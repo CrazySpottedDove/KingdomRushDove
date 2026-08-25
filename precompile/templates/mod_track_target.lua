@@ -37,7 +37,7 @@ end
 -- 	local target = store.entities[m.target_id]
 
 -- 	if not target or not target.pos then
--- 		queue_remove(store, this)
+-- 		simulation:queue_remove_entity(this)
 
 -- 		return
 -- 	end
@@ -53,7 +53,7 @@ end
 -- 			@constif(this.modifier.last_node)
 -- 			or target.nav_path.ni > m.last_node
 -- 		then
--- 			queue_remove(store, this)
+-- 			simulation:queue_remove_entity(this)
 
 -- 			return
 -- 		end
@@ -95,7 +95,7 @@ return function(this, store)
     local target = store.entities[m.target_id]
 
 	if not target or target.health.dead then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -109,14 +109,14 @@ return function(this, store)
 
     constif(this.modifier.duration >= 0)
         if store.tick_ts - m.ts > m.duration then
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
             return
         end
     constend
 
     constif(this.modifier.last_node)
         if target.nav_path.ni > m.last_node then
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
             return
         end
     constend

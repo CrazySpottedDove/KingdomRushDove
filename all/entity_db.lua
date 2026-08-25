@@ -5,6 +5,15 @@ require("lib.klua.table")
 local perf = require("dove_modules.perf.perf")
 
 local copy = table.deepclone
+
+local function quickcopy(t)
+	local out = {}
+	for k, v in pairs(t) do
+		out[k] = copy(v)
+	end
+	return out
+end
+
 local entity_db = {
 	last_id = 1,
 	entities = {},
@@ -20,10 +29,10 @@ function entity_db:Load()
 	if not self.entities_backup then
 		self:load()
 		self:precompile()
-		self.entities_backup = copy(self.entities)
+		self.entities_backup = quickcopy(self.entities)
 	else
 		-- 已有实体数据库备份时，直接拷贝即可。components 约定为只读数据，无需重复拷贝。
-		self.entities = copy(self.entities_backup)
+		self.entities = quickcopy(self.entities_backup)
 	end
 end
 
@@ -251,7 +260,7 @@ function entity_db:register_t(name, base)
 	-- 	return self.entities[name]
 	-- end
 
-	local t = base and copy(self.entities[base]) or {}
+	local t = base and quickcopy(self.entities[base]) or {}
 
 	t.template_name = name
 	self.entities[name] = t
@@ -323,7 +332,7 @@ function entity_db:create_entity(t)
 	-- 	return nil
 	-- end
 
-	local out = copy(tpl)
+	local out = quickcopy(tpl)
 
 	out.id = self.last_id
 	self.last_id = self.last_id + 1
@@ -362,7 +371,7 @@ function entity_db.assign_damage(damage_type, value, source_id, target_id)
 end
 
 function entity_db:clone_entity(e)
-	local out = copy(e)
+	local out = quickcopy(e)
 
 	out.id = self.last_id
 	self.last_id = self.last_id + 1

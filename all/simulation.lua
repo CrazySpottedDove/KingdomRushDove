@@ -180,7 +180,7 @@ function simulation:do_tick(dt)
 		d.pending_inserts[i] = d.pending_inserts[i + last_count]
 	end
 
-	for i = #d.pending_inserts, #d.pending_inserts - last_count + 1, -1 do
+	for i = #d.pending_inserts - last_count + 1, #d.pending_inserts do
 		d.pending_inserts[i] = nil
 	end
 
@@ -195,7 +195,7 @@ function simulation:do_tick(dt)
 		d.pending_removals[i] = d.pending_removals[i + last_count]
 	end
 
-	for i = #d.pending_removals, #d.pending_removals - last_count + 1, -1 do
+	for i = #d.pending_removals - last_count + 1, #d.pending_removals do
 		d.pending_removals[i] = nil
 	end
 

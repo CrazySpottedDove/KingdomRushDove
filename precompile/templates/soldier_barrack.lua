@@ -20,7 +20,7 @@ return function(this, store)
 			e.aura.level = this.unit.level
 			e.aura.source_id = this.id
 			e.aura.ts = store.tick_ts
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 		end
 	constend
 	constend
@@ -32,7 +32,7 @@ return function(this, store)
 	m.modifier.source_id = this.id
 	m.pos.x = this.pos.x
 	m.pos.y = this.pos.y
-	queue_insert(store, m)
+	simulation:queue_insert_entity(m)
 	constend
 
 	constif(this.track_damage and this.track_damage.mod)
@@ -41,7 +41,7 @@ return function(this, store)
 	e.pos.y = this.pos.y
 	e.modifier.target_id = this.id
 	e.modifier.source_id = this.id
-	queue_insert(store, e)
+	simulation:queue_insert_entity(e)
 	constend
 
 	constif(this.powers)

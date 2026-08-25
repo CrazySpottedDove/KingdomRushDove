@@ -46,7 +46,7 @@ end
 -- 	local target = store.entities[m.target_id]
 
 -- 	if not target then
--- 		queue_remove(store, this)
+-- 		simulation:queue_remove_entity(this)
 
 -- 		return
 -- 	end
@@ -170,7 +170,7 @@ end
 --                     end
 --                     constend
 
---                     queue_insert(store, fx)
+--                     simulation:queue_insert_entity(fx)
 --                 @constif(dps.fx_every)
 --                 end
 --             constend
@@ -180,7 +180,7 @@ end
 -- 		coroutine.yield()
 -- 	end
 
--- 	queue_remove(store, this)
+-- 	simulation:queue_remove_entity(this)
 -- end
 -- ]]
 
@@ -192,7 +192,7 @@ return function(this, store)
 
     local target = store.entities[this.modifier.target_id]
     if not target or target.health.dead then
-        queue_remove(store, this)
+        simulation:queue_remove_entity(this)
         return
     end
 
@@ -228,7 +228,7 @@ return function(this, store)
 
             queue_damage(store, d)
         constend
-        queue_remove(store, this)
+        simulation:queue_remove_entity(this)
         return
     end
 
@@ -311,7 +311,7 @@ return function(this, store)
                     end
                     constend
 
-                    queue_insert(store, fx)
+                    simulation:queue_insert_entity(fx)
                 end
             constend
 		end

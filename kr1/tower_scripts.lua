@@ -212,7 +212,7 @@ scripts.tower_archer_dwarf = {
 						apply_precision(b1)
 					end
 
-					queue_insert(store, b1)
+					simulation:queue_insert_entity(b1)
 
 					while not animation_finished(this, shooter_sid) do
 						coroutine.yield()
@@ -301,7 +301,7 @@ scripts.tower_ranger = {
 			b.bullet.damage_factor = tw.damage_factor
 
 			apply_precision(b)
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 		end
 
 		while true do
@@ -326,7 +326,7 @@ scripts.tower_ranger = {
 						local ta = E:create_entity(pow_t.aura)
 						ta.aura.source_id = this.id
 						ta.pos = tpos
-						queue_insert(store, ta)
+						simulation:queue_insert_entity(ta)
 					end
 				end
 
@@ -444,7 +444,7 @@ scripts.tower_musketeer = {
 			end
 
 			apply_precision(b)
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 
 			return b
 		end
@@ -502,7 +502,7 @@ scripts.tower_musketeer = {
 							m.modifier.target_id = enemy.id
 							m.render.sprites[1].ts = store.tick_ts
 
-							queue_insert(store, m)
+							simulation:queue_insert_entity(m)
 							shot_animation(ax, seeker_idx, enemy, ax.animation_seeker)
 							U.y_wait_unconditional(store, ax.shoot_time)
 
@@ -512,7 +512,7 @@ scripts.tower_musketeer = {
 
 							shot_bullet(ax, shooter_idx, ai, enemy, pow_sn.level)
 							y_animation_wait(this, shooter_sids[shooter_idx])
-							queue_remove(store, m)
+							simulation:queue_remove_entity(m)
 						end
 
 						::continue_ax::
@@ -571,7 +571,7 @@ scripts.tower_musketeer = {
 							bl.level = pow_sh.level
 							bl.damage_factor = tw.damage_factor * distance_factor
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 						end
 
 						y_animation_wait(this, shooter_sids[shooter_idx])
@@ -619,7 +619,7 @@ scripts.tower_crossbow = {
 		end)
 
 		for _, m in ipairs(mods) do
-			queue_remove(store, m)
+			simulation:queue_remove_entity(m)
 		end
 
 		if this.eagle_previews then
@@ -654,7 +654,7 @@ scripts.tower_crossbow = {
 			if tw.blocked then
 				if this.eagle_previews then
 					for _, decal in pairs(this.eagle_previews) do
-						queue_remove(store, decal)
+						simulation:queue_remove_entity(decal)
 					end
 
 					this.eagle_previews = nil
@@ -664,7 +664,7 @@ scripts.tower_crossbow = {
 				if this.ui.hover_active and this.ui.args == "eagle" and (not this.eagle_previews or eagle_previews_level ~= pow_e.level) then
 					if this.eagle_previews then
 						for _, decal in pairs(this.eagle_previews) do
-							queue_remove(store, decal)
+							simulation:queue_remove_entity(decal)
 						end
 					end
 
@@ -691,12 +691,12 @@ scripts.tower_crossbow = {
 						decal.pos = target.pos
 						decal.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, decal)
+						simulation:queue_insert_entity(decal)
 						table.insert(this.eagle_previews, decal)
 					end
 				elseif this.eagle_previews and (not this.ui.hover_active or this.ui.args ~= "eagle") then
 					for _, decal in pairs(this.eagle_previews) do
-						queue_remove(store, decal)
+						simulation:queue_remove_entity(decal)
 					end
 
 					this.eagle_previews = nil
@@ -745,7 +745,7 @@ scripts.tower_crossbow = {
 							new_mod.modifier.source_id = this.id
 							new_mod.pos = tower.pos
 
-							queue_insert(store, new_mod)
+							simulation:queue_insert_entity(new_mod)
 						end
 					end
 
@@ -834,7 +834,7 @@ scripts.tower_crossbow = {
 							b.pos = vclone(bl.from)
 
 							apply_precision(b)
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 
 							-- AC:inc_check("BOLTOFTHESUN", 1)
 							while store.tick_ts - loop_ts < ma.cycle_time do
@@ -907,7 +907,7 @@ scripts.tower_crossbow = {
 						end
 
 						apply_precision(b1)
-						queue_insert(store, b1)
+						simulation:queue_insert_entity(b1)
 
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()
@@ -1004,7 +1004,7 @@ scripts.tower_totem = {
 							b.render.sprites[2].ts = store.tick_ts
 							b.render.sprites[3].ts = store.tick_ts
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 						end
 					end
 				end
@@ -1044,7 +1044,7 @@ scripts.tower_totem = {
 						b1.bullet.target_id = enemy.id
 
 						apply_precision(b1)
-						queue_insert(store, b1)
+						simulation:queue_insert_entity(b1)
 
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()
@@ -1083,7 +1083,7 @@ scripts.tower_pirate_watchtower = {
 		end)
 
 		for _, m in ipairs(watcher_mods) do
-			queue_remove(store, m)
+			simulation:queue_remove_entity(m)
 		end
 
 		if this.watcher_previews then
@@ -1118,7 +1118,7 @@ scripts.tower_pirate_watchtower = {
 				if this.ui.hover_active and this.ui.args == "watcher" and (not this.watcher_previews or watcher_previews_level ~= pow_w.level) then
 					if this.watcher_previews then
 						for _, decal in ipairs(this.watcher_previews) do
-							queue_remove(store, decal)
+							simulation:queue_remove_entity(decal)
 						end
 					end
 
@@ -1144,12 +1144,12 @@ scripts.tower_pirate_watchtower = {
 						decal.pos = target.pos
 						decal.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, decal)
+						simulation:queue_insert_entity(decal)
 						table.insert(this.watcher_previews, decal)
 					end
 				elseif this.watcher_previews and (not this.ui.hover_active or this.ui.args ~= "watcher") then
 					for _, decal in ipairs(this.watcher_previews) do
-						queue_remove(store, decal)
+						simulation:queue_remove_entity(decal)
 					end
 
 					this.watcher_previews = nil
@@ -1171,7 +1171,7 @@ scripts.tower_pirate_watchtower = {
 						e.pos = vclone(e.idle_pos)
 						e.owner = this
 
-						queue_insert(store, e)
+						simulation:queue_insert_entity(e)
 						table.insert(this.parrots, e)
 					end
 				end
@@ -1185,7 +1185,7 @@ scripts.tower_pirate_watchtower = {
 					end)
 
 					for _, m in ipairs(old_mods) do
-						queue_remove(store, m)
+						simulation:queue_remove_entity(m)
 					end
 				end
 
@@ -1210,7 +1210,7 @@ scripts.tower_pirate_watchtower = {
 						new_mod.modifier.source_id = this.id
 						new_mod.pos = tower.pos
 
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 					end
 				end
 				if ready_to_attack(a, store, tw.cooldown_factor) then
@@ -1251,7 +1251,7 @@ scripts.tower_pirate_watchtower = {
 						bl.source_id = this.id
 
 						apply_precision(b1)
-						queue_insert(store, b1)
+						simulation:queue_insert_entity(b1)
 
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()
@@ -1323,7 +1323,7 @@ scripts.tower_arcane = {
 
 			b.bullet.flight_time = b.bullet.flight_time_min + dist / a.range * b.bullet.flight_time_factor
 
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 		end
 
 		aa.ts = store.tick_ts
@@ -1523,7 +1523,7 @@ scripts.tower_silver = {
 				end
 			end
 
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 
 			if attack.shot_fx then
 				local fx = E:create_entity(attack.shot_fx)
@@ -1535,7 +1535,7 @@ scripts.tower_silver = {
 				fx.render.sprites[1].r = V.angleTo(bb.to.x - bb.from.x, bb.to.y - bb.from.y)
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 
 			U.y_animation_wait_specific(this, sid)
@@ -1709,7 +1709,7 @@ scripts.tower_wild_magus = {
 							b.bullet.level = pow_e.level
 							b.bullet.damage_factor = tw.damage_factor
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 						end
 
 						y_animation_wait(this, shooter_sid)
@@ -1770,7 +1770,7 @@ scripts.tower_wild_magus = {
 								mod.modifier.target_id = target.id
 								mod.modifier.level = pow_w.level
 
-								queue_insert(store, mod)
+								simulation:queue_insert_entity(mod)
 							end
 							wa.ts = store.tick_ts
 						else
@@ -1827,7 +1827,7 @@ scripts.tower_wild_magus = {
 							last_enemy_shots = 0
 						end
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						y_animation_wait(this, shooter_sid)
 
 						an, af = animation_name_facing_point(this, "idle", enemy.pos, shooter_sid, so)
@@ -1876,7 +1876,7 @@ scripts.tower_high_elven = {
 		for _, s in pairs(this.sentinels) do
 			s.owner = nil
 
-			queue_remove(store, s)
+			simulation:queue_remove_entity(s)
 		end
 
 		local mods = table.filter(store.modifiers, function(_, e)
@@ -1884,7 +1884,7 @@ scripts.tower_high_elven = {
 		end)
 
 		for _, m in ipairs(mods) do
-			queue_remove(store, m)
+			simulation:queue_remove_entity(m)
 		end
 
 		if this.sentinel_previews then
@@ -1900,7 +1900,7 @@ scripts.tower_high_elven = {
 
 			s.pos = vclone(this.pos)
 
-			queue_insert(store, s)
+			simulation:queue_insert_entity(s)
 			table.insert(this.sentinels, s)
 
 			s.owner = this
@@ -1930,7 +1930,7 @@ scripts.tower_high_elven = {
 				if this.ui.hover_active and this.ui.args == "sentinel" and (not this.sentinel_previews or sentinel_previews_level ~= pow_s.level) then
 					if this.sentinel_previews then
 						for _, decal in pairs(this.sentinel_previews) do
-							queue_remove(store, decal)
+							simulation:queue_remove_entity(decal)
 						end
 					end
 
@@ -1964,12 +1964,12 @@ scripts.tower_high_elven = {
 						decal.pos = target.pos
 						decal.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, decal)
+						simulation:queue_insert_entity(decal)
 						table.insert(this.sentinel_previews, decal)
 					end
 				elseif this.sentinel_previews and (not this.ui.hover_active or this.ui.args ~= "sentinel") then
 					for _, decal in pairs(this.sentinel_previews) do
-						queue_remove(store, decal)
+						simulation:queue_remove_entity(decal)
 					end
 
 					this.sentinel_previews = nil
@@ -2008,7 +2008,7 @@ scripts.tower_high_elven = {
 						new_mod.modifier.source_id = this.id
 						new_mod.pos = tower.pos
 
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 					end
 				end
 
@@ -2051,7 +2051,7 @@ scripts.tower_high_elven = {
 								mod.modifier.level = pow_t.level
 								mod.modifier.damage_factor = tw.damage_factor
 
-								queue_insert(store, mod)
+								simulation:queue_insert_entity(mod)
 							end
 
 							y_animation_wait(this, shooter_sid)
@@ -2094,7 +2094,7 @@ scripts.tower_high_elven = {
 								b.bullet.from = v(this.pos.x + bo.x, this.pos.y + bo.y)
 								b.pos = vclone(b.bullet.from)
 
-								queue_insert(store, b)
+								simulation:queue_insert_entity(b)
 							end
 						end
 
@@ -2130,7 +2130,7 @@ scripts.tower_arcane_wizard = {
 	end,
 	remove = function(this, store)
 		if this.decalmod_disintegrate then
-			queue_remove(store, this.decalmod_disintegrate)
+			simulation:queue_remove_entity(this.decalmod_disintegrate)
 
 			this.decalmod_disintegrate = nil
 		end
@@ -2246,7 +2246,7 @@ scripts.tower_arcane_wizard = {
 				b.bullet.source_id = this.id
 			end
 
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 			y_animation_wait(this, tower_sid)
 		end
 
@@ -2350,12 +2350,12 @@ scripts.tower_arcane_wizard = {
 					mod.modifier.source_id = this.id
 					mod.pos = this.pos
 
-					queue_insert(store, mod)
+					simulation:queue_insert_entity(mod)
 
 					this.decalmod_disintegrate = mod
 				end
 			elseif this.decalmod_disintegrate then
-				queue_remove(store, this.decalmod_disintegrate)
+				simulation:queue_remove_entity(this.decalmod_disintegrate)
 
 				this.decalmod_disintegrate = nil
 			end
@@ -2433,7 +2433,7 @@ scripts.tower_sorcerer = {
 
 					if not s or s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime then
 						if s then
-							queue_remove(store, s)
+							simulation:queue_remove_entity(s)
 						end
 						local ns = E:create_entity(ba.soldier_type)
 
@@ -2453,7 +2453,7 @@ scripts.tower_sorcerer = {
 						ma.damage_min = ma.damage_min + ma.damage_inc * ns.unit.level
 						ma.damage_max = ma.damage_max + ma.damage_inc * ns.unit.level
 
-						queue_insert(store, ns)
+						simulation:queue_insert_entity(ns)
 
 						ba.soldiers[1] = ns
 						s = ns
@@ -2536,7 +2536,7 @@ scripts.tower_sorcerer = {
 								b.bullet.source_id = this.id
 								b.bullet.damage_factor = this.tower.damage_factor
 
-								queue_insert(store, b)
+								simulation:queue_insert_entity(b)
 							end
 
 							::label_18_0::
@@ -2567,7 +2567,7 @@ scripts.tower_archmage = {
 	end,
 	remove = function(this, store)
 		for _, b in pairs(this._stored_bullets) do
-			queue_remove(store, b)
+			simulation:queue_remove_entity(b)
 		end
 
 		return true
@@ -2614,7 +2614,7 @@ scripts.tower_archmage = {
 
 			this._stored_bullets[insert_pos] = b
 
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 		end
 
 		while true do
@@ -2761,7 +2761,7 @@ scripts.tower_archmage = {
 							twister.blast_level = pow_b.level
 						end
 
-						queue_insert(store, twister)
+						simulation:queue_insert_entity(twister)
 
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()
@@ -2800,7 +2800,7 @@ scripts.tower_necromancer = {
 				e.aura.source_id = this.id
 				e.aura.ts = store.tick_ts
 
-				queue_insert(store, e)
+				simulation:queue_insert_entity(e)
 			end
 		end
 
@@ -2884,7 +2884,7 @@ scripts.tower_necromancer = {
 						s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + s.melee.attacks[1].damage_inc * s.unit.level
 
 						SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-						queue_insert(store, s)
+						simulation:queue_insert_entity(s)
 
 						b.soldiers[1] = s
 					end
@@ -2955,7 +2955,7 @@ scripts.tower_necromancer = {
 						b.aura.level = pow_p.level
 						b.pos = dest
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()
@@ -3012,7 +3012,7 @@ scripts.tower_necromancer = {
 						bullet.bullet.from = v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 						bullet.pos = vclone(bullet.bullet.from)
 
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 					elseif hands_raised then
 						this.render.sprites[skull_fx_sid].hidden = true
 						this.render.sprites[skull_glow_sid].ts = store.tick_ts
@@ -3074,7 +3074,7 @@ scripts.tower_faerie_dragon = {
 		aura.aura.source_id = this.id
 		aura.aura.ts = store.tick_ts + math.random(0, 30) / 30
 
-		queue_insert(store, aura)
+		simulation:queue_insert_entity(aura)
 
 		return true
 	end,
@@ -3115,7 +3115,7 @@ scripts.tower_faerie_dragon = {
 							e.owner = this
 							e.idle_pos = vclone(e.pos)
 
-							queue_insert(store, e)
+							simulation:queue_insert_entity(e)
 							table.insert(this.dragons, e)
 						end
 					end
@@ -3344,7 +3344,7 @@ scripts.tower_sunray = {
 
 								enemy.enemy.gold = enemy_gold * (1 + pow_g.gold_factor)
 
-								queue_insert(store, fx)
+								simulation:queue_insert_entity(fx)
 							end
 						elseif enemy_gold and enemy_gold > 0 and not enemy_is_boss then
 							store.player_gold = store.player_gold + 1
@@ -3358,7 +3358,7 @@ scripts.tower_sunray = {
 						end
 					end
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 				end
 
 				if kill_count > 0 then
@@ -3415,7 +3415,7 @@ function scripts.tower_pixie.update(this, store)
 		e.owner = this
 
 		table.insert(pixies, e)
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 	end
 
 	spawn_pixie()
@@ -3529,7 +3529,7 @@ function scripts.decal_pixie.update(this, store)
 						e.modifier.level = this.attack_level
 						e.modifier.damage_factor = this.owner.tower.damage_factor
 
-						queue_insert(store, e)
+						simulation:queue_insert_entity(e)
 					end
 				else
 					e = E:create_entity(a.bullet)
@@ -3541,7 +3541,7 @@ function scripts.decal_pixie.update(this, store)
 					e.bullet.damage_factor = this.owner.tower.damage_factor
 					e.pos = vclone(e.bullet.from)
 
-					queue_insert(store, e)
+					simulation:queue_insert_entity(e)
 				end
 
 				U.y_animation_wait_default(this)
@@ -3623,7 +3623,7 @@ scripts.tower_bfg = {
 						b.bullet.target_id = enemy and enemy.id or trigger.id
 						b.bullet.source_id = this.id
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						y_animation_wait(this, tower_sid)
 					end
 				end
@@ -3660,7 +3660,7 @@ scripts.tower_bfg = {
 						b.bullet.target_id = enemy and enemy.id or trigger.id
 						b.bullet.source_id = this.id
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						y_animation_wait(this, tower_sid)
 					end
 				end
@@ -3696,7 +3696,7 @@ scripts.tower_bfg = {
 						b.bullet.target_id = enemy and enemy.id or trigger.id
 						b.bullet.source_id = this.id
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						y_animation_wait(this, tower_sid)
 					end
 				end
@@ -3721,7 +3721,7 @@ scripts.missile_bfg = {
 			missile_second.bullet.target_id = this.bullet.target_id
 			missile_second.bullet.source_id = this.bullet.source_id
 			missile_second.bullet.to = v(this.pos.x + math.cos(missile_second.render.sprites[1].r) * 100, this.pos.y + math.sin(missile_second.render.sprites[1].r) * 100)
-			queue_insert(store, missile_second)
+			simulation:queue_insert_entity(missile_second)
 		end
 		return true
 	end
@@ -3760,7 +3760,7 @@ scripts.lava_dwaarp = {
 						new_mod.modifier.damage_factor = this.aura.damage_factor
 						new_mod.template_name = new_mod.template_name .. this.aura.source_id
 
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 					end
 				end
 			end
@@ -3768,7 +3768,7 @@ scripts.lava_dwaarp = {
 			coroutine.yield()
 		end
 
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 -- 地震
@@ -3861,7 +3861,7 @@ scripts.tower_dwaarp = {
 								drill.bullet.target_id = enemy.id
 								drill.pos.x, drill.pos.y = enemy.pos.x, enemy.pos.y
 
-								queue_insert(store, drill)
+								simulation:queue_insert_entity(drill)
 							end
 
 							U.y_animation_wait_specific(this, 3)
@@ -3915,7 +3915,7 @@ scripts.tower_dwaarp = {
 											mod.modifier.target_id = enemy.id
 											mod.modifier.damage_factor = this.tower.damage_factor
 
-											queue_insert(store, mod)
+											simulation:queue_insert_entity(mod)
 										end
 									end
 								end
@@ -3930,7 +3930,7 @@ scripts.tower_dwaarp = {
 								lava.aura.radius = a.range
 								lava.aura.damage_factor = this.tower.damage_factor
 
-								queue_insert(store, lava)
+								simulation:queue_insert_entity(lava)
 							end
 
 							local fx_points = U.get_path_fx_points(this, 60)
@@ -3944,7 +3944,7 @@ scripts.tower_dwaarp = {
 									smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
 									smoke.render.sprites[1].ts = store.tick_ts + random() * 5 / FPS
 
-									queue_insert(store, smoke)
+									simulation:queue_insert_entity(smoke)
 
 									if lava_ready then
 										local vapor = E:create_entity("decal_dwaarp_scorched_water")
@@ -3956,7 +3956,7 @@ scripts.tower_dwaarp = {
 											vapor.render.sprites[1].flip_x = true
 										end
 
-										queue_insert(store, vapor)
+										simulation:queue_insert_entity(vapor)
 									end
 								else
 									local decal = E:create_entity("decal_tween")
@@ -3975,14 +3975,14 @@ scripts.tower_dwaarp = {
 									decal.render.sprites[1].z = Z_DECALS
 									decal.render.sprites[1].ts = store.tick_ts
 
-									queue_insert(store, decal)
+									simulation:queue_insert_entity(decal)
 
 									local smoke = E:create_entity("decal_dwaarp_smoke")
 
 									smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
 									smoke.render.sprites[1].ts = store.tick_ts + random() * 5 / FPS
 
-									queue_insert(store, smoke)
+									simulation:queue_insert_entity(smoke)
 
 									if lava_ready then
 										local scorch = E:create_entity("decal_dwaarp_scorched")
@@ -3994,7 +3994,7 @@ scripts.tower_dwaarp = {
 										scorch.pos.x, scorch.pos.y = p.pos.x, p.pos.y
 										scorch.render.sprites[1].ts = store.tick_ts
 
-										queue_insert(store, scorch)
+										simulation:queue_insert_entity(scorch)
 									end
 								end
 							end
@@ -4005,7 +4005,7 @@ scripts.tower_dwaarp = {
 								tower_scorch.pos.x, tower_scorch.pos.y = this.pos.x, this.pos.y + 10
 								tower_scorch.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, tower_scorch)
+								simulation:queue_insert_entity(tower_scorch)
 							end
 
 							local pulse = E:create_entity("decal_dwaarp_pulse")
@@ -4013,7 +4013,7 @@ scripts.tower_dwaarp = {
 							pulse.pos.x, pulse.pos.y = this.pos.x, this.pos.y + 16
 							pulse.render.sprites[1].ts = store.tick_ts
 
-							queue_insert(store, pulse)
+							simulation:queue_insert_entity(pulse)
 
 							if lava_ready then
 								S:queue(la.sound)
@@ -4158,7 +4158,7 @@ scripts.tower_entwood = {
 					b.bullet.hit_payload = pl
 				end
 
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 				U.y_animation_wait_group(this, "layers")
 
 				return true
@@ -4228,14 +4228,14 @@ scripts.tower_entwood = {
 							decal.pos.x, decal.pos.y = p.pos.x, p.pos.y
 							decal.render.sprites[1].ts = store.tick_ts
 
-							queue_insert(store, decal)
+							simulation:queue_insert_entity(decal)
 
 							local smoke = E:create_entity("fx_clobber_smoke")
 
 							smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
 							smoke.render.sprites[1].ts = store.tick_ts
 
-							queue_insert(store, smoke)
+							simulation:queue_insert_entity(smoke)
 						end
 
 						local fx = E:create_entity("fx_clobber_smoke_ring")
@@ -4243,7 +4243,7 @@ scripts.tower_entwood = {
 						fx.render.sprites[1].ts = store.tick_ts
 						fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 
 						local targets = U.find_enemies_in_range_filter_off(tpos(this), ca.damage_radius, ca.vis_flags, ca.vis_bans)
 
@@ -4260,14 +4260,14 @@ scripts.tower_entwood = {
 										mod.modifier.target_id = target.id
 										mod.modifier.duration = pow_c.stun_durations[pow_c.level]
 
-										queue_insert(store, mod)
+										simulation:queue_insert_entity(mod)
 									elseif band(target.vis.bans, F_MOD) == 0 then
 										local mod = E:create_entity(ca.slow_mod)
 
 										mod.modifier.target_id = target.id
 										mod.modifier.duration = pow_c.stun_durations[pow_c.level]
 
-										queue_insert(store, mod)
+										simulation:queue_insert_entity(mod)
 									end
 								elseif band(target.vis.bans, F_MOD) == 0 then
 									local mod = E:create_entity(ca.slow_mod)
@@ -4275,7 +4275,7 @@ scripts.tower_entwood = {
 									mod.modifier.target_id = target.id
 									mod.modifier.duration = pow_c.stun_durations[pow_c.level]
 
-									queue_insert(store, mod)
+									simulation:queue_insert_entity(mod)
 								end
 
 								queue_damage(store, d)
@@ -4427,7 +4427,7 @@ scripts.tower_tesla = {
 							b.bullet.source_id = this.id
 							b.bullet.level = pow_b.level
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 						end
 
 						if pow_o.level > 0 then
@@ -4438,7 +4438,7 @@ scripts.tower_tesla = {
 							b.aura.level = pow_o.level
 							b.scale_factor = a.range / b.aura.radius
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 						end
 
 						y_animation_wait(this, tower_sid)
@@ -4528,7 +4528,7 @@ scripts.tower_mech = {
 		mecha.nav_rally.new = true
 		mecha.owner = this
 
-		queue_insert(store, mecha)
+		simulation:queue_insert_entity(mecha)
 		table.insert(this.barrack.soldiers, mecha)
 		coroutine.yield()
 
@@ -4677,7 +4677,7 @@ function scripts.soldier_mecha.update(this, store)
 					b.aura.source_id = this.id
 					b.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 
 					while not U.animation_finished_default(this) do
 						coroutine.yield()
@@ -4740,7 +4740,7 @@ function scripts.soldier_mecha.update(this, store)
 							b.bullet.target_id = target.id
 							b.bullet.damage_factor = tw.damage_factor
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 
 							target = U.detect_foremost_enemy_in_range_filter_off(this.pos, am.max_range, am.vis_flags, am.vis_bans)
 
@@ -4796,7 +4796,7 @@ function scripts.soldier_mecha.update(this, store)
 				b.bullet.to = pred_pos
 				b.bullet.source_id = this.id
 
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 
 				while not U.animation_finished_default(this) do
 					if this.nav_rally.new then
@@ -4971,7 +4971,7 @@ scripts.tower_frankenstein = {
 								s.melee.attacks[2].disabled = nil
 							end
 
-							queue_insert(store, s)
+							simulation:queue_insert_entity(s)
 
 							b.soldiers[1] = s
 						end
@@ -5002,7 +5002,7 @@ scripts.tower_frankenstein = {
 					if s and s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime then
 						local orig_s = s
 
-						queue_remove(store, orig_s)
+						simulation:queue_remove_entity(orig_s)
 
 						local l = pow_f.level
 
@@ -5027,7 +5027,7 @@ scripts.tower_frankenstein = {
 							s.melee.attacks[2].disabled = nil
 						end
 
-						queue_insert(store, s)
+						simulation:queue_insert_entity(s)
 
 						b.soldiers[1] = s
 					end
@@ -5101,7 +5101,7 @@ scripts.tower_frankenstein = {
 							bu.bullet.target_id = enemy.id
 							bu.bullet.level = pow_l.level
 
-							queue_insert(store, bu)
+							simulation:queue_insert_entity(bu)
 						end
 
 						while not animation_finished(this, 3) do
@@ -5125,7 +5125,7 @@ scripts.tower_druid = {}
 function scripts.tower_druid.remove(this, store)
 	if this.loaded_bullets then
 		for i = #this.loaded_bullets, 1, -1 do
-			queue_remove(store, this.loaded_bullets[i])
+			simulation:queue_remove_entity(this.loaded_bullets[i])
 
 			this.loaded_bullets[i] = nil
 		end
@@ -5133,7 +5133,7 @@ function scripts.tower_druid.remove(this, store)
 
 	if this.shooters then
 		for i = #this.shooters, 1, -1 do
-			queue_remove(store, this.shooters[i])
+			simulation:queue_remove_entity(this.shooters[i])
 
 			this.shooters[i] = nil
 		end
@@ -5146,7 +5146,7 @@ function scripts.tower_druid.remove(this, store)
 			s.health.dead = true
 		end
 
-		queue_remove(store, s)
+		simulation:queue_remove_entity(s)
 
 		this.barrack.soldiers[i] = nil
 	end
@@ -5182,7 +5182,7 @@ function scripts.druid_shooter_sylvan.update(this, store)
 				mod.modifier.level = this.owner.powers.sylvan.level
 				mod.modifier.damage_factor = this.owner.tower.damage_factor
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 			else
 				a.ts = a.ts + 1
 			end
@@ -5213,11 +5213,11 @@ function scripts.mod_druid_sylvan.update(this, store)
 				new_mod.modifier.level = this.modifier.level
 				new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
 
-				queue_insert(store, new_mod)
+				simulation:queue_insert_entity(new_mod)
 			end
 		end
 
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -5235,7 +5235,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 		target = store.entities[m.target_id]
 
 		if not target then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -5275,7 +5275,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 						b.pos = vclone(b.bullet.from)
 						b.bullet.damage_factor = m.damage_factor
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					end
 				end
 			end
@@ -5295,16 +5295,16 @@ function scripts.mod_druid_sylvan.update(this, store)
 				new_mod.modifier.level = this.modifier.level
 				new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
 
-				queue_insert(store, new_mod)
+				simulation:queue_insert_entity(new_mod)
 			end
 
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
 
 		if store.tick_ts - m.ts > m.duration then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -5348,7 +5348,7 @@ function scripts.tower_druid.update(this, store)
 				b.bullet.damage_factor = this.tower.damage_factor
 				b.render.sprites[1].prefix = string.format(b.render.sprites[1].prefix, idx)
 
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 
 				this.loaded_bullets[idx] = b
 			end
@@ -5373,7 +5373,7 @@ function scripts.tower_druid.update(this, store)
 						s.pos = vclone(this.pos)
 						s.owner = this
 
-						queue_insert(store, s)
+						simulation:queue_insert_entity(s)
 						table.insert(this.shooters, s)
 					end
 
@@ -5480,7 +5480,7 @@ function scripts.tower_baby_ashbite.update(this, store)
 		end
 
 		SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-		queue_insert(store, s)
+		simulation:queue_insert_entity(s)
 		table.insert(b.soldiers, s)
 		signal.emit("tower-spawn", this, s)
 	end
@@ -5517,7 +5517,7 @@ function scripts.tower_baby_ashbite.update(this, store)
 					end
 
 					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 
 					b.soldiers[i] = s
 
@@ -5590,7 +5590,7 @@ function scripts.tower_tricannon.update(this, store)
 		b.bullet.target_id = enemy and enemy.id
 		b.bullet.source_id = this.id
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 
 		return b
 	end
@@ -5613,7 +5613,7 @@ function scripts.tower_tricannon.update(this, store)
 			if ao.active and store.tick_ts - ao.ts > ao.duration then
 				ao.active = nil
 
-				queue_remove(store, this.decal_mod)
+				simulation:queue_remove_entity(this.decal_mod)
 
 				this.decal_mod = nil
 			end
@@ -5631,7 +5631,7 @@ function scripts.tower_tricannon.update(this, store)
 					mod.modifier.source_id = this.id
 					mod.pos = this.pos
 
-					queue_insert(store, mod)
+					simulation:queue_insert_entity(mod)
 
 					this.decal_mod = mod
 					ao.ts = store.tick_ts
@@ -5796,7 +5796,7 @@ end
 
 function scripts.tower_tricannon.remove(this, store)
 	if this.decal_mod then
-		queue_remove(store, this.decal_mod)
+		simulation:queue_remove_entity(this.decal_mod)
 
 		this.decal_mod = nil
 		this.attacks.list[3].active = false
@@ -5906,7 +5906,7 @@ function scripts.tower_dark_elf.update(this, store)
 		m.modifier.source_id = this.id
 		m.render.sprites[1].hidden = hidden_sprite
 
-		queue_insert(store, m)
+		simulation:queue_insert_entity(m)
 	end
 
 	-- 找到范围内生命最高的、且一定能被一发子弹击杀的敌人
@@ -6040,7 +6040,7 @@ function scripts.tower_dark_elf.update(this, store)
 						this.controller_soldiers.tower_ref = this
 						this.controller_soldiers.pos = this.pos
 
-						queue_insert(store, this.controller_soldiers)
+						simulation:queue_insert_entity(this.controller_soldiers)
 					end
 
 					this.controller_soldiers.pow_level = pow.level
@@ -6110,7 +6110,7 @@ function scripts.tower_dark_elf.update(this, store)
 						animation_start(this, an, af, store.tick_ts, false, this.render.sid_archer)
 
 						if this.mod_target then
-							queue_remove(store, this.mod_target)
+							simulation:queue_remove_entity(this.mod_target)
 						end
 
 						goto label_995_0
@@ -6161,7 +6161,7 @@ function scripts.tower_dark_elf.update(this, store)
 					bullet.bullet.target_id = nil
 				end
 
-				queue_insert(store, bullet)
+				simulation:queue_insert_entity(bullet)
 
 				while not animation_finished(this, this.render.sid_archer, 1) do
 					check_upgrades_purchase()
@@ -6195,7 +6195,7 @@ end
 
 function scripts.tower_dark_elf.remove(this, store)
 	if this.controller_soldiers then
-		queue_remove(store, this.controller_soldiers)
+		simulation:queue_remove_entity(this.controller_soldiers)
 
 		this.controller_soldiers = nil
 	end
@@ -6214,7 +6214,7 @@ function scripts.mod_tower_dark_elf_big_target.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target or not target.pos then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -6236,7 +6236,7 @@ function scripts.mod_tower_dark_elf_big_target.update(this, store)
 		this.render.sprites[1].hidden = not target or target.health.dead or not source or not source.tower_upgrade_persistent_data or source.tower_upgrade_persistent_data.current_mode == 0
 
 		if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -6326,7 +6326,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 					mod.modifier.source_damage = d
 					mod.modifier.damage_factor = b.damage_factor
 
-					queue_insert(store, mod)
+					simulation:queue_insert_entity(mod)
 				end
 			end
 
@@ -6343,7 +6343,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 				fxs.ts = store.tick_ts
 				fxs.r = this.render.sprites[1].r
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 
 			local tower = source and store.entities[source.id]
@@ -6360,7 +6360,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 						soul_mod.modifier.target_id = target.id
 						soul_mod.tower_id = tower.id
 
-						queue_insert(store, soul_mod)
+						simulation:queue_insert_entity(soul_mod)
 
 						skill_buff.times = skill_buff.times + 1
 					end
@@ -6372,14 +6372,14 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 			fx.pos = v(b.to.x, b.to.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			local fx = E:create_entity(this.missed_arrow_dust)
 
 			fx.pos = v(b.to.x, b.to.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			local fx = E:create_entity(this.missed_arrow)
 
@@ -6387,7 +6387,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].flip_x = b.to.x > b.from.x
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 	end
 
@@ -6423,7 +6423,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 			end
 
 			if source and not store.entities[source.id] then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				break
 			end
@@ -6441,7 +6441,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 	else
 		while not U.animation_finished_default(this) do
 			if source and not store.entities[source.id] then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				break
 			end
@@ -6456,7 +6456,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.controller_tower_dark_elf_soldiers = {}
@@ -6519,7 +6519,7 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 					s.melee.attacks[2].damage_max = power_data.damage_max[this.pow_level]
 					s.dodge.chance = power_data.dodge_chance[this.pow_level]
 
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 
 					b.soldiers[i] = s
 					check_soldiers_ts = store.tick_ts
@@ -6557,7 +6557,7 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.controller_tower_dark_elf_soldiers.remove(this, store)
@@ -6593,7 +6593,7 @@ function scripts.mod_tower_dark_elf_skill_buff.remove(this, store)
 	bullet.bullet.target_id = this.tower_id
 	bullet.bullet.source_id = this.modifier.source_id
 
-	queue_insert(store, bullet)
+	simulation:queue_insert_entity(bullet)
 
 	return true
 end
@@ -6623,7 +6623,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.insert(this, store)
 		new_bullet.bullet.target_id = other_tower.id
 		new_bullet._parent = false
 
-		queue_insert(store, new_bullet)
+		simulation:queue_insert_entity(new_bullet)
 	end
 
 	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
@@ -6649,7 +6649,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 		ps = E:create_entity(b.particles_name)
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	U.y_animation_play(this, "soul_start", nil, store.tick_ts, 1)
@@ -6728,7 +6728,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 	local tower = store.entities[b.target_id]
 
 	if not tower then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -6773,7 +6773,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 				m.modifier.target_id = b.target_id
 				m.modifier.level = b.level
 
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 
@@ -6782,7 +6782,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 
 			hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
 
-			queue_insert(store, hp)
+			simulation:queue_insert_entity(hp)
 		end
 	end
 
@@ -6791,7 +6791,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 
 		hp.pos.x, hp.pos.y = b.to.x, b.to.y
 
-		queue_insert(store, hp)
+		simulation:queue_insert_entity(hp)
 	end
 
 	if b.hit_fx then
@@ -6804,10 +6804,10 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
 		end
 
-		queue_insert(store, sfx)
+		simulation:queue_insert_entity(sfx)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 暮光长弓_END
@@ -6842,7 +6842,7 @@ function scripts.tower_demon_pit.update(this, store)
 		b.bullet.source_id = this.id
 		b.bullet.damage_factor = this.tower.damage_factor
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 
 		return b
 	end
@@ -6920,7 +6920,7 @@ function scripts.tower_demon_pit.update(this, store)
 						d.render.sprites[1].name = this.animation_reload
 						d.pos = vclone(this.pos)
 
-						queue_insert(store, d)
+						simulation:queue_insert_entity(d)
 						U.y_animation_wait_default(d)
 						animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.demons_sid)
 						y_animation_wait(this, this.demons_sid)
@@ -6967,7 +6967,7 @@ function scripts.decal_tower_demon_pit_reload.update(this, store)
 
 	this.render.sprites[1].hidden = true
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.soldier_tower_demon_pit = {}
@@ -7008,7 +7008,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 				m.modifier.target_id = target.id
 				m.modifier.duration = this.explosion_mod_stun_duration[this.level]
 
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 
 				if pow_master_exploders then
 					m = E:create_entity(pow_master_exploders.mod)
@@ -7019,7 +7019,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 					m.dps.damage_min = pow_master_exploders.burning_damage_min[pow_master_exploders.level]
 					m.dps.damage_max = pow_master_exploders.burning_damage_max[pow_master_exploders.level]
 
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 		end
@@ -7090,9 +7090,9 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 			decal.pos = vclone(this.pos)
 			decal.tween.ts = store.tick_ts
 
-			queue_insert(store, decal)
+			simulation:queue_insert_entity(decal)
 			U.y_animation_wait_default(this)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -7194,10 +7194,10 @@ function scripts.projecticle_big_guy_tower_demon_pit.update(this, store)
 			hp.aura.level = this.bullet.level
 		end
 
-		queue_insert(store, hp)
+		simulation:queue_insert_entity(hp)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.big_guy_tower_demon_pit = {}
@@ -7281,8 +7281,8 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 			S:queue(this.explosion_sound)
 			explosion(this.explosion_range[this.level], this.explosion_damage[this.level] * this.unit.damage_factor, this.explosion_damage_type)
 			U.y_animation_wait_default(this)
-			queue_remove(store, this)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -7413,7 +7413,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 			debuff_aura.aura.level = power.level
 			debuff_aura.aura.source_id = this.id
 
-			queue_insert(store, debuff_aura)
+			simulation:queue_insert_entity(debuff_aura)
 			y_animation_wait(this, this.render.sid_mage)
 
 			attack.ts = start_ts
@@ -7452,7 +7452,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 		rider.aura.level = power.level
 		rider.path_id = enemy.nav_path.pi
 
-		queue_insert(store, rider)
+		simulation:queue_insert_entity(rider)
 		attack.ts = start_ts
 
 		y_animation_wait(this, this.render.sid_mage)
@@ -7578,7 +7578,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 						b.render.sprites[1].draw_order = 2
 					end
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 
 					this.tower_upgrade_persistent_data.current_skulls = this.tower_upgrade_persistent_data.current_skulls + 1
 					this.tower_upgrade_persistent_data.skulls_ref[this.tower_upgrade_persistent_data.current_skulls] = b
@@ -7599,7 +7599,7 @@ function scripts.tower_necromancer_lvl4.remove(this, store)
 	if this.tower_upgrade_persistent_data.skulls_ref then
 		for _, skull in pairs(this.tower_upgrade_persistent_data.skulls_ref) do
 			if skull then
-				queue_remove(store, skull)
+				simulation:queue_remove_entity(skull)
 			end
 		end
 		this.tower_upgrade_persistent_data.current_skulls = 0
@@ -7673,7 +7673,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 	local recalculate_spawn_pos = false
 
 	if not this.source then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -7747,7 +7747,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 		ps.particle_system.emit = true
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	local iix, iiy = V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y)
@@ -7796,7 +7796,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 				mod.modifier.damage_factor = b.damage_factor
 				mod.modifier.source_id = this.source.id
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 			end
 		elseif b.mod then
 			local mod = E:create_entity(b.mod)
@@ -7805,7 +7805,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 			mod.modifier.damage_factor = b.damage_factor
 			mod.modifier.source_id = this.source.id
 
-			queue_insert(store, mod)
+			simulation:queue_insert_entity(mod)
 		end
 
 		local d = SU.create_bullet_damage(b, target.id, this.id)
@@ -7826,7 +7826,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 
 	this.render.sprites[1].hidden = true
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 	coroutine.yield()
 end
 
@@ -7889,7 +7889,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 		ps.particle_system.emit = true
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	local iix, iiy = V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y)
@@ -7945,7 +7945,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 				mod.modifier.damage_factor = b.damage_factor
 				mod.modifier.source_id = this.id
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 			end
 		elseif b.mod then
 			local mod = E:create_entity(b.mod)
@@ -7954,7 +7954,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 			mod.modifier.damage_factor = b.damage_factor
 			mod.modifier.source_id = this.id
 
-			queue_insert(store, mod)
+			simulation:queue_insert_entity(mod)
 		end
 
 		local d = SU.create_bullet_damage(b, target.id, this.id)
@@ -7975,7 +7975,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 
 	this.render.sprites[1].hidden = true
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 
 	return
 end
@@ -8077,7 +8077,7 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 
 				s.unit.damage_factor = s.unit.damage_factor * m.damage_factor
 
-				queue_insert(store, s)
+				simulation:queue_insert_entity(s)
 			end
 
 			local bullet = E:create_entity("bullet_tower_necromancer_deathspawn")
@@ -8089,7 +8089,7 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 			b.to = vclone(bullet.pos)
 			b.damage_factor = m.damage_factor
 
-			queue_insert(store, bullet)
+			simulation:queue_insert_entity(bullet)
 		else
 			target._necromancer_entity_name = nil
 
@@ -8154,7 +8154,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 			this.source_necromancer.tower_upgrade_persistent_data.current_skeletons = this.source_necromancer.tower_upgrade_persistent_data.current_skeletons + 1
 		end
 	else
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -8186,7 +8186,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 				this.source_necromancer.tower_upgrade_persistent_data.current_skeletons = this.source_necromancer.tower_upgrade_persistent_data.current_skeletons - 1
 			end
 
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -8202,7 +8202,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 	spawn_fx.pos = vclone(this.pos)
 	spawn_fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, spawn_fx)
+	simulation:queue_insert_entity(spawn_fx)
 	U.y_wait_unconditional(store, fts(this.spawn_fx_delay))
 	S:queue(this.spawn_sound)
 	U.y_animation_play(this, "spawn", nil, store.tick_ts, 1)
@@ -8246,7 +8246,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 			end
 
 			table.removeobject(this.source_necromancer.tower_upgrade_persistent_data.skeletons_ref, this)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -8369,7 +8369,7 @@ function scripts.aura_tower_necromancer_skill_debuff.update(this, store)
 							new_mod.render = nil
 						end
 
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 					end
 				end
 			end
@@ -8396,7 +8396,7 @@ function scripts.aura_tower_necromancer_skill_debuff.update(this, store)
 						new_mod.render = nil
 					end
 
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 		end
@@ -8412,7 +8412,7 @@ function scripts.aura_tower_necromancer_skill_debuff.update(this, store)
 	this.tween.props[1].ts = store.tick_ts
 
 	U.y_animation_play(this, "end", nil, store.tick_ts, 1, sid_totem)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.aura_tower_necromancer_skill_rider = {}
@@ -8502,7 +8502,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 					hit_fx.pos.x, hit_fx.pos.y = hit_fx.pos.x + target.unit.hit_offset.x, hit_fx.pos.y + target.unit.hit_offset.y
 					hit_fx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, hit_fx)
+					simulation:queue_insert_entity(hit_fx)
 
 					local new_mod = E:create_entity(this.aura.mod)
 
@@ -8513,7 +8513,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 						new_mod.render = nil
 					end
 
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 		end
@@ -8537,14 +8537,14 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 	psA.particle_system.track_id = this.id
 	psA.particle_system.emit = true
 
-	queue_insert(store, psA)
+	simulation:queue_insert_entity(psA)
 
 	local psB = E:create_entity(this.particles_name_B)
 
 	psB.particle_system.track_id = this.id
 	psB.particle_system.emit = true
 
-	queue_insert(store, psB)
+	simulation:queue_insert_entity(psB)
 
 	local function rider_go_back_step()
 		if V.veq(this.pos, target_pos) then
@@ -8594,7 +8594,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 			hit_fx.render.sprites[1].ts = store.tick_ts
 			hit_fx.render.sprites[1].flip_x = af
 
-			queue_insert(store, hit_fx)
+			simulation:queue_insert_entity(hit_fx)
 
 			spawned_fx = true
 		end
@@ -8677,7 +8677,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_tower_necromancer_skill_debuff = {}
@@ -8702,7 +8702,7 @@ function scripts.mod_tower_necromancer_skill_debuff.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target or not target.pos then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -8738,7 +8738,7 @@ function scripts.mod_tower_necromancer_skill_debuff.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.mod_tower_necromancer_skill_debuff.remove(this, store)
@@ -9011,7 +9011,7 @@ function scripts.tower_pandas.update(this, store)
 			smoke.render.sprites[1].offset = vclone(this.render.sprites[sid].offset)
 			smoke.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, smoke)
+			simulation:queue_insert_entity(smoke)
 			animation_start(this, "spawn_end", nil, store.tick_ts, false, sid)
 		end
 
@@ -9109,7 +9109,7 @@ function scripts.tower_pandas.update(this, store)
 				s.nav_rally.new = true
 
 				SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-				queue_insert(store, s)
+				simulation:queue_insert_entity(s)
 
 				b.soldiers[#b.soldiers + 1] = s
 
@@ -9126,7 +9126,7 @@ function scripts.tower_pandas.update(this, store)
 				bullet.bullet.source_id = this.id
 				bullet.destroy_if_tower_upgraded = true
 
-				queue_insert(store, bullet)
+				simulation:queue_insert_entity(bullet)
 				coroutine.yield()
 
 				panda.in_animation = false
@@ -9197,7 +9197,7 @@ function scripts.tower_pandas.update(this, store)
 						bullet.bullet.flight_time = bullet.bullet.flight_time_min + dist / at.range * bullet.bullet.flight_time_factor
 					end
 
-					queue_insert(store, bullet)
+					simulation:queue_insert_entity(bullet)
 				end
 
 				panda.shoot_cfg = nil
@@ -9356,7 +9356,7 @@ function scripts.tower_pandas.remove(this, store)
 	-- 		fx.render.sprites[1].flip_x = random() > 0.5
 	-- 		fx.render.sprites[1].ts = store.tick_ts
 
-	-- 		queue_insert(store, fx)
+	-- 		simulation:queue_insert_entity(fx)
 	-- 	end
 	-- end
 
@@ -9391,7 +9391,7 @@ function scripts.bullet_tower_pandas_spawn_soldier.update(this, store)
 		local source_tower = store.entities[b.source_id]
 
 		if not source_tower then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 		end
 	end
 
@@ -9402,7 +9402,7 @@ function scripts.bullet_tower_pandas_spawn_soldier.update(this, store)
 		t.bullet_arrived = true
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.tower_pandas_ray = {}
@@ -9514,7 +9514,7 @@ function scripts.tower_pandas_ray.update(this, store)
 			end
 
 			table.insert(mods_added, m)
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 	end
 
@@ -9540,7 +9540,7 @@ function scripts.tower_pandas_ray.update(this, store)
 			hp.pos.x, hp.pos.y = dest.x, dest.y
 		end
 
-		queue_insert(store, hp)
+		simulation:queue_insert_entity(hp)
 	end
 
 	local disable_hit = false
@@ -9569,7 +9569,7 @@ function scripts.tower_pandas_ray.update(this, store)
 			fxs.r = s.r + math.rad(90)
 			fxs.sort_y_offset = this.pos.y - fx.pos.y - 10
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 	end
 
@@ -9580,14 +9580,14 @@ function scripts.tower_pandas_ray.update(this, store)
 			end
 
 			if tower and not store.entities[tower.id] then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				if fx then
-					queue_remove(store, fx)
+					simulation:queue_remove_entity(fx)
 				end
 
 				for key, value in pairs(mods_added) do
-					queue_remove(store, value)
+					simulation:queue_remove_entity(value)
 				end
 
 				break
@@ -9600,7 +9600,7 @@ function scripts.tower_pandas_ray.update(this, store)
 	else
 		while not U.animation_finished_default(this) do
 			if tower and not store.entities[tower.id] then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				break
 			end
@@ -9609,7 +9609,7 @@ function scripts.tower_pandas_ray.update(this, store)
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bullet_tower_pandas_air = {}
@@ -9631,7 +9631,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 		ps = E:create_entity(b.particles_name)
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	::label_1243_0::
@@ -9741,7 +9741,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 				m.modifier.level = b.level
 				m.modifier.damage_factor = b.damage_factor
 
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 
@@ -9750,7 +9750,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 
 			hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
 
-			queue_insert(store, hp)
+			simulation:queue_insert_entity(hp)
 		end
 	end
 
@@ -9759,7 +9759,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 
 		hp.pos.x, hp.pos.y = b.to.x, b.to.y
 
-		queue_insert(store, hp)
+		simulation:queue_insert_entity(hp)
 	end
 
 	if b.hit_fx then
@@ -9773,7 +9773,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
 		end
 
-		queue_insert(store, sfx)
+		simulation:queue_insert_entity(sfx)
 	end
 
 	if this.bounces < this.max_bounces[b.level] then
@@ -9807,7 +9807,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.soldier_tower_pandas = {}
@@ -9848,7 +9848,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 		smoke.pos = vclone(this.pos)
 		smoke.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, smoke)
+		simulation:queue_insert_entity(smoke)
 	end
 
 	U.y_animation_play(this, "scape_end", nil, store.tick_ts, 1)
@@ -10075,7 +10075,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 
 							fx.render.sprites[1].ts = store.tick_ts
 
-							queue_insert(store, fx)
+							simulation:queue_insert_entity(fx)
 
 							if shoot_index == 2 then
 								local affected = U.find_enemies_in_range_filter_off(crowded_pos, a_i.damage_area, a_i.vis_flags, a_i.vis_bans)
@@ -10094,7 +10094,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 											mod.modifier.source_id = this.id
 											mod.modifier.damage_factor = this.unit.damage_factor
 
-											queue_insert(store, mod)
+											simulation:queue_insert_entity(mod)
 										end
 									end
 								end
@@ -10136,7 +10136,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 						decal.pos = vclone(this.pos)
 						decal.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, decal)
+						simulation:queue_insert_entity(decal)
 
 						for i = 1, num_targets do
 							local t = targets[i]
@@ -10156,7 +10156,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 							mod_teleport.delay_end = random_float(fts(2), fts(5))
 							mod_teleport.begin_wait = random_float(0, 0.2)
 
-							queue_insert(store, mod_teleport)
+							simulation:queue_insert_entity(mod_teleport)
 						end
 
 						U.y_animation_wait_default(this)
@@ -10304,7 +10304,7 @@ function scripts.tower_ray.update(this, store)
 						shock_fx.render.sprites[1].ts = store.tick_ts
 						shock_fx.tower_id = this.id
 
-						queue_insert(store, shock_fx)
+						simulation:queue_insert_entity(shock_fx)
 						U.animation_start_default(shock_fx, "idle", nil, store.tick_ts, true)
 					end
 				end
@@ -10374,7 +10374,7 @@ function scripts.tower_ray.update(this, store)
 								fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
 								fx.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, fx)
+								simulation:queue_insert_entity(fx)
 							end
 
 							enemy_id = ray_wait_retarget(fts(1) * this.tower.cooldown_factor, aa, enemy_id)
@@ -10401,7 +10401,7 @@ function scripts.tower_ray.update(this, store)
 							b.tower_ref = this
 							b.pred_pos = vclone(pred_pos)
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 
 							::label_989_0::
 
@@ -10449,7 +10449,7 @@ function scripts.tower_ray.update(this, store)
 								fx.pos = vclone(tpos(this))
 								fx.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, fx)
+								simulation:queue_insert_entity(fx)
 							end
 
 							enemy_id = ray_wait_retarget(fts(4) * this.tower.cooldown_factor, aa, enemy_id)
@@ -10487,7 +10487,7 @@ function scripts.tower_ray.update(this, store)
 								fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
 								fx.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, fx)
+								simulation:queue_insert_entity(fx)
 							end
 
 							if b.bullet.out_fx then
@@ -10496,7 +10496,7 @@ function scripts.tower_ray.update(this, store)
 								fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
 								fx.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, fx)
+								simulation:queue_insert_entity(fx)
 
 								this.ray_fx_start = fx
 							end
@@ -10542,7 +10542,7 @@ function scripts.tower_ray.update(this, store)
 								b.damage_mult = tonumber(ac.damage_mult) or 1
 							end
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 
 							while store.tick_ts - last_ts < aa.duration * this.tower.cooldown_factor + aa.shoot_time and b and not b.force_stop_ray and not this.tower.blocked do
 								if ray_target_invalid(store, enemy_id) then
@@ -10561,7 +10561,7 @@ function scripts.tower_ray.update(this, store)
 									fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
 									fx.render.sprites[1].ts = store.tick_ts
 
-									queue_insert(store, fx)
+									simulation:queue_insert_entity(fx)
 
 									last_fx = store.tick_ts
 								end
@@ -10582,7 +10582,7 @@ function scripts.tower_ray.update(this, store)
 							aa.ts = last_ts
 
 							if this.ray_fx_start then
-								queue_remove(store, this.ray_fx_start)
+								simulation:queue_remove_entity(this.ray_fx_start)
 
 								this.ray_fx_start = nil
 							end
@@ -10651,7 +10651,7 @@ end
 
 function scripts.tower_ray.remove(this, store)
 	if this.ray_fx_start then
-		queue_remove(store, this.ray_fx_start)
+		simulation:queue_remove_entity(this.ray_fx_start)
 	end
 
 	return true
@@ -10703,7 +10703,7 @@ function scripts.fx_tower_ray_lvl4_shock.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_tower_ray_damage = {}
@@ -10716,7 +10716,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target or not target.health or target.health.dead then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -10929,7 +10929,7 @@ function scripts.bullet_tower_ray.update(this, store)
 			end
 
 			table.insert(mods_added, m)
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 
 			if this.mod_start_ts then
 				m.forced_start_ts = this.mod_start_ts
@@ -10958,7 +10958,7 @@ function scripts.bullet_tower_ray.update(this, store)
 
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	local start_ts = store.tick_ts
@@ -10976,7 +10976,7 @@ function scripts.bullet_tower_ray.update(this, store)
 		explosion_fx.pos = hit_pos
 		explosion_fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, explosion_fx)
+		simulation:queue_insert_entity(explosion_fx)
 
 		local explosion_targets = U.find_enemies_in_range_filter_off(explosion_fx.pos, this.explosion_radius, F_AREA, F_NONE)
 
@@ -11038,7 +11038,7 @@ function scripts.bullet_tower_ray.update(this, store)
 				chain.bullet.cooldown_factor = b.cooldown_factor
 				chain.damage_mult = this.damage_mult
 
-				queue_insert(store, chain)
+				simulation:queue_insert_entity(chain)
 
 				this.next_in_chain = chain
 
@@ -11110,13 +11110,13 @@ function scripts.bullet_tower_ray.update(this, store)
 	end
 
 	if fx then
-		queue_remove(store, fx)
+		simulation:queue_remove_entity(fx)
 	end
 
 	for key, value in pairs(mods_added) do
 		if not value.dps or not tower or this.force_stop_ray then
 			if store.entities[value.id] then
-				queue_remove(store, value)
+				simulation:queue_remove_entity(value)
 			end
 		end
 	end
@@ -11145,7 +11145,7 @@ function scripts.bullet_tower_ray.update(this, store)
 
 	this.render.sprites[1].hidden = true
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bullet_tower_ray_sheep = {}
@@ -11182,7 +11182,7 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
 		ps.particle_system.emit = true
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	local iix, iiy = V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y)
@@ -11240,12 +11240,12 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
 		sheep.health.hp = target.health.hp * this.sheep_hp_mult
 		sheep.health.patched = true
 
-		queue_insert(store, sheep)
+		simulation:queue_insert_entity(sheep)
 
 		target.trigger_deselect = true
 		target.gold = 0
 
-		queue_remove(store, target)
+		simulation:queue_remove_entity(target)
 		S:queue(this.hit_sound)
 	end
 
@@ -11255,14 +11255,14 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
 		fx.pos = vclone(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	if ps and ps.particle_system.emit then
 		ps.particle_system.emit = false
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 	coroutine.yield()
 end
 
@@ -11324,7 +11324,7 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
 				b.bullet.level = pow_s.level
 				b.bullet.damage_factor = factor * this.tower.damage_factor
 
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 			end
 		end
 	end
@@ -11434,7 +11434,7 @@ function scripts.tower_stargazers.update(this, store)
 								m.modifier.damage_factor = tw.damage_factor
 								m.modifier.level = pow_s.level
 
-								queue_insert(store, m)
+								simulation:queue_insert_entity(m)
 							end
 						else
 							bullet.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
@@ -11454,7 +11454,7 @@ function scripts.tower_stargazers.update(this, store)
 						bullet.pos = vclone(bullet.bullet.from)
 						bullet.bullet.level = this.tower.level
 
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 						U.y_wait_unconditional(store, ray_timing * tw.cooldown_factor)
 					end
 
@@ -11518,7 +11518,7 @@ function scripts.tower_stargazers.update(this, store)
 						m.modifier.target_id = enemy.id
 						m.modifier.source_id = this.id
 
-						queue_insert(store, m)
+						simulation:queue_insert_entity(m)
 
 						local fx_size
 
@@ -11534,7 +11534,7 @@ function scripts.tower_stargazers.update(this, store)
 						fx.pos.y = enemy.pos.y + enemy.unit.mod_offset.y
 						fx.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 						scripts.tower_stargazers.create_star_death(this, store, enemy, 0.25)
 					end
 
@@ -11544,7 +11544,7 @@ function scripts.tower_stargazers.update(this, store)
 					fx.pos.y = middle.y
 					fx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 					U.y_wait_unconditional(store, 0.2 * tw.cooldown_factor)
 
 					for i = 1, count do
@@ -11585,7 +11585,7 @@ function scripts.tower_stargazers.update(this, store)
 					end
 
 					U.y_wait_unconditional(store, 0.5 * tw.cooldown_factor)
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 					S:queue(at.sound_teleport_in)
 					U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
 					animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
@@ -11627,7 +11627,7 @@ function scripts.tower_stargazers.update(this, store)
 						fx.pos.y = enemy.pos.y + enemy.unit.mod_offset.y
 						fx.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 						scripts.tower_stargazers.create_star_death(this, store, enemy, 0.25)
 					end
 
@@ -11690,7 +11690,7 @@ function scripts.tower_stargazers.remove(this, store)
 			fx.pos.y = enemy.pos.y + enemy.unit.mod_offset.y
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 	end
 
@@ -11704,7 +11704,7 @@ function scripts.mod_ray_stargazers.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target or not target.health or target.health.dead then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -11732,7 +11732,7 @@ function scripts.mod_ray_stargazers.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_stargazers_stars_death = {}
@@ -11748,7 +11748,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 	local duration = this.modifier.duration
 
 	if not target or not target.health or target.health.dead then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -11766,7 +11766,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 		b.bullet.level = level
 		b.bullet.damage_factor = m.damage_factor
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	while true do
@@ -11791,7 +11791,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 观星 END
@@ -11855,7 +11855,7 @@ function scripts.tower_sand.update(this, store)
 		apply_precision(b)
 		b.bounces = 0
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	for idx, ssid in ipairs(shooter_sids) do
@@ -11902,7 +11902,7 @@ function scripts.tower_sand.update(this, store)
 						c.target_node = nearest_nodes[1]
 						c.tower_ref = this
 
-						queue_insert(store, c)
+						simulation:queue_insert_entity(c)
 					end
 				end
 			end
@@ -11972,7 +11972,7 @@ function scripts.bullet_tower_sand.update(this, store)
 		ps = E:create_entity(b.particles_name)
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	if b.damage_min_config then
@@ -12022,7 +12022,7 @@ function scripts.bullet_tower_sand.update(this, store)
 				m.modifier.damage_factor = b.damage_factor
 				m.modifier.level = b.level
 
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 
@@ -12041,7 +12041,7 @@ function scripts.bullet_tower_sand.update(this, store)
 			sfx.pos = vclone(b.to)
 			sfx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, sfx)
+			simulation:queue_insert_entity(sfx)
 
 			store.player_gold = store.player_gold + this.gold_extra[skill_level]
 		end
@@ -12053,7 +12053,7 @@ function scripts.bullet_tower_sand.update(this, store)
 		sfx.pos = vclone(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, sfx)
+		simulation:queue_insert_entity(sfx)
 	end
 
 	S:queue(this.sound)
@@ -12102,7 +12102,7 @@ function scripts.bullet_tower_sand.update(this, store)
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.controller_tower_sand_lvl4_skill_big_blade = {}
@@ -12125,7 +12125,7 @@ function scripts.controller_tower_sand_lvl4_skill_big_blade.update(this, store)
 		b.aura.damage_max = this.tower_ref.powers.skill_big_blade.damage_max[b.aura.level]
 		b.aura.duration = this.tower_ref.powers.skill_big_blade.duration[b.aura.level]
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local pi, _, ni = unpack(this.target_node)
@@ -12136,7 +12136,7 @@ function scripts.controller_tower_sand_lvl4_skill_big_blade.update(this, store)
 	shoot_big_blade(1, pos1)
 	U.y_wait_unconditional(store, bba.shoot_time[2] - bba.shoot_time[1])
 	shoot_big_blade(2, pos2)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.aura_tower_sand_skill_big_blade = {}
@@ -12160,7 +12160,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 
 	ps.particle_system.track_id = this.id
 
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	local vx, vy = V.normalize(this.dest_pos.x - this.pos.x, this.dest_pos.y - this.pos.y)
@@ -12219,7 +12219,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 					fx.pos.x, fx.pos.y = fx.pos.x + target.unit.hit_offset.x, fx.pos.y + target.unit.hit_offset.y
 					fx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 
 					local mods = this.aura.mods or {this.aura.mod}
 
@@ -12234,7 +12234,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 							new_mod.render = nil
 						end
 
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 
 						victims_count = victims_count + 1
 					end
@@ -12250,7 +12250,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 	this.render.sprites[1].prefix = "tower_sand_lvl4_skill_2_decal"
 
 	U.y_animation_play(this, "out", nil, store.tick_ts)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 沙丘哨兵 END
@@ -12386,7 +12386,7 @@ function scripts.tower_royal_archers.update(this, store)
 							bl.flight_time = bl.flight_time + arrow_number * fts(6)
 							apply_precision(b)
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 							U.y_wait_unconditional(store, ap.time_between_arrows * tw.cooldown_factor)
 
 							arrow_number = arrow_number + 1
@@ -12440,7 +12440,7 @@ function scripts.tower_royal_archers.update(this, store)
 						bl.damage_factor = tw.damage_factor
 						bl.flight_time = 2 * (math.sqrt(2 * bl.fixed_height * bl.g * -1) / bl.g * -1)
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						y_animation_wait(this, shooter_sid)
 					end
 				end
@@ -12495,14 +12495,14 @@ function scripts.tower_royal_archers.update(this, store)
 					s.level = pow_r.level
 					this.rapacious_hunter_tamer = s
 
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 
 					local fx = E:create_entity(pow_r.purchase_fx)
 
 					fx.pos = s.pos
 					fx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 				else
 					this.rapacious_hunter_tamer.level = pow_r.level
 					this.rapacious_hunter_tamer.attacks.list[1].range = pow_r.range_config[pow_r.level]
@@ -12523,12 +12523,12 @@ end
 
 function scripts.tower_royal_archers.remove(this, store)
 	if this.rapacious_hunter_tamer then
-		queue_remove(store, this.rapacious_hunter_tamer)
+		simulation:queue_remove_entity(this.rapacious_hunter_tamer)
 
 		local eagle = this.rapacious_hunter_tamer.entity_spawned
 
 		if eagle then
-			queue_remove(store, eagle)
+			simulation:queue_remove_entity(eagle)
 		end
 
 		this.rapacious_hunter_tamer = nil
@@ -12585,7 +12585,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer.update(this, sto
 				mark_mod.modifier.target_id = enemy.id
 				mark_mod.modifier.duration = ab.mark_mod_duration
 
-				queue_insert(store, mark_mod)
+				simulation:queue_insert_entity(mark_mod)
 				U.animation_start_default(this, ab.animation, nil, store.tick_ts, false)
 
 				while store.tick_ts - ab.ts < ab.cast_time do
@@ -12601,7 +12601,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer.update(this, sto
 				p.pos.x, p.pos.y = V.add(this.pos.x, this.pos.y, p.owner_offset.x, p.owner_offset.y)
 				this.entity_spawned = p
 
-				queue_insert(store, p)
+				simulation:queue_insert_entity(p)
 
 				ab.ts = store.tick_ts
 
@@ -12673,7 +12673,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 				this.tween.reverse = true
 
 				U.y_wait_unconditional(store, this.tween.props[1].keys[2][1])
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 			end
 
 			local tx, ty = destination.x, destination.y
@@ -12691,7 +12691,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 
 		this.return_to_owner = true
 
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 
 	while true do
@@ -12721,7 +12721,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 				mark_mod.modifier.target_id = target.id
 				mark_mod.modifier.duration = tamer_attack.mark_mod_duration
 
-				queue_insert(store, mark_mod)
+				simulation:queue_insert_entity(mark_mod)
 
 				this.mark_mod = mark_mod
 			else
@@ -12752,7 +12752,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 			trail.particle_system.emit = true
 			trail.particle_system.track_offset = sf.offset
 
-			queue_insert(store, trail)
+			simulation:queue_insert_entity(trail)
 			S:queue(this.sound_events.descend)
 			U.y_animation_play(this, "projectile", nil, store.tick_ts, 1)
 
@@ -12791,7 +12791,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 			end
 
 			if target and target.health.dead then
-				queue_remove(store, trail)
+				simulation:queue_remove_entity(trail)
 
 				ca.ts = store.tick_ts
 			else
@@ -12811,12 +12811,12 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 				fx.render.sprites[1].offset = v(0, target_h)
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 
 				shots = shots + 1
 				flip_multiplier = flip_multiplier * -1
 
-				queue_remove(store, trail)
+				simulation:queue_remove_entity(trail)
 				U.y_animation_play(this, "attack_out", nil, store.tick_ts, 1)
 
 				ca.ts = store.tick_ts
@@ -12854,7 +12854,7 @@ end
 
 function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.remove(this, store)
 	if this.mark_mod then
-		queue_remove(store, this.mark_mod)
+		simulation:queue_remove_entity(this.mark_mod)
 	end
 
 	return true
@@ -12896,7 +12896,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update(
 	local target = store.entities[m.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -12915,7 +12915,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update(
 			this.tween.props[2].disabled = nil
 			this.tween.props[2].ts = store.tick_ts
 
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -12994,13 +12994,13 @@ function scripts.tower_arcane_wizard5.update(this, store)
 						decal.pos = target.pos
 						decal.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, decal)
+						simulation:queue_insert_entity(decal)
 						table.insert(this.empowerments_previews, decal)
 					end
 				end
 			elseif this.empowerments_previews and (not this.ui.hover_active or this.ui.args ~= "empowerment") then
 				for _, decal in ipairs(this.empowerments_previews) do
-					queue_remove(store, decal)
+					simulation:queue_remove_entity(decal)
 				end
 
 				this.empowerments_previews = nil
@@ -13041,7 +13041,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 						mark_mod.modifier.source_id = this.id
 						mark_mod.modifier.target_id = tower.id
 
-						queue_insert(store, mark_mod)
+						simulation:queue_insert_entity(mark_mod)
 
 						local _, mods = U.has_modifiers(store, tower, ae.mod)
 						local max_factor = 1
@@ -13066,7 +13066,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 						m.damage_factor = pow_e.damage_factor[pow_e.level]
 						m.modifier.damage_factor = m.damage_factor
 
-						queue_insert(store, m)
+						simulation:queue_insert_entity(m)
 
 						m = E:create_entity(ae.mod_fx)
 						m.modifier.source_id = this.id
@@ -13074,7 +13074,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 						m.modifier.level = pow_e.level
 						m.pos.x, m.pos.y = tower.pos.x, tower.pos.y
 
-						queue_insert(store, m)
+						simulation:queue_insert_entity(m)
 					end
 
 					ae.ts = start_ts
@@ -13122,7 +13122,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 					fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
 					fx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 
 					this.ray_fx_start = fx
 
@@ -13149,7 +13149,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 							b.tower_ref = this
 							b.bullet.level = pow_d.level
 
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 						end
 						ad.ts = last_ts
 					else
@@ -13191,7 +13191,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 						fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
 						fx.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 
 						this.ray_fx_start = fx
 					end
@@ -13213,7 +13213,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 					b.tower_ref = this
 					b.bullet.level = tw.level
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 					U.y_animation_wait_group(this, "layers")
 
 					goto label_792_0
@@ -13234,7 +13234,7 @@ end
 
 function scripts.tower_arcane_wizard5.remove(this, store)
 	if this.ray_fx_start then
-		queue_remove(store, this.ray_fx_start)
+		simulation:queue_remove_entity(this.ray_fx_start)
 	end
 
 	local ae = this.attacks.list[3]
@@ -13262,7 +13262,7 @@ function scripts.tower_arcane_wizard5.remove(this, store)
 
 	if this.empowerments_previews then
 		for _, decal in ipairs(this.empowerments_previews) do
-			queue_remove(store, decal)
+			simulation:queue_remove_entity(decal)
 		end
 
 		this.empowerments_previews = nil
@@ -13291,7 +13291,7 @@ function scripts.mod_tower_arcane_wizard_power_empowerment.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.mod_tower_arcane_wizard_power_empowerment.remove(this, store)
@@ -13326,7 +13326,7 @@ function scripts.tower_arcane_wizard_power_empowerment_mark_mod.update(this, sto
 		local target = store.entities[m.target_id]
 
 		if not target or m.duration >= 0 and store.tick_ts - m.ts > m.duration or not store.entities[this.modifier.source_id] or store.entities[this.modifier.source_id].pending_removal then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -13370,7 +13370,7 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 五代奥术 END
@@ -13492,7 +13492,7 @@ function scripts.tower_rocket_gunners.update(this, store)
 
 					s.spawned_from_tower = true
 
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 
 					b.soldiers[i] = s
 
@@ -13539,7 +13539,7 @@ local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, targe
 		local mod = E:create_entity("mod_soldier_tower_rocket_gunners_phosphoric_slow")
 		mod.modifier.source_id = soldier.id
 		mod.modifier.target_id = enemy.id
-		queue_insert(store, mod)
+		simulation:queue_insert_entity(mod)
 	end
 end
 
@@ -13635,7 +13635,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 				this.shadow_decal.soldier_height = this.flight_height
 				this.shadow_decal.entity = this
 
-				queue_insert(store, this.shadow_decal)
+				simulation:queue_insert_entity(this.shadow_decal)
 
 				local dest = vclone(r.pos)
 
@@ -13657,7 +13657,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 				fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 
 				while not this.motion.arrived do
 					adjust_height()
@@ -13774,7 +13774,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 		land_fx.render.sprites[1].ts = store.tick_ts
 		land_fx.pos = this.pos
 
-		queue_insert(store, land_fx)
+		simulation:queue_insert_entity(land_fx)
 		S:queue(this.sound_take_off)
 		U.y_animation_play(this, "take_off", nil, store.tick_ts, 1)
 		U.animation_start_default(this, "idle_air", nil, store.tick_ts, true)
@@ -13832,7 +13832,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 				land_fx.render.sprites[1].ts = store.tick_ts
 				land_fx.pos = this.pos
 
-				queue_insert(store, land_fx)
+				simulation:queue_insert_entity(land_fx)
 			end
 
 			coroutine.yield()
@@ -13952,7 +13952,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 		this.shadow_decal.soldier_height = this.flight_height
 		this.shadow_decal.entity = this
 
-		queue_insert(store, this.shadow_decal)
+		simulation:queue_insert_entity(this.shadow_decal)
 
 		if this.current_mode == MODE_FLY then
 			U.animation_start_default(this, "idle_air", nil, store.tick_ts, true)
@@ -14144,14 +14144,14 @@ function scripts.bullet_soldier_tower_rocket_gunners.update(this, store)
 			fx.pos = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		else
 			local fx = E:create_entity(b.hit_fx)
 
 			fx.pos = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			if band(target.vis.flags, F_CLIFF) == 0 then
 				local fx = E:create_entity(b.floor_fx)
@@ -14159,12 +14159,12 @@ function scripts.bullet_soldier_tower_rocket_gunners.update(this, store)
 				fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bullet_soldier_tower_rocket_gunners_phosphoric = {}
@@ -14260,14 +14260,14 @@ function scripts.bullet_soldier_tower_rocket_gunners_phosphoric.update(this, sto
 			fx.pos = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		else
 			local fx = E:create_entity(b.hit_fx)
 
 			fx.pos = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			if band(target.vis.flags, F_CLIFF) == 0 then
 				local fx = E:create_entity(b.floor_fx)
@@ -14275,7 +14275,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_phosphoric.update(this, sto
 				fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 		end
 
@@ -14284,7 +14284,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_phosphoric.update(this, sto
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bullet_soldier_tower_rocket_gunners_sting_missiles = {}
@@ -14297,7 +14297,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 	local ps
 
 	if not source then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -14345,7 +14345,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 		ps.particle_system.emit = true
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	local mark_mod
@@ -14354,13 +14354,13 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 
 		m.modifier.target_id = target.id
 
-		queue_insert(store, m)
+		simulation:queue_insert_entity(m)
 
 		mark_mod = E:create_entity(this.mark_mod)
 		mark_mod.modifier.source_id = this.id
 		mark_mod.modifier.target_id = target.id
 		mark_mod.modifier.duration = 1e99
-		queue_insert(store, mark_mod)
+		simulation:queue_insert_entity(mark_mod)
 	end
 
 	local soldier_pos = v(source.pos.x, source.pos.y + source.render.sprites[1].offset.y)
@@ -14405,7 +14405,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 
 			m.modifier.target_id = new_target.id
 
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 	end
 
@@ -14465,7 +14465,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 				m.modifier.target_id = b.target_id
 				m.modifier.level = b.level
 
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 	end
@@ -14481,7 +14481,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 			decal.pos = vclone(b.to)
 			decal.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, decal)
+			simulation:queue_insert_entity(decal)
 		end
 	else
 		if b.hit_fx then
@@ -14491,7 +14491,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].runs = 0
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 
 		if target and target.unit.can_explode then
@@ -14503,7 +14503,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 				decal.pos = vclone(b.to)
 				decal.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, decal)
+				simulation:queue_insert_entity(decal)
 			end
 
 			if b.hit_decal_fx then
@@ -14512,7 +14512,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 				decal.pos = vclone(b.to)
 				decal.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, decal)
+				simulation:queue_insert_entity(decal)
 			end
 		end
 	end
@@ -14524,10 +14524,10 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 	end
 
 	if mark_mod then
-		queue_remove(store, mark_mod)
+		simulation:queue_remove_entity(mark_mod)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target = {}
@@ -14540,7 +14540,7 @@ function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(t
 	local target = store.entities[m.target_id]
 
 	if not target or not target.pos then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -14555,7 +14555,7 @@ function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(t
 		target = store.entities[m.target_id]
 
 		if not target or not target.health or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -14716,7 +14716,7 @@ function scripts.tower_flamespitter.update(this, store)
 		b.bullet.damage_max = attack_bomb.damage_max[this.powers.skill_bomb.level]
 		b.bullet.damage_factor = tw.damage_factor
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function spawn_column(origin, dest)
@@ -14732,7 +14732,7 @@ function scripts.tower_flamespitter.update(this, store)
 		column.damage_out_min = power.damage_out_min[power.level]
 		column.damage_out_max = power.damage_out_max[power.level]
 
-		queue_insert(store, column)
+		simulation:queue_insert_entity(column)
 	end
 
 	local function check_skill_bomb()
@@ -14976,7 +14976,7 @@ function scripts.tower_flamespitter.update(this, store)
 				this.flame_fx.render.sprites[1].scale = v(1, 1)
 				this.flame_fx.render.sprites[1].scale.x = attack_basic.flame_fx_scale_x[angle_idx]
 
-				queue_insert(store, this.flame_fx)
+				simulation:queue_insert_entity(this.flame_fx)
 				U.y_animation_play(this.flame_fx, "in", false, store.tick_ts)
 				U.animation_start_default(this.flame_fx, "loop", false, store.tick_ts, true)
 
@@ -15054,7 +15054,7 @@ function scripts.tower_flamespitter.update(this, store)
 								new_mod.modifier.damage_factor = tw.damage_factor
 								new_mod.dps.damage_inc = 0
 
-								queue_insert(store, new_mod)
+								simulation:queue_insert_entity(new_mod)
 							end
 						end
 
@@ -15068,7 +15068,7 @@ function scripts.tower_flamespitter.update(this, store)
 				last_ts = store.tick_ts
 
 				U.y_animation_play(this.flame_fx, "out", false, store.tick_ts)
-				queue_remove(store, this.flame_fx)
+				simulation:queue_remove_entity(this.flame_fx)
 
 				last_ts_idle = store.tick_ts
 				idle_cooldown = random(4, 8)
@@ -15089,7 +15089,7 @@ function scripts.tower_flamespitter.remove(this, store)
 	if this.flame_fx then
 		this.flame_fx.render.sprites[1].hidden = true
 
-		queue_remove(store, this.flame_fx)
+		simulation:queue_remove_entity(this.flame_fx)
 	end
 
 	return true
@@ -15105,7 +15105,7 @@ function scripts.bullet_tower_flamespitter_skill_bomb_payload.update(this, store
 		s.pos = vclone(pos)
 		s.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, s)
+		simulation:queue_insert_entity(s)
 
 		local enemies = U.find_enemies_in_range_filter_off(pos, this.burn_radius, this.vis_flags, this.vis_bans)
 
@@ -15115,7 +15115,7 @@ function scripts.bullet_tower_flamespitter_skill_bomb_payload.update(this, store
 
 				mod.modifier.target_id = enemies[i].id
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 			end
 		end
 	end
@@ -15162,7 +15162,7 @@ function scripts.bullet_tower_flamespitter_skill_bomb_payload.update(this, store
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.controller_tower_flamespitter_column = {}
@@ -15187,7 +15187,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 		decal.pos.x, decal.pos.y = pos.x, pos.y
 		decal.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 		U.y_wait_unconditional(store, fts(2))
 	end
 
@@ -15196,7 +15196,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 	fx.pos.x, fx.pos.y = this.dest.x, this.dest.y
 	fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 	U.y_wait_unconditional(store, fts(12))
 	S:queue(this.sound)
 
@@ -15223,7 +15223,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 			mod.modifier.target_id = enemy.id
 			mod.modifier.source_id = this.id
 
-			queue_insert(store, mod)
+			simulation:queue_insert_entity(mod)
 		end
 	end
 
@@ -15231,7 +15231,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 
 	fx.render.sprites[1].hidden = true
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 喷火器 END
@@ -15357,7 +15357,7 @@ function scripts.tower_ballista.update(this, store)
 		bl.damage_max = attack.damage_max[pow_b.level]
 		bl.damage_factor = tw.damage_factor * bl.damage_factor
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function check_skill_bomb()
@@ -15559,14 +15559,14 @@ function scripts.tower_ballista.update(this, store)
 						fx.pos = V.vclone(bl.from)
 						fx.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 					end
 
 					if missed_shot then
 						b.missed_shot = true
 					end
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 
 					local fx = E:create_entity(this.shot_fx)
 
@@ -15586,7 +15586,7 @@ function scripts.tower_ballista.update(this, store)
 						s.z = sprites[this.render.sid_tower_top].z + 1
 					end
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 
 					if i < 5 then
 						U.animation_start_group(this, "ability" .. i, false, store.tick_ts, false, "layers_base")
@@ -15690,7 +15690,7 @@ function scripts.bullet_tower_ballista.update(this, store)
 					mod.modifier.source_damage = d
 					mod.modifier.damage_factor = b.damage_factor
 
-					queue_insert(store, mod)
+					simulation:queue_insert_entity(mod)
 				end
 			end
 
@@ -15699,21 +15699,21 @@ function scripts.bullet_tower_ballista.update(this, store)
 			fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		elseif this.missed_shot and GR:cell_is_only(this.pos.x, this.pos.y, TERRAIN_LAND) then
 			local fx = E:create_entity(this.missed_arrow_decal)
 
 			fx.pos = V.v(b.to.x, b.to.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			local fx = E:create_entity(this.missed_arrow_dust)
 
 			fx.pos = V.v(b.to.x, b.to.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			local fx = E:create_entity(this.missed_arrow)
 
@@ -15721,7 +15721,7 @@ function scripts.bullet_tower_ballista.update(this, store)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].flip_x = b.to.x > b.from.x
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 	end
 
@@ -15757,7 +15757,7 @@ function scripts.bullet_tower_ballista.update(this, store)
 			end
 
 			if source and not store.entities[source.id] then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				break
 			end
@@ -15775,7 +15775,7 @@ function scripts.bullet_tower_ballista.update(this, store)
 	else
 		while not U.animation_finished_default(this) do
 			if source and not store.entities[source.id] then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				break
 			end
@@ -15790,7 +15790,7 @@ function scripts.bullet_tower_ballista.update(this, store)
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bullet_tower_ballista_skill_final_shot = {
@@ -15830,7 +15830,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 				mod.modifier.source_damage = d
 				mod.modifier.damage_factor = b.damage_factor
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 			end
 
 			local fx = E:create_entity(b.hit_fx)
@@ -15838,7 +15838,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 			fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			fx.render.sprites[1].r = angle
 		end
@@ -15855,7 +15855,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 
 		while store.tick_ts - s.ts < this.ray_duration do
 			if source and not store.entities[source.id] then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				break
 			end
@@ -15877,7 +15877,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 			s.hidden = false
 		end
 
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 scripts.bullet_tower_ballista_skill_bomb = {}
@@ -15894,13 +15894,13 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 				ps = E:create_entity(pn)
 				ps.particle_system.track_id = this.id
 
-				queue_insert(store, ps)
+				simulation:queue_insert_entity(ps)
 			end
 		else
 			ps = E:create_entity(b.particles_name)
 			ps.particle_system.track_id = this.id
 
-			queue_insert(store, ps)
+			simulation:queue_insert_entity(ps)
 		end
 	end
 
@@ -15956,7 +15956,7 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 	local p = SU.create_bullet_pop(store, this)
 
 	if p then
-		queue_insert(store, p)
+		simulation:queue_insert_entity(p)
 
 	end
 
@@ -15971,7 +15971,7 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 		sfx.render.sprites[1].ts = store.tick_ts
 		sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-		queue_insert(store, sfx)
+		simulation:queue_insert_entity(sfx)
 	end
 
 	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
@@ -15980,10 +15980,10 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 		decal.pos = V.vclone(this_pos)
 		decal.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.bullet_tower_ballista_skill_bomb.remove(this, store)
@@ -15997,7 +15997,7 @@ function scripts.bullet_tower_ballista_skill_bomb.remove(this, store)
 		scraps.aura.duration = this.duration_config[b.level]
 		scraps.tween.props[1].keys = {{0, 255}, {scraps.aura.duration - 0.5, 255}, {scraps.aura.duration, 0}}
 
-		queue_insert(store, scraps)
+		simulation:queue_insert_entity(scraps)
 	end
 
 	return true
@@ -16051,7 +16051,7 @@ function scripts.aura_bullet_tower_ballista_skill_bomb.update(this, store)
 						junk_fx.pos = V.vclone(this.pos)
 						junk_fx.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, junk_fx)
+						simulation:queue_insert_entity(junk_fx)
 					end
 				end
 
@@ -16062,7 +16062,7 @@ function scripts.aura_bullet_tower_ballista_skill_bomb.update(this, store)
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
 
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 		end
@@ -16070,7 +16070,7 @@ function scripts.aura_bullet_tower_ballista_skill_bomb.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 巨弩哨站 END
@@ -16145,7 +16145,7 @@ function scripts.tower_paladin_rider.update(this, store)
 					end
 
 					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 
 					b.soldiers[i] = s
 
@@ -16193,7 +16193,7 @@ function scripts.soldier_paladin_rider.update(this, store)
 		if this.health.dead then
 			SU.y_soldier_death(store, this)
 			U.y_wait_unconditional(store, this.health.dead_lifetime)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -16309,7 +16309,7 @@ function scripts.tower_barrel.update(this, store)
 					b.bullet.level = pow_b.level
 					b.render.sprites[1].r = 0
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 					S:queue(bba.sound)
 					U.y_animation_wait(this, this.sid_viking)
 					U.animation_start(this, "idle", nil, store.tick_ts, true, this.sid_viking)
@@ -16349,7 +16349,7 @@ function scripts.tower_barrel.update(this, store)
 						spawn_fx.soldier_ref = s
 						spawn_fx.tower_ref = this
 
-						queue_insert(store, spawn_fx)
+						simulation:queue_insert_entity(spawn_fx)
 						U.y_animation_wait(this, this.sid_tower)
 						U.animation_start_specific(this, "idle", false, store.tick_ts, false, this.sid_tower)
 
@@ -16404,7 +16404,7 @@ function scripts.tower_barrel.update(this, store)
 					b.bullet.to = target and pred_pos or trigger_pos
 					b.bullet.source_id = this.id
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 					S:queue(ba.sound)
 					U.y_animation_wait(this, this.sid_viking)
 					U.animation_start(this, "idle", nil, store.tick_ts, true, this.sid_viking)
@@ -16446,7 +16446,7 @@ scripts.bullet_tower_barrel_lvl4 = {
 				local m = E:create_entity("mod_bullet_tower_barrel_lvl4_soldier")
 				m.modifier.source_id = this.id
 				m.modifier.target_id = soldier.id
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 
@@ -16485,7 +16485,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 						new_mod.modifier.source_id = this.id
 						new_mod.modifier.damage_factor = a.damage_factor
 
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 					end
 
 					if not target._attract_pos and band(target.vis.flags, bor(F_BOSS, F_STUN)) == 0 then
@@ -16496,7 +16496,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 						attract_mod.pos = this.pos
 						attract_mod.modifier.duration = a.duration - (store.tick_ts - first_hit_ts)
 
-						queue_insert(store, attract_mod)
+						simulation:queue_insert_entity(attract_mod)
 					end
 				end
 			end
@@ -16510,7 +16510,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 	decal.render.sprites[1].ts = store.tick_ts
 	decal.tween.ts = store.tick_ts
 
-	queue_insert(store, decal)
+	simulation:queue_insert_entity(decal)
 
 	local targets = U.find_enemies_in_range_filter_off(this.pos, this.explosion_damage_radius, this.explosion_vis_flags, this.explosion_vis_bans)
 
@@ -16538,7 +16538,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 
 	S:queue(this.explosion_sfx)
 	U.y_animation_play(this, "explosion", nil, store.tick_ts, 1, this.sid_barrel)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.controller_soldier_tower_barrel_skill_warrior_spawn = {}
@@ -16553,7 +16553,7 @@ function scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update(this
 	spawn_fx.render.sprites[1].ts = store.tick_ts
 	spawn_fx.pos = V.vclone(this.pos)
 
-	queue_insert(store, spawn_fx)
+	simulation:queue_insert_entity(spawn_fx)
 	U.y_animation_wait(this, 1)
 
 	local w = this.soldier_ref
@@ -16564,8 +16564,8 @@ function scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update(this
 	w.health.armor = this.tower_ref.powers.skill_warrior.armor[w.level] - this.tower_ref.powers.skill_warrior.armor[1] + w.health.armor
 
 	SU.soldier_inherit_tower_buff_factor(w, this.tower_ref, store.tick_ts)
-	queue_insert(store, w)
-	queue_remove(store, this)
+	simulation:queue_insert_entity(w)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.soldier_tower_barrel_skill_warrior = {}
@@ -16578,7 +16578,7 @@ function scripts.soldier_tower_barrel_skill_warrior.insert(this, store)
 	floor_decal.render.sprites[1].ts = store.tick_ts
 	floor_decal.pos = this.pos
 
-	queue_insert(store, floor_decal)
+	simulation:queue_insert_entity(floor_decal)
 
 	this.decal_floor_ref = floor_decal
 
@@ -16608,7 +16608,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 		this.decal_floor_ref.tween.disabled = false
 		this.decal_floor_ref.tween.ts = store.tick_ts
 
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -16726,7 +16726,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 				fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			elseif band(h.last_damage_types, bor(DAMAGE_EAT)) ~= 0 then
 				this.unit.hide_during_death = true
 			else
@@ -16865,7 +16865,7 @@ function scripts.tower_hermit_toad.update(this, store)
 		ps.particle_system.scale_var = this.ps_bubbles_mage_area_scale_var
 		ps.particle_system.emission_rate = this.ps_bubbles_mage_area_emission_rate
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 
 		this.tower_upgrade_persistent_data.bubbles_mage_area_id = ps.id
 
@@ -16891,7 +16891,7 @@ function scripts.tower_hermit_toad.update(this, store)
 		ps.particle_system.scale_var = this.ps_bubbles_mage_scale_var
 		ps.particle_system.emission_rate = this.ps_bubbles_mage_emission_rate
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 
 		this.tower_upgrade_persistent_data.bubbles_mage_id = ps.id
 
@@ -16917,7 +16917,7 @@ function scripts.tower_hermit_toad.update(this, store)
 		ps.particle_system.scale_var = this.ps_bubbles_engineer_scale_var
 		ps.particle_system.emission_rate = this.ps_bubbles_engineer_emission_rate
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 
 		this.tower_upgrade_persistent_data.bubbles_engineer_id = ps.id
 
@@ -16988,7 +16988,7 @@ function scripts.tower_hermit_toad.update(this, store)
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].color = this.tower_upgrade_persistent_data.current_mode == MODE_MAGE and {239, 156, 255} or {41, 226, 219}
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	local function get_mode_anim(anim_table, mode)
@@ -17179,7 +17179,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					mark_mod.modifier.target_id = target.id
 					mark_mod.modifier.source_id = this.id
 
-					queue_insert(store, mark_mod)
+					simulation:queue_insert_entity(mark_mod)
 
 					local pushed_bans = U.push_bans(target.vis, F_EAT)
 					local start_ts = store.tick_ts
@@ -17215,7 +17215,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					bullet.bullet.target_id = target and target.id or nil
 					bullet.bullet.source_id = this.id
 
-					queue_insert(store, bullet)
+					simulation:queue_insert_entity(bullet)
 					attack.ts = start_ts
 
 					local bullet_from = V.vclone(bullet.bullet.from)
@@ -17273,7 +17273,7 @@ function scripts.tower_hermit_toad.update(this, store)
 								s.offset.x, s.offset.y = V.add(s.offset.x, s.offset.y, sprites_offset.x, sprites_offset.y)
 							end
 
-							queue_insert(store, es)
+							simulation:queue_insert_entity(es)
 							coroutine.yield()
 							U.sprites_hide(target, nil, nil, true)
 						end
@@ -17296,7 +17296,7 @@ function scripts.tower_hermit_toad.update(this, store)
 									es.render.sprites[1].scale = V.v(orig_scale.x * 0.65, orig_scale.y * 0.65)
 									es.render.sprites[1].alpha = 150
 									coroutine.yield()
-									queue_remove(store, es)
+									simulation:queue_remove_entity(es)
 
 									eaten = true
 								elseif bs.frame_idx == 3 then
@@ -17395,7 +17395,7 @@ function scripts.tower_hermit_toad.update(this, store)
 								mod.modifier.target_id = t.id
 								mod.modifier.source_id = this.id
 
-								queue_insert(store, mod)
+								simulation:queue_insert_entity(mod)
 							end
 						end
 					end
@@ -17405,7 +17405,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					decal.pos = V.vclone(pred_pos)
 					decal.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, decal)
+					simulation:queue_insert_entity(decal)
 
 					while not U.animation_finished(this, 6, 1) do
 						coroutine.yield()
@@ -17429,7 +17429,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					decal_shadow.render.sprites[1].pos = V.vclone(this.pos)
 					decal_shadow.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, decal_shadow)
+					simulation:queue_insert_entity(decal_shadow)
 
 					while elapsed_time < attack.jump_back_duration do
 						local elapsed_percentage = elapsed_time / attack.jump_back_duration
@@ -17449,7 +17449,7 @@ function scripts.tower_hermit_toad.update(this, store)
 
 					this.render.sprites[6]._track_e = true
 
-					queue_remove(store, decal_shadow)
+					simulation:queue_remove_entity(decal_shadow)
 
 					this.render.sprites[6].hidden = true
 
@@ -17524,7 +17524,7 @@ function scripts.tower_hermit_toad.update(this, store)
 				bullet.bullet.source_id = this.id
 				bullet.bullet.damage_factor = tw.damage_factor
 
-				queue_insert(store, bullet)
+				simulation:queue_insert_entity(bullet)
 				y_toad_animation_finished_check_change_mode()
 				resume_pipe_ps()
 
@@ -17570,7 +17570,7 @@ function scripts.tower_hermit_toad.remove(this, store)
 		local ps = store.entities[this.tower_upgrade_persistent_data.bubbles_engineer_id]
 
 		if ps then
-			queue_remove(store, ps)
+			simulation:queue_remove_entity(ps)
 		end
 
 		this.tower_upgrade_persistent_data.bubbles_engineer_id = nil
@@ -17580,7 +17580,7 @@ function scripts.tower_hermit_toad.remove(this, store)
 		local ps = store.entities[this.tower_upgrade_persistent_data.bubbles_mage_id]
 
 		if ps then
-			queue_remove(store, ps)
+			simulation:queue_remove_entity(ps)
 		end
 
 		this.tower_upgrade_persistent_data.bubbles_mage_id = nil
@@ -17590,7 +17590,7 @@ function scripts.tower_hermit_toad.remove(this, store)
 		local ps = store.entities[this.tower_upgrade_persistent_data.bubbles_mage_area_id]
 
 		if ps then
-			queue_remove(store, ps)
+			simulation:queue_remove_entity(ps)
 		end
 
 		this.tower_upgrade_persistent_data.bubbles_mage_area_id = nil
@@ -17645,7 +17645,7 @@ function scripts.bullet_tower_hermit_toad_instakill_tongue.update(this, store)
 				mod.modifier.target_id = target.id
 				mod.modifier.source_id = source.id
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 			end
 
 			local d = SU.create_bullet_damage(b, target.id, this.id)
@@ -17659,7 +17659,7 @@ function scripts.bullet_tower_hermit_toad_instakill_tongue.update(this, store)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].flip_x = b.to.x > b.from.x
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 
 			target.unit.can_explode = false
@@ -17671,14 +17671,14 @@ function scripts.bullet_tower_hermit_toad_instakill_tongue.update(this, store)
 			fx.pos = V.v(b.to.x, b.to.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			local fx = E:create_entity(this.missed_arrow_dust)
 
 			fx.pos = V.v(b.to.x, b.to.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			local fx = E:create_entity(this.missed_arrow)
 
@@ -17686,7 +17686,7 @@ function scripts.bullet_tower_hermit_toad_instakill_tongue.update(this, store)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].flip_x = b.to.x > b.from.x
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 	end
 
@@ -17721,7 +17721,7 @@ function scripts.bullet_tower_hermit_toad_instakill_tongue.update(this, store)
 		end
 
 		if source and not store.entities[source.id] then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			break
 		end
@@ -17737,7 +17737,7 @@ function scripts.bullet_tower_hermit_toad_instakill_tongue.update(this, store)
 		s.hidden = false
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_tower_hermit_toad_engineer_basic_slow = {}
@@ -17804,7 +17804,7 @@ function scripts.tower_sparking_geode.update(this, store)
 		fx.pos = V.v(this.pos.x + this.fx_evolve_offset.x, this.pos.y + this.fx_evolve_offset.y)
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	local function can_crystalize()
@@ -17876,7 +17876,7 @@ function scripts.tower_sparking_geode.update(this, store)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[2].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				U.y_wait_unconditional(store, fts(11) * tw.cooldown_factor)
 
 				local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
@@ -17898,7 +17898,7 @@ function scripts.tower_sparking_geode.update(this, store)
 						mod.modifier.damage_factor = tw.damage_factor
 						mod.received_damage_factor = a_crystalize.received_damage_factor[pow_crystalize.level]
 
-						queue_insert(store, mod)
+						simulation:queue_insert_entity(mod)
 
 						local bullet = E:create_entity(a_basic.bullet)
 						bullet.bullet.shot_index = i
@@ -17908,7 +17908,7 @@ function scripts.tower_sparking_geode.update(this, store)
 						bullet.bullet.to:copy(bullet.pos)
 						bullet.bullet.from:copy(bullet.pos)
 						bullet.bullet.target_id = enemies[i].id
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 
 						U.y_wait_unconditional(store, fts(2) * tw.cooldown_factor)
 					end
@@ -17946,7 +17946,7 @@ function scripts.tower_sparking_geode.update(this, store)
 						spike_burst_aura.aura.level = pow_burst.level
 						spike_burst_aura.aura.radius = a.range
 
-						queue_insert(store, spike_burst_aura)
+						simulation:queue_insert_entity(spike_burst_aura)
 					end
 
 					a_burst.ts = start_ts
@@ -18028,7 +18028,7 @@ function scripts.tower_sparking_geode.update(this, store)
 
 						bullet.pos = V.vclone(bullet.bullet.from)
 
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 
 						this.tower_upgrade_persistent_data.last_fight_ts = store.tick_ts
 
@@ -18070,13 +18070,13 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 	local s = this.render and this.render.sprites and this.render.sprites[1]
 
 	if not b or not s then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
 
 	if not b.to then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -18150,7 +18150,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 				m.modifier.level = b.level
 
 				table.insert(mods_added, m)
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 
@@ -18188,7 +18188,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 				r.image_width = this.bounce_image_width
 				r.bullet.hit_fx = nil
 
-				queue_insert(store, r)
+				simulation:queue_insert_entity(r)
 			end
 		end
 	end
@@ -18210,7 +18210,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 			fxs.r = s.r + math.rad(90)
 			fxs.sort_y_offset = this.pos.y - fx.pos.y - 10
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 	end
 
@@ -18224,7 +18224,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 		s.hidden = false
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_tower_sparking_geode_stun = {}
@@ -18313,7 +18313,7 @@ function scripts.mod_tower_sparking_geode_stun.update(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -18378,7 +18378,7 @@ function scripts.mod_tower_sparking_geode_stun.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.mod_tower_sparking_geode_stun.remove(this, store)
@@ -18387,7 +18387,7 @@ function scripts.mod_tower_sparking_geode_stun.remove(this, store)
 	fx.pos = V.vclone(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 
 	local target = store.entities[this.modifier.target_id]
 
@@ -18442,7 +18442,7 @@ function scripts.decal_tower_sparking_geode_burst_crystal.update(this, store)
 	end
 
 	U.y_animation_play(this, "death", nil, store.tick_ts)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_tower_sparking_geode_burst_damage = {}
@@ -18524,7 +18524,7 @@ function scripts.tower_dwarf.update(this, store)
 						s.powers.incendiary_ammo.changed = true
 					end
 					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 
 					b.soldiers[i] = s
 
@@ -18636,7 +18636,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 				d.pos = V.v(this.pos.x, this.pos.y)
 				d.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, d)
+				simulation:queue_insert_entity(d)
 
 				local prefix = this.render.sprites[1].prefix
 
@@ -18779,10 +18779,10 @@ function scripts.bullet_soldier_tower_dwarf.update(this, store)
 		fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 -- 炮兵 END
 
@@ -18847,7 +18847,7 @@ function scripts.tower_ghost.update(this, store)
 					end
 
 					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 
 					b.soldiers[i] = s
 
@@ -18968,7 +18968,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 		ps1.particle_system.emit = true
 		ps1.particle_system.track_id = this.id
 
-		queue_insert(store, ps1)
+		simulation:queue_insert_entity(ps1)
 
 		local flight_time = 1
 		local from = V.vclone(this.pos)
@@ -19000,7 +19000,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 		spawn.render.sprites[1].ts = store.tick_ts
 		spawn.pos = V.vclone(fpos)
 
-		queue_insert(store, spawn)
+		simulation:queue_insert_entity(spawn)
 		U.y_wait_unconditional(store, fts(8))
 
 		this.render.sprites[1].hidden = false
@@ -19009,7 +19009,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 	U.y_animation_play(this, "spawn", nil, store.tick_ts, 1)
 
 	if ps1 then
-		queue_remove(store, ps1)
+		simulation:queue_remove_entity(ps1)
 	end
 
 	this.ui.can_click = true
@@ -19027,7 +19027,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 				soul.level = this.powers.soul_attack.level
 				soul.pos = V.vclone(this.pos)
 
-				queue_insert(store, soul)
+				simulation:queue_insert_entity(soul)
 			end
 
 			SU.y_soldier_death(store, this)
@@ -19045,7 +19045,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 				e.aura.level = pow_e.level
 				this._aura_extra_damage = e
 
-				queue_insert(store, e)
+				simulation:queue_insert_entity(e)
 			else
 				this._aura_extra_damage.aura.level = pow_e.level
 			end
@@ -19103,7 +19103,7 @@ function scripts.tower_ghost.soul_update(this, store)
 		b.bullet.damage_min = this.damage_min[level]
 		b.bullet.damage_max = this.damage_max[level]
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local enemy = U.find_random_enemy(store.entities, this.pos, 0, this.radius * 2, F_ENEMY, F_NONE)
@@ -19112,7 +19112,7 @@ function scripts.tower_ghost.soul_update(this, store)
 		shoot_bullet(enemy, this.level)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.tower_ghost_hover_controller = {}
@@ -19127,7 +19127,7 @@ function scripts.tower_ghost_hover_controller.insert(this, store)
 
 			h.pos = V.vclone(v.pos)
 
-			queue_insert(store, h)
+			simulation:queue_insert_entity(h)
 			table.insert(this.hovers, h)
 		end
 	end
@@ -19138,7 +19138,7 @@ end
 function scripts.tower_ghost_hover_controller.remove(this, store)
 	if this.hovers then
 		for _, v in pairs(this.hovers) do
-			queue_remove(store, v)
+			simulation:queue_remove_entity(v)
 		end
 
 		this.hovers = nil
@@ -19160,7 +19160,7 @@ function scripts.controller_tower_swap.update(this, store)
 		ne.render.sprites[1].ts = store.tick_ts
 		ne.pos = V.vclone(to.pos)
 
-		queue_insert(store, ne)
+		simulation:queue_insert_entity(ne)
 		U.y_wait_unconditional(store, fts(4))
 	end
 
@@ -19170,7 +19170,7 @@ function scripts.controller_tower_swap.update(this, store)
 		ne.render.sprites[1].ts = store.tick_ts
 		ne.pos = V.vclone(to.pos)
 
-		queue_insert(store, ne)
+		simulation:queue_insert_entity(ne)
 	end
 
 	local function create_temp_holder(to)
@@ -19180,7 +19180,7 @@ function scripts.controller_tower_swap.update(this, store)
 		th.ui.can_click = false
 		th.render.sprites[1].name = to.render.sprites[1].name
 
-		queue_insert(store, th)
+		simulation:queue_insert_entity(th)
 
 		return th
 	end
@@ -19196,7 +19196,7 @@ function scripts.controller_tower_swap.update(this, store)
 		local mods = tower._applied_mods
 		if mods then
 			for i = #mods, 1, -1 do
-				queue_remove(store, mods[i])
+				simulation:queue_remove_entity(mods[i])
 				mods[i] = nil
 			end
 		end
@@ -19217,13 +19217,13 @@ function scripts.controller_tower_swap.update(this, store)
 			create_spawner_out(t1)
 
 			-- 这么做，实际上会先清理掉 modifiers，因为删除是从后往前删的
-			queue_remove(store, t1)
+			simulation:queue_remove_entity(t1)
 			remove_modifiers(t1)
 
 			U.y_wait_unconditional(store, this.delay)
 			create_spawner_in(t1)
 			U.y_wait_unconditional(store, this.fx_spawn_delay)
-			queue_insert(store, t1)
+			simulation:queue_insert_entity(t1)
 
 			t1.ui.can_click = true
 		else
@@ -19232,7 +19232,7 @@ function scripts.controller_tower_swap.update(this, store)
 
 			create_spawner_out(t1)
 
-			queue_remove(store, t1)
+			simulation:queue_remove_entity(t1)
 			remove_modifiers(t1)
 
 			create_spawner_out(t2)
@@ -19257,7 +19257,7 @@ function scripts.controller_tower_swap.update(this, store)
 				store.player_gold = store.player_gold + E:get_template(t2.barrack.soldier_type).unit.price * soldier_count
 			end
 
-			queue_remove(store, t2)
+			simulation:queue_remove_entity(t2)
 			remove_modifiers(t2)
 
 			U.y_wait_unconditional(store, this.delay)
@@ -19306,15 +19306,15 @@ function scripts.controller_tower_swap.update(this, store)
 				t2.main_script.co = nil
 			end
 
-			queue_insert(store, t1)
-			queue_insert(store, t2)
+			simulation:queue_insert_entity(t1)
+			simulation:queue_insert_entity(t2)
 
 			t1.ui.can_click = true
 			t2.ui.can_click = true
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 幽冥 END
@@ -19480,7 +19480,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 							mod.modifier.source_id = this.id
 							mod.modifier.level = pow_h.level
 
-							queue_insert(store, mod)
+							simulation:queue_insert_entity(mod)
 						end
 
 						this.health.immune_to = F_ALL
@@ -19505,7 +19505,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 						local decal_beat_back = E:create_entity("decal_paladin_holystrike")
 						decal_beat_back.pos:copy(this.pos)
 						decal_beat_back.render.sprites[1].ts = store.tick_ts
-						queue_insert(store, decal_beat_back)
+						simulation:queue_insert_entity(decal_beat_back)
 
 						local enemies = U.find_enemies_in_range_filter_off(this.pos, 50, bor(F_STUN, F_TELEPORT), bor(F_FLYING, F_BOSS))
 						if enemies then
@@ -19543,7 +19543,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 						e.owner = this
 						e.aura.source_id = this.id
 
-						queue_insert(store, e)
+						simulation:queue_insert_entity(e)
 					end
 
 					if SU.y_soldier_animation_wait(this) then
@@ -19648,7 +19648,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 						e.power_level = pow_g.level
 						e.target_id = target.id
 
-						queue_insert(store, e)
+						simulation:queue_insert_entity(e)
 						U.y_animation_wait_group(this, "layers")
 						ag.ts = last_ts
 					else
@@ -19686,7 +19686,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 								m.wave_of_roots = aw.wave_of_roots_balance
 								m.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, m)
+								simulation:queue_insert_entity(m)
 
 								local d = E.assign_damage(aw.damage_type, math.random(aw.damage_min, aw.damage_max) * tw.damage_factor, this.id, e.id)
 
@@ -19742,7 +19742,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 							b.bullet.target_id = t.id
 							b.bullet.source_id = this.id
 							b.bullet.damage_factor = tw.damage_factor
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 						end
 						U.y_animation_wait_group(this, "layers")
 					else
@@ -19889,7 +19889,7 @@ function scripts.decal_tower_arborean_emissary_gift_of_nature_wisp.update(this, 
 		ps.particle_system.emit = true
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	while true do
@@ -19975,7 +19975,7 @@ function scripts.decal_tower_arborean_emissary_gift_of_nature_wisp.update(this, 
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.tower_arborean_emissary_bolt = {}
@@ -20009,7 +20009,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 		ps.particle_system.emit = true
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	local pred_pos
@@ -20091,7 +20091,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 				m.modifier.target_id = b.target_id
 				m.modifier.level = b.level
 
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 	elseif b.damage_radius and b.damage_radius > 0 then
@@ -20115,7 +20115,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].runs = 0
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	if b.hit_decal then
@@ -20124,7 +20124,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 		decal.pos = V.vclone(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 	end
 
 	if ps and ps.particle_system.emit then
@@ -20133,7 +20133,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_arborean_emissary_weak = {}
@@ -20228,7 +20228,7 @@ function scripts.tower_arborean_emissary_root_stun_mod.update(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -20251,7 +20251,7 @@ function scripts.tower_arborean_emissary_root_stun_mod.update(this, store)
 	end
 
 	U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.aura_tower_arborean_emissary_gift_of_nature = {}
@@ -20287,7 +20287,7 @@ function scripts.aura_tower_arborean_emissary_gift_of_nature.update(this, store)
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
 
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 		end
@@ -20321,7 +20321,7 @@ function scripts.tower_arborean_emissary_gift_of_nature_heal_mod.update(this, st
 	local target = store.entities[m.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -20332,7 +20332,7 @@ function scripts.tower_arborean_emissary_gift_of_nature_heal_mod.update(this, st
 		target = store.entities[m.target_id]
 
 		if not target or not target.health or target.health.dead or duration < store.tick_ts - m.ts then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -20359,7 +20359,7 @@ function scripts.tower_arborean_emissary_gift_of_nature_heal_mod.update(this, st
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].runs = 0
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 		end
 
@@ -20428,7 +20428,7 @@ function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, 
 		e.target_id = target_id
 		e.end_offset = this.end_offset
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 		table.insert(wisps, e)
 	end
 
@@ -20452,7 +20452,7 @@ function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, 
 	a.aura.duration = this.duration
 	a.aura.level = this.power_level
 
-	queue_insert(store, a)
+	simulation:queue_insert_entity(a)
 
 	local aura_ts = store.tick_ts
 
@@ -20481,8 +20481,8 @@ function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, 
 		coroutine.yield()
 	end
 
-	queue_remove(store, a)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(a)
+	simulation:queue_remove_entity(this)
 end
 
 -- 树灵 END
@@ -20521,7 +20521,7 @@ function scripts.soldier_priests_barrack.update(this, store)
 				fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 			end
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 
 		local s = E:create_entity(this.death_spawns.name)
@@ -20556,7 +20556,7 @@ function scripts.soldier_priests_barrack.update(this, store)
 			s.pos.y = s.pos.y + this.death_spawns.offset.y
 		end
 
-		queue_insert(store, s)
+		simulation:queue_insert_entity(s)
 
 		local tower = store.entities[this.soldier.tower_id]
 
@@ -20610,7 +20610,7 @@ function scripts.soldier_priests_barrack.update(this, store)
 				end
 
 				priest_transformation()
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				return
 			elseif r < this.transform_chances[1] + this.transform_chances[2] then
@@ -20620,7 +20620,7 @@ function scripts.soldier_priests_barrack.update(this, store)
 
 				tentacle.pos = V.v(this.pos.x + offsetX, this.pos.y + offsetY)
 
-				queue_insert(store, tentacle)
+				simulation:queue_insert_entity(tentacle)
 				S:queue(this.sound_events.death, this.sound_events.death_args)
 				U.y_animation_play(this, "transform_tentacle", nil, store.tick_ts, 1)
 
@@ -20914,7 +20914,7 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 		if store.tick_ts - this.spawn_ts > this.duration then
 			SU.remove_modifiers(store, this)
 			U.y_animation_play(this, "death", nil, store.tick_ts, 1)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -20943,7 +20943,7 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 					e.owner = this
 					e.aura.source_id = this.id
 
-					queue_insert(store, e)
+					simulation:queue_insert_entity(e)
 				end
 
 				U.y_animation_wait_default(this)
@@ -21135,7 +21135,7 @@ function scripts.tower_dragons.update(this, store)
 				end
 			end
 
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 			table.insert(this.dragons, e)
 		end
 		U.y_animation_wait_default(this.dragons[1])
@@ -21272,7 +21272,7 @@ function scripts.tower_dragons.update(this, store)
 							fx.render.sprites[1].offset.x = -fx.render.sprites[1].offset.x
 						end
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 
 						did_breath_fx = true
 					end
@@ -21362,7 +21362,7 @@ function scripts.tower_dragons.update(this, store)
 						decal.pos = p
 						decal.duration = a_massive_fear.stun_duration * 0.8
 
-						queue_insert(store, decal)
+						simulation:queue_insert_entity(decal)
 					end
 
 					total_enemies = math.min(#enemies, a_massive_fear.max_targets)
@@ -21376,7 +21376,7 @@ function scripts.tower_dragons.update(this, store)
 						mod.modifier.source_id = this.id
 						mod.modifier.duration = a_massive_fear.stun_duration
 
-						queue_insert(store, mod)
+						simulation:queue_insert_entity(mod)
 
 						count_targets = count_targets + 1
 					end
@@ -21401,7 +21401,7 @@ function scripts.tower_dragons.update(this, store)
 
 								mod.modifier.target_id = e.id
 
-								queue_insert(store, mod)
+								simulation:queue_insert_entity(mod)
 							end
 						end
 					end
@@ -21456,7 +21456,7 @@ function scripts.tower_dragons.update(this, store)
 						bullet.bullet.damage_max_area = attack.damage_max_area[pow_dragon_split.level]
 						bullet.initial_impulse_duration = 0.1 * i
 
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 					end
 
 					a_dragon_split.ts = store.tick_ts
@@ -21480,7 +21480,7 @@ function scripts.tower_dragons.remove(this, store, script)
 			s.health.dead = true
 		end
 
-		queue_remove(store, s)
+		simulation:queue_remove_entity(s)
 	end
 
 	return true
@@ -21500,7 +21500,7 @@ function scripts.decal_tower_dragons_stun.update(this, store, script)
 	U.y_wait_unconditional(store, this.duration)
 	SU.fade_out_entity(store, this, 0, fts(10))
 	U.y_wait_unconditional(store, fts(10))
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bullet_tower_dragons_dragon_split = {}
@@ -21536,7 +21536,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 	ps.particle_system.emit = true
 	ps.particle_system.track_id = this.id
 
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 
 	local pred_pos
 
@@ -21619,7 +21619,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 					m.modifier.target_id = b.target_id
 					m.modifier.level = b.level
 
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 		end
@@ -21694,20 +21694,20 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[1].runs = 0
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 
 	if not target then
 		local decal = E:create_entity(b.hit_decal)
 		decal.pos:copy(this.pos)
 		decal.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 	elseif target.vis and band(target.vis.flags, F_FLYING) == 0 then
 		local decal = E:create_entity(b.hit_decal)
 
 		decal.pos = V.vclone(target.pos)
 		decal.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 	end
 
 	if ps.particle_system.emit then
@@ -21716,7 +21716,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.faerie_dragon_lvl4 = {}
@@ -21823,7 +21823,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 						b.bullet.source_id = this.id
 						b.bullet.damage_factor = unit_damage_factor
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					end
 
 					U.y_animation_wait_default(this)
@@ -21872,7 +21872,7 @@ scripts.tower_shadow_archer = {}
 function scripts.tower_shadow_archer.remove(this, store)
 	for i = #this.crows, 1, -1 do
 		this.crows[i].owner = nil
-		queue_remove(store, this.crows[i])
+		simulation:queue_remove_entity(this.crows[i])
 		this.crows[i] = nil
 	end
 
@@ -21919,7 +21919,7 @@ function scripts.tower_shadow_archer.update(this, store)
 
 		apply_precision(b)
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 
 		if attack.shot_fx then
 			local fx = E:create_entity(attack.shot_fx)
@@ -21936,7 +21936,7 @@ function scripts.tower_shadow_archer.update(this, store)
 			fx.render.sprites[1].r = V.angleTo(bb.to.x - bb.from.x, bb.to.y - bb.from.y)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 
 		U.y_animation_wait(this, sid)
@@ -21979,7 +21979,7 @@ function scripts.tower_shadow_archer.update(this, store)
 					e.idle_pos:set(this.pos.x + 35 + 10 * math.cos(theta), this.pos.y + 10 * math.sin(theta))
 					e.pos:copy(e.idle_pos)
 
-					queue_insert(store, e)
+					simulation:queue_insert_entity(e)
 					table.insert(this.crows, e)
 
 					e.owner = this
@@ -22107,7 +22107,7 @@ end
 
 function scripts.shadow_crow.update(this, store)
 	if not this.owner then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 
@@ -22187,7 +22187,7 @@ function scripts.shadow_crow.update(this, store)
 				end
 
 				fx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 
 				if this.custom_attack.sound_chance > math.random() then
 					S:queue(this.custom_attack.sound)
@@ -22230,7 +22230,7 @@ function scripts.mod_arrow_shadow_mark.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -22244,7 +22244,7 @@ function scripts.mod_arrow_shadow_mark.update(this, store)
 
 		if not target or target.health.dead or store.tick_ts - m.ts > m.duration then
 
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -22299,10 +22299,10 @@ function scripts.tower_rotten_forest.insert(this, store, script)
 		local smoke = E:create_entity("decal_rotten_forest_smoke")
 		smoke.pos:copy(p.pos)
 		table.insert(this.aura_list1, smoke)
-		queue_insert(store, smoke)
+		simulation:queue_insert_entity(smoke)
 	end
 
-	queue_insert(store, e)
+	simulation:queue_insert_entity(e)
 
 	if this.powers.fog.level >= 1 then
 		local e = E:create_entity(this.auras.list[2].name)
@@ -22314,14 +22314,14 @@ function scripts.tower_rotten_forest.insert(this, store, script)
 		e.owner = this
 		this.aura2 = e
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		for _, p in ipairs(U.get_path_fx_points(this, 55)) do
 			local fog = E:create_entity("decal_rotten_forest_fog")
 			fog.pos:copy(p.pos)
 			fog.render.sprites[1].ts = store.tick_ts
 			table.insert(this.aura_list2, fog)
-			queue_insert(store, fog)
+			simulation:queue_insert_entity(fog)
 		end
 	end
 
@@ -22352,7 +22352,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 					ta.aura.source_id = this.id
 					ta.pos = tpos
 
-					queue_insert(store, ta)
+					simulation:queue_insert_entity(ta)
 				end
 			end
 			if pow_t.changed then
@@ -22370,14 +22370,14 @@ function scripts.tower_rotten_forest.update(this, store, script)
 					e.owner = this
 					this.aura2 = e
 
-					queue_insert(store, e)
+					simulation:queue_insert_entity(e)
 
 					for _, p in ipairs(U.get_path_fx_points(this, 55)) do
 						local fog = E:create_entity("decal_rotten_forest_fog")
 						fog.pos:copy(p.pos)
 						fog.render.sprites[1].ts = store.tick_ts
 						table.insert(this.aura_list2, fog)
-						queue_insert(store, fog)
+						simulation:queue_insert_entity(fog)
 					end
 				end
 
@@ -22403,7 +22403,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 					local smoke = E:create_entity("decal_rotten_forest_smoke")
 					smoke.pos:copy(p.pos)
 					table.insert(this.aura_list1, smoke)
-					queue_insert(store, smoke)
+					simulation:queue_insert_entity(smoke)
 				end
 
 				if this.aura2 then
@@ -22421,7 +22421,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 						fog.pos:copy(p.pos)
 						fog.render.sprites[1].ts = store.tick_ts
 						table.insert(this.aura_list2, fog)
-						queue_insert(store, fog)
+						simulation:queue_insert_entity(fog)
 					end
 				end
 			end
@@ -22438,7 +22438,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 						local pred_pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 						entity.pos:set(pred_pos.x + math.random(5, -5), pred_pos.y + math.random(5, -5))
 						SU.soldier_inherit_tower_buff_factor(entity, this, store.tick_ts)
-						queue_insert(store, entity)
+						simulation:queue_insert_entity(entity)
 					end
 				end
 			end
@@ -22449,7 +22449,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 end
 
 function scripts.tower_rotten_forest.remove(this, store, script)
-	queue_remove(store, this.aura1)
+	simulation:queue_remove_entity(this.aura1)
 	for i = #this.aura_list1, 1, -1 do
 		this.aura_list1[i].tween.props[1].ts = store.tick_ts
 		this.aura_list1[i].tween.props[2].ts = store.tick_ts
@@ -22461,7 +22461,7 @@ function scripts.tower_rotten_forest.remove(this, store, script)
 	end
 
 	if this.aura2 then
-		queue_remove(store, this.aura2)
+		simulation:queue_remove_entity(this.aura2)
 		for i = #this.aura_list2, 1, -1 do
 			this.aura_list2[i].tween.props[1].ts = store.tick_ts
 			this.aura_list2[i].tween.reverse = true
@@ -22510,7 +22510,7 @@ function scripts.aura_tower_rotten_forest_spike_burst.update(this, store, script
 						new_mod.modifier.target_id = target.id
 						new_mod.modifier.source_id = this.id
 						new_mod.modifier.damage_factor = this.owner.tower.damage_factor
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 					end
 				end
 			end
@@ -22519,7 +22519,7 @@ function scripts.aura_tower_rotten_forest_spike_burst.update(this, store, script
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.aura_rotten_forest_thorn = {}
@@ -22557,7 +22557,7 @@ function scripts.aura_rotten_forest_thorn.update(this, store)
 					m.modifier.level = owner.powers.warp.level
 					m.modifier.duration = m.modifier.duration + m.modifier.duration_inc * owner.powers.warp.level
 
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 		end
@@ -22565,7 +22565,7 @@ function scripts.aura_rotten_forest_thorn.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.aura_tower_rotten_forest_fog = {}
@@ -22600,7 +22600,7 @@ function scripts.aura_tower_rotten_forest_fog.update(this, store, script)
 						new_mod.modifier.source_id = this.id
 						new_mod.modifier.damage_factor = this.owner.tower.damage_factor
 
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 					end
 				end
 			end
@@ -22611,7 +22611,7 @@ function scripts.aura_tower_rotten_forest_fog.update(this, store, script)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.decal_rotten_forest_smoke = {}
@@ -22657,7 +22657,7 @@ function scripts.soldier_rotten_forest_tree.insert(this, store)
 	local m = E:create_entity("mod_soldier_rotten_forest_tree_lose_hp")
 	m.modifier.target_id = this.id
 	m.modifier.source_id = this.id
-	queue_insert(store, m)
+	simulation:queue_insert_entity(m)
 	return true
 end
 
@@ -22714,7 +22714,7 @@ function scripts.soldier_rotten_forest_tree.update(this, store)
 		if this.health.dead then
 			U.y_animation_play(this, "death", nil, store.tick_ts, 1)
 
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 
@@ -22846,7 +22846,7 @@ function scripts.tower_infernal_mage.update(this, store)
 						aura_curse.aura.source_id = this.id
 						aura_curse.aura.level = pow_c.level
 						aura_curse.aura.damage_factor = this.tower.damage_factor
-						queue_insert(store, aura_curse)
+						simulation:queue_insert_entity(aura_curse)
 					end
 
 					U.y_animation_wait(this, shooter_sid, 1)
@@ -22878,7 +22878,7 @@ function scripts.tower_infernal_mage.update(this, store)
 							aura_lava.aura.level = pow_d.level
 							aura_lava.target_id = enemy.id
 							aura_lava.aura.damage_factor = this.tower.damage_factor
-							queue_insert(store, aura_lava)
+							simulation:queue_insert_entity(aura_lava)
 							U.y_wait_unconditional(store, fts(2) * this.tower.cooldown_factor)
 						end
 
@@ -22923,7 +22923,7 @@ function scripts.tower_infernal_mage.update(this, store)
 					b.bullet.source_id = this.id
 					b.bullet.damage_factor = this.tower.damage_factor
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 
 					U.y_animation_wait(this, shooter_sid, 1)
 				end
@@ -22949,7 +22949,7 @@ function scripts.tower_infernal_mage.update(this, store)
 						aura_teleport.aura.level = pow_t.level
 						aura_teleport.max_count = pow_t.max_count[pow_t.level]
 
-						queue_insert(store, aura_teleport)
+						simulation:queue_insert_entity(aura_teleport)
 					end
 					U.y_animation_wait(this, shooter_sid, 1)
 				end
@@ -23000,12 +23000,12 @@ function scripts.aura_lava_fissure.update(this, store)
 		decal.pos.x, decal.pos.y = target.pos.x, target.pos.y
 		decal.tween.ts = store.tick_ts
 
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 	end
 
 	U.y_animation_play(this, nil, nil, store.tick_ts, 1)
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 -- 炼狱法师 End
 
@@ -23060,7 +23060,7 @@ function scripts.aura_orc_shaman_healing_roots.update(this, store)
 					m.modifier.source_id = this.id
 					m.modifier.damage_factor = a.damage_factor
 					m.modifier.level = a.level
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 
@@ -23073,7 +23073,7 @@ function scripts.aura_orc_shaman_healing_roots.update(this, store)
 					m.modifier.source_id = this.id
 					m.modifier.damage_factor = a.damage_factor
 					m.modifier.level = a.level
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 		end
@@ -23083,7 +23083,7 @@ function scripts.aura_orc_shaman_healing_roots.update(this, store)
 
 	U.animation_start(this, "out", nil, store.tick_ts, false, 1)
 	U.y_animation_wait_default(this)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.tower_orc_shaman.update(this, store)
@@ -23168,7 +23168,7 @@ function scripts.tower_orc_shaman.update(this, store)
 					aura.aura.source_id = this.id
 					aura.aura.heal_inc = pow_v.heal_inc
 					aura.aura.damage_factor = this.tower.damage_factor
-					queue_insert(store, aura)
+					simulation:queue_insert_entity(aura)
 					va.ts = last_ts
 
 					U.y_animation_wait(this, shooter_sid, 1)
@@ -23206,7 +23206,7 @@ function scripts.tower_orc_shaman.update(this, store)
 							b.bullet.payload = shock
 						end
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					end
 
 					U.y_animation_wait(this, shooter_sid, 1)
@@ -23240,7 +23240,7 @@ function scripts.tower_orc_shaman.update(this, store)
 						b.bullet.damage_factor = this.tower.damage_factor
 						b.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						U.y_wait_unconditional(store, fts(6) * this.tower.cooldown_factor)
 					end
 
@@ -23310,7 +23310,7 @@ function scripts.bullet_orc_shaman_shock.update(this, store)
 	end
 
 	U.y_animation_wait_default(this)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bolt_orc_shaman = {}
@@ -23336,7 +23336,7 @@ function scripts.bolt_orc_shaman.update(this, store)
 					m.modifier.source_id = this.id
 					m.modifier.level = b.level
 					m.modifier.damage_factor = b.damage_factor
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 		end
@@ -23350,7 +23350,7 @@ function scripts.bolt_orc_shaman.update(this, store)
 				hp.pos.x, hp.pos.y = b.to.x, b.to.y
 			end
 			hp._effect_pos = target.pos
-			queue_insert(store, hp)
+			simulation:queue_insert_entity(hp)
 		end
 	end
 
@@ -23378,9 +23378,9 @@ function scripts.bolt_orc_shaman.update(this, store)
 		sfx.render.sprites[i].r = r
 	end
 
-	queue_insert(store, sfx)
+	simulation:queue_insert_entity(sfx)
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.fireball_orc_shaman_meteorite = {}
@@ -23391,13 +23391,13 @@ function scripts.fireball_orc_shaman_meteorite.update(this, store)
 
 	local particle = E:create_entity(b.particles_name)
 	particle.particle_system.track_id = this.id
-	queue_insert(store, particle)
+	simulation:queue_insert_entity(particle)
 
 	local shadow = E:create_entity("decal_fireball_shadow")
 	shadow.pos.x, shadow.pos.y = b.to.x, b.to.y
 	shadow.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, shadow)
+	simulation:queue_insert_entity(shadow)
 
 	local shadow_tracks = b.from.x ~= b.to.x
 
@@ -23436,7 +23436,7 @@ function scripts.fireball_orc_shaman_meteorite.update(this, store)
 				unit_hit_fx.pos:copy(enemy.pos)
 			end
 			unit_hit_fx.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, unit_hit_fx)
+			simulation:queue_insert_entity(unit_hit_fx)
 
 			for j = 1, #mods do
 				local mod_name = mods[j]
@@ -23446,7 +23446,7 @@ function scripts.fireball_orc_shaman_meteorite.update(this, store)
 					m.modifier.source_id = this.id
 					m.modifier.level = b.level
 					m.modifier.damage_factor = b.damage_factor
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 		end
@@ -23462,18 +23462,18 @@ function scripts.fireball_orc_shaman_meteorite.update(this, store)
 		fx.pos.x, fx.pos.y = b.to.x, b.to.y
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	else
 		local fx = E:create_entity(b.hit_fx)
 
 		fx.pos.x, fx.pos.y = b.to.x, b.to.y
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
-	queue_remove(store, shadow)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(shadow)
+	simulation:queue_remove_entity(this)
 end
 
 -- 兽人萨满 End
@@ -23499,8 +23499,8 @@ function scripts.tower_orc_warriors.update(this, store)
 
 		SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 
-		queue_insert(store, s)
-		queue_remove(store, old)
+		simulation:queue_insert_entity(s)
+		simulation:queue_remove_entity(old)
 		b.soldiers[i] = s
 
 		signal.emit("tower-spawn", this, s)
@@ -23576,7 +23576,7 @@ function scripts.tower_orc_warriors.update(this, store)
 					end
 
 					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 					b.soldiers[i] = s
 					signal.emit("tower-spawn", this, s)
 				end
@@ -23634,7 +23634,7 @@ function scripts.soldier_orc_warrior.update(this, store)
 						a.aura.source_id = this.id
 						a.regen.health = p.heal[p.level] * a.regen.cooldown
 						a.aura.ts = store.tick_ts
-						queue_insert(store, a)
+						simulation:queue_insert_entity(a)
 					else
 						this._aura_regen.regen.health = p.heal[p.level] * this._aura_regen.regen.cooldown
 					end
@@ -23686,7 +23686,7 @@ function scripts.soldier_orc_warrior.update(this, store)
 										local m = E:create_entity(a.mod)
 										m.modifier.target_id = enemies[i].id
 										m.modifier.source_id = this.id
-										queue_insert(store, m)
+										simulation:queue_insert_entity(m)
 									end
 								end
 							end
@@ -23788,7 +23788,7 @@ function scripts.tower_dark_knights.update(this, store)
 					end
 
 					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 					b.soldiers[i] = s
 					signal.emit("tower-spawn", this, s)
 				end
@@ -24026,7 +24026,7 @@ function scripts.tower_bone_flingers.remove(this, store)
 	local bar = this.barrack
 
 	for i = #bar.soldiers, 1, -1 do
-		queue_remove(store, bar.soldiers[i])
+		simulation:queue_remove_entity(bar.soldiers[i])
 		bar.soldiers[i] = nil
 	end
 
@@ -24079,7 +24079,7 @@ function scripts.tower_bone_flingers.update(this, store)
 		e.nav_rally.pos.x, e.nav_rally.pos.y = e_pos.x, e_pos.y
 		SU.soldier_inherit_tower_buff_factor(e, this, store.tick_ts)
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 		return true
 	end
 
@@ -24155,7 +24155,7 @@ function scripts.tower_bone_flingers.update(this, store)
 					s.nav_rally.new = true
 					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 					barrack.soldiers[i] = s
 
 					signal.emit("tower-spawn", this, s)
@@ -24260,7 +24260,7 @@ function scripts.tower_bone_flingers.update(this, store)
 
 					apply_precision(b1)
 
-					queue_insert(store, b1)
+					simulation:queue_insert_entity(b1)
 
 					while not U.animation_finished(this, shooter_sid) do
 						coroutine.yield()
@@ -24341,7 +24341,7 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 		if this.health.dead or (not U.has_valid_rally_node_nearby(this.pos) and this.soldier.target_id == nil) or not next_pos then
 			this.health.hp = 0
 			SU.y_soldier_death(store, this)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 
@@ -24447,7 +24447,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 						bomb.bullet.to = pred_pos
 						bomb.bullet.source_id = this.id
 
-						queue_insert(store, bomb)
+						simulation:queue_insert_entity(bomb)
 
 						while not U.animation_finished(this, sid) do
 							coroutine.yield()
@@ -24535,7 +24535,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 						bullet.pos:copy(bullet.bullet.from)
 
 						apply_precision(bullet)
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 
 						while store.tick_ts - loop_ts < a_multi.cycle_time do
 							coroutine.yield()
@@ -24600,12 +24600,12 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 					bl.source_id = this.id
 					bl.damage_factor = this.tower.damage_factor
 					apply_precision(bullet)
-					queue_insert(store, bullet)
+					simulation:queue_insert_entity(bullet)
 
 					local bullet_2 = E:clone_entity(bullet)
 					bullet_2.pos.x = bullet_2.pos.x - 20
 					bullet_2.bullet.from.x = bullet_2.pos.x
-					queue_insert(store, bullet_2)
+					simulation:queue_insert_entity(bullet_2)
 
 					while not U.animation_finished(this, sid_m) do
 						coroutine.yield()
@@ -24678,7 +24678,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 						s.powers.armor.level = p_armor.level
 
 						SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-						queue_insert(store, s)
+						simulation:queue_insert_entity(s)
 
 						b.soldiers[i] = s
 						s.soldier.tower_soldier_idx = i
@@ -24761,7 +24761,7 @@ end
 function scripts.tower_rocket_riders.remove(this, store)
 	if this.box then
 		this.box.owner = nil
-		queue_remove(store, this.box)
+		simulation:queue_remove_entity(this.box)
 		this.box = nil
 	end
 
@@ -24860,7 +24860,7 @@ function scripts.tower_rocket_riders.update(this, store, script)
 					this.box = E:create_entity(pow_m.entity)
 					this.box.pos:copy(this.pos)
 					this.box.owner = this
-					queue_insert(store, this.box)
+					simulation:queue_insert_entity(this.box)
 				end
 			end
 
@@ -24910,7 +24910,7 @@ function scripts.tower_rocket_riders.update(this, store, script)
 						b.bullet.damage_min = b.bullet.damage_min + pow_c.damage_inc[pow_c.level]
 						b.bullet.damage_max = b.bullet.damage_max + pow_c.damage_inc[pow_c.level]
 					end
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 
 					U.y_animation_wait(this, tower_sid)
 				end
@@ -24946,7 +24946,7 @@ function scripts.tower_rocket_riders.update(this, store, script)
 						b.bullet.damage_min = b.bullet.damage_min + pow_c.damage_inc[pow_c.level]
 						b.bullet.damage_max = b.bullet.damage_max + pow_c.damage_inc[pow_c.level]
 					end
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 
 					U.y_animation_wait(this, tower_sid)
 				end
@@ -24967,7 +24967,7 @@ function scripts.mine_box.update(this, store)
 
 	while true do
 		if not this.owner or not store.entities[this.owner.id] then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		if not this.owner.tower.blocked and store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
@@ -24976,7 +24976,7 @@ function scripts.mine_box.update(this, store)
 			U.y_wait_unconditional(store, a.shoot_time)
 
 			if not this.owner or not store.entities[this.owner.id] then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 				return
 			end
 
@@ -25023,7 +25023,7 @@ function scripts.mine_box.update(this, store)
 				end
 			end
 			if global_success then
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 			end
 		end
 
@@ -25061,9 +25061,9 @@ function scripts.bomb_rr_mine.update(this, store)
 	hp.damage_max = this.bullet.damage_config[this.bullet.level]
 	hp.damage_factor = this.bullet.damage_factor
 
-	queue_insert(store, hp)
+	simulation:queue_insert_entity(hp)
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.decal_rr_mine = {}
@@ -25079,7 +25079,7 @@ function scripts.decal_rr_mine.update(this, store)
 			dec.pos = V.vclone(this.pos)
 			dec.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, dec)
+			simulation:queue_insert_entity(dec)
 			S:queue(this.sound)
 
 			local fx = E:create_entity(this.hit_fx)
@@ -25087,7 +25087,7 @@ function scripts.decal_rr_mine.update(this, store)
 			fx.pos = V.vclone(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 			if targets and #targets > 0 then
 				for _, t in ipairs(targets) do
 					local d = E.assign_damage(this.damage_type, math.random(this.damage_min, this.damage_max) * this.damage_factor, this.id, t.id)
@@ -25098,7 +25098,7 @@ function scripts.decal_rr_mine.update(this, store)
 						local mod = E:create_entity(this.mod)
 						mod.modifier.target_id = t.id
 						mod.modifier.source_id = this.id
-						queue_insert(store, mod)
+						simulation:queue_insert_entity(mod)
 					end
 				end
 			end
@@ -25141,7 +25141,7 @@ function scripts.decal_rr_mine.update(this, store)
 						local mod = E:create_entity(this.mod)
 						mod.modifier.target_id = t.id
 						mod.modifier.source_id = this.id
-						queue_insert(store, mod)
+						simulation:queue_insert_entity(mod)
 					end
 				end
 			end
@@ -25150,7 +25150,7 @@ function scripts.decal_rr_mine.update(this, store)
 			dec.pos = V.vclone(this.pos)
 			dec.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, dec)
+			simulation:queue_insert_entity(dec)
 			S:queue(this.sound)
 
 			local fx = E:create_entity(this.hit_fx)
@@ -25158,14 +25158,14 @@ function scripts.decal_rr_mine.update(this, store)
 			fx.pos = V.vclone(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 			break
 		end
 
 		U.y_wait_unconditional(store, this.check_interval)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bomb_rr_fragment = {}
@@ -25173,7 +25173,7 @@ scripts.bomb_rr_fragment = {}
 function scripts.bomb_rr_fragment.update(this, store)
 	local ps = E:create_entity(this.bullet.particles_name)
 	ps.particle_system.track_id = this.id
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 
 	local start_ts = store.tick_ts
 	local check_interval = math.min(0.05, this.bullet.flight_time / 10)
@@ -25213,7 +25213,7 @@ function scripts.bomb_rr_fragment.update(this, store)
 						local fx = E:create_entity(this.bullet.hit_fx)
 						fx.pos:copy(targets[i].pos)
 						fx.render.sprites[1].ts = store.tick_ts
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 
 						this.bullet.speed.x = this.bullet.speed.x * 0.9
 						this.bullet.speed.y = this.bullet.speed.y * 0.9
@@ -25252,10 +25252,10 @@ function scripts.bomb_rr_fragment.update(this, store)
 	local fx = E:create_entity(this.bullet.hit_fx)
 	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 	S:queue(this.sound_events.hit)
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 	return
 end
 
@@ -25290,7 +25290,7 @@ function scripts.missile_rr.remove(this, store)
 					-- 只有第一个碎片有爆炸音效，避免炸音
 					fragment.sound_events.hit = nil
 				end
-				queue_insert(store, fragment)
+				simulation:queue_insert_entity(fragment)
 			end
 		end
 	end
@@ -25323,7 +25323,7 @@ function scripts.tower_grim_cemetery.insert(this, store, script)
 	e.pos = tpos(this)
 	e.aura.source_id = this.id
 	e.aura.ts = store.tick_ts
-	queue_insert(store, e)
+	simulation:queue_insert_entity(e)
 	this.aura_cemetery = e
 
 	return true
@@ -25373,7 +25373,7 @@ function scripts.tower_grim_cemetery.update(this, store, script)
 						b.aura.level = pow_h.level
 						b.aura.damage_factor = this.tower.damage_factor * b.aura.damage_factor
 						b.render.sprites[1].ts = store.tick_ts
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 
 						U.y_wait_unconditional(store, 0.1)
 					end
@@ -25398,9 +25398,9 @@ function scripts.tower_grim_cemetery.remove(this, store)
 			if s.health then
 				s.health.dead = true
 			end
-			queue_remove(store, s)
+			simulation:queue_remove_entity(s)
 		end
-		queue_remove(store, this.aura_cemetery)
+		simulation:queue_remove_entity(this.aura_cemetery)
 		this.aura_cemetery = nil
 	end
 
@@ -25415,7 +25415,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 
 	local source = store.entities[this.aura.source_id]
 	if not source then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 
@@ -25441,7 +25441,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 
 		SU.soldier_inherit_tower_buff_factor(e, source, store.tick_ts)
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		if pow_p.level > 0 then
 			e.pestilence_active = true
@@ -25451,7 +25451,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 			m.modifier.target_id = e.id
 			m.modifier.source_id = this.id
 			m.modifier.damage_factor = e.unit.damage_factor
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 
 		S:queue(this.spawn_sound)
@@ -25463,7 +25463,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 		source = store.entities[this.aura.source_id]
 
 		if not source then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -25644,7 +25644,7 @@ function scripts.soldier_zombie.update(this, store, script)
 			fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		elseif band(h.last_damage_types, bor(DAMAGE_EAT)) ~= 0 then
 			this.unit.hide_during_death = true
 		elseif band(h.last_damage_types, bor(DAMAGE_HOST)) ~= 0 then
@@ -25658,7 +25658,7 @@ function scripts.soldier_zombie.update(this, store, script)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].name = fx.render.sprites[1].size_names[this.unit.size]
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			if this.unit.show_blood_pool and this.unit.blood_color ~= BLOOD_NONE then
 				local decal = E:create_entity("decal_blood_pool")
@@ -25667,7 +25667,7 @@ function scripts.soldier_zombie.update(this, store, script)
 				decal.render.sprites[1].ts = store.tick_ts
 				decal.render.sprites[1].name = this.unit.blood_color
 
-				queue_insert(store, decal)
+				simulation:queue_insert_entity(decal)
 			end
 		else
 			if this.pestilence_active then
@@ -25786,7 +25786,7 @@ function scripts.aura_grim_cemetery_hand.update(this, store, script)
 						local m = E:create_entity("mod_grim_cemetery_scare")
 						m.modifier.target_id = target.id
 						m.modifier.source_id = this.id
-						queue_insert(store, m)
+						simulation:queue_insert_entity(m)
 					end
 				end
 			end
@@ -25799,7 +25799,7 @@ function scripts.aura_grim_cemetery_hand.update(this, store, script)
 	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_grim_cemetery_explode = {}
@@ -25825,7 +25825,7 @@ function scripts.mod_grim_cemetery_explode.remove(this, store)
 			m.modifier.target_id = target.id
 			m.modifier.source_id = this.id
 
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 	end
 
@@ -25840,7 +25840,7 @@ function scripts.mod_grim_cemetery_explode.update(this, store, script)
 	local target = store.entities[m.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -25852,7 +25852,7 @@ function scripts.mod_grim_cemetery_explode.update(this, store, script)
 
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
 			U.y_wait_unconditional(store, this.explode_delay)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -25887,7 +25887,7 @@ function scripts.tower_balloon.update(this, store)
 		balloon.nav_rally.new = true
 		balloon.owner = this
 		balloon.wick_mode = 1
-		queue_insert(store, balloon)
+		simulation:queue_insert_entity(balloon)
 		table.insert(this.barrack.soldiers, balloon)
 	end
 
@@ -25976,7 +25976,7 @@ function scripts.soldier_balloon.update(this, store, script)
 					b.bullet.to = pred_pos
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 					while not U.animation_finished(this, shooter_sid) do
 						coroutine.yield()
 					end
@@ -26046,7 +26046,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						b.bullet.from:copy(b.pos)
 						b.bullet.to = this.pos
 						b.bullet.source_id = this.id
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					end
 					U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
 				end
@@ -26082,7 +26082,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						b.bullet.level = pow_o.level
 						b.bullet.from:copy(b.pos)
 						b.bullet.to = this.pos
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						while not U.animation_finished_default(this) do
 							coroutine.yield()
 						end
@@ -26103,7 +26103,7 @@ function scripts.soldier_balloon.update(this, store, script)
 			mod.modifier.target_id = this.owner.id
 			mod.pos:copy(this.owner.pos)
 			this._balloon_mod_id = mod.id
-			queue_insert(store, mod)
+			simulation:queue_insert_entity(mod)
 			this.render.sprites[7].hidden = false
 		end
 
@@ -26143,7 +26143,7 @@ end
 
 function scripts.soldier_balloon.remove(this, store, script)
 	if this._balloon_mod_id and store.entities[this._balloon_mod_id] then
-		queue_remove(store, store.entities[this._balloon_mod_id])
+		simulation:queue_remove_entity(store.entities[this._balloon_mod_id])
 	end
 	return true
 end
@@ -26256,25 +26256,25 @@ scripts.tower_spirit_mausoleum = {}
 function scripts.tower_spirit_mausoleum.remove(this, store)
 	local bullets = this.attacks.list[1].stored_bullets
 	for i = #bullets, 1, -1 do
-		queue_remove(store, bullets[i])
+		simulation:queue_remove_entity(bullets[i])
 		bullets[i] = nil
 	end
 	bullets = this.attacks.list[1].extra_bullets
 	for i = #bullets, 1, -1 do
-		queue_remove(store, bullets[i])
+		simulation:queue_remove_entity(bullets[i])
 		bullets[i] = nil
 	end
 
 	local soldiers = this.barrack.soldiers
 	for i = #soldiers, 1, -1 do
-		queue_remove(store, soldiers[i])
+		simulation:queue_remove_entity(soldiers[i])
 		soldiers[i] = nil
 	end
 
 	if this._aura_spectral_communion then
 		local aura = store.entities[this._aura_spectral_communion]
 		if aura then
-			queue_remove(store, aura)
+			simulation:queue_remove_entity(aura)
 		end
 		this._aura_spectral_communion = nil
 	end
@@ -26309,7 +26309,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 					aura.aura.source_id = this.id
 					aura.pos:copy(this.pos)
 					this._aura_spectral_communion = aura.id
-					queue_insert(store, aura)
+					simulation:queue_insert_entity(aura)
 				end
 			end
 			if pow_p.changed then
@@ -26329,7 +26329,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 						local offset = pow_g.spawn_positions[i]
 						fx.pos:set(this.pos.x + offset.x, this.pos.y + offset.y)
 						fx.render.sprites[1].ts = store.tick_ts
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 						local gargoyle = E:create_entity(barrack.soldier_type)
 						gargoyle.soldier.tower_id = this.id
 						gargoyle.soldier.tower_soldier_idx = i
@@ -26345,7 +26345,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 				U.y_wait_unconditional(store, pow_g.spawn_time)
 
 				for i = 1, #gargoyles do
-					queue_insert(store, gargoyles[i][2])
+					simulation:queue_insert_entity(gargoyles[i][2])
 					this.render.sprites[gargoyles[i][1]].hidden = true
 				end
 			end
@@ -26354,7 +26354,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 				local s = barrack.soldiers[i]
 				if not s or s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime then
 					if s then
-						queue_remove(store, s)
+						simulation:queue_remove_entity(s)
 					end
 					local new_s = E:create_entity(barrack.soldier_type)
 					new_s.soldier.tower_id = this.id
@@ -26369,7 +26369,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 					end
 					new_s.render.sprites[1].name = "raise"
 					SU.soldier_inherit_tower_buff_factor(new_s, this, store.tick_ts)
-					queue_insert(store, new_s)
+					simulation:queue_insert_entity(new_s)
 					barrack.soldiers[i] = new_s
 					signal.emit("tower-spawn", this, new_s)
 				end
@@ -26401,7 +26401,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 					local fx = E:create_entity(a2.bullet[1])
 					fx.pos = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 					fx.render.sprites[1].ts = store.tick_ts
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 					U.y_wait_unconditional(store, a2.shoot_time)
 
 					if target.health.dead then
@@ -26420,7 +26420,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 					b.bullet.level = pow_p.level
 					b.bullet.target_id = target.id
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 					a2.ts = start_ts
 				end
 			end
@@ -26444,7 +26444,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 						b.bullet.shot_index = math.floor((#a1.stored_bullets - 1) / 3 + 1) % -2 + 2
 						local offset = b.bullet.destination_offsets[(b.bullet.shot_index - 1) % #b.bullet.destination_offsets + 1]
 						b.bullet.to:set(b.pos.x + offset.x, b.pos.y + offset.y)
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					end
 
 					local target, targets = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, a1.node_prediction, a1.vis_flags, a1.vis_bans)
@@ -26535,7 +26535,7 @@ function scripts.aura_spectral_communion.update(this, store)
 		local source = store.entities[this.aura.source_id]
 
 		if not source then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -26564,7 +26564,7 @@ function scripts.aura_spectral_communion.update(this, store)
 
 					b.bullet.to:set(source.pos.x + start_offset.x + offset.x, source.pos.y + start_offset.y + offset.y)
 					a.extra_bullets[#a.extra_bullets + 1] = b
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 				end
 			end
 		end
@@ -26583,7 +26583,7 @@ function scripts.tower_spirit_mausoleum_bolt.update(this, store)
 	end
 	local ps = E:create_entity(b.particles_name)
 	ps.particle_system.track_id = this.id
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 
 	local function move_step(dest)
 		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
@@ -26702,7 +26702,7 @@ function scripts.tower_spirit_mausoleum_bolt.update(this, store)
 				m.modifier.target_id = b.target_id
 				m.modifier.level = b.level
 				m.modifier.damage_factor = b.damage_factor
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 	end
@@ -26714,12 +26714,12 @@ function scripts.tower_spirit_mausoleum_bolt.update(this, store)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[1].runs = 0
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 
 	ps.particle_system.emit = false
 	U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_possession = {}
@@ -26749,7 +26749,7 @@ function scripts.mod_possession.update(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	this.pos = target.pos
@@ -26765,7 +26765,7 @@ function scripts.mod_possession.update(this, store)
 		target = store.entities[m.target_id]
 		if not target or target.health.dead or not target._betray_data then
 			U.y_animation_play(this, "end", nil, store.tick_ts, false)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 
@@ -26811,7 +26811,7 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				SU.soldier_inherit_tower_buff_factor(unit, tower, store.tick_ts)
 				unit.dodge.chance = this.dodge.chance
 				unit._espectral_tower_ref = tower
-				queue_insert(store, unit)
+				simulation:queue_insert_entity(unit)
 				this.render.sprites[1].hidden = true
 				this.render.sprites[2].hidden = true
 				U.replace_blocker(store, this, unit)
@@ -26819,7 +26819,7 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				if not U.y_wait_conditional(store, this.health.dead_lifetime, function()
 					return not this.health.dead
 				end) then
-					queue_remove(store, this)
+					simulation:queue_remove_entity(this)
 					return
 				end
 			else
@@ -26915,7 +26915,7 @@ function scripts.soldier_elves_espectral_harasser.update(this, store, script)
 	local ps = E:create_entity(this.particle)
 	ps.particle_system.emit = this.nav_rally.new
 	ps.particle_system.track_id = this.id
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 
 	local immune_stop_ts = store.tick_ts + this.immune_duration
 	this.health.ignore_damage = true
@@ -27016,7 +27016,7 @@ function scripts.tower_goblirang.update(this, store)
 		if pow_p.level > 0 then
 			U.append_mod(b.bullet, pow_p.mod)
 		end
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 		return b.id
 	end
 
@@ -27037,7 +27037,7 @@ function scripts.tower_goblirang.update(this, store)
 		local ft = b.bullet.flight_time
 		b.bullet.speed = v((b.bullet.to.x - b.bullet.from.x) / ft, (b.bullet.to.y - b.bullet.from.y) / ft)
 		b.bullet.ts = store.tick_ts
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	while true do
@@ -27178,7 +27178,7 @@ function scripts.goblirang.update(this, store)
 	U.animation_start_default(this, "flying", nil, store.tick_ts, true)
 	local ps = E:create_entity(b.particles_name)
 	ps.particle_system.track_id = this.id
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 
 	local mods
 	if b.mod then
@@ -27212,7 +27212,7 @@ function scripts.goblirang.update(this, store)
 							sfx.pos.x, sfx.pos.y = t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y
 							sfx.render.sprites[1].ts = store.tick_ts
 							sfx.render.sprites[1].runs = 0
-							queue_insert(store, sfx)
+							simulation:queue_insert_entity(sfx)
 						end
 
 						local d = SU.create_bullet_damage_without_pops(b, t.id, this.id)
@@ -27230,7 +27230,7 @@ function scripts.goblirang.update(this, store)
 									mod.modifier.source_damage = d
 									mod.modifier.damage_factor = b.damage_factor
 
-									queue_insert(store, mod)
+									simulation:queue_insert_entity(mod)
 								end
 							end
 						end
@@ -27250,7 +27250,7 @@ function scripts.goblirang.update(this, store)
 		goto label_193_0
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.tower_deep_devils = {}
@@ -27279,7 +27279,7 @@ function scripts.tower_deep_devils.update(this, store)
 				if #this.sentinels == 0 then
 					local s = E:create_entity("storm_deep_devils")
 					s.pos:copy(this.pos)
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 					table.insert(this.sentinels, s)
 					s.owner = this
 				end
@@ -27329,7 +27329,7 @@ function scripts.tower_deep_devils.update(this, store)
 						s.render.sprites[3].hidden = false
 					end
 					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 					b.soldiers[i] = s
 					signal.emit("tower-spawn", this, s)
 				end
@@ -27351,7 +27351,7 @@ function scripts.tower_deep_devils.update(this, store)
 					b.bullet.damage_factor = this.tower.damage_factor
 					b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 					b.bullet.target_id = target.id
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 				else
 					ab.ts = ab.ts + 0.1
 				end
@@ -27394,7 +27394,7 @@ scripts.bolt_tower_deep_devils = {
 			b.bullet.source_id = this.bullet.source_id
 			b.bullet.damage_factor = this.bullet.damage_factor
 			b.chain = {this.bullet.target_id}
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 		end
 		return true
 	end
@@ -27422,7 +27422,7 @@ scripts.ray_deep_devils = {
 					b.bullet.damage_factor = this.bullet.damage_factor
 					b.chain = this.chain
 					this.chain[#this.chain + 1] = target.id
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 				end
 			end
 		end
@@ -27517,7 +27517,7 @@ function scripts.storm_deep_devils.update(this, store)
 				b.bullet.target_id = target.id
 				b.bullet.source_id = this.id
 				b.bullet.damage_factor = damage_factor
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 
 				U.y_animation_wait_default(this)
 				U.animation_start_default(this, "idle", false, store.tick_ts, true)
@@ -27541,7 +27541,7 @@ function scripts.storm_deep_devils.update(this, store)
 	end
 
 	hide()
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 火山
@@ -27564,7 +27564,7 @@ function scripts.tower_ignis_altar.update(this, store)
 	-- const&
 	this.shooter.pos = this.pos
 	this.shooter.owner = this
-	queue_insert(store, this.shooter)
+	simulation:queue_insert_entity(this.shooter)
 
 	local tower_sid = 2
 	local pow_elemental = this.powers.burning_elemental
@@ -27592,7 +27592,7 @@ function scripts.tower_ignis_altar.update(this, store)
 				soldier.nav_rally.new = false
 				soldier.render.sprites[1].name = soldier.raise_animation
 				SU.soldier_inherit_tower_buff_factor(soldier, this, store.tick_ts)
-				queue_insert(store, soldier)
+				simulation:queue_insert_entity(soldier)
 				this.barrack.soldiers[1] = soldier
 				signal.emit("tower-spawn", this, soldier)
 			end
@@ -27615,7 +27615,7 @@ function scripts.tower_ignis_altar.update(this, store)
 					ns.soldier.tower_id = this.id
 					ns.soldier.tower_soldier_idx = i
 					if s then
-						queue_remove(store, s)
+						simulation:queue_remove_entity(s)
 						ns.pos:copy(s.pos)
 					else
 						ns.pos:copy(this.barrack.rally_pos)
@@ -27627,7 +27627,7 @@ function scripts.tower_ignis_altar.update(this, store)
 						ns.nav_rally.new = true
 					end
 					SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
-					queue_insert(store, ns)
+					simulation:queue_insert_entity(ns)
 					this.barrack.soldiers[i] = ns
 					signal.emit("tower-spawn", this, ns)
 				end
@@ -27672,7 +27672,7 @@ function scripts.tower_ignis_altar.update(this, store)
 						bullet.bullet.damage_factor = this.tower.damage_factor
 						bullet.bullet.level = pow_fire.level
 
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 
 						while not U.animation_finished(this, tower_sid) do
 							coroutine.yield()
@@ -27697,14 +27697,14 @@ end
 
 function scripts.tower_ignis_altar.remove(this, store)
 	if this.shooter then
-		queue_remove(store, this.shooter)
+		simulation:queue_remove_entity(this.shooter)
 		this.shooter = nil
 	end
 	for i, s in ipairs(this.barrack.soldiers) do
 		if s.health then
 			s.health.dead = true
 		end
-		queue_remove(store, s)
+		simulation:queue_remove_entity(s)
 	end
 	return true
 end
@@ -27738,7 +27738,7 @@ function scripts.ignis_altar_subunit.update(this, store)
 						local mod = E:create_entity(a1.spell)
 						mod.modifier.target_id = enemy.id
 						mod.modifier.source_id = this.id
-						queue_insert(store, mod)
+						simulation:queue_insert_entity(mod)
 						U.animation_start_default(this, "active", nil, store.tick_ts, true)
 						coroutine.yield()
 						while store.entities[mod.id] do
@@ -27772,7 +27772,7 @@ function scripts.mod_ignis_altar_single_extinction.remove(this, store)
 			fx.pos = V.vclone(target.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].offset = V.v(0, 0)
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 
 			local enemies = U.find_enemies_in_range_filter_off(target.pos, this.explosion_range, this.explosion_vis_flags, this.explosion_vis_bans)
 
@@ -27832,7 +27832,7 @@ function scripts.aura_bullet_ignis_altar.update(this, store)
 						new_mod.modifier.source_id = this.id
 						new_mod.modifier.damage_factor = this.aura.damage_factor
 
-						queue_insert(store, new_mod)
+						simulation:queue_insert_entity(new_mod)
 					end
 				end
 			end
@@ -27917,7 +27917,7 @@ function scripts.tower_shaolin.insert(this, store)
 		e.aura.ts = store.tick_ts
 		if this.powers.lion.level >= 1 then
 			this.aura1 = e
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 		end
 	end
 	if not this.barrack.rally_pos and this.tower.default_rally_pos then
@@ -27936,12 +27936,12 @@ function scripts.tower_shaolin.remove(this, store)
 				p.is_stun = false
 			end
 		end
-		queue_remove(store, p)
+		simulation:queue_remove_entity(p)
 		this.pixies[i] = nil
 	end
 
 	if this.aura1 then
-		queue_remove(store, this.aura1)
+		simulation:queue_remove_entity(this.aura1)
 		this.aura1 = nil
 	end
 
@@ -27949,13 +27949,13 @@ function scripts.tower_shaolin.remove(this, store)
 		if s.health then
 			s.health.dead = true
 		end
-		queue_remove(store, s)
+		simulation:queue_remove_entity(s)
 	end
 
 	for i = #this.barrack.soldiers, 1, -1 do
 		local s = this.barrack.soldiers[i]
 		s.health.dead = true
-		queue_remove(store, s)
+		simulation:queue_remove_entity(s)
 		this.barrack.soldiers[i] = nil
 	end
 
@@ -27978,7 +27978,7 @@ function scripts.tower_shaolin.update(this, store)
 			local e = E:create_entity("decal_shaolin")
 			e.idle_pos = po
 			e.pos:set(this.pos.x + po.x, this.pos.y + po.y)
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 			this.pixies[i] = e
 			e.render.sprites[1].hidden = true
 			e.owner = this
@@ -27995,7 +27995,7 @@ function scripts.tower_shaolin.update(this, store)
 			e.aura.source_id = this.id
 			e.aura.ts = store.tick_ts
 			this.aura1 = e
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 		end
 	end
 
@@ -28025,7 +28025,7 @@ function scripts.tower_shaolin.update(this, store)
 				local s = this.barrack.soldiers[i]
 				if not s or (s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime) then
 					if s then
-						queue_remove(store, s)
+						simulation:queue_remove_entity(s)
 					end
 
 					local ns = E:create_entity(this.barrack.soldier_type)
@@ -28047,7 +28047,7 @@ function scripts.tower_shaolin.update(this, store)
 					end
 
 					SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
-					queue_insert(store, ns)
+					simulation:queue_insert_entity(ns)
 					this.barrack.soldiers[i] = ns
 					signal.emit("tower-spawn", this, ns)
 				end
@@ -28156,7 +28156,7 @@ function scripts.decal_shaolin.update(this, store)
 						fx.render.sprites[1].hidden = true
 					end
 					fx.render.sprites[1].ts = store.tick_ts
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 
 					bullet.bullet.damage_factor = this.owner.tower.damage_factor / math.sqrt(this.target_round)
 					apply_precision(bullet)
@@ -28180,7 +28180,7 @@ function scripts.decal_shaolin.update(this, store)
 								mod.modifier.source_damage = d
 								mod.modifier.damage_factor = bullet.bullet.damage_factor
 
-								queue_insert(store, mod)
+								simulation:queue_insert_entity(mod)
 							end
 						end
 					end
@@ -28241,7 +28241,7 @@ scripts.aura_tower_shaolin_gold = {
 							m.template_name = m.template_name .. this.id
 							m.modifier.target_id = target.id
 							m.modifier.source_id = this.id
-							queue_insert(store, m)
+							simulation:queue_insert_entity(m)
 						end
 					end
 				end
@@ -28268,7 +28268,7 @@ scripts.mod_gold_indicator = {
 				fx.pos.x = target.pos.x + target.unit.hit_offset.x
 				fx.pos.y = target.pos.y + target.unit.hit_offset.y
 				fx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				target._aura_tower_shaolin_gold_shown = true
 			end
 
@@ -28350,7 +28350,7 @@ scripts.tower_blazing_watcher = {
 							b.bullet.level = this.tower.level
 							b.bullet.damage_factor = this.tower.damage_factor
 							b.tower_ref = this
-							queue_insert(store, b)
+							simulation:queue_insert_entity(b)
 							U.y_animation_wait_specific(this, 4)
 							U.animation_start_group(this, "loop", nil, store.tick_ts, true, "mage")
 							U.y_animation_wait_specific(this, 3)
@@ -28405,7 +28405,7 @@ scripts.bullet_tower_blazing_watcher = {
 		local s = this.render.sprites[1]
 		local target = store.entities[b.target_id]
 		if not target then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		local tower = this.tower_ref
@@ -28447,7 +28447,7 @@ scripts.bullet_tower_blazing_watcher = {
 					mod_dps = m
 				end
 
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 
@@ -28476,7 +28476,7 @@ scripts.bullet_tower_blazing_watcher = {
 					e.attack_stage = attack_stage
 					e.bullet.damage_factor = b.damage_factor
 					e.bullet.level = pow_explosion_level
-					queue_insert(store, e)
+					simulation:queue_insert_entity(e)
 				end
 			end
 			if not store.entities[tower.id] then
@@ -28507,7 +28507,7 @@ scripts.bullet_tower_blazing_watcher = {
 			U.y_animation_play(this, "out", nil, store.tick_ts, false, 1)
 		end
 		this.render.sprites[1].hidden = true
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 
@@ -28518,7 +28518,7 @@ scripts.mod_tower_blazing_watcher_damage = {
 		local target = store.entities[m.target_id]
 		local tower = this.tower_ref
 		if not target or target.health.dead then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 
@@ -28561,7 +28561,7 @@ scripts.mod_tower_blazing_watcher_damage = {
 						pb.bullet.damage_factor = tower.tower.damage_factor
 						pb.bullet_proc_pct = pow_d.damage_pct[pow_d.level]
 						pb.tower_ref = tower
-						queue_insert(store, pb)
+						simulation:queue_insert_entity(pb)
 						S:queue("blazing_watcher_disintegrate")
 					end
 				end
@@ -28620,7 +28620,7 @@ scripts.bullet_tower_blazing_watcher_proc = {
 
 		local target = store.entities[b.target_id]
 		if not target or target.health.dead then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 
@@ -28654,7 +28654,7 @@ scripts.bullet_tower_blazing_watcher_proc = {
 		local fx = E:create_entity(b.hit_fx)
 		fx.pos:copy(b.to)
 		fx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 
 		local tower = this.tower_ref
 		local pow_explosion_level = tower.powers.explosion.level
@@ -28664,7 +28664,7 @@ scripts.bullet_tower_blazing_watcher_proc = {
 			e.attack_stage = tower.attack_stage
 			e.bullet.damage_factor = b.damage_factor
 			e.bullet.level = pow_explosion_level
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 		end
 
 		while not U.animation_finished_default(this) do
@@ -28679,7 +28679,7 @@ scripts.bullet_tower_blazing_watcher_proc = {
 		for i = 1, #sprites do
 			sprites[i].hidden = true
 		end
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 
@@ -28705,11 +28705,11 @@ scripts.blazing_watcher_bolt_blast = {
 				m.modifier.target_id = enemies[i].id
 				m.modifier.level = this.attack_stage
 				m.slow.factor = 1 - (1 - m.slow.factor) * this.attack_stage
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 		U.y_animation_wait_default(this)
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 
@@ -28886,7 +28886,7 @@ function scripts.tower_swamp_monster.update(this, store)
 							U.append_mod(bl.bullet, "mod_swamp_stun")
 						end
 
-						queue_insert(store, bl)
+						simulation:queue_insert_entity(bl)
 
 						U.y_animation_wait_group(this, "layers", 1)
 						U.animation_start_group(this, an == "shootUp" and "idleUp" or "idle", af, store.tick_ts, true, "layers")
@@ -28908,11 +28908,11 @@ function scripts.tower_swamp_monster.update(this, store)
 					ns.powers.instakill.level = pow_i.level
 					ns.powers.eat.level = pow_e.level
 					SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
-					queue_insert(store, ns)
+					simulation:queue_insert_entity(ns)
 					b.soldiers[1] = ns
 					signal.emit("tower-spawn", this, ns)
 				elseif s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime then
-					queue_remove(store, s)
+					simulation:queue_remove_entity(s)
 					local ns = E:create_entity(b.soldier_type)
 					ns.soldier.tower_id = this.id
 					ns.pos:copy(s.pos)
@@ -28923,7 +28923,7 @@ function scripts.tower_swamp_monster.update(this, store)
 					ns.powers.instakill.level = pow_i.level
 					ns.powers.eat.level = pow_e.level
 					SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
-					queue_insert(store, ns)
+					simulation:queue_insert_entity(ns)
 					b.soldiers[1] = ns
 					signal.emit("tower-spawn", this, ns)
 				end
@@ -28953,7 +28953,7 @@ function scripts.tower_swamp_monster.update(this, store)
 			if s.pos:equals(spawn_pos) then
 				mode_changing = false
 				s.health.dead = true
-				queue_remove(store, s)
+				simulation:queue_remove_entity(s)
 				this.render.sprites[3].hidden = false
 				this.render.sprites[4].hidden = false
 				this.render.sprites[5].hidden = false
@@ -28975,12 +28975,12 @@ function scripts.tower_melting_furnace.remove(this, store)
 		return e.modifier and e.modifier.source_id == this.id
 	end)
 	for _, m in ipairs(mods) do
-		queue_remove(store, m)
+		simulation:queue_remove_entity(m)
 	end
 
 	if this.heat_previews then
 		for _, decal in ipairs(this.heat_previews) do
-			queue_remove(store, decal)
+			simulation:queue_remove_entity(decal)
 		end
 		this.heat_previews = nil
 	end
@@ -29045,12 +29045,12 @@ function scripts.tower_melting_furnace.update(this, store)
 
 					decal.pos = target.pos
 					decal.render.sprites[1].ts = store.tick_ts
-					queue_insert(store, decal)
+					simulation:queue_insert_entity(decal)
 					table.insert(this.heat_previews, decal)
 				end
 			elseif this.heat_previews and (not this.ui.hover_active or this.ui.args ~= "heat") then
 				for _, decal in ipairs(this.heat_previews) do
-					queue_remove(store, decal)
+					simulation:queue_remove_entity(decal)
 				end
 				this.heat_previews = nil
 			end
@@ -29068,7 +29068,7 @@ function scripts.tower_melting_furnace.update(this, store)
 					new_mod.modifier.target_id = tower.id
 					new_mod.modifier.source_id = this.id
 					new_mod.pos = tower.pos
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 
@@ -29117,7 +29117,7 @@ function scripts.tower_melting_furnace.update(this, store)
 						b.bullet.target_id = trigger_enemy.id
 						b.bullet.source_id = this.id
 						b.bullet.level = pow_coal.level
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					end
 					U.y_animation_wait(this, 2)
 					this.render.sprites[10].hidden = true
@@ -29143,7 +29143,7 @@ function scripts.tower_melting_furnace.update(this, store)
 						mod.pos = tower.pos
 						mod.modifier.target_id = tower.id
 						mod.modifier.source_id = this.id
-						queue_insert(store, mod)
+						simulation:queue_insert_entity(mod)
 					end
 
 					U.animation_start_default(this, "bfLoop", nil, store.tick_ts, true)
@@ -29178,7 +29178,7 @@ function scripts.tower_melting_furnace.update(this, store)
 								m.modifier.target_id = enemy.id
 								m.modifier.source_id = this.id
 								m.modifier.damage_factor = this.tower.damage_factor
-								queue_insert(store, m)
+								simulation:queue_insert_entity(m)
 							end
 						end
 					end
@@ -29189,7 +29189,7 @@ function scripts.tower_melting_furnace.update(this, store)
 							local smoke = E:create_entity("decal_dwaarp_smoke_water")
 							smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
 							smoke.render.sprites[1].ts = store.tick_ts + math.random() * fts(5)
-							queue_insert(store, smoke)
+							simulation:queue_insert_entity(smoke)
 						else
 							local decal = E:create_entity("decal_tween")
 							decal.pos.x, decal.pos.y = p.pos.x, p.pos.y
@@ -29199,11 +29199,11 @@ function scripts.tower_melting_furnace.update(this, store)
 							decal.render.sprites[1].animated = false
 							decal.render.sprites[1].z = Z_DECALS
 							decal.render.sprites[1].ts = store.tick_ts
-							queue_insert(store, decal)
+							simulation:queue_insert_entity(decal)
 							local smoke = E:create_entity("decal_melting_furnace_smoke")
 							smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
 							smoke.render.sprites[1].ts = store.tick_ts
-							queue_insert(store, smoke)
+							simulation:queue_insert_entity(smoke)
 						end
 					end
 					U.y_animation_wait(this, 2, 1)
@@ -29248,7 +29248,7 @@ function scripts.mod_furnace_fuel.update(this, store)
 	U.animation_start_default(this, "loop", nil, store.tick_ts, true)
 	U.y_wait_unconditional(store, m.duration - fts(13))
 	U.y_animation_play_default(this, "fadeOut", nil, store.tick_ts)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.mod_furnace_fuel.remove(this, store)
@@ -29295,7 +29295,7 @@ function scripts.lava_furnace.update(this, store)
 		end
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 女巫
@@ -29354,7 +29354,7 @@ function scripts.tower_wicked_sisters.update(this, store)
 		witch.owner = this
 		witch.powers.silent.level = this.powers.silent.level
 		witch.powers.frog.level = this.powers.frog.level
-		queue_insert(store, witch)
+		simulation:queue_insert_entity(witch)
 		b.soldiers[1] = witch
 		witch.wick_mode = current_mode
 		witch.attacks.list[1].vis_flags = current_mode == 0 and witch.attacks.list[1].vis_flags_0 or witch.attacks.list[1].vis_flags_1
@@ -29438,7 +29438,7 @@ function scripts.tower_wicked_sisters.update(this, store)
 					b2.pos:copy(totem_pos)
 					b2.aura.level = pow_s.level
 					b2.aura.source_id = this.id
-					queue_insert(store, b2)
+					simulation:queue_insert_entity(b2)
 				else
 					sa.ts = sa.ts + 0.1
 				end
@@ -29535,7 +29535,7 @@ function scripts.soldier_wicked_sisters.update(this, store)
 				b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
 				b.bullet.source_id = this.id
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 
 				U.y_animation_wait_default(this)
 			else
@@ -29570,7 +29570,7 @@ function scripts.soldier_wicked_sisters.update(this, store)
 					U.append_mod(b.bullet, "mod_wicked_sisters_stun")
 				end
 
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 				while not U.animation_finished_default(this) do
 					if this.nav_rally.new then
 						break
@@ -29609,7 +29609,7 @@ function scripts.aura_totem_wicked_sisters.update(this, store)
 		fx.render.sprites[1].name = "totem_water_fx_enter"
 		fx.render.sprites[1].anchor.y = 0.09
 		fx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	U.y_animation_play_once_specific_no_flip(this, "start", store.tick_ts, 1)
@@ -29627,7 +29627,7 @@ function scripts.aura_totem_wicked_sisters.update(this, store)
 					new_mod.modifier.level = a.level
 					new_mod.modifier.target_id = enemy.id
 					new_mod.modifier.source_id = this.id
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 		end
@@ -29641,12 +29641,12 @@ function scripts.aura_totem_wicked_sisters.update(this, store)
 		fx.render.sprites[1].name = "totem_water_fx_exit"
 		fx.render.sprites[1].anchor.y = 0.09
 		fx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	S:queue("TotemVanish")
 	U.y_animation_play_once_specific_no_flip(this, "end", store.tick_ts, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 沙虫
@@ -29742,7 +29742,7 @@ function scripts.tower_sandworm.update(this, store)
 					local controller = E:create_entity(ae.bullet)
 					controller.pos:copy(enemy.pos)
 					controller.render.sprites[1].fps = this.render.sprites[2].fps or 30
-					queue_insert(store, controller)
+					simulation:queue_insert_entity(controller)
 
 					U.y_animation_wait(this, 2)
 					U.animation_start_specific(this, "idle", nil, store.tick_ts, true, 2)
@@ -29770,7 +29770,7 @@ function scripts.tower_sandworm.update(this, store)
 					local pred_pos = U.calculate_enemy_ffe_pos(target, fts(26))
 					a.pos = U.find_best_center_node_containing_point(pred_pos, a.aura.radius, target.nav_path.pi)
 					a.aura.source_id = this.id
-					queue_insert(store, a)
+					simulation:queue_insert_entity(a)
 					U.y_animation_wait(this, 2)
 					U.animation_start_specific(this, "idle", nil, store.tick_ts, true, 2)
 				else
@@ -29807,7 +29807,7 @@ function scripts.tower_sandworm.update(this, store)
 				end
 
 				SU.soldier_inherit_tower_buff_factor(e, this, store.tick_ts)
-				queue_insert(store, e)
+				simulation:queue_insert_entity(e)
 			end
 
 			-- 黏液球
@@ -29828,7 +29828,7 @@ function scripts.tower_sandworm.update(this, store)
 					b.bullet.to = U.find_best_center_node_containing_point(U.calculate_enemy_ffe_pos(target, b.bullet.flight_time), E:get_template("aura_bomb_tower_sandworm_spit").aura.radius, target.nav_path.pi)
 					b.bullet.source_id = this.id
 					b.bullet.level = pow_s.level
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 					U.y_animation_wait(this, 2)
 					U.animation_start_specific(this, "idle", nil, store.tick_ts, true, 2)
 				else
@@ -29863,7 +29863,7 @@ scripts.aura_tower_sandworm = {
 			coroutine.yield()
 		end
 		U.y_animation_play_once_specific_no_flip(this, "out", store.tick_ts, 1)
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 
@@ -29898,10 +29898,10 @@ scripts.controller_tower_sandworm_eat = {
 		for i = 1, #decal.tween.props[1].keys do
 			decal.tween.props[1].keys[i][1] = decal.tween.props[1].keys[i][1] / this.render.sprites[1].fps * 30
 		end
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 		U.y_animation_play_once_specific_no_flip(this, "worm_nest_level4_instakill_run", store.tick_ts, 1)
 		S:queue("sandwormEatOut")
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 
@@ -29934,7 +29934,7 @@ scripts.aura_bomb_tower_sandworm_spit = {
 								new_mod.modifier.target_id = enemies[i].id
 								new_mod.modifier.source_id = this.id
 								new_mod.modifier.damage_factor = a.damage_factor
-								queue_insert(store, new_mod)
+								simulation:queue_insert_entity(new_mod)
 							end
 						end
 					end
@@ -29943,7 +29943,7 @@ scripts.aura_bomb_tower_sandworm_spit = {
 			coroutine.yield()
 		end
 
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 

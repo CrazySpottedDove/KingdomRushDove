@@ -791,7 +791,7 @@ function M.register(sys)
 		local damage_queue_len = #damage_queue
 
 		local entities = store.entities
-		for i = damage_queue_len, 1, -1 do
+		for i = 1, damage_queue_len do
 			local d = damage_queue[i]
 			local e = entities[d.target_id]
 

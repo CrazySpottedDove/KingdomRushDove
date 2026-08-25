@@ -18,15 +18,6 @@ local configer = require("dove_modules.configer")
 local log = require("lib.klua.log"):new("systems")
 
 function M.register(sys)
-
-	local function queue_insert(store, e)
-		simulation:queue_insert_entity(e)
-	end
-
-	local function queue_remove(store, e)
-		simulation:queue_remove_entity(e)
-	end
-
 	local function fts(v)
 		return v / FPS
 	end
@@ -67,7 +58,7 @@ function M.register(sys)
 						e.nav_path.ni = P:get_start_node(pi)
 						e.spawn_data = s.spawn_data
 
-						queue_insert(store, e)
+						simulation:queue_insert_entity(e)
 						current_count = current_count + 1
 					else
 						log.error("Entity template not found for %s.", s.crep)

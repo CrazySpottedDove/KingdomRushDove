@@ -2,9 +2,6 @@ local M = {}
 
 function M.register(sys)
 	local table_contains = table.arraycontains
-	local function queue_remove(store, e)
-		simulation:queue_remove_entity(e)
-	end
 
 	sys.mod_lifecycle = {}
 	sys.mod_lifecycle.name = "mod_lifecycle"
@@ -45,12 +42,12 @@ function M.register(sys)
 
 				if mdf.bans and table_contains(mdf.bans, m.template_name) then
 					mm.removed_by_ban = true
-					queue_remove(store, m)
+					simulation:queue_remove_entity(m)
 				end
 
 				if mdf.ban_types and table_contains(mdf.ban_types, mm.type) then
 					mm.removed_by_ban = true
-					queue_remove(store, m)
+					simulation:queue_remove_entity(m)
 				end
 			end
 		end
@@ -96,7 +93,7 @@ function M.register(sys)
 						end
 					end
 
-					queue_remove(store, m)
+					simulation:queue_remove_entity(m)
 				else
 					return false
 				end

@@ -45,7 +45,7 @@ return function(this, store)
                 e.aura.level = this.unit.level
                 e.aura.source_id = this.id
                 e.aura.ts = store.tick_ts
-                queue_insert(store, e)
+                simulation:queue_insert_entity(e)
             end
         constend
     constend

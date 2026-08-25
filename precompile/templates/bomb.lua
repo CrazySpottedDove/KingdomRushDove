@@ -53,7 +53,7 @@ return function(this, store)
         constif(b.particles_name)
             local ps = E:create_entity(b.particles_name)
             ps.particle_system.track_id = this.id
-            queue_insert(store, ps)
+            simulation:queue_insert_entity(ps)
             context.ps = ps
         constend
 
@@ -124,7 +124,7 @@ return function(this, store)
                             mod.modifier.source_id = this.id
                             mod.modifier.level = b.level
 
-                            queue_insert(store, mod)
+                            simulation:queue_insert_entity(mod)
                         end
                     end
                 end
@@ -133,7 +133,7 @@ return function(this, store)
 
         constif(b.pop)
             local pop = SU.create_pop(store, this.pos, b.pop)
-            queue_insert(store, pop)
+            simulation:queue_insert_entity(pop)
         constend
 
         @constif(b.hit_fx_water or b.hit_decal)
@@ -150,7 +150,7 @@ return function(this, store)
                 water_fx.render.sprites[1].ts = store.tick_ts
                 water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-                queue_insert(store, water_fx)
+                simulation:queue_insert_entity(water_fx)
             constif(b.hit_fx)
             else
                 @constif(this.sound_events and this.sound_events.hit)
@@ -162,7 +162,7 @@ return function(this, store)
                 sfx.render.sprites[1].ts = store.tick_ts
                 sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-                queue_insert(store, sfx)
+                simulation:queue_insert_entity(sfx)
             constend
             end
         constelse
@@ -176,7 +176,7 @@ return function(this, store)
                 sfx.render.sprites[1].ts = store.tick_ts
                 sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-                queue_insert(store, sfx)
+                simulation:queue_insert_entity(sfx)
             constend
         constend
 
@@ -187,7 +187,7 @@ return function(this, store)
                 decal.pos = V.vclone(this.pos)
                 decal.render.sprites[1].ts = store.tick_ts
 
-                queue_insert(store, decal)
+                simulation:queue_insert_entity(decal)
             end
         constend
 
@@ -210,10 +210,10 @@ return function(this, store)
                 hp.aura.damage_factor = this.bullet.damage_factor * hp.aura.damage_factor
             end
 
-            queue_insert(store, hp)
+            simulation:queue_insert_entity(hp)
         end
 
-        queue_remove(store, this)
+        simulation:queue_remove_entity(this)
         return
     end
 

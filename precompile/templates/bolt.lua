@@ -39,7 +39,7 @@ end
 -- 	constif(b.particles_name)
 -- 		local ps = E:create_entity(b.particles_name)
 -- 		ps.particle_system.track_id = this.id
--- 		queue_insert(store, ps)
+-- 		simulation:queue_insert_entity(ps)
 -- 	constend
 
 -- 	::label_75_0::
@@ -132,7 +132,7 @@ end
 -- 				m.modifier.target_id = b.target_id
 -- 				m.modifier.level = b.level
 
--- 				queue_insert(store, m)
+-- 				simulation:queue_insert_entity(m)
 -- 			end
 -- 		end
 
@@ -140,7 +140,7 @@ end
 -- 			local hp = b.hit_payload
 
 -- 			hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
--- 			queue_insert(store, hp)
+-- 			simulation:queue_insert_entity(hp)
 -- 		end
 -- 	end
 
@@ -148,7 +148,7 @@ end
 -- 		local hp = b.payload
 
 -- 		hp.pos.x, hp.pos.y = b.to.x, b.to.y
--- 		queue_insert(store, hp)
+-- 		simulation:queue_insert_entity(hp)
 -- 	end
 
 -- 	constif(b.hit_fx)
@@ -164,10 +164,10 @@ end
 --             end
 -- 		constend
 
--- 		queue_insert(store, sfx)
+-- 		simulation:queue_insert_entity(sfx)
 -- 	constend
 
--- 	queue_remove(store, this)
+-- 	simulation:queue_remove_entity(this)
 -- end
 -- ]]
 
@@ -190,7 +190,7 @@ return function(this, store)
         constif(b.particles_name)
             local ps = E:create_entity(b.particles_name)
             ps.particle_system.track_id = this.id
-            queue_insert(store, ps)
+            simulation:queue_insert_entity(ps)
             context.ps = ps
         constend
 
@@ -256,7 +256,7 @@ return function(this, store)
                     m.modifier.target_id = b.target_id
                     m.modifier.level = b.level
 
-                    queue_insert(store, m)
+                    simulation:queue_insert_entity(m)
                 end
             end
 
@@ -264,7 +264,7 @@ return function(this, store)
                 local hp = b.hit_payload
 
                 hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
-                queue_insert(store, hp)
+                simulation:queue_insert_entity(hp)
             end
         end
 
@@ -272,7 +272,7 @@ return function(this, store)
             local hp = b.payload
 
             hp.pos.x, hp.pos.y = b.to.x, b.to.y
-            queue_insert(store, hp)
+            simulation:queue_insert_entity(hp)
         end
 
         constif(b.hit_fx)
@@ -288,10 +288,10 @@ return function(this, store)
                 end
             constend
 
-            queue_insert(store, sfx)
+            simulation:queue_insert_entity(sfx)
         constend
 
-        queue_remove(store, this)
+        simulation:queue_remove_entity(this)
     end
 
     local target

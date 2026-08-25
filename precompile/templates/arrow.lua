@@ -65,7 +65,7 @@ return function(this, store)
         constif(b.particles_name)
             local ps = E:create_entity(b.particles_name)
             ps.particle_system.track_id = this.id
-            queue_insert(store, ps)
+            simulation:queue_insert_entity(ps)
             context.ps = ps
         constend
 
@@ -137,7 +137,7 @@ return function(this, store)
                                     mod.modifier.source_damage = d
                                     mod.modifier.damage_factor = b.damage_factor
 
-                                    queue_insert(store, mod)
+                                    simulation:queue_insert_entity(mod)
                                 end
                             end
                         end
@@ -146,7 +146,7 @@ return function(this, store)
                             local fx = E:create_entity(b.hit_fx)
                             fx.pos = V.vclone(target.pos)
                             fx.render.sprites[1].ts = store.tick_ts
-                            queue_insert(store, fx)
+                            simulation:queue_insert_entity(fx)
                         constend
 
                         constif(b.hit_blood_fx)
@@ -162,7 +162,7 @@ return function(this, store)
                                     end
                                 constend
 
-                                queue_insert(store, sfx)
+                                simulation:queue_insert_entity(sfx)
                             end
                         constend
                     end
@@ -259,7 +259,7 @@ return function(this, store)
                             mod.modifier.source_damage = d
                             mod.modifier.damage_factor = b.damage_factor
 
-                            queue_insert(store, mod)
+                            simulation:queue_insert_entity(mod)
                         end
                     end
                 end
@@ -268,7 +268,7 @@ return function(this, store)
                     local fx = E:create_entity(b.hit_fx)
                     fx.pos = V.vclone(target_pos)
                     fx.render.sprites[1].ts = store.tick_ts
-                    queue_insert(store, fx)
+                    simulation:queue_insert_entity(fx)
                 constend
 
                 constif(b.hit_blood_fx)
@@ -284,7 +284,7 @@ return function(this, store)
                             end
                         constend
 
-                        queue_insert(store, sfx)
+                        simulation:queue_insert_entity(sfx)
                     end
                 constend
             end
@@ -296,14 +296,14 @@ return function(this, store)
                     local water_fx = E:create_entity(b.miss_fx_water)
                     water_fx.pos.x, water_fx.pos.y = this.pos.x, this.pos.y
                     water_fx.render.sprites[1].ts = store.tick_ts
-                    queue_insert(store, water_fx)
+                    simulation:queue_insert_entity(water_fx)
                 constend
             else
                 constif(b.miss_fx)
                     local fx = E:create_entity(b.miss_fx)
                     fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
                     fx.render.sprites[1].ts = store.tick_ts
-                    queue_insert(store, fx)
+                    simulation:queue_insert_entity(fx)
                 constend
 
                 constif(b.miss_decal)
@@ -327,7 +327,7 @@ return function(this, store)
                     @constif(b.miss_decal_anchor)
                     decal.render.sprites[1].anchor = b.miss_decal_anchor
 
-                    queue_insert(store, decal)
+                    simulation:queue_insert_entity(decal)
                 constend
             end
         end
@@ -355,7 +355,7 @@ return function(this, store)
                 end
             constend
 
-            queue_insert(store, p)
+            simulation:queue_insert_entity(p)
         constend
 
         constif(b.particles_name)
@@ -365,11 +365,11 @@ return function(this, store)
                 context.wait_until_ts = store.tick_ts + context.ps.particle_system.particle_lifetime[2]
                 context.state = 4
             else
-                queue_remove(store, this)
+                simulation:queue_remove_entity(this)
                 return
             end
         constelse
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
             return
         constend
     end
@@ -377,7 +377,7 @@ return function(this, store)
     constif(b.particles_name)
     if context.state == 4 then
         if store.tick_ts >= context.wait_until_ts then
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
             return
         end
     end

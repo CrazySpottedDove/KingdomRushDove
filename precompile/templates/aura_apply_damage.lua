@@ -33,12 +33,12 @@ return function(this, store)
 
     constif(a.cycles)
         if context.cycles_count >= this.aura.cycles then
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
             return
         end
     constelseif(a.duration >= 0)
         if store.tick_ts - this.aura.ts >= this.aura.duration then
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
             return
         end
     constend
@@ -47,7 +47,7 @@ return function(this, store)
         local te = store.entities[this.aura.source_id]
 
         if not te or te.health and te.health.dead or (te.enemy and (not te.enemy.can_do_magic)) then
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
             return
         end
 
@@ -150,7 +150,7 @@ return function(this, store)
                     end
                     constend
 
-                    queue_insert(store, m)
+                    simulation:queue_insert_entity(m)
                 end
             end
         @constif(band(a.vis_bans, F_FRIEND) == 0)

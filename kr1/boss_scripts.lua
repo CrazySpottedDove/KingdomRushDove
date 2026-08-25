@@ -145,7 +145,7 @@ function scripts.eb_juggernaut.update(this, store)
 					end
 
 					if b.bullet.to then
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					else
 						log.debug("could not find random position to shoot juggernaut bomb. skipping...")
 					end
@@ -232,7 +232,7 @@ function scripts.eb_jt.update(this, store)
 				coroutine.yield()
 			end
 
-			queue_remove(store, tap)
+			simulation:queue_remove_entity(tap)
 
 			S:stop_all()
 			S:queue(this.sound_events.death_explode)
@@ -285,7 +285,7 @@ function scripts.eb_jt.update(this, store)
 						m.modifier.target_id = t.id
 						m.modifier.source_id = this.id
 
-						queue_insert(store, m)
+						simulation:queue_insert_entity(m)
 					end
 
 					U.y_animation_wait_default(this)
@@ -352,7 +352,7 @@ function scripts.jt_spawner_aura.update(this, store)
 					e.nav_path.spi = spi
 					e.nav_path.ni = P:get_start_node(pi)
 
-					queue_insert(store, e)
+					simulation:queue_insert_entity(e)
 
 					spawn_ts[i] = store.tick_ts - delay
 				end
@@ -362,7 +362,7 @@ function scripts.jt_spawner_aura.update(this, store)
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_jt_tower = {}
@@ -373,7 +373,7 @@ function scripts.mod_jt_tower.update(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -417,7 +417,7 @@ function scripts.mod_jt_tower.update(this, store)
 		U.y_wait_unconditional(store, 2)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.eb_veznan = {}
@@ -492,7 +492,7 @@ function scripts.eb_veznan.update(this, store)
 			m.modifier.target_id = t.id
 			m.modifier.source_id = this.id
 
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 
 		U.y_animation_wait_default(this)
@@ -572,7 +572,7 @@ function scripts.eb_veznan.update(this, store)
 		soul.speed = {speed, speed}
 		soul.duration = dist / speed
 
-		queue_insert(store, soul)
+		simulation:queue_insert_entity(soul)
 
 		return soul.duration
 	end
@@ -939,7 +939,7 @@ function scripts.eb_veznan.update(this, store)
 	sc.pos = V.vclone(this.pos)
 	sc.pos.y = sc.pos.y + 14
 
-	queue_insert(store, sc)
+	simulation:queue_insert_entity(sc)
 	U.y_animation_wait_default(this)
 	U.animation_start_default(this, "deathLoop", nil, store.tick_ts, true)
 	U.y_wait_unconditional(store, fts(90))
@@ -955,12 +955,12 @@ function scripts.eb_veznan.update(this, store)
 	circle.tween.ts = store.tick_ts
 	circle.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, circle)
+	simulation:queue_insert_entity(circle)
 	U.y_wait_unconditional(store, fts(65) + 2)
 
 	this.phase = "death-end"
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.veznan_portal = {}
@@ -1001,7 +1001,7 @@ function scripts.veznan_portal.update(this, store)
 				e.nav_path.ni = ni
 				e.pos = V.vclone(this.pos)
 
-				queue_insert(store, e)
+				simulation:queue_insert_entity(e)
 				U.y_wait_unconditional(store, this.spawn_interval)
 			end
 		end
@@ -1023,7 +1023,7 @@ function scripts.mod_veznan_tower.update(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -1071,7 +1071,7 @@ function scripts.mod_veznan_tower.update(this, store)
 	S:queue(this.sound_released)
 	U.y_animation_play(this, "remove", nil, store.tick_ts, 1, 1)
 	SU.tower_block_dec(target)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.veznan_souls_aura = {}
@@ -1089,7 +1089,7 @@ function scripts.veznan_souls_aura.update(this, store)
 		e.pos = V.vclone(this.pos)
 		e.soul_phase = 1 - i / this.souls.count
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		if this.souls.delay_frames >= 2 then
 			this.souls.delay_frames = this.souls.delay_frames - 1
@@ -1098,14 +1098,14 @@ function scripts.veznan_souls_aura.update(this, store)
 		U.y_wait_unconditional(store, fts(this.souls.delay_frames))
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.veznan_soul = {}
 
 function scripts.veznan_soul.update(this, store)
 	if not this.render or not this.render.sprites or not this.render.sprites[1] then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -1125,7 +1125,7 @@ function scripts.veznan_soul.update(this, store)
 		pl[1], pl[2] = pl[1] * this.soul_phase, pl[2] * this.soul_phase
 	end
 
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 
 	while store.tick_ts - start_ts < this.duration do
 		local dt = store.tick_ts - last_ts
@@ -1148,7 +1148,7 @@ function scripts.veznan_soul.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.eb_greenmuck = {}
@@ -1211,7 +1211,7 @@ function scripts.eb_greenmuck.update(this, store)
 						b.bullet.to = V.vclone(t.pos)
 						b.pos = V.vclone(b.bullet.from)
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					end
 
 					U.y_animation_wait_default(this)
@@ -1302,7 +1302,7 @@ function scripts.eb_kingpin.update(this, store)
 						m.modifier.source_id = this.id
 						m.modifier.target_id = target.id
 
-						queue_insert(store, m)
+						simulation:queue_insert_entity(m)
 					end
 				end
 
@@ -1473,7 +1473,7 @@ function scripts.eb_moloch.update(this, store)
 							fx.pos.x = this.pos.x + xo * af
 							fx.pos.y = this.pos.y + yo
 
-							queue_insert(store, fx)
+							simulation:queue_insert_entity(fx)
 						end
 					end
 
@@ -1530,7 +1530,7 @@ function scripts.eb_myconid.update(this, store)
 		sp.spawner.count = count
 		sp.spawner.owner_id = owner
 
-		queue_insert(store, sp)
+		simulation:queue_insert_entity(sp)
 	end
 
 	sa.ts = store.tick_ts
@@ -1573,7 +1573,7 @@ function scripts.eb_myconid.update(this, store)
 					fx.pos.y = fx.pos.y + sa.fx_offset.y
 				end
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 
 				if SU.y_enemy_wait(store, this, mod_wait) then
 					goto label_168_0
@@ -1589,7 +1589,7 @@ function scripts.eb_myconid.update(this, store)
 						m.modifier.target_id = target.id
 						m.modifier.source_id = this.id
 
-						queue_insert(store, m)
+						simulation:queue_insert_entity(m)
 					end
 				end
 
@@ -1704,7 +1704,7 @@ function scripts.eb_blackburn.update(this, store)
 
 				local a = E:create_entity(sa.aura_shake)
 
-				queue_insert(store, a)
+				simulation:queue_insert_entity(a)
 
 				local af = this.render.sprites[1].flip_x
 				local fx = E:create_entity(sa.fx)
@@ -1714,7 +1714,7 @@ function scripts.eb_blackburn.update(this, store)
 				fx.pos.x = fx.pos.x + (af and -1 or 1) * sa.fx_offset.x
 				fx.pos.y = fx.pos.y + (af and -1 or 1) * sa.fx_offset.y
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				SU.insert_sprite(store, sa.hit_decal, fx.pos, af, fts(2))
 
 				local towers = U.find_towers_in_range(store.towers, this.pos, sa, function(t)
@@ -1729,7 +1729,7 @@ function scripts.eb_blackburn.update(this, store)
 						tm.modifier.source_id = this.id
 						tm.modifier.target_id = tt.id
 
-						queue_insert(store, tm)
+						simulation:queue_insert_entity(tm)
 					end
 				end
 
@@ -1747,7 +1747,7 @@ function scripts.eb_blackburn.update(this, store)
 						tm.modifier.source_id = this.id
 						tm.modifier.target_id = t.id
 
-						queue_insert(store, tm)
+						simulation:queue_insert_entity(tm)
 					end
 				end
 
@@ -1795,7 +1795,7 @@ function scripts.mod_blackburn_tower.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -1821,7 +1821,7 @@ function scripts.mod_blackburn_tower.update(this, store)
 
 	SU.tower_block_dec(target)
 	U.y_wait_unconditional(store, this.tween.props[1].keys[2][1])
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.blackburn_aura = {}
@@ -1834,7 +1834,7 @@ function scripts.blackburn_aura.update(this, store)
 		local source = store.entities[this.aura.source_id]
 
 		if not source or source.health.dead then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -1885,7 +1885,7 @@ function scripts.blackburn_aura.update(this, store)
 							e.count_group.name = this.count_group_name
 							e.count_group.type = this.count_group_type
 
-							queue_insert(store, e)
+							simulation:queue_insert_entity(e)
 						end
 					end
 				end
@@ -1956,7 +1956,7 @@ function scripts.eb_efreeti.update(this, store)
 			fx.render.sprites[1].name = "efreeti_explosion"
 			fx.render.sprites[1].ts = store.tick_ts + delay
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 
 		while store.tick_ts - death_start_ts < 1.9 do
@@ -1978,7 +1978,7 @@ function scripts.eb_efreeti.update(this, store)
 		lamp.render.sprites[1].z = Z_EFFECTS
 		lamp.pos.x, lamp.pos.y = this.pos.x, this.pos.y
 
-		queue_insert(store, lamp)
+		simulation:queue_insert_entity(lamp)
 
 		while not U.animation_finished(this, 2) do
 			coroutine.yield()
@@ -1999,7 +1999,7 @@ function scripts.eb_efreeti.update(this, store)
 
 			e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, spi, ni
 
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 
 			local fx = E:create_entity("fx")
 
@@ -2010,7 +2010,7 @@ function scripts.eb_efreeti.update(this, store)
 			fx.render.sprites[1].z = Z_OBJECTS
 			fx.render.sprites[1].draw_order = 2
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		else
 			log.debug("no nodes nearby %s,%s to spanw enemy_efreeti_small", pos.x, pos.y)
 		end
@@ -2076,7 +2076,7 @@ function scripts.eb_efreeti.update(this, store)
 			m.modifier.source_id = this.id
 			m.pos = t.pos
 
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 	end
 
@@ -2116,7 +2116,7 @@ function scripts.eb_efreeti.update(this, store)
 
 			LU.kill_all_enemies(store, true)
 			do_death()
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			signal.emit("boss-killed", this)
 
 			return
@@ -2371,7 +2371,7 @@ function scripts.eb_gorilla.update(this, store)
 						bullet.bullet.target_id = target.id
 						bullet.bullet.rotation_speed = bullet.bullet.rotation_speed * (left_side and 1 or -1)
 
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 						U.y_animation_wait_default(this)
 					end
 				end
@@ -2401,7 +2401,7 @@ function scripts.eb_gorilla.update(this, store)
 						e.spawn_dest = dest
 						e.delay = 0.3 * (i - 1)
 
-						queue_insert(store, e)
+						simulation:queue_insert_entity(e)
 					end
 
 					a_spawn.ts = store.tick_ts
@@ -2429,7 +2429,7 @@ function scripts.eb_gorilla.update(this, store)
 						fx.pos = V.vclone(this.pos)
 						fx.render.sprites[1].ts = store.tick_ts + 0.45
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 
 						local right_side = this.nav_path.pi == 2
 
@@ -2471,7 +2471,7 @@ function scripts.eb_gorilla.update(this, store)
 					fx.render.sprites[1].ts = store.tick_ts
 					fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 					U.y_animation_play(this, "heal", nil, store.tick_ts)
 
 					goto label_249_0
@@ -2596,7 +2596,7 @@ function scripts.eb_umbra.update(this, store)
 				r.bullet.damage_type = DAMAGE_NONE
 			end
 
-			queue_insert(store, r)
+			simulation:queue_insert_entity(r)
 		end
 
 		while not U.animation_finished(this, eyes_sid) do
@@ -2633,7 +2633,7 @@ function scripts.eb_umbra.update(this, store)
 			t.texts.list[1].font_size = font_sizes[3]
 		end
 
-		queue_insert(store, t)
+		simulation:queue_insert_entity(t)
 
 		return t
 	end
@@ -2841,7 +2841,7 @@ function scripts.eb_umbra.update(this, store)
 						fx.render.sprites[1].name = "umbra_death_explosion"
 						fx.render.sprites[1].ts = store.tick_ts + delay
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 					end
 
 					for _, p in pairs(fx_rays) do
@@ -2853,7 +2853,7 @@ function scripts.eb_umbra.update(this, store)
 						fx.render.sprites[1].name = "umbra_death_rays"
 						fx.render.sprites[1].ts = store.tick_ts + delay
 
-						queue_insert(store, fx)
+						simulation:queue_insert_entity(fx)
 					end
 
 					local pos, delay = v(119, 85), 2.3
@@ -2864,7 +2864,7 @@ function scripts.eb_umbra.update(this, store)
 					fx.render.sprites[1].name = "umbra_death_blast_long"
 					fx.render.sprites[1].ts = store.tick_ts + delay
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 					U.y_wait_unconditional(store, 2.5)
 
 					local pos = v(119, 80)
@@ -2874,12 +2874,12 @@ function scripts.eb_umbra.update(this, store)
 					fx.pos.y = this.pos.y + pos.y - image_y * anchor_y
 					fx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 					U.y_wait_unconditional(store, 1)
 
 					this.phase = "dead"
 
-					queue_remove(store, this)
+					simulation:queue_remove_entity(this)
 					signal.emit("boss-killed", this)
 
 					return
@@ -2896,7 +2896,7 @@ function scripts.eb_umbra.update(this, store)
 					fx.render.sprites[1].ts = store.tick_ts
 					fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 
 					pieces = {}
 
@@ -2928,7 +2928,7 @@ function scripts.eb_umbra.update(this, store)
 						s.bullet.hit_payload = p
 						s.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, s)
+						simulation:queue_insert_entity(s)
 					end
 
 					U.y_animation_play(this, "explode", nil, store.tick_ts, 1)
@@ -2973,7 +2973,7 @@ function scripts.eb_umbra.update(this, store)
 						s.spawner.allowed_nodes = n
 						s.spawner.count = as.count_min + math.floor((max_pieces - pieces_alive) * as.add_per_missing_piece)
 
-						queue_insert(store, s)
+						simulation:queue_insert_entity(s)
 					end
 
 					while not U.animation_finished(this, body_sid) and not this.health.dead do
@@ -3011,7 +3011,7 @@ function scripts.eb_umbra.update(this, store)
 						jump_node = at.nodes_battlefield[idx]
 						is_at_home = false
 					-- if taunt.last_id and store.entities[last_id] then
-					--     queue_remove(store, store.entities[last_id])
+					--     simulation:queue_remove_entity(store.entities[last_id])
 					--     taunt.last_id = nil
 					-- end
 					else
@@ -3136,14 +3136,14 @@ function scripts.umbra_portal.update(this, store)
 		spawn.unit.spawner_id = this.id
 		spawn.pos = P:node_pos(spawn.nav_path.pi, spawn.nav_path.spi, spawn.nav_path.ni)
 
-		queue_insert(store, spawn)
+		simulation:queue_insert_entity(spawn)
 
 		if sp.spawn_fx then
 			local fx = E:create_entity(sp.spawn_fx)
 			fx.pos.x, fx.pos.y = spawn.pos.x, spawn.pos.y - 1
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 
 		spawn_ts = store.tick_ts
@@ -3163,7 +3163,7 @@ function scripts.umbra_portal.update(this, store)
 		U.y_animation_play(this, sp.animation_end, nil, store.tick_ts, 1)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.enemy_umbra_piece = {}
@@ -3188,7 +3188,7 @@ function scripts.enemy_umbra_piece.update(this, store)
 	while true do
 		if this.recovered then
 			U.y_animation_play(this, "fuse", nil, store.tick_ts, 1)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -3256,7 +3256,7 @@ function scripts.umbra_guy.update(this, store)
 			t.texts.list[1].line_height = t.texts.list[1].line_heights[1]
 		end
 
-		queue_insert(store, t)
+		simulation:queue_insert_entity(t)
 
 		return t
 	end
@@ -3291,7 +3291,7 @@ function scripts.umbra_guy.update(this, store)
 			t.pos.x, t.pos.y = taunt.death_pos.x, taunt.death_pos.y
 
 			U.y_animation_wait_default(this)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -3363,7 +3363,7 @@ function scripts.umbra_guy.update(this, store)
 				r.bullet.target_id = target.id
 				r.pos = V.vclone(r.bullet.from)
 
-				queue_insert(store, r)
+				simulation:queue_insert_entity(r)
 				U.y_animation_wait_default(this)
 
 				at.ts = store.tick_ts
@@ -3470,7 +3470,7 @@ function scripts.eb_leviathan.update(this, store)
 			fx.render.sprites[1].ts = store.tick_ts + delay
 			fx.render.sprites[1].scale = v(fx_scale, fx_scale)
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 
 		U.y_animation_wait(this, sid)
@@ -3486,7 +3486,7 @@ function scripts.eb_leviathan.update(this, store)
 	fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 	fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 	U.y_wait_unconditional(store, 3)
 	S:queue("RTBossSpawn")
 
@@ -3519,7 +3519,7 @@ function scripts.eb_leviathan.update(this, store)
 			end
 
 			do_death()
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			signal.emit("boss-killed", this)
 
 			return
@@ -3540,7 +3540,7 @@ function scripts.eb_leviathan.update(this, store)
 					e.pos.x, e.pos.y = tp[1], tp[2]
 					e.flip = tp[3]
 
-					LU.queue_insert(store, e)
+					LU.simulation:queue_insert_entity(e)
 					table.insert(tentacles, e)
 					U.y_wait_unconditional(store, U.frandom(0.1, 0.2))
 				end
@@ -3619,7 +3619,7 @@ function scripts.leviathan_tentacle.update(this, store)
 	end
 
 	U.y_animation_play(this, "hide", nil, store.tick_ts)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.eb_dracula = {}
@@ -3666,7 +3666,7 @@ function scripts.eb_dracula.update(this, store)
 	t.render.sprites[1].ts = store.tick_ts
 	t.render.sprites[2].ts = store.tick_ts
 
-	queue_insert(store, t)
+	simulation:queue_insert_entity(t)
 	U.y_wait_unconditional(store, t.timed.duration + 1)
 
 	this.phase = "fight"
@@ -3698,7 +3698,7 @@ function scripts.eb_dracula.update(this, store)
 
 				e.aura.source_id = this.id
 
-				queue_insert(store, e)
+				simulation:queue_insert_entity(e)
 			else
 				this.phase = "dead"
 
@@ -3752,7 +3752,7 @@ function scripts.dracula_damage_aura.update(this, store)
 	local source = store.entities[a.source_id]
 
 	if not source then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -3790,7 +3790,7 @@ function scripts.dracula_damage_aura.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_dracula_lifesteal = {}
@@ -3820,7 +3820,7 @@ function scripts.mod_dracula_lifesteal.update(this, store)
 	local d = E.assign_damage(target.hero and DAMAGE_TRUE or DAMAGE_INSTAKILL, this.damage, this.id, target.id)
 
 	queue_damage(store, d)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.eb_saurian_king = {}
@@ -3870,7 +3870,7 @@ function scripts.eb_saurian_king.update(this, store)
 
 		a.aura.amplitude = idx / #ha.max_damages
 
-		queue_insert(store, a)
+		simulation:queue_insert_entity(a)
 
 		local dmin, dmax = ha.min_damages[idx], ha.max_damages[idx]
 		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, ha.damage_radius, ha.vis_flags, ha.vis_bans)
@@ -3891,7 +3891,7 @@ function scripts.eb_saurian_king.update(this, store)
 		fx.pos = v(this.pos.x + o.x * (this.render.sprites[1].flip_x and -1 or 1), o.y + this.pos.y)
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	ha.ts = store.tick_ts
@@ -4085,7 +4085,7 @@ function scripts.eb_gnoll.update(this, store)
 
 				local a = E:create_entity("aura_screen_shake")
 
-				queue_insert(store, a)
+				simulation:queue_insert_entity(a)
 				U.y_animation_wait_default(this)
 
 				fa.ts = store.tick_ts
@@ -4182,18 +4182,18 @@ function scripts.eb_drow_queen.update(this, store)
 
 	d_shield.pos = this.pos
 
-	queue_insert(store, d_shield)
+	simulation:queue_insert_entity(d_shield)
 
 	this.shield = d_shield
 
 	local d_flying = E:create_entity("decal_drow_queen_flying")
 	local s_flying = d_flying.render.sprites[1]
 
-	queue_insert(store, d_flying)
+	simulation:queue_insert_entity(d_flying)
 
 	local ps = E:create_entity("ps_drow_queen_trail")
 
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 
 	ps.particle_system.track_id = d_flying.id
 
@@ -4210,7 +4210,7 @@ function scripts.eb_drow_queen.update(this, store)
 					m.modifier.duration = duration
 				end
 
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 			end
 		end
 	end
@@ -4334,7 +4334,7 @@ function scripts.eb_drow_queen.update(this, store)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].flip_x = s_body.flip_x
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 			U.y_wait_unconditional(store, fts(13))
 			-- if U.random_table_idx(pow_chances) == 2 then
 			--     block_random_tower()
@@ -4409,13 +4409,13 @@ function scripts.eb_drow_queen.update(this, store)
 		spider.pos_start = v(spider.pos_drop.x, 1100)
 		spider.pos.x, spider.pos.y = spider.pos_start.x, spider.pos_start.y
 
-		queue_insert(store, spider)
+		simulation:queue_insert_entity(spider)
 
 		local shadow = E:create_entity("decal_mactans_shadow")
 
 		shadow.pos.x, shadow.pos.y = spider.pos_drop.x, spider.pos_drop.y + 16
 
-		queue_insert(store, shadow)
+		simulation:queue_insert_entity(shadow)
 
 		shadow.tween.ts = store.tick_ts
 
@@ -4423,7 +4423,7 @@ function scripts.eb_drow_queen.update(this, store)
 
 		thread.pos = spider.pos
 
-		queue_insert(store, thread)
+		simulation:queue_insert_entity(thread)
 		U.animation_start_default(spider, "falling", nil, store.tick_ts, true)
 		S:queue("ElvesFinalBossSpiderIn", {
 			delay = spider.drop_duration - fts(25)
@@ -4441,7 +4441,7 @@ function scripts.eb_drow_queen.update(this, store)
 			sprite.ts = store.tick_ts + (i - 1) * fts(5)
 		end
 
-		queue_insert(store, webbing)
+		simulation:queue_insert_entity(webbing)
 		U.y_wait_unconditional(store, fts(13))
 
 		local cocoon = E:create_entity("decal_s11_drow_queen_cocoon")
@@ -4449,7 +4449,7 @@ function scripts.eb_drow_queen.update(this, store)
 		cocoon.pos = spider.pos
 		cocoon.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, cocoon)
+		simulation:queue_insert_entity(cocoon)
 		U.y_wait_unconditional(store, fts(25))
 
 		this.tween.ts = store.tick_ts
@@ -4459,7 +4459,7 @@ function scripts.eb_drow_queen.update(this, store)
 		this.tween.props[3].disabled = true
 
 		U.y_wait_unconditional(store, fts(41))
-		queue_remove(store, webbing)
+		simulation:queue_remove_entity(webbing)
 		U.animation_start_default(spider, "malicia_grab", nil, store.tick_ts, false)
 		U.y_wait_unconditional(store, fts(13))
 		U.y_ease_key(store, cocoon.render.sprites[1].offset, "y", 15, 8, fts(5), "quad-in")
@@ -4664,7 +4664,7 @@ function scripts.decal_drow_queen_shield.update(this, store)
 		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 end
 
@@ -4680,7 +4680,7 @@ function scripts.eb_spider.update(this, store)
 
 	local shadow = E:create_entity("decal_shadow_eb_spider")
 
-	queue_insert(store, shadow)
+	simulation:queue_insert_entity(shadow)
 
 	local function y_jump_out()
 		U.unblock_all(store, this)
@@ -4704,7 +4704,7 @@ function scripts.eb_spider.update(this, store)
 		smoke.pos.x, smoke.pos.y = this.pos.x, this.pos.y
 		smoke.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, smoke)
+		simulation:queue_insert_entity(smoke)
 		U.animation_start_default(this, "flyingUp", nil, store.tick_ts, false)
 
 		for _, s in pairs(this.render.sprites) do
@@ -4782,7 +4782,7 @@ function scripts.eb_spider.update(this, store)
 		aura.pi = dest_node.pi
 		aura.ni = dest_node.ni
 
-		queue_insert(store, aura)
+		simulation:queue_insert_entity(aura)
 	end
 
 	local function y_death()
@@ -4799,7 +4799,7 @@ function scripts.eb_spider.update(this, store)
 		rays.pos.x, rays.pos.y = this.pos.x, this.pos.y + 68
 		rays.tween.ts = store.tick_ts
 
-		queue_insert(store, rays)
+		simulation:queue_insert_entity(rays)
 		U.y_animation_wait_default(this)
 		U.animation_start_default(this, "death_second_loop", nil, store.tick_ts, true)
 		U.y_wait_unconditional(store, fts(7) + 2)
@@ -4809,7 +4809,7 @@ function scripts.eb_spider.update(this, store)
 		circle.pos.x, circle.pos.y = rays.pos.x, rays.pos.y
 		circle.tween.ts = store.tick_ts
 
-		queue_insert(store, circle)
+		simulation:queue_insert_entity(circle)
 		U.y_wait_unconditional(store, 0.5)
 	end
 
@@ -4843,7 +4843,7 @@ function scripts.eb_spider.update(this, store)
 		b.bullet.target_id = tower.id
 		b.pos = V.vclone(b.bullet.from)
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 		U.y_animation_wait_default(this)
 	end
 
@@ -4883,7 +4883,7 @@ function scripts.eb_spider.update(this, store)
 
 	fx.pos.x, fx.pos.y = this.pos.x, this.pos.y - 1
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 	U.y_wait_unconditional(store, fts(45))
 
 	fx.tween.disabled = nil
@@ -4975,7 +4975,7 @@ function scripts.eb_spider.update(this, store)
 					m.modifier.target_id = e.id
 					m.pos.x, m.pos.y = e.pos.x, e.pos.y
 
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 
 				-- signal.emit("block-random-power", a.power_block_duration, "eb_spider")
@@ -5106,7 +5106,7 @@ function scripts.eb_bram.update(this, store)
 					decal.pos.x, decal.pos.y = this.pos.x, this.pos.y
 					decal.tween.ts = store.tick_ts
 
-					queue_insert(store, decal)
+					simulation:queue_insert_entity(decal)
 
 					for i, target in ipairs(targets) do
 						if i > a.max_count then
@@ -5117,7 +5117,7 @@ function scripts.eb_bram.update(this, store)
 
 						e.modifier.target_id = target.id
 
-						queue_insert(store, e)
+						simulation:queue_insert_entity(e)
 					end
 
 					SU.y_enemy_animation_wait(this)
@@ -5173,7 +5173,7 @@ function scripts.mod_bram_slap.update(this, store)
 	local source = store.entities[this.modifier.source_id]
 
 	if not target or not source then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -5200,8 +5200,8 @@ function scripts.mod_bram_slap.update(this, store)
 	es.tween.props[2].keys[2][2].x, es.tween.props[2].keys[2][2].y = dx, dy
 	es.tween.props[3].keys[2][2] = (af and -1 or 1) * math.random(300, 400) * math.pi / 180
 
-	queue_insert(store, es)
-	queue_remove(store, this)
+	simulation:queue_insert_entity(es)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.eb_bajnimen = {}
@@ -5247,7 +5247,7 @@ function scripts.eb_bajnimen.update(this, store)
 		b.bullet.to = pos
 		b.pos = V.vclone(b.bullet.from)
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function ready_to_storm()
@@ -5499,7 +5499,7 @@ function scripts.eb_balrog.update(this, store)
 						b.bullet.source_id = this.id
 						b.pos = V.vclone(b.bullet.from)
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 
 						a.ts = store.tick_ts
 
@@ -5630,7 +5630,7 @@ function scripts.eb_jack_spawner_aura.update(this, store)
 	local source = store.entities[this.aura.source_id]
 
 	if not source or source.health.dead then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -5643,7 +5643,7 @@ function scripts.eb_jack_spawner_aura.update(this, store)
 		end
 
 		if not source or source.health.dead then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -5662,7 +5662,7 @@ function scripts.eb_jack_spawner_aura.update(this, store)
 				e.render.sprites[1].name = "raise"
 				e.enemy.gold = 0
 
-				queue_insert(store, e)
+				simulation:queue_insert_entity(e)
 			end
 
 			a.ts = store.tick_ts
@@ -5673,7 +5673,7 @@ function scripts.eb_jack_spawner_aura.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_krdove_elephant_cannibal = {}
@@ -5708,7 +5708,7 @@ function scripts.mod_krdove_elephant_cannibal.update(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or not target.health or target.health.dead then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -5724,7 +5724,7 @@ function scripts.mod_krdove_elephant_cannibal.update(this, store)
 
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.krdove_eb_elephant_cannibal = {}
@@ -5779,7 +5779,7 @@ function scripts.krdove_eb_elephant_cannibal.update(this, store)
 							m.modifier.source_id = this.id
 							m.modifier.target_id = target.id
 
-							queue_insert(store, m)
+							simulation:queue_insert_entity(m)
 						end
 					end
 
@@ -5984,7 +5984,7 @@ function scripts.boss_corrupted_denas.update(this, store)
 					b.bullet.to = this.available_nodes[i]
 					b.bullet.source_id = this.id
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 					U.y_wait_unconditional(store, spawn_entities_attack.delay_between)
 				end
 
@@ -6037,7 +6037,7 @@ function scripts.bullet_boss_corrupted_denas_spawn_entities.update(this, store)
 		ps = E:create_entity(b.particles_name)
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
@@ -6077,10 +6077,10 @@ function scripts.bullet_boss_corrupted_denas_spawn_entities.update(this, store)
 			hp.path_to_spawn = this.path_to_spawn
 		end
 
-		queue_insert(store, hp)
+		simulation:queue_insert_entity(hp)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.controller_stage_15_cult_leader_tower = {}
@@ -6135,7 +6135,7 @@ function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 
 				local boss = E:create_entity(this.boss_to_spawn)
 
-				queue_insert(store, boss)
+				simulation:queue_insert_entity(boss)
 				U.y_wait_unconditional(store, 2)
 
 				local denas = E:create_entity("soldier_reinforcement_stage_15_denas")
@@ -6145,7 +6145,7 @@ function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 				denas.nav_rally.pos = V.vclone(denas.pos)
 				denas.reinforcement.squad_id = denas.id
 
-				queue_insert(store, denas)
+				simulation:queue_insert_entity(denas)
 				U.y_wait_unconditional(store, 2)
 				signal.emit("show-balloon_tutorial", "LV15_DENAS01", false)
 				U.y_wait_unconditional(store, 4)
@@ -6163,7 +6163,7 @@ function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 			end
 
 			if this.boss_fight_started and this.boss_dead then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 			end
 
 			if this.boss_fight_started and this.boss_teleport then
@@ -6218,7 +6218,7 @@ function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 						aura.aura.ts = store.tick_ts
 						aura.mod_duration = this.config_per_wave[store.wave_group_number].tentacle_duration
 
-						queue_insert(store, aura)
+						simulation:queue_insert_entity(aura)
 					end
 				end
 			end
@@ -6287,7 +6287,7 @@ function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 						aura.aura.ts = store.tick_ts
 						aura.mod_duration = this.config_per_wave[store.wave_group_number].tentacle_duration
 
-						queue_insert(store, aura)
+						simulation:queue_insert_entity(aura)
 					end
 				end
 
@@ -6599,7 +6599,7 @@ function scripts.boss_cult_leader.update(this, store)
 									mod.modifier.target_id = target.id
 									mod.modifier.source_id = this.id
 
-									queue_insert(store, mod)
+									simulation:queue_insert_entity(mod)
 								end
 							elseif ma.type == "area" then
 								local targets = table.filter(store.entities, function(_, e)
@@ -6631,7 +6631,7 @@ function scripts.boss_cult_leader.update(this, store)
 											mod.modifier.target_id = e.id
 											mod.modifier.source_id = this.id
 
-											queue_insert(store, mod)
+											simulation:queue_insert_entity(mod)
 										end
 									end
 								end
@@ -6653,7 +6653,7 @@ function scripts.boss_cult_leader.update(this, store)
 
 								fx.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, fx)
+								simulation:queue_insert_entity(fx)
 							end
 
 							if ma.hit_decal then
@@ -6667,7 +6667,7 @@ function scripts.boss_cult_leader.update(this, store)
 									fx.pos.y = fx.pos.y + ma.hit_decal_offset.y
 								end
 
-								queue_insert(store, fx)
+								simulation:queue_insert_entity(fx)
 							end
 						end
 
@@ -6921,7 +6921,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		blood.pos = V.vclone(this.pos)
 		blood.pos.y = blood.pos.y + 100
 
-		queue_insert(store, blood)
+		simulation:queue_insert_entity(blood)
 	end
 
 	local function check_change_damaged_state()
@@ -6985,7 +6985,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		h.pos = V.vclone(this.hit_point_pos[i])
 		h.boss = this
 
-		queue_insert(store, h)
+		simulation:queue_insert_entity(h)
 	end
 
 	this.idle_anims = this.idle_start_anims
@@ -7007,7 +7007,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 	shake.aura.duration = fts(30)
 	shake.aura.freq_factor = 2
 
-	queue_insert(store, shake)
+	simulation:queue_insert_entity(shake)
 	U.y_wait_unconditional(store, fts(30))
 
 	local shake = E:create_entity("aura_screen_shake")
@@ -7016,7 +7016,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 	shake.aura.duration = fts(20)
 	shake.aura.freq_factor = 3
 
-	queue_insert(store, shake)
+	simulation:queue_insert_entity(shake)
 	U.y_animation_wait_default(this)
 
 	this.idle_anims = this.idle_fight_anims
@@ -7057,7 +7057,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 			death_fx.pos = V.vclone(this.pos)
 
-			queue_insert(store, death_fx)
+			simulation:queue_insert_entity(death_fx)
 			U.animation_start(death_fx, "death", nil, store.tick_ts, false, 1)
 			U.animation_start(this, "death", nil, store.tick_ts, false, 1)
 			U.y_wait_unconditional(store, 2)
@@ -7068,7 +7068,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			shake.aura.duration = 8
 			shake.aura.freq_factor = 2.5
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			U.y_animation_wait_default(this)
 			LU.kill_all_enemies(store, true)
 
@@ -7102,7 +7102,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				bullet.bullet.target_id = nil
 				bullet.bullet.source_id = this.id
 
-				queue_insert(store, bullet)
+				simulation:queue_insert_entity(bullet)
 				U.y_wait_unconditional(store, fts(2))
 
 				local overseer_fx = E:create_entity("decal_stage_16_overseer_destroy_holder_bright")
@@ -7111,7 +7111,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				overseer_fx.render.sprites[1].ts = store.tick_ts
 				overseer_fx.tween.ts = store.tick_ts
 
-				queue_insert(store, overseer_fx)
+				simulation:queue_insert_entity(overseer_fx)
 				U.y_wait_unconditional(store, fts(12))
 				S:queue(this.sound_destroy_explosion)
 
@@ -7120,15 +7120,15 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				holder_destroy.pos = V.vclone(holder_by_id[1].pos)
 				holder_destroy.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, holder_destroy)
+				simulation:queue_insert_entity(holder_destroy)
 
 				local holder_crater = E:create_entity(this.destroy_holders_crater_template)
 
 				holder_crater.pos = V.vclone(holder_by_id[1].pos)
 				holder_crater.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, holder_crater)
-				queue_remove(store, holder_by_id[1])
+				simulation:queue_insert_entity(holder_crater)
+				simulation:queue_remove_entity(holder_by_id[1])
 
 				destroy_holder_last_ts = store.tick_ts
 				next_holder_to_destroy_i = next_holder_to_destroy_i + 1
@@ -7151,7 +7151,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				shake.aura.duration = fts(20)
 				shake.aura.freq_factor = 3
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 				U.y_animation_wait_default(this)
 
 				last_idle_anim_ts = store.tick_ts
@@ -7193,7 +7193,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 					bullet.bullet.target_id = nil
 					bullet.bullet.source_id = this.id
 
-					queue_insert(store, bullet)
+					simulation:queue_insert_entity(bullet)
 				end
 				U.y_wait_unconditional(store, fts(2))
 
@@ -7205,7 +7205,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 					overseer_fx.render.sprites[1].ts = store.tick_ts
 					overseer_fx.tween.ts = store.tick_ts
 
-					queue_insert(store, overseer_fx)
+					simulation:queue_insert_entity(overseer_fx)
 				end
 
 				U.y_wait_unconditional(store, fts(12))
@@ -7223,7 +7223,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				shake.aura.duration = fts(20)
 				shake.aura.freq_factor = 3
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 				U.y_animation_wait_default(this)
 
 				last_idle_anim_ts = store.tick_ts
@@ -7274,7 +7274,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						glare_mod.modifier.source_id = this.id
 						glare_mod.modifier.target_id = enemy.id
 						glare_mod.modifier.duration = this.glare_duration[this.phase]
-						queue_insert(store, glare_mod)
+						simulation:queue_insert_entity(glare_mod)
 					end
 				end
 				last_idle_anim_ts = store.tick_ts
@@ -7299,7 +7299,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 					glare_mod.modifier.source_id = this.id
 					glare_mod.modifier.target_id = e.id
 					glare_mod.modifier.duration = heal_duration
-					queue_insert(store, glare_mod)
+					simulation:queue_insert_entity(glare_mod)
 				end
 			end
 
@@ -7309,7 +7309,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			heal_mod.modifier.duration = heal_duration
 			heal_mod.hps.heal_min = heal_per_second
 			heal_mod.hps.heal_max = heal_per_second
-			queue_insert(store, heal_mod)
+			simulation:queue_insert_entity(heal_mod)
 
 			last_idle_anim_ts = store.tick_ts
 		end
@@ -7357,7 +7357,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						change_tower_fx.render.sprites[1].ts = store.tick_ts
 						change_tower_fx.tween.ts = store.tick_ts
 
-						queue_insert(store, change_tower_fx)
+						simulation:queue_insert_entity(change_tower_fx)
 
 						local change_tower_fx = E:create_entity(this.change_towers_template)
 
@@ -7365,7 +7365,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						change_tower_fx.render.sprites[1].ts = store.tick_ts
 						change_tower_fx.tween.ts = store.tick_ts
 
-						queue_insert(store, change_tower_fx)
+						simulation:queue_insert_entity(change_tower_fx)
 						towers[tower_index].ui.can_click = false
 						holders[tower_index].ui.can_click = false
 						towers[tower_index].tower.blocked = true
@@ -7378,7 +7378,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						change_tower_fx.render.sprites[1].ts = store.tick_ts
 						change_tower_fx.tween.ts = store.tick_ts
 
-						queue_insert(store, change_tower_fx)
+						simulation:queue_insert_entity(change_tower_fx)
 
 						local change_tower_fx = E:create_entity(this.change_towers_template)
 
@@ -7386,7 +7386,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						change_tower_fx.render.sprites[1].ts = store.tick_ts
 						change_tower_fx.tween.ts = store.tick_ts
 
-						queue_insert(store, change_tower_fx)
+						simulation:queue_insert_entity(change_tower_fx)
 						signal.emit("force-tower-swap", towers[tower_index], towers[tower_index + 1])
 						towers[tower_index].ui.can_click = false
 						towers[tower_index + 1].ui.can_click = false
@@ -7408,14 +7408,14 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						controller.tower_1 = towers[tower_index]
 						controller.tower_2 = holders[tower_index]
 
-						queue_insert(store, controller)
+						simulation:queue_insert_entity(controller)
 					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
 						local controller = E:create_entity("controller_tower_swap_overseer")
 
 						controller.tower_1 = towers[tower_index]
 						controller.tower_2 = towers[tower_index + 1]
 
-						queue_insert(store, controller)
+						simulation:queue_insert_entity(controller)
 
 						tower_index = tower_index + 1
 					end
@@ -7473,7 +7473,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 					change_tower_fx.pos = towers[i].pos
 					change_tower_fx.render.sprites[1].ts = store.tick_ts
 					change_tower_fx.tween.ts = store.tick_ts
-					queue_insert(store, change_tower_fx)
+					simulation:queue_insert_entity(change_tower_fx)
 				end
 
 				U.y_wait_unconditional(store, this.swap_delay + 1)
@@ -7482,7 +7482,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 					local slow_mod = E:create_entity("mod_slow_overseer")
 					slow_mod.modifier.source_id = this.id
 					slow_mod.modifier.target_id = towers[i].id
-					queue_insert(store, slow_mod)
+					simulation:queue_insert_entity(slow_mod)
 				end
 
 				U.y_animation_wait_default(this)
@@ -7519,11 +7519,11 @@ function scripts.decal_stage_16_overseer_blood.update(this, store)
 		blood.render.sprites[1].ts = store.tick_ts
 		blood.tween.ts = store.tick_ts
 
-		queue_insert(store, blood)
+		simulation:queue_insert_entity(blood)
 		U.y_wait_unconditional(store, fts(1))
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 大眼的嘴巴出怪口
@@ -7590,12 +7590,12 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 	this.tentacle_mouth = E:create_entity(this.tentacle_mouth_template)
 	this.tentacle_mouth.pos = this.pos
 
-	queue_insert(store, this.tentacle_mouth)
+	simulation:queue_insert_entity(this.tentacle_mouth)
 
 	local hit_point = E:create_entity("enemy_overseer_hit_point")
 	hit_point.pos = V.v(this.pos.x + this.spawn_offset.x + (this.spawn_offset.x < 0 and 35 or -35), this.pos.y + this.spawn_offset.y)
 	hit_point.boss = overseer
-	queue_insert(store, hit_point)
+	simulation:queue_insert_entity(hit_point)
 
 	while true do
 		if overseer.health.dead then
@@ -7612,7 +7612,7 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 					shake.aura.duration = fts(120)
 					shake.aura.freq_factor = 3
 
-					queue_insert(store, shake)
+					simulation:queue_insert_entity(shake)
 					S:queue(this.sound_unchain)
 					U.y_animation_play(this, "shake", nil, store.tick_ts, 1)
 
@@ -7628,7 +7628,7 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 					shake.aura.duration = fts(10)
 					shake.aura.freq_factor = 3
 
-					queue_insert(store, shake)
+					simulation:queue_insert_entity(shake)
 					U.y_animation_wait_default(this)
 					U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
 
@@ -7671,7 +7671,7 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 						b.overseer = overseer
 						b.spawn_path = this.spawn_path[spawn_pos_i]
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						U.y_animation_wait_default(this)
 						U.y_animation_wait_default(this.tentacle_mouth)
 						coroutine.yield()
@@ -7726,7 +7726,7 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 						b.overseer = overseer
 						b.spawn_path = this.spawn_path[1]
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						U.y_animation_wait_default(this)
 						U.y_animation_wait_default(this.tentacle_mouth)
 						coroutine.yield()
@@ -7789,7 +7789,7 @@ end
 function scripts.mod_slow_overseer.update(this, store)
 	local target = store.towers[this.modifier.target_id]
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 
@@ -7801,7 +7801,7 @@ function scripts.mod_slow_overseer.update(this, store)
 	SU.remove_tower_cooldown_buff(store.tick_ts, target, 1 / this.slow_factor)
 	U.entity_remove_shader(target, this.id)
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 -- 受击点
@@ -7839,7 +7839,7 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.enemy_overseer_hit_point.on_damage(this, store, damage)
@@ -7880,7 +7880,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 		ps = E:create_entity(b.particles_name)
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
@@ -7929,14 +7929,14 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 			mod.modifier.target_id = enemy.id
 			mod.modifier.source_id = this.id
 
-			queue_insert(store, mod)
+			simulation:queue_insert_entity(mod)
 		end
 	end
 
 	local p = SU.create_bullet_pop(store, this)
 
 	if p then
-		queue_insert(store, p)
+		simulation:queue_insert_entity(p)
 
 	end
 
@@ -7951,7 +7951,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 		water_fx.render.sprites[1].ts = store.tick_ts
 		water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-		queue_insert(store, water_fx)
+		simulation:queue_insert_entity(water_fx)
 	elseif b.hit_fx then
 		S:queue(this.sound_events.hit)
 
@@ -7961,7 +7961,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 		sfx.render.sprites[1].ts = store.tick_ts
 		sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-		queue_insert(store, sfx)
+		simulation:queue_insert_entity(sfx)
 	end
 
 	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
@@ -7970,7 +7970,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 		decal.pos = V.vclone(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 	end
 
 	local enemy_template = "enemy_glareling"
@@ -7992,7 +7992,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 		enemy.nav_path.ni = path_ni
 		enemy.nav_path_data = nearest[1]
 
-		queue_insert(store, enemy)
+		simulation:queue_insert_entity(enemy)
 	end
 
 	local soldiers = U.find_soldiers_in_range(store.soldiers, b.to, 0, this.explosion_damage.range, this.explosion_damage.vis_flags, this.explosion_damage.vis_bans)
@@ -8006,7 +8006,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 		end
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.controller_stage_16_overseer_eye = {}
@@ -8069,7 +8069,7 @@ function scripts.controller_stage_16_tentacle_bottom.update(this, store)
 			shake.aura.duration = fts(35)
 			shake.aura.freq_factor = 3
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			U.y_wait_unconditional(store, fts(40))
 
 			local shake = E:create_entity("aura_screen_shake")
@@ -8078,7 +8078,7 @@ function scripts.controller_stage_16_tentacle_bottom.update(this, store)
 			shake.aura.duration = fts(20)
 			shake.aura.freq_factor = 3
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			U.y_animation_wait_default(this)
 			U.animation_start_specific(this, "idle2", false, store.tick_ts, true, 1)
 		end
@@ -8126,7 +8126,7 @@ function scripts.controller_stage_19_navira.update(this, store)
 		b.bullet.target_id = tower.id
 		b.bullet.source_id = this.id
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function break_fn()
@@ -8151,7 +8151,7 @@ function scripts.controller_stage_19_navira.update(this, store)
 				ball.render.sprites[1].ts = store.tick_ts
 				ball.render.sprites[1].hidden = true
 
-				queue_insert(store, ball)
+				simulation:queue_insert_entity(ball)
 				table.insert(balls, ball)
 			end
 
@@ -8161,7 +8161,7 @@ function scripts.controller_stage_19_navira.update(this, store)
 			rot_controller.balls = balls
 			rot_controller.center_pos = this.pos
 
-			queue_insert(store, rot_controller)
+			simulation:queue_insert_entity(rot_controller)
 
 			for _, v in pairs(balls) do
 				if U.y_wait_conditional(store, this.fire_balls_wait_between_balls, break_fn) then
@@ -8207,10 +8207,10 @@ function scripts.controller_stage_19_navira.update(this, store)
 					U.y_wait_unconditional(store, this.fire_balls_wait_between_shots)
 				end
 
-				queue_remove(store, b)
+				simulation:queue_remove_entity(b)
 			end
 
-			queue_remove(store, rot_controller)
+			simulation:queue_remove_entity(rot_controller)
 			U.y_animation_wait_default(this)
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
@@ -8223,7 +8223,7 @@ function scripts.controller_stage_19_navira.update(this, store)
 
 	for _, b in pairs(balls) do
 		if b then
-			queue_remove(store, b)
+			simulation:queue_remove_entity(b)
 		end
 	end
 
@@ -8236,28 +8236,28 @@ function scripts.controller_stage_19_navira.update(this, store)
 	fx.pos = V.vclone(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 
 	local fx = E:create_entity(this.hands_dust_2_t)
 
 	fx.pos = V.vclone(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 
 	local fx = E:create_entity(this.hands_stones_1_t)
 
 	fx.pos = V.vclone(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 
 	local fx = E:create_entity(this.hands_stones_2_t)
 
 	fx.pos = V.vclone(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 	S:queue(this.sound_hands_down)
 	S:queue(this.sound_hands_up)
 	U.animation_start_default(statue_hands, "hands_shake", nil, store.tick_ts)
@@ -8323,12 +8323,12 @@ function scripts.bullet_stage_19_navira_fire_ball_ray.update(this, store)
 			m.modifier.target_id = b.target_id
 
 			table.insert(mods_added, m)
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 	end
 
 	U.y_animation_wait_default(this)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_bullet_stage_19_navira_fire_ball_ray_stun = {}
@@ -8338,7 +8338,7 @@ function scripts.mod_bullet_stage_19_navira_fire_ball_ray_stun.update(this, stor
 	local target = store.entities[m.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -8368,7 +8368,7 @@ function scripts.mod_bullet_stage_19_navira_fire_ball_ray_stun.update(this, stor
 
 	U.y_animation_play(this, "end", nil, store.tick_ts)
 	SU.tower_block_dec(target)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.boss_navira = {}
@@ -8428,7 +8428,7 @@ function scripts.boss_navira.update(this, store)
 			b.render.sprites[1].scale = V.v(1, -1)
 		end
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function y_on_death()
@@ -8439,7 +8439,7 @@ function scripts.boss_navira.update(this, store)
 
 		if is_tornado then
 			S:queue(this.sound_transform_out)
-			queue_remove(store, this.tornado_aura)
+			simulation:queue_remove_entity(this.tornado_aura)
 			U.y_animation_play(this, "tornadoend", nil, store.tick_ts)
 		end
 
@@ -8504,7 +8504,7 @@ function scripts.boss_navira.update(this, store)
 		this.tornado_aura = E:create_entity(this.tornado_aura_t)
 		this.tornado_aura.aura.source_id = this.id
 
-		queue_insert(store, this.tornado_aura)
+		simulation:queue_insert_entity(this.tornado_aura)
 
 		this.corruption_kr5.enabled = false
 	end
@@ -8537,7 +8537,7 @@ function scripts.boss_navira.update(this, store)
 		U.speed_div_self(this, this.tornado_speed_mult)
 		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar._offset_y)
 
-		queue_remove(store, this.tornado_aura)
+		simulation:queue_remove_entity(this.tornado_aura)
 
 		this.corruption_kr5.enabled = true
 	end
@@ -8603,7 +8603,7 @@ function scripts.boss_navira.on_corrupt(this, store)
 
 	m.modifier.target_id = this.id
 
-	queue_insert(store, m)
+	simulation:queue_insert_entity(m)
 end
 
 scripts.controller_stage_22_boss_crocs = {}
@@ -8695,7 +8695,7 @@ function scripts.controller_stage_22_boss_crocs.update(this, store)
 					end)
 
 					for _, mod_in_tower in pairs(mods_in_tower) do
-						queue_remove(store, mod_in_tower)
+						simulation:queue_remove_entity(mod_in_tower)
 					end
 
 					local mod = E:create_entity(this.mod)
@@ -8705,7 +8705,7 @@ function scripts.controller_stage_22_boss_crocs.update(this, store)
 					mod.use_secondary_anim = true
 					mod.muted = true
 
-					queue_insert(store, mod)
+					simulation:queue_insert_entity(mod)
 				end
 
 				U.y_wait_unconditional(store, fts(2))
@@ -8716,7 +8716,7 @@ function scripts.controller_stage_22_boss_crocs.update(this, store)
 				shake.aura.duration = 2
 				shake.aura.freq_factor = 2
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 				U.y_wait_unconditional(store, fts(98))
 				S:queue(this.sound_catch_arm)
 				U.y_wait_unconditional(store, fts(30))
@@ -8727,7 +8727,7 @@ function scripts.controller_stage_22_boss_crocs.update(this, store)
 				shake.aura.duration = 1
 				shake.aura.freq_factor = 2
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 				U.y_animation_wait_default(this)
 				U.animation_start(this, this.default_idle, nil, store.tick_ts, true, 1, true)
 
@@ -8784,7 +8784,7 @@ function scripts.controller_stage_22_boss_crocs.update(this, store)
 				mod.use_secondary_anim = true
 				mod.muted = true
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 			end
 
 			U.y_wait_unconditional(store, fts(2))
@@ -8795,7 +8795,7 @@ function scripts.controller_stage_22_boss_crocs.update(this, store)
 			shake.aura.duration = 2
 			shake.aura.freq_factor = 2
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			U.y_wait_unconditional(store, fts(98))
 			S:queue(this.sound_catch_arm)
 			U.y_wait_unconditional(store, fts(30))
@@ -8806,7 +8806,7 @@ function scripts.controller_stage_22_boss_crocs.update(this, store)
 			shake.aura.duration = 1
 			shake.aura.freq_factor = 2
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			U.y_animation_wait_default(this)
 			U.animation_start(this, this.default_idle, nil, store.tick_ts, true, 1, true)
 
@@ -8957,7 +8957,7 @@ function scripts.mod_boss_crocs_tower_timed_destroy.update(this, store)
 			target.tower.destroy = true
 
 			U.y_animation_wait_default(this)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 		end
 
 		coroutine.yield()
@@ -8970,7 +8970,7 @@ function scripts.mod_boss_crocs_tower_timed_destroy.update(this, store)
 	U.animation_start(this, "dissipate", nil, store.tick_ts, false, 1)
 	U.animation_start(this, "dissipate", nil, store.tick_ts, false, 2)
 	U.y_animation_wait_default(this)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.mod_boss_crocs_tower_timed_destroy.remove(this, store)
@@ -9036,7 +9036,7 @@ function scripts.aura_bullet_boss_crocs_poison_rain_lvl1.update(this, store)
 						new_mod.render = nil
 					end
 
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 
 					victims_count = victims_count + 1
 				end
@@ -9049,7 +9049,7 @@ function scripts.aura_bullet_boss_crocs_poison_rain_lvl1.update(this, store)
 	end
 
 	signal.emit("aura-apply-mod-victims", this, victims_count)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.boss_crocs = {}
@@ -9074,7 +9074,7 @@ function scripts.boss_crocs.update(this, store)
 		shake.aura.duration = 0.5
 		shake.aura.freq_factor = 3
 
-		LU.queue_insert(store, shake)
+		LU.simulation:queue_insert_entity(shake)
 		U.y_wait_unconditional(store, fts(46))
 
 		local shake = E:create_entity("aura_screen_shake")
@@ -9083,7 +9083,7 @@ function scripts.boss_crocs.update(this, store)
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 2
 
-		LU.queue_insert(store, shake)
+		LU.simulation:queue_insert_entity(shake)
 
 		for _, e in pairs(store.entities) do
 			if e.template_name == "tower_stage_22_arborean_mages" then
@@ -9099,7 +9099,7 @@ function scripts.boss_crocs.update(this, store)
 			fx.pos = V.vclone(this.rocks_fall_fx_pos)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 		end
 
 		local rocks_index = 0
@@ -9117,7 +9117,7 @@ function scripts.boss_crocs.update(this, store)
 			shake.aura.duration = 0.5
 			shake.aura.freq_factor = 3
 
-			LU.queue_insert(store, shake)
+			LU.simulation:queue_insert_entity(shake)
 
 			for _, e in pairs(store.entities) do
 				if e.template_name == mask_settings[1] then
@@ -9125,7 +9125,7 @@ function scripts.boss_crocs.update(this, store)
 				end
 
 				if e.template_name == "tower_stage_22_arborean_mages" then
-					queue_remove(store, e)
+					simulation:queue_remove_entity(e)
 				end
 
 				if e.template_name == "controller_stage_22_boss_crocs" then
@@ -9133,7 +9133,7 @@ function scripts.boss_crocs.update(this, store)
 				end
 
 				if rocks_index == 3 and e.template_name == "decal_stage_22_rune_rock" and e.pos.x > 400 and e.pos.x < 600 then
-					queue_remove(store, e)
+					simulation:queue_remove_entity(e)
 				end
 			end
 
@@ -9153,7 +9153,7 @@ function scripts.boss_crocs.update(this, store)
 
 		for _, e in pairs(store.entities) do
 			if e.pos and e.pos.y < 100 and (e.template_name == "decal_defense_flag" or e.template_name == "decal_defend_point" or e.template_name == "decal_upgrade_alliance_flux_altering_coils" or e.template_name == "decal_upgrade_alliance_seal_of_punishment") then
-				queue_remove(store, e)
+				simulation:queue_remove_entity(e)
 			end
 		end
 
@@ -9356,7 +9356,7 @@ function scripts.boss_crocs.update(this, store)
 					step_fx.render.sprites[1].flip_x = true
 				end
 
-				queue_insert(store, step_fx)
+				simulation:queue_insert_entity(step_fx)
 
 				local shake = E:create_entity("aura_screen_shake")
 
@@ -9364,7 +9364,7 @@ function scripts.boss_crocs.update(this, store)
 				shake.aura.duration = 0.5
 				shake.aura.freq_factor = 1
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 
 				local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.stomp_passive.range, this.stomp_passive.vis_flags_soldiers, this.stomp_passive.vis_bans_soldiers)
 
@@ -9410,7 +9410,7 @@ function scripts.boss_crocs.update(this, store)
 		b.bullet.to = shot_pos
 		b.bullet.source_id = this.id
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function y_on_death()
@@ -9511,7 +9511,7 @@ function scripts.boss_crocs.update(this, store)
 					fx.pos = V.vclone(hit_pos)
 					fx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, fx)
+					simulation:queue_insert_entity(fx)
 				end
 
 				while not U.animation_finished_default(this) do
@@ -9622,7 +9622,7 @@ function scripts.boss_crocs.update(this, store)
 						b.bullet.source_id = this.id
 						b.nav_path_data = this.available_nodes[i].node
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 						U.y_wait_unconditional(store, fts(1))
 					end
 
@@ -9659,14 +9659,14 @@ function scripts.boss_crocs.update(this, store)
 				shake.aura.duration = 2
 				shake.aura.freq_factor = 2
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 
 				local mods_in_tower = table.filter(store.entities, function(_, ee)
 					return ee.modifier and ee.modifier.target_id == target_tower.id
 				end)
 
 				for _, mod_in_tower in pairs(mods_in_tower) do
-					queue_remove(store, mod_in_tower)
+					simulation:queue_remove_entity(mod_in_tower)
 				end
 
 				local mod = E:create_entity(a.mod)
@@ -9674,7 +9674,7 @@ function scripts.boss_crocs.update(this, store)
 				mod.modifier.target_id = target_tower.id
 				mod.modifier.source_id = this.id
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 				SU.y_enemy_wait(store, this, a.action_time_eat - a.action_time_mod)
 				SU.y_enemy_animation_wait(this)
 
@@ -9781,7 +9781,7 @@ function scripts.boss_crocs.update(this, store)
 				mod.modifier.target_id = this.id
 				mod.modifier.source_id = this.id
 
-				queue_insert(store, mod)
+				simulation:queue_insert_entity(mod)
 
 				return
 			end
@@ -9816,7 +9816,7 @@ function scripts.mod_croc_boss_melee_hit.insert(this, store)
 	fx.pos = V.vclone(hit_pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 
 	return false
 end
@@ -9847,7 +9847,7 @@ function scripts.mod_boss_crocs_tower_eat.update(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -9880,7 +9880,7 @@ function scripts.mod_boss_crocs_tower_eat.update(this, store)
 	end)
 
 	if not_finished then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -9919,7 +9919,7 @@ function scripts.mod_boss_crocs_tower_eat.update(this, store)
 		holder.tower.can_hover = true
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.mod_boss_crocs_tower_eat.remove(this, store)
@@ -9948,7 +9948,7 @@ function scripts.mod_croc_boss_evolution_polymorph.insert(this, store)
 
 		SU.remove_modifiers(store, target)
 		SU.remove_auras(store, target)
-		queue_remove(store, target)
+		simulation:queue_remove_entity(target)
 		U.unblock_all(store, target)
 
 		if target.ui then
@@ -9979,7 +9979,7 @@ function scripts.mod_croc_boss_evolution_polymorph.insert(this, store)
 		entity_poly.pos = target.pos
 		entity_poly.nav_path = target.nav_path
 
-		queue_insert(store, entity_poly)
+		simulation:queue_insert_entity(entity_poly)
 
 		local hp_start = target.health.hp
 		entity_poly.health.patched = target.health.patched
@@ -10017,7 +10017,7 @@ function scripts.boss_pig.update(this, store)
 	local d_flying = E:create_entity("decal_boss_pig_flying")
 	local s_flying = d_flying.render.sprites[1]
 
-	queue_insert(store, d_flying)
+	simulation:queue_insert_entity(d_flying)
 
 	local node_id = P:nearest_nodes(698, 467, {2})[1][3]
 	local jump_id = 1
@@ -10057,7 +10057,7 @@ function scripts.boss_pig.update(this, store)
 		shadow.tween.props[1].keys[2][1] = this.fly_time_down
 		shadow.tween.reverse = true
 
-		queue_insert(store, shadow)
+		simulation:queue_insert_entity(shadow)
 		S:queue(this.sound_falling)
 
 		repeat
@@ -10078,7 +10078,7 @@ function scripts.boss_pig.update(this, store)
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 2
 
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 
 		round_idx = round_idx + 1
 		megaspawner_boss.manual_wave = string.format("BOSS%i", round_idx)
@@ -10089,7 +10089,7 @@ function scripts.boss_pig.update(this, store)
 		damage_on_fall.owner = this
 		damage_on_fall.aura.source_id = this.id
 
-		queue_insert(store, damage_on_fall)
+		simulation:queue_insert_entity(damage_on_fall)
 
 		this.pos.x, this.pos.y = to.x, to.y
 		s_flying.hidden = true
@@ -10106,7 +10106,7 @@ function scripts.boss_pig.update(this, store)
 		ground_decal.pos.x = this.pos.x
 		ground_decal.pos.y = this.pos.y
 
-		queue_insert(store, ground_decal)
+		simulation:queue_insert_entity(ground_decal)
 		U.y_animation_play(this, "fall", true, store.tick_ts, 1)
 
 		this.nav_path.pi = dest_pi
@@ -10145,7 +10145,7 @@ function scripts.boss_pig.update(this, store)
 		ground_decal.pos.y = this.pos.y
 		ground_decal.tween.ts = store.tick_ts
 
-		queue_insert(store, ground_decal)
+		simulation:queue_insert_entity(ground_decal)
 
 		local shadow = E:create_entity(this.shadow)
 
@@ -10154,7 +10154,7 @@ function scripts.boss_pig.update(this, store)
 		shadow.render.sprites[1].runs = 0
 		shadow.tween.props[1].keys[2][1] = 1.5
 
-		queue_insert(store, shadow)
+		simulation:queue_insert_entity(shadow)
 
 		s_flying.hidden = false
 
@@ -10185,7 +10185,7 @@ function scripts.boss_pig.update(this, store)
 		shadow.tween.reverse = true
 		shadow.tween.props[1].keys[2][1] = this.fly_time_down
 
-		queue_insert(store, shadow)
+		simulation:queue_insert_entity(shadow)
 		S:queue(this.sound_falling)
 
 		repeat
@@ -10213,7 +10213,7 @@ function scripts.boss_pig.update(this, store)
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 2
 
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 
 		round_idx = round_idx + 1
 		megaspawner_boss.manual_wave = string.format("BOSS%i", round_idx)
@@ -10224,7 +10224,7 @@ function scripts.boss_pig.update(this, store)
 		damage_on_fall.owner = this
 		damage_on_fall.aura.source_id = this.id
 
-		queue_insert(store, damage_on_fall)
+		simulation:queue_insert_entity(damage_on_fall)
 
 		local ground_decal = E:create_entity("decal_boss_pig_ground_fall")
 
@@ -10233,7 +10233,7 @@ function scripts.boss_pig.update(this, store)
 		ground_decal.pos.y = this.pos.y
 		ground_decal.tween.ts = store.tick_ts
 
-		queue_insert(store, ground_decal)
+		simulation:queue_insert_entity(ground_decal)
 		U.y_animation_play(this, "fall", af, store.tick_ts, 1)
 
 		this.nav_path.pi = dest_pi
@@ -10370,7 +10370,7 @@ function scripts.boss_machinist.update(this, store)
 	this.burn_aura = E:create_entity(this.burn_aura_t)
 	this.burn_aura.aura.source_id = this.id
 
-	queue_insert(store, this.burn_aura)
+	simulation:queue_insert_entity(this.burn_aura)
 
 	local function y_on_death()
 		LU.kill_all_enemies(store, true)
@@ -10391,7 +10391,7 @@ function scripts.boss_machinist.update(this, store)
 			smoke.pos.y = smoke.pos.y + this.flight_height + math.random(-20, 20)
 			smoke.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, smoke)
+			simulation:queue_insert_entity(smoke)
 			U.y_wait_unconditional(store, fts(5))
 
 			local particle = E:create_entity(this.death_particle_fx)
@@ -10401,7 +10401,7 @@ function scripts.boss_machinist.update(this, store)
 			particle.pos.y = particle.pos.y + this.flight_height + math.random(-20, 20)
 			particle.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, particle)
+			simulation:queue_insert_entity(particle)
 			U.y_wait_unconditional(store, fts(5))
 			LU.kill_all_enemies(store, true)
 		end
@@ -10604,7 +10604,7 @@ function scripts.boss_deformed_grymbeard.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 function scripts.boss_deformed_grymbeard.on_clone_death(this, store)
@@ -10649,7 +10649,7 @@ function scripts.enemy_deformed_grymbeard_clone.update(this, store)
 		this.shield = E:create_entity(this.shield_t)
 		this.shield.render.sprites[1].offset = this.render.sprites[1].offset
 
-		queue_insert(store, this.shield)
+		simulation:queue_insert_entity(this.shield)
 	end
 
 	this.shield.pos = this.pos
@@ -10669,7 +10669,7 @@ function scripts.enemy_deformed_grymbeard_clone.update(this, store)
 
 	while true do
 		if this.health.dead then
-			queue_remove(store, this.shield)
+			simulation:queue_remove_entity(this.shield)
 
 			this.render.sprites[2].hidden = true
 
@@ -10680,7 +10680,7 @@ function scripts.enemy_deformed_grymbeard_clone.update(this, store)
 			SU.y_enemy_death(store, this)
 
 			if this.shield then
-				queue_remove(store, this.shield)
+				simulation:queue_remove_entity(this.shield)
 			end
 
 			return
@@ -10721,7 +10721,7 @@ function scripts.boss_grymbeard.update(this, store)
 			b.bullet.rotation_speed = -b.bullet.rotation_speed
 		end
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function shoot_himself(spawn_pos, target_pos)
@@ -10732,7 +10732,7 @@ function scripts.boss_grymbeard.update(this, store)
 		b.bullet.to = V.vclone(target_pos)
 		b.bullet.source_id = this.id
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function shoot_scrap(spawn_pos, target_pos, type)
@@ -10749,7 +10749,7 @@ function scripts.boss_grymbeard.update(this, store)
 			b.bullet.rotation_speed = -b.bullet.rotation_speed
 		end
 
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 
 	local function y_on_death()
@@ -10788,7 +10788,7 @@ function scripts.boss_grymbeard.update(this, store)
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 1
 
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 
 		local t_pos = pick_clone_pos(-150, 2)
 
@@ -10801,7 +10801,7 @@ function scripts.boss_grymbeard.update(this, store)
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 1
 
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 
 		t_pos = pick_clone_pos(150, 3)
 
@@ -10818,7 +10818,7 @@ function scripts.boss_grymbeard.update(this, store)
 		shake.aura.duration = 0.5
 		shake.aura.freq_factor = 1
 
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 
 		t_pos = pick_clone_pos(-200, 3)
 
@@ -10831,7 +10831,7 @@ function scripts.boss_grymbeard.update(this, store)
 		shake.aura.duration = 0.5
 		shake.aura.freq_factor = 1
 
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 
 		t_pos = pick_clone_pos(200, 1)
 
@@ -10848,7 +10848,7 @@ function scripts.boss_grymbeard.update(this, store)
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 1.5
 
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 
 		t_pos = pick_clone_pos(-130, 1)
 
@@ -10949,7 +10949,7 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 	local ps
 
 	if not source then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 
@@ -10993,7 +10993,7 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 		ps.particle_system.emit = true
 		ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	local spawn_pos = V.vclone(this.pos)
@@ -11113,7 +11113,7 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 		decal.pos = V.vclone(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 	end
 
 	if b.hit_fx then
@@ -11122,7 +11122,7 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 		fx.pos = V.vclone(b.to)
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 
 	if ps and ps.particle_system.emit then
@@ -11132,7 +11132,7 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 	end
 
 	U.y_animation_wait_default(this)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.boss_spider_queen = {}
@@ -11154,7 +11154,7 @@ function scripts.boss_spider_queen.update(this, store)
 	local d_flying = E:create_entity("decal_boss_spider_queen_flying")
 	local s_flying = d_flying.render.sprites[1]
 
-	queue_insert(store, d_flying)
+	simulation:queue_insert_entity(d_flying)
 
 	a_webspit.ts = store.tick_ts - (a_webspit.cooldown - a_webspit.first_cooldown)
 	a_call_wardens.ts = store.tick_ts - (a_call_wardens.cooldown - a_call_wardens.first_cooldown)
@@ -11413,7 +11413,7 @@ function scripts.boss_spider_queen.update(this, store)
 									bullet.render.sprites[1].scale = V.vv(bullet.render.sprites[1].scale.x - 0.3 + 0.3 * math.random())
 									bullet.bullet.flight_time = bullet.bullet.flight_time + table.random({fts(-1), fts(0), fts(1)})
 
-									queue_insert(store, bullet)
+									simulation:queue_insert_entity(bullet)
 								end
 
 								U.y_wait_unconditional(store, fts(4))
@@ -11434,7 +11434,7 @@ function scripts.boss_spider_queen.update(this, store)
 						shake.aura.duration = fts(30)
 						shake.aura.freq_factor = 3
 
-						LU.queue_insert(store, shake)
+						LU.simulation:queue_insert_entity(shake)
 						U.y_animation_wait_default(this)
 
 						goto label_224_0
@@ -11484,7 +11484,7 @@ function scripts.boss_spider_queen.update(this, store)
 
 						decal.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, decal)
+						simulation:queue_insert_entity(decal)
 					end
 
 					a.ts = store.tick_ts
@@ -11522,7 +11522,7 @@ function scripts.boss_spider_queen.update(this, store)
 								obj.spi = v.spi
 								obj.ni = ni
 
-								queue_insert(store, obj)
+								simulation:queue_insert_entity(obj)
 							end
 						end
 					else
@@ -11551,7 +11551,7 @@ function scripts.boss_spider_queen.update(this, store)
 								obj.spi = spi
 								obj.ni = ni
 
-								queue_insert(store, obj)
+								simulation:queue_insert_entity(obj)
 							end
 
 							if sign == -1 then
@@ -11615,7 +11615,7 @@ function scripts.boss_spider_queen.update(this, store)
 									mod.modifier.target_id = s.id
 									mod.modifier.source_id = this.id
 
-									queue_insert(store, mod)
+									simulation:queue_insert_entity(mod)
 								end
 
 								local rs = table.random(soldiers)
@@ -11632,7 +11632,7 @@ function scripts.boss_spider_queen.update(this, store)
 								bullet.bullet.target_id = rs.id
 								bullet.bullet.source_id = this.id
 
-								queue_insert(store, bullet)
+								simulation:queue_insert_entity(bullet)
 							end
 						end
 
@@ -11665,21 +11665,21 @@ function scripts.boss_spider_queen.update(this, store)
 							bullet.bullet.source_id = this.id
 							bullet.bullet.hit_fx = nil
 
-							queue_insert(store, bullet)
+							simulation:queue_insert_entity(bullet)
 
 							local fx_units = E:create_entity(a.fx_end_units)
 
 							fx_units.pos = V.vclone(s.pos)
 							fx_units.render.sprites[1].ts = store.tick_ts
 
-							queue_insert(store, fx_units)
+							simulation:queue_insert_entity(fx_units)
 
 							local mod = E:create_entity(a.mod_end)
 
 							mod.modifier.target_id = s.id
 							mod.modifier.source_id = this.id
 
-							queue_insert(store, mod)
+							simulation:queue_insert_entity(mod)
 						end
 
 						S:stop("Stage30BossfightDrainLoop")
@@ -11767,13 +11767,13 @@ function scripts.decal_boss_spider_queen_spawns.update(this, store)
 	obj.nav_path.spi = this.spi
 	obj.nav_path.ni = this.ni
 
-	queue_insert(store, obj)
+	simulation:queue_insert_entity(obj)
 
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
 
 	U.y_animation_play(this, "out", nil, store.tick_ts, 1, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_boss_spider_queen_area_lifesteal = {}
@@ -11826,7 +11826,7 @@ function scripts.aura_boss_spider_queen_spiderweb.update(this, store)
 			local te = store.entities[this.aura.source_id]
 
 			if not te or te.health and te.health.dead then
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 
 				return
 			end
@@ -11845,13 +11845,13 @@ function scripts.aura_boss_spider_queen_spiderweb.update(this, store)
 					decal.pos = V.v(n_pos.x - offsetX + offsetX * 2 * math.random(), n_pos.y - offsetY + offsetY * 2 * math.random())
 					decal.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, decal)
+					simulation:queue_insert_entity(decal)
 
 					last_pos_created = V.vclone(n_pos)
 					last_ts = store.tick_ts
 				end
 			else
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 			end
 		end
 
@@ -11880,7 +11880,7 @@ function scripts.mod_boss_spider_queen_tower_debuff.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 
 		return
 	end
@@ -11961,7 +11961,7 @@ function scripts.mod_boss_spider_queen_tower_debuff.update(this, store)
 			fx.pos = V.v(target.pos.x - 20 + math.random() * 40, target.pos.y - 20 + math.random() * 40 + 30)
 			fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 			S:queue(this.sound_click)
 
 			this.ui.clicked = nil
@@ -12003,7 +12003,7 @@ function scripts.mod_boss_spider_queen_tower_debuff.update(this, store)
 	mod_hide.skip_modifiers = {this.template_name}
 	mod_hide.handle_stun = false
 
-	queue_insert(store, mod_hide)
+	simulation:queue_insert_entity(mod_hide)
 	U.animation_start(this, "idle_lvl_2", nil, store.tick_ts, true, this.render.sid_mask)
 
 	animation_release = "death_1"
@@ -12085,7 +12085,7 @@ function scripts.mod_boss_spider_queen_tower_debuff.update(this, store)
 		SU.tower_block_dec(target)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.bullet_boss_spider_queen_tower_stun = {}
@@ -12105,7 +12105,7 @@ function scripts.bullet_boss_spider_queen_tower_stun.update(this, store)
 		ps.particle_system.scales_x[1] = this.render.sprites[1].scale.x
 		ps.particle_system.scales_y[1] = this.render.sprites[1].scale.y
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 
 	local ps2
@@ -12116,7 +12116,7 @@ function scripts.bullet_boss_spider_queen_tower_stun.update(this, store)
 		ps.particle_system.scales_x[1] = this.render.sprites[1].scale.x
 		ps.particle_system.scales_y[1] = this.render.sprites[1].scale.y
 
-		queue_insert(store, ps2)
+		simulation:queue_insert_entity(ps2)
 	end
 
 	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
@@ -12145,7 +12145,7 @@ function scripts.bullet_boss_spider_queen_tower_stun.update(this, store)
 			mod.modifier.target_id = target.id
 			mod.modifier.source_id = b.source
 
-			queue_insert(store, mod)
+			simulation:queue_insert_entity(mod)
 		end
 	end
 
@@ -12155,10 +12155,10 @@ function scripts.bullet_boss_spider_queen_tower_stun.update(this, store)
 		sfx.pos = V.vclone(this.pos)
 		sfx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, sfx)
+		simulation:queue_insert_entity(sfx)
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.editor_aura_spider_web_sprint = {}
@@ -12215,7 +12215,7 @@ function scripts.aura_spider_webs.update(this, store)
 						new_mod.render = nil
 					end
 
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 
 					victims_count = victims_count + 1
 				end
@@ -12228,7 +12228,7 @@ function scripts.aura_spider_webs.update(this, store)
 	end
 
 	signal.emit("aura-apply-mod-victims", this, victims_count)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.boss_redboy_teen = {}
@@ -12268,7 +12268,7 @@ function scripts.boss_redboy_teen.insert(this, store)
 				e.aura.source_id = this.id
 				e.aura.ts = store.tick_ts
 
-				queue_insert(store, e)
+				simulation:queue_insert_entity(e)
 			end
 		end
 	end
@@ -12387,7 +12387,7 @@ function scripts.boss_redboy_teen.update(this, store)
 				fire_fx.render.sprites[1].offset = V.v(28, -65)
 				fire_fx.render.sprites[1].scale = V.vv(0.6)
 
-				queue_insert(store, fire_fx)
+				simulation:queue_insert_entity(fire_fx)
 
 				fire_fx = E:create_entity("fx_stage_32_redboy_transform_fire")
 				fire_fx.render.sprites[1].ts = store.tick_ts
@@ -12398,7 +12398,7 @@ function scripts.boss_redboy_teen.update(this, store)
 				fire_fx.render.sprites[1].flip_x = true
 				fire_fx.render.sprites[1].scale = V.vv(0.6)
 
-				queue_insert(store, fire_fx)
+				simulation:queue_insert_entity(fire_fx)
 
 				hide_possessed_times = hide_possessed_max_times - 1
 				hide_possessed_ts = store.tick_ts + hide_possessed_delay
@@ -12413,7 +12413,7 @@ function scripts.boss_redboy_teen.update(this, store)
 		fx.pos = V.vclone(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 		set_exo_for_anim(jump_fly_up_anim)
 		U.animation_start(this, jump_fly_up_anim, af, store.tick_ts, true, 1, true)
 
@@ -12475,7 +12475,7 @@ function scripts.boss_redboy_teen.update(this, store)
 			shake.aura.duration = 0.2
 			shake.aura.freq_factor = 5
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			set_exo_for_anim("jump_end")
 			U.y_animation_play(this, "jump_end", af, store.tick_ts, 1)
 			set_exo_for_anim("idle")
@@ -12531,7 +12531,7 @@ function scripts.boss_redboy_teen.update(this, store)
 			shake.aura.duration = 0.2
 			shake.aura.freq_factor = 5
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			set_exo_for_anim("jump_end")
 			U.y_animation_play(this, "jump_end", af, store.tick_ts, 1)
 			set_exo_for_anim("idle")
@@ -12663,7 +12663,7 @@ function scripts.boss_redboy_teen.update(this, store)
 
 		fireball.pos.x, fireball.pos.y = 512, 382
 
-		LU.queue_insert(store, fireball)
+		LU.simulation:queue_insert_entity(fireball)
 
 		if SU.y_enemy_animation_wait(this) then
 			return false
@@ -12807,7 +12807,7 @@ function scripts.boss_redboy_teen.update(this, store)
 
 		set_exo_for_anim("baculo")
 		U.y_animation_play(this, "baculo", nil, store.tick_ts, 1, 1)
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 
 	set_exo_for_anim("jump_end_2")
@@ -12820,7 +12820,7 @@ function scripts.boss_redboy_teen.update(this, store)
 	shake.aura.duration = 0.2
 	shake.aura.freq_factor = 5
 
-	queue_insert(store, shake)
+	simulation:queue_insert_entity(shake)
 	U.y_animation_wait_default(this)
 	set_exo_for_anim("idle")
 	U.animation_start(this, "idle", false, store.tick_ts, true, 1, true)
@@ -12890,7 +12890,7 @@ function scripts.boss_redboy_teen.update(this, store)
 				shake.aura.duration = 0.2
 				shake.aura.freq_factor = 5
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 				U.y_animation_wait_default(this)
 
 				this.health_bar.hidden = false
@@ -12924,7 +12924,7 @@ function scripts.boss_redboy_teen.update(this, store)
 				enemy.ni = this.nav_path.ni + math.random(10, 20)
 				enemy.pos = P:node_pos(enemy.pi, enemy.spi, enemy.ni)
 
-				queue_insert(store, enemy)
+				simulation:queue_insert_entity(enemy)
 
 				local shake = E:create_entity("aura_screen_shake")
 
@@ -12932,7 +12932,7 @@ function scripts.boss_redboy_teen.update(this, store)
 				shake.aura.duration = 0.5
 				shake.aura.freq_factor = 2
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 
 				local fx = E:create_entity(a_summon.decal)
 
@@ -12946,7 +12946,7 @@ function scripts.boss_redboy_teen.update(this, store)
 
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 
 				a_summon.ts = store.tick_ts
 
@@ -12999,7 +12999,7 @@ function scripts.boss_redboy_teen.update(this, store)
 				fx.pos = V.vclone(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 
 				a_fireabsorb.ts = store.tick_ts
 
@@ -13033,7 +13033,7 @@ function scripts.boss_redboy_teen.update(this, store)
 
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 
 				if SU.y_enemy_wait(store, this, a_block_power.cast_time - a_block_power.fx_time) then
 					goto label_1910_0

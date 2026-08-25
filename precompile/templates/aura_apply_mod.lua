@@ -70,7 +70,7 @@ return function(this, store)
                     ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
 
                     ps.particle_system.track_id = this.id
-                    queue_insert(store, ps)
+                    simulation:queue_insert_entity(ps)
                     context.ps_instances[i] = ps
                 constend
             constend
@@ -121,7 +121,7 @@ return function(this, store)
                     ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
 
                     ps.particle_system.track_id = this.id
-                    queue_insert(store, ps)
+                    simulation:queue_insert_entity(ps)
                     context.ps_instances[i] = ps
                 constend
             constend
@@ -151,7 +151,7 @@ return function(this, store)
         end
     elseif context.state == 3 then
         if U.animation_finished_default(this) then
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
         end
         return
     end
@@ -167,7 +167,7 @@ return function(this, store)
             context.state = 3
             U.animation_start_default(this, "out", false, store.tick_ts, false)
         constelse
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
         constend
         return
     end
@@ -179,7 +179,7 @@ return function(this, store)
             context.state = 3
             U.animation_start_default(this, "out", false, store.tick_ts, false)
         constelse
-            queue_remove(store, this)
+            simulation:queue_remove_entity(this)
         constend
         return
     end
@@ -194,7 +194,7 @@ return function(this, store)
                 context.state = 3
                 U.animation_start_default(this, "out", false, store.tick_ts, false)
             constelse
-                queue_remove(store, this)
+                simulation:queue_remove_entity(this)
             constend
             return
         end
@@ -311,7 +311,7 @@ return function(this, store)
                 end
                 constend
 
-                queue_insert(store, new_mod)
+                simulation:queue_insert_entity(new_mod)
             end
         end
     end
