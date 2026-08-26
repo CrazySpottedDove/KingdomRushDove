@@ -29361,7 +29361,7 @@ function scripts.tower_wicked_sisters.update(this, store)
 		witch.owner = this
 		witch.powers.silent.level = this.powers.silent.level
 		witch.powers.frog.level = this.powers.frog.level
-		SU.change_fps(store.tick_ts, witch, this.toweer.cooldown_factor_divider)
+		SU.change_fps(store.tick_ts, witch, this.tower.cooldown_factor_divider)
 		simulation:queue_insert_entity(witch)
 		b.soldiers[1] = witch
 		witch.wick_mode = current_mode
