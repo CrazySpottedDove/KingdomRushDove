@@ -360,10 +360,6 @@ function game_gui:init(w, h, game)
 
 	towermenu.hidden = true
 
-	local criketmenu = CriketMenu:new()
-
-	criketmenu.hidden = true
-
 	local towertooltip = TowerMenuTooltip:new()
 
 	towertooltip.hidden = true
@@ -500,9 +496,15 @@ function game_gui:init(w, h, game)
 	layer_gui_game:add_child(rangedrange)
 	layer_gui_game:add_child(towertooltip)
 	layer_gui_game:add_child(towermenu)
-	layer_gui_game:add_child(criketmenu)
 
-	if configer.config().enable_hero_menu then
+	if configer.ui_settings().tower_menu_enabled then
+		local criketmenu = CriketMenu:new()
+		criketmenu.hidden = true
+		layer_gui_game:add_child(criketmenu)
+		self.criketmenu = criketmenu
+	end
+
+	if configer.ui_settings().hero_menu_enabled then
 		local heromenu = HeroMenu:new()
 		heromenu.hidden = true
 		layer_gui_game:add_child(heromenu)
@@ -619,7 +621,6 @@ function game_gui:init(w, h, game)
 
 	self.pickview = pickview
 	self.towermenu = towermenu
-	self.criketmenu = criketmenu
 	self.towertooltip = towertooltip
 	self.rallyrange = rallyrange
 	self.tower_range = tower_range
@@ -957,7 +958,7 @@ function game_gui:keypressed(key, isrepeat)
 		-- if not self.next_wave_button:is_disabled() then
 		game_gui.game.store.send_next_wave = true
 	-- end
-	elseif ks.criket_toggle == key then
+	elseif ks.criket_toggle == key and configer.ui_settings().tower_menu_enabled then
 		if self.criketmenu.hidden then
 			self.criketmenu:show()
 		else
@@ -993,7 +994,7 @@ function game_gui:keypressed(key, isrepeat)
 		self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
 
 		game_gui.endless_select_reward_view:show(true)
-	elseif ks.hero_menu_toggle == key and configer.config().enabled and configer.config().enable_hero_menu then
+	elseif ks.hero_menu_toggle == key and configer.ui_settings().hero_menu_enabled then
 		if self.heromenu.hidden then
 			self.heromenu:show()
 		else
@@ -3554,22 +3555,6 @@ function PauseView:initialize()
 		-- 右侧按钮列（需要立刻交互的功能）
 		button_height = 0
 
-		local btn_criket = GGOptionsButton:new("一键造塔")
-		btn_criket:set_anchor_to_center()
-		btn_criket.pos.x = right_x
-		btn_criket.pos.y = button_height
-		function btn_criket.on_click()
-			S:queue("GUIButtonCommon")
-			self:hide()
-			if game_gui.criketmenu.hidden then
-				game_gui.criketmenu:show()
-			else
-				game_gui.criketmenu:hide()
-			end
-		end
-		self:add_child(btn_criket)
-
-		button_height = button_height + 100
 		local btn_random = GGOptionsButton:new("随机造塔")
 		btn_random:set_anchor_to_center()
 		btn_random.pos.x = right_x
@@ -3593,6 +3578,24 @@ function PauseView:initialize()
 		end
 		self:add_child(btn_force_wave)
 
+		if configer.ui_settings().tower_menu_enabled then
+			button_height = button_height + 100
+			local btn_criket = GGOptionsButton:new("一键造塔")
+			btn_criket:set_anchor_to_center()
+			btn_criket.pos.x = right_x
+			btn_criket.pos.y = button_height
+			function btn_criket.on_click()
+				S:queue("GUIButtonCommon")
+				self:hide()
+				if game_gui.criketmenu.hidden then
+					game_gui.criketmenu:show()
+				else
+					game_gui.criketmenu:hide()
+				end
+			end
+			self:add_child(btn_criket)
+		end
+
 		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
 			button_height = button_height + 100
 			local btn_endless = GGOptionsButton:new("无尽商店")
@@ -3610,7 +3613,7 @@ function PauseView:initialize()
 			self:add_child(btn_endless)
 		end
 
-		if configer.config().enabled and configer.config().enable_hero_menu then
+		if configer.ui_settings().hero_menu_enabled then
 			button_height = button_height + 100
 			local btn_hero_menu = GGOptionsButton:new("英雄菜单")
 			btn_hero_menu:set_anchor_to_center()

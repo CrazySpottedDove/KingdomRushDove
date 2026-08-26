@@ -266,7 +266,7 @@ function director:unload_item(item)
 		groups = table.append(groups, replace_locale(game.required_textures))
 		groups = table.append(groups, replace_locale(game.store.level.required_textures))
 
-		if configer.config().enabled and configer.config().enable_hero_menu then
+		if configer.ui_settings().hero_menu_enabled then
 			local hero_data = require("data.map_data").hero_data
 
 			for _, data in pairs(hero_data) do
@@ -526,7 +526,7 @@ function director:queue_load_item_named(name)
 			storage:save_slot(slot)
 		end
 
-		if configer.config().enabled and configer.config().enable_hero_menu then
+		if configer.ui_settings().hero_menu_enabled then
 			local hero_data = require("data.map_data").hero_data
 
 			local hero_textures = {}

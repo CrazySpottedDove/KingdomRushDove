@@ -7108,7 +7108,6 @@ function ConfigPanelView:initialize(sw, sh, keyboard, controller)
 		reverse_path = "路线倒转",
 		enabled = "启用自定义配置",
 		endless = "开启无尽模式",
-		enable_hero_menu = "启用局内英雄菜单",
 		enemy_count_multiplier = "敌人数量倍率",
 		enemy_gold_multiplier = "敌人金币倍率",
 		enemy_health_multiplier = "敌人生命倍率",
@@ -7251,7 +7250,9 @@ function UISettingsPanelView:initialize(sw, sh, keyboard, controller)
 		damage_numbers_enabled = "显示伤害数字",
 		heal_numbers_enabled = "显示治疗数字",
 		perf_enabled = "启用性能检测",
-		coordinate_enabled = "显示坐标"
+		coordinate_enabled = "显示坐标",
+		hero_menu_enabled = "启用局内英雄菜单",
+		tower_menu_enabled = "启用局内防御塔菜单"
 	})
 end
 

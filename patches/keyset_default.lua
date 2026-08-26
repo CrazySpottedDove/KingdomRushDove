@@ -34,7 +34,7 @@ return {
 	endless_shop = "f2",
 	-- 兵营寻路键位，会让士兵未处于拦截状态的兵营修改集结点到离家最近敌人位置，默认为 "f3"
 	barrack_seek = "f3",
-	-- 开启/关闭英雄菜单键位，只有config.lua中enable_hero_menu为true时生效，默认为 "f4"
+	-- 开启/关闭英雄菜单键位，只有ui_settings.lua中hero_menu_enabled为true时生效，默认为 "f4"
 	hero_menu_toggle = "f4",
 	-- 跳波开关，杀死所有敌人并进入下一波，默认为 "f5"
 	force_next_wave = "f5",
