@@ -859,6 +859,18 @@ function game_gui:toggle_reinforce_mode()
 	end
 end
 
+function game_gui:change_speed_factor(factor)
+	self.game.simulation.store.speed_factor = factor
+	local adaptive_fps = require("dove_modules.perf.adaptive_fps")
+	adaptive_fps:set_fps(adaptive_fps.fps)
+	if factor == 1 then
+		self.speed_state_indicator.hidden = true
+		self.speed_state_indicator.last_speed_factor = 1
+	else
+		self.speed_state_indicator.hidden = false
+	end
+end
+
 function game_gui:keypressed(key, isrepeat)
 	if isrepeat then
 		return
@@ -952,17 +964,11 @@ function game_gui:keypressed(key, isrepeat)
 			self:set_mode(GUI_MODE_RALLY_CONTROABLES)
 		end
 	elseif ks.slow == key then
-		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 0.5
-		local adaptive_fps = require("dove_modules.perf.adaptive_fps")
-		adaptive_fps:set_fps(adaptive_fps.fps)
+		self:change_speed_factor(self.game.simulation.store.speed_factor * 0.5)
 	elseif ks.quick == key then
-		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 2
-		local adaptive_fps = require("dove_modules.perf.adaptive_fps")
-		adaptive_fps:set_fps(adaptive_fps.fps)
+		self:change_speed_factor(self.game.simulation.store.speed_factor * 2)
 	elseif ks.normal == key then
-		self.game.simulation.store.speed_factor = 1
-		local adaptive_fps = require("dove_modules.perf.adaptive_fps")
-		adaptive_fps:set_fps(adaptive_fps.fps)
+		self:change_speed_factor(1)
 	elseif ks.next_wave == key then
 		-- if not self.next_wave_button:is_disabled() then
 		game_gui.game.store.send_next_wave = true
@@ -1843,20 +1849,16 @@ function SpeedStateIndicator:initialize()
 	self:add_child(label)
 
 	-- 状态
-	self.visible = false
 	self.hidden = true
 	self.last_speed_factor = 1
 end
 
 function SpeedStateIndicator:update(dt)
-	local store = game_gui.game.store
-
-	if store.speed_factor == 1 then
-		self.hidden = true
+	if self.hidden then
 		return
 	end
 
-	self.hidden = false
+	local store = game_gui.game.store
 
 	-- 更新文字和颜色效果
 	if store.speed_factor ~= self.last_speed_factor then
