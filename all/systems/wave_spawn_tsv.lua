@@ -9,11 +9,28 @@ local P = require("path_db")
 local U = require("utils")
 local W = require("wave_db")
 local configer = require("dove_modules.configer")
+local DI = require("difficulty")
 local log = require("lib.klua.log"):new("systems")
 
 function M.register(sys)
 	local function fts(v)
 		return v / FPS
+	end
+
+	-- 与 wave_spawn.lua 中 DIFFICULTY_HARD 的出怪加速保持一致：
+	-- 后期波次按组号缩减 wave/spawn/wait 的等待时间。
+	local function hard_wave_wait_time(wait_time, group_id)
+		if DI.level == DIFFICULTY_HARD and wait_time and wait_time > 0 then
+			if group_id > 12 then
+				return wait_time * 0.25
+			elseif group_id > 9 then
+				return wait_time * 0.5
+			elseif group_id > 6 then
+				return wait_time * 0.75
+			end
+		end
+
+		return wait_time
 	end
 
 	sys.wave_spawn_tsv = {}
@@ -75,7 +92,7 @@ function M.register(sys)
 		signal.emit("next-wave-ready", group)
 
 		local wave_number = store.wave_group_number
-		local wait_time = cmd.wait_time
+		local wait_time = hard_wave_wait_time(cmd.wait_time, store.wave_group_number)
 		local start_ts = store.tick_ts
 
 		if wait_time < 0 then
@@ -137,7 +154,7 @@ function M.register(sys)
 	end
 
 	function sys.wave_spawn_tsv.cmd_fns.spawn(store, cmd, wave_name)
-		local wait_time = cmd.wait_time
+		local wait_time = hard_wave_wait_time(cmd.wait_time, store.wave_group_number)
 		local spawn_multipier_min = math.floor((configer.config().enabled and configer.config().enemy_count_multiplier or 1))
 		local spawn_multipier_max = math.ceil((configer.config().enabled and configer.config().enemy_count_multiplier or 1))
 		local spawn_min_rate = spawn_multipier_max - (configer.config().enabled and configer.config().enemy_count_multiplier or 1)
@@ -249,7 +266,7 @@ function M.register(sys)
 	end
 
 	function sys.wave_spawn_tsv.cmd_fns.wait(store, cmd)
-		local wait_time = cmd.wait_time
+		local wait_time = hard_wave_wait_time(cmd.wait_time, store.wave_group_number)
 
 		if wait_time and wait_time > 0 then
 			U.y_wait_conditional(store, wait_time, function(store, wait_time)

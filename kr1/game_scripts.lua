@@ -2423,14 +2423,20 @@ scripts.enemy_troll_skater = {}
 function scripts.enemy_troll_skater.update(this, store)
 	local walking_angles = this.render.sprites[1].angles.walk
 
-	this._last_on_ice = false
-
 	local function on_ice()
 		return this.enemy.can_do_magic and band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_ICE) ~= 0
 	end
 
 	local function ice_changed()
 		return this._last_on_ice ~= on_ice()
+	end
+
+	this._last_on_ice = false
+	this.vis.bans = U.flag_clear(this.vis.bans, this.skate.vis_bans_extra)
+	this.render.sprites[1].angles.walk = walking_angles
+	if this.skate._mod then
+		simulation:queue_remove_entity(this.skate._mod)
+		this.skate._mod = nil
 	end
 
 	while true do
