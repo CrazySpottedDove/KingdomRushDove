@@ -3491,7 +3491,7 @@ function PauseView:initialize()
 
 	-- Android专用快捷键按钮
 	if IS_ANDROID then
-		local button_height = 100
+		local button_height = 0
 		local left_x = -75 -- 左侧按钮x位置
 		local right_x = self.size.x + 75 -- 右侧按钮x位置
 
@@ -3503,7 +3503,7 @@ function PauseView:initialize()
 		btn_slow.pos.y = button_height
 		function btn_slow.on_click()
 			S:queue("GUIButtonCommon")
-			game_gui.game.simulation.store.speed_factor = game_gui.game.simulation.store.speed_factor * 0.5
+			game_gui:change_speed_factor(game_gui.game.simulation.store.speed_factor * 0.5)
 		end
 		self:add_child(btn_slow)
 
@@ -3514,7 +3514,7 @@ function PauseView:initialize()
 		btn_normal.pos.y = button_height
 		function btn_normal.on_click()
 			S:queue("GUIButtonCommon")
-			game_gui.game.simulation.store.speed_factor = 1
+			game_gui:change_speed_factor(1)
 		end
 		self:add_child(btn_normal)
 
@@ -3525,7 +3525,7 @@ function PauseView:initialize()
 		btn_quick.pos.y = button_height
 		function btn_quick.on_click()
 			S:queue("GUIButtonCommon")
-			game_gui.game.simulation.store.speed_factor = game_gui.game.simulation.store.speed_factor * 2
+			game_gui:change_speed_factor(game_gui.game.simulation.store.speed_factor * 2)
 		end
 		self:add_child(btn_quick)
 
@@ -3552,7 +3552,8 @@ function PauseView:initialize()
 		self:add_child(btn_healthy)
 
 		-- 右侧按钮列（需要立刻交互的功能）
-		button_height = 100
+		button_height = 0
+
 		local btn_criket = GGOptionsButton:new("一键造塔")
 		btn_criket:set_anchor_to_center()
 		btn_criket.pos.x = right_x
@@ -3569,37 +3570,15 @@ function PauseView:initialize()
 		self:add_child(btn_criket)
 
 		button_height = button_height + 100
-		local btn_endless = GGOptionsButton:new("无尽商店")
-		btn_endless:set_anchor_to_center()
-		btn_endless.pos.x = right_x
-		btn_endless.pos.y = button_height
-		function btn_endless.on_click()
+		local btn_random = GGOptionsButton:new("随机造塔")
+		btn_random:set_anchor_to_center()
+		btn_random.pos.x = right_x
+		btn_random.pos.y = button_height
+		function btn_random.on_click()
 			S:queue("GUIButtonCommon")
-			if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and game_gui.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
-				self:hide()
-				game_gui.game.store.player_gold = game_gui.game.store.player_gold - EL.gold_extra_cost
-				game_gui.endless_select_reward_view:show(true)
-			end
+			game_gui:build_random_towers()
 		end
-		self:add_child(btn_endless)
-
-		button_height = button_height + 100
-		local btn_hero_menu = GGOptionsButton:new("英雄菜单")
-		btn_hero_menu:set_anchor_to_center()
-		btn_hero_menu.pos.x = right_x
-		btn_hero_menu.pos.y = button_height
-		function btn_hero_menu.on_click()
-			S:queue("GUIButtonCommon")
-			if configer.config().enabled and configer.config().enable_hero_menu then
-				self:hide()
-				if game_gui.heromenu.hidden then
-					game_gui.heromenu:show()
-				else
-					game_gui.heromenu:hide()
-				end
-			end
-		end
-		self:add_child(btn_hero_menu)
+		self:add_child(btn_random)
 
 		button_height = button_height + 100
 		local btn_force_wave = GGOptionsButton:new("强制跳波")
@@ -3613,6 +3592,42 @@ function PauseView:initialize()
 			game_gui.game.store.step = true
 		end
 		self:add_child(btn_force_wave)
+
+		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
+			button_height = button_height + 100
+			local btn_endless = GGOptionsButton:new("无尽商店")
+			btn_endless:set_anchor_to_center()
+			btn_endless.pos.x = right_x
+			btn_endless.pos.y = button_height
+			function btn_endless.on_click()
+				S:queue("GUIButtonCommon")
+				if game_gui.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
+					self:hide()
+					game_gui.game.store.player_gold = game_gui.game.store.player_gold - EL.gold_extra_cost
+					game_gui.endless_select_reward_view:show(true)
+				end
+			end
+			self:add_child(btn_endless)
+		end
+
+		if configer.config().enabled and configer.config().enable_hero_menu then
+			button_height = button_height + 100
+			local btn_hero_menu = GGOptionsButton:new("英雄菜单")
+			btn_hero_menu:set_anchor_to_center()
+			btn_hero_menu.pos.x = right_x
+			btn_hero_menu.pos.y = button_height
+			function btn_hero_menu.on_click()
+				S:queue("GUIButtonCommon")
+
+				self:hide()
+				if game_gui.heromenu.hidden then
+					game_gui.heromenu:show()
+				else
+					game_gui.heromenu:hide()
+				end
+			end
+			self:add_child(btn_hero_menu)
+		end
 
 		if configer.ui_settings().perf_enabled then
 			button_height = button_height + 100
