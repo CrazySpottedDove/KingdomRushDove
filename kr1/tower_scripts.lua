@@ -2806,9 +2806,6 @@ scripts.tower_necromancer = {
 
 		return true
 	end,
-	remove = function(this, store)
-		return true
-	end,
 	update = function(this, store)
 		local shooter_sid = 3
 		local skull_glow_sid = 4
@@ -2895,8 +2892,8 @@ scripts.tower_necromancer = {
 						signal.emit("rally-point-changed", this)
 
 						if s then
-							s.nav_rally.pos = vclone(b.rally_pos)
-							s.nav_rally.center = vclone(b.rally_pos)
+							s.nav_rally.pos:copy(b.rally_pos)
+							s.nav_rally.center:copy(b.rally_pos)
 							s.nav_rally.new = true
 
 							if not s.health.dead then
@@ -2947,15 +2944,19 @@ scripts.tower_necromancer = {
 
 						ni = km.clamp(1, #path, ni)
 
-						local dest = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, ni)
-						local b = E:create_entity(pa.bullet)
+						local dest = P:node_pos_ref(enemy.nav_path.pi, enemy.nav_path.spi, ni)
 
-						b.aura.source_id = this.id
-						b.aura.ts = store.tick_ts
-						b.aura.level = pow_p.level
-						b.pos = dest
+						local count = pow_p.level + 2
+						for i = 1, count do
+							local b = E:create_entity(pa.bullet)
 
-						simulation:queue_insert_entity(b)
+							b.aura.source_id = this.id
+							b.aura.ts = store.tick_ts
+							b.aura.level = pow_p.level
+							b.pos:set(dest.x + math.random(-42, 42), dest.y + math.random(-42, 42))
+
+							simulation:queue_insert_entity(b)
+						end
 
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()

@@ -416,57 +416,44 @@ function scripts.pestilence.insert(this, store)
 
 	this.actual_duration = duration
 
-	local count = 2 + this.aura.level
-	local points = {}
-
 	this.aura.ts = store.tick_ts
 
-	for i = 1, count do
-		points[i] = v(this.pos.x + math.random(-42, 42), this.pos.y + math.random(-42, 42))
-	end
+	local decal = E:create_entity("decal_tween")
 
-	for _, dest in ipairs(points) do
-		local decal = E:create_entity("decal_tween")
+	decal.pos.x, decal.pos.y = this.pos.x, this.pos.y
+	decal.tween.props[1].keys = {{0, 0}, {0.1, 255}, {duration, 255}, {duration + 1.2, 0}}
+	decal.tween.props[1].name = "alpha"
+	decal.render.sprites[1].name = "NecroPestilenceDecal"
+	decal.render.sprites[1].animated = false
+	decal.render.sprites[1].z = Z_DECALS
+	decal.render.sprites[1].ts = store.tick_ts
 
-		decal.pos.x, decal.pos.y = dest.x, dest.y
-		decal.tween.props[1].keys = {{0, 0}, {0.1, 255}, {duration, 255}, {duration + 1.2, 0}}
-		decal.tween.props[1].name = "alpha"
-		decal.render.sprites[1].name = "NecroPestilenceDecal"
-		decal.render.sprites[1].animated = false
-		decal.render.sprites[1].z = Z_DECALS
-		decal.render.sprites[1].ts = store.tick_ts
-
-		simulation:queue_insert_entity(decal)
-	end
+	simulation:queue_insert_entity(decal)
 
 	local smoke_offsets = {v(-17, 5), v(6, 13), v(3, -5), v(23, 3)}
 
-	for _, dest in ipairs(points) do
-		for i, off in ipairs(smoke_offsets) do
-			local sm = E:create_entity("decal_tween")
+	for i, off in ipairs(smoke_offsets) do
+		local sm = E:create_entity("decal_tween")
 
-			sm.pos.x, sm.pos.y = dest.x + off.x, dest.y + off.y
-			sm.tween.props[1].keys = {{0, 0}, {0.1, 255}, {duration, 255}, {duration + 1.2, 0}}
-			sm.tween.props[1].name = "alpha"
-			sm.render.sprites[1].name = "pestilence_fx_decal_smoke"
-			sm.render.sprites[1].z = Z_OBJECTS
-			sm.render.sprites[1].ts = store.tick_ts
-			sm.render.sprites[1].time_offset = i * 6 / FPS
+		sm.pos.x, sm.pos.y = this.pos.x + off.x, this.pos.y + off.y
+		sm.tween.props[1].keys = {{0, 0}, {0.1, 255}, {duration, 255}, {duration + 1.2, 0}}
+		sm.tween.props[1].name = "alpha"
+		sm.render.sprites[1].name = "pestilence_fx_decal_smoke"
+		sm.render.sprites[1].z = Z_OBJECTS
+		sm.render.sprites[1].ts = store.tick_ts
+		sm.render.sprites[1].time_offset = i * 6 / FPS
 
-			simulation:queue_insert_entity(sm)
-		end
+		simulation:queue_insert_entity(sm)
 	end
 
-	for _, dest in ipairs(points) do
-		local s = E:create_entity("decal_timed")
+	local s = E:create_entity("decal_timed")
 
-		s.pos.x, s.pos.y = dest.x, dest.y
-		s.render.sprites[1].name = "pestilence_fx_start_smoke"
-		s.render.sprites[1].ts = store.tick_ts
-		s.render.sprites[1].time_offset = math.random(0, 3) / 30
+	s.pos.x, s.pos.y = this.pos.x, this.pos.y
+	s.render.sprites[1].name = "pestilence_fx_start_smoke"
+	s.render.sprites[1].ts = store.tick_ts
+	s.render.sprites[1].time_offset = math.random(0, 3) / 30
 
-		simulation:queue_insert_entity(s)
-	end
+	simulation:queue_insert_entity(s)
 
 	return true
 end
