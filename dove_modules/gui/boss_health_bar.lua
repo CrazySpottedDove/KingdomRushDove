@@ -241,7 +241,6 @@ function BossHealthBar:update_entity()
 			end
 		end
 	end
-
 end
 
 function BossHealthBar:update(dt)

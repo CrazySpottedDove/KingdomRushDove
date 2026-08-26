@@ -512,13 +512,14 @@ function game_gui:init(w, h, game)
 	layer_gui_game:add_child(towertooltip)
 	layer_gui_game:add_child(towermenu)
 	layer_gui_game:add_child(criketmenu)
+
 	if configer.config().enable_hero_menu then
 		local heromenu = HeroMenu:new()
-
 		heromenu.hidden = true
 		layer_gui_game:add_child(heromenu)
 		self.heromenu = heromenu
 	end
+
 	layer_gui_game:add_child(incoming_tooltip)
 	layer_gui_game:add_child(boss_health_bar)
 	layer_gui_game:add_child(speed_state_indicator)
@@ -532,26 +533,25 @@ function game_gui:init(w, h, game)
 	layer_gui_top:add_child(overlay)
 	layer_gui_top:add_child(notiview)
 	layer_gui_top:add_child(pauseview)
+
 	if game.simulation.store.level_mode_override == GAME_MODE_ENDLESS then
 		local endless_select_reward_view = EndlessSelectRewardView:new(sw, sh)
-
 		endless_select_reward_view.hidden = true
 		endless_select_reward_view.pos = v(0, 0)
 		layer_gui_top:add_child(endless_select_reward_view)
 		self.endless_select_reward_view = endless_select_reward_view
 	end
+
 	layer_gui_top:add_child(victoryview)
 	layer_gui_top:add_child(defeatview)
 
 	if self.game.store.level.show_comic_idx then
 		local comic_transition = KView:new(V.v(sw, sh))
-
 		comic_transition.colors.background = {0, 0, 0, 255}
 		comic_transition.hidden = false
 		comic_transition.alpha = 1
 		comic_transition.update = KF.update_empty
 		layer_gui_top:add_child(comic_transition)
-
 		timer:tween(0.5, comic_transition, {
 			alpha = 0
 		}, "out-linear", function()

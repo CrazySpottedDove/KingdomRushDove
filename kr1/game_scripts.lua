@@ -19066,7 +19066,7 @@ function scripts.gryphon_controller.update(this, store)
 		e.cooldown = cw.cooldown
 		e.side = cw.side
 
-		LU.simulation:queue_insert_entity(e)
+		simulation:queue_insert_entity(e)
 	end
 
 	simulation:queue_remove_entity(this)
@@ -52858,7 +52858,7 @@ function scripts.fx_stage_32_fireball_right.update(this, store)
 		shake_travel.aura.freq_factor = 5
 		shake_travel.aura.reverse_fade = true
 
-		LU.simulation:queue_insert_entity(shake_travel)
+		simulation:queue_insert_entity(shake_travel)
 
 		local spawn_wait_time = 1.5
 
@@ -52937,7 +52937,7 @@ function scripts.fx_stage_32_fireball_right.update(this, store)
 				fx.duration = this.fire_duration + 1 * math.random()
 				fx.start_wait = 1 * math.random()
 
-				LU.simulation:queue_insert_entity(fx)
+				simulation:queue_insert_entity(fx)
 
 				ni = ni + 5
 
@@ -52949,7 +52949,7 @@ function scripts.fx_stage_32_fireball_right.update(this, store)
 				fx.duration = this.fire_duration + 1 * math.random()
 				fx.start_wait = 1 * math.random()
 
-				LU.simulation:queue_insert_entity(fx)
+				simulation:queue_insert_entity(fx)
 
 				ni = ni + 5
 			end
@@ -53482,7 +53482,7 @@ function scripts.controller_stage_32_boss.update(this, store)
 
 		fireball.pos.x, fireball.pos.y = 512, 382
 
-		LU.simulation:queue_insert_entity(fireball)
+		simulation:queue_insert_entity(fireball)
 		dragon_animation_start(side_anims[side].loop, true)
 		U.y_wait_unconditional(store, fixed_loop_time and fixed_loop_time or 5.6)
 		U.y_animation_wait(this, this.render.sid_dragon, this.render.sprites[this.render.sid_dragon].runs + 1)
@@ -58046,7 +58046,7 @@ function scripts.boss_bull_king.update(this, store)
 				shake.aura.duration = 0.5
 				shake.aura.freq_factor = 4
 
-				LU.simulation:queue_insert_entity(shake)
+				simulation:queue_insert_entity(shake)
 				U.y_wait_unconditional(store, fts(5))
 
 				for _, e in pairs(store.entities) do

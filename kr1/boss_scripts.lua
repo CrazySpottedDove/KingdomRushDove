@@ -3540,7 +3540,7 @@ function scripts.eb_leviathan.update(this, store)
 					e.pos.x, e.pos.y = tp[1], tp[2]
 					e.flip = tp[3]
 
-					LU.simulation:queue_insert_entity(e)
+					simulation:queue_insert_entity(e)
 					table.insert(tentacles, e)
 					U.y_wait_unconditional(store, U.frandom(0.1, 0.2))
 				end
@@ -9074,7 +9074,7 @@ function scripts.boss_crocs.update(this, store)
 		shake.aura.duration = 0.5
 		shake.aura.freq_factor = 3
 
-		LU.simulation:queue_insert_entity(shake)
+		simulation:queue_insert_entity(shake)
 		U.y_wait_unconditional(store, fts(46))
 
 		local shake = E:create_entity("aura_screen_shake")
@@ -9083,7 +9083,7 @@ function scripts.boss_crocs.update(this, store)
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 2
 
-		LU.simulation:queue_insert_entity(shake)
+		simulation:queue_insert_entity(shake)
 
 		for _, e in pairs(store.entities) do
 			if e.template_name == "tower_stage_22_arborean_mages" then
@@ -9117,7 +9117,7 @@ function scripts.boss_crocs.update(this, store)
 			shake.aura.duration = 0.5
 			shake.aura.freq_factor = 3
 
-			LU.simulation:queue_insert_entity(shake)
+			simulation:queue_insert_entity(shake)
 
 			for _, e in pairs(store.entities) do
 				if e.template_name == mask_settings[1] then
@@ -11434,7 +11434,7 @@ function scripts.boss_spider_queen.update(this, store)
 						shake.aura.duration = fts(30)
 						shake.aura.freq_factor = 3
 
-						LU.simulation:queue_insert_entity(shake)
+						simulation:queue_insert_entity(shake)
 						U.y_animation_wait_default(this)
 
 						goto label_224_0
@@ -12663,7 +12663,7 @@ function scripts.boss_redboy_teen.update(this, store)
 
 		fireball.pos.x, fireball.pos.y = 512, 382
 
-		LU.simulation:queue_insert_entity(fireball)
+		simulation:queue_insert_entity(fireball)
 
 		if SU.y_enemy_animation_wait(this) then
 			return false
