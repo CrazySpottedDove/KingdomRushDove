@@ -562,6 +562,66 @@ function game_gui:init(w, h, game)
 		self.comic_transition = comic_transition
 	end
 
+	if configer.ui_settings().coordinate_enabled then
+		local coordinate_debug = KView:new(V.v(sw, sh))
+		coordinate_debug.id = "coordinate_debug"
+		coordinate_debug.pos = V.v(0, 0)
+		coordinate_debug.propagate_on_click = true
+		coordinate_debug.propagate_on_down = true
+		coordinate_debug.update = KF.update_empty
+		coordinate_debug.game_gui = self
+
+		local coordinate_label = KTextLabel:new(V.v(300, 40))
+		coordinate_label.font_name = "hud"
+		coordinate_label.font_size = 10
+		coordinate_label.text_align = "left"
+		coordinate_debug:add_child(coordinate_label)
+
+		function coordinate_debug:draw()
+			local gg = self.game_gui
+			local store = gg.game.simulation.store
+
+			-- 1. 红色边框绘制所有 ui.click_rect
+			G.setColor(1, 0, 0, 1)
+			G.setLineWidth(1)
+
+			for _, e in pairs(store.entities_with_ui) do
+				if e.ui and e.ui.click_rect and not e.pending_removal then
+					local r = e.ui.click_rect
+					local x1 = e.pos.x + r.pos.x
+					local y1 = e.pos.y + r.pos.y
+					local x2 = x1 + r.size.x
+					local y2 = y1 + r.size.y
+
+					local sx1, sy1 = gg:g2u(V.v(x1, y1))
+					local sx2, sy2 = gg:g2u(V.v(x2, y2))
+
+					local x = sx1
+					local y = sy2
+					local w = sx2 - sx1
+					local h = sy1 - sy2
+
+					if w ~= 0 and h ~= 0 then
+						G.rectangle("line", x, y, w, h)
+					end
+				end
+			end
+
+			-- 2. 鼠标坐标（世界坐标，与 levelXX_data.lua 的 pos 一致）
+			local mx, my = gg.window._last_mouse_screen_pos.x, gg.window._last_mouse_screen_pos.y
+			local gx, gy = gg:u2g(V.v(mx, my))
+			coordinate_label.text = string.format("(%.1f, %.1f)", gx, gy)
+			-- 在 mx, my 位置绘制中心圆点
+			G.circle("fill", mx, my, 3)
+			G.translate(mx + 12, my + 12)
+			coordinate_label:draw()
+			G.translate(-mx - 12, -my - 12)
+		end
+
+		layer_gui_top:add_child(coordinate_debug)
+		self.coordinate_debug = coordinate_debug
+	end
+
 	layer_gui:add_child(rallyflag)
 	layer_gui:add_child(point_confirm)
 	layer_gui:add_child(layer_gui_game)
@@ -984,15 +1044,8 @@ end
 
 function game_gui:g2u(p, snap)
 	local game = self.game
-	-- local sx = (p.x * self.game.game_scale  + self.game.game_ref_origin.x - self.window.origin.x) / self.gui_scale
-	-- local sy = (-1 * (p.y * self.game.game_scale + self.game.game_ref_origin.y - self.sh * self.gui_scale) -
-	--                self.window.origin.y) / self.gui_scale
-	-- if snap then
-	--     sx, sy = math.floor(sx + 0.5), math.floor(sy + 0.5)
-	-- end
-	-- return sx, sy
-	local sx = (p.x * game.game_scale - game.camera.x) * game.camera.zoom / game_gui.gui_scale + self.sw / 2
-	local sy = ((game.ref_h - p.y) * game.game_scale - game.camera.y) * game.camera.zoom / game_gui.gui_scale + self.sh / 2
+	local sx = (p.x * game.game_scale - game.camera.x) * game.camera.zoom / self.gui_scale + self.sw / 2
+	local sy = ((game.ref_h - p.y) * game.game_scale - game.camera.y) * game.camera.zoom / self.gui_scale + self.sh / 2
 
 	if snap then
 		sx, sy = math.floor(sx + 0.5), math.floor(sy + 0.5)
@@ -1003,13 +1056,8 @@ end
 
 function game_gui:u2g(s)
 	local game = self.game
-	-- local px = (s.x * self.gui_scale + self.window.origin.x - self.game.game_ref_origin.x) / self.game.game_scale
-	-- local py =
-	--     (self.sh * self.gui_scale - (s.y * self.gui_scale + self.window.origin.y) - self.game.game_ref_origin.y) /
-	--         self.game.game_scale
-	-- return px, py
-	local px = ((s.x - self.sw / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
-	local py = game.ref_h - ((s.y - self.sh / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
+	local px = ((s.x - self.sw / 2) * self.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
+	local py = game.ref_h - ((s.y - self.sh / 2) * self.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
 
 	return px, py
 end
@@ -1021,8 +1069,9 @@ function game_gui:s2u(s)
 end
 
 function game_gui:u2w(s)
-	local px = ((s.x - self.sw / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
-	local py = game.ref_h - ((s.y - self.sh / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
+	local game = self.game
+	local px = ((s.x - self.sw / 2) * self.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
+	local py = game.ref_h - ((s.y - self.sh / 2) * self.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
 
 	return px, py
 end
