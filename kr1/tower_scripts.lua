@@ -19223,9 +19223,8 @@ function scripts.controller_tower_swap.update(this, store)
 
 			create_spawner_out(t1)
 
-			-- 这么做，实际上会先清理掉 modifiers，因为删除是从后往前删的
-			simulation:queue_remove_entity(t1)
 			remove_modifiers(t1)
+			simulation:queue_remove_entity(t1)
 
 			U.y_wait_unconditional(store, this.delay)
 			create_spawner_in(t1)
@@ -19239,8 +19238,8 @@ function scripts.controller_tower_swap.update(this, store)
 
 			create_spawner_out(t1)
 
-			simulation:queue_remove_entity(t1)
 			remove_modifiers(t1)
+			simulation:queue_remove_entity(t1)
 
 			create_spawner_out(t2)
 
@@ -19264,8 +19263,8 @@ function scripts.controller_tower_swap.update(this, store)
 				store.player_gold = store.player_gold + E:get_template(t2.barrack.soldier_type).unit.price * soldier_count
 			end
 
-			simulation:queue_remove_entity(t2)
 			remove_modifiers(t2)
+			simulation:queue_remove_entity(t2)
 
 			U.y_wait_unconditional(store, this.delay)
 			create_spawner_in(t1)
