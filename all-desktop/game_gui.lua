@@ -1836,7 +1836,7 @@ function SpeedStateIndicator:initialize()
 	self.pos = v(120, 50) -- GUI坐标系中的位置
 
 	-- 创建文本标签
-	local label = GGTextLabel:new(V.v(300, 50))
+	local label = GGCachedTextLabel:new(V.v(300, 50))
 	label.pos = v(0, 0)
 	label.font_name = "hud" -- 使用hud字体，支持中文
 	label.font_size = 16
@@ -1844,6 +1844,7 @@ function SpeedStateIndicator:initialize()
 	label.text_align = "left"
 	label.vertical_align = "top"
 	label.text = ""
+	label:update_cache()
 
 	self.label = label
 	self:add_child(label)
@@ -1866,13 +1867,15 @@ function SpeedStateIndicator:update(dt)
 
 		if store.speed_factor > 1 then
 			self.label.text = string.format("%s 倍加速中...", store.speed_factor)
+			self.label:update_cache()
 		else
 			self.label.text = string.format("%s 倍减速中...", store.speed_factor)
+			self.label:update_cache()
 		end
 	end
 
-	-- 动态颜色效果
-	self.label.colors.text[1], self.label.colors.text[2], self.label.colors.text[3] = math.floor((math.sin(store.ts) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 2) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 4) + 1) * 127.5 + 127.5)
+-- 动态颜色效果
+-- self.label.colors.text[1], self.label.colors.text[2], self.label.colors.text[3] = math.floor((math.sin(store.ts) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 2) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 4) + 1) * 127.5 + 127.5)
 end
 
 TimeRewardFx = class("TimeRewardFx", KView)
@@ -2027,7 +2030,7 @@ function HeroPortrait:initialize(hero_entity)
 
 	self:add_child(self.frame)
 
-	self.level = GGTextLabel:new(V.v(16, 16))
+	self.level = GGCachedTextLabel:new(V.v(16, 16))
 	self.level.pos = v(66, 65)
 	self.level.font_name = "TOONISH"
 	self.level.font_size = 14
@@ -2037,6 +2040,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.level.propagate_on_click = true
 	self.level._disabled = true
 	self.level.draw = KF.draw_without_children_and_clip
+	self.level:update_cache()
 
 	self:add_child(self.level)
 
@@ -2167,6 +2171,7 @@ function HeroPortrait:update_xp(hero)
 			self.bar_level.scale.x = 1
 			self.hero_level = e.hero.level
 			self.level.text = e.hero.level
+			self.level:update_cache()
 		end
 	else
 		if self.hero_level ~= e.hero.level then
@@ -2179,6 +2184,7 @@ function HeroPortrait:update_xp(hero)
 
 			self.hero_xp_next = GS.hero_xp_thresholds[e.hero.level]
 			self.level.text = e.hero.level
+			self.level:update_cache()
 			levelup = true
 		end
 
@@ -2769,7 +2775,6 @@ function InfoBar:initialize()
 		l.text_shadow = shadow
 		l.propagate_on_down = true
 		l.propagate_on_click = true
-
 		return l
 	end
 
@@ -2832,8 +2837,6 @@ function InfoBar:initialize()
 end
 
 function InfoBar:show()
-	log.debug("pos:%s,%s  size:%s,%s", self.pos.x, self.pos.y, self.size.x, self.size.y)
-
 	local e = game_gui.selected_entity
 
 	if not e or not e.info then
@@ -3239,7 +3242,7 @@ function HudCountersView:initialize(level_mode)
 	-- 对于不可交互的UI元素，应当直接设置其为 disabled，以减少碰撞检测的开销
 	self._disabled = true
 
-	local lbl_lives = GGTextLabel:new(V.v(71, 35))
+	local lbl_lives = GGCachedTextLabel:new(V.v(71, 35))
 
 	lbl_lives.pos = v(80, CJK(44, 39, 46, 39))
 	lbl_lives.text = "0"
@@ -3248,8 +3251,9 @@ function HudCountersView:initialize(level_mode)
 	lbl_lives.font_size = 12
 	lbl_lives.colors.text = {255, 255, 255, 255}
 	lbl_lives.draw = KF.draw_without_children_and_clip
+	lbl_lives:update_cache()
 
-	local lbl_gold = GGTextLabel:new(V.v(71, 35))
+	local lbl_gold = GGCachedTextLabel:new(V.v(71, 35))
 
 	lbl_gold.pos = v(136, CJK(44, 39, 46, 39))
 	lbl_gold.text = "1000"
@@ -3258,8 +3262,9 @@ function HudCountersView:initialize(level_mode)
 	lbl_gold.font_size = 12
 	lbl_gold.colors.text = {255, 255, 255, 255}
 	lbl_gold.draw = KF.draw_without_children_and_clip
+	lbl_gold:update_cache()
 
-	local lbl_wave = GGTextLabel:new(V.v(game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and 25 or 74, 28))
+	local lbl_wave = GGCachedTextLabel:new(V.v(game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and 25 or 74, 28))
 
 	lbl_wave.pos = v(240, 38)
 	lbl_wave.text_align = "left"
@@ -3272,6 +3277,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_wave.colors.text = {255, 255, 255, 255}
 	lbl_wave.colors.background = DEBUG_BACKGROUND_COLOR
 	lbl_wave.draw = KF.draw_without_children_and_clip
+	lbl_wave:update_cache()
 
 	self:add_child(lbl_lives)
 	self:add_child(lbl_gold)
@@ -3294,11 +3300,13 @@ function HudCountersView:update(dt)
 	if store.lives ~= self.lbl_lives_value then
 		self.lbl_lives_value = store.lives
 		self.lbl_lives.text = string.format("%d", store.lives)
+		self.lbl_lives:update_cache()
 	end
 
 	if store.player_gold ~= self.lbl_gold_value then
 		self.lbl_gold_value = store.player_gold
 		self.lbl_gold.text = string.format("%d", store.player_gold)
+		self.lbl_gold:update_cache()
 	end
 
 	local wave_value = store.wave_group_number
@@ -3318,6 +3326,7 @@ function HudCountersView:update(dt)
 		else
 			self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), wave_value, store.wave_group_total)
 		end
+		self.lbl_wave:update_cache()
 	end
 end
 
@@ -7454,22 +7463,24 @@ function IncomingTooltip:initialize()
 
 	self:add_child(arrow)
 
-	local title = GGTextLabel:new(V.v(180, 30))
+	local title = GGCachedTextLabel:new(V.v(180, 30))
 
 	title.text = _("INCOMING WAVE")
 	title.font_name = "h"
 	title.font_size = 14
 	title.text_align = "center"
 	title.colors.text = {255, 115, 55, 255}
+	title.pos.x, title.pos.y = 0, 10
+	title:update_cache()
 
-	local report = GGTextLabel:new(V.v(180, 90))
+	local report = GGCachedTextLabel:new(V.v(180, 90))
 
 	report.font_name = "body"
 	report.font_size = 12
 	report.text_align = "center"
 	report.colors.text = {255, 245, 210, 255}
-	title.pos.x, title.pos.y = 0, 10
 	report.pos.x, report.pos.y = 0, 30
+	report:update_cache()
 
 	self:add_child(title)
 	self:add_child(report)
@@ -7494,6 +7505,7 @@ function IncomingTooltip:set_report(text)
 	local height = lines * self.report:get_font_height()
 
 	self.size.y = 40 + height + 10
+	self.report:update_cache()
 end
 
 function IncomingTooltip:show(x, y, r, report)

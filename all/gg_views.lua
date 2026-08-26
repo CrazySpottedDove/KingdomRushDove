@@ -388,6 +388,105 @@ function GGTextLabel:_draw_self()
 	G.setColor(pr, pg, pb, pa)
 end
 
+GGCachedTextLabel = class("GGCachedTextLabel", GGTextLabel)
+
+function GGCachedTextLabel:update_cache()
+	self:_load_font()
+	self:_fit_text()
+	self.font:setLineHeight(self.line_height)
+
+	local font_scale = self._font_scale or GGLabel.static.font_scale
+	self._font_scale = font_scale
+
+	local voff = (self.font_adj.top or 0) / font_scale
+
+	if self.vertical_align and self.vertical_align ~= "top" then
+		local _, tl = self:get_wrap_lines()
+		local th = self:get_font_height()
+		local des = -1 * self.font:getDescent() / font_scale
+		local base = self.font:getBaseline() / font_scale
+
+		if tl > 1 then
+			th = th + (tl - 1) * self:get_font_height() * self.font:getLineHeight()
+		end
+
+		if self.vertical_align == "middle" then
+			voff = math.floor((self.text_size.y - th) * 0.5)
+		elseif self.vertical_align == "middle-caps" then
+			voff = math.floor((self.text_size.y - th + des) * 0.5)
+		elseif self.vertical_align == "bottom" then
+			voff = self.text_size.y - th
+		elseif self.vertical_align == "bottom-caps" then
+			voff = self.text_size.y - th + des
+		elseif self.vertical_align == "base" then
+			voff = -base
+		end
+
+		local vadj = (self.font_adj[self.vertical_align] or 0) / font_scale
+
+		voff = voff + vadj
+	end
+
+	self._voff = voff
+
+	if self.text_shadow then
+		local tsc = self.colors.text_shadow
+		if not self.colors._text_shadow then
+			self.colors._text_shadow = {}
+		end
+		self.colors._text_shadow[1] = tsc[1] > 1 and tsc[1] / 255 or tsc[1]
+		self.colors._text_shadow[2] = tsc[2] > 1 and tsc[2] / 255 or tsc[2]
+		self.colors._text_shadow[3] = tsc[3] > 1 and tsc[3] / 255 or tsc[3]
+		self.colors._text_shadow[4] = (tsc[4] or 1) * self.alpha
+		if self.colors._text_shadow[4] > 1 then
+			self.colors._text_shadow[4] = self.colors._text_shadow[4] / 255
+		end
+	end
+
+	if not self.colors._text then
+		self.colors._text = {}
+	end
+	self.colors._text[1] = self.colors.text[1]
+	self.colors._text[2] = self.colors.text[2]
+	self.colors._text[3] = self.colors.text[3]
+	self.colors._text[4] = self.colors.text[4] * self.alpha
+	if self.colors.tint then
+		local tint_c = self.colors.tint
+		self.colors._text[1] = self.colors._text[1] * tint_c[1]
+		self.colors._text[2] = self.colors._text[2] * tint_c[2]
+		self.colors._text[3] = self.colors._text[3] * tint_c[3]
+		self.colors._text[4] = self.colors._text[4] * tint_c[4]
+	end
+	if self.colors._text[1] > 1 then
+		self.colors._text[1] = self.colors._text[1] / 255
+	end
+	if self.colors._text[2] > 1 then
+		self.colors._text[2] = self.colors._text[2] / 255
+	end
+	if self.colors._text[3] > 1 then
+		self.colors._text[3] = self.colors._text[3] / 255
+	end
+	if self.colors._text[4] > 1 then
+		self.colors._text[4] = self.colors._text[4] / 255
+	end
+end
+
+function GGCachedTextLabel:_draw_self()
+	local font_scale = self._font_scale
+	G.setFont(self.font)
+	local pr, pg, pb, pa = G.getColor()
+
+	if self.text_shadow then
+		local tsc = self.colors._text_shadow
+		G.setColor(tsc[1], tsc[2], tsc[3], tsc[4] * pa)
+		G.printf(self.text, self.text_offset.x + self.text_shadow_offset.x, self.text_offset.y + self.text_shadow_offset.y + self._voff, self.text_size.x * font_scale, self.text_align, 0, 1 / font_scale)
+	end
+
+	G.setColor(self.colors._text[1], self.colors._text[2], self.colors._text[3], self.colors._text[4] * pa)
+	G.printf(self.text, self.text_offset.x, self.text_offset.y + self._voff, self.text_size.x * font_scale, self.text_align, 0, 1 / font_scale)
+	G.setColor(pr, pg, pb, pa)
+end
+
 GGShaderLabel = class("GGShaderLabel", GGLabel)
 
 GGShaderLabel:include(KMShaderDraw)
