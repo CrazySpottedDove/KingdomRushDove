@@ -4527,6 +4527,7 @@ scripts.tower_mech = {
 		mecha.nav_rally.pos.x, mecha.nav_rally.pos.y = this.barrack.rally_pos.x, this.barrack.rally_pos.y
 		mecha.nav_rally.new = true
 		mecha.owner = this
+		SU.change_fps(store.tick_ts, mecha, this.tower.cooldown_factor_divider)
 
 		simulation:queue_insert_entity(mecha)
 		table.insert(this.barrack.soldiers, mecha)
@@ -4654,13 +4655,11 @@ function scripts.soldier_mecha.update(this, store)
 			end
 
 			if store.tick_ts - ao.ts > ao.cooldown * tw.cooldown_factor then
-				local _, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, ao.min_range, ao.max_range, true, ao.vis_flags, ao.vis_bans)
+				local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, ao.min_range, ao.max_range, ao.vis_flags, ao.vis_bans)
 
-				if not targets then
+				if not target then
 					ao.ts = ao.ts + 0.1
 				else
-					local target = table.random(targets)
-
 					ao.ts = store.tick_ts
 
 					local an, af = animation_name_facing_point(this, ao.animation, target.pos)
@@ -4725,7 +4724,7 @@ function scripts.soldier_mecha.update(this, store)
 						animation_start(this, an, af, store.tick_ts, false, 1)
 
 						for hi, ht in ipairs(am.hit_times) do
-							while ht > store.tick_ts - this.render.sprites[1].ts do
+							while ht * tw.cooldown_factor > store.tick_ts - this.render.sprites[1].ts do
 								if this.nav_rally.new then
 									goto label_67_1
 								end
@@ -4753,6 +4752,9 @@ function scripts.soldier_mecha.update(this, store)
 						end
 
 						while not U.animation_finished_default(this) do
+							if this.nav_rally.new then
+								goto label_67_1
+							end
 							coroutine.yield()
 						end
 					end
@@ -4789,7 +4791,7 @@ function scripts.soldier_mecha.update(this, store)
 				local an, af = animation_name_facing_point(this, ab.animations[ab_side], target.pos)
 
 				animation_start(this, an, af, store.tick_ts, false, 1)
-				U.y_wait_unconditional(store, ab.hit_times[ab_side])
+				U.y_wait_unconditional(store, ab.hit_times[ab_side] * tw.cooldown_factor)
 
 				local b = E:create_entity(ab.bullet)
 
@@ -25891,6 +25893,7 @@ function scripts.tower_balloon.update(this, store)
 		balloon.nav_rally.new = true
 		balloon.owner = this
 		balloon.wick_mode = 1
+		SU.change_fps(store.tick_ts, balloon, this.tower.cooldown_factor_divider)
 		simulation:queue_insert_entity(balloon)
 		table.insert(this.barrack.soldiers, balloon)
 	end

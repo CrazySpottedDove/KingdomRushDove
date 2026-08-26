@@ -4587,6 +4587,9 @@ function SU.insert_tower_cooldown_buff(ts, target, cooldown_factor)
 				s.unit.cooldown_factor = 1.0 / s.unit.cooldown_factor_divider
 
 				SU.change_fps(ts, s, s.unit.cooldown_factor_divider)
+			else
+				-- 跟随防御塔
+				SU.change_fps(ts, s, target.tower.cooldown_factor_divider)
 			end
 		end
 	end
@@ -4657,6 +4660,8 @@ function SU.remove_tower_cooldown_buff(ts, target, cooldown_factor)
 				s.unit.cooldown_factor = 1.0 / s.unit.cooldown_factor_divider
 
 				SU.change_fps(ts, s, s.unit.cooldown_factor_divider)
+			else
+				SU.change_fps(ts, target, target.tower.cooldown_factor_divider)
 			end
 		end
 	end

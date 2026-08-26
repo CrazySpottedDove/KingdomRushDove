@@ -444,7 +444,6 @@ tt.powers.missile.price_inc = 280
 tt.powers.oil = CC("power")
 tt.powers.oil.price_base = 250
 tt.powers.oil.price_inc = 200
-
 tt.main_script.update = scripts.tower_mech.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.barrack.soldier_type = "soldier_mecha"
