@@ -457,17 +457,6 @@ function game_gui:init(w, h, game)
 	notiview.pos = v(self.sw * 0.5, self.sh * 0.5)
 	notiview.hidden = true
 
-	local victoryview = VictoryView:new(self.game.simulation.store.level_mode)
-
-	victoryview.pos.x, victoryview.pos.y = self.sw * 0.5, self.sh / 3
-	victoryview.anchor.x, victoryview.anchor.y = victoryview.size.x * 0.5, victoryview.size.y * 0.5
-	victoryview.hidden = true
-
-	local defeatview = DefeatView:new()
-	defeatview.pos.x, defeatview.pos.y = self.sw * 0.5, 3 * self.sh / 7
-	defeatview.anchor.x, defeatview.anchor.y = defeatview.size.x * 0.5, defeatview.size.y * 0.5
-	defeatview.hidden = true
-
 	local overlay = OverlayView:new(sw, sh)
 
 	overlay.hidden = true
@@ -541,9 +530,6 @@ function game_gui:init(w, h, game)
 		layer_gui_top:add_child(endless_select_reward_view)
 		self.endless_select_reward_view = endless_select_reward_view
 	end
-
-	layer_gui_top:add_child(victoryview)
-	layer_gui_top:add_child(defeatview)
 
 	if self.game.store.level.show_comic_idx then
 		local comic_transition = KView:new(V.v(sw, sh))
@@ -652,8 +638,6 @@ function game_gui:init(w, h, game)
 	self.overlay = overlay
 	self.pauseview = pauseview
 	self.notiview = notiview
-	self.victoryview = victoryview
-	self.defeatview = defeatview
 	self.incoming_tooltip = incoming_tooltip
 	self.layer_gui = layer_gui
 	self.layer_gui_game = layer_gui_game
@@ -879,9 +863,9 @@ function game_gui:keypressed(key, isrepeat)
 	if key == KEYPRESS_ESCAPE then
 		if not self.notiview.hidden then
 			self.notiview:hide()
-		elseif not self.victoryview.hidden then
+		elseif self.victoryview then
 			game_gui:go_to_map()
-		elseif not self.defeatview.hidden then
+		elseif self.defeatview then
 			game_gui:go_to_map()
 		elseif not self.pauseview.hidden then
 			self.pauseview:hide()
@@ -1568,6 +1552,11 @@ function game_gui:defeat()
 	self:hide_wave_flags()
 	self:deselect_all()
 	self:disable_keys()
+	local defeatview = DefeatView:new()
+	defeatview.pos.x, defeatview.pos.y = self.sw * 0.5, 3 * self.sh / 7
+	defeatview.anchor.x, defeatview.anchor.y = defeatview.size.x * 0.5, defeatview.size.y * 0.5
+	self.layer_gui_top:add_child(defeatview)
+	self.defeatview = defeatview
 	self.defeatview:show()
 end
 
@@ -1580,6 +1569,12 @@ function game_gui:victory()
 
 	self:deselect_all()
 
+	local victoryview = VictoryView:new(self.game.simulation.store.level_mode)
+
+	victoryview.pos.x, victoryview.pos.y = self.sw * 0.5, self.sh / 3
+	victoryview.anchor.x, victoryview.anchor.y = victoryview.size.x * 0.5, victoryview.size.y * 0.5
+	self.layer_gui_top:add_child(victoryview)
+	self.victoryview = victoryview
 	self.victoryview:show()
 end
 
