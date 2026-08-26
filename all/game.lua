@@ -1536,18 +1536,16 @@ else
 
 		local c = layer_gui.children[1]
 		if not c.hidden then
-			G.push()
 			G.translate(c.pos.x, c.pos.y)
 			c:draw()
-			G.pop()
+			G.translate(-c.pos.x, -c.pos.y)
 		end
 
 		c = layer_gui.children[2]
 		if not c.hidden then
-			G.push()
 			G.translate(c.pos.x, c.pos.y)
 			c:draw()
-			G.pop()
+			G.translate(-c.pos.x, -c.pos.y)
 		end
 
 		c = layer_gui.children[3]

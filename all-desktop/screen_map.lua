@@ -1289,6 +1289,9 @@ function screen_map:change_generation(i)
 		reload_generation()
 	else
 		self.generation = i
+		if self._custom_map_view then
+			self._custom_map_view.hidden = true
+		end
 		self.is_switching_map = true
 		local scale_x = self.window.scale.x
 		local scale_y = self.window.scale.y
@@ -1321,10 +1324,14 @@ function screen_map:change_generation(i)
 end
 
 --- 刷新自制关卡列表视图：重新扫描并对比内容签名，
---- 插件热加载/热卸载导致列表变化时重建视图（保留原隐藏状态），无变化时不动
+--- 插件热加载/热卸载导致列表变化时重建视图（保留原隐藏状态），无变化时不动；
+--- 非插件地图世代下始终隐藏，避免切换世代时闪现自定义地图列表。
 function screen_map:refresh_custom_map_view()
 	local maps = SCU.scan_maps()
 	if self._custom_map_view and self._custom_maps_sig == custom_maps_signature(maps) then
+		if self.generation ~= screen_map.CUSTOM_GEN then
+			self._custom_map_view.hidden = true
+		end
 		return
 	end
 	local was_hidden = self._custom_map_view and self._custom_map_view.hidden
@@ -1342,7 +1349,7 @@ function screen_map:refresh_custom_map_view()
 	list_view.pos = v(20, 8)
 	self.window:add_child(list_view, 1)
 	self._custom_map_view = list_view
-	if was_hidden then
+	if was_hidden or self.generation ~= screen_map.CUSTOM_GEN then
 		self._custom_map_view.hidden = true
 	end
 end
