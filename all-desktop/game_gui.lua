@@ -364,10 +364,6 @@ function game_gui:init(w, h, game)
 
 	criketmenu.hidden = true
 
-	local heromenu = HeroMenu:new()
-
-	heromenu.hidden = true
-
 	local towertooltip = TowerMenuTooltip:new()
 
 	towertooltip.hidden = true
@@ -472,32 +468,9 @@ function game_gui:init(w, h, game)
 	defeatview.anchor.x, defeatview.anchor.y = defeatview.size.x * 0.5, defeatview.size.y * 0.5
 	defeatview.hidden = true
 
-	local endless_select_reward_view = EndlessSelectRewardView:new(sw, sh)
-
-	endless_select_reward_view.hidden = true
-	endless_select_reward_view.pos = v(0, 0)
-
 	local overlay = OverlayView:new(sw, sh)
 
 	overlay.hidden = true
-
-	local comic_transition = KView:new(V.v(sw, sh))
-
-	comic_transition.colors.background = {0, 0, 0, 255}
-
-	if self.game.store.level.show_comic_idx then
-		comic_transition.hidden = false
-		comic_transition.alpha = 1
-
-		timer:tween(0.5, comic_transition, {
-			alpha = 0
-		}, "out-linear", function()
-			comic_transition.hidden = true
-		end)
-	else
-		comic_transition.hidden = true
-	end
-	comic_transition.update = KF.update_empty
 
 	local layer_gui = KVirtualView:new()
 	layer_gui.id = "layer_gui"
@@ -539,7 +512,13 @@ function game_gui:init(w, h, game)
 	layer_gui_game:add_child(towertooltip)
 	layer_gui_game:add_child(towermenu)
 	layer_gui_game:add_child(criketmenu)
-	layer_gui_game:add_child(heromenu)
+	if configer.config().enable_hero_menu then
+		local heromenu = HeroMenu:new()
+
+		heromenu.hidden = true
+		layer_gui_game:add_child(heromenu)
+		self.heromenu = heromenu
+	end
 	layer_gui_game:add_child(incoming_tooltip)
 	layer_gui_game:add_child(boss_health_bar)
 	layer_gui_game:add_child(speed_state_indicator)
@@ -553,10 +532,35 @@ function game_gui:init(w, h, game)
 	layer_gui_top:add_child(overlay)
 	layer_gui_top:add_child(notiview)
 	layer_gui_top:add_child(pauseview)
-	layer_gui_top:add_child(endless_select_reward_view)
+	if game.simulation.store.level_mode_override == GAME_MODE_ENDLESS then
+		local endless_select_reward_view = EndlessSelectRewardView:new(sw, sh)
+
+		endless_select_reward_view.hidden = true
+		endless_select_reward_view.pos = v(0, 0)
+		layer_gui_top:add_child(endless_select_reward_view)
+		self.endless_select_reward_view = endless_select_reward_view
+	end
 	layer_gui_top:add_child(victoryview)
 	layer_gui_top:add_child(defeatview)
-	layer_gui_top:add_child(comic_transition)
+
+	if self.game.store.level.show_comic_idx then
+		local comic_transition = KView:new(V.v(sw, sh))
+
+		comic_transition.colors.background = {0, 0, 0, 255}
+		comic_transition.hidden = false
+		comic_transition.alpha = 1
+		comic_transition.update = KF.update_empty
+		layer_gui_top:add_child(comic_transition)
+
+		timer:tween(0.5, comic_transition, {
+			alpha = 0
+		}, "out-linear", function()
+			comic_transition.hidden = true
+			layer_gui_top:remove_child(comic_transition)
+			self.comic_transition = nil
+		end)
+		self.comic_transition = comic_transition
+	end
 
 	layer_gui:add_child(rallyflag)
 	layer_gui:add_child(point_confirm)
@@ -567,11 +571,9 @@ function game_gui:init(w, h, game)
 	window:add_child(pickview)
 	window:add_child(layer_gui)
 
-	self.endless_select_reward_view = endless_select_reward_view
 	self.pickview = pickview
 	self.towermenu = towermenu
 	self.criketmenu = criketmenu
-	self.heromenu = heromenu
 	self.towertooltip = towertooltip
 	self.rallyrange = rallyrange
 	self.tower_range = tower_range
@@ -593,7 +595,6 @@ function game_gui:init(w, h, game)
 	self.victoryview = victoryview
 	self.defeatview = defeatview
 	self.incoming_tooltip = incoming_tooltip
-	self.comic_transition = comic_transition
 	self.layer_gui = layer_gui
 	self.layer_gui_game = layer_gui_game
 	self.layer_gui_hud = layer_gui_hud
