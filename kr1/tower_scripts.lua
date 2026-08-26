@@ -3775,6 +3775,7 @@ scripts.lava_dwaarp = {
 -- 地震
 scripts.tower_dwaarp = {
 	update = function(this, store)
+		this._fx_points_cache = nil
 		local a = this.attacks
 		local aa = this.attacks.list[1]
 		local la = this.attacks.list[2]
