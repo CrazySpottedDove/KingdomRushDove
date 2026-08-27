@@ -275,6 +275,18 @@ local function normalize_headers(h)
 	return out
 end
 
+-- 将字节/秒格式化为可读的速度文本（空或 0 时返回空串）
+local function format_speed(bps)
+	if bps and bps >= 1024 * 1024 then
+		return string.format("%.1f MB/s", bps / 1024 / 1024)
+	elseif bps and bps >= 1024 then
+		return string.format("%.0f KB/s", bps / 1024)
+	elseif bps and bps > 0 then
+		return string.format("%.0f B/s", bps)
+	end
+	return ""
+end
+
 require("dove_modules.gui.plugin_manager_components")
 
 -- ─────────────────────────────────────────────
@@ -1521,10 +1533,11 @@ function PluginManagerView:_download_zip(item, task)
 		return nil, "插件缺少下载文件名"
 	end
 	local url = base .. "/download/" .. url_encode(filename) .. "?platform=" .. get_platform()
-	local chunk_size = 256 * 1024
+	local chunk_size = 1024 * 1024
 	local chunks = {}
 	local downloaded = 0
 	local total = nil
+	local speed_bps = 0
 	self._active_download_name = item.name or item.entry or filename
 
 	local function is_cancelled()
@@ -1535,6 +1548,7 @@ function PluginManagerView:_download_zip(item, task)
 		if is_cancelled() then
 			if task then
 				task.progress = 0
+				task.speed = 0
 			end
 			return nil, "cancelled"
 		end
@@ -1544,6 +1558,7 @@ function PluginManagerView:_download_zip(item, task)
 		else
 			end_pos = downloaded + chunk_size - 1
 		end
+		local chunk_t0 = love.timer.getTime()
 		local resp, err = self:_request(url, {
 			method = "GET",
 			headers = {
@@ -1571,11 +1586,23 @@ function PluginManagerView:_download_zip(item, task)
 		chunks[#chunks + 1] = body
 		downloaded = downloaded + #body
 
+		-- 按分块计算下载速度（含请求等待时间），EMA 平滑避免抖动
+		local chunk_elapsed = love.timer.getTime() - chunk_t0
+		if chunk_elapsed > 0.02 and #body > 0 then
+			local chunk_speed = #body / chunk_elapsed
+			speed_bps = speed_bps > 0 and (speed_bps * 0.7 + chunk_speed * 0.3) or chunk_speed
+		end
+
 		local percent = total and (downloaded * 100 / math.max(total, 1)) or 0
 		if task then
 			task.progress = percent
+			task.speed = speed_bps
 		end
-		self:_set_status(string.format("下载插件中：%s  %.1f%%", self._active_download_name, percent), percent)
+		local speed_text = format_speed(speed_bps)
+		if speed_text ~= "" then
+			speed_text = "  " .. speed_text
+		end
+		self:_set_status(string.format("下载插件中：%s  %.1f%%%s", self._active_download_name, percent, speed_text), percent)
 
 		if code == 200 then
 			break
@@ -1946,6 +1973,7 @@ function PluginManagerView:_enqueue_download(item, is_update)
 		is_update = is_update == true,
 		state = "queued",
 		progress = 0,
+		speed = 0,
 		error = nil,
 		cancelled = false,
 		coro = nil
@@ -3303,12 +3331,16 @@ function PluginManagerView:_render_dl_task_view()
 		name_lbl.pos = V.v(12, math.floor(6 * us + 0.5))
 		row:add_child(name_lbl)
 
+		local state_text = DL_STATE_TEXT[task.state] or task.state
+		if task.state == "running" and task.speed and task.speed > 0 then
+			state_text = state_text .. "  " .. format_speed(task.speed)
+		end
 		local state_lbl = GGLabel:new(V.v(math.floor(140 * us + 0.5), math.floor(22 * us + 0.5)))
 		state_lbl.font_size = 13 * rs
 		state_lbl.text_align = "right"
 		state_lbl.vertical_align = "middle"
 		state_lbl.colors.text = {214, 193, 144, 255}
-		state_lbl.text = DL_STATE_TEXT[task.state] or task.state
+		state_lbl.text = state_text
 		state_lbl.pos = V.v(list_w - math.floor(152 * us + 0.5), math.floor(6 * us + 0.5))
 		state_lbl.font_name = "body"
 		row:add_child(state_lbl)
@@ -3402,7 +3434,12 @@ function PluginManagerView:_update_dl_view_progress()
 			task._progress_lbl.text = pct .. "%"
 		end
 		if task._state_lbl then
-			task._state_lbl.text = DL_STATE_TEXT[task.state] or task.state
+			local state_text = DL_STATE_TEXT[task.state] or task.state
+			-- 下载中：在状态文本后附加实时速度
+			if task.state == "running" and task.speed and task.speed > 0 then
+				state_text = state_text .. "  " .. format_speed(task.speed)
+			end
+			task._state_lbl.text = state_text
 		end
 	end
 end
