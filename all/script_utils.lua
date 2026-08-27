@@ -401,27 +401,6 @@ function SU.tower_block_dec(this, remove_all)
 	end
 end
 
----更新沉默塔技能冷却
----@param store table game.store
----@param this table 塔实体
----@return nil
-function SU.tower_update_silenced_powers(store, this)
-	for k, pow in pairs(this.powers) do
-		if pow.attack_idx then
-			local pa = this.attacks.list[pow.attack_idx]
-
-			if pa then
-				if not this.tower.can_do_magic and not pa.silence_ts then
-					pa.silence_ts = store.tick_ts
-				elseif this.tower.can_do_magic and pa.silence_ts then
-					pa.ts = store.tick_ts - (pa.silence_ts - pa.ts)
-					pa.silence_ts = nil
-				end
-			end
-		end
-	end
-end
-
 ---召唤死亡生成物
 ---@param store table game.store
 ---@param this table 实体

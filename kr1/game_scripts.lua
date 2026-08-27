@@ -13149,7 +13149,7 @@ function scripts.enemy_twilight_evoker.update(this, store)
 				a = as
 
 				local towers = table.filter(store.towers, function(_, e)
-					return e.tower and e.tower.can_be_mod and e.tower.can_do_magic and table.contains(a.included_templates, e.template_name) and U.is_inside_ellipse(e.pos, this.pos, a.range)
+					return U.tower_is_silence_target(e) and U.is_inside_ellipse(e.pos, this.pos, a.range)
 				end)
 				local tower = table.random(towers)
 
@@ -28101,7 +28101,7 @@ function scripts.aura_stage_10_obelisk_teleport.update(this, store)
 			end
 		end
 
-		if this.aura.requires_magic then
+		if this.aura.requires_magic ~= false then
 			local te = store.entities[this.aura.source_id]
 
 			if not te or not te.enemy then
@@ -29122,7 +29122,7 @@ function scripts.aura_enemy_stage_11_cult_leader_illusion_shield.update(this, st
 			end
 		end
 
-		if this.aura.requires_magic then
+		if this.aura.requires_magic ~= false then
 			local te = store.entities[this.aura.source_id]
 
 			if not te or not te.enemy then
@@ -34451,7 +34451,7 @@ function scripts.enemy_blinker.update(this, store)
 			local target
 
 			while target == nil and not this.unit.is_stunned and not this.health.dead do
-				if not ar.disabled and (not ar.requires_magic or this.enemy.can_do_magic) and store.tick_ts - ar.ts > ar.cooldown then
+				if not ar.disabled and (ar.requires_magic ~= false or this.enemy.can_do_magic) and store.tick_ts - ar.ts > ar.cooldown then
 					target = U.find_nearest_soldier(store.soldiers, this.pos, ar.min_range, ar.max_range, ar.vis_flags, ar.vis_bans, function(v, origin)
 						return not v.unit.is_stunned and SU.can_range_soldier(store, this, v)
 					end)
@@ -69775,7 +69775,7 @@ function scripts.boss_murglum.update(this, store, script)
 
 			if node_valid and not ignore_soldiers and this.ranged then
 				for _, a in pairs(this.ranged.attacks) do
-					if not a.disabled and (not a.requires_magic or this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
+					if not a.disabled and (a.requires_magic ~= false or this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
 						ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(s)
 							return not a.only_foward or s.pos.x + a.only_foward_range <= this.pos.x
 						end)

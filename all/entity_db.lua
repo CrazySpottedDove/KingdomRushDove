@@ -62,6 +62,7 @@ function entity_db:load()
 	package.loaded["boss"] = nil
 	package.loaded["hero_boss"] = nil
 
+-- self:test_attacks()
 -- self:report_status()
 -- self:test_tween()
 end
@@ -167,6 +168,16 @@ function entity_db:test_tween()
 				if not e.render.sprites[prop.sprite_id] then
 					log.error("template %s has tween with invalid sprite_id %s", name, tostring(prop.sprite_id))
 				end
+			end
+		end
+	end
+end
+
+function entity_db:test_attacks()
+	for name, e in pairs(self.entities) do
+		if e.tower then
+			if not e.attacks or not e.attacks.list then
+				print("template " .. name .. " has tower component but no attacks defined")
 			end
 		end
 	end

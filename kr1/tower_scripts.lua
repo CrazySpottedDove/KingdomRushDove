@@ -69,10 +69,6 @@ local function queue_damage(store, damage)
 	store.damage_queue[#store.damage_queue + 1] = damage
 end
 
-local function ready_to_use_power(power, power_attack, store, factor)
-	return power.level > 0 and (store.tick_ts - power_attack.ts > power_attack.cooldown * (factor or 1)) and (not power_attack.silence_ts)
-end
-
 local function apply_precision(b)
 	local u = UP:get_upgrade("archer_precision")
 
@@ -157,9 +153,7 @@ scripts.tower_archer_dwarf = {
 				a = nil
 				pow = nil
 
-				SU.tower_update_silenced_powers(store, this)
-
-				if ready_to_use_power(pow_b, ab, store, this.tower.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_b, ab, store, this.tower) then
 					enemy, pred_pos = U.find_random_enemy_with_pos(store, tpos, 0, at.range, ab.node_prediction, ab.vis_flags, ab.vis_bans)
 
 					if enemy then
@@ -471,11 +465,9 @@ scripts.tower_musketeer = {
 					end
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
 				if pow_sn.level > 0 then
 					for _, ax in ipairs({asi, asn}) do
-						if (ax.chance == 1 or random() < ax.chance) and ready_to_use_power(pow_sn, ax, store, tw.cooldown_factor) then
+						if (ax.chance == 1 or random() < ax.chance) and U.tower_ready_to_use_power(pow_sn, ax, store, tw) then
 							local enemy = U.find_biggest_enemy_in_range_filter_off(tpos, ax.range, ax.vis_flags, ax.vis_bans)
 
 							if not enemy then
@@ -519,7 +511,7 @@ scripts.tower_musketeer = {
 					end
 				end
 
-				if ready_to_use_power(pow_sh, ash, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_sh, ash, store, tw) then
 					local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, ash.range * 1.5, nil, ash.vis_flags, ash.vis_bans, ash.min_spread)
 
 					if not enemy then
@@ -719,8 +711,6 @@ scripts.tower_crossbow = {
 					end
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
 				if pow_e.level > 0 then
 					if ready_to_attack(ea, store) then
 						ea.ts = store.tick_ts
@@ -758,7 +748,7 @@ scripts.tower_crossbow = {
 					end
 				end
 
-				if ready_to_use_power(pow_m, ma, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_m, ma, store, tw) then
 					local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, ma.vis_flags, ma.vis_bans)
 
 					if not enemy then
@@ -955,8 +945,6 @@ scripts.tower_totem = {
 			if tw.blocked then
 			-- block empty
 			else
-				SU.tower_update_silenced_powers(store, this)
-
 				for i, name in ipairs({"weakness", "silence"}) do
 					local pow = this.powers[name]
 					local ta = this.attacks.list[attack_ids[i]]
@@ -971,7 +959,7 @@ scripts.tower_totem = {
 						end
 					end
 
-					if ready_to_use_power(pow, ta, store, tw.cooldown_factor) then
+					if U.tower_ready_to_use_power(pow, ta, store, tw) then
 						local enemy
 
 						if name == "silence" then
@@ -1189,7 +1177,7 @@ scripts.tower_pirate_watchtower = {
 					end
 				end
 
-				if pow_w.level > 0 and ready_to_use_power(pow_w, pow_w, store) then
+				if pow_w.level > 0 and U.tower_ready_to_use_power(pow_w, pow_w, store, tw) then
 					pow_w.ts = store.tick_ts
 
 					local existing = table.filter(store.modifiers, function(_, e)
@@ -1359,12 +1347,10 @@ scripts.tower_arcane = {
 					this.attacks.list[3].chance = this.attacks.list[3].chance_base + pow_s.level * this.attacks.list[3].chance_inc
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
 				local sa = this.attacks.list[2]
 
 				-- local pow = this.powers.burst
-				if ready_to_use_power(pow_b, sa, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_b, sa, store, tw) then
 					local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, nil, sa.vis_flags, sa.vis_bans, 57.5)
 
 					if not enemy then
@@ -1572,9 +1558,7 @@ scripts.tower_silver = {
 					this.attacks.list[3].cooldown = this.attacks.list[3].cooldown_base + this.attacks.list[3].cooldown_inc * pow_m.level
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
-				if ready_to_use_power(pow_m, am, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_m, am, store, tw) then
 					local enemy = U.find_biggest_enemy_in_range_filter_on(tpos, a.range, am.vis_flags, am.vis_bans, function(e)
 						return not U.has_modifiers(store, e, "mod_arrow_silver_mark")
 					end)
@@ -1675,9 +1659,7 @@ scripts.tower_wild_magus = {
 					end
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
-				if ready_to_use_power(pow_e, ea, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_e, ea, store, tw) then
 					local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, ea.vis_flags, ea.vis_bans)
 
 					if not enemy then
@@ -1716,7 +1698,7 @@ scripts.tower_wild_magus = {
 					end
 				end
 
-				if ready_to_use_power(pow_w, wa, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_w, wa, store, tw) then
 					local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, wa.vis_flags, wa.vis_bans, U.enemy_is_silent_target)
 
 					if enemy then
@@ -1985,9 +1967,7 @@ scripts.tower_high_elven = {
 					pow_s.changed = nil
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
-				if ready_to_use_power(pow_s, pow_s, store) then
+				if U.tower_ready_to_use_power(pow_s, pow_s, store, tw) then
 					pow_s.ts = store.tick_ts
 
 					local existing_mods = table.filter(store.modifiers, function(_, e)
@@ -2012,7 +1992,7 @@ scripts.tower_high_elven = {
 					end
 				end
 
-				if ready_to_use_power(pow_t, ta, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_t, ta, store, tw) then
 					local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ta.vis_flags, ta.vis_bans)
 
 					if enemy then
@@ -2275,9 +2255,7 @@ scripts.tower_arcane_wizard = {
 					goto continue
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
-				if ready_to_use_power(pow_d, ad, store, tw.cooldown_factor) and wizard_ready() then
+				if U.tower_ready_to_use_power(pow_d, ad, store, tw) and wizard_ready() then
 					local enemy, _ = find_target(ad)
 
 					if not enemy then
@@ -2319,7 +2297,7 @@ scripts.tower_arcane_wizard = {
 					wizard_attack(ar, enemy)
 				end
 
-				if ready_to_use_power(pow_t, at, store, tw.cooldown_factor) and wizard_ready() then
+				if U.tower_ready_to_use_power(pow_t, at, store, tw) and wizard_ready() then
 					local enemy, pred_pos = find_target(at)
 
 					if not enemy then
@@ -2476,12 +2454,10 @@ scripts.tower_sorcerer = {
 					end
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
 				for i, aa in ipairs(attacks) do
 					pow = pows[i]
 
-					if (pow and ready_to_use_power(pow, aa, store, this.tower.cooldown_factor)) or (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor)) then
+					if (pow and U.tower_ready_to_use_power(pow, aa, store, this.tower)) or (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor)) then
 						local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, aa.vis_flags, aa.vis_bans)
 
 						if not enemy then
@@ -2634,8 +2610,6 @@ scripts.tower_archmage = {
 					blast_range = E:get_template("bolt_blast").bullet.damage_radius + E:get_template("bolt_blast").bullet.damage_radius_inc * pow_b.level
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
 				if ready_to_attack(ba, store, tw.cooldown_factor) then
 					local target, targets = U.find_foremost_enemy_with_max_coverage(store, tpos, 0, a.range, nil, ba.vis_flags, ba.vis_bans, nil, nil, blast_range)
 
@@ -2724,7 +2698,7 @@ scripts.tower_archmage = {
 					end
 				end
 
-				if ready_to_use_power(pow_t, ta, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_t, ta, store, tw) then
 					local target = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, ta.vis_flags, ta.vis_bans, function(e)
 						return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni > P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni < P:get_end_node(e.nav_path.pi) - ta.nodes_limit and (not e.enemy.counts.twister or e.enemy.counts.twister < E:get_template("twister").max_times_applied)
 					end)
@@ -2919,9 +2893,7 @@ scripts.tower_necromancer = {
 					end
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
-				if ready_to_use_power(pow_p, pa, store, this.tower.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_p, pa, store, this.tower) then
 					local enemy = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, pa.vis_flags, pa.vis_bans)
 
 					if enemy then
@@ -3594,9 +3566,7 @@ scripts.tower_bfg = {
 					ac.cooldown = ac.cooldown_base - pow_c.cooldown_dec * pow_c.level
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
-				if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_m, am, store, this.tower) then
 					local trigger = U.find_first_enemy_in_range_filter_off(tpos, am.range, am.vis_flags, am.vis_bans)
 
 					if not trigger then
@@ -3629,7 +3599,7 @@ scripts.tower_bfg = {
 					end
 				end
 
-				if ready_to_use_power(pow_c, ac, store, this.tower.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_c, ac, store, this.tower) then
 					local trigger = U.find_first_enemy_in_range_filter_off(tpos, a.range, ac.vis_flags, ac.vis_bans)
 
 					if trigger then
@@ -3810,9 +3780,7 @@ scripts.tower_dwaarp = {
 					end
 				end
 
-				SU.tower_update_silenced_powers(store, this)
-
-				if ready_to_use_power(pow_d, da, store, this.tower.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_d, da, store, this.tower) then
 					drill_ready = true
 				end
 
@@ -3820,7 +3788,7 @@ scripts.tower_dwaarp = {
 					std_ready = true
 				end
 
-				if ready_to_use_power(pow_l, la, store, this.tower.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_l, la, store, this.tower) then
 					lava_ready = true
 					std_ready = true
 					this.render.sprites[4].hidden = false
@@ -4178,24 +4146,24 @@ scripts.tower_entwood = {
 			if this.tower.blocked then
 				coroutine.yield()
 			else
-				for k, pow in pairs(this.powers) do
-					if pow.changed then
-						pow.changed = nil
-
-						if pow.level == 1 then
-							local pa = this.attacks.list[pow.attack_idx]
-
-							pa.ts = store.tick_ts
-						end
+				if pow_f.changed then
+					pow_f.changed = nil
+					if pow_f.level == 1 then
+						fa.ts = store.tick_ts
 					end
 				end
 
-				SU.tower_update_silenced_powers(store, this)
+				if pow_c.changed then
+					pow_c.changed = nil
+					if pow_c.level == 1 then
+						ca.ts = store.tick_ts
+					end
+				end
 
 				if not loaded then
-					if ready_to_use_power(pow_c, ca, store, this.tower.cooldown_factor) and U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, nil, ca.min_count) then
+					if U.tower_ready_to_use_power(pow_c, ca, store, this.tower) and U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, nil, ca.min_count) then
 						loaded = "clobber"
-					elseif pow_f.level > 0 and not fa.silence_ts and store.tick_ts - fa.ts > aa.cooldown * fa.cooldown_factor * this.tower.cooldown_factor - a.load_time then
+					elseif pow_f.level > 0 and this.tower.can_do_magic and store.tick_ts - fa.ts > aa.cooldown * fa.cooldown_factor * this.tower.cooldown_factor - a.load_time then
 						S:queue("TowerEntwoodLeaves")
 						U.y_animation_play_group(this, "special1_charge", nil, store.tick_ts, 1, "layers")
 
@@ -5626,7 +5594,7 @@ function scripts.tower_tricannon.update(this, store)
 				this.decal_mod = nil
 			end
 
-			if ready_to_use_power(pow_o, ao, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_o, ao, store, tw) then
 				local trigger = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range + 160, ao.vis_flags, ao.vis_bans)
 				if trigger and U.is_inside_ellipse(tpos, U.calculate_enemy_ffe_pos(trigger, fts(60)), a.range) then
 					ao.active = true
@@ -5648,7 +5616,7 @@ function scripts.tower_tricannon.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_m, am, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_m, am, store, tw) then
 				local trigger = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, am.vis_flags, am.vis_bans)
 
 				if not trigger then
@@ -11489,7 +11457,7 @@ function scripts.tower_stargazers.update(this, store)
 			end
 		end
 
-		if ready_to_use_power(pow_t, at, store, tw.cooldown_factor) then
+		if U.tower_ready_to_use_power(pow_t, at, store, tw) then
 			local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, at_vis_flags, at_vis_bans)
 
 			if not enemy then
@@ -11889,7 +11857,7 @@ function scripts.tower_sand.update(this, store)
 				pow_g.changed = nil
 			end
 
-			if ready_to_use_power(pow_b, bba, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_b, bba, store, tw) then
 				local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, bba.range, bba.shoot_time[1] + E:get_template("aura_tower_sand_skill_big_blade").flight_time, bba.vis_flags, bba.vis_bans)
 
 				if not enemies then
@@ -11915,7 +11883,7 @@ function scripts.tower_sand.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_g, ga, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_g, ga, store, tw) then
 				at = ga
 			elseif ready_to_attack(ba, store, tw.cooldown_factor) then
 				at = ba
@@ -12342,7 +12310,7 @@ function scripts.tower_royal_archers.update(this, store)
 			local tpos = v(tpos.x + soffset.x, tpos.y + soffset.y)
 
 			while true do
-				if ready_to_use_power(pow_a, ap, store, tw.cooldown_factor) then
+				if U.tower_ready_to_use_power(pow_a, ap, store, tw) then
 					local enemy, enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, ap.vis_flags, ap.vis_bans)
 
 					if not enemy then
@@ -13093,7 +13061,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_d, ad, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_d, ad, store, tw) then
 				local enemy = find_target(ad)
 
 				if not enemy then
@@ -14747,7 +14715,7 @@ function scripts.tower_flamespitter.update(this, store)
 		local power = this.powers.skill_bomb
 		local a = attack_bomb
 
-		if not ready_to_use_power(power, a, store, tw.cooldown_factor) then
+		if not U.tower_ready_to_use_power(power, a, store, tw) then
 			return
 		end
 
@@ -14789,7 +14757,7 @@ function scripts.tower_flamespitter.update(this, store)
 		local power = this.powers.skill_columns
 		local a = attack_columns
 
-		if not ready_to_use_power(power, a, store, tw.cooldown_factor) then
+		if not U.tower_ready_to_use_power(power, a, store, tw) then
 			return
 		end
 
@@ -14885,14 +14853,19 @@ function scripts.tower_flamespitter.update(this, store)
 				this.render.sprites[this.render.sid_stove_fire].hidden = true
 			end
 
-			for k, pow in pairs(this.powers) do
+			do
+				local pow = this.powers.skill_bomb
 				if pow.changed then
 					pow.changed = nil
-
-					local a = this.attacks.list[pow.attack_idx]
-
+					local a = this.attacks.list[2]
 					a.cooldown = pow.cooldown[pow.level]
-					a.ts = store.tick_ts - a.cooldown
+				end
+
+				pow = this.powers.skill_columns
+				if pow.changed then
+					pow.changed = nil
+					local a = this.attacks.list[3]
+					a.cooldown = pow.cooldown[pow.level]
 				end
 			end
 
@@ -14924,7 +14897,6 @@ function scripts.tower_flamespitter.update(this, store)
 
 			if target and pred_pos then
 				rotate_towards_pos(pred_pos)
-
 			end
 
 			if ready_to_attack(attack_basic, store, tw.cooldown_factor) then
@@ -16277,7 +16249,7 @@ function scripts.tower_barrel.update(this, store)
 				pow_b.ts = store.tick_ts - bba.cooldown
 			end
 
-			if ready_to_use_power(pow_b, bba, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_b, bba, store, tw) then
 				local targets = U.find_enemies_in_range_filter_off(tpos, a.range, bba.vis_flags, bba.vis_bans)
 
 				if not targets or #targets < bba.min_targets then
@@ -16328,7 +16300,7 @@ function scripts.tower_barrel.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_w, wa, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_w, wa, store, tw) then
 				for i = 1, b.max_soldiers do
 					local s = b.soldiers[i]
 
@@ -16709,7 +16681,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 			tower = store.entities[this.source_id]
 
 			if tower then
-				tower.attacks.list[tower.powers.skill_warrior.attack_idx].ts = store.tick_ts
+				tower.attacks.list[3].ts = store.tick_ts
 			end
 
 			this.health.hp = 0
@@ -17127,26 +17099,6 @@ function scripts.tower_hermit_toad.update(this, store)
 		end
 	end
 
-	local function check_upgrades_purchase()
-		for _, pow in pairs(this.powers) do
-			if pow.changed then
-				pow.changed = nil
-
-				local pa = this.attacks.list[pow.attack_idx]
-
-				pa.cooldown = pow.cooldown[pow.level]
-
-				if pow.damage_min then
-					pa.damage_min = pow.damage_min[pow.level]
-				end
-
-				if pow.damage_max then
-					pa.damage_max = pow.damage_max[pow.level]
-				end
-			end
-		end
-	end
-
 	if not this.attacks._last_target_pos then
 		this.attacks._last_target_pos = {}
 		this.attacks._last_target_pos = v(REF_W, 0)
@@ -17170,9 +17122,20 @@ function scripts.tower_hermit_toad.update(this, store)
 			coroutine.yield()
 		else
 			check_change_mode()
-			check_upgrades_purchase()
 
-			if ready_to_use_power(pow_instakill, attack_instakill, store, tw.cooldown_factor) then
+			if pow_instakill.changed then
+				pow_instakill.changed = nil
+				attack_instakill.cooldown = pow_instakill.cooldown[pow_instakill.level]
+			end
+
+			if pow_jump.changed then
+				pow_jump.changed = nil
+				attack_jump.cooldown = pow_jump.cooldown[pow_jump.level]
+				attack_jump.damage_min = pow_jump.damage_min[pow_jump.level]
+				attack_jump.damage_max = pow_jump.damage_max[pow_jump.level]
+			end
+
+			if U.tower_ready_to_use_power(pow_instakill, attack_instakill, store, tw) then
 				attack = attack_instakill
 				target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attacks.range, attack.vis_flags, attack.vis_bans)
 
@@ -17345,7 +17308,7 @@ function scripts.tower_hermit_toad.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_jump, attack_jump, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_jump, attack_jump, store, tw) then
 				attack = attack_jump
 				targets = U.find_enemies_in_range_filter_off(tpos(this), attacks.range, attack.vis_flags, attack.vis_bans)
 
@@ -17816,7 +17779,7 @@ function scripts.tower_sparking_geode.update(this, store)
 	end
 
 	local function can_crystalize()
-		if not ready_to_use_power(pow_crystalize, a_crystalize, store, tw.cooldown_factor) then
+		if not U.tower_ready_to_use_power(pow_crystalize, a_crystalize, store, tw) then
 			return false
 		end
 
@@ -17830,7 +17793,7 @@ function scripts.tower_sparking_geode.update(this, store)
 	end
 
 	local function can_spike_burst()
-		if not ready_to_use_power(pow_burst, a_burst, store, tw.cooldown_factor) then
+		if not U.tower_ready_to_use_power(pow_burst, a_burst, store, tw) then
 			return false
 		end
 
@@ -19632,7 +19595,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 				pow_w.changed = nil
 			end
 
-			if ready_to_use_power(pow_g, ag, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_g, ag, store, tw) then
 				if U.is_soldiers_around_need_heal(store.soldiers, tpos, 0.99, a.range) then
 					last_ts = store.tick_ts
 					U.animation_start_group(this, ag.animation, nil, store.tick_ts, false, "layers")
@@ -19666,7 +19629,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_w, aw, store, tw.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_w, aw, store, tw) then
 				local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, aw.vis_flags, aw.vis_bans)
 				if enemies then
 					last_ts = store.tick_ts
@@ -21993,7 +21956,7 @@ function scripts.tower_shadow_archer.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_s, as, store, this.tower) then
 				local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
 				if enemy then
 					local start_ts = store.tick_ts
@@ -22047,7 +22010,7 @@ function scripts.tower_shadow_archer.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_m, am, store, this.tower) then
 				local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, am.vis_flags, am.vis_bans, function(e)
 					return not U.has_modifier(store, e, "mod_arrow_shadow_mark")
 				end)
@@ -22434,7 +22397,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 			end
 
 			-- 召唤树
-			if ready_to_use_power(pow_t, a_tree, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_t, a_tree, store, this.tower) then
 				local enemy = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, false, a_tree.vis_flags, a_tree.vis_bans)
 				if not enemy then
 					a_tree.ts = a_tree.ts + 0.3
@@ -22835,7 +22798,7 @@ function scripts.tower_infernal_mage.update(this, store)
 			end
 
 			-- 优先级：首先尝试使用诅咒，然后再打伤害，然后普攻，最后使用传送
-			if ready_to_use_power(pow_c, ac, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_c, ac, store, this.tower) then
 				local enemy = U.find_first_enemy_in_range_filter_on(tpos, a.range, ac.vis_flags, ac.vis_bans, curse_filter_fn)
 				if not enemy then
 					ac.ts = ac.ts + 0.3
@@ -22860,7 +22823,7 @@ function scripts.tower_infernal_mage.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_d, ad, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_d, ad, store, this.tower) then
 				local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, ad.vis_flags, ad.vis_bans)
 				if not enemy then
 					ad.ts = ad.ts + 0.3
@@ -22936,7 +22899,7 @@ function scripts.tower_infernal_mage.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_t, at, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_t, at, store, this.tower) then
 				local enemy = U.find_first_enemy_in_range_filter_on(tpos, a.range, at.vis_flags, at.vis_bans, teleport_filter_fn)
 				if not enemy then
 					at.ts = at.ts + 0.3
@@ -23151,7 +23114,7 @@ function scripts.tower_orc_shaman.update(this, store)
 				pow_s.changed = nil
 			end
 
-			if ready_to_use_power(pow_v, va, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_v, va, store, this.tower) then
 				-- local target = U.is_soldiers_around_need_heal(store.soldiers, tpos, va.min_health_factor, a.range)
 				local target = U.find_first_enemy_in_range_filter_on(tpos, a.range, va.vis_flags, va.vis_bans, heal_filter_fn)
 
@@ -23220,7 +23183,7 @@ function scripts.tower_orc_shaman.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_m, ma, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_m, ma, store, this.tower) then
 				local target, targets = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, ma.shoot_time, ma.vis_flags, ma.vis_bans, E:get_template(ma.bullet).bullet.damage_radius)
 
 				if not target or #targets < 2 then
@@ -23913,7 +23876,7 @@ function scripts.soldier_dark_knight.update(this, store)
 			goto dark_knight_continue
 		end
 
-		if ready_to_use_power(p_shield, shield_attack, store) then
+		if p_shield.level > 0 and ready_to_attack(shield_attack, store, 1) then
 			if U.find_first_enemy_in_range_filter_on(this.pos, shield_attack.range, shield_attack.vis_flags, shield_attack.vis_bans, SU.is_valid_mock_target) then
 				this.health.damage_factor = this.health.damage_factor * shield_attack.damage_factor
 
@@ -24653,7 +24616,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 			end
 		end
 		if not tw.blocked then
-			SU.tower_update_silenced_powers(store, this)
 
 			for i = 1, b.max_soldiers do
 				local s = b.soldiers[i]
@@ -24882,7 +24844,7 @@ function scripts.tower_rocket_riders.update(this, store, script)
 				end
 			end
 
-			if ready_to_use_power(pow_n, an, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_n, an, store, this.tower) then
 				local enemy = U.find_first_enemy_between_range_filter_off(tpos, a.blind_range, a.range, an.vis_flags, an.vis_bans)
 				if not enemy then
 					an.ts = an.ts + 0.1
@@ -25354,7 +25316,7 @@ function scripts.tower_grim_cemetery.update(this, store, script)
 		this.attacks.range = this.barrack.rally_range
 
 		if not this.tower.blocked then
-			if ready_to_use_power(pow_h, ha, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_h, ha, store, this.tower) then
 				local targets = U.find_enemies_in_range_filter_on(tpos(this), a.range * 0.7, ha.vis_flags, ha.vis_bans, tower_grim_cemetery_scare_filter)
 
 				if not targets then
@@ -26397,7 +26359,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_p, a2, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_p, a2, store, this.tower) then
 				local target = U.find_biggest_enemy_in_range_filter_on(tpos(this), a.range, a2.vis_flags, a2.vis_bans, betray_filter)
 
 				if not target then
@@ -27068,7 +27030,7 @@ function scripts.tower_goblirang.update(this, store)
 				pow_p.changed = nil
 			end
 
-			if ready_to_use_power(pow_t, ah, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_t, ah, store, this.tower) then
 				local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, ah.range, ah.vis_flags, ah.vis_bans)
 				if enemy then
 					ah.ts = store.tick_ts
@@ -27087,7 +27049,7 @@ function scripts.tower_goblirang.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_b, ab, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_b, ab, store, this.tower) then
 				local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans)
 				if enemy then
 					ab.ts = store.tick_ts
@@ -29063,7 +29025,7 @@ function scripts.tower_melting_furnace.update(this, store)
 				this.heat_previews = nil
 			end
 
-			if ready_to_use_power(pow_heat, a_buff, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_heat, a_buff, store, this.tower) then
 				a_buff.ts = store.tick_ts
 				local towers = table.filter(store.towers, function(_, e)
 					local _, mods = U.has_modifiers(store, e, a_buff.mod)
@@ -29080,7 +29042,7 @@ function scripts.tower_melting_furnace.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_coal, a_coal, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_coal, a_coal, store, this.tower) then
 				local trigger_enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, a_coal.vis_flags, a_coal.vis_bans)
 				if trigger_enemy then
 					a_coal.ts = store.tick_ts
@@ -29135,7 +29097,7 @@ function scripts.tower_melting_furnace.update(this, store)
 				end
 			end
 
-			if not a_fuel.boost and ready_to_use_power(pow_fuel, a_fuel, store, this.tower.cooldown_factor) then
+			if not a_fuel.boost and U.tower_ready_to_use_power(pow_fuel, a_fuel, store, this.tower) then
 				local trigger = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range + 160, a_smash.damage_flags, a_smash.damage_bans)
 				if trigger and U.is_inside_ellipse(tpos, U.calculate_enemy_ffe_pos(trigger, fts(45)), a.range) then
 					a_fuel.ts = store.tick_ts
@@ -29438,7 +29400,7 @@ function scripts.tower_wicked_sisters.update(this, store)
 		end
 
 		if not this.tower.blocked then
-			if ready_to_use_power(pow_s, sa, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_s, sa, store, this.tower) then
 				local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, this.attacks.range, sa.vis_flags, sa.vis_bans)
 				if enemy then
 					sa.ts = store.tick_ts
@@ -29523,7 +29485,7 @@ function scripts.soldier_wicked_sisters.update(this, store)
 			am.disabled = false
 		end
 
-		if ready_to_use_power(pow_m, am, store, tw.cooldown_factor) then
+		if U.tower_ready_to_use_power(pow_m, am, store, tw) then
 			local target = find_target(am)
 			if target then
 				am.ts = store.tick_ts
@@ -29721,7 +29683,7 @@ function scripts.tower_sandworm.update(this, store)
 			end
 
 			-- 秒杀
-			if ready_to_use_power(pow_e, ae, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_e, ae, store, this.tower) then
 				local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ae.vis_flags, ae.vis_bans)
 				local satisfied = false
 
@@ -29788,7 +29750,7 @@ function scripts.tower_sandworm.update(this, store)
 			end
 
 			-- 召唤小沙虫
-			if ready_to_use_power(pow_w, aw, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_w, aw, store, this.tower) then
 				aw.ts = store.tick_ts
 
 				local target = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, aw.vis_flags, aw.vis_bans)
@@ -29820,7 +29782,7 @@ function scripts.tower_sandworm.update(this, store)
 			end
 
 			-- 黏液球
-			if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
+			if U.tower_ready_to_use_power(pow_s, as, store, this.tower) then
 				local target = U.detect_foremost_enemy_in_range_filter_on(tpos, a.range, as.vis_flags, as.vis_bans, filter_fn)
 				if target then
 					as.ts = store.tick_ts

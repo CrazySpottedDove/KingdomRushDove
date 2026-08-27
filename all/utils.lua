@@ -3160,6 +3160,39 @@ function U.remove_silence(target, ts)
 	end
 end
 
+function U.tower_is_silence_target(target)
+	local tw = target.tower
+	return tw.can_do_magic and tw.can_be_mod and target.attacks and #target.attacks.list > 1
+end
+
+function U.cast_silence_on_tower(target, ts)
+	local tw = target.tower
+	tw.silence_cast_count = tw.silence_cast_count + 1
+
+	if tw.silence_cast_count == 1 then
+		tw.silence_ts = ts
+		tw.can_do_magic = false
+	end
+end
+
+function U.remove_silence_on_tower(target, ts)
+	local tw = target.tower
+	tw.silence_cast_count = tw.silence_cast_count - 1
+
+	if tw.silence_cast_count < 1 and not tw.can_do_magic then
+		tw.can_do_magic = true
+		if tw.attacks and tw.silence_ts then
+			local duration = ts - tw.silence_ts
+			for i = 2, #tw.attacks.list do
+				local a = tw.attacks.list[i]
+				if a.requires_magic ~= false then
+					a.ts = a.ts + duration
+				end
+			end
+		end
+	end
+end
+
 --- 治疗数字回调（health.lua 初始化时注入具体实现，默认空函数防御）
 U.hnum_on_applied_impl = function()
 end
@@ -3553,6 +3586,10 @@ function U.find_best_center_node_containing_point(pos, radius, pi)
 	else
 		return pos
 	end
+end
+
+function U.tower_ready_to_use_power(power, power_attack, store, tw)
+	return (tw.can_do_magic or power_attack.requires_magic == false) and power.level > 0 and (store.tick_ts - power_attack.ts > power_attack.cooldown * tw.cooldown_factor)
 end
 
 return U

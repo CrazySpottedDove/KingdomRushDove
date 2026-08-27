@@ -5783,24 +5783,6 @@ tt.timed_attacks.list[1].cast_time = fts(15)
 tt.timed_attacks.list[1].cooldown = {7, 7, 7, 4}
 tt.timed_attacks.list[1].mod = "mod_twilight_evoker_silence"
 tt.timed_attacks.list[1].range = 165
-tt.timed_attacks.list[1].included_templates = {
-	"tower_high_elven",
-	"tower_wild_magus",
-	"tower_druid",
-	"tower_entwood",
-	"tower_archer_dwarf",
-	"tower_musketeer",
-	"tower_crossbow",
-	"tower_totem",
-	"tower_arcane",
-	"tower_silver",
-	"tower_arcane_wizard",
-	"tower_sorcerer",
-	"tower_archmage",
-	"tower_necromancer",
-	"tower_bfg",
-	"tower_dwaarp"
-}
 tt.timed_attacks.list[2] = CC("mod_attack")
 tt.timed_attacks.list[2].cast_time = fts(16)
 tt.timed_attacks.list[2].animation = "heal"

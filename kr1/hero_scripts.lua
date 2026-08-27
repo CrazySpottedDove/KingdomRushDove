@@ -27961,7 +27961,7 @@ function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store)
 			end
 		end
 
-		if this.aura.requires_magic then
+		if this.aura.requires_magic ~= false then
 			local te = store.entities[this.aura.source_id]
 
 			if not te or not te.enemy then
@@ -45023,7 +45023,7 @@ function scripts.aura_apply_mod_tank.update(this, store)
 			end
 		end
 
-		if this.aura.requires_magic then
+		if this.aura.requires_magic ~= false then
 			local te = store.entities[this.aura.source_id]
 
 			if not te or not te.enemy then

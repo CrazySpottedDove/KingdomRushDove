@@ -6634,7 +6634,7 @@ function scripts.mod_tower_silence.update(this, store)
 		end
 	end
 
-	target.tower.can_do_magic = false
+	U.cast_silence_on_tower(target, store.tick_ts)
 
 	while store.tick_ts - m.ts < m.duration do
 		coroutine.yield()
@@ -6644,7 +6644,7 @@ function scripts.mod_tower_silence.update(this, store)
 		end
 	end
 
-	target.tower.can_do_magic = true
+	U.remove_silence_on_tower(target, store.tick_ts)
 
 	simulation:queue_remove_entity(this)
 end
