@@ -814,7 +814,7 @@ local heroes = {
 			cooldown = {55, 50, 45},
 			damage_type = DAMAGE_INSTAKILL,
 			regen = {0.1, 0.15, 0.2},
-			damage = {10, 20, 30},
+			damage = {40, 50, 60},
 			extra_damage_type = DAMAGE_RUDE,
 			xp_gain = {100, 200, 300}
 		},

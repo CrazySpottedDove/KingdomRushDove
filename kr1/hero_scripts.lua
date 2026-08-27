@@ -20823,22 +20823,7 @@ function scripts.hero_venom.update(this, store)
 	local base_speed = this.motion.max_speed
 
 	this.is_transformed = false
-
-	if not ranged_tentacle_attack.disabled then
-		ranged_tentacle_attack.ts = store.tick_ts - ranged_tentacle_attack.cooldown
-	end
-
-	if not inner_beast_attack.disabled then
-		inner_beast_attack.ts = store.tick_ts - inner_beast_attack.cooldown
-	end
-
-	if not floor_spikes_attack.disabled then
-		floor_spikes_attack.ts = store.tick_ts - floor_spikes_attack.cooldown
-	end
-
-	if not eat_enemy_attack.disabled then
-		eat_enemy_attack.ts = store.tick_ts - eat_enemy_attack.cooldown
-	end
+	this.melee._range = this.melee.range
 
 	local function play_level_up_animation()
 		if this.is_transformed then
@@ -20885,7 +20870,6 @@ function scripts.hero_venom.update(this, store)
 		this._bar_type = this.health_bar.type
 		this._click_rect = table.deepclone(this.ui.click_rect)
 		this._hit_mod_offset = V.vclone(this.unit.hit_offset)
-		-- this.health_bar.offset = V.vclone(this.beast.health_bar_offset)
 		U.change_health_bar_offset_run_time(this.health_bar, this.beast.health_bar_offset.y)
 		this.health_bar.type = this.beast.health_bar_type
 		this.ui.click_rect = table.deepclone(this.beast.click_rect)
@@ -20914,9 +20898,7 @@ function scripts.hero_venom.update(this, store)
 		this.melee.attacks[3].disabled = true
 		this.melee.attacks[4].disabled = true
 		this.melee.attacks[5].disabled = true
-		-- this.melee.attacks[6].disabled = false
 		eat_enemy_attack.disabled = false
-		-- this.health_bar.offset = V.vclone(this._bar_offset)
 		U.change_health_bar_offset_run_time(this.health_bar, this._bar_offset.y)
 		this.health_bar.type = this._bar_type
 		this.ui.click_rect = table.deepclone(this._click_rect)
@@ -20989,14 +20971,18 @@ function scripts.hero_venom.update(this, store)
 					local dest = r.pos
 					local n = this.nav_grid
 
+					local an, af = U.animation_name_facing_point(this, tw.animations[2], this.motion.dest)
+
+					U.animation_start(this, an, not af, store.tick_ts, true, 1, true)
+
 					while not V.veq(this.pos, dest) do
 						local w = table.remove(n.waypoints, 1) or dest
 
 						U.set_destination(this, w)
 
-						local an, af = U.animation_name_facing_point(this, tw.animations[2], this.motion.dest)
+						-- local an, af = U.animation_name_facing_point(this, tw.animations[2], this.motion.dest)
 
-						U.animation_start(this, an, af, store.tick_ts, true, 1, true)
+						-- U.animation_start(this, an, af, store.tick_ts, true, 1, true)
 
 						local runs = this.render.sprites[1].runs - 1
 
@@ -21365,15 +21351,20 @@ function scripts.hero_venom.update(this, store)
 
 			if not this.soldier.target_id and ready_to_use_skill(eat_enemy_attack, store, this.unit.cooldown_factor) then
 				local targets = U.find_enemies_in_range_filter_on(this.nav_rally.center, this.melee.range, F_BLOCK, F_CLIFF, function(e)
-					return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and e.health.hp < e.health.hp_max * eat_enemy_attack.hp_trigger
+					return band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and e.health.hp < e.health.hp_max * eat_enemy_attack.hp_trigger
 				end)
 
 				if targets then
-					U.block_enemy(store, this, targets[1])
+					local target = table.find_best(targets, function(v)
+						return v.health.hp
+					end)
+					U.block_enemy(store, this, target)
+					this.melee.range = 0
 				end
 			end
 
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			this.melee.range = this.melee._range
 
 			if sta == A_DONE then
 				if this.is_transformed then
