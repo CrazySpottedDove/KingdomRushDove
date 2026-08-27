@@ -7252,7 +7252,8 @@ function UISettingsPanelView:initialize(sw, sh, keyboard, controller)
 		perf_enabled = "启用性能检测",
 		coordinate_enabled = "显示坐标",
 		hero_menu_enabled = "启用局内英雄菜单",
-		tower_menu_enabled = "启用局内防御塔菜单"
+		tower_menu_enabled = "启用局内防御塔菜单",
+		game_gui_minified = "简化局内UI"
 	})
 end
 

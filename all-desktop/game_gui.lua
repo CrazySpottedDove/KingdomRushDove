@@ -1997,14 +1997,19 @@ function HeroPortrait:initialize(hero_entity)
 	self.portrait._disabled = true
 	self.portrait.draw = KF.draw_without_children_and_clip
 	self.portrait._draw_self = KF._draw_self_KView_colored
-
-	self.portrait_bo = KImageView:new("hero_portraits_0000")
-	self.portrait_bo._disabled = true
-	self.portrait_bo.draw = KF.draw_without_children_and_clip
-	self.portrait_bo._draw_self = KF._draw_self_KView_colored
-
 	self:add_child(self.portrait)
-	self:add_child(self.portrait_bo)
+
+	if configer.ui_settings().game_gui_minified then
+		self.portrait:set_anchor_to_center()
+		self.portrait.pos:set(self.size.x * 0.5, self.size.y * 0.5)
+		self.portrait.scale:set(1.05, 1.05)
+	else
+		self.portrait_bo = KImageView:new("hero_portraits_0000")
+		self.portrait_bo._disabled = true
+		self.portrait_bo.draw = KF.draw_without_children_and_clip
+		self.portrait_bo._draw_self = KF._draw_self_KView_colored
+		self:add_child(self.portrait_bo)
+	end
 
 	self.ov_cooldown = KView:new(V.v(63, 63))
 	self.ov_cooldown.pos = v(19, 78)
@@ -2023,7 +2028,6 @@ function HeroPortrait:initialize(hero_entity)
 	self.frame._disabled = true
 	self.frame.draw = KF.draw_without_children_and_clip
 	self.frame._draw_self = KF._draw_self_KView_colored
-
 	self:add_child(self.frame)
 
 	self.level = GGCachedTextLabel:new(V.v(16, 16))
@@ -2071,14 +2075,16 @@ function HeroPortrait:initialize(hero_entity)
 
 	self:add_child(self.ov_selected)
 
-	self.ov_hover = KImageView:new("heroPortrait_0003")
-	self.ov_hover.hidden = true
-	self.ov_hover.propagate_on_click = true
-	self.ov_hover._disabled = true
-	self.ov_hover.draw = KF.draw_without_children_and_clip
-	self.ov_hover._draw_self = KF._draw_self_KView_colored
+	if not IS_ANDROID then
+		self.ov_hover = KImageView:new("heroPortrait_0003")
+		self.ov_hover.hidden = true
+		self.ov_hover.propagate_on_click = true
+		self.ov_hover._disabled = true
+		self.ov_hover.draw = KF.draw_without_children_and_clip
+		self.ov_hover._draw_self = KF._draw_self_KView_colored
 
-	self:add_child(self.ov_hover)
+		self:add_child(self.ov_hover)
+	end
 
 	self.ov_levelup = KImageView:new("heroPortrait_0001")
 	self.ov_levelup.propagate_on_click = true
@@ -2103,7 +2109,10 @@ function HeroPortrait:set_style(style)
 	prefix = style == "left" and "heroPortrait_L" or style == "right" and "heroPortrait_R" or "heroPortrait"
 
 	self.frame:set_image(prefix .. "_0001")
-	self.ov_hover:set_image(prefix .. "_0003")
+
+	if not IS_ANDROID then
+		self.ov_hover:set_image(prefix .. "_0003")
+	end
 
 	self.ov_levelup.animation.prefix = prefix
 end
@@ -2136,12 +2145,14 @@ function HeroPortrait:show()
 	end)
 end
 
-function HeroPortrait:on_enter()
-	self.ov_hover.hidden = false
-end
+if not IS_ANDROID then
+	function HeroPortrait:on_enter()
+		self.ov_hover.hidden = false
+	end
 
-function HeroPortrait:on_exit()
-	self.ov_hover.hidden = true
+	function HeroPortrait:on_exit()
+		self.ov_hover.hidden = true
+	end
 end
 
 function HeroPortrait:on_click(button, x, y)
@@ -2362,15 +2373,17 @@ function PowerButton:is_disabled()
 	return self._disabled or self.mode == "locked" or self.mode == "cooldown"
 end
 
-function PowerButton:on_enter()
-	if table.contains({"default", "unlocked", "ready"}, self.mode) then
-		self:set_mode("highlighted")
+if not IS_ANDROID then
+	function PowerButton:on_enter()
+		if table.contains({"default", "unlocked", "ready"}, self.mode) then
+			self:set_mode("highlighted")
+		end
 	end
-end
 
-function PowerButton:on_exit()
-	if self.mode == "highlighted" then
-		self:set_mode("default")
+	function PowerButton:on_exit()
+		if self.mode == "highlighted" then
+			self:set_mode("default")
+		end
 	end
 end
 
@@ -3039,37 +3052,48 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 
 	self.propagate_on_click = true
 
-	local bg_bar = KImageView:new("bg_bottom_bar")
+	if not configer.ui_settings().game_gui_minified then
+		local bg_bar = KImageView:new("bg_bottom_bar")
 
-	bg_bar.anchor = v(0, bg_bar.size.y)
-	bg_bar.pos = v(0, sh)
-	bg_bar.scale = v(ui_scale, ui_scale)
-	-- 拉伸bg_bar以适应屏幕宽度
-	if bg_bar.size.x * ui_scale < sw then
-		bg_bar.scale.x = sw / bg_bar.size.x
+		bg_bar.anchor = v(0, bg_bar.size.y)
+		bg_bar.pos = v(0, sh)
+		bg_bar.scale = v(ui_scale, ui_scale)
+		-- 拉伸bg_bar以适应屏幕宽度
+		if bg_bar.size.x * ui_scale < sw then
+			bg_bar.scale.x = sw / bg_bar.size.x
+		end
+		bg_bar._disabled = true
+		bg_bar.draw = KF.draw_without_children_and_clip
+		bg_bar._draw_self = KF._draw_self_KView_no_color
+		self:add_child(bg_bar)
 	end
-	bg_bar._disabled = true
-	bg_bar.draw = KF.draw_without_children_and_clip
-	bg_bar._draw_self = KF._draw_self_KView_no_color
-	self:add_child(bg_bar)
 
-	local powers = GG9View:new("bg_bottom_left", V.v(247, 36), V.r(140, 36, 10, 1))
-
-	powers.anchor = v(0, powers.size.y)
+	local powers
+	if configer.ui_settings().game_gui_minified then
+		powers = KVirtualView:new(V.v(247, 36))
+		powers.anchor = v(0, 26)
+		powers.scale:set(ui_scale * 1.1, ui_scale * 1.1)
+	else
+		powers = GG9View:new("bg_bottom_left", V.v(247, 36), V.r(140, 36, 10, 1))
+		powers.anchor = v(0, powers.size.y)
+		powers.draw = KF.draw_without_clip_and_scroll
+		powers.scale:set(ui_scale, ui_scale)
+	end
 	powers.pos = v(105, sh)
-	powers.scale = v(ui_scale, ui_scale)
 	powers.draw = KF.draw_without_clip_and_scroll
 	self.powers = powers
 
 	self:add_child(powers)
 
-	local base_powers = KImageView:new("base_powers_bg")
-	base_powers.anchor = v(103, base_powers.size.y)
-	base_powers.pos = v(123.5, powers.size.y)
-	base_powers._disabled = true
-	base_powers.draw = KF.draw_without_children_and_clip
-	base_powers._draw_self = KF._draw_self_KView_no_color
-	powers:add_child(base_powers)
+	if not configer.ui_settings().game_gui_minified then
+		local base_powers = KImageView:new("base_powers_bg")
+		base_powers.anchor = v(103, base_powers.size.y)
+		base_powers.pos = v(123.5, powers.size.y)
+		base_powers._disabled = true
+		base_powers.draw = KF.draw_without_children_and_clip
+		base_powers._draw_self = KF._draw_self_KView_no_color
+		powers:add_child(base_powers)
+	end
 
 	self.power_buttons = {}
 
@@ -3091,32 +3115,36 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 
 	self.power_buttons[2] = power_2
 
-	for i = 1, 2 do
-		local pb = powers.children[1 + i]
-		local pn = KImageView:new("power_nbrs_000" .. i)
+	if not configer.ui_settings().game_gui_minified then
+		for i = 1, 2 do
+			local pb = powers.children[1 + i]
+			local pn = KImageView:new("power_nbrs_000" .. i)
 
-		pn.anchor = v(pn.size.x * 0.5, pn.size.y)
-		pn.pos = v(pb.pos.x + pb.size.x * 0.5, powers.size.y)
-		pn._disabled = true
-		pn.draw = KF.draw_without_children_and_clip
-		pn._draw_self = KF._draw_self_KView_no_color
+			pn.anchor = v(pn.size.x * 0.5, pn.size.y)
+			pn.pos = v(pb.pos.x + pb.size.x * 0.5, powers.size.y)
+			pn._disabled = true
+			pn.draw = KF.draw_without_children_and_clip
+			pn._draw_self = KF._draw_self_KView_no_color
 
-		powers:add_child(pn)
+			powers:add_child(pn)
+		end
 	end
 
 	local x_center = math.floor((sw - powers.size.x * ui_scale - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x * ui_scale
 
-	local bg_center = KImageView:new("bg_bottom_center")
+	if not configer.ui_settings().game_gui_minified then
+		local bg_center = KImageView:new("bg_bottom_center")
 
-	bg_center.anchor = v(bg_center.size.x * 0.5, bg_center.size.y)
-	bg_center.pos = v(x_center, sh)
-	bg_center.scale = v(ui_scale, ui_scale)
-	bg_center._disabled = true
-	bg_center.draw = KF.draw_without_children_and_clip
-	bg_center._draw_self = KF._draw_self_KView_no_color
-	self.bg_center = bg_center
+		bg_center.anchor = v(bg_center.size.x * 0.5, bg_center.size.y)
+		bg_center.pos = v(x_center, sh)
+		bg_center.scale = v(ui_scale, ui_scale)
+		bg_center._disabled = true
+		bg_center.draw = KF.draw_without_children_and_clip
+		bg_center._draw_self = KF._draw_self_KView_no_color
+		self.bg_center = bg_center
 
-	self:add_child(bg_center)
+		self:add_child(bg_center)
+	end
 
 	local infobar = InfoBar:new()
 
@@ -3170,7 +3198,9 @@ function HudBottomView:update_bars_pos()
 	local x_center = math.floor((game_gui.sw - powers_scaled_width - self.powers.pos.x) * 0.5) + self.powers.pos.x + powers_scaled_width
 	self.infobar.pos.x = x_center - 12
 
-	self.bg_center.pos.x = x_center
+	if not configer.ui_settings().game_gui_minified then
+		self.bg_center.pos.x = x_center
+	end
 end
 
 function HudBottomView:add_hero(hero_entity)
@@ -3181,7 +3211,7 @@ function HudBottomView:add_hero(hero_entity)
 	self.herobar:add_child(hero)
 
 	if #self.herobar.children > 1 then
-		self.powers.pos.x = 175 * self.powers.scale.x
+		self.powers.pos.x = 175 + (self.powers.scale.x - 1) * self.powers.size.x * 0.5
 
 		local last = self.herobar.children[1]
 
@@ -3189,27 +3219,29 @@ function HudBottomView:add_hero(hero_entity)
 
 		last.pos.x = 8
 
-		local overlap = 18
+		local overlap = 18 + (configer.ui_settings().game_gui_minified and 7 or 0)
 
 		hero.pos = v(last.pos.x + hero.size.x - overlap, 0)
 
 		hero:set_style("right")
 
-		local separator = KImageView:new("heroPortrait_separator")
+		if not configer.ui_settings().game_gui_minified then
+			local separator = KImageView:new("heroPortrait_separator")
 
-		separator.anchor = v(separator.size.x * 0.5, hero.size.y)
-		separator.pos = v(last.pos.x + hero.size.x - overlap * 0.5, 3)
-		separator.propagate_on_click = true
-		separator.propagate_on_down = true
-		separator.propagate_on_up = true
-		separator._disabled = true
-		separator.draw = KF.draw_without_children_and_clip
-		separator._draw_self = KF._draw_self_KView_no_color
+			separator.anchor = v(separator.size.x * 0.5, hero.size.y)
+			separator.pos = v(last.pos.x + hero.size.x - overlap * 0.5, 3)
+			separator.propagate_on_click = true
+			separator.propagate_on_down = true
+			separator.propagate_on_up = true
+			separator._disabled = true
+			separator.draw = KF.draw_without_children_and_clip
+			separator._draw_self = KF._draw_self_KView_no_color
 
-		self.herobar:add_child(separator)
+			self.herobar:add_child(separator)
+		end
 	else
 		hero.pos = v(15, 0)
-		self.powers.pos.x = 105 * self.powers.scale.x
+		self.powers.pos.x = 105 + (self.powers.scale.x - 1) * self.powers.size.x * 0.5
 	end
 
 	game_gui.hud_bottom:update_bars_pos()
