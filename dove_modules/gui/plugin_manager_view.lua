@@ -2209,7 +2209,7 @@ function PluginManagerView:_render_local_list()
 				row:set_dimmed(true)
 			end
 			self.plugin_list:add_row(row)
-			self.plugin_list:add_row(KView:new(V.v(list_w, 10)))
+			self.plugin_list:add_row(KVirtualView:new(V.v(list_w, 10)))
 			self._plugin_rows[#self._plugin_rows + 1] = row
 		end
 		::continue::
@@ -2300,7 +2300,7 @@ function PluginManagerView:_render_store_list()
 			actions = actions
 		}, list_w)
 		self.plugin_list:add_row(row)
-		self.plugin_list:add_row(KView:new(V.v(list_w, 10)))
+		self.plugin_list:add_row(KVirtualView:new(V.v(list_w, 10)))
 		::continue::
 	end
 end
