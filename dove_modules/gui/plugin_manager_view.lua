@@ -952,6 +952,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	confirm_hint.text = "插件管理器配置已修改，请选择操作："
 	confirm_hint.pos = V.v(12, 40)
 	self._confirm_dialog:add_child(confirm_hint)
+	self._confirm_hint = confirm_hint
 
 	local bw = 120
 	local bh = 30
@@ -987,9 +988,16 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		y = row_y1,
 		action = function()
 			self._confirm_dialog.hidden = true
+			-- 卸载/更新了正在运行的插件：磁盘文件已改动，无论是否应用其余修改都必须重启
+			local needs_restart = self:_needs_restart()
 			-- 舍弃本次全部修改（含未应用的插件配置，配置不写盘）
 			self:_clear_pending_changes()
 			self._unsaved_changes = false
+			if needs_restart then
+				self:_stop_http_thread()
+				restart.tmp()
+				return
+			end
 			self._pending_close = true
 		end
 	}})
@@ -2451,8 +2459,22 @@ end
 
 function PluginManagerView:hide()
 	if self._unsaved_changes then
+		-- 卸载/更新正在运行的插件时，退出必须重启，提示文案说明原因
+		if self._confirm_hint then
+			if self:_needs_restart() then
+				self._confirm_hint.text = "已卸载或更新正在运行的插件，退出必须重启游戏："
+			else
+				self._confirm_hint.text = "插件管理器配置已修改，请选择操作："
+			end
+		end
 		self._confirm_dialog.hidden = false
 		self._confirm_dialog:order_to_front()
+		return
+	end
+	if self:_needs_restart() then
+		-- 防御：存在已卸载/更新的运行中插件但未被标记为未保存修改（正常流程不会走到）
+		self:_stop_http_thread()
+		restart.tmp()
 		return
 	end
 	-- 关闭管理器：清理本次修改记忆，避免下次打开污染
@@ -2983,6 +3005,10 @@ function PluginManagerView:_check_unsaved()
 		if info.config_changed then
 			return true
 		end
+	end
+	-- 本会话卸载/更新过插件：磁盘文件已改动，属于必须处理（应用或重启）的未应用修改
+	if next(self._pending.deleted) ~= nil or next(self._pending.updated) ~= nil then
+		return true
 	end
 	return false
 end
