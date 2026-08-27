@@ -1393,6 +1393,31 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 	return true, nil
 end
 
+function PluginManagerView:_load_local_plugin(name)
+	local dir_path = plugin_paths.LOCAL_PLUGINS_DIR .. "/" .. name
+	if not FS.getInfo(dir_path, "directory") then
+		return nil
+	end
+	local config_path = dir_path .. "/config.lua"
+	local mc = plugin_paths.load_lua_table(config_path)
+	if not mc then
+		return nil
+	end
+	local has_config = false
+	local config_info = love.filesystem.getInfo(dir_path .. "/" .. name .. "_config.lua")
+	if config_info and config_info.type == "file" then
+		has_config = true
+	end
+	return {
+		name = name,
+		path = dir_path,
+		config_path = config_path,
+		config = mc,
+		entry = mc.entry or name,
+		has_config = has_config
+	}
+end
+
 function PluginManagerView:_reload_local_plugins()
 	plugin_paths.ensure_storage_ready()
 
@@ -1403,30 +1428,17 @@ function PluginManagerView:_reload_local_plugins()
 	local plugins_dir = plugin_paths.LOCAL_PLUGINS_DIR
 	local items = FS.getDirectoryItems(plugins_dir) or {}
 	for _, name in ipairs(items) do
-		local dir_path = plugins_dir .. "/" .. name
-		if FS.getInfo(dir_path, "directory") then
-			local config_path = dir_path .. "/config.lua"
-			local mc = plugin_paths.load_lua_table(config_path)
-			if mc then
-				local has_config = false
-				local config_info = love.filesystem.getInfo(dir_path .. "/" .. name .. "_config.lua")
-				if config_info and config_info.type == "file" then
-					has_config = true
-				end
-				local plugin_data = {
-					name = name,
-					path = dir_path,
-					config_path = config_path,
-					config = mc,
-					entry = mc.entry or name,
-					has_config = has_config
-				}
-				self.local_plugins[#self.local_plugins + 1] = plugin_data
-				self.local_by_name[name] = plugin_data
-				self.local_by_entry[plugin_data.entry] = plugin_data
-			end
+		local plugin_data = self:_load_local_plugin(name)
+		if plugin_data then
+			self.local_plugins[#self.local_plugins + 1] = plugin_data
+			self.local_by_name[name] = plugin_data
+			self.local_by_entry[plugin_data.entry] = plugin_data
 		end
 	end
+	self:_sort_local_plugins()
+end
+
+function PluginManagerView:_sort_local_plugins()
 	table.sort(self.local_plugins, function(a, b)
 		local t_a = a.config.last_used_at or 0
 		local t_b = b.config.last_used_at or 0
@@ -1437,12 +1449,42 @@ function PluginManagerView:_reload_local_plugins()
 	end)
 end
 
-function PluginManagerView:_refresh_local_view(status_text)
+--- 只刷新指定插件（新增或更新后调用），避免全量 reload 覆盖其他插件未保存的开关状态。
+--- 支持传插件目录名或 entry。
+function PluginManagerView:_reload_local_plugin(name_or_entry)
+	plugin_paths.ensure_storage_ready()
+	local old = self.local_by_name[name_or_entry] or self.local_by_entry[name_or_entry]
+	local name = old and old.name or name_or_entry
+
+	if old then
+		table.removeobject(self.local_plugins, old)
+		self.local_by_name[old.name] = nil
+		if self.local_by_entry[old.entry] == old then
+			self.local_by_entry[old.entry] = nil
+		end
+	end
+
+	local plugin_data = self:_load_local_plugin(name)
+	if plugin_data then
+		self.local_plugins[#self.local_plugins + 1] = plugin_data
+		self.local_by_name[plugin_data.name] = plugin_data
+		self.local_by_entry[plugin_data.entry] = plugin_data
+	end
+
+	self:_sort_local_plugins()
+end
+
+function PluginManagerView:_refresh_local_view(status_text, target_name)
 	if status_text then
 		self:_set_status(status_text, 100)
 	end
-	self:_reload_local_plugins()
+	if target_name then
+		self:_reload_local_plugin(target_name)
+	else
+		self:_reload_local_plugins()
+	end
 	self:_render_current_list()
+	self._unsaved_changes = self:_check_unsaved()
 end
 
 function PluginManagerView:_delete_local_plugin_by_name(plugin_name)
@@ -1456,8 +1498,16 @@ function PluginManagerView:_delete_local_plugin_by_name(plugin_name)
 	if not ok then
 		return false, "删除失败：" .. plugin_data.path
 	end
-	self:_reload_local_plugins()
+	-- 只从内存中移除该插件，保留其他插件尚未落盘的开关修改；
+	-- 不需要重新扫描磁盘导致未保存的开关状态被覆盖。
+	self._pending.plugins[plugin_name] = nil
+	table.removeobject(self.local_plugins, plugin_data)
+	self.local_by_name[plugin_name] = nil
+	if self.local_by_entry[plugin_data.entry] == plugin_data then
+		self.local_by_entry[plugin_data.entry] = nil
+	end
 	self:_render_current_list()
+	self._unsaved_changes = self:_check_unsaved()
 	return true, nil
 end
 
@@ -1676,7 +1726,7 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 		storage:write_lua(target_dir .. "/config.lua", new_cfg)
 	end
 
-	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry))
+	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry), target_name)
 	self._active_download_name = ""
 	if task then
 		task.progress = 100
@@ -1830,11 +1880,14 @@ function PluginManagerView:_install_or_update_item(item, task)
 					end
 					local installed_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
 					if installed_cfg then
-						installed_cfg.enabled = local_cfg and local_cfg.enabled ~= false
+						installed_cfg.enabled = local_plugin and local_plugin.config and (local_plugin.config.enabled ~= false)
+						if installed_cfg.enabled == nil then
+							installed_cfg.enabled = local_cfg and local_cfg.enabled ~= false
+						end
 						installed_cfg.last_used_at = os.time()
 						storage:write_lua(target_dir .. "/config.lua", installed_cfg)
 					end
-					self:_refresh_local_view("插件增量更新完成：" .. (item.name or item.entry))
+					self:_refresh_local_view("插件增量更新完成：" .. (item.name or item.entry), local_plugin and local_plugin.name or entry)
 					if task then
 						task.progress = 100
 					end
@@ -2776,7 +2829,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 		if #changed == 0 and #deleted == 0 then
 			print("插件无变更，无需上传！")
-			self:_refresh_local_view("插件无变更，无需上传：" .. entry)
+			self:_refresh_local_view("插件无变更，无需上传：" .. entry, plugin_data.name)
 			return true, nil
 		end
 		if not use_full and #changed > 0 then
@@ -2785,7 +2838,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 				if cover_data and cover_ext then
 					self:_upload_cover(entry, cover_data, cover_ext)
 				end
-				self:_refresh_local_view("增量上传成功：" .. entry)
+				self:_refresh_local_view("增量上传成功：" .. entry, plugin_data.name)
 				return true, nil
 			end
 			log.error("[plugin_manager] 补丁上传失败，回退到全量上传：%s", tostring(err_patch))
@@ -2838,7 +2891,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		self:_upload_cover(entry, cover_data, cover_ext)
 	end
 
-	self:_refresh_local_view("上传成功：" .. entry)
+	self:_refresh_local_view("上传成功：" .. entry, plugin_data.name)
 	return true, nil
 end
 
@@ -2870,9 +2923,9 @@ function PluginManagerView:_upload_cover(entry, cover_data, cover_ext)
 	}, 30)
 
 	if err then
-		self:_refresh_local_view("插件上传成功，但封面上传失败：" .. err)
+		self:_refresh_local_view("插件上传成功，但封面上传失败：" .. err, entry)
 	elseif tonumber(resp.code) ~= 200 then
-		self:_refresh_local_view("插件上传成功，但封面上传失败：HTTP " .. tostring(resp.code))
+		self:_refresh_local_view("插件上传成功，但封面上传失败：HTTP " .. tostring(resp.code), entry)
 	end
 end
 
