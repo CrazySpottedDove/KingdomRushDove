@@ -2180,7 +2180,7 @@ function PluginManagerView:_render_local_list()
 			local row = PluginItemRow:new({
 				plugin_data = plugin_data,
 				title = cfg.name or plugin_data.name,
-				meta = string.format("本地版本 v%s  作者: %s", utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)),
+				meta = string.format("%s v%s  作者: %s", plugin_data.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)),
 				desc = cfg.desc or "",
 				status = status,
 				show_toggle = not global_disabled,
