@@ -19363,7 +19363,7 @@ tt.damage_radius = 9999
 tt.main_script.update = scripts.controller_beresad_ultimate.update
 tt.sound_events.insert = "hero_beresad_ultimate"
 tt.mod = "mod_beresad_ultimate"
-tt.mod_cooldown = 0.2
+tt.mod_cooldown = 0.25
 tt.rain = {}
 tt.rain.alpha_max = 255
 tt.rain.alpha_min = 150
@@ -19397,7 +19397,7 @@ tt.render.sprites[1].name = "hero_beresad_ultimate_hit_run"
 tt = RT("mod_beresad_ultimate", "modifier")
 AC(tt, "dps", "render")
 tt.dps.damage_type = DAMAGE_TRUE
-tt.dps.damage_every = 0.2
+tt.dps.damage_every = 0.25
 tt.modifier.duration = 4
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps_with_fade.update
