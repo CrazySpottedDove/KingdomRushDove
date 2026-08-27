@@ -2329,62 +2329,8 @@ tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 tt.main_script.type = 1
-
 -- 牢大 END
--- 圣骑兵 START
-tt = RT("tower_paladin_rider", "tower_barrack_1")
-AC(tt, "powers")
-tt.info.portrait = "info_portraits_towers_0105" -- to be added
-tt.info.enc_icon = 114
-tt.tower.type = "imperial_patrol"
-tt.tower.price = 300
-tt.barrack.soldier_type = "soldier_paladin_rider"
-tt.barrack.rally_range = 1450
-tt.main_script.update = scripts.tower_paladin_rider.update
-tt.render.sprites[1].name = "terrain_barrack_%04i"
-tt.render.sprites[2].name = "tower_HolyKnight_1"
-tt.render.sprites[2].offset = v(0, 39)
-tt.render.sprites[3].prefix = "towerbarracklvl4_paladin_door"
-tt.render.sprites[3].offset = v(0, 39)
-tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].name = "tower_HolyFlag"
-tt.render.sprites[4].offset = v(7, 72)
-tt.sound_events.insert = {"BarrackPaladinTaunt", "GUITowerUpgrade"}
-tt.sound_events.change_rally_point = "BarrackPaladinTaunt"
 
-tt = RT("soldier_paladin_rider", "soldier_militia")
-AC(tt, "editor", "powers", "pickpocket", "track_damage", "nav_path")
-anchor_y = 0.17
-image_y = 42
-tt.health.armor = 0.7
-tt.health.dead_lifetime = 3
-tt.health.hp_max = 510
-tt.health.armor_power_name = "shield"
-tt.health.armor_inc = 0.15
-tt.health_bar.offset = v(0, 50)
-tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.nav_path.dir = -1
-tt.main_script.update = scripts.soldier_paladin_rider.update
-tt.info.portrait = "info_portraits_sc_0004" -- to be added
-tt.info.random_name_count = 20
-tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
-tt.melee.attacks[1].damage_max = 50
-tt.melee.attacks[1].damage_min = 30
-tt.melee.attacks[1].damage_inc = 10
-tt.melee.attacks[1].power_name = "holystrike"
-tt.melee.attacks[1].shared_cooldown = true
-tt.melee.cooldown = 0.5 + fts(13)
-tt.powers.healing = CC("power")
-tt.powers.shield = CC("power")
-tt.powers.holystrike = CC("power")
-tt.regen.health = 25
-tt.render.sprites[1].prefix = "soldier_paladin_rider"
-tt.unit.hit_offset = v(0, 14)
-tt.unit.marker_offset = v(0, ady(10))
-tt.unit.size = UNIT_SIZE_MEDIUM
-tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE)
-
--- 圣骑兵 END
 -- 炮兵 START
 tt = RT("ps_bullet_incendiary_soldier_dwarf_tower")
 AC(tt, "pos", "particle_system")
@@ -2465,6 +2411,25 @@ tt.sound_events.insert = "TowerDwarfTaunt"
 tt.sound_events.change_rally_point = "TowerDwarfTaunt"
 tt.ui.click_rect = r(-42, 0, 84, 90)
 
+tt = RT("bullet_incendiary_soldier_tower_dwarf", "bomb")
+local b = balance.towers.dwarf.incendiary_ammo
+tt.bullet.hit_fx = "fx_explosion_tower_dwarf"
+tt.bullet.hit_decal = nil
+tt.bullet.hit_decal = "decal_bullet_soldier_tower_dwarf"
+tt.bullet.particles_name = "ps_bullet_incendiary_soldier_dwarf_tower"
+tt.bullet.pop_chance = 0
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
+tt.bullet.hit_payload = "aura_bullet_soldier_tower_dwarf"
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = "TowerDwarfIncendiaryAmmo"
+tt.render.sprites[1].name = "tower_dwarf_skill_projectile"
+tt.render.sprites[1].hidden = false
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.use_hit_offset = true
+
 tt = RT("soldier_tower_dwarf_lvl4", "soldier_militia")
 b = balance.towers.dwarf.soldier
 AC(tt, "nav_grid", "ranged", "powers")
@@ -2507,6 +2472,7 @@ tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
 tt.ranged.attacks[1].max_range = b.ranged_attack.max_range[4]
 tt.ranged.attacks[1].min_range = b.ranged_attack.min_range[4]
 tt.ranged.attacks[1].shoot_time = fts(20)
+tt.ranged.attacks[1].check_target_before_shot = true
 tt.ranged.attacks[2] = table.deepclone(tt.ranged.attacks[1])
 tt.ranged.attacks[2].animation = "skill"
 tt.ranged.attacks[2].bullet = "bullet_incendiary_soldier_tower_dwarf"
@@ -2514,9 +2480,9 @@ tt.ranged.attacks[2].disabled = true
 tt.ranged.attacks[2].bullet_start_offset = {v(0, 0)}
 tt.ranged.attacks[2].bullet_start_offset_relative = v(15, 14)
 tt.ranged.attacks[2].shoot_time = fts(35)
-tt.ranged.attacks[2].node_prediction = fts(55)
-tt.ranged.attacks[2].ignore_hit_offset = true
 tt.ranged.attacks[2].cooldown = balance.towers.dwarf.incendiary_ammo.cooldown
+tt.ranged.attacks[2].check_target_before_shot = true
+update_node_prediction(tt.ranged.attacks[2])
 tt.ui.click_rect = r(-13, 0, 25, 25)
 tt.ui.click_rect_offset_y = 0
 tt.max_dist_walk = 140
@@ -2539,25 +2505,6 @@ tt.bullet.level = 1
 tt.main_script.update = scripts.bullet_soldier_tower_dwarf.update
 tt.render = nil
 tt.sound_events.insert = "TowerDwarfBasicAttack"
-
-tt = RT("bullet_incendiary_soldier_tower_dwarf", "bomb")
-local b = balance.towers.dwarf.incendiary_ammo
-tt.bullet.hit_fx = "fx_explosion_tower_dwarf"
-tt.bullet.hit_decal = nil
-tt.bullet.hit_decal = "decal_bullet_soldier_tower_dwarf"
-tt.bullet.particles_name = "ps_bullet_incendiary_soldier_dwarf_tower"
-tt.bullet.pop_chance = 0
-tt.bullet.align_with_trajectory = false
-tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
-tt.bullet.hit_payload = "aura_bullet_soldier_tower_dwarf"
-tt.bullet.damage_min = b.damage_min
-tt.bullet.damage_max = b.damage_max
-tt.sound_events.hit_water = nil
-tt.sound_events.hit = "TowerDwarfIncendiaryAmmo"
-tt.render.sprites[1].name = "tower_dwarf_skill_projectile"
-tt.render.sprites[1].hidden = false
-tt.bullet.damage_radius = b.damage_radius
-tt.from_tower = true
 
 tt = RT("aura_bullet_soldier_tower_dwarf", "aura")
 b = balance.towers.dwarf.incendiary_ammo.burn.aura
