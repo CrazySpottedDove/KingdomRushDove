@@ -20962,27 +20962,23 @@ function scripts.hero_venom.update(this, store)
 					S:queue(this.sound_events.change_rally_point)
 					S:queue(this.slimewalk.sound)
 
-					local an, af = U.animation_name_facing_point(this, tw.animations[1], this.motion.dest)
+					local an, af = U.animation_name_facing_point(this, tw.animations[1], r.pos)
 
-					U.y_animation_play(this, an, not af, store.tick_ts)
+					U.y_animation_play(this, an, af, store.tick_ts)
 
 					::label_294_0::
 
 					local dest = r.pos
 					local n = this.nav_grid
 
-					local an, af = U.animation_name_facing_point(this, tw.animations[2], this.motion.dest)
+					local an, af = U.animation_name_facing_point(this, tw.animations[2], r.pos)
 
-					U.animation_start(this, an, not af, store.tick_ts, true, 1, true)
+					U.animation_start(this, an, af, store.tick_ts, true, 1, true)
 
 					while not V.veq(this.pos, dest) do
 						local w = table.remove(n.waypoints, 1) or dest
 
 						U.set_destination(this, w)
-
-						-- local an, af = U.animation_name_facing_point(this, tw.animations[2], this.motion.dest)
-
-						-- U.animation_start(this, an, af, store.tick_ts, true, 1, true)
 
 						local runs = this.render.sprites[1].runs - 1
 
@@ -21083,6 +21079,10 @@ function scripts.hero_venom.update(this, store)
 
 							if eat_enemy_attack.ts > start_ts then
 								eat_enemy_attack.ts = start_ts
+							end
+
+							if this.health.hp > 0 and this.health.dead then
+								this.health.dead = false
 							end
 
 							local mod = E:create_entity(eat_enemy_attack.mod_regen)
