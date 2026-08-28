@@ -440,6 +440,58 @@ local function hnum_init(store)
 	end
 end
 
+local damage_trace_table = {}
+
+local damage_trace
+
+local function damage_trace_disabled(store, d)
+end
+
+local function damage_trace_enabled(store, d)
+	local source = store.entities[d.source_id]
+	while source do
+		if source.source_id then
+			source = store.entities[source.source_id]
+		elseif source.bullet and source.bullet.source_id then
+			source = store.entities[source.bullet.source_id]
+		elseif source.modifier and source.modifier.source_id then
+			source = store.entities[source.modifier.source_id]
+		elseif source.aura and source.aura.source_id then
+			source = store.entities[source.aura.source_id]
+		else
+			break
+		end
+	end
+
+	if source then
+		if source.tower or source.unit then
+			if not damage_trace_table[source.template_name] then
+				damage_trace_table[source.template_name] = {
+					name = source.info and source.info.i18n_key and _(source.info.i18n_key .. "_NAME") or _(string.upper(source.template_name) .. "_NAME"),
+					data = {}
+				}
+			end
+			local dt = damage_trace_table[source.template_name].data
+			if not dt[d.damage_type] then
+				dt[d.damage_type] = 0
+			end
+			dt[d.damage_type] = dt[d.damage_type] + d.damage_applied
+		end
+	end
+end
+
+local function damage_trace_init(store)
+	if configer.ui_settings().damage_trace_enabled then
+		damage_trace = damage_trace_enabled
+		damage_trace_table = {}
+		store.damage_trace_table = damage_trace_table
+	else
+		damage_trace = damage_trace_disabled
+		damage_trace_table = nil
+		store.damage_trace_table = nil
+	end
+end
+
 --- 从 damage.source_id 沿 modifier.source_id / bullet.source_id 追溯
 local function damage_trace_bullet_hints(s)
 	local b = s.bullet
@@ -711,6 +763,7 @@ function M.register(sys)
 		store.damage_queue_swapper = {}
 		dnum_init(store)
 		hnum_init(store)
+		damage_trace_init(store)
 		if dnum_enabled or hnum_enabled then
 			num_draw_impl = num_draw_enabled
 		else
@@ -734,6 +787,7 @@ function M.register(sys)
 
 	function sys.health.on_damage_applied(store, d, e)
 		dnum_on_applied_impl(store, d, e)
+		damage_trace(store, d)
 		-- pops system begin
 		if d.pop then
 			local source = store.entities[d.source_id]
@@ -942,5 +996,9 @@ function M.register(sys)
 		perf.stop("health")
 	end
 end
+
+-- 供其他模块复用伤害数字的伤害类型 -> 颜色映射（单一数据源）
+M.damage_color_index = dnum_color_index
+M.damage_color_palette = num_palette
 
 return M

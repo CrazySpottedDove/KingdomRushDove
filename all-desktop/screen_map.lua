@@ -7253,7 +7253,8 @@ function UISettingsPanelView:initialize(sw, sh, keyboard, controller)
 		coordinate_enabled = "显示坐标",
 		hero_menu_enabled = "启用局内英雄菜单",
 		tower_menu_enabled = "启用局内防御塔菜单",
-		game_gui_minified = "简化局内UI"
+		game_gui_minified = "简化局内UI",
+		damage_trace_enabled = "启用伤害追踪"
 	})
 end
 

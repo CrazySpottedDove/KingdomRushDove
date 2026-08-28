@@ -841,6 +841,7 @@ tt.dps.damage_min = 5
 tt.dps.damage_every = 0.5
 
 tt = RT("enemy_orc_armored_mad", "enemy_orc_armored")
+tt.info.i18n_key = "enemy_orc_armored"
 tt.motion.max_speed = 1.1 * FPS
 tt.melee.attacks[1].mod = "mod_orc_blood"
 tt.strengthened = false

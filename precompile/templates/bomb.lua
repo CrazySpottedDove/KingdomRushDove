@@ -121,7 +121,7 @@ return function(this, store)
                             mod.modifier.source_damage = d
                             mod.modifier.damage_factor = b.damage_factor
                             mod.modifier.target_id = enemy.id
-                            mod.modifier.source_id = this.id
+                            mod.modifier.source_id = b.source_id
                             mod.modifier.level = b.level
 
                             simulation:queue_insert_entity(mod)

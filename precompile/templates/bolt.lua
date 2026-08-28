@@ -254,6 +254,7 @@ return function(this, store)
                     local m = E:create_entity(mods[k])
 
                     m.modifier.target_id = b.target_id
+                    m.modifier.source_id = b.source_id
                     m.modifier.level = b.level
 
                     simulation:queue_insert_entity(m)

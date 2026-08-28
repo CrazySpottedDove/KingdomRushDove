@@ -3988,7 +3988,7 @@ function scripts.shotgun.update(this, store)
 			for _, mod_name in ipairs(mods) do
 				local mod = E:create_entity(mod_name)
 
-				mod.modifier.source_id = this.id
+				mod.modifier.source_id = b.source_id
 				mod.modifier.target_id = target.id
 				mod.modifier.level = b.level
 				mod.modifier.source_damage = d

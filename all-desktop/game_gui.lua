@@ -68,6 +68,7 @@ require("gg_views_custom")
 
 local data = require("data.game_gui_data")
 local damage_icons = require("kr1-desktop.data.damage_icons")
+local sys_health = require("all.systems.health")
 local kr5_balloon = require("kr5_balloon")
 local game_gui = {}
 
@@ -610,6 +611,14 @@ function game_gui:init(w, h, game)
 		self.coordinate_debug = coordinate_debug
 	end
 
+	if configer.ui_settings().damage_trace_enabled then
+		local damage_trace_panel = DamageTraceView:new(sw, sh)
+
+		damage_trace_panel.pos = v(0, 0)
+		layer_gui_top:add_child(damage_trace_panel)
+		self.damage_trace_panel = damage_trace_panel
+	end
+
 	layer_gui:add_child(rallyflag)
 	layer_gui:add_child(point_confirm)
 	layer_gui:add_child(layer_gui_game)
@@ -785,6 +794,15 @@ function game_gui:mousereleased(x, y, button)
 	self.window:mousereleased(x, y, button)
 end
 
+-- 滚轮：伤害追踪面板打开时交给窗口内的列表滚动，并返回 true 阻止地图缩放劫持
+function game_gui:wheelmoved(dx, dy)
+	if self.damage_trace_panel and not self.damage_trace_panel.hidden then
+		self.window:wheelmoved(dx, dy)
+
+		return true
+	end
+end
+
 function game_gui:build_random_towers()
 	for k, v in pairs(game_gui.game.store.towers) do
 		local new_tower = E:create_entity(table.random(GS.advanced_towers))
@@ -864,6 +882,8 @@ function game_gui:keypressed(key, isrepeat)
 	if key == KEYPRESS_ESCAPE then
 		if not self.notiview.hidden then
 			self.notiview:hide()
+		elseif self.damage_trace_panel and not self.damage_trace_panel.hidden then
+			self.damage_trace_panel:hide()
 		elseif self.victoryview then
 			game_gui:go_to_map()
 		elseif self.defeatview then
@@ -875,6 +895,16 @@ function game_gui:keypressed(key, isrepeat)
 		elseif not self.keys_disabled then
 			self.pauseview:show()
 		end
+	end
+
+	if self.damage_trace_panel and configer.keyset().damage_trace_toggle == key then
+		if self.damage_trace_panel.hidden then
+			self.damage_trace_panel:show()
+		else
+			self.damage_trace_panel:hide()
+		end
+
+		return
 	end
 
 	if self.keys_disabled then
@@ -3610,6 +3640,19 @@ function PauseView:initialize()
 		end
 		self:add_child(btn_force_wave)
 
+		if configer.ui_settings().damage_trace_enabled then
+			button_height = button_height + 100
+			local btn_damage_trace = GGOptionsButton:new("伤害追踪")
+			btn_damage_trace:set_anchor_to_center()
+			btn_damage_trace.pos.x = right_x
+			btn_damage_trace.pos.y = button_height
+			function btn_damage_trace.on_click()
+				S:queue("GUIButtonCommon")
+				game_gui.damage_trace_panel:show()
+			end
+			self:add_child(btn_damage_trace)
+		end
+
 		if configer.ui_settings().tower_menu_enabled then
 			button_height = button_height + 100
 			local btn_criket = GGOptionsButton:new("一键造塔")
@@ -3827,7 +3870,7 @@ function DefeatView:initialize()
 	self.l_tip = l_tip
 
 	local mx = 84
-	local y = 278
+	local y = 266
 	local b
 
 	b = GGOptionsButton(_("BUTTON_RESTART"))
@@ -3849,6 +3892,18 @@ function DefeatView:initialize()
 	end
 
 	self:add_child(b)
+
+	if configer.ui_settings().damage_trace_enabled then
+		b = GGOptionsButton:new("伤害追踪")
+		b.pos.x, b.pos.y = V.csnap(self.size.x * 0.5, y + b.size.y + 35)
+
+		function b.on_click()
+			S:queue("GUIButtonCommon")
+			game_gui.damage_trace_panel:show()
+		end
+
+		self:add_child(b)
+	end
 end
 
 function DefeatView:show()
@@ -4041,6 +4096,24 @@ function VictoryView:initialize(level_mode)
 	self.v_stars = v_stars
 	self.v_restart = v_r
 	self.v_continue = v_c
+
+	if configer.ui_settings().damage_trace_enabled then
+		local b_damage = GGOptionsButton:new("伤害追踪")
+
+		b_damage.anchor = V.v(b_damage.size.x * 0.5, b_damage.size.y * 0.5)
+		b_damage._target_y = 540
+		b_damage.pos = V.v(vw * 0.5, b_damage._target_y)
+		b_damage.hidden = true
+		b_damage.alpha = 0
+
+		function b_damage.on_click()
+			S:queue("GUIButtonCommon")
+			game_gui.damage_trace_panel:show()
+		end
+
+		self:add_child(b_damage)
+		self.b_damage = b_damage
+	end
 end
 
 function VictoryView:show()
@@ -4134,6 +4207,23 @@ function VictoryView:show()
 		wait(0.5)
 		c_chain:enable()
 		r_chain:enable()
+
+		local b_damage = self.b_damage
+
+		if b_damage then
+			b_damage.hidden = false
+			b_damage.pos.y = b_damage._target_y - 60
+			b_damage.alpha = 0
+
+			timer:tween(0.5, b_damage.pos, {
+				y = b_damage._target_y
+			}, "out-back")
+			timer:tween(0.4, b_damage, {
+				alpha = 1
+			}, "out-quad")
+			wait(0.5)
+		end
+
 		if game_gui.game.store.custom_battle_prep_music then
 			S:queue(game_gui.game.store.custom_battle_prep_music)
 		else
@@ -4153,6 +4243,440 @@ function VictoryView:update(dt)
 			self.particles:update(dt)
 		end
 		self.v_stars:update(dt)
+	end
+end
+
+-- ============================================================
+-- 伤害追踪面板
+-- ============================================================
+-- 伤害类型 -> 颜色：复用 health 系统伤害数字的映射（单一数据源）
+local damage_trace_color_index = sys_health.damage_color_index
+local damage_trace_color_palette = sys_health.damage_color_palette
+
+local damage_trace_names = {
+	[DAMAGE_TRUE] = "真实",
+	[DAMAGE_PHYSICAL] = "物理",
+	[DAMAGE_MAGICAL] = "法术",
+	[DAMAGE_EXPLOSION] = "爆炸",
+	[DAMAGE_ELECTRICAL] = "雷电",
+	[DAMAGE_MAGICAL_EXPLOSION] = "法爆",
+	[DAMAGE_SHOT] = "枪击",
+	[DAMAGE_RUDE] = "残暴",
+	[DAMAGE_STAB] = "刺击",
+	[DAMAGE_MIXED] = "混合",
+	[DAMAGE_POISON] = "剧毒",
+	[DAMAGE_AGAINST_ARMOR] = "破甲",
+	[DAMAGE_AGAINST_MAGIC_ARMOR] = "破魔",
+	[DAMAGE_INSTAKILL] = "秒杀",
+	[DAMAGE_DISINTEGRATE] = "分解",
+	[DAMAGE_EAT] = "吞噬"
+}
+
+local function damage_trace_segment_info(damage_type)
+	local color = damage_trace_color_palette[damage_trace_color_index(damage_type)]
+	local names = {}
+
+	for t, name in pairs(damage_trace_names) do
+		if band(damage_type, t) ~= 0 then
+			names[#names + 1] = name
+		end
+	end
+
+	if #names == 0 then
+		return "其他", color
+	end
+
+	return table.concat(names, "+"), color
+end
+
+DamageTraceItemView = class("DamageTraceItemView", KView)
+
+DamageTraceItemView.height = 88
+
+function DamageTraceItemView:initialize(template_name, info, width)
+	KView.initialize(self, nil)
+
+	local h = DamageTraceItemView.height
+
+	self.template_name = template_name
+	self.size = V.v(width, h)
+	self.colors.background = {62, 48, 22, 220}
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 3, 3, width - 6, h - 6, 8, 8, 8}
+	}
+	-- 让按下/抬起/点击事件穿透到所属的 KScrollList，保证滚动条与内容区可拖动
+	self.propagate_on_down = true
+	self.propagate_on_up = true
+	self.propagate_on_click = true
+
+	local t = E:get_template(template_name)
+	local portrait = t and t.info and t.info.portrait
+
+	if portrait then
+		local icon = KImageView:new(portrait)
+
+		icon.scale = V.v(0.25, 0.25)
+		icon.pos = V.v(12, 10)
+		self:add_child(icon)
+	end
+
+	local name = GGLabel:new(V.v(width - 56, 24))
+
+	name.pos = V.v(portrait and 42 or 12, 8)
+	name.font_name = "h"
+	name.font_size = 15
+	name.text_align = "left"
+	name.vertical_align = "middle"
+	name.colors.text = {240, 228, 200, 255}
+	name.text = info.name
+	self:add_child(name)
+
+	local total = 0
+	local segments = {}
+
+	for damage_type, value in pairs(info.data) do
+		total = total + value
+	end
+
+	for damage_type, value in pairs(info.data) do
+		local seg_name, color = damage_trace_segment_info(damage_type)
+
+		local duplicate = false
+		for i = 1, #segments do
+			if segments[i].name == seg_name then
+				segments[i].value = segments[i].value + value / total
+				duplicate = true
+			end
+		end
+
+		if not duplicate then
+			segments[#segments + 1] = {
+				name = seg_name,
+				color = color,
+				value = value / total
+			}
+		end
+	end
+
+	table.sort(segments, function(a, b)
+		return a.value > b.value
+	end)
+
+	self.segments = segments
+	self.total = total
+end
+
+function DamageTraceItemView:_draw_self()
+	KView._draw_self(self)
+
+	local pr, pg, pb, pa = G.getColor()
+	local bar_y = 38
+	local bar_h = 20
+
+	-- 总伤害数值显示在条的左侧（无中文前缀）
+	local total_font = F:f("body", 14)
+	local total_text = string.format("%.1f", self.total)
+	local total_w = total_font:getWidth(total_text)
+	local bar_x = 12 + total_w + 12
+	local w = self.size.x - 24 - total_w - 12
+
+	G.setColor(0, 0, 0, 0.5 * pa)
+	G.rectangle("fill", bar_x, bar_y, w, bar_h, 3, 3)
+
+	if self.total > 0 then
+		-- 计算各段宽度（总长恒等于条宽）
+		local seg_layout = {}
+		local x = bar_x
+
+		for i, seg in ipairs(self.segments) do
+			local seg_w = seg.value * w
+
+			if seg_w < 1 then
+				seg_w = 1
+			end
+
+			if x - bar_x + seg_w > w then
+				seg_w = w - (x - bar_x)
+			end
+
+			if seg_w <= 0 then
+				break
+			end
+
+			seg_layout[i] = {
+				x = x,
+				w = seg_w
+			}
+			x = x + seg_w
+		end
+
+		for i, seg in ipairs(self.segments) do
+			local sl = seg_layout[i]
+
+			if not sl then
+				break
+			end
+
+			local c = seg.color
+
+			G.setColor(c[1], c[2], c[3], pa)
+			G.rectangle("fill", sl.x, bar_y, sl.w, bar_h)
+		end
+
+		-- 各段类型 + 数值：平均分槽显示在条下方（类型用段色，数值用暖白），字号自适应避免超出卡片
+		local items = {}
+		local value_color = {240 / 255, 228 / 255, 200 / 255}
+		local n = #self.segments
+		local slot_w = w / n
+
+		for i, seg in ipairs(self.segments) do
+			items[i] = {
+				name = seg.name,
+				value = string.format("%.1f%%", seg.value * 100),
+				color = seg.color
+			}
+		end
+
+		local fs = 12
+		local font = F:f("body", fs)
+		local function items_max_width()
+			local m = 0
+
+			for i = 1, n do
+				local tw = font:getWidth(items[i].name) + 4 + font:getWidth(items[i].value)
+
+				if tw > m then
+					m = tw
+				end
+			end
+
+			return m
+		end
+
+		local max_w = items_max_width()
+
+		while max_w > slot_w and fs > 8 do
+			fs = fs - 1
+			font = F:f("body", fs)
+			max_w = items_max_width()
+		end
+
+		G.setFont(font)
+
+		for i = 1, n do
+			local item = items[i]
+			local nw = font:getWidth(item.name)
+			local vw = font:getWidth(item.value)
+			local start_x = bar_x + (i - 1) * slot_w + (slot_w - (nw + 4 + vw)) * 0.5
+			local c = item.color
+
+			G.setColor(c[1], c[2], c[3], pa)
+			G.print(item.name, start_x, bar_y + bar_h + 4)
+			G.setColor(value_color[1], value_color[2], value_color[3], pa)
+			G.print(item.value, start_x + nw + 4, bar_y + bar_h + 4)
+		end
+	end
+
+	-- 总伤害数值
+	local fh = total_font:getHeight()
+
+	G.setColor(232 / 255, 214 / 255, 166 / 255, pa)
+	G.setFont(total_font)
+	G.print(total_text, 12, bar_y + (bar_h - fh) * 0.5)
+
+	G.setColor(pr, pg, pb, pa)
+end
+
+DamageTraceView = class("DamageTraceView", PopUpView)
+
+function DamageTraceView:initialize(sw, sh)
+	PopUpView.initialize(self, V.v(sw, sh))
+
+	self.pos = v(0, 0)
+	self.tab_idx = 1
+
+	-- 面板尺寸：相对屏幕留边，保证大屏/安卓都能容纳内容
+	local pw = math.min(sw - 100, 1000)
+	local ph = sh - 100
+	local back = KView:new(V.v(pw, ph))
+
+	back.colors.background = {35, 25, 12, 240}
+	back.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 12, 12, 12}
+	}
+	back.anchor = v(pw * 0.5, ph * 0.5)
+	back.pos = v(sw * 0.5, sh * 0.5 - 50)
+
+	function back:_draw_self()
+		KView._draw_self(self)
+
+		local pr, pg, pb, pa = G.getColor()
+
+		G.setColor(161 / 255, 122 / 255, 45 / 255, 0.9 * pa)
+		G.setLineWidth(2)
+		G.rectangle("line", 1, 1, pw - 2, ph - 2, 12, 12, 12)
+		G.setLineWidth(1)
+		G.setColor(pr, pg, pb, pa)
+	end
+
+	self.back = back
+	self:add_child(back)
+
+	local header = GGPanelHeader:new("伤害追踪", 180)
+
+	header.pos = V.v((pw - 180) * 0.5, 14)
+	back:add_child(header)
+
+	self.tab_buttons = {}
+
+	for i, label in ipairs({"防御塔", "士兵", "敌人"}) do
+		local b = GGOptionsButton:new(label)
+
+		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
+
+		local idx = i
+
+		function b.on_click()
+			S:queue("GUIButtonCommon")
+			self:set_tab(idx)
+		end
+
+		back:add_child(b)
+		self.tab_buttons[i] = b
+	end
+
+	local b0 = self.tab_buttons[1]
+	local tab_gap = 20
+	local tabs_w = 3 * b0.size.x + 2 * tab_gap
+	local tabs_y = 100
+
+	for i, b in ipairs(self.tab_buttons) do
+		b.pos = V.v((pw - tabs_w) * 0.5 + b0.size.x * 0.5 + (i - 1) * (b0.size.x + tab_gap), tabs_y)
+	end
+
+	local list_x = 30
+	local list_y = 140
+	local list_w = pw - 60
+	local list_h = ph - list_y - 78
+	local list = KScrollList:new(V.v(list_w, list_h))
+
+	list.pos = V.v(list_x, list_y)
+	list.scroll_amount = 44
+	list.colors.scroller_background = {45, 36, 22, 200}
+	list.colors.scroller_foreground = {110, 90, 50, 255}
+	list:set_scroller_size(24, 4)
+	back:add_child(list)
+	self.list = list
+	-- 预留滚动条区域，避免滚动条遮掩卡片
+	self.list_w = list_w - 24 - 2 * 4 - 4
+
+	local l_empty = GGLabel:new(V.v(list_w, 30))
+
+	l_empty.pos = V.v(list_x, list_y + (list_h - 30) * 0.5)
+	l_empty.font_name = "h"
+	l_empty.font_size = 18
+	l_empty.text_align = "center"
+	l_empty.vertical_align = "middle"
+	l_empty.colors.text = {200, 185, 150, 255}
+	l_empty.text = "暂无伤害记录"
+	l_empty.hidden = true
+	back:add_child(l_empty)
+	self.l_empty = l_empty
+
+	local b_close = GGOptionsButton:new("关闭")
+
+	b_close.anchor = V.v(b_close.size.x * 0.5, b_close.size.y * 0.5)
+	b_close.pos = V.v(pw * 0.5, ph - 40)
+
+	function b_close.on_click()
+		S:queue("GUIButtonCommon")
+		self:hide()
+	end
+
+	back:add_child(b_close)
+
+	self:set_tab(1)
+end
+
+function DamageTraceView:set_tab(idx)
+	self.tab_idx = idx
+
+	for i, b in ipairs(self.tab_buttons) do
+		local image = i == idx and "options_button_bg_0002" or "options_button_bg_0001"
+
+		b.default_image_name = image
+		b:set_image(image)
+	end
+
+	self:refresh()
+end
+
+function DamageTraceView:refresh()
+	local data = game_gui.game.store.damage_trace_table or {}
+	local rows = {}
+
+	for template_name, info in pairs(data) do
+		local t = E:get_template(template_name)
+		local category
+
+		if t then
+			if t.tower then
+				category = 1
+			elseif t.soldier then
+				category = 2
+			elseif t.enemy then
+				category = 3
+			end
+		end
+
+		if category == self.tab_idx then
+			rows[#rows + 1] = DamageTraceItemView:new(template_name, info, self.list_w)
+		end
+	end
+
+	-- 卡片按总伤降序排列，总伤相同时按模板名排序保证稳定
+	table.sort(rows, function(a, b)
+		if a.total ~= b.total then
+			return a.total > b.total
+		end
+
+		return a.template_name < b.template_name
+	end)
+
+	self.list:clear_rows()
+
+	for i, row in ipairs(rows) do
+		self.list:add_row(row)
+	end
+
+	self.l_empty.hidden = #rows > 0
+end
+
+function DamageTraceView:show()
+	if not self.hidden then
+		return
+	end
+
+	self:refresh()
+	PopUpView.show(self)
+	-- 胜利/失败视图是在 init 之后才加入 layer_gui_top 的，会盖住本面板；显示时置顶
+	self:order_to_front()
+	game_gui:disable_keys()
+	game_gui.game.store.paused = true
+end
+
+function DamageTraceView:hide()
+	if self.hidden then
+		return
+	end
+
+	PopUpView.hide(self)
+
+	if not game_gui.game.store.game_outcome and game_gui.pauseview.hidden then
+		game_gui:enable_keys()
+		game_gui.game.store.paused = false
 	end
 end
 

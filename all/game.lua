@@ -481,14 +481,15 @@ function game:mousereleased(x, y, button, istouch)
 end
 
 function game:wheelmoved(dx, dy)
+	-- GUI 消费滚轮（如伤害追踪列表滚动）时不再缩放地图
+	if self.game_gui.wheelmoved and self.game_gui:wheelmoved(dx, dy) then
+		return
+	end
+
 	if self.camera then
 		self.camera.zoom = self.camera.zoom * (1 + dy * 0.1)
 
 		self.camera:clamp()
-	end
-
-	if self.game_gui.wheelmoved then
-		self.game_gui:wheelmoved(dx, dy)
 	end
 end
 
@@ -1477,53 +1478,10 @@ if IS_ANDROID then
 		G.pop()
 
 		perf.stop("game_draw")
-		perf.start("game_gui_draw")
-		-- KFD.draw(self.game_gui.window, self.game_gui.layer_gui)
-		self.game_gui.window:draw_child(self.game_gui.layer_gui)
-		perf.stop("game_gui_draw")
 
 		d.numbers_draw(self)
-	end
-else
-	function game:draw_game()
-		perf.start("game_draw")
-		local d = self.store
 
-		local draw_frames_range = RU.draw_frames_range
-		local gs = self.game_scale
-
-		local c = self.camera
-		-- c:clamp()
-		local rox, roy = -(c.x * c.zoom - self.screen_w * 0.5), -(c.y * c.zoom - self.screen_h * 0.5)
-		gs = gs * c.zoom
-		if d.world_offset then
-			rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
-		end
-
-		-- self:front_draw_debug(rox, roy, gs)
-		G.push()
-		G.translate(rox, roy)
-		G.scale(gs, gs)
-		local last_idx = draw_frames_range(d.render_frames, d.render_frames_start_idx, Z_SCREEN_FIXED - 1)
-		G.pop()
-
-		if self.DBG_DRAW_PATHS or self.shown_path then
-			self:draw_path(rox, roy, gs)
-		end
-
-		if d.night_mode then
-			self:draw_dark_foreground(rox, roy, gs)
-		end
-
-		G.push()
-		G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
-		G.scale(self.game_scale, self.game_scale)
-		last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
-		G.pop()
-
-		perf.stop("game_draw")
 		perf.start("game_gui_draw")
-		-- KFD.draw(self.game_gui.window, self.game_gui.layer_gui)
 
 		-- 手动内联 game_gui 绘制逻辑
 		local window = self.game_gui.window
@@ -1565,8 +1523,90 @@ else
 
 		G.pop()
 		perf.stop("game_gui_draw")
+	end
+else
+	function game:draw_game()
+		perf.start("game_draw")
+		local d = self.store
+
+		local draw_frames_range = RU.draw_frames_range
+		local gs = self.game_scale
+
+		local c = self.camera
+		-- c:clamp()
+		local rox, roy = -(c.x * c.zoom - self.screen_w * 0.5), -(c.y * c.zoom - self.screen_h * 0.5)
+		gs = gs * c.zoom
+		if d.world_offset then
+			rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
+		end
+
+		-- self:front_draw_debug(rox, roy, gs)
+		G.push()
+		G.translate(rox, roy)
+		G.scale(gs, gs)
+		local last_idx = draw_frames_range(d.render_frames, d.render_frames_start_idx, Z_SCREEN_FIXED - 1)
+		G.pop()
+
+		if self.DBG_DRAW_PATHS or self.shown_path then
+			self:draw_path(rox, roy, gs)
+		end
+
+		if d.night_mode then
+			self:draw_dark_foreground(rox, roy, gs)
+		end
+
+		G.push()
+		G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
+		G.scale(self.game_scale, self.game_scale)
+		last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
+		G.pop()
+
+		perf.stop("game_draw")
 
 		d.numbers_draw(self)
+
+		perf.start("game_gui_draw")
+
+		-- 手动内联 game_gui 绘制逻辑
+		local window = self.game_gui.window
+		G.push()
+		G.translate(window.origin.x, window.origin.y)
+		G.scale(window.scale.x, window.scale.y)
+		G.rotate(-window.r)
+		G.translate(-window.anchor.x, -window.anchor.y)
+		local layer_gui = self.game_gui.layer_gui
+
+		local c = layer_gui.children[1]
+		if not c.hidden then
+			G.translate(c.pos.x, c.pos.y)
+			c:draw()
+			G.translate(-c.pos.x, -c.pos.y)
+		end
+
+		c = layer_gui.children[2]
+		if not c.hidden then
+			G.translate(c.pos.x, c.pos.y)
+			c:draw()
+			G.translate(-c.pos.x, -c.pos.y)
+		end
+
+		c = layer_gui.children[3]
+		if not c.hidden then
+			c:draw()
+		end
+
+		c = layer_gui.children[4]
+		if not c.hidden then
+			c:draw()
+		end
+
+		c = layer_gui.children[5]
+		if not c.hidden then
+			c:draw()
+		end
+
+		G.pop()
+		perf.stop("game_gui_draw")
 
 	-- self:after_draw_debug(rox, roy, gs)
 	end

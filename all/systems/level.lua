@@ -377,8 +377,6 @@ function M.register(sys)
 					return
 				end
 
-				log.info("++++ VICTORY ++++")
-
 				local stars = 1
 
 				if store.level_mode == GAME_MODE_CAMPAIGN then

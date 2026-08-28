@@ -131,7 +131,7 @@ return function(this, store)
                                 if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
                                     local mod = E:create_entity(mod_name)
 
-                                    mod.modifier.source_id = this.id
+                                    mod.modifier.source_id = b.source_id
                                     mod.modifier.target_id = target.id
                                     mod.modifier.level = b.level
                                     mod.modifier.source_damage = d
@@ -253,7 +253,7 @@ return function(this, store)
                         if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
                             local mod = E:create_entity(mod_name)
 
-                            mod.modifier.source_id = this.id
+                            mod.modifier.source_id = b.source_id
                             mod.modifier.target_id = target.id
                             mod.modifier.level = b.level
                             mod.modifier.source_damage = d
@@ -341,7 +341,7 @@ return function(this, store)
             local p = E:create_entity(b.payload)
             p.pos.x, p.pos.y = this.pos.x, this.pos.y
             p.target_id = b.target_id
-            p.source_id = this.id
+            p.source_id = b.source_id
 
             constif(E:get_template(b.payload).aura)
                 p.aura.level = b.level

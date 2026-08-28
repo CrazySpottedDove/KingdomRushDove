@@ -45,5 +45,7 @@ return {
 	-- 全屏随机建满高级塔
 	random_towers = "f8",
 	fps = "f10",
+	-- 伤害追踪面板开关，默认为 "f9"
+	damage_trace_toggle = "f9",
 	restart = "return"
 }

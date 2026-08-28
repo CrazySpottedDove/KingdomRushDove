@@ -227,7 +227,6 @@ scripts.tower_ranger = {
 	update = function(this, store)
 		local shooter_sids = {3, 4}
 		local shooter_idx = 2
-		-- local druid_sid = 5
 		local a = this.attacks
 		local aa = this.attacks.list[1]
 		local pow_p = this.powers.poison
@@ -291,6 +290,7 @@ scripts.tower_ranger = {
 			b.bullet.from = vclone(b.pos)
 			b.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 			b.bullet.target_id = enemy.id
+			b.bullet.source_id = this.id
 			b.bullet.level = level
 			b.bullet.damage_factor = tw.damage_factor
 
@@ -375,6 +375,7 @@ scripts.tower_ranger = {
 	end,
 	remove = function(this, store)
 		this.render.sprites[5].hidden = true
+		this.powers.poison.applied = false
 		return true
 	end
 }
@@ -420,6 +421,7 @@ scripts.tower_musketeer = {
 			bl.from = vclone(b.pos)
 			bl.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 			bl.target_id = enemy.id
+			bl.source_id = this.id
 			bl.level = level
 			bl.damage_factor = tw.damage_factor
 
@@ -561,6 +563,7 @@ scripts.tower_musketeer = {
 							bl.from = vclone(src_pos)
 							bl.to = U.point_on_ellipse(dest_pos, U.frandom(ash.min_spread * spread_factor, ash.max_spread * spread_factor), (i - 1) * 2 * math.pi / ash.loops)
 							bl.level = pow_sh.level
+							bl.source_id = this.id
 							bl.damage_factor = tw.damage_factor * distance_factor
 
 							simulation:queue_insert_entity(b)
@@ -3292,6 +3295,7 @@ scripts.tower_sunray = {
 					b.bullet.from.x, b.bullet.from.y = b.pos.x, b.pos.y
 					b.bullet.to.x, b.bullet.to.y = enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y
 					b.bullet.target_id = enemy.id
+					b.bullet.source_id = this.id
 					b.bullet.level = 0
 					b.render.sprites[1].scale = v(1, b.ray_y_scales[pow_r.level])
 					b.bullet.damage_factor = damage_factor
@@ -26814,6 +26818,7 @@ function scripts.tower_goblirang.update(this, store)
 		local rate = km.clamp(0.2, 1, V.dist(start_x, start_y, enemy.pos.x, enemy.pos.y) / a.range)
 		b.bullet.flight_time = b.bullet.flight_time * this.tower.cooldown_factor
 		b.bullet.target_id = enemy.id
+		b.bullet.source_id = this.id
 		local flight_time = b.bullet.flight_time
 		local epos = U.calculate_enemy_ffe_pos(enemy, flight_time * rate * rate)
 		epos.x = epos.x + enemy.unit.hit_offset.x
