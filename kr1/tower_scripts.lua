@@ -822,6 +822,7 @@ scripts.tower_crossbow = {
 							end
 
 							bl.target_id = enemy_id
+							bl.source_id = this.id
 							bl.from = v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 							bl.to = shoot_pos
 							b.pos = vclone(bl.from)
@@ -887,6 +888,7 @@ scripts.tower_crossbow = {
 						bl.from = vclone(b1.pos)
 						bl.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 						bl.target_id = enemy.id
+						bl.source_id = this.id
 						bl.damage_factor = tw.damage_factor
 
 						if pow_e.level > 0 then
@@ -1033,6 +1035,7 @@ scripts.tower_totem = {
 						b1.bullet.from = vclone(b1.pos)
 						b1.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 						b1.bullet.target_id = enemy.id
+						b1.bullet.source_id = this.id
 
 						apply_precision(b1)
 						simulation:queue_insert_entity(b1)
@@ -1753,6 +1756,7 @@ scripts.tower_wild_magus = {
 								local mod = E:create_entity(wa.spell)
 
 								mod.modifier.target_id = target.id
+								mod.modifier.source_id = this.id
 								mod.modifier.level = pow_w.level
 
 								simulation:queue_insert_entity(mod)
@@ -1834,6 +1838,311 @@ scripts.tower_wild_magus = {
 		end
 	end
 }
+
+scripts.high_elven_sentinel = {}
+
+function scripts.high_elven_sentinel.update(this, store)
+	local sb_sid, ss_sid = 1, 2
+	local sb = this.render.sprites[sb_sid]
+	local ss = this.render.sprites[ss_sid]
+	local ra = this.ranged.attacks[1]
+	local fm = this.force_motion
+
+	local function move_step(dest)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local ramp_radius = fm.ramp_radius
+		local df = (not ramp_radius or ramp_radius < dist) and 1 or math.max(dist / ramp_radius, 0.1)
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step * df, dx, dy)))
+		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
+		fm.v.x, fm.v.y = V.trim(fm.max_v, fm.v.x, fm.v.y)
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = V.mul(-1 * fm.fr / store.tick_length, fm.v.x, fm.v.y)
+	end
+
+	local function find_target(range)
+		if this.owner.tower.blocked then
+			return nil
+		end
+
+		local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, range, false, ra.vis_flags, ra.vis_bans)
+
+		if target and #this.owner.sentinels > 1 then
+			local other_target_id = this.owner.sentinels[this.owner_idx == 1 and 2 or 1].chasing_target_id
+
+			if target.id == other_target_id and #targets > 1 then
+				target = targets[2]
+			end
+		end
+
+		return target
+	end
+
+	local charge_ts, wait_ts, shoot_ts, search_ts, shots = 0, 0, 0, 0, 0
+	local target, dist
+	local dest = v(0, 0)
+	local ps = E:create_entity(this.particles_name)
+
+	ps.particle_system.track_id = this.id
+	ps.particle_system.track_offset = v(0, this.flight_height)
+
+	simulation:queue_insert_entity(ps)
+
+	while true do
+		if not this.owner then
+			simulation:queue_remove_entity(this)
+
+			return
+		end
+
+		U.animation_start(this, "small", nil, store.tick_ts, true, sb_sid)
+
+		ss.hidden = true
+		sb.z = Z_OBJECTS
+		sb.sort_y = this.owner.pos.y
+		ps.particle_system.emit = true
+		ps.particle_system.sort_y = this.owner.pos.y
+		this.tween.reverse = false
+		this.tween.ts = store.tick_ts
+		shots = 0
+		charge_ts = store.tick_ts
+
+		while true do
+			if not this.owner then
+				simulation:queue_remove_entity(this)
+
+				return
+			end
+
+			local p = v(this.tower_rotation_radius, 0)
+
+			p.x, p.y = V.rotate(store.tick_ts * this.tower_rotation_speed + (this.owner_idx - 1) * math.pi, p.x, p.y)
+			p.y = 0.5 * p.y
+			this.pos.x = this.owner.pos.x + this.tower_rotation_offset.x + p.x
+			this.pos.y = this.owner.pos.y + this.tower_rotation_offset.y + p.y
+
+			if store.tick_ts - charge_ts > this.charge_time * this.owner.tower.cooldown_factor then
+				if sb.name == "small" then
+					U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+				end
+
+				target = find_target(ra.launch_range)
+
+				if target then
+					S:queue("TowerHighMageSentinelActivate")
+
+					break
+				else
+					charge_ts = charge_ts + 0.1
+				end
+			end
+
+			coroutine.yield()
+		end
+
+		::label_29_0::
+
+		sb.z = Z_BULLETS
+		sb.sort_y_offset = 0
+		ss.hidden = false
+		ps.particle_system.emit = false
+		this.chasing_target_id = target.id
+		dest.x, dest.y = target.pos.x, target.pos.y
+
+		repeat
+			dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
+
+			move_step(dest)
+			coroutine.yield()
+		until dist < ra.shoot_range or target.health.dead or band(ra.vis_flags, target.vis.bans) ~= 0
+
+		if shots < ra.max_shots and store.entities[target.id] and not target.health.dead and band(ra.vis_flags, target.vis.bans) == 0 then
+			if store.tick_ts - shoot_ts > ra.cooldown * this.owner.tower.cooldown_factor then
+				shoot_ts = store.tick_ts
+				shots = shots + 1
+
+				U.animation_start(this, "shoot", nil, store.tick_ts, false, sb_sid)
+				U.y_wait_unconditional(store, ra.shoot_time)
+
+				local b = E:create_entity(ra.bullet)
+
+				b.pos.x, b.pos.y = this.pos.x + sb.offset.x, this.pos.y + sb.offset.y
+				b.bullet.from = V.vclone(b.pos)
+				b.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+				b.bullet.target_id = target.id
+				b.bullet.damage_factor = this.owner.tower.damage_factor
+				b.bullet.source_id = this.owner.id
+
+				simulation:queue_insert_entity(b)
+				U.y_animation_wait(this, sb_sid)
+				U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+			end
+
+			goto label_29_0
+		end
+
+		wait_ts = store.tick_ts
+		this.chasing_target_id = nil
+
+		U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+
+		local wait_time = shots < ra.max_shots and this.wait_time or this.wait_spent_time
+
+		::label_29_1::
+
+		search_ts = store.tick_ts
+
+		if shots < ra.max_shots then
+			target = find_target(ra.max_range)
+
+			if target then
+				goto label_29_0
+			end
+		end
+
+		while store.tick_ts - search_ts < ra.search_cooldown * this.owner.tower.cooldown_factor do
+			move_step(dest)
+			coroutine.yield()
+		end
+
+		if wait_time > store.tick_ts - wait_ts then
+			goto label_29_1
+		end
+
+		this.tween.ts = store.tick_ts
+		this.tween.reverse = true
+
+		U.y_wait_unconditional(store, this.tween.props[1].keys[2][1])
+	end
+end
+
+scripts.high_elven_sentinel_extra = {}
+
+function scripts.high_elven_sentinel_extra.update(this, store)
+	local sb_sid, ss_sid = 1, 2
+	local sb = this.render.sprites[sb_sid]
+	local ss = this.render.sprites[ss_sid]
+	local ra = this.ranged.attacks[1]
+	local fm = this.force_motion
+
+	local function move_step(dest)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local ramp_radius = fm.ramp_radius
+		local df = (not ramp_radius or ramp_radius < dist) and 1 or math.max(dist / ramp_radius, 0.1)
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step * df, dx, dy)))
+		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
+		fm.v.x, fm.v.y = V.trim(fm.max_v, fm.v.x, fm.v.y)
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = V.mul(-1 * fm.fr / store.tick_length, fm.v.x, fm.v.y)
+	end
+
+	local function find_target(range)
+		return U.find_foremost_enemy_in_range_filter_off(this.pos, range, false, ra.vis_flags, ra.vis_bans)
+	end
+
+	local wait_ts, shoot_ts, search_ts, shots = 0, 0, 0, 0
+	local target, dist
+	local dest = v(0, 0)
+	local ps = E:create_entity(this.particles_name)
+
+	ps.particle_system.track_id = this.id
+	ps.particle_system.track_offset = v(0, this.flight_height)
+
+	simulation:queue_insert_entity(ps)
+	U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+
+	ss.hidden = true
+	sb.z = Z_OBJECTS
+	sb.sort_y = this.pos.y
+	ps.particle_system.emit = true
+	ps.particle_system.sort_y = this.pos.y
+	this.tween.reverse = false
+	this.tween.ts = store.tick_ts
+	shots = 0
+
+	while not target do
+		target = find_target(ra.max_range)
+
+		coroutine.yield()
+	end
+
+	::label_29_0::
+
+	sb.sort_y_offset = 0
+	ss.hidden = false
+	ps.particle_system.emit = false
+	this.chasing_target_id = target.id
+	dest.x, dest.y = target.pos.x, target.pos.y
+
+	repeat
+		dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
+
+		move_step(dest)
+		coroutine.yield()
+	until dist < ra.shoot_range or target.health.dead or band(ra.vis_flags, target.vis.bans) ~= 0
+
+	if shots < ra.max_shots and store.entities[target.id] and not target.health.dead and band(ra.vis_flags, target.vis.bans) == 0 then
+		if store.tick_ts - shoot_ts > ra.cooldown then
+			shoot_ts = store.tick_ts
+			shots = shots + 1
+
+			U.animation_start(this, "shoot", nil, store.tick_ts, false, sb_sid)
+			U.y_wait_unconditional(store, ra.shoot_time)
+
+			local b = E:create_entity(ra.bullet)
+
+			b.pos.x, b.pos.y = this.pos.x + sb.offset.x, this.pos.y + sb.offset.y
+			b.bullet.from = V.vclone(b.pos)
+			b.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			b.bullet.target_id = target.id
+			b.bullet.source_id = this.id
+
+			simulation:queue_insert_entity(b)
+			U.y_animation_wait(this, sb_sid)
+			U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+		end
+
+		goto label_29_0
+	end
+
+	wait_ts = store.tick_ts
+	this.chasing_target_id = nil
+
+	U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+
+	local wait_time = shots < ra.max_shots and this.wait_time or this.wait_spent_time
+
+	::label_29_1::
+
+	search_ts = store.tick_ts
+
+	if shots < ra.max_shots then
+		target = find_target(ra.max_range)
+
+		if target then
+			goto label_29_0
+		end
+	end
+
+	while store.tick_ts - search_ts < ra.search_cooldown do
+		move_step(dest)
+		coroutine.yield()
+	end
+
+	if wait_time > store.tick_ts - wait_ts then
+		goto label_29_1
+	end
+
+	this.tween.ts = store.tick_ts
+	this.tween.reverse = true
+
+	U.y_wait_unconditional(store, this.tween.props[1].keys[2][1])
+	simulation:queue_remove_entity(this)
+end
+
 -- 高等精灵法师
 scripts.tower_high_elven = {
 	get_info = function(this)
@@ -2031,6 +2340,7 @@ scripts.tower_high_elven = {
 								local mod = E:create_entity(ta.spell)
 
 								mod.modifier.target_id = target.id
+								mod.modifier.source_id = this.id
 								mod.modifier.level = pow_t.level
 								mod.modifier.damage_factor = tw.damage_factor
 
@@ -2074,6 +2384,7 @@ scripts.tower_high_elven = {
 								b.bullet.damage_factor = tw.damage_factor
 								b.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 								b.bullet.target_id = enemy.id
+								b.bullet.source_id = this.id
 								b.bullet.from = v(this.pos.x + bo.x, this.pos.y + bo.y)
 								b.pos = vclone(b.bullet.from)
 
@@ -2982,6 +3293,7 @@ scripts.tower_necromancer = {
 						bullet.bullet.damage_factor = this.tower.damage_factor
 						bullet.bullet.to = vclone(enemy.pos)
 						bullet.bullet.target_id = enemy.id
+						bullet.bullet.source_id = this.id
 
 						local start_offset = ba.bullet_start_offset[ai]
 
@@ -3501,7 +3813,7 @@ function scripts.decal_pixie.update(this, store)
 				if a.type == "mod" then
 					for _, m in pairs(a.mods) do
 						e = E:create_entity(m)
-						e.modifier.source_id = this.id
+						e.modifier.source_id = this.owner.id
 						e.modifier.target_id = target.id
 						e.modifier.level = this.attack_level
 						e.modifier.damage_factor = this.owner.tower.damage_factor
@@ -3510,7 +3822,7 @@ function scripts.decal_pixie.update(this, store)
 					end
 				else
 					e = E:create_entity(a.bullet)
-					e.bullet.source_id = this.id
+					e.bullet.source_id = this.owner.id
 					e.bullet.target_id = target.id
 					e.bullet.from = v(this_pos.x + a.bullet_start_offset.x, this_pos.y + a.bullet_start_offset.y)
 					e.bullet.to = v(target.pos.x, target.pos.y)
@@ -5159,6 +5471,7 @@ function scripts.druid_shooter_sylvan.update(this, store)
 				local mod = E:create_entity(a.spell)
 
 				mod.modifier.target_id = target.id
+				mod.modifier.source_id = this.owner.id
 				mod.modifier.level = this.owner.powers.sylvan.level
 				mod.modifier.damage_factor = this.owner.tower.damage_factor
 
@@ -5191,6 +5504,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 
 				new_mod.modifier.target_id = new_target.id
 				new_mod.modifier.level = this.modifier.level
+				new_mod.modifier.source_id = this.modifier.source_id
 				new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
 
 				simulation:queue_insert_entity(new_mod)
@@ -5272,6 +5586,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 				local new_mod = E:create_entity(this.template_name)
 
 				new_mod.modifier.target_id = new_target.id
+				new_mod.modifier.source_id = this.modifier.source_id
 				new_mod.modifier.level = this.modifier.level
 				new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
 
@@ -21563,15 +21878,6 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 	end
 
 	local tower_id = this.owner.id
-	local unit_damage_factor = 1
-	local cooldown_factor = 1
-
-	local function check_tower_damage_factor()
-		if store.entities[tower_id] then
-			unit_damage_factor = store.entities[tower_id].tower.damage_factor
-			cooldown_factor = store.entities[tower_id].tower.cooldown_factor
-		end
-	end
 
 	ca.ts = store.tick_ts
 	sp.offset.y = this.flight_height
@@ -21593,8 +21899,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 		end
 
 		while ca.active do
-			check_tower_damage_factor()
-			if ca.target_id ~= nil and store.tick_ts - ca.ts > ca.cooldown * cooldown_factor then
+			if ca.target_id ~= nil and store.tick_ts - ca.ts > ca.cooldown * this.owner.tower.cooldown_factor then
 				ca.ts = store.tick_ts
 
 				local an, af, ai
@@ -21641,8 +21946,8 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 						b.bullet.from = V.vclone(b.pos)
 						b.bullet.to = pred_pos
 						b.bullet.target_id = target.id
-						b.bullet.source_id = this.id
-						b.bullet.damage_factor = unit_damage_factor
+						b.bullet.source_id = tower_id
+						b.bullet.damage_factor = this.owner.tower.damage_factor
 
 						simulation:queue_insert_entity(b)
 					end
@@ -25634,7 +25939,7 @@ function scripts.mod_grim_cemetery_explode.remove(this, store)
 		for i = 1, #targets do
 			local target = targets[i]
 
-			local d = E.assign_damage(this.explode_damage_type, this.explode_damage[this.modifier.level] * this.modifier.damage_factor, this.id, target.id)
+			local d = E.assign_damage(this.explode_damage_type, this.explode_damage[this.modifier.level] * this.modifier.damage_factor, this.modifier.target_id, target.id)
 
 			queue_damage(store, d)
 
@@ -25643,7 +25948,7 @@ function scripts.mod_grim_cemetery_explode.remove(this, store)
 			m.modifier.level = this.modifier.level
 			m.modifier.damage_factor = this.modifier.damage_factor
 			m.modifier.target_id = target.id
-			m.modifier.source_id = this.id
+			m.modifier.source_id = this.modifier.target_id
 
 			simulation:queue_insert_entity(m)
 		end
@@ -27559,7 +27864,7 @@ function scripts.ignis_altar_subunit.update(this, store)
 						a1.ts = start_ts
 						local mod = E:create_entity(a1.spell)
 						mod.modifier.target_id = enemy.id
-						mod.modifier.source_id = this.id
+						mod.modifier.source_id = owner.id
 						simulation:queue_insert_entity(mod)
 						U.animation_start_default(this, "active", nil, store.tick_ts, true)
 						coroutine.yield()
@@ -27600,7 +27905,7 @@ function scripts.mod_ignis_altar_single_extinction.remove(this, store)
 
 			if enemies then
 				for _, e in ipairs(enemies) do
-					local d = E.assign_damage(this.explosion_damage_type, this.explosion_damage * this.modifier.damage_factor, this.id, e.id)
+					local d = E.assign_damage(this.explosion_damage_type, this.explosion_damage * this.modifier.damage_factor, this.modifier.source_id, e.id)
 					queue_damage(store, d)
 				end
 			end
@@ -27611,61 +27916,54 @@ function scripts.mod_ignis_altar_single_extinction.remove(this, store)
 end
 
 scripts.aura_bullet_ignis_altar = {
-	insert = function(this, store)
+	update = function(this, store)
 		if this.aura.level > 0 then
 			this.aura.mods = this.mods_upgraded
 			this.render.sprites[1].prefix = this.render.sprites[1].prefix_upgraded
 		end
-	end
-}
 
-function scripts.aura_bullet_ignis_altar.update(this, store)
-	if this.aura.level > 0 then
-		this.aura.mods = this.mods_upgraded
-		this.render.sprites[1].prefix = this.render.sprites[1].prefix_upgraded
-	end
+		local last_hit_ts = store.tick_ts - this.aura.cycle_time
 
-	local last_hit_ts = store.tick_ts - this.aura.cycle_time
+		U.animation_start(this, "start", nil, store.tick_ts, false, 1)
+		local start_ended = false
 
-	U.animation_start(this, "start", nil, store.tick_ts, false, 1)
-	local start_ended = false
+		while true do
+			if not start_ended and U.animation_finished(this, 1) then
+				start_ended = true
+				U.animation_start(this, "run", nil, store.tick_ts, true, 1)
+			end
+			if store.tick_ts - this.aura.ts > this.actual_duration then
+				break
+			end
 
-	while true do
-		if not start_ended and U.animation_finished(this, 1) then
-			start_ended = true
-			U.animation_start(this, "run", nil, store.tick_ts, true, 1)
-		end
-		if store.tick_ts - this.aura.ts > this.actual_duration then
-			break
-		end
+			if store.tick_ts - last_hit_ts > this.aura.cycle_time then
+				last_hit_ts = store.tick_ts
 
-		if store.tick_ts - last_hit_ts > this.aura.cycle_time then
-			last_hit_ts = store.tick_ts
+				local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+				if targets then
+					for i, target in ipairs(targets) do
+						local mods = this.aura.mods
 
-			local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
-			if targets then
-				for i, target in ipairs(targets) do
-					local mods = this.aura.mods
+						for _, mod_name in ipairs(mods) do
+							local new_mod = E:create_entity(mod_name)
 
-					for _, mod_name in ipairs(mods) do
-						local new_mod = E:create_entity(mod_name)
+							new_mod.modifier.target_id = target.id
+							new_mod.modifier.source_id = this.id
+							new_mod.modifier.damage_factor = this.aura.damage_factor
 
-						new_mod.modifier.target_id = target.id
-						new_mod.modifier.source_id = this.id
-						new_mod.modifier.damage_factor = this.aura.damage_factor
-
-						simulation:queue_insert_entity(new_mod)
+							simulation:queue_insert_entity(new_mod)
+						end
 					end
 				end
 			end
+
+			coroutine.yield()
 		end
 
-		coroutine.yield()
+		this.tween.ts = store.tick_ts
+		this.tween.disabled = nil
 	end
-
-	this.tween.ts = store.tick_ts
-	this.tween.disabled = nil
-end
+}
 
 scripts.soldier_ignis_altar_elemental = {}
 
@@ -29357,7 +29655,7 @@ function scripts.soldier_wicked_sisters.update(this, store)
 				b.bullet.from:copy(b.pos)
 				b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
-				b.bullet.source_id = this.id
+				b.bullet.source_id = tw.id
 				simulation:queue_insert_entity(b)
 
 				U.y_animation_wait_default(this)
@@ -29385,7 +29683,7 @@ function scripts.soldier_wicked_sisters.update(this, store)
 				b.pos.x = this.pos.x + (af and -1 or 1) * ab.start_offsets[wick_idx].x
 				b.pos.y = this.pos.y + ab.start_offsets[wick_idx].y
 				b.bullet.from:copy(b.pos)
-				b.bullet.source_id = this.id
+				b.bullet.source_id = tw.id
 				b.bullet.to:set(trigger.pos.x + trigger.unit.hit_offset.x, trigger.pos.y + trigger.unit.hit_offset.y)
 				b.bullet.target_id = trigger.id
 

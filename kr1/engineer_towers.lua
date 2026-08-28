@@ -3034,6 +3034,7 @@ tt = RT("mod_ignis_altar_damage", "mod_damage")
 tt.damage_min = 8
 tt.damage_max = 8
 tt.damage_type = DAMAGE_EXPLOSION
+tt.modifier.allows_duplicates = true
 
 -- Modifier: Slow
 tt = RT("mod_ignis_altar_slow", "mod_slow")

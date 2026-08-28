@@ -7015,7 +7015,7 @@ function scripts.mod_damage.insert(this, store)
 	end
 	value = value * this.modifier.damage_factor
 
-	local d = E.assign_damage(this.damage_type, value, this.id, target.id)
+	local d = E.assign_damage(this.damage_type, value, this.modifier.source_id, target.id)
 
 	queue_damage(store, d)
 

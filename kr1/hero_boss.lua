@@ -713,6 +713,8 @@ local function inherit_from_hero_template(new_template, old_template)
 
 		for _, a in pairs(t.melee.attacks) do
 			a.disabled = nil
+			a.xp_from_skill = nil
+			a.xp_gain_factor = nil
 		end
 	end
 
@@ -721,6 +723,8 @@ local function inherit_from_hero_template(new_template, old_template)
 
 		for _, a in pairs(t.ranged.attacks) do
 			a.disabled = nil
+			a.xp_from_skill = nil
+			a.xp_gain_factor = nil
 		end
 	end
 
@@ -729,6 +733,8 @@ local function inherit_from_hero_template(new_template, old_template)
 
 		for _, a in pairs(t.timed_attacks.list) do
 			a.disabled = nil
+			a.xp_from_skill = nil
+			a.xp_gain_factor = nil
 		end
 	end
 
