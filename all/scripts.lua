@@ -4100,6 +4100,7 @@ function scripts.ray_simple.update(this, store)
 		for _, mod_name in ipairs(mods) do
 			local m = E:create_entity(mod_name)
 
+			m.modifier.source_id = b.source_id
 			m.modifier.target_id = b.target_id
 			m.modifier.level = b.level
 			m.modifier.damage_factor = b.damage_factor

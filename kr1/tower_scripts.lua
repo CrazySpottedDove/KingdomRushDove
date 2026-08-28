@@ -1694,6 +1694,7 @@ scripts.tower_wild_magus = {
 							b.bullet.from = vclone(b.pos)
 							b.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 							b.bullet.target_id = enemy.id
+							b.bullet.source_id = this.id
 							b.bullet.level = pow_e.level
 							b.bullet.damage_factor = tw.damage_factor
 
@@ -1799,6 +1800,7 @@ scripts.tower_wild_magus = {
 						b.bullet.from:copy(b.pos)
 						b.bullet.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 						b.bullet.target_id = enemy.id
+						b.bullet.source_id = this.id
 						b.bullet.damage_factor = tw.damage_factor
 
 						if not enemy.enemy.can_do_magic then
@@ -26101,7 +26103,7 @@ function scripts.soldier_balloon.update(this, store, script)
 					b.bullet.from:copy(b.pos)
 					b.bullet.to = pred_pos
 					b.bullet.target_id = target.id
-					b.bullet.source_id = this.id
+					b.bullet.source_id = tw.id
 					simulation:queue_insert_entity(b)
 					while not U.animation_finished(this, shooter_sid) do
 						coroutine.yield()
@@ -26171,7 +26173,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x * (this.render.sprites[2].flip_x and -1 or 1), this.pos.y + aa.bullet_start_offset.y
 						b.bullet.from:copy(b.pos)
 						b.bullet.to = this.pos
-						b.bullet.source_id = this.id
+						b.bullet.source_id = tw.id
 						simulation:queue_insert_entity(b)
 					end
 					U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
@@ -26205,6 +26207,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						b.pos.x = this.pos.x + (af and -1 or 1) * ao.start_offset.x
 						b.pos.y = this.pos.y + ao.start_offset.y
 						b.render.sprites[1].ts = store.tick_ts
+						b.bullet.source_id = tw.id
 						b.bullet.level = pow_o.level
 						b.bullet.from:copy(b.pos)
 						b.bullet.to = this.pos

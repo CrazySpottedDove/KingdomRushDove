@@ -16313,7 +16313,7 @@ function scripts.mod_eldritch.update(this, store)
 	local d = E.create_damage()
 
 	d.damage_type = DAMAGE_EAT
-	d.source_id = this.id
+	d.source_id = this.modifier.source_id
 	d.target_id = target.id
 
 	queue_damage(store, d)
@@ -16370,7 +16370,7 @@ function scripts.mod_eldritch.update(this, store)
 
 	if targets then
 		for _, t in ipairs(targets) do
-			local d = E.assign_damage(this.damage_type, this.damage_levels[m.level], this.id, t.id)
+			local d = E.assign_damage(this.damage_type, this.damage_levels[m.level], this.modifier.source_id, t.id)
 
 			queue_damage(store, d)
 		end
@@ -16410,7 +16410,7 @@ function scripts.mod_pixie_pickpocket.insert(this, store)
 		simulation:queue_insert_entity(fx)
 	end
 
-	local damage = E.assign_damage(m.damage_type, math.random(m.damage_min, m.damage_max) * m.damage_factor, this.id, target.id)
+	local damage = E.assign_damage(m.damage_type, math.random(m.damage_min, m.damage_max) * m.damage_factor, this.modifier.source_id, target.id)
 
 	queue_damage(store, damage)
 	simulation:queue_remove_entity(this)
