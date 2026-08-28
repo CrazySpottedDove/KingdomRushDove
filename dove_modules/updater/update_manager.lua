@@ -482,7 +482,15 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 	local chunk_size = current_chunk_size
 
 	local encoded_file = url_encode(file_param)
-	local url = url_base .. "?file=" .. encoded_file
+	-- 两种 URL 模式：
+	--   1) url_base 以 "/" 结尾 → 路径模式：{base}{file}（如 /_assets/ 静态资源下载）
+	--   2) 否则 → 查询参数模式：{base}?file={file}（如 /file、旧 /assets/download）
+	local url
+	if url_base:sub(-1) == "/" then
+		url = url_base .. encoded_file
+	else
+		url = url_base .. "?file=" .. encoded_file
+	end
 
 	-- 获取文件总大小
 	local code, body, headers = async_request(url, {
@@ -795,7 +803,8 @@ local function sync_assets(added_or_modified)
 		return true
 	end
 
-	local url_base = server_address .. "assets/download"
+	-- 单文件回退下载走 /_assets/ 静态服务（/assets/download 接口已废弃）
+	local url_base = server_address .. "_assets/"
 	local file_count = #added_or_modified
 
 	local total_size = 0
