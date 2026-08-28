@@ -743,13 +743,13 @@ function M.register(sys)
 				local pop_conds = d.pop_conds
 				if (not pop_chance or random() < pop_chance) and (not pop_conds or band(d.damage_result, pop_conds) ~= 0) then
 					local name = d.pop[random(1, #d.pop)]
-					local e = E:create_entity(name)
+					local pop = E:create_entity(name)
 
-					if e.pop_over_target then
+					if pop.pop_over_target then
 						pop_entity = e
 					end
 
-					local pos_y = pop_entity.pos.y + e.pop_y_offset
+					local pos_y = pop_entity.pos.y + pop.pop_y_offset
 
 					if pop_entity.unit then
 						if pop_entity.unit.pop_offset then
@@ -759,11 +759,11 @@ function M.register(sys)
 						end
 					end
 
-					e.pos:set(pop_entity.pos.x, pos_y)
-					e.render.sprites[1].r = random(-21, 21) * 0.017453292519943295
-					e.render.sprites[1].ts = store.tick_ts
+					pop.pos:set(pop_entity.pos.x, pos_y)
+					pop.render.sprites[1].r = random(-21, 21) * 0.017453292519943295
+					pop.render.sprites[1].ts = store.tick_ts
 
-					simulation:queue_insert_entity(e)
+					simulation:queue_insert_entity(pop)
 				end
 			end
 		end
