@@ -3836,7 +3836,8 @@ function PauseView:hide()
 	end
 end
 
-PauseView.update = KF.update_empty
+-- 暂停菜单可见时才向子视图传播 update（音量条拖动依赖子视图 update，隐藏时保持零开销）
+PauseView.update = KF.update_only_propagate_to_children
 
 DefeatView = class("DefeatView", KView)
 
