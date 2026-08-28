@@ -1316,19 +1316,19 @@ local heroes = {
 			range = 200,
 			max_nodes_to_goal = 50,
 			cooldown = {20, 20, 20},
-			hp_max = {800, 1600, 2400},
-			duration = {4, 6, 8},
+			hp_max = {1000, 2000, 3000},
+			duration = {8, 8, 8},
 			xp_gain = {160, 320, 480},
 			pumpkin = {
 				speed = 20,
 				armor = 0,
 				magic_armor = 0,
-				hp = {0.75, 0.6, 0.4}
+				hp = {0.7, 0.55, 0.4}
 			}
 		},
 		skill_path_aoe = {
 			max_range = 180,
-			min_targets = 3,
+			min_targets = 1,
 			slow_factor = 0.5,
 			min_range = 75,
 			node_prediction = 30,

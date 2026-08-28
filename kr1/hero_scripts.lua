@@ -23386,8 +23386,6 @@ function scripts.hero_witch.update(this, store)
 	local a, skill, brk, stam
 	local basic_ranged = this.ranged.attacks[1]
 	local skill_soldiers_attack = this.timed_attacks.list[1]
-	local skill_polymorph = this.timed_attacks.list[2]
-	local skill_path_aoe_attack = this.timed_attacks.list[3]
 	local p_sys
 
 	this.health_bar.hidden = false
@@ -23396,18 +23394,6 @@ function scripts.hero_witch.update(this, store)
 	p_sys.particle_system.track_id = this.id
 
 	simulation:queue_insert_entity(p_sys)
-
-	if not skill_soldiers_attack.disabled then
-		skill_soldiers_attack.ts = store.tick_ts - skill_soldiers_attack.cooldown
-	end
-
-	if not skill_polymorph.disabled then
-		skill_polymorph.ts = store.tick_ts - skill_polymorph.cooldown
-	end
-
-	if not skill_path_aoe_attack.disabled then
-		skill_path_aoe_attack.ts = store.tick_ts - skill_path_aoe_attack.cooldown
-	end
 
 	local function custom_new_rally()
 		local r = this.nav_rally
