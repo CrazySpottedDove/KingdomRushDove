@@ -807,19 +807,6 @@ local function sync_assets(added_or_modified)
 	local url_base = server_address .. "_assets/"
 	local file_count = #added_or_modified
 
-	local total_size = 0
-	for _, f in ipairs(added_or_modified) do
-		total_size = total_size + ((asset_sizes and asset_sizes[f]) and asset_sizes[f][1] or 0)
-	end
-
-	if file_count > 1000 or total_size > 100 * 1024 * 1024 then
-		set_state(STATE_DOWNLOADING_ASSETS_HEAVY)
-	elseif file_count > 100 or total_size > 30 * 1024 * 1024 then
-		set_state(STATE_DOWNLOADING_ASSETS_MIDDLE_HEAVY)
-	else
-		set_state(STATE_DOWNLOADING_ASSETS)
-	end
-
 	for i, file_path in ipairs(added_or_modified) do
 		-- 下载到缓存目录，而不是直接覆盖本地文件
 		local cached_path = update_cache_dir .. "/assets/" .. file_path
