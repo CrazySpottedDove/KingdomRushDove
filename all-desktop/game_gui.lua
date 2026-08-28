@@ -3427,8 +3427,8 @@ function HudPauseButton:initialize()
 
 	local button = KImageButton:new("pause_btn_0001", "pause_btn_0002", "pause_btn_0002")
 
-	button.anchor = v(button.size.x * 0.5, 0)
-	button.pos = v(self.size.x * 0.5, 25)
+	button.anchor = v(button.size.x * 0.5, self.size.y * 0.5)
+	button.pos = v(self.size.x * 0.5, 25 + self.size.y * 0.5)
 	button.draw = KF.draw_without_children_and_clip
 
 	function button.on_click()
