@@ -18729,7 +18729,7 @@ function scripts.bullet_hero_hunter_ultimate_ranged_attack.update(this, store)
 	U.y_wait_unconditional(store, b.flight_time)
 
 	if target then
-		local d = SU.create_bullet_damage(b, target.id, this)
+		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
 
