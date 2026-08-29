@@ -458,6 +458,8 @@ local function damage_trace_enabled(store, d)
 			source = store.entities[source.modifier.source_id]
 		elseif source.aura and source.aura.source_id then
 			source = store.entities[source.aura.source_id]
+		elseif source.soldier and source.soldier.tower_id then
+			source = store.entities[source.soldier.tower_id]
 		else
 			break
 		end
@@ -475,7 +477,7 @@ local function damage_trace_enabled(store, d)
 			if not dt[d.damage_type] then
 				dt[d.damage_type] = 0
 			end
-			dt[d.damage_type] = dt[d.damage_type] + d.damage_applied
+			dt[d.damage_type] = dt[d.damage_type] + d.damage_effective
 		end
 	end
 end
@@ -868,7 +870,7 @@ function M.register(sys)
 					else
 						if band(d.damage_type, DAMAGE_EAT) ~= 0 then
 							local eat_amt = math.max(h.hp, 0)
-
+							d.damage_effective = eat_amt
 							d.damage_applied = eat_amt
 							d.damage_result = bor(d.damage_result, DR_KILL)
 							-- damage_trace_record_event(store, e, d, "eat", eat_amt, starting_hp, 0)
@@ -876,7 +878,7 @@ function M.register(sys)
 							self.on_damage_applied(store, d, e)
 						else
 							local actual_damage = U.predict_damage(e, d)
-
+							d.damage_effective = math.min(h.hp, actual_damage)
 							h.hp = h.hp - actual_damage
 							d.damage_applied = actual_damage
 							-- damage_trace_record_event(store, e, d, "hp", actual_damage, starting_hp, h.hp)

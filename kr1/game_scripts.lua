@@ -222,193 +222,6 @@ function scripts.aura_totem.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-scripts.twister = {}
-
-function scripts.twister.update(this, store)
-	local dmax = this.damage_max + this.aura.level * this.damage_inc
-	local dmin = this.damage_min + this.aura.level * this.damage_inc
-	local enemies_max = this.enemies_max + this.aura.level * this.enemies_inc
-
-	U.animation_start_default(this, "start", nil, store.tick_ts, false)
-
-	while not U.animation_finished_default(this) do
-		coroutine.yield()
-	end
-
-	S:queue("ArchmageTwisterTravel")
-	U.animation_start_default(this, "travel", nil, store.tick_ts, true)
-
-	local np = this.nav_path
-
-	np.ni = km.clamp(P:get_start_node(np.pi), P:get_end_node(np.pi), np.ni)
-
-	local walk_nodes = this.nodes + this.aura.level * this.nodes_inc
-	local nodes_step = -5
-	local picked_enemies = this.picked_enemies
-	local terrains = P:path_terrain_types(np.pi)
-
-	terrains = band(terrains, bnot(TERRAIN_CLIFF))
-
-	local last_node = P:get_start_node(np.pi) + this.nodes_limit
-
-	for i = 1, math.ceil(walk_nodes / math.abs(nodes_step)) do
-		if last_node >= np.ni and band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_CLIFF) == 0 then
-			coroutine.yield()
-
-			break
-		end
-
-		local next_pos = P:node_pos(np.pi, np.spi, np.ni + nodes_step)
-
-		if P:is_node_valid(np.pi, np.ni + nodes_step, NF_TWISTER) and band(GR:cell_type(next_pos.x, next_pos.y), TERRAIN_CLIFF) == 0 then
-			np.ni = np.ni + nodes_step
-		end
-
-		np.spi = np.spi == 2 and 3 or 2
-
-		U.set_destination(this, P:node_pos(np.pi, np.spi, np.ni))
-
-		while not this.motion.arrived do
-			U.walk_off__accel__unsnapped(this, store.tick_length)
-			coroutine.yield()
-
-			if this.interrupt then
-				goto label_105_0
-			end
-
-			if enemies_max > #picked_enemies then
-				local _, enemies = U.find_foremost_enemy_in_range_filter_on(this.pos, this.pickup_range, false, this.aura.vis_flags, this.aura.vis_bans, function(e)
-					return (not e.enemy.counts.twister or e.enemy.counts.twister < this.max_times_applied) and band(bnot(e.enemy.valid_terrains), terrains) == 0
-				end)
-
-				if enemies then
-					for _, enemy in ipairs(enemies) do
-						if enemies_max > #picked_enemies then
-							-- AC:inc_check("FUJITA5", 1)
-							table.insert(picked_enemies, enemy)
-							SU.remove_modifiers(store, enemy)
-							SU.remove_auras(store, enemy)
-							U.sprites_hide(enemy, nil, nil, true)
-							SU.stun_inc(enemy)
-							U.cast_silence(enemy, store.tick_ts)
-							U.unblock_all(store, enemy)
-
-							if enemy.health_bar then
-								enemy.health_bar.hidden = true
-							end
-
-							if enemy.ui then
-								enemy.ui.can_click = false
-							end
-
-							if enemy.count_group then
-								enemy.count_group.in_limbo = true
-							end
-
-							U.bans_add(enemy.vis, F_ALL)
-						end
-					end
-				end
-			end
-		end
-	end
-
-	for _, enemy in pairs(picked_enemies) do
-		if not enemy.enemy.counts.twister then
-			enemy.enemy.counts.twister = 1
-		else
-			enemy.enemy.counts.twister = enemy.enemy.counts.twister + 1
-		end
-
-		enemy.nav_path.pi = np.pi
-		enemy.nav_path.ni = km.clamp(1, #P:path(np.pi) - 1, math.random(-2, 2) + np.ni)
-		enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
-
-		if enemy.ui then
-			enemy.ui.can_click = true
-		end
-
-		if enemy.health_bar then
-			enemy.health_bar.hidden = nil
-		end
-
-		U.bans_remove(enemy.vis, F_ALL)
-
-		SU.stun_dec(enemy)
-		U.remove_silence(enemy, store.tick_ts)
-		U.sprites_show(enemy, nil, nil, true)
-	end
-
-	coroutine.yield()
-
-	for _, enemy in pairs(picked_enemies) do
-		local d = E.assign_damage(this.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.id, enemy.id)
-
-		queue_damage(store, d)
-
-		local m = E:create_entity(this.after_mod)
-
-		m.source_id = this.id
-		m.target_id = enemy.id
-
-		simulation:queue_insert_entity(m)
-	end
-
-	::label_105_0::
-
-	S:stop("ArchmageTwisterTravel")
-	U.animation_start_default(this, "end", nil, store.tick_ts, false)
-
-	local bolt = E:create_entity("bolt_archmage")
-	bolt.bullet.damage_factor = this.aura.damage_factor
-	bolt.pos = V.vclone(this.pos)
-	bolt.bullet.from.x, bolt.bullet.from.y = bolt.pos.x, bolt.pos.y
-	bolt.bullet.target_id = nil
-	bolt.bullet.store = true
-	bolt.bullet.to.x, bolt.bullet.to.y = bolt.pos.x, bolt.pos.y
-	if this.blast_chance then
-		if this.blast_chance > math.random() then
-			local blast = E:create_entity("bolt_blast")
-			blast.bullet.damage_factor = this.aura.damage_factor
-			blast.bullet.level = this.blast_level
-			bolt.bullet.payload = blast
-		end
-	end
-	simulation:queue_insert_entity(bolt)
-
-	while not U.animation_finished_default(this) do
-		coroutine.yield()
-	end
-
-	local target_found = false
-
-	for i = 1, #this.picked_enemies do
-		local enemy = this.picked_enemies[i]
-		if not enemy.health.dead then
-			bolt.bullet.target_id = enemy.id
-			bolt.bullet.to.x, bolt.bullet.to.y = enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y
-			bolt.bullet.store = false
-			target_found = true
-			break
-		end
-	end
-
-	this.picked_enemies = {}
-	U.sprites_hide(this)
-	while not target_found do
-		U.y_wait_unconditional(store, fts(5))
-		local target = U.find_first_enemy_in_range_filter_off(this.pos, 160, F_RANGED, F_NONE)
-		if target then
-			bolt.bullet.target_id = target.id
-			bolt.bullet.store = false
-			bolt.bullet.to.x, bolt.bullet.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
-			target_found = true
-		end
-	end
-
-	simulation:queue_remove_entity(this)
-end
-
 scripts.pestilence = {}
 
 function scripts.pestilence.insert(this, store)
@@ -2714,14 +2527,10 @@ function scripts.ray_tesla.update(this, store)
 					local mod = E:create_entity(b.mod)
 					local bounce_factor = UP:get_upgrade("engineer_efficiency") and 1 or this.bounce_damage_factor
 					local total_damage = (math.random(this.bounce_damage_min, this.bounce_damage_max) + b.level * this.bounce_damage_inc) * bounce_factor
-					-- local actual_damage = math.min(total_damage, target.health.hp)
-					-- local last_damage = total_damage - actual_damage
-					-- local frame_damage = actual_damage / mod.dps.cocos_frames
 					local frame_damage = total_damage / mod.dps.cocos_frames
 					local mod_damage = frame_damage * mod.dps.cocos_cycles
 					local dps_hits = mod.modifier.duration / mod.dps.damage_every
 					local dps_damage = mod_damage / dps_hits
-					-- local first_damage = mod_damage - dps_damage * dps_hits
 
 					mod.modifier.damage_factor = b.damage_factor
 					mod.modifier.level = b.level
@@ -2729,8 +2538,6 @@ function scripts.ray_tesla.update(this, store)
 					mod.modifier.target_id = target.id
 					mod.dps.damage_max = dps_damage
 					mod.dps.damage_min = dps_damage
-					-- mod.dps.damage_last = last_damage
-					-- mod.dps.damage_first = dps_damage + first_damage
 
 					simulation:queue_insert_entity(mod)
 				end
@@ -2764,7 +2571,7 @@ function scripts.ray_tesla.update(this, store)
 					r.bounce_range = this.orig_bounce_range
 					r.bullet.to = V.vclone(bounce_target.pos)
 					r.bullet.target_id = bounce_target.id
-					r.bullet.source_id = target.id
+					r.bullet.source_id = b.source_id
 					r.bullet.damage_factor = b.damage_factor
 					r.bullet.level = b.level
 					r.max_bounces = this.max_bounces
@@ -2940,7 +2747,7 @@ function scripts.aura_ranger_thorn.update(this, store)
 
 	local function find_targets()
 		local targets = U.find_enemies_in_range_filter_on(this.pos, a.radius, a.vis_flags, a.vis_bans, function(e)
-			return not e.enemy._ranger_thron_ts or store.tick_ts - e.enemy._ranger_thron_ts >= a.cooldown * (store.entities[a.source_id] and store.entities[a.source_id].tower.cooldown_factor or 1) * 0.8
+			return not e.enemy._ranger_thorn_ts or store.tick_ts - e.enemy._ranger_thorn_ts >= a.cooldown * (store.entities[a.source_id] and store.entities[a.source_id].tower.cooldown_factor or 1) * 0.8
 		end)
 
 		return targets
@@ -2982,12 +2789,12 @@ function scripts.aura_ranger_thorn.update(this, store)
 					for i = 1, math.min(#targets, a.max_count + a.max_count_inc * owner.powers.thorn.level) do
 						local e = targets[i]
 
-						e.enemy._ranger_thron_ts = store.tick_ts
+						e.enemy._ranger_thorn_ts = store.tick_ts
 
 						local m = E:create_entity(a.mod)
 
 						m.modifier.target_id = e.id
-						m.modifier.source_id = this.id
+						m.modifier.source_id = a.source_id
 						m.modifier.level = owner.powers.thorn.level
 						m.modifier.duration = m.modifier.duration + m.modifier.duration_inc * owner.powers.thorn.level
 						m.modifier.damage_factor = owner.tower.damage_factor * m.modifier.damage_factor
@@ -3500,17 +3307,6 @@ function scripts.aura_skeleton_big.update(this, store)
 	return scripts.aura_apply_mod.update(this, store)
 end
 
-scripts.aura_abomination = {}
-
-function scripts.aura_abomination.update(this, store)
-	U.y_wait_unconditional(store, this.aura.delay)
-
-	this.tween.disabled = false
-	this.tween.ts = store.tick_ts
-
-	return scripts.aura_apply_mod.update(this, store)
-end
-
 scripts.mod_slow_curse = {}
 
 function scripts.mod_slow_curse.insert(this, store)
@@ -3595,7 +3391,7 @@ function scripts.mod_thorn.update(this, store)
 			hit_ts = store.tick_ts
 
 			local d = SU.create_attack_damage(this, target.id, this)
-
+			d.source_id = m.source_id
 			queue_damage(store, d)
 		end
 
@@ -8364,136 +8160,7 @@ function scripts.decal_whale.update(this, store)
 	log.debug("whale ended")
 end
 
-scripts.pirate_watchtower_parrot = {}
-
-function scripts.pirate_watchtower_parrot.update(this, store)
-	local sp = this.render.sprites[1]
-	local fm = this.force_motion
-	local ca = this.custom_attack
-	local dest = V.vclone(this.idle_pos)
-
-	local function force_move_step(dest, max_speed, ramp_radius)
-		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
-		local dist = V.len(dx, dy)
-		local df = (not ramp_radius or ramp_radius < dist) and 1 or math.max(dist / ramp_radius, 0.1)
-
-		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(495, V.mul(10 * df, dx, dy)))
-		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
-		fm.v.x, fm.v.y = V.trim(max_speed, fm.v.x, fm.v.y)
-		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
-		fm.a.x, fm.a.y = V.mul(-0.05 / store.tick_length, fm.v.x, fm.v.y)
-		sp.flip_x = this.pos.x < dest.x
-	end
-
-	sp.offset.y = this.flight_height
-
-	while true do
-		-- 由 owner 负责 remove 它，这里只进行退出
-		if not this.owner then
-			return
-		end
-		if store.tick_ts - ca.ts > ca.cooldown and not this.owner.tower.blocked then
-			local target = U.find_nearest_enemy(store, tpos(this.owner), 0, this.owner.attacks.range, ca.vis_flags, ca.vis_bans)
-
-			if not target then
-				SU.delay_attack(store, ca, 0.13333333333333333)
-			else
-				U.animation_start_default(this, "fly", nil, store.tick_ts, true)
-
-				dest.x, dest.y = this.bombs_pos.x, this.bombs_pos.y
-
-				local dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
-
-				while dist > 10 do
-					force_move_step(dest, this.flight_speed_busy)
-					coroutine.yield()
-
-					target = store.entities[target.id]
-
-					if not target or target.health.dead then
-						ca.ts = store.tick_ts
-
-						goto label_185_0
-					end
-
-					dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
-				end
-
-				U.animation_start_default(this, "carry", nil, store.tick_ts, true)
-
-				dest.x, dest.y = target.pos.x, target.pos.y
-				dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
-
-				while dist > 40 do
-					force_move_step(dest, this.flight_speed_busy)
-					coroutine.yield()
-
-					dest.x, dest.y = target.pos.x, target.pos.y
-					dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
-				end
-
-				local e = E:create_entity(ca.bullet)
-
-				e.pos.x, e.pos.y = this.pos.x, this.pos.y + this.flight_height - 8
-				e.bullet.from = V.vclone(e.pos)
-				e.bullet.source_id = this.id
-
-				simulation:queue_insert_entity(e)
-
-				local t_off = P:predict_enemy_node_advance(target, e.bullet.flight_time)
-				local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + t_off)
-
-				e.bullet.to = V.vclone(t_pos)
-				ca.ts = store.tick_ts
-				fm.v.x, fm.v.y = 0, 0
-				fm.a.x, fm.a.y = 0, 0
-				dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
-
-				local rdist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
-
-				U.animation_start_default(this, "fly", nil, store.tick_ts, true)
-
-				while rdist > 20 do
-					force_move_step(dest, this.flight_speed_busy)
-					coroutine.yield()
-					rdist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
-				end
-			end
-		end
-
-		::label_185_0::
-
-		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
-
-		if V.dist(dest.x, dest.y, this.idle_pos.x, this.idle_pos.y) > 43 or V.dist(dest.x, dest.y, this.pos.x, this.pos.y) < 10 then
-			dest = U.point_on_ellipse(this.idle_pos, 30, U.frandom(0, 2 * math.pi))
-		end
-
-		force_move_step(dest, this.flight_speed_idle, this.ramp_dist_idle)
-		coroutine.yield()
-	end
-end
-
 scripts.hero_steam_frigate = {}
-
-function scripts.hero_steam_frigate.get_info(this)
-	local b = E:get_template("steam_frigate_barrel")
-	local min, max = b.bullet.damage_min, b.bullet.damage_max
-
-	return {
-		type = STATS_TYPE_SOLDIER,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor
-	}
-end
-
-function scripts.hero_steam_frigate.insert(this, store)
-	return true
-end
 
 function scripts.hero_steam_frigate.update(this, store)
 	local ba = this.ranged.attacks[1]
@@ -15549,58 +15216,6 @@ function scripts.rock_perython.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-scripts.aura_arcane_burst = {}
-
-function scripts.aura_arcane_burst.update(this, store)
-	local a = this.aura
-	local target = this.target_id and store.entities[this.target_id]
-	local hit_pos = V.vclone(this.pos)
-
-	if target then
-		hit_pos.x, hit_pos.y = target.pos.x, target.pos.y
-	end
-
-	local targets = U.find_enemies_in_range_filter_off(hit_pos, a.radius, a.vis_flags, a.vis_bans)
-
-	if targets then
-		for _, target in ipairs(targets) do
-			local d = E.assign_damage(a.damage_type, a.level * a.damage_inc * a.damage_factor, this.id, target.id)
-
-			queue_damage(store, d)
-
-			if (band(target.vis.flags, F_BOSS) == 0 and 1 or 2) * math.random() < this.sleep_chance and band(target.vis.bans, F_STUN) == 0 then
-				local m = E:create_entity("mod_arrow_arcane_slumber")
-
-				m.modifier.target_id = target.id
-				m.modifier.source_id = this.id
-
-				simulation:queue_insert_entity(m)
-			end
-
-			if target.health.magic_armor <= 0 then
-				local m = E:create_entity("mod_arcane_burst")
-				m.modifier.target_id = target.id
-				m.modifier.source_id = this.id
-				m.modifier.damage_factor = a.damage_factor
-				m.modifier.level = a.level
-				simulation:queue_insert_entity(m)
-			end
-		end
-	end
-
-	if target and not target.health.dead and band(target.vis.flags, F_FLYING) == 0 then
-		local decal = E:create_entity("decal_arcane_burst_ground")
-
-		decal.pos.x, decal.pos.y = target.pos.x, target.pos.y
-		decal.tween.ts = store.tick_ts
-
-		simulation:queue_insert_entity(decal)
-	end
-
-	U.y_animation_play(this, nil, nil, store.tick_ts, 1)
-	simulation:queue_remove_entity(this)
-end
-
 scripts.aura_forest_eerie = {}
 
 function scripts.aura_forest_eerie.insert(this, store)
@@ -20380,13 +19995,6 @@ function scripts.mod_black_baby_dragon.insert(this, store)
 end
 
 scripts.soldier_baby_ashbite = {}
-
-function scripts.soldier_baby_ashbite.ranged_filter_fn(e, origin)
-	local pp = P:predict_enemy_pos(e, fts(12))
-	local allow = math.abs(pp.x - origin.x) > 30
-
-	return allow
-end
 
 function scripts.soldier_baby_ashbite.insert(this, store)
 	this.ranged.order = U.attack_order(this.ranged.attacks)

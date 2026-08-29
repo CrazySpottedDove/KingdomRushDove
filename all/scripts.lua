@@ -4384,6 +4384,8 @@ function scripts.fireball.update(this, store)
 				local mod = E:create_entity(b.mod)
 
 				mod.modifier.target_id = e.id
+				mod.modifier.source_id = b.source_id
+				mod.modifier.damage_factor = b.damage_factor
 				mod.xp_dest_id = b.source_id
 
 				simulation:queue_insert_entity(mod)
@@ -4419,6 +4421,8 @@ function scripts.fireball.update(this, store)
 
 		if fx.aura then
 			fx.aura.level = b.level
+			fx.aura.source_id = b.source_id
+			fx.aura.damage_factor = b.damage_factor
 		end
 
 		if fx.tween then
@@ -4697,7 +4701,7 @@ function scripts.aura_apply_mod.update(this, store)
 
 						new_mod.modifier.level = this.aura.level
 						new_mod.modifier.target_id = target.id
-						new_mod.modifier.source_id = this.id
+						new_mod.modifier.source_id = this.aura.source_id
 						new_mod.modifier.damage_factor = this.aura.damage_factor
 
 						if this.aura.hide_source_fx and target.id == this.aura.source_id then
@@ -4785,13 +4789,8 @@ function scripts.aura_apply_damage.update(this, store)
 				for i = 1, target_count do
 					local target = targets[i]
 
-					local d = E.create_damage()
+					local d = E.assign_damage(this.aura.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.aura.source_id, target.id)
 
-					d.source_id = this.id
-					d.target_id = target.id
-
-					d.value = math.random(dmin, dmax) * this.aura.damage_factor
-					d.damage_type = this.aura.damage_type
 					d.track_damage = this.aura.track_damage
 					d.xp_dest_id = this.aura.xp_dest_id
 					d.xp_gain_factor = this.aura.xp_gain_factor
@@ -4803,7 +4802,7 @@ function scripts.aura_apply_damage.update(this, store)
 
 						m.modifier.level = this.aura.level
 						m.modifier.target_id = target.id
-						m.modifier.source_id = this.id
+						m.modifier.source_id = this.aura.source_id
 						m.modifier.damage_factor = this.aura.damage_factor
 						if this.aura.hide_source_fx and target.id == this.aura.source_id then
 							m.render = nil

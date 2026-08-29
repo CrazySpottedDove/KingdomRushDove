@@ -729,7 +729,6 @@ tt.tower.type = "arcane"
 tt.tower.price = 230
 tt.tower.size = TOWER_SIZE_LARGE
 tt.info.enc_icon = 17
-tt.info.fn = scripts.tower_arcane.get_info
 tt.info.portrait = "kr3_info_portraits_towers_0009"
 tt.powers.burst = CC("power")
 tt.powers.burst.price_base = 200

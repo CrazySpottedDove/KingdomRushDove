@@ -841,7 +841,7 @@ tt.dps.damage_min = 5
 tt.dps.damage_every = 0.5
 
 tt = RT("enemy_orc_armored_mad", "enemy_orc_armored")
-tt.info.i18n_key = "enemy_orc_armored"
+tt.info.i18n_key = "ENEMY_ORC_ARMORED"
 tt.motion.max_speed = 1.1 * FPS
 tt.melee.attacks[1].mod = "mod_orc_blood"
 tt.strengthened = false
@@ -2284,9 +2284,6 @@ image_y = 115
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].name = "moon_enemy_aura"
 tt.auras.list[1].cooldown = 0
-tt.auras.list[2] = CC("aura_attack")
-tt.auras.list[2].cooldown = 0
-tt.auras.list[2].name = "aura_abomination"
 tt.death_spawns.name = "abomination_explosion_aura"
 tt.death_spawns.concurrent_with_death = true
 tt.unit.disintegrate_when_silenced_death = true
@@ -2317,41 +2314,6 @@ tt.unit.hide_after_death = true
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = F_POISON
 tt.vis.flags = bor(tt.vis.flags, F_MOCKING)
-
-tt = RT("aura_abomination", "aura")
-AC(tt, "render", "tween")
-tt.aura.active = false
-tt.aura.allowed_templates = {"enemy_halloween_zombie", "enemy_zombie_blackburn"}
-tt.aura.cooldown = 0
-tt.aura.delay = fts(30)
-tt.aura.duration = -1
-tt.aura.mod = "mod_abomination"
-tt.aura.radius = 120
-tt.aura.track_source = true
-tt.aura.use_mod_offset = false
-tt.aura.vis_bans = F_FRIEND
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_abomination.update
-tt.render.sprites[1].alpha = 0
-tt.render.sprites[1].anchor = vec_2(0.5, 0.28125)
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "CB_DeathKnight_aura_0001"
-tt.render.sprites[1].offset = vec_2(0, -16)
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].animated = true
-tt.render.sprites[2].name = "spectral_knight_aura"
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 0}, {fts(20), 200}}
-tt.tween.props[1].name = "alpha"
-tt.tween.props[2] = table.deepclone(tt.tween.props[1])
-tt.tween.props[2].sprite_id = 2
-tt.tween.remove = false
-
-tt = RT("mod_abomination", "mod_blood")
-tt.dps.damage_max = -2
-tt.dps.damage_min = -2
-tt.max_times_applied = 1
 
 tt = RT("enemy_werewolf", "enemy")
 AC(tt, "melee", "moon", "auras", "regen")
