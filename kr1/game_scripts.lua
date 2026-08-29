@@ -7572,17 +7572,14 @@ function scripts.spell_djinn.insert(this, store)
 	local target = store.entities[this.spell.target_id]
 
 	if not target or band(target.vis.bans, F_POLYMORPH) ~= 0 then
-		simulation:queue_remove_entity(this)
-
 		return false
 	end
 
 	local damage_spell = this.spell.level * this.spell.damage_inc + this.spell.damage_base
+
 	local instakill = target.health.hp <= damage_spell
 
 	if target.health.dead then
-		simulation:queue_remove_entity(this)
-
 		return false
 	end
 
@@ -7600,7 +7597,8 @@ function scripts.spell_djinn.insert(this, store)
 		end
 	end
 
-	d.source_id = this.id
+	-- workaround
+	d.source_id = this.spell.source_id
 	d.target_id = target.id
 
 	queue_damage(store, d)
@@ -7623,9 +7621,8 @@ function scripts.spell_djinn.insert(this, store)
 	end
 
 	-- AC:inc_check("STUFFOMAKER", 1)
-	simulation:queue_remove_entity(this)
 
-	return true
+	return false
 end
 
 scripts.shock_djinn = {}
@@ -7634,13 +7631,11 @@ function scripts.shock_djinn.insert(this, store)
 	local target = store.entities[this.spell.target_id]
 
 	if not target or target.health.dead then
-		simulation:queue_remove_entity(this)
-
 		return false
 	end
 
 	local damage_spell = this.spell.level * this.spell.damage_inc + this.spell.damage_base
-	local d = E.assign_damage(DAMAGE_TRUE, damage_spell, this.id, target.id)
+	local d = E.assign_damage(DAMAGE_TRUE, damage_spell, this.spell.source_id, target.id)
 
 	queue_damage(store, d)
 
@@ -7659,9 +7654,8 @@ function scripts.shock_djinn.insert(this, store)
 	mod_shock.modifier.target_id = target.id
 
 	simulation:queue_insert_entity(mod_shock)
-	simulation:queue_remove_entity(this)
 
-	return true
+	return false
 end
 
 scripts.pirate_cannons = {}
@@ -16026,12 +16020,11 @@ function scripts.mod_pixie_pickpocket.insert(this, store)
 		simulation:queue_insert_entity(fx)
 	end
 
-	local damage = E.assign_damage(m.damage_type, math.random(m.damage_min, m.damage_max) * m.damage_factor, this.id, target.id)
+	local damage = E.assign_damage(m.damage_type, math.random(m.damage_min, m.damage_max) * m.damage_factor, m.source_id, target.id)
 
 	queue_damage(store, damage)
-	simulation:queue_remove_entity(this)
 
-	return true
+	return false
 end
 
 scripts.mod_bravebark_branchball = {}
@@ -21005,6 +20998,7 @@ function scripts.ray5_simple.update(this, store)
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
+			m.modifier.source_id = this.id
 			U.modifier_inherit_bullet(m, b)
 
 			if m.damage_from_bullet then

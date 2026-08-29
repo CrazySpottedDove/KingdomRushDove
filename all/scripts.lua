@@ -4050,8 +4050,6 @@ function scripts.ray_simple.update(this, store)
 			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
 
 			if d > b.max_track_distance then
-				log.paranoid("(%s) ray_simple target (%s) out of max_track_distance", this.id, target.id)
-
 				target = nil
 			else
 				dest.x, dest.y = target.pos.x, target.pos.y
@@ -7015,7 +7013,7 @@ function scripts.mod_damage.insert(this, store)
 	end
 	value = value * this.modifier.damage_factor
 
-	local d = E.assign_damage(this.damage_type, value, this.id, target.id)
+	local d = E.assign_damage(this.damage_type, value, this.modifier.source_id, target.id)
 
 	queue_damage(store, d)
 
@@ -7255,7 +7253,8 @@ function scripts.mod_polymorph.insert(this, store)
 	local d = E.create_damage()
 
 	d.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_LIFESTEAL)
-	d.source_id = this.id
+	-- workaround
+	d.source_id = m.source_id
 	d.target_id = target.id
 	d.pop = pm.pop
 
@@ -7308,16 +7307,11 @@ function scripts.mod_polymorph.insert(this, store)
 
 	simulation:queue_insert_entity(e)
 	signal.emit("mod-applied", this, target)
-	simulation:queue_remove_entity(this)
 
-	return true
+	return false
 end
 
 scripts.background_sounds = {}
-
-function scripts.background_sounds.insert(this, store)
-	return true
-end
 
 function scripts.background_sounds.update(this, store)
 	while true do

@@ -995,7 +995,6 @@ tt.editor_script.remove = scripts.editor_mega_spawner.remove
 
 tt = E:register_t("background_sounds")
 E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.background_sounds.insert
 tt.main_script.update = scripts.background_sounds.update
 tt.min_delay = 15
 tt.max_delay = 25

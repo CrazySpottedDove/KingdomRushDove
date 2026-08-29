@@ -4498,6 +4498,7 @@ scripts.tower_dwaarp = {
 								local drill = E:create_entity(da.bullet)
 
 								drill.bullet.target_id = enemy.id
+								drill.bullet.source_id = this.id
 								drill.pos.x, drill.pos.y = enemy.pos.x, enemy.pos.y
 
 								simulation:queue_insert_entity(drill)
@@ -8442,7 +8443,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 
 				mod.modifier.target_id = target.id
 				mod.modifier.damage_factor = b.damage_factor
-				mod.modifier.source_id = b.source_id
+				mod.modifier.source_id = this.id
 
 				simulation:queue_insert_entity(mod)
 			end
@@ -8451,7 +8452,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 
 			mod.modifier.target_id = target.id
 			mod.modifier.damage_factor = b.damage_factor
-			mod.modifier.source_id = b.source_id
+			mod.modifier.source_id = this.id
 
 			simulation:queue_insert_entity(mod)
 		end
@@ -8724,6 +8725,7 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 				end
 
 				s.unit.damage_factor = s.unit.damage_factor * m.damage_factor
+				s._damage_source_id = this._damage_source_id
 
 				simulation:queue_insert_entity(s)
 			end
@@ -8734,6 +8736,7 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 			bullet.pos.x = target.pos.x
 			bullet.pos.y = target.pos.y
 			bullet.source_id = this.id
+			bullet._damage_source_id = this._damage_source_id
 			b.from = vclone(bullet.pos)
 			b.to = vclone(bullet.pos)
 			b.damage_factor = m.damage_factor
@@ -11882,7 +11885,6 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
 		sheep.nav_path.pi = target.nav_path.pi
 		sheep.nav_path.spi = target.nav_path.spi
 		sheep.nav_path.ni = target.nav_path.ni
-		sheep.source_id = b.source_id
 		sheep.enemy.gold = target.enemy.gold
 		sheep.health.hp_max = target.health.hp_max * this.sheep_hp_mult
 		sheep.health.hp = target.health.hp * this.sheep_hp_mult
@@ -11893,7 +11895,8 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
 		target.trigger_deselect = true
 		target.gold = 0
 
-		simulation:queue_remove_entity(target)
+		local d = E.assign_damage(DAMAGE_EAT, 1, b.source_id, target.id)
+		queue_damage(store, d)
 		S:queue(this.hit_sound)
 	end
 
@@ -13895,15 +13898,9 @@ function scripts.tower_arcane_wizard5.remove(this, store)
 
 		if towers then
 			for _, tower in pairs(towers) do
-				-- local mods = U.get_modifiers(store, tower)
-				-- local mods = table.filter(store.entities, function(k, v)
-				--     return v.modifier and v.template_name == ae.mark_mod and v.modifier.target_id == tower.id
-				-- end)
 				SU.remove_modifiers(store, tower, ae.mark_mod)
-				-- if mods and #mods <= 1 then
 				SU.remove_modifiers(store, tower, ae.mod)
 				SU.remove_modifiers(store, tower, ae.mod_fx)
-			-- end
 			end
 		end
 	end
@@ -23137,7 +23134,6 @@ scripts.soldier_rotten_forest_tree = {}
 function scripts.soldier_rotten_forest_tree.insert(this, store)
 	local m = E:create_entity("mod_soldier_rotten_forest_tree_lose_hp")
 	m.modifier.target_id = this.id
-	m.modifier.source_id = this.id
 	simulation:queue_insert_entity(m)
 	return true
 end
@@ -27520,6 +27516,7 @@ function scripts.tower_goblirang.update(this, store)
 		b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 		b.bullet.damage_factor = this.tower.damage_factor
 		b.bullet.target_id = enemy.id
+		b.bullet.source_id = this.id
 		b.bullet.level = level
 		local ft = b.bullet.flight_time
 		b.bullet.speed = v((b.bullet.to.x - b.bullet.from.x) / ft, (b.bullet.to.y - b.bullet.from.y) / ft)
@@ -28266,7 +28263,7 @@ function scripts.mod_ignis_altar_single_extinction.remove(this, store)
 
 			if enemies then
 				for _, e in ipairs(enemies) do
-					local d = E.assign_damage(this.explosion_damage_type, this.explosion_damage * this.modifier.damage_factor, this.id, e.id)
+					local d = E.assign_damage(this.explosion_damage_type, this.explosion_damage * this.modifier.damage_factor, this.modifier.source_id, e.id)
 					queue_damage(store, d)
 				end
 			end

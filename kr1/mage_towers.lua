@@ -1757,7 +1757,6 @@ tt.powers.sheep = CC("power")
 tt.powers.sheep.price_base = b.skill_sheep.price[1]
 tt.powers.sheep.max_level = 1
 tt.powers.sheep.cooldown = b.skill_sheep.cooldown
--- tt.main_script.insert = scripts.tower_ray.insert
 tt.main_script.update = scripts.tower_ray.update
 tt.main_script.remove = scripts.tower_ray.remove
 tt.attacks.min_cooldown = b.shared_min_cooldown
@@ -2005,7 +2004,6 @@ tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_POLYMORPH)
 tt.clicks_to_destroy = b.clicks_to_destroy
 
 tt = RT("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
-
 tt.info.portrait = "kr5_info_portraits_enemies_0041"
 tt.flight_height = 47
 tt.health_bar.offset = vec_2(0, tt.flight_height + 40)
@@ -2393,7 +2391,6 @@ tt.ui.click_rect = r(-40, 0, 80, 86)
 
 tt = RT("tower_arcane_wizard_ray_disintegrate_mod", "modifier")
 local b = balance.towers.arcane_wizard
-
 tt.main_script.update = scripts.tower_arcane_wizard_ray_disintegrate_mod.update
 tt.modifier.pop = {"pop_zap_arcane"}
 tt.modifier.pop_conds = DR_KILL
