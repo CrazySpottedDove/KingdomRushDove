@@ -27300,6 +27300,7 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				SU.soldier_inherit_tower_buff_factor(unit, tower, store.tick_ts)
 				unit.dodge.chance = this.dodge.chance
 				unit._espectral_tower_ref = tower
+				unit.source_id = tower.id
 				simulation:queue_insert_entity(unit)
 				this.render.sprites[1].hidden = true
 				this.render.sprites[2].hidden = true
