@@ -2544,7 +2544,7 @@ function scripts.arrow_missile.update(this, store)
 				for _, mod_name in ipairs(mods) do
 					local mod = E:create_entity(mod_name)
 
-					mod.modifier.source_id = this.id
+					mod.modifier.source_id = b.source_id
 					mod.modifier.target_id = target.id
 					mod.modifier.level = b.level
 					mod.modifier.source_damage = d
@@ -2635,11 +2635,12 @@ function scripts.arrow_missile.update(this, store)
 
 		p.pos.x, p.pos.y = this_pos.x, this_pos.y
 		p.target_id = b.target_id
-		p.source_id = this.id
+		p.source_id = b.source_id
 
 		if p.aura then
 			p.aura.level = b.level
 			p.aura.damage_factor = b.damage_factor
+			p.aura.source_id = b.source_id
 		end
 
 		if b.payload_props then
@@ -2845,6 +2846,7 @@ function scripts.bomb.update(this, store)
 
 		if hp.aura then
 			hp.aura.level = this.bullet.level
+			hp.aura.source_id = b.source_id
 			hp.aura.damage_factor = this.bullet.damage_factor * hp.aura.damage_factor
 		end
 
@@ -5865,7 +5867,7 @@ function scripts.mod_dps.update(this, store)
 
 		local d = E.create_damage()
 
-		d.source_id = this.id
+		d.source_id = m.source_id
 		d.target_id = target.id
 		d.value = value * m.damage_factor
 		d.damage_type = dps.damage_type
@@ -7255,7 +7257,7 @@ function scripts.mod_polymorph.insert(this, store)
 	local d = E.create_damage()
 
 	d.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_LIFESTEAL)
-	d.source_id = this.id
+	d.source_id = m.source_id
 	d.target_id = target.id
 	d.pop = pm.pop
 

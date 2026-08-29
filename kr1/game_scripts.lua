@@ -1947,7 +1947,7 @@ scripts.enemy_zombiemancer = {
 
 		local function get_zombies()
 			return table.filter(store.enemies, function(k, v)
-				return v.owner and v.owner == this.id and v.health and not v.health.dead
+				return v.owner_id and v.owner_id == this.id and v.health and not v.health.dead
 			end)
 		end
 
@@ -1991,7 +1991,7 @@ scripts.enemy_zombiemancer = {
 						e.nav_path.ni = this.nav_path.ni + math.random(noff[2], noff[3])
 						e.render.sprites[1].name = a.spawn_animation
 						e.enemy.gold = 0
-						e.owner = this.id
+						e.owner_id = this.id
 						e.motion.max_speed = (0.5 + math.random() * 0.1) * FPS
 
 						E:add_comps(e, "count_group")
@@ -13641,18 +13641,27 @@ function scripts.mod_ogre_magi_shield.insert(this, store)
 		return false
 	end
 
-	local source_aura = store.entities[m.source_id]
+	local source_ogre = store.entities[m.source_id]
 
-	if not source_aura then
-		log.debug("cannot insert mod_ogre_magi_shield: missing source_aura %s", m.source_id)
+	if not source_ogre then
+		log.debug("cannot insert mod_ogre_magi_shield: missing source_ogre %s", m.source_id)
 
 		return false
 	end
 
-	local source_ogre = store.entities[source_aura.aura.source_id]
+	local source_aura_id = table.find(store.auras, function(_, e)
+		return e.aura.source_id == source_ogre.id and e.template_name == "aura_ogre_magi_shield"
+	end)
 
-	if not source_ogre then
-		log.debug("cannot insert mod_ogre_magi_shield: missing source_ogre %s", source_aura.aura.source_id)
+	if not source_aura_id then
+		log.debug("cannot insert mod_ogre_magi_shield: missing source_aura in store.auras for source_ogre %s", source_ogre.id)
+
+		return false
+	end
+
+	local source_aura = store.entities[source_aura_id]
+	if not source_aura then
+		log.debug("cannot insert mod_ogre_magi_shield: missing source_aura %s", m.source_id)
 
 		return false
 	end

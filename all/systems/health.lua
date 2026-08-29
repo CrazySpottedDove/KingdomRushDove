@@ -444,10 +444,10 @@ local damage_trace_table = {}
 
 local damage_trace
 
-local function damage_trace_disabled(store, d)
+local function damage_trace_disabled(store, d, e)
 end
 
-local function damage_trace_enabled(store, d)
+local function damage_trace_enabled(store, d, e)
 	local source = store.entities[d.source_id]
 	while source do
 		if source.source_id then
@@ -460,6 +460,8 @@ local function damage_trace_enabled(store, d)
 			source = store.entities[source.aura.source_id]
 		elseif source.soldier and source.soldier.tower_id then
 			source = store.entities[source.soldier.tower_id]
+		elseif source.owner then
+			source = source.owner
 		else
 			break
 		end
@@ -477,7 +479,7 @@ local function damage_trace_enabled(store, d)
 			if not dt[d.damage_type] then
 				dt[d.damage_type] = 0
 			end
-			dt[d.damage_type] = dt[d.damage_type] + d.damage_effective
+			dt[d.damage_type] = dt[d.damage_type] + math.min(d.damage_applied, math.max(e.health.hp, 0))
 		end
 	end
 end
@@ -789,7 +791,6 @@ function M.register(sys)
 
 	function sys.health.on_damage_applied(store, d, e)
 		dnum_on_applied_impl(store, d, e)
-		damage_trace(store, d)
 		-- pops system begin
 		if d.pop then
 			local source = store.entities[d.source_id]
@@ -870,28 +871,29 @@ function M.register(sys)
 					else
 						if band(d.damage_type, DAMAGE_EAT) ~= 0 then
 							local eat_amt = math.max(h.hp, 0)
-							d.damage_effective = eat_amt
 							d.damage_applied = eat_amt
 							d.damage_result = bor(d.damage_result, DR_KILL)
+							damage_trace(store, d, e)
 							-- damage_trace_record_event(store, e, d, "eat", eat_amt, starting_hp, 0)
 							h.hp = 0
 							self.on_damage_applied(store, d, e)
 						else
 							local actual_damage = U.predict_damage(e, d)
-							d.damage_effective = math.min(h.hp, actual_damage)
-							h.hp = h.hp - actual_damage
-							d.damage_applied = actual_damage
+
 							-- damage_trace_record_event(store, e, d, "hp", actual_damage, starting_hp, h.hp)
 
-							if starting_hp > 0 and h.hp <= 0 then
-								d.damage_result = bor(d.damage_result, DR_KILL)
-							end
-
 							if actual_damage > 0 then
+								d.damage_applied = actual_damage
 								d.damage_result = bor(d.damage_result, DR_DAMAGE)
+								damage_trace(store, d, e)
 
 								if e.regen then
 									e.regen.last_hit_ts = ts
+								end
+
+								h.hp = h.hp - actual_damage
+								if starting_hp > 0 and h.hp <= 0 then
+									d.damage_result = bor(d.damage_result, DR_KILL)
 								end
 
 								if d.track_damage then
@@ -923,7 +925,7 @@ function M.register(sys)
 							end
 						end
 
-						-- 处理击杀跟踪
+						-- 处理击杀
 						if starting_hp > 0 and h.hp <= 0 then
 							signal.emit("entity-killed", e, d)
 
