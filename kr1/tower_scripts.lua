@@ -11182,6 +11182,7 @@ function scripts.tower_ray.update(this, store)
 							b.bullet.to = vclone(enemy_pos)
 							b.bullet.target_id = enemy_id
 							b.bullet.source_id = this.id
+							b.source_id = this.id
 							b.bullet.level = 4
 							b.bullet.damage_factor = this.tower.damage_factor
 							b.tower_ref = this
@@ -11371,7 +11372,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
 		return
 	end
 
-	local source = store.entities[m.source_id]
+	local source = this.bullet_ref
 
 	local function apply_damage(value)
 		local d = E.assign_damage(dps.damage_type, value, m.source_id, target.id)
@@ -11409,7 +11410,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
 
 	while true do
 		target = store.entities[m.target_id]
-		source = store.entities[m.source_id]
+		source = store.entities[source.id]
 
 		if not target or not target.health or target.health.dead then
 			break
@@ -11576,6 +11577,7 @@ function scripts.bullet_tower_ray.update(this, store)
 				m.dps.damage_max = b.damage_max
 				m.dps.damage_min = b.damage_min
 				m.modifier.duration = m.modifier.duration * b.cooldown_factor
+				m.bullet_ref = this
 			end
 
 			table.insert(mods_added, m)
@@ -11679,7 +11681,8 @@ function scripts.bullet_tower_ray.update(this, store)
 				chain.bullet.to = vclone(chain_target.pos)
 				chain.bullet.to.x, chain.bullet.to.y = chain.bullet.to.x + end_offset.x, chain.bullet.to.y + end_offset.y
 				chain.bullet.target_id = chain_target.id
-				chain.bullet.source_id = b.source_id
+				chain.bullet.source_id = target.source_id
+				chain.source_id = this.source_id
 				chain.bullet.level = b.level
 				chain.bullet.damage_factor = b.damage_factor
 				chain.tower_ref = tower
@@ -28916,7 +28919,7 @@ scripts.bullet_tower_blazing_watcher = {
 			for i = 1, #mods do
 				local m = E:create_entity(mods[i])
 				m.modifier.target_id = b.target_id
-				m.modifier.source_id = this.id
+				m.modifier.source_id = b.source_id
 				m.modifier.damage_factor = b.damage_factor
 
 				if mods[i] == "mod_tower_blazing_watcher_damage" then
@@ -28957,6 +28960,7 @@ scripts.bullet_tower_blazing_watcher = {
 					e.attack_stage = attack_stage
 					e.bullet.damage_factor = b.damage_factor
 					e.bullet.level = pow_explosion_level
+					e.bullet.source_id = b.source_id
 					simulation:queue_insert_entity(e)
 				end
 			end
@@ -29021,7 +29025,7 @@ scripts.mod_tower_blazing_watcher_damage = {
 			if store.tick_ts - dps.ts >= dps.damage_every * tower.tower.cooldown_factor then
 				dps.ts = dps.ts + dps.damage_every * tower.tower.cooldown_factor
 				local value = math.random(this.dps.damage_min, this.dps.damage_max) * m.damage_factor * this.damage_tiers[tower.attack_stage]
-				local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
+				local d = E.assign_damage(dps.damage_type, value, m.source_id, target.id)
 				d.pop = dps.pop
 				d.pop_chance = dps.pop_chance
 				d.pop_conds = dps.pop_conds
@@ -29126,7 +29130,7 @@ scripts.bullet_tower_blazing_watcher_proc = {
 		if target and not target.health.dead then
 			local pct = this.bullet_proc_pct
 			local dmg = math.ceil(target.health.hp_max * pct + math.random(b.damage_min, b.damage_max)) * b.damage_factor
-			local d = E.assign_damage(DAMAGE_MAGICAL, dmg, this.id, target.id)
+			local d = E.assign_damage(DAMAGE_MAGICAL, dmg, b.source_id, target.id)
 			d.pop = this.bullet.pop
 			d.pop_conds = this.bullet.pop_conds
 			queue_damage(store, d)
@@ -29179,10 +29183,10 @@ scripts.blazing_watcher_bolt_blast = {
 		local enemies = U.find_enemies_in_range_filter_off(this.pos, dradius, b.damage_flags, b.damage_bans)
 		if enemies then
 			for i = 1, #enemies do
-				local d = E.assign_damage(b.damage_type, math.random(dmin, dmax) * this.bullet.damage_factor, this.id, enemies[i].id)
+				local d = E.assign_damage(b.damage_type, math.random(dmin, dmax) * this.bullet.damage_factor, b.source_id, enemies[i].id)
 				queue_damage(store, d)
 				local m = E:create_entity("mod_blazing_watcher_bolt_blast")
-				m.modifier.source_id = this.id
+				m.modifier.source_id = b.source_id
 				m.modifier.target_id = enemies[i].id
 				m.modifier.level = this.attack_stage
 				m.slow.factor = 1 - (1 - m.slow.factor) * this.attack_stage

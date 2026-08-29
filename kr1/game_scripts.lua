@@ -8721,7 +8721,7 @@ function scripts.ray_frankenstein.update(this, store)
 				r.bullet.level = b.level
 				r.bullet.to = V.vclone(target.pos)
 				r.bullet.target_id = bounce_target.id
-				r.bullet.source_id = target.id
+				r.bullet.source_id = b.source_id
 				r.bullet.damage_factor = b.damage_factor
 
 				if bounce_target.template_name == "hero_thor" then

@@ -4376,7 +4376,7 @@ function DamageTraceItemView:_draw_self()
 	local bar_h = 20
 
 	-- 总伤害数值显示在条的左侧（无中文前缀）
-	local total_font = F:f("body", 14)
+	local total_font = F:f("body_bold", 14)
 	local total_text = string.format("%.1f", self.total)
 	local total_w = total_font:getWidth(total_text)
 	local bar_x = 12 + total_w + 12
@@ -4440,7 +4440,7 @@ function DamageTraceItemView:_draw_self()
 		end
 
 		local fs = 12
-		local font = F:f("body", fs)
+		local font = F:f("body_bold", fs)
 		local function items_max_width()
 			local m = 0
 
@@ -4459,7 +4459,7 @@ function DamageTraceItemView:_draw_self()
 
 		while max_w > slot_w and fs > 8 do
 			fs = fs - 1
-			font = F:f("body", fs)
+			font = F:f("body_bold", fs)
 			max_w = items_max_width()
 		end
 
@@ -4474,7 +4474,7 @@ function DamageTraceItemView:_draw_self()
 
 			G.setColor(c[1], c[2], c[3], pa)
 			G.print(item.name, start_x, bar_y + bar_h + 4)
-			G.setColor(value_color[1], value_color[2], value_color[3], pa)
+			-- G.setColor(value_color[1], value_color[2], value_color[3], pa)
 			G.print(item.value, start_x + nw + 4, bar_y + bar_h + 4)
 		end
 	end
