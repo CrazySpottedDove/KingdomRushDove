@@ -2534,7 +2534,7 @@ function scripts.ray_tesla.update(this, store)
 
 					mod.modifier.damage_factor = b.damage_factor
 					mod.modifier.level = b.level
-					mod.modifier.source_id = b.source_id
+					mod.modifier.source_id = this.id
 					mod.modifier.target_id = target.id
 					mod.dps.damage_max = dps_damage
 					mod.dps.damage_min = dps_damage
@@ -2571,7 +2571,8 @@ function scripts.ray_tesla.update(this, store)
 					r.bounce_range = this.orig_bounce_range
 					r.bullet.to = V.vclone(bounce_target.pos)
 					r.bullet.target_id = bounce_target.id
-					r.bullet.source_id = b.source_id
+					r.bullet.source_id = target.id
+					r._damage_source_id = this._damage_source_id
 					r.bullet.damage_factor = b.damage_factor
 					r.bullet.level = b.level
 					r.max_bounces = this.max_bounces
@@ -2794,7 +2795,7 @@ function scripts.aura_ranger_thorn.update(this, store)
 						local m = E:create_entity(a.mod)
 
 						m.modifier.target_id = e.id
-						m.modifier.source_id = a.source_id
+						m.modifier.source_id = this.id
 						m.modifier.level = owner.powers.thorn.level
 						m.modifier.duration = m.modifier.duration + m.modifier.duration_inc * owner.powers.thorn.level
 						m.modifier.damage_factor = owner.tower.damage_factor * m.modifier.damage_factor
@@ -3391,7 +3392,6 @@ function scripts.mod_thorn.update(this, store)
 			hit_ts = store.tick_ts
 
 			local d = SU.create_attack_damage(this, target.id, this)
-			d.source_id = m.source_id
 			queue_damage(store, d)
 		end
 
@@ -8685,7 +8685,7 @@ function scripts.ray_frankenstein.update(this, store)
 			local mod = E:create_entity(b.mod)
 
 			mod.modifier.level = b.level
-			mod.modifier.source_id = b.source_id
+			mod.modifier.source_id = this.id
 			mod.modifier.target_id = target.id
 			mod.modifier.damage_factor = b.damage_factor
 			mod.dps.damage_max = mod.dps.damage_max * this.bounce_damage_factor
@@ -8721,7 +8721,8 @@ function scripts.ray_frankenstein.update(this, store)
 				r.bullet.level = b.level
 				r.bullet.to = V.vclone(target.pos)
 				r.bullet.target_id = bounce_target.id
-				r.bullet.source_id = b.source_id
+				r.bullet.source_id = target.id
+				r._damage_source_id = this._damage_source_id
 				r.bullet.damage_factor = b.damage_factor
 
 				if bounce_target.template_name == "hero_thor" then
@@ -13641,27 +13642,18 @@ function scripts.mod_ogre_magi_shield.insert(this, store)
 		return false
 	end
 
-	local source_ogre = store.entities[m.source_id]
+	local source_aura = store.entities[m.source_id]
 
-	if not source_ogre then
-		log.debug("cannot insert mod_ogre_magi_shield: missing source_ogre %s", m.source_id)
-
-		return false
-	end
-
-	local source_aura_id = table.find(store.auras, function(_, e)
-		return e.aura.source_id == source_ogre.id and e.template_name == "aura_ogre_magi_shield"
-	end)
-
-	if not source_aura_id then
-		log.debug("cannot insert mod_ogre_magi_shield: missing source_aura in store.auras for source_ogre %s", source_ogre.id)
-
-		return false
-	end
-
-	local source_aura = store.entities[source_aura_id]
 	if not source_aura then
 		log.debug("cannot insert mod_ogre_magi_shield: missing source_aura %s", m.source_id)
+
+		return false
+	end
+
+	local source_ogre = store.entities[source_aura.aura.source_id]
+
+	if not source_ogre then
+		log.debug("cannot insert mod_ogre_magi_shield: missing source_ogre %s", source_aura.aura.source_id)
 
 		return false
 	end
@@ -15729,7 +15721,7 @@ function scripts.mod_timelapse.remove(this, store)
 	else
 		if this.template_name == "mod_timelapse" then
 			local e = E:create_entity("high_elven_sentinel_extra")
-			e.source_id = this.modifier.source_id
+			e._damage_source_id = this._damage_source_id
 			if target then
 				e.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			else
@@ -15937,7 +15929,7 @@ function scripts.mod_eldritch.update(this, store)
 	local d = E.create_damage()
 
 	d.damage_type = DAMAGE_EAT
-	d.source_id = this.modifier.source_id
+	d.source_id = this.id
 	d.target_id = target.id
 
 	queue_damage(store, d)
@@ -15994,7 +15986,7 @@ function scripts.mod_eldritch.update(this, store)
 
 	if targets then
 		for _, t in ipairs(targets) do
-			local d = E.assign_damage(this.damage_type, this.damage_levels[m.level], this.modifier.source_id, t.id)
+			local d = E.assign_damage(this.damage_type, this.damage_levels[m.level], this.id, t.id)
 
 			queue_damage(store, d)
 		end
@@ -16034,7 +16026,7 @@ function scripts.mod_pixie_pickpocket.insert(this, store)
 		simulation:queue_insert_entity(fx)
 	end
 
-	local damage = E.assign_damage(m.damage_type, math.random(m.damage_min, m.damage_max) * m.damage_factor, this.modifier.source_id, target.id)
+	local damage = E.assign_damage(m.damage_type, math.random(m.damage_min, m.damage_max) * m.damage_factor, this.id, target.id)
 
 	queue_damage(store, damage)
 	simulation:queue_remove_entity(this)

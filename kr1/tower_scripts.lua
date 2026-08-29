@@ -1137,7 +1137,7 @@ function scripts.pirate_watchtower_parrot.update(this, store)
 				e.pos.x, e.pos.y = this.pos.x, this.pos.y + this.flight_height - 8
 				e.bullet.from = V.vclone(e.pos)
 				e.bullet.damage_factor = this.owner.tower.damage_factor
-				e.bullet.source_id = this.owner.id
+				e.bullet.source_id = this.id
 
 				simulation:queue_insert_entity(e)
 
@@ -1390,7 +1390,7 @@ function scripts.aura_arcane_burst.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E.assign_damage(a.damage_type, a.level * a.damage_inc * a.damage_factor, a.source_id, target.id)
+			local d = E.assign_damage(a.damage_type, a.level * a.damage_inc * a.damage_factor, this.id, target.id)
 
 			queue_damage(store, d)
 
@@ -1398,7 +1398,7 @@ function scripts.aura_arcane_burst.update(this, store)
 				local m = E:create_entity("mod_arrow_arcane_slumber")
 
 				m.modifier.target_id = target.id
-				m.modifier.source_id = a.source_id
+				m.modifier.source_id = this.id
 
 				simulation:queue_insert_entity(m)
 			end
@@ -1406,7 +1406,7 @@ function scripts.aura_arcane_burst.update(this, store)
 			if target.health.magic_armor <= 0 then
 				local m = E:create_entity("mod_arcane_burst")
 				m.modifier.target_id = target.id
-				m.modifier.source_id = a.source_id
+				m.modifier.source_id = this.id
 				m.modifier.damage_factor = a.damage_factor
 				m.modifier.level = a.level
 				simulation:queue_insert_entity(m)
@@ -2133,7 +2133,7 @@ function scripts.high_elven_sentinel.update(this, store)
 				b.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
 				b.bullet.damage_factor = this.owner.tower.damage_factor
-				b.bullet.source_id = this.owner.id
+				b.bullet.source_id = this.id
 
 				simulation:queue_insert_entity(b)
 				U.y_animation_wait(this, sb_sid)
@@ -3129,13 +3129,13 @@ function scripts.twister.update(this, store)
 	coroutine.yield()
 
 	for _, enemy in pairs(picked_enemies) do
-		local d = E.assign_damage(this.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.aura.source_id, enemy.id)
+		local d = E.assign_damage(this.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.id, enemy.id)
 
 		queue_damage(store, d)
 
 		local m = E:create_entity(this.after_mod)
 
-		m.source_id = this.aura.source_id
+		m.source_id = this.id
 		m.target_id = enemy.id
 
 		simulation:queue_insert_entity(m)
@@ -3187,7 +3187,7 @@ function scripts.twister.update(this, store)
 		local target = U.find_first_enemy_in_range_filter_off(this.pos, 160, F_RANGED, F_NONE)
 		if target then
 			bolt.bullet.target_id = target.id
-			bolt.bullet.source_id = this.aura.source_id
+			bolt.bullet.source_id = this.id
 			bolt.bullet.store = false
 			bolt.bullet.to.x, bolt.bullet.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
 			target_found = true
@@ -4166,7 +4166,7 @@ function scripts.decal_pixie.update(this, store)
 				if a.type == "mod" then
 					for _, m in pairs(a.mods) do
 						e = E:create_entity(m)
-						e.modifier.source_id = this.owner.id
+						e.modifier.source_id = this.id
 						e.modifier.target_id = target.id
 						e.modifier.level = this.attack_level
 						e.modifier.damage_factor = this.owner.tower.damage_factor
@@ -4175,7 +4175,7 @@ function scripts.decal_pixie.update(this, store)
 					end
 				else
 					e = E:create_entity(a.bullet)
-					e.bullet.source_id = this.owner.id
+					e.bullet.source_id = this.id
 					e.bullet.target_id = target.id
 					e.bullet.from = v(this_pos.x + a.bullet_start_offset.x, this_pos.y + a.bullet_start_offset.y)
 					e.bullet.to = v(target.pos.x, target.pos.y)
@@ -5377,7 +5377,7 @@ function scripts.soldier_mecha.update(this, store)
 							b.pos.y = this.pos.y + am.start_offsets[hi].y
 							b.bullet.level = pow_m.level
 							b.bullet.from = vclone(b.pos)
-							b.bullet.source_id = this.owner.id
+							b.bullet.source_id = this.id
 							b.bullet.to = v(b.pos.x + (af and -1 or 1) * am.launch_vector.x, b.pos.y + am.launch_vector.y)
 							b.bullet.target_id = target.id
 							b.bullet.damage_factor = tw.damage_factor
@@ -5440,7 +5440,7 @@ function scripts.soldier_mecha.update(this, store)
 				b.pos.y = this.pos.y + ab.start_offsets[ab_side].y
 				b.bullet.from = vclone(b.pos)
 				b.bullet.to = pred_pos
-				b.bullet.source_id = this.owner.id
+				b.bullet.source_id = this.id
 
 				simulation:queue_insert_entity(b)
 
@@ -5496,9 +5496,6 @@ scripts.tower_frankenstein = {
 			range = this.attacks.range,
 			cooldown = cooldown
 		}
-	end,
-	insert = function(this, store)
-		return true
 	end,
 	update = function(this, store)
 		local charges_sids = {7, 8}
@@ -7838,7 +7835,7 @@ function scripts.projecticle_big_guy_tower_demon_pit.update(this, store)
 
 		hp.pos.x, hp.pos.y = b.to.x, b.to.y
 		hp.level = b.level
-		hp.source_id = b.source_id
+		hp._damage_source_id = this._damage_source_id
 
 		if hp.aura then
 			hp.aura.level = this.bullet.level
@@ -8459,7 +8456,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 			simulation:queue_insert_entity(mod)
 		end
 
-		local d = SU.create_bullet_damage(b, target.id, b.source_id)
+		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
 		S:queue(this.hit_sound)
@@ -8594,7 +8591,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 
 				mod.modifier.target_id = target.id
 				mod.modifier.damage_factor = b.damage_factor
-				mod.modifier.source_id = b.source_id
+				mod.modifier.source_id = this.id
 
 				simulation:queue_insert_entity(mod)
 			end
@@ -8603,12 +8600,12 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 
 			mod.modifier.target_id = target.id
 			mod.modifier.damage_factor = b.damage_factor
-			mod.modifier.source_id = b.source_id
+			mod.modifier.source_id = this.id
 
 			simulation:queue_insert_entity(mod)
 		end
 
-		local d = SU.create_bullet_damage(b, target.id, b.source_id)
+		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
 		S:queue(this.hit_sound)
@@ -8736,7 +8733,7 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 
 			bullet.pos.x = target.pos.x
 			bullet.pos.y = target.pos.y
-			b.source_id = m.source_id
+			bullet.source_id = this.id
 			b.from = vclone(bullet.pos)
 			b.to = vclone(bullet.pos)
 			b.damage_factor = m.damage_factor
@@ -9147,7 +9144,6 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 
 				if target and not target.health.dead and target.enemy then
 					local d = SU.create_attack_damage(this, target.id, this)
-					d.source_id = this.aura.source_id
 					queue_damage(store, d)
 
 					local hit_fx = E:create_entity(this.hit_fx)
@@ -9161,7 +9157,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 					local new_mod = E:create_entity(this.aura.mod)
 
 					new_mod.modifier.target_id = target.id
-					new_mod.modifier.source_id = this.aura.source_id
+					new_mod.modifier.source_id = this.id
 
 					simulation:queue_insert_entity(new_mod)
 				end
@@ -11372,10 +11368,10 @@ function scripts.mod_tower_ray_damage.update(this, store)
 		return
 	end
 
-	local source = this.bullet_ref
+	local source = store.entities[m.source_id]
 
 	local function apply_damage(value)
-		local d = E.assign_damage(dps.damage_type, value, m.source_id, target.id)
+		local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
 		d.hooks = m.damage_hooks
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
@@ -11410,7 +11406,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
 
 	while true do
 		target = store.entities[m.target_id]
-		source = store.entities[source.id]
+		source = store.entities[m.source_id]
 
 		if not target or not target.health or target.health.dead then
 			break
@@ -11566,7 +11562,7 @@ function scripts.bullet_tower_ray.update(this, store)
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
-			m.modifier.source_id = b.source_id
+			m.modifier.source_id = this.id
 			local dmg_factor = b.damage_factor
 			local chain_dmg_mult = this._is_origin and 1 or this.damage_mult
 
@@ -11577,7 +11573,6 @@ function scripts.bullet_tower_ray.update(this, store)
 				m.dps.damage_max = b.damage_max
 				m.dps.damage_min = b.damage_min
 				m.modifier.duration = m.modifier.duration * b.cooldown_factor
-				m.bullet_ref = this
 			end
 
 			table.insert(mods_added, m)
@@ -11637,7 +11632,7 @@ function scripts.bullet_tower_ray.update(this, store)
 				local explosion_target = explosion_targets[i]
 				local ex_dmin = b.damage_min
 				local ex_dmax = b.damage_max
-				local d = E.assign_damage(DAMAGE_MAGICAL_EXPLOSION, random(ex_dmin, ex_dmax) * b.damage_factor * this.explosion_factor, b.source_id, explosion_target.id)
+				local d = E.assign_damage(DAMAGE_MAGICAL_EXPLOSION, random(ex_dmin, ex_dmax) * b.damage_factor * this.explosion_factor, this.id, explosion_target.id)
 
 				queue_damage(store, d)
 			end
@@ -11681,7 +11676,7 @@ function scripts.bullet_tower_ray.update(this, store)
 				chain.bullet.to = vclone(chain_target.pos)
 				chain.bullet.to.x, chain.bullet.to.y = chain.bullet.to.x + end_offset.x, chain.bullet.to.y + end_offset.y
 				chain.bullet.target_id = chain_target.id
-				chain.bullet.source_id = target.source_id
+				chain.bullet.source_id = b.target_id
 				chain.source_id = this.source_id
 				chain.bullet.level = b.level
 				chain.bullet.damage_factor = b.damage_factor
@@ -22304,7 +22299,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 						b.bullet.from = V.vclone(b.pos)
 						b.bullet.to = pred_pos
 						b.bullet.target_id = target.id
-						b.bullet.source_id = tower_id
+						b.bullet.source_id = this.id
 						b.bullet.damage_factor = this.owner.tower.damage_factor
 
 						simulation:queue_insert_entity(b)
@@ -22659,7 +22654,7 @@ function scripts.shadow_crow.update(this, store)
 				local d = E.assign_damage(ca.damage_type, math.random(ca.damage_min, ca.damage_max) * this.owner.tower.damage_factor, this.id, target.id)
 				queue_damage(store, d)
 
-				d = E.assign_damage(DAMAGE_ARMOR, this.damage_armor, this.owner.id, target.id)
+				d = E.assign_damage(DAMAGE_ARMOR, this.damage_armor, this.id, target.id)
 				queue_damage(store, d)
 
 				ca.ts = store.tick_ts
@@ -23142,6 +23137,7 @@ scripts.soldier_rotten_forest_tree = {}
 function scripts.soldier_rotten_forest_tree.insert(this, store)
 	local m = E:create_entity("mod_soldier_rotten_forest_tree_lose_hp")
 	m.modifier.target_id = this.id
+	m.modifier.source_id = this.id
 	simulation:queue_insert_entity(m)
 	return true
 end
@@ -24562,7 +24558,7 @@ function scripts.tower_bone_flingers.update(this, store)
 		e.nav_path.ni = ni
 		e.nav_rally.center.x, e.nav_rally.center.y = e_pos.x, e_pos.y
 		e.nav_rally.pos.x, e.nav_rally.pos.y = e_pos.x, e_pos.y
-		e.source_id = this.id
+		e._damage_source_id = this.id
 		SU.soldier_inherit_tower_buff_factor(e, this, store.tick_ts)
 
 		simulation:queue_insert_entity(e)
@@ -26461,7 +26457,7 @@ function scripts.soldier_balloon.update(this, store, script)
 					b.bullet.from:copy(b.pos)
 					b.bullet.to = pred_pos
 					b.bullet.target_id = target.id
-					b.bullet.source_id = this.owner.id
+					b.bullet.source_id = this.id
 					simulation:queue_insert_entity(b)
 					while not U.animation_finished(this, shooter_sid) do
 						coroutine.yield()
@@ -26531,7 +26527,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x * (this.render.sprites[2].flip_x and -1 or 1), this.pos.y + aa.bullet_start_offset.y
 						b.bullet.from:copy(b.pos)
 						b.bullet.to = this.pos
-						b.bullet.source_id = this.owner.id
+						b.bullet.source_id = this.id
 						simulation:queue_insert_entity(b)
 					end
 					U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
@@ -26565,7 +26561,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						b.pos.x = this.pos.x + (af and -1 or 1) * ao.start_offset.x
 						b.pos.y = this.pos.y + ao.start_offset.y
 						b.render.sprites[1].ts = store.tick_ts
-						b.bullet.source_id = this.owner.id
+						b.bullet.source_id = this.id
 						b.bullet.level = pow_o.level
 						b.bullet.from:copy(b.pos)
 						b.bullet.to = this.pos
@@ -27300,7 +27296,7 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				SU.soldier_inherit_tower_buff_factor(unit, tower, store.tick_ts)
 				unit.dodge.chance = this.dodge.chance
 				unit._espectral_tower_ref = tower
-				unit.source_id = tower.id
+				unit._damage_source_id = this._damage_source_id
 				simulation:queue_insert_entity(unit)
 				this.render.sprites[1].hidden = true
 				this.render.sprites[2].hidden = true
@@ -28007,7 +28003,7 @@ function scripts.storm_deep_devils.update(this, store)
 				b.bullet.from:copy(b.pos)
 				b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
-				b.bullet.source_id = this.owner.id
+				b.bullet.source_id = this.id
 				b.bullet.damage_factor = damage_factor
 				simulation:queue_insert_entity(b)
 
@@ -28229,7 +28225,7 @@ function scripts.ignis_altar_subunit.update(this, store)
 						a1.ts = start_ts
 						local mod = E:create_entity(a1.spell)
 						mod.modifier.target_id = enemy.id
-						mod.modifier.source_id = owner.id
+						mod.modifier.source_id = this.id
 						simulation:queue_insert_entity(mod)
 						U.animation_start_default(this, "active", nil, store.tick_ts, true)
 						coroutine.yield()
@@ -28270,7 +28266,7 @@ function scripts.mod_ignis_altar_single_extinction.remove(this, store)
 
 			if enemies then
 				for _, e in ipairs(enemies) do
-					local d = E.assign_damage(this.explosion_damage_type, this.explosion_damage * this.modifier.damage_factor, this.modifier.source_id, e.id)
+					local d = E.assign_damage(this.explosion_damage_type, this.explosion_damage * this.modifier.damage_factor, this.id, e.id)
 					queue_damage(store, d)
 				end
 			end
@@ -28920,7 +28916,7 @@ scripts.bullet_tower_blazing_watcher = {
 			for i = 1, #mods do
 				local m = E:create_entity(mods[i])
 				m.modifier.target_id = b.target_id
-				m.modifier.source_id = b.source_id
+				m.modifier.source_id = this.id
 				m.modifier.damage_factor = b.damage_factor
 
 				if mods[i] == "mod_tower_blazing_watcher_damage" then
@@ -29026,7 +29022,7 @@ scripts.mod_tower_blazing_watcher_damage = {
 			if store.tick_ts - dps.ts >= dps.damage_every * tower.tower.cooldown_factor then
 				dps.ts = dps.ts + dps.damage_every * tower.tower.cooldown_factor
 				local value = math.random(this.dps.damage_min, this.dps.damage_max) * m.damage_factor * this.damage_tiers[tower.attack_stage]
-				local d = E.assign_damage(dps.damage_type, value, m.source_id, target.id)
+				local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
 				d.pop = dps.pop
 				d.pop_chance = dps.pop_chance
 				d.pop_conds = dps.pop_conds
@@ -29131,7 +29127,7 @@ scripts.bullet_tower_blazing_watcher_proc = {
 		if target and not target.health.dead then
 			local pct = this.bullet_proc_pct
 			local dmg = math.ceil(target.health.hp_max * pct + math.random(b.damage_min, b.damage_max)) * b.damage_factor
-			local d = E.assign_damage(DAMAGE_MAGICAL, dmg, b.source_id, target.id)
+			local d = E.assign_damage(DAMAGE_MAGICAL, dmg, this.id, target.id)
 			d.pop = this.bullet.pop
 			d.pop_conds = this.bullet.pop_conds
 			queue_damage(store, d)
@@ -29184,10 +29180,10 @@ scripts.blazing_watcher_bolt_blast = {
 		local enemies = U.find_enemies_in_range_filter_off(this.pos, dradius, b.damage_flags, b.damage_bans)
 		if enemies then
 			for i = 1, #enemies do
-				local d = E.assign_damage(b.damage_type, math.random(dmin, dmax) * this.bullet.damage_factor, b.source_id, enemies[i].id)
+				local d = E.assign_damage(b.damage_type, math.random(dmin, dmax) * this.bullet.damage_factor, this.id, enemies[i].id)
 				queue_damage(store, d)
 				local m = E:create_entity("mod_blazing_watcher_bolt_blast")
-				m.modifier.source_id = b.source_id
+				m.modifier.source_id = this.id
 				m.modifier.target_id = enemies[i].id
 				m.modifier.level = this.attack_stage
 				m.slow.factor = 1 - (1 - m.slow.factor) * this.attack_stage
@@ -30021,7 +30017,7 @@ function scripts.soldier_wicked_sisters.update(this, store)
 				b.bullet.from:copy(b.pos)
 				b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
-				b.bullet.source_id = this.owner.id
+				b.bullet.source_id = this.id
 				simulation:queue_insert_entity(b)
 
 				U.y_animation_wait_default(this)
@@ -30049,7 +30045,7 @@ function scripts.soldier_wicked_sisters.update(this, store)
 				b.pos.x = this.pos.x + (af and -1 or 1) * ab.start_offsets[wick_idx].x
 				b.pos.y = this.pos.y + ab.start_offsets[wick_idx].y
 				b.bullet.from:copy(b.pos)
-				b.bullet.source_id = this.owner.id
+				b.bullet.source_id = this.id
 				b.bullet.to:set(trigger.pos.x + trigger.unit.hit_offset.x, trigger.pos.y + trigger.unit.hit_offset.y)
 				b.bullet.target_id = trigger.id
 
@@ -30295,7 +30291,7 @@ function scripts.tower_sandworm.update(this, store)
 				end
 
 				SU.soldier_inherit_tower_buff_factor(e, this, store.tick_ts)
-				e.source_id = this.id
+				e._damage_source_id = this.id
 				simulation:queue_insert_entity(e)
 			end
 

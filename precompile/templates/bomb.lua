@@ -207,7 +207,7 @@ return function(this, store)
 
             if hp.aura then
                 hp.aura.level = b.level
-                hp.aura.source_id = b.source_id
+                hp.aura.source_id = this.id
                 hp.aura.damage_factor = b.damage_factor * hp.aura.damage_factor
             end
 

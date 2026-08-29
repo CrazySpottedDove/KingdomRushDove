@@ -479,7 +479,7 @@ local function damage_trace_enabled(store, d, e)
 		if source._damage_source_id then
 			source = store.entities[source._damage_source_id]
 		end
-		if source.tower or source.unit then
+		if source and (source.tower or source.unit) then
 			if not damage_trace_table[source.template_name] then
 				damage_trace_table[source.template_name] = {
 					name = source.info and source.info.i18n_key and _(source.info.i18n_key .. "_NAME") or _(string.upper(source.template_name) .. "_NAME"),

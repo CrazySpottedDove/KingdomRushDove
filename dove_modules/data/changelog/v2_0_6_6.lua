@@ -1,1 +1,1 @@
-return {{date="2026-08-29",author="CrazySpottedDove",message="feat: 重构伤害链路追踪逻辑，与原有脚本进行解耦，并保证原有脚本书写正确的前提下必然能够追溯到伤害源"}}
+return {{date="2026-08-29",author="CrazySpottedDove",message="feat: 重构伤害链路追踪逻辑，与原有脚本进行解耦，并保证原有脚本书写正确的前提下必然能够追溯到伤害源"},{date="2026-08-29",author="CrazySpottedDove",message="refactor: 回退自然的source_id逻辑"}}

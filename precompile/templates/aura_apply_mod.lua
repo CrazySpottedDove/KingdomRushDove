@@ -302,7 +302,7 @@ return function(this, store)
 
                 new_mod.modifier.level = this.aura.level
                 new_mod.modifier.target_id = target.id
-                new_mod.modifier.source_id = this.aura.source_id
+                new_mod.modifier.source_id = this.id
                 new_mod.modifier.damage_factor = this.aura.damage_factor
 
                 constif(a.hide_source_fx)

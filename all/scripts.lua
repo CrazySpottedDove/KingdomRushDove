@@ -2544,7 +2544,7 @@ function scripts.arrow_missile.update(this, store)
 				for _, mod_name in ipairs(mods) do
 					local mod = E:create_entity(mod_name)
 
-					mod.modifier.source_id = b.source_id
+					mod.modifier.source_id = this.id
 					mod.modifier.target_id = target.id
 					mod.modifier.level = b.level
 					mod.modifier.source_damage = d
@@ -2635,12 +2635,11 @@ function scripts.arrow_missile.update(this, store)
 
 		p.pos.x, p.pos.y = this_pos.x, this_pos.y
 		p.target_id = b.target_id
-		p.source_id = b.source_id
+		p._damage_source_id = this._damage_source_id
 
 		if p.aura then
 			p.aura.level = b.level
 			p.aura.damage_factor = b.damage_factor
-			p.aura.source_id = b.source_id
 		end
 
 		if b.payload_props then
@@ -2846,7 +2845,7 @@ function scripts.bomb.update(this, store)
 
 		if hp.aura then
 			hp.aura.level = this.bullet.level
-			hp.aura.source_id = b.source_id
+			hp.aura.source_id = this.id
 			hp.aura.damage_factor = this.bullet.damage_factor * hp.aura.damage_factor
 		end
 
@@ -4423,7 +4422,7 @@ function scripts.fireball.update(this, store)
 
 		if fx.aura then
 			fx.aura.level = b.level
-			fx.aura.source_id = b.source_id
+			fx.aura.source_id = this.id
 			fx.aura.damage_factor = b.damage_factor
 		end
 
@@ -4703,7 +4702,7 @@ function scripts.aura_apply_mod.update(this, store)
 
 						new_mod.modifier.level = this.aura.level
 						new_mod.modifier.target_id = target.id
-						new_mod.modifier.source_id = this.aura.source_id
+						new_mod.modifier.source_id = this.id
 						new_mod.modifier.damage_factor = this.aura.damage_factor
 
 						if this.aura.hide_source_fx and target.id == this.aura.source_id then
@@ -4791,8 +4790,7 @@ function scripts.aura_apply_damage.update(this, store)
 				for i = 1, target_count do
 					local target = targets[i]
 
-					local d = E.assign_damage(this.aura.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.aura.source_id, target.id)
-
+					local d = E.assign_damage(this.aura.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.id, target.id)
 					d.track_damage = this.aura.track_damage
 					d.xp_dest_id = this.aura.xp_dest_id
 					d.xp_gain_factor = this.aura.xp_gain_factor
@@ -4804,7 +4802,7 @@ function scripts.aura_apply_damage.update(this, store)
 
 						m.modifier.level = this.aura.level
 						m.modifier.target_id = target.id
-						m.modifier.source_id = this.aura.source_id
+						m.modifier.source_id = this.id
 						m.modifier.damage_factor = this.aura.damage_factor
 						if this.aura.hide_source_fx and target.id == this.aura.source_id then
 							m.render = nil
@@ -5867,7 +5865,7 @@ function scripts.mod_dps.update(this, store)
 
 		local d = E.create_damage()
 
-		d.source_id = m.source_id
+		d.source_id = this.id
 		d.target_id = target.id
 		d.value = value * m.damage_factor
 		d.damage_type = dps.damage_type
@@ -7017,7 +7015,7 @@ function scripts.mod_damage.insert(this, store)
 	end
 	value = value * this.modifier.damage_factor
 
-	local d = E.assign_damage(this.damage_type, value, this.modifier.source_id, target.id)
+	local d = E.assign_damage(this.damage_type, value, this.id, target.id)
 
 	queue_damage(store, d)
 
@@ -7257,7 +7255,7 @@ function scripts.mod_polymorph.insert(this, store)
 	local d = E.create_damage()
 
 	d.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_LIFESTEAL)
-	d.source_id = m.source_id
+	d.source_id = this.id
 	d.target_id = target.id
 	d.pop = pm.pop
 

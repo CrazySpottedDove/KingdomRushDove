@@ -377,7 +377,9 @@ local click_state = {
 }
 
 function game:camera_move_allowed()
-	return click_state.active and not (self.game_gui.damage_trace_panel and not self.game_gui.damage_trace_panel.hidden)
+	local gui = self.game_gui
+
+	return click_state.active and not (gui.damage_trace_panel and not gui.damage_trace_panel.hidden) and not (gui.pauseview and not gui.pauseview.hidden)
 end
 
 function game:update(dt)

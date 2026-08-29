@@ -256,7 +256,7 @@ return function(this, store)
             @constif(not dps.kill)
 			damage_value = km.clamp(0, target.health.hp - 1, damage_value)
 
-			local d = E.assign_damage(dps.damage_type, damage_value, m.source_id, target.id)
+			local d = E.assign_damage(dps.damage_type, damage_value, this.id, target.id)
 
             d.pop = dps.pop
             d.pop_chance = dps.pop_chance

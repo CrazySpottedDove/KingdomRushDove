@@ -128,7 +128,7 @@ return function(this, store)
             for i = 1, #targets do
                 local target = targets[i]
 
-                local d = E.assign_damage(this.aura.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.aura.source_id, target.id)
+                local d = E.assign_damage(this.aura.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.id, target.id)
 
                 d.track_damage = this.aura.track_damage
                 d.xp_dest_id = this.aura.xp_dest_id
@@ -141,7 +141,7 @@ return function(this, store)
 
                     m.modifier.level = this.aura.level
                     m.modifier.target_id = target.id
-                    m.modifier.source_id = this.aura.source_id
+                    m.modifier.source_id = this.id
                     m.modifier.damage_factor = this.aura.damage_factor
 
                     constif(a.hide_source_fx)
