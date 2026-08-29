@@ -376,12 +376,16 @@ local click_state = {
 	y = 0
 }
 
+function game:camera_move_allowed()
+	return click_state.active and not (self.game_gui.damage_trace_panel and not self.game_gui.damage_trace_panel.hidden)
+end
+
 function game:update(dt)
 	if DEBUG then
 		self:update_debug(dt)
 	end
 
-	if click_state.active then
+	if self:camera_move_allowed() then
 		local now = love.timer.getTime()
 
 		if now - click_state.press_time > click_state.threshold then
@@ -423,16 +427,6 @@ function game:update(dt)
 		d.step = false
 		updated = true
 	end
-
-	-- while d.to_gui > TICK_LENGTH do
-	-- 	d.to_gui = d.to_gui - TICK_LENGTH
-	-- 	self.simulation:render_update(TICK_LENGTH)
-	-- 	perf.start("game_gui:update")
-	-- 	self.game_gui:update(TICK_LENGTH)
-	-- 	perf.stop("game_gui:update")
-	-- 	d.step = false
-	-- 	updated = true
-	-- end
 
 	return updated
 end
@@ -482,7 +476,7 @@ end
 
 function game:wheelmoved(dx, dy)
 	-- GUI 消费滚轮（如伤害追踪列表滚动）时不再缩放地图
-	if self.game_gui.wheelmoved and self.game_gui:wheelmoved(dx, dy) then
+	if self.game_gui:wheelmoved(dx, dy) then
 		return
 	end
 
@@ -559,12 +553,6 @@ end
 function game:focus(focus)
 	if self.game_gui.focus then
 		self.game_gui:focus(focus)
-	end
-end
-
-function game:get_ism_state()
-	if self.game_gui and self.game_gui.get_ism_state then
-		return self.game_gui:get_ism_state()
 	end
 end
 

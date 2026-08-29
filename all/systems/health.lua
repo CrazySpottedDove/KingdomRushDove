@@ -443,31 +443,42 @@ end
 local damage_trace_table = {}
 
 local damage_trace
+local damage_trace_on_insert_unconditional
+
+local function damage_trace_on_insert_unconditional_disabled(entity, store)
+end
+
+local function damage_trace_on_insert_unconditional_enabled(entity, store)
+	if not entity._damage_source_id then
+		local source = nil
+		if entity.source_id then
+			source = store.entities[entity.source_id]
+		elseif entity.bullet and entity.bullet.source_id then
+			source = store.entities[entity.bullet.source_id]
+		elseif entity.modifier and entity.modifier.source_id then
+			source = store.entities[entity.modifier.source_id]
+		elseif entity.aura and entity.aura.source_id then
+			source = store.entities[entity.aura.source_id]
+		elseif entity.soldier and entity.soldier.tower_id then
+			source = store.entities[entity.soldier.tower_id]
+		elseif entity.owner then
+			source = entity.owner
+		end
+		if source then
+			entity._damage_source_id = source._damage_source_id or source.id
+		end
+	end
+end
 
 local function damage_trace_disabled(store, d, e)
 end
 
 local function damage_trace_enabled(store, d, e)
 	local source = store.entities[d.source_id]
-	while source do
-		if source.source_id then
-			source = store.entities[source.source_id]
-		elseif source.bullet and source.bullet.source_id then
-			source = store.entities[source.bullet.source_id]
-		elseif source.modifier and source.modifier.source_id then
-			source = store.entities[source.modifier.source_id]
-		elseif source.aura and source.aura.source_id then
-			source = store.entities[source.aura.source_id]
-		elseif source.soldier and source.soldier.tower_id then
-			source = store.entities[source.soldier.tower_id]
-		elseif source.owner then
-			source = source.owner
-		else
-			break
-		end
-	end
-
 	if source then
+		if source._damage_source_id then
+			source = store.entities[source._damage_source_id]
+		end
 		if source.tower or source.unit then
 			if not damage_trace_table[source.template_name] then
 				damage_trace_table[source.template_name] = {
@@ -487,10 +498,12 @@ end
 local function damage_trace_init(store)
 	if configer.ui_settings().damage_trace_enabled then
 		damage_trace = damage_trace_enabled
+		damage_trace_on_insert_unconditional = damage_trace_on_insert_unconditional_enabled
 		damage_trace_table = {}
 		store.damage_trace_table = damage_trace_table
 	else
 		damage_trace = damage_trace_disabled
+		damage_trace_on_insert_unconditional = damage_trace_on_insert_unconditional_disabled
 		damage_trace_table = nil
 		store.damage_trace_table = nil
 	end
@@ -787,6 +800,7 @@ function M.register(sys)
 				end
 			end
 		end
+		damage_trace_on_insert_unconditional(entity, store)
 	end
 
 	function sys.health.on_damage_applied(store, d, e)

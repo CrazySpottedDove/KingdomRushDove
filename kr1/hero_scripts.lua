@@ -4453,6 +4453,7 @@ scripts.magnus_arcane_rain_controller = {
 			end
 
 			e.damage_factor = this.damage_factor
+			e.source_id = this.source_id
 
 			simulation:queue_insert_entity(e)
 
@@ -4565,6 +4566,7 @@ scripts.soldier_magnus_illusion = {
 
 						e.is_illusion = true
 						e.pos = pos
+						e.source_id = this.owner.id
 						e.damage_factor = this.unit.damage_factor * this.skill_damage_factor
 						e.render.sprites[1].scale = V.v(this.skill_radius_factor, this.skill_radius_factor)
 
@@ -4767,6 +4769,7 @@ scripts.hero_magnus = {
 						local e = E:create_entity(a.entity)
 
 						e.pos = pos
+						e.source_id = this.id
 						e.damage_factor = this.unit.damage_factor
 						e.render.sprites[1].scale = V.v(1, 1)
 
