@@ -4427,7 +4427,6 @@ function DamageTraceItemView:_draw_self()
 
 		-- 各段类型 + 数值：平均分槽显示在条下方（类型用段色，数值用暖白），字号自适应避免超出卡片
 		local items = {}
-		local value_color = {240 / 255, 228 / 255, 200 / 255}
 		local n = #self.segments
 		local slot_w = w / n
 

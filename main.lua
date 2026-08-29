@@ -643,10 +643,6 @@ else
 	end
 end
 
-local function get_error_stack(msg, layer)
-	return (debug.traceback("Error: " .. tostring(msg), 1 + (layer or 1)):gsub("\n[^\n]+$", ""))
-end
-
 -- 从 traceback 文本中归因出导致错误的插件。
 -- 规则：逐行（从最内层向外）扫描；
 --   若先遇到某个插件 entry 对应的帧再遇到 hook_utils.lua 帧，说明错误发生在插件自身代码中；
@@ -682,7 +678,6 @@ local function find_plugin_from_traceback(traceback)
 	end
 
 	local first_plugin_dir = nil
-	local first_plugin_idx = nil
 	local first_hookutils_idx = nil
 	local idx = 0
 
@@ -694,7 +689,6 @@ local function find_plugin_from_traceback(traceback)
 
 			if dir then
 				first_plugin_dir = dir
-				first_plugin_idx = idx
 			end
 		end
 
@@ -711,89 +705,35 @@ local function find_plugin_from_traceback(traceback)
 		return nil
 	end
 
-	-- hook_utils 帧比插件帧更靠内层 → 错误在原始函数中，不归因插件
-	if first_hookutils_idx and first_hookutils_idx < first_plugin_idx then
-		return nil
-	end
-
-	local config = PLUGIN_REGISTRY and PLUGIN_REGISTRY[first_plugin_dir]
-	if config then
-		return string.format("%s:%s (%s)", config.name or first_plugin_dir, config.version, config.entry or first_plugin_dir)
-	end
+	-- local config = PLUGIN_REGISTRY and PLUGIN_REGISTRY[first_plugin_dir]
+	-- if config then
+	-- 	return string.format("%s:%s (%s)", config.name or first_plugin_dir, config.version, config.entry or first_plugin_dir)
+	-- end
 
 	return first_plugin_dir
 end
 
-local function find_plugin_dir_from_traceback(traceback)
-	if not traceback then
-		return nil
-	end
-
-	local first_plugin_dir = nil
-	local first_plugin_idx = nil
-	local first_hookutils_idx = nil
-	local idx = 0
-
-	for line in traceback:gmatch("[^\n]+") do
-		idx = idx + 1
-
-		if first_plugin_dir == nil then
-			local dir = find_plugin_dir_by_entry_in_line(line)
-			if not dir then
-				dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]") or line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
-			end
-
-			if dir then
-				first_plugin_dir = dir
-				first_plugin_idx = idx
-			end
-		end
-
-		if first_hookutils_idx == nil and line:match("hook_utils%.lua") then
-			first_hookutils_idx = idx
-		end
-
-		if first_plugin_dir and first_hookutils_idx then
-			break
-		end
-	end
-
-	if not first_plugin_dir then
-		return nil
-	end
-
-	if first_hookutils_idx and first_hookutils_idx < first_plugin_idx then
-		return nil
-	end
-
-	return first_plugin_dir
-end
-
-local function auto_disable_crashing_plugin(traceback)
-	local plugin_dir = find_plugin_dir_from_traceback(traceback)
-	if not plugin_dir then
-		return nil, nil
-	end
-
+local function auto_disable_crashing_plugin(plugin_dir)
 	local cfg_path = "plugins/" .. plugin_dir .. "/config.lua"
 	if not love.filesystem.getInfo(cfg_path, "file") then
-		return plugin_dir, false
+		log.error("auto_disable_crashing_plugin: config file not found for %s", cfg_path)
+		return false
 	end
 
 	local chunk, err = love.filesystem.load(cfg_path)
 	if not chunk then
 		log.error("auto_disable_crashing_plugin: load failed for %s: %s", cfg_path, tostring(err))
-		return plugin_dir, false
+		return false
 	end
 
 	local ok, cfg = pcall(chunk)
 	if not ok or type(cfg) ~= "table" then
 		log.error("auto_disable_crashing_plugin: invalid config for %s", cfg_path)
-		return plugin_dir, false
+		return false
 	end
 
 	if cfg.enabled == false then
-		return plugin_dir, true
+		return true
 	end
 
 	cfg.enabled = false
@@ -801,11 +741,10 @@ local function auto_disable_crashing_plugin(traceback)
 	local written = love.filesystem.write(cfg_path, persistence.serialize_to_string(cfg))
 	if not written then
 		log.error("auto_disable_crashing_plugin: write failed for %s", cfg_path)
-		return plugin_dir, false
+		return false
 	end
 
-	log.error("auto_disable_crashing_plugin: disabled plugin %s after crash", plugin_dir)
-	return plugin_dir, true
+	return true
 end
 
 local function disabled_all_plugins()
@@ -843,20 +782,35 @@ local function build_enabled_plugins_text()
 	return table.concat(lines, "\n")
 end
 
+local function strip_boot_lua(trace_string)
+	local trace_lines = {}
+	for l in string.gmatch(trace_string, "(.-)\n") do
+		if not string.match(l, "boot.lua") then
+			table.insert(trace_lines, l)
+		end
+	end
+	return table.concat(trace_lines, "\n")
+end
+
 function love.errorhandler(msg)
 	local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
+	local trace = strip_boot_lua(debug.traceback())
 
-	msg = tostring(msg)
-
-	local stack_msg = debug.traceback("Error: " .. tostring(msg), 3):gsub("\n[^\n]+$", "")
-
-	stack_msg = (stack_msg or "") .. "\n" .. last_log_msg
+	local blamed_plugins
+	if PLUGIN_ERRORS and #PLUGIN_ERRORS > 0 then
+		blamed_plugins = PLUGIN_ERRORS
+	else
+		local blamed_plugin = find_plugin_from_traceback(trace)
+		if blamed_plugin then
+			blamed_plugins = {{
+				entry = blamed_plugin,
+				error = ""
+			}}
+		end
+	end
 
 	local plugins_text = build_enabled_plugins_text()
 
-	stack_msg = stack_msg .. "\n" .. plugins_text
-
-	log.error(stack_msg)
 	close_log()
 
 	love.mouse.setVisible(true)
@@ -878,64 +832,58 @@ function love.errorhandler(msg)
 	local scale = math.max(1, G.getHeight() / ref_h)
 	local font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(15 * scale))
 	local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(16 * scale))
-	local title_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(26 * scale))
 
 	-- 半透明黑色遮罩：默认背景为 0.5 透明度的崩溃前画面
 	G.setColor(0, 0, 0, 0.5)
 	G.rectangle("fill", 0, 0, G.getWidth(), G.getHeight())
 
-	local trace = debug.traceback()
-
 	local tip = {}
 	local err = {}
 
 	table.insert(tip, string.format("Version %s", version.id))
-	table.insert(err, "Error\n")
-	table.insert(err, msg .. "\n\n")
+	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下本界面，反馈并用语言详细说明发生了什么。")
+
+	table.insert(err, msg .. "\n")
 
 	-- 归因：检查错误是否由某个插件导致（stack_msg 包含完整 traceback）
-	local blamed_plugin = find_plugin_from_traceback(stack_msg)
-	if blamed_plugin then
-		table.insert(tip, string.format("插件导致崩溃：%s\n", blamed_plugin))
+
+	if blamed_plugins then
+		table.insert(tip, string.format("插件导致崩溃："))
+		for _, plugin_error_info in ipairs(blamed_plugins) do
+			local plugin_tip
+			if PLUGIN_REGISTRY and PLUGIN_REGISTRY[plugin_error_info.entry] then
+				local config = PLUGIN_REGISTRY[plugin_error_info.entry]
+				plugin_tip = string.format("    %s(%s:%s)", config.name, config.entry, config.version or "?")
+			else
+				plugin_tip = string.format("    %s", plugin_error_info.entry)
+			end
+			local disabled_ok = auto_disable_crashing_plugin(plugin_error_info.entry)
+			if disabled_ok then
+				plugin_tip = plugin_tip .. "(已自动禁用)"
+			end
+			table.insert(tip, plugin_tip)
+			if plugin_error_info.error ~= "" then
+				table.insert(err, string.format("[%s]\n%s\n", plugin_error_info.entry, plugin_error_info.error))
+			end
+		end
 	end
 
 	-- 某个没被定位的插件导致了游戏进都进不去，采用保守措施，把所有插件全都禁用
-	if not blamed_plugin and not main.screen_map_entered then
+	if not blamed_plugins and not main.screen_map_entered then
 		if disabled_all_plugins() then
 			table.insert(tip, "检测到未知插件导致崩溃，已自动禁用所有插件。\n重启游戏后将跳过所有插件。")
 		end
-	else
-		local disabled_plugin_dir, disabled_ok = auto_disable_crashing_plugin(stack_msg)
-		if disabled_plugin_dir and disabled_ok then
-			table.insert(tip, string.format("已自动禁用崩溃插件：%s\n重启游戏后将跳过该插件。", disabled_plugin_dir))
-		end
 	end
 
-	local trace_lines = {}
-	for l in string.gmatch(trace, "(.-)\n") do
-		if not string.match(l, "boot.lua") then
-			l = string.gsub(l, "stack traceback:", "Traceback")
+	local tip_text = table.concat(tip, "\n")
 
-			table.insert(trace_lines, l)
-		end
-	end
+	tip_text = string.gsub(tip_text, "\t", "")
+	tip_text = string.gsub(tip_text, "%[string \"(.-)\"%]", "%1")
 
-	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下本界面，反馈并用语言详细说明发生了什么。")
+	local err_text = table.concat(err, "\n")
 
-	table.insert(err, "\n" .. plugins_text)
-
-	table.insert(err, "\n\nLast error msgs\n")
-	table.insert(err, last_log_msg)
-
-	local pt = table.concat(tip, "\n")
-
-	pt = string.gsub(pt, "\t", "")
-	pt = string.gsub(pt, "%[string \"(.-)\"%]", "%1")
-
-	local p = table.concat(err, "\n")
-
-	p = string.gsub(p, "\t", "")
-	p = string.gsub(p, "%[string \"(.-)\"%]", "%1")
+	err_text = string.gsub(err_text, "\t", "")
+	err_text = string.gsub(err_text, "%[string \"(.-)\"%]", "%1")
 
 	-- 分区渲染：不同类型的信息使用不同颜色（更醒目）
 	local margin = math.floor(28 * scale)
@@ -948,34 +896,28 @@ function love.errorhandler(msg)
 	end
 
 	local sections = {}
-	-- 标题：亮红
+	-- 版本与插件归因/自动禁用提示：亮黄
 	sections[#sections + 1] = {
-		text = "Error",
-		color = {1, 0.3, 0.3, 1},
-		font = title_font
+		text = tip_text,
+		color = {1, 0.82, 0.35, 1},
+		font = cn_font
 	}
 	-- 错误消息：红
 	sections[#sections + 1] = {
-		text = msg,
+		text = err_text,
 		color = {1, 0.45, 0.45, 1},
-		font = cn_font
-	}
-	-- 版本与插件归因/自动禁用提示：亮黄
-	sections[#sections + 1] = {
-		text = pt,
-		color = {1, 0.82, 0.35, 1},
 		font = cn_font
 	}
 	-- 堆栈：浅灰
 	sections[#sections + 1] = {
-		text = table.concat(trace_lines, "\n"),
+		text = trace,
 		color = {0.8, 0.8, 0.88, 1},
 		font = font
 	}
 	-- 最近日志：橙
 	if last_log_msg and last_log_msg ~= "" then
 		sections[#sections + 1] = {
-			text = "Last error msgs\n" .. last_log_msg,
+			text = "报错日志记录\n" .. last_log_msg,
 			color = {1, 0.62, 0.32, 1},
 			font = font
 		}
@@ -993,18 +935,22 @@ function love.errorhandler(msg)
 		font = cn_font
 	}
 
+	local sum_up = ""
 	local y = margin
 	for _, sec in ipairs(sections) do
 		G.setFont(sec.font)
 		G.setColor(sec.color[1], sec.color[2], sec.color[3], sec.color[4])
 		G.printf(sec.text, margin, y, wrap_w)
 		y = y + text_height(sec.font, sec.text, wrap_w) + math.floor(5 * scale)
+		sum_up = sum_up .. sec.text .. "\n"
 	end
 	G.present()
 
 	if LLDEBUGGER then
 		LLDEBUGGER.start()
 	end
+
+	print(sum_up)
 
 	return function()
 		love.event.pump()
@@ -1026,7 +972,7 @@ function love.errorhandler(msg)
 				local pressed = love.window.showMessageBox("关闭" .. name .. "?", "", buttons)
 
 				if pressed == 1 then
-					love.system.setClipboardText(pt .. p)
+					love.system.setClipboardText(sum_up)
 					return 1
 				end
 			end

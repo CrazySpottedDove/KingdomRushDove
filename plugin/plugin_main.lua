@@ -50,14 +50,7 @@ end
 function plugin_main:after_init()
 	-- 提前初始化，确保 errorhandler 归因时 PLUGIN_REGISTRY 不为 nil
 	PLUGIN_REGISTRY = {}
-
-	-- 正序增加插件路径
-	-- for i = 1, plugin_db.plugins_count do
-	-- local plugin_data = plugin_db.plugins_datas[i]
-
-	-- 添加插件路径到package.path
-	-- plugin_utils.add_path(plugin_data)
-	-- end
+	PLUGIN_ERRORS = {}
 
 	-- 倒序加载插件，确保加载模块顺序正确
 	for i = plugin_db.plugins_count, 1, -1 do
@@ -75,21 +68,47 @@ function plugin_main:after_init()
 
 	local loaded_plugins_count = #self.loaded_plugins
 
+	local function plugin_error_handler(err)
+		-- 获取完整堆栈（跳过错误处理器本身和 xpcall 的 C 帧）
+		local stack = debug.traceback(err)
+		local lines = {}
+		local is_first = true
+
+		for line in stack:gmatch("[^\n]+") do
+			if is_first then
+				-- 保留第一行（错误消息）
+				table.insert(lines, line)
+				is_first = false
+			else
+				-- 遇到框架行则停止（不包含该行）
+				if line:match("function 'after_init'") then
+					break
+				end
+				table.insert(lines, line)
+			end
+		end
+
+		return table.concat(lines, "\n")
+	end
 	-- 正序初始化插件，确保高优先级覆盖低优先级
 	for i = loaded_plugins_count, 1, -1 do
 		local loaded_plugin, plugin_data = unpack(self.loaded_plugins[i])
-
+		PLUGIN_REGISTRY[plugin_data.name] = plugin_data.config
 		-- 初始化插件
-		loaded_plugin:init(plugin_data)
-		-- 打印插件加载信息
-		print(plugin_db.get_debug_info(plugin_data.config))
+		local ok, err = xpcall(loaded_plugin.init, plugin_error_handler, loaded_plugin, plugin_data)
+		if ok then
+			-- 打印插件加载信息
+			print(plugin_db.get_debug_info(plugin_data.config))
+		else
+			PLUGIN_ERRORS[#PLUGIN_ERRORS + 1] = {
+				entry = plugin_data.entry,
+				error = err
+			}
+		end
 	end
 
-	-- 注册全局 plugin 表，供 errorhandler 归因使用（目录名 → config）
-	PLUGIN_REGISTRY = {}
-	for i = 1, plugin_db.plugins_count do
-		local plugin_data = plugin_db.plugins_datas[i]
-		PLUGIN_REGISTRY[plugin_data.name] = plugin_data.config
+	if #PLUGIN_ERRORS > 0 then
+		error("插件初始化错误")
 	end
 end
 

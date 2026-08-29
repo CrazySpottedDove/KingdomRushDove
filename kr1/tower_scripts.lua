@@ -22227,8 +22227,6 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 		sp.flip_x = this.pos.x > dest.x
 	end
 
-	local tower_id = this.owner.id
-
 	ca.ts = store.tick_ts
 	sp.offset.y = this.flight_height
 
