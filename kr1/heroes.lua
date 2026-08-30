@@ -772,8 +772,8 @@ tt.hero.skills.flaming_frenzy.xp_level_steps = {
 }
 tt.hero.skills.flaming_frenzy.xp_gain = {100, 200, 300}
 tt.hero.skills.surge_of_flame = CC("hero_skill")
-tt.hero.skills.surge_of_flame.damage_max = {20, 30, 30}
-tt.hero.skills.surge_of_flame.damage_min = {10, 20, 20}
+tt.hero.skills.surge_of_flame.damage_max = {10, 15, 30}
+tt.hero.skills.surge_of_flame.damage_min = {5, 10, 20}
 tt.hero.skills.surge_of_flame.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,

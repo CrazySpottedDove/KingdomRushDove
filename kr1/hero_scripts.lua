@@ -6577,20 +6577,18 @@ scripts.hero_ignus = {
 
 							target = store.entities[last_target_id]
 
-							if skill.level > 2 then
-								if target and not target.health.dead then
-									surge(target)
+							if target and not target.health.dead then
+								surge(target)
+							end
+
+							while target and target.health.dead do
+								target = find_surge_target()
+
+								if not target then
+									break
 								end
 
-								while target and target.health.dead do
-									target = find_surge_target()
-
-									if not target then
-										break
-									end
-
-									surge(target)
-								end
+								surge(target)
 							end
 
 							surge_end()
