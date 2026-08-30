@@ -2437,6 +2437,7 @@ function scripts.bomb_cluster.update(this, store)
 
 		bf.bullet.from = V.vclone(this.pos)
 		bf.bullet.to = bf_dest
+		bf.bullet.damage_factor = b.damage_factor
 		bf.bullet.flight_time = bf.bullet.flight_time + fts(i) * math.random(1, 2)
 		bf.render.sprites[1].r = 100 * math.random() * (math.pi / 180)
 

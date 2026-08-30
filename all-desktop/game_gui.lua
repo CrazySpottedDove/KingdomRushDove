@@ -4697,6 +4697,9 @@ function DamageTraceView:refresh()
 	local data = game_gui.game.store[damage_trace_modes[self.mode_idx].data_key] or {}
 	local rows = {}
 
+	-- 按展示名聚合：同名条目合并数据后展示，不影响底层记录表
+	local merged = {}
+
 	for template_name, info in pairs(data) do
 		local t = E:get_template(template_name)
 		local category
@@ -4714,8 +4717,27 @@ function DamageTraceView:refresh()
 		end
 
 		if category == self.tab_idx then
-			rows[#rows + 1] = DamageTraceItemView:new(template_name, info, self.list_w)
+			local agg = merged[info.name]
+
+			if not agg then
+				agg = {
+					template_name = template_name,
+					data = {}
+				}
+				merged[info.name] = agg
+			end
+
+			for damage_type, value in pairs(info.data) do
+				agg.data[damage_type] = (agg.data[damage_type] or 0) + value
+			end
 		end
+	end
+
+	for name, agg in pairs(merged) do
+		rows[#rows + 1] = DamageTraceItemView:new(agg.template_name, {
+			name = name,
+			data = agg.data
+		}, self.list_w)
 	end
 
 	-- 卡片按总伤降序排列，总伤相同时按模板名排序保证稳定
