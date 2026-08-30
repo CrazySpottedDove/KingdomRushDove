@@ -196,28 +196,9 @@ require("lib.klua.dump")
 for i = 1, #arg do
 	local a = arg[i]
 
-	if a == "--damage-trace" then
-		DEBUG_DAMAGE_TRACE = true
-	elseif a == "--damage-trace-enemy-hits" then
-		DEBUG_DAMAGE_TRACE = true
-		DEBUG_DAMAGE_TRACE_ALL_ENEMY_HITS = true
-	elseif a == "--damage-trace-all-targets" then
-		DEBUG_DAMAGE_TRACE = true
-		DEBUG_DAMAGE_TRACE_ALL_TARGETS = true
-	elseif a == "--damage-trace-tower" then
-		DEBUG_DAMAGE_TRACE = true
-		DEBUG_DAMAGE_TRACE_TOWER_ATTACKS = true
-	elseif a == "--damage-investigate" then
-		DEBUG_DAMAGE_TRACE_INVESTIGATE = true
+	if a == "assets" then
+		ASSETS_CHECK_ENABLED = true
 	end
-end
-
-if arg[2] == "assets" then
-	ASSETS_CHECK_ENABLED = true
-end
-
-if arg[2] == "waves" then
-	GEN_WAVES_ENABLED = true
 end
 
 if version.build == "RELEASE" then

@@ -19,7 +19,6 @@ local SystemsLastHook = require("all.systems.last_hook")
 local SystemsAssetsChecker = require("all.systems.assets_checker")
 local SystemsEndless = require("all.systems.endless")
 local SystemsTowerSkill = require("all.systems.tower_skill")
-local SystemsWaveGenerator = require("all.systems.wave_generator")
 local SystemsEnemy = require("all.systems.enemy")
 
 local sys = {}
@@ -44,7 +43,6 @@ SystemsLastHook.register(sys)
 SystemsAssetsChecker.register(sys)
 SystemsEndless.register(sys)
 SystemsTowerSkill.register(sys)
-SystemsWaveGenerator.register(sys)
 SystemsEnemy.register(sys)
 
 return sys

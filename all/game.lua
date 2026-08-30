@@ -134,8 +134,7 @@ game.simulation_systems = {
 	"enemy",
 	"last_hook",
 	-- "lights",
-	"assets_checker",
-	"wave_generator"
+	"assets_checker"
 }
 
 local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_done)

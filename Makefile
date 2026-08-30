@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check gen_waves android windows publish publish_retry
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check  android windows publish publish_retry
 
 all: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -38,9 +38,6 @@ debug: _examine_dir_map sync
 
 assets_check: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" assets
-
-gen_waves: _examine_dir_map sync
-	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" waves
 
 # 用于发布小的版本更新，使得更新器端可以在 master 分支上检查到最新更新
 package:
