@@ -4273,6 +4273,19 @@ local damage_trace_names = {
 	[DAMAGE_EAT] = "吞噬"
 }
 
+-- 追踪模式定义：按钮/标题（name）、右侧说明（tip）、空态文案（empty_text）、store 数据表字段（data_key）
+local damage_trace_modes = {{
+	name = "伤害追踪",
+	tip = "伤害追踪显示护甲、免伤结算后的伤害值，不包含溢出的伤害。",
+	empty_text = "暂无伤害记录",
+	data_key = "damage_trace_table"
+}, {
+	name = "承伤追踪",
+	tip = "承伤追踪显示护甲、免伤结算前的伤害值，不包含溢出的伤害。",
+	empty_text = "暂无承伤记录",
+	data_key = "damage_taken_trace_table"
+}}
+
 local function damage_trace_segment_info(damage_type)
 	local color = damage_trace_color_palette[damage_trace_color_index(damage_type)]
 	local names = {}
@@ -4473,7 +4486,6 @@ function DamageTraceItemView:_draw_self()
 
 			G.setColor(c[1], c[2], c[3], pa)
 			G.print(item.name, start_x, bar_y + bar_h + 4)
-			-- G.setColor(value_color[1], value_color[2], value_color[3], pa)
 			G.print(item.value, start_x + nw + 4, bar_y + bar_h + 4)
 		end
 	end
@@ -4524,14 +4536,43 @@ function DamageTraceView:initialize(sw, sh)
 	self.back = back
 	self:add_child(back)
 
-	local header = GGPanelHeader:new("伤害追踪", 180)
+	local header = GGPanelHeader:new(damage_trace_modes[1].name, 180)
 
-	header.pos = V.v((pw - 180) * 0.5, 14)
+	header.pos = V.v(30, 14)
 	back:add_child(header)
+	self.header = header
+
+	-- 模式切换：伤害追踪 / 承伤追踪
+	self.mode_idx = 1
+	self.mode_buttons = {}
+
+	for i, mode in ipairs(damage_trace_modes) do
+		local b = GGOptionsButton:new(mode.name)
+
+		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
+
+		local idx = i
+
+		function b.on_click()
+			S:queue("GUIButtonCommon")
+			self:set_mode(idx)
+		end
+
+		back:add_child(b)
+		self.mode_buttons[i] = b
+	end
+
+	local b_x = 30
+	local mode_gap = 10
+	local mode_y = 88
+
+	for i, b in ipairs(self.mode_buttons) do
+		b.pos = V.v(b_x + b.size.x * 0.5 + (i - 1) * (b.size.x + mode_gap), mode_y)
+	end
 
 	self.tab_buttons = {}
 
-	for i, label in ipairs({"防御塔", "士兵", "敌人"}) do
+	for i, label in ipairs({"防御塔", "士兵", "敌人", "其它"}) do
 		local b = GGOptionsButton:new(label)
 
 		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
@@ -4548,16 +4589,33 @@ function DamageTraceView:initialize(sw, sh)
 	end
 
 	local b0 = self.tab_buttons[1]
-	local tab_gap = 20
-	local tabs_w = 3 * b0.size.x + 2 * tab_gap
-	local tabs_y = 100
+	local tab_gap = 10
+	local bh = b0.size.y * 0.5
+	local tabs_w = #self.tab_buttons * b0.size.x + (#self.tab_buttons - 1) * tab_gap
+	local tabs_y = mode_y + bh + 6 + bh
 
 	for i, b in ipairs(self.tab_buttons) do
-		b.pos = V.v((pw - tabs_w) * 0.5 + b0.size.x * 0.5 + (i - 1) * (b0.size.x + tab_gap), tabs_y)
+		b.pos = V.v(b_x + b0.size.x * 0.5 + (i - 1) * (b0.size.x + tab_gap), tabs_y)
 	end
 
+	-- 右侧提示：伤害/承伤说明，随模式切换、自适应换行
+	local tip_x = b_x + tabs_w + 20
+	local tip_w = pw - tip_x - 30
+	local tip = GGLabel:new(V.v(tip_w, tabs_y + bh - (mode_y - bh)))
+
+	tip.pos = V.v(tip_x, mode_y - bh)
+	tip.font_name = "body"
+	tip.font_size = 14
+	tip.text_align = "left"
+	tip.vertical_align = "middle"
+	tip.fit_lines = 3
+	tip.colors.text = {200, 185, 150, 255}
+	tip.text = damage_trace_modes[1].tip
+	back:add_child(tip)
+	self.tip = tip
+
 	local list_x = 30
-	local list_y = 140
+	local list_y = tabs_y + bh + 6
 	local list_w = pw - 60
 	local list_h = ph - list_y - 78
 	local list = KScrollList:new(V.v(list_w, list_h))
@@ -4580,7 +4638,7 @@ function DamageTraceView:initialize(sw, sh)
 	l_empty.text_align = "center"
 	l_empty.vertical_align = "middle"
 	l_empty.colors.text = {200, 185, 150, 255}
-	l_empty.text = "暂无伤害记录"
+	l_empty.text = damage_trace_modes[1].empty_text
 	l_empty.hidden = true
 	back:add_child(l_empty)
 	self.l_empty = l_empty
@@ -4597,6 +4655,7 @@ function DamageTraceView:initialize(sw, sh)
 
 	back:add_child(b_close)
 
+	self:set_mode(1)
 	self:set_tab(1)
 end
 
@@ -4613,8 +4672,29 @@ function DamageTraceView:set_tab(idx)
 	self:refresh()
 end
 
+function DamageTraceView:set_mode(idx)
+	self.mode_idx = idx
+
+	for i, b in ipairs(self.mode_buttons) do
+		local image = i == idx and "options_button_bg_0002" or "options_button_bg_0001"
+
+		b.default_image_name = image
+		b:set_image(image)
+	end
+
+	local mode = damage_trace_modes[idx]
+
+	self.header.text = mode.name
+	self.header:do_fit_lines(1)
+	self.l_empty.text = mode.empty_text
+	self.tip.text = mode.tip
+	self.tip:do_fit_lines(3)
+
+	self:refresh()
+end
+
 function DamageTraceView:refresh()
-	local data = game_gui.game.store.damage_trace_table or {}
+	local data = game_gui.game.store[damage_trace_modes[self.mode_idx].data_key] or {}
 	local rows = {}
 
 	for template_name, info in pairs(data) do
@@ -4628,6 +4708,8 @@ function DamageTraceView:refresh()
 				category = 2
 			elseif t.enemy then
 				category = 3
+			else
+				category = 4
 			end
 		end
 

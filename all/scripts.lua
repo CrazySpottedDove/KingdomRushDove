@@ -8560,6 +8560,7 @@ function scripts.bomb_bouncing.update(this, store)
 
 			if hp.aura then
 				hp.aura.level = b.level
+				hp.aura.source_id = this.id
 			end
 
 			simulation:queue_insert_entity(hp)

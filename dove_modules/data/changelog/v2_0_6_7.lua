@@ -1,1 +1,1 @@
-return {{date="2026-08-30",author="CrazySpottedDove",message="feat: 优化插件报错"},{date="2026-08-30",author="CrazySpottedDove",message="refactor: 删除古早的wave_generator，删除伤害追踪日志"}}
+return {{date="2026-08-30",author="CrazySpottedDove",message="feat: 优化插件报错"},{date="2026-08-30",author="CrazySpottedDove",message="refactor: 删除古早的wave_generator，删除伤害追踪日志"},{date="2026-08-30",author="CrazySpottedDove",message="feat: 添加承伤面板，并支持检查其余类型实体的伤害追踪结果"}}

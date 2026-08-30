@@ -3151,6 +3151,7 @@ function scripts.twister.update(this, store)
 	bolt.pos = V.vclone(this.pos)
 	bolt.bullet.from.x, bolt.bullet.from.y = bolt.pos.x, bolt.pos.y
 	bolt.bullet.target_id = nil
+	bolt._damage_source_id = this._damage_source_id
 	bolt.bullet.store = true
 	bolt.bullet.to.x, bolt.bullet.to.y = bolt.pos.x, bolt.pos.y
 	if this.blast_chance then
@@ -3158,6 +3159,7 @@ function scripts.twister.update(this, store)
 			local blast = E:create_entity("bolt_blast")
 			blast.bullet.damage_factor = this.aura.damage_factor
 			blast.bullet.level = this.blast_level
+			blast._damage_source_id = this._damage_source_id
 			bolt.bullet.payload = blast
 		end
 	end
@@ -11972,6 +11974,7 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
 				b.bullet.from:copy(e_pos)
 				b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
+				b.bullet.source_id = this.id
 				b.bullet.level = pow_s.level
 				b.bullet.damage_factor = factor * this.tower.damage_factor
 
@@ -19513,6 +19516,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 
 				soul.level = this.powers.soul_attack.level
 				soul.pos = V.vclone(this.pos)
+				soul._damage_source_id = this._damage_source_id
 
 				simulation:queue_insert_entity(soul)
 			end
@@ -19587,6 +19591,7 @@ function scripts.tower_ghost.soul_update(this, store)
 		b.bullet.from = V.vclone(b.pos)
 		b.bullet.to = V.v(enemy.pos.x, enemy.pos.y)
 		b.bullet.target_id = enemy.id
+		b._damage_source_id = this._damage_source_id
 		b.bullet.damage_min = this.damage_min[level]
 		b.bullet.damage_max = this.damage_max[level]
 
@@ -24733,6 +24738,7 @@ function scripts.tower_bone_flingers.update(this, store)
 					b1.bullet.from:copy(b1.pos)
 					b1.bullet.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 					b1.bullet.target_id = enemy.id
+					b1.bullet.source_id = this.id
 
 					apply_precision(b1)
 
@@ -25761,6 +25767,7 @@ function scripts.missile_rr.remove(this, store)
 				fragment.bullet.speed:set(speed_amount * math.cos(fragment_angle), speed_amount * math.sin(fragment_angle))
 				fragment.pos:copy(start_pos)
 				fragment.render.sprites[1].name = fragment.render.sprites[1].name .. math.random(1, 2)
+				fragment._damage_source_id = this._damage_source_id
 				if i ~= 0 then
 					-- 只有第一个碎片有爆炸音效，避免炸音
 					fragment.sound_events.hit = nil
@@ -26916,6 +26923,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 						local b = E:create_entity(a1.bullet)
 						b.bullet.damage_factor = this.tower.damage_factor
 						b.bullet.from:set(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
+						b.bullet.source_id = this.id
 						b.pos:copy(b.bullet.from)
 						table.insert(a1.stored_bullets, b)
 						b.bullet.shot_index = math.floor((#a1.stored_bullets - 1) / 3 + 1) % -2 + 2
@@ -26934,7 +26942,6 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 							local b = a1.stored_bullets[i]
 							a1.stored_bullets[i] = nil
 							b.bullet.target_id = target.id
-							b.bullet.source_id = this.id
 							b.bullet.to:set(pred_pos.x + target.unit.hit_offset.x, pred_pos.y + target.unit.hit_offset.y)
 							b.target_found = true
 							local d = SU.create_bullet_damage_without_pops(b.bullet, target.id, b.id)
@@ -26953,7 +26960,6 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 							local b = a1.extra_bullets[i]
 							a1.extra_bullets[i] = nil
 							b.bullet.target_id = target.id
-							b.bullet.source_id = this.id
 							b.bullet.to:set(pred_pos.x + target.unit.hit_offset.x, pred_pos.y + target.unit.hit_offset.y)
 							b.target_found = true
 							local d = SU.create_bullet_damage_without_pops(b.bullet, target.id, b.id)
@@ -27038,6 +27044,7 @@ function scripts.aura_spectral_communion.update(this, store)
 
 					b.bullet.damage_factor = source.tower.damage_factor
 					b.bullet.from:set(source.pos.x + start_offset.x, source.pos.y + start_offset.y)
+					b.bullet.source_id = this.id
 					b.bullet.shot_index = math.floor((i - 1) / 3 + 1) % -2 + 2
 					local offset = b.bullet.destination_offsets[(b.bullet.shot_index - 1) % #b.bullet.destination_offsets + 1]
 
@@ -28952,7 +28959,7 @@ scripts.bullet_tower_blazing_watcher = {
 					e.attack_stage = attack_stage
 					e.bullet.damage_factor = b.damage_factor
 					e.bullet.level = pow_explosion_level
-					e.bullet.source_id = b.source_id
+					e.bullet.source_id = this.id
 					simulation:queue_insert_entity(e)
 				end
 			end
@@ -29141,6 +29148,7 @@ scripts.bullet_tower_blazing_watcher_proc = {
 			e.attack_stage = tower.attack_stage
 			e.bullet.damage_factor = b.damage_factor
 			e.bullet.level = pow_explosion_level
+			e.bullet.source_id = this.id
 			simulation:queue_insert_entity(e)
 		end
 

@@ -441,6 +441,7 @@ local function hnum_init(store)
 end
 
 local damage_trace_table = {}
+local damage_taken_trace_table = {}
 
 local damage_trace
 local damage_trace_on_insert_unconditional
@@ -474,25 +475,46 @@ local function damage_trace_disabled(store, d, e)
 end
 
 local function damage_trace_enabled(store, d, e)
-	local source = store.entities[d.source_id]
-	if source then
-		if source._damage_source_id then
-			source = store.entities[source._damage_source_id]
-		end
-		if source and (source.tower or source.unit) then
-			if not damage_trace_table[source.template_name] then
-				damage_trace_table[source.template_name] = {
-					name = source.info and source.info.i18n_key and _(source.info.i18n_key .. "_NAME") or _(string.upper(source.template_name) .. "_NAME"),
-					data = {}
-				}
+	if d.source_id then
+		local source = store.entities[d.source_id]
+		if source then
+			if source._damage_source_id then
+				source = store.entities[source._damage_source_id]
 			end
-			local dt = damage_trace_table[source.template_name].data
-			if not dt[d.damage_type] then
-				dt[d.damage_type] = 0
+			-- if source and (source.tower or source.unit) then
+			if source then
+				if not damage_trace_table[source.template_name] then
+					damage_trace_table[source.template_name] = {
+						name = source.info and source.info.i18n_key and _(source.info.i18n_key .. "_NAME") or _(string.upper(source.template_name) .. "_NAME"),
+						data = {}
+					}
+				end
+				local dt = damage_trace_table[source.template_name].data
+				if not dt[d.damage_type] then
+					dt[d.damage_type] = 0
+				end
+				dt[d.damage_type] = dt[d.damage_type] + math.min(d.damage_applied, math.max(e.health.hp, 0))
 			end
-			dt[d.damage_type] = dt[d.damage_type] + math.min(d.damage_applied, math.max(e.health.hp, 0))
 		end
 	end
+	local damage_taken = 0
+	if e.health.hp > 0 then
+		damage_taken = (band(d.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 and d.damage_applied or d.value) * math.min(e.health.hp / d.damage_applied, 1)
+	end
+	if e._damage_source_id and store.entities[e._damage_source_id] then
+		e = store.entities[e._damage_source_id]
+	end
+	if not damage_taken_trace_table[e.template_name] then
+		damage_taken_trace_table[e.template_name] = {
+			name = e.info and e.info.i18n_key and _(e.info.i18n_key .. "_NAME") or _(string.upper(e.template_name) .. "_NAME"),
+			data = {}
+		}
+	end
+	local dt = damage_taken_trace_table[e.template_name].data
+	if not dt[d.damage_type] then
+		dt[d.damage_type] = 0
+	end
+	dt[d.damage_type] = dt[d.damage_type] + damage_taken
 end
 
 local function damage_trace_init(store)
@@ -500,12 +522,16 @@ local function damage_trace_init(store)
 		damage_trace = damage_trace_enabled
 		damage_trace_on_insert_unconditional = damage_trace_on_insert_unconditional_enabled
 		damage_trace_table = {}
+		damage_taken_trace_table = {}
 		store.damage_trace_table = damage_trace_table
+		store.damage_taken_trace_table = damage_taken_trace_table
 	else
 		damage_trace = damage_trace_disabled
 		damage_trace_on_insert_unconditional = damage_trace_on_insert_unconditional_disabled
 		damage_trace_table = nil
+		damage_taken_trace_table = nil
 		store.damage_trace_table = nil
+		store.damage_taken_trace_table = nil
 	end
 end
 
@@ -619,24 +645,19 @@ function M.register(sys)
 					if band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
 						SU.armor_dec(e, d.value)
 						d.damage_result = bor(d.damage_result, DR_ARMOR)
-					-- damage_trace_record_event(store, e, d, "armor", d.value, h.hp, h.hp)
 					elseif band(d.damage_type, DAMAGE_MAGICAL_ARMOR) ~= 0 then
 						SU.magic_armor_dec(e, d.value)
 						d.damage_result = bor(d.damage_result, DR_MAGICAL_ARMOR)
-					-- damage_trace_record_event(store, e, d, "magic_armor", d.value, h.hp, h.hp)
 					else
 						if band(d.damage_type, DAMAGE_EAT) ~= 0 then
 							local eat_amt = math.max(h.hp, 0)
 							d.damage_applied = eat_amt
 							d.damage_result = bor(d.damage_result, DR_KILL)
 							damage_trace(store, d, e)
-							-- damage_trace_record_event(store, e, d, "eat", eat_amt, starting_hp, 0)
 							h.hp = 0
 							self.on_damage_applied(store, d, e)
 						else
 							local actual_damage = U.predict_damage(e, d)
-
-							-- damage_trace_record_event(store, e, d, "hp", actual_damage, starting_hp, h.hp)
 
 							if actual_damage > 0 then
 								d.damage_applied = actual_damage
@@ -711,7 +732,6 @@ function M.register(sys)
 			local h = e.health
 
 			if h.hp <= 0 and not h.dead and not h.ignore_damage then
-				-- damage_trace_print_death(store, e)
 				h.hp = 0
 				h.dead = true
 				h.death_ts = ts

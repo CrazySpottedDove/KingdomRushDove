@@ -6759,5 +6759,8 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_TANK_SPECIAL = "多刺蛞蝓，炽热导弹，猛击地，敢死队，灼热大炮，女武神的呼唤",
 	CORO = "协程",
 	IMAGE = "图像",
-	SOUND = "音频"
+	SOUND = "音频",
+	POWER_SCORCHED_EARTH_NAME = "焦土",
+	POWER_SCORCHED_WATER_NAME = "焦水",
+	POWER_THUNDER_CONTROL_NAME = "闪电风暴"
 }
