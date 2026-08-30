@@ -8146,7 +8146,7 @@ function scripts.werewolf_regen_aura.update(this, store)
 
 		if target.unit.is_stunned and U.has_modifier_types(store, target, MOD_TYPE_FREEZE) then
 		-- block empty
-		elseif target.regen and store.tick_ts - this.aura.ts >= target.regen.cooldown then
+		elseif target.enemy.can_do_magic and target.regen and store.tick_ts - this.aura.ts >= target.regen.cooldown then
 			this.aura.ts = store.tick_ts
 			U.heal(target, target.regen.health)
 		end
