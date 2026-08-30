@@ -18638,6 +18638,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
+				m.modifier.source_id = this.id
 				m.modifier.damage_factor = b.damage_factor
 				m.modifier.level = b.level
 
@@ -18675,6 +18676,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 				r.seen_targets = this.seen_targets
 				r.bullet.damage_min = this.bullet.damage_min * this.bounce_damage_factor
 				r.bullet.damage_max = this.bullet.damage_max * this.bounce_damage_factor
+				r.bullet.damage_factor = this.bullet.damage_factor
 				r.render.sprites[1].name = this.bounce_sprite_name
 				r.ray_duration = this.bounce_ray_duration
 				r.image_width = this.bounce_image_width
