@@ -782,25 +782,38 @@ local function build_enabled_plugins_text()
 	return table.concat(lines, "\n")
 end
 
-local function strip_boot_lua(trace_string)
+local function strip_noise_from_trace(trace_string)
+	-- 使用纯文本子串匹配（避免把 "." 当成通配符）
+	local skip_substrings = {"boot.lua", "[C]:", "in main chunk"}
+
 	local trace_lines = {}
+	-- 按行分割（保留末尾空行不影响拼接）
 	for l in string.gmatch(trace_string, "(.-)\n") do
-		if not string.match(l, "boot.lua") then
+		local should_skip = false
+		for _, substr in ipairs(skip_substrings) do
+			-- 第三个参数 true 表示纯文本查找，不使用模式匹配
+			if string.find(l, substr, 1, true) then
+				should_skip = true
+				break
+			end
+		end
+		if not should_skip then
 			table.insert(trace_lines, l)
 		end
 	end
+
 	return table.concat(trace_lines, "\n")
 end
 
 function love.errorhandler(msg)
 	local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
-	local trace = strip_boot_lua(debug.traceback())
+	local trace = strip_noise_from_trace(debug.traceback())
 
 	local blamed_plugins
 	if PLUGIN_ERRORS and #PLUGIN_ERRORS > 0 then
 		blamed_plugins = PLUGIN_ERRORS
 	else
-		local blamed_plugin = find_plugin_from_traceback(trace)
+		local blamed_plugin = find_plugin_from_traceback(trace .. "\n" .. msg)
 		if blamed_plugin then
 			blamed_plugins = {{
 				entry = blamed_plugin,

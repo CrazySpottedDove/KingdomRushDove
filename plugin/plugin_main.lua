@@ -84,7 +84,9 @@ function plugin_main:after_init()
 				if line:match("function 'after_init'") then
 					break
 				end
-				table.insert(lines, line)
+				if not string.find(line, "[C]: ", 1, true) then
+					table.insert(lines, line)
+				end
 			end
 		end
 
