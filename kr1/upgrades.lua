@@ -2539,6 +2539,7 @@ function upgrades:patch_templates(max_level)
 		T("power_thunder_control").thunders[1].count = 10
 		T("power_thunder_control").thunders[2].count = 10
 		T("power_thunder_control").slow.factor = 0.25
+		T("power_thunder_control").extra_duration = 4
 	end
 
 	if self.levels.reinforcements > 0 then

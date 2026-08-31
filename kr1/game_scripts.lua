@@ -17389,13 +17389,79 @@ function scripts.power_thunder_control.update(this, store)
 		coroutine.yield()
 	end
 
-	U.y_wait_unconditional(store, overlay.cooldown)
+	if this.extra_duration then
+		local stop_ts = store.tick_ts + this.extra_duration
+		overlay.tween.remove = true
+		overlay.tween.props[1].keys = {{0, overlay.render.sprites[1].alpha}, {this.extra_duration, 0}}
+		overlay.tween.props[2].keys = {{0, overlay.render.sprites[2].alpha}, {this.extra_duration, 0}}
+		overlay.tween.ts = store.tick_ts
+		overlay.tween.props[2].ts = nil
+		while store.tick_ts < stop_ts do
+			if not this.slow.disabled and store.tick_ts - this.slow.ts > this.slow.cooldown then
+				this.slow.ts = store.tick_ts
+				local factor = (stop_ts - store.tick_ts) / this.extra_duration
 
-	overlay.tween.remove = true
-	overlay.tween.props[1].keys = {{0, overlay.render.sprites[1].alpha}, {0.5, 0}}
-	overlay.tween.props[2].keys = {{0, overlay.render.sprites[2].alpha}, {0.5, 0}}
-	overlay.tween.ts = store.tick_ts
-	overlay.tween.props[2].ts = nil
+				local targets = U.find_enemies_in_range_filter_off(this.pos, this.slow.range, this.vis_flags, this.vis_bans)
+
+				if targets then
+					for _, target in ipairs(targets) do
+						local mod = E:create_entity(this.slow.mod)
+
+						mod.modifier.target_id = target.id
+						mod.modifier.source_id = this.id
+						mod.slow.factor = 1 - (1 - this.slow.factor) * factor
+
+						simulation:queue_insert_entity(mod)
+					end
+				end
+			end
+
+			if not this.rain.disabled and store.tick_ts - this.rain.ts > this.rain.cooldown then
+				local r = this.rain
+
+				r.ts = store.tick_ts
+
+				local angle = U.frandom(r.angle_min, r.angle_max)
+				local factor = (stop_ts - store.tick_ts) / this.extra_duration
+				for i = 1, math.ceil(r.count * factor) do
+					angle = angle + U.frandom(-r.angle_between, r.angle_between)
+
+					local dist = math.random(r.distance_min, r.distance_max)
+					local ox, oy = V.rotate(angle, dist, 0)
+					local delay = U.frandom(0.001, r.delay_max)
+					local pos = v(math.random(-REF_OX, REF_W + REF_OX), math.random(0, REF_H))
+					local e = E:create_entity("fx_power_thunder_drop")
+
+					e.pos.x, e.pos.y = pos.x, pos.y
+					e.render.sprites[1].offset = v(-ox, -oy)
+					e.render.sprites[1].r = angle
+					e.render.sprites[1].alpha = math.random(r.alpha_min, r.alpha_max)
+					e.tween.props[1].keys = {{0, 0}, {0.001, 255}}
+					e.tween.props[2] = E:clone_c("tween_prop")
+					e.tween.props[2].keys = {{0, v(-ox, -oy)}, {0.001, v(-ox, -oy)}, {r.duration, v(0, 0)}}
+					e.tween.props[2].name = "offset"
+					e.tween.ts = store.tick_ts + delay
+
+					simulation:queue_insert_entity(e)
+
+					local e = E:create_entity("fx_power_thunder_rain_splash")
+
+					e.pos.x, e.pos.y = pos.x, pos.y
+					e.render.sprites[1].ts = store.tick_ts + delay + r.duration
+
+					simulation:queue_insert_entity(e)
+				end
+			end
+
+			coroutine.yield()
+		end
+	else
+		overlay.tween.remove = true
+		overlay.tween.props[1].keys = {{0, overlay.render.sprites[1].alpha}, {0.5, 0}}
+		overlay.tween.props[2].keys = {{0, overlay.render.sprites[2].alpha}, {0.5, 0}}
+		overlay.tween.ts = store.tick_ts
+		overlay.tween.props[2].ts = nil
+	end
 
 	simulation:queue_remove_entity(this)
 end
