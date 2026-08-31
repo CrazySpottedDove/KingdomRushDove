@@ -1,48 +1,35 @@
--- chunkname: @./all/systems.lua
-local SystemsLevel = require("all.systems.level")
-local SystemsTween = require("all.systems.tween")
-local SystemsRender = require("all.systems.render")
-local SystemsTower = require("all.systems.tower")
-local SystemsMainScript = require("all.systems.main_script")
-local SystemsHealth = require("all.systems.health")
-local SystemsCountGroups = require("all.systems.count_groups")
-local SystemsTimed = require("all.systems.timed")
-local SystemsSoundEvents = require("all.systems.sound_events")
-local SystemsEvents = require("all.systems.events")
-local SystemsWaveSpawnTsv = require("all.systems.wave_spawn_tsv")
-local SystemsWaveSpawn = require("all.systems.wave_spawn")
-local SystemsModLifecycle = require("all.systems.mod_lifecycle")
-local SystemsParticleSystem = require("all.systems.particle_system")
-local SystemsEditorOverrides = require("all.systems.editor_overrides")
-local SystemsEditorScript = require("all.systems.editor_script")
-local SystemsLastHook = require("all.systems.last_hook")
-local SystemsAssetsChecker = require("all.systems.assets_checker")
-local SystemsEndless = require("all.systems.endless")
-local SystemsTowerSkill = require("all.systems.tower_skill")
-local SystemsEnemy = require("all.systems.enemy")
+local systems_list = {
+	"level",
+	"tween",
+	"render",
+	"tower",
+	"main_script",
+	"health",
+	"count_groups",
+	"timed",
+	"sound_events",
+	"events",
+	"wave_spawn_tsv",
+	"wave_spawn",
+	"mod_lifecycle",
+	"particle_system",
+	"editor_overrides",
+	"editor_script",
+	"last_hook",
+	"assets_checker",
+	"endless",
+	"tower_skill",
+	"enemy"
+}
 
-local sys = {}
+local systems = {}
 
-SystemsLevel.register(sys)
-SystemsTween.register(sys)
-SystemsRender.register(sys)
-SystemsTower.register(sys)
-SystemsMainScript.register(sys)
-SystemsHealth.register(sys)
-SystemsCountGroups.register(sys)
-SystemsTimed.register(sys)
-SystemsSoundEvents.register(sys)
-SystemsEvents.register(sys)
-SystemsWaveSpawnTsv.register(sys)
-SystemsWaveSpawn.register(sys)
-SystemsModLifecycle.register(sys)
-SystemsParticleSystem.register(sys)
-SystemsEditorOverrides.register(sys)
-SystemsEditorScript.register(sys)
-SystemsLastHook.register(sys)
-SystemsAssetsChecker.register(sys)
-SystemsEndless.register(sys)
-SystemsTowerSkill.register(sys)
-SystemsEnemy.register(sys)
+for i = 1, #systems_list do
+	local name = systems_list[i]
+	local system = require("all.systems." .. name)
+	if system then
+		systems[name] = system
+	end
+end
 
-return sys
+return systems

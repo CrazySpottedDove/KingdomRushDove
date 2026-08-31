@@ -1,23 +1,20 @@
-local M = {}
+local timed = {}
 
 local perf = require("dove_modules.perf.perf")
 
-function M.register(sys)
-	sys.timed = {}
-	sys.timed.name = "timed"
+timed.name = "timed"
 
-	function sys.timed:on_render_update(dt, ts, store)
-		local entities = store.entities_with_timed
+function timed:on_render_update(dt, ts, store)
+	local entities = store.entities_with_timed
 
-		for _, e in pairs(entities) do
-			local s = e.render.sprites[e.timed.sprite_id]
+	for _, e in pairs(entities) do
+		local s = e.render.sprites[e.timed.sprite_id]
 
-			-- 如果 timed 系统排在 render 系统之前更新，那么某些地方启动 timed 的时候，可能将 timed.runs 置为 1，但是此时，render 系统没有更新，s.runs 可能远大于 e.timed.runs，导致实体直接被删除。所以，应该把 timed 系统放在 render 系统之后更新。
-			if s.runs >= e.timed.runs or ts - s.ts > e.timed.duration then
-				simulation:queue_remove_entity(e)
-			end
+		-- 如果 timed 系统排在 render 系统之前更新，那么某些地方启动 timed 的时候，可能将 timed.runs 置为 1，但是此时，render 系统没有更新，s.runs 可能远大于 e.timed.runs，导致实体直接被删除。所以，应该把 timed 系统放在 render 系统之后更新。
+		if s.runs >= e.timed.runs or ts - s.ts > e.timed.duration then
+			simulation:queue_remove_entity(e)
 		end
 	end
 end
 
-return M
+return timed

@@ -2635,7 +2635,6 @@ function scripts.arrow_missile.update(this, store)
 
 		p.pos.x, p.pos.y = this_pos.x, this_pos.y
 		p.target_id = b.target_id
-		p._damage_source_id = this._damage_source_id
 
 		if p.aura then
 			p.aura.level = b.level
@@ -2924,9 +2923,7 @@ function scripts.enemy_bomb.update(this, store)
 	end
 
 	for _, target in ipairs(targets) do
-		local d = E.create_damage()
-
-		d.damage_type = b.damage_type
+		local d = E.assign_damage(b.damage_type, 0, this.id, target.id)
 
 		if b.damage_decay_random then
 			d.value = U.frandom(b.damage_min, b.damage_max)
@@ -2935,9 +2932,6 @@ function scripts.enemy_bomb.update(this, store)
 
 			d.value = b.damage_max - (b.damage_max - b.damage_min) * dist_factor
 		end
-
-		d.source_id = this.id
-		d.target_id = target.id
 
 		queue_damage(store, d)
 
@@ -3319,18 +3313,11 @@ function scripts.enemy_missile.update(this, store)
 
 		for _, t in ipairs(targets) do
 			local t_pos = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
-			local d = E.create_damage()
-
-			d.source_id = this.id
-			d.target_id = t.id
-			d.damage_type = b.damage_type
-			d.reduce_armor = b.reduce_armor
-			d.reduce_magic_armor = b.reduce_magic_armor
-
 			local dist_factor = U.dist_factor_inside_ellipse(t_pos, this.pos, b.damage_radius)
 
-			d.value = b.damage_max - (b.damage_max - b.damage_min) * dist_factor
-			d.value = b.damage_factor * d.value
+			local d = E.assign_damage(b.damage_type, b.damage_factor * (b.damage_max - (b.damage_max - b.damage_min) * dist_factor), this.id, t.id)
+			d.reduce_armor = b.reduce_armor
+			d.reduce_magic_armor = b.reduce_magic_armor
 
 			queue_damage(store, d)
 
@@ -4234,12 +4221,7 @@ function scripts.ray_enemy.update(this, store)
 
 	if targets and b.damage_type ~= DAMAGE_NONE then
 		for _, t in ipairs(targets) do
-			local d = E.create_damage()
-
-			d.source_id = this.id
-			d.target_id = t.id
-			d.value = math.random(b.damage_min, b.damage_max)
-			d.damage_type = b.damage_type
+			local d = E.assign_damage(b.damage_type, math.random(b.damage_min, b.damage_max), this.id, t.id)
 
 			queue_damage(store, d)
 		end
@@ -5861,12 +5843,7 @@ function scripts.mod_dps.update(this, store)
 	local function do_damage(target, value)
 		total_damage = total_damage + value
 
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = target.id
-		d.value = value * m.damage_factor
-		d.damage_type = dps.damage_type
+		local d = E.assign_damage(dps.damage_type, value * m.damage_factor, this.id, target.id)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
@@ -6012,12 +5989,7 @@ scripts.mod_dps_with_fade = {
 
 			if store.tick_ts - m.ts >= m.duration - 1e-09 then
 				if dps.damage_last then
-					local d = E.create_damage()
-
-					d.source_id = this.id
-					d.target_id = target.id
-					d.value = dps.damage_last * m.damage_factor
-					d.damage_type = dps.damage_type
+					local d = E.assign_damage(dps.damage_type, dps.damage_last * m.damage_factor, this.id, target.id)
 					d.pop = dps.pop
 					d.pop_chance = dps.pop_chance
 					d.pop_conds = dps.pop_conds
@@ -6054,12 +6026,7 @@ scripts.mod_dps_with_fade = {
 						damage_value = km.clamp(0, target.health.hp - 1, damage_value)
 					end
 
-					local d = E.create_damage()
-
-					d.source_id = this.id
-					d.target_id = target.id
-					d.value = damage_value
-					d.damage_type = dps.damage_type
+					local d = E.assign_damage(dps.damage_type, damage_value, this.id, target.id)
 					d.pop = dps.pop
 					d.pop_chance = dps.pop_chance
 					d.pop_conds = dps.pop_conds
@@ -7027,12 +6994,7 @@ function scripts.mod_teleport.insert(this, store)
 
 	if target and target.health and not target.health.dead and (not this.max_times_applied or not target.enemy.counts.mod_teleport or target.enemy.counts.mod_teleport < this.max_times_applied) and (not this.jump_connection or P:get_next_pi(target.nav_path.pi)) then
 		if this.damage_base ~= 0 then
-			local d = E.create_damage()
-
-			d.source_id = this.id
-			d.target_id = target.id
-			d.damage_type = this.damage_type
-			d.value = (this.damage_base + this.damage_inc * this.modifier.level) * this.modifier.damage_factor
+			local d = E.assign_damage(this.damage_type, (this.damage_base + this.damage_inc * this.modifier.level) * this.modifier.damage_factor, this.id, target.id)
 
 			queue_damage(store, d)
 		end
@@ -7250,12 +7212,7 @@ function scripts.mod_polymorph.insert(this, store)
 		e_name = pm.custom_entity_names.default
 	end
 
-	local d = E.create_damage()
-
-	d.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_LIFESTEAL)
-	-- workaround
-	d.source_id = m.source_id
-	d.target_id = target.id
+	local d = E.assign_damage(bor(DAMAGE_EAT, DAMAGE_NO_LIFESTEAL), 0, m.source_id, target.id)
 	d.pop = pm.pop
 
 	queue_damage(store, d)
@@ -8011,12 +7968,7 @@ function scripts.power_fireball.update(this, store)
 
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = E.create_damage()
-
-			d.source_id = this.id
-			d.target_id = enemy.id
-			d.value = damage_value
-			d.damage_type = b.damage_type
+			local d = E.assign_damage(b.damage_type, damage_value, this.id, enemy.id)
 
 			queue_damage(store, d)
 		end
@@ -8118,12 +8070,7 @@ function scripts.abomination_explosion_aura.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E.create_damage()
-
-			d.damage_type = this.aura.damage_type
-			d.value = this.aura.damage_max
-			d.target_id = target.id
-			d.source_id = this.id
+			local d = E.assign_damage(this.aura.damage_type, this.aura.damage_max, this.id, target.id)
 
 			queue_damage(store, d)
 		end
@@ -8196,11 +8143,7 @@ function scripts.mod_lycanthropy.update(this, store)
 			return
 		end
 
-		local d = E.create_damage()
-
-		d.damage_type = DAMAGE_EAT
-		d.source_id = this.id
-		d.target_id = target.id
+		local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 		queue_damage(store, d)
 
@@ -9488,12 +9431,7 @@ function scripts.mod_lifesteal_kr5.insert(this, store)
 			dmg_value = math.random(damage_min, damage_max)
 		end
 
-		local d = E.create_damage()
-
-		d.value = dmg_value
-		d.source_id = this.id
-		d.target_id = target.id
-		d.damage_type = this.damage_type
+		local d = E.assign_damage(this.damage_type, dmg_value, this.id, target.id)
 
 		if not this.only_predict_damage then
 			queue_damage(store, d)
@@ -9730,11 +9668,7 @@ function scripts.mod_do_damage_by_movement.insert(this, store)
 	end
 
 	this.pos:copy(target.pos)
-	this.damage_cache = E.create_damage()
-	this.damage_cache.damage_type = this.damage_type
-	this.damage_cache.source_id = this.id
-	this.damage_cache.target_id = target.id
-	this.damage_cache.value = this.damage_per_distance + this.damage_per_distance_inc * this.modifier.level
+	this.damage_cache = E.assign_damage(this.damage_type, this.damage_per_distance + this.damage_per_distance_inc * this.modifier.level, this.id, target.id)
 
 	this.modifier.ts = store.tick_ts
 

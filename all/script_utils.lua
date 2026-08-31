@@ -649,13 +649,9 @@ function SU.create_bullet_damage_without_pops(bullet, target_id, source_id)
 end
 
 function SU.create_bullet_damage_without_pops_and_value(bullet, target_id, source_id)
-	local d = E.create_damage()
-
-	d.damage_type = bullet.damage_type
+	local d = E.assign_damage(bullet.damage_type, 0, source_id, target_id)
 	d.reduce_armor = bullet.reduce_armor
 	d.reduce_magic_armor = bullet.reduce_magic_armor
-	d.target_id = target_id
-	d.source_id = source_id
 	d.xp_gain_factor = bullet.xp_gain_factor
 	d.xp_dest_id = bullet.xp_dest_id
 	d.track_damage = bullet.track_damage
@@ -1082,12 +1078,7 @@ function SU.y_hero_death_and_respawn(store, this)
 
 		if targets then
 			for _, t in ipairs(targets) do
-				local d = E.create_damage()
-
-				d.damage_type = sd.damage_type
-				d.value = ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.unit.damage_buff) * this.unit.damage_factor
-				d.source_id = this.id
-				d.target_id = t.id
+				local d = E.assign_damage(sd.damage_type, ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.unit.damage_buff) * this.unit.damage_factor, this.id, t.id)
 
 				queue_damage(store, d)
 
@@ -1390,12 +1381,7 @@ function SU.y_soldier_death(store, this)
 
 		if targets then
 			for _, t in ipairs(targets) do
-				local d = E.create_damage()
-
-				d.damage_type = sd.damage_type
-				d.value = ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.unit.damage_buff) * this.unit.damage_factor
-				d.source_id = this.id
-				d.target_id = t.id
+				local d = E.assign_damage(sd.damage_type, ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.unit.damage_buff) * this.unit.damage_factor, this.id, t.id)
 
 				queue_damage(store, d)
 
@@ -2054,12 +2040,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 
 	for i = 1, math.min(attack.count or #targets, #targets) do
 		local e = targets[i]
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = e.id
-		d.damage_type = attack.damage_type
-		d.value = (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
+		local d = E.assign_damage(attack.damage_type, (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff) * this.unit.damage_factor, this.id, e.id)
 		d.track_kills = this.track_kills ~= nil
 		d.track_damage = attack.track_damage
 		d.xp_gain_factor = attack.xp_gain_factor
@@ -2223,12 +2204,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 				local targets = U.find_enemies_in_range_filter_off(hit_pos, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
 
 				for _, e in ipairs(targets) do
-					local d = E.create_damage()
-
-					d.source_id = this.id
-					d.target_id = e.id
-					d.damage_type = attack.damage_type
-					d.value = (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
+					local d = E.assign_damage(attack.damage_type, (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff) * this.unit.damage_factor, this.id, e.id)
 					d.track_kills = this.track_kills ~= nil
 					d.track_damage = attack.track_damage
 					d.xp_gain_factor = attack.xp_gain_factor
@@ -2276,18 +2252,14 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 					simulation:queue_insert_entity(fx)
 				end
 			elseif this.soldier and this.soldier.target_id == target.id then
-				local d = E.create_damage()
+				local d = E.assign_damage(attack.damage_type, 0, this.id, target.id)
 
 				if attack.fn_damage then
-					d.damage_type = attack.damage_type
 					d.value = attack.fn_damage(this, store, attack, target)
 				else
-					d.damage_type = attack.damage_type
 					d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff)
 				end
 
-				d.source_id = this.id
-				d.target_id = target.id
 				d.xp_gain_factor = attack.xp_gain_factor
 				d.xp_dest_id = attack.xp_dest_id
 				d.pop = attack.pop

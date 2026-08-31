@@ -1,4 +1,4 @@
-local M = {}
+local wave_spawn = {}
 
 local math = require("math")
 local random = math.random
@@ -17,274 +17,271 @@ local W = require("wave_db")
 local configer = require("dove_modules.configer")
 local log = require("lib.klua.log"):new("systems")
 
-function M.register(sys)
-	local function fts(v)
-		return v / FPS
+local function fts(v)
+	return v / FPS
+end
+
+wave_spawn.name = "wave_spawn"
+
+local function spawner(store, wave, group_id)
+	local spawns = wave.spawns
+	local pi = wave.path_index
+	local spawn_multipier_min = math.floor((configer.config().enabled and configer.config().enemy_count_multiplier or 1))
+	local spawn_multipier_max = math.ceil((configer.config().enabled and configer.config().enemy_count_multiplier or 1))
+	local spawn_min_rate = spawn_multipier_max - (configer.config().enabled and configer.config().enemy_count_multiplier or 1)
+
+	for i = 1, #spawns do
+		local spawn_multipier = math.random() < spawn_min_rate and spawn_multipier_min or spawn_multipier_max
+		for count = 1, spawn_multipier do
+			local current_count = 0
+			local current_creep
+			local s = spawns[i]
+			local path = P.paths[pi]
+
+			for j = 1, s.max do
+				U.y_wait_unconditional(store, fts(s.interval or 0) / spawn_multipier)
+
+				if not current_creep then
+					current_creep = s.creep
+				elseif s.creep_aux and s.max_same and s.max_same > 0 and current_count >= s.max_same then
+					current_creep = s.creep == current_creep and s.creep_aux or s.creep
+					current_count = 0
+				end
+
+				local e = E:create_entity(current_creep)
+
+				if e then
+					e.nav_path.pi = pi
+					e.nav_path.spi = s.fixed_sub_path == 1 and s.path or random(#path)
+					e.nav_path.ni = P:get_start_node(pi)
+					e.spawn_data = s.spawn_data
+
+					simulation:queue_insert_entity(e)
+					current_count = current_count + 1
+				else
+					log.error("Entity template not found for %s.", s.crep)
+				end
+			end
+
+			if s.max == 0 then
+				U.y_wait_unconditional(store, fts(s.interval or 0) / spawn_multipier)
+			end
+
+			local oes = s.on_end_signal
+			if oes then
+				log.info("Sending spawner on_end_signal: %s", oes)
+				store.wave_signals[oes] = {}
+			end
+
+			if i < #spawns then
+				local interval_next = s.interval_next or 0
+
+				if DI.level == DIFFICULTY_HARD then
+					if group_id > 12 then
+						store.last_wave_ts = store.last_wave_ts - interval_next * 0.75
+						interval_next = interval_next * 0.25
+					elseif group_id > 9 then
+						store.last_wave_ts = store.last_wave_ts - interval_next * 0.5
+						interval_next = interval_next * 0.5
+					elseif group_id > 6 then
+						store.last_wave_ts = store.last_wave_ts - interval_next * 0.25
+						interval_next = interval_next * 0.75
+					end
+				end
+
+				U.y_wait_unconditional(store, fts(interval_next) / spawn_multipier)
+			end
+		end
 	end
 
-	sys.wave_spawn = {}
-	sys.wave_spawn.name = "wave_spawn"
+	return true
+end
 
-	local function spawner(store, wave, group_id)
-		local spawns = wave.spawns
-		local pi = wave.path_index
-		local spawn_multipier_min = math.floor((configer.config().enabled and configer.config().enemy_count_multiplier or 1))
-		local spawn_multipier_max = math.ceil((configer.config().enabled and configer.config().enemy_count_multiplier or 1))
-		local spawn_min_rate = spawn_multipier_max - (configer.config().enabled and configer.config().enemy_count_multiplier or 1)
+function wave_spawn:init(store)
+	if W.format ~= "lua" then
+		return false
+	end
+	store.wave_group_number = 0
+	store.waves_finished = false
+	store.last_wave_ts = 0
+	store.waves_active = {}
+	store.wave_signals = {}
+	store.send_next_wave = false
 
-		for i = 1, #spawns do
-			local spawn_multipier = math.random() < spawn_min_rate and spawn_multipier_min or spawn_multipier_max
-			for count = 1, spawn_multipier do
-				local current_count = 0
-				local current_creep
-				local s = spawns[i]
-				local path = P.paths[pi]
+	if store.level_mode_override == GAME_MODE_ENDLESS then
+		store.wave_group_total = 0
 
-				for j = 1, s.max do
-					U.y_wait_unconditional(store, fts(s.interval or 0) / spawn_multipier)
-
-					if not current_creep then
-						current_creep = s.creep
-					elseif s.creep_aux and s.max_same and s.max_same > 0 and current_count >= s.max_same then
-						current_creep = s.creep == current_creep and s.creep_aux or s.creep
-						current_count = 0
-					end
-
-					local e = E:create_entity(current_creep)
-
-					if e then
-						e.nav_path.pi = pi
-						e.nav_path.spi = s.fixed_sub_path == 1 and s.path or random(#path)
-						e.nav_path.ni = P:get_start_node(pi)
-						e.spawn_data = s.spawn_data
-
-						simulation:queue_insert_entity(e)
-						current_count = current_count + 1
-					else
-						log.error("Entity template not found for %s.", s.crep)
-					end
-				end
-
-				if s.max == 0 then
-					U.y_wait_unconditional(store, fts(s.interval or 0) / spawn_multipier)
-				end
-
-				local oes = s.on_end_signal
-				if oes then
-					log.info("Sending spawner on_end_signal: %s", oes)
-					store.wave_signals[oes] = {}
-				end
-
-				if i < #spawns then
-					local interval_next = s.interval_next or 0
-
-					if DI.level == DIFFICULTY_HARD then
-						if group_id > 12 then
-							store.last_wave_ts = store.last_wave_ts - interval_next * 0.75
-							interval_next = interval_next * 0.25
-						elseif group_id > 9 then
-							store.last_wave_ts = store.last_wave_ts - interval_next * 0.5
-							interval_next = interval_next * 0.5
-						elseif group_id > 6 then
-							store.last_wave_ts = store.last_wave_ts - interval_next * 0.25
-							interval_next = interval_next * 0.75
-						end
-					end
-
-					U.y_wait_unconditional(store, fts(interval_next) / spawn_multipier)
-				end
-			end
+		if store.endless and store.endless.wave_group_number then
+			store.wave_group_number = store.endless.wave_group_number
 		end
-
-		return true
+	else
+		store.wave_group_total = W:groups_count()
 	end
 
-	function sys.wave_spawn:init(store)
-		if W.format ~= "lua" then
-			return false
-		end
-		store.wave_group_number = 0
-		store.waves_finished = false
-		store.last_wave_ts = 0
-		store.waves_active = {}
-		store.wave_signals = {}
-		store.send_next_wave = false
+	local function run(store)
+		log.info("Wave group spawn thread STARTING")
 
-		if store.level_mode_override == GAME_MODE_ENDLESS then
-			store.wave_group_total = 0
+		local i = 1
+		local start = true
 
-			if store.endless and store.endless.wave_group_number then
-				store.wave_group_number = store.endless.wave_group_number
-			end
-		else
-			store.wave_group_total = W:groups_count()
+		if store.endless and store.endless.wave_group_number then
+			i = store.endless.wave_group_number
 		end
 
-		local function run(store)
-			log.info("Wave group spawn thread STARTING")
+		while W:has_group(i) do
+			local group = W:get_group(i)
 
-			local i = 1
-			local start = true
+			group.group_idx = i
+			store.next_wave_group_ready = group
+			signal.emit("next-wave-ready", group)
 
-			if store.endless and store.endless.wave_group_number then
-				i = store.endless.wave_group_number
-			end
-
-			while W:has_group(i) do
-				local group = W:get_group(i)
-
-				group.group_idx = i
-				store.next_wave_group_ready = group
-				signal.emit("next-wave-ready", group)
-
-				if start then
-					group.group_idx = 1
-
-					for _, wave in ipairs(group.waves) do
-						if wave.notification then
-							signal.emit("wave-notification", "view", wave.notification)
-						end
-					end
-
-					while not (store.send_next_wave or store.force_next_wave) do
-						coroutine.yield()
-					end
-
-					start = false
-					log.debug("Sending first WAVE. (Started by player)")
-				else
-					while not store.send_next_wave and not (store.tick_ts - store.last_wave_ts >= fts(group.interval)) and not store.force_next_wave do
-						coroutine.yield()
-					end
-				end
-
-				log.info("sending WAVE group %02d (%02d waves)", i, #group.waves)
-				store.next_wave_group_ready = nil
-				store.wave_group_number = i
-
-				if store.send_next_wave == true and i > 1 then
-					local score_reward
-					local remaining_secs = km.round(fts(group.interval) - (store.tick_ts - store.last_wave_ts))
-
-					if store.level_mode == -1 then
-						store.early_wave_reward = ceil(remaining_secs * GS.early_wave_reward_per_second * W:get_endless_early_wave_reward_factor())
-						local conf = W:get_endless_score_config()
-						local time_factor = km.clamp(0, 1, remaining_secs / fts(group.interval))
-
-						score_reward = km.round((i - 1) * conf.scorePerWave * conf.scoreNextWaveMultiplier * time_factor * #group.waves)
-						store.player_score = store.player_score + score_reward
-
-						log.debug("ENDLESS: early wave %s reward %s (time_factor:%s scorePerWave:%s scoreNextWaveMultiplier:%s flags:%s", i, score_reward, time_factor, conf.scorePerWave, conf.scoreNextWaveMultiplier, #group.waves)
-					else
-						store.early_wave_reward = ceil(remaining_secs * GS.early_wave_reward_per_second)
-					end
-
-					store.player_gold = store.player_gold + store.early_wave_reward
-					signal.emit("early-wave-called", group, store.early_wave_reward, remaining_secs, score_reward)
-				else
-					store.early_wave_reward = 0
-
-					if configer.criket() then
-						configer.criket().start_time = store.tick_ts
-					end
-				end
-
-				store.send_next_wave = false
-				store.current_wave_group = group
-				signal.emit("next-wave-sent", group)
+			if start then
+				group.group_idx = 1
 
 				for _, wave in ipairs(group.waves) do
-					wave.group_idx = i
-
-					if i ~= 1 and wave.notification then
+					if wave.notification then
 						signal.emit("wave-notification", "view", wave.notification)
 					end
-
-					if wave.notification_second_level and wave.notification_second_level ~= "" then
-						signal.emit("wave-notification", "icon", wave.notification_second_level)
-					end
-
-					local sco = coroutine.create(function()
-						local wave_start_ts = store.tick_ts
-
-						while store.tick_ts < wave_start_ts + fts(wave.delay) do
-							coroutine.yield()
-						end
-
-						return spawner(store, wave, i)
-					end)
-
-					store.waves_active[sco] = sco
 				end
 
-				log.info("WAVE group %d about to wait for all its spawner threads to finish", i)
-				while next(store.waves_active) do
+				while not (store.send_next_wave or store.force_next_wave) do
 					coroutine.yield()
 				end
 
-				store.current_wave_group = nil
-				store.last_wave_ts = store.tick_ts
-				i = i + 1
+				start = false
+				log.debug("Sending first WAVE. (Started by player)")
+			else
+				while not store.send_next_wave and not (store.tick_ts - store.last_wave_ts >= fts(group.interval)) and not store.force_next_wave do
+					coroutine.yield()
+				end
 			end
 
-			log.info("WAVE spawn thread FINISHED")
-			return true
+			log.info("sending WAVE group %02d (%02d waves)", i, #group.waves)
+			store.next_wave_group_ready = nil
+			store.wave_group_number = i
+
+			if store.send_next_wave == true and i > 1 then
+				local score_reward
+				local remaining_secs = km.round(fts(group.interval) - (store.tick_ts - store.last_wave_ts))
+
+				if store.level_mode == -1 then
+					store.early_wave_reward = ceil(remaining_secs * GS.early_wave_reward_per_second * W:get_endless_early_wave_reward_factor())
+					local conf = W:get_endless_score_config()
+					local time_factor = km.clamp(0, 1, remaining_secs / fts(group.interval))
+
+					score_reward = km.round((i - 1) * conf.scorePerWave * conf.scoreNextWaveMultiplier * time_factor * #group.waves)
+					store.player_score = store.player_score + score_reward
+
+					log.debug("ENDLESS: early wave %s reward %s (time_factor:%s scorePerWave:%s scoreNextWaveMultiplier:%s flags:%s", i, score_reward, time_factor, conf.scorePerWave, conf.scoreNextWaveMultiplier, #group.waves)
+				else
+					store.early_wave_reward = ceil(remaining_secs * GS.early_wave_reward_per_second)
+				end
+
+				store.player_gold = store.player_gold + store.early_wave_reward
+				signal.emit("early-wave-called", group, store.early_wave_reward, remaining_secs, score_reward)
+			else
+				store.early_wave_reward = 0
+
+				if configer.criket() then
+					configer.criket().start_time = store.tick_ts
+				end
+			end
+
+			store.send_next_wave = false
+			store.current_wave_group = group
+			signal.emit("next-wave-sent", group)
+
+			for _, wave in ipairs(group.waves) do
+				wave.group_idx = i
+
+				if i ~= 1 and wave.notification then
+					signal.emit("wave-notification", "view", wave.notification)
+				end
+
+				if wave.notification_second_level and wave.notification_second_level ~= "" then
+					signal.emit("wave-notification", "icon", wave.notification_second_level)
+				end
+
+				local sco = coroutine.create(function()
+					local wave_start_ts = store.tick_ts
+
+					while store.tick_ts < wave_start_ts + fts(wave.delay) do
+						coroutine.yield()
+					end
+
+					return spawner(store, wave, i)
+				end)
+
+				store.waves_active[sco] = sco
+			end
+
+			log.info("WAVE group %d about to wait for all its spawner threads to finish", i)
+			while next(store.waves_active) do
+				coroutine.yield()
+			end
+
+			store.current_wave_group = nil
+			store.last_wave_ts = store.tick_ts
+			i = i + 1
 		end
 
-		store.wave_spawn_thread = coroutine.create(run)
+		log.info("WAVE spawn thread FINISHED")
+		return true
 	end
 
-	function sys.wave_spawn:force_next_wave(store)
-		if store.force_next_wave then
-			store.waves_active = {}
-			LU.kill_all_enemies(store, nil, true)
-		end
-	end
+	store.wave_spawn_thread = coroutine.create(run)
+end
 
-	function sys.wave_spawn:on_update(dt, ts, store)
-		sys.wave_spawn:force_next_wave(store)
-
-		if store.wave_spawn_thread then
-			local ok, done = coroutine.resume(store.wave_spawn_thread, store)
-
-			if ok and done then
-				store.wave_spawn_thread = nil
-				store.waves_finished = true
-				log.debug("++++ WAVES FINISHED")
-			end
-
-			if not ok then
-				log.error("Error resuming wave_spawn_thread co: %s", debug.traceback(store.wave_spawn_thread, done))
-				store.wave_spawn_thread = nil
-			end
-		end
-
-		local to_cleanup
-
-		for _, co in pairs(store.waves_active) do
-			local ok, done = coroutine.resume(co, store)
-
-			if ok and done then
-				log.debug("thread (%s) finished after resume()", tostring(co))
-				to_cleanup = to_cleanup or {}
-				to_cleanup[#to_cleanup + 1] = co
-			end
-
-			if not ok then
-				local err = done
-				log.error("Error resuming spawner thread (%s): %s", tostring(co), debug.traceback(co, err))
-			end
-		end
-
-		if to_cleanup then
-			for _, co in pairs(to_cleanup) do
-				log.debug("removing spawner thread (%s)", co)
-				store.waves_active[co] = nil
-			end
-		end
-
-		store.force_next_wave = false
+function wave_spawn:force_next_wave(store)
+	if store.force_next_wave then
+		store.waves_active = {}
+		LU.kill_all_enemies(store, nil, true)
 	end
 end
 
-return M
+function wave_spawn:on_update(dt, ts, store)
+	wave_spawn:force_next_wave(store)
+
+	if store.wave_spawn_thread then
+		local ok, done = coroutine.resume(store.wave_spawn_thread, store)
+
+		if ok and done then
+			store.wave_spawn_thread = nil
+			store.waves_finished = true
+			log.debug("++++ WAVES FINISHED")
+		end
+
+		if not ok then
+			log.error("Error resuming wave_spawn_thread co: %s", debug.traceback(store.wave_spawn_thread, done))
+			store.wave_spawn_thread = nil
+		end
+	end
+
+	local to_cleanup
+
+	for _, co in pairs(store.waves_active) do
+		local ok, done = coroutine.resume(co, store)
+
+		if ok and done then
+			log.debug("thread (%s) finished after resume()", tostring(co))
+			to_cleanup = to_cleanup or {}
+			to_cleanup[#to_cleanup + 1] = co
+		end
+
+		if not ok then
+			local err = done
+			log.error("Error resuming spawner thread (%s): %s", tostring(co), debug.traceback(co, err))
+		end
+	end
+
+	if to_cleanup then
+		for _, co in pairs(to_cleanup) do
+			log.debug("removing spawner thread (%s)", co)
+			store.waves_active[co] = nil
+		end
+	end
+
+	store.force_next_wave = false
+end
+
+return wave_spawn

@@ -4453,7 +4453,6 @@ scripts.magnus_arcane_rain_controller = {
 			end
 
 			e.damage_factor = this.damage_factor
-			e._damage_source_id = this._damage_source_id
 
 			simulation:queue_insert_entity(e)
 
@@ -4566,7 +4565,6 @@ scripts.soldier_magnus_illusion = {
 
 						e.is_illusion = true
 						e.pos = pos
-						e._damage_source_id = this._damage_source_id
 						e.damage_factor = this.unit.damage_factor * this.skill_damage_factor
 						e.render.sprites[1].scale = V.v(this.skill_radius_factor, this.skill_radius_factor)
 
@@ -27079,17 +27077,6 @@ function scripts.hero_wukong.update(this, store)
 		return false
 	end
 
-	local function create_damage(a, target_id)
-		local d = E.assign_damage(a.area_damage_type, 0, this.id, target_id)
-		d.track_kills = this.track_kills ~= nil
-		d.track_damage = a.track_damage
-		d.pop = a.pop
-		d.pop_chance = a.pop_chance
-		d.pop_conds = a.pop_conds
-
-		return d
-	end
-
 	while true do
 		if h.dead then
 			if (not this.selfdestruct or this.selfdestruct.disabled or band(h.last_damage_types, bor(DAMAGE_EAT, DAMAGE_HOST, DAMAGE_DISINTEGRATE_BOSS)) ~= 0) and band(h.last_damage_types, bor(DAMAGE_DISINTEGRATE_BOSS)) == 0 and band(h.last_damage_types, bor(DAMAGE_EAT)) == 0 and band(h.last_damage_types, bor(DAMAGE_HOST)) == 0 then
@@ -27436,7 +27423,6 @@ function scripts.hero_wukong.update(this, store)
 									target = store.entities[this.soldier.target_id]
 
 									if target then
-										-- queue_damage(store, create_damage(a, target.id))
 										local d = E.assign_damage(a.damage_type, 1, this.id, target.id)
 
 										queue_damage(store, d)
@@ -27447,9 +27433,12 @@ function scripts.hero_wukong.update(this, store)
 
 								if enemies and #enemies > 0 then
 									for _, e in ipairs(enemies) do
-										local d = create_damage(a, e.id)
-
-										d.value = math.random(a.area_damage_min, a.area_damage_max) * this.unit.damage_factor
+										local d = E.assign_damage(a.area_damage_type, math.random(a.area_damage_min, a.area_damage_max) * this.unit.damage_factor, this.id, e.id)
+										d.track_kills = this.track_kills ~= nil
+										d.track_damage = a.track_damage
+										d.pop = a.pop
+										d.pop_chance = a.pop_chance
+										d.pop_conds = a.pop_conds
 
 										queue_damage(store, d)
 									end
@@ -39091,11 +39080,7 @@ function scripts.eiskalt_icepeaks.update(this, store)
 		for _, target in ipairs(targets) do
 			if target._icepeak_timestamp ~= this._icepeak_timestamp then
 				target._icepeak_timestamp = this._icepeak_timestamp
-				local d = E:create_entity("damage")
-				d.damage_type = b.damage_type
-				d.source_id = this.id
-				d.target_id = target.id
-				d.value = target.health.hp_max * 0.1 * b.level
+				local d = E.assign_damage(b.damage_type, target.health.hp_max * 0.1 * b.level, this.id, target.id)
 				queue_damage(store, d)
 
 				for i = 1, #b.mods do
@@ -41312,11 +41297,7 @@ function scripts.projectile_isfet_frog_curse.update(this, store)
 		S:queue(this.sound_hit)
 		S:queue(this.sound_frog)
 
-		local damage = E:create_entity("damage")
-		damage.source_id = this.source_id
-		damage.target_id = target.id
-		damage.value = target.health.hp_max
-		damage.damage_type = DAMAGE_INSTAKILL
+		local damage = E.assign_damage(DAMAGE_INSTAKILL, target.health.hp_max, this.source_id, target.id)
 		queue_damage(store, damage)
 
 		local smoke = E:create_entity("fx_isfet_frog_smoke")
@@ -41397,11 +41378,7 @@ function scripts.projectile_isfet_rain.update(this, store)
 	local targets = U.find_enemies_in_range(store, this.to, 0, this.damage_radius, this.vis_flags, this.vis_bans)
 	if targets then
 		for _, target in ipairs(targets) do
-			local damage = E:create_entity("damage")
-			damage.source_id = this.source_id
-			damage.target_id = target.id
-			damage.value = this.damage
-			damage.damage_type = this.damage_type
+			local damage = E.assign_damage(this.damage_type, this.damage, this.source_id, target.id)
 			damage.xp_dest_id = this.source_id
 			queue_damage(store, damage)
 
@@ -41459,11 +41436,7 @@ function scripts.controller_hero_isfet_ultimate.update(this, store)
 		local damaged_targets = U.find_enemies_in_range(store, impact_pos, 0, this.damage_radius, this.damage_flags, this.damage_bans)
 		if damaged_targets then
 			for _, target in ipairs(damaged_targets) do
-				local damage = E:create_entity("damage")
-				damage.source_id = this.id
-				damage.target_id = target.id
-				damage.value = damage_value
-				damage.damage_type = this.damage_type
+				local damage = E.assign_damage(this.damage_type, damage_value, this.id, target.id)
 				queue_damage(store, damage)
 			end
 		end
@@ -43399,12 +43372,7 @@ function scripts.aura_jigou_ultimate.update(this, store)
 			S:queue(this.sound)
 
 			for _, t in ipairs(targets) do
-				local d = E:create_entity("damage")
-
-				d.value = math.random(a.damage_min, a.damage_max) * this.aura.damage_factor
-				d.damage_type = a.damage_type
-				d.source_id = this.id
-				d.target_id = t.id
+				local d = E.assign_damage(a.damage_type, math.random(a.damage_min, a.damage_max) * this.aura.damage_factor, this.id, t.id)
 
 				queue_damage(store, d)
 
@@ -44166,7 +44134,6 @@ function scripts.hero_tank.update(this, store)
 				e.damage_factor = this.unit.damage_factor
 				e.pos = V.vclone(target.pos)
 				e.level = this.hero.skills.ultimate.level
-				e._damage_source_id = this.id
 				simulation:queue_insert_entity(e)
 				SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
 			else
@@ -44451,12 +44418,7 @@ function scripts.aura_tank_skill2_bomb.update(this, store)
 		if targets then
 			S:queue(this.sound)
 			for _, t in pairs(targets) do
-				local d = E:create_entity("damage")
-
-				d.value = math.random(a.damage_min, a.damage_max) * a.damage_factor
-				d.damage_type = a.damage_type
-				d.source_id = this.id
-				d.target_id = t.id
+				local d = E.assign_damage(a.damage_type, math.random(a.damage_min, a.damage_max) * a.damage_factor, this.id, t.id)
 
 				queue_damage(store, d)
 
@@ -44549,7 +44511,6 @@ function scripts.hero_tank_ultimate.update(this, store)
 		zep.sound = this.sound
 		zep.level = this.level
 		zep.damage_factor = this.damage_factor
-		zep._damage_source_id = this._damage_source_id
 
 		simulation:queue_insert_entity(zep)
 	end
@@ -44600,7 +44561,6 @@ function scripts.zeppelin_hero_tank.update(this, store)
 	b.bullet.damage_factor = this.damage_factor
 	b.bullet.hit_payload = E:create_entity(b.bullet.hit_payload)
 	b.bullet.hit_payload.damage_factor = this.damage_factor
-	b.bullet.hit_payload._damage_source_id = this._damage_source_id
 
 	simulation:queue_insert_entity(b)
 

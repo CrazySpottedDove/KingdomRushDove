@@ -34,6 +34,7 @@ function simulation:init(store, system_names)
 	self.systems_on_remove = {}
 	self.systems_on_remove_unconditional = {}
 	self.systems_on_update = {}
+	self.systems_on_queue_unconditional = {}
 
 	local systems_order = {}
 
@@ -62,6 +63,10 @@ function simulation:init(store, system_names)
 			table.insert(self.systems_on_remove_unconditional, s)
 		end
 
+		if s.on_queue_unconditional then
+			table.insert(self.systems_on_queue_unconditional, s)
+		end
+
 		if s.on_update then
 			table.insert(self.systems_on_update, s)
 		end
@@ -72,6 +77,7 @@ function simulation:init(store, system_names)
 	self.systems_on_remove_count = #self.systems_on_remove
 	self.systems_on_remove_unconditional_count = #self.systems_on_remove_unconditional
 	self.systems_on_update_count = #self.systems_on_update
+	self.systems_on_queue_unconditional_count = #self.systems_on_queue_unconditional
 
 	-- init 动作必须在最后执行，因为对 systems_on_xxx_count 有依赖。而且，你必须保证所有因 init 而进入的实体都经历所有的钩子处理。
 
@@ -102,6 +108,7 @@ function simulation:init(store, system_names)
 	self.systems_on_remove_unconditional = {}
 	self.systems_on_update = {}
 	self.systems_on_render_update = {}
+	self.systems_on_queue_unconditional = {}
 
 	for _, s in ipairs(systems_order) do
 		if s.on_insert then
@@ -120,6 +127,10 @@ function simulation:init(store, system_names)
 			table.insert(self.systems_on_remove_unconditional, s)
 		end
 
+		if s.on_queue_unconditional then
+			table.insert(self.systems_on_queue_unconditional, s)
+		end
+
 		if s.on_update then
 			table.insert(self.systems_on_update, s)
 		end
@@ -135,6 +146,7 @@ function simulation:init(store, system_names)
 	self.systems_on_remove_unconditional_count = #self.systems_on_remove_unconditional
 	self.systems_on_update_count = #self.systems_on_update
 	self.systems_on_render_update_count = #self.systems_on_render_update
+	self.systems_on_queue_unconditional_count = #self.systems_on_queue_unconditional
 end
 
 function simulation:update(dt)
@@ -212,6 +224,9 @@ function simulation:queue_insert_entity(e)
 	--     error("Attempt to queue a nil entity" .. debug.traceback())
 	-- end
 	local d = self.store
+	for i = 1, self.systems_on_queue_unconditional_count do
+		self.systems_on_queue_unconditional[i]:on_queue_unconditional(e, d)
+	end
 	d.pending_inserts[#d.pending_inserts + 1] = e
 end
 

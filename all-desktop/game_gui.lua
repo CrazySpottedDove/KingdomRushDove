@@ -4278,12 +4278,12 @@ local damage_trace_modes = {{
 	name = "伤害追踪",
 	tip = "伤害追踪显示护甲、免伤结算后的伤害值，不包含溢出的伤害。",
 	empty_text = "暂无伤害记录",
-	data_key = "damage_trace_table"
+	data_key = "applied_effective_damage"
 }, {
 	name = "承伤追踪",
 	tip = "承伤追踪显示护甲、免伤结算前的伤害值，不包含溢出的伤害。",
 	empty_text = "暂无承伤记录",
-	data_key = "damage_taken_trace_table"
+	data_key = "received_total_damage"
 }}
 
 local function damage_trace_segment_info(damage_type)
@@ -4694,9 +4694,9 @@ function DamageTraceView:set_mode(idx)
 end
 
 function DamageTraceView:refresh()
-	local data = game_gui.game.store[damage_trace_modes[self.mode_idx].data_key] or {}
+	local data = game_gui.game.store.damage_trace_table
 	local rows = {}
-
+	local data_key = damage_trace_modes[self.mode_idx].data_key
 	-- 按展示名聚合：同名条目合并数据后展示，不影响底层记录表
 	local merged = {}
 
@@ -4727,17 +4727,23 @@ function DamageTraceView:refresh()
 				merged[info.name] = agg
 			end
 
-			for damage_type, value in pairs(info.data) do
+			for damage_type, value in pairs(info[data_key]) do
 				agg.data[damage_type] = (agg.data[damage_type] or 0) + value
 			end
 		end
 	end
 
 	for name, agg in pairs(merged) do
-		rows[#rows + 1] = DamageTraceItemView:new(agg.template_name, {
-			name = name,
-			data = agg.data
-		}, self.list_w)
+		local count = 0
+		for _, value in pairs(agg.data) do
+			count = count + value
+		end
+		if count > 0 then
+			rows[#rows + 1] = DamageTraceItemView:new(agg.template_name, {
+				name = name,
+				data = agg.data
+			}, self.list_w)
+		end
 	end
 
 	-- 卡片按总伤降序排列，总伤相同时按模板名排序保证稳定

@@ -122,7 +122,7 @@ game.simulation_systems = {
 	"main_script",
 	"events",
 	"tween",
-	"endless_patch",
+	"endless",
 	"health",
 	"count_groups",
 	"tower",

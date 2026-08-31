@@ -172,10 +172,7 @@ local function enemy_do_counter_attack(store, this, target)
 		S:queue(ma.sound_hit, ma.sound_hit_args)
 
 		if ma.type == "melee" and not dodged and table.contains(this.enemy.blockers, target.id) then
-			local d = E.create_damage()
-
-			d.source_id = this.id
-			d.target_id = target.id
+			local d = E.assign_damage(ma.damage_type, 0, this.id, target.id)
 			d.track_kills = this.track_kills ~= nil
 			d.track_damage = ma.track_damage
 			d.pop = ma.pop
@@ -183,7 +180,6 @@ local function enemy_do_counter_attack(store, this, target)
 			d.pop_conds = ma.pop_conds
 
 			if ma.damage_min then
-				d.damage_type = ma.damage_type
 				d.value = this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)
 
 				queue_damage(store, d)
@@ -382,18 +378,14 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 						queue_insert(store, fx)
 					end
 				else
-					local d = E.create_damage()
+					local d = E.assign_damage(attack.damage_type, 0, this.id, target.id)
 
 					if attack.fn_damage then
-						d.damage_type = attack.damage_type
 						d.value = attack.fn_damage(this, store, attack, target)
 					else
-						d.damage_type = attack.damage_type
 						d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + (this.unit.damage_buff or 0))
 					end
 
-					d.source_id = this.id
-					d.target_id = target.id
 					d.xp_gain_factor = attack.xp_gain_factor
 					d.xp_dest_id = attack.xp_dest_id
 					d.pop = attack.pop
@@ -495,10 +487,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 			S:queue(ma.sound_hit, ma.sound_hit_args)
 
 			if ma.type == "melee" and not dodged and table.contains(this.enemy.blockers, target.id) then
-				local d = E.create_damage()
-
-				d.source_id = this.id
-				d.target_id = target.id
+				local d = E.assign_damage(ma.damage_type, 0, this.id, target.id)
 				d.track_kills = this.track_kills ~= nil
 				d.track_damage = ma.track_damage
 				d.pop = ma.pop
@@ -506,7 +495,6 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 				d.pop_conds = ma.pop_conds
 
 				if ma.damage_min then
-					d.damage_type = ma.damage_type
 					d.value = this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)
 
 					queue_damage(store, d)

@@ -2573,7 +2573,6 @@ function scripts.ray_tesla.update(this, store)
 					r.bullet.to = V.vclone(bounce_target.pos)
 					r.bullet.target_id = bounce_target.id
 					r.bullet.source_id = target.id
-					r._damage_source_id = this._damage_source_id
 					r.bullet.damage_factor = b.damage_factor
 					r.bullet.level = b.level
 					r.max_bounces = this.max_bounces
@@ -3421,12 +3420,7 @@ function scripts.mod_ray_arcane.update(this, store)
 	end
 
 	local function apply_damage(value)
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = target.id
-		d.value = value
-		d.damage_type = dps.damage_type
+		local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
@@ -3499,12 +3493,7 @@ function scripts.mod_ray_arcane_disintegrate.update(this, store)
 
 		if store.tick_ts - m.ts >= m.duration then
 			if band(target.vis.flags, F_BOSS) == 0 and band(target.vis.bans, F_INSTAKILL) == 0 then
-				local d = E.create_damage()
-
-				d.source_id = this.id
-				d.target_id = target.id
-				d.damage_type = m.damage_type
-				d.value = m.damage
+				local d = E.assign_damage(m.damage_type, m.damage, this.id, target.id)
 				d.pop = m.pop
 				d.pop_chance = m.pop_chance
 				d.pop_conds = m.pop_conds
@@ -3513,12 +3502,7 @@ function scripts.mod_ray_arcane_disintegrate.update(this, store)
 
 				break
 			else
-				local d = E.create_damage()
-
-				d.source_id = this.id
-				d.target_id = target.id
-				d.damage_type = bor(DAMAGE_TRUE)
-				d.value = (642 + target.health.hp_max * 0.047) * m.damage_factor
+				local d = E.assign_damage(bor(DAMAGE_TRUE), (642 + target.health.hp_max * 0.047) * m.damage_factor, this.id, target.id)
 				d.pop = m.pop
 				d.pop_chance = m.pop_chance
 				d.pop_conds = m.pop_conds
@@ -5285,12 +5269,7 @@ function scripts.enemy_alien_breeder.update(this, store)
 							goto label_19_0
 						end
 
-						local d = E.create_damage()
-
-						d.value = damage_value
-						d.source_id = this.id
-						d.target_id = blocker.id
-						d.damage_type = bor(DAMAGE_HOST, DAMAGE_TRUE)
+						local d = E.assign_damage(bor(DAMAGE_HOST, DAMAGE_TRUE), damage_value, this.id, blocker.id)
 						d.track_kills = this.track_kills ~= nil
 
 						queue_damage(store, d)
@@ -7584,7 +7563,7 @@ function scripts.spell_djinn.insert(this, store)
 		return false
 	end
 
-	local d = E.create_damage()
+	local d = E.assign_damage(DAMAGE_TRUE, 0, this.spell.source_id, target.id)
 
 	if instakill then
 		d.damage_type = DAMAGE_EAT
@@ -7597,10 +7576,6 @@ function scripts.spell_djinn.insert(this, store)
 			U.bans_add(target.vis, F_POLYMORPH)
 		end
 	end
-
-	-- workaround
-	d.source_id = this.spell.source_id
-	d.target_id = target.id
 
 	queue_damage(store, d)
 
@@ -8717,7 +8692,6 @@ function scripts.ray_frankenstein.update(this, store)
 				r.bullet.to = V.vclone(target.pos)
 				r.bullet.target_id = bounce_target.id
 				r.bullet.source_id = target.id
-				r._damage_source_id = this._damage_source_id
 				r.bullet.damage_factor = b.damage_factor
 
 				if bounce_target.template_name == "hero_thor" then
@@ -11027,12 +11001,7 @@ function scripts.aura_baby_malik_fissure.update(this, store)
 
 		if targets then
 			for _, t in ipairs(targets) do
-				local d = E.create_damage()
-
-				d.value = math.random(a.damage_min, a.damage_max)
-				d.damage_type = a.damage_type
-				d.source_id = this.id
-				d.target_id = t.id
+				local d = E.assign_damage(a.damage_type, math.random(a.damage_min, a.damage_max), this.id, t.id)
 
 				queue_damage(store, d)
 
@@ -12151,18 +12120,13 @@ function scripts.enemy_twilight_scourger.update(this, store)
 								if targets then
 									for i = 1, #targets do
 										local target = targets[i]
-										local d = E.create_damage()
-
-										d.damage_type = a.damage_type
+										local d = E.assign_damage(a.damage_type, 0, this.id, target.id)
 
 										if band(target.vis.flags, F_DARK_ELF) ~= 0 then
 											d.value = 0
 										else
 											d.value = U.frandom(a.damage_min, a.damage_max)
 										end
-
-										d.target_id = target.id
-										d.source_id = this.id
 
 										local pd = U.predict_damage(target, d)
 
@@ -12879,12 +12843,7 @@ function scripts.enemy_mantaray.update(this, store)
 							damage_value = math.random(this.facehug_damage_soldier_min, this.facehug_damage_soldier_max)
 						end
 
-						local d = E.create_damage()
-
-						d.value = damage_value
-						d.source_id = this.id
-						d.target_id = blocker.id
-						d.damage_type = bor(DAMAGE_HOST, DAMAGE_TRUE)
+						local d = E.assign_damage(bor(DAMAGE_HOST, DAMAGE_TRUE), damage_value, this.id, blocker.id)
 						d.track_kills = this.track_kills ~= nil
 
 						queue_damage(store, d)
@@ -15716,7 +15675,6 @@ function scripts.mod_timelapse.remove(this, store)
 	else
 		if this.template_name == "mod_timelapse" then
 			local e = E:create_entity("high_elven_sentinel_extra")
-			e._damage_source_id = this._damage_source_id
 			if target then
 				e.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			else
@@ -15921,11 +15879,7 @@ function scripts.mod_eldritch.update(this, store)
 	simulation:queue_insert_entity(es)
 
 	local show_blood_pool = target.unit.show_blood_pool
-	local d = E.create_damage()
-
-	d.damage_type = DAMAGE_EAT
-	d.source_id = this.id
-	d.target_id = target.id
+	local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 	queue_damage(store, d)
 
@@ -16527,17 +16481,13 @@ function scripts.mod_twilight_avenger_last_service.remove(this, store)
 		if targets and #targets > 0 then
 			for _, target in ipairs(targets) do
 				local is_enemy = band(target.vis.flags, F_ENEMY) ~= 0
-				local d = E.create_damage()
+				local d = E.assign_damage(DAMAGE_MAGICAL_EXPLOSION, 0, this.id, target.id)
 
 				if band(target.vis.flags, F_DARK_ELF) ~= 0 then
 					d.value = 0
 				else
 					d.value = this.explode_damage
 				end
-
-				d.damage_type = DAMAGE_MAGICAL_EXPLOSION
-				d.source_id = this.id
-				d.target_id = target.id
 
 				queue_damage(store, d)
 
@@ -20225,10 +20175,7 @@ function scripts.aura_fiery_mist_baby_ashbite.update(this, store)
 
 						simulation:queue_insert_entity(m)
 
-						local d = E.create_damage()
-
-						d.source_id = this.id
-						d.target_id = target.id
+						local d = E.assign_damage(a.damage_type, 0, this.id, target.id)
 
 						local dmin, dmax = a.damage_min, a.damage_max
 
@@ -20238,7 +20185,6 @@ function scripts.aura_fiery_mist_baby_ashbite.update(this, store)
 						end
 
 						d.value = math.random(dmin, dmax)
-						d.damage_type = a.damage_type
 
 						queue_damage(store, d)
 					end
@@ -30667,12 +30613,7 @@ function scripts.mod_sunray.update(this, store)
 	end
 
 	local function apply_damage(value)
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = target.id
-		d.value = value
-		d.damage_type = dps.damage_type
+		local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
@@ -31974,13 +31915,9 @@ function scripts.controller_stage_18_eridan.update(this, store)
 
 				target.health.ignore_damage = false
 
-				local d = E.create_damage()
-
-				d.source_id = this.id
-				d.target_id = target.id
+				local d = E.assign_damage(ai.damage_type, 0, this.id, target.id)
 				d.pop = ai.pop
 				d.pop_chance = 1
-				d.damage_type = ai.damage_type
 
 				queue_damage(store, d)
 				U.y_animation_wait_default(this)
@@ -32031,15 +31968,9 @@ function scripts.decal_stage_21_falling_rocks.update(this, store)
 
 			if targets then
 				for _, t in ipairs(targets) do
-					local d = E.create_damage()
-
-					d.damage_type = this.damage_type
-
 					local dist_factor = U.dist_factor_inside_ellipse(t.pos, this.fall_position, this.damage_radius)
 
-					d.value = math.floor(this.damage * dist_factor)
-					d.source_id = this.id
-					d.target_id = t.id
+					local d = E.assign_damage(this.damage_type, math.floor(this.damage * dist_factor), this.id, t.id)
 
 					queue_damage(store, d)
 				end
@@ -33322,11 +33253,7 @@ function scripts.mod_enemy_unblinded_abomination_eat.update(this, store)
 
 	this.pos.x, this.pos.y = target.pos.x, target.pos.y
 
-	local d = E.create_damage()
-
-	d.damage_type = DAMAGE_EAT
-	d.source_id = this.id
-	d.target_id = target.id
+	local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 	queue_damage(store, d)
 
@@ -34584,11 +34511,7 @@ function scripts.mod_enemy_evolving_scourge_eat.update(this, store)
 
 	this.pos.x, this.pos.y = target.pos.x, target.pos.y
 
-	local d = E.create_damage()
-
-	d.damage_type = DAMAGE_EAT
-	d.source_id = this.id
-	d.target_id = target.id
+	local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 	queue_damage(store, d)
 
@@ -36891,12 +36814,7 @@ function scripts.mod_enemy_crocs_tank_charge_soldier.update(this, store)
 	local function do_damage(target, value)
 		total_damage = total_damage + value
 
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = target.id
-		d.value = value
-		d.damage_type = dps.damage_type
+		local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
@@ -37306,10 +37224,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 						end
 
 						if ma.type == "melee" and not dodged and table.contains(this.enemy.blockers, target.id) then
-							local d = E.create_damage()
-
-							d.source_id = this.id
-							d.target_id = target.id
+							local d = E.assign_damage(ma.damage_type, 0, this.id, target.id)
 							d.track_kills = this.track_kills ~= nil
 							d.track_damage = ma.track_damage
 							d.pop = ma.pop
@@ -37317,7 +37232,6 @@ function scripts.enemy_crocs_hydra.update(this, store)
 							d.pop_conds = ma.pop_conds
 
 							if ma.damage_min then
-								d.damage_type = ma.damage_type
 								d.value = math.ceil(this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max))
 
 								queue_damage(store, d)
@@ -38225,16 +38139,9 @@ function scripts.bullet_heart_of_the_arborean.update(this, store)
 
 		if targets then
 			for _, t in ipairs(targets) do
-				local d = E.create_damage()
-
-				d.damage_type = b.damage_type
-
 				local dist_factor = U.dist_factor_inside_ellipse(t.pos, b.to, dradius)
 
-				d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
-				d.value = math.ceil(b.damage_factor * d.value)
-				d.source_id = this.id
-				d.target_id = t.id
+				local d = E.assign_damage(b.damage_type, math.ceil(b.damage_factor * math.floor(dmax - (dmax - dmin) * dist_factor)), this.id, t.id)
 
 				queue_damage(store, d)
 			end
@@ -39843,15 +39750,11 @@ function scripts.stage_20_arborean_oldtree_tree.update(this, store)
 
 			if targets then
 				for _, target in ipairs(targets) do
-					local d = E.create_damage()
-
-					d.source_id = this.id
-					d.target_id = target.id
+					local d = E.assign_damage(a.damage_type, 0, this.id, target.id)
 
 					local dmin, dmax = a.damage_min, a.damage_max
 
 					d.value = math.random(dmin, dmax)
-					d.damage_type = a.damage_type
 
 					queue_damage(store, d)
 
@@ -41894,12 +41797,7 @@ function scripts.controller_stage_25_torso.update(this, store)
 								enemies_count = enemies_count + 1
 							end
 
-							local d = E.create_damage()
-
-							d.source_id = this.id
-							d.target_id = v.id
-							d.damage_type = this.fist_damage_type
-							d.value = 1
+							local d = E.assign_damage(this.fist_damage_type, 1, this.id, v.id)
 							d.pop_chance = 0
 
 							queue_damage(store, d)
@@ -43174,12 +43072,7 @@ function scripts.controller_stage_27_head.update(this, store)
 
 					simulation:queue_insert_entity(m)
 				elseif (v.enemy or v.soldier) and v.health and not v.health.dead then
-					local d = E.create_damage()
-
-					d.source_id = this.id
-					d.target_id = v.id
-					d.damage_type = this.ray_damage_type
-					d.value = 1
+					local d = E.assign_damage(this.ray_damage_type, 1, this.id, v.id)
 					d.pop_chance = 0
 
 					queue_damage(store, d)
@@ -45185,15 +45078,9 @@ function scripts.controller_darksteel_guardian_death.update(this, store)
 	end)
 
 	for _, enemy in ipairs(targets) do
-		local d = E.create_damage()
-
-		d.damage_type = this.explotion_damage_type
-
 		local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, dradius)
 
-		d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
-		d.source_id = this.id
-		d.target_id = enemy.id
+		local d = E.assign_damage(this.explotion_damage_type, math.floor(dmax - (dmax - dmin) * dist_factor), this.id, enemy.id)
 
 		queue_damage(store, d)
 	end
@@ -48459,9 +48346,7 @@ function scripts.bullet_storm_elemental.update(this, store)
 	end
 
 	for _, target in ipairs(targets) do
-		local d = E.create_damage()
-
-		d.damage_type = b.damage_type
+		local d = E.assign_damage(b.damage_type, 0, this.id, target.id)
 
 		if b.damage_decay_random then
 			d.value = math.ceil(U.frandom(b.damage_min, b.damage_max))
@@ -48470,9 +48355,6 @@ function scripts.bullet_storm_elemental.update(this, store)
 
 			d.value = math.floor(b.damage_max - (b.damage_max - b.damage_min) * dist_factor)
 		end
-
-		d.source_id = this.id
-		d.target_id = target.id
 
 		queue_damage(store, d)
 
@@ -49150,9 +49032,7 @@ function scripts.bullet_wuxian_bolt.update(this, store)
 	end)
 
 	for _, enemy in ipairs(enemies) do
-		local d = E.create_damage()
-
-		d.damage_type = b.damage_type
+		local d = E.assign_damage(b.damage_type, 0, this.id, enemy.id)
 		d.reduce_armor = b.reduce_armor
 		d.reduce_magic_armor = b.reduce_magic_armor
 
@@ -49166,8 +49046,6 @@ function scripts.bullet_wuxian_bolt.update(this, store)
 		end
 
 		d.value = math.ceil(b.damage_factor * d.value)
-		d.source_id = this.id
-		d.target_id = enemy.id
 
 		if b.xp_gain_factor and b.xp_dest_id then
 			d.xp_gain_factor = b.xp_gain_factor
@@ -49665,10 +49543,7 @@ function scripts.enemy_fan_guard.update(this, store)
 						S:queue(ma.sound_hit, ma.sound_hit_args)
 
 						if ma.type == "melee" and not dodged and table.contains(this.enemy.blockers, target.id) then
-							local d = E.create_damage()
-
-							d.source_id = this.id
-							d.target_id = target.id
+							local d = E.assign_damage(ma.damage_type, 0, this.id, target.id)
 							d.track_kills = this.track_kills ~= nil
 							d.track_damage = ma.track_damage
 							d.pop = ma.pop
@@ -49676,7 +49551,6 @@ function scripts.enemy_fan_guard.update(this, store)
 							d.pop_conds = ma.pop_conds
 
 							if ma.damage_min then
-								d.damage_type = ma.damage_type
 								d.value = math.ceil(this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max))
 
 								queue_damage(store, d)
@@ -49703,12 +49577,7 @@ function scripts.enemy_fan_guard.update(this, store)
 										break
 									end
 
-									local d = E.create_damage()
-
-									d.source_id = this.id
-									d.target_id = e.id
-									d.damage_type = ma.damage_type
-									d.value = math.ceil(this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max))
+									local d = E.assign_damage(ma.damage_type, math.ceil(this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)), this.id, e.id)
 									d.pop = ma.pop
 									d.pop_chance = ma.pop_chance
 									d.pop_conds = ma.pop_conds
@@ -50925,9 +50794,7 @@ function scripts.bullet_hellfire_warlock_fireball.update(this, store)
 	end
 
 	for _, target in ipairs(targets) do
-		local d = E.create_damage()
-
-		d.damage_type = b.damage_type
+		local d = E.assign_damage(b.damage_type, 0, this.id, target.id)
 
 		if b.damage_decay_random then
 			d.value = math.ceil(U.frandom(b.damage_min, b.damage_max))
@@ -50936,9 +50803,6 @@ function scripts.bullet_hellfire_warlock_fireball.update(this, store)
 
 			d.value = math.floor(b.damage_max - (b.damage_max - b.damage_min) * dist_factor)
 		end
-
-		d.source_id = this.id
-		d.target_id = target.id
 
 		queue_damage(store, d)
 
@@ -51620,12 +51484,7 @@ function scripts.mod_stage31_water_mechanic_dps.update(this, store)
 	local function do_damage(target, value)
 		total_damage = total_damage + value
 
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = target.id
-		d.value = value
-		d.damage_type = dps.damage_type
+		local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
@@ -52276,12 +52135,7 @@ function scripts.fx_stage_32_fireball_right.update(this, store)
 				if not inside_kill_radius then
 				-- block empty
 				else
-					local d = E.create_damage()
-
-					d.source_id = this.id
-					d.target_id = v.id
-					d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
-					d.value = 10
+					local d = E.assign_damage(bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS), 10, this.id, v.id)
 
 					queue_damage(store, d)
 				end
@@ -56275,9 +56129,7 @@ function scripts.bullet_boss_princess_iron_fan.update(this, store)
 	end)
 
 	for _, target in ipairs(targets) do
-		local d = E.create_damage()
-
-		d.damage_type = b.damage_type
+		local d = E.assign_damage(b.damage_type, 0, this.id, target.id)
 
 		if b.damage_decay_random then
 			d.value = math.ceil(U.frandom(b.damage_min, b.damage_max))
@@ -56286,9 +56138,6 @@ function scripts.bullet_boss_princess_iron_fan.update(this, store)
 
 			d.value = math.floor(b.damage_max - (b.damage_max - b.damage_min) * dist_factor)
 		end
-
-		d.source_id = this.id
-		d.target_id = target.id
 
 		queue_damage(store, d)
 
@@ -62262,12 +62111,7 @@ function scripts.mod_boss_stage_39_get_hit_dps.update(this, store, script)
 	local function do_damage(target, value)
 		total_damage = total_damage + value
 
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = target.id
-		d.value = value
-		d.damage_type = dps.damage_type
+		local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
@@ -65522,12 +65366,7 @@ function scripts.mod_stage_40_boss_feet_death.update(this, store)
 	local m, target
 
 	local function kill_unit()
-		local d = E.create_damage()
-
-		d.damage_type = DAMAGE_TRUE
-		d.value = 99999999
-		d.source_id = this.id
-		d.target_id = target.id
+		local d = E.assign_damage(DAMAGE_TRUE, 99999999, this.id, target.id)
 
 		queue_damage(store, d)
 	end
@@ -65960,12 +65799,7 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 
 			if soldiers then
 				for k, v in ipairs(soldiers) do
-					local d = E.create_damage()
-
-					d.source_id = this.id
-					d.target_id = v.id
-					d.damage_type = this.landing_damage_type
-					d.value = math.random(this.landing_damage_min, this.landing_damage_max)
+					local d = E.assign_damage(this.landing_damage_type, math.random(this.landing_damage_min, this.landing_damage_max), this.id, v.id)
 
 					queue_damage(store, d)
 
@@ -66110,12 +65944,7 @@ function scripts.enemy_alfa_lava.update(this, store, script)
 
 					if soldiers then
 						for k, v in ipairs(soldiers) do
-							local d = E.create_damage()
-
-							d.source_id = this.id
-							d.target_id = v.id
-							d.damage_type = a.jump_damage_type
-							d.value = math.random(a.jump_damage_min, a.jump_damage_max)
+							local d = E.assign_damage(a.jump_damage_type, math.random(a.jump_damage_min, a.jump_damage_max), this.id, v.id)
 
 							queue_damage(store, d)
 						end
@@ -66263,24 +66092,19 @@ function scripts.bullet_alfa_lava_vomit.update(this, store, script)
 	end)
 
 	for _, enemy in ipairs(enemies) do
-		local d = E.create_damage()
-
-		d.damage_type = b.damage_type
+		local d = E.assign_damage(b.damage_type, 0, this.id, enemy.id)
 		d.reduce_armor = b.reduce_armor
 		d.reduce_magic_armor = b.reduce_magic_armor
 
 		if b.damage_decay_random then
 			d.value = U.frandom(dmin, dmax)
 		else
-
 			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
 
 			d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
 		end
 
 		d.value = math.ceil(b.damage_factor * d.value)
-		d.source_id = this.id
-		d.target_id = enemy.id
 
 		if b.xp_gain_factor and b.xp_dest_id then
 			d.xp_gain_factor = b.xp_gain_factor
@@ -66967,9 +66791,7 @@ function scripts.bullet_enemy_evolved_acid.update(this, store, script)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E.create_damage()
-
-			d.damage_type = b.damage_type
+			local d = E.assign_damage(b.damage_type, 0, this.id, target.id)
 
 			if b.damage_decay_random then
 				d.value = math.ceil(U.frandom(b.damage_min, b.damage_max))
@@ -66978,9 +66800,6 @@ function scripts.bullet_enemy_evolved_acid.update(this, store, script)
 
 				d.value = math.floor(b.damage_max - (b.damage_max - b.damage_min) * dist_factor)
 			end
-
-			d.source_id = this.id
-			d.target_id = target.id
 
 			queue_damage(store, d)
 
@@ -67632,12 +67451,7 @@ function scripts.mod_enemy_alfa_acid_poison.update(this, store)
 		if store.tick_ts - dps.ts >= dps.damage_every then
 			dps.ts = store.tick_ts
 
-			local d = E.create_damage()
-
-			d.source_id = this.id
-			d.target_id = target.id
-			d.value = dps.damage_max
-			d.damage_type = dps.damage_type
+			local d = E.assign_damage(dps.damage_type, dps.damage_max, this.id, target.id)
 
 			queue_damage(store, d)
 		end
@@ -68492,12 +68306,7 @@ function scripts.enemy_evolved_storm.update(this, store, script)
 
 				if targets then
 					for _, t in ipairs(targets) do
-						local d = E.create_damage()
-
-						d.damage_type = a_area.damage_type
-						d.value = math.random(a_area.damage_min, a_area.damage_max)
-						d.source_id = this.id
-						d.target_id = t.id
+						local d = E.assign_damage(a_area.damage_type, math.random(a_area.damage_min, a_area.damage_max), this.id, t.id)
 
 						queue_damage(store, d)
 					end
@@ -69011,12 +68820,7 @@ function scripts.enemy_executioner_storm.update(this, store, script)
 				U.animation_start(this, a_instakill.animation_out, nil, store.tick_ts, false, 1, true)
 				U.y_wait_unconditional(store, a_instakill.hit_time)
 
-				local d = E.create_damage()
-
-				d.source_id = this.id
-				d.target_id = target.id
-				d.damage_type = a_instakill.damage_type
-				d.value = math.random(a_instakill.damage_min, a_instakill.damage_max)
+				local d = E.assign_damage(a_instakill.damage_type, math.random(a_instakill.damage_min, a_instakill.damage_max), this.id, target.id)
 
 				queue_damage(store, d)
 				U.y_animation_wait_default(this)
@@ -69399,12 +69203,7 @@ function scripts.boss_murglum.update(this, store, script)
 
 		if soldiers and #soldiers > 0 then
 			for _, s in ipairs(soldiers) do
-				local d = E.create_damage()
-
-				d.damage_type = a_feral_bite.damage_type
-				d.value = math.random(a_feral_bite.min_damage, a_feral_bite.max_damage)
-				d.source_id = this.id
-				d.target_id = s.id
+				local d = E.assign_damage(a_feral_bite.damage_type, math.random(a_feral_bite.min_damage, a_feral_bite.max_damage), this.id, s.id)
 
 				queue_damage(store, d)
 			end

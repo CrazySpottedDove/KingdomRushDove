@@ -1,4 +1,4 @@
-local M = {}
+local render = {}
 local log = require("lib.klua.log"):new("render")
 local perf = require("dove_modules.perf.perf")
 local A = require("animation_db")
@@ -106,394 +106,391 @@ else
 	}
 end
 
-function M.register(sys)
-	sys.render = {}
-	sys.render.name = "render"
-	local F = require("lib.klove.font_db")
+render.name = "render"
+local F = require("lib.klove.font_db")
 
-	function sys.render:init(store)
-		store.render_frames = {}
-		store.render_frames_swapper = {}
-		store.render_frames_count = 0
-		store.render_frames_start_idx = 1
-		store.render_frames_ffi_cap = 8192
-		store.render_frames_ffi = ffi.new("RenderFrameFFI[8192]")
-		store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[8192]")
+function render:init(store)
+	store.render_frames = {}
+	store.render_frames_swapper = {}
+	store.render_frames_count = 0
+	store.render_frames_start_idx = 1
+	store.render_frames_ffi_cap = 8192
+	store.render_frames_ffi = ffi.new("RenderFrameFFI[8192]")
+	store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[8192]")
 
-		local hb_quad = love.graphics.newQuad(unpack(HEALTH_BAR_CORNER_DOT_QUAD))
+	local hb_quad = love.graphics.newQuad(unpack(HEALTH_BAR_CORNER_DOT_QUAD))
 
-		self._hb_ss = {
-			ref_scale = 1,
-			quad = hb_quad,
-			trim = {0, 0},
-			size = {1, 1}
-		}
-		self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
-		self._hb_colors = HEALTH_BAR_COLORS
-	end
+	self._hb_ss = {
+		ref_scale = 1,
+		quad = hb_quad,
+		trim = {0, 0},
+		size = {1, 1}
+	}
+	self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
+	self._hb_colors = HEALTH_BAR_COLORS
+end
 
-	function sys.render:on_insert_unconditional(entity, store)
-		if entity.render then
-			-- texts system begin
-			if entity.texts then
-				for i = 1, #entity.texts.list do
-					local t = entity.texts.list[i]
-					local sprite_id = t.sprite_id
-					local image_name = "_tmp_text_" .. t.text
+function render:on_insert_unconditional(entity, store)
+	if entity.render then
+		-- texts system begin
+		if entity.texts then
+			for i = 1, #entity.texts.list do
+				local t = entity.texts.list[i]
+				local sprite_id = t.sprite_id
+				local image_name = "_tmp_text_" .. t.text
 
-					if not I.db_images[image_name] then
-						local group = "temp_game_texts"
-						local scale = store.screen_scale
-						local image = F:create_text_image(t.text, t.size, t.alignment, t.font_name, t.font_size, t.color, t.line_height, store.screen_scale, t.fit_height, t.debug_bg)
-						I:add_image(image_name, image, group, scale)
+				if not I.db_images[image_name] then
+					local group = "temp_game_texts"
+					local scale = store.screen_scale
+					local image = F:create_text_image(t.text, t.size, t.alignment, t.font_name, t.font_size, t.color, t.line_height, store.screen_scale, t.fit_height, t.debug_bg)
+					I:add_image(image_name, image, group, scale)
 
-						-- 标记 atlas 引用计数，保证卸载正常
-						I.atlas_uses[string.format("%s-%.6f", group, scale)] = 1
-					end
-
-					-- local group = "temp_game_texts"
-					-- local scale = store.screen_scale
-
-					-- -- 避免重复创建文本 atlas
-					-- if I.atlas_uses[name_scale] and I.atlas_uses[name_scale] > 0 then
-					-- -- I.atlas_uses[name_scale] = I.atlas_uses[name_scale] + 1
-					-- else
-					-- 	local image = F:create_text_image(t.text, t.size, t.alignment, t.font_name, t.font_size, t.color, t.line_height, store.screen_scale, t.fit_height, t.debug_bg)
-					-- 	I:add_image(image_name, image, group, scale)
-					-- end
-
-					t.image_name = image_name
-					t.image_group = "texts"
-					entity.render.sprites[sprite_id].name = image_name
-					entity.render.sprites[sprite_id].animated = false
+					-- 标记 atlas 引用计数，保证卸载正常
+					I.atlas_uses[string.format("%s-%.6f", group, scale)] = 1
 				end
+
+				-- local group = "temp_game_texts"
+				-- local scale = store.screen_scale
+
+				-- -- 避免重复创建文本 atlas
+				-- if I.atlas_uses[name_scale] and I.atlas_uses[name_scale] > 0 then
+				-- -- I.atlas_uses[name_scale] = I.atlas_uses[name_scale] + 1
+				-- else
+				-- 	local image = F:create_text_image(t.text, t.size, t.alignment, t.font_name, t.font_size, t.color, t.line_height, store.screen_scale, t.fit_height, t.debug_bg)
+				-- 	I:add_image(image_name, image, group, scale)
+				-- end
+
+				t.image_name = image_name
+				t.image_group = "texts"
+				entity.render.sprites[sprite_id].name = image_name
+				entity.render.sprites[sprite_id].animated = false
 			end
-			-- texts system end
+		end
+		-- texts system end
 
-			local render_frames = store.render_frames
-			local track_e_pos = nil
-			for i = 1, #entity.render.sprites do
-				local s = entity.render.sprites[i]
+		local render_frames = store.render_frames
+		local track_e_pos = nil
+		for i = 1, #entity.render.sprites do
+			local s = entity.render.sprites[i]
 
-				s.marked_to_remove = false
-				s._render_e_id = entity.id
-				s._draw_order = 100000 * (s.draw_order or i) + entity.id
+			s.marked_to_remove = false
+			s._render_e_id = entity.id
+			s._draw_order = 100000 * (s.draw_order or i) + entity.id
 
-				if s.random_ts then
-					s.ts = U.frandom(-1 * s.random_ts, 0)
-				end
-
-				if not s.pos then
-					if not track_e_pos then
-						s.pos = V.v(entity.pos.x, entity.pos.y)
-						track_e_pos = s.pos
-						s._track_e = true
-					else
-						s.pos = track_e_pos
-					end
-				end
-
-				if s.shader then
-					s._shader = SH:get(s.shader)
-				end
-
-				store.render_frames_count = store.render_frames_count + 1
-				render_frames[store.render_frames_count] = s
+			if s.random_ts then
+				s.ts = U.frandom(-1 * s.random_ts, 0)
 			end
 
-			if entity.health_bar then
-				local hb = entity.health_bar
-				local hbsize = self._hb_sizes[hb.type]
-				local fb = {
-					flip_x = false,
-					pos = V.vv(0),
-					r = 0,
-					alpha = 255,
-					anchor = V.vv(0),
-					offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
-					_draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
-					z = Z_OBJECTS,
-					sort_y_offset = hb.sort_y_offset,
-					ss = self._hb_ss,
-					color = hb.colors and hb.colors.bg or self._hb_colors.bg,
-					bar_width = hbsize.x,
-					scale = V.v(hbsize.x, hbsize.y),
-					hidden = true
-				}
+			if not s.pos then
+				if not track_e_pos then
+					s.pos = V.v(entity.pos.x, entity.pos.y)
+					track_e_pos = s.pos
+					s._track_e = true
+				else
+					s.pos = track_e_pos
+				end
+			end
 
-				local ff = {
+			if s.shader then
+				s._shader = SH:get(s.shader)
+			end
+
+			store.render_frames_count = store.render_frames_count + 1
+			render_frames[store.render_frames_count] = s
+		end
+
+		if entity.health_bar then
+			local hb = entity.health_bar
+			local hbsize = self._hb_sizes[hb.type]
+			local fb = {
+				flip_x = false,
+				pos = V.vv(0),
+				r = 0,
+				alpha = 255,
+				anchor = V.vv(0),
+				offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
+				_draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
+				z = Z_OBJECTS,
+				sort_y_offset = hb.sort_y_offset,
+				ss = self._hb_ss,
+				color = hb.colors and hb.colors.bg or self._hb_colors.bg,
+				bar_width = hbsize.x,
+				scale = V.v(hbsize.x, hbsize.y),
+				hidden = true
+			}
+
+			local ff = {
+				flip_x = false,
+				pos = fb.pos,
+				r = 0,
+				alpha = 255,
+				anchor = V.vv(0),
+				offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
+				_draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
+				z = Z_OBJECTS,
+				sort_y_offset = hb.sort_y_offset,
+				ss = self._hb_ss,
+				color = hb.colors and hb.colors.fg or self._hb_colors.fg,
+				bar_width = hbsize.x,
+				scale = V.v(hbsize.x, hbsize.y),
+				hidden = true
+			}
+
+			for i = #hb.frames, 1, -1 do
+				hb.frames[i].marked_to_remove = true
+			end
+
+			hb.frames[1] = fb
+			hb.frames[2] = ff
+			store.render_frames_count = store.render_frames_count + 1
+			render_frames[store.render_frames_count] = fb
+			store.render_frames_count = store.render_frames_count + 1
+			render_frames[store.render_frames_count] = ff
+
+			if hb.black_bar_hp then
+				local fk = {
 					flip_x = false,
 					pos = fb.pos,
 					r = 0,
 					alpha = 255,
 					anchor = V.vv(0),
 					offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
-					_draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
+					_draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + entity.id,
 					z = Z_OBJECTS,
 					sort_y_offset = hb.sort_y_offset,
 					ss = self._hb_ss,
-					color = hb.colors and hb.colors.fg or self._hb_colors.fg,
+					color = hb.colors and hb.colors.black or self._hb_colors.black,
 					bar_width = hbsize.x,
 					scale = V.v(hbsize.x, hbsize.y),
 					hidden = true
 				}
 
-				for i = #hb.frames, 1, -1 do
-					hb.frames[i].marked_to_remove = true
-				end
-
-				hb.frames[1] = fb
-				hb.frames[2] = ff
+				hb.frames[3] = fk
 				store.render_frames_count = store.render_frames_count + 1
-				render_frames[store.render_frames_count] = fb
-				store.render_frames_count = store.render_frames_count + 1
-				render_frames[store.render_frames_count] = ff
-
-				if hb.black_bar_hp then
-					local fk = {
-						flip_x = false,
-						pos = fb.pos,
-						r = 0,
-						alpha = 255,
-						anchor = V.vv(0),
-						offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
-						_draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + entity.id,
-						z = Z_OBJECTS,
-						sort_y_offset = hb.sort_y_offset,
-						ss = self._hb_ss,
-						color = hb.colors and hb.colors.black or self._hb_colors.black,
-						bar_width = hbsize.x,
-						scale = V.v(hbsize.x, hbsize.y),
-						hidden = true
-					}
-
-					hb.frames[3] = fk
-					store.render_frames_count = store.render_frames_count + 1
-					render_frames[store.render_frames_count] = fk
-				end
+				render_frames[store.render_frames_count] = fk
 			end
 		end
 	end
+end
 
-	function sys.render:on_remove_unconditional(entity, store)
-		if entity.render then
-			-- texts system begin
-			if entity.texts then
-				for i = 1, #entity.texts.list do
-					local t = entity.texts.list[i]
+function render:on_remove_unconditional(entity, store)
+	if entity.render then
+		-- texts system begin
+		if entity.texts then
+			for i = 1, #entity.texts.list do
+				local t = entity.texts.list[i]
 
-					if t.image_name then
-						-- 不需要调用 remove，作为缓存就好了，等待 game 卸载时一起卸载
-						-- I:remove_image(t.image_name)
-						-- 跳过绘制，避免执行了 remove_image 后，由于 on_render_update 未执行即调用 draw 导致的找不到纹理错误
-						entity.render.sprites[t.sprite_id].hidden = true
-					end
+				if t.image_name then
+					-- 不需要调用 remove，作为缓存就好了，等待 game 卸载时一起卸载
+					-- I:remove_image(t.image_name)
+					-- 跳过绘制，避免执行了 remove_image 后，由于 on_render_update 未执行即调用 draw 导致的找不到纹理错误
+					entity.render.sprites[t.sprite_id].hidden = true
 				end
 			end
-			-- texts system end
-			for i = #entity.render.sprites, 1, -1 do
-				local s = entity.render.sprites[i]
+		end
+		-- texts system end
+		for i = #entity.render.sprites, 1, -1 do
+			local s = entity.render.sprites[i]
 
-				s.marked_to_remove = true
-			end
+			s.marked_to_remove = true
+		end
 
-			if entity.health_bar then
-				for i = #entity.health_bar.frames, 1, -1 do
-					local f = entity.health_bar.frames[i]
+		if entity.health_bar then
+			for i = #entity.health_bar.frames, 1, -1 do
+				local f = entity.health_bar.frames[i]
 
-					f.marked_to_remove = true
-					entity.health_bar.frames[i] = nil
-				end
+				f.marked_to_remove = true
+				entity.health_bar.frames[i] = nil
 			end
 		end
 	end
+end
 
-	function sys.render:on_render_update(dt, ts, store)
-		perf.start("render")
+function render:on_render_update(dt, ts, store)
+	perf.start("render")
 
-		if store.render_frames_count > store.render_frames_ffi_cap then
-			store.render_frames_ffi_cap = store.render_frames_ffi_cap * 2
-			store.render_frames_ffi = ffi.new("RenderFrameFFI[" .. store.render_frames_ffi_cap .. "]")
-			store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[" .. store.render_frames_ffi_cap .. "]")
-		end
+	if store.render_frames_count > store.render_frames_ffi_cap then
+		store.render_frames_ffi_cap = store.render_frames_ffi_cap * 2
+		store.render_frames_ffi = ffi.new("RenderFrameFFI[" .. store.render_frames_ffi_cap .. "]")
+		store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[" .. store.render_frames_ffi_cap .. "]")
+	end
 
-		local render_frames = store.render_frames
-		local render_frames_ffi = store.render_frames_ffi
-		local new_frames = store.render_frames_swapper
-		-- 必须保留该行！怀疑对象的写入更替引发了一些 GC 问题，导致性能暴跌。在清理后可以恢复正常
-		table_clear(new_frames)
+	local render_frames = store.render_frames
+	local render_frames_ffi = store.render_frames_ffi
+	local new_frames = store.render_frames_swapper
+	-- 必须保留该行！怀疑对象的写入更替引发了一些 GC 问题，导致性能暴跌。在清理后可以恢复正常
+	table_clear(new_frames)
 
-		local n = 0
-		local start_idx = 1
+	local n = 0
+	local start_idx = 1
 
-		for i = 1, store.render_frames_count do
-			local s = render_frames[i]
+	for i = 1, store.render_frames_count do
+		local s = render_frames[i]
 
-			if not s.marked_to_remove then
-				if s._render_e_id then
-					if s.ts > ts then
-						s.hidden = true
-						s._hidden_for_ts = true
-					elseif s._hidden_for_ts then
-						s.hidden = false
-						s._hidden_for_ts = false
+		if not s.marked_to_remove then
+			if s._render_e_id then
+				if s.ts > ts then
+					s.hidden = true
+					s._hidden_for_ts = true
+				elseif s._hidden_for_ts then
+					s.hidden = false
+					s._hidden_for_ts = false
+				end
+
+				do
+					local fn
+					local last_runs = s.runs
+
+					if s.animated then
+						fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+					else
+						s.runs = 0
+						s.frame_idx = 1
+						fn = s.name
 					end
 
-					do
-						local fn
-						local last_runs = s.runs
+					if s.exo then
+						local exo_frame = EXO:f(fn)
 
-						if s.animated then
-							fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
-						else
-							s.runs = 0
-							s.frame_idx = 1
-							fn = s.name
-						end
+						if exo_frame then
+							s.exo_frame = exo_frame
+							local exo = EXO:get_exo_by_frame(exo_frame)
 
-						if s.exo then
-							local exo_frame = EXO:f(fn)
+							if s.exo_hide_prefix then
+								for i = 1, #exo_frame do
+									local p = exo_frame[i]
+									if p[1] == 1 then
+										local pname = exo.parts[p[2]][1]
 
-							if exo_frame then
-								s.exo_frame = exo_frame
-								local exo = EXO:get_exo_by_frame(exo_frame)
+										p.hidden = false
 
-								if s.exo_hide_prefix then
-									for i = 1, #exo_frame do
-										local p = exo_frame[i]
-										if p[1] == 1 then
-											local pname = exo.parts[p[2]][1]
+										for j = 1, #s.exo_hide_prefix do
+											if string.find(pname, s.exo_hide_prefix[j], 1, true) then
+												p.hidden = true
 
-											p.hidden = false
-
-											for j = 1, #s.exo_hide_prefix do
-												if string.find(pname, s.exo_hide_prefix[j], 1, true) then
-													p.hidden = true
-
-													break
-												end
+												break
 											end
 										end
 									end
 								end
-							else
-								-- if not MISSED_SS[fn] then
-								-- 	-- fallback, 仅在开发时启用，用于检查美术资源
-								-- 	local e = store.entities[s._render_e_id]
-								-- 	print(string.format("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i))
-								-- 	print(string.format("EXO name: %s", fn or "nil"))
-								-- 	MISSED_SS[fn] = true
-								-- end
-								s.exo_frame = {}
 							end
 						else
-							s.sync_flag = last_runs ~= s.runs
-							s.ss = I:s(fn)
-
-						-- DEBUG:仅在开发时启用，用于检查美术资源
-						-- if s.ss == nil then
-						-- 	local e = store.entities[s._render_e_id]
-						-- 	if s.animation then
-						-- 		if not MISSED_SS[s.animation] then
-						-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-						-- 			print(string.format("Animation name: %s", s.animation))
-						-- 			MISSED_SS[s.animation] = true
-						-- 		end
-						-- 	elseif s.animated then
-						-- 		if not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
-						-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-						-- 			print(string.format("Animated prefix: %s", s.prefix))
-						-- 			print(string.format("Animated name: %s", s.name))
-						-- 			MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
-						-- 		end
-						-- 	else
-						-- 		if not MISSED_SS[s.name] then
-						-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-						-- 			print(string.format("Static sprite name: %s", s.name))
-						-- 			MISSED_SS[s.name] = true
-						-- 		end
-						-- 	end
-						-- end
+							-- if not MISSED_SS[fn] then
+							-- 	-- fallback, 仅在开发时启用，用于检查美术资源
+							-- 	local e = store.entities[s._render_e_id]
+							-- 	print(string.format("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i))
+							-- 	print(string.format("EXO name: %s", fn or "nil"))
+							-- 	MISSED_SS[fn] = true
+							-- end
+							s.exo_frame = {}
 						end
-					end
+					else
+						s.sync_flag = last_runs ~= s.runs
+						s.ss = I:s(fn)
 
-					if s.hide_after_runs and s.runs >= s.hide_after_runs then
-						s.hidden = true
-					end
-
-					local e = store.entities[s._render_e_id]
-
-					if s._track_e then
-						s.pos.x, s.pos.y = e.pos.x, e.pos.y
-					end
-
-					if e.health_bar and e.health_bar._last_ts ~= ts then
-						local hb = e.health_bar
-						hb._last_ts = ts
-						local fb = hb.frames[1]
-						local ff = hb.frames[2]
-						local fk = hb.black_bar_hp and hb.frames[3] or nil
-
-						if e.health.hp == e.health.hp_max or hb.hidden then
-							fb.hidden = true
-							ff.hidden = true
-
-							if fk then
-								fk.hidden = true
-							end
-						else
-							fb.hidden = false
-							ff.hidden = false
-							fb.pos.x, fb.pos.y = e.pos.x, e.pos.y
-
-							if fk then
-								fk.hidden = false
-								ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
-								fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
-							else
-								if e.health.hp > e.health.hp_max then
-									ff.scale.x = ff.bar_width
-									ff.color = hb.colors and hb.colors.fg2 or self._hb_colors.fg2
-								else
-									ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
-									ff.color = hb.colors and hb.colors.fg or self._hb_colors.fg
-								end
-							end
-						end
+					-- DEBUG:仅在开发时启用，用于检查美术资源
+					-- if s.ss == nil then
+					-- 	local e = store.entities[s._render_e_id]
+					-- 	if s.animation then
+					-- 		if not MISSED_SS[s.animation] then
+					-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
+					-- 			print(string.format("Animation name: %s", s.animation))
+					-- 			MISSED_SS[s.animation] = true
+					-- 		end
+					-- 	elseif s.animated then
+					-- 		if not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+					-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
+					-- 			print(string.format("Animated prefix: %s", s.prefix))
+					-- 			print(string.format("Animated name: %s", s.name))
+					-- 			MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+					-- 		end
+					-- 	else
+					-- 		if not MISSED_SS[s.name] then
+					-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
+					-- 			print(string.format("Static sprite name: %s", s.name))
+					-- 			MISSED_SS[s.name] = true
+					-- 		end
+					-- 	end
+					-- end
 					end
 				end
 
-				if s.hidden then
-					new_frames[start_idx] = s
-					start_idx = start_idx + 1
-				else
-					local ffi_f = render_frames_ffi[n]
-					ffi_f.z = s.z
-					ffi_f.sort_y = s.sort_y or (s.sort_y_offset or 0) + s.pos.y
-					ffi_f.draw_order = s._draw_order
-					ffi_f.lua_index = i
-					n = n + 1
+				if s.hide_after_runs and s.runs >= s.hide_after_runs then
+					s.hidden = true
+				end
+
+				local e = store.entities[s._render_e_id]
+
+				if s._track_e then
+					s.pos.x, s.pos.y = e.pos.x, e.pos.y
+				end
+
+				if e.health_bar and e.health_bar._last_ts ~= ts then
+					local hb = e.health_bar
+					hb._last_ts = ts
+					local fb = hb.frames[1]
+					local ff = hb.frames[2]
+					local fk = hb.black_bar_hp and hb.frames[3] or nil
+
+					if e.health.hp == e.health.hp_max or hb.hidden then
+						fb.hidden = true
+						ff.hidden = true
+
+						if fk then
+							fk.hidden = true
+						end
+					else
+						fb.hidden = false
+						ff.hidden = false
+						fb.pos.x, fb.pos.y = e.pos.x, e.pos.y
+
+						if fk then
+							fk.hidden = false
+							ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
+							fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
+						else
+							if e.health.hp > e.health.hp_max then
+								ff.scale.x = ff.bar_width
+								ff.color = hb.colors and hb.colors.fg2 or self._hb_colors.fg2
+							else
+								ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
+								ff.color = hb.colors and hb.colors.fg or self._hb_colors.fg
+							end
+						end
+					end
 				end
 			end
+
+			if s.hidden then
+				new_frames[start_idx] = s
+				start_idx = start_idx + 1
+			else
+				local ffi_f = render_frames_ffi[n]
+				ffi_f.z = s.z
+				ffi_f.sort_y = s.sort_y or (s.sort_y_offset or 0) + s.pos.y
+				ffi_f.draw_order = s._draw_order
+				ffi_f.lua_index = i
+				n = n + 1
+			end
 		end
-
-		lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
-
-		local i = 0
-		while i < n do
-			local ffi_f = render_frames_ffi[i]
-			new_frames[i + start_idx] = render_frames[ffi_f.lua_index]
-			i = i + 1
-		end
-
-		store.render_frames = new_frames
-		store.render_frames_swapper = render_frames
-		store.render_frames_count = n + start_idx - 1
-		store.render_frames_start_idx = start_idx
-
-		perf.set_frames(n)
-		perf.stop("render")
 	end
+
+	lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+
+	local i = 0
+	while i < n do
+		local ffi_f = render_frames_ffi[i]
+		new_frames[i + start_idx] = render_frames[ffi_f.lua_index]
+		i = i + 1
+	end
+
+	store.render_frames = new_frames
+	store.render_frames_swapper = render_frames
+	store.render_frames_count = n + start_idx - 1
+	store.render_frames_start_idx = start_idx
+
+	perf.set_frames(n)
+	perf.stop("render")
 end
 
-return M
+return render

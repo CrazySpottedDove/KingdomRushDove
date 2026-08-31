@@ -1,4 +1,4 @@
-local M = {}
+local health = {}
 
 local bit = require("bit")
 local bor = bit.bor
@@ -441,35 +441,8 @@ local function hnum_init(store)
 end
 
 local damage_trace_table = {}
-local damage_taken_trace_table = {}
 
 local damage_trace
-local damage_trace_on_insert_unconditional
-
-local function damage_trace_on_insert_unconditional_disabled(entity, store)
-end
-
-local function damage_trace_on_insert_unconditional_enabled(entity, store)
-	if not entity._damage_source_id then
-		local source = nil
-		if entity.source_id then
-			source = store.entities[entity.source_id]
-		elseif entity.bullet and entity.bullet.source_id then
-			source = store.entities[entity.bullet.source_id]
-		elseif entity.modifier and entity.modifier.source_id then
-			source = store.entities[entity.modifier.source_id]
-		elseif entity.aura and entity.aura.source_id then
-			source = store.entities[entity.aura.source_id]
-		elseif entity.soldier and entity.soldier.tower_id then
-			source = store.entities[entity.soldier.tower_id]
-		elseif entity.owner then
-			source = entity.owner
-		end
-		if source then
-			entity._damage_source_id = source._damage_source_id or source.id
-		end
-	end
-end
 
 local function damage_trace_disabled(store, d, e)
 end
@@ -478,39 +451,38 @@ local function damage_trace_enabled(store, d, e)
 	if d.source_id then
 		local source = store.entities[d.source_id]
 		if source then
-			if source._damage_source_id then
-				source = store.entities[source._damage_source_id]
+			local root = source._root_entity or source
+			if not damage_trace_table[root.template_name] then
+				damage_trace_table[root.template_name] = {
+					name = root.info and root.info.i18n_key and _(root.info.i18n_key .. "_NAME") or _(string.upper(root.template_name) .. "_NAME"),
+					applied_effective_damage = {},
+					received_total_damage = {}
+				}
 			end
-			-- if source and (source.tower or source.unit) then
-			if source then
-				if not damage_trace_table[source.template_name] then
-					damage_trace_table[source.template_name] = {
-						name = source.info and source.info.i18n_key and _(source.info.i18n_key .. "_NAME") or _(string.upper(source.template_name) .. "_NAME"),
-						data = {}
-					}
-				end
-				local dt = damage_trace_table[source.template_name].data
-				if not dt[d.damage_type] then
-					dt[d.damage_type] = 0
-				end
-				dt[d.damage_type] = dt[d.damage_type] + math.min(d.damage_applied, math.max(e.health.hp, 0))
+			local dt = damage_trace_table[root.template_name].applied_effective_damage
+			if not dt[d.damage_type] then
+				dt[d.damage_type] = 0
 			end
+			dt[d.damage_type] = dt[d.damage_type] + math.min(d.damage_applied, math.max(e.health.hp, 0))
 		end
 	end
+
 	local damage_taken = 0
 	if e.health.hp > 0 then
 		damage_taken = (band(d.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 and d.damage_applied or d.value) * math.min(e.health.hp / d.damage_applied, 1)
 	end
-	if e._damage_source_id and store.entities[e._damage_source_id] then
-		e = store.entities[e._damage_source_id]
+
+	if e._root_entity then
+		e = e._root_entity
 	end
-	if not damage_taken_trace_table[e.template_name] then
-		damage_taken_trace_table[e.template_name] = {
+	if not damage_trace_table[e.template_name] then
+		damage_trace_table[e.template_name] = {
 			name = e.info and e.info.i18n_key and _(e.info.i18n_key .. "_NAME") or _(string.upper(e.template_name) .. "_NAME"),
-			data = {}
+			applied_effective_damage = {},
+			received_total_damage = {}
 		}
 	end
-	local dt = damage_taken_trace_table[e.template_name].data
+	local dt = damage_trace_table[e.template_name].received_total_damage
 	if not dt[d.damage_type] then
 		dt[d.damage_type] = 0
 	end
@@ -520,265 +492,267 @@ end
 local function damage_trace_init(store)
 	if configer.ui_settings().damage_trace_enabled then
 		damage_trace = damage_trace_enabled
-		damage_trace_on_insert_unconditional = damage_trace_on_insert_unconditional_enabled
 		damage_trace_table = {}
-		damage_taken_trace_table = {}
 		store.damage_trace_table = damage_trace_table
-		store.damage_taken_trace_table = damage_taken_trace_table
+
+		function health:on_queue_unconditional(e, d)
+			if d._dominant_entity then
+				local parent = d._dominant_entity
+				if parent._root_entity then
+					e._root_entity = parent._root_entity
+				else
+					e._root_entity = parent
+				end
+			end
+		end
 	else
 		damage_trace = damage_trace_disabled
-		damage_trace_on_insert_unconditional = damage_trace_on_insert_unconditional_disabled
 		damage_trace_table = nil
-		damage_taken_trace_table = nil
 		store.damage_trace_table = nil
-		store.damage_taken_trace_table = nil
+		health.on_queue_unconditional = nil
 	end
 end
 
 -- local FADE_OUT_DURATION = 0.4
 require("table.clear")
-function M.register(sys)
-	local GS = require("kr1.game_settings")
+local GS = require("kr1.game_settings")
 
-	sys.health = {}
-	sys.health.name = "health"
+health.name = "health"
 
-	function sys.health:init(store)
-		store.damage_queue = {}
-		store.damage_queue_swapper = {}
-		dnum_init(store)
-		hnum_init(store)
-		damage_trace_init(store)
-		if dnum_enabled or hnum_enabled then
-			num_draw_impl = num_draw_enabled
-		else
-			num_draw_impl = num_draw_disabled
-		end
-		store.numbers_draw = num_draw_impl
+function health:init(store)
+	store.damage_queue = {}
+	store.damage_queue_swapper = {}
+	dnum_init(store)
+	hnum_init(store)
+	damage_trace_init(store)
+	if dnum_enabled or hnum_enabled then
+		num_draw_impl = num_draw_enabled
+	else
+		num_draw_impl = num_draw_disabled
 	end
+	store.numbers_draw = num_draw_impl
+end
 
-	function sys.health:on_insert_unconditional(entity, store)
-		if entity.health then
-			if not entity.health.hp then
-				entity.health.hp = entity.health.hp_max
-			end
-			if entity.regen then
-				if not entity.regen.health then
-					entity.regen.health = math.ceil(entity.health.hp_max * GS.soldier_regen_factor)
-				end
+function health:on_insert_unconditional(entity, store)
+	if entity.health then
+		if not entity.health.hp then
+			entity.health.hp = entity.health.hp_max
+		end
+		if entity.regen then
+			if not entity.regen.health then
+				entity.regen.health = math.ceil(entity.health.hp_max * GS.soldier_regen_factor)
 			end
 		end
-		damage_trace_on_insert_unconditional(entity, store)
-	end
-
-	function sys.health.on_damage_applied(store, d, e)
-		dnum_on_applied_impl(store, d, e)
-		-- pops system begin
-		if d.pop then
-			local source = store.entities[d.source_id]
-			local pop_entity = (source and (source.enemy or source.soldier)) and source or e
-			if pop_entity then
-				local pop_chance = d.pop_chance
-				local pop_conds = d.pop_conds
-				if (not pop_chance or random() < pop_chance) and (not pop_conds or band(d.damage_result, pop_conds) ~= 0) then
-					local name = d.pop[random(1, #d.pop)]
-					local pop = E:create_entity(name)
-
-					if pop.pop_over_target then
-						pop_entity = e
-					end
-
-					local pos_y = pop_entity.pos.y + pop.pop_y_offset
-
-					if pop_entity.unit then
-						if pop_entity.unit.pop_offset then
-							pos_y = pos_y + pop_entity.unit.pop_offset.y
-						elseif pop_entity == e and pop_entity.unit.hit_offset then
-							pos_y = pos_y + pop_entity.unit.hit_offset.y
-						end
-					end
-
-					pop.pos:set(pop_entity.pos.x, pos_y)
-					pop.render.sprites[1].r = random(-21, 21) * 0.017453292519943295
-					pop.render.sprites[1].ts = store.tick_ts
-
-					simulation:queue_insert_entity(pop)
-				end
-			end
-		end
-		-- pops system end
-
-		-- hero_xp_tracking system begin
-		if d.xp_gain_factor then
-			local id = d.xp_dest_id or d.source_id
-			local source = store.entities[id]
-
-			if source and source.hero then
-				local amount = d.damage_applied * d.xp_gain_factor
-				source.hero.xp_queued = source.hero.xp_queued + amount
-			end
-		end
-	-- hero_xp_tracking system end
-	end
-
-	function sys.health:on_update(dt, ts, store)
-		perf.start("health")
-		local new_damage_queue = store.damage_queue_swapper
-		table.clear(new_damage_queue)
-
-		local damage_queue = store.damage_queue
-		local damage_queue_len = #damage_queue
-
-		local entities = store.entities
-		for i = 1, damage_queue_len do
-			local d = damage_queue[i]
-			local e = entities[d.target_id]
-
-			if e then
-				local h = e.health
-
-				if not (h.dead or band(h.immune_to, d.damage_type) ~= 0 or h.ignore_damage or h.on_damage and not h.on_damage(e, store, d)) then
-					local starting_hp = h.hp
-
-					h.last_damage_types = bor(h.last_damage_types, d.damage_type)
-
-					if band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
-						SU.armor_dec(e, d.value)
-						d.damage_result = bor(d.damage_result, DR_ARMOR)
-					elseif band(d.damage_type, DAMAGE_MAGICAL_ARMOR) ~= 0 then
-						SU.magic_armor_dec(e, d.value)
-						d.damage_result = bor(d.damage_result, DR_MAGICAL_ARMOR)
-					else
-						if band(d.damage_type, DAMAGE_EAT) ~= 0 then
-							local eat_amt = math.max(h.hp, 0)
-							d.damage_applied = eat_amt
-							d.damage_result = bor(d.damage_result, DR_KILL)
-							damage_trace(store, d, e)
-							h.hp = 0
-							self.on_damage_applied(store, d, e)
-						else
-							local actual_damage = U.predict_damage(e, d)
-
-							if actual_damage > 0 then
-								d.damage_applied = actual_damage
-								d.damage_result = bor(d.damage_result, DR_DAMAGE)
-								damage_trace(store, d, e)
-
-								if e.regen then
-									e.regen.last_hit_ts = ts
-								end
-
-								h.hp = h.hp - actual_damage
-								if starting_hp > 0 and h.hp <= 0 then
-									d.damage_result = bor(d.damage_result, DR_KILL)
-								end
-
-								if d.track_damage then
-									signal.emit("entity-damaged", e, d)
-
-									local source = entities[d.source_id]
-
-									if source and source.track_damage then
-										source.track_damage.damaged[#source.track_damage.damaged + 1] = {e.id, actual_damage}
-									end
-								end
-								self.on_damage_applied(store, d, e)
-							end
-
-							if h.spiked_armor > 0 and d.source_id then
-								local t = entities[d.source_id]
-
-								if t and t.health and not t.health.dead then
-									new_damage_queue[#new_damage_queue + 1] = E.assign_damage(DAMAGE_TRUE, h.spiked_armor * d.value, e.id, t.id)
-								end
-							end
-
-							if h.constant_spiked_armor and d.source_id then
-								local t = entities[d.source_id]
-
-								if t and t.health and not t.health.dead then
-									new_damage_queue[#new_damage_queue + 1] = E.assign_damage(h.constant_spiked_armor.damage_type, h.constant_spiked_armor.value, e.id, t.id)
-								end
-							end
-						end
-
-						-- 处理击杀
-						if starting_hp > 0 and h.hp <= 0 then
-							signal.emit("entity-killed", e, d)
-
-							if d.track_kills then
-								local source = entities[d.source_id]
-
-								if source and source.track_kills then
-									source.track_kills.killed[#source.track_kills.killed + 1] = e.id
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-
-		for i = damage_queue_len + 1, #damage_queue do
-			new_damage_queue[#new_damage_queue + 1] = damage_queue[i]
-		end
-
-		store.damage_queue_swapper = damage_queue
-		store.damage_queue = new_damage_queue
-
-		local soldiers = store.soldiers
-
-		for _, e in pairs(soldiers) do
-			local h = e.health
-
-			if h.hp <= 0 and not h.dead and not h.ignore_damage then
-				h.hp = 0
-				h.dead = true
-				h.death_ts = ts
-
-				if e.render then
-					h.fading_after = ts + h.dead_lifetime - 0.4
-				else
-					h.delete_after = ts + h.dead_lifetime
-				end
-
-				if e.health_bar then
-					e.health_bar.hidden = true
-				end
-			end
-
-			if not h.dead then
-				h.last_damage_types = 0
-			elseif not e.hero and not h.ignore_delete_after then
-				if h.fading_after and ts > h.fading_after then
-					local progress = (ts - h.fading_after) / 0.4
-
-					if progress >= 1.0 then
-						simulation:queue_remove_entity(e)
-					else
-						local sprites = e.render.sprites
-						if not h._fade_init_alphas then
-							h._fade_init_alphas = {}
-							for i = 1, #sprites do
-								h._fade_init_alphas[i] = sprites[i].alpha
-							end
-						end
-						for i = 1, #sprites do
-							sprites[i].alpha = h._fade_init_alphas[i] * (1 - progress)
-						end
-					end
-				elseif h.delete_after and ts > h.delete_after then
-					simulation:queue_remove_entity(e)
-				end
-			end
-		end
-
-		perf.stop("health")
 	end
 end
 
--- 供其他模块复用伤害数字的伤害类型 -> 颜色映射（单一数据源）
-M.damage_color_index = dnum_color_index
-M.damage_color_palette = num_palette
+function health.on_damage_applied(store, d, e)
+	dnum_on_applied_impl(store, d, e)
+	-- pops system begin
+	if d.pop then
+		local source = store.entities[d.source_id]
+		local pop_entity = (source and (source.enemy or source.soldier)) and source or e
+		if pop_entity then
+			local pop_chance = d.pop_chance
+			local pop_conds = d.pop_conds
+			if (not pop_chance or random() < pop_chance) and (not pop_conds or band(d.damage_result, pop_conds) ~= 0) then
+				local name = d.pop[random(1, #d.pop)]
+				local pop = E:create_entity(name)
 
-return M
+				if pop.pop_over_target then
+					pop_entity = e
+				end
+
+				local pos_y = pop_entity.pos.y + pop.pop_y_offset
+
+				if pop_entity.unit then
+					if pop_entity.unit.pop_offset then
+						pos_y = pos_y + pop_entity.unit.pop_offset.y
+					elseif pop_entity == e and pop_entity.unit.hit_offset then
+						pos_y = pos_y + pop_entity.unit.hit_offset.y
+					end
+				end
+
+				pop.pos:set(pop_entity.pos.x, pos_y)
+				pop.render.sprites[1].r = random(-21, 21) * 0.017453292519943295
+				pop.render.sprites[1].ts = store.tick_ts
+
+				simulation:queue_insert_entity(pop)
+			end
+		end
+	end
+	-- pops system end
+
+	-- hero_xp_tracking system begin
+	if d.xp_gain_factor then
+		local id = d.xp_dest_id or d.source_id
+		local source = store.entities[id]
+
+		if source and source.hero then
+			local amount = d.damage_applied * d.xp_gain_factor
+			source.hero.xp_queued = source.hero.xp_queued + amount
+		end
+	end
+-- hero_xp_tracking system end
+end
+
+function health:on_update(dt, ts, store)
+	perf.start("health")
+	local new_damage_queue = store.damage_queue_swapper
+	table.clear(new_damage_queue)
+
+	local damage_queue = store.damage_queue
+	local damage_queue_len = #damage_queue
+
+	local entities = store.entities
+	for i = 1, damage_queue_len do
+		local d = damage_queue[i]
+		local e = entities[d.target_id]
+
+		if e then
+			local h = e.health
+
+			if not (h.dead or band(h.immune_to, d.damage_type) ~= 0 or h.ignore_damage or h.on_damage and not h.on_damage(e, store, d)) then
+				local starting_hp = h.hp
+
+				h.last_damage_types = bor(h.last_damage_types, d.damage_type)
+
+				if band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
+					SU.armor_dec(e, d.value)
+					d.damage_result = bor(d.damage_result, DR_ARMOR)
+				elseif band(d.damage_type, DAMAGE_MAGICAL_ARMOR) ~= 0 then
+					SU.magic_armor_dec(e, d.value)
+					d.damage_result = bor(d.damage_result, DR_MAGICAL_ARMOR)
+				else
+					if band(d.damage_type, DAMAGE_EAT) ~= 0 then
+						local eat_amt = math.max(h.hp, 0)
+						d.damage_applied = eat_amt
+						d.damage_result = bor(d.damage_result, DR_KILL)
+						damage_trace(store, d, e)
+						h.hp = 0
+						self.on_damage_applied(store, d, e)
+					else
+						local actual_damage = U.predict_damage(e, d)
+
+						if actual_damage > 0 then
+							d.damage_applied = actual_damage
+							d.damage_result = bor(d.damage_result, DR_DAMAGE)
+							damage_trace(store, d, e)
+
+							if e.regen then
+								e.regen.last_hit_ts = ts
+							end
+
+							h.hp = h.hp - actual_damage
+							if starting_hp > 0 and h.hp <= 0 then
+								d.damage_result = bor(d.damage_result, DR_KILL)
+							end
+
+							if d.track_damage then
+								signal.emit("entity-damaged", e, d)
+
+								local source = entities[d.source_id]
+
+								if source and source.track_damage then
+									source.track_damage.damaged[#source.track_damage.damaged + 1] = {e.id, actual_damage}
+								end
+							end
+							self.on_damage_applied(store, d, e)
+						end
+
+						if h.spiked_armor > 0 and d.source_id then
+							local t = entities[d.source_id]
+
+							if t and t.health and not t.health.dead then
+								new_damage_queue[#new_damage_queue + 1] = E.assign_damage(DAMAGE_TRUE, h.spiked_armor * d.value, e.id, t.id)
+							end
+						end
+
+						if h.constant_spiked_armor and d.source_id then
+							local t = entities[d.source_id]
+
+							if t and t.health and not t.health.dead then
+								new_damage_queue[#new_damage_queue + 1] = E.assign_damage(h.constant_spiked_armor.damage_type, h.constant_spiked_armor.value, e.id, t.id)
+							end
+						end
+					end
+
+					-- 处理击杀
+					if starting_hp > 0 and h.hp <= 0 then
+						signal.emit("entity-killed", e, d)
+
+						if d.track_kills then
+							local source = entities[d.source_id]
+
+							if source and source.track_kills then
+								source.track_kills.killed[#source.track_kills.killed + 1] = e.id
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+	for i = damage_queue_len + 1, #damage_queue do
+		new_damage_queue[#new_damage_queue + 1] = damage_queue[i]
+	end
+
+	store.damage_queue_swapper = damage_queue
+	store.damage_queue = new_damage_queue
+
+	local soldiers = store.soldiers
+
+	for _, e in pairs(soldiers) do
+		local h = e.health
+
+		if h.hp <= 0 and not h.dead and not h.ignore_damage then
+			h.hp = 0
+			h.dead = true
+			h.death_ts = ts
+
+			if e.render then
+				h.fading_after = ts + h.dead_lifetime - 0.4
+			else
+				h.delete_after = ts + h.dead_lifetime
+			end
+
+			if e.health_bar then
+				e.health_bar.hidden = true
+			end
+		end
+
+		if not h.dead then
+			h.last_damage_types = 0
+		elseif not e.hero and not h.ignore_delete_after then
+			if h.fading_after and ts > h.fading_after then
+				local progress = (ts - h.fading_after) / 0.4
+
+				if progress >= 1.0 then
+					simulation:queue_remove_entity(e)
+				else
+					local sprites = e.render.sprites
+					if not h._fade_init_alphas then
+						h._fade_init_alphas = {}
+						for i = 1, #sprites do
+							h._fade_init_alphas[i] = sprites[i].alpha
+						end
+					end
+					for i = 1, #sprites do
+						sprites[i].alpha = h._fade_init_alphas[i] * (1 - progress)
+					end
+				end
+			elseif h.delete_after and ts > h.delete_after then
+				simulation:queue_remove_entity(e)
+			end
+		end
+	end
+
+	perf.stop("health")
+end
+
+-- 供其他模块复用伤害数字的伤害类型 -> 颜色映射（单一数据源）
+health.damage_color_index = dnum_color_index
+health.damage_color_palette = num_palette
+
+return health

@@ -3151,7 +3151,6 @@ function scripts.twister.update(this, store)
 	bolt.pos = V.vclone(this.pos)
 	bolt.bullet.from.x, bolt.bullet.from.y = bolt.pos.x, bolt.pos.y
 	bolt.bullet.target_id = nil
-	bolt._damage_source_id = this._damage_source_id
 	bolt.bullet.store = true
 	bolt.bullet.to.x, bolt.bullet.to.y = bolt.pos.x, bolt.pos.y
 	if this.blast_chance then
@@ -3159,7 +3158,6 @@ function scripts.twister.update(this, store)
 			local blast = E:create_entity("bolt_blast")
 			blast.bullet.damage_factor = this.aura.damage_factor
 			blast.bullet.level = this.blast_level
-			blast._damage_source_id = this._damage_source_id
 			bolt.bullet.payload = blast
 		end
 	end
@@ -5893,12 +5891,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 		end
 
 		if store.tick_ts - ray_ts > this.ray_cooldown then
-			local damage = E.create_damage()
-
-			damage.value = this.damage
-			damage.damage_type = DAMAGE_TRUE
-			damage.target_id = target.id
-
+			local damage = E.assign_damage(DAMAGE_TRUE, this.damage, this.id, target.id)
 			queue_damage(store, damage)
 
 			local dhp = last_hp - target.health.hp
@@ -7838,7 +7831,6 @@ function scripts.projecticle_big_guy_tower_demon_pit.update(this, store)
 
 		hp.pos.x, hp.pos.y = b.to.x, b.to.y
 		hp.level = b.level
-		hp._damage_source_id = this._damage_source_id
 
 		if hp.aura then
 			hp.aura.level = this.bullet.level
@@ -8727,7 +8719,6 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 				end
 
 				s.unit.damage_factor = s.unit.damage_factor * m.damage_factor
-				s._damage_source_id = this._damage_source_id
 
 				simulation:queue_insert_entity(s)
 			end
@@ -8738,7 +8729,6 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 			bullet.pos.x = target.pos.x
 			bullet.pos.y = target.pos.y
 			bullet.source_id = this.id
-			bullet._damage_source_id = this._damage_source_id
 			b.from = vclone(bullet.pos)
 			b.to = vclone(bullet.pos)
 			b.damage_factor = m.damage_factor
@@ -19518,7 +19508,6 @@ function scripts.tower_ghost.soldier_update(this, store)
 
 				soul.level = this.powers.soul_attack.level
 				soul.pos = V.vclone(this.pos)
-				soul._damage_source_id = this._damage_source_id
 
 				simulation:queue_insert_entity(soul)
 			end
@@ -19593,7 +19582,6 @@ function scripts.tower_ghost.soul_update(this, store)
 		b.bullet.from = V.vclone(b.pos)
 		b.bullet.to = V.v(enemy.pos.x, enemy.pos.y)
 		b.bullet.target_id = enemy.id
-		b._damage_source_id = this._damage_source_id
 		b.bullet.damage_min = this.damage_min[level]
 		b.bullet.damage_max = this.damage_max[level]
 
@@ -24559,7 +24547,6 @@ function scripts.tower_bone_flingers.update(this, store)
 		e.nav_path.ni = ni
 		e.nav_rally.center.x, e.nav_rally.center.y = e_pos.x, e_pos.y
 		e.nav_rally.pos.x, e.nav_rally.pos.y = e_pos.x, e_pos.y
-		e._damage_source_id = this.id
 		SU.soldier_inherit_tower_buff_factor(e, this, store.tick_ts)
 
 		simulation:queue_insert_entity(e)
@@ -25769,7 +25756,6 @@ function scripts.missile_rr.remove(this, store)
 				fragment.bullet.speed:set(speed_amount * math.cos(fragment_angle), speed_amount * math.sin(fragment_angle))
 				fragment.pos:copy(start_pos)
 				fragment.render.sprites[1].name = fragment.render.sprites[1].name .. math.random(1, 2)
-				fragment._damage_source_id = this._damage_source_id
 				if i ~= 0 then
 					-- 只有第一个碎片有爆炸音效，避免炸音
 					fragment.sound_events.hit = nil
@@ -27299,7 +27285,6 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				SU.soldier_inherit_tower_buff_factor(unit, tower, store.tick_ts)
 				unit.dodge.chance = this.dodge.chance
 				unit._espectral_tower_ref = tower
-				unit._damage_source_id = this._damage_source_id
 				simulation:queue_insert_entity(unit)
 				this.render.sprites[1].hidden = true
 				this.render.sprites[2].hidden = true
@@ -30296,7 +30281,6 @@ function scripts.tower_sandworm.update(this, store)
 				end
 
 				SU.soldier_inherit_tower_buff_factor(e, this, store.tick_ts)
-				e._damage_source_id = this.id
 				simulation:queue_insert_entity(e)
 			end
 

@@ -1,127 +1,124 @@
-local M = {}
+local mod_lifecycle = {}
 
-function M.register(sys)
-	local table_contains = table.arraycontains
+local table_contains = table.arraycontains
 
-	sys.mod_lifecycle = {}
-	sys.mod_lifecycle.name = "mod_lifecycle"
+mod_lifecycle.name = "mod_lifecycle"
 
-	function sys.mod_lifecycle:on_insert(entity, store)
-		local mdf = entity.modifier
+function mod_lifecycle:on_insert(entity, store)
+	local mdf = entity.modifier
 
-		if not mdf then
-			return true
-		end
+	if not mdf then
+		return true
+	end
 
-		local this = entity
-		local target_id = mdf.target_id
-		local target = store.entities[target_id]
+	local this = entity
+	local target_id = mdf.target_id
+	local target = store.entities[target_id]
 
-		if not target then
+	if not target then
+		return false
+	end
+
+	if not target._applied_mods then
+		target._applied_mods = {}
+	end
+
+	local modifiers = target._applied_mods
+
+	for i = 1, #modifiers do
+		local m = modifiers[i].modifier
+
+		if m.bans and table_contains(m.bans, this.template_name) then
 			return false
 		end
+	end
 
-		if not target._applied_mods then
-			target._applied_mods = {}
-		end
-
-		local modifiers = target._applied_mods
-
-		for i = 1, #modifiers do
-			local m = modifiers[i].modifier
-
-			if m.bans and table_contains(m.bans, this.template_name) then
-				return false
-			end
-		end
-
-		if mdf.remove_banned then
-			for i = 1, #modifiers do
-				local m = modifiers[i]
-				local mm = m.modifier
-
-				if mdf.bans and table_contains(mdf.bans, m.template_name) then
-					mm.removed_by_ban = true
-					simulation:queue_remove_entity(m)
-				end
-
-				if mdf.ban_types and table_contains(mdf.ban_types, mm.type) then
-					mm.removed_by_ban = true
-					simulation:queue_remove_entity(m)
-				end
-			end
-		end
-
-		mdf.ts = store.tick_ts
-
-		if this.render then
-			for i = 1, #this.render.sprites do
-				this.render.sprites[i].ts = store.tick_ts
-			end
-		end
-
-		local duplicates = {}
-
+	if mdf.remove_banned then
 		for i = 1, #modifiers do
 			local m = modifiers[i]
+			local mm = m.modifier
 
-			if m.template_name == this.template_name then
-				if mdf.level == m.modifier.level then
-					if mdf.max_duplicates then
-						mdf.max_duplicates = mdf.max_duplicates - 1
-						duplicates[#duplicates + 1] = m
+			if mdf.bans and table_contains(mdf.bans, m.template_name) then
+				mm.removed_by_ban = true
+				simulation:queue_remove_entity(m)
+			end
 
-						if mdf.max_duplicates < 0 then
-							return false
-						end
-					elseif mdf.allows_duplicates then
-						duplicates[#duplicates + 1] = m
-						break
-					elseif mdf.resets_same then
-						m.modifier.ts = store.tick_ts
-						if mdf.resets_same_tween and m.tween then
-							m.tween.ts = store.tick_ts - (mdf.resets_same_tween_offset or 0)
-						end
-						return false
-					else
+			if mdf.ban_types and table_contains(mdf.ban_types, mm.type) then
+				mm.removed_by_ban = true
+				simulation:queue_remove_entity(m)
+			end
+		end
+	end
+
+	mdf.ts = store.tick_ts
+
+	if this.render then
+		for i = 1, #this.render.sprites do
+			this.render.sprites[i].ts = store.tick_ts
+		end
+	end
+
+	local duplicates = {}
+
+	for i = 1, #modifiers do
+		local m = modifiers[i]
+
+		if m.template_name == this.template_name then
+			if mdf.level == m.modifier.level then
+				if mdf.max_duplicates then
+					mdf.max_duplicates = mdf.max_duplicates - 1
+					duplicates[#duplicates + 1] = m
+
+					if mdf.max_duplicates < 0 then
 						return false
 					end
-				elseif mdf.level > m.modifier.level and mdf.replaces_lower then
-					if m.render then
-						for i = 1, #this.render.sprites do
-							this.render.sprites[i].ts = m.render.sprites[i].ts
-						end
+				elseif mdf.allows_duplicates then
+					duplicates[#duplicates + 1] = m
+					break
+				elseif mdf.resets_same then
+					m.modifier.ts = store.tick_ts
+					if mdf.resets_same_tween and m.tween then
+						m.tween.ts = store.tick_ts - (mdf.resets_same_tween_offset or 0)
 					end
-
-					simulation:queue_remove_entity(m)
+					return false
 				else
 					return false
 				end
-			end
-		end
-
-		if #duplicates > 0 then
-			for _, d in ipairs(duplicates) do
-				if d.dps then
-					d.dps.fx = nil
-				end
-
-				if d.render then
-					for i = 1, #d.render.sprites do
-						d.render.sprites[i].hidden = true
-						d.render.sprites[i].marked_to_remove = true
+			elseif mdf.level > m.modifier.level and mdf.replaces_lower then
+				if m.render then
+					for i = 1, #this.render.sprites do
+						this.render.sprites[i].ts = m.render.sprites[i].ts
 					end
 				end
+
+				simulation:queue_remove_entity(m)
+			else
+				return false
 			end
-			if this.render then
-				for i = 1, #this.render.sprites do
-					this.render.sprites[i].ts = duplicates[1].render.sprites[1].ts
+		end
+	end
+
+	if #duplicates > 0 then
+		for _, d in ipairs(duplicates) do
+			if d.dps then
+				d.dps.fx = nil
+			end
+
+			if d.render then
+				for i = 1, #d.render.sprites do
+					d.render.sprites[i].hidden = true
+					d.render.sprites[i].marked_to_remove = true
 				end
 			end
 		end
-
-		return true
+		if this.render then
+			for i = 1, #this.render.sprites do
+				this.render.sprites[i].ts = duplicates[1].render.sprites[1].ts
+			end
+		end
 	end
+
+	return true
 end
 
-return M
+return mod_lifecycle
