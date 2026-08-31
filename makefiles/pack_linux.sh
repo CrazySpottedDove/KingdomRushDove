@@ -28,6 +28,10 @@ for arg in "$@"; do
     esac
 done
 
+# 打包新版本前，删除 .versions 下旧版本的 Linux 包，保留当前版本
+source makefiles/cleanup_old_versions.sh
+cleanup_old_packages "$current_id" ".versions/王国保卫战Dove版-v*Linux电脑端*.zip"
+
 # 依赖检查
 if ! command -v 7z >/dev/null 2>&1; then
     echo "ERROR: 7z not found" >&2

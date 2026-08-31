@@ -87,6 +87,12 @@ else
     AUDIO_CACHE_DIR=".versions/.android_audio_cache"
 fi
 
+# 打包新版本前，删除 .versions 下旧版本的安卓包（含高配/低配），保留当前版本
+source makefiles/cleanup_old_versions.sh
+cleanup_old_packages "$current_id" \
+    ".versions/王国保卫战Dove版-v*安卓手机端*.zip" \
+    ".versions/王国保卫战Dove版-v*安卓手机端*.apk"
+
 AUDIO_Q_SFX="${AUDIO_Q_SFX:-3}"
 AUDIO_Q_BGM="${AUDIO_Q_BGM:-5}"
 AUDIO_BGM_MIN_DURATION="${AUDIO_BGM_MIN_DURATION:-25}"
