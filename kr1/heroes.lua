@@ -22298,7 +22298,7 @@ tt.timed_attacks.list[3].spawn_time = fts(10)
 tt.timed_attacks.list[3].vis_flags = F_RANGED
 tt.timed_attacks.list[3].vis_bans = F_FLYING
 tt.timed_attacks.list[3].min_range = 0
-tt.timed_attacks.list[3].max_range = 100
+tt.timed_attacks.list[3].max_range = 70
 
 -- 被动 碾压
 tt = RT("controller_overwhelm_tank")
