@@ -44258,12 +44258,12 @@ function scripts.hero_tank.update(this, store)
 				a.ts = a.ts + 0.1
 			else
 				local target = target_info[1].enemy
-				SU.hero_gain_xp_from_skill(this, skill)
 
 				S:queue(a.sound_pre)
 				if not SU.y_soldier_do_single_area_attack(store, this, target, a) then
 					goto label_tank_attack_end
 				end
+				SU.hero_gain_xp_from_skill(this, skill)
 			end
 		end
 
