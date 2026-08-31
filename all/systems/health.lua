@@ -442,59 +442,84 @@ local function hnum_init(store)
 end
 
 local damage_trace_table = {}
+local damage_trace_waves = {}
 
 local damage_trace
+
+local function damage_trace_name(e)
+	return e.info and e.info.i18n_key and _(e.info.i18n_key .. "_NAME") or _(string.upper(e.template_name) .. "_NAME")
+end
+
+local function damage_trace_add(bucket, entity, sub_key, damage_type, value)
+	local template_name = entity.template_name
+	local entry = bucket[template_name]
+
+	if not entry then
+		entry = {
+			name = damage_trace_name(entity),
+			applied_effective_damage = {},
+			received_total_damage = {}
+		}
+		bucket[template_name] = entry
+	end
+
+	local sub = entry[sub_key]
+
+	if not sub[damage_type] then
+		sub[damage_type] = 0
+	end
+
+	sub[damage_type] = sub[damage_type] + value
+end
+
+local function damage_trace_wave_bucket(wave)
+	local bucket = damage_trace_waves[wave]
+
+	if not bucket then
+		bucket = {}
+		damage_trace_waves[wave] = bucket
+	end
+
+	return bucket
+end
 
 local function damage_trace_disabled(store, d, e)
 end
 
 local function damage_trace_enabled(store, d, e)
+	local wave_bucket = damage_trace_wave_bucket(store.wave_group_number or 0)
+
 	if d.source_id then
 		local source = store.entities[d.source_id]
+
 		if source then
 			local root = store.root_entity_map[source.id] or source
-			if not damage_trace_table[root.template_name] then
-				damage_trace_table[root.template_name] = {
-					name = root.info and root.info.i18n_key and _(root.info.i18n_key .. "_NAME") or _(string.upper(root.template_name) .. "_NAME"),
-					applied_effective_damage = {},
-					received_total_damage = {}
-				}
-			end
-			local dt = damage_trace_table[root.template_name].applied_effective_damage
-			if not dt[d.damage_type] then
-				dt[d.damage_type] = 0
-			end
-			dt[d.damage_type] = dt[d.damage_type] + math.min(d.damage_applied, math.max(e.health.hp, 0))
+			local value = math.min(d.damage_applied, math.max(e.health.hp, 0))
+
+			damage_trace_add(damage_trace_table, root, "applied_effective_damage", d.damage_type, value)
+			damage_trace_add(wave_bucket, root, "applied_effective_damage", d.damage_type, value)
 		end
 	end
 
 	local damage_taken = 0
+
 	if e.health.hp > 0 then
 		damage_taken = (band(d.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 and d.damage_applied or d.value) * math.min(e.health.hp / d.damage_applied, 1)
 	end
 
-	if store.root_entity_map[e.id] then
-		e = store.root_entity_map[e.id]
-	end
-	if not damage_trace_table[e.template_name] then
-		damage_trace_table[e.template_name] = {
-			name = e.info and e.info.i18n_key and _(e.info.i18n_key .. "_NAME") or _(string.upper(e.template_name) .. "_NAME"),
-			applied_effective_damage = {},
-			received_total_damage = {}
-		}
-	end
-	local dt = damage_trace_table[e.template_name].received_total_damage
-	if not dt[d.damage_type] then
-		dt[d.damage_type] = 0
-	end
-	dt[d.damage_type] = dt[d.damage_type] + damage_taken
+	local root_target = store.root_entity_map[e.id] or e
+
+	damage_trace_add(damage_trace_table, root_target, "received_total_damage", d.damage_type, damage_taken)
+	damage_trace_add(wave_bucket, root_target, "received_total_damage", d.damage_type, damage_taken)
 end
 
 local function damage_trace_init(store)
 	if configer.ui_settings().damage_trace_enabled then
 		damage_trace = damage_trace_enabled
 		damage_trace_table = {}
+		damage_trace_waves = {}
 		store.damage_trace_table = damage_trace_table
+		store.damage_trace_waves = damage_trace_waves
 		-- 记录实体 id -> 实体的根实体的映射关系
 		store.root_entity_map = {}
 
@@ -519,7 +544,9 @@ local function damage_trace_init(store)
 	else
 		damage_trace = damage_trace_disabled
 		damage_trace_table = nil
+		damage_trace_waves = nil
 		store.damage_trace_table = nil
+		store.damage_trace_waves = nil
 		store.root_entity_map = nil
 		health.on_queue_unconditional = nil
 		health.on_remove_unconditional = nil

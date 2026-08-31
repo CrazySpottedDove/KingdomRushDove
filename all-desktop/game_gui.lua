@@ -4303,6 +4303,594 @@ local function damage_trace_segment_info(damage_type)
 	return table.concat(names, "+"), color
 end
 
+-- ============================================================
+-- 图表共用：实体模板 -> 颜色（饼图/折线图同色，跨波次稳定）
+-- ============================================================
+local damage_trace_entity_palette = {
+	{0.92, 0.30, 0.28}, -- 红
+	{0.28, 0.55, 0.95}, -- 蓝
+	{0.30, 0.78, 0.40}, -- 绿
+	{0.96, 0.66, 0.15}, -- 橙
+	{0.72, 0.42, 0.92}, -- 紫
+	{0.20, 0.78, 0.78}, -- 青
+	{0.92, 0.52, 0.76}, -- 粉
+	{0.62, 0.62, 0.28}, -- 橄榄
+	{0.92, 0.84, 0.30}, -- 黄
+	{0.45, 0.72, 0.95}, -- 浅蓝
+	{0.85, 0.44, 0.34}, -- 砖红
+	{0.52, 0.74, 0.52} -- 灰绿
+}
+local damage_trace_entity_color_map = {}
+local damage_trace_entity_color_count = 0
+
+local function damage_trace_entity_color(template_name)
+	local c = damage_trace_entity_color_map[template_name]
+
+	if not c then
+		damage_trace_entity_color_count = damage_trace_entity_color_count + 1
+		c = damage_trace_entity_palette[((damage_trace_entity_color_count - 1) % #damage_trace_entity_palette) + 1]
+		damage_trace_entity_color_map[template_name] = c
+	end
+
+	return c
+end
+
+local damage_trace_other_color = {0.50, 0.50, 0.50}
+
+local function damage_trace_category(template_name)
+	local t = E:get_template(template_name)
+
+	if t then
+		if t.tower then
+			return 1
+		elseif t.soldier then
+			return 2
+		elseif t.enemy then
+			return 3
+		end
+	end
+
+	return 4
+end
+
+local function damage_trace_num_fmt(v)
+	if v >= 100000000 then
+		return string.format("%.2f亿", v / 100000000)
+	elseif v >= 10000 then
+		return string.format("%.1f万", v / 10000)
+	elseif v >= 100 then
+		return string.format("%.0f", v)
+	end
+
+	return string.format("%.1f", v)
+end
+
+-- 自绘紧凑按钮（参考 plugin_manager_components 的 PluginActionButton 写法）
+DamageTraceTabButton = class("DamageTraceTabButton", KButtonNoText)
+
+function DamageTraceTabButton:initialize(text, size)
+	local w = size and size.x or 84
+	local h = size and size.y or 30
+
+	KButtonNoText.initialize(self, V.v(w, h))
+
+	self.text = text
+	self.selected = false
+	self._hover = false
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, w, h, 8, 8}
+	}
+	self._label = GGLabel:new(self.size)
+	self._label.font_name = "body_bold"
+	self._label.font_size = 13
+	self._label.text_align = "center"
+	self._label.vertical_align = "middle"
+	self._label.fit_lines = 1
+	self._label.propagate_on_click = true
+	self:add_child(self._label)
+	self:_refresh()
+end
+
+function DamageTraceTabButton:set_selected(v)
+	self.selected = v ~= false
+	self:_refresh()
+end
+
+function DamageTraceTabButton:_refresh()
+	if self.selected then
+		self.colors.background = {161, 122, 45, 245}
+		self._label.colors.text = {255, 240, 190, 255}
+	elseif self._hover then
+		self.colors.background = {150, 112, 40, 220}
+		self._label.colors.text = {250, 234, 190, 255}
+	else
+		self.colors.background = {134, 101, 36, 200}
+		self._label.colors.text = {236, 220, 175, 255}
+	end
+
+	self._label.text = self.text
+end
+
+function DamageTraceTabButton:on_enter()
+	self._hover = true
+	self:_refresh()
+end
+
+function DamageTraceTabButton:on_exit()
+	self._hover = false
+	self:_refresh()
+end
+
+function DamageTraceTabButton:on_click()
+	S:queue("GUIButtonCommon")
+
+	if self.on_press then
+		self:on_press()
+	end
+end
+
+-- 波次选择条：水平轴 + 可拖动手柄（点击/拖动跳转到对应波次）
+DamageTraceWaveAxis = class("DamageTraceWaveAxis", KView)
+
+function DamageTraceWaveAxis:initialize(size)
+	KView.initialize(self, size)
+
+	self.wave = 1
+	self.wave_max = 1
+	self.on_wave_change = nil
+	self.dragging = false
+	self.touch_id = nil
+	self.pad = 14
+end
+
+function DamageTraceWaveAxis:set_wave_max(wave_max)
+	self.wave_max = math.max(1, wave_max or 1)
+
+	if self.wave > self.wave_max then
+		self.wave = self.wave_max
+	end
+end
+
+function DamageTraceWaveAxis:set_wave(wave)
+	wave = km.clamp(1, self.wave_max, math.floor(wave + 0.5))
+
+	if wave ~= self.wave then
+		self.wave = wave
+
+		if self.on_wave_change then
+			self.on_wave_change(wave)
+		end
+	end
+end
+
+function DamageTraceWaveAxis:wave_to_x(wave)
+	if self.wave_max <= 1 then
+		return self.size.x * 0.5
+	end
+
+	return self.pad + (wave - 1) / (self.wave_max - 1) * (self.size.x - 2 * self.pad)
+end
+
+function DamageTraceWaveAxis:x_to_wave(x)
+	if self.wave_max <= 1 then
+		return 1
+	end
+
+	local t = km.clamp(0, 1, (x - self.pad) / (self.size.x - 2 * self.pad))
+
+	return 1 + t * (self.wave_max - 1)
+end
+
+function DamageTraceWaveAxis:set_wave_from_x(x)
+	self:set_wave(self:x_to_wave(x))
+end
+
+function DamageTraceWaveAxis:on_down(button, x, y)
+	self.dragging = true
+	self:set_wave_from_x(x)
+end
+
+function DamageTraceWaveAxis:on_up(button, x, y)
+	self.dragging = false
+end
+
+function DamageTraceWaveAxis:on_touch_down(id, x, y)
+	self.dragging = true
+	self.touch_id = id
+	self:set_wave_from_x(x)
+end
+
+function DamageTraceWaveAxis:on_touch_move(id, x, y)
+	if self.dragging and self.touch_id == id then
+		self:set_wave_from_x(x)
+	end
+end
+
+function DamageTraceWaveAxis:on_touch_up(id)
+	if self.touch_id == id then
+		self.dragging = false
+		self.touch_id = nil
+	end
+end
+
+function DamageTraceWaveAxis:update(dt)
+	-- 鼠标拖拽：依赖轮询（KWindow 只会为 drag_view 持续派发移动）
+	if self.dragging and not self.touch_id then
+		local wx, wy, down = self:get_window():get_mouse_position()
+
+		if not down then
+			self.dragging = false
+		else
+			local vx, _ = self:screen_to_view(wx, wy)
+			self:set_wave_from_x(vx)
+		end
+	end
+end
+
+function DamageTraceWaveAxis:_draw_self()
+	KView._draw_self(self)
+
+	local pr, pg, pb, pa = G.getColor()
+	local w = self.size.x
+	local y = self.size.y * 0.5
+
+	-- 轴线
+	G.setColor(1, 1, 1, 0.25 * pa)
+	G.setLineWidth(2)
+	G.line(self.pad, y, w - self.pad, y)
+
+	-- 刻度（自适应疏密）
+	local font = F:f("body", 11)
+
+	G.setFont(font)
+	G.setColor(1, 1, 1, 0.5 * pa)
+	local steps = math.min(self.wave_max, 8)
+	local step = math.max(1, math.floor(self.wave_max / steps))
+
+	for wave = 1, self.wave_max, step do
+		local x = self:wave_to_x(wave)
+
+		G.line(x, y - 4, x, y + 4)
+
+		local tw = font:getWidth(tostring(wave))
+
+		G.print(tostring(wave), x - tw * 0.5, y + 8)
+	end
+
+	-- 当前波标记
+	local cx = self:wave_to_x(self.wave_max)
+
+	G.setColor(1, 0.85, 0.4, 0.9 * pa)
+	G.setLineWidth(1)
+	G.line(cx, y - 7, cx, y + 7)
+
+	-- 手柄
+	local hx = self:wave_to_x(self.wave)
+	local hw = 14
+
+	G.setColor(0.95, 0.75, 0.3, pa)
+	G.rectangle("fill", hx - hw * 0.5, y - 12, hw, 24, 4, 4)
+	G.setColor(0.35, 0.28, 0.12, pa)
+	G.rectangle("line", hx - hw * 0.5, y - 12, hw, 24, 4, 4)
+	G.setLineWidth(1)
+	G.setColor(pr, pg, pb, pa)
+end
+
+-- 饼图（纯绘制，数据由外部刷新）
+DamageTracePieChart = class("DamageTracePieChart", KView)
+
+function DamageTracePieChart:initialize(size)
+	KView.initialize(self, size)
+
+	self.items = {}
+	self.total = 0
+end
+
+function DamageTracePieChart:_draw_self()
+	KView._draw_self(self)
+
+	if #self.items == 0 or self.total <= 0 then
+		return
+	end
+
+	local pr, pg, pb, pa = G.getColor()
+	local cx, cy = self.size.x * 0.5, self.size.y * 0.5
+	local r = math.min(self.size.x, self.size.y) * 0.42
+	local start = -math.pi * 0.5
+
+	-- 背景圆
+	G.setColor(0, 0, 0, 0.35 * pa)
+	G.circle("fill", cx, cy, r, 40)
+
+	-- 切片
+	for _, item in ipairs(self.items) do
+		local sweep = item.value / self.total * 2 * math.pi
+		local c = item.color
+
+		G.setColor(c[1], c[2], c[3], pa)
+		G.arc("fill", cx, cy, r, start, start + sweep, 24)
+		start = start + sweep
+	end
+
+	-- 切片分隔线 + 描边
+	G.setColor(0, 0, 0, 0.45 * pa)
+	G.setLineWidth(1)
+	local a = -math.pi * 0.5
+
+	for _, item in ipairs(self.items) do
+		local sweep = item.value / self.total * 2 * math.pi
+
+		a = a + sweep
+		G.line(cx, cy, cx + r * math.cos(a), cy + r * math.sin(a))
+	end
+
+	G.setLineWidth(2)
+	G.circle("line", cx, cy, r, 40)
+	G.setLineWidth(1)
+	G.setColor(pr, pg, pb, pa)
+end
+
+-- 折线图（纯绘制）：X=波次，Y=对数刻度
+DamageTraceLineChart = class("DamageTraceLineChart", KView)
+
+function DamageTraceLineChart:initialize(size)
+	KView.initialize(self, size)
+
+	self.series = {}
+	self.wave_max = 1
+end
+
+function DamageTraceLineChart:wave_to_x(wave, x0, w)
+	if self.wave_max <= 1 then
+		return x0 + w * 0.5
+	end
+
+	return x0 + (wave - 1) / (self.wave_max - 1) * w
+end
+
+function DamageTraceLineChart:_draw_self()
+	KView._draw_self(self)
+
+	if #self.series == 0 then
+		return
+	end
+
+	local pr, pg, pb, pa = G.getColor()
+	local pad_l, pad_r, pad_t, pad_b = 52, 14, 12, 26
+	local plot_w = self.size.x - pad_l - pad_r
+	local plot_h = self.size.y - pad_t - pad_b
+
+	if plot_w <= 0 or plot_h <= 0 then
+		return
+	end
+
+	local plot_x0, plot_y0 = pad_l, pad_t
+	local plot_x1, plot_y1 = pad_l + plot_w, pad_t + plot_h
+
+	-- Y 范围（对数）：0 刻度占用底部一小段带，其上为 1/10/100…
+	local band = math.max(18, plot_h * 0.08)
+	local y1_pos = plot_y1 - band
+	local y_max_log = 1
+
+	for _, s in ipairs(self.series) do
+		for _, p in ipairs(s.points) do
+			if p.value >= 1 then
+				y_max_log = math.max(y_max_log, math.log(p.value) / math.log(10))
+			end
+		end
+	end
+
+	y_max_log = math.ceil(y_max_log)
+
+	local function y_for_value(v)
+		if v <= 0 then
+			return plot_y1
+		elseif v < 1 then
+			return plot_y1 - v * band
+		end
+
+		return y1_pos - (math.log(v) / math.log(10)) / y_max_log * (y1_pos - plot_y0)
+	end
+
+	-- 网格 + Y 刻度（0 与对数刻度，数值标签）
+	local grid_font = F:f("body", 11)
+
+	G.setFont(grid_font)
+
+	G.setColor(1, 1, 1, 0.35 * pa)
+	G.line(plot_x0, plot_y1, plot_x1, plot_y1)
+	local zero_label = "0"
+	local zw = grid_font:getWidth(zero_label)
+
+	G.setColor(0.75, 0.7, 0.6, pa)
+	G.print(zero_label, plot_x0 - zw - 6, plot_y1 - grid_font:getHeight() * 0.5)
+
+	for k = 0, y_max_log do
+		local gy = y1_pos - k / y_max_log * (y1_pos - plot_y0)
+
+		G.setColor(1, 1, 1, 0.13 * pa)
+		G.setLineWidth(1)
+		G.line(plot_x0, gy, plot_x1, gy)
+
+		local label = damage_trace_num_fmt(10 ^ k)
+		local tw = grid_font:getWidth(label)
+
+		G.setColor(0.75, 0.7, 0.6, pa)
+		G.print(label, plot_x0 - tw - 6, gy - grid_font:getHeight() * 0.5)
+	end
+
+	-- X 轴刻度（自适应疏密）
+	G.setColor(0.75, 0.7, 0.6, pa)
+	local x_step = 1
+
+	if self.wave_max > 8 then
+		x_step = math.ceil(self.wave_max / 8)
+	end
+
+	for wave = 1, self.wave_max, x_step do
+		local x = self:wave_to_x(wave, plot_x0, plot_w)
+		local tw = grid_font:getWidth(tostring(wave))
+
+		G.print(tostring(wave), x - tw * 0.5, plot_y1 + 6)
+	end
+
+	-- 折线：每个波次都有点（未造成伤害落 0 位），连续不断裂
+	for _, s in ipairs(self.series) do
+		local c = s.color
+
+		G.setColor(c[1], c[2], c[3], pa)
+		G.setLineWidth(2)
+		local seg = {}
+
+		for _, p in ipairs(s.points) do
+			local x = self:wave_to_x(p.wave, plot_x0, plot_w)
+			local y = y_for_value(p.value)
+
+			seg[#seg + 1] = x
+			seg[#seg + 1] = y
+		end
+
+		if #seg == 2 then
+			G.circle("fill", seg[1], seg[2], 3)
+		elseif #seg > 2 then
+			G.line(seg)
+		end
+	end
+
+	G.setLineWidth(1)
+	G.setColor(pr, pg, pb, pa)
+end
+
+-- 饼图图例行（名称靠左，数值/百分比左右分列靠右）
+DamageTraceLegendRow = class("DamageTraceLegendRow", KView)
+
+function DamageTraceLegendRow:initialize(item, width, total)
+	KView.initialize(self, V.v(width, 40))
+
+	self.item = item
+	self.total = total
+	self.colors.background = {62, 48, 22, 180}
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, width, 38, 6, 6, 6}
+	}
+	self.propagate_on_down = true
+	self.propagate_on_up = true
+	self.propagate_on_click = true
+
+	if item.template_name then
+		local t = E:get_template(item.template_name)
+		local portrait = t and t.info and t.info.portrait
+
+		if portrait then
+			local icon = KImageView:new(portrait)
+
+			icon.scale = V.v(0.25, 0.25)
+
+			local ih = icon.size.y * icon.scale.y
+
+			icon.pos = V.v(30, (38 - ih) * 0.5)
+			self:add_child(icon)
+		end
+	end
+
+	local name = GGLabel:new(V.v(width - 64 - 140, 38))
+
+	name.pos = V.v(64, 0)
+	name.font_name = "body_bold"
+	name.font_size = 14
+	name.text_align = "left"
+	name.vertical_align = "middle"
+	name.colors.text = {240, 228, 200, 255}
+	name.text = item.name
+	self:add_child(name)
+
+	-- 数值与百分比左右分列
+	local pct_w = 70
+	local value_w = 70
+	local padding = 6
+	local pct = total > 0 and string.format("%.1f%%", item.value / total * 100) or ""
+
+	local value = GGLabel:new(V.v(value_w, 38))
+
+	value.pos = V.v(width - value_w - pct_w - 2 * padding, 0)
+	value.font_name = "body_bold"
+	value.font_size = 13
+	value.text_align = "right"
+	value.vertical_align = "middle"
+	value.colors.text = {232, 214, 166, 255}
+	value.text = damage_trace_num_fmt(item.value)
+	self:add_child(value)
+
+	local pct_lbl = GGLabel:new(V.v(pct_w, 38))
+
+	pct_lbl.pos = V.v(width - pct_w - padding, 0)
+	pct_lbl.font_name = "body_bold"
+	pct_lbl.font_size = 13
+	pct_lbl.text_align = "right"
+	pct_lbl.vertical_align = "middle"
+	pct_lbl.colors.text = {200, 185, 150, 255}
+	pct_lbl.text = pct
+	self:add_child(pct_lbl)
+end
+
+function DamageTraceLegendRow:_draw_self()
+	KView._draw_self(self)
+
+	local pr, pg, pb, pa = G.getColor()
+	local c = self.item.color
+
+	G.setColor(c[1], c[2], c[3], pa)
+	G.rectangle("fill", 8, 11, 16, 16, 3, 3)
+	G.setColor(pr, pg, pb, pa)
+end
+
+-- 折线图图例项（横向换行排列）
+DamageTraceLineLegendItem = class("DamageTraceLineLegendItem", KView)
+
+function DamageTraceLineLegendItem:initialize(s, w, h)
+	KView.initialize(self, V.v(w, h))
+
+	self.s = s
+
+	local t = E:get_template(s.template_name)
+	local portrait = t and t.info and t.info.portrait
+
+	if portrait then
+		local icon = KImageView:new(portrait)
+
+		icon.scale = V.v(0.25, 0.25)
+
+		local ih = icon.size.y * icon.scale.y
+
+		icon.pos = V.v(16, (h - ih) * 0.5)
+		self:add_child(icon)
+	end
+
+	local name = GGLabel:new(V.v(w - 46, h))
+
+	name.pos = V.v(46, 0)
+	name.font_name = "body"
+	name.font_size = 12
+	name.text_align = "left"
+	name.vertical_align = "middle"
+	name.colors.text = {230, 220, 195, 255}
+	name.text = s.name
+	self:add_child(name)
+end
+
+function DamageTraceLineLegendItem:_draw_self()
+	KView._draw_self(self)
+
+	local pr, pg, pb, pa = G.getColor()
+	local c = self.s.color
+
+	G.setColor(c[1], c[2], c[3], pa)
+	G.rectangle("fill", 3, (self.size.y - 10) * 0.5, 10, 10, 2, 2)
+	G.setColor(pr, pg, pb, pa)
+end
+
 DamageTraceItemView = class("DamageTraceItemView", KView)
 
 DamageTraceItemView.height = 88
@@ -4507,6 +5095,15 @@ function DamageTraceView:initialize(sw, sh)
 
 	self.pos = v(0, 0)
 	self.tab_idx = 1
+	self.mode_idx = 1
+	self.view_idx = 1
+	-- 图表共享分类多选：默认只选中防御塔(1)和士兵(2)
+	self.chart_cats = {
+		[1] = true,
+		[2] = true,
+		[3] = false,
+		[4] = false
+	}
 
 	-- 面板尺寸：相对屏幕留边，保证大屏/安卓都能容纳内容
 	local pw = math.min(sw - 100, 1000)
@@ -4536,6 +5133,18 @@ function DamageTraceView:initialize(sw, sh)
 	self.back = back
 	self:add_child(back)
 
+	-- 布局基准（相对面板的边距与行高，紧凑按钮行）
+	local margin = 30
+	local body_x = margin
+	local body_w = pw - 2 * margin
+	local btn_h = 30
+	local mode_y = 64
+	local view_y = mode_y + btn_h + 6
+	local cats_y = view_y + btn_h + 6
+	local body_y = cats_y + btn_h + 6
+	local body_h = ph - body_y - 70
+	self.body_h = body_h
+
 	local header = GGPanelHeader:new(damage_trace_modes[1].name, 180)
 
 	header.pos = V.v(30, 14)
@@ -4543,18 +5152,16 @@ function DamageTraceView:initialize(sw, sh)
 	self.header = header
 
 	-- 模式切换：伤害追踪 / 承伤追踪
-	self.mode_idx = 1
 	self.mode_buttons = {}
 
 	for i, mode in ipairs(damage_trace_modes) do
-		local b = GGOptionsButton:new(mode.name)
+		local b = DamageTraceTabButton:new(mode.name, V.v(100, btn_h))
 
 		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
 
 		local idx = i
 
-		function b.on_click()
-			S:queue("GUIButtonCommon")
+		function b.on_press()
 			self:set_mode(idx)
 		end
 
@@ -4562,25 +5169,43 @@ function DamageTraceView:initialize(sw, sh)
 		self.mode_buttons[i] = b
 	end
 
-	local b_x = 30
-	local mode_gap = 10
-	local mode_y = 88
-
 	for i, b in ipairs(self.mode_buttons) do
-		b.pos = V.v(b_x + b.size.x * 0.5 + (i - 1) * (b.size.x + mode_gap), mode_y)
+		b.pos = V.v(body_x + b.size.x * 0.5 + (i - 1) * (b.size.x + 10), mode_y)
 	end
 
-	self.tab_buttons = {}
+	-- 视图切换：明细 / 饼图 / 折线图
+	self.view_buttons = {}
 
-	for i, label in ipairs({"防御塔", "士兵", "敌人", "其它"}) do
-		local b = GGOptionsButton:new(label)
+	for i, label in ipairs({"明细", "饼图", "折线图"}) do
+		local b = DamageTraceTabButton:new(label, V.v(76, btn_h))
 
 		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
 
 		local idx = i
 
-		function b.on_click()
-			S:queue("GUIButtonCommon")
+		function b.on_press()
+			self:set_view(idx)
+		end
+
+		back:add_child(b)
+		self.view_buttons[i] = b
+	end
+
+	for i, b in ipairs(self.view_buttons) do
+		b.pos = V.v(body_x + b.size.x * 0.5 + (i - 1) * (b.size.x + 10), view_y)
+	end
+
+	-- ============ 明细页：分类单选 + 提示 + 列表 ============
+	self.tab_buttons = {}
+
+	for i, label in ipairs({"防御塔", "士兵", "敌人", "其它"}) do
+		local b = DamageTraceTabButton:new(label, V.v(76, btn_h))
+
+		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
+
+		local idx = i
+
+		function b.on_press()
 			self:set_tab(idx)
 		end
 
@@ -4590,20 +5215,18 @@ function DamageTraceView:initialize(sw, sh)
 
 	local b0 = self.tab_buttons[1]
 	local tab_gap = 10
-	local bh = b0.size.y * 0.5
 	local tabs_w = #self.tab_buttons * b0.size.x + (#self.tab_buttons - 1) * tab_gap
-	local tabs_y = mode_y + bh + 6 + bh
 
 	for i, b in ipairs(self.tab_buttons) do
-		b.pos = V.v(b_x + b0.size.x * 0.5 + (i - 1) * (b0.size.x + tab_gap), tabs_y)
+		b.pos = V.v(body_x + b0.size.x * 0.5 + (i - 1) * (b0.size.x + tab_gap), cats_y)
 	end
 
 	-- 右侧提示：伤害/承伤说明，随模式切换、自适应换行
-	local tip_x = b_x + tabs_w + 20
-	local tip_w = pw - tip_x - 30
-	local tip = GGLabel:new(V.v(tip_w, tabs_y + bh - (mode_y - bh)))
+	local tip_x = body_x + tabs_w + 20
+	local tip_w = body_w - tabs_w - 20
+	local tip = GGLabel:new(V.v(tip_w, 36))
 
-	tip.pos = V.v(tip_x, mode_y - bh)
+	tip.pos = V.v(tip_x, cats_y - 18)
 	tip.font_name = "body"
 	tip.font_size = 14
 	tip.text_align = "left"
@@ -4614,13 +5237,10 @@ function DamageTraceView:initialize(sw, sh)
 	back:add_child(tip)
 	self.tip = tip
 
-	local list_x = 30
-	local list_y = tabs_y + bh + 6
-	local list_w = pw - 60
-	local list_h = ph - list_y - 78
-	local list = KScrollList:new(V.v(list_w, list_h))
+	local list_w = body_w
+	local list = KScrollList:new(V.v(list_w, body_h))
 
-	list.pos = V.v(list_x, list_y)
+	list.pos = V.v(body_x, body_y)
 	list.scroll_amount = 44
 	list.colors.scroller_background = {45, 36, 22, 200}
 	list.colors.scroller_foreground = {110, 90, 50, 255}
@@ -4632,7 +5252,7 @@ function DamageTraceView:initialize(sw, sh)
 
 	local l_empty = GGLabel:new(V.v(list_w, 30))
 
-	l_empty.pos = V.v(list_x, list_y + (list_h - 30) * 0.5)
+	l_empty.pos = V.v(body_x, body_y + (body_h - 30) * 0.5)
 	l_empty.font_name = "h"
 	l_empty.font_size = 18
 	l_empty.text_align = "center"
@@ -4642,6 +5262,138 @@ function DamageTraceView:initialize(sw, sh)
 	l_empty.hidden = true
 	back:add_child(l_empty)
 	self.l_empty = l_empty
+
+	-- ============ 图表分类多选（饼图/折线图共享） ============
+	self.chart_cat_buttons = {}
+
+	for i, label in ipairs({"防御塔", "士兵", "敌人", "其它"}) do
+		local b = DamageTraceTabButton:new(label, V.v(76, btn_h))
+
+		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
+
+		local idx = i
+
+		function b.on_press()
+			self:set_chart_cat(idx)
+		end
+
+		back:add_child(b)
+		self.chart_cat_buttons[i] = b
+	end
+
+	local cb0 = self.chart_cat_buttons[1]
+
+	for i, b in ipairs(self.chart_cat_buttons) do
+		b.pos = V.v(body_x + cb0.size.x * 0.5 + (i - 1) * (cb0.size.x + tab_gap), cats_y)
+		b:set_selected(self.chart_cats[i])
+	end
+
+	-- ============ 饼图页 ============
+	self.pie_page = KView:new(V.v(body_w, body_h))
+
+	self.pie_page.pos = V.v(body_x, body_y)
+	back:add_child(self.pie_page)
+
+	local axis = DamageTraceWaveAxis:new(V.v(body_w, 44))
+
+	axis.pos = V.v(0, 0)
+
+	function axis.on_wave_change(wave)
+		self:refresh_pie()
+	end
+
+	self.pie_page:add_child(axis)
+	self.wave_axis = axis
+
+	local wave_label = GGLabel:new(V.v(body_w, 22))
+
+	wave_label.pos = V.v(0, 46)
+	wave_label.font_name = "h"
+	wave_label.font_size = 15
+	wave_label.text_align = "center"
+	wave_label.vertical_align = "middle"
+	wave_label.colors.text = {240, 228, 200, 255}
+	self.pie_page:add_child(wave_label)
+	self.wave_total_label = wave_label
+
+	local chart_y = 70
+	local chart_h = body_h - chart_y
+	-- 宽面板并排 / 窄面板堆叠
+	local wide = body_w >= 620
+	local pie_side, legend_x, legend_w, legend_h
+
+	if wide then
+		pie_side = math.min(260, chart_h * 0.9)
+		legend_x = pie_side + 16
+		legend_w = body_w - legend_x
+		legend_h = chart_h
+	else
+		pie_side = math.min(body_w * 0.7, 240)
+		legend_x = 0
+		legend_w = body_w
+		legend_h = chart_h - pie_side - 10
+	end
+
+	local pie_chart = DamageTracePieChart:new(V.v(pie_side, pie_side))
+
+	pie_chart.pos = V.v(0, chart_y)
+	self.pie_page:add_child(pie_chart)
+	self.pie_chart = pie_chart
+
+	local pie_legend = KScrollList:new(V.v(legend_w, legend_h))
+
+	pie_legend.pos = V.v(legend_x, chart_y)
+	pie_legend.scroll_amount = 40
+	pie_legend.colors.scroller_background = {45, 36, 22, 200}
+	pie_legend.colors.scroller_foreground = {110, 90, 50, 255}
+	pie_legend:set_scroller_size(16, 4)
+	self.pie_page:add_child(pie_legend)
+	self.pie_legend = pie_legend
+	self.pie_legend_w = legend_w - 16 - 8
+
+	local pie_empty = GGLabel:new(V.v(body_w, 30))
+
+	pie_empty.pos = V.v(0, chart_y + (chart_h - 30) * 0.5)
+	pie_empty.font_name = "h"
+	pie_empty.font_size = 18
+	pie_empty.text_align = "center"
+	pie_empty.vertical_align = "middle"
+	pie_empty.colors.text = {200, 185, 150, 255}
+	pie_empty.text = "该波次暂无数据"
+	pie_empty.hidden = true
+	self.pie_page:add_child(pie_empty)
+	self.pie_empty = pie_empty
+
+	-- ============ 折线图页 ============
+	self.line_page = KView:new(V.v(body_w, body_h))
+
+	self.line_page.pos = V.v(body_x, body_y)
+	back:add_child(self.line_page)
+
+	local line_chart = DamageTraceLineChart:new(V.v(body_w, body_h - 90))
+
+	line_chart.pos = V.v(0, 0)
+	self.line_page:add_child(line_chart)
+	self.line_chart = line_chart
+
+	local line_legend = KView:new(V.v(body_w, 90))
+
+	line_legend.pos = V.v(0, body_h - 90)
+	self.line_page:add_child(line_legend)
+	self.line_legend = line_legend
+
+	local line_empty = GGLabel:new(V.v(body_w, 30))
+
+	line_empty.pos = V.v(0, (body_h - 30) * 0.5)
+	line_empty.font_name = "h"
+	line_empty.font_size = 18
+	line_empty.text_align = "center"
+	line_empty.vertical_align = "middle"
+	line_empty.colors.text = {200, 185, 150, 255}
+	line_empty.text = "暂无数据"
+	line_empty.hidden = true
+	self.line_page:add_child(line_empty)
+	self.line_empty = line_empty
 
 	local b_close = GGOptionsButton:new("关闭")
 
@@ -4655,18 +5407,53 @@ function DamageTraceView:initialize(sw, sh)
 
 	back:add_child(b_close)
 
+	self:set_view(1)
 	self:set_mode(1)
 	self:set_tab(1)
+end
+
+function DamageTraceView:set_view(idx)
+	self.view_idx = idx
+
+	for i, b in ipairs(self.view_buttons) do
+		b:set_selected(i == idx)
+	end
+
+	local detail = idx == 1
+
+	-- 明细页元素
+	for _, b in ipairs(self.tab_buttons) do
+		b.hidden = not detail
+	end
+
+	self.tip.hidden = not detail
+	self.list.hidden = not detail
+	-- 图表页元素
+	for _, b in ipairs(self.chart_cat_buttons) do
+		b.hidden = detail
+	end
+
+	self.pie_page.hidden = idx ~= 2
+	self.line_page.hidden = idx ~= 3
+
+	self:refresh()
+end
+
+function DamageTraceView:set_chart_cat(idx)
+	self.chart_cats[idx] = not self.chart_cats[idx]
+
+	for i, b in ipairs(self.chart_cat_buttons) do
+		b:set_selected(self.chart_cats[i])
+	end
+
+	self:refresh()
 end
 
 function DamageTraceView:set_tab(idx)
 	self.tab_idx = idx
 
 	for i, b in ipairs(self.tab_buttons) do
-		local image = i == idx and "options_button_bg_0002" or "options_button_bg_0001"
-
-		b.default_image_name = image
-		b:set_image(image)
+		b:set_selected(i == idx)
 	end
 
 	self:refresh()
@@ -4676,10 +5463,7 @@ function DamageTraceView:set_mode(idx)
 	self.mode_idx = idx
 
 	for i, b in ipairs(self.mode_buttons) do
-		local image = i == idx and "options_button_bg_0002" or "options_button_bg_0001"
-
-		b.default_image_name = image
-		b:set_image(image)
+		b:set_selected(i == idx)
 	end
 
 	local mode = damage_trace_modes[idx]
@@ -4694,50 +5478,52 @@ function DamageTraceView:set_mode(idx)
 end
 
 function DamageTraceView:refresh()
+	local store = game_gui.game.store
+	local wave_max = math.max(store.wave_group_number or 0, 1)
+
+	self.wave_max = wave_max
+	self.wave_axis:set_wave_max(wave_max)
+	self:refresh_detail()
+	self:refresh_pie()
+	self:refresh_line()
+end
+
+function DamageTraceView:refresh_detail()
 	local data = game_gui.game.store.damage_trace_table
 	local rows = {}
 	local data_key = damage_trace_modes[self.mode_idx].data_key
 	-- 按展示名聚合：同名条目合并数据后展示，不影响底层记录表
 	local merged = {}
 
-	for template_name, info in pairs(data) do
-		local t = E:get_template(template_name)
-		local category
+	if data then
+		for template_name, info in pairs(data) do
+			local category = damage_trace_category(template_name)
 
-		if t then
-			if t.tower then
-				category = 1
-			elseif t.soldier then
-				category = 2
-			elseif t.enemy then
-				category = 3
-			else
-				category = 4
-			end
-		end
+			if category == self.tab_idx then
+				local agg = merged[info.name]
 
-		if category == self.tab_idx then
-			local agg = merged[info.name]
+				if not agg then
+					agg = {
+						template_name = template_name,
+						data = {}
+					}
+					merged[info.name] = agg
+				end
 
-			if not agg then
-				agg = {
-					template_name = template_name,
-					data = {}
-				}
-				merged[info.name] = agg
-			end
-
-			for damage_type, value in pairs(info[data_key]) do
-				agg.data[damage_type] = (agg.data[damage_type] or 0) + value
+				for damage_type, value in pairs(info[data_key]) do
+					agg.data[damage_type] = (agg.data[damage_type] or 0) + value
+				end
 			end
 		end
 	end
 
 	for name, agg in pairs(merged) do
 		local count = 0
+
 		for _, value in pairs(agg.data) do
 			count = count + value
 		end
+
 		if count > 0 then
 			rows[#rows + 1] = DamageTraceItemView:new(agg.template_name, {
 				name = name,
@@ -4761,7 +5547,189 @@ function DamageTraceView:refresh()
 		self.list:add_row(row)
 	end
 
-	self.l_empty.hidden = #rows > 0
+	self.l_empty.hidden = not (self.view_idx == 1) or #rows > 0
+end
+
+local DAMAGE_TRACE_PIE_TOP_N = 12
+
+function DamageTraceView:refresh_pie()
+	local store = game_gui.game.store
+	local data_key = damage_trace_modes[self.mode_idx].data_key
+	local wave = self.wave_axis.wave
+	local bucket = store.damage_trace_waves and store.damage_trace_waves[wave]
+	local items = {}
+	local total = 0
+
+	if bucket then
+		for template_name, info in pairs(bucket) do
+			if self.chart_cats[damage_trace_category(template_name)] then
+				local value = 0
+
+				for _, v in pairs(info[data_key]) do
+					value = value + v
+				end
+
+				if value > 0 then
+					items[#items + 1] = {
+						template_name = template_name,
+						name = info.name,
+						value = value
+					}
+					total = total + value
+				end
+			end
+		end
+	end
+
+	table.sort(items, function(a, b)
+		return a.value > b.value
+	end)
+
+	-- Top N + 合并「其它」
+	local pie_items = {}
+	local other = 0
+
+	for i, item in ipairs(items) do
+		if i <= DAMAGE_TRACE_PIE_TOP_N then
+			pie_items[#pie_items + 1] = {
+				template_name = item.template_name,
+				name = item.name,
+				color = damage_trace_entity_color(item.template_name),
+				value = item.value
+			}
+		else
+			other = other + item.value
+		end
+	end
+
+	if other > 0 then
+		pie_items[#pie_items + 1] = {
+			template_name = nil,
+			name = "其它(" .. (#items - DAMAGE_TRACE_PIE_TOP_N) .. ")",
+			color = damage_trace_other_color,
+			value = other
+		}
+	end
+
+	self.pie_chart.items = pie_items
+	self.pie_chart.total = total
+
+	self.pie_legend:clear_rows()
+
+	for _, item in ipairs(pie_items) do
+		local row = DamageTraceLegendRow:new(item, self.pie_legend_w, total)
+
+		self.pie_legend:add_row(row)
+	end
+
+	self.pie_empty.hidden = total > 0
+	self.wave_total_label.text = "第 " .. wave .. " 波 · 总伤 " .. damage_trace_num_fmt(total)
+end
+
+function DamageTraceView:refresh_line()
+	local store = game_gui.game.store
+	local data_key = damage_trace_modes[self.mode_idx].data_key
+	local wave_max = self.wave_max
+	local series = {}
+
+	if store.damage_trace_waves then
+		for wave = 1, wave_max do
+			local bucket = store.damage_trace_waves[wave]
+
+			if bucket then
+				for template_name, info in pairs(bucket) do
+					if self.chart_cats[damage_trace_category(template_name)] then
+						local s = series[template_name]
+
+						if not s then
+							s = {
+								template_name = template_name,
+								name = info.name,
+								points = {},
+								total = 0
+							}
+							series[template_name] = s
+						end
+
+						local value = 0
+
+						for _, v in pairs(info[data_key]) do
+							value = value + v
+						end
+
+						if value > 0 then
+							s.points[wave] = value
+							s.total = s.total + value
+						end
+					end
+				end
+			end
+		end
+	end
+
+	local list = {}
+
+	for template_name, s in pairs(series) do
+		list[#list + 1] = s
+	end
+
+	table.sort(list, function(a, b)
+		if a.total ~= b.total then
+			return a.total > b.total
+		end
+
+		return a.template_name < b.template_name
+	end)
+
+	local shown = {}
+
+	for i = 1, math.min(DAMAGE_TRACE_PIE_TOP_N, #list) do
+		local s = list[i]
+		local pts = {}
+
+		for wave = 1, wave_max do
+			pts[#pts + 1] = {
+				wave = wave,
+				value = s.points[wave] or 0
+			}
+		end
+
+		shown[#shown + 1] = {
+			template_name = s.template_name,
+			name = s.name,
+			color = damage_trace_entity_color(s.template_name),
+			points = pts,
+			total = s.total
+		}
+	end
+
+	self.line_chart.series = shown
+	self.line_chart.wave_max = wave_max
+	self.line_empty.hidden = #shown > 0
+	self:rebuild_line_legend(shown)
+end
+
+function DamageTraceView:rebuild_line_legend(shown)
+	self.line_legend:remove_children()
+
+	local item_w, item_h = 150, 26
+	local per_row = math.max(1, math.floor(self.line_legend.size.x / item_w))
+	local rows = math.max(1, math.ceil(#shown / per_row))
+	local legend_h = rows * item_h + 10
+
+	-- 图例占高自适应，折线主体占剩余空间
+	self.line_legend.pos.y = self.body_h - legend_h
+	self.line_legend.size.y = legend_h
+	self.line_chart.size.y = self.body_h - legend_h
+
+	for i, s in ipairs(shown) do
+		local col = (i - 1) % per_row
+		local row = math.floor((i - 1) / per_row)
+		local item = DamageTraceLineLegendItem:new(s, item_w, item_h)
+
+		item.pos = V.v(col * item_w, row * item_h)
+		self.line_legend:add_child(item)
+	end
 end
 
 function DamageTraceView:show()
@@ -4769,6 +5737,12 @@ function DamageTraceView:show()
 		return
 	end
 
+	-- 打开面板时默认停在当前波次
+	local store = game_gui.game.store
+	local wave_max = math.max(store.wave_group_number or 0, 1)
+
+	self.wave_axis:set_wave_max(wave_max)
+	self.wave_axis:set_wave(wave_max)
 	self:refresh()
 	PopUpView.show(self)
 	-- 胜利/失败视图是在 init 之后才加入 layer_gui_top 的，会盖住本面板；显示时置顶
