@@ -51114,11 +51114,6 @@ return {
 		from = 474,
 		to = 475
 	},
-	hero_tank_downWalk = {
-		prefix = "hero_tank",
-		from = 14,
-		to = 19
-	},
 	hero_tank_dust_out = {
 		prefix = "hero_tank_dust",
 		from = 23,
@@ -51254,16 +51249,6 @@ return {
 		from = 1,
 		to = 6
 	},
-	hero_tank_moreDownWalk = {
-		prefix = "hero_tank",
-		from = 8,
-		to = 13
-	},
-	hero_tank_moreUpWalk = {
-		prefix = "hero_tank",
-		from = 32,
-		to = 37
-	},
 	hero_tank_respawn = {
 		prefix = "hero_tank",
 		from = 476,
@@ -51354,25 +51339,40 @@ return {
 		from = 1,
 		to = 13
 	},
-	hero_tank_upWalk = {
+	hero_tank_walk_30 = {
 		prefix = "hero_tank",
 		from = 26,
 		to = 31
 	},
-	hero_tank_walk = {
+	hero_tank_walk_0 = {
 		prefix = "hero_tank",
 		from = 20,
 		to = 25
 	},
-	hero_tank_walkDown = {
+	hero_tank_walk_270 = {
 		prefix = "hero_tank",
 		from = 2,
 		to = 7
 	},
-	hero_tank_walkUp = {
+	hero_tank_walk_330 = {
+		prefix = "hero_tank",
+		from = 14,
+		to = 19
+	},
+	hero_tank_walk_90 = {
 		prefix = "hero_tank",
 		from = 38,
 		to = 43
+	},
+	hero_tank_walk_300 = {
+		prefix = "hero_tank",
+		from = 8,
+		to = 13
+	},
+	hero_tank_walk_60 = {
+		prefix = "hero_tank",
+		from = 32,
+		to = 37
 	},
 	hero_tramin_idle = {
 		prefix = "hero_tramin",

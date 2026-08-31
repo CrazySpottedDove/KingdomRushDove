@@ -19,7 +19,7 @@ return function(this, store)
 	constif(this.aura.duration_inc)
 		this.actual_duration = this.aura.duration + this.aura.level * this.aura.duration_inc
 	constelse
-		conststmt(this.actual_duration = this.aura.duration)
+		this.actual_duration = this.aura.duration
 	constend
 
 	return true

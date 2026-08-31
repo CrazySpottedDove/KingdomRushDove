@@ -340,6 +340,7 @@ ui.can_select = true
 ui.can_hover = nil
 ui.can_drag = nil
 ui.click_proxies = nil
+-- 该 rect 为左下到右上的坐标系
 ui.click_rect = r(-10, -10, 20, 20)
 ui.hover_active = nil
 ui.hover_controller_active = nil

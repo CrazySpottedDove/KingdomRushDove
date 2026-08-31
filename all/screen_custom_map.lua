@@ -1061,7 +1061,7 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start, progress)
 
 	-- Heroic page
 	local rules_y = 290
-	local upg_level = map.level_data.max_upgrade_level
+	local upg_level = map.level_data.max_upgrade_level or GS.max_upgrade_level
 	local locked_hero = map.level_data.locked_hero
 
 	self.heroic = KView:new()

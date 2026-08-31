@@ -390,7 +390,7 @@ function M.register(sys)
 							s.sync_flag = last_runs ~= s.runs
 							s.ss = I:s(fn)
 
-						-- -- DEBUG:仅在开发时启用，用于检查美术资源
+						-- DEBUG:仅在开发时启用，用于检查美术资源
 						-- if s.ss == nil then
 						-- 	local e = store.entities[s._render_e_id]
 						-- 	if s.animation then

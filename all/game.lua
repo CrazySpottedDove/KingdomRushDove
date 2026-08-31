@@ -342,7 +342,6 @@ function game:init_debug()
 
 	DEBUG_KEYS_ON = true
 	self.I = I
-	self.DBG_DRAW_CLICKABLE = false
 	self.DBG_DRAW_PATHS = nil
 	self.DBG_DRAW_GRID = false
 	self.DBG_DRAW_CENTERS = false
@@ -841,7 +840,6 @@ if DEBUG then
 				self.DBG_DRAW_BULLET_TRAILS = not self.DBG_DRAW_BULLET_TRAILS
 			else
 				self.DBG_DRAW_CENTERS = not self.DBG_DRAW_CENTERS
-				self.DBG_DRAW_CLICKABLE = not self.DBG_DRAW_CLICKABLE
 			end
 		elseif key == "v" then
 			signal.emit("debug-ready-user-powers")
@@ -1121,25 +1119,6 @@ function game:after_draw_debug(rox, roy, gs)
 				G.setColor_old(0, 0, 200, 200)
 				G.rectangle("fill", e.pos.x - 1, REF_H - e.pos.y - 4, 2, 8)
 				G.rectangle("fill", e.pos.x - 4, REF_H - e.pos.y - 1, 8, 2)
-			end
-		end
-
-		G.pop()
-		G.setColor(1, 1, 1, 1)
-	end
-
-	if self.DBG_DRAW_CLICKABLE then
-		G.push()
-		G.translate(rox, roy)
-		G.scale(gs, gs)
-
-		for _, e in pairs(self.store.entities) do
-			if e.ui then
-				G.setColor_old(255, 255, 0, 70)
-
-				local rect = e.ui.click_rect
-
-				G.rectangle("fill", e.pos.x + rect.pos.x, REF_H - (e.pos.y + rect.pos.y), rect.size.x, -rect.size.y)
 			end
 		end
 

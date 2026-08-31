@@ -794,6 +794,7 @@ tt = RT("soldier_djinn", "soldier_militia")
 anchor_y = 0.14
 image_y = 54
 AC(tt, "timed_attacks", "powers")
+tt.ui.click_rect = r(-10, 8, 20, 40)
 tt.health.magic_armor = 0.3
 tt.health.dead_lifetime = 12
 tt.health.hp_max = 300
@@ -1910,7 +1911,6 @@ tt.motion.max_speed = b.soldier.speed * 1.1
 tt.ui.click_rect = r(-13, 0, 25, 30)
 tt.ui.click_rect_offset_y = 0
 tt.max_dist_walk = 160
-tt.ignore_linirea_true_might_revive = true
 tt.death_go_back_delay = fts(15)
 
 tt = RT("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
