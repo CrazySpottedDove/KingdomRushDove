@@ -44166,6 +44166,7 @@ function scripts.hero_tank.update(this, store)
 				e.damage_factor = this.unit.damage_factor
 				e.pos = V.vclone(target.pos)
 				e.level = this.hero.skills.ultimate.level
+				e._damage_source_id = this.id
 				simulation:queue_insert_entity(e)
 				SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
 			else
@@ -44548,6 +44549,7 @@ function scripts.hero_tank_ultimate.update(this, store)
 		zep.sound = this.sound
 		zep.level = this.level
 		zep.damage_factor = this.damage_factor
+		zep._damage_source_id = this._damage_source_id
 
 		simulation:queue_insert_entity(zep)
 	end
@@ -44598,6 +44600,7 @@ function scripts.zeppelin_hero_tank.update(this, store)
 	b.bullet.damage_factor = this.damage_factor
 	b.bullet.hit_payload = E:create_entity(b.bullet.hit_payload)
 	b.bullet.hit_payload.damage_factor = this.damage_factor
+	b.bullet.hit_payload._damage_source_id = this._damage_source_id
 
 	simulation:queue_insert_entity(b)
 
@@ -44675,6 +44678,8 @@ function scripts.decal_bullet_zeppelin_hero_tank.update(this, store)
 		delay = delay + fts(U.frandom(2, 5))
 		spi = km.zmod(spi + math.random(1, 2), 3)
 	end
+
+	simulation:queue_remove_entity(this)
 end
 
 return scripts
