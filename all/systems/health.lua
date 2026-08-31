@@ -1,3 +1,4 @@
+-- 死亡管理，伤害结算，伤害追踪，伤害数字，治疗数字
 local health = {}
 
 local bit = require("bit")
@@ -451,7 +452,7 @@ local function damage_trace_enabled(store, d, e)
 	if d.source_id then
 		local source = store.entities[d.source_id]
 		if source then
-			local root = source._root_entity or source
+			local root = store.root_entity_map[source.id] or source
 			if not damage_trace_table[root.template_name] then
 				damage_trace_table[root.template_name] = {
 					name = root.info and root.info.i18n_key and _(root.info.i18n_key .. "_NAME") or _(string.upper(root.template_name) .. "_NAME"),
@@ -472,8 +473,8 @@ local function damage_trace_enabled(store, d, e)
 		damage_taken = (band(d.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 and d.damage_applied or d.value) * math.min(e.health.hp / d.damage_applied, 1)
 	end
 
-	if e._root_entity then
-		e = e._root_entity
+	if store.root_entity_map[e.id] then
+		e = store.root_entity_map[e.id]
 	end
 	if not damage_trace_table[e.template_name] then
 		damage_trace_table[e.template_name] = {
@@ -494,22 +495,34 @@ local function damage_trace_init(store)
 		damage_trace = damage_trace_enabled
 		damage_trace_table = {}
 		store.damage_trace_table = damage_trace_table
+		-- 记录实体 id -> 实体的根实体的映射关系
+		store.root_entity_map = {}
 
 		function health:on_queue_unconditional(e, d)
 			if d._dominant_entity then
 				local parent = d._dominant_entity
-				if parent._root_entity then
-					e._root_entity = parent._root_entity
-				else
-					e._root_entity = parent
+				-- 如果创建该实体的实体拥有根实体，则将 parent 指向其根实体
+				if store.root_entity_map[parent.id] then
+					parent = store.root_entity_map[parent.id]
+				end
+
+				if not e.enemy or (e.enemy and parent.enemy) then
+					store.root_entity_map[e.id] = parent
 				end
 			end
+		end
+
+		-- 清理引用，避免内存泄露
+		function health:on_remove_unconditional(e, store)
+			store.root_entity_map[e.id] = nil
 		end
 	else
 		damage_trace = damage_trace_disabled
 		damage_trace_table = nil
 		store.damage_trace_table = nil
+		store.root_entity_map = nil
 		health.on_queue_unconditional = nil
+		health.on_remove_unconditional = nil
 	end
 end
 

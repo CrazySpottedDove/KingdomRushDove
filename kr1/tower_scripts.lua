@@ -25003,6 +25003,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 						bullet.bullet.target_id = enemy.id
 						bullet.bullet.from = v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 						bullet.bullet.to = shoot_pos
+						bullet.bullet.source_id = this.id
 						bullet.pos:copy(bullet.bullet.from)
 
 						apply_precision(bullet)
@@ -25117,7 +25118,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 			end
 		end
 		if not tw.blocked then
-
 			for i = 1, b.max_soldiers do
 				local s = b.soldiers[i]
 
