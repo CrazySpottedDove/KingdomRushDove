@@ -639,7 +639,8 @@ function scripts.soldier_barrack.get_info(this)
 		respawn = this.health.dead_lifetime,
 		no_ranged = no_ranged,
 		cooldown = cooldown,
-		ranged_cooldown = ranged_cooldown
+		ranged_cooldown = ranged_cooldown,
+		immune = this.health.immune_to
 	}
 end
 
@@ -861,7 +862,6 @@ function scripts.enemy_basic.get_info(this)
 	local info = scripts.soldier_barrack.get_info(this)
 
 	info.lives = this.enemy.lives_cost
-	info.immune = this.health.immune_to
 	info.type = STATS_TYPE_ENEMY
 
 	return info

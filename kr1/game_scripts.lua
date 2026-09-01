@@ -2894,15 +2894,13 @@ function scripts.aura_chill_elora.update(this, store)
 
 			for i, target in ipairs(targets) do
 				if U.flags_pass(target.vis, E:get_template(this.aura.mod).modifier) then
-					if not U.has_modifiers(store, target, this.aura.mod) then
-						local new_mod = E:create_entity(this.aura.mod)
+					local new_mod = E:create_entity(this.aura.mod)
 
-						new_mod.modifier.level = this.aura.level
-						new_mod.modifier.target_id = target.id
-						new_mod.modifier.source_id = this.id
+					new_mod.modifier.level = this.aura.level
+					new_mod.modifier.target_id = target.id
+					new_mod.modifier.source_id = this.id
 
-						simulation:queue_insert_entity(new_mod)
-					end
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 		end

@@ -3021,8 +3021,8 @@ function InfoBar:update_stats()
 		sv.l_ranged_damage.text = GU.damage_value_and_cooldown_desc(stats.ranged_damage_min, stats.ranged_damage_max, stats.ranged_cooldown)
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
 
-		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor)
-		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor)
+		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor, stats.immune == DAMAGE_PHYSICAL_GROUP)
+		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor, stats.immune == DAMAGE_MAGICAL_GROUP)
 		sv.l_respawn.text = stats.respawn and string.format(_("%i sec."), stats.respawn) or "-"
 	elseif stats.type == STATS_TYPE_TOWER or stats.type == STATS_TYPE_TOWER_MAGE then
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
@@ -3064,8 +3064,8 @@ function InfoBar:update_stats()
 
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
 
-		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor)
-		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor)
+		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor, stats.immune == DAMAGE_PHYSICAL_GROUP)
+		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor, stats.immune == DAMAGE_MAGICAL_GROUP)
 		sv.l_respawn.text = stats.respawn and string.format("%i", stats.respawn) or "-"
 	elseif stats.type == STATS_TYPE_TEXT then
 		sv.l_desc.text = _(stats.desc)
