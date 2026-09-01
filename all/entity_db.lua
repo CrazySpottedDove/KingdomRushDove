@@ -36,6 +36,14 @@ function entity_db:Load()
 	end
 end
 
+function entity_db:hot_load(template_name_table)
+	local compiler = require("precompile.interface")
+	for _, template_name in ipairs(template_name_table) do
+		compiler:compile(self.entities[template_name])
+		self.entities_backup[template_name] = quickcopy(self.entities[template_name])
+	end
+end
+
 --- 实体数据库的首次初始化，实际的初始化逻辑，只负责将组件和实体模板从文件加载到内存中。
 --- 插件应当 HOOK 该函数，来实现自己定义的组件和实体模板的加载（不要在这个HOOK中做其他事情！）。
 --- 通过将 precompile 步骤和 load 步骤分离，允许了在 load HOOK 中注册的实体也享受到编译效果，从而避免错误地继承一个已被编译的脚本的问题。

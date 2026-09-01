@@ -282,7 +282,7 @@ upgrades.list = {{
 		from_kr = 3,
 		class = "reinforcements",
 		duration_inc = 2,
-		cooldown_dec = 1,
+		cooldown_dec = 2,
 		icon = 29,
 		price = 4,
 		level = 6
@@ -575,7 +575,7 @@ upgrades.list = {{
 		from_kr = 3,
 		class = "reinforcements",
 		duration_inc = 1,
-		cooldown_dec = 2,
+		cooldown_dec = 3,
 		icon = 29,
 		price = 4,
 		level = 6
@@ -809,7 +809,7 @@ upgrades.list = {{
 		from_kr = 3,
 		class = "reinforcements",
 		duration_inc = 2,
-		cooldown_dec = 1,
+		cooldown_dec = 2,
 		icon = 29,
 		price = 4,
 		level = 6
@@ -1118,7 +1118,7 @@ upgrades.list = {{
 		from_kr = 3,
 		class = "reinforcements",
 		duration_inc = 1,
-		cooldown_dec = 2,
+		cooldown_dec = 3,
 		icon = 29,
 		price = 4,
 		level = 6
@@ -2555,13 +2555,13 @@ function upgrades:patch_templates(max_level)
 
 		if u then
 			for i = 1, 3 do
-				if v then
-					T(u.template_name .. "_" .. i).reinforcement.duration = T(u.template_name .. "_" .. i).reinforcement.duration + v.duration_inc
-					T("re_current_1").cooldown = T("re_current_1").cooldown - 1
-				end
-
 				E:set_template("re_current_" .. i, T(u.template_name .. "_" .. i))
 			end
+		end
+
+		if v then
+			T("user_power_2").cooldown = T("user_power_2").cooldown - v.cooldown_dec
+			T("user_power_2").duration = T("user_power_2").duration + v.duration_inc
 		end
 	end
 end

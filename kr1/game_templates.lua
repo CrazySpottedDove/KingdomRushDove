@@ -491,7 +491,6 @@ tt = RT("re_farmer", "soldier_militia")
 AC(tt, "reinforcement", "tween", "nav_grid")
 image_y = 44
 anchor_y = 0.1590909090909091
-tt.cooldown = 10
 tt.health.hp_max = 30
 tt.health_bar.offset = vec_2(0, ady(32))
 tt.info.portrait_idxs = {9, 10, 11}
@@ -569,8 +568,6 @@ for i = 1, 3 do
 end
 
 for i = 1, 3 do
-
-	-- E:set_template("re_current_" .. i, E:get_template("re_farmer_" .. i))
 	E:register_t("re_current_" .. i, "re_farmer_" .. i)
 end
 

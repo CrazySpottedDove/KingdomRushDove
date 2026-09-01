@@ -1072,7 +1072,8 @@ tt = E:register_t("power_reinforcements_control")
 E:add_comps(tt, "user_power", "pos", "main_script", "user_selection")
 tt.main_script.insert = scripts.power_reinforcements_control.insert
 tt.user_selection.can_select_point_fn = scripts.power_reinforcements_control.can_select_point
-tt.cooldown = 99
+tt.cooldown = 10
+tt.duration = 23
 
 tt = E:register_t("mod_soldier_cooldown", "modifier")
 tt.main_script.insert = scripts.mod_soldier_cooldown.insert

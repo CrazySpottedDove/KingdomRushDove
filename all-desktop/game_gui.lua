@@ -3138,7 +3138,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 
 	local power_2 = Power2Button:new()
 
-	power_2.cooldown_time = E:get_template("re_current_1").cooldown
+	power_2.cooldown_time = E:get_template("user_power_2").cooldown
 	power_2.pos = v(125, 30)
 
 	powers:add_child(power_2)

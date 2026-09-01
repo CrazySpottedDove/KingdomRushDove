@@ -8043,6 +8043,7 @@ function scripts.power_reinforcements_control.insert(this, store)
 	e.pos.y = this.pos.y - 10
 	e.nav_rally.center:copy(this.pos)
 	e.nav_rally.pos:copy(e.pos)
+	e.reinforcement.duration = this.duration
 	simulation:queue_insert_entity(e)
 
 	i = math.random(1, 3)
@@ -8051,6 +8052,7 @@ function scripts.power_reinforcements_control.insert(this, store)
 	e.pos.y = this.pos.y + 10
 	e.nav_rally.center:copy(this.pos)
 	e.nav_rally.pos:copy(e.pos)
+	e.reinforcement.duration = this.duration
 
 	simulation:queue_insert_entity(e)
 
