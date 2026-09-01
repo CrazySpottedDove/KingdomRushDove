@@ -2498,6 +2498,8 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 		coroutine.yield()
 	end
 
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+
 	::label_72_0::
 
 	S:stop(attack.sound)
