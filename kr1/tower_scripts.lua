@@ -28805,9 +28805,7 @@ scripts.tower_blazing_watcher = {
 							local new_target, targets = U.find_crowdest_enemy_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans, E:get_template(ab.payload_bullet).bullet.damage_radius, 3)
 							if targets then
 								target = new_target
-								local target_count = #targets
-								target = targets[target_count]
-								for i = target_count, 1, -1 do
+								for i = 1, #targets do
 									local t = targets[i]
 									if #t.enemy.blockers > 0 then
 										target = t
