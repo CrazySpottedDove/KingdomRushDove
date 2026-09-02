@@ -63,6 +63,7 @@ U.detect_foremost_enemy_with_flying_preference_in_range_filter_off = seek.detect
 U.detect_foremost_enemy_with_flying_preference_in_range_filter_on = seek.detect_foremost_enemy_with_flying_preference_in_range_filter_on
 U.find_enemies_around_line = seek.find_enemies_around_line
 U.find_enemies_in_range_filter_off_consider_hit_offset = seek.find_enemies_in_range_filter_off_consider_hit_offset
+U.find_crowdest_enemy_in_range_filter_off = seek.find_crowdest_enemy_in_range_filter_off
 
 ---
 ---返回从 from 到 to 的随机数

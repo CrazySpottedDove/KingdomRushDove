@@ -28786,8 +28786,7 @@ scripts.tower_blazing_watcher = {
 				end
 
 				if ready_to_attack(ab, store, this.tower.cooldown_factor) then
-					local _, targets = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ab.vis_flags, ab.vis_bans)
-					if targets then
+					if U.find_first_enemy_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans) then
 						ab.ts = store.tick_ts
 						S:queue(ab.sound)
 
@@ -28795,9 +28794,11 @@ scripts.tower_blazing_watcher = {
 
 						U.y_wait_unconditional(store, fts(10) * this.tower.cooldown_factor)
 
-						local target, targets = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ab.vis_flags, ab.vis_bans)
-						if targets then
-							do
+						local target
+						if pow_e.level > 0 then
+							local new_target, targets = U.find_crowdest_enemy_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans, E:get_template(ab.payload_bullet).bullet.damage_radius, 3)
+							if targets then
+								target = new_target
 								local target_count = #targets
 								target = targets[target_count]
 								for i = target_count, 1, -1 do
@@ -28808,7 +28809,22 @@ scripts.tower_blazing_watcher = {
 									end
 								end
 							end
+						else
+							local _, targets = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ab.vis_flags, ab.vis_bans)
+							if targets then
+								local target_count = #targets
+								target = targets[target_count]
+								for i = target_count, 1, -1 do
+									local t = targets[i]
+									if #t.enemy.blockers > 0 then
+										target = t
+										break
+									end
+								end
+							end
+						end
 
+						if target then
 							local start_offset = ab.bullet_start_offset
 							local b = E:create_entity(ab.bullet)
 

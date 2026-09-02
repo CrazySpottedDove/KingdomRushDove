@@ -144,6 +144,86 @@ function seek.find_enemies_in_range_filter_off(origin, range, flags, bans)
 	return count ~= 0 and result or nil
 end
 
+function seek.find_crowdest_enemy_in_range_filter_off(origin, range, flags, bans, radius, level)
+	local x = origin.x
+	local y = origin.y
+	local min_col = max(1, _x_to_col(x - range))
+	local max_col = min(_cols, _x_to_col(x + range))
+	local b = range * _aspect
+	local min_row = max(1, _y_to_row(y - b))
+	local max_row = min(_rows, _y_to_row(y + b))
+	local count = 0
+	local index_base = (min_row - 1) * _cols - 1
+	local r_outer_sq = range * range
+	local result = {}
+
+	for _ = min_row, max_row do
+		for col = min_col, max_col do
+			local cell = id_arrays[index_base + col]
+			local array = cell.array
+
+			for i = 0, cell.size - 1 do
+				local entity = entities[array[i]]
+				local dx = entity.pos.x - x
+				local dy = (entity.pos.y - y) * _aspect_inv
+
+				if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) then
+					count = count + 1
+					result[count] = entity
+				end
+			end
+		end
+
+		index_base = index_base + _cols
+	end
+
+	if count == 0 then
+		return nil
+	end
+
+	local check_count = min(count, level)
+	local candidate = nil
+	local radius_sq = radius * radius
+	local b_radius = radius * _aspect
+	local crowded_count = 0
+	local check_idx_upper = floor(count / check_count)
+	local check_idx_lower = 1
+	for i = 1, check_count do
+		local e = result[math.random(check_idx_lower, check_idx_upper)]
+		check_idx_lower = check_idx_upper + 1
+		check_idx_upper = floor(count / check_count * (i + 1))
+		local e_count = 0
+		local e_x = e.pos.x
+		local e_y = e.pos.y
+		local e_min_col = max(1, _x_to_col(e_x - radius))
+		local e_max_col = min(_cols, _x_to_col(e_x + radius))
+		local e_min_row = max(1, _y_to_row(e_y - b_radius))
+		local e_max_row = min(_rows, _y_to_row(e_y + b_radius))
+		local e_index_base = (e_min_row - 1) * _cols - 1
+		for e_row = e_min_row, e_max_row do
+			for e_col = e_min_col, e_max_col do
+				local cell = id_arrays[e_index_base + e_col]
+				local array = cell.array
+				for j = 0, cell.size - 1 do
+					local entity = entities[array[j]]
+					local dx = entity.pos.x - e_x
+					local dy = (entity.pos.y - e_y) * _aspect_inv
+					if (dx * dx + dy * dy <= radius_sq) then
+						e_count = e_count + 1
+					end
+				end
+			end
+			e_index_base = e_index_base + _cols
+		end
+		if e_count > crowded_count then
+			crowded_count = e_count
+			candidate = e
+		end
+	end
+
+	return candidate, result
+end
+
 function seek.find_enemies_in_range_filter_off_consider_hit_offset(origin, range, flags, bans)
 	local x = origin.x
 	local y = origin.y
