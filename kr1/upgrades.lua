@@ -2255,6 +2255,8 @@ function upgrades:patch_templates(max_level)
 		T("aura_tower_sandworm").render.sprites[1].scale.x = T("aura_tower_sandworm").render.sprites[1].scale.x * u.radius_factor
 		T("aura_tower_sandworm").render.sprites[1].scale.y = T("aura_tower_sandworm").render.sprites[1].scale.y * u.radius_factor
 		T("aura_tower_sandworm").aura.radius = T("aura_tower_sandworm").aura.radius * u.radius_factor
+		-- 补偿喷火
+		T("tower_flamespitter_lvl4").attacks.range = T("tower_flamespitter_lvl4").attacks.range * (1 + (u.radius_factor - 1) * 0.5)
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")
