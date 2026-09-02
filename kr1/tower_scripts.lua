@@ -15268,8 +15268,14 @@ function scripts.tower_flamespitter.update(this, store)
 	local tpos = tpos(this)
 
 	local function find_target(attack)
-		local target, pred_pos = U.find_random_enemy_with_pos(store, tpos, 0, this.attacks.range, attack.node_prediction * tw.cooldown_factor, attack.vis_flags, attack.vis_bans)
-
+		-- local target, pred_pos = U.find_random_enemy_with_pos(store, tpos, 0, this.attacks.range, attack.node_prediction * tw.cooldown_factor, attack.vis_flags, attack.vis_bans)
+		local target = U.find_crowdest_enemy_in_range_filter_off(tpos, this.attacks.range, attack.vis_flags, attack.vis_bans, attack_basic.square_half_x * this.attacks.range / attack_basic.square_y, 2)
+		local pred_pos = nil
+		if target then
+			pred_pos = U.calculate_enemy_ffe_pos(target, attack.node_prediction * tw.cooldown_factor)
+			pred_pos.x = pred_pos.x + target.unit.hit_offset.x
+			pred_pos.y = pred_pos.y + target.unit.hit_offset.y
+		end
 		return target, pred_pos
 	end
 
@@ -15332,7 +15338,7 @@ function scripts.tower_flamespitter.update(this, store)
 	end
 
 	local function rotate_towards_pos(pos)
-		local vx, vy = V.sub(pos.x, pos.y, this.pos.x + this.tower_top_offset.x, this.pos.y + this.tower_top_offset.y)
+		local vx, vy = V.sub(pos.x, pos.y, tpos.x, tpos.y)
 		local v_angle = V.angleTo(vx, vy)
 		local angle_to_target = km.unroll(v_angle)
 
@@ -15408,7 +15414,7 @@ function scripts.tower_flamespitter.update(this, store)
 		this.render.sprites[this.render.sid_stove_fire].hidden = false
 
 		animation_start(this, "blazing_trail", nil, store.tick_ts, false, this.render.sid_stove_fire)
-		U.y_wait_unconditional(store, fts(34) * tw.cooldown_factor)
+		U.y_wait_unconditional(store, fts(31) * tw.cooldown_factor)
 		S:queue(a.sound)
 		shoot_bomb(nil, pred_pos)
 
@@ -15494,7 +15500,7 @@ function scripts.tower_flamespitter.update(this, store)
 
 	animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
 
-	local target, pred_pos = find_target(attack_basic)
+	local target, pred_pos
 	local up = UP:get_upgrade("engineer_efficiency")
 	local scale_factor = this.attacks.range / attack_basic.square_y
 	local co_powers = coroutine.create(function()
@@ -15521,6 +15527,7 @@ function scripts.tower_flamespitter.update(this, store)
 					pow.changed = nil
 					local a = this.attacks.list[2]
 					a.cooldown = pow.cooldown[pow.level]
+					this.render.sprites[3].hidden = false
 				end
 
 				pow = this.powers.skill_columns
@@ -15528,6 +15535,7 @@ function scripts.tower_flamespitter.update(this, store)
 					pow.changed = nil
 					local a = this.attacks.list[3]
 					a.cooldown = pow.cooldown[pow.level]
+					this.render.sprites[3].hidden = false
 				end
 			end
 
@@ -15557,10 +15565,6 @@ function scripts.tower_flamespitter.update(this, store)
 				idle_cooldown = random(4, 8)
 			end
 
-			if target and pred_pos then
-				rotate_towards_pos(pred_pos)
-			end
-
 			if ready_to_attack(attack_basic, store, tw.cooldown_factor) then
 				target, pred_pos = find_target(attack_basic)
 
@@ -15570,6 +15574,7 @@ function scripts.tower_flamespitter.update(this, store)
 					goto label_606_0
 				end
 
+				local start_ts = store.tick_ts
 				local a_name, a_flip, angle_idx
 
 				repeat
@@ -15578,7 +15583,13 @@ function scripts.tower_flamespitter.update(this, store)
 
 					if target and pred_pos then
 						angle_dist = rotate_towards_pos(pred_pos)
-						target, pred_pos = find_target(attack_basic)
+						if not target.health.dead then
+							pred_pos = U.calculate_enemy_ffe_pos(target, attack_basic.node_prediction * tw.cooldown_factor)
+							pred_pos.x = pred_pos.x + target.unit.hit_offset.x
+							pred_pos.y = pred_pos.y + target.unit.hit_offset.y
+						else
+							target, pred_pos = find_target(attack_basic)
+						end
 						reached_target = arrive_epsilon >= math.abs(angle_dist) and target and pred_pos
 					end
 
@@ -15591,10 +15602,7 @@ function scripts.tower_flamespitter.update(this, store)
 					end
 				until reached_target
 
-				-- animation_start(this, "attack", a_flip, store.tick_ts, false, this.render.sid_dwarf)
-				U.y_wait_unconditional(store, fts(14) * tw.cooldown_factor)
-
-				a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("attack", pred_pos, this.tower_top_offset)
+				a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("attack", pred_pos, tw.range_offset)
 
 				animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
 				S:queue(attack_basic.sound, {
@@ -15602,7 +15610,7 @@ function scripts.tower_flamespitter.update(this, store)
 				})
 				U.y_wait_unconditional(store, fts(21) * tw.cooldown_factor)
 
-				a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("idle", pred_pos, this.tower_top_offset)
+				a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("idle", pred_pos, tw.range_offset)
 
 				local offset = vclone(attack_basic.bullet_start_offset[angle_idx])
 
@@ -15614,7 +15622,7 @@ function scripts.tower_flamespitter.update(this, store)
 				this.flame_fx.render.sprites[1].ts = store.tick_ts
 				this.flame_fx.pos.x = this.pos.x + offset.x
 				this.flame_fx.pos.y = this.pos.y + offset.y
-				this.flame_fx.render.sprites[1].r = V.angleTo(this.pos.x + this.tower_top_offset.x - pred_pos.x, this.pos.y + this.tower_top_offset.y - pred_pos.y)
+				this.flame_fx.render.sprites[1].r = V.angleTo(tpos.x - pred_pos.x, tpos.y - pred_pos.y)
 				this.flame_fx.render.sprites[1].scale = v(1, 1)
 				this.flame_fx.render.sprites[1].scale.x = attack_basic.flame_fx_scale_x[angle_idx]
 
@@ -15623,7 +15631,7 @@ function scripts.tower_flamespitter.update(this, store)
 				U.animation_start_default(this.flame_fx, "loop", false, store.tick_ts, true)
 
 				local fire_ts = store.tick_ts
-				local fire_cycle_ts = store.tick_ts - attack_basic.cycle_time
+				local fire_cycle_ts = store.tick_ts - attack_basic.cycle_time * tw.cooldown_factor
 				local tried_seek_last_time = false
 
 				while store.tick_ts - fire_ts < attack_basic.duration * tw.cooldown_factor do
@@ -15641,12 +15649,12 @@ function scripts.tower_flamespitter.update(this, store)
 					end
 
 					if target then
-						pred_pos.x = target.pos.x
-						pred_pos.y = target.pos.y
+						pred_pos.x = target.pos.x + target.unit.hit_offset.x
+						pred_pos.y = target.pos.y + target.unit.hit_offset.y
 
 						rotate_towards_pos(pred_pos)
 
-						a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("attack", pred_pos, this.tower_top_offset)
+						a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("attack", pred_pos, tw.range_offset)
 						offset = vclone(attack_basic.bullet_start_offset[angle_idx])
 
 						if not a_flip then
@@ -15655,22 +15663,20 @@ function scripts.tower_flamespitter.update(this, store)
 
 						this.flame_fx.pos.x = this.pos.x + offset.x
 						this.flame_fx.pos.y = this.pos.y + offset.y
-						this.flame_fx.render.sprites[1].r = V.angleTo(this.pos.x + this.tower_top_offset.x - pred_pos.x, this.pos.y + this.tower_top_offset.y - pred_pos.y)
+						this.flame_fx.render.sprites[1].r = V.angleTo(tpos.x - pred_pos.x, tpos.y - pred_pos.y)
 					end
 
 					scale_factor = this.attacks.range / attack_basic.square_y
 					this.flame_fx.render.sprites[1].scale.x = scale_factor
 					this.flame_fx.render.sprites[1].scale.y = scale_factor
 
-					if store.tick_ts - fire_cycle_ts >= attack_basic.cycle_time then
-						fire_cycle_ts = fire_cycle_ts + attack_basic.cycle_time
+					if store.tick_ts - fire_cycle_ts >= attack_basic.cycle_time * tw.cooldown_factor then
+						fire_cycle_ts = fire_cycle_ts + attack_basic.cycle_time * tw.cooldown_factor
 
 						local r = -this.flame_fx.render.sprites[1].r
 						-- 矩形索敌
-						local aura_center = V.v(this.pos.x + this.tower_top_offset.x - math.cos(r) * this.attacks.range * 0.6, this.pos.y + this.tower_top_offset.y + math.sin(r) * this.attacks.range * 0.6)
-						local aura_targets = U.find_enemies_in_range_filter_on(tpos, this.attacks.range, attack_basic.vis_flags, attack_basic.vis_bans, function(v)
-							return U.is_inside_square(aura_center, this.attacks.range * 0.6, attack_basic.square_half_x * scale_factor, r, v.pos)
-						end)
+
+						local aura_targets = U.find_enemies_around_line(tpos.x, tpos.y, tpos.x - math.cos(r) * this.attacks.range * 1.2, tpos.y + math.sin(r) * this.attacks.range * 1.2, attack_basic.square_half_x * scale_factor, attack_basic.vis_flags, attack_basic.vis_bans)
 
 						if aura_targets then
 							for _, aura_target in ipairs(aura_targets) do
@@ -15706,7 +15712,7 @@ function scripts.tower_flamespitter.update(this, store)
 					coroutine.yield()
 				end
 
-				attack_basic.ts = store.tick_ts
+				attack_basic.ts = start_ts
 				last_ts = store.tick_ts
 
 				U.y_animation_play(this.flame_fx, "out", false, store.tick_ts)
