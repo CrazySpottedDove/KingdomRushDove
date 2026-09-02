@@ -2544,6 +2544,7 @@ function upgrades:patch_templates(max_level)
 		T("power_thunder_control").extra_duration = 4
 	end
 
+	E:set_template("user_power_2", T("power_reinforcements_control"))
 	if self.levels.reinforcements > 0 then
 		local rl = math.min(self.levels.reinforcements, self.max_level)
 
