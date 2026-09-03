@@ -2523,7 +2523,9 @@ function scripts.ray_tesla.update(this, store)
 				if target.template_name == "hero_thor" then
 					U.heal(target, target.lightning_heal)
 
+					this.orig_bounce_range = this.orig_bounce_range + this.bounce_range
 					this.bounce_range = this.bounce_range * 2
+					this.max_bounces = this.max_bounces * 5
 				else
 					local mod = E:create_entity(b.mod)
 					local bounce_factor = UP:get_upgrade("engineer_efficiency") and 1 or this.bounce_damage_factor
@@ -2549,7 +2551,7 @@ function scripts.ray_tesla.update(this, store)
 			if this.bounces < this.max_bounces then
 				U.y_wait_unconditional(store, this.bounce_delay)
 
-				local bounce_target, bounce_targets = U.find_nearest_target(store.entities, dest, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
+				local bounce_target, bounce_targets = U.find_nearest_target(store.entities, target.pos, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
 					return (not table.contains(this.seen_targets, v.id)) and (v.enemy or v.template_name == "hero_thor")
 				end)
 
@@ -2564,8 +2566,6 @@ function scripts.ray_tesla.update(this, store)
 				end
 
 				if bounce_target then
-					log.paranoid("ray_tesla bounce from %s to %s dist:%s", target.id, bounce_target.id, V.dist(dest.x, dest.y, bounce_target.pos.x, bounce_target.pos.y))
-
 					local r = E:create_entity(this.template_name)
 
 					r.pos = V.vclone(dest)
@@ -2582,7 +2582,6 @@ function scripts.ray_tesla.update(this, store)
 
 					if bounce_target.template_name == "hero_thor" then
 						r.bounces = 0
-						r.max_bounces = r.max_bounces * 5
 					else
 						r.bounces = this.bounces + 1
 					end
@@ -2837,7 +2836,7 @@ function scripts.aura_tesla_overcharge.update(this, store)
 	if targets then
 		for _, e in ipairs(targets) do
 			local d = SU.create_attack_damage(a, e.id, this)
-
+			d.value = d.value * a.damage_factor
 			queue_damage(store, d)
 
 			if not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, e.template_name) then
@@ -8649,6 +8648,8 @@ function scripts.ray_frankenstein.update(this, store)
 			U.heal(target, this.frankie_heal_hp)
 		elseif target.template_name == "hero_thor" then
 			U.heal(target, target.lightning_heal)
+			this.bounce_range = this.bounce_range * 2
+			this.bounces = this.bounces * 5 + 1
 		else
 			local mod = E:create_entity(b.mod)
 
@@ -8672,7 +8673,7 @@ function scripts.ray_frankenstein.update(this, store)
 		if this.bounces > 0 then
 			U.y_wait_unconditional(store, this.bounce_delay)
 
-			local bounce_target = U.find_nearest_target(store.entities, dest, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
+			local bounce_target = U.find_nearest_target(store.entities, target.pos, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
 				return (not table.contains(this.seen_targets, v.id)) and (v.enemy or v.template_name == "hero_thor")
 			end)
 
@@ -8681,8 +8682,6 @@ function scripts.ray_frankenstein.update(this, store)
 			end)
 
 			if bounce_target then
-				log.paranoid("bounce from %s to %s dist:%s", target.id, bounce_target.id, V.dist(dest.x, dest.y, bounce_target.pos.x, bounce_target.pos.y))
-
 				local r = E:create_entity(this.template_name)
 
 				r.pos = V.vclone(dest)
@@ -8691,13 +8690,7 @@ function scripts.ray_frankenstein.update(this, store)
 				r.bullet.target_id = bounce_target.id
 				r.bullet.source_id = target.id
 				r.bullet.damage_factor = b.damage_factor
-
-				if bounce_target.template_name == "hero_thor" then
-					r.bounces = (this.bounces + 1) * 5
-					r.bounce_range = this.bounce_range * 1.5
-				else
-					r.bounces = this.bounces - 1
-				end
+				r.bounces = this.bounces - 1
 
 				r.seen_targets = this.seen_targets
 

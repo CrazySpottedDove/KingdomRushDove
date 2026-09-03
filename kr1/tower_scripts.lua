@@ -5076,6 +5076,7 @@ scripts.tower_tesla = {
 							b.pos.x, b.pos.y = this.pos.x + ao.bullet_start_offset.x, this.pos.y + ao.bullet_start_offset.y
 							b.aura.source_id = this.id
 							b.aura.level = pow_o.level
+							b.aura.damage_factor = tw.damage_factor
 							b.scale_factor = a.range / b.aura.radius
 
 							simulation:queue_insert_entity(b)
