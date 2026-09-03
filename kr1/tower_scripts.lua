@@ -8094,6 +8094,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 		rider.pos = P:node_pos(enemy.nav_path.pi, 1, ni)
 		rider.aura.level = power.level
 		rider.aura.source_id = this.id
+		rider.aura.damage_factor = tw.damage_factor
 		rider.path_id = enemy.nav_path.pi
 
 		simulation:queue_insert_entity(rider)
@@ -9140,6 +9141,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 
 				if target and not target.health.dead and target.enemy then
 					local d = SU.create_attack_damage(this, target.id, this)
+					d.value = d.value * this.aura.damage_factor
 					queue_damage(store, d)
 
 					local hit_fx = E:create_entity(this.hit_fx)
@@ -9154,6 +9156,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
+					new_mod.modifier.damage_factor = this.aura.damage_factor
 
 					simulation:queue_insert_entity(new_mod)
 				end
