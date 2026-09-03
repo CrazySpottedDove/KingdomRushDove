@@ -12703,45 +12703,24 @@ function scripts.bullet_tower_sand.update(this, store)
 
 	S:queue(this.sound)
 
-	local function filter_fn(v)
-		return not table.contains(already_hit, v.id)
-	end
-
 	if this.bounces < this.max_bounces then
-		local targets = U.find_enemies_in_range_filter_on(this.pos, this.bounce_range, b.vis_flags, b.vis_bans, filter_fn)
-
-		if not targets then
-			if target and not target.health.dead then
-				already_hit = {target.id}
-			else
-				already_hit = {}
-			end
-
-			targets = U.find_enemies_in_range_filter_on(this.pos, this.bounce_range, b.vis_flags, b.vis_bans, filter_fn)
-		end
+		local targets = U.find_enemies_in_range_filter_on_consider_hit_offset(this.pos, this.bounce_range, b.vis_flags, b.vis_bans, function(e)
+			return not table.arraycontains(already_hit, e.id)
+		end)
 
 		if targets then
-			table.sort(targets, function(e1, e2)
-				return V.dist2(this.pos.x, this.pos.y, e1.pos.x, e1.pos.y) < V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
+			local target = table.find_best(targets, function(e)
+				local dx = this.pos.x - e.pos.x - e.unit.hit_offset.x
+				local dy = this.pos.y - e.pos.y - e.unit.hit_offset.y
+				return -(dx * dx + dy * dy)
 			end)
-
-			local target = targets[1]
 
 			this.bounces = this.bounces + 1
 			b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
 			b.target_id = target.id
 			b.fixed_speed = b.fixed_speed * this.bounce_speed_mult
-			b.damage_min = math.floor(b.damage_min * this.bounce_damage_mult)
-
-			if b.damage_min < 1 then
-				b.damage_min = 1
-			end
-
-			b.damage_max = math.floor(b.damage_max * this.bounce_damage_mult)
-
-			if b.damage_max < 1 then
-				b.damage_max = 1
-			end
+			b.damage_min = b.damage_min * this.bounce_damage_mult
+			b.damage_max = b.damage_max * this.bounce_damage_mult
 
 			goto label_981_0
 		end
@@ -27888,10 +27867,15 @@ scripts.ray_deep_devils = {
 	insert = function(this, store)
 		if this.chain then
 			if #this.chain <= 2 then
-				local target = U.detect_foremost_enemy_in_range_filter_on(this.pos, 120, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
+				local targets = U.find_enemies_in_range_filter_on_consider_hit_offset(this.pos, 120, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
 					return not table.arraycontains(this.chain, e.id)
 				end)
-				if target then
+				if targets then
+					local target = table.find_best(targets, function(e)
+						local dx = this.pos.x - e.pos.x - e.unit.hit_offset.x
+						local dy = this.pos.y - e.pos.y - e.unit.hit_offset.y
+						return -(dx * dx + dy * dy)
+					end)
 					local b = E:create_entity("ray_deep_devils")
 					local old_target = store.entities[this.bullet.target_id]
 					if old_target then

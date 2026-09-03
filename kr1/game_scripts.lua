@@ -2551,17 +2551,20 @@ function scripts.ray_tesla.update(this, store)
 			if this.bounces < this.max_bounces then
 				U.y_wait_unconditional(store, this.bounce_delay)
 
-				local bounce_target, bounce_targets = U.find_nearest_target(store.entities, target.pos, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
-					return (not table.contains(this.seen_targets, v.id)) and (v.enemy or v.template_name == "hero_thor")
+				local bounce_target = U.find_nearest_soldier(store.soldiers, target.pos, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
+					return v.template_name == "hero_thor" and not table.arraycontains(this.seen_targets, v.id)
 				end)
 
-				if bounce_targets then
-					for _, t in pairs(bounce_targets) do
-						if t.template_name == "hero_thor" then
-							bounce_target = t
-
-							break
-						end
+				if not bounce_target then
+					local candidates = U.find_enemies_in_range_filter_on_consider_hit_offset(dest, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
+						return not table.arraycontains(this.seen_targets, v.id)
+					end)
+					if candidates then
+						bounce_target = table.find_best(candidates, function(e)
+							local dx = dest.x - e.pos.x - e.unit.hit_offset.x
+							local dy = dest.y - e.pos.y - e.unit.hit_offset.y
+							return -(dx * dx + dy * dy)
+						end)
 					end
 				end
 
@@ -8673,13 +8676,28 @@ function scripts.ray_frankenstein.update(this, store)
 		if this.bounces > 0 then
 			U.y_wait_unconditional(store, this.bounce_delay)
 
-			local bounce_target = U.find_nearest_target(store.entities, target.pos, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
-				return (not table.contains(this.seen_targets, v.id)) and (v.enemy or v.template_name == "hero_thor")
+			local bounce_target = U.find_nearest_soldier(store.soldiers, target.pos, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
+				return v.template_name == "hero_thor" and not table.arraycontains(this.seen_targets, v.id)
 			end)
 
-			bounce_target = bounce_target or U.find_nearest_soldier(store.soldiers, dest, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
-				return v.template_name == "soldier_frankenstein" and not v.health.dead and not table.contains(this.seen_targets, v.id)
-			end)
+			if not bounce_target then
+				local candidates = U.find_enemies_in_range_filter_on_consider_hit_offset(dest, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
+					return not table.arraycontains(this.seen_targets, v.id)
+				end)
+				if candidates then
+					bounce_target = table.find_best(candidates, function(e)
+						local dx = dest.x - e.pos.x - e.unit.hit_offset.x
+						local dy = dest.y - e.pos.y - e.unit.hit_offset.y
+						return -(dx * dx + dy * dy)
+					end)
+				end
+			end
+
+			if not bounce_target then
+				bounce_target = U.find_nearest_soldier(store.soldiers, target.pos, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
+					return v.template_name == "soldier_frankenstein" and not table.arraycontains(this.seen_targets, v.id)
+				end)
+			end
 
 			if bounce_target then
 				local r = E:create_entity(this.template_name)
