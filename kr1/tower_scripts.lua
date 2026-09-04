@@ -25643,7 +25643,7 @@ function scripts.bomb_rr_fragment.update(this, store)
 		if store.tick_ts - check_ts >= check_interval then
 			check_ts = store.tick_ts
 
-			local targets = U.find_enemies_in_range_filter_off(this.pos, this.bullet.damage_radius, this.bullet.damage_flags, this.bullet.damage_bans)
+			local targets = U.find_enemies_in_range_filter_off_consider_hit_offset(this.pos, this.bullet.damage_radius, this.bullet.damage_flags, this.bullet.damage_bans)
 
 			if targets then
 				local hit_any = false
@@ -25652,7 +25652,9 @@ function scripts.bomb_rr_fragment.update(this, store)
 						hitted[targets[i].id] = true
 						hit_any = true
 
-						local damage_targets = U.find_enemies_in_range_filter_off(targets[i].pos, this.bullet.damage_radius, this.bullet.damage_flags, this.bullet.damage_bans)
+						local hit_pos = targets[i].pos:clone()
+						hit_pos:add(targets[i].unit.hit_offset)
+						local damage_targets = U.find_enemies_in_range_filter_off_consider_hit_offset(hit_pos, this.bullet.damage_radius, this.bullet.damage_flags, this.bullet.damage_bans)
 
 						for j = 1, #damage_targets do
 							local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
@@ -25660,7 +25662,9 @@ function scripts.bomb_rr_fragment.update(this, store)
 							if UP:get_upgrade("engineer_efficiency") then
 								d.value = this.bullet.damage_max
 							else
-								local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
+								local pos = damage_targets[i].pos:clone()
+								pos:add(damage_targets[i].unit.hit_offset)
+								local dist_factor = U.dist_factor_inside_ellipse(pos, this.pos, this.bullet.damage_radius)
 
 								d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
 							end
@@ -25670,7 +25674,7 @@ function scripts.bomb_rr_fragment.update(this, store)
 						end
 
 						local fx = E:create_entity(this.bullet.hit_fx)
-						fx.pos:copy(targets[i].pos)
+						fx.pos:copy(hit_pos)
 						fx.render.sprites[1].ts = store.tick_ts
 						simulation:queue_insert_entity(fx)
 
