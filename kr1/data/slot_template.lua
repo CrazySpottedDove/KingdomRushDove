@@ -84,6 +84,7 @@ return {
 		"tower_dwarf_lvl4",
 		"tower_barrel_lvl4",
 		"tower_paladin_covenant_lvl4",
-		"tower_dragons_lvl4"
+		"tower_dragons_lvl4",
+		"tower_stage_28_priests_barrack"
 	}
 }

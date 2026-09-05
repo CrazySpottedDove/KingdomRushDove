@@ -18989,7 +18989,8 @@ function scripts.tower_dwarf.update(this, store)
 					s.soldier.tower_id = this.id
 					s.soldier.tower_soldier_idx = i
 					s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, angle_offset)
+					s.nav_rally.pos = U.rally_formation_position(i, b, b.max_soldiers, angle_offset)
+					s.nav_rally.center:copy(s.nav_rally.pos)
 					s.nav_rally.new = true
 
 					if pow_i.level > 0 then
@@ -20967,75 +20968,17 @@ function scripts.soldier_priests_barrack.update(this, store)
 		this.vis._bans = nil
 	end
 
-	if this.render.sprites[1].name == "raise" then
-		this.health_bar.hidden = true
-		U.animation_start_default(this, "raise", nil, store.tick_ts, false)
-
-		while not U.animation_finished_default(this) and not this.health.dead do
-			coroutine.yield()
-		end
-
-		if not this.health.dead then
-			this.health_bar.hidden = nil
-		end
-	end
-
 	local function priest_transformation()
-		if this.death_spawns.fx then
-			local fx = E:create_entity(this.death_spawns.fx)
-
-			fx.pos = V.vclone(this.pos)
-			fx.render.sprites[1].ts = store.tick_ts
-
-			if this.death_spawns.fx_flip_to_source and this.render and this.render.sprites[1] then
-				fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
-			end
-
-			simulation:queue_insert_entity(fx)
-		end
-
 		local s = E:create_entity(this.death_spawns.name)
 
 		s.pos = V.vclone(this.pos)
+		s.render.sprites[1].flip_x = this.render.sprites[1].flip_x
+		s.nav_rally = table.deepclone(this.nav_rally)
 
-		if this.death_spawns.spawn_animation and s.render then
-			s.render.sprites[1].name = this.death_spawns.spawn_animation
-		end
-
-		if s.render and s.render.sprites[1] and this.render and this.render.sprites[1] then
-			s.render.sprites[1].flip_x = this.render.sprites[1].flip_x
-		end
-
-		if s.nav_path then
-			s.nav_path.pi = this.nav_path.pi
-
-			s.nav_path.spi = this.nav_path.spi
-			s.nav_path.ni = this.nav_path.ni + 2
-		end
-
-		if s.nav_grid and this.nav_grid then
-			s.nav_grid = table.deepclone(this.nav_grid)
-		end
-
-		if s.nav_rally and this.nav_rally then
-			s.nav_rally = table.deepclone(this.nav_rally)
-		end
-
-		if this.death_spawns.offset then
-			s.pos.x = s.pos.x + this.death_spawns.offset.x
-			s.pos.y = s.pos.y + this.death_spawns.offset.y
-		end
+		s.pos.x = s.pos.x + this.death_spawns.offset.x
+		s.pos.y = s.pos.y + this.death_spawns.offset.y
 
 		simulation:queue_insert_entity(s)
-
-		local tower = store.entities[this.soldier.tower_id]
-
-		s.soldier.tower_id = tower.id
-
-		if this.soldier.tower_soldier_idx then
-			tower.barrack.soldiers[this.soldier.tower_soldier_idx] = s
-			s.soldier.tower_soldier_idx = this.soldier.tower_soldier_idx
-		end
 
 		return s
 	end
@@ -21051,23 +20994,10 @@ function scripts.soldier_priests_barrack.update(this, store)
 			end
 		end
 
-		if this.cloak then
-			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
-			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
-			this.render.sprites[1].alpha = 255
-		end
-
 		if not this.health.dead or SU.y_soldier_revive(store, this) then
 		-- block empty
 		else
-			local r = math.random() * 100
-			local force_abomination = false
-
-			if this.mercenary_spawn_number == 1 then
-				force_abomination = true
-			end
-
-			if r < this.transform_chances[1] or force_abomination then
+			if this.powers.abomination.level >= 2 then
 				S:queue(this.sound_events.death, this.sound_events.death_args)
 				U.y_animation_play(this, "transformation_abomination", nil, store.tick_ts, 1)
 
@@ -21080,10 +21010,8 @@ function scripts.soldier_priests_barrack.update(this, store)
 				end
 
 				priest_transformation()
-				simulation:queue_remove_entity(this)
-
-				return
-			elseif r < this.transform_chances[1] + this.transform_chances[2] then
+				U.sprites_hide(this)
+			elseif this.powers.abomination.level >= 1 then
 				local tentacle = E:create_entity("decal_tentacle_priests_barrack")
 				local maxOffset = 10
 				local offsetX, offsetY = -maxOffset + maxOffset * math.random() * 2, -maxOffset + maxOffset * math.random() * 2
@@ -21103,8 +21031,6 @@ function scripts.soldier_priests_barrack.update(this, store)
 				end
 
 				U.sprites_hide(this)
-
-				return
 			end
 
 			SU.y_soldier_death(store, this)
@@ -21115,23 +21041,6 @@ function scripts.soldier_priests_barrack.update(this, store)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-
-			if this.dodge and this.dodge.active then
-				this.dodge.active = false
-
-				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
-					this.dodge.counter_attack_pending = true
-				elseif this.dodge.animation then
-					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, false)
-
-					while not U.animation_finished_default(this) do
-						coroutine.yield()
-					end
-				end
-
-				signal.emit("soldier-dodge", this)
-			end
-
 			if SU.go_to_forced_waypoint(this, store) then
 			-- block empty
 			else
@@ -21141,46 +21050,18 @@ function scripts.soldier_priests_barrack.update(this, store)
 					end
 				end
 
-				if this.timed_actions then
-					brk, sta = SU.y_soldier_timed_actions(store, this)
+				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-					if brk then
-						goto label_1140_1
-					end
+				if brk or sta ~= A_NO_TARGET then
+					goto label_1140_1
 				end
 
-				if this.timed_attacks then
-					brk, sta = SU.y_soldier_timed_attacks(store, this)
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
 
-					if brk then
-						goto label_1140_1
-					end
-				end
-
-				if this.ranged and this.ranged.range_while_blocking then
-					brk, sta = SU.y_soldier_ranged_attacks(store, this)
-
-					if brk then
-						goto label_1140_1
-					end
-				end
-
-				if this.melee then
-					brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
-
-					if brk or sta ~= A_NO_TARGET then
-						goto label_1140_1
-					end
-				end
-
-				if this.ranged and not this.ranged.range_while_blocking then
-					brk, sta = SU.y_soldier_ranged_attacks(store, this)
-
-					if brk or sta == A_DONE then
-						goto label_1140_1
-					elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
-						goto label_1140_0
-					end
+				if brk or sta == A_DONE then
+					goto label_1140_1
+				elseif sta == A_IN_COOLDOWN then
+					goto label_1140_0
 				end
 
 				if SU.soldier_go_back_step(store, this) then
@@ -21190,16 +21071,6 @@ function scripts.soldier_priests_barrack.update(this, store)
 				::label_1140_0::
 
 				SU.soldier_idle(store, this)
-
-				if this.cloak then
-					this.vis.flags = bor(this.vis.flags, this.cloak.flags)
-					this.vis.bans = bor(this.vis.bans, this.cloak.bans)
-
-					if this.cloak.alpha then
-						this.render.sprites[1].alpha = this.cloak.alpha
-					end
-				end
-
 				SU.soldier_regen(store, this)
 			end
 		end
@@ -21406,14 +21277,11 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
-				if enemies and #enemies > 0 then
-					local e = E:create_entity(a.aura)
-
-					e.pos.x, e.pos.y = this.pos.x, this.pos.y
-					e.owner = this
-					e.aura.source_id = this.id
-
-					simulation:queue_insert_entity(e)
+				if enemies then
+					for i = 1, #enemies do
+						local d = E.assign_damage(a.damage_type, math.random(a.damage_min, a.damage_max), this.id, enemies[i].id)
+						queue_damage(store, d)
+					end
 				end
 
 				U.y_animation_wait_default(this)

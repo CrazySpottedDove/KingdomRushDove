@@ -8933,6 +8933,10 @@ function TowerMenuButton:disable()
 	end
 end
 
+local tower_menu_button_size_map = {
+	upgrade_power = v(58, 55)
+}
+
 function TowerMenuButton:initialize(item, entity)
 	TowerMenuButton.super.initialize(self)
 
@@ -8940,7 +8944,21 @@ function TowerMenuButton:initialize(item, entity)
 	self.item = item
 	self.entity = entity
 
-	local b = KImageView:new(item.image)
+	local ss = I:s(item.image)
+	local target_size = tower_menu_button_size_map[item.action]
+	local image_scale = 1
+	local b
+	if target_size then
+		local scale_x = target_size.x / ss.ref_scale / ss.size[1]
+		local scale_y = target_size.y / ss.ref_scale / ss.size[2]
+		image_scale = math.min(scale_x, scale_y)
+	end
+
+	if image_scale == 1 then
+		b = KImageView:new(item.image)
+	else
+		b = KImageView:new(item.image, target_size, image_scale)
+	end
 
 	b.pos = v(0, 0)
 	b.propagate_on_click = true

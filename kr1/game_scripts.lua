@@ -69550,13 +69550,6 @@ function scripts.mod_boss_murglum_tower_block.update(this, store)
 		target.tower._type = target.tower.type
 		target.tower.type = "tower_broken_stage_37"
 		target.trigger_deselect = true
-		target.repair = {}
-		target.repair.cost = this.repair_cost
-		target.repair.active = false
-
-		if not target.user_selection then
-			E:add_comps(target, "user_selection")
-		end
 
 		if this.click_rect and target.ui then
 			this._ui_click_rect = table.deepclone(target.ui.click_rect)
@@ -69575,20 +69568,10 @@ function scripts.mod_boss_murglum_tower_block.update(this, store)
 	this.pos = target.pos
 
 	while store.tick_ts - m.ts < m.duration do
-		if target.user_selection and target.user_selection.in_progress and not target.repair.active then
-			target.user_selection.in_progress = nil
-			target.user_selection.allowed = false
-			store.player_gold = store.player_gold - target.repair.cost
-			target.repair.active = true
-			target.ui.can_click = false
-
-			break
-		end
 
 		coroutine.yield()
 	end
 
-	target.user_selection.allowed = true
 	target = store.entities[m.target_id]
 
 	if target then

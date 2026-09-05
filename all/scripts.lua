@@ -1905,7 +1905,12 @@ function scripts.tower_barrack.update(this, store)
 					s = E:create_entity(soldier_type)
 					s.soldier.tower_id = this.id
 					s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+					if b.scattered then
+						s.nav_rally.pos = U.rally_formation_position(i, b, b.max_soldiers)
+						s.nav_rally.center:copy(s.nav_rally.pos)
+					else
+						s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+					end
 					s.nav_rally.new = true
 
 					if this.powers then
@@ -1943,7 +1948,12 @@ function scripts.tower_barrack.update(this, store)
 			local all_dead = true
 
 			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+				if b.scattered then
+					s.nav_rally.pos = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+					s.nav_rally.center:copy(s.nav_rally.pos)
+				else
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+				end
 				s.nav_rally.new = true
 				all_dead = all_dead and s.health.dead
 			end
@@ -2002,7 +2012,12 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 				s = E:create_entity(b.soldier_type)
 				s.soldier.tower_id = this.id
 				s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b)
+				if b.scattered then
+					s.nav_rally.pos = U.rally_formation_position(i, b)
+					s.nav_rally.center:copy(s.nav_rally.pos)
+				else
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b)
+				end
 				s.nav_rally.new = true
 
 				if this.powers then
@@ -2083,7 +2098,12 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 			local all_dead = true
 
 			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b)
+				if b.scattered then
+					s.nav_rally.pos = U.rally_formation_position(i, b)
+					s.nav_rally.center:copy(s.nav_rally.pos)
+				else
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b)
+				end
 				s.nav_rally.new = true
 
 				if s.sound_events.change_rally_point then
@@ -3869,8 +3889,6 @@ function scripts.bolt_blast.update(this, store)
 	if enemies then
 		for _, enemy in ipairs(enemies) do
 			local d = E.assign_damage(b.damage_type, d_value, this.id, enemy.id)
-			d.track_damage = true
-
 			queue_damage(store, d)
 		end
 	end

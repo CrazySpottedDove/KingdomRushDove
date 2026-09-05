@@ -47,6 +47,7 @@ local persistent_textures = table.to_map({
 	"go_towers_group23",
 	"go_towers_group24",
 	"go_towers_group25",
+	"go_stage128",
 	"tower_holders",
 	-- game_gui
 	"gui_common",

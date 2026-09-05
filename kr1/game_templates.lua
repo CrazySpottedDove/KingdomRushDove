@@ -17407,20 +17407,6 @@ tt.ui.can_select = false
 tt.ui.click_rect = r(-40, 0, 80, 60)
 tt.ui.z = 1
 
-tt = E:register_t("bullet_soldier_priests_barrack", "bolt")
-b = balance.specials.towers.tower_stage_28_priests_barrack.priest.ranged
-tt.render.sprites[1].name = "priest_projectile"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor = v(0.5, 0.5)
-tt.bullet.pop = nil
-tt.bullet.pop_conds = nil
-tt.bullet.acceleration_factor = 0.1
-tt.bullet.align_with_trajectory = true
-tt.bullet.damage_min = b.damage_min
-tt.bullet.damage_max = b.damage_max
-tt.bullet.particles_name = "ps_bullet_soldier_priests_barrack_trail"
-tt.bullet.hit_fx = "fx_soldier_priests_barrack_bolt_hit"
-
 tt = E:register_t("bullet_boss_spider_queen_tower_stun", "bomb")
 tt.main_script.update = scripts.bullet_boss_spider_queen_tower_stun.update
 tt.bullet.flight_time = fts(35)
@@ -17477,9 +17463,6 @@ tt.render.sprites[1].sort_y_offset = -30
 tt = E:register_t("fx_soldier_priests_barrack_abomination_eat", "fx")
 tt.render.sprites[1].name = "redemeed_cultist_barraca_unblinded_abomination_eat_fx"
 tt.render.sprites[1].sort_y_offset = -30
-
-tt = E:register_t("fx_soldier_priests_barrack_bolt_hit", "fx")
-tt.render.sprites[1].name = "priest_ranged_hit_idle"
 
 tt = E:register_t("aura_boss_spider_queen_spiderweb", "aura")
 b = balance.enemies.arachnids.boss_spider_queen.spiderweb

@@ -704,6 +704,14 @@ return {
 			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_NAME"),
 			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_stage_28_priests_barrack",
+			type = "tower_priests_barrack",
+			image = "kr5_main_icons_0041",
+			place = 30,
+			tt_title = _("TOWER_STAGE_28_PRIESTS_BARRACK_NAME"),
+			tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_DESCRIPTION")
+		}),
 		tpl.rally,
 		tpl.sell
 	}},
@@ -3056,7 +3064,36 @@ return {
 		image = "kr5_main_icons_0041",
 		action_arg = "soldier_priests_barrack",
 		tt_title = _("SPECIAL_PRIESTS_SOLDIERS_NAME"),
-		tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_DESCRIPTION")
+		tt_desc = _("SPECIAL_PRIESTS_SOLDIERS_DESCRIPTION")
+	}), M(tpl.upgrade_power, {
+		action_arg = "abomination",
+		image = "kr5_info_portraits_soldiers_0028",
+		place = 6,
+		sounds = {},
+		tt_phrase = _("TOWER_STAGE_28_PRIESTS_BARRACK_ABOMINATION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_STAGE_28_PRIESTS_BARRACK_ABOMINATION_NAME_1"),
+			tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_ABOMINATION_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_STAGE_28_PRIESTS_BARRACK_ABOMINATION_NAME_2"),
+			tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_ABOMINATION_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "explosion",
+		image = "kr5_special_icons_0030",
+		place = 7,
+		sounds = {},
+		tt_phrase = _("TOWER_STAGE_28_PRIESTS_BARRACK_EXPLOSION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_STAGE_28_PRIESTS_BARRACK_EXPLOSION_NAME_1"),
+			tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_EXPLOSION_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_STAGE_28_PRIESTS_BARRACK_EXPLOSION_NAME_2"),
+			tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_EXPLOSION_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_STAGE_28_PRIESTS_BARRACK_EXPLOSION_NAME_3"),
+			tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_EXPLOSION_DESCRIPTION_3")
+		}}
 	}), tpl.rally, tpl.sell}},
 	holder_blocked_spiders = {{M(tpl.unblock, {
 		action_arg = "tower_holder",

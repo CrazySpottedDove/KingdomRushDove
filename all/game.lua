@@ -58,6 +58,7 @@ game.required_textures = {
 	"go_towers_group23",
 	"go_towers_group24",
 	"go_towers_group25",
+	"go_stage128",
 	"tower_holders"
 }
 game.ref_h = REF_H
@@ -109,7 +110,8 @@ game.required_sounds = {
 	"tower_swamp_monster",
 	"tower_melting_furnace",
 	"tower_wicked_sisters",
-	"tower_sandworm"
+	"tower_sandworm",
+	"tower_stage_28_priests_barrack"
 }
 game.required_exoskeletons = {"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava"}
 game.plugin_required_textures = {}

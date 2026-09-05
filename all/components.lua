@@ -507,6 +507,7 @@ barrack.soldiers = {}
 barrack.rally_pos = nil
 barrack.rally_new = false
 barrack.unit_bought = nil
+-- barrack.scattered 控制士兵是否使用同一个 center。scattered 为 true 时，士兵 nav_rally.center 不一致
 
 local melee_attack = E:register_c("melee_attack")
 melee_attack.type = "melee"

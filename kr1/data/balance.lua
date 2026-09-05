@@ -8879,18 +8879,15 @@ local specials = {
 	},
 	towers = {
 		tower_stage_28_priests_barrack = {
-			cooldown_disable = 2,
-			max_soldiers = 3,
-			spawn_cooldown_max = 0.6,
-			spawn_cooldown_min = 0.3,
-			price = 0,
+			max_soldiers = 4,
+			price = 200,
+			rally_range = 174.4,
 			priest = {
-				regen_health = 0,
 				armor = 0,
 				max_speed = 45,
 				hp_max = 110,
-				price = 60,
-				transform_chances = {100, 0},
+				price = 105,
+				dead_lifetime = 10,
 				melee = {
 					cooldown = 1,
 					damage_min = 10,
@@ -8899,30 +8896,43 @@ local specials = {
 				},
 				ranged = {
 					range = 218,
-					damage_min = 30,
+					damage_min = 40,
 					cooldown = 2.5,
-					damage_max = 45,
+					damage_max = 65,
 					damage_type = DAMAGE_MAGICAL
-				}
+				},
+				melee_range = 60
+			},
+			explosion = {
+				price_inc = 120,
+				price_base = 200,
+				damage_type = DAMAGE_MAGICAL,
+				damage_min = 2,
+				damage_max = 6,
+				damage_inc = 6,
+				damage_radius = 50
 			},
 			abomination = {
+				price_base = 120,
+				price_inc = 200,
 				armor = 0,
 				max_speed = 25,
 				regen_health = 0,
 				hp_max = 500,
-				duration = 20,
+				duration = 10,
 				melee_attack = {
 					cooldown = 2,
 					damage_min = 45,
-					damage_max = 60
+					damage_max = 65
 				},
 				eat = {
-					cooldown = 10,
+					cooldown = 8,
 					hp_required = 0.3
-				}
+				},
+				melee_range = 70
 			},
 			tentacle = {
-				duration = 15,
+				duration = 10,
 				area_attack = {
 					radius = 50,
 					cooldown_min = 1,

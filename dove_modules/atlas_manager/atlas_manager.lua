@@ -88,8 +88,6 @@ local state = {
 	preview_files = nil,
 	merge_pages = nil,
 	scale_factor = 1,
-	view_mode = "atlas",
-	png_files = {},
 	_merged_idata = nil,
 	loaded_textures = {}
 }
@@ -146,7 +144,69 @@ end
 
 function atlas_manager:preview_group(gname)
 	local group = state.groups[gname]
-	if not group or not group.dds_files or #group.dds_files == 0 then
+	if not group then
+		return
+	end
+	-- 松散组（如 .images/append）：把每个 png 作为一页预览，可直接单图查看
+	if group._is_loose_group then
+		local files = {}
+		for _, fname in ipairs(group.frame_order) do
+			local frame = group.frames[fname]
+			if frame and frame._src_path then
+				local ok, data = pcall(love.filesystem.read, frame._src_path)
+				if not ok or not data then
+					local real = real_path(frame._src_path)
+					local fh = io.open(real, "rb")
+					if fh then
+						data = fh:read("*all")
+						fh:close()
+					end
+				end
+				if data then
+					local ok2, idata = pcall(love.image.newImageData, love.data.newByteData(data))
+					if ok2 then
+						local iw, ih = idata:getDimensions()
+						local canvas = G.newCanvas(iw, ih)
+						G.setCanvas(canvas)
+						G.setColor(1, 1, 1, 1)
+						G.clear(0, 0, 0, 0)
+						G.setBlendMode("alpha", "premultiplied")
+						G.draw(G.newImage(idata), 0, 0)
+						G.setBlendMode("alpha", "alphamultiply")
+						G.setCanvas()
+						files[#files + 1] = {
+							key = frame.a_name or fname,
+							canvas = canvas,
+							w = iw,
+							h = ih,
+							placements = {{
+								frame_name = fname,
+								x = 0,
+								y = 0,
+								w = iw,
+								h = ih,
+								data = {
+									group = gname
+								}
+							}},
+							sprite_list = {fname},
+							sprite_group = {
+								[fname] = gname
+							}
+						}
+					end
+				end
+			end
+		end
+		if #files == 0 then
+			self:set_status("该图集所有文件都无法加载")
+			return
+		end
+		self:set_preview_files(files)
+		self:show_preview_popup()
+		return
+	end
+	if not group.dds_files or #group.dds_files == 0 then
 		self:set_status("该图集无可预览的纹理")
 		return
 	end
@@ -463,7 +523,6 @@ function atlas_manager:init(w, h, done_callback)
 	self:build_controls()
 	self:build_preview_area()
 	self:build_button_bar()
-	self:update_view_mode()
 	self:refresh_groups()
 	ui.window:add_child(ui.fps_label)
 end
@@ -473,20 +532,17 @@ function atlas_manager:build_header()
 	local header = GGPanelHeader:new("图集管理器", 300)
 	header.pos = V.v(20, 14)
 	ui.window:add_child(header)
-	local mode_btn = self:make_button("PNG视图", V.v(90, 24))
-	mode_btn.pos = V.v(330, 14)
-	mode_btn._label.font_size = 12 * rs
-	mode_btn.on_press = function()
-		state.view_mode = state.view_mode == "atlas" and "png" or "atlas"
-		mode_btn._label.text = state.view_mode == "atlas" and "PNG视图" or "图集视图"
-		if state.view_mode == "png" then
-			self:refresh_png_list()
-		end
-		self:update_view_mode()
+	-- 重新扫描 .images/append：把新增的小图同步进松散组 append
+	local refresh_btn = self:make_button("刷新append", V.v(110, 24))
+	refresh_btn.pos = V.v(330, 14)
+	refresh_btn._label.font_size = 12 * rs
+	refresh_btn.on_press = function()
+		self:refresh_append_group()
 		self:rebuild_tree()
+		local g = state.groups["append"]
+		self:set_status(g and string.format("append 已同步: %d 张", #g.frame_order) or "append 无小图")
 	end
-	ui.mode_btn = mode_btn
-	ui.window:add_child(mode_btn)
+	ui.window:add_child(refresh_btn)
 	local status_text = GGLabel:new(V.v(self.ref_w - 480, 28))
 	status_text.font_name = "body"
 	status_text.font_size = 12 * rs
@@ -790,7 +846,7 @@ function atlas_manager:build_controls()
 	ui.select_y = action_y + 30
 	self:build_scale_dialog()
 	self:build_split_dialog()
-	self:build_pack_dialog()
+	self:build_png_scale_dialog()
 end
 
 local function make_dialog_text_input(w, initial)
@@ -842,6 +898,9 @@ local function make_dialog_text_input(w, initial)
 			return
 		end
 		self._text = (self._text or "") .. t
+		if self._on_change then
+			self:_on_change(self._text)
+		end
 	end
 	function inp:on_keypressed(key)
 		if not self._focused then
@@ -854,6 +913,9 @@ local function make_dialog_text_input(w, initial)
 				self._text = byteoffset > 1 and text:sub(1, byteoffset - 1) or ""
 			else
 				self._text = ""
+			end
+			if self._on_change then
+				self:_on_change(self._text)
 			end
 		elseif key == "return" or key == "escape" then
 			self._focused = false
@@ -1082,146 +1144,104 @@ function atlas_manager:build_split_dialog()
 	dlg:add_child(hint)
 end
 
-function atlas_manager:show_pack_dialog()
-	local selected = 0
-	for _, f in ipairs(state.png_files) do
-		if f.checked then
-			selected = selected + 1
-		end
-	end
-	if selected == 0 then
-		self:set_status("请先在PNG视图中勾选要打包的PNG")
-		return
-	end
-	ui.pack_dialog.hidden = false
-	ui.pack_dialog:order_to_front()
-	ui.pack_info.text = string.format("已选 %d 个PNG", selected)
-	ui.pack_name_input._text = "packed_atlas"
-	ui.pack_name_input._focused = false
-	ui.pack_w_text.text = tostring(state.merge_w)
-	ui.pack_h_text.text = tostring(state.merge_h)
-	ui.pack_non_pow2_tick.text = state.non_pow2_mode and "✓" or ""
-end
-
-function atlas_manager:build_pack_dialog()
+-- ========== 单张PNG 等比缩放 ==========
+-- 对 append 松散组中的单个 png 小图预览并等比缩放：
+-- 目标宽/目标高填其中一个即按等比(保比例)计算另一边；两个都填且比例不一致时取较小比例(不超界)。
+function atlas_manager:build_png_scale_dialog()
 	local rs = self._rs
-	local dlg = KView:new(V.v(440, 250))
-	dlg.anchor = V.v(220, 125)
+	local dlg = KView:new(V.v(460, 300))
+	dlg.anchor = V.v(230, 150)
 	dlg.pos = V.v(self.ref_w / 2, self.ref_h / 2)
 	dlg.colors.background = {20, 26, 42, 245}
 	dlg.shape = {
 		name = "rectangle",
-		args = {"fill", 0, 0, 440, 250, 12, 12}
+		args = {"fill", 0, 0, 460, 300, 12, 12}
 	}
 	dlg.hidden = true
 	ui.window:add_child(dlg)
-	ui.pack_dialog = dlg
+	ui.png_scale_dialog = dlg
 	local title = GGLabel:new(V.v(420, 26))
 	title.font_name = "body"
 	title.font_size = 15 * rs
 	title.text_align = "left"
 	title.vertical_align = "middle"
 	title.colors.text = {244, 221, 165, 255}
-	title.text = "打包PNG为图集"
+	title.text = "PNG等比缩放"
 	title.pos = V.v(16, 10)
 	dlg:add_child(title)
-	local info = GGLabel:new(V.v(420, 24))
+	local info = GGLabel:new(V.v(420, 44))
 	info.font_name = "body"
 	info.font_size = 12 * rs
 	info.text_align = "left"
-	info.vertical_align = "middle"
+	info.vertical_align = "top"
 	info.colors.text = {180, 190, 220, 255}
-	info.pos = V.v(16, 40)
-	ui.pack_info = info
+	info.pos = V.v(16, 42)
+	info.fit_lines = 2
+	info.fit_size = true
+	info.line_height = 1.3
+	ui.png_scale_info = info
 	dlg:add_child(info)
-	local nl = GGLabel:new(V.v(60, 22))
-	nl.font_name = "body"
-	nl.font_size = 12 * rs
-	nl.text_align = "left"
-	nl.vertical_align = "middle"
-	nl.colors.text = {205, 218, 248, 255}
-	nl.text = "名称:"
-	nl.pos = V.v(16, 70)
-	dlg:add_child(nl)
-	local name_input = make_dialog_text_input(140, "packed_atlas")
-	name_input.pos = V.v(72, 70)
-	dlg:add_child(name_input)
-	ui.pack_name_input = name_input
-	local wl = GGLabel:new(V.v(40, 22))
+	local wl = GGLabel:new(V.v(90, 22))
 	wl.font_name = "body"
 	wl.font_size = 12 * rs
 	wl.text_align = "left"
 	wl.vertical_align = "middle"
 	wl.colors.text = {205, 218, 248, 255}
-	wl.text = "宽:"
-	wl.pos = V.v(16, 102)
+	wl.text = "目标宽(x):"
+	wl.pos = V.v(16, 92)
 	dlg:add_child(wl)
-	local w_input = make_dialog_text_input(60, "2048")
-	w_input.pos = V.v(56, 102)
+	local w_input = make_dialog_text_input(100, "")
+	w_input.pos = V.v(110, 92)
 	dlg:add_child(w_input)
-	ui.pack_w_text = w_input
-	local hl = GGLabel:new(V.v(40, 22))
+	w_input._on_commit = function()
+		self:_update_png_scale_result()
+	end
+	w_input._on_change = function()
+		self:_update_png_scale_result()
+	end
+	ui.png_scale_w_input = w_input
+	local hl = GGLabel:new(V.v(90, 22))
 	hl.font_name = "body"
 	hl.font_size = 12 * rs
 	hl.text_align = "left"
 	hl.vertical_align = "middle"
 	hl.colors.text = {205, 218, 248, 255}
-	hl.text = "高:"
-	hl.pos = V.v(130, 102)
+	hl.text = "目标高(y):"
+	hl.pos = V.v(16, 122)
 	dlg:add_child(hl)
-	local h_input = make_dialog_text_input(60, "2048")
-	h_input.pos = V.v(170, 102)
+	local h_input = make_dialog_text_input(100, "")
+	h_input.pos = V.v(110, 122)
 	dlg:add_child(h_input)
-	ui.pack_h_text = h_input
-	local np_cb = KView:new(V.v(130, 20))
-	np_cb.pos = V.v(250, 103)
-	np_cb.colors.background = {22, 28, 42, 200}
-	np_cb.shape = {
-		name = "rectangle",
-		args = {"fill", 0, 0, 130, 20, 4, 4}
-	}
-	dlg:add_child(np_cb)
-	local np_t = GGLabel:new(V.v(120, 20))
-	np_t.font_name = "body"
-	np_t.font_size = 11 * rs
-	np_t.text_align = "left"
-	np_t.vertical_align = "middle"
-	np_t.colors.text = {180, 190, 220, 255}
-	np_t.text = "  非常规尺寸"
-	np_t.pos = V.v(5, 0)
-	np_cb:add_child(np_t)
-	local np_tick = GGLabel:new(V.v(14, 20))
-	np_tick.font_name = "body"
-	np_tick.font_size = 14 * rs
-	np_tick.text_align = "center"
-	np_tick.vertical_align = "middle"
-	np_tick.colors.text = {100, 220, 100, 255}
-	np_tick.pos = V.v(3, 0)
-	np_tick.text = ""
-	np_cb:add_child(np_tick)
-	ui.pack_non_pow2_tick = np_tick
-	function np_cb:on_click()
-		ui.pack_non_pow2 = not ui.pack_non_pow2
-		np_tick.text = ui.pack_non_pow2 and "✓" or ""
+	h_input._on_commit = function()
+		self:_update_png_scale_result()
 	end
-	local run_btn = self:make_button("执行打包", V.v(100, 30))
-	run_btn.pos = V.v(16, 140)
-	run_btn.on_press = function()
-		local name = ui.pack_name_input._text or "packed_atlas"
-		if name == "" then
-			name = "packed_atlas"
-		end
-		local w = tonumber(ui.pack_w_text._text or "2048")
-		local h = tonumber(ui.pack_h_text._text or "2048")
-		if not w or not h or w < 4 or h < 4 then
-			self:set_status("无效的图集尺寸")
-			return
-		end
-		self:pack_selected_pngs(name, w, h, ui.pack_non_pow2)
+	h_input._on_change = function()
+		self:_update_png_scale_result()
 	end
-	dlg:add_child(run_btn)
-	local close_btn = self:make_button("关闭", V.v(100, 30))
-	close_btn.pos = V.v(126, 140)
+	ui.png_scale_h_input = h_input
+	local result = GGLabel:new(V.v(420, 22))
+	result.font_name = "body"
+	result.font_size = 13 * rs
+	result.text_align = "left"
+	result.vertical_align = "middle"
+	result.colors.text = {100, 220, 100, 255}
+	result.pos = V.v(16, 152)
+	ui.png_scale_result = result
+	dlg:add_child(result)
+	local preview_btn = self:make_button("预览原图", V.v(110, 32))
+	preview_btn.pos = V.v(16, 190)
+	preview_btn.on_press = function()
+		self:preview_png_file(ui.png_scale_file)
+	end
+	dlg:add_child(preview_btn)
+	local apply_btn = self:make_button("应用缩放", V.v(110, 32))
+	apply_btn.pos = V.v(136, 190)
+	apply_btn.on_press = function()
+		self:apply_png_scale()
+	end
+	dlg:add_child(apply_btn)
+	local close_btn = self:make_button("关闭", V.v(110, 32))
+	close_btn.pos = V.v(256, 190)
 	close_btn.on_press = function()
 		dlg.hidden = true
 	end
@@ -1232,310 +1252,147 @@ function atlas_manager:build_pack_dialog()
 	hint.text_align = "left"
 	hint.vertical_align = "top"
 	hint.colors.text = {140, 155, 185, 255}
-	hint.text = "相同内容的PNG自动去重为alias；ref_scale 取每行输入值；目标尺寸超过4096时可后续拆分。"
-	hint.pos = V.v(16, 184)
+	hint.text = "等比缩放：只填宽或高，另一边自动按比例。两个都填时按较小比例（不超出）。应用将覆盖该PNG文件（原文件备份到 .images_backup）。"
+	hint.pos = V.v(16, 234)
 	hint.fit_lines = 2
 	hint.fit_size = true
 	hint.line_height = 1.3
 	dlg:add_child(hint)
 end
 
-function atlas_manager:pack_selected_pngs(name, pack_w, pack_h, non_pow2)
-	local selected = {}
-	for _, f in ipairs(state.png_files) do
-		if f.checked then
-			selected[#selected + 1] = f
-		end
-	end
-	if #selected == 0 then
-		self:set_status("没有选中任何PNG")
+function atlas_manager:show_png_scale_dialog(f)
+	if not f then
+		self:set_status("请先选中一个PNG")
 		return
 	end
-	-- load each png and compute trim + hash for dedup
-	local items = {}
-	local hash_to_name = {}
-	for _, f in ipairs(selected) do
-		local ok, data = pcall(love.filesystem.read, f.rel)
-		if not ok or not data then
-			local real = real_path(f.rel)
-			local fh = io.open(real, "rb")
-			if fh then
-				data = fh:read("*all")
-				fh:close()
-			end
-		end
-		if not data then
-			self:set_status("无法读取PNG: " .. f.name)
-			return
-		end
-		local ok2, idata = pcall(love.image.newImageData, love.data.newByteData(data))
-		if not ok2 then
-			self:set_status("无法解码PNG: " .. f.name)
-			return
-		end
-		local img_w, img_h = idata:getDimensions()
-		local left, top, right, bottom = self:_scan_alpha_trim(idata)
-		local crop_w = math.max(1, img_w - left - right)
-		local crop_h = math.max(1, img_h - top - bottom)
-		local hash = self:_hash_idata_region(idata, left, top, crop_w, crop_h)
-		items[#items + 1] = {
-			name = f.name,
-			ref_scale = f.ref_scale or 1,
-			idata = idata,
-			img_w = img_w,
-			img_h = img_h,
-			trim = {left, top, right, bottom},
-			crop_w = crop_w,
-			crop_h = crop_h,
-			hash = hash
-		}
+	ui.png_scale_file = f
+	ui.png_scale_info.text = string.format("%s  (%dx%d)", f.name, f.w or 0, f.h or 0)
+	ui.png_scale_w_input._text = ""
+	ui.png_scale_h_input._text = ""
+	ui.png_scale_w_input._focused = false
+	ui.png_scale_h_input._focused = false
+	ui.png_scale_result.text = ""
+	self:_update_png_scale_result()
+	ui.png_scale_dialog.hidden = false
+	ui.png_scale_dialog:order_to_front()
+end
+
+-- 计算等比缩放目标尺寸；无法计算时返回 nil
+function atlas_manager:_png_scale_target_dims()
+	local f = ui.png_scale_file
+	if not f then
+		return nil
 	end
-	-- dedup by hash; canonical keeps its own entry, duplicates become alias
-	local canonical = {}
-	local alias_map = {}
-	local order = {}
-	for _, it in ipairs(items) do
-		local c = hash_to_name[it.hash]
-		if c then
-			alias_map[it.name] = c
-		else
-			hash_to_name[it.hash] = it.name
-			canonical[it.name] = it
-			order[#order + 1] = it
-		end
+	local w, h = f.w or 0, f.h or 0
+	if w <= 0 or h <= 0 then
+		return nil
 	end
-	-- pack canonical items
-	local pack_frames = {}
-	for _, it in ipairs(order) do
-		pack_frames[#pack_frames + 1] = {
-			w = it.crop_w,
-			h = it.crop_h,
-			frame_name = it.name
-		}
+	local tw = tonumber(ui.png_scale_w_input and ui.png_scale_w_input._text or "")
+	local th = tonumber(ui.png_scale_h_input and ui.png_scale_h_input._text or "")
+	if (not tw or tw <= 0) and (not th or th <= 0) then
+		return nil
 	end
-	local w, h = pack_w, pack_h
-	local placements, err
-	if non_pow2 then
-		local step = 4
-		local max_attempts = 1024
-		for attempt = 1, max_attempts do
-			placements, err = atlas_binpack.pack(pack_frames, w, h)
-			if placements then
-				break
-			end
-			if attempt % 2 == 1 then
-				w = w + step
-			else
-				h = h + step
-			end
-		end
-		if not placements then
-			self:set_status("打包失败(非常规): " .. tostring(err))
-			return
-		end
-	else
-		placements, err = atlas_binpack.pack(pack_frames, w, h)
-		if not placements then
-			self:set_status("打包失败: " .. tostring(err))
-			return
-		end
+	local s = nil
+	if tw and tw > 0 then
+		s = tw / w
 	end
-	-- build merged atlas idata
-	local merged = love.image.newImageData(w, h)
-	merged:mapPixel(function()
-		return 0, 0, 0, 0
-	end)
-	for _, p in ipairs(placements) do
-		local it = canonical[p.frame_name]
-		local fw, fh = p.w, p.h
-		-- extract trimmed region
-		local canvas = G.newCanvas(fw, fh)
-		G.setCanvas(canvas)
-		G.setBlendMode("alpha", "premultiplied")
-		local quad = G.newQuad(it.trim[1], it.trim[2], fw, fh, it.img_w, it.img_h)
-		G.draw(G.newImage(it.idata), quad, 0, 0)
-		G.setBlendMode("alpha", "alphamultiply")
-		G.setCanvas()
-		local frame_idata = canvas:newImageData()
-		canvas:release()
-		merged:paste(frame_idata, p.x, p.y, 0, 0, fw, fh)
+	if th and th > 0 then
+		local sh = th / h
+		s = s and math.min(s, sh) or sh
 	end
-	state._merged_idata = merged
-	state.merge_w = w
-	state.merge_h = h
-	state.merge_name = name
-	state.merge_pages = nil
-	-- build new frames table for .lua
-	local new_frames = {}
-	for _, it in ipairs(order) do
-		local aliases = {}
-		for n, c in pairs(alias_map) do
-			if c == it.name then
-				aliases[#aliases + 1] = n
-			end
-		end
-		local pl = nil
-		for _, p in ipairs(placements) do
-			if p.frame_name == it.name then
-				pl = p
-				break
-			end
-		end
-		if pl then
-			local rs = it.ref_scale
-			new_frames[it.name] = {
-				a_name = name .. ".dds",
-				size = {math.floor(it.img_w * rs), math.floor(it.img_h * rs)},
-				trim = {math.floor(it.trim[1] * rs), math.floor(it.trim[2] * rs), math.floor(it.trim[3] * rs), math.floor(it.trim[4] * rs)},
-				a_size = {w, h},
-				f_quad = {pl.x, pl.y, pl.w, pl.h},
-				alias = aliases,
-				ref_scale = rs
-			}
-		end
+	if not s or s <= 0 then
+		return nil
 	end
-	-- write .lua/.luac/.aluac
-	local atlas_real_dir = real_path(ATLAS_DIR)
-	local backup_real_dir = real_path(BACKUP_DIR)
-	atlas_util.backup_files(atlas_real_dir, name, backup_real_dir, read_fs, write_real)
-	local ok_w, err_w = atlas_util.write_atlas_files(atlas_real_dir, name, new_frames, write_real)
-	if not ok_w then
-		self:set_status("写入图集文件失败: " .. tostring(err_w))
+	local nw = math.max(1, math.floor(w * s + 0.5))
+	local nh = math.max(1, math.floor(h * s + 0.5))
+	if nw > 16384 or nh > 16384 then
+		return nil
+	end
+	return nw, nh
+end
+
+function atlas_manager:_update_png_scale_result()
+	if not ui.png_scale_result then
 		return
 	end
-	-- write PNG archive
-	local png_path = real_path(IMAGES_DIR) .. "/" .. name .. ".png"
-	file_utlis.ensure_parent_dir(png_path)
-	local png_data = self:merged_idata_to_png(merged)
-	write_real(png_path, png_data)
-	-- set dds command
-	self._pending_dds_commands = {string.format("nvcompress.exe -bc3 -maximum %q %q", png_path, real_path(ATLAS_DIR) .. "/" .. name .. ".dds")}
-	ui.pack_dialog.hidden = true
-	self:set_status(string.format("已打包 %d 帧 (%d去重alias) 到 %dx%d: %s", #order, #selected - #order, w, h, name))
-	print(string.format("[atlas_manager] pack: %s %dx%d frames=%d aliases=%d", name, w, h, #order, #selected - #order))
-	-- build preview directly from merged idata (frames come from loose PNGs, not dds)
-	self._merge_placements = placements
-	self._merge_src_frames = {}
-	state._placements = placements
-	state._sprite_list = {}
-	state._sprite_group = {}
-	for _, it in ipairs(order) do
-		state._sprite_list[#state._sprite_list + 1] = it.name
-		state._sprite_group[it.name] = name
-		self._merge_src_frames[it.name] = {
-			size = new_frames[it.name].size,
-			trim = new_frames[it.name].trim,
-			a_size = new_frames[it.name].a_size,
-			f_quad = new_frames[it.name].f_quad,
-			alias = new_frames[it.name].alias,
-			ref_scale = new_frames[it.name].ref_scale
-		}
+	local f = ui.png_scale_file
+	local nw, nh = self:_png_scale_target_dims()
+	if nw then
+		ui.png_scale_result.text = string.format("等比结果: %dx%d", nw, nh)
+	elseif f then
+		ui.png_scale_result.text = string.format("原尺寸: %dx%d (输入目标宽或高)", f.w or 0, f.h or 0)
 	end
-	table.sort(state._sprite_list)
-	local canvas = G.newCanvas(w, h)
-	G.setCanvas(canvas)
-	local preview_img = G.newImage(merged)
-	G.setColor(1, 1, 1, 1)
-	G.clear(0, 0, 0, 0)
-	G.setBlendMode("alpha", "premultiplied")
-	G.draw(preview_img, 0, 0)
-	G.setBlendMode("alpha", "alphamultiply")
-	G.setCanvas()
-	if state.preview_files then
-		for _, f in ipairs(state.preview_files) do
-			if f.canvas and f.canvas ~= canvas then
-				f.canvas:release()
-			end
-		end
-	end
-	state.preview_files = {{
-		key = name,
-		canvas = canvas,
-		w = w,
-		h = h,
-		placements = placements,
-		sprite_list = state._sprite_list,
-		sprite_group = state._sprite_group
-	}}
-	state.preview_canvas = canvas
-	state.preview_valid = true
-	popup.file_idx = 1
-	self:select_preview_file(1)
-	self:show_preview_popup()
 end
 
-function atlas_manager:_scan_alpha_trim(idata)
-	local w, h = idata:getDimensions()
-	local left, top, right, bottom = 0, 0, 0, 0
-	for x = 0, w - 1 do
-		local found = false
-		for y = 0, h - 1 do
-			local _, _, _, a = idata:getPixel(x, y)
-			if a > 0 then
-				found = true
-				break
-			end
-		end
-		if found then
-			break
-		end
-		left = left + 1
+function atlas_manager:apply_png_scale()
+	local f = ui.png_scale_file
+	if not f then
+		self:set_status("没有可缩放的PNG")
+		return
 	end
-	for y = 0, h - 1 do
-		local found = false
-		for x = 0, w - 1 do
-			local _, _, _, a = idata:getPixel(x, y)
-			if a > 0 then
-				found = true
-				break
-			end
-		end
-		if found then
-			break
-		end
-		top = top + 1
+	local nw, nh = self:_png_scale_target_dims()
+	if not nw then
+		self:set_status("请输入有效的目标宽或目标高")
+		return
 	end
-	for x = w - 1, 0, -1 do
-		local found = false
-		for y = 0, h - 1 do
-			local _, _, _, a = idata:getPixel(x, y)
-			if a > 0 then
-				found = true
-				break
-			end
-		end
-		if found then
-			break
-		end
-		right = right + 1
+	local ow, oh = f.w or 0, f.h or 0
+	if nw == ow and nh == oh then
+		ui.png_scale_dialog.hidden = true
+		self:set_status("尺寸未变化")
+		return
 	end
-	for y = h - 1, 0, -1 do
-		local found = false
-		for x = 0, w - 1 do
-			local _, _, _, a = idata:getPixel(x, y)
-			if a > 0 then
-				found = true
-				break
-			end
+	local ok, data = pcall(love.filesystem.read, f.rel)
+	if not ok or not data then
+		local real = real_path(f.rel)
+		local fh = io.open(real, "rb")
+		if fh then
+			data = fh:read("*all")
+			fh:close()
 		end
-		if found then
-			break
-		end
-		bottom = bottom + 1
 	end
-	return left, top, right, bottom
-end
-
-function atlas_manager:_hash_idata_region(idata, x, y, w, h)
-	local region = love.image.newImageData(w, h)
-	region:paste(idata, 0, 0, x, y, w, h)
-	local px = region:getPixels()
-	region:release()
-	if px.getString then
-		px = px:getString()
+	if not data then
+		self:set_status("无法读取PNG: " .. tostring(f.name))
+		return
 	end
-	local digest = love.data.hash("sha1", px)
-	return love.data.encode("string", "hex", digest)
+	local ok2, idata = pcall(love.image.newImageData, love.data.newByteData(data))
+	if not ok2 then
+		self:set_status("无法解码PNG: " .. tostring(f.name))
+		return
+	end
+	local resized = self:_resample_idata(idata, nw, nh)
+	if not resized then
+		self:set_status("缩放失败")
+		return
+	end
+	local png_data = resized:encode("png")
+	if png_data.getString then
+		png_data = png_data:getString()
+	end
+	-- 备份原文件
+	local ts = tostring(os.time())
+	local backup_dir = real_path(BACKUP_DIR)
+	local backup_path = backup_dir .. "/" .. ts .. "_" .. tostring(f.name) .. ".png"
+	local ok_bak = write_real(backup_path, data)
+	if not ok_bak then
+		self:set_status("备份原图失败，已取消: " .. backup_path)
+		return
+	end
+	-- 覆盖源文件
+	local ok_write = write_real(real_path(f.rel), png_data)
+	if not ok_write then
+		self:set_status("写入PNG失败: " .. real_path(f.rel))
+		return
+	end
+	f.w, f.h = nw, nh
+	if f.dds_exists then
+		local dw, dh = self:_get_dds_dim(f.name)
+		f.dds_match = dw == nw and dh == nh
+	end
+	ui.png_scale_dialog.hidden = true
+	-- 若是 append 松散组中的文件，刷新其帧元数据（尺寸/裁剪）
+	self:refresh_append_group()
+	self:rebuild_tree()
+	self:set_status(string.format("已等比缩放 %s: %dx%d -> %dx%d", f.name, ow, oh, nw, nh))
 end
 
 function atlas_manager:build_preview_area()
@@ -1578,42 +1435,86 @@ function atlas_manager:build_button_bar()
 	bar_btn("替换图集", 5, function()
 		self:replace_with_upscaled()
 	end)
-	-- PNG mode action buttons
-	local png_bar_y = by + 40
-	local png_btn = function(text, idx, on_press)
-		local btn = self:make_button(text, V.v(bw, 30))
-		btn.pos = V.v(sx + (bw + gap) * idx, png_bar_y)
-		btn.on_press = on_press
-		ui.window:add_child(btn)
-		return btn
-	end
-	ui.png_batch_dds = png_btn("批量转DDS", 0, function()
-		self:convert_selected_pngs()
-	end)
-	ui.png_pack = png_btn("打包成图集", 1, function()
-		self:show_pack_dialog()
-	end)
-	ui.png_refresh = png_btn("刷新", 2, function()
-		self:refresh_png_list()
-		self:rebuild_tree()
-	end)
-	ui.png_mode_btns = {ui.png_batch_dds, ui.png_pack, ui.png_refresh}
-end
-
-local function set_png_buttons_visible(visible)
-	if not ui.png_mode_btns then
-		return
-	end
-	for _, b in ipairs(ui.png_mode_btns) do
-		b.hidden = not visible
-	end
-end
-
-function atlas_manager:update_view_mode()
-	set_png_buttons_visible(state.view_mode == "png")
+-- 说明：原 PNG 视图已移除，小图处理（预览/缩放/合并）统一在图集视图中完成。
 end
 
 local _dds_cache = {}
+
+-- 扫描 .images/append 平铺 png，返回 frames（loose frame 元数据）与有序名称列表
+function atlas_manager:_scan_append_dir_frames()
+	local frames = {}
+	local frame_order = {}
+	local append_dir = IMAGES_DIR .. "/append"
+	local ok_dir, items = pcall(love.filesystem.getDirectoryItems, append_dir)
+	if not ok_dir then
+		return frames, frame_order
+	end
+	for _, fn in ipairs(items) do
+		if fn:sub(-4) == ".png" then
+			local base = fn:sub(1, -5)
+			local full_rel = append_dir .. "/" .. fn
+			local trim_data, img_w, img_h = self:_compute_png_trim(full_rel)
+			if trim_data then
+				local crop_w = img_w - trim_data[1] - trim_data[3]
+				local crop_h = img_h - trim_data[2] - trim_data[4]
+				frames[base] = {
+					a_name = fn,
+					size = {img_w, img_h},
+					trim = trim_data,
+					a_size = {crop_w, crop_h},
+					f_quad = {0, 0, crop_w, crop_h},
+					alias = {},
+					ref_scale = 1,
+					dds_key = nil,
+					_is_loose = true,
+					_src_path = full_rel
+				}
+				frame_order[#frame_order + 1] = base
+			end
+		end
+	end
+	return frames, frame_order
+end
+
+-- 刷新 .images/append 松散组（组名 append），保留仍存在的帧的选中状态
+function atlas_manager:refresh_append_group()
+	local gname = "append"
+	local frames, frame_order = self:_scan_append_dir_frames()
+	local group = state.groups[gname]
+	if not group then
+		if #frame_order == 0 then
+			return
+		end
+		group = {
+			name = gname,
+			path = nil,
+			frames = {},
+			frame_order = {},
+			dds_files = {},
+			has_png_archive = false,
+			tex_size = "",
+			_is_loose_group = true
+		}
+		state.groups[gname] = group
+		state.group_order[#state.group_order + 1] = gname
+	end
+	-- 清理已不存在帧的勾选
+	for key in pairs(state.selected_frames) do
+		local prefix = gname .. "."
+		if key:sub(1, #prefix) == prefix then
+			local base = key:sub(#prefix + 1)
+			if not frames[base] then
+				state.selected_frames[key] = nil
+			end
+		end
+	end
+	group.frames = frames
+	group.frame_order = frame_order
+	if #frame_order == 0 then
+		state.groups[gname] = nil
+		table.removeobject(state.group_order, gname)
+	end
+end
 
 function atlas_manager:_get_dds_dim(dds_key)
 	if _dds_cache[dds_key] then
@@ -1706,311 +1607,11 @@ function atlas_manager:refresh_groups()
 			state.group_order[#state.group_order + 1] = f.base
 		end
 	end
-	-- scan loose PNGs
-	local ok_append, appends = pcall(love.filesystem.getDirectoryItems, IMAGES_DIR .. "/appends")
-	if ok_append then
-		for _, subname in ipairs(appends) do
-			local sub_rel = IMAGES_DIR .. "/appends/" .. subname
-			local sub_info = love.filesystem.getInfo(sub_rel)
-			if sub_info and sub_info.type == "directory" then
-				local png_files = love.filesystem.getDirectoryItems(sub_rel) or {}
-				local frames = {}
-				local frame_order = {}
-				for _, fn in ipairs(png_files) do
-					if fn:sub(-4) == ".png" then
-						local base = fn:sub(1, -5)
-						local full_rel = sub_rel .. "/" .. fn
-						local trim_data, img_w, img_h = self:_compute_png_trim(full_rel)
-						if trim_data then
-							local crop_w = img_w - trim_data[1] - trim_data[3]
-							local crop_h = img_h - trim_data[2] - trim_data[4]
-							frames[base] = {
-								a_name = fn,
-								size = {img_w, img_h},
-								trim = trim_data,
-								a_size = {crop_w, crop_h},
-								f_quad = {0, 0, crop_w, crop_h},
-								alias = {},
-								ref_scale = 1,
-								dds_key = nil,
-								_is_loose = true,
-								_src_path = full_rel
-							}
-							frame_order[#frame_order + 1] = base
-						end
-					end
-				end
-				if #frame_order > 0 then
-					state.groups[subname] = {
-						name = subname,
-						path = nil,
-						frames = frames,
-						frame_order = frame_order,
-						dds_files = {},
-						has_png_archive = false,
-						tex_size = "",
-						_is_loose_group = true
-					}
-					state.group_order[#state.group_order + 1] = subname
-				end
-			end
-		end
-	end
+	-- scan loose PNGs: .images/append 下的平铺小图，注册为一个可勾选的松散组
+	-- （组名固定 append，可与其它图集帧一起参与合并）
+	self:refresh_append_group()
 	self:set_status(string.format("已加载 %d 个图集", #state.group_order))
 	self:rebuild_tree()
-end
-
-function atlas_manager:_get_png_dim(rel_path)
-	local data = nil
-	local ok_read, d = pcall(love.filesystem.read, rel_path, 24)
-	if ok_read and d then
-		data = d
-	end
-	if not data or #data < 24 then
-		local real = real_path(rel_path)
-		local f = io.open(real, "rb")
-		if f then
-			data = f:read(24)
-			f:close()
-		end
-	end
-	if not data or #data < 24 then
-		return nil
-	end
-	-- PNG IHDR: bytes 16..19 = width, 20..23 = height (big-endian)
-	if data:sub(1, 8) ~= "\137PNG\r\n\26\n" then
-		return nil
-	end
-	local w = string.byte(data, 17) * 16777216 + string.byte(data, 18) * 65536 + string.byte(data, 19) * 256 + string.byte(data, 20)
-	local h = string.byte(data, 21) * 16777216 + string.byte(data, 22) * 65536 + string.byte(data, 23) * 256 + string.byte(data, 24)
-	if w > 0 and h > 0 then
-		return w, h
-	end
-	return nil
-end
-
-function atlas_manager:refresh_png_list()
-	state.png_files = {}
-	local seen = {}
-	local function add_dir(rel_dir)
-		local ok, items = pcall(love.filesystem.getDirectoryItems, rel_dir)
-		if not ok then
-			return
-		end
-		for _, fn in ipairs(items) do
-			if fn:sub(-4) == ".png" and not seen[fn:sub(1, -5)] then
-				local base = fn:sub(1, -5)
-				seen[base] = true
-				local full_rel = rel_dir .. "/" .. fn
-				local w, h = self:_get_png_dim(full_rel)
-				local dds_exists = FS.getInfo(ATLAS_DIR .. "/" .. base .. ".dds", "file") ~= nil
-				local dds_w, dds_h = self:_get_dds_dim(base)
-				local match = dds_exists and dds_w == w and dds_h == h
-				state.png_files[#state.png_files + 1] = {
-					name = base,
-					rel = full_rel,
-					w = w or 0,
-					h = h or 0,
-					dds_exists = dds_exists,
-					dds_match = match,
-					ref_scale = 1,
-					checked = false
-				}
-			end
-		end
-	end
-	add_dir(IMAGES_DIR)
-	local ok_append, appends = pcall(love.filesystem.getDirectoryItems, IMAGES_DIR .. "/appends")
-	if ok_append then
-		for _, sub in ipairs(appends) do
-			local sub_rel = IMAGES_DIR .. "/appends/" .. sub
-			local info = love.filesystem.getInfo(sub_rel)
-			if info and info.type == "directory" then
-				add_dir(sub_rel)
-			end
-		end
-	end
-	table.sort(state.png_files, function(a, b)
-		return a.name < b.name
-	end)
-end
-
-function atlas_manager:rebuild_png_tree()
-	local sl = ui.tree_list
-	local rs = self._rs
-	local sel_count = 0
-	for _, f in ipairs(state.png_files) do
-		if f.checked then
-			sel_count = sel_count + 1
-		end
-	end
-	ui.sel_label.text = string.format("选中: %d 个PNG", sel_count)
-	ui.sel_label.pos = V.v(20, ui.control_y)
-
-	-- header hint row
-	local hint = KView:new(V.v(sl.size.x, 26))
-	hint.colors.background = {30, 40, 60, 120}
-	local hint_txt = GGLabel:new(V.v(sl.size.x - 40, 26))
-	hint_txt.font_name = "body"
-	hint_txt.font_size = 11 * rs
-	hint_txt.text_align = "left"
-	hint_txt.vertical_align = "middle"
-	hint_txt.colors.text = {150, 175, 205, 255}
-	hint_txt.text = "PNG视图: 勾选后可在下方批量转DDS或打包成图集"
-	hint_txt.pos = V.v(12, 0)
-	hint_txt.fit_lines = 1
-	hint_txt.fit_size = true
-	hint:add_child(hint_txt)
-	sl:add_row(hint)
-
-	local all_btn_row = KView:new(V.v(sl.size.x, 24))
-	local sel_all = self:make_button("全选", V.v(50, 20))
-	sel_all.pos = V.v(10, 2)
-	sel_all._label.font_size = 10 * rs
-	sel_all.on_press = function()
-		for _, f in ipairs(state.png_files) do
-			f.checked = true
-		end
-		self:rebuild_tree()
-	end
-	all_btn_row:add_child(sel_all)
-	local unsel_all = self:make_button("取消", V.v(50, 20))
-	unsel_all.pos = V.v(68, 2)
-	unsel_all._label.font_size = 10 * rs
-	unsel_all.on_press = function()
-		for _, f in ipairs(state.png_files) do
-			f.checked = false
-		end
-		self:rebuild_tree()
-	end
-	all_btn_row:add_child(unsel_all)
-	local sel_ready = self:make_button("选就绪", V.v(60, 20))
-	sel_ready.pos = V.v(126, 2)
-	sel_ready._label.font_size = 10 * rs
-	sel_ready.on_press = function()
-		for _, f in ipairs(state.png_files) do
-			if f.dds_match then
-				f.checked = true
-			end
-		end
-		self:rebuild_tree()
-	end
-	all_btn_row:add_child(sel_ready)
-	sl:add_row(all_btn_row)
-
-	for _, f in ipairs(state.png_files) do
-		local row = KView:new(V.v(sl.size.x, 24))
-		row.propagate_on_click = true
-		row.propagate_on_down = true
-		row.propagate_on_up = true
-		row.colors.background = f.checked and {52, 118, 210, 70} or nil
-
-		local cb = KView:new(V.v(13, 13))
-		cb.pos = V.v(18, 5)
-		cb.propagate_on_click = true
-		row:add_child(cb)
-		cb._checked = f.checked
-
-		function cb._draw_self()
-			local g2 = love.graphics
-			local s = 13
-			if cb._checked then
-				g2.setColor(52, 118, 210, 255)
-				g2.rectangle("fill", 0, 0, s, s)
-				g2.setColor(255, 255, 255, 230)
-				g2.setLineWidth(2)
-				g2.line(3, 7, 5, 10)
-				g2.line(5, 10, 10, 3)
-				g2.setLineWidth(1)
-			else
-				g2.setColor(100, 130, 180, 120)
-				g2.setLineWidth(1.5)
-				g2.rectangle("line", 0, 0, s, s)
-				g2.setLineWidth(1)
-			end
-		end
-
-		function cb.on_click()
-			f.checked = not f.checked
-			self:rebuild_tree()
-		end
-
-		local status_color = {200, 120, 120, 255}
-		local status_txt = "✕"
-		if f.dds_exists then
-			if f.dds_match then
-				status_color = {100, 200, 100, 255}
-				status_txt = "✓"
-			else
-				status_color = {220, 200, 100, 255}
-				status_txt = "!"
-			end
-		end
-		local status_lbl = GGLabel:new(V.v(20, 24))
-		status_lbl.font_name = "body"
-		status_lbl.font_size = 12 * rs
-		status_lbl.text_align = "center"
-		status_lbl.vertical_align = "middle"
-		status_lbl.colors.text = status_color
-		status_lbl.text = status_txt
-		status_lbl.pos = V.v(40, 0)
-		row:add_child(status_lbl)
-
-		local name_lbl = GGLabel:new(V.v(sl.size.x - 320, 24))
-		name_lbl.font_name = "body"
-		name_lbl.font_size = 11 * rs
-		name_lbl.text_align = "left"
-		name_lbl.vertical_align = "middle"
-		name_lbl.colors.text = f.checked and {200, 220, 255, 255} or {180, 190, 210, 255}
-		name_lbl.text = string.format("  %s (%dx%d)", f.name, f.w or 0, f.h or 0)
-		name_lbl.pos = V.v(60, 0)
-		name_lbl.fit_lines = 1
-		name_lbl.fit_size = true
-		name_lbl.propagate_on_click = true
-		row:add_child(name_lbl)
-
-		local rs_lbl = GGLabel:new(V.v(34, 24))
-		rs_lbl.font_name = "body"
-		rs_lbl.font_size = 10 * rs
-		rs_lbl.text_align = "right"
-		rs_lbl.vertical_align = "middle"
-		rs_lbl.colors.text = {150, 175, 205, 255}
-		rs_lbl.text = "ref:"
-		rs_lbl.pos = V.v(sl.size.x - 210, 0)
-		row:add_child(rs_lbl)
-
-		local rs_input = make_dialog_text_input(46, tostring(f.ref_scale))
-		rs_input.pos = V.v(sl.size.x - 178, 1)
-		rs_input._on_commit = function(val)
-			local n = tonumber(val)
-			if n and n > 0 then
-				f.ref_scale = n
-			end
-		end
-		row:add_child(rs_input)
-
-		local prev = self:make_button("预览", V.v(40, 20))
-		prev.pos = V.v(sl.size.x - 118, 2)
-		prev._label.font_size = 10 * rs
-		prev.on_press = function()
-			self:preview_png_file(f)
-		end
-		row:add_child(prev)
-
-		local dds_btn = self:make_button("转DDS", V.v(52, 20))
-		dds_btn.pos = V.v(sl.size.x - 72, 2)
-		dds_btn._label.font_size = 10 * rs
-		dds_btn.on_press = function()
-			self:convert_png_to_dds(f)
-		end
-		row:add_child(dds_btn)
-
-		function row.on_click()
-			cb.on_click()
-		end
-
-		sl:add_row(row)
-	end
 end
 
 function atlas_manager:preview_png_file(f)
@@ -2063,44 +1664,6 @@ function atlas_manager:preview_png_file(f)
 		}
 	}})
 	self:show_preview_popup()
-end
-
-function atlas_manager:convert_png_to_dds(f)
-	local png_path = real_path(f.rel)
-	local dds_path = real_path(ATLAS_DIR) .. "/" .. f.name .. ".dds"
-	local cmd = string.format("nvcompress.exe -bc3 -maximum %q %q", png_path, dds_path)
-	print("[atlas_manager] convert: " .. cmd)
-	local ok = os.execute(cmd)
-	if ok then
-		f.dds_exists = true
-		f.dds_match = true
-		self:set_status("已转换: " .. f.name)
-	else
-		self:set_status("DDS转换失败: " .. f.name)
-	end
-	self:rebuild_tree()
-end
-
-function atlas_manager:convert_selected_pngs()
-	local selected = {}
-	for _, f in ipairs(state.png_files) do
-		if f.checked then
-			selected[#selected + 1] = f
-		end
-	end
-	if #selected == 0 then
-		self:set_status("没有选中任何PNG")
-		return
-	end
-	local done = 0
-	for _, f in ipairs(selected) do
-		self:convert_png_to_dds(f)
-		if f.dds_match then
-			done = done + 1
-		end
-	end
-	self:set_status(string.format("已转换 %d/%d 个PNG为DDS", done, #selected))
-	self:rebuild_tree()
 end
 
 function atlas_manager:_compute_png_trim(rel_path)
@@ -2193,11 +1756,6 @@ function atlas_manager:rebuild_tree()
 
 	sl:clear_rows()
 	local rs = self._rs
-
-	if state.view_mode == "png" then
-		self:rebuild_png_tree()
-		return
-	end
 
 	local sel_count = 0
 	for _, v in pairs(state.selected_frames) do
@@ -2303,8 +1861,13 @@ function atlas_manager:rebuild_tree()
 			png_indicator.font_size = 11 * rs
 			png_indicator.text_align = "center"
 			png_indicator.vertical_align = "middle"
-			png_indicator.colors.text = group.has_png_archive and {100, 200, 100, 255} or {150, 150, 150, 180}
-			png_indicator.text = group.has_png_archive and "PNG" or "DDS"
+			if group._is_loose_group then
+				png_indicator.colors.text = {100, 200, 220, 255}
+				png_indicator.text = "追加"
+			else
+				png_indicator.colors.text = group.has_png_archive and {100, 200, 100, 255} or {150, 150, 150, 180}
+				png_indicator.text = group.has_png_archive and "PNG" or "DDS"
+			end
 			png_indicator.pos = V.v(545, 0)
 			group_row:add_child(png_indicator)
 
@@ -2475,7 +2038,8 @@ function atlas_manager:rebuild_tree()
 						self:rebuild_tree()
 					end
 
-					local frame_label = GGLabel:new(V.v(ui.tree_list.size.x - 60, 24))
+					local label_w = ui.tree_list.size.x - (group._is_loose_group and 190 or 60)
+					local frame_label = GGLabel:new(V.v(label_w, 24))
 					frame_label.font_name = "body"
 					frame_label.font_size = 12 * rs
 					frame_label.text_align = "left"
@@ -2490,6 +2054,33 @@ function atlas_manager:rebuild_tree()
 					frame_label.fit_size = true
 					frame_label.propagate_on_click = true
 					frame_row:add_child(frame_label)
+
+					if group._is_loose_group then
+						-- 松散组（append）的帧就是单个 png 文件：提供单图预览与等比缩放
+						local src_rel = frame._src_path
+						local tmp = {
+							name = fname,
+							rel = src_rel,
+							w = frame.size and frame.size[1] or 0,
+							h = frame.size and frame.size[2] or 0,
+							dds_exists = false,
+							dds_match = false
+						}
+						local f_scale = self:make_button("缩放", V.v(46, 20))
+						f_scale.pos = V.v(ui.tree_list.size.x - 170, 2)
+						f_scale._label.font_size = 10 * rs
+						f_scale.on_press = function()
+							self:show_png_scale_dialog(tmp)
+						end
+						frame_row:add_child(f_scale)
+						local f_prev = self:make_button("预览", V.v(40, 20))
+						f_prev.pos = V.v(ui.tree_list.size.x - 118, 2)
+						f_prev._label.font_size = 10 * rs
+						f_prev.on_press = function()
+							self:preview_png_file(tmp)
+						end
+						frame_row:add_child(f_prev)
+					end
 
 					function frame_row.on_click()
 						cb_view.on_click()
@@ -2704,7 +2295,23 @@ function atlas_manager:do_merge()
 	print("[atlas_manager] merge: start")
 	local selected = self:get_selected_frame_list()
 	if #selected == 0 then
-		self:set_status("没有选中任何帧")
+		-- TEMP DIAG: dump why selection resolves empty
+		local parts = {}
+		for key, checked in pairs(state.selected_frames) do
+			if checked then
+				local dot = key and key:find("%.")
+				if not dot then
+					parts[#parts + 1] = key .. "(no dot)"
+				else
+					local gname = key:sub(1, dot - 1)
+					local fname = key:sub(dot + 1)
+					local g = state.groups[gname]
+					local f = g and g.frames[fname]
+					parts[#parts + 1] = string.format("%s -> group:%s frame:%s", key, g and "Y" or "N", f and "Y" or "N")
+				end
+			end
+		end
+		self:set_status("没有选中任何帧 | " .. table.concat(parts, ", "))
 		return
 	end
 	local name = ui.merge_name_input and ui.merge_name_input._text or "merged_atlas"
@@ -3337,8 +2944,7 @@ function atlas_manager:do_split(max_size)
 			written = written + 1
 		end
 	end
-	self:refresh_png_list()
-	self:set_status(string.format("已拆分为 %d 页，PNG已写入 .images (%s-1.png ...)，可在PNG视图选择转DDS", #page_entries, merge_name))
+	self:set_status(string.format("已拆分为 %d 页，PNG已写入 .images (%s-1.png ...)", #page_entries, merge_name))
 	print(string.format("[atlas_manager] split: wrote %d page PNGs as %s-N.png", written, merge_name))
 	self:show_preview_popup()
 end

@@ -33684,7 +33684,7 @@ return {
 		prefix = "priest_projectile",
 		to = 1
 	},
-	priest_ranged_hit_idle = {
+	priest_ranged_hit = {
 		from = 1,
 		prefix = "priest_ranged_hit",
 		to = 10
