@@ -69,7 +69,8 @@ screen_map.required_textures = {
 	"encyclopedia",
 	"encyclopedia_creeps",
 	"gui_ico",
-	"gui_common"
+	"gui_common",
+	"gui_portraits"
 }
 screen_map.plugin_required_textures = {}
 screen_map.plugin_required_sounds = {}
