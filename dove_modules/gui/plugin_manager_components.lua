@@ -114,10 +114,11 @@ end
 -- ─────────────────────────────────────────────
 PluginToggleButton = class("PluginToggleButton", KButtonNoText)
 
-function PluginToggleButton:initialize(initial_value, size)
+function PluginToggleButton:initialize(initial_value, size, label_font)
 	local rs = GGLabel.static.ref_h / REF_H
 	local w = size and size.x or 84
 	local h = size and size.y or 36
+	self._label_font = label_font or 16
 	KButtonNoText.initialize(self, V.v(w, h))
 	self.shape = {
 		name = "rectangle",
@@ -127,7 +128,7 @@ function PluginToggleButton:initialize(initial_value, size)
 	self._hover = false
 	self._label = GGLabel:new(self.size)
 	self._label.font_name = "body"
-	self._label.font_size = 16 * rs
+	self._label.font_size = self._label_font * rs
 	self._label.text_align = "center"
 	self._label.vertical_align = "middle"
 	self._label.propagate_on_click = true
@@ -181,6 +182,8 @@ function PluginItemRow:initialize(opts, row_w)
 	row_w = row_w or 760
 	KView.initialize(self, V.v(row_w, ROW_H))
 	self.opts = opts or {}
+	-- 三态 accent（on=绿 / off=红 / partial=黄）；nil 时退回 legacy 两态行为
+	self.accent_state = opts.accent_state
 	self._base_bg = {24, 18, 12, 210}
 	self._hover_bg = {40, 30, 18, 230}
 	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
@@ -388,11 +391,28 @@ function PluginItemRow:initialize(opts, row_w)
 end
 
 function PluginItemRow:_refresh_accent(enabled)
+	if self.accent_state then
+		if self.accent_state == "on" then
+			self._accent.colors.background = {55, 185, 80, 235}
+		elseif self.accent_state == "off" then
+			self._accent.colors.background = {185, 50, 45, 210}
+		else
+			-- partial（部分启用/缺成员）：黄色
+			self._accent.colors.background = {227, 190, 68, 235}
+		end
+		return
+	end
 	if enabled then
 		self._accent.colors.background = {55, 185, 80, 235}
 	else
 		self._accent.colors.background = {185, 50, 45, 210}
 	end
+end
+
+--- 更新行状态指示色（on=绿 / off=红 / partial=黄）
+function PluginItemRow:set_accent_state(state)
+	self.accent_state = state
+	self:_refresh_accent(true)
 end
 
 function PluginItemRow:set_dimmed(dimmed)

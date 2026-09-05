@@ -14,6 +14,7 @@ local plugin_main = require("plugin.plugin_main")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local markdown_view = require("dove_modules.gui.markdown_view")
 local zip = require("lib.zip")
+local plugin_packs = require("dove_modules.gui.plugin_manager_packs")
 
 local km = require("lib.klua.macros")
 local utf8_util = require("lib.utf8_utils")
@@ -447,6 +448,13 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._row_right_pad = km.clamp(row_right_pad, IS_ANDROID and 32 or 28, IS_ANDROID and 44 or 38)
 	self._row_action_bottom_margin = km.clamp(math.floor(18 * touch_scale + 0.5), 18, 26)
 	self._row_toggle_top_margin = km.clamp(math.floor(18 * touch_scale + 0.5), 18, 26)
+	-- 整合包行的动作按钮/状态列尺寸：动作较多时适度压缩宽度，减少与文本区重叠
+	self._pack_action_button_size = V.v(math.max(86, math.floor(self._row_action_button_size.x * 0.72 + 0.5)), self._row_action_button_size.y)
+	self._pack_row_status_width = km.clamp(math.floor(self._row_status_width * 0.8 + 0.5), 190, 300)
+	-- 头部第 2 行左侧的作用域切换按钮
+	local scope_btn_w = math.floor(84 * touch_scale + 0.5)
+	local scope_btn_gap = math.floor(8 * touch_scale + 0.5)
+	self._scope_btn_w = scope_btn_w
 
 	-- 视图状态
 	self.mode = "local"
@@ -494,6 +502,24 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		deleted = {},
 		updated = {}
 	}
+
+	-- 作用域（本地与商店共用同一变量）："plugins" 插件 / "packs" 整合包（本地模式=分组）
+	self.scope = "plugins"
+	-- 本地分组（packs/<entry>/pack.lua；v3 起本地不再落“已装商店包”记录，全部按分组对待）
+	self.local_packs = {}
+	self.local_pack_by_entry = {} -- entry -> cfg 表（文件损坏时为 nil）
+	self._pack_members_by_plugin = {} -- 插件 entry -> {[所属分组 entry]=true}（排他过滤 / 插件行标注）
+	self.pack_store_page = 1
+	self.pack_store_total_pages = 1
+	self.pack_store_items = {}
+	self._pack_store_page_cache = {}
+	self._pack_op_entry = nil -- 正在“同步成员”的商店整合包 entry（商店行状态显示用）
+	-- 自建的轻量 overlay（确认弹层 / 分组编辑器），同一时刻至多一个
+	self._pack_confirm_layer = nil
+	self._group_editor_layer = nil
+	self._group_editor_members = nil
+	self._group_editor_order = nil
+	self._group_editor_search = ""
 
 	-- 开发者模式
 	self._developer_config = {
@@ -567,11 +593,13 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		self.mode = (self.mode == "local") and "store" or "local"
 		self:_refresh_header_buttons()
 		self:_render_current_list()
-		if prev_mode ~= "store" and self.mode == "store" and #self.store_items == 0 and not self._active_task then
-			self.store_page = 1
-			self:_start_task("刷新商店列表", function()
-				return self:_fetch_store_list()
-			end)
+		-- 回到本地且当前为分组（packs）作用域：从磁盘刷新本地分组列表（不覆盖未保存的插件开关）
+		if self.mode == "local" and self.scope == "packs" then
+			self:_reload_local_packs()
+			self:_render_current_list()
+		end
+		if prev_mode ~= "store" and self.mode == "store" then
+			self:_ensure_store_data_if_needed()
 		end
 	end
 
@@ -590,10 +618,8 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		self._uninstalled_only = not self._uninstalled_only
 		self:_refresh_header_buttons()
 		if self.mode == "store" then
-			self.store_page = 1
-			self:_start_task("刷新商店列表", function()
-				return self:_fetch_store_list()
-			end)
+			self:_reset_store_page()
+			self:_start_store_refresh()
 		end
 	end
 
@@ -615,12 +641,10 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 			self.sort_idx = v
 		end,
 		on_select = function()
-			self.store_page = 1
+			self:_reset_store_page()
 			self:_refresh_header_buttons()
 			if self.mode == "store" then
-				self:_start_task("刷新商店列表", function()
-					return self:_fetch_store_list()
-				end)
+				self:_start_store_refresh()
 			end
 		end
 	})
@@ -643,12 +667,10 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 			self.category_idx = v
 		end,
 		on_select = function()
-			self.store_page = 1
+			self:_reset_store_page()
 			self:_refresh_header_buttons()
 			if self.mode == "store" then
-				self:_start_task("刷新商店列表", function()
-					return self:_fetch_store_list()
-				end)
+				self:_start_store_refresh()
 			else
 				self:_render_current_list()
 			end
@@ -658,14 +680,23 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.refresh_btn = header_btn("刷新商店", header_group_x, header_row2_y)
 	self.refresh_btn.on_press = function()
 		if self.mode == "store" then
-			self:_start_task("刷新商店列表", function()
-				return self:_fetch_store_list()
-			end)
+			self:_start_store_refresh()
+		elseif self.scope == "packs" then
+			-- 本地分组视图不需要联网：从磁盘重新加载（含外部手改/清理后的同步）
+			self:_reload_local_packs()
+			self:_set_status("已刷新本地分组列表", 0)
+			self:_render_current_list()
 		else
 			self:_start_task("查询远端条目", function()
 				return self:_fetch_remote_entries_for_local()
 			end)
 		end
+	end
+
+	self.new_group_btn = header_btn("新建分组", header_group_x + header_btn_w + header_btn_gap, header_row2_y)
+	self.new_group_btn.hidden = true
+	self.new_group_btn.on_press = function()
+		self:_open_group_editor(nil)
 	end
 
 	self.update_all_btn = header_btn("一键更新全部", header_group_x + header_btn_w + header_btn_gap, header_row2_y)
@@ -688,6 +719,30 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		self:_toggle_dl_view()
 	end
 
+	-- 作用域切换按钮（两种 mode 均显示；位于头部第 2 行左侧，不占用右侧按钮区）
+	self.scope_plugins_btn = header_btn("插件", 20, header_row2_y, scope_btn_w, header_btn_h)
+	self.scope_plugins_btn.on_press = function()
+		if self.scope == "plugins" then
+			return
+		end
+		self.scope = "plugins"
+		self:_refresh_header_buttons()
+		self:_render_current_list()
+	end
+	self.scope_packs_btn = header_btn("分组", 20 + scope_btn_w + scope_btn_gap, header_row2_y, scope_btn_w, header_btn_h)
+	self.scope_packs_btn.on_press = function()
+		if self.scope == "packs" then
+			return
+		end
+		self.scope = "packs"
+		if self.mode == "local" then
+			-- 本地分组视图：从磁盘读取最新 pack（分组）文件（不触发 _reload_local_plugins）
+			self:_reload_local_packs()
+		end
+		self:_refresh_header_buttons()
+		self:_render_current_list()
+	end
+
 	-- 分页控件与状态提示
 	local pager_gap = 10
 	local pager_next_x = panel_w - 20 - pager_btn_w
@@ -696,13 +751,21 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 
 	self.prev_page_btn = header_btn("上一页", pager_prev_x, pager_y, pager_btn_w, pager_btn_h)
 	self.prev_page_btn.on_press = function()
-		if self.mode ~= "store" or self.store_page <= 1 then
+		if self.mode ~= "store" then
 			return
 		end
-		self.store_page = self.store_page - 1
-		self:_start_task("翻页刷新", function()
-			return self:_fetch_store_list()
-		end)
+		if self.scope == "packs" then
+			if self.pack_store_page <= 1 then
+				return
+			end
+			self.pack_store_page = self.pack_store_page - 1
+		else
+			if self.store_page <= 1 then
+				return
+			end
+			self.store_page = self.store_page - 1
+		end
+		self:_start_store_refresh()
 	end
 
 	local sep = KView:new(V.v(panel_w - 40, 1))
@@ -754,13 +817,21 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 
 	self.next_page_btn = header_btn("下一页", pager_next_x, pager_y, pager_btn_w, pager_btn_h)
 	self.next_page_btn.on_press = function()
-		if self.mode ~= "store" or self.store_page >= self.store_total_pages then
+		if self.mode ~= "store" then
 			return
 		end
-		self.store_page = self.store_page + 1
-		self:_start_task("翻页刷新", function()
-			return self:_fetch_store_list()
-		end)
+		if self.scope == "packs" then
+			if self.pack_store_page >= self.pack_store_total_pages then
+				return
+			end
+			self.pack_store_page = self.pack_store_page + 1
+		else
+			if self.store_page >= self.store_total_pages then
+				return
+			end
+			self.store_page = self.store_page + 1
+		end
+		self:_start_store_refresh()
 	end
 
 	-- 任务进度对话框
@@ -1042,6 +1113,9 @@ end
 
 function PluginManagerView:_refresh_header_buttons()
 	self.mode_btn:set_text(self.mode == "local" and "前往商店" or "回到本地")
+	-- 作用域按钮：本地模式下 packs 作用域是「分组」；商店模式下是「整合包」（整合包商店）
+	self.scope_packs_btn:set_text(self.mode == "local" and "分组" or "整合包")
+	self:_refresh_scope_buttons()
 	self.sort_btn:set_text("排序：" .. SORT_OPTIONS[self.sort_idx].label)
 	self.category_btn:set_text("分类：" .. CATEGORY_OPTIONS[self.category_idx].label)
 	if self._uninstalled_only then
@@ -1053,22 +1127,37 @@ function PluginManagerView:_refresh_header_buttons()
 		self.uninstalled_btn:_refresh()
 	end
 	local in_store = self.mode == "store"
-	self.uninstalled_btn.hidden = not in_store
+	local in_packs = self.scope == "packs"
+	-- 只看未安装只对插件商店有意义（整合包商店不落本地记录，无“已装”概念）
+	self.uninstalled_btn.hidden = not in_store or in_packs
 	-- 搜索框常驻：商店模式搜索远端，本地模式过滤本地
 	local task_running = self._active_task ~= nil
-	self.refresh_btn:set_text(in_store and "刷新商店" or "查询远端")
+	-- 本地分组视图的“刷新”只是重读磁盘（不联网）
+	self.refresh_btn:set_text(in_store and "刷新商店" or (in_packs and "刷新分组" or "查询远端"))
+	-- 分类按钮常显：本地插件按分类过滤、商店（插件/整合包）按分类筛选、本地分组按分组 tag 筛选
+	self.category_btn.hidden = false
+	self.category_btn:set_enabled(true)
+	self.sort_btn.hidden = in_packs and not in_store
 	self.sort_btn:set_enabled(in_store and not self._active_task)
-	self.category_btn:set_enabled(true) -- 分类按钮始终可用，本地下直接切分类，商店下刷新商店列表
 	self.refresh_btn:set_enabled(not self._active_task)
 	self.prev_page_btn.hidden = not in_store
 	self.page_lbl.hidden = not in_store
 	self.next_page_btn.hidden = not in_store
-	self.prev_page_btn:set_enabled(in_store and not task_running and self.store_page > 1)
-	self.next_page_btn:set_enabled(in_store and not task_running and self.store_page < self.store_total_pages)
-	self.page_lbl.text = string.format("第%d/%d页", self.store_page, self.store_total_pages)
+	if in_packs then
+		self.prev_page_btn:set_enabled(in_store and not task_running and self.pack_store_page > 1)
+		self.next_page_btn:set_enabled(in_store and not task_running and self.pack_store_page < self.pack_store_total_pages)
+		self.page_lbl.text = string.format("第%d/%d页", self.pack_store_page, self.pack_store_total_pages)
+	else
+		self.prev_page_btn:set_enabled(in_store and not task_running and self.store_page > 1)
+		self.next_page_btn:set_enabled(in_store and not task_running and self.store_page < self.store_total_pages)
+		self.page_lbl.text = string.format("第%d/%d页", self.store_page, self.store_total_pages)
+	end
 	self.task_cancel_btn:set_enabled(task_running)
+	-- 整合包作用域隐藏单插件类按钮：一键更新全部 / 我的插件；本地分组视图显示“新建分组”
+	self.update_all_btn.hidden = in_packs
+	self.my_plugins_btn.hidden = not self._developer_mode or in_store or in_packs
+	self.new_group_btn.hidden = not (not in_store and in_packs)
 	self.update_all_btn:set_enabled(not task_running)
-	self.my_plugins_btn.hidden = not self._developer_mode or in_store
 	if not self.my_plugins_btn.hidden then
 		if self._my_plugins_only then
 			self.my_plugins_btn:set_text("切换本地插件")
@@ -1079,6 +1168,20 @@ function PluginManagerView:_refresh_header_buttons()
 			self.my_plugins_btn:_refresh()
 		end
 	end
+end
+
+--- 刷新作用域切换按钮（本地：插件/分组；商店：插件/整合包）的高亮态
+function PluginManagerView:_refresh_scope_buttons()
+	local function style(btn, active)
+		if active then
+			btn.colors.background = {161, 122, 45, 245}
+			btn._label.colors.text = {255, 240, 190, 255}
+		else
+			btn:_refresh()
+		end
+	end
+	style(self.scope_plugins_btn, self.scope ~= "packs")
+	style(self.scope_packs_btn, self.scope == "packs")
 end
 
 function PluginManagerView:_toggle_sort_panel()
@@ -1281,10 +1384,11 @@ end
 function PluginManagerView:_on_search_submit(text)
 	self._search_query = text
 	if self.mode == "store" then
-		self.store_page = 1
-		self:_start_task("搜索插件", function()
-			return self:_fetch_store_list()
-		end)
+		self:_reset_store_page()
+		self:_start_store_refresh()
+	elseif self.scope == "packs" then
+		-- 本地分组：磁盘数据未变，仅按新关键字过滤重绘
+		self:_render_current_list()
 	else
 		self:_render_current_list()
 	end
@@ -2269,7 +2373,7 @@ function PluginManagerView:_render_local_list()
 			local row = PluginItemRow:new({
 				plugin_data = plugin_data,
 				title = cfg.name or plugin_data.name,
-				meta = string.format("%s v%s  作者: %s", plugin_data.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)),
+				meta = string.format("%s v%s  作者: %s", plugin_data.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)) .. self:_group_tag_for(plugin_data.entry),
 				desc = cfg.desc or "",
 				status = status,
 				show_toggle = not global_disabled,
@@ -2400,7 +2504,13 @@ function PluginManagerView:_render_current_list()
 	local plugin_list = self.plugin_list
 	local saved_scroll = plugin_list and plugin_list.scroll_origin_y or 0
 	if self.mode == "store" then
-		self:_render_store_list()
+		if self.scope == "packs" then
+			self:_render_store_packs_list()
+		else
+			self:_render_store_list()
+		end
+	elseif self.scope == "packs" then
+		self:_render_local_groups_list()
 	else
 		self:_render_local_list()
 	end
@@ -2447,6 +2557,8 @@ function PluginManagerView:show()
 	self.global_toggle:set_value(cfg.enabled ~= false)
 	self.global_toggle.on_change = saved_cb
 	self:_reload_local_plugins()
+	-- 本地分组：从磁盘读取（只刷新分组数据，不覆盖未保存的插件开关）
+	self:_reload_local_packs()
 	self:_capture_state()
 	self:_render_current_list()
 	self.task_dialog.hidden = true
@@ -2503,14 +2615,17 @@ function PluginManagerView:update(dt)
 	local ok, result = coroutine.resume(self._active_task)
 	if not ok then
 		self._active_task = nil
+		self._pack_op_entry = nil
 		self.task_dialog.hidden = true
 		self:_set_status("操作失败：" .. tostring(result), 0)
 		log.error("plugin manager task failed: %s", tostring(result))
+		self:_render_current_list()
 		self:_refresh_header_buttons()
 		return
 	end
 	if coroutine.status(self._active_task) == "dead" then
 		self._active_task = nil
+		self._pack_op_entry = nil
 		self.task_dialog.hidden = true
 		self._task_result = result
 		if result and result.ok then
@@ -2521,6 +2636,8 @@ function PluginManagerView:update(dt)
 			self:_set_status("操作失败：" .. tostring(result and result.err or "unknown"), 0)
 		end
 		self._cancel_requested = false
+		-- 任务终态：重绘列表，恢复任务期间被禁用的行内动作按钮
+		self:_render_current_list()
 		self:_refresh_header_buttons()
 	end
 end
@@ -3468,6 +3585,1588 @@ function PluginManagerView:_update_dl_view_progress()
 			task._state_lbl.text = state_text
 		end
 	end
+end
+
+-- ─────────────────────────────────────────────
+-- 整合包商店 / 本地分组（Packs/Groups）作用域（设计稿 v3 简化）
+-- ─────────────────────────────────────────────
+-- 本地分组：packs/<entry>/pack.lua 一律按本地分组对待；
+-- 商店整合包：仅「浏览 + 安装/重新同步」（同步成员插件，不写任何本地包记录）。
+
+-- ─────────────────────────────────────────────
+-- 本地分组：数据层
+-- ─────────────────────────────────────────────
+
+--- 聚合推导（成员 enabled 聚合 + 缺失成员判定；纯展示）
+function PluginManagerView:_aggregate_group(cfg)
+	if type(cfg) ~= "table" then
+		return {
+			state = "off",
+			total = 0,
+			exist_count = 0,
+			on_count = 0,
+			missing_entries = {}
+		}
+	end
+	return plugin_packs.aggregate(cfg, function(entry)
+		local pd = self.local_by_entry[entry] or self.local_by_name[entry]
+		if not pd or not pd.config then
+			return nil
+		end
+		return pd.config.enabled ~= false
+	end)
+end
+
+--- 重建本地分组映射与「插件所属分组」索引（插件 entry -> {[分组 entry]=true}；排他过滤/行标注用）
+function PluginManagerView:_rebuild_group_index()
+	self.local_pack_by_entry = {}
+	self._pack_members_by_plugin = {}
+	for _, row in ipairs(self.local_packs) do
+		if row.entry then
+			self.local_pack_by_entry[row.entry] = row.cfg
+		end
+		if row.cfg and type(row.cfg.members) == "table" then
+			for _, member in ipairs(plugin_packs.entries_of(row.cfg)) do
+				local owners = self._pack_members_by_plugin[member]
+				if not owners then
+					owners = {}
+					self._pack_members_by_plugin[member] = owners
+				end
+				owners[row.entry] = true
+			end
+		end
+	end
+end
+
+--- 从磁盘刷新本地分组列表与映射。
+--- v3：聚合状态纯展示（渲染时实时推导），不再写回 pack 文件。
+--- 只刷新分组数据，绝不触发 _reload_local_plugins（避免覆盖未保存的插件开关修改）。
+function PluginManagerView:_reload_local_packs()
+	self.local_packs = plugin_packs.list()
+	self:_rebuild_group_index()
+end
+
+--- 本地插件行 meta 的「所属分组」标记（历史遗留数据可能同属多组，取名前几个）
+function PluginManagerView:_group_tag_for(entry)
+	local owners = self._pack_members_by_plugin and self._pack_members_by_plugin[entry]
+	if not owners then
+		return ""
+	end
+	local names = {}
+	for ge in pairs(owners) do
+		local cfg = self.local_pack_by_entry and self.local_pack_by_entry[ge]
+		names[#names + 1] = (cfg and (cfg.name or ge)) or tostring(ge)
+	end
+	if #names == 0 then
+		return ""
+	end
+	table.sort(names)
+	if #names == 1 then
+		return " · 分组:" .. tostring(names[1])
+	end
+	return string.format(" · 分组:%s(+%d)", tostring(names[1]), #names - 1)
+end
+
+--- 插件是否属于「其它」分组（用于分组编辑器候选排他；editing_entry 为正在编辑的分组 entry，新建为 nil）
+function PluginManagerView:_member_in_other_group(entry, editing_entry)
+	local owners = self._pack_members_by_plugin[entry]
+	if not owners then
+		return false
+	end
+	for ge in pairs(owners) do
+		if ge ~= editing_entry then
+			return true
+		end
+	end
+	return false
+end
+
+-- ─────────────────────────────────────────────
+-- 本地分组：列表渲染
+-- ─────────────────────────────────────────────
+
+--- 分组行状态栏文案（成员 enabled 聚合，纯展示）
+function PluginManagerView:_build_group_status(cfg, agg)
+	if #agg.missing_entries > 0 then
+		return "缺成员 " .. #agg.missing_entries
+	elseif agg.state == "on" then
+		return "全部启用"
+	elseif agg.state == "off" then
+		return "已停用"
+	end
+	return string.format("部分启用 %d/%d", agg.on_count, agg.exist_count)
+end
+
+function PluginManagerView:_render_local_groups_list()
+	self.plugin_list:clear_rows()
+	self._plugin_rows = {}
+	local rs = GGLabel.static.ref_h / REF_H
+	local list_w = self.plugin_list.size.x - self.plugin_list.scroller_width - 2 * self.plugin_list.scroller_margin - 4
+	local global_disabled = not self.global_toggle.value
+	local idle = self._active_task == nil
+	local q = self._search_query and self._search_query ~= "" and self._search_query:lower()
+
+	if #self.local_packs == 0 then
+		local lbl = GGLabel:new(V.v(list_w, 60))
+		lbl.font_name = "body"
+		lbl.font_size = 14 * rs
+		lbl.text_align = "center"
+		lbl.colors.text = {214, 193, 144, 255}
+		lbl.text = "暂无本地分组：点「新建分组」创建自己的插件组合"
+		self.plugin_list:add_row(lbl)
+		return
+	end
+
+	for _, row in ipairs(self.local_packs) do
+		local cfg = row.cfg
+		if cfg then
+			local title = cfg.name or row.entry
+			if q and not (tostring(title):lower():find(q, 1, true) or tostring(cfg.desc or ""):lower():find(q, 1, true) or tostring(row.entry):lower():find(q, 1, true)) then
+				goto continue
+			end
+			local gcat = (cfg.category and cfg.category ~= "") and cfg.category or "other"
+			local cat_opt = CATEGORY_OPTIONS[self.category_idx]
+			if cat_opt.value ~= "all" then
+				local gcat_norm = "other"
+				for _, co in ipairs(CATEGORY_OPTIONS) do
+					if co.value == gcat then
+						gcat_norm = gcat
+						break
+					end
+				end
+				if gcat_norm ~= cat_opt.value then
+					goto continue
+				end
+			end
+			local agg = self:_aggregate_group(cfg)
+			local member_count = #plugin_packs.entries_of(cfg)
+			local status = self:_build_group_status(cfg, agg)
+
+			local actions = {}
+			actions[#actions + 1] = {
+				text = "编辑",
+				enabled = idle,
+				on_press = function()
+					self:_open_group_editor(cfg)
+				end
+			}
+			-- 启用/停用整组始终都提供（成员为 0 时置灰）
+			actions[#actions + 1] = {
+				text = "启用整组",
+				enabled = idle and member_count > 0,
+				on_press = function()
+					self:_set_group_enabled(cfg, true)
+				end
+			}
+			actions[#actions + 1] = {
+				text = "停用整组",
+				enabled = idle and member_count > 0,
+				on_press = function()
+					self:_set_group_enabled(cfg, false)
+				end
+			}
+			actions[#actions + 1] = {
+				text = "删除分组",
+				enabled = idle,
+				on_press = function()
+					self:_confirm_delete_group(row)
+				end
+			}
+
+			local meta = string.format("本地分组 · %d 个成员", member_count)
+			if gcat ~= "other" then
+				local gtag_label = gcat
+				for _, co in ipairs(CATEGORY_OPTIONS) do
+					if co.value == gcat then
+						gtag_label = co.label
+						break
+					end
+				end
+				meta = meta .. " · " .. tostring(gtag_label)
+			end
+			local pack_row = PluginItemRow:new({
+				title = title,
+				meta = meta,
+				desc = (cfg.desc and cfg.desc ~= "") and cfg.desc or "暂无简介",
+				status = status,
+				show_toggle = false,
+				accent_state = agg.state,
+				action_button_size = self._pack_action_button_size,
+				status_width = self._pack_row_status_width,
+				right_pad = self._row_right_pad,
+				action_bottom_margin = self._row_action_bottom_margin,
+				actions = global_disabled and {} or actions
+			}, list_w)
+			if global_disabled then
+				pack_row:set_dimmed(true)
+			end
+			self.plugin_list:add_row(pack_row)
+			self.plugin_list:add_row(KVirtualView:new(V.v(list_w, 10)))
+		else
+			-- 损坏的分组文件行：仅提供删除清理入口
+			if q and not tostring(row.entry):lower():find(q, 1, true) then
+				goto continue
+			end
+			local pack_row = PluginItemRow:new({
+				title = tostring(row.entry) .. "（分组文件损坏）",
+				meta = "packs/" .. tostring(row.entry) .. "/pack.lua",
+				desc = "该分组文件无法解析。分组本身不影响任何插件，可删除该分组清理损坏文件。",
+				status = "文件损坏",
+				show_toggle = false,
+				action_button_size = self._pack_action_button_size,
+				status_width = self._pack_row_status_width,
+				right_pad = self._row_right_pad,
+				action_bottom_margin = self._row_action_bottom_margin,
+				actions = global_disabled and {} or {{
+					text = "删除分组",
+					enabled = idle,
+					on_press = function()
+						self:_confirm_delete_group(row)
+					end
+				}}
+			}, list_w)
+			self.plugin_list:add_row(pack_row)
+			self.plugin_list:add_row(KVirtualView:new(V.v(list_w, 10)))
+		end
+		::continue::
+	end
+end
+
+-- ─────────────────────────────────────────────
+-- 整合包商店：列表与数据（浏览 + 安装/重新同步；无本地包记录）
+-- ─────────────────────────────────────────────
+
+--- 进入商店模式后按当前作用域决定是否自动拉取第一页
+function PluginManagerView:_ensure_store_data_if_needed()
+	if self._active_task then
+		return
+	end
+	if self.scope == "packs" then
+		if #self.pack_store_items == 0 then
+			self.pack_store_page = 1
+			self:_start_store_refresh()
+		end
+	elseif #self.store_items == 0 then
+		self.store_page = 1
+		self:_start_store_refresh()
+	end
+end
+
+--- 重置当前作用域的商店页码
+function PluginManagerView:_reset_store_page()
+	if self.scope == "packs" then
+		self.pack_store_page = 1
+	else
+		self.store_page = 1
+	end
+end
+
+--- 按当前作用域启动商店列表刷新任务（插件商店 / 整合包商店）
+function PluginManagerView:_start_store_refresh()
+	local label = self.scope == "packs" and "刷新整合包列表" or "刷新商店列表"
+	self:_start_task(label, function()
+		if self.scope == "packs" then
+			return self:_fetch_pack_store_list()
+		end
+		return self:_fetch_store_list()
+	end)
+end
+
+--- 整合包商店站点基址（与插件商店同源，/packs 命名空间）
+function PluginManagerView:_select_packs_base_url()
+	if self._selected_site and self._selected_site ~= "" then
+		return self._selected_site:gsub("/+$", "") .. "/packs"
+	end
+	local params_tmp = main and main.params or {}
+	local last_site = params_tmp and params_tmp.update_last_site or STORE_BACKUP_SITES[1]
+	local candidates = {last_site}
+	for _, site in ipairs(STORE_BACKUP_SITES) do
+		if site ~= last_site then
+			candidates[#candidates + 1] = site
+		end
+	end
+	for i, site in ipairs(candidates) do
+		self:_set_status(string.format("正在选择整合包商店地址（%d/%d）：%s", i, #candidates, site), 0)
+		local test_url = site:gsub("/+$", "") .. "/packs/list?page=1&page_size=1&limit=1&sort=hot"
+		local resp, err = self:_request(test_url, {
+			method = "GET"
+		}, 10)
+		if err then
+			self:_set_status("地址不可用：" .. site .. "（" .. err .. "）", 0)
+		elseif tonumber(resp.code) == 200 then
+			self._selected_site = site
+			local params = main and main.params
+			if params and params.update_last_site ~= site then
+				params.update_last_site = site
+				storage:save_settings(params)
+			end
+			self:_set_status("已选中整合包商店地址：" .. site, 0)
+			return site:gsub("/+$", "") .. "/packs"
+		else
+			self:_set_status("地址不可用：" .. site .. "（HTTP " .. tostring(resp.code) .. "）", 0)
+		end
+	end
+	return nil
+end
+
+--- 拉取整合包商店分页（decode 复用 _decode_store_page）
+function PluginManagerView:_get_pack_store_page(base, sort_val, page, use_cache)
+	local q_param = ""
+	if self._search_query and self._search_query ~= "" then
+		q_param = "&q=" .. url_encode(self._search_query)
+	end
+	local category_val = CATEGORY_OPTIONS[self.category_idx].value
+	local cat_param = (category_val and category_val ~= "all") and ("&category=" .. url_encode(category_val)) or ""
+	local key = table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(STORE_PAGE_SIZE), q_param}, "::")
+	if use_cache ~= false and self._pack_store_page_cache[key] then
+		return true, self._pack_store_page_cache[key], true
+	end
+	local url = string.format("%s/list?page=%d&page_size=%d&limit=%d&sort=%s%s%s", base, page, STORE_PAGE_SIZE, STORE_PAGE_SIZE, sort_val, q_param, cat_param)
+	local resp, err = self:_request(url, {
+		method = "GET"
+	}, 20)
+	if err then
+		return false, "拉取整合包列表失败：" .. err, false
+	end
+	if tonumber(resp.code) ~= 200 then
+		return false, "拉取整合包列表失败：HTTP " .. tostring(resp.code), false
+	end
+	local ok, body = pcall(json.decode, resp.body)
+	if not ok or type(body) ~= "table" then
+		return false, "整合包列表解析失败", false
+	end
+	local parsed = self:_decode_store_page(body, page)
+	self._pack_store_page_cache[key] = parsed
+	return true, parsed, false
+end
+
+--- 刷新整合包商店当前页
+function PluginManagerView:_fetch_pack_store_list()
+	self._cancel_requested = false
+	local base = self:_select_packs_base_url()
+	if not base then
+		return false, "没有可用整合包商店地址"
+	end
+	local sort_val = SORT_OPTIONS[self.sort_idx].value
+	local page = math.max(1, self.pack_store_page)
+	self:_set_status(string.format("正在刷新整合包商店（第 %d 页）…", page), 5)
+	local ok, page_data_or_err = self:_get_pack_store_page(base, sort_val, page, true)
+	if not ok then
+		return false, page_data_or_err
+	end
+	local page_data = page_data_or_err
+	self.pack_store_page = page_data.page
+	self.pack_store_total_pages = page_data.total_pages
+	self.pack_store_items = page_data.items
+	self:_set_status(string.format("整合包商店第 %d 页已刷新：%d 项", self.pack_store_page, #self.pack_store_items), 100)
+	self:_render_current_list()
+	return true, nil
+end
+
+function PluginManagerView:_render_store_packs_list()
+	self.plugin_list:clear_rows()
+	local rs = GGLabel.static.ref_h / REF_H
+	local list_w = self.plugin_list.size.x - self.plugin_list.scroller_width - 2 * self.plugin_list.scroller_margin - 4
+	local idle = self._active_task == nil
+
+	if #self.pack_store_items == 0 then
+		local lbl = GGLabel:new(V.v(list_w, 60))
+		lbl.font_name = "body"
+		lbl.font_size = 14 * rs
+		lbl.text_align = "center"
+		lbl.colors.text = {214, 193, 144, 255}
+		lbl.text = "暂无整合包条目：点“刷新商店”加载"
+		self.plugin_list:add_row(lbl)
+		return
+	end
+
+	for _, item in ipairs(self.pack_store_items) do
+		-- v3：商店整合包不落本地记录，行状态只表达“同步中”与默认“未处理”
+		local syncing = self._pack_op_entry == item.entry
+		local status = syncing and "正在同步成员插件…" or "未处理"
+
+		local actions = {}
+		actions[#actions + 1] = {
+			text = "详情",
+			enabled = idle,
+			on_press = function()
+				self:_show_store_pack_detail(item)
+			end
+		}
+		actions[#actions + 1] = {
+			text = syncing and "同步中" or "安装",
+			enabled = idle,
+			on_press = function()
+				self:_start_pack_sync(item)
+			end
+		}
+
+		local pack_row = PluginItemRow:new({
+			title = item.name or item.entry,
+			meta = string.format("v%s · 成员:%s · 下载:%s · 作者:%s", utf8_util.sanitize(item.version or ""), tostring(item.plugin_count or "?"), utf8_util.sanitize(tostring(item.downloads or 0)), utf8_util.sanitize(item.by or "")),
+			desc = item.desc or "",
+			status = status,
+			show_toggle = false,
+			action_button_size = self._pack_action_button_size,
+			status_width = self._pack_row_status_width,
+			right_pad = self._row_right_pad,
+			action_bottom_margin = self._row_action_bottom_margin,
+			actions = actions
+		}, list_w)
+		self.plugin_list:add_row(pack_row)
+		self.plugin_list:add_row(KVirtualView:new(V.v(list_w, 10)))
+		::continue::
+	end
+end
+
+--- 开始商店整合包的「安装/重新同步」任务（下载 zip 清单 → 同步成员插件）
+function PluginManagerView:_start_pack_sync(item)
+	if not item or not item.entry then
+		return
+	end
+	if self._active_task then
+		self:_set_status("有任务进行中，请稍候", 0)
+		return
+	end
+	self._pack_op_entry = item.entry
+	self:_start_task("安装整合包", function()
+		return self:_install_pack_from_item(item)
+	end)
+	-- 任务进行中：重绘让该行显示“正在同步成员插件…”（行内动作已因 _active_task 禁用）
+	self:_render_current_list()
+end
+
+--- 下载并解析远端 pack.lua（zip 解压到临时目录即删；不缓存 README、不写任何本地包文件）
+function PluginManagerView:_download_pack_lua(item)
+	local base = self:_select_packs_base_url()
+	if not base then
+		return nil, "无法选择整合包商店地址"
+	end
+	local filename = item.filename or (tostring(item.entry or "") .. ".zip")
+	self:_set_status("正在下载整合包：" .. (item.name or item.entry), 10)
+	local resp, err = self:_request(base .. "/download/" .. url_encode(filename), {
+		method = "GET"
+	}, 60)
+	if err then
+		return nil, "下载整合包失败：" .. err
+	end
+	if tonumber(resp.code) ~= 200 then
+		return nil, "下载整合包失败：HTTP " .. tostring(resp.code)
+	end
+	local zip_data = resp.body or ""
+	local stage = "tmp/pack_dl"
+	remove_dir_recursive(stage)
+	FS.createDirectory("tmp")
+	FS.createDirectory(stage)
+	local ok_uz, unzip_err = zip.unzip_to_dir(zip_data, stage)
+	if not ok_uz then
+		remove_dir_recursive(stage)
+		return nil, "解压整合包失败：" .. tostring(unzip_err)
+	end
+	if not FS.getInfo(stage .. "/pack.lua", "file") then
+		remove_dir_recursive(stage)
+		return nil, "整合包 zip 缺少 pack.lua"
+	end
+	local content = FS.read(stage .. "/pack.lua") or ""
+	remove_dir_recursive(stage)
+	local chunk, load_err = loadstring(content, "@pack.lua")
+	if not chunk then
+		return nil, "整合包清单解析失败：" .. tostring(load_err)
+	end
+	local ok, cfg = pcall(chunk)
+	if not ok or type(cfg) ~= "table" then
+		return nil, "整合包清单解析失败（文件未返回配置表）"
+	end
+	return cfg, nil
+end
+
+--- 批量查询成员插件条目（POST <plugins>/entries），返回 entry -> item
+function PluginManagerView:_lookup_remote_plugins(entries)
+	local result = {}
+	if #entries == 0 then
+		return result, nil
+	end
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return nil, "无法选择插件商店地址"
+	end
+	local BATCH_SIZE = 100
+	for i = 1, #entries, BATCH_SIZE do
+		if self._cancel_requested then
+			return nil, "cancelled"
+		end
+		local batch = {}
+		local batch_end = math.min(i + BATCH_SIZE - 1, #entries)
+		for j = i, batch_end do
+			batch[#batch + 1] = entries[j]
+		end
+		self:_set_status(string.format("正在查询成员插件…（%d/%d）", i, #entries), 5)
+		local resp, err = self:_request(base .. "/entries", {
+			method = "POST",
+			headers = {
+				["Content-Type"] = "application/json"
+			},
+			data = json.encode({
+				entries = batch
+			})
+		}, 30)
+		if err then
+			return nil, "成员插件查询失败：" .. err
+		end
+		if tonumber(resp.code) ~= 200 then
+			return nil, "成员插件查询失败：HTTP " .. tostring(resp.code)
+		end
+		local ok, body = pcall(json.decode, resp.body)
+		if not ok or type(body) ~= "table" or type(body.items) ~= "table" then
+			return nil, "成员插件查询响应解析失败"
+		end
+		for _, ritem in ipairs(body.items) do
+			if ritem.entry then
+				result[ritem.entry] = ritem
+			end
+		end
+		coroutine.yield()
+	end
+	return result, nil
+end
+
+--- 安装/重新同步整合包主流程（须在 _start_task 协程内运行）。
+--- v3 语义：下载 zip → 解析成员 → 逐个成员同步（缺失代装 / 版本不同更新 / 最新与商店缺失跳过）；
+--- 不创建/更新 packs/ 下任何记录文件，不缓存 README，不维护 installed/state。
+function PluginManagerView:_install_pack_from_item(item)
+	if self._cancel_requested then
+		return false, "cancelled"
+	end
+	local cfg, dl_err = self:_download_pack_lua(item)
+	if not cfg then
+		return false, dl_err or "下载整合包失败"
+	end
+	local members = plugin_packs.entries_of(cfg)
+	if #members == 0 then
+		return false, "整合包「" .. tostring(cfg.name or item.name or item.entry) .. "」没有成员"
+	end
+	local remote_map, lookup_err = self:_lookup_remote_plugins(members)
+	if not remote_map then
+		return false, lookup_err or "成员插件查询失败"
+	end
+
+	local installed_n = 0 -- 代装
+	local updated_n = 0 -- 更新
+	local latest_n = 0 -- 跳过最新
+	local gone_n = 0 -- 商店缺失
+	for _, member in ipairs(members) do
+		if self._cancel_requested then
+			return false, "cancelled"
+		end
+		local local_pd = self.local_by_entry[member] or self.local_by_name[member]
+		local ritem = remote_map[member]
+		if not ritem then
+			-- 商店已下架/不存在：无论本地是否存在都跳过并计数
+			gone_n = gone_n + 1
+		elseif not local_pd then
+			-- 本地缺失且商店存在：代装（走既有单插件安装流程）
+			local ok_install, install_err = self:_install_plugin(ritem, false, nil)
+			if not ok_install then
+				return false, string.format("代装成员「%s」失败：%s", tostring(member), tostring(install_err or "未知错误"))
+			end
+			installed_n = installed_n + 1
+		elseif has_update(norm_version(local_pd.config and local_pd.config.version or ""), norm_version(ritem.version or "")) then
+			-- 本地已有但商店版本不同：自动更新（复用单插件更新机制：保留本地配置与 enabled）
+			local ok_up, up_err = self:_install_or_update_item(ritem, nil)
+			if not ok_up then
+				return false, string.format("更新成员「%s」失败：%s", tostring(member), tostring(up_err or "未知错误"))
+			end
+			updated_n = updated_n + 1
+		else
+			-- 本地已有且版本一致：跳过
+			latest_n = latest_n + 1
+		end
+	end
+	self:_render_current_list()
+	local parts = {}
+	if installed_n > 0 then
+		parts[#parts + 1] = "代装 " .. installed_n .. " 个"
+	end
+	if updated_n > 0 then
+		parts[#parts + 1] = "更新 " .. updated_n .. " 个"
+	end
+	if latest_n > 0 then
+		parts[#parts + 1] = "跳过最新 " .. latest_n .. " 个"
+	end
+	if gone_n > 0 then
+		parts[#parts + 1] = "商店缺失 " .. gone_n .. " 个"
+	end
+	if #parts == 0 then
+		parts[#parts + 1] = "无需处理"
+	end
+	-- v3：不写本地包记录；再次点「安装」即为重新同步
+	self:_set_status(string.format("整合包「%s」同步完成：%s", tostring(cfg.name or item.name or item.entry), table.concat(parts, "，")), 100)
+	return true, nil
+end
+
+--- 商店整合包详情：GET <site>/packs/{entry} → pack(readme) + members JOIN 信息
+function PluginManagerView:_show_store_pack_detail(item)
+	self:_start_task("获取整合包详情", function()
+		local base = self:_select_packs_base_url()
+		if not base then
+			return false, "无法选择整合包商店地址"
+		end
+		local entry = utf8_util.sanitize(item.entry or "")
+		if entry == "" then
+			return false, "整合包缺少 entry 字段"
+		end
+		self:_set_status("正在获取整合包详情：" .. (item.name or entry), 50)
+		local resp, err = self:_request(base .. "/" .. url_encode(entry), {
+			method = "GET"
+		}, 20)
+		if err then
+			return false, "获取详情失败：" .. err
+		end
+		if tonumber(resp.code) ~= 200 then
+			self:_set_status("整合包详情不可用（可能已下架）", 100)
+			local detail = markdown_view:new(self._sw, self._sh, item.name or entry, nil, item.desc or "暂无说明文档")
+			self:add_child(detail)
+			detail:show()
+			return true, nil
+		end
+		local ok, body = pcall(json.decode, resp.body)
+		if not ok or type(body) ~= "table" then
+			return false, "整合包详情解析失败"
+		end
+		local pack = (type(body.pack) == "table" and body.pack) or body
+		local md_lines = {}
+		local readme = pack and pack.readme or ""
+		local desc = pack and pack.desc or ""
+		if readme ~= "" then
+			md_lines[#md_lines + 1] = readme
+		elseif desc ~= "" then
+			md_lines[#md_lines + 1] = desc
+		end
+		local members = type(body.members) == "table" and body.members or {}
+		if #members > 0 then
+			md_lines[#md_lines + 1] = "## 成员列表"
+			for _, m in ipairs(members) do
+				local m_entry = tostring(m.entry or "")
+				local m_name = tostring(m.name or m_entry or "?")
+				local m_ver = utf8_util.sanitize(m.version or "")
+				local m_meta = m_entry ~= "" and (string.format("（%s%s）", m_entry, m_ver ~= "" and (" v" .. m_ver) or "")) or ""
+				local m_state = (m.exists == false) and "（已下架）" or ""
+				md_lines[#md_lines + 1] = string.format("- **%s**%s%s", m_name, m_meta, m_state)
+			end
+		end
+		local content = table.concat(md_lines, "\n")
+		if content == "" then
+			content = nil
+		end
+		self:_set_status("已获取整合包详情", 100)
+		local detail = markdown_view:new(self._sw, self._sh, (pack and (pack.name or entry)) or (item.name or entry), content, (desc ~= "" and desc) or item.desc or "暂无说明文档")
+		self:add_child(detail)
+		detail:show()
+		return true, nil
+	end)
+end
+
+-- ─────────────────────────────────────────────
+-- 本地分组：整组启停 / 删除
+-- ─────────────────────────────────────────────
+
+--- 启用/停用整组：遍历组内本地存在的成员改内存 enabled（启用时顺带 last_used_at）+ _unsaved_changes。
+--- 缺失成员跳过并在状态里提示；不写盘（统一走「应用」）。
+--- 因分组间排他，组间无交叉引用，无需跨组决策弹窗。
+function PluginManagerView:_set_group_enabled(cfg, enable)
+	local members = plugin_packs.entries_of(cfg)
+	local changed = 0
+	local missing = 0
+	for _, entry in ipairs(members) do
+		local pd = self.local_by_entry[entry] or self.local_by_name[entry]
+		if pd and pd.config then
+			if (pd.config.enabled ~= false) ~= enable then
+				changed = changed + 1
+			end
+			pd.config.enabled = enable
+			if enable then
+				pd.config.last_used_at = os.time()
+			end
+		else
+			missing = missing + 1
+		end
+	end
+	self._unsaved_changes = self:_check_unsaved()
+	local msg = string.format("%s整组：%d 个插件", enable and "已启用" or "已停用", changed)
+	if missing > 0 then
+		msg = msg .. string.format("（跳过缺失成员 %d）", missing)
+	end
+	self:_after_group_toggled(msg)
+end
+
+--- 整组启停后的收敛：提示 + 重绘（分组状态纯展示，无需写盘）
+function PluginManagerView:_after_group_toggled(msg)
+	self:_set_status(msg, 0)
+	self:_render_current_list()
+end
+
+--- 删除本地分组确认（只删分组文件，绝不触碰插件；同一确认组件也用于损坏分组文件清理）
+function PluginManagerView:_confirm_delete_group(row)
+	local cfg = row.cfg
+	local name = (cfg and (cfg.name or cfg.entry)) or row.entry
+	local lines = {string.format("将删除本地分组「%s」。", tostring(name)), "仅删除分组，不影响任何插件的安装与开关状态。"}
+	if not cfg then
+		lines[#lines + 1] = "该分组文件已损坏，删除仅用于清理损坏文件。"
+	end
+	self:_show_pack_confirm({
+		title = "删除本地分组",
+		lines = lines,
+		buttons = {{
+			text = "删除分组",
+			on_press = function()
+				self:_hide_pack_confirm()
+				self:_remove_group(row)
+			end
+		}}
+	})
+end
+
+--- 执行删除分组文件（不触碰插件目录）
+function PluginManagerView:_remove_group(row)
+	local label = tostring(row.cfg and (row.cfg.name or row.entry) or row.entry)
+	local ok = plugin_packs.remove(row.entry)
+	self:_reload_local_packs()
+	self:_render_current_list()
+	if ok then
+		self:_set_status("已删除本地分组：" .. label, 0)
+	else
+		self:_set_status("删除本地分组失败：" .. label, 0)
+	end
+end
+
+-- ─────────────────────────────────────────────
+-- 轻量确认/选择弹层（自包含 overlay：遮罩 + 圆角面板 + 多行消息 + 按钮）
+-- ─────────────────────────────────────────────
+
+--- 展示确认弹层；opts = {title, lines={}, buttons={{text=, enabled=?, on_press=}}}
+--- 自动追加「取消」按钮；遮罩铺满主面板，未关闭前阻挡下层交互
+function PluginManagerView:_show_pack_confirm(opts)
+	self:_hide_pack_confirm()
+	local rs = GGLabel.static.ref_h / REF_H
+	local bw, bh = self.back.size.x, self.back.size.y
+	local layer = KView:new(V.v(bw, bh))
+	layer.colors.background = {0, 0, 0, 150}
+	-- 遮罩与插件管理器主面板同轮廓：圆角矩形，避免直角外露
+	layer.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, bw, bh, 20, 20}
+	}
+	self.back:add_child(layer)
+	self._pack_confirm_layer = layer
+
+	local pw = math.min(620, bw - 120)
+	local lines = opts.lines or {}
+	local max_lines = 13
+	local truncated = #lines > max_lines
+	local shown_lines = math.min(max_lines, #lines)
+	if truncated then
+		shown_lines = shown_lines + 1 -- 追加“…等 N 行”汇总行
+	end
+	local line_h = 23
+	local header_h = 42
+	local btn_h = 36
+	local ph = header_h + 10 + shown_lines * line_h + 10 + btn_h + 10
+	ph = math.max(170, math.min(ph, bh - 80))
+
+	local panel = KView:new(V.v(pw, ph))
+	panel.colors.background = {40, 29, 10, 250}
+	panel.anchor = V.v(pw / 2, ph / 2)
+	panel.pos = V.v(bw / 2, bh / 2)
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 14, 14}
+	}
+	layer:add_child(panel)
+
+	local title = GGLabel:new(V.v(pw - 80, 30))
+	title.font_name = "h"
+	title.font_size = 15 * rs
+	title.text_align = "left"
+	title.vertical_align = "middle"
+	title.colors.text = {244, 221, 165, 255}
+	title.text = utf8_util.sanitize(opts.title or "确认")
+	title.fit_lines = 1
+	title.fit_size = true
+	title.pos = V.v(16, 6)
+	panel:add_child(title)
+
+	local close_btn = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+	close_btn.pos = V.v(pw - 20, 21)
+	close_btn.scale:set(1.2, 1.2)
+	close_btn:set_anchor_to_center()
+	close_btn.on_click = function()
+		S:queue("GUIButtonCommon")
+		self:_hide_pack_confirm()
+	end
+	panel:add_child(close_btn)
+
+	local line_top = header_h
+	for i = 1, shown_lines do
+		local text
+		if i > #lines then
+			text = string.format("…等共 %d 行", #lines)
+		else
+			text = lines[i]
+		end
+		local lbl = GGLabel:new(V.v(pw - 56, line_h))
+		lbl.font_name = "body"
+		lbl.font_size = 12 * rs
+		lbl.text_align = "left"
+		lbl.vertical_align = "top"
+		lbl.colors.text = {223, 202, 152, 255}
+		lbl.text = utf8_util.sub(utf8_util.sanitize(text), 46)
+		lbl.pos = V.v(28, line_top)
+		panel:add_child(lbl)
+		line_top = line_top + line_h
+	end
+
+	-- 底部按钮行（右侧：动作按钮 → 取消）
+	local buttons = {}
+	for _, b in ipairs(opts.buttons or {}) do
+		buttons[#buttons + 1] = b
+	end
+	buttons[#buttons + 1] = {
+		text = "取消",
+		on_press = function()
+			self:_hide_pack_confirm()
+		end
+	}
+	local btn_w = 112
+	local btn_gap = 10
+	local total_w = #buttons * btn_w + (#buttons - 1) * btn_gap
+	local x = pw - 16 - total_w
+	local y = ph - btn_h - 8
+	for _, b in ipairs(buttons) do
+		local btn = PluginActionButton:new(b.text, V.v(btn_w, btn_h))
+		btn.pos = V.v(x, y)
+		if b.enabled == false then
+			btn:set_enabled(false)
+		end
+		btn.on_press = function()
+			if b.on_press then
+				b.on_press()
+			end
+		end
+		panel:add_child(btn)
+		x = x + btn_w + btn_gap
+	end
+end
+
+function PluginManagerView:_hide_pack_confirm()
+	if self._pack_confirm_layer then
+		local parent = self._pack_confirm_layer.parent
+		if parent then
+			parent:remove_child(self._pack_confirm_layer)
+		end
+		self._pack_confirm_layer = nil
+	end
+end
+
+-- ─────────────────────────────────────────────
+-- 本地分组创建/编辑弹层（两栏编辑器：候选栏 + 已选栏 + 搜索 + 排他）
+-- ─────────────────────────────────────────────
+
+--- 打开分组编辑器（pack_cfg=nil 表示新建本地分组）
+function PluginManagerView:_open_group_editor(pack_cfg)
+	self:_hide_group_editor()
+	local rs = GGLabel.static.ref_h / REF_H
+	local bw, bh = self.back.size.x, self.back.size.y
+	local layer = KView:new(V.v(bw, bh))
+	layer.colors.background = {0, 0, 0, 150}
+	-- 遮罩与插件管理器主面板同轮廓：圆角矩形，避免直角外露
+	layer.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, bw, bh, 20, 20}
+	}
+	self.back:add_child(layer)
+	self._group_editor_layer = layer
+
+	self._group_editor_base = pack_cfg
+	self._group_editor_entry = (pack_cfg and pack_cfg.entry) or nil
+	self._group_editor_name = (pack_cfg and pack_cfg.name) or ""
+	self._group_editor_members = {}
+	self._group_editor_order = {}
+	if pack_cfg then
+		for _, entry in ipairs(plugin_packs.entries_of(pack_cfg)) do
+			self._group_editor_members[entry] = true
+			self._group_editor_order[#self._group_editor_order + 1] = entry
+		end
+	end
+	self._group_editor_search = ""
+	self._group_editor_cat = "all"
+	self._group_editor_tag = "other"
+	if pack_cfg and type(pack_cfg.category) == "string" and pack_cfg.category ~= "" then
+		for _, tag_opt in ipairs(CATEGORY_OPTIONS) do
+			if tag_opt.value == pack_cfg.category then
+				self._group_editor_tag = pack_cfg.category
+				break
+			end
+		end
+	end
+
+	local ts = self._dl_touch_scale or 1
+	-- 弹窗尺寸：相对可用区域并适当放大（安卓端用相对尺寸，避免内容挤压/重叠）
+	local pad = 18
+	local pw = math.min(880, bw - pad * 2)
+	pw = math.max(pw, math.floor(bw * 0.62))
+	local ph = math.max(560, math.min(bh - 32, math.floor(bh * 0.94)))
+	-- 纵向按需增高（不超过可用区域）
+	local title_h = math.max(30, math.floor(34 * ts + 0.5))
+	local name_h = math.max(36, math.floor(42 * ts + 0.5))
+	local err_h = 24
+	local search_h = math.max(30, math.floor(36 * ts + 0.5))
+	local header_h = math.max(22, math.floor(26 * ts + 0.5))
+	local btn_h = math.max(36, math.floor(42 * ts + 0.5))
+	local y = 12
+	local title_y = y
+	local name_y = title_y + title_h + 6
+	local gcat_h = math.max(24, math.floor(28 * ts + 0.5))
+	local gcat_y = name_y + name_h + 6
+	local err_y = gcat_y + gcat_h + 2
+	local search_y = err_y + err_h + 2
+	local cat_h = math.max(26, math.floor(30 * ts + 0.5))
+	local cat_y = search_y + search_h + 8
+	local header_y = cat_y + cat_h + 8
+	local list_top = header_y + header_h + 6
+	local bar_h = btn_h + 22
+	local need_ph = list_top + 200 + bar_h + 6
+	if need_ph > ph and need_ph <= bh - 12 then
+		ph = need_ph
+	end
+	pw = math.min(pw, bw - 12)
+	ph = math.min(ph, bh - 12)
+	local list_h = math.max(160, ph - list_top - bar_h)
+
+	local panel = KView:new(V.v(pw, ph))
+	panel.colors.background = {40, 29, 10, 250}
+	panel.anchor = V.v(pw / 2, ph / 2)
+	panel.pos = V.v(bw / 2, bh / 2)
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 14, 14}
+	}
+	layer:add_child(panel)
+	self._group_editor_panel = panel
+
+	local is_new = pack_cfg == nil
+	local title = GGLabel:new(V.v(pw - 120, title_h))
+	title.font_name = "h"
+	title.font_size = 15 * rs
+	title.text_align = "left"
+	title.vertical_align = "middle"
+	title.colors.text = {244, 221, 165, 255}
+	title.text = is_new and "新建本地分组" or "编辑本地分组"
+	title.pos = V.v(pad, title_y)
+	panel:add_child(title)
+
+	local close_btn = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+	close_btn.pos = V.v(pw - 23, 23)
+	close_btn.scale:set(1.2, 1.2)
+	close_btn:set_anchor_to_center()
+	close_btn.on_click = function()
+		S:queue("GUIButtonCommon")
+		self:_hide_group_editor()
+	end
+	panel:add_child(close_btn)
+
+	-- 分组名称输入框（responder 归还规范与 PluginSearchBox 一致）
+	self._group_name_box = PluginSearchBox:new({
+		width = pw - pad * 2,
+		height = name_h,
+		controller = self._controller,
+		placeholder = "分组名称（1~40 字符）",
+		on_change = function(text)
+			self._group_editor_name = utf8_util.sub(utf8_util.sanitize(text), 40)
+			if self._group_editor_error then
+				self._group_editor_error.text = ""
+			end
+		end,
+		on_submit = nil
+	})
+	self._group_name_box.pos = V.v(pad, name_y)
+	panel:add_child(self._group_name_box)
+	self._group_name_box:set_text(self._group_editor_name)
+
+	-- 可选中 chip 的绿色高亮：选中态绿色；悬停时背景变亮（利用按钮自身 _hover）
+	local function chip_sel(btn, sel)
+		btn._chip_selected = sel
+		if sel then
+			-- 选中：普通绿 / 悬停亮绿
+			btn.colors.background = btn._hover and {66, 200, 110, 255} or {35, 148, 68, 235}
+			btn._label.colors.text = {220, 255, 225, 255}
+		else
+			btn:_refresh()
+		end
+	end
+	local function bind_chip(btn)
+		function btn:on_enter()
+			btn._hover = true
+			chip_sel(btn, btn._chip_selected == true)
+		end
+		function btn:on_exit()
+			btn._hover = false
+			chip_sel(btn, btn._chip_selected == true)
+		end
+	end
+
+	-- 分组分类标签（tag）：左侧小字标签与 chips 同一行（不换行）
+	local gcat_lbl_w = 56
+	local gcat_lbl = GGLabel:new(V.v(gcat_lbl_w, gcat_h))
+	gcat_lbl.font_name = "body"
+	gcat_lbl.font_size = 11 * rs
+	gcat_lbl.text_align = "left"
+	gcat_lbl.vertical_align = "middle"
+	gcat_lbl.fit_lines = 1
+	gcat_lbl.fit_size = true
+	gcat_lbl.colors.text = {175, 162, 122, 255}
+	gcat_lbl.text = "分类"
+	gcat_lbl.pos = V.v(pad, gcat_y)
+	panel:add_child(gcat_lbl)
+	local gcat_opts = {}
+	for _, o in ipairs(CATEGORY_OPTIONS) do
+		if o.value ~= "all" then
+			gcat_opts[#gcat_opts + 1] = o
+		end
+	end
+	local gcat_gap = 4
+	local gcat_btn_w = math.max(40, math.floor((pw - pad * 2 - gcat_lbl_w - (#gcat_opts - 1) * gcat_gap) / #gcat_opts))
+	local gcat_btns = {}
+	local function refresh_gcat()
+		for _, b in ipairs(gcat_btns) do
+			chip_sel(b, b._gcat_value == self._group_editor_tag)
+		end
+	end
+	do
+		local gx = pad + gcat_lbl_w
+		for _, o in ipairs(gcat_opts) do
+			local b = PluginActionButton:new(o.label, V.v(gcat_btn_w, gcat_h))
+			b.pos = V.v(gx, gcat_y)
+			b._gcat_value = o.value
+			bind_chip(b)
+			b.on_press = function()
+				S:queue("GUIButtonCommon")
+				self:_blur_group_inputs()
+				self._group_editor_tag = b._gcat_value
+				refresh_gcat()
+			end
+			panel:add_child(b)
+			gcat_btns[#gcat_btns + 1] = b
+			gx = gx + gcat_btn_w + gcat_gap
+		end
+	end
+	refresh_gcat()
+	self._refresh_tag_cats = refresh_gcat
+
+	-- 校验错误提示
+	self._group_editor_error = GGLabel:new(V.v(pw - pad * 2, err_h))
+	self._group_editor_error.font_name = "body"
+	self._group_editor_error.font_size = 12 * rs
+	self._group_editor_error.text_align = "left"
+	self._group_editor_error.vertical_align = "middle"
+	self._group_editor_error.colors.text = {255, 150, 130, 255}
+	self._group_editor_error.text = ""
+	self._group_editor_error.pos = V.v(pad, err_y)
+	panel:add_child(self._group_editor_error)
+
+	-- 候选过滤搜索框（过滤左栏候选，口径与本地插件列表一致：名称/简介/作者/entry）
+	self._group_search_box = PluginSearchBox:new({
+		width = pw - pad * 2,
+		height = search_h,
+		controller = self._controller,
+		placeholder = "搜索可加入的插件（名称/简介/作者/entry）",
+		on_change = function(text)
+			self._group_editor_search = string.lower(utf8_util.sanitize(text or ""))
+			self:_render_group_candidates()
+		end,
+		on_submit = nil
+	})
+	self._group_search_box.pos = V.v(pad, search_y)
+	panel:add_child(self._group_search_box)
+	-- 两个输入框互斥：任一获焦时另一失焦；任何离开输入的操作统一失焦，避免光标闪烁
+	self._group_name_box._group_sibling_box = self._group_search_box
+	self._group_search_box._group_sibling_box = self._group_name_box
+	for _, box in ipairs({self._group_name_box, self._group_search_box}) do
+		local orig_click = box.on_click
+		box.on_click = function(sb)
+			local sib = sb._group_sibling_box
+			if sib then
+				sib:set_focused(false)
+			end
+			if orig_click then
+				orig_click(sb)
+			end
+		end
+	end
+
+	-- 分类筛选行：按插件分类过滤左栏候选（与本地插件列表的分类口径一致）
+	local cat_gap = 4
+	local cat_btn_w = math.max(42, math.floor((pw - pad * 2 - (#CATEGORY_OPTIONS - 1) * cat_gap) / #CATEGORY_OPTIONS))
+	local cat_btns = {}
+	local function refresh_cat_btns()
+		for _, b in ipairs(cat_btns) do
+			chip_sel(b, b._cat_value == self._group_editor_cat)
+		end
+	end
+	do
+		local cx = pad
+		for _, opt in ipairs(CATEGORY_OPTIONS) do
+			local b = PluginActionButton:new(opt.label, V.v(cat_btn_w, cat_h))
+			b.pos = V.v(cx, cat_y)
+			b._cat_value = opt.value
+			bind_chip(b)
+			b.on_press = function()
+				S:queue("GUIButtonCommon")
+				self:_blur_group_inputs()
+				self._group_editor_cat = b._cat_value
+				refresh_cat_btns()
+				self:_render_group_candidates()
+			end
+			panel:add_child(b)
+			cat_btns[#cat_btns + 1] = b
+			cx = cx + cat_btn_w + cat_gap
+		end
+	end
+	refresh_cat_btns()
+	self._refresh_pick_cats = refresh_cat_btns
+
+	-- 两栏布局：左「可加入的插件」/ 右「已在分组中的插件」
+	local col_gap = 16
+	local col_w = math.floor((pw - pad * 2 - col_gap) / 2)
+	local col_lx = pad
+	local col_rx = col_lx + col_w + col_gap
+
+	local function col_header(text, x)
+		local lbl = GGLabel:new(V.v(col_w, header_h))
+		lbl.font_name = "body"
+		lbl.font_size = 12 * rs
+		lbl.text_align = "left"
+		lbl.vertical_align = "middle"
+		lbl.colors.text = {214, 193, 144, 255}
+		lbl.text = text
+		lbl.pos = V.v(x, header_y)
+		panel:add_child(lbl)
+	end
+	col_header("可加入的插件", col_lx)
+	col_header("已在分组中的插件", col_rx)
+
+	local function make_list(x)
+		local list = KScrollList:new(V.v(col_w, list_h))
+		list.pos = V.v(x, list_top)
+		list.drag_scroll_threshold = IS_ANDROID and 20 or 6
+		list.scroll_amount = 50
+		list.colors.scroller_background = {45, 36, 22, 200}
+		list.colors.scroller_foreground = {110, 90, 50, 255}
+		list.scroller_width = 16
+		panel:add_child(list)
+		return list
+	end
+	self._group_editor_list_l = make_list(col_lx)
+	self._group_editor_list_r = make_list(col_rx)
+
+	-- 底部按钮：取消居左下角、保存居右下角
+	local bottom_y = ph - 12 - btn_h
+	local btn_w = 112
+	local cancel_btn = PluginActionButton:new("取消", V.v(btn_w, btn_h))
+	cancel_btn.pos = V.v(pad, bottom_y)
+	cancel_btn.on_press = function()
+		S:queue("GUIButtonCommon")
+		self:_hide_group_editor()
+	end
+	panel:add_child(cancel_btn)
+
+	local save_btn = PluginActionButton:new("保存", V.v(btn_w, btn_h))
+	save_btn.pos = V.v(pw - pad - btn_w, bottom_y)
+	save_btn.on_press = function()
+		S:queue("GUIButtonCommon")
+		self:_group_editor_save()
+	end
+	panel:add_child(save_btn)
+
+	self:_render_group_candidates()
+	self:_render_group_members()
+end
+
+--- 生成不冲突的分组 entry（"group_" + 时间戳；冲突追加序号，保证不与任何分组/插件 entry 冲突）
+function PluginManagerView:_gen_group_entry()
+	local base = "group_" .. tostring(os.time())
+	local function taken(entry)
+		if self.local_by_entry[entry] or self.local_by_name[entry] then
+			return true
+		end
+		for _, r in ipairs(self.local_packs) do
+			if r.entry == entry then
+				return true
+			end
+		end
+		return false
+	end
+	local candidate = base
+	local n = 0
+	while taken(candidate) do
+		n = n + 1
+		candidate = base .. "_" .. n
+	end
+	return candidate
+end
+
+--- 构建单行成员/候选行（两栏共用：显示名 + entry + 右侧动作按钮）
+function PluginManagerView:_make_group_pick_row(opts)
+	local rs = GGLabel.static.ref_h / REF_H
+	local row_h = opts.row_h or 46
+	local is_member = opts.member == true
+	-- 右区宽度：member 模式 = 启用态开关(92) + 移除(72)；普通模式 = 单一动作按钮
+	local right_zone = is_member and 172 or (opts.btn_w + 24)
+	local row = KView:new(V.v(opts.list_w, row_h))
+	row.colors.background = {56, 44, 24, 210}
+	row.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, opts.list_w, row_h, 8, 8}
+	}
+	row.propagate_on_down = true
+	row.propagate_on_up = true
+	row.propagate_on_touch_down = true
+	row.propagate_on_touch_up = true
+	row.propagate_on_touch_move = true
+
+	local text_w = math.max(120, opts.list_w - right_zone - 22)
+	local name_y = is_member and 5 or 3
+	local name_lbl = GGLabel:new(V.v(text_w, 22))
+	name_lbl.font_name = "body"
+	name_lbl.font_size = 13 * rs
+	name_lbl.text_align = "left"
+	name_lbl.vertical_align = "middle"
+	name_lbl.colors.text = {238, 218, 162, 255}
+	name_lbl.text = opts.name
+	name_lbl.fit_lines = 1
+	name_lbl.fit_size = true
+	name_lbl.pos = V.v(14, name_y)
+	row:add_child(name_lbl)
+
+	local entry_y = is_member and 27 or 27
+	local entry_lbl = GGLabel:new(V.v(text_w, 16))
+	entry_lbl.font_name = "body"
+	entry_lbl.font_size = 10 * rs
+	entry_lbl.text_align = "left"
+	entry_lbl.vertical_align = "middle"
+	entry_lbl.colors.text = {150, 138, 112, 255}
+	entry_lbl.text = opts.entry
+	entry_lbl.fit_lines = 1
+	entry_lbl.fit_size = true
+	entry_lbl.pos = V.v(14, entry_y)
+	row:add_child(entry_lbl)
+
+	if is_member then
+		-- 成员行：顶部为启用/停用开关（同时展示插件当前开关状态），底部为移除
+		local state_toggle = PluginToggleButton:new(opts.member_enabled ~= false, V.v(92, 26), 14)
+		state_toggle.pos = V.v(opts.list_w - 12 - 92, 4)
+		state_toggle.anchor = V.v(0, 0)
+		state_toggle.on_change = function(_, v)
+			if opts.on_toggle then
+				opts.on_toggle(v)
+			end
+		end
+		row:add_child(state_toggle)
+
+		local remove_btn = PluginActionButton:new("移除", V.v(72, 26))
+		remove_btn.pos = V.v(opts.list_w - 12 - 72, row_h - 26 - 4)
+		remove_btn.on_press = function()
+			if opts.on_press then
+				opts.on_press()
+			end
+		end
+		row:add_child(remove_btn)
+	else
+		local btn = PluginActionButton:new(opts.btn_text, V.v(opts.btn_w, 30))
+		btn.pos = V.v(opts.list_w - opts.btn_w - 12, (row_h - 30) / 2)
+		btn.on_press = function()
+			if opts.on_press then
+				opts.on_press()
+			end
+		end
+		row:add_child(btn)
+	end
+	return row
+end
+
+--- 重建左栏候选（搜索过滤 + 排他：已在其它分组的本地插件不出现；本组已有成员不出现）
+function PluginManagerView:_render_group_candidates()
+	local list = self._group_editor_list_l
+	if not list or not self._group_editor_layer then
+		return
+	end
+	if self._refresh_tag_cats then
+		self._refresh_tag_cats()
+	end
+	if self._refresh_pick_cats then
+		self._refresh_pick_cats()
+	end
+	local rs = GGLabel.static.ref_h / REF_H
+	local saved_scroll = list.scroll_origin_y or 0
+	list:clear_rows()
+	local list_w = list.size.x - list.scroller_width - 2 * list.scroller_margin
+
+	if #self.local_plugins == 0 then
+		local lbl = GGLabel:new(V.v(list_w, 40))
+		lbl.font_name = "body"
+		lbl.font_size = 13 * rs
+		lbl.text_align = "center"
+		lbl.colors.text = {200, 185, 150, 255}
+		lbl.text = "本地没有已安装插件，无法选择成员"
+		list:add_row(lbl)
+		return
+	end
+
+	local editing_entry = self._group_editor_entry
+	local q = self._group_editor_search and self._group_editor_search ~= "" and self._group_editor_search
+	local candidates = {}
+	for _, pd in ipairs(self.local_plugins) do
+		local entry = utf8_util.sanitize(pd.entry or pd.name or "")
+		if entry ~= "" and not self._group_editor_members[entry] then
+			-- 排他性：已属于其它分组的本地插件不进入候选
+			if not self:_member_in_other_group(entry, editing_entry) then
+				local pcfg = pd.config or {}
+				local cat = pcfg.category or "other"
+				if self._group_editor_cat and self._group_editor_cat ~= "all" and cat ~= self._group_editor_cat then
+					goto continue
+				end
+				if q then
+					local cfg = pcfg
+					local function mhit(v)
+						return v and (string.lower(utf8_util.sanitize(tostring(v))):find(q, 1, true)) ~= nil
+					end
+					local hit = mhit(cfg.name) or mhit(cfg.desc) or mhit(cfg.by) or mhit(entry)
+					if not hit then
+						goto continue
+					end
+				end
+				candidates[#candidates + 1] = {
+					pd = pd,
+					entry = entry
+				}
+			end
+		end
+		::continue::
+	end
+	table.sort(candidates, function(a, b)
+		local na = (a.pd.config and a.pd.config.name) or a.entry
+		local nb = (b.pd.config and b.pd.config.name) or b.entry
+		if tostring(na) ~= tostring(nb) then
+			return tostring(na) < tostring(nb)
+		end
+		return a.entry < b.entry
+	end)
+
+	if #candidates == 0 then
+		local lbl = GGLabel:new(V.v(list_w, 40))
+		lbl.font_name = "body"
+		lbl.font_size = 13 * rs
+		lbl.text_align = "center"
+		lbl.colors.text = {200, 185, 150, 255}
+		lbl.text = q and "没有匹配的插件" or "没有可加入的插件"
+		list:add_row(lbl)
+		return
+	end
+
+	local ts_row = self._dl_touch_scale or 1
+	local row_h = math.max(46, math.floor(50 * ts_row + 0.5))
+	for _, cand in ipairs(candidates) do
+		local pd = cand.pd
+		local name = (pd.config and pd.config.name) or cand.entry
+		local row = self:_make_group_pick_row({
+			list_w = list_w,
+			row_h = row_h,
+			name = tostring(name),
+			entry = cand.entry,
+			btn_text = "加入",
+			btn_w = 76,
+			on_press = function()
+				self:_blur_group_inputs()
+				self._group_editor_members[cand.entry] = true
+				self._group_editor_order[#self._group_editor_order + 1] = cand.entry
+				self:_render_group_candidates()
+				self:_render_group_members()
+			end
+		})
+		list:add_row(row)
+		list:add_row(KVirtualView:new(V.v(list_w, 4)))
+	end
+	local max_scroll = -(list._bottom_y - list.size.y)
+	list.scroll_origin_y = km.clamp(max_scroll, 0, saved_scroll)
+end
+
+--- 重建右栏成员（按 _group_editor_order 即加入顺序展示）
+function PluginManagerView:_render_group_members()
+	local list = self._group_editor_list_r
+	if not list or not self._group_editor_layer then
+		return
+	end
+	if self._refresh_tag_cats then
+		self._refresh_tag_cats()
+	end
+	if self._refresh_pick_cats then
+		self._refresh_pick_cats()
+	end
+	local rs = GGLabel.static.ref_h / REF_H
+	local saved_scroll = list.scroll_origin_y or 0
+	list:clear_rows()
+	local list_w = list.size.x - list.scroller_width - 2 * list.scroller_margin
+
+	local order = self._group_editor_order or {}
+	if #order == 0 then
+		local lbl = GGLabel:new(V.v(list_w, 40))
+		lbl.font_name = "body"
+		lbl.font_size = 13 * rs
+		lbl.text_align = "center"
+		lbl.colors.text = {200, 185, 150, 255}
+		lbl.text = "暂无成员：请从左栏点「加入」"
+		list:add_row(lbl)
+		return
+	end
+
+	local ts_row = self._dl_touch_scale or 1
+	local row_h = math.max(66, math.floor(70 * ts_row + 0.5))
+	for _, entry in ipairs(order) do
+		local pd = self.local_by_entry[entry] or self.local_by_name[entry]
+		local name = (pd and pd.config and pd.config.name) or entry
+		local enabled = pd and pd.config and (pd.config.enabled ~= false) or false
+		local row = self:_make_group_pick_row({
+			list_w = list_w,
+			row_h = row_h,
+			name = tostring(name),
+			entry = entry,
+			member = true,
+			member_enabled = enabled,
+			on_toggle = function(v)
+				self:_blur_group_inputs()
+				-- 直接修改该成员插件的开关（内存 + unsaved，主界面点「应用」生效）
+				local mpd = self.local_by_entry[entry] or self.local_by_name[entry]
+				if mpd and mpd.config then
+					mpd.config.enabled = v
+					if v then
+						mpd.config.last_used_at = os.time()
+					end
+					self._unsaved_changes = self:_check_unsaved()
+				end
+			end,
+			on_press = function()
+				self:_blur_group_inputs()
+				self._group_editor_members[entry] = nil
+				table.removeobject(self._group_editor_order, entry)
+				self:_render_group_candidates()
+				self:_render_group_members()
+			end
+		})
+		list:add_row(row)
+		list:add_row(KVirtualView:new(V.v(list_w, 4)))
+	end
+	local max_scroll = -(list._bottom_y - list.size.y)
+	list.scroll_origin_y = km.clamp(max_scroll, 0, saved_scroll)
+end
+
+--- 编辑器内统一失焦（点按钮/动作前调用，防止输入条残留闪烁）
+function PluginManagerView:_blur_group_inputs()
+	if self._group_name_box then
+		self._group_name_box:set_focused(false)
+	end
+	if self._group_search_box then
+		self._group_search_box:set_focused(false)
+	end
+end
+
+--- 保存分组（新建/改名/成员更新）→ 写 packs/<entry>/pack.lua → 收敛
+function PluginManagerView:_group_editor_save()
+	self:_blur_group_inputs()
+	local name = self._group_editor_name or ""
+	name = string.trim(name)
+	if name == "" then
+		self._group_editor_error.text = "请输入分组名称"
+		return
+	end
+	if utf8_util.sub(name, 41) ~= name then
+		self._group_editor_error.text = "分组名称过长（最多 40 字符）"
+		return
+	end
+	local entry = self._group_editor_entry
+	-- 重名校验（分组间唯一）
+	for _, row in ipairs(self.local_packs) do
+		local cfg = row.cfg
+		if cfg and row.entry ~= entry and (cfg.name or "") == name then
+			self._group_editor_error.text = "已存在同名分组「" .. utf8_util.sub(name, 20) .. "」，请换一个名称"
+			return
+		end
+	end
+
+	-- 收集成员：按右栏当前顺序（过滤掉编辑期间已不存在的插件目录）
+	local order = {}
+	for _, mentry in ipairs(self._group_editor_order or {}) do
+		local pd = self.local_by_entry[mentry] or self.local_by_name[mentry]
+		if pd then
+			order[#order + 1] = mentry
+		end
+	end
+
+	local is_new = entry == nil
+	if is_new then
+		entry = self:_gen_group_entry()
+	end
+	-- 精简 schema：entry + name + members 有序数组（冗余字段不再写入）
+	local cfg = {
+		entry = entry,
+		name = name,
+		members = order
+	}
+	-- 编辑旧文件时若带简介，保留展示（新格式不再写 desc）
+	if not is_new and type(self._group_editor_base) == "table" and type(self._group_editor_base.desc) == "string" and self._group_editor_base.desc ~= "" then
+		cfg.desc = self._group_editor_base.desc
+	end
+	-- 分组分类 tag：仅非 other 时写入（缺省视为 other）
+	if self._group_editor_tag and self._group_editor_tag ~= "other" then
+		cfg.category = self._group_editor_tag
+	end
+	local wok = plugin_packs.save(entry, cfg)
+	if not wok then
+		self._group_editor_error.text = "写入分组文件失败，请重试"
+		return
+	end
+	self:_hide_group_editor()
+	self:_reload_local_packs()
+	self:_render_current_list()
+	self:_set_status((is_new and "已创建本地分组：" or "已保存本地分组：") .. name, 0)
+end
+
+--- 关闭分组编辑器（归还键盘/搜索框 responder）
+function PluginManagerView:_hide_group_editor()
+	self._refresh_tag_cats = nil
+	self._refresh_pick_cats = nil
+	self:_blur_group_inputs()
+	if self._group_name_box then
+		self._group_name_box = nil
+	end
+	if self._group_search_box then
+		self._group_search_box = nil
+	end
+	if self._group_editor_layer then
+		local parent = self._group_editor_layer.parent
+		if parent then
+			parent:remove_child(self._group_editor_layer)
+		end
+		self._group_editor_layer = nil
+	end
+	self._group_editor_base = nil
+	self._group_editor_entry = nil
+	self._group_editor_members = nil
+	self._group_editor_order = nil
+	self._group_editor_search = ""
+	self._group_editor_list = nil
+	self._group_editor_list_l = nil
+	self._group_editor_list_r = nil
+	self._group_editor_panel = nil
+	self._group_editor_error = nil
 end
 
 return PluginManagerView
