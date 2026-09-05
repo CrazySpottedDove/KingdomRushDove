@@ -728,6 +728,9 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		self.scope = "plugins"
 		self:_refresh_header_buttons()
 		self:_render_current_list()
+		if self.mode == "store" then
+			self:_ensure_store_data_if_needed()
+		end
 	end
 	self.scope_packs_btn = header_btn("分组", 20 + scope_btn_w + scope_btn_gap, header_row2_y, scope_btn_w, header_btn_h)
 	self.scope_packs_btn.on_press = function()
@@ -741,6 +744,10 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		end
 		self:_refresh_header_buttons()
 		self:_render_current_list()
+		if self.mode == "store" then
+			-- 整合包商店：首次进入自动拉取第一页（与插件商店表现一致）
+			self:_ensure_store_data_if_needed()
+		end
 	end
 
 	-- 分页控件与状态提示
