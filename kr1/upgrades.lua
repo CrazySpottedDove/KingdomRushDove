@@ -1177,6 +1177,7 @@ upgrades.arrows = {
 	"arrow_ranger",
 	"shotgun_musketeer",
 	"shotgun_musketeer_sniper",
+	"shotgun_musketeer_sniper_instakill",
 	"arrow_crossbow",
 	"axe_totem",
 	"dwarf_shotgun",
