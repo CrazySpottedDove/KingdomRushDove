@@ -6241,11 +6241,7 @@ local towers = {
 				s_damage = {24, 64, 112},
 				damage = {3, 8, 14},
 				damage_type = DAMAGE_TRUE,
-				aura = {
-					duration = 0.1,
-					radius = 50,
-					cycle_time = 0.1
-				}
+				max_duplicates = 2
 			}
 		}
 	},

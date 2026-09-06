@@ -2361,6 +2361,7 @@ tt = RT("mod_aura_bullet_soldier_tower_dwarf", "modifier")
 b = balance.towers.dwarf.incendiary_ammo.burn
 AC(tt, "dps", "render")
 tt.modifier.duration = b.duration
+tt.modifier.max_duplicates = b.max_duplicates
 tt.dps.damage_config = b.damage
 tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.damage_every = b.damage_every
@@ -2417,12 +2418,12 @@ tt = RT("bullet_incendiary_soldier_tower_dwarf", "bomb")
 local b = balance.towers.dwarf.incendiary_ammo
 tt.bullet.hit_fx = "fx_explosion_tower_dwarf"
 tt.bullet.hit_decal = nil
-tt.bullet.hit_decal = "decal_bullet_soldier_tower_dwarf"
+-- tt.bullet.hit_decal = "decal_bullet_soldier_tower_dwarf"
 tt.bullet.particles_name = "ps_bullet_incendiary_soldier_dwarf_tower"
 tt.bullet.pop_chance = 0
 tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
-tt.bullet.hit_payload = "aura_bullet_soldier_tower_dwarf"
+tt.bullet.mod = "mod_aura_bullet_soldier_tower_dwarf"
 tt.bullet.damage_min = b.damage_min
 tt.bullet.damage_max = b.damage_max
 tt.sound_events.hit_water = nil
@@ -2431,6 +2432,7 @@ tt.render.sprites[1].name = "tower_dwarf_skill_projectile"
 tt.render.sprites[1].hidden = false
 tt.bullet.damage_radius = b.damage_radius
 tt.bullet.use_hit_offset = true
+tt.bullet.flight_time = fts(20)
 
 tt = RT("soldier_tower_dwarf_lvl4", "soldier_militia")
 b = balance.towers.dwarf.soldier
@@ -2508,22 +2510,11 @@ tt.main_script.update = scripts.bullet_soldier_tower_dwarf.update
 tt.render = nil
 tt.sound_events.insert = "TowerDwarfBasicAttack"
 
-tt = RT("aura_bullet_soldier_tower_dwarf", "aura")
-b = balance.towers.dwarf.incendiary_ammo.burn.aura
-tt.aura.mod = "mod_aura_bullet_soldier_tower_dwarf"
-tt.aura.duration = b.duration
-tt.aura.cycle_time = b.cycle_time
-tt.aura.radius = b.radius
-tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
-tt.aura.vis_flags = bor(F_MOD)
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_apply_mod.update
-
-tt = RT("decal_bullet_soldier_tower_dwarf", "decal_tween")
-tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
-tt.render.sprites[1].name = "tower_dwarf_skill_explosion_decal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = v(1.2, 1.2)
+-- tt = RT("decal_bullet_soldier_tower_dwarf", "decal_tween")
+-- tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
+-- tt.render.sprites[1].name = "tower_dwarf_skill_explosion_decal"
+-- tt.render.sprites[1].animated = false
+-- tt.render.sprites[1].scale = v(1.2, 1.2)
 
 -- 炮兵 END
 -- 幽冥 START

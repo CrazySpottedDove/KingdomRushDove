@@ -1587,7 +1587,6 @@ function SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 	local start_ts = store.tick_ts
 	local bullet
 	local bullet_to = pred_pos or target.pos
-	local bullet_to_start = V.vclone(bullet_to)
 	local an, af, ai = U.animation_name_facing_point(this, attack.animation, bullet_to)
 
 	U.animation_start_default(this, an, af, store.tick_ts, false)
@@ -1621,15 +1620,13 @@ function SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 
 			if target and not target.health.dead then
 				bullet_to = U.calculate_enemy_ffe_pos(target, node_prediction)
-				bullet_to_start = V.vclone(bullet_to)
 			else
 				goto label_60_0
 			end
 		end
 	end
 
-	if attack.max_track_distance and V.dist2(target.pos.x, target.pos.y, bullet_to_start.x, bullet_to_start.y) > attack.max_track_distance * attack.max_track_distance then
-		log.debug("target (%s) at %s,%s  exceeds attack.max_track_distance %s to %s,%s", target.id, target.pos.x, target.pos.y, attack.max_track_distance, bullet_to_start.x, bullet_to_start.y)
+	if attack.max_track_distance and V.dist2(target.pos.x, target.pos.y, bullet_to.x, bullet_to.y) > attack.max_track_distance * attack.max_track_distance then
 	else
 		if attack.side_effect then
 			attack.side_effect(this, store, attack, target)
@@ -1649,8 +1646,8 @@ function SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 			bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
 		end
 
-		b.from = V.vclone(bullet.pos)
-		b.to = V.vclone(bullet_to)
+		b.from:copy(bullet.pos)
+		b.to:copy(bullet_to)
 
 		if not attack.ignore_hit_offset then
 			b.to.x = b.to.x + target.unit.hit_offset.x
