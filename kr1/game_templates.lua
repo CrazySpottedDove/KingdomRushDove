@@ -22513,6 +22513,7 @@ tt.unit.mod_offset = v(0, ady(22))
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
 tt.tween.props[1].name = "alpha"
 tt.tween.remove = false
+tt.tween.disabled = true
 tt.reinforcement.duration = 1e+99
 
 tt = RT("soldier_dragon_warden_warrior_reinforcement", "soldier_dragon_warden_warrior")
