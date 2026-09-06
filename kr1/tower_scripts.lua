@@ -21962,7 +21962,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 			end
 		end
 
-		local area_targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
+		local area_targets = U.find_enemies_in_range_filter_off_consider_hit_offset(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if area_targets then
 			for _, target_area in ipairs(area_targets) do
