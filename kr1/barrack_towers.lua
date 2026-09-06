@@ -3100,7 +3100,6 @@ tt.death_spawns.name = "soldier_abomination_priests_barrack"
 tt.death_spawns.death_animation = "transformation_abomination"
 tt.death_spawns.concurrent_with_death = false
 tt.death_spawns.offset = v(0, 2)
-tt.death_spawns.dead_lifetime = 0
 tt.unit.price = b.price
 tt.unit.fade_time_after_death = 1
 
@@ -3149,7 +3148,7 @@ tt.render.sprites[1].name = "priest_ranged_hit"
 
 tt = E:register_t("soldier_abomination_priests_barrack", "soldier_militia")
 b = balance.specials.towers.tower_stage_28_priests_barrack.abomination
-E:add_comps(tt, "reinforcement")
+E:add_comps(tt, "reinforcement", "nav_grid")
 tt.health.hp_max = b.hp_max
 tt.health.armor = b.armor
 tt.regen.health = b.regen_health
