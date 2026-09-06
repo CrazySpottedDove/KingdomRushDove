@@ -62,17 +62,17 @@ end
 ---@param priority integer 优先级
 function hook_utils.HOOK(obj, fn_name, handler, priority)
 	if not obj then
-		log.error("尝试添加钩子到一个空对象!")
+		log.error("尝试添加方法%s的钩子到一个空对象！%s", fn_name, debug.traceback())
 		return
 	end
 
 	if not obj[fn_name] then
-		log.error("尝试添加钩子到不存在的函数%s!", fn_name)
+		log.error("尝试添加钩子到不存在的函数%s!%s", fn_name, debug.traceback())
 		return
 	end
 
 	if type(handler) ~= "function" then
-		log.error("钩子处理器必须是函数: %s.%s（实际为 %s）", tostring(obj), tostring(fn_name), type(handler))
+		log.error("方法%s的钩子处理器必须是函数！%s", fn_name, debug.traceback())
 		return
 	end
 
