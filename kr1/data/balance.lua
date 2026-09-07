@@ -5478,12 +5478,11 @@ local towers = {
 		shared_min_cooldown = 2,
 		price = {130, 180, 260, 330},
 		basic_attack = {
-			ray_timing = 0.15,
+			ray_timing = fts(4),
 			cooldown = 2.7,
 			damage_min = {4, 8, 15, 30},
 			damage_max = {7, 16, 28, 50},
 			range = {160, 170, 185, 205},
-			damage_every = fts(1),
 			count = 5
 		},
 		teleport = {
@@ -5498,7 +5497,6 @@ local towers = {
 			min_range = 0,
 			price = {225, 225, 225},
 			stars = {3, 4, 5},
-			chance = {1, 1, 1},
 			damage_min = {16, 28, 36},
 			damage_max = {24, 42, 54}
 		}

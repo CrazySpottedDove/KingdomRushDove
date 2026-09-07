@@ -279,9 +279,15 @@ function U.point_on_ellipse(center, a, angle, aspect)
 	aspect = aspect or 0.7
 	angle = angle or 0
 
-	local b = a * aspect
+	return V.v(center.x + a * cos(angle), center.y + a * aspect * sin(angle))
+end
 
-	return V.v(center.x + a * cos(angle), center.y + b * sin(angle))
+--- 返回椭圆上指定角度的点，使用游戏统一的 aspect，性能更优
+---@param center ffi.cdata vector
+---@param a number 椭圆长轴半径
+---@param angle number 仿射变换至圆后的圆心角
+function U.point_on_ellipse_default(center, a, angle)
+	return V.v(center.x + a * cos(angle), center.y + a * 0.7 * sin(angle))
 end
 
 ---计算点在椭圆内的距离因子
@@ -1766,7 +1772,7 @@ function U.rally_formation_position(idx, barrack, count, angle_offset)
 	else
 		local a = 2 * PI / count
 
-		pos = U.point_on_ellipse(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - PI * 0.5 + angle_offset)
+		pos = U.point_on_ellipse_default(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - PI * 0.5 + angle_offset)
 	end
 
 	local center = V.vclone(barrack.rally_pos)
@@ -3486,7 +3492,7 @@ function U.get_path_fx_points(this, fx_radius, void_radius)
 		theta = 2 * math.pi / n_points
 
 		for j = 1, n_points do
-			local pos = U.point_on_ellipse(this.pos, r, theta * j)
+			local pos = U.point_on_ellipse_default(this.pos, r, theta * j)
 
 			if GR:cell_is(pos.x, pos.y, TERRAIN_WATER) or P:valid_node_nearby(pos.x, pos.y, 1) and not GR:cell_is(pos.x, pos.y, TERRAIN_CLIFF) then
 				local p = {}

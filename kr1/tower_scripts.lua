@@ -12012,7 +12012,7 @@ function scripts.tower_stargazers.update(this, store)
 		if pow_s.changed then
 			pow_s.changed = nil
 
-			aa.cooldown = aa.cooldown_base + pow_s.level * aa.ray_timing
+			-- aa.cooldown = aa.cooldown_base + pow_s.level * aa.ray_timing
 			shots = aa.count_base + pow_s.level
 			aa.count = shots
 		end
@@ -12031,7 +12031,7 @@ function scripts.tower_stargazers.update(this, store)
 				local start_ts = store.tick_ts
 
 				animation_start(this, "attack_in", nil, store.tick_ts, false, elf_sid)
-				U.y_wait_unconditional(store, 0.5 * tw.cooldown_factor)
+				U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
 				animation_start(this, "attack_loop", nil, store.tick_ts, true, elf_sid)
 				U.animation_start_group(this, "attack_in", nil, store.tick_ts, false, "layers")
 				U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
@@ -12070,8 +12070,8 @@ function scripts.tower_stargazers.update(this, store)
 						bullet.bullet.damage_factor = tw.damage_factor
 						bullet.bullet.source_id = this.id
 
-						if enemy.health and not enemy.health.dead then
-							bullet.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+						if not enemy.health.dead then
+							bullet.bullet.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 							bullet.bullet.target_id = enemy.id
 
 							if pow_s.level > 0 then
@@ -12085,7 +12085,7 @@ function scripts.tower_stargazers.update(this, store)
 								simulation:queue_insert_entity(m)
 							end
 						else
-							bullet.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+							bullet.bullet.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 							bullet.bullet.target_id = nil
 
 							-- new: 鞭尸时，也触发星爆
@@ -12098,9 +12098,8 @@ function scripts.tower_stargazers.update(this, store)
 
 						local start_offset = aa.bullet_start_offset[1]
 
-						bullet.bullet.from = v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
-						bullet.pos = vclone(bullet.bullet.from)
-						bullet.bullet.level = this.tower.level
+						bullet.bullet.from:set(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
+						bullet.pos:copy(bullet.bullet.from)
 
 						simulation:queue_insert_entity(bullet)
 						U.y_wait_unconditional(store, ray_timing * tw.cooldown_factor)
@@ -12388,7 +12387,6 @@ scripts.mod_stargazers_stars_death = {}
 function scripts.mod_stargazers_stars_death.update(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
-	local chance = m.stars_death_chance[m.level]
 	local radius = m.stars_death_max_range
 	local total_stars = m.stars_death_stars[m.level]
 	local bullet = m.bullet
@@ -12419,7 +12417,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 
 	while true do
 		if not target or not target.health or target.health.dead then
-			if target and chance > random() then
+			if target then
 				local targets = U.find_enemies_in_range_filter_off(target.pos, radius, F_ENEMY, F_NONE)
 
 				if targets then

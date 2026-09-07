@@ -2120,6 +2120,7 @@ tt.particle_system.emission_rate = 40
 tt.particle_system.animation_fps = 30
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(2, 2)
+tt.particle_system.particle_lifetime = {0.6, 0.7}
 
 tt = RT("fx_tower_elven_stargazers_ray_hit_start", "fx")
 AC(tt, "tween")
@@ -2294,16 +2295,14 @@ tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 
--- tt.damage_from_bullet = true
 tt = RT("mod_tower_elven_stargazers_star_death", "modifier")
 b = balance.towers.elven_stargazers
 tt.main_script.update = scripts.mod_stargazers_stars_death.update
 tt.modifier.duration = 0.8
-tt.modifier.allows_duplicates = false
+tt.modifier.allows_duplicates = true
 tt.modifier.bullet = "arrow_tower_stargazers_death_star"
 tt.modifier.stars_death_min_range = b.stars_death.min_range
 tt.modifier.stars_death_max_range = b.stars_death.max_range
-tt.modifier.stars_death_chance = b.stars_death.chance
 tt.modifier.stars_death_stars = b.stars_death.stars
 
 tt = RT("mod_tower_stargazers_teleport_stun", "mod_stun")
