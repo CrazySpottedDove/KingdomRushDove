@@ -12012,7 +12012,6 @@ function scripts.tower_stargazers.update(this, store)
 		if pow_s.changed then
 			pow_s.changed = nil
 
-			-- aa.cooldown = aa.cooldown_base + pow_s.level * aa.ray_timing
 			shots = aa.count_base + pow_s.level
 			aa.count = shots
 		end
@@ -12027,21 +12026,20 @@ function scripts.tower_stargazers.update(this, store)
 			if not enemy then
 				aa.ts = aa.ts + fts(10)
 			else
-
 				local start_ts = store.tick_ts
 
-				animation_start(this, "attack_in", nil, store.tick_ts, false, elf_sid)
+				U.animation_start_once_specific_no_flip(this, "attack_in", store.tick_ts, elf_sid)
 				U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
-				animation_start(this, "attack_loop", nil, store.tick_ts, true, elf_sid)
+				U.animation_start_loop_specific(this, "attack_loop", nil, store.tick_ts, elf_sid)
 				U.animation_start_group(this, "attack_in", nil, store.tick_ts, false, "layers")
 				U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
 				U.animation_start_group(this, "atack_loop", nil, store.tick_ts, true, "layers")
 
 				sprites[moon_sid].hidden = false
 
-				animation_start(this, "start", nil, store.tick_ts, false, moon_sid)
+				U.animation_start_once_specific_no_flip(this, "start", store.tick_ts, moon_sid)
 				U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
-				animation_start(this, "loop", nil, store.tick_ts, true, moon_sid)
+				U.animation_start_loop_specific(this, "loop", nil, store.tick_ts, moon_sid)
 
 				local _, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, false, aa_vis_flags, aa_vis_bans)
 
@@ -12104,23 +12102,15 @@ function scripts.tower_stargazers.update(this, store)
 						simulation:queue_insert_entity(bullet)
 						U.y_wait_unconditional(store, ray_timing * tw.cooldown_factor)
 					end
-
-					animation_start(this, "attack_out", nil, store.tick_ts, false, elf_sid)
-					U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
-					animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
-					U.animation_start_group(this, "attack_out", nil, store.tick_ts, false, "layers")
-					animation_start(this, "end", nil, store.tick_ts, false, moon_sid)
-					U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
-
-					aa.ts = start_ts
-				else
-					-- 没有可打目标时，确保离开 attack_loop，避免举手卡住。
-					animation_start(this, "attack_out", nil, store.tick_ts, false, elf_sid)
-					U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
-					animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
-					U.animation_start_group(this, "attack_out", nil, store.tick_ts, false, "layers")
-					aa.ts = start_ts
 				end
+
+				U.animation_start_once_specific_no_flip(this, "attack_out", store.tick_ts, elf_sid)
+				U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
+				U.animation_start_loop_specific(this, "idle", nil, store.tick_ts, elf_sid)
+				U.animation_start_group(this, "attack_out", nil, store.tick_ts, false, "layers")
+				U.animation_start_once_specific_no_flip(this, "end", store.tick_ts, moon_sid)
+				U.y_wait_unconditional(store, 0.25 * tw.cooldown_factor)
+				aa.ts = start_ts
 
 				sprites[moon_sid].hidden = true
 

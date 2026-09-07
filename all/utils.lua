@@ -491,6 +491,12 @@ function U.animation_start_specific(entity, name, flip_x, ts, loop, idx)
 	a.name = name
 end
 
+--- 单个纹理开始循环动画，并设置 flip_x
+---@param entity any
+---@param name any
+---@param flip_x any
+---@param ts any
+---@param idx any
 function U.animation_start_loop_specific(entity, name, flip_x, ts, idx)
 	local a = entity.render.sprites[idx]
 	a.flip_x = flip_x and true or false
@@ -513,6 +519,11 @@ function U.animation_start_once_specific(entity, name, flip_x, ts, idx)
 	a.name = name
 end
 
+--- 单个非 loop_forced 纹理开始单次动画，不改变 flip
+---@param entity any
+---@param name any
+---@param ts any
+---@param idx any
 function U.animation_start_once_specific_no_flip(entity, name, ts, idx)
 	local a = entity.render.sprites[idx]
 	a.loop = false

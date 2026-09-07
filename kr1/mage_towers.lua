@@ -2120,7 +2120,7 @@ tt.particle_system.emission_rate = 40
 tt.particle_system.animation_fps = 30
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(2, 2)
-tt.particle_system.particle_lifetime = {0.6, 0.7}
+tt.particle_system.particle_lifetime = {0.4, 0.5}
 
 tt = RT("fx_tower_elven_stargazers_ray_hit_start", "fx")
 AC(tt, "tween")
