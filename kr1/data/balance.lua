@@ -4956,7 +4956,7 @@ local enemies = {
 			speed = 18,
 			armor = 0.75,
 			hp = 2500,
-			gold = 80,
+			gold = 90,
 			magic_armor = 0,
 			lives_cost = 2,
 			basic_attack = {
@@ -5043,7 +5043,7 @@ local enemies = {
 			}
 		},
 		alfa_acid = {
-			gold = 95,
+			gold = 105,
 			magic_armor = 0.5,
 			speed = 24,
 			armor = 0,
@@ -5116,7 +5116,7 @@ local enemies = {
 			}
 		},
 		alfa_shadow = {
-			gold = 60,
+			gold = 70,
 			magic_armor = 0.9,
 			speed = 28,
 			armor = 0,
@@ -5174,7 +5174,7 @@ local enemies = {
 			}
 		},
 		alfa_storm = {
-			gold = 70,
+			gold = 80,
 			magic_armor = 0.5,
 			speed = 26,
 			armor = 0,
