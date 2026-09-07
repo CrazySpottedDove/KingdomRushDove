@@ -794,7 +794,7 @@ function love.errorhandler(msg)
 	if PLUGIN_ERRORS and #PLUGIN_ERRORS > 0 then
 		blamed_plugins = PLUGIN_ERRORS
 	else
-		local blamed_plugin = find_plugin_from_traceback(trace .. "\n" .. msg)
+		local blamed_plugin = find_plugin_from_traceback(msg .. "\n" .. trace)
 		if blamed_plugin then
 			blamed_plugins = {{
 				entry = blamed_plugin,
