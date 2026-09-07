@@ -1932,7 +1932,7 @@ function upgrades:patch_templates(max_level)
 	end
 
 	if u then
-		for _, n in pairs(self.bolts) do
+		for _, n in ipairs(self.bolts) do
 			local b = T(n).bullet
 			local mods
 

@@ -3137,9 +3137,9 @@ tt = RT("faerie_dragon_lvl4", "decal_scripted")
 AC(tt, "force_motion", "custom_attack", "tween")
 tt.flight_height = 80
 tt.flight_speed_idle = 80
-tt.flight_speed_busy = 200
+tt.flight_speed_busy = 800
 tt.ramp_dist_idle = 80
-tt.ramp_dist_busy = 80
+tt.ramp_dist_busy = 20
 tt.main_script.update = scripts.faerie_dragon_lvl4.update
 tt.custom_attack = CC("bullet_attack")
 tt.custom_attack.animation = "attack"

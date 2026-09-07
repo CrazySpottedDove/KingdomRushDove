@@ -22071,7 +22071,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 		local dist = V.len(dx, dy)
 		local df = (not ramp_radius or ramp_radius < dist) and 1 or math.max(dist / ramp_radius, 0.1)
 
-		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(495, V.mul(10 * df, dx, dy)))
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(900, V.mul(10 * df, dx, dy)))
 		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
 		fm.v.x, fm.v.y = V.trim(max_speed, fm.v.x, fm.v.y)
 		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
