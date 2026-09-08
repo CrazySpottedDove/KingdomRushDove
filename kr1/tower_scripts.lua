@@ -25513,13 +25513,13 @@ function scripts.bomb_rr_fragment.update(this, store)
 						local damage_targets = U.find_enemies_in_range_filter_off_consider_hit_offset(hit_pos, this.bullet.damage_radius, this.bullet.damage_flags, this.bullet.damage_bans)
 
 						for j = 1, #damage_targets do
-							local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
+							local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, damage_targets[j].id, this.id)
 
 							if UP:get_upgrade("engineer_efficiency") then
 								d.value = this.bullet.damage_max
 							else
-								local pos = damage_targets[i].pos:clone()
-								pos:add(damage_targets[i].unit.hit_offset)
+								local pos = damage_targets[j].pos:clone()
+								pos:add(damage_targets[j].unit.hit_offset)
 								local dist_factor = U.dist_factor_inside_ellipse(pos, this.pos, this.bullet.damage_radius)
 
 								d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
