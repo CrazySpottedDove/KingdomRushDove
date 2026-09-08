@@ -3624,6 +3624,7 @@ tt.toughness_extra_hp = 0
 tt = RT("pirate_shotgun", "shotgun")
 tt.bullet.damage_min = nil
 tt.bullet.damage_max = nil
+tt.bullet.damage_type = DAMAGE_SHOT
 tt.bullet.min_speed = 40 * FPS
 tt.bullet.max_speed = 40 * FPS
 tt.bullet.hit_blood_fx = "fx_blood_splat"
