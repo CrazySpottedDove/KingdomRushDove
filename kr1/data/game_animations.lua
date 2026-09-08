@@ -13185,16 +13185,7 @@ return {
 		prefix = "bandit",
 		to = 67
 	},
-	enemy_bandit_thorn = {
-		from = 75,
-		prefix = "bandit",
-		to = 93
-	},
-	enemy_bandit_thornFree = {
-		from = 94,
-		prefix = "bandit",
-		to = 98
-	},
+
 	enemy_bandit_walkingDown = {
 		from = 45,
 		prefix = "bandit",
@@ -13505,16 +13496,7 @@ return {
 		prefix = "brigand",
 		to = 67
 	},
-	enemy_brigand_thorn = {
-		from = 81,
-		prefix = "brigand",
-		to = 99
-	},
-	enemy_brigand_thornFree = {
-		from = 100,
-		prefix = "brigand",
-		to = 104
-	},
+
 	enemy_brigand_walkingDown = {
 		from = 45,
 		prefix = "brigand",
@@ -13775,16 +13757,7 @@ return {
 		prefix = "darkKnight",
 		to = 67
 	},
-	enemy_dark_knight_thorn = {
-		from = 79,
-		prefix = "darkKnight",
-		to = 97
-	},
-	enemy_dark_knight_thornFree = {
-		from = 98,
-		prefix = "darkKnight",
-		to = 102
-	},
+
 	enemy_dark_knight_walkingDown = {
 		from = 45,
 		prefix = "darkKnight",
@@ -14115,16 +14088,7 @@ return {
 		prefix = "demonMage",
 		to = 114
 	},
-	enemy_demon_mage_thorn = {
-		from = 115,
-		prefix = "demonMage",
-		to = 133
-	},
-	enemy_demon_mage_thornFree = {
-		from = 134,
-		prefix = "demonMage",
-		to = 138
-	},
+
 	enemy_demon_mage_walkingDown = {
 		from = 45,
 		prefix = "demonMage",
@@ -14140,16 +14104,7 @@ return {
 		prefix = "demonMage",
 		to = 44
 	},
-	enemy_demon_thorn = {
-		from = 77,
-		prefix = "demonEvil",
-		to = 95
-	},
-	enemy_demon_thornFree = {
-		from = 96,
-		prefix = "demonEvil",
-		to = 100
-	},
+
 	enemy_demon_walkingDown = {
 		from = 45,
 		prefix = "demonEvil",
@@ -14180,16 +14135,7 @@ return {
 		prefix = "demonWolf",
 		to = 44
 	},
-	enemy_demon_wolf_thorn = {
-		from = 46,
-		prefix = "demonWolf",
-		to = 64
-	},
-	enemy_demon_wolf_thornFree = {
-		from = 65,
-		prefix = "demonWolf",
-		to = 69
-	},
+
 	enemy_demon_wolf_walkingDown = {
 		from = 21,
 		prefix = "demonWolf",
@@ -14610,16 +14556,7 @@ return {
 		prefix = "orc",
 		to = 67
 	},
-	enemy_fat_orc_thorn = {
-		from = 78,
-		prefix = "orc",
-		to = 96
-	},
-	enemy_fat_orc_thornFree = {
-		from = 97,
-		prefix = "orc",
-		to = 101
-	},
+
 	enemy_fat_orc_walkingDown = {
 		from = 45,
 		prefix = "orc",
@@ -14780,16 +14717,7 @@ return {
 		prefix = "CB_Rat",
 		to = 104
 	},
-	enemy_giant_rat_thorn = {
-		from = 67,
-		prefix = "CB_Rat",
-		to = 85
-	},
-	enemy_giant_rat_thornFree = {
-		from = 86,
-		prefix = "CB_Rat",
-		to = 89
-	},
+
 	enemy_giant_rat_walkingDown = {
 		from = 9,
 		prefix = "CB_Rat",
@@ -14885,16 +14813,7 @@ return {
 		prefix = "golemHead",
 		to = 45
 	},
-	enemy_golem_head_thorn = {
-		from = 46,
-		prefix = "golemHead",
-		to = 65
-	},
-	enemy_golem_head_thornFree = {
-		from = 84,
-		prefix = "golemHead",
-		to = 88
-	},
+
 	enemy_golem_head_walkingRightLeft = {
 		from = 1,
 		prefix = "golemHead",
@@ -15425,16 +15344,7 @@ return {
 		prefix = "lavaElemental",
 		to = 182
 	},
-	enemy_lava_elemental_thorn = {
-		from = 103,
-		prefix = "lavaElemental",
-		to = 121
-	},
-	enemy_lava_elemental_thornFree = {
-		from = 122,
-		prefix = "lavaElemental",
-		to = 125
-	},
+
 	enemy_lava_elemental_walkingDown = {
 		from = 50,
 		prefix = "lavaElemental",
@@ -15530,16 +15440,7 @@ return {
 		prefix = "marauder",
 		to = 67
 	},
-	enemy_marauder_thorn = {
-		from = 81,
-		prefix = "marauder",
-		to = 99
-	},
-	enemy_marauder_thornFree = {
-		from = 100,
-		prefix = "marauder",
-		to = 104
-	},
+
 	enemy_marauder_walkingDown = {
 		from = 45,
 		prefix = "marauder",
@@ -15660,16 +15561,7 @@ return {
 		prefix = "necromancer",
 		to = 163
 	},
-	enemy_necromancer_thorn = {
-		from = 164,
-		prefix = "necromancer",
-		to = 182
-	},
-	enemy_necromancer_thornFree = {
-		from = 183,
-		prefix = "necromancer",
-		to = 187
-	},
+
 	enemy_necromancer_walkingDown = {
 		from = 49,
 		prefix = "necromancer",
@@ -15760,16 +15652,7 @@ return {
 		prefix = "ogre",
 		to = 80
 	},
-	enemy_ogre_thorn = {
-		from = 107,
-		prefix = "ogre",
-		to = 125
-	},
-	enemy_ogre_thornFree = {
-		from = 126,
-		prefix = "ogre",
-		to = 129
-	},
+
 	enemy_ogre_walkingDown = {
 		from = 53,
 		prefix = "ogre",
@@ -15800,16 +15683,7 @@ return {
 		prefix = "orc_armored",
 		to = 67
 	},
-	enemy_orc_armored_thorn = {
-		from = 78,
-		prefix = "orc_armored",
-		to = 96
-	},
-	enemy_orc_armored_thornFree = {
-		from = 97,
-		prefix = "orc_armored",
-		to = 102
-	},
+
 	enemy_orc_armored_walkingDown = {
 		from = 45,
 		prefix = "orc_armored",
@@ -15900,16 +15774,7 @@ return {
 		prefix = "Pillager",
 		to = 79
 	},
-	enemy_pillager_thorn = {
-		from = 104,
-		prefix = "Pillager",
-		to = 122
-	},
-	enemy_pillager_thornFree = {
-		from = 123,
-		prefix = "Pillager",
-		to = 127
-	},
+
 	enemy_pillager_walkingDown = {
 		from = 53,
 		prefix = "Pillager",
@@ -16185,16 +16050,7 @@ return {
 		prefix = "mushroom",
 		to = 83
 	},
-	enemy_rotten_lesser_thorn = {
-		from = 84,
-		prefix = "mushroom",
-		to = 102
-	},
-	enemy_rotten_lesser_thornFree = {
-		from = 103,
-		prefix = "mushroom",
-		to = 106
-	},
+
 	enemy_rotten_lesser_walkingDown = {
 		from = 18,
 		prefix = "mushroom",
@@ -16230,16 +16086,7 @@ return {
 		prefix = "rotten_treant",
 		to = 126
 	},
-	enemy_rotten_tree_thorn = {
-		from = 71,
-		prefix = "rotten_treant",
-		to = 86
-	},
-	enemy_rotten_tree_thornFree = {
-		from = 87,
-		prefix = "rotten_treant",
-		to = 91
-	},
+
 	enemy_rotten_tree_walkingDown = {
 		from = 33,
 		prefix = "rotten_treant",
@@ -16270,16 +16117,7 @@ return {
 		prefix = "spider_sonofsarelgaz",
 		to = 40
 	},
-	enemy_sarelgaz_small_thorn = {
-		from = 40,
-		prefix = "spider_sonofsarelgaz",
-		to = 59
-	},
-	enemy_sarelgaz_small_thornFree = {
-		from = 84,
-		prefix = "spider_sonofsarelgaz",
-		to = 88
-	},
+
 	enemy_sarelgaz_small_walkingDown = {
 		from = 27,
 		prefix = "spider_sonofsarelgaz",
@@ -16456,16 +16294,7 @@ return {
 		prefix = "shadowArcher",
 		to = 88
 	},
-	enemy_shadow_archer_thorn = {
-		from = 67,
-		prefix = "shadowArcher",
-		to = 86
-	},
-	enemy_shadow_archer_thornFree = {
-		from = 108,
-		prefix = "shadowArcher",
-		to = 113
-	},
+
 	enemy_shadow_archer_walkingDown = {
 		from = 45,
 		prefix = "shadowArcher",
@@ -16636,16 +16465,7 @@ return {
 		prefix = "CanibalShamanShield",
 		to = 44
 	},
-	enemy_shaman_thorn = {
-		from = 112,
-		prefix = "shaman",
-		to = 130
-	},
-	enemy_shaman_thornFree = {
-		from = 131,
-		prefix = "shaman",
-		to = 135
-	},
+
 	enemy_shaman_walkingDown = {
 		from = 45,
 		prefix = "shaman",
@@ -16736,16 +16556,7 @@ return {
 		prefix = "skeleton_warrior",
 		to = 146
 	},
-	enemy_skeleton_big_thorn = {
-		from = 48,
-		prefix = "skeleton_warrior",
-		to = 67
-	},
-	enemy_skeleton_big_thornFree = {
-		from = 89,
-		prefix = "skeleton_warrior",
-		to = 93
-	},
+
 	enemy_skeleton_big_walkingDown = {
 		from = 33,
 		prefix = "skeleton_warrior",
@@ -16776,16 +16587,7 @@ return {
 		prefix = "skeleton",
 		to = 146
 	},
-	enemy_skeleton_thorn = {
-		from = 67,
-		prefix = "skeleton",
-		to = 87
-	},
-	enemy_skeleton_thornFree = {
-		from = 89,
-		prefix = "skeleton",
-		to = 93
-	},
+
 	enemy_skeleton_walkingDown = {
 		from = 33,
 		prefix = "skeleton",
@@ -16816,16 +16618,7 @@ return {
 		prefix = "darkSlayer",
 		to = 67
 	},
-	enemy_slayer_thorn = {
-		from = 68,
-		prefix = "darkSlayer",
-		to = 88
-	},
-	enemy_slayer_thornFree = {
-		from = 106,
-		prefix = "darkSlayer",
-		to = 110
-	},
+
 	enemy_slayer_walkingDown = {
 		from = 45,
 		prefix = "darkSlayer",
@@ -17001,16 +16794,7 @@ return {
 		prefix = "rotten_spider",
 		to = 40
 	},
-	enemy_spider_rotten_thorn = {
-		from = 59,
-		prefix = "rotten_spider",
-		to = 77
-	},
-	enemy_spider_rotten_thornFree = {
-		from = 78,
-		prefix = "rotten_spider",
-		to = 82
-	},
+
 	enemy_spider_rotten_tiny_attack = {
 		from = 28,
 		prefix = "rotten_spider_tiny",
@@ -17026,16 +16810,7 @@ return {
 		prefix = "rotten_spider_tiny",
 		to = 28
 	},
-	enemy_spider_rotten_tiny_thorn = {
-		from = 47,
-		prefix = "rotten_spider_tiny",
-		to = 65
-	},
-	enemy_spider_rotten_tiny_thornFree = {
-		from = 66,
-		prefix = "rotten_spider_tiny",
-		to = 70
-	},
+
 	enemy_spider_rotten_tiny_walkingDown = {
 		from = 19,
 		prefix = "rotten_spider_tiny",
@@ -17081,16 +16856,7 @@ return {
 		prefix = "spider_small",
 		to = 28
 	},
-	enemy_spider_small_thorn = {
-		from = 47,
-		prefix = "spider_small",
-		to = 65
-	},
-	enemy_spider_small_thornFree = {
-		from = 66,
-		prefix = "spider_small",
-		to = 70
-	},
+
 	enemy_spider_small_walkingDown = {
 		from = 19,
 		prefix = "spider_small",
@@ -17106,16 +16872,7 @@ return {
 		prefix = "spider_small",
 		to = 18
 	},
-	enemy_spider_thorn = {
-		from = 47,
-		prefix = "spider_medium",
-		to = 65
-	},
-	enemy_spider_thornFree = {
-		from = 66,
-		prefix = "spider_medium",
-		to = 70
-	},
+
 	enemy_spider_tiny_attack = {
 		from = 28,
 		prefix = "spider_tiny",
@@ -17131,16 +16888,7 @@ return {
 		prefix = "spider_tiny",
 		to = 28
 	},
-	enemy_spider_tiny_thorn = {
-		from = 47,
-		prefix = "spider_tiny",
-		to = 65
-	},
-	enemy_spider_tiny_thornFree = {
-		from = 66,
-		prefix = "spider_tiny",
-		to = 70
-	},
+
 	enemy_spider_tiny_walkingDown = {
 		from = 19,
 		prefix = "spider_tiny",
@@ -17197,16 +16945,7 @@ return {
 		prefix = "rotten_thing",
 		to = 127
 	},
-	enemy_swamp_thing_thorn = {
-		from = 128,
-		prefix = "rotten_thing",
-		to = 146
-	},
-	enemy_swamp_thing_thornFree = {
-		from = 147,
-		prefix = "rotten_thing",
-		to = 151
-	},
+
 	enemy_swamp_thing_walkingDown = {
 		from = 49,
 		prefix = "rotten_thing",
@@ -17292,16 +17031,7 @@ return {
 		prefix = "troll_thrower",
 		to = 82
 	},
-	enemy_troll_axe_thrower_thorn = {
-		from = 67,
-		prefix = "troll_thrower",
-		to = 86
-	},
-	enemy_troll_axe_thrower_thornFree = {
-		from = 120,
-		prefix = "troll_thrower",
-		to = 124
-	},
+
 	enemy_troll_axe_thrower_walkingDown = {
 		from = 45,
 		prefix = "troll_thrower",
@@ -17332,16 +17062,7 @@ return {
 		prefix = "troll_brute",
 		to = 67
 	},
-	enemy_troll_brute_thorn = {
-		from = 97,
-		prefix = "troll_brute",
-		to = 115
-	},
-	enemy_troll_brute_thornFree = {
-		from = 116,
-		prefix = "troll_brute",
-		to = 120
-	},
+
 	enemy_troll_brute_walkingDown = {
 		from = 45,
 		prefix = "troll_brute",
@@ -17377,16 +17098,7 @@ return {
 		prefix = "troll_chieftain",
 		to = 121
 	},
-	enemy_troll_chieftain_thorn = {
-		from = 122,
-		prefix = "troll_chieftain",
-		to = 140
-	},
-	enemy_troll_chieftain_thornFree = {
-		from = 141,
-		prefix = "troll_chieftain",
-		to = 145
-	},
+
 	enemy_troll_chieftain_walkingDown = {
 		from = 53,
 		prefix = "troll_chieftain",
@@ -17457,16 +17169,7 @@ return {
 		prefix = "troll_skater",
 		to = 44
 	},
-	enemy_troll_thorn = {
-		from = 77,
-		prefix = "troll",
-		to = 95
-	},
-	enemy_troll_thornFree = {
-		from = 96,
-		prefix = "troll",
-		to = 100
-	},
+
 	enemy_troll_walkingDown = {
 		from = 45,
 		prefix = "troll",
@@ -17672,16 +17375,7 @@ return {
 		prefix = "CB_Ratman",
 		to = 60
 	},
-	enemy_wererat_thorn = {
-		from = 84,
-		prefix = "CB_Ratman",
-		to = 102
-	},
-	enemy_wererat_thornFree = {
-		from = 103,
-		prefix = "CB_Ratman",
-		to = 106
-	},
+
 	enemy_wererat_walkingDown = {
 		from = 15,
 		prefix = "CB_Ratman",
@@ -17747,16 +17441,7 @@ return {
 		prefix = "winterwolf",
 		to = 31
 	},
-	enemy_whitewolf_thorn = {
-		from = 44,
-		prefix = "winterwolf",
-		to = 63
-	},
-	enemy_whitewolf_thornFree = {
-		from = 65,
-		prefix = "winterwolf",
-		to = 69
-	},
+
 	enemy_whitewolf_walkingDown = {
 		from = 21,
 		prefix = "winterwolf",
@@ -17832,16 +17517,7 @@ return {
 		prefix = "wulf",
 		to = 31
 	},
-	enemy_wolf_small_thorn = {
-		from = 44,
-		prefix = "wulf",
-		to = 63
-	},
-	enemy_wolf_small_thornFree = {
-		from = 65,
-		prefix = "wulf",
-		to = 69
-	},
+
 	enemy_wolf_small_walkingDown = {
 		from = 21,
 		prefix = "wulf",
@@ -17857,16 +17533,7 @@ return {
 		prefix = "wulf",
 		to = 20
 	},
-	enemy_wolf_thorn = {
-		from = 44,
-		prefix = "worg",
-		to = 63
-	},
-	enemy_wolf_thornFree = {
-		from = 65,
-		prefix = "worg",
-		to = 69
-	},
+
 	enemy_wolf_walkingDown = {
 		from = 21,
 		prefix = "worg",
@@ -17927,16 +17594,7 @@ return {
 		prefix = "yeti",
 		to = 73
 	},
-	enemy_yeti_thorn = {
-		from = 73,
-		prefix = "yeti",
-		to = 93
-	},
-	enemy_yeti_thornFree = {
-		from = 122,
-		prefix = "yeti",
-		to = 126
-	},
+
 	enemy_yeti_walkingDown = {
 		from = 50,
 		prefix = "yeti",
@@ -17972,16 +17630,7 @@ return {
 		prefix = "rotten_zombie",
 		to = 170
 	},
-	enemy_zombie_thorn = {
-		from = 94,
-		prefix = "rotten_zombie",
-		to = 112
-	},
-	enemy_zombie_thornFree = {
-		from = 113,
-		prefix = "rotten_zombie",
-		to = 117
-	},
+
 	enemy_zombie_walkingDown = {
 		from = 48,
 		prefix = "rotten_zombie",
@@ -21337,16 +20986,7 @@ return {
 		prefix = "goblin",
 		to = 67
 	},
-	goblin_thorn = {
-		from = 83,
-		prefix = "goblin",
-		to = 101
-	},
-	goblin_thornFree = {
-		from = 102,
-		prefix = "goblin",
-		to = 106
-	},
+
 	goblin_walkingDown = {
 		from = 45,
 		prefix = "goblin",
