@@ -73,6 +73,11 @@ function level:init_coroutined(store)
 	game.progress = 0.3
 	coroutine.yield()
 
+	-- level:init 紧跟在 E:Load() 后面，保证自定义 store.level.init 中自定义的敌人能够吃到各种数值补丁
+	if store.level.init then
+		store.level:init(store)
+	end
+
 	DI:patch_templates()
 	E:precompute()
 	game.progress = 0.4
@@ -101,10 +106,6 @@ function level:init_coroutined(store)
 	end
 
 	E:patch_config(configer.config())
-
-	if store.level.init then
-		store.level:init(store)
-	end
 
 	-- 随机化敌人放在 level:init 后面，避免 level 中定义的敌人未定义导致随机化失败的问题
 	if configer.config().enabled and configer.config().random_creeps then

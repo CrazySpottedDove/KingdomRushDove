@@ -2623,8 +2623,10 @@ function atlas_manager:_build_preview()
 		return
 	end
 	-- extract each frame as clean ImageData, then build merged ImageData
+
 	local merged_idata = atlas_util.create_merged_atlas(placements, all_frames, w, h)
 	state._merged_idata = merged_idata
+
 	for _, p in ipairs(placements) do
 		local frame = all_frames[p.frame_name]
 		if frame then
@@ -3029,6 +3031,12 @@ function atlas_manager:export_png()
 		end
 		if count > 0 then
 			self:set_status(string.format("已导出 %d 个PNG页: %s-1.png ... %s-%d.png", count, name, name, #state.merge_pages))
+			-- 记录本次导出的各页 PNG 对应的 DDS 转换命令
+			local cmds = {}
+			for pi = 1, #state.merge_pages do
+				cmds[#cmds + 1] = string.format("nvcompress.exe -bc3 -maximum %q %q", real_path(IMAGES_DIR) .. "/" .. name .. "-" .. pi .. ".png", real_path(ATLAS_DIR) .. "/" .. name .. "-" .. pi .. ".dds")
+			end
+			self._pending_dds_commands = cmds
 		else
 			self:set_status("PNG导出失败")
 		end
@@ -3045,6 +3053,8 @@ function atlas_manager:export_png()
 	if ok then
 		print(string.format("[atlas_manager] export_png: %s (%dx%d)", png_path, state.merge_w, state.merge_h))
 		self:set_status(string.format("已导出PNG: %s", png_path))
+		-- 记录本次导出的 PNG 对应的 DDS 转换命令，避免后续「DDS转换」误用旧命令
+		self._pending_dds_commands = {string.format("nvcompress.exe -bc3 -maximum %q %q", png_path, real_path(ATLAS_DIR) .. "/" .. name .. ".dds")}
 	else
 		self:set_status("PNG导出失败")
 	end
@@ -3256,6 +3266,8 @@ function atlas_manager:print_dds_commands()
 			return
 		end
 	end
+	-- 执行完毕即清空，防止残留的旧命令在下次转换时被重复执行
+	self._pending_dds_commands = nil
 	self:set_status("DDS 转换完成")
 	print("========================================\n")
 end

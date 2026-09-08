@@ -14650,16 +14650,6 @@ return {
 		prefix = "forest_troll",
 		to = 73
 	},
-	enemy_forest_troll_thorn = {
-		from = 73,
-		prefix = "forest_troll",
-		to = 92
-	},
-	enemy_forest_troll_thornFree = {
-		from = 122,
-		prefix = "forest_troll",
-		to = 127
-	},
 	enemy_forest_troll_walkingDown = {
 		from = 50,
 		prefix = "forest_troll",
@@ -14864,16 +14854,6 @@ return {
 		from = 67,
 		prefix = "goblin_zapper",
 		to = 81
-	},
-	enemy_goblin_zapper_thorn = {
-		from = 102,
-		prefix = "goblin_zapper",
-		to = 120
-	},
-	enemy_goblin_zapper_thornFree = {
-		from = 121,
-		prefix = "goblin_zapper",
-		to = 125
 	},
 	enemy_goblin_zapper_walkingDown = {
 		from = 45,
@@ -15860,16 +15840,6 @@ return {
 		prefix = "orc_wolfrider",
 		to = 31
 	},
-	enemy_orc_rider_thorn = {
-		from = 31,
-		prefix = "orc_wolfrider",
-		to = 50
-	},
-	enemy_orc_rider_thornFree = {
-		from = 65,
-		prefix = "orc_wolfrider",
-		to = 69
-	},
 	enemy_orc_rider_walkingDown = {
 		from = 21,
 		prefix = "orc_wolfrider",
@@ -15999,16 +15969,6 @@ return {
 		from = 85,
 		prefix = "Raider",
 		to = 108
-	},
-	enemy_raider_thorn = {
-		from = 67,
-		prefix = "Raider",
-		to = 86
-	},
-	enemy_raider_thornFree = {
-		from = 129,
-		prefix = "Raider",
-		to = 133
 	},
 	enemy_raider_walkingDown = {
 		from = 45,
