@@ -760,7 +760,7 @@ function atlas_manager:build_controls()
 		ui.window:add_child(btn)
 		return btn
 	end
-	local presets = {{720, "1K", 1024}, {770, "2K", 2048}, {820, "4K", 4096}}
+	local presets = {{720, "512", 512}, {770, "1K", 1024}, {820, "2K", 2048}, {870, "4K", 4096}}
 	for _, p in ipairs(presets) do
 		local sz = p[3]
 		local btn = make_size_btn(p[1], p[2])
@@ -774,7 +774,7 @@ function atlas_manager:build_controls()
 	-- non-power-of-2 mode checkbox
 	do
 		local cb = KView:new(V.v(130, 20))
-		cb.pos = V.v(880, control_y + 1)
+		cb.pos = V.v(930, control_y + 1)
 		cb.colors.background = {22, 28, 42, 200}
 		cb.shape = {
 			name = "rectangle",
@@ -2283,7 +2283,7 @@ function atlas_manager:_make_merge_frame(sel)
 		_orig_a_size = logical and {logical.a_size[1], logical.a_size[2]} or {src.a_size[1], src.a_size[2]},
 		f_quad = {src.f_quad[1], src.f_quad[2], src.f_quad[3], src.f_quad[4]},
 		alias = type(src.alias) == "table" and src.alias or {},
-		ref_scale = (logical and logical.ref_scale) or (src.ref_scale or 1),
+		ref_scale = logical and (logical.ref_scale or 1) or (src.ref_scale or 1),
 		dds_key = src.dds_key,
 		_is_loose = src._is_loose,
 		_src_path = src._src_path,

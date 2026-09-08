@@ -1,6 +1,6 @@
 -- sort_lua_table.lua
 local input_file = arg[1]
-local output_file = "tmp/sorted_table.lua"
+local output_file = arg[1] or "tmp/sorted_table.lua"
 
 if not input_file then
 	print("Usage: lua sort_lua_table.lua <input_file>")
