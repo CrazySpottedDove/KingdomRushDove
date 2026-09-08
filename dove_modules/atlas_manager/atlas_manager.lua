@@ -2535,33 +2535,61 @@ function atlas_manager:_load_frame_idatas(placements, all_frames)
 	end
 	local real_png_dir = project_root .. "/" .. IMAGES_DIR
 	local total_loads = 0
+	-- 优先走 CPU：直接解码 PNG 存档为 ImageData，逐帧用 ImageData:paste 子矩形拷贝裁切，
+	-- 避免对 4096 等大纹理做逐帧 GPU canvas 回读（弱 GPU/虚拟机环境下会长时间卡死）
 	for dds_key, info in pairs(need_load) do
-		local exp_w, exp_h = 0, 0
-		for _, fr in pairs(info.frames) do
-			if fr.a_size then
-				exp_w, exp_h = fr.a_size[1], fr.a_size[2]
+		local png_idata = nil
+		for _, try_key in ipairs({dds_key, dds_key:gsub("%-1$", "")}) do
+			if try_key ~= "" then
+				local pf = io.open(real_png_dir .. "/" .. try_key .. ".png", "rb")
+				if pf then
+					local blob = pf:read("*all")
+					pf:close()
+					local ok_id, id = pcall(love.image.newImageData, love.data.newByteData(blob))
+					if ok_id and id then
+						png_idata = id
+						break
+					end
+				end
 			end
-			break
 		end
-		local img, _, tw, th = atlas_util.load_source_preview(dds_key, ATLAS_DIR, real_png_dir, exp_w, exp_h)
-		if not img then
-			local alt_key = dds_key:gsub("%-1$", "")
-			if alt_key ~= dds_key then
-				img, _, tw, th = atlas_util.load_source_preview(alt_key, ATLAS_DIR, real_png_dir, exp_w, exp_h)
-			end
-		end
-		if img then
-			img:setFilter("nearest", "nearest")
-			info.texture = img
-			info.tex_w = tw
-			info.tex_h = th
+		if png_idata then
+			info.idata = png_idata
+			info.tex_w = png_idata:getWidth()
+			info.tex_h = png_idata:getHeight()
 			total_loads = total_loads + 1
-			print(string.format("[atlas_manager] load: %s (%dx%d)", dds_key, tw, th))
+			print(string.format("[atlas_manager] load: %s (%dx%d, CPU)", dds_key, info.tex_w, info.tex_h))
+		else
+			-- PNG 缺失/解码失败 → 退回 GPU 路径（load_source_preview 会按需从 DDS 生成 PNG）
+			local exp_w, exp_h = 0, 0
+			for _, fr in pairs(info.frames) do
+				if fr.a_size then
+					exp_w, exp_h = fr.a_size[1], fr.a_size[2]
+				end
+				break
+			end
+			local img, _, tw, th = atlas_util.load_source_preview(dds_key, ATLAS_DIR, real_png_dir, exp_w, exp_h)
+			if not img then
+				local alt_key = dds_key:gsub("%-1$", "")
+				if alt_key ~= dds_key then
+					img, _, tw, th = atlas_util.load_source_preview(alt_key, ATLAS_DIR, real_png_dir, exp_w, exp_h)
+				end
+			end
+			if img then
+				img:setFilter("nearest", "nearest")
+				info.texture = img
+				info.tex_w = tw
+				info.tex_h = th
+				total_loads = total_loads + 1
+				print(string.format("[atlas_manager] load: %s (%dx%d, GPU)", dds_key, tw, th))
+			end
 		end
 	end
 	if total_loads == 0 and next(need_load) then
 		return nil, "无法加载纹理用于预览 (文件不存在?)"
 	end
+	local t_extract = os.clock()
+	local extract_count = 0
 	for _, p in ipairs(placements) do
 		local frame = all_frames[p.frame_name]
 		if frame then
@@ -2575,11 +2603,28 @@ function atlas_manager:_load_frame_idatas(placements, all_frames)
 			else
 				local dds_key = frame.dds_key
 				local info = dds_key and need_load[dds_key]
-				if info and info.texture then
-					frame._preview_idata = atlas_util.extract_frame_pixels(info.texture, frame.f_quad, info.tex_w, info.tex_h)
+				if info then
+					local q = frame.f_quad
+					local idata = nil
+					if info.idata then
+						idata = atlas_util.crop_idata(info.idata, q[1], q[2], q[3], q[4])
+					end
+					if idata then
+						frame._preview_idata = idata
+					elseif info.texture then
+						frame._preview_idata = atlas_util.extract_frame_pixels(info.texture, q, info.tex_w, info.tex_h)
+					end
 				end
 			end
+			extract_count = extract_count + 1
+			if extract_count % 100 == 0 then
+				print(string.format("[atlas_manager] extract progress: %d/%d (%.1fs)", extract_count, #placements, os.clock() - t_extract))
+			end
 		end
+	end
+	print(string.format("[atlas_manager] extract done: %d/%d frames (%.1fs)", extract_count, #placements, os.clock() - t_extract))
+	for _, info in pairs(need_load) do
+		info.idata = nil -- 尽早释放大块 CPU 内存
 	end
 	return true
 end

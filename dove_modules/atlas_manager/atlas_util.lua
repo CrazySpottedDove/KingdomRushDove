@@ -268,6 +268,38 @@ function util.extract_frame_pixels(atlas_img, f_quad, tex_w, tex_h)
 	return idata
 end
 
+--- CPU 裁切 ImageData 子矩形（替代逐帧 GPU canvas 回读）。
+--- 直接以子矩形形式创建新 ImageData，返回 nil 表示失败（越界/不支持），
+--- 由调用方退回 GPU 路径。
+function util.crop_idata(src, x, y, w, h)
+	-- 注意：LÖVE 的 ImageData 是 userdata，不能用 type()=="table" 判断
+	if not src or not src.paste then
+		return nil
+	end
+	x, y = math.floor(x or 0), math.floor(y or 0)
+	w, h = math.floor(w or 1), math.floor(h or 1)
+	if x < 0 then
+		x = 0
+	end
+	if y < 0 then
+		y = 0
+	end
+	local src_w, src_h = src:getWidth(), src:getHeight()
+	local cw = math.min(w, src_w - x)
+	local ch = math.min(h, src_h - y)
+	if cw <= 0 or ch <= 0 then
+		return nil
+	end
+	local out = love.image.newImageData(cw, ch)
+	local ok = pcall(function()
+		out:paste(src, 0, 0, x, y, cw, ch)
+	end)
+	if not ok then
+		return nil
+	end
+	return out
+end
+
 function util.create_merged_atlas(placements, src_frames, output_w, output_h)
 	local merged = love.image.newImageData(output_w, output_h)
 	merged:mapPixel(function()

@@ -15683,7 +15683,6 @@ return {
 		prefix = "orc_armored",
 		to = 67
 	},
-
 	enemy_orc_armored_walkingDown = {
 		from = 45,
 		prefix = "orc_armored",
