@@ -322,6 +322,35 @@ function util.save_png(image_data, path)
 	return pcall(FS.write, path, png_data)
 end
 
+local function backup_list_dir(dir)
+	local names = {}
+	local function add(set)
+		for _, n in ipairs(set) do
+			names[n] = true
+		end
+	end
+	local ok, items = pcall(love.filesystem.getDirectoryItems, dir)
+	if ok and type(items) == "table" then
+		add(items)
+	end
+	-- 真实文件系统兜底（绝对路径下 love.filesystem 列不到）
+	local h = io.popen('ls -a "' .. tostring(dir):gsub('"', '\\"') .. '" 2>/dev/null')
+	if h then
+		for n in h:lines() do
+			names[n] = true
+		end
+		h:close()
+	end
+	local out = {}
+	for n in pairs(names) do
+		out[#out + 1] = n
+	end
+	return out
+end
+
+-- 备份 lua/luac/aluac + base.dds + base-N.dds 到 backup_dir/<ts>_<base>/
+-- 目录列举与读写均带真实文件系统兜底，确保 .dds 不会漏备份。
+-- 返回 (target目录, 成功拷贝的文件名列表)
 function util.backup_files(dir, base_name, backup_dir, read_fn, write_fn)
 	read_fn = read_fn or function(path)
 		return FS.read(path)
@@ -331,45 +360,48 @@ function util.backup_files(dir, base_name, backup_dir, read_fn, write_fn)
 	end
 	local ts = tostring(os.time())
 	local target = backup_dir .. "/" .. ts .. "_" .. base_name
-	-- try real filesystem first, fallback to FS
-	local ok = pcall(FS.createDirectory, target)
-	if not ok then
-		os.execute("mkdir -p " .. target:gsub(" ", "\\ "))
+	local mk = pcall(FS.createDirectory, target)
+	if not mk then
+		os.execute('mkdir -p "' .. tostring(target):gsub('"', '\\"') .. '"')
 	end
-
-	local suffixes = {".lua", ".luac", ".aluac"}
-	for _, ext in ipairs(suffixes) do
-		local src = dir .. "/" .. base_name .. ext
-		local data = read_fn(src)
-		if data then
-			write_fn(target .. "/" .. base_name .. ext, data)
-		end
+	local wanted = {}
+	for _, ext in ipairs({".lua", ".luac", ".aluac"}) do
+		wanted[base_name .. ext] = true
 	end
+	wanted[base_name .. ".dds"] = true
 
-	local ok, files = pcall(FS.getDirectoryItems, dir)
-	if not ok or type(files) ~= "table" then
-		-- try real filesystem via io.popen
-		local f = io.popen("ls " .. dir:gsub(" ", "\\ ") .. " 2>/dev/null", "r")
-		if f then
-			files = {}
-			for n in f:lines() do
-				files[#files + 1] = n
+	local copied = {}
+	for _, name in ipairs(backup_list_dir(dir)) do
+		if wanted[name] or name:match("^" .. base_name .. "%-%d+%.dds$") then
+			local src = dir .. "/" .. name
+			local data
+			local okr, d = pcall(read_fn, src)
+			if okr and d then
+				data = d
+			else
+				local f = io.open(src, "rb")
+				if f then
+					data = f:read("*all")
+					f:close()
+				end
 			end
-			f:close()
-		end
-	end
-	if type(files) == "table" then
-		for _, fname in ipairs(files) do
-			if fname == (base_name .. ".dds") or fname:match("^" .. base_name .. "%-%d+%.dds$") then
-				local content = read_fn(dir .. "/" .. fname)
-				if content then
-					write_fn(target .. "/" .. fname, content)
+			if data then
+				local okw = write_fn(target .. "/" .. name, data)
+				if not (okw and okw ~= false) then
+					local fw = io.open(target .. "/" .. name, "wb")
+					if fw then
+						fw:write(data)
+						fw:close()
+						okw = true
+					end
+				end
+				if okw and okw ~= false then
+					copied[#copied + 1] = name
 				end
 			end
 		end
 	end
-
-	return target
+	return target, copied
 end
 
 function util.generate_nvcompress_commands(png_dir, dds_dir, base_name, num_pages)

@@ -724,7 +724,19 @@ function atlas_manager:build_controls()
 	w_lbl.text = "尺寸:"
 	w_lbl.pos = V.v(530, control_y)
 	ui.window:add_child(w_lbl)
-	local function make_size_input(x, initial)
+	-- 尺寸下拉选项：宽/高独立选择（256~4096），合并与后续重打包共用同一套选择
+	local SIZE_CHOICES = {256, 512, 1024, 2048, 4096}
+	local size_target = nil -- "w" | "h"
+
+	local function close_size_menu()
+		if ui.size_menu_dlg then
+			ui.size_menu_dlg.hidden = true
+		end
+		size_target = nil
+	end
+	ui.close_size_menu = close_size_menu
+
+	local function make_size_input(x, initial, kind)
 		local inp = KView:new(V.v(64, 22))
 		inp.pos = V.v(x, control_y)
 		inp.colors.background = {22, 28, 42, 255}
@@ -733,17 +745,73 @@ function atlas_manager:build_controls()
 			args = {"fill", 0, 0, 64, 22, 4, 4}
 		}
 		ui.window:add_child(inp)
-		local txt = GGLabel:new(V.v(60, 22))
+		local txt = GGLabel:new(V.v(46, 22))
 		txt.font_name = "body"
 		txt.font_size = 13 * rs
 		txt.text_align = "center"
 		txt.vertical_align = "middle"
 		txt.colors.text = {255, 255, 255, 255}
 		txt.text = tostring(initial)
+		txt.pos = V.v(0, 0)
 		inp:add_child(txt)
+		local arrow = GGLabel:new(V.v(14, 22))
+		arrow.font_name = "body"
+		arrow.font_size = 11 * rs
+		arrow.text_align = "center"
+		arrow.vertical_align = "middle"
+		arrow.colors.text = {150, 162, 192, 255}
+		arrow.text = "▾"
+		arrow.pos = V.v(48, 0)
+		inp:add_child(arrow)
+		function inp:on_click()
+			ui.size_menu_apply = nil -- 合并尺寸路径：不使用外部回调
+			if ui.size_menu_dlg and not ui.size_menu_dlg.hidden and size_target == kind then
+				close_size_menu()
+				return
+			end
+			size_target = kind
+			local mw, mh = ui.size_menu_dlg.size.x, ui.size_menu_dlg.size.y
+			ui.size_menu_dlg.anchor = V.v(mw * 0.5, mh * 0.5)
+			ui.size_menu_dlg.pos = V.v(x + 32, control_y + 22 + 6 + mh * 0.5)
+			ui.size_menu_dlg.hidden = false
+			ui.size_menu_dlg:order_to_front()
+		end
 		return inp, txt
 	end
-	ui.merge_w_input, ui.merge_w_text = make_size_input(572, 2048)
+
+	-- 尺寸下拉弹层
+	do
+		local rows = #SIZE_CHOICES
+		local mw, row_h, gap = 150, 24, 2
+		local mh = rows * row_h + (rows - 1) * gap + 8
+		ui.size_menu_dlg = KView:new(V.v(mw, mh))
+		ui.size_menu_dlg.colors.background = {20, 27, 42, 250}
+		ui.size_menu_dlg.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, mw, mh, 6, 6}
+		}
+		ui.window:add_child(ui.size_menu_dlg)
+		for i, sz in ipairs(SIZE_CHOICES) do
+			local b = self:make_button(tostring(sz), V.v(mw - 12, row_h))
+			b.pos = V.v(6, 4 + (i - 1) * (row_h + gap))
+			b.on_press = function()
+				if ui.size_menu_apply then
+					ui.size_menu_apply(sz)
+				elseif size_target == "w" then
+					state.merge_w = sz
+					ui.merge_w_text.text = tostring(sz)
+				elseif size_target == "h" then
+					state.merge_h = sz
+					ui.merge_h_text.text = tostring(sz)
+				end
+				close_size_menu()
+			end
+			ui.size_menu_dlg:add_child(b)
+		end
+		ui.size_menu_dlg.hidden = true
+	end
+	ui.size_menu_apply = nil
+	ui.merge_w_input, ui.merge_w_text = make_size_input(572, state.merge_w, "w")
 	local x_lbl = GGLabel:new(V.v(12, 22))
 	x_lbl.font_name = "body"
 	x_lbl.font_size = 13 * rs
@@ -753,24 +821,7 @@ function atlas_manager:build_controls()
 	x_lbl.text = "x"
 	x_lbl.pos = V.v(638, control_y)
 	ui.window:add_child(x_lbl)
-	ui.merge_h_input, ui.merge_h_text = make_size_input(650, 2048)
-	local function make_size_btn(x, text)
-		local btn = self:make_button(text, V.v(48, 22))
-		btn.pos = V.v(x, control_y)
-		ui.window:add_child(btn)
-		return btn
-	end
-	local presets = {{720, "512", 512}, {770, "1K", 1024}, {820, "2K", 2048}, {870, "4K", 4096}}
-	for _, p in ipairs(presets) do
-		local sz = p[3]
-		local btn = make_size_btn(p[1], p[2])
-		btn.on_press = function()
-			state.merge_w = sz
-			state.merge_h = sz
-			ui.merge_w_text.text = tostring(sz)
-			ui.merge_h_text.text = tostring(sz)
-		end
-	end
+	ui.merge_h_input, ui.merge_h_text = make_size_input(650, state.merge_h, "h")
 	-- non-power-of-2 mode checkbox
 	do
 		local cb = KView:new(V.v(130, 20))
@@ -939,6 +990,10 @@ local function make_dialog_text_input(w, initial)
 end
 
 function atlas_manager:show_scale_dialog()
+
+	if ui.close_size_menu then
+		ui.close_size_menu()
+	end
 	if not state._merged_idata then
 		self:set_status("请先选中帧并点击「合并」生成图集")
 		return
@@ -955,6 +1010,10 @@ function atlas_manager:show_scale_dialog()
 end
 
 function atlas_manager:show_split_dialog()
+
+	if ui.close_size_menu then
+		ui.close_size_menu()
+	end
 	local selected = self:get_selected_frame_list()
 	if #selected == 0 then
 		self:set_status("请先勾选要拆分的帧（无需先合并）")
@@ -1404,7 +1463,7 @@ function atlas_manager:build_button_bar()
 	local by = ui.button_y or (self.ref_h - 36)
 	local bw = 120
 	local gap = 12
-	local total = bw * 6 + gap * 5
+	local total = bw * 7 + gap * 6
 	local sx = (vw - total) * 0.5
 	local function bar_btn(text, idx, on_press)
 		local btn = self:make_button(text, V.v(bw, 32))
@@ -1434,6 +1493,9 @@ function atlas_manager:build_button_bar()
 	end)
 	bar_btn("替换图集", 5, function()
 		self:replace_with_upscaled()
+	end)
+	bar_btn("重打包", 6, function()
+		self:show_repack_dialog()
 	end)
 -- 说明：原 PNG 视图已移除，小图处理（预览/缩放/合并）统一在图集视图中完成。
 end
@@ -1532,6 +1594,7 @@ function atlas_manager:refresh_groups()
 	state.frame_checks = {}
 	state.file_checks = {}
 	state.expanded = {}
+	state.ref_index_dirty = true -- 图集数据变化后，重打包引用索引需要重建
 	local files = atlas_util.scan_atlas_files(ATLAS_DIR)
 	for _, f in ipairs(files) do
 		local tbl = atlas_util.load_atlas_lua(f.path)
@@ -2292,6 +2355,10 @@ function atlas_manager:_make_merge_frame(sel)
 end
 
 function atlas_manager:do_merge()
+
+	if ui.close_size_menu then
+		ui.close_size_menu()
+	end
 	print("[atlas_manager] merge: start")
 	local selected = self:get_selected_frame_list()
 	if #selected == 0 then
@@ -3482,6 +3549,14 @@ end
 
 function atlas_manager:keypressed(key, isrepeat)
 	if key == "escape" then
+		if ui.size_menu_dlg and not ui.size_menu_dlg.hidden then
+			ui.close_size_menu()
+			return
+		end
+		if ui.repack_dialog and not ui.repack_dialog.hidden then
+			ui.repack_dialog.hidden = true
+			return
+		end
 		if popup.active then
 			self:hide_preview_popup()
 			return
@@ -3565,6 +3640,1279 @@ end
 function atlas_manager:preview_merge()
 	print("[atlas_manager] preview_merge: start")
 	self:do_merge()
+end
+
+-- ============================================================
+-- 图集重打包（repack）
+-- 规则：同 prefix 族的帧必须整体进入同一输出图集。
+-- 打包判定只发生在点击「顺序填充」与「打包并暂存」时；
+-- 切换尺寸/输出集数量仅改数值与显示，不触发打包检查。
+-- 状态精简：每集只显示 帧数+占用百分比；装不下才提示。
+-- ============================================================
+local RPK_MAX_K = 8
+local RPK_PAGE_ROWS = 12
+
+local function rpk_frame_prefix(name)
+	return (name:match("^(.-)_%d+$")) or name
+end
+
+local function rpk_build_families(selected_set)
+	local fam, order = {}, {}
+	for name in pairs(selected_set) do
+		local p = rpk_frame_prefix(name)
+		if not fam[p] then
+			fam[p] = {}
+			order[#order + 1] = p
+		end
+		fam[p][#fam[p] + 1] = name
+	end
+	table.sort(order)
+	for _, p in ipairs(order) do
+		table.sort(fam[p])
+	end
+	return fam, order
+end
+
+-- 懒构建全量倒排索引：帧名(含 alias) -> 出现它的图集集合。
+-- 只在图集数据变化(refresh_groups)后重建一次，后续打开重打包对话框 O(1) 查询。
+-- 纹理文件名（去扩展名），如 "go_stage36.dds" -> "go_stage36"
+local function rpk_tex_key(a_name)
+	local n = tostring(a_name or ""):match("([^/]+)$") or ""
+	return (n:match("^(.+)%.[^.]+$")) or n
+end
+
+-- 懒构建倒排索引：纹理名 -> 引用它的图集集合（含示例帧）
+function atlas_manager:rpk_ensure_index()
+	if not state.ref_index_dirty then
+		return
+	end
+	local idx, ex = {}, {}
+	for gname, g in pairs(state.groups) do
+		if g and g.frames then
+			for fn, v in pairs(g.frames) do
+				local tex = rpk_tex_key(v and v.a_name)
+				if tex ~= "" then
+					if not idx[tex] then
+						idx[tex] = {}
+					end
+					idx[tex][gname] = true
+					if not ex[tex] then
+						ex[tex] = {}
+					end
+					if not ex[tex][gname] then
+						ex[tex][gname] = {}
+					end
+					if #ex[tex][gname] < 2 then
+						ex[tex][gname][#ex[tex][gname] + 1] = fn
+					end
+				end
+			end
+		end
+	end
+	ui.rpk_tex_index = idx
+	ui.rpk_tex_examples = ex
+	state.ref_index_dirty = false
+end
+
+-- 引用检查（按 DDS 纹理）：
+-- 重打包将覆盖/删除本图集自己的 dds 页（base.dds / base-N.dds，含磁盘上残留的旧页）。
+-- 若其它图集有帧的 a_name 指向这些 dds，替换后其 quad 会失效 → 阻止并列出引用方。
+function atlas_manager:rpk_block_refs(removed_set, gname)
+	self:rpk_ensure_index()
+	local idx = ui.rpk_tex_index or {}
+	local ex = ui.rpk_tex_examples or {}
+	local g0 = state.groups[gname]
+	-- 目标纹理集合：本组帧当前引用的纹理 + 磁盘上本组前缀(base/base-N)的 dds 页
+	local target = {}
+	if g0 and g0.frames then
+		for _, v in pairs(g0.frames) do
+			local tex = rpk_tex_key(v and v.a_name)
+			if tex ~= "" then
+				target[tex] = true
+			end
+		end
+	end
+	-- 磁盘上残留的同前缀页（如旧的 -2/-3），也会被清理/覆盖
+	do
+		local ok, items = pcall(love.filesystem.getDirectoryItems, ATLAS_DIR)
+		if ok and type(items) == "table" then
+			for _, nm in ipairs(items) do
+				local page = nm:match("^(" .. gname .. "(?:%-%d+)?)%.dds$")
+				if page then
+					target[page] = true
+				end
+			end
+		end
+	end
+	local refs_map = {}
+	local refs_ex = {}
+	for tex in pairs(target) do
+		local owners = idx[tex]
+		if owners then
+			for g2 in pairs(owners) do
+				if g2 ~= gname then
+					refs_map[g2] = (refs_map[g2] or 0) + 1
+					if not refs_ex[g2] then
+						refs_ex[g2] = {}
+					end
+					local s2 = (ex[tex] and ex[tex][g2]) or {}
+					for _, f in ipairs(s2) do
+						if #refs_ex[g2] < 3 then
+							refs_ex[g2][#refs_ex[g2] + 1] = f
+						end
+					end
+				end
+			end
+		end
+	end
+	local refs = {}
+	for g2, n in pairs(refs_map) do
+		refs[#refs + 1] = string.format("%s：%d 个共享纹理（%s …）", g2, n, table.concat(refs_ex[g2] or {}, ", "))
+	end
+	table.sort(refs)
+	-- 同组内：保留帧的 alias 指向被剔除帧
+	local same = {}
+	if removed_set and g0 and g0.frames then
+		for fn, v in pairs(g0.frames) do
+			if not removed_set[fn] then
+				for _, al in ipairs(v.alias or {}) do
+					if removed_set[al] then
+						same[#same + 1] = string.format("%s 的 alias 指向将移除的 %s", fn, al)
+					end
+				end
+			end
+		end
+	end
+	return refs, same
+end
+
+function atlas_manager:rpk_block_message(refs, same)
+	if #refs == 0 and #same == 0 then
+		return nil
+	end
+	local lines = {"以下图集引用了本图集将覆盖/删除的 DDS 纹理（a_name 指向 base/base-N dds），已阻止重打包："}
+	for i = 1, math.min(6, #refs) do
+		lines[#lines + 1] = "  · " .. refs[i]
+	end
+	if #refs > 6 then
+		lines[#lines + 1] = string.format("  …等 %d 个图集", #refs)
+	end
+	for i = 1, math.min(3, #same) do
+		lines[#lines + 1] = "  · " .. same[i]
+	end
+	return table.concat(lines, "\n")
+end
+
+local function rpk_fam_area(rp, g0, p)
+	local a = 0
+	for _, fn in ipairs(rp.fam[p]) do
+		local f = g0.frames[fn]
+		if f then
+			a = a + f.f_quad[3] * f.f_quad[4]
+		end
+	end
+	return a
+end
+
+-- 汇总各集：names 帧列表 + 面积（不含 unplaced）
+function atlas_manager:rpk_recompute()
+	local rp = state.repack
+	if not rp then
+		return
+	end
+	for i = 1, RPK_MAX_K do
+		rp.outs[i].names = {}
+		rp.outs[i].area = 0
+	end
+	local g0 = state.groups[rp.gname]
+	for idx, p in ipairs(rp.famOrder) do
+		if not (rp.unplaced and rp.unplaced[p]) then
+			local t = rp.assign[p]
+			if not t or t < 1 or t > rp.k then
+				t = ((idx - 1) % rp.k) + 1
+				rp.assign[p] = t
+			end
+			for _, fn in ipairs(rp.fam[p]) do
+				rp.outs[t].names[#rp.outs[t].names + 1] = fn
+			end
+			rp.outs[t].area = rp.outs[t].area + rpk_fam_area(rp, g0, p)
+		end
+	end
+	for i = 1, RPK_MAX_K do
+		table.sort(rp.outs[i].names)
+	end
+end
+
+function atlas_manager:rpk_open_size_menu(apply, abs_cx, abs_cy)
+	if not ui.size_menu_dlg then
+		return
+	end
+	ui.size_menu_apply = apply
+	local mw, mh = ui.size_menu_dlg.size.x, ui.size_menu_dlg.size.y
+	ui.size_menu_dlg.anchor = V.v(mw * 0.5, mh * 0.5)
+	local vw, vh = self.ref_w, self.ref_h
+	local cx = math.max(mw * 0.5 + 4, math.min(abs_cx, vw - mw * 0.5 - 4))
+	local cy = math.min(abs_cy + 14, vh - mh * 0.5 - 4)
+	ui.size_menu_dlg.pos = V.v(cx, cy)
+	ui.size_menu_dlg.hidden = false
+	ui.size_menu_dlg:order_to_front()
+end
+
+function atlas_manager:build_repack_dialog()
+	if ui.repack_dialog then
+		return
+	end
+	local rs = self._rs
+	local dlg = KView:new(V.v(1020, 660))
+	dlg.colors.background = {26, 20, 12, 246}
+	dlg.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, 1020, 660, 12, 12}
+	}
+	dlg.anchor = V.v(510, 330)
+	ui.repack_dialog = dlg
+	ui.window:add_child(dlg)
+
+	local function lab(parent, x, y, w, h, size, align)
+		local l = GGLabel:new(V.v(w, h))
+		l.font_name = "body"
+		l.font_size = size * rs
+		l.text_align = align or "left"
+		l.vertical_align = "middle"
+		l.colors.text = {223, 214, 190, 255}
+		l.pos = V.v(x, y)
+		parent:add_child(l)
+		return l
+	end
+	local function button(parent, text, x, y, w, h, on_press)
+		local b = self:make_button(text, V.v(w, h))
+		b.pos = V.v(x, y)
+		b.on_press = on_press
+		parent:add_child(b)
+		return b
+	end
+
+	-- 顶栏：标题在左，输出集数量增减在右上（避免与任何标题重叠）
+	local t = lab(dlg, 16, 8, 320, 26, 15)
+	t.colors.text = {244, 221, 165, 255}
+	t.text = "图集重打包"
+	local kk = lab(dlg, 660, 10, 76, 22, 12)
+	kk.text_align = "right"
+	kk.text = "输出集数"
+	ui.rpk_lab_k = lab(dlg, 740, 10, 34, 22, 13)
+	ui.rpk_lab_k.text_align = "center"
+	button(dlg, "-", 778, 8, 28, 22, function()
+		self:rpk_set_k(-1)
+	end)
+	button(dlg, "+", 810, 8, 28, 22, function()
+		self:rpk_set_k(1)
+	end)
+
+	ui.rpk_lab_sel = lab(dlg, 16, 38, 560, 22, 12)
+
+	-- 左：家族列表（分页容器）
+	ui.rpk_fam_box = KView:new(V.v(620, RPK_PAGE_ROWS * 26 + 4))
+	ui.rpk_fam_box.pos = V.v(16, 64)
+	dlg:add_child(ui.rpk_fam_box)
+	ui.rpk_lab_pg = lab(dlg, 16, 64 + RPK_PAGE_ROWS * 26 + 6, 220, 20, 11)
+	button(dlg, "上一页", 300, 64 + RPK_PAGE_ROWS * 26 + 4, 60, 20, function()
+		local rp = state.repack
+		if rp and rp.fam_page > 1 then
+			rp.fam_page = rp.fam_page - 1
+			self:rpk_render()
+		end
+	end)
+	button(dlg, "下一页", 366, 64 + RPK_PAGE_ROWS * 26 + 4, 60, 20, function()
+		local rp = state.repack
+		if rp then
+			local pages = math.max(1, math.ceil(#rp.famOrder / RPK_PAGE_ROWS))
+			if rp.fam_page < pages then
+				rp.fam_page = rp.fam_page + 1
+				self:rpk_render()
+			end
+		end
+	end)
+
+	-- 右：输出图集配置（标题在增减按钮下方，互不重叠）
+	ui.rpk_lab_out_head = lab(dlg, 660, 38, 340, 22, 13, "left")
+	ui.rpk_out_box = KView:new(V.v(360, RPK_MAX_K * 34 + 4))
+	ui.rpk_out_box.pos = V.v(660, 64)
+	dlg:add_child(ui.rpk_out_box)
+
+	ui.rpk_lab_warn = lab(dlg, 16, 64 + RPK_PAGE_ROWS * 26 + 30, 620, 40, 11)
+	ui.rpk_lab_warn.fit_lines = 2
+	-- 状态/操作结果区（位于按钮行上方，避免与任何控件重叠）
+	ui.rpk_lab_status = lab(dlg, 16, 470, 1000, 74, 12)
+	ui.rpk_lab_status.fit_lines = 4
+
+	button(dlg, "顺序填充", 16, 566, 96, 28, function()
+		self:rpk_fill_sequential()
+	end)
+	button(dlg, "打包并暂存", 122, 566, 110, 28, function()
+		self:rpk_stage()
+	end)
+	button(dlg, "确认替换", 242, 566, 110, 28, function()
+		self:rpk_commit()
+	end)
+	button(dlg, "读取排除清单", 362, 566, 150, 28, function()
+		self:rpk_apply_excludes_file()
+	end)
+	button(dlg, "关闭", 900, 566, 100, 28, function()
+		ui.repack_dialog.hidden = true
+	end)
+	dlg.hidden = true
+end
+
+function atlas_manager:rpk_set_k(delta)
+	local rp = state.repack
+	if not rp then
+		return
+	end
+	local k = math.max(1, math.min(RPK_MAX_K, rp.k + delta))
+	if k == rp.k then
+		return
+	end
+	rp.k = k
+	for p, t in pairs(rp.assign) do
+		if t > k then
+			rp.assign[p] = nil
+		end
+	end
+	self:rpk_recompute()
+	self:rpk_render()
+end
+
+-- 顺序填充：从第1集开始，塞得进就塞；否则第2集、第3集……依次类推（放不下则驱逐腾位）
+-- 读取项目根目录 .repack_exclude.txt（每行 prefix:start-end，支持 # 注释），
+-- 取消 go_enemies_common 等当前组中对应帧的勾选，之后点「顺序填充」即可。
+function atlas_manager:rpk_apply_excludes_file()
+	local rp = state.repack
+	if not rp then
+		self:set_status("请先选中帧并打开「重打包」对话框")
+		return
+	end
+	local path = project_root .. "/" .. IMAGES_DIR .. "/.repack_exclude.txt"
+	local f = io.open(path, "rb")
+	if not f then
+		self:set_status("未找到 " .. path)
+		return
+	end
+	local content = f:read("*all")
+	f:close()
+	local group = state.groups[rp.gname]
+	if not group then
+		return
+	end
+	local total_removed = 0
+	local line_no = 0
+	for line in content:gmatch("[^\r\n]+") do
+		line_no = line_no + 1
+		line = line:gsub("%s+", "")
+		if line ~= "" and line:sub(1, 1) ~= "#" then
+			local p, s, e = line:match("^([%w_]+):(%d+)%-(%d+)$")
+			if p then
+				s, e = tonumber(s), tonumber(e)
+				local here = 0
+				for fn in pairs(group.frames) do
+					local fp, num = fn:match("^(.-)_(%d+)$")
+					if fp == p and num then
+						local n = tonumber(num)
+						if n >= s and n <= e then
+							state.selected_frames[rp.gname .. "." .. fn] = nil
+							here = here + 1
+						end
+					end
+				end
+				total_removed = total_removed + here
+			else
+				print("[atlas_manager] exclude file 第 " .. line_no .. " 行无法解析: " .. line)
+			end
+		end
+	end
+	self:rebuild_tree()
+	self:rpk_resync()
+	self:set_status(string.format("已按排除清单取消勾选 %d 帧，点「顺序填充」继续", total_removed))
+	print(string.format("[atlas_manager] apply excludes: removed %d frames", total_removed))
+end
+
+-- 按“当前树勾选”重新同步重打包数据：
+-- 无论勾选是在打开对话框前还是之后调整，这里都以其为准重建族集合，
+-- 保证被剔除的帧绝不会出现在输出；勾选变化时旧布局/旧暂存失效。
+function atlas_manager:rpk_resync()
+	local rp = state.repack
+	if not rp then
+		return false
+	end
+	local group = state.groups[rp.gname]
+	if not group then
+		self:set_status("源图集组已不存在")
+		return false
+	end
+	local sel = self:get_selected_frame_list()
+	local sel_set = {}
+	for _, s in ipairs(sel) do
+		if s.group == rp.gname and group.frames[s.frame_name] then
+			sel_set[s.frame_name] = true
+		end
+	end
+	local fam, order = rpk_build_families(sel_set)
+	if #order == 0 then
+		ui.rpk_lab_status.text = "当前没有任何勾选帧，请先在树上勾选本组帧。"
+		self:set_status("没有可重打包的帧")
+		return false
+	end
+	local removed = {}
+	for _, fn in ipairs(group.frame_order) do
+		if group.frames[fn] and not sel_set[fn] then
+			removed[fn] = true
+		end
+	end
+	local removed_count = 0
+	for _ in pairs(removed) do
+		removed_count = removed_count + 1
+	end
+	for p in pairs(rp.assign) do
+		if not fam[p] then
+			rp.assign[p] = nil
+		end
+	end
+	local changed = (#rp.famOrder ~= #order)
+	if not changed then
+		for idx, p in ipairs(order) do
+			if rp.famOrder[idx] ~= p then
+				changed = true
+				break
+			end
+		end
+	end
+	rp.fam = fam
+	rp.famOrder = order
+	rp.removed = removed
+	rp.removed_count = removed_count
+	rp.refs, rp.same = self:rpk_block_refs(removed, rp.gname)
+	if changed then
+		rp.unplaced = {}
+		rp.fill_ok = false
+		rp.fill_k = nil
+		rp.fill_sizes = nil
+		rp.fill_bins = nil
+		rp.assign_fp = nil
+		rp.outs_staged = nil
+		rp.mfs = nil
+		rp.stage = nil
+	end
+	self:rpk_recompute()
+	self:rpk_render()
+	if changed then
+		ui.rpk_lab_status.text = "检测到勾选集合已变化，请重新点「顺序填充」。"
+		self:set_status("勾选变化，需重新「顺序填充」")
+	end
+	return true
+end
+
+-- 顺序填充（性能版）：
+--  1) 面积贪心粗分：族按面积降序，塞进第一个放得下的集（集中式）；
+--  2) 每集只做一次真实打包；放不下就把“最小族”顺延到后续集，重试直到成功；
+--  3) 最终布局(placements)存档，打包并暂存直接复用，不再二次打包。
+function atlas_manager:rpk_fill_sequential()
+	local rp = state.repack
+	local t_fill = os.clock()
+	if not rp then
+		return
+	end
+	if not self:rpk_resync() then
+		return
+	end
+	local g0 = state.groups[rp.gname]
+	if not g0 then
+		return
+	end
+	local items = {}
+	for _, p in ipairs(rp.famOrder) do
+		local area, mw, mh = 0, 0, 0
+		for _, fn in ipairs(rp.fam[p]) do
+			local f = g0.frames[fn]
+			if f then
+				area = area + f.f_quad[3] * f.f_quad[4]
+				mw = math.max(mw, f.f_quad[3] or 0)
+				mh = math.max(mh, f.f_quad[4] or 0)
+			end
+		end
+		items[#items + 1] = {
+			p = p,
+			area = area,
+			mw = mw,
+			mh = mh
+		}
+	end
+	table.sort(items, function(a, b)
+		return a.area > b.area
+	end)
+	for p in pairs(rp.assign) do
+		rp.assign[p] = nil
+	end
+	local function cap(i)
+		return rp.outs[i].w * rp.outs[i].h
+	end
+	local function fam_area(p)
+		local a = 0
+		for _, fn in ipairs(rp.fam[p]) do
+			local f = g0.frames[fn]
+			if f then
+				a = a + f.f_quad[3] * f.f_quad[4]
+			end
+		end
+		return a
+	end
+	local function fams_of(i)
+		local out = {}
+		for _, p in ipairs(rp.famOrder) do
+			if rp.assign[p] == i then
+				out[#out + 1] = p
+			end
+		end
+		return out
+	end
+	local function pack_output(i)
+		local list = {}
+		for _, p in ipairs(fams_of(i)) do
+			for _, fn in ipairs(rp.fam[p]) do
+				local f = g0.frames[fn]
+				if f then
+					list[#list + 1] = {
+						w = f.f_quad[3],
+						h = f.f_quad[4],
+						frame_name = fn,
+						group = rp.gname
+					}
+				end
+			end
+		end
+		return atlas_binpack.pack(list, rp.outs[i].w, rp.outs[i].h)
+	end
+	local unplaced = {}
+	-- 阶段1：面积贪心粗分
+	local loads = {}
+	for i = 1, rp.k do
+		loads[i] = 0
+	end
+	for _, it in ipairs(items) do
+		local placed = false
+		for i = 1, rp.k do
+			if it.mw <= rp.outs[i].w and it.mh <= rp.outs[i].h and loads[i] + it.area <= cap(i) then
+				rp.assign[it.p] = i
+				loads[i] = loads[i] + it.area
+				placed = true
+				break
+			end
+		end
+		if not placed then
+			local best = 0
+			for i = 1, rp.k do
+				if it.mw <= rp.outs[i].w and it.mh <= rp.outs[i].h then
+					if best == 0 or cap(i) - loads[i] > cap(best) - loads[best] then
+						best = i
+					end
+				end
+			end
+			if best > 0 then
+				rp.assign[it.p] = best
+				loads[best] = loads[best] + it.area
+			else
+				unplaced[it.p] = true
+			end
+		end
+	end
+	-- 阶段2：逐集真实打包，放不下就把最小族顺延到后续集
+	for i = 1, rp.k do
+		local guard = 0
+		while true do
+			local pl = pack_output(i)
+			if pl then
+				rp.outs[i].pl_final = pl
+				break
+			end
+			local fams = fams_of(i)
+			local min_p
+			for _, p in ipairs(fams) do
+				if not min_p or fam_area(p) < fam_area(min_p) then
+					min_p = p
+				end
+			end
+			if not min_p then
+				rp.outs[i].pl_final = nil
+				break
+			end
+			local moved = false
+			for j = i + 1, rp.k do
+				rp.assign[min_p] = j
+				loads[i] = loads[i] - fam_area(min_p)
+				loads[j] = loads[j] + fam_area(min_p)
+				moved = true
+				break
+			end
+			if not moved then
+				unplaced[min_p] = true
+				rp.assign[min_p] = nil
+				break
+			end
+			guard = guard + 1
+			if guard > 128 then
+				break
+			end
+		end
+	end
+	-- 阶段3：记录填充结果
+	rp.unplaced = unplaced
+	rp.fill_bins = {}
+	rp.fill_outs = {}
+	for i = 1, rp.k do
+		rp.fill_bins[i] = {}
+		local pl = rp.outs[i].pl_final or {}
+		for _, p in ipairs(pl) do
+			rp.fill_bins[i][#rp.fill_bins[i] + 1] = p.frame_name
+		end
+		if #pl > 0 then
+			rp.fill_outs[i] = {
+				w = rp.outs[i].w,
+				h = rp.outs[i].h,
+				page = (rp.k == 1) and rp.base or (rp.base .. "-" .. i),
+				pl = pl
+			}
+		end
+	end
+	self:rpk_recompute()
+	rp.fill_ok = not next(unplaced)
+	rp.fill_k = rp.k
+	rp.fill_sizes = {}
+	for i = 1, rp.k do
+		rp.fill_sizes[i] = {rp.outs[i].w, rp.outs[i].h}
+	end
+	rp.assign_fp = {}
+	for _, p in ipairs(rp.famOrder) do
+		rp.assign_fp[#rp.assign_fp + 1] = rp.assign[p] or 0
+	end
+	self:rpk_render()
+	if next(unplaced) then
+		local names = {}
+		for p in pairs(unplaced) do
+			names[#names + 1] = p
+		end
+		table.sort(names)
+		local ex = {}
+		for j = 1, math.min(4, #names) do
+			ex[#ex + 1] = names[j]
+		end
+		ui.rpk_lab_status.text = string.format("打包不下：族 %s 等 %d 个族放不进当前任何输出集。请加大某集尺寸或增加输出集数量，再点「顺序填充」。", table.concat(ex, "、"), #names)
+		self:set_status(string.format("有 %d 个族放不下，暂不能打包", #names))
+	else
+		ui.rpk_lab_status.text = "打包得下：已从第1集起按序填满。可「打包并暂存」预览。"
+		self:set_status("顺序填充完成，打包得下")
+	end
+end
+
+function atlas_manager:rpk_render()
+	local rp = state.repack
+	if not rp or not ui.repack_dialog then
+		return
+	end
+	local fam_count = 0
+	for _, p in ipairs(rp.famOrder) do
+		fam_count = fam_count + #rp.fam[p]
+	end
+	ui.rpk_lab_sel.text = string.format("组:%s   选中 %d 帧 / %d 族", rp.base, fam_count, #rp.famOrder)
+	ui.rpk_lab_k.text = tostring(rp.k)
+
+	-- 家族行（分页）
+	ui.rpk_fam_box:remove_children()
+	local pages = math.max(1, math.ceil(#rp.famOrder / RPK_PAGE_ROWS))
+	if rp.fam_page > pages then
+		rp.fam_page = pages
+	end
+	local start_i = (rp.fam_page - 1) * RPK_PAGE_ROWS + 1
+	ui.rpk_lab_pg.text = string.format("页 %d/%d   族(帧数)  右侧按钮切换归属集", rp.fam_page, pages)
+	for i = start_i, math.min(#rp.famOrder, start_i + RPK_PAGE_ROWS - 1) do
+		local p = rp.famOrder[i]
+		local row = KView:new(V.v(620, 24))
+		row.pos = V.v(0, (i - start_i) * 26)
+		ui.rpk_fam_box:add_child(row)
+		local cannot = rp.unplaced and rp.unplaced[p]
+		local l = GGLabel:new(V.v(430, 24))
+		l.font_name = "body"
+		l.font_size = 12 * self._rs
+		l.text_align = "left"
+		l.vertical_align = "middle"
+		l.colors.text = cannot and {255, 150, 130, 255} or {205, 218, 248, 255}
+		l.text = string.format("  %s（%d帧）%s", p, #rp.fam[p], cannot and "装不下" or "")
+		row:add_child(l)
+		local t = rp.assign[p] or 1
+		local b = self:make_button(string.format("集%d/%d", t, rp.k), V.v(120, 22))
+		b.pos = V.v(480, 1)
+		b.on_press = function()
+			local cur = rp.assign[p] or 1
+			rp.assign[p] = (cur % rp.k) + 1
+			if rp.unplaced then
+				rp.unplaced[p] = nil
+			end
+			self:rpk_recompute()
+			self:rpk_render()
+		end
+		row:add_child(b)
+	end
+
+	-- 输出集：只显示帧数与占用百分比；超容量才标红
+	ui.rpk_out_box:remove_children()
+	ui.rpk_lab_out_head.text = "输出图集（每集独立选择宽x高）"
+	local dlg_abs_x = ui.repack_dialog.pos.x - ui.repack_dialog.anchor.x
+	local dlg_abs_y = ui.repack_dialog.pos.y - ui.repack_dialog.anchor.y
+	for i = 1, rp.k do
+		local o = rp.outs[i]
+		local y = (i - 1) * 34
+		local hl = GGLabel:new(V.v(30, 24))
+		hl.font_name = "body"
+		hl.font_size = 12 * self._rs
+		hl.text_align = "left"
+		hl.vertical_align = "middle"
+		hl.colors.text = {223, 214, 190, 255}
+		hl.text = string.format("集%d", i)
+		hl.pos = V.v(0, y)
+		ui.rpk_out_box:add_child(hl)
+		local function size_box(ax, value, axis)
+			local box = KView:new(V.v(64, 22))
+			box.pos = V.v(ax, y)
+			box.colors.background = {22, 28, 42, 255}
+			box.shape = {
+				name = "rectangle",
+				args = {"fill", 0, 0, 64, 22, 4, 4}
+			}
+			ui.rpk_out_box:add_child(box)
+			local vl = GGLabel:new(V.v(46, 22))
+			vl.font_name = "body"
+			vl.font_size = 13 * self._rs
+			vl.text_align = "center"
+			vl.vertical_align = "middle"
+			vl.colors.text = {255, 255, 255, 255}
+			vl.text = tostring(value)
+			box:add_child(vl)
+			local ar = GGLabel:new(V.v(14, 22))
+			ar.font_name = "body"
+			ar.font_size = 11 * self._rs
+			ar.text_align = "center"
+			ar.vertical_align = "middle"
+			ar.colors.text = {150, 162, 192, 255}
+			ar.text = "▾"
+			ar.pos = V.v(48, 0)
+			box:add_child(ar)
+			local abs_cx = dlg_abs_x + 660 + ax + 32
+			local abs_cy = dlg_abs_y + 64 + y + 11
+			box.on_click = function()
+				self:rpk_open_size_menu(function(sz)
+					if axis == "w" then
+						o.w = sz
+					else
+						o.h = sz
+					end
+					self:rpk_render()
+				end, abs_cx, abs_cy)
+			end
+			return vl
+		end
+		size_box(36, o.w, "w")
+		local xl = GGLabel:new(V.v(12, 24))
+		xl.font_name = "body"
+		xl.font_size = 12 * self._rs
+		xl.text_align = "center"
+		xl.vertical_align = "middle"
+		xl.colors.text = {205, 218, 248, 255}
+		xl.text = "x"
+		xl.pos = V.v(102, y)
+		ui.rpk_out_box:add_child(xl)
+		size_box(114, o.h, "h")
+		local util = o.w * o.h > 0 and (o.area / (o.w * o.h) * 100) or 0
+		local info = GGLabel:new(V.v(220, 24))
+		info.font_name = "body"
+		info.font_size = 11 * self._rs
+		info.text_align = "left"
+		info.vertical_align = "middle"
+		info.colors.text = util > 100 and {255, 130, 110, 255} or {150, 200, 150, 255}
+		info.text = string.format("%d帧 占%.0f%%", #o.names, util)
+		if util > 100 then
+			info.text = string.format("%d帧 超容量%.0f%%", #o.names, util - 100)
+		end
+		info.pos = V.v(184, y)
+		ui.rpk_out_box:add_child(info)
+	end
+
+	local msg = self:rpk_block_message(rp.refs, rp.same)
+	if msg then
+		ui.rpk_lab_warn.colors.text = {255, 130, 120, 255}
+		ui.rpk_lab_warn.text = msg
+	elseif rp.removed_count and rp.removed_count > 0 then
+		ui.rpk_lab_warn.colors.text = {235, 200, 120, 255}
+		ui.rpk_lab_warn.text = string.format("注意：本组另有 %d 帧未勾选，替换后将随旧文件移入备份目录。", rp.removed_count)
+	else
+		ui.rpk_lab_warn.text = ""
+	end
+end
+
+function atlas_manager:show_repack_dialog()
+	local t_open = os.clock()
+	if ui.close_size_menu then
+		ui.close_size_menu()
+	end
+	local selected = self:get_selected_frame_list()
+	if #selected == 0 then
+		self:set_status("重打包：请先勾选帧（可用组上的「全选」整组勾选，再取消个别帧）")
+		return
+	end
+	local gname = nil
+	for _, s in ipairs(selected) do
+		if gname and gname ~= s.group then
+			self:set_status("重打包仅支持单个图集组内的帧；跨组合并请使用「合并」")
+			return
+		end
+		gname = s.group
+	end
+	local group = state.groups[gname]
+	if not group then
+		self:set_status("找不到源图集组")
+		return
+	end
+	local sel_set = {}
+	for _, s in ipairs(selected) do
+		sel_set[s.frame_name] = true
+	end
+	local removed = {}
+	for _, fn in ipairs(group.frame_order) do
+		if group.frames[fn] and not sel_set[fn] then
+			removed[fn] = true
+		end
+	end
+	local fam, order = rpk_build_families(sel_set)
+	if #order == 0 then
+		self:set_status("没有可重打包的帧")
+		return
+	end
+	local refs, same = self:rpk_block_refs(removed, gname)
+	local removed_count = 0
+	for _ in pairs(removed) do
+		removed_count = removed_count + 1
+	end
+	local rp = {
+		gname = gname,
+		base = group.name,
+		removed = removed,
+		removed_count = removed_count,
+		fam = fam,
+		famOrder = order,
+		assign = {},
+		unplaced = {},
+		k = 1,
+		outs = {},
+		fam_page = 1,
+		refs = refs,
+		same = same,
+		stage = nil
+	}
+	for i = 1, RPK_MAX_K do
+		rp.outs[i] = {
+			w = 2048,
+			h = 2048,
+			area = 0,
+			names = {}
+		}
+	end
+	state.repack = rp
+	self:build_repack_dialog()
+	-- 打开时不打包：默认全部帧先归第1集，尺寸/归属可自由调整，点「顺序填充」后真正分配
+	for _, p in ipairs(order) do
+		rp.assign[p] = 1
+	end
+	self:rpk_recompute()
+	ui.repack_dialog.hidden = false
+	ui.repack_dialog.anchor = V.v(510, 330)
+	ui.repack_dialog.pos = V.v(self.ref_w / 2, self.ref_h / 2)
+	ui.repack_dialog:order_to_front()
+	ui.rpk_lab_status.text = "提示：先点「顺序填充」自动分配（从第1集起依次填满），或手动为每族选择归属集。"
+	self:rpk_render()
+end
+
+function atlas_manager:rpk_stage()
+	local rp = state.repack
+	if not rp then
+		return
+	end
+	local block_msg = self:rpk_block_message(rp.refs, rp.same)
+	if block_msg then
+		ui.rpk_lab_status.text = block_msg .. "\n请先在其它图集中解除引用，或勾选被引用的帧一起重打包。"
+		self:set_status("重打包被阻止：有其它图集引用本图集帧")
+		return
+	end
+	local group = state.groups[rp.gname]
+	if not group then
+		self:set_status("源图集组已不存在")
+		return
+	end
+	-- 以当前勾选为准（打开前后调整都生效），剔除的帧绝不会进入输出
+	if not self:rpk_resync() then
+		return
+	end
+
+	-- 「顺序填充」负责布局判定；这里只把那次结果落盘。
+	if not rp.fill_ok then
+		ui.rpk_lab_status.text = "还没有可打包的结果：请先点「顺序填充」完成分配，再「打包并暂存」。"
+		self:set_status("请先「顺序填充」")
+		return
+	end
+	-- 填充后若尺寸/数量/归属被改过，旧布局不再有效，提示重新填充（不自动改布局）
+	local stale = rp.fill_k ~= rp.k
+	if not stale then
+		for i = 1, rp.k do
+			local fs = rp.fill_sizes and rp.fill_sizes[i]
+			if not fs or fs[1] ~= rp.outs[i].w or fs[2] ~= rp.outs[i].h then
+				stale = true
+				break
+			end
+		end
+	end
+	if not stale and rp.assign_fp then
+		local idx = 0
+		for _, p in ipairs(rp.famOrder) do
+			idx = idx + 1
+			if (rp.assign[p] or 0) ~= (rp.assign_fp[idx] or 0) then
+				stale = true
+				break
+			end
+		end
+	end
+	if stale then
+		ui.rpk_lab_status.text = "「顺序填充」之后尺寸/数量/归属被修改过，请重新点「顺序填充」，再「打包并暂存」。"
+		self:set_status("布局已过期，请重新「顺序填充」")
+		return
+	end
+
+	-- 直接复用「顺序填充」时已验证放得下的布局（fill_outs），不再二次打包
+	if not rp.fill_outs then
+		ui.rpk_lab_status.text = "没有可用的填充结果，请先点「顺序填充」。"
+		self:set_status("请先「顺序填充」")
+		return
+	end
+	local outs = {}
+	local all_placements = {}
+	for i = 1, rp.k do
+		local fo = rp.fill_outs[i]
+		if fo and #fo.pl > 0 then
+			outs[#outs + 1] = {
+				w = fo.w,
+				h = fo.h,
+				pl = fo.pl,
+				page = fo.page
+			}
+			for _, p in ipairs(fo.pl) do
+				all_placements[#all_placements + 1] = p
+			end
+		end
+	end
+	if #outs == 0 or #all_placements == 0 then
+		self:set_status("没有可打包的内容，请先「顺序填充」")
+		return
+	end
+	-- 输出守卫：所有进入输出的帧必须属于当前勾选集合，防止剔除帧混入
+	do
+		local allowed = {}
+		for _, p in ipairs(rp.famOrder) do
+			if not (rp.unplaced and rp.unplaced[p]) then
+				for _, fn in ipairs(rp.fam[p]) do
+					allowed[fn] = true
+				end
+			end
+		end
+		local bad = {}
+		for _, p in ipairs(all_placements) do
+			if not allowed[p.frame_name] then
+				bad[#bad + 1] = p.frame_name
+			end
+		end
+		if #bad > 0 then
+			local ex = {}
+			for j = 1, math.min(5, #bad) do
+				ex[#ex + 1] = bad[j]
+			end
+			ui.rpk_lab_status.text = string.format("内部错误：发现 %d 个不属于勾选集合的帧（%s …），已中止，请重新「顺序填充」。", #bad, table.concat(ex, ", "))
+			self:set_status("发现越界帧，打包已中止")
+			print("[atlas_manager] repack guard: bad frames: " .. table.concat(bad, ", "))
+			return
+		end
+	end
+
+	local mfs = {}
+	for _, p in ipairs(rp.famOrder) do
+		if not (rp.unplaced and rp.unplaced[p]) then
+			for _, fn in ipairs(rp.fam[p]) do
+				local frame = group.frames[fn]
+				if frame then
+					mfs[fn] = self:_make_merge_frame({
+						group = rp.gname,
+						frame_name = fn,
+						frame = frame
+					})
+				end
+			end
+		end
+	end
+	local ok, err2 = self:_load_frame_idatas(all_placements, mfs)
+	if not ok then
+		self:set_status("加载帧像素失败：" .. tostring(err2))
+		return
+	end
+	local ts = tostring(os.time())
+	local stage_dir = project_root .. "/" .. BACKUP_DIR .. "/_repack_stage_" .. ts
+	os.execute("mkdir -p " .. stage_dir:gsub(" ", "\\ "))
+	local failed = false
+	for _, o in ipairs(outs) do
+		local idata = atlas_util.create_merged_atlas(o.pl, mfs, o.w, o.h)
+		local png_data = self:merged_idata_to_png(idata)
+		local f = io.open(stage_dir .. "/" .. o.page .. ".png", "wb")
+		if not f then
+			failed = true
+			break
+		end
+		f:write(png_data)
+		f:close()
+		print(string.format("[atlas_manager] repack_stage: %s.png (%dx%d)", o.page, o.w, o.h))
+	end
+	for _, mf in pairs(mfs) do
+		mf._preview_idata = nil
+	end
+	if failed then
+		self:set_status("写入暂存目录失败：" .. stage_dir)
+		return
+	end
+	rp.mfs = mfs
+	rp.outs_staged = outs
+	rp.stage = {
+		dir = stage_dir
+	}
+	ui.rpk_lab_status.text = string.format("已暂存 %d 个 PNG 到：%s\n检查布局无误后点「确认替换」开始正式替换。", #outs, stage_dir:gsub(project_root .. "/", ""))
+	self:set_status("已打包并暂存，等待确认替换")
+end
+
+-- 可靠备份：把 base 相关旧文件（lua/luac/aluac、base.dds、base-N.dds、旧PNG）逐一
+-- 用 io 直接拷贝到 .images_backup/<时间戳>_<base>/，并返回成功拷贝的文件清单。
+function atlas_manager:rpk_backup_old(base)
+	local back_dir = real_path(BACKUP_DIR)
+	os.execute("mkdir -p " .. back_dir:gsub(" ", "\\ "))
+	local bp = back_dir .. "/" .. tostring(os.time()) .. "_" .. base
+	os.execute("mkdir -p " .. bp:gsub(" ", "\\ "))
+	local atlas_real = real_path(ATLAS_DIR)
+	local imgs_real = project_root .. "/" .. IMAGES_DIR
+	local copied = {}
+	local function copy_if_exists(src)
+		local f = io.open(src, "rb")
+		if not f then
+			return false
+		end
+		local blob = f:read("*all")
+		f:close()
+		if not blob or #blob == 0 then
+			return false
+		end
+		local name = src:match("([^/]+)$")
+		local dst = io.open(bp .. "/" .. name, "wb")
+		if not dst then
+			return false
+		end
+		dst:write(blob)
+		dst:close()
+		copied[#copied + 1] = name
+		return true
+	end
+	-- 资源目录：lua 三件套 + 单页 dds + 分页 dds
+	for _, ext in ipairs({".lua", ".luac", ".aluac"}) do
+		copy_if_exists(atlas_real .. "/" .. base .. ext)
+	end
+	copy_if_exists(atlas_real .. "/" .. base .. ".dds")
+	local function scan_copy(dir, pattern)
+		local h = io.popen('ls "' .. dir .. '" 2>/dev/null')
+		if h then
+			for name in h:lines() do
+				if name:match(pattern) then
+					copy_if_exists(dir .. "/" .. name)
+				end
+			end
+			h:close()
+		end
+	end
+	scan_copy(atlas_real, "^" .. base .. "%-%d+%.dds$")
+	-- .images 里的旧 png
+	scan_copy(imgs_real, "^" .. base .. "%.png$")
+	scan_copy(imgs_real, "^" .. base .. "%-%d+%.png$")
+	return {
+		dir = bp,
+		files = copied
+	}
+end
+
+function atlas_manager:rpk_commit()
+	local rp = state.repack
+	if not rp or not rp.stage or not rp.outs_staged then
+		self:set_status("请先「打包并暂存」")
+		return
+	end
+	local block_msg = self:rpk_block_message(rp.refs, rp.same)
+	if block_msg then
+		ui.rpk_lab_status.text = block_msg .. "\n已阻止替换。"
+		self:set_status("重打包被阻止：存在外部引用")
+		return
+	end
+	local group = state.groups[rp.gname]
+	if not group then
+		self:set_status("源图集组已不存在")
+		return
+	end
+	local base = rp.base
+	local atlas_real = real_path(ATLAS_DIR)
+	local imgs_real = project_root .. "/" .. IMAGES_DIR
+
+	-- 1) 备份旧文件（io 直接拷贝，含 base.dds 与 base-N.dds 及旧PNG）
+	local bp = self:rpk_backup_old(base)
+	print(string.format("[atlas_manager] repack_backup: %s -> %s (%d 个文件)", base, bp.dir, #bp.files))
+	local backed = {}
+	for _, nm in ipairs(bp.files) do
+		backed[nm] = true
+	end
+	local function in_backup(name)
+		if backed[name] then
+			return true
+		end
+		local f = io.open(bp.dir .. "/" .. name, "rb")
+		if f then
+			f:close()
+			backed[name] = true
+			return true
+		end
+		return false
+	end
+
+	-- 2) 组装新帧表（与合并/保存同一套 size/ref_scale 换算）
+	local new_frames = {}
+	for _, o in ipairs(rp.outs_staged) do
+		for _, pl in ipairs(o.pl) do
+			local mf = rp.mfs[pl.frame_name]
+			if mf then
+				local kx, ky = 1, 1
+				if mf._orig_a_size and mf._orig_a_size[1] and mf.a_size and mf.a_size[1] > 0 then
+					kx = mf.a_size[1] / mf._orig_a_size[1]
+					ky = mf.a_size[2] / mf._orig_a_size[2]
+				end
+				local rs = (mf.ref_scale or 1) / kx
+				new_frames[pl.frame_name] = {
+					a_name = o.page .. ".dds",
+					size = {math.floor(mf.size[1] * kx + 0.5), math.floor(mf.size[2] * ky + 0.5)},
+					trim = {math.floor(mf.trim[1] * kx + 0.5), math.floor(mf.trim[2] * ky + 0.5), math.floor(mf.trim[3] * kx + 0.5), math.floor(mf.trim[4] * ky + 0.5)},
+					a_size = {o.w, o.h},
+					f_quad = {pl.x, pl.y, pl.w, pl.h},
+					alias = type(mf.alias) == "table" and mf.alias or {},
+					ref_scale = rs
+				}
+			end
+		end
+	end
+	-- 3) 新 png 进 .images
+	for _, o in ipairs(rp.outs_staged) do
+		local f = io.open(rp.stage.dir .. "/" .. o.page .. ".png", "rb")
+		if f then
+			local blob = f:read("*all")
+			f:close()
+			write_real(imgs_real .. "/" .. o.page .. ".png", blob)
+		end
+	end
+	-- 4) nvcompress 生成 dds
+	for _, o in ipairs(rp.outs_staged) do
+		local cmd = string.format("nvcompress.exe -bc3 -maximum %q %q", imgs_real .. "/" .. o.page .. ".png", atlas_real .. "/" .. o.page .. ".dds")
+		print("[atlas_manager] " .. cmd)
+		local okrun = os.execute(cmd)
+		if not okrun then
+			self:set_status("DDS 转换失败（" .. o.page .. "），旧文件已在 " .. bp.dir .. " 备份，可恢复")
+			return
+		end
+	end
+	-- 5) 写 lua/luac/aluac
+	local okw, errw = atlas_util.write_atlas_files(atlas_real, base, new_frames, write_real)
+	if not okw then
+		self:set_status("写入 lua 失败：" .. tostring(errw) .. "（旧文件备份于 " .. bp.dir .. "）")
+		return
+	end
+	-- 6) 清理不再使用的旧文件：先确保已进备份目录，再删除
+	local keep = {}
+	for _, o in ipairs(rp.outs_staged) do
+		keep[o.page] = true
+	end
+	local leftover = {}
+	-- 兜底：若旧文件此前没进备份，先补拷进备份目录（能读就能删）
+	local function ensure_backed(name, dir)
+		if in_backup(name) then
+			return true
+		end
+		local f = io.open(dir .. "/" .. name, "rb")
+		if not f then
+			return false
+		end
+		local blob = f:read("*all")
+		f:close()
+		if not blob or #blob == 0 then
+			return false
+		end
+		local dst = io.open(bp.dir .. "/" .. name, "wb")
+		if not dst then
+			return false
+		end
+		dst:write(blob)
+		dst:close()
+		backed[name] = true
+		return true
+	end
+	local function sweep(dir, pattern)
+		local h = io.popen('ls "' .. dir .. '" 2>/dev/null')
+		if h then
+			local deleted = 0
+			for name in h:lines() do
+				if name ~= base .. ".lua" and name ~= base .. ".luac" and name ~= base .. ".aluac" then
+					-- 注意：name 带扩展名（如 go_x-3.dds），取页名前缀时要含扩展名匹配
+					local page = name:match("^(" .. base .. "%-%d+)%.[%w]+$")
+					if page and not keep[page] and name:match(pattern) then
+						if ensure_backed(name, dir) then
+							local okdel, delerr = os.remove(dir .. "/" .. name)
+							if okdel then
+								deleted = deleted + 1
+								print("[atlas_manager] repack cleanup: removed " .. name)
+							else
+								leftover[#leftover + 1] = name .. "(删除失败:" .. tostring(delerr) .. ")"
+							end
+						else
+							leftover[#leftover + 1] = name .. "(备份失败，已保留)"
+						end
+					end
+				end
+			end
+			h:close()
+			print(string.format("[atlas_manager] repack cleanup: %s 扫描删除 %d 个", dir:match("([^/]+)$"), deleted))
+		end
+	end
+	-- 仅处理资源目录/PNG 存档中旧分页文件（三件套与单页由新文件覆盖，无需清理）
+	sweep(atlas_real, "^" .. base .. "%-%d+%.(dds|astc|lua|luac|aluac)$")
+	sweep(imgs_real, "^" .. base .. "%-%d+%.png$")
+	-- 7) 清理暂存目录
+	os.execute("rm -rf " .. rp.stage.dir:gsub(" ", "\\ "))
+	self:refresh_groups()
+	ui.repack_dialog.hidden = true
+	if #leftover > 0 then
+		self:set_status(string.format("重打包完成：%s -> %d 个图集（备份于 %s）。注意残留：%s", base, #rp.outs_staged, bp.dir, table.concat(leftover, "；")))
+		print(string.format("[atlas_manager] repack leftover: %s", table.concat(leftover, "; ")))
+	else
+		self:set_status(string.format("重打包完成：%s -> %d 个图集（旧文件备份于 %s）", base, #rp.outs_staged, bp.dir))
+	end
+	print(string.format("[atlas_manager] repack done: %s -> %d pages", base, #rp.outs_staged))
 end
 
 return atlas_manager

@@ -1,1 +1,1 @@
-return {stage_5_trees={a_name="go_stage05-1.dds",size={364,200},trim={8,7,5,3},a_size={1024,1024},f_quad={6,6,351,190},alias={}}}
+return {stage_5_trees={a_name="go_stage05.dds",a_size={512,256},f_quad={2,0,351,190},size={364,200},trim={8,7,5,3}}}

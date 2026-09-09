@@ -20,7 +20,7 @@ local v=V.v
 local OX=-35
 local level={}
 level.required_sounds={"music_stage37","FrontiersJungleAmbienceSounds","SpecialAlienSounds","SpecialIndianaSounds","BossMonkey"}
-level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage37","go_stage37_bg"}
+level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage37","go_stage37_bg","go_stage36"}
 function level:init(store)
 store.level_terrain_style=TERRAIN_STYLE_JUNGLE
 self.locations=LU.load_locations(store,self)

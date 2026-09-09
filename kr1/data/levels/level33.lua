@@ -15,7 +15,7 @@ end
 local v=V.v
 local level={}
 level.required_sounds={"music_stage33","FrontiersJungleAmbienceSounds","AmazonSounds","SpecialCutTreeSounds"}
-level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage33","go_stage33_bg"}
+level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage33","go_stage33_bg","go_stage36"}
 level.show_comic_idx=11
 function level:init(store)
 store.level_terrain_style=TERRAIN_STYLE_JUNGLE
