@@ -14575,7 +14575,7 @@ return {
 	enemy_forest_troll_attack = {
 		from = 73,
 		prefix = "forest_troll",
-		to = 103
+		to = 102
 	},
 	enemy_forest_troll_death = {
 		from = 126,

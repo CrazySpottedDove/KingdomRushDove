@@ -1,1 +1,1 @@
-return {{date="2026-09-10",author="CrazySpottedDove",message="feat: 添加动态删除tower_menus_data表项的插件接口"},{date="2026-09-10",author="CrazySpottedDove",message="feat: 增强护盾modifier脚本兼容性"}}
+return {{date="2026-09-10",author="CrazySpottedDove",message="feat: 添加动态删除tower_menus_data表项的插件接口"},{date="2026-09-10",author="CrazySpottedDove",message="feat: 增强护盾modifier脚本兼容性"},{date="2026-09-10",author="CrazySpottedDove",message="feat: 允许护盾脚本通过block_last_damage来实现一次无限制免伤"}}

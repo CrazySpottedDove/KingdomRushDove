@@ -9880,7 +9880,7 @@ scripts.mod_shield = {
 			if mod.damage_taken >= mod.shield_max_damage then
 				mod.shield_broken = true
 
-				if mod.damage_taken - mod.shield_max_damage > 0 then
+				if mod.damage_taken - mod.shield_max_damage > 0 and not mod.block_last_damage then
 					damage.value = mod.damage_taken - mod.shield_max_damage
 					goto continue
 				else
