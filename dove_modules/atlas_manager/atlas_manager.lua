@@ -69,6 +69,23 @@ local function write_real(path, data)
 	return file_utlis.write_file(path, data)
 end
 
+--- 文件内容 md5（十六进制字符串）。love.data.hash 是 C 实现；失败时退回纯 lua 实现。
+local function file_md5_hex(data)
+	if not data or data == "" then
+		return nil
+	end
+	local ok, h = pcall(love.data.hash, "md5", data)
+	if ok and h then
+		local ok_hex, hex = pcall(love.data.encode, "string", "hex", h)
+		return ok_hex and hex or h
+	end
+	local ok_lib, md5 = pcall(require, "lib.md5")
+	if ok_lib and md5 and md5.sumhexa then
+		return md5.sumhexa(data)
+	end
+	return nil
+end
+
 local state = {
 	groups = {},
 	group_order = {},
@@ -78,6 +95,7 @@ local state = {
 	file_checks = {},
 	sort_area_desc = true,
 	non_pow2_mode = false,
+	dedup_alias = true,
 	merge_name = "",
 	merge_w = 2048,
 	merge_h = 2048,
@@ -540,7 +558,7 @@ function atlas_manager:build_header()
 		self:refresh_append_group()
 		self:rebuild_tree()
 		local g = state.groups["append"]
-		self:set_status(g and string.format("append 已同步: %d 张", #g.frame_order) or "append 无小图")
+		self:set_status(g and string.format("append 已同步: %d 张 (其中 %d 张内容重复)", #g.frame_order, self._append_dup_count or 0) or "append 无小图")
 	end
 	ui.window:add_child(refresh_btn)
 	local status_text = GGLabel:new(V.v(self.ref_w - 480, 28))
@@ -856,6 +874,41 @@ function atlas_manager:build_controls()
 		end
 		ui.non_pow2_cb = cb
 		ui.non_pow2_tick = tick
+	end
+	-- 重复帧去重：内容完全一致的帧只打包一份，其余名字写成 alias
+	do
+		local cb = KView:new(V.v(210, 20))
+		cb.pos = V.v(1075, control_y + 1)
+		cb.colors.background = {22, 28, 42, 200}
+		cb.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, 210, 20, 4, 4}
+		}
+		ui.window:add_child(cb)
+		local cbt = GGLabel:new(V.v(200, 20))
+		cbt.font_name = "body"
+		cbt.font_size = 12 * rs
+		cbt.text_align = "left"
+		cbt.vertical_align = "middle"
+		cbt.colors.text = {180, 190, 220, 255}
+		cbt.text = "  重复帧→alias"
+		cbt.pos = V.v(5, 0)
+		cb:add_child(cbt)
+		local tick = GGLabel:new(V.v(14, 20))
+		tick.font_name = "body"
+		tick.font_size = 14 * rs
+		tick.text_align = "center"
+		tick.vertical_align = "middle"
+		tick.colors.text = {100, 220, 100, 255}
+		tick.pos = V.v(3, 0)
+		tick.text = state.dedup_alias and "✓" or ""
+		cb:add_child(tick)
+		function cb:on_click()
+			state.dedup_alias = not state.dedup_alias
+			tick.text = state.dedup_alias and "✓" or ""
+		end
+		ui.dedup_cb = cb
+		ui.dedup_tick = tick
 	end
 	local action_y = control_y + 26
 	local merge_btn = self:make_button("合并", V.v(80, 26))
@@ -1511,6 +1564,9 @@ function atlas_manager:_scan_append_dir_frames()
 	if not ok_dir then
 		return frames, frame_order
 	end
+	table.sort(items)
+	local first_by_hash = {}
+	local dup_count = 0
 	for _, fn in ipairs(items) do
 		if fn:sub(-4) == ".png" then
 			local base = fn:sub(1, -5)
@@ -1519,6 +1575,14 @@ function atlas_manager:_scan_append_dir_frames()
 			if trim_data then
 				local crop_w = img_w - trim_data[1] - trim_data[3]
 				local crop_h = img_h - trim_data[2] - trim_data[4]
+				-- 内容指纹：内容完全一致的帧打包时只保留一份，其余名字用 alias 指向它
+				local hash = file_md5_hex(read_fs(full_rel))
+				local dup_of = hash and first_by_hash[hash] or nil
+				if dup_of then
+					dup_count = dup_count + 1
+				elseif hash then
+					first_by_hash[hash] = base
+				end
 				frames[base] = {
 					a_name = fn,
 					size = {img_w, img_h},
@@ -1529,12 +1593,15 @@ function atlas_manager:_scan_append_dir_frames()
 					ref_scale = 1,
 					dds_key = nil,
 					_is_loose = true,
-					_src_path = full_rel
+					_src_path = full_rel,
+					_content_hash = hash,
+					_dup_of = dup_of
 				}
 				frame_order[#frame_order + 1] = base
 			end
 		end
 	end
+	self._append_dup_count = dup_count
 	return frames, frame_order
 end
 
@@ -2111,6 +2178,9 @@ function atlas_manager:rebuild_tree()
 					local size_str = string.format("%dx%d", frame.size[1], frame.size[2])
 					local alias_count = #(frame.alias or {})
 					local alias_str = alias_count > 0 and string.format(" alias:%d", alias_count) or ""
+					if frame._dup_of then
+						alias_str = alias_str .. " 重复"
+					end
 					frame_label.text = string.format("  %s  [%s]%s", fname, size_str, alias_str)
 					frame_label.pos = V.v(38, 0)
 					frame_label.fit_lines = 1
@@ -2325,6 +2395,136 @@ function atlas_manager:get_selected_frame_list()
 	return selected
 end
 
+--- 帧的内容指纹。内容完全一致的帧只打包一份，其余名字写成 alias 指向规范帧。
+--- - 松散帧（.images/append 的独立 png）：文件内容 md5（字节一致 → 尺寸/裁剪必然一致）
+--- - 图集帧：源页 + 源矩形 + 逻辑框 + 裁剪 + 缩放，四项全等才认定可复用
+function atlas_manager:_frame_content_key(sel)
+	local f = sel.frame
+	if f._is_loose then
+		local hash = f._content_hash
+		if not hash then
+			hash = file_md5_hex(read_fs(f._src_path))
+			f._content_hash = hash
+		end
+		return hash and ("png:" .. hash) or nil
+	end
+	local fq = f.f_quad or {0, 0, 0, 0}
+	local tr = f.trim or {0, 0, 0, 0}
+	local sz = f.size or {0, 0}
+	return string.format("atlas:%s:%d,%d,%d,%d:%d,%d,%d,%d:%d,%d:%.6f", tostring(f.a_name), fq[1], fq[2], fq[3], fq[4], tr[1], tr[2], tr[3], tr[4], sz[1], sz[2], f.ref_scale or 1)
+end
+
+--- 按内容指纹去重选中的帧（原地排序 selected）。
+--- 返回：只含规范帧的选中列表、规范帧名 -> 别名列表、统计表。
+--- 规范帧取文件顺序最靠前的那个（同组按 frame_order，跨组按组顺序），保证同批选中结果稳定。
+function atlas_manager:_dedup_selected(selected)
+	local group_index = {}
+	for gi, gname in ipairs(state.group_order) do
+		group_index[gname] = gi
+	end
+	local order = {}
+	local touched = {}
+	for _, sel in ipairs(selected) do
+		local gname = sel.group
+		if not touched[gname] then
+			touched[gname] = true
+			local g = state.groups[gname]
+			local gi = group_index[gname] or 0
+			if g and g.frame_order then
+				for fi, fname in ipairs(g.frame_order) do
+					order[gname .. "." .. fname] = gi * 1000000 + fi
+				end
+			end
+		end
+	end
+	table.sort(selected, function(a, b)
+		local ka = order[a.group .. "." .. a.frame_name] or math.huge
+		local kb = order[b.group .. "." .. b.frame_name] or math.huge
+		if ka ~= kb then
+			return ka < kb
+		end
+		return (a.group .. "." .. a.frame_name) < (b.group .. "." .. b.frame_name)
+	end)
+	local ok_groups = {}
+	local by_key = {}
+	for _, sel in ipairs(selected) do
+		local key = self:_frame_content_key(sel)
+		local g = key and by_key[key]
+		if g then
+			g[#g + 1] = sel
+		else
+			g = {sel}
+			if key then
+				by_key[key] = g
+			end
+			ok_groups[#ok_groups + 1] = g
+		end
+	end
+	local kept = {}
+	local alias_map = {}
+	local aliased = 0
+	for _, g in ipairs(ok_groups) do
+		local canon = g[1]
+		kept[#kept + 1] = canon
+		local seen = {
+			[canon.frame_name] = true
+		}
+		local out = {}
+		local function add(n)
+			if n and n ~= "" and not seen[n] then
+				seen[n] = true
+				out[#out + 1] = n
+			end
+		end
+		for i = 2, #g do
+			add(g[i].frame_name)
+			aliased = aliased + 1
+		end
+		-- 原有的 alias 一并带上（原本指向的名字不能丢）
+		for _, m in ipairs(g) do
+			for _, al in ipairs(m.frame.alias or {}) do
+				add(al)
+			end
+		end
+		alias_map[canon.frame_name] = out
+	end
+	return kept, alias_map, {
+		before = #selected,
+		after = #kept,
+		aliased = aliased
+	}
+end
+
+--- 生成合并用帧数据，并把去重得到的别名合并进 alias（save 会直接写出）
+function atlas_manager:_merge_frame_with_alias(sel, alias_map)
+	local f = self:_make_merge_frame(sel)
+	local out = {}
+	if type(f.alias) == "table" then
+		for _, n in ipairs(f.alias) do
+			out[#out + 1] = n
+		end
+	end
+	local extra = alias_map and alias_map[sel.frame_name]
+	if extra then
+		for _, n in ipairs(extra) do
+			if n ~= sel.frame_name then
+				local dup = false
+				for i = 1, #out do
+					if out[i] == n then
+						dup = true
+						break
+					end
+				end
+				if not dup then
+					out[#out + 1] = n
+				end
+			end
+		end
+	end
+	f.alias = out
+	return f
+end
+
 -- 深拷贝帧数据；size/trim/ref_scale 从原始 .lua 取逻辑值，a_size/f_quad 用物理像素值
 -- 这样合并/拆分时逻辑信息（ref_scale 等）不丢失
 function atlas_manager:_make_merge_frame(sel)
@@ -2381,6 +2581,16 @@ function atlas_manager:do_merge()
 		self:set_status("没有选中任何帧 | " .. table.concat(parts, ", "))
 		return
 	end
+	-- 重复帧去重：内容一致的帧只打包一份，其余名字写成 alias
+	local raw_count = #selected
+	local alias_map, dedup_info = nil, nil
+	if state.dedup_alias then
+		local kept, map, info = self:_dedup_selected(selected)
+		selected, alias_map, dedup_info = kept, map, info
+		if info.aliased > 0 then
+			print(string.format("[atlas_manager] dedup: %d -> %d frames (%d become alias)", info.before, info.after, info.aliased))
+		end
+	end
 	local name = ui.merge_name_input and ui.merge_name_input._text or "merged_atlas"
 	if name == "" then
 		name = "merged_atlas"
@@ -2429,13 +2639,27 @@ function atlas_manager:do_merge()
 	else
 		placements, err = atlas_binpack.pack(pack_frames, w, h)
 		if not placements then
-			self:set_status("打包失败: " .. err)
+			-- 严格按用户选择的尺寸：放不下就如实报错，绝不偷偷换尺寸
+			local suggest = nil
+			local limit = math.max(w, h)
+			for _, sz in ipairs({256, 512, 1024, 2048, 4096}) do
+				if sz > limit and atlas_binpack.pack(pack_frames, sz, sz) then
+					suggest = sz
+					break
+				end
+			end
+			local msg = string.format("打包失败: %s", tostring(err))
+			if suggest then
+				msg = msg .. string.format(" | %d 帧单页最小 %dx%d，多页请点「拆分」", #pack_frames, suggest, suggest)
+			end
+			print(string.format("[atlas_manager] merge: pack failed at %dx%d (%s)%s", w, h, tostring(err), suggest and string.format(", smallest single page = %dx%d", suggest, suggest) or ""))
+			self:set_status(msg)
 			return
 		end
 	end
 	local all_frames = {}
 	for _, sel in ipairs(selected) do
-		all_frames[sel.frame_name] = self:_make_merge_frame(sel)
+		all_frames[sel.frame_name] = self:_merge_frame_with_alias(sel, alias_map)
 	end
 	state.merge_pages = nil
 	state.scale_factor = 1
@@ -2451,10 +2675,16 @@ function atlas_manager:do_merge()
 	self._merge_placements = placements
 	self._merge_src_frames = all_frames
 	self._merge_full_frames = sel_info
+	self._merge_alias_map = alias_map
+	self._merge_dedup_info = dedup_info
 	self._split_ready = nil
 	local util = self:_calc_utilization()
 	print(string.format("[atlas_manager] merge: %d frames into %dx%d, pack=ok, util=%.1f%%", #placements, w, h, util))
-	self:set_status(string.format("合并完成: %d帧打包到 %dx%d 图集 (%.1f%%)", #placements, w, h, util))
+	if dedup_info and dedup_info.aliased > 0 then
+		self:set_status(string.format("合并完成: %d帧(去重%d个→alias)打包到 %dx%d (%.1f%%)", raw_count, dedup_info.aliased, w, h, util))
+	else
+		self:set_status(string.format("合并完成: %d帧打包到 %dx%d 图集 (%.1f%%)", #placements, w, h, util))
+	end
 	self:_build_preview()
 	self:show_preview_popup()
 end
@@ -2871,10 +3101,19 @@ function atlas_manager:do_split(max_size)
 		self:set_status("没有选中任何帧")
 		return
 	end
+	local raw_count = #selected
+	local alias_map, dedup_info = nil, nil
+	if state.dedup_alias then
+		local kept, map, info = self:_dedup_selected(selected)
+		selected, alias_map, dedup_info = kept, map, info
+		if info.aliased > 0 then
+			print(string.format("[atlas_manager] dedup: %d -> %d frames (%d become alias)", info.before, info.after, info.aliased))
+		end
+	end
 	-- 深拷贝帧数据，避免污染源 group；size/trim/ref_scale 用原始 .lua 逻辑值
 	local all_frames = {}
 	for _, sel in ipairs(selected) do
-		all_frames[sel.frame_name] = self:_make_merge_frame(sel)
+		all_frames[sel.frame_name] = self:_merge_frame_with_alias(sel, alias_map)
 	end
 	local placements = {}
 	for _, sel in ipairs(selected) do
@@ -2944,7 +3183,7 @@ function atlas_manager:do_split(max_size)
 		end
 	end
 	if #pages <= 1 then
-		self:set_status(string.format("选中帧 %d 帧，未超过 %d 无需拆分（已打包为单页）", #selected, max_size))
+		self:set_status(string.format("选中帧 %d 帧，未超过 %d 无需拆分（已打包为单页）", raw_count, max_size))
 		ui.split_dialog.hidden = true
 		return
 	end
@@ -3032,6 +3271,8 @@ function atlas_manager:do_split(max_size)
 	state.merge_pages = page_entries
 	self._merge_placements = placements
 	self._merge_src_frames = all_frames
+	self._merge_alias_map = alias_map
+	self._merge_dedup_info = dedup_info
 	self._split_ready = true
 	local split_name = ui.merge_name_input and ui.merge_name_input._text or "merged_atlas"
 	if split_name == "" then
@@ -3058,7 +3299,7 @@ function atlas_manager:do_split(max_size)
 			written = written + 1
 		end
 	end
-	self:set_status(string.format("已拆分为 %d 页，PNG已写入 .images (%s-1.png ...)", #page_entries, merge_name))
+	self:set_status(string.format("已拆分为 %d 页(去重%d→%d)，PNG已写入 .images (%s-1.png ...)", #page_entries, raw_count, #selected, merge_name))
 	print(string.format("[atlas_manager] split: wrote %d page PNGs as %s-N.png", written, merge_name))
 	self:show_preview_popup()
 end
@@ -3170,6 +3411,56 @@ function atlas_manager:export_png()
 	else
 		self:set_status("PNG导出失败")
 	end
+end
+
+--- 检查本次要写出的 alias 名字是否已被其它图集占用。
+--- db_atlas 是全局表，同名会被后加载的图集覆盖（顺序不确定），因此需要提示。
+--- 返回冲突描述列表（同时打印到控制台）。
+function atlas_manager:_alias_conflicts(name, new_frames)
+	local alias_names = {}
+	for _, fdata in pairs(new_frames) do
+		for _, n in ipairs(type(fdata.alias) == "table" and fdata.alias or {}) do
+			alias_names[#alias_names + 1] = n
+		end
+	end
+	if #alias_names == 0 then
+		return nil
+	end
+	local owner = {}
+	for _, gname in ipairs(state.group_order) do
+		if gname ~= name then
+			local g = state.groups[gname]
+			if g then
+				for fname, f in pairs(g.frames) do
+					if owner[fname] == nil then
+						owner[fname] = gname
+					end
+					for _, al in ipairs(f.alias or {}) do
+						if owner[al] == nil then
+							owner[al] = gname
+						end
+					end
+				end
+			end
+		end
+	end
+	local hits = {}
+	for _, al in ipairs(alias_names) do
+		local gname = owner[al]
+		if gname then
+			hits[#hits + 1] = string.format("%s (已被图集 %s 占用)", al, gname)
+		end
+	end
+	if #hits > 0 then
+		print(string.format("[atlas_manager] alias conflict: %s 写出 %d 个 alias 名与其它图集重名", name, #hits))
+		for i = 1, math.min(#hits, 10) do
+			print("  - " .. hits[i])
+		end
+		if #hits > 10 then
+			print(string.format("  ... 其余 %d 个见上", #hits - 10))
+		end
+	end
+	return hits
 end
 
 function atlas_manager:save(hot_reload)
@@ -3286,6 +3577,26 @@ function atlas_manager:save(hot_reload)
 			dds_commands[#dds_commands + 1] = string.format("nvcompress.exe -bc3 -maximum %q %q", real_path(IMAGES_DIR) .. "/" .. name .. ".png", real_path(ATLAS_DIR) .. "/" .. name .. ".dds")
 		end
 		local atlas_real_dir = real_path(ATLAS_DIR)
+		-- alias 安全网：alias 名字若本身也作为独立帧写出，同文件内会重复定义，剔除掉
+		local alias_fixed = 0
+		for fname, fdata in pairs(new_frames) do
+			local al = fdata.alias
+			if type(al) == "table" and #al > 0 then
+				local filtered = {}
+				for _, n in ipairs(al) do
+					if n ~= fname and not new_frames[n] then
+						filtered[#filtered + 1] = n
+					else
+						alias_fixed = alias_fixed + 1
+					end
+				end
+				fdata.alias = filtered
+			end
+		end
+		if alias_fixed > 0 then
+			print(string.format("[atlas_manager] alias: dropped %d conflicting names while writing %s", alias_fixed, name))
+		end
+		local alias_conflicts = self:_alias_conflicts(name, new_frames)
 		local backup_real_dir = real_path(BACKUP_DIR)
 		local bp = atlas_util.backup_files(atlas_real_dir, name, backup_real_dir, read_fs, write_real)
 		print(string.format("[atlas_manager] save_backup: %s -> %s", name, bp))
@@ -3295,7 +3606,11 @@ function atlas_manager:save(hot_reload)
 		end
 		print(string.format("[atlas_manager] save_compile: %s .lua/.luac/.aluac written", name))
 		self._pending_dds_commands = dds_commands
-		self:set_status(string.format("已保存 %s.", name))
+		if alias_conflicts and #alias_conflicts > 0 then
+			self:set_status(string.format("已保存 %s（注意: %d 个 alias 名与其它图集重名，见控制台）", name, #alias_conflicts))
+		else
+			self:set_status(string.format("已保存 %s.", name))
+		end
 		if hot_reload then
 			self:_hot_reload_group(name, new_frames, w, h)
 			state.preview_valid = false

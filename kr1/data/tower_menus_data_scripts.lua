@@ -28,4 +28,19 @@ function scripts.clever_add(upgrade_table, upgrade_item)
 		end
 	end
 end
+
+function scripts.clever_remove(upgrade_table, sort_fn)
+	local key = nil
+	for i, item in ipairs(upgrade_table) do
+		if sort_fn(item) then
+			key = i
+			break
+		end
+	end
+	if key then
+		table.remove(upgrade_table, key)
+		scripts.clever_add(upgrade_table, nil) -- Recalculate the placement of remaining items
+	end
+end
+
 return scripts
