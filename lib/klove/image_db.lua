@@ -589,9 +589,7 @@ function image_db:load_atlas(ref_scale, path, name)
 
 	for fn in pairs(image_names) do
 		i = i + 1
-		print(fn)
 		local key, im, w, h = image_db:load_image_file(fn, path)
-		print(key)
 		self.db_images[key] = {im, w, h}
 	end
 
