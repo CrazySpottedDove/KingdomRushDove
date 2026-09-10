@@ -14,8 +14,10 @@ require("lib.klua.dump")
 
 local extension_name = IS_ANDROID and ".aluac" or ".luac"
 
+local km = require("lib.klua.macros")
+local image_db = {}
 -- 缓存纹理，这些纹理只要进局内肯定会需要加载，就不重复加载卸载了
-local persistent_textures = table.to_map({
+image_db.persistent_textures = table.to_map({
 	-- game
 	"go_decals",
 	"go_enemies_common",
@@ -60,9 +62,6 @@ local persistent_textures = table.to_map({
 	"ballon"
 -- TODO: view_options 不可加入该缓存列表，因为两个scene的scale不一样，目前暂未处理
 })
-
-local km = require("lib.klua.macros")
-local image_db = {}
 -- 已加载的图片名称（无拓展名），为 map<string, {userdata(Image), number(width), number(height)}>
 image_db.db_images = {}
 -- 已加载的图集帧信息
@@ -349,7 +348,7 @@ function image_db:queue_load_done()
 end
 
 function image_db:queue_load_atlas(ref_scale, path, name, not_bytecode)
-	if persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
+	if self.persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
 		return
 	end
 
@@ -362,7 +361,7 @@ end
 
 function image_db:unload_atlas(name, ref_scale)
 	-- 不卸载持久化纹理
-	if persistent_textures[name] then
+	if self.persistent_textures[name] then
 		return
 	end
 
@@ -576,7 +575,7 @@ end
 ---@param path string 图像父目录路径
 ---@param name string 图像组名称（不含.lua后缀）
 function image_db:load_atlas(ref_scale, path, name)
-	if persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
+	if self.persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
 		return
 	end
 
@@ -590,9 +589,9 @@ function image_db:load_atlas(ref_scale, path, name)
 
 	for fn in pairs(image_names) do
 		i = i + 1
-
+		print(fn)
 		local key, im, w, h = image_db:load_image_file(fn, path)
-
+		print(key)
 		self.db_images[key] = {im, w, h}
 	end
 
@@ -604,7 +603,7 @@ end
 ---@param path string 图像父目录路径
 ---@param name string 图像组名称（不含.lua后缀）
 function image_db:load_atlas_new(ref_scale, path, name)
-	if persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
+	if self.persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
 		return
 	end
 

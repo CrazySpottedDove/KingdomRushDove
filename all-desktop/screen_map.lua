@@ -4521,6 +4521,12 @@ function EncyclopediaTabLabel:initialize(text, selected, rotation)
 	end
 end
 
+local encyclopedia_view_size_map = {
+	tower_thumb = v(84, 78),
+	tower_detail = v(260, 250),
+	tower_special_icon = v(58, 57)
+}
+
 EncyclopediaView = class("EncyclopediaView", PopUpView)
 
 function EncyclopediaView:initialize(sw, sh)
@@ -4716,11 +4722,17 @@ function EncyclopediaView:load_towers(index)
 
 		if i <= tower_count then
 			local t = screen_map.tower_data[i]
-			local f = string.format("encyclopedia_tower_thumbs_%04i", t.icon)
-			local icon = U.splicing_from_kr(t.from_kr, f)
+			local image_name
+			if t.thumb_image_name then
+				image_name = t.thumb_image_name
+			else
+				local f = string.format("encyclopedia_tower_thumbs_%04i", t.icon)
+				image_name = U.splicing_from_kr(t.from_kr, f)
+			end
+
 			local off_y = 120
 
-			self:create_tower(icon, v(math.fmod(d - 1, 4) * 88 + 50, math.floor((d - 1) / 4) * 85 + off_y), i, true)
+			self:create_tower(image_name, v(math.fmod(d - 1, 4) * 88 + 50, math.floor((d - 1) / 4) * 85 + off_y), i, true)
 		end
 	end
 
@@ -4785,8 +4797,20 @@ function EncyclopediaView:create_tower(icon, pos, information, enabled)
 		self.towers:add_child(tower)
 	else
 		local tower = KButtonNoText:new()
-
-		tower:set_image(icon)
+		local ss = I:s(icon)
+		local target_size = encyclopedia_view_size_map["tower_thumb"]
+		local image_scale = 1
+		if target_size then
+			local scale_x = target_size.x / ss.ref_scale / ss.size[1]
+			local scale_y = target_size.y / ss.ref_scale / ss.size[2]
+			image_scale = math.min(scale_x, scale_y)
+		end
+		if image_scale == 1 then
+			tower:set_image(icon)
+		else
+			tower.image_scale = image_scale
+			tower:set_image(icon, target_size)
+		end
 
 		tower.anchor = v(tower.size.x / 2, tower.size.y / 2)
 		tower.pos = pos
@@ -4879,9 +4903,27 @@ function EncyclopediaView:detail_tower(index)
 
 	self.right_panel:add_child(right_decoration)
 
-	local f = string.format("encyclopedia_towers_%04i", t.detail_icon)
-	local tower_fmt = U.splicing_from_kr(t.from_kr, f)
-	local portrait = KImageView:new(tower_fmt)
+	local image_name
+	if t.detail_image_name then
+		image_name = t.detail_image_name
+	else
+		image_name = string.format("encyclopedia_towers_%04i", t.detail_icon)
+		image_name = U.splicing_from_kr(t.from_kr, image_name)
+	end
+	local ss = I:s(image_name)
+	local target_size = encyclopedia_view_size_map["tower_detail"]
+	local image_scale = 1
+	if target_size then
+		local scale_x = target_size.x / ss.ref_scale / ss.size[1]
+		local scale_y = target_size.y / ss.ref_scale / ss.size[2]
+		image_scale = math.min(scale_x, scale_y)
+	end
+	local portrait
+	if image_scale == 1 then
+		portrait = KImageView:new(image_name)
+	else
+		portrait = KImageView:new(image_name, target_size, image_scale)
+	end
 
 	portrait.anchor = v(portrait.size.x / 2, portrait.size.y / 2)
 	portrait.pos = v(300, 175)
@@ -5131,10 +5173,20 @@ function EncyclopediaView:detail_tower_second(index)
 			end
 		end
 
+		local ss = I:s(tower_specials_fmt)
+		local target_size = encyclopedia_view_size_map["tower_special_icon"]
+		local image_scale = 1
+		if target_size then
+			local scale_x = target_size.x / ss.ref_scale / ss.size[1]
+			local scale_y = target_size.y / ss.ref_scale / ss.size[2]
+			image_scale = math.min(scale_x, scale_y)
+		end
+
 		local power_button = KImageButton:new(tower_specials_fmt)
 
-		power_button.image_scale = 0.65
+		power_button.image_scale = 0.65 * image_scale
 		power_button.pos = v(px, 90)
+		power_button.size:copy(target_size)
 		power_button.anchor = v(power_button.size.x * 0.65 / 2, power_button.size.y * 0.65 / 2)
 
 		if i == 1 then

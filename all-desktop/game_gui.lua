@@ -46,6 +46,12 @@ local i18n = require("i18n")
 local EU = require("endless_utils")
 local EL = require("kr1.data.endless")
 local perf = require("dove_modules.perf.perf")
+
+local tower_menu_button_size_map = {
+	upgrade_power = v(58, 55),
+	tw_upgrade = v(59, 55)
+}
+
 local function ISW(...)
 	return i18n.sw(i18n, ...)
 end
@@ -7565,7 +7571,21 @@ function CriketMenuButton:initialize(item)
 	self.item_image = item.image
 	self.item = item
 
-	local b = KImageView:new(item.image)
+	local ss = I:s(item.image)
+	local target_size = tower_menu_button_size_map[item.action]
+	local image_scale = 1
+	local b
+	if target_size then
+		local scale_x = target_size.x / ss.ref_scale / ss.size[1]
+		local scale_y = target_size.y / ss.ref_scale / ss.size[2]
+		image_scale = math.min(scale_x, scale_y)
+	end
+
+	if image_scale == 1 then
+		b = KImageView:new(item.image)
+	else
+		b = KImageView:new(item.image, target_size, image_scale)
+	end
 
 	b.pos = v(0, 0)
 	b.propagate_on_click = true
@@ -8932,10 +8952,6 @@ function TowerMenuButton:disable()
 		self.price_tag.colors.text = {156, 146, 132, 255}
 	end
 end
-
-local tower_menu_button_size_map = {
-	upgrade_power = v(58, 55)
-}
 
 function TowerMenuButton:initialize(item, entity)
 	TowerMenuButton.super.initialize(self)
