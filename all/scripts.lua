@@ -9818,13 +9818,17 @@ scripts.mod_shield = {
 
 		this.pos = target.pos
 
-		U.y_animation_play(this, this.animation_start, nil, store.tick_ts, false)
+		if this.render then
+			U.y_animation_play(this, this.animation_start, nil, store.tick_ts, false)
+		end
 
 		while true do
 			target = store.entities[m.target_id]
 
 			if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node or this.shield_broken then
-				U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
+				if this.render then
+					U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
+				end
 				simulation:queue_remove_entity(this)
 
 				return
@@ -9848,7 +9852,9 @@ scripts.mod_shield = {
 				end
 			end
 
-			U.y_animation_play(this, this.animation_loop, nil, store.tick_ts, 1)
+			if this.render then
+				U.y_animation_play(this, this.animation_loop, nil, store.tick_ts, 1)
+			end
 			coroutine.yield()
 		end
 	end,
