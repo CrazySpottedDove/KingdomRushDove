@@ -204,6 +204,7 @@ scripts.tower_archer_dwarf = {
 
 					if (b1.template_name == "dwarf_shotgun") then
 						apply_precision(b1)
+						b1.bullet.to:add(enemy.unit.hit_offset)
 					end
 
 					simulation:queue_insert_entity(b1)
