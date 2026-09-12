@@ -164,9 +164,6 @@ local function merge_missing_or_mismatch_fields(local_cfg, remote_cfg)
 end
 
 local function deep_equal(a, b)
-	if type(a) ~= type(b) then
-		return false
-	end
 	if type(a) ~= "table" then
 		return a == b
 	end
@@ -216,8 +213,8 @@ local function merge_plugin_config_with_defaults(preserved_local_cfg, remote_cfg
 				if old_default[k] == nil then
 					-- 用户新增字段，保留
 					result[k] = table.deepclone(v)
-				elseif not deep_equal(v, old_default[k]) then
-					-- 用户自定义过，保留用户值
+				elseif type(v) == type(old_default[k]) and not deep_equal(v, old_default[k]) then
+					-- 用户自定义过，保留用户值。这里注意先比较类型，如果类型不同，可能是插件的配置项类型发生了改变，此时应该使用新的配置项。
 					result[k] = table.deepclone(v)
 				end
 			-- 其余：用户未修改，采用新版本默认值
