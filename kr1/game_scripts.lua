@@ -15642,7 +15642,7 @@ function scripts.mod_archer_magic.insert(this, store)
 		return false
 	end
 
-	local dmg = E.assign_damage(DAMAGE_MAGICAL, math.ceil(math.max(source_damage.value * this._mod_archer_magic_factor, 1)), this.id, target.id)
+	local dmg = E.assign_damage(DAMAGE_MAGICAL, math.ceil(math.max(source_damage.value * this._mod_archer_magic_factor, 1)), this.modifier.source_id, target.id)
 	queue_damage(store, dmg)
 	return false
 end

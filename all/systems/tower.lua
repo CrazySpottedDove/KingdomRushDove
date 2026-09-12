@@ -272,7 +272,7 @@ function tower:on_update(dt, ts, store)
 				end
 			elseif e.barrack and ne.barrack and not ne.barrack.banned then
 				ne.barrack.rally_pos = V.vclone(e.barrack.rally_pos)
-
+				store._dominant_entity = ne
 				for i, s in ipairs(e.barrack.soldiers) do
 					if s.health.dead then
 					-- block empty
@@ -288,7 +288,6 @@ function tower:on_update(dt, ts, store)
 
 							local ns = E:create_entity(soldier_type)
 
-							ns.info.i18n_key = s.info.i18n_key
 							ns.soldier.tower_id = ne.id
 							ns.pos = V.vclone(s.pos)
 							ns.motion.dest = V.vclone(s.motion.dest)
@@ -330,6 +329,7 @@ function tower:on_update(dt, ts, store)
 						simulation:queue_remove_entity(s)
 					end
 				end
+				store._dominant_entity = nil
 			elseif ne.barrack then
 				ne.barrack.rally_pos = V.vclone(ne.tower.default_rally_pos)
 			end
