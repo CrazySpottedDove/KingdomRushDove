@@ -8907,7 +8907,7 @@ local specials = {
 				max_speed = 25,
 				regen_health = 0,
 				hp_max = 450,
-				duration = 12,
+				duration = 10,
 				melee_attack = {
 					cooldown = 2,
 					damage_min = 45,
@@ -8920,7 +8920,7 @@ local specials = {
 				melee_range = 70
 			},
 			tentacle = {
-				duration = 12,
+				duration = 10,
 				area_attack = {
 					radius = 50,
 					cooldown_min = 1,
