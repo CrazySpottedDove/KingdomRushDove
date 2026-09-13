@@ -1898,10 +1898,10 @@ function SpeedStateIndicator:update(dt)
 		self.last_speed_factor = store.speed_factor
 
 		if store.speed_factor > 1 then
-			self.label.text = string.format("%s 倍加速中...", store.speed_factor)
+			self.label.text = string.format(_("INGAME_UI_SPEED_UP_X"), store.speed_factor)
 			self.label:update_cache()
 		else
-			self.label.text = string.format("%s 倍减速中...", store.speed_factor)
+			self.label.text = string.format(_("INGAME_UI_SPEED_DOWN_X"), store.speed_factor)
 			self.label:update_cache()
 		end
 	end
@@ -3566,7 +3566,7 @@ function PauseView:initialize()
 
 		-- 左侧按钮列
 		-- 减速按钮
-		local btn_slow = GGOptionsButton:new("减速")
+		local btn_slow = GGOptionsButton:new(_("INGAME_UI_BTN_SLOW"))
 		btn_slow:set_anchor_to_center()
 		btn_slow.pos.x = left_x
 		btn_slow.pos.y = button_height
@@ -3577,7 +3577,7 @@ function PauseView:initialize()
 		self:add_child(btn_slow)
 
 		button_height = button_height + 100
-		local btn_normal = GGOptionsButton:new("正常")
+		local btn_normal = GGOptionsButton:new(_("INGAME_UI_BTN_NORMAL"))
 		btn_normal:set_anchor_to_center()
 		btn_normal.pos.x = left_x
 		btn_normal.pos.y = button_height
@@ -3588,7 +3588,7 @@ function PauseView:initialize()
 		self:add_child(btn_normal)
 
 		button_height = button_height + 100
-		local btn_quick = GGOptionsButton:new("加速")
+		local btn_quick = GGOptionsButton:new(_("INGAME_UI_BTN_FAST"))
 		btn_quick:set_anchor_to_center()
 		btn_quick.pos.x = left_x
 		btn_quick.pos.y = button_height
@@ -3599,7 +3599,7 @@ function PauseView:initialize()
 		self:add_child(btn_quick)
 
 		button_height = button_height + 100
-		local btn_wealthy = GGOptionsButton:new("加金币")
+		local btn_wealthy = GGOptionsButton:new(_("INGAME_UI_BTN_ADD_GOLD"))
 		btn_wealthy:set_anchor_to_center()
 		btn_wealthy.pos.x = left_x
 		btn_wealthy.pos.y = button_height
@@ -3610,7 +3610,7 @@ function PauseView:initialize()
 		self:add_child(btn_wealthy)
 
 		button_height = button_height + 100
-		local btn_healthy = GGOptionsButton:new("加生命")
+		local btn_healthy = GGOptionsButton:new(_("INGAME_UI_BTN_ADD_LIVES"))
 		btn_healthy:set_anchor_to_center()
 		btn_healthy.pos.x = left_x
 		btn_healthy.pos.y = button_height
@@ -3623,7 +3623,7 @@ function PauseView:initialize()
 		-- 右侧按钮列（需要立刻交互的功能）
 		button_height = 0
 
-		local btn_random = GGOptionsButton:new("随机造塔")
+		local btn_random = GGOptionsButton:new(_("INGAME_UI_BTN_RANDOM_TOWERS"))
 		btn_random:set_anchor_to_center()
 		btn_random.pos.x = right_x
 		btn_random.pos.y = button_height
@@ -3634,7 +3634,7 @@ function PauseView:initialize()
 		self:add_child(btn_random)
 
 		button_height = button_height + 100
-		local btn_force_wave = GGOptionsButton:new("强制跳波")
+		local btn_force_wave = GGOptionsButton:new(_("INGAME_UI_BTN_FORCE_WAVE"))
 		btn_force_wave:set_anchor_to_center()
 		btn_force_wave.pos.x = right_x
 		btn_force_wave.pos.y = button_height
@@ -3648,7 +3648,7 @@ function PauseView:initialize()
 
 		if configer.ui_settings().damage_trace_enabled then
 			button_height = button_height + 100
-			local btn_damage_trace = GGOptionsButton:new("伤害追踪")
+			local btn_damage_trace = GGOptionsButton:new(_("INGAME_UI_DAMAGE_TRACE"))
 			btn_damage_trace:set_anchor_to_center()
 			btn_damage_trace.pos.x = right_x
 			btn_damage_trace.pos.y = button_height
@@ -3661,7 +3661,7 @@ function PauseView:initialize()
 
 		if configer.ui_settings().tower_menu_enabled then
 			button_height = button_height + 100
-			local btn_criket = GGOptionsButton:new("一键造塔")
+			local btn_criket = GGOptionsButton:new(_("INGAME_UI_BTN_QUICK_BUILD"))
 			btn_criket:set_anchor_to_center()
 			btn_criket.pos.x = right_x
 			btn_criket.pos.y = button_height
@@ -3679,7 +3679,7 @@ function PauseView:initialize()
 
 		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
 			button_height = button_height + 100
-			local btn_endless = GGOptionsButton:new("无尽商店")
+			local btn_endless = GGOptionsButton:new(_("INGAME_UI_BTN_ENDLESS_SHOP"))
 			btn_endless:set_anchor_to_center()
 			btn_endless.pos.x = right_x
 			btn_endless.pos.y = button_height
@@ -3696,7 +3696,7 @@ function PauseView:initialize()
 
 		if configer.ui_settings().hero_menu_enabled then
 			button_height = button_height + 100
-			local btn_hero_menu = GGOptionsButton:new("英雄菜单")
+			local btn_hero_menu = GGOptionsButton:new(_("INGAME_UI_BTN_HERO_MENU"))
 			btn_hero_menu:set_anchor_to_center()
 			btn_hero_menu.pos.x = right_x
 			btn_hero_menu.pos.y = button_height
@@ -3715,7 +3715,7 @@ function PauseView:initialize()
 
 		if configer.ui_settings().perf_enabled then
 			button_height = button_height + 100
-			local btn_perf = GGOptionsButton:new("性能检测")
+			local btn_perf = GGOptionsButton:new(_("INGAME_UI_BTN_PERF"))
 			btn_perf:set_anchor_to_center()
 			btn_perf.pos.x = right_x
 			btn_perf.pos.y = button_height
@@ -3901,7 +3901,7 @@ function DefeatView:initialize()
 	self:add_child(b)
 
 	if configer.ui_settings().damage_trace_enabled then
-		b = GGOptionsButton:new("伤害追踪")
+		b = GGOptionsButton:new(_("INGAME_UI_DAMAGE_TRACE"))
 		b.pos.x, b.pos.y = V.csnap(self.size.x * 0.5, y + b.size.y + 35)
 
 		function b.on_click()
@@ -4105,7 +4105,7 @@ function VictoryView:initialize(level_mode)
 	self.v_continue = v_c
 
 	if configer.ui_settings().damage_trace_enabled then
-		local b_damage = GGOptionsButton:new("伤害追踪")
+		local b_damage = GGOptionsButton:new(_("INGAME_UI_DAMAGE_TRACE"))
 
 		b_damage.anchor = V.v(b_damage.size.x * 0.5, b_damage.size.y * 0.5)
 		b_damage._target_y = 540
@@ -4135,7 +4135,7 @@ function VictoryView:show()
 			lives = game_gui.game.store.lives
 		end
 
-		self.ct.text = string.format("%s损 %.1f秒 %d牺牲", tostring(lives), criket.time_cost, game_gui.game.store.dead_soldier_count)
+		self.ct.text = string.format(_("INGAME_UI_CRIKET_RESULT"), tostring(lives), criket.time_cost, game_gui.game.store.dead_soldier_count)
 		self.ct.font_size = 28
 
 		if criket.tower_name then
@@ -4261,34 +4261,34 @@ local damage_trace_color_index = sys_health.damage_color_index
 local damage_trace_color_palette = sys_health.damage_color_palette
 
 local damage_trace_names = {
-	[DAMAGE_TRUE] = "真实",
-	[DAMAGE_PHYSICAL] = "物理",
-	[DAMAGE_MAGICAL] = "法术",
-	[DAMAGE_EXPLOSION] = "爆炸",
-	[DAMAGE_ELECTRICAL] = "雷电",
-	[DAMAGE_MAGICAL_EXPLOSION] = "法爆",
-	[DAMAGE_SHOT] = "枪击",
-	[DAMAGE_RUDE] = "残暴",
-	[DAMAGE_STAB] = "刺击",
-	[DAMAGE_MIXED] = "混合",
-	[DAMAGE_POISON] = "剧毒",
-	[DAMAGE_AGAINST_ARMOR] = "破甲",
-	[DAMAGE_AGAINST_MAGIC_ARMOR] = "破魔",
-	[DAMAGE_INSTAKILL] = "秒杀",
-	[DAMAGE_DISINTEGRATE] = "分解",
-	[DAMAGE_EAT] = "吞噬"
+	[DAMAGE_TRUE] = _("INGAME_UI_DAMAGE_TYPE_TRUE"),
+	[DAMAGE_PHYSICAL] = _("INGAME_UI_DAMAGE_TYPE_PHYSICAL"),
+	[DAMAGE_MAGICAL] = _("INGAME_UI_DAMAGE_TYPE_MAGICAL"),
+	[DAMAGE_EXPLOSION] = _("INGAME_UI_DAMAGE_TYPE_EXPLOSION"),
+	[DAMAGE_ELECTRICAL] = _("INGAME_UI_DAMAGE_TYPE_ELECTRICAL"),
+	[DAMAGE_MAGICAL_EXPLOSION] = _("INGAME_UI_DAMAGE_TYPE_MAGICAL_EXPLOSION"),
+	[DAMAGE_SHOT] = _("INGAME_UI_DAMAGE_TYPE_SHOT"),
+	[DAMAGE_RUDE] = _("INGAME_UI_DAMAGE_TYPE_RUDE"),
+	[DAMAGE_STAB] = _("INGAME_UI_DAMAGE_TYPE_STAB"),
+	[DAMAGE_MIXED] = _("INGAME_UI_DAMAGE_TYPE_MIXED"),
+	[DAMAGE_POISON] = _("INGAME_UI_DAMAGE_TYPE_POISON"),
+	[DAMAGE_AGAINST_ARMOR] = _("INGAME_UI_DAMAGE_TYPE_AGAINST_ARMOR"),
+	[DAMAGE_AGAINST_MAGIC_ARMOR] = _("INGAME_UI_DAMAGE_TYPE_AGAINST_MAGIC_ARMOR"),
+	[DAMAGE_INSTAKILL] = _("INGAME_UI_DAMAGE_TYPE_INSTAKILL"),
+	[DAMAGE_DISINTEGRATE] = _("INGAME_UI_DAMAGE_TYPE_DISINTEGRATE"),
+	[DAMAGE_EAT] = _("INGAME_UI_DAMAGE_TYPE_EAT")
 }
 
 -- 追踪模式定义：按钮/标题（name）、右侧说明（tip）、空态文案（empty_text）、store 数据表字段（data_key）
 local damage_trace_modes = {{
-	name = "伤害追踪",
-	tip = "伤害追踪显示护甲、免伤结算后的伤害值，不包含溢出的伤害。",
-	empty_text = "暂无伤害记录",
+	name = _("INGAME_UI_DAMAGE_TRACE"),
+	tip = _("INGAME_UI_DAMAGE_TRACE_TIP"),
+	empty_text = _("INGAME_UI_DAMAGE_TRACE_EMPTY"),
 	data_key = "applied_effective_damage"
 }, {
-	name = "承伤追踪",
-	tip = "承伤追踪显示护甲、免伤结算前的伤害值，不包含溢出的伤害。",
-	empty_text = "暂无承伤记录",
+	name = _("INGAME_UI_DAMAGE_TAKEN"),
+	tip = _("INGAME_UI_DAMAGE_TAKEN_TIP"),
+	empty_text = _("INGAME_UI_DAMAGE_TAKEN_EMPTY"),
 	data_key = "received_total_damage"
 }}
 
@@ -4303,7 +4303,7 @@ local function damage_trace_segment_info(damage_type)
 	end
 
 	if #names == 0 then
-		return "其他", color
+		return _("INGAME_UI_DAMAGE_TYPE_OTHER"), color
 	end
 
 	return table.concat(names, "+"), color
@@ -4361,9 +4361,9 @@ end
 
 local function damage_trace_num_fmt(v)
 	if v >= 100000000 then
-		return string.format("%.2f亿", v / 100000000)
+		return string.format(_("INGAME_UI_NUM_YI"), v / 100000000)
 	elseif v >= 10000 then
-		return string.format("%.1f万", v / 10000)
+		return string.format(_("INGAME_UI_NUM_WAN"), v / 10000)
 	elseif v >= 100 then
 		return string.format("%.0f", v)
 	end
@@ -5182,7 +5182,7 @@ function DamageTraceView:initialize(sw, sh)
 	-- 视图切换：明细 / 饼图 / 折线图
 	self.view_buttons = {}
 
-	for i, label in ipairs({"明细", "饼图", "折线图"}) do
+	for i, label in ipairs({_("INGAME_UI_VIEW_DETAIL"), _("INGAME_UI_VIEW_PIE"), _("INGAME_UI_VIEW_LINE")}) do
 		local b = DamageTraceTabButton:new(label, V.v(76, btn_h))
 
 		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
@@ -5204,7 +5204,7 @@ function DamageTraceView:initialize(sw, sh)
 	-- ============ 明细页：分类单选 + 提示 + 列表 ============
 	self.tab_buttons = {}
 
-	for i, label in ipairs({"防御塔", "士兵", "敌人", "其它"}) do
+	for i, label in ipairs({_("INGAME_UI_CAT_TOWER"), _("INGAME_UI_CAT_SOLDIER"), _("INGAME_UI_CAT_ENEMY"), _("INGAME_UI_CAT_OTHER")}) do
 		local b = DamageTraceTabButton:new(label, V.v(76, btn_h))
 
 		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
@@ -5272,7 +5272,7 @@ function DamageTraceView:initialize(sw, sh)
 	-- ============ 图表分类多选（饼图/折线图共享） ============
 	self.chart_cat_buttons = {}
 
-	for i, label in ipairs({"防御塔", "士兵", "敌人", "其它"}) do
+	for i, label in ipairs({_("INGAME_UI_CAT_TOWER"), _("INGAME_UI_CAT_SOLDIER"), _("INGAME_UI_CAT_ENEMY"), _("INGAME_UI_CAT_OTHER")}) do
 		local b = DamageTraceTabButton:new(label, V.v(76, btn_h))
 
 		b.anchor = V.v(b.size.x * 0.5, b.size.y * 0.5)
@@ -5365,7 +5365,7 @@ function DamageTraceView:initialize(sw, sh)
 	pie_empty.text_align = "center"
 	pie_empty.vertical_align = "middle"
 	pie_empty.colors.text = {200, 185, 150, 255}
-	pie_empty.text = "该波次暂无数据"
+	pie_empty.text = _("INGAME_UI_PIE_EMPTY")
 	pie_empty.hidden = true
 	self.pie_page:add_child(pie_empty)
 	self.pie_empty = pie_empty
@@ -5396,12 +5396,12 @@ function DamageTraceView:initialize(sw, sh)
 	line_empty.text_align = "center"
 	line_empty.vertical_align = "middle"
 	line_empty.colors.text = {200, 185, 150, 255}
-	line_empty.text = "暂无数据"
+	line_empty.text = _("INGAME_UI_CHART_EMPTY")
 	line_empty.hidden = true
 	self.line_page:add_child(line_empty)
 	self.line_empty = line_empty
 
-	local b_close = GGOptionsButton:new("关闭")
+	local b_close = GGOptionsButton:new(_("BUTTON_CLOSE"))
 
 	b_close.anchor = V.v(b_close.size.x * 0.5, b_close.size.y * 0.5)
 	b_close.pos = V.v(pw * 0.5, ph - 40)
@@ -5611,7 +5611,7 @@ function DamageTraceView:refresh_pie()
 	if other > 0 then
 		pie_items[#pie_items + 1] = {
 			template_name = nil,
-			name = "其它(" .. (#items - DAMAGE_TRACE_PIE_TOP_N) .. ")",
+			name = string.format(_("INGAME_UI_OTHER_COUNT"), #items - DAMAGE_TRACE_PIE_TOP_N),
 			color = damage_trace_other_color,
 			value = other
 		}
@@ -5629,7 +5629,7 @@ function DamageTraceView:refresh_pie()
 	end
 
 	self.pie_empty.hidden = total > 0
-	self.wave_total_label.text = "第 " .. wave .. " 波 · 总伤 " .. damage_trace_num_fmt(total)
+	self.wave_total_label.text = string.format(_("INGAME_UI_WAVE_TOTAL_DAMAGE"), wave, damage_trace_num_fmt(total))
 end
 
 function DamageTraceView:refresh_line()
@@ -9704,7 +9704,7 @@ end
 EndlessSelectRewardView = class("EndlessSelectRewardView", SelectPanelView)
 
 function EndlessSelectRewardView:initialize(sw, sh)
-	SelectPanelView.initialize(self, sw, sh, "选择奖励")
+	SelectPanelView.initialize(self, sw, sh, _("INGAME_UI_SELECT_REWARD"))
 	self:set_key_label_map(EL.key_label_map)
 	self:set_key_desc_map(EL.key_desc_map)
 end

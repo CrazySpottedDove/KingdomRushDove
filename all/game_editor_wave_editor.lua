@@ -74,7 +74,7 @@ function WaveEditorView:initialize(sw, sh, editor, opts)
 	self.panel = panel
 
 	local title = KLabel:new(V.v(pw, 34))
-	title.text = "出怪预览 / 微调"
+	title.text = _("EDITOR_UI_WAVE_PREVIEW_EDIT")
 	title.text_align = "center"
 	title.vertical_align = "middle"
 	title.colors.background = C.panel
@@ -115,7 +115,7 @@ function WaveEditorView:initialize(sw, sh, editor, opts)
 	self:_rebuild_rows()
 	self:_refresh_list_scrollbar()
 
-	local save_btn = KEButton:new("保存出怪文件")
+	local save_btn = KEButton:new(_("EDITOR_UI_SAVE_WAVE_FILE"))
 	save_btn.size = v(130, 30)
 	save_btn.pos = v(10, ph - 44)
 	save_btn.colors.background = C.button
@@ -126,7 +126,7 @@ function WaveEditorView:initialize(sw, sh, editor, opts)
 	hook_button_feedback(save_btn)
 	panel:add_child(save_btn)
 
-	local glossary_btn = KEButton:new("怪物一览表")
+	local glossary_btn = KEButton:new(_("EDITOR_UI_ENEMY_GLOSSARY"))
 	glossary_btn.size = v(130, 30)
 	glossary_btn.pos = v(150, ph - 44)
 	function glossary_btn.on_click()
@@ -146,7 +146,7 @@ function WaveEditorView:_build_side_panel()
 	self.side:remove_children()
 	local y = 8
 
-	self.p_lives = self:_create_prop("生命值(lives)", self.editor.wave_data.lives or 20)
+	self.p_lives = self:_create_prop(_("EDITOR_UI_PROP_LIVES"), self.editor.wave_data.lives or 20)
 	self.p_lives.pos = v(8, y)
 	self.side:add_child(self.p_lives)
 	self.p_lives.on_change = function()
@@ -154,7 +154,7 @@ function WaveEditorView:_build_side_panel()
 	end
 	y = y + 46
 
-	self.p_cash = self:_create_prop("初始金币(cash)", self.editor.wave_data.cash or 800)
+	self.p_cash = self:_create_prop(_("EDITOR_UI_PROP_CASH"), self.editor.wave_data.cash or 800)
 	self.p_cash.pos = v(8, y)
 	self.side:add_child(self.p_cash)
 	self.p_cash.on_change = function()
@@ -164,50 +164,50 @@ function WaveEditorView:_build_side_panel()
 
 	local sep = KLabel:new(V.v(self.side.size.x - 16, 24))
 	sep.pos = v(8, y)
-	sep.text = "当前选中出怪项"
+	sep.text = _("EDITOR_UI_CURRENT_SPAWN_ITEM")
 	sep.vertical_align = "middle"
 	sep.colors.background = C.panel
 	sep.colors.text = C.text
 	self.side:add_child(sep)
 	y = y + 28
 
-	self.p_group_interval = self:_create_prop("波间隔(interval 帧)", "")
+	self.p_group_interval = self:_create_prop(_("EDITOR_UI_PROP_GROUP_INTERVAL_FRAMES"), "")
 	self.p_group_interval.pos = v(8, y)
 	self.side:add_child(self.p_group_interval)
 	y = y + 46
 
-	self.p_wave_delay = self:_create_prop("子波延迟(delay 帧)", "")
+	self.p_wave_delay = self:_create_prop(_("EDITOR_UI_PROP_WAVE_DELAY_FRAMES"), "")
 	self.p_wave_delay.pos = v(8, y)
 	self.side:add_child(self.p_wave_delay)
 	y = y + 46
 
-	self.p_wave_path = self:_create_prop("路径(path_index)", "")
+	self.p_wave_path = self:_create_prop(_("EDITOR_UI_PROP_PATH"), "")
 	self.p_wave_path.pos = v(8, y)
 	self.side:add_child(self.p_wave_path)
 	y = y + 46
 
-	self.p_spawn_creep = self:_create_prop("怪物模板(creep)", "")
+	self.p_spawn_creep = self:_create_prop(_("EDITOR_UI_PROP_CREEP"), "")
 	self.p_spawn_creep.pos = v(8, y)
 	self.side:add_child(self.p_spawn_creep)
 	y = y + 46
 
-	self.p_spawn_creep_cn = self:_create_prop("怪物中文", "")
+	self.p_spawn_creep_cn = self:_create_prop(_("EDITOR_UI_PROP_CREEP_CN"), "")
 	self.p_spawn_creep_cn.editable = false
 	self.p_spawn_creep_cn.pos = v(8, y)
 	self.side:add_child(self.p_spawn_creep_cn)
 	y = y + 46
 
-	self.p_spawn_max = self:_create_prop("数量(max)", "")
+	self.p_spawn_max = self:_create_prop(_("EDITOR_UI_PROP_MAX"), "")
 	self.p_spawn_max.pos = v(8, y)
 	self.side:add_child(self.p_spawn_max)
 	y = y + 46
 
-	self.p_spawn_interval = self:_create_prop("间隔(interval)", "")
+	self.p_spawn_interval = self:_create_prop(_("EDITOR_UI_PROP_INTERVAL"), "")
 	self.p_spawn_interval.pos = v(8, y)
 	self.side:add_child(self.p_spawn_interval)
 	y = y + 46
 
-	self.p_spawn_interval_next = self:_create_prop("尾延(interval_next)", "")
+	self.p_spawn_interval_next = self:_create_prop(_("EDITOR_UI_PROP_INTERVAL_NEXT"), "")
 	self.p_spawn_interval_next.pos = v(8, y)
 	self.side:add_child(self.p_spawn_interval_next)
 	y = y + 54
@@ -299,39 +299,39 @@ function WaveEditorView:_rebuild_rows()
 
 	local cols = {{
 		key = "group",
-		title = "波",
+		title = _("EDITOR_UI_COL_GROUP"),
 		w = 44
 	}, {
 		key = "interval",
-		title = "波间隔",
+		title = _("EDITOR_UI_COL_GROUP_INTERVAL"),
 		w = 76
 	}, {
 		key = "path",
-		title = "路径",
+		title = _("EDITOR_UI_COL_PATH"),
 		w = 54
 	}, {
 		key = "delay",
-		title = "延迟",
+		title = _("EDITOR_UI_COL_DELAY"),
 		w = 60
 	}, {
 		key = "en",
-		title = "怪物英文",
+		title = _("EDITOR_UI_COL_ENEMY_EN"),
 		w = 184
 	}, {
 		key = "cn",
-		title = "怪物中文",
+		title = _("EDITOR_UI_PROP_CREEP_CN"),
 		w = 184
 	}, {
 		key = "max",
-		title = "数量",
+		title = _("EDITOR_UI_COL_MAX"),
 		w = 52
 	}, {
 		key = "spawn_i",
-		title = "间隔",
+		title = _("EDITOR_UI_COL_INTERVAL"),
 		w = 52
 	}, {
 		key = "next_i",
-		title = "尾延",
+		title = _("EDITOR_UI_COL_INTERVAL_NEXT"),
 		w = 52
 	}}
 
@@ -419,9 +419,9 @@ function WaveEditorView:_save_wave_data()
 	self.editor.wave_data.cash = tonumber(self.p_cash.value) or self.editor.wave_data.cash
 
 	if self.editor:save_wave_assets() then
-		self.editor.gui:show_save_notification("出怪文件已保存", true)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_WAVE_FILE_SAVED"), true)
 	else
-		self.editor.gui:show_save_notification("出怪文件保存失败", false)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_WAVE_FILE_SAVE_FAILED"), false)
 	end
 end
 

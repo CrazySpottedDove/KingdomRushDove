@@ -76,7 +76,7 @@ function director:init(params)
 		main:set_locale(params.locale)
 	end
 
-	love.window.setTitle(version.title .. version.id)
+	love.window.setTitle(_("APP_TITLE") .. version.id)
 
 	if params.launch_options.skip_slot or params.tmp_restart then
 		if params.tmp_restart then

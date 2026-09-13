@@ -2,6 +2,7 @@ local G = love.graphics
 local FS = love.filesystem
 local utf8 = require("utf8")
 local V = require("lib.klua.vector")
+local F = require("lib.klove.font_db")
 local v = V.v
 local S = require("sound_db")
 local I = require("lib.klove.image_db")
@@ -138,7 +139,7 @@ local popup = {
 
 function atlas_manager:show_preview_popup()
 	if not state.preview_valid or not state.preview_canvas then
-		self:set_status("没有可用的预览")
+		self:set_status(_("ATLAS_MGR_STATUS_NO_PREVIEW_AVAILABLE"))
 		return
 	end
 	popup.active = true
@@ -217,7 +218,7 @@ function atlas_manager:preview_group(gname)
 			end
 		end
 		if #files == 0 then
-			self:set_status("该图集所有文件都无法加载")
+			self:set_status(_("ATLAS_MGR_STATUS_ALL_FILES_LOAD_FAILED"))
 			return
 		end
 		self:set_preview_files(files)
@@ -225,12 +226,12 @@ function atlas_manager:preview_group(gname)
 		return
 	end
 	if not group.dds_files or #group.dds_files == 0 then
-		self:set_status("该图集无可预览的纹理")
+		self:set_status(_("ATLAS_MGR_STATUS_NO_PREVIEW_TEXTURE"))
 		return
 	end
 	local real_png_dir = project_root .. "/" .. IMAGES_DIR
 	local files = {}
-	for _, dds_key in ipairs(group.dds_files) do
+	for _i, dds_key in ipairs(group.dds_files) do
 		local img, err, tw, th = atlas_util.load_source_preview(dds_key, ATLAS_DIR, real_png_dir)
 		if img then
 			local canvas = G.newCanvas(tw, th)
@@ -272,11 +273,11 @@ function atlas_manager:preview_group(gname)
 				files[#files].sprite_group[p.frame_name] = gname
 			end
 		else
-			self:set_status(string.format("无法加载纹理 %s: %s", dds_key, tostring(err)))
+			self:set_status(string.format(_G._("ATLAS_MGR_ERR_LOAD_TEXTURE_S_S"), dds_key, tostring(err)))
 		end
 	end
 	if #files == 0 then
-		self:set_status("该图集所有文件都无法加载")
+		self:set_status(_("ATLAS_MGR_STATUS_ALL_FILES_LOAD_FAILED"))
 		return
 	end
 	self:set_preview_files(files)
@@ -327,7 +328,7 @@ function atlas_manager:preview_group_file(gname, dds_key)
 	local real_png_dir = project_root .. "/" .. IMAGES_DIR
 	local img, err, tw, th = atlas_util.load_source_preview(dds_key, ATLAS_DIR, real_png_dir)
 	if not img then
-		self:set_status("无法加载纹理 " .. tostring(dds_key) .. ": " .. tostring(err))
+		self:set_status(string.format(_G._("ATLAS_MGR_ERR_LOAD_TEXTURE_S_S"), tostring(dds_key), tostring(err)))
 		return
 	end
 	local canvas = G.newCanvas(tw, th)
@@ -416,12 +417,12 @@ local function draw_popup()
 			G2.setColor(1, 1, 1, 1)
 			G2.draw(state.preview_canvas, quad, cx, cy, 0, zoom, zoom)
 			G2.setColor(255 / 255, 255 / 255, 255 / 255, 200 / 255)
-			G2.print(string.format("%s (%d,%d) %dx%d 缩放:%.0f%% +- X R", sel, pl.x, pl.y, pl.w, pl.h, zoom * 100), 10, 10)
+			G2.print(string.format(_("ATLAS_MGR_HUD_SELECTION"), sel, pl.x, pl.y, pl.w, pl.h, zoom * 100), 10, 10)
 		end
 		-- sidebar
 		G2.setColor(20 / 255, 25 / 255, 40 / 255, 230 / 255)
 		G2.rectangle("fill", area_w, 0, list_w, sh)
-		local font = love.graphics.newFont(12)
+		local font = F:default_font(12)
 		G2.setFont(font)
 		local lh = font:getHeight() + 2
 		local max_visible = math.floor((sh - 20) / lh)
@@ -478,7 +479,7 @@ local function draw_popup()
 	-- file tabs
 	popup.file_tabs = {}
 	if state.preview_files and #state.preview_files > 1 then
-		local font = love.graphics.newFont(11)
+		local font = F:default_font(11)
 		G2.setFont(font)
 		local tab_h = 22
 		local tab_y = 34
@@ -514,10 +515,10 @@ local function draw_popup()
 	local file_label = ""
 	if state.preview_files and #state.preview_files > 1 then
 		local f = state.preview_files[popup.file_idx]
-		file_label = string.format(" | 文件 %d/%d: %s", popup.file_idx, #state.preview_files, f and f.key or "?")
+		file_label = string.format(_("ATLAS_MGR_HUD_FILE_X_OF_Y"), popup.file_idx, #state.preview_files, f and f.key or "?")
 	end
 	G2.setColor(255 / 255, 255 / 255, 255 / 255, 200 / 255)
-	G2.print(string.format("图集: %dx%d | 缩放: %.0f%% | S键列表 | ESC关闭%s", cw, ch, s * 100, file_label), 10, 10)
+	G2.print(string.format(_("ATLAS_MGR_HUD_ATLAS_INFO"), cw, ch, s * 100, file_label), 10, 10)
 	local cs = CLOSE_BTN_SIZE
 	G2.setColor(200 / 255, 60 / 255, 60 / 255, 200 / 255)
 	G2.rectangle("fill", sw - cs, 0, cs, cs)
@@ -547,18 +548,18 @@ end
 
 function atlas_manager:build_header()
 	local rs = self._rs
-	local header = GGPanelHeader:new("图集管理器", 300)
+	local header = GGPanelHeader:new(_("ATLAS_MGR_TITLE"), 300)
 	header.pos = V.v(20, 14)
 	ui.window:add_child(header)
 	-- 重新扫描 .images/append：把新增的小图同步进松散组 append
-	local refresh_btn = self:make_button("刷新append", V.v(110, 24))
+	local refresh_btn = self:make_button(_("ATLAS_MGR_BTN_REFRESH_APPEND"), V.v(110, 24))
 	refresh_btn.pos = V.v(330, 14)
 	refresh_btn._label.font_size = 12 * rs
 	refresh_btn.on_press = function()
 		self:refresh_append_group()
 		self:rebuild_tree()
 		local g = state.groups["append"]
-		self:set_status(g and string.format("append 已同步: %d 张 (其中 %d 张内容重复)", #g.frame_order, self._append_dup_count or 0) or "append 无小图")
+		self:set_status(g and string.format(_("ATLAS_MGR_STATUS_APPEND_SYNCED"), #g.frame_order, self._append_dup_count or 0) or _("ATLAS_MGR_STATUS_APPEND_EMPTY"))
 	end
 	ui.window:add_child(refresh_btn)
 	local status_text = GGLabel:new(V.v(self.ref_w - 480, 28))
@@ -655,7 +656,7 @@ function atlas_manager:build_controls()
 	name_lbl.text_align = "left"
 	name_lbl.vertical_align = "middle"
 	name_lbl.colors.text = {205, 218, 248, 255}
-	name_lbl.text = "名称:"
+	name_lbl.text = _("ATLAS_MGR_LABEL_NAME")
 	name_lbl.pos = V.v(280, control_y)
 	ui.window:add_child(name_lbl)
 	local name_input = KButton:new(V.v(180, 22))
@@ -669,7 +670,7 @@ function atlas_manager:build_controls()
 	name_input._cursor = 0
 	name_input._focused = false
 	ui.window:add_child(name_input)
-	local _name_input_font = love.graphics.newFont(13)
+	local _name_input_font = F:default_font(13)
 	function name_input:_draw_self()
 		local G2 = love.graphics
 		KButton._draw_self(self)
@@ -739,7 +740,7 @@ function atlas_manager:build_controls()
 	w_lbl.text_align = "right"
 	w_lbl.vertical_align = "middle"
 	w_lbl.colors.text = {205, 218, 248, 255}
-	w_lbl.text = "尺寸:"
+	w_lbl.text = _("ATLAS_MGR_LABEL_SIZE")
 	w_lbl.pos = V.v(530, control_y)
 	ui.window:add_child(w_lbl)
 	-- 尺寸下拉选项：宽/高独立选择（256~4096），合并与后续重打包共用同一套选择
@@ -856,7 +857,7 @@ function atlas_manager:build_controls()
 		cbt.text_align = "left"
 		cbt.vertical_align = "middle"
 		cbt.colors.text = {180, 190, 220, 255}
-		cbt.text = "  非常规尺寸"
+		cbt.text = _("ATLAS_MGR_FILTER_IRREGULAR_SIZE")
 		cbt.pos = V.v(5, 0)
 		cb:add_child(cbt)
 		local tick = GGLabel:new(V.v(14, 20))
@@ -891,7 +892,7 @@ function atlas_manager:build_controls()
 		cbt.text_align = "left"
 		cbt.vertical_align = "middle"
 		cbt.colors.text = {180, 190, 220, 255}
-		cbt.text = "  重复帧→alias"
+		cbt.text = _("ATLAS_MGR_FILTER_DUPLICATE_ALIAS")
 		cbt.pos = V.v(5, 0)
 		cb:add_child(cbt)
 		local tick = GGLabel:new(V.v(14, 20))
@@ -911,37 +912,37 @@ function atlas_manager:build_controls()
 		ui.dedup_tick = tick
 	end
 	local action_y = control_y + 26
-	local merge_btn = self:make_button("合并", V.v(80, 26))
+	local merge_btn = self:make_button(_("ATLAS_MGR_BTN_MERGE"), V.v(80, 26))
 	merge_btn.pos = V.v(20, action_y)
 	merge_btn.on_press = function()
 		self:do_merge()
 	end
 	ui.window:add_child(merge_btn)
-	local del_btn = self:make_button("删除帧", V.v(100, 26))
+	local del_btn = self:make_button(_("ATLAS_MGR_BTN_DELETE_FRAMES"), V.v(100, 26))
 	del_btn.pos = V.v(110, action_y)
 	del_btn.on_press = function()
 		self:delete_frames()
 	end
 	ui.window:add_child(del_btn)
-	local export_btn = self:make_button("导出PNG", V.v(100, 26))
+	local export_btn = self:make_button(_("ATLAS_MGR_BTN_EXPORT_PNG"), V.v(100, 26))
 	export_btn.pos = V.v(220, action_y)
 	export_btn.on_press = function()
 		self:export_png()
 	end
 	ui.window:add_child(export_btn)
-	local unload_btn = self:make_button("释放纹理", V.v(110, 26))
+	local unload_btn = self:make_button(_("ATLAS_MGR_BTN_RELEASE_TEXTURES"), V.v(110, 26))
 	unload_btn.pos = V.v(330, action_y)
 	unload_btn.on_press = function()
 		self:unload_all_textures()
 	end
 	ui.window:add_child(unload_btn)
-	local scale_btn = self:make_button("缩放", V.v(70, 26))
+	local scale_btn = self:make_button(_("ATLAS_MGR_BTN_SCALE"), V.v(70, 26))
 	scale_btn.pos = V.v(450, action_y)
 	scale_btn.on_press = function()
 		self:show_scale_dialog()
 	end
 	ui.window:add_child(scale_btn)
-	local split_btn = self:make_button("拆分", V.v(70, 26))
+	local split_btn = self:make_button(_("ATLAS_MGR_BTN_SPLIT"), V.v(70, 26))
 	split_btn.pos = V.v(530, action_y)
 	split_btn.on_press = function()
 		self:show_split_dialog()
@@ -962,7 +963,7 @@ local function make_dialog_text_input(w, initial)
 	}
 	inp._text = initial or ""
 	inp._focused = false
-	local font = love.graphics.newFont(13)
+	local font = F:default_font(13)
 	function inp:_draw_self()
 		local G2 = love.graphics
 		KView._draw_self(self)
@@ -1048,16 +1049,16 @@ function atlas_manager:show_scale_dialog()
 		ui.close_size_menu()
 	end
 	if not state._merged_idata then
-		self:set_status("请先选中帧并点击「合并」生成图集")
+		self:set_status(_("ATLAS_MGR_STATUS_MERGE_ATLAS_FIRST"))
 		return
 	end
 	if state.merge_pages then
-		self:set_status("已拆分图集，缩放请先重新合并")
+		self:set_status(_("ATLAS_MGR_STATUS_SPLIT_REMERGE_FOR_SCALE"))
 		return
 	end
 	ui.scale_dialog.hidden = false
 	ui.scale_dialog:order_to_front()
-	ui.scale_info.text = string.format("当前尺寸: %dx%d (%.2fMP)", state.merge_w, state.merge_h, state.merge_w * state.merge_h / 1e6)
+	ui.scale_info.text = string.format(_("ATLAS_MGR_LABEL_CURRENT_SIZE_MP"), state.merge_w, state.merge_h, state.merge_w * state.merge_h / 1e6)
 	ui.scale_input._text = "1"
 	ui.scale_input._focused = false
 end
@@ -1069,11 +1070,11 @@ function atlas_manager:show_split_dialog()
 	end
 	local selected = self:get_selected_frame_list()
 	if #selected == 0 then
-		self:set_status("请先勾选要拆分的帧（无需先合并）")
+		self:set_status(_("ATLAS_MGR_STATUS_CHECK_FRAMES_TO_SPLIT"))
 		return
 	end
 	if state.merge_pages then
-		self:set_status("已经拆分过了，可重新选择帧后再拆分")
+		self:set_status(_("ATLAS_MGR_STATUS_ALREADY_SPLIT_RECHECK"))
 		return
 	end
 	ui.split_dialog.hidden = false
@@ -1084,7 +1085,7 @@ function atlas_manager:show_split_dialog()
 	for _, sel in ipairs(selected) do
 		total_area = total_area + sel.frame.f_quad[3] * sel.frame.f_quad[4]
 	end
-	ui.split_info.text = string.format("已选 %d 帧，将按上限拆分为多页", #selected)
+	ui.split_info.text = string.format(_("ATLAS_MGR_LABEL_SPLIT_SELECTED"), #selected)
 end
 
 function atlas_manager:build_scale_dialog()
@@ -1106,7 +1107,7 @@ function atlas_manager:build_scale_dialog()
 	title.text_align = "left"
 	title.vertical_align = "middle"
 	title.colors.text = {244, 221, 165, 255}
-	title.text = "图集缩放"
+	title.text = _("ATLAS_MGR_DLG_SCALE_TITLE")
 	title.pos = V.v(16, 10)
 	dlg:add_child(title)
 	local info = GGLabel:new(V.v(360, 24))
@@ -1124,7 +1125,7 @@ function atlas_manager:build_scale_dialog()
 	fl.text_align = "left"
 	fl.vertical_align = "middle"
 	fl.colors.text = {205, 218, 248, 255}
-	fl.text = "倍率:"
+	fl.text = _("ATLAS_MGR_LABEL_FACTOR")
 	fl.pos = V.v(16, 70)
 	dlg:add_child(fl)
 	local inp = make_dialog_text_input(100, "1")
@@ -1144,30 +1145,30 @@ function atlas_manager:build_scale_dialog()
 		dlg:add_child(b)
 		px = px + 62
 	end
-	local fit_btn = self:make_button("适配4096", V.v(90, 26))
+	local fit_btn = self:make_button(_("ATLAS_MGR_BTN_FIT_4096"), V.v(90, 26))
 	fit_btn.pos = V.v(16, 136)
 	fit_btn.on_press = function()
 		local mw, mh = state.merge_w, state.merge_h
 		local mx = math.max(mw, mh)
 		if mx <= 4096 then
-			self:set_status("当前尺寸未超过4096")
+			self:set_status(_("ATLAS_MGR_STATUS_WITHIN_4096"))
 			return
 		end
 		self:apply_scale(4096 / mx)
 	end
 	dlg:add_child(fit_btn)
-	local apply_btn = self:make_button("应用", V.v(90, 26))
+	local apply_btn = self:make_button(_("ATLAS_MGR_BTN_APPLY"), V.v(90, 26))
 	apply_btn.pos = V.v(116, 136)
 	apply_btn.on_press = function()
 		local f = tonumber(ui.scale_input._text or "1")
 		if not f or f <= 0 then
-			self:set_status("无效的倍率")
+			self:set_status(_("ATLAS_MGR_ERR_INVALID_FACTOR"))
 			return
 		end
 		self:apply_scale(f)
 	end
 	dlg:add_child(apply_btn)
-	local close_btn = self:make_button("关闭", V.v(90, 26))
+	local close_btn = self:make_button(_("BUTTON_CLOSE"), V.v(90, 26))
 	close_btn.pos = V.v(216, 136)
 	close_btn.on_press = function()
 		dlg.hidden = true
@@ -1179,7 +1180,7 @@ function atlas_manager:build_scale_dialog()
 	hint.text_align = "left"
 	hint.vertical_align = "middle"
 	hint.colors.text = {140, 155, 185, 255}
-	hint.text = "缩放后所有帧坐标/尺寸同步换算，配合 DDS转换 使用"
+	hint.text = _("ATLAS_MGR_HINT_SCALE_COORDS")
 	hint.pos = V.v(16, 172)
 	dlg:add_child(hint)
 end
@@ -1203,7 +1204,7 @@ function atlas_manager:build_split_dialog()
 	title.text_align = "left"
 	title.vertical_align = "middle"
 	title.colors.text = {244, 221, 165, 255}
-	title.text = "图集拆分"
+	title.text = _("ATLAS_MGR_DLG_SPLIT_TITLE")
 	title.pos = V.v(16, 10)
 	dlg:add_child(title)
 	local info = GGLabel:new(V.v(360, 24))
@@ -1221,25 +1222,25 @@ function atlas_manager:build_split_dialog()
 	ml.text_align = "left"
 	ml.vertical_align = "middle"
 	ml.colors.text = {205, 218, 248, 255}
-	ml.text = "上限:"
+	ml.text = _("ATLAS_MGR_LABEL_MAX_SIZE")
 	ml.pos = V.v(16, 70)
 	dlg:add_child(ml)
 	local inp = make_dialog_text_input(100, "4096")
 	inp.pos = V.v(70, 70)
 	dlg:add_child(inp)
 	ui.split_max_input = inp
-	local run_btn = self:make_button("执行拆分", V.v(100, 30))
+	local run_btn = self:make_button(_("ATLAS_MGR_BTN_RUN_SPLIT"), V.v(100, 30))
 	run_btn.pos = V.v(16, 108)
 	run_btn.on_press = function()
 		local mx = tonumber(ui.split_max_input._text or "4096")
 		if not mx or mx < 16 then
-			self:set_status("无效的上限尺寸")
+			self:set_status(_("ATLAS_MGR_ERR_INVALID_MAX_SIZE"))
 			return
 		end
 		self:do_split(mx)
 	end
 	dlg:add_child(run_btn)
-	local close_btn = self:make_button("关闭", V.v(100, 30))
+	local close_btn = self:make_button(_("BUTTON_CLOSE"), V.v(100, 30))
 	close_btn.pos = V.v(126, 108)
 	close_btn.on_press = function()
 		dlg.hidden = true
@@ -1251,7 +1252,7 @@ function atlas_manager:build_split_dialog()
 	hint.text_align = "left"
 	hint.vertical_align = "middle"
 	hint.colors.text = {140, 155, 185, 255}
-	hint.text = "拆分为 name-1.dds / name-2.dds ... 多页图集"
+	hint.text = _("ATLAS_MGR_HINT_SPLIT_PAGES")
 	hint.pos = V.v(16, 150)
 	dlg:add_child(hint)
 end
@@ -1278,7 +1279,7 @@ function atlas_manager:build_png_scale_dialog()
 	title.text_align = "left"
 	title.vertical_align = "middle"
 	title.colors.text = {244, 221, 165, 255}
-	title.text = "PNG等比缩放"
+	title.text = _("ATLAS_MGR_DLG_PNG_SCALE_TITLE")
 	title.pos = V.v(16, 10)
 	dlg:add_child(title)
 	local info = GGLabel:new(V.v(420, 44))
@@ -1299,7 +1300,7 @@ function atlas_manager:build_png_scale_dialog()
 	wl.text_align = "left"
 	wl.vertical_align = "middle"
 	wl.colors.text = {205, 218, 248, 255}
-	wl.text = "目标宽(x):"
+	wl.text = _("ATLAS_MGR_LABEL_TARGET_WIDTH")
 	wl.pos = V.v(16, 92)
 	dlg:add_child(wl)
 	local w_input = make_dialog_text_input(100, "")
@@ -1318,7 +1319,7 @@ function atlas_manager:build_png_scale_dialog()
 	hl.text_align = "left"
 	hl.vertical_align = "middle"
 	hl.colors.text = {205, 218, 248, 255}
-	hl.text = "目标高(y):"
+	hl.text = _("ATLAS_MGR_LABEL_TARGET_HEIGHT")
 	hl.pos = V.v(16, 122)
 	dlg:add_child(hl)
 	local h_input = make_dialog_text_input(100, "")
@@ -1340,19 +1341,19 @@ function atlas_manager:build_png_scale_dialog()
 	result.pos = V.v(16, 152)
 	ui.png_scale_result = result
 	dlg:add_child(result)
-	local preview_btn = self:make_button("预览原图", V.v(110, 32))
+	local preview_btn = self:make_button(_("ATLAS_MGR_BTN_PREVIEW_ORIGINAL"), V.v(110, 32))
 	preview_btn.pos = V.v(16, 190)
 	preview_btn.on_press = function()
 		self:preview_png_file(ui.png_scale_file)
 	end
 	dlg:add_child(preview_btn)
-	local apply_btn = self:make_button("应用缩放", V.v(110, 32))
+	local apply_btn = self:make_button(_("ATLAS_MGR_BTN_APPLY_SCALE"), V.v(110, 32))
 	apply_btn.pos = V.v(136, 190)
 	apply_btn.on_press = function()
 		self:apply_png_scale()
 	end
 	dlg:add_child(apply_btn)
-	local close_btn = self:make_button("关闭", V.v(110, 32))
+	local close_btn = self:make_button(_("BUTTON_CLOSE"), V.v(110, 32))
 	close_btn.pos = V.v(256, 190)
 	close_btn.on_press = function()
 		dlg.hidden = true
@@ -1364,7 +1365,7 @@ function atlas_manager:build_png_scale_dialog()
 	hint.text_align = "left"
 	hint.vertical_align = "top"
 	hint.colors.text = {140, 155, 185, 255}
-	hint.text = "等比缩放：只填宽或高，另一边自动按比例。两个都填时按较小比例（不超出）。应用将覆盖该PNG文件（原文件备份到 .images_backup）。"
+	hint.text = _("ATLAS_MGR_HINT_PNG_SCALE")
 	hint.pos = V.v(16, 234)
 	hint.fit_lines = 2
 	hint.fit_size = true
@@ -1374,7 +1375,7 @@ end
 
 function atlas_manager:show_png_scale_dialog(f)
 	if not f then
-		self:set_status("请先选中一个PNG")
+		self:set_status(_("ATLAS_MGR_STATUS_SELECT_A_PNG"))
 		return
 	end
 	ui.png_scale_file = f
@@ -1430,27 +1431,27 @@ function atlas_manager:_update_png_scale_result()
 	local f = ui.png_scale_file
 	local nw, nh = self:_png_scale_target_dims()
 	if nw then
-		ui.png_scale_result.text = string.format("等比结果: %dx%d", nw, nh)
+		ui.png_scale_result.text = string.format(_("ATLAS_MGR_LABEL_SCALE_RESULT"), nw, nh)
 	elseif f then
-		ui.png_scale_result.text = string.format("原尺寸: %dx%d (输入目标宽或高)", f.w or 0, f.h or 0)
+		ui.png_scale_result.text = string.format(_("ATLAS_MGR_LABEL_ORIGINAL_SIZE_HINT"), f.w or 0, f.h or 0)
 	end
 end
 
 function atlas_manager:apply_png_scale()
 	local f = ui.png_scale_file
 	if not f then
-		self:set_status("没有可缩放的PNG")
+		self:set_status(_("ATLAS_MGR_STATUS_NO_SCALABLE_PNG"))
 		return
 	end
 	local nw, nh = self:_png_scale_target_dims()
 	if not nw then
-		self:set_status("请输入有效的目标宽或目标高")
+		self:set_status(_("ATLAS_MGR_STATUS_ENTER_TARGET_SIZE"))
 		return
 	end
 	local ow, oh = f.w or 0, f.h or 0
 	if nw == ow and nh == oh then
 		ui.png_scale_dialog.hidden = true
-		self:set_status("尺寸未变化")
+		self:set_status(_("ATLAS_MGR_STATUS_SIZE_UNCHANGED"))
 		return
 	end
 	local ok, data = pcall(love.filesystem.read, f.rel)
@@ -1463,17 +1464,17 @@ function atlas_manager:apply_png_scale()
 		end
 	end
 	if not data then
-		self:set_status("无法读取PNG: " .. tostring(f.name))
+		self:set_status(string.format(_("ATLAS_MGR_ERR_READ_PNG_S"), tostring(f.name)))
 		return
 	end
 	local ok2, idata = pcall(love.image.newImageData, love.data.newByteData(data))
 	if not ok2 then
-		self:set_status("无法解码PNG: " .. tostring(f.name))
+		self:set_status(string.format(_("ATLAS_MGR_ERR_DECODE_PNG_S"), tostring(f.name)))
 		return
 	end
 	local resized = self:_resample_idata(idata, nw, nh)
 	if not resized then
-		self:set_status("缩放失败")
+		self:set_status(_("ATLAS_MGR_ERR_SCALE_FAILED"))
 		return
 	end
 	local png_data = resized:encode("png")
@@ -1486,13 +1487,13 @@ function atlas_manager:apply_png_scale()
 	local backup_path = backup_dir .. "/" .. ts .. "_" .. tostring(f.name) .. ".png"
 	local ok_bak = write_real(backup_path, data)
 	if not ok_bak then
-		self:set_status("备份原图失败，已取消: " .. backup_path)
+		self:set_status(string.format(_("ATLAS_MGR_ERR_BACKUP_CANCELLED_S"), backup_path))
 		return
 	end
 	-- 覆盖源文件
 	local ok_write = write_real(real_path(f.rel), png_data)
 	if not ok_write then
-		self:set_status("写入PNG失败: " .. real_path(f.rel))
+		self:set_status(string.format(_("ATLAS_MGR_ERR_WRITE_PNG_S"), real_path(f.rel)))
 		return
 	end
 	f.w, f.h = nw, nh
@@ -1504,7 +1505,7 @@ function atlas_manager:apply_png_scale()
 	-- 若是 append 松散组中的文件，刷新其帧元数据（尺寸/裁剪）
 	self:refresh_append_group()
 	self:rebuild_tree()
-	self:set_status(string.format("已等比缩放 %s: %dx%d -> %dx%d", f.name, ow, oh, nw, nh))
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_SCALED_S"), f.name, ow, oh, nw, nh))
 end
 
 function atlas_manager:build_preview_area()
@@ -1525,29 +1526,29 @@ function atlas_manager:build_button_bar()
 		ui.window:add_child(btn)
 		return btn
 	end
-	bar_btn("保存", 0, function()
+	bar_btn(_("ATLAS_MGR_BTN_SAVE"), 0, function()
 		self:save(false)
 	end)
-	bar_btn("预览", 1, function()
+	bar_btn(_("ATLAS_MGR_BTN_PREVIEW"), 1, function()
 		if state.preview_valid and state.preview_canvas then
 			self:show_preview_popup()
 		else
-			self:set_status("请先选中帧并点击「合并」生成预览")
+			self:set_status(_("ATLAS_MGR_STATUS_MERGE_FOR_PREVIEW"))
 		end
 	end)
-	bar_btn("放弃修改", 2, function()
+	bar_btn(_("ATLAS_MGR_BTN_DISCARD_CHANGES"), 2, function()
 		self:leave()
 	end)
-	bar_btn("DDS转换", 3, function()
+	bar_btn(_("ATLAS_MGR_BTN_DDS_CONVERT"), 3, function()
 		self:print_dds_commands()
 	end)
-	bar_btn("AI放大", 4, function()
+	bar_btn(_("ATLAS_MGR_BTN_AI_UPSCALE"), 4, function()
 		self:ai_upscale()
 	end)
-	bar_btn("替换图集", 5, function()
+	bar_btn(_("ATLAS_MGR_BTN_REPLACE_ATLAS"), 5, function()
 		self:replace_with_upscaled()
 	end)
-	bar_btn("重打包", 6, function()
+	bar_btn(_("ATLAS_MGR_BTN_REPACK"), 6, function()
 		self:show_repack_dialog()
 	end)
 -- 说明：原 PNG 视图已移除，小图处理（预览/缩放/合并）统一在图集视图中完成。
@@ -1740,7 +1741,7 @@ function atlas_manager:refresh_groups()
 	-- scan loose PNGs: .images/append 下的平铺小图，注册为一个可勾选的松散组
 	-- （组名固定 append，可与其它图集帧一起参与合并）
 	self:refresh_append_group()
-	self:set_status(string.format("已加载 %d 个图集", #state.group_order))
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_LOADED_ATLASES"), #state.group_order))
 	self:rebuild_tree()
 end
 
@@ -1755,12 +1756,12 @@ function atlas_manager:preview_png_file(f)
 		end
 	end
 	if not data then
-		self:set_status("无法读取PNG: " .. f.name)
+		self:set_status(string.format(_("ATLAS_MGR_ERR_READ_PNG_S"), f.name))
 		return
 	end
 	local ok2, idata = pcall(love.image.newImageData, love.data.newByteData(data))
 	if not ok2 then
-		self:set_status("无法解码PNG: " .. f.name)
+		self:set_status(string.format(_("ATLAS_MGR_ERR_DECODE_PNG_S"), f.name))
 		return
 	end
 	local w, h = idata:getDimensions()
@@ -1893,9 +1894,9 @@ function atlas_manager:rebuild_tree()
 			sel_count = sel_count + 1
 		end
 	end
-	ui.sel_label.text = string.format("选中: %d 帧", sel_count)
+	ui.sel_label.text = string.format(_("ATLAS_MGR_LABEL_SELECTED_FRAMES"), sel_count)
 
-	for _, gname in ipairs(state.group_order) do
+	for _i, gname in ipairs(state.group_order) do
 		local group = state.groups[gname]
 		if group then
 			local expanded = state.expanded[gname]
@@ -1936,7 +1937,7 @@ function atlas_manager:rebuild_tree()
 
 			local frame_count = #group.frame_order
 			local tex_info = group.tex_size or ""
-			local count_str = string.format("(%d帧%s%s)", frame_count, tex_info ~= "" and " " or "", tex_info)
+			local count_str = string.format(_G._("ATLAS_MGR_LABEL_FRAME_COUNT_PAREN"), frame_count, tex_info ~= "" and " " or "", tex_info)
 			local count_text = GGLabel:new(V.v(200, 28))
 			count_text.font_name = "body"
 			count_text.font_size = 11 * rs
@@ -1950,7 +1951,7 @@ function atlas_manager:rebuild_tree()
 			count_text.propagate_on_click = true
 			group_row:add_child(count_text)
 
-			local group_sel_all = self:make_button("全选", V.v(36, 20))
+			local group_sel_all = self:make_button(_G._("ATLAS_MGR_BTN_SELECT_ALL"), V.v(36, 20))
 			group_sel_all.pos = V.v(426, 4)
 			group_sel_all._label.font_size = 10 * rs
 			group_sel_all.on_press = function()
@@ -1967,7 +1968,7 @@ function atlas_manager:rebuild_tree()
 			end
 			group_row:add_child(group_sel_all)
 
-			local group_unsel_all = self:make_button("取消", V.v(36, 20))
+			local group_unsel_all = self:make_button(_G._("MAP_HERO_ROOM_DESELECT"), V.v(36, 20))
 			group_unsel_all.pos = V.v(464, 4)
 			group_unsel_all._label.font_size = 10 * rs
 			group_unsel_all.on_press = function()
@@ -1978,7 +1979,7 @@ function atlas_manager:rebuild_tree()
 			end
 			group_row:add_child(group_unsel_all)
 
-			local preview_btn = self:make_button("预览", V.v(36, 20))
+			local preview_btn = self:make_button(_G._("ATLAS_MGR_BTN_PREVIEW"), V.v(36, 20))
 			preview_btn.pos = V.v(502, 4)
 			preview_btn._label.font_size = 10 * rs
 			preview_btn.on_press = function()
@@ -1993,7 +1994,7 @@ function atlas_manager:rebuild_tree()
 			png_indicator.vertical_align = "middle"
 			if group._is_loose_group then
 				png_indicator.colors.text = {100, 200, 220, 255}
-				png_indicator.text = "追加"
+				png_indicator.text = _G._("ATLAS_MGR_LABEL_APPEND")
 			else
 				png_indicator.colors.text = group.has_png_archive and {100, 200, 100, 255} or {150, 150, 150, 180}
 				png_indicator.text = group.has_png_archive and "PNG" or "DDS"
@@ -2027,7 +2028,7 @@ function atlas_manager:rebuild_tree()
 
 			if expanded then
 				-- per-file selection rows
-				for _, dds_key in ipairs(group.dds_files or {}) do
+				for _i, dds_key in ipairs(group.dds_files or {}) do
 					local dw, dh = self:_get_dds_dim(dds_key)
 					local file_frames = {}
 					for _, fn in ipairs(group.frame_order) do
@@ -2100,14 +2101,14 @@ function atlas_manager:rebuild_tree()
 						file_label.text_align = "left"
 						file_label.vertical_align = "middle"
 						file_label.colors.text = file_on and {150, 200, 150, 255} or {140, 150, 170, 200}
-						file_label.text = string.format("  %s  %sx%s (%d帧)", dds_key, dw or "?", dh or "?", #file_frames)
+						file_label.text = string.format(_G._("ATLAS_MGR_LABEL_FILE_INFO"), dds_key, dw or "?", dh or "?", #file_frames)
 						file_label.pos = V.v(52, 0)
 						file_label.fit_lines = 1
 						file_label.fit_size = true
 						file_label.propagate_on_click = true
 						file_row:add_child(file_label)
 
-						local file_prev = self:make_button("预览", V.v(36, 18))
+						local file_prev = self:make_button(_G._("ATLAS_MGR_BTN_PREVIEW"), V.v(36, 18))
 						file_prev.pos = V.v(ui.tree_list.size.x - 46, 2)
 						file_prev._label.font_size = 10 * rs
 						file_prev.on_press = function()
@@ -2123,7 +2124,7 @@ function atlas_manager:rebuild_tree()
 					end
 				end
 
-				for _, fname in ipairs(group.frame_order) do
+				for _i, fname in ipairs(group.frame_order) do
 					local frame = group.frames[fname]
 					local key = gname .. "." .. fname
 					local checked = state.selected_frames[key]
@@ -2179,7 +2180,7 @@ function atlas_manager:rebuild_tree()
 					local alias_count = #(frame.alias or {})
 					local alias_str = alias_count > 0 and string.format(" alias:%d", alias_count) or ""
 					if frame._dup_of then
-						alias_str = alias_str .. " 重复"
+						alias_str = alias_str .. _G._("ATLAS_MGR_LABEL_DUPLICATE_SUFFIX")
 					end
 					frame_label.text = string.format("  %s  [%s]%s", fname, size_str, alias_str)
 					frame_label.pos = V.v(38, 0)
@@ -2199,14 +2200,14 @@ function atlas_manager:rebuild_tree()
 							dds_exists = false,
 							dds_match = false
 						}
-						local f_scale = self:make_button("缩放", V.v(46, 20))
+						local f_scale = self:make_button(_G._("ATLAS_MGR_BTN_SCALE"), V.v(46, 20))
 						f_scale.pos = V.v(ui.tree_list.size.x - 170, 2)
 						f_scale._label.font_size = 10 * rs
 						f_scale.on_press = function()
 							self:show_png_scale_dialog(tmp)
 						end
 						frame_row:add_child(f_scale)
-						local f_prev = self:make_button("预览", V.v(40, 20))
+						local f_prev = self:make_button(_G._("ATLAS_MGR_BTN_PREVIEW"), V.v(40, 20))
 						f_prev.pos = V.v(ui.tree_list.size.x - 118, 2)
 						f_prev._label.font_size = 10 * rs
 						f_prev.on_press = function()
@@ -2226,7 +2227,7 @@ function atlas_manager:rebuild_tree()
 	end
 
 	print(string.format("[atlas_manager] rebuild_tree: %d groups, %d selected", #state.group_order, sel_count))
-	self:set_status(string.format("已加载 %d 个图集，已选 %d 帧", #state.group_order, sel_count))
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_LOADED_ATLASES_SELECTED"), #state.group_order, sel_count))
 	if saved_frac > 0 and sl._bottom_y and sl._bottom_y > sl.size.y then
 		sl.scroll_origin_y = -saved_frac * (sl._bottom_y - sl.size.y)
 	end
@@ -2578,7 +2579,7 @@ function atlas_manager:do_merge()
 				end
 			end
 		end
-		self:set_status("没有选中任何帧 | " .. table.concat(parts, ", "))
+		self:set_status(string.format(_("ATLAS_MGR_ERR_NO_FRAMES_SELECTED_S"), table.concat(parts, ", ")))
 		return
 	end
 	-- 重复帧去重：内容一致的帧只打包一份，其余名字写成 alias
@@ -2602,7 +2603,7 @@ function atlas_manager:do_merge()
 		h = align4(h)
 	else
 		if not self:_is_pow2(w) or not self:_is_pow2(h) then
-			self:set_status("图集尺寸必须是2的幂次")
+			self:set_status(_("ATLAS_MGR_ERR_SIZE_NOT_POWER_OF_TWO"))
 			return
 		end
 	end
@@ -2632,7 +2633,7 @@ function atlas_manager:do_merge()
 			end
 		end
 		if not placements then
-			self:set_status("打包失败(非常规): " .. tostring(err))
+			self:set_status(string.format(_("ATLAS_MGR_ERR_PACK_IRREGULAR_S"), tostring(err)))
 			return
 		end
 		print(string.format("[atlas_manager] non_pow2 merge: final size %dx%d", w, h))
@@ -2648,9 +2649,9 @@ function atlas_manager:do_merge()
 					break
 				end
 			end
-			local msg = string.format("打包失败: %s", tostring(err))
+			local msg = string.format(_("ATLAS_MGR_ERR_PACK_S"), tostring(err))
 			if suggest then
-				msg = msg .. string.format(" | %d 帧单页最小 %dx%d，多页请点「拆分」", #pack_frames, suggest, suggest)
+				msg = msg .. string.format(_("ATLAS_MGR_ERR_PACK_MIN_PAGE"), #pack_frames, suggest, suggest)
 			end
 			print(string.format("[atlas_manager] merge: pack failed at %dx%d (%s)%s", w, h, tostring(err), suggest and string.format(", smallest single page = %dx%d", suggest, suggest) or ""))
 			self:set_status(msg)
@@ -2681,9 +2682,9 @@ function atlas_manager:do_merge()
 	local util = self:_calc_utilization()
 	print(string.format("[atlas_manager] merge: %d frames into %dx%d, pack=ok, util=%.1f%%", #placements, w, h, util))
 	if dedup_info and dedup_info.aliased > 0 then
-		self:set_status(string.format("合并完成: %d帧(去重%d个→alias)打包到 %dx%d (%.1f%%)", raw_count, dedup_info.aliased, w, h, util))
+		self:set_status(string.format(_("ATLAS_MGR_STATUS_MERGE_DONE_DEDUP"), raw_count, dedup_info.aliased, w, h, util))
 	else
-		self:set_status(string.format("合并完成: %d帧打包到 %dx%d 图集 (%.1f%%)", #placements, w, h, util))
+		self:set_status(string.format(_("ATLAS_MGR_STATUS_MERGE_DONE"), #placements, w, h, util))
 	end
 	self:_build_preview()
 	self:show_preview_popup()
@@ -2741,15 +2742,15 @@ function atlas_manager:_ensure_png_archives(need_load)
 		return "ok"
 	end
 	if self._replace_confirmed == nil then
-		local msg = string.format("发现 %d 个尺寸不匹配的 PNG 存档：", #replace_candidates)
+		local msg = string.format(_("ATLAS_MGR_MSG_MISMATCHED_PNGS"), #replace_candidates)
 		for i = 1, math.min(5, #replace_candidates) do
 			local r = replace_candidates[i]
 			msg = msg .. string.format("\n  %s (PNG %s, DDS %s)", r.key, r.png, r.dds)
 		end
 		if #replace_candidates > 5 then
-			msg = msg .. string.format("\n  ...等 %d 个", #replace_candidates)
+			msg = msg .. string.format(_("ATLAS_MGR_MSG_AND_N_MORE"), #replace_candidates)
 		end
-		msg = msg .. "\n\n将从 DDS 重新生成正确尺寸的 PNG 替换它们。\n此操作不可撤销。确认？"
+		msg = msg .. _("ATLAS_MGR_MSG_REGENERATE_CONFIRM")
 		self._replace_pending = replace_candidates
 		self._replace_confirmed = nil
 		if not ui.replace_dialog then
@@ -2768,7 +2769,7 @@ function atlas_manager:_ensure_png_archives(need_load)
 			title.text_align = "left"
 			title.vertical_align = "middle"
 			title.colors.text = {244, 221, 165, 255}
-			title.text = "PNG 存档尺寸不匹配"
+			title.text = _("ATLAS_MGR_DLG_PNG_MISMATCH_TITLE")
 			title.pos = V.v(20, 10)
 			ui.replace_dialog:add_child(title)
 			local di = GGLabel:new(V.v(480, 200))
@@ -2783,21 +2784,21 @@ function atlas_manager:_ensure_png_archives(need_load)
 			di.line_height = 1.3
 			ui.replace_info = di
 			ui.replace_dialog:add_child(di)
-			local confirm_btn = self:make_button("确认替换", V.v(120, 32))
+			local confirm_btn = self:make_button(_("ATLAS_MGR_BTN_CONFIRM_REPLACE"), V.v(120, 32))
 			confirm_btn.pos = V.v(170, 250)
 			ui.replace_dialog:add_child(confirm_btn)
 			confirm_btn.on_press = function()
 				ui.replace_dialog.hidden = true
 				self._replace_confirmed = true
 			end
-			local cancel_btn = self:make_button("使用 DDS", V.v(120, 32))
+			local cancel_btn = self:make_button(_("ATLAS_MGR_BTN_USE_DDS"), V.v(120, 32))
 			cancel_btn.pos = V.v(310, 250)
 			ui.replace_dialog:add_child(cancel_btn)
 			cancel_btn.on_press = function()
 				ui.replace_dialog.hidden = true
 				self._replace_confirmed = false
 			end
-			local abort_btn = self:make_button("取消", V.v(100, 32))
+			local abort_btn = self:make_button(_("Cancel"), V.v(100, 32))
 			abort_btn.pos = V.v(440, 250)
 			ui.replace_dialog:add_child(abort_btn)
 			abort_btn.on_press = function()
@@ -2883,7 +2884,7 @@ function atlas_manager:_load_frame_idatas(placements, all_frames)
 		end
 	end
 	if total_loads == 0 and next(need_load) then
-		return nil, "无法加载纹理用于预览 (文件不存在?)"
+		return nil, _("ATLAS_MGR_ERR_PREVIEW_TEXTURE_LOAD")
 	end
 	local t_extract = os.clock()
 	local extract_count = 0
@@ -2929,7 +2930,7 @@ end
 function atlas_manager:_build_preview()
 	local placements = self._merge_placements
 	if not placements then
-		self:set_status("没有可的合并数据")
+		self:set_status(_("ATLAS_MGR_ERR_NO_MERGE_DATA"))
 		return
 	end
 	local all_frames = self._merge_src_frames
@@ -2958,9 +2959,9 @@ function atlas_manager:_build_preview()
 	local ok, err = self:_load_frame_idatas(placements, all_frames)
 	if not ok then
 		if err ~= "cancel" and err ~= "blocked" then
-			self:set_status(err or "加载纹理失败")
+			self:set_status(err or _("ATLAS_MGR_ERR_LOAD_TEXTURE_FAILED"))
 		elseif err == "cancel" then
-			self:set_status("已取消")
+			self:set_status(_("ATLAS_MGR_STATUS_CANCELLED"))
 		end
 		return
 	end
@@ -3028,11 +3029,11 @@ end
 
 function atlas_manager:apply_scale(factor)
 	if not state._merged_idata or not self._merge_placements then
-		self:set_status("请先合并生成图集")
+		self:set_status(_("ATLAS_MGR_STATUS_MERGE_ATLAS_BUILD_FIRST"))
 		return
 	end
 	if state.merge_pages then
-		self:set_status("已拆分图集，缩放请先重新合并")
+		self:set_status(_("ATLAS_MGR_STATUS_SPLIT_REMERGE_FOR_SCALE"))
 		return
 	end
 	local old_w, old_h = state.merge_w, state.merge_h
@@ -3084,21 +3085,21 @@ function atlas_manager:apply_scale(factor)
 	state.preview_canvas = canvas
 	state.preview_valid = true
 	popup.file_idx = 1
-	ui.scale_info.text = string.format("已缩放: %dx%d (%.2fMP)", new_w, new_h, new_w * new_h / 1e6)
-	self:set_status(string.format("已缩放至 %dx%d", new_w, new_h))
+	ui.scale_info.text = string.format(_("ATLAS_MGR_LABEL_SCALED_SIZE_MP"), new_w, new_h, new_w * new_h / 1e6)
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_SCALED_TO"), new_w, new_h))
 	self:show_preview_popup()
 end
 
 function atlas_manager:do_split(max_size)
 	if state.merge_pages then
-		self:set_status("已经拆分过了")
+		self:set_status(_("ATLAS_MGR_STATUS_ALREADY_SPLIT"))
 		return
 	end
 	max_size = math.floor(max_size or 4096)
 	-- 直接基于选中的帧进行拆分，无需先合并
 	local selected = self:get_selected_frame_list()
 	if #selected == 0 then
-		self:set_status("没有选中任何帧")
+		self:set_status(_("ATLAS_MGR_STATUS_NO_FRAMES_SELECTED"))
 		return
 	end
 	local raw_count = #selected
@@ -3133,9 +3134,9 @@ function atlas_manager:do_split(max_size)
 	local ok, err = self:_load_frame_idatas(placements, all_frames)
 	if not ok then
 		if err ~= "cancel" and err ~= "blocked" then
-			self:set_status(err or "加载纹理失败")
+			self:set_status(err or _("ATLAS_MGR_ERR_LOAD_TEXTURE_FAILED"))
 		elseif err == "cancel" then
-			self:set_status("已取消")
+			self:set_status(_("ATLAS_MGR_STATUS_CANCELLED"))
 		end
 		return
 	end
@@ -3153,7 +3154,7 @@ function atlas_manager:do_split(max_size)
 	local function try_pack(list)
 		return atlas_binpack.pack(list, max_size, max_size)
 	end
-	for _, f in ipairs(pack_frames) do
+	for _i, f in ipairs(pack_frames) do
 		local trial = {}
 		for i, cf in ipairs(cur_pack) do
 			trial[i] = cf
@@ -3162,7 +3163,7 @@ function atlas_manager:do_split(max_size)
 		if try_pack(trial) then
 			cur_pack = trial
 		elseif #cur_pack == 0 then
-			self:set_status(string.format("拆分失败: 帧 %s (%dx%d) 超过上限 %d", f.frame_name or "?", f.w, f.h, max_size))
+			self:set_status(string.format(_G._("ATLAS_MGR_ERR_SPLIT_FRAME_TOO_LARGE"), f.frame_name or "?", f.w, f.h, max_size))
 			return
 		else
 			local placed = try_pack(cur_pack)
@@ -3170,7 +3171,7 @@ function atlas_manager:do_split(max_size)
 				pages[#pages + 1] = placed
 			end
 			if not try_pack({f}) then
-				self:set_status(string.format("拆分失败: 帧 %s (%dx%d) 超过上限 %d", f.frame_name or "?", f.w, f.h, max_size))
+				self:set_status(string.format(_G._("ATLAS_MGR_ERR_SPLIT_FRAME_TOO_LARGE"), f.frame_name or "?", f.w, f.h, max_size))
 				return
 			end
 			cur_pack = {f}
@@ -3183,7 +3184,7 @@ function atlas_manager:do_split(max_size)
 		end
 	end
 	if #pages <= 1 then
-		self:set_status(string.format("选中帧 %d 帧，未超过 %d 无需拆分（已打包为单页）", raw_count, max_size))
+		self:set_status(string.format(_("ATLAS_MGR_STATUS_NO_SPLIT_NEEDED"), raw_count, max_size))
 		ui.split_dialog.hidden = true
 		return
 	end
@@ -3299,7 +3300,7 @@ function atlas_manager:do_split(max_size)
 			written = written + 1
 		end
 	end
-	self:set_status(string.format("已拆分为 %d 页(去重%d→%d)，PNG已写入 .images (%s-1.png ...)", #page_entries, raw_count, #selected, merge_name))
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_SPLIT_PAGES"), #page_entries, raw_count, #selected, merge_name))
 	print(string.format("[atlas_manager] split: wrote %d page PNGs as %s-N.png", written, merge_name))
 	self:show_preview_popup()
 end
@@ -3342,7 +3343,7 @@ function atlas_manager:delete_frames()
 	end
 	state.dirty = true
 	self:rebuild_tree()
-	self:set_status(string.format("已标记 %d 帧为删除 (保存后生效)", total_del))
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_MARKED_DELETED"), total_del))
 	print(string.format("[atlas_manager] delete_total: %d frames marked", total_del))
 end
 
@@ -3383,7 +3384,7 @@ function atlas_manager:export_png()
 			end
 		end
 		if count > 0 then
-			self:set_status(string.format("已导出 %d 个PNG页: %s-1.png ... %s-%d.png", count, name, name, #state.merge_pages))
+			self:set_status(string.format(_("ATLAS_MGR_STATUS_EXPORTED_PAGES"), count, name, name, #state.merge_pages))
 			-- 记录本次导出的各页 PNG 对应的 DDS 转换命令
 			local cmds = {}
 			for pi = 1, #state.merge_pages do
@@ -3391,12 +3392,12 @@ function atlas_manager:export_png()
 			end
 			self._pending_dds_commands = cmds
 		else
-			self:set_status("PNG导出失败")
+			self:set_status(_("ATLAS_MGR_ERR_PNG_EXPORT_FAILED"))
 		end
 		return
 	end
 	if not state._merged_idata then
-		self:set_status("请先预览合并结果")
+		self:set_status(_("ATLAS_MGR_STATUS_PREVIEW_MERGE_FIRST"))
 		return
 	end
 	local png_path = real_path(IMAGES_DIR) .. "/" .. name .. ".png"
@@ -3405,11 +3406,11 @@ function atlas_manager:export_png()
 	local ok = write_real(png_path, png_data)
 	if ok then
 		print(string.format("[atlas_manager] export_png: %s (%dx%d)", png_path, state.merge_w, state.merge_h))
-		self:set_status(string.format("已导出PNG: %s", png_path))
+		self:set_status(string.format(_("ATLAS_MGR_STATUS_EXPORTED_PNG_S"), png_path))
 		-- 记录本次导出的 PNG 对应的 DDS 转换命令，避免后续「DDS转换」误用旧命令
 		self._pending_dds_commands = {string.format("nvcompress.exe -bc3 -maximum %q %q", png_path, real_path(ATLAS_DIR) .. "/" .. name .. ".dds")}
 	else
-		self:set_status("PNG导出失败")
+		self:set_status(_("ATLAS_MGR_ERR_PNG_EXPORT_FAILED"))
 	end
 end
 
@@ -3445,19 +3446,19 @@ function atlas_manager:_alias_conflicts(name, new_frames)
 		end
 	end
 	local hits = {}
-	for _, al in ipairs(alias_names) do
+	for _i, al in ipairs(alias_names) do
 		local gname = owner[al]
 		if gname then
-			hits[#hits + 1] = string.format("%s (已被图集 %s 占用)", al, gname)
+			hits[#hits + 1] = string.format(_G._("ATLAS_MGR_MSG_ALIAS_TAKEN"), al, gname)
 		end
 	end
 	if #hits > 0 then
-		print(string.format("[atlas_manager] alias conflict: %s 写出 %d 个 alias 名与其它图集重名", name, #hits))
+		print(string.format(_("ATLAS_MGR_LOG_ALIAS_CONFLICT"), name, #hits))
 		for i = 1, math.min(#hits, 10) do
 			print("  - " .. hits[i])
 		end
 		if #hits > 10 then
-			print(string.format("  ... 其余 %d 个见上", #hits - 10))
+			print(string.format(_("ATLAS_MGR_LOG_SEE_ABOVE_N"), #hits - 10))
 		end
 	end
 	return hits
@@ -3468,12 +3469,12 @@ function atlas_manager:save(hot_reload)
 	local has_selected = next(state.selected_frames) ~= nil
 	local has_deleted = state.dirty
 	if not has_selected and not has_deleted then
-		self:set_status("没有修改需要保存")
+		self:set_status(_("ATLAS_MGR_STATUS_NO_CHANGES"))
 		return
 	end
 	FS.createDirectory(BACKUP_DIR)
 	if has_deleted then
-		for _, gname in ipairs(state.group_order) do
+		for _i, gname in ipairs(state.group_order) do
 			local group = state.groups[gname]
 			if group and group.frames then
 				local frame_count = 0
@@ -3483,7 +3484,7 @@ function atlas_manager:save(hot_reload)
 					end
 				end
 				if frame_count == 0 then
-					return self:set_status("图集 " .. gname .. " 已无帧, 无法保存")
+					return self:set_status(string.format(_G._("ATLAS_MGR_ERR_ATLAS_EMPTY_S"), gname))
 				end
 				local lua_data = FS.load(group.path)
 				if lua_data then
@@ -3499,7 +3500,7 @@ function atlas_manager:save(hot_reload)
 						print(string.format("[atlas_manager] save_backup: %s -> %s", merged_name, bp))
 						local ok_write, err_write = atlas_util.write_atlas_files(ATLAS_DIR, merged_name, src_tbl)
 						if not ok_write then
-							return self:set_status("写入失败: " .. tostring(err_write))
+							return self:set_status(string.format(_G._("ATLAS_MGR_ERR_WRITE_FAILED_S"), tostring(err_write)))
 						end
 					end
 				end
@@ -3602,14 +3603,14 @@ function atlas_manager:save(hot_reload)
 		print(string.format("[atlas_manager] save_backup: %s -> %s", name, bp))
 		local ok, err = atlas_util.write_atlas_files(atlas_real_dir, name, new_frames, write_real)
 		if not ok then
-			return self:set_status("写入文件失败: " .. (err or "unknown"))
+			return self:set_status(string.format(_("ATLAS_MGR_ERR_WRITE_FILE_FAILED_S"), (err or "unknown")))
 		end
 		print(string.format("[atlas_manager] save_compile: %s .lua/.luac/.aluac written", name))
 		self._pending_dds_commands = dds_commands
 		if alias_conflicts and #alias_conflicts > 0 then
-			self:set_status(string.format("已保存 %s（注意: %d 个 alias 名与其它图集重名，见控制台）", name, #alias_conflicts))
+			self:set_status(string.format(_("ATLAS_MGR_STATUS_SAVED_ALIAS_CONFLICT"), name, #alias_conflicts))
 		else
-			self:set_status(string.format("已保存 %s.", name))
+			self:set_status(string.format(_("ATLAS_MGR_STATUS_SAVED_S"), name))
 		end
 		if hot_reload then
 			self:_hot_reload_group(name, new_frames, w, h)
@@ -3633,7 +3634,7 @@ function atlas_manager:save(hot_reload)
 	end
 	state.dirty = false
 	self:rebuild_tree()
-	self:set_status(string.format("保存完成. %s", hot_reload and "已热重载" or "重启后生效"))
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_SAVE_DONE_S"), hot_reload and _("ATLAS_MGR_STATUS_HOT_RELOADED") or _("ATLAS_MGR_STATUS_TAKES_EFFECT_ON_RESTART")))
 	print(string.format("[atlas_manager] save: done (hot_reload=%s)", tostring(hot_reload)))
 end
 
@@ -3643,12 +3644,12 @@ function atlas_manager:_hot_reload_group(name, frames, w, h)
 	local png_path = IMAGES_DIR .. "/" .. dds_key .. ".png"
 	local png_info = FS.getInfo(png_path)
 	if not png_info then
-		self:set_status("热重载需要PNG文件, 但 .images 中未找到")
+		self:set_status(_("ATLAS_MGR_ERR_HOT_RELOAD_NO_PNG"))
 		return
 	end
 	local ok, img = pcall(G.newImage, png_path)
 	if not ok then
-		self:set_status("热重载: 无法加载PNG纹理")
+		self:set_status(_("ATLAS_MGR_ERR_HOT_RELOAD_PNG_LOAD"))
 		return
 	end
 	local img_w, img_h = img:getDimensions()
@@ -3670,7 +3671,7 @@ function atlas_manager:_hot_reload_group(name, frames, w, h)
 		end
 	end
 	print(string.format("[atlas_manager] hot_reload: %s from %s (%dx%d) %d frames -> image_db", name, png_path, img_w, img_h, #frames))
-	self:set_status("热重载完成: " .. name)
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_HOT_RELOAD_DONE_S"), name))
 end
 
 function atlas_manager:print_dds_commands()
@@ -3681,21 +3682,21 @@ function atlas_manager:print_dds_commands()
 		local dds_path = real_path(ATLAS_DIR) .. "/" .. name .. ".dds"
 		commands = {string.format("nvcompress.exe -bc3 -maximum %q %q", png_path, dds_path)}
 	end
-	print("\n===== 执行 DDS 转换 =====")
-	for _, cmd in ipairs(commands) do
+	print(_("ATLAS_MGR_LOG_DDS_CONVERT_HEADER"))
+	for _i, cmd in ipairs(commands) do
 		print(cmd)
 		local ok = os.execute(cmd)
 		if ok then
-			print("✅ DDS 转换完成: " .. cmd)
+			print(string.format(_G._("ATLAS_MGR_LOG_DDS_CONVERT_OK_S"), cmd))
 		else
-			print("❌ DDS 转换失败")
-			self:set_status("DDS 转换失败，请检查 nvcompress.exe")
+			print(_G._("ATLAS_MGR_LOG_DDS_CONVERT_FAILED"))
+			self:set_status(_G._("ATLAS_MGR_ERR_DDS_CONVERT_NVCOMPRESS"))
 			return
 		end
 	end
 	-- 执行完毕即清空，防止残留的旧命令在下次转换时被重复执行
 	self._pending_dds_commands = nil
-	self:set_status("DDS 转换完成")
+	self:set_status(_("ATLAS_MGR_STATUS_DDS_CONVERT_DONE"))
 	print("========================================\n")
 end
 
@@ -3715,7 +3716,7 @@ function atlas_manager:ai_upscale()
 	end
 	local cmd = string.format("realesrgan-ncnn-vulkan -i %q -o %q -m %q -n %s -s 2", src, dst, models_path, model_name)
 	print(string.format("[atlas_manager] ai_upscale: %s", cmd))
-	self:set_status("AI 放大中...")
+	self:set_status(_("ATLAS_MGR_STATUS_AI_UPSCALING"))
 	local ok = os.execute(cmd)
 	if ok then
 		local f = io.open(dst, "rb")
@@ -3723,25 +3724,25 @@ function atlas_manager:ai_upscale()
 			local sz = f:seek("end")
 			f:close()
 			state._ai_upscaled = dst
-			self:set_status(string.format("AI 放大完成: %s (%d bytes)", dst, sz))
+			self:set_status(string.format(_("ATLAS_MGR_STATUS_AI_UPSCALE_DONE"), dst, sz))
 			print(string.format("[atlas_manager] ai_upscale: done %s (%d bytes)", dst, sz))
 		end
 	else
-		self:set_status("AI 放大失败")
+		self:set_status(_("ATLAS_MGR_ERR_AI_UPSCALE_FAILED"))
 	end
 end
 
 function atlas_manager:replace_with_upscaled()
 	local src = state._ai_upscaled
 	if not src then
-		self:set_status("没有可用的 AI 放大结果，请先执行 AI 放大")
+		self:set_status(_("ATLAS_MGR_ERR_NO_AI_UPSCALE_RESULT"))
 		return
 	end
 	local name = ui.merge_name_input and ui.merge_name_input._text or "merged_atlas"
 	local dst = real_path(IMAGES_DIR) .. "/" .. name .. ".png"
 	local fi = io.open(src, "rb")
 	if not fi then
-		self:set_status("AI 放大文件不存在: " .. src)
+		self:set_status(string.format(_("ATLAS_MGR_ERR_AI_UPSCALE_FILE_MISSING_S"), src))
 		return
 	end
 	local data = fi:read("*all")
@@ -3761,14 +3762,14 @@ function atlas_manager:replace_with_upscaled()
 	end
 	local fo = io.open(dst, "wb")
 	if not fo then
-		self:set_status("无法写入: " .. dst)
+		self:set_status(string.format(_("ATLAS_MGR_ERR_WRITE_S"), dst))
 		return
 	end
 	fo:write(out_data)
 	fo:close()
 	print(string.format("[atlas_manager] replace: %s (%s) -> %s (health bar block applied)", src, idata:getWidth() .. "x" .. idata:getHeight(), dst))
 	state._after_replace = true
-	self:set_status("已替换为 AI 放大版本，请点击 DDS 转换生成新 DDS，不要再点击合并/保存")
+	self:set_status(_("ATLAS_MGR_STATUS_REPLACED_WITH_AI_UPSCALE"))
 end
 
 function atlas_manager:mousepressed(x, y, button)
@@ -3802,7 +3803,7 @@ function atlas_manager:mousepressed(x, y, button)
 			if popup.show_list and state._sprite_list and not popup.sb_drag then
 				local list_w = math.min(480, math.floor(sw * 0.45))
 				if x > sw - list_w then
-					local font = love.graphics.newFont(12)
+					local font = F:default_font(12)
 					local lh = font:getHeight() + 2
 					local idx = math.floor((y - 4) / lh) + 1 + popup.scroll
 					if idx >= 1 and idx <= #state._sprite_list then
@@ -3933,7 +3934,7 @@ function atlas_manager:keypressed(key, isrepeat)
 			local list = state._sprite_list
 			if key == "down" then
 				popup.sel_idx = math.min(#list, popup.sel_idx + 1)
-				local max_vis = math.floor((love.graphics.getHeight() - 20) / (love.graphics.newFont(12):getHeight() + 2))
+				local max_vis = math.floor((love.graphics.getHeight() - 20) / (F:default_font(12):getHeight() + 2))
 				if popup.sel_idx > popup.scroll + max_vis then
 					popup.scroll = popup.sel_idx - max_vis
 				end
@@ -4082,7 +4083,7 @@ function atlas_manager:rpk_block_refs(removed_set, gname)
 	end
 	local refs = {}
 	for g2, n in pairs(refs_map) do
-		refs[#refs + 1] = string.format("%s：%d 个共享纹理（%s …）", g2, n, table.concat(refs_ex[g2] or {}, ", "))
+		refs[#refs + 1] = string.format(_("ATLAS_MGR_MSG_SHARED_TEXTURES"), g2, n, table.concat(refs_ex[g2] or {}, ", "))
 	end
 	table.sort(refs)
 	-- 同组内：保留帧的 alias 指向被剔除帧
@@ -4090,9 +4091,9 @@ function atlas_manager:rpk_block_refs(removed_set, gname)
 	if removed_set and g0 and g0.frames then
 		for fn, v in pairs(g0.frames) do
 			if not removed_set[fn] then
-				for _, al in ipairs(v.alias or {}) do
+				for _i, al in ipairs(v.alias or {}) do
 					if removed_set[al] then
-						same[#same + 1] = string.format("%s 的 alias 指向将移除的 %s", fn, al)
+						same[#same + 1] = string.format(_G._("ATLAS_MGR_MSG_ALIAS_TO_REMOVED"), fn, al)
 					end
 				end
 			end
@@ -4105,12 +4106,12 @@ function atlas_manager:rpk_block_message(refs, same)
 	if #refs == 0 and #same == 0 then
 		return nil
 	end
-	local lines = {"以下图集引用了本图集将覆盖/删除的 DDS 纹理（a_name 指向 base/base-N dds），已阻止重打包："}
+	local lines = {_("ATLAS_MGR_MSG_REPACK_BLOCKED_REFS")}
 	for i = 1, math.min(6, #refs) do
 		lines[#lines + 1] = "  · " .. refs[i]
 	end
 	if #refs > 6 then
-		lines[#lines + 1] = string.format("  …等 %d 个图集", #refs)
+		lines[#lines + 1] = string.format(_("ATLAS_MGR_MSG_AND_N_ATLASES"), #refs)
 	end
 	for i = 1, math.min(3, #same) do
 		lines[#lines + 1] = "  · " .. same[i]
@@ -4210,10 +4211,10 @@ function atlas_manager:build_repack_dialog()
 	-- 顶栏：标题在左，输出集数量增减在右上（避免与任何标题重叠）
 	local t = lab(dlg, 16, 8, 320, 26, 15)
 	t.colors.text = {244, 221, 165, 255}
-	t.text = "图集重打包"
+	t.text = _("ATLAS_MGR_DLG_REPACK_TITLE")
 	local kk = lab(dlg, 660, 10, 76, 22, 12)
 	kk.text_align = "right"
-	kk.text = "输出集数"
+	kk.text = _("ATLAS_MGR_LABEL_OUTPUT_SET_COUNT")
 	ui.rpk_lab_k = lab(dlg, 740, 10, 34, 22, 13)
 	ui.rpk_lab_k.text_align = "center"
 	button(dlg, "-", 778, 8, 28, 22, function()
@@ -4230,14 +4231,14 @@ function atlas_manager:build_repack_dialog()
 	ui.rpk_fam_box.pos = V.v(16, 64)
 	dlg:add_child(ui.rpk_fam_box)
 	ui.rpk_lab_pg = lab(dlg, 16, 64 + RPK_PAGE_ROWS * 26 + 6, 220, 20, 11)
-	button(dlg, "上一页", 300, 64 + RPK_PAGE_ROWS * 26 + 4, 60, 20, function()
+	button(dlg, _("ATLAS_MGR_BTN_PREV_PAGE"), 300, 64 + RPK_PAGE_ROWS * 26 + 4, 60, 20, function()
 		local rp = state.repack
 		if rp and rp.fam_page > 1 then
 			rp.fam_page = rp.fam_page - 1
 			self:rpk_render()
 		end
 	end)
-	button(dlg, "下一页", 366, 64 + RPK_PAGE_ROWS * 26 + 4, 60, 20, function()
+	button(dlg, _("ATLAS_MGR_BTN_NEXT_PAGE"), 366, 64 + RPK_PAGE_ROWS * 26 + 4, 60, 20, function()
 		local rp = state.repack
 		if rp then
 			local pages = math.max(1, math.ceil(#rp.famOrder / RPK_PAGE_ROWS))
@@ -4260,19 +4261,19 @@ function atlas_manager:build_repack_dialog()
 	ui.rpk_lab_status = lab(dlg, 16, 470, 1000, 74, 12)
 	ui.rpk_lab_status.fit_lines = 4
 
-	button(dlg, "顺序填充", 16, 566, 96, 28, function()
+	button(dlg, _("ATLAS_MGR_BTN_SEQUENTIAL_FILL"), 16, 566, 96, 28, function()
 		self:rpk_fill_sequential()
 	end)
-	button(dlg, "打包并暂存", 122, 566, 110, 28, function()
+	button(dlg, _("ATLAS_MGR_BTN_PACK_AND_STAGE"), 122, 566, 110, 28, function()
 		self:rpk_stage()
 	end)
-	button(dlg, "确认替换", 242, 566, 110, 28, function()
+	button(dlg, _("ATLAS_MGR_BTN_CONFIRM_REPLACE"), 242, 566, 110, 28, function()
 		self:rpk_commit()
 	end)
-	button(dlg, "读取排除清单", 362, 566, 150, 28, function()
+	button(dlg, _("ATLAS_MGR_BTN_LOAD_EXCLUDE_LIST"), 362, 566, 150, 28, function()
 		self:rpk_apply_excludes_file()
 	end)
-	button(dlg, "关闭", 900, 566, 100, 28, function()
+	button(dlg, _("BUTTON_CLOSE"), 900, 566, 100, 28, function()
 		ui.repack_dialog.hidden = true
 	end)
 	dlg.hidden = true
@@ -4303,13 +4304,13 @@ end
 function atlas_manager:rpk_apply_excludes_file()
 	local rp = state.repack
 	if not rp then
-		self:set_status("请先选中帧并打开「重打包」对话框")
+		self:set_status(_("ATLAS_MGR_STATUS_OPEN_REPACK_FIRST"))
 		return
 	end
 	local path = project_root .. "/" .. IMAGES_DIR .. "/.repack_exclude.txt"
 	local f = io.open(path, "rb")
 	if not f then
-		self:set_status("未找到 " .. path)
+		self:set_status(string.format(_("ATLAS_MGR_ERR_NOT_FOUND_S"), path))
 		return
 	end
 	local content = f:read("*all")
@@ -4340,13 +4341,13 @@ function atlas_manager:rpk_apply_excludes_file()
 				end
 				total_removed = total_removed + here
 			else
-				print("[atlas_manager] exclude file 第 " .. line_no .. " 行无法解析: " .. line)
+				print(string.format(_("ATLAS_MGR_LOG_EXCLUDE_PARSE_FAIL"), line_no, line))
 			end
 		end
 	end
 	self:rebuild_tree()
 	self:rpk_resync()
-	self:set_status(string.format("已按排除清单取消勾选 %d 帧，点「顺序填充」继续", total_removed))
+	self:set_status(string.format(_("ATLAS_MGR_STATUS_EXCLUDE_UNCHECKED"), total_removed))
 	print(string.format("[atlas_manager] apply excludes: removed %d frames", total_removed))
 end
 
@@ -4360,7 +4361,7 @@ function atlas_manager:rpk_resync()
 	end
 	local group = state.groups[rp.gname]
 	if not group then
-		self:set_status("源图集组已不存在")
+		self:set_status(_("ATLAS_MGR_ERR_SOURCE_GROUP_GONE"))
 		return false
 	end
 	local sel = self:get_selected_frame_list()
@@ -4372,8 +4373,8 @@ function atlas_manager:rpk_resync()
 	end
 	local fam, order = rpk_build_families(sel_set)
 	if #order == 0 then
-		ui.rpk_lab_status.text = "当前没有任何勾选帧，请先在树上勾选本组帧。"
-		self:set_status("没有可重打包的帧")
+		ui.rpk_lab_status.text = _("ATLAS_MGR_MSG_NO_FRAMES_CHECKED")
+		self:set_status(_("ATLAS_MGR_ERR_NO_REPACKABLE_FRAMES"))
 		return false
 	end
 	local removed = {}
@@ -4419,8 +4420,8 @@ function atlas_manager:rpk_resync()
 	self:rpk_recompute()
 	self:rpk_render()
 	if changed then
-		ui.rpk_lab_status.text = "检测到勾选集合已变化，请重新点「顺序填充」。"
-		self:set_status("勾选变化，需重新「顺序填充」")
+		ui.rpk_lab_status.text = _("ATLAS_MGR_MSG_SELECTION_CHANGED")
+		self:set_status(_("ATLAS_MGR_STATUS_RERUN_SEQUENTIAL_FILL"))
 	end
 	return true
 end
@@ -4431,7 +4432,6 @@ end
 --  3) 最终布局(placements)存档，打包并暂存直接复用，不再二次打包。
 function atlas_manager:rpk_fill_sequential()
 	local rp = state.repack
-	local t_fill = os.clock()
 	if not rp then
 		return
 	end
@@ -4618,11 +4618,11 @@ function atlas_manager:rpk_fill_sequential()
 		for j = 1, math.min(4, #names) do
 			ex[#ex + 1] = names[j]
 		end
-		ui.rpk_lab_status.text = string.format("打包不下：族 %s 等 %d 个族放不进当前任何输出集。请加大某集尺寸或增加输出集数量，再点「顺序填充」。", table.concat(ex, "、"), #names)
-		self:set_status(string.format("有 %d 个族放不下，暂不能打包", #names))
+		ui.rpk_lab_status.text = string.format(_("ATLAS_MGR_MSG_FAMILIES_DONT_FIT"), table.concat(ex, _("ATLAS_MGR_SEP_ENUM")), #names)
+		self:set_status(string.format(_("ATLAS_MGR_STATUS_FAMILIES_UNPLACED"), #names))
 	else
-		ui.rpk_lab_status.text = "打包得下：已从第1集起按序填满。可「打包并暂存」预览。"
-		self:set_status("顺序填充完成，打包得下")
+		ui.rpk_lab_status.text = _("ATLAS_MGR_MSG_FITS_FILLED")
+		self:set_status(_("ATLAS_MGR_STATUS_FILL_DONE_OK"))
 	end
 end
 
@@ -4635,7 +4635,7 @@ function atlas_manager:rpk_render()
 	for _, p in ipairs(rp.famOrder) do
 		fam_count = fam_count + #rp.fam[p]
 	end
-	ui.rpk_lab_sel.text = string.format("组:%s   选中 %d 帧 / %d 族", rp.base, fam_count, #rp.famOrder)
+	ui.rpk_lab_sel.text = string.format(_("ATLAS_MGR_LABEL_GROUP_SELECTION"), rp.base, fam_count, #rp.famOrder)
 	ui.rpk_lab_k.text = tostring(rp.k)
 
 	-- 家族行（分页）
@@ -4645,7 +4645,7 @@ function atlas_manager:rpk_render()
 		rp.fam_page = pages
 	end
 	local start_i = (rp.fam_page - 1) * RPK_PAGE_ROWS + 1
-	ui.rpk_lab_pg.text = string.format("页 %d/%d   族(帧数)  右侧按钮切换归属集", rp.fam_page, pages)
+	ui.rpk_lab_pg.text = string.format(_("ATLAS_MGR_LABEL_PAGE_FAMILIES"), rp.fam_page, pages)
 	for i = start_i, math.min(#rp.famOrder, start_i + RPK_PAGE_ROWS - 1) do
 		local p = rp.famOrder[i]
 		local row = KView:new(V.v(620, 24))
@@ -4658,10 +4658,10 @@ function atlas_manager:rpk_render()
 		l.text_align = "left"
 		l.vertical_align = "middle"
 		l.colors.text = cannot and {255, 150, 130, 255} or {205, 218, 248, 255}
-		l.text = string.format("  %s（%d帧）%s", p, #rp.fam[p], cannot and "装不下" or "")
+		l.text = string.format(_("ATLAS_MGR_LABEL_FAMILY_ROW"), p, #rp.fam[p], cannot and _("ATLAS_MGR_LABEL_CANNOT_FIT") or "")
 		row:add_child(l)
 		local t = rp.assign[p] or 1
-		local b = self:make_button(string.format("集%d/%d", t, rp.k), V.v(120, 22))
+		local b = self:make_button(string.format(_("ATLAS_MGR_BTN_SET_X_OF_Y"), t, rp.k), V.v(120, 22))
 		b.pos = V.v(480, 1)
 		b.on_press = function()
 			local cur = rp.assign[p] or 1
@@ -4677,7 +4677,7 @@ function atlas_manager:rpk_render()
 
 	-- 输出集：只显示帧数与占用百分比；超容量才标红
 	ui.rpk_out_box:remove_children()
-	ui.rpk_lab_out_head.text = "输出图集（每集独立选择宽x高）"
+	ui.rpk_lab_out_head.text = _("ATLAS_MGR_LABEL_OUTPUT_ATLASES")
 	local dlg_abs_x = ui.repack_dialog.pos.x - ui.repack_dialog.anchor.x
 	local dlg_abs_y = ui.repack_dialog.pos.y - ui.repack_dialog.anchor.y
 	for i = 1, rp.k do
@@ -4689,7 +4689,7 @@ function atlas_manager:rpk_render()
 		hl.text_align = "left"
 		hl.vertical_align = "middle"
 		hl.colors.text = {223, 214, 190, 255}
-		hl.text = string.format("集%d", i)
+		hl.text = string.format(_("ATLAS_MGR_LABEL_SET_N"), i)
 		hl.pos = V.v(0, y)
 		ui.rpk_out_box:add_child(hl)
 		local function size_box(ax, value, axis)
@@ -4750,9 +4750,9 @@ function atlas_manager:rpk_render()
 		info.text_align = "left"
 		info.vertical_align = "middle"
 		info.colors.text = util > 100 and {255, 130, 110, 255} or {150, 200, 150, 255}
-		info.text = string.format("%d帧 占%.0f%%", #o.names, util)
+		info.text = string.format(_("ATLAS_MGR_LABEL_FRAMES_USAGE"), #o.names, util)
 		if util > 100 then
-			info.text = string.format("%d帧 超容量%.0f%%", #o.names, util - 100)
+			info.text = string.format(_("ATLAS_MGR_LABEL_FRAMES_OVER_CAPACITY"), #o.names, util - 100)
 		end
 		info.pos = V.v(184, y)
 		ui.rpk_out_box:add_child(info)
@@ -4764,33 +4764,32 @@ function atlas_manager:rpk_render()
 		ui.rpk_lab_warn.text = msg
 	elseif rp.removed_count and rp.removed_count > 0 then
 		ui.rpk_lab_warn.colors.text = {235, 200, 120, 255}
-		ui.rpk_lab_warn.text = string.format("注意：本组另有 %d 帧未勾选，替换后将随旧文件移入备份目录。", rp.removed_count)
+		ui.rpk_lab_warn.text = string.format(_("ATLAS_MGR_MSG_UNCHECKED_FRAMES_WARNING"), rp.removed_count)
 	else
 		ui.rpk_lab_warn.text = ""
 	end
 end
 
 function atlas_manager:show_repack_dialog()
-	local t_open = os.clock()
 	if ui.close_size_menu then
 		ui.close_size_menu()
 	end
 	local selected = self:get_selected_frame_list()
 	if #selected == 0 then
-		self:set_status("重打包：请先勾选帧（可用组上的「全选」整组勾选，再取消个别帧）")
+		self:set_status(_("ATLAS_MGR_STATUS_REPACK_CHECK_FRAMES"))
 		return
 	end
 	local gname = nil
-	for _, s in ipairs(selected) do
+	for _i, s in ipairs(selected) do
 		if gname and gname ~= s.group then
-			self:set_status("重打包仅支持单个图集组内的帧；跨组合并请使用「合并」")
+			self:set_status(_G._("ATLAS_MGR_ERR_REPACK_SINGLE_GROUP_ONLY"))
 			return
 		end
 		gname = s.group
 	end
 	local group = state.groups[gname]
 	if not group then
-		self:set_status("找不到源图集组")
+		self:set_status(_("ATLAS_MGR_ERR_SOURCE_GROUP_NOT_FOUND"))
 		return
 	end
 	local sel_set = {}
@@ -4805,7 +4804,7 @@ function atlas_manager:show_repack_dialog()
 	end
 	local fam, order = rpk_build_families(sel_set)
 	if #order == 0 then
-		self:set_status("没有可重打包的帧")
+		self:set_status(_("ATLAS_MGR_ERR_NO_REPACKABLE_FRAMES"))
 		return
 	end
 	local refs, same = self:rpk_block_refs(removed, gname)
@@ -4848,7 +4847,7 @@ function atlas_manager:show_repack_dialog()
 	ui.repack_dialog.anchor = V.v(510, 330)
 	ui.repack_dialog.pos = V.v(self.ref_w / 2, self.ref_h / 2)
 	ui.repack_dialog:order_to_front()
-	ui.rpk_lab_status.text = "提示：先点「顺序填充」自动分配（从第1集起依次填满），或手动为每族选择归属集。"
+	ui.rpk_lab_status.text = _("ATLAS_MGR_MSG_REPACK_HINT")
 	self:rpk_render()
 end
 
@@ -4859,13 +4858,13 @@ function atlas_manager:rpk_stage()
 	end
 	local block_msg = self:rpk_block_message(rp.refs, rp.same)
 	if block_msg then
-		ui.rpk_lab_status.text = block_msg .. "\n请先在其它图集中解除引用，或勾选被引用的帧一起重打包。"
-		self:set_status("重打包被阻止：有其它图集引用本图集帧")
+		ui.rpk_lab_status.text = block_msg .. _("ATLAS_MGR_MSG_UNBLOCK_REFS")
+		self:set_status(_("ATLAS_MGR_ERR_REPACK_BLOCKED_BY_REFS"))
 		return
 	end
 	local group = state.groups[rp.gname]
 	if not group then
-		self:set_status("源图集组已不存在")
+		self:set_status(_("ATLAS_MGR_ERR_SOURCE_GROUP_GONE"))
 		return
 	end
 	-- 以当前勾选为准（打开前后调整都生效），剔除的帧绝不会进入输出
@@ -4875,8 +4874,8 @@ function atlas_manager:rpk_stage()
 
 	-- 「顺序填充」负责布局判定；这里只把那次结果落盘。
 	if not rp.fill_ok then
-		ui.rpk_lab_status.text = "还没有可打包的结果：请先点「顺序填充」完成分配，再「打包并暂存」。"
-		self:set_status("请先「顺序填充」")
+		ui.rpk_lab_status.text = _("ATLAS_MGR_MSG_NO_STAGED_RESULT")
+		self:set_status(_("ATLAS_MGR_STATUS_SEQUENTIAL_FILL_FIRST"))
 		return
 	end
 	-- 填充后若尺寸/数量/归属被改过，旧布局不再有效，提示重新填充（不自动改布局）
@@ -4901,15 +4900,15 @@ function atlas_manager:rpk_stage()
 		end
 	end
 	if stale then
-		ui.rpk_lab_status.text = "「顺序填充」之后尺寸/数量/归属被修改过，请重新点「顺序填充」，再「打包并暂存」。"
-		self:set_status("布局已过期，请重新「顺序填充」")
+		ui.rpk_lab_status.text = _("ATLAS_MGR_MSG_LAYOUT_STALE")
+		self:set_status(_("ATLAS_MGR_STATUS_LAYOUT_EXPIRED"))
 		return
 	end
 
 	-- 直接复用「顺序填充」时已验证放得下的布局（fill_outs），不再二次打包
 	if not rp.fill_outs then
-		ui.rpk_lab_status.text = "没有可用的填充结果，请先点「顺序填充」。"
-		self:set_status("请先「顺序填充」")
+		ui.rpk_lab_status.text = _("ATLAS_MGR_MSG_NO_FILL_RESULT")
+		self:set_status(_("ATLAS_MGR_STATUS_SEQUENTIAL_FILL_FIRST"))
 		return
 	end
 	local outs = {}
@@ -4929,7 +4928,7 @@ function atlas_manager:rpk_stage()
 		end
 	end
 	if #outs == 0 or #all_placements == 0 then
-		self:set_status("没有可打包的内容，请先「顺序填充」")
+		self:set_status(_("ATLAS_MGR_ERR_NOTHING_TO_PACK"))
 		return
 	end
 	-- 输出守卫：所有进入输出的帧必须属于当前勾选集合，防止剔除帧混入
@@ -4953,8 +4952,8 @@ function atlas_manager:rpk_stage()
 			for j = 1, math.min(5, #bad) do
 				ex[#ex + 1] = bad[j]
 			end
-			ui.rpk_lab_status.text = string.format("内部错误：发现 %d 个不属于勾选集合的帧（%s …），已中止，请重新「顺序填充」。", #bad, table.concat(ex, ", "))
-			self:set_status("发现越界帧，打包已中止")
+			ui.rpk_lab_status.text = string.format(_("ATLAS_MGR_ERR_INTERNAL_STRAY_FRAMES"), #bad, table.concat(ex, ", "))
+			self:set_status(_("ATLAS_MGR_STATUS_STRAY_FRAMES_ABORTED"))
 			print("[atlas_manager] repack guard: bad frames: " .. table.concat(bad, ", "))
 			return
 		end
@@ -4977,7 +4976,7 @@ function atlas_manager:rpk_stage()
 	end
 	local ok, err2 = self:_load_frame_idatas(all_placements, mfs)
 	if not ok then
-		self:set_status("加载帧像素失败：" .. tostring(err2))
+		self:set_status(string.format(_("ATLAS_MGR_ERR_LOAD_FRAME_PIXELS_S"), tostring(err2)))
 		return
 	end
 	local ts = tostring(os.time())
@@ -5000,7 +4999,7 @@ function atlas_manager:rpk_stage()
 		mf._preview_idata = nil
 	end
 	if failed then
-		self:set_status("写入暂存目录失败：" .. stage_dir)
+		self:set_status(string.format(_("ATLAS_MGR_ERR_WRITE_STAGE_DIR_S"), stage_dir))
 		return
 	end
 	rp.mfs = mfs
@@ -5008,8 +5007,8 @@ function atlas_manager:rpk_stage()
 	rp.stage = {
 		dir = stage_dir
 	}
-	ui.rpk_lab_status.text = string.format("已暂存 %d 个 PNG 到：%s\n检查布局无误后点「确认替换」开始正式替换。", #outs, stage_dir:gsub(project_root .. "/", ""))
-	self:set_status("已打包并暂存，等待确认替换")
+	ui.rpk_lab_status.text = string.format(_("ATLAS_MGR_MSG_STAGED_PNGS"), #outs, stage_dir:gsub(project_root .. "/", ""))
+	self:set_status(_("ATLAS_MGR_STATUS_STAGED_WAITING_CONFIRM"))
 end
 
 -- 可靠备份：把 base 相关旧文件（lua/luac/aluac、base.dds、base-N.dds、旧PNG）逐一
@@ -5071,18 +5070,18 @@ end
 function atlas_manager:rpk_commit()
 	local rp = state.repack
 	if not rp or not rp.stage or not rp.outs_staged then
-		self:set_status("请先「打包并暂存」")
+		self:set_status(_("ATLAS_MGR_STATUS_PACK_AND_STAGE_FIRST"))
 		return
 	end
 	local block_msg = self:rpk_block_message(rp.refs, rp.same)
 	if block_msg then
-		ui.rpk_lab_status.text = block_msg .. "\n已阻止替换。"
-		self:set_status("重打包被阻止：存在外部引用")
+		ui.rpk_lab_status.text = block_msg .. _("ATLAS_MGR_MSG_REPLACE_BLOCKED")
+		self:set_status(_("ATLAS_MGR_ERR_REPACK_BLOCKED_EXTERNAL_REFS"))
 		return
 	end
 	local group = state.groups[rp.gname]
 	if not group then
-		self:set_status("源图集组已不存在")
+		self:set_status(_("ATLAS_MGR_ERR_SOURCE_GROUP_GONE"))
 		return
 	end
 	local base = rp.base
@@ -5091,7 +5090,7 @@ function atlas_manager:rpk_commit()
 
 	-- 1) 备份旧文件（io 直接拷贝，含 base.dds 与 base-N.dds 及旧PNG）
 	local bp = self:rpk_backup_old(base)
-	print(string.format("[atlas_manager] repack_backup: %s -> %s (%d 个文件)", base, bp.dir, #bp.files))
+	print(string.format(_("ATLAS_MGR_LOG_REPACK_BACKUP"), base, bp.dir, #bp.files))
 	local backed = {}
 	for _, nm in ipairs(bp.files) do
 		backed[nm] = true
@@ -5143,19 +5142,19 @@ function atlas_manager:rpk_commit()
 		end
 	end
 	-- 4) nvcompress 生成 dds
-	for _, o in ipairs(rp.outs_staged) do
+	for _i, o in ipairs(rp.outs_staged) do
 		local cmd = string.format("nvcompress.exe -bc3 -maximum %q %q", imgs_real .. "/" .. o.page .. ".png", atlas_real .. "/" .. o.page .. ".dds")
 		print("[atlas_manager] " .. cmd)
 		local okrun = os.execute(cmd)
 		if not okrun then
-			self:set_status("DDS 转换失败（" .. o.page .. "），旧文件已在 " .. bp.dir .. " 备份，可恢复")
+			self:set_status(string.format(_G._("ATLAS_MGR_ERR_DDS_PAGE_BACKED_UP"), o.page, bp.dir))
 			return
 		end
 	end
 	-- 5) 写 lua/luac/aluac
 	local okw, errw = atlas_util.write_atlas_files(atlas_real, base, new_frames, write_real)
 	if not okw then
-		self:set_status("写入 lua 失败：" .. tostring(errw) .. "（旧文件备份于 " .. bp.dir .. "）")
+		self:set_status(string.format(_("ATLAS_MGR_ERR_WRITE_LUA_BACKED_UP"), tostring(errw), bp.dir))
 		return
 	end
 	-- 6) 清理不再使用的旧文件：先确保已进备份目录，再删除
@@ -5202,16 +5201,16 @@ function atlas_manager:rpk_commit()
 								deleted = deleted + 1
 								print("[atlas_manager] repack cleanup: removed " .. name)
 							else
-								leftover[#leftover + 1] = name .. "(删除失败:" .. tostring(delerr) .. ")"
+								leftover[#leftover + 1] = name .. string.format(_("ATLAS_MGR_MSG_DELETE_FAILED_S"), tostring(delerr))
 							end
 						else
-							leftover[#leftover + 1] = name .. "(备份失败，已保留)"
+							leftover[#leftover + 1] = name .. _("ATLAS_MGR_MSG_BACKUP_FAILED_KEPT")
 						end
 					end
 				end
 			end
 			h:close()
-			print(string.format("[atlas_manager] repack cleanup: %s 扫描删除 %d 个", dir:match("([^/]+)$"), deleted))
+			print(string.format(_("ATLAS_MGR_LOG_REPACK_CLEANUP"), dir:match("([^/]+)$"), deleted))
 		end
 	end
 	-- 仅处理资源目录/PNG 存档中旧分页文件（三件套与单页由新文件覆盖，无需清理）
@@ -5222,10 +5221,10 @@ function atlas_manager:rpk_commit()
 	self:refresh_groups()
 	ui.repack_dialog.hidden = true
 	if #leftover > 0 then
-		self:set_status(string.format("重打包完成：%s -> %d 个图集（备份于 %s）。注意残留：%s", base, #rp.outs_staged, bp.dir, table.concat(leftover, "；")))
+		self:set_status(string.format(_("ATLAS_MGR_STATUS_REPACK_DONE_WITH_LEFTOVER"), base, #rp.outs_staged, bp.dir, table.concat(leftover, _("ATLAS_MGR_SEP_LIST"))))
 		print(string.format("[atlas_manager] repack leftover: %s", table.concat(leftover, "; ")))
 	else
-		self:set_status(string.format("重打包完成：%s -> %d 个图集（旧文件备份于 %s）", base, #rp.outs_staged, bp.dir))
+		self:set_status(string.format(_("ATLAS_MGR_STATUS_REPACK_DONE"), base, #rp.outs_staged, bp.dir))
 	end
 	print(string.format("[atlas_manager] repack done: %s -> %d pages", base, #rp.outs_staged))
 end

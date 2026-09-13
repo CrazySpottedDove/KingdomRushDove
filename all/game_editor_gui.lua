@@ -199,9 +199,9 @@ function gui:init(w, h, editor)
 	wid("tools_save").on_click = function()
 		local ok = editor:level_save()
 		if ok then
-			self:show_save_notification("保存成功", true)
+			self:show_save_notification(_("EDITOR_UI_SAVE_SUCCESS"), true)
 		else
-			self:show_save_notification("保存失败", false)
+			self:show_save_notification(_("EDITOR_UI_SAVE_FAILED"), false)
 		end
 	end
 	wid("tools_load").on_click = function()
@@ -320,7 +320,7 @@ function gui:init(w, h, editor)
 		end
 	}
 	wid("entities_insert").on_click = nil
-	wid("entities_insert").text = "插入实体(A) [仅快捷键]"
+	wid("entities_insert").text = _("EDITOR_UI_INSERT_ENTITY_SHORTCUT")
 	wid("entities_selected").hidden = true
 
 	-- 设置实体自动补全
@@ -331,7 +331,7 @@ function gui:init(w, h, editor)
 	wid("entities_delete").on_click = function()
 		gui:delete_entity()
 	end
-	wid("entities_delete").text = "删除实体(D)"
+	wid("entities_delete").text = _("EDITOR_UI_DELETE_ENTITY_SHORTCUT")
 	wid("entities_pos").on_change = function(this)
 		gui:update_entity_prop(this)
 	end
@@ -417,7 +417,7 @@ function gui:init(w, h, editor)
 		gui:path_node_width_change(this)
 	end
 	wid("path_node_extend").on_click = nil
-	wid("path_node_extend").text = "添加节点(A) [仅快捷键]"
+	wid("path_node_extend").text = _("EDITOR_UI_ADD_NODE_SHORTCUT")
 	wid("path_node_extend").font_size = KE_CONST.font_size
 	local path_node_row = wid("path_node_extend").parent
 	if path_node_row and path_node_row.style == "horizontal" then
@@ -427,7 +427,7 @@ function gui:init(w, h, editor)
 	local subdivide_btn = wid("path_node_subdivide")
 	if subdivide_btn then
 		subdivide_btn.on_click = nil
-		subdivide_btn.text = "细分路径(W) [仅快捷键]"
+		subdivide_btn.text = _("EDITOR_UI_SUBDIVIDE_PATH_SHORTCUT")
 		subdivide_btn.font_size = KE_CONST.font_size
 		subdivide_btn.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
 		fit_button_text(subdivide_btn)
@@ -443,7 +443,7 @@ function gui:init(w, h, editor)
 	wid("path_node_remove").on_click = function(this)
 		gui:path_node_remove(this)
 	end
-	wid("path_node_remove").text = "移除(D)"
+	wid("path_node_remove").text = _("EDITOR_UI_REMOVE_SHORTCUT")
 	wid("path_node_remove").text_offset = V.v(0, (KE_CONST.PROP_H - KE_CONST.font_size) / 2)
 	self.tool_shortcuts.paths = {
 		up = function()
@@ -547,7 +547,7 @@ function gui:add_back_to_map_button()
 		return
 	end
 
-	local back_btn = KEButton:new("返回地图")
+	local back_btn = KEButton:new(_("EDITOR_UI_BACK_TO_MAP"))
 	back_btn.id = "tools_back_to_map"
 	back_btn.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
 	back_btn.text_offset = V.v(0, (KE_CONST.PROP_H - KE_CONST.font_size) / 2)
@@ -558,7 +558,7 @@ function gui:add_back_to_map_button()
 				next_item_name = "map"
 			})
 		else
-			gui:show_save_notification("无法返回地图", false)
+			gui:show_save_notification(_("EDITOR_UI_CANNOT_BACK_TO_MAP"), false)
 		end
 	end
 
@@ -584,10 +584,10 @@ function gui:add_extension_tools_buttons()
 		layout:add_child(b)
 	end
 
-	add_btn("tools_wave_config", "出怪配置", function()
+	add_btn("tools_wave_config", _("EDITOR_UI_WAVE_CONFIG"), function()
 		self:show_wave_config()
 	end)
-	add_btn("tools_wave_preview", "出怪预览", function()
+	add_btn("tools_wave_preview", _("EDITOR_UI_WAVE_PREVIEW"), function()
 		self:show_wave_editor()
 	end)
 	-- TODO: 确认效果，审查逻辑
@@ -606,10 +606,10 @@ function gui:add_extension_tools_buttons()
 	-- 	self.editor:set_drop_import_mode(next_mode)
 	-- 	self:show_save_notification(next_mode and "已进入战斗音乐拖拽模式，请拖入 OGG / MP3 / WAV" or "已取消战斗音乐拖拽模式", next_mode ~= nil)
 	-- end)
-	add_btn("tools_load_plugin", "插件关卡", function()
+	add_btn("tools_load_plugin", _("EDITOR_UI_PLUGIN_LEVELS"), function()
 		self:show_plugin_level_selector()
 	end)
-	add_btn("tools_init_plugin", "初始化地图插件", function()
+	add_btn("tools_init_plugin", _("EDITOR_UI_INIT_PLUGIN"), function()
 		self:show_init_plugin_dialog()
 	end)
 	layout:update_layout()
@@ -626,7 +626,7 @@ function gui:show_plugin_level_selector()
 		end
 	end
 	if #levels == 0 then
-		self:show_save_notification("未找到插件关卡", false)
+		self:show_save_notification(_("EDITOR_UI_PLUGIN_LEVEL_NOT_FOUND"), false)
 		return
 	end
 
@@ -650,7 +650,7 @@ function gui:show_plugin_level_selector()
 	title.font_name = "h"
 	title.font_size = 18
 	title.text_align = "center"
-	title.text = "选择插件关卡"
+	title.text = _("EDITOR_UI_SELECT_PLUGIN_LEVEL")
 	title.colors.text = {241, 222, 171, 255}
 	panel:add_child(title)
 
@@ -1019,7 +1019,7 @@ end
 
 function gui:show_wave_editor()
 	if not self.editor.store.level then
-		self:show_save_notification("请先加载一个关卡")
+		self:show_save_notification(_("EDITOR_UI_LOAD_LEVEL_FIRST"))
 		return
 	end
 	if self._wave_editor and not self._wave_editor.hidden then
@@ -1035,7 +1035,7 @@ end
 
 function gui:show_wave_config()
 	if not self.editor.store.level then
-		self:show_save_notification("请先加载一个关卡")
+		self:show_save_notification(_("EDITOR_UI_LOAD_LEVEL_FIRST"))
 		return
 	end
 	local WaveConfigView = require("game_editor_wave_config")
@@ -1047,7 +1047,7 @@ end
 
 function gui:show_export_view()
 	if not self.editor.store.level then
-		self:show_save_notification("请先加载一个关卡")
+		self:show_save_notification(_("EDITOR_UI_LOAD_LEVEL_FIRST"))
 		return
 	end
 	local EditorExportView = require("game_editor_export")
@@ -1299,30 +1299,30 @@ function gui:grid_cell_info_update(this, dt)
 	local ct, i, j = GR:cell_type(wx, wy)
 	local terrain = band(ct, TERRAIN_TYPES_MASK)
 	local terrain_name = ({
-		[TERRAIN_NONE] = "无",
-		[TERRAIN_LAND] = "陆地",
-		[TERRAIN_WATER] = "水",
-		[TERRAIN_CLIFF] = "悬崖"
-	})[terrain] or "未知"
+		[TERRAIN_NONE] = _("None"),
+		[TERRAIN_LAND] = _("EDITOR_UI_TERRAIN_LAND"),
+		[TERRAIN_WATER] = _("EDITOR_UI_TERRAIN_WATER"),
+		[TERRAIN_CLIFF] = _("EDITOR_UI_TERRAIN_CLIFF")
+	})[terrain] or _("EDITOR_UI_TERRAIN_UNKNOWN")
 	local tags = {}
 
 	if band(ct, TERRAIN_NOWALK) ~= 0 then
-		tags[#tags + 1] = "禁行"
+		tags[#tags + 1] = _("EDITOR_UI_FLAG_NOWALK")
 	end
 	if band(ct, TERRAIN_SHALLOW) ~= 0 then
-		tags[#tags + 1] = "浅滩"
+		tags[#tags + 1] = _("EDITOR_UI_FLAG_SHALLOW")
 	end
 	if band(ct, TERRAIN_FAERIE) ~= 0 then
-		tags[#tags + 1] = "仙子"
+		tags[#tags + 1] = _("EDITOR_UI_FLAG_FAERIE")
 	end
 	if band(ct, TERRAIN_ICE) ~= 0 then
-		tags[#tags + 1] = "冰"
+		tags[#tags + 1] = _("EDITOR_UI_FLAG_ICE")
 	end
 	if band(ct, TERRAIN_FLYING_NOWALK) ~= 0 then
-		tags[#tags + 1] = "禁飞"
+		tags[#tags + 1] = _("EDITOR_UI_FLAG_FLYING_NOWALK")
 	end
 	if #tags == 0 then
-		tags[1] = "无"
+		tags[1] = _("None")
 	end
 
 	this.lt.text = string.format("%s,%s", i, j)
@@ -1433,7 +1433,7 @@ function gui:ensure_grid_layer_toggle_buttons()
 
 	for i = #layout.children, 1, -1 do
 		local c = layout.children[i]
-		if c and c.class and c.class.name == "KESep" and c.text == "网格" then
+		if c and c.class and c.class.name == "KESep" and c.text == _("EDITOR_UI_GRID") then
 			layout:remove_child(c)
 			break
 		end
@@ -1443,7 +1443,7 @@ function gui:ensure_grid_layer_toggle_buttons()
 	row.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
 	row.separation = V.v(0, 0)
 
-	local mode_btn = KEButton:new("显示：地形和标签")
+	local mode_btn = KEButton:new(_("EDITOR_UI_GRID_SHOW_TERRAIN_TAGS"))
 	mode_btn.id = "grid_show_mode"
 	mode_btn.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
 	mode_btn.text_size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
@@ -1481,13 +1481,13 @@ function gui:update_grid_layer_toggle_state()
 		local st = self.settings.grid.show_terrain
 		local sg = self.settings.grid.show_tags
 		if st and sg then
-			mode_btn.text = "显示：地形和标签"
+			mode_btn.text = _("EDITOR_UI_GRID_SHOW_TERRAIN_TAGS")
 		elseif st then
-			mode_btn.text = "显示：仅地形"
+			mode_btn.text = _("EDITOR_UI_GRID_SHOW_TERRAIN_ONLY")
 		elseif sg then
-			mode_btn.text = "显示：仅标签"
+			mode_btn.text = _("EDITOR_UI_GRID_SHOW_TAGS_ONLY")
 		else
-			mode_btn.text = "显示：地形和标签"
+			mode_btn.text = _("EDITOR_UI_GRID_SHOW_TERRAIN_TAGS")
 			self.settings.grid.show_terrain = true
 			self.settings.grid.show_tags = true
 		end
@@ -1920,7 +1920,7 @@ function gui:insert_entity()
 	local template = wid("entities_insert_template").value
 
 	if not template or not E:get_template(template) then
-		self:show_save_notification("模板不存在，无法插入", false)
+		self:show_save_notification(_("EDITOR_UI_TEMPLATE_NOT_FOUND"), false)
 		return
 	end
 
@@ -2346,7 +2346,7 @@ end
 
 function gui:path_node_subdivide_at_mouse()
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		self:show_save_notification("请先选中一个路径点")
+		self:show_save_notification(_("EDITOR_UI_SELECT_PATH_NODE_FIRST"))
 		return
 	end
 
@@ -2698,7 +2698,7 @@ function gui:show_init_plugin_dialog()
 	popup:add_child(panel)
 
 	local title = KLabel:new(V.v(pw, 36))
-	title.text = "初始化地图插件"
+	title.text = _("EDITOR_UI_INIT_PLUGIN")
 	title.text_align = "center"
 	title.vertical_align = "middle"
 	title.font_size = 18
@@ -2724,7 +2724,7 @@ function gui:show_init_plugin_dialog()
 	local pair_w = btn_w1 + gap + btn_w2
 	local start_x = (pw - pair_w) / 2
 
-	local confirm_btn = KEButton:new("创建")
+	local confirm_btn = KEButton:new(_("EDITOR_UI_CREATE"))
 	confirm_btn.size = V.v(btn_w1, 32)
 	confirm_btn.pos = V.v(start_x, btn_y)
 	confirm_btn.text_size = confirm_btn.size
@@ -2734,27 +2734,27 @@ function gui:show_init_plugin_dialog()
 	function confirm_btn.on_click()
 		local entry = tostring(entry_prop.value or "")
 		if entry == "" then
-			self:show_save_notification("请输入合法 entry", false)
+			self:show_save_notification(_("EDITOR_UI_INVALID_ENTRY"), false)
 			return
 		end
 		local FS = love.filesystem
 		if FS.getInfo("plugins/" .. entry) then
-			self:show_save_notification("插件已存在: " .. entry, false)
+			self:show_save_notification(string.format(_("EDITOR_UI_PLUGIN_EXISTS"), entry), false)
 			return
 		end
 		local ok = self.editor:create_plugin(entry)
 		if ok then
 			popup:hide()
-			self:show_save_notification("地图插件已创建: " .. entry, true)
+			self:show_save_notification(string.format(_("EDITOR_UI_PLUGIN_CREATED"), entry), true)
 			local mode = wid("tools_game_mode") and wid("tools_game_mode").value or GAME_MODE_CAMPAIGN
 			self.editor:load_plugin_level(entry, mode)
 		else
-			self:show_save_notification("创建失败", false)
+			self:show_save_notification(_("EDITOR_UI_CREATE_FAILED"), false)
 		end
 	end
 	panel:add_child(confirm_btn)
 
-	local cancel_btn = KEButton:new("取消")
+	local cancel_btn = KEButton:new(_("Cancel"))
 	cancel_btn.size = V.v(btn_w2, 32)
 	cancel_btn.pos = V.v(start_x + btn_w1 + gap, btn_y)
 	cancel_btn.text_size = cancel_btn.size

@@ -2,19 +2,19 @@ require("all.constants")
 
 local E = require("entity_db")
 local damage_type_map = {
-	[DAMAGE_TRUE] = "真实伤害",
-	[DAMAGE_PHYSICAL] = "物理伤害",
-	[DAMAGE_MAGICAL] = "法术伤害",
-	[DAMAGE_EXPLOSION] = "爆炸伤害",
-	[DAMAGE_RUDE] = "残暴伤害",
-	[DAMAGE_STAB] = "穿刺伤害",
-	[DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害",
-	[DAMAGE_ELECTRICAL] = "雷电伤害",
-	[DAMAGE_MIXED] = "物法混合伤害",
-	[DAMAGE_SHOT] = "枪击伤害",
-	[DAMAGE_POISON] = "剧毒伤害",
-	[DAMAGE_AGAINST_ARMOR] = "破甲伤害",
-	[DAMAGE_AGAINST_MAGIC_ARMOR] = "破魔伤害"
+	[DAMAGE_TRUE] = _("HERO_ROOM_DMG_TRUE"),
+	[DAMAGE_PHYSICAL] = _("HERO_ROOM_DMG_PHYSICAL"),
+	[DAMAGE_MAGICAL] = _("HERO_ROOM_DMG_MAGICAL"),
+	[DAMAGE_EXPLOSION] = _("HERO_ROOM_DMG_EXPLOSION"),
+	[DAMAGE_RUDE] = _("HERO_ROOM_DMG_RUDE"),
+	[DAMAGE_STAB] = _("HERO_ROOM_DMG_STAB"),
+	[DAMAGE_MAGICAL_EXPLOSION] = _("HERO_ROOM_DMG_MAGICAL_EXPLOSION"),
+	[DAMAGE_ELECTRICAL] = _("HERO_ROOM_DMG_ELECTRICAL"),
+	[DAMAGE_MIXED] = _("HERO_ROOM_DMG_MIXED"),
+	[DAMAGE_SHOT] = _("HERO_ROOM_DMG_SHOT"),
+	[DAMAGE_POISON] = _("HERO_ROOM_DMG_POISON"),
+	[DAMAGE_AGAINST_ARMOR] = _("HERO_ROOM_DMG_AGAINST_ARMOR"),
+	[DAMAGE_AGAINST_MAGIC_ARMOR] = _("HERO_ROOM_DMG_AGAINST_MAGIC_ARMOR")
 }
 local bit = require("bit")
 local band = bit.band
@@ -45,7 +45,7 @@ local function str(...)
 end
 
 local function rate_str(rate)
-	return str(rate * 100, "%概率")
+	return string.format(_("HERO_ROOM_FMT_CHANCE"), str(rate * 100))
 end
 
 local function _max_level(skill)
@@ -71,7 +71,7 @@ local health = {{}, {}, {}} -- health 列表
 local H = {}
 
 H.default = {
-	["加工中"] = "加工中"
+	[_("HERO_ROOM_PROCESSING")] = _("HERO_ROOM_PROCESSING")
 }
 
 local function ss(key)
@@ -140,10 +140,10 @@ local function damage_str(i)
 	end
 
 	if d[i].damage_min == d[i].damage_max then
-		return str(d[i].damage_min, "点", damage_type_str(d[i].damage_type))
+		return string.format(_("HERO_ROOM_FMT_DAMAGE"), str(d[i].damage_min), damage_type_str(d[i].damage_type))
 	end
 
-	return str(d[i].damage_min, "-", d[i].damage_max, "点", damage_type_str(d[i].damage_type))
+	return string.format(_("HERO_ROOM_FMT_DAMAGE_RANGE"), str(d[i].damage_min), str(d[i].damage_max), damage_type_str(d[i].damage_type))
 end
 
 local function hp_str(i)
@@ -151,7 +151,7 @@ local function hp_str(i)
 		i = 1
 	end
 
-	return str(health[i].hp_max, "点生命值")
+	return string.format(_("HERO_ROOM_FMT_HP"), str(health[i].hp_max))
 end
 
 local function armor_str(i)
@@ -159,7 +159,7 @@ local function armor_str(i)
 		i = 1
 	end
 
-	return str(health[i].armor * 100, "点护甲")
+	return string.format(_("HERO_ROOM_FMT_ARMOR"), str(health[i].armor * 100))
 end
 
 local function magic_armor_str(i)
@@ -167,7 +167,7 @@ local function magic_armor_str(i)
 		i = 1
 	end
 
-	return str(health[i].magic_armor * 100, "点魔法抗性")
+	return string.format(_("HERO_ROOM_FMT_MAGIC_ARMOR"), str(health[i].magic_armor * 100))
 end
 --- t: table, with component health
 local function get_health(t, i)
@@ -192,18 +192,18 @@ local function health_str(i)
 	local h_str = hp_str(i)
 
 	if health[i].armor and health[i].armor > 0 then
-		h_str = str(h_str, "，", armor_str(i))
+		h_str = str(h_str, _("HERO_ROOM_FMT_SEP"), armor_str(i))
 	end
 
 	if health[i].magic_armor and health[i].magic_armor > 0 then
-		h_str = str(h_str, "，", magic_armor_str(i))
+		h_str = str(h_str, _("HERO_ROOM_FMT_SEP"), magic_armor_str(i))
 	end
 
 	return h_str
 end
 
 local function cooldown_str()
-	return str("每隔", cooldown, "秒，")
+	return string.format(_("HERO_ROOM_FMT_COOLDOWN"), str(cooldown))
 end
 
 local function T(template_name)
@@ -221,7 +221,7 @@ get_damage(b.bullet)
 get_damage(d[1], 2)
 
 d[2].damage_max = d[2].damage_max - 20
-map["多重射击"] = str("每隔", cooldown, "秒，小公主瞄准一小片敌人，合理分配箭矢目标，射出共", count, "发精灵箭矢，造成", damage_str(), "。当额外的箭矢命中同一敌人时，改为造成", damage_str(2), "。")
+map[_("HERO_ROOM_ALLERIA_MULTISHOT_NAME")] = string.format(_("HERO_ROOM_ALLERIA_MULTISHOT_DESC"), str(cooldown), str(count), str(damage_str()), str(damage_str(2)))
 
 set_skill(h.hero.skills.callofwild)
 
@@ -233,7 +233,7 @@ get_damage(e.melee.attacks[1])
 
 d[1].damage_min = s.damage_min_base + s.damage_inc * max_lvl
 d[1].damage_max = s.damage_max_base + s.damage_inc * max_lvl
-map["野性呼唤"] = str("每隔", cooldown, "秒，小公主召唤一只野猫，跟随小公主战斗，召唤期间保持无敌。野猫拥有", health[1].hp_max, "点生命值，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_ALLERIA_CALLOFWILD_NAME")] = string.format(_("HERO_ROOM_ALLERIA_CALLOFWILD_DESC"), str(cooldown), str(health[1].hp_max), str(damage_str()))
 
 set_skill(h.hero.skills.missileshot)
 
@@ -243,7 +243,7 @@ count = s.count_base + s.count_inc * max_lvl
 set_bullet("arrow_hero_alleria_missile")
 get_damage(b.bullet)
 
-map["追猎箭矢"] = str("每隔", cooldown, "秒，小公主射出一发追猎箭矢，追踪并穿刺最多", count, "个目标，对每个目标造成", damage_str(), "。")
+map[_("HERO_ROOM_ALLERIA_MISSILESHOT_NAME")] = string.format(_("HERO_ROOM_ALLERIA_MISSILESHOT_DESC"), str(cooldown), str(count), str(damage_str()))
 
 set_hero("hero_gerald")
 set_skill(h.hero.skills.block_counter)
@@ -253,7 +253,7 @@ local factor = h.dodge.counter_attack.reflected_damage_factor + h.dodge.counter_
 local chance = h.dodge.chance_base + h.dodge.chance_inc * max_lvl
 local low_change_factor = h.dodge.low_chance_factor
 
-map["惩戒之盾"] = str("杰拉尔德每次受到近战攻击时，有", chance * 100, "%的概率举盾反击，免疫并造成本次攻击伤害", factor * 100, "%的", damage_type_map[d[1].damage_type], "。面对BOSS单位时，盾反概率×", low_change_factor * 100, "%；受到范围攻击时，盾反概率×60%。")
+map[_("HERO_ROOM_GERALD_BLOCK_COUNTER_NAME")] = string.format(_("HERO_ROOM_GERALD_BLOCK_COUNTER_DESC"), str(chance * 100), str(factor * 100), str(damage_type_map[d[1].damage_type]), str(low_change_factor * 100))
 
 set_skill(h.hero.skills.holy_strike)
 get_damage(h.melee.attacks[3])
@@ -263,7 +263,7 @@ e = T("mod_paladin_silence")
 local duration = e.modifier.duration
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
-map["神圣打击"] = str(cooldown_str(), "杰拉尔德发动神圣打击，对", radius, "范围内敌人造成", damage_str(), "，并使其沉默", duration, "秒。")
+map[_("HERO_ROOM_GERALD_HOLY_STRIKE_NAME")] = string.format(_("HERO_ROOM_GERALD_HOLY_STRIKE_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(duration))
 
 set_skill(h.hero.skills.courage)
 
@@ -279,7 +279,7 @@ local armor_buff = e.courage.armor_inc * max_lvl
 local magic_armor_buff = e.courage.magic_armor_inc * max_lvl
 local duration = e.modifier.duration
 
-map["鼓舞"] = str("每隔", cooldown, "秒，在身边至少有", min_count, "名友军时，杰拉尔德会敲盾鼓舞他们，立刻恢复友军", heal_factor * 100, "%最大生命值，并在接下来的", duration, "秒内提升友军", damage_buff, "点伤害，", armor_buff * 100, "点护甲和", magic_armor_buff * 100, "点魔法抗性。抗性提升与恢复效果对英雄减半。")
+map[_("HERO_ROOM_GERALD_COURAGE_NAME")] = string.format(_("HERO_ROOM_GERALD_COURAGE_DESC"), str(cooldown), str(min_count), str(heal_factor * 100), str(duration), str(damage_buff), str(armor_buff * 100), str(magic_armor_buff * 100))
 
 set_skill(h.hero.skills.paladin)
 
@@ -297,7 +297,7 @@ cooldown = h.timed_attacks.list[2].cooldown
 
 local duration = e.reinforcement.duration
 
-map["神圣支援"] = str("每隔", cooldown, "秒，爵士召唤一名可调集的皇家近卫协助战斗。皇家近卫拥有", hp_str(), "，", armor_str(), "，", "每次攻击造成", damage_str(), "，驻场", duration, "秒。")
+map[_("HERO_ROOM_GERALD_PALADIN_NAME")] = string.format(_("HERO_ROOM_GERALD_PALADIN_DESC"), str(cooldown), str(hp_str()), str(armor_str()), str(damage_str()), str(duration))
 
 set_hero("hero_bolin")
 set_skill(h.hero.skills.mines)
@@ -312,7 +312,7 @@ local radius = b.radius
 cooldown = h.timed_attacks.list[3].cooldown
 count = h.timed_attacks.list[3].count
 duration = b.duration
-map["布雷专家"] = str("每隔", cooldown, "秒，博林投掷一枚警戒范围为", radius, "的地雷，持续时间", duration, "秒，最多同时存在", count, "枚。地雷爆炸时，对", radius * 2, "范围内敌人造成", damage_str(), "。若视野内有敌人，博林将尝试直接向敌人投掷地雷。")
+map[_("HERO_ROOM_BOLIN_MINES_NAME")] = string.format(_("HERO_ROOM_BOLIN_MINES_DESC"), str(cooldown), str(radius), str(duration), str(count), str(radius * 2), str(damage_str()))
 
 set_skill(h.hero.skills.tar)
 
@@ -326,10 +326,10 @@ set_bullet("mod_bolin_slow")
 
 factor = 1 - b.slow.factor
 cooldown = h.timed_attacks.list[2].cooldown
-map["焦油炸弹"] = str("每隔", cooldown, "秒，博林投掷一枚焦油炸弹，炸弹在命中地面后形成一片半径为", radius, "的焦油区域，使进入焦油区域的敌人移动速度降低", factor * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_BOLIN_TAR_NAME")] = string.format(_("HERO_ROOM_BOLIN_TAR_DESC"), str(cooldown), str(radius), str(factor * 100), str(duration))
 chance = h.timed_attacks.list[4].chance
 count = #h.timed_attacks.list[4].shoot_times
-map["狂热连射"] = str("博林有", chance * 100, "%的概率连射", count, "次，每发子弹造成最大伤害。")
+map[_("HERO_ROOM_BOLIN_TAR_2_NAME")] = string.format(_("HERO_ROOM_BOLIN_TAR_2_DESC"), str(chance * 100), str(count))
 cooldown = h.timed_attacks.list[5].cooldown
 count = h.timed_attacks.list[5].count
 
@@ -337,7 +337,7 @@ set_bullet("bomb_shrapnel_bolin")
 get_damage(b.bullet)
 
 radius = b.bullet.damage_radius
-map["霰弹射击"] = str("每隔", cooldown, "秒，博林发射", count, "发霰弹，每发霰弹在命中目标后对半径", radius, "范围内的敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_BOLIN_TAR_3_NAME")] = string.format(_("HERO_ROOM_BOLIN_TAR_3_DESC"), str(cooldown), str(count), str(radius), str(damage_str()))
 
 set_hero("hero_magnus")
 set_skill(h.hero.skills.mirage)
@@ -354,8 +354,8 @@ local rain_damage_factor = e.skill_damage_factor
 
 duration = e.reinforcement.duration
 cooldown = h.timed_attacks.list[1].cooldown
-map["幻影"] = str(cooldown_str(), "马格努斯创造", count, "个幻影分身，分身拥有主英雄", health_factor * 100, "%的生命值，", damage_factor * 100, "%的普攻伤害，持续", duration, "秒。")
-map["幻影·奥术风暴"] = str("马格努斯的幻影分身会释放弱化的奥术风暴，每个幻影分身释放的奥术风暴拥有主英雄奥术风暴", rain_radius_factor * 100, "%的作用范围，造成", rain_damage_factor * 100, "%的魔法伤害。")
+map[_("HERO_ROOM_MAGNUS_MIRAGE_NAME")] = string.format(_("HERO_ROOM_MAGNUS_MIRAGE_DESC"), str(cooldown_str()), str(count), str(health_factor * 100), str(damage_factor * 100), str(duration))
+map[_("HERO_ROOM_MAGNUS_MIRAGE_2_NAME")] = string.format(_("HERO_ROOM_MAGNUS_MIRAGE_2_DESC"), str(rain_radius_factor * 100), str(rain_damage_factor * 100))
 
 set_skill(h.hero.skills.arcane_rain)
 
@@ -368,7 +368,7 @@ radius = b.damage_radius
 count = s.count[max_lvl]
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
-map["奥术风暴"] = str(cooldown_str(), "马格努斯召唤奥术风暴，在目标区域内降下", count, "枚奥术雨滴，每枚雨滴对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_MAGNUS_ARCANE_RAIN_NAME")] = string.format(_("HERO_ROOM_MAGNUS_ARCANE_RAIN_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 
 set_hero("hero_ignus")
 set_skill(h.hero.skills.flaming_frenzy)
@@ -381,7 +381,7 @@ local heal_factor = h.timed_attacks.list[1].heal_factor
 
 radius = h.timed_attacks.list[1].max_range
 cooldown = h.timed_attacks.list[1].cooldown
-map["暴怒狂焰"] = str(cooldown_str(), "伊格努斯释放暴怒狂焰，对周围", radius, "范围内的敌人造成", damage_str(), "，并恢复", heal_factor * 100, "%最大生命值。")
+map[_("HERO_ROOM_IGNUS_FLAMING_FRENZY_NAME")] = string.format(_("HERO_ROOM_IGNUS_FLAMING_FRENZY_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(heal_factor * 100))
 
 set_skill(h.hero.skills.surge_of_flame)
 set_bullet("aura_ignus_surge_of_flame")
@@ -394,21 +394,21 @@ local cycle_time = b.aura.cycle_time
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 cooldown = h.timed_attacks.list[2].cooldown
-map["烈焰喷涌"] = str(cooldown_str(), "伊格努斯化为火球，快速穿梭至另一名敌人面前，再穿梭回来，期间保持无敌，并对身边", radius, "范围内敌人每", cycle_time, "秒造成", damage_str(), "。若穿梭导致了目标死亡，伊格努斯将额外寻找目标穿梭。")
+map[_("HERO_ROOM_IGNUS_SURGE_OF_FLAME_NAME")] = string.format(_("HERO_ROOM_IGNUS_SURGE_OF_FLAME_DESC"), str(cooldown_str()), str(radius), str(cycle_time), str(damage_str()))
 
 set_bullet("mod_ignus_burn_3")
 get_damage(b.dps)
 
 cycle_time = b.dps.damage_every
 duration = b.modifier.duration
-map["烈火附身"] = str("伊格努斯所有攻击有60%的概率点燃敌人，使其在接下来的", duration, "秒内每", cycle_time, "秒受到", damage_str(), "。永恒燃烧的身躯使伊格努斯免疫火焰与剧毒。")
+map[_("HERO_ROOM_IGNUS_SURGE_OF_FLAME_2_NAME")] = string.format(_("HERO_ROOM_IGNUS_SURGE_OF_FLAME_2_DESC"), str(duration), str(cycle_time), str(damage_str()))
 
 set_hero("hero_malik")
 set_bullet("mod_malik_stun")
 
 duration = b.modifier.duration
 chance = h.melee.attacks[2].chance
-map["震慑"] = str("马利克每次普攻有", rate_str(chance), "震慑敌人，使敌人眩晕", duration, "秒。")
+map[_("HERO_ROOM_MALIK_SURGE_OF_FLAME_NAME")] = string.format(_("HERO_ROOM_MALIK_SURGE_OF_FLAME_DESC"), str(rate_str(chance)), str(duration))
 
 set_skill(h.hero.skills.smash)
 
@@ -420,7 +420,7 @@ d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 chance = s.stun_chance[max_lvl]
 radius = h.melee.attacks[3].damage_radius
-map["粉碎重锤"] = str(cooldown_str(), "马利克调动重锤之力，对面前", radius, "范围内敌人造成", damage_str(), "，并有", rate_str(chance), "使其眩晕", duration, "秒。该技能获取经验量和造成总伤相关。")
+map[_("HERO_ROOM_MALIK_SMASH_NAME")] = string.format(_("HERO_ROOM_MALIK_SMASH_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(rate_str(chance)), str(duration))
 
 set_skill(h.hero.skills.fissure)
 set_bullet("aura_malik_fissure")
@@ -430,7 +430,7 @@ radius = b.aura.damage_radius
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 cooldown = h.melee.attacks[4].cooldown
-map["地震"] = str(cooldown_str(), "马利克高高跃起，锤击地面，引起数片地震，每片地震对", radius, "范围内敌人造成", damage_str(), "，并使其眩晕", duration, "秒。在道路的交汇处，地震将额外向多条道路蔓延。")
+map[_("HERO_ROOM_MALIK_FISSURE_NAME")] = string.format(_("HERO_ROOM_MALIK_FISSURE_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(duration))
 
 set_hero("hero_denas")
 set_skill(h.hero.skills.tower_buff)
@@ -444,7 +444,7 @@ local s_range_factor = b.range_factor - 1
 local s_cooldown_factor = 1 - b.cooldown_factor
 local range = h.timed_attacks.list[2].max_range
 
-map["皇家号令"] = str(cooldown_str(), "迪纳斯发出皇家号令，使", range, "范围内友军防御塔攻击范围提升", s_range_factor * 100, "%，攻速提升", s_cooldown_factor * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_DENAS_TOWER_BUFF_NAME")] = string.format(_("HERO_ROOM_DENAS_TOWER_BUFF_DESC"), str(cooldown_str()), str(range), str(s_range_factor * 100), str(s_cooldown_factor * 100), str(duration))
 
 set_skill(h.hero.skills.catapult)
 
@@ -457,11 +457,11 @@ d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 count = s.count[max_lvl]
 radius = b.bullet.damage_radius
-map["投石弹幕"] = str(cooldown_str(), "迪纳斯命令投石机向目标区域发射", count, "块巨石，每块巨石对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_DENAS_CATAPULT_NAME")] = string.format(_("HERO_ROOM_DENAS_CATAPULT_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 
 local s_price_factor = 1 - h.tower_price_factor
 
-map["资源调配"] = str("迪纳斯国王优秀的资源调配能力使所有防御塔的造价降低", s_price_factor * 100, "%。赞美国王！")
+map[_("HERO_ROOM_DENAS_CATAPULT_2_NAME")] = string.format(_("HERO_ROOM_DENAS_CATAPULT_2_DESC"), str(s_price_factor * 100))
 
 set_hero("hero_elora")
 set_skill(h.hero.skills.chill)
@@ -472,7 +472,7 @@ e = E:get_template("aura_chill_elora")
 radius = e.aura.radius
 cooldown = h.timed_attacks.list[2].cooldown
 duration = e.aura.duration
-map["永恒冻土"] = str(cooldown_str(), "伊洛拉制造", count, "片冻土覆盖地面，持续", duration, "秒，每一片冻土使", radius, "范围内敌人受到", factor * 100, "%减速效果。")
+map[_("HERO_ROOM_ELORA_CHILL_NAME")] = string.format(_("HERO_ROOM_ELORA_CHILL_DESC"), str(cooldown_str()), str(count), str(duration), str(radius), str(factor * 100))
 
 set_skill(h.hero.skills.ice_storm)
 
@@ -485,7 +485,7 @@ d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_min = s.damage_min[max_lvl]
 radius = b.bullet.damage_radius
 cooldown = h.timed_attacks.list[1].cooldown
-map["寒冰风暴"] = str(cooldown_str(), "伊洛拉召唤", count, "枚冰锥打击敌人，每一枚冰锥对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_ELORA_ICE_STORM_NAME")] = string.format(_("HERO_ROOM_ELORA_ICE_STORM_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 e = E:get_template("mod_elora_bolt_slow")
 duration = e.modifier.duration
 factor = 1 - e.slow.factor
@@ -494,7 +494,7 @@ e = E:get_template("mod_elora_bolt_freeze")
 
 local duration_2 = e.modifier.duration
 
-map["冰霜气息"] = str("伊洛拉的法球可对敌人造成", factor * 100, "%的减速效果，持续", duration, "秒。法球有", rate_str(chance), "冰冻敌人，持续", duration_2, "秒。")
+map[_("HERO_ROOM_ELORA_ICE_STORM_2_NAME")] = string.format(_("HERO_ROOM_ELORA_ICE_STORM_2_DESC"), str(factor * 100), str(duration), str(rate_str(chance)), str(duration_2))
 
 set_hero("hero_ingvar")
 
@@ -504,7 +504,7 @@ get_damage(h.melee.attacks[2])
 
 radius = h.melee.attacks[2].damage_radius
 factor = h.melee.attacks[2].damage_factor
-map["旋风斩"] = str("英格瓦每次攻击有", rate_str(chance), "的概率发动旋风斩，对周围", radius, "范围内敌人造成普攻", factor * 100, "%的", damage_type_map[d[1].damage_type], "。该技能获取经验数与造成总伤相关。")
+map[_("HERO_ROOM_INGVAR_ICE_STORM_NAME")] = string.format(_("HERO_ROOM_INGVAR_ICE_STORM_DESC"), str(rate_str(chance)), str(radius), str(factor * 100), str(damage_type_map[d[1].damage_type]))
 
 set_skill(h.hero.skills.ancestors_call)
 
@@ -518,7 +518,7 @@ d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
 duration = e.reinforcement.duration
-map["先祖召唤"] = str(cooldown_str(), "英格瓦召唤", count, "名可调集的先祖加入战斗。先祖拥有", hp_str(1), "，每次攻击造成", damage_str(), "，驻场", duration, "秒，且不会被转化为狼人或骷髅。若该技能已冷却好，且英格瓦仍处于巨熊形态，英格瓦将自行退出巨熊形态并释放本技能，并返还对应冷却时间。")
+map[_("HERO_ROOM_INGVAR_ANCESTORS_CALL_NAME")] = string.format(_("HERO_ROOM_INGVAR_ANCESTORS_CALL_DESC"), str(cooldown_str()), str(count), str(hp_str(1)), str(damage_str()), str(duration))
 
 set_skill(h.hero.skills.bear)
 get_damage(h.melee.attacks[3])
@@ -533,11 +533,11 @@ cycle_time = e.regen.cooldown
 
 local heal = e.regen.health
 
-map["巨熊形态"] = str(cooldown_str(), "若英格瓦生命值低于", factor * 100, "%，英格瓦将变身巨熊，持续", duration, "秒。变身后，英格瓦免疫基础伤害类型，攻击替换为三连击，每次攻击造成", damage_str(), "。变身期间，英格瓦还会获得每", cycle_time, "秒恢复", heal, "点生命值的再生效果。该技能在巨熊状态下不进入冷却。")
+map[_("HERO_ROOM_INGVAR_BEAR_NAME")] = string.format(_("HERO_ROOM_INGVAR_BEAR_DESC"), str(cooldown_str()), str(factor * 100), str(duration), str(damage_str()), str(cycle_time), str(heal))
 
 set_hero("hero_hacksaw")
 
-map["摧甲钢锯"] = str("钢锯每次攻击敌人，都能削减敌人5点护甲，并加快弹射锯片等同于敌人护甲一半的冷却。")
+map[_("HERO_ROOM_HACKSAW_BEAR_NAME")] = _("HERO_ROOM_HACKSAW_BEAR_DESC")
 
 set_skill(h.hero.skills.sawblade)
 
@@ -548,12 +548,12 @@ get_damage(b.bullet)
 
 range = b.bounce_range
 cooldown = h.ranged.attacks[1].cooldown
-map["弹射锯片"] = str(cooldown_str(), "钢锯发射一枚高速飞行的锯片，造成", damage_str(), "，并在击中目标后弹射至最多", count, "个附近敌人，弹射范围为", range, "。")
+map[_("HERO_ROOM_HACKSAW_SAWBLADE_NAME")] = string.format(_("HERO_ROOM_HACKSAW_SAWBLADE_DESC"), str(cooldown_str()), str(damage_str()), str(count), str(range))
 
 set_skill(h.hero.skills.timber)
 get_cooldown()
 
-map["伐伐伐木"] = str(cooldown_str(), "钢锯祭出巨型电钻，强行秒杀面前的敌人，并获得双倍的金币。")
+map[_("HERO_ROOM_HACKSAW_TIMBER_NAME")] = string.format(_("HERO_ROOM_HACKSAW_TIMBER_DESC"), str(cooldown_str()))
 
 set_hero("hero_oni")
 set_skill(h.hero.skills.death_strike)
@@ -563,7 +563,7 @@ d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 chance = s.chance[max_lvl]
 cooldown = h.melee.attacks[3].cooldown
-map["灭魂斩"] = str(cooldown_str(), "鬼侍聚力怒击，对敌人造成无法闪避的", damage_str(), "并有", rate_str(chance), "斩杀敌人。")
+map[_("HERO_ROOM_ONI_DEATH_STRIKE_NAME")] = string.format(_("HERO_ROOM_ONI_DEATH_STRIKE_DESC"), str(cooldown_str()), str(damage_str()), str(rate_str(chance)))
 
 set_skill(h.hero.skills.torment)
 get_damage(h.timed_attacks.list[1])
@@ -573,13 +573,13 @@ d[1].damage_max = s.max_damage[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
 min_count = h.timed_attacks.list[1].min_count
 radius = h.timed_attacks.list[1].damage_radius
-map["千本刃"] = str(cooldown_str(), "若身边有不少于", min_count, "名敌人，鬼侍插刀入地，生出千刃莲台，对", radius, "范围内敌人造成无法闪避的", damage_str(), "。若目标为恶魔，则额外造成60%伤害。")
+map[_("HERO_ROOM_ONI_TORMENT_NAME")] = string.format(_("HERO_ROOM_ONI_TORMENT_DESC"), str(cooldown_str()), str(min_count), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.rage)
 
 damage_buff = s.rage_max[max_lvl]
 factor = s.unyield_max[max_lvl]
-map["复仇怒火"] = str("鬼侍的复仇之火永恒燃烧，无视恶魔的爆炸，并在受伤时提升伤害与免伤，最多提高", damage_buff, "点伤害与", factor * 100, "%伤害减免。每当鬼侍受到伤害，普攻和灭魂斩的冷却减少0.5秒，千本刃的冷却减少1秒。")
+map[_("HERO_ROOM_ONI_RAGE_NAME")] = string.format(_("HERO_ROOM_ONI_RAGE_DESC"), str(damage_buff), str(factor * 100))
 
 set_hero("hero_thor")
 set_skill(h.hero.skills.thunderclap)
@@ -599,7 +599,7 @@ d[2].damage_type = b.thunderclap.secondary_damage_type
 local duration_min = b.thunderclap.stun_duration_min
 
 cooldown = h.ranged.attacks[1].cooldown
-map["雷神之锤"] = str(cooldown_str(), "索尔掷出雷神之锤，对目标造成", damage_str(1), "，并对", radius, "范围内敌人造成", damage_str(2), "与", duration_min, "-", duration, "秒眩晕效果。")
+map[_("HERO_ROOM_THOR_THUNDERCLAP_NAME")] = string.format(_("HERO_ROOM_THOR_THUNDERCLAP_DESC"), str(cooldown_str()), str(damage_str(1)), str(radius), str(damage_str(2)), str(duration_min), str(duration))
 
 set_skill(h.hero.skills.chainlightning)
 
@@ -618,9 +618,9 @@ set_bullet("mod_hero_thor_chainlightning")
 d[2].damage_type = b.chainlightning.damage_type
 d[2].damage_min = b.chainlightning.damage
 d[2].damage_max = b.chainlightning.damage
-map["雷霆一击"] = str("索尔每次攻击，有", rate_str(chance), "触发", count, "条电流分配给随机敌人，造成", damage_str(2), "并施加可叠加的电击效果，每", cycle_time, "秒造成", damage_str(), "，持续", duration, "秒。触发雷霆一击时，雷神之锤的冷却加快1秒。雷神的普攻攻速提升", factor * 100, "%。")
+map[_("HERO_ROOM_THOR_CHAINLIGHTNING_NAME")] = string.format(_("HERO_ROOM_THOR_CHAINLIGHTNING_DESC"), str(rate_str(chance)), str(count), str(damage_str(2)), str(cycle_time), str(damage_str()), str(duration), str(factor * 100))
 heal = h.hero.level_stats.lightning_heal[10]
-map["雷电中继"] = str("索尔的身躯可以充当电流的中继站，使电流传导上限刷新至5倍，并使电流的传导范围翻倍。每当雷电中继触发，索尔都会恢复", heal, "点生命值。")
+map[_("HERO_ROOM_THOR_CHAINLIGHTNING_2_NAME")] = string.format(_("HERO_ROOM_THOR_CHAINLIGHTNING_2_DESC"), str(heal))
 
 set_hero("hero_10yr")
 set_skill(h.hero.skills.buffed)
@@ -655,8 +655,8 @@ d[2].damage_type = b.aura.damage_type
 chance = b.aura.stun_chance
 e = E:get_template("mod_10yr_stun")
 duration_2 = e.modifier.duration
-map["钢铁时间"] = str("每隔", cooldown, "秒，若周围敌人数量不少于", count_2, "，天十进入钢铁状态，移速提升至", speed, "。并免疫基础伤害类型，持续", duration, "秒。在钢铁状态下，天十每隔", cooldown_3, "秒高速旋转，对", radius, "范围内敌人进行", loop, "连击，每次攻击造成", damage_str(3), "。在调集距离较远时，天十将主动退出钢铁状态，返还对应冷却，并传送至调集位置。该技能在钢铁状态下不进入冷却。")
-map["巨叟撼地"] = str("在钢铁状态下，天十每隔", cooldown_2, "秒高高跃起，对", radius_3, "范围内敌人造成", damage_str(1), "，同时震碎地面，激起", count, "片裂片，每片裂片对", radius_2, "范围内敌人造成", damage_str(2), "，并有", rate_str(chance), "使其眩晕", duration_2, "秒。")
+map[_("HERO_ROOM_10YR_BUFFED_NAME")] = string.format(_("HERO_ROOM_10YR_BUFFED_DESC"), str(cooldown), str(count_2), str(speed), str(duration), str(cooldown_3), str(radius), str(loop), str(damage_str(3)))
+map[_("HERO_ROOM_10YR_BUFFED_2_NAME")] = string.format(_("HERO_ROOM_10YR_BUFFED_2_DESC"), str(cooldown_2), str(radius_3), str(damage_str(1)), str(count), str(radius_2), str(damage_str(2)), str(rate_str(chance)), str(duration_2))
 
 set_skill(h.hero.skills.rain)
 set_bullet("fireball_10yr")
@@ -676,7 +676,7 @@ cycle_time = b.aura.cycle_time
 
 get_damage(b.aura, 2)
 
-map["火焰冲刺"] = str(cooldown_str(), "天十感召天地，召唤", loop, "枚火球，每枚火球对", radius, "范围内敌人造成", damage_str(1), "。火球落地后产生焦土，每隔", cycle_time, "秒对", radius_2, "范围内敌人造成", damage_str(2), "，持续", duration, "秒。每隔双倍冷却，天十还会释放一次本技能的增强版本，召唤一坨两倍大小的火球。")
+map[_("HERO_ROOM_10YR_RAIN_NAME")] = string.format(_("HERO_ROOM_10YR_RAIN_DESC"), str(cooldown_str()), str(loop), str(radius), str(damage_str(1)), str(cycle_time), str(radius_2), str(damage_str(2)), str(duration))
 
 set_hero("hero_alric")
 set_skill(h.hero.skills.flurry)
@@ -686,7 +686,7 @@ loop = s.loops[max_lvl]
 get_cooldown()
 get_damage(h.melee.attacks[3])
 
-map["血色连斩"] = str(cooldown_str(), "沙王对面前敌人发动", loop, "连斩，每次斩击造成普攻等额的", damage_type_str(d[1].damage_type), "。该技能获取经验量与总伤相关。")
+map[_("HERO_ROOM_ALRIC_FLURRY_NAME")] = string.format(_("HERO_ROOM_ALRIC_FLURRY_DESC"), str(cooldown_str()), str(loop), str(damage_type_str(d[1].damage_type)))
 
 set_skill(h.hero.skills.sandwarriors)
 
@@ -704,8 +704,8 @@ set_bullet("decal_alric_soul_ball")
 
 factor = b.hp_factor
 cooldown = h.timed_attacks.list[1].cooldown
-map["沙漠勇士"] = str(cooldown_str(), "沙王唤醒", count, "名沙漠勇士，一同作战。沙漠勇士拥有", health[1].hp_max, "点生命值，每次攻击造成", damage_str(), "，驻场", duration, "秒，且无惧剧毒，不会狼人化、尸骸化。")
-map["沙漠之心"] = str("阿尔里奇的心与沙漠和族人们紧密连结。远距离调遣时，阿尔里奇会化身沙卷风，提升自身", speed, "点移速。在沙漠勇士的躯体消散时，他们的灵魂会飘向阿尔里奇，使阿尔里奇恢复沙漠勇士最大生命值", factor * 100, "%的生命，并减少血色连斩10%的剩余冷却时间。")
+map[_("HERO_ROOM_ALRIC_SANDWARRIORS_NAME")] = string.format(_("HERO_ROOM_ALRIC_SANDWARRIORS_DESC"), str(cooldown_str()), str(count), str(health[1].hp_max), str(damage_str()), str(duration))
+map[_("HERO_ROOM_ALRIC_SANDWARRIORS_2_NAME")] = string.format(_("HERO_ROOM_ALRIC_SANDWARRIORS_2_DESC"), str(speed), str(factor * 100))
 
 set_skill(h.hero.skills.spikedarmor)
 
@@ -715,7 +715,7 @@ for _, value in pairs(s.values) do
 	spiked_armor = spiked_armor + value
 end
 
-map["反伤刺甲"] = str("沙王额外获得", spiked_armor * 100, "点反甲。")
+map[_("HERO_ROOM_ALRIC_SPIKEDARMOR_NAME")] = string.format(_("HERO_ROOM_ALRIC_SPIKEDARMOR_DESC"), str(spiked_armor * 100))
 
 set_hero("hero_mirage")
 set_skill(h.hero.skills.shadowdodge)
@@ -731,7 +731,7 @@ e = E:get_template("soldier_mirage_illusion")
 get_damage(e.melee.attacks[1])
 
 radius = e.melee.attacks[1].damage_radius
-map["移形换影"] = str("幻影每次遭遇近战攻击时，有", rate_str(chance), "恢复10%最大生命值，消除自身异常状态，进入无敌状态并闪离，在原地留下一个存在", duration, "秒的影子。影子消失时，对", radius, "范围内敌人造成", damage_str(), "。若幻影成功闪避近战攻击，将立刻缩减影舞", reward_shadowdance * 100, "%冷却与背刺", reward_lethalstrike * 100, "%冷却。面对范围攻击或远程攻击时，移形换影触发概率×60%。")
+map[_("HERO_ROOM_MIRAGE_SHADOWDODGE_NAME")] = string.format(_("HERO_ROOM_MIRAGE_SHADOWDODGE_DESC"), str(rate_str(chance)), str(duration), str(radius), str(damage_str()), str(reward_shadowdance * 100), str(reward_lethalstrike * 100))
 
 set_skill(h.hero.skills.shadowdance)
 
@@ -743,7 +743,7 @@ get_damage(b.bullet)
 d[1].damage_min = b.bullet.damage_min + b.bullet.damage_inc * max_lvl
 d[1].damage_max = b.bullet.damage_max + b.bullet.damage_inc * max_lvl
 cooldown = h.timed_attacks.list[1].cooldown
-map["影舞"] = str(cooldown_str(), "幻影进入无敌状态，幻化", count, "个分身，每个分身对敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_MIRAGE_SHADOWDANCE_NAME")] = string.format(_("HERO_ROOM_MIRAGE_SHADOWDANCE_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.lethalstrike)
 
@@ -754,7 +754,7 @@ get_damage(h.timed_attacks.list[2])
 
 d[1].damage_min = d[1].damage_min * max_lvl
 d[1].damage_max = d[1].damage_max * max_lvl
-map["背刺"] = str(cooldown_str(), "幻影进入无敌状态，潜行到敌人背后，发动致命一击，造成", damage_str(), "，并有", rate_str(chance), "概率斩杀敌人。对于BOSS单位，斩杀效果替换为双倍伤害。")
+map[_("HERO_ROOM_MIRAGE_LETHALSTRIKE_NAME")] = string.format(_("HERO_ROOM_MIRAGE_LETHALSTRIKE_DESC"), str(cooldown_str()), str(damage_str()), str(rate_str(chance)))
 
 set_hero("hero_pirate")
 set_skill(h.hero.skills.scattershot)
@@ -766,7 +766,7 @@ get_damage(E:get_template("barrel_fragment").bullet)
 d[1].damage_max = s.fragment_damage[max_lvl]
 d[1].damage_min = s.fragment_damage[max_lvl]
 cooldown = h.timed_attacks.list[2].cooldown
-map["火药子母"] = str(cooldown_str(), "黑棘船长投出一桶炸药，在空中爆炸产生", count, "枚破片，每枚破片造成", damage_str(), "。")
+map[_("HERO_ROOM_PIRATE_SCATTERSHOT_NAME")] = string.format(_("HERO_ROOM_PIRATE_SCATTERSHOT_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.kraken)
 
@@ -779,12 +779,12 @@ get_damage(e.dps)
 
 cycle_time = e.dps.damage_every
 duration = e.modifier.duration
-map["克拉肯之触"] = str(cooldown_str(), "黑棘船长召唤克拉肯的触手攻击敌人，持续", duration, "秒。在持续区间，触手可困住最多", count, "名敌人，并使范围内敌人受到", factor * 100, "%的减速效果，且每", cycle_time, "秒受到", damage_str(), "。")
+map[_("HERO_ROOM_PIRATE_KRAKEN_NAME")] = string.format(_("HERO_ROOM_PIRATE_KRAKEN_DESC"), str(cooldown_str()), str(duration), str(count), str(factor * 100), str(cycle_time), str(damage_str()))
 
 set_skill(h.hero.skills.looting)
 
 factor = s.percent[max_lvl]
-map["寻宝"] = str("黑棘船长高超的职业素养让他能在摸尸体的时候找到额外", factor * 100, "%的金币。")
+map[_("HERO_ROOM_PIRATE_LOOTING_NAME")] = string.format(_("HERO_ROOM_PIRATE_LOOTING_DESC"), str(factor * 100))
 
 set_hero("hero_wizard")
 set_skill(h.hero.skills.magicmissile)
@@ -797,13 +797,13 @@ get_damage(b.bullet)
 
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
-map["魔法飞弹"] = str(cooldown_str(), "纽维斯发射", count, "枚魔法飞弹，全图范围内追踪敌人，每枚飞弹造成", damage_str(), "。")
+map[_("HERO_ROOM_WIZARD_MAGICMISSILE_NAME")] = string.format(_("HERO_ROOM_WIZARD_MAGICMISSILE_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.chainspell)
 
 count = s.bounces[max_lvl]
 cooldown = h.ranged.attacks[2].cooldown
-map["连锁反应"] = str(cooldown_str(), "纽维斯的普攻额外进行", count, "次弹射。")
+map[_("HERO_ROOM_WIZARD_CHAINSPELL_NAME")] = string.format(_("HERO_ROOM_WIZARD_CHAINSPELL_DESC"), str(cooldown_str()), str(count))
 
 set_skill(h.hero.skills.disintegrate)
 
@@ -812,12 +812,12 @@ count = s.count[max_lvl]
 local total_damage = s.total_damage[max_lvl]
 
 cooldown = h.timed_attacks.list[1].cooldown
-map["分解"] = str(cooldown_str(), "纽维斯用知识的力量分解最多", count, "名血量总和不超过", total_damage, "的敌人。")
+map[_("HERO_ROOM_WIZARD_DISINTEGRATE_NAME")] = string.format(_("HERO_ROOM_WIZARD_DISINTEGRATE_DESC"), str(cooldown_str()), str(count), str(total_damage))
 
 set_skill(h.hero.skills.arcanetorrent)
 
 factor = s.factor[max_lvl]
-map["法术洪流"] = str("年迈的法师热衷于在后辈前展示力量。场上每多一座法师塔，纽维斯的伤害就提升", factor * 100, "%。该伤害提升对魔法飞弹、分解同样生效。")
+map[_("HERO_ROOM_WIZARD_ARCANETORRENT_NAME")] = string.format(_("HERO_ROOM_WIZARD_ARCANETORRENT_DESC"), str(factor * 100))
 
 set_hero("hero_beastmaster")
 set_skill(h.hero.skills.boarmaster)
@@ -841,7 +841,7 @@ get_damage(e.melee.attacks[1], 2)
 
 chance = e.dodge.chance
 cooldown = h.timed_attacks.list[2].cooldown
-map["野猪朋友"] = str(cooldown_str(), "兽王随机召唤", count, "只野猪、野狼，跟随兽王战斗。野猪拥有", health_str(), "，每次攻击造成", damage_str(), "；野狼拥有", health_str(2), "，每次攻击造成", damage_str(2), "，且拥有", rate_str(chance), "闪避攻击。")
+map[_("HERO_ROOM_BEASTMASTER_BOARMASTER_NAME")] = string.format(_("HERO_ROOM_BEASTMASTER_BOARMASTER_DESC"), str(cooldown_str()), str(count), str(health_str()), str(damage_str()), str(health_str(2)), str(damage_str(2)), str(rate_str(chance)))
 
 set_skill(h.hero.skills.falconer)
 
@@ -854,7 +854,7 @@ get_damage(e.custom_attack)
 e = E:get_template("mod_beastmaster_falcon")
 duration = e.modifier.duration
 factor = 1 - e.slow.factor
-map["猎鹰朋友"] = str("兽王身边伴有", count, "只猎鹰。猎鹰每隔", cooldown, "秒发动一次攻击，造成", damage_str(), "，并使目标受到", factor * 100, "%的减速效果，持续", duration, "秒。")
+map[_("HERO_ROOM_BEASTMASTER_FALCONER_NAME")] = string.format(_("HERO_ROOM_BEASTMASTER_FALCONER_DESC"), str(count), str(cooldown), str(damage_str()), str(factor * 100), str(duration))
 
 set_skill(h.hero.skills.stampede)
 
@@ -869,7 +869,7 @@ get_damage(e.attack)
 d[1].damage_max = s.damage[max_lvl]
 d[1].damage_min = s.damage[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
-map["犀牛朋友"] = str(cooldown_str(), "兽王召唤", count, "只犀牛，犀牛冲锋对路径上的敌人造成", damage_str(), "，并有", rate_str(chance), "使其眩晕", duration_2, "秒。犀牛驻场", duration, "秒。")
+map[_("HERO_ROOM_BEASTMASTER_STAMPEDE_NAME")] = string.format(_("HERO_ROOM_BEASTMASTER_STAMPEDE_DESC"), str(cooldown_str()), str(count), str(damage_str()), str(rate_str(chance)), str(duration_2), str(duration))
 
 set_skill(h.hero.skills.deeplashes)
 
@@ -884,13 +884,13 @@ get_damage(e.dps, 2)
 d[2].damage_max = s.blood_damage[max_lvl]
 d[2].damage_min = s.blood_damage[max_lvl]
 duration = e.modifier.duration
-map["愤怒鞭笞"] = str(cooldown_str(), "兽王挥舞长鞭，对敌人造成", damage_str(), "，并使其流血，在", duration, "秒内受到共", damage_str(2), "。")
+map[_("HERO_ROOM_BEASTMASTER_DEEPLASHES_NAME")] = string.format(_("HERO_ROOM_BEASTMASTER_DEEPLASHES_DESC"), str(cooldown_str()), str(damage_str()), str(duration), str(damage_str(2)))
 e = E:get_template("aura_beastmaster_regeneration")
 cycle_time = e.hps.heal_every
 
 local amount = e.hps.heal_min
 
-map["狂野体质"] = str("兽王免疫剧毒，且每隔", cycle_time, "秒恢复", amount, "点生命值。")
+map[_("HERO_ROOM_BEASTMASTER_DEEPLASHES_2_NAME")] = string.format(_("HERO_ROOM_BEASTMASTER_DEEPLASHES_2_DESC"), str(cycle_time), str(amount))
 
 set_hero("hero_voodoo_witch")
 set_skill(h.hero.skills.laughingskulls)
@@ -905,19 +905,19 @@ end
 e = E:get_template("voodoo_witch_skull")
 cooldown = e.ranged.attacks[1].cooldown
 count = e.max_shots
-map["冷笑骷髅"] = str("冷笑骷髅每隔", cooldown, "秒攻击一名敌人，造成", damage_str(), "，最多攻击", count, "次。")
+map[_("HERO_ROOM_VOODOO_WITCH_LAUGHINGSKULLS_NAME")] = string.format(_("HERO_ROOM_VOODOO_WITCH_LAUGHINGSKULLS_DESC"), str(cooldown), str(damage_str()), str(count))
 
 set_skill(h.hero.skills.deathskull)
 get_damage(e.sacrifice)
 
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
-map["亡骨献祭"] = str("冷笑骷髅完成使命时，砸向敌人，造成", damage_str(), "。")
+map[_("HERO_ROOM_VOODOO_WITCH_DEATHSKULL_NAME")] = string.format(_("HERO_ROOM_VOODOO_WITCH_DEATHSKULL_DESC"), str(damage_str()))
 
 set_skill(h.hero.skills.bonedance)
 
 count = s.skull_count[max_lvl]
-map["骨骸舞蹈"] = str("每当敌军或友军在女巫身边死亡时，女巫将提取亡灵之力，召唤冷笑骷髅，跟随女巫战斗。冷笑骷髅最多存在", count, "个。")
+map[_("HERO_ROOM_VOODOO_WITCH_BONEDANCE_NAME")] = string.format(_("HERO_ROOM_VOODOO_WITCH_BONEDANCE_DESC"), str(count))
 
 set_skill(h.hero.skills.deathaura)
 
@@ -930,7 +930,7 @@ get_damage(e.aura)
 
 d[1].damage_min = e.aura.damage
 d[1].damage_max = e.aura.damage
-map["恐惧光环"] = str("女巫散发出恐惧光环，每隔", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "，并使其受到", factor * 100, "%的减速效果。")
+map[_("HERO_ROOM_VOODOO_WITCH_DEATHAURA_NAME")] = string.format(_("HERO_ROOM_VOODOO_WITCH_DEATHAURA_DESC"), str(cycle_time), str(radius), str(damage_str()), str(factor * 100))
 
 set_skill(h.hero.skills.voodoomagic)
 get_damage(h.timed_attacks.list[1])
@@ -942,7 +942,7 @@ e = E:get_template("mod_voodoo_witch_magic_slow")
 factor = 1 - e.slow.factor
 duration = e.modifier.duration
 count = s.count[max_lvl]
-map["巫毒魔法"] = str(cooldown_str(), "女巫施展巫毒魔法，使最多", count, "名敌人减速", factor * 100, "%，持续", duration, "秒，并对其造成", damage_str(), "。")
+map[_("HERO_ROOM_VOODOO_WITCH_VOODOOMAGIC_NAME")] = string.format(_("HERO_ROOM_VOODOO_WITCH_VOODOOMAGIC_DESC"), str(cooldown_str()), str(count), str(factor * 100), str(duration), str(damage_str()))
 
 set_hero("hero_alien")
 set_skill(h.hero.skills.energyglaive)
@@ -958,7 +958,7 @@ cooldown = h.ranged.attacks[1].cooldown
 e = E:get_template("mod_slow_alien_glaive")
 factor = 1 - e.slow.factor
 duration = e.modifier.duration
-map["能量飞镖"] = str(cooldown_str(), "沙塔投掷能量飞镖，造成", damage_str(), "与持续", duration, "秒的", factor * 100, "%减速效果。飞镖每次命中敌人都有", rate_str(chance), "弹射至附近敌人。")
+map[_("HERO_ROOM_ALIEN_ENERGYGLAIVE_NAME")] = string.format(_("HERO_ROOM_ALIEN_ENERGYGLAIVE_DESC"), str(cooldown_str()), str(damage_str()), str(duration), str(factor * 100), str(rate_str(chance)))
 
 set_skill(h.hero.skills.purificationprotocol)
 
@@ -969,21 +969,21 @@ e = E:get_template("alien_purification_drone")
 get_damage(e.dps)
 
 cycle_time = e.dps.damage_every
-map["净化协议"] = str(cooldown_str(), "沙塔召唤驻场", duration, "秒的净化无人机，自动锁定敌人，造成持续眩晕，并每", cycle_time, "秒对敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_ALIEN_PURIFICATIONPROTOCOL_NAME")] = string.format(_("HERO_ROOM_ALIEN_PURIFICATIONPROTOCOL_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(damage_str()))
 
 set_skill(h.hero.skills.abduction)
 
 count = s.total_targets[max_lvl]
 amount = s.total_hp[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
-map["母舰劫持"] = str(cooldown_str(), "沙塔呼叫母舰，随机劫持最多", count, "名血量总和不超过", amount, "的敌人，或一名血量不限的敌人，直接将他们移出战场。")
+map[_("HERO_ROOM_ALIEN_ABDUCTION_NAME")] = string.format(_("HERO_ROOM_ALIEN_ABDUCTION_DESC"), str(cooldown_str()), str(count), str(amount))
 
 set_skill(h.hero.skills.vibroblades)
 
 d[1].damage_type = s.damage_type
 d[1].damage_min = s.extra_damage[max_lvl]
 d[1].damage_max = s.extra_damage[max_lvl]
-map["鸣颤战刃"] = str("沙塔每次普攻额外附带", damage_str(), "。")
+map[_("HERO_ROOM_ALIEN_VIBROBLADES_NAME")] = string.format(_("HERO_ROOM_ALIEN_VIBROBLADES_DESC"), str(damage_str()))
 
 set_skill(h.hero.skills.finalcountdown)
 get_damage(h.selfdestruct)
@@ -992,7 +992,7 @@ d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 e = E:get_template("mod_alien_selfdestruct")
 duration = e.modifier.duration
-map["最终手段"] = str("沙塔复活时间为6秒，并在升级时刷新所有技能冷却。当生命值耗尽时，沙塔自爆，对周围敌人造成", damage_str(), "，并使其受到", duration, "秒的眩晕效果。")
+map[_("HERO_ROOM_ALIEN_FINALCOUNTDOWN_NAME")] = string.format(_("HERO_ROOM_ALIEN_FINALCOUNTDOWN_DESC"), str(damage_str()), str(duration))
 
 set_hero("hero_monk")
 set_skill(h.hero.skills.tigerstyle)
@@ -1001,7 +1001,7 @@ get_damage(h.melee.attacks[5])
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 cooldown = h.melee.attacks[5].cooldown
-map["虎型拳"] = str(cooldown_str(), "库绍施展虎型拳，造成", damage_str(), "，并恢复自身30点生命值。")
+map[_("HERO_ROOM_MONK_TIGERSTYLE_NAME")] = string.format(_("HERO_ROOM_MONK_TIGERSTYLE_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.snakestyle)
 get_damage(h.melee.attacks[4])
@@ -1010,7 +1010,7 @@ d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 cooldown = h.melee.attacks[4].cooldown
 factor = s.damage_reduction_factor[max_lvl]
-map["蛇型拳"] = str(cooldown_str(), "库绍对非boss敌人施展蛇形拳，造成", damage_str(), "并使敌人的伤害降低", factor * 100, "%", "。")
+map[_("HERO_ROOM_MONK_SNAKESTYLE_NAME")] = string.format(_("HERO_ROOM_MONK_SNAKESTYLE_DESC"), str(cooldown_str()), str(damage_str()), str(factor * 100))
 
 set_skill(h.hero.skills.leopardstyle)
 
@@ -1021,7 +1021,7 @@ get_damage(h.timed_attacks.list[2])
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_min = s.damage_min[max_lvl]
 cooldown = h.timed_attacks.list[2].cooldown
-map["豹形拳"] = str(cooldown_str(), "库绍对非boss敌人施展豹形拳，连续攻击", count, "次并短暂阻拦敌人，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_MONK_LEOPARDSTYLE_NAME")] = string.format(_("HERO_ROOM_MONK_LEOPARDSTYLE_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.dragonstyle)
 get_damage(h.timed_attacks.list[1])
@@ -1029,7 +1029,7 @@ get_damage(h.timed_attacks.list[1])
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_min = s.damage_min[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
-map["龙形拳"] = str(cooldown_str(), "库绍施展龙形拳，对周围敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_MONK_DRAGONSTYLE_NAME")] = string.format(_("HERO_ROOM_MONK_DRAGONSTYLE_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.cranestyle)
 
@@ -1040,8 +1040,8 @@ get_damage(h.dodge)
 
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
-map["鹤形拳"] = str("库绍有", rate_str(chance), "闪避敌人的攻击并以鹤形拳反击，造成", damage_str(), "。该技能有", cooldown, "秒冷却时间。")
-map["诸武精通"] = str("库绍的普攻可触发三种随机效果：降低敌人10%护甲；减少蛇形拳和虎型拳1秒冷却；减少豹形拳和龙形拳一秒冷却。持续战斗时，库绍的普攻、虎型拳、蛇形拳的冷却逐渐减少，最多减少40%。")
+map[_("HERO_ROOM_MONK_CRANESTYLE_NAME")] = string.format(_("HERO_ROOM_MONK_CRANESTYLE_DESC"), str(rate_str(chance)), str(damage_str()), str(cooldown))
+map[_("HERO_ROOM_MONK_CRANESTYLE_2_NAME")] = _("HERO_ROOM_MONK_CRANESTYLE_2_DESC")
 
 set_hero("hero_monkey_god")
 set_skill(h.hero.skills.spinningpole)
@@ -1055,7 +1055,7 @@ cooldown = h.melee.attacks[3].cooldown
 
 set_damage_value(s.damage[max_lvl])
 
-map["狼牙风暴"] = str(cooldown_str(), "赛塔姆挥舞狼牙棒，对", radius, "范围内敌人造成", count, "段伤害，每段造成", damage_str(), "。")
+map[_("HERO_ROOM_MONKEY_GOD_SPINNINGPOLE_NAME")] = string.format(_("HERO_ROOM_MONKEY_GOD_SPINNINGPOLE_DESC"), str(cooldown_str()), str(radius), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.tetsubostorm)
 get_damage(h.melee.attacks[4])
@@ -1063,7 +1063,7 @@ set_damage_value(s.damage[max_lvl])
 
 cooldown = h.melee.attacks[4].cooldown
 count = h.melee.attacks[4].loops * #h.melee.attacks[4].hit_times
-map["旋风棍法"] = str(cooldown_str(), "赛塔姆挥棒如旋风，对敌人进行", count, "段攻击，每段造成", damage_str(), "。")
+map[_("HERO_ROOM_MONKEY_GOD_TETSUBOSTORM_NAME")] = string.format(_("HERO_ROOM_MONKEY_GOD_TETSUBOSTORM_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.monkeypalm)
 get_damage(h.melee.attacks[5])
@@ -1073,7 +1073,7 @@ d[1].damage_max = s.damage_max[max_lvl]
 duration = s.stun_duration[max_lvl]
 duration_2 = s.silence_duration[max_lvl]
 cooldown = h.melee.attacks[5].cooldown
-map["猴掌"] = str(cooldown_str(), "赛塔姆凝聚精神拍出一掌，对非BOSS敌人造成", damage_str(), "，并使敌人眩晕", duration, "秒，沉默", duration_2, "秒，且使神怒的冷却减少4秒。")
+map[_("HERO_ROOM_MONKEY_GOD_MONKEYPALM_NAME")] = string.format(_("HERO_ROOM_MONKEY_GOD_MONKEYPALM_DESC"), str(cooldown_str()), str(damage_str()), str(duration), str(duration_2))
 
 set_skill(h.hero.skills.angrygod)
 
@@ -1086,12 +1086,12 @@ get_damage(e.dps)
 set_damage_value(e.dps.damage_min + max_lvl * e.dps.damage_inc)
 
 cycle_time = e.dps.damage_every
-map["神怒"] = str(cooldown_str(), "赛塔姆进入无敌状态，刷新狼牙风暴、旋风棍法和猴掌的冷却，并释放心中的怒火，持续", duration, "秒，期间所有敌人受到的伤害乘以", factor, "，并每隔", cycle_time, "秒受到", damage_str(), "。该技能被手动打断时，恢复等比例冷却时间。")
+map[_("HERO_ROOM_MONKEY_GOD_ANGRYGOD_NAME")] = string.format(_("HERO_ROOM_MONKEY_GOD_ANGRYGOD_DESC"), str(cooldown_str()), str(duration), str(factor), str(cycle_time), str(damage_str()))
 speed = h.cloudwalk.extra_speed
 e = E:get_template("aura_monkey_god_divinenature")
 cycle_time = e.hps.heal_every
 amount = e.hps.heal_min
-map["神性"] = str("远距离移动时，赛塔姆乘坐祥云，移速提升", speed, "点。每隔", cycle_time, "秒，赛塔姆恢复", amount, "点生命值。赛塔姆免疫剧毒。")
+map[_("HERO_ROOM_MONKEY_GOD_ANGRYGOD_2_NAME")] = string.format(_("HERO_ROOM_MONKEY_GOD_ANGRYGOD_2_DESC"), str(speed), str(cycle_time), str(amount))
 
 set_hero("hero_giant")
 set_skill(h.hero.skills.boulderthrow)
@@ -1106,7 +1106,7 @@ get_damage(b.bullet)
 
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_min = s.damage_min[max_lvl]
-map["巨石投掷"] = str(cooldown_str(), "格劳尔投掷巨石，对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_GIANT_BOULDERTHROW_NAME")] = string.format(_("HERO_ROOM_GIANT_BOULDERTHROW_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.massivedamage)
 
@@ -1118,7 +1118,7 @@ set_damage_value(s.extra_damage[max_lvl])
 
 chance = s.chance[max_lvl]
 cooldown = h.melee.attacks[2].cooldown
-map["岩晶肘击"] = str(cooldown_str(), "格劳尔奋力肘击敌人，额外造成", damage_str(), "。肘击有", rate_str(chance), "概率暴击：若结算伤害后，敌人生命值少于格劳尔", 100 / factor, "%最大生命值，且不为BOSS，则秒杀敌人；否则，额外伤害翻倍。")
+map[_("HERO_ROOM_GIANT_MASSIVEDAMAGE_NAME")] = string.format(_("HERO_ROOM_GIANT_MASSIVEDAMAGE_DESC"), str(cooldown_str()), str(damage_str()), str(rate_str(chance)), str(100 / factor))
 
 set_skill(h.hero.skills.stomp)
 
@@ -1131,7 +1131,7 @@ set_damage_value(s.damage[max_lvl])
 cooldown = h.timed_attacks.list[1].cooldown
 radius = h.timed_attacks.list[1].damage_radius
 chance = h.timed_attacks.list[1].stun_chance
-map["大地震颤"] = str(cooldown_str(), "格劳尔持续锤击地面", count, "次，每次对", radius, "范围内敌人造成", damage_str(), "，并有", rate_str(chance), "概率使其眩晕", duration, "秒。")
+map[_("HERO_ROOM_GIANT_STOMP_NAME")] = string.format(_("HERO_ROOM_GIANT_STOMP_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()), str(rate_str(chance)), str(duration))
 
 set_skill(h.hero.skills.bastion)
 
@@ -1146,7 +1146,7 @@ set_skill(h.hero.skills.hardrock)
 
 local amount_3 = s.damage_block[max_lvl]
 
-map["堡垒之势"] = str("格劳尔免疫毒伤，且拥有嘲讽效果。当原地不动时，格劳尔每", cycle_time, "秒提升", amount, "点伤害，最多提升", amount_2, "点。格劳尔受到的所有伤害减少", amount_3, "点。")
+map[_("HERO_ROOM_GIANT_HARDROCK_NAME")] = string.format(_("HERO_ROOM_GIANT_HARDROCK_DESC"), str(cycle_time), str(amount), str(amount_2), str(amount_3))
 
 set_hero("hero_dragon")
 set_skill(h.hero.skills.blazingbreath)
@@ -1158,7 +1158,7 @@ set_damage_value(s.damage[max_lvl])
 
 radius = e.bullet.damage_radius
 cooldown = h.ranged.attacks[2].cooldown
-map["龙息"] = str(cooldown_str(), "阿什比特向随机敌人持续喷吐火焰，对", radius, "范围内敌人总共造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_BLAZINGBREATH_NAME")] = string.format(_("HERO_ROOM_DRAGON_BLAZINGBREATH_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.feast)
 
@@ -1168,7 +1168,7 @@ get_damage(h.timed_attacks.list[1])
 set_damage_value(s.damage[max_lvl])
 
 cooldown = h.timed_attacks.list[1].cooldown
-map["猎宴"] = str(cooldown_str(), "阿什比特扑击最近的敌人，造成", damage_str(), "，并有", rate_str(chance), "概率吞噬敌人。如果敌人免疫秒杀或吞噬，则改为造成2倍伤害。")
+map[_("HERO_ROOM_DRAGON_FEAST_NAME")] = string.format(_("HERO_ROOM_DRAGON_FEAST_DESC"), str(cooldown_str()), str(damage_str()), str(rate_str(chance)))
 
 set_skill(h.hero.skills.fierymist)
 
@@ -1181,7 +1181,7 @@ cycle_time = e.aura.cycle_time
 get_damage(e.aura)
 
 cooldown = h.ranged.attacks[3].cooldown
-map["浓烟"] = str(cooldown_str(), "阿什比特向随机敌人喷吐浓烟，持续", duration, "秒。浓烟每隔", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "，并使其受到", factor * 100, "%的减速效果。")
+map[_("HERO_ROOM_DRAGON_FIERYMIST_NAME")] = string.format(_("HERO_ROOM_DRAGON_FIERYMIST_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(radius), str(damage_str()), str(factor * 100))
 
 set_skill(h.hero.skills.wildfirebarrage)
 
@@ -1192,7 +1192,7 @@ e = E:get_template("wildfirebarrage_dragon")
 get_damage(e.bullet)
 
 radius = e.bullet.damage_radius
-map["火焰弹幕"] = str(cooldown_str(), "阿什比特向随机敌人发射火球，落地后爆炸产生", count, "次范围", radius, "的爆炸，每次爆炸造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_WILDFIREBARRAGE_NAME")] = string.format(_("HERO_ROOM_DRAGON_WILDFIREBARRAGE_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.reignoffire)
 
@@ -1204,7 +1204,7 @@ get_damage(e.dps)
 set_damage_value(s.dps[max_lvl])
 
 count = e.modifier.max_duplicates
-map["烈焰君临"] = str("阿什比特的攻击将会点燃敌人，持续", duration, "秒。点燃状态下的敌人每隔", cycle_time, "秒受到", damage_str(), "，最多叠加", count, "层。当火焰持续时间结束时，火焰将尝试向周围敌人传播。")
+map[_("HERO_ROOM_DRAGON_REIGNOFFIRE_NAME")] = string.format(_("HERO_ROOM_DRAGON_REIGNOFFIRE_DESC"), str(duration), str(cycle_time), str(damage_str()), str(count))
 
 set_hero("hero_priest")
 set_skill(h.hero.skills.holylight)
@@ -1213,14 +1213,14 @@ count = s.heal_count[max_lvl]
 chance = s.revive_chance[max_lvl]
 heal = s.heal_hp[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
-map["圣光术"] = str(cooldown_str(), "德得尔使用圣光术治疗自己与周围友军，最多恢复", count, "名士兵", heal, "点生命值，驱散他们的异常状态，并有", rate_str(chance), "复活死去的战友。")
+map[_("HERO_ROOM_PRIEST_HOLYLIGHT_NAME")] = string.format(_("HERO_ROOM_PRIEST_HOLYLIGHT_DESC"), str(cooldown_str()), str(count), str(heal), str(rate_str(chance)))
 
 set_skill(h.hero.skills.consecrate)
 
 duration = s.duration[max_lvl]
 factor = s.extra_damage[max_lvl]
 cooldown = h.timed_attacks.list[2].cooldown
-map["神圣祝颂"] = str(cooldown_str(), "德得尔祝福最近的一座防御塔，使其伤害提升", factor * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_PRIEST_CONSECRATE_NAME")] = string.format(_("HERO_ROOM_PRIEST_CONSECRATE_DESC"), str(cooldown_str()), str(factor * 100), str(duration))
 
 set_skill(h.hero.skills.wingsoflight)
 
@@ -1234,7 +1234,7 @@ e = E:get_template("mod_priest_armor")
 local factor_3 = 1 - e.cooldown_rate
 
 count = s.count[max_lvl]
-map["光翼庇护"] = str("德得尔传送时，用光翼庇护周围最多", count, "名友军，使他们物抗与法抗距离免疫的差距减小", factor * 100, "%，并使他们伤害提升", factor_2 * 100, "%，攻速提升", factor_3 * 100, "%。")
+map[_("HERO_ROOM_PRIEST_WINGSOFLIGHT_NAME")] = string.format(_("HERO_ROOM_PRIEST_WINGSOFLIGHT_DESC"), str(count), str(factor * 100), str(factor_2 * 100), str(factor_3 * 100))
 
 set_hero("hero_dwarf")
 set_skill(h.hero.skills.ring)
@@ -1244,7 +1244,7 @@ cooldown = h.melee.attacks[2].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 radius = h.melee.attacks[2].damage_radius
-map["重锤"] = str(cooldown_str(), "鲁林挥动重锤，对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_DWARF_RING_NAME")] = string.format(_("HERO_ROOM_DWARF_RING_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.giant)
 
@@ -1253,10 +1253,10 @@ cooldown = h.timed_attacks.list[1].cooldown
 heal_factor = factor * 0.1
 e = E:get_template("mod_dwarf_champion_stun")
 duration = e.modifier.duration
-map["大地之力"] = str(cooldown_str(), "鲁林使用大地之力，身形变为", factor, "倍，恢复", heal_factor * 100, "%最大生命值的生命，并挥动重锤，造成范围伤害与", duration, "秒眩晕，范围与伤害均为重锤技能的", factor, "倍。")
+map[_("HERO_ROOM_DWARF_GIANT_NAME")] = string.format(_("HERO_ROOM_DWARF_GIANT_DESC"), str(cooldown_str()), str(factor), str(heal_factor * 100), str(duration), str(factor))
 cooldown = h.timed_attacks.list[2].cooldown
 duration = E:get_template("soldier_dwarf_reinforcement").reinforcement.duration
-map["矮人亲卫"] = str(cooldown_str(), "鲁林召唤可调集的矮人亲卫协助战斗，驻场", duration, "秒。矮人亲卫数值与矮人大厅的士兵相同，技能等级同本技能等级。")
+map[_("HERO_ROOM_DWARF_GIANT_2_NAME")] = string.format(_("HERO_ROOM_DWARF_GIANT_2_DESC"), str(cooldown_str()), str(duration))
 
 set_hero("hero_minotaur")
 set_skill(h.hero.skills.bullrush)
@@ -1269,26 +1269,26 @@ d[2].damage_min = s.run_damage_min[max_lvl]
 d[2].damage_max = s.run_damage_max[max_lvl]
 duration = s.duration[max_lvl]
 cooldown = h.timed_attacks.list[3].cooldown
-map["蛮牛冲撞"] = str(cooldown_str(), "卡兹刷新巨斧风暴的冷却，对首个离自己一定距离的敌人发动冲撞，使路径上所有敌人受到", damage_str(2), "，冲撞终点的敌人受到", damage_str(), "。上述所有敌人眩晕", duration, "秒。")
+map[_("HERO_ROOM_MINOTAUR_BULLRUSH_NAME")] = string.format(_("HERO_ROOM_MINOTAUR_BULLRUSH_DESC"), str(cooldown_str()), str(damage_str(2)), str(damage_str()), str(duration))
 
 set_skill(h.hero.skills.bloodaxe)
 
 factor = s.damage_factor[max_lvl]
 chance = h.melee.attacks[2].chance
-map["英勇打击"] = str("卡兹每次攻击有", rate_str(chance), "概率发动英勇打击，该攻击无法闪避且能够破除护盾，造成", factor, "倍于普攻的真实伤害。")
+map[_("HERO_ROOM_MINOTAUR_BLOODAXE_NAME")] = string.format(_("HERO_ROOM_MINOTAUR_BLOODAXE_DESC"), str(rate_str(chance)), str(factor))
 
 set_skill(h.hero.skills.daedalusmaze)
 
 cooldown = h.timed_attacks.list[4].cooldown
 duration = s.duration[max_lvl]
 range = h.timed_attacks.list[4].min_range
-map["代达罗斯的迷宫"] = str(cooldown_str(), "卡兹刷新巨斧风暴和野牛怒吼的冷却，并将", range, "距离外最近的一名生命值大于卡兹当前生命值2倍的敌人传送至身前，使其眩晕", duration, "秒。")
+map[_("HERO_ROOM_MINOTAUR_DAEDALUSMAZE_NAME")] = string.format(_("HERO_ROOM_MINOTAUR_DAEDALUSMAZE_DESC"), str(cooldown_str()), str(range), str(duration))
 
 set_skill(h.hero.skills.roaroffury)
 
 cooldown = h.timed_attacks.list[2].cooldown
 factor = s.extra_damage[max_lvl]
-map["野牛怒吼"] = str(cooldown_str(), "卡兹一声怒吼鼓舞士气，使所有的防御塔伤害提升", factor * 100, "%。")
+map[_("HERO_ROOM_MINOTAUR_ROAROFFURY_NAME")] = string.format(_("HERO_ROOM_MINOTAUR_ROAROFFURY_DESC"), str(cooldown_str()), str(factor * 100))
 
 set_skill(h.hero.skills.doomspin)
 get_damage(h.timed_attacks.list[1])
@@ -1297,14 +1297,14 @@ cooldown = h.timed_attacks.list[1].cooldown
 radius = h.timed_attacks.list[1].damage_radius
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
-map["巨斧风暴"] = str(cooldown_str(), "卡兹对", radius, "范围内敌人造成", damage_str(), "并恢复造成伤害总量25%的生命值。")
+map[_("HERO_ROOM_MINOTAUR_DOOMSPIN_NAME")] = string.format(_("HERO_ROOM_MINOTAUR_DOOMSPIN_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 
 set_hero("hero_crab")
 set_skill(h.hero.skills.battlehardened)
 
 chance = s.chance[max_lvl]
 duration = h.invuln.duration
-map["战争强硬"] = str("每当卡基诺斯受到攻击，有", rate_str(chance), "触发战争强硬，使得接下来", duration, "秒内受到的攻击改为使卡基诺斯恢复一半伤害量的生命值。该效果持续期间无法重复触发。")
+map[_("HERO_ROOM_CRAB_BATTLEHARDENED_NAME")] = string.format(_("HERO_ROOM_CRAB_BATTLEHARDENED_DESC"), str(rate_str(chance)), str(duration))
 
 set_skill(h.hero.skills.pincerattack)
 
@@ -1318,7 +1318,7 @@ d[1].damage_max = s.damage_max[max_lvl]
 local x = h.timed_attacks.list[1].damage_size.x
 local y = h.timed_attacks.list[1].damage_size.y
 
-map["折叠蟹钳"] = str(cooldown_str(), "卡基诺斯使用折叠蟹钳，对面前", x, "x", y, "区域内的敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_CRAB_PINCERATTACK_NAME")] = string.format(_("HERO_ROOM_CRAB_PINCERATTACK_DESC"), str(cooldown_str()), str(x), str(y), str(damage_str()))
 
 set_skill(h.hero.skills.shouldercannon)
 get_damage(E:get_template("crab_water_bomb").bullet)
@@ -1333,7 +1333,7 @@ for _, inc in pairs(s.radius_inc) do
 end
 
 cooldown = h.ranged.attacks[1].cooldown
-map["水炮"] = str(cooldown_str(), "卡基诺斯发射水炮，对", radius, "范围内敌人造成", damage_str(), "与持续", duration, "秒的", factor * 100, "%减速效果。")
+map[_("HERO_ROOM_CRAB_SHOULDERCANNON_NAME")] = string.format(_("HERO_ROOM_CRAB_SHOULDERCANNON_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(duration), str(factor * 100))
 
 set_skill(h.hero.skills.burrow)
 
@@ -1350,7 +1350,7 @@ radius = h.burrow.radius
 local amount_4 = h.burrow.stun_speed - h.motion.max_speed
 
 duration = E:get_template("mod_stun_burrow").modifier.duration
-map["裂地攻势"] = str("卡基诺斯可在海洋中自由穿梭。长距离移动时，卡基诺斯遁地，立刻提升", amount_3, "点移速，并每秒提高", amount, "点移速，最高提升", amount_2, "点。当卡基诺斯出土时，若提升的速度超过", amount_4, "，则在", radius, "范围内造成基于加速效果（最多两倍）倍数的", damage_str(), "与", duration, "秒眩晕效果。伤害与眩晕效果每", cooldown, "秒仅触发一次。")
+map[_("HERO_ROOM_CRAB_BURROW_NAME")] = string.format(_("HERO_ROOM_CRAB_BURROW_DESC"), str(amount_3), str(amount), str(amount_2), str(amount_4), str(radius), str(damage_str()), str(duration), str(cooldown))
 
 set_hero("hero_van_helsing")
 set_skill(h.hero.skills.silverbullet)
@@ -1360,7 +1360,7 @@ cooldown = h.timed_attacks.list[2].cooldown
 get_damage(E:get_template("van_helsing_silverbullet").bullet)
 set_damage_value(s.damage[max_lvl])
 
-map["纯银子弹"] = str(cooldown_str(), "但丁射出一发纯银子弹，造成", damage_str(), "。该攻击优先攻击极接近驻守点的敌人，其次是折算物抗后生命值最高的敌人。对于狼人，该折算生命值翻倍，造成的伤害也翻倍。")
+map[_("HERO_ROOM_VAN_HELSING_SILVERBULLET_NAME")] = string.format(_("HERO_ROOM_VAN_HELSING_SILVERBULLET_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.multishoot)
 
@@ -1369,25 +1369,25 @@ cooldown = h.timed_attacks.list[1].cooldown
 
 get_damage(E:get_template("van_helsing_shotgun").bullet)
 
-map["致命连射"] = str(cooldown_str(), "但丁使用手枪连射", count, "发，每发造成", damage_str(), "。射击目标死亡后，就近转火。")
+map[_("HERO_ROOM_VAN_HELSING_MULTISHOOT_NAME")] = string.format(_("HERO_ROOM_VAN_HELSING_MULTISHOOT_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.relicofpower)
 
 factor = ss("armor_reduce_factor")
 cooldown = h.melee.attacks[2].cooldown
-map["遗迹之力"] = str(cooldown_str(), "但丁对面前敌人使用遗迹之力，削减他", factor * 100, "%的双抗。该技能只会对生命高于500，且护甲/法抗高于0的敌人使用。")
+map[_("HERO_ROOM_VAN_HELSING_RELICOFPOWER_NAME")] = string.format(_("HERO_ROOM_VAN_HELSING_RELICOFPOWER_DESC"), str(cooldown_str()), str(factor * 100))
 
 set_skill(h.hero.skills.holygrenade)
 
 duration = ss("silence_duration")
 radius = E:get_template("van_helsing_grenade").bullet.damage_radius
 cooldown = h.timed_attacks.list[3].cooldown
-map["圣水炸弹"] = str(cooldown_str(), "但丁对可沉默单位投掷一枚圣水炸弹，在", radius, "范围内造成沉默效果，持续", duration, "秒。")
+map[_("HERO_ROOM_VAN_HELSING_HOLYGRENADE_NAME")] = string.format(_("HERO_ROOM_VAN_HELSING_HOLYGRENADE_DESC"), str(cooldown_str()), str(radius), str(duration))
 
 set_skill(h.hero.skills.beaconoflight)
 
 factor = ss("inflicted_damage_factor")
-map["光明信标"] = str("但丁的光明信标鼓舞着友军，使身边友军的伤害乘以", factor, "。但丁死亡后，魂灵依旧留在战场。")
+map[_("HERO_ROOM_VAN_HELSING_BEACONOFLIGHT_NAME")] = string.format(_("HERO_ROOM_VAN_HELSING_BEACONOFLIGHT_DESC"), str(factor))
 
 set_hero("hero_dracolich")
 set_skill(h.hero.skills.spinerain)
@@ -1404,7 +1404,7 @@ get_damage(e.bullet)
 
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
-map["脊雨"] = str(cooldown_str(), "波恩哈特向随机敌人发射", count, "根脊柱，每根对", radius, "范围内敌人造成", damage_str(), "。该技能不会主动对空军释放。")
+map[_("HERO_ROOM_DRACOLICH_SPINERAIN_NAME")] = string.format(_("HERO_ROOM_DRACOLICH_SPINERAIN_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.diseasenova)
 
@@ -1416,7 +1416,7 @@ get_damage(a)
 radius = a.max_range
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
-map["疾病新星"] = str(cooldown_str(), "波恩哈特撞击敌人，在", radius, "范围内造成", damage_str(), "，并使敌人感染瘟疫。")
+map[_("HERO_ROOM_DRACOLICH_DISEASENOVA_NAME")] = string.format(_("HERO_ROOM_DRACOLICH_DISEASENOVA_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.plaguecarrier)
 
@@ -1428,7 +1428,7 @@ e = E:get_template("dracolich_plague_carrier")
 
 get_damage(e.aura)
 
-map["死亡之触"] = str(cooldown_str(), "波恩哈特向前吐出", count, "枚瘟疫球，每枚瘟疫球持续前进", duration, "秒，并对路径上的敌人造成", damage_str(), "，让他们感染瘟疫。")
+map[_("HERO_ROOM_DRACOLICH_PLAGUECARRIER_NAME")] = string.format(_("HERO_ROOM_DRACOLICH_PLAGUECARRIER_DESC"), str(cooldown_str()), str(count), str(duration), str(damage_str()))
 
 set_skill(h.hero.skills.bonegolem)
 
@@ -1441,7 +1441,7 @@ health[1].hp_max = ss("hp_max")
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 duration = ss("duration")
-map["亡灵眷属"] = str(cooldown_str(), "波恩哈特召唤亡灵眷属协助战斗，驻场", duration, "秒。亡灵眷属拥有", health_str(), "，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_DRACOLICH_BONEGOLEM_NAME")] = string.format(_("HERO_ROOM_DRACOLICH_BONEGOLEM_DESC"), str(cooldown_str()), str(duration), str(health_str()), str(damage_str()))
 
 set_skill(h.hero.skills.unstabledisease)
 
@@ -1457,7 +1457,7 @@ set_damage_value(h.hero.level_stats.disease_damage[#h.hero.level_stats.disease_d
 
 cycle_time = e.dps.damage_every
 radius = e.spread_radius
-map["凋零"] = str("波恩哈特的攻击会使敌人感染瘟疫，持续", duration, "秒，每", cycle_time, "秒造成", damage_str(2), "。当感染瘟疫的敌人死亡时，会触发尸爆，对", radius, "范围内敌人造成", damage_str(1), "。")
+map[_("HERO_ROOM_DRACOLICH_UNSTABLEDISEASE_NAME")] = string.format(_("HERO_ROOM_DRACOLICH_UNSTABLEDISEASE_DESC"), str(duration), str(cycle_time), str(damage_str(2)), str(radius), str(damage_str(1)))
 
 set_hero("hero_vampiress")
 set_skill(h.hero.skills.vampirism)
@@ -1475,7 +1475,7 @@ cycle_time = e.dps.damage_every
 get_damage(e.dps, 2)
 set_damage_value(e.dps.damage_min + max_lvl * e.dps.damage_inc, 2)
 
-map["生命汲取"] = str(cooldown_str(), "卢克蕾齐娅汲取敌人的生命，造成", damage_str(), "并恢复等量生命值。被汲取的敌人流血", duration, "秒，每", cycle_time, "秒受到", damage_str(2), "。")
+map[_("HERO_ROOM_VAMPIRESS_VAMPIRISM_NAME")] = string.format(_("HERO_ROOM_VAMPIRESS_VAMPIRISM_DESC"), str(cooldown_str()), str(damage_str()), str(duration), str(cycle_time), str(damage_str(2)))
 
 set_skill(h.hero.skills.slayer)
 
@@ -1488,7 +1488,7 @@ d[1].damage_max = ss("damage_max")
 radius = a.damage_radius
 factor = a.extra_damage_factor
 cooldown = a.cooldown
-map["绛红之舞"] = str(cooldown_str(), "卢克蕾齐娅对周围", radius, "范围内敌人造成", damage_str(), "。该伤害对吸血鬼夫人x", factor, "。")
+map[_("HERO_ROOM_VAMPIRESS_SLAYER_NAME")] = string.format(_("HERO_ROOM_VAMPIRESS_SLAYER_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(factor))
 e = E:get_template("mod_vampiress_gain")
 count = e.max_gain_count
 amount = e.gain.damage
@@ -1501,8 +1501,8 @@ local amount_5 = e.gain.radius
 local amount_6 = e.gain.speed
 local amount_7 = e.gain.armor
 
-map["杀戮生长"] = str("卢克蕾齐娅在杀戮中成长，每杀死一名敌人，就恢复", heal, "点生命值，并提升：", amount_2, "点最大生命值，", amount, "点普攻伤害，", amount_7 * 100, "点物抗，", amount_3 * 100, "点法抗，", amount_6, "点移速，", amount_5, "点绛红之舞的伤害范围，并永久减少", amount_4, "秒生命汲取和绛红之舞的冷却时间。上述属性提升最多", count, "次。")
-map["鲜血后裔"] = str("卢克蕾齐娅免疫毒素，每次普攻恢复3点生命值，且被视为亡灵单位。远距离移动时，卢克蕾齐娅变身蝙蝠飞行，提升自身", h.motion.max_speed_bat - h.motion.max_speed, "点移速。")
+map[_("HERO_ROOM_VAMPIRESS_SLAYER_2_NAME")] = string.format(_("HERO_ROOM_VAMPIRESS_SLAYER_2_DESC"), str(heal), str(amount_2), str(amount), str(amount_7 * 100), str(amount_3 * 100), str(amount_6), str(amount_5), str(amount_4), str(count))
+map[_("HERO_ROOM_VAMPIRESS_SLAYER_3_NAME")] = string.format(_("HERO_ROOM_VAMPIRESS_SLAYER_3_DESC"), str(h.motion.max_speed_bat - h.motion.max_speed))
 
 set_hero("hero_elves_archer")
 set_skill(h.hero.skills.nimble_fencer)
@@ -1511,7 +1511,7 @@ chance = ss("chance")
 
 get_damage(h.dodge.counter_attack)
 
-map["迅闪"] = str("受到攻击时，艾莉丹有", rate_str(chance), "闪避并反击，造成", damage_str(), "，并使双刃的冷却减少1秒。")
+map[_("HERO_ROOM_ELVES_ARCHER_NIMBLE_FENCER_NAME")] = string.format(_("HERO_ROOM_ELVES_ARCHER_NIMBLE_FENCER_DESC"), str(rate_str(chance)), str(damage_str()))
 
 set_skill(h.hero.skills.double_strike)
 get_damage(h.melee.attacks[2])
@@ -1519,18 +1519,18 @@ get_damage(h.melee.attacks[2])
 cooldown = h.melee.attacks[2].cooldown
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-map["双刃"] = str(cooldown_str(), "艾莉丹挥动双刃斩击敌人，造成无法闪避的", damage_str(), "。发动技能期间若触发迅闪，则保持无敌状态，继续释放该技能。")
+map[_("HERO_ROOM_ELVES_ARCHER_DOUBLE_STRIKE_NAME")] = string.format(_("HERO_ROOM_ELVES_ARCHER_DOUBLE_STRIKE_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.porcupine)
 
 amount = ss("damage_inc")
-map["箭猪"] = str("每射击命中同一敌人，便使艾莉丹对该敌人的射击伤害提升", amount, "点。")
+map[_("HERO_ROOM_ELVES_ARCHER_PORCUPINE_NAME")] = string.format(_("HERO_ROOM_ELVES_ARCHER_PORCUPINE_DESC"), str(amount))
 
 set_skill(h.hero.skills.multishot)
 
 count = ss("loops")
 cooldown = h.ranged.attacks[2].cooldown
-map["连射"] = str(cooldown_str(), "艾莉丹连续射出", count, "发箭矢，每发都造成面板伤害。")
+map[_("HERO_ROOM_ELVES_ARCHER_MULTISHOT_NAME")] = string.format(_("HERO_ROOM_ELVES_ARCHER_MULTISHOT_DESC"), str(cooldown_str()), str(count))
 
 set_skill(h.hero.skills.ultimate)
 
@@ -1545,7 +1545,7 @@ radius = e.bullet.damage_radius
 e = E:get_template("mod_hero_elves_archer_slow")
 factor = 1 - e.slow.factor
 duration = e.modifier.duration
-map["箭雨"] = str(cooldown_str(), "艾莉丹在大范围内发射共", count, "支箭矢，每支箭矢对", radius, "范围内敌人造成", damage_str(), "，并使其受到", factor * 100, "%的减速效果，持续", duration, "秒。")
+map[_("HERO_ROOM_ELVES_ARCHER_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_ELVES_ARCHER_ULTIMATE_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()), str(factor * 100), str(duration))
 
 set_skill(h.hero.skills.guards)
 e = E:get_template(h.timed_attacks.list[1].entity)
@@ -1557,7 +1557,7 @@ health[1].armor = s.armor[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
 local duration = e.reinforcement.duration
 
-map["护卫"] = str("每隔", cooldown, "秒，艾利丹召唤一名可调集的游侠护卫协助战斗。游侠护卫拥有", hp_str(), "，", armor_str(), "，", "每次攻击造成", damage_str(), "，驻场", duration, "秒。")
+map[_("HERO_ROOM_ELVES_ARCHER_GUARDS_NAME")] = string.format(_("HERO_ROOM_ELVES_ARCHER_GUARDS_DESC"), str(cooldown), str(hp_str()), str(armor_str()), str(damage_str()), str(duration))
 
 set_hero("hero_regson")
 set_skill(h.hero.skills.slash)
@@ -1571,15 +1571,15 @@ get_damage(e)
 
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-map["刃舞"] = str(cooldown_str(), "雷格森挥舞双刃，对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_REGSON_SLASH_NAME")] = string.format(_("HERO_ROOM_REGSON_SLASH_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 count = ss("loops")
 cooldown = h.timed_attacks.list[1].cooldown
-map["影袭"] = str(cooldown_str(), "雷格森跃入暗影，短时间内", count, "次突袭敌人，施展刃舞，并在归来时激活异能魔刃。")
+map[_("HERO_ROOM_REGSON_SLASH_2_NAME")] = string.format(_("HERO_ROOM_REGSON_SLASH_2_DESC"), str(cooldown_str()), str(count))
 
 set_skill(h.hero.skills.heal)
 
 factor = ss("heal_factor")
-map["死战之志"] = str("每当身边有敌人死亡，雷格森就会吸收他们的灵魂，为自己恢复敌人最大生命值", factor * 100, "%的生命，并减少刃舞剩余冷却时间的3.5%、影袭剩余冷却时间的1.75%。")
+map[_("HERO_ROOM_REGSON_HEAL_NAME")] = string.format(_("HERO_ROOM_REGSON_HEAL_DESC"), str(factor * 100))
 
 set_skill(h.hero.skills.blade)
 get_damage(h.melee.attacks[3])
@@ -1589,7 +1589,7 @@ e = E:get_template("aura_regson_blade")
 duration = e.blade_duration
 cooldown = e.blade_cooldown
 chance = ss("instakill_chance")
-map["异能魔刃"] = str(cooldown_str(), "雷格森强化双刃，持续", duration, "秒。强化期间，雷格森的普攻无法闪避，每次造成", damage_str(), "，且有", rate_str(chance), "秒杀非BOSS敌人。")
+map[_("HERO_ROOM_REGSON_BLADE_NAME")] = string.format(_("HERO_ROOM_REGSON_BLADE_DESC"), str(cooldown_str()), str(duration), str(damage_str()), str(rate_str(chance)))
 
 set_skill(h.hero.skills.ultimate)
 
@@ -1598,7 +1598,7 @@ cooldown = ss("cooldown")
 set_damage_value(ss("damage_boss"))
 
 d[1].damage_type = DAMAGE_TRUE
-map["死吻"] = str(cooldown_str(), "雷格森锁定身边生命值高于750的最大单位并秒杀之。若目标为BOSS，则改为造成", damage_str(), "。")
+map[_("HERO_ROOM_REGSON_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_REGSON_ULTIMATE_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_hero("hero_lynn")
 set_skill(h.hero.skills.hexfury)
@@ -1610,7 +1610,7 @@ get_damage(h.melee.attacks[3])
 
 cooldown = h.melee.attacks[3].cooldown
 count = count * #h.melee.attacks[3].hit_times
-map["妖咒连斩"] = str(cooldown_str(), "莉恩连续斩击", count, "次，每次造成", damage_str(), "。敌人身上每有厄运诅咒、绝望诅咒、虚弱诅咒、命运封印的一种，斩击伤害便提升", amount, "点。该技能经验获取量与造成总伤相关。")
+map[_("HERO_ROOM_LYNN_HEXFURY_NAME")] = string.format(_("HERO_ROOM_LYNN_HEXFURY_DESC"), str(cooldown_str()), str(count), str(damage_str()), str(amount))
 
 set_skill(h.hero.skills.despair)
 
@@ -1620,7 +1620,7 @@ factor_2 = 1 - ss("speed_factor")
 count = ss("max_count")
 a = h.timed_attacks.list[1]
 cooldown = a.cooldown
-map["绝望诅咒"] = str(cooldown_str(), "莉恩诅咒身边最多", count, "名敌人，使他们移速降低", factor_2 * 100, "%，伤害降低至", factor * 100, "%，持续", duration, "秒。绝望诅咒会反向作用于莉恩。")
+map[_("HERO_ROOM_LYNN_DESPAIR_NAME")] = string.format(_("HERO_ROOM_LYNN_DESPAIR_DESC"), str(cooldown_str()), str(count), str(factor_2 * 100), str(factor * 100), str(duration))
 
 set_skill(h.hero.skills.weakening)
 
@@ -1630,7 +1630,7 @@ factor_2 = ss("magic_armor_reduction")
 count = ss("max_count")
 a = h.timed_attacks.list[2]
 cooldown = a.cooldown
-map["虚弱诅咒"] = str(cooldown_str(), "若目前拦截的敌人护甲或法抗高于10，莉恩会诅咒身边最多", count, "名敌人，降低他们", factor * 100, "%护甲与", factor_2 * 100, "%法抗，并根据实际削减法抗值额外削减一半数值的物抗，持续", duration, "秒。虚弱诅咒会削弱一半并反向作用于莉恩。")
+map[_("HERO_ROOM_LYNN_WEAKENING_NAME")] = string.format(_("HERO_ROOM_LYNN_WEAKENING_DESC"), str(cooldown_str()), str(count), str(factor * 100), str(factor_2 * 100), str(duration))
 
 set_skill(h.hero.skills.charm_of_unluck)
 
@@ -1640,7 +1640,7 @@ e = E:get_template("mod_lynn_curse")
 local chance_2 = e.modifier.chance
 
 duration = e.modifier.duration
-map["厄运符印"] = str("莉恩受到任何伤害时，有", rate_str(chance), "逃脱。莉恩的普攻与妖咒连斩均有", rate_str(chance_2), "对目标施加厄运诅咒，使目标沉默，持续", duration, "秒。")
+map[_("HERO_ROOM_LYNN_CHARM_OF_UNLUCK_NAME")] = string.format(_("HERO_ROOM_LYNN_CHARM_OF_UNLUCK_DESC"), str(rate_str(chance)), str(rate_str(chance_2)), str(duration))
 
 set_skill(h.hero.skills.ultimate)
 
@@ -1656,7 +1656,7 @@ set_damage_value(ss("explode_damage"), 2)
 
 cycle_time = e.dps.damage_every
 duration = e.modifier.duration
-map["命运封印"] = str(cooldown_str(), "莉恩封印一名敌人的命运，使其在", duration, "秒内每", cycle_time, "秒受到", damage_str(), "。若敌人在封印期间死亡，则产生爆炸，对周围敌人造成", damage_str(2), "，并传播给他们削弱40%的命运封印效果。")
+map[_("HERO_ROOM_LYNN_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_LYNN_ULTIMATE_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(damage_str()), str(damage_str(2)))
 
 set_hero("hero_wilbur")
 set_skill(h.hero.skills.smoke)
@@ -1666,7 +1666,7 @@ a = h.timed_attacks.list[1]
 cooldown = a.cooldown
 e = T("aura_smoke_wilbur")
 radius = e.aura.radius
-map["迷雾"] = str(cooldown_str(), "威尔伯在身下制造持续", duration, "秒的迷雾，使", radius, "范围内敌人移速x", factor * 100, "%。")
+map[_("HERO_ROOM_WILBUR_SMOKE_NAME")] = string.format(_("HERO_ROOM_WILBUR_SMOKE_DESC"), str(cooldown_str()), str(duration), str(radius), str(factor * 100))
 set_skill(h.hero.skills.missile)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
@@ -1676,14 +1676,14 @@ a = h.ranged.attacks[2]
 cooldown = a.cooldown
 count = #a.shoot_times
 radius = e.bullet.damage_radius
-map["导弹"] = str(cooldown_str(), "威尔伯发射", count, "枚导弹，每枚对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_WILBUR_MISSILE_NAME")] = string.format(_("HERO_ROOM_WILBUR_MISSILE_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 set_skill(h.hero.skills.box)
 count = ss("count")
 e = T("aura_bomb_wilbur")
 get_damage(e.aura)
 radius = e.aura.radius
 cooldown = h.timed_attacks.list[2].cooldown
-map["自走炸弹"] = str(cooldown_str(), "威尔伯放置", count, "枚自走炸弹。自走炸弹爆炸时对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_WILBUR_BOX_NAME")] = string.format(_("HERO_ROOM_WILBUR_BOX_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 set_skill(h.hero.skills.ultimate)
 set_damage_value(ss("damage"))
 cooldown = h.ultimate.cooldown
@@ -1694,13 +1694,13 @@ duration = e.duration
 count_2 = e.custom_attack.max_shots
 cycle_time = e.custom_attack.cooldown
 d[1].damage_type = e.custom_attack.damage_type
-map["无人机蜂群"] = str(cooldown_str(), "威尔伯召唤", count, "架无人机协助战斗，驻场", duration, "秒。无人机全图索敌，每隔", cycle_time, "秒攻击一次，最多攻击", count_2, "次，每次造成", damage_str(), "。")
+map[_("HERO_ROOM_WILBUR_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_WILBUR_ULTIMATE_DESC"), str(cooldown_str()), str(count), str(duration), str(cycle_time), str(count_2), str(damage_str()))
 
 set_hero("hero_veznan")
 set_skill(h.hero.skills.soulburn)
 amount = ss("total_hp")
 cooldown = h.timed_attacks.list[1].cooldown
-map["灵魂裂解"] = str(cooldown_str(), "维兹南炼化数名总生命值不超过", amount, "的敌人，或无限制炼化视野内生命值最高的一名敌人。")
+map[_("HERO_ROOM_VEZNAN_SOULBURN_NAME")] = string.format(_("HERO_ROOM_VEZNAN_SOULBURN_DESC"), str(cooldown_str()), str(amount))
 set_skill(h.hero.skills.shackles)
 count = ss("max_count")
 cooldown = h.timed_attacks.list[2].cooldown
@@ -1708,7 +1708,7 @@ e = T("mod_veznan_shackles_dps")
 get_damage(e.dps)
 cycle_time = e.dps.damage_every
 duration = e.modifier.duration
-map["苦痛牢笼"] = str(cooldown_str(), "维兹南禁锢最多", count, "名敌人，持续", duration, "秒，每", cycle_time, "秒造成", damage_str(), "。")
+map[_("HERO_ROOM_VEZNAN_SHACKLES_NAME")] = string.format(_("HERO_ROOM_VEZNAN_SHACKLES_DESC"), str(cooldown_str()), str(count), str(duration), str(cycle_time), str(damage_str()))
 set_skill(h.hero.skills.arcanenova)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
@@ -1718,7 +1718,7 @@ d[1].damage_type = h.timed_attacks.list[3].damage_type
 e = T("mod_veznan_arcanenova")
 factor = e.slow.factor
 duration = e.modifier.duration
-map["奥术新星"] = str(cooldown_str(), "维兹南引爆奥术能量，在", radius, "范围内造成", damage_str(), "，并使敌人移速x", factor * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_VEZNAN_ARCANENOVA_NAME")] = string.format(_("HERO_ROOM_VEZNAN_ARCANENOVA_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(factor * 100), str(duration))
 set_skill(h.hero.skills.ultimate)
 duration = ss("stun_duration")
 health[1].hp_max = ss("soldier_hp_max")
@@ -1732,7 +1732,7 @@ health[1].magic_armor = e.health.magic_armor
 d[1].damage_type = e.melee.attacks[1].damage_type
 cooldown = h.ultimate.cooldown
 duration_2 = e.reinforcement.duration
-map["恶魔契约"] = str(cooldown_str(), "维兹南召唤大恶魔，晕眩", radius, "范围内敌人", duration, "秒。大恶魔可调集，驻场", duration_2, "秒，拥有", health_str(), "，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_VEZNAN_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_VEZNAN_ULTIMATE_DESC"), str(cooldown_str()), str(radius), str(duration), str(duration_2), str(health_str()), str(damage_str()))
 
 set_hero("hero_durax")
 set_skill(h.hero.skills.shardseed)
@@ -1741,7 +1741,7 @@ get_damage(e.bullet)
 set_damage_value(ss("damage"))
 a = h.ranged.attacks[1]
 cooldown = a.cooldown
-map["水晶长矛"] = str(cooldown_str(), "杜拉斯投出水晶长矛，造成", damage_str(), "。")
+map[_("HERO_ROOM_DURAX_SHARDSEED_NAME")] = string.format(_("HERO_ROOM_DURAX_SHARDSEED_DESC"), str(cooldown_str()), str(damage_str()))
 set_skill(h.hero.skills.lethal_prism)
 a = h.timed_attacks.list[1]
 cooldown = a.cooldown
@@ -1749,18 +1749,18 @@ get_damage(T("ray_durax").bullet)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
 count = ss("ray_count")
-map["折射效应"] = str(cooldown_str(), "杜拉斯变幻为水晶，短暂无敌并持续射出共", count, "发射线，每发射线造成", damage_str(), "。")
+map[_("HERO_ROOM_DURAX_LETHAL_PRISM_NAME")] = string.format(_("HERO_ROOM_DURAX_LETHAL_PRISM_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 set_skill(h.hero.skills.armsword)
 a = h.melee.attacks[3]
 cooldown = a.cooldown
 get_damage(a)
 set_damage_value(ss("damage"))
-map["致命晶刃"] = str(cooldown_str(), "杜拉斯使用晶刃打击敌人，造成", damage_str(), "。")
+map[_("HERO_ROOM_DURAX_ARMSWORD_NAME")] = string.format(_("HERO_ROOM_DURAX_ARMSWORD_DESC"), str(cooldown_str()), str(damage_str()))
 set_skill(h.hero.skills.crystallites)
 factor = s.damage_factor
 duration = ss("duration")
 cooldown = h.timed_attacks.list[2].cooldown
-map["水晶分身"] = str(cooldown_str(), "杜拉斯分裂出分身，驻场", duration, "秒。分身可使用本体的一切攻击手段，且伤害为本体的", factor * 100, "%。牢杜温馨提示， 3,4,5号英雄快捷键分别为s,q,r。")
+map[_("HERO_ROOM_DURAX_CRYSTALLITES_NAME")] = string.format(_("HERO_ROOM_DURAX_CRYSTALLITES_DESC"), str(cooldown_str()), str(duration), str(factor * 100))
 
 set_skill(h.hero.skills.ultimate)
 e = T("hero_durax_ultimate")
@@ -1773,7 +1773,7 @@ factor = 1 - e.slow.factor
 duration_2 = e.modifier.duration
 e = T("mod_durax_stun")
 duration = e.modifier.duration
-map["蓝水晶之牙"] = str(cooldown_str(), "杜拉斯召唤蓝水晶之牙攻击", radius, "范围内敌人，使他们分摊共", damage_str(), "，并使他们眩晕", duration, "秒。若为BOSS，则改为减速", factor * 100, "%，持续", duration_2, "秒。")
+map[_("HERO_ROOM_DURAX_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_DURAX_ULTIMATE_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(duration), str(factor * 100), str(duration_2))
 
 set_hero("hero_elves_denas")
 set_skill(h.hero.skills.shield_strike)
@@ -1785,19 +1785,19 @@ range = e.rebound_range
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
 count = ss("rebounds")
-map["弹射盾牌"] = str(cooldown_str(), "迪纳斯王子掷出盾牌，攻击敌人。盾牌每次在", range, "范围内寻找敌人，最多", count, "次，每次造成", damage_str(), "。")
+map[_("HERO_ROOM_ELVES_DENAS_SHIELD_STRIKE_NAME")] = string.format(_("HERO_ROOM_ELVES_DENAS_SHIELD_STRIKE_DESC"), str(cooldown_str()), str(range), str(count), str(damage_str()))
 set_skill(h.hero.skills.celebrity)
 count = ss("max_targets")
 duration = ss("stun_duration")
 cooldown = h.timed_attacks.list[1].cooldown
-map["英姿"] = str(cooldown_str(), "迪纳斯王子挥洒惊人魅力，使周围最多", count, "名敌人瞠目结舌，呆在原地，持续", duration, "秒。该技能被打断时，按比例返还冷却。")
+map[_("HERO_ROOM_ELVES_DENAS_CELEBRITY_NAME")] = string.format(_("HERO_ROOM_ELVES_DENAS_CELEBRITY_DESC"), str(cooldown_str()), str(count), str(duration))
 set_skill(h.hero.skills.mighty)
 a = h.melee.attacks[3]
 cooldown = a.cooldown
 get_damage(a)
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
-map["巨势锤击"] = str(cooldown_str(), "迪纳斯王子奋力打击面前敌人，造成", damage_str(), "。")
+map[_("HERO_ROOM_ELVES_DENAS_MIGHTY_NAME")] = string.format(_("HERO_ROOM_ELVES_DENAS_MIGHTY_DESC"), str(cooldown_str()), str(damage_str()))
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
 e = T("soldier_elves_denas_guard")
@@ -1806,9 +1806,9 @@ get_damage(e.melee.attacks[1])
 duration = e.reinforcement.duration
 e = T("hero_elves_denas_ultimate")
 count = e.guards_count[max_lvl]
-map["近卫骑士"] = str(cooldown_str(), "迪纳斯王子召集", count, "名可调集的近卫骑士，驻场", duration, "秒。近卫骑士拥有", health_str(), "，每次攻击造成", damage_str(), "，且免疫尸骸化和狼人化。")
+map[_("HERO_ROOM_ELVES_DENAS_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_ELVES_DENAS_ULTIMATE_DESC"), str(cooldown_str()), str(count), str(duration), str(health_str()), str(damage_str()))
 count = h.wealthy.gold
-map["零花钱"] = str("跳波时，迪纳斯王子会慷慨地把自己的", count, "块零花钱赞助给将军。")
+map[_("HERO_ROOM_ELVES_DENAS_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_ELVES_DENAS_ULTIMATE_2_DESC"), str(count))
 set_skill(h.hero.skills.sybarite)
 heal = ss("heal_hp")
 e = T("mod_elves_denas_sybarite")
@@ -1816,7 +1816,7 @@ factor = e.inflicted_damage_factor
 duration = e.modifier.duration
 cooldown = h.timed_attacks.list[2].cooldown
 amount = h.timed_attacks.list[2].lost_health
-map["大鸡腿"] = str(cooldown_str(), "若迪纳斯王子损失的生命值超过", amount, "，王子将一口吃下豪大大鸡腿，恢复", heal, "点生命值，并且自身伤害x", factor, "，持续", duration, "秒。")
+map[_("HERO_ROOM_ELVES_DENAS_SYBARITE_NAME")] = string.format(_("HERO_ROOM_ELVES_DENAS_SYBARITE_DESC"), str(cooldown_str()), str(amount), str(heal), str(factor), str(duration))
 
 set_hero("hero_arivan")
 set_skill(h.hero.skills.lightning_rod)
@@ -1829,7 +1829,7 @@ get_damage(e.bullet)
 
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-map["闪电箭"] = str(cooldown_str(), "艾里矾发射闪电箭，对敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_ARIVAN_LIGHTNING_ROD_NAME")] = string.format(_("HERO_ROOM_ARIVAN_LIGHTNING_ROD_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.stone_dance)
 
@@ -1840,7 +1840,7 @@ amount = ss("stone_extra")
 
 local hp = E:get_template("arivan_stone").hp
 
-map["石盾"] = str("元素法师善用岩石之力守护自己。", cooldown_str(), "艾里矾召唤最多", count, "枚石盾，每枚石盾能够吸收", hp, "点伤害。艾里矾每拥有一枚石盾，近战攻击伤害便提升", amount, "点。石盾碎裂时，会释放元素能量，使闪电箭、火球术、寒冰箭的冷却减少1秒。艾里矾每次普攻都有20%概率生成一枚石盾。若目标为BOSS，则概率降低为10%。拦截时，艾里矾依旧可以使用技能。")
+map[_("HERO_ROOM_ARIVAN_STONE_DANCE_NAME")] = string.format(_("HERO_ROOM_ARIVAN_STONE_DANCE_DESC"), str(cooldown_str()), str(count), str(hp), str(amount))
 
 set_skill(h.hero.skills.seal_of_fire)
 
@@ -1852,7 +1852,7 @@ cooldown = a.cooldown
 
 get_damage(e.bullet)
 
-map["火球术"] = str(cooldown_str(), "艾里矾使用火球术，连续发射", count, "发火球，每发火球对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_ARIVAN_SEAL_OF_FIRE_NAME")] = string.format(_("HERO_ROOM_ARIVAN_SEAL_OF_FIRE_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.icy_prison)
 
@@ -1864,7 +1864,7 @@ get_damage(e.bullet)
 set_damage_value(ss("damage"))
 
 duration = ss("duration")
-map["寒冰箭"] = str(cooldown_str(), "艾里矾发射寒冰箭，对敌人造成", damage_str(), "并将其冰冻，持续", duration, "秒。")
+map[_("HERO_ROOM_ARIVAN_ICY_PRISON_NAME")] = string.format(_("HERO_ROOM_ARIVAN_ICY_PRISON_DESC"), str(cooldown_str()), str(damage_str()), str(duration))
 
 set_skill(h.hero.skills.ultimate)
 
@@ -1896,7 +1896,7 @@ e = E:get_template("lightning_arivan_ultimate")
 get_damage(e.bullet, 2)
 set_damage_value(ss("damage"), 2)
 
-map["元素之怒"] = str(cooldown_str(), "艾里矾解放元素之力，召唤风暴持续前进，持续", duration, "秒。风暴对", radius, "范围内敌人造成", factor * 100, "%减速效果，每", cycle_time_2, "秒对", radius_2, "范围内敌人造成", damage_str(), "，对", radius_3, "范围内敌人每", cycle_time_3, "秒有", rate_str(chance), "冰冻其", duration_2, "秒，对", radius_4, "范围内敌人每", cycle_time, "秒有", rate_str(chance_2), "造成", damage_str(2), "。")
+map[_("HERO_ROOM_ARIVAN_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_ARIVAN_ULTIMATE_DESC"), str(cooldown_str()), str(duration), str(radius), str(factor * 100), str(cycle_time_2), str(radius_2), str(damage_str()), str(radius_3), str(cycle_time_3), str(rate_str(chance)), str(duration_2), str(radius_4), str(cycle_time), str(rate_str(chance_2)), str(damage_str(2)))
 
 set_hero("hero_phoenix")
 set_skill(h.hero.skills.purification)
@@ -1905,7 +1905,7 @@ d[1].damage_max = ss("damage_max")
 d[1].damage_type = DAMAGE_TRUE
 e = T("aura_phoenix_purification")
 radius = e.aura.radius
-map["净化"] = str("凤凰", radius, "范围内的敌人在死亡后会净化为火羽，自行追踪敌人并造成", damage_str(), "。")
+map[_("HERO_ROOM_PHOENIX_PURIFICATION_NAME")] = string.format(_("HERO_ROOM_PHOENIX_PURIFICATION_DESC"), str(radius), str(damage_str()))
 set_skill(h.hero.skills.inmolate)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
@@ -1922,7 +1922,7 @@ d[3].damage_max = h.hero.level_stats.egg_explosion_damage_max[#h.hero.level_stat
 d[3].damage_type = e.custom_attack.damage_type
 radius_2 = e.aura.radius
 radius_3 = e.custom_attack.radius
-map["焚祭"] = str("凤凰死亡时，将坠落对", radius, "范围内敌人造成", damage_str(), "，并留下一枚凤凰蛋。凤凰蛋每", cycle_time, "秒对", radius_2, "范围内敌人造成", damage_str(2), "，并在复活时对", radius_3, "范围内敌人造成", damage_str(3), "。", cooldown_str(), "凤凰会主动使用焚祭。")
+map[_("HERO_ROOM_PHOENIX_INMOLATE_NAME")] = string.format(_("HERO_ROOM_PHOENIX_INMOLATE_DESC"), str(radius), str(damage_str()), str(cycle_time), str(radius_2), str(damage_str(2)), str(radius_3), str(damage_str(3)), str(cooldown_str()))
 set_skill(h.hero.skills.blazing_offspring)
 e = T("missile_phoenix")
 get_damage(e.bullet)
@@ -1930,7 +1930,7 @@ d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
 count = ss("count")
 cooldown = h.ranged.attacks[2].cooldown
-map["炽焰后裔"] = str(cooldown_str(), "凤凰发射", count, "枚火羽追踪并攻击敌人，每枚火羽造成", damage_str(), "。")
+map[_("HERO_ROOM_PHOENIX_BLAZING_OFFSPRING_NAME")] = string.format(_("HERO_ROOM_PHOENIX_BLAZING_OFFSPRING_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 set_skill(h.hero.skills.flaming_path)
 set_damage_value(ss("damage"))
 cooldown = h.timed_attacks.list[2].cooldown
@@ -1939,7 +1939,7 @@ duration = e.modifier.duration
 cycle_time = e.custom_attack.cooldown
 radius = e.custom_attack.radius
 d[1].damage_type = e.custom_attack.damage_type
-map["火焰之环"] = str(cooldown_str(), "凤凰增益一座防御塔，持续", duration, "秒，使其每隔", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_PHOENIX_FLAMING_PATH_NAME")] = string.format(_("HERO_ROOM_PHOENIX_FLAMING_PATH_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(radius), str(damage_str()))
 set_skill(h.hero.skills.ultimate)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
@@ -1948,7 +1948,7 @@ e = T("hero_phoenix_ultimate")
 radius = e.aura.radius
 duration = e.aura.duration
 d[1].damage_type = e.aura.damage_type
-map["余烬之地"] = str(cooldown_str(), "凤凰产下一枚蛋，驻场", duration, "秒。被触发时，对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_PHOENIX_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_PHOENIX_ULTIMATE_DESC"), str(cooldown_str()), str(duration), str(radius), str(damage_str()))
 
 set_hero("hero_bravebark")
 set_skill(h.hero.skills.ultimate)
@@ -1960,7 +1960,7 @@ e = E:get_template("mod_bravebark_ultimate")
 duration = e.modifier.duration
 count = ss("count")
 set_damage_value(ss("damage"))
-map["自然之怒"] = str(cooldown_str(), "巴克在一片区域区域召唤共", count, "个树根，每个树根对", radius, "范围内敌人造成", damage_str(), "，并使他们晕眩", duration, "秒。")
+map[_("HERO_ROOM_BRAVEBARK_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_BRAVEBARK_ULTIMATE_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()), str(duration))
 set_skill(h.hero.skills.springsap)
 duration = ss("duration")
 amount = ss("hp_per_cycle")
@@ -1969,7 +1969,7 @@ factor = h.springsap.trigger_hp_factor
 radius = h.springsap.radius
 e = E:get_template("mod_bravebark_springsap")
 cycle_time = e.hps.heal_every
-map["春生树液"] = str(cooldown_str(), "若巴克身边有生命值低于", factor * 100, "%的友军，巴克便分泌春生树液，在", duration, "秒内持续治疗", radius, "范围内的友军，驱除他们的中毒效果，并每", cycle_time, "秒恢复", amount, "点生命值。")
+map[_("HERO_ROOM_BRAVEBARK_SPRINGSAP_NAME")] = string.format(_("HERO_ROOM_BRAVEBARK_SPRINGSAP_DESC"), str(cooldown_str()), str(factor * 100), str(duration), str(radius), str(cycle_time), str(amount))
 set_skill(h.hero.skills.oakseeds)
 e = E:get_template("soldier_bravebark")
 get_health(e)
@@ -1980,7 +1980,7 @@ d[1].damage_min = ss("soldier_damage_min")
 cooldown = h.timed_attacks.list[2].cooldown
 count = h.timed_attacks.list[2].count
 duration = e.reinforcement.duration
-map["橡树之种"] = str(cooldown_str(), "巴克种下", count, "枚橡树之种，繁育出小树人。小树人拥有", health_str(), "，每次攻击造成", damage_str(), "。小树人驻场", duration, "秒，且不会尸骸化或狼人化。")
+map[_("HERO_ROOM_BRAVEBARK_OAKSEEDS_NAME")] = string.format(_("HERO_ROOM_BRAVEBARK_OAKSEEDS_DESC"), str(cooldown_str()), str(count), str(health_str()), str(damage_str()), str(duration))
 set_skill(h.hero.skills.rootspikes)
 a = h.timed_attacks.list[1]
 cooldown = a.cooldown
@@ -1989,10 +1989,10 @@ radius = a.damage_radius
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
 count = a.trigger_count
-map["尖刺树根"] = str(cooldown_str(), "巴克从地面召唤出尖刺树根，对", radius, "范围内敌人造成", damage_str(), "。该技能只有周围敌人数量达到", count, "时才会释放。")
+map[_("HERO_ROOM_BRAVEBARK_ROOTSPIKES_NAME")] = string.format(_("HERO_ROOM_BRAVEBARK_ROOTSPIKES_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(count))
 set_skill(h.hero.skills.branchball)
 cooldown = h.melee.attacks[2].cooldown
-map["本垒打"] = str(cooldown_str(), "巴克抄起大树枝，将面前的敌人打飞出游戏。")
+map[_("HERO_ROOM_BRAVEBARK_BRANCHBALL_NAME")] = string.format(_("HERO_ROOM_BRAVEBARK_BRANCHBALL_DESC"), str(cooldown_str()))
 
 set_hero("hero_catha")
 set_skill(h.hero.skills.ultimate)
@@ -2000,18 +2000,18 @@ duration = ss("duration")
 duration_2 = ss("duration_boss")
 radius = ss("range")
 cooldown = h.ultimate.cooldown
-map["仙境魔尘"] = str(cooldown_str(), "卡莎释放仙境魔尘，使", radius, "范围内敌人陷入昏睡", duration, "秒。若敌人为BOSS，则改为昏睡", duration_2, "秒。")
+map[_("HERO_ROOM_CATHA_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_CATHA_ULTIMATE_DESC"), str(cooldown_str()), str(radius), str(duration), str(duration_2))
 set_skill(h.hero.skills.curse)
 chance = ss("chance")
 duration = ss("duration")
 factor = s.chance_factor_tale
-map["仙子诅咒"] = str("卡莎的近战和远程普攻有", rate_str(chance), "使敌人昏睡，持续", duration, "秒。卡莎分身继承该效果，但是触发概率为原来的", factor * 100, "%。")
+map[_("HERO_ROOM_CATHA_CURSE_NAME")] = string.format(_("HERO_ROOM_CATHA_CURSE_DESC"), str(rate_str(chance)), str(duration), str(factor * 100))
 set_skill(h.hero.skills.soul)
 heal = ss("heal_hp")
 cooldown = h.timed_attacks.list[2].cooldown
 radius = h.timed_attacks.list[2].max_range
 count = h.timed_attacks.list[2].max_count
-map["仙女之魂"] = str(cooldown_str(), "卡莎仙法大爆发，为附近", radius, "范围内最多", count, "名友军恢复", heal, "点生命值。")
+map[_("HERO_ROOM_CATHA_SOUL_NAME")] = string.format(_("HERO_ROOM_CATHA_SOUL_DESC"), str(cooldown_str()), str(radius), str(count), str(heal))
 set_skill(h.hero.skills.tale)
 count = ss("max_count")
 e = T("soldier_catha")
@@ -2019,7 +2019,7 @@ get_health(e)
 health[1].hp_max = ss("hp_max")
 cooldown = h.timed_attacks.list[3].cooldown
 duration = e.reinforcement.duration
-map["仙境传说"] = str(cooldown_str(), "卡莎召唤", count, "个分身。分身拥有", health_str(), "，造成和本体相同的伤害，驻场", duration, "秒。")
+map[_("HERO_ROOM_CATHA_TALE_NAME")] = string.format(_("HERO_ROOM_CATHA_TALE_DESC"), str(cooldown_str()), str(count), str(health_str()), str(duration))
 set_skill(h.hero.skills.fury)
 e = T("catha_fury")
 get_damage(e.bullet)
@@ -2027,7 +2027,7 @@ count = ss("count")
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 cooldown = h.timed_attacks.list[1].cooldown
-map["仙子之怒"] = str(cooldown_str(), "卡莎释放仙子之怒，对", count, "名随机敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_CATHA_FURY_NAME")] = string.format(_("HERO_ROOM_CATHA_FURY_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_hero("hero_lilith")
 set_skill(h.hero.skills.infernal_wheel)
@@ -2039,14 +2039,14 @@ e = T("aura_lilith_infernal_wheel")
 duration = e.aura.duration
 radius = e.aura.radius
 set_damage_value(ss("damage"))
-map["地狱之轮"] = str(cooldown_str(), "莉莉丝召唤一片持续", duration, "秒的火场，使", radius, "范围内敌人烧伤，每", cycle_time, "秒造成", damage_str(), "。")
+map[_("HERO_ROOM_LILITH_INFERNAL_WHEEL_NAME")] = string.format(_("HERO_ROOM_LILITH_INFERNAL_WHEEL_DESC"), str(cooldown_str()), str(duration), str(radius), str(cycle_time), str(damage_str()))
 set_skill(h.hero.skills.reapers_harvest)
 chance = ss("instakill_chance")
 a = h.melee.attacks[3]
 cooldown = a.cooldown
 get_damage(a)
 set_damage_value(ss("damage"))
-map["收割"] = str(cooldown_str(), "莉莉丝高举镰刀，对敌人进行一次无法闪避的攻击，造成", damage_str(), "。该攻击有", rate_str(chance), "秒杀敌人，并立刻触发噬魂，为莉莉丝恢复20%最大生命值。")
+map[_("HERO_ROOM_LILITH_REAPERS_HARVEST_NAME")] = string.format(_("HERO_ROOM_LILITH_REAPERS_HARVEST_DESC"), str(cooldown_str()), str(damage_str()), str(rate_str(chance)))
 set_skill(h.hero.skills.ultimate)
 count = ss("angel_count")
 e = T("soldier_lilith_angel")
@@ -2064,20 +2064,20 @@ cooldown = h.ultimate.cooldown
 e = T("hero_lilith_ultimate")
 min_count = 1
 local max_count = 1 + e.meteor_node_spread * 4
-map["神圣混沌"] = str(cooldown_str(), "若身边只有一名敌人，莉莉丝召唤", count, "名天使短暂阻拦敌人，每名天使攻击敌人", count_2, "次，每次攻击造成", damage_str(), "。否则，莉莉丝召唤", min_count, "至", max_count, "颗陨石砸向敌人，每枚陨石对", radius, "范围内敌人造成", damage_str(2), "，并使其受到", factor * 100, "%的减速效果，持续", duration, "秒。")
+map[_("HERO_ROOM_LILITH_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_LILITH_ULTIMATE_DESC"), str(cooldown_str()), str(count), str(count_2), str(damage_str()), str(min_count), str(max_count), str(radius), str(damage_str(2)), str(factor * 100), str(duration))
 set_skill(h.hero.skills.soul_eater)
 e = T("aura_lilith_soul_eater")
 factor = ss("damage_factor")
 cooldown = e.aura.cooldown
 e = T("mod_lilith_soul_eater_damage_factor")
 duration = e.modifier.duration
-map["噬魂"] = str(cooldown_str(), "莉莉丝汲取一名周围死亡敌人的灵魂，使自己获得基于敌人攻击力x", factor * 100, "%与自身原本攻击力的比值的伤害加成，持续", duration, "秒。")
+map[_("HERO_ROOM_LILITH_SOUL_EATER_NAME")] = string.format(_("HERO_ROOM_LILITH_SOUL_EATER_DESC"), str(cooldown_str()), str(factor * 100), str(duration))
 set_skill(h.hero.skills.resurrection)
 chance = ss(("chance"))
 local cost = h.revive.resist.cost
 duration = h.revive.resist.duration
-map["复生"] = str("莉莉丝死亡时，有", rate_str(chance), "复活，并刷新收割的冷却。当莉莉丝受到眩晕、流血、中毒、灼烧等异常效果影响时，莉莉丝会降低下次复活概率", cost * 100, "%，并刷新收割的冷却，并在接下来的", duration, "秒免疫异常效果。")
-map["降临"] = str("莉莉丝拥有额外10%复活概率，该复活概率可由其躯体的透明度显明。透明度越高，复活概率越低。莉莉丝每次近战普攻可提升复活概率1%，每次远程普攻可提升复活概率1.5%。收割未触发秒杀时，提升复活概率1%，反之提升2%。每1%额外复活概率可加快神圣混沌的冷却0.15%、地狱之轮的冷却0.4%，并使收割秒杀的触发概率提升0.2%，最高加快15%，40%冷却，提高20%秒杀概率。当莉莉丝复活时，其额外复活概率减半。")
+map[_("HERO_ROOM_LILITH_RESURRECTION_NAME")] = string.format(_("HERO_ROOM_LILITH_RESURRECTION_DESC"), str(rate_str(chance)), str(cost * 100), str(duration))
+map[_("HERO_ROOM_LILITH_RESURRECTION_2_NAME")] = _("HERO_ROOM_LILITH_RESURRECTION_2_DESC")
 set_hero("hero_xin")
 set_skill(h.hero.skills.inspire)
 
@@ -2086,7 +2086,7 @@ a = h.timed_attacks.list[2]
 cooldown = a.cooldown
 e = E:get_template("mod_xin_inspire")
 factor = e.inflicted_damage_factor
-map["激励怒吼"] = str(cooldown_str(), "鑫短暂无敌，怒喝一声，使周围友军的伤害x", factor, "，持续", duration, "秒。")
+map[_("HERO_ROOM_XIN_INSPIRE_NAME")] = string.format(_("HERO_ROOM_XIN_INSPIRE_DESC"), str(cooldown_str()), str(factor), str(duration))
 a = h.timed_attacks.list[1]
 cooldown = a.cooldown
 
@@ -2095,7 +2095,7 @@ set_skill(h.hero.skills.daring_strike)
 
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-map["英勇打击"] = str(cooldown_str(), "鑫进入无敌状态，闪现至生命值最高的敌人身前并英勇地打击他，造成", damage_str(), "。鑫可瞬移至任何位置，并在原地留下分身短暂代为拦截敌人。")
+map[_("HERO_ROOM_XIN_DARING_STRIKE_NAME")] = string.format(_("HERO_ROOM_XIN_DARING_STRIKE_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.ultimate)
 
@@ -2107,7 +2107,7 @@ get_damage(e.melee.attacks[1])
 set_damage_value(ss("damage"))
 
 count_2 = e.max_attack_count
-map["熊猫乱舞"] = str(cooldown_str(), "鑫召唤", count, "名弟子支援，每名弟子肘敌人", count_2, "下后退场，每肘造成", damage_str(), "。")
+map[_("HERO_ROOM_XIN_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_XIN_ULTIMATE_DESC"), str(cooldown_str()), str(count), str(count_2), str(damage_str()))
 
 set_skill(h.hero.skills.mind_over_body)
 
@@ -2118,7 +2118,7 @@ amount = ss("damage_buff")
 a = h.timed_attacks.list[3]
 cooldown = a.cooldown
 factor = a.min_health_factor
-map["驭体于灵"] = str(cooldown_str(), "当鑫的剩余生命值低于", factor * 100, "%时，鑫会喝下熊猫特酿，进入驭体于灵状态，持续", duration, "秒。驭体于灵状态下，鑫的伤害提升", amount, "点，并每", cycle_time, "秒恢复", heal, "点生命，且会快速驱散中毒、晕眩、流血等异常效果。退出驭体于灵状态时，熊猫流派、英勇打击、激励怒吼的冷却时间均会减少10%。驭体于灵状态下时，每次普攻有50%概率加快熊猫流派、英勇打击、激励怒吼冷却10%。任何时候，鑫普攻均有50%概率加快驭体于灵冷却10%。")
+map[_("HERO_ROOM_XIN_MIND_OVER_BODY_NAME")] = string.format(_("HERO_ROOM_XIN_MIND_OVER_BODY_DESC"), str(cooldown_str()), str(factor * 100), str(duration), str(amount), str(cycle_time), str(heal))
 
 set_skill(h.hero.skills.panda_style)
 
@@ -2130,7 +2130,7 @@ get_damage(a)
 
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-map["熊猫流派"] = str(cooldown_str(), " 鑫施展熊猫流派（屁股墩），对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_XIN_PANDA_STYLE_NAME")] = string.format(_("HERO_ROOM_XIN_PANDA_STYLE_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 
 set_hero("hero_faustus")
 set_skill(h.hero.skills.teleport_rune)
@@ -2144,7 +2144,7 @@ set_damage_value(e.damage_base + e.damage_inc * max_lvl)
 d[1].damage_type = e.damage_type
 duration = e.delay_start
 local nodes_offset = -e.nodes_offset
-map["传送符文"] = str(cooldown_str(), "浮士德使用传送符文，影响", radius, "范围内最多", count, "名敌人，使他们晕眩", duration, "秒后传送", nodes_offset, "个节点，并造成", damage_str(), "。")
+map[_("HERO_ROOM_FAUSTUS_TELEPORT_RUNE_NAME")] = string.format(_("HERO_ROOM_FAUSTUS_TELEPORT_RUNE_DESC"), str(cooldown_str()), str(radius), str(count), str(duration), str(nodes_offset), str(damage_str()))
 set_skill(h.hero.skills.ultimate)
 e = T("mod_minidragon_faustus")
 set_damage_value(ss("mod_damage"))
@@ -2153,7 +2153,7 @@ d[1].damage_type = e.dps.damage_type
 cooldown = h.ultimate.cooldown
 e = T("aura_minidragon_faustus")
 duration = e.aura.duration
-map["龙怒"] = str(cooldown_str(), "浮士德召唤数条小龙，焚烧路径", duration, "秒，使敌人每", cycle_time, "秒受到", damage_str(), "。")
+map[_("HERO_ROOM_FAUSTUS_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_FAUSTUS_ULTIMATE_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(damage_str()))
 set_skill(h.hero.skills.dragon_lance)
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
@@ -2161,7 +2161,7 @@ a = h.ranged.attacks[2]
 cooldown = a.cooldown
 e = T("bolt_lance_faustus")
 d[1].damage_type = e.bullet.damage_type
-map["龙枪"] = str(cooldown_str(), "浮士德射出数根龙枪，每根龙枪造成", damage_str(), "。")
+map[_("HERO_ROOM_FAUSTUS_DRAGON_LANCE_NAME")] = string.format(_("HERO_ROOM_FAUSTUS_DRAGON_LANCE_DESC"), str(cooldown_str()), str(damage_str()))
 set_skill(h.hero.skills.liquid_fire)
 count = ss("flames_count")
 e = T("aura_liquid_fire_flame_faustus")
@@ -2173,16 +2173,16 @@ cycle_time = e.dps.damage_every
 a = h.ranged.attacks[5]
 cooldown = a.cooldown
 min_count = a.min_count
-map["液烟"] = str(cooldown_str(), "周围至少有", min_count, "名敌人时，浮士德吐出龙烟，向路径前后方向各传播出", count, "枚火焰，持续", duration, "秒，使敌人每", cycle_time, "秒受到", damage_str(), "。")
+map[_("HERO_ROOM_FAUSTUS_LIQUID_FIRE_NAME")] = string.format(_("HERO_ROOM_FAUSTUS_LIQUID_FIRE_DESC"), str(cooldown_str()), str(min_count), str(count), str(duration), str(cycle_time), str(damage_str()))
 set_skill(h.hero.skills.enervation)
 duration = ss("duration")
 count = ss("max_targets")
 a = h.ranged.attacks[4]
 cooldown = a.cooldown
-map["弱能"] = str(cooldown_str(), "浮士德沉默最多", count, "名施法者，持续", duration, "秒。")
+map[_("HERO_ROOM_FAUSTUS_ENERVATION_NAME")] = string.format(_("HERO_ROOM_FAUSTUS_ENERVATION_DESC"), str(cooldown_str()), str(count), str(duration))
 set_skill(h.hero.skills.urination)
 count = ss("count")
-map["蔓枝"] = str("浮士德的普攻与龙枪会分裂出", count, "发。")
+map[_("HERO_ROOM_FAUSTUS_URINATION_NAME")] = string.format(_("HERO_ROOM_FAUSTUS_URINATION_DESC"), str(count))
 
 set_hero("hero_rag")
 -- 兔子
@@ -2193,7 +2193,7 @@ e = T("aura_rabbit_kamihare")
 get_damage(e.aura)
 radius = e.aura.radius
 count = ss("count")
-map["爆炸兔兔"] = str(cooldown_str(), "瑞格召唤", count, "只兔子敢死队向前行进，每只兔子遇敌爆炸，对", radius, "范围内的敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_RAG_KAMIHARE_NAME")] = string.format(_("HERO_ROOM_RAG_KAMIHARE_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 -- 锤子
 set_skill(h.hero.skills.hammer_time)
 a = h.timed_attacks.list[3]
@@ -2202,7 +2202,7 @@ get_damage(a)
 radius = a.damage_radius
 duration = ss("duration")
 cycle_time = a.damage_every
-map["敲敲敲"] = str(cooldown_str(), "瑞格抄起大锤胡乱敲打，持续", duration, "秒，每", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "和眩晕效果。该技能被手动打断时，按比例返还冷却。")
+map[_("HERO_ROOM_RAG_HAMMER_TIME_NAME")] = string.format(_("HERO_ROOM_RAG_HAMMER_TIME_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(radius), str(damage_str()))
 -- 扔东西
 set_skill(h.hero.skills.angry_gnome)
 a = h.timed_attacks.list[1]
@@ -2210,7 +2210,7 @@ cooldown = a.cooldown
 get_damage(T("bullet_rag_throw").bullet)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-map["侏儒之怒"] = str(cooldown_str(), "瑞格扔出一个不明物体，造成", damage_str(), "。")
+map[_("HERO_ROOM_RAG_ANGRY_GNOME_NAME")] = string.format(_("HERO_ROOM_RAG_ANGRY_GNOME_DESC"), str(cooldown_str()), str(damage_str()))
 set_skill(h.hero.skills.raggified)
 a = h.timed_attacks.list[4]
 cooldown = a.cooldown
@@ -2218,10 +2218,10 @@ amount = ss("max_target_hp")
 duration = ss("doll_duration")
 factor = ss("break_factor")
 factor_2 = T("soldier_rag").health.damage_factor
-map["布偶变"] = str(cooldown_str(), "瑞格将一个生命值低于", amount, "的非BOSS陆军敌人变成布偶，为我军作战。布偶继承敌人的生命值与攻击力，且受到伤害x", factor_2, "。在", duration, "秒后，一旦布偶生命值降到", factor * 100, "%以下，布偶将变回敌人。")
+map[_("HERO_ROOM_RAG_RAGGIFIED_NAME")] = string.format(_("HERO_ROOM_RAG_RAGGIFIED_DESC"), str(cooldown_str()), str(amount), str(factor_2), str(duration), str(factor * 100))
 set_skill(h.hero.skills.ultimate)
 count = ss("max_count")
-map["超级变变变"] = str(cooldown_str(), "瑞格对最多", count, "名敌人施展无生命值限制的布偶变。")
+map[_("HERO_ROOM_RAG_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_RAG_ULTIMATE_DESC"), str(cooldown_str()), str(count))
 
 set_hero("hero_bruce")
 set_skill(h.hero.skills.sharp_claws)
@@ -2234,21 +2234,21 @@ d[2].damage_type = e.extra_bleeding_damage_type
 a = h.melee.attacks[3]
 chance = a.chance
 duration = e.modifier.duration
-map["流血利刃"] = str("布鲁斯每次攻击有", chance, "概率使敌人流血，持续", duration, "秒，每", cycle_time, "秒造成", damage_str(1), "。对流血或中毒的敌人，布鲁斯每次攻击额外造成", damage_str(2), "。")
+map[_("HERO_ROOM_BRUCE_SHARP_CLAWS_NAME")] = string.format(_("HERO_ROOM_BRUCE_SHARP_CLAWS_DESC"), str(chance), str(duration), str(cycle_time), str(damage_str(1)), str(damage_str(2)))
 set_skill(h.hero.skills.kings_roar)
 duration = ss("stun_duration")
 a = h.timed_attacks.list[1]
 cooldown = a.cooldown
 radius = a.range
 min_count = a.min_count
-map["王者咆哮"] = str(cooldown_str(), "若周围有至少", min_count, "名敌人，布鲁斯一声怒喝，使", radius, "范围内敌人眩晕", duration, "秒。")
+map[_("HERO_ROOM_BRUCE_KINGS_ROAR_NAME")] = string.format(_("HERO_ROOM_BRUCE_KINGS_ROAR_DESC"), str(cooldown_str()), str(min_count), str(radius), str(duration))
 set_skill(h.hero.skills.grievous_bites)
 set_damage_value(ss("damage"))
 a = h.melee.attacks[4]
 cooldown = a.cooldown
 d[1].damage_type = a.damage_type
 count = #a.hit_times
-map["野蛮撕咬"] = str(cooldown_str(), "布鲁斯连续撕咬敌人", count, "次，每次造成", damage_str(), "，并使敌人流血。该技能获得经验量与造成总伤相关。")
+map[_("HERO_ROOM_BRUCE_GRIEVOUS_BITES_NAME")] = string.format(_("HERO_ROOM_BRUCE_GRIEVOUS_BITES_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
 set_damage_value(ss("damage_per_tick"))
@@ -2260,7 +2260,7 @@ duration = e.modifier.duration
 d[1].damage_type = e.dps.damage_type
 cycle_time = e.dps.damage_every
 count = ss("count")
-map["雄狮守卫"] = str(cooldown_str(), "布鲁斯召唤", count, "头雄狮守卫向前奔跑，遭遇敌人后消失，使敌人眩晕", duration, "秒，并每", cycle_time, "秒受到", damage_str(1), "。若目标为boss，则改为一次性造成", damage_str(2), "。")
+map[_("HERO_ROOM_BRUCE_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_BRUCE_ULTIMATE_DESC"), str(cooldown_str()), str(count), str(duration), str(cycle_time), str(damage_str(1)), str(damage_str(2)))
 
 set_hero("hero_bolverk")
 set_skill(h.hero.skills.slash)
@@ -2269,7 +2269,7 @@ d[1].damage_min = ss("damage_min")
 a = h.melee.attacks[2]
 cooldown = a.cooldown
 d[1].damage_type = a.damage_type
-map["怒击"] = str(cooldown_str(), "波尔维克奋力劈砍敌人，造成", damage_str(), "，并恢复自身12%已损生命值。该技能获取经验量与造成总伤相关。")
+map[_("HERO_ROOM_BOLVERK_SLASH_NAME")] = string.format(_("HERO_ROOM_BOLVERK_SLASH_DESC"), str(cooldown_str()), str(damage_str()))
 set_skill(h.hero.skills.scream)
 a = h.timed_attacks.list[1]
 set_damage_value(ss("fire_damage"))
@@ -2283,10 +2283,10 @@ duration_2 = e.modifier.duration
 cycle_time = e.dps.damage_every
 d[1].damage_type = e.dps.damage_type
 radius = a.max_range
-map["炎吼"] = str(cooldown_str(), "波尔维克展示口气，使", radius, "范围的敌人获得", duration_2, "秒烧伤效果，每", cycle_time, "秒造成", damage_str(), "，并使敌人受到的伤害x", factor, "，造成的伤害x", factor_2, "，持续", duration, "秒。")
+map[_("HERO_ROOM_BOLVERK_SCREAM_NAME")] = string.format(_("HERO_ROOM_BOLVERK_SCREAM_DESC"), str(cooldown_str()), str(radius), str(duration_2), str(cycle_time), str(damage_str()), str(factor), str(factor_2), str(duration))
 set_skill(h.hero.skills.berserker)
 factor = ss("factor")
-map["狂战血脉"] = str("波尔维克的狂战血脉使他越战越勇。他的生命值越低，技能冷却越快，最高缩减至", factor * 100, "%。")
+map[_("HERO_ROOM_BOLVERK_BERSERKER_NAME")] = string.format(_("HERO_ROOM_BOLVERK_BERSERKER_DESC"), str(factor * 100))
 
 local balance = require("kr1.data.balance").heroes
 set_hero("hero_vesper")
@@ -2297,7 +2297,7 @@ d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_type = blc.damage_type
 duration = table.tail(blc.stun_duration)
 local distance = T("hero_vesper_arrow_to_the_knee_arrow").bullet.straight_forward_distance
-map["穿膝利箭"] = str(cooldown_str(), "维斯帕射出穿膝利箭，穿透", distance, "距离上的敌人，造成", damage_str(), "，并使其眩晕", duration, "秒。")
+map[_("HERO_ROOM_VESPER_BERSERKER_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_DESC"), str(cooldown_str()), str(distance), str(damage_str()), str(duration))
 blc = balance.hero_vesper.ricochet
 count = table.tail(blc.bounces)
 d[1].damage_max = table.tail(blc.damage_max)
@@ -2306,21 +2306,21 @@ d[1].damage_type = blc.damage_type
 cooldown = table.tail(blc.cooldown)
 factor = blc.slow_factor
 duration = blc.duration
-map["弹射箭矢"] = str(cooldown_str(), "维斯帕射出弹射箭矢，对敌人造成", damage_str(), "，并在击中敌人后弹射至附近敌人，最多弹射", count, "次。被命中的敌人在", duration, "秒内移速x", factor * 100, "%。")
+map[_("HERO_ROOM_VESPER_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_2_DESC"), str(cooldown_str()), str(damage_str()), str(count), str(duration), str(factor * 100))
 blc = balance.hero_vesper.disengage
 count = blc.total_shoots
 cooldown = table.tail(blc.cooldown)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_type = blc.damage_type
-map["金蝉脱壳"] = str(cooldown_str(), "受到攻击时，维斯帕刷新穿膝利箭与弹射箭矢的冷却，向后闪躲并射出", count, "支箭，每支造成", damage_str(), "。")
+map[_("HERO_ROOM_VESPER_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 blc = balance.hero_vesper.martial_flourish
 cooldown = table.tail(blc.cooldown)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_type = blc.damage_type
 count = #h.melee.attacks[3].hit_times
-map["武艺绽放"] = str(cooldown_str(), "维斯帕武艺绽放，连续攻击敌人", count, "次，每次造成", damage_str(), "。")
+map[_("HERO_ROOM_VESPER_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_4_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 blc = balance.hero_vesper.ultimate
 radius = blc.enemies_range
 count = table.tail(blc.spread) * 2
@@ -2330,7 +2330,7 @@ d[1].damage_type = blc.damage_type
 factor = blc.slow_factor
 set_damage_value(table.tail(blc.damage))
 cooldown = table.tail(blc.cooldown)
-map["箭矢风暴"] = str(cooldown_str(), "维斯帕召唤箭矢风暴，在", radius, "范围内共射出", count, "支箭，每支箭对", radius_2, "范围内敌人造成", damage_str(), "，并使其移速x", factor * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_VESPER_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_5_DESC"), str(cooldown_str()), str(radius), str(count), str(radius_2), str(damage_str()), str(factor * 100), str(duration))
 
 set_hero("hero_hunter")
 blc = balance.hero_hunter.shoot_around
@@ -2342,13 +2342,13 @@ d[1].damage_min = table.tail(blc.damage_min)
 factor = blc.slow_factor
 duration = table.tail(blc.duration)
 cycle_time = blc.damage_every
-map["银白风暴"] = str(cooldown_str(), "安雅快速射击", radius, "范围内的敌人，持续", duration, "秒，使敌人移速x", factor * 100, "%，并每", cycle_time, "秒造成", damage_str(), "。打断技能时，等比例返还冷却。")
+map[_("HERO_ROOM_HUNTER_BERSERKER_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_DESC"), str(cooldown_str()), str(radius), str(duration), str(factor * 100), str(cycle_time), str(damage_str()))
 blc = balance.hero_hunter.heal_strike
 d[1].damage_type = blc.damage_type
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_min = table.tail(blc.damage_min)
 factor = table.tail(blc.heal_factor)
-map["吸血爪击"] = str("每普攻6次，安雅使用吸血爪击，对敌人造成", damage_str(), "，并恢复目标最大生命值", factor * 100, "%的生命。若此时安雅已死亡，恢复的生命会强行将安雅拉出鬼门关。")
+map[_("HERO_ROOM_HUNTER_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_2_DESC"), str(damage_str()), str(factor * 100))
 blc = balance.hero_hunter.beasts
 cooldown = table.tail(blc.cooldown)
 cooldown_2 = blc.attack_cooldown
@@ -2358,14 +2358,14 @@ duration = table.tail(blc.duration)
 amount = table.tail(blc.gold_to_steal)
 d[1].damage_type = blc.damage_type
 chance = blc.chance_to_steal
-map["黄昏血妖"] = str(cooldown_str(), "安雅召唤两只黄昏血妖，驻场", duration, "秒。黄昏血妖每次攻击造成", damage_str(), "，并有", chance * 100, "%概率偷取", amount, "枚金币。")
+map[_("HERO_ROOM_HUNTER_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_3_DESC"), str(cooldown_str()), str(duration), str(damage_str()), str(chance * 100), str(amount))
 blc = balance.hero_hunter.ricochet
 cooldown = table.tail(blc.cooldown)
 d[1].damage_type = blc.damage_type
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_min = table.tail(blc.damage_min)
 count = table.tail(blc.bounces) + 1
-map["迷雾步伐"] = str(cooldown_str(), "安雅退出射击状态，化身血妖连续攻击最多", count, "名敌人，每次造成", damage_str(), "，并在最后一次攻击后回身攻击，对直线路径上敌人再次造成相同伤害。")
+map[_("HERO_ROOM_HUNTER_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_4_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 blc = balance.hero_hunter.ultimate
 cooldown = table.tail(blc.cooldown)
 duration = blc.duration
@@ -2375,7 +2375,7 @@ factor_2 = table.tail(blc.damage_factor)
 d[1].damage_max = table.tail(blc.entity.basic_ranged.damage_max)
 d[1].damage_min = table.tail(blc.entity.basic_ranged.damage_min)
 d[1].damage_type = blc.entity.basic_ranged.damage_type
-map["父魂"] = str(cooldown_str(), "安雅召唤但丁之魂，驻场", duration, "秒。但丁可调集，每次攻击造成", damage_str(), "，并使", radius, "范围内敌人移速x", factor * 100, "%。当安雅死亡且但丁在附近时，但丁将复活安雅。此技能拥有双倍于基础冷却的独立冷却，在安雅死亡，且场上无但丁灵魂时自动释放，复活安雅。当安雅与但丁同时出战时，召唤但丁之魂替换为自身伤害x", factor_2, "，持续", duration, "秒。")
+map[_("HERO_ROOM_HUNTER_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_5_DESC"), str(cooldown_str()), str(duration), str(damage_str()), str(radius), str(factor * 100), str(factor_2), str(duration))
 
 local function tail(name)
 	return table.tail(blc[name])
@@ -2391,20 +2391,20 @@ d[1].damage_min = table.tail(blc.entity.damage_min)
 health[1].hp_max = table.tail(blc.entity.hp_max)
 health[1].armor = table.tail(blc.entity.armor)
 health[1].magic_armor = 0
-map["指挥号令"] = str(cooldown_str(), "蕾琳召唤一名可调集的黑骑士，驻场", duration, "秒。黑骑士拥有", health_str(), "，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_RAELYN_BERSERKER_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_DESC"), str(cooldown_str()), str(duration), str(health_str()), str(damage_str()))
 blc = balance.hero_raelyn.brutal_slash
 cooldown = tail("cooldown")
 d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
-map["残酷打击"] = str(cooldown_str(), "蕾琳残酷地打击敌人，造成", damage_str(), "。当适当距离横向调遣蕾琳时，蕾琳会利用跳斩快速位移。")
+map[_("HERO_ROOM_RAELYN_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_2_DESC"), str(cooldown_str()), str(damage_str()))
 blc = balance.hero_raelyn.onslaught
 min_count = blc.min_targets
 duration = tail("duration")
 cooldown = tail("cooldown")
 factor = blc.speed_inc_factor
 factor_2 = blc.cooldown_factor
-map["全力猛攻"] = str(cooldown_str(), "当身边至少有", min_count, "名敌人时，蕾琳进入全力猛攻状态，持续", duration, "秒。在此期间，蕾琳的普攻大大加快并额外造成范围伤害，移速提升", factor * 100, "%，攻速加快", (1 - factor_2) * 100, "%。使用其它技能不会消耗全力猛攻状态的时间。")
+map[_("HERO_ROOM_RAELYN_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_3_DESC"), str(cooldown_str()), str(min_count), str(duration), str(factor * 100), str((1 - factor_2) * 100))
 blc = balance.hero_raelyn.inspire_fear
 cooldown = tail("cooldown")
 factor = tail("inflicted_damage_factor")
@@ -2413,7 +2413,7 @@ duration_2 = tail("damage_duration")
 radius = blc.max_range_effect
 set_damage_value(tail("damage"))
 d[1].damage_type = blc.damage_type
-map["闻风丧胆"] = str(cooldown_str(), "蕾琳发出震慑敌人的怒吼，使", radius, "范围内的敌人眩晕", duration, "秒、受到", damage_str(), "，并使其造成的伤害x", factor * 100, "%，持续", duration_2, "秒。")
+map[_("HERO_ROOM_RAELYN_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_4_DESC"), str(cooldown_str()), str(radius), str(duration), str(damage_str()), str(factor * 100), str(duration_2))
 blc = balance.hero_raelyn.unbreakable
 cooldown = tail("cooldown")
 count = blc.max_targets
@@ -2422,7 +2422,7 @@ amount_2 = tail("shield_per_enemy")
 radius = blc.max_range_effect
 duration = tail("duration")
 factor = blc.soldier_factor
-map["坚不可摧"] = str(cooldown_str(), "根据周围敌人数量x（上限为", count, "），蕾琳获得一个持续", duration, "秒，数值为[自身最大生命值]*(", amount, "+", amount_2, "*x)的护盾，并为身边最多", count, "名友军提供基于他们最大生命值的护盾。护盾生效于普通士兵时，数值衰减至", factor * 100, "%。")
+map[_("HERO_ROOM_RAELYN_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_5_DESC"), str(cooldown_str()), str(count), str(duration), str(amount), str(amount_2), str(count), str(factor * 100))
 
 set_hero("hero_muyrn")
 blc = balance.hero_muyrn.leaf_whirlwind
@@ -2436,13 +2436,13 @@ d[1].damage_max = tail("damage_max")
 d[1].damage_min = tail("damage_min")
 amount = tail("heal_max")
 amount_2 = tail("heal_min")
-map["叶片旋风"] = str(cooldown_str(), "尼鲁为自己施加一个微风护盾，持续", duration, "秒。护盾每", cycle_time, "秒恢复尼鲁", amount_2, "-", amount, "点生命，并每", cycle_time_2, "秒对", radius, "范围敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_MUYRN_BERSERKER_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(amount_2), str(amount), str(cycle_time_2), str(radius), str(damage_str()))
 blc = balance.hero_muyrn.faery_dust
 radius = blc.radius
 cooldown = tail("cooldown")
 duration = tail("duration")
 factor = tail("damage_factor")
-map["衰弱咒语"] = str(cooldown_str(), "尼鲁虚弱", radius, "范围内的敌人，使其造成的伤害x", factor, "持续", duration, "秒。")
+map[_("HERO_ROOM_MUYRN_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_2_DESC"), str(cooldown_str()), str(radius), str(factor), str(duration))
 blc = balance.hero_muyrn.sentinel_wisps
 cooldown = tail("cooldown")
 count = tail("max_summons")
@@ -2450,13 +2450,13 @@ duration = table.tail(blc.wisp.duration)
 d[1].damage_max = table.tail(blc.wisp.damage_max)
 d[1].damage_min = table.tail(blc.wisp.damage_min)
 d[1].damage_type = blc.wisp.damage_type
-map["哨兵仙灵"] = str(cooldown_str(), "尼鲁召唤", count, "只小仙灵，驻场", duration, "秒。小仙灵每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_MUYRN_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(duration), str(damage_str()))
 blc = balance.hero_muyrn.verdant_blast
 cooldown = tail("cooldown")
 d[1].damage_max = tail("damage_max")
 d[1].damage_min = tail("damage_min")
 d[1].damage_type = blc.damage_type
-map["翠绿迸发"] = str(cooldown_str(), "尼鲁搓出一团大法球，造成", damage_str(), "。")
+map[_("HERO_ROOM_MUYRN_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_4_DESC"), str(cooldown_str()), str(damage_str()))
 blc = balance.hero_muyrn.ultimate
 radius = blc.radius
 cycle_time = blc.damage_every
@@ -2467,7 +2467,7 @@ d[1].damage_max = tail("damage_max")
 d[1].damage_min = tail("damage_min")
 d[1].damage_type = blc.damage_type
 count = tail("roots_count")
-map["根系守卫"] = str(cooldown_str(), "尼鲁召唤", count, "根树根，每根树根使", radius, "范围内敌人移速x", factor * 100, "%，并每", cycle_time, "秒造成", damage_str(), "，持续", duration, "秒。")
+map[_("HERO_ROOM_MUYRN_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_5_DESC"), str(cooldown_str()), str(count), str(radius), str(factor * 100), str(cycle_time), str(damage_str()), str(duration))
 
 set_hero("hero_space_elf")
 blc = balance.hero_space_elf.astral_reflection
@@ -2479,7 +2479,7 @@ d[1].damage_max = table.tail(blc.entity.basic_ranged.damage_max)
 d[1].damage_min = table.tail(blc.entity.basic_ranged.damage_min)
 d[1].damage_type = blc.entity.basic_ranged.damage_type
 duration = blc.entity.duration
-map["星界镜像"] = str(cooldown_str(), "塞莉恩召唤星界镜像，驻场", duration, "秒。星界镜像拥有", health_str(), "，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_SPACE_ELF_BERSERKER_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_DESC"), str(cooldown_str()), str(duration), str(health_str()), str(damage_str()))
 blc = balance.hero_space_elf.void_rift
 radius = blc.radius
 cycle_time = blc.damage_every
@@ -2490,7 +2490,7 @@ d[1].damage_max = tail("damage_max")
 d[1].damage_min = tail("damage_min")
 d[1].damage_type = blc.damage_type
 factor = blc.slow_factor
-map["虚空裂隙"] = str(cooldown_str(), "塞莉恩撕开", count, "道虚空裂隙，持续", duration, "秒。每道裂隙使", radius, "范围内敌人移速x", factor * 100, "%，并每", cycle_time, "秒造成", damage_str(), "。")
+map[_("HERO_ROOM_SPACE_ELF_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_2_DESC"), str(cooldown_str()), str(count), str(duration), str(radius), str(factor * 100), str(cycle_time), str(damage_str()))
 blc = balance.hero_space_elf.black_aegis
 radius = blc.explosion_range
 cooldown = tail("cooldown")
@@ -2498,21 +2498,21 @@ duration = tail("duration")
 amount = tail("shield_base")
 set_damage_value(tail("explosion_damage"))
 d[1].damage_type = blc.explosion_damage_type
-map["黑曜庇护"] = str(cooldown_str(), "塞莉恩使用黑暗之力保护友军，使他们获得数值为", amount, "的护盾，持续", duration, "秒。护盾破裂时，对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_SPACE_ELF_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_3_DESC"), str(cooldown_str()), str(amount), str(duration), str(radius), str(damage_str()))
 blc = balance.hero_space_elf.spatial_distortion
 cooldown = tail("cooldown")
 duration = tail("duration")
 factor = tail("range_factor")
 factor_2 = tail("damage_factor")
 factor_3 = tail("cooldown_factor")
-map["空间扭曲"] = str(cooldown_str(), "塞莉恩扭曲空间，使全场防御塔范围x", factor * 100, "%，伤害提升", factor_2 * 100 - 100, "%，冷却x", factor_3 * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_SPACE_ELF_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_4_DESC"), str(cooldown_str()), str(factor * 100), str(factor_2 * 100 - 100), str(factor_3 * 100), str(duration))
 blc = balance.hero_space_elf.ultimate
 cooldown = tail("cooldown")
 duration = tail("duration")
 set_damage_value(tail("damage"))
 d[1].damage_type = blc.damage_type
 radius = blc.radius
-map["异域囚笼"] = str(cooldown_str(), "塞莉恩将", radius, "范围内敌人困入异域囚笼中，持续", duration, "秒，并在结束时造成", damage_str(), "。囚笼持续期间，敌人依旧可被攻击。若敌人在持续期间死亡，则不触发亡语。")
+map[_("HERO_ROOM_SPACE_ELF_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_5_DESC"), str(cooldown_str()), str(radius), str(duration), str(damage_str()))
 
 set_hero("hero_venom")
 blc = balance.hero_venom.ranged_tentacle
@@ -2523,14 +2523,14 @@ d[1].damage_type = blc.damage_type
 local bleed_every_val = table.tail(blc.bleed_every)
 local bleed_dmg_val = table.tail(blc.bleed_damage_min)
 local bleed_dur_val = table.tail(blc.bleed_duration)
-map["贯心追猎"] = str(cooldown_str(), "格里姆森远程攻击一名敌人，造成", damage_str(), "，并施加出血效果，每", bleed_every_val, "秒造成", bleed_dmg_val, "点伤害，持续", bleed_dur_val, "秒。")
+map[_("HERO_ROOM_VENOM_BERSERKER_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_DESC"), str(cooldown_str()), str(damage_str()), str(bleed_every_val), str(bleed_dmg_val), str(bleed_dur_val))
 blc = balance.hero_venom.inner_beast
 cooldown = tail("cooldown")
 duration = blc.duration
 local trigger_hp_val = blc.trigger_hp * 100
 local s_dmg_factor_val = table.tail(blc.basic_melee.damage_factor) * 100 - 100
 local regen_health_val = blc.basic_melee.regen_health * 100
-map["原始野性"] = str(cooldown_str(), "当格里姆森生命值低于", trigger_hp_val, "%时自动触发，完全变身持续", duration, "秒。变身期间攻击伤害提升", s_dmg_factor_val, "%，每次攻击恢复总生命值的", regen_health_val, "%。变身状态下，重塑血肉的触发阈值提升50%，并在重塑血肉触发时退出野性变身，返还50%冷却。变身期间恢复的生命可将格里姆森拉回死亡状态。")
+map[_("HERO_ROOM_VENOM_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_2_DESC"), str(cooldown_str()), str(trigger_hp_val), str(duration), str(s_dmg_factor_val), str(regen_health_val))
 blc = balance.hero_venom.floor_spikes
 cooldown = tail("cooldown")
 count = table.tail(blc.spikes)
@@ -2538,14 +2538,14 @@ d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
 radius = blc.damage_radius
-map["致命尖刺"] = str(cooldown_str(), "格里姆森在路径上散布", count, "根尖刺，每根对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_VENOM_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 blc = balance.hero_venom.eat_enemy
 cooldown = tail("cooldown")
 local eat_hp_trigger_val = blc.hp_trigger * 100
 local eat_regen_val = table.tail(blc.regen) * 100
 set_damage_value(table.tail(blc.damage))
 d[1].damage_type = blc.extra_damage_type
-map["重塑血肉"] = str("格里姆森可以吞噬一片生命值低于", eat_hp_trigger_val, "%的敌人，并对其余敌人造成", damage_str(), "。每吞噬一名敌人，格里姆森就恢复自身总生命值的", eat_regen_val, "%。吞噬敌人的总生命值百分比越多，技能冷却越长，最多需要", cooldown, "秒。")
+map[_("HERO_ROOM_VENOM_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_4_DESC"), str(eat_hp_trigger_val), str(damage_str()), str(eat_regen_val), str(cooldown))
 blc = balance.hero_venom.ultimate
 cooldown = tail("cooldown")
 radius = blc.radius
@@ -2554,28 +2554,28 @@ duration = tail("duration")
 d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
-map["死亡蔓延"] = str(cooldown_str(), "格里姆森在", radius, "范围内散布粘稠物质，使敌人移速x", factor, "%持续", duration, "秒，随后对其造成", damage_str(), "。")
+map[_("HERO_ROOM_VENOM_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_5_DESC"), str(cooldown_str()), str(radius), str(factor), str(duration), str(damage_str()))
 
 set_hero("hero_dragon_gem")
 blc = balance.hero_dragon_gem.stun
 cooldown = tail("cooldown")
 radius = blc.stun_radius
 duration = tail("duration")
-map["结晶吐息"] = str(cooldown_str(), "科斯米尔吐出晶体气流，眩晕", radius, "范围内敌人", duration, "秒。")
+map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_DESC"), str(cooldown_str()), str(radius), str(duration))
 blc = balance.hero_dragon_gem.floor_impact
 cooldown = tail("cooldown")
 radius = blc.damage_range
 d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
-map["棱晶碎片"] = str(cooldown_str(), "科斯米尔使周围路径上长出数簇水晶尖刺，每簇对", radius, "范围内的敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_2_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 blc = balance.hero_dragon_gem.crystal_instakill
 cooldown = tail("cooldown")
 local instakill_hp_val = tail("hp_max")
 d[1].damage_min = tail("damage_aoe_min")
 d[1].damage_max = tail("damage_aoe_max")
 d[1].damage_type = blc.damage_type
-map["红晶石冢"] = str(cooldown_str(), "科斯米尔将一名生命值低于", instakill_hp_val, "的敌人困入水晶，片刻后爆炸秒杀目标，并对周围敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_3_DESC"), str(cooldown_str()), str(instakill_hp_val), str(damage_str()))
 blc = balance.hero_dragon_gem.crystal_totem
 cooldown = tail("cooldown")
 radius = blc.aura_radius
@@ -2585,7 +2585,7 @@ duration = tail("duration")
 d[1].damage_max = tail("damage_max")
 d[1].damage_min = tail("damage_min")
 d[1].damage_type = blc.damage_type
-map["能量输导"] = str(cooldown_str(), "科斯米尔在路径上放置一个能量晶体，持续", duration, "秒。晶体使", radius, "范围内敌人移速x", factor, "%，并每", cycle_time, "秒造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_4_DESC"), str(cooldown_str()), str(duration), str(radius), str(factor), str(cycle_time), str(damage_str()))
 blc = balance.hero_dragon_gem.ultimate
 cooldown = tail("cooldown")
 count = tail("max_shards")
@@ -2593,11 +2593,11 @@ radius = blc.damage_range
 d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
-map["水晶崩落"] = str(cooldown_str(), "科斯米尔朝路径投射", count, "根水晶锥，每根对", radius, "范围内的敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_5_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
 blc = balance.hero_dragon_gem.passive_charge
 amount = blc.distance_threshold
 factor = blc.damage_factor
-map["无源充能"] = str("科斯米尔移动", amount, "距离后，下一次普攻获得充能，造成", factor, "倍伤害。")
+map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_6_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_6_DESC"), str(amount), str(factor))
 
 set_hero("hero_witch")
 blc = balance.hero_witch.skill_polymorph
@@ -2606,12 +2606,12 @@ duration = tail("duration")
 local poly_hp_val = tail("hp_max")
 factor = table.tail(blc.pumpkin.hp)
 speed = blc.pumpkin.speed
-map["南瓜魔术"] = str(cooldown_str(), "斯特蕾吉将一名生命值低于", poly_hp_val, "的敌人变成南瓜，持续", duration, "秒。南瓜继承敌人", factor * 100, "%的生命值，双抗清零，移速为", speed, "。")
+map[_("HERO_ROOM_WITCH_BERSERKER_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_DESC"), str(cooldown_str()), str(poly_hp_val), str(duration), str(factor * 100), str(speed))
 blc = balance.hero_witch.disengage
 cooldown = tail("cooldown")
 local decoy_hp_val = table.tail(blc.decoy.hp_max)
 local stun_dur_val = table.tail(blc.decoy.explotion.stun_duration)
-map["闪光诱饵"] = str(cooldown_str(), "斯特蕾吉拦截敌人时向后传送，减少所有其它技能冷却2秒，并在原地留下一个诱饵。诱饵拥有", decoy_hp_val, "点生命值，被摧毁时爆炸，眩晕周围敌人", stun_dur_val, "秒。")
+map[_("HERO_ROOM_WITCH_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_2_DESC"), str(cooldown_str()), str(decoy_hp_val), str(stun_dur_val))
 blc = balance.hero_witch.skill_soldiers
 cooldown = tail("cooldown")
 count = table.tail(blc.soldiers_amount)
@@ -2622,7 +2622,7 @@ health[1].magic_armor = 0
 d[1].damage_min = table.tail(blc.soldier.melee_attack.damage_min)
 d[1].damage_max = table.tail(blc.soldier.melee_attack.damage_max)
 d[1].damage_type = blc.soldier.melee_attack.damage_type
-map["黑夜煞星"] = str(cooldown_str(), "斯特蕾吉召唤", count, "只黑猫与敌人作战，持续", duration, "秒。每只黑猫拥有", hp_str(), "，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_WITCH_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(duration), str(hp_str()), str(damage_str()))
 blc = balance.hero_witch.skill_path_aoe
 cooldown = tail("cooldown")
 duration = tail("duration")
@@ -2630,14 +2630,14 @@ factor = blc.slow_factor * 100
 d[1].damage_max = tail("damage_max")
 d[1].damage_min = tail("damage_min")
 d[1].damage_type = blc.damage_type
-map["粘稠魔药"] = str(cooldown_str(), "斯特蕾吉向路径上投掷一大瓶魔药，造成", damage_str(), "，并使范围内敌人移速x", factor, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_WITCH_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_4_DESC"), str(cooldown_str()), str(damage_str()), str(factor), str(duration))
 blc = balance.hero_witch.ultimate
 radius = blc.radius
 cooldown = tail("cooldown")
 count = tail("max_targets")
 duration = tail("duration")
 amount = blc.nodes_limit
-map["昏昏欲退"] = str(cooldown_str(), "斯特蕾吉将", radius, "范围内最多", count, "名敌人沿路径往回传送", amount, "个节点，并使其昏睡", duration, "秒。")
+map[_("HERO_ROOM_WITCH_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_5_DESC"), str(cooldown_str()), str(radius), str(count), str(amount), str(duration))
 
 set_hero("hero_dragon_bone")
 blc = balance.hero_dragon_bone.rain
@@ -2647,27 +2647,27 @@ stun_dur_val = blc.stun_time
 d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
-map["脊骨骤雨"] = str(cooldown_str(), "波恩哈特向敌人射出", count, "根脊骨，每根造成", damage_str(), "，并使其眩晕", stun_dur_val, "秒。")
+map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_DESC"), str(cooldown_str()), str(count), str(damage_str()), str(stun_dur_val))
 blc = balance.hero_dragon_bone.cloud
 cooldown = tail("cooldown")
 radius = blc.radius
 factor = blc.slow_factor * 100
 duration = tail("duration")
-map["瘟神毒雾"] = str(cooldown_str(), "波恩哈特向一片区域喷吐毒雾，持续", duration, "秒，对", radius, "范围内敌人施加瘟疫效果并使其移速x", factor, "%。")
+map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_2_DESC"), str(cooldown_str()), str(duration), str(radius), str(factor))
 blc = balance.hero_dragon_bone.burst
 cooldown = tail("cooldown")
 count = tail("proj_count")
 d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
-map["爆发感染"] = str(cooldown_str(), "波恩哈特发射", count, "颗魔法弹幕，每颗造成", damage_str(), "，并施加瘟疫效果。")
+map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 blc = balance.hero_dragon_bone.nova
 cooldown = tail("cooldown")
 radius = blc.damage_radius
 d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
-map["疫病灾星"] = str(cooldown_str(), "波恩哈特沿路径猛冲，对", radius, "范围内敌人造成", damage_str(), "，并施加瘟疫效果。")
+map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_4_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 blc = balance.hero_dragon_bone.ultimate
 cooldown = tail("cooldown")
 health[1].hp_max = table.tail(blc.dog.hp)
@@ -2677,7 +2677,7 @@ duration = table.tail(blc.dog.duration)
 d[1].damage_min = table.tail(blc.dog.melee_attack.damage_min)
 d[1].damage_max = table.tail(blc.dog.melee_attack.damage_max)
 d[1].damage_type = blc.dog.melee_attack.damage_type
-map["化骨为龙"] = str(cooldown_str(), "波恩哈特召唤2只小骨龙，各拥有", hp_str(), "，驻场", duration, "秒，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_5_DESC"), str(cooldown_str()), str(hp_str()), str(duration), str(damage_str()))
 blc = balance.hero_dragon_bone.plague
 cycle_time = blc.every
 d[1].damage_min = blc.damage_min
@@ -2687,7 +2687,7 @@ d[2].damage_min = blc.explotion.damage_min
 d[2].damage_max = blc.explotion.damage_max
 d[2].damage_type = blc.explotion.damage_type
 radius = blc.explotion.damage_radius
-map["瘟疫"] = str("波恩哈特的攻击附带持续", duration, "秒的瘟疫效果。瘟疫每", cycle_time, "秒造成", damage_str(), "，持续", duration, "秒。当感染者死亡时，会在其位置爆炸，对", radius, "范围内敌人造成", damage_str(2), "。")
+map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_6_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_6_DESC"), str(duration), str(cycle_time), str(damage_str()), str(duration), str(radius), str(damage_str(2)))
 
 set_hero("hero_lumenir")
 blc = balance.hero_lumenir.fire_balls
@@ -2699,28 +2699,28 @@ d[1].damage_max = table.tail(blc.flame_damage_max)
 d[1].damage_type = blc.damage_type
 cycle_time = blc.damage_rate
 radius = blc.damage_radius
-map["光辉波动"] = str(cooldown_str(), "卢米妮尔喷出", count, "个神圣光球，在路径上游荡", duration, "秒。每个光球每", cycle_time, "秒对", radius, "范围敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_LUMENIR_BERSERKER_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_DESC"), str(cooldown_str()), str(count), str(duration), str(cycle_time), str(radius), str(damage_str()))
 blc = balance.hero_lumenir.mini_dragon
 cooldown = tail("cooldown")
 duration = table.tail(blc.dragon.duration)
 d[1].damage_min = table.tail(blc.dragon.ranged_attack.damage_min)
 d[1].damage_max = table.tail(blc.dragon.ranged_attack.damage_max)
 d[1].damage_type = blc.dragon.ranged_attack.damage_type
-map["光明伙伴"] = str(cooldown_str(), "卢米妮尔召唤一条光明小龙战斗，驻场", duration, "秒，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_LUMENIR_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_2_DESC"), str(cooldown_str()), str(duration), str(damage_str()))
 blc = balance.hero_lumenir.shield
 cooldown = tail("cooldown")
 radius = blc.range
 local shield_armor_val = table.tail(blc.armor) * 100
 local spiked_armor_val = table.tail(blc.spiked_armor) * 100
 duration = table.tail(blc.duration)
-map["反伤赐福"] = str(cooldown_str(), "卢米妮尔为", radius, "范围内友方单位赐福，持续", duration, "秒。赐福提供", shield_armor_val, "%护甲，并将所受伤害的", spiked_armor_val, "%反弹给攻击者。")
+map[_("HERO_ROOM_LUMENIR_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_3_DESC"), str(cooldown_str()), str(radius), str(duration), str(shield_armor_val), str(spiked_armor_val))
 blc = balance.hero_lumenir.celestial_judgement
 cooldown = tail("cooldown")
 radius = blc.stun_range
 set_damage_value(table.tail(blc.damage))
 d[1].damage_type = blc.damage_type
 duration = table.tail(blc.stun_duration)
-map["天国裁决"] = str(cooldown_str(), "卢米妮尔向附近最强的敌人投下圣光之剑，造成", damage_str(), "，并眩晕", radius, "范围内敌人", duration, "秒。")
+map[_("HERO_ROOM_LUMENIR_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_4_DESC"), str(cooldown_str()), str(damage_str()), str(radius), str(duration))
 blc = balance.hero_lumenir.ultimate
 cooldown = tail("cooldown")
 count = table.tail(blc.soldier_count)
@@ -2729,7 +2729,7 @@ d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 count = blc.max_attack_count
 local lumenir_stun_val = blc.stun_target_duration
-map["光耀凯歌"] = str(cooldown_str(), "卢米妮尔召唤", count, "名光之战士，每名战士攻击", count, "次，每次造成", damage_str(), "并眩晕其", lumenir_stun_val, "秒。")
+map[_("HERO_ROOM_LUMENIR_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_5_DESC"), str(cooldown_str()), str(count), str(count), str(damage_str()), str(lumenir_stun_val))
 
 set_hero("hero_wukong")
 blc = balance.hero_wukong.zhu_apprentice
@@ -2743,7 +2743,7 @@ local smash_min_val = table.tail(blc.smash_attack.damage_min)
 local smash_max_val = table.tail(blc.smash_attack.damage_max)
 local smash_chance_val = table.tail(blc.smash_attack.chance) * 100
 local smash_radius_val = blc.smash_attack.damage_radius
-map["八戒师弟"] = str("猪八戒永远跟随孙悟空征战。八戒拥有", hp_str(), "，每次攻击造成", damage_str(), "，并有", smash_chance_val, "%概率对", smash_radius_val, "范围内敌人造成", smash_min_val, "-", smash_max_val, "点物理伤害。")
+map[_("HERO_ROOM_WUKONG_BERSERKER_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_DESC"), str(hp_str()), str(damage_str()), str(smash_chance_val), str(smash_radius_val), str(smash_min_val), str(smash_max_val))
 blc = balance.hero_wukong.hair_clones
 cooldown = tail("cooldown")
 duration = table.tail(blc.soldier.duration)
@@ -2753,7 +2753,7 @@ health[1].magic_armor = 0
 d[1].damage_min = table.tail(blc.soldier.melee_attack.damage_min)
 d[1].damage_max = table.tail(blc.soldier.melee_attack.damage_max)
 d[1].damage_type = blc.soldier.melee_attack.damage_type
-map["身外身法"] = str(cooldown_str(), "孙悟空变出2只毛猴并肩作战，各拥有", hp_str(), "，驻场", duration, "秒，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_WUKONG_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_2_DESC"), str(cooldown_str()), str(hp_str()), str(duration), str(damage_str()))
 blc = balance.hero_wukong.pole_ranged
 cooldown = tail("cooldown")
 count = tail("pole_amounts")
@@ -2762,21 +2762,21 @@ d[1].damage_min = tail("damage_min")
 d[1].damage_max = tail("damage_max")
 d[1].damage_type = blc.damage_type
 local pole_stun_val = blc.stun_duration
-map["雨落千钧"] = str(cooldown_str(), "孙悟空将金箍棒掷向空中，变出", count, "根落向敌人，每根对", radius, "范围内敌人造成", damage_str(), "，并眩晕", pole_stun_val, "秒。")
+map[_("HERO_ROOM_WUKONG_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()), str(pole_stun_val))
 blc = balance.hero_wukong.giant_staff
 cooldown = tail("cooldown")
 radius = blc.area_damage.damage_radius
 d[1].damage_min = table.tail(blc.area_damage.damage_min)
 d[1].damage_max = table.tail(blc.area_damage.damage_max)
 d[1].damage_type = blc.area_damage.damage_type
-map["神珍定海"] = str(cooldown_str(), "孙悟空将金箍棒变为参天大小，重压一名敌人将其秒杀，并对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_WUKONG_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_4_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 blc = balance.hero_wukong.ultimate
 cooldown = tail("cooldown")
 set_damage_value(table.tail(blc.damage_total))
 d[1].damage_type = blc.damage_type
 factor = table.tail(blc.slow_factor) * 100
 duration = table.tail(blc.slow_duration)
-map["白龙腾渊"] = str(cooldown_str(), "小白龙从天而降，造成共计", damage_str(), "，并在落点留下减速区域，使敌人移速x", factor, "%，持续", duration, "秒。释放本技能时，悟空恢复全部生命值。")
+map[_("HERO_ROOM_WUKONG_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_5_DESC"), str(cooldown_str()), str(damage_str()), str(factor), str(duration))
 
 set_hero("hero_dragon_arb")
 blc = balance.hero_dragon_arb.arborean_spawn
@@ -2798,14 +2798,14 @@ health[2].magic_armor = 0
 d[2].damage_min = table.tail(blc.paragon.basic_attack.damage_min)
 d[2].damage_max = table.tail(blc.paragon.basic_attack.damage_max)
 d[2].damage_type = blc.paragon.basic_attack.damage_type
-map["森林呼唤"] = str("每隔", spawn_cooldown, "秒，希尔瓦拉将路径上的绿地化为最多", spawn_count_max, "名树灵守卫。树灵守卫拥有", hp_str(), "，驻场", arb_duration, "秒，每次攻击造成", damage_str(), "。释放自然本性期间，会召唤树灵楷模代替（拥有", hp_str(2), "，驻场", paragon_duration, "秒，每次攻击造成", damage_str(2), "）。")
+map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_DESC"), str(spawn_cooldown), str(spawn_count_max), str(hp_str()), str(arb_duration), str(damage_str()), str(hp_str(2)), str(paragon_duration), str(damage_str(2)))
 
 blc = balance.hero_dragon_arb.tower_runes
 cooldown = table.tail(blc.cooldown)
 local runes_count = table.tail(blc.max_targets)
 local runes_duration = table.tail(blc.duration)
 local runes_factor = table.tail(blc.s_damage_factor) * 100
-map["根深蒂固"] = str(cooldown_str(), "希尔瓦拉为附近最多", runes_count, "座防御塔刻上符文，使其伤害提升", runes_factor, "%，持续", runes_duration, "秒。")
+map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_2_DESC"), str(cooldown_str()), str(runes_count), str(runes_factor), str(runes_duration))
 
 blc = balance.hero_dragon_arb.thorn_bleed
 cooldown = table.tail(blc.cooldown)
@@ -2813,7 +2813,7 @@ local bleed_ratio = table.tail(blc.damage_speed_ratio)
 local bleed_every = blc.damage_every
 local bleed_duration = table.tail(blc.duration)
 local instakill_chance = table.tail(blc.instakill_chance) * 100
-map["荆棘吐息"] = str(cooldown_str(), "希尔瓦拉强化她的下一次攻击，附加一个持续", bleed_duration, "秒的流血效果，每", bleed_every, "秒造成等于目标移速x", bleed_ratio, "的法术伤害。释放自然本性期间，有", instakill_chance, "%的概率直接秒杀目标。")
+map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_3_DESC"), str(cooldown_str()), str(bleed_duration), str(bleed_every), str(bleed_ratio), str(instakill_chance))
 
 blc = balance.hero_dragon_arb.tower_plants
 cooldown = table.tail(blc.cooldown)
@@ -2824,13 +2824,13 @@ d[1].damage_min = table.tail(blc.dark_army.damage_min)
 d[1].damage_max = table.tail(blc.dark_army.damage_max)
 d[1].damage_type = blc.dark_army.damage_type
 local linirea_heal = table.tail(blc.linirea.heal_max)
-map["创生之种"] = str(cooldown_str(), "希尔瓦拉在最多", plants_count, "座防御塔周围随机召唤植物，持续", plants_duration, "秒。植物可能会治愈周围友军（每次", linirea_heal, "点），也可能造成", damage_str(), "并使敌人移速x", dark_slow, "%。")
+map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_4_DESC"), str(cooldown_str()), str(plants_count), str(plants_duration), str(linirea_heal), str(damage_str()), str(dark_slow))
 
 blc = balance.hero_dragon_arb.ultimate
 cooldown = table.tail(blc.cooldown)
 local ult_duration = table.tail(blc.duration)
 local ult_bonus = table.tail(blc.s_bonuses) * 100
-map["自然本性"] = str(cooldown_str(), "希尔瓦拉释放真实形态，持续", ult_duration, "秒。期间伤害、速度、护甲和魔法抗性均提升", ult_bonus, "%，并强化森林呼唤和荆棘吐息技能。")
+map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_5_DESC"), str(cooldown_str()), str(ult_duration), str(ult_bonus))
 
 set_hero("hero_builder")
 local blc = balance.hero_builder.overtime_work
@@ -2842,13 +2842,13 @@ d[1].damage_max = table.tail(blc.soldier.melee_attack.damage_max)
 d[1].damage_type = DAMAGE_PHYSICAL
 local ow_duration = blc.soldier.duration
 cooldown = table.tail(blc.cooldown)
-map["正在施工"] = str(cooldown_str(), "召唤两名工人并肩作战，各拥有", hp_str(), "，驻场", ow_duration, "秒，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_BUILDER_BERSERKER_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_DESC"), str(cooldown_str()), str(hp_str()), str(ow_duration), str(damage_str()))
 
 blc = balance.hero_builder.lunch_break
 cooldown = table.tail(blc.cooldown)
 local heal_val = table.tail(blc.heal_hp)
 local lost_health_val = blc.lost_health * 100
-map["午休时间"] = str(cooldown_str(), "生命值低于", lost_health_val, "%时，奥布杜尔停下战斗享用小吃，恢复", heal_val, "点生命。")
+map[_("HERO_ROOM_BUILDER_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_2_DESC"), str(cooldown_str()), str(lost_health_val), str(heal_val))
 
 blc = balance.hero_builder.demolition_man
 cooldown = table.tail(blc.cooldown)
@@ -2858,7 +2858,7 @@ d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 cycle_time = blc.damage_every
 radius = blc.radius
-map["拆迁达人"] = str(cooldown_str(), "奥布杜尔快速旋转手中的木梁，在", demo_duration, "秒中眩晕敌人，并每", cycle_time, "秒对", radius, "范围敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_BUILDER_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_3_DESC"), str(cooldown_str()), str(demo_duration), str(cycle_time), str(radius), str(damage_str()))
 
 blc = balance.hero_builder.defensive_turret
 cooldown = table.tail(blc.cooldown)
@@ -2867,14 +2867,14 @@ d[1].damage_min = table.tail(blc.attack.damage_min)
 d[1].damage_max = table.tail(blc.attack.damage_max)
 d[1].damage_type = DAMAGE_PHYSICAL
 duration = blc.stun_duration
-map["防御塔楼"] = str(cooldown_str(), "奥布杜尔在路径上建造一座临时炮台，持续", turret_duration, "秒，每次攻击造成", damage_str(), "，并使敌人晕眩", duration, "秒。")
+map[_("HERO_ROOM_BUILDER_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_4_DESC"), str(cooldown_str()), str(turret_duration), str(damage_str()), str(duration))
 
 blc = balance.hero_builder.ultimate
 cooldown = table.tail(blc.cooldown)
 set_damage_value(table.tail(blc.damage))
 d[1].damage_type = blc.damage_type
 local stun_val = table.tail(blc.stun_duration)
-map["破城钢球"] = str(cooldown_str(), "奥布杜尔朝路径上扔出一个巨大钢球，造成", damage_str(), "，并使敌人眩晕", stun_val, "秒。")
+map[_("HERO_ROOM_BUILDER_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_5_DESC"), str(cooldown_str()), str(damage_str()), str(stun_val))
 
 set_hero("hero_robot")
 blc = balance.hero_robot.jump
@@ -2885,7 +2885,7 @@ d[1].damage_type = blc.damage_type
 local stun_dur = table.tail(blc.stun_duration)
 local jump_radius = blc.damage_radius
 loop = table.tail(blc.loops)
-map["震撼冲击"] = str(cooldown_str(), "布莱兹", loop, "次跳向一名随机敌人，砸落时对", jump_radius, "范围内造成", damage_str(), "，并使其眩晕", stun_dur, "秒。")
+map[_("HERO_ROOM_ROBOT_BERSERKER_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_DESC"), str(cooldown_str()), str(loop), str(jump_radius), str(damage_str()), str(stun_dur))
 
 blc = balance.hero_robot.fire
 cooldown = table.tail(blc.cooldown)
@@ -2894,7 +2894,7 @@ d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 factor = blc.slow_factor
 duration = table.tail(blc.smoke_duration)
-map["瓦斯烟幕"] = str(cooldown_str(), "布莱兹向路径喷射持续", duration, "秒的烟幕，对敌人造成", damage_str(), "，并使其移速x", factor, "。")
+map[_("HERO_ROOM_ROBOT_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_2_DESC"), str(cooldown_str()), str(duration), str(damage_str()), str(factor))
 
 blc = balance.hero_robot.explode
 cooldown = table.tail(blc.cooldown)
@@ -2906,12 +2906,12 @@ d[2].damage_min = table.tail(blc.burning_damage_min)
 d[2].damage_max = table.tail(blc.burning_damage_max)
 d[2].damage_type = blc.burning_damage_type
 cycle_time = blc.damage_every
-map["战争献祭"] = str(cooldown_str(), "布莱兹在脚下引爆炸弹，对周围敌人造成", damage_str(), "，并使其燃烧", burn_dur, "秒，每", cycle_time, "秒造成", damage_str(2), "。")
+map[_("HERO_ROOM_ROBOT_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_3_DESC"), str(cooldown_str()), str(damage_str()), str(burn_dur), str(cycle_time), str(damage_str(2)))
 
 blc = balance.hero_robot.uppercut
 cooldown = table.tail(blc.cooldown)
 local life_pct = table.tail(blc.life_threshold)
-map["强力勾拳"] = str(cooldown_str(), "当目标生命值低于", life_pct, "%时，布莱兹使用强力勾拳将其击飞。")
+map[_("HERO_ROOM_ROBOT_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_4_DESC"), str(cooldown_str()), str(life_pct))
 
 blc = balance.hero_robot.ultimate
 cooldown = table.tail(blc.cooldown)
@@ -2924,7 +2924,7 @@ d[2].damage_max = table.tail(blc.burning_damage_max)
 d[2].damage_type = blc.burning_damage_type
 cycle_time = blc.damage_every
 local ult_burn_dur = blc.burning_duration
-map["列车炮"] = str(cooldown_str(), "布莱兹召唤一辆战车沿路径逆向行进，持续", ult_dur, "秒，对沿途敌人造成", damage_str(), "，并使其燃烧", ult_burn_dur, "秒，每", cycle_time, "秒造成", damage_str(2), "。")
+map[_("HERO_ROOM_ROBOT_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_5_DESC"), str(cooldown_str()), str(ult_dur), str(damage_str()), str(ult_burn_dur), str(cycle_time), str(damage_str(2)))
 
 set_hero("hero_bird")
 blc = balance.hero_bird.cluster_bomb
@@ -2935,7 +2935,7 @@ d[1].damage_max = table.tail(blc.explosion_damage_max)
 d[1].damage_type = blc.explosion_damage_type
 local fire_dur = table.tail(blc.fire_duration)
 local burn_dmg = table.tail(blc.burning.damage)
-map["集束炸弹"] = str(cooldown_str(), "格里芬向路径投掷集束炸弹，炸弹分裂为多枚子弹，每枚爆炸对范围内敌人造成", damage_str(), "，并在落点引燃持续", fire_dur, "秒的火焰，每", blc.burning.cycle_time, "秒造成", burn_dmg, "点真实伤害。")
+map[_("HERO_ROOM_BIRD_CLUSTER_BOMB_NAME")] = string.format(_("HERO_ROOM_BIRD_CLUSTER_BOMB_DESC"), str(cooldown_str()), str(damage_str()), str(fire_dur), str(blc.burning.cycle_time), str(burn_dmg))
 
 blc = balance.hero_bird.shout_stun
 set_skill(h.hero.skills.shout_stun)
@@ -2943,7 +2943,7 @@ get_cooldown()
 local stun_dur = table.tail(blc.stun_duration)
 local slow_dur = table.tail(blc.slow_duration)
 local slow_factor = (1 - blc.slow_factor) * 100
-map["嘶吼眩晕"] = str(cooldown_str(), "格里芬发出震耳战吼，使", blc.radius, "范围内所有敌人眩晕", stun_dur, "秒，并在之后减速", slow_factor, "%持续", slow_dur, "秒。")
+map[_("HERO_ROOM_BIRD_SHOUT_STUN_NAME")] = string.format(_("HERO_ROOM_BIRD_SHOUT_STUN_DESC"), str(cooldown_str()), str(blc.radius), str(stun_dur), str(slow_factor), str(slow_dur))
 
 blc = balance.hero_bird.gattling
 set_skill(h.hero.skills.gattling)
@@ -2953,13 +2953,13 @@ d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 local gat_dur = table.tail(blc.duration)
 cycle_time = blc.shoot_every
-map["机枪扫射"] = str(cooldown_str(), "格里芬持续扫射目标区域", gat_dur, "秒，每", cycle_time, "秒对目标及周围敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_BIRD_GATTLING_NAME")] = string.format(_("HERO_ROOM_BIRD_GATTLING_DESC"), str(cooldown_str()), str(gat_dur), str(cycle_time), str(damage_str()))
 
 blc = balance.hero_bird.eat_instakill
 set_skill(h.hero.skills.eat_instakill)
 get_cooldown()
 local eat_hp = table.tail(blc.hp_max)
-map["吞噬"] = str(cooldown_str(), "格里芬俯冲并吞噬一名生命值低于", eat_hp, "点的敌人，将其彻底消灭。")
+map[_("HERO_ROOM_BIRD_EAT_INSTAKILL_NAME")] = string.format(_("HERO_ROOM_BIRD_EAT_INSTAKILL_DESC"), str(cooldown_str()), str(eat_hp))
 
 blc = balance.hero_bird.ultimate
 set_skill(h.hero.skills.ultimate)
@@ -2968,7 +2968,7 @@ local ult_dur = table.tail(blc.bird.duration)
 d[1].damage_min = table.tail(blc.bird.melee_attack.damage_min)
 d[1].damage_max = table.tail(blc.bird.melee_attack.damage_max)
 d[1].damage_type = blc.bird.melee_attack.damage_type
-map["毁灭轰炸"] = str(cooldown_str(), "格里芬召唤两只幼鹰在路径上追击敌人，持续", ult_dur, "秒，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_BIRD_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_BIRD_ULTIMATE_DESC"), str(cooldown_str()), str(ult_dur), str(damage_str()))
 
 set_hero("hero_lava")
 blc = balance.hero_lava.temper_tantrum
@@ -2978,7 +2978,7 @@ d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 local stun_dur = blc.stun_duration
-map["暴怒猛击"] = str(cooldown_str(), "喀拉托连续猛击一名敌人三次，每次造成", damage_str(), "，并将目标击晕", stun_dur, "秒。")
+map[_("HERO_ROOM_LAVA_TEMPER_TANTRUM_NAME")] = string.format(_("HERO_ROOM_LAVA_TEMPER_TANTRUM_DESC"), str(cooldown_str()), str(damage_str()), str(stun_dur))
 
 blc = balance.hero_lava.hotheaded
 set_skill(h.hero.skills.hotheaded)
@@ -2988,7 +2988,7 @@ cycle_time = balance.hero_lava.death_aura.cycle_time
 d[1].damage_min = balance.hero_lava.death_aura.damage_min
 d[1].damage_max = balance.hero_lava.death_aura.damage_max
 d[1].damage_type = balance.hero_lava.death_aura.damage_type
-map["烈焰之心"] = "喀拉托在死亡状态时仍可行动，持续对身边敌人每" .. cycle_time .. "秒造成" .. damage_str() .. "。喀拉托复活时，使附近防御塔的伤害提升" .. hothead_factor .. "%，持续" .. hothead_dur .. "秒。"
+map[_("HERO_ROOM_LAVA_HEART_NAME")] = string.format(_("HERO_ROOM_LAVA_HEART_DESC"), str(cycle_time), damage_str(), str(hothead_factor), str(hothead_dur))
 
 blc = balance.hero_lava.double_trouble
 set_skill(h.hero.skills.double_trouble)
@@ -2997,7 +2997,7 @@ d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 local sol_dur = blc.soldier.duration
-map["双倍麻烦"] = str(cooldown_str(), "喀拉托投掷熔岩球，爆炸造成", damage_str(), "，并召唤一只熔岩团，持续战斗", sol_dur, "秒。")
+map[_("HERO_ROOM_LAVA_DOUBLE_TROUBLE_NAME")] = string.format(_("HERO_ROOM_LAVA_DOUBLE_TROUBLE_DESC"), str(cooldown_str()), str(damage_str()), str(sol_dur))
 
 blc = balance.hero_lava.wild_eruption
 set_skill(h.hero.skills.wild_eruption)
@@ -3007,7 +3007,7 @@ d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 local erupt_dur = table.tail(blc.duration)
 cycle_time = blc.damage_every
-map["烈炎席卷"] = str(cooldown_str(), "喀拉托向周围敌人甩出熔岩，每", cycle_time, "秒造成", damage_str(), "，持续", erupt_dur, "秒。")
+map[_("HERO_ROOM_LAVA_WILD_ERUPTION_NAME")] = string.format(_("HERO_ROOM_LAVA_WILD_ERUPTION_DESC"), str(cooldown_str()), str(cycle_time), str(damage_str()), str(erupt_dur))
 
 blc = balance.hero_lava.ultimate
 set_skill(h.hero.skills.ultimate)
@@ -3017,7 +3017,7 @@ d[1].damage_min = table.tail(blc.bullet.damage_min)
 d[1].damage_max = table.tail(blc.bullet.damage_max)
 d[1].damage_type = blc.bullet.damage_type
 local scorch_dur = blc.bullet.scorch.duration
-map["狂野喷发"] = str(cooldown_str(), "喀拉托向路径喷射", ult_count, "发熔岩弹，每发造成", damage_str(), "，并使敌人灼烧", scorch_dur, "秒。")
+map[_("HERO_ROOM_LAVA_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_LAVA_ULTIMATE_DESC"), str(cooldown_str()), str(ult_count), str(damage_str()), str(scorch_dur))
 
 set_hero("hero_spider")
 blc = balance.hero_spider.instakill_melee
@@ -3025,7 +3025,7 @@ set_skill(h.hero.skills.instakill_melee)
 get_cooldown()
 local instakill_threshold = table.tail(blc.life_threshold)
 factor = blc.heal_factor
-map["暗杀"] = str(cooldown_str(), "丝派蒂尔对被眩晕且当前生命值低于", instakill_threshold, "的敌人发动一击必杀，并恢复自身", factor * 100, "%的最大生命值。")
+map[_("HERO_ROOM_SPIDER_INSTAKILL_MELEE_NAME")] = string.format(_("HERO_ROOM_SPIDER_INSTAKILL_MELEE_DESC"), str(cooldown_str()), str(instakill_threshold), str(factor * 100))
 
 blc = balance.hero_spider.area_attack
 set_skill(h.hero.skills.area_attack)
@@ -3034,7 +3034,7 @@ local stun_dur = table.tail(blc.s_stun_time)
 d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
-map["蛛网缠绕"] = str(cooldown_str(), "丝派蒂尔喷出丝网，将周围敌人眩晕", stun_dur, "秒，并造成", damage_str(), "。")
+map[_("HERO_ROOM_SPIDER_AREA_ATTACK_NAME")] = string.format(_("HERO_ROOM_SPIDER_AREA_ATTACK_DESC"), str(cooldown_str()), str(stun_dur), str(damage_str()))
 
 blc = balance.hero_spider.tunneling
 set_skill(h.hero.skills.tunneling)
@@ -3042,7 +3042,7 @@ d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 duration = blc.stun_duration
-map["地道穿越"] = str("丝派蒂尔移动至新集结点时潜入地下，抵达后对周围敌人造成", damage_str(), "，并晕眩他们", duration, "秒。")
+map[_("HERO_ROOM_SPIDER_TUNNELING_NAME")] = string.format(_("HERO_ROOM_SPIDER_TUNNELING_DESC"), str(damage_str()), str(duration))
 
 blc = balance.hero_spider.supreme_hunter
 set_skill(h.hero.skills.supreme_hunter)
@@ -3054,14 +3054,14 @@ d[2].damage_min = table.tail(blc.dot_damage_min)
 d[2].damage_max = table.tail(blc.dot_damage_max)
 d[2].damage_type = blc.dot_damage_type
 cycle_time = blc.damage_every
-map["猎手本能"] = str(cooldown_str(), "丝派蒂尔瞬移至生命值最高的敌人身旁，造成", damage_str(), "并施加无限时长的剧毒，每", cycle_time, "秒造成", damage_str(2), "。")
+map[_("HERO_ROOM_SPIDER_SUPREME_HUNTER_NAME")] = string.format(_("HERO_ROOM_SPIDER_SUPREME_HUNTER_DESC"), str(cooldown_str()), str(damage_str()), str(cycle_time), str(damage_str(2)))
 
 blc = balance.hero_spider.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
 local spawn_count = table.tail(blc.spawn_amount)
 local spider_dur = table.tail(blc.spider.duration)
-map["蛛后降临"] = str(cooldown_str(), "丝派蒂尔召唤", spawn_count, "只蜘蛛协助战斗，持续", spider_dur, "秒。")
+map[_("HERO_ROOM_SPIDER_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_SPIDER_ULTIMATE_DESC"), str(cooldown_str()), str(spawn_count), str(spider_dur))
 
 set_hero("hero_mecha")
 blc = balance.hero_mecha.goblidrones
@@ -3071,14 +3071,14 @@ local drone_dur = table.tail(blc.drone.duration)
 d[1].damage_min = table.tail(blc.drone.ranged_attack.damage_min)
 d[1].damage_max = table.tail(blc.drone.ranged_attack.damage_max)
 d[1].damage_type = blc.drone.ranged_attack.damage_type
-map["哥布林无人机"] = str(cooldown_str(), "召唤", blc.units, "架无人机攻击敌人，持续", drone_dur, "秒，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_MECHA_GOBLIDRONES_NAME")] = string.format(_("HERO_ROOM_MECHA_GOBLIDRONES_DESC"), str(cooldown_str()), str(blc.units), str(drone_dur), str(damage_str()))
 
 blc = balance.hero_mecha.tar_bomb
 set_skill(h.hero.skills.tar_bomb)
 get_cooldown()
 local tar_dur = table.tail(blc.duration)
 local tar_slow = (1 - blc.slow_factor) * 100
-map["焦油炸弹"] = str(cooldown_str(), "朝路上投掷一颗沥青弹，使敌人减速", tar_slow, "%，持续", tar_dur, "秒。")
+map[_("HERO_ROOM_MECHA_TAR_BOMB_NAME")] = string.format(_("HERO_ROOM_MECHA_TAR_BOMB_DESC"), str(cooldown_str()), str(tar_slow), str(tar_dur))
 
 blc = balance.hero_mecha.power_slam
 set_skill(h.hero.skills.power_slam)
@@ -3087,7 +3087,7 @@ local slam_stun = table.tail(blc.stun_time) / 30
 d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
-map["战争机器"] = str(cooldown_str(), "机甲撞击地面，短暂眩晕附近所有敌人", slam_stun, "秒，并造成", damage_str(), "。")
+map[_("HERO_ROOM_MECHA_POWER_SLAM_NAME")] = string.format(_("HERO_ROOM_MECHA_POWER_SLAM_DESC"), str(cooldown_str()), str(slam_stun), str(damage_str()))
 
 blc = balance.hero_mecha.mine_drop
 set_skill(h.hero.skills.mine_drop)
@@ -3096,7 +3096,7 @@ local max_mines = table.tail(blc.max_mines)
 d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
-map["自毁"] = str(cooldown_str(), "静止时，机甲定期在路径上安放至多", max_mines, "枚爆炸地雷，爆炸造成", damage_str(), "。")
+map[_("HERO_ROOM_MECHA_MINE_DROP_NAME")] = string.format(_("HERO_ROOM_MECHA_MINE_DROP_DESC"), str(cooldown_str()), str(max_mines), str(damage_str()))
 
 blc = balance.hero_mecha.ultimate
 set_skill(h.hero.skills.ultimate)
@@ -3104,7 +3104,7 @@ get_cooldown()
 d[1].damage_min = table.tail(blc.ranged_attack.damage_min)
 d[1].damage_max = table.tail(blc.ranged_attack.damage_max)
 d[1].damage_type = blc.ranged_attack.damage_type
-map["终极炮击"] = str(cooldown_str(), "呼叫一架哥布林飞艇，对目标范围附近的敌人进行轰炸，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_MECHA_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_MECHA_ULTIMATE_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_hero("hero_dragon_sun")
 blc = balance.hero_dragon_sun.worthy_foe
@@ -3113,7 +3113,7 @@ get_cooldown()
 d[1].damage_min = table.tail(blc.damages_target.damage_min)
 d[1].damage_max = table.tail(blc.damages_target.damage_max)
 d[1].damage_type = blc.damages_target.damage_type
-map["耀阳审判"] = str(cooldown_str(), "当攻击范围中无敌人时，奥利昂传送至生命值最高的敌人头顶，发动毁灭性的一击，造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_SUN_WORTHY_FOE_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_WORTHY_FOE_DESC"), str(cooldown_str()), str(damage_str()))
 
 blc = balance.hero_dragon_sun.solar_cleansing
 set_skill(h.hero.skills.solar_cleansing)
@@ -3121,7 +3121,7 @@ get_cooldown()
 local cleansing_dur = table.tail(blc.duration)
 cycle_time = blc.heal_every
 amount = table.tail(blc.heal)
-map["日耀净化"] = str(cooldown_str(), "奥利昂召唤神圣之光，持续", cleansing_dur, "秒，每", cycle_time, "秒恢复自身与附近友军", amount, "点生命值，并驱除他们的异常状态。")
+map[_("HERO_ROOM_DRAGON_SUN_SOLAR_CLEANSING_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_SOLAR_CLEANSING_DESC"), str(cooldown_str()), str(cleansing_dur), str(cycle_time), str(amount))
 
 blc = balance.hero_dragon_sun.overcharge
 set_skill(h.hero.skills.overcharge)
@@ -3129,7 +3129,7 @@ d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = DAMAGE_TRUE
 cooldown = table.tail(blc.cooldown)
-map["烈阳过载"] = str("在未普攻期间，奥利昂持续充能。充能满", cooldown, "秒后，下一次攻击将额外造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_SUN_OVERCHARGE_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_OVERCHARGE_DESC"), str(cooldown), str(damage_str()))
 
 blc = balance.hero_dragon_sun.solar_stones
 set_skill(h.hero.skills.solar_stones)
@@ -3139,7 +3139,7 @@ d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 radius = blc.damage_radius
-map["日光宝石"] = str(cooldown_str(), "在路径上放置一颗金色宝石，与敌人接触时发生爆炸，在", radius, "范围内造成", damage_str(), "，最多同时存在", max_mines, "颗。")
+map[_("HERO_ROOM_DRAGON_SUN_SOLAR_STONES_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_SOLAR_STONES_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(max_mines))
 
 blc = balance.hero_dragon_sun.ultimate
 set_skill(h.hero.skills.ultimate)
@@ -3149,22 +3149,22 @@ d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 cycle_time = blc.damage_every
 radius = blc.damage_radius
-map["日炎风暴"] = str(cooldown_str(), "召唤一道纯粹太阳能量的巨型光柱，沿路径前进，每", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_DRAGON_SUN_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_ULTIMATE_DESC"), str(cooldown_str()), str(cycle_time), str(radius), str(damage_str()))
 
 -- hero_eiskalt
 set_hero("hero_eiskalt")
 
-map["寒冰吐息"] = str("艾斯酷特的普通攻击会减缓敌人25%的移速，持续3秒。")
+map[_("HERO_ROOM_EISKALT_ULTIMATE_NAME")] = _("HERO_ROOM_EISKALT_ULTIMATE_DESC")
 
 set_skill(h.hero.skills.explosion)
 local radius = s.damage_radius[max_lvl]
-map["暴烈之息"] = str("普通攻击在命中时爆炸，对", radius, "范围内敌人造成伤害。")
+map[_("HERO_ROOM_EISKALT_EXPLOSION_NAME")] = string.format(_("HERO_ROOM_EISKALT_EXPLOSION_DESC"), str(radius))
 
 set_skill(h.hero.skills.coldfury)
 cooldown = s.cooldown_time[max_lvl]
 duration = T("aura_chill_eiskalt").aura.duration
 slow_factor = 1 - T("mod_eiskalt_chill").slow.factor
-map["永恒冻土"] = str(cooldown_str(), "艾斯酷特制造一片持续", duration, "秒的冻土带，使敌人减速", slow_factor * 100, "%。")
+map[_("HERO_ROOM_EISKALT_COLDFURY_NAME")] = string.format(_("HERO_ROOM_EISKALT_COLDFURY_DESC"), str(cooldown_str()), str(duration), str(slow_factor * 100))
 
 set_skill(h.hero.skills.frosty)
 cooldown = h.timed_attacks.list[1].cooldown
@@ -3172,39 +3172,39 @@ d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_type = T("aura_eiskalt_rider").damage_type
 cycle_time = T("aura_eiskalt_rider").aura.cycle_time
-map["雪崩"] = str(cooldown_str(), "艾斯酷特召唤一颗巨大的冰球沿路径滚动，对附近的敌人每", cycle_time, "秒造成", damage_str(), "。")
+map[_("HERO_ROOM_EISKALT_FROSTY_NAME")] = string.format(_("HERO_ROOM_EISKALT_FROSTY_DESC"), str(cooldown_str()), str(cycle_time), str(damage_str()))
 
 set_skill(h.hero.skills.icepeak)
 cooldown = h.timed_attacks.list[2].cooldown
 local count = s.count[max_lvl]
-map["冰峰"] = str(cooldown_str(), "冰龙召唤", count, "根冰刺，每根造成目标最大生命值30%的真实伤害。该技能仅在存在最大生命值高于750的敌人时才会释放。")
+map[_("HERO_ROOM_EISKALT_ICEPEAK_NAME")] = string.format(_("HERO_ROOM_EISKALT_ICEPEAK_DESC"), str(cooldown_str()), str(count))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
 duration = s.duration[max_lvl]
-map["冰川风暴"] = str(cooldown_str(), "冰龙释放全部力量，冻结战场上所有敌人，持续", duration, "秒。")
+map[_("HERO_ROOM_EISKALT_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_EISKALT_ULTIMATE_2_DESC"), str(cooldown_str()), str(duration))
 
 -- hero_asra
 set_hero("hero_asra")
 
-map["暗影之舞"] = str("远距离移动时，阿斯拉瞬移并移除所有状态效果，并使自己攻速提升25%，持续8秒。")
+map[_("HERO_ROOM_ASRA_ULTIMATE_NAME")] = _("HERO_ROOM_ASRA_ULTIMATE_DESC")
 
 set_skill(h.hero.skills.spider_bite)
 cooldown = h.melee.attacks[2].cooldown
 local poison_damage = s.damage_config[max_lvl]
 e = T("mod_asra_poison")
 local poison_every = e.dps.damage_every
-map["蜘蛛啮"] = str(cooldown_str(), "用淬毒匕首攻击敌人，每", poison_every, "秒造成", poison_damage, "点剧毒伤害，直至敌人死亡。")
+map[_("HERO_ROOM_ASRA_SPIDER_BITE_NAME")] = string.format(_("HERO_ROOM_ASRA_SPIDER_BITE_DESC"), str(cooldown_str()), str(poison_every), str(poison_damage))
 
 set_skill(h.hero.skills.onix_arrows)
 cooldown = h.ranged.attacks[2].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_type = T("bullet_onix_asra").bullet.damage_type
-map["岩蛇箭"] = str(cooldown_str(), "向目标射出", s.loops[max_lvl], "支箭，每支造成", damage_str(), "。")
+map[_("HERO_ROOM_ASRA_ONIX_ARROWS_NAME")] = string.format(_("HERO_ROOM_ASRA_ONIX_ARROWS_DESC"), str(cooldown_str()), str(s.loops[max_lvl]), str(damage_str()))
 
 set_skill(h.hero.skills.quiver_of_sorrow)
-map["哀恸箭袋"] = str("阿斯拉每次射击都可削减目标", s.damage_armor[max_lvl] * 100, "点护甲。")
+map[_("HERO_ROOM_ASRA_QUIVER_OF_SORROW_NAME")] = string.format(_("HERO_ROOM_ASRA_QUIVER_OF_SORROW_DESC"), str(s.damage_armor[max_lvl] * 100))
 
 set_skill(h.hero.skills.shield_of_shadows)
 cooldown = h.unbreakable.cooldown
@@ -3212,7 +3212,7 @@ e = T("hero_asra_unbreakable_mod")
 local shield_duration = e.modifier.duration
 factor = T("mod_hero_asra_unbreakable_broken").inflicted_damage_factor - 1
 duration = T("mod_hero_asra_unbreakable_broken").modifier.duration
-map["暗影之盾"] = str(cooldown_str(), "受到攻击后，阿斯拉会施放出一面可抵挡", s.shield_max_damage[max_lvl], "点伤害的护盾，持续", shield_duration, "秒。护盾效果移除时，阿斯拉的伤害提升", factor * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_ASRA_SHIELD_OF_SHADOWS_NAME")] = string.format(_("HERO_ROOM_ASRA_SHIELD_OF_SHADOWS_DESC"), str(cooldown_str()), str(s.shield_max_damage[max_lvl]), str(shield_duration), str(factor * 100), str(duration))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
@@ -3225,12 +3225,12 @@ local ult_poison_duration = e.modifier.duration
 d[2].damage_min = s.damage_poison_config[max_lvl]
 d[2].damage_max = s.damage_poison_config[max_lvl]
 d[2].damage_type = e.dps.damage_type
-map["毒雨"] = str(cooldown_str(), "射出数支毒箭攻击大范围区域，每支对区域内所有敌人造成", damage_str(), "并附加剧毒，每", ult_poison_every, "秒造成", damage_str(2), "，持续", ult_poison_duration, "秒。")
+map[_("HERO_ROOM_ASRA_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_ASRA_ULTIMATE_2_DESC"), str(cooldown_str()), str(damage_str()), str(ult_poison_every), str(damage_str(2)), str(ult_poison_duration))
 
 -- hero_beresad
 set_hero("hero_beresad")
 
-map["金之欲"] = str("被贝雷萨德普攻杀死的敌人额外掉落6枚金币，被地狱火杀死的敌人额外掉落3枚金币。")
+map[_("HERO_ROOM_BERESAD_ULTIMATE_NAME")] = _("HERO_ROOM_BERESAD_ULTIMATE_DESC")
 
 set_skill(h.hero.skills.conflagration)
 cooldown = s.cooldown[max_lvl]
@@ -3241,14 +3241,14 @@ local conflagration_burn_every = e.dps.damage_every
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 d[1].damage_type = e.dps.damage_type
-map["爆炎"] = str(cooldown_str(), "贝雷萨德喷出灼热的火焰，灼烧前方区域，留下持续", conflagration_duration, "秒的焦土，每", conflagration_burn_every, "秒造成", damage_str(), "。")
+map[_("HERO_ROOM_BERESAD_CONFLAGRATION_NAME")] = string.format(_("HERO_ROOM_BERESAD_CONFLAGRATION_DESC"), str(cooldown_str()), str(conflagration_duration), str(conflagration_burn_every), str(damage_str()))
 
 set_skill(h.hero.skills.fear_dragon)
 cooldown = h.timed_attacks.list[1].cooldown
 duration = s.duration[max_lvl]
 local max_targets = h.timed_attacks.list[1].max_targets
 local speed_factor = (T("mod_beresad_fear_indicator").slow.factor - 1) * 100
-map["惧龙"] = str(cooldown_str(), "发出震耳欲聋的咆哮，恐惧最多", max_targets, "名敌人", "，使其逃跑并加速", speed_factor, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_BERESAD_FEAR_DRAGON_NAME")] = string.format(_("HERO_ROOM_BERESAD_FEAR_DRAGON_DESC"), str(cooldown_str()), str(max_targets), str(speed_factor), str(duration))
 
 set_skill(h.hero.skills.dragon_spawn)
 get_cooldown()
@@ -3261,14 +3261,14 @@ d[2].damage_min = s.explode_damage_min[max_lvl]
 d[2].damage_max = s.explode_damage_max[max_lvl]
 d[2].damage_type = T("bomb_beresad_golem").bullet.damage_type
 duration = T("hero_beresad_golem").reinforcement.duration
-map["龙生"] = str(cooldown_str(), "发射一个傀儡，落地时造成", damage_str(2), "。傀儡拥有", golem_hp, "点生命值，每次攻击造成", damage_str(), "，驻场", duration, "秒。傀儡无法恢复生命值，但也不受火焰、剧毒、流血、狼人化、尸骸化的影响。")
+map[_("HERO_ROOM_BERESAD_DRAGON_SPAWN_NAME")] = string.format(_("HERO_ROOM_BERESAD_DRAGON_SPAWN_DESC"), str(cooldown_str()), str(damage_str(2)), str(golem_hp), str(damage_str()), str(duration))
 
 set_skill(h.hero.skills.remove_existence)
 get_cooldown()
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_type = T("mod_ray_beresad_disintegrate").explode_damage_type
-map["片甲不留"] = str(cooldown_str(), "射出一道湮灭光线，秒杀目标，并对附近敌人造成", damage_str(), "。该技能只会对生命值高于750的敌人释放。")
+map[_("HERO_ROOM_BERESAD_REMOVE_EXISTENCE_NAME")] = string.format(_("HERO_ROOM_BERESAD_REMOVE_EXISTENCE_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
@@ -3277,7 +3277,7 @@ d[1].damage_max = s.damage[max_lvl]
 d[1].damage_type = T("mod_beresad_ultimate").dps.damage_type
 cycle_time = T("mod_beresad_ultimate").dps.damage_every
 duration = T("controller_beresad_ultimate").duration
-map["地狱火"] = str(cooldown_str(), "召唤地狱火雨，每", cycle_time, "秒对所有敌人造成", damage_str(), "，持续", duration, "秒。")
+map[_("HERO_ROOM_BERESAD_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_BERESAD_ULTIMATE_2_DESC"), str(cooldown_str()), str(cycle_time), str(damage_str()), str(duration))
 
 -- hero_dianyun
 set_hero("hero_dianyun")
@@ -3287,20 +3287,20 @@ cooldown = h.ranged.attacks[2].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_type = T("hero_dianyun_lightning_ricochet").bullet.damage_type
-map["闪电打击"] = str(cooldown_str(), "发射一道闪电，在", s.bounce[max_lvl], "个敌人之间弹射，每次造成", damage_str(), "。")
+map[_("HERO_ROOM_DIANYUN_RICOCHET_NAME")] = string.format(_("HERO_ROOM_DIANYUN_RICOCHET_DESC"), str(cooldown_str()), str(s.bounce[max_lvl]), str(damage_str()))
 
 set_skill(h.hero.skills.lord_storm)
-map["暴风领主"] = str("普通攻击会同时攻击最多", s.max_targets[max_lvl], "个目标。")
+map[_("HERO_ROOM_DIANYUN_LORD_STORM_NAME")] = string.format(_("HERO_ROOM_DIANYUN_LORD_STORM_DESC"), str(s.max_targets[max_lvl]))
 
 set_skill(h.hero.skills.divine_rain)
 cooldown = h.timed_attacks.list[1].cooldown
 duration = s.duration
 cycle_time = T("aura_hero_dianyun_divine_rain").aura.cycle_time
-map["神圣雨露"] = str(cooldown_str(), "降下神圣之雨，每", cycle_time, "秒为周围友军回复", s.healing_points_tick[max_lvl], "点生命值，持续", duration, "秒。")
+map[_("HERO_ROOM_DIANYUN_DIVINE_RAIN_NAME")] = string.format(_("HERO_ROOM_DIANYUN_DIVINE_RAIN_DESC"), str(cooldown_str()), str(cycle_time), str(s.healing_points_tick[max_lvl]), str(duration))
 
 set_skill(h.hero.skills.supreme_wave)
 cooldown = h.timed_attacks.list[2].cooldown
-map["势崩江河"] = str(cooldown_str(), "电云以自己为中心释放数道能量波，击晕路径上的敌人", s.stun[max_lvl], "秒。")
+map[_("HERO_ROOM_DIANYUN_SUPREME_WAVE_NAME")] = string.format(_("HERO_ROOM_DIANYUN_SUPREME_WAVE_DESC"), str(cooldown_str()), str(s.stun[max_lvl]))
 
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
@@ -3309,9 +3309,9 @@ d[1].damage_max = e.bullet.damage_max
 d[1].damage_min = e.bullet.damage_min
 d[1].damage_type = e.bullet.damage_type
 count = s.bullets_to_death[max_lvl]
-map["雷电之子"] = str(cooldown_str(), "召唤一个雷电之子，自动攻击附近的敌人，每次造成", damage_str(), "，最多攻击", count, "次。")
+map[_("HERO_ROOM_DIANYUN_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_DIANYUN_ULTIMATE_DESC"), str(cooldown_str()), str(damage_str()), str(count))
 
-map["孔明灯"] = str("电云附近200范围内死亡的敌人会化为孔明灯，额外产出1枚金币。")
+map[_("HERO_ROOM_DIANYUN_ULTIMATE_2_NAME")] = _("HERO_ROOM_DIANYUN_ULTIMATE_2_DESC")
 
 set_hero("hero_isfet")
 
@@ -3320,31 +3320,31 @@ cooldown = h.timed_attacks.list[1].cooldown
 d[1].damage_min = ss("damage")
 d[1].damage_max = ss("damage")
 d[1].damage_type = DAMAGE_EXPLOSION
-map["黑色蝗虫"] = str(cooldown_str(), "召唤一片致命的蝗虫云，沿路径移动，对碰到的敌人每0.25秒造成", damage_str(), "。")
+map[_("HERO_ROOM_ISFET_BLACK_CLOUD_NAME")] = string.format(_("HERO_ROOM_ISFET_BLACK_CLOUD_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.frog_curse)
 cooldown = h.timed_attacks.list[2].cooldown
-map["青蛙诅咒"] = str(cooldown_str(), "向生命值低于", s.health_threshold[max_lvl], "的敌人释放诅咒，将其变成一只青蛙（即直接秒杀）。")
+map[_("HERO_ROOM_ISFET_FROG_CURSE_NAME")] = string.format(_("HERO_ROOM_ISFET_FROG_CURSE_DESC"), str(cooldown_str()), str(s.health_threshold[max_lvl]))
 
 set_skill(h.hero.skills.rain)
 cooldown = h.timed_attacks.list[3].cooldown
 count = ss("count")
-map["冰火雨"] = str(cooldown_str(), "召唤", count, "颗陨石落向目标区域，每颗造成60点真实伤害，并燃烧或冰冻敌人。")
+map[_("HERO_ROOM_ISFET_RAIN_NAME")] = string.format(_("HERO_ROOM_ISFET_RAIN_DESC"), str(cooldown_str()), str(count))
 
 set_skill(h.hero.skills.blood_pool)
 cooldown = h.timed_attacks.list[4].cooldown
 d[1].damage_min = ss("damage_factor")
 factor = ss("damage_factor")
-map["血之折磨"] = str(cooldown_str(), "召唤一池沸腾的血液，使范围内的敌人受到的伤害增加", (factor - 1) * 100, "%。")
+map[_("HERO_ROOM_ISFET_BLOOD_POOL_NAME")] = string.format(_("HERO_ROOM_ISFET_BLOOD_POOL_DESC"), str(cooldown_str()), str((factor - 1) * 100))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
 d[1].damage_min = ss("damage")
 d[1].damage_max = ss("damage")
 d[1].damage_type = DAMAGE_TRUE
-map["黑暗风暴"] = str(cooldown_str(), "召唤一场致命的风暴，对区域内的敌人每0.2秒造成", damage_str(), "伤害并减速60%。")
+map[_("HERO_ROOM_ISFET_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_ISFET_ULTIMATE_DESC"), str(cooldown_str()), str(damage_str()))
 
-map["倒下的仆从"] = str("当靠近伊斯菲特的敌人死亡时，有50%概率作为木乃伊复活为其作战。")
+map[_("HERO_ROOM_ISFET_ULTIMATE_2_NAME")] = _("HERO_ROOM_ISFET_ULTIMATE_2_DESC")
 
 set_hero("hero_orc")
 
@@ -3353,12 +3353,12 @@ cooldown = h.melee.attacks[3].cooldown
 d[1].damage_min = ss("damage_config")
 d[1].damage_max = ss("damage_config")
 d[1].damage_type = h.melee.attacks[3].damage_type
-map["瞄准砍击"] = str(cooldown_str(), "维鲁克连续斩击两次，每次造成", damage_str(), "。")
+map[_("HERO_ROOM_ORC_DUELIST_NAME")] = string.format(_("HERO_ROOM_ORC_DUELIST_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.brute_force)
 cooldown = ss("cooldown")
 duration = ss("duration")
-map["蛮力"] = str(cooldown_str(), "维鲁克猛砍地面，造成范围普攻伤害，并使附近敌人眩晕", duration, "秒。")
+map[_("HERO_ROOM_ORC_BRUTE_FORCE_NAME")] = string.format(_("HERO_ROOM_ORC_BRUTE_FORCE_DESC"), str(cooldown_str()), str(duration))
 
 set_skill(h.hero.skills.inspiring_leader)
 cooldown = ss("cooldown")
@@ -3369,7 +3369,7 @@ get_damage(e.melee.attacks[1])
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 count = h.timed_attacks.list[1].count
-map["振臂一呼"] = str(cooldown_str(), "呼叫", count, "名拥有", health_str(), "的哥布林助战，每次攻击造成", damage_str(), "，驻场", e.reinforcement.duration, "秒。哥布林可调集。")
+map[_("HERO_ROOM_ORC_INSPIRING_LEADER_NAME")] = string.format(_("HERO_ROOM_ORC_INSPIRING_LEADER_DESC"), str(cooldown_str()), str(count), str(health_str()), str(damage_str()), str(e.reinforcement.duration))
 
 set_skill(h.hero.skills.ultimate)
 e = T("soldier_hero_orc_spear_goblin")
@@ -3383,19 +3383,19 @@ get_damage(e.bullet, 2)
 d[2].damage_min = ss("ranged_damage_min")
 d[2].damage_max = ss("ranged_damage_max")
 
-map["好战分子"] = str("维鲁克将一名投矛哥布林编入援军，每次近战攻击造成", damage_str(), "，远程攻击造成", damage_str(2), "，驻场", duration, "秒。")
+map[_("HERO_ROOM_ORC_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_ORC_ULTIMATE_DESC"), str(damage_str()), str(damage_str(2)), str(duration))
 
 e = T("aura_hero_orc_regen")
 amount = e.regen.health
 cooldown = e.regen.cooldown
-map["战之欲"] = str(cooldown_str(), "维鲁克恢复", amount, "点生命值。")
+map[_("HERO_ROOM_ORC_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_ORC_ULTIMATE_2_DESC"), str(cooldown_str()), str(amount))
 
 set_skill(h.hero.skills.aimed_slash)
 amount = ss("max_buff_level")
 e = T("aura_hero_orc_aimed_slash")
 amount_2 = e.damage_factor_inc
 cycle_time = e.upgrade_cycle_time
-map["角斗立场"] = str("处于战斗状态时，维鲁克提升自身伤害", amount_2 * 100, "%，每", cycle_time, "秒叠加1层，最多叠加", amount, "层。")
+map[_("HERO_ROOM_ORC_AIMED_SLASH_NAME")] = string.format(_("HERO_ROOM_ORC_AIMED_SLASH_DESC"), str(amount_2 * 100), str(cycle_time), str(amount))
 
 -- function H.dump()
 -- 	for hero_name, skills in pairs(H) do
@@ -3421,7 +3421,7 @@ duration = e.reinforcement.duration
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = DAMAGE_MAGICAL
-map["自我复制"] = str(cooldown_str(), "奥洛克制造出两个自己的幻象来攻击敌人，拥有", hp_str(), "，每次攻击造成", damage_str(), "，持续", duration, "秒。分身继承恶魔飞爆和炼狱业火技能，且可自由调集。")
+map[_("HERO_ROOM_OLOCH_DUPLICATION_NAME")] = string.format(_("HERO_ROOM_OLOCH_DUPLICATION_DESC"), str(cooldown_str()), str(hp_str()), str(damage_str()), str(duration))
 
 set_skill(h.hero.skills.magma_eruption)
 cooldown = h.timed_attacks.list[2].cooldown
@@ -3435,20 +3435,20 @@ d[2].damage_min = ss("damage_aura_config")
 d[2].damage_max = ss("damage_aura_config")
 d[2].damage_type = e.dps.damage_type
 cycle_time = e.dps.damage_every
-map["岩浆喷发"] = str(cooldown_str(), "喷发出", count, "个熔岩泉，每个造成", damage_str(), "，并留下一片熔岩区域持续灼烧敌人，每", cycle_time, "秒造成", damage_str(2), "。")
+map[_("HERO_ROOM_OLOCH_MAGMA_ERUPTION_NAME")] = string.format(_("HERO_ROOM_OLOCH_MAGMA_ERUPTION_DESC"), str(cooldown_str()), str(count), str(damage_str()), str(cycle_time), str(damage_str(2)))
 
 set_skill(h.hero.skills.hellish_infusion)
 cooldown = h.timed_attacks.list[1].cooldown
 duration = T("mod_oloch_heat").modifier.duration
 local factor = ss("damage_factor_config")
-map["地狱注入"] = str(cooldown_str(), "向附近防御塔注入能量，给予它们", (factor - 1) * 100, "%伤害加成，持续", duration, "秒。")
+map[_("HERO_ROOM_OLOCH_HELLISH_INFUSION_NAME")] = string.format(_("HERO_ROOM_OLOCH_HELLISH_INFUSION_DESC"), str(cooldown_str()), str((factor - 1) * 100), str(duration))
 
 set_skill(h.hero.skills.demonic_blast)
 cooldown = h.ranged.attacks[2].cooldown
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = T("bolt_oloch_big").bullet.damage_type
-map["恶魔飞爆"] = str(cooldown_str(), "召唤一只大火球掷向敌人，造成", damage_str(), "。")
+map[_("HERO_ROOM_OLOCH_DEMONIC_BLAST_NAME")] = string.format(_("HERO_ROOM_OLOCH_DEMONIC_BLAST_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = ss("cooldown")
@@ -3456,25 +3456,25 @@ count = T("controller_hero_oloch_ultimate").max_targets
 d[1].damage_min = T("mod_hero_oloch_ultimate_teleport").damage_base + T("mod_hero_oloch_ultimate_teleport").damage_inc * max_lvl
 d[1].damage_max = d[1].damage_min
 d[1].damage_type = T("mod_hero_oloch_ultimate_teleport").damage_type
-map["孤立缄印"] = str(cooldown_str(), "将最多", count, "名敌人传送回一段距离，并对他们造成", damage_str(), "。")
+map[_("HERO_ROOM_OLOCH_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_OLOCH_ULTIMATE_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 d[1].damage_min = table.tail(h.hero.level_stats.selfdestruct_damage_config)
 d[1].damage_max = table.tail(h.hero.level_stats.selfdestruct_damage_config)
 d[1].damage_type = h.selfdestruct.damage_type
 radius = h.selfdestruct.damage_radius
-map["炼狱业火"] = str("奥洛克阵亡后爆炸，对", radius, "范围内的敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_OLOCH_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_OLOCH_ULTIMATE_2_DESC"), str(radius), str(damage_str()))
 
 -- 苦楝夫人
 set_hero("hero_margosa")
 
-map["嗜血本能"] = str("苦楝夫人免疫剧毒，普通攻击造成残暴伤害。远距离调遣时，苦楝夫人化身蝙蝠高速飞行。")
+map[_("HERO_ROOM_MARGOSA_ULTIMATE_NAME")] = _("HERO_ROOM_MARGOSA_ULTIMATE_DESC")
 
 set_skill(h.hero.skills.bat_familiar)
 d[1].damage_min = ss("damage_min_config")
 d[1].damage_max = ss("damage_max_config")
 d[1].damage_type = T("bat_reinforcement_special_dark_army").custom_attack.damage_type
 cooldown = T("bat_reinforcement_special_dark_army").custom_attack.cooldown
-map["熟吸蝙蝠"] = str("召唤一只吸血蝙蝠伴她作战，每隔", cooldown, "秒攻击一次，每次造成", damage_str(), "。")
+map[_("HERO_ROOM_MARGOSA_BAT_FAMILIAR_NAME")] = string.format(_("HERO_ROOM_MARGOSA_BAT_FAMILIAR_DESC"), str(cooldown), str(damage_str()))
 
 set_skill(h.hero.skills.myst_form)
 cooldown = h.timed_attacks.list[1].cooldown
@@ -3485,34 +3485,34 @@ cycle_time = T("mod_dmg_fog_hero_margosa").dps.damage_every
 duration = T("aura_fog_hero_margosa").aura.duration
 factor = 1 - ss("damage_factor")
 local slow_factor = 1 - T("mod_slow_fog_hero_margosa").slow.factor
-map["绝望迷雾"] = str(cooldown_str(), "使自己被魔法迷雾环绕。迷雾中的敌人每", cycle_time, "秒受到", damage_str(), "，移动速度降低", slow_factor * 100, "%，并使敌人造成的伤害降低", factor * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_MARGOSA_MYST_FORM_NAME")] = string.format(_("HERO_ROOM_MARGOSA_MYST_FORM_DESC"), str(cooldown_str()), str(cycle_time), str(damage_str()), str(slow_factor * 100), str(factor * 100), str(duration))
 
 set_skill(h.hero.skills.dark_call)
 cooldown = h.timed_attacks.list[2].cooldown
 duration = ss("duration")
 count = h.timed_attacks.list[2].max_count
-map["黑暗呼唤"] = str(cooldown_str(), "将最多", count, "名敌人传送到她身前，阻止对方继续前行，并使其眩晕", duration, "秒。")
+map[_("HERO_ROOM_MARGOSA_DARK_CALL_NAME")] = string.format(_("HERO_ROOM_MARGOSA_DARK_CALL_DESC"), str(cooldown_str()), str(count), str(duration))
 
 set_skill(h.hero.skills.vampiric_touch)
 factor = ss("track_rate")
-map["吸血鬼之触"] = str("每次普通攻击用所造成伤害的", factor * 100, "%恢复自身生命值。")
+map[_("HERO_ROOM_MARGOSA_VAMPIRIC_TOUCH_NAME")] = string.format(_("HERO_ROOM_MARGOSA_VAMPIRIC_TOUCH_DESC"), str(factor * 100))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
 duration = ss("duration")
 local dmg_factor = h.ultimate.damage_factor
-map["野兽形态"] = str(cooldown_str(), "当生命值耗尽或附近有敌人时，苦楝夫人变身为渴血的野兽，生命值恢复至全满，普通攻击变为真实伤害，伤害提升", (dmg_factor - 1) * 100, "%，攻击速度与移动速度大幅提升，吸血效果强化，持续", duration, "秒。变身期间使用绝望迷雾或黑暗呼唤将提前退出野兽形态。")
+map[_("HERO_ROOM_MARGOSA_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_MARGOSA_ULTIMATE_2_DESC"), str(cooldown_str()), str((dmg_factor - 1) * 100), str(duration))
 
 -- 墨忒弥斯
 set_hero("hero_mortemis")
 
-map["巫妖"] = str("普通攻击发射灵魂弹幕，并吸收所造成伤害的", T("bolt_mortemis").bullet.heal_factor * 100, "%转化为自身生命值。")
+map[_("HERO_ROOM_MORTEMIS_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_MORTEMIS_ULTIMATE_DESC"), str(T("bolt_mortemis").bullet.heal_factor * 100))
 
 set_skill(h.hero.skills.call_haunted)
 cooldown = h.timed_attacks.list[1].cooldown
 count = h.timed_attacks.list[1].max_target
 duration = ss("duration")
-map["夜鬼哭"] = str(cooldown_str(), "墨忒弥斯利用死者痛苦的低语控制", count, "名敌人的心神，使其惊恐逃跑，持续", duration, "秒。")
+map[_("HERO_ROOM_MORTEMIS_CALL_HAUNTED_NAME")] = string.format(_("HERO_ROOM_MORTEMIS_CALL_HAUNTED_DESC"), str(cooldown_str()), str(count), str(duration))
 
 set_skill(h.hero.skills.deadly_fumes)
 cooldown = h.timed_attacks.list[2].cooldown
@@ -3521,12 +3521,12 @@ d[1].damage_max = ss("damage_config")
 d[1].damage_type = T("mod_mortemis_magma").dps.damage_type
 cycle_time = T("mod_mortemis_magma").dps.damage_every
 duration = T("mortemis_poisonpool").aura.duration
-map["腐朽之地"] = str(cooldown_str(), "腐蚀一片区域，使上面的敌人每", cycle_time, "秒受到", damage_str(), "，持续", duration, "秒。")
+map[_("HERO_ROOM_MORTEMIS_DEADLY_FUMES_NAME")] = string.format(_("HERO_ROOM_MORTEMIS_DEADLY_FUMES_DESC"), str(cooldown_str()), str(cycle_time), str(damage_str()), str(duration))
 
 set_skill(h.hero.skills.grim_presence)
 local reduction = -1 * ss("armor_reduction")
 radius = T("aura_mortemis_curse_armor").aura.radius
-map["无望之人"] = str("墨忒弥斯身边", radius, "范围内的敌人减少", reduction * 100, "点护甲和魔法抗性。")
+map[_("HERO_ROOM_MORTEMIS_GRIM_PRESENCE_NAME")] = string.format(_("HERO_ROOM_MORTEMIS_GRIM_PRESENCE_DESC"), str(radius), str(reduction * 100))
 
 set_skill(h.hero.skills.undead_servitude)
 count = T("aura_mortemis_zombie").max_count
@@ -3538,7 +3538,7 @@ d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = T("hero_mortemis_zombie").melee.attacks[1].damage_type
 duration = T("hero_mortemis_zombie").reinforcement.duration
-map["不死人之奴"] = str("墨忒弥斯身边", radius, "范围内的敌人死亡后会化为一只僵尸作战。僵尸拥有", health_str(), "，每次攻击造成", damage_str(), "，驻场", duration, "秒。同一范围内，最多存在", count, "只僵尸。")
+map[_("HERO_ROOM_MORTEMIS_UNDEAD_SERVITUDE_NAME")] = string.format(_("HERO_ROOM_MORTEMIS_UNDEAD_SERVITUDE_DESC"), str(radius), str(health_str()), str(damage_str()), str(duration), str(count))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
@@ -3550,7 +3550,7 @@ d[1].damage_max = ss("damage_max")
 d[1].damage_type = e.melee.attacks[1].damage_type
 duration = e.reinforcement.duration
 duration_2 = T("hero_mortemis_golem_stun").modifier.duration
-map["腐朽近卫"] = str(cooldown_str(), "召唤出一只可调集的僵尸巨怪，拥有", hp_str(), "，每次攻击对周围敌人造成", damage_str(), "，并使他们眩晕", duration_2, "秒。僵尸巨怪驻场", duration, "秒。")
+map[_("HERO_ROOM_MORTEMIS_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_MORTEMIS_ULTIMATE_2_DESC"), str(cooldown_str()), str(hp_str()), str(damage_str()), str(duration_2), str(duration))
 
 set_skill(h.hero.skills.undead_servitude)
 e = T("hero_mortemis_zombie")
@@ -3558,7 +3558,7 @@ health[1].hp_max = ss("hp_max")
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = e.melee.attacks[1].damage_type
-map["黑暗军"] = str("墨忒弥斯死时，身边将生出", h.death_spawns.quantity, "只僵尸，每只拥有", hp_str(), "，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_MORTEMIS_UNDEAD_SERVITUDE_2_NAME")] = string.format(_("HERO_ROOM_MORTEMIS_UNDEAD_SERVITUDE_2_DESC"), str(h.death_spawns.quantity), str(hp_str()), str(damage_str()))
 
 -- 极狗
 set_hero("hero_jigou")
@@ -3566,7 +3566,7 @@ set_hero("hero_jigou")
 e = E:get_template("aura_jigou_regen")
 local regen_every = e.hps.heal_every
 local regen_amount = e.hps.heal_min
-map["雪人血"] = str("极狗的自愈能力极强，每隔", regen_every, "秒恢复", regen_amount, "点生命值。")
+map[_("HERO_ROOM_JIGOU_UNDEAD_SERVITUDE_NAME")] = string.format(_("HERO_ROOM_JIGOU_UNDEAD_SERVITUDE_DESC"), str(regen_every), str(regen_amount))
 
 set_skill(h.hero.skills.ice_shard)
 cooldown = h.ranged.attacks[1].cooldown
@@ -3574,19 +3574,19 @@ d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = T("bullet_jigou").bullet.damage_type
 radius = T("bullet_jigou").bullet.damage_radius
-map["雪球"] = str(cooldown_str(), "极狗向敌人投掷一块冻结的石头，对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_JIGOU_ICE_SHARD_NAME")] = string.format(_("HERO_ROOM_JIGOU_ICE_SHARD_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.frozen_breath)
 cooldown = h.timed_attacks.list[2].cooldown
 duration = T("mod_jigou_freeze").modifier.duration
-map["霜冻吐息"] = str(cooldown_str(), "极狗呼出肺中的空气，冻结面前的敌人，使其冻结", duration, "秒。")
+map[_("HERO_ROOM_JIGOU_FROZEN_BREATH_NAME")] = string.format(_("HERO_ROOM_JIGOU_FROZEN_BREATH_DESC"), str(cooldown_str()), str(duration))
 
 set_skill(h.hero.skills.earthshake)
 cooldown = h.melee.attacks[2].cooldown
 local loops = ss("loops")
 get_damage(h.melee.attacks[2])
 local stun_dur = T("mod_jigou_stun").modifier.duration
-map["猛击大地"] = str(cooldown_str(), "暴怒，猛烈击打大地", loops, "次，对周围敌人造成", damage_str(), "，并使其眩晕", stun_dur, "秒。")
+map[_("HERO_ROOM_JIGOU_EARTHSHAKE_NAME")] = string.format(_("HERO_ROOM_JIGOU_EARTHSHAKE_DESC"), str(cooldown_str()), str(loops), str(damage_str()), str(stun_dur))
 
 set_skill(h.hero.skills.glacial_form)
 cooldown = h.timed_attacks.list[1].cooldown
@@ -3595,7 +3595,7 @@ heal = ss("hps")
 local damage_reduction = 1 - h.timed_attacks.list[1].damage_factor
 e = E:get_template("mod_jigou_slow")
 local slow_factor = 1 - e.slow.factor
-map["冰川形态"] = str(cooldown_str(), "极狗蜷缩进冰屋，", duration, "秒内受到的伤害减少", damage_reduction * 100, "%，嘲讽周围", h.melee.range, "范围内敌人，并使其移动速度降低", slow_factor * 100, "%，期间每秒恢复", heal, "点生命值。")
+map[_("HERO_ROOM_JIGOU_GLACIAL_FORM_NAME")] = string.format(_("HERO_ROOM_JIGOU_GLACIAL_FORM_DESC"), str(cooldown_str()), str(duration), str(damage_reduction * 100), str(h.melee.range), str(slow_factor * 100), str(heal))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
@@ -3604,12 +3604,12 @@ d[1].damage_max = ss("damage_config")
 d[1].damage_type = T("aura_jigou_ultimate").aura.damage_type
 duration = T("mod_jigou_ultimate_slow").modifier.duration
 local slow = 1 - ss("slow_factor")
-map["冰区"] = str(cooldown_str(), "极狗制造出一块布满冰雪的区域，沿敌阵路径延伸，对沿途敌人造成", damage_str(), "，并使其移动速度降低", slow * 100, "%，持续", duration, "秒。")
+map[_("HERO_ROOM_JIGOU_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_JIGOU_ULTIMATE_DESC"), str(cooldown_str()), str(damage_str()), str(slow * 100), str(duration))
 
 -- 特拉敏大师
 set_hero("hero_tramin")
 
-map["火箭跳"] = str("远距离调遣时，特拉敏驱散特殊效果，并用火箭跳跃快速转移。")
+map[_("HERO_ROOM_TRAMIN_ULTIMATE_NAME")] = _("HERO_ROOM_TRAMIN_ULTIMATE_DESC")
 
 set_skill(h.hero.skills.bombots)
 cooldown = h.ranged.attacks[2].cooldown
@@ -3617,18 +3617,18 @@ d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = T("aura_bomb_tramin_skill1").aura.damage_type
 radius = T("aura_bomb_tramin_skill1").aura.radius
-map["自爆机器人"] = str(cooldown_str(), "向敌人投掷一个自爆机器人，落地后沿路径冲向敌人并自爆，对", radius, "范围内敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_TRAMIN_BOMBOTS_NAME")] = string.format(_("HERO_ROOM_TRAMIN_BOMBOTS_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
 
 set_skill(h.hero.skills.nitro_rush)
 cooldown = h.timed_attacks.list[2].cooldown
 duration = ss("duration")
 factor = 1 - h.timed_attacks.list[2].cooldown_factor
-map["饮硝狂奔"] = str(cooldown_str(), "特拉敏喝下一杯硝酸甘油，使自身攻速加快", factor * 100, "%，普攻冷却额外缩短一半，持续", duration, "秒。")
+map[_("HERO_ROOM_TRAMIN_NITRO_RUSH_NAME")] = string.format(_("HERO_ROOM_TRAMIN_NITRO_RUSH_DESC"), str(cooldown_str()), str(factor * 100), str(duration))
 
 set_skill(h.hero.skills.flashbang)
 cooldown = h.ranged.attacks[3].cooldown
 duration = ss("duration")
-map["闪光弹"] = str(cooldown_str(), "向敌人掷出一枚闪光弹，令其眩晕", duration, "秒，并造成普攻伤害。")
+map[_("HERO_ROOM_TRAMIN_FLASHBANG_NAME")] = string.format(_("HERO_ROOM_TRAMIN_FLASHBANG_DESC"), str(cooldown_str()), str(duration))
 
 set_skill(h.hero.skills.rocket_barrage)
 cooldown = h.timed_attacks.list[1].cooldown
@@ -3636,7 +3636,7 @@ count = ss("count")
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = T("missle_tramin").bullet.damage_type
-map["火箭弹幕"] = str(cooldown_str(), "向敌人发射", count, "枚追踪导弹，每枚造成", damage_str(), "。")
+map[_("HERO_ROOM_TRAMIN_ROCKET_BARRAGE_NAME")] = string.format(_("HERO_ROOM_TRAMIN_ROCKET_BARRAGE_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
@@ -3644,7 +3644,7 @@ count = ss("entity_count")
 d[1].damage_min = ss("damage_config")
 d[1].damage_max = ss("damage_config")
 d[1].damage_type = T("aura_bomb_tramin_ultimate").aura.damage_type
-map["疯狂炸弹人"] = str(cooldown_str(), "投下一个能造出炸弹的盒子，放出", count, "颗炸弹沿路径前进，每颗爆炸对敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_TRAMIN_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_TRAMIN_ULTIMATE_2_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 -- 毁灭坦克 SG-11
 set_hero("hero_tank")
@@ -3652,7 +3652,7 @@ e = T("controller_overwhelm_tank")
 d[1].damage_min = table.tail(e.damage)
 d[1].damage_max = table.tail(e.damage)
 d[1].damage_type = e.damage_type
-map["多刺蛞蝓"] = str("毁灭坦克移动时，每", e.cooldown, "秒对附近敌人造成", damage_str(), "。")
+map[_("HERO_ROOM_TANK_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_TANK_ULTIMATE_DESC"), str(e.cooldown), str(damage_str()))
 
 set_skill(h.hero.skills.heat_missiles)
 cooldown = h.timed_attacks.list[1].cooldown
@@ -3660,7 +3660,7 @@ count = ss("count")
 d[1].damage_min = ss("damage_min_config")
 d[1].damage_max = ss("damage_max_config")
 d[1].damage_type = T("missle_tank").bullet.damage_type
-map["炽热导弹"] = str(cooldown_str(), "发射", count, "枚导弹，每枚造成", damage_str(), "。")
+map[_("HERO_ROOM_TANK_HEAT_MISSILES_NAME")] = string.format(_("HERO_ROOM_TANK_HEAT_MISSILES_DESC"), str(cooldown_str()), str(count), str(damage_str()))
 
 set_skill(h.hero.skills.ground_slam)
 cooldown = h.timed_attacks.list[2].cooldown
@@ -3669,7 +3669,7 @@ d[1].damage_min = ss("damage_min_config")
 d[1].damage_max = ss("damage_max_config")
 d[1].damage_type = e.aura.damage_type
 local stun_dur = T("mod_tank_skill2_stun").modifier.duration
-map["猛击地"] = str(cooldown_str(), "猛击地面，对路径上的敌人造成", damage_str(), "，并令其眩晕", stun_dur, "秒。")
+map[_("HERO_ROOM_TANK_GROUND_SLAM_NAME")] = string.format(_("HERO_ROOM_TANK_GROUND_SLAM_DESC"), str(cooldown_str()), str(damage_str()), str(stun_dur))
 
 set_skill(h.hero.skills.expendables)
 e = T("hero_tank_expendables")
@@ -3679,7 +3679,7 @@ get_damage(e.melee.attacks[1])
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 count = ss("count")
-map["敢死队"] = str(count, "名严阵以待的士兵与坦克协同作战，每名士兵拥有", hp_str(), "，每次攻击造成", damage_str(), "。")
+map[_("HERO_ROOM_TANK_EXPENDABLES_NAME")] = string.format(_("HERO_ROOM_TANK_EXPENDABLES_DESC"), str(count), str(hp_str()), str(damage_str()))
 
 set_skill(h.hero.skills.scorching_cannon)
 cooldown = ss("cooldown")
@@ -3688,7 +3688,7 @@ d[1].damage_min = ss("damage_config")
 d[1].damage_max = ss("damage_config")
 d[1].damage_type = e.dps.damage_type
 local fire_every = e.dps.damage_every
-map["灼热大炮"] = str(cooldown_str(), "点燃喷火器并原地旋转，对周围敌人每", fire_every, "秒造成", damage_str(), "，持续", T("aura_roundfire_hero_tank").aura.duration, "秒。")
+map[_("HERO_ROOM_TANK_SCORCHING_CANNON_NAME")] = string.format(_("HERO_ROOM_TANK_SCORCHING_CANNON_DESC"), str(cooldown_str()), str(fire_every), str(damage_str()), str(T("aura_roundfire_hero_tank").aura.duration))
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
@@ -3697,6 +3697,6 @@ d[1].damage_min = ss("damage_config")
 d[1].damage_max = ss("damage_config")
 d[1].damage_type = e.dps.damage_type
 local ult_every = e.dps.damage_every
-map["女武神的呼唤"] = str(cooldown_str(), "呼叫飞机投下一颗凝固汽油弹，点燃路径上的敌人，每", ult_every, "秒造成", damage_str(), "，持续", T("aura_bullet_zeppelin_hero_tank").aura.duration, "秒。")
+map[_("HERO_ROOM_TANK_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_TANK_ULTIMATE_2_DESC"), str(cooldown_str()), str(ult_every), str(damage_str()), str(T("aura_bullet_zeppelin_hero_tank").aura.duration))
 
 return H

@@ -98,7 +98,7 @@ local function distribute_total_amount_to_groups_randomly(total, n, min_each, we
 	min_each = tonumber(min_each) or 0
 	if min_each * n > total then
 		print("min_each: ", min_each, "n: ", n, "total: ", total)
-		error("min_each * n 不能大于 total")
+		error(_("WAVE_GEN_ERR_MIN_EACH_EXCEEDS_TOTAL"))
 	end
 
 	local remain = total - min_each * n

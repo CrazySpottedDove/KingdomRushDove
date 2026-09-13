@@ -24,7 +24,7 @@ function last_hook:on_insert_unconditional(e, d)
 			if not target._applied_mods then
 				target._applied_mods = {}
 				-- 这个问题应该是历史遗留问题，现在使用强制蓝屏策略，等待用户报告。
-				error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s", target.template_name, e.template_name))
+				error(string.format(_("LAST_HOOK_TARGET_NOT_INITIALIZED"), target.template_name, e.template_name))
 			end
 
 			local mods = target._applied_mods

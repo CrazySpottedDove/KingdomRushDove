@@ -35,42 +35,42 @@ local STORE_PAGE_SIZE = 20
 local STORE_BACKUP_SITES = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
 
 local CATEGORY_OPTIONS = {{
-	label = "全部",
+	label = _("PLUGIN_MGR_CATEGORY_ALL"),
 	value = "all"
 }, {
-	label = "玩法",
+	label = _("PLUGIN_MGR_CATEGORY_GAMEPLAY"),
 	value = "gameplay"
 }, {
-	label = "防御塔",
+	label = _("Towers"),
 	value = "tower"
 }, {
-	label = "英雄",
+	label = _("Heroes"),
 	value = "hero"
 }, {
-	label = "显示",
+	label = _("PLUGIN_MGR_CATEGORY_DISPLAY"),
 	value = "display"
 }, {
-	label = "美化",
+	label = _("PLUGIN_MGR_CATEGORY_COSMETIC"),
 	value = "cosmetic"
 }, {
-	label = "敌人",
+	label = _("Enemies"),
 	value = "enemy"
 }, {
-	label = "关卡",
+	label = _("PLUGIN_MGR_CATEGORY_LEVELS"),
 	value = "level"
 }, {
-	label = "其它",
+	label = _("PLUGIN_MGR_CATEGORY_OTHER"),
 	value = "other"
 }}
 
 local SORT_OPTIONS = {{
-	label = "最热门",
+	label = _("PLUGIN_MGR_SORT_TRENDING"),
 	value = "hot"
 }, {
-	label = "下载最多",
+	label = _("PLUGIN_MGR_SORT_MOST_DOWNLOADED"),
 	value = "downloads"
 }, {
-	label = "最新",
+	label = _("PLUGIN_MGR_SORT_NEWEST"),
 	value = "newest"
 }}
 
@@ -472,7 +472,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._plugin_rows = {}
 	self._progress_target = 0
 	self._progress_value = 0
-	self._status_text = "点击“刷新商店”加载插件列表"
+	self._status_text = _("PLUGIN_MGR_EMPTY_LOAD_HINT")
 	self._cancel_requested = false
 	self._request_id = 0
 	self._active_task = nil
@@ -551,15 +551,19 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self:add_child(self.back)
 
 	-- 面板标题
-	local header = GGPanelHeader:new("插件管理器", panel_w - 40)
+	local header = GGPanelHeader:new(_("PLUGIN_MGR_TITLE"), panel_w - 40)
 	header.pos = V.v(20, 14)
 	self.back:add_child(header)
 
 	-- 插件管理器总开关
-	local global_lbl = GGOptionsLabel:new(V.v(300, global_label_h))
-	global_lbl.text = "插件管理器总开关"
+	-- 宽度不能写死 300：中文「插件管理器总开关」约 270 单位，而英文
+	-- "Plugin Manager Master Switch" 在 h 字号（20*rs）下约 429 单位，会折成两行。
+	-- 这里给足宽度，并保留 fit_lines=1 作为其它语言（更长的译文）的兜底收缩。
+	local global_lbl = GGOptionsLabel:new(V.v(math.min(panel_w - 220, 560), global_label_h))
+	global_lbl.text = _("PLUGIN_MGR_MASTER_SWITCH")
 	global_lbl.text_align = "left"
 	global_lbl.vertical_align = "middle"
+	global_lbl:do_fit_lines(1)
 	global_lbl.pos = V.v(20, global_label_y)
 	self.back:add_child(global_lbl)
 
@@ -582,7 +586,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		return btn
 	end
 
-	self.mode_btn = header_btn("前往商店", header_group_x, header_top_y)
+	self.mode_btn = header_btn(_("PLUGIN_MGR_BTN_GO_TO_STORE"), header_group_x, header_top_y)
 	self.mode_btn.on_press = function()
 		self._category_panel.hidden = true
 		self._sort_panel.hidden = true
@@ -600,17 +604,17 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		end
 	end
 
-	self.sort_btn = header_btn("排序：最热", header_group_x + header_btn_w + header_btn_gap, header_top_y)
+	self.sort_btn = header_btn(string.format(_("PLUGIN_MGR_BTN_SORT_FMT"), _("PLUGIN_MGR_SORT_TRENDING_SHORT")), header_group_x + header_btn_w + header_btn_gap, header_top_y)
 	self.sort_btn.on_press = function()
 		self:_toggle_sort_panel()
 	end
 
-	self.category_btn = header_btn("分类：全部", header_group_x + (header_btn_w + header_btn_gap) * 2, header_top_y)
+	self.category_btn = header_btn(string.format(_("PLUGIN_MGR_BTN_CATEGORY_FMT"), _("PLUGIN_MGR_CATEGORY_ALL")), header_group_x + (header_btn_w + header_btn_gap) * 2, header_top_y)
 	self.category_btn.on_press = function()
 		self:_toggle_category_panel()
 	end
 
-	self.uninstalled_btn = header_btn("只看未安装", header_group_x + (header_btn_w + header_btn_gap) * 3, header_top_y)
+	self.uninstalled_btn = header_btn(_("PLUGIN_MGR_BTN_SHOW_UNINSTALLED"), header_group_x + (header_btn_w + header_btn_gap) * 3, header_top_y)
 	self.uninstalled_btn.on_press = function()
 		self._uninstalled_only = not self._uninstalled_only
 		self:_refresh_header_buttons()
@@ -674,34 +678,34 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		end
 	})
 
-	self.refresh_btn = header_btn("刷新商店", header_group_x, header_row2_y)
+	self.refresh_btn = header_btn(_("PLUGIN_MGR_BTN_REFRESH_STORE"), header_group_x, header_row2_y)
 	self.refresh_btn.on_press = function()
 		if self.mode == "store" then
 			self:_start_store_refresh()
 		elseif self.scope == "packs" then
 			-- 本地分组视图不需要联网：从磁盘重新加载（含外部手改/清理后的同步）
 			self:_reload_local_packs()
-			self:_set_status("已刷新本地分组列表", 0)
+			self:_set_status(_("PLUGIN_MGR_STATUS_LOCAL_GROUPS_REFRESHED"), 0)
 			self:_render_current_list()
 		else
-			self:_start_task("查询远端条目", function()
+			self:_start_task(_("PLUGIN_MGR_TASK_QUERY_REMOTE"), function()
 				return self:_fetch_remote_entries_for_local()
 			end)
 		end
 	end
 
-	self.new_group_btn = header_btn("新建分组", header_group_x + header_btn_w + header_btn_gap, header_row2_y)
+	self.new_group_btn = header_btn(_("PLUGIN_MGR_BTN_NEW_GROUP"), header_group_x + header_btn_w + header_btn_gap, header_row2_y)
 	self.new_group_btn.hidden = true
 	self.new_group_btn.on_press = function()
 		self:_open_group_editor(nil)
 	end
 
-	self.update_all_btn = header_btn("一键更新全部", header_group_x + header_btn_w + header_btn_gap, header_row2_y)
+	self.update_all_btn = header_btn(_("PLUGIN_MGR_BTN_UPDATE_ALL"), header_group_x + header_btn_w + header_btn_gap, header_row2_y)
 	self.update_all_btn.on_press = function()
 		self:_update_all_plugins()
 	end
 
-	self.my_plugins_btn = header_btn("我的插件", header_group_x + (header_btn_w + header_btn_gap) * 2, header_row2_y)
+	self.my_plugins_btn = header_btn(_("PLUGIN_MGR_BTN_MY_PLUGINS"), header_group_x + (header_btn_w + header_btn_gap) * 2, header_row2_y)
 	self.my_plugins_btn.on_press = function()
 		self._my_plugins_only = not self._my_plugins_only
 		if self.mode ~= "store" then
@@ -711,13 +715,13 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	end
 	self.my_plugins_btn.hidden = not self._developer_mode
 
-	self.dl_manager_btn = header_btn("下载管理", header_group_x + (header_btn_w + header_btn_gap) * 3, header_row2_y)
+	self.dl_manager_btn = header_btn(_("PLUGIN_MGR_BTN_DOWNLOAD_MANAGER"), header_group_x + (header_btn_w + header_btn_gap) * 3, header_row2_y)
 	self.dl_manager_btn.on_press = function()
 		self:_toggle_dl_view()
 	end
 
 	-- 作用域切换按钮（两种 mode 均显示；位于头部第 2 行左侧，不占用右侧按钮区）
-	self.scope_plugins_btn = header_btn("插件", 20, header_row2_y, scope_btn_w, header_btn_h)
+	self.scope_plugins_btn = header_btn(_("PLUGIN_MGR_SCOPE_PLUGINS"), 20, header_row2_y, scope_btn_w, header_btn_h)
 	self.scope_plugins_btn.on_press = function()
 		if self.scope == "plugins" then
 			return
@@ -729,7 +733,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 			self:_ensure_store_data_if_needed()
 		end
 	end
-	self.scope_packs_btn = header_btn("分组", 20 + scope_btn_w + scope_btn_gap, header_row2_y, scope_btn_w, header_btn_h)
+	self.scope_packs_btn = header_btn(_("PLUGIN_MGR_SCOPE_GROUPS"), 20 + scope_btn_w + scope_btn_gap, header_row2_y, scope_btn_w, header_btn_h)
 	self.scope_packs_btn.on_press = function()
 		if self.scope == "packs" then
 			return
@@ -753,7 +757,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	local pager_page_x = pager_next_x - pager_gap - pager_page_w
 	local pager_prev_x = pager_page_x - pager_gap - pager_btn_w
 
-	self.prev_page_btn = header_btn("上一页", pager_prev_x, pager_y, pager_btn_w, pager_btn_h)
+	self.prev_page_btn = header_btn(_("PLUGIN_MGR_BTN_PREV_PAGE"), pager_prev_x, pager_y, pager_btn_w, pager_btn_h)
 	self.prev_page_btn.on_press = function()
 		if self.mode ~= "store" then
 			return
@@ -783,7 +787,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		width = search_box_w,
 		height = search_h,
 		controller = self._controller,
-		placeholder = "搜索插件（支持中文）",
+		placeholder = _("PLUGIN_MGR_PLACEHOLDER_SEARCH"),
 		on_change = function(text)
 			self._search_query = text
 			-- 本地模式过滤无网络成本，输入即生效；商店模式等待回车提交
@@ -819,7 +823,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.page_lbl.pos = V.v(pager_page_x, pager_y)
 	self.back:add_child(self.page_lbl)
 
-	self.next_page_btn = header_btn("下一页", pager_next_x, pager_y, pager_btn_w, pager_btn_h)
+	self.next_page_btn = header_btn(_("PLUGIN_MGR_BTN_NEXT_PAGE"), pager_next_x, pager_y, pager_btn_w, pager_btn_h)
 	self.next_page_btn.on_press = function()
 		if self.mode ~= "store" then
 			return
@@ -856,7 +860,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.task_title_lbl.text_align = "left"
 	self.task_title_lbl.vertical_align = "middle"
 	self.task_title_lbl.colors.text = {244, 221, 165, 255}
-	self.task_title_lbl.text = "网络任务进行中"
+	self.task_title_lbl.text = _("PLUGIN_MGR_TASK_NETWORK_RUNNING")
 	self.task_title_lbl.pos = V.v(12, 10)
 	self.task_dialog:add_child(self.task_title_lbl)
 
@@ -894,11 +898,11 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	local task_btn_w = km.clamp(math.floor(110 * touch_scale + 0.5), 110, 150)
 	local task_btn_h = km.clamp(math.floor(28 * touch_scale + 0.5), 28, 34)
 	self._confirm_btn_h = task_btn_h
-	self.task_cancel_btn = PluginActionButton:new("断开请求", V.v(task_btn_w, task_btn_h))
+	self.task_cancel_btn = PluginActionButton:new(_("PLUGIN_MGR_BTN_ABORT_REQUEST"), V.v(task_btn_w, task_btn_h))
 	self.task_cancel_btn.pos = V.v(self.task_dialog.size.x - task_btn_w - 12, self.task_dialog.size.y - task_btn_h - 12)
 	self.task_cancel_btn.on_press = function()
 		self._cancel_requested = true
-		self:_set_status("已请求断连，正在停止当前网络操作…", nil)
+		self:_set_status(_("PLUGIN_MGR_STATUS_ABORT_REQUESTED"), nil)
 	end
 	self.task_dialog:add_child(self.task_cancel_btn)
 
@@ -906,14 +910,14 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._confirm_btn_gap = cover_btn_gap
 	local cover_btn_w = math.floor(task_btn_w * 0.8)
 	self._confirm_btn_w = cover_btn_w
-	self._cover_yes_btn = PluginActionButton:new("上传封面", V.v(cover_btn_w, task_btn_h))
+	self._cover_yes_btn = PluginActionButton:new(_("PLUGIN_MGR_BTN_UPLOAD_COVER"), V.v(cover_btn_w, task_btn_h))
 	self._cover_yes_btn.on_press = function()
 		S:queue("GUIButtonCommon")
 		local plugin_data = self._upload_pending_data
 		local has_cover = self._upload_pending_cover ~= nil
 		self:_reset_cover_prompt()
 		if plugin_data then
-			self:_start_task("上传插件", function()
+			self:_start_task(_("PLUGIN_MGR_TASK_UPLOAD_PLUGIN"), function()
 				return self:_upload_plugin(plugin_data, has_cover)
 			end)
 		end
@@ -921,13 +925,13 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._cover_yes_btn.hidden = true
 	self.task_dialog:add_child(self._cover_yes_btn)
 
-	self._cover_no_btn = PluginActionButton:new("跳过封面", V.v(cover_btn_w, task_btn_h))
+	self._cover_no_btn = PluginActionButton:new(_("PLUGIN_MGR_BTN_SKIP_COVER"), V.v(cover_btn_w, task_btn_h))
 	self._cover_no_btn.on_press = function()
 		S:queue("GUIButtonCommon")
 		local plugin_data = self._upload_pending_data
 		self:_reset_cover_prompt()
 		if plugin_data then
-			self:_start_task("上传插件", function()
+			self:_start_task(_("PLUGIN_MGR_TASK_UPLOAD_PLUGIN"), function()
 				return self:_upload_plugin(plugin_data, false)
 			end)
 		end
@@ -935,7 +939,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._cover_no_btn.hidden = true
 	self.task_dialog:add_child(self._cover_no_btn)
 
-	self._confirm_cancel_btn = PluginActionButton:new("取消", V.v(cover_btn_w, task_btn_h))
+	self._confirm_cancel_btn = PluginActionButton:new(_("Cancel"), V.v(cover_btn_w, task_btn_h))
 	self._confirm_cancel_btn.on_press = function()
 		S:queue("GUIButtonCommon")
 		self:_reset_cover_prompt()
@@ -951,7 +955,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._disabled_warning.text_align = "center"
 	self._disabled_warning.vertical_align = "middle"
 	self._disabled_warning.colors.text = {255, 180, 100, 255}
-	self._disabled_warning.text = "!插件管理器总开关已关闭，所有插件不会生效"
+	self._disabled_warning.text = _("PLUGIN_MGR_WARN_MASTER_SWITCH_OFF")
 	self._disabled_warning.pos = V.v(20, list_top_y - 32)
 	self._disabled_warning.hidden = true
 	self.back:add_child(self._disabled_warning)
@@ -968,7 +972,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 
 	-- 底部按钮（应用 / 浏览器商店 / 关闭）
 	local y_btn = footer_y
-	local save_btn = GGOptionsButton:new("应用")
+	local save_btn = GGOptionsButton:new(_("PLUGIN_MGR_BTN_APPLY"))
 	save_btn:set_anchor_to_center()
 	save_btn.pos = V.v(panel_w / 3, y_btn)
 	self.back:add_child(save_btn)
@@ -977,7 +981,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		self:apply()
 	end
 
-	local shop_btn = GGOptionsButton:new("浏览器商店")
+	local shop_btn = GGOptionsButton:new(_("PLUGIN_MGR_BTN_BROWSER_STORE"))
 	shop_btn:set_anchor_to_center()
 	shop_btn.pos = V.v(panel_w * 2 / 3, y_btn)
 	self.back:add_child(shop_btn)
@@ -997,7 +1001,9 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	end
 
 	-- 未保存修改确认对话框
-	self._confirm_dialog = KView:new(V.v(480, 180))
+	-- 宽度 480 是给中文量的（提示行「已卸载或更新正在运行的插件，退出必须重启游戏：」约 466 单位），
+	-- 英文同义句约 673 单位会折行，这里放宽到 620（与删除分组确认弹层一致）再配合 fit_lines 兜底。
+	self._confirm_dialog = KView:new(V.v(math.min(620, panel_w - 120), 180))
 	self._confirm_dialog.anchor = V.v(self._confirm_dialog.size.x / 2, self._confirm_dialog.size.y / 2)
 	self._confirm_dialog.pos = V.v(panel_w / 2, panel_h / 2)
 	self._confirm_dialog.colors.background = {30, 21, 9, 235}
@@ -1014,7 +1020,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	confirm_title.text_align = "left"
 	confirm_title.vertical_align = "middle"
 	confirm_title.colors.text = {244, 221, 165, 255}
-	confirm_title.text = "有未保存的修改"
+	confirm_title.text = _("PLUGIN_MGR_CONFIRM_UNSAVED_TITLE")
 	confirm_title.pos = V.v(12, 10)
 	self._confirm_dialog:add_child(confirm_title)
 
@@ -1024,7 +1030,10 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	confirm_hint.text_align = "left"
 	confirm_hint.vertical_align = "middle"
 	confirm_hint.colors.text = {223, 202, 152, 255}
-	confirm_hint.text = "插件管理器配置已修改，请选择操作："
+	confirm_hint.text = _("PLUGIN_MGR_CONFIRM_UNSAVED_HINT")
+	-- 提示文案会在 hide() 里按场景替换，长度随语言变化；fit_lines=1 保证任何译文都保持单行
+	-- （文本变化时 GGLabel:_fit_text 会按 _fitted_text 自动重新收缩字号）
+	confirm_hint.fit_lines = 1
 	confirm_hint.pos = V.v(12, 40)
 	self._confirm_dialog:add_child(confirm_hint)
 	self._confirm_hint = confirm_hint
@@ -1051,7 +1060,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	end
 
 	center_row({{
-		text = "应用",
+		text = _("PLUGIN_MGR_BTN_APPLY"),
 		y = row_y1,
 		action = function()
 			self._confirm_dialog.hidden = true
@@ -1059,7 +1068,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 			self:apply()
 		end
 	}, {
-		text = "直接退出",
+		text = _("PLUGIN_MGR_BTN_EXIT_DIRECTLY"),
 		y = row_y1,
 		action = function()
 			self._confirm_dialog.hidden = true
@@ -1078,7 +1087,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	}})
 
 	center_row({{
-		text = "取消",
+		text = _("Cancel"),
 		y = row_y2,
 		action = function()
 			self._confirm_dialog.hidden = true
@@ -1116,18 +1125,18 @@ function PluginManagerView:_stop_http_thread()
 end
 
 function PluginManagerView:_refresh_header_buttons()
-	self.mode_btn:set_text(self.mode == "local" and "前往商店" or "回到本地")
+	self.mode_btn:set_text(self.mode == "local" and _("PLUGIN_MGR_BTN_GO_TO_STORE") or _("PLUGIN_MGR_BTN_BACK_TO_LOCAL"))
 	-- 作用域按钮：本地模式下 packs 作用域是「分组」；商店模式下是「整合包」（整合包商店）
-	self.scope_packs_btn:set_text(self.mode == "local" and "分组" or "整合包")
+	self.scope_packs_btn:set_text(self.mode == "local" and _("PLUGIN_MGR_SCOPE_GROUPS") or _("PLUGIN_MGR_SCOPE_PACKS"))
 	self:_refresh_scope_buttons()
-	self.sort_btn:set_text("排序：" .. SORT_OPTIONS[self.sort_idx].label)
-	self.category_btn:set_text("分类：" .. CATEGORY_OPTIONS[self.category_idx].label)
+	self.sort_btn:set_text(string.format(_("PLUGIN_MGR_BTN_SORT_FMT"), SORT_OPTIONS[self.sort_idx].label))
+	self.category_btn:set_text(string.format(_("PLUGIN_MGR_BTN_CATEGORY_FMT"), CATEGORY_OPTIONS[self.category_idx].label))
 	if self._uninstalled_only then
-		self.uninstalled_btn:set_text("只看未安装")
+		self.uninstalled_btn:set_text(_("PLUGIN_MGR_BTN_SHOW_UNINSTALLED"))
 		self.uninstalled_btn.colors.background = {161, 122, 45, 245}
 		self.uninstalled_btn._label.colors.text = {255, 240, 190, 255}
 	else
-		self.uninstalled_btn:set_text("显示全部")
+		self.uninstalled_btn:set_text(_("PLUGIN_MGR_BTN_SHOW_ALL"))
 		self.uninstalled_btn:_refresh()
 	end
 	local in_store = self.mode == "store"
@@ -1137,7 +1146,7 @@ function PluginManagerView:_refresh_header_buttons()
 	-- 搜索框常驻：商店模式搜索远端，本地模式过滤本地
 	local task_running = self._active_task ~= nil
 	-- 本地分组视图的“刷新”只是重读磁盘（不联网）
-	self.refresh_btn:set_text(in_store and "刷新商店" or (in_packs and "刷新分组" or "查询远端"))
+	self.refresh_btn:set_text(in_store and _("PLUGIN_MGR_BTN_REFRESH_STORE") or (in_packs and _("PLUGIN_MGR_BTN_REFRESH_GROUPS") or _("PLUGIN_MGR_BTN_QUERY_REMOTE")))
 	-- 分类按钮常显：本地插件按分类过滤、商店（插件/整合包）按分类筛选、本地分组按分组 tag 筛选
 	self.category_btn.hidden = false
 	self.category_btn:set_enabled(true)
@@ -1150,11 +1159,11 @@ function PluginManagerView:_refresh_header_buttons()
 	if in_packs then
 		self.prev_page_btn:set_enabled(in_store and not task_running and self.pack_store_page > 1)
 		self.next_page_btn:set_enabled(in_store and not task_running and self.pack_store_page < self.pack_store_total_pages)
-		self.page_lbl.text = string.format("第%d/%d页", self.pack_store_page, self.pack_store_total_pages)
+		self.page_lbl.text = string.format(_("PLUGIN_MGR_PAGE_X_OF_Y"), self.pack_store_page, self.pack_store_total_pages)
 	else
 		self.prev_page_btn:set_enabled(in_store and not task_running and self.store_page > 1)
 		self.next_page_btn:set_enabled(in_store and not task_running and self.store_page < self.store_total_pages)
-		self.page_lbl.text = string.format("第%d/%d页", self.store_page, self.store_total_pages)
+		self.page_lbl.text = string.format(_("PLUGIN_MGR_PAGE_X_OF_Y"), self.store_page, self.store_total_pages)
 	end
 	self.task_cancel_btn:set_enabled(task_running)
 	-- 整合包作用域隐藏单插件类按钮：一键更新全部 / 我的插件；本地分组视图显示“新建分组”
@@ -1164,11 +1173,11 @@ function PluginManagerView:_refresh_header_buttons()
 	self.update_all_btn:set_enabled(not task_running)
 	if not self.my_plugins_btn.hidden then
 		if self._my_plugins_only then
-			self.my_plugins_btn:set_text("切换本地插件")
+			self.my_plugins_btn:set_text(_("PLUGIN_MGR_BTN_SWITCH_LOCAL_PLUGINS"))
 			self.my_plugins_btn.colors.background = {161, 122, 45, 245}
 			self.my_plugins_btn._label.colors.text = {255, 240, 190, 255}
 		else
-			self.my_plugins_btn:set_text("切换我的插件")
+			self.my_plugins_btn:set_text(_("PLUGIN_MGR_BTN_SWITCH_MY_PLUGINS"))
 			self.my_plugins_btn:_refresh()
 		end
 	end
@@ -1273,13 +1282,13 @@ function PluginManagerView:_select_store_base_url()
 		end
 	end
 	for i, site in ipairs(candidates) do
-		self:_set_status(string.format("正在选择插件商店地址（%d/%d）：%s", i, #candidates, site), 0)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_SELECTING_STORE_SITE"), i, #candidates, site), 0)
 		local test_url = site:gsub("/+$", "") .. "/plugins/list?page=1&page_size=1&sort=hot&category=all"
 		local resp, err = self:_request(test_url, {
 			method = "GET"
 		}, 10)
 		if err then
-			self:_set_status("地址不可用：" .. site .. "（" .. err .. "）", 0)
+			self:_set_status(string.format(_("PLUGIN_MGR_ERR_ADDRESS_UNAVAILABLE"), site, err), 0)
 		elseif tonumber(resp.code) == 200 then
 			self._selected_site = site
 			local params = main and main.params
@@ -1287,10 +1296,10 @@ function PluginManagerView:_select_store_base_url()
 				params.update_last_site = site
 				storage:save_settings(params)
 			end
-			self:_set_status("已选中插件商店地址：" .. site, 0)
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_STORE_SITE_SELECTED"), site), 0)
 			return site:gsub("/+$", "") .. "/plugins"
 		else
-			self:_set_status("地址不可用：" .. site .. "（HTTP " .. tostring(resp.code) .. "）", 0)
+			self:_set_status(string.format(_("PLUGIN_MGR_ERR_ADDRESS_UNAVAILABLE_HTTP"), site, tostring(resp.code)), 0)
 		end
 	end
 	return nil
@@ -1369,14 +1378,14 @@ function PluginManagerView:_get_store_page(base, sort_val, category_val, page, u
 		method = "GET"
 	}, 20)
 	if err then
-		return false, "拉取插件列表失败：" .. err, false
+		return false, string.format(_("PLUGIN_MGR_ERR_FETCH_PLUGIN_LIST"), err), false
 	end
 	if tonumber(resp.code) ~= 200 then
-		return false, "拉取插件列表失败：HTTP " .. tostring(resp.code), false
+		return false, string.format(_("PLUGIN_MGR_ERR_FETCH_PLUGIN_LIST_HTTP"), tostring(resp.code)), false
 	end
 	local ok, body = pcall(json.decode, resp.body)
 	if not ok or type(body) ~= "table" then
-		return false, "插件列表解析失败", false
+		return false, _("PLUGIN_MGR_ERR_PLUGIN_LIST_PARSE"), false
 	end
 
 	local parsed = self:_decode_store_page(body, page)
@@ -1402,12 +1411,12 @@ function PluginManagerView:_fetch_store_list()
 	self._cancel_requested = false
 	local base = self:_select_store_base_url()
 	if not base then
-		return false, "没有可用插件商店地址"
+		return false, _("PLUGIN_MGR_ERR_NO_STORE_SITE")
 	end
 	local sort_val = SORT_OPTIONS[self.sort_idx].value
 	local category_val = CATEGORY_OPTIONS[self.category_idx].value
 	local page = math.max(1, self.store_page)
-	self:_set_status(string.format("正在刷新插件商店（第 %d 页）…", page), 5)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_REFRESHING_STORE"), page), 5)
 	local ok, page_data_or_err = self:_get_store_page(base, sort_val, category_val, page, true)
 	if not ok then
 		return false, page_data_or_err
@@ -1420,7 +1429,7 @@ function PluginManagerView:_fetch_store_list()
 		self._remote_entry_cache[entry] = item
 	end
 	self.remote_by_entry = self._remote_entry_cache
-	self:_set_status(string.format("插件商店第 %d 页已刷新：%d 项", self.store_page, #self.store_items), 100)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_STORE_PAGE_REFRESHED"), self.store_page, #self.store_items), 100)
 	self:_render_current_list()
 	return true, nil
 end
@@ -1430,14 +1439,14 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 	if #self.local_plugins == 0 then
 		self.remote_by_entry = self._remote_entry_cache
 		self._remote_lookup_done = true
-		self:_set_status("本地没有已安装插件", 0)
+		self:_set_status(_("PLUGIN_MGR_STATUS_NO_LOCAL_PLUGINS"), 0)
 		self:_render_current_list()
 		return true, nil
 	end
 
 	local base = self:_select_store_base_url()
 	if not base then
-		return false, "没有可用插件商店地址"
+		return false, _("PLUGIN_MGR_ERR_NO_STORE_SITE")
 	end
 
 	-- 收集需要查询的 entry（去重），已命中缓存的直接计入
@@ -1458,7 +1467,7 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 	end
 	if total_targets == 0 then
 		self._remote_lookup_done = true
-		self:_set_status("本地插件缺少可匹配的 entry 字段", 0)
+		self:_set_status(_("PLUGIN_MGR_STATUS_LOCAL_PLUGIN_NO_ENTRY"), 0)
 		self:_render_current_list()
 		return true, nil
 	end
@@ -1481,7 +1490,7 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 		for j = i, batch_end do
 			batch[#batch + 1] = pending[j]
 		end
-		self:_set_status(string.format("正在批量查询远端条目…（%d/%d）", i, #pending), 5)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_BATCH_QUERYING"), i, #pending), 5)
 		local resp, err = self:_request(base .. "/entries", {
 			method = "POST",
 			headers = {
@@ -1492,14 +1501,14 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 			})
 		}, 30)
 		if err then
-			return false, "批量查询失败：" .. err
+			return false, string.format(_("PLUGIN_MGR_ERR_BATCH_QUERY"), err)
 		end
 		if tonumber(resp.code) ~= 200 then
-			return false, "批量查询失败：HTTP " .. tostring(resp.code)
+			return false, string.format(_("PLUGIN_MGR_ERR_BATCH_QUERY_HTTP"), tostring(resp.code))
 		end
 		local ok, body = pcall(json.decode, resp.body)
 		if not ok or type(body) ~= "table" or type(body.items) ~= "table" then
-			return false, "批量查询响应解析失败"
+			return false, _("PLUGIN_MGR_ERR_BATCH_QUERY_PARSE")
 		end
 		for _, item in ipairs(body.items) do
 			if item.entry and not self._remote_entry_cache[item.entry] then
@@ -1514,9 +1523,9 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 	self._remote_lookup_done = true
 	self:_render_current_list()
 	if found_count >= total_targets then
-		self:_set_status(string.format("远端条目查询完成：已匹配 %d/%d", found_count, total_targets), 100)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_REMOTE_QUERY_DONE"), found_count, total_targets), 100)
 	else
-		self:_set_status(string.format("远端条目查询完成：已匹配 %d/%d，仍有缺失", found_count, total_targets), 100)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_REMOTE_QUERY_DONE_MISSING"), found_count, total_targets), 100)
 	end
 	return true, nil
 end
@@ -1618,13 +1627,13 @@ end
 function PluginManagerView:_delete_local_plugin_by_name(plugin_name)
 	local plugin_data = self.local_by_name[plugin_name]
 	if not plugin_data then
-		return false, "本地插件不存在"
+		return false, _("PLUGIN_MGR_ERR_LOCAL_PLUGIN_MISSING")
 	end
 	-- 记忆删除：点「应用」时若插件仍在运行（文件已移除），无法安全热应用，直接重启
 	self._pending.deleted[plugin_name] = plugin_data
 	local ok = remove_dir_recursive(plugin_data.path)
 	if not ok then
-		return false, "删除失败：" .. plugin_data.path
+		return false, string.format(_("PLUGIN_MGR_ERR_DELETE_FAILED"), plugin_data.path)
 	end
 	-- 只从内存中移除该插件，保留其他插件尚未落盘的开关修改；
 	-- 不需要重新扫描磁盘导致未保存的开关状态被覆盖。
@@ -1642,11 +1651,11 @@ end
 function PluginManagerView:_download_zip(item, task)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
-		return nil, "无法选择插件商店地址"
+		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 	local filename = item.filename
 	if not filename or filename == "" then
-		return nil, "插件缺少下载文件名"
+		return nil, _("PLUGIN_MGR_ERR_PLUGIN_NO_FILENAME")
 	end
 	local url = base .. "/download/" .. url_encode(filename) .. "?platform=" .. get_platform()
 	local chunk_size = 1024 * 1024
@@ -1684,11 +1693,11 @@ function PluginManagerView:_download_zip(item, task)
 			return task and task.cancelled
 		end)
 		if err then
-			return nil, "下载失败：" .. err
+			return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_FAILED"), err)
 		end
 		local code = tonumber(resp.code)
 		if code ~= 206 and code ~= 200 then
-			return nil, "下载失败：HTTP " .. tostring(resp.code)
+			return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_FAILED_HTTP"), tostring(resp.code))
 		end
 
 		local headers = normalize_headers(resp.headers)
@@ -1718,18 +1727,18 @@ function PluginManagerView:_download_zip(item, task)
 		if speed_text ~= "" then
 			speed_text = "  " .. speed_text
 		end
-		self:_set_status(string.format("下载插件中：%s  %.1f%%%s", self._active_download_name, percent, speed_text), percent)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_DOWNLOADING_PROGRESS"), self._active_download_name, percent, speed_text), percent)
 
 		if code == 200 then
 			break
 		end
 		if #body == 0 then
-			return nil, "下载返回空数据"
+			return nil, _("PLUGIN_MGR_ERR_DOWNLOAD_EMPTY")
 		end
 	end
 
 	if total and downloaded ~= total then
-		return nil, "下载不完整"
+		return nil, _("PLUGIN_MGR_ERR_DOWNLOAD_INCOMPLETE")
 	end
 	return table.concat(chunks), nil
 end
@@ -1759,7 +1768,7 @@ function PluginManagerView:_collect_plugin_root_candidates(base_dir)
 end
 
 function PluginManagerView:_install_plugin(item, is_update, task)
-	self:_set_status((is_update and "正在更新插件：" or "正在安装插件：") .. (item.name or item.entry), 0)
+	self:_set_status(string.format(is_update and _("PLUGIN_MGR_STATUS_UPDATING_PLUGIN") or _("PLUGIN_MGR_STATUS_INSTALLING_PLUGIN"), item.name or item.entry), 0)
 	local zip_data, err = self:_download_zip(item, task)
 	if not zip_data then
 		return false, err
@@ -1775,7 +1784,7 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 	FS.createDirectory("tmp/plugin_store_stage")
 	FS.createDirectory(stage_root)
 
-	self:_set_status("正在解压插件：" .. (item.name or item.entry), 92)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_EXTRACTING_PLUGIN"), item.name or item.entry), 92)
 	if task then
 		task.progress = 92
 	end
@@ -1801,7 +1810,7 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 		selected_dir = stage_root .. "/" .. entry
 	end
 	if not selected_dir then
-		return false, "安装包结构无法识别（未找到有效插件目录）"
+		return false, _("PLUGIN_MGR_ERR_PACKAGE_STRUCTURE")
 	end
 
 	local target_name = (entry ~= "" and entry) or basename(selected_dir)
@@ -1826,7 +1835,7 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 		if FS.getInfo(local_cfg_path, "file") then
 			local local_cfg, read_err = plugin_paths.load_lua_table(local_cfg_path)
 			if not local_cfg then
-				return false, "更新前读取本地配置失败：" .. local_cfg_path .. " (" .. tostring(read_err) .. ")"
+				return false, string.format(_("PLUGIN_MGR_ERR_READ_LOCAL_CONFIG_BEFORE_UPDATE"), local_cfg_path, tostring(read_err))
 			end
 			preserved_local_config = local_cfg
 		end
@@ -1836,12 +1845,12 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 	if preserved_enabled ~= nil then
 		local installed_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
 		if not installed_cfg then
-			return false, "更新后读取配置失败：" .. target_dir .. "/config.lua"
+			return false, string.format(_("PLUGIN_MGR_ERR_READ_CONFIG_AFTER_UPDATE"), target_dir)
 		end
 		installed_cfg.enabled = preserved_enabled
 		local wok = storage:write_lua(target_dir .. "/config.lua", installed_cfg)
 		if not wok then
-			return false, "更新后写入配置失败：" .. target_dir .. "/config.lua"
+			return false, string.format(_("PLUGIN_MGR_ERR_WRITE_CONFIG_AFTER_UPDATE"), target_dir)
 		end
 	end
 	if preserved_local_config then
@@ -1849,13 +1858,13 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 		if FS.getInfo(installed_local_cfg_path, "file") then
 			local remote_local_cfg, read_err = plugin_paths.load_lua_table(installed_local_cfg_path)
 			if not remote_local_cfg then
-				return false, "更新后读取远端本地配置失败：" .. installed_local_cfg_path .. " (" .. tostring(read_err) .. ")"
+				return false, string.format(_("PLUGIN_MGR_ERR_READ_REMOTE_LOCAL_CONFIG"), installed_local_cfg_path, tostring(read_err))
 			end
 			preserved_local_config = merge_plugin_config_with_defaults(preserved_local_config, remote_local_cfg)
 		end
 		local wok = storage:write_lua(installed_local_cfg_path, preserved_local_config)
 		if not wok then
-			return false, "更新后写入本地配置失败：" .. installed_local_cfg_path
+			return false, string.format(_("PLUGIN_MGR_ERR_WRITE_LOCAL_CONFIG"), installed_local_cfg_path)
 		end
 	else
 		-- 本地不存在配置（或旧配置），为新版本配置记录默认配置数据
@@ -1869,7 +1878,7 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 		storage:write_lua(target_dir .. "/config.lua", new_cfg)
 	end
 
-	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry), target_name)
+	self:_refresh_local_view(string.format(is_update and _("PLUGIN_MGR_STATUS_PLUGIN_UPDATED") or _("PLUGIN_MGR_STATUS_PLUGIN_INSTALLED"), item.name or item.entry), target_name)
 	self._active_download_name = ""
 	if task then
 		task.progress = 100
@@ -1953,7 +1962,7 @@ end
 function PluginManagerView:_download_patch(entry, platform, version, changed, deleted)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
-		return nil, "无法选择插件商店地址"
+		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 	local resp, err = self:_request(base .. "/download_patch", {
 		method = "POST",
@@ -1969,10 +1978,10 @@ function PluginManagerView:_download_patch(entry, platform, version, changed, de
 		})
 	}, 60)
 	if err then
-		return nil, "增量更新请求失败：" .. err
+		return nil, string.format(_("PLUGIN_MGR_ERR_INCREMENTAL_REQUEST"), err)
 	end
 	if tonumber(resp.code) ~= 200 then
-		return nil, "增量更新请求失败：HTTP " .. tostring(resp.code)
+		return nil, string.format(_("PLUGIN_MGR_ERR_INCREMENTAL_REQUEST_HTTP"), tostring(resp.code))
 	end
 	return resp.body, nil
 end
@@ -1998,7 +2007,7 @@ function PluginManagerView:_install_or_update_item(item, task)
 			local changed = hash_resp.changed
 			local deleted = hash_resp.deleted
 			if #changed == 0 and #deleted == 0 then
-				self:_set_status("插件已是最新：" .. (item.name or item.entry), 100)
+				self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_UP_TO_DATE"), item.name or item.entry), 100)
 				return true, nil
 			end
 			local patch_data = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted)
@@ -2006,8 +2015,8 @@ function PluginManagerView:_install_or_update_item(item, task)
 				return false, "cancelled"
 			end
 			if patch_data then
-				local _, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_plugin)
-				self:_set_status("正在应用增量更新：" .. (item.name or item.entry), 90)
+				local _unused, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_plugin)
+				self:_set_status(string.format(_("PLUGIN_MGR_STATUS_APPLYING_DELTA"), item.name or item.entry), 90)
 				if task then
 					task.progress = 90
 				end
@@ -2030,7 +2039,7 @@ function PluginManagerView:_install_or_update_item(item, task)
 						installed_cfg.last_used_at = os.time()
 						storage:write_lua(target_dir .. "/config.lua", installed_cfg)
 					end
-					self:_refresh_local_view("插件增量更新完成：" .. (item.name or item.entry), local_plugin and local_plugin.name or entry)
+					self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPDATE_DONE"), item.name or item.entry), local_plugin and local_plugin.name or entry)
 					if task then
 						task.progress = 100
 					end
@@ -2073,12 +2082,12 @@ function PluginManagerView:_enqueue_download(item, is_update)
 	end
 	local entry = item.entry
 	if self._dl_running and self._dl_running.item.entry == entry then
-		self:_set_status("该插件正在下载中：" .. (item.name or entry), 0)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_DOWNLOADING"), item.name or entry), 0)
 		return nil
 	end
-	for _, t in ipairs(self._dl_queue) do
+	for _i, t in ipairs(self._dl_queue) do
 		if t.item.entry == entry and (t.state == "queued" or t.state == "running") then
-			self:_set_status("该插件已在下载队列中：" .. (item.name or entry), 0)
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_IN_DL_QUEUE"), item.name or entry), 0)
 			return nil
 		end
 	end
@@ -2095,7 +2104,7 @@ function PluginManagerView:_enqueue_download(item, is_update)
 		coro = nil
 	}
 	table.insert(self._dl_queue, task)
-	self:_set_status(string.format("已加入下载队列：%s（队列共 %d 项）", item.name or entry, #self._dl_queue), 0)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_ADDED_TO_DL_QUEUE"), item.name or entry, #self._dl_queue), 0)
 	self:_refresh_header_buttons()
 	self:_render_current_list()
 	if self._dl_view_open then
@@ -2236,7 +2245,7 @@ end
 function PluginManagerView:_update_all_plugins()
 	self._cancel_requested = false
 	if #self.local_plugins == 0 then
-		self:_set_status("本地没有已安装插件", 0)
+		self:_set_status(_("PLUGIN_MGR_STATUS_NO_LOCAL_PLUGINS"), 0)
 		return true, nil
 	end
 	local need_remote_lookup = not next(self._remote_entry_cache)
@@ -2267,7 +2276,7 @@ function PluginManagerView:_update_all_plugins()
 		end
 	end
 	if #pending == 0 then
-		self:_set_status("没有可更新的插件", 0)
+		self:_set_status(_("PLUGIN_MGR_STATUS_NO_UPDATABLE_PLUGINS"), 0)
 		return true, nil
 	end
 	-- 全部加入下载队列（串行执行，不阻塞 UI）
@@ -2277,7 +2286,7 @@ function PluginManagerView:_update_all_plugins()
 			enqueued = enqueued + 1
 		end
 	end
-	self:_set_status(string.format("已加入更新队列，共 %d 个插件", enqueued), 0)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_ADDED_TO_UPDATE_QUEUE"), enqueued), 0)
 	return true, nil
 end
 
@@ -2287,7 +2296,7 @@ function PluginManagerView:_start_task(name, fn)
 	end
 	self._cancel_requested = false
 	self._task_result = nil
-	self:_set_status("正在处理：" .. name, 0)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PROCESSING"), name), 0)
 	self.task_dialog:order_to_front()
 	self.task_dialog.hidden = false
 	self._active_task = coroutine.create(function()
@@ -2308,7 +2317,7 @@ function PluginManagerView:_render_local_list()
 
 	local category_option = CATEGORY_OPTIONS[self.category_idx]
 
-	for _, plugin_data in ipairs(self.local_plugins) do
+	for _i, plugin_data in ipairs(self.local_plugins) do
 		local cfg = plugin_data.config
 		local plugin_category = cfg.category or "other"
 		-- 搜索过滤（本地即时）
@@ -2326,24 +2335,24 @@ function PluginManagerView:_render_local_list()
 			local status = ""
 
 			if remote and has_update(cfg.version, remote.version) then
-				status = string.format("可更新：v%s → v%s", utf8_util.sanitize(cfg.version), utf8_util.sanitize(remote.version))
+				status = string.format(_("PLUGIN_MGR_STATUS_UPDATE_AVAILABLE"), utf8_util.sanitize(cfg.version), utf8_util.sanitize(remote.version))
 			elseif remote then
-				status = "已是最新版本"
+				status = _("PLUGIN_MGR_STATUS_UP_TO_DATE")
 			else
-				status = self._remote_lookup_done and "未在商店中找到远端条目" or "未查询远端条目（点“查询远端”）"
+				status = self._remote_lookup_done and _("PLUGIN_MGR_STATUS_REMOTE_NOT_FOUND") or _("PLUGIN_MGR_STATUS_REMOTE_NOT_QUERIED")
 			end
 
 			local actions = {}
 			if self._developer_mode and cfg.by == self._developer_config.account then
 				actions[#actions + 1] = {
-					text = "上传",
+					text = _("PLUGIN_MGR_BTN_UPLOAD"),
 					on_press = function()
 						self:_handle_upload_plugin(plugin_data)
 					end
 				}
 			end
 			actions[#actions + 1] = {
-				text = "详情",
+				text = _("PLUGIN_MGR_BTN_DETAILS"),
 				on_press = function()
 					self:_show_local_plugin_detail(plugin_data)
 				end
@@ -2351,13 +2360,13 @@ function PluginManagerView:_render_local_list()
 			-- 作者自己的插件：本地视图同样禁止删除，防止误删
 			local is_own = self._developer_mode and cfg and cfg.by == self._developer_config.account
 			actions[#actions + 1] = {
-				text = is_own and "我的插件" or "删除",
+				text = is_own and _("PLUGIN_MGR_BTN_MY_PLUGINS") or _("PLUGIN_MGR_BTN_DELETE"),
 				enabled = not is_own,
 				on_press = function()
-					self:_start_task("删除插件", function()
+					self:_start_task(_("PLUGIN_MGR_TASK_DELETE_PLUGIN"), function()
 						local ok, err = self:_delete_local_plugin_by_name(plugin_data.name)
 						if ok then
-							self:_set_status("已删除插件：" .. plugin_data.name, 0)
+							self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_DELETED"), plugin_data.name), 0)
 							return true, nil
 						end
 						return false, err
@@ -2367,7 +2376,7 @@ function PluginManagerView:_render_local_list()
 			if remote and has_update(cfg.version, remote.version) then
 				local dl_task = self:_find_dl_task_by_entry(remote.entry)
 				actions[#actions + 1] = {
-					text = dl_task and "更新中" or "更新",
+					text = dl_task and _("PLUGIN_MGR_BTN_UPDATING") or _("UPDATE_POPUP"),
 					on_press = function()
 						self:_enqueue_download(remote, true)
 					end
@@ -2377,7 +2386,7 @@ function PluginManagerView:_render_local_list()
 			local row = PluginItemRow:new({
 				plugin_data = plugin_data,
 				title = cfg.name or plugin_data.name,
-				meta = string.format("%s v%s  作者: %s", plugin_data.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)) .. self:_group_tag_for(plugin_data.entry),
+				meta = string.format(_("PLUGIN_MGR_META_PLUGIN_AUTHOR"), plugin_data.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)) .. self:_group_tag_for(plugin_data.entry),
 				desc = cfg.desc or "",
 				status = status,
 				show_toggle = not global_disabled,
@@ -2416,7 +2425,7 @@ end
 function PluginManagerView:_render_store_list()
 	self.plugin_list:clear_rows()
 	local list_w = self.plugin_list.size.x - self.plugin_list.scroller_width - 2 * self.plugin_list.scroller_margin - 4
-	for _, item in ipairs(self.store_items) do
+	for _i, item in ipairs(self.store_items) do
 		local local_plugin = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
 		-- 只看未安装：本地再过滤一次（防本页请求后刚安装的条目残留）
 		if self._uninstalled_only and local_plugin then
@@ -2428,23 +2437,23 @@ function PluginManagerView:_render_store_list()
 		local status
 		if dl_task then
 			if dl_task.state == "running" or dl_task.state == "cancelling" then
-				status = "正在下载…"
+				status = _("PLUGIN_MGR_STATUS_DOWNLOADING_ELLIPSIS")
 			else
-				status = "已加入下载队列"
+				status = _("PLUGIN_MGR_STATUS_ADDED_TO_DL_QUEUE_SHORT")
 			end
 		elseif installed then
 			if needs_update then
-				status = string.format("已安装：v%s（可更新到 v%s）", utf8_util.sanitize(local_plugin.config.version), utf8_util.sanitize(item.version))
+				status = string.format(_("PLUGIN_MGR_STATUS_INSTALLED_UPDATE_AVAILABLE"), utf8_util.sanitize(local_plugin.config.version), utf8_util.sanitize(item.version))
 			else
-				status = "已安装且最新"
+				status = _("PLUGIN_MGR_STATUS_INSTALLED_LATEST")
 			end
 		else
-			status = "未安装"
+			status = _("PLUGIN_MGR_STATUS_NOT_INSTALLED")
 		end
 
 		local actions = {}
 		actions[#actions + 1] = {
-			text = "详情",
+			text = _("PLUGIN_MGR_BTN_DETAILS"),
 			on_press = function()
 				self:_show_store_plugin_detail(item)
 			end
@@ -2452,14 +2461,14 @@ function PluginManagerView:_render_store_list()
 		if dl_task then
 			-- 已在下载队列：按钮改为排队提示（点击不再重复入队，_enqueue_download 会提示）
 			actions[#actions + 1] = {
-				text = dl_task.state == "running" and "下载中" or "排队中",
+				text = dl_task.state == "running" and _("PLUGIN_MGR_STATUS_DOWNLOADING") or _("PLUGIN_MGR_STATUS_QUEUED"),
 				on_press = function()
 					self:_enqueue_download(item, installed and needs_update)
 				end
 			}
 		else
 			actions[#actions + 1] = {
-				text = installed and (needs_update and "更新" or "重装") or "安装",
+				text = installed and (needs_update and _("UPDATE_POPUP") or _("PLUGIN_MGR_BTN_REINSTALL")) or _("PLUGIN_MGR_BTN_INSTALL"),
 				on_press = function()
 					self:_enqueue_download(item, installed and needs_update)
 				end
@@ -2469,13 +2478,13 @@ function PluginManagerView:_render_store_list()
 			-- 作者自己的插件：商店视图中禁用删除按钮，防止误删本地插件
 			local is_own = self._developer_mode and local_plugin.config and local_plugin.config.by == self._developer_config.account
 			actions[#actions + 1] = {
-				text = is_own and "我的插件" or "删除",
+				text = is_own and _("PLUGIN_MGR_BTN_MY_PLUGINS") or _("PLUGIN_MGR_BTN_DELETE"),
 				enabled = not is_own,
 				on_press = function()
-					self:_start_task("删除插件", function()
+					self:_start_task(_("PLUGIN_MGR_TASK_DELETE_PLUGIN"), function()
 						local ok, err = self:_delete_local_plugin_by_name(local_plugin.name)
 						if ok then
-							self:_set_status("已删除插件：" .. local_plugin.name, 0)
+							self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_DELETED"), local_plugin.name), 0)
 							return true, nil
 						end
 						return false, err
@@ -2486,7 +2495,7 @@ function PluginManagerView:_render_store_list()
 
 		local row = PluginItemRow:new({
 			title = item.name or item.entry,
-			meta = string.format("v%s  下载:%s  作者:%s", utf8_util.sanitize(item.version), utf8_util.sanitize(item.downloads), utf8_util.sanitize(item.by)),
+			meta = string.format(_("PLUGIN_MGR_META_STORE_ITEM"), utf8_util.sanitize(item.version), utf8_util.sanitize(item.downloads), utf8_util.sanitize(item.by)),
 			desc = item.desc or "",
 			status = status,
 			show_toggle = false,
@@ -2568,7 +2577,7 @@ function PluginManagerView:show()
 	self.task_dialog.hidden = true
 	self._category_panel.hidden = true
 	self._sort_panel.hidden = true
-	self:_set_status("前往插件商店后会自动拉取第一页", 0)
+	self:_set_status(_("PLUGIN_MGR_STATUS_AUTO_FETCH_FIRST_PAGE"), 0)
 	self:_sanitize_view_texts(self.back)
 	PluginManagerView.super.show(self)
 end
@@ -2578,9 +2587,9 @@ function PluginManagerView:hide()
 		-- 卸载/更新正在运行的插件时，退出必须重启，提示文案说明原因
 		if self._confirm_hint then
 			if self:_needs_restart() then
-				self._confirm_hint.text = "已卸载或更新正在运行的插件，退出必须重启游戏："
+				self._confirm_hint.text = _("PLUGIN_MGR_CONFIRM_RESTART_HINT")
 			else
-				self._confirm_hint.text = "插件管理器配置已修改，请选择操作："
+				self._confirm_hint.text = _("PLUGIN_MGR_CONFIRM_UNSAVED_HINT")
 			end
 		end
 		self._confirm_dialog.hidden = false
@@ -2621,7 +2630,7 @@ function PluginManagerView:update(dt)
 		self._active_task = nil
 		self._pack_op_entry = nil
 		self.task_dialog.hidden = true
-		self:_set_status("操作失败：" .. tostring(result), 0)
+		self:_set_status(string.format(_("PLUGIN_MGR_ERR_OPERATION_FAILED"), tostring(result)), 0)
 		log.error("plugin manager task failed: %s", tostring(result))
 		self:_render_current_list()
 		self:_refresh_header_buttons()
@@ -2634,10 +2643,10 @@ function PluginManagerView:update(dt)
 		self._task_result = result
 		if result and result.ok then
 			if self._cancel_requested then
-				self:_set_status("操作已断开", 0)
+				self:_set_status(_("PLUGIN_MGR_STATUS_OPERATION_ABORTED"), 0)
 			end
 		else
-			self:_set_status("操作失败：" .. tostring(result and result.err or "unknown"), 0)
+			self:_set_status(string.format(_("PLUGIN_MGR_ERR_OPERATION_FAILED"), tostring(result and result.err or "unknown")), 0)
 		end
 		self._cancel_requested = false
 		-- 任务终态：重绘列表，恢复任务期间被禁用的行内动作按钮
@@ -2653,14 +2662,14 @@ function PluginManagerView:_reset_cover_prompt()
 	self._cover_no_btn.hidden = true
 	self._confirm_cancel_btn.hidden = true
 	self.task_cancel_btn.hidden = false
-	self._cover_yes_btn:set_text("上传封面")
+	self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_UPLOAD_COVER"))
 end
 
 function PluginManagerView:_show_local_plugin_detail(plugin_data)
 	-- 读取本地 README.md
 	local readme_path = plugin_data.path .. "/README.md"
 	local content = nil
-	local fallback = plugin_data.config.desc or "暂无说明文档"
+	local fallback = plugin_data.config.desc or _("PLUGIN_MGR_NO_DESCRIPTION")
 	if FS.getInfo(readme_path, "file") then
 		content = FS.read(readme_path) or nil
 	end
@@ -2675,28 +2684,28 @@ end
 
 function PluginManagerView:_show_store_plugin_detail(item)
 	-- 网络获取商店插件的 README
-	self:_start_task("获取插件详情", function()
+	self:_start_task(_("PLUGIN_MGR_TASK_FETCH_PLUGIN_DETAILS"), function()
 		local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 		if not base then
-			return false, "无法选择插件商店地址"
+			return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 		end
 		local entry = utf8_util.sanitize(item.entry or "")
 		if entry == "" then
-			return false, "插件缺少 entry 字段"
+			return false, _("PLUGIN_MGR_ERR_PLUGIN_NO_ENTRY")
 		end
 
 		local url = base .. "/" .. url_encode(entry) .. "/readme"
-		self:_set_status("正在获取插件详情：" .. (item.name or item.entry), 50)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_FETCHING_DETAILS"), item.name or item.entry), 50)
 		local resp, err = self:_request(url, {
 			method = "GET"
 		}, 20)
 		if err then
-			return false, "获取详情失败：" .. err
+			return false, string.format(_("PLUGIN_MGR_ERR_FETCH_DETAILS"), err)
 		end
 		if tonumber(resp.code) ~= 200 then
 			-- 可能没有 README，使用 item.desc 作为备选
-			self:_set_status("插件无 README 文档", 100)
-			local detail = markdown_view:new(self._sw, self._sh, item.name or item.entry, nil, item.desc or "暂无说明文档")
+			self:_set_status(_("PLUGIN_MGR_STATUS_NO_README"), 100)
+			local detail = markdown_view:new(self._sw, self._sh, item.name or item.entry, nil, item.desc or _("PLUGIN_MGR_NO_DESCRIPTION"))
 			self:add_child(detail)
 			detail:show()
 			return true, nil
@@ -2706,8 +2715,8 @@ function PluginManagerView:_show_store_plugin_detail(item)
 		if content == "" then
 			content = nil
 		end
-		self:_set_status("已获取详情", 100)
-		local detail = markdown_view:new(self._sw, self._sh, item.name or item.entry, content, item.desc or "暂无说明文档")
+		self:_set_status(_("PLUGIN_MGR_STATUS_DETAILS_FETCHED"), 100)
+		local detail = markdown_view:new(self._sw, self._sh, item.name or item.entry, content, item.desc or _("PLUGIN_MGR_NO_DESCRIPTION"))
 		self:add_child(detail)
 		detail:show()
 		return true, nil
@@ -2733,15 +2742,15 @@ function PluginManagerView:_handle_upload_plugin(plugin_data)
 	self.progress_fill.size = V.v(0, self.progress_fill.size.y)
 
 	if cover_name then
-		self.task_title_lbl.text = "上传插件"
-		self.task_status_lbl.text = "检测到封面文件 " .. cover_name .. "，是否上传？"
-		self._cover_yes_btn:set_text("上传封面")
+		self.task_title_lbl.text = _("PLUGIN_MGR_TASK_UPLOAD_PLUGIN")
+		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_COVER_FOUND"), cover_name)
+		self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_UPLOAD_COVER"))
 		self._cover_yes_btn.hidden = false
 		self._cover_no_btn.hidden = false
 	else
-		self.task_title_lbl.text = "上传插件"
-		self.task_status_lbl.text = "确认上传 " .. (plugin_data.config.name or plugin_data.name) .. " 到商店？"
-		self._cover_yes_btn:set_text("确认上传")
+		self.task_title_lbl.text = _("PLUGIN_MGR_TASK_UPLOAD_PLUGIN")
+		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_UPLOAD_PLUGIN"), plugin_data.config.name or plugin_data.name)
+		self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_CONFIRM_UPLOAD"))
 		self._cover_yes_btn.hidden = false
 		self._cover_no_btn.hidden = true
 	end
@@ -2767,10 +2776,10 @@ end
 function PluginManagerView:_developer_login()
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
-		return false, "无法选择插件商店地址"
+		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 
-	self:_set_status("正在登录开发者账户…", 5)
+	self:_set_status(_("PLUGIN_MGR_STATUS_LOGGING_IN"), 5)
 	local resp, err = self:_request(base .. "/login", {
 		method = "POST",
 		headers = {
@@ -2783,15 +2792,15 @@ function PluginManagerView:_developer_login()
 	}, 15)
 
 	if err then
-		return false, "登录失败：" .. err
+		return false, string.format(_("PLUGIN_MGR_ERR_LOGIN"), err)
 	end
 	if tonumber(resp.code) ~= 200 then
-		return false, "登录失败：HTTP " .. tostring(resp.code) .. " " .. tostring(resp.body)
+		return false, string.format(_("PLUGIN_MGR_ERR_LOGIN_HTTP"), tostring(resp.code), tostring(resp.body))
 	end
 
 	local ok, body = pcall(json.decode, resp.body)
 	if not ok or not body.token then
-		return false, "登录响应解析失败"
+		return false, _("PLUGIN_MGR_ERR_LOGIN_PARSE")
 	end
 
 	self._developer_token = body.token
@@ -2859,7 +2868,7 @@ end
 function PluginManagerView:_hash_check(entry, version, hashes, platform, mode)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
-		return false, "无法选择插件商店地址"
+		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 	local body_data = {
 		entry = entry,
@@ -2879,14 +2888,14 @@ function PluginManagerView:_hash_check(entry, version, hashes, platform, mode)
 		data = json.encode(body_data)
 	}, 30)
 	if err then
-		return false, "哈希比对失败：" .. err
+		return false, string.format(_("PLUGIN_MGR_ERR_HASH_COMPARE"), err)
 	end
 	if tonumber(resp.code) ~= 200 then
 		return false, nil
 	end
 	local ok, body = pcall(json.decode, resp.body)
 	if not ok or type(body) ~= "table" then
-		return false, "哈希比对响应解析失败"
+		return false, _("PLUGIN_MGR_ERR_HASH_COMPARE_PARSE")
 	end
 	return true, body
 end
@@ -2924,15 +2933,15 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 	local patch_data = zip.create_from_dir(tmp, {})
 	remove_dir_recursive("tmp/plugin_patch")
 	if not patch_data then
-		return false, "打包增量失败"
+		return false, _("PLUGIN_MGR_ERR_PACK_DELTA")
 	end
 
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
-		return false, "无法选择插件商店地址"
+		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 
-	self:_set_status("正在增量上传插件：" .. entry, 40)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA"), entry), 40)
 	local resp, err = self:_request(base .. "/upload", {
 		method = "POST",
 		headers = {
@@ -2946,10 +2955,10 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 	}, 120)
 
 	if err then
-		return false, "增量上传失败：" .. err
+		return false, string.format(_("PLUGIN_MGR_ERR_DELTA_UPLOAD"), err)
 	end
 	if tonumber(resp.code) ~= 200 then
-		return false, "增量上传失败：HTTP " .. tostring(resp.code) .. " " .. tostring(resp.body)
+		return false, string.format(_("PLUGIN_MGR_ERR_DELTA_UPLOAD_HTTP"), tostring(resp.code), tostring(resp.body))
 	end
 
 	return true, nil
@@ -2980,10 +2989,10 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	end
 
 	-- 计算本地文件哈希
-	self:_set_status("正在计算文件哈希：" .. entry, 5)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPUTING_HASH"), entry), 5)
 	local dir_info = self:_compute_dir_hashes(plugin_data.path)
 	if dir_info.total_bytes == 0 then
-		return false, "插件目录为空"
+		return false, _("PLUGIN_MGR_ERR_PLUGIN_DIR_EMPTY")
 	end
 
 	-- 与服务端比对哈希，决定全量还是增量
@@ -2999,8 +3008,8 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		use_full = changed_bytes > dir_info.total_bytes * 0.6
 
 		if #changed == 0 and #deleted == 0 then
-			print("插件无变更，无需上传！")
-			self:_refresh_local_view("插件无变更，无需上传：" .. entry, plugin_data.name)
+			print(_("PLUGIN_MGR_LOG_NO_CHANGES"))
+			self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_NO_CHANGES"), entry), plugin_data.name)
 			return true, nil
 		end
 		if not use_full and #changed > 0 then
@@ -3009,33 +3018,33 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 				if cover_data and cover_ext then
 					self:_upload_cover(entry, cover_data, cover_ext)
 				end
-				self:_refresh_local_view("增量上传成功：" .. entry, plugin_data.name)
+				self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPLOAD_SUCCESS"), entry), plugin_data.name)
 				return true, nil
 			end
-			log.error("[plugin_manager] 补丁上传失败，回退到全量上传：%s", tostring(err_patch))
+			log.error(_("PLUGIN_MGR_LOG_DELTA_UPLOAD_FAILED"), tostring(err_patch))
 			use_full = true
 		end
 	end
 	if not hash_ok then
-		log.error("[plugin_manager] 哈希检查失败，回退到全量上传：%s", tostring(hash_resp))
+		log.error(_("PLUGIN_MGR_LOG_HASH_CHECK_FAILED"), tostring(hash_resp))
 	end
 
 	-- 全量上传（增量不可用或变更量过大时回落）
-	self:_set_status("正在压缩插件：" .. entry, 20)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPRESSING"), entry), 20)
 	local zip_data = zip.create_from_dir(plugin_data.path, {
 		exclude = {"^cover%..+$"},
 		skip_dirs = {".git", ".backup", ".tmp"}
 	})
 	if not zip_data then
-		return false, "打包插件失败：目录为空"
+		return false, _("PLUGIN_MGR_ERR_PACK_EMPTY_DIR")
 	end
 
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
-		return false, "无法选择插件商店地址"
+		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 
-	self:_set_status("正在上传插件：" .. entry, 40)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN"), entry), 40)
 	local resp, err = self:_request(base .. "/upload", {
 		method = "POST",
 		headers = {
@@ -3046,28 +3055,28 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	}, 60)
 
 	if err then
-		return false, "上传失败：" .. err
+		return false, string.format(_("PLUGIN_MGR_ERR_UPLOAD"), err)
 	end
 	if tonumber(resp.code) ~= 200 then
-		return false, "上传失败：HTTP " .. tostring(resp.code) .. " " .. tostring(resp.body)
+		return false, string.format(_("PLUGIN_MGR_ERR_UPLOAD_HTTP"), tostring(resp.code), tostring(resp.body))
 	end
 
 	local ok, body = pcall(json.decode, resp.body)
 	if not ok or not body.entry then
-		return false, "上传响应解析失败"
+		return false, _("PLUGIN_MGR_ERR_UPLOAD_PARSE")
 	end
 
-	self:_set_status("已上传插件，正在处理…", 80)
+	self:_set_status(_("PLUGIN_MGR_STATUS_PLUGIN_UPLOADED"), 80)
 	if cover_data and cover_ext then
 		self:_upload_cover(entry, cover_data, cover_ext)
 	end
 
-	self:_refresh_local_view("上传成功：" .. entry, plugin_data.name)
+	self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_UPLOAD_SUCCESS"), entry), plugin_data.name)
 	return true, nil
 end
 
 function PluginManagerView:_upload_cover(entry, cover_data, cover_ext)
-	self:_set_status("正在上传封面…", 90)
+	self:_set_status(_("PLUGIN_MGR_STATUS_UPLOADING_COVER"), 90)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return
@@ -3094,9 +3103,9 @@ function PluginManagerView:_upload_cover(entry, cover_data, cover_ext)
 	}, 30)
 
 	if err then
-		self:_refresh_local_view("插件上传成功，但封面上传失败：" .. err, entry)
+		self:_refresh_local_view(string.format(_("PLUGIN_MGR_ERR_COVER_UPLOAD"), err), entry)
 	elseif tonumber(resp.code) ~= 200 then
-		self:_refresh_local_view("插件上传成功，但封面上传失败：HTTP " .. tostring(resp.code), entry)
+		self:_refresh_local_view(string.format(_("PLUGIN_MGR_ERR_COVER_UPLOAD_HTTP"), tostring(resp.code)), entry)
 	end
 end
 
@@ -3296,11 +3305,11 @@ function PluginManagerView:apply()
 		self.on_applied()
 	end
 	if ok then
-		self:_set_status("已热应用插件修改，无需重启", 0)
+		self:_set_status(_("PLUGIN_MGR_STATUS_HOT_APPLIED"), 0)
 		-- 应用成功自动关闭管理器
 		self._pending_close = true
 	else
-		self:_set_status("热应用部分失败：" .. table.concat(errors, "；"), 0)
+		self:_set_status(string.format(_("PLUGIN_MGR_ERR_HOT_APPLY_PARTIAL"), table.concat(errors, _("PLUGIN_MGR_SEP_SEMICOLON"))), 0)
 	end
 end
 
@@ -3309,10 +3318,10 @@ function PluginManagerView:save()
 	base_cfg.enabled = self.global_toggle.value
 	local ok = storage:write_lua(plugin_paths.MAIN_CONFIG_PATH, base_cfg)
 	if not ok then
-		log.error("写入 %s 失败", plugin_paths.MAIN_CONFIG_PATH)
+		log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), plugin_paths.MAIN_CONFIG_PATH)
 	end
 
-	for _, plugin_data in ipairs(self.local_plugins) do
+	for _i, plugin_data in ipairs(self.local_plugins) do
 		local cfg = plugin_data.config or {}
 		local out = {}
 		for k, v in pairs(cfg) do
@@ -3324,7 +3333,7 @@ function PluginManagerView:save()
 		end
 		local wok = storage:write_lua(plugin_data.config_path, out)
 		if not wok then
-			log.error("写入 %s 失败", plugin_data.config_path)
+			log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), plugin_data.config_path)
 		end
 	end
 
@@ -3336,7 +3345,7 @@ function PluginManagerView:save()
 				local cfg_path = plugin_data.path .. "/" .. plugin_data.name .. "_config.lua"
 				local wok = storage:write_lua(cfg_path, info.config)
 				if not wok then
-					log.error("写入 %s 失败", cfg_path)
+					log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), cfg_path)
 				end
 			end
 		end
@@ -3353,12 +3362,12 @@ end
 -- ─────────────────────────────────────────────
 
 local DL_STATE_TEXT = {
-	queued = "排队中",
-	running = "下载中",
-	cancelling = "取消中",
-	done = "完成",
-	failed = "失败",
-	cancelled = "已取消"
+	queued = _("PLUGIN_MGR_STATUS_QUEUED"),
+	running = _("PLUGIN_MGR_STATUS_DOWNLOADING"),
+	cancelling = _("PLUGIN_MGR_STATUS_CANCELLING"),
+	done = _("Done"),
+	failed = _("PLUGIN_MGR_STATUS_FAILED"),
+	cancelled = _("PLUGIN_MGR_STATUS_CANCELLED")
 }
 
 function PluginManagerView:_build_dl_view()
@@ -3390,7 +3399,7 @@ function PluginManagerView:_build_dl_view()
 	title.text_align = "left"
 	title.vertical_align = "middle"
 	title.colors.text = {244, 221, 165, 255}
-	title.text = "下载任务管理"
+	title.text = _("PLUGIN_MGR_DL_MANAGER_TITLE")
 	title.pos = V.v(20, 12)
 	panel:add_child(title)
 
@@ -3400,7 +3409,7 @@ function PluginManagerView:_build_dl_view()
 	hint.text_align = "left"
 	hint.vertical_align = "middle"
 	hint.colors.text = {200, 185, 150, 255}
-	hint.text = "任务完成后点「清除记录」仅移除列表项，不会删除已安装的插件；卸载插件请在本地列表操作。"
+	hint.text = _("PLUGIN_MGR_DL_MANAGER_HINT")
 	hint.pos = V.v(20, 44)
 	panel:add_child(hint)
 
@@ -3452,14 +3461,14 @@ function PluginManagerView:_render_dl_task_view()
 		lbl.text_align = "center"
 		lbl.colors.text = {200, 185, 150, 255}
 		lbl.font_name = "body"
-		lbl.text = "暂无下载任务"
+		lbl.text = _("PLUGIN_MGR_DL_MANAGER_EMPTY")
 		self._dl_list:add_row(lbl)
 		return
 	end
 
 	local row_h = math.floor(66 * us + 0.5)
 	local row_gap = math.max(4, math.floor(8 * us + 0.5))
-	for _, task in ipairs(self._dl_queue) do
+	for _i, task in ipairs(self._dl_queue) do
 		local row = KView:new(V.v(list_w, row_h))
 		row.colors.background = {62, 48, 22, 220}
 		row.shape = {
@@ -3482,13 +3491,18 @@ function PluginManagerView:_render_dl_task_view()
 		if task.state == "running" and task.speed and task.speed > 0 then
 			state_text = state_text .. "  " .. format_speed(task.speed)
 		end
-		local state_lbl = GGLabel:new(V.v(math.floor(140 * us + 0.5), math.floor(22 * us + 0.5)))
+		-- 状态列：中文「下载中」+ 速度约 160 单位，英文 "Downloading  2.4 MB/s" 约 213 单位
+		-- （极端情况 "Downloading  1234.5 MB/s" 约 245 单位），原来写死 140 会折成两行压到下面的进度条上；
+		-- 这里放宽到 260，右边缘仍与列表保持 12 的边距，超出时再由 fit_lines 收缩兜底。
+		local state_lbl_w = math.floor(260 * us + 0.5)
+		local state_lbl = GGLabel:new(V.v(state_lbl_w, math.floor(22 * us + 0.5)))
 		state_lbl.font_size = 13 * rs
 		state_lbl.text_align = "right"
 		state_lbl.vertical_align = "middle"
+		state_lbl.fit_lines = 1
 		state_lbl.colors.text = {214, 193, 144, 255}
 		state_lbl.text = state_text
-		state_lbl.pos = V.v(list_w - math.floor(152 * us + 0.5), math.floor(6 * us + 0.5))
+		state_lbl.pos = V.v(list_w - state_lbl_w - math.floor(12 * us + 0.5), math.floor(6 * us + 0.5))
 		state_lbl.font_name = "body"
 		row:add_child(state_lbl)
 		task._state_lbl = state_lbl
@@ -3545,12 +3559,12 @@ function PluginManagerView:_render_dl_task_view()
 
 		local btn
 		if task.state == "queued" or task.state == "running" or task.state == "cancelling" then
-			btn = PluginActionButton:new("取消", V.v(math.floor(64 * us + 0.5), math.floor(28 * us + 0.5)))
+			btn = PluginActionButton:new(_("Cancel"), V.v(math.floor(64 * us + 0.5), math.floor(28 * us + 0.5)))
 			btn.on_press = function()
 				self:_cancel_dl_task(task)
 			end
 		else
-			btn = PluginActionButton:new("清除记录", V.v(math.floor(76 * us + 0.5), math.floor(28 * us + 0.5)))
+			btn = PluginActionButton:new(_("PLUGIN_MGR_BTN_CLEAR_RECORDS"), V.v(math.floor(76 * us + 0.5), math.floor(28 * us + 0.5)))
 			btn.on_press = function()
 				self:_remove_dl_task(task)
 			end
@@ -3666,9 +3680,9 @@ function PluginManagerView:_group_tag_for(entry)
 	end
 	table.sort(names)
 	if #names == 1 then
-		return " · 分组:" .. tostring(names[1])
+		return string.format(_("PLUGIN_MGR_GROUP_TAG"), tostring(names[1]))
 	end
-	return string.format(" · 分组:%s(+%d)", tostring(names[1]), #names - 1)
+	return string.format(_("PLUGIN_MGR_GROUP_TAG_MORE"), tostring(names[1]), #names - 1)
 end
 
 --- 插件是否属于「其它」分组（用于分组编辑器候选排他；editing_entry 为正在编辑的分组 entry，新建为 nil）
@@ -3692,13 +3706,13 @@ end
 --- 分组行状态栏文案（成员 enabled 聚合，纯展示）
 function PluginManagerView:_build_group_status(cfg, agg)
 	if #agg.missing_entries > 0 then
-		return "缺成员 " .. #agg.missing_entries
+		return string.format(_("PLUGIN_MGR_GROUP_MISSING_MEMBERS"), #agg.missing_entries)
 	elseif agg.state == "on" then
-		return "全部启用"
+		return _("PLUGIN_MGR_GROUP_ALL_ENABLED")
 	elseif agg.state == "off" then
-		return "已停用"
+		return _("PLUGIN_MGR_GROUP_DISABLED")
 	end
-	return string.format("部分启用 %d/%d", agg.on_count, agg.exist_count)
+	return string.format(_("PLUGIN_MGR_GROUP_PARTIAL"), agg.on_count, agg.exist_count)
 end
 
 function PluginManagerView:_render_local_groups_list()
@@ -3716,12 +3730,12 @@ function PluginManagerView:_render_local_groups_list()
 		lbl.font_size = 14 * rs
 		lbl.text_align = "center"
 		lbl.colors.text = {214, 193, 144, 255}
-		lbl.text = "暂无本地分组：点「新建分组」创建自己的插件组合"
+		lbl.text = _("PLUGIN_MGR_GROUP_LIST_EMPTY")
 		self.plugin_list:add_row(lbl)
 		return
 	end
 
-	for _, row in ipairs(self.local_packs) do
+	for _i, row in ipairs(self.local_packs) do
 		local cfg = row.cfg
 		if cfg then
 			local title = cfg.name or row.entry
@@ -3748,7 +3762,7 @@ function PluginManagerView:_render_local_groups_list()
 
 			local actions = {}
 			actions[#actions + 1] = {
-				text = "编辑",
+				text = _("PLUGIN_MGR_BTN_EDIT"),
 				enabled = idle,
 				on_press = function()
 					self:_open_group_editor(cfg)
@@ -3756,28 +3770,28 @@ function PluginManagerView:_render_local_groups_list()
 			}
 			-- 启用/停用整组始终都提供（成员为 0 时置灰）
 			actions[#actions + 1] = {
-				text = "启用整组",
+				text = _("PLUGIN_MGR_BTN_ENABLE_GROUP"),
 				enabled = idle and member_count > 0,
 				on_press = function()
 					self:_set_group_enabled(cfg, true)
 				end
 			}
 			actions[#actions + 1] = {
-				text = "停用整组",
+				text = _("PLUGIN_MGR_BTN_DISABLE_GROUP"),
 				enabled = idle and member_count > 0,
 				on_press = function()
 					self:_set_group_enabled(cfg, false)
 				end
 			}
 			actions[#actions + 1] = {
-				text = "删除分组",
+				text = _("PLUGIN_MGR_BTN_DELETE_GROUP"),
 				enabled = idle,
 				on_press = function()
 					self:_confirm_delete_group(row)
 				end
 			}
 
-			local meta = string.format("本地分组 · %d 个成员", member_count)
+			local meta = string.format(_("PLUGIN_MGR_GROUP_META_MEMBERS"), member_count)
 			if gcat ~= "other" then
 				local gtag_label = gcat
 				for _, co in ipairs(CATEGORY_OPTIONS) do
@@ -3791,7 +3805,7 @@ function PluginManagerView:_render_local_groups_list()
 			local pack_row = PluginItemRow:new({
 				title = title,
 				meta = meta,
-				desc = (cfg.desc and cfg.desc ~= "") and cfg.desc or "暂无简介",
+				desc = (cfg.desc and cfg.desc ~= "") and cfg.desc or _("PLUGIN_MGR_NO_SUMMARY"),
 				status = status,
 				show_toggle = false,
 				accent_state = agg.state,
@@ -3812,17 +3826,17 @@ function PluginManagerView:_render_local_groups_list()
 				goto continue
 			end
 			local pack_row = PluginItemRow:new({
-				title = tostring(row.entry) .. "（分组文件损坏）",
+				title = string.format(_("PLUGIN_MGR_GROUP_TITLE_CORRUPT"), tostring(row.entry)),
 				meta = "packs/" .. tostring(row.entry) .. "/pack.lua",
-				desc = "该分组文件无法解析。分组本身不影响任何插件，可删除该分组清理损坏文件。",
-				status = "文件损坏",
+				desc = _("PLUGIN_MGR_GROUP_CORRUPT_DESC"),
+				status = _("PLUGIN_MGR_GROUP_STATUS_CORRUPT"),
 				show_toggle = false,
 				action_button_size = self._pack_action_button_size,
 				status_width = self._pack_row_status_width,
 				right_pad = self._row_right_pad,
 				action_bottom_margin = self._row_action_bottom_margin,
 				actions = global_disabled and {} or {{
-					text = "删除分组",
+					text = _("PLUGIN_MGR_BTN_DELETE_GROUP"),
 					enabled = idle,
 					on_press = function()
 						self:_confirm_delete_group(row)
@@ -3867,7 +3881,7 @@ end
 
 --- 按当前作用域启动商店列表刷新任务（插件商店 / 整合包商店）
 function PluginManagerView:_start_store_refresh()
-	local label = self.scope == "packs" and "刷新整合包列表" or "刷新商店列表"
+	local label = self.scope == "packs" and _("PLUGIN_MGR_TASK_REFRESH_PACK_LIST") or _("PLUGIN_MGR_TASK_REFRESH_STORE_LIST")
 	self:_start_task(label, function()
 		if self.scope == "packs" then
 			return self:_fetch_pack_store_list()
@@ -3890,13 +3904,13 @@ function PluginManagerView:_select_packs_base_url()
 		end
 	end
 	for i, site in ipairs(candidates) do
-		self:_set_status(string.format("正在选择整合包商店地址（%d/%d）：%s", i, #candidates, site), 0)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_SELECTING_PACK_SITE"), i, #candidates, site), 0)
 		local test_url = site:gsub("/+$", "") .. "/packs/list?page=1&page_size=1&limit=1&sort=hot"
 		local resp, err = self:_request(test_url, {
 			method = "GET"
 		}, 10)
 		if err then
-			self:_set_status("地址不可用：" .. site .. "（" .. err .. "）", 0)
+			self:_set_status(string.format(_("PLUGIN_MGR_ERR_ADDRESS_UNAVAILABLE"), site, err), 0)
 		elseif tonumber(resp.code) == 200 then
 			self._selected_site = site
 			local params = main and main.params
@@ -3904,10 +3918,10 @@ function PluginManagerView:_select_packs_base_url()
 				params.update_last_site = site
 				storage:save_settings(params)
 			end
-			self:_set_status("已选中整合包商店地址：" .. site, 0)
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PACK_SITE_SELECTED"), site), 0)
 			return site:gsub("/+$", "") .. "/packs"
 		else
-			self:_set_status("地址不可用：" .. site .. "（HTTP " .. tostring(resp.code) .. "）", 0)
+			self:_set_status(string.format(_("PLUGIN_MGR_ERR_ADDRESS_UNAVAILABLE_HTTP"), site, tostring(resp.code)), 0)
 		end
 	end
 	return nil
@@ -3930,14 +3944,14 @@ function PluginManagerView:_get_pack_store_page(base, sort_val, page, use_cache)
 		method = "GET"
 	}, 20)
 	if err then
-		return false, "拉取整合包列表失败：" .. err, false
+		return false, string.format(_("PLUGIN_MGR_ERR_FETCH_PACK_LIST"), err), false
 	end
 	if tonumber(resp.code) ~= 200 then
-		return false, "拉取整合包列表失败：HTTP " .. tostring(resp.code), false
+		return false, string.format(_("PLUGIN_MGR_ERR_FETCH_PACK_LIST_HTTP"), tostring(resp.code)), false
 	end
 	local ok, body = pcall(json.decode, resp.body)
 	if not ok or type(body) ~= "table" then
-		return false, "整合包列表解析失败", false
+		return false, _("PLUGIN_MGR_ERR_PACK_LIST_PARSE"), false
 	end
 	local parsed = self:_decode_store_page(body, page)
 	self._pack_store_page_cache[key] = parsed
@@ -3949,11 +3963,11 @@ function PluginManagerView:_fetch_pack_store_list()
 	self._cancel_requested = false
 	local base = self:_select_packs_base_url()
 	if not base then
-		return false, "没有可用整合包商店地址"
+		return false, _("PLUGIN_MGR_ERR_NO_PACK_STORE_SITE")
 	end
 	local sort_val = SORT_OPTIONS[self.sort_idx].value
 	local page = math.max(1, self.pack_store_page)
-	self:_set_status(string.format("正在刷新整合包商店（第 %d 页）…", page), 5)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_REFRESHING_PACK_STORE"), page), 5)
 	local ok, page_data_or_err = self:_get_pack_store_page(base, sort_val, page, true)
 	if not ok then
 		return false, page_data_or_err
@@ -3962,7 +3976,7 @@ function PluginManagerView:_fetch_pack_store_list()
 	self.pack_store_page = page_data.page
 	self.pack_store_total_pages = page_data.total_pages
 	self.pack_store_items = page_data.items
-	self:_set_status(string.format("整合包商店第 %d 页已刷新：%d 项", self.pack_store_page, #self.pack_store_items), 100)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PACK_STORE_PAGE_REFRESHED"), self.pack_store_page, #self.pack_store_items), 100)
 	self:_render_current_list()
 	return true, nil
 end
@@ -3979,26 +3993,26 @@ function PluginManagerView:_render_store_packs_list()
 		lbl.font_size = 14 * rs
 		lbl.text_align = "center"
 		lbl.colors.text = {214, 193, 144, 255}
-		lbl.text = "暂无整合包条目：点“刷新商店”加载"
+		lbl.text = _("PLUGIN_MGR_PACK_LIST_EMPTY")
 		self.plugin_list:add_row(lbl)
 		return
 	end
 
-	for _, item in ipairs(self.pack_store_items) do
+	for _i, item in ipairs(self.pack_store_items) do
 		-- v3：商店整合包不落本地记录，行状态只表达“同步中”与默认“未处理”
 		local syncing = self._pack_op_entry == item.entry
-		local status = syncing and "正在同步成员插件…" or "未处理"
+		local status = syncing and _("PLUGIN_MGR_STATUS_SYNCING_MEMBERS") or _("PLUGIN_MGR_STATUS_NOT_PROCESSED")
 
 		local actions = {}
 		actions[#actions + 1] = {
-			text = "详情",
+			text = _("PLUGIN_MGR_BTN_DETAILS"),
 			enabled = idle,
 			on_press = function()
 				self:_show_store_pack_detail(item)
 			end
 		}
 		actions[#actions + 1] = {
-			text = syncing and "同步中" or "安装",
+			text = syncing and _("PLUGIN_MGR_STATUS_SYNCING") or _("PLUGIN_MGR_BTN_INSTALL"),
 			enabled = idle,
 			on_press = function()
 				self:_start_pack_sync(item)
@@ -4007,7 +4021,7 @@ function PluginManagerView:_render_store_packs_list()
 
 		local pack_row = PluginItemRow:new({
 			title = item.name or item.entry,
-			meta = string.format("v%s · 成员:%s · 下载:%s · 作者:%s", utf8_util.sanitize(item.version or ""), tostring(item.plugin_count or "?"), utf8_util.sanitize(tostring(item.downloads or 0)), utf8_util.sanitize(item.by or "")),
+			meta = string.format(_("PLUGIN_MGR_META_PACK"), utf8_util.sanitize(item.version or ""), tostring(item.plugin_count or "?"), utf8_util.sanitize(tostring(item.downloads or 0)), utf8_util.sanitize(item.by or "")),
 			desc = item.desc or "",
 			status = status,
 			show_toggle = false,
@@ -4029,11 +4043,11 @@ function PluginManagerView:_start_pack_sync(item)
 		return
 	end
 	if self._active_task then
-		self:_set_status("有任务进行中，请稍候", 0)
+		self:_set_status(_("PLUGIN_MGR_STATUS_TASK_IN_PROGRESS"), 0)
 		return
 	end
 	self._pack_op_entry = item.entry
-	self:_start_task("安装整合包", function()
+	self:_start_task(_("PLUGIN_MGR_TASK_INSTALL_PACK"), function()
 		return self:_install_pack_from_item(item)
 	end)
 	-- 任务进行中：重绘让该行显示“正在同步成员插件…”（行内动作已因 _active_task 禁用）
@@ -4044,18 +4058,18 @@ end
 function PluginManagerView:_download_pack_lua(item)
 	local base = self:_select_packs_base_url()
 	if not base then
-		return nil, "无法选择整合包商店地址"
+		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_PACK_SITE")
 	end
 	local filename = item.filename or (tostring(item.entry or "") .. ".zip")
-	self:_set_status("正在下载整合包：" .. (item.name or item.entry), 10)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_DOWNLOADING_PACK"), item.name or item.entry), 10)
 	local resp, err = self:_request(base .. "/download/" .. url_encode(filename), {
 		method = "GET"
 	}, 60)
 	if err then
-		return nil, "下载整合包失败：" .. err
+		return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_PACK"), err)
 	end
 	if tonumber(resp.code) ~= 200 then
-		return nil, "下载整合包失败：HTTP " .. tostring(resp.code)
+		return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_PACK_HTTP"), tostring(resp.code))
 	end
 	local zip_data = resp.body or ""
 	local stage = "tmp/pack_dl"
@@ -4065,21 +4079,21 @@ function PluginManagerView:_download_pack_lua(item)
 	local ok_uz, unzip_err = zip.unzip_to_dir(zip_data, stage)
 	if not ok_uz then
 		remove_dir_recursive(stage)
-		return nil, "解压整合包失败：" .. tostring(unzip_err)
+		return nil, string.format(_("PLUGIN_MGR_ERR_UNZIP_PACK"), tostring(unzip_err))
 	end
 	if not FS.getInfo(stage .. "/pack.lua", "file") then
 		remove_dir_recursive(stage)
-		return nil, "整合包 zip 缺少 pack.lua"
+		return nil, _("PLUGIN_MGR_ERR_PACK_ZIP_NO_MANIFEST")
 	end
 	local content = FS.read(stage .. "/pack.lua") or ""
 	remove_dir_recursive(stage)
 	local chunk, load_err = loadstring(content, "@pack.lua")
 	if not chunk then
-		return nil, "整合包清单解析失败：" .. tostring(load_err)
+		return nil, string.format(_("PLUGIN_MGR_ERR_PACK_MANIFEST_PARSE"), tostring(load_err))
 	end
 	local ok, cfg = pcall(chunk)
 	if not ok or type(cfg) ~= "table" then
-		return nil, "整合包清单解析失败（文件未返回配置表）"
+		return nil, _("PLUGIN_MGR_ERR_PACK_MANIFEST_INVALID")
 	end
 	return cfg, nil
 end
@@ -4092,7 +4106,7 @@ function PluginManagerView:_lookup_remote_plugins(entries)
 	end
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
-		return nil, "无法选择插件商店地址"
+		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 	local BATCH_SIZE = 100
 	for i = 1, #entries, BATCH_SIZE do
@@ -4104,7 +4118,7 @@ function PluginManagerView:_lookup_remote_plugins(entries)
 		for j = i, batch_end do
 			batch[#batch + 1] = entries[j]
 		end
-		self:_set_status(string.format("正在查询成员插件…（%d/%d）", i, #entries), 5)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_QUERYING_MEMBERS"), i, #entries), 5)
 		local resp, err = self:_request(base .. "/entries", {
 			method = "POST",
 			headers = {
@@ -4115,14 +4129,14 @@ function PluginManagerView:_lookup_remote_plugins(entries)
 			})
 		}, 30)
 		if err then
-			return nil, "成员插件查询失败：" .. err
+			return nil, string.format(_("PLUGIN_MGR_ERR_MEMBER_QUERY"), err)
 		end
 		if tonumber(resp.code) ~= 200 then
-			return nil, "成员插件查询失败：HTTP " .. tostring(resp.code)
+			return nil, string.format(_("PLUGIN_MGR_ERR_MEMBER_QUERY_HTTP"), tostring(resp.code))
 		end
 		local ok, body = pcall(json.decode, resp.body)
 		if not ok or type(body) ~= "table" or type(body.items) ~= "table" then
-			return nil, "成员插件查询响应解析失败"
+			return nil, _("PLUGIN_MGR_ERR_MEMBER_QUERY_PARSE")
 		end
 		for _, ritem in ipairs(body.items) do
 			if ritem.entry then
@@ -4143,22 +4157,22 @@ function PluginManagerView:_install_pack_from_item(item)
 	end
 	local cfg, dl_err = self:_download_pack_lua(item)
 	if not cfg then
-		return false, dl_err or "下载整合包失败"
+		return false, dl_err or _("PLUGIN_MGR_ERR_DOWNLOAD_PACK_SHORT")
 	end
 	local members = plugin_packs.entries_of(cfg)
 	if #members == 0 then
-		return false, "整合包「" .. tostring(cfg.name or item.name or item.entry) .. "」没有成员"
+		return false, string.format(_("PLUGIN_MGR_ERR_PACK_NO_MEMBERS"), tostring(cfg.name or item.name or item.entry))
 	end
 	local remote_map, lookup_err = self:_lookup_remote_plugins(members)
 	if not remote_map then
-		return false, lookup_err or "成员插件查询失败"
+		return false, lookup_err or _("PLUGIN_MGR_ERR_MEMBER_QUERY_SHORT")
 	end
 
 	local installed_n = 0 -- 代装
 	local updated_n = 0 -- 更新
 	local latest_n = 0 -- 跳过最新
 	local gone_n = 0 -- 商店缺失
-	for _, member in ipairs(members) do
+	for _i, member in ipairs(members) do
 		if self._cancel_requested then
 			return false, "cancelled"
 		end
@@ -4171,14 +4185,14 @@ function PluginManagerView:_install_pack_from_item(item)
 			-- 本地缺失且商店存在：代装（走既有单插件安装流程）
 			local ok_install, install_err = self:_install_plugin(ritem, false, nil)
 			if not ok_install then
-				return false, string.format("代装成员「%s」失败：%s", tostring(member), tostring(install_err or "未知错误"))
+				return false, string.format(_("PLUGIN_MGR_ERR_MEMBER_AUTO_INSTALL"), tostring(member), tostring(install_err or _("PLUGIN_MGR_ERR_UNKNOWN")))
 			end
 			installed_n = installed_n + 1
 		elseif has_update(norm_version(local_pd.config and local_pd.config.version or ""), norm_version(ritem.version or "")) then
 			-- 本地已有但商店版本不同：自动更新（复用单插件更新机制：保留本地配置与 enabled）
 			local ok_up, up_err = self:_install_or_update_item(ritem, nil)
 			if not ok_up then
-				return false, string.format("更新成员「%s」失败：%s", tostring(member), tostring(up_err or "未知错误"))
+				return false, string.format(_("PLUGIN_MGR_ERR_MEMBER_UPDATE"), tostring(member), tostring(up_err or _("PLUGIN_MGR_ERR_UNKNOWN")))
 			end
 			updated_n = updated_n + 1
 		else
@@ -4189,53 +4203,53 @@ function PluginManagerView:_install_pack_from_item(item)
 	self:_render_current_list()
 	local parts = {}
 	if installed_n > 0 then
-		parts[#parts + 1] = "代装 " .. installed_n .. " 个"
+		parts[#parts + 1] = string.format(_("PLUGIN_MGR_SYNC_PART_INSTALLED"), installed_n)
 	end
 	if updated_n > 0 then
-		parts[#parts + 1] = "更新 " .. updated_n .. " 个"
+		parts[#parts + 1] = string.format(_("PLUGIN_MGR_SYNC_PART_UPDATED"), updated_n)
 	end
 	if latest_n > 0 then
-		parts[#parts + 1] = "跳过最新 " .. latest_n .. " 个"
+		parts[#parts + 1] = string.format(_("PLUGIN_MGR_SYNC_PART_SKIPPED"), latest_n)
 	end
 	if gone_n > 0 then
-		parts[#parts + 1] = "商店缺失 " .. gone_n .. " 个"
+		parts[#parts + 1] = string.format(_("PLUGIN_MGR_SYNC_PART_MISSING"), gone_n)
 	end
 	if #parts == 0 then
-		parts[#parts + 1] = "无需处理"
+		parts[#parts + 1] = _("PLUGIN_MGR_SYNC_PART_NONE")
 	end
 	-- v3：不写本地包记录；再次点「安装」即为重新同步
-	self:_set_status(string.format("整合包「%s」同步完成：%s", tostring(cfg.name or item.name or item.entry), table.concat(parts, "，")), 100)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PACK_SYNC_DONE"), tostring(cfg.name or item.name or item.entry), table.concat(parts, _("PLUGIN_MGR_SEP_COMMA"))), 100)
 	return true, nil
 end
 
 --- 商店整合包详情：GET <site>/packs/{entry} → pack(readme) + members JOIN 信息
 function PluginManagerView:_show_store_pack_detail(item)
-	self:_start_task("获取整合包详情", function()
+	self:_start_task(_("PLUGIN_MGR_TASK_FETCH_PACK_DETAILS"), function()
 		local base = self:_select_packs_base_url()
 		if not base then
-			return false, "无法选择整合包商店地址"
+			return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_PACK_SITE")
 		end
 		local entry = utf8_util.sanitize(item.entry or "")
 		if entry == "" then
-			return false, "整合包缺少 entry 字段"
+			return false, _("PLUGIN_MGR_ERR_PACK_NO_ENTRY")
 		end
-		self:_set_status("正在获取整合包详情：" .. (item.name or entry), 50)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_FETCHING_PACK_DETAILS"), item.name or entry), 50)
 		local resp, err = self:_request(base .. "/" .. url_encode(entry), {
 			method = "GET"
 		}, 20)
 		if err then
-			return false, "获取详情失败：" .. err
+			return false, string.format(_("PLUGIN_MGR_ERR_FETCH_DETAILS"), err)
 		end
 		if tonumber(resp.code) ~= 200 then
-			self:_set_status("整合包详情不可用（可能已下架）", 100)
-			local detail = markdown_view:new(self._sw, self._sh, item.name or entry, nil, item.desc or "暂无说明文档")
+			self:_set_status(_("PLUGIN_MGR_STATUS_PACK_DETAILS_UNAVAILABLE"), 100)
+			local detail = markdown_view:new(self._sw, self._sh, item.name or entry, nil, item.desc or _("PLUGIN_MGR_NO_DESCRIPTION"))
 			self:add_child(detail)
 			detail:show()
 			return true, nil
 		end
 		local ok, body = pcall(json.decode, resp.body)
 		if not ok or type(body) ~= "table" then
-			return false, "整合包详情解析失败"
+			return false, _("PLUGIN_MGR_ERR_PACK_DETAILS_PARSE")
 		end
 		local pack = (type(body.pack) == "table" and body.pack) or body
 		local md_lines = {}
@@ -4248,13 +4262,13 @@ function PluginManagerView:_show_store_pack_detail(item)
 		end
 		local members = type(body.members) == "table" and body.members or {}
 		if #members > 0 then
-			md_lines[#md_lines + 1] = "## 成员列表"
-			for _, m in ipairs(members) do
+			md_lines[#md_lines + 1] = _("PLUGIN_MGR_MD_MEMBER_LIST")
+			for _i, m in ipairs(members) do
 				local m_entry = tostring(m.entry or "")
 				local m_name = tostring(m.name or m_entry or "?")
 				local m_ver = utf8_util.sanitize(m.version or "")
-				local m_meta = m_entry ~= "" and (string.format("（%s%s）", m_entry, m_ver ~= "" and (" v" .. m_ver) or "")) or ""
-				local m_state = (m.exists == false) and "（已下架）" or ""
+				local m_meta = m_entry ~= "" and (string.format(_("PLUGIN_MGR_MD_MEMBER_META"), m_entry, m_ver ~= "" and (" v" .. m_ver) or "")) or ""
+				local m_state = (m.exists == false) and _("PLUGIN_MGR_MD_MEMBER_GONE") or ""
 				md_lines[#md_lines + 1] = string.format("- **%s**%s%s", m_name, m_meta, m_state)
 			end
 		end
@@ -4262,8 +4276,8 @@ function PluginManagerView:_show_store_pack_detail(item)
 		if content == "" then
 			content = nil
 		end
-		self:_set_status("已获取整合包详情", 100)
-		local detail = markdown_view:new(self._sw, self._sh, (pack and (pack.name or entry)) or (item.name or entry), content, (desc ~= "" and desc) or item.desc or "暂无说明文档")
+		self:_set_status(_("PLUGIN_MGR_STATUS_PACK_DETAILS_FETCHED"), 100)
+		local detail = markdown_view:new(self._sw, self._sh, (pack and (pack.name or entry)) or (item.name or entry), content, (desc ~= "" and desc) or item.desc or _("PLUGIN_MGR_NO_DESCRIPTION"))
 		self:add_child(detail)
 		detail:show()
 		return true, nil
@@ -4296,9 +4310,9 @@ function PluginManagerView:_set_group_enabled(cfg, enable)
 		end
 	end
 	self._unsaved_changes = self:_check_unsaved()
-	local msg = string.format("%s整组：%d 个插件", enable and "已启用" or "已停用", changed)
+	local msg = string.format(_("PLUGIN_MGR_STATUS_GROUP_TOGGLED"), enable and _("PLUGIN_MGR_ENABLED") or _("PLUGIN_MGR_GROUP_DISABLED"), changed)
 	if missing > 0 then
-		msg = msg .. string.format("（跳过缺失成员 %d）", missing)
+		msg = msg .. string.format(_("PLUGIN_MGR_STATUS_SKIPPED_MISSING"), missing)
 	end
 	self:_after_group_toggled(msg)
 end
@@ -4313,15 +4327,15 @@ end
 function PluginManagerView:_confirm_delete_group(row)
 	local cfg = row.cfg
 	local name = (cfg and (cfg.name or cfg.entry)) or row.entry
-	local lines = {string.format("将删除本地分组「%s」。", tostring(name)), "仅删除分组，不影响任何插件的安装与开关状态。"}
+	local lines = {string.format(_("PLUGIN_MGR_CONFIRM_DELETE_GROUP"), tostring(name)), _("PLUGIN_MGR_CONFIRM_DELETE_GROUP_HINT")}
 	if not cfg then
-		lines[#lines + 1] = "该分组文件已损坏，删除仅用于清理损坏文件。"
+		lines[#lines + 1] = _("PLUGIN_MGR_CONFIRM_DELETE_GROUP_CORRUPT_HINT")
 	end
 	self:_show_pack_confirm({
-		title = "删除本地分组",
+		title = _("PLUGIN_MGR_CONFIRM_DELETE_GROUP_TITLE"),
 		lines = lines,
 		buttons = {{
-			text = "删除分组",
+			text = _("PLUGIN_MGR_BTN_DELETE_GROUP"),
 			on_press = function()
 				self:_hide_pack_confirm()
 				self:_remove_group(row)
@@ -4337,9 +4351,9 @@ function PluginManagerView:_remove_group(row)
 	self:_reload_local_packs()
 	self:_render_current_list()
 	if ok then
-		self:_set_status("已删除本地分组：" .. label, 0)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_GROUP_DELETED"), label), 0)
 	else
-		self:_set_status("删除本地分组失败：" .. label, 0)
+		self:_set_status(string.format(_("PLUGIN_MGR_ERR_GROUP_DELETE"), label), 0)
 	end
 end
 
@@ -4393,7 +4407,7 @@ function PluginManagerView:_show_pack_confirm(opts)
 	title.text_align = "left"
 	title.vertical_align = "middle"
 	title.colors.text = {244, 221, 165, 255}
-	title.text = utf8_util.sanitize(opts.title or "确认")
+	title.text = utf8_util.sanitize(opts.title or _("BUTTON_CONFIRM"))
 	title.fit_lines = 1
 	title.fit_size = true
 	title.pos = V.v(16, 6)
@@ -4413,7 +4427,7 @@ function PluginManagerView:_show_pack_confirm(opts)
 	for i = 1, shown_lines do
 		local text
 		if i > #lines then
-			text = string.format("…等共 %d 行", #lines)
+			text = string.format(_("PLUGIN_MGR_CONFIRM_MORE_LINES"), #lines)
 		else
 			text = lines[i]
 		end
@@ -4435,7 +4449,7 @@ function PluginManagerView:_show_pack_confirm(opts)
 		buttons[#buttons + 1] = b
 	end
 	buttons[#buttons + 1] = {
-		text = "取消",
+		text = _("Cancel"),
 		on_press = function()
 			self:_hide_pack_confirm()
 		end
@@ -4564,7 +4578,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	title.text_align = "left"
 	title.vertical_align = "middle"
 	title.colors.text = {244, 221, 165, 255}
-	title.text = is_new and "新建本地分组" or "编辑本地分组"
+	title.text = is_new and _("PLUGIN_MGR_GROUP_EDITOR_NEW_TITLE") or _("PLUGIN_MGR_GROUP_EDITOR_EDIT_TITLE")
 	title.pos = V.v(pad, title_y)
 	panel:add_child(title)
 
@@ -4583,7 +4597,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 		width = pw - pad * 2,
 		height = name_h,
 		controller = self._controller,
-		placeholder = "分组名称（1~40 字符）",
+		placeholder = _("PLUGIN_MGR_GROUP_EDITOR_NAME_HINT"),
 		on_change = function(text)
 			self._group_editor_name = utf8_util.sub(utf8_util.sanitize(text), 40)
 			if self._group_editor_error then
@@ -4619,6 +4633,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	end
 
 	-- 分组分类标签（tag）：左侧小字标签与 chips 同一行（不换行）
+	-- 中文「分类」约 37 单位；英文 "Category" 约 69 单位，56 会让它被 fit 缩字号，故按文本实测宽度留位
 	local gcat_lbl_w = 56
 	local gcat_lbl = GGLabel:new(V.v(gcat_lbl_w, gcat_h))
 	gcat_lbl.font_name = "body"
@@ -4628,7 +4643,11 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	gcat_lbl.fit_lines = 1
 	gcat_lbl.fit_size = true
 	gcat_lbl.colors.text = {175, 162, 122, 255}
-	gcat_lbl.text = "分类"
+	gcat_lbl.text = _("PLUGIN_MGR_GROUP_EDITOR_CATEGORY_LABEL")
+	-- 分类标签按文本实测宽度留位（KLabel 里 text_size 与 size 是同一张量，
+	-- 与 all/gg_views.lua:800 的 `l.size.x = l:get_text_width(l.text)` 做法一致）
+	gcat_lbl_w = math.max(gcat_lbl_w, math.ceil(gcat_lbl:get_text_width(gcat_lbl.text) + 6))
+	gcat_lbl.size.x = gcat_lbl_w
 	gcat_lbl.pos = V.v(pad, gcat_y)
 	panel:add_child(gcat_lbl)
 	local gcat_opts = {}
@@ -4682,7 +4701,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 		width = pw - pad * 2,
 		height = search_h,
 		controller = self._controller,
-		placeholder = "搜索可加入的插件（名称/简介/作者/entry）",
+		placeholder = _("PLUGIN_MGR_GROUP_EDITOR_SEARCH_HINT"),
 		on_change = function(text)
 			self._group_editor_search = string.lower(utf8_util.sanitize(text or ""))
 			self:_render_group_candidates()
@@ -4755,8 +4774,8 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 		lbl.pos = V.v(x, header_y)
 		panel:add_child(lbl)
 	end
-	col_header("可加入的插件", col_lx)
-	col_header("已在分组中的插件", col_rx)
+	col_header(_("PLUGIN_MGR_GROUP_EDITOR_AVAILABLE"), col_lx)
+	col_header(_("PLUGIN_MGR_GROUP_EDITOR_MEMBERS"), col_rx)
 
 	local function make_list(x)
 		local list = KScrollList:new(V.v(col_w, list_h))
@@ -4775,7 +4794,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	-- 底部按钮：取消居左下角、保存居右下角
 	local bottom_y = ph - 12 - btn_h
 	local btn_w = 112
-	local cancel_btn = PluginActionButton:new("取消", V.v(btn_w, btn_h))
+	local cancel_btn = PluginActionButton:new(_("Cancel"), V.v(btn_w, btn_h))
 	cancel_btn.pos = V.v(pad, bottom_y)
 	cancel_btn.on_press = function()
 		S:queue("GUIButtonCommon")
@@ -4783,7 +4802,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	end
 	panel:add_child(cancel_btn)
 
-	local save_btn = PluginActionButton:new("保存", V.v(btn_w, btn_h))
+	local save_btn = PluginActionButton:new(_("PLUGIN_MGR_BTN_SAVE"), V.v(btn_w, btn_h))
 	save_btn.pos = V.v(pw - pad - btn_w, bottom_y)
 	save_btn.on_press = function()
 		S:queue("GUIButtonCommon")
@@ -4876,7 +4895,7 @@ function PluginManagerView:_make_group_pick_row(opts)
 		end
 		row:add_child(state_toggle)
 
-		local remove_btn = PluginActionButton:new("移除", V.v(72, 26))
+		local remove_btn = PluginActionButton:new(_("PLUGIN_MGR_BTN_REMOVE"), V.v(72, 26))
 		remove_btn.pos = V.v(opts.list_w - 12 - 72, row_h - 26 - 4)
 		remove_btn.on_press = function()
 			if opts.on_press then
@@ -4920,7 +4939,7 @@ function PluginManagerView:_render_group_candidates()
 		lbl.font_size = 13 * rs
 		lbl.text_align = "center"
 		lbl.colors.text = {200, 185, 150, 255}
-		lbl.text = "本地没有已安装插件，无法选择成员"
+		lbl.text = _("PLUGIN_MGR_GROUP_EDITOR_NO_LOCAL_PLUGINS")
 		list:add_row(lbl)
 		return
 	end
@@ -4971,14 +4990,14 @@ function PluginManagerView:_render_group_candidates()
 		lbl.font_size = 13 * rs
 		lbl.text_align = "center"
 		lbl.colors.text = {200, 185, 150, 255}
-		lbl.text = q and "没有匹配的插件" or "没有可加入的插件"
+		lbl.text = q and _("PLUGIN_MGR_GROUP_EDITOR_NO_MATCH") or _("PLUGIN_MGR_GROUP_EDITOR_NO_AVAILABLE")
 		list:add_row(lbl)
 		return
 	end
 
 	local ts_row = self._dl_touch_scale or 1
 	local row_h = math.max(46, math.floor(50 * ts_row + 0.5))
-	for _, cand in ipairs(candidates) do
+	for _i, cand in ipairs(candidates) do
 		local pd = cand.pd
 		local name = (pd.config and pd.config.name) or cand.entry
 		local row = self:_make_group_pick_row({
@@ -4986,7 +5005,7 @@ function PluginManagerView:_render_group_candidates()
 			row_h = row_h,
 			name = tostring(name),
 			entry = cand.entry,
-			btn_text = "加入",
+			btn_text = _("PLUGIN_MGR_BTN_ADD"),
 			btn_w = 76,
 			on_press = function()
 				self:_blur_group_inputs()
@@ -5027,7 +5046,7 @@ function PluginManagerView:_render_group_members()
 		lbl.font_size = 13 * rs
 		lbl.text_align = "center"
 		lbl.colors.text = {200, 185, 150, 255}
-		lbl.text = "暂无成员：请从左栏点「加入」"
+		lbl.text = _("PLUGIN_MGR_GROUP_EDITOR_NO_MEMBERS")
 		list:add_row(lbl)
 		return
 	end
@@ -5088,19 +5107,19 @@ function PluginManagerView:_group_editor_save()
 	local name = self._group_editor_name or ""
 	name = string.trim(name)
 	if name == "" then
-		self._group_editor_error.text = "请输入分组名称"
+		self._group_editor_error.text = _("PLUGIN_MGR_GROUP_EDITOR_ERR_NAME_REQUIRED")
 		return
 	end
 	if utf8_util.sub(name, 41) ~= name then
-		self._group_editor_error.text = "分组名称过长（最多 40 字符）"
+		self._group_editor_error.text = _("PLUGIN_MGR_GROUP_EDITOR_ERR_NAME_TOO_LONG")
 		return
 	end
 	local entry = self._group_editor_entry
 	-- 重名校验（分组间唯一）
-	for _, row in ipairs(self.local_packs) do
+	for _i, row in ipairs(self.local_packs) do
 		local cfg = row.cfg
 		if cfg and row.entry ~= entry and (cfg.name or "") == name then
-			self._group_editor_error.text = "已存在同名分组「" .. utf8_util.sub(name, 20) .. "」，请换一个名称"
+			self._group_editor_error.text = string.format(_("PLUGIN_MGR_GROUP_EDITOR_ERR_NAME_EXISTS"), utf8_util.sub(name, 20))
 			return
 		end
 	end
@@ -5134,13 +5153,13 @@ function PluginManagerView:_group_editor_save()
 	end
 	local wok = plugin_packs.save(entry, cfg)
 	if not wok then
-		self._group_editor_error.text = "写入分组文件失败，请重试"
+		self._group_editor_error.text = _("PLUGIN_MGR_GROUP_EDITOR_ERR_WRITE")
 		return
 	end
 	self:_hide_group_editor()
 	self:_reload_local_packs()
 	self:_render_current_list()
-	self:_set_status((is_new and "已创建本地分组：" or "已保存本地分组：") .. name, 0)
+	self:_set_status(string.format(is_new and _("PLUGIN_MGR_STATUS_GROUP_CREATED") or _("PLUGIN_MGR_STATUS_GROUP_SAVED"), name), 0)
 end
 
 --- 关闭分组编辑器（归还键盘/搜索框 responder）

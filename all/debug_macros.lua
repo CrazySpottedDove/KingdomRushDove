@@ -186,7 +186,7 @@ function debug_macros.print(t, maybe_filename_or_indent, ...)
 		local fh, err = io.open(fname, "w")
 
 		if not fh then
-			error("无法打开文件: " .. tostring(err))
+			error(string.format(_("DEBUG_MAC_OPEN_FILE_FAILED"), tostring(err)))
 		end
 
 		local ok, perr = pcall(function()

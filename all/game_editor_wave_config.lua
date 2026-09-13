@@ -35,9 +35,9 @@ local function enemy_cn_only(template_name)
 	local tpl = E.entities and E.entities[template_name] or nil
 	local label = enemy_name_label(template_name, tpl)
 	if not label then
-		return "未知敌人"
+		return _("EDITOR_UI_UNKNOWN_ENEMY")
 	end
-	return label:match("%((.+)%)$") or "未知敌人"
+	return label:match("%((.+)%)$") or _("EDITOR_UI_UNKNOWN_ENEMY")
 end
 
 local function hook_button_feedback(btn)
@@ -81,7 +81,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 	self.panel = panel
 
 	local title = KLabel:new(V.v(pw, 34))
-	title.text = "出怪配置"
+	title.text = _("EDITOR_UI_WAVE_CONFIG")
 	title.text_align = "center"
 	title.vertical_align = "middle"
 	title.colors.background = C.panel
@@ -139,7 +139,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 
 	self:_build_form()
 
-	local save_cfg = KEButton:new("保存配置")
+	local save_cfg = KEButton:new(_("EDITOR_UI_SAVE_CONFIG"))
 	save_cfg.size = v(120, 30)
 	save_cfg.pos = v(20, ph - 44)
 	save_cfg.colors.background = C.button
@@ -149,7 +149,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 	hook_button_feedback(save_cfg)
 	panel:add_child(save_cfg)
 
-	local gen_btn = KEButton:new("生成出怪")
+	local gen_btn = KEButton:new(_("EDITOR_UI_GENERATE_WAVES"))
 	gen_btn.size = v(120, 30)
 	gen_btn.pos = v(154, ph - 44)
 	gen_btn.colors.background = C.button
@@ -159,7 +159,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 	hook_button_feedback(gen_btn)
 	panel:add_child(gen_btn)
 
-	local save_wave_btn = KEButton:new("保存出怪")
+	local save_wave_btn = KEButton:new(_("EDITOR_UI_SAVE_WAVES"))
 	save_wave_btn.size = v(120, 30)
 	save_wave_btn.pos = v(288, ph - 44)
 	save_wave_btn.colors.background = C.button
@@ -169,7 +169,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 	hook_button_feedback(save_wave_btn)
 	panel:add_child(save_wave_btn)
 
-	local preview_btn = KEButton:new("出怪预览")
+	local preview_btn = KEButton:new(_("EDITOR_UI_WAVE_PREVIEW"))
 	preview_btn.size = v(120, 30)
 	preview_btn.pos = v(422, ph - 44)
 	preview_btn.colors.background = C.button
@@ -179,7 +179,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 	hook_button_feedback(preview_btn)
 	panel:add_child(preview_btn)
 
-	local add_group_btn = KEButton:new("+ 新增波")
+	local add_group_btn = KEButton:new(_("EDITOR_UI_ADD_GROUP"))
 	add_group_btn.size = v(120, 30)
 	add_group_btn.pos = v(556, ph - 44)
 	function add_group_btn.on_click()
@@ -188,7 +188,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 	hook_button_feedback(add_group_btn)
 	panel:add_child(add_group_btn)
 
-	local glossary_btn = KEButton:new("怪物一览表")
+	local glossary_btn = KEButton:new(_("EDITOR_UI_ENEMY_GLOSSARY"))
 	glossary_btn.size = v(130, 30)
 	glossary_btn.pos = v(690, ph - 44)
 	function glossary_btn.on_click()
@@ -243,12 +243,12 @@ function WaveConfigView:_build_form()
 
 	local y = 8
 
-	local lives = self:_create_prop("生命值(lives)", config.lives or 20)
+	local lives = self:_create_prop(_("EDITOR_UI_PROP_LIVES"), config.lives or 20)
 	lives.pos = v(10, y)
 	self._content:add_child(lives)
 	self._fields.lives = lives
 
-	local cash = self:_create_prop("初始金币(cash)", config.cash or 800)
+	local cash = self:_create_prop(_("EDITOR_UI_PROP_CASH"), config.cash or 800)
 	cash.pos = v(220, y)
 	self._content:add_child(cash)
 	self._fields.cash = cash
@@ -257,14 +257,14 @@ function WaveConfigView:_build_form()
 	for gi, group in ipairs(config.groups or {}) do
 		local sep = KLabel:new(V.v(self._content_view.size.x - 20, 24))
 		sep.pos = v(10, y)
-		sep.text = string.format("第 %d 波", gi)
+		sep.text = string.format(_("EDITOR_UI_GROUP_N"), gi)
 		sep.vertical_align = "middle"
 		sep.colors.background = C.panel
 		sep.colors.text = C.text
 		self._content:add_child(sep)
 		local del_group_btn = KButton:new(v(88, 24))
 		del_group_btn.pos = v(self._content_view.size.x - 122, y)
-		del_group_btn.text = "删除波"
+		del_group_btn.text = _("EDITOR_UI_DELETE_GROUP")
 		del_group_btn.colors.background = {180, 80, 80, 255}
 		del_group_btn.colors.text = {255, 255, 255, 255}
 		function del_group_btn.on_click()
@@ -274,11 +274,11 @@ function WaveConfigView:_build_form()
 		self._content:add_child(del_group_btn)
 		y = y + 28
 
-		local g_interval = self:_create_prop("持续时间/秒(interval)", group.interval)
+		local g_interval = self:_create_prop(_("EDITOR_UI_PROP_GROUP_INTERVAL"), group.interval)
 		g_interval.pos = v(10, y)
 		self._content:add_child(g_interval)
 
-		local g_gold = self:_create_prop("本波金币量(gold)", group.total_gold)
+		local g_gold = self:_create_prop(_("EDITOR_UI_PROP_GROUP_GOLD"), group.total_gold)
 		g_gold.pos = v(220, y)
 		self._content:add_child(g_gold)
 		y = y + 46
@@ -311,23 +311,23 @@ function WaveConfigView:_build_form()
 				return math.max(0, interval - delay - rest)
 			end
 
-			local w_delay = self:_create_prop(string.format("子波%d 延迟/秒(delay)", wi), wave.delay or 0)
+			local w_delay = self:_create_prop(string.format(_("EDITOR_UI_PROP_WAVE_DELAY"), wi), wave.delay or 0)
 			w_delay.pos = v(wf_x, y)
 			self._content:add_child(w_delay)
 
-			local w_wave_length = self:_create_prop(string.format("子波%d 波长/秒(interval)", wi), wave_length_from(wave.delay, wave.rest))
+			local w_wave_length = self:_create_prop(string.format(_("EDITOR_UI_PROP_WAVE_LENGTH"), wi), wave_length_from(wave.delay, wave.rest))
 			w_wave_length.pos = v(wf_x + wf_step, y)
 			self._content:add_child(w_wave_length)
 
-			local w_rest = self:_create_prop(string.format("子波%d 留白/秒(rest)", wi), wave.rest or 0)
+			local w_rest = self:_create_prop(string.format(_("EDITOR_UI_PROP_WAVE_REST"), wi), wave.rest or 0)
 			w_rest.pos = v(wf_x + wf_step * 2, y)
 			self._content:add_child(w_rest)
 
-			local w_path = self:_create_prop(string.format("子波%d 路径(path_index)", wi), wave.path_index or 1)
+			local w_path = self:_create_prop(string.format(_("EDITOR_UI_PROP_WAVE_PATH"), wi), wave.path_index or 1)
 			w_path.pos = v(wf_x + wf_step * 3, y)
 			self._content:add_child(w_path)
 
-			local w_weight = self:_create_prop(string.format("子波%d 权重(weight)", wi), wave.weight or 1)
+			local w_weight = self:_create_prop(string.format(_("EDITOR_UI_PROP_WAVE_WEIGHT"), wi), wave.weight or 1)
 			w_weight.pos = v(wf_x + wf_step * 4, y)
 			self._content:add_child(w_weight)
 
@@ -352,7 +352,7 @@ function WaveConfigView:_build_form()
 
 			y = y + 46
 
-			local w_formation = KEPropBool:new("阵型(formation)", wave.formation == true)
+			local w_formation = KEPropBool:new(_("EDITOR_UI_PROP_FORMATION"), wave.formation == true)
 			w_formation.pos = v(wf_x, y)
 			self._content:add_child(w_formation)
 			y = y + 46
@@ -360,7 +360,7 @@ function WaveConfigView:_build_form()
 			local enemies_props = {}
 			local wave_enemies = wave.enemies or {"enemy_goblin"}
 			for ei, enemy_name in ipairs(wave_enemies) do
-				local enemy_prop = self:_create_prop(string.format("子波%d 敌人%d", wi, ei), enemy_name)
+				local enemy_prop = self:_create_prop(string.format(_("EDITOR_UI_PROP_WAVE_ENEMY"), wi, ei), enemy_name)
 				enemy_prop.pos = v(40, y)
 				enemy_prop.size = v(440, enemy_prop.size.y)
 				enemy_prop.lt.size = v(440, enemy_prop.lt.size.y)
@@ -383,7 +383,7 @@ function WaveConfigView:_build_form()
 
 				local del_enemy_btn = KButton:new(v(88, 24))
 				del_enemy_btn.pos = v(680, y + 23)
-				del_enemy_btn.text = "删除敌人"
+				del_enemy_btn.text = _("EDITOR_UI_DELETE_ENEMY")
 				del_enemy_btn.colors.background = {160, 90, 90, 255}
 				del_enemy_btn.colors.text = {255, 255, 255, 255}
 				function del_enemy_btn.on_click()
@@ -396,7 +396,7 @@ function WaveConfigView:_build_form()
 
 			local add_enemy_btn = KButton:new(v(120, 24))
 			add_enemy_btn.pos = v(40, y + 22)
-			add_enemy_btn.text = "+ 添加敌人种类"
+			add_enemy_btn.text = _("EDITOR_UI_ADD_ENEMY")
 			add_enemy_btn.colors.background = {120, 150, 196, 255}
 			add_enemy_btn.colors.text = {255, 255, 255, 255}
 			function add_enemy_btn.on_click()
@@ -407,7 +407,7 @@ function WaveConfigView:_build_form()
 
 			local del_wave_btn = KButton:new(v(88, 24))
 			del_wave_btn.pos = v(680, y + 22)
-			del_wave_btn.text = "删除子波"
+			del_wave_btn.text = _("EDITOR_UI_DELETE_WAVE")
 			del_wave_btn.colors.background = {160, 90, 90, 255}
 			del_wave_btn.colors.text = {255, 255, 255, 255}
 			function del_wave_btn.on_click()
@@ -429,7 +429,7 @@ function WaveConfigView:_build_form()
 		end
 		local add_wave_btn = KButton:new(v(120, 26))
 		add_wave_btn.pos = v(40, y)
-		add_wave_btn.text = "+ 新增子波"
+		add_wave_btn.text = _("EDITOR_UI_ADD_WAVE")
 		add_wave_btn.colors.background = {72, 96, 138, 255}
 		add_wave_btn.colors.text = {255, 255, 255, 255}
 		function add_wave_btn.on_click()
@@ -491,7 +491,7 @@ function WaveConfigView:_config_issues(cfg)
 			local delay = tonumber(wave.delay) or 0
 			local rest = tonumber(wave.rest) or 0
 			if delay + rest > interval then
-				issues[#issues + 1] = string.format("第 %d 波 · 子波 %d：延迟 %d + 留白 %d = %d 秒，超过大波时长 %d 秒", gi, wi, delay, rest, delay + rest, interval)
+				issues[#issues + 1] = string.format(_("EDITOR_UI_ISSUE_WAVE_TIME"), gi, wi, delay, rest, delay + rest, interval)
 			end
 		end
 	end
@@ -519,7 +519,7 @@ function WaveConfigView:_show_config_issues(issues)
 	popup:add_child(panel)
 
 	local title = KLabel:new(V.v(pw, 32))
-	title.text = "出怪配置存在不合法数据，已取消"
+	title.text = _("EDITOR_UI_CONFIG_INVALID")
 	title.text_align = "center"
 	title.vertical_align = "middle"
 	title.colors.background = {170, 64, 64, 255}
@@ -543,7 +543,7 @@ function WaveConfigView:_show_config_issues(issues)
 	if extra > 0 then
 		local lb = KLabel:new(V.v(pw - 24, line_h))
 		lb.pos = V.v(12, y)
-		lb.text = string.format("…… 共 %d 处，请逐波修正后重试", #issues)
+		lb.text = string.format(_("EDITOR_UI_ISSUE_MORE"), #issues)
 		lb.text_align = "left"
 		lb.vertical_align = "middle"
 		lb.font_name = KE_CONST.font_name
@@ -553,7 +553,7 @@ function WaveConfigView:_show_config_issues(issues)
 		y = y + line_h
 	end
 
-	local ok_btn = KEButton:new("知道了")
+	local ok_btn = KEButton:new(_("EDITOR_UI_OK_GOT_IT"))
 	ok_btn.size = V.v(110, 30)
 	ok_btn.pos = V.v((pw - 110) / 2, ph - 40)
 	function ok_btn.on_click()
@@ -574,9 +574,9 @@ function WaveConfigView:_save_config()
 	end
 	self.editor.wave_config = cfg
 	if self.editor:save_wave_assets() then
-		self.editor.gui:show_save_notification("出怪配置已保存", true)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_WAVE_CONFIG_SAVED"), true)
 	else
-		self.editor.gui:show_save_notification("出怪配置保存失败", false)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_WAVE_CONFIG_SAVE_FAILED"), false)
 	end
 end
 
@@ -584,7 +584,7 @@ function WaveConfigView:_generate_waves()
 	local cfg = self:_read_config_from_form()
 	self.editor.wave_config = cfg
 	self.editor.wave_data = self.editor:generate_wave_data_from_config(self.editor.wave_config)
-	self.editor.gui:show_save_notification("生成出怪成功", true)
+	self.editor.gui:show_save_notification(_("EDITOR_UI_GENERATE_WAVES_SUCCESS"), true)
 end
 
 function WaveConfigView:_save_waves()
@@ -592,9 +592,9 @@ function WaveConfigView:_save_waves()
 	self.editor.wave_config = cfg
 	self.editor.wave_data = self.editor:generate_wave_data_from_config(self.editor.wave_config)
 	if self.editor:save_wave_assets() then
-		self.editor.gui:show_save_notification("出怪文件已保存", true)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_WAVE_FILE_SAVED"), true)
 	else
-		self.editor.gui:show_save_notification("出怪文件保存失败", false)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_WAVE_FILE_SAVE_FAILED"), false)
 	end
 end
 
@@ -671,7 +671,7 @@ function WaveConfigView:_remove_group(gi)
 	self.editor.wave_config = self:_read_config_from_form()
 	local config = self:_editor_wave_config()
 	if not config.groups or #config.groups <= 1 then
-		self.editor.gui:show_save_notification("至少保留 1 个波次", false)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_KEEP_ONE_GROUP"), false)
 		return
 	end
 	table.remove(config.groups, gi)
@@ -698,7 +698,7 @@ function WaveConfigView:_remove_wave(gi, wi)
 	local config = self:_editor_wave_config()
 	local group = config.groups[gi]
 	if not group or #group.waves <= 1 then
-		self.editor.gui:show_save_notification("每个波至少保留 1 个子波", false)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_KEEP_ONE_WAVE"), false)
 		return
 	end
 	table.remove(group.waves, wi)
@@ -721,7 +721,7 @@ function WaveConfigView:_remove_enemy(gi, wi, ei)
 	local config = self:_editor_wave_config()
 	local wave = config.groups[gi] and config.groups[gi].waves[wi]
 	if not wave or #wave.enemies <= 1 then
-		self.editor.gui:show_save_notification("每个子波至少保留 1 个敌人种类", false)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_KEEP_ONE_ENEMY"), false)
 		return
 	end
 	table.remove(wave.enemies, ei)

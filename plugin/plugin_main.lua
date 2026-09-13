@@ -110,7 +110,7 @@ function plugin_main:after_init()
 	end
 
 	if #PLUGIN_ERRORS > 0 then
-		error("插件初始化错误")
+		error(_("PLUGIN_UI_INIT_ERROR"))
 	end
 end
 
@@ -191,32 +191,32 @@ function plugin_main:can_hot_apply(plan)
 	plan = plan or {}
 	local reasons = {}
 
-	for _, pd in ipairs(plan.unloads or {}) do
+	for _i, pd in ipairs(plan.unloads or {}) do
 		local entry = self:find_loaded(pd)
 		if entry and type(entry[1].unload) ~= "function" then
-			reasons[#reasons + 1] = string.format("插件「%s」不支持热卸载（缺少 unload 接口）", pd.name or "?")
+			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_UNLOAD_UNSUPPORTED"), pd.name or "?")
 		end
 	end
 
-	for _, pd in ipairs(plan.reloads or {}) do
+	for _i, pd in ipairs(plan.reloads or {}) do
 		local plugin = self:_hot_module(pd)
 		if not plugin then
-			reasons[#reasons + 1] = string.format("插件「%s」模块加载失败，无法热加载", pd.name or "?")
+			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_LOAD_FAILED"), pd.name or "?")
 		elseif type(plugin.reload) ~= "function" then
-			reasons[#reasons + 1] = string.format("插件「%s」不支持热加载（缺少 reload 接口）", pd.name or "?")
+			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_UNSUPPORTED"), pd.name or "?")
 		end
 	end
 
-	for _, item in ipairs(plan.configs or {}) do
+	for _i, item in ipairs(plan.configs or {}) do
 		local pd = item.plugin_data
 		local entry = self:find_loaded(pd)
 		if entry and type(entry[1].on_config_change) ~= "function" then
-			reasons[#reasons + 1] = string.format("插件「%s」不支持配置热加载（缺少 on_config_change 接口）", pd.name or "?")
+			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_CONFIG_UNSUPPORTED"), pd.name or "?")
 		end
 	end
 
 	if #reasons > 0 then
-		return false, table.concat(reasons, "；")
+		return false, table.concat(reasons, _("PLUGIN_UI_REASON_SEPARATOR"))
 	end
 	return true, nil
 end
@@ -244,14 +244,14 @@ function plugin_main:apply_hot(plan)
 	-- 1. 热卸载（高优先级先卸载，与启动初始化顺序相反）
 	local unloads = plan.unloads or {}
 	sort_plugins(unloads, true)
-	for _, pd in ipairs(unloads) do
+	for _i, pd in ipairs(unloads) do
 		local entry = self:find_loaded(pd)
 		if entry then
 			local plugin = entry[1]
 			if type(plugin.unload) == "function" then
 				local ok, err = pcall(plugin.unload, plugin, pd)
 				if not ok then
-					errors[#errors + 1] = string.format("插件「%s」卸载失败：%s", pd.name or "?", tostring(err))
+					errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_UNLOAD_FAILED"), pd.name or "?", tostring(err))
 					log.error("plugin unload failed: %s", tostring(err))
 				end
 			end
@@ -268,7 +268,7 @@ function plugin_main:apply_hot(plan)
 	-- 2. 热加载（低优先级先加载，与启动 init 顺序一致）
 	local reloads = plan.reloads or {}
 	sort_plugins(reloads, false)
-	for _, pd in ipairs(reloads) do
+	for _i, pd in ipairs(reloads) do
 		local plugin = self:_hot_module(pd)
 		if plugin then
 			self:_insert_loaded(plugin, pd)
@@ -276,7 +276,7 @@ function plugin_main:apply_hot(plan)
 			if type(plugin.reload) == "function" then
 				local ok, err = pcall(plugin.reload, plugin, pd)
 				if not ok then
-					errors[#errors + 1] = string.format("插件「%s」热加载失败：%s", pd.name or "?", tostring(err))
+					errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_FAILED"), pd.name or "?", tostring(err))
 					log.error("plugin reload failed: %s", tostring(err))
 				end
 			end
@@ -284,14 +284,14 @@ function plugin_main:apply_hot(plan)
 	end
 
 	-- 3. 配置热加载（参数为新配置数据，同时已由插件管理器写盘）
-	for _, item in ipairs(plan.configs or {}) do
+	for _i, item in ipairs(plan.configs or {}) do
 		local pd = item.plugin_data
 		local new_config = item.config
 		local entry = self:find_loaded(pd)
 		if entry and type(entry[1].on_config_change) == "function" then
 			local ok, err = pcall(entry[1].on_config_change, entry[1], new_config)
 			if not ok then
-				errors[#errors + 1] = string.format("插件「%s」配置热加载失败：%s", pd.name or "?", tostring(err))
+				errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_CONFIG_FAILED"), pd.name or "?", tostring(err))
 				log.error("plugin on_config_change failed: %s", tostring(err))
 			end
 		end

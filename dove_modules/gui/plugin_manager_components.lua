@@ -132,8 +132,8 @@ function PluginToggleButton:initialize(initial_value, size, label_font)
 	self._label.text_align = "center"
 	self._label.vertical_align = "middle"
 	self._label.propagate_on_click = true
-	self._enable_text = "已启用"
-	self._disable_text = "已禁用"
+	self._enable_text = _("PLUGIN_MGR_ENABLED")
+	self._disable_text = _("PLUGIN_MGR_DISABLED")
 	self:add_child(self._label)
 	self:_refresh()
 end
@@ -270,6 +270,9 @@ function PluginItemRow:initialize(opts, row_w)
 	status_lbl.vertical_align = "middle"
 	status_lbl.colors.text = {242, 211, 121, 255}
 	status_lbl.text = utf8_util.sanitize(self.opts.status or "")
+	-- 状态列宽度是固定的（列表行 300、分组行 190~300），长语言文案（如
+	-- "Installed: v1.0.0 (v2.0.0 available)"）会直接折行压到下面的开关上，故单行收缩兜底
+	status_lbl.fit_lines = 1
 	status_lbl.pos = V.v(status_x, status_y)
 	self:add_child(status_lbl)
 
@@ -296,8 +299,8 @@ function PluginItemRow:initialize(opts, row_w)
 			local config_button = PluginToggleButton:new(true, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
 			config_button.pos = V.v(row_w - 2 * right_pad - toggle_w * 3 / 2, toggle_top + toggle.size.y / 2)
 			config_button.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
-			config_button._label.text = "配置"
-			config_button._enable_text = "配置"
+			config_button._label.text = _("PLUGIN_MGR_BTN_CONFIGURE")
+			config_button._enable_text = _("PLUGIN_MGR_BTN_CONFIGURE")
 			function config_button:on_click()
 				S:queue("GUIButtonCommon")
 				local config_path = opts.plugin_data.path .. "/" .. opts.plugin_data.name .. "_config.lua"
@@ -455,7 +458,7 @@ function PluginSearchBox:initialize(opts)
 		args = {"fill", 0, 0, w, h, 6, 6}
 	}
 	self._controller = opts.controller
-	self._placeholder = opts.placeholder or "搜索插件"
+	self._placeholder = opts.placeholder or _("PLUGIN_MGR_SEARCH_PLACEHOLDER")
 	self._text = ""
 	self._focused = false
 	self._cursor_visible = true
@@ -493,7 +496,7 @@ function PluginSearchBox:_refresh()
 		self._label.text = utf8_util.sub(self._text, 24)
 	elseif self._focused then
 		self._label.colors.text = {180, 168, 138, 255}
-		self._label.text = "输入后搜索"
+		self._label.text = _("PLUGIN_MGR_SEARCH_HINT")
 	else
 		self._label.colors.text = {150, 138, 112, 255}
 		self._label.text = self._placeholder

@@ -614,7 +614,7 @@ function screen_map:init(w, h)
 	cat_filter_btn.label.text_size = cat_filter_btn.label.size
 	cat_filter_btn.label.font_size = 18
 	cat_filter_btn.label.vertical_align = CJK("middle", "top", nil, "top")
-	cat_filter_btn.label.text = "全部"
+	cat_filter_btn.label.text = _("CUSTOM_MAP_UI_ALL")
 	cat_filter_btn.label.fit_lines = 1
 	cat_filter_btn.hidden = self.generation ~= screen_map.CUSTOM_GEN
 	self.window:add_child(cat_filter_btn)
@@ -721,7 +721,7 @@ function screen_map:init(w, h)
 	change_button.label.text_size = change_button.label.size
 	change_button.label.font_size = 18
 	change_button.label.vertical_align = CJK("middle", "top", nil, "top")
-	change_button.label.text = "切换地图"
+	change_button.label.text = _("MAP_UI_SWITCH_MAP")
 	change_button.label.fit_lines = 1
 
 	self.window:add_child(change_button)
@@ -734,19 +734,19 @@ function screen_map:init(w, h)
 	self.window:add_child(gen_dropdown)
 
 	local gen_options = {{
-		label = "一代",
+		label = _("MAP_UI_GEN_1"),
 		value = 1
 	}, {
-		label = "二代",
+		label = _("MAP_UI_GEN_2"),
 		value = 2
 	}, {
-		label = "三代",
+		label = _("MAP_UI_GEN_3"),
 		value = 3
 	}, {
-		label = "五代",
+		label = _("MAP_UI_GEN_5"),
 		value = 5
 	}, {
-		label = "插件地图",
+		label = _("MAP_UI_GEN_PLUGIN"),
 		value = screen_map.CUSTOM_GEN
 	}}
 
@@ -1285,7 +1285,7 @@ function screen_map:change_generation(i)
 		end
 		self._cat_filter = "all"
 		if self._cat_filter_btn then
-			self._cat_filter_btn.label.text = "全部"
+			self._cat_filter_btn.label.text = _("CUSTOM_MAP_UI_ALL")
 		end
 		reload_generation()
 	else
@@ -3853,16 +3853,16 @@ function UpgradesView:initialize(sw, sh)
 	self:add_child(self.list_dropdown)
 
 	self.list_options = {{
-		label = "科技一",
+		label = _("UPGRADES_1"),
 		value = 1
 	}, {
-		label = "科技二",
+		label = _("UPGRADES_2"),
 		value = 2
 	}, {
-		label = "科技三",
+		label = _("UPGRADES_3"),
 		value = 3
 	}, {
-		label = "科技四",
+		label = _("UPGRADES_4"),
 		value = 4
 	}}
 	local list_options = self.list_options
@@ -3933,7 +3933,7 @@ function UpgradesView:initialize(sw, sh)
 	end
 
 	-- 添加科技组切换功能
-	self.toggle_button = GGUpgradesButton:new("切换科技")
+	self.toggle_button = GGUpgradesButton:new(_("MAP_UI_SWITCH_UPGRADES"))
 	self.toggle_button.pos = v(420, 630)
 	self.back:add_child(self.toggle_button)
 
@@ -5079,7 +5079,7 @@ function EncyclopediaView:detail_tower(index)
 
 	self.right_panel:add_child(special_label)
 
-	local detail_btn = GGOptionsButton:new("技能")
+	local detail_btn = GGOptionsButton:new(_("Skills"))
 
 	detail_btn.pos = v(520, 650)
 
@@ -5253,7 +5253,7 @@ function EncyclopediaView:detail_tower_second(index)
 		self.right_panel:add_child(label)
 	end
 
-	local back_btn = GGOptionsButton:new("返回")
+	local back_btn = GGOptionsButton:new(_("BACK"))
 
 	back_btn.pos = v(520, 650)
 
@@ -5279,7 +5279,7 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 	panel.pos = v(50, 100)
 	panel.anchor = v(0, 0)
 
-	local i_map = {"一级: ", "二级: ", "三级: ", "四级: "}
+	local i_map = {_("MAP_UI_SKILL_LEVEL_1"), _("MAP_UI_SKILL_LEVEL_2"), _("MAP_UI_SKILL_LEVEL_3"), _("MAP_UI_SKILL_LEVEL_4")}
 	local height = 150
 	if power.max_level > 3 then
 		height = height * 3 / power.max_level
@@ -5295,9 +5295,9 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 		local name_label = GGLabel:new(V.v(400, 40))
 
 		if i == 1 then
-			name_label.text = i_map[i] .. power.price_base .. " 金币"
+			name_label.text = string.format(_("MAP_UI_SKILL_LEVEL_PRICE_FMT"), i_map[i], power.price_base)
 		else
-			name_label.text = i_map[i] .. power.price_inc .. " 金币"
+			name_label.text = string.format(_("MAP_UI_SKILL_LEVEL_PRICE_FMT"), i_map[i], power.price_inc)
 		end
 
 		name_label.font_name = "h_book"
@@ -5671,7 +5671,7 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 	local conf = self.hero_name_config[hero_name] or self.hero_name_config.default
 	local text = _(string.upper(hero_i18n_key or hero_name) .. "_NAME")
 
-	for _, s in pairs({"・", "·"}) do
+	for _, s in pairs({_("MAP_UI_HERO_NAME_SEP_CJK"), _("MAP_UI_HERO_NAME_SEP_LATIN")}) do
 		text = string.gsub(text, s, " ")
 	end
 
@@ -6073,7 +6073,11 @@ function HeroRoomViewKR1:show_hero(name)
 
 		if name_img then
 			c.hidden = c.id ~= "portrait_" .. name
-			name_img.hidden = i18n.current_locale ~= "en"
+			-- 原版英文姓名是贴图（screen_map_hero_room 图集里的 heroroom_bigportraits_name_XXXX），
+			-- 本项目图集里没有这些帧，只有一个 hero_room_portraits_name_0000，
+			-- 所以不能再按语言切换贴图，否则所有英雄都会显示同一张姓名图并错位。
+			-- 中英统一使用 HeroNameLabel 文本（en.lua 里已有各英雄英文名）。
+			name_img.hidden = true
 		end
 	end
 
@@ -6081,7 +6085,7 @@ function HeroRoomViewKR1:show_hero(name)
 
 	lt:set_hero(name, ht.info.i18n_key)
 
-	lt.hidden = i18n.current_locale == "en"
+	lt.hidden = false
 
 	local ll = self:get_child_by_id("hero_room_sel_locked")
 	local bs = self:get_child_by_id("hero_room_sel_select")
@@ -6484,7 +6488,7 @@ function OptionsView:initialize(sw, sh)
 
 	local button_height = 100
 
-	local config_button = GGOptionsButton:new("修改配置")
+	local config_button = GGOptionsButton:new(_("MAP_UI_EDIT_CONFIG"))
 	config_button:set_anchor_to_center()
 	config_button.pos.x = -75
 	config_button.pos.y = button_height
@@ -6497,7 +6501,7 @@ function OptionsView:initialize(sw, sh)
 	self.back:add_child(config_button)
 
 	button_height = button_height + 100
-	local keyset_button = GGOptionsButton:new("修改键位")
+	local keyset_button = GGOptionsButton:new(_("MAP_UI_EDIT_KEYSET"))
 	keyset_button:set_anchor_to_center()
 	keyset_button.pos.x = -75
 	keyset_button.pos.y = button_height
@@ -6510,7 +6514,7 @@ function OptionsView:initialize(sw, sh)
 	self.back:add_child(keyset_button)
 
 	button_height = button_height + 100
-	local launch_options_button = GGOptionsButton:new("修改启动项")
+	local launch_options_button = GGOptionsButton:new(_("MAP_UI_EDIT_LAUNCH_OPTIONS"))
 	launch_options_button:set_anchor_to_center()
 	launch_options_button.pos.x = -75
 	launch_options_button.pos.y = button_height
@@ -6524,7 +6528,7 @@ function OptionsView:initialize(sw, sh)
 
 	-- if not IS_ANDROID then
 	button_height = button_height + 100
-	local plugin_manager_button = GGOptionsButton:new("插件管理器")
+	local plugin_manager_button = GGOptionsButton:new(_("MAP_UI_PLUGIN_MANAGER"))
 	plugin_manager_button:set_anchor_to_center()
 	plugin_manager_button.pos.x = -75
 	plugin_manager_button.pos.y = button_height
@@ -6538,7 +6542,7 @@ function OptionsView:initialize(sw, sh)
 	-- end
 
 	button_height = button_height + 100
-	local restart_button = GGOptionsButton:new("重启游戏")
+	local restart_button = GGOptionsButton:new(_("MAP_UI_RESTART_GAME"))
 	restart_button:set_anchor_to_center()
 	restart_button.pos.x = -75
 	restart_button.pos.y = button_height
@@ -6551,7 +6555,7 @@ function OptionsView:initialize(sw, sh)
 	self.back:add_child(restart_button)
 
 	button_height = 100
-	local history_button = GGOptionsButton:new("查看更新日志")
+	local history_button = GGOptionsButton:new(_("MAP_UI_VIEW_CHANGELOG"))
 	history_button:set_anchor_to_center()
 	history_button.pos.x = self.back.size.x + 75
 	history_button.pos.y = button_height
@@ -6564,7 +6568,7 @@ function OptionsView:initialize(sw, sh)
 	self.back:add_child(history_button)
 
 	button_height = button_height + 100
-	local ui_settings_button = GGOptionsButton:new("UI设置")
+	local ui_settings_button = GGOptionsButton:new(_("MAP_UI_UI_SETTINGS"))
 	ui_settings_button:set_anchor_to_center()
 	ui_settings_button.pos.x = self.back.size.x + 75
 	ui_settings_button.pos.y = button_height
@@ -6577,7 +6581,7 @@ function OptionsView:initialize(sw, sh)
 	self.back:add_child(ui_settings_button)
 
 	button_height = button_height + 100
-	local fps_button = GGOptionsButton:new("帧率:" .. main.params.fps)
+	local fps_button = GGOptionsButton:new(string.format(_("MAP_UI_FPS_FMT"), main.params.fps))
 	fps_button:set_anchor_to_center()
 	fps_button.pos.x = self.back.size.x + 75
 	fps_button.pos.y = button_height
@@ -6599,14 +6603,14 @@ function OptionsView:initialize(sw, sh)
 		local settings = storage:load_settings()
 		settings.fps = new_fps
 		storage:save_settings(settings)
-		fps_button.label.text = "帧率:" .. new_fps
+		fps_button.label.text = string.format(_("MAP_UI_FPS_FMT"), new_fps)
 	end
 
 	self.back:add_child(fps_button)
 
 	if not IS_ANDROID then
 		button_height = button_height + 100
-		local editor_button = GGOptionsButton:new("地图编辑器")
+		local editor_button = GGOptionsButton:new(_("MAP_UI_MAP_EDITOR"))
 		editor_button:set_anchor_to_center()
 		editor_button.pos.x = self.back.size.x + 75
 		editor_button.pos.y = button_height
@@ -7155,30 +7159,30 @@ local EditablePanelView = require("dove_modules.gui.editable_panel_view")
 ConfigPanelView = class("ConfigPanelView", EditablePanelView)
 
 function ConfigPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "自定义配置", keyboard, controller, configer.default("config"))
+	EditablePanelView.initialize(self, sw, sh, _("MAP_UI_CUSTOM_CONFIG_TITLE"), keyboard, controller, configer.default("config"))
 	self:set_key_label_map({
-		hero_full_level_at_start = "英雄开局满级",
-		reverse_path = "路线倒转",
-		enabled = "启用自定义配置",
-		endless = "开启无尽模式",
-		enemy_count_multiplier = "敌人数量倍率",
-		enemy_gold_multiplier = "敌人金币倍率",
-		enemy_health_multiplier = "敌人生命倍率",
-		enemy_damage_multiplier = "敌人伤害倍率",
-		enemy_health_damage_multiplier = "敌人受伤倍率",
-		enemy_speed_multiplier = "敌人移速倍率",
-		gold_multiplier = "开局金币倍率",
-		hero_damage_multiplier = "英雄伤害倍率",
-		hero_xp_gain_multiplier = "英雄经验倍率",
-		hero_health_damage_multiplier = "英雄受伤倍率",
-		ban_random_towers = "随机禁用高级塔",
-		random_creeps = "随机出怪",
-		build_random_towers = "随机建造防御塔",
-		random_hero = "随机选择英雄",
-		tower_cooldown_divider = "防御塔攻速倍率",
-		tower_damage_multiplier = "防御塔伤害倍率",
-		tower_range_multiplier = "防御塔射程倍率",
-		extra_soldiers = "额外士兵数量"
+		hero_full_level_at_start = _("MAP_UI_CFG_HERO_FULL_LEVEL_AT_START"),
+		reverse_path = _("MAP_UI_CFG_REVERSE_PATH"),
+		enabled = _("MAP_UI_CFG_ENABLED"),
+		endless = _("MAP_UI_CFG_ENDLESS"),
+		enemy_count_multiplier = _("MAP_UI_CFG_ENEMY_COUNT_MULTIPLIER"),
+		enemy_gold_multiplier = _("MAP_UI_CFG_ENEMY_GOLD_MULTIPLIER"),
+		enemy_health_multiplier = _("MAP_UI_CFG_ENEMY_HEALTH_MULTIPLIER"),
+		enemy_damage_multiplier = _("MAP_UI_CFG_ENEMY_DAMAGE_MULTIPLIER"),
+		enemy_health_damage_multiplier = _("MAP_UI_CFG_ENEMY_HEALTH_DAMAGE_MULTIPLIER"),
+		enemy_speed_multiplier = _("MAP_UI_CFG_ENEMY_SPEED_MULTIPLIER"),
+		gold_multiplier = _("MAP_UI_CFG_GOLD_MULTIPLIER"),
+		hero_damage_multiplier = _("MAP_UI_CFG_HERO_DAMAGE_MULTIPLIER"),
+		hero_xp_gain_multiplier = _("MAP_UI_CFG_HERO_XP_GAIN_MULTIPLIER"),
+		hero_health_damage_multiplier = _("MAP_UI_CFG_HERO_HEALTH_DAMAGE_MULTIPLIER"),
+		ban_random_towers = _("MAP_UI_CFG_BAN_RANDOM_TOWERS"),
+		random_creeps = _("MAP_UI_CFG_RANDOM_CREEPS"),
+		build_random_towers = _("MAP_UI_CFG_BUILD_RANDOM_TOWERS"),
+		random_hero = _("MAP_UI_CFG_RANDOM_HERO"),
+		tower_cooldown_divider = _("MAP_UI_CFG_TOWER_COOLDOWN_DIVIDER"),
+		tower_damage_multiplier = _("MAP_UI_CFG_TOWER_DAMAGE_MULTIPLIER"),
+		tower_range_multiplier = _("MAP_UI_CFG_TOWER_RANGE_MULTIPLIER"),
+		extra_soldiers = _("MAP_UI_CFG_EXTRA_SOLDIERS")
 	})
 end
 
@@ -7199,9 +7203,9 @@ end
 CriketPanelView = class("CriketPanelView", EditablePanelView)
 
 function CriketPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "斗蛐蛐配置", keyboard, controller, configer.default("criket"))
+	EditablePanelView.initialize(self, sw, sh, _("MAP_UI_CRIKET_CONFIG_TITLE"), keyboard, controller, configer.default("criket"))
 	self:set_key_label_map({
-		on = "启用斗蛐蛐"
+		on = _("MAP_UI_CRIKET_ENABLED")
 	-- fps_transformed = "请勿修改本条",
 	-- gold_judge = "启用金币裁判",
 	-- cash = "初始资金",
@@ -7226,31 +7230,31 @@ end
 KeysetPanelView = class("KeysetPanelView", EditablePanelView)
 
 function KeysetPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "键位设置", keyboard, controller, configer.default("keyset"))
+	EditablePanelView.initialize(self, sw, sh, _("MAP_UI_KEYSET_TITLE"), keyboard, controller, configer.default("keyset"))
 	self:set_key_label_map({
-		pow_1 = "火雨",
-		pow_2 = "援军",
-		hero_1 = "英雄1",
-		hero_2 = "英雄2",
-		hero_3 = "英雄3",
-		hero_4 = "英雄4",
-		hero_5 = "英雄5",
-		reinforce = "援军调集",
-		reinforce_other = "召唤物调集",
-		next_wave = "下一波",
-		slow = "游戏减速",
-		quick = "游戏加速",
-		normal = "游戏原速",
-		criket_toggle = "切换一键造塔菜单",
-		endless_shop = "(无尽)开启商店",
-		barrack_seek = "兵营士兵索敌",
-		hero_menu_toggle = "切换英雄召唤菜单",
-		force_next_wave = "跳波",
-		wealthy = "获得金币",
-		healthy = "获得生命",
-		fps = "显示帧率",
-		restart = "重开（斗蛐蛐生效）",
-		random_towers = "随机建造高级塔"
+		pow_1 = _("MAP_UI_KEY_POW_1"),
+		pow_2 = _("MAP_UI_KEY_POW_2"),
+		hero_1 = _("MAP_UI_KEY_HERO_1"),
+		hero_2 = _("MAP_UI_KEY_HERO_2"),
+		hero_3 = _("MAP_UI_KEY_HERO_3"),
+		hero_4 = _("MAP_UI_KEY_HERO_4"),
+		hero_5 = _("MAP_UI_KEY_HERO_5"),
+		reinforce = _("MAP_UI_KEY_REINFORCE"),
+		reinforce_other = _("MAP_UI_KEY_REINFORCE_OTHER"),
+		next_wave = _("MAP_UI_KEY_NEXT_WAVE"),
+		slow = _("MAP_UI_KEY_SLOW"),
+		quick = _("MAP_UI_KEY_QUICK"),
+		normal = _("MAP_UI_KEY_NORMAL"),
+		criket_toggle = _("MAP_UI_KEY_CRIKET_TOGGLE"),
+		endless_shop = _("MAP_UI_KEY_ENDLESS_SHOP"),
+		barrack_seek = _("MAP_UI_KEY_BARRACK_SEEK"),
+		hero_menu_toggle = _("MAP_UI_KEY_HERO_MENU_TOGGLE"),
+		force_next_wave = _("MAP_UI_KEY_FORCE_NEXT_WAVE"),
+		wealthy = _("MAP_UI_KEY_WEALTHY"),
+		healthy = _("MAP_UI_KEY_HEALTHY"),
+		fps = _("MAP_UI_KEY_FPS"),
+		restart = _("MAP_UI_KEY_RESTART"),
+		random_towers = _("MAP_UI_KEY_RANDOM_TOWERS")
 	})
 end
 
@@ -7271,11 +7275,11 @@ end
 LaunchOptionsPanelView = class("LaunchOptionsPanelView", EditablePanelView)
 
 function LaunchOptionsPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "启动选项", keyboard, controller, require("settings_template").launch_options)
+	EditablePanelView.initialize(self, sw, sh, _("MAP_UI_LAUNCH_OPTIONS_TITLE"), keyboard, controller, require("settings_template").launch_options)
 	self:set_key_label_map({
-		skip_settings = "跳过设置",
-		skip_must_read = "跳过作者的话",
-		skip_slot = "跳过存档选择"
+		skip_settings = _("MAP_UI_LAUNCH_SKIP_SETTINGS"),
+		skip_must_read = _("MAP_UI_LAUNCH_SKIP_MUST_READ"),
+		skip_slot = _("MAP_UI_LAUNCH_SKIP_SLOT")
 	})
 end
 
@@ -7297,17 +7301,17 @@ end
 UISettingsPanelView = class("UIPanelView", EditablePanelView)
 
 function UISettingsPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "UI设置", keyboard, controller, configer.default("ui_settings"))
+	EditablePanelView.initialize(self, sw, sh, _("MAP_UI_UI_SETTINGS"), keyboard, controller, configer.default("ui_settings"))
 	self:set_key_label_map({
-		hud_scale = "局内技能按钮缩放",
-		damage_numbers_enabled = "显示伤害数字",
-		heal_numbers_enabled = "显示治疗数字",
-		perf_enabled = "启用性能检测",
-		coordinate_enabled = "显示坐标",
-		hero_menu_enabled = "启用局内英雄菜单",
-		tower_menu_enabled = "启用局内防御塔菜单",
-		game_gui_minified = "简化局内UI",
-		damage_trace_enabled = "启用伤害追踪"
+		hud_scale = _("MAP_UI_UISET_HUD_SCALE"),
+		damage_numbers_enabled = _("MAP_UI_UISET_DAMAGE_NUMBERS"),
+		heal_numbers_enabled = _("MAP_UI_UISET_HEAL_NUMBERS"),
+		perf_enabled = _("MAP_UI_UISET_PERF_ENABLED"),
+		coordinate_enabled = _("MAP_UI_UISET_COORDINATE"),
+		hero_menu_enabled = _("MAP_UI_UISET_HERO_MENU"),
+		tower_menu_enabled = _("MAP_UI_UISET_TOWER_MENU"),
+		game_gui_minified = _("MAP_UI_UISET_GAME_GUI_MINIFIED"),
+		damage_trace_enabled = _("MAP_UI_UISET_DAMAGE_TRACE")
 	})
 end
 

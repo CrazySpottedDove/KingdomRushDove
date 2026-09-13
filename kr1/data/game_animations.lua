@@ -14766,7 +14766,7 @@ return {
 	enemy_goblin_zapper_attack = {
 		from = 81,
 		prefix = "goblin_zapper",
-		to = 102
+		to = 101
 	},
 	enemy_goblin_zapper_death = {
 		from = 125,

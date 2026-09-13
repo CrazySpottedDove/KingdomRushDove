@@ -20,6 +20,8 @@ end
 
 function font_db:load(font_sizes)
 	self.fonts = {}
+	self.ttf_fonts = {}
+	self.fallback_font_names = {}
 	self.ascents = {}
 	self.font_files = {}
 	self.font_subst = {}
@@ -85,6 +87,90 @@ function font_db:load(font_sizes)
 	end
 end
 
+--[[
+	缺失字形回退字体。
+
+	主字体（尤其是英文环境下的 Comic Book Italic / TOONISH）只含拉丁字形，
+	一旦文本里出现中文字符（例如插件作者名、插件说明、中文自定义关卡名）或者
+	→ ← 这类符号，就会整段渲染成空白。这里给每个字体挂上含 CJK 的回退字体，
+	由 LOVE（>= 11.4 的 Font:setFallbacks）按字形逐个回退。
+
+	用法：font_db:set_fallback_fonts({"msyh", "NotoSansCJKkr-Regular"})
+	（名字是字体文件去掉扩展名后的 key，必须在 font_db:load() 之后调用）
+]]
+function font_db:set_fallback_fonts(names)
+	self.fallback_font_names = names or {}
+
+	for _, v in pairs(self.ttf_fonts or {}) do
+		self:apply_fallbacks(v.font, v.size)
+	end
+end
+
+--- 取（并缓存）某个字号的回退字体列表
+function font_db:get_fallback_fonts(size)
+	local names = self.fallback_font_names
+
+	if not names or #names == 0 or not self.font_files then
+		return nil
+	end
+
+	local list = {}
+
+	for i = 1, #names do
+		local n = names[i]
+		local font_file = self.font_files[n]
+
+		if font_file then
+			local key = "fallback:" .. n .. "-" .. size
+			local f = self.fonts[key]
+
+			if not f then
+				f = G.newFont(font_file, size, "light")
+
+				self.fonts[key] = f
+			end
+
+			list[#list + 1] = f
+		end
+	end
+
+	if #list == 0 then
+		return nil
+	end
+
+	return list
+end
+
+--- 给一个字体挂上回退字体（旧版 LOVE 没有 setFallbacks 时静默跳过）
+function font_db:apply_fallbacks(font, size)
+	if not (font and font.setFallbacks) then
+		return
+	end
+
+	local list = self:get_fallback_fonts(size)
+
+	if list then
+		font:setFallbacks(unpack(list))
+	end
+end
+
+--- LOVE 内置默认字体（Vera Sans，无 CJK）的带回退版本，供调试/工具界面使用
+function font_db:default_font(size)
+	size = math.max(tonumber(size) or 12, 1)
+
+	local key = "default:" .. size
+	local f = self.fonts[key]
+
+	if not f then
+		f = G.newFont(size)
+
+		self.fonts[key] = f
+		self:apply_fallbacks(f, size)
+	end
+
+	return f
+end
+
 function font_db:f(alias, size)
 	local name = self.font_subst[alias] or alias
 	local real_size = tonumber(self.font_adj[alias] and self.font_adj[alias].size * size or size)
@@ -113,6 +199,12 @@ function font_db:f(alias, size)
 			local font = G.newFont(font_file, real_size, "light")
 
 			self.fonts[name_size] = font
+			self.ttf_fonts[name_size] = {
+				font = font,
+				size = real_size
+			}
+
+			self:apply_fallbacks(font, real_size)
 
 			local fa = self:get_ascent(name_size)
 			local fh = font:getHeight()

@@ -234,6 +234,10 @@ function main:set_locale(locale)
 
 	local fs = require("data.font_subst")
 
+	-- 缺失字形回退：英文环境下插件作者名/说明等中文、以及 → ← 之类符号，
+	-- 主字体没有字形时回退到含 CJK 的字体，避免整段空白。
+	F:set_fallback_fonts(fs.fallbacks)
+
 	for _, v in pairs(fs.global) do
 		F:set_font_subst(unpack(v))
 	end
@@ -415,7 +419,7 @@ local function load(arg)
 	MU.start_debugger(main.params)
 
 	main:set_locale(main.params.locale)
-	love.window.setTitle(version.title .. version.id)
+	love.window.setTitle(_("APP_TITLE") .. version.id)
 
 	-- icon switched to krdove
 	love.window.setIcon(love.image.newImageData(KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"))
@@ -747,7 +751,7 @@ end
 -- 构建当前已启用（已加载或正在加载）的插件列表（名称 + 版本）文本。
 -- 数据源仅 PLUGIN_REGISTRY，没有则输出 "(无)"。
 local function build_enabled_plugins_text()
-	local lines = {"===== 已启用插件列表 (name : version) ====="}
+	local lines = {_("CRASH_UI_ENABLED_PLUGIN_LIST")}
 
 	local listed = 0
 
@@ -758,7 +762,7 @@ local function build_enabled_plugins_text()
 		end
 	end
 
-	lines[#lines + 1] = "===== 已启用插件总数: " .. listed .. " ====="
+	lines[#lines + 1] = string.format(_("CRASH_UI_ENABLED_PLUGIN_COUNT"), listed)
 
 	return table.concat(lines, "\n")
 end
@@ -835,15 +839,15 @@ function love.errorhandler(msg)
 	local err = {}
 
 	table.insert(tip, string.format("Version %s", version.id))
-	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下本界面，反馈并用语言详细说明发生了什么。")
+	table.insert(tip, _("CRASH_UI_REPORT_TIP"))
 
 	table.insert(err, msg .. "\n")
 
 	-- 归因：检查错误是否由某个插件导致（stack_msg 包含完整 traceback）
 
 	if blamed_plugins then
-		table.insert(tip, string.format("插件导致崩溃："))
-		for _, plugin_error_info in ipairs(blamed_plugins) do
+		table.insert(tip, _("CRASH_UI_CRASH_BY_PLUGIN"))
+		for _idx, plugin_error_info in ipairs(blamed_plugins) do
 			local plugin_tip
 			if PLUGIN_REGISTRY and PLUGIN_REGISTRY[plugin_error_info.entry] then
 				local config = PLUGIN_REGISTRY[plugin_error_info.entry]
@@ -853,7 +857,7 @@ function love.errorhandler(msg)
 			end
 			local disabled_ok = auto_disable_crashing_plugin(plugin_error_info.entry)
 			if disabled_ok then
-				plugin_tip = plugin_tip .. "(已自动禁用)"
+				plugin_tip = plugin_tip .. _("CRASH_UI_AUTO_DISABLED")
 			end
 			table.insert(tip, plugin_tip)
 			if plugin_error_info.error ~= "" then
@@ -865,7 +869,7 @@ function love.errorhandler(msg)
 	-- 某个没被定位的插件导致了游戏进都进不去，采用保守措施，把所有插件全都禁用
 	if not blamed_plugins and not main.screen_map_entered then
 		if disabled_all_plugins() then
-			table.insert(tip, "检测到未知插件导致崩溃，已自动禁用所有插件。\n重启游戏后将跳过所有插件。")
+			table.insert(tip, _("CRASH_UI_UNKNOWN_PLUGIN_DISABLE_ALL"))
 		end
 	end
 
@@ -911,7 +915,7 @@ function love.errorhandler(msg)
 	-- 最近日志：橙
 	if last_log_msg and last_log_msg ~= "" then
 		sections[#sections + 1] = {
-			text = "报错日志记录\n" .. last_log_msg,
+			text = _("CRASH_UI_ERROR_LOG") .. last_log_msg,
 			color = {1, 0.62, 0.32, 1},
 			font = font
 		}
@@ -924,7 +928,7 @@ function love.errorhandler(msg)
 	}
 	-- 操作提示：亮绿
 	sections[#sections + 1] = {
-		text = "按ESC以退出。",
+		text = _("CRASH_UI_PRESS_ESC_TO_EXIT"),
 		color = {0.62, 1, 0.62, 1},
 		font = cn_font
 	}
@@ -962,8 +966,8 @@ function love.errorhandler(msg)
 					name = "Game"
 				end
 
-				local buttons = {"关闭并复制报错信息"}
-				local pressed = love.window.showMessageBox("关闭" .. name .. "?", "", buttons)
+				local buttons = {_("CRASH_UI_CLOSE_AND_COPY")}
+				local pressed = love.window.showMessageBox(string.format(_("CRASH_UI_CLOSE_X"), name), "", buttons)
 
 				if pressed == 1 then
 					love.system.setClipboardText(sum_up)

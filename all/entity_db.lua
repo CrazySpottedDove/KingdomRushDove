@@ -240,12 +240,12 @@ function entity_db:test()
 
 	local mem_after = collectgarbage("count") -- 单位：KB
 
-	print("entity_db:load() 用时: " .. string.format("%.4f", t1 - t0) .. " 秒")
-	print("entity_db:load() 前内存: " .. string.format("%.2f", mem_before) .. " KB")
-	print("entity_db:load() 后内存: " .. string.format("%.2f", mem_after) .. " KB")
-	print("entity_db:load() 增加内存: " .. string.format("%.2f", mem_after - mem_before) .. " KB")
-	print("模板数量: " .. template_count)
-	print("组件数量: " .. component_count)
+	print(string.format(_("ENTITY_DB_LOAD_TIME"), t1 - t0))
+	print(string.format(_("ENTITY_DB_MEM_BEFORE"), mem_before))
+	print(string.format(_("ENTITY_DB_MEM_AFTER"), mem_after))
+	print(string.format(_("ENTITY_DB_MEM_DELTA"), mem_after - mem_before))
+	print(string.format(_("ENTITY_DB_TEMPLATE_COUNT"), template_count))
+	print(string.format(_("ENTITY_DB_COMPONENT_COUNT"), component_count))
 
 	-- 可选：测试批量创建实体的性能和内存
 	local create_count = 1000
@@ -266,9 +266,9 @@ function entity_db:test()
 
 	local mem_entities = collectgarbage("count")
 
-	print("批量创建 " .. create_count .. " 个实体用时: " .. string.format("%.4f", t3 - t2) .. " 秒")
-	print("批量创建后内存: " .. string.format("%.2f", mem_entities) .. " KB")
-	print("批量创建增加内存: " .. string.format("%.2f", mem_entities - mem_after) .. " KB")
+	print(string.format(_("ENTITY_DB_BULK_CREATE_TIME"), create_count, t3 - t2))
+	print(string.format(_("ENTITY_DB_BULK_MEM_AFTER"), mem_entities))
+	print(string.format(_("ENTITY_DB_BULK_MEM_DELTA"), mem_entities - mem_after))
 end
 
 function entity_db:register_t(name, base)

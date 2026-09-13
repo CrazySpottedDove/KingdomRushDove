@@ -58,7 +58,7 @@ function main_script:on_remove_unconditional(e, d)
 		if s.type == 0 then
 			local index = d.entities_with_main_script_on_update_index[e.id]
 			if not index then
-				log.error(string.format("！如果看见这条消息，请截下来发给作者，实体 %s 的 main_script.update 没有正确注册到 entities_with_main_script_on_update 中", e.template_name))
+				log.error(string.format(_("MAIN_SCRIPT_UPDATE_NOT_REGISTERED"), e.template_name))
 				return
 			end
 			local last_entity = d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count]
@@ -70,7 +70,7 @@ function main_script:on_remove_unconditional(e, d)
 		else
 			local index = d.entities_with_main_script_on_update_index1[e.id]
 			if not index then
-				log.error(string.format("！如果看见这条消息，请截下来发给作者，实体 %s 的 main_script.update 没有正确注册到 entities_with_main_script_on_update 中", e.template_name))
+				log.error(string.format(_("MAIN_SCRIPT_UPDATE_NOT_REGISTERED"), e.template_name))
 				return
 			end
 			local last_entity = d.entities_with_main_script_on_update1[d.entities_with_main_script_on_update_count1]

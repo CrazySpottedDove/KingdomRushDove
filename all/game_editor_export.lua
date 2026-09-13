@@ -129,7 +129,7 @@ function EditorExportView:initialize(sw, sh, editor)
 	self.panel = panel
 
 	local title = KLabel:new(V.v(pw, 54))
-	title.text = "导出地图插件"
+	title.text = _("EDITOR_UI_EXPORT_MAP_PLUGIN")
 	title.text_align = "center"
 	title.vertical_align = "middle"
 	title.colors.text = {251, 240, 214, 255}
@@ -163,22 +163,22 @@ function EditorExportView:initialize(sw, sh, editor)
 
 	local left_x = mx
 	local right_x = mx + lw + 10 + iw + col_gap - (lw + 10)
-	self._name_input = add_field("地图名称:", "我的自定义地图", left_x, fy)
-	self._entry_input = add_field("唯一标识:", "my_custom_map", right_x, fy)
+	self._name_input = add_field(_("EDITOR_UI_FIELD_MAP_NAME"), _("EDITOR_UI_DEFAULT_MAP_NAME"), left_x, fy)
+	self._entry_input = add_field(_("EDITOR_UI_FIELD_ENTRY"), "my_custom_map", right_x, fy)
 	fy = fy + fh + 10
-	self._author_input = add_field("作者:", "匿名", left_x, fy)
-	self._version_input = add_field("版本:", "1.0", right_x, fy)
+	self._author_input = add_field(_("EDITOR_UI_FIELD_AUTHOR"), _("EDITOR_UI_ANONYMOUS"), left_x, fy)
+	self._version_input = add_field(_("EDITOR_UI_FIELD_VERSION"), "1.0", right_x, fy)
 	fy = fy + fh + 10
-	self._category_input = add_field("分类:", "level", left_x, fy)
-	self._priority_input = add_field("优先级:", "0", right_x, fy)
+	self._category_input = add_field(_("EDITOR_UI_FIELD_CATEGORY"), "level", left_x, fy)
+	self._priority_input = add_field(_("EDITOR_UI_FIELD_PRIORITY"), "0", right_x, fy)
 	fy = fy + fh + 10
-	self._url_input = add_field("发布链接:", "", left_x, fy)
+	self._url_input = add_field(_("EDITOR_UI_FIELD_URL"), "", left_x, fy)
 	self._url_input.size = v(pw - mx * 2, fh)
 	self._url_input.lt.size = v(pw - mx * 2, self._url_input.lt.size.y)
 	self._url_input.lv.size = v(pw - mx * 2, self._url_input.lv.size.y)
 	self._url_input.input_border.size = v(pw - mx * 2 + 2, self._url_input.input_border.size.y)
 	fy = fy + fh + 10
-	self._desc_input = add_field("描述:", "一张玩家自制地图", left_x, fy)
+	self._desc_input = add_field(_("EDITOR_UI_FIELD_DESC"), _("EDITOR_UI_DEFAULT_MAP_DESC"), left_x, fy)
 	self._desc_input.size = v(pw - mx * 2, fh)
 	self._desc_input.lt.size = v(pw - mx * 2, self._desc_input.lt.size.y)
 	self._desc_input.lv.size = v(pw - mx * 2, self._desc_input.lv.size.y)
@@ -187,7 +187,7 @@ function EditorExportView:initialize(sw, sh, editor)
 
 	local info_lbl = KLabel:new(V.v(pw - 56, 148))
 	info_lbl.pos = v(28, fy)
-	info_lbl.text = string.format("导出目录：game_editor/plugins/$entry/\n关卡标识：%s\n配置格式遵循 plugin/plugin_template/config.lua，并附加 level_name / 背景图 / 音乐字段。\n若 campaign 出怪不存在，会自动生成空占位文件。", level_name)
+	info_lbl.text = string.format(_("EDITOR_UI_EXPORT_INFO"), level_name)
 	info_lbl.text_align = "left"
 	info_lbl.colors.text = C.text
 	info_lbl.font_size = 12
@@ -200,7 +200,7 @@ function EditorExportView:initialize(sw, sh, editor)
 	}
 	panel:add_child(info_lbl)
 
-	local export_btn = KEButton:new("导出插件")
+	local export_btn = KEButton:new(_("EDITOR_UI_EXPORT_PLUGIN"))
 	export_btn.size = v(170, 32)
 	export_btn.pos = v(28, ph - 58)
 	export_btn.colors.background = C.button
@@ -209,7 +209,7 @@ function EditorExportView:initialize(sw, sh, editor)
 	end
 	panel:add_child(export_btn)
 
-	local cancel_btn = KEButton:new("取消")
+	local cancel_btn = KEButton:new(_("Cancel"))
 	cancel_btn.size = v(100, 32)
 	cancel_btn.pos = v(pw - 128, ph - 58)
 	function cancel_btn.on_click()
@@ -240,11 +240,11 @@ function EditorExportView:_do_export()
 	local ok_snapshot = self.editor:level_save()
 
 	if name == "" then
-		self.editor.gui:show_save_notification("请输入地图名称")
+		self.editor.gui:show_save_notification(_("EDITOR_UI_INPUT_MAP_NAME"))
 		return
 	end
 	if entry == "" then
-		self.editor.gui:show_save_notification("请输入合法 entry")
+		self.editor.gui:show_save_notification(_("EDITOR_UI_INVALID_ENTRY"))
 		return
 	end
 
@@ -262,7 +262,7 @@ function EditorExportView:_do_export()
 	local cfg = {
 		name = name,
 		entry = entry,
-		by = author ~= "" and author or "匿名",
+		by = author ~= "" and author or _("EDITOR_UI_ANONYMOUS"),
 		version = version ~= "" and version or "1.0",
 		desc = desc or "",
 		url = url ~= "" and url or "",
@@ -323,10 +323,10 @@ function EditorExportView:_do_export()
 	storage:write_lua(plugin_dir .. "/config.lua", cfg)
 
 	if not ok_snapshot or not has_data or not has_paths then
-		self.editor.gui:show_save_notification("导出完成，但缺少关键文件(data/paths)", false)
+		self.editor.gui:show_save_notification(_("EDITOR_UI_EXPORT_INCOMPLETE"), false)
 		log.error("Plugin export incomplete for %s: snapshot=%s has_data=%s has_paths=%s", entry, tostring(ok_snapshot), tostring(has_data), tostring(has_paths))
 	else
-		self.editor.gui:show_save_notification("导出成功: " .. plugin_dir .. "/config.lua", true)
+		self.editor.gui:show_save_notification(string.format(_("EDITOR_UI_EXPORT_SUCCESS"), plugin_dir), true)
 		log.info("Plugin exported: %s", plugin_dir)
 	end
 	self:hide()

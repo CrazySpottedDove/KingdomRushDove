@@ -52,16 +52,16 @@ local C = {
 }
 
 local CATEGORY_FILTERS = {{
-	label = "全部",
+	label = _("CUSTOM_MAP_UI_ALL"),
 	value = "all"
 }, {
-	label = "常规",
+	label = _("CUSTOM_MAP_UI_NORMAL"),
 	value = "normal"
 }, {
-	label = "挑战",
+	label = _("CUSTOM_MAP_UI_CHALLENGE"),
 	value = "challenge"
 }, {
-	label = "整活",
+	label = _("CUSTOM_MAP_UI_CREATIVE"),
 	value = "creative"
 }}
 
@@ -1354,7 +1354,7 @@ function CustomMapListView:show_page(page)
 		empty.text_align = "center"
 		empty.vertical_align = "middle"
 		empty.colors.text = C.meta
-		empty.text = "还没有地图插件，前往插件管理器的地图分类下载吧！"
+		empty.text = _("CUSTOM_MAP_UI_EMPTY_HINT")
 		self._page_view:add_child(empty)
 		return
 	end

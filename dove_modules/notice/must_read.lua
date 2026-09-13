@@ -74,43 +74,43 @@ local utf8 = require("utf8")
 -- 通用题库（所有平台）
 local common_quiz = {
 	{
-		q = "Dove版的开发目标是什么？",
-		opts = {"高性能、高可操作性、高平衡度、高自由度", "画面精美、剧情丰富", "简单易玩、快速通关"},
+		q = _("MUST_READ_QUIZ_Q1"),
+		opts = {_("MUST_READ_QUIZ_Q1_A"), _("MUST_READ_QUIZ_Q1_B"), _("MUST_READ_QUIZ_Q1_C")},
 		ans = 1
 	},
 	{
-		q = "Dove版是否完全免费？",
-		opts = {"是的，完全免费", "需要付费解锁部分内容", "免费试玩，后续收费"},
+		q = _("MUST_READ_QUIZ_Q2"),
+		opts = {_("MUST_READ_QUIZ_Q2_A"), _("MUST_READ_QUIZ_Q2_B"), _("MUST_READ_QUIZ_Q2_C")},
 		ans = 1
 	},
 	{
-		q = "将Dove版用于商业用途是否合法？",
-		opts = {"不合法，属于侵权", "合法，可以随意使用", "需要得到作者授权"},
+		q = _("MUST_READ_QUIZ_Q3"),
+		opts = {_("MUST_READ_QUIZ_Q3_A"), _("MUST_READ_QUIZ_Q3_B"), _("MUST_READ_QUIZ_Q3_C")},
 		ans = 1
 	},
 	{
-		q = "不阅读作者的话就询问他人相关问题会怎样？",
-		opts = {"浪费他人的时间", "没有影响", "会得到帮助"},
+		q = _("MUST_READ_QUIZ_Q4"),
+		opts = {_("MUST_READ_QUIZ_Q4_A"), _("MUST_READ_QUIZ_OPT_NO_EFFECT"), _("MUST_READ_QUIZ_Q4_C")},
 		ans = 1
 	},
 	{
-		q = "游玩Dove版前建议先玩什么？",
-		opts = {"至少一代王国保卫战原版", "其他塔防游戏", "不需要玩其他游戏"},
+		q = _("MUST_READ_QUIZ_Q5"),
+		opts = {_("MUST_READ_QUIZ_Q5_A"), _("MUST_READ_QUIZ_Q5_B"), _("MUST_READ_QUIZ_Q5_C")},
 		ans = 1
 	},
 	{
-		q = "Dove版英雄等级局外是否保留？",
-		opts = {"不保留，局内从1级开始升级", "保留", "部分保留"},
+		q = _("MUST_READ_QUIZ_Q6"),
+		opts = {_("MUST_READ_QUIZ_Q6_A"), _("MUST_READ_QUIZ_Q6_B"), _("MUST_READ_QUIZ_Q6_C")},
 		ans = 1
 	},
 	{
-		q = "如果不喜欢英雄局内升级，可以怎么做？",
-		opts = {"在大地图按f1配置，选择'开局英雄满级'", "无法修改", "在局内按f2修改"},
+		q = _("MUST_READ_QUIZ_Q7"),
+		opts = {_("MUST_READ_QUIZ_Q7_A"), _("MUST_READ_QUIZ_Q7_B"), _("MUST_READ_QUIZ_Q7_C")},
 		ans = 1
 	},
 	{
-		q = "主线前期关卡有什么机制防止双英雄乱杀？",
-		opts = {"英雄经验获取衰减", "英雄伤害降低", "英雄数量限制"},
+		q = _("MUST_READ_QUIZ_Q8"),
+		opts = {_("MUST_READ_QUIZ_Q8_A"), _("MUST_READ_QUIZ_Q8_B"), _("MUST_READ_QUIZ_Q8_C")},
 		ans = 1
 	},
 	-- {
@@ -124,110 +124,110 @@ local common_quiz = {
 	-- 	ans = 1
 	-- },
 	{
-		q = "在哪个平台搜索什么可以找到作者自制关卡的通关视频？",
-		opts = {"bilibili搜索时笺滴答", "YouTube搜索KingdomRush", "抖音搜索塔防游戏"},
+		q = _("MUST_READ_QUIZ_Q9"),
+		opts = {_("MUST_READ_QUIZ_Q9_A"), _("MUST_READ_QUIZ_Q9_B"), _("MUST_READ_QUIZ_Q9_C")},
 		ans = 1
 	},
 	{
-		q = "局内按f1可以做什么（需在大地图配置中开启）？",
-		opts = {"开启一键造塔", "召唤英雄", "进入下一波"},
+		q = _("MUST_READ_QUIZ_Q10"),
+		opts = {_("MUST_READ_QUIZ_Q10_A"), _("MUST_READ_QUIZ_OPT_SUMMON_HERO"), _("MUST_READ_QUIZ_OPT_NEXT_WAVE")},
 		ans = 1
 	},
 	{
-		q = "局内按f4可以做什么（需在大地图配置中开启）？",
-		opts = {"召唤英雄", "一键造塔", "进入下一波"},
+		q = _("MUST_READ_QUIZ_Q11"),
+		opts = {_("MUST_READ_QUIZ_OPT_SUMMON_HERO"), _("MUST_READ_QUIZ_Q11_B"), _("MUST_READ_QUIZ_OPT_NEXT_WAVE")},
 		ans = 1
 	},
 	{
-		q = "局内按f5可以做什么？",
-		opts = {"进入下一波", "召唤英雄", "获得金币"},
+		q = _("MUST_READ_QUIZ_Q12"),
+		opts = {_("MUST_READ_QUIZ_OPT_NEXT_WAVE"), _("MUST_READ_QUIZ_OPT_SUMMON_HERO"), _("MUST_READ_QUIZ_Q12_C")},
 		ans = 1
 	},
 	{
-		q = "反馈报错问题时首先要做什么？",
-		opts = {"确定版本最新", "直接截图", "重启游戏"},
+		q = _("MUST_READ_QUIZ_Q13"),
+		opts = {_("MUST_READ_QUIZ_Q13_A"), _("MUST_READ_QUIZ_Q13_B"), _("MUST_READ_QUIZ_OPT_RESTART_GAME")},
 		ans = 1
 	},
 	{
-		q = "反馈问题时需要提供什么信息？",
-		opts = {"游戏中止/控制台信息；崩溃前截图(电脑端)", "问题如何产生，表现为什么", "所有选项都需要"},
+		q = _("MUST_READ_QUIZ_Q14"),
+		opts = {_("MUST_READ_QUIZ_Q14_A"), _("MUST_READ_QUIZ_Q14_B"), _("MUST_READ_QUIZ_Q14_C")},
 		ans = 3
 	},
 	{
-		q = "不遵守反馈要求会有什么后果？",
-		opts = {"很可能被骂，被拉黑", "没有影响", "会被提醒"},
+		q = _("MUST_READ_QUIZ_Q15"),
+		opts = {_("MUST_READ_QUIZ_OPT_SCOLDED_BLOCKED"), _("MUST_READ_QUIZ_OPT_NO_EFFECT"), _("MUST_READ_QUIZ_Q15_C")},
 		ans = 1
 	},
 	{
-		q = "游戏的更新历史在哪里查阅？",
-		opts = {"https://krdovedownload4.crazyspotteddove.top/history", "游戏内f1菜单", "README文件"},
+		q = _("MUST_READ_QUIZ_Q16"),
+		opts = {_("MUST_READ_QUIZ_Q16_A"), _("MUST_READ_QUIZ_Q16_B"), _("MUST_READ_QUIZ_Q16_C")},
 		ans = 1
 	},
 	{
-		q = "询问更新历史会有什么后果？",
-		opts = {"很可能被骂，被拉黑", "会得到回答", "没有影响"},
+		q = _("MUST_READ_QUIZ_Q17"),
+		opts = {_("MUST_READ_QUIZ_OPT_SCOLDED_BLOCKED"), _("MUST_READ_QUIZ_Q17_B"), _("MUST_READ_QUIZ_OPT_NO_EFFECT")},
 		ans = 1
 	},
 	{
-		q = "重新下载安装Dove版后存档会怎样？",
-		opts = {"存档会得到保留", "存档会丢失", "需要手动备份"},
+		q = _("MUST_READ_QUIZ_Q18"),
+		opts = {_("MUST_READ_QUIZ_Q18_A"), _("MUST_READ_QUIZ_Q18_B"), _("MUST_READ_QUIZ_Q18_C")},
 		ans = 1
 	},
 	{
-		q = "Dove版是否接受催更？",
-		opts = {"不接受，催更可能被骂、拉黑", "接受，欢迎催更", "偶尔可以催更"},
-		ans = 1
-	},
-
-	{
-		q = "点击单位后，绿圈表示什么？",
-		opts = {"远程范围", "拦截范围", "移动范围"},
+		q = _("MUST_READ_QUIZ_Q19"),
+		opts = {_("MUST_READ_QUIZ_Q19_A"), _("MUST_READ_QUIZ_Q19_B"), _("MUST_READ_QUIZ_Q19_C")},
 		ans = 1
 	},
 
 	{
-		q = "残暴伤害的图标是什么？",
-		opts = {"利爪", "十字架", "闪电"},
+		q = _("MUST_READ_QUIZ_Q20"),
+		opts = {_("MUST_READ_QUIZ_Q20_A"), _("MUST_READ_QUIZ_Q20_B"), _("MUST_READ_QUIZ_Q20_C")},
+		ans = 1
+	},
+
+	{
+		q = _("MUST_READ_QUIZ_Q21"),
+		opts = {_("MUST_READ_QUIZ_OPT_CLAW"), _("MUST_READ_QUIZ_Q21_B"), _("MUST_READ_QUIZ_OPT_LIGHTNING")},
 		ans = 1
 	},
 	{
-		q = "真实伤害的图标是什么？",
-		opts = {"金色十字架", "利爪", "盾牌"},
+		q = _("MUST_READ_QUIZ_Q22"),
+		opts = {_("MUST_READ_QUIZ_Q22_A"), _("MUST_READ_QUIZ_OPT_CLAW"), _("MUST_READ_QUIZ_Q22_C")},
 		ans = 1
 	},
 	{
-		q = "破甲伤害的图标是什么？",
-		opts = {"碎裂的白色盾牌", "碎裂的蓝色盾牌", "利爪"},
+		q = _("MUST_READ_QUIZ_Q23"),
+		opts = {_("MUST_READ_QUIZ_Q23_A"), _("MUST_READ_QUIZ_Q23_B"), _("MUST_READ_QUIZ_OPT_CLAW")},
 		ans = 1
 	},
 	{
-		q = "刺伤的图标是什么？",
-		opts = {"红色冲击状", "利爪", "闪电"},
+		q = _("MUST_READ_QUIZ_Q24"),
+		opts = {_("MUST_READ_QUIZ_Q24_A"), _("MUST_READ_QUIZ_OPT_CLAW"), _("MUST_READ_QUIZ_OPT_LIGHTNING")},
 		ans = 1
 	},
 	{
-		q = "老兵难度下，防御塔价格会怎样？",
-		opts = {"提升", "降低", "不变"},
+		q = _("MUST_READ_QUIZ_Q25"),
+		opts = {_("MUST_READ_QUIZ_Q25_A"), _("MUST_READ_QUIZ_Q25_B"), _("MUST_READ_QUIZ_Q25_C")},
 		ans = 1
 	},
 	{
-		q = "不可能难度下，高血量敌人有什么特性？",
-		opts = {"获得一定秒杀抗性", "血量翻倍", "移动加速"},
+		q = _("MUST_READ_QUIZ_Q26"),
+		opts = {_("MUST_READ_QUIZ_Q26_A"), _("MUST_READ_QUIZ_Q26_B"), _("MUST_READ_QUIZ_Q26_C")},
 		ans = 1
 	},
 	{
-		q = "作者是否接受非主动提问情况下的修改建议？",
-		opts = {"不接受", "接受", "有时接受"},
+		q = _("MUST_READ_QUIZ_Q27"),
+		opts = {_("MUST_READ_QUIZ_Q27_A"), _("MUST_READ_QUIZ_Q27_B"), _("MUST_READ_QUIZ_Q27_C")},
 		ans = 1
 	},
 	{
-		q = "启动项设置内可以做什么？",
-		opts = {"关闭作者的话", "修改快捷键", "切换语言"},
+		q = _("MUST_READ_QUIZ_Q28"),
+		opts = {_("MUST_READ_QUIZ_Q28_A"), _("MUST_READ_QUIZ_Q28_B"), _("MUST_READ_QUIZ_Q28_C")},
 		ans = 1
 	},
 	{
-		q = "在大地图配置中，如何调整数值项？",
-		opts = {"点击后键盘输入", "滑动调整", "双击修改"},
+		q = _("MUST_READ_QUIZ_Q29"),
+		opts = {_("MUST_READ_QUIZ_Q29_A"), _("MUST_READ_QUIZ_Q29_B"), _("MUST_READ_QUIZ_Q29_C")},
 		ans = 1
 	}
 }
@@ -235,120 +235,120 @@ local common_quiz = {
 -- 电脑端专用题目
 local pc_only_quiz = {
 	{
-		q = "Dove版联网的用途是什么？",
-		opts = {"只用于提供更新服务，不收集隐私", "收集用户数据", "提供联机对战"},
+		q = _("MUST_READ_QUIZ_PC_Q30"),
+		opts = {_("MUST_READ_QUIZ_PC_Q30_A"), _("MUST_READ_QUIZ_PC_Q30_B"), _("MUST_READ_QUIZ_PC_Q30_C")},
 		ans = 1
 	},
 	{
-		q = "选择更新选项时，如果不了解IPv6/IPv4，应该怎么做？",
-		opts = {"先选IPv6，等待自动检测", "选IPv4", "离线启动"},
+		q = _("MUST_READ_QUIZ_PC_Q31"),
+		opts = {_("MUST_READ_QUIZ_PC_Q31_A"), _("MUST_READ_QUIZ_PC_Q31_B"), _("MUST_READ_QUIZ_PC_Q31_C")},
 		ans = 1
 	},
 	{
-		q = "离线情况下启动应该怎么做？",
-		opts = {"在启动页面关闭更新", "等待超时", "强制更新"},
+		q = _("MUST_READ_QUIZ_PC_Q32"),
+		opts = {_("MUST_READ_QUIZ_PC_Q32_A"), _("MUST_READ_QUIZ_PC_Q32_B"), _("MUST_READ_QUIZ_PC_Q32_C")},
 		ans = 1
 	},
 	{
-		q = "反馈bug时需要截下小黑框图片吗？",
-		opts = {"需要，要完整截下", "不需要", "看情况"},
+		q = _("MUST_READ_QUIZ_PC_Q33"),
+		opts = {_("MUST_READ_QUIZ_PC_Q33_A"), _("MUST_READ_QUIZ_PC_Q33_B"), _("MUST_READ_QUIZ_PC_Q33_C")},
 		ans = 1
 	},
 	{
-		q = "电脑端推荐使用多少帧率？",
-		opts = {"先选择最高帧率，然后依照性能表现选择", "固定30帧", "固定60帧"},
+		q = _("MUST_READ_QUIZ_PC_Q34"),
+		opts = {_("MUST_READ_QUIZ_PC_Q34_A"), _("MUST_READ_QUIZ_PC_Q34_B"), _("MUST_READ_QUIZ_PC_Q34_C")},
 		ans = 1
 	},
 	{
-		q = "如何缩放屏幕？",
-		opts = {"滑动鼠标滚轮（中键）", "按Ctrl+加减号", "双击屏幕"},
+		q = _("MUST_READ_QUIZ_PC_Q35"),
+		opts = {_("MUST_READ_QUIZ_PC_Q35_A"), _("MUST_READ_QUIZ_PC_Q35_B"), _("MUST_READ_QUIZ_PC_Q35_C")},
 		ans = 1
 	},
 	{
-		q = "如果发现画质差应该怎么做？",
-		opts = {"关闭全屏，尝试分辨率，使屏幕大小一致后恢复全屏", "降低帧率", "重启游戏"},
+		q = _("MUST_READ_QUIZ_PC_Q36"),
+		opts = {_("MUST_READ_QUIZ_PC_Q36_A"), _("MUST_READ_QUIZ_PC_Q36_B"), _("MUST_READ_QUIZ_OPT_RESTART_GAME")},
 		ans = 1
 	},
 	{
-		q = "插件文件夹应该放置在哪里？",
-		opts = {"存档目录/plugins", "KingdomRushDove/plugins", "根目录"},
+		q = _("MUST_READ_QUIZ_PC_Q37"),
+		opts = {_("MUST_READ_QUIZ_PC_Q37_A"), _("MUST_READ_QUIZ_PC_Q37_B"), _("MUST_READ_QUIZ_PC_Q37_C")},
 		ans = 1
 	},
 	{
-		q = "如何打开插件管理器？",
-		opts = {"在大地图中按f3", "在局内按f3", "在启动页面"},
+		q = _("MUST_READ_QUIZ_PC_Q38"),
+		opts = {_("MUST_READ_QUIZ_PC_Q38_A"), _("MUST_READ_QUIZ_PC_Q38_B"), _("MUST_READ_QUIZ_PC_Q38_C")},
 		ans = 1
 	},
 	{
-		q = "调集第1-5名英雄的快捷键是什么？",
-		opts = {"a,d,s,q,r", "1,2,3,4,5", "q,w,e,r,t"},
+		q = _("MUST_READ_QUIZ_PC_Q39"),
+		opts = {_("MUST_READ_QUIZ_PC_Q39_A"), _("MUST_READ_QUIZ_PC_Q39_B"), _("MUST_READ_QUIZ_PC_Q39_C")},
 		ans = 1
 	},
 	{
-		q = "按什么键可以调集所有援军？",
-		opts = {"f", "e", "a"},
+		q = _("MUST_READ_QUIZ_PC_Q40"),
+		opts = {_("MUST_READ_QUIZ_PC_Q40_A"), _("MUST_READ_QUIZ_PC_Q40_B"), _("MUST_READ_QUIZ_PC_Q40_C")},
 		ans = 1
 	},
 	{
-		q = "按e键可以调集哪些单位？",
-		opts = {"除援军、英雄、兵营士兵外的可调集单位", "所有单位", "只有英雄"},
+		q = _("MUST_READ_QUIZ_PC_Q41"),
+		opts = {_("MUST_READ_QUIZ_PC_Q41_A"), _("MUST_READ_QUIZ_PC_Q41_B"), _("MUST_READ_QUIZ_PC_Q41_C")},
 		ans = 1
 	},
 	{
-		q = "游戏的倍速键是什么？",
-		opts = {"4减速，5加速，6还原", "1减速，2加速，3还原", "7减速，8加速，9还原"},
+		q = _("MUST_READ_QUIZ_PC_Q42"),
+		opts = {_("MUST_READ_QUIZ_PC_Q42_A"), _("MUST_READ_QUIZ_PC_Q42_B"), _("MUST_READ_QUIZ_PC_Q42_C")},
 		ans = 1
 	},
 	{
-		q = "在大地图内按f2可以做什么？",
-		opts = {"打开斗蛐蛐配置", "打开配置", "切换地图"},
+		q = _("MUST_READ_QUIZ_PC_Q43"),
+		opts = {_("MUST_READ_QUIZ_PC_Q43_A"), _("MUST_READ_QUIZ_OPT_OPEN_CONFIG"), _("MUST_READ_QUIZ_OPT_SWITCH_MAP")},
 		ans = 1
 	},
 	{
-		q = "在大地图内按k可以做什么？",
-		opts = {"打开键位设置", "打开配置", "切换地图"},
+		q = _("MUST_READ_QUIZ_PC_Q44"),
+		opts = {_("MUST_READ_QUIZ_PC_Q44_A"), _("MUST_READ_QUIZ_OPT_OPEN_CONFIG"), _("MUST_READ_QUIZ_OPT_SWITCH_MAP")},
 		ans = 1
 	},
 	{
-		q = "在大地图内按l可以做什么？",
-		opts = {"打开启动项设置", "打开配置", "切换地图"},
+		q = _("MUST_READ_QUIZ_PC_Q45"),
+		opts = {_("MUST_READ_QUIZ_PC_Q45_A"), _("MUST_READ_QUIZ_OPT_OPEN_CONFIG"), _("MUST_READ_QUIZ_OPT_SWITCH_MAP")},
 		ans = 1
 	},
 	{
-		q = "在大地图内按wasd可以做什么？",
-		opts = {"移动视野", "切换地图", "打开配置"},
+		q = _("MUST_READ_QUIZ_PC_Q46"),
+		opts = {_("MUST_READ_QUIZ_PC_Q46_A"), _("MUST_READ_QUIZ_OPT_SWITCH_MAP"), _("MUST_READ_QUIZ_OPT_OPEN_CONFIG")},
 		ans = 1
 	}
 }
 
 -- 安卓端专用题目
 local android_only_quiz = {{
-	q = "安卓端建议使用多少帧率？",
-	opts = {"30帧", "144帧", "30或60帧"},
+	q = _("MUST_READ_QUIZ_ANDROID_Q47"),
+	opts = {_("MUST_READ_QUIZ_ANDROID_Q47_A"), _("MUST_READ_QUIZ_ANDROID_Q47_B"), _("MUST_READ_QUIZ_ANDROID_Q47_C")},
 	ans = 3
 }, {
-	q = "Dove版对手机端的定位是什么？",
-	opts = {"提供最基础的游玩服务", "和电脑端完全一致的体验", "专门为手机端优化"},
+	q = _("MUST_READ_QUIZ_ANDROID_Q48"),
+	opts = {_("MUST_READ_QUIZ_ANDROID_Q48_A"), _("MUST_READ_QUIZ_ANDROID_Q48_B"), _("MUST_READ_QUIZ_ANDROID_Q48_C")},
 	ans = 1
 }, {
-	q = "手机端是否接受bug反馈？",
-	opts = {"不接受bug反馈，但接受游戏中止报错信息", "接受所有反馈", "完全不接受反馈"},
+	q = _("MUST_READ_QUIZ_ANDROID_Q49"),
+	opts = {_("MUST_READ_QUIZ_ANDROID_Q49_A"), _("MUST_READ_QUIZ_ANDROID_Q49_B"), _("MUST_READ_QUIZ_ANDROID_Q49_C")},
 	ans = 1
 }, {
-	q = "作者建议在什么端游玩Dove版？",
-	opts = {"条件允许尽量在电脑端", "手机端", "都可以"},
+	q = _("MUST_READ_QUIZ_ANDROID_Q50"),
+	opts = {_("MUST_READ_QUIZ_ANDROID_Q50_A"), _("MUST_READ_QUIZ_ANDROID_Q50_B"), _("MUST_READ_QUIZ_ANDROID_Q50_C")},
 	ans = 1
 }, {
-	q = "安卓端如何使用绑定在快捷键上的功能？",
-	opts = {"在局内点击暂停按钮使用", "不能使用", "通过手势操作"},
+	q = _("MUST_READ_QUIZ_ANDROID_Q51"),
+	opts = {_("MUST_READ_QUIZ_ANDROID_Q51_A"), _("MUST_READ_QUIZ_ANDROID_Q51_B"), _("MUST_READ_QUIZ_ANDROID_Q51_C")},
 	ans = 1
 }, {
-	q = "安卓端如何打开UI设置？",
-	opts = {"在大地图中点击左上角齿轮图标，找到UI设置", "无法调整", "喊作者调整"},
+	q = _("MUST_READ_QUIZ_ANDROID_Q52"),
+	opts = {_("MUST_READ_QUIZ_ANDROID_Q52_A"), _("MUST_READ_QUIZ_ANDROID_Q52_B"), _("MUST_READ_QUIZ_ANDROID_Q52_C")},
 	ans = 1
 }, {
-	q = "安卓端如何调集所有援军？",
-	opts = {"在援军技能冷却时点击它", "大喊调集", "无法调集"},
+	q = _("MUST_READ_QUIZ_ANDROID_Q53"),
+	opts = {_("MUST_READ_QUIZ_ANDROID_Q53_A"), _("MUST_READ_QUIZ_ANDROID_Q53_B"), _("MUST_READ_QUIZ_ANDROID_Q53_C")},
 	ans = 1
 }}
 
@@ -725,7 +725,7 @@ function MUST_READ:draw_reading_mode(w, h)
 	end
 
 	-- 标题
-	local title = "作者的话"
+	local title = _("MUST_READ_TITLE")
 	love.graphics.printf(title, self.margin, 20, content_w, "center")
 
 	-- 文本绘制
@@ -748,7 +748,7 @@ function MUST_READ:draw_reading_mode(w, h)
 	local can_continue = is_scrolled_to_bottom(self.scroll, total_lines, visible_lines)
 	if not can_continue then
 		love.graphics.setColor(1, 1, 1, 0.7)
-		love.graphics.printf("向下滚动以阅读剩余内容...", self.margin, h - 120, content_w, "left")
+		love.graphics.printf(_("MUST_READ_SCROLL_HINT"), self.margin, h - 120, content_w, "left")
 	end
 
 	-- 按钮
@@ -775,7 +775,7 @@ function MUST_READ:draw_reading_mode(w, h)
 		end
 		love.graphics.rectangle("fill", bx, by, btn_w, btn_h, 6, 6)
 		love.graphics.setColor(1, 1, 1)
-		love.graphics.printf("继续游戏", bx, by + (btn_h - font:getHeight()) / 2, btn_w, "center")
+		love.graphics.printf(_("MUST_READ_CONTINUE"), bx, by + (btn_h - font:getHeight()) / 2, btn_w, "center")
 	else
 		-- 未答题，显示"去答题"
 		if self.mouse_pressed and is_btn_hover then
@@ -790,7 +790,7 @@ function MUST_READ:draw_reading_mode(w, h)
 		end
 		love.graphics.rectangle("fill", bx, by, btn_w, btn_h, 6, 6)
 		love.graphics.setColor(1, 1, 1)
-		love.graphics.printf("去答题", bx, by + (btn_h - font:getHeight()) / 2, btn_w, "center")
+		love.graphics.printf(_("MUST_READ_GO_QUIZ"), bx, by + (btn_h - font:getHeight()) / 2, btn_w, "center")
 	end
 end
 
@@ -818,7 +818,7 @@ function MUST_READ:draw_quiz_mode(w, h)
 	love.graphics.rectangle("fill", back_x, back_y, back_btn_w, back_btn_h, 4, 4)
 	love.graphics.setColor(1, 1, 1)
 	love.graphics.setFont(small_font)
-	love.graphics.printf("← 返回阅读", back_x, back_y + (back_btn_h - small_font:getHeight()) / 2, back_btn_w, "center")
+	love.graphics.printf(_("MUST_READ_BACK_TO_READING"), back_x, back_y + (back_btn_h - small_font:getHeight()) / 2, back_btn_w, "center")
 
 	-- 题目卡片 - 响应式布局
 	-- 1. 计算卡片基本尺寸
@@ -902,7 +902,7 @@ function MUST_READ:draw_quiz_mode(w, h)
 	-- 进度显示（顶部居中）
 	love.graphics.setColor(0.7, 0.7, 0.7)
 	love.graphics.setFont(small_font)
-	local progress_text = string.format("题目 %d / %d", self.current_question, #quiz_bank)
+	local progress_text = string.format(_("MUST_READ_PROGRESS"), self.current_question, #quiz_bank)
 	love.graphics.printf(progress_text, card_x, card_y + self.ui.progress_margin, card_w, "center")
 
 	-- 题目文本
@@ -989,12 +989,12 @@ function MUST_READ:draw_quiz_mode(w, h)
 	if cooldown > 0 then
 		love.graphics.setColor(1, 0.5, 0)
 		love.graphics.setFont(small_font)
-		local cooldown_text = string.format("回答错误，提交冷却中... %.1f秒", cooldown)
+		local cooldown_text = string.format(_("MUST_READ_COOLDOWN"), cooldown)
 		love.graphics.printf(cooldown_text, card_x, card_y + card_h - 40, card_w, "center")
 	else
 		love.graphics.setColor(0.5, 1, 0.5)
 		love.graphics.setFont(small_font)
-		love.graphics.printf("点击选项提交答案", card_x, card_y + card_h - 40, card_w, "center")
+		love.graphics.printf(_("MUST_READ_SUBMIT_HINT"), card_x, card_y + card_h - 40, card_w, "center")
 	end
 end
 

@@ -48,19 +48,19 @@ function assets_checker:init(store)
 	end
 
 	if next(info_portraits_check_result) ~= nil then
-		log.error("=== info.portrait 资源缺失检查 ===")
+		log.error(_("ASSETS_CHECK_PORTRAIT_HEADER"))
 
 		for ename, img in pairs(info_portraits_check_result) do
-			log.error("实体 %s 缺失资源 %s", ename, img)
+			log.error(_("ASSETS_CHECK_ENTITY_MISSING"), ename, img)
 		end
 	end
 
 	if next(tower_menu_images_check_result) ~= nil then
-		log.error("=== tower_menus_data 资源缺失检查 ===")
+		log.error(_("ASSETS_CHECK_TOWER_MENU_HEADER"))
 
 		for tname, imgs in pairs(tower_menu_images_check_result) do
-			for _, img in pairs(imgs) do
-				log.error("实体 %s 缺失资源 %s", tname, img)
+			for _i, img in pairs(imgs) do
+				log.error(_("ASSETS_CHECK_ENTITY_MISSING"), tname, img)
 			end
 		end
 	end

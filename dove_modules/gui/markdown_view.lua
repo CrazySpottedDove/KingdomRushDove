@@ -335,8 +335,8 @@ MarkdownView = class("MarkdownView", KView)
 function MarkdownView:initialize(sw, sh, title, content, fallback_text)
 	KView.initialize(self, V.v(sw, sh))
 	self._content = content or ""
-	self._fallback_text = fallback_text or "暂无说明文档"
-	self._title = utf8_util.sanitize(title or "详情")
+	self._fallback_text = fallback_text or _("MARKDOWN_UI_NO_DOC")
+	self._title = utf8_util.sanitize(title or _("MARKDOWN_UI_DETAILS"))
 
 	local panel_w = math.min(PANEL_MAX_W, sw - PANEL_MARGIN)
 	panel_w = math.max(PANEL_MIN_W, panel_w)
@@ -372,7 +372,7 @@ function MarkdownView:initialize(sw, sh, title, content, fallback_text)
 	title_lbl.text_align = "left"
 	title_lbl.vertical_align = "middle"
 	title_lbl.colors.text = C_TEXT_TITLE
-	title_lbl.text = utf8_util.sanitize(self._title) .. " - 详情"
+	title_lbl.text = utf8_util.sanitize(self._title) .. " - " .. _("MARKDOWN_UI_DETAILS")
 	title_lbl.fit_lines = 1
 	title_lbl.fit_size = true
 	title_lbl.pos = V.v(16, 0)
@@ -468,7 +468,7 @@ function MarkdownView:_add_empty_row(message)
 	lbl.text_align = "center"
 	lbl.vertical_align = "middle"
 	lbl.colors.text = C_TEXT_EMPTY
-	lbl.text = utf8_util.sanitize(message or "暂无内容")
+	lbl.text = utf8_util.sanitize(message or _("MARKDOWN_UI_NO_CONTENT"))
 	lbl.fit_lines = 2
 	lbl.fit_size = true
 	lbl.line_height = 1.4

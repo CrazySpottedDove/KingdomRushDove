@@ -2429,7 +2429,7 @@ function editor:create_plugin(entry)
 	love.filesystem.createDirectory(waves_dir)
 	love.filesystem.createDirectory(waveconfigs_dir)
 
-	love.filesystem.write(plugin_dir .. "/README.md", "# " .. entry .. "\n\nTODO: 描述你的地图\n")
+	love.filesystem.write(plugin_dir .. "/README.md", "# " .. entry .. "\n\n" .. _("EDITOR_UI_README_TODO") .. "\n")
 
 	love.filesystem.write(plugin_dir .. "/" .. entry .. ".lua", [[local hook=require("hook_utils"):new()
 function hook:init(plugin_data)
@@ -2444,7 +2444,7 @@ return hook
 	local cfg = {
 		name = entry,
 		entry = entry,
-		by = "匿名",
+		by = _("EDITOR_UI_ANONYMOUS"),
 		version = "1.0",
 		desc = "",
 		url = "",

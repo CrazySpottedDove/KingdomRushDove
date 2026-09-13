@@ -124,7 +124,7 @@ function screen_settings:init(w, h, params, done_callback)
 	l_title.pos = v(0, 4)
 	l_title.font_name = "sans_bold"
 	l_title.font_size = 20
-	l_title.text = "设置面板"
+	l_title.text = _("SETTINGS_UI_TITLE")
 	l_title.text_align = "center"
 	l_title.colors.text = colors.title_text
 	window:add_child(l_title)
@@ -148,9 +148,9 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(l_lang)
 
 	y = y + h + m
-	h = 28
+	h = 56
 
-	-- only keep zh-Hans, so h 96 -> 24
+	-- 2 locales, each item is 28 high, so h 96 -> 56
 	local sl_lang = SelectList:new(sw * 0.5 - 2 * m, h)
 
 	sl_lang.pos = v(m, y)
@@ -169,7 +169,7 @@ function screen_settings:init(w, h, params, done_callback)
 	l_sound_pool.pos = v(m, y)
 	l_sound_pool.font_name = "sans_bold"
 	l_sound_pool.font_size = 14
-	l_sound_pool.text = "音效池大小"
+	l_sound_pool.text = _("SETTINGS_UI_SOUND_POOL_SIZE")
 	l_sound_pool.text_align = "left"
 	l_sound_pool.colors.text = colors.text_black
 
@@ -183,7 +183,7 @@ function screen_settings:init(w, h, params, done_callback)
 	sl_sound_pool.pos = v(m, y)
 
 	-- 添加音效池大小选项
-	for _, pool_option in pairs({{"2倍", 2}, {"1.5倍", 1.5}, {"1倍", 1}}) do
+	for _, pool_option in pairs({{_("SETTINGS_UI_SOUND_POOL_2X"), 2}, {_("SETTINGS_UI_SOUND_POOL_1_5X"), 1.5}, {_("SETTINGS_UI_SOUND_POOL_1X"), 1}}) do
 		sl_sound_pool:add_item(pool_option[1], pool_option[2])
 	end
 
@@ -220,7 +220,7 @@ function screen_settings:init(w, h, params, done_callback)
 	l_ipv.pos = v(m, y)
 	l_ipv.font_name = "sans_bold"
 	l_ipv.font_size = 14
-	l_ipv.text = "更新使用IPv"
+	l_ipv.text = _("SETTINGS_UI_UPDATE_IPV")
 	l_ipv.text_align = "left"
 	l_ipv.colors.text = colors.text_black
 
@@ -346,7 +346,7 @@ function screen_settings:init(w, h, params, done_callback)
 	y = y + h + m
 	h = 22
 
-	local c_update = CheckBox:new(sw - 2 * m, h, "启动时检查更新")
+	local c_update = CheckBox:new(sw - 2 * m, h, _("SETTINGS_UI_CHECK_UPDATE_ON_START"))
 	c_update.pos = v(sw * 0.5 + m, y)
 	c_update:get_colors().text = colors.text_black
 
@@ -418,7 +418,7 @@ function screen_settings:init(w, h, params, done_callback)
 
 	local l_ver = KLabel(V.v(sw, 12))
 
-	l_ver.text = string.format("版本号：%s", version.id)
+	l_ver.text = string.format(_("SETTINGS_UI_VERSION"), version.id)
 	l_ver.font_name = "sans"
 	l_ver.font_size = 11
 	l_ver.colors.text = colors.text_black

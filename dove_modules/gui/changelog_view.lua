@@ -66,7 +66,7 @@ function ChangelogView:initialize(sw, sh)
 	self._panel_h = panel_h
 	self._ver_idx = 1
 
-	local header = GGPanelHeader:new("更新日志", panel_w - 40)
+	local header = GGPanelHeader:new(_("CHANGELOG_UI_TITLE"), panel_w - 40)
 	header.pos = V.v(20, 14)
 	self.back:add_child(header)
 
@@ -86,7 +86,7 @@ function ChangelogView:initialize(sw, sh)
 		empty_lbl.text_align = "center"
 		empty_lbl.vertical_align = "middle"
 		empty_lbl.colors.text = {160, 150, 120, 255}
-		empty_lbl.text = "暂无更新日志记录"
+		empty_lbl.text = _("CHANGELOG_UI_EMPTY")
 		empty_lbl.pos = V.v(20, 120)
 		self.back:add_child(empty_lbl)
 		return
@@ -100,7 +100,7 @@ function ChangelogView:_build_ui(rs, panel_w, panel_h)
 	local nav_y = 58
 	local lbl_w = 200
 
-	local prev_btn = PluginActionButton:new("上版本", V.v(BTN_W, BTN_H))
+	local prev_btn = PluginActionButton:new(_("CHANGELOG_UI_PREV_VERSION"), V.v(BTN_W, BTN_H))
 	prev_btn.pos = V.v(20, nav_y)
 	self.back:add_child(prev_btn)
 	prev_btn.on_press = function()
@@ -124,7 +124,7 @@ function ChangelogView:_build_ui(rs, panel_w, panel_h)
 	self.back:add_child(ver_lbl)
 	self._ver_lbl = ver_lbl
 
-	local pick_btn = PluginActionButton:new("选择", V.v(54, BTN_H))
+	local pick_btn = PluginActionButton:new(_("Select"), V.v(54, BTN_H))
 	pick_btn.pos = V.v((panel_w - lbl_w) / 2 + lbl_w + 4, nav_y)
 
 	self.back:add_child(pick_btn)
@@ -133,7 +133,7 @@ function ChangelogView:_build_ui(rs, panel_w, panel_h)
 		self:_show_version_picker()
 	end
 
-	local next_btn = PluginActionButton:new("下版本", V.v(BTN_W, BTN_H))
+	local next_btn = PluginActionButton:new(_("CHANGELOG_UI_NEXT_VERSION"), V.v(BTN_W, BTN_H))
 	next_btn.pos = V.v(panel_w - 20 - BTN_W, nav_y)
 	self.back:add_child(next_btn)
 	next_btn.on_press = function()
@@ -268,7 +268,7 @@ function ChangelogView:_show_version_picker()
 	title.text_align = "left"
 	title.vertical_align = "middle"
 	title.colors.text = {244, 221, 165, 255}
-	title.text = "选择版本"
+	title.text = _("CHANGELOG_UI_PICK_VERSION")
 	title.pos = V.v(12, 8)
 	picker:add_child(title)
 
@@ -306,10 +306,10 @@ function ChangelogView:_show_version_picker()
 		lbl.vertical_align = "middle"
 		lbl.colors.text = idx == self._ver_idx and {255, 215, 100, 255} or {200, 190, 160, 255}
 		if idx == 1 then
-			lbl.text = string.format("v%-12s  (%d条)", safe_tostring(ver_info.id), ver_info.count or 0)
+			lbl.text = string.format(_("CHANGELOG_UI_VERSION_ENTRY_NEWEST"), safe_tostring(ver_info.id), ver_info.count or 0)
 		else
 			local newer_id = changelog_index[idx - 1].id
-			lbl.text = string.format("v%s → v%s  (%d条)", safe_tostring(ver_info.id), safe_tostring(newer_id), ver_info.count or 0)
+			lbl.text = string.format(_("CHANGELOG_UI_VERSION_ENTRY_RANGE"), safe_tostring(ver_info.id), safe_tostring(newer_id), ver_info.count or 0)
 		end
 		lbl.fit_lines = 1
 		lbl.pos = V.v(6, 0)

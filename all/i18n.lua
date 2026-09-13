@@ -6,9 +6,8 @@ i18n.msgs = {}
 -- i18n.current_locale = "en"
 i18n.default_locale = "zh-Hans"
 i18n.current_locale = "zh-Hans"
-i18n.supported_locales = {"zh-Hans"}
+i18n.supported_locales = {"zh-Hans", "en"}
 -- "de",
--- "en",
 -- "es",
 -- "fr",
 -- "ja",
@@ -23,8 +22,8 @@ i18n.locale_names = {
 	-- pt = "Português",
 	-- ["zh-Hant"] = "中文 (繁體)",
 	-- fr = "Français",
-	-- en = "English",
 	-- ja = "日本語",
+	en = "English",
 	["zh-Hans"] = "中文 (简体)"
 -- es = "Español"
 }

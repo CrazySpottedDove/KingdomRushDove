@@ -15,10 +15,10 @@ end
 -- Only used in dove, so just in Chinese for quickness
 function GU.armor_value_desc_detailed(v, immune)
 	if immune then
-		return "免疫"
+		return _("Immune")
 	end
 	if not v or type(v) ~= "number" or v <= 0 then
-		return "无"
+		return _("None")
 	end
 	return string.format("%d", v * 100)
 end
@@ -131,7 +131,7 @@ function GU.damage_value_and_cooldown_desc(min, max, cooldown)
 	if min and max and max > 0 then
 		return string.format("%i-%i / %.1f", min, max, cooldown)
 	else
-		return string.format("无 / %.1f", cooldown)
+		return string.format(_("GUI_UTILS_NONE_SLASH_FMT"), cooldown)
 	end
 end
 

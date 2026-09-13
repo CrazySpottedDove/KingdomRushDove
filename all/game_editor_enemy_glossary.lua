@@ -34,7 +34,7 @@ function EnemyGlossaryView:initialize(sw, sh)
 	self.panel = panel
 
 	local title = KLabel:new(v(pw, 34))
-	title.text = "怪物一览表"
+	title.text = _("EDITOR_UI_ENEMY_GLOSSARY")
 	title.text_align = "center"
 	title.vertical_align = "middle"
 	title.colors.background = {232, 232, 232, 255}
@@ -62,14 +62,14 @@ function EnemyGlossaryView:initialize(sw, sh)
 
 	local h1 = KLabel:new(v(320, 26))
 	h1.pos = v(8, 0)
-	h1.text = "英文模板名"
+	h1.text = _("EDITOR_UI_COL_TEMPLATE_EN")
 	h1.vertical_align = "middle"
 	h1.colors.text = {25, 25, 25, 255}
 	self.header:add_child(h1)
 
 	local h2 = KLabel:new(v(380, 26))
 	h2.pos = v(336, 0)
-	h2.text = "中文名"
+	h2.text = _("EDITOR_UI_COL_NAME_CN")
 	h2.vertical_align = "middle"
 	h2.colors.text = {25, 25, 25, 255}
 	self.header:add_child(h2)

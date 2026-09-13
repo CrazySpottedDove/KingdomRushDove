@@ -795,7 +795,7 @@ function sound_db:_play(request, source_pool)
 	local source
 
 	if max == 0 then
-		log.error("看到报告作者：max_sources for %s is 0", opts.source_group)
+		log.error(_("SOUND_DB_MAX_SOURCES_ZERO"), opts.source_group)
 
 		return
 	end
