@@ -79,8 +79,26 @@ local function check_number_format(key, body, expanded)
 	end
 end
 
+--- 文案 key 里编码的技能等级。
+--- 运行时不变量：tt_list[i] 的那条文案一定以 level = i 渲染
+--- （game_gui.lua 的 upgrade_power 分支、screen_map.lua 的技能页），
+--- 所以 key 尾 _N_ / _DESCRIPTION_N 就等于它被渲染时的 level。
+--- 这样 2 级技能（如 sparking_geode）不会因为 level=3 取不到值而误报。
+local function key_level(key)
+	local n = key:match('_(%d)_DESCRIPTION$') or key:match('_DESCRIPTION_(%d)$')
+
+	return n and tonumber(n) or nil
+end
+
 local function check_string(locale, key, s)
 	checked_strings = checked_strings + 1
+
+	local levels = LEVELS
+	local lv = key_level(key)
+
+	if lv then
+		levels = {lv}
+	end
 
 	local spans, spans_err = find_spans(s)
 
@@ -104,7 +122,7 @@ local function check_string(locale, key, s)
 			end
 		end
 
-		for _, level in ipairs(LEVELS) do
+		for _, level in ipairs(levels) do
 			local out = U.balance_format(span.text, {
 				level = level
 			})

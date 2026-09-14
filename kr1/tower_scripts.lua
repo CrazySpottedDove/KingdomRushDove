@@ -6690,7 +6690,7 @@ function scripts.tower_dark_elf.update(this, store)
 					this.controller_soldiers.pow_level = pow.level
 				else
 					if not this._pow_buff_upgraded then
-						SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
+						SU.insert_tower_cooldown_buff(store.tick_ts, this, pow_buff.cooldown_factor)
 
 						this._pow_buff_upgraded = true
 					end
@@ -7394,10 +7394,13 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 			tower.tower_upgrade_persistent_data.souls_extra_damage_min = tower.tower_upgrade_persistent_data.souls_extra_damage_min + tower.powers.skill_buff.damage_min
 			tower.tower_upgrade_persistent_data.souls_extra_damage_max = tower.tower_upgrade_persistent_data.souls_extra_damage_max + tower.powers.skill_buff.damage_max
 
-			if tower.tower_upgrade_persistent_data.souls_extra_damage_min / tower.powers.skill_buff.damage_min <= 25 then
-				SU.insert_tower_cooldown_buff(store.tick_ts, tower, 0.99)
+			if tower.tower_upgrade_persistent_data.souls_extra_damage_min / tower.powers.skill_buff.damage_min <= tower.powers.skill_buff.soul_cooldown_max_stacks then
+				SU.insert_tower_cooldown_buff(store.tick_ts, tower, tower.powers.skill_buff.soul_cooldown_factor)
 			end
 		else
+			-- 这里的 tower 是附近随机一座防御塔，不一定带 skill_buff，配置从暮光长弓模板取
+			local buff_cfg = E:get_template("tower_dark_elf_lvl4").powers.skill_buff
+
 			if not tower.tower_upgrade_persistent_data.dark_elf_soul_damage_factor then
 				tower.tower_upgrade_persistent_data.dark_elf_soul_damage_factor = 0
 			end
@@ -7407,7 +7410,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 			U.insert_tower_upgrade_function(tower, function(t, d)
 				SU.insert_tower_damage_factor_buff(t, t.tower_upgrade_persistent_data.dark_elf_soul_damage_factor)
 			end, "dark_elf_soul_damage_factor")
-			SU.insert_tower_damage_factor_buff(tower, 0.008)
+			SU.insert_tower_damage_factor_buff(tower, buff_cfg.soul_tower_damage_factor)
 		end
 
 		if b.mod or b.mods then
