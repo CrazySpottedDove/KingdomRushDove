@@ -2574,19 +2574,48 @@ function U.append_mod(field, mod_name)
 end
 
 -- ── 文案内嵌表达式 ──────────────────────────────────────────────
--- 写法：%$ ... %$ 里写 Lua 表达式（在原 balance 数据被内联进模板之后，
--- 数值一律从模板/公式上取；数值本身已经不再有 balance 这一份数据了）
+-- 数值一律从模板/公式上取（数值本身已经不再有 balance 这一份数据了）。
+--
+-- 两种写法，都在 %$ ... %$ 之间：
+--   1. 单个表达式：  %$ a.damage_min + a.damage_inc * level %$
+--   2. 语句块（自带 return，可用 local）：%$ local a = aura_x.aura\nreturn a.damage_min * tdmg %$
+-- 编译时先按写法 1 试，语法不通过才按写法 2 试，因此写法 2 是纯增量，
+-- 既有文案零迁移。
+--
 -- 环境里有：
 --        T("模板名") -> entity_db 的模板（等价 E:get_template）
+--        裸模板名    -> 同上，写 aura_x 等价于写 T("aura_x")
 --        E          -> entity_db 本身
 --        level      -> 当前技能等级（调用处通过 ctx 传入）
+--        this       -> 当前被描述对象（ctx.ent 优先，其次 ctx.tpl）
+--        tdmg/tcd   -> this 的有效伤害/冷却倍率（含局内加成；无对象时为 nil）
+--        grow(t, k) -> t[k] + t[k .. "_inc"] * level
+--                      （只用于同名字段成对；共享 inc 的 damage_inc 用语句块 + local）
 --        math / FPS / floor / ceil / min / max ...
 -- 表达式只在首次出现时编译一次，之后走缓存（描述每帧都在画）。
 -- 代入的数字统一走 U.format_text_number（整数原样、至多两位小数）。
--- 注意：这里不做"entity_db 是否已加载"的守卫 —— 调用方必须保证在所有使用
--- T(...) 的文案被展开之前 E:Load() 已经跑过（目前只有游戏内升级菜单与图鉴
+-- 注意 1：这里不做"entity_db 是否已加载"的守卫 —— 调用方必须保证在所有使用
+-- 模板的文案被展开之前 E:Load() 已经跑过（目前只有游戏内升级菜单与图鉴
 -- 技能页两处调用：前者必然有对局，后者 EncyclopediaView:show() 自己先 E:Load()）。
+-- 注意 2：用了 tdmg/tcd 的文案，调用方必须传 ctx.ent（或 ctx.tpl），否则
+-- 求值拿到 nil 会让整段渲染成空串；make check-text 会挡住这类漏传。
 local expr_cache = {}
+
+-- 有效倍率短名：前缀 -> 组件名。用 t 前缀而不是裸 dmg，是为了给其他实体类别
+-- 留位置（例：将来加 u = "unit"，就自动多出 udmg / ucd）。
+local FACTOR_COMPONENTS = {
+	t = "tower"
+}
+local factor_aliases = {}
+
+for short, comp in pairs(FACTOR_COMPONENTS) do
+	factor_aliases[#factor_aliases + 1] = {
+		comp = comp,
+		dmg = short .. "dmg",
+		cd = short .. "cd"
+	}
+end
+
 local expr_env = {
 	math = math,
 	string = string,
@@ -2611,7 +2640,46 @@ local expr_env = {
 	end
 }
 
+--- 属性在当前等级的线性取值：t[k] + t[k.."_inc"] * level。
+--- 只支持「同名字段成对」这一种约定（slow.factor / slow.factor_inc）。
+--- 共享 inc 的写法（aura.damage_min / aura.damage_inc）请用语句块 + local 展开，
+--- 不要在这里传 'damage_min'：它没有 damage_min_inc，会直接报错。
+function expr_env.grow(t, k)
+	local base, inc = t[k], t[k .. "_inc"]
+
+	if base == nil or inc == nil then
+		error(string.format("grow 需要 %s 与 %s_inc 同时存在（共享 inc 请改用 local 展开）", k, k), 2)
+	end
+
+	return base + inc * expr_env.level
+end
+
 expr_env._G = expr_env
+
+-- 裸模板名：表达式里没绑定的标识符一律当模板名查。
+-- 模板名与运行期短名（T/E/this/tdmg/tcd/grow/level/math 等）不冲突。
+setmetatable(expr_env, {
+	__index = function(_, k)
+		return E:get_template(k)
+	end
+})
+
+--- 按 ctx 刷新表达式的上下文（this / level / tdmg / tcd）。
+--- 必须在每次 pcall 之前调用：短名是按调用点变化的，不能编译期固化。
+local function refresh_text_env(ctx)
+	local this = ctx and (ctx.ent or ctx.tpl)
+
+	expr_env.this = this
+	expr_env.level = (ctx and ctx.level) or 0
+
+	for i = 1, #factor_aliases do
+		local a = factor_aliases[i]
+		local c = this and this[a.comp]
+
+		expr_env[a.dmg] = c and c.damage_factor
+		expr_env[a.cd] = c and c.cooldown_factor
+	end
+end
 
 --- 文案里的数值显示格式：整数原样，否则最多两位小数并去掉末尾多余的 0。
 --- 与 _assets/kr1-desktop/strings/hero_room_special.lua 的 str() 规则保持一致，
@@ -2630,12 +2698,18 @@ function U.format_text_number(v)
 	return (s:gsub("%.0+$", ""):gsub("(%.%d-)0+$", "%1"))
 end
 
---- 求值一个内嵌表达式；失败时返回 nil 并记日志
+--- 求值一个内嵌表达式（或语句块）；失败时返回 nil 并记日志
 function U.eval_text_expr(expr, ctx)
 	local fn = expr_cache[expr]
 
 	if fn == nil then
+		-- 先按单个表达式编译；语法不通过再按语句块编译（语句块自带 return）。
+		-- 表达式形式永远优先，两种写法不会互相干扰。
 		local chunk, err = loadstring("return (" .. expr .. ")")
+
+		if not chunk then
+			chunk, err = loadstring(expr)
+		end
 
 		if chunk then
 			setfenv(chunk, expr_env)
@@ -2654,7 +2728,7 @@ function U.eval_text_expr(expr, ctx)
 		return nil
 	end
 
-	expr_env.level = (ctx and ctx.level) or 0
+	refresh_text_env(ctx)
 
 	local ok, v = pcall(fn)
 

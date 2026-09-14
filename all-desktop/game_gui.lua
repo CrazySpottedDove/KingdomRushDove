@@ -8753,9 +8753,6 @@ function TowerMenuTooltip:show(entity, item)
 	self.phrase_label.hidden = true
 
 	if item.action == "tw_upgrade" then
-		self.title.text = item.tt_title or U.format_text_expr(_(item.action_arg))
-		self.desc:set_text(U.format_text_expr(item.tt_desc) or "")
-
 		local te
 
 		if entity.tower_holder then
@@ -8767,6 +8764,14 @@ function TowerMenuTooltip:show(entity, item)
 		else
 			te = E:get_template(item.action_arg)
 		end
+
+		-- 待建的下一级塔还没有实体，用模板充当文案上下文（即显示基准值）
+		self.title.text = item.tt_title or U.format_text_expr(_(item.action_arg), {
+			ent = te
+		})
+		self.desc:set_text(U.format_text_expr(item.tt_desc, {
+			ent = te
+		}) or "")
 
 		local stats = te.info.fn(te)
 
@@ -8803,14 +8808,16 @@ function TowerMenuTooltip:show(entity, item)
 			local texts = item.tt_list[current_level]
 			self.title.text = texts.tt_title
 			self.desc:set_text(text_diff.mark_number(U.format_text_expr(texts.tt_desc, {
-				level = current_level
+				level = current_level,
+				ent = entity
 			})))
 		elseif power.level == 0 then
 			-- 未解锁：显示下一级数据
 			local next_texts = item.tt_list[next_level]
 			self.title.text = next_texts.tt_title
 			self.desc:set_text(text_diff.mark_number(U.format_text_expr(next_texts.tt_desc, {
-				level = next_level
+				level = next_level,
+				ent = entity
 			})))
 		else
 			-- 未满级：显示对比（当前级 → 下一级）
@@ -8821,10 +8828,12 @@ function TowerMenuTooltip:show(entity, item)
 
 			-- 使用智能对比生成富文本
 			local current_desc = U.format_text_expr(current_texts.tt_desc, {
-				level = current_level
+				level = current_level,
+				ent = entity
 			})
 			local next_desc = U.format_text_expr(next_texts.tt_desc, {
-				level = next_level
+				level = next_level,
+				ent = entity
 			})
 			local diff_text = text_diff.create_diff_text(current_desc, next_desc)
 
@@ -8836,7 +8845,9 @@ function TowerMenuTooltip:show(entity, item)
 		end
 
 		if item.tt_desc then
-			self.desc:set_text(U.format_text_expr(item.tt_desc))
+			self.desc:set_text(U.format_text_expr(item.tt_desc, {
+				ent = entity
+			}))
 		end
 	elseif item.action == "tw_sell" then
 		self.title.text = _("Sell Tower")
@@ -8849,7 +8860,9 @@ function TowerMenuTooltip:show(entity, item)
 
 		if entity.tower_upgrade_persistent_data.max_current_mode == 0 then
 			self.title.text = item.tt_title
-			self.desc:set_text(U.format_text_expr(item.tt_desc))
+			self.desc:set_text(U.format_text_expr(item.tt_desc, {
+				ent = entity
+			}))
 		else
 			self.title.text = item["tt_title_mode" .. current_mode]
 			self.desc:set_text(item["tt_desc_mode" .. current_mode])

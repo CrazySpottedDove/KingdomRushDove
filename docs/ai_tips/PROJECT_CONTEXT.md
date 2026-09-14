@@ -247,6 +247,64 @@ Windows/Linux/Android 分别使用 `librender_sort.dll`、`librender_sort.so`、
 
 支持 `.exo3`、`.exo`、`.lua` 格式的骨骼动画，数据存于 `kr1/data/exoskeletons/`。
 
+### 文案内嵌表达式（`%$ ... %$`）
+
+游戏内所有"带数字的技能说明"都不是写死的数字，而是从模板/公式现场算出来的。
+机制在 `all/utils.lua`（`U.eval_text_expr` / `U.format_text_expr`），文案在
+`_assets/kr1-desktop/strings/<locale>.lua`。
+
+两种写法，都在 `%$ ... %$` 之间：
+
+```lua
+-- 写法 1：单个表达式
+"每%$T('tower_bastion').attacks.list[1].cooldown%$秒攻击一次。"
+-- 写法 2：语句块，自带 return，可以用 local（写法 1 语法不通过时才启用，故两者互不干扰）
+"共造成%$local a = aura_fiery_mist_baby_ashbite.aura\nreturn (a.damage_min + a.damage_inc * level) * a.duration / a.cycle_time * tdmg%$点伤害。"
+```
+
+环境里可用的名字：
+
+| 名字 | 含义 |
+|---|---|
+| `T("模板名")` / **裸模板名** | entity_db 的模板；写 `aura_x` 等价于 `T("aura_x")` |
+| `this` | 当前被描述对象（调用方通过 `ctx.ent` 注入；图鉴传 `E:create_entity(塔名)`） |
+| `tdmg` / `tcd` | `this.tower.damage_factor` / `cooldown_factor`，**含局内加成** |
+| `grow(t, k)` | `t[k] + t[k.."_inc"] * level`，只用于同名字段成对 |
+| `level` | 当前技能等级（调用方通过 `ctx.level` 注入） |
+| `E` / `math` / `floor` / `ceil` / `min` / `max` / `FPS` … | 常规工具 |
+
+**关键约定**：
+
+1. **局内实时值**：`tdmg`/`tcd` 取的是 `ctx.ent` 上的活值（`entity.tower.damage_factor`
+   在局内会被 endless 科技、光环等通过 `SU.insert_tower_damage_factor_buff` 改写）。
+   图鉴没有实体，传 `E:create_entity(塔名)` 即得基准值。**用 `tdmg` 却不传 `ctx.ent`
+   会让整段渲染成空串**，`make check-text` 会挡住。
+   **塔技能的伤害倍率一律写 `tdmg`，不要再写 `T('x').tower.damage_factor`** ——
+   后者读的是模板基准值，局内加成不会反映到技能文案上（踩过这个坑，
+   `make check-text` 现在会把它当硬错误拦下）。
+2. **共享 inc 不要用 grow**：`aura.damage_min + aura.damage_inc * level` 这种共享
+   `_inc` 的写法请用语句块 + `local` 展开；`grow(t,'damage_min')` 会直接报错
+   （没有 `damage_min_inc`）。
+3. **短名准入**：只有当某条路径在表达式里出现 ≥50 次、且在所有出现处语义唯一时，
+   才在 `expr_env` 里提升为短名（如 `tdmg` 是 499 处同源）。攻击路径
+   `T('x').attacks.list[N]` 虽然高频但不唯一（102 条里 75 条指向另一个模板），
+   所以不抽象。加短名的位置是 `all/utils.lua` 的 `FACTOR_COMPONENTS`（表驱动，
+   加 `u = "unit"` 即多出 `udmg`/`ucd`）。
+4. **静态检查**：改完文案跑 `make check-text`。它会校验模板存在性、自由标识符
+   白名单（防裸模板名拼错）、`this` 上下文可推导、三种等级下都能求值、数字格式。
+5. **塔的「每隔 X 秒」一律乘 `tcd`**：运行时 `U.tower_ready_to_use_power`
+   （`power_attack.cooldown * tw.cooldown_factor`）与 `ready_to_attack(a, store,
+   this.tower.cooldown_factor)` 都会乘塔的冷却系数，所以文案里的间隔也要乘，
+   否则局内拿到冷却加成后显示的时长是错的。写法是 `(冷却表达式) * tcd`（括号
+   必需，冷却常是 `cooldown_base + cooldown_inc * level` 这种和式）。
+   **例外（不要乘，运行时没有这个系数）**：
+   - `timed_actions.list[*].cooldown`（`SU.y_soldier_timed_actions` 是裸比较）
+   - `mod_druid_sylvan.ray_cooldown`（脚本里是 `> this.ray_cooldown`）
+   - `power_reinforcements_control.cooldown`（英雄技能，不是塔）
+   - 士兵/子单位自身的冷却（乘的是 `unit.cooldown_factor`，需要士兵实体而非塔）
+   - 「冷却降低/加快 X 秒」「攻速提升 X%」这类**非间隔**语义
+     （`cooldown_reduction` / `cooldown_factor` / `caster_cooldown_refund` 等）
+
 ---
 
 ## 六、渲染架构要点
