@@ -2579,12 +2579,10 @@ tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].loop = false
 
-local balance = require("kr1.data.balance")
 local v = vec_2
 local vv = vec_1
 
 tt = E:register_t("boss_pig", "boss")
-local b
 E:add_comps(tt, "melee", "auras")
 tt.enemy.gold = 250
 tt.enemy.lives_cost = 20
@@ -3054,7 +3052,6 @@ tt.death_bullet_scrap = "bullet_boss_grymbeard_death_scrap_"
 tt.sound_death = "Stage27BFGrymbeardDeath"
 
 tt = E:register_t("controller_stage_16_overseer")
-b = balance.specials.stage16_overseer
 E:add_comps(tt, "editor", "pos", "main_script", "render", "health", "info", "ui")
 tt.main_script.update = scripts.controller_stage_16_overseer.update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -3071,26 +3068,26 @@ tt.render.sprites[2].sort_y_offset = 3
 tt.render.sprites[2].offset = v(20, 620)
 tt.hit_point_template = "enemy_overseer_hit_point"
 tt.hit_point_pos = {v(415, 425), v(520, 400), v(625, 425)}
-tt.health.hp_max = b.hp
+tt.health.hp_max = 40000
 tt.health.ignore_delete_after = true
 tt.info.enc_icon = 38
 tt.info.portrait_boss = "boss_health_bar_icon_0004"
-tt.phase_per_hp_threshold = b.phase_per_hp_threshold
-tt.phase_per_time = b.phase_per_time
-tt.change_tower_cooldown = b.change_tower_cooldown
-tt.change_tower_amount = b.change_tower_amount
-tt.glare_cooldown = b.glare_cooldown
-tt.glare_duration = b.glare_duration
-tt.heal_cooldown = b.heal_cooldown
-tt.heal_duration = b.heal_duration
-tt.heal_per_second = b.heal_per_second
-tt.downgrade_cooldown = b.downgrade_cooldown
-tt.downgrade_count = b.downgrade_count
-tt.slow_cooldown = b.slow_cooldown
-tt.slow_count = b.slow_count
+tt.phase_per_hp_threshold = {100, 90, 80, 70, 50, 20}
+tt.phase_per_time = {30, 75, 90, 120, 100000000}
+tt.change_tower_cooldown = {nil, 60, 60, 45, 30}
+tt.change_tower_amount = {nil, 1, 1, 2, 3}
+tt.glare_cooldown = {nil, nil, nil, 36, 33, 30}
+tt.glare_duration = {nil, nil, nil, 4, 5, 6}
+tt.heal_cooldown = {nil, nil, nil, 30, 30, 15}
+tt.heal_duration = {nil, nil, nil, 6, 8, 10}
+tt.heal_per_second = {nil, nil, nil, 150, 450, 200}
+tt.downgrade_cooldown = {nil, nil, 60, 55, 45, 40}
+tt.downgrade_count = {nil, nil, 1, 2, 2, 2}
+tt.slow_cooldown = {nil, 50, 50, 45, 40, 35}
+tt.slow_count = {nil, 1, 2, 3, 3, 2}
 tt.holders_close = {"6", "7", "8", "9", "10"}
 tt.swap_delay = fts(60)
-tt.destroy_holder_cooldown = b.destroy_holder.cooldown
+tt.destroy_holder_cooldown = {nil, nil, nil, nil, nil, 20}
 tt.holders_to_destroy = {
 	"1",
 	"13",
@@ -3169,7 +3166,7 @@ tt.idle_cooldown_min = 2
 tt.idle_cooldown_max = 6
 tt.idle_start_anims = {"startidle2", "startidle1"}
 tt.idle_fight_anims = {"idle1", "idle2", "idle4", "idle5", "idle6"}
-tt.first_time_cooldown = b.first_time_cooldown
+tt.first_time_cooldown = 5
 tt.life_hurt_threshold = {33, 66}
 tt.destroy_holders_template = "decal_stage_16_holder_destroy_fx"
 tt.destroy_holders_crater_template = "decal_stage_16_holder_destroy_crater"
@@ -3202,8 +3199,8 @@ tt.shader_args = {
 	tint_factor = 0.5,
 	tint_color = {0.5, 0, 0.5, 1}
 }
-tt.slow_factor = b.slow.factor
-tt.modifier.duration = b.slow.duration
+tt.slow_factor = 0.5
+tt.modifier.duration = 12
 
 tt = E:register_t("bullet_stage_16_overseer_destroy_holders", "bullet")
 tt.bullet.damage_type = DAMAGE_NONE
@@ -3223,7 +3220,7 @@ tt = E:register_t("enemy_overseer_hit_point", "enemy")
 E:add_comps(tt, "glare_kr5")
 tt.enemy.gold = 250
 tt.enemy.melee_slot = v(0, 0)
-tt.health.hp_max = b.hp
+tt.health.hp_max = 40000
 tt.unit.blood_color = BLOOD_VIOLET
 tt.main_script.update = scripts.enemy_overseer_hit_point.update
 tt.health.on_damage = scripts.enemy_overseer_hit_point.on_damage
@@ -3238,7 +3235,6 @@ tt.move_bounds = v(25, 25)
 tt.move_speed = v(0.2, 0.2)
 
 tt = E:register_t("controller_stage_16_mouth_left")
-b = balance.specials.stage16_overseer.mouth_left
 E:add_comps(tt, "editor", "pos", "main_script", "render")
 tt.main_script.update = scripts.controller_stage_16_overseer_mouth_door.update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -3254,11 +3250,9 @@ tt.check_vis_bans = F_BOSS
 
 tt = E:register_t("controller_stage_16_mouth_right", "controller_stage_16_mouth_left")
 tt.render.sprites[1].flip_x = true
-b = balance.specials.stage16_overseer.mouth_right
 tt.check_pos = v(721, 553)
 
 tt = E:register_t("controller_stage_16_tentacle_left")
-b = balance.specials.stage16_overseer.tentacle_left
 E:add_comps(tt, "editor", "pos", "main_script", "render")
 tt.main_script.update = scripts.controller_stage_16_overseer_tentacle.update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -3266,22 +3260,27 @@ tt.render.sprites[1].prefix = "overseer_tentacleDef"
 tt.render.sprites[1].name = "idletrapped"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-tt.config = b
+tt.config = {
+	cooldown = {nil, nil, nil, 40, 30, 20},
+	cooldown_attack_soldiers = {nil, nil, nil, nil, 35, 25}
+}
 tt.shot_delay = fts(24)
 tt.bullet = "bullet_stage_16_overseer_tentacle_spawn"
 tt.spawn_offset = v(90, -130)
 tt.spawn_pos = {v(76, 332), v(218, 424)}
 tt.spawn_path = {1, 2}
 tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_left"
-tt.first_cooldown = balance.specials.stage16_overseer.first_time_cooldown
+tt.first_cooldown = 5
 tt.sound_rumble = "Stage16OverseerRumble"
 tt.sound_unchain = "Stage16OverseerUnchainLeftRight"
 tt.sound_spawn = "Stage16OverseerSpawnerCast"
 
 tt = E:register_t("controller_stage_16_tentacle_right", "controller_stage_16_tentacle_left")
 tt.render.sprites[1].flip_x = true
-b = balance.specials.stage16_overseer.tentacle_right
-tt.config = b
+tt.config = {
+	cooldown = {nil, nil, 45, 45, 35, 25},
+	cooldown_attack_soldiers = {nil, nil, nil, 40, 30, 20}
+}
 tt.is_right = true
 tt.spawn_offset = v(-80, -150)
 tt.spawn_pos = {v(850, 446), v(860, 206)}
@@ -3289,7 +3288,6 @@ tt.spawn_path = {3, 4}
 tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_right"
 
 tt = E:register_t("bullet_stage_16_overseer_tentacle_spawn", "bomb")
-local b = balance.specials.stage16_overseer.tentacle_bullet_explosion_damage
 tt.sound_events.hit_water = nil
 tt.render.sprites[1].name = "overseer_fx_overseer_proyectile"
 tt.bullet.hit_fx = "fx_stage_16_overseer_tentacle_hit_decal"
@@ -3302,13 +3300,13 @@ tt.bullet.damage_max = 0
 tt.main_script.update = scripts.bullet_stage_16_overseer_tentacle_spawn.update
 tt.spawn_offset = {v(-40, 0), v(0, 20), v(30, 0), v(0, -30), v(-20, 0)}
 tt.explosion_damage = {}
-tt.explosion_damage.range = b.range
+tt.explosion_damage.range = 70
 tt.explosion_damage.vis_flags = bor(F_RANGED)
 tt.explosion_damage.vis_bans = bor(F_ENEMY)
-tt.explosion_damage.damage_type = b.damage_type
-tt.explosion_damage.damage_min = b.damage_min
-tt.explosion_damage.damage_max = b.damage_max
-tt.spawn_amounts_per_phase = balance.specials.stage16_overseer.tentacle_spawns_per_phase
+tt.explosion_damage.damage_type = DAMAGE_PHYSICAL
+tt.explosion_damage.damage_min = 120
+tt.explosion_damage.damage_max = 180
+tt.spawn_amounts_per_phase = {0, 0, 3, 3, 4, 5}
 tt.sound_events.insert = nil
 tt.sound_events.hit = "Stage16OverseerSpawnerImpact"
 

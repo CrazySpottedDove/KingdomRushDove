@@ -3289,7 +3289,7 @@ function PluginManagerView:apply()
 		return
 	end
 
-	local hot_ok, _ = plugin_main:can_hot_apply(changes)
+	local hot_ok = plugin_main:can_hot_apply(changes)
 	if not hot_ok then
 		-- 存在无法热重载的修改：沿用原重启逻辑
 		self:_stop_http_thread()

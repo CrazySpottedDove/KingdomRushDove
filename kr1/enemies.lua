@@ -6809,7 +6809,6 @@ tt.enemy.melee_slot.x = tt.enemy.melee_slot.x * 1.2
 -- G5
 local v = vec_2
 local vv = vec_1
-local balance = require("kr1.data.balance")
 
 tt = E:register_t("enemy_hog_invader", "enemy")
 E:add_comps(tt, "melee")
@@ -8000,36 +7999,35 @@ tt.sound_events.death = "EnemyCrystalGolemDeath"
 tt.wake_up_sound = "Stage10ObeliskEffectGolemSpawnGolem"
 
 tt = E:register_t("enemy_stage_11_cult_leader_illusion", "enemy")
-local b = balance.specials.stage11_cult_leader.illusion
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 tt.ui.click_rect = r(-23, 0, 46, 60)
 tt.enemy.melee_slot = v(15, 0)
-tt.health.hp_max = b.hp_max
-tt.health.magic_armor = b.magic_armor
-tt.health.armor = b.armor
+tt.health.hp_max = 150
+tt.health.magic_armor = 0
+tt.health.armor = 0
 tt.health_bar.offset = v(0, 70)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.unit.hit_offset = v(0, 31)
 tt.unit.head_offset = v(0, 21)
 tt.unit.mod_offset = v(0, 16)
 tt.unit.show_blood_pool = false
-tt.motion.max_speed = b.max_speed
+tt.motion.max_speed = 20
 tt.sound_events.death = "Stage11MydriasIllusionDeath"
 tt.info.enc_icon = 25
 tt.info.portrait = "kr5_info_portraits_enemies_0026"
 tt.main_script.update = scripts.enemy_stage_11_cult_leader_illusion.update
 tt.melee.range = 72
-tt.melee.attacks[1].cooldown = b.melee_attack.cooldown
-tt.melee.attacks[1].damage_max = b.melee_attack.damage_max
-tt.melee.attacks[1].damage_min = b.melee_attack.damage_min
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 5
+tt.melee.attacks[1].damage_min = 5
 tt.melee.attacks[1].hit_time = fts(12)
 tt.melee.attacks[1].hit_fx = "fx_stage_11_cult_leader_attack_hit"
 tt.melee.attacks[1].hit_fx_offset = v(25, 35)
 tt.ranged.attacks[1].bullet = "bullet_stage_11_cult_leader_illusion"
 tt.ranged.attacks[1].bullet_start_offset = {v(25, 45)}
-tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
-tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
-tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
+tt.ranged.attacks[1].cooldown = 1.5
+tt.ranged.attacks[1].max_range = 100
+tt.ranged.attacks[1].min_range = 10
 tt.ranged.attacks[1].shoot_time = fts(18)
 tt.ranged.attacks[1].hold_advance = true
 tt.ranged.attacks[1].animation = "rangedattack"
@@ -8038,8 +8036,8 @@ tt.timed_attacks.list[1].animation_start = "skill"
 tt.timed_attacks.list[1].animation_loop = "skillloop"
 tt.timed_attacks.list[1].animation_end = "skillout"
 tt.timed_attacks.list[1].cast_time = fts(36)
-tt.timed_attacks.list[1].cooldown = b.chain.cooldown
-tt.timed_attacks.list[1].max_range = b.chain.max_range
+tt.timed_attacks.list[1].cooldown = 1
+tt.timed_attacks.list[1].max_range = 160
 tt.timed_attacks.list[1].min_range = 0
 tt.timed_attacks.list[1].mod = "mod_enemy_stage_11_cult_leader_illusion_chain"
 tt.timed_attacks.list[2] = E:clone_c("custom_attack")
@@ -8053,11 +8051,11 @@ tt.render.sprites[1].prefix = "mydrias_clone"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].angles.walk = {"walk", "walk", "walkdown"}
 tt.chain_every = fts(15)
-tt.nodes_limit = b.nodes_limit
-tt.chain_illusion_ttl = b.chain.duration
-tt.shield_illusion_ttl = b.shield.duration
+tt.nodes_limit = 20
+tt.chain_illusion_ttl = 12
+tt.shield_illusion_ttl = 12
 tt.fx_spawn = "fx_stage_11_cult_leader_spawn"
-tt.spawn_charge_time = b.spawn_charge_time
+tt.spawn_charge_time = 5
 tt.sound_spawn = "EnemyTwistedSisterSummonSpawn"
 tt.sound_shield = "Stage11MydriasIllusionShieldCast"
 tt.sound_tentacles_spawn = "Stage11MydriasIllusionTendrilsCast"
@@ -8065,14 +8063,13 @@ tt.sound_tentacles_death = "Stage11MydriasIllusionTendrilsDeath"
 tt.vis.bans = bor(F_TELEPORT)
 
 tt = E:register_t("bullet_stage_11_cult_leader_illusion", "bolt_enemy")
-local b = balance.specials.stage11_cult_leader.illusion
 tt.render.sprites[1].prefix = "mydrias_proyectile"
 tt.render.sprites[1].flip_x = true
 tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.bullet.hit_fx = "fx_stage_11_cult_leader_attack_hit"
 tt.bullet.acceleration_factor = 0.5
-tt.bullet.damage_min = b.ranged_attack.damage_min
-tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.damage_min = 16
+tt.bullet.damage_max = 24
 tt.bullet.max_speed = 360
 tt.bullet.particles_name = "ps_bullet_stage_11_cult_leader"
 tt.bullet.align_with_trajectory = true
@@ -9374,7 +9371,6 @@ tt.water_fixed_speed = {
 }
 
 tt = E:register_t("enemy_crocs_hydra", "enemy")
-local b
 E:add_comps(tt, "melee", "timed_attacks", "water")
 tt.info.enc_icon = 56
 tt.info.portrait = "kr5_info_portraits_enemies_0064"
@@ -9778,7 +9774,6 @@ tt.render.sprites[1].hide_after_runs = 1
 tt.render.sprites[1].z = Z_BULLETS
 
 tt = E:register_t("aura_stage_09_spawn_nightmare_convert", "aura")
-b = balance.specials.stage09_spawn_nightmares
 tt.aura.duration = 1e+99
 tt.aura.radius = 4
 tt.include_templates = {"enemy_lesser_sister_nightmare"}
@@ -9786,7 +9781,59 @@ tt.entity_to_spawn = "enemy_armored_nightmare"
 tt.spawn_fx = "fx_stage_09_portal_path_spawn_fx"
 tt.portal_offset = v(-15, 0)
 tt.main_script.update = scripts.aura_stage_09_spawn_nightmare_convert.update
-tt.wave_config = b.wave_config
+tt.wave_config = {{
+	{},
+	{},
+	{{
+		duration = 28,
+		time_start = 10
+	}},
+	{{
+		duration = 28,
+		time_start = 10
+	}},
+	{},
+	{},
+	{{
+		duration = 30,
+		time_start = 10
+	}},
+	{},
+	{{
+		duration = 30,
+		time_start = 10
+	}},
+	{},
+	{{
+		duration = 52,
+		time_start = 10
+	}},
+	{{
+		duration = 40,
+		time_start = 10
+	}},
+	{},
+	{{
+		duration = 40,
+		time_start = 12
+	}},
+	{{
+		duration = 70,
+		time_start = 10
+	}}
+}, {{}, {}, {}, {{
+	duration = 70,
+	time_start = 20
+}}, {}, {{
+	duration = 107,
+	time_start = 21
+}}}, {{{
+	duration = 110,
+	time_start = 74
+}, {
+	duration = 330,
+	time_start = 310
+}}}}
 tt.sound_spawn = "EnemyTwistedSisterSummonSpawn"
 
 tt = E:register_t("aura_stage_09_spawn_nightmare_convert_spawn_fx", "aura")
@@ -10288,7 +10335,6 @@ tt.tween.props[1].keys = {{0, 0}, {fts(15), 255}}
 tt.tween.remove = false
 
 tt = E:register_t("mod_stage_25_torso_missile_stun", "modifier")
-local b = balance.specials.stage25_torso.missile
 E:add_comps(tt, "render", "tween")
 tt.main_script.update = scripts.mod_stage_25_torso_missile_stun.update
 tt.main_script.remove = scripts.mod_stage_25_torso_missile_stun.remove
@@ -10305,15 +10351,14 @@ tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, v(0.7, 0.7)}, {fts(10), v(1, 1)}}
 tt.tween.remove = false
-tt.repair_cost = b.repair_cost
+tt.repair_cost = 50
 tt.water_decal_t = "decal_mod_stage_25_torso_missile_stun_water"
 tt.hand_decal_t = "decal_mod_stage_25_torso_missile_stun_hand"
 
 tt = E:register_t("mod_stage_27_ray_stun", "modifier")
-b = balance.specials.stage27_head
 E:add_comps(tt, "render", "tween")
 tt.main_script.update = scripts.mod_stage_27_ray_stun.update
-tt.modifier.duration = b.ray_stun_duration
+tt.modifier.duration = 15
 tt.render.sprites[1].prefix = "dclenanos_stage05_headplasmaDef"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = true
@@ -10334,7 +10379,6 @@ tt.sound_events.insert = "EnemyRevenantSoulcallerBlockTowerIn"
 tt.sound_events.remove = "EnemyRevenantSoulcallerBlockTowerOut"
 
 tt = E:register_t("mod_bullet_stage_27_tower_stun", "modifier")
-local b = balance.specials.stage27_head
 E:add_comps(tt, "render")
 tt.main_script.update = scripts.mod_bullet_stage_27_tower_stun.update
 tt.main_script.remove = scripts.mod_bullet_stage_27_tower_stun.remove
@@ -10345,7 +10389,7 @@ tt.render.sprites[1].offset = v(-1, 10)
 tt.render.sprites[1].sort_y_offset = -10
 tt.sound_events.insert = "EnemyRevenantSoulcallerBlockTowerIn"
 tt.sound_events.remove = "EnemyRevenantSoulcallerBlockTowerOut"
-tt.repair_cost = b.tower_stun_repair_cost
+tt.repair_cost = {50, 75, 100, 125, 150, 175, 200, 225, 250, 275}
 tt.hand_decal_t = "decal_mod_stage_25_torso_missile_stun_hand"
 tt.modifier.duration = 4
 

@@ -679,8 +679,8 @@ function scripts.soldier_barbarian.on_power_upgrade(this, power_name, power)
 		a.damage_min_base = a.damage_min
 		a.damage_max_base = a.damage_max
 	end
-	a.damage_min = a.damage_min_base + power.level * this.melee.attacks[1].damage_inc * 0.5
-	a.damage_max = a.damage_max_base + power.level * this.melee.attacks[1].damage_inc * 0.5
+	a.damage_min = a.damage_min_base + power.level * this.melee.attacks[1].damage_inc * power.twister_damage_factor
+	a.damage_max = a.damage_max_base + power.level * this.melee.attacks[1].damage_inc * power.twister_damage_factor
 end
 
 scripts.soldier_sasquash = {}
@@ -3502,7 +3502,7 @@ function scripts.mod_ray_arcane_disintegrate.update(this, store)
 
 				break
 			else
-				local d = E.assign_damage(bor(DAMAGE_TRUE), (642 + target.health.hp_max * 0.047) * m.damage_factor, this.id, target.id)
+				local d = E.assign_damage(bor(DAMAGE_TRUE), (m.boss_damage_base + target.health.hp_max * m.boss_damage_hp_percent) * m.damage_factor, this.id, target.id)
 				d.pop = m.pop
 				d.pop_chance = m.pop_chance
 				d.pop_conds = m.pop_conds
@@ -10061,7 +10061,7 @@ end
 
 scripts.holygrail = {
 	side_effect = function(this, store)
-		U.heal(this, (this.health.hp_max - this.health.hp) * (0.15 + this.powers.holygrail.level * 0.05))
+		U.heal(this, (this.health.hp_max - this.health.hp) * (this.revive.heal_factor + this.powers.holygrail.level * this.revive.heal_factor_inc))
 
 		this.melee.attacks[1].ts = store.tick_ts - this.melee.cooldown
 		this.melee.attacks[2].ts = store.tick_ts - this.melee.cooldown
@@ -20888,7 +20888,7 @@ function scripts.mod_dwarf_beer.insert(this, store)
 
 	this.hps.ts = store.tick_ts - this.hps.heal_every
 	this.modifier.ts = store.tick_ts
-	target.health.damage_factor = target.health.damage_factor * 0.8
+	target.health.damage_factor = target.health.damage_factor * this.damage_factor
 
 	signal.emit("mod-applied", this, target)
 

@@ -2288,867 +2288,765 @@ set_skill(h.hero.skills.berserker)
 factor = ss("factor")
 map[_("HERO_ROOM_BOLVERK_BERSERKER_NAME")] = string.format(_("HERO_ROOM_BOLVERK_BERSERKER_DESC"), str(factor * 100))
 
-local balance = require("kr1.data.balance").heroes
 set_hero("hero_vesper")
-local blc = balance.hero_vesper.arrow_to_the_knee
-cooldown = table.tail(blc.cooldown)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_type = blc.damage_type
-duration = table.tail(blc.stun_duration)
+cooldown = table.tail({15, 13, 11})
+d[1].damage_max = table.tail({72, 144, 216})
+d[1].damage_min = table.tail({54, 108, 162})
+d[1].damage_type = DAMAGE_TRUE
+duration = table.tail({1, 1.5, 2})
 local distance = T("hero_vesper_arrow_to_the_knee_arrow").bullet.straight_forward_distance
 map[_("HERO_ROOM_VESPER_BERSERKER_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_DESC"), str(cooldown_str()), str(distance), str(damage_str()), str(duration))
-blc = balance.hero_vesper.ricochet
-count = table.tail(blc.bounces)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_type = blc.damage_type
-cooldown = table.tail(blc.cooldown)
-factor = blc.slow_factor
-duration = blc.duration
+count = table.tail({3, 5, 7})
+d[1].damage_max = table.tail({45, 50, 55})
+d[1].damage_min = table.tail({45, 50, 55})
+d[1].damage_type = DAMAGE_PHYSICAL
+cooldown = table.tail({15, 13, 11})
+factor = 0.7
+duration = 2
 map[_("HERO_ROOM_VESPER_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_2_DESC"), str(cooldown_str()), str(damage_str()), str(count), str(duration), str(factor * 100))
-blc = balance.hero_vesper.disengage
-count = blc.total_shoots
-cooldown = table.tail(blc.cooldown)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_type = blc.damage_type
+count = 3
+cooldown = table.tail({16, 14, 12})
+d[1].damage_max = table.tail({60, 110, 160})
+d[1].damage_min = table.tail({60, 110, 160})
+d[1].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_VESPER_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(damage_str()))
-blc = balance.hero_vesper.martial_flourish
-cooldown = table.tail(blc.cooldown)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({16, 14, 12})
+d[1].damage_max = table.tail({50, 80, 120})
+d[1].damage_min = table.tail({50, 80, 120})
+d[1].damage_type = DAMAGE_PHYSICAL
 count = #h.melee.attacks[3].hit_times
 map[_("HERO_ROOM_VESPER_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_4_DESC"), str(cooldown_str()), str(count), str(damage_str()))
-blc = balance.hero_vesper.ultimate
-radius = blc.enemies_range
-count = table.tail(blc.spread) * 2
-duration = blc.slow_duration
-radius_2 = blc.damage_radius
-d[1].damage_type = blc.damage_type
-factor = blc.slow_factor
-set_damage_value(table.tail(blc.damage))
-cooldown = table.tail(blc.cooldown)
+radius = 100
+count = table.tail({8, 10, 12, 14}) * 2
+duration = 1
+radius_2 = 40
+d[1].damage_type = DAMAGE_TRUE
+factor = 0.5
+set_damage_value(table.tail({26, 32, 39, 45}))
+cooldown = table.tail({40, 40, 40, 40})
 map[_("HERO_ROOM_VESPER_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_VESPER_BERSERKER_5_DESC"), str(cooldown_str()), str(radius), str(count), str(radius_2), str(damage_str()), str(factor * 100), str(duration))
 
 set_hero("hero_hunter")
-blc = balance.hero_hunter.shoot_around
-radius = blc.radius
-cooldown = table.tail(blc.cooldown)
-d[1].damage_type = blc.damage_type
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_min = table.tail(blc.damage_min)
-factor = blc.slow_factor
-duration = table.tail(blc.duration)
-cycle_time = blc.damage_every
+radius = 80
+cooldown = table.tail({20, 20, 20})
+d[1].damage_type = DAMAGE_TRUE
+d[1].damage_max = table.tail({6, 7, 8})
+d[1].damage_min = table.tail({3, 4, 5})
+factor = 0.7
+duration = table.tail({3, 3.5, 4})
+cycle_time = fts(3)
 map[_("HERO_ROOM_HUNTER_BERSERKER_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_DESC"), str(cooldown_str()), str(radius), str(duration), str(factor * 100), str(cycle_time), str(damage_str()))
-blc = balance.hero_hunter.heal_strike
-d[1].damage_type = blc.damage_type
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_min = table.tail(blc.damage_min)
-factor = table.tail(blc.heal_factor)
+d[1].damage_type = DAMAGE_TRUE
+d[1].damage_max = table.tail({40, 52, 64})
+d[1].damage_min = table.tail({28, 40, 52})
+factor = table.tail({0.08, 0.12, 0.16})
 map[_("HERO_ROOM_HUNTER_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_2_DESC"), str(damage_str()), str(factor * 100))
-blc = balance.hero_hunter.beasts
-cooldown = table.tail(blc.cooldown)
-cooldown_2 = blc.attack_cooldown
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_min = table.tail(blc.damage_min)
-duration = table.tail(blc.duration)
-amount = table.tail(blc.gold_to_steal)
-d[1].damage_type = blc.damage_type
-chance = blc.chance_to_steal
+cooldown = table.tail({18, 18, 18})
+cooldown_2 = 0.5
+d[1].damage_max = table.tail({10, 20, 30})
+d[1].damage_min = table.tail({6, 12, 18})
+duration = table.tail({8, 10, 12})
+amount = table.tail({1, 2, 3})
+d[1].damage_type = DAMAGE_RUDE
+chance = 0.25
 map[_("HERO_ROOM_HUNTER_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_3_DESC"), str(cooldown_str()), str(duration), str(damage_str()), str(chance * 100), str(amount))
-blc = balance.hero_hunter.ricochet
-cooldown = table.tail(blc.cooldown)
-d[1].damage_type = blc.damage_type
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_min = table.tail(blc.damage_min)
-count = table.tail(blc.bounces) + 1
+cooldown = table.tail({15, 15, 15})
+d[1].damage_type = DAMAGE_RUDE
+d[1].damage_max = table.tail({43, 77, 105})
+d[1].damage_min = table.tail({27, 52, 72})
+count = table.tail({2, 3, 4}) + 1
 map[_("HERO_ROOM_HUNTER_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_4_DESC"), str(cooldown_str()), str(count), str(damage_str()))
-blc = balance.hero_hunter.ultimate
-cooldown = table.tail(blc.cooldown)
-duration = blc.duration
-factor = blc.slow_duration
-radius = blc.slow_radius
-factor_2 = table.tail(blc.damage_factor)
-d[1].damage_max = table.tail(blc.entity.basic_ranged.damage_max)
-d[1].damage_min = table.tail(blc.entity.basic_ranged.damage_min)
-d[1].damage_type = blc.entity.basic_ranged.damage_type
+cooldown = table.tail({50, 50, 50, 50})
+duration = 12
+factor = 0.5
+radius = 80
+factor_2 = table.tail({2, 2.5, 3, 3.5})
+d[1].damage_max = table.tail({11, 19, 30, 42})
+d[1].damage_min = table.tail({7, 14, 19, 28})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_HUNTER_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_HUNTER_BERSERKER_5_DESC"), str(cooldown_str()), str(duration), str(damage_str()), str(radius), str(factor * 100), str(factor_2), str(duration))
 
-local function tail(name)
-	return table.tail(blc[name])
-end
-
 set_hero("hero_raelyn")
-blc = balance.hero_raelyn.ultimate
-cooldown = tail("cooldown")
-duration = blc.entity.duration
-d[1].damage_type = blc.entity.damage_type
-d[1].damage_max = table.tail(blc.entity.damage_max)
-d[1].damage_min = table.tail(blc.entity.damage_min)
-health[1].hp_max = table.tail(blc.entity.hp_max)
-health[1].armor = table.tail(blc.entity.armor)
+cooldown = table.tail({48, 48, 48, 48})
+duration = 20
+d[1].damage_type = DAMAGE_TRUE
+d[1].damage_max = table.tail({15, 23, 31, 44})
+d[1].damage_min = table.tail({10, 15, 20, 28})
+health[1].hp_max = table.tail({156, 260, 364, 468})
+health[1].armor = table.tail({0.3, 0.4, 0.55, 0.7})
 health[1].magic_armor = 0
 map[_("HERO_ROOM_RAELYN_BERSERKER_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_DESC"), str(cooldown_str()), str(duration), str(health_str()), str(damage_str()))
-blc = balance.hero_raelyn.brutal_slash
-cooldown = tail("cooldown")
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({20, 19, 18})
+d[1].damage_min = table.tail({180, 360, 540})
+d[1].damage_max = table.tail({180, 360, 540})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_RAELYN_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_2_DESC"), str(cooldown_str()), str(damage_str()))
-blc = balance.hero_raelyn.onslaught
-min_count = blc.min_targets
-duration = tail("duration")
-cooldown = tail("cooldown")
-factor = blc.speed_inc_factor
-factor_2 = blc.cooldown_factor
+min_count = 2
+duration = table.tail({6, 8, 10})
+cooldown = table.tail({24, 20, 18})
+factor = 0.4
+factor_2 = 0.8
 map[_("HERO_ROOM_RAELYN_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_3_DESC"), str(cooldown_str()), str(min_count), str(duration), str(factor * 100), str((1 - factor_2) * 100))
-blc = balance.hero_raelyn.inspire_fear
-cooldown = tail("cooldown")
-factor = tail("inflicted_damage_factor")
-duration = tail("stun_duration")
-duration_2 = tail("damage_duration")
-radius = blc.max_range_effect
-set_damage_value(tail("damage"))
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({21, 21, 21})
+factor = table.tail({0.6, 0.4, 0.2})
+duration = table.tail({2, 2.5, 3})
+duration_2 = table.tail({6, 6, 6})
+radius = 120
+set_damage_value(table.tail({45, 60, 75}))
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_RAELYN_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_4_DESC"), str(cooldown_str()), str(radius), str(duration), str(damage_str()), str(factor * 100), str(duration_2))
-blc = balance.hero_raelyn.unbreakable
-cooldown = tail("cooldown")
-count = blc.max_targets
-amount = tail("shield_base")
-amount_2 = tail("shield_per_enemy")
-radius = blc.max_range_effect
-duration = tail("duration")
-factor = blc.soldier_factor
+cooldown = table.tail({25, 25, 25})
+count = 4
+amount = table.tail({0.2, 0.2, 0.2})
+amount_2 = table.tail({0.1, 0.15, 0.2})
+radius = 140
+duration = table.tail({6, 6, 6})
+factor = 0.6
 map[_("HERO_ROOM_RAELYN_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_RAELYN_BERSERKER_5_DESC"), str(cooldown_str()), str(count), str(duration), str(amount), str(amount_2), str(count), str(factor * 100))
 
 set_hero("hero_muyrn")
-blc = balance.hero_muyrn.leaf_whirlwind
-radius = blc.radius
-cycle_time = blc.heal_every
-cycle_time_2 = blc.damage_every
-cooldown = tail("cooldown")
-duration = tail("duration")
-d[1].damage_type = blc.damage_type
-d[1].damage_max = tail("damage_max")
-d[1].damage_min = tail("damage_min")
-amount = tail("heal_max")
-amount_2 = tail("heal_min")
+radius = 50
+cycle_time = 0.25
+cycle_time_2 = 0.25
+cooldown = table.tail({25, 23.5, 21})
+duration = table.tail({8, 8, 8})
+d[1].damage_type = DAMAGE_STAB
+d[1].damage_max = table.tail({4, 8, 12})
+d[1].damage_min = table.tail({2, 4, 6})
+amount = table.tail({3, 4, 5})
+amount_2 = table.tail({2, 3, 4})
 map[_("HERO_ROOM_MUYRN_BERSERKER_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(amount_2), str(amount), str(cycle_time_2), str(radius), str(damage_str()))
-blc = balance.hero_muyrn.faery_dust
-radius = blc.radius
-cooldown = tail("cooldown")
-duration = tail("duration")
-factor = tail("damage_factor")
+radius = 80
+cooldown = table.tail({14, 14, 14})
+duration = table.tail({5, 6, 8})
+factor = table.tail({0.4, 0.25, 0.1})
 map[_("HERO_ROOM_MUYRN_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_2_DESC"), str(cooldown_str()), str(radius), str(factor), str(duration))
-blc = balance.hero_muyrn.sentinel_wisps
-cooldown = tail("cooldown")
-count = tail("max_summons")
-duration = table.tail(blc.wisp.duration)
-d[1].damage_max = table.tail(blc.wisp.damage_max)
-d[1].damage_min = table.tail(blc.wisp.damage_min)
-d[1].damage_type = blc.wisp.damage_type
+cooldown = table.tail({17.5, 17.5, 17.5})
+count = table.tail({1, 2, 3})
+duration = table.tail({6, 6, 6})
+d[1].damage_max = table.tail({6, 12, 18})
+d[1].damage_min = table.tail({3, 6, 9})
+d[1].damage_type = DAMAGE_MAGICAL
 map[_("HERO_ROOM_MUYRN_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(duration), str(damage_str()))
-blc = balance.hero_muyrn.verdant_blast
-cooldown = tail("cooldown")
-d[1].damage_max = tail("damage_max")
-d[1].damage_min = tail("damage_min")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({22.5, 22.5, 22.5})
+d[1].damage_max = table.tail({150, 300, 450})
+d[1].damage_min = table.tail({150, 300, 450})
+d[1].damage_type = DAMAGE_MAGICAL_EXPLOSION
 map[_("HERO_ROOM_MUYRN_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_4_DESC"), str(cooldown_str()), str(damage_str()))
-blc = balance.hero_muyrn.ultimate
-radius = blc.radius
-cycle_time = blc.damage_every
-cooldown = tail("cooldown")
-factor = tail("slow_factor")
-duration = tail("duration")
-d[1].damage_max = tail("damage_max")
-d[1].damage_min = tail("damage_min")
-d[1].damage_type = blc.damage_type
-count = tail("roots_count")
+radius = 60
+cycle_time = 0.25
+cooldown = table.tail({32, 32, 32, 32})
+factor = table.tail({0.6, 0.6, 0.6, 0.6})
+duration = table.tail({4, 5, 6, 7})
+d[1].damage_max = table.tail({6, 7, 9, 11})
+d[1].damage_min = table.tail({4, 5, 6, 7})
+d[1].damage_type = DAMAGE_TRUE
+count = table.tail({10, 15, 20, 25})
 map[_("HERO_ROOM_MUYRN_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_MUYRN_BERSERKER_5_DESC"), str(cooldown_str()), str(count), str(radius), str(factor * 100), str(cycle_time), str(damage_str()), str(duration))
 
 set_hero("hero_space_elf")
-blc = balance.hero_space_elf.astral_reflection
-cooldown = tail("cooldown")
-health[1].hp_max = table.tail(blc.entity.hp_max)
+cooldown = table.tail({25, 25, 25})
+health[1].hp_max = table.tail({247, 286, 325})
 health[1].armor = 0
 health[1].magic_armor = 0
-d[1].damage_max = table.tail(blc.entity.basic_ranged.damage_max)
-d[1].damage_min = table.tail(blc.entity.basic_ranged.damage_min)
-d[1].damage_type = blc.entity.basic_ranged.damage_type
-duration = blc.entity.duration
+d[1].damage_max = table.tail({36, 47, 62})
+d[1].damage_min = table.tail({19, 26, 33})
+d[1].damage_type = DAMAGE_MAGICAL
+duration = 12
 map[_("HERO_ROOM_SPACE_ELF_BERSERKER_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_DESC"), str(cooldown_str()), str(duration), str(health_str()), str(damage_str()))
-blc = balance.hero_space_elf.void_rift
-radius = blc.radius
-cycle_time = blc.damage_every
-cooldown = tail("cooldown")
-duration = tail("duration")
-count = tail("cracks_amount")
-d[1].damage_max = tail("damage_max")
-d[1].damage_min = tail("damage_min")
-d[1].damage_type = blc.damage_type
-factor = blc.slow_factor
+radius = 120
+cycle_time = 0.25
+cooldown = table.tail({30, 25, 20})
+duration = table.tail({6, 8, 10})
+count = table.tail({1, 2, 3})
+d[1].damage_max = table.tail({6, 6, 6})
+d[1].damage_min = table.tail({3, 3, 3})
+d[1].damage_type = DAMAGE_MAGICAL_EXPLOSION
+factor = 0.8
 map[_("HERO_ROOM_SPACE_ELF_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_2_DESC"), str(cooldown_str()), str(count), str(duration), str(radius), str(factor * 100), str(cycle_time), str(damage_str()))
-blc = balance.hero_space_elf.black_aegis
-radius = blc.explosion_range
-cooldown = tail("cooldown")
-duration = tail("duration")
-amount = tail("shield_base")
-set_damage_value(tail("explosion_damage"))
-d[1].damage_type = blc.explosion_damage_type
+radius = 80
+cooldown = table.tail({18, 16, 14})
+duration = table.tail({6, 8, 10})
+amount = table.tail({50, 85, 120})
+set_damage_value(table.tail({25, 50, 75}))
+d[1].damage_type = DAMAGE_MAGICAL_EXPLOSION
 map[_("HERO_ROOM_SPACE_ELF_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_3_DESC"), str(cooldown_str()), str(amount), str(duration), str(radius), str(damage_str()))
-blc = balance.hero_space_elf.spatial_distortion
-cooldown = tail("cooldown")
-duration = tail("duration")
-factor = tail("range_factor")
-factor_2 = tail("damage_factor")
-factor_3 = tail("cooldown_factor")
+cooldown = table.tail({25, 23, 20})
+duration = table.tail({6, 7, 8})
+factor = table.tail({1.04, 1.06, 1.08})
+factor_2 = table.tail({1.04, 1.06, 1.08})
+factor_3 = table.tail({0.96, 0.94, 0.92})
 map[_("HERO_ROOM_SPACE_ELF_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_4_DESC"), str(cooldown_str()), str(factor * 100), str(factor_2 * 100 - 100), str(factor_3 * 100), str(duration))
-blc = balance.hero_space_elf.ultimate
-cooldown = tail("cooldown")
-duration = tail("duration")
-set_damage_value(tail("damage"))
-d[1].damage_type = blc.damage_type
-radius = blc.radius
+cooldown = table.tail({45, 45, 45, 45})
+duration = table.tail({5, 6, 7, 8})
+set_damage_value(table.tail({39, 117, 234, 351}))
+d[1].damage_type = DAMAGE_TRUE
+radius = 90
 map[_("HERO_ROOM_SPACE_ELF_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_SPACE_ELF_BERSERKER_5_DESC"), str(cooldown_str()), str(radius), str(duration), str(damage_str()))
 
 set_hero("hero_venom")
-blc = balance.hero_venom.ranged_tentacle
-cooldown = tail("cooldown")
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
-local bleed_every_val = table.tail(blc.bleed_every)
-local bleed_dmg_val = table.tail(blc.bleed_damage_min)
-local bleed_dur_val = table.tail(blc.bleed_duration)
+cooldown = table.tail({10, 9, 8})
+d[1].damage_min = table.tail({30, 60, 90})
+d[1].damage_max = table.tail({30, 60, 90})
+d[1].damage_type = DAMAGE_RUDE
+local bleed_every_val = table.tail({0.25, 0.25, 0.25})
+local bleed_dmg_val = table.tail({3, 4, 5})
+local bleed_dur_val = table.tail({4, 4, 4})
 map[_("HERO_ROOM_VENOM_BERSERKER_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_DESC"), str(cooldown_str()), str(damage_str()), str(bleed_every_val), str(bleed_dmg_val), str(bleed_dur_val))
-blc = balance.hero_venom.inner_beast
-cooldown = tail("cooldown")
-duration = blc.duration
-local trigger_hp_val = blc.trigger_hp * 100
-local s_dmg_factor_val = table.tail(blc.basic_melee.damage_factor) * 100 - 100
-local regen_health_val = blc.basic_melee.regen_health * 100
+cooldown = table.tail({35, 35, 35})
+duration = 10
+local trigger_hp_val = 0.5 * 100
+local s_dmg_factor_val = table.tail({1.25, 1.5, 1.75}) * 100 - 100
+local regen_health_val = 0.1 * 100
 map[_("HERO_ROOM_VENOM_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_2_DESC"), str(cooldown_str()), str(trigger_hp_val), str(duration), str(s_dmg_factor_val), str(regen_health_val))
-blc = balance.hero_venom.floor_spikes
-cooldown = tail("cooldown")
-count = table.tail(blc.spikes)
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
-radius = blc.damage_radius
+cooldown = table.tail({30, 30, 30})
+count = table.tail({15, 15, 15})
+d[1].damage_min = table.tail({20, 40, 60})
+d[1].damage_max = table.tail({20, 40, 60})
+d[1].damage_type = DAMAGE_TRUE
+radius = 35
 map[_("HERO_ROOM_VENOM_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
-blc = balance.hero_venom.eat_enemy
-cooldown = tail("cooldown")
-local eat_hp_trigger_val = blc.hp_trigger * 100
-local eat_regen_val = table.tail(blc.regen) * 100
-set_damage_value(table.tail(blc.damage))
-d[1].damage_type = blc.extra_damage_type
+cooldown = table.tail({55, 50, 45})
+local eat_hp_trigger_val = 0.3 * 100
+local eat_regen_val = table.tail({0.1, 0.15, 0.2}) * 100
+set_damage_value(table.tail({40, 50, 60}))
+d[1].damage_type = DAMAGE_RUDE
 map[_("HERO_ROOM_VENOM_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_4_DESC"), str(eat_hp_trigger_val), str(damage_str()), str(eat_regen_val), str(cooldown))
-blc = balance.hero_venom.ultimate
-cooldown = tail("cooldown")
-radius = blc.radius
-factor = blc.slow_factor * 100
-duration = tail("duration")
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({50, 50, 50, 50})
+radius = 70
+factor = 0.5 * 100
+duration = table.tail({3, 3, 3, 3})
+d[1].damage_min = table.tail({190, 250, 315, 370})
+d[1].damage_max = table.tail({190, 250, 315, 370})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_VENOM_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_VENOM_BERSERKER_5_DESC"), str(cooldown_str()), str(radius), str(factor), str(duration), str(damage_str()))
 
 set_hero("hero_dragon_gem")
-blc = balance.hero_dragon_gem.stun
-cooldown = tail("cooldown")
-radius = blc.stun_radius
-duration = tail("duration")
+cooldown = table.tail({16, 16, 16})
+radius = 80
+duration = table.tail({2, 3, 4})
 map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_DESC"), str(cooldown_str()), str(radius), str(duration))
-blc = balance.hero_dragon_gem.floor_impact
-cooldown = tail("cooldown")
-radius = blc.damage_range
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({25, 25, 25})
+radius = 50
+d[1].damage_min = table.tail({31, 62, 93})
+d[1].damage_max = table.tail({46, 93, 140})
+d[1].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_2_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
-blc = balance.hero_dragon_gem.crystal_instakill
-cooldown = tail("cooldown")
-local instakill_hp_val = tail("hp_max")
-d[1].damage_min = tail("damage_aoe_min")
-d[1].damage_max = tail("damage_aoe_max")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({35, 35, 35})
+local instakill_hp_val = table.tail({260, 520, 1040})
+d[1].damage_min = table.tail({41, 98, 124})
+d[1].damage_max = table.tail({41, 98, 124})
+d[1].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_3_DESC"), str(cooldown_str()), str(instakill_hp_val), str(damage_str()))
-blc = balance.hero_dragon_gem.crystal_totem
-cooldown = tail("cooldown")
-radius = blc.aura_radius
-factor = blc.slow_factor * 100
-cycle_time = blc.trigger_every
-duration = tail("duration")
-d[1].damage_max = tail("damage_max")
-d[1].damage_min = tail("damage_min")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({20, 20, 20})
+radius = 80
+factor = 0.75 * 100
+cycle_time = fts(30)
+duration = table.tail({6, 8, 10})
+d[1].damage_max = table.tail({10, 20, 32})
+d[1].damage_min = table.tail({10, 20, 32})
+d[1].damage_type = DAMAGE_MAGICAL
 map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_4_DESC"), str(cooldown_str()), str(duration), str(radius), str(factor), str(cycle_time), str(damage_str()))
-blc = balance.hero_dragon_gem.ultimate
-cooldown = tail("cooldown")
-count = tail("max_shards")
-radius = blc.damage_range
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({45, 45, 45, 45})
+count = table.tail({3, 4, 6, 8})
+radius = 30
+d[1].damage_min = table.tail({62, 93, 114, 135})
+d[1].damage_max = table.tail({93, 140, 171, 202})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_5_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()))
-blc = balance.hero_dragon_gem.passive_charge
-amount = blc.distance_threshold
-factor = blc.damage_factor
+amount = 250
+factor = 3
 map[_("HERO_ROOM_DRAGON_GEM_BERSERKER_6_NAME")] = string.format(_("HERO_ROOM_DRAGON_GEM_BERSERKER_6_DESC"), str(amount), str(factor))
 
 set_hero("hero_witch")
-blc = balance.hero_witch.skill_polymorph
-cooldown = tail("cooldown")
-duration = tail("duration")
-local poly_hp_val = tail("hp_max")
-factor = table.tail(blc.pumpkin.hp)
-speed = blc.pumpkin.speed
+cooldown = table.tail({20, 20, 20})
+duration = table.tail({8, 8, 8})
+local poly_hp_val = table.tail({1000, 2000, 3000})
+factor = table.tail({0.7, 0.55, 0.4})
+speed = 20
 map[_("HERO_ROOM_WITCH_BERSERKER_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_DESC"), str(cooldown_str()), str(poly_hp_val), str(duration), str(factor * 100), str(speed))
-blc = balance.hero_witch.disengage
-cooldown = tail("cooldown")
-local decoy_hp_val = table.tail(blc.decoy.hp_max)
-local stun_dur_val = table.tail(blc.decoy.explotion.stun_duration)
+cooldown = table.tail({12, 12, 12})
+local decoy_hp_val = table.tail({65, 97, 130})
+local stun_dur_val = table.tail({2, 2.5, 3})
 map[_("HERO_ROOM_WITCH_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_2_DESC"), str(cooldown_str()), str(decoy_hp_val), str(stun_dur_val))
-blc = balance.hero_witch.skill_soldiers
-cooldown = tail("cooldown")
-count = table.tail(blc.soldiers_amount)
-duration = blc.soldier.duration
-health[1].hp_max = table.tail(blc.soldier.hp_max)
+cooldown = table.tail({17.5, 17.5, 17.5})
+count = table.tail({2, 3, 4})
+duration = 8
+health[1].hp_max = table.tail({60, 85, 110})
 health[1].armor = 0
 health[1].magic_armor = 0
-d[1].damage_min = table.tail(blc.soldier.melee_attack.damage_min)
-d[1].damage_max = table.tail(blc.soldier.melee_attack.damage_max)
-d[1].damage_type = blc.soldier.melee_attack.damage_type
+d[1].damage_min = table.tail({2, 5, 7})
+d[1].damage_max = table.tail({3, 7, 11})
+d[1].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_WITCH_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(duration), str(hp_str()), str(damage_str()))
-blc = balance.hero_witch.skill_path_aoe
-cooldown = tail("cooldown")
-duration = tail("duration")
-factor = blc.slow_factor * 100
-d[1].damage_max = tail("damage_max")
-d[1].damage_min = tail("damage_min")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({16, 16, 16})
+duration = table.tail({5, 6, 8})
+factor = 0.5 * 100
+d[1].damage_max = table.tail({65, 104, 156})
+d[1].damage_min = table.tail({65, 104, 156})
+d[1].damage_type = DAMAGE_MAGICAL_EXPLOSION
 map[_("HERO_ROOM_WITCH_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_4_DESC"), str(cooldown_str()), str(damage_str()), str(factor), str(duration))
-blc = balance.hero_witch.ultimate
-radius = blc.radius
-cooldown = tail("cooldown")
-count = tail("max_targets")
-duration = tail("duration")
-amount = blc.nodes_limit
+radius = 100
+cooldown = table.tail({27, 27, 27, 27})
+count = table.tail({4, 6, 8, 10})
+duration = table.tail({3, 4, 5, 6})
+amount = 20
 map[_("HERO_ROOM_WITCH_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_WITCH_BERSERKER_5_DESC"), str(cooldown_str()), str(radius), str(count), str(amount), str(duration))
 
 set_hero("hero_dragon_bone")
-blc = balance.hero_dragon_bone.rain
-cooldown = tail("cooldown")
-count = tail("bones_count")
-stun_dur_val = blc.stun_time
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({20, 20, 20})
+count = table.tail({4, 6, 8})
+stun_dur_val = 0.25
+d[1].damage_min = table.tail({15, 31, 46})
+d[1].damage_max = table.tail({23, 46, 70})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_DESC"), str(cooldown_str()), str(count), str(damage_str()), str(stun_dur_val))
-blc = balance.hero_dragon_bone.cloud
-cooldown = tail("cooldown")
-radius = blc.radius
-factor = blc.slow_factor * 100
-duration = tail("duration")
+cooldown = table.tail({15, 15, 15})
+radius = 100
+factor = 0.5 * 100
+duration = table.tail({4, 6, 10})
 map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_2_DESC"), str(cooldown_str()), str(duration), str(radius), str(factor))
-blc = balance.hero_dragon_bone.burst
-cooldown = tail("cooldown")
-count = tail("proj_count")
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({32, 32, 32})
+count = table.tail({6, 8, 10})
+d[1].damage_min = table.tail({31, 75, 112})
+d[1].damage_max = table.tail({46, 112, 169})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(damage_str()))
-blc = balance.hero_dragon_bone.nova
-cooldown = tail("cooldown")
-radius = blc.damage_radius
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
+cooldown = table.tail({24, 24, 24})
+radius = 75
+d[1].damage_min = table.tail({26, 80, 109})
+d[1].damage_max = table.tail({52, 153, 202})
+d[1].damage_type = DAMAGE_EXPLOSION
 map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_4_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
-blc = balance.hero_dragon_bone.ultimate
-cooldown = tail("cooldown")
-health[1].hp_max = table.tail(blc.dog.hp)
-health[1].armor = blc.dog.armor
+cooldown = table.tail({36, 36, 36, 36})
+health[1].hp_max = table.tail({130, 156, 195, 234})
+health[1].armor = 0
 health[1].magic_armor = 0
-duration = table.tail(blc.dog.duration)
-d[1].damage_min = table.tail(blc.dog.melee_attack.damage_min)
-d[1].damage_max = table.tail(blc.dog.melee_attack.damage_max)
-d[1].damage_type = blc.dog.melee_attack.damage_type
+duration = table.tail({10, 15, 20, 25})
+d[1].damage_min = table.tail({13, 14, 18, 27})
+d[1].damage_max = table.tail({18, 22, 28, 40})
+d[1].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_5_DESC"), str(cooldown_str()), str(hp_str()), str(duration), str(damage_str()))
-blc = balance.hero_dragon_bone.plague
-cycle_time = blc.every
-d[1].damage_min = blc.damage_min
-d[1].damage_max = blc.damage_max
-duration = blc.duration
-d[2].damage_min = blc.explotion.damage_min
-d[2].damage_max = blc.explotion.damage_max
-d[2].damage_type = blc.explotion.damage_type
-radius = blc.explotion.damage_radius
+cycle_time = 0.25
+d[1].damage_min = 1
+d[1].damage_max = 1
+duration = 4
+d[2].damage_min = 15
+d[2].damage_max = 30
+d[2].damage_type = DAMAGE_EXPLOSION
+radius = 60
 map[_("HERO_ROOM_DRAGON_BONE_BERSERKER_6_NAME")] = string.format(_("HERO_ROOM_DRAGON_BONE_BERSERKER_6_DESC"), str(duration), str(cycle_time), str(damage_str()), str(duration), str(radius), str(damage_str(2)))
 
 set_hero("hero_lumenir")
-blc = balance.hero_lumenir.fire_balls
-cooldown = tail("cooldown")
-count = table.tail(blc.flames_count)
-duration = blc.duration
-d[1].damage_min = table.tail(blc.flame_damage_min)
-d[1].damage_max = table.tail(blc.flame_damage_max)
-d[1].damage_type = blc.damage_type
-cycle_time = blc.damage_rate
-radius = blc.damage_radius
+cooldown = table.tail({20, 20, 20})
+count = table.tail({5, 6, 7})
+duration = 8
+d[1].damage_min = table.tail({1, 2, 4})
+d[1].damage_max = table.tail({3, 6, 8})
+d[1].damage_type = DAMAGE_TRUE
+cycle_time = 0.25
+radius = 55
 map[_("HERO_ROOM_LUMENIR_BERSERKER_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_DESC"), str(cooldown_str()), str(count), str(duration), str(cycle_time), str(radius), str(damage_str()))
-blc = balance.hero_lumenir.mini_dragon
-cooldown = tail("cooldown")
-duration = table.tail(blc.dragon.duration)
-d[1].damage_min = table.tail(blc.dragon.ranged_attack.damage_min)
-d[1].damage_max = table.tail(blc.dragon.ranged_attack.damage_max)
-d[1].damage_type = blc.dragon.ranged_attack.damage_type
+cooldown = table.tail({30, 30, 30})
+duration = table.tail({10, 12, 15})
+d[1].damage_min = table.tail({13, 20, 24})
+d[1].damage_max = table.tail({18, 31, 37})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_LUMENIR_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_2_DESC"), str(cooldown_str()), str(duration), str(damage_str()))
-blc = balance.hero_lumenir.shield
-cooldown = tail("cooldown")
-radius = blc.range
-local shield_armor_val = table.tail(blc.armor) * 100
-local spiked_armor_val = table.tail(blc.spiked_armor) * 100
-duration = table.tail(blc.duration)
+cooldown = table.tail({20, 20, 20})
+radius = 300
+local shield_armor_val = table.tail({0.1, 0.2, 0.3}) * 100
+local spiked_armor_val = table.tail({0.2, 0.4, 0.6}) * 100
+duration = table.tail({8, 8, 8})
 map[_("HERO_ROOM_LUMENIR_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_3_DESC"), str(cooldown_str()), str(radius), str(duration), str(shield_armor_val), str(spiked_armor_val))
-blc = balance.hero_lumenir.celestial_judgement
-cooldown = tail("cooldown")
-radius = blc.stun_range
-set_damage_value(table.tail(blc.damage))
-d[1].damage_type = blc.damage_type
-duration = table.tail(blc.stun_duration)
+cooldown = table.tail({32, 32, 32})
+radius = 40
+set_damage_value(table.tail({240, 480, 720}))
+d[1].damage_type = DAMAGE_TRUE
+duration = table.tail({2, 2, 2})
 map[_("HERO_ROOM_LUMENIR_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_4_DESC"), str(cooldown_str()), str(damage_str()), str(radius), str(duration))
-blc = balance.hero_lumenir.ultimate
-cooldown = tail("cooldown")
-count = table.tail(blc.soldier_count)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-count = blc.max_attack_count
-local lumenir_stun_val = blc.stun_target_duration
+cooldown = table.tail({30, 30, 30, 30})
+count = table.tail({3, 3, 3, 3})
+d[1].damage_min = table.tail({13, 19, 32, 51})
+d[1].damage_max = table.tail({19, 29, 48, 77})
+d[1].damage_type = DAMAGE_TRUE
+count = 2
+local lumenir_stun_val = 5
 map[_("HERO_ROOM_LUMENIR_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_LUMENIR_BERSERKER_5_DESC"), str(cooldown_str()), str(count), str(count), str(damage_str()), str(lumenir_stun_val))
 
 set_hero("hero_wukong")
-blc = balance.hero_wukong.zhu_apprentice
-health[1].hp_max = table.tail(blc.hp_max)
-health[1].armor = blc.armor
+health[1].hp_max = table.tail({78, 117, 182})
+health[1].armor = 0
 health[1].magic_armor = 0
-d[1].damage_min = table.tail(blc.melee_attack.damage_min)
-d[1].damage_max = table.tail(blc.melee_attack.damage_max)
-d[1].damage_type = blc.melee_attack.damage_type
-local smash_min_val = table.tail(blc.smash_attack.damage_min)
-local smash_max_val = table.tail(blc.smash_attack.damage_max)
-local smash_chance_val = table.tail(blc.smash_attack.chance) * 100
-local smash_radius_val = blc.smash_attack.damage_radius
+d[1].damage_min = table.tail({3, 5, 10})
+d[1].damage_max = table.tail({4, 7, 15})
+d[1].damage_type = DAMAGE_PHYSICAL
+local smash_min_val = table.tail({39, 71, 97})
+local smash_max_val = table.tail({45, 91, 117})
+local smash_chance_val = table.tail({0.3, 0.4, 0.5}) * 100
+local smash_radius_val = 72
 map[_("HERO_ROOM_WUKONG_BERSERKER_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_DESC"), str(hp_str()), str(damage_str()), str(smash_chance_val), str(smash_radius_val), str(smash_min_val), str(smash_max_val))
-blc = balance.hero_wukong.hair_clones
-cooldown = tail("cooldown")
-duration = table.tail(blc.soldier.duration)
-health[1].hp_max = table.tail(blc.soldier.hp_max)
-health[1].armor = blc.soldier.armor
+cooldown = table.tail({24, 22, 20})
+duration = table.tail({9, 9, 9})
+health[1].hp_max = table.tail({104, 130, 156})
+health[1].armor = 0
 health[1].magic_armor = 0
-d[1].damage_min = table.tail(blc.soldier.melee_attack.damage_min)
-d[1].damage_max = table.tail(blc.soldier.melee_attack.damage_max)
-d[1].damage_type = blc.soldier.melee_attack.damage_type
+d[1].damage_min = table.tail({4, 8, 12})
+d[1].damage_max = table.tail({5, 10, 15})
+d[1].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_WUKONG_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_2_DESC"), str(cooldown_str()), str(hp_str()), str(duration), str(damage_str()))
-blc = balance.hero_wukong.pole_ranged
-cooldown = tail("cooldown")
-count = tail("pole_amounts")
-radius = blc.damage_radius
-d[1].damage_min = tail("damage_min")
-d[1].damage_max = tail("damage_max")
-d[1].damage_type = blc.damage_type
-local pole_stun_val = blc.stun_duration
+cooldown = table.tail({17, 17, 17})
+count = table.tail({3, 5, 7})
+radius = 50
+d[1].damage_min = table.tail({13, 18, 23})
+d[1].damage_max = table.tail({19, 32, 39})
+d[1].damage_type = DAMAGE_PHYSICAL
+local pole_stun_val = 3
 map[_("HERO_ROOM_WUKONG_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_3_DESC"), str(cooldown_str()), str(count), str(radius), str(damage_str()), str(pole_stun_val))
-blc = balance.hero_wukong.giant_staff
-cooldown = tail("cooldown")
-radius = blc.area_damage.damage_radius
-d[1].damage_min = table.tail(blc.area_damage.damage_min)
-d[1].damage_max = table.tail(blc.area_damage.damage_max)
-d[1].damage_type = blc.area_damage.damage_type
+cooldown = table.tail({50.5, 47.5, 44})
+radius = 90
+d[1].damage_min = table.tail({120, 160, 200})
+d[1].damage_max = table.tail({140, 200, 260})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_WUKONG_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_4_DESC"), str(cooldown_str()), str(radius), str(damage_str()))
-blc = balance.hero_wukong.ultimate
-cooldown = tail("cooldown")
-set_damage_value(table.tail(blc.damage_total))
-d[1].damage_type = blc.damage_type
-factor = table.tail(blc.slow_factor) * 100
-duration = table.tail(blc.slow_duration)
+cooldown = table.tail({42, 42, 42, 42})
+set_damage_value(table.tail({260, 390, 520, 650}))
+d[1].damage_type = DAMAGE_TRUE
+factor = table.tail({0.5, 0.5, 0.5, 0.5}) * 100
+duration = table.tail({3, 3.5, 4, 4.5})
 map[_("HERO_ROOM_WUKONG_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_WUKONG_BERSERKER_5_DESC"), str(cooldown_str()), str(damage_str()), str(factor), str(duration))
 
 set_hero("hero_dragon_arb")
-blc = balance.hero_dragon_arb.arborean_spawn
-local spawn_cooldown = table.tail(blc.cooldown)
-local spawn_count_max = blc.max_targets
-local arb_hp = table.tail(blc.arborean.hp)
-local arb_duration = table.tail(blc.arborean.duration)
+local spawn_cooldown = table.tail({35, 35, 35})
+local spawn_count_max = 3
+local arb_hp = table.tail({104, 143, 182})
+local arb_duration = table.tail({10, 12, 14})
 health[1].hp_max = arb_hp
 health[1].armor = 0
 health[1].magic_armor = 0
-d[1].damage_min = table.tail(blc.arborean.basic_attack.damage_min)
-d[1].damage_max = table.tail(blc.arborean.basic_attack.damage_max)
-d[1].damage_type = blc.arborean.basic_attack.damage_type
-local paragon_hp = table.tail(blc.paragon.hp)
-local paragon_duration = table.tail(blc.paragon.duration)
+d[1].damage_min = table.tail({2, 3, 5})
+d[1].damage_max = table.tail({4, 6, 8})
+d[1].damage_type = DAMAGE_PHYSICAL
+local paragon_hp = table.tail({156, 208, 260})
+local paragon_duration = table.tail({10, 12, 14})
 health[2].hp_max = paragon_hp
 health[2].armor = 0
 health[2].magic_armor = 0
-d[2].damage_min = table.tail(blc.paragon.basic_attack.damage_min)
-d[2].damage_max = table.tail(blc.paragon.basic_attack.damage_max)
-d[2].damage_type = blc.paragon.basic_attack.damage_type
+d[2].damage_min = table.tail({8, 12, 16})
+d[2].damage_max = table.tail({12, 16, 20})
+d[2].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_DESC"), str(spawn_cooldown), str(spawn_count_max), str(hp_str()), str(arb_duration), str(damage_str()), str(hp_str(2)), str(paragon_duration), str(damage_str(2)))
 
-blc = balance.hero_dragon_arb.tower_runes
-cooldown = table.tail(blc.cooldown)
-local runes_count = table.tail(blc.max_targets)
-local runes_duration = table.tail(blc.duration)
-local runes_factor = table.tail(blc.s_damage_factor) * 100
+cooldown = table.tail({35, 35, 35})
+local runes_count = table.tail({3, 3, 3})
+local runes_duration = table.tail({6, 7, 8})
+local runes_factor = table.tail({0.3, 0.45, 0.6}) * 100
 map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_2_DESC"), str(cooldown_str()), str(runes_count), str(runes_factor), str(runes_duration))
 
-blc = balance.hero_dragon_arb.thorn_bleed
-cooldown = table.tail(blc.cooldown)
-local bleed_ratio = table.tail(blc.damage_speed_ratio)
-local bleed_every = blc.damage_every
-local bleed_duration = table.tail(blc.duration)
-local instakill_chance = table.tail(blc.instakill_chance) * 100
+cooldown = table.tail({12, 10, 8})
+local bleed_ratio = table.tail({0.375, 0.564, 0.825})
+local bleed_every = 0.75
+local bleed_duration = table.tail({5, 5, 5})
+local instakill_chance = table.tail({0.3, 0.3, 0.3}) * 100
 map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_3_DESC"), str(cooldown_str()), str(bleed_duration), str(bleed_every), str(bleed_ratio), str(instakill_chance))
 
-blc = balance.hero_dragon_arb.tower_plants
-cooldown = table.tail(blc.cooldown)
-local plants_count = table.tail(blc.max_targets)
-local plants_duration = table.tail(blc.duration)
-local dark_slow = table.tail(blc.dark_army.slow_factor) * 100
-d[1].damage_min = table.tail(blc.dark_army.damage_min)
-d[1].damage_max = table.tail(blc.dark_army.damage_max)
-d[1].damage_type = blc.dark_army.damage_type
-local linirea_heal = table.tail(blc.linirea.heal_max)
+cooldown = table.tail({20, 20, 20})
+local plants_count = table.tail({1, 2, 3})
+local plants_duration = table.tail({8, 10, 12})
+local dark_slow = table.tail({0.5, 0.4, 0.3}) * 100
+d[1].damage_min = table.tail({5, 7, 9})
+d[1].damage_max = table.tail({5, 7, 9})
+d[1].damage_type = DAMAGE_MAGICAL
+local linirea_heal = table.tail({15, 15, 15})
 map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_4_DESC"), str(cooldown_str()), str(plants_count), str(plants_duration), str(linirea_heal), str(damage_str()), str(dark_slow))
 
-blc = balance.hero_dragon_arb.ultimate
-cooldown = table.tail(blc.cooldown)
-local ult_duration = table.tail(blc.duration)
-local ult_bonus = table.tail(blc.s_bonuses) * 100
+cooldown = table.tail({36, 36, 36, 36})
+local ult_duration = table.tail({8, 10, 13, 15})
+local ult_bonus = table.tail({0.3, 0.4, 0.5, 0.6}) * 100
 map[_("HERO_ROOM_DRAGON_ARB_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_DRAGON_ARB_BERSERKER_5_DESC"), str(cooldown_str()), str(ult_duration), str(ult_bonus))
 
 set_hero("hero_builder")
-local blc = balance.hero_builder.overtime_work
-health[1].hp_max = table.tail(blc.soldier.hp_max)
-health[1].armor = blc.soldier.armor
+health[1].hp_max = table.tail({50, 75, 100})
+health[1].armor = 0.15
 health[1].magic_armor = 0
-d[1].damage_min = table.tail(blc.soldier.melee_attack.damage_min)
-d[1].damage_max = table.tail(blc.soldier.melee_attack.damage_max)
+d[1].damage_min = table.tail({2, 4, 6})
+d[1].damage_max = table.tail({4, 8, 12})
 d[1].damage_type = DAMAGE_PHYSICAL
-local ow_duration = blc.soldier.duration
-cooldown = table.tail(blc.cooldown)
+local ow_duration = 12
+cooldown = table.tail({11, 11, 11})
 map[_("HERO_ROOM_BUILDER_BERSERKER_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_DESC"), str(cooldown_str()), str(hp_str()), str(ow_duration), str(damage_str()))
 
-blc = balance.hero_builder.lunch_break
-cooldown = table.tail(blc.cooldown)
-local heal_val = table.tail(blc.heal_hp)
-local lost_health_val = blc.lost_health * 100
+cooldown = table.tail({30, 28, 26})
+local heal_val = table.tail({125, 250, 375})
+local lost_health_val = 0.4 * 100
 map[_("HERO_ROOM_BUILDER_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_2_DESC"), str(cooldown_str()), str(lost_health_val), str(heal_val))
 
-blc = balance.hero_builder.demolition_man
-cooldown = table.tail(blc.cooldown)
-local demo_duration = table.tail(blc.duration)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-cycle_time = blc.damage_every
-radius = blc.radius
+cooldown = table.tail({16, 16, 16})
+local demo_duration = table.tail({1.25, 1.25, 1.25})
+d[1].damage_min = table.tail({5, 10, 15})
+d[1].damage_max = table.tail({8, 16, 24})
+d[1].damage_type = DAMAGE_PHYSICAL
+cycle_time = 0.25
+radius = 100
 map[_("HERO_ROOM_BUILDER_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_3_DESC"), str(cooldown_str()), str(demo_duration), str(cycle_time), str(radius), str(damage_str()))
 
-blc = balance.hero_builder.defensive_turret
-cooldown = table.tail(blc.cooldown)
-local turret_duration = table.tail(blc.duration)
-d[1].damage_min = table.tail(blc.attack.damage_min)
-d[1].damage_max = table.tail(blc.attack.damage_max)
+cooldown = table.tail({30, 30, 30})
+local turret_duration = table.tail({12, 13.5, 15})
+d[1].damage_min = table.tail({8, 16, 24})
+d[1].damage_max = table.tail({12, 24, 36})
 d[1].damage_type = DAMAGE_PHYSICAL
-duration = blc.stun_duration
+duration = 0.25
 map[_("HERO_ROOM_BUILDER_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_4_DESC"), str(cooldown_str()), str(turret_duration), str(damage_str()), str(duration))
 
-blc = balance.hero_builder.ultimate
-cooldown = table.tail(blc.cooldown)
-set_damage_value(table.tail(blc.damage))
-d[1].damage_type = blc.damage_type
-local stun_val = table.tail(blc.stun_duration)
+cooldown = table.tail({35, 35, 35, 35})
+set_damage_value(table.tail({120, 180, 240, 300}))
+d[1].damage_type = DAMAGE_AGAINST_ARMOR
+local stun_val = table.tail({2, 2, 2, 2})
 map[_("HERO_ROOM_BUILDER_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_BUILDER_BERSERKER_5_DESC"), str(cooldown_str()), str(damage_str()), str(stun_val))
 
 set_hero("hero_robot")
-blc = balance.hero_robot.jump
-cooldown = table.tail(blc.cooldown)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-local stun_dur = table.tail(blc.stun_duration)
-local jump_radius = blc.damage_radius
-loop = table.tail(blc.loops)
+cooldown = table.tail({15, 14, 13, 12})
+d[1].damage_min = table.tail({30, 60, 90, 120})
+d[1].damage_max = table.tail({30, 60, 90, 120})
+d[1].damage_type = DAMAGE_PHYSICAL
+local stun_dur = table.tail({2, 2, 2, 2})
+local jump_radius = 100
+loop = table.tail({1, 2, 3, 4})
 map[_("HERO_ROOM_ROBOT_BERSERKER_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_DESC"), str(cooldown_str()), str(loop), str(jump_radius), str(damage_str()), str(stun_dur))
 
-blc = balance.hero_robot.fire
-cooldown = table.tail(blc.cooldown)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-factor = blc.slow_factor
-duration = table.tail(blc.smoke_duration)
+cooldown = table.tail({20, 20, 20})
+d[1].damage_min = table.tail({20, 40, 60})
+d[1].damage_max = table.tail({40, 80, 120})
+d[1].damage_type = DAMAGE_TRUE
+factor = 0.5
+duration = table.tail({5, 5, 5})
 map[_("HERO_ROOM_ROBOT_BERSERKER_2_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_2_DESC"), str(cooldown_str()), str(duration), str(damage_str()), str(factor))
 
-blc = balance.hero_robot.explode
-cooldown = table.tail(blc.cooldown)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-local burn_dur = blc.burning_duration
-d[2].damage_min = table.tail(blc.burning_damage_min)
-d[2].damage_max = table.tail(blc.burning_damage_max)
-d[2].damage_type = blc.burning_damage_type
-cycle_time = blc.damage_every
+cooldown = table.tail({20, 19, 18})
+d[1].damage_min = table.tail({30, 60, 90})
+d[1].damage_max = table.tail({40, 80, 120})
+d[1].damage_type = DAMAGE_EXPLOSION
+local burn_dur = 4
+d[2].damage_min = table.tail({1, 2, 3})
+d[2].damage_max = table.tail({1, 2, 3})
+d[2].damage_type = DAMAGE_TRUE
+cycle_time = 0.25
 map[_("HERO_ROOM_ROBOT_BERSERKER_3_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_3_DESC"), str(cooldown_str()), str(damage_str()), str(burn_dur), str(cycle_time), str(damage_str(2)))
 
-blc = balance.hero_robot.uppercut
-cooldown = table.tail(blc.cooldown)
-local life_pct = table.tail(blc.life_threshold)
+cooldown = table.tail({32, 28, 24})
+local life_pct = table.tail({25, 30, 40})
 map[_("HERO_ROOM_ROBOT_BERSERKER_4_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_4_DESC"), str(cooldown_str()), str(life_pct))
 
-blc = balance.hero_robot.ultimate
-cooldown = table.tail(blc.cooldown)
-local ult_dur = blc.duration
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-d[2].damage_min = table.tail(blc.burning_damage_min)
-d[2].damage_max = table.tail(blc.burning_damage_max)
-d[2].damage_type = blc.burning_damage_type
-cycle_time = blc.damage_every
-local ult_burn_dur = blc.burning_duration
+cooldown = table.tail({40, 40, 40, 40})
+local ult_dur = 5
+d[1].damage_min = table.tail({60, 130, 200, 270})
+d[1].damage_max = table.tail({60, 130, 200, 270})
+d[1].damage_type = DAMAGE_PHYSICAL
+d[2].damage_min = table.tail({1, 2, 3, 4})
+d[2].damage_max = table.tail({1, 2, 3, 4})
+d[2].damage_type = DAMAGE_TRUE
+cycle_time = 0.25
+local ult_burn_dur = 4
 map[_("HERO_ROOM_ROBOT_BERSERKER_5_NAME")] = string.format(_("HERO_ROOM_ROBOT_BERSERKER_5_DESC"), str(cooldown_str()), str(ult_dur), str(damage_str()), str(ult_burn_dur), str(cycle_time), str(damage_str(2)))
 
 set_hero("hero_bird")
-blc = balance.hero_bird.cluster_bomb
 set_skill(h.hero.skills.cluster_bomb)
 get_cooldown()
-d[1].damage_min = table.tail(blc.explosion_damage_min)
-d[1].damage_max = table.tail(blc.explosion_damage_max)
-d[1].damage_type = blc.explosion_damage_type
-local fire_dur = table.tail(blc.fire_duration)
-local burn_dmg = table.tail(blc.burning.damage)
-map[_("HERO_ROOM_BIRD_CLUSTER_BOMB_NAME")] = string.format(_("HERO_ROOM_BIRD_CLUSTER_BOMB_DESC"), str(cooldown_str()), str(damage_str()), str(fire_dur), str(blc.burning.cycle_time), str(burn_dmg))
+d[1].damage_min = table.tail({16, 24, 36})
+d[1].damage_max = table.tail({16, 24, 36})
+d[1].damage_type = DAMAGE_EXPLOSION
+local fire_dur = table.tail({3, 6, 9})
+local burn_dmg = table.tail({1, 1, 1})
+map[_("HERO_ROOM_BIRD_CLUSTER_BOMB_NAME")] = string.format(_("HERO_ROOM_BIRD_CLUSTER_BOMB_DESC"), str(cooldown_str()), str(damage_str()), str(fire_dur), str(0.25), str(burn_dmg))
 
-blc = balance.hero_bird.shout_stun
 set_skill(h.hero.skills.shout_stun)
 get_cooldown()
-local stun_dur = table.tail(blc.stun_duration)
-local slow_dur = table.tail(blc.slow_duration)
-local slow_factor = (1 - blc.slow_factor) * 100
-map[_("HERO_ROOM_BIRD_SHOUT_STUN_NAME")] = string.format(_("HERO_ROOM_BIRD_SHOUT_STUN_DESC"), str(cooldown_str()), str(blc.radius), str(stun_dur), str(slow_factor), str(slow_dur))
+local stun_dur = table.tail({1, 1.5, 2})
+local slow_dur = table.tail({3, 4, 6})
+local slow_factor = (1 - 0.5) * 100
+map[_("HERO_ROOM_BIRD_SHOUT_STUN_NAME")] = string.format(_("HERO_ROOM_BIRD_SHOUT_STUN_DESC"), str(cooldown_str()), str(100), str(stun_dur), str(slow_factor), str(slow_dur))
 
-blc = balance.hero_bird.gattling
 set_skill(h.hero.skills.gattling)
 get_cooldown()
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-local gat_dur = table.tail(blc.duration)
-cycle_time = blc.shoot_every
+d[1].damage_min = table.tail({1, 3, 4})
+d[1].damage_max = table.tail({3, 5, 6})
+d[1].damage_type = DAMAGE_SHOT
+local gat_dur = table.tail({3, 3, 3})
+cycle_time = fts(4)
 map[_("HERO_ROOM_BIRD_GATTLING_NAME")] = string.format(_("HERO_ROOM_BIRD_GATTLING_DESC"), str(cooldown_str()), str(gat_dur), str(cycle_time), str(damage_str()))
 
-blc = balance.hero_bird.eat_instakill
 set_skill(h.hero.skills.eat_instakill)
 get_cooldown()
-local eat_hp = table.tail(blc.hp_max)
+local eat_hp = table.tail({520, 1040, 1560})
 map[_("HERO_ROOM_BIRD_EAT_INSTAKILL_NAME")] = string.format(_("HERO_ROOM_BIRD_EAT_INSTAKILL_DESC"), str(cooldown_str()), str(eat_hp))
 
-blc = balance.hero_bird.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
-local ult_dur = table.tail(blc.bird.duration)
-d[1].damage_min = table.tail(blc.bird.melee_attack.damage_min)
-d[1].damage_max = table.tail(blc.bird.melee_attack.damage_max)
-d[1].damage_type = blc.bird.melee_attack.damage_type
+local ult_dur = table.tail({8, 10, 12, 15})
+d[1].damage_min = table.tail({16, 25, 36, 50})
+d[1].damage_max = table.tail({16, 25, 36, 50})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_BIRD_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_BIRD_ULTIMATE_DESC"), str(cooldown_str()), str(ult_dur), str(damage_str()))
 
 set_hero("hero_lava")
-blc = balance.hero_lava.temper_tantrum
 set_skill(h.hero.skills.temper_tantrum)
 get_cooldown()
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-local stun_dur = blc.stun_duration
+d[1].damage_min = table.tail({19, 35, 54})
+d[1].damage_max = table.tail({28, 52, 80})
+d[1].damage_type = DAMAGE_PHYSICAL
+local stun_dur = 2
 map[_("HERO_ROOM_LAVA_TEMPER_TANTRUM_NAME")] = string.format(_("HERO_ROOM_LAVA_TEMPER_TANTRUM_DESC"), str(cooldown_str()), str(damage_str()), str(stun_dur))
 
-blc = balance.hero_lava.hotheaded
 set_skill(h.hero.skills.hotheaded)
-local hothead_factor = (table.tail(blc.damage_factors) - 1) * 100
-local hothead_dur = table.tail(blc.durations)
-cycle_time = balance.hero_lava.death_aura.cycle_time
-d[1].damage_min = balance.hero_lava.death_aura.damage_min
-d[1].damage_max = balance.hero_lava.death_aura.damage_max
-d[1].damage_type = balance.hero_lava.death_aura.damage_type
+local hothead_factor = (table.tail({1.2, 1.3, 1.4}) - 1) * 100
+local hothead_dur = table.tail({6, 6, 6})
+cycle_time = 0.25
+d[1].damage_min = 5
+d[1].damage_max = 7
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_LAVA_HEART_NAME")] = string.format(_("HERO_ROOM_LAVA_HEART_DESC"), str(cycle_time), damage_str(), str(hothead_factor), str(hothead_dur))
 
-blc = balance.hero_lava.double_trouble
 set_skill(h.hero.skills.double_trouble)
 get_cooldown()
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-local sol_dur = blc.soldier.duration
+d[1].damage_min = table.tail({30, 50, 75})
+d[1].damage_max = table.tail({30, 50, 75})
+d[1].damage_type = DAMAGE_EXPLOSION
+local sol_dur = 10
 map[_("HERO_ROOM_LAVA_DOUBLE_TROUBLE_NAME")] = string.format(_("HERO_ROOM_LAVA_DOUBLE_TROUBLE_DESC"), str(cooldown_str()), str(damage_str()), str(sol_dur))
 
-blc = balance.hero_lava.wild_eruption
 set_skill(h.hero.skills.wild_eruption)
 get_cooldown()
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-local erupt_dur = table.tail(blc.duration)
-cycle_time = blc.damage_every
+d[1].damage_min = table.tail({10, 12, 15})
+d[1].damage_max = table.tail({10, 12, 15})
+d[1].damage_type = DAMAGE_TRUE
+local erupt_dur = table.tail({4, 4, 4})
+cycle_time = 0.25
 map[_("HERO_ROOM_LAVA_WILD_ERUPTION_NAME")] = string.format(_("HERO_ROOM_LAVA_WILD_ERUPTION_DESC"), str(cooldown_str()), str(cycle_time), str(damage_str()), str(erupt_dur))
 
-blc = balance.hero_lava.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
-local ult_count = table.tail(blc.fireball_count)
-d[1].damage_min = table.tail(blc.bullet.damage_min)
-d[1].damage_max = table.tail(blc.bullet.damage_max)
-d[1].damage_type = blc.bullet.damage_type
-local scorch_dur = blc.bullet.scorch.duration
+local ult_count = table.tail({3, 4, 5, 6})
+d[1].damage_min = table.tail({40, 80, 130, 200})
+d[1].damage_max = table.tail({40, 80, 130, 200})
+d[1].damage_type = DAMAGE_TRUE
+local scorch_dur = 4
 map[_("HERO_ROOM_LAVA_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_LAVA_ULTIMATE_DESC"), str(cooldown_str()), str(ult_count), str(damage_str()), str(scorch_dur))
 
 set_hero("hero_spider")
-blc = balance.hero_spider.instakill_melee
 set_skill(h.hero.skills.instakill_melee)
 get_cooldown()
-local instakill_threshold = table.tail(blc.life_threshold)
-factor = blc.heal_factor
+local instakill_threshold = table.tail({1000, 1500, 2000})
+factor = 0.4
 map[_("HERO_ROOM_SPIDER_INSTAKILL_MELEE_NAME")] = string.format(_("HERO_ROOM_SPIDER_INSTAKILL_MELEE_DESC"), str(cooldown_str()), str(instakill_threshold), str(factor * 100))
 
-blc = balance.hero_spider.area_attack
 set_skill(h.hero.skills.area_attack)
 get_cooldown()
-local stun_dur = table.tail(blc.s_stun_time)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
+local stun_dur = table.tail({3, 4, 5})
+d[1].damage_min = table.tail({25, 50, 75})
+d[1].damage_max = table.tail({50, 75, 100})
+d[1].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_SPIDER_AREA_ATTACK_NAME")] = string.format(_("HERO_ROOM_SPIDER_AREA_ATTACK_DESC"), str(cooldown_str()), str(stun_dur), str(damage_str()))
 
-blc = balance.hero_spider.tunneling
 set_skill(h.hero.skills.tunneling)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-duration = blc.stun_duration
+d[1].damage_min = table.tail({30, 45, 60})
+d[1].damage_max = table.tail({40, 70, 100})
+d[1].damage_type = DAMAGE_PHYSICAL
+duration = 0.35
 map[_("HERO_ROOM_SPIDER_TUNNELING_NAME")] = string.format(_("HERO_ROOM_SPIDER_TUNNELING_DESC"), str(damage_str()), str(duration))
 
-blc = balance.hero_spider.supreme_hunter
 set_skill(h.hero.skills.supreme_hunter)
 get_cooldown()
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-d[2].damage_min = table.tail(blc.dot_damage_min)
-d[2].damage_max = table.tail(blc.dot_damage_max)
-d[2].damage_type = blc.dot_damage_type
-cycle_time = blc.damage_every
+d[1].damage_min = table.tail({112, 224, 336})
+d[1].damage_max = table.tail({168, 336, 504})
+d[1].damage_type = DAMAGE_RUDE
+d[2].damage_min = table.tail({8, 12, 16})
+d[2].damage_max = table.tail({8, 12, 16})
+d[2].damage_type = DAMAGE_POISON
+cycle_time = 0.25
 map[_("HERO_ROOM_SPIDER_SUPREME_HUNTER_NAME")] = string.format(_("HERO_ROOM_SPIDER_SUPREME_HUNTER_DESC"), str(cooldown_str()), str(damage_str()), str(cycle_time), str(damage_str(2)))
 
-blc = balance.hero_spider.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
-local spawn_count = table.tail(blc.spawn_amount)
-local spider_dur = table.tail(blc.spider.duration)
+local spawn_count = table.tail({2, 3, 4, 5})
+local spider_dur = table.tail({5, 7, 8, 10})
 map[_("HERO_ROOM_SPIDER_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_SPIDER_ULTIMATE_DESC"), str(cooldown_str()), str(spawn_count), str(spider_dur))
 
 set_hero("hero_mecha")
-blc = balance.hero_mecha.goblidrones
 set_skill(h.hero.skills.goblidrones)
 get_cooldown()
-local drone_dur = table.tail(blc.drone.duration)
-d[1].damage_min = table.tail(blc.drone.ranged_attack.damage_min)
-d[1].damage_max = table.tail(blc.drone.ranged_attack.damage_max)
-d[1].damage_type = blc.drone.ranged_attack.damage_type
-map[_("HERO_ROOM_MECHA_GOBLIDRONES_NAME")] = string.format(_("HERO_ROOM_MECHA_GOBLIDRONES_DESC"), str(cooldown_str()), str(blc.units), str(drone_dur), str(damage_str()))
+local drone_dur = table.tail({8, 10, 12})
+d[1].damage_min = table.tail({4, 7, 10})
+d[1].damage_max = table.tail({5, 10, 15})
+d[1].damage_type = DAMAGE_SHOT
+map[_("HERO_ROOM_MECHA_GOBLIDRONES_NAME")] = string.format(_("HERO_ROOM_MECHA_GOBLIDRONES_DESC"), str(cooldown_str()), str(2), str(drone_dur), str(damage_str()))
 
-blc = balance.hero_mecha.tar_bomb
 set_skill(h.hero.skills.tar_bomb)
 get_cooldown()
-local tar_dur = table.tail(blc.duration)
-local tar_slow = (1 - blc.slow_factor) * 100
+local tar_dur = table.tail({5, 6, 7})
+local tar_slow = (1 - 0.5) * 100
 map[_("HERO_ROOM_MECHA_TAR_BOMB_NAME")] = string.format(_("HERO_ROOM_MECHA_TAR_BOMB_DESC"), str(cooldown_str()), str(tar_slow), str(tar_dur))
 
-blc = balance.hero_mecha.power_slam
 set_skill(h.hero.skills.power_slam)
 get_cooldown()
-local slam_stun = table.tail(blc.stun_time) / 30
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
+local slam_stun = table.tail({30, 45, 60}) / 30
+d[1].damage_min = table.tail({30, 60, 90})
+d[1].damage_max = table.tail({30, 60, 90})
+d[1].damage_type = DAMAGE_PHYSICAL
 map[_("HERO_ROOM_MECHA_POWER_SLAM_NAME")] = string.format(_("HERO_ROOM_MECHA_POWER_SLAM_DESC"), str(cooldown_str()), str(slam_stun), str(damage_str()))
 
-blc = balance.hero_mecha.mine_drop
 set_skill(h.hero.skills.mine_drop)
 get_cooldown()
-local max_mines = table.tail(blc.max_mines)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
+local max_mines = table.tail({2, 3, 4})
+d[1].damage_min = table.tail({16, 24, 32})
+d[1].damage_max = table.tail({26, 38, 50})
+d[1].damage_type = DAMAGE_EXPLOSION
 map[_("HERO_ROOM_MECHA_MINE_DROP_NAME")] = string.format(_("HERO_ROOM_MECHA_MINE_DROP_DESC"), str(cooldown_str()), str(max_mines), str(damage_str()))
 
-blc = balance.hero_mecha.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
-d[1].damage_min = table.tail(blc.ranged_attack.damage_min)
-d[1].damage_max = table.tail(blc.ranged_attack.damage_max)
-d[1].damage_type = blc.ranged_attack.damage_type
+d[1].damage_min = table.tail({40, 48, 56, 64})
+d[1].damage_max = table.tail({60, 72, 84, 96})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_MECHA_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_MECHA_ULTIMATE_DESC"), str(cooldown_str()), str(damage_str()))
 
 set_hero("hero_dragon_sun")
-blc = balance.hero_dragon_sun.worthy_foe
 set_skill(h.hero.skills.worthy_foe)
 get_cooldown()
-d[1].damage_min = table.tail(blc.damages_target.damage_min)
-d[1].damage_max = table.tail(blc.damages_target.damage_max)
-d[1].damage_type = blc.damages_target.damage_type
+d[1].damage_min = table.tail({200, 360, 400})
+d[1].damage_max = table.tail({300, 540, 720})
+d[1].damage_type = DAMAGE_TRUE
 map[_("HERO_ROOM_DRAGON_SUN_WORTHY_FOE_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_WORTHY_FOE_DESC"), str(cooldown_str()), str(damage_str()))
 
-blc = balance.hero_dragon_sun.solar_cleansing
 set_skill(h.hero.skills.solar_cleansing)
 get_cooldown()
-local cleansing_dur = table.tail(blc.duration)
-cycle_time = blc.heal_every
-amount = table.tail(blc.heal)
+local cleansing_dur = table.tail({6, 6, 6})
+cycle_time = 0.25
+amount = table.tail({5, 10, 15})
 map[_("HERO_ROOM_DRAGON_SUN_SOLAR_CLEANSING_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_SOLAR_CLEANSING_DESC"), str(cooldown_str()), str(cleansing_dur), str(cycle_time), str(amount))
 
-blc = balance.hero_dragon_sun.overcharge
 set_skill(h.hero.skills.overcharge)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_min = table.tail({75, 150, 225})
+d[1].damage_max = table.tail({100, 200, 300})
 d[1].damage_type = DAMAGE_TRUE
-cooldown = table.tail(blc.cooldown)
+cooldown = table.tail({6, 6, 6})
 map[_("HERO_ROOM_DRAGON_SUN_OVERCHARGE_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_OVERCHARGE_DESC"), str(cooldown), str(damage_str()))
 
-blc = balance.hero_dragon_sun.solar_stones
 set_skill(h.hero.skills.solar_stones)
 get_cooldown()
-local max_mines = table.tail(blc.max_mines)
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-radius = blc.damage_radius
+local max_mines = table.tail({3, 4, 5})
+d[1].damage_min = table.tail({50, 90, 130})
+d[1].damage_max = table.tail({70, 120, 190})
+d[1].damage_type = DAMAGE_TRUE
+radius = 50
 map[_("HERO_ROOM_DRAGON_SUN_SOLAR_STONES_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_SOLAR_STONES_DESC"), str(cooldown_str()), str(radius), str(damage_str()), str(max_mines))
 
-blc = balance.hero_dragon_sun.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
-d[1].damage_min = table.tail(blc.damage_min)
-d[1].damage_max = table.tail(blc.damage_max)
-d[1].damage_type = blc.damage_type
-cycle_time = blc.damage_every
-radius = blc.damage_radius
+d[1].damage_min = table.tail({6, 12, 18, 24})
+d[1].damage_max = table.tail({10, 20, 30, 40})
+d[1].damage_type = DAMAGE_TRUE
+cycle_time = 0.1
+radius = 80
 map[_("HERO_ROOM_DRAGON_SUN_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_DRAGON_SUN_ULTIMATE_DESC"), str(cooldown_str()), str(cycle_time), str(radius), str(damage_str()))
 
 -- hero_eiskalt

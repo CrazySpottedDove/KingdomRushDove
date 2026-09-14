@@ -426,6 +426,7 @@ end
 ---@param times number? 完成次数（可选，默认1）
 function U.y_animation_wait(entity, idx, times)
 	local a = entity.render.sprites[idx or 1]
+
 	times = a.loop and (times or 1) or 0
 
 	while a.runs <= times do
@@ -436,6 +437,7 @@ end
 function U.y_animation_wait_specific(entity, idx)
 	local a = entity.render.sprites[idx]
 	local times = a.loop and 1 or 0
+
 	while a.runs <= times do
 		coroutine.yield()
 	end
@@ -484,10 +486,12 @@ function U.animation_start_specific(entity, name, flip_x, ts, loop, idx)
 
 	a.flip_x = flip_x and true or false
 	a.loop = loop or a.loop_forced == true
+
 	if not a.loop then
 		a.ts = ts
 		a.runs = 0
 	end
+
 	a.name = name
 end
 
@@ -499,6 +503,7 @@ end
 ---@param idx any
 function U.animation_start_loop_specific(entity, name, flip_x, ts, idx)
 	local a = entity.render.sprites[idx]
+
 	a.flip_x = flip_x and true or false
 	a.loop = true
 	a.name = name
@@ -512,6 +517,7 @@ end
 ---@param idx any
 function U.animation_start_once_specific(entity, name, flip_x, ts, idx)
 	local a = entity.render.sprites[idx]
+
 	a.flip_x = flip_x and true or false
 	a.loop = false
 	a.ts = ts
@@ -526,6 +532,7 @@ end
 ---@param idx any
 function U.animation_start_once_specific_no_flip(entity, name, ts, idx)
 	local a = entity.render.sprites[idx]
+
 	a.loop = false
 	a.ts = ts
 	a.runs = 0
@@ -551,6 +558,7 @@ end
 ---@return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_facing_point_use_path_and_offset(e, group, point, idx, offset)
 	local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+
 	return U.animation_name_with_direction(e.render.sprites[idx or 1], group, point.x - offset.x - npos.x, point.y - offset.y - npos.y)
 end
 
@@ -562,6 +570,7 @@ end
 ---@return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_facing_point_use_path(e, group, point, idx)
 	local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+
 	return U.animation_name_with_direction(e.render.sprites[idx or 1], group, point.x - npos.x, point.y - npos.y)
 end
 
@@ -585,6 +594,7 @@ end
 --- U.y_animation_wait 的显式默认实现，性能更优
 function U.y_animation_wait_default(entity)
 	local s = entity.render.sprites[1]
+
 	while s.runs <= 0 do
 		coroutine.yield()
 	end
@@ -680,6 +690,7 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 
 	if e.nav_path and use_path then
 		local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+
 		dx, dy = dx - npos.x, dy - npos.y
 	else
 		dx, dy = dx - e.pos.x, dy - e.pos.y
@@ -710,6 +721,7 @@ function U.animation_name_with_direction(sprite, group, dx, dy)
 		return angles[1], dx < 0, 1
 	elseif angle_count == 2 then
 		local coordinate_idx = dy > 0 and 1 or 2
+
 		return angles[coordinate_idx], (sprite.angles_flip_horizontal and sprite.angles_flip_horizontal[coordinate_idx]) and (dx >= 0) or (dx < 0), coordinate_idx
 	--else if angle_count == 3 then
 	else
@@ -717,6 +729,7 @@ function U.animation_name_with_direction(sprite, group, dx, dy)
 		local coordinate_idx = 1
 		local o_flip = false
 		local a1, a2, a3, a4 = 45, 135, 225, 315
+
 		if sprite.angles_custom and sprite.angles_custom[group] then
 			a1, a2, a3, a4 = sprite.angles_custom[group][1], sprite.angles_custom[group][2], sprite.angles_custom[group][3], sprite.angles_custom[group][4]
 		end
@@ -726,11 +739,14 @@ function U.animation_name_with_direction(sprite, group, dx, dy)
 
 		if stickiness then
 			local skew_factor = sprite._last_skew_factor
+
 			if skew_factor then
 				local skew = stickiness * skew_factor
+
 				a1, a3 = a1 - skew, a3 - skew
 				a2, a4 = a2 + skew, a4 + skew
 			end
+
 			if a1 <= angle_deg and angle_deg < a2 then
 				coordinate_idx = 2
 				sprite._last_skew_factor = 1
@@ -739,6 +755,7 @@ function U.animation_name_with_direction(sprite, group, dx, dy)
 				sprite._last_skew_factor = 1
 			else
 				sprite._last_skew_factor = -1
+
 				if dx < 0 then
 					o_flip = true
 				end
@@ -772,6 +789,7 @@ function U.y_animation_play(entity, name, flip_x, ts, times, idx)
 	U.animation_start(entity, name, flip_x, ts, times and times > 1, idx, true)
 
 	local a = entity.render.sprites[idx or 1]
+
 	times = a.loop and (times or 1) or 0
 
 	while a.runs <= times do
@@ -781,8 +799,10 @@ end
 
 function U.y_animation_play_default(entity, name, flip_x, ts)
 	U.animation_start_default(entity, name, flip_x, ts, false)
+
 	local a = entity.render.sprites[1]
 	local times = a.loop and 1 or 0
+
 	while a.runs <= times do
 		coroutine.yield()
 	end
@@ -790,7 +810,9 @@ end
 
 function U.y_animation_play_once_specific(entity, name, flip_x, ts, idx)
 	U.animation_start_once_specific(entity, name, flip_x, ts, idx)
+
 	local a = entity.render.sprites[idx]
+
 	while a.runs <= 0 do
 		coroutine.yield()
 	end
@@ -798,7 +820,9 @@ end
 
 function U.y_animation_play_once_specific_no_flip(entity, name, ts, idx)
 	U.animation_start_once_specific_no_flip(entity, name, ts, idx)
+
 	local a = entity.render.sprites[idx]
+
 	while a.runs <= 0 do
 		coroutine.yield()
 	end
@@ -1064,7 +1088,6 @@ function U.walk_off__accel__unsnapped(e, dt)
 	local m = e.motion
 	local pos = e.pos
 	local vx, vy = m.dest.x - pos.x, m.dest.y - pos.y
-
 	local step = e.motion.real_speed * dt
 
 	if vx * vx + vy * vy <= step * step and not (e.teleport and e.teleport.pending) then
@@ -1082,6 +1105,7 @@ function U.walk_off__accel__unsnapped(e, dt)
 	end
 
 	local sx, sy = step * cos(v_angle), step * sin(v_angle)
+
 	pos.x, pos.y = pos.x + sx, pos.y + sy
 	m.speed.x, m.speed.y = sx / dt, sy / dt
 	m.arrived = false
@@ -1134,6 +1158,7 @@ function U.find_nearest_soldier(entities, origin, min_range, max_range, flags, b
 	else
 		-- 不要 sort，只找一个最优的，线性扫描即可
 		local best = soldiers[1]
+
 		for i = 2, #soldiers do
 			local s = soldiers[i]
 			local s_mock = band(s.vis.flags, F_MOCKING) ~= 0
@@ -1179,6 +1204,7 @@ function U.has_soldier_in_range(entities, origin, min_range, max_range, flags, b
 			return true
 		end
 	end
+
 	return false
 end
 
@@ -1665,6 +1691,7 @@ function U.attack_order(attacks)
 		local a = attacks[i]
 		local chance = type(a.chance) == "table" and a.chance[#a.chance] or a.chance or 1
 		local cooldown = type(a.cooldown) == "table" and a.cooldown[#a.cooldown] or a.cooldown
+
 		table.insert(order, {i, chance, cooldown})
 	-- id = i,
 	-- chance = a.chance or 1,
@@ -1756,7 +1783,6 @@ function U.melee_slot_enemy_position(enemy, soldier, rank, back)
 	local enemy_on_the_right = not soldier.render.sprites[1].flip_x
 
 	-- local enemy_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) > PI * 0.5
-
 	if back then
 		enemy_on_the_right = not enemy_on_the_right
 	end
@@ -2017,6 +2043,7 @@ function U.predict_damage(entity, damage)
 
 	-- 该类攻击对护甲高的敌人伤害更高
 	local against_extra = 0
+
 	if band(damage.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 or band(damage.damage_type, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
 		against_extra = dvalue * protection * protection * 2 * entity.health.damage_factor
 	end
@@ -2397,10 +2424,12 @@ end
 ---@return number 真实最大速度
 function U.real_max_speed(entity)
 	local factor = entity.motion.factor
+
 	-- 对极低速度倍率做补偿，避免减速效果叠加时的收益曲线过于陡峭
 	if factor < 0.25 then
 		factor = factor * (1 + 40 * (0.25 - factor) * (0.25 - factor))
 	end
+
 	return km.clamp(1, 10000, (entity.motion.max_speed + entity.motion.buff) * entity.motion.factor)
 end
 
@@ -2544,41 +2573,12 @@ function U.append_mod(field, mod_name)
 	end
 end
 
-local function get_value(obj, path)
-	local p = {}
-
-	for v in path:gmatch("[^%.%[%]]+") do
-		local i = tonumber(v)
-
-		if i then
-			table.insert(p, i)
-		else
-			table.insert(p, v)
-		end
-	end
-
-	local val = obj
-
-	for _, v in ipairs(p) do
-		val = val[v]
-
-		if not val then
-			return nil
-		end
-	end
-
-	return val
-end
-
-local b = require("kr1.data.balance")
-
 -- ── 文案内嵌表达式 ──────────────────────────────────────────────
--- 写法与旧的 balance 引用相同：%$...%$
---   1) 先按 balance 路径取值（兼容 %$towers.x.y[1]%$ 这类老写法）
---   2) 取不到就把内容当 Lua 表达式求值，环境里有：
+-- 写法：%$ ... %$ 里写 Lua 表达式（在原 balance 数据被内联进模板之后，
+-- 数值一律从模板/公式上取；数值本身已经不再有 balance 这一份数据了）
+-- 环境里有：
 --        T("模板名") -> entity_db 的模板（等价 E:get_template）
 --        E          -> entity_db 本身
---        b / towers / heroes / enemies / specials / reinforcements
 --        level      -> 当前技能等级（调用处通过 ctx 传入）
 --        math / FPS / floor / ceil / min / max ...
 -- 表达式只在首次出现时编译一次，之后走缓存（描述每帧都在画）。
@@ -2603,18 +2603,14 @@ local expr_env = {
 	max = math.max,
 	abs = math.abs,
 	FPS = FPS,
+	BIG_ENEMY_HP = BIG_ENEMY_HP,
 	level = 0,
-	b = b,
-	towers = b.towers,
-	heroes = b.heroes,
-	enemies = b.enemies,
-	specials = b.specials,
-	reinforcements = b.reinforcements,
 	E = E,
 	T = function(name)
 		return E:get_template(name)
 	end
 }
+
 expr_env._G = expr_env
 
 --- 文案里的数值显示格式：整数原样，否则最多两位小数并去掉末尾多余的 0。
@@ -2637,30 +2633,41 @@ end
 --- 求值一个内嵌表达式；失败时返回 nil 并记日志
 function U.eval_text_expr(expr, ctx)
 	local fn = expr_cache[expr]
+
 	if fn == nil then
 		local chunk, err = loadstring("return (" .. expr .. ")")
+
 		if chunk then
 			setfenv(chunk, expr_env)
+
 			fn = chunk
 		else
 			log.error("文案表达式语法错误: [%s] %s", expr, tostring(err))
+
 			fn = false
 		end
+
 		expr_cache[expr] = fn
 	end
+
 	if not fn then
 		return nil
 	end
+
 	expr_env.level = (ctx and ctx.level) or 0
+
 	local ok, v = pcall(fn)
+
 	if not ok then
 		log.error("文案表达式求值失败: [%s] %s", expr, tostring(v))
+
 		return nil
 	end
+
 	return v
 end
 
-function U.balance_format(s, ctx)
+function U.format_text_expr(s, ctx)
 	local i, f
 
 	if not s then
@@ -2675,11 +2682,7 @@ function U.balance_format(s, ctx)
 
 			if f then
 				local p = string.sub(s, i + 1, f - 2)
-				local v = get_value(b, p)
-
-				if v == nil then
-					v = U.eval_text_expr(p, ctx)
-				end
+				local v = U.eval_text_expr(p, ctx)
 
 				if not v then
 					v = ""
@@ -3147,7 +3150,9 @@ end
 ---@param draw_order number|nil，为 nil 时重置 draw_order 为原顺序
 function U.change_sprite_draw_order(entity, sprite_id, draw_order)
 	local sprite = entity.render.sprites[sprite_id]
+
 	sprite.draw_order = draw_order
+
 	if draw_order then
 		sprite._draw_order = 100000 * draw_order + entity.id
 	else
@@ -3213,11 +3218,13 @@ end
 
 function U.tower_is_silence_target(target)
 	local tw = target.tower
+
 	return tw.can_do_magic and tw.can_be_mod and target.attacks and #target.attacks.list > 1
 end
 
 function U.cast_silence_on_tower(target, ts)
 	local tw = target.tower
+
 	tw.silence_cast_count = tw.silence_cast_count + 1
 
 	if tw.silence_cast_count == 1 then
@@ -3228,14 +3235,18 @@ end
 
 function U.remove_silence_on_tower(target, ts)
 	local tw = target.tower
+
 	tw.silence_cast_count = tw.silence_cast_count - 1
 
 	if tw.silence_cast_count < 1 and not tw.can_do_magic then
 		tw.can_do_magic = true
+
 		if tw.attacks and tw.silence_ts then
 			local duration = ts - tw.silence_ts
+
 			for i = 2, #tw.attacks.list do
 				local a = tw.attacks.list[i]
+
 				if a.requires_magic ~= false then
 					a.ts = a.ts + duration
 				end
@@ -3255,15 +3266,21 @@ end
 function U.heal(target, amount)
 	local h = target.health
 	local current_hp = h.hp
+
 	if current_hp >= h.hp_max or amount <= 0 then
 		return 0
 	end
+
 	h.hp = current_hp + amount
+
 	if h.hp > h.hp_max then
 		h.hp = h.hp_max
 	end
+
 	local healed = h.hp - current_hp
+
 	U.hnum_on_applied_impl(target, healed)
+
 	return healed
 end
 
@@ -3276,16 +3293,21 @@ function U.heal_with_overflow(target, amount, overflow_factor)
 	local h = target.health
 	local upper_bound = h.hp_max * overflow_factor
 	local current_hp = h.hp
+
 	if current_hp >= upper_bound or amount <= 0 then
 		return 0
 	end
+
 	h.hp = current_hp + amount
+
 	if h.hp > upper_bound then
 		h.hp = upper_bound
 	end
+
 	local healed = h.hp - current_hp
 
 	U.hnum_on_applied_impl(target, healed)
+
 	return healed
 end
 
@@ -3323,9 +3345,13 @@ function U.insert_on_damage(entity, func)
 			entity.health.on_damages[1] = entity.health.on_damage
 		end
 	end
+
 	local index = #entity.health.on_damages + 1
+
 	entity.health.on_damages[index] = func
+
 	update_on_damage(entity)
+
 	return index
 end
 
@@ -3334,12 +3360,15 @@ end
 ---@param index number 回调索引
 function U.remove_on_damage(entity, index)
 	entity.health.on_damages[index] = nil
+
 	update_on_damage(entity)
 end
 
 function U.tower_block_inc(tower_entity)
 	local tw = tower_entity.tower
+
 	tw.block_count = tw.block_count + 1
+
 	if tw.block_count > 0 then
 		tw.blocked = true
 	end
@@ -3347,7 +3376,9 @@ end
 
 function U.tower_block_dec(tower_entity)
 	local tw = tower_entity.tower
+
 	tw.block_count = tw.block_count - 1
+
 	if tw.block_count <= 0 then
 		tw.blocked = false
 	end
@@ -3357,11 +3388,14 @@ function U.entity_insert_shader(entity, shader, shader_args, id)
 	if not entity.render._runtime_shaders then
 		entity.render._runtime_shaders = {}
 	end
+
 	local runtime_shaders = entity.render._runtime_shaders
+
 	runtime_shaders[id] = {shader, shader_args}
 
 	for i = 1, #entity.render.sprites do
 		local sprite = entity.render.sprites[i]
+
 		sprite._shader = shader
 		sprite.shader_args = shader_args
 	end
@@ -3371,19 +3405,26 @@ function U.entity_remove_shader(entity, id)
 	if not entity.render._runtime_shaders then
 		return
 	end
+
 	local runtime_shaders = entity.render._runtime_shaders
+
 	runtime_shaders[id] = nil
+
 	local last_key = nil
+
 	for k, v in pairs(runtime_shaders) do
 		last_key = k
 	end
+
 	local shader, shader_args = nil, nil
+
 	if last_key then
 		shader, shader_args = runtime_shaders[last_key][1], runtime_shaders[last_key][2]
 	end
 
 	for i = 1, #entity.render.sprites do
 		local sprite = entity.render.sprites[i]
+
 		sprite._shader = shader
 		sprite.shader_args = shader_args
 	end
@@ -3398,6 +3439,7 @@ function U.render_clone(render)
 
 	for i = 1, #render.sprites do
 		local sprite = render.sprites[i]
+
 		new_render.sprites[#new_render.sprites + 1] = table.deepclone(sprite)
 	end
 
@@ -3410,12 +3452,15 @@ function U.soldier_revive(soldier)
 	soldier.health.dead = false
 	soldier.health.hp = soldier.health.hp_max
 	soldier.health_bar.hidden = nil
+
 	if soldier.ui then
 		soldier.ui.can_select = true
 	end
+
 	if soldier.unit.hide_during_death then
 		soldier.unit.hide_during_death = nil
 	end
+
 	U.sprites_show(soldier)
 
 	for _, s in ipairs(soldier.render.sprites) do
@@ -3445,6 +3490,7 @@ function U.is_soldiers_around_need_heal(soldiers, center, trigger_hp_factor, ran
 			return s
 		end
 	end
+
 	return nil
 end
 
@@ -3461,12 +3507,14 @@ function U.set_terrain_style(e, terrain_style)
 
 	if not sprite_name then
 		log.error("not found terrain style's sprite: %s", terrain_style)
+
 		return
 	end
 
 	-- 含替换符，说明需要替换原有 sprite name 中的地形样式部分
 	if e.render.sprites[1].name and string.find(e.render.sprites[1].name, "%%") then
 		e.render.sprites[1].name = TERRAIN_STYLE_SPRITE_DICT[terrain_style]
+
 		return
 	end
 
@@ -3508,7 +3556,6 @@ function U.get_path_fx_points(this, fx_radius, void_radius)
 	this._fx_point_path_sum = P:active_path_id_sum()
 
 	local points = {}
-
 	-- 特效总长
 	local scope = this.attacks.range - void_radius
 	-- 特效直径
@@ -3558,8 +3605,10 @@ end
 ---@return table? 可用集结点位置
 function U.get_nearest_valid_rally_pos(pos)
 	local nodes = P:nearest_nodes(pos.x, pos.y, nil, {1, 2, 3}, NF_RALLY)
+
 	for i = 1, #nodes do
 		local node_pos = P:node_pos_ref(nodes[i][1], nodes[i][2], nodes[i][3])
+
 		if U.has_valid_rally_node_nearby(node_pos) then
 			return node_pos:clone()
 		end
@@ -3582,10 +3631,13 @@ function U.overwrite_main_script(entity, new_script, on_new_script_return)
 	local script_wrapper = function(this, store)
 		-- 在原协程头插入新的逻辑。当新的逻辑结束时，自然退出，协程继续执行原有逻辑
 		new_script(this, store)
+
 		if on_new_script_return then
 			on_new_script_return(this, store)
 		end
+
 		entity._main_script_overwritten = nil
+
 		entity.main_script.update(this, store)
 	end
 
@@ -3599,6 +3651,7 @@ end
 ---@param y number
 function U.change_health_bar_offset_run_time(health_bar, y)
 	health_bar.offset.y = y
+
 	for i = 1, #health_bar.frames do
 		health_bar.frames[i].offset.y = y
 	end
@@ -3606,6 +3659,7 @@ end
 
 function U.change_health_bar_z_run_time(health_bar, z)
 	health_bar.z = z
+
 	for i = 1, #health_bar.frames do
 		health_bar.frames[i].z = z
 	end
@@ -3613,6 +3667,7 @@ end
 
 function U.change_health_bar_sort_y_offset_run_time(health_bar, sort_y_offset)
 	health_bar.sort_y_offset = sort_y_offset
+
 	for i = 1, #health_bar.frames do
 		health_bar.frames[i].sort_y_offset = sort_y_offset
 	end
@@ -3627,8 +3682,10 @@ end
 function U.find_best_center_node_containing_point(pos, radius, pi)
 	local nodes = P:nearest_nodes(pos.x, pos.y, {pi}, nil)
 	local node = nodes[1]
+
 	if node and node[4] < radius then
 		local node_pos = P:node_pos_ref(node[1], node[2], node[3])
+
 		if node_pos:dist(pos) < radius then
 			return node_pos:clone()
 		else

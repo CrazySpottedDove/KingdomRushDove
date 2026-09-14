@@ -277,6 +277,7 @@ tt.scale_factor = 1
 
 tt = RT("mod_tesla_overcharge", "modifier")
 AC(tt, "render")
+tt.stun_chance = 0.12
 tt.modifier.duration = fts(20)
 tt.modifier.vis_flags = F_MOD
 tt.render.sprites[1].prefix = "mod_tesla_hit"
@@ -299,6 +300,7 @@ tower_dwaarp.powers.drill.price_inc = 175
 tower_dwaarp.powers.lava = CC("power")
 tower_dwaarp.powers.lava.price_base = 400
 tower_dwaarp.powers.lava.price_inc = 250
+tower_dwaarp.powers.lava.damage_mult_inc = 0.7
 tower_dwaarp.main_script.update = scripts.tower_dwaarp.update
 tower_dwaarp.render.sprites[1].animated = false
 tower_dwaarp.render.sprites[1].name = "terrain_artillery_%04i"
@@ -1070,7 +1072,6 @@ tt.render.sprites[1].draw_order = 10
 
 --     五代
 -- --
-local balance = require("kr1.data.balance")
 
 -- 三管加农炮_START
 
@@ -2204,6 +2205,7 @@ tt.powers.tree.price_inc = 100
 tt.powers.tree.max_level = 2
 tt.powers.tree.cooldown = 23
 tt.powers.tree.cooldown_inc = -5
+tt.powers.tree.count = 2
 
 tt = RT("mod_rf_thorn", "modifier")
 AC(tt, "render")
@@ -2399,6 +2401,7 @@ tt.powers.nitro.max_level = 2
 tt.powers.nitro.price_base = 200
 tt.powers.nitro.price_inc = 150
 tt.powers.nitro.damage_inc = {100, 200}
+tt.powers.nitro.fragment_count_inc = 2
 
 tt = E:register_t("rr_mine_box", "decal_scripted")
 E:add_comps(tt, "attacks")
@@ -2738,8 +2741,9 @@ tt.tween.remove = false
 tt.sound_events.insert = "MechOil"
 
 tt = RT("mod_slow_oil_balloon", "mod_slow")
+tt.slow.factor_inc = -0.2
 tt.main_script.insert = fn_group(function(this, store)
-	this.slow.factor = 1 - this.modifier.level * 0.2
+	this.slow.factor = 1 + this.slow.factor_inc * this.modifier.level
 	return true
 end, tt.main_script.insert)
 tt.modifier.duration = 0.4

@@ -123,7 +123,7 @@ local function check_string(locale, key, s)
 		end
 
 		for _, level in ipairs(levels) do
-			local out = U.balance_format(span.text, {
+			local out = U.format_text_expr(span.text, {
 				level = level
 			})
 
@@ -138,7 +138,7 @@ local function check_string(locale, key, s)
 	end
 
 	-- 整串展开：确认没有任何未配对的标记被漏掉
-	local whole = U.balance_format(s, {
+	local whole = U.format_text_expr(s, {
 		level = 1
 	})
 

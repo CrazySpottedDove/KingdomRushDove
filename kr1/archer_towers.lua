@@ -401,9 +401,13 @@ tt.powers.sniper.price_base = 300
 tt.powers.sniper.price_inc = 250
 tt.powers.sniper.damage_factor_inc = 0.2
 tt.powers.sniper.instakill_chance_inc = 0.15
+tt.powers.sniper.boss_damage_base = 6
+tt.powers.sniper.boss_damage_inc = 2
 tt.powers.shrapnel = CC("power")
 tt.powers.shrapnel.price_base = 275
 tt.powers.shrapnel.price_inc = 300
+tt.powers.shrapnel.far_damage_factor = 0.6
+tt.powers.shrapnel.far_cooldown_reduction = 0.4
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = vec_2(0, 15)
 tt.render.sprites[2] = CC("sprite")
@@ -733,6 +737,7 @@ tt.info.portrait = "kr3_info_portraits_towers_0009"
 tt.powers.burst = CC("power")
 tt.powers.burst.price_base = 200
 tt.powers.burst.price_inc = 200
+tt.powers.burst.magic_armor_hit_cooldown_reduction = 0.3
 tt.powers.slumber = CC("power")
 tt.powers.slumber.price_base = 225
 tt.powers.slumber.price_inc = 75
@@ -912,9 +917,13 @@ tt.powers.sentence = CC("power")
 tt.powers.sentence.price_base = 250
 tt.powers.sentence.price_inc = 250
 tt.powers.sentence.chances = {{0.04, 0.07, 0.1}, {0.08, 0.14, 0.2}}
+tt.powers.sentence.damage_factor_base = 4
+tt.powers.sentence.damage_factor_inc = 2
+tt.powers.sentence.boss_damage_factor = 1.5
 tt.powers.mark = CC("power")
 tt.powers.mark.price_base = 225
 tt.powers.mark.price_inc = 150
+tt.powers.mark.sentence_chance_factor = 1.8
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = vec_2(0, 10)
@@ -1034,7 +1043,6 @@ tt.sound_events.insert = "TowerGoldenBowFlareHit"
 
 --         五代
 --     --
-local balance = require("kr1.data.balance")
 
 -- 暮光长弓_START
 tt = RT("tower_dark_elf_lvl4", "tower")
@@ -1742,9 +1750,11 @@ tt.info.portrait = "kr4_info_portraits_towers_0001"
 tt.powers.blade = E:clone_c("power")
 tt.powers.blade.price_base = 275
 tt.powers.blade.price_inc = 100
+tt.powers.blade.caster_cooldown_refund = 0.5
 tt.powers.mark = E:clone_c("power")
 tt.powers.mark.price_base = 150
 tt.powers.mark.price_inc = 150
+tt.powers.mark.hp_threshold = 1000
 tt.powers.crow = E:clone_c("power")
 tt.powers.crow.price_base = 180
 tt.powers.crow.price_inc = 180
@@ -2489,6 +2499,7 @@ tt.sound_events.insert = "GoblirangSound"
 
 tt = RT("mod_goblirang_stun", "mod_stun")
 tt.modifier.duration = 1
+tt.modifier.chance = 0.2
 
 ----------------------------------------------
 -- 少林寺 (Shaolin Temple, KR4)
@@ -2504,6 +2515,7 @@ tt.info.enc_icon = 19
 tt.powers.total = CC("power")
 tt.powers.total.price_base = 175
 tt.powers.total.price_inc = 175
+tt.powers.total.base_count = 3
 tt.powers.dragon = CC("power")
 tt.powers.dragon.price_base = 225
 tt.powers.dragon.max_level = 1

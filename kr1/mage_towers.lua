@@ -111,6 +111,8 @@ tt.render.sprites[1].z = Z_BULLETS
 
 tt = RT("mod_ray_arcane_disintegrate", "modifier")
 AC(tt, "render")
+tt.boss_damage_base = 642
+tt.boss_damage_hp_percent = 0.047
 tt.main_script.update = scripts.mod_ray_arcane_disintegrate.update
 tt.modifier.pop = {"pop_zap_arcane"}
 tt.modifier.pop_conds = DR_KILL
@@ -1390,7 +1392,6 @@ tt.pickpocket.fx = "fx_coin_jump"
 tt.pickpocket.pop = {"pop_faerie_steal"}
 
 -- 五代
-local balance = require("kr1.data.balance")
 
 -- 死灵法师_START
 

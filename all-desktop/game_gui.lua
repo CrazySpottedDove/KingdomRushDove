@@ -6282,7 +6282,7 @@ function NotificationView:show(id, no_transition, force_show)
 			local l_desc = GGTextLabel:new(V.v(label_w, 85))
 
 			l_desc.pos = V.v(ox, CJK(oy, nil, nil, oy + 8))
-			l_desc.text = _(prefix .. "_LARGE_DESCRIPTION")
+			l_desc.text = U.format_text_expr(_(prefix .. "_LARGE_DESCRIPTION"))
 			l_desc.font_name = "body_slides"
 			l_desc.font_size = 17
 			l_desc.line_height = CJK(0.8, nil, 1.1, 0.9)
@@ -8753,8 +8753,8 @@ function TowerMenuTooltip:show(entity, item)
 	self.phrase_label.hidden = true
 
 	if item.action == "tw_upgrade" then
-		self.title.text = item.tt_title or U.balance_format(_(item.action_arg))
-		self.desc:set_text(U.balance_format(item.tt_desc) or "")
+		self.title.text = item.tt_title or U.format_text_expr(_(item.action_arg))
+		self.desc:set_text(U.format_text_expr(item.tt_desc) or "")
 
 		local te
 
@@ -8802,14 +8802,14 @@ function TowerMenuTooltip:show(entity, item)
 			-- 满级：直接显示当前级数据
 			local texts = item.tt_list[current_level]
 			self.title.text = texts.tt_title
-			self.desc:set_text(text_diff.mark_number(U.balance_format(texts.tt_desc, {
+			self.desc:set_text(text_diff.mark_number(U.format_text_expr(texts.tt_desc, {
 				level = current_level
 			})))
 		elseif power.level == 0 then
 			-- 未解锁：显示下一级数据
 			local next_texts = item.tt_list[next_level]
 			self.title.text = next_texts.tt_title
-			self.desc:set_text(text_diff.mark_number(U.balance_format(next_texts.tt_desc, {
+			self.desc:set_text(text_diff.mark_number(U.format_text_expr(next_texts.tt_desc, {
 				level = next_level
 			})))
 		else
@@ -8820,10 +8820,10 @@ function TowerMenuTooltip:show(entity, item)
 			self.title.text = next_texts.tt_title
 
 			-- 使用智能对比生成富文本
-			local current_desc = U.balance_format(current_texts.tt_desc, {
+			local current_desc = U.format_text_expr(current_texts.tt_desc, {
 				level = current_level
 			})
-			local next_desc = U.balance_format(next_texts.tt_desc, {
+			local next_desc = U.format_text_expr(next_texts.tt_desc, {
 				level = next_level
 			})
 			local diff_text = text_diff.create_diff_text(current_desc, next_desc)
@@ -8836,7 +8836,7 @@ function TowerMenuTooltip:show(entity, item)
 		end
 
 		if item.tt_desc then
-			self.desc:set_text(U.balance_format(item.tt_desc))
+			self.desc:set_text(U.format_text_expr(item.tt_desc))
 		end
 	elseif item.action == "tw_sell" then
 		self.title.text = _("Sell Tower")
@@ -8849,7 +8849,7 @@ function TowerMenuTooltip:show(entity, item)
 
 		if entity.tower_upgrade_persistent_data.max_current_mode == 0 then
 			self.title.text = item.tt_title
-			self.desc:set_text(U.balance_format(item.tt_desc))
+			self.desc:set_text(U.format_text_expr(item.tt_desc))
 		else
 			self.title.text = item["tt_title_mode" .. current_mode]
 			self.desc:set_text(item["tt_desc_mode" .. current_mode])
