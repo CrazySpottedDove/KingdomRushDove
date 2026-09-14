@@ -8,7 +8,7 @@ local bit = require("bit")
 local bor = bit.bor
 local band = bit.band
 local bnot = bit.bnot
-
+local E = require("entity_db")
 local V = require("lib.klua.vector")
 local P = require("path_db")
 local GR = require("grid_db")
@@ -2544,34 +2544,6 @@ function U.append_mod(field, mod_name)
 	end
 end
 
----修改字符串的有前导零数字后缀
----@param str string 字符串
----@param add? integer 加法模式，加数
----@param subtract? integer 减法模式，减数
----@param num? integer 替换模式，替换为指定数
----@return string 处理后的字符串
-function U.str_reset_leading_zero(str, add, subtract, num)
-	local str_num = string.match(str, "%d+$")
-
-	if str_num then
-		local format_str = "%0" .. #str_num .. "d"
-
-		local function gsub(int)
-			return string.gsub(str, "%d+$", string.format(format_str, int))
-		end
-
-		if add then
-			str = gsub(str_num + add)
-		elseif subtract then
-			str = gsub(str_num - subtract)
-		elseif num then
-			str = gsub(num)
-		end
-	end
-
-	return str
-end
-
 local function get_value(obj, path)
 	local p = {}
 
@@ -2587,8 +2559,6 @@ local function get_value(obj, path)
 
 	local val = obj
 
-	log.paranoid("values are " .. getfulldump(p))
-
 	for _, v in ipairs(p) do
 		val = val[v]
 
@@ -2600,42 +2570,97 @@ local function get_value(obj, path)
 	return val
 end
 
-function U.dynamic_format(tbl, s)
-	local i, f
-
-	if not s then
-		return s
-	end
-
-	repeat
-		i = string.find(s, "%$")
-
-		if i then
-			f = string.find(s, "%$", i + 1)
-
-			if f then
-				log.paranoid("index i " .. i .. " end " .. f)
-
-				local p = string.sub(s, i + 1, f - 2)
-				local v = get_value(tbl, p)
-
-				if not v then
-					v = ""
-				elseif string.sub(s, f + 1, f + 1) == "%" then
-					v = v * 100
-				end
-
-				s = string.sub(s, 1, i - 2) .. v .. string.sub(s, f + 1)
-			end
-		end
-	until not i or not f
-
-	return s
-end
-
 local b = require("kr1.data.balance")
 
-function U.balance_format(s)
+-- ── 文案内嵌表达式 ──────────────────────────────────────────────
+-- 写法与旧的 balance 引用相同：%$...%$
+--   1) 先按 balance 路径取值（兼容 %$towers.x.y[1]%$ 这类老写法）
+--   2) 取不到就把内容当 Lua 表达式求值，环境里有：
+--        T("模板名") -> entity_db 的模板（等价 E:get_template）
+--        E          -> entity_db 本身
+--        b / towers / heroes / enemies / specials / reinforcements
+--        level      -> 当前技能等级（调用处通过 ctx 传入）
+--        math / FPS / floor / ceil / min / max ...
+-- 表达式只在首次出现时编译一次，之后走缓存（描述每帧都在画）。
+-- 代入的数字统一走 U.format_text_number（整数原样、至多两位小数）。
+-- 注意：这里不做"entity_db 是否已加载"的守卫 —— 调用方必须保证在所有使用
+-- T(...) 的文案被展开之前 E:Load() 已经跑过（目前只有游戏内升级菜单与图鉴
+-- 技能页两处调用：前者必然有对局，后者 EncyclopediaView:show() 自己先 E:Load()）。
+local expr_cache = {}
+local expr_env = {
+	math = math,
+	string = string,
+	table = table,
+	tostring = tostring,
+	tonumber = tonumber,
+	type = type,
+	ipairs = ipairs,
+	pairs = pairs,
+	select = select,
+	floor = math.floor,
+	ceil = math.ceil,
+	min = math.min,
+	max = math.max,
+	abs = math.abs,
+	FPS = FPS,
+	level = 0,
+	b = b,
+	towers = b.towers,
+	heroes = b.heroes,
+	enemies = b.enemies,
+	specials = b.specials,
+	reinforcements = b.reinforcements,
+	E = E,
+	T = function(name)
+		return E:get_template(name)
+	end
+}
+expr_env._G = expr_env
+
+--- 文案里的数值显示格式：整数原样，否则最多两位小数并去掉末尾多余的 0。
+--- 与 _assets/kr1-desktop/strings/hero_room_special.lua 的 str() 规则保持一致，
+--- 避免文案里出现 0.675、46.596 这类玩家看不懂的数字。非数字原样返回。
+function U.format_text_number(v)
+	if type(v) ~= "number" then
+		return v
+	end
+
+	if v == math.floor(v) then
+		return tostring(v)
+	end
+
+	local s = string.format("%.2f", v)
+
+	return (s:gsub("%.0+$", ""):gsub("(%.%d-)0+$", "%1"))
+end
+
+--- 求值一个内嵌表达式；失败时返回 nil 并记日志
+function U.eval_text_expr(expr, ctx)
+	local fn = expr_cache[expr]
+	if fn == nil then
+		local chunk, err = loadstring("return (" .. expr .. ")")
+		if chunk then
+			setfenv(chunk, expr_env)
+			fn = chunk
+		else
+			log.error("文案表达式语法错误: [%s] %s", expr, tostring(err))
+			fn = false
+		end
+		expr_cache[expr] = fn
+	end
+	if not fn then
+		return nil
+	end
+	expr_env.level = (ctx and ctx.level) or 0
+	local ok, v = pcall(fn)
+	if not ok then
+		log.error("文案表达式求值失败: [%s] %s", expr, tostring(v))
+		return nil
+	end
+	return v
+end
+
+function U.balance_format(s, ctx)
 	local i, f
 
 	if not s then
@@ -2649,15 +2674,22 @@ function U.balance_format(s)
 			f = string.find(s, "%$", i + 1)
 
 			if f then
-				log.paranoid("index i " .. i .. " end " .. f)
-
 				local p = string.sub(s, i + 1, f - 2)
 				local v = get_value(b, p)
 
+				if v == nil then
+					v = U.eval_text_expr(p, ctx)
+				end
+
 				if not v then
 					v = ""
-				elseif string.sub(s, f + 1, f + 1) == "%" then
-					v = v * 100
+				else
+					-- %$ 后面紧跟 % 表示按百分比显示（值 ×100）
+					if string.sub(s, f + 1, f + 1) == "%" and type(v) == "number" then
+						v = v * 100
+					end
+
+					v = U.format_text_number(v)
 				end
 
 				s = string.sub(s, 1, i - 2) .. v .. string.sub(s, f + 1)

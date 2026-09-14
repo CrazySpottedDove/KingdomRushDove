@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check  android windows publish publish_retry
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text android windows publish publish_retry
 
 all: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -155,3 +155,7 @@ compile_atlas:
 	luajit ./scripts/compile_image_atlas.lua
 
 compile: compile_animations compile_atlas
+
+# 文案内嵌表达式检查：加载 entity_db 后逐条展开 %$...%$，验证模板/字段/数值格式
+check-text:
+	@luajit ./scripts/ci/check_text_expr.lua

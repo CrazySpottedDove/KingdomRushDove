@@ -265,6 +265,22 @@ function SU.stun_dec(this, remove_all)
 	end
 end
 
+function SU.armor_inc_self(this, value)
+	if not this.health.raw_armor then
+		this.health.raw_armor = this.health.armor
+	end
+	this.health.raw_armor = this.health.raw_armor + value
+	this.health.armor = km.clamp(0, 1, this.health.raw_armor + this.health.armor_buff)
+end
+
+function SU.magic_armor_inc_self(this, value)
+	if not this.health.raw_magic_armor then
+		this.health.raw_magic_armor = this.health.magic_armor
+	end
+	this.health.raw_magic_armor = this.health.raw_magic_armor + value
+	this.health.magic_armor = km.clamp(0, 1, this.health.raw_magic_armor + this.health.magic_armor_buff)
+end
+
 ---更新护甲
 ---@param this table 单位实体
 ---@return nil

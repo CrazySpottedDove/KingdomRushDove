@@ -8802,12 +8802,16 @@ function TowerMenuTooltip:show(entity, item)
 			-- 满级：直接显示当前级数据
 			local texts = item.tt_list[current_level]
 			self.title.text = texts.tt_title
-			self.desc:set_text(text_diff.mark_number(U.balance_format(texts.tt_desc)))
+			self.desc:set_text(text_diff.mark_number(U.balance_format(texts.tt_desc, {
+				level = current_level
+			})))
 		elseif power.level == 0 then
 			-- 未解锁：显示下一级数据
 			local next_texts = item.tt_list[next_level]
 			self.title.text = next_texts.tt_title
-			self.desc:set_text(text_diff.mark_number(U.balance_format(next_texts.tt_desc)))
+			self.desc:set_text(text_diff.mark_number(U.balance_format(next_texts.tt_desc, {
+				level = next_level
+			})))
 		else
 			-- 未满级：显示对比（当前级 → 下一级）
 			local current_texts = item.tt_list[current_level]
@@ -8816,8 +8820,12 @@ function TowerMenuTooltip:show(entity, item)
 			self.title.text = next_texts.tt_title
 
 			-- 使用智能对比生成富文本
-			local current_desc = U.balance_format(current_texts.tt_desc)
-			local next_desc = U.balance_format(next_texts.tt_desc)
+			local current_desc = U.balance_format(current_texts.tt_desc, {
+				level = current_level
+			})
+			local next_desc = U.balance_format(next_texts.tt_desc, {
+				level = next_level
+			})
 			local diff_text = text_diff.create_diff_text(current_desc, next_desc)
 
 			self.desc:set_text(diff_text)

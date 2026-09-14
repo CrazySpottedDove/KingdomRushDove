@@ -5319,19 +5319,31 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 
 		if i == 1 then
 			if from_kr == 5 then
-				desc_label:set_text(text_diff.mark_number(U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION"))), color_new))
+				desc_label:set_text(text_diff.mark_number(U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION")), {
+					level = i
+				}), color_new))
 			else
-				desc_label:set_text(text_diff.mark_number(U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i))), color_new))
+				desc_label:set_text(text_diff.mark_number(U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)), {
+					level = i
+				}), color_new))
 			end
 		else
 			if from_kr == 5 then
-				local last_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. (i - 1) .. "_DESCRIPTION")))
-				local current_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION")))
+				local last_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. (i - 1) .. "_DESCRIPTION")), {
+					level = i - 1
+				})
+				local current_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION")), {
+					level = i
+				})
 				local diff_text = text_diff.create_diff_text(last_desc, current_desc, color_old, color_new)
 				desc_label:set_text(diff_text)
 			else
-				local last_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. (i - 1))))
-				local current_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)))
+				local last_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. (i - 1))), {
+					level = i - 1
+				})
+				local current_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)), {
+					level = i
+				})
 				local diff_text = text_diff.create_diff_text(last_desc, current_desc, color_old, color_new)
 				desc_label:set_text(diff_text)
 			end

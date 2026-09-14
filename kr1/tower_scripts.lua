@@ -7113,23 +7113,23 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 
 	while true do
 		if this.pow_level ~= last_pow_level then
-			last_pow_level = this.pow_level
-
 			for i = 1, b.max_soldiers do
 				local s = b.soldiers[i]
 
 				if s and store.entities[s.id] then
-					s.health.hp_max = s.health.hp_max + power_data.hp[this.pow_level] - power_data.hp[1]
-					s.health.hp = s.health.hp_max
+					s.health.hp_max = s.health.hp_max + power_data.hp[this.pow_level] - power_data.hp[last_pow_level]
+					U.heal(s, s.health.hp_max)
 
-					s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min + power_data.damage_min[this.pow_level] - power_data.damage_min[1]
-					s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + power_data.damage_max[this.pow_level] - power_data.damage_max[1]
-					s.melee.attacks[2].damage_min = s.melee.attacks[2].damage_min + power_data.damage_min[this.pow_level] - power_data.damage_min[1]
-					s.melee.attacks[2].damage_max = s.melee.attacks[2].damage_max + power_data.damage_max[this.pow_level] - power_data.damage_max[1]
+					s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min + power_data.damage_min[this.pow_level] - power_data.damage_min[last_pow_level]
+					s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + power_data.damage_max[this.pow_level] - power_data.damage_max[last_pow_level]
+					s.melee.attacks[2].damage_min = s.melee.attacks[2].damage_min + power_data.damage_min[this.pow_level] - power_data.damage_min[last_pow_level]
+					s.melee.attacks[2].damage_max = s.melee.attacks[2].damage_max + power_data.damage_max[this.pow_level] - power_data.damage_max[last_pow_level]
 
 					s.dodge.chance = power_data.dodge_chance[this.pow_level]
+					SU.armor_inc_self(s, power_data.armor[this.pow_level] - power_data.armor[last_pow_level])
 				end
 			end
+			last_pow_level = this.pow_level
 		end
 
 		if store.tick_ts - check_soldiers_ts > this.check_soldiers_cooldown and not this.tower_ref.blocked then
@@ -7162,6 +7162,8 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 					s.melee.attacks[2].damage_min = power_data.damage_min[this.pow_level]
 					s.melee.attacks[2].damage_max = power_data.damage_max[this.pow_level]
 					s.dodge.chance = power_data.dodge_chance[this.pow_level]
+
+					SU.armor_inc_self(s, power_data.armor[this.pow_level] - power_data.armor[1])
 
 					simulation:queue_insert_entity(s)
 
@@ -17030,7 +17032,7 @@ function scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update(this
 	w.pos = V.vclone(warrior_pos)
 	w.level = this.tower_ref.powers.skill_warrior.level
 	w.health.hp_max = this.tower_ref.powers.skill_warrior.hp_max[w.level] - this.tower_ref.powers.skill_warrior.hp_max[1] + w.health.hp_max
-	w.health.armor = this.tower_ref.powers.skill_warrior.armor[w.level] - this.tower_ref.powers.skill_warrior.armor[1] + w.health.armor
+	SU.armor_inc_self(w, this.tower_ref.powers.skill_warrior.armor[w.level] - this.tower_ref.powers.skill_warrior.armor[1])
 
 	SU.soldier_inherit_tower_buff_factor(w, this.tower_ref, store.tick_ts)
 	simulation:queue_insert_entity(w)

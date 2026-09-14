@@ -39,7 +39,7 @@ local function patch_damage_max(t, mult)
 end
 local heroes = {
 	common = {
-		melee_attack_range = 72,
+		melee_attack_range = 72
 	},
 	hero_wukong = {
 		distance_to_flywalk = 150,
@@ -852,7 +852,7 @@ local heroes = {
 			damage_max = {40, 80, 120},
 			damage_min = {20, 40, 60},
 			smoke_duration = {5, 5, 5},
-			slow_duration = {1, 1, 1},
+			slow_duration = {1, 1, 1}
 		},
 		uppercut = {
 			life_threshold = {25, 30, 40},
@@ -872,7 +872,7 @@ local heroes = {
 			xp_gain = {160, 320, 480},
 			burning_damage_type = DAMAGE_TRUE,
 			burning_damage_min = {1, 2, 3},
-			burning_damage_max = {1, 2, 3},
+			burning_damage_max = {1, 2, 3}
 		},
 		ultimate = {
 			burning_duration = 4,
@@ -2888,7 +2888,7 @@ local enemies = {
 				waves = {3, 5, 7, 9, 11, 13, 15},
 				first_cooldown = {5, 5, 7, 1, 15, 10, 10, 5, 1},
 				cooldown = {0, 0, 0, 40, 45, 35, 40, 26, 20},
-				max_casts = {1, 1, 1, 1, 1, 1, 1},
+				max_casts = {1, 1, 1, 1, 1, 1, 1}
 			},
 			primordial_hunger = {{
 				hp_evolution_method = 2,
@@ -2920,7 +2920,7 @@ local enemies = {
 			},
 			tower_destruction = {
 				cooldown = {13.2, 13.2, 19.8, 19.8, 22},
-				max_range = {200, 200, 200, 200, 200},
+				max_range = {200, 200, 200, 200, 200}
 			},
 			eggs_spawn = {
 				max_total = 1e+99,
@@ -4448,8 +4448,8 @@ local enemies = {
 						2,
 						2,
 						3,
-						boss_jump = 3,
-},
+						boss_jump = 3
+					},
 					side = {
 						{{7, 8, 9}},
 						{{7, 8, 9}},
@@ -4457,7 +4457,7 @@ local enemies = {
 						{{7, 8, 9}},
 						{{7, 8, 9}},
 						{{4, 3, 6}},
-						boss_jump = {{7, 8, 9}, {7, 8, 9}},
+						boss_jump = {{7, 8, 9}, {7, 8, 9}}
 					}
 				},
 				pre_fight_meteorite = {
@@ -4471,8 +4471,8 @@ local enemies = {
 						"left",
 						"left",
 						"right",
-						boss_jump = "right",
-}
+						boss_jump = "right"
+					}
 				}
 			},
 			heroic = {
@@ -4791,8 +4791,8 @@ local enemies = {
 						},
 						change_paths = {{
 							to_path = 4,
-							from_path = 2,
-}}
+							from_path = 2
+						}}
 					}
 				}
 			}
@@ -5390,29 +5390,6 @@ local enemies = {
 patch_hp(enemies, 0.8)
 patch_damage_max(enemies, 1.25)
 local towers = {
-	arcane_wizard = {
-		shared_min_cooldown = 2,
-		price = 280,
-		basic_attack = {
-			cooldown = 2,
-			damage_min = {12, 25, 48, 87},
-			damage_max = {18, 47, 80, 148},
-			range = 186,
-			damage_every = fts(2)
-		},
-		disintegrate = {
-			price = {250, 150, 150},
-			cooldown = {18, 18, 18},
-			boss_damage = {200, 300, 400}
-		},
-		empowerment = {
-			max_range = 240,
-			min_range = 0,
-			price = {275, 200, 200},
-			damage_factor = {1.15, 1.25, 1.4},
-			s_damage_factor = {0.15, 0.25, 0.4}
-		}
-	},
 	elven_stargazers = {
 		shared_min_cooldown = 2,
 		price = 330,
@@ -5877,67 +5854,6 @@ local towers = {
 			damage_out_type = DAMAGE_PHYSICAL
 		}
 	},
-	barrel = {
-		rally_range = 145,
-		price = {120, 180, 260, 360},
-		basic_attack = {
-			damage_radius = 60,
-			cooldown = 2.64,
-			damage_min = 60,
-			damage_max = 90,
-			range = {170, 170, 170, 215},
-			debuff = {
-				damage_factor = 0.6,
-				duration = 5
-			},
-			buff = {
-				damage_factor = 1.25,
-				duration = 5
-			}
-		},
-		skill_warrior = {
-			range = 240,
-			min_targets = 1,
-			price = {200, 150, 150},
-			cooldown = {12, 11, 10},
-			entity = {
-				range = 72,
-				cooldown = 1.5,
-				speed = 60,
-				duration = 10,
-				damage_min = {30, 48, 64},
-				damage_max = {45, 72, 99},
-				damage_type = DAMAGE_PHYSICAL,
-				hp_max = {300, 375, 450},
-				armor = {0, 0, 0}
-			}
-		},
-		skill_barrel = {
-			radius = 75,
-			min_targets = 3,
-			duration = 4,
-			price = {225, 175, 175},
-			cooldown = {27, 24, 21},
-			range = {180, 180, 180},
-			explosion = {
-				damage_radius = 75,
-				damage_min = {80, 130, 180},
-				damage_max = {120, 200, 280},
-				damage_type = DAMAGE_PHYSICAL
-			},
-			poison = {
-				damage_max = 1,
-				damage_min = 1,
-				every = 0.25,
-				duration = 5,
-				s_damage = 4
-			},
-			slow = {
-				factor = 0.5,
-				duration = 1
-			}
-		}
-	},
 	sand = {
 		price = 240,
 		basic_attack = {
@@ -6019,84 +5935,6 @@ local towers = {
 			damage_min = {100, 150, 200},
 			damage_max = {100, 150, 200},
 			s_damage = {100, 150, 200}
-		}
-	},
-	ray = {
-		shared_min_cooldown = 2,
-		price = 330,
-		basic_attack = {
-			cooldown = 1.5,
-			damage_every = 0.2,
-			extra_range_to_stay = 60,
-			duration = 4,
-			range = 180,
-			damage_min = 335,
-			damage_max = 335,
-			damage_type = DAMAGE_MAGICAL,
-			damage_per_second = {0.1, 0.15, 0.2, 0.25, 0.3},
-			slow = {
-				factor = 0.8
-			},
-			explosion_radius = 55,
-			explosion_factor = 0.2
-		},
-		skill_chain = {
-			chain_delay = 0.1,
-			s_max_enemies = 3,
-			max_enemies = 4,
-			chain_range = 115,
-			price = {200, 200, 200},
-			damage_mult = {0.25, 0.5, 0.75},
-			damage_type = DAMAGE_MAGICAL
-		},
-		skill_sheep = {
-			range = 200,
-			price = 300,
-			cooldown = {20},
-			sheep = {
-				speed = 20,
-				armor = 0,
-				clicks_to_destroy = 8,
-				magic_armor = 0,
-				hp_mult = 0.7,
-				gold = 0
-			}
-		}
-	},
-	dark_elf = {
-		rally_range = 170,
-		soldier = {
-			dead_lifetime = 10,
-			speed = 95,
-			armor = {0.2, 0.25, 0.3},
-			hp = {50, 115, 180},
-			regen_hp = {6, 9, 12},
-			basic_attack = {
-				range = 70,
-				cooldown = 1,
-				damage_min = {5, 10, 15},
-				damage_max = {8, 16, 24},
-				damage_type = DAMAGE_PHYSICAL
-			},
-			dodge_chance = {0.6, 0.6, 0.6}
-		},
-		price = 275,
-		basic_attack = {
-			cooldown = 2.75,
-			damage_min = 134,
-			damage_max = 146,
-			range = 300,
-			damage_type = DAMAGE_PHYSICAL
-		},
-		skill_soldiers = {
-			price = {100, 125, 125},
-			cooldown = {1, 1, 1}
-		},
-		skill_buff = {
-			extra_damage_min = 1,
-			extra_damage_max = 1,
-			max_times = {20, 50, 999999},
-			price = {250, 125}
 		}
 	},
 	hermit_toad = {
@@ -6690,15 +6528,15 @@ local specials = {
 		},
 		stun = {
 			cooldown = 26,
-			stun_duration = 3,
-},
+			stun_duration = 3
+		},
 		heal = {
 			heal_duration = 10,
 			cooldown = 50,
 			heal_min = 1,
 			heal_every = 0.25,
-			heal_max = 3,
-},
+			heal_max = 3
+		},
 		teleport = {
 			max_targets = 4,
 			nodes_advance = 25,
@@ -6706,8 +6544,8 @@ local specials = {
 			nodes_limit = 30,
 			cooldown = 5,
 			nodes_from_selectable = 30,
-			nodes_to_goal_selectable = 80,
-},
+			nodes_to_goal_selectable = 80
+		},
 		sacrifice = {
 			inactive_time = 20,
 			waves = {5, 10, 15}
