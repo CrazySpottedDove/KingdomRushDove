@@ -1371,7 +1371,7 @@ scripts.tower_pirate_watchtower = {
 						bl.damage_factor = tw.damage_factor
 
 						bl.from:copy(b1.pos)
-
+						pred_pos:add(enemy.unit.hit_offset)
 						bl.to = pred_pos
 						bl.target_id = enemy.id
 						bl.source_id = this.id
