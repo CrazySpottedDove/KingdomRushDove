@@ -1675,15 +1675,6 @@ function SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 		b.xp_dest_id = this.id
 		b.level = attack.level
 		b.damage_factor = this.unit.damage_factor
-
-		if type(b.damage_min) == "table" then
-			b.damage_min = b.damage_min[b.level]
-		end
-
-		if type(b.damage_max) == "table" then
-			b.damage_max = b.damage_max[b.level]
-		end
-
 		b.damage_max = b.damage_max + this.unit.damage_buff
 		b.damage_min = b.damage_min + this.unit.damage_buff
 

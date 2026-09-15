@@ -12086,6 +12086,8 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
 				b.bullet.source_id = this.id
 				b.bullet.level = pow_s.level
 				b.bullet.damage_factor = factor * this.tower.damage_factor
+				b.bullet.damage_min = b.bullet.damage_min_config[pow_s.level]
+				b.bullet.damage_max = b.bullet.damage_max_config[pow_s.level]
 
 				simulation:queue_insert_entity(b)
 			end
@@ -12522,6 +12524,8 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 		b.bullet.target_id = enemy.id
 		b.bullet.level = level
 		b.bullet.damage_factor = m.damage_factor
+		b.bullet.damage_min = b.bullet.damage_min_config[level]
+		b.bullet.damage_max = b.bullet.damage_max_config[level]
 
 		simulation:queue_insert_entity(b)
 	end

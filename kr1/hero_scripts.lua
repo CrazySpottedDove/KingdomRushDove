@@ -24858,6 +24858,8 @@ function scripts.hero_dragon_bone.update(this, store)
 					b.bullet.damage_factor = this.unit.damage_factor
 					b.bullet.source_id = this.id
 					b.bullet.target_id = target.id
+					b.bullet.damage_min = b.bullet.damage_min_config[this.hero.skills.burst.level]
+					b.bullet.damage_max = b.bullet.damage_max_config[this.hero.skills.burst.level]
 
 					simulation:queue_insert_entity(b)
 				end
@@ -24887,14 +24889,6 @@ function scripts.hero_dragon_bone.update(this, store)
 
 					table.insert(selected_targets, sel_target)
 					table.remove(targets, 1)
-				-- for i = #targets, 1, -1 do
-				--     local e = targets[i]
-				--     local dz = this.danger_zones
-				--     local sd2 = this.safe_dist2
-				--     if max_dist2 > V.dist2(sel_target.pos.x, sel_target.pos.y, e.pos.x, e.pos.y) then
-				--         table.remove(targets, i)
-				--     end
-				-- end
 				end
 
 				if #selected_targets == a.proj_count then

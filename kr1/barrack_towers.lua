@@ -1518,10 +1518,9 @@ tt.powers.blazing_breath.price_inc = 225
 tt.powers.fiery_mist = CC("power")
 tt.powers.fiery_mist.price_base = 275
 tt.powers.fiery_mist.max_level = 1
+
 tt = RT("soldier_baby_ashbite", "soldier")
-
 AC(tt, "ranged", "powers")
-
 tt.health.armor = 0.5
 tt.health.dead_lifetime = 10
 tt.health.hp_max = 450
@@ -2407,6 +2406,7 @@ tt.main_script.remove = scripts.tower_barrack.remove
 tt.sound_events.insert = "TowerDwarfTaunt"
 tt.sound_events.change_rally_point = "TowerDwarfTaunt"
 tt.ui.click_rect = r(-42, 0, 84, 90)
+
 tt = RT("bullet_incendiary_soldier_tower_dwarf", "bomb")
 tt.bullet.hit_fx = "fx_explosion_tower_dwarf"
 tt.bullet.hit_decal = nil
@@ -2416,8 +2416,16 @@ tt.bullet.pop_chance = 0
 tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
 tt.bullet.mod = "mod_aura_bullet_soldier_tower_dwarf"
-tt.bullet.damage_min = {20, 38, 52}
-tt.bullet.damage_max = {28, 58, 80}
+tt.main_script.insert = fn_group(scripts.bomb.insert, function(this, store)
+	this.bullet.damage_min = this.bullet.damage_min_config[this.bullet.level]
+	this.bullet.damage_max = this.bullet.damage_max_config[this.bullet.level]
+	return true
+end)
+tt.bullet.damage_min_config = {20, 38, 52}
+tt.bullet.damage_max_config = {28, 58, 80}
+tt.bullet.damage_min = 20
+tt.bullet.damage_max = 28
+tt.bullet.level = 1
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = "TowerDwarfIncendiaryAmmo"
 tt.render.sprites[1].name = "tower_dwarf_skill_projectile"
