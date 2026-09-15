@@ -1556,9 +1556,6 @@ function upgrades:patch_templates(max_level)
 		end
 
 		T("aura_ranger_thorn").aura.radius = T("aura_ranger_thorn").aura.radius * u.range_factor
-		T("tower_musketeer").attacks.list[2].range = T("tower_musketeer").attacks.list[2].range * u.range_factor
-		T("tower_musketeer").attacks.list[3].range = T("tower_musketeer").attacks.list[3].range * u.range_factor
-		T("tower_musketeer").attacks.list[4].range = T("tower_musketeer").attacks.list[4].range * u.range_factor
 	end
 
 	u = self:get_upgrade("archer_piercing")
@@ -1585,9 +1582,6 @@ function upgrades:patch_templates(max_level)
 		end
 
 		T("aura_ranger_thorn").aura.radius = T("aura_ranger_thorn").aura.radius * u.range_factor
-		T("tower_musketeer").attacks.list[2].range = T("tower_musketeer").attacks.list[2].range * u.range_factor
-		T("tower_musketeer").attacks.list[3].range = T("tower_musketeer").attacks.list[3].range * u.range_factor
-		T("tower_musketeer").attacks.list[4].range = T("tower_musketeer").attacks.list[4].range * u.range_factor
 	end
 
 	u = self:get_upgrade("archer_logger")

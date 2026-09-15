@@ -486,7 +486,7 @@ scripts.tower_musketeer = {
 				if pow_sn.level > 0 then
 					for _, ax in ipairs({asi, asn}) do
 						if (ax.chance == 1 or random() < ax.chance) and U.tower_ready_to_use_power(pow_sn, ax, store, tw) then
-							local enemy = U.find_biggest_enemy_in_range_filter_off(tpos, ax.range, ax.vis_flags, ax.vis_bans)
+							local enemy = U.find_biggest_enemy_in_range_filter_off(tpos, a.range * ax.range_factor, ax.vis_flags, ax.vis_bans)
 
 							if not enemy then
 								ax.ts = ax.ts + fts(5)
@@ -530,7 +530,8 @@ scripts.tower_musketeer = {
 				end
 
 				if U.tower_ready_to_use_power(pow_sh, ash, store, tw) then
-					local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, ash.range * 1.5, nil, ash.vis_flags, ash.vis_bans, ash.min_spread)
+					local range = a.range * ash.range_factor
+					local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, range * 1.5, nil, ash.vis_flags, ash.vis_bans, ash.min_spread)
 
 					if not enemy then
 						ash.ts = ash.ts + fts(5)
@@ -540,9 +541,9 @@ scripts.tower_musketeer = {
 						ash.ts = store.tick_ts
 
 						local distance_factor = 1
-						local spread_factor = km.clamp(0.75, 1.5, distance / ash.range)
+						local spread_factor = km.clamp(0.75, 1.5, distance / range)
 
-						if distance > ash.range then
+						if distance > range then
 							distance_factor = pow_sh.far_damage_factor
 							ash.ts = ash.ts - pow_sh.far_cooldown_reduction * ash.cooldown
 						end
