@@ -2909,10 +2909,9 @@ tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_barrack.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.ui.click_rect = r(-42, 0, 84, 90)
+
 tt = E:register_t("tower_arborean_sentinels", "tower")
-
 E:add_comps(tt, "barrack")
-
 tt.tower.type = "tower_arborean_sentinels"
 tt.tower.can_be_sold = false
 tt.tower.can_be_mod = false
@@ -2948,64 +2947,62 @@ tt.barrack.soldier_type = "soldier_arborean_sentinels_spearmen"
 tt.barrack.rally_range = 209.28
 tt.barrack.respawn_offset = v(0, 5)
 tt.sound_events.change_rally_point = "Stage04ArboreanThornspears"
+
 tt = E:register_t("soldier_arborean_sentinels_spearmen", "soldier_militia")
-
 E:add_comps(tt, "powers", "ranged", "nav_grid")
-
-tt.health.armor = nil
-tt.health.hp_max = nil
-tt.regen.health = nil
+tt.health.armor = 0.1
+tt.health.hp_max = 92
 tt.health_bar.offset = v(0, 35)
 tt.health.delete_after = 2
 tt.health.dead_lifetime = 1
 tt.info.portrait = "kr5_info_portraits_soldiers_0005"
 tt.info.random_name_format = "SOLDIER_ARBOREAN_SENTINELS_%i_NAME"
 tt.info.random_name_count = 9
-tt.melee.attacks[1].cooldown = nil
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
+tt.melee.attacks[1].cooldown = 1.2
+tt.melee.attacks[1].damage_max = 18
+tt.melee.attacks[1].damage_min = 12
 tt.melee.attacks[1].hit_time = fts(10)
 tt.ranged.attacks[1].animation = "ranged_attack"
 tt.ranged.attacks[1].bullet = "arborean_sentinels_spearmen_spear"
 tt.ranged.attacks[1].bullet_start_offset = {v(0, 25)}
-tt.ranged.attacks[1].cooldown = nil
-tt.ranged.attacks[1].max_range = nil
-tt.ranged.attacks[1].min_range = nil
+tt.ranged.attacks[1].cooldown = 1.5
+tt.ranged.attacks[1].max_range = 165
+tt.ranged.attacks[1].min_range = 60.5
 tt.ranged.attacks[1].shoot_time = fts(6)
 tt.render.sprites[1].prefix = "stage_4_special_arborean_sentinels_spearer_soldier"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
-tt.unit.price = nil
+tt.unit.price = 50
 tt.unit.fade_time_after_death = 1
 tt.sound_events.insert = "Stage04ArboreanThornspears"
+
 tt = E:register_t("arborean_sentinels_spearmen_spear", "arrow")
-tt.bullet.damage_max = nil
-tt.bullet.damage_min = nil
+tt.bullet.damage_max = 14
+tt.bullet.damage_min = 9
 tt.bullet.miss_decal = "stage_4_special_arborean_sentinels_spearer_spear_decal"
 tt.bullet.flight_time = fts(14)
 tt.bullet.hide_radius = 10
 tt.bullet.hit_fx = "fx_arborean_sentinels_spearmen_spear_hit"
 tt.render.sprites[1].name = "stage_4_special_arborean_sentinels_spearer_spear"
+
 tt = E:register_t("soldier_arborean_sentinels_barkshield", "soldier_militia")
 tt.info.portrait = "kr5_info_portraits_soldiers_0003"
 tt.info.random_name_format = "SOLDIER_ARBOREAN_SENTINELS_%i_NAME"
 tt.info.random_name_count = 9
 tt.render.sprites[1].prefix = "stage_4_special_arborean_sentinels_barkshield_soldier"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
-tt.regen.health = nil
-tt.health.hp_max = nil
-tt.health.armor = nil
+tt.health.hp_max = 300
+tt.health.armor = 0.5
 tt.health_bar.offset = v(0, 41)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.melee.attacks[1].cooldown = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].damage_max = nil
+tt.melee.attacks[1].cooldown = 3
+tt.melee.attacks[1].damage_min = 25
+tt.melee.attacks[1].damage_max = 50
 tt.melee.attacks[1].hit_time = fts(8)
-tt.motion.max_speed = nil
-tt.unit.price = nil
+tt.motion.max_speed = 60
+tt.unit.price = 90
+
 tt = E:register_t("tower_stage_28_priests_barrack", "tower")
-
 E:add_comps(tt, "barrack", "powers")
-
 tt.tower.price = 200
 tt.tower.type = "tower_priests_barrack"
 tt.tower.range_offset = v(0, 10)
@@ -3640,10 +3637,9 @@ tt.render.sprites[3].name = "close"
 tt.sound_events.change_rally_point = "kr4_elves_barrack_taunt"
 tt.sound_events.insert = "kr4_elves_barrack_taunt"
 tt.ui.click_rect = r(-40, 0, 80, 70)
+
 tt = RT("soldier_elves_harasser", "soldier_militia")
-
 AC(tt, "dodge", "ranged", "powers", "death_spawns")
-
 tt.info.random_name_count = 10
 tt.info.random_name_format = "ELVES_SOLDIER_HARASSER_%i_NAME"
 tt.info.portrait = "kr4_info_portraits_soldiers_0017"
@@ -3714,10 +3710,9 @@ tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 13)
 tt.vis.flags = bor(tt.vis.flags, F_DARK_ELF)
 tt.main_script.update = scripts.soldier_elves_harasser.update
+
 tt = RT("soldier_elves_espectral_harasser", "soldier_militia")
-
 AC(tt, "reinforcement", "dodge")
-
 tt.dodge.silent = true
 tt.dodge.ranged = true
 tt.info.portrait = "kr4_info_portraits_soldiers_0018"
@@ -3762,10 +3757,9 @@ tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 13)
 tt.unit.hide_after_death = true
 tt.particle = "ps_elves_soldier_espectral_harasser_run_effect"
+
 tt = RT("ps_elves_soldier_espectral_harasser_run_effect")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "elves_soldier_espectral_harasser_run_effect_run"
 tt.particle_system.anchor = v(0.5, 0.116)
 tt.particle_system.sort_y_offset = -5
