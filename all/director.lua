@@ -314,12 +314,6 @@ function director:unload_item(item)
 			end
 		end
 
-		local criket = configer.criket()
-
-		if criket and criket.on then
-			self:unload_sound_groups(criket.required_sounds)
-		end
-
 		if game.store and game.store.level then
 			local level = game.store.level
 			if level.plugin_required_textures then
@@ -467,13 +461,6 @@ function director:queue_load_item_named(name)
 		game.store.level = LU.load_level(game.store, game.store.level_name)
 		if configer.config().enabled and configer.config().endless then
 			game.store.level_mode_override = GAME_MODE_ENDLESS
-		end
-
-		local criket = configer.criket()
-
-		if criket and criket.on then
-			self:load_texture_groups(replace_locale(criket.required_textures), self.params.texture_size, game.ref_res, true, "game")
-			self:load_sound_groups(criket.required_sounds)
 		end
 
 		self:load_texture_groups(replace_locale(game.required_textures), self.params.texture_size, game.ref_res, true, "game")
