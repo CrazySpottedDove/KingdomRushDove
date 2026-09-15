@@ -21021,7 +21021,7 @@ function scripts.ray5_simple.update(this, store)
 
 			m.modifier.target_id = b.target_id
 			m.modifier.source_id = this.id
-			U.modifier_inherit_bullet(m, b)
+			U.modifier_inherit_bullet(m.modifier, b)
 
 			if m.damage_from_bullet then
 				if m.dps then
