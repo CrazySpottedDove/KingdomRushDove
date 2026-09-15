@@ -3502,7 +3502,7 @@ function scripts.mod_ray_arcane_disintegrate.update(this, store)
 
 				break
 			else
-				local d = E.assign_damage(bor(DAMAGE_TRUE), (m.boss_damage_base + target.health.hp_max * m.boss_damage_hp_percent) * m.damage_factor, this.id, target.id)
+				local d = E.assign_damage(bor(DAMAGE_TRUE), (this.boss_damage_base + target.health.hp_max * this.boss_damage_hp_percent) * m.damage_factor, this.id, target.id)
 				d.pop = m.pop
 				d.pop_chance = m.pop_chance
 				d.pop_conds = m.pop_conds
