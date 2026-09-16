@@ -1866,6 +1866,9 @@ function SpeedStateIndicator:initialize()
 	-- 设置大小和位置
 	self.size = v(300, 50)
 	self.pos = v(120, 50) -- GUI坐标系中的位置
+	self.propagate_on_up = true
+	self.propagate_on_down = true
+	self.propagate_on_click = true
 
 	-- 创建文本标签
 	local label = GGCachedTextLabel:new(V.v(300, 50))
@@ -1876,6 +1879,9 @@ function SpeedStateIndicator:initialize()
 	label.text_align = "left"
 	label.vertical_align = "top"
 	label.text = ""
+	label.propagate_on_up = true
+	label.propagate_on_down = true
+	label.propagate_on_click = true
 	label:update_cache()
 
 	self.label = label
