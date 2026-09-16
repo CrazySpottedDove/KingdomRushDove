@@ -4,7 +4,7 @@ ASSETS_CHECK_ENABLED = false
 GEN_WAVES_ENABLED = false
 PATH_POINTS_DISTANCE = 7
 -- 运行时平台是否为安卓
-IS_ANDROID = false
+IS_ANDROID = love.system.getOS() == "Android"
 NULL = "__NULL__"
 FPS = 30
 INT_32_MAX = 2147483647

@@ -15,7 +15,6 @@ if love.system.getOS() == "Windows" then
 end
 
 love.filesystem.setIdentity(version.identity)
-IS_ANDROID = love.system.getOS() == "Android"
 
 --- 调用 love.filesystem 来加载文件，但是在 prefixs 中进行逐个尝试，返回最先找到的文件
 ---@param filename string

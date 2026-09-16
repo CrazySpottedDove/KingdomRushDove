@@ -9715,7 +9715,7 @@ function scripts.mod_do_damage_by_movement.update(this, store)
 
 		if dist * this.damage_cache.value > 1 then
 			local d = table.deepclone(this.damage_cache)
-			d.value = d.value * dist * this.modifier.damage_factor
+			d.value = d.value * dist * this.modifier.damage_factor / target.motion.real_speed * target.motion.max_speed
 			queue_damage(store, d)
 			this.pos:copy(target.pos)
 		end

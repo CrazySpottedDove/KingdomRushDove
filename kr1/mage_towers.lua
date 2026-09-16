@@ -3375,7 +3375,7 @@ tt.render.sprites[1].name = "ember_lords_mage_tower_shooter_affliction_modifier_
 
 tt = RT("mod_infernal_curse_effect", "mod_do_damage_by_movement")
 tt.damage_per_distance = 0
-tt.damage_per_distance_inc = 0.5
+tt.damage_per_distance_inc = 0.4
 
 tt = RT("fx_teleport_infernal", "fx")
 tt.render.sprites[1].name = "ember_lords_mage_tower_shooter_teleport_effect_in" --这里原先是prefix
