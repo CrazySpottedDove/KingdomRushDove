@@ -1227,7 +1227,7 @@ tt.dodge.ranged = false
 tt.health.on_damage = function(this, store, damage)
 	local bda = this.timed_attacks.list[1]
 
-	if this.unit.is_stuuned or this.health.dead or bda.in_progress or band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, (DAMAGE_MIXED or 0)))) ~= 0 or band(damage.damage_type, DAMAGE_NO_DODGE) ~= 0 or this.dodge.chance < math.random() or (not this.enemy.can_do_magic) then
+	if this.unit.is_stunned or this.health.dead or bda.in_progress or band(damage.damage_type, bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, DAMAGE_MIXED)) == 0 or band(damage.damage_type, DAMAGE_NO_DODGE) ~= 0 or this.dodge.chance < math.random() or (not this.enemy.can_do_magic) then
 		return true
 	end
 

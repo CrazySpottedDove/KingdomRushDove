@@ -7104,6 +7104,7 @@ function scripts.mod_teleport.update(this, store)
 
 		-- table.insert(target.nav_path.prev_pis, target.nav_path.pi)
 
+		-- TODO: protect against nil return value from P:get_next_pi
 		local npi = P:get_next_pi(target.nav_path.pi)
 
 		target.nav_path.pi = npi
