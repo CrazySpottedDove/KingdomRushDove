@@ -8,7 +8,6 @@ local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
-local b
 require("templates")
 
 local function adx(v)

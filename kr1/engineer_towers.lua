@@ -2742,12 +2742,8 @@ tt.sound_events.insert = "MechOil"
 
 tt = RT("mod_slow_oil_balloon", "mod_slow")
 tt.slow.factor_inc = -0.2
-tt.main_script.insert = fn_group(function(this, store)
-	this.slow.factor = 1 + this.slow.factor_inc * this.modifier.level
-	return true
-end, tt.main_script.insert)
 tt.modifier.duration = 0.4
-tt.slow.factor = 0.8
+tt.slow.factor = 1
 
 tt = E:register_t("baloon_tower_splash_run", "fx")
 tt.render.sprites[1].prefix = "baloon_tower_splash"

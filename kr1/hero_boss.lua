@@ -1231,10 +1231,8 @@ tt.health.on_damage = function(this, store, damage)
 		return true
 	end
 
-	-- if #this.enemy.blockers > 0 then
 	this.dodge.active = true
 
-	-- end
 	return false
 end
 tt.melee.cooldown = 0.8
@@ -1293,7 +1291,6 @@ tt.main_script.update = function(this, store)
 
 				if not this.dodge.applied then
 					this.dodge.applied = true
-					-- this.health.damage_factor = this.health.damage_factor * 0.05
 					this.health.ignore_damage = true
 				end
 
@@ -1328,7 +1325,6 @@ tt.main_script.update = function(this, store)
 				this.vis.bans = band(this.vis.bans, bnot(F_NET))
 
 				if this.dodge.applied then
-					-- this.health.damage_factor = this.health.damage_factor * 20
 					this.health.ignore_damage = false
 					this.dodge.applied = nil
 				end
