@@ -7294,11 +7294,19 @@ LaunchOptionsPanelView = class("LaunchOptionsPanelView", EditablePanelView)
 
 function LaunchOptionsPanelView:initialize(sw, sh, keyboard, controller)
 	EditablePanelView.initialize(self, sw, sh, _("MAP_UI_LAUNCH_OPTIONS_TITLE"), keyboard, controller, require("settings_template").launch_options)
-	self:set_key_label_map({
+
+	local key_label_map = {
 		skip_settings = _("MAP_UI_LAUNCH_SKIP_SETTINGS"),
 		skip_must_read = _("MAP_UI_LAUNCH_SKIP_MUST_READ"),
 		skip_slot = _("MAP_UI_LAUNCH_SKIP_SLOT")
-	})
+	}
+
+	-- 语言启动屏只在安卓端存在，电脑端不显示这个开关（电脑端由设置界面选语言）
+	if IS_ANDROID then
+		key_label_map.skip_language_select = _("MAP_UI_LAUNCH_SKIP_LANGUAGE_SELECT")
+	end
+
+	self:set_key_label_map(key_label_map)
 end
 
 function LaunchOptionsPanelView:load()

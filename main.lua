@@ -274,6 +274,16 @@ local function load_update_manager()
 	end)
 end
 
+--- 安卓端没有设置界面，语言选择改到启动流程最前（作者的话之前）。
+--- 必须在作者的话/首次答题之前定好语言，否则外语用户看不懂、也答不出题。
+local function load_language_select()
+	local language_select = require("dove_modules.notice.language_select")
+	main.handler = language_select
+	language_select:init(main.params, function()
+		loader:load_next()
+	end)
+end
+
 local function load_must_read()
 	local must_read = require("dove_modules.notice.must_read")
 	main.handler = must_read
@@ -305,9 +315,10 @@ local function load_app_settings()
 end
 
 loader = {
-	items = {"settings", "must_read", "update_manager", "director"},
+	items = {"settings", "language_select", "must_read", "update_manager", "director"},
 	methods = {
 		settings = load_app_settings,
+		language_select = load_language_select,
 		must_read = load_must_read,
 		update_manager = load_update_manager,
 		director = load_director
@@ -327,6 +338,10 @@ function loader:load()
 		if launch_options.skip_settings or IS_ANDROID then
 			table.removeobject(self.items, "settings")
 			MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+		end
+		-- 语言启动屏只在安卓端出现；在 设置 → 启动选项 里打开「跳过语言选择」后不再出现
+		if not IS_ANDROID or launch_options.skip_language_select then
+			table.removeobject(self.items, "language_select")
 		end
 	end
 

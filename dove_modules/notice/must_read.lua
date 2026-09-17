@@ -7,7 +7,7 @@ local MUST_READ = {
 	scroll_start = 0,
 	scroll = 0,
 	margin = 40,
-	text = require("dove_modules.notice.author_words"),
+	text = _("AUTHOR_WORDS"),
 	enabled = true,
 	params = nil,
 	has_read = storage:load_lua("must_read.lua", true) ~= nil,
@@ -349,6 +349,10 @@ local android_only_quiz = {{
 }, {
 	q = _("MUST_READ_QUIZ_ANDROID_Q53"),
 	opts = {_("MUST_READ_QUIZ_ANDROID_Q53_A"), _("MUST_READ_QUIZ_ANDROID_Q53_B"), _("MUST_READ_QUIZ_ANDROID_Q53_C")},
+	ans = 1
+}, {
+	q = _("MUST_READ_QUIZ_ANDROID_Q54"),
+	opts = {_("MUST_READ_QUIZ_ANDROID_Q54_A"), _("MUST_READ_QUIZ_ANDROID_Q54_B"), _("MUST_READ_QUIZ_ANDROID_Q54_C")},
 	ans = 1
 }}
 

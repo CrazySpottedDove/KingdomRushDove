@@ -18,7 +18,8 @@ return {
 	launch_options = {
 		skip_must_read = false,
 		skip_settings = false,
-		skip_slot = false
+		skip_slot = false,
+		skip_language_select = false
 	},
 	last_slot_idx = 1,
 	tmp_restart = false

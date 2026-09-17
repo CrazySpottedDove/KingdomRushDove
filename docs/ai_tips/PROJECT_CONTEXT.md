@@ -97,7 +97,7 @@ KingdomRushDove/
 │   ├── perf/                 # 性能计数器（perf.lua / perf_ui.lua）
 │   ├── updater/              # 自动更新管理器
 │   ├── gui/                  # 自定义 GUI（boss_health_bar / plugin_manager_view）
-│   └── notice/               # 公告（must_read / author_words）
+│   └── notice/               # 公告（must_read 作者的话/答题 / language_select 安卓语言启动屏）
 ├── lib/                      # 第三方/通用库
 │   ├── klua/                 # Lua 工具库（log, table, vector, macros...）
 │   ├── klove/                # LÖVE 专用库（image_db, font_db, shader_db...）
