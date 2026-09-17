@@ -890,9 +890,9 @@ function game_gui:keypressed(key, isrepeat)
 			self.notiview:hide()
 		elseif self.damage_trace_panel and not self.damage_trace_panel.hidden then
 			self.damage_trace_panel:hide()
-		elseif self.victoryview then
+		elseif self.victoryview and not self.victoryview.hidden then
 			game_gui:go_to_map()
-		elseif self.defeatview then
+		elseif self.defeatview and not self.defeatview.hidden then
 			game_gui:go_to_map()
 		elseif not self.pauseview.hidden then
 			self.pauseview:hide()
