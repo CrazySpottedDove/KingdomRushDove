@@ -510,13 +510,6 @@ mod_poison.dps.kill = false
 mod_poison.main_script.insert = scripts.mod_dps.insert
 mod_poison.main_script.update = scripts.mod_dps.update
 
-local mod_pestilence = E:register_t("mod_pestilence", "mod_poison")
-mod_pestilence.dps.damage_min = 2
-mod_pestilence.dps.damage_max = 2
-mod_pestilence.dps.damage_every = fts(3)
-mod_pestilence.dps.kill = true
-mod_pestilence.modifier.duration = 1
-
 local mod_slow = E:register_t("mod_slow", "modifier")
 E:add_comps(mod_slow, "slow")
 mod_slow.modifier.duration = 0.5

@@ -3603,14 +3603,6 @@ scripts.tower_necromancer = {
 				if pow_p.changed then
 					pow_p.changed = nil
 
-					local e_table = table.filter(store.auras, function(k, v)
-						return v.aura.source_id == this.id and v.template_name == this.auras.list[1].name
-					end)
-
-					for _, e in ipairs(e_table) do
-						e.max_skeletons_tower = e.max_skeletons_tower + 1
-					end
-
 					if pow_p.level == 1 then
 						pa.ts = store.tick_ts
 					end

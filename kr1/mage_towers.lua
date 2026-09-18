@@ -520,8 +520,22 @@ tt.bullet.particles_name = "ps_bolt_necromancer_trail"
 tt.bullet.pop = {"pop_sishh"}
 tt.sound_events.insert = "NecromancerBolt"
 
+tt = E:register_t("mod_pestilence", "mod_poison")
+tt.dps.damage_min = 2
+tt.dps.damage_max = 2
+tt.dps.damage_every = fts(3)
+tt.dps.kill = true
+tt.modifier.duration = 1
+
+tt = E:register_t("mod_pestilence_weak", "modifier")
+tt.inflicted_damage_factor = 0.5
+tt.modifier.duration = 1
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_damage_factors.update
+
 local pestilence = RT("pestilence", "aura")
-pestilence.aura.mod = "mod_pestilence"
+pestilence.aura.mods = {"mod_pestilence", "mod_pestilence_weak"}
 pestilence.aura.duration = 3
 pestilence.aura.duration_inc = 1
 pestilence.aura.cycle_time = fts(10)
