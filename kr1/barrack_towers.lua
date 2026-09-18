@@ -1020,10 +1020,9 @@ tt.sound_events.change_rally_point = "ElvesBarrackBladesingerTaunt"
 tt.sound_events.insert = "ElvesBarrackBladesingerTaunt"
 tt.tower.price = 185
 tt.tower.type = "blade"
+
 tt = RT("tower_forest", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.barrack.rally_range = 165
 tt.info.enc_icon = 19
 tt.info.portrait = "kr3_info_portraits_towers_0006"
@@ -1047,10 +1046,9 @@ tt.sound_events.change_rally_point = "ElvesBarrackForestKeeperTaunt"
 tt.sound_events.insert = "ElvesBarrackForestKeeperTaunt"
 tt.tower.price = 185
 tt.tower.type = "forest"
+
 tt = RT("soldier_blade", "soldier_barrack_1")
-
 AC(tt, "powers", "dodge", "timed_attacks")
-
 image_y = 68
 anchor_y = 15 / image_y
 tt.dodge.animation = "dodge"
@@ -1108,10 +1106,9 @@ tt.timed_attacks.list[1].disabled = true
 tt.timed_attacks.list[1].hit_time = fts(5)
 tt.timed_attacks.list[1].sound = "TowerBladesingerBladedance"
 tt.unit.mod_offset = vec_2(0, 14)
+
 tt = RT("soldier_forest", "soldier_barrack_1")
-
 AC(tt, "powers", "timed_attacks", "ranged")
-
 image_y = 114
 anchor_y = 31 / image_y
 tt.health.armor = 0
@@ -2328,35 +2325,37 @@ tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 tt.main_script.type = 1
 -- 牢大 END
+
 -- 炮兵 START
 tt = RT("ps_bullet_incendiary_soldier_dwarf_tower")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "tower_dwarf_skill_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.particle_lifetime = {fts(15), fts(15)}
 tt.particle_system.emission_rate = 20
 tt.particle_system.emit_rotation_spread = math.pi / 2
+
 tt = RT("fx_soldier_tower_dwarf_melee_hit", "fx")
 tt.render.sprites[1].name = "tower_dwarf_attack_2_hit"
+
 tt = RT("fx_bullet_soldier_tower_dwarf_hit", "fx")
 tt.render.sprites[1].name = "tower_dwarf_attack_1_hit_hit"
+
 tt = RT("fx_explosion_tower_dwarf", "fx")
 tt.render.sprites[1].name = "tower_dwarf_skill_main_explosion_idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].anchor = v(0.43, 0.5)
+
 tt = RT("decal_tower_dwarf_jump_explosion", "decal_timed")
 tt.render.sprites[1].prefix = "tower_dwarf_jump_explosion_lvl4_jump_in"
 tt.render.sprites[1].name = "fx"
 tt.timed.duration = fts(20)
+
 tt = RT("mod_aura_bullet_soldier_tower_dwarf", "modifier")
-
 AC(tt, "dps", "render")
-
 tt.modifier.duration = 2
-tt.modifier.max_duplicates = 2
+tt.modifier.allows_duplicate = true
 tt.dps.damage_config = {3, 8, 14}
 tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.damage_every = 0.25
@@ -2434,10 +2433,9 @@ tt.render.sprites[1].hidden = false
 tt.bullet.damage_radius = 60
 tt.bullet.use_hit_offset = true
 tt.bullet.flight_time = fts(20)
+
 tt = RT("soldier_tower_dwarf_lvl4", "soldier_militia")
-
 AC(tt, "nav_grid", "ranged", "powers")
-
 tt.info.portrait = "kr5_info_portraits_soldiers_0024"
 tt.info.random_name_format = "SOLDIER_TOWER_DWARF_%i_NAME"
 tt.info.random_name_count = 10
@@ -2464,7 +2462,7 @@ tt.health.hp_max = 150
 tt.health.armor = 0.3
 tt.health_bar.offset = v(0, 33)
 tt.health.dead_lifetime = 8
-tt.melee.range = 72
+tt.melee.range = 65
 tt.melee.attacks[1].hit_time = fts(18)
 tt.melee.attacks[1].animation = "attack_2"
 tt.melee.attacks[1].hit_fx = "fx_soldier_tower_dwarf_melee_hit"
@@ -2475,7 +2473,7 @@ tt.ranged.attacks[1].animation = "attack"
 tt.ranged.attacks[1].bullet = "bullet_soldier_tower_dwarf"
 tt.ranged.attacks[1].cooldown = 1.5
 tt.ranged.attacks[1].max_range = 180
-tt.ranged.attacks[1].min_range = 70
+tt.ranged.attacks[1].min_range = 0
 tt.ranged.attacks[1].shoot_time = fts(20)
 tt.ranged.attacks[1].check_target_before_shot = true
 tt.ranged.attacks[2] = table.deepclone(tt.ranged.attacks[1])
@@ -2487,9 +2485,7 @@ tt.ranged.attacks[2].bullet_start_offset_relative = v(15, 14)
 tt.ranged.attacks[2].shoot_time = fts(35)
 tt.ranged.attacks[2].cooldown = 12
 tt.ranged.attacks[2].check_target_before_shot = true
-
 update_node_prediction(tt.ranged.attacks[2])
-
 tt.ui.click_rect = r(-13, 0, 25, 25)
 tt.ui.click_rect_offset_y = 0
 tt.max_dist_walk = 140
@@ -2497,29 +2493,28 @@ tt.sound_jump = "TowerDwarfIncendiaryJump"
 tt.sound_events.death = "TowerDwarfUnitDeath"
 tt.powers.incendiary_ammo = CC("power")
 tt.powers.incendiary_ammo.cooldown = 12
+
 tt = RT("bullet_soldier_tower_dwarf", "bullet")
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_dwarf_hit"
 tt.bullet.flight_time = fts(2)
 tt.bullet.damage_type = DAMAGE_SHOT
 tt.bullet.damage_max = 32
 tt.bullet.damage_min = 24
-tt.bullet.damage_max_config = {6, 14, 26, 32}
-tt.bullet.damage_min_config = {4, 10, 18, 24}
 tt.bullet.level = 1
 tt.main_script.update = scripts.bullet_soldier_tower_dwarf.update
 tt.render = nil
 tt.sound_events.insert = "TowerDwarfBasicAttack"
+
 -- tt = RT("decal_bullet_soldier_tower_dwarf", "decal_tween")
 -- tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 -- tt.render.sprites[1].name = "tower_dwarf_skill_explosion_decal"
 -- tt.render.sprites[1].animated = false
 -- tt.render.sprites[1].scale = v(1.2, 1.2)
 -- 炮兵 END
+
 -- 幽冥 START
 tt = RT("ps_soldier_tower_ghost")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "ghost_tower_spawn_trail_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
