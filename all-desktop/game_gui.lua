@@ -334,6 +334,10 @@ function game_gui:init(w, h, game)
 	self.manual_gui_hide = nil
 	self.keys_disabled = nil
 	self.to = 0
+	-- 胜利/失败界面属于上一次结局，由 victory()/defeat() 现造。重建 GUI（换关、重开、回溯）后
+	-- 旧对象已不在新的界面树里，但 Esc 分支只看它的 hidden：留着就会「明明没显示却按 Esc 回大地图」
+	self.victoryview = nil
+	self.defeatview = nil
 	local settings = storage:load_settings()
 
 	self.pause_on_switch = settings.pause_on_switch

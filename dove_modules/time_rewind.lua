@@ -556,18 +556,21 @@ function time_rewind:toggle(game_gui)
 	view:show()
 end
 
-function time_rewind:close(game_gui)
+function time_rewind:close(game_gui, keep_hidden)
 	local view = game_gui.time_rewind_view
 
 	view:hide()
 	-- 关闭时作废进行中的拖动，否则淡出期间松手会再触发一次 start
 	view.dragging = false
 
-	-- 放回被面板收起来的暂停菜单 / 结算界面
+	-- 放回被面板收起来的暂停菜单 / 结算界面。但要开始回溯时不能放：重建会把它们整个换掉，
+	-- 旧对象的 hidden 若停在「可见」，Esc 的分支就会照它直接回大地图（面板其实早就不在了）
 	local panels = self.hidden_panels
 
-	for i = 1, #panels do
-		panels[i].hidden = false
+	if not keep_hidden then
+		for i = 1, #panels do
+			panels[i].hidden = false
+		end
 	end
 
 	self.hidden_panels = nil
@@ -587,7 +590,7 @@ function time_rewind:start(game, target_time)
 	-- 与原来不同，往往正好用来重开一次结果）。所以这里只做钳制，不拦「到当前时刻」。
 	target_time = km.clamp(0, store.tick_ts, target_time)
 
-	self:close(game.game_gui)
+	self:close(game.game_gui, true)
 
 	-- close 会把暂停菜单放回来；重建会把它整个换掉，所以要先让它按自己的流程收尾
 	-- （PauseView:hide 会恢复音频、关掉遮罩并写回音量），否则声音会一直停着
