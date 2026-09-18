@@ -693,10 +693,9 @@ tt.render.sprites[1].prefix = "soldierassassin"
 tt.render.sprites[1].anchor.y = anchor_y
 tt.unit.marker_offset = vec_2(0, ady(8))
 tt.unit.mod_offset = vec_2(0, ady(23))
+
 tt = RT("tower_barrack_dwarf", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.barrack.rally_range = 180
 tt.barrack.soldier_type = "soldier_dwarf"
 tt.barrack.max_soldiers = 4
@@ -1372,6 +1371,7 @@ tt.info.portrait = "kr3_info_portraits_towers_0013"
 tt.barrack.max_soldiers = 4
 tt.barrack.rally_range = 175
 tt.barrack.soldier_type = "soldier_ewok"
+tt.barrack.scattered = true
 tt.editor.props = table.append(tt.editor.props, {{"barrack.rally_pos", PT_COORDS}}, true)
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = vec_2(0, 10)
@@ -1453,6 +1453,7 @@ tt.ranged.attacks[1].cooldown = 1.3
 tt.ranged.attacks[1].max_range = 150
 tt.ranged.attacks[1].min_range = 25
 tt.ranged.attacks[1].shoot_time = fts(11)
+tt.ranged.attacks[1].level = 0
 tt.ranged.attacks[1].power_name = "tear"
 tt.powers.tear.on_power_upgrade = function(this, power_name, power)
 	this.ranged.attacks[1].mod = "mod_ewok_tear"
@@ -1465,6 +1466,7 @@ tt.render.sprites[1].angles.walk = {"running"}
 tt.render.sprites[1].prefix = "soldier_ewok"
 tt.ui.click_rect = r(-10, -2, 20, 25)
 tt.unit.mod_offset = vec_2(0, 10)
+
 tt = RT("bullet_soldier_ewok", "arrow")
 tt.bullet.damage_max = 12
 tt.bullet.damage_min = 8
@@ -2364,10 +2366,9 @@ tt.render.sprites[1].name = "small"
 tt.render.sprites[1].draw_order = 2
 tt.main_script.insert = scripts.mod_tricannon_overheat_dps.insert
 tt.main_script.update = scripts.mod_dps.update
+
 tt = RT("tower_dwarf_lvl4", "tower")
-
 AC(tt, "barrack", "powers")
-
 tt.powers.formation = CC("power")
 tt.powers.formation.price_base = 180
 tt.powers.formation.price_inc = 180
