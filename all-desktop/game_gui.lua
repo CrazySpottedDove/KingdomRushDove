@@ -5607,43 +5607,25 @@ function DamageTraceView:refresh_detail()
 	local data = game_gui.game.store.damage_trace_table
 	local rows = {}
 	local data_key = damage_trace_modes[self.mode_idx].data_key
-	-- 按展示名聚合：同名条目合并数据后展示，不影响底层记录表
-	local merged = {}
 
 	if data then
 		for template_name, info in pairs(data) do
 			local category = damage_trace_category(template_name)
 
 			if category == self.tab_idx then
-				local agg = merged[info.name]
+				local count = 0
 
-				if not agg then
-					agg = {
-						template_name = template_name,
-						data = {}
-					}
-					merged[info.name] = agg
+				for _, value in pairs(info[data_key]) do
+					count = count + value
 				end
 
-				for damage_type, value in pairs(info[data_key]) do
-					agg.data[damage_type] = (agg.data[damage_type] or 0) + value
+				if count > 0 then
+					rows[#rows + 1] = DamageTraceItemView:new(template_name, {
+						name = info.name,
+						data = info[data_key]
+					}, self.list_w)
 				end
 			end
-		end
-	end
-
-	for name, agg in pairs(merged) do
-		local count = 0
-
-		for _, value in pairs(agg.data) do
-			count = count + value
-		end
-
-		if count > 0 then
-			rows[#rows + 1] = DamageTraceItemView:new(agg.template_name, {
-				name = name,
-				data = agg.data
-			}, self.list_w)
 		end
 	end
 
