@@ -22,7 +22,9 @@ local G = love.graphics
 local bit = require("bit")
 local storage = require("all.storage")
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
--- local KFD = require("klove.kui_fast_draw")
+local time_rewind = require("dove_modules.time_rewind")
+local IN_MOUSE_DOWN, IN_MOUSE_UP, IN_KEY = time_rewind.IN_MOUSE_DOWN, time_rewind.IN_MOUSE_UP, time_rewind.IN_KEY
+local IN_TOUCH_DOWN, IN_TOUCH_UP, IN_TOUCH_MOVE = time_rewind.IN_TOUCH_DOWN, time_rewind.IN_TOUCH_UP, time_rewind.IN_TOUCH_MOVE
 
 require("all.constants")
 
@@ -141,6 +143,7 @@ game.simulation_systems = {
 
 local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_done)
 	adaptive_fps:set_scene(self)
+	time_rewind:reset()
 	self.dash_start_offset = 0
 	self.screen_w = screen_w
 	self.screen_h = screen_h
@@ -430,10 +433,16 @@ function game:update(dt)
 		updated = true
 	end
 
+	time_rewind:record(self, d)
+
 	return updated
 end
 
 function game:keypressed(key, isrepeat)
+	if time_rewind:keypressed(self, key, isrepeat) then
+		return true
+	end
+
 	if DEBUG then
 		if key == "/" then
 			DEBUG_KEYS_ON = not DEBUG_KEYS_ON
@@ -450,6 +459,10 @@ function game:keypressed(key, isrepeat)
 	-- 	return true
 	-- end
 
+	if time_rewind:input(IN_KEY, self.simulation.store, self.camera, key, isrepeat) then
+		return true
+	end
+
 	return self.game_gui:keypressed(key, isrepeat)
 end
 
@@ -462,6 +475,10 @@ function game:keyreleased(key, isrepeat)
 end
 
 function game:mousepressed(x, y, button, istouch)
+	if time_rewind:input(IN_MOUSE_DOWN, self.simulation.store, self.camera, x, y, button, istouch) then
+		return
+	end
+
 	click_state.active = true
 	click_state.press_time = love.timer.getTime()
 	click_state.x = x
@@ -471,12 +488,21 @@ function game:mousepressed(x, y, button, istouch)
 end
 
 function game:mousereleased(x, y, button, istouch)
+	if time_rewind:input(IN_MOUSE_UP, self.simulation.store, self.camera, x, y, button, istouch) then
+		return
+	end
+
 	click_state.active = false
 
 	self.game_gui:mousereleased(x, y, button, istouch)
 end
 
 function game:wheelmoved(dx, dy)
+	-- 回溯面板打开、或正在重演时，滚轮都不落到地图，避免在它们背后缩放
+	if time_rewind.panel_open or time_rewind.state ~= time_rewind.STATE_IDLE then
+		return
+	end
+
 	-- GUI 消费滚轮（如伤害追踪列表滚动）时不再缩放地图
 	if self.game_gui:wheelmoved(dx, dy) then
 		return
@@ -495,6 +521,10 @@ game._pinch_last_center = nil
 game._pinch_last_zoom = nil
 
 function game:touchpressed(id, x, y, dx, dy, pressure)
+	if time_rewind:input(IN_TOUCH_DOWN, self.simulation.store, self.camera, id, x, y, dx, dy, pressure) then
+		return
+	end
+
 	self._touch_points[id] = V.v(x, y)
 
 	-- 保持原有 GUI 事件
@@ -504,6 +534,10 @@ function game:touchpressed(id, x, y, dx, dy, pressure)
 end
 
 function game:touchreleased(id, x, y, dx, dy, pressure)
+	if time_rewind:input(IN_TOUCH_UP, self.simulation.store, self.camera, id, x, y, dx, dy, pressure) then
+		return
+	end
+
 	self._touch_points[id] = nil
 	self._pinch_last_dist = nil
 	self._pinch_last_center = nil
@@ -515,6 +549,10 @@ function game:touchreleased(id, x, y, dx, dy, pressure)
 end
 
 function game:touchmoved(id, x, y, dx, dy, pressure)
+	if time_rewind:input(IN_TOUCH_MOVE, self.simulation.store, self.camera, id, x, y, dx, dy, pressure) then
+		return
+	end
+
 	self._touch_points[id] = V.v(x, y)
 
 	local points = self._touch_points

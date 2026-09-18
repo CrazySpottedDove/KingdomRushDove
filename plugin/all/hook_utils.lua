@@ -106,6 +106,32 @@ function hook_utils.HOOK(obj, fn_name, handler, priority)
 	rebuild_chain(obj, fn_name)
 end
 
+---替换链尾的原函数，插件 handler 全部保留。用于临时接管某个函数的实际行为
+---（例如回溯期间让 game.update 去跑重演），正常路径不会多出任何转发层。
+---没有钩子时等价于直接换字段。
+---@param obj table 对象
+---@param fn_name string 函数名
+---@param fn function 新的原函数
+---@return function 被换下来的原函数（用于还原）
+function hook_utils.SET_ORIGINAL(obj, fn_name, fn)
+	local hook_info = obj.__hooks and obj.__hooks[fn_name]
+
+	if not hook_info then
+		local original = obj[fn_name]
+
+		obj[fn_name] = fn
+
+		return original
+	end
+
+	local original = hook_info.original
+
+	hook_info.original = fn
+	rebuild_chain(obj, fn_name)
+
+	return original
+end
+
 -- 移除特定钩子
 function hook_utils.UNHOOK(obj, fn_name, handler_to_remove)
 	if not obj.__hooks or not obj.__hooks[fn_name] then

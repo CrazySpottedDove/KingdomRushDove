@@ -35,6 +35,8 @@ local v = V.v
 local RichTextLabel = require("dove_modules.gui.rich_text_label")
 local text_diff = require("dove_modules.gui.text_utils")
 local EditablePanelView = require("dove_modules.gui.editable_panel_view")
+local time_rewind = require("dove_modules.time_rewind")
+local TimeRewindView = require("dove_modules.gui.time_rewind_view")
 local P = require("path_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
@@ -464,6 +466,8 @@ function game_gui:init(w, h, game)
 
 	overlay.hidden = true
 
+	local time_rewind_view = TimeRewindView:new(sw, sh, self, time_rewind)
+
 	local layer_gui = KVirtualView:new()
 	layer_gui.id = "layer_gui"
 	layer_gui.pos = v(0, 0)
@@ -531,6 +535,7 @@ function game_gui:init(w, h, game)
 	layer_gui_top:add_child(overlay)
 	layer_gui_top:add_child(notiview)
 	layer_gui_top:add_child(pauseview)
+	layer_gui_top:add_child(time_rewind_view)
 
 	if game.simulation.store.level_mode_override == GAME_MODE_ENDLESS then
 		local endless_select_reward_view = EndlessSelectRewardView:new(sw, sh)
@@ -655,6 +660,7 @@ function game_gui:init(w, h, game)
 	self.pauseview = pauseview
 	self.notiview = notiview
 	self.incoming_tooltip = incoming_tooltip
+	self.time_rewind_view = time_rewind_view
 	self.layer_gui = layer_gui
 	self.layer_gui_game = layer_gui_game
 	self.layer_gui_hud = layer_gui_hud
@@ -3665,6 +3671,17 @@ function PauseView:initialize()
 			self:add_child(btn_damage_trace)
 		end
 
+		button_height = button_height + 100
+		local btn_time_rewind = GGOptionsButton:new(_("INGAME_UI_TIME_REWIND"))
+		btn_time_rewind:set_anchor_to_center()
+		btn_time_rewind.pos.x = right_x
+		btn_time_rewind.pos.y = button_height
+		function btn_time_rewind.on_click()
+			S:queue("GUIButtonCommon")
+			time_rewind:toggle(game_gui)
+		end
+		self:add_child(btn_time_rewind)
+
 		if configer.ui_settings().tower_menu_enabled then
 			button_height = button_height + 100
 			local btn_criket = GGOptionsButton:new(_("INGAME_UI_BTN_QUICK_BUILD"))
@@ -3906,9 +3923,24 @@ function DefeatView:initialize()
 
 	self:add_child(b)
 
-	if configer.ui_settings().damage_trace_enabled then
+	-- 回溯与「伤害追踪」并排放在下面一行：那一行放得下两个，重开/退出那行放不下三个。
+	-- 伤害追踪没开时，回溯自己居中
+	local damage_on = configer.ui_settings().damage_trace_enabled
+	local b_rewind = GGOptionsButton(_("INGAME_UI_TIME_REWIND"))
+	local b_step = (b_rewind.size.x + 20) * 0.5
+
+	b_rewind.pos.x, b_rewind.pos.y = V.csnap(damage_on and (self.size.x * 0.5 + b_step) or (self.size.x * 0.5), y + b_rewind.size.y + 35)
+
+	function b_rewind.on_click()
+		S:queue("GUIButtonCommon")
+		time_rewind:toggle(game_gui)
+	end
+
+	self:add_child(b_rewind)
+
+	if damage_on then
 		b = GGOptionsButton:new(_("INGAME_UI_DAMAGE_TRACE"))
-		b.pos.x, b.pos.y = V.csnap(self.size.x * 0.5, y + b.size.y + 35)
+		b.pos.x, b.pos.y = V.csnap(self.size.x * 0.5 - b_step, y + b.size.y + 35)
 
 		function b.on_click()
 			S:queue("GUIButtonCommon")
@@ -4110,12 +4142,34 @@ function VictoryView:initialize(level_mode)
 	self.v_restart = v_r
 	self.v_continue = v_c
 
-	if configer.ui_settings().damage_trace_enabled then
+	local b_rewind = GGOptionsButton:new(_("INGAME_UI_TIME_REWIND"))
+
+	b_rewind.anchor = V.v(b_rewind.size.x * 0.5, b_rewind.size.y * 0.5)
+	b_rewind._target_y = 540
+
+	-- 与「伤害追踪」并排居中：并排时各让开半个按钮加间隙，只有自己时就居中
+	local b_step = (b_rewind.size.x + 20) * 0.5
+	local damage_on = configer.ui_settings().damage_trace_enabled
+
+	b_rewind.pos = V.v(damage_on and (vw * 0.5 + b_step) or (vw * 0.5), b_rewind._target_y)
+	b_rewind.hidden = true
+	b_rewind.alpha = 0
+
+	function b_rewind.on_click()
+		S:queue("GUIButtonCommon")
+		time_rewind:toggle(game_gui)
+	end
+
+	self:add_child(b_rewind)
+
+	self.b_rewind = b_rewind
+
+	if damage_on then
 		local b_damage = GGOptionsButton:new(_("INGAME_UI_DAMAGE_TRACE"))
 
 		b_damage.anchor = V.v(b_damage.size.x * 0.5, b_damage.size.y * 0.5)
 		b_damage._target_y = 540
-		b_damage.pos = V.v(vw * 0.5, b_damage._target_y)
+		b_damage.pos = V.v(vw * 0.5 - b_step, b_damage._target_y)
 		b_damage.hidden = true
 		b_damage.alpha = 0
 
@@ -4221,19 +4275,27 @@ function VictoryView:show()
 		c_chain:enable()
 		r_chain:enable()
 
-		local b_damage = self.b_damage
+		-- 并排的两个按钮一起滑入；伤害追踪没开时只有回溯
+		local function reveal(b)
+			if not b then
+				return
+			end
 
-		if b_damage then
-			b_damage.hidden = false
-			b_damage.pos.y = b_damage._target_y - 60
-			b_damage.alpha = 0
+			b.hidden = false
+			b.pos.y = b._target_y - 60
+			b.alpha = 0
 
-			timer:tween(0.5, b_damage.pos, {
-				y = b_damage._target_y
+			timer:tween(0.5, b.pos, {
+				y = b._target_y
 			}, "out-back")
-			timer:tween(0.4, b_damage, {
+			timer:tween(0.4, b, {
 				alpha = 1
 			}, "out-quad")
+		end
+
+		if self.b_damage or self.b_rewind then
+			reveal(self.b_damage)
+			reveal(self.b_rewind)
 			wait(0.5)
 		end
 

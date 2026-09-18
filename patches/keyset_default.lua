@@ -47,5 +47,7 @@ return {
 	fps = "f10",
 	-- 伤害追踪面板开关，默认为 "f9"
 	damage_trace_toggle = "f9",
+	-- 时间倒流面板开关，默认为 "t"
+	time_rewind_toggle = "t",
 	restart = "return"
 }
