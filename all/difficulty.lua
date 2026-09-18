@@ -54,7 +54,8 @@ function difficulty:patch_templates()
 		if t.enemy then
 			if not PT(t.health, "hp_max") and hp_factor_enemy ~= 1 then
 				if self.level == DIFFICULTY_IMPOSSIBLE and t.health.hp_max > 2000 then
-					t.health.instakill_resistance = km.clamp(0, 1, (t.health.hp_max - 2000) * 0.0002)
+					local delta = t.health.hp_max - 2000
+					t.health.instakill_resistance = 1 - (2000 + delta * math.exp(-delta / 2000)) / t.health.hp_max
 				end
 
 				if bit.band(t.vis.flags, F_FLYING) ~= 0 then
