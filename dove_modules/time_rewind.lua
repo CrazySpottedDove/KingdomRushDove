@@ -1,5 +1,5 @@
 -- chunkname: @./dove_modules/time_rewind.lua
--- 时间倒流：记录玩家的每一次操作（连同发生时的游戏时钟），回溯时重建关卡，
+-- 时间回溯：记录玩家的每一次操作（连同发生时的游戏时钟），回溯时重建关卡，
 -- 再按标称帧率重演到目标游戏时间。
 --
 -- 数据布局（热路径一律数组 + 数字下标）：
@@ -19,6 +19,7 @@ local simulation = require("simulation")
 local S = require("sound_db")
 local AC = require("achievements")
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
+local perf = require("dove_modules.perf.perf")
 local hook_utils = require("hook_utils")
 local PS = require("all.systems.particle_system")
 local render = require("all.systems.render")
@@ -322,41 +323,6 @@ local function rewind_render_update(self, dt, ts, store)
 
 				if s._track_e then
 					s.pos.x, s.pos.y = e.pos.x, e.pos.y
-				end
-
-				if e.health_bar and e.health_bar._last_ts ~= ts then
-					local hb = e.health_bar
-					hb._last_ts = ts
-					local fb = hb.frames[1]
-					local ff = hb.frames[2]
-					local fk = hb.black_bar_hp and hb.frames[3] or nil
-
-					if e.health.hp == e.health.hp_max or hb.hidden then
-						fb.hidden = true
-						ff.hidden = true
-
-						if fk then
-							fk.hidden = true
-						end
-					else
-						fb.hidden = false
-						ff.hidden = false
-						fb.pos.x, fb.pos.y = e.pos.x, e.pos.y
-
-						if fk then
-							fk.hidden = false
-							ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
-							fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
-						else
-							if e.health.hp > e.health.hp_max then
-								ff.scale.x = ff.bar_width
-								ff.color = hb.colors and hb.colors.fg2 or self._hb_colors.fg2
-							else
-								ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
-								ff.color = hb.colors and hb.colors.fg or self._hb_colors.fg
-							end
-						end
-					end
 				end
 			end
 
@@ -663,6 +629,8 @@ function time_rewind:start(game, target_time)
 	self.ach_snapshot = snapshot_achievements()
 	cursor = 1
 
+	perf.set_enabled(false)
+
 	local defs = {
 		{game, "update", rewind_update},
 		{game, "draw_game", rewind_draw},
@@ -674,7 +642,8 @@ function time_rewind:start(game, target_time)
 		{PS, "on_render_update", rewind_particle_update},
 		{render, "on_render_update", rewind_render_update},
 		{game.game_gui, "change_speed_factor", noop},
-		{tween, "on_render_update", rewind_tween_update}
+		{tween, "on_render_update", rewind_tween_update},
+		{perf, "set_enabled", noop}
 	}
 
 	self:swap_defs(defs)
@@ -781,6 +750,8 @@ function time_rewind:finish(game)
 	self.state = STATE_IDLE
 	self.progress = 0
 	self:restore_defs()
+
+	perf.set_enabled(configer.ui_settings().perf_enabled)
 
 	game.game_gui:change_speed_factor(1)
 end

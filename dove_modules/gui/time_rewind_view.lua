@@ -1,5 +1,5 @@
 -- chunkname: @./dove_modules/gui/time_rewind_view.lua
--- 时间倒流：时间轴面板（波次刻度 + 拖动选择）与重演进度画面
+-- 时间回溯：时间轴面板（波次刻度 + 拖动选择）与重演进度画面
 local G = love.graphics
 local class = require("middleclass")
 local km = require("lib.klua.macros")
