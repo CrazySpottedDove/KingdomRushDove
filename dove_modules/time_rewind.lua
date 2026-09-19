@@ -13,7 +13,6 @@ require("all.constants")
 local log = require("lib.klua.log"):new("time_rewind")
 local km = require("lib.klua.macros")
 local configer = require("dove_modules.configer")
-local simulation = require("simulation")
 local S = require("sound_db")
 local AC = require("achievements")
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
@@ -55,14 +54,10 @@ local handlers = {} -- 决定 id -> {apply, valid}
 local kind_names = {} -- 决定 id -> 名字（按 id 直接下标，id 从 KIND_DECISION 起）
 local kind_seq = 0 -- 已登记的决定种类数（用来发 id，不能用 #kind_names）
 local kind_ids = {} -- 名字 -> 决定 id（重复登记要报错）
-local cur_ts -- 当帧游戏时钟：决定靠它落款（input/record 每帧刷新）
 local cursor = 1
 -- 已记过刻度的波次。初值取 0：第 0 波只是关卡开场（wave_spawn 的初始值就是 0），它的时间就是 0，
 -- 轴上不需要这个刻度，所以从"第 0 波已经记过"开始
 local last_wave = 0
--- 上一帧记到哪个事件。用来撤掉「让游戏暂停的那一下」：它是界面操作，进了时间线就会在重演时
--- 把游戏暂停住，而重演一停 tick_ts 就不再前进，进度条永远走不完
-local events_at_last_record = 0
 -- 重演期间记下的最后一次音乐请求：它代表「回溯到的那一刻本该在放的曲子」
 local pending_music
 -- true 表示当前这次调用是重演自己派发的：要放行，也不要记回日志。
@@ -212,13 +207,26 @@ function time_rewind.event_at(i)
 	return e[E_TIME], kind_names[e[E_KIND]], e[E_A], e[E_B], e[E_C], e[E_D], e[E_E]
 end
 
-function time_rewind.decision(id, a, b, c, d, e)
-	if time_rewind.state ~= STATE_IDLE or not cur_ts then
+--- 记录一次玩家的决定：在目标已经解析出来、动作即将生效时调用，时钟由调用点传入
+--- （模块不持有 store，也就没有时钟缓存）。面板打开、或正在回溯时一律不记。
+function time_rewind:record_decision(id, tick_ts, a, b, c, d, e)
+	if self.panel_open or self.state ~= STATE_IDLE then
 		return
 	end
 
 	n_events = n_events + 1
-	events[n_events] = {cur_ts, id, a, b, c, d, e}
+	events[n_events] = {tick_ts, id, a, b, c, d, e}
+end
+
+--- 波次系统在「波号推进」处通知（live 与回溯重演都会走到）：重演因此会自己把时间轴上的
+--- 波次刻度重建一遍。第 0 波是开场，不进时间轴；同一波重复通知只记一次。
+function time_rewind:wave_started(tick_ts, wave)
+	if wave == 0 or wave == last_wave then
+		return
+	end
+
+	last_wave = wave
+	self.waves[#self.waves + 1] = {tick_ts, wave}
 end
 
 --- 派发所有发生时间不晚于 ts 的操作（记录顺序即发生顺序，同一帧的多个事件同时间戳也照顺序走）。
@@ -268,6 +276,10 @@ local function rewind_update(game, dt)
 			time_rewind.state = STATE_REPLAY
 			time_rewind.phase = PHASE_REPLAY
 			time_rewind.progress = 0
+
+			-- 重演从 0 重跑一遍，时间轴上的波次刻度由重演自己重建（波次系统会在推进处通知）
+			time_rewind.waves = {}
+			last_wave = 0
 		end
 
 		return true
@@ -509,7 +521,6 @@ function time_rewind:reset()
 	n_events = 0
 	cursor = 1
 	last_wave = 0
-	events_at_last_record = 0
 	self.waves = {}
 	self.now_time = 0
 end
@@ -548,32 +559,6 @@ end
 
 --- 每帧只做一件事：波次变化时插一条刻度。逐帧数据一条不留。
 --- 回溯期间 game.update 链尾已被换掉；面板打开期间本函数被顶成 noop。
-function time_rewind:record(game, store)
-	cur_ts = store.tick_ts
-
-	if game.progress < 1 then
-		return
-	end
-
-	-- 这一帧刚被暂停（点暂停按钮 / 按 Esc）：把本帧记下的操作撤掉。暂停是那一操作的后果，
-	-- 所以记它的时候 paused 还是 false，只能等到这里才发现，于是按「本帧」撤
-	if store.paused then
-		for i = events_at_last_record + 1, n_events do
-			events[i] = nil
-		end
-
-		n_events = events_at_last_record
-	end
-
-	events_at_last_record = n_events
-
-	local wave = store.wave_group_number
-
-	if wave ~= last_wave then
-		last_wave = wave
-		self.waves[#self.waves + 1] = {store.tick_ts, wave}
-	end
-end
 
 --- 处理回溯面板的热键；返回 true 表示这一下按键已经被吞掉
 function time_rewind:keypressed(game, key, isrepeat)
@@ -641,7 +626,7 @@ function time_rewind:toggle(game_gui)
 	game.store.paused = true
 
 	-- 面板上的操作不属于时间线，直接顶掉两个记录入口
-	self:swap_defs({{self, "record", noop}})
+	self:swap_defs({{self, "record_decision", noop}})
 
 	-- 暂停菜单与胜利/失败界面和面板同一层、还排在面板后面，会把面板盖住；
 	-- 这里先收起来，关闭时放回去（它们的状态不能靠重建复原，重建等于直接跳过它们）
@@ -826,14 +811,7 @@ function time_rewind:finish(game)
 
 	n_events = cursor - 1
 
-	local waves = self.waves
-
-	for i = #waves, 1, -1 do
-		if waves[i][1] > self.target_time then
-			table.remove(waves, i)
-		end
-	end
-
+	-- 刻度由重演重建（见 REPLAY 入口），这里不再按目标时间截断
 	local store = game.simulation.store
 
 	last_wave = store.wave_group_number

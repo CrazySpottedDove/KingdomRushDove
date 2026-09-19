@@ -1,4 +1,5 @@
 local wave_spawn_tsv = {}
+local time_rewind = require("dove_modules.time_rewind")
 
 local E = require("entity_db")
 local GS = require("kr1.game_settings")
@@ -107,6 +108,7 @@ function wave_spawn_tsv.cmd_fns.wave(store, cmd)
 
 	store.next_wave_group_ready = nil
 	store.wave_group_number = store.wave_group_number + 1
+	time_rewind:wave_started(store.tick_ts, store.wave_group_number)
 
 	if store.force_next_wave then
 		store.force_next_wave = false

@@ -837,7 +837,7 @@ function game_gui:build_random_towers(resolved)
 			resolved[v.tower.holder_id] = table.random(GS.advanced_towers)
 		end
 
-		time_rewind.decision(RK.random_towers, resolved)
+		time_rewind:record_decision(RK.random_towers, game_gui.game.store.tick_ts, resolved)
 	end
 
 	for k, v in pairs(game_gui.game.store.towers) do
@@ -1023,7 +1023,7 @@ function game_gui:keypressed(key, isrepeat)
 	elseif ks.next_wave == key then
 		-- if not self.next_wave_button:is_disabled() then
 		game_gui.game.store.send_next_wave = true
-		time_rewind.decision(RK.next_wave)
+		time_rewind:record_decision(RK.next_wave, game_gui.game.store.tick_ts)
 	-- end
 	elseif ks.criket_toggle == key and configer.ui_settings().tower_menu_enabled then
 		if self.criketmenu.hidden then
@@ -1069,13 +1069,13 @@ function game_gui:keypressed(key, isrepeat)
 		end
 	elseif ks.force_next_wave == key then
 		game_gui.game.store.force_next_wave = true
-		time_rewind.decision(RK.force_next_wave)
+		time_rewind:record_decision(RK.force_next_wave, game_gui.game.store.tick_ts)
 	elseif ks.wealthy == key then
 		game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
-		time_rewind.decision(RK.cheat_gold, 99999)
+		time_rewind:record_decision(RK.cheat_gold, game_gui.game.store.tick_ts, 99999)
 	elseif ks.healthy == key then
 		game_gui.game.store.lives = game_gui.game.store.lives + 100
-		time_rewind.decision(RK.cheat_lives, 100)
+		time_rewind:record_decision(RK.cheat_lives, game_gui.game.store.tick_ts, 100)
 	elseif configer.ui_settings().perf_enabled and ks.fps == key then
 		require("dove_modules.perf.perf_ui").toggle()
 	elseif ks.random_towers == key then
@@ -1875,7 +1875,7 @@ function game_gui.swap_tower(target_tower)
 		local holder_id = e.tower and e.tower.holder_id
 
 		if holder_id then
-			time_rewind.decision(RK.tower_swap, holder_id)
+			time_rewind:record_decision(RK.tower_swap, game_gui.game.store.tick_ts, holder_id)
 		end
 	end
 
@@ -3656,7 +3656,7 @@ function PauseView:initialize()
 		function btn_wealthy.on_click()
 			S:queue("GUIButtonCommon")
 			game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
-			time_rewind.decision(RK.cheat_gold, 99999)
+			time_rewind:record_decision(RK.cheat_gold, game_gui.game.store.tick_ts, 99999)
 		end
 		self:add_child(btn_wealthy)
 
@@ -3668,7 +3668,7 @@ function PauseView:initialize()
 		function btn_healthy.on_click()
 			S:queue("GUIButtonCommon")
 			game_gui.game.store.lives = game_gui.game.store.lives + 100
-			time_rewind.decision(RK.cheat_lives, 100)
+			time_rewind:record_decision(RK.cheat_lives, game_gui.game.store.tick_ts, 100)
 		end
 		self:add_child(btn_healthy)
 
@@ -3693,7 +3693,7 @@ function PauseView:initialize()
 		function btn_force_wave.on_click()
 			S:queue("GUIButtonCommon")
 			game_gui.game.store.force_next_wave = true
-			time_rewind.decision(RK.force_next_wave)
+			time_rewind:record_decision(RK.force_next_wave, game_gui.game.store.tick_ts)
 			-- 强制刷新一帧
 			game_gui.game.store.step = true
 		end
@@ -7505,7 +7505,7 @@ function PickView:on_down(button, x, y)
 
 				if holder_id then
 					-- 记「解析后的落点」：本体可能把它夹到该方向上最远的合法点
-					time_rewind.decision(RK.barrack_rally, holder_id, target_pos.x, target_pos.y)
+					time_rewind:record_decision(RK.barrack_rally, game_gui.game.store.tick_ts, holder_id, target_pos.x, target_pos.y)
 				end
 
 				e.barrack.rally_pos = target_pos
@@ -7525,7 +7525,7 @@ function PickView:on_down(button, x, y)
 				end
 
 				-- 记「单位 + 落点」：键是模板名（英雄本体就是用模板名建的），不是 entity.id
-				time_rewind.decision(RK.unit_rally, e.template_name, e.pos.x, e.pos.y, wx, wy)
+				time_rewind:record_decision(RK.unit_rally, game_gui.game.store.tick_ts, e.template_name, e.pos.x, e.pos.y, wx, wy)
 
 				e.nav_rally.new = true
 				e.nav_rally.pos = v(wx, wy)
@@ -7571,7 +7571,7 @@ function PickView:on_down(button, x, y)
 					end
 				end
 
-				time_rewind.decision(reinf and RK.reinforce_rally or RK.units_rally, wx, wy, reinf and 1 or 0)
+				time_rewind:record_decision(reinf and RK.reinforce_rally or RK.units_rally, game_gui.game.store.tick_ts, wx, wy, reinf and 1 or 0)
 				game_gui:show_point_confirm(x, y)
 				game_gui:deselect_controables()
 			else
@@ -7593,7 +7593,7 @@ function PickView:on_down(button, x, y)
 
 			if holder_id then
 				-- 进模式那一下不记（UI 状态），这里才是决定：目标位置 + 进模式时选的 arg
-				time_rewind.decision(RK.tower_user_point, holder_id, wx, wy, e.user_selection.arg)
+				time_rewind:record_decision(RK.tower_user_point, game_gui.game.store.tick_ts, holder_id, wx, wy, e.user_selection.arg)
 			end
 
 			game_gui:deselect_entity()
@@ -7604,14 +7604,14 @@ function PickView:on_down(button, x, y)
 
 			if not GR:cell_is(wx, wy, TERRAIN_CLIFF) and not GR:cell_is(wx, wy, TERRAIN_FAERIE) and (P:valid_node_nearby(wx, wy, 1.4285714285714286, NF_POWER_1) or level.fn_can_power and level:fn_can_power(store, GUI_MODE_POWER_1, V.v(wx, wy)) or GR:cell_is(wx, wy, TERRAIN_WATER)) then
 				game_gui.power_1:fire(wx, wy)
-				time_rewind.decision(RK.power_fire, 1, wx, wy)
+				time_rewind:record_decision(RK.power_fire, game_gui.game.store.tick_ts, 1, wx, wy)
 			else
 				game_gui:show_invalid_point_cross(x, y)
 			end
 		elseif game_gui.mode == GUI_MODE_POWER_2 then
 			if P:valid_node_nearby(wx, wy, nil, NF_RALLY) and GR:cell_is_only(wx, wy, bor(TERRAIN_LAND, TERRAIN_ICE)) then
 				game_gui.power_2:fire(wx, wy)
-				time_rewind.decision(RK.power_fire, 2, wx, wy)
+				time_rewind:record_decision(RK.power_fire, game_gui.game.store.tick_ts, 2, wx, wy)
 			else
 				game_gui:show_invalid_point_cross(x, y)
 			end
@@ -7626,7 +7626,7 @@ function PickView:on_down(button, x, y)
 				game_gui:show_invalid_point_cross(x, y)
 			end
 		elseif game_gui.mode == GUI_MODE_SUMMON_HERO then
-			time_rewind.decision(RK.summon_hero, game_gui.selected_hero_to_summon, wx, wy)
+			time_rewind:record_decision(RK.summon_hero, game_gui.game.store.tick_ts, game_gui.selected_hero_to_summon, wx, wy)
 			LU.insert_hero(game_gui.game.store, game_gui.selected_hero_to_summon, v(wx, wy))
 			game_gui:set_mode()
 		else
@@ -7640,7 +7640,7 @@ function PickView:on_down(button, x, y)
 				-- 点「可点的世界物件」（羊、特殊可点敌人…）：塔/英雄/可控单位那类点击只是选中，
 				-- 属于 UI，不进日志；只有这类物件的点击会被脚本消费、真的改变世界。
 				if not (e.tower or e.hero or e.controable or e.soldier) and e.template_name then
-					time_rewind.decision(RK.world_click, e.template_name)
+					time_rewind:record_decision(RK.world_click, game_gui.game.store.tick_ts, e.template_name)
 				end
 
 				e.ui.clicked = true
@@ -8660,7 +8660,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		local holder_id = entity.tower.holder_id
 
 		if holder_id then
-			time_rewind.decision(RK.tower_upgrade, holder_id, entity.tower.upgrade_to)
+			time_rewind:record_decision(RK.tower_upgrade, game_gui.game.store.tick_ts, holder_id, entity.tower.upgrade_to)
 		end
 
 		signal.emit("tower-built")
@@ -8699,7 +8699,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 
 			if holder_id then
 				-- 记「升级后的等级 + 实际价钱」：重演照记录还原等级、照记录扣钱
-				time_rewind.decision(RK.tower_power_upgrade, holder_id, item.action_arg, power.level, spent)
+				time_rewind:record_decision(RK.tower_power_upgrade, game_gui.game.store.tick_ts, holder_id, item.action_arg, power.level, spent)
 			end
 
 			game_gui.towertooltip:show(entity, item)
@@ -8720,7 +8720,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		local holder_id = entity.tower.holder_id
 
 		if holder_id then
-			time_rewind.decision(RK.tower_sell, holder_id)
+			time_rewind:record_decision(RK.tower_sell, game_gui.game.store.tick_ts, holder_id)
 		end
 
 		game_gui:deselect_entity()
@@ -8730,7 +8730,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		local holder_id = entity.tower.holder_id
 
 		if holder_id then
-			time_rewind.decision(RK.barrack_buy_soldier, holder_id, item.action_arg)
+			time_rewind:record_decision(RK.barrack_buy_soldier, game_gui.game.store.tick_ts, holder_id, item.action_arg)
 		end
 
 		game_gui:deselect_entity()
@@ -8742,7 +8742,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 				local holder_id = e.tower and e.tower.holder_id
 
 				if holder_id then
-					time_rewind.decision(RK.barrack_buy_attack, holder_id, item.action_arg)
+					time_rewind:record_decision(RK.barrack_buy_attack, game_gui.game.store.tick_ts, holder_id, item.action_arg)
 				end
 
 				game_gui:deselect_entity()
@@ -8784,7 +8784,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 
 		if holder_id then
 			-- 记「算好的新模式」：本体在这里绕环，重演照记录写回同一个模式
-			time_rewind.decision(RK.tower_change_mode, holder_id, item.action_arg, next_mode)
+			time_rewind:record_decision(RK.tower_change_mode, game_gui.game.store.tick_ts, holder_id, item.action_arg, next_mode)
 		end
 
 		self:hide()
@@ -9533,7 +9533,7 @@ function WaveFlag:on_click()
 
 	self.clicked = true
 	game_gui.game.store.send_next_wave = true
-	time_rewind.decision(RK.next_wave)
+	time_rewind:record_decision(RK.next_wave, game_gui.game.store.tick_ts)
 	if IS_ANDROID then
 		self._android_checked = nil
 	end

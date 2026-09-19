@@ -1,4 +1,5 @@
 local wave_spawn = {}
+local time_rewind = require("dove_modules.time_rewind")
 
 local math = require("math")
 local random = math.random
@@ -159,6 +160,7 @@ function wave_spawn:init(store)
 			log.info("sending WAVE group %02d (%02d waves)", i, #group.waves)
 			store.next_wave_group_ready = nil
 			store.wave_group_number = i
+			time_rewind:wave_started(store.tick_ts, store.wave_group_number)
 
 			if store.send_next_wave == true and i > 1 then
 				local score_reward

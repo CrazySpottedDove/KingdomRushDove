@@ -431,8 +431,6 @@ function game:update(dt)
 		updated = true
 	end
 
-	time_rewind:record(self, d)
-
 	return updated
 end
 
