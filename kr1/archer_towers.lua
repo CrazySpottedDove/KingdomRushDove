@@ -2530,7 +2530,7 @@ tt.attacks.range = 192
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_shaolin"
 tt.attacks.list[1].bullet_start_offset = v(10, 11)
-tt.attacks.list[1].cooldown = 1.5
+tt.attacks.list[1].cooldown = 1.6
 tt.pixies = {}
 tt.render.sprites[1].name = "terrains_0002"
 tt.render.sprites[1].offset = v(0, 10)
@@ -2621,8 +2621,8 @@ tt.sound_events.insert = "ShaolinAttack"
 
 -- Bullet (damage template for monks)
 tt = E:register_t("bullet_shaolin", "arrow")
-tt.bullet.damage_min = 15
-tt.bullet.damage_max = 27
+tt.bullet.damage_min = 20
+tt.bullet.damage_max = 25
 tt.bullet.hit_fx = "shaolin_monk_hit_fx"
 
 -- Decal: Monk (pixie)

@@ -48,6 +48,9 @@ time_rewind.IN_TOUCH_DOWN, time_rewind.IN_TOUCH_UP, time_rewind.IN_TOUCH_MOVE = 
 
 -- 给 game.lua 判断“现在是不是在回溯”用（非 IDLE 时世界不接受输入）
 time_rewind.STATE_IDLE = STATE_IDLE
+-- 重建/重演也对外暴露：测试与排查要按状态分支判断，不该到处写 2/3 这种魔数
+time_rewind.STATE_REBUILD = STATE_REBUILD
+time_rewind.STATE_REPLAY = STATE_REPLAY
 
 -- 与回溯面板同层、且排在面板之后的界面：打开面板时要把它们收起来，否则会盖在面板上
 local PANELS_UNDER_PANEL = {"pauseview", "victoryview", "defeatview"}
@@ -563,6 +566,13 @@ function time_rewind:toggle(game_gui)
 		return
 	end
 
+	-- 只有空闲时才允许开面板。面板自己也要顶一批函数，而换回信息只有一份槽位（swap_defs），
+	-- 重演途中再开一次会把 game.update 那批的还原信息冲掉：game.update 会永远顶着 rewind_update，
+	-- 于是收尾后的下一帧状态已是 IDLE 却再跑一遍重演，二次 finish 撞上已消费的快照。
+	if self.state ~= STATE_IDLE then
+		return
+	end
+
 	local game = game_gui.game
 	local now_time = game.simulation.store.tick_ts
 
@@ -656,7 +666,7 @@ function time_rewind:start(game, target_time)
 	-- （PauseView:hide 会恢复音频、关掉遮罩并写回音量），否则声音会一直停着
 	local pauseview = game.game_gui.pauseview
 
-	if pauseview and not pauseview.hidden then
+	if pauseview and (not pauseview.hidden or S.paused) then
 		pauseview:hide()
 	end
 
@@ -747,6 +757,12 @@ function time_rewind:replay_step(game)
 end
 
 function time_rewind:finish(game)
+	-- 只在重建/重演里收尾。收尾会把状态置回空闲并消费掉成就快照，重入一次就会撞上已消费的快照，
+	-- 所以这里必须挡住：顶替漏还原（见 toggle 的注释）时那一帧会再走到收尾，挡下也只是空操作。
+	if self.state == STATE_IDLE then
+		return
+	end
+
 	-- 丢弃回溯点之后的记录：派发游标指向下一个未派发的事件，之后的全丢；
 	-- 波次刻度按时间截断
 	for i = cursor, n_events do
@@ -771,7 +787,7 @@ function time_rewind:finish(game)
 	-- 回溯结束一律回到「进行中」：重演期间若真被谁按下了暂停，不能留到回溯之后
 	local pauseview = game.game_gui.pauseview
 
-	if pauseview and not pauseview.hidden then
+	if pauseview and (not pauseview.hidden or S.paused) then
 		pauseview:hide()
 	end
 

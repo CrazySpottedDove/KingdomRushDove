@@ -29458,6 +29458,7 @@ function scripts.tower_shaolin.update(this, store)
 				local _, targets = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
 
 				if targets then
+					local start_ts = store.tick_ts
 					local count = #this.pixies
 
 					for i = 1, count do
@@ -29467,28 +29468,14 @@ function scripts.tower_shaolin.update(this, store)
 
 						pixie.target_round = math.max((i - idx) / #targets, 1)
 						pixie.target_id = target.id
+						pixie.attack_ts = fts(2) * this.tower.cooldown_factor * (pixie.target_round - 1) + store.tick_ts
 						pixie.render.sprites[1].fps = this.render.sprites[3].fps or 30
 					end
 
-					aa.ts = store.tick_ts
+					aa.ts = start_ts
 
 					U.y_animation_play(this, "out", nil, store.tick_ts, false, 3)
 					U.y_animation_play(this, "out", nil, store.tick_ts, false, 4)
-
-					local check_idx = 1
-
-					while check_idx <= count do
-						for i = check_idx, count do
-							if this.pixies[i].target_id then
-								break
-							else
-								check_idx = check_idx + 1
-							end
-						end
-
-						coroutine.yield()
-					end
-
 					U.y_animation_play(this, "in", nil, store.tick_ts, false, 3)
 					U.y_animation_play(this, "in", nil, store.tick_ts, false, 4)
 				else
@@ -29529,115 +29516,117 @@ function scripts.decal_shaolin.update(this, store)
 
 	while true do
 		if this.target_id then
-			local target = store.entities[this.target_id]
-
-			if target and not target.health.dead then
-				if band(target.vis.bans, F_STUN) == 0 and band(target.vis.flags, F_BOSS) == 0 and (not target.enemy.blockers or #target.enemy.blockers == 0) then
-					SU.stun_inc(target)
-
-					this.is_stun = true
-				end
-
-				this.render.sprites[1].hidden = false
-
-				local is_air = band(target.vis.flags, F_FLYING) ~= 0 or band(target.vis.flags, F_BOSS) ~= 0
-				local random_action = 1
-				local slot_flip = false
-
-				if is_air then
-					this.pos.x = target.pos.x + target.unit.hit_offset.x
-					this.pos.y = target.pos.y
-					this.tween.disabled = false
-					this.tween.props[1].disabled = false
-					this.tween.props[1].ts = store.tick_ts
-					this.tween.props[1].keys[2][2].y = math.max(target.unit.hit_offset.y - 20, 5)
-
-					U.animation_start(this, "dragonPunchUp", nil, store.tick_ts)
-				else
-					slot_flip = math.abs(km.signed_unroll(target.heading.angle)) < math.pi * 0.5
-					this.pos.x = target.pos.x + target.enemy.melee_slot.x * (slot_flip and 1 or -1)
-					this.pos.y = target.pos.y + target.enemy.melee_slot.y
-					random_action = math.random(1, 2)
-
-					U.animation_start_default(this, punchInName[random_action], slot_flip, store.tick_ts)
-				end
-
-				U.y_wait_unconditional(store, fts(6) * this.owner.tower.cooldown_factor)
+			if store.tick_ts >= this.attack_ts then
+				local target = store.entities[this.target_id]
 
 				if target and not target.health.dead then
-					local bullet = E:create_entity("bullet_shaolin")
-					local fx = E:create_entity(bullet.bullet.hit_fx)
+					if band(target.vis.bans, F_STUN) == 0 and band(target.vis.flags, F_BOSS) == 0 and (not target.enemy.blockers or #target.enemy.blockers == 0) then
+						SU.stun_inc(target)
+
+						this.is_stun = true
+					end
+
+					this.render.sprites[1].hidden = false
+
+					local is_air = band(target.vis.flags, F_FLYING) ~= 0 or band(target.vis.flags, F_BOSS) ~= 0
+					local random_action = 1
+					local slot_flip = false
 
 					if is_air then
-						fx.pos.x = target.pos.x + target.unit.hit_offset.x
-						fx.pos.y = target.pos.y + target.unit.hit_offset.y
+						this.pos.x = target.pos.x + target.unit.hit_offset.x
+						this.pos.y = target.pos.y
+						this.tween.disabled = false
+						this.tween.props[1].disabled = false
+						this.tween.props[1].ts = store.tick_ts
+						this.tween.props[1].keys[2][2].y = math.max(target.unit.hit_offset.y - 20, 5)
+
+						U.animation_start(this, "dragonPunchUp", nil, store.tick_ts)
 					else
-						fx.render.sprites[1].hidden = true
+						slot_flip = math.abs(km.signed_unroll(target.heading.angle)) < math.pi * 0.5
+						this.pos.x = target.pos.x + target.enemy.melee_slot.x * (slot_flip and 1 or -1)
+						this.pos.y = target.pos.y + target.enemy.melee_slot.y
+						random_action = math.random(1, 2)
+
+						U.animation_start_default(this, punchInName[random_action], slot_flip, store.tick_ts)
 					end
 
-					fx.render.sprites[1].ts = store.tick_ts
+					U.y_wait_unconditional(store, fts(6) * this.owner.tower.cooldown_factor)
 
-					simulation:queue_insert_entity(fx)
+					if target and not target.health.dead then
+						local bullet = E:create_entity("bullet_shaolin")
+						local fx = E:create_entity(bullet.bullet.hit_fx)
 
-					bullet.bullet.damage_factor = this.owner.tower.damage_factor / math.sqrt(this.target_round)
-
-					apply_precision(bullet)
-
-					local d = SU.create_bullet_damage_without_pops(bullet.bullet, target.id, this.id)
-					local mods = bullet.bullet.mods
-
-					if not mods then
-						if bullet.bullet.mod then
-							mods = {bullet.bullet.mod}
+						if is_air then
+							fx.pos.x = target.pos.x + target.unit.hit_offset.x
+							fx.pos.y = target.pos.y + target.unit.hit_offset.y
+						else
+							fx.render.sprites[1].hidden = true
 						end
-					end
 
-					if mods then
-						for i = 1, #mods do
-							local mod_name = mods[i]
+						fx.render.sprites[1].ts = store.tick_ts
 
-							if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
-								local mod = E:create_entity(mod_name)
+						simulation:queue_insert_entity(fx)
 
-								mod.modifier.source_id = this.id
-								mod.modifier.target_id = target.id
-								mod.modifier.level = bullet.bullet.level
-								mod.modifier.source_damage = d
-								mod.modifier.damage_factor = bullet.bullet.damage_factor
+						bullet.bullet.damage_factor = this.owner.tower.damage_factor / math.sqrt(math.max(this.target_round - 3, 1))
 
-								simulation:queue_insert_entity(mod)
+						apply_precision(bullet)
+
+						local d = SU.create_bullet_damage_without_pops(bullet.bullet, target.id, this.id)
+						local mods = bullet.bullet.mods
+
+						if not mods then
+							if bullet.bullet.mod then
+								mods = {bullet.bullet.mod}
 							end
 						end
+
+						if mods then
+							for i = 1, #mods do
+								local mod_name = mods[i]
+
+								if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+									local mod = E:create_entity(mod_name)
+
+									mod.modifier.source_id = this.id
+									mod.modifier.target_id = target.id
+									mod.modifier.level = bullet.bullet.level
+									mod.modifier.source_damage = d
+									mod.modifier.damage_factor = bullet.bullet.damage_factor
+
+									simulation:queue_insert_entity(mod)
+								end
+							end
+						end
+
+						queue_damage(store, d)
 					end
 
-					queue_damage(store, d)
+					if is_air then
+						U.animation_start_default(this, "dragonPunchDown", nil, store.tick_ts)
+						U.y_wait_unconditional(store, fts(5) * this.owner.tower.cooldown_factor)
+
+						this.tween.disabled = true
+						this.tween.props[1].disabled = true
+
+						U.y_animation_play_default(this, "dragonPunchOut", nil, store.tick_ts)
+					else
+						U.y_animation_wait_default(this)
+						U.y_animation_play_default(this, punchOutName[random_action], slot_flip, store.tick_ts)
+					end
+
+					if this.is_stun then
+						SU.stun_dec(target)
+
+						this.is_stun = false
+					end
+
+					this.render.sprites[1].hidden = true
+					this.pos.x = this.owner.pos.x + this.idle_pos.x
+					this.pos.y = this.owner.pos.y + this.idle_pos.y
 				end
 
-				if is_air then
-					U.animation_start_default(this, "dragonPunchDown", nil, store.tick_ts)
-					U.y_wait_unconditional(store, fts(5) * this.owner.tower.cooldown_factor)
-
-					this.tween.disabled = true
-					this.tween.props[1].disabled = true
-
-					U.y_animation_play_default(this, "dragonPunchOut", nil, store.tick_ts)
-				else
-					U.y_animation_wait_default(this)
-					U.y_animation_play_default(this, punchOutName[random_action], slot_flip, store.tick_ts)
-				end
-
-				if this.is_stun then
-					SU.stun_dec(target)
-
-					this.is_stun = false
-				end
-
-				this.render.sprites[1].hidden = true
-				this.pos.x = this.owner.pos.x + this.idle_pos.x
-				this.pos.y = this.owner.pos.y + this.idle_pos.y
+				this.target_id = nil
 			end
-
-			this.target_id = nil
 		end
 
 		coroutine.yield()
