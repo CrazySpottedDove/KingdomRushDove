@@ -29567,7 +29567,7 @@ function scripts.decal_shaolin.update(this, store)
 
 						simulation:queue_insert_entity(fx)
 
-						bullet.bullet.damage_factor = this.owner.tower.damage_factor / math.sqrt(math.max(this.target_round - 3, 1))
+						bullet.bullet.damage_factor = this.owner.tower.damage_factor / math.sqrt(math.max(this.target_round - 2, 1))
 
 						apply_precision(bullet)
 

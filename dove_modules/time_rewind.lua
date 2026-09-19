@@ -1,14 +1,12 @@
 -- chunkname: @./dove_modules/time_rewind.lua
--- 时间回溯：记录玩家的每一次操作（连同发生时的游戏时钟），回溯时重建关卡，
--- 再按标称帧率重演到目标游戏时间。
+-- 时间回溯：只记录玩家的「决定」（把意图解析成目标之后的那一下），回溯时重建关卡，再按固定
+-- 步长重演到目标游戏时间。金币、击杀、随机流、单位位置都属于世界结果，不进日志。
 --
 -- 数据布局（热路径一律数组 + 数字下标）：
---   events[i] = 一次玩家操作，按发生时间递增（同一时间点的先后就是记录顺序）：
---     [1]     发生时的游戏时钟 store.tick_ts
---     [2]     操作种类，见 IN_* 常量；数字下标可直接索引 replay_fns 取到 game 方法
---     [3..8]  原样透传给 game 方法的参数
---             按键 key,isrepeat / 鼠标 x,y,button,istouch / 触摸 id,x,y,dx,dy,pressure
---     [9..11] 发生时的相机 x,y,zoom —— 命令里的世界坐标依赖相机，必须跟着操作记
+--   events[i] = 一次决定，按发生时间递增（同一时间点的先后就是记录顺序）：
+--     [1]       发生时的游戏时钟 store.tick_ts
+--     [2]       决定种类 id（time_rewind.register 分配，从 KIND_DECISION 起）
+--     [3..7]    决定参数，语义由登记方定（目标键 + 参数；目标键必须用游戏自己的存档身份）
 --   waves[i] = {游戏时钟, 波数}，面板横轴上的波次刻度
 require("all.constants")
 
@@ -36,15 +34,8 @@ local STATE_IDLE, STATE_REBUILD, STATE_REPLAY = 1, 2, 3
 -- 进度画面的阶段编号（给 UI 用，文案由 UI 自己按编号取 i18n 键）
 local PHASE_REBUILD, PHASE_REPLAY = 1, 2
 
--- 事件数组的下标：时间、种类、6 个透传参数、3 个相机分量
-local E_TIME, E_KIND, E_A, E_B, E_C, E_D, E_E, E_F, E_CAMX, E_CAMY, E_CAMZ = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-
--- 操作种类：数字本身就是 replay_fns 的下标
-local IN_MOUSE_DOWN, IN_MOUSE_UP, IN_KEY, IN_TOUCH_DOWN, IN_TOUCH_UP, IN_TOUCH_MOVE = 1, 2, 3, 4, 5, 6
-
--- 导出给 game.lua 的记录调用点，那边一次性取进局部变量，热路径上不再查字符串
-time_rewind.IN_MOUSE_DOWN, time_rewind.IN_MOUSE_UP, time_rewind.IN_KEY = IN_MOUSE_DOWN, IN_MOUSE_UP, IN_KEY
-time_rewind.IN_TOUCH_DOWN, time_rewind.IN_TOUCH_UP, time_rewind.IN_TOUCH_MOVE = IN_TOUCH_DOWN, IN_TOUCH_UP, IN_TOUCH_MOVE
+-- 决定数组的下标：时间、种类、5 个透传参数
+local E_TIME, E_KIND, E_A, E_B, E_C, E_D, E_E = 1, 2, 3, 4, 5, 6, 7
 
 -- 给 game.lua 判断“现在是不是在回溯”用（非 IDLE 时世界不接受输入）
 time_rewind.STATE_IDLE = STATE_IDLE
@@ -55,12 +46,16 @@ time_rewind.STATE_REPLAY = STATE_REPLAY
 -- 与回溯面板同层、且排在面板之后的界面：打开面板时要把它们收起来，否则会盖在面板上
 local PANELS_UNDER_PANEL = {"pauseview", "victoryview", "defeatview"}
 
--- 种类 -> game 方法名，按种类编号排列；进入重演时解析成函数数组并缓存
-local REPLAY_METHOD = {"mousepressed", "mousereleased", "keypressed", "touchpressed", "touchreleased", "touchmoved"}
-
 -- 热路径状态放局部变量；面板要读的值在打开面板时镜像到 time_rewind 字段上。
 local events = {}
 local n_events = 0
+-- 「决定」与原始输入共用这份日志：决定 id 从 KIND_DECISION 起，和上面的原始输入种类不重叠
+local KIND_DECISION = 100
+local handlers = {} -- 决定 id -> {apply, valid}
+local kind_names = {} -- 决定 id -> 名字（按 id 直接下标，id 从 KIND_DECISION 起）
+local kind_seq = 0 -- 已登记的决定种类数（用来发 id，不能用 #kind_names）
+local kind_ids = {} -- 名字 -> 决定 id（重复登记要报错）
+local cur_ts -- 当帧游戏时钟：决定靠它落款（input/record 每帧刷新）
 local cursor = 1
 -- 已记过刻度的波次。初值取 0：第 0 波只是关卡开场（wave_spawn 的初始值就是 0），它的时间就是 0，
 -- 轴上不需要这个刻度，所以从"第 0 波已经记过"开始
@@ -70,8 +65,7 @@ local last_wave = 0
 local events_at_last_record = 0
 -- 重演期间记下的最后一次音乐请求：它代表「回溯到的那一刻本该在放的曲子」
 local pending_music
-local replay_fns
--- true 表示当前这次 mousepressed/keypressed 是重演自己派发的：要放行，也不要记回日志。
+-- true 表示当前这次调用是重演自己派发的：要放行，也不要记回日志。
 -- 玩家在回溯期间的操作与重演派发的操作走的是同一条路（game:mousepressed 等），只能这样区分。
 local replaying = false
 -- 重演步长与帧率：固定用引擎标称帧率，每次 start 时从 TICK_LENGTH 取值
@@ -79,6 +73,8 @@ local replaying = false
 local fps
 local tick
 
+-- 名字 -> 决定 id：本体与插件在载入时登记，调用点把 id 缓进局部变量（热路径不查字符串）
+time_rewind.kind = {}
 time_rewind.waves = {}
 time_rewind.now_time = 0
 time_rewind.target_time = 0
@@ -138,6 +134,93 @@ end
 local function noop()
 end
 
+--- 回溯期间顶替 game 的输入入口：玩家的真实输入一律吞掉（和原来那 6 处守卫的返回值一致）
+local function block_input()
+	return true
+end
+
+--- 登记一种「决定」：核心只认 id 与两个回调，语义（目标是谁、什么条件才成立）全在登记方。
+--- 目标键必须用「游戏自己存档/恢复时用的身份」（塔 = tower.holder_id、援军 = power id……），
+--- 不能用 entity.id：它是 entity_db.last_id 单调计数器，按创建顺序发号，重演一遍就会错位。
+--- apply(game, ...) 必须确定性：只按参数改世界，不许读鼠标/时间/随机。
+--- valid(game, ...) 可选：返回 false 表示这条决定的前提（目标/状态）在重演世界里不成立，
+--- 那就静默跳过 —— 前提属于世界结果（随机出现的羊、随机封印的塔），不硬造。
+function time_rewind.register(name, spec)
+	-- 重名不报错也不覆盖：返回已有 id，让两边共用同一种决定（登记是载入期行为，不是热路径）
+	if kind_ids[name] then
+		return kind_ids[name]
+	end
+
+	local id = KIND_DECISION + kind_seq
+
+	kind_seq = kind_seq + 1
+	kind_names[id] = name
+	kind_ids[name] = id
+	handlers[id] = spec
+	time_rewind.kind[name] = id
+
+	return id
+end
+
+--- 记录一次玩家的决定：在目标已经解析出来、动作即将生效的那一刻调用。
+--- 重演派发进来的同一次调用只是借道（重演走 apply，不重新记录），所以这里对 replaying 是 no-op。
+--- 读日志用（回溯面板、调试、以后扩展）：总数 + 第 i 条（i 从 1 起）。
+--- 日志本身按记录顺序排列，而记录顺序就是时间递增顺序（同一 tick 的多条保持先后），所以不需要排序。
+--- 第 i 条的自定义文本：登记时给了 label 就用它（例如把「技能 1 @ x,y」拼好），
+--- 没给就返回 nil，UI 自己按参数拼（插件种类一般走这条）。
+function time_rewind.event_label(i)
+	local e = events[i]
+
+	if not e then
+		return nil
+	end
+
+	local handler = handlers[e[E_KIND]]
+
+	return handler and handler.label and handler.label(e[E_A], e[E_B], e[E_C], e[E_D], e[E_E]) or nil
+end
+
+function time_rewind.event_count()
+	return n_events
+end
+
+--- 返回第 i 条的时间、种类名与参数；越界返回 nil
+--- 二分找出「时间不晚于 ts 的最后一条」的下标（没有则返回 0）。日志按时间递增，所以可以二分。
+function time_rewind.event_index_at(ts)
+	local lo, hi = 1, n_events
+
+	while lo <= hi do
+		local mid = math.floor((lo + hi) * 0.5)
+
+		if events[mid][E_TIME] <= ts then
+			lo = mid + 1
+		else
+			hi = mid - 1
+		end
+	end
+
+	return hi
+end
+
+function time_rewind.event_at(i)
+	local e = events[i]
+
+	if not e then
+		return nil
+	end
+
+	return e[E_TIME], kind_names[e[E_KIND]], e[E_A], e[E_B], e[E_C], e[E_D], e[E_E]
+end
+
+function time_rewind.decision(id, a, b, c, d, e)
+	if time_rewind.state ~= STATE_IDLE or not cur_ts then
+		return
+	end
+
+	n_events = n_events + 1
+	events[n_events] = {cur_ts, id, a, b, c, d, e}
+end
+
 --- 派发所有发生时间不晚于 ts 的操作（记录顺序即发生顺序，同一帧的多个事件同时间戳也照顺序走）。
 --- 抽出来是因为重演收尾还要再派发一次：最后那一 tick 里到期的操作若不派发，会被 finish 当成
 --- 「回溯点之后」直接丢掉（同一帧多个事件、以及拖到最右端时当前帧的操作都会踩到）。
@@ -149,11 +232,17 @@ local function dispatch_events(game, ts)
 			break
 		end
 
-		local camera = game.camera
+		local handler = handlers[e[E_KIND]]
 
-		camera.x, camera.y, camera.zoom = e[E_CAMX], e[E_CAMY], e[E_CAMZ]
-		-- 6 个参数格全传（多余的是 nil，Lua 调用方自行忽略）
-		replay_fns[e[E_KIND]](game, e[E_A], e[E_B], e[E_C], e[E_D], e[E_E], e[E_F])
+		-- 只有登记过的决定会进日志；前提不成立（目标/状态在重演世界里没了）就跳过，不硬造目标。
+		-- 跳过时打印一条，便于回看「哪条决定为什么没被重演」。handler 为 nil 只在插件用错 id 时发生。
+		if not handler then
+			print(string.format("[time_rewind] 未登记的决定 id=%s，跳过 #%d t=%.3f", tostring(e[E_KIND]), cursor, e[E_TIME]))
+		elseif handler.valid and not handler.valid(game, e[E_A], e[E_B], e[E_C], e[E_D], e[E_E]) then
+			print(string.format("[time_rewind] valid 不成立，跳过 #%d %s t=%.3f args=%s|%s|%s|%s|%s", cursor, tostring(kind_names[e[E_KIND]]), e[E_TIME], tostring(e[E_A]), tostring(e[E_B]), tostring(e[E_C]), tostring(e[E_D]), tostring(e[E_E])))
+		else
+			handler.apply(game, e[E_A], e[E_B], e[E_C], e[E_D], e[E_E])
+		end
 
 		cursor = cursor + 1
 	end
@@ -179,15 +268,6 @@ local function rewind_update(game, dt)
 			time_rewind.state = STATE_REPLAY
 			time_rewind.phase = PHASE_REPLAY
 			time_rewind.progress = 0
-
-			-- 解析派发函数（数字索引），重演时每个事件只做一次数组查表，不再查字符串
-			local fns = {}
-
-			for i = 1, #REPLAY_METHOD do
-				fns[i] = game[REPLAY_METHOD[i]]
-			end
-
-			replay_fns = fns
 		end
 
 		return true
@@ -430,7 +510,6 @@ function time_rewind:reset()
 	cursor = 1
 	last_wave = 0
 	events_at_last_record = 0
-	replay_fns = nil
 	self.waves = {}
 	self.now_time = 0
 end
@@ -466,40 +545,12 @@ end
 --- 返回 true 表示这次输入到此为止：回溯期间世界不接受玩家的输入，否则重演中一个误触就会
 --- 改掉刚重建好的关卡或帧率。面板打开期间本函数已被顶成 noop，输入照常往下走。
 --- 重演派发进来的操作（replaying）只是借道，既不记录也不拦。
-function time_rewind:input(kind, store, camera, a, b, c, d, e, f)
-	if replaying then
-		return
-	end
-
-	if self.state ~= STATE_IDLE then
-		return true
-	end
-
-	-- 暂停中（暂停菜单 / 胜利 / 失败界面）的点击是界面操作，不是战斗操作：
-	-- 记下来只会让它在回溯时被派发到刚重建好的战斗界面上，撞出别的动作
-	if store.paused then
-		return
-	end
-
-	n_events = n_events + 1
-	events[n_events] = {
-		store.tick_ts,
-		kind,
-		a,
-		b,
-		c,
-		d,
-		e,
-		f,
-		camera.x,
-		camera.y,
-		camera.zoom
-	}
-end
 
 --- 每帧只做一件事：波次变化时插一条刻度。逐帧数据一条不留。
 --- 回溯期间 game.update 链尾已被换掉；面板打开期间本函数被顶成 noop。
 function time_rewind:record(game, store)
+	cur_ts = store.tick_ts
+
 	if game.progress < 1 then
 		return
 	end
@@ -590,7 +641,7 @@ function time_rewind:toggle(game_gui)
 	game.store.paused = true
 
 	-- 面板上的操作不属于时间线，直接顶掉两个记录入口
-	self:swap_defs({{self, "record", noop}, {self, "input", noop}})
+	self:swap_defs({{self, "record", noop}})
 
 	-- 暂停菜单与胜利/失败界面和面板同一层、还排在面板后面，会把面板盖住；
 	-- 这里先收起来，关闭时放回去（它们的状态不能靠重建复原，重建等于直接跳过它们）
@@ -670,11 +721,8 @@ function time_rewind:start(game, target_time)
 		pauseview:hide()
 	end
 
-	-- 重演步有意粗于模拟 tick：1/30 s ≈ 4.8 个 tick。一步跑 4~5 个 tick，但 GUI/渲染每秒只更新 30 次，
-	-- 拿落点精度换重演速度：落点最多越过一个重演步，重演期间派发的操作最多滞后一步（收尾按落点补派发）。
-	-- 模拟本身仍走标称 tick（simulation:init 把 store.tick_length 填回 TICK_LENGTH），结束时全部还原。
-	fps = 30
-	tick = 1 / fps
+	tick = TICK_LENGTH
+	fps = 1 / tick
 
 	self.target_time = target_time
 	self.progress = 0
@@ -689,6 +737,13 @@ function time_rewind:start(game, target_time)
 	local defs = {
 		{game, "update", rewind_update},
 		{game, "draw_game", rewind_draw},
+		-- 回溯期间玩家的真实输入不许进世界：只在这段状态里顶掉，收尾随 swap 一起还原
+		{game, "mousepressed", block_input},
+		{game, "mousereleased", block_input},
+		{game, "keypressed", block_input},
+		{game, "touchpressed", block_input},
+		{game, "touchreleased", block_input},
+		{game, "touchmoved", block_input},
 		{S, "queue", rewind_sound_queue},
 		-- 声音的「停」也一律拦下：重演不该动正在放的声音，否则那对 stop+queue 里的 stop 会先生效
 		{S, "stop_group", noop},
@@ -782,7 +837,6 @@ function time_rewind:finish(game)
 	local store = game.simulation.store
 
 	last_wave = store.wave_group_number
-	replay_fns = nil
 
 	-- 回溯结束一律回到「进行中」：重演期间若真被谁按下了暂停，不能留到回溯之后
 	local pauseview = game.game_gui.pauseview

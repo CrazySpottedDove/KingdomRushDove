@@ -14,6 +14,8 @@ local PAD = 60
 local TRACK_H = 12
 local TICK_TOP = 30
 local TICK_BOTTOM = 10
+local EV_ROW_H = 20
+local EV_FONT = 15
 
 local COL_PANEL = {0.09, 0.10, 0.13}
 local COL_TEXT = {0.88, 0.90, 0.94}
@@ -45,7 +47,8 @@ function TimeRewindView:initialize(sw, sh, gui, rewind)
 	self.panel_w = math.min(sw - 80, 960)
 	self.panel_h = 178
 	self.panel_x = (sw - self.panel_w) * 0.5
-	self.panel_y = sh * 0.40
+	-- 面板上移，把下半屏留给事件列表（矮屏再往上一点，安卓可用空间小）
+	self.panel_y = sh * (sh < 620 and 0.12 or 0.18)
 	self.bar_x = self.panel_x + PAD
 	self.bar_w = self.panel_w - PAD * 2
 	self.bar_y = self.panel_y + 108
@@ -55,6 +58,49 @@ function TimeRewindView:initialize(sw, sh, gui, rewind)
 	self.close_h = 34
 	self.close_x = self.panel_x + self.panel_w - PAD - self.close_w
 	self.close_y = self.panel_y + self.panel_h - self.close_h - 10
+
+	-- 事件列表（KScrollList）：面板下方，滚轮在 game_gui:wheelmoved 里被面板吃掉，不透传给地图
+	local list_y = self.panel_y + self.panel_h + 64
+
+	self.ev_list = KScrollList:new(V.v(self.panel_w - PAD * 2, math.max(0, sh - list_y - 16)))
+	self.ev_list.pos = V.v(self.panel_x + PAD, list_y)
+	self.ev_list.scroll_amount = EV_ROW_H
+	self.ev_list.drag_scroll_threshold = 6
+	self.ev_list:set_scroller_size(24, 4) -- 滚动条矩形由它算出来，不调会错位
+	self.ev_list.colors.scroller_background = {45, 36, 22, 200}
+	self.ev_list.colors.scroller_foreground = {110, 90, 50, 255}
+	self:add_child(self.ev_list)
+
+	-- 固定标题行 + 列头（只有 ev_list 里的数据滚动）。列宽算法与列表内部一致
+	local inner_w = self.ev_list.size.x - 24 - 2 * 4 - 4
+	local h_col_t = math.floor(inner_w * 0.16)
+	local h_col_k = math.floor(inner_w * 0.32)
+
+	self.ev_title = GGLabel:new(V.v(inner_w, 24))
+	self.ev_title.font_name = "body"
+	self.ev_title.font_size = EV_FONT + 1
+	self.ev_title.text_align = "left"
+	self.ev_title.vertical_align = "middle"
+	self.ev_title.colors.text = {224, 230, 240, 255}
+	self.ev_title.pos = V.v(self.panel_x + PAD, list_y - 62)
+	self:add_child(self.ev_title)
+
+	local h_text = {_("INGAME_UI_TIME_REWIND_EVENTS_TIME"), _("INGAME_UI_TIME_REWIND_EVENTS_KIND"), _("INGAME_UI_TIME_REWIND_EVENTS_ARGS")}
+	local h_x = {0, h_col_t, h_col_t + h_col_k}
+	local h_w = {h_col_t, h_col_k, inner_w - h_col_t - h_col_k}
+
+	for i = 1, 3 do
+		local h = GGLabel:new(V.v(h_w[i], EV_ROW_H - 4))
+
+		h.font_name = "body"
+		h.font_size = EV_FONT - 1
+		h.text_align = "left"
+		h.vertical_align = "middle"
+		h.colors.text = {140, 148, 160, 255}
+		h.text = h_text[i]
+		h.pos = V.v(self.panel_x + PAD + h_x[i], list_y - 34)
+		self:add_child(h)
+	end
 end
 
 function TimeRewindView:in_close(x, y)
@@ -102,6 +148,88 @@ function TimeRewindView:update(dt)
 		self.dragging = false
 		self.rewind:start(self.gui.game, self.target_time)
 	end
+end
+
+--- 一行参数：数字按整数显示（坐标是浮点，直接打出来没法看），表只报 {...}
+local function args_text(v1, v2, v3, v4, v5)
+	local vals = {v1, v2, v3, v4, v5}
+	local parts = {}
+
+	for i = 1, 5 do
+		local val = vals[i]
+
+		if val ~= nil then
+			local vt = type(val)
+
+			if vt == "table" then
+				local cnt = 0
+
+				for _ in pairs(val) do
+					cnt = cnt + 1
+				end
+
+				parts[#parts + 1] = "n=" .. cnt
+			elseif vt == "number" then
+				parts[#parts + 1] = string.format("%.0f", val)
+			else
+				parts[#parts + 1] = tostring(val)
+			end
+		end
+	end
+
+	return table.concat(parts, ", ")
+end
+
+--- 一行 = 一个容器 + 三个子 label。注意 add_row 一次只加一行：三个 label 各自 add_row 会变成三行。
+local function row_view(list_w, col_t, col_k)
+	local row = KVirtualView:new(V.v(list_w, EV_ROW_H))
+
+	local function label(x, w)
+		local l = GGLabel:new(V.v(w, EV_ROW_H))
+
+		l.font_name = "body"
+		l.pos = V.v(x, 0)
+		l.text_align = "left"
+		l.vertical_align = "middle"
+		row:add_child(l)
+
+		return l
+	end
+
+	return row, {label(0, col_t), label(col_t, col_k), label(col_t + col_k, list_w - col_t - col_k)}
+end
+
+--- 面板打开时重建列表：面板打开期间 record 被顶成 noop，日志是冻结的，所以建一次就够
+function TimeRewindView:show()
+	local rewind = self.rewind
+	local list = self.ev_list
+	local list_w = list.size.x - list.scroller_width - 2 * list.scroller_margin - 4
+	local col_t = math.floor(list_w * 0.16)
+	local col_k = math.floor(list_w * 0.32)
+
+	list:clear_rows()
+
+	-- 标题与列头是视图的固定子节点，不进列表：滚动只影响下面的数据行
+	self.ev_title.text = _("INGAME_UI_TIME_REWIND_EVENTS") .. "    " .. string.format(_("INGAME_UI_TIME_REWIND_EVENTS_COUNT"), rewind.event_count())
+
+	for i = rewind.event_count(), 1, -1 do
+		local ts, name, v1, v2, v3, v4, v5 = rewind.event_at(i)
+		local row, cells = row_view(list_w, col_t, col_k)
+		local key = name and ("INGAME_UI_TIME_REWIND_K_" .. name:upper())
+
+		cells[1].text = clock(ts)
+		cells[2].text = (key and _(key) ~= key) and _(key) or (name or "?")
+		cells[3].text = rewind.event_label(i) or args_text(v1, v2, v3, v4, v5)
+
+		for j = 1, 3 do
+			cells[j].font_size = EV_FONT
+			cells[j].colors.text = {196, 204, 216, 255}
+		end
+
+		list:add_row(row)
+	end
+
+	TimeRewindView.super.show(self)
 end
 
 function TimeRewindView:_draw_self()

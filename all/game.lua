@@ -23,8 +23,6 @@ local bit = require("bit")
 local storage = require("all.storage")
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
 local time_rewind = require("dove_modules.time_rewind")
-local IN_MOUSE_DOWN, IN_MOUSE_UP, IN_KEY = time_rewind.IN_MOUSE_DOWN, time_rewind.IN_MOUSE_UP, time_rewind.IN_KEY
-local IN_TOUCH_DOWN, IN_TOUCH_UP, IN_TOUCH_MOVE = time_rewind.IN_TOUCH_DOWN, time_rewind.IN_TOUCH_UP, time_rewind.IN_TOUCH_MOVE
 
 require("all.constants")
 
@@ -459,10 +457,6 @@ function game:keypressed(key, isrepeat)
 	-- 	return true
 	-- end
 
-	if time_rewind:input(IN_KEY, self.simulation.store, self.camera, key, isrepeat) then
-		return true
-	end
-
 	return self.game_gui:keypressed(key, isrepeat)
 end
 
@@ -475,9 +469,6 @@ function game:keyreleased(key, isrepeat)
 end
 
 function game:mousepressed(x, y, button, istouch)
-	if time_rewind:input(IN_MOUSE_DOWN, self.simulation.store, self.camera, x, y, button, istouch) then
-		return
-	end
 
 	click_state.active = true
 	click_state.press_time = love.timer.getTime()
@@ -488,9 +479,6 @@ function game:mousepressed(x, y, button, istouch)
 end
 
 function game:mousereleased(x, y, button, istouch)
-	if time_rewind:input(IN_MOUSE_UP, self.simulation.store, self.camera, x, y, button, istouch) then
-		return
-	end
 
 	click_state.active = false
 
@@ -498,8 +486,11 @@ function game:mousereleased(x, y, button, istouch)
 end
 
 function game:wheelmoved(dx, dy)
-	-- 回溯面板打开、或正在重演时，滚轮都不落到地图，避免在它们背后缩放
+	-- 回溯面板打开、或正在重演时，滚轮不给地图（避免在面板背后缩放），但要先交给 GUI：
+	-- 面板里的事件列表靠 on_scroll 滚动，链路是 game_gui:wheelmoved -> window:wheelmoved -> 列表
 	if time_rewind.panel_open or time_rewind.state ~= time_rewind.STATE_IDLE then
+		self.game_gui:wheelmoved(dx, dy)
+
 		return
 	end
 
@@ -521,9 +512,6 @@ game._pinch_last_center = nil
 game._pinch_last_zoom = nil
 
 function game:touchpressed(id, x, y, dx, dy, pressure)
-	if time_rewind:input(IN_TOUCH_DOWN, self.simulation.store, self.camera, id, x, y, dx, dy, pressure) then
-		return
-	end
 
 	self._touch_points[id] = V.v(x, y)
 
@@ -534,9 +522,6 @@ function game:touchpressed(id, x, y, dx, dy, pressure)
 end
 
 function game:touchreleased(id, x, y, dx, dy, pressure)
-	if time_rewind:input(IN_TOUCH_UP, self.simulation.store, self.camera, id, x, y, dx, dy, pressure) then
-		return
-	end
 
 	self._touch_points[id] = nil
 	self._pinch_last_dist = nil
@@ -549,9 +534,6 @@ function game:touchreleased(id, x, y, dx, dy, pressure)
 end
 
 function game:touchmoved(id, x, y, dx, dy, pressure)
-	if time_rewind:input(IN_TOUCH_MOVE, self.simulation.store, self.camera, id, x, y, dx, dy, pressure) then
-		return
-	end
 
 	self._touch_points[id] = V.v(x, y)
 
