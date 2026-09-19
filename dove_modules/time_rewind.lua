@@ -22,6 +22,7 @@ local adaptive_fps = require("dove_modules.perf.adaptive_fps")
 local hook_utils = require("hook_utils")
 local PS = require("all.systems.particle_system")
 local render = require("all.systems.render")
+local tween = require("all.systems.tween")
 
 local time_rewind = {}
 
@@ -71,8 +72,6 @@ local replaying = false
 -- （设置里改帧率会重算这个全局）。放局部变量是因为重演热路径每步都要读它们。
 local fps
 local tick
--- 重建会把倍速按 1 倍重来，这里留住，回溯结束走 change_speed_factor 还回去
-local resume_speed_factor
 
 time_rewind.waves = {}
 time_rewind.now_time = 0
@@ -372,6 +371,59 @@ local function rewind_render_update(self, dt, ts, store)
 	store.render_frames_start_idx = start_idx
 end
 
+local function rewind_tween_update(self, dt, ts, store)
+	local entities = store.entities_with_tween
+
+	for _, e in pairs(entities) do
+		if not e.tween.disabled then
+			local finished = true
+			local sprites = e.render.sprites
+			local tween = e.tween
+
+			for i = 1, #tween.props do
+				local tween_prop = tween.props[i]
+				if not tween_prop.disabled then
+					local s = sprites[tween_prop.sprite_id]
+					local keys = tween_prop.keys
+					local start_time = keys[1][1]
+					local end_time = keys[#keys][1]
+					local duration = end_time - start_time
+					local time = ts - (tween_prop.ts or tween.ts or s.ts)
+
+					if tween_prop.time_offset then
+						time = time + tween_prop.time_offset
+					end
+
+					if tween_prop.loop then
+						time = time % duration
+					end
+
+					if tween.reverse and not tween_prop.ignore_reverse then
+						time = duration - time
+						if time > start_time then
+							finished = finished and tween_prop.loop
+						end
+					else
+						if time < end_time then
+							finished = finished and tween_prop.loop
+						end
+					end
+				end
+			end
+
+			if finished then
+				if tween.remove then
+					simulation:queue_remove_entity(e)
+				end
+
+				if tween.run_once then
+					tween.disabled = true
+				end
+			end
+		end
+	end
+end
+
 --- 关卡开始：忘掉上一条时间线。重演按引擎标称帧率推进，所以不需要记录每帧节奏。
 function time_rewind:reset()
 	events = {}
@@ -611,13 +663,23 @@ function time_rewind:start(game, target_time)
 	self.ach_snapshot = snapshot_achievements()
 	cursor = 1
 
-	local defs = {{game, "update", rewind_update}, {game, "draw_game", rewind_draw}, {S, "queue", noop}, {AC, "save", noop}, {adaptive_fps, "fps", fps}, {adaptive_fps, "tick_length", tick}, {adaptive_fps.scene, "limit_fps", fps}, {PS, "on_render_update", rewind_particle_update}, {render, "on_render_update", rewind_render_update}, {game.game_gui, "change_speed_factor", noop}}
+	local defs = {
+		{game, "update", rewind_update},
+		{game, "draw_game", rewind_draw},
+		{S, "queue", noop},
+		{AC, "save", noop},
+		{adaptive_fps, "fps", fps},
+		{adaptive_fps, "tick_length", tick},
+		{adaptive_fps.scene, "limit_fps", fps},
+		{PS, "on_render_update", rewind_particle_update},
+		{render, "on_render_update", rewind_render_update},
+		{game.game_gui, "change_speed_factor", noop},
+		{tween, "on_render_update", rewind_tween_update}
+	}
 
 	self:swap_defs(defs)
 
 	store.paused = false
-	-- 重建会把倍速按 1 倍重来，留住，回溯结束再还回去（见 finish）
-	resume_speed_factor = store.speed_factor
 
 	self.rebuild_co = coroutine.create(function()
 		store.restarted = true
@@ -720,7 +782,7 @@ function time_rewind:finish(game)
 	self.progress = 0
 	self:restore_defs()
 
-	game.game_gui:change_speed_factor(resume_speed_factor)
+	game.game_gui:change_speed_factor(1)
 end
 
 return time_rewind
