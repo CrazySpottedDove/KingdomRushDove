@@ -2628,6 +2628,7 @@ tt.bullet.hit_fx = "shaolin_monk_hit_fx"
 -- Decal: Monk (pixie)
 tt = E:register_t("decal_shaolin", "decal_scripted")
 AC(tt, "tween")
+tt.attack_ts = 0
 tt.main_script.update = scripts.decal_shaolin.update
 tt.render.sprites[1].prefix = "shaolin_monk_lvl4"
 tt.render.sprites[1].name = "idle"

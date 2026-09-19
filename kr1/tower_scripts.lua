@@ -29466,7 +29466,7 @@ function scripts.tower_shaolin.update(this, store)
 						local idx = km.zmod(i, #targets)
 						local target = targets[idx]
 
-						pixie.target_round = math.max((i - idx) / #targets, 1)
+						pixie.target_round = math.ceil(i / #targets)
 						pixie.target_id = target.id
 						pixie.attack_ts = fts(2) * this.tower.cooldown_factor * (pixie.target_round - 1) + store.tick_ts
 						pixie.render.sprites[1].fps = this.render.sprites[3].fps or 30
