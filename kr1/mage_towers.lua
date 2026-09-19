@@ -3727,7 +3727,7 @@ tt.powers.spectral_communion.max_charges = {5}
 tt.powers.possession = CC("power")
 tt.powers.possession.price_base = 200
 tt.powers.possession.price_inc = 100
-tt.powers.possession.cooldown = {23, 20, 17}
+tt.powers.possession.cooldown = {24, 21, 18}
 tt.powers.gargoyles = CC("power")
 tt.powers.gargoyles.price_base = 250
 tt.powers.gargoyles.price_inc = 250
@@ -3819,8 +3819,11 @@ tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.modifier.duration = 10
 tt.modifier.use_mod_offset = nil
 tt.betray_duration = {10, 12, 14}
+tt.on_remove_damage_factor = 0.2
+tt.on_remove_damage_type = DAMAGE_TRUE
 tt.main_script.insert = scripts.mod_possession.insert
 tt.main_script.update = scripts.mod_possession.update
+tt.main_script.remove = scripts.mod_possession.remove
 
 tt = RT("bolt_possession", "bolt")
 AC(tt, "tween", "mark_flags")

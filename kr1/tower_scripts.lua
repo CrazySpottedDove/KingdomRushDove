@@ -27922,6 +27922,17 @@ function scripts.mod_possession.update(this, store)
 	end
 end
 
+function scripts.mod_possession.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target then
+		local d = E.assign_damage(this.on_remove_damage_type, this.on_remove_damage_factor * this.modifier.damage_factor * target.health.hp_max, this.modifier.source_id, target.id)
+		queue_damage(store, d)
+	end
+
+	return true
+end
+
 scripts.soldier_elves_harasser = {}
 
 function scripts.soldier_elves_harasser.update(this, store, script)
