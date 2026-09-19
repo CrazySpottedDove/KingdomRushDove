@@ -65,6 +65,8 @@ local last_wave = 0
 -- 上一帧记到哪个事件。用来撤掉「让游戏暂停的那一下」：它是界面操作，进了时间线就会在重演时
 -- 把游戏暂停住，而重演一停 tick_ts 就不再前进，进度条永远走不完
 local events_at_last_record = 0
+-- 重演期间记下的最后一次音乐请求：它代表「回溯到的那一刻本该在放的曲子」
+local pending_music
 local replay_fns
 -- true 表示当前这次 mousepressed/keypressed 是重演自己派发的：要放行，也不要记回日志。
 -- 玩家在回溯期间的操作与重演派发的操作走的是同一条路（game:mousepressed 等），只能这样区分。
@@ -133,6 +135,27 @@ end
 local function noop()
 end
 
+--- 派发所有发生时间不晚于 ts 的操作（记录顺序即发生顺序，同一帧的多个事件同时间戳也照顺序走）。
+--- 抽出来是因为重演收尾还要再派发一次：最后那一 tick 里到期的操作若不派发，会被 finish 当成
+--- 「回溯点之后」直接丢掉（同一帧多个事件、以及拖到最右端时当前帧的操作都会踩到）。
+local function dispatch_events(game, ts)
+	while cursor <= n_events do
+		local e = events[cursor]
+
+		if e[E_TIME] > ts then
+			break
+		end
+
+		local camera = game.camera
+
+		camera.x, camera.y, camera.zoom = e[E_CAMX], e[E_CAMY], e[E_CAMZ]
+		-- 6 个参数格全传（多余的是 nil，Lua 调用方自行忽略）
+		replay_fns[e[E_KIND]](game, e[E_A], e[E_B], e[E_C], e[E_D], e[E_E], e[E_F])
+
+		cursor = cursor + 1
+	end
+end
+
 --- 回溯期间顶替 game.update 的原函数：正常帧主体让位给重演驱动。
 --- 换的是钩子链尾，插件挂在 game.update 上的 handler 照常执行、也没有额外转发层。
 local function rewind_update(game, dt)
@@ -177,6 +200,13 @@ local function rewind_update(game, dt)
 	until store.tick_ts >= time_rewind.target_time or love.timer.getTime() >= deadline
 
 	if store.tick_ts >= time_rewind.target_time then
+		-- 收尾再派发一次：用落点（而不是进入这一帧时）的游戏时钟，把最后一 tick 里到期的操作补上
+		replaying = true
+
+		dispatch_events(game, store.tick_ts)
+
+		replaying = false
+
 		time_rewind:finish(game)
 	end
 
@@ -601,6 +631,18 @@ function time_rewind:close(game_gui, keep_hidden)
 	self.paused_before_panel = nil
 end
 
+-- 保留音乐
+local function rewind_sound_queue(sound_db, id, options)
+	local sd = id and sound_db.sounds[id]
+
+	if sd and sd.source_group == "MUSIC" then
+		pending_music = {
+			id = id,
+			options = options
+		}
+	end
+end
+
 function time_rewind:start(game, target_time)
 	local store = game.simulation.store
 
@@ -618,9 +660,11 @@ function time_rewind:start(game, target_time)
 		pauseview:hide()
 	end
 
-	-- 重演按引擎标称帧率推进：和关卡加载时填进 store.tick_length 的是同一个值
-	fps = 1 / TICK_LENGTH
-	tick = TICK_LENGTH
+	-- 重演步有意粗于模拟 tick：1/30 s ≈ 4.8 个 tick。一步跑 4~5 个 tick，但 GUI/渲染每秒只更新 30 次，
+	-- 拿落点精度换重演速度：落点最多越过一个重演步，重演期间派发的操作最多滞后一步（收尾按落点补派发）。
+	-- 模拟本身仍走标称 tick（simulation:init 把 store.tick_length 填回 TICK_LENGTH），结束时全部还原。
+	fps = 30
+	tick = 1 / fps
 
 	self.target_time = target_time
 	self.progress = 0
@@ -628,13 +672,18 @@ function time_rewind:start(game, target_time)
 	self.state = STATE_REBUILD
 	self.ach_snapshot = snapshot_achievements()
 	cursor = 1
+	pending_music = nil
 
 	perf.set_enabled(false)
 
 	local defs = {
 		{game, "update", rewind_update},
 		{game, "draw_game", rewind_draw},
-		{S, "queue", noop},
+		{S, "queue", rewind_sound_queue},
+		-- 声音的「停」也一律拦下：重演不该动正在放的声音，否则那对 stop+queue 里的 stop 会先生效
+		{S, "stop_group", noop},
+		{S, "stop", noop},
+		{S, "stop_all", noop},
 		{AC, "save", noop},
 		{adaptive_fps, "fps", fps},
 		{adaptive_fps, "tick_length", tick},
@@ -673,26 +722,9 @@ function time_rewind:replay_step(game)
 	store.to = store.to + store.dt
 	store.to_gui = store.to_gui + dt
 
-	-- 派发所有发生时间不晚于当前游戏时钟的操作；记录顺序即发生顺序。
-	local ts = store.tick_ts
-
 	replaying = true
 
-	while cursor <= n_events do
-		local e = events[cursor]
-
-		if e[E_TIME] > ts then
-			break
-		end
-
-		local camera = game.camera
-
-		camera.x, camera.y, camera.zoom = e[E_CAMX], e[E_CAMY], e[E_CAMZ]
-		-- 6 个参数格全传（多余的是 nil，Lua 调用方自行忽略）
-		replay_fns[e[E_KIND]](game, e[E_A], e[E_B], e[E_C], e[E_D], e[E_E], e[E_F])
-
-		cursor = cursor + 1
-	end
+	dispatch_events(game, store.tick_ts)
 
 	replaying = false
 
@@ -752,6 +784,14 @@ function time_rewind:finish(game)
 	self:restore_defs()
 
 	perf.set_enabled(configer.ui_settings().perf_enabled)
+
+	-- 补放重演期间记下的音乐：它就是回溯到的那一刻本该在放的那首
+	if pending_music then
+		S:stop_group("MUSIC")
+		S:queue(pending_music.id, pending_music.options)
+
+		pending_music = nil
+	end
 
 	game.game_gui:change_speed_factor(1)
 end
