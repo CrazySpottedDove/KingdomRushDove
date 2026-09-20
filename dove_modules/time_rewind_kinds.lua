@@ -323,10 +323,6 @@ local KIND_POWER_UPGRADE = time_rewind.register("tower_power_upgrade", {
 	apply = function(game, holder_id, power_name, level, spent)
 		local t = tower_by_holder_id(game.simulation.store, holder_id)
 
-		if not t then
-			return
-		end
-
 		local power = t.powers[power_name]
 
 		power.level = level
@@ -342,7 +338,7 @@ local KIND_POWER_UPGRADE = time_rewind.register("tower_power_upgrade", {
 	valid = function(game, holder_id, power_name, level)
 		local t = tower_by_holder_id(game.simulation.store, holder_id)
 
-		return t ~= nil and t.powers[power_name] ~= nil and t.powers[power_name].level < level
+		return t ~= nil and t.powers ~= nil and t.powers[power_name] ~= nil and t.powers[power_name].level < level
 	end
 })
 local KIND_BARRACK_UNIT = time_rewind.register("barrack_buy_soldier", {
