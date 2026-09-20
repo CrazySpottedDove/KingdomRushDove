@@ -187,6 +187,17 @@ function sound_db:queue_load_group(name)
 	end
 end
 
+-- TO BE DEPRECATED: 兼容性脚本。预计在未来版本废弃，直接强制添加 plugins 前缀，默认用户不写 plugins 前缀
+function sound_db:resolve_path(path)
+	if not path then
+		return self.files_path .. "/"
+	end
+	if path:match("^plugins/") then
+		return path .. "/"
+	end
+	return "plugins/" .. path .. "/"
+end
+
 function sound_db:queue_load_done()
 	-- 加载队列已空，而且所有线程都完成工作，说明加载已结束
 	if #self.load_queue == 0 and #self.threads == 0 then
@@ -222,7 +233,7 @@ function sound_db:queue_load_done()
 						self.source_uses[fn] = 1
 						local insert_index = #self.load_file_queue + 1
 						-- 允许在 group 中指定 parent_dir，以允许 mod 自定义声音资源的加载路径
-						local parent_dir = (group.parent_dir and group.parent_dir or self.files_path) .. "/"
+						local parent_dir = self:resolve_path(group.parent_dir)
 						self.load_file_queue[insert_index] = fn
 						self.load_path_queue[insert_index] = parent_dir .. fn
 						self.load_mode_queue[insert_index] = mode
@@ -235,7 +246,7 @@ function sound_db:queue_load_done()
 					local sound = self.sounds[group.sounds[j]]
 					if sound and sound.files then
 						local mode = sound.stream and "stream" or "static"
-						local parent_dir = (sound.parent_dir and sound.parent_dir or self.files_path) .. "/"
+						local parent_dir = self:resolve_path(sound.parent_dir)
 						for k = 1, #sound.files do
 							local fn = sound.files[k]
 
