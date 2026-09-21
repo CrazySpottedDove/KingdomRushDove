@@ -92,7 +92,6 @@ target = U.find_foremost_enemy_in_range_filter_on(origin, max, pred, flags, bans
 |------|--------|------------------------|
 | `kr1/game_scripts.lua` | 106 | 0 |
 | `kr1/hero_scripts.lua` | 177+2（手动） | 2→手动展开 |
-| `kr1/hero_boss.lua` | 2 | 0 |
 | `kr1/tower_scripts.lua` | 8 | 0 |
 | `kr1/boss_scripts.lua` | 5+1（手动） | 1→手动展开 |
 | `all/scripts.lua` | 4 | 2（注释行，保留） |

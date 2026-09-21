@@ -65,7 +65,7 @@ KingdomRushDove/
 │   ├── game_settings.lua     # 塔/英雄分类列表（GS）
 │   ├── game_templates.lua    # kr1 实体模板
 │   ├── enemies.lua           # 敌人定义
-│   ├── boss.lua / hero_boss.lua # Boss 定义
+│   ├── boss.lua              # Boss 定义
 │   ├── heroes.lua            # 英雄定义
 │   ├── archer_towers.lua     # 弓箭塔定义
 │   ├── mage_towers.lua       # 法师塔定义

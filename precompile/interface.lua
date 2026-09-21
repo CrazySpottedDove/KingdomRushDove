@@ -10,7 +10,8 @@ local M = {
 	mod_track_target = require("precompile.templates.mod_track_target"),
 	arrow = require("precompile.templates.arrow"),
 	bomb = require("precompile.templates.bomb"),
-	bolt = require("precompile.templates.bolt")
+	bolt = require("precompile.templates.bolt"),
+	main_script_backup = {}
 }
 local CU = require("precompile.compile_utils")
 local _fn_cache = {}
@@ -228,6 +229,21 @@ function M:_compile(e, template)
 	return result
 end
 
+function M:set_and_backup(e, key, value)
+	local m = e.main_script
+	if not self.main_script_backup[e.template_name] then
+		self.main_script_backup[e.template_name] = {}
+	end
+	self.main_script_backup[e.template_name][key] = m[key]
+	m[key] = value
+end
+
+function M:restore_main_script(e)
+	if self.main_script_backup[e.template_name] then
+		table.merge(e.main_script, self.main_script_backup[e.template_name])
+	end
+end
+
 function M:compile(e)
 	if e.main_script then
 		local m = e.main_script
@@ -235,50 +251,50 @@ function M:compile(e)
 		-- === 敌人 ===
 		if e.enemy then
 			if m.insert == scripts.enemy_basic.insert then
-				m.insert = self:_compile(e, self.enemy_basic.insert)
+				self:set_and_backup(e, "insert", self:_compile(e, self.enemy_basic.insert))
 			end
 
 			if m.update == scripts.enemy_mixed.update then
 				if e.melee or e.ranged then
-					m.update = self:_compile(e, self.enemy_mixed.update)
+					self:set_and_backup(e, "update", self:_compile(e, self.enemy_mixed.update))
 				end
 			elseif m.update == scripts.enemy_passive.update then
-				m.update = self:_compile(e, self.enemy_passive.update)
+				self:set_and_backup(e, "update", self:_compile(e, self.enemy_passive.update))
 			end
 		end
 
 		-- === 投射物 ===
 		if e.bullet then
 			if m.insert == scripts.arrow.insert then
-				m.insert = self:_compile(e, self.arrow.insert)
+				self:set_and_backup(e, "insert", self:_compile(e, self.arrow.insert))
 			elseif m.insert == scripts.bomb.insert then
-				m.insert = self:_compile(e, self.bomb.insert)
+				self:set_and_backup(e, "insert", self:_compile(e, self.bomb.insert))
 			elseif m.insert == scripts.bolt.insert then
-				m.insert = self:_compile(e, self.bolt.insert)
+				self:set_and_backup(e, "insert", self:_compile(e, self.bolt.insert))
 			end
 
 			if m.update == scripts.arrow.update then
-				m.update = self:_compile(e, self.arrow.update)
-				m.type = 1
+				self:set_and_backup(e, "update", self:_compile(e, self.arrow.update))
+				self:set_and_backup(e, "type", 1)
 			elseif m.update == scripts.bomb.update then
-				m.update = self:_compile(e, self.bomb.update)
-				m.type = 1
+				self:set_and_backup(e, "update", self:_compile(e, self.bomb.update))
+				self:set_and_backup(e, "type", 1)
 			elseif m.update == scripts.bolt.update then
-				m.update = self:_compile(e, self.bolt.update)
-				m.type = 1
+				self:set_and_backup(e, "update", self:_compile(e, self.bolt.update))
+				self:set_and_backup(e, "type", 1)
 			end
 		end
 
 		-- === 士兵（兵营/援军）===
 		if e.soldier then
 			if m.insert == scripts.soldier_barrack.insert then
-				m.insert = self:_compile(e, self.soldier_barrack.insert)
+				self:set_and_backup(e, "insert", self:_compile(e, self.soldier_barrack.insert))
 			-- 	elseif m.insert == scripts.soldier_reinforcement.insert then
 			-- 		m.insert = self:_compile(e, self.soldier_reinforcement.insert)
 			end
 
 			if m.update == scripts.soldier_barrack.update then
-				m.update = self:_compile(e, self.soldier_barrack.update)
+				self:set_and_backup(e, "update", self:_compile(e, self.soldier_barrack.update))
 			-- 	elseif m.update == scripts.soldier_reinforcement.update then
 			-- 		m.update = self:_compile(e, self.soldier_reinforcement.update)
 			end
@@ -286,17 +302,17 @@ function M:compile(e)
 
 		if e.modifier then
 			if m.insert == scripts.mod_dps.insert then
-				m.insert = self:_compile(e, self.mod_dps.insert)
+				self:set_and_backup(e, "insert", self:_compile(e, self.mod_dps.insert))
 			elseif m.insert == scripts.mod_track_target.insert then
-				m.insert = self:_compile(e, self.mod_track_target.insert)
+				self:set_and_backup(e, "insert", self:_compile(e, self.mod_track_target.insert))
 			end
 			if m.update == scripts.mod_dps.update then
-				m.update = self:_compile(e, self.mod_dps.update)
-				m.type = 1
+				self:set_and_backup(e, "update", self:_compile(e, self.mod_dps.update))
+				self:set_and_backup(e, "type", 1)
 			elseif m.update == scripts.mod_track_target.update then
 				if e.modifier.duration then
-					m.update = self:_compile(e, self.mod_track_target.update)
-					m.type = 1
+					self:set_and_backup(e, "update", self:_compile(e, self.mod_track_target.update))
+					self:set_and_backup(e, "type", 1)
 				end
 			end
 		end
@@ -304,18 +320,18 @@ function M:compile(e)
 		-- === 光环 ===
 		if e.aura then
 			if m.insert == scripts.aura_apply_mod.insert then
-				m.insert = self:_compile(e, self.aura_apply_mod.insert)
+				self:set_and_backup(e, "insert", self:_compile(e, self.aura_apply_mod.insert))
 			end
 
 			if m.update == scripts.aura_apply_mod.update then
 				if e.aura.duration then
-					m.update = self:_compile(e, self.aura_apply_mod.update)
-					m.type = 1
+					self:set_and_backup(e, "update", self:_compile(e, self.aura_apply_mod.update))
+					self:set_and_backup(e, "type", 1)
 				end
 			elseif m.update == scripts.aura_apply_damage.update then
 				if e.aura.duration then
-					m.update = self:_compile(e, self.aura_apply_damage.update)
-					m.type = 1
+					self:set_and_backup(e, "update", self:_compile(e, self.aura_apply_damage.update))
+					self:set_and_backup(e, "type", 1)
 				end
 			end
 		end

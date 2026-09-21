@@ -76,6 +76,7 @@ function level:init_coroutined(store)
 	-- level:init 紧跟在 E:Load() 后面，保证自定义 store.level.init 中自定义的敌人能够吃到各种数值补丁
 	if store.level.init then
 		store.level:init(store)
+		E:precompile_hot()
 	end
 
 	DI:patch_templates()

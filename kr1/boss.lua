@@ -21,6 +21,9 @@ end
 
 require("game_templates_utils")
 
+local v = vec_2
+local vv = vec_1
+
 -- 毁灭者
 tt = RT("eb_juggernaut", "boss")
 AC(tt, "melee", "timed_attacks")
@@ -2439,80 +2442,6 @@ tt.timed_attacks.list[1].bullet_start_offset = {vec_2(23, 82)}
 tt.timed_attacks.list[1].sound = "ElvesBalrogSpit"
 tt.timed_attacks.list[1].vis_bans = bor(F_ENEMY, F_FLYING)
 tt.timed_attacks.list[1].vis_flag = F_RANGED
-
-tt = RT("krdove_eb_elephant_cannibal", "boss")
-AC(tt, "melee", "timed_attacks")
-anchor_y = 0.11
-anchor_x = 0.5
-tt.enemy.gold = 250
-image_y = 196
-image_x = 340
-tt.enemy.lives_cost = 20
-tt.enemy.melee_slot = vec_2(60, 0)
-tt.health.dead_lifetime = 8
-tt.health.hp_max = 12000
-tt.health_bar.offset = vec_2(0, 95)
-tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
-tt.health.magic_armor = 0.114514
-tt.info.enc_icon = 40
-tt.info.portrait = "kr2_info_portraits_enemies_0024"
-tt.main_script.insert = scripts.enemy_basic.insert
-tt.main_script.update = scripts.enemy_mixed.update
-tt.main_script.update = scripts.krdove_eb_elephant_cannibal.update
-tt.melee.attacks[1] = CC("area_attack")
-tt.melee.attacks[1].cooldown = 1 + fts(20)
-tt.melee.attacks[1].damage_max = 600
-tt.melee.attacks[1].damage_min = 200
-tt.melee.attacks[1].hit_time = fts(22)
-tt.melee.attacks[1].hit_offset = vec_2(60, 0)
-tt.melee.attacks[1].damage_radius = 60
-tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
-tt.timed_attacks.list[1] = CC("mod_attack")
-tt.timed_attacks.list[1].animation = "cast"
-tt.timed_attacks.list[1].cooldown = 15
-tt.timed_attacks.list[1].cast_time = fts(8)
-tt.timed_attacks.list[1].max_range = 210
-tt.timed_attacks.list[1].mod = "mod_krdove_elephant_cannibal"
-tt.timed_attacks.list[1].sound = "EnemyHealing"
-tt.timed_attacks.list[1].vis_flags = F_MOD
-tt.motion.max_speed = 0.45 * FPS
-tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
-tt.render.sprites[1].prefix = "krdove_eb_elephant_cannibal"
-tt.render.sprites[1].angles_stickiness = {
-	walk = 10
-}
-tt.render.sprites[1].angles_flip_vertical = {
-	walk = true
-}
-tt.render.sprites[1].angles = {
-	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
-}
-tt.sound_events.death = "DeathBig"
-tt.sound_events.insert = "MusicBossFight"
-tt.ui.click_rect = r(-50, 0, 90, 60)
-tt.unit.can_explode = false
-tt.unit.can_disintegrate = false
-tt.unit.fade_time_after_death = 2
-tt.unit.hit_offset = vec_2(0, 30)
-tt.unit.mod_offset = vec_2(0, 27)
-tt.unit.marker_hidden = true
-tt.unit.size = UNIT_SIZE_LARGE
-tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
-
-tt = RT("mod_krdove_elephant_cannibal", "modifier")
-AC(tt, "render")
-tt.main_script.insert = scripts.mod_krdove_elephant_cannibal.insert
-tt.main_script.update = scripts.mod_krdove_elephant_cannibal.update
-tt.scale_factor = 1.2
-tt.scale_delay = fts(45)
-tt.heal_amount = 500
-tt.render.sprites[1].prefix = "healing"
-tt.render.sprites[1].size_names = {"small", "medium", "large"}
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].loop = false
-
-local v = vec_2
-local vv = vec_1
 
 tt = E:register_t("boss_pig", "boss")
 E:add_comps(tt, "melee", "auras")

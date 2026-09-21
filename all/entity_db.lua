@@ -19,6 +19,7 @@ local entity_db = {
 	entities = {},
 	components = {},
 	components_cloner = {},
+	hots = {},
 	loaded = false
 }
 
@@ -36,6 +37,7 @@ function entity_db:Load()
 	end
 end
 
+-- DEPRECATED: 建议使用 register_t_hot() + precompile_hot() 来实现热加载实体
 function entity_db:hot_load(template_name_table)
 	local compiler = require("precompile.interface")
 	for _, template_name in ipairs(template_name_table) do
@@ -68,7 +70,6 @@ function entity_db:load()
 	package.loaded["heroes"] = nil
 	package.loaded["enemies"] = nil
 	package.loaded["boss"] = nil
-	package.loaded["hero_boss"] = nil
 
 -- self:test_attacks()
 -- self:report_status()
@@ -90,6 +91,18 @@ function entity_db:precompile()
 -- profiling report (可注释掉以关闭)
 -- local CU = require("precompile.compile_utils")
 -- CU.profile_report()
+end
+
+function entity_db:precompile_hot()
+	local compiler = require("precompile.interface")
+	for i = #self.hots, 1, -1 do
+		local name, is_tmp = self.hots[i][1], self.hots[i][2]
+		compiler:compile(self.entities[name])
+		if not is_tmp then
+			self.entities_backup[name] = quickcopy(self.entities[name])
+		end
+		self.hots[i] = nil
+	end
 end
 
 -- --- 返回一个实体数据库的影子副本，通过元表可访问所有的entity_db的成员和方法，但是自身也拥有独立的entities和components。
@@ -283,6 +296,25 @@ function entity_db:register_t(name, base)
 
 	t.template_name = name
 	self.entities[name] = t
+
+	return t
+end
+
+--- 热注册实体
+---@param name string 模板名
+---@param base string 父模板名
+---@param is_tmp boolean 是否为临时模板，临时模板不会被备份到 entities_backup 中
+function entity_db:register_t_hot(name, base, is_tmp)
+	local t = base and quickcopy(self.entities[base]) or {}
+	self.entities[name] = t
+	self.hots[#self.hots + 1] = {name, is_tmp}
+
+	if t.main_script then
+		local compiler = require("precompile.interface")
+		compiler:restore_main_script(t)
+	end
+
+	t.template_name = name
 
 	return t
 end

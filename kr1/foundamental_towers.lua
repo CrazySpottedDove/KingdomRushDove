@@ -712,11 +712,6 @@ tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 
-tt = RT("tower_holder_blocked_elemental_wood_enhance", "tower_holder_blocked_elemental_wood")
-tt.tower.type = "holder_blocked_elemental_wood_enhance"
-tt.tower_holder.unblock_price = 50
-
----龙魂宝壶 水
 tt = RT("tower_holder_blocked_elemental_water", "tower_holder_blocked_elemental")
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
