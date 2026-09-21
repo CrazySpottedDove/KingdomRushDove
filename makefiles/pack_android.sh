@@ -249,7 +249,6 @@ if [ "$rebuild_love" -eq 1 ]; then
         "_assets/assets_index.lua"
         "_assets/tmp_download/*"
         "lldebugger.lua"
-        "kr1/data/waveconfigs/*"
         "kr1/data/game_animations.lua"
         "_assets/kr1-desktop/images/fullhd/*.lua"
         "_assets/kr1-desktop/images/fullhd/*.luac"

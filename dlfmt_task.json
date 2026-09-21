@@ -10,7 +10,6 @@
 				"kr1/data/exoskeletons",
 				"kr1/data/levels",
 				"kr1/data/waves",
-				"kr1/data/waveconfigs",
 				"kr1-desktop/data",
 				"all-desktop/data",
 				"dove_modules/data",
@@ -51,10 +50,6 @@
 		{
 			"type": "compress",
 			"directory": "kr1/data/waves"
-		},
-		{
-			"type": "compress",
-			"directory": "kr1/data/waveconfigs"
 		},
 		{
 			"type": "compress",
