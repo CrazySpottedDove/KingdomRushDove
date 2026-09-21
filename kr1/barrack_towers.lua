@@ -1482,9 +1482,7 @@ tt.damage_type = DAMAGE_ARMOR
 tt.damage_inc = 0.01
 
 tt = RT("tower_baby_ashbite", "tower")
-
 AC(tt, "barrack", "powers")
-
 tt.tower.hide_dust = true
 tt.tower.type = "baby_ashbite"
 tt.tower.price = 350
@@ -2081,11 +2079,10 @@ tt.track_target = false
 tt.ray_duration = fts(11)
 tt.sound_events.insert = "TowerPandasRangedBolt"
 -- 熊猫_END
+
 -- 牢大 BEGIN
 tt = RT("tower_rocket_gunners_lvl4", "tower")
-
 AC(tt, "barrack", "powers")
-
 tt.tower.type = "rocket_gunners"
 tt.tower.price = 210
 tt.tower_upgrade_persistent_data.max_current_mode = 1
@@ -2127,10 +2124,9 @@ tt.powers.sting_missiles = CC("power")
 tt.powers.sting_missiles.price_base = 250
 tt.powers.sting_missiles.price_inc = 100
 tt.powers.sting_missiles.cooldown = {16, 16, 16}
+
 tt = RT("soldier_tower_rocket_gunners_lvl4", "soldier_militia")
-
 AC(tt, "nav_grid", "powers", "ranged", "tween")
-
 tt.info.portrait = "kr5_info_portraits_soldiers_0007"
 tt.info.random_name_format = "SOLDIER_TOWER_ROCKET_GUNNERS_%i_NAME"
 tt.info.random_name_count = 10
@@ -2252,6 +2248,7 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].disabled = true
 tt.tween.props[1].remove = false
 tt.sound_take_off = "TowerRocketGunnersTakeoff"
+
 tt = RT("bullet_soldier_tower_rocket_gunners", "bullet")
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_hit"
 tt.bullet.floor_fx = "fx_bullet_soldier_tower_rocket_gunners_floor"
@@ -2263,6 +2260,7 @@ tt.bullet.level = 1
 tt.main_script.update = scripts.bullet_soldier_tower_rocket_gunners.update
 tt.render = nil
 tt.sound_events.insert = "TowerRocketGunnersBasicAttack"
+
 tt = RT("bullet_soldier_tower_rocket_gunners_phosphoric", "bullet")
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_hit"
 tt.bullet.floor_fx = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_floor"
