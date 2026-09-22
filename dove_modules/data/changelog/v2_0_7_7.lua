@@ -1,1 +1,1 @@
-return {{date="2026-09-22",author="CrazySpottedDove",message="perf: 优化levelSelect图集打包"}}
+return {{date="2026-09-22",author="CrazySpottedDove",message="perf: 优化levelSelect图集打包"},{date="2026-09-22",author="CrazySpottedDove",message="feat: 支持剪切变换"}}

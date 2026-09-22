@@ -40,6 +40,9 @@ function table.isarray(t)
 	return false
 end
 
+--- 检查数组中是否存在某个元素
+---@param t table
+---@param o any
 function table.arraycontains(t, o)
 	for i = 1, #t do
 		if t[i] == o then
@@ -49,6 +52,9 @@ function table.arraycontains(t, o)
 	return false
 end
 
+--- 保证数组中存在某个元素。若不存在，追加到最后
+---@param t table
+---@param o any
 function table.arrayensure(t, o)
 	for i = 1, #t do
 		if t[i] == o then
@@ -56,6 +62,42 @@ function table.arrayensure(t, o)
 		end
 	end
 	t[#t + 1] = o
+end
+
+--- 确保数组中某个元素的前面一位为某个元素。若不存在，则插入
+---@param t table
+---@param o any
+---@param v any
+function table.arrayensure_before(t, o, v)
+	for i = 1, #t do
+		if t[i] == o then
+			return
+		end
+	end
+	for i = 1, #t do
+		if t[i] == v then
+			table.insert(t, i, o)
+			return
+		end
+	end
+end
+
+--- 确保数组中某个元素的后面一位为某个元素。若不存在，则插入
+---@param t table
+---@param o any
+---@param v any
+function table.arrayensure_after(t, o, v)
+	for i = 1, #t do
+		if t[i] == o then
+			return
+		end
+	end
+	for i = 1, #t do
+		if t[i] == v then
+			table.insert(t, i + 1, o)
+			return
+		end
+	end
 end
 
 function table.indexforobject(t, o)

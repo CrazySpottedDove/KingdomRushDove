@@ -281,7 +281,7 @@ function RU.init()
 							end
 
 							-- batch:add(RU.frame_draw_params(f))
-							batch:add(ss.quad, x, y, -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2])
+							batch:add(ss.quad, x, y, -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2], f.kx, f.ky)
 							batch_count = batch_count + 1
 						end
 					end
@@ -561,7 +561,7 @@ function RU.init()
 						sy = sy * f.scale.y
 						sx = sx * f.scale.x
 					end
-					batch:add(ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2])
+					batch:add(ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2], f.kx, f.ky)
 
 					batch_count = batch_count + 1
 				end
