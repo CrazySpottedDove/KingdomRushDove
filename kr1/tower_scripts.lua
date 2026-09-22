@@ -12338,7 +12338,7 @@ function scripts.tower_stargazers.update(this, store)
 					end
 
 					U.y_wait_unconditional(store, 0.5 * tw.cooldown_factor)
-					simulation:queue_insert_entity(fx)
+					-- simulation:queue_insert_entity(fx)
 					S:queue(at.sound_teleport_in)
 					U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
 					animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
