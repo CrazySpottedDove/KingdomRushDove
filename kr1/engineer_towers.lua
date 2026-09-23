@@ -1371,12 +1371,11 @@ tt.decal_on_explosion = "decal_tower_demon_pit_demon_explosion_decal"
 tt.melee.attacks[1].damage_max = 18
 tt.melee.attacks[1].damage_min = 12
 tt.explosion_sound = "TowerDemonPitDemonExplosion"
-tt.explosion_range = {45, 45, 45, 45}
-tt.explosion_damage_min = {2, 5, 8, 25}
-tt.explosion_damage_max = {4, 8, 12, 30}
+tt.explosion_range = 45
+tt.explosion_damage_min = 25
+tt.explosion_damage_max = 30
 tt.explosion_damage_type = DAMAGE_EXPLOSION
 tt.explosion_mod_stun = "mod_soldier_tower_demon_pit_explosion"
-tt.explosion_mod_stun_duration = {0.25, 0.4, 0.6, 0.8}
 tt.patrol_pos_offset = vec_2(15, 10)
 tt.patrol_min_cd = 3
 tt.patrol_max_cd = 6
@@ -1444,7 +1443,7 @@ tt.sound_events.insert = "TowerDemonPitBasicAttack"
 tt.main_script.update = scripts.projecticle_big_guy_tower_demon_pit.update
 
 tt = RT("mod_soldier_tower_demon_pit_explosion", "mod_stun")
-tt.modifier.duration = nil
+tt.modifier.duration = 0.8
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 
 tt = RT("mod_tower_demon_pit_master_explosion_burning", "modifier")

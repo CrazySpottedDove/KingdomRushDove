@@ -224,6 +224,7 @@ tt.ranged.attacks[1].min_range = 55
 tt.ranged.attacks[1].power_name = "throwing"
 tt.ranged.attacks[1].range_inc = 13
 tt.ranged.attacks[1].shoot_time = fts(7)
+
 tt = RT("axe_barbarian", "arrow")
 tt.bullet.damage_min = 24
 tt.bullet.damage_max = 32
@@ -236,12 +237,12 @@ tt.main_script.insert = scripts.axe_barbarian.insert
 tt.render.sprites[1].name = "barbarian_axe_0001"
 tt.bullet.pop = nil
 tt.sound_events.insert = "AxeSound"
+
 tt = RT("axe_barbarian_rude", "axe_barbarian")
 tt.bullet.damage_type = DAMAGE_RUDE
+
 tt = RT("tower_elf_holder")
-
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor", "editor_script")
-
 tt.tower.type = "holder_elf"
 tt.tower.level = 1
 tt.tower.can_be_mod = false
@@ -259,10 +260,9 @@ tt.ui.has_nav_mesh = true
 tt.editor.props = {{"tower.terrain_style", PT_NUMBER}, {"tower.default_rally_pos", PT_COORDS}, {"tower.holder_id", PT_STRING}, {"ui.nav_mesh_id", PT_STRING}, {"editor.game_mode", PT_NUMBER}}
 tt.editor_script.insert = scripts.editor_tower.insert
 tt.editor_script.remove = scripts.editor_tower.remove
+
 tt = RT("tower_elf", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.info.portrait = "info_portraits_towers_0013"
 tt.barrack.max_soldiers = 4
 tt.barrack.rally_range = 170
@@ -295,10 +295,9 @@ tt.powers.bleed.price_inc = 100
 tt.powers.cripple = CC("power")
 tt.powers.cripple.price_base = 200
 tt.powers.cripple.price_inc = 125
+
 tt = RT("soldier_elf", "soldier_militia")
-
 AC(tt, "powers", "ranged")
-
 image_y = 32
 anchor_y = 0.19
 tt.health.hp_max = 90
@@ -317,7 +316,7 @@ tt.ranged.attacks[1].bullet = "arrow_elf"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(4, 16)}
 tt.ranged.attacks[1].cooldown = 1 + fts(15)
 tt.ranged.attacks[1].max_range = 200
-tt.ranged.attacks[1].min_range = 50
+tt.ranged.attacks[1].min_range = 0
 tt.ranged.attacks[1].shoot_time = fts(7)
 tt.ranged.attacks[1].shared_cooldown = true
 tt.ranged.attacks[2] = table.deepclone(tt.ranged.attacks[1])
@@ -335,12 +334,14 @@ tt.unit.price = 100
 tt.powers.bleed = CC("power")
 tt.powers.bleed.on_power_upgrade = scripts.soldier_elf.on_power_upgrade
 tt.powers.cripple = CC("power")
+
 tt = RT("arrow_elf", "arrow")
 tt.bullet.damage_min = 25
 tt.bullet.damage_max = 50
 tt.bullet.flight_time = fts(12)
 tt.bullet.reset_to_target_pos = true
 tt.bullet.damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
+
 tt = RT("arrow_elf_cripple", "arrow_elf")
 tt.bullet.damage_type = bor(DAMAGE_TRUE, DAMAGE_NO_DODGE)
 tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
@@ -351,18 +352,19 @@ tt.bullet.flight_time = fts(8)
 tt.bullet.damage_min = 55
 tt.bullet.damage_max = 55
 tt.bullet.damage_inc = 15
+
 tt = RT("mod_elf_bleed", "mod_blood")
 tt.dps.damage_max = 5
 tt.dps.damage_min = 5
 tt.dps.damage_inc = 5
 tt.modifier.allows_duplicate = true
+
 tt = RT("mod_elf_cripple", "mod_slow")
 tt.slow.factor = 0.6
 tt.modifier.duration = 2.5
+
 tt = RT("tower_barrack_amazonas", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.tower.type = "mercenaries_amazonas"
 tt.tower.price = 190
 tt.barrack.max_soldiers = 4

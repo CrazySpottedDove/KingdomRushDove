@@ -8511,7 +8511,7 @@ function scripts.bomb_bouncing.update(this, store)
 			simulation:queue_insert_entity(decal)
 		end
 
-		if b.hit_payload then
+		if b.hit_payload and not this.bounce_only_last_hit_payload then
 			local hp
 
 			if type(b.hit_payload) == "string" then
@@ -8595,6 +8595,25 @@ function scripts.bomb_bouncing.update(this, store)
 
 		this.bounce_count = this.bounce_count - 1
 		target = U.find_first_enemy_in_range_filter_off(this_pos, dradius * 2, bor(F_AREA, F_RANGED), F_NONE)
+	end
+
+	if b.hit_payload and not this.bounce_only_last_hit_payload then
+		local hp
+
+		if type(b.hit_payload) == "string" then
+			hp = E:create_entity(b.hit_payload)
+		else
+			hp = b.hit_payload
+		end
+
+		hp.pos.x, hp.pos.y = this_pos.x, this_pos.y
+
+		if hp.aura then
+			hp.aura.level = b.level
+			hp.aura.source_id = this.id
+		end
+
+		simulation:queue_insert_entity(hp)
 	end
 
 	simulation:queue_remove_entity(this)

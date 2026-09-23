@@ -1532,6 +1532,33 @@ local function scale_fps_based_keys(tbl, factor, visited)
 	end
 end
 
+function upgrades:bomb_damage_mul(damage_factor)
+	local engineer_bombs = self.engineer_bombs
+	for _, n in ipairs(engineer_bombs) do
+		T(n).bullet.damage_min = T(n).bullet.damage_min * damage_factor
+		T(n).bullet.damage_max = T(n).bullet.damage_max * damage_factor
+	end
+
+	T("tower_dwaarp").attacks.list[1].damage_min = T("tower_dwaarp").attacks.list[1].damage_min * damage_factor
+	T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * damage_factor
+	T("tower_melting_furnace").attacks.list[1].damage_min = T("tower_melting_furnace").attacks.list[1].damage_min * damage_factor
+	T("tower_melting_furnace").attacks.list[1].damage_max = T("tower_melting_furnace").attacks.list[1].damage_max * damage_factor
+	T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * damage_factor
+	T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * damage_factor
+	T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * damage_factor
+	T("mod_ray_frankenstein").dps.damage_max = T("mod_ray_frankenstein").dps.damage_max * damage_factor
+	T("tower_flamespitter_lvl4").attacks.list[1].damage_min = T("tower_flamespitter_lvl4").attacks.list[1].damage_min * damage_factor
+	T("tower_flamespitter_lvl4").attacks.list[1].damage_max = T("tower_flamespitter_lvl4").attacks.list[1].damage_max * damage_factor
+	T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * damage_factor
+	T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * damage_factor
+	T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * damage_factor
+	T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * damage_factor
+	T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * damage_factor
+	T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * damage_factor
+	T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_min = T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_min * damage_factor
+	T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_max = T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_max * damage_factor
+end
+
 function upgrades:patch_templates(max_level)
 	if max_level then
 		self.max_level = max_level
@@ -2155,27 +2182,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_concentrated_fire")
 
 	if u then
-		for _, n in pairs(engineer_bombs) do
-			T(n).bullet.damage_min = T(n).bullet.damage_min * u.damage_factor
-			T(n).bullet.damage_max = T(n).bullet.damage_max * u.damage_factor
-		end
-
-		T("tower_dwaarp").attacks.list[1].damage_min = T("tower_dwaarp").attacks.list[1].damage_min * u.damage_factor
-		T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor
-		T("tower_melting_furnace").attacks.list[1].damage_min = T("tower_melting_furnace").attacks.list[1].damage_min * u.damage_factor
-		T("tower_melting_furnace").attacks.list[1].damage_max = T("tower_melting_furnace").attacks.list[1].damage_max * u.damage_factor
-		T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * u.damage_factor
-		T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * u.damage_factor
-		T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * u.damage_factor
-		T("mod_ray_frankenstein").dps.damage_max = T("mod_ray_frankenstein").dps.damage_max * u.damage_factor
-		T("tower_flamespitter_lvl4").attacks.list[1].damage_min = T("tower_flamespitter_lvl4").attacks.list[1].damage_min * u.damage_factor
-		T("tower_flamespitter_lvl4").attacks.list[1].damage_max = T("tower_flamespitter_lvl4").attacks.list[1].damage_max * u.damage_factor
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor
-		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * u.damage_factor
-		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * u.damage_factor
-		T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * u.damage_factor
-		T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * u.damage_factor
+		self:bomb_damage_mul(u.damage_factor)
 	end
 
 	u = self:get_upgrade("engineer_range_finder")
@@ -2273,26 +2280,7 @@ function upgrades:patch_templates(max_level)
 		for _, n in ipairs(engineer_towers) do
 			T(n).tower.price = math.floor(T(n).tower.price * u.cost_factor)
 		end
-		for _, n in ipairs(self.engineer_bombs) do
-			T(n).bullet.damage_min = T(n).bullet.damage_min * u.damage_factor
-			T(n).bullet.damage_max = T(n).bullet.damage_max * u.damage_factor
-		end
-		T("tower_dwaarp").attacks.list[1].damage_min = T("tower_dwaarp").attacks.list[1].damage_min * u.damage_factor
-		T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor
-		T("tower_melting_furnace").attacks.list[1].damage_min = T("tower_melting_furnace").attacks.list[1].damage_min * u.damage_factor
-		T("tower_melting_furnace").attacks.list[1].damage_max = T("tower_melting_furnace").attacks.list[1].damage_max * u.damage_factor
-		T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * u.damage_factor
-		T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * u.damage_factor
-		T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * u.damage_factor
-		T("mod_ray_frankenstein").dps.damage_max = T("mod_ray_frankenstein").dps.damage_max * u.damage_factor
-		T("tower_flamespitter_lvl4").attacks.list[1].damage_min = T("tower_flamespitter_lvl4").attacks.list[1].damage_min * u.damage_factor
-		T("tower_flamespitter_lvl4").attacks.list[1].damage_max = T("tower_flamespitter_lvl4").attacks.list[1].damage_max * u.damage_factor
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor
-		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * u.damage_factor
-		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * u.damage_factor
-		T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * u.damage_factor
-		T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * u.damage_factor
+		self:bomb_damage_mul(u.damage_factor)
 	end
 
 	u = self:get_upgrade("engineer_industrialization")

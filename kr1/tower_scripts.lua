@@ -7741,7 +7741,6 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 
 				m.modifier.source_id = this.id
 				m.modifier.target_id = target.id
-				m.modifier.duration = this.explosion_mod_stun_duration[this.level]
 
 				simulation:queue_insert_entity(m)
 
@@ -7825,7 +7824,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 			U.unblock_target(store, this)
 			U.y_wait_unconditional(store, fts(20))
 			S:queue(this.explosion_sound)
-			explosion(this.explosion_range[this.level], this.explosion_damage_min[this.level], this.explosion_damage_max[this.level], this.explosion_damage_type)
+			explosion(this.explosion_range, this.explosion_damage_min, this.explosion_damage_max, this.explosion_damage_type)
 
 			local decal = E:create_entity(this.decal_on_explosion)
 
