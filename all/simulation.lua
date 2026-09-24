@@ -19,6 +19,7 @@ function simulation:init(store, system_names)
 	d.to_gui = 0
 	d.paused = false
 	d.step = false
+	d.step_render = false
 	d.entities = {}
 	-- 优化分类索引
 	d.soldiers = {}
@@ -162,7 +163,7 @@ end
 function simulation:render_update(dt)
 	local d = self.store
 
-	if d.paused and not d.step then
+	if d.paused and not d.step_render then
 		return
 	end
 

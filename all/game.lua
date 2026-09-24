@@ -427,7 +427,7 @@ function game:update(dt)
 		perf.start("game_gui:update")
 		self.game_gui:update(adaptive_fps.tick_length)
 		perf.stop("game_gui:update")
-		d.step = false
+		d.step_render = false
 		updated = true
 	end
 

@@ -5073,21 +5073,6 @@ return {
 		prefix = "channeler_tower_crystal_union_fx",
 		to = 21
 	},
-	channeler_tower_lvl3_rune_glow_glow_end = {
-		from = 6,
-		prefix = "channeler_tower_lvl3_rune_glow",
-		to = 9
-	},
-	channeler_tower_lvl3_rune_glow_glow_start = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_rune_glow",
-		to = 4
-	},
-	channeler_tower_lvl3_rune_glow_idle = {
-		from = 5,
-		prefix = "channeler_tower_lvl3_rune_glow",
-		to = 5
-	},
 	channeler_tower_lvl4_crystal_a_break = {
 		from = 11,
 		prefix = "channeler_tower_lvl4_crystal_a",

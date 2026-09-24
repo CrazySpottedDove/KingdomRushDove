@@ -11418,19 +11418,10 @@ function scripts.fx_tower_ray_lvl4_shock.update(this, store)
 		end
 	end
 
-	local function y_wait_and_hide(time)
-		local start_ts = store.tick_ts
-
-		while time > store.tick_ts - start_ts do
-			hide_if_necessary()
-			coroutine.yield()
-		end
-	end
-
 	while store.entities[this.tower_id] do
 		this.render.sprites[1].hidden = false
-
-		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+		this.render.sprites[1].runs = 0
+		this.render.sprites[1].ts = store.tick_ts
 
 		while not animation_finished(this, 1, cds[cd_id]) do
 			hide_if_necessary()
@@ -11439,7 +11430,7 @@ function scripts.fx_tower_ray_lvl4_shock.update(this, store)
 
 		this.render.sprites[1].hidden = true
 
-		y_wait_and_hide(1)
+		U.y_wait_unconditional(store, 1)
 
 		cd_id = cd_id + 1
 
@@ -29648,6 +29639,10 @@ scripts.aura_tower_shaolin_gold = {
 		local cycle_time = this.aura.cycle_time
 		local last_ts = store.tick_ts - cycle_time
 		local source = store.entities[this.aura.source_id]
+
+		if not source then
+			return
+		end
 
 		while true do
 			if store.tick_ts - last_ts > cycle_time then
