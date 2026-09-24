@@ -650,20 +650,20 @@ local function escape_lua_pattern(s)
 	return (tostring(s):gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1"))
 end
 
-local function find_plugin_dir_by_entry_in_line(line)
+local function find_plugin_entry_in_line(line)
 	if type(line) ~= "string" or type(PLUGIN_REGISTRY) ~= "table" then
 		return nil
 	end
 
 	local padded_line = " " .. line .. " "
 
-	for plugin_dir, config in pairs(PLUGIN_REGISTRY) do
-		local entry = (type(config) == "table" and config.entry) or plugin_dir
+	-- PLUGIN_REGISTRY 以 entry 为键（见 plugin_main:after_init）
+	for entry in pairs(PLUGIN_REGISTRY) do
 		if type(entry) == "string" and entry ~= "" then
 			local escaped_entry = escape_lua_pattern(entry)
 			local token_pattern = "[^%w_]" .. escaped_entry .. "[^%w_]"
 			if padded_line:match(token_pattern) then
-				return plugin_dir
+				return entry
 			end
 		end
 	end
@@ -676,18 +676,18 @@ local function find_plugin_from_traceback(traceback)
 		return nil
 	end
 
-	local first_plugin_dir = nil
+	local first_plugin_entry = nil
 	local first_hookutils_idx = nil
 	local idx = 0
 
 	for line in traceback:gmatch("[^\n]+") do
 		idx = idx + 1
 
-		if first_plugin_dir == nil then
-			local dir = find_plugin_dir_by_entry_in_line(line)
+		if first_plugin_entry == nil then
+			local entry = find_plugin_entry_in_line(line)
 
-			if dir then
-				first_plugin_dir = dir
+			if entry then
+				first_plugin_entry = entry
 			end
 		end
 
@@ -695,12 +695,12 @@ local function find_plugin_from_traceback(traceback)
 			first_hookutils_idx = idx
 		end
 
-		if first_plugin_dir and first_hookutils_idx then
+		if first_plugin_entry and first_hookutils_idx then
 			break
 		end
 	end
 
-	if not first_plugin_dir then
+	if not first_plugin_entry then
 		return nil
 	end
 
@@ -709,11 +709,11 @@ local function find_plugin_from_traceback(traceback)
 	-- 	return string.format("%s:%s (%s)", config.name or first_plugin_dir, config.version, config.entry or first_plugin_dir)
 	-- end
 
-	return first_plugin_dir
+	return first_plugin_entry
 end
 
-local function auto_disable_crashing_plugin(plugin_dir)
-	local cfg_path = "plugins/" .. plugin_dir .. "/config.lua"
+local function auto_disable_crashing_plugin(entry)
+	local cfg_path = "plugins/" .. entry .. "/config.lua"
 	if not love.filesystem.getInfo(cfg_path, "file") then
 		log.error("auto_disable_crashing_plugin: config file not found for %s", cfg_path)
 		return false

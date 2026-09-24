@@ -19,8 +19,18 @@ local plugin_main = {
 	loaded_plugins = {}
 }
 
+--- 日志/提示里用的插件标签：显示名优先，没有就退回 entry
+local function plugin_label(plugin_data)
+	local config = plugin_data and plugin_data.config
+	if not config then
+		return "?"
+	end
+	return config.name
+end
+
 local function load_plugin_module(plugin_data)
-	local entry_path = plugin_data.path .. "/" .. plugin_data.entry .. ".lua"
+	local entry = plugin_data.config.entry
+	local entry_path = plugin_paths.entry_path(entry)
 	if FS.getInfo(entry_path, "file") then
 		local chunk, err = FS.load(entry_path)
 		if not chunk then
@@ -32,7 +42,7 @@ local function load_plugin_module(plugin_data)
 		end
 		return ret, nil
 	end
-	return nil, string.format("Entry file '%s' not found for plugin '%s'", entry_path, plugin_data.name)
+	return nil, string.format("Entry file '%s' not found for plugin '%s'", entry_path, entry)
 end
 
 function plugin_main:init(director)
@@ -58,9 +68,9 @@ function plugin_main:after_init()
 		local plugin, load_err = load_plugin_module(plugin_data)
 
 		if not plugin then
-			log.error("Failed to load plugin '%s': %s", plugin_data.name, tostring(load_err))
+			log.error("Failed to load plugin '%s': %s", plugin_data.config.entry, tostring(load_err))
 		elseif type(plugin) ~= "table" then
-			log.error(string.format("Must return table, plugin: %s", plugin_data.name))
+			log.error(string.format("Must return table, plugin: %s", plugin_data.config.entry))
 		else
 			table.insert(self.loaded_plugins, {plugin, plugin_data})
 		end
@@ -95,7 +105,7 @@ function plugin_main:after_init()
 	-- 正序初始化插件，确保高优先级覆盖低优先级
 	for i = loaded_plugins_count, 1, -1 do
 		local loaded_plugin, plugin_data = unpack(self.loaded_plugins[i])
-		PLUGIN_REGISTRY[plugin_data.name] = plugin_data.config
+		PLUGIN_REGISTRY[plugin_data.config.entry] = plugin_data.config
 		-- 初始化插件
 		local ok, err = xpcall(loaded_plugin.init, plugin_error_handler, loaded_plugin, plugin_data)
 		if ok then
@@ -103,7 +113,7 @@ function plugin_main:after_init()
 			print(plugin_db.get_debug_info(plugin_data.config))
 		else
 			PLUGIN_ERRORS[#PLUGIN_ERRORS + 1] = {
-				entry = plugin_data.entry,
+				entry = plugin_data.config.entry,
 				error = err
 			}
 		end
@@ -124,16 +134,17 @@ end
 -- 任一相关插件缺少对应接口时，插件管理器会回退到原来的「保存并重启」逻辑。
 -- ─────────────────────────────────────────────
 
---- 运行时按名称查找已加载插件
----@param plugin_data table 插件数据（按 name 匹配）
+--- 运行时按 entry 查找已加载插件
+---@param plugin_data table 插件记录（{config, has_plugin_config}）
 ---@return table|nil 已加载条目 {plugin, plugin_data}
 function plugin_main:find_loaded(plugin_data)
-	if not plugin_data or not plugin_data.name then
+	if not plugin_data or not plugin_data.config or not plugin_data.config.entry then
 		return nil
 	end
+	local target = plugin_data.config.entry
 	for i = 1, #self.loaded_plugins do
 		local entry = self.loaded_plugins[i]
-		if entry and entry[2] and entry[2].name == plugin_data.name then
+		if entry and entry[2] and entry[2].config.entry == target then
 			return entry
 		end
 	end
@@ -155,26 +166,26 @@ function plugin_main:_hot_module(plugin_data)
 	if not self._hot_module_cache then
 		self._hot_module_cache = {}
 	end
-	local cached = self._hot_module_cache[plugin_data.name]
+	local cached = self._hot_module_cache[plugin_data.config.entry]
 	if cached ~= nil then
 		return cached
 	end
 	local plugin, err = load_plugin_module(plugin_data)
 	if not plugin then
-		log.error("Failed to hot-load plugin '%s': %s", plugin_data.name, tostring(err))
-		self._hot_module_cache[plugin_data.name] = false
+		log.error("Failed to hot-load plugin '%s': %s", plugin_data.config.entry, tostring(err))
+		self._hot_module_cache[plugin_data.config.entry] = false
 		return nil
 	end
-	self._hot_module_cache[plugin_data.name] = plugin
+	self._hot_module_cache[plugin_data.config.entry] = plugin
 	return plugin
 end
 
 --- 按优先级插入已加载列表（与启动时顺序一致：高优先级在前）
 function plugin_main:_insert_loaded(plugin, plugin_data)
-	local priority = plugin_data.priority or 0
+	local priority = plugin_data.config.priority
 	local idx = #self.loaded_plugins + 1
 	for i = 1, #self.loaded_plugins do
-		if (self.loaded_plugins[i][2].priority or 0) < priority then
+		if self.loaded_plugins[i][2].config.priority < priority then
 			idx = i
 			break
 		end
@@ -194,16 +205,16 @@ function plugin_main:can_hot_apply(plan)
 	for _i, pd in ipairs(plan.unloads or {}) do
 		local entry = self:find_loaded(pd)
 		if entry and type(entry[1].unload) ~= "function" then
-			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_UNLOAD_UNSUPPORTED"), pd.name or "?")
+			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_UNLOAD_UNSUPPORTED"), plugin_label(pd))
 		end
 	end
 
 	for _i, pd in ipairs(plan.reloads or {}) do
 		local plugin = self:_hot_module(pd)
 		if not plugin then
-			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_LOAD_FAILED"), pd.name or "?")
+			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_LOAD_FAILED"), plugin_label(pd))
 		elseif type(plugin.reload) ~= "function" then
-			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_UNSUPPORTED"), pd.name or "?")
+			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_UNSUPPORTED"), plugin_label(pd))
 		end
 	end
 
@@ -211,7 +222,7 @@ function plugin_main:can_hot_apply(plan)
 		local pd = item.plugin_data
 		local entry = self:find_loaded(pd)
 		if entry and type(entry[1].on_config_change) ~= "function" then
-			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_CONFIG_UNSUPPORTED"), pd.name or "?")
+			reasons[#reasons + 1] = string.format(_("PLUGIN_UI_HOT_CONFIG_UNSUPPORTED"), plugin_label(pd))
 		end
 	end
 
@@ -232,8 +243,8 @@ function plugin_main:apply_hot(plan)
 
 	local function sort_plugins(list, desc)
 		table.sort(list, function(a, b)
-			local pa = a.priority or 0
-			local pb = b.priority or 0
+			local pa = a.config.priority
+			local pb = b.config.priority
 			if desc then
 				return pa > pb
 			end
@@ -251,7 +262,7 @@ function plugin_main:apply_hot(plan)
 			if type(plugin.unload) == "function" then
 				local ok, err = pcall(plugin.unload, plugin, pd)
 				if not ok then
-					errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_UNLOAD_FAILED"), pd.name or "?", tostring(err))
+					errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_UNLOAD_FAILED"), plugin_label(pd), tostring(err))
 					log.error("plugin unload failed: %s", tostring(err))
 				end
 			end
@@ -261,7 +272,7 @@ function plugin_main:apply_hot(plan)
 					break
 				end
 			end
-			PLUGIN_REGISTRY[pd.name] = nil
+			PLUGIN_REGISTRY[pd.config.entry] = nil
 		end
 	end
 
@@ -272,11 +283,11 @@ function plugin_main:apply_hot(plan)
 		local plugin = self:_hot_module(pd)
 		if plugin then
 			self:_insert_loaded(plugin, pd)
-			PLUGIN_REGISTRY[pd.name] = pd.config
+			PLUGIN_REGISTRY[pd.config.entry] = pd.config
 			if type(plugin.reload) == "function" then
 				local ok, err = pcall(plugin.reload, plugin, pd)
 				if not ok then
-					errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_FAILED"), pd.name or "?", tostring(err))
+					errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_RELOAD_FAILED"), plugin_label(pd), tostring(err))
 					log.error("plugin reload failed: %s", tostring(err))
 				end
 			end
@@ -291,7 +302,7 @@ function plugin_main:apply_hot(plan)
 		if entry and type(entry[1].on_config_change) == "function" then
 			local ok, err = pcall(entry[1].on_config_change, entry[1], new_config)
 			if not ok then
-				errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_CONFIG_FAILED"), pd.name or "?", tostring(err))
+				errors[#errors + 1] = string.format(_("PLUGIN_UI_HOT_CONFIG_FAILED"), plugin_label(pd), tostring(err))
 				log.error("plugin on_config_change failed: %s", tostring(err))
 			end
 		end

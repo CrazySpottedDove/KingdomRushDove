@@ -4,6 +4,7 @@ local V = require("lib.klua.vector")
 local S = require("sound_db")
 local storage = require("all.storage")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
+local plugin_paths = require("plugin_paths")
 local km = require("lib.klua.macros")
 local utf8_util = require("lib.utf8_utils")
 local utf8 = require("utf8")
@@ -295,7 +296,7 @@ function PluginItemRow:initialize(opts, row_w)
 		end
 		self:add_child(toggle)
 		self.toggle = toggle
-		if self.opts.plugin_data.has_config then
+		if self.opts.plugin_data.has_plugin_config then
 			local config_button = PluginToggleButton:new(true, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
 			config_button.pos = V.v(row_w - 2 * right_pad - toggle_w * 3 / 2, toggle_top + toggle.size.y / 2)
 			config_button.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
@@ -303,12 +304,12 @@ function PluginItemRow:initialize(opts, row_w)
 			config_button._enable_text = _("PLUGIN_MGR_BTN_CONFIGURE")
 			function config_button:on_click()
 				S:queue("GUIButtonCommon")
-				local config_path = opts.plugin_data.path .. "/" .. opts.plugin_data.name .. "_config.lua"
+				local config_path = plugin_paths.plugin_config_path(opts.plugin_data.config.entry)
 				local manager = opts.manager
 				-- 读取当前配置：优先管理器中的待应用修改（延迟写盘期间编辑面板显示最新值），其次磁盘
 				local function read_current_config()
 					if manager then
-						local pending = manager:_get_pending_config(opts.plugin_data.name)
+						local pending = manager:_get_pending_config(opts.plugin_data.config.entry)
 						if pending then
 							return pending
 						end
@@ -332,9 +333,9 @@ function PluginItemRow:initialize(opts, row_w)
 						-- 避免关闭管理器时误报「有未保存的修改」。
 						local disk_config = storage:load_lua(config_path, true)
 						if deep_equal(config, disk_config) then
-							manager:_clear_pending_config(opts.plugin_data.name)
+							manager:_clear_pending_config(opts.plugin_data.config.entry)
 						else
-							manager:_set_pending_config(opts.plugin_data.name, config)
+							manager:_set_pending_config(opts.plugin_data.config.entry, config)
 						end
 					else
 						-- 无管理器上下文（理论上不会发生）：保持原行为直接写盘

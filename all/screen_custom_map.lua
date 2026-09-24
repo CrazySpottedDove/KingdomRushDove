@@ -5,6 +5,7 @@ local v = V.v
 local FS = love.filesystem
 local storage = require("all.storage")
 local plugin_main = require("plugin.plugin_main")
+local plugin_paths = require("plugin_paths")
 local S = require("sound_db")
 local km = require("lib.klua.macros")
 local GS = require("kr1.game_settings")
@@ -106,8 +107,8 @@ local function scan_maps()
 		local plugin_data = loaded[2]
 		local cfg = plugin_data.config
 		if cfg and cfg.category == "level" then
-			local entry = plugin_data.entry
-			local base = plugin_data.path
+			local entry = cfg.entry
+			local base = plugin_paths.plugin_dir(entry)
 			local wave_root = base .. "/data/waves/"
 			local has_campaign = FS.getInfo(wave_root .. entry .. "_waves_campaign.lua") ~= nil
 			if has_campaign then
@@ -153,7 +154,7 @@ local function scan_maps()
 		if t_a ~= t_b then
 			return t_a > t_b
 		end
-		return (a.cfg.name or a.entry) < (b.cfg.name or b.entry)
+		return a.cfg.name < b.cfg.name
 	end)
 	return maps
 end
@@ -985,7 +986,7 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start, progress)
 		self:hide()
 	end
 
-	add_level_title(self.back, map.cfg.name or map.entry, "left", ls_page_y + 22)
+	add_level_title(self.back, map.cfg.name, "left", ls_page_y + 22)
 
 	-- Badges
 	local badge_x = 310

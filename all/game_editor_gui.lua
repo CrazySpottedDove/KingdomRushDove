@@ -678,7 +678,7 @@ function gui:show_plugin_level_selector()
 		label.text_align = "left"
 		label.vertical_align = "middle"
 		label.colors.text = {241, 222, 171, 255}
-		label.text = (md.config.name or md.entry) .. "  (" .. md.entry .. ")"
+		label.text = md.config.name .. "  (" .. md.config.entry .. ")"
 		label.fit_lines = 1
 		label.fit_size = true
 		label.propagate_on_click = true
@@ -687,7 +687,7 @@ function gui:show_plugin_level_selector()
 		function btn.on_click()
 			popup:hide()
 			local mode = wid("tools_game_mode") and wid("tools_game_mode").value or GAME_MODE_CAMPAIGN
-			self.editor:load_plugin_level(md.entry, mode)
+			self.editor:load_plugin_level(md.config.entry, mode)
 		end
 		function btn.on_enter()
 			btn.colors.background = {50, 35, 16, 240}

@@ -15,6 +15,7 @@ local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local markdown_view = require("dove_modules.gui.markdown_view")
 local zip = require("lib.zip")
 local plugin_packs = require("dove_modules.gui.plugin_manager_packs")
+local version = require("version")
 
 local km = require("lib.klua.macros")
 local utf8_util = require("lib.utf8_utils")
@@ -102,12 +103,26 @@ while true do
 end
 ]]
 
-local function norm_version(v)
-	return string.trim(utf8_util.sanitize(v))
+local function version_to_num(v)
+	-- 先把字符串里不是数字的都除去
+	local num_str = v:gsub("[^%d]", "")
+
+	return tonumber(num_str)
 end
 
-local function has_update(local_version, remote_version)
-	return norm_version(local_version) ~= "" and norm_version(remote_version) ~= "" and norm_version(local_version) ~= norm_version(remote_version)
+local function version_lt(v1, v2)
+	return version_to_num(v1) < version_to_num(v2)
+end
+
+--- 判断商店条目是否因本体版本过低而不可用
+---@param item table 商店条目（可选字段 min_version）
+---@return boolean 是否被拦截
+---@return string|nil 插件要求的 min_version
+local function min_version_blocked(item)
+	if not item.min_version or item.min_version == "" then
+		return false
+	end
+	return version_lt(version.id, item.min_version)
 end
 
 local function remove_dir_recursive(path)
@@ -468,7 +483,6 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.remote_by_entry = self._remote_entry_cache
 	self.local_plugins = {}
 	self.local_by_entry = {}
-	self.local_by_name = {}
 	self._plugin_rows = {}
 	self._progress_target = 0
 	self._progress_value = 0
@@ -490,10 +504,11 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._unsaved_changes = false
 	self._pending_close = false
 	self._saved_state = {}
-	-- 本次打开期间的修改记忆（点「应用」或关闭管理器后清空，避免下次打开污染）：
-	--   plugins[name] = {config_changed = bool, config = table}  待应用的插件配置修改（延迟写盘）
-	--   deleted[name] = plugin_data                               本会话已删除的插件（运行中则应用时重启）
-	--   updated[name] = true                                      本会话已更新的插件（运行中则应用时重启）
+	-- 本次打开期间的修改记忆（点「应用」或关闭管理器后清空，避免下次打开污染）。
+	-- 三张表都以插件 entry（唯一标识）为键：
+	--   plugins[entry] = {config_changed = bool, config = table}  待应用的插件配置修改（延迟写盘）
+	--   deleted[entry] = plugin_data                              本会话已删除的插件（运行中则应用时重启）
+	--   updated[entry] = true                                     本会话已更新的插件（运行中则应用时重启）
 	self._pending = {
 		plugins = {},
 		deleted = {},
@@ -513,6 +528,8 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._pack_op_entry = nil -- 正在“同步成员”的商店整合包 entry（商店行状态显示用）
 	-- 自建的轻量 overlay（确认弹层 / 分组编辑器），同一时刻至多一个
 	self._pack_confirm_layer = nil
+	-- 待汇总的「本体版本不足」插件（同一帧内可命中多个，见 _flush_min_version_blocked）
+	self._min_version_blocked = nil
 	self._group_editor_layer = nil
 	self._group_editor_members = nil
 	self._group_editor_order = nil
@@ -1453,7 +1470,7 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 	local target_entries = {}
 	local pending = {}
 	for _, plugin_data in ipairs(self.local_plugins) do
-		local entry = utf8_util.sanitize(plugin_data.entry)
+		local entry = utf8_util.sanitize(plugin_data.config.entry)
 		if entry ~= "" and not target_entries[entry] then
 			target_entries[entry] = true
 			if not self._remote_entry_cache[entry] then
@@ -1530,29 +1547,12 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 	return true, nil
 end
 
-function PluginManagerView:_load_local_plugin(name)
-	local dir_path = plugin_paths.LOCAL_PLUGINS_DIR .. "/" .. name
-	if not FS.getInfo(dir_path, "directory") then
-		return nil
-	end
-	local config_path = dir_path .. "/config.lua"
-	local mc = plugin_paths.load_lua_table(config_path)
-	if not mc then
-		return nil
-	end
-	local has_config = false
-	local config_info = love.filesystem.getInfo(dir_path .. "/" .. name .. "_config.lua")
-	if config_info and config_info.type == "file" then
-		has_config = true
-	end
-	return {
-		name = name,
-		path = dir_path,
-		config_path = config_path,
-		config = mc,
-		entry = mc.entry or name,
-		has_config = has_config
-	}
+--- 插件记录的构造统一走 plugin_paths.load_plugin（与运行时同一结构、同一构造点）。
+--- 记录只有 config / has_plugin_config 两个字段：位置由 entry 现算，优先级取 config.priority。
+---@param entry string 插件 entry（唯一标识）
+---@return table|nil { config = table, has_plugin_config = boolean }
+function PluginManagerView:_load_local_plugin(entry)
+	return plugin_paths.load_plugin(entry)
 end
 
 function PluginManagerView:_reload_local_plugins()
@@ -1560,16 +1560,13 @@ function PluginManagerView:_reload_local_plugins()
 
 	self.local_plugins = {}
 	self.local_by_entry = {}
-	self.local_by_name = {}
 
-	local plugins_dir = plugin_paths.LOCAL_PLUGINS_DIR
-	local items = FS.getDirectoryItems(plugins_dir) or {}
-	for _, name in ipairs(items) do
-		local plugin_data = self:_load_local_plugin(name)
+	-- 目录名必须等于 entry（见 plugin_paths.list_plugin_entries）
+	for _, entry in ipairs(plugin_paths.list_plugin_entries()) do
+		local plugin_data = self:_load_local_plugin(entry)
 		if plugin_data then
 			self.local_plugins[#self.local_plugins + 1] = plugin_data
-			self.local_by_name[name] = plugin_data
-			self.local_by_entry[plugin_data.entry] = plugin_data
+			self.local_by_entry[plugin_data.config.entry] = plugin_data
 		end
 	end
 	self:_sort_local_plugins()
@@ -1582,41 +1579,41 @@ function PluginManagerView:_sort_local_plugins()
 		if t_a ~= t_b then
 			return t_a > t_b
 		end
-		return (a.config.priority or 0) < (b.config.priority or 0)
+		return a.config.priority < b.config.priority
 	end)
 end
 
 --- 只刷新指定插件（新增或更新后调用），避免全量 reload 覆盖其他插件未保存的开关状态。
---- 支持传插件目录名或 entry。
-function PluginManagerView:_reload_local_plugin(name_or_entry)
+--- 位置由 entry 现算，不需要（也不应该）回头查旧记录的目录名。
+---@param entry string 插件 entry（唯一标识）
+function PluginManagerView:_reload_local_plugin(entry)
 	plugin_paths.ensure_storage_ready()
-	local old = self.local_by_name[name_or_entry] or self.local_by_entry[name_or_entry]
-	local name = old and old.name or name_or_entry
+	local old = self.local_by_entry[entry]
 
 	if old then
 		table.removeobject(self.local_plugins, old)
-		self.local_by_name[old.name] = nil
-		if self.local_by_entry[old.entry] == old then
-			self.local_by_entry[old.entry] = nil
+		if self.local_by_entry[old.config.entry] == old then
+			self.local_by_entry[old.config.entry] = nil
 		end
 	end
 
-	local plugin_data = self:_load_local_plugin(name)
+	local plugin_data = self:_load_local_plugin(entry)
 	if plugin_data then
 		self.local_plugins[#self.local_plugins + 1] = plugin_data
-		self.local_by_name[plugin_data.name] = plugin_data
-		self.local_by_entry[plugin_data.entry] = plugin_data
+		self.local_by_entry[plugin_data.config.entry] = plugin_data
 	end
 
 	self:_sort_local_plugins()
 end
 
-function PluginManagerView:_refresh_local_view(status_text, target_name)
+---@param status_text string|nil
+---@param target_entry string|nil 只刷新该 entry；为空则全量重扫
+function PluginManagerView:_refresh_local_view(status_text, target_entry)
 	if status_text then
 		self:_set_status(status_text, 100)
 	end
-	if target_name then
-		self:_reload_local_plugin(target_name)
+	if target_entry then
+		self:_reload_local_plugin(target_entry)
 	else
 		self:_reload_local_plugins()
 	end
@@ -1624,24 +1621,25 @@ function PluginManagerView:_refresh_local_view(status_text, target_name)
 	self._unsaved_changes = self:_check_unsaved()
 end
 
-function PluginManagerView:_delete_local_plugin_by_name(plugin_name)
-	local plugin_data = self.local_by_name[plugin_name]
+---@param entry string 插件 entry（唯一标识）
+function PluginManagerView:_delete_local_plugin(entry)
+	local plugin_data = self.local_by_entry[entry]
 	if not plugin_data then
 		return false, _("PLUGIN_MGR_ERR_LOCAL_PLUGIN_MISSING")
 	end
 	-- 记忆删除：点「应用」时若插件仍在运行（文件已移除），无法安全热应用，直接重启
-	self._pending.deleted[plugin_name] = plugin_data
-	local ok = remove_dir_recursive(plugin_data.path)
+	self._pending.deleted[entry] = plugin_data
+	local dir = plugin_paths.plugin_dir(entry)
+	local ok = remove_dir_recursive(dir)
 	if not ok then
-		return false, string.format(_("PLUGIN_MGR_ERR_DELETE_FAILED"), plugin_data.path)
+		return false, string.format(_("PLUGIN_MGR_ERR_DELETE_FAILED"), dir)
 	end
 	-- 只从内存中移除该插件，保留其他插件尚未落盘的开关修改；
 	-- 不需要重新扫描磁盘导致未保存的开关状态被覆盖。
-	self._pending.plugins[plugin_name] = nil
+	self._pending.plugins[entry] = nil
 	table.removeobject(self.local_plugins, plugin_data)
-	self.local_by_name[plugin_name] = nil
-	if self.local_by_entry[plugin_data.entry] == plugin_data then
-		self.local_by_entry[plugin_data.entry] = nil
+	if self.local_by_entry[plugin_data.config.entry] == plugin_data then
+		self.local_by_entry[plugin_data.config.entry] = nil
 	end
 	self:_render_current_list()
 	self._unsaved_changes = self:_check_unsaved()
@@ -1768,7 +1766,8 @@ function PluginManagerView:_collect_plugin_root_candidates(base_dir)
 end
 
 function PluginManagerView:_install_plugin(item, is_update, task)
-	self:_set_status(string.format(is_update and _("PLUGIN_MGR_STATUS_UPDATING_PLUGIN") or _("PLUGIN_MGR_STATUS_INSTALLING_PLUGIN"), item.name or item.entry), 0)
+	local entry = item.entry
+	self:_set_status(string.format(is_update and _("PLUGIN_MGR_STATUS_UPDATING_PLUGIN") or _("PLUGIN_MGR_STATUS_INSTALLING_PLUGIN"), item.name), 0)
 	local zip_data, err = self:_download_zip(item, task)
 	if not zip_data then
 		return false, err
@@ -1777,14 +1776,13 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 		return false, "cancelled"
 	end
 
-	local entry = utf8_util.sanitize(item.entry or "")
-	local stage_root = "tmp/plugin_store_stage/" .. (entry ~= "" and entry or ("pkg_" .. tostring(os.time())))
+	local stage_root = "tmp/plugin_store_stage/" .. entry
 	remove_dir_recursive("tmp/plugin_store_stage")
 	FS.createDirectory("tmp")
 	FS.createDirectory("tmp/plugin_store_stage")
 	FS.createDirectory(stage_root)
 
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_EXTRACTING_PLUGIN"), item.name or item.entry), 92)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_EXTRACTING_PLUGIN"), item.name or entry), 92)
 	if task then
 		task.progress = 92
 	end
@@ -1793,12 +1791,13 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 		return false, unzip_err
 	end
 
+	-- 解压后定位插件根目录：优先 config.lua 里 entry 匹配的目录，其次目录名匹配 entry 的
 	local candidates = self:_collect_plugin_root_candidates(stage_root)
 	local selected_dir = nil
 	for _, c in ipairs(candidates) do
 		local cfg = plugin_paths.load_lua_table(c .. "/config.lua")
 		local c_entry = cfg and utf8_util.sanitize(cfg.entry or "")
-		if entry ~= "" and (c_entry == entry or basename(c) == entry) then
+		if c_entry == entry or basename(c) == entry then
 			selected_dir = c
 			break
 		end
@@ -1806,32 +1805,32 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 	if not selected_dir and #candidates == 1 then
 		selected_dir = candidates[1]
 	end
-	if not selected_dir and entry ~= "" and FS.getInfo(stage_root .. "/" .. entry, "directory") then
+	if not selected_dir and FS.getInfo(stage_root .. "/" .. entry, "directory") then
 		selected_dir = stage_root .. "/" .. entry
 	end
 	if not selected_dir then
 		return false, _("PLUGIN_MGR_ERR_PACKAGE_STRUCTURE")
 	end
 
-	local target_name = (entry ~= "" and entry) or basename(selected_dir)
-	local target_dir = plugin_paths.LOCAL_PLUGINS_DIR .. "/" .. target_name
+	-- 安装目录名 = entry（插件唯一标识），不再回退到解压目录名
+	local target_dir = plugin_paths.plugin_dir(entry)
 	local local_plugin = nil
 	local preserved_enabled = nil
 	local preserved_local_config = nil
 	if is_update then
 		-- 记忆更新：应用时若该插件正在运行（文件已替换），无法安全热应用，直接重启
-		self._pending.updated[target_name] = true
-		local_plugin = (entry ~= "" and self.local_by_entry[entry]) or self.local_by_name[target_name]
+		self._pending.updated[entry] = true
+		local_plugin = self.local_by_entry[entry]
 		if local_plugin and local_plugin.config then
-			preserved_enabled = local_plugin.config.enabled ~= false
+			preserved_enabled = local_plugin.config.enabled
 		else
-			local existing_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
+			local existing_cfg = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
 			if existing_cfg then
-				preserved_enabled = existing_cfg.enabled ~= false
+				preserved_enabled = existing_cfg.enabled
 			end
 		end
 
-		local local_cfg_path = local_plugin and (local_plugin.path .. "/" .. local_plugin.name .. "_config.lua") or (target_dir .. "/" .. target_name .. "_config.lua")
+		local local_cfg_path = local_plugin and plugin_paths.plugin_config_path(local_plugin.config.entry) or plugin_paths.plugin_config_path(entry)
 		if FS.getInfo(local_cfg_path, "file") then
 			local local_cfg, read_err = plugin_paths.load_lua_table(local_cfg_path)
 			if not local_cfg then
@@ -1843,18 +1842,18 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 	remove_dir_recursive(target_dir)
 	copy_dir_recursive(selected_dir, target_dir)
 	if preserved_enabled ~= nil then
-		local installed_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
+		local installed_cfg = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
 		if not installed_cfg then
 			return false, string.format(_("PLUGIN_MGR_ERR_READ_CONFIG_AFTER_UPDATE"), target_dir)
 		end
 		installed_cfg.enabled = preserved_enabled
-		local wok = storage:write_lua(target_dir .. "/config.lua", installed_cfg)
+		local wok = storage:write_lua(plugin_paths.metadata_path(entry), installed_cfg)
 		if not wok then
 			return false, string.format(_("PLUGIN_MGR_ERR_WRITE_CONFIG_AFTER_UPDATE"), target_dir)
 		end
 	end
 	if preserved_local_config then
-		local installed_local_cfg_path = target_dir .. "/" .. target_name .. "_config.lua"
+		local installed_local_cfg_path = plugin_paths.plugin_config_path(entry)
 		if FS.getInfo(installed_local_cfg_path, "file") then
 			local remote_local_cfg, read_err = plugin_paths.load_lua_table(installed_local_cfg_path)
 			if not remote_local_cfg then
@@ -1868,17 +1867,17 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 		end
 	else
 		-- 本地不存在配置（或旧配置），为新版本配置记录默认配置数据
-		ensure_default_config_recorded(target_dir .. "/" .. target_name .. "_config.lua")
+		ensure_default_config_recorded(plugin_paths.plugin_config_path(entry))
 	end
 	remove_dir_recursive("tmp/plugin_store_stage")
 
-	local new_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
+	local new_cfg = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
 	if new_cfg then
 		new_cfg.last_used_at = os.time()
-		storage:write_lua(target_dir .. "/config.lua", new_cfg)
+		storage:write_lua(plugin_paths.metadata_path(entry), new_cfg)
 	end
 
-	self:_refresh_local_view(string.format(is_update and _("PLUGIN_MGR_STATUS_PLUGIN_UPDATED") or _("PLUGIN_MGR_STATUS_PLUGIN_INSTALLED"), item.name or item.entry), target_name)
+	self:_refresh_local_view(string.format(is_update and _("PLUGIN_MGR_STATUS_PLUGIN_UPDATED") or _("PLUGIN_MGR_STATUS_PLUGIN_INSTALLED"), item.name or entry), entry)
 	self._active_download_name = ""
 	if task then
 		task.progress = 100
@@ -1991,16 +1990,16 @@ function PluginManagerView:_install_or_update_item(item, task)
 		return false, "cancelled"
 	end
 	local local_plugin = self.local_by_entry[item.entry]
-	local need_update = local_plugin and has_update(local_plugin.config.version, item.version)
+	local need_update = local_plugin and version_lt(local_plugin.config.version, item.version)
 	if not need_update then
 		return self:_install_plugin(item, false, task)
 	end
 
 	-- 尝试增量更新：现场计算本地文件哈希
 	local entry = utf8_util.sanitize(item.entry or "")
-	local target_dir = plugin_paths.LOCAL_PLUGINS_DIR .. "/" .. entry
+	local target_dir = plugin_paths.plugin_dir(entry)
 	if FS.getInfo(target_dir, "directory") then
-		local local_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
+		local local_cfg = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
 		local dir_info = self:_compute_dir_hashes(target_dir)
 		local hash_ok, hash_resp = self:_hash_check(entry, item.version or "", dir_info.hashes, get_platform(), "download")
 		if hash_ok and hash_resp and type(hash_resp.changed) == "table" then
@@ -2015,7 +2014,7 @@ function PluginManagerView:_install_or_update_item(item, task)
 				return false, "cancelled"
 			end
 			if patch_data then
-				local _unused, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_plugin)
+				local _unused, local_cfg_saved = self:_preserve_local_config(entry)
 				self:_set_status(string.format(_("PLUGIN_MGR_STATUS_APPLYING_DELTA"), item.name or item.entry), 90)
 				if task then
 					task.progress = 90
@@ -2025,21 +2024,21 @@ function PluginManagerView:_install_or_update_item(item, task)
 					-- 记忆更新：应用时若该插件正在运行（文件已替换），直接重启
 					self._pending.updated[entry] = true
 					if local_cfg_saved then
-						self:_restore_local_config(target_dir, entry, local_cfg_saved)
+						self:_restore_local_config(entry, local_cfg_saved)
 					else
 						-- 本地没有旧配置，为新版本配置记录默认配置数据
-						ensure_default_config_recorded(target_dir .. "/" .. entry .. "_config.lua")
+						ensure_default_config_recorded(plugin_paths.plugin_config_path(entry))
 					end
-					local installed_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
+					local installed_cfg = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
 					if installed_cfg then
-						installed_cfg.enabled = local_plugin and local_plugin.config and (local_plugin.config.enabled ~= false)
+						installed_cfg.enabled = local_plugin and local_plugin.config and local_plugin.config.enabled
 						if installed_cfg.enabled == nil then
-							installed_cfg.enabled = local_cfg and local_cfg.enabled ~= false
+							installed_cfg.enabled = local_cfg and local_cfg.enabled
 						end
 						installed_cfg.last_used_at = os.time()
 						storage:write_lua(target_dir .. "/config.lua", installed_cfg)
 					end
-					self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPDATE_DONE"), item.name or item.entry), local_plugin and local_plugin.name or entry)
+					self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPDATE_DONE"), item.name), entry)
 					if task then
 						task.progress = 100
 					end
@@ -2072,13 +2071,134 @@ function PluginManagerView:_find_dl_task_by_entry(entry)
 	return nil
 end
 
+--- 收集一个因本体版本不足被拒绝的插件。
+--- 批量入口（如「全部更新」）会在同一帧内连续命中多个，先攒起来，
+--- 由 _flush_min_version_blocked 合成单个弹窗绘制，避免后一个弹窗顶掉前一个。
+---@param item table 商店条目
+function PluginManagerView:_queue_min_version_blocked(item)
+	if not self._min_version_blocked then
+		self._min_version_blocked = {}
+	end
+	local list = self._min_version_blocked
+	list[#list + 1] = item
+end
+
+--- 弹出「本体版本不足」汇总弹窗（KScrollList 承载，条目多时可滚动）
+---@param items table 商店条目数组
+function PluginManagerView:_show_min_version_blocked_dialog(items)
+	self:_hide_pack_confirm()
+	local rs = GGLabel.static.ref_h / REF_H
+	local bw, bh = self.back.size.x, self.back.size.y
+
+	local layer = KView:new(V.v(bw, bh))
+	layer.colors.background = {0, 0, 0, 150}
+	-- 遮罩与插件管理器主面板同轮廓：圆角矩形，避免直角外露
+	layer.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, bw, bh, 20, 20}
+	}
+	self.back:add_child(layer)
+	self._pack_confirm_layer = layer
+
+	local pw = math.min(720, bw - 120)
+	local header_h = 46
+	local btn_h = 36
+	local row_h = 44
+	local row_gap = 6
+	local list_w = pw - 32
+	-- 列表高度随条目数增长，超过面板可用高度后交给 KScrollList 滚动
+	local max_list_h = math.max(row_h, bh - 80 - header_h - btn_h - 26)
+	local list_h = math.min(#items * (row_h + row_gap), max_list_h)
+	local ph = header_h + list_h + 16 + btn_h + 10
+
+	local panel = KView:new(V.v(pw, ph))
+	panel.colors.background = {40, 29, 10, 250}
+	panel.anchor = V.v(pw / 2, ph / 2)
+	panel.pos = V.v(bw / 2, bh / 2)
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 14, 14}
+	}
+	layer:add_child(panel)
+
+	local title = GGLabel:new(V.v(pw - 60, 30))
+	title.font_name = "h"
+	title.font_size = 15 * rs
+	title.text_align = "left"
+	title.vertical_align = "middle"
+	title.colors.text = {244, 221, 165, 255}
+	title.text = _("PLUGIN_MGR_MIN_VERSION_TITLE")
+	title.fit_lines = 1
+	title.fit_size = true
+	title.pos = V.v(16, 8)
+	panel:add_child(title)
+
+	local list = KScrollList:new(V.v(list_w, list_h))
+	list.pos = V.v(16, header_h)
+	list.colors.scroller_background = {45, 36, 22, 200}
+	list.colors.scroller_foreground = {110, 90, 50, 255}
+	list.scroller_width = 10
+	list.scroller_margin = 4
+	list.scroll_amount = 60
+	panel:add_child(list)
+
+	-- 行高比卡片高一个 row_gap：add_row 按 size.y 顺序堆叠，多出来的部分就是行间距
+	local card_w = list_w - list.scroller_width - 2 * list.scroller_margin
+	for _i, item in ipairs(items) do
+		local row = KView:new(V.v(card_w, row_h + row_gap))
+		row.colors.background = {62, 48, 22, 220}
+		row.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, card_w, row_h, 8, 8}
+		}
+		local lbl = GGLabel:new(V.v(card_w - 24, row_h))
+		lbl.font_name = "body"
+		lbl.font_size = 12 * rs
+		lbl.text_align = "left"
+		lbl.vertical_align = "middle"
+		-- 句子较长：固定一行，超宽时自动缩小字号，不截断插件名
+		lbl.fit_lines = 1
+		lbl.fit_size = true
+		lbl.colors.text = {235, 220, 185, 255}
+		lbl.text = string.format(_("PLUGIN_MGR_MIN_VERSION_BLOCKED"), item.name or item.entry or "?", item.entry or "?", item.min_version or "?")
+		lbl.pos = V.v(12, 0)
+		row:add_child(lbl)
+		list:add_row(row)
+	end
+
+	local ok_btn = PluginActionButton:new(_("BUTTON_CONFIRM"), V.v(112, btn_h))
+	ok_btn.pos = V.v(pw - 16 - 112, ph - btn_h - 8)
+	ok_btn.on_press = function()
+		self:_hide_pack_confirm()
+	end
+	panel:add_child(ok_btn)
+end
+
+--- 把本帧收集到的被拒插件合成一个弹窗（由 update 每帧调用）
+function PluginManagerView:_flush_min_version_blocked()
+	local items = self._min_version_blocked
+	if not items then
+		return
+	end
+	self._min_version_blocked = nil
+	if #items > 0 then
+		self:_show_min_version_blocked_dialog(items)
+	end
+end
+
 --- 加入下载队列；同一 entry 已在队列/运行中时忽略
 ---@param item table 商店条目
 ---@param is_update boolean 是否更新（用于完成文案）
 ---@return table|nil 任务对象（重复入队返回 nil）
+---@return string|nil 未入队原因（"min_version" 表示本体版本不足）
 function PluginManagerView:_enqueue_download(item, is_update)
 	if not item or not item.entry then
 		return nil
+	end
+	if min_version_blocked(item) then
+		-- 只收集不弹窗：批量入口同一帧会连续命中多个，交给 update 统一汇总
+		self:_queue_min_version_blocked(item)
+		return nil, "min_version"
 	end
 	local entry = item.entry
 	if self._dl_running and self._dl_running.item.entry == entry then
@@ -2208,9 +2328,13 @@ function PluginManagerView:_remove_dl_task(task)
 	return true
 end
 
-function PluginManagerView:_preserve_local_config(target_dir, entry, local_plugin)
+--- 更新前把用户改过的插件配置读出来（路径由 entry 现算）
+---@param entry string
+---@return string 插件配置文件路径
+---@return table|nil 读到的配置
+function PluginManagerView:_preserve_local_config(entry)
 	local local_cfg = nil
-	local local_cfg_path = local_plugin and (local_plugin.path .. "/" .. local_plugin.name .. "_config.lua") or (target_dir .. "/" .. entry .. "_config.lua")
+	local local_cfg_path = plugin_paths.plugin_config_path(entry)
 	if FS.getInfo(local_cfg_path, "file") then
 		local ok, cfg = pcall(FS.load, local_cfg_path)
 		if ok and type(cfg()) == "table" then
@@ -2220,8 +2344,11 @@ function PluginManagerView:_preserve_local_config(target_dir, entry, local_plugi
 	return local_cfg_path, local_cfg
 end
 
-function PluginManagerView:_restore_local_config(target_dir, entry, local_cfg)
-	local path = target_dir .. "/" .. entry .. "_config.lua"
+--- 更新后把用户配置合并回去
+---@param entry string
+---@param local_cfg table|nil 更新前保留的配置
+function PluginManagerView:_restore_local_config(entry, local_cfg)
+	local path = plugin_paths.plugin_config_path(entry)
 	if not local_cfg then
 		return
 	end
@@ -2251,7 +2378,7 @@ function PluginManagerView:_update_all_plugins()
 	local need_remote_lookup = not next(self._remote_entry_cache)
 	if not need_remote_lookup then
 		for _, plugin_data in ipairs(self.local_plugins) do
-			local entry = utf8_util.sanitize(plugin_data.entry)
+			local entry = utf8_util.sanitize(plugin_data.config.entry)
 			if entry ~= "" and not self._remote_entry_cache[entry] then
 				need_remote_lookup = true
 				break
@@ -2267,8 +2394,8 @@ function PluginManagerView:_update_all_plugins()
 	self.remote_by_entry = self._remote_entry_cache
 	local pending = {}
 	for _, plugin_data in ipairs(self.local_plugins) do
-		local remote = self.remote_by_entry[plugin_data.entry]
-		if remote and has_update(plugin_data.config.version, remote.version) then
+		local remote = self.remote_by_entry[plugin_data.config.entry]
+		if remote and version_lt(plugin_data.config.version, remote.version) then
 			pending[#pending + 1] = {
 				local_plugin = plugin_data,
 				remote = remote
@@ -2279,14 +2406,22 @@ function PluginManagerView:_update_all_plugins()
 		self:_set_status(_("PLUGIN_MGR_STATUS_NO_UPDATABLE_PLUGINS"), 0)
 		return true, nil
 	end
-	-- 全部加入下载队列（串行执行，不阻塞 UI）
+	-- 全部加入下载队列（串行执行，不阻塞 UI）；本体版本不足的插件会被拒绝并汇总到弹窗
 	local enqueued = 0
+	local blocked_n = 0
 	for _, row in ipairs(pending) do
-		if self:_enqueue_download(row.remote, true) then
+		local _task, reason = self:_enqueue_download(row.remote, true)
+		if _task then
 			enqueued = enqueued + 1
+		elseif reason == "min_version" then
+			blocked_n = blocked_n + 1
 		end
 	end
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_ADDED_TO_UPDATE_QUEUE"), enqueued), 0)
+	local status = string.format(_("PLUGIN_MGR_STATUS_ADDED_TO_UPDATE_QUEUE"), enqueued)
+	if blocked_n > 0 then
+		status = status .. _("PLUGIN_MGR_SEP_COMMA") .. string.format(_("PLUGIN_MGR_SYNC_PART_BLOCKED"), blocked_n)
+	end
+	self:_set_status(status, 0)
 	return true, nil
 end
 
@@ -2319,11 +2454,11 @@ function PluginManagerView:_render_local_list()
 
 	for _i, plugin_data in ipairs(self.local_plugins) do
 		local cfg = plugin_data.config
-		local plugin_category = cfg.category or "other"
+		local plugin_category = cfg.category
 		-- 搜索过滤（本地即时）
 		if self._search_query and self._search_query ~= "" then
 			local q = self._search_query:lower()
-			local hit = (cfg.name and cfg.name:lower():find(q, 1, true)) or (cfg.desc and cfg.desc:lower():find(q, 1, true)) or (cfg.by and cfg.by:lower():find(q, 1, true)) or (plugin_data.entry and plugin_data.entry:lower():find(q, 1, true))
+			local hit = (cfg.name and cfg.name:lower():find(q, 1, true)) or (cfg.desc and cfg.desc:lower():find(q, 1, true)) or (cfg.by and cfg.by:lower():find(q, 1, true)) or (plugin_data.config.entry and plugin_data.config.entry:lower():find(q, 1, true))
 
 			if not hit then
 				goto continue
@@ -2331,10 +2466,10 @@ function PluginManagerView:_render_local_list()
 		end
 		-- 过滤分类
 		if (category_option.value == "all" or category_option.value == plugin_category) and (not self._my_plugins_only or cfg.by == self._developer_config.account) then
-			local remote = self.remote_by_entry[plugin_data.entry]
+			local remote = self.remote_by_entry[plugin_data.config.entry]
 			local status = ""
 
-			if remote and has_update(cfg.version, remote.version) then
+			if remote and version_lt(cfg.version, remote.version) then
 				status = string.format(_("PLUGIN_MGR_STATUS_UPDATE_AVAILABLE"), utf8_util.sanitize(cfg.version), utf8_util.sanitize(remote.version))
 			elseif remote then
 				status = _("PLUGIN_MGR_STATUS_UP_TO_DATE")
@@ -2364,16 +2499,16 @@ function PluginManagerView:_render_local_list()
 				enabled = not is_own,
 				on_press = function()
 					self:_start_task(_("PLUGIN_MGR_TASK_DELETE_PLUGIN"), function()
-						local ok, err = self:_delete_local_plugin_by_name(plugin_data.name)
+						local ok, err = self:_delete_local_plugin(plugin_data.config.entry)
 						if ok then
-							self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_DELETED"), plugin_data.name), 0)
+							self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_DELETED"), plugin_data.config.entry), 0)
 							return true, nil
 						end
 						return false, err
 					end)
 				end
 			}
-			if remote and has_update(cfg.version, remote.version) then
+			if remote and version_lt(cfg.version, remote.version) then
 				local dl_task = self:_find_dl_task_by_entry(remote.entry)
 				actions[#actions + 1] = {
 					text = dl_task and _("PLUGIN_MGR_BTN_UPDATING") or _("UPDATE_POPUP"),
@@ -2385,9 +2520,9 @@ function PluginManagerView:_render_local_list()
 
 			local row = PluginItemRow:new({
 				plugin_data = plugin_data,
-				title = cfg.name or plugin_data.name,
-				meta = string.format(_("PLUGIN_MGR_META_PLUGIN_AUTHOR"), plugin_data.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)) .. self:_group_tag_for(plugin_data.entry),
-				desc = cfg.desc or "",
+				title = cfg.name,
+				meta = string.format(_("PLUGIN_MGR_META_PLUGIN_AUTHOR"), plugin_data.config.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)) .. self:_group_tag_for(plugin_data.config.entry),
+				desc = cfg.desc,
 				status = status,
 				show_toggle = not global_disabled,
 				action_button_size = self._row_action_button_size,
@@ -2396,7 +2531,7 @@ function PluginManagerView:_render_local_list()
 				right_pad = self._row_right_pad,
 				action_bottom_margin = self._row_action_bottom_margin,
 				toggle_top_margin = self._row_toggle_top_margin,
-				enabled = cfg.enabled ~= false,
+				enabled = cfg.enabled,
 				on_toggle = function(v)
 					cfg.enabled = v
 					if v then
@@ -2426,13 +2561,13 @@ function PluginManagerView:_render_store_list()
 	self.plugin_list:clear_rows()
 	local list_w = self.plugin_list.size.x - self.plugin_list.scroller_width - 2 * self.plugin_list.scroller_margin - 4
 	for _i, item in ipairs(self.store_items) do
-		local local_plugin = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
+		local local_plugin = self.local_by_entry[item.entry]
 		-- 只看未安装：本地再过滤一次（防本页请求后刚安装的条目残留）
 		if self._uninstalled_only and local_plugin then
 			goto continue
 		end
 		local installed = local_plugin ~= nil
-		local needs_update = installed and has_update(local_plugin.config.version, item.version)
+		local needs_update = installed and version_lt(local_plugin.config.version, item.version)
 		local dl_task = self:_find_dl_task_by_entry(item.entry)
 		local status
 		if dl_task then
@@ -2482,9 +2617,9 @@ function PluginManagerView:_render_store_list()
 				enabled = not is_own,
 				on_press = function()
 					self:_start_task(_("PLUGIN_MGR_TASK_DELETE_PLUGIN"), function()
-						local ok, err = self:_delete_local_plugin_by_name(local_plugin.name)
+						local ok, err = self:_delete_local_plugin(local_plugin.config.entry)
 						if ok then
-							self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_DELETED"), local_plugin.name), 0)
+							self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_DELETED"), local_plugin.config.entry), 0)
 							return true, nil
 						end
 						return false, err
@@ -2567,7 +2702,7 @@ function PluginManagerView:show()
 	local cfg = plugin_paths.load_main_config()
 	local saved_cb = self.global_toggle.on_change
 	self.global_toggle.on_change = nil
-	self.global_toggle:set_value(cfg.enabled ~= false)
+	self.global_toggle:set_value(cfg.enabled)
 	self.global_toggle.on_change = saved_cb
 	self:_reload_local_plugins()
 	-- 本地分组：从磁盘读取（只刷新分组数据，不覆盖未保存的插件开关）
@@ -2611,6 +2746,8 @@ end
 
 function PluginManagerView:update(dt)
 	PluginManagerView.super.update(self, dt)
+	-- 本帧被拒的插件统一汇总成一个弹窗（批量入口会在同一帧连续命中多个）
+	self:_flush_min_version_blocked()
 	if self._pending_close then
 		self._pending_close = false
 		self:hide()
@@ -2667,9 +2804,9 @@ end
 
 function PluginManagerView:_show_local_plugin_detail(plugin_data)
 	-- 读取本地 README.md
-	local readme_path = plugin_data.path .. "/README.md"
+	local readme_path = plugin_paths.plugin_dir(plugin_data.config.entry) .. "/README.md"
 	local content = nil
-	local fallback = plugin_data.config.desc or _("PLUGIN_MGR_NO_DESCRIPTION")
+	local fallback = plugin_data.config.desc
 	if FS.getInfo(readme_path, "file") then
 		content = FS.read(readme_path) or nil
 	end
@@ -2677,7 +2814,7 @@ function PluginManagerView:_show_local_plugin_detail(plugin_data)
 		content = nil
 	end
 
-	local detail = markdown_view:new(self._sw, self._sh, plugin_data.config.name or plugin_data.name, content, fallback)
+	local detail = markdown_view:new(self._sw, self._sh, plugin_data.config.name, content, fallback)
 	self:add_child(detail)
 	detail:show()
 end
@@ -2725,7 +2862,7 @@ end
 
 function PluginManagerView:_handle_upload_plugin(plugin_data)
 	local cover_name = nil
-	local items = FS.getDirectoryItems(plugin_data.path) or {}
+	local items = FS.getDirectoryItems(plugin_paths.plugin_dir(plugin_data.config.entry)) or {}
 	for _, name in ipairs(items) do
 		if name:lower():match("^cover%.") then
 			cover_name = name
@@ -2749,7 +2886,7 @@ function PluginManagerView:_handle_upload_plugin(plugin_data)
 		self._cover_no_btn.hidden = false
 	else
 		self.task_title_lbl.text = _("PLUGIN_MGR_TASK_UPLOAD_PLUGIN")
-		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_UPLOAD_PLUGIN"), plugin_data.config.name or plugin_data.name)
+		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_UPLOAD_PLUGIN"), plugin_data.config.name)
 		self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_CONFIRM_UPLOAD"))
 		self._cover_yes_btn.hidden = false
 		self._cover_no_btn.hidden = true
@@ -2908,7 +3045,7 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 	FS.createDirectory(tmp)
 
 	for _, rel_path in ipairs(changed) do
-		local src = plugin_data.path .. "/" .. rel_path
+		local src = plugin_paths.plugin_dir(plugin_data.config.entry) .. "/" .. rel_path
 		local dst = tmp .. "/" .. rel_path
 		local parent = dst:match("^(.*/)")
 		if parent and not FS.getInfo(parent, "directory") then
@@ -2972,16 +3109,16 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		end
 	end
 
-	local entry = plugin_data.config.entry or plugin_data.name
-	local version = plugin_data.config.version or ""
+	local entry = plugin_data.config.entry
+	local version = plugin_data.config.version
 
 	local cover_data = nil
 	local cover_ext = nil
 	if upload_cover then
-		local items = FS.getDirectoryItems(plugin_data.path) or {}
+		local items = FS.getDirectoryItems(plugin_paths.plugin_dir(plugin_data.config.entry)) or {}
 		for _, name in ipairs(items) do
 			if name:lower():match("^cover%.") then
-				cover_data = FS.read(plugin_data.path .. "/" .. name)
+				cover_data = FS.read(plugin_paths.plugin_dir(plugin_data.config.entry) .. "/" .. name)
 				cover_ext = name:match("%.([^%.]+)$")
 				break
 			end
@@ -2990,7 +3127,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 	-- 计算本地文件哈希
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPUTING_HASH"), entry), 5)
-	local dir_info = self:_compute_dir_hashes(plugin_data.path)
+	local dir_info = self:_compute_dir_hashes(plugin_paths.plugin_dir(plugin_data.config.entry))
 	if dir_info.total_bytes == 0 then
 		return false, _("PLUGIN_MGR_ERR_PLUGIN_DIR_EMPTY")
 	end
@@ -3009,7 +3146,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 		if #changed == 0 and #deleted == 0 then
 			print(_("PLUGIN_MGR_LOG_NO_CHANGES"))
-			self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_NO_CHANGES"), entry), plugin_data.name)
+			self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_NO_CHANGES"), entry), plugin_data.config.entry)
 			return true, nil
 		end
 		if not use_full and #changed > 0 then
@@ -3018,7 +3155,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 				if cover_data and cover_ext then
 					self:_upload_cover(entry, cover_data, cover_ext)
 				end
-				self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPLOAD_SUCCESS"), entry), plugin_data.name)
+				self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
 				return true, nil
 			end
 			log.error(_("PLUGIN_MGR_LOG_DELTA_UPLOAD_FAILED"), tostring(err_patch))
@@ -3031,7 +3168,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 	-- 全量上传（增量不可用或变更量过大时回落）
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPRESSING"), entry), 20)
-	local zip_data = zip.create_from_dir(plugin_data.path, {
+	local zip_data = zip.create_from_dir(plugin_paths.plugin_dir(plugin_data.config.entry), {
 		exclude = {"^cover%..+$"},
 		skip_dirs = {".git", ".backup", ".tmp"}
 	})
@@ -3071,7 +3208,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		self:_upload_cover(entry, cover_data, cover_ext)
 	end
 
-	self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_UPLOAD_SUCCESS"), entry), plugin_data.name)
+	self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
 	return true, nil
 end
 
@@ -3115,7 +3252,7 @@ function PluginManagerView:_capture_state()
 		plugin_enabled = {}
 	}
 	for _, plugin_data in ipairs(self.local_plugins) do
-		self._saved_state.plugin_enabled[plugin_data.name] = plugin_data.config.enabled ~= false
+		self._saved_state.plugin_enabled[plugin_data.config.entry] = plugin_data.config.enabled
 	end
 	self._unsaved_changes = false
 end
@@ -3125,8 +3262,8 @@ function PluginManagerView:_check_unsaved()
 		return true
 	end
 	for _, plugin_data in ipairs(self.local_plugins) do
-		local saved = self._saved_state.plugin_enabled[plugin_data.name]
-		if saved ~= nil and (plugin_data.config.enabled ~= false) ~= saved then
+		local saved = self._saved_state.plugin_enabled[plugin_data.config.entry]
+		if saved ~= nil and plugin_data.config.enabled ~= saved then
 			return true
 		end
 	end
@@ -3144,31 +3281,31 @@ function PluginManagerView:_check_unsaved()
 end
 
 --- 配置编辑器保存时调用：记忆待应用配置（延迟写盘，点「应用」才落盘并触发 on_config_change）
----@param plugin_name string 插件目录名
----@param config table 编辑后的完整用户配置（<name>_config.lua 内容）
-function PluginManagerView:_set_pending_config(plugin_name, config)
-	local info = self._pending.plugins[plugin_name] or {}
+---@param entry string 插件 entry（唯一标识）
+---@param config table 编辑后的完整用户配置（<entry>_config.lua 内容）
+function PluginManagerView:_set_pending_config(entry, config)
+	local info = self._pending.plugins[entry] or {}
 	info.config_changed = true
 	info.config = table.deepclone(config or {})
-	self._pending.plugins[plugin_name] = info
+	self._pending.plugins[entry] = info
 	self._unsaved_changes = self:_check_unsaved()
 end
 
 --- 清除某插件的待应用配置（编辑结果与磁盘原配置一致时调用，
 --- 避免仅打开过配置界面未做修改也提示「有未保存的修改」）
----@param plugin_name string 插件目录名
-function PluginManagerView:_clear_pending_config(plugin_name)
-	if self._pending.plugins[plugin_name] then
-		self._pending.plugins[plugin_name] = nil
+---@param entry string 插件 entry（唯一标识）
+function PluginManagerView:_clear_pending_config(entry)
+	if self._pending.plugins[entry] then
+		self._pending.plugins[entry] = nil
 		self._unsaved_changes = self:_check_unsaved()
 	end
 end
 
 --- 读取待应用配置（配置编辑器加载时优先显示待定值，未修改则显示磁盘值）
----@param plugin_name string 插件目录名
+---@param entry string 插件 entry（唯一标识）
 ---@return table|nil
-function PluginManagerView:_get_pending_config(plugin_name)
-	local info = self._pending.plugins[plugin_name]
+function PluginManagerView:_get_pending_config(entry)
+	local info = self._pending.plugins[entry]
 	if info and info.config then
 		return info.config
 	end
@@ -3200,7 +3337,7 @@ function PluginManagerView:_collect_changes()
 	for _, plugin_data in ipairs(self.local_plugins) do
 		-- 应用前该插件是否正在运行（运行时真实状态）
 		local old_eff = plugin_main:is_loaded(plugin_data)
-		local new_eff = new_global and plugin_data.config.enabled ~= false
+		local new_eff = new_global and plugin_data.config.enabled
 		if old_eff and not new_eff then
 			-- 启用 → 未启用：热卸载
 			changes.unloads[#changes.unloads + 1] = plugin_data
@@ -3208,7 +3345,7 @@ function PluginManagerView:_collect_changes()
 			-- 未启用 → 启用：热加载（配置由 reload 自行读取）
 			changes.reloads[#changes.reloads + 1] = plugin_data
 		elseif new_eff then
-			local info = self._pending.plugins[plugin_data.name]
+			local info = self._pending.plugins[plugin_data.config.entry]
 			if info and info.config_changed and info.config then
 				-- 保持启用且配置有修改：配置热加载（携带新配置数据）
 				changes.configs[#changes.configs + 1] = {
@@ -3229,8 +3366,8 @@ function PluginManagerView:_needs_restart()
 			return true
 		end
 	end
-	for name in pairs(self._pending.updated) do
-		local plugin_data = self.local_by_name[name]
+	for entry in pairs(self._pending.updated) do
+		local plugin_data = self.local_by_entry[entry]
 		if plugin_data and plugin_main:is_loaded(plugin_data) then
 			return true
 		end
@@ -3247,9 +3384,9 @@ function PluginManagerView:_has_disk_changes()
 		return true
 	end
 	for _, plugin_data in ipairs(self.local_plugins) do
-		local saved = self._saved_state.plugin_enabled[plugin_data.name]
+		local saved = self._saved_state.plugin_enabled[plugin_data.config.entry]
 		-- saved == nil：本会话新安装的插件（打开管理器时尚不存在），最终状态必须落盘
-		if saved == nil or (plugin_data.config.enabled ~= false) ~= saved then
+		if saved == nil or plugin_data.config.enabled ~= saved then
 			return true
 		end
 	end
@@ -3327,22 +3464,22 @@ function PluginManagerView:save()
 		for k, v in pairs(cfg) do
 			out[k] = v
 		end
-		out.enabled = cfg.enabled ~= false
+		out.enabled = cfg.enabled
 		if out.enabled then
 			out.last_used_at = os.time()
 		end
-		local wok = storage:write_lua(plugin_data.config_path, out)
+		local wok = storage:write_lua(plugin_paths.metadata_path(plugin_data.config.entry), out)
 		if not wok then
-			log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), plugin_data.config_path)
+			log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), plugin_paths.metadata_path(plugin_data.config.entry))
 		end
 	end
 
 	-- 写入本会话待应用的插件用户配置（<name>_config.lua）：延迟到应用时才落盘
-	for name, info in pairs(self._pending.plugins) do
+	for entry, info in pairs(self._pending.plugins) do
 		if info.config then
-			local plugin_data = self.local_by_name[name]
+			local plugin_data = self.local_by_entry[entry]
 			if plugin_data then
-				local cfg_path = plugin_data.path .. "/" .. plugin_data.name .. "_config.lua"
+				local cfg_path = plugin_paths.plugin_config_path(plugin_data.config.entry)
 				local wok = storage:write_lua(cfg_path, info.config)
 				if not wok then
 					log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), cfg_path)
@@ -3627,11 +3764,11 @@ function PluginManagerView:_aggregate_group(cfg)
 		}
 	end
 	return plugin_packs.aggregate(cfg, function(entry)
-		local pd = self.local_by_entry[entry] or self.local_by_name[entry]
+		local pd = self.local_by_entry[entry]
 		if not pd or not pd.config then
 			return nil
 		end
-		return pd.config.enabled ~= false
+		return pd.config.enabled
 	end)
 end
 
@@ -4172,15 +4309,20 @@ function PluginManagerView:_install_pack_from_item(item)
 	local updated_n = 0 -- 更新
 	local latest_n = 0 -- 跳过最新
 	local gone_n = 0 -- 商店缺失
+	local blocked_n = 0 -- 本体版本不足
 	for _i, member in ipairs(members) do
 		if self._cancel_requested then
 			return false, "cancelled"
 		end
-		local local_pd = self.local_by_entry[member] or self.local_by_name[member]
+		local local_pd = self.local_by_entry[member]
 		local ritem = remote_map[member]
+		local blocked = ritem and min_version_blocked(ritem) or false
 		if not ritem then
 			-- 商店已下架/不存在：无论本地是否存在都跳过并计数
 			gone_n = gone_n + 1
+		elseif blocked then
+			-- 成员要求更高本体版本：跳过（其余成员照常同步）
+			blocked_n = blocked_n + 1
 		elseif not local_pd then
 			-- 本地缺失且商店存在：代装（走既有单插件安装流程）
 			local ok_install, install_err = self:_install_plugin(ritem, false, nil)
@@ -4188,7 +4330,7 @@ function PluginManagerView:_install_pack_from_item(item)
 				return false, string.format(_("PLUGIN_MGR_ERR_MEMBER_AUTO_INSTALL"), tostring(member), tostring(install_err or _("PLUGIN_MGR_ERR_UNKNOWN")))
 			end
 			installed_n = installed_n + 1
-		elseif has_update(norm_version(local_pd.config and local_pd.config.version or ""), norm_version(ritem.version or "")) then
+		elseif version_lt(local_pd.config.version, ritem.version) then
 			-- 本地已有但商店版本不同：自动更新（复用单插件更新机制：保留本地配置与 enabled）
 			local ok_up, up_err = self:_install_or_update_item(ritem, nil)
 			if not ok_up then
@@ -4213,6 +4355,9 @@ function PluginManagerView:_install_pack_from_item(item)
 	end
 	if gone_n > 0 then
 		parts[#parts + 1] = string.format(_("PLUGIN_MGR_SYNC_PART_MISSING"), gone_n)
+	end
+	if blocked_n > 0 then
+		parts[#parts + 1] = string.format(_("PLUGIN_MGR_SYNC_PART_BLOCKED"), blocked_n)
 	end
 	if #parts == 0 then
 		parts[#parts + 1] = _("PLUGIN_MGR_SYNC_PART_NONE")
@@ -4296,9 +4441,9 @@ function PluginManagerView:_set_group_enabled(cfg, enable)
 	local changed = 0
 	local missing = 0
 	for _, entry in ipairs(members) do
-		local pd = self.local_by_entry[entry] or self.local_by_name[entry]
+		local pd = self.local_by_entry[entry]
 		if pd and pd.config then
-			if (pd.config.enabled ~= false) ~= enable then
+			if pd.config.enabled ~= enable then
 				changed = changed + 1
 			end
 			pd.config.enabled = enable
@@ -4818,7 +4963,7 @@ end
 function PluginManagerView:_gen_group_entry()
 	local base = "group_" .. tostring(os.time())
 	local function taken(entry)
-		if self.local_by_entry[entry] or self.local_by_name[entry] then
+		if self.local_by_entry[entry] then
 			return true
 		end
 		for _, r in ipairs(self.local_packs) do
@@ -4948,12 +5093,12 @@ function PluginManagerView:_render_group_candidates()
 	local q = self._group_editor_search and self._group_editor_search ~= "" and self._group_editor_search
 	local candidates = {}
 	for _, pd in ipairs(self.local_plugins) do
-		local entry = utf8_util.sanitize(pd.entry or pd.name or "")
+		local entry = utf8_util.sanitize(pd.config.entry)
 		if entry ~= "" and not self._group_editor_members[entry] then
 			-- 排他性：已属于其它分组的本地插件不进入候选
 			if not self:_member_in_other_group(entry, editing_entry) then
 				local pcfg = pd.config or {}
-				local cat = pcfg.category or "other"
+				local cat = pcfg.category
 				if self._group_editor_cat and self._group_editor_cat ~= "all" and cat ~= self._group_editor_cat then
 					goto continue
 				end
@@ -5054,9 +5199,9 @@ function PluginManagerView:_render_group_members()
 	local ts_row = self._dl_touch_scale or 1
 	local row_h = math.max(66, math.floor(70 * ts_row + 0.5))
 	for _, entry in ipairs(order) do
-		local pd = self.local_by_entry[entry] or self.local_by_name[entry]
+		local pd = self.local_by_entry[entry]
 		local name = (pd and pd.config and pd.config.name) or entry
-		local enabled = pd and pd.config and (pd.config.enabled ~= false) or false
+		local enabled = pd and pd.config and pd.config.enabled or false
 		local row = self:_make_group_pick_row({
 			list_w = list_w,
 			row_h = row_h,
@@ -5067,7 +5212,7 @@ function PluginManagerView:_render_group_members()
 			on_toggle = function(v)
 				self:_blur_group_inputs()
 				-- 直接修改该成员插件的开关（内存 + unsaved，主界面点「应用」生效）
-				local mpd = self.local_by_entry[entry] or self.local_by_name[entry]
+				local mpd = self.local_by_entry[entry]
 				if mpd and mpd.config then
 					mpd.config.enabled = v
 					if v then
@@ -5127,7 +5272,7 @@ function PluginManagerView:_group_editor_save()
 	-- 收集成员：按右栏当前顺序（过滤掉编辑期间已不存在的插件目录）
 	local order = {}
 	for _, mentry in ipairs(self._group_editor_order or {}) do
-		local pd = self.local_by_entry[mentry] or self.local_by_name[mentry]
+		local pd = self.local_by_entry[mentry]
 		if pd then
 			order[#order + 1] = mentry
 		end
