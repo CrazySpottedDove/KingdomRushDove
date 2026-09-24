@@ -122,7 +122,7 @@ if ready_to_use_skill(this.ultimate, store) then
 		e.level = this.hero.skills.ultimate.level
 		e.pos = V.vclone(target.pos)
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		this.ultimate.ts = store.tick_ts
 

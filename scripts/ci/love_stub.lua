@@ -54,7 +54,12 @@ for _, name in ipairs(STUB_MODULES) do
 	end
 end
 
-_G.love = {}
+-- love 本体也要能取到任意子模块（如 all/constants.lua 会调 love.system.getOS()）
+_G.love = setmetatable({}, {
+	__index = function()
+		return stub_fn
+	end
+})
 _G.FPS = 30
 _G.REF_H = 768
 _G.REF_W = 1024

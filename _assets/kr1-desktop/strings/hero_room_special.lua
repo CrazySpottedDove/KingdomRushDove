@@ -3597,4 +3597,58 @@ d[1].damage_type = e.dps.damage_type
 local ult_every = e.dps.damage_every
 map[_("HERO_ROOM_TANK_ULTIMATE_2_NAME")] = string.format(_("HERO_ROOM_TANK_ULTIMATE_2_DESC"), str(cooldown_str()), str(ult_every), str(damage_str()), str(T("aura_bullet_zeppelin_hero_tank").aura.duration))
 
+-- 浚湃
+set_hero("hero_naga")
+e = T("controller_hero_naga_fight_to_win_or_die")
+factor = e.hp_threshold * 100
+amount = (e.damage_factor - 1) * 100
+map[_("HERO_ROOM_NAGA_PASSIVE_NAME")] = string.format(_("HERO_ROOM_NAGA_PASSIVE_DESC"), str(factor), str(amount))
+
+set_skill(h.hero.skills.splash)
+cooldown = h.melee.attacks[2].cooldown
+get_damage(h.melee.attacks[2])
+d[1].damage_min = ss("damage_config")
+d[1].damage_max = ss("damage_config")
+radius = h.melee.attacks[2].damage_radius
+count = h.melee.attacks[2].count
+map[_("HERO_ROOM_NAGA_SPLASH_NAME")] = string.format(_("HERO_ROOM_NAGA_SPLASH_DESC"), str(cooldown_str()), str(radius), str(count), str(damage_str()))
+
+set_skill(h.hero.skills.wave)
+cooldown = h.timed_attacks.list[2].cooldown
+e = T("aura_naga_skill1_bomb")
+d[1].damage_min = ss("damage_config")
+d[1].damage_max = ss("damage_config")
+d[1].damage_type = e.aura.damage_type
+count = ss("count")
+radius = e.aura.damage_radius
+stun_dur = T("mod_naga_skill1_stun").modifier.duration
+map[_("HERO_ROOM_NAGA_WAVE_NAME")] = string.format(_("HERO_ROOM_NAGA_WAVE_DESC"), str(cooldown_str()), str(count), str(damage_str()), str(radius), str(stun_dur))
+
+set_skill(h.hero.skills.banner_allies)
+cooldown = h.timed_attacks.list[3].cooldown
+e = T("totem_naga")
+radius = e.aura.radius
+heal = ss("heal")
+duration = ss("duration")
+cycle_time = T("mod_totem_naga").hps.heal_every
+map[_("HERO_ROOM_NAGA_BANNER_ALLIES_NAME")] = string.format(_("HERO_ROOM_NAGA_BANNER_ALLIES_DESC"), str(cooldown_str()), str(radius), str(cycle_time), str(heal), str(duration))
+
+set_skill(h.hero.skills.gaze)
+cooldown = h.timed_attacks.list[1].cooldown
+count = ss("max_targets")
+slow_factor = 1 - T("mod_naga_gaze_slow").slow.factor
+duration = ss("duration")
+map[_("HERO_ROOM_NAGA_GAZE_NAME")] = string.format(_("HERO_ROOM_NAGA_GAZE_DESC"), str(cooldown_str()), str(count), str(slow_factor * 100), str(duration))
+
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+e = T("controller_hero_naga_ultimate")
+d[1].damage_min = ss("damage_config")
+d[1].damage_max = ss("damage_config")
+d[1].damage_type = e.damage_type
+duration = e.duration
+cycle_time = 0.2
+radius = e.damage_radius
+map[_("HERO_ROOM_NAGA_ULTIMATE_NAME")] = string.format(_("HERO_ROOM_NAGA_ULTIMATE_DESC"), str(cooldown_str()), str(duration), str(cycle_time), str(radius), str(damage_str()))
+
 return H

@@ -44638,4 +44638,524 @@ function scripts.decal_bullet_zeppelin_hero_tank.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
+scripts.hero_naga = {}
+
+function scripts.hero_naga.level_up(this, store)
+	local hl, ls = level_up_basic(this)
+
+	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
+
+	local b = E:get_template(this.ranged.attacks[1].bullet)
+
+	b.bullet.damage_min = ls.ranged_damage_min[hl]
+	b.bullet.damage_max = ls.ranged_damage_max[hl]
+
+	-- 1技能 潮汐
+	upgrade_skill(this, "wave", function(this, s)
+		local a = this.timed_attacks.list[2]
+
+		a.disabled = nil
+		a.count = s.count[s.level]
+
+		local e = E:get_template(a.hit_aura)
+
+		e.aura.damage_min = s.damage_config[s.level]
+		e.aura.damage_max = s.damage_config[s.level]
+	end)
+
+	-- 2技能 勇气旗帜
+	upgrade_skill(this, "banner_allies", function(this, s)
+		local a = this.timed_attacks.list[3]
+
+		a.disabled = nil
+
+		local e = E:get_template(a.entity)
+
+		e.aura.duration = s.duration[s.level]
+
+		local m = E:get_template(e.aura.mod)
+
+		m.hps.heal_min = s.heal[s.level]
+		m.hps.heal_max = s.heal[s.level]
+	end)
+
+	-- 3技能 那伽之凝视
+	upgrade_skill(this, "gaze", function(this, s)
+		local a = this.timed_attacks.list[1]
+
+		a.disabled = nil
+		a.max_targets = s.max_targets[s.level]
+
+		local e = E:get_template("mod_naga_gaze_slow")
+
+		e.modifier.duration = s.duration[s.level]
+	end)
+
+	-- 4技能 水花四溅
+	upgrade_skill(this, "splash", function(this, s)
+		local a = this.melee.attacks[2]
+
+		a.damage_min = s.damage_config[s.level]
+		a.damage_max = s.damage_config[s.level]
+		a.disabled = nil
+	end)
+
+	-- 大招 深渊恐怖
+	upgrade_skill(this, "ultimate", function(this, s)
+		this.ultimate.disabled = nil
+
+		local u = E:get_template(s.controller_name)
+
+		u.cooldown = s.cooldown[s.level]
+		u.damage = s.damage_config[s.level]
+	end)
+
+	update_hp(this)
+end
+
+function scripts.hero_naga.update(this, store)
+	local h = this.health
+	local a, skill, brk, sta
+	local gaze_attack = this.timed_attacks.list[1]
+	local wave_attack = this.timed_attacks.list[2]
+	local totem_attack = this.timed_attacks.list[3]
+
+	gaze_attack.ts = 0
+	wave_attack.ts = 0
+	totem_attack.ts = 0
+	this.melee.attacks[1].ts = 0
+	this.ranged.attacks[1].ts = 0
+
+	do
+		local e = E:create_entity("controller_hero_naga_fight_to_win_or_die")
+		e.target_id = this.id
+		this.fight_to_win_or_die_controller_id = e.id
+		simulation:queue_insert_entity(e)
+	end
+
+	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
+	this.health_bar.hidden = false
+
+	while true do
+		if h.dead then
+			SU.y_hero_death_and_respawn(store, this)
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_hero_new_rally(store, this) then
+					goto label_naga_0
+				end
+			end
+
+			if SU.hero_level_up(store, this) then
+				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+			end
+
+			-- 3技能 那伽之凝视
+			skill = this.hero.skills.gaze
+			a = gaze_attack
+
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
+				local enemy = U.detect_foremost_enemy_in_range_filter_off(this.pos, a.max_range_trigger, a.vis_flags, a.vis_bans)
+
+				if not enemy then
+					a.ts = a.ts + fts(10)
+				else
+					local start_ts = store.tick_ts
+					local af = enemy.pos.x < this.pos.x
+					S:queue(a.sound)
+					U.animation_start(this, a.animation, af, store.tick_ts, 1)
+
+					if SU.y_hero_wait(store, this, a.cast_time) then
+						goto label_naga_0
+					end
+
+					local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range_effect, a.vis_flags, a.vis_bans)
+					SU.hero_gain_xp_from_skill(this, skill)
+					a.ts = start_ts
+
+					if enemies then
+						table.sort(enemies, function(a, b)
+							if U.enemy_is_silent_target(a) and not U.enemy_is_silent_target(b) then
+								return true
+							elseif not U.enemy_is_silent_target(a) and U.enemy_is_silent_target(b) then
+								return false
+							end
+							local p1 = a.nav_path
+							local p2 = b.nav_path
+							return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
+						end)
+						for i = 1, #enemies do
+							for _, mod in ipairs(a.mods) do
+								local m = E:create_entity(mod)
+
+								m.modifier.source_id = this.id
+								m.modifier.target_id = enemies[i].id
+
+								simulation:queue_insert_entity(m)
+							end
+
+							if i >= a.max_targets then
+								break
+							end
+						end
+					end
+
+					if SU.y_hero_animation_wait(this) then
+						goto label_naga_0
+					end
+				end
+			end
+
+			-- 1技能 潮汐
+			a = wave_attack
+			skill = this.hero.skills.wave
+
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
+				local target_info = U.find_enemies_in_paths(store.enemies, this.pos, a.min_nodes, a.max_nodes, nil, a.vis_flags, a.vis_bans)
+
+				if not target_info or #target_info < a.min_count then
+					a.ts = a.ts + 0.2
+				else
+					local target = target_info[1].enemy
+
+					S:queue(a.sound_pre)
+
+					if not SU.y_soldier_do_single_area_attack(store, this, target, a) then
+						goto label_naga_0
+					end
+					SU.hero_gain_xp_from_skill(this, skill)
+				end
+			end
+
+			-- 2技能 勇气旗帜
+			skill = this.hero.skills.banner_allies
+			a = totem_attack
+
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
+				local soldier = U.is_soldiers_around_need_heal(store.soldiers, this.pos, a.hp_threshold, a.max_range)
+
+				if not soldier then
+					a.ts = a.ts + fts(10)
+				else
+					local start_ts = store.tick_ts
+					local af = soldier.pos.x < this.pos.x
+					S:queue(a.sound)
+					U.animation_start(this, a.animation, af, store.tick_ts, 1)
+
+					if SU.y_hero_wait(store, this, a.cast_time) then
+						goto label_naga_0
+					end
+
+					a.ts = start_ts
+					SU.hero_gain_xp_from_skill(this, skill)
+
+					local e = E:create_entity(a.entity)
+					local nearest_node = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, false)[1]
+					local pi, spi, ni = unpack(nearest_node)
+
+					e.pos = P:node_pos(pi, spi, ni)
+
+					simulation:queue_insert_entity(e)
+
+					if SU.y_hero_animation_wait(this) then
+						goto label_naga_0
+					end
+				end
+			end
+
+			-- 大招 深渊恐怖
+			skill = this.hero.skills.ultimate
+
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
+				local enemy = find_target_at_critical_moment(this, this.ultimate.range, F_RANGED, F_NONE, function(e)
+					return valid_land_node_nearby(e.pos)
+				end, true)
+
+				if enemy and enemy.pos then
+					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+					S:queue(this.sound_events.change_rally_point)
+
+					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+					e.pos = V.vclone(enemy.pos)
+					e.level = this.hero.skills.ultimate.level
+					e.damage_factor = this.unit.damage_factor
+
+					simulation:queue_insert_entity(e)
+
+					this.ultimate.ts = store.tick_ts
+
+					SU.hero_gain_xp_from_skill(this, skill)
+				else
+					this.ultimate.ts = this.ultimate.ts + 1
+				end
+			end
+
+			brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+			if brk then
+				goto label_naga_0
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+				goto label_naga_0
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+				goto label_naga_0
+			end
+
+			SU.soldier_idle(store, this)
+			SU.soldier_regen(store, this)
+		end
+
+		::label_naga_0::
+
+		coroutine.yield()
+	end
+end
+
+function scripts.hero_naga.remove(this, store)
+	if this.fight_to_win_or_die_controller_id then
+		local e = store.entities[this.fight_to_win_or_die_controller_id]
+		if e then
+			if e.enabled then
+				this.unit.damage_factor = this.unit.damage_factor / e.damage_factor
+				e.enabled = false
+				simulation:queue_remove_entity(e)
+			end
+		end
+	end
+	return true
+end
+
+scripts.controller_hero_naga_fight_to_win_or_die = {
+	update = function(this, store)
+		local e = store.entities[this.target_id]
+		if e then
+			if e.health.hp / e.health.hp_max < this.hp_threshold then
+				if not this.enabled then
+					this.enabled = true
+					e.unit.damage_factor = e.unit.damage_factor * this.damage_factor
+				end
+			else
+				if this.enabled then
+					this.enabled = false
+					e.unit.damage_factor = e.unit.damage_factor / this.damage_factor
+				end
+			end
+		end
+	end
+}
+
+scripts.controller_hero_naga_ultimate = {}
+
+function scripts.controller_hero_naga_ultimate.update(this, store)
+	local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true, NF_POWER_3)
+
+	if #nodes < 1 then
+		log.error("controller_hero_naga_ultimate: could not find valid node")
+		simulation:queue_remove_entity(this)
+
+		return
+	end
+
+	local pi, _, ni = unpack(nodes[1])
+	local pos = P:node_pos(pi, 1, ni)
+
+	this.pos.x, this.pos.y = pos.x, pos.y
+
+	U.animation_start_group(this, "in", nil, store.tick_ts, false, "layers")
+	U.y_animation_wait(this)
+	U.animation_start_group(this, "run", nil, store.tick_ts, true, "layers")
+
+	local start_ts = store.tick_ts
+
+	S:queue(this.sound_events.insert)
+
+	for t = 1, this.duration * 5 do
+		while store.tick_ts < start_ts + 0.2 * t do
+			coroutine.yield()
+		end
+
+		local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, this.damage_radius, this.damage_flags, this.damage_bans)
+
+		if targets then
+			for _, e in ipairs(targets) do
+				local d = E.assign_damage(this.damage_type, this.damage * this.damage_factor, this.id, e.id)
+
+				queue_damage(store, d)
+			end
+		end
+	end
+
+	U.animation_start_group(this, "out", nil, store.tick_ts, false, "layers")
+	U.y_animation_wait(this)
+
+	simulation:queue_remove_entity(this)
+end
+
+scripts.aura_naga_skill1_bomb = {}
+
+function scripts.aura_naga_skill1_bomb.update(this, store)
+	local a = this.aura
+
+	local function do_attack(pos, last_attack)
+		local fx = E:create_entity(a.fx)
+
+		fx.pos.x, fx.pos.y = pos.x, pos.y
+
+		if not last_attack then
+			fx.render.sprites[2].scale = V.v(0.8, 0.8)
+		end
+
+		fx.render.sprites[2].ts = store.tick_ts
+		fx.tween.ts = store.tick_ts
+
+		simulation:queue_insert_entity(fx)
+
+		local radius = last_attack and a.last_attack_damage_radius or a.damage_radius
+		local targets = U.find_enemies_in_range(store.enemies, pos, 0, radius, a.vis_flags, a.vis_bans)
+
+		if targets then
+			S:queue(this.sound)
+
+			for _, t in ipairs(targets) do
+				local d = E.assign_damage(a.damage_type, math.random(a.damage_min, a.damage_max) * a.damage_factor, this.id, t.id)
+
+				queue_damage(store, d)
+
+				if (last_attack or math.random() < a.stun_chance) and U.flags_pass(t.vis, this.stun) then
+					local m = E:create_entity(this.stun.mod)
+
+					m.modifier.source_id = this.id
+					m.modifier.target_id = t.id
+
+					simulation:queue_insert_entity(m)
+				end
+			end
+		end
+	end
+
+	local pi, spi, ni, tni, target, origin
+	local target_info = U.find_enemies_in_paths(store.enemies, this.pos, a.min_nodes, a.max_nodes, nil, a.vis_flags, a.vis_bans)
+
+	if not target_info or #target_info < a.min_count then
+		log.error("aura_naga_skill1_bomb could not find valid enemies in the hero paths")
+	else
+		target = target_info[1].enemy
+		origin = target_info[1].origin
+		pi, spi, ni = unpack(origin)
+		tni = target.nav_path.ni
+
+		for i = 1, a.steps do
+			local nni = ni + i * a.step_nodes * km.sign(tni - ni)
+			local oni = ni + i * a.step_nodes * km.sign(tni - ni) * -1
+
+			spi = i == a.steps and 1 or (spi == 2 or spi == 3) and 1 or math.random() < 0.5 and 2 or 3
+
+			U.y_wait(store, a.step_delay)
+
+			local spos = P:node_pos(pi, spi, nni)
+
+			do_attack(spos, i == a.steps)
+
+			if i == 1 then
+				local opos = P:node_pos(pi, spi, oni)
+
+				do_attack(opos, false)
+			end
+		end
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+scripts.aura_totem_naga = {}
+
+function scripts.aura_totem_naga.update(this, store)
+	local last_hit_ts = 0
+	local a = this.aura
+	local ring_sid = 1
+	local ground_sid = 2
+	local totem_sid = 3
+
+	if GR:cell_is(this.pos.x, this.pos.y, TERRAIN_WATER) then
+		local fx = E:create_entity("fx")
+
+		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+		fx.render.sprites[1].name = "totem_water_fx_enter"
+		fx.render.sprites[1].anchor.y = 0.09
+		fx.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(fx)
+	end
+
+	this.render.sprites[ring_sid].ts = store.tick_ts
+
+	U.animation_start(this, "start", nil, store.tick_ts, 1, totem_sid)
+
+	while not U.animation_finished(this, totem_sid) do
+		coroutine.yield()
+	end
+
+	U.animation_start(this, "run", nil, store.tick_ts, true, totem_sid)
+
+	this.aura.ts = store.tick_ts
+
+	while store.tick_ts - this.aura.ts < a.duration do
+		local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+
+		if soldiers then
+			for _, soldier in ipairs(soldiers) do
+				local new_mod = E:create_entity(this.aura.mod)
+
+				new_mod.modifier.level = this.aura.level
+				new_mod.modifier.target_id = soldier.id
+				new_mod.modifier.source_id = this.id
+
+				simulation:queue_insert_entity(new_mod)
+			end
+		end
+
+		last_hit_ts = store.tick_ts
+
+		while store.tick_ts - last_hit_ts < this.aura.cycle_time do
+			coroutine.yield()
+		end
+	end
+
+	if GR:cell_is(this.pos.x, this.pos.y, TERRAIN_WATER) then
+		local fx = E:create_entity("fx")
+
+		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+		fx.render.sprites[1].name = "totem_water_fx_exit"
+		fx.render.sprites[1].anchor.y = 0.09
+		fx.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(fx)
+	end
+
+	this.render.sprites[ground_sid].hidden = true
+	this.render.sprites[ring_sid].hidden = true
+
+	S:queue("TotemVanish")
+
+	U.animation_start(this, "end", nil, store.tick_ts, 1, totem_sid)
+
+	while not U.animation_finished(this, totem_sid) do
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
 return scripts
