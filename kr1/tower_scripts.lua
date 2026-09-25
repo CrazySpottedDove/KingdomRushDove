@@ -17120,6 +17120,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 
 	decal.render.sprites[1].ts = store.tick_ts
 	decal.tween.ts = store.tick_ts
+	decal.pos:copy(this.pos)
 
 	simulation:queue_insert_entity(decal)
 

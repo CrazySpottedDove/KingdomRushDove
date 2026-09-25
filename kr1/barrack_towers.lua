@@ -1492,19 +1492,19 @@ tt.info.fn = scripts.tower_barrack.get_info
 tt.info.portrait = "kr3_info_portraits_towers_0019"
 tt.render.sprites[1].name = "babyAshbite_tower_layer1_0001"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].offset = vec_2(0, 6)
+tt.render.sprites[1].offset = vec_2(0, 16)
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "babyAshbite_tower_layer1_0001"
 tt.render.sprites[2].animated = false
-tt.render.sprites[2].offset = vec_2(0, 26)
+tt.render.sprites[2].offset = vec_2(0, 36)
 tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].name = "babyAshbite_tower_layer2_0005"
 tt.render.sprites[3].animated = false
-tt.render.sprites[3].offset = vec_2(0, 26)
+tt.render.sprites[3].offset = vec_2(0, 36)
 tt.barrack.soldier_type = "soldier_baby_ashbite"
 tt.barrack.rally_range = 350
 tt.barrack.rally_anywhere = true
-tt.barrack.respawn_offset = vec_2(-4, 26)
+tt.barrack.respawn_offset = vec_2(-4, 36)
 tt.barrack.max_soldiers = 1
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_baby_ashbite.update
@@ -3196,11 +3196,10 @@ tt.main_script.insert = scripts.mod_enemy_unblinded_abomination_eat.insert
 tt.main_script.update = scripts.mod_enemy_unblinded_abomination_eat.update
 tt.explode_fx = "fx_soldier_priests_barrack_abomination_eat"
 tt.required_hp = 0.3
+
 -- 兽巢
 tt = RT("tower_orc_warriors", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.info.enc_icon = 3
 tt.info.portrait = "kr4_info_portraits_towers_0002"
 tt.tower.type = "orc_warriors"
@@ -3230,10 +3229,9 @@ tt.render.sprites[3].name = "close"
 tt.sound_events.insert = "TowerOrcWarriorsDenTaunt"
 tt.sound_events.change_rally_point = "TowerOrcWarriorsDenTaunt"
 tt.main_script.update = scripts.tower_orc_warriors.update
+
 tt = RT("soldier_orc_warrior", "soldier_militia")
-
 AC(tt, "powers")
-
 tt.health.armor = 0.2
 tt.health.hp_max = 235
 tt.health_bar.offset = vec_2(0, 30)
@@ -3253,7 +3251,7 @@ tt.powers.seal.heal = {8, 16}
 tt.powers.bloodlust = CC("power")
 tt.render.sprites[1].prefix = "warmongers_soldier_orc_lvl4"
 tt.render.sprites[1].anchor.y = 0.25
-tt.render.sprites[1].offset = vec_2(0, 6)
+tt.render.sprites[1].offset = vec_2(0, 4)
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "warmongers_soldier_orc_lvl4_shadow"
@@ -3264,7 +3262,7 @@ tt.render.sprites[3].prefix = "warmongers_soldier_orc_captain_rage"
 tt.render.sprites[3].name = "running"
 tt.render.sprites[3].loop_forced = true
 tt.render.sprites[3].anchor.y = 0.337
-tt.render.sprites[3].offset = vec_2(0, 6)
+tt.render.sprites[3].offset = vec_2(0, 4)
 tt.render.sprites[3].z = Z_DECALS
 tt.render.sprites[3].hidden = true
 tt.unit.mod_offset = vec_2(0, 14)

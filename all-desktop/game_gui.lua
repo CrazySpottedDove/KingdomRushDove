@@ -610,6 +610,9 @@ function game_gui:init(w, h, game)
 					if w ~= 0 and h ~= 0 then
 						G.rectangle("line", x, y, w, h)
 					end
+					-- 也绘制坐标中心
+					local cx, cy = gg:g2u(V.v(e.pos.x, e.pos.y))
+					G.circle("line", cx, cy, 3)
 				end
 			end
 
@@ -7869,10 +7872,11 @@ function CriketMenu:button_exit(button)
 end
 
 function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
-	local total_cost = 0
+	-- local total_cost = 0
 
 	for k, v in pairs(game_gui.game.store.towers) do
-		if v.tower.type == "holder" or (v.tower_holder and v.tower_holder.blocked) then
+		-- if v.tower.type == "holder" or (v.tower_holder and v.tower_holder.blocked) then
+		if v.ui and v.ui.can_click then
 			local new_tower = E:create_entity(item.action_arg)
 
 			configer.criket().tower_name = new_tower.template_name
@@ -7916,25 +7920,25 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 				end
 			end
 
-			if table.contains(GS.archer_towers, new_tower.template_name) then
-				total_cost = total_cost + E:get_template("tower_archer_1").tower.price + E:get_template("tower_archer_2").tower.price + E:get_template("tower_archer_3").tower.price
-			elseif table.contains(GS.mage_towers, new_tower.template_name) then
-				total_cost = total_cost + E:get_template("tower_mage_1").tower.price + E:get_template("tower_mage_2").tower.price + E:get_template("tower_mage_3").tower.price
-			elseif table.contains(GS.engineer_towers, new_tower.template_name) then
-				total_cost = total_cost + E:get_template("tower_engineer_1").tower.price + E:get_template("tower_engineer_2").tower.price + E:get_template("tower_engineer_3").tower.price
-			elseif table.contains(GS.barrack_towers, new_tower.template_name) then
-				total_cost = total_cost + E:get_template("tower_barrack_1").tower.price + E:get_template("tower_barrack_2").tower.price + E:get_template("tower_barrack_3").tower.price
-			end
+		-- if table.contains(GS.archer_towers, new_tower.template_name) then
+		-- 	total_cost = total_cost + E:get_template("tower_archer_1").tower.price + E:get_template("tower_archer_2").tower.price + E:get_template("tower_archer_3").tower.price
+		-- elseif table.contains(GS.mage_towers, new_tower.template_name) then
+		-- 	total_cost = total_cost + E:get_template("tower_mage_1").tower.price + E:get_template("tower_mage_2").tower.price + E:get_template("tower_mage_3").tower.price
+		-- elseif table.contains(GS.engineer_towers, new_tower.template_name) then
+		-- 	total_cost = total_cost + E:get_template("tower_engineer_1").tower.price + E:get_template("tower_engineer_2").tower.price + E:get_template("tower_engineer_3").tower.price
+		-- elseif table.contains(GS.barrack_towers, new_tower.template_name) then
+		-- 	total_cost = total_cost + E:get_template("tower_barrack_1").tower.price + E:get_template("tower_barrack_2").tower.price + E:get_template("tower_barrack_3").tower.price
+		-- end
 
-			total_cost = total_cost + new_tower.tower.price
+		-- total_cost = total_cost + new_tower.tower.price
 
-			for _, p in pairs(new_tower.powers) do
-				total_cost = total_cost + p.price_base + p.price_inc * (p.max_level - 1)
-			end
+		-- for _, p in pairs(new_tower.powers) do
+		-- 	total_cost = total_cost + p.price_base + p.price_inc * (p.max_level - 1)
+		-- end
 
-			if new_tower.mercenary then
-				total_cost = total_cost + E:get_template(new_tower.barrack.soldier_type).unit.price
-			end
+		-- if new_tower.mercenary then
+		-- 	total_cost = total_cost + E:get_template(new_tower.barrack.soldier_type).unit.price
+		-- end
 		end
 	end
 
