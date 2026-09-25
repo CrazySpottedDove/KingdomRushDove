@@ -1,1 +1,1 @@
-return {{date="2026-09-25",author="CrazySpottedDove",message="fix: 修复部分纹理偏移问题"},{date="2026-09-25",author="CrazySpottedDove",message="feat: 添加毒伤icon"}}
+return {{date="2026-09-25",author="CrazySpottedDove",message="fix: 修复部分纹理偏移问题"},{date="2026-09-25",author="CrazySpottedDove",message="feat: 添加毒伤icon"},{date="2026-09-25",author="CrazySpottedDove",message="fix: 修复部分情况下快捷键失效的问题"}}

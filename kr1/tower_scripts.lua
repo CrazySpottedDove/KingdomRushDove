@@ -4346,7 +4346,6 @@ scripts.tower_bfg = {
 						b.bullet.from = vclone(b.pos)
 						b.bullet.to = dest
 						b.bullet.fragment_count = pow_c.fragment_count_base + pow_c.fragment_count_inc * pow_c.level
-						b.bullet.target_id = enemy and enemy.id or trigger.id
 						b.bullet.source_id = this.id
 
 						simulation:queue_insert_entity(b)
@@ -4382,7 +4381,6 @@ scripts.tower_bfg = {
 						b.bullet.damage_factor = this.tower.damage_factor
 						b.bullet.from = vclone(b.pos)
 						b.bullet.to = dest
-						b.bullet.target_id = enemy and enemy.id or trigger.id
 						b.bullet.source_id = this.id
 
 						simulation:queue_insert_entity(b)
@@ -30423,6 +30421,7 @@ function scripts.tower_swamp_monster.update(this, store)
 								bl = E:create_entity(ab.bullet_bomb_tosky)
 
 								bl.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+								bl.bullet.target_id = target.id
 							else
 								bl = E:create_entity(ab.bullet_bomb)
 
@@ -30436,12 +30435,12 @@ function scripts.tower_swamp_monster.update(this, store)
 							bl = E:create_entity(ab.bullet)
 
 							bl.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+							bl.bullet.target_id = target.id
 						end
 
 						bl.bullet.from:set(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 						bl.pos:copy(bl.bullet.from)
 
-						bl.bullet.target_id = target.id
 						bl.bullet.source_id = this.id
 						bl.bullet.damage_factor = this.tower.damage_factor
 

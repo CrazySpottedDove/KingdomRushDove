@@ -1566,9 +1566,7 @@ function game_gui:disable_keys()
 end
 
 function game_gui:enable_keys()
-	if not self.manual_gui_hide then
-		self.keys_disabled = nil
-	end
+	self.keys_disabled = nil
 end
 
 function game_gui:hide()
