@@ -4440,6 +4440,8 @@ return {
 	LEVEL_1_IRON_UNLOCK = "no archer\nno mage",
 	LEVEL_1_MODES_UPGRADES = "lvl 1 max\nNo Heroes",
 	LEVEL_1_TITLE = "Southport",
+	LEVEL_201_HISTORY = "General, I was sent back in time to warn the Linirean King of the fate of the world at the hands of Vez'nan, the Dark Wizard.\n\nI see that even in these times the citadel is being sieged by bandits, so let's first get rid of this threat before marching forward!",
+	LEVEL_201_TITLE = "Linirean Castle",
 	LEVEL_20_HEROIC = "Heroic Description 15",
 	LEVEL_20_HISTORY = "Demons have ravaged our troops stationed at Vez'nan's tower, leaving a lone survivor... From his terrified mumbling we've learned that these hellish hordes rose from the depths of the Rift of Cinders. \n\nGeneral, you must secure the area, discover the true origin of this threat, and make sure we have truly prevailed over Vez'nan.",
 	LEVEL_20_IRON = "Iron Description 15",
@@ -4892,6 +4894,7 @@ return {
 	MAP_UI_GEN_2 = "Gen 2",
 	MAP_UI_GEN_3 = "Gen 3",
 	MAP_UI_GEN_5 = "Gen 5",
+	MAP_UI_GEN_6 = "Gen 6",
 	MAP_UI_GEN_PLUGIN = "Plugin Maps",
 	MAP_UI_HERO_NAME_SEP_CJK = "・",
 	MAP_UI_HERO_NAME_SEP_LATIN = "·",
@@ -8761,5 +8764,10 @@ return {
 	["this is the good one!"] = "this is the good one!",
 	["uh-oh..."] = "uh-oh...",
 	["wOOt!"] = "wOOt!",
-	["you can adjust your soldiers rally point to make them defend a different area."] = "you can adjust your soldiers' rally point to make them defend a different area."
+	["you can adjust your soldiers rally point to make them defend a different area."] = "you can adjust your soldiers' rally point to make them defend a different area.",
+	ENEMY_BANDIT_KR6_NAME = "Bandit",
+	ENEMY_BANDIT_KR6_DESCRIPTION = "They are the lowest ranked fighters in the Shadow Order. It is easy to see why.",
+	ENEMY_BANDIT_TUT_KR6_NAME = "Bandit",
+	ENEMY_BLACKGUARD_NAME = "Blackguard",
+	ENEMY_BLACKGUARD_DESCRIPTION = "Tougher and meaner than the bandits, they shank their opponents with two blades."
 }

@@ -13152,3 +13152,93 @@ tt.aura.radius = 50
 tt.aura.cycle_time = 0.1
 tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
 tt.aura.track_source = true
+
+-- kr6 敌人：移植自 KR Genesis (kr6) templates_game.lua
+-- 说明：
+--   * kr6 用 balance.xxx 引用的数值，这里按 dove 的「不使用 balance」约定内联成字面量
+--   * 敌人 hp_max 统一内部联成 4 档难度表（dove 的 difficulty PT 会按难度取），每档乘 1.375
+--   * 与 dove 同名模板一律加 _kr6 后缀（enemy_bandit / enemy_blackguard 在 dove 里指的是完全不同的单位）
+--   * 原 kr6 的 enemy_KR6/enemy_KR5 基础模板字段直接内联到每个敌人（父模板用 dove 的 "enemy"）
+
+-- kr6 stage01 的三种敌人。kr6 里它们都继承 enemy_KR6（= dove 的 enemy + kr6 增量），
+-- 这里不使用中间基础模板，直接把 enemy_KR6 的字段铺到每个敌人上。
+-- 共同增量（原 enemy_KR5 + enemy_KR6）：
+--   unit.head_offset = v(0, 0)
+--   unit.disintegrate_fx = "fx_enemy_desintegrate"
+--   unit.fade_time_after_death = 3
+--   unit.fade_duration_after_death = 0.3
+--   render.sprites[1].angles_custom.walk = {55, 115, 245, 305}
+
+-- enemy_bandit_kr6 —— 与 dove 的 enemy_bandit 同名但完全是另一个单位，故加后缀
+tt = RT("enemy_bandit_kr6", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(3, 17)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 5
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = {55, 55, 68.75, 137.5}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 32)
+tt.info.portrait = "kr6_info_portraits_enemies_0001"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 40
+tt.render.sprites[1].prefix = "enemy_bandit_kr6"
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 1
+tt.melee.attacks[1].damage_max = 2
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(6), fts(13)}
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
+tt.sound_events.death = "EnemyBanditDeath"
+tt.ui.click_rect = r(-13, 0, 26, 25)
+
+-- enemy_bandit_tut_kr6（kr6 教学用，血量/速度单独一套）
+tt = RT("enemy_bandit_tut_kr6", "enemy_bandit_kr6")
+tt.info.fn = nil
+tt.health.hp_max = 33
+tt.motion.max_speed = 48
+tt.ui.click_rect = r(0, 0, 0, 0)
+
+-- enemy_blackguard（kr6；dove 无同名模板，直接用原名）
+tt = RT("enemy_blackguard", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(4.5, 19)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 8
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = {96.25, 110, 137.5, 275}
+tt.health.armor = 0.3
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 34)
+tt.health.dead_lifetime = 1
+tt.info.portrait = "kr6_info_portraits_enemies_0002"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 40
+tt.render.sprites[1].prefix = "enemy_blackguard_kr6"
+tt.melee.attacks[1].cooldown = 1.25
+tt.melee.attacks[1].damage_min = 3
+tt.melee.attacks[1].damage_max = 5
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(10), fts(18)}
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
+tt.sound_events.death = "EnemyBlackguardDeath"
+tt.ui.click_rect = r(-18, 0, 26, 30)

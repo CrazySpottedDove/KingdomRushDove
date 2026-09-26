@@ -99,7 +99,26 @@ local holder_template_names = {
 	tower_holder_sea_of_trees_17 = TERRAIN_STYLE_SEA_OF_TREES_17,
 	tower_holder_sea_of_trees_18 = TERRAIN_STYLE_SEA_OF_TREES_18,
 	tower_holder_sea_of_trees_19 = TERRAIN_STYLE_SEA_OF_TREES_19,
-	tower_holder_sea_of_trees_20 = TERRAIN_STYLE_SEA_OF_TREES_20
+	tower_holder_sea_of_trees_20 = TERRAIN_STYLE_SEA_OF_TREES_20,
+	-- kr6 地形塔位（tower_holder_terrain_*）
+	tower_holder_terrain_1_1 = TERRAIN_STYLE_KR6_TERRAIN_1_1,
+	tower_holder_terrain_1_2 = TERRAIN_STYLE_KR6_TERRAIN_1_2,
+	tower_holder_terrain_1_3 = TERRAIN_STYLE_KR6_TERRAIN_1_3,
+	tower_holder_terrain_1_4 = TERRAIN_STYLE_KR6_TERRAIN_1_4,
+	tower_holder_terrain_2_1 = TERRAIN_STYLE_KR6_TERRAIN_2_1,
+	tower_holder_terrain_2_2 = TERRAIN_STYLE_KR6_TERRAIN_2_2,
+	tower_holder_terrain_2_3 = TERRAIN_STYLE_KR6_TERRAIN_2_3,
+	tower_holder_terrain_2_4 = TERRAIN_STYLE_KR6_TERRAIN_2_4,
+	tower_holder_terrain_3_1 = TERRAIN_STYLE_KR6_TERRAIN_3_1,
+	tower_holder_terrain_3_2 = TERRAIN_STYLE_KR6_TERRAIN_3_2,
+	tower_holder_terrain_3_3 = TERRAIN_STYLE_KR6_TERRAIN_3_3,
+	tower_holder_terrain_3_4 = TERRAIN_STYLE_KR6_TERRAIN_3_4,
+	tower_holder_terrain_3_5 = TERRAIN_STYLE_KR6_TERRAIN_3_5,
+	tower_holder_terrain_3_6 = TERRAIN_STYLE_KR6_TERRAIN_3_6,
+	tower_holder_terrain_3_7 = TERRAIN_STYLE_KR6_TERRAIN_3_7,
+	tower_holder_terrain_3_8 = TERRAIN_STYLE_KR6_TERRAIN_3_8,
+	tower_holder_terrain_3_9 = TERRAIN_STYLE_KR6_TERRAIN_3_9,
+	tower_holder_terrain_3_10 = TERRAIN_STYLE_KR6_TERRAIN_3_10
 }
 
 -- 注册所有模板

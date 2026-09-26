@@ -121,6 +121,8 @@ local function get_map_points_for_generation(generation)
 		points_data = require("data.map_points3")
 	elseif generation == 5 then
 		points_data = require("data.map_points5")
+	elseif generation == 6 then
+		points_data = require("data.map_points6")
 	end
 
 	local points_by_level = {}
@@ -176,6 +178,8 @@ local function queue_generation_music(generation)
 		S:queue("MusicMap3")
 	elseif generation == 5 then
 		S:queue("MusicMap5")
+	elseif generation == 6 then
+		S:queue("MusicMap6")
 	end
 end
 
@@ -745,6 +749,9 @@ function screen_map:init(w, h)
 	}, {
 		label = _("MAP_UI_GEN_5"),
 		value = 5
+	}, {
+		label = _("MAP_UI_GEN_6"),
+		value = 6
 	}, {
 		label = _("MAP_UI_GEN_PLUGIN"),
 		value = screen_map.CUSTOM_GEN
@@ -1502,6 +1509,11 @@ function screen_map:keypressed(key, isrepeat)
 		if self.generation ~= 5 then
 			hide_others()
 			self:change_generation(5)
+		end
+	elseif key == "6" then
+		if self.generation ~= 6 then
+			hide_others()
+			self:change_generation(6)
 		end
 	elseif key == "k" then
 		hide_others()

@@ -1,0 +1,261 @@
+#	COMANDOS									1 - Derecha a Izquierda
+	column_names								inc	1:*	1:2	1:1	1:3
+#	level properties
+	description	main JC
+	lives	20
+	gold	175
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	561
+#	stage gold curve
+#	WAVE 1
+#	enemies									bandit	blackguard	shadow_blades	shadow_archer
+#	cant.									8	0	0	0
+#	gold	40								40	0	0	0
+	wave		1						-1
+#	Signals start of wave for tutorial								0
+									2		bandit_kr6
+									0.8			bandit_kr6
+									0.8				bandit_kr6
+									0.4		bandit_kr6
+									0.4			bandit_kr6
+									12				bandit_kr6
+									0.8			bandit_kr6
+									0.8		bandit_kr6
+	wait								1
+
+#	WAVE 2
+#	enemies									bandit	blackguard	shadow_blades	shadow_archer
+#	cant.									14	0	0	0
+#	gold	112								112	0	0	0
+	wave		2						22
+									0		bandit_kr6		bandit_kr6
+									0.6			bandit_kr6
+									0.6		bandit_kr6		bandit_kr6
+									0.6			bandit_kr6
+									0.6		bandit_kr6		bandit_kr6
+									12		bandit_kr6
+									0.6				bandit_kr6
+									0.6			bandit_kr6
+									1.2		bandit_kr6
+									0.6				bandit_kr6
+									0.6			bandit_kr6
+
+
+
+
+
+#	WAVE 3
+#	enemies									bandit	blackguard	shadow_blades	shadow_archer
+#	cant.									16	0	0	0
+#	gold	80								80	0	0	0
+	wave		3						35
+									0		bandit_kr6		bandit_kr6
+									0.8			bandit_kr6
+									6			bandit_kr6
+									0.6		bandit_kr6		bandit_kr6
+									0.8			bandit_kr6
+									12		bandit_kr6		bandit_kr6
+									1.2		bandit_kr6		bandit_kr6
+									1.2		bandit_kr6		bandit_kr6
+									6		bandit_kr6
+									0.6				bandit_kr6
+									0.6			bandit_kr6
+
+#	WAVE 4
+#	enemies									bandit	blackguard	shadow_blades	shadow_archer
+#	cant.									8	4	0	0
+#	gold	72								40	32	0	0
+	wave		4						25
+									0	bandit_kr6
+									0.6	bandit_kr6
+									0.6	bandit_kr6
+									0.6	bandit_kr6
+									12		blackguard
+									1				blackguard
+									6	bandit_kr6
+									0.6	bandit_kr6
+									0.6	bandit_kr6
+									0.6	bandit_kr6
+									10				blackguard
+									1		blackguard
+
+#	WAVE 5
+#	enemies									bandit	blackguard	shadow_blades	shadow_archer
+#	cant.									10	4	0	0
+#	gold	82								50	32	0	0
+	wave		5						25
+									0		blackguard
+									1			blackguard
+									6		bandit_kr6		bandit_kr6
+									0.6		bandit_kr6		bandit_kr6
+									10		blackguard
+									1				blackguard
+									8		bandit_kr6
+									0.6				bandit_kr6
+									0.6		bandit_kr6
+									0.6				bandit_kr6
+									0.6		bandit_kr6
+									0.6				bandit_kr6
+
+
+
+
+
+
+
+
+
+#	TUTORIAL: small help at bottom
+	manual_wave	tutorial							0
+#
+#	ftue-step : analytics
+	signal	ftue-step	tutorial_begins						0
+#
+#	TUTORIAL START
+#	HUD setup for tutorial
+	signal	kr6-tutorial-start-tutorial							0
+	signal	tutorial-hide-wave							0
+	signal	tutorial-stop-input							0
+	signal	tutorial-stop-movement							0
+#	Prevent input from all holders
+	signal	disable-all-holders							0
+#	Center camera real quick while screen is dark
+	signal	tutorial-pan-zoom-center-find	holder_with_id	2	0.1	0	66		0
+	wait								0.4
+#	Center on holder 6, in 1 second, offset 0 on x and 30 on y
+	signal	tutorial-pan-zoom-center-find	holder_with_id	6	3.5	-30	60		0
+	wait								0.8
+#	SIGNAL MAIN WAVE TO START SPAWNING. (THIS WAY TO PREVENT PRE-BATTLE MUSIC)
+	signal	kr6-tutorial-first-enemy-spawn							0
+									0			bandit_tut_kr6
+	wait								1.2
+#	Also prevents knights flipping								0
+	signal	kr6-tutorial-knights-look-right							0
+#	Small wait to make it natural that knights take some time to spot the bandits								0
+	wait								2.2
+#	Knight warning balloon
+	signal	show-balloon_tutorial-xy	TB_TOWER_WARNING	835	390				0
+	wait								1.8
+									0.5				bandit_tut_kr6
+	wait								0.8
+	signal	tutorial-hide-balloon	TB_TOWER_WARNING						0
+	signal	enable-holder	6						0
+	signal	tutorial-show-focus-circle-find	holder_with_id	6	0	0			0
+	wait								0.6
+									0		bandit_tut_kr6
+	wait								0.8
+									0			bandit_tut_kr6
+	wait								0.4
+#	Freezes enemies that have already spawned. WONT freeze new ones
+	signal	tutorial-freeze-enemies							0
+	signal	tutorial-resume-input							0
+#	Disable all stage interactables (done here to disable enemies and keep input)
+	signal	tutorial-disable-all-interactables							0
+#
+#	BUILD TOWER TUTORIAL
+	signal	kr6-tutorial-sequence	build-tower						0
+	wait_signal	tower-built							-1
+	signal	kr6-tutorial-build-tower-sequence-finished							0
+	signal	tutorial-unfreeze-enemies							0
+	signal	hide-focus-circle							0
+	wait								1
+#
+#	GOLD TUTORIAL
+	signal	tutorial-stop-input
+	wait_signal	got-enemy-gold							-1
+#	Disable archer attack to prevent them attacking when time is 'stopped'. Need to reenable later
+	signal	kr6-tutorial-disable-archer-shoot							0
+	wait								0.5
+	signal	highlight-hud-label	hud_gold_label	5					0
+	signal	tutorial-highlight-entity-find	first_dead_enemy						0
+	signal	tutorial-pan-zoom-center-find	first_dead_enemy	1	0	0			0
+	signal	tutorial-show-focus-circle-find	first_dead_enemy	0	0				0
+#	Offset balloon above enemy to prevent overlap
+	signal	tutorial-show-balloon-find	first_dead_enemy	TB_GOLD	0	40			0
+	signal	tutorial-freeze-enemies							0
+	wait								2.5
+	signal	tutorial-unfreeze-enemies							0
+	signal	kr6-tutorial-reenable-archer-shoot							0
+	signal	tutorial-hide-balloon	TB_GOLD						0
+	signal	hide-focus-circle							0
+	wait_signal	all_enemies_died							-1
+#
+#	END GOAL TUTORIAL
+	signal	tutorial-pan-zoom-center-find	flags_with_id	1	1.5	0	0	1.2	0
+	signal	tutorial-show-focus-circle-find	flags_with_id	1	200	-20			0
+	wait								1.5
+#	Show balloon with center on the flags of path 1, use TB_GOAL as key and offset 300 on x and -20 on y
+	signal	tutorial-show-balloon-find	flags_with_id	1	TB_GOAL	222	-23		0
+	signal	tutorial-highlight-entity-find	all_flags						0
+	wait								2
+	signal	tutorial-hide-balloon	TB_GOAL						0
+	signal	hide-focus-circle							0
+#
+#	WAVE CALL TUTORIAL
+	signal	tutorial-pan-zoom-center-find	next_wave_with_id	1	1.5	0	0	1.2	0
+	wait								1
+	signal	tutorial-show-focus-circle-find	next_wave_with_id	1	-140	-20
+#	signal	tutorial-resume-input							0
+#	Shows the wave contents.
+	signal	tutorial-show-wave							0
+	wait								1
+	signal	tutorial-show-balloon-find	next_wave_with_id	1	TB_START	-180	20		0
+#	Selects wave button for non-touch devices
+#	signal	tutorial-focus-wave							0
+	signal	tutorial-resume-input							0
+	signal	kr6-tutorial-knights-turn-on-flip							0
+#	WAIT FOR WAVE 2
+	wait_signal	next-wave-sent							-1
+#	signal	kr6-trigger-archer-level-up							0
+	signal	enable-all-holders							0
+	signal	tutorial-hide-balloon							0
+	signal	hide-focus-circle							0
+	signal	tutorial-resume-movement							0
+#	Reenable interactables
+	signal	tutorial-enable-all-interactables							0
+	signal	show-gui							0
+#	TOWERS LEVEL UP
+	wait								7
+#	signal	wave-notification	view	TUTORIAL_TOWERS_LEVELUP					0
+#
+#	POWER REINFORCEMENTS
+	wait								11
+	signal	wave-notification	view	POWER_REINFORCEMENT					0
+	wait								0.5
+	signal	kr6-tutorial-sequence	power-reinforcement						0
+#
+#	POWER RAIN OF FIRE
+	wait_signal	next-wave-sent							-1
+	wait								7
+	signal	wave-notification	view	POWER_RAIN_OF_FIRE					0
+	wait								0.5
+	signal	kr6-tutorial-sequence	power-rain-of-fire						0
+#
+#	HERO
+	wait_signal	next-wave-sent							-1
+#	Inserta a Gerald en cierta posicion
+	signal	kr6-tutorial-insert-hero	gerald	628	352				0
+	signal	tutorial-pan-zoom-center-find	entity_with_name	controller_stage_01_gerald_intro	1.5	0	0	1.5	0.1
+	wait								9.5
+	signal	wave-notification	view	TUTORIAL_HERO					0
+	wait								0.5
+#	Hacemos que el ultimo heroe insertado se mueva a cierta posicion
+#	wait								1.5
+	signal	kr6-tutorial-sequence	drag-hero	gerald					0
+
+
+
+#	Small Help for specific signals for stage 01, check #help for generic tutorial signals
+#		Description	Parameters
+#	kr6-tutorial-start-tutorial	Does preparations for the start of the tutorial such as hiding UI and preventing wave spawns.	None
+#	kr6-tutorial-sequence	Activates specific sequences in the tutorial. For example, the whole sequence of building a tower is contained in the 'build-tower' sequence.	sequence_id (build-tower, power-reinforcement, power-royal-edict, drag-hero)
+#	kr6-tutorial-knights-look-right	Causes the barracks knights to look to the right and disables their auto-flipping.	None
+#	kr6-tutorial-knights-turn-on-flip	Reactivates the knights auto-flip.	None
+#	kr6-tutorial-disable-archer-shoot	Prevents archers from acquiring new targets.	None
+#	kr6-tutorial-reenable-archer-shoot	Reativates archer shooting.	None
+#	kr6-tutorial-insert-hero	Inserts a hero in a certain position.	hero, pos_x, pos_y
+#	kr6-tutorial-set-move-hero	Sets the hero's rally to a certain position.	hero, where_x, where_y

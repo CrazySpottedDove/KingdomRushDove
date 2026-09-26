@@ -326,7 +326,18 @@ loader = {
 }
 
 function loader:load()
-	if main.params.tmp_restart then
+	if main.params.autoplay then
+		-- 无人值守自动测试：跳过 settings / language_select / must_read / update_manager，
+		-- 直接进 director（由它把 autoplay 场景排进队列）。
+		-- 窗口不可见（见 conf.lua 的 t.window.visible）、静音、且不重置窗口模式，
+		-- 避免打断正在全屏游玩的本体。
+		main.params.fullscreen = false
+		main.params.vsync = false
+		main.params.volume_fx = 0
+		main.params.volume_music = 0
+		MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+		self.items = {"director"}
+	elseif main.params.tmp_restart then
 		MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
 		self.items = {"director"}
 	else
@@ -358,8 +369,22 @@ end
 local function load(arg)
 	local w, h = love.window.getDesktopDimensions()
 
-	-- 安卓端强制全屏游戏
-	if IS_ANDROID then
+	-- 无人值守自动测试（-autoplay）：这里再 setMode 会把 conf.lua 建好的不可见窗口重新显示出来，
+	-- 抢走正在全屏游玩的本体的焦点。所以保留 conf.lua 创建的那个不可见窗口，不碰窗口设置。
+	local is_autoplay = false
+
+	for _, v in pairs(arg) do
+		if v == "-autoplay" then
+			is_autoplay = true
+
+			break
+		end
+	end
+
+	if is_autoplay then
+	-- block empty：窗口保持 conf.lua 的不可见状态
+	elseif IS_ANDROID then
+		-- 安卓端强制全屏游戏
 		love.window.setMode(w, h, {
 			centered = false,
 			vsync = false,
@@ -433,10 +458,14 @@ local function load(arg)
 	MU.start_debugger(main.params)
 
 	main:set_locale(main.params.locale)
-	love.window.setTitle(_("APP_TITLE") .. version.id)
 
-	-- icon switched to krdove
-	love.window.setIcon(love.image.newImageData(KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"))
+	-- 自动测试下不碰窗口标题/图标：窗口不可见，也没必要惊动窗口管理器
+	if not main.params.autoplay then
+		love.window.setTitle(_("APP_TITLE") .. version.id)
+
+		-- icon switched to krdove
+		love.window.setIcon(love.image.newImageData(KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"))
+	end
 
 	loader:load()
 end

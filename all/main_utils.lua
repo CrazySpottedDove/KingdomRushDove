@@ -117,6 +117,12 @@ function mu.parse_args(arg, params)
 	if has_arg("atlas_manager_on") then
 		params.atlas_manager_on = true
 	end
+
+	-- 无人值守自动测试：-autoplay <关卡号>[-mode <模式>][-diff <难度>]
+	-- 直接进入 autoplay 场景，跳过其它所有场景。
+	if has_arg("autoplay") then
+		params.autoplay = argv("autoplay")
+	end
 end
 
 function mu.default_params(params, game_name, game_target, game_platform)
@@ -152,7 +158,9 @@ function mu.apply_params(params, game_name, game_target, game_platform)
 	SOUND_POOL_SIZE_FACTOR = params.sound_pool_size
 
 	-- 安卓端禁止自定义参数
-	if not IS_ANDROID then
+	-- autoplay（无人值守自动测试）不重置窗口：conf.lua 已经把窗口建成不可见，
+	-- 这里再 setMode 会把它重新显示出来，打断正在全屏游玩的本体。
+	if not IS_ANDROID and not params.autoplay then
 		love.window.setMode(params.width, params.height, {
 			centered = false,
 			fullscreen = params.fullscreen,

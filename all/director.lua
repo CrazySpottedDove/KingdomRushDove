@@ -93,7 +93,21 @@ function director:init(params)
 		self.next_item_name = "slots"
 	end
 
-	if params.level or params.screen then
+	if params.autoplay then
+		-- 无人值守自动测试：跳过所有其它场景，直接进 autoplay
+		if not storage:load_slot(1) then
+			storage:create_slot(1)
+		end
+
+		storage:set_active_slot(1)
+
+		self.next_item_name = "autoplay"
+		self.next_item_args = {
+			level_idx = tonumber(params.autoplay),
+			level_mode = params.mode and tonumber(params.mode) or GAME_MODE_CAMPAIGN,
+			level_difficulty = params.diff and tonumber(params.diff) or DIFFICULTY_NORMAL
+		}
+	elseif params.level or params.screen then
 		if not storage:load_slot(1) then
 			storage:create_slot(1)
 		end

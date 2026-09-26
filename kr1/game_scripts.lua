@@ -69908,4 +69908,554 @@ scripts.controller_mage_purge_field = {
 	end
 }
 
+-- ================================================================
+-- kr6 关卡 201（kr6 stage01）所需脚本
+----------------------------------------------------------------
+scripts.decal_stage_201_cow = {}
+
+function scripts.decal_stage_201_cow.update(this, store, script)
+	local taps_count = 0
+
+	while taps_count < 3 do
+		if this.ui.clicked then
+			taps_count = taps_count + 1
+
+			U.y_animation_play(this, "tap", nil, store.tick_ts, 1)
+			U.animation_start(this, "idle", nil, store.tick_ts, 1)
+
+			this.ui.clicked = nil
+		end
+
+		coroutine.yield()
+	end
+
+	S:queue(this.sound_discover)
+	U.y_animation_play(this, "action", nil, store.tick_ts, 1)
+	signal.emit("cow-ard-spies-stage01")
+	simulation:queue_remove_entity(this)
+end
+
+scripts.decal_stage_201_king = {}
+
+function scripts.decal_stage_201_king.update(this, store, script)
+	while store.level_mode == GAME_MODE_CAMPAIGN and store.wave_group_number < 1 do
+		coroutine.yield()
+	end
+
+	this.render.sprites[1].hidden = false
+
+	U.y_animation_play(this, "entrance", nil, store.tick_ts, 1, 1)
+	U.animation_start(this, "idle", nil, store.tick_ts, 1, 1)
+
+	local aa = this.attacks.list[1]
+	local min_range = this.attacks.min_range
+	local max_range = this.attacks.max_range
+
+	while true do
+		coroutine.yield()
+
+		if store.tick_ts - aa.ts > aa.cooldown then
+			local k_pos = V.v(this.pos.x + this.king_offset.x, this.pos.y + this.king_offset.y)
+			local k_pos_ground = V.v(k_pos.x, k_pos.y - this.balcony_height)
+			local trigger_enemy, _ = U.find_foremost_enemy(store.entities, k_pos_ground, min_range, max_range, false, aa.vis_flags, aa.vis_bans)
+
+			if not trigger_enemy then
+				SU.delay_attack(store, aa, fts(10))
+			else
+				local fb = aa.bullet
+				local roll = math.random()
+
+				if roll < aa.bullet_chances[1] then
+					fb = fb .. "_anvil"
+
+					U.animation_start(this, "attack_1", nil, store.tick_ts, false)
+				elseif roll < aa.bullet_chances[1] + aa.bullet_chances[2] then
+					fb = fb .. "_bust"
+
+					U.animation_start(this, "attack_2", nil, store.tick_ts, false)
+				elseif roll < aa.bullet_chances[1] + aa.bullet_chances[2] + aa.bullet_chances[3] then
+					fb = fb .. "_sheep"
+
+					U.animation_start(this, "attack_3", nil, store.tick_ts, false)
+				end
+
+				aa.ts = store.tick_ts
+
+				U.y_wait(store, aa.shoot_time)
+
+				local enemy, _ = U.find_foremost_enemy(store.entities, k_pos_ground, min_range, max_range, false, aa.vis_flags, aa.vis_bans)
+
+				enemy = enemy or trigger_enemy
+
+				local enp = enemy.nav_path
+				local to_pos = P:node_pos(enp.pi, 1, enp.ni)
+				local b = E:create_entity(fb)
+
+				b.pos.x, b.pos.y = k_pos.x + aa.bullet_start_offset.x, k_pos.y + aa.bullet_start_offset.y
+				b.bullet.from = V.vclone(b.pos)
+				b.bullet.to = V.vclone(to_pos)
+				b.bullet.source_id = this.id
+
+				simulation:queue_insert_entity(b)
+				S:queue(this.sound_attack)
+				U.y_wait(store, this.wait_laugh)
+				S:queue(this.sound_laugh)
+				U.y_animation_wait(this, 1)
+			end
+		end
+	end
+end
+
+scripts.decal_stage_201_merchant = {}
+
+function scripts.decal_stage_201_merchant.update(this, store, script)
+	local idle_ts = store.tick_ts
+	local idle_cd = fts(math.random(2, 4) * FPS)
+	local idle = 1
+
+	while not this.broken_cart do
+		if idle_cd < store.tick_ts - idle_ts then
+			idle_cd = fts(math.random(2, 4) * FPS)
+			idle_ts = store.tick_ts
+			idle = idle == 1 and 2 or 1
+
+			U.animation_start(this, "idle_" .. idle, nil, store.tick_ts, false)
+		end
+
+		coroutine.yield()
+	end
+
+	U.animation_start(this, "action", nil, store.tick_ts)
+	U.y_wait(store, 2)
+	signal.emit("my-cabbages-stage01")
+	U.y_animation_wait(this)
+end
+
+scripts.decal_stage_201_statue = {}
+
+function scripts.decal_stage_201_statue.update(this, store, script)
+	local taps_count = 0
+	local w
+
+	for _, e in pairs(store.entities) do
+		if e.template_name == this.worker_t then
+			w = e
+
+			break
+		end
+	end
+
+	while true do
+		if this.ui.clicked then
+			taps_count = taps_count + 1
+
+			if taps_count >= 4 then
+				taps_count = 1
+			end
+
+			local idle = taps_count == 3 and "idle" or "idle_" .. taps_count
+
+			S:queue(this.sound_tap)
+			U.animation_start(w, taps_count == 3 and "action_2" or "action_1", nil, store.tick_ts, 1)
+			U.y_animation_play(this, "tap_" .. taps_count, nil, store.tick_ts, 1)
+			U.animation_start(this, idle, nil, store.tick_ts, 1)
+			U.animation_start(w, "idle", nil, store.tick_ts, -1)
+
+			this.ui.clicked = nil
+		end
+
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+scripts.decal_stage_201_stone = {}
+
+function scripts.decal_stage_201_stone.update(this, store, script)
+	local taps_count = 0
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			this.ui.can_click = false
+			taps_count = taps_count + 1
+
+			if taps_count <= 2 then
+				S:queue(this.sound_tap)
+				U.y_animation_play(this, "action_1", nil, store.tick_ts, 1)
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+				this.ui.can_click = true
+			else
+				S:queue(this.sound_break)
+				U.animation_start(this, "action_2", nil, store.tick_ts, false)
+
+				for k, v in pairs(store.entities) do
+					if v.template_name == this.merchant_t then
+						v.broken_cart = true
+
+						break
+					end
+				end
+
+				U.y_wait(store, fts(7))
+
+				for k, v in pairs(store.entities) do
+					if v.template_name == this.injure_worker_t then
+						simulation:queue_remove_entity(v)
+
+						break
+					end
+				end
+
+				U.y_animation_wait(this)
+				U.animation_start(this, "idle_2", nil, store.tick_ts, true)
+
+				break
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	while true do
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+scripts.decal_stage_201_worker_2 = {}
+
+function scripts.decal_stage_201_worker_2.update(this, store, script)
+	while true do
+		U.y_animation_play(this, "run", nil, store.tick_ts, math.random(1, 3))
+		U.animation_start(this, "idle", nil, store.tick_ts, true)
+		U.y_wait(store, U.frandom(this.random_wait_min, this.random_wait_max))
+		coroutine.yield()
+	end
+end
+
+scripts.decal_terrain_1_sheep = {}
+
+function scripts.decal_terrain_1_sheep.insert(this, store, script)
+	this.render.sprites[1].flip_x = this.editor.flip > 0
+
+	return true
+end
+
+function scripts.decal_terrain_1_sheep.update(this, store, script)
+	local taps_count = 0
+	local eat_ts = store.tick_ts
+	local eat_cd = fts(math.random(3 * FPS, 7 * FPS))
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			taps_count = taps_count + 1
+
+			if taps_count == this.taps_to_explode then
+				S:queue(this.sound)
+				U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+
+				break
+			else
+				U.animation_start(this, "tap", nil, store.tick_ts, 1)
+			end
+		end
+
+		if eat_cd < store.tick_ts - eat_ts then
+			local eat_cd = fts(math.random(3 * FPS, 7 * FPS))
+
+			eat_ts = store.tick_ts
+
+			U.animation_start(this, "eat", nil, store.tick_ts, false)
+		end
+
+		if this.render.sprites[1].name == "tap" and U.animation_finished(this) then
+			U.animation_start(this, "idle", nil, store.tick_ts, 1)
+		end
+
+		if this.render.sprites[1].name == "eat" and U.animation_finished(this) then
+			U.animation_start(this, "idle", nil, store.tick_ts, true)
+		end
+
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+function scripts.decal_terrain_1_sheep.update_editor(this, store)
+	while true do
+		this.render.sprites[1].flip_x = this.editor.flip > 0
+
+		coroutine.yield()
+	end
+
+	return true
+end
+
+-- kr6 关卡 201：老国王投掷物脚本
+scripts.bomb_kr6 = {}
+
+function scripts.bomb_kr6.insert(this, store, script)
+	local b = this.bullet
+
+	b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
+	b.ts = store.tick_ts
+	b.last_pos = V.vclone(b.from)
+
+	if b.rotation_speed then
+		if b.starting_rotation then
+			this.render.sprites[1].r = b.starting_rotation
+		else
+			this.render.sprites[1].r = (math.random() - 0.5) * math.pi
+		end
+
+		b.rotation_speed = b.rotation_speed * (b.to.x > b.from.x and -1 or 1)
+	end
+
+	if b.hide_radius then
+		this.render.sprites[1].hidden = true
+	end
+
+	if this.tween then
+		for i = 1, #this.tween.props do
+			this.tween.props[i].ts = store.tick_ts
+		end
+	end
+
+	return true
+end
+
+function scripts.bomb_kr6.update(this, store, script)
+	local b = this.bullet
+	local dmin, dmax = b.damage_min, b.damage_max
+	local dradius = b.damage_radius
+
+	if b.level and b.level > 0 then
+		if b.damage_radius_inc then
+			dradius = dradius + b.level * b.damage_radius_inc
+		end
+
+		if b.damage_min_inc then
+			dmin = dmin + b.level * b.damage_min_inc
+		end
+
+		if b.damage_max_inc then
+			dmax = dmax + b.level * b.damage_max_inc
+		end
+	end
+
+	if b.damages_min and b.damages_max and b.level then
+		dmin = b.damages_min[b.level]
+		dmax = b.damages_max[b.level]
+	end
+
+	local ps
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+
+		simulation:queue_insert_entity(ps)
+	end
+
+	local shadow, shadow_start_pos
+
+	if this.decal_shadow then
+		shadow = E:create_entity(this.decal_shadow)
+		shadow.pos = V.vclone(b.from)
+		shadow.pos.y = b.from.y - 70
+
+		simulation:queue_insert_entity(shadow)
+
+		shadow_start_pos = V.vclone(shadow.pos)
+	end
+
+	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+		coroutine.yield()
+
+		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+		elseif b.rotation_speed then
+			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+		end
+
+		if b.hide_radius then
+			this.render.sprites[1].hidden = V.dist(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius or V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius
+		end
+
+		if b.anim_rising or b.anim_falling then
+			if this.pos.y - b.last_pos.y >= 0 then
+				if b.anim_rising and this.render.sprites[1].name ~= b.anim_rising then
+					U.animation_start(this, b.anim_rising, nil, store.tick_ts, b.anim_rising_loops, 1)
+				end
+			elseif b.anim_falling and this.render.sprites[1].name ~= b.anim_falling then
+				U.animation_start(this, b.anim_falling, nil, store.tick_ts, b.anim_falling_loops, 1)
+			end
+		end
+
+		if b.switch_z_time and this.render.sprites[1].z ~= Z_BULLETS and store.tick_ts - b.ts > b.switch_z_time then
+			this.render.sprites[1].z = Z_BULLETS
+		end
+
+		if shadow then
+			shadow.pos.x = shadow_start_pos.x + (b.to.x - shadow_start_pos.x) * ((store.tick_ts - b.ts) / b.flight_time)
+			shadow.pos.y = shadow_start_pos.y + (b.to.y - shadow_start_pos.y) * ((store.tick_ts - b.ts) / b.flight_time)
+
+			local height = this.pos.y - shadow.pos.y
+			local s = km.clamp(0.6, 1, 40 / height)
+
+			shadow.render.sprites[1].scale = V.vv(s)
+		end
+	end
+
+	local enemies = U.find_enemies_in_range(store.entities, b.to, 0, dradius, b.damage_flags, b.damage_bans)
+
+	if enemies and dmax and dmax > 0 then
+		local upg = UP:get_upgrade("engineer_efficiency")
+		local source = store.entities[b.source_id]
+		local upg_valid = upg and source and source.tower
+		local ignore_dist_factor = upg_valid or this.bullet.chance_ignore_dist_factor and math.random() <= this.bullet.chance_ignore_dist_factor
+
+		for _, enemy in pairs(enemies) do
+			local d = E:create_entity("damage")
+
+			d.damage_type = b.damage_type
+			d.reduce_armor = b.reduce_armor
+			d.reduce_magic_armor = b.reduce_magic_armor
+
+			if b.damage_decay_random then
+				d.value = U.frandom(dmin, dmax)
+			elseif ignore_dist_factor then
+				d.value = dmax
+			else
+				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
+
+				d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+			end
+
+			if (d.damage_type == DAMAGE_EXPLOSION or d.damage_type == DAMAGE_ELECTRICAL) and this.bullet.explosive_factor then
+				d.explosive_factor = this.bullet.explosive_factor
+			end
+
+			d.value = math.ceil(b.damage_factor * d.value)
+			d.source_id = this.id
+			d.target_id = enemy.id
+
+			if b.xp_gain_factor and b.xp_dest_id then
+				d.xp_gain_factor = b.xp_gain_factor
+				d.xp_dest_id = b.source_id
+			end
+
+			queue_damage(store, d)
+			log.paranoid("bomb id:%s, radius:%s, enemy id:%s, dist:%s, damage:%s damage_type:%x", this.id, dradius, enemy.id, V.dist(enemy.pos.x, enemy.pos.y, b.to.x, b.to.y), d.value, d.damage_type)
+
+			if b.mod or b.mods then
+				local mods = b.mods or {b.mod}
+
+				if b.mod and b.mods then
+					mods = table.merge(b.mods, {b.mod})
+				end
+
+				for _, mod_name in pairs(mods) do
+					local m = E:create_entity(mod_name)
+
+					m.modifier.target_id = enemy.id
+					m.modifier.source_id = b.source_id
+					m.modifier.level = b.level or 1
+
+					simulation:queue_insert_entity(m)
+				end
+			end
+		end
+	end
+
+	local p = SU.create_bullet_pop(store, this)
+
+	simulation:queue_insert_entity(p)
+
+	local cell_type = GR:cell_type(b.to.x, b.to.y)
+
+	if b.hit_fx_water and band(cell_type, TERRAIN_WATER) ~= 0 then
+		S:queue(this.sound_events.hit_water)
+
+		local water_fx = E:create_entity(b.hit_fx_water)
+
+		water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
+		water_fx.render.sprites[1].ts = store.tick_ts
+		water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+
+		simulation:queue_insert_entity(water_fx)
+	elseif b.hit_fx then
+		S:queue(this.sound_events.hit)
+
+		local sfx = E:create_entity(b.hit_fx)
+
+		sfx.pos = V.vclone(b.to)
+
+		for i = 1, #sfx.render.sprites do
+			sfx.render.sprites[i].ts = store.tick_ts
+			sfx.render.sprites[i].sort_y_offset = b.hit_fx_sort_y_offset
+		end
+
+		simulation:queue_insert_entity(sfx)
+	end
+
+	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
+		local decal = E:create_entity(b.hit_decal)
+
+		decal.pos = V.vclone(b.to)
+
+		for i = 1, #decal.render.sprites do
+			decal.render.sprites[i].ts = store.tick_ts
+		end
+
+		simulation:queue_insert_entity(decal)
+	end
+
+	if b.hit_payload then
+		local hp
+
+		if type(b.hit_payload) == "string" then
+			hp = E:create_entity(b.hit_payload)
+		else
+			hp = b.hit_payload
+		end
+
+		hp.pos.x, hp.pos.y = b.to.x, b.to.y
+		hp.source_id = b.source_id
+
+		if hp.aura then
+			hp.aura.level = this.bullet.level
+		end
+
+		simulation:queue_insert_entity(hp)
+	end
+
+	if this.screenshake_amplitude then
+		local shake = E:create_entity("aura_screen_shake")
+
+		shake.aura.amplitude = this.screenshake_amplitude
+		shake.aura.duration = this.screenshake_duration
+		shake.aura.freq_factor = this.screenshake_freq_factor
+
+		simulation:queue_insert_entity(shake)
+	end
+
+	if shadow then
+		simulation:queue_remove_entity(shadow)
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+scripts.controller_path_direction = {}
+
 return scripts

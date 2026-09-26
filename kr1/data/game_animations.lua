@@ -51207,5 +51207,132 @@ return {
 		prefix = "hero_naga_tidal_wave",
 		from = 1,
 		to = 23
+	},
+	enemy_bandit_kr6_walkingRightLeft = {
+		from = 2,
+		prefix = "bandit_enemy",
+		to = 21
+	},
+	enemy_bandit_kr6_walkingDown = {
+		from = 22,
+		prefix = "bandit_enemy",
+		to = 41
+	},
+	enemy_bandit_kr6_walkingUp = {
+		from = 42,
+		prefix = "bandit_enemy",
+		to = 61
+	},
+	enemy_bandit_kr6_attack = {
+		from = 62,
+		prefix = "bandit_enemy",
+		to = 82
+	},
+	enemy_bandit_kr6_death = {
+		from = 83,
+		prefix = "bandit_enemy",
+		to = 96
+	},
+	enemy_bandit_kr6_raise = {
+		from = 2,
+		prefix = "bandit_enemy",
+		to = 2
+	},
+	enemy_bandit_kr6_idle = {
+		from = 1,
+		prefix = "bandit_enemy",
+		to = 1
+	},
+	enemy_blackguard_kr6_walkingRightLeft = {
+		from = 2,
+		prefix = "blackguard_blackguard",
+		to = 21
+	},
+	enemy_blackguard_kr6_walkingDown = {
+		from = 22,
+		prefix = "blackguard_blackguard",
+		to = 41
+	},
+	enemy_blackguard_kr6_walkingUp = {
+		from = 42,
+		prefix = "blackguard_blackguard",
+		to = 61
+	},
+	enemy_blackguard_kr6_attack = {
+		from = 62,
+		prefix = "blackguard_blackguard",
+		to = 102
+	},
+	enemy_blackguard_kr6_death = {
+		from = 103,
+		prefix = "blackguard_blackguard",
+		to = 122
+	},
+	enemy_blackguard_kr6_idle = {
+		from = 1,
+		prefix = "blackguard_blackguard",
+		to = 1
+	},
+
+	-- kr6 关卡 201：老国王投掷物动画
+	Stage_1_old_king_projectiles_pojectile_anvil = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_pojectile_anvil",
+		to = 1
+	},
+	Stage_1_old_king_projectiles_pojectile_bust = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_pojectile_bust",
+		to = 1
+	},
+	Stage_1_old_king_projectiles_pojectile_sheep_loop = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_pojectile_sheep",
+		to = 8
+	},
+	Stage_1_old_king_projectiles_anvil_break_fx_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_anvil_break_fx",
+		to = 14
+	},
+	Stage_1_old_king_projectiles_bust_break_fx_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_bust_break_fx",
+		to = 14
+	},
+	Stage_1_old_king_projectiles_sheep_break_fx_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_sheep_break_fx",
+		to = 12
+	},
+	Stage_1_old_king_projectiles_explosion_fx_a_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_a",
+		to = 28
+	},
+	Stage_1_old_king_projectiles_explosion_fx_a_decal_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_a_decal",
+		to = 28
+	},
+	Stage_1_old_king_projectiles_explosion_fx_a_decal_idle = {
+		from = 29,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_a_decal",
+		to = 29
+	},
+	Stage_1_old_king_projectiles_explosion_fx_b_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_b",
+		to = 18
+	},
+	Stage_1_old_king_projectiles_explosion_fx_b_floor_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_b_floor",
+		to = 10
+	},
+	Stage_1_old_king_projectiles_explosion_fx_b_decal = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_b_decal",
+		to = 1
 	}
 }
