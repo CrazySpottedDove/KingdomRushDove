@@ -542,7 +542,7 @@ end
 this.tween.ts=store.tick_ts
 if target.template_name=="hero_stage_205_alleria" then
 if target.motion then
-target.motion.max_speed=target.motion.max_speed*this.alleria_speed_buff
+U.speed_mul_self(target,this.alleria_speed_buff)
 end
 if target.regen and target.regen.health then
 target.regen.health=target.regen.health*this.alleria_regen_buff
@@ -591,7 +591,7 @@ local m=this.modifier
 local target=store.entities[m.target_id]
 if target and target.template_name=="hero_stage_205_alleria" then
 if target.motion then
-target.motion.max_speed=target.motion.max_speed/this.alleria_speed_buff
+U.speed_div_self(target,this.alleria_speed_buff)
 end
 if target.regen and target.regen.health then
 target.regen.health=target.regen.health/this.alleria_regen_buff

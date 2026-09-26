@@ -25782,4 +25782,110 @@ tt = RT("controller_mage_purge_field")
 AC(tt, "main_script")
 tt.main_script.update = scripts.controller_mage_purge_field.update
 
+-- ===== KR6 stage 08 圣殿弓手/剑士 =====
+tt = RT("soldier_stage_208_templar_archer", "soldier_militia")
+AC(tt, "ranged", "editor")
+tt.health.hp_max = 1
+tt.health.immune_to = DAMAGE_ALL_TYPES
+tt.health_bar = nil
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.range = 0
+tt.main_script.insert = scripts.soldier_stage_208_templar_archer.insert
+tt.main_script.update = scripts.soldier_stage_208_templar_archer.update
+tt.render.sprites[1].prefix = "templars_archer_templar"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].flip_x = true
+tt.render.sprites[1].angles.walk = {"run"}
+tt.render.sprites[1].hidden = true
+tt.idle_flip.cooldown = 1e+99
+tt.ranged.attacks[1].animation = "attack"
+tt.ranged.attacks[1].bullet = "bullet_templar_archer"
+tt.ranged.attacks[1].bullet_start_offset = {v(15, 8)}
+tt.ranged.attacks[1].cooldown = 4
+tt.ranged.attacks[1].min_range = 25
+tt.ranged.attacks[1].max_range = 320
+tt.ranged.attacks[1].shoot_time = fts(13)
+tt.ranged.attacks[1].filter_fn = scripts.soldier_stage_208_templar_archer.ranged_attack_filter_fn
+tt.ui = nil
+tt.unit.hit_offset = v(0, 10)
+tt.unit.mod_offset = v(0, 21)
+tt.vis.bans = bor(tt.vis.bans, F_BLOCK, F_RANGED)
+tt.editor.props = {{"editor.wall_id", PT_NUMBER}, {"editor.balcony", PT_NUMBER}}
+
+tt = RT("soldier_stage_208_templar_swordsman", "soldier_militia")
+tt.info.portrait = "kr6_info_portraits_soldiers_0018"
+tt.info.random_name_count = 12
+tt.info.random_name_format = "SOLDIER_STAGE_208_TEMPLAR_SWORDSMAN_%i_NAME"
+tt.main_script.update = scripts.soldier_stage_208_templar_swordsman.update
+tt.main_script.remove = scripts.soldier_stage_208_templar_swordsman.remove
+tt.render.sprites[1].prefix = "templars_templar"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 13)
+tt.health.hp_max = 200
+tt.health.armor = 0.25
+tt.health_bar.offset = v(0, 30)
+tt.regen.health = 6
+tt.motion.max_speed = 40
+tt.melee.range = 70
+tt.vis.flags = bor(F_BLOCK, F_FRIEND)
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 8
+tt.melee.attacks[1].damage_max = 16
+tt.melee.attacks[1].hit_time = fts(12)
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].cooldown = 4
+tt.melee.attacks[2].animation = "attack2"
+tt.melee.attacks[2].damage_min = 16
+tt.melee.attacks[2].damage_max = 32
+tt.melee.attacks[2].hit_time = fts(33)
+tt.melee.attacks[2].mod = "mod_stage_208_templar"
+tt.melee.attacks[2].hit_fx = "fx_stage_208_templar_skill_hit"
+tt.melee.attacks[2].hit_offset = v(20, 8)
+tt.soldier.melee_slot_offset = v(10, 0)
+tt.ui.click_rect = r(-13, -2, 26, 25)
+
+tt = RT("bullet_templar_archer", "arrow5_fixed_height")
+tt.bullet.damage_min = 4
+tt.bullet.damage_max = 8
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.fixed_height = 50
+tt.bullet.g = -1000
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.miss_decal = nil
+tt.bullet.miss_fx = nil
+tt.bullet.hide_radius = 0
+tt.render.sprites[1].prefix = "templars_arrow_archer_templar"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.sound_events.insert = "TowerArcherGarrisonBasicAttack"
+
+tt = RT("decal_stage_208_templar_archer_miss", "decal_tween")
+tt.render.sprites[1].prefix = "templars_arrow_archer_templar"
+tt.render.sprites[1].name = "miss"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.tween.props[1].keys = {{0, 255}, {2, 255}, {4, 0}}
+
+tt = RT("fx_stage_208_templar_skill_hit", "fx")
+tt.render.sprites[1].prefix = "templars_hit_templar"
+tt.render.sprites[1].name = "run"
+
+tt = RT("mod_stage_208_templar", "mod_blood")
+tt.dps.damage_min = 4
+tt.dps.damage_max = 5
+tt.dps.damage_inc = 0
+tt.dps.damage_every = 0.5
+tt.dps.fx_every = fts(20)
+tt.modifier.duration = 3
+
+tt = RT("aura_stage_208_archers_visibility", "aura")
+tt.aura.duration = 1e+99
+tt.aura.radius = 10
+tt.aura.cycle_time = fts(5)
+tt.main_script.update = scripts.aura_stage_208_archers_visibility.update
+
 return scripts

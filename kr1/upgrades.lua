@@ -1513,9 +1513,7 @@ local function scale_fps_based_keys(tbl, factor, visited)
 
 	for k, v in pairs(tbl) do
 		-- 跳过 _origin_xxx 字段，避免递归
-		if type(v) == "table" then
-			scale_fps_based_keys(v, factor, visited)
-		elseif fps_based_keys[k] then
+		if fps_based_keys[k] then
 			local _origin_key = "_origin_" .. k
 
 			if not tbl[_origin_key] then
@@ -1528,6 +1526,8 @@ local function scale_fps_based_keys(tbl, factor, visited)
 					v[i] = tbl[_origin_key][i] * factor
 				end
 			end
+		elseif type(v) == "table" then
+			scale_fps_based_keys(v, factor, visited)
 		end
 	end
 end

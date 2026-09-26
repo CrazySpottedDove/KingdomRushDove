@@ -71247,4 +71247,193 @@ function scripts.bullet_enemy_flying.update(this, store, script)
 	queue_remove(store, this)
 end
 
+-- ===== KR6 stage 08 =====
+scripts.enemy_cloud_of_crows = {}
+
+function scripts.enemy_cloud_of_crows.update(this, store)
+	local shadow_sprite = this.render.sprites[2]
+
+	local function break_fn_1(store, this)
+		return this.nav_path.ni > this.nodes_to_explode
+	end
+
+	local function break_fn_2(store, this)
+		return store.tick_ts - this.tween.ts > fts(16)
+	end
+
+	local function break_fn_3(store, this)
+		return store.tick_ts - this.render.sprites[1].ts > fts(5)
+	end
+
+	SU.y_enemy_walk_until_blocked(store, this, true, break_fn_1)
+
+	this.tween.disabled = false
+	this.tween.ts = store.tick_ts
+
+	SU.y_enemy_walk_until_blocked(store, this, true, break_fn_2)
+
+	this.tween.reverse = true
+	this.tween.ts = store.tick_ts
+	this.render.sprites[1].angles.walk = {"attack", "attack", "attack"}
+
+	U.animation_start(this, "attack", nil, store.tick_ts, false)
+	SU.y_enemy_walk_until_blocked(store, this, true, break_fn_3)
+
+	local explosion = E:create_entity(this.explosion_fx)
+
+	explosion.pos = V.vclone(this.pos)
+	explosion.render.sprites[1].ts = store.tick_ts
+
+	simulation:queue_insert_entity(explosion)
+
+	if this.sound_explosion then
+		S:queue(this.sound_explosion)
+	end
+
+	for i = 1, this.spawn_count do
+		local enemy = E:create_entity(this.enemy_spawn)
+
+		enemy.nav_path.pi = this.nav_path.pi
+
+		if i == 2 or i == 3 then
+			enemy.nav_path.ni = this.nav_path.ni
+			enemy.nav_path.spi = i
+		elseif i == 1 then
+			enemy.nav_path.ni = this.nav_path.ni + 3
+			enemy.nav_path.spi = 1
+		else
+			enemy.nav_path.ni = this.nav_path.ni - 6
+			enemy.nav_path.spi = 1
+		end
+
+		enemy.pos = P:node_pos(enemy.nav_path.pi, 1, enemy.nav_path.ni)
+		enemy.source_id = this.id
+
+		simulation:queue_insert_entity(enemy)
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+scripts.soldier_stage_208_templar_archer = {}
+
+function scripts.soldier_stage_208_templar_archer.insert(this, store)
+	this.nav_rally.new = true
+	this.nav_rally.pos = V.vclone(this.pos)
+	this.nav_rally.center = V.vclone(this.pos)
+	this.motion.arrived = false
+
+	if this.editor.wall_id == 1 then
+		this.pos.x, this.pos.y = this.pos.x + 280, this.pos.y - 448
+	else
+		this.pos.x, this.pos.y = this.pos.x + 140, this.pos.y - 224
+	end
+
+	return scripts.soldier_barrack.insert(this, store)
+end
+
+function scripts.soldier_stage_208_templar_archer.ranged_attack_filter_fn(entity, origin)
+	if not entity or not entity.nav_path then
+		return false
+	end
+
+	return P:is_node_valid(entity.nav_path.pi, entity.nav_path.ni, NF_RANGE)
+end
+
+function scripts.soldier_stage_208_templar_archer.update(this, store)
+	while this.nav_rally.new do
+		SU.y_soldier_new_rally(store, this)
+	end
+
+	U.animation_start(this, "idle", true, store.tick_ts, true)
+
+	return scripts.soldier_barrack.update(this, store)
+end
+
+scripts.aura_stage_208_archers_visibility = {}
+
+function scripts.aura_stage_208_archers_visibility.update(this, store, script)
+	local last_ts = 0
+	local controller_phases
+
+	for k, v in pairs(store.entities) do
+		if v.template_name == "controller_stage_208_phases" then
+			controller_phases = v
+		end
+	end
+
+	while true do
+		if this.enabled and store.tick_ts - last_ts >= this.aura.cycle_time then
+			last_ts = store.tick_ts
+
+			for k, v in pairs(store.entities) do
+				if v.template_name == "soldier_stage_208_templar_archer" and V.dist2(v.pos.x, v.pos.y, this.pos.x, this.pos.y) < this.aura.radius * this.aura.radius then
+					v.render.sprites[1].hidden = false
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+scripts.soldier_stage_208_templar_swordsman = {}
+
+function scripts.soldier_stage_208_templar_swordsman.update(this, store)
+	local path_ni = this.starting_ni
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	this.nav_rally.pos = P:node_pos(this.path_id, this.subpath_id, path_ni)
+	this.melee.order = U.attack_order(this.melee.attacks)
+
+	while true do
+		if path_ni < 3 then
+			break
+		end
+
+		if this.health.dead then
+			local tower = store.entities[this.source_id]
+
+			tower.soldiers_alive = tower.soldiers_alive - 1
+
+			SU.y_soldier_death(store, this)
+
+			return
+		end
+
+		local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+		if brk or sta == A_DONE or sta == A_IN_COOLDOWN and not this.melee.continue_in_cooldown then
+		-- block empty
+		else
+			if V.dist2(this.nav_rally.pos.x, this.nav_rally.pos.y, this.pos.x, this.pos.y) < 25 then
+				path_ni = path_ni - 3
+				this.nav_rally.pos = P:node_pos(this.path_id, this.subpath_id, path_ni)
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				SU.soldier_regen(store, this)
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+function scripts.soldier_stage_208_templar_swordsman.remove(this, store)
+	this.cont_ref.soldiers_alive = this.cont_ref.soldiers_alive - 1
+
+	return true
+end
+
 return scripts

@@ -78,7 +78,7 @@ return {
 		action_arg = "",
 		halo = "glow_ico_main",
 		image = "main_icons_0037",
-		place = 12,
+		place = 5,
 		tt_title = _("TOWER_STAGE_204_CRANE_BUY_NAME"),
 		tt_desc = _("TOWER_STAGE_204_CRANE_BUY_DESC")
 	})}},
@@ -87,9 +87,17 @@ return {
 		action_arg = "",
 		halo = "glow_ico_main",
 		image = "kr6_quickmenu_main_icon_s7barrack",
-		place = 12,
+		place = 5,
 		tt_title = _("TOWER_STAGE_207_BARN_BUY_NAME"),
 		tt_desc = _("TOWER_STAGE_207_BARN_BUY_DESC")
+	})}},
+	stage_208_catapult = {{M(tpl.buy_attack, {
+		check = "main_icons_0019",
+		action_arg = 1,
+		image = "kr6_quickmenu_main_icon_s8catapult",
+		place = 5,
+		tt_title = _("TOWER_STAGE_208_CATAPULT_BUY_NAME"),
+		tt_desc = _("TOWER_STAGE_208_CATAPULT_BUY_DESC")
 	})}},
 	mage = {{M(tpl.common_upgrade, {
 		action_arg = "tower_mage_2",

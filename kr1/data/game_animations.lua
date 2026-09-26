@@ -52243,5 +52243,111 @@ return {
 		from = 13,
 		prefix = "rider_goblin_creep",
 		to = 23
+	},
+	-- ===== KR6 stage 08（自动追加） =====
+	["cloud_of_crows_cloud_crows_attack"] = {
+		["from"] = 27,
+		["prefix"] = "cloud_of_crows_cloud_crows",
+		["to"] = 33
+	},
+	["cloud_of_crows_cloud_crows_idle"] = {
+		["from"] = 1,
+		["prefix"] = "cloud_of_crows_cloud_crows",
+		["to"] = 26
+	},
+	["cloud_of_crows_explosion"] = {
+		["from"] = 1,
+		["prefix"] = "cloud_of_crows_explosion",
+		["to"] = 27
+	},
+	["cloud_of_crows_shadow"] = {
+		["from"] = 1,
+		["prefix"] = "cloud_of_crows_shadow",
+		["to"] = 1
+	},
+	["goblin_catapult_particles_particle1_idle"] = {
+		["from"] = 1,
+		["prefix"] = "goblin_catapult_particles_particle1",
+		["to"] = 15
+	},
+	["goblin_catapult_particles_particle2_idle"] = {
+		["from"] = 1,
+		["prefix"] = "goblin_catapult_particles_particle2",
+		["to"] = 33
+	},
+	["stage_208_boss_particles_run"] = {
+		["from"] = 1,
+		["prefix"] = "stage_208_boss_particles",
+		["to"] = 14
+	},
+	["templars_archer_templar_attack"] = {
+		["from"] = 3,
+		["prefix"] = "templars_archer_templar",
+		["to"] = 28
+	},
+	["templars_archer_templar_idle"] = {
+		["from"] = 1,
+		["prefix"] = "templars_archer_templar",
+		["to"] = 2
+	},
+	["templars_archer_templar_run"] = {
+		["from"] = 29,
+		["prefix"] = "templars_archer_templar",
+		["to"] = 40
+	},
+	["templars_arrow_archer_templar_idle"] = {
+		["from"] = 1,
+		["prefix"] = "templars_arrow_archer_templar",
+		["to"] = 1
+	},
+	["templars_arrow_archer_templar_miss"] = {
+		["from"] = 2,
+		["prefix"] = "templars_arrow_archer_templar",
+		["to"] = 10
+	},
+	["templars_arrow_archer_templar_missidle"] = {
+		["from"] = 10,
+		["prefix"] = "templars_arrow_archer_templar",
+		["to"] = 10
+	},
+	["templars_hit_templar_run"] = {
+		["from"] = 1,
+		["prefix"] = "templars_hit_templar",
+		["to"] = 7
+	},
+	["templars_templar_attack"] = {
+		["from"] = 10,
+		["prefix"] = "templars_templar",
+		["to"] = 49
+	},
+	["templars_templar_attack2"] = {
+		["from"] = 50,
+		["prefix"] = "templars_templar",
+		["to"] = 106
+	},
+	["templars_templar_death"] = {
+		["from"] = 107,
+		["prefix"] = "templars_templar",
+		["to"] = 140
+	},
+	["templars_templar_idle"] = {
+		["from"] = 1,
+		["prefix"] = "templars_templar",
+		["to"] = 1
+	},
+	["templars_templar_idle2"] = {
+		["from"] = 2,
+		["prefix"] = "templars_templar",
+		["to"] = 2
+	},
+	["templars_templar_idle3"] = {
+		["from"] = 3,
+		["prefix"] = "templars_templar",
+		["to"] = 3
+	},
+	["templars_templar_walk"] = {
+		["from"] = 4,
+		["prefix"] = "templars_templar",
+		["to"] = 9
 	}
 }

@@ -1,0 +1,1 @@
+return {["animations"]={{["frames"]={{{1,1,1,0,-1.8,0.541321,0.647034,0,0,0}}},["name"]="idle"}},["attach_points"]={},["fps"]=30,["partScaleCompensation"]=1.40625,["parts"]={{"boss_stage_208_fly_shadow_asst_boss_shadow",0,0}},["version"]=3}

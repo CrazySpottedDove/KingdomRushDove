@@ -13250,7 +13250,7 @@ tt.unit.head_offset = v(4, 28)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
 tt.unit.fade_time_after_death = 3
 tt.unit.fade_duration_after_death = 0.3
-tt.enemy.gold = 80
+tt.enemy.gold = 88
 tt.enemy.melee_slot = v(36, 0)
 tt.enemy.lives_cost = 2
 tt.health.hp_max = {893.75, 1100, 1237.5, 2475}
@@ -13340,9 +13340,9 @@ tt = RT("enemy_shadow_blades", "enemy")
 
 AC(tt, "melee")
 
-tt.enemy.gold = 10
+tt.enemy.gold = 11
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = 70
+tt.health.hp_max = {82.5, 96.25, 110, 220}
 tt.health_bar.offset = v(0, 35)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health.armor = 0
@@ -13423,9 +13423,9 @@ tt = RT("enemy_shadow_archer_kr6", "enemy")
 
 AC(tt, "melee", "ranged")
 
-tt.enemy.gold = 15
+tt.enemy.gold = 16
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = 110
+tt.health.hp_max = {137.5, 151.25, 192.5, 385}
 tt.health.armor = 0
 tt.health.magic_armor = 0.3
 tt.health_bar.offset = v(0, 35)
@@ -13510,7 +13510,7 @@ tt.bullet.particles_name = "ps_bullet_orc_shaman"
 -- enemy_crowcaller（暗影军团召唤者）
 tt = RT("enemy_crowcaller", "enemy")
 AC(tt, "melee", "timed_attacks")
-tt.enemy.gold = 40
+tt.enemy.gold = 44
 tt.enemy.melee_slot = v(30, 0)
 tt.enemy.has_magic = true
 tt.health.hp_max = {343.75, 412.5, 481.25, 1031.25}
@@ -13583,7 +13583,7 @@ tt.ui.click_rect = r(-13, 0, 26, 25)
 -- enemy_orc_warrior
 tt = RT("enemy_orc_warrior", "enemy")
 AC(tt, "melee")
-tt.enemy.gold = 15
+tt.enemy.gold = 16
 tt.enemy.melee_slot = v(32, 0)
 tt.enemy.has_magic = true
 tt.health.hp_max = {220, 247.5, 275, 550}
@@ -13651,7 +13651,7 @@ tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}}
 -- enemy_orc_shaman
 tt = RT("enemy_orc_shaman", "enemy")
 AC(tt, "melee", "ranged", "timed_attacks")
-tt.enemy.gold = 12
+tt.enemy.gold = 13
 tt.enemy.melee_slot = v(28, 0)
 tt.enemy.has_magic = true
 tt.health.hp_max = {110, 137.5, 165, 343.75}
@@ -13798,7 +13798,7 @@ tt.unit.fade_duration_after_death = 0.3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
-tt.enemy.gold = 10
+tt.enemy.gold = 11
 tt.enemy.melee_slot = v(30, 0)
 tt.health.hp_max = {137.5, 165, 192.5, 385}
 tt.health.armor = 0
@@ -13836,7 +13836,7 @@ tt.unit.fade_duration_after_death = 0.3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
-tt.enemy.gold = 20
+tt.enemy.gold = 22
 tt.enemy.melee_slot = v(34, 0)
 tt.health.hp_max = {330, 385, 440, 880}
 tt.health.armor = 0.6
@@ -13876,7 +13876,7 @@ tt.ui.click_rect = r(-22, 0, 44, 40)
 -- enemy_rider_goblin
 tt = RT("enemy_rider_goblin", "enemy")
 AC(tt, "melee")
-tt.enemy.gold = 10
+tt.enemy.gold = 11
 tt.enemy.melee_slot = v(30, 0)
 tt.health.hp_max = {165, 192.5, 220, 440}
 tt.health.armor = 0
@@ -13947,7 +13947,7 @@ tt.decal_shadow = "decal_rider_goblin_bullet_shadow"
 tt = RT("enemy_ogre_kr6", "enemy")
 tt.info.i18n_key = "ENEMY_OGRE"
 AC(tt, "melee")
-tt.enemy.gold = 120
+tt.enemy.gold = 132
 tt.enemy.melee_slot = v(38, 0)
 tt.enemy.lives_cost = 2
 tt.health.hp_max = {1512.5, 1787.5, 2200, 3850}
@@ -13988,3 +13988,49 @@ tt.render.sprites[1].prefix = "ogre_area_fx"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].sort_y_offset = 2
+
+-- ===== KR6 stage 08 乌鸦群 =====
+tt = RT("enemy_cloud_of_crows", "enemy")
+AC(tt, "tween")
+tt.enemy.gold = 0
+tt.flight_height = 0
+tt.health.hp_max = 1e+99
+tt.health_bar.hidden = true
+tt.info.portrait = "gui_bottom_info_image_enemies_0032"
+tt.main_script.update = scripts.enemy_cloud_of_crows.update
+tt.motion.max_speed = 50
+tt.render.sprites[1].offset = v(0, tt.flight_height)
+tt.render.sprites[1].prefix = "cloud_of_crows_cloud_crows"
+tt.render.sprites[1].angles.walk = {"idle", "idle", "idle"}
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "cloud_of_crows_shadow"
+tt.render.sprites[2].offset = v(0, 0)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.show_blood_pool = false
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.vis.bans = F_ALL
+tt.vis.flags = bor(F_ENEMY, F_FLYING)
+tt.ui = nil
+tt.nodes_to_explode = 20
+tt.explosion_fx = "fx_cloud_of_crows_explosion"
+tt.sound_explosion = "Stage08EnemyCrowFlockTransform"
+tt.spawn_count = 3
+tt.enemy_spawn = nil
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, vv(0)}, {fts(16), v(0, 15)}}
+tt.tween.props[1].name = "offset"
+tt.tween.props[1].sprite_id = 1
+
+tt = RT("fx_cloud_of_crows_explosion", "fx")
+tt.render.sprites[1].name = "cloud_of_crows_explosion"
+
+tt = RT("enemy_stage_208_cloud_of_crows", "enemy_cloud_of_crows")
+tt.render.sprites[1].prefix = "cloud_of_crows_cloud_crows"
+tt.render.sprites[2].name = "cloud_of_crows_shadow"
+tt.motion.max_speed = 64
+tt.nodes_to_explode = 56
+tt.spawn_count = 4
+tt.enemy_spawn = "enemy_shadow_blades"

@@ -1,0 +1,1 @@
+return {["animations"]={{["frames"]={{{1,1,1,-0.9,0.15,0.999985,0.999985,0,0,0}}},["name"]="idle"}},["attach_points"]={},["fps"]=30,["partScaleCompensation"]=1.40625,["parts"]={{"stage_208_catapult_proj_asst_stage8_catapult_rock_projectile",0.9,-0.1}},["version"]=3}

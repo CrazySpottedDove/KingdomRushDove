@@ -12879,4 +12879,247 @@ function scripts.boss_redboy_teen.update(this, store)
 		end
 	end
 end
+scripts.enemy_boss_stage_208 = {}
+
+function scripts.enemy_boss_stage_208.update(this, store, script)
+	local spawn_ts = store.tick_ts
+	local aa = this.melee.attacks[1]
+	local as = this.timed_attacks.list[1]
+	local path_controller = E:create_entity("controller_stage_208_boss_path")
+
+	path_controller.boss_ref = this
+
+	simulation:queue_insert_entity(path_controller)
+
+	local sound_controller = E:create_entity(this.sound_steps_t)
+
+	sound_controller.source_id = this.id
+
+	simulation:queue_insert_entity(sound_controller)
+
+	local old_bans = this.vis.bans
+
+	local function walk_cart_break_fn(store, this)
+		local nodes_to_end = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+
+		if this.enraged then
+			return nodes_to_end < 75
+		else
+			return this.health.hp < this.health.hp_max * this.rage_hp or nodes_to_end < this.nodes_to_enrage
+		end
+	end
+
+	local function walk_break_fn(store, this)
+		if as.disabled or store.tick_ts - as.ts < as.cooldown then
+			return false
+		end
+
+		local targets = U.find_enemies_in_range(store, this.pos, 0, as.range, as.vis_flags, as.vis_bans)
+
+		if targets and #targets >= as.min_targets then
+			return true
+		else
+			as.ts = store.tick_ts - as.cooldown + fts(30)
+
+			return false
+		end
+	end
+
+	local function kill_all_special_enemies()
+		local riders = table.filter(store.entities, function(k, v)
+			return v.template_name == "enemy_rider_goblin"
+		end)
+
+		for i, v in ipairs(riders) do
+			riders[i].forced_death = true
+		end
+
+		local clouds = table.filter(store.entities, function(k, v)
+			return v.template_name == "enemy_stage_208_cloud_of_crows"
+		end)
+
+		for i, v in ipairs(clouds) do
+			clouds[i].spawn_count = 0
+		end
+
+		local catapults = table.filter(store.entities, function(k, v)
+			return v.template_name == "decal_stage_208_goblin_catapult"
+		end)
+
+		for i, v in ipairs(catapults) do
+			catapults[i].taps_to_explode = 0
+			catapults[i].spawn_count = 0
+			catapults[i].ui.clicked = true
+		end
+	end
+
+	local function y_on_death()
+		kill_all_special_enemies()
+		LU.kill_all_enemies(store, true)
+		S:stop_all()
+		W:stop_manual_wave("BOSS1")
+		S:queue(this.sound_death)
+		U.animation_start(this, "death", nil, store.tick_ts, false)
+		U.y_wait(store, fts(26))
+
+		local shake = E:create_entity("aura_screen_shake")
+
+		shake.aura.amplitude = 0.5
+		shake.aura.duration = 0.5
+		shake.aura.freq_factor = 1
+
+		simulation:queue_insert_entity(shake)
+		U.y_animation_wait(this)
+		signal.emit("boss-killed", this)
+
+		this.bossfight_ended = true
+	end
+
+	U.animation_start(this, "walk", nil, store.tick_ts, true)
+
+	while true do
+		if this.health.dead then
+			y_on_death()
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		elseif this.is_pushing_cart then
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, true, walk_cart_break_fn)
+
+			if not cont then
+				if this.enraged then
+					this.triggered_explosion = true
+					this.trigger_deselect = true
+					this.vis.bans = F_ALL
+
+					S:queue(this.sound_explosion)
+
+					local explosion = E:create_entity(this.explosion_fx)
+
+					explosion.pos = V.v(512, 384)
+					explosion.render.sprites[1].ts = store.tick_ts
+
+					simulation:queue_insert_entity(explosion)
+
+					local shake = E:create_entity("aura_screen_shake")
+
+					shake.aura.amplitude = 1
+					shake.aura.duration = 2
+					shake.aura.freq_factor = 3
+
+					simulation:queue_insert_entity(shake)
+
+					this.render.sprites[1].hidden = true
+					this.health_bar.hidden = true
+
+					local b = E:create_entity(this.fly_bullet)
+
+					b.pos.x, b.pos.y = this.pos.x, this.pos.y + 50
+					b.bullet.from = V.vclone(b.pos)
+					b.bullet.to = P:node_pos(this.nav_path.pi, 1, this.nav_path.ni - this.nodes_knockback)
+					b.bullet.source_id = this.id
+
+					simulation:queue_insert_entity(b)
+					U.y_wait(store, b.bullet.flight_time)
+
+					this.pos = V.vclone(b.bullet.to)
+					this.nav_path.spi = 1
+					this.nav_path.ni = this.nav_path.ni - this.nodes_knockback
+					b.render.sprites[1].hidden = true
+					this.render.sprites[1].hidden = false
+					this.render.sprites[1].prefix = "boss_stage_208Def"
+					this.health_bar.offset.x = 0
+					this.health_bar.offset.y = 130
+					this.unit.hit_offset.x = 0
+					this.unit.marker_offset.x = 0
+					this.unit.mod_offset.x = 0
+					U.update_max_speed(this, this.normal_speed)
+					this.render.sprites[1].angles.walk = {"walk", "walk", "walk"}
+					this.ui.click_rect = r(-60, 0, 120, 100)
+					aa.disabled = false
+					as.disabled = false
+					as.ts = store.tick_ts
+
+					U.y_animation_play(this, "land", nil, store.tick_ts, 1)
+					U.animation_start(this, "land_idle", nil, store.tick_ts, true)
+					U.y_wait(store, 1)
+
+					local shake = E:create_entity("aura_screen_shake")
+
+					shake.aura.amplitude = 1
+					shake.aura.duration = 1
+					shake.aura.freq_factor = 3
+
+					simulation:queue_insert_entity(shake)
+					U.y_wait(store, 1)
+					U.y_animation_play(this, "land_get_up", nil, store.tick_ts, 1)
+
+					this.health.ignore_damage = false
+					this.vis.bans = band(old_bans, bnot(F_BLOCK))
+					this.is_pushing_cart = false
+					this.trigger_deselect = nil
+
+					if this.health.hp < this.health.hp_max then
+						this.health_bar.hidden = false
+					end
+
+					W:start_manual_wave("BOSS1")
+					signal.emit("boss_fight_start", this)
+				else
+					this.enraged = true
+					U.update_max_speed(this, this.speed_cart_rage)
+
+					S:queue(this.sound_angry)
+
+					old_bans = this.vis.bans
+					this.vis.bans = F_ALL
+					this.health.ignore_damage = true
+
+					U.y_animation_play(this, "angry", nil, store.tick_ts, 1)
+
+					this.render.sprites[1].angles.walk = {"rush", "rush", "rush"}
+				end
+			end
+		else
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, walk_break_fn)
+
+			if not cont then
+				if store.tick_ts - as.ts > as.cooldown then
+					U.animation_start(this, as.animation, nil, store.tick_ts, false)
+					U.y_wait(store, as.cast_time)
+
+					as.ts = store.tick_ts
+
+					for k, v in pairs(as.auras) do
+						local aura = E:create_entity(v)
+
+						aura.aura.source_id = this.id
+						aura.aura.ts = store.tick_ts
+						aura.pos = V.vclone(this.pos)
+
+						simulation:queue_insert_entity(aura)
+					end
+
+					U.y_animation_wait(this)
+				end
+			elseif not blocker or not SU.y_wait_for_blocker(store, this, blocker) then
+			-- block empty
+			else
+				while SU.can_melee_blocker(store, this, blocker) do
+					if not SU.y_enemy_melee_attacks(store, this, blocker) then
+						break
+					end
+
+					coroutine.yield()
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
 return scripts

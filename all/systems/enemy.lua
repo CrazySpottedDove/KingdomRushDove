@@ -50,7 +50,7 @@ function enemy:on_insert_unconditional(entity, store)
 			entity.health.patched = true
 		end
 
-		if entity.enemy.lives_cost == 20 then
+		if entity.enemy.lives_cost == 20 and store.game_gui then
 			store.game_gui:set_boss(entity)
 		end
 
