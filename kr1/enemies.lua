@@ -13204,7 +13204,6 @@ tt.ui.click_rect = r(-13, 0, 26, 25)
 
 -- enemy_bandit_tut_kr6（kr6 教学用，血量/速度单独一套）
 tt = RT("enemy_bandit_tut_kr6", "enemy_bandit_kr6")
-tt.info.fn = nil
 tt.health.hp_max = 33
 tt.motion.max_speed = 48
 tt.ui.click_rect = r(0, 0, 0, 0)

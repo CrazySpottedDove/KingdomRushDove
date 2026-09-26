@@ -48,6 +48,10 @@ function _(s, default)
 		-- DEBUG_USE
 		-- print("Missing translation for '" .. s .. "' in locale '" .. i18n.current_locale .. "'")
 		-- print(debug.traceback())
+		if _G.I18N_DEBUG or os.getenv("I18N_DEBUG") == "1" then
+			print("I18N_MISSING\t" .. tostring(s) .. "\t" .. tostring(i18n.current_locale))
+			print(debug.traceback("", 2))
+		end
 		return s
 	end
 end
@@ -105,4 +109,31 @@ function i18n:find_fallback_locale(lang, script)
 	end
 end
 
+-- 缺失文案可见化：只在显式开启时替换实现，正常工作路径不带任何检查
+local fast_lookup = _
+function i18n.set_debug_missing(on)
+	if not on then
+		_ = fast_lookup
+
+		return
+	end
+
+	_ = function(s, default)
+		local l = i18n.msgs[i18n.current_locale] or i18n.msgs[i18n.default_locale]
+		local ts = l and l[s]
+
+		if ts then
+			return ts
+		elseif default then
+			return default
+		end
+
+		print("I18N_MISSING\t" .. tostring(s) .. "\t" .. tostring(i18n.current_locale))
+		print(debug.traceback("", 2))
+
+		return s
+	end
+end
+
 return i18n
+

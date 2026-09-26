@@ -1500,13 +1500,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_sandworm"
 }
 
-local fps_based_keys = {
-	["hit_time"] = true,
-	["cast_time"] = true,
-	["shoot_time"] = true,
-	["dodge_time"] = true
-}
--- SU 中的副本，为了避免循环引用，不得不在这里复制
+local fps_based_keys = table.to_map({"hit_time", "cast_time", "shoot_time", "dodge_time", "cycle_time", "shoot_times", "hit_times"})
+
 local function scale_fps_based_keys(tbl, factor, visited)
 	visited = visited or {}
 
@@ -1520,14 +1515,19 @@ local function scale_fps_based_keys(tbl, factor, visited)
 		-- 跳过 _origin_xxx 字段，避免递归
 		if type(v) == "table" then
 			scale_fps_based_keys(v, factor, visited)
-		elseif fps_based_keys[k] and type(v) == "number" then
+		elseif fps_based_keys[k] then
 			local _origin_key = "_origin_" .. k
 
 			if not tbl[_origin_key] then
-				tbl[_origin_key] = v
+				tbl[_origin_key] = table.deepclone(v)
 			end
-
-			tbl[k] = tbl[_origin_key] * factor
+			if type(v) == "number" then
+				tbl[k] = tbl[_origin_key] * factor
+			else
+				for i = 1, #v do
+					v[i] = tbl[_origin_key][i] * factor
+				end
+			end
 		end
 	end
 end

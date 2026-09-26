@@ -45984,21 +45984,6 @@ return {
 		from = 1,
 		to = 1
 	},
-	tower_shadow_archer_shooter_shootDown = {
-		prefix = "darkarmy_archer_tower_shooter_lvl4",
-		from = 2,
-		to = 22
-	},
-	tower_shadow_archer_shooter_idleUp = {
-		prefix = "darkarmy_archer_tower_shooter_lvl4",
-		from = 23,
-		to = 23
-	},
-	tower_shadow_archer_shooter_shootUp = {
-		prefix = "darkarmy_archer_tower_shooter_lvl4",
-		from = 24,
-		to = 44
-	},
 	tower_shadow_archer_shooter_teleportOut = {
 		prefix = "darkarmy_archer_tower_shooter_lvl4",
 		-- from = 45,
@@ -46022,16 +46007,6 @@ return {
 		prefix = "darkarmy_archer_tower_shooter_lvl4",
 		from = 116,
 		to = 130
-	},
-	tower_shadow_archer_shooter_shootSpecialDown = {
-		prefix = "darkarmy_archer_tower_shooter_lvl4",
-		from = 131,
-		to = 151
-	},
-	tower_shadow_archer_shooter_shootSpecialUp = {
-		prefix = "darkarmy_archer_tower_shooter_lvl4",
-		from = 152,
-		to = 172
 	},
 	mod_arrow_shadow_mark_run = {
 		prefix = "darkarmy_archer_tower_shooter_lvl4_shadow_modifier",
@@ -46604,22 +46579,6 @@ return {
 		prefix = "ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3",
 		from = 1,
 		to = 20
-	},
-	--proyectile普攻魔法弹、尾焰、打击效果
-	ember_lords_mage_tower_shooter_proyectile_flying = {
-		prefix = "ember_lords_mage_tower_bolt",
-		from = 1,
-		to = 10
-	},
-	ember_lords_mage_tower_shooter_proyectile_hit = {
-		prefix = "ember_lords_mage_tower_bolt",
-		from = 11,
-		to = 22
-	},
-	ember_lords_mage_tower_bolt_particle_run = {
-		prefix = "ember_lords_mage_tower_bolt_particle",
-		from = 1,
-		to = 10
 	},
 	ember_lords_mage_tower_shooter_proyectile_flying = {
 		prefix = "ember_lords_mage_tower_bolt_lvl4",
@@ -51273,8 +51232,47 @@ return {
 		prefix = "blackguard_blackguard",
 		to = 1
 	},
-
 	-- kr6 关卡 201：老国王投掷物动画
+	Stage_1_old_king_projectiles_anvil_break_fx_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_anvil_break_fx",
+		to = 14
+	},
+	Stage_1_old_king_projectiles_bust_break_fx_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_bust_break_fx",
+		to = 14
+	},
+	Stage_1_old_king_projectiles_explosion_fx_a_decal_idle = {
+		from = 29,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_a_decal",
+		to = 29
+	},
+	Stage_1_old_king_projectiles_explosion_fx_a_decal_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_a_decal",
+		to = 28
+	},
+	Stage_1_old_king_projectiles_explosion_fx_a_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_a",
+		to = 28
+	},
+	Stage_1_old_king_projectiles_explosion_fx_b_decal = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_b_decal",
+		to = 1
+	},
+	Stage_1_old_king_projectiles_explosion_fx_b_floor_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_b_floor",
+		to = 10
+	},
+	Stage_1_old_king_projectiles_explosion_fx_b_run = {
+		from = 1,
+		prefix = "Stage_1_old_king_projectiles_explosion_fx_b",
+		to = 18
+	},
 	Stage_1_old_king_projectiles_pojectile_anvil = {
 		from = 1,
 		prefix = "Stage_1_old_king_projectiles_pojectile_anvil",
@@ -51290,49 +51288,108 @@ return {
 		prefix = "Stage_1_old_king_projectiles_pojectile_sheep",
 		to = 8
 	},
-	Stage_1_old_king_projectiles_anvil_break_fx_run = {
-		from = 1,
-		prefix = "Stage_1_old_king_projectiles_anvil_break_fx",
-		to = 14
-	},
-	Stage_1_old_king_projectiles_bust_break_fx_run = {
-		from = 1,
-		prefix = "Stage_1_old_king_projectiles_bust_break_fx",
-		to = 14
-	},
 	Stage_1_old_king_projectiles_sheep_break_fx_run = {
 		from = 1,
 		prefix = "Stage_1_old_king_projectiles_sheep_break_fx",
 		to = 12
 	},
-	Stage_1_old_king_projectiles_explosion_fx_a_run = {
+
+	-- kr6 关卡 202：暗影之刃动画
+	shadow_blades_dust_fx_loop = {
 		from = 1,
-		prefix = "Stage_1_old_king_projectiles_explosion_fx_a",
-		to = 28
+		prefix = "shadow_blades_dust_fx",
+		to = 41
 	},
-	Stage_1_old_king_projectiles_explosion_fx_a_decal_run = {
+	shadow_blades_enemy_attack = {
+		from = 50,
+		prefix = "shadow_blades_enemy",
+		to = 73
+	},
+	shadow_blades_enemy_death = {
+		from = 118,
+		prefix = "shadow_blades_enemy",
+		to = 139
+	},
+	shadow_blades_enemy_idle = {
 		from = 1,
-		prefix = "Stage_1_old_king_projectiles_explosion_fx_a_decal",
-		to = 28
-	},
-	Stage_1_old_king_projectiles_explosion_fx_a_decal_idle = {
-		from = 29,
-		prefix = "Stage_1_old_king_projectiles_explosion_fx_a_decal",
-		to = 29
-	},
-	Stage_1_old_king_projectiles_explosion_fx_b_run = {
-		from = 1,
-		prefix = "Stage_1_old_king_projectiles_explosion_fx_b",
-		to = 18
-	},
-	Stage_1_old_king_projectiles_explosion_fx_b_floor_run = {
-		from = 1,
-		prefix = "Stage_1_old_king_projectiles_explosion_fx_b_floor",
-		to = 10
-	},
-	Stage_1_old_king_projectiles_explosion_fx_b_decal = {
-		from = 1,
-		prefix = "Stage_1_old_king_projectiles_explosion_fx_b_decal",
+		prefix = "shadow_blades_enemy",
 		to = 1
+	},
+	shadow_blades_enemy_smokebomb = {
+		from = 74,
+		prefix = "shadow_blades_enemy",
+		to = 117
+	},
+	shadow_blades_enemy_walk = {
+		from = 2,
+		prefix = "shadow_blades_enemy",
+		to = 17
+	},
+	shadow_blades_enemy_walk_back = {
+		from = 34,
+		prefix = "shadow_blades_enemy",
+		to = 49
+	},
+	shadow_blades_enemy_walk_front = {
+		from = 18,
+		prefix = "shadow_blades_enemy",
+		to = 33
+	},
+	shadow_blades_hit_fx = {
+		from = 1,
+		prefix = "shadow_blades_hit_fx",
+		to = 6
+	},
+	shadow_blades_modifier_idle = {
+		from = 1,
+		prefix = "shadow_blades_modifier",
+		to = 22
+	},
+
+	-- kr6 关卡 202：暗影弓手动画（_kr6）
+	shadow_archer_arrow = {
+		from = 1,
+		prefix = "shadow_archer_arrow",
+		to = 1
+	},
+	shadow_archer_arrow2 = {
+		from = 1,
+		prefix = "shadow_archer_arrow2",
+		to = 1
+	},
+	shadow_archer_enemy_attack_melee = {
+		from = 121,
+		prefix = "shadow_archer_enemy",
+		to = 144
+	},
+	shadow_archer_enemy_attack_ranged = {
+		from = 97,
+		prefix = "shadow_archer_enemy",
+		to = 120
+	},
+	shadow_archer_enemy_death = {
+		from = 145,
+		prefix = "shadow_archer_enemy",
+		to = 168
+	},
+	shadow_archer_enemy_idle = {
+		from = 1,
+		prefix = "shadow_archer_enemy",
+		to = 24
+	},
+	shadow_archer_enemy_walk = {
+		from = 25,
+		prefix = "shadow_archer_enemy",
+		to = 48
+	},
+	shadow_archer_enemy_walk_back = {
+		from = 73,
+		prefix = "shadow_archer_enemy",
+		to = 96
+	},
+	shadow_archer_enemy_walk_front = {
+		from = 49,
+		prefix = "shadow_archer_enemy",
+		to = 72
 	}
 }

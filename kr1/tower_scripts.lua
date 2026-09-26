@@ -1655,7 +1655,7 @@ scripts.tower_silver = {
 
 			U.animation_start_once_specific(this, an, af, store.tick_ts, sid)
 
-			local shoot_time = attack.shoot_times[lidx] * tw.cooldown_factor
+			local shoot_time = attack.shoot_times[lidx]
 
 			U.y_wait_unconditional(store, shoot_time)
 
@@ -5429,7 +5429,7 @@ function scripts.soldier_mecha.update(this, store)
 						animation_start(this, an, af, store.tick_ts, false, 1)
 
 						for hi, ht in ipairs(am.hit_times) do
-							while ht * tw.cooldown_factor > store.tick_ts - this.render.sprites[1].ts do
+							while ht > store.tick_ts - this.render.sprites[1].ts do
 								if this.nav_rally.new then
 									goto label_67_1
 								end
@@ -5499,7 +5499,7 @@ function scripts.soldier_mecha.update(this, store)
 				local an, af = animation_name_facing_point(this, ab.animations[ab_side], target.pos)
 
 				animation_start(this, an, af, store.tick_ts, false, 1)
-				U.y_wait_unconditional(store, ab.hit_times[ab_side] * tw.cooldown_factor)
+				U.y_wait_unconditional(store, ab.hit_times[ab_side])
 
 				local b = E:create_entity(ab.bullet)
 
@@ -26883,7 +26883,7 @@ function scripts.soldier_balloon.update(this, store, script)
 					local an, af = U.animation_name_facing_point(this, ab.animations[this.wick_mode], target.pos)
 
 					U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
-					U.y_wait_unconditional(store, ab.hit_times[this.wick_mode] * tw.cooldown_factor)
+					U.y_wait_unconditional(store, ab.hit_times[this.wick_mode])
 
 					local b = E:create_entity(ab.bullet)
 
@@ -30778,7 +30778,7 @@ function scripts.tower_melting_furnace.update(this, store)
 					a_smash.ts = store.tick_ts
 
 					U.animation_start_default(this, a_fuel.boost and "bfHit" or "shoot", nil, store.tick_ts)
-					U.y_wait_unconditional(store, a_smash.hit_times[a_fuel.boost and 2 or 1] * this.tower.cooldown_factor)
+					U.y_wait_unconditional(store, a_smash.hit_times[a_fuel.boost and 2 or 1])
 					S:queue(a_smash.sound)
 
 					local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, a_smash.damage_flags, a_smash.damage_bans)

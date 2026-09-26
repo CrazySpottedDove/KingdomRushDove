@@ -12,7 +12,7 @@
 #	stage total gold	1734
 #	stage gold curve
 #	WAVE 1										Bandit x8					Bandit x8
-#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
 #	cant.					16	0	0	0		0	0	0	0		0	0	0	0
 #	gold	80				80	0	0	0		0	0	0	0		0	0	0
 	wave		1		-1
@@ -40,7 +40,7 @@
 
 
 #	WAVE 2					Blackguard x8															Bandit x12
-#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
 #	cant.					12	8	0	0		0	0	0	0		0	0	0	0
 #	gold	124				60	64	0	0		0	0	0	0		0	0	0
 	wave		2		22
@@ -74,7 +74,7 @@
 
 #	WAVE 3										Bandit x18
 S. Archer x6
-#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
 #	cant.					20	0	0	6		0	0	0	0		0	0	0	0
 #	gold	190				100	0	0	90		0	0	0	0		0	0	0
 	wave		3		22
@@ -88,10 +88,10 @@ S. Archer x6
 					0.6									bandit_kr6
 					0.6							bandit_kr6
 					0.6									bandit_kr6
-					5								shadow_archer
+					5								shadow_archer_kr6
 	signal	wave-notification	icon	TIP_ARMOR_MAGIC	0
-					2							shadow_archer
-					2									shadow_archer
+					2							shadow_archer_kr6
+					2									shadow_archer_kr6
 					1
 					12									bandit_kr6
 					0.6							bandit_kr6
@@ -103,9 +103,9 @@ S. Archer x6
 					0.6							bandit_kr6
 					0.6									bandit_kr6
 					0.6							bandit_kr6
-					5								shadow_archer
-					2									shadow_archer
-					2							shadow_archer
+					5								shadow_archer_kr6
+					2									shadow_archer_kr6
+					2							shadow_archer_kr6
 
 
 
@@ -115,23 +115,23 @@ S. Archer x6
 
 #	WAVE 4															Bandit x10					Blackguard x6
 S. Archer x9
-#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
 #	cant.					10	6	0	6		0	0	0	0		0	0	0	0
 #	gold	188				50	48	0	90		0	0	0	0		0	0	0
 	wave		4		23
 					0																	blackguard		blackguard
 					1																		blackguard
-					6																	shadow_archer
-					1																			shadow_archer
+					6																	shadow_archer_kr6
+					1																			shadow_archer_kr6
 					0
 					4												bandit_kr6		bandit_kr6
 					0.6													bandit_kr6
 					0.6												bandit_kr6		bandit_kr6
-					12																	shadow_archer		shadow_archer
+					12																	shadow_archer_kr6		shadow_archer_kr6
 					14																	blackguard		blackguard
 					1																		blackguard
-					8																	shadow_archer
-					1																			shadow_archer
+					8																	shadow_archer_kr6
+					1																			shadow_archer_kr6
 					0
 					1												bandit_kr6		bandit_kr6
 					0.6													bandit_kr6
@@ -147,7 +147,7 @@ S. Archer x9
 #	WAVE 5										Bandit x4
 S. Archer x3					Bandit x4
 S. Archer x3
-#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
 #	cant.					16	0	0	4		0	0	0	0		0	0	0	0
 #	gold	140				80	0	0	60		0	0	0	0		0	0	0
 	wave		5		23
@@ -159,8 +159,8 @@ S. Archer x3
 					0.6								bandit_kr6					bandit_kr6
 					0.6							bandit_kr6					bandit_kr6
 					0.6									bandit_kr6					bandit_kr6
-					8							shadow_archer						shadow_archer
-					2									shadow_archer			shadow_archer
+					8							shadow_archer_kr6						shadow_archer_kr6
+					2									shadow_archer_kr6			shadow_archer_kr6
 
 
 
@@ -185,7 +185,7 @@ S. Archer x3
 
 
 #	WAVE 6					Blackguard x8					S. Blades x12
-#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
 #	cant.					0	8	12	0		0	0	0	0		0	0	0	0
 #	gold	184				0	64	120	0		0	0	0	0		0	0	0
 	wave		6		26
@@ -210,7 +210,7 @@ S. Archer x3
 
 
 #	WAVE 7					S. Blades x10															S. Blades x10
-#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
 #	cant.					0	0	20	0		0	0	0	0		0	0	0	0
 #	gold	200				0	0	200	0		0	0	0	0		0	0	0
 	wave		7		28
@@ -251,7 +251,7 @@ S. Archer x3
 
 #	WAVE 8					Blackguard x10					S. Archer x6
 S. Blades x8
-#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
 #	cant.					0	16	11	6		0	0	0	0		0	0	0	0
 #	gold	328				0	128	110	90		0	0	0	0		0	0	0
 	wave		8		20
@@ -262,9 +262,9 @@ S. Blades x8
 					0.6						shadow_blades
 					0.6			blackguard			shadow_blades
 					1		blackguard		blackguard
-					0						shadow_archer
-					1			blackguard			shadow_archer
-					1						shadow_archer
+					0						shadow_archer_kr6
+					1			blackguard			shadow_archer_kr6
+					1						shadow_archer_kr6
 					6		blackguard		blackguard
 					16						shadow_blades
 					0.6						shadow_blades
@@ -272,9 +272,9 @@ S. Blades x8
 					0.6						shadow_blades
 					0.6		blackguard		blackguard		shadow_blades
 					1			blackguard
-					6						shadow_archer
-					1						shadow_archer
-					1		blackguard				shadow_archer
+					6						shadow_archer_kr6
+					1						shadow_archer_kr6
+					1		blackguard				shadow_archer_kr6
 					1				blackguard
 					9		blackguard		blackguard
 					1		blackguard		blackguard

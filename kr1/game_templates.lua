@@ -25787,16 +25787,6 @@ tt.main_script.update = scripts.controller_mage_purge_field.update
 -- 移植自 KR Genesis (kr6) templates_game.lua
 -- ================================================================
 
-tt = RT("decal_stage_201_cow", "decal_scripted")
-AC(tt, "ui")
-tt.render.sprites[1].prefix = "stage201_cowDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS - 1
-tt.main_script.update = scripts.decal_stage_201_cow.update
-tt.sound_discover = "Stage01CowSpiesReveal"
-tt.ui.click_rect = r(556, 255, 41, 30)
-
 tt = RT("decal_stage_201_king", "decal_scripted")
 AC(tt, "attacks", "editor")
 tt.render.sprites[1].prefix = "stage_201_old_kingDef"
@@ -25820,127 +25810,6 @@ tt.wait_laugh = fts(29)
 tt.sound_attack = "Stage01OldKingGibberishThrow"
 tt.sound_laugh = "Stage01OldKingGibberishLaugh"
 
-tt = RT("decal_stage_201_merchant", "decal_scripted")
-tt.render.sprites[1].prefix = "stage_201_merchantDef"
-tt.render.sprites[1].name = "idle_1"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS - 1
-tt.broken_cart = false
-tt.main_script.update = scripts.decal_stage_201_merchant.update
-
-tt = RT("decal_stage_201_sheep", "decal_scripted")
-AC(tt, "ui", "editor", "editor_script")
-tt.render.sprites[1].prefix = "stage_201_sheepDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.main_script.insert = scripts.decal_terrain_1_sheep.insert
-tt.main_script.update = scripts.decal_terrain_1_sheep.update
-tt.editor_script.update = scripts.decal_terrain_1_sheep.update_editor
-tt.sound = "Stage03SheepExplosion"
-tt.taps_to_explode = 5
-tt.ui.click_rect = r(-15, -5, 30, 25)
-tt.editor.flip = 0
-tt.editor.props = {{"editor.flip", PT_NUMBER}}
-
-tt = RT("decal_stage_201_sheep_small", "decal_stage_201_sheep")
-tt.render.sprites[1].prefix = "stage_201_sheep_smallDef"
-tt.ui.click_rect = r(-12.5, -5, 25, 20)
-
-tt = RT("decal_stage_201_statue", "decal_scripted")
-AC(tt, "ui")
-tt.render.sprites[1].prefix = "stage201_statueDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_201_statue.update
-tt.sound_tap = "Stage01StatueChange"
-tt.worker_t = "decal_stage_201_worker_statue"
-tt.ui.click_rect = r(125, 100, 80, 110)
-
-tt = RT("decal_stage_201_stone", "decal_scripted")
-AC(tt, "ui")
-tt.render.sprites[1].prefix = "stage_201_stoneDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.main_script.update = scripts.decal_stage_201_stone.update
-tt.merchant_t = "decal_stage_201_merchant"
-tt.injure_worker_t = "decal_stage_201_worker_1f"
-tt.sound_tap = "Stage01ConstructionWorkerTap12"
-tt.sound_break = "Stage01ConstructionWorkerTap3"
-tt.ui.click_rect = r(-358, -104, 36, 36)
-
-tt = RT("decal_stage_201_water", "decal")
-tt.render.sprites[1].prefix = "stage_201_water_dotsDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].random_ts = fts(15)
-
-tt = RT("decal_stage_201_worker_1", "decal")
-tt.render.sprites[1].prefix = "stage201_dude1Def"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].random_ts = fts(30)
-
-tt = RT("decal_stage_201_worker_1f", "decal_stage_201_worker_1")
-tt.render.sprites[1].flip_x = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-
-tt = RT("decal_stage_201_worker_2", "decal_scripted")
-tt.render.sprites[1].prefix = "stage201_dude2Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.random_wait_min = fts(20)
-tt.random_wait_max = fts(80)
-tt.main_script.update = scripts.decal_stage_201_worker_2.update
-
-tt = RT("decal_stage_201_worker_2f", "decal_stage_201_worker_2")
-tt.render.sprites[1].flip_x = true
-
-tt = RT("decal_stage_201_worker_3", "decal_stage_201_worker_1")
-tt.render.sprites[1].prefix = "stage201_dude3Def"
-tt.render.sprites[1].name = "loop"
-
-tt = RT("decal_stage_201_worker_3f", "decal_stage_201_worker_3")
-tt.render.sprites[1].flip_x = true
-
-tt = RT("decal_stage_201_worker_4", "decal_stage_201_worker_3")
-tt.render.sprites[1].prefix = "stage201_dude4Def"
-
-tt = RT("decal_stage_201_worker_statue", "decal")
-tt.render.sprites[1].prefix = "stage201_dude1_statueDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.render.sprites[1].random_ts = fts(30)
-
-tt = RT("decal_stage_201_hp_mask_1", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "KR6_stage_201_iron_mask1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = RT("decal_stage_201_mask_1", "decal")
-tt.render.sprites[1].name = "KR6_stage_201_mask1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = RT("decal_stage_201_mask_2", "decal")
-tt.render.sprites[1].name = "KR6_stage_201_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = RT("decal_stage_201_mask_3", "decal")
-tt.render.sprites[1].name = "KR6_stage_201_mask3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = RT("decal_stage_201_mask_4", "decal")
-tt.render.sprites[1].name = "KR6_stage_201_mask4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
--- kr6 关卡 201：老国王投掷物链条（脚本引用的模板）
 tt = RT("bullet_stage_201_king_anvil", "bomb")
 tt.bullet.damage_decay_random = false
 tt.bullet.damage_type = DAMAGE_EXPLOSION
@@ -25995,43 +25864,670 @@ tt.render.sprites[1].prefix = "Stage_1_old_king_projectiles_sheep_break_fx"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].z = Z_OBJECTS - 1
 
-tt = RT("decal_stage_201_anvil_bust_hit", "decal_tween")
-AC(tt, "main_script")
-tt.render.sprites[1].prefix = "Stage_1_old_king_projectiles_explosion_fx_a_decal"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "Stage_1_old_king_projectiles_explosion_fx_a"
-tt.render.sprites[2].name = "run"
-tt.render.sprites[2].animated = true
-tt.render.sprites[2].loop = false
-tt.render.sprites[2].z = Z_OBJECTS
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2.5, 0}}
-
-tt = RT("decal_stage_201_sheep_hit", "decal_tween")
-AC(tt, "main_script")
-tt.render.sprites[1].name = "Stage_1_old_king_projectiles_explosion_fx_b_decal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "Stage_1_old_king_projectiles_explosion_fx_b_floor"
-tt.render.sprites[2].name = "run"
-tt.render.sprites[2].animated = true
-tt.render.sprites[2].loop = false
-tt.render.sprites[2].z = Z_DECALS + 1
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].prefix = "Stage_1_old_king_projectiles_explosion_fx_b"
-tt.render.sprites[3].name = "run"
-tt.render.sprites[3].animated = true
-tt.render.sprites[3].loop = false
-tt.render.sprites[3].z = Z_OBJECTS
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2.5, 0}}
-
 tt = RT("bullet_stage_201_king", "bullet_stage_201_king_anvil")
+
+-- kr6 关卡 202（kr6 stage02）所需模板
+tt = RT("controller_stage_202_masterclass_achievement_tracker", "decal")
+
+AC(tt, "main_script", "pos")
+
+tt.main_script.update = scripts.controller_stage_202_masterclass_achievement_tracker.update
+
+tt = RT("controller_stage_202_scrolls", "decal")
+
+AC(tt, "pos", "main_script")
+
+tt.main_script.update = scripts.controller_stage_202_scrolls.update
+tt.amount_for_achievement = 4
+tt.scrolls_obtained = 0
+
+tt = RT("controller_stage_202_teleport_left", "decal")
+
+AC(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_202_teleport.update
+tt.mod_teleport = "mod_stage_202_teleport"
+tt.mod_mark = "mod_stage_202_teleport_mark"
+tt.book_t = "decal_stage_202_teleport_book_left"
+tt.decal_teleport = "decal_stage_202_teleport"
+tt.sound_teleport = "Stage02StatueTeleport"
+tt.sound_recharge = "Stage02StatueTeleportRecharge"
+tt.cooldown = 35
+tt.nodes_teleport = 50
+tt.radius = 40
+tt.max_targets = 4
+
+tt = RT("controller_stage_202_teleport_right", "decal")
+
+AC(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_202_teleport.update
+tt.mod_teleport = "mod_stage_202_teleport"
+tt.mod_mark = "mod_stage_202_teleport_mark"
+tt.book_t = "decal_stage_202_teleport_book_left"
+tt.decal_teleport = "decal_stage_202_teleport"
+tt.sound_teleport = "Stage02StatueTeleport"
+tt.sound_recharge = "Stage02StatueTeleportRecharge"
+tt.cooldown = 35
+tt.nodes_teleport = 50
+tt.radius = 40
+tt.max_targets = 4
+
+tt.book_t = "decal_stage_202_teleport_book_right"
+
+tt = RT("controller_stage_202_teleport_left", "decal")
+
+AC(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_202_teleport.update
+tt.mod_teleport = "mod_stage_202_teleport"
+tt.mod_mark = "mod_stage_202_teleport_mark"
+tt.book_t = "decal_stage_202_teleport_book_left"
+tt.decal_teleport = "decal_stage_202_teleport"
+tt.sound_teleport = "Stage02StatueTeleport"
+tt.sound_recharge = "Stage02StatueTeleportRecharge"
+tt.cooldown = 35
+tt.nodes_teleport = 50
+tt.radius = 40
+tt.max_targets = 4
+
+tt = RT("decal_stage_202_book", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "stage202_bukDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_202_book.update
+tt.sound = "Stage02BookFountainTap"
+tt.ui.click_rect = r(-42.5, -35, 85, 60)
+
+tt = RT("decal_stage_202_chess_bishop_black", "decal")
+tt.controller_t = "controller_stage_202_chess"
+
+AC(tt, "pos", "ui")
+
+tt.ui.click_rect = r(-241, -294, 25, 35)
+
+tt = RT("decal_stage_202_chess_knight", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "chess_bishopDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.insert = scripts.decal_stage_202_chess.insert
+tt.main_script.update = scripts.decal_stage_202_chess.update
+tt.controller_t = "controller_stage_202_chess"
+tt.sound_miss = "Stage02BattleChessPieceInvalidMove"
+tt.sound_valid = "Stage02BattleChessPieceValidMove"
+tt.sound_select = "Stage02BattleChessPieceSelect"
+tt.sound_explosion = "Stage02BattleChessPieceExplosion"
+tt.ui.click_rect = r(-238, -214, 25, 49)
+
+tt.render.sprites[1].prefix = "chess_knightDef"
+tt.render.sprites[1].z = Z_OBJECTS + 1
+tt.ui.click_rect = r(-280, -275, 30, 40)
+
+tt = RT("decal_stage_202_chess_bishop", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "chess_bishopDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.insert = scripts.decal_stage_202_chess.insert
+tt.main_script.update = scripts.decal_stage_202_chess.update
+tt.controller_t = "controller_stage_202_chess"
+tt.sound_miss = "Stage02BattleChessPieceInvalidMove"
+tt.sound_valid = "Stage02BattleChessPieceValidMove"
+tt.sound_select = "Stage02BattleChessPieceSelect"
+tt.sound_explosion = "Stage02BattleChessPieceExplosion"
+tt.ui.click_rect = r(-238, -214, 25, 49)
+
+tt = RT("decal_stage_202_chess_knight_black", "decal")
+tt.controller_t = "controller_stage_202_chess"
+
+AC(tt, "pos", "ui")
+
+tt.ui.click_rect = r(-165, -255, 25, 35)
+
+tt = RT("decal_stage_202_chess_rook", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "chess_bishopDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.insert = scripts.decal_stage_202_chess.insert
+tt.main_script.update = scripts.decal_stage_202_chess.update
+tt.controller_t = "controller_stage_202_chess"
+tt.sound_miss = "Stage02BattleChessPieceInvalidMove"
+tt.sound_valid = "Stage02BattleChessPieceValidMove"
+tt.sound_select = "Stage02BattleChessPieceSelect"
+tt.sound_explosion = "Stage02BattleChessPieceExplosion"
+tt.ui.click_rect = r(-238, -214, 25, 49)
+
+tt.render.sprites[1].prefix = "chess_rookDef"
+tt.ui.click_rect = r(-278, -232, 25, 35)
+
+tt = RT("decal_stage_202_chess_rook_black", "decal")
+tt.controller_t = "controller_stage_202_chess"
+
+AC(tt, "pos", "ui")
+
+tt.ui.click_rect = r(-203, -276, 25, 49)
+
+tt = RT("decal_stage_202_lamp", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "magelampDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.tap_anim = "brokenstart"
+tt.tap_anim_play_times = 1
+tt.loop_anim = "broken"
+tt.tap_disables = true
+tt.tap_ends = true
+tt.tap_sound = "Stage05LampBreak"
+tt.main_script.update = scripts.decal_utils.animation_on_tap_update
+tt.ui.can_click = true
+tt.ui.click_rect = r(-13, 20, 25, 30)
+
+tt = RT("decal_stage_202_mage_1_2", "decal")
+
+tt.render.sprites[1].prefix = "mage1_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt.render.sprites[1].prefix = "mage1_2_animationsDef"
+
+tt = RT("decal_stage_202_mage_1", "decal")
+
+tt.render.sprites[1].prefix = "mage1_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt = RT("decal_stage_202_mage_3_2", "decal_scripted")
+
+tt.render.sprites[1].prefix = "mage2_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_202_mage_2.update
+
+tt.render.sprites[1].prefix = "mage3_animationsDef"
+tt.main_script.update = scripts.decal_stage_202_mage_3.update
+
+tt.render.sprites[1].prefix = "mage3_2_animationsDef"
+
+tt = RT("decal_stage_202_mage_3", "decal_scripted")
+
+tt.render.sprites[1].prefix = "mage2_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_202_mage_2.update
+
+tt.render.sprites[1].prefix = "mage3_animationsDef"
+tt.main_script.update = scripts.decal_stage_202_mage_3.update
+
+tt = RT("decal_stage_202_mage_2", "decal_scripted")
+
+tt.render.sprites[1].prefix = "mage2_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_202_mage_2.update
+
+tt = RT("decal_stage_202_mage_4_2", "decal_scripted")
+
+tt.render.sprites[1].prefix = "mage2_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_202_mage_2.update
+
+tt.render.sprites[1].prefix = "mage3_animationsDef"
+tt.main_script.update = scripts.decal_stage_202_mage_3.update
+
+tt.render.sprites[1].prefix = "mage4_animationsDef"
+tt.render.sprites[1].name = "idle1"
+tt.main_script.update = scripts.decal_stage_202_mage_4.update
+
+tt.render.sprites[1].prefix = "mage4_2_animationsDef"
+tt.render.sprites[1].flip_x = true
+
+tt = RT("decal_stage_202_mage_4", "decal_scripted")
+
+tt.render.sprites[1].prefix = "mage2_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_202_mage_2.update
+
+tt.render.sprites[1].prefix = "mage3_animationsDef"
+tt.main_script.update = scripts.decal_stage_202_mage_3.update
+
+tt.render.sprites[1].prefix = "mage4_animationsDef"
+tt.render.sprites[1].name = "idle1"
+tt.main_script.update = scripts.decal_stage_202_mage_4.update
+
+tt = RT("decal_stage_202_mage_4_3", "decal_scripted")
+
+tt.render.sprites[1].prefix = "mage2_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_202_mage_2.update
+
+tt.render.sprites[1].prefix = "mage3_animationsDef"
+tt.main_script.update = scripts.decal_stage_202_mage_3.update
+
+tt.render.sprites[1].prefix = "mage4_animationsDef"
+tt.render.sprites[1].name = "idle1"
+tt.main_script.update = scripts.decal_stage_202_mage_4.update
+
+tt.render.sprites[1].flip_x = true
+
+tt = RT("decal_stage_202_magnus", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "magnus_animationsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.main_script.update = scripts.decal_stage_202_magnus.update
+tt.sound_t1 = "Stage02WizardStudentsTap1"
+tt.sound_t2 = "Stage02WizardStudentsTap2"
+tt.sound_t2_cheer = "Stage02WizardStudentsTap2Cheer"
+tt.ui.click_rect = r(105, -55, 30, 35)
+
+tt = RT("decal_stage_202_mask_1", "decal")
+
+tt.render.sprites[1].name = "KR6_stage_202_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
+tt = RT("decal_stage_202_mask_2", "decal")
+
+tt.render.sprites[1].name = "KR6_stage_202_mask2"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt = RT("decal_stage_202_mask_3", "decal")
+
+tt.render.sprites[1].name = "KR6_stage_202_mask3"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 122
+
+tt = RT("decal_stage_202_merlin", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "stage202_merlinDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].exo = true
+tt.main_script.insert = scripts.decal_utils.censor_cn_insert
+tt.main_script.update = scripts.decal_stage_202_merlin.update
+tt.sound_p1 = "Stage02MerlinPart1"
+tt.sound_p2 = "Stage02MerlinPart2"
+tt.ui.click_rect = r(-50, -60, 110, 120)
+
+tt = RT("decal_stage_202_scroll_2", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "scroll_1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.tap_anim = "tap"
+tt.tap_anim_play_times = 1
+tt.tap_sound = "Stage02ScrollsDisintegrate"
+tt.no_loop_anim = true
+tt.tap_disables = true
+tt.tap_ends = true
+tt.scrolls_controller_t = "controller_stage_202_scrolls"
+tt.main_script.update = scripts.decal_stage_202_scroll.update
+tt.ui.click_rect = r(-476, -76, 25, 18)
+
+tt.render.sprites[1].prefix = "scroll_2Def"
+tt.ui.click_rect = r(249, 141, 25, 18)
+
+tt = RT("decal_stage_202_scroll_1", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "scroll_1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.tap_anim = "tap"
+tt.tap_anim_play_times = 1
+tt.tap_sound = "Stage02ScrollsDisintegrate"
+tt.no_loop_anim = true
+tt.tap_disables = true
+tt.tap_ends = true
+tt.scrolls_controller_t = "controller_stage_202_scrolls"
+tt.main_script.update = scripts.decal_stage_202_scroll.update
+tt.ui.click_rect = r(-476, -76, 25, 18)
+
+tt = RT("decal_stage_202_scroll_3", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "scroll_1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.tap_anim = "tap"
+tt.tap_anim_play_times = 1
+tt.tap_sound = "Stage02ScrollsDisintegrate"
+tt.no_loop_anim = true
+tt.tap_disables = true
+tt.tap_ends = true
+tt.scrolls_controller_t = "controller_stage_202_scrolls"
+tt.main_script.update = scripts.decal_stage_202_scroll.update
+tt.ui.click_rect = r(-476, -76, 25, 18)
+
+tt.render.sprites[1].prefix = "scroll_3Def"
+tt.ui.click_rect = r(-596, -304, 25, 18)
+
+tt = RT("decal_stage_202_scroll_4", "decal_scripted")
+
+AC(tt, "ui")
+
+tt.render.sprites[1].prefix = "scroll_1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.tap_anim = "tap"
+tt.tap_anim_play_times = 1
+tt.tap_sound = "Stage02ScrollsDisintegrate"
+tt.no_loop_anim = true
+tt.tap_disables = true
+tt.tap_ends = true
+tt.scrolls_controller_t = "controller_stage_202_scrolls"
+tt.main_script.update = scripts.decal_stage_202_scroll.update
+tt.ui.click_rect = r(-476, -76, 25, 18)
+
+tt.render.sprites[1].prefix = "scroll_4Def"
+tt.ui.click_rect = r(16, -270, 25, 18)
+
+tt = RT("decal_stage_202_water_small", "decal")
+
+tt.render.sprites[1].prefix = "magewaterDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].random_ts = fts(15)
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
+tt.render.sprites[1].scale = vv(0.75)
+
+tt = RT("decal_stage_202_water", "decal")
+
+tt.render.sprites[1].prefix = "magewaterDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].random_ts = fts(15)
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
+tt = RT("decal_stage_202_wisp", "decal_scripted")
+
+tt.render.sprites[1].prefix = "magewispDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].random_ts = fts(30)
+tt.main_script.update = scripts.decal_stage_202_wisp.update
+
+tt = RT("controller_stage_202_chess")
+
+AC(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_202_chess.update
+tt.bishop_t = "decal_stage_202_chess_bishop"
+tt.knight_t = "decal_stage_202_chess_knight"
+tt.rook_t = "decal_stage_202_chess_rook"
+
+-- kr6 关卡 202：暗影之刃（波次引用的敌人及其依赖）
+tt = RT("enemy_shadow_blades", "enemy")
+
+AC(tt, "melee")
+
+tt.enemy.gold = 10
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = 70
+tt.health_bar.offset = v(0, 35)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.info.portrait = "gui_bottom_info_image_enemies_0003"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_shadow_blades.update
+tt.motion.max_speed = 64
+tt.render.sprites[1].prefix = "shadow_blades_enemy"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 0.8
+tt.melee.attacks[1].damage_min = 7
+tt.melee.attacks[1].damage_max = 11
+tt.melee.attacks[1].damage_type = 2
+tt.melee.attacks[1].hit_times = {fts(8), fts(14)}
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
+tt.melee.attacks[1].animation = "attack"
+tt.melee.attacks[1].hit_fx = "fx_shadow_blades_hit"
+tt.melee.attacks[1].hit_offset = v(40, 13)
+tt.unit.hit_offset = v(0, 15)
+tt.unit.head_offset = v(6, 18)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 15)
+tt.smokebomb = {}
+tt.smokebomb.animation = "smokebomb"
+tt.smokebomb.smoke_t = "aura_shadow_blades_smoke"
+tt.smokebomb.delay = fts(20)
+tt.smokebomb.min_nodes_to_exit = 35
+tt.smokebomb.hp_threshold = 0.2
+tt.smokebomb.sound = "EnemyShadowBladesSmokeBombCast"
+tt.sound_events.death = "EnemyShadowBladesDeath"
+tt.ui.click_rect = r(-12, 0, 24, 26)
+
+tt = RT("fx_shadow_blades_hit", "fx")
+tt.render.sprites[1].name = "shadow_blades_hit_fx"
+
+tt = RT("aura_shadow_blades_smoke", "aura")
+tt.aura.mod = "mod_shadow_blades_smoke"
+tt.aura.radius = 60
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.cycle_time = 0.2
+tt.aura.duration = 3
+tt.aura.track_source = false
+tt.main_script.insert = scripts.aura_shadow_blades_smoke.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.main_script.remove = scripts.aura_shadow_blades_smoke.remove
+tt.decal_t = "decal_shadow_blades_smoke"
+
+tt = RT("mod_shadow_blades_smoke", "modifier")
+
+AC(tt, "render")
+
+tt.modifier.duration = 0.25
+tt.main_script.insert = scripts.mod_shadow_blades_smoke.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.main_script.remove = scripts.mod_shadow_blades_smoke.remove
+tt.render.sprites[1].prefix = "shadow_blades_modifier"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].loop = true
+
+tt = RT("decal_shadow_blades_smoke", "decal_tween")
+tt.range_factor = 1
+tt.render.sprites[1].prefix = "shadow_blades_dust_fx"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[1].fps = 30
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].loop = false
+tt.tween.remove = false
+
+-- kr6 关卡 202：传送门链（控制器引用的模板）
+tt = RT("decal_stage_202_teleport_book_left", "decal")
+tt.render.sprites[1].prefix = "stage202_tpDef"
+tt.render.sprites[1].name = "idle_active"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+
+tt = RT("decal_stage_202_teleport_book_right", "decal_stage_202_teleport_book_left")
+tt.render.sprites[1].prefix = "stage202_tp2Def"
+
+tt = RT("decal_stage_202_teleport", "decal_timed")
+tt.render.sprites[1].prefix = "stage202_teleport_decalDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+
+tt = RT("mod_stage_202_teleport_mark", "modifier")
+
+AC(tt, "mark_flags")
+
+tt.mark_flags.vis_bans = F_TELEPORT
+tt.modifier.duration = fts(50)
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+
+tt = RT("mod_stage_202_teleport", "mod_teleport")
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.modifier.duration = 1
+tt.modifier.allows_duplicates = false
+tt.nodes_offset = -50
+tt.max_times_applied = 5
+tt.dest_valid_node = true
+tt.dest_node_valid_flags = NF_NO_BACKWARDS
+tt.delay_start = fts(3)
+tt.hold_time = 0.34
+tt.delay_end = fts(3)
+tt.fx_start = "fx_stage_202_teleport"
+tt.fx_end = "fx_stage_202_teleport"
+
+tt = RT("controller_stage_202_teleport_left")
+
+AC(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_202_teleport.update
+tt.mod_teleport = "mod_stage_202_teleport"
+tt.mod_mark = "mod_stage_202_teleport_mark"
+tt.book_t = "decal_stage_202_teleport_book_left"
+tt.decal_teleport = "decal_stage_202_teleport"
+tt.sound_teleport = "Stage02StatueTeleport"
+tt.sound_recharge = "Stage02StatueTeleportRecharge"
+tt.cooldown = 35
+tt.nodes_teleport = 50
+tt.radius = 40
+tt.max_targets = 4
+
+tt = RT("controller_stage_202_teleport_right", "controller_stage_202_teleport_left")
+tt.book_t = "decal_stage_202_teleport_book_right"
+
+tt = RT("fx_stage_202_teleport", "fx")
+tt.render.sprites[1].prefix = "stage202_tpfxDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].offset = v(0, -20)
+
+-- kr6 关卡 202：暗影弓手（_kr6，避免与 dove 本体同名）
+tt = RT("enemy_shadow_archer_kr6", "enemy")
+
+AC(tt, "melee", "ranged")
+
+tt.enemy.gold = 15
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = 110
+tt.health.armor = 0
+tt.health.magic_armor = 0.3
+tt.health_bar.offset = v(0, 35)
+tt.info.portrait = "gui_bottom_info_image_enemies_0004"
+tt.info.fn = scripts.enemy_ranged.get_info
+tt.main_script.insert = scripts.enemy_basic_with_random_range.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 40
+tt.render.sprites[1].prefix = "shadow_archer_enemy"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 3
+tt.melee.attacks[1].damage_max = 4
+tt.melee.attacks[1].damage_type = 2
+tt.melee.attacks[1].hit_time = fts(10)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].animation = "attack_melee"
+tt.ranged.attacks[1].bullet = "bullet_shadow_archer"
+tt.ranged.attacks[1].hold_advance = true
+tt.ranged.attacks[1].shoot_time = fts(11)
+tt.ranged.attacks[1].cooldown = 1.5
+tt.ranged.attacks[1].min_range = 60
+tt.ranged.attacks[1].max_range = 150
+tt.ranged.attacks[1].max_range_variance = 60
+tt.ranged.attacks[1].bullet_start_offset = {v(12, 22)}
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[1].animation = "attack_ranged"
+tt.unit.hit_offset = v(0, 15)
+tt.unit.head_offset = v(5.5, 13)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 14)
+tt.sound_events.death = "EnemyShadowArcherDeath"
+tt.ui.click_rect = r(-13, -3, 26, 25)
+
+tt = RT("arrow_KR6", "bullet")
+tt.bullet.hit_distance = 22
+tt.bullet.hit_blood_fx = "fx_blood_splat"
+tt.bullet.miss_decal = "decal_arrow"
+tt.bullet.miss_fx_water = "fx_splash_small"
+tt.bullet.flight_time = fts(22)
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.pop = {"pop_archer", "pop_archer2"}
+tt.bullet.pop_chance = 1
+tt.bullet.pop_conds = DR_KILL
+tt.render.sprites[1].name = "arrow"
+tt.render.sprites[1].animated = false
+tt.main_script.insert = scripts.arrow.insert
+tt.main_script.update = scripts.arrow_KR6.update
+tt.sound_events.insert = "ArrowSound"
+tt.bullet.prediction_error = true
+tt.bullet.predict_target_pos = true
+tt.bullet.hide_radius = 6
+tt.bullet.flip_hit_fx = false
+
+tt = RT("arrow_KR6_fixed_height", "arrow_KR6")
+tt.main_script.insert = scripts.arrow_KR6_fixed_height.insert
+
+tt = RT("bullet_shadow_archer", "arrow_KR6_fixed_height")
+tt.main_script.insert = scripts.arrow_KR6.insert
+tt.main_script.update = scripts.arrow_KR6.update
+tt.render.sprites[1].name = "shadow_archer_arrow"
+tt.bullet.fixed_height = 30
+tt.bullet.g = -1000
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.hide_radius = 1
+tt.bullet.prediction_error = false
+tt.bullet.predict_target_pos = false
+tt.bullet.miss_decal = "shadow_archer_arrow2"
+tt.bullet.use_unit_damage_factor = true
+tt.bullet.damage_min = 10
+tt.bullet.damage_max = 16
+tt.bullet.damage_type = 2
+
+tt = RT("pop_archer", "pop")
+tt.render.sprites[1].name = "pop_0002"
+
+tt = RT("pop_archer2", "pop")
+tt.render.sprites[1].name = "pop_0009"
 
 return scripts

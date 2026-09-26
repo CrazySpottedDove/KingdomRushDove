@@ -43,7 +43,27 @@ local TOWER_ROTATION = {"tower_ranger", "tower_sorcerer", "tower_barbarian", "to
 local stats
 local errors
 
+-- AUTOPLAY 覆盖 love.errorhandler：调试时出错立即退出（love 的兜底 handler 会留在错误界面不退出）
+do
+	local _orig = love.errorhandler
+
+	love.errorhandler = function(msg)
+		print("AUTOPLAY 异常，立即退出：")
+		print(tostring(msg))
+		print(debug.traceback("", 2))
+
+		if _orig and os.getenv("AUTOPLAY_KEEP_ERRORHANDLER") then
+			return _orig(msg)
+		end
+
+		os.exit(1)
+	end
+end
+
 --- 收集 log.error（这就是「有没有报错」的来源）
+local S = require("sound_db")
+require("i18n").set_debug_missing(true) -- autoplay 时把缺失文案打出来（按需替换实现，平时零开销）
+
 local function hook_log_errors()
 	local ok, klog = pcall(require, "lib.klua.log")
 
@@ -66,6 +86,13 @@ local function hook_log_errors()
 
 			if #errors <= 30 then
 				print("AUTOPLAY_ERROR " .. msg)
+				print(debug.traceback("", 2))
+			end
+
+			-- 调试用：首个报错立刻退出（报错本身不会让主循环停下来）
+			if #errors == 1 and not _G.AUTOPLAY_NO_FAST_EXIT then
+				print("AUTOPLAY 首个报错，立即退出")
+				love.event.quit(1)
 			end
 
 			return orig_error(fmt, ...)
@@ -94,6 +121,7 @@ local function report(reason)
 	for i, e in ipairs(errors) do
 		if i <= 30 then
 			print(string.format("AUTOPLAY_ERROR[%d] %s", i, e))
+			love.event.quit(1)
 		end
 	end
 
@@ -192,6 +220,7 @@ local function pump_init(self)
 	if not ok then
 		errors[#errors + 1] = "init coroutine: " .. tostring(err)
 		print("AUTOPLAY_ERROR init coroutine: " .. tostring(err))
+		love.event.quit(1)
 		print(debug.traceback(co, tostring(err)))
 		io.stdout:flush()
 		self.init_co = nil
@@ -276,6 +305,9 @@ function autoplay:run_sim()
 		-- 一帧的渲染侧更新也要跑：render / tween / particle_system 的 on_render_update
 		-- 里可能有会影响 main_script 的逻辑（时间回溯的重演走的也是这条路）。
 		simulation:render_update(STEP)
+
+		-- 声音系统也要每步驱动：否则 S:queue 的播放/资源校验永远不会跑，声音问题会被漏掉
+		S:update(STEP)
 
 		if self.game.game_gui then
 			self.game.game_gui:update(STEP)
