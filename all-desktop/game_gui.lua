@@ -8457,6 +8457,20 @@ function TowerMenu:update(dt)
 				else
 					c:enable()
 				end
+			elseif c.item_props.action == "tw_custom_no_close" or c.item_props.action == "tw_custom_close" then
+				local pt = c:get_child_by_id("price_tag")
+
+				if pt and e.tower_action then
+					pt.text = tostring(e.tower_action.cost)
+					-- 即使按钮被禁用（准备阶段/士兵满员/金币不足）也保留价格，只由 disable() 变灰
+					pt.hidden = false
+				end
+
+				if e.tower_action.active or store.player_gold < e.tower_action.cost then
+					c:disable()
+				else
+					c:enable()
+				end
 			end
 		end
 	end
@@ -8593,7 +8607,19 @@ function TowerMenu:button_exit(button, item, entity, mouse_button)
 	end
 end
 
-local actions_needing_confirmation_in_android = table.to_map({"tw_upgrade", "tw_unblock", "upgrade_power", "tw_sell", "tw_buy_soldier", "tw_buy_attack", "tw_change_mode", "tw_free_action", "tw_repair"})
+local actions_needing_confirmation_in_android = table.to_map({
+	"tw_upgrade",
+	"tw_unblock",
+	"upgrade_power",
+	"tw_sell",
+	"tw_buy_soldier",
+	"tw_buy_attack",
+	"tw_change_mode",
+	"tw_free_action",
+	"tw_repair",
+	"tw_custom_no_close",
+	"tw_custom_close"
+})
 
 function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 	if IS_ANDROID then
@@ -8781,6 +8807,16 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 			e.user_selection.new_pos = nil
 		end
 		self:hide()
+	elseif item.action == "tw_custom_no_close" or item.action == "tw_custom_close" then
+		if e.user_selection then
+			e.user_selection.in_progress = true
+			e.user_selection.arg = item.action_arg ~= "" and item.action_arg or nil
+		end
+
+		-- no_close：桌面端保持菜单打开，方便连续雇兵；移动端/关闭型收起菜单。
+		if IS_ANDROID or item.action == "tw_custom_close" then
+			self:hide()
+		end
 	elseif item.action == "tw_repair" then
 		local e = game_gui.selected_entity
 		if e.user_selection then
@@ -9006,7 +9042,7 @@ function TowerMenuTooltip:show(entity, item)
 
 			self.desc:set_text(diff_text)
 		end
-	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_repair" then
+	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_repair" or item.action == "tw_custom_no_close" or item.action == "tw_custom_close" then
 		if item.tt_title then
 			self.title.text = item.tt_title
 		end
@@ -9208,7 +9244,7 @@ function TowerMenuButton:initialize(item, entity)
 
 	if item.action == "upgrade_power" then
 		bo = create_bo_view("special_icons_0000")
-	elseif table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock", "tw_repair", "redirect"}, item.action) then
+	elseif table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock", "tw_repair", "tw_custom_no_close", "tw_custom_close", "redirect"}, item.action) then
 		bo = create_bo_view("main_icons_0000")
 	end
 
@@ -9250,6 +9286,9 @@ function TowerMenuButton:initialize(item, entity)
 		price_tag = ""
 	elseif item.action == "tw_repair" then
 		price_tag = not entity.repair.active and entity.repair.cost or nil
+	elseif item.action == "tw_custom_no_close" or item.action == "tw_custom_close" then
+		-- 始终建出价格标签；是否显示由 TowerMenu:update 每帧按 tower_action.active 刷新
+		price_tag = entity.tower_action and tostring(entity.tower_action.cost) or nil
 	end
 
 	if price_tag then

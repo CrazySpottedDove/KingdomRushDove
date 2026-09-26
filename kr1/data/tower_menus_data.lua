@@ -82,6 +82,15 @@ return {
 		tt_title = _("TOWER_STAGE_204_CRANE_BUY_NAME"),
 		tt_desc = _("TOWER_STAGE_204_CRANE_BUY_DESC")
 	})}},
+	stage_207_barn = {{M(tpl.buy_attack, {
+		action = "tw_custom_no_close",
+		action_arg = "",
+		halo = "glow_ico_main",
+		image = "kr6_quickmenu_main_icon_s7barrack",
+		place = 12,
+		tt_title = _("TOWER_STAGE_207_BARN_BUY_NAME"),
+		tt_desc = _("TOWER_STAGE_207_BARN_BUY_DESC")
+	})}},
 	mage = {{M(tpl.common_upgrade, {
 		action_arg = "tower_mage_2",
 		tt_title = _("TOWER_MAGE_2_NAME"),

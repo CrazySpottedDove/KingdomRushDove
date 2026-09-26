@@ -232,7 +232,15 @@ function atlas_manager:preview_group(gname)
 	local real_png_dir = project_root .. "/" .. IMAGES_DIR
 	local files = {}
 	for _i, dds_key in ipairs(group.dds_files) do
-		local img, err, tw, th = atlas_util.load_source_preview(dds_key, ATLAS_DIR, real_png_dir)
+		local exp_w, exp_h
+		for _, fn in ipairs(group.frame_order) do
+			local fr = group.frames[fn]
+			if fr and fr.dds_key == dds_key then
+				exp_w, exp_h = fr.a_size[1], fr.a_size[2]
+				break
+			end
+		end
+		local img, err, tw, th = atlas_util.load_source_preview(dds_key, ATLAS_DIR, real_png_dir, exp_w, exp_h)
 		if img then
 			local canvas = G.newCanvas(tw, th)
 			G.setCanvas(canvas)
@@ -326,7 +334,15 @@ function atlas_manager:preview_group_file(gname, dds_key)
 		return
 	end
 	local real_png_dir = project_root .. "/" .. IMAGES_DIR
-	local img, err, tw, th = atlas_util.load_source_preview(dds_key, ATLAS_DIR, real_png_dir)
+	local exp_w, exp_h
+	for _, fn in ipairs(group.frame_order) do
+		local fr = group.frames[fn]
+		if fr and fr.dds_key == dds_key then
+			exp_w, exp_h = fr.a_size[1], fr.a_size[2]
+			break
+		end
+	end
+	local img, err, tw, th = atlas_util.load_source_preview(dds_key, ATLAS_DIR, real_png_dir, exp_w, exp_h)
 	if not img then
 		self:set_status(string.format(_G._("ATLAS_MGR_ERR_LOAD_TEXTURE_S_S"), tostring(dds_key), tostring(err)))
 		return

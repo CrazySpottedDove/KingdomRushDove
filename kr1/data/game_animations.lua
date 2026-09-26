@@ -52123,5 +52123,125 @@ return {
 		from = 1,
 		prefix = "nivus_polymorph_ray",
 		to = 14
+	},
+	stage207_fogata_fire_action = {
+		from = 13,
+		prefix = "stage207_fogata_fire",
+		to = 75
+	},
+	stage207_fogata_fire_idle = {
+		from = 1,
+		prefix = "stage207_fogata_fire",
+		to = 12
+	},
+	stage207_fogata_fire_idle_ashes = {
+		from = 76,
+		prefix = "stage207_fogata_fire",
+		to = 76
+	},
+	stage207_jinete_hit_Idle = {
+		from = 1,
+		prefix = "stage207_jinete_hit",
+		to = 6
+	},
+	stage207_jinete_particle_1 = {
+		from = 1,
+		prefix = "stage207_jinete_particle_1",
+		to = 15
+	},
+	stage207_jinete_particle_2 = {
+		from = 1,
+		prefix = "stage207_jinete_particle_2",
+		to = 35
+	},
+	stage207_jinete_run_run = {
+		from = 1,
+		prefix = "stage207_jinete_run",
+		to = 10
+	},
+	stage207_jinete_soldier_attack = {
+		from = 18,
+		prefix = "stage207_jinete_soldier",
+		to = 41
+	},
+	stage207_jinete_soldier_death = {
+		from = 42,
+		prefix = "stage207_jinete_soldier",
+		to = 62
+	},
+	stage207_jinete_soldier_idle = {
+		from = 1,
+		prefix = "stage207_jinete_soldier",
+		to = 1
+	},
+	stage207_jinete_soldier_walk = {
+		from = 2,
+		prefix = "stage207_jinete_soldier",
+		to = 17
+	},
+	ogre_area_fx_idle = {
+		from = 1,
+		prefix = "ogre_area_fx",
+		to = 12
+	},
+	ogre_enemy_attack = {
+		from = 122,
+		prefix = "ogre_enemy",
+		to = 177
+	},
+	ogre_enemy_death = {
+		from = 178,
+		prefix = "ogre_enemy",
+		to = 223
+	},
+	ogre_enemy_idle = {
+		from = 1,
+		prefix = "ogre_enemy",
+		to = 1
+	},
+	ogre_enemy_walk = {
+		from = 2,
+		prefix = "ogre_enemy",
+		to = 41
+	},
+	ogre_enemy_walk_back = {
+		from = 82,
+		prefix = "ogre_enemy",
+		to = 121
+	},
+	ogre_enemy_walk_front = {
+		from = 42,
+		prefix = "ogre_enemy",
+		to = 81
+	},
+	rider_goblin_creep_attack = {
+		from = 35,
+		prefix = "rider_goblin_creep",
+		to = 68
+	},
+	rider_goblin_creep_death = {
+		from = 69,
+		prefix = "rider_goblin_creep",
+		to = 90
+	},
+	rider_goblin_creep_idle = {
+		from = 1,
+		prefix = "rider_goblin_creep",
+		to = 1
+	},
+	rider_goblin_creep_walk = {
+		from = 2,
+		prefix = "rider_goblin_creep",
+		to = 12
+	},
+	rider_goblin_creep_walk_back = {
+		from = 24,
+		prefix = "rider_goblin_creep",
+		to = 34
+	},
+	rider_goblin_creep_walk_front = {
+		from = 13,
+		prefix = "rider_goblin_creep",
+		to = 23
 	}
 }

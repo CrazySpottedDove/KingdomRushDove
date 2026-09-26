@@ -105,7 +105,8 @@ function director:init(params)
 		self.next_item_args = {
 			level_idx = tonumber(params.autoplay),
 			level_mode = params.mode and tonumber(params.mode) or GAME_MODE_CAMPAIGN,
-			level_difficulty = params.diff and tonumber(params.diff) or DIFFICULTY_NORMAL
+			level_difficulty = params.diff and tonumber(params.diff) or DIFFICULTY_NORMAL,
+			auto_click = not params.no_click
 		}
 	elseif params.level or params.screen then
 		if not storage:load_slot(1) then

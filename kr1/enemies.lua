@@ -13869,3 +13869,122 @@ tt.worg_mode.speed = {2, 2, 2, 2.1875}
 tt.worg_mode.sound_in = "EnemyOrcWildlingTriggerRunCast"
 tt.sound_events.death = "EnemyOrcWildlingDeath"
 tt.ui.click_rect = r(-22, 0, 44, 40)
+
+-- ==================== kr6 关卡 207：goblin 狼骑（rider_goblin） ====================
+-- 数值取自 kr6/data/balance/balance.lua，hp_max 每档 ×1.375。
+
+-- enemy_rider_goblin
+tt = RT("enemy_rider_goblin", "enemy")
+AC(tt, "melee")
+tt.enemy.gold = 10
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = {165, 192.5, 220, 440}
+tt.health.armor = 0
+tt.health.magic_armor = 0.5
+tt.health_bar.offset = v(0, 45)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0011"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.head_offset = v(0, 5)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_rider_goblin.update
+tt.motion.max_speed = 64
+tt.render.sprites[1].prefix = "rider_goblin_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1.25
+tt.melee.attacks[1].damage_min = 10
+tt.melee.attacks[1].damage_max = 15
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.sound_events.death = "EnemyWorgDeath"
+tt.sound_death_and_spawn = "EnemyRiderGoblinDeath"
+tt.ui.click_rect = r(-22, -3, 44, 38)
+tt.no_spawn_damage_types = bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS, DAMAGE_DISINTEGRATE)
+tt.spawn_controller = "controller_rider_goblin_spawn"
+
+-- controller_rider_goblin_spawn
+tt = RT("controller_rider_goblin_spawn")
+AC(tt, "main_script")
+tt.main_script.update = scripts.controller_rider_goblin_spawn.update
+tt.spawn_bullet = "bullet_enemy_flying"
+tt.min_nodes_ahead = 15
+tt.max_nodes_ahead = 25
+tt.spawn_max_nodes_to_exit = 70
+tt.start_offset = v(-10, 25)
+tt.sound_spawn = "EnemyMindlessHuskSpawnDeath"
+
+-- decal_rider_goblin_bullet_shadow
+tt = RT("decal_rider_goblin_bullet_shadow", "decal")
+tt.render.sprites[1].name = "decal_flying_shadow"
+tt.render.sprites[1].animated = false
+
+-- bullet_enemy_flying（rider_goblin 死亡后抛出的 goblin）
+tt = RT("bullet_enemy_flying", "bomb")
+tt.bullet.flight_time = fts(30)
+tt.bullet.align_with_trajectory = false
+tt.bullet.ignore_hit_offset = true
+tt.bullet.pop = nil
+tt.bullet.hit_payload = "enemy_goblin_kr6"
+tt.bullet.rotation_speed = 10
+tt.bullet.hit_decal = nil
+tt.bullet.hit_fx = nil
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.g = -0.8 / (fts(1) * fts(1))
+tt.bullet.hide_radius = 0
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "goblin_projectile"
+tt.main_script.update = scripts.bullet_enemy_flying.update
+tt.decal_shadow = "decal_rider_goblin_bullet_shadow"
+
+-- ==================== kr6 关卡 207：ogre 食人魔 ====================
+-- 数值取自 kr6/data/balance/balance.lua，hp_max 每档 ×1.375。
+
+-- enemy_ogre_kr6
+tt = RT("enemy_ogre_kr6", "enemy")
+tt.info.i18n_key = "ENEMY_OGRE"
+AC(tt, "melee")
+tt.enemy.gold = 120
+tt.enemy.melee_slot = v(38, 0)
+tt.enemy.lives_cost = 2
+tt.health.hp_max = {1512.5, 1787.5, 2200, 3850}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 70)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.info.portrait = "kr6_info_portraits_enemies_0015"
+tt.unit.hit_offset = v(5, 21)
+tt.unit.head_offset = v(7, 32)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 19)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 24
+tt.render.sprites[1].prefix = "ogre_enemy"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].cooldown = 2
+tt.melee.attacks[1].damage_min = {38, 38, 38, 64}
+tt.melee.attacks[1].damage_max = {58, 58, 58, 104}
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].damage_radius = 25
+tt.melee.attacks[1].hit_decal = "decal_ogre_hit"
+tt.melee.attacks[1].hit_time = fts(22)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].hit_offset = v(50, 0)
+tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
+tt.sound_events.death = "EnemyOgreDeath"
+tt.ui.click_rect = r(-28, 0, 56, 60)
+
+-- decal_ogre_hit
+tt = RT("decal_ogre_hit", "decal_timed")
+tt.render.sprites[1].prefix = "ogre_area_fx"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].sort_y_offset = 2

@@ -70977,4 +70977,274 @@ function scripts.enemy_orc_wildling.update(this, store, script)
 	end
 end
 
+scripts.tower_spawn_soldier_on_path = {}
+
+function scripts.tower_spawn_soldier_on_path.can_select_point(this, x, y)
+	return P:valid_node_nearby(x, y)
+end
+
+function scripts.tower_spawn_soldier_on_path.update(this, store)
+	this.soldiers_alive = 0
+
+	local function activate()
+		this.soldiers_alive = km.clamp(0, this.max_soldiers, this.soldiers_alive + 1)
+
+		S:queue(this.tower_action.sound)
+
+		local soldier = E:create_entity(this.soldier_t)
+
+		soldier.path_id = this.path_id
+		soldier.pos = P:node_pos(this.path_id, 1, 1)
+		soldier.source_id = this.id
+
+		queue_insert(store, soldier)
+		S:queue(this.tower_action.post_sound)
+	end
+
+	local function on_soldier_died()
+		this.soldiers_alive = km.clamp(0, this.max_soldiers, this.soldiers_alive - 1)
+	end
+
+	this.on_soldier_died = on_soldier_died
+
+	while true do
+		this.tower_action.active = store.wave_group_number == 0 or this.soldiers_alive >= this.max_soldiers
+		this.user_selection.allowed = not this.tower_action.active and store.player_gold >= this.tower_action.cost
+
+		if this.user_selection.in_progress and not this.tower_action.active then
+			this.user_selection.in_progress = nil
+			this.user_selection.allowed = false
+			store.player_gold = store.player_gold - this.tower_action.cost
+
+			activate()
+		end
+
+		if this.user_selection.in_progress then
+			this.user_selection.in_progress = nil
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_walk_to_objective = {}
+
+function scripts.soldier_walk_to_objective.update(this, store)
+	local brk, sta
+	local path_ni = 1
+	local path_spi = 1
+	local target_pos = P:node_pos(this.path_id, path_spi, path_ni)
+
+	this.vis.bans = 0
+
+	local function do_step()
+		if V.veq(this.pos, target_pos) then
+			this.motion.arrived = true
+
+			return false
+		else
+			U.set_destination(this, target_pos)
+
+			if U.walk(this, store.tick_length) then
+				return false
+			else
+				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest, 1)
+
+				U.animation_start(this, an, af, store.tick_ts, true)
+
+				return true
+			end
+		end
+	end
+
+	local function run_to_objective()
+		local distSq = V.dist2(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
+
+		if distSq < this.distance_sqd then
+			path_ni = path_ni + 2
+			target_pos = P:node_pos(this.path_id, path_spi, path_ni)
+		end
+
+		do_step()
+	end
+
+	while true do
+		if P:nodes_to_goal(this.path_id, 1, path_ni) < 3 then
+			break
+		end
+
+		if this.health.dead then
+			local tower = store.entities[this.source_id]
+
+			if tower and tower.on_soldier_died then
+				tower.on_soldier_died()
+			end
+
+			SU.y_soldier_death(store, this)
+
+			return
+		end
+
+		brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+		if brk or sta ~= A_NO_TARGET then
+			if sta == A_DONE then
+				local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {this.path_id}, nil)
+				local pi, spi, ni = unpack(nearest[1])
+
+				path_ni = ni + 2
+				target_pos = P:node_pos(this.path_id, path_spi, path_ni)
+			end
+		else
+			run_to_objective()
+		end
+
+		coroutine.yield()
+	end
+
+	this.on_arrived(this, store)
+	queue_remove(store, this)
+end
+
+-- ==================== kr6 关卡 207：goblin 狼骑 ====================
+
+scripts.enemy_rider_goblin = {}
+
+function scripts.enemy_rider_goblin.update(this, store, script)
+	while true do
+		if this.health.dead then
+			local can_spawn = band(this.health.last_damage_types, this.no_spawn_damage_types) == 0
+
+			if can_spawn and store.level.run_complete and store.waves_finished then
+				local enemies_left = table.filter(store.entities, function(_, e)
+					return e.main_script and (e.main_script.co or e.main_script.runs > 0) and (e.enemy and e.health and not e.health.dead or e.enemy and e.death_spawns or e.spawner and not e.spawner.eternal or e.picked_enemies and #e.picked_enemies > 0 or e.tunnel and #e.tunnel.picked_enemies > 0) and e.id ~= this.id
+				end)
+
+				can_spawn = #enemies_left > 0
+			end
+
+			if can_spawn and not this.forced_death then
+				local c = E:create_entity(this.spawn_controller)
+
+				c.worg = this
+
+				queue_insert(store, c)
+
+				this.sound_events.death = this.sound_death_and_spawn
+			end
+
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		elseif not SU.y_enemy_mixed_walk_melee_ranged(store, this, false) then
+		-- block empty
+		else
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.controller_rider_goblin_spawn = {}
+
+function scripts.controller_rider_goblin_spawn.update(this, store, script)
+	local np = this.worg.nav_path
+	local nodes_ahead = math.random(this.min_nodes_ahead, this.max_nodes_ahead)
+	local nodes_to_end = P:nodes_to_goal(np.pi, np.spi, np.ni)
+
+	if nodes_to_end <= this.spawn_max_nodes_to_exit then
+		nodes_ahead = 1
+	end
+
+	local dest = P:node_pos(np.pi, np.spi, np.ni + nodes_ahead)
+	local offset_x = this.start_offset.x
+
+	if this.worg.render.sprites[1].flip_x then
+		offset_x = offset_x * -1
+	end
+
+	local b = E:create_entity(this.spawn_bullet)
+
+	b.pos.x, b.pos.y = this.worg.pos.x + offset_x, this.worg.pos.y + this.start_offset.y
+	b.bullet.from = V.vclone(b.pos)
+	b.bullet.to = dest
+	b.bullet.source_id = this.worg.id
+	b.path_to_spawn = np.pi
+
+	queue_insert(store, b)
+	queue_remove(store, this)
+end
+
+scripts.bullet_enemy_flying = {}
+
+function scripts.bullet_enemy_flying.update(this, store, script)
+	local b = this.bullet
+	local shadow, shadow_start_pos
+
+	if this.decal_shadow then
+		shadow = E:create_entity(this.decal_shadow)
+
+		shadow.pos = V.vclone(b.from)
+		shadow.pos.y = b.from.y - 25
+
+		queue_insert(store, shadow)
+
+		shadow_start_pos = V.vclone(shadow.pos)
+	end
+
+	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+		coroutine.yield()
+
+		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+		elseif b.rotation_speed then
+			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+		end
+
+		if b.hide_radius then
+			this.render.sprites[1].hidden = V.dist(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius or V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius
+		end
+
+		if shadow then
+			shadow.pos.x = shadow_start_pos.x + (b.to.x - shadow_start_pos.x) * ((store.tick_ts - b.ts) / b.flight_time)
+			shadow.pos.y = shadow_start_pos.y + (b.to.y - shadow_start_pos.y) * ((store.tick_ts - b.ts) / b.flight_time)
+
+			local height = this.pos.y - shadow.pos.y
+			local s = km.clamp(0.6, 1, 40 / height)
+
+			shadow.render.sprites[1].scale = V.vv(s)
+		end
+	end
+
+	local goblin = E:create_entity(b.hit_payload)
+
+	goblin.pos = V.vclone(b.to)
+	goblin.spawn_from_bullet = true
+	goblin.path_to_spawn = this.path_to_spawn
+	goblin.start_flipped = b.from.x > b.to.x
+
+	queue_insert(store, goblin)
+
+	if b.hit_fx then
+		local hfx = E:create_entity(b.hit_fx)
+
+		hfx.pos = V.vclone(b.to)
+		hfx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, hfx)
+	end
+
+	if shadow then
+		queue_remove(store, shadow)
+	end
+
+	queue_remove(store, this)
+end
+
 return scripts

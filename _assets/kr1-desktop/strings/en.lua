@@ -8840,5 +8840,23 @@ return {
 	SOLDIER_NIVUS_BOOK_11_NAME = "THE SILMARILLION",
 	SOLDIER_NIVUS_BOOK_12_NAME = "DON QUIXOTE",
 
-	SOLDIER_ALLERIA_CAT_NAME = "WILDCAT"
+	SOLDIER_ALLERIA_CAT_NAME = "WILDCAT",
+	LEVEL_207_TITLE = "THREE-SIDE AMBUSH",
+	LEVEL_207_HISTORY = "Sound the alarms and ready yourselves! We are being attacked from every side of the road.\n\nGeneral, gather the troops and repel the orcs and bandits, buy some time for the rest to organize. We will rendezvous at the gates of Acaroth. Godspeed!",
+	ENEMY_RIDER_GOBLIN_NAME = "Rider Goblin",
+	ENEMY_RIDER_GOBLIN_DESCRIPTION = "That's the last straw, now the little greenskins ride worgs. They don't even use saddles.",
+	ENEMY_RIDER_GOBLIN_EXTRA = "- Medium magic resistance\n- When the worg dies, it throws a goblin forward the path",
+	ENEMY_RIDER_GOBLIN_SPECIAL = "",
+	TOWER_STAGE_207_BARN_NAME = "FOOTMAN TENT",
+	TOWER_STAGE_207_BARN_DESCRIPTION = "Standard issue Linirean soldier tent.",
+	TOWER_STAGE_207_BARN_BUY_NAME = "HIRE FOOTMAN",
+	TOWER_STAGE_207_BARN_BUY_DESC = "Hire a footman to fight enemies.",
+	SOLDIER_STAGE_207_BARN_1_NAME = "MUSTANG",
+	SOLDIER_STAGE_207_BARN_2_NAME = "CRIOLLO",
+	SOLDIER_STAGE_207_BARN_3_NAME = "ARDENNAIS",
+	SOLDIER_STAGE_207_BARN_4_NAME = "BRETON",
+	SOLDIER_STAGE_207_BARN_5_NAME = "MARCHADOR",
+	SOLDIER_STAGE_207_BARN_6_NAME = "MORGAN",
+	SOLDIER_STAGE_207_BARN_7_NAME = "PERCHERON",
+	SOLDIER_STAGE_207_BARN_8_NAME = "FRIESIAN"
 }
