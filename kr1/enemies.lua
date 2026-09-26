@@ -13243,6 +13243,61 @@ tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
 tt.sound_events.death = "EnemyBlackguardDeath"
 tt.ui.click_rect = r(-18, 0, 26, 30)
 
+-- enemy_headhunter（kr6；暗影猎头者；单体高伤+处决；dove 无同名模板）
+tt = RT("enemy_headhunter", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(4, 28)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.enemy.gold = 80
+tt.enemy.melee_slot = v(36, 0)
+tt.enemy.lives_cost = 2
+tt.health.hp_max = {893.75, 1100, 1237.5, 2475}
+tt.health.armor = 0.5
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 50)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0007"
+tt.unit.hit_offset = v(0, 18)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 15)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 24
+tt.render.sprites[1].prefix = "headhunter_enemy"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 24
+tt.melee.attacks[1].damage_max = 36
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].hit_fx = "fx_headhunter_hit"
+tt.melee.attacks[1].hit_offset = v(40, 15)
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].cooldown = 6
+tt.melee.attacks[2].chance = 1
+tt.melee.attacks[2].animation = "attack_melee"
+tt.melee.attacks[2].damage_type = DAMAGE_INSTAKILL
+tt.melee.attacks[2].vis_bans = 0
+tt.melee.attacks[2].hit_time = fts(18)
+tt.melee.attacks[2].dodge_time = tt.melee.attacks[2].hit_time
+tt.melee.attacks[2].hit_offset = v(50, 15)
+tt.melee.attacks[2].sound = "EnemyHeadhunterInstakillCast"
+tt.melee.attacks[2].hp_threshold = {0.25, 0.25, 0.25, 0.4}
+tt.melee.attacks[2].fn_can = scripts.enemy_headhunter.can_instakill
+tt.sound_events.death = "EnemyHeadhunterDeath"
+tt.vis.flags = bor(F_ENEMY)
+tt.ui.click_rect = r(-25, 0, 50, 45)
+
+-- fx_headhunter_hit
+tt = RT("fx_headhunter_hit", "fx")
+tt.render.sprites[1].name = "headhunter_hit_fx_idle"
+
 -- enemy_crow（kr6；暗影召唤流的乌鸦小怪；dove 无同名模板）
 tt = RT("enemy_crow", "enemy")
 AC(tt, "count_group")

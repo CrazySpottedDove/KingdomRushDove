@@ -51858,5 +51858,270 @@ return {
 		from = 1,
 		prefix = "Alleria_skill_1_arrow_particle",
 		to = 13
+	},
+	headhunter_enemy_attack = {
+		from = 98,
+		prefix = "headhunter_enemy",
+		to = 131
+	},
+	headhunter_enemy_attack_melee = {
+		from = 132,
+		prefix = "headhunter_enemy",
+		to = 185
+	},
+	headhunter_enemy_death = {
+		from = 186,
+		prefix = "headhunter_enemy",
+		to = 231
+	},
+	headhunter_enemy_idle = {
+		from = 1,
+		prefix = "headhunter_enemy",
+		to = 1
+	},
+	headhunter_enemy_walk = {
+		from = 2,
+		prefix = "headhunter_enemy",
+		to = 33
+	},
+	headhunter_enemy_walk_back = {
+		from = 66,
+		prefix = "headhunter_enemy",
+		to = 97
+	},
+	headhunter_enemy_walk_front = {
+		from = 34,
+		prefix = "headhunter_enemy",
+		to = 65
+	},
+	headhunter_hit_fx_idle = {
+		from = 1,
+		prefix = "headhunter_hit_fx",
+		to = 7
+	},
+	headhunter_instakill_fx_idle = {
+		from = 1,
+		prefix = "headhunter_instakill_fx",
+		to = 11
+	},
+	nivus_animate_book_attack = {
+		from = 48,
+		prefix = "nivus_animate_book",
+		to = 75
+	},
+	nivus_animate_book_call_color_effect_idle = {
+		from = 1,
+		prefix = "nivus_animate_book_call_color_effect",
+		to = 1
+	},
+	nivus_animate_book_call_idle = {
+		from = 1,
+		prefix = "nivus_animate_book_call",
+		to = 1
+	},
+	nivus_animate_book_call_out = {
+		from = 2,
+		prefix = "nivus_animate_book_call",
+		to = 23
+	},
+	nivus_animate_book_death = {
+		from = 76,
+		prefix = "nivus_animate_book",
+		to = 110
+	},
+	nivus_animate_book_hit_run = {
+		from = 1,
+		prefix = "nivus_animate_book_hit",
+		to = 8
+	},
+	nivus_animate_book_idle = {
+		from = 12,
+		prefix = "nivus_animate_book",
+		to = 37
+	},
+	nivus_animate_book_in = {
+		from = 1,
+		prefix = "nivus_animate_book",
+		to = 11
+	},
+	nivus_animate_book_particle_1_run = {
+		from = 1,
+		prefix = "nivus_animate_book_particle_1",
+		to = 22
+	},
+	nivus_animate_book_particle_run = {
+		from = 1,
+		prefix = "nivus_animate_book_particle",
+		to = 22
+	},
+	nivus_animate_book_walk = {
+		from = 38,
+		prefix = "nivus_animate_book",
+		to = 47
+	},
+	nivus_book_icon = {
+		from = 1,
+		prefix = "nivus_book_icon",
+		to = 1
+	},
+	nivus_desintegrate_icon = {
+		from = 1,
+		prefix = "nivus_desintegrate_icon",
+		to = 1
+	},
+	nivus_desintegrate_run = {
+		from = 1,
+		prefix = "nivus_desintegrate",
+		to = 28
+	},
+	nivus_missile_explosion_run = {
+		from = 1,
+		prefix = "nivus_missile_explosion",
+		to = 16
+	},
+	nivus_missile_flying = {
+		from = 1,
+		prefix = "nivus_missile",
+		to = 8
+	},
+	nivus_missile_particle_01_run = {
+		from = 1,
+		prefix = "nivus_missile_particle_01",
+		to = 15
+	},
+	nivus_missile_particle_02_run = {
+		from = 1,
+		prefix = "nivus_missile_particle_02",
+		to = 20
+	},
+	nivus_nivus_animate_call = {
+		from = 21,
+		prefix = "nivus_nivus",
+		to = 52
+	},
+	nivus_nivus_animate_shot = {
+		from = 53,
+		prefix = "nivus_nivus",
+		to = 114
+	},
+	nivus_nivus_desintegrate = {
+		from = 256,
+		prefix = "nivus_nivus",
+		to = 288
+	},
+	nivus_nivus_desintegrate_back = {
+		from = 234,
+		prefix = "nivus_nivus",
+		to = 255
+	},
+	nivus_nivus_desintegrate_in = {
+		from = 206,
+		prefix = "nivus_nivus",
+		to = 233
+	},
+	nivus_nivus_desintegrate_out = {
+		from = 167,
+		prefix = "nivus_nivus",
+		to = 205
+	},
+	nivus_nivus_idle = {
+		from = 327,
+		prefix = "nivus_nivus",
+		to = 327
+	},
+	nivus_nivus_in = {
+		from = 1,
+		prefix = "nivus_nivus",
+		to = 20
+	},
+	nivus_nivus_missille = {
+		from = 289,
+		prefix = "nivus_nivus",
+		to = 307
+	},
+	nivus_nivus_missille_out = {
+		from = 315,
+		prefix = "nivus_nivus",
+		to = 326
+	},
+	nivus_nivus_missille_shot = {
+		from = 308,
+		prefix = "nivus_nivus",
+		to = 314
+	},
+	nivus_nivus_out = {
+		from = 328,
+		prefix = "nivus_nivus",
+		to = 345
+	},
+	nivus_nivus_polymorph = {
+		from = 115,
+		prefix = "nivus_nivus",
+		to = 166
+	},
+	nivus_polymorph_broom_death = {
+		from = 91,
+		prefix = "nivus_polymorph_broom",
+		to = 113
+	},
+	nivus_polymorph_broom_flying_death = {
+		from = 129,
+		prefix = "nivus_polymorph_broom_flying",
+		to = 155
+	},
+	nivus_polymorph_broom_flying_fly = {
+		from = 1,
+		prefix = "nivus_polymorph_broom_flying",
+		to = 42
+	},
+	nivus_polymorph_broom_flying_fly_down = {
+		from = 43,
+		prefix = "nivus_polymorph_broom_flying",
+		to = 87
+	},
+	nivus_polymorph_broom_flying_fly_up = {
+		from = 88,
+		prefix = "nivus_polymorph_broom_flying",
+		to = 128
+	},
+	nivus_polymorph_broom_walk = {
+		from = 1,
+		prefix = "nivus_polymorph_broom",
+		to = 30
+	},
+	nivus_polymorph_broom_walk_down = {
+		from = 31,
+		prefix = "nivus_polymorph_broom",
+		to = 60
+	},
+	nivus_polymorph_broom_walk_up = {
+		from = 61,
+		prefix = "nivus_polymorph_broom",
+		to = 90
+	},
+	nivus_polymorph_icon = {
+		from = 1,
+		prefix = "nivus_polymorph_icon",
+		to = 1
+	},
+	nivus_polymorph_particles_run = {
+		from = 1,
+		prefix = "nivus_polymorph_particles",
+		to = 15
+	},
+	nivus_polymorph_ray_area_run = {
+		from = 1,
+		prefix = "nivus_polymorph_ray_area",
+		to = 14
+	},
+	nivus_polymorph_ray_hit_run = {
+		from = 1,
+		prefix = "nivus_polymorph_ray_hit",
+		to = 19
+	},
+	nivus_polymorph_ray_run = {
+		from = 1,
+		prefix = "nivus_polymorph_ray",
+		to = 14
 	}
 }

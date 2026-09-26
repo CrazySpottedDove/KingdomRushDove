@@ -155,7 +155,7 @@ GS.last_level1 = 26
 GS.last_level2 = 22
 GS.last_level3 = 22
 GS.last_level5 = 40
-GS.last_level6 = 5
+GS.last_level6 = 6
 GS.extra_level1_from = 999
 GS.extra_level1 = 1
 GS.extra_level2_from = 1999
@@ -171,7 +171,7 @@ GS.level_ranges1 = {{1, 12}, {13}, {14}, {15}, {16, 17}, {18, 19}, {20, 21}, {22
 GS.level_ranges2 = {{27, 41}, {42, 44}, {45, 47}, {48}}
 GS.level_ranges3 = {{49, 63}, {64, 66}, {67, 68}, {69, 70}}
 GS.level_ranges5 = {{101, 116}, {117, 119}, {120, 122}, {123, 127}, {128, 130}, {131, 135}, {136, 140}}
-GS.level_ranges6 = {{201, 205}}
+GS.level_ranges6 = {{201, 206}}
 GS.max_stars = 0
 
 for _, range in ipairs(GS.level_ranges1) do

@@ -70461,8 +70461,8 @@ end
 scripts.tween_utils = {}
 
 -- 延迟移除：先播 tween 反向淡出，tween 跑完后由 all/systems/tween.lua 统一移除。
--- 注意：本函数返回 false 表示本帧不移除，all/simulation.lua 会打印 "remove xxx aborted"，
--- 这是延迟移除的正常输出（实体最终由 tween 系统 queue_remove，不会泄露）。
+-- 本函数返回 false 表示本帧不移除；返回前清掉 pending_removal，all/simulation.lua
+-- 据此识别为「正常延迟跳过」而非异常阻断，不再打印 "remove xxx aborted"。
 function scripts.tween_utils.reverse_remove(this, store, script)
 	if this.tween.disabled then
 		if this.tween_prop_replace then
@@ -70597,6 +70597,12 @@ function scripts.enemy_crowcaller.update(this, store, script)
 			end
 		end
 	end
+end
+
+scripts.enemy_headhunter = {}
+
+function scripts.enemy_headhunter.can_instakill(this, store, attack, target)
+	return target.health and target.health.hp / target.health.hp_max <= SU.get_difficulty_field_value(store, attack.hp_threshold) and band(attack.vis_bans, target.vis.flags) == 0
 end
 
 scripts.enemy_goblin = {}

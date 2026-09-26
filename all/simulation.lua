@@ -272,7 +272,11 @@ function simulation:remove_entity(e)
 
 	for i = 1, self.systems_on_remove_count do
 		if not self.systems_on_remove[i]:on_remove(e, d) then
-			print(string.format("remove %s aborted", e.template_name))
+			-- 主动延迟移除的实体（如 scripts.tween_utils.reverse_remove）会在返回 false 前
+			-- 清掉 pending_removal；此时属正常跳过，不打印。真正被意外阻断的才打印。
+			if e.pending_removal then
+				print(string.format("remove %s aborted", e.template_name))
+			end
 
 			return
 		end
