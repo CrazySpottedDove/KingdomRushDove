@@ -1,0 +1,397 @@
+#	COMANDOS					1 - Derecha Arriba a Arriba (ARMOR)					2 - Derecha Abajo a Izquierda (MR)					3 - Derecha Arriba a Izquierda (ARMOR)					4 - Derecha Abajo a Arriba (MR)
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3
+#	level properties
+	description	main JC
+	lives	20
+	gold	400
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	1879
+#	stage gold curve
+#	WAVE 1					Blackguard x8															Bandit x15
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					15	8	0	0		0	0	0	0		0	0	0	0
+#	gold	139				75	64	0	0		0	0	0	0		0	0	0
+	wave		1		-1
+					0																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+					3		blackguard		blackguard
+					1		blackguard		blackguard
+					12																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+					8			blackguard
+					1		blackguard		blackguard
+					1			blackguard
+					3																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+					0.6																bandit_kr6
+
+
+
+
+#	WAVE 2					Blackguard x10					S. Blade x9
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					0	10	9	0		0	0	0	0		0	0	0	0
+#	gold	170				0	80	90	0		0	0	0	0		0	0	0
+	wave		2		26
+					0		blackguard
+					1				blackguard
+					1			blackguard
+					8		blackguard		blackguard
+					0.6						shadow_blades
+					0.6						shadow_blades
+					0.6						shadow_blades
+					8						shadow_blades
+					0.6						shadow_blades
+					0.6		blackguard		blackguard		shadow_blades
+					6		blackguard		blackguard
+					1			blackguard			shadow_blades
+					0.6						shadow_blades
+					0.6						shadow_blades
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 3										Bandit x12
+Crow x
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					14	0	0	0		16	0	0	0		0	0	0	0
+#	gold	102				70	0	0	0		32	0	0	0		0	0	0
+	wave		3		25
+					0						crow
+					0.75						crow
+					0.75						crow
+					0.75						crow
+					2						crow
+					0.75						crow
+					0.75						crow
+					0.75						crow
+					2									bandit_kr6
+					0.2							bandit_kr6
+					1							bandit_kr6
+					0.1									bandit_kr6
+					2						bandit_kr6
+					0.6						bandit_kr6
+					0.5						bandit_kr6
+					0.6						bandit_kr6
+					0.5						bandit_kr6
+					0
+					6						crow
+					0.75						crow
+					0.75						crow
+					0.75						crow
+					1						crow
+					0.75						crow
+					0.75						crow
+					0.75						crow
+					0						bandit_kr6
+					0.6						bandit_kr6
+					0.6						bandit_kr6
+					0.6						bandit_kr6
+					0.7						bandit_kr6
+
+#	WAVE 4															Blackguard x18					Crow x30
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					0	22	0	0		30	0	0	0		0	0	0	0
+#	gold	236				0	176	0	0		60	0	0	0		0	0	0
+	wave		4		22
+					0												blackguard
+					1														blackguard
+					1												blackguard
+					5														blackguard		crow
+					0.6																crow
+					0.6													blackguard			crow
+					0.6																crow
+					0.6												blackguard				crow
+					4																crow
+					0.6																crow
+					0.6																crow
+					0.6																crow
+					0.6																crow
+					6														blackguard
+					1												blackguard
+					1														blackguard
+					6												blackguard				crow
+					0.6																crow
+					0.6														blackguard		crow
+					0.6																crow
+					0.6													blackguard			crow
+					4																crow
+					0.6																crow
+					0.6																crow
+					0.6																crow
+					0.6																crow
+					4												blackguard		blackguard
+					2												blackguard		blackguard
+					2												blackguard		blackguard		crow
+					0.6																crow
+					0.6																crow
+					0.6																crow
+					0.6																crow
+					2																crow
+					4													blackguard
+					0.6																crow
+					0.6												blackguard		blackguard		crow
+					0.6																crow
+					0.6													blackguard			crow
+
+
+
+
+
+#	WAVE 5																				Bandit x16
+S. Archer x8
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					16	0	0	8		0	0	0	0		0	0	0	0
+#	gold	200				80	0	0	120		0	0	0	0		0	0	0
+	wave		5		20
+					0																	bandit_kr6
+					1																	shadow_archer_kr6		bandit_kr6
+					0.6																		bandit_kr6
+					0.6																	bandit_kr6
+					2																			bandit_kr6
+					1																	bandit_kr6		shadow_archer_kr6
+					0.6																		bandit_kr6
+					0.6																			bandit_kr6
+					4																	shadow_archer_kr6
+					3																		shadow_archer_kr6
+					1																	bandit_kr6		bandit_kr6
+					0.6																		bandit_kr6
+					0.6																	bandit_kr6		bandit_kr6
+					0.6																	bandit_kr6		bandit_kr6
+					0.6																		bandit_kr6
+					6																	shadow_archer_kr6
+					1																		shadow_archer_kr6
+					1																	shadow_archer_kr6
+					1																			shadow_archer_kr6
+
+
+
+
+
+
+
+
+
+
+#	WAVE 6					Blackguard x6
+S. Archer x6										S. Blade x8
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					0	6	8	6		0	0	0	0		0	0	0	0
+#	gold	218				0	48	80	90		0	0	0	0		0	0	0
+	wave		6		23
+					0		blackguard
+					1				blackguard
+					1			blackguard
+					5											shadow_blades
+					0.6											shadow_blades
+					0.6											shadow_blades
+					0.6											shadow_blades
+					6				shadow_archer_kr6
+					1		shadow_archer_kr6
+					1			shadow_archer_kr6
+					2											shadow_blades
+					0.6											shadow_blades
+					0.6											shadow_blades
+					0.6											shadow_blades
+					2		blackguard		shadow_archer_kr6
+					1.2		shadow_archer_kr6		blackguard
+					1.2			blackguard
+					1.2		shadow_archer_kr6
+
+
+#	WAVE 7					Crow x20					Crow x20
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					0	0	0	0		44	0	0	0		0	0	0	0
+#	gold	88				0	0	0	0		88	0	0	0		0	0	0
+	wave		7		22
+					0.75				crow
+					0.75			crow
+					0.75				crow				crow
+					0.75				crow			crow
+					0.75								crow
+					0.75								crow
+					2							crow
+					0.75							crow
+					0.75								crow
+					0.75							crow
+					2							crow
+					0.75								crow
+					0.75								crow
+					0.75							crow
+					2				crow
+					0.75			crow
+					0.75				crow
+					0.75			crow
+					2								crow
+					0.75								crow
+					0.75							crow
+					0.75			crow				crow
+					0.75				crow
+					0.75				crow
+					0.75			crow
+					2							crow
+					0.75							crow
+					0.75				crow				crow
+					0.75			crow				crow
+					0.75				crow
+					0.75				crow
+					2								crow
+					0.75							crow
+					0.75				crow				crow
+					0.75			crow				crow
+					0.75			crow
+					0.75				crow
+
+#	WAVE 8										S. Blade x15					Bandit x4
+Blackguard x7
+S. Archer x6
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					6	7	15	6		0	0	0	0		0	0	0	0
+#	gold	326				30	56	150	90		0	0	0	0		0	0	0
+	wave		8		17
+					0												bandit_kr6
+					0.6												bandit_kr6
+					0.6						shadow_blades								bandit_kr6
+					0.6						shadow_blades								bandit_kr6
+					0.6						shadow_blades
+					0.6						shadow_blades
+					0.6						shadow_blades
+					0												shadow_archer_kr6
+					1													shadow_archer_kr6
+					1												shadow_archer_kr6
+					0
+					2											bandit_kr6
+					0.6											bandit_kr6
+					0.6						shadow_blades					bandit_kr6
+					0.6						shadow_blades					bandit_kr6
+					0.6						shadow_blades
+					0.6						shadow_blades
+					0.6						shadow_blades
+					3													blackguard
+					1												blackguard		blackguard
+					1													blackguard
+					1												blackguard		blackguard
+					1													blackguard
+					1						shadow_blades
+					0.6						shadow_blades
+					0.6						shadow_blades						shadow_archer_kr6		shadow_archer_kr6
+					0.6						shadow_blades
+					0.6						shadow_blades
+					0.4													shadow_archer_kr6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 9					Bandit x14
+Blackguard x6															S. Blade x12
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					14	6	12	7		0	0	0	0		0	0	0	0
+#	gold	343				70	48	120	105		0	0	0	0		0	0	0
+	wave		9		22
+					0.6		bandit_kr6														shadow_blades
+					0.6				bandit_kr6												shadow_blades
+					0.6			bandit_kr6													shadow_blades
+					0.6				bandit_kr6												shadow_blades
+					0.6		bandit_kr6														shadow_blades
+					0.6			bandit_kr6													shadow_blades
+					6																shadow_archer_kr6
+					0.6		blackguard
+					0.6				blackguard												shadow_archer_kr6
+					0.6			blackguard
+					0.6				blackguard												shadow_archer_kr6
+					0.6		blackguard
+					0.6			blackguard													shadow_archer_kr6
+					3																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6		bandit_kr6		bandit_kr6
+					1			bandit_kr6													shadow_archer_kr6
+					1		bandit_kr6		bandit_kr6
+					1			bandit_kr6													shadow_archer_kr6
+					1		bandit_kr6		bandit_kr6
+					1																shadow_archer_kr6
+
+
+
+
+
+#	WAVE 10					Blackguard x16
+S. Archer x6					Crow x16
+S. Archer x12
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
+#	cant.					0	16	0	18		16	0	0	0		0	0	0	0
+#	gold	430				0	128	0	270		32	0	0	0		0	0	0
+	wave		10		22
+					0			blackguard			crow
+					0.6						crow
+					0.6		blackguard		blackguard		crow
+					0.6						crow
+					0.6			shadow_archer_kr6			crow
+					0.6						crow
+					3		blackguard		blackguard
+					1			blackguard
+					2		shadow_archer_kr6		shadow_archer_kr6				shadow_archer_kr6
+					2		blackguard		blackguard			shadow_archer_kr6
+					2									shadow_archer_kr6
+					4						crow	shadow_archer_kr6
+					0.6						crow
+					0.6						crow		shadow_archer_kr6
+					0.6						crow
+					0.6						crow	shadow_archer_kr6
+					5						crow
+					0.6						crow
+					0.6						crow
+					0.6						crow
+					0.6						crow
+					0
+					2		blackguard		blackguard			shadow_archer_kr6
+					1			shadow_archer_kr6					shadow_archer_kr6
+					1		blackguard		blackguard					shadow_archer_kr6
+					3			blackguard
+					1		blackguard		blackguard				shadow_archer_kr6
+					1			blackguard				shadow_archer_kr6
+					1		shadow_archer_kr6		shadow_archer_kr6					shadow_archer_kr6

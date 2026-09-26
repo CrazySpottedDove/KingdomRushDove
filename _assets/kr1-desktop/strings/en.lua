@@ -4442,8 +4442,10 @@ return {
 	LEVEL_1_TITLE = "Southport",
 	LEVEL_201_HISTORY = "General, I was sent back in time to warn the Linirean King of the fate of the world at the hands of Vez'nan, the Dark Wizard.\n\nI see that even in these times the citadel is being sieged by bandits, so let's first get rid of this threat before marching forward!",
 	LEVEL_202_HISTORY = "Our army is in no shape of making it through the Bandit's Lair east of the castle, we should go west to recruit some allies in the Arcane Academy.\n\nThey too seem to be facing the Bandit threat! After assisting in the defense, they will surely hear our proposal.",
+	LEVEL_203_HISTORY = "The local farmers tell us they have been under attack from what they refer to as the \"Shadow Order\" for months, but even their messengers have disappeared in ambushes.\n\nGeneral, we must stop and help them even if it delays our mission. It is the right thing to do.",
 	LEVEL_201_TITLE = "Linirean Castle",
 	LEVEL_202_TITLE = "ARCANE ACADEMY",
+	LEVEL_203_TITLE = "RAIDED FARMLANDS",
 	LEVEL_20_HEROIC = "Heroic Description 15",
 	LEVEL_20_HISTORY = "Demons have ravaged our troops stationed at Vez'nan's tower, leaving a lone survivor... From his terrified mumbling we've learned that these hellish hordes rose from the depths of the Rift of Cinders. \n\nGeneral, you must secure the area, discover the true origin of this threat, and make sure we have truly prevailed over Vez'nan.",
 	LEVEL_20_IRON = "Iron Description 15",
@@ -8773,5 +8775,8 @@ return {
 	ENEMY_SHADOW_BLADES_DESCRIPTION = "Now enhanced by Vez'nan's magic, the Blades spread darkness as they roam the battlefield.",
 	ENEMY_BANDIT_TUT_KR6_NAME = "Bandit",
 	ENEMY_BLACKGUARD_NAME = "Blackguard",
-	ENEMY_BLACKGUARD_DESCRIPTION = "Tougher and meaner than the bandits, they shank their opponents with two blades."
+	ENEMY_BLACKGUARD_DESCRIPTION = "Tougher and meaner than the bandits, they shank their opponents with two blades.",
+	ENEMY_CROW_NAME = "Crow",
+	ENEMY_CROW_DESCRIPTION = "Black feathers and ill omens aplenty flying over the troops' heads, better strike them down.",
+	ENEMY_CROW_EXTRA = "- Flying"
 }

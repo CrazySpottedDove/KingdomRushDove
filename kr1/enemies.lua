@@ -13204,6 +13204,7 @@ tt.ui.click_rect = r(-13, 0, 26, 25)
 
 -- enemy_bandit_tut_kr6（kr6 教学用，血量/速度单独一套）
 tt = RT("enemy_bandit_tut_kr6", "enemy_bandit_kr6")
+tt.info.i18n_key = "ENEMY_BANDIT_KR6"
 tt.health.hp_max = 33
 tt.motion.max_speed = 48
 tt.ui.click_rect = r(0, 0, 0, 0)
@@ -13241,3 +13242,178 @@ tt.melee.attacks[1].hit_times = {fts(10), fts(18)}
 tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
 tt.sound_events.death = "EnemyBlackguardDeath"
 tt.ui.click_rect = r(-18, 0, 26, 30)
+
+-- enemy_crow（kr6；暗影召唤流的乌鸦小怪；dove 无同名模板）
+tt = RT("enemy_crow", "enemy")
+AC(tt, "count_group")
+tt.unit.head_offset = v(5, 43)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.enemy.gold = 2
+tt.count_group.name = "enemy_crow"
+tt.flight_height = 40
+tt.health.hp_max = {20, 20, 25, 40}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, tt.flight_height + 25)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0006"
+tt.main_script.update = scripts.enemy_crow.update
+tt.motion.max_speed = 64
+tt.render.sprites[1].offset = v(0, tt.flight_height)
+tt.render.sprites[1].prefix = "crowcaller_crow"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "crowcaller_crow_shadow"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].scale = vv(1)
+tt.unit.can_explode = false
+tt.unit.hide_after_death = true
+tt.unit.show_blood_pool = false
+tt.unit.hit_offset = v(0, tt.flight_height + 5)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, tt.flight_height + 2)
+tt.vis.bans = bor(F_BLOCK, F_SKELETON)
+tt.vis.flags = bor(F_ENEMY, F_FLYING)
+tt.sound_events.death = "EnemyCrowDeath"
+tt.ui.click_rect = r(-15, tt.flight_height - 15, 30, 30)
+
+-- kr6 关卡 202：暗影之刃（波次引用的敌人及其依赖）
+tt = RT("enemy_shadow_blades", "enemy")
+
+AC(tt, "melee")
+
+tt.enemy.gold = 10
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = 70
+tt.health_bar.offset = v(0, 35)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.info.portrait = "kr6_info_portraits_enemies_0003"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_shadow_blades.update
+tt.motion.max_speed = 64
+tt.render.sprites[1].prefix = "shadow_blades_enemy"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 0.8
+tt.melee.attacks[1].damage_min = 7
+tt.melee.attacks[1].damage_max = 11
+tt.melee.attacks[1].damage_type = 2
+tt.melee.attacks[1].hit_times = {fts(8), fts(14)}
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
+tt.melee.attacks[1].animation = "attack"
+tt.melee.attacks[1].hit_fx = "fx_shadow_blades_hit"
+tt.melee.attacks[1].hit_offset = v(40, 13)
+tt.unit.hit_offset = v(0, 15)
+tt.unit.head_offset = v(6, 18)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 15)
+tt.smokebomb = {}
+tt.smokebomb.animation = "smokebomb"
+tt.smokebomb.smoke_t = "aura_shadow_blades_smoke"
+tt.smokebomb.delay = fts(20)
+tt.smokebomb.min_nodes_to_exit = 35
+tt.smokebomb.hp_threshold = 0.2
+tt.smokebomb.sound = "EnemyShadowBladesSmokeBombCast"
+tt.sound_events.death = "EnemyShadowBladesDeath"
+tt.ui.click_rect = r(-12, 0, 24, 26)
+
+tt = RT("fx_shadow_blades_hit", "fx")
+tt.render.sprites[1].name = "shadow_blades_hit_fx"
+
+tt = RT("aura_shadow_blades_smoke", "aura")
+tt.aura.mod = "mod_shadow_blades_smoke"
+tt.aura.radius = 60
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.cycle_time = 0.2
+tt.aura.duration = 3
+tt.aura.track_source = false
+tt.main_script.insert = scripts.aura_shadow_blades_smoke.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.main_script.remove = scripts.aura_shadow_blades_smoke.remove
+tt.decal_t = "decal_shadow_blades_smoke"
+
+tt = RT("mod_shadow_blades_smoke", "modifier")
+
+AC(tt, "render")
+
+tt.modifier.duration = 0.25
+tt.main_script.insert = scripts.mod_shadow_blades_smoke.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.main_script.remove = scripts.mod_shadow_blades_smoke.remove
+tt.render.sprites[1].prefix = "shadow_blades_modifier"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].loop = true
+
+tt = RT("decal_shadow_blades_smoke", "decal_tween")
+tt.range_factor = 1
+tt.render.sprites[1].prefix = "shadow_blades_dust_fx"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[1].fps = 30
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].loop = false
+tt.tween.remove = false
+
+-- kr6 关卡 202：暗影弓手（_kr6，避免与 dove 本体同名）
+tt = RT("enemy_shadow_archer_kr6", "enemy")
+
+AC(tt, "melee", "ranged")
+
+tt.enemy.gold = 15
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = 110
+tt.health.armor = 0
+tt.health.magic_armor = 0.3
+tt.health_bar.offset = v(0, 35)
+tt.info.portrait = "kr6_info_portraits_enemies_0004"
+tt.info.i18n_key = "ENEMY_SHADOW_ARCHER"
+tt.main_script.insert = scripts.enemy_basic_with_random_range.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 40
+tt.render.sprites[1].prefix = "shadow_archer_enemy"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 3
+tt.melee.attacks[1].damage_max = 4
+tt.melee.attacks[1].damage_type = 2
+tt.melee.attacks[1].hit_time = fts(10)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].animation = "attack_melee"
+tt.ranged.attacks[1].bullet = "bullet_shadow_archer"
+tt.ranged.attacks[1].hold_advance = true
+tt.ranged.attacks[1].shoot_time = fts(11)
+tt.ranged.attacks[1].cooldown = 1.5
+tt.ranged.attacks[1].min_range = 60
+tt.ranged.attacks[1].max_range = 150
+tt.ranged.attacks[1].max_range_variance = 60
+tt.ranged.attacks[1].bullet_start_offset = {v(12, 22)}
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[1].animation = "attack_ranged"
+tt.unit.hit_offset = v(0, 15)
+tt.unit.head_offset = v(5.5, 13)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 14)
+tt.sound_events.death = "EnemyShadowArcherDeath"
+tt.ui.click_rect = r(-13, -3, 26, 25)
+
+-- 路径复用共享 arrow5_fixed_height（insert 算好 flight_time 后转 scripts.arrow.insert，
+-- update 走共享 scripts.arrow.update，会被 precompile 特化），无需 KR6 专用脚本
+tt = RT("bullet_shadow_archer", "arrow5_fixed_height")
+tt.render.sprites[1].name = "shadow_archer_arrow"
+tt.bullet.fixed_height = 30
+tt.bullet.g = -1000
+tt.bullet.hide_radius = 1
+tt.bullet.predict_target_pos = false
+tt.bullet.miss_decal = "shadow_archer_arrow2"
+tt.bullet.damage_min = 10
+tt.bullet.damage_max = 16
+tt.bullet.damage_type = DAMAGE_PHYSICAL

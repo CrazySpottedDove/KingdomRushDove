@@ -51391,5 +51391,42 @@ return {
 		from = 49,
 		prefix = "shadow_archer_enemy",
 		to = 72
+	},
+
+	-- kr6 关卡 203：乌鸦动画
+	crowcaller_crow_idle = {
+		from = 1,
+		prefix = "crowcaller_crow",
+		to = 14
+	},
+	crowcaller_crow_in = {
+		from = 70,
+		prefix = "crowcaller_crow",
+		to = 83
+	},
+	crowcaller_crow_death = {
+		from = 57,
+		prefix = "crowcaller_crow",
+		to = 69
+	},
+	crowcaller_crow_walk = {
+		from = 15,
+		prefix = "crowcaller_crow",
+		to = 28
+	},
+	crowcaller_crow_walk_front = {
+		from = 29,
+		prefix = "crowcaller_crow",
+		to = 42
+	},
+	crowcaller_crow_walk_back = {
+		from = 43,
+		prefix = "crowcaller_crow",
+		to = 56
+	},
+	crowcaller_crow_shadow = {
+		from = 1,
+		prefix = "crowcaller_crow_shadow",
+		to = 1
 	}
 }

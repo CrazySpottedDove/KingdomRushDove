@@ -70430,4 +70430,30 @@ function scripts.mod_shadow_blades_smoke.remove(this, store, script)
 	return true
 end
 
+-- kr6 关卡 203：乌鸦（暗影召唤流小怪）
+scripts.enemy_crow = {}
+
+function scripts.enemy_crow.update(this, store)
+	local shadow_sprite = this.render.sprites[2]
+
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1)
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	while true do
+		if this.health.dead then
+			shadow_sprite.hidden = true
+
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			SU.y_enemy_walk_until_blocked(store, this)
+		end
+	end
+end
+
 return scripts
