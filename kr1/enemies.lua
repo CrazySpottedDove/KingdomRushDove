@@ -13253,7 +13253,7 @@ tt.unit.fade_duration_after_death = 0.3
 tt.enemy.gold = 2
 tt.count_group.name = "enemy_crow"
 tt.flight_height = 40
-tt.health.hp_max = {20, 20, 25, 40}
+tt.health.hp_max = {27.5, 27.5, 34.375, 55}
 tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, tt.flight_height + 25)
@@ -13417,3 +13417,266 @@ tt.bullet.miss_decal = "shadow_archer_arrow2"
 tt.bullet.damage_min = 10
 tt.bullet.damage_max = 16
 tt.bullet.damage_type = DAMAGE_PHYSICAL
+
+-- ==================== kr6 关卡 204：shadow_order / orcs 敌人 ====================
+-- 数值取自 kr6/data/balance/balance.lua，hp_max 每档统一 ×1.375（含飞行怪），见文件顶部约定。
+
+-- fx_crowcaller_hit
+tt = RT("fx_crowcaller_hit", "fx")
+tt.render.sprites[1].name = "crowcaller_hit_idle"
+
+-- fx_bullet_orc_shaman_hit
+tt = RT("fx_bullet_orc_shaman_hit", "fx")
+tt.render.sprites[1].name = "orc_shaman_hit"
+
+-- ps_bullet_orc_shaman
+tt = RT("ps_bullet_orc_shaman", "particle_system")
+tt.particle_system.name = "orc_shaman_particle"
+tt.particle_system.particle_lifetime = {fts(6), fts(6)}
+tt.particle_system.emission_rate = 30
+
+-- bullet_orc_shaman（远程萨满的法术弹）
+tt = RT("bullet_orc_shaman", "bolt_enemy")
+tt.render.sprites[1].name = "orc_shaman_projectile"
+tt.render.sprites[1].animated = false
+tt.bullet.damage_min = 4
+tt.bullet.damage_max = 6
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.align_with_trajectory = true
+tt.bullet.hit_fx = "fx_bullet_orc_shaman_hit"
+tt.bullet.particles_name = "ps_bullet_orc_shaman"
+
+-- enemy_crowcaller（暗影军团召唤者）
+tt = RT("enemy_crowcaller", "enemy")
+AC(tt, "melee", "timed_attacks")
+tt.enemy.gold = 40
+tt.enemy.melee_slot = v(30, 0)
+tt.enemy.has_magic = true
+tt.health.hp_max = {343.75, 412.5, 481.25, 1031.25}
+tt.health.armor = 0
+tt.health.magic_armor = 0.6
+tt.health_bar.offset = v(0, 34)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0005"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.head_offset = v(2, 17)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.unit.show_blood_pool = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_crowcaller.update
+tt.motion.max_speed = 32
+tt.render.sprites[1].prefix = "crowcaller_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 8
+tt.melee.attacks[1].damage_max = 12
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(12)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].hit_fx = "fx_crowcaller_hit"
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.timed_attacks.list[1] = CC("spawn_attack")
+tt.timed_attacks.list[1].cast_time = fts(10)
+tt.timed_attacks.list[1].animation = "skill"
+tt.timed_attacks.list[1].cooldown = 6
+tt.timed_attacks.list[1].spawn_count = {1, 1, 1, 2}
+tt.timed_attacks.list[1].entity = "enemy_crow"
+tt.timed_attacks.list[1].count_group_type = COUNT_GROUP_CONCURRENT
+tt.timed_attacks.list[1].count_group_name = "enemy_crow"
+tt.timed_attacks.list[1].count_group_max = 10
+tt.timed_attacks.list[1].sound = "EnemyCrowcallerCrowSummon"
+tt.sound_events.death = "EnemyCrowcallerDeath"
+tt.spawn_crow_node_limit = 60
+tt.ui.click_rect = r(-18, 0, 36, 30)
+
+-- enemy_goblin_kr6（与 dove 的 enemy_goblin 同名，故加后缀）
+tt = RT("enemy_goblin_kr6", "enemy")
+tt.info.i18n_key = "ENEMY_GOBLIN"
+AC(tt, "melee")
+tt.enemy.gold = 3
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = {27.5, 27.5, 41.25, 103.125}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 32)
+tt.info.portrait = "kr6_info_portraits_enemies_0008"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.head_offset = v(4, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_goblin.update
+tt.motion.max_speed = 50
+tt.render.sprites[1].prefix = "goblin_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 2
+tt.melee.attacks[1].damage_max = 3
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.sound_events.death = "EnemyGoblinDeath"
+tt.ui.click_rect = r(-13, 0, 26, 25)
+
+-- enemy_orc_warrior
+tt = RT("enemy_orc_warrior", "enemy")
+AC(tt, "melee")
+tt.enemy.gold = 15
+tt.enemy.melee_slot = v(32, 0)
+tt.enemy.has_magic = true
+tt.health.hp_max = {220, 247.5, 275, 550}
+tt.health.armor = 0.3
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 34)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health.dead_lifetime = 1
+tt.info.portrait = "kr6_info_portraits_enemies_0010"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.head_offset = v(5.5, 21)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_orc_warrior.update
+tt.motion.max_speed = 32
+tt.render.sprites[1].prefix = "orc_warrior_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 9
+tt.melee.attacks[1].damage_max = 14
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.rage = {}
+tt.rage.ts_max = 1
+tt.rage.animation = "rage"
+tt.rage.cast_time = fts(8)
+tt.rage.radius = 60
+tt.rage.aura = "aura_orc_warrior_rage_check"
+tt.rage.mod = "mod_orc_warrior_rage"
+tt.rage.sound = "EnemyOrcWarriorRageCast"
+tt.sound_events.death = "EnemyOrcWarriorDeath"
+tt.ui.click_rect = r(-18, 0, 36, 30)
+
+-- aura_orc_warrior_rage_check
+tt = RT("aura_orc_warrior_rage_check", "aura")
+tt.aura.radius = 60
+tt.aura.cycle_time = 0.3
+tt.aura.track_source = true
+tt.aura.requires_magic = true
+tt.aura.allowed_templates = {"enemy_orc_warrior", "enemy_orc_shaman"}
+tt.main_script.update = scripts.aura_orc_warrior_rage_check.update
+
+-- mod_orc_warrior_rage
+tt = RT("mod_orc_warrior_rage", "modifier")
+AC(tt, "render", "tween")
+tt.inflicted_damage_factor = 2
+tt.modifier.duration = 6
+tt.modifier.resets_same = true
+tt.modifier.use_mod_offset = false
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.update = scripts.mod_orc_warrior_rage.update
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.render.sprites[1].name = "orc_warrior_rage_decal"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].prefix = "orc_warrior_rage_fx"
+tt.render.sprites[2].name = "buff_loop"
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 2
+tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}}
+
+-- enemy_orc_shaman
+tt = RT("enemy_orc_shaman", "enemy")
+AC(tt, "melee", "ranged", "timed_attacks")
+tt.enemy.gold = 12
+tt.enemy.melee_slot = v(28, 0)
+tt.enemy.has_magic = true
+tt.health.hp_max = {110, 137.5, 165, 343.75}
+tt.health.armor = 0
+tt.health.magic_armor = 0.8
+tt.health_bar.offset = v(0, 32)
+tt.info.portrait = "kr6_info_portraits_enemies_0014"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.head_offset = v(4, 15)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_orc_shaman.update
+tt.motion.max_speed = 32
+tt.render.sprites[1].prefix = "orc_shaman_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].animation = "melee"
+tt.melee.attacks[1].cooldown = 1.25
+tt.melee.attacks[1].damage_min = 4
+tt.melee.attacks[1].damage_max = 6
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.ranged.attacks[1].animation = "ranged"
+tt.ranged.attacks[1].hold_advance = false
+tt.ranged.attacks[1].bullet = "bullet_orc_shaman"
+tt.ranged.attacks[1].shoot_time = fts(8)
+tt.ranged.attacks[1].cooldown = 1.25
+tt.ranged.attacks[1].min_range = 60
+tt.ranged.attacks[1].max_range = 120
+tt.ranged.attacks[1].max_range_variance = 60
+tt.ranged.attacks[1].bullet_start_offset = {v(-10, 30)}
+tt.timed_attacks.list[1] = CC("aura_attack")
+tt.timed_attacks.list[1].cast_time = fts(8)
+tt.timed_attacks.list[1].animation = "heal_in"
+tt.timed_attacks.list[1].cooldown = 8
+tt.timed_attacks.list[1].aura = "aura_orc_shaman_heal"
+tt.timed_attacks.list[1].range = 100
+tt.timed_attacks.list[1].min_targets = 2
+tt.timed_attacks.list[1].max_target_hp = 0.7
+tt.timed_attacks.list[1].sound = "EnemyOrcShamanHealingCast"
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
+tt.sound_events.death = "EnemyOrcShamanDeath"
+tt.ui.click_rect = r(-13, 0, 26, 25)
+
+-- aura_orc_shaman_heal
+tt = RT("aura_orc_shaman_heal", "aura")
+AC(tt, "render", "tween")
+tt.aura.mod = "mod_orc_shaman_heal"
+tt.aura.radius = 100
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.cycle_time = 0.2
+tt.aura.duration = 1
+tt.aura.filter_source = true
+tt.aura.track_source = true
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_orc_shaman_heal.update
+tt.render.sprites[1].prefix = "orc_shaman_heal_decal"
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+tt.tween.disabled = true
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}
+
+-- mod_orc_shaman_heal
+tt = RT("mod_orc_shaman_heal", "modifier")
+AC(tt, "hps", "render", "tween")
+tt.modifier.duration = 0.5
+tt.hps.heal_every = 0.2
+tt.hps.heal_per_second_min = {60, 60, 60, 135}
+tt.hps.heal_per_second_max = {80, 80, 80, 180}
+tt.main_script.insert = scripts.mod_orc_shaman_heal.insert
+tt.main_script.update = scripts.mod_orc_shaman_heal.update
+tt.render.sprites[1].name = "orc_shaman_heal_fx"
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].prefix = "orc_shaman_heal_decal"
+tt.render.sprites[2].name = "Idle"
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[2].exclude_mod_offset = true
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+tt.tween.disabled = true
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}

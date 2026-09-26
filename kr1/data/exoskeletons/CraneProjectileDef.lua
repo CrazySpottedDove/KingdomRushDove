@@ -1,0 +1,1 @@
+return {version=3,partScaleCompensation=1.40625,fps=30,parts={{'CraneProjectile_asst_crane_projectile',-0.05,-2.75}},attach_points={},animations={{name='idle',frames={{{1,1,1,-0.15,3.2,1.078385,1.140638,0.148423,0.097384,0}}}}}}

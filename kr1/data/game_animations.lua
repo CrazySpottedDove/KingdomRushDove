@@ -51428,5 +51428,205 @@ return {
 		from = 1,
 		prefix = "crowcaller_crow_shadow",
 		to = 1
+	},
+	crowcaller_creep_idle = {
+		from = 1,
+		prefix = "crowcaller_creep",
+		to = 1
+	},
+	crowcaller_creep_walk = {
+		from = 2,
+		prefix = "crowcaller_creep",
+		to = 21
+	},
+	crowcaller_creep_walk_front = {
+		from = 22,
+		prefix = "crowcaller_creep",
+		to = 41
+	},
+	crowcaller_creep_walk_back = {
+		from = 42,
+		prefix = "crowcaller_creep",
+		to = 61
+	},
+	crowcaller_creep_attack = {
+		from = 62,
+		prefix = "crowcaller_creep",
+		to = 91
+	},
+	crowcaller_creep_skill = {
+		from = 92,
+		prefix = "crowcaller_creep",
+		to = 130
+	},
+	crowcaller_creep_death = {
+		from = 131,
+		prefix = "crowcaller_creep",
+		to = 154
+	},
+	crowcaller_hit_idle = {
+		from = 1,
+		prefix = "crowcaller_hit",
+		to = 5
+	},
+	goblin_creep_idle = {
+		from = 1,
+		prefix = "goblin_creep",
+		to = 1
+	},
+	goblin_creep_walk = {
+		from = 2,
+		prefix = "goblin_creep",
+		to = 21
+	},
+	goblin_creep_walk_front = {
+		from = 22,
+		prefix = "goblin_creep",
+		to = 41
+	},
+	goblin_creep_walk_back = {
+		from = 42,
+		prefix = "goblin_creep",
+		to = 61
+	},
+	goblin_creep_attack = {
+		from = 62,
+		prefix = "goblin_creep",
+		to = 97
+	},
+	goblin_creep_fall = {
+		from = 98,
+		prefix = "goblin_creep",
+		to = 137
+	},
+	goblin_creep_death = {
+		from = 138,
+		prefix = "goblin_creep",
+		to = 158
+	},
+	goblin_projectile = {
+		from = 1,
+		prefix = "goblin_projectile",
+		to = 1
+	},
+	orc_warrior_rage_fx_buff_loop = {
+		from = 1,
+		prefix = "orc_warrior_rage_fx",
+		to = 12
+	},
+	orc_warrior_rage_decal_buff_decal = {
+		from = 1,
+		prefix = "orc_warrior_rage_decal",
+		to = 1
+	},
+	orc_warrior_creep_idle = {
+		from = 1,
+		prefix = "orc_warrior_creep",
+		to = 1
+	},
+	orc_warrior_creep_walk = {
+		from = 2,
+		prefix = "orc_warrior_creep",
+		to = 25
+	},
+	orc_warrior_creep_walk_front = {
+		from = 26,
+		prefix = "orc_warrior_creep",
+		to = 49
+	},
+	orc_warrior_creep_walk_back = {
+		from = 50,
+		prefix = "orc_warrior_creep",
+		to = 73
+	},
+	orc_warrior_creep_attack = {
+		from = 74,
+		prefix = "orc_warrior_creep",
+		to = 113
+	},
+	orc_warrior_creep_rage = {
+		from = 114,
+		prefix = "orc_warrior_creep",
+		to = 151
+	},
+	orc_warrior_creep_death = {
+		from = 152,
+		prefix = "orc_warrior_creep",
+		to = 181
+	},
+	orc_shaman_hit = {
+		from = 1,
+		prefix = "orc_shaman_hit",
+		to = 17
+	},
+	orc_shaman_particle = {
+		from = 1,
+		prefix = "orc_shaman_particle",
+		to = 6
+	},
+	orc_shaman_projectile = {
+		from = 1,
+		prefix = "orc_shaman_projectile",
+		to = 1
+	},
+	orc_shaman_heal_decal_in = {
+		from = 1,
+		prefix = "orc_shaman_heal_decal",
+		to = 4
+	},
+	orc_shaman_heal_decal_Idle = {
+		from = 5,
+		prefix = "orc_shaman_heal_decal",
+		to = 5
+	},
+	orc_shaman_heal_decal_out = {
+		from = 6,
+		prefix = "orc_shaman_heal_decal",
+		to = 13
+	},
+	orc_shaman_heal_fx = {
+		from = 1,
+		prefix = "orc_shaman_heal_fx",
+		to = 30
+	},
+	orc_shaman_creep_idle = {
+		from = 1,
+		prefix = "orc_shaman_creep",
+		to = 1
+	},
+	orc_shaman_creep_walk = {
+		from = 2,
+		prefix = "orc_shaman_creep",
+		to = 21
+	},
+	orc_shaman_creep_walk_front = {
+		from = 22,
+		prefix = "orc_shaman_creep",
+		to = 41
+	},
+	orc_shaman_creep_walk_back = {
+		from = 42,
+		prefix = "orc_shaman_creep",
+		to = 61
+	},
+	orc_shaman_creep_melee = {
+		from = 62,
+		prefix = "orc_shaman_creep",
+		to = 105
+	},
+	orc_shaman_creep_death = {
+		from = 106,
+		prefix = "orc_shaman_creep",
+		to = 125
+	},
+	orc_shaman_creep_heal_in = {
+		from = 126,
+		prefix = "orc_shaman_creep",
+		to = 195
+	},
+	orc_shaman_creep_ranged = {
+		from = 196,
+		prefix = "orc_shaman_creep",
+		to = 228
 	}
 }

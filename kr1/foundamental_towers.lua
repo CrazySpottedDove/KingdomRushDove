@@ -195,6 +195,12 @@ for name, data in pairs(holder_blocked_names) do
 	tt.render.sprites[1].name = data.sprite_name
 end
 
+-- kr6 地形 1_3 的 blocked 塔位（关卡 204 围墙爆破后生成，也可被其它 kr6 关卡复用）
+tt = E:register_t("tower_holder_blocked_terrain_1_3", "tower_holder_blocked")
+tt.tower.terrain_style = TERRAIN_STYLE_KR6_TERRAIN_1_3
+tt.tower_holder.unblock_price = 60
+tt.render.sprites[1].name = "kr6_build_terrain_blocked_0003"
+
 tt = RT("tower_build_archer", "tower_build")
 tt.build_name = "tower_archer_1"
 tt.render.sprites[2].name = "tower_constructing_0004"

@@ -8778,5 +8778,23 @@ return {
 	ENEMY_BLACKGUARD_DESCRIPTION = "Tougher and meaner than the bandits, they shank their opponents with two blades.",
 	ENEMY_CROW_NAME = "Crow",
 	ENEMY_CROW_DESCRIPTION = "Black feathers and ill omens aplenty flying over the troops' heads, better strike them down.",
-	ENEMY_CROW_EXTRA = "- Flying"
+	ENEMY_CROW_EXTRA = "- Flying",
+
+	ENEMY_CROWCALLER_NAME = "Crowcaller",
+	ENEMY_CROWCALLER_DESCRIPTION = "These dark mages call upon the blackest crows to spy on enemy lines.",
+	ENEMY_CROWCALLER_EXTRA = "- Medium magic resistance\n- Periodically summons crows",
+	ENEMY_CROWCALLER_SPECIAL = "",
+	ENEMY_ORC_SHAMAN_NAME = "Orc Shaman",
+	ENEMY_ORC_SHAMAN_DESCRIPTION = "Knowledgeable in the arts of mending, they are respected by the greenskin for their healing powers.",
+	ENEMY_ORC_SHAMAN_EXTRA = "- High magic resistance\n- Heals enemy units",
+	ENEMY_ORC_SHAMAN_SPECIAL = "",
+	ENEMY_ORC_WARRIOR_NAME = "Orc Warrior",
+	ENEMY_ORC_WARRIOR_DESCRIPTION = "Fueled by pure rage, the harder their comrades fall, the harder the ones standing hit.",
+	ENEMY_ORC_WARRIOR_EXTRA = "- Low armor\n- Enraged when a nearby medium or big Orc enemy dies",
+	ENEMY_ORC_WARRIOR_SPECIAL = "",
+	LEVEL_204_TITLE = "WESTERN WALL",
+	LEVEL_204_HISTORY = "By the King's commission, the Dwarves (renowned warriors and engineers) have built a wall to block the pass to the wild threats lurking west of Linirea.\n\nThey are about to finish the job, so let's help them secure the area and perhaps convince them to join our crusade.",
+	TOWER_STAGE_204_CRANE_NAME = "DWARVEN CRANE",
+	TOWER_STAGE_204_CRANE_BUY_NAME = "HIRE CRANE WORKER",
+	TOWER_STAGE_204_CRANE_BUY_DESC = "Use the crane to fight off enemies."
 }

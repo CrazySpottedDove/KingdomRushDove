@@ -70456,4 +70456,448 @@ function scripts.enemy_crow.update(this, store)
 	end
 end
 
+-- ============ KR6 关卡 204：新敌人脚本（crowcaller / goblin / orc） ============
+
+scripts.tween_utils = {}
+
+-- 延迟移除：先播 tween 反向淡出，tween 跑完后由 all/systems/tween.lua 统一移除。
+-- 注意：本函数返回 false 表示本帧不移除，all/simulation.lua 会打印 "remove xxx aborted"，
+-- 这是延迟移除的正常输出（实体最终由 tween 系统 queue_remove，不会泄露）。
+function scripts.tween_utils.reverse_remove(this, store, script)
+	if this.tween.disabled then
+		if this.tween_prop_replace then
+			this.tween.props[1].keys[2] = this.tween_prop_replace
+		end
+
+		this.tween.disabled = false
+		this.tween.ts = store.tick_ts
+		this.tween.remove = true
+		this.tween.reverse = true
+		this.tween.run_once = false
+		this.pending_removal = false
+
+		if this.timed then
+			this.timed.duration = 10
+		end
+
+		for i = 2, #this.tween.props do
+			this.tween.props[i].disabled = true
+		end
+
+		return false
+	end
+
+	return true
+end
+
+local function get_random_round_robin(mutable_history, n, m)
+	if not m then
+		m = n
+		n = 1
+	end
+
+	if m < n then
+		log.error("ERROR: Random round robin needs M to be bigger or equal than N")
+	end
+
+	if #mutable_history == 0 then
+		for i = n, m do
+			table.insert(mutable_history, i)
+		end
+	end
+
+	local pos = math.random(1, #mutable_history)
+	local value = mutable_history[pos]
+
+	table.remove(mutable_history, pos)
+
+	return value
+end
+
+scripts.enemy_crowcaller = {}
+
+function scripts.enemy_crowcaller.update(this, store, script)
+	local as = this.timed_attacks.list[1]
+
+	as.ts = store.tick_ts
+
+	local cg = store.count_groups[as.count_group_type]
+	local spawn_count = SU.get_difficulty_field_value(store, as.spawn_count)
+
+	local function ready_to_spawn()
+		return store.tick_ts - as.ts > as.cooldown and this.enemy.can_do_magic and (not cg[as.count_group_name] or cg[as.count_group_name] < as.count_group_max)
+	end
+
+	local function break_fn()
+		return ready_to_spawn() and P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > this.spawn_crow_node_limit
+	end
+
+	::label_crowcaller_0::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if ready_to_spawn() and P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > this.spawn_crow_node_limit then
+				S:queue(as.sound)
+
+				as.ts = store.tick_ts
+
+				U.animation_start(this, as.animation, nil, store.tick_ts, false)
+
+				if SU.y_enemy_wait(store, this, as.cast_time) or #this.enemy.blockers > 0 then
+					goto label_crowcaller_0
+				end
+
+				if spawn_count == 1 then
+					local crow = E:create_entity(as.entity)
+
+					crow.nav_path.pi = this.nav_path.pi
+					crow.nav_path.spi = this.nav_path.spi
+					crow.nav_path.ni = this.nav_path.ni + 6
+					crow.pos = P:node_pos(crow.nav_path.pi, crow.nav_path.spi, crow.nav_path.ni)
+					crow.pos.y = crow.pos.y + 1
+					crow.source_id = this.id
+					crow.enemy.gold = 0
+					crow.render.sprites[1].flip_x = this.render.sprites[1].flip_x
+
+					queue_insert(store, crow)
+				else
+					local spi_history = {}
+					local ni_history = {}
+
+					for _ = 1, spawn_count do
+						local crow = E:create_entity(as.entity)
+
+						crow.nav_path.pi = this.nav_path.pi
+						crow.nav_path.spi = get_random_round_robin(spi_history, 3)
+						crow.nav_path.ni = this.nav_path.ni + get_random_round_robin(ni_history, 4, 8)
+						crow.pos = P:node_pos(crow.nav_path.pi, crow.nav_path.spi, crow.nav_path.ni)
+						crow.pos.y = crow.pos.y + 1
+						crow.source_id = this.id
+						crow.enemy.gold = 0
+						crow.render.sprites[1].flip_x = this.render.sprites[1].flip_x
+
+						queue_insert(store, crow)
+					end
+				end
+
+				U.y_animation_wait(this)
+			end
+
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_fn, false) then
+			else
+				coroutine.yield()
+			end
+		end
+	end
+end
+
+scripts.enemy_goblin = {}
+
+function scripts.enemy_goblin.update(this, store, script)
+	if this.spawn_from_bullet then
+		this.render.sprites[1].flip_x = this.start_flipped
+
+		U.y_animation_play(this, "fall", nil, store.tick_ts)
+
+		local nearest
+
+		if P:is_path_active(this.path_to_spawn) then
+			nearest = P:nearest_nodes(this.pos.x, this.pos.y, {this.path_to_spawn}, {1, 2, 3})
+		else
+			nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, {1, 2, 3}, true)
+		end
+
+		local path_pi, path_spi, path_ni
+
+		if #nearest > 0 then
+			path_pi, path_spi, path_ni = unpack(nearest[1])
+		end
+
+		this.nav_path.pi = path_pi
+		this.nav_path.spi = path_spi
+		this.nav_path.ni = path_ni
+	end
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		elseif not SU.y_enemy_mixed_walk_melee_ranged(store, this, false) then
+		else
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.enemy_orc_warrior = {}
+
+function scripts.enemy_orc_warrior.update(this, store, script)
+	local aura = E:create_entity(this.rage.aura)
+
+	aura.aura.source_id = this.id
+	aura.aura.ts = store.tick_ts
+
+	queue_insert(store, aura)
+
+	local function can_rage()
+		return this.trigger_rage and this.enemy.can_do_magic and not U.has_modifiers(store, this, this.rage.mod)
+	end
+
+	::label_orc_warrior_0::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if this.trigger_rage then
+				S:queue(this.rage.sound)
+
+				this.trigger_rage = false
+
+				U.animation_start(this, this.rage.animation, nil, store.tick_ts, false)
+
+				if SU.y_enemy_wait(store, this, this.rage.cast_time) then
+					goto label_orc_warrior_0
+				end
+
+				local mod = E:create_entity(this.rage.mod)
+
+				mod.modifier.target_id = this.id
+				mod.modifier.source_id = this.id
+
+				queue_insert(store, mod)
+
+				if SU.y_enemy_animation_wait(this) then
+					goto label_orc_warrior_0
+				end
+			end
+
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, can_rage, can_rage) then
+			else
+				coroutine.yield()
+			end
+		end
+	end
+end
+
+scripts.aura_orc_warrior_rage_check = {}
+
+function scripts.aura_orc_warrior_rage_check.update(this, store, script)
+	local last_cycle_ts = 0
+
+	if this.aura.track_source and this.aura.source_id then
+		local te = store.entities[this.aura.source_id]
+
+		if te and te.pos then
+			this.pos = te.pos
+		end
+	end
+
+	while true do
+		local te = store.entities[this.aura.source_id]
+
+		if this.aura.track_source and this.aura.source_id and (not te or te.health and te.health.dead and not this.aura.track_dead) then
+			break
+		end
+
+		if this.aura.requires_magic then
+			if not te or not te.enemy then
+				goto label_rage_check_0
+			end
+
+			if not te.enemy.can_do_magic then
+				goto label_rage_check_0
+			end
+		end
+
+		if U.has_modifiers(store, te, te.rage.mod) then
+		elseif store.tick_ts - last_cycle_ts >= this.aura.cycle_time then
+			last_cycle_ts = store.tick_ts
+
+			local targets = table.filter(store.entities, function(_, v)
+				return v.enemy and v.health and (v.health.dead or v.health.hp <= 0) and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name))
+			end)
+
+			if targets and #targets > 0 then
+				te.trigger_rage = true
+			end
+		end
+
+		::label_rage_check_0::
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.mod_orc_warrior_rage = {}
+
+function scripts.mod_orc_warrior_rage.update(this, store, script)
+	local m = this.modifier
+
+	this.modifier.ts = store.tick_ts
+
+	local target = store.entities[m.target_id]
+
+	if not target or not target.pos then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+	this.tween.ts = store.tick_ts
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
+			this.tween.remove = true
+			this.tween.reverse = true
+			this.tween.ts = store.tick_ts
+
+			return
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.enemy_orc_shaman = {}
+
+function scripts.enemy_orc_shaman.update(this, store, script)
+	local ah = this.timed_attacks.list[1]
+	local heal_check_ts = store.tick_ts
+	local trigger_heal
+
+	local function can_heal()
+		if not this.enemy.can_do_magic then
+			return false
+		end
+
+		if trigger_heal then
+			return true
+		end
+
+		if store.tick_ts - heal_check_ts < 0.25 then
+			return false
+		end
+
+		if store.tick_ts - ah.ts < ah.cooldown then
+			return false
+		end
+
+		heal_check_ts = store.tick_ts
+
+		local targets = U.find_enemies_in_range(store, this.pos, 0, ah.range, this.vis.flags, 0, function(e)
+			return e.health and e.health.hp / e.health.hp_max < ah.max_target_hp
+		end)
+
+		trigger_heal = targets and #targets >= ah.min_targets
+
+		return trigger_heal
+	end
+
+	::label_orc_shaman_0::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if trigger_heal then
+				S:queue(ah.sound)
+
+				trigger_heal = false
+				ah.ts = store.tick_ts
+
+				U.animation_start(this, ah.animation, nil, store.tick_ts, false)
+
+				if SU.y_enemy_wait(store, this, ah.cast_time) then
+					goto label_orc_shaman_0
+				end
+
+				local aura = E:create_entity(ah.aura)
+
+				aura.aura.source_id = this.id
+				aura.aura.ts = store.tick_ts
+
+				queue_insert(store, aura)
+
+				while not U.animation_finished(this) do
+					if SU.enemy_interrupted(this) then
+						goto label_orc_shaman_0
+					end
+
+					coroutine.yield()
+				end
+			end
+
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, can_heal) then
+			else
+				coroutine.yield()
+			end
+		end
+	end
+end
+
+scripts.aura_orc_shaman_heal = {}
+
+function scripts.aura_orc_shaman_heal.update(this, store, script)
+	if this.aura.track_source and this.aura.source_id then
+		local te = store.entities[this.aura.source_id]
+
+		if te and te.pos then
+			this.pos = te.pos
+		end
+	end
+
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1)
+	U.animation_start(this, "Idle", nil, store.tick_ts, true)
+	scripts.aura_apply_mod.update(this, store, script)
+end
+
+scripts.mod_orc_shaman_heal = {}
+
+function scripts.mod_orc_shaman_heal.insert(this, store, script)
+	local target = store.entities[this.modifier.target_id]
+
+	this.pos = target.pos
+	this.hps.heal_min = SU.get_difficulty_field_value(store, this.hps.heal_per_second_min) * this.hps.heal_every
+	this.hps.heal_max = SU.get_difficulty_field_value(store, this.hps.heal_per_second_max) * this.hps.heal_every
+
+	return scripts.mod_hps.insert(this, store, script)
+end
+
+function scripts.mod_orc_shaman_heal.update(this, store, script)
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1, 2)
+	U.animation_start(this, "Idle", nil, store.tick_ts, true, 2)
+	scripts.mod_hps.update(this, store, script)
+end
+
 return scripts

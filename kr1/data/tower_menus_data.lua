@@ -72,6 +72,16 @@ return {
 		tt_title = _("SPECIAL_REPAIR_HOLDER_UNDERGROUND_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_UNDERGROUND_DESCRIPTION")
 	})}},
+	stage_204_crane = {{M(tpl.buy_attack, {
+		check = "main_icons_0019",
+		action = "tw_repair",
+		action_arg = "",
+		halo = "glow_ico_main",
+		image = "main_icons_0037",
+		place = 12,
+		tt_title = _("TOWER_STAGE_204_CRANE_BUY_NAME"),
+		tt_desc = _("TOWER_STAGE_204_CRANE_BUY_DESC")
+	})}},
 	mage = {{M(tpl.common_upgrade, {
 		action_arg = "tower_mage_2",
 		tt_title = _("TOWER_MAGE_2_NAME"),
