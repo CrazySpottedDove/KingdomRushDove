@@ -1,0 +1,1 @@
+return {version=3,partScaleCompensation=1.40625,fps=30,parts={{'stage05_pathburnlight_asst_s05burn_stage05_backglow',0,0}},attach_points={},animations={{name='idleburn',frames={{{1,1,0.691,795,-20.4,13.428650,4.452438,0,0,0},{1,1,0.531,795.6,-19,12.988037,1.024338,0,0,0}}}}}}

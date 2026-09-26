@@ -45158,4 +45158,178 @@ function scripts.aura_totem_naga.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
+-- ======== 银橡村关卡自带英雄（KR6 level05 stage hero）========
+scripts.hero_stage_205_alleria = {}
+
+function scripts.hero_stage_205_alleria.insert(this, store)
+	this.melee.order = U.attack_order(this.melee.attacks)
+	this.ranged.order = U.attack_order(this.ranged.attacks)
+
+	return true
+end
+
+function scripts.hero_stage_205_alleria.update(this, store)
+	local h = this.health
+	local brk, sta
+	local old_tombstone_time = this.hero.tombstone_show_time
+	local old_tombstone_respawn_animation = this.hero.tombstone_respawn_animation
+
+	this.health_bar.hidden = false
+
+	local ma = this.timed_attacks.list[1]
+
+	ma.ts = store.tick_ts - ma.cooldown
+
+	local wa = this.timed_attacks.list[2]
+
+	wa.ts = store.tick_ts - wa.cooldown
+
+	if not this.ignore_in_animation then
+		U.y_animation_play(this, "in", this.in_cinematic, store.tick_ts, 1)
+	end
+
+	U.animation_start(this, "idle", this.in_cinematic, store.tick_ts, true)
+
+	while this.in_cinematic do
+		coroutine.yield()
+	end
+
+	while true do
+		if h.dead then
+			if band(h.last_damage_types, bor(DAMAGE_EAT)) ~= 0 then
+				this.hero.tombstone_show_time = nil
+				this.hero.tombstone_respawn_animation = nil
+			end
+
+			SU.y_hero_death_and_respawn(store, this)
+
+			this.hero.tombstone_show_time = old_tombstone_time
+			this.hero.tombstone_respawn_animation = old_tombstone_respawn_animation
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_hero_new_rally(store, this) then
+					goto label_stage_205_alleria_0
+				end
+			end
+
+			if store.tick_ts - ma.ts > ma.cooldown and this.soldier.target_id == nil then
+				local enemies = U.find_enemies_in_range(store, this.pos, ma.min_range, ma.max_range, ma.vis_flags, ma.vis_bans)
+
+				if not enemies or #enemies < ma.min_targets then
+					SU.delay_attack(store, ma, 1.5)
+				else
+					ma.ts = store.tick_ts
+
+					local an, af = U.animation_name_facing_point(this, ma.animations[1], enemies[1].pos)
+
+					U.y_animation_play(this, an, af, store.tick_ts, 1)
+
+					local enemy_idx = 1
+
+					for i = 1, ma.shots do
+						S:queue(ma.sound)
+						U.animation_start(this, ma.animations[2], nil, store.tick_ts, false)
+						U.y_wait(store, ma.shoot_time)
+
+						local target = enemies[enemy_idx]
+						local bullet = E:create_entity(ma.bullet)
+
+						bullet.pos = V.vclone(this.pos)
+
+						if ma.bullet_start_offset then
+							local offset = ma.bullet_start_offset
+
+							bullet.pos.x, bullet.pos.y = bullet.pos.x + (this.render.sprites[1].flip_x and -1 or 1) * offset.x, bullet.pos.y + offset.y
+						end
+
+						bullet.bullet.from = V.vclone(bullet.pos)
+						bullet.bullet.to = V.vclone(target.pos)
+
+						if not ma.ignore_hit_offset then
+							bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
+							bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
+						end
+
+						bullet.bullet.target_id = target.id
+						bullet.bullet.source_id = this.id
+
+						queue_insert(store, bullet)
+
+						enemy_idx = enemy_idx + 1
+
+						if enemy_idx > #enemies then
+							enemy_idx = 1
+						end
+
+						U.y_animation_wait(this)
+					end
+
+					U.y_animation_play(this, ma.animations[3], nil, store.tick_ts, 1)
+				end
+			end
+
+			if store.tick_ts - wa.ts > wa.cooldown and this.soldier.target_id == nil then
+				local enemies = U.find_enemies_in_range(store, this.pos, 0, wa.range_check, wa.vis_flags, wa.vis_bans)
+
+				if not enemies or #enemies < wa.min_targets then
+				-- block empty
+				else
+					wa.ts = store.tick_ts
+
+					local an, af = U.animation_name_facing_point(this, wa.animation, enemies[1].pos)
+
+					U.animation_start(this, an, af, store.tick_ts, 1)
+					U.y_wait(store, wa.cast_time)
+
+					local e = E:create_entity(wa.entity)
+
+					e.pos.x = this.pos.x + wa.spawn_offset.x
+					e.pos.y = this.pos.y + wa.spawn_offset.y
+					e.nav_rally.center = e.pos
+					e.nav_rally.pos = V.vclone(e.pos)
+
+					local has_mod, mods = U.has_modifiers(store, this, "mod_stage_205_tree_buff")
+
+					if has_mod then
+						e.health.hp_max = e.health.hp_max * mods[1].cat_hp_buff
+						e.health.hp = e.health.hp_max
+						e.melee.attacks[1].damage_min = e.melee.attacks[1].damage_min * mods[1].cat_dmg_buff
+						e.melee.attacks[1].damage_max = e.melee.attacks[1].damage_max * mods[1].cat_dmg_buff
+					end
+
+					queue_insert(store, e)
+					S:queue(wa.sound)
+					U.animation_start(e, "in", nil, store.tick_ts, false)
+					U.y_animation_wait(this)
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+			-- block empty
+			elseif SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk then
+				-- block empty
+				else
+					SU.soldier_idle(store, this)
+					SU.soldier_regen(store, this)
+				end
+			end
+		end
+
+		::label_stage_205_alleria_0::
+
+		coroutine.yield()
+	end
+end
+
 return scripts

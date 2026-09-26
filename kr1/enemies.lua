@@ -13432,6 +13432,8 @@ tt.render.sprites[1].name = "orc_shaman_hit"
 -- ps_bullet_orc_shaman
 tt = RT("ps_bullet_orc_shaman", "particle_system")
 tt.particle_system.name = "orc_shaman_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.particle_lifetime = {fts(6), fts(6)}
 tt.particle_system.emission_rate = 30
 
@@ -13680,3 +13682,135 @@ tt.tween.disabled = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
 tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}
+
+-- ==================== kr6 关卡 205：orcs 野猪狼骑敌人 ====================
+-- 数值取自 kr6/data/balance/balance.lua，hp_max 每档 ×1.375，见文件顶部约定。
+
+-- fx_orc_wildling_hit
+tt = RT("fx_orc_wildling_hit", "fx")
+tt.render.sprites[1].name = "wildling_hit_fx_run"
+
+-- mod_orc_wildling_worg_mode（附近有狼/狼骑时提速，借用 mod_slow 机制）
+tt = RT("mod_orc_wildling_worg_mode", "mod_slow")
+tt.slow.factor = 2
+tt.modifier.type = MOD_TYPE_FAST
+tt.modifier.duration = 1e+99
+
+-- enemy_wulf
+tt = RT("enemy_wulf", "enemy")
+AC(tt, "melee", "dodge")
+tt.unit.head_offset = v(11, 9)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 4
+tt.enemy.melee_slot = v(26, 0)
+tt.health.hp_max = {48.125, 55, 55, 110}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 31)
+tt.info.portrait = "kr6_info_portraits_enemies_0009"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 90
+tt.render.sprites[1].prefix = "wulf_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 0.8
+tt.melee.attacks[1].damage_min = 2
+tt.melee.attacks[1].damage_max = 3
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.dodge.chance = 0.3
+tt.dodge.show_pop = true
+tt.dodge.silent = true
+tt.sound_events.death = "EnemyWulfDeath"
+tt.ui.click_rect = r(-18, -3, 36, 32)
+
+-- enemy_worg
+tt = RT("enemy_worg", "enemy")
+AC(tt, "melee", "dodge")
+tt.unit.head_offset = v(15, 14)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 10
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = {137.5, 165, 192.5, 385}
+tt.health.armor = 0
+tt.health.magic_armor = 0.5
+tt.health_bar.offset = v(0, 34)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0012"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 64
+tt.render.sprites[1].prefix = "worg_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1.25
+tt.melee.attacks[1].damage_min = 10
+tt.melee.attacks[1].damage_max = 15
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.dodge.chance = 0.3
+tt.dodge.show_pop = true
+tt.dodge.silent = true
+tt.sound_events.death = "EnemyWorgDeath"
+tt.ui.click_rect = r(-22, -3, 44, 32)
+
+-- enemy_orc_wildling（靠近狼时会切换成坐骑冲锋）
+tt = RT("enemy_orc_wildling", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(13, 20)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 20
+tt.enemy.melee_slot = v(34, 0)
+tt.health.hp_max = {330, 385, 440, 880}
+tt.health.armor = 0.6
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(2, 45)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0013"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 17)
+tt.unit.can_explode = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_orc_wildling.update
+tt.motion.max_speed = 32
+tt.render.sprites[1].prefix = "wildling_enemy"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 6
+tt.melee.attacks[1].damage_max = 10
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(8), fts(14)}
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
+tt.melee.attacks[1].hit_fx = "fx_orc_wildling_hit"
+tt.melee.attacks[1].hit_offset = v(40, 15)
+tt.worg_mode = {}
+tt.worg_mode.angles_walk = {"run_side", "run_side_back", "run_side_front"}
+tt.worg_mode.range = 100
+tt.worg_mode.mod = "mod_orc_wildling_worg_mode"
+tt.worg_mode.speed = {2, 2, 2, 2.1875}
+tt.worg_mode.sound_in = "EnemyOrcWildlingTriggerRunCast"
+tt.sound_events.death = "EnemyOrcWildlingDeath"
+tt.ui.click_rect = r(-22, 0, 44, 40)

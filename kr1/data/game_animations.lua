@@ -51628,5 +51628,235 @@ return {
 		from = 196,
 		prefix = "orc_shaman_creep",
 		to = 228
+	},
+	wulf_creep_idle = {
+		from = 1,
+		prefix = "wulf_creep",
+		to = 1
+	},
+	wulf_creep_walk = {
+		from = 2,
+		prefix = "wulf_creep",
+		to = 12
+	},
+	wulf_creep_walk_front = {
+		from = 13,
+		prefix = "wulf_creep",
+		to = 23
+	},
+	wulf_creep_walk_back = {
+		from = 24,
+		prefix = "wulf_creep",
+		to = 34
+	},
+	wulf_creep_attack = {
+		from = 35,
+		prefix = "wulf_creep",
+		to = 68
+	},
+	wulf_creep_death = {
+		from = 69,
+		prefix = "wulf_creep",
+		to = 90
+	},
+	worg_creep_idle = {
+		from = 1,
+		prefix = "worg_creep",
+		to = 1
+	},
+	worg_creep_walk = {
+		from = 2,
+		prefix = "worg_creep",
+		to = 12
+	},
+	worg_creep_walk_front = {
+		from = 13,
+		prefix = "worg_creep",
+		to = 23
+	},
+	worg_creep_walk_back = {
+		from = 24,
+		prefix = "worg_creep",
+		to = 34
+	},
+	worg_creep_attack = {
+		from = 35,
+		prefix = "worg_creep",
+		to = 68
+	},
+	worg_creep_death = {
+		from = 69,
+		prefix = "worg_creep",
+		to = 90
+	},
+	wildling_enemy_idle = {
+		from = 1,
+		prefix = "wildling_enemy",
+		to = 1
+	},
+	wildling_enemy_walk = {
+		from = 2,
+		prefix = "wildling_enemy",
+		to = 21
+	},
+	wildling_enemy_walk_front = {
+		from = 22,
+		prefix = "wildling_enemy",
+		to = 41
+	},
+	wildling_enemy_walk_back = {
+		from = 42,
+		prefix = "wildling_enemy",
+		to = 61
+	},
+	wildling_enemy_attack = {
+		from = 62,
+		prefix = "wildling_enemy",
+		to = 93
+	},
+	wildling_enemy_death = {
+		from = 94,
+		prefix = "wildling_enemy",
+		to = 125
+	},
+	wildling_enemy_run_side = {
+		from = 126,
+		prefix = "wildling_enemy",
+		to = 137
+	},
+	wildling_enemy_run_side_front = {
+		from = 138,
+		prefix = "wildling_enemy",
+		to = 149
+	},
+	wildling_enemy_run_side_back = {
+		from = 150,
+		prefix = "wildling_enemy",
+		to = 161
+	},
+	wildling_hit_fx_run = {
+		from = 1,
+		prefix = "wildling_hit_fx",
+		to = 8
+	},
+	Alleria_hero_idle = {
+		from = 1,
+		prefix = "Alleria_hero",
+		to = 24
+	},
+	Alleria_hero_walk = {
+		from = 25,
+		prefix = "Alleria_hero",
+		to = 44
+	},
+	Alleria_hero_attack = {
+		from = 45,
+		prefix = "Alleria_hero",
+		to = 64
+	},
+	Alleria_hero_attack_melee = {
+		from = 65,
+		prefix = "Alleria_hero",
+		to = 94
+	},
+	Alleria_hero_skill_1_in = {
+		from = 95,
+		prefix = "Alleria_hero",
+		to = 98
+	},
+	Alleria_hero_skill_1_loop = {
+		from = 99,
+		prefix = "Alleria_hero",
+		to = 105
+	},
+	Alleria_hero_skill_1_out = {
+		from = 106,
+		prefix = "Alleria_hero",
+		to = 117
+	},
+	Alleria_hero_skill_2 = {
+		from = 118,
+		prefix = "Alleria_hero",
+		to = 157
+	},
+	Alleria_hero_in = {
+		from = 158,
+		prefix = "Alleria_hero",
+		to = 200
+	},
+	Alleria_hero_death = {
+		from = 201,
+		prefix = "Alleria_hero",
+		to = 235
+	},
+	Alleria_cat_idle = {
+		from = 1,
+		prefix = "Alleria_cat",
+		to = 1
+	},
+	Alleria_cat_walk = {
+		from = 2,
+		prefix = "Alleria_cat",
+		to = 15
+	},
+	Alleria_cat_attack = {
+		from = 16,
+		prefix = "Alleria_cat",
+		to = 45
+	},
+	Alleria_cat_in = {
+		from = 46,
+		prefix = "Alleria_cat",
+		to = 73
+	},
+	Alleria_cat_raise = {
+		from = 46,
+		prefix = "Alleria_cat",
+		to = 73
+	},
+	Alleria_cat_hit_hit = {
+		from = 1,
+		prefix = "Alleria_cat_hit",
+		to = 6
+	},
+	Alleria_arrow = {
+		from = 1,
+		prefix = "Alleria_arrow",
+		to = 1
+	},
+	Alleria_arrow_decal_in = {
+		from = 1,
+		prefix = "Alleria_arrow_decal",
+		to = 11
+	},
+	Alleria_arrow_hit_hit = {
+		from = 1,
+		prefix = "Alleria_arrow_hit",
+		to = 6
+	},
+	Alleria_arrow_particle_hit = {
+		from = 1,
+		prefix = "Alleria_arrow_particle",
+		to = 12
+	},
+	Alleria_skill_1_arrow = {
+		from = 1,
+		prefix = "Alleria_skill_1_arrow",
+		to = 1
+	},
+	Alleria_skill_1_arrow_decal_in = {
+		from = 1,
+		prefix = "Alleria_skill_1_arrow_decal",
+		to = 11
+	},
+	Alleria_skill_1_arrow_hit_hit = {
+		from = 1,
+		prefix = "Alleria_skill_1_arrow_hit",
+		to = 12
+	},
+	Alleria_skill_1_arrow_particle = {
+		from = 1,
+		prefix = "Alleria_skill_1_arrow_particle",
+		to = 13
 	}
 }

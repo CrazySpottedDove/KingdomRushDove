@@ -8800,5 +8800,22 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	LEVEL_204_HISTORY = "矮人族是以战士和工程师而闻名的民族。他们奉国王之命，正在此建造巨大的防壁，阻挡利尼维亚以西那片蛮荒之地中潜藏的威胁。\n\n目前防壁已经接近完工，就让我们协助完成最后的守卫工作吧，事成之后也许还能借此说服矮人加入我们的远征。",
 	TOWER_STAGE_204_CRANE_NAME = "矮人起重机",
 	TOWER_STAGE_204_CRANE_BUY_NAME = "雇佣起重机工人。",
-	TOWER_STAGE_204_CRANE_BUY_DESC = "利用起重机来攻击敌人。"
+	TOWER_STAGE_204_CRANE_BUY_DESC = "利用起重机来攻击敌人。",
+
+	ENEMY_WULF_NAME = "狼",
+	ENEMY_WULF_DESCRIPTION = "凶猛又敏捷的毛茸茸生物，甚至可以毫发无伤地穿过士兵的防线。",
+	ENEMY_WULF_EXTRA = "- 快速\n- 闪避攻击",
+	ENEMY_WULF_SPECIAL = "",
+	ENEMY_WORG_NAME = "座狼",
+	ENEMY_WORG_DESCRIPTION = "速度较慢，但更加凶猛，攻击性不容小觑。",
+	ENEMY_WORG_EXTRA = "- 中魔法抗性\n- 快速\n- 闪避攻击",
+	ENEMY_WORG_SPECIAL = "",
+	ENEMY_ORC_WILDLING_NAME = "野蛮兽人",
+	ENEMY_ORC_WILDLING_DESCRIPTION = "比起同族，这些野蛮的兽人更习惯与座狼为伍。他们从不畏惧释放自己野性的本能。",
+	ENEMY_ORC_WILDLING_EXTRA = "- 中护甲\n- 靠近座狼或哥布林骑兵时提升移动速度",
+	ENEMY_ORC_WILDLING_SPECIAL = "",
+	LEVEL_205_TITLE = "银橡村",
+	LEVEL_205_HISTORY = "对精灵而言，宏伟的银色橡树向来是他们与自然联系的重要象征。作为盟友，面对卫兹南的威胁他们一定会出手相助。\n\n然而兽人似乎也加入了卫兹南的势力，正准备在银橡村中大肆破坏……我们绝不能让他们得逞！",
+
+	SOLDIER_ALLERIA_CAT_NAME = "野猫"
 }

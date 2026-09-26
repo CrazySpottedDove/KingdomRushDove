@@ -230,6 +230,10 @@ function storage:load_slot(idx, force)
 		input.levels[201] = {}
 	end
 
+	if not input.levels[205] then
+		input.levels[205] = {}
+	end
+
 	return input
 end
 

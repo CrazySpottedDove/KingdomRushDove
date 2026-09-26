@@ -8796,5 +8796,22 @@ return {
 	LEVEL_204_HISTORY = "By the King's commission, the Dwarves (renowned warriors and engineers) have built a wall to block the pass to the wild threats lurking west of Linirea.\n\nThey are about to finish the job, so let's help them secure the area and perhaps convince them to join our crusade.",
 	TOWER_STAGE_204_CRANE_NAME = "DWARVEN CRANE",
 	TOWER_STAGE_204_CRANE_BUY_NAME = "HIRE CRANE WORKER",
-	TOWER_STAGE_204_CRANE_BUY_DESC = "Use the crane to fight off enemies."
+	TOWER_STAGE_204_CRANE_BUY_DESC = "Use the crane to fight off enemies.",
+
+	ENEMY_WULF_NAME = "Wulf",
+	ENEMY_WULF_DESCRIPTION = "Fast and furious balls of fur, so fast they can slip through barracks unscathed.",
+	ENEMY_WULF_EXTRA = "- Fast speed\n- Dodges attacks",
+	ENEMY_WULF_SPECIAL = "",
+	ENEMY_WORG_NAME = "Worg",
+	ENEMY_WORG_DESCRIPTION = "Not so fast but definitely furious. Will bite even harder.",
+	ENEMY_WORG_EXTRA = "- Medium magic resistance\n- Fast speed\n- Dodges attacks",
+	ENEMY_WORG_SPECIAL = "",
+	ENEMY_ORC_WILDLING_NAME = "Orc Wildling",
+	ENEMY_ORC_WILDLING_DESCRIPTION = "More at home with the worgs than with their own kin, the Wildlings do not fear to let their savage instincts out.",
+	ENEMY_ORC_WILDLING_EXTRA = "- Medium armor\n- Runs faster when near worgs and rider goblins",
+	ENEMY_ORC_WILDLING_SPECIAL = "",
+	LEVEL_205_TITLE = "SILVEROAK VILLAGE",
+	LEVEL_205_HISTORY = "The mighty Silveroak is revered by the Elves as a symbol of their connection to nature. They for sure will follow us in our goal to stop Vez'nan's plans.\n\nBut it seems the Orcs have also joined his army and are about to cause havoc in the village. We cannot let that happen!",
+
+	SOLDIER_ALLERIA_CAT_NAME = "WILDCAT"
 }

@@ -70900,4 +70900,75 @@ function scripts.mod_orc_shaman_heal.update(this, store, script)
 	scripts.mod_hps.update(this, store, script)
 end
 
+-- ==================== kr6 关卡 205：enemy_orc_wildling ====================
+scripts.enemy_orc_wildling = {}
+
+function scripts.enemy_orc_wildling.update(this, store, script)
+	local worg_mode = false
+	local worg_check_ts = store.tick_ts
+	local trigger_mode_change = false
+	local normal_angles = this.render.sprites[1].angles.walk
+	local mod
+
+	E:get_template(this.worg_mode.mod).slow.factor = SU.get_difficulty_field_value(store, this.worg_mode.speed)
+
+	local function check_worg_mode_change()
+		if store.tick_ts - worg_check_ts < 0.25 then
+			return false
+		end
+
+		worg_check_ts = store.tick_ts
+
+		local range = worg_mode and this.worg_mode.range * 1.2 or this.worg_mode.range
+		local targets = U.find_enemies_in_range(store, this.pos, 0, range, this.vis.flags, 0, function(e, o)
+			return e.template_name == "enemy_worg"
+		end)
+
+		trigger_mode_change = worg_mode ~= (targets and #targets >= 1)
+		worg_mode = targets and #targets >= 1
+
+		return trigger_mode_change
+	end
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if trigger_mode_change then
+				trigger_mode_change = false
+
+				if worg_mode then
+					S:queue(this.worg_mode.sound_in)
+
+					this.render.sprites[1].angles.walk = this.worg_mode.angles_walk
+					mod = E:create_entity(this.worg_mode.mod)
+					mod.modifier.target_id = this.id
+					mod.modifier.source_id = this.id
+
+					queue_insert(store, mod)
+				else
+					this.render.sprites[1].angles.walk = normal_angles
+
+					if mod then
+						mod.modifier.duration = 0
+					end
+
+					mod = nil
+				end
+			end
+
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, check_worg_mode_change) then
+			else
+				coroutine.yield()
+			end
+		end
+	end
+end
+
 return scripts
