@@ -52349,5 +52349,361 @@ return {
 		["from"] = 4,
 		["prefix"] = "templars_templar",
 		["to"] = 9
+	},
+	["troll_warrior_creep_climb_idle"] = {
+		["from"] = 114,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 114
+	},
+	["troll_warrior_creep_rope"] = {
+		["from"] = 154,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 154
+	},
+	["troll_warrior_creep_rope_end"] = {
+		["from"] = 155,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 172
+	},
+	["troll_warrior_creep_rope_land"] = {
+		["from"] = 173,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 188
+	},
+	["troll_warrior_hit_fx_run"] = {
+		["from"] = 1,
+		["prefix"] = "troll_warrior_hit_fx",
+		["to"] = 6
+	},
+	["troll_warrior_creep_climb_death"] = {
+		["from"] = 86,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 86
+	},
+	["troll_warrior_creep_climb_walkingRightLeft"] = {
+		["from"] = 2,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 21
+	},
+	["troll_warrior_creep_climb_walkingDown"] = {
+		["from"] = 22,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 41
+	},
+	["troll_warrior_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 1
+	},
+	["troll_warrior_creep_walkingRightLeft"] = {
+		["from"] = 2,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 21
+	},
+	["troll_warrior_creep_walkingDown"] = {
+		["from"] = 22,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 41
+	},
+	["troll_warrior_creep_walkingUp"] = {
+		["from"] = 42,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 61
+	},
+	["troll_warrior_creep_attack"] = {
+		["from"] = 62,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 85
+	},
+	["troll_warrior_creep_death"] = {
+		["from"] = 86,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 113
+	},
+	["troll_warrior_creep_climb_walkingUp"] = {
+		["from"] = 114,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 137
+	},
+	["troll_warrior_creep_climb_fall"] = {
+		["from"] = 138,
+		["prefix"] = "troll_warrior_creep",
+		["to"] = 153
+	},
+	["troll_champion_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 1
+	},
+	["troll_champion_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 21
+	},
+	["troll_champion_creep_walk_down"] = {
+		["from"] = 22,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 41
+	},
+	["troll_champion_creep_walk_up"] = {
+		["from"] = 42,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 61
+	},
+	["troll_champion_creep_trow"] = {
+		["from"] = 62,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 95
+	},
+	["troll_champion_creep_mele"] = {
+		["from"] = 96,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 123
+	},
+	["troll_champion_creep_death"] = {
+		["from"] = 124,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 147
+	},
+	["troll_champion_creep_air_down"] = {
+		["from"] = 148,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 151
+	},
+	["troll_champion_creep_land"] = {
+		["from"] = 152,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 157
+	},
+	["troll_champion_creep_jump"] = {
+		["from"] = 158,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 163
+	},
+	["troll_champion_creep_air_up"] = {
+		["from"] = 164,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 167
+	},
+	["troll_champion_creep_death_2"] = {
+		["from"] = 168,
+		["prefix"] = "troll_champion_creep",
+		["to"] = 183
+	},
+	["troll_champion_projectile_miss_decal_run"] = {
+		["from"] = 1,
+		["prefix"] = "troll_champion_projectile_miss_decal",
+		["to"] = 26
+	},
+	["troll_champion_projectile_miss_decal_idle"] = {
+		["from"] = 27,
+		["prefix"] = "troll_champion_projectile_miss_decal",
+		["to"] = 27
+	},
+	["troll_champion_projectile_miss_decal_out"] = {
+		["from"] = 28,
+		["prefix"] = "troll_champion_projectile_miss_decal",
+		["to"] = 43
+	},
+	["troll_champion_projectile_run"] = {
+		["from"] = 1,
+		["prefix"] = "troll_champion_projectile",
+		["to"] = 6
+	},
+	["troll_champion_projectile_hit_run"] = {
+		["from"] = 1,
+		["prefix"] = "troll_champion_projectile_hit",
+		["to"] = 6
+	},
+	["troll_glider_broken_glider_run"] = {
+		["from"] = 1,
+		["prefix"] = "troll_glider_broken_glider",
+		["to"] = 17
+	},
+	["troll_glider_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "troll_glider_creep",
+		["to"] = 1
+	},
+	["troll_glider_creep_glide"] = {
+		["from"] = 1,
+		["prefix"] = "troll_glider_creep",
+		["to"] = 26
+	},
+	["troll_glider_creep_crash"] = {
+		["from"] = 27,
+		["prefix"] = "troll_glider_creep",
+		["to"] = 60
+	},
+	["troll_glider_creep_crash_projectile"] = {
+		["from"] = 61,
+		["prefix"] = "troll_glider_creep",
+		["to"] = 62
+	},
+	["troll_glider_creep_fall_loop"] = {
+		["from"] = 63,
+		["prefix"] = "troll_glider_creep",
+		["to"] = 66
+	},
+	["troll_glider_creep_drop"] = {
+		["from"] = 67,
+		["prefix"] = "troll_glider_creep",
+		["to"] = 70
+	},
+	["troll_glider_creep_glide_down"] = {
+		["from"] = 71,
+		["prefix"] = "troll_glider_creep",
+		["to"] = 96
+	},
+	["troll_glider_creep_glide_up"] = {
+		["from"] = 97,
+		["prefix"] = "troll_glider_creep",
+		["to"] = 122
+	},
+	["troll_crusher_humo_stun_run"] = {
+		["from"] = 1,
+		["prefix"] = "troll_crusher_humo_stun",
+		["to"] = 14
+	},
+	["troll_crusher_crack_run"] = {
+		["from"] = 1,
+		["prefix"] = "troll_crusher_crack",
+		["to"] = 6
+	},
+	["troll_crusher_stun_start"] = {
+		["from"] = 1,
+		["prefix"] = "troll_crusher_stun",
+		["to"] = 36
+	},
+	["troll_crusher_stun_loop"] = {
+		["from"] = 37,
+		["prefix"] = "troll_crusher_stun",
+		["to"] = 46
+	},
+	["troll_crusher_stun_end"] = {
+		["from"] = 47,
+		["prefix"] = "troll_crusher_stun",
+		["to"] = 96
+	},
+	["troll_crusher_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "troll_crusher_creep",
+		["to"] = 1
+	},
+	["troll_crusher_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "troll_crusher_creep",
+		["to"] = 27
+	},
+	["troll_crusher_creep_walk_front"] = {
+		["from"] = 28,
+		["prefix"] = "troll_crusher_creep",
+		["to"] = 53
+	},
+	["troll_crusher_creep_walk_back"] = {
+		["from"] = 54,
+		["prefix"] = "troll_crusher_creep",
+		["to"] = 79
+	},
+	["troll_crusher_creep_mele"] = {
+		["from"] = 80,
+		["prefix"] = "troll_crusher_creep",
+		["to"] = 131
+	},
+	["troll_crusher_creep_stuntower"] = {
+		["from"] = 132,
+		["prefix"] = "troll_crusher_creep",
+		["to"] = 195
+	},
+	["troll_crusher_creep_death"] = {
+		["from"] = 196,
+		["prefix"] = "troll_crusher_creep",
+		["to"] = 245
+	},
+	["icecaller_icicle_out"] = {
+		["from"] = 36,
+		["prefix"] = "icecaller_icicle",
+		["to"] = 41
+	},
+	["icecaller_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "icecaller_creep",
+		["to"] = 1
+	},
+	["icecaller_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "icecaller_creep",
+		["to"] = 21
+	},
+	["icecaller_creep_walk_front"] = {
+		["from"] = 22,
+		["prefix"] = "icecaller_creep",
+		["to"] = 41
+	},
+	["icecaller_creep_walk_back"] = {
+		["from"] = 42,
+		["prefix"] = "icecaller_creep",
+		["to"] = 61
+	},
+	["icecaller_creep_mele"] = {
+		["from"] = 62,
+		["prefix"] = "icecaller_creep",
+		["to"] = 104
+	},
+	["icecaller_creep_ranged"] = {
+		["from"] = 105,
+		["prefix"] = "icecaller_creep",
+		["to"] = 132
+	},
+	["icecaller_creep_icecles"] = {
+		["from"] = 133,
+		["prefix"] = "icecaller_creep",
+		["to"] = 180
+	},
+	["icecaller_creep_death"] = {
+		["from"] = 181,
+		["prefix"] = "icecaller_creep",
+		["to"] = 236
+	},
+	["icecaller_hit_run"] = {
+		["from"] = 1,
+		["prefix"] = "icecaller_hit",
+		["to"] = 6
+	},
+	["icecaller_proyectil_flying"] = {
+		["from"] = 1,
+		["prefix"] = "icecaller_proyectil",
+		["to"] = 10
+	},
+	["icecaller_icicle_run"] = {
+		["from"] = 1,
+		["prefix"] = "icecaller_icicle",
+		["to"] = 34
+	},
+	["icecaller_icicle_floor_idle"] = {
+		["from"] = 35,
+		["prefix"] = "icecaller_icicle",
+		["to"] = 35
+	},
+	["icecaller_trail"] = {
+		["from"] = 1,
+		["prefix"] = "icecaller_trail",
+		["to"] = 18
+	},
+	["icecaller_decal_hielo_in"] = {
+		["from"] = 1,
+		["prefix"] = "frost_brute_ice_decal",
+		["to"] = 4
+	},
+	["icecaller_decal_hielo_loop"] = {
+		["from"] = 5,
+		["prefix"] = "frost_brute_ice_decal",
+		["to"] = 6
+	},
+	["icecaller_decal_hielo_out"] = {
+		["from"] = 50,
+		["prefix"] = "frost_brute_ice_decal",
+		["to"] = 66
 	}
+
 }

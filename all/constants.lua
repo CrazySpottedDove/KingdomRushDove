@@ -416,6 +416,7 @@ MOD_TYPE_STUN = "stun"
 MOD_TYPE_TELEPORT = "teleport"
 MOD_TYPE_TIMELAPSE = "timelapse"
 MOD_TYPE_BUFF = "buff"
+MOD_TYPE_PROTECTION = "protection"
 -- 索敌模式
 MODE_FIND_FOREMOST = 0
 MODE_FIND_MAXHP = 1

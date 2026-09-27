@@ -25888,4 +25888,188 @@ tt.aura.radius = 10
 tt.aura.cycle_time = fts(5)
 tt.main_script.update = scripts.aura_stage_208_archers_visibility.update
 
+-- ============ KR6 关卡 209：deep trolls 子实体 ============
+
+tt = RT("fx_troll_warrior_hit", "fx")
+tt.render.sprites[1].name = "troll_warrior_hit_fx_run"
+
+tt = RT("fx_troll_champion_projectile_hit", "fx")
+tt.render.sprites[1].name = "troll_champion_projectile_hit_run"
+
+tt = RT("fx_troll_glider_death", "fx")
+tt.flight_height = 40
+tt.render.sprites[1].offset = v(0, tt.flight_height)
+tt.render.sprites[1].name = "troll_glider_broken_glider_run"
+
+tt = RT("fx_troll_crusher_pound_hit", "fx")
+tt.render.sprites[1].name = "troll_crusher_humo_stun_run"
+
+tt = RT("fx_bullet_frost_icecaller_hit", "fx")
+tt.render.sprites[1].name = "icecaller_hit_run"
+
+tt = RT("decal_troll_champion_miss", "decal")
+AC(tt, "main_script")
+tt.render.sprites[1].prefix = "troll_champion_projectile_miss_decal"
+tt.render.sprites[1].name = "miss"
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = scripts.decal_utils.animation_in_loop_out.update
+tt.duration = 2
+tt.animation_start = "run"
+tt.animation_idle = "idle"
+tt.animation_end = "out"
+
+tt = RT("decal_troll_crusher_pound_crack", "decal")
+AC(tt, "main_script", "tween")
+tt.render.sprites[1].prefix = "troll_crusher_crack"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = false
+tt.tween.props[1].keys = {{0, 0}, {1, 255}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].name = "alpha"
+tt.tween.disabled = true
+tt.wait_time = 2
+tt.main_script.update = scripts.tween_utils.wait_update
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+
+tt = RT("decal_frost_icecaller_icicle", "decal")
+AC(tt, "main_script")
+tt.render.sprites[1].prefix = "icecaller_icicle"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].loop = false
+tt.damage_radius = 25
+tt.damage_min = 20
+tt.damage_max = 40
+tt.damage_type = DAMAGE_MAGICAL
+tt.damage_delay = fts(21)
+tt.vis_flags = 0
+tt.vis_bans = F_FLYING
+tt.anim_in = "run"
+tt.anim_loop = "floor_idle"
+tt.anim_out = "out"
+tt.main_script.update = scripts.decal_frost_icecaller_icicle.update
+
+tt = RT("bullet_troll_champion", "arrow5_fixed_height")
+tt.render.sprites[1].name = "troll_champion_projectile_run"
+tt.render.sprites[1].animated = true
+tt.bullet.fixed_height = 50
+tt.bullet.g = -1000
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.hide_radius = 1
+tt.bullet.prediction_error = false
+tt.bullet.predict_target_pos = false
+tt.bullet.miss_decal = nil
+tt.bullet.hit_fx = "fx_troll_champion_projectile_hit"
+tt.bullet.damage_min = 15
+tt.bullet.damage_max = 24
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+
+tt = RT("bullet_frost_icecaller", "bolt_enemy")
+tt.render.sprites[1].prefix = "icecaller_proyectil"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.bullet.damage_min = 28
+tt.bullet.damage_max = 43
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.align_with_trajectory = true
+tt.bullet.hit_fx = "fx_bullet_frost_icecaller_hit"
+tt.bullet.particles_name = "ps_bullet_frost_icecaller"
+tt.bullet.pop = {"pop_zap"}
+tt.bullet.pop_conds = DR_KILL
+tt.sound_events.travel = "EnemyFrostHeraldBasicAttack"
+
+tt = RT("ps_bullet_frost_icecaller", "particle_system")
+tt.particle_system.name = "icecaller_trail"
+tt.particle_system.animated = true
+tt.particle_system.particle_lifetime = {fts(16), fts(18)}
+tt.particle_system.emission_rate = 18
+tt.particle_system.emit_area_spread = v(4, 4)
+
+tt = RT("aura_troll_warrior_regeneration", "aura")
+AC(tt, "regen")
+tt.main_script.update = scripts.aura_unit_regen.update
+tt.regen.cooldown = fts(15)
+tt.regen.health = 3
+tt.regen.ignore_stun = true
+tt.regen.ignore_freeze = false
+
+tt = RT("aura_troll_champion_regeneration", "aura_troll_warrior_regeneration")
+tt.regen.health = 4
+
+tt = RT("aura_troll_crusher_regeneration", "aura_troll_warrior_regeneration")
+tt.regen.health = 10
+
+tt = RT("aura_troll_glider_regeneration", "aura_troll_warrior_regeneration")
+tt.regen.health = 0
+
+tt = RT("aura_troll_crusher_pound", "aura")
+tt.aura.mod = "mod_troll_crusher_tower_stun"
+tt.aura.radius = 150
+tt.aura.excluded_templates = {"tower_stage_13_broken_sunray_tower", "tower_stage_13_sunray_tower", "tower_stage_13_broken_sunray_obelisk", "tower_stage_13_sunray_obelisk"}
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = 0
+tt.aura.cycle_time = 0.6
+tt.aura.duration = 1
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod_towers.update
+
+tt = RT("aura_frost_icecaller_death_ice_slow", "aura")
+AC(tt, "render", "tween")
+tt.aura.mod = "mod_frost_icecaller_death_ice_slow"
+tt.aura.radius = 55
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.cycle_time = 0.1
+tt.aura.duration = 16
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+tt.render.sprites[1].prefix = "icecaller_decal_hielo"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].scale = V.vv(0.8)
+tt.tween.props[1].keys = {{0, 0}, {fts(17), 255}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].name = "alpha"
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].keys = {{0, V.vv(0.3)}, {fts(4), V.vv(0.8)}}
+tt.tween.props[2].name = "scale"
+tt.tween.props[2].loop = false
+tt.tween.props[2].ignore_reverse = true
+tt.tween.disabled = true
+
+tt = RT("mod_tower_stun", "modifier")
+tt.modifier.duration = 1
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.main_script.insert = scripts.mod_tower_stun.insert
+tt.main_script.remove = scripts.mod_tower_stun.remove
+
+tt = RT("mod_troll_crusher_tower_stun", "mod_tower_stun")
+AC(tt, "render")
+tt.main_script.insert = scripts.mod_troll_crusher_tower_stun.insert
+tt.main_script.update = scripts.mod_troll_crusher_tower_stun.update
+tt.modifier.duration = 6
+tt.end_anim_duration = fts(49)
+tt.max_delay = 0.7
+tt.max_range = 150
+tt.render.sprites[1].prefix = "troll_crusher_stun"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.sound_events.block = "EnemyTrollCrusherTowerBlockBlock"
+
+tt = RT("mod_frost_icecaller_death_ice_slow", "mod_slow")
+tt.slow.factor = 0.5
+tt.modifier.duration = 1
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.resets_same = true
+
 return scripts
