@@ -72881,6 +72881,10 @@ end
 scripts.enemy_troll_pathfinder = {}
 
 function scripts.enemy_troll_pathfinder.insert(this, store, script)
+	if type(this.on_ice_mod) ~= "string" then
+		this.on_ice_mod = E:get_template(this.template_name).on_ice_mod
+	end
+
 	this.on_ice_mod = E:create_entity(this.on_ice_mod)
 	this.on_ice_mod.modifier.target_id = this.id
 
@@ -72973,9 +72977,176 @@ function scripts.decal_troll_pathfinder_dead_sliding.update(this, store, script)
 	simulation:queue_remove_entity(this)
 end
 
+scripts.enemy_troll_chieftain_kr6 = {}
+
+function scripts.enemy_troll_chieftain_kr6.update(this, store, script)
+	local ad = this.timed_attacks.list[1]
+	local drum_check_ts = store.tick_ts
+	local trigger_drums
+
+	local function can_drums()
+		if not this.enemy.can_do_magic then
+			return false
+		end
+
+		if trigger_drums then
+			return true
+		end
+
+		if store.tick_ts - drum_check_ts < 0.25 then
+			return false
+		end
+
+		if store.tick_ts - ad.ts < ad.cooldown then
+			return false
+		end
+
+		drum_check_ts = store.tick_ts
+
+		local targets = U.find_enemies_in_range(store, this.pos, 0, ad.range, ad.vis_flags, 0)
+
+		trigger_drums = targets and #targets >= ad.min_targets
+
+		return trigger_drums
+	end
+
+	::label_185_0::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if trigger_drums then
+				S:queue(ad.sound, {
+					delay = fts(10)
+				})
+				U.animation_start(this, ad.animation, nil, store.tick_ts, false)
+
+				trigger_drums = false
+				ad.ts = store.tick_ts
+
+				if SU.y_enemy_wait(store, this, ad.aura_time) then
+					goto label_185_0
+				end
+
+				local aura_d = E:create_entity(ad.aura_decal)
+
+				aura_d.pos.x, aura_d.pos.y = this.pos.x, this.pos.y
+				aura_d.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, aura_d)
+
+				local aura = E:create_entity(ad.aura)
+
+				aura.pos.x, aura.pos.y = this.pos.x, this.pos.y
+				aura.aura.source_id = this.id
+				aura.aura.ts = store.tick_ts
+
+				queue_insert(store, aura)
+				U.y_animation_wait(this)
+			end
+
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, can_drums, can_drums) then
+			-- block empty
+			else
+				coroutine.yield()
+			end
+		end
+	end
+end
+
+scripts.mod_troll_chieftain_drums_buff = {}
+
+function scripts.mod_troll_chieftain_drums_buff.insert(this, store, script)
+	local i_damage = scripts.mod_damage_factors.insert(this, store, script)
+	local i_speed = scripts.mod_slow.insert(this, store, script)
+
+	if not i_damage or not i_speed then
+		if not i_damage then
+			scripts.mod_damage_factors.remove(this, store, script)
+		end
+
+		if not i_speed then
+			scripts.mod_slow.remove(this, store, script)
+		end
+
+		return false
+	end
+
+	return true
+end
+
+function scripts.mod_troll_chieftain_drums_buff.update(this, store, script)
+	local m = this.modifier
+
+	this.modifier.ts = store.tick_ts
+
+	local target = store.entities[m.target_id]
+
+	if not target or not target.pos then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+	this.tween.ts = store.tick_ts
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
+			this.tween.ts = store.tick_ts
+
+			queue_remove(store, this)
+
+			return
+		end
+
+		if this.render and target.unit then
+			local s = this.render.sprites[1]
+			local flip_sign = 1
+
+			if target.render then
+				flip_sign = target.render.sprites[1].flip_x and -1 or 1
+			end
+
+			if m.health_bar_offset and target.health_bar then
+				local hb = target.health_bar.offset
+				local hbo = m.health_bar_offset
+
+				s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
+			elseif m.use_mod_offset and target.unit.mod_offset then
+				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+function scripts.mod_troll_chieftain_drums_buff.remove(this, store, script)
+	if not this.tween.disabled then
+		scripts.mod_damage_factors.remove(this, store, script)
+		scripts.mod_slow.remove(this, store, script)
+	end
+
+	return scripts.tween_utils.reverse_remove(this, store, script)
+end
+
 scripts.enemy_frost_baiter = {}
 
 function scripts.enemy_frost_baiter.insert(this, store, script)
+	if type(this.on_ice_mod) ~= "string" then
+		this.on_ice_mod = E:get_template(this.template_name).on_ice_mod
+	end
+
 	this.on_ice_mod = E:create_entity(this.on_ice_mod)
 	this.on_ice_mod.modifier.target_id = this.id
 
@@ -73281,6 +73452,10 @@ end
 scripts.enemy_frost_brute = {}
 
 function scripts.enemy_frost_brute.insert(this, store, script)
+	if type(this.on_ice_mod) ~= "string" then
+		this.on_ice_mod = E:get_template(this.template_name).on_ice_mod
+	end
+
 	this.on_ice_mod = E:create_entity(this.on_ice_mod)
 	this.on_ice_mod.modifier.target_id = this.id
 
@@ -75011,7 +75186,13 @@ function scripts.decal_rappel_string.update(this, store, script)
 					for i = last_dissolved + 1, next_to_dissolve do
 						local s = this.render.sprites[i]
 
-						s.name = "end"
+						if s.prefix then
+							s.name = "end"
+						else
+							-- 静态绳索没有独立的 "end" 帧，直接隐藏该段避免查表报错
+							s.hidden = true
+						end
+
 						s.ts = store.tick_ts
 						last_dissolved = i
 					end

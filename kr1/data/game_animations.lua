@@ -53689,5 +53689,60 @@ return {
 		from = 2,
 		prefix = "tower_catapult_projectiles_trap",
 		to = 19
+	},
+	["trolls_chieftain_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "trolls_chieftain_creep",
+		["to"] = 1
+	},
+	["trolls_chieftain_creep_run_side"] = {
+		["from"] = 2,
+		["prefix"] = "trolls_chieftain_creep",
+		["to"] = 41
+	},
+	["trolls_chieftain_creep_run_front"] = {
+		["from"] = 42,
+		["prefix"] = "trolls_chieftain_creep",
+		["to"] = 81
+	},
+	["trolls_chieftain_creep_run_back"] = {
+		["from"] = 82,
+		["prefix"] = "trolls_chieftain_creep",
+		["to"] = 121
+	},
+	["trolls_chieftain_creep_attack"] = {
+		["from"] = 122,
+		["prefix"] = "trolls_chieftain_creep",
+		["to"] = 157
+	},
+	["trolls_chieftain_creep_drum"] = {
+		["from"] = 158,
+		["prefix"] = "trolls_chieftain_creep",
+		["to"] = 197
+	},
+	["trolls_chieftain_creep_death"] = {
+		["from"] = 198,
+		["prefix"] = "trolls_chieftain_creep",
+		["to"] = 245
+	},
+	["trolls_chieftain_hit_fx_run"] = {
+		["from"] = 1,
+		["prefix"] = "trolls_chieftain_hit_fx",
+		["to"] = 6
+	},
+	["trolls_chieftain_drum_decal_run"] = {
+		["from"] = 1,
+		["prefix"] = "trolls_chieftain_drum_decal",
+		["to"] = 35
+	},
+	["trolls_chieftain_drum_fx_loop"] = {
+		["from"] = 1,
+		["prefix"] = "trolls_chieftain_drum_fx",
+		["to"] = 16
+	},
+	["trolls_chieftain_drum_fx_big_loop"] = {
+		["from"] = 1,
+		["prefix"] = "trolls_chieftain_drum_fx_big",
+		["to"] = 16
 	}
 }

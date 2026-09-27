@@ -1,0 +1,325 @@
+#	COMANDOS					1 - Arriba a Izquierda (pasa al 6)					2 - Arriba a la Derecha (pasa al 3)					3 - Derecha a Derecha Abajo (viene del 2)					4 - Centro a Abajo Izquierda (Viene del 6)					5 - Izquierda Medio a Abajo Izquierda					6 - Izquierda a Centro (Viene del 1)					7 - Derecha Medio a Abajo Derecha					8 - Centro a Abajo Derecha (Elevador)					9 - Centro a Abajo Izquierda (Elevador)					10 - Izquierda a Abajo Izquierda (Voladores)					11 - Derecha a Abajo Derecha (Voladores)
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3		10:*	10:2	10:1	10:3		11:*	11:2	11:1	11:3
+#	level properties
+	description	NH Rodri
+	lives	20
+	gold	1540
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	2300
+#	stage gold curve
+#	WAVE 1					T. Warrior x16										T. Champion x4
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz
+#	cant.					18	0	0	0		0	0	0	0		0	0	0	0		0	0
+#	gold	144				144	0	0	0		0	0	0	0		0	0	0	0		0	0
+	flags															n	n	n	n		n	n	n	n							n	n	n	n							n	n	n	n		n	n	n	n		n	n	n	n		n	n	n	n
+	wave		1		-1
+					0			troll_warrior
+					0.7		troll_warrior
+					0.5				troll_warrior
+					4				troll_warrior
+					0.6			troll_warrior
+					0.4		troll_warrior
+					0.5			troll_warrior
+					6																						troll_champion_jumper_stage_12
+					3																							troll_champion_jumper_stage_12
+					8		troll_warrior		troll_warrior
+					1			troll_warrior
+					1		troll_warrior		troll_warrior
+					8																								troll_champion_jumper_stage_12
+					3																						troll_champion_jumper_stage_12
+					6		troll_warrior
+					1				troll_warrior
+					1			troll_warrior
+					3		troll_warrior		troll_warrior
+					1			troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 4					T. Champion x4					F. Baiter x20															T. Champion x4										T. Warrior x16
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz
+#	cant.					16	4	0	0		0	0	20	0		0	0	0	0		0	0
+#	gold	308				128	120	0	0		0	0	60	0		0	0	0	0		0	0
+	wave		2		22
+					0																							troll_champion_jumper_stage_12
+					3																						troll_champion_jumper_stage_12										troll_warrior
+					1																																	troll_warrior
+					1																																troll_warrior
+					3																																		troll_warrior
+					1																																	troll_warrior
+					1																																troll_warrior
+					1																																		troll_warrior
+					1																																troll_warrior
+					3																							troll_champion_jumper_stage_12
+					3																								troll_champion_jumper_stage_12
+					3						frost_baiter
+					0.4						frost_baiter
+					0.6						frost_baiter
+					0.5						frost_baiter
+					0.4						frost_baiter
+					3						frost_baiter
+					0.5						frost_baiter
+					0.3						frost_baiter
+					0.4						frost_baiter
+					0.4						frost_baiter
+					0		troll_champion
+					2			troll_champion
+					2		troll_champion
+					2				troll_champion
+					0																																	troll_warrior
+					1																																		troll_warrior
+					1																																troll_warrior
+					1																																		troll_warrior
+					4																																	troll_warrior
+					1																																troll_warrior
+					1																																		troll_warrior
+					1																																troll_warrior
+					0						frost_baiter
+					0.4						frost_baiter
+					0.6						frost_baiter
+					0.5						frost_baiter
+					0.4						frost_baiter
+					3						frost_baiter
+					0.5						frost_baiter
+					0.3						frost_baiter
+					0.4						frost_baiter
+					0.5						frost_baiter
+
+
+
+
+
+
+
+
+
+
+#	WAVE 7					T. Chieftain x1 T. Champion x8																				F. Baiter x24																				T. Champion x2										T. Glider x12
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz
+#	cant.					0	12	7	0		0	0	0	0		1	0	0	0		0	0
+#	gold	448				0	360	28	0		0	0	0	0		60	0	0	0		0	0
+	wave		3		28
+					0		troll_champion
+					0.2				troll_champion
+					3				troll_champion
+	event	lower_elevator	l		0
+					0.4		troll_champion
+					1			troll_chieftain_kr6
+					4																								frost_baiter_jumper_stage_12
+					0.3																							frost_baiter_jumper_stage_12
+					0.2																								frost_baiter_jumper_stage_12
+					1																																											troll_champion
+					2																																										troll_champion
+					4																							frost_baiter_jumper_stage_12
+					0.3																						frost_baiter_jumper_stage_12
+					0.5																							frost_baiter_jumper_stage_12
+					0.4																						frost_baiter_jumper_stage_12
+	event	rise_elevator			0
+					4																								frost_baiter_jumper_stage_12
+					0.5																						frost_baiter_jumper_stage_12
+					0.3																							frost_baiter_jumper_stage_12
+					0.4																						frost_baiter_jumper_stage_12
+					0.4																								frost_baiter_jumper_stage_12
+					1																																																					troll_glider
+					3																																																					troll_glider
+					3																																																					troll_glider
+					9		troll_champion																																																				troll_glider
+	event	lower_elevator	l		0
+
+					2.5				troll_champion																																																		troll_glider
+					4			troll_champion																																																		troll_glider
+					1.2																																										troll_champion
+					1.4		troll_champion																																																			troll_glider
+					1.3																																											troll_champion
+	event	rise_elevator			6
+					2																						frost_baiter_jumper_stage_12
+					0.3																								frost_baiter_jumper_stage_12
+					0.5																							frost_baiter_jumper_stage_12
+					0.4																						frost_baiter_jumper_stage_12
+					0.3																								frost_baiter_jumper_stage_12
+					4																						frost_baiter_jumper_stage_12
+					0.4																								frost_baiter_jumper_stage_12
+					0.3																							frost_baiter_jumper_stage_12
+					0.5																						frost_baiter_jumper_stage_12
+					2																							frost_baiter_jumper_stage_12
+					0.4																								frost_baiter_jumper_stage_12
+					0.3																						frost_baiter_jumper_stage_12
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 9					F. Herald x3					T. Pathfinder x12															F. Baiter x16															F. Herald x2
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz
+#	cant.					0	0	0	0		4	12	0	0		0	0	0	0		0	0
+#	gold	440				0	0	0	0		320	120	0	0		0	0	0	0		0	0
+	wave		4		20
+					0				frost_icecaller
+					1							troll_pathfinder
+					0.5								troll_pathfinder
+					0.7								troll_pathfinder
+					0.6							troll_pathfinder
+					0.7								troll_pathfinder
+					0.8							troll_pathfinder
+					0			frost_icecaller
+
+					4								troll_pathfinder
+					0.5							troll_pathfinder
+					0.6							troll_pathfinder
+					0.7								troll_pathfinder
+					0.5								troll_pathfinder
+					0.5							troll_pathfinder
+					6																						frost_baiter_jumper_stage_12
+					0.3																								frost_baiter_jumper_stage_12
+					0.4																							frost_baiter_jumper_stage_12
+					0.5																						frost_baiter_jumper_stage_12
+	event	lower_elevator	r		0
+					2.5																								frost_baiter_jumper_stage_12
+					0.4																						frost_baiter_jumper_stage_12
+					0.6																								frost_baiter_jumper_stage_12
+					0.5																							frost_baiter_jumper_stage_12
+					0.5																						frost_baiter_jumper_stage_12
+					2.5																							frost_baiter_jumper_stage_12
+					0.5																								frost_baiter_jumper_stage_12
+					0.4																						frost_baiter_jumper_stage_12
+					0.2																							frost_baiter_jumper_stage_12														frost_icecaller
+					0.3																								frost_baiter_jumper_stage_12
+					0.2																						frost_baiter_jumper_stage_12
+					0.4																							frost_baiter_jumper_stage_12
+					3																																							frost_icecaller
+	event	rise_elevator			8
+	wait				3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 10					T. Crusher x1					F. Brute x1 T. Warrior x8																									T. Warrior x12															T. Glider x12
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz
+#	cant.					20	0	10	1		0	0	0	1		0	0	0	0		0	0
+#	gold	590				160	0	40	130		0	0	0	260		0	0	0	0		0	0
+	wave		5		25
+					0																																														troll_glider
+					1.2																																														troll_glider
+					1.4																																														troll_glider
+					1			troll_crusher
+					3								frost_brute
+					3									troll_warrior																																					troll_glider
+					0.3							troll_warrior
+					0.4									troll_warrior
+					0.5							troll_warrior																																							troll_glider
+					2									troll_warrior																																					troll_glider
+					0.3							troll_warrior
+					0.4									troll_warrior
+					0.6							troll_warrior																																							troll_glider
+					8																																troll_warrior
+					1																																		troll_warrior
+					1																																	troll_warrior
+					1																																troll_warrior
+					1																																		troll_warrior
+					1																																	troll_warrior
+					6																																	troll_warrior														troll_glider
+					1																																		troll_warrior
+					1																																troll_warrior																	troll_glider
+					1																																	troll_warrior
+					1																																		troll_warrior														troll_glider
+					1																																troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 15					T. Crusher x1 T. Chieftain x1					T. Warrior x12 (Rappel)															T. Champion x12										T. Warrior x12					T. Chieftain x2
+#	enemies					troll_warrior	troll_champion*	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz
+#	cant.					8	7	0	1		0	0	0	1		3	0	0	0		0	0
+#	gold	844				64	210	0	130		0	0	0	260		180	0	0	0		0	0
+	wave		6		23
+					0			troll_crusher
+					3		troll_chieftain_kr6
+					4								frost_brute																							troll_warrior
+					1																															troll_warrior
+	wait				1
+					1																															troll_warrior
+					1																															troll_warrior
+	wait				1
+	event	lower_elevator	r		0
+	event	troll_rappel	2	3	3	6
+					3																																						troll_chieftain_kr6
+					0																							troll_champion_jumper_stage_12
+					2																						troll_champion_jumper_stage_12
+	wait				2
+	event	rise_elevator			0
+					2																						troll_champion_jumper_stage_12
+					2																							troll_champion_jumper_stage_12
+					2																								troll_champion_jumper_stage_12
+					6																															troll_warrior
+					1																															troll_warrior
+	wait				1
+					1																															troll_warrior
+					1																							troll_champion_jumper_stage_12								troll_warrior
+	wait				1
+	event	lower_elevator	r		2
+					1																						troll_champion_jumper_stage_12
+	event	troll_rappel	2	3	2	6
+					0
+
+					3																																						troll_chieftain_kr6
+
+	event	rise_elevator			4

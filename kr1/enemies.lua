@@ -14471,6 +14471,9 @@ tt.tween.run_once = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
+-- 该模板已有阴影 tween，dove 的 SU.fade_out_entity 不会给带 tween 的实体再补死亡淡出
+-- （会刷 "already has tween"），故禁用运行时淡出，交由 dead_lifetime 移除。
+tt.unit.fade_time_after_death = nil
 
 -- enemy_frost_baiter_decoy —— 冰替身，只吸引阻挡
 tt = RT("enemy_frost_baiter_decoy", "enemy")
@@ -14582,6 +14585,106 @@ tt.animation_end_combat = "transform_walk"
 tt.on_ice_mod = "mod_movement_terrain_frost_brute"
 tt.sound_events.death = "EnemyFrostBruteDeath"
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
+tt.ui.click_rect = r(-25, 0, 45, 55)
+
+-- ==================== kr6 关卡 12 首现：troll chieftain（鼓 buff 巨魔首领） ====================
+-- 数值取自 kr6/data/balance/balance.lua deep_trolls.troll_chieftain，hp_max 每档 ×1.375，gold ×1.1 向下取整。
+-- 与 dove 原生 enemy_troll_chieftain（KR1 冰原巨魔首领，前缀 troll_chieftain）同名但完全不同，故加 _kr6 后缀。
+
+tt = RT("fx_troll_chieftain_hit", "fx")
+tt.render.sprites[1].name = "trolls_chieftain_hit_fx_run"
+
+tt = RT("decal_troll_chieftain_drums_buff", "decal_timed")
+tt.render.sprites[1].prefix = "trolls_chieftain_drum_decal"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("aura_troll_chieftain_drums_buff", "aura")
+tt.aura.mod = "mod_troll_chieftain_drums_buff"
+tt.aura.radius = 100
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.cycle_time = 0.5
+tt.aura.duration = 1
+tt.aura.filter_source = true
+tt.aura.track_source = true
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = RT("mod_troll_chieftain_drums_buff", "modifier")
+AC(tt, "render", "tween", "slow")
+tt.inflicted_damage_factor = 1.33
+tt.slow.factor = 1.33
+tt.modifier.duration = 8
+tt.modifier.resets_same = false
+tt.modifier.use_mod_offset = false
+tt.main_script.insert = scripts.mod_troll_chieftain_drums_buff.insert
+tt.main_script.update = scripts.mod_troll_chieftain_drums_buff.update
+tt.main_script.remove = scripts.mod_troll_chieftain_drums_buff.remove
+tt.render.sprites[1].size_names = {"loop", "loop", "big_loop"}
+tt.render.sprites[1].prefix = "trolls_chieftain_drum_fx"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.tween.props[1].keys = {{0, 0}, {1, 255}}
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 1
+tt.tween.remove = false
+tt.tween.disabled = true
+
+tt = RT("enemy_troll_chieftain_kr6", "enemy")
+AC(tt, "melee", "auras", "timed_attacks")
+tt.unit.head_offset = v(5, 31)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.enemy.gold = 66
+tt.enemy.melee_slot = v(36, 0)
+tt.enemy.lives_cost = 2
+tt.enemy.has_magic = true
+tt.health.hp_max = {1375, 1650, 2062.5, 2887.5}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 54)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.info.portrait = "kr6_info_portraits_enemies_0022"
+tt.info.i18n_key = "ENEMY_TROLL_CHIEFTAIN"
+tt.unit.hit_offset = v(5, 21)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_troll_chieftain_kr6.update
+tt.motion.max_speed = 24
+tt.render.sprites[1].prefix = "trolls_chieftain_creep"
+tt.render.sprites[1].angles.walk = {"run_side", "run_back", "run_front"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.melee.attacks[1] = CC("melee_attack")
+tt.melee.attacks[1].animation = "attack"
+tt.melee.attacks[1].cooldown = 2
+tt.melee.attacks[1].damage_min = 44
+tt.melee.attacks[1].damage_max = 66
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].damage_radius = 50
+tt.melee.attacks[1].hit_times = {fts(14)}
+tt.melee.attacks[1].dodge_time = fts(14)
+tt.melee.attacks[1].hit_fx = "fx_troll_chieftain_hit"
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.timed_attacks.list[1] = CC("aura_attack")
+tt.timed_attacks.list[1].animation = "drum"
+tt.timed_attacks.list[1].range = 100
+tt.timed_attacks.list[1].cooldown = {20, 20, 20, 14}
+tt.timed_attacks.list[1].min_targets = 3
+tt.timed_attacks.list[1].aura_time = fts(10)
+tt.timed_attacks.list[1].aura_decal = "decal_troll_chieftain_drums_buff"
+tt.timed_attacks.list[1].aura = "aura_troll_chieftain_drums_buff"
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
+tt.timed_attacks.list[1].sound = "EnemyTrollChieftainDrumbeat"
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "aura_troll_chieftain_regeneration"
+tt.auras.list[1].cooldown = 0
+tt.sound_events.death = "EnemyTrollLargeDeath"
 tt.ui.click_rect = r(-25, 0, 45, 55)
 
 -- enemy_troll_warrior_landing —— 索降落地动画版

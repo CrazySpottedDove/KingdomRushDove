@@ -26007,6 +26007,10 @@ tt.regen.health = 10
 tt = RT("aura_troll_glider_regeneration", "aura_troll_warrior_regeneration")
 tt.regen.health = 0
 
+tt = RT("aura_troll_chieftain_regeneration", "aura_troll_warrior_regeneration")
+tt.regen.cooldown = fts(15)
+tt.regen.health = 8
+
 tt = RT("aura_troll_crusher_pound", "aura")
 tt.aura.mod = "mod_troll_crusher_tower_stun"
 tt.aura.radius = 150
