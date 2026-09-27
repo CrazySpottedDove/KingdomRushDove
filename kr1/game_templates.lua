@@ -26115,4 +26115,15 @@ tt.wait_random = 0.5
 tt.spawner_id = 0
 tt.editor.props = {{"spawner_id", PT_NUMBER}}
 
+-- ==================== kr6 stage14：特殊塔 / 士兵 / aura / mod / 墓地控制器 ====================
+
+-- controller_graveyard_kr6（KR6 版墓地控制器基类）
+tt = RT("controller_graveyard_kr6")
+AC(tt, "main_script", "pos", "graveyard")
+tt.main_script.update = scripts.controller_graveyard_kr6.update
+tt.graveyard.keep_gold = true
+tt.graveyard.vis_has = F_ENEMY
+tt.graveyard.vis_flags = F_SKELETON
+tt.graveyard.vis_bans = F_BOSS
+
 return scripts

@@ -13360,6 +13360,7 @@ function scripts.mod_boss_tower_block.update(this, store)
 
 	U.y_wait(store, U.frandom(0, this.spawn_delay_max))
 	SU.tower_block_inc(target)
+	this._blocked_inc = true
 
 	m.ts = store.tick_ts
 
@@ -13411,7 +13412,28 @@ function scripts.mod_boss_tower_block.update(this, store)
 	this.render.sprites[1].hidden = true
 
 	U.y_wait(store, 0.5)
+
+	-- 冰被点掉/到期后必须释放封塔计数，否则 tower.blocked 永远为 true（塔不再攻击）
+	if this._blocked_inc then
+		this._blocked_inc = nil
+		SU.tower_block_dec(target)
+	end
+
 	simulation:queue_remove_entity(this)
+end
+
+function scripts.mod_boss_tower_block.remove(this, store)
+	if this._blocked_inc then
+		this._blocked_inc = nil
+
+		local target = store.entities[this.modifier.target_id]
+
+		if target then
+			SU.tower_block_dec(target)
+		end
+	end
+
+	return true
 end
 
 scripts.enemy_boss_stage_11 = {}

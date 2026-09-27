@@ -3056,6 +3056,60 @@ return {
 		tt_desc = _("TOWER_STAGE_213_SUNRAY_OBELISK_UPGRADE_DESCRIPTION")
 	})}},
 	stage_213_sunray_obelisk = {},
+	stage_214_blacksmith = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_st14_0003",
+		place = 5,
+		sounds = {"Stage14BlacksmithUpgradeTaunt"},
+		tt_phrase = _("TOWER_STAGE_214_BLACKSMITH_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_STAGE_214_BLACKSMITH_SKILL_A_NAME"),
+			tt_desc = _("TOWER_STAGE_214_BLACKSMITH_SKILL_A_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_STAGE_214_BLACKSMITH_SKILL_A_NAME"),
+			tt_desc = _("TOWER_STAGE_214_BLACKSMITH_SKILL_A_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_STAGE_214_BLACKSMITH_SKILL_A_NAME"),
+			tt_desc = _("TOWER_STAGE_214_BLACKSMITH_SKILL_A_3_DESCRIPTION")
+		}}
+	})}},
+	stage_214_armory = {{M(tpl.buy_attack, {
+		check = "main_icons_0019",
+		action = "tw_repair",
+		action_arg = "",
+		halo = "glow_ico_main",
+		image = "main_icons_0005",
+		place = 5,
+		tt_title = _("TOWER_STAGE_214_BROKEN_ARMORY_UPGRADE_NAME"),
+		tt_desc = _("TOWER_STAGE_214_BROKEN_ARMORY_UPGRADE_DESCRIPTION")
+	})}},
+	stage_214_armory_fixed = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_st14_0001",
+		place = 1,
+		sounds = {"Stage14ArmoryUpgradeTaunt"},
+		tt_phrase = _("TOWER_STAGE_214_ARMORY_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_STAGE_214_ARMORY_SKILL_A_NAME"),
+			tt_desc = _("TOWER_STAGE_214_ARMORY_SKILL_A_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_st14_0002",
+		place = 2,
+		sounds = {"Stage14ArmoryUpgradeTaunt"},
+		tt_phrase = _("TOWER_STAGE_214_ARMORY_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_STAGE_214_ARMORY_SKILL_B_NAME"),
+			tt_desc = _("TOWER_STAGE_214_ARMORY_SKILL_B_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_STAGE_214_ARMORY_SKILL_B_NAME"),
+			tt_desc = _("TOWER_STAGE_214_ARMORY_SKILL_B_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_STAGE_214_ARMORY_SKILL_B_NAME"),
+			tt_desc = _("TOWER_STAGE_214_ARMORY_SKILL_B_3_DESCRIPTION")
+		}}
+	}), tpl.rally}},
 	tower_stage_18_elven_barrack = {{{
 		check = "main_icons_0019",
 		action_arg = "soldier_tower_stage_18_elven_barrack",

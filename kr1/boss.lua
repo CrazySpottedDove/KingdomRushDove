@@ -4428,6 +4428,7 @@ tt = RT("mod_boss_stage_10_tower_freeze", "modifier")
 AC(tt, "render", "ui")
 tt.main_script.insert = scripts.mod_boss_tower_block.insert
 tt.main_script.update = scripts.mod_boss_tower_block.update
+tt.main_script.remove = scripts.mod_boss_tower_block.remove
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.duration = 15
 tt.tap_removable = true
@@ -4522,7 +4523,7 @@ tt.loss_positions = {
 
 -- ===== KR6 stage 13 boss：Moglok-Hai（deep_trolls.troll_boss）=====
 tt = RT("enemy_boss_stage_213", "boss")
-AC(tt, "melee", "timed_attacks")
+AC(tt, "melee")
 tt.enemy.gold = 1
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)

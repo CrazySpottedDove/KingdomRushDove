@@ -53744,5 +53744,460 @@ return {
 		["from"] = 1,
 		["prefix"] = "trolls_chieftain_drum_fx_big",
 		["to"] = 16
+	},
+	["brigand_creep_blood_strike"] = {
+		from = 90,
+		prefix = "brigand_creep",
+		to = 113
+	},
+	["brigand_creep_death"] = {
+		from = 114,
+		prefix = "brigand_creep",
+		to = 151
+	},
+	["brigand_creep_idle"] = {
+		from = 1,
+		prefix = "brigand_creep",
+		to = 1
+	},
+	["brigand_creep_mele"] = {
+		from = 62,
+		prefix = "brigand_creep",
+		to = 89
+	},
+	["brigand_creep_walk"] = {
+		from = 2,
+		prefix = "brigand_creep",
+		to = 21
+	},
+	["brigand_creep_walk_back"] = {
+		from = 42,
+		prefix = "brigand_creep",
+		to = 61
+	},
+	["brigand_creep_walk_front"] = {
+		from = 22,
+		prefix = "brigand_creep",
+		to = 41
+	},
+	["brigand_hit_run"] = {
+		from = 1,
+		prefix = "brigand_hit",
+		to = 6
+	},
+	["dark_sapper_creep_death"] = {
+		from = 196,
+		prefix = "dark_sapper_creep",
+		to = 247
+	},
+	["dark_sapper_creep_idle"] = {
+		from = 1,
+		prefix = "dark_sapper_creep",
+		to = 1
+	},
+	["dark_sapper_creep_mele"] = {
+		from = 160,
+		prefix = "dark_sapper_creep",
+		to = 195
+	},
+	["dark_sapper_creep_ranged_attack"] = {
+		from = 110,
+		prefix = "dark_sapper_creep",
+		to = 159
+	},
+	["dark_sapper_creep_walk"] = {
+		from = 2,
+		prefix = "dark_sapper_creep",
+		to = 37
+	},
+	["dark_sapper_creep_walk_down"] = {
+		from = 38,
+		prefix = "dark_sapper_creep",
+		to = 73
+	},
+	["dark_sapper_creep_walk_up"] = {
+		from = 74,
+		prefix = "dark_sapper_creep",
+		to = 109
+	},
+	["dark_sapper_explosion_run"] = {
+		from = 1,
+		prefix = "dark_sapper_explosion",
+		to = 24
+	},
+	["dark_sapper_hit_run"] = {
+		from = 1,
+		prefix = "dark_sapper_hit",
+		to = 6
+	},
+	["dark_sapper_projectile_run"] = {
+		from = 1,
+		prefix = "dark_sapper_projectile",
+		to = 10
+	},
+	["dark_sapper_trail_run"] = {
+		from = 1,
+		prefix = "dark_sapper_trail",
+		to = 20
+	},
+	["darkworg_creep_attack"] = {
+		from = 46,
+		prefix = "darkworg_creep",
+		to = 79
+	},
+	["darkworg_creep_death"] = {
+		from = 80,
+		prefix = "darkworg_creep",
+		to = 101
+	},
+	["darkworg_creep_idle"] = {
+		from = 1,
+		prefix = "darkworg_creep",
+		to = 12
+	},
+	["darkworg_creep_walk"] = {
+		from = 13,
+		prefix = "darkworg_creep",
+		to = 23
+	},
+	["darkworg_creep_walk_back"] = {
+		from = 35,
+		prefix = "darkworg_creep",
+		to = 45
+	},
+	["darkworg_creep_walk_front"] = {
+		from = 24,
+		prefix = "darkworg_creep",
+		to = 34
+	},
+	["darkworg_hit_run"] = {
+		from = 1,
+		prefix = "darkworg_hit",
+		to = 20
+	},
+	["gargoyle_creep_death"] = {
+		from = 128,
+		prefix = "gargoyle_creep",
+		to = 160
+	},
+	["gargoyle_creep_heal_fall_in"] = {
+		from = 33,
+		prefix = "gargoyle_creep",
+		to = 42
+	},
+	["gargoyle_creep_heal_fall_loop"] = {
+		from = 43,
+		prefix = "gargoyle_creep",
+		to = 52
+	},
+	["gargoyle_creep_heal_fall_out"] = {
+		from = 53,
+		prefix = "gargoyle_creep",
+		to = 65
+	},
+	["gargoyle_creep_heal_loop"] = {
+		from = 66,
+		prefix = "gargoyle_creep",
+		to = 95
+	},
+	["gargoyle_creep_heal_out"] = {
+		from = 96,
+		prefix = "gargoyle_creep",
+		to = 113
+	},
+	["gargoyle_creep_health_death"] = {
+		from = 114,
+		prefix = "gargoyle_creep",
+		to = 127
+	},
+	["gargoyle_creep_idle"] = {
+		from = 1,
+		prefix = "gargoyle_creep",
+		to = 10
+	},
+	["gargoyle_creep_sf_heal_loop"] = {
+		from = 66,
+		prefix = "gargoyle_creep",
+		to = 95
+	},
+	["gargoyle_creep_sf_heal_out"] = {
+		from = 96,
+		prefix = "gargoyle_creep",
+		to = 113
+	},
+	["gargoyle_creep_sf_idle"] = {
+		from = 66,
+		prefix = "gargoyle_creep",
+		to = 95
+	},
+	["gargoyle_creep_sf_walk"] = {
+		from = 66,
+		prefix = "gargoyle_creep",
+		to = 95
+	},
+	["gargoyle_creep_sf_walk_down"] = {
+		from = 66,
+		prefix = "gargoyle_creep",
+		to = 95
+	},
+	["gargoyle_creep_sf_walk_up"] = {
+		from = 66,
+		prefix = "gargoyle_creep",
+		to = 95
+	},
+	["gargoyle_creep_walk"] = {
+		from = 1,
+		prefix = "gargoyle_creep",
+		to = 10
+	},
+	["gargoyle_creep_walk_down"] = {
+		from = 11,
+		prefix = "gargoyle_creep",
+		to = 21
+	},
+	["gargoyle_creep_walk_up"] = {
+		from = 22,
+		prefix = "gargoyle_creep",
+		to = 32
+	},
+	["gargoyle_shadow"] = {
+		from = 1,
+		prefix = "gargoyle_shadow",
+		to = 1
+	},
+	["goatfall_goat_idle"] = {
+		from = 1,
+		prefix = "goatfall_goat",
+		to = 1
+	},
+	["goatfall_goat_idle_2"] = {
+		from = 48,
+		prefix = "goatfall_goat",
+		to = 65
+	},
+	["goatfall_goat_idle_3"] = {
+		from = 151,
+		prefix = "goatfall_goat",
+		to = 151
+	},
+	["goatfall_goat_tap_1"] = {
+		from = 2,
+		prefix = "goatfall_goat",
+		to = 47
+	},
+	["goatfall_goat_tap_2"] = {
+		from = 66,
+		prefix = "goatfall_goat",
+		to = 150
+	},
+	["skeleton_big_creep_attack"] = {
+		from = 74,
+		prefix = "skeleton_big_creep",
+		to = 106
+	},
+	["skeleton_big_creep_dead"] = {
+		from = 107,
+		prefix = "skeleton_big_creep",
+		to = 146
+	},
+	["skeleton_big_creep_death"] = {
+		from = 107,
+		prefix = "skeleton_big_creep",
+		to = 146
+	},
+	["skeleton_big_creep_idle"] = {
+		from = 1,
+		prefix = "skeleton_big_creep",
+		to = 1
+	},
+	["skeleton_big_creep_raise"] = {
+		from = 147,
+		prefix = "skeleton_big_creep",
+		to = 270
+	},
+	["skeleton_big_creep_spawn"] = {
+		from = 147,
+		prefix = "skeleton_big_creep",
+		to = 231
+	},
+	["skeleton_big_creep_walk"] = {
+		from = 2,
+		prefix = "skeleton_big_creep",
+		to = 25
+	},
+	["skeleton_big_creep_walk_down"] = {
+		from = 26,
+		prefix = "skeleton_big_creep",
+		to = 49
+	},
+	["skeleton_big_creep_walk_up"] = {
+		from = 50,
+		prefix = "skeleton_big_creep",
+		to = 73
+	},
+	["skeleton_big_hit"] = {
+		from = 1,
+		prefix = "skeleton_big_hit",
+		to = 6
+	},
+	["skeleton_skeleton_attack"] = {
+		from = 159,
+		prefix = "skeleton_skeleton",
+		to = 187
+	},
+	["skeleton_skeleton_death"] = {
+		from = 188,
+		prefix = "skeleton_skeleton",
+		to = 208
+	},
+	["skeleton_skeleton_idle"] = {
+		from = 86,
+		prefix = "skeleton_skeleton",
+		to = 86
+	},
+	["skeleton_skeleton_raise"] = {
+		from = 1,
+		prefix = "skeleton_skeleton",
+		to = 85
+	},
+	["skeleton_skeleton_resurect"] = {
+		from = 1,
+		prefix = "skeleton_skeleton",
+		to = 85
+	},
+	["skeleton_skeleton_walk"] = {
+		from = 87,
+		prefix = "skeleton_skeleton",
+		to = 110
+	},
+	["skeleton_skeleton_walk_back"] = {
+		from = 135,
+		prefix = "skeleton_skeleton",
+		to = 158
+	},
+	["skeleton_skeleton_walk_front"] = {
+		from = 111,
+		prefix = "skeleton_skeleton",
+		to = 134
+	},
+	["stage214_soldier_var1_attack"] = {
+		from = 18,
+		prefix = "Stage12_Militia",
+		to = 41
+	},
+	["stage214_soldier_var1_death"] = {
+		from = 42,
+		prefix = "Stage12_Militia",
+		to = 75
+	},
+	["stage214_soldier_var1_idle"] = {
+		from = 1,
+		prefix = "Stage12_Militia",
+		to = 1
+	},
+	["stage214_soldier_var1_walk"] = {
+		from = 2,
+		prefix = "Stage12_Militia",
+		to = 17
+	},
+	["stage214_soldier_var2_attack"] = {
+		from = 18,
+		prefix = "Stage12_Militia2",
+		to = 39
+	},
+	["stage214_soldier_var2_death"] = {
+		from = 40,
+		prefix = "Stage12_Militia2",
+		to = 75
+	},
+	["stage214_soldier_var2_idle"] = {
+		from = 1,
+		prefix = "Stage12_Militia2",
+		to = 1
+	},
+	["stage214_soldier_var2_walk"] = {
+		from = 2,
+		prefix = "Stage12_Militia2",
+		to = 17
+	},
+	["stage_214_goat_death"] = {
+		from = 53,
+		prefix = "Stage214_Goat",
+		to = 64
+	},
+	["stage_214_goat_eat"] = {
+		from = 10,
+		prefix = "Stage214_Goat",
+		to = 52
+	},
+	["stage_214_goat_idle"] = {
+		from = 1,
+		prefix = "Stage214_Goat",
+		to = 1
+	},
+	["stage_214_goat_small_death"] = {
+		from = 53,
+		prefix = "Stage214_GoatSmall",
+		to = 64
+	},
+	["stage_214_goat_small_eat"] = {
+		from = 10,
+		prefix = "Stage214_GoatSmall",
+		to = 52
+	},
+	["stage_214_goat_small_idle"] = {
+		from = 1,
+		prefix = "Stage214_GoatSmall",
+		to = 1
+	},
+	["stage_214_goat_small_tap"] = {
+		from = 2,
+		prefix = "Stage214_GoatSmall",
+		to = 9
+	},
+	["stage_214_goat_tap"] = {
+		from = 2,
+		prefix = "Stage214_Goat",
+		to = 9
+	},
+	["zombie_goat_creep_death"] = {
+		from = 96,
+		prefix = "zombie_goat_creep",
+		to = 124
+	},
+	["zombie_goat_creep_idle"] = {
+		from = 66,
+		prefix = "zombie_goat_creep",
+		to = 66
+	},
+	["zombie_goat_creep_raise"] = {
+		from = 2,
+		prefix = "zombie_goat_creep",
+		to = 65
+	},
+	["zombie_goat_creep_run"] = {
+		from = 67,
+		prefix = "zombie_goat_creep",
+		to = 74
+	},
+	["zombie_goat_creep_run_down"] = {
+		from = 75,
+		prefix = "zombie_goat_creep",
+		to = 84
+	},
+	["zombie_goat_creep_run_up"] = {
+		from = 85,
+		prefix = "zombie_goat_creep",
+		to = 94
+	},
+	["zombie_goat_creep_spawn"] = {
+		from = 2,
+		prefix = "zombie_goat_creep",
+		to = 65
+	},
+	["zombie_goat_hit_hit"] = {
+		from = 1,
+		prefix = "zombie_goat_hit",
+		to = 5
 	}
 }

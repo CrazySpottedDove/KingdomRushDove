@@ -75317,4 +75317,284 @@ function scripts.controller_remote_balance_rappel_spawner.update(this, store, sc
 	end
 end
 
+-- ==================== kr6 stage14：dark_army 敌人脚本 ====================
+
+scripts.enemy_skeleton = {}
+
+function scripts.enemy_skeleton.insert(this, store, script)
+	if not scripts.enemy_basic.insert(this, store, script) then
+		return false
+	end
+
+	if this.render.sprites[1].name == "raise" then
+		this._raise_ignore_damage = this.health.ignore_damage
+
+		if not this._raise_bans_added then
+			this._raise_bans_added = true
+			U.bans_add(this.vis, F_ALL)
+		end
+
+		this.health.ignore_damage = true
+		this.health_bar.hidden = true
+	end
+
+	return true
+end
+
+function scripts.enemy_skeleton.update(this, store, script)
+	if this.render.sprites[1].name == "raise" then
+		if this.sound_events and this.sound_events.raise then
+			S:queue(this.sound_events.raise, this.sound_events.raise_args)
+		end
+
+		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
+
+		U.y_animation_play(this, an, af, store.tick_ts, 1)
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+
+		if this._raise_bans_added then
+			U.bans_remove(this.vis, F_ALL)
+			this._raise_bans_added = nil
+			this.health.ignore_damage = this._raise_ignore_damage
+		end
+
+		U.animation_start(this, "idle", af, store.tick_ts, true)
+	end
+
+	return scripts.enemy_mixed.update(this, store, script)
+end
+
+scripts.enemy_gargoyle = {}
+
+function scripts.enemy_gargoyle.update(this, store)
+	local heal_uses = 0
+	local in_stone_form = false
+	local old_prefix = this.render.sprites[1].prefix
+	local old_armor = this.health.armor
+	local old_magic_armor = this.health.magic_armor
+	local sf = this.stone_form
+	local sf_duration = SU.get_difficulty_field_value(store, sf.duration)
+
+	-- 模板未内联 F_BLOCK/F_FLYING（引用计数 seed 无法移除），在运行时按状态增删
+	U.bans_add(this.vis, F_BLOCK)
+	U.flags_add(this.vis, F_FLYING)
+
+	local function check_enter_stone_form()
+		return heal_uses < sf.max_heal_uses and this.health.hp < sf.trigger_hp
+	end
+
+	local function exit_stone_form()
+		U.flags_add(this.vis, F_FLYING)
+		U.bans_add(this.vis, F_BLOCK)
+
+		U.animation_start(this, sf.heal_out_anim, nil, store.tick_ts, false, 1)
+		U.y_wait(store, fts(12))
+
+		this._current_height = 0
+
+		U.y_ease_key(store, this, "_current_height", 0, this.flight_height, sf.rise_duration, sf.ease_up, function(dt, p)
+			this.render.sprites[1].offset.y = this._current_height
+			U.change_health_bar_offset_run_time(this.health_bar, this._current_height + 25 + 15)
+			this.ui.click_rect.pos.y = this._current_height - 15 + 20
+			this.unit.hit_offset.y = this._current_height + 5 + 10
+			this.unit.mod_offset.y = this._current_height + 2 + 10
+		end)
+		U.y_animation_wait(this, 1)
+
+		in_stone_form = false
+		sf.used = true
+		this.render.sprites[1].prefix = old_prefix
+		this.health.armor = old_armor
+		this.health.magic_armor = old_magic_armor
+
+		U.animation_start(this, "walk", nil, store.tick_ts, true, 1)
+
+		return true
+	end
+
+	while true do
+		if this.health.dead or (heal_uses < sf.max_heal_uses and this.health.hp < sf.trigger_hp) then
+			if band(this.health.last_damage_types, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 then
+				simulation:queue_remove_entity(this)
+
+				return
+			end
+
+			if heal_uses < sf.max_heal_uses then
+				in_stone_form = true
+				heal_uses = heal_uses + 1
+				this.health.hp = sf.trigger_hp
+				this.health.dead = false
+				this.health_bar.hidden = false
+
+				S:queue(this.sound_events.death)
+
+				this.health.ignore_damage = true
+
+				U.y_animation_play(this, sf.fall_in_anim, nil, store.tick_ts, 1, 1)
+
+				this.health.armor = sf.armor
+				this.health.magic_armor = sf.magic_armor
+
+				U.animation_start(this, sf.fall_loop_anim, nil, store.tick_ts, true, 1)
+
+				this._current_height = this.flight_height
+
+				U.y_ease_key(store, this, "_current_height", this.flight_height, sf.floor_height, sf.lower_duration, sf.ease_down, function(dt, p)
+					this.render.sprites[1].offset.y = this._current_height
+					U.change_health_bar_offset_run_time(this.health_bar, this._current_height + 25 + 15)
+					this.ui.click_rect.pos.y = this._current_height - 15 + 20
+					this.unit.hit_offset.y = this._current_height + 5 + 10
+					this.unit.mod_offset.y = this._current_height + 2 + 10
+				end)
+
+				this.health.ignore_damage = false
+
+				S:queue(sf.sound)
+
+				U.flags_remove(this.vis, F_FLYING)
+				U.bans_remove(this.vis, F_BLOCK)
+
+				U.y_animation_play(this, sf.fall_out_anim, nil, store.tick_ts, 1, 1)
+				U.animation_start(this, sf.heal_anim, nil, store.tick_ts, true, 1)
+
+				local mod = E:create_entity(sf.mod)
+
+				mod.modifier.target_id = this.id
+				mod.modifier.source_id = this.id
+
+				simulation:queue_insert_entity(mod)
+
+				this.render.sprites[1].prefix = this.stone_form.anim_prefix
+
+				local ts = store.tick_ts
+
+				repeat
+					if this.health.dead then
+						if band(this.health.last_damage_types, bor(DAMAGE_INSTAKILL)) ~= 0 then
+							simulation:queue_remove_entity(this)
+
+							return
+						end
+
+						goto label_212_0
+					end
+
+					coroutine.yield()
+				until sf_duration < store.tick_ts - ts
+
+				exit_stone_form()
+
+				goto label_212_1
+			end
+
+			::label_212_0::
+
+			if in_stone_form then
+				this.render.sprites[1].prefix = old_prefix
+				this.unit.death_animation = sf.death_anim
+			end
+
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		::label_212_1::
+
+		SU.y_enemy_walk_until_blocked(store, this, false, check_enter_stone_form)
+		coroutine.yield()
+	end
+end
+
+function scripts.enemy_gargoyle.remove(this, store)
+	if not this.stone_form.used then
+		signal.emit("stone-cold-dead")
+	end
+
+	return true
+end
+
+-- ==================== kr6 stage14：特殊塔 / 墓地控制器 ====================
+
+local function find_all_t(store, template_name, contains, fn)
+	if not store or not store.entities then
+		return {}
+	end
+
+	return table.filter(store.entities, function(k, val)
+		return (contains and string.find(val.template_name, template_name) or val.template_name == template_name) and (not fn or fn(k, val))
+	end)
+end
+
+-- controller_graveyard_kr6（KR6 版墓地控制器，带 associated_decal 动画）
+scripts.controller_graveyard_kr6 = {}
+
+function scripts.controller_graveyard_kr6.update(this, store)
+	local animation_decal = find_all_t(store, this.associated_decal)[1]
+	local anim_ts = store.tick_ts
+	local g = this.graveyard
+
+	while not this.interrupt do
+		local targets = table.filter(store.entities, function(k, v)
+			return not v._in_graveyard and v.health and v.health.dead and band(v.vis.flags, g.vis_has) ~= 0 and band(v.vis.flags, g.vis_bans) == 0 and band(v.vis.bans, g.vis_flags) == 0 and store.tick_ts - v.health.death_ts >= g.dead_time and (not v.reinforcement or not v.reinforcement.hp_before_timeout) and (not g.excluded_templates or not table.contains(g.excluded_templates, v.template_name))
+		end)
+
+		if #targets == 0 then
+			U.y_wait_unconditional(store, g.check_interval)
+		else
+			if animation_decal and store.tick_ts - anim_ts > this.animation_cooldown then
+				U.animation_start(animation_decal, this.animation, nil, store.tick_ts, false, 1)
+				anim_ts = store.tick_ts
+			end
+
+			for _, t in ipairs(targets) do
+				if this.interrupt then
+					return
+				end
+
+				t._in_graveyard = true
+
+				for _, s in ipairs(g.spawns_by_health) do
+					local e, s_pos, pi, spi, ni
+
+					if t.health.hp_max > s[2] then
+					-- block empty
+					else
+						s_pos = table.random(g.spawn_pos)
+
+						local nearest_nodes = P:nearest_nodes(s_pos.x, s_pos.y, g.pi and {g.pi} or nil, {1, 2, 3})
+
+						if #nearest_nodes < 1 then
+							log.error("graveyard controller %s could not spawn enemy. node not found near %s,%s", this.id, s_pos.x, s_pos.y)
+						else
+							pi, spi, ni = unpack(nearest_nodes[1])
+							e = E:create_entity(s[1])
+							e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, spi, ni
+							e.pos = V.vclone(s_pos)
+							e.render.sprites[1].name = "raise"
+							e.motion.forced_waypoint = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+
+							if not g.keep_gold and e.enemy then
+								e.enemy.gold = 0
+							end
+
+							simulation:queue_insert_entity(e)
+
+							break
+						end
+					end
+				end
+
+				U.y_wait_unconditional(store, g.spawn_interval)
+			end
+		end
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
 return scripts

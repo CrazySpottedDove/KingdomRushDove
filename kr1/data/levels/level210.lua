@@ -402,7 +402,7 @@ while not boss.health.dead do
 coroutine.yield()
 end
 local freeze_mods=table.filter(store.entities,function(k,v)
-return v.template_name=="mod_boss_tower_block"
+return v.template_name=="mod_boss_stage_10_tower_freeze"
 end)
 for k,m in pairs(freeze_mods) do
 m.modifier.ts=0

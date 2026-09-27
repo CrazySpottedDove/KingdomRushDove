@@ -1,0 +1,231 @@
+#	COMANDOS					1 - Izquierda a Abajo Derecha ()					2 - Izquierda a Arriba Derecha					3 - Abajo a Arriba Derecha					4 - Abajo a Abajo Derecha					5 - Arriba Izquierda a Arriba Derecha
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3
+#	level properties
+	description	Iron Rodri
+	lives	20
+	gold	1320
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	3172
+#	stage gold curve
+#	WAVE 1
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		dark_sapper	tainted_wolf
+#	cant.					0	0	10	0		0	5
+#	gold	240				0	0	150	0		0	70
+	wave		1		-1
+					0		brigand_kr6		brigand_kr6
+					3		brigand_kr6		brigand_kr6
+					7														tainted_wolf
+					3												tainted_wolf
+					6		brigand_kr6		brigand_kr6
+					2			brigand_kr6
+					3		brigand_kr6		brigand_kr6
+					2			brigand_kr6
+					7													tainted_wolf
+					3												tainted_wolf		tainted_wolf
+
+
+
+
+
+
+#	36
+#	Mecánica base del modo, presentada de manera clara
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 2
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		dark_sapper	tainted_wolf
+#	cant.					0	7	11	7		0	0
+#	gold	520				0	210	165	98		0	0
+#	wave		2
+					21		brigand_kr6		brigand_kr6
+					1			shadow_archer_kr6
+					8		brigand_kr6		brigand_kr6
+					1			shadow_archer_kr6
+					0														gargoyle_kr6
+					6												gargoyle_kr6
+					8		brigand_kr6		brigand_kr6
+					1			brigand_kr6
+					3		shadow_archer_kr6		shadow_archer_kr6
+					10		brigand_kr6		brigand_kr6
+					1		brigand_kr6		brigand_kr6
+					3			shadow_archer_kr6
+					1		shadow_archer_kr6		shadow_archer_kr6
+					5												gargoyle_kr6
+					1														gargoyle_kr6
+					4												gargoyle_kr6
+					1														gargoyle_kr6
+					1													gargoyle_kr6
+
+
+#	76
+#	Mecánica base del modo, más larga y con variaciones
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 3
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		dark_sapper	tainted_wolf
+#	cant.					0	3	7	3		1	0
+#	gold	290				0	90	105	42		30	0
+#	wave		3
+					21								dark_sapper
+					8																	brigand_kr6
+					1.5																		brigand_kr6
+					1.5																			brigand_kr6
+					6			gargoyle_kr6														brigand_kr6		brigand_kr6
+					2																			brigand_kr6
+					2		gargoyle_kr6															brigand_kr6
+					4				gargoyle_kr6														shadow_archer_kr6
+					1																	shadow_archer_kr6		shadow_archer_kr6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	47
+#	Cambiamos salida. Arriba rompe el Sapper, Correr la barraca para abajo/atras y bloquear Brigands
+
+
+
+
+
+
+
+
+
+
+#	WAVE 4
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		dark_sapper	tainted_wolf
+#	cant.					0	3	0	5		0	10
+#	gold	330				0	90	0	70		0	140
+#	wave		4
+					18								shadow_archer_kr6
+					2							shadow_archer_kr6		shadow_archer_kr6
+					4													tainted_wolf
+					2												tainted_wolf		tainted_wolf
+					8							gargoyle_kr6		gargoyle_kr6
+					1																		tainted_wolf
+					3								gargoyle_kr6
+					1																	tainted_wolf		tainted_wolf
+					1							shadow_archer_kr6		shadow_archer_kr6
+					3																	tainted_wolf		tainted_wolf
+					3																	tainted_wolf		tainted_wolf
+
+
+
+
+
+
+
+
+
+
+
+
+#	46
+#	Challenge diferente, estructura del primer push. Vuelven los tainted y archers por arriba para bombardear el choke
+
+
+
+
+
+
+
+#	WAVE 5
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		dark_sapper	tainted_wolf
+#	cant.					0	5	12	5		2	18
+#	gold	780				0	150	180	70		60	252
+#	wave		5
+					18							gargoyle_kr6		gargoyle_kr6
+					1.5							gargoyle_kr6
+					2								gargoyle_kr6
+					1.3									gargoyle_kr6
+					6																		dark_sapper
+					2																	brigand_kr6		brigand_kr6
+					1																	brigand_kr6		brigand_kr6
+
+					11							tainted_wolf		tainted_wolf
+					2.5							tainted_wolf		tainted_wolf
+					2.5							tainted_wolf		tainted_wolf
+					4																	brigand_kr6		brigand_kr6
+					1																	brigand_kr6		brigand_kr6
+					10													dark_sapper
+					1												shadow_archer_kr6		shadow_archer_kr6
+					1													shadow_archer_kr6
+					1												shadow_archer_kr6		shadow_archer_kr6
+
+					12							tainted_wolf		tainted_wolf
+					2							tainted_wolf		tainted_wolf								brigand_kr6		brigand_kr6
+					8							tainted_wolf		tainted_wolf
+					2							tainted_wolf		tainted_wolf								brigand_kr6		brigand_kr6
+					6							tainted_wolf		tainted_wolf
+					2							tainted_wolf		tainted_wolf
+
+
+#	97.8
+#	Push final, rotar milicias, barrer hacia atras
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	TOTAL DURATION (min):	5.33
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 6
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		dark_sapper	tainted_wolf
+#	cant.					0	0	0	0		0	0
+#	gold	0				0	0	0	0		0	0
+#	wave		6
+					18

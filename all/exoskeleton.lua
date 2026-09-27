@@ -158,11 +158,13 @@ end
 --- 约定（调用者保证）：tracker / target 存在，且 target 对应 sprite 已完成渲染
 --- （exo_frame 与 last_attach_point_xform 就绪）。
 function EXO:track_attach_point(tracker, target, sprite_id)
-	local sp = tracker.render.sprites[sprite_id or 1]
-	local ts = target.render.sprites[sp.track_sprite_id or 1]
+	local sp = tracker.render.sprites[sprite_id]
+	local ts = target.render.sprites[sp.track_sprite_id]
 	local xf = ts.last_attach_point_xform[self.exos[ts.exo_frame.exo_name].attach_idx[sp.track_attach_point]]
 
 	tracker.pos.x, tracker.pos.y = xf.x, xf.y
+
+	sp.flip_x = ts.flip_x
 end
 
 --- 简短查看当前 EXO 的加载情况

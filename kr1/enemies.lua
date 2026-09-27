@@ -13174,8 +13174,7 @@ tt = RT("enemy_bandit_kr6", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(3, 17)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -13214,8 +13213,7 @@ tt = RT("enemy_blackguard", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(4.5, 19)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -13248,8 +13246,7 @@ tt = RT("enemy_headhunter", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(4, 28)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.enemy.gold = 88
 tt.enemy.melee_slot = v(36, 0)
 tt.enemy.lives_cost = 2
@@ -13303,8 +13300,7 @@ tt = RT("enemy_crow", "enemy")
 AC(tt, "count_group")
 tt.unit.head_offset = v(5, 43)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.enemy.gold = 2.2
 tt.count_group.name = "enemy_crow"
 tt.flight_height = 40
@@ -13756,8 +13752,7 @@ tt = RT("enemy_wulf", "enemy")
 AC(tt, "melee", "dodge")
 tt.unit.head_offset = v(11, 9)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -13793,8 +13788,7 @@ tt = RT("enemy_worg", "enemy")
 AC(tt, "melee", "dodge")
 tt.unit.head_offset = v(15, 14)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -13831,8 +13825,7 @@ tt = RT("enemy_orc_wildling", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(13, 20)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -14008,8 +14001,7 @@ tt.render.sprites[2].name = "cloud_of_crows_shadow"
 tt.render.sprites[2].offset = v(0, 0)
 tt.unit.marker_offset = v(0, 0)
 tt.unit.show_blood_pool = false
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.vis.bans = F_ALL
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
 tt.ui = nil
@@ -14043,8 +14035,7 @@ tt = RT("enemy_troll_warrior", "enemy")
 AC(tt, "melee", "auras", "cliff")
 tt.unit.head_offset = v(6, 17)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -14084,8 +14075,7 @@ tt = RT("enemy_troll_champion", "enemy")
 AC(tt, "melee", "ranged", "auras")
 tt.unit.head_offset = v(6, 23)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -14164,8 +14154,7 @@ tt.y_to_die = 457.3
 tt = RT("enemy_troll_glider", "enemy")
 AC(tt, "death_spawns", "auras")
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -14216,8 +14205,7 @@ tt = RT("enemy_troll_crusher", "enemy")
 AC(tt, "melee", "auras", "timed_attacks")
 tt.unit.head_offset = v(6, 33)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -14281,8 +14269,7 @@ tt = RT("enemy_frost_icecaller", "enemy")
 AC(tt, "melee", "ranged", "timed_attacks", "death_spawns")
 tt.unit.head_offset = v(8, 17)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.render.sprites[1].angles_custom = {
 	walk = {55, 115, 245, 305}
 }
@@ -14359,8 +14346,7 @@ tt = RT("enemy_troll_pathfinder", "enemy")
 AC(tt, "melee", "auras", "death_spawns")
 tt.unit.head_offset = v(6, 17)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.enemy.gold = 11
 tt.enemy.melee_slot = v(28, 0)
 tt.enemy.lives_cost = 1
@@ -14405,8 +14391,7 @@ tt = RT("enemy_frost_baiter", "enemy")
 AC(tt, "melee", "bullet", "death_spawns")
 tt.unit.head_offset = v(3, 14)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.enemy.gold = 3.3
 tt.enemy.melee_slot = v(28, 0)
 tt.enemy.lives_cost = 1
@@ -14480,8 +14465,7 @@ tt = RT("enemy_frost_baiter_decoy", "enemy")
 AC(tt, "melee", "death_spawns")
 tt.unit.head_offset = v(0, 5)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.enemy.gold = 0
 tt.enemy.melee_slot = v(28, 0)
 tt.health.hp_max = {41.25, 55, 55, 68.75}
@@ -14519,8 +14503,7 @@ tt = RT("enemy_frost_brute", "enemy")
 AC(tt, "melee", "timed_attacks", "death_spawns")
 tt.unit.head_offset = v(12, 34)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.enemy.gold = 286
 tt.enemy.melee_slot = v(36, 0)
 tt.enemy.lives_cost = 2
@@ -14636,8 +14619,7 @@ tt = RT("enemy_troll_chieftain_kr6", "enemy")
 AC(tt, "melee", "auras", "timed_attacks")
 tt.unit.head_offset = v(5, 31)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
-tt.unit.fade_time_after_death = 3
-tt.unit.fade_duration_after_death = 0.3
+tt.health.dead_lifetime = 3
 tt.enemy.gold = 66
 tt.enemy.melee_slot = v(36, 0)
 tt.enemy.lives_cost = 2
@@ -15192,3 +15174,402 @@ tt.bullet.pop = {"pop_pow"}
 tt.bullet.pop_conds = DR_KILL
 tt.main_script.update = scripts.bullet_troll_glider_stage_213_suicide.update
 tt.sound_events.hit = "Stage13KamikazeGliderDeathImpact"
+
+-- ==================== kr6 关卡 214：dark_army 敌人 ====================
+-- 数值取自 kr6/data/balance/balance.lua，hp_max ×1.375、gold ×1.1、主动伤害 ×1.1（见文件顶部约定）。
+-- 敌人基础增量（原 enemy_KR5 + enemy_KR6）：
+--   unit.head_offset = v(0,0)、unit.disintegrate_fx = "fx_enemy_desintegrate"、
+--   unit.fade_time_after_death = 3、unit.fade_duration_after_death = 0.3、
+--   render.sprites[1].angles_custom.walk = {55,115,245,305}
+
+-- fx 命中特效
+tt = RT("fx_brigand_hit", "fx")
+tt.render.sprites[1].name = "brigand_hit_run"
+
+tt = RT("fx_dark_sapper_hit", "fx")
+tt.render.sprites[1].name = "dark_sapper_hit_run"
+
+tt = RT("fx_dark_sapper_bomb_hit", "fx")
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].prefix = "dark_sapper_explosion"
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt = RT("fx_tainted_wolf_hit", "fx")
+tt.render.sprites[1].name = "darkworg_hit_run"
+
+tt = RT("fx_skeleton_big_hit", "fx")
+tt.render.sprites[1].name = "skeleton_big_hit"
+
+-- ps_bullet_dark_sapper
+tt = RT("ps_bullet_dark_sapper", "particle_system")
+tt.particle_system.name = "dark_sapper_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(20), fts(20)}
+tt.particle_system.emission_rate = 25
+tt.particle_system.emit_rotation_spread = math.pi / 2
+tt.particle_system.emit_area_spread = v(3, 3)
+
+-- mod_brigand_bleed（brigand 血刺 DoT）
+tt = RT("mod_brigand_bleed", "mod_blood")
+tt.dps.damage_every = 0.25
+tt.dps.damage_min = 3.3
+tt.dps.damage_max = 3.3
+tt.dps.damage_inc = 0
+tt.dps.kill = true
+tt.modifier.duration = 2
+tt.modifier.vis_flags = bor(F_MOD, F_BLOOD)
+
+-- mod_gargoyle_stone_form_heal
+tt = RT("mod_gargoyle_stone_form_heal", "modifier")
+AC(tt, "hps")
+tt.modifier.duration = {4, 4, 4, 6}
+tt.hps.heal_every = 0.25
+tt.hps.heal_min = 30 * tt.hps.heal_every
+tt.hps.heal_max = 30 * tt.hps.heal_every
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hps.update
+
+-- aura_dark_sapper_death_explosion
+tt = RT("aura_dark_sapper_death_explosion", "aura")
+tt.aura.vis_flags = F_AREA
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.cycles = 1
+tt.aura.radius = 60
+tt.aura.damage_min = 110
+tt.aura.damage_max = 165
+tt.aura.damage_type = DAMAGE_EXPLOSION
+tt.main_script.update = scripts.aura_apply_damage.update
+
+-- bullet_dark_sapper（敌方自爆投射物，必须用 scripts.enemy_bomb.update）
+tt = RT("bullet_dark_sapper", "bomb")
+tt.render.sprites[1].name = "dark_sapper_projectile_0001"
+tt.render.sprites[1].animated = false
+tt.bullet.particles_name = "ps_bullet_dark_sapper"
+tt.bullet.min_speed = 5 * FPS
+tt.bullet.max_speed = 15 * FPS
+tt.bullet.acceleration_factor = 0.2
+tt.bullet.hit_fx = "fx_dark_sapper_bomb_hit"
+tt.bullet.hit_decal = nil
+tt.bullet.damage_type = DAMAGE_EXPLOSION
+tt.bullet.damage_radius = 70
+tt.bullet.damage_min = 61.6
+tt.bullet.damage_max = 92.4
+tt.bullet.flight_time = fts(25)
+tt.bullet.damage_flags = bor(F_AREA, F_FRIEND)
+tt.bullet.damage_bans = bor(F_ENEMY)
+tt.main_script.update = scripts.enemy_bomb.update
+
+-- enemy_brigand_kr6（brigand：高护甲、血刺）
+tt = RT("enemy_brigand_kr6", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(4, 21)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 22
+tt.enemy.melee_slot = v(28, 0)
+tt.health.hp_max = {343.75, 385, 481.25, 618.75}
+tt.health.armor = 0.4
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 32)
+tt.info.portrait = "kr6_info_portraits_enemies_0048"
+tt.info.i18n_key = "ENEMY_BRIGAND"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 40
+tt.render.sprites[1].prefix = "brigand_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 9.9
+tt.melee.attacks[1].damage_max = 15.4
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].animation = "mele"
+tt.melee.attacks[1].hit_fx = "fx_brigand_hit"
+tt.melee.attacks[1].hit_offset = v(30, 10)
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[2] = CC("melee_attack")
+tt.melee.attacks[2].cooldown = 10
+tt.melee.attacks[2].damage_min = 9.9
+tt.melee.attacks[2].damage_max = 15.4
+tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[2].animation = "blood_strike"
+tt.melee.attacks[2].hit_time = fts(12)
+tt.melee.attacks[2].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[2].mod = "mod_brigand_bleed"
+tt.sound_events.death = "EnemyBanditDeath"
+tt.ui.click_rect = r(-13, 0, 30, 35)
+
+-- enemy_dark_sapper（远程自爆兵）
+tt = RT("enemy_dark_sapper", "enemy")
+AC(tt, "melee", "ranged", "death_spawns")
+tt.unit.head_offset = v(5.5, 13)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 33
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = {825, 825, 990, 1237.5}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 55)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0049"
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 24
+tt.render.sprites[1].prefix = "dark_sapper_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 22
+tt.melee.attacks[1].damage_max = 33
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(17)
+tt.melee.attacks[1].hit_fx = "fx_dark_sapper_hit"
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].animation = "mele"
+tt.ranged.attacks[1].bullet = "bullet_dark_sapper"
+tt.ranged.attacks[1].hold_advance = true
+tt.ranged.attacks[1].shoot_time = fts(9)
+tt.ranged.attacks[1].cooldown = 2
+tt.ranged.attacks[1].min_range = 60
+tt.ranged.attacks[1].max_range = 170
+tt.ranged.attacks[1].ignore_hit_offset = true
+tt.ranged.attacks[1].bullet_start_offset = {v(0, 44)}
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[1].vis_bans = bor(F_FLYING)
+tt.ranged.attacks[1].animation = "ranged_attack"
+tt.unit.hit_offset = v(0, 15)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 14)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.death_spawns.name = "aura_dark_sapper_death_explosion"
+tt.death_spawns.delay = fts(25)
+tt.sound_events.death = "EnemyDarkSapperDeath"
+tt.sound_events.death_args = {
+	delay = 0.55
+}
+tt.ui.click_rect = r(-25, -2, 50, 50)
+
+-- enemy_gargoyle_kr6（石化回血飞行怪）
+tt = RT("enemy_gargoyle_kr6", "enemy")
+tt.unit.head_offset = v(0, 0)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 8.8
+tt.flight_height = 40
+tt.health.hp_max = {144.375, 165, 206.25, 226.875}
+tt.health_bar.offset = v(0, tt.flight_height + 25 + 15)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.info.portrait = "kr6_info_portraits_enemies_0047"
+tt.info.i18n_key = "ENEMY_GARGOYLE"
+tt.main_script.update = scripts.enemy_gargoyle.update
+tt.main_script.remove = scripts.enemy_gargoyle.remove
+tt.motion.max_speed = 50
+tt.render.sprites[1].offset = v(0, tt.flight_height)
+tt.render.sprites[1].prefix = "gargoyle_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "gargoyle_shadow"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].scale = vv(1)
+tt.stone_form = {}
+tt.stone_form.trigger_hp = 60
+tt.stone_form.max_heal_uses = 1
+tt.stone_form.duration = {4, 4, 4, 6}
+tt.stone_form.armor = 0
+tt.stone_form.magic_armor = 0
+tt.stone_form.floor_height = 0
+tt.stone_form.lower_duration = 0.2
+tt.stone_form.ease_down = "linear"
+tt.stone_form.rise_duration = fts(5)
+tt.stone_form.ease_up = "linear"
+tt.stone_form.anim_prefix = "gargoyle_creep_sf"
+tt.stone_form.fall_in_anim = "heal_fall_in"
+tt.stone_form.fall_loop_anim = "heal_fall_loop"
+tt.stone_form.fall_out_anim = "heal_fall_out"
+tt.stone_form.heal_anim = "heal_loop"
+tt.stone_form.heal_out_anim = "heal_out"
+tt.stone_form.death_anim = "health_death"
+tt.stone_form.mod = "mod_gargoyle_stone_form_heal"
+tt.stone_form.sound = "EnemyGargoyleStoneFormIn"
+tt.unit.can_explode = false
+tt.unit.hide_after_death = true
+tt.unit.show_blood_pool = false
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
+tt.unit.hit_offset = v(0, tt.flight_height + 5 + 10)
+tt.unit.head_offset = v(0, tt.flight_height + 5 + 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, tt.flight_height + 2 + 10)
+tt.vis.bans = bor(F_SKELETON)
+tt.vis.flags = bor(F_ENEMY)
+tt.sound_events.death = "EnemyGargoyleDeath"
+tt.ui.click_rect = r(-15, tt.flight_height - 15 + 20, 30, 30)
+
+-- enemy_tainted_wolf（高闪避魔狼）
+tt = RT("enemy_tainted_wolf", "enemy")
+AC(tt, "melee", "dodge")
+tt.unit.head_offset = v(15, 14)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 13.2
+tt.enemy.melee_slot = v(35, 0)
+tt.health.hp_max = {247.5, 309.375, 343.75, 433.125}
+tt.health.armor = 0
+tt.health.magic_armor = 0.5
+tt.health_bar.offset = v(0, 34)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0057"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 64
+tt.render.sprites[1].prefix = "darkworg_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1.25
+tt.melee.attacks[1].damage_min = 17.6
+tt.melee.attacks[1].damage_max = 26.4
+tt.melee.attacks[1].damage_type = DAMAGE_MAGICAL
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].hit_fx = "fx_tainted_wolf_hit"
+tt.melee.attacks[1].hit_fx_offset = v(30, 5)
+tt.dodge.chance = 0.55
+tt.dodge.show_pop = true
+tt.dodge.silent = true
+tt.sound_events.death = "EnemyWorgDeath"
+tt.ui.click_rect = r(-22, -3, 44, 32)
+tt.vis.bans = bor(F_SKELETON)
+tt.vis.flags = bor(F_ENEMY)
+
+-- enemy_skeleton_kr6（墓地召唤；与 dove 的 enemy_skeleton 不同，加后缀）
+tt = RT("enemy_skeleton_kr6", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(6, 16)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 2.2
+tt.enemy.melee_slot = v(28, 0)
+tt.health.hp_max = {96.25, 110, 137.5, 171.875}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 32)
+tt.info.portrait = "kr6_info_portraits_enemies_0045"
+tt.info.i18n_key = "ENEMY_SKELETON"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.unit.show_blood_pool = false
+tt.unit.blood_color = BLOOD_NONE
+tt.unit.can_explode = false
+tt.vis.bans = bor(F_SKELETON, F_BLOOD, F_POISON, F_POLYMORPH)
+tt.main_script.insert = scripts.enemy_skeleton.insert
+tt.main_script.update = scripts.enemy_skeleton.update
+tt.motion.max_speed = 28
+tt.render.sprites[1].prefix = "skeleton_skeleton"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[1].name = "raise"
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 4.4
+tt.melee.attacks[1].damage_max = 7.7
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(8)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.sound_events.death = "EnemySkeletonDeath"
+tt.ui.click_rect = r(-13, 0, 26, 25)
+
+-- enemy_skeleton_big_kr6（墓地召唤大骷髅）
+tt = RT("enemy_skeleton_big_kr6", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(11, 26)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 33
+tt.enemy.melee_slot = v(36, 0)
+tt.enemy.lives_cost = 2
+tt.health.hp_max = {660, 852.5, 1100, 1375}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 50)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0046"
+tt.info.i18n_key = "ENEMY_SKELETON_BIG"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.unit.show_blood_pool = false
+tt.unit.blood_color = BLOOD_NONE
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.vis.bans = bor(F_SKELETON, F_BLOOD, F_POISON, F_POLYMORPH)
+tt.main_script.insert = scripts.enemy_skeleton.insert
+tt.main_script.update = scripts.enemy_skeleton.update
+tt.motion.max_speed = 24
+tt.render.sprites[1].prefix = "skeleton_big_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.render.sprites[1].name = "raise"
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 33
+tt.melee.attacks[1].damage_max = 49.5
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_fx = "fx_skeleton_big_hit"
+tt.melee.attacks[1].hit_offset = v(35, 5)
+tt.melee.attacks[1].hit_time = fts(10)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.sound_events.death = "EnemySkeletonDeath"
+tt.ui.click_rect = r(-25, 0, 50, 45)
+
+-- enemy_skeleton_goat（墓地召唤羊骷髅）
+tt = RT("enemy_skeleton_goat", "enemy")
+tt.unit.head_offset = v(8, 13)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 5.5
+tt.enemy.lives_cost = 1
+tt.health.hp_max = {82.5, 137.5, 137.5, 165}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 35)
+tt.info.portrait = "kr6_info_portraits_enemies_0053"
+tt.unit.size = UNIT_SIZE_SMALL
+tt.unit.death_animation = "death"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 64
+tt.render.sprites[1].prefix = "zombie_goat_creep"
+tt.render.sprites[1].angles.walk = {"run", "run_up", "run_down"}
+tt.unit.show_blood_pool = false
+tt.unit.hit_offset = v(5, 15)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 15)
+tt.ui.click_rect = r(0, 0, 0, 0)
+tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_POLYMORPH)
+tt.vis.flags = bor(F_ENEMY)
+tt.sound_events.death = "EnemySkeletonDeath"
