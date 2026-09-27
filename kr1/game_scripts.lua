@@ -71390,6 +71390,9 @@ function scripts.soldier_stage_208_templar_swordsman.update(this, store)
 	end
 
 	this.nav_rally.pos = P:node_pos(this.path_id, this.subpath_id, path_ni)
+	-- dove 的 nav_rally.center 默认是 v(0,0)（KR6 是 nil，会让 `nav_rally.center or this.pos`
+	-- 回退到 this.pos）。这里不跟随自身位置的话，索敌中心会停在原点，士兵永不拦截。
+	this.nav_rally.center.x, this.nav_rally.center.y = this.pos.x, this.pos.y
 	this.melee.order = U.attack_order(this.melee.attacks)
 
 	while true do
@@ -71407,6 +71410,7 @@ function scripts.soldier_stage_208_templar_swordsman.update(this, store)
 			return
 		end
 
+		this.nav_rally.center.x, this.nav_rally.center.y = this.pos.x, this.pos.y
 		local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 		if brk or sta == A_DONE or sta == A_IN_COOLDOWN and not this.melee.continue_in_cooldown then

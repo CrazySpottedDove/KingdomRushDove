@@ -101,8 +101,9 @@ return {
 	})}},
 	stage_11_camp = {},
 	stage_11_spider_eggs_nest = {{M(tpl.buy_attack, {
-		check = "main_icons_0019",
-		action_arg = 1,
+		action = "tw_custom_no_close",
+		action_arg = "",
+		halo = "glow_ico_main",
 		image = "kr6_quickmenu_main_icon_s11_archers",
 		place = 5,
 		tt_title = _("TOWER_STAGE_211_CAMP_3_ATTACK_NAME"),

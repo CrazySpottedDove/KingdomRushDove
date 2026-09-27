@@ -244,7 +244,7 @@ coroutine.yield()
 end
 end
 local function controller_stage_208_phases_update(this,store,script)
-this.current_phase=(store.level_mode==GAME_MODE_IRON or store.level_mode==GAME_MODE_EXTRA_HEROES or store.level_mode==GAME_MODE_BLITZ or store.level_mode==GAME_MODE_NO_HEROES) and 3 or this.current_phase
+this.current_phase=(store.level_mode==GAME_MODE_IRON or store.level_mode==GAME_MODE_HEROIC) and 3 or this.current_phase
 phases_link_entities(this,store)
 phases_register_defend_points(this,store)
 phases_restore_nav_mesh(this,store)

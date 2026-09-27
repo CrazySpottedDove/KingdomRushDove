@@ -7800,7 +7800,10 @@ function CriketMenu:show()
 				log.debug("CLICK")
 
 				if not self.tweening and not this.click_disabled then
-					stm:button_callback(this, item)
+					-- 辅助输入：按住 Ctrl 点 = “不覆盖造塔”，只填空塔位
+					local no_overwrite = love.keyboard.isDown("lctrl", "rctrl")
+
+					stm:button_callback(this, item, no_overwrite)
 				end
 			end
 
@@ -7869,12 +7872,19 @@ function CriketMenu:button_exit(button)
 	end
 end
 
-function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
+function CriketMenu:button_callback(button, item, no_overwrite)
 	-- local total_cost = 0
 
 	for k, v in pairs(game_gui.game.store.towers) do
-		-- if v.tower.type == "holder" or (v.tower_holder and v.tower_holder.blocked) then
-		if v.ui and v.ui.can_click then
+		-- 覆盖模式（默认）= 替换所有可点塔；
+		-- 不覆盖模式（Ctrl）= 只填空塔位（tower.type == "holder"），其它一律跳过
+		local replace = v.ui and v.ui.can_click
+
+		if no_overwrite then
+			replace = replace and v.tower and v.tower.type == "holder" or (v.tower_holder and v.tower_holder.blocked)
+		end
+
+		if replace then
 			local new_tower = E:create_entity(item.action_arg)
 
 			configer.criket().tower_name = new_tower.template_name

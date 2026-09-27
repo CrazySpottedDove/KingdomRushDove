@@ -37,6 +37,8 @@ autoplay.ref_h = REF_H
 local WALL_BUDGET = 0.35
 --- 模拟的最长游戏内时间（秒）；超时即认为关卡卡住
 local MAX_SIM_SECONDS = 60 * 30
+--- 进入最后一波后，若这么久还没结算（boss 打不死/卡住），也算跑完，避免拖到 MAX
+local LAST_WAVE_TIMEOUT = 180
 --- 固定步长：与正常游玩同一套数值
 local STEP = TICK_LENGTH
 --- 自动点击节流：每隔多少游戏内秒点一轮（避免刷屏点击）
@@ -298,9 +300,58 @@ function autoplay:build_towers()
 	end
 end
 
---- 模拟玩家点击带 ui 的世界物件（羊/篝火/马厩/谷仓…）与需要选点的特殊塔。
---- 和 game_gui 世界点击一样：对非战斗实体直接置 ui.clicked；
---- 对 user_selection 类特殊塔（scripts.tower_spawn_soldier_on_path）置 in_progress。
+--- 把实体所在的世界坐标换算成窗口坐标，模拟一次真实的鼠标左键点击。
+--- 走 game_gui:mousepressed → window:mousepressed → PickView:on_down →
+--- select_entity / InfoBar / TowerMenu。autoplay 不再自己置 ui.clicked
+--- （直接置字段会漏掉 info.fn、塔菜单等点击路径里的报错）。
+function autoplay:simulate_click_at(e)
+	local game_gui = self.game.game_gui
+
+	if not game_gui or not game_gui.window or not e.pos then
+		return
+	end
+
+	local wx, wy = e.pos.x, e.pos.y
+	local rect = e.ui and e.ui.click_rect
+
+	if rect then
+		-- 点 click_rect 中心，命中率更高
+		wx = e.pos.x + rect.pos.x + rect.size.x * 0.5
+		wy = e.pos.y + rect.pos.y + rect.size.y * 0.5
+	end
+
+	local ux, uy = game_gui:g2u(V.v(wx, wy))
+	local origin = game_gui.window.origin
+	local scale = game_gui.window.scale
+	local sx = origin.x + ux * scale.x
+	local sy = origin.y + uy * scale.y
+
+	game_gui:mousepressed(sx, sy, 1)
+	game_gui:mousereleased(sx, sy, 1)
+end
+
+--- 强制推进 boss 阶段：autoplay 的通用塔常被 boss 波的小怪吸引，打不动 boss，
+--- 于是 boss 的 phase 代码（升空/降落等，例如 stage11 boss 升到屏幕外坐标）测不到。
+--- 这里按 `phases_health_thresholds` 把 boss 血量逐档压低，确保每个 phase 都跑一遍。
+function autoplay:force_boss_phases()
+	local store = self.game.simulation.store
+
+	for _, e in pairs(store.entities) do
+		if e.health and not e.health.dead and not e.pending_removal and e.phases_health_thresholds and e.health.hp_max > 0 then
+			local hp_max = e.health.hp_max
+
+			for _, t in ipairs(e.phases_health_thresholds) do
+				if e.health.hp >= hp_max * t then
+					e.health.hp = hp_max * t - 1
+
+					break
+				end
+			end
+		end
+	end
+end
+
+--- 模拟玩家点击带 ui 的世界物件（羊/篝火/马厩/谷仓…）与特殊塔。
 function autoplay:run_clicks()
 	local store = self.game.simulation.store
 	local ts = store.tick_ts
@@ -311,15 +362,16 @@ function autoplay:run_clicks()
 
 	self.next_click_ts = ts + CLICK_INTERVAL
 
+	-- 世界物件：真实点击，让 game_gui 自己置 ui.clicked 并走 select_entity / InfoBar
 	for _, e in pairs(store.entities_with_ui) do
 		if e.ui and e.ui.can_click and not e.pending_removal and not e.enemy and not e.hero and not e.soldier and not e.tower then
-			e.ui.clicked = true
+			self:simulate_click_at(e)
 			stats.auto_clicks = stats.auto_clicks + 1
 		end
 	end
 
 	for _, e in pairs(store.entities) do
-		if e.tower and e.user_selection and e.tower_action and e.soldier_t and not e.pending_removal and not e.tower_action.active then
+		if e.tower and e.user_selection and e.ui and e.ui.can_click and not e.pending_removal and not e.tower.blocked and (e.tower_action or e.soldier_t) then
 			-- 这类「选点雇兵」塔必须能在 tower_menus_data 里找到菜单项
 			-- （tw_free_action/tw_point…），否则玩家根本触发不了
 			-- user_selection.in_progress（207 谷仓塔就漏过）。
@@ -385,8 +437,15 @@ function autoplay:run_clicks()
 				end
 			end
 
-			e.user_selection.in_progress = true
-			stats.auto_hires = (stats.auto_hires or 0) + 1
+			-- 真实点击打开塔菜单（覆盖 InfoBar/TowerMenu:show 的报错）
+			self:simulate_click_at(e)
+			stats.auto_clicks = stats.auto_clicks + 1
+
+			-- 需要点一下买一次/雇兵/开火的塔（谷仓、蛛卵巢穴…）：再置 in_progress 让脚本消费
+			if e.tower_action and not e.tower_action.active then
+				e.user_selection.in_progress = true
+				stats.auto_hires = (stats.auto_hires or 0) + 1
+			end
 		end
 	end
 end
@@ -409,6 +468,8 @@ function autoplay:run_sim()
 			self:run_clicks()
 		end
 
+		self:force_boss_phases()
+
 		simulation:update(STEP)
 
 		-- 一帧的渲染侧更新也要跑：render / tween / particle_system 的 on_render_update
@@ -422,7 +483,8 @@ function autoplay:run_sim()
 			self.game.game_gui:update(STEP)
 		end
 
-		if store.game_outcome or (store.waves_finished and not LU.has_alive_enemies(store)) then
+		-- 见 update：只等关卡真正的 game_outcome，别在中途（KR6 boss 降临前）提前收工
+		if store.game_outcome then
 			return
 		end
 
@@ -458,6 +520,18 @@ function autoplay:update(dt)
 
 			return
 		end
+
+		-- 像正常开局一样初始化 game_gui：time_rewind 也是直接 `game.game_gui:init(...)`。
+		-- autoplay 走的是 game_init_impl，不会创建 game_gui；不补的话，凡访问
+		-- game.game_gui 的 release 脚本（如 KR6 boss 阶段）都会在 headless 下崩。
+		local game_gui = require("game_gui")
+
+		game_gui:init(self.screen_w, self.screen_h, game)
+		game.game_gui = game_gui
+		game.store.game_gui = game_gui
+
+		-- 冒烟测试不动胜负：把生命拉满，避免因漏怪/被推平提前结束，方便跑到结算
+		game.store.lives = 99999
 
 		self.phase = "warmup"
 		self.warmup_frames = 0
@@ -495,6 +569,9 @@ function autoplay:update(dt)
 		stats.wave_group_total = store.wave_group_total
 		stats.lives = store.lives
 
+		-- 只认关卡系统真正给出的 game_outcome。KR6 boss 关会在 waves_finished 之后
+		-- 才降下 boss（level:update 协程还没跑完），此时“waves_finished 且无敌人”已成立，
+		-- 若照它提前结束就会漏测整个 boss 战（如 boss 升空到屏幕外 out of bounds）。
 		if store.game_outcome then
 			stats.victory = store.game_outcome.victory
 			self.phase = "done"
@@ -502,12 +579,17 @@ function autoplay:update(dt)
 			return
 		end
 
-		if store.waves_finished and not LU.has_alive_enemies(store) then
-			stats.victory = true
-			stats.reason = "waves_finished"
-			self.phase = "done"
+		-- 最后一波超时兜底：进入最后一波后长时间没结算（如 boss 打不死）就算跑完
+		if store.wave_group_total and store.wave_group_number >= store.wave_group_total then
+			self._last_wave_ts = self._last_wave_ts or store.tick_ts
 
-			return
+			if store.tick_ts - self._last_wave_ts > LAST_WAVE_TIMEOUT then
+				stats.victory = false
+				stats.reason = "last_wave_timeout"
+				self.phase = "done"
+
+				return
+			end
 		end
 
 		if store.tick_ts >= MAX_SIM_SECONDS then

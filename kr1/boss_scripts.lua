@@ -13417,7 +13417,9 @@ end
 scripts.enemy_boss_stage_11 = {}
 
 function scripts.enemy_boss_stage_11.update(this, store, script)
-	local OFF_SCREEN_X, OFF_SCREEN_Y = 512, 1000
+	-- dove 的 spatial_index 上界是 IN_GAME_Y_MAX(=1000) 开区间，boss 升到 y=1000 会
+	-- `spatial_index.on_update: ... out of bounds`。取 1000 以下的值即可（仍在屏幕外）。
+	local OFF_SCREEN_X, OFF_SCREEN_Y = 512, 950
 	local controller = boss_find_all_t(store, this.controller_t)[1]
 	local phase = 1
 

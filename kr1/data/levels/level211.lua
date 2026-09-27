@@ -419,17 +419,21 @@ camp=camp or find_all_t(store,this.camp_t)[1]
 if camp then
 can_shoot=not camp.arrow_in_cooldown
 end
-this.user_selection.allowed=can_shoot and this.has_eggs
+local usable=can_shoot and this.has_eggs
+this.user_selection.allowed=usable
+this.tower_action.active=not usable
 this.tower.blocked=not this.has_eggs and camp
 this.tower.can_hover=this.has_eggs and camp
 this.ui.can_click=this.has_eggs and camp
 this.ui.can_hover=this.has_eggs and camp
-if this.user_selection.allowed and this.user_selection.arg==1 then
-store.player_gold=store.player_gold-this.attacks.list[1].price
-this.user_selection.arg=nil
+if this.user_selection.in_progress and usable then
+store.player_gold=store.player_gold-this.tower_action.cost
 this.user_selection.in_progress=nil
 this.user_selection.allowed=false
 activate(camp)
+end
+if this.user_selection.in_progress then
+this.user_selection.in_progress=nil
 end
 coroutine.yield()
 end
@@ -938,8 +942,6 @@ for i=1,b.max_soldiers do
 local s=b.soldiers[i]
 if not s or s.health.dead and not store.entities[s.id] then
 s=E:create_entity(b.soldier_type)
-s.soldier.tower_id=this.id
-s.soldier.tower_soldier_idx=i
 s.pos=V.v(V.add(this.pos.x,this.pos.y,b.respawn_offset.x,b.respawn_offset.y))
 s.nav_rally.pos,s.nav_rally.center=U.rally_formation_position(i,b,b.max_soldiers,math.pi/4)
 s.nav_rally.new=true
@@ -1064,6 +1066,13 @@ end
 last_wave=store.wave_group_number
 coroutine.yield()
 end
+end
+local function bullet_stage_211_camp_fire_arrow_insert(this,store)
+local ok=scripts.arrow5_fixed_height.insert(this,store)
+if ok then
+this.bullet.target_id=nil
+end
+return ok
 end
 local tt=E:register_t_hot("tower_holder_terrain_2_3_ease_in","tower_holder",true)
 AC(tt,"tween")
@@ -1464,7 +1473,9 @@ tt=E:register_t_hot("mod_stage_211_spider_webs_slow","mod_slow",true)
 tt.slow.factor=0.7
 tt.modifier.duration=0.25
 tt=E:register_t_hot("ps_stage_211_fire_arrow","particle_system",true)
-tt.particle_system.name="Archer_Arrow_Fire_Trail"
+tt.particle_system.name="Archer_Arrow_Fire_trail"
+tt.particle_system.animated=true
+tt.particle_system.loop=false
 tt.particle_system.particle_lifetime={fts(27),fts(27)}
 tt.particle_system.emit_rotation_spread=math.pi/2
 tt.particle_system.emit_spread=math.pi/2
@@ -1489,6 +1500,7 @@ tt.render.sprites[1].prefix="CampSpiderTouchDef"
 tt.render.sprites[1].name="run"
 tt.render.sprites[1].exo=true
 tt=E:register_t_hot("bullet_stage_211_camp_fire_arrow","arrow5_fixed_height",true)
+tt.main_script.insert=bullet_stage_211_camp_fire_arrow_insert
 tt.bullet.damage_min=1
 tt.bullet.damage_max=1
 tt.bullet.damage_radius=0
@@ -1577,6 +1589,7 @@ tt.render.sprites[3].flip_x=true
 tt.render.sprites[3].z=Z_OBJECTS_COVERS
 tt.render.sprites[3].hidden=true
 tt.info.portrait="kr6_info_portraits_towers_0011"
+tt.info.fn=scripts.tower_barrack_mercenaries.get_info
 tt.main_script.insert=tower_stage_211_camp_insert
 tt.main_script.update=tower_stage_211_camp_update
 tt.main_script.remove=tower_stage_211_camp_remove
@@ -1635,9 +1648,10 @@ tt.attacks.list[2].basic_attack=true
 tt.sound_events.level_up="Stage11EncampmentLevelUp2"
 tt.sound_events.level_up_taunt="Stage11EncampmentLevelUp2Taunt"
 tt=E:register_t_hot("tower_stage_211_spider_eggs_nest","tower",true)
-AC(tt,"pos","editor","user_selection","attacks")
+AC(tt,"pos","editor","user_selection")
 tt.render.sprites[1].animated=false
 tt.render.sprites[1].name="build_terrain_%04i"
+tt.render.sprites[1].hidden=true
 tt.editor.props={{"nest_id",PT_NUMBER},{"path_id",PT_NUMBER}}
 tt.tower.type="stage_11_spider_eggs_nest"
 tt.tower.menu_offset=v(0,0)
@@ -1645,11 +1659,11 @@ tt.tower.can_be_sold=false
 tt.tower.can_be_mod=false
 tt.tower.max_level=1
 tt.info.portrait="kr6_info_portraits_towers_0010"
+tt.info.fn=scripts.tower_barrack_mercenaries.get_info
 tt.main_script.update=tower_stage_211_spider_eggs_nest_update
-tt.attacks.list[1]=E:clone_c("bullet_attack")
-tt.attacks.list[1].price=50
+tt.tower_action={}
+tt.tower_action.cost=50
 tt.camp_t="tower_stage_211_camp_lvl3"
-tt.user_selection.ignore_point=true
 tt.ui.click_rect=r(-25,-25,50,50)
 tt.ui.hover_sprite_scale=vv(1)
 tt.ui.hover_sprite_offset=v(0,-8)
