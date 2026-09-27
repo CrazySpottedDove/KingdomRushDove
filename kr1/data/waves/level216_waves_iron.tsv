@@ -1,0 +1,270 @@
+#	COMANDOS					1 - Izquierda a Izquierda Arriba					2 - Derecha Arriba a Izquierda Arriba (POR TUNEL)					3 - Derecha Arriba a Derecha Centro					4 - Derecha Abajo a Derecha Centro					5 - Derecha Arriba a Izquierda Arriba (NO TUNEL)					6 - Izquierda Abajo a Abajo Centro					7 - TUNEL!					8 - LAGO / SWAMP a Arriba Izquierda					9 - LAGO / SWAMP a Abajo Derecha Centro
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3
+#	level properties
+	description	Iron Rodri
+	lives	20
+	gold	2530
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	4249
+#	stage gold curve
+#	WAVE 1
+#	enemies					skeleton	gargoyle	brigand	shadow_archer		dark_sapper	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer		dark_construct	darkling	tainted_wolf
+#	cant.					0	0	0	0		1	0	0	0		0	0	0	0		0	0	6
+#	gold	174				0	0	0	0		30	0	0	0		0	0	0	0		0	0	84
+	wave		1		-1
+
+	event	start_bubbles	7		0
+	event	spawn_swamp_husks	7	3	3
+					2							dark_sapper
+	event	spawn_swamp_husks	7	5	5
+	event	spawn_swamp_husks	7	5	8
+	event	spawn_swamp_husks	7	5	5
+					6																						tainted_wolf
+					1.6																							tainted_wolf
+					2																								tainted_wolf
+	event	end_bubbles	7		0
+					3																						tainted_wolf
+					1.6																						tainted_wolf
+					2																								tainted_wolf
+
+
+
+
+
+
+
+
+
+#	39.2
+#	Mostramos swarm p1 y pesados por p2 hacia la misma salida.
+
+
+
+
+#	WAVE 2
+#	enemies					skeleton	gargoyle	brigand	shadow_archer		dark_sapper	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer		dark_construct	darkling	tainted_wolf
+#	cant.					0	0	0	9		1	0	0	0		0	0	0	1		0	0	5
+#	gold	285				0	0	0	135		30	0	0	0		0	0	0	50		0	0	70
+#	wave		2
+					10			necromancer_kr6
+					6							shadow_archer_kr6		shadow_archer_kr6
+					1							shadow_archer_kr6		shadow_archer_kr6
+					8																						tainted_wolf
+					1.5																								tainted_wolf
+					2.3				dark_sapper																			tainted_wolf
+					1.5																							tainted_wolf
+					2																						tainted_wolf
+
+					5							shadow_archer_kr6
+					0.8								shadow_archer_kr6
+					1.2								shadow_archer_kr6
+					1									shadow_archer_kr6
+					1.3								shadow_archer_kr6
+
+
+
+
+
+
+
+
+
+
+#	41.6
+#	Reforzamos el patrón por p1 para seguir farmeando. Exige roots skill/poderes para solucionar.
+Mostramos swarm por p2 tambien para que cambie el modo del Treant.
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 3
+#	enemies					skeleton	gargoyle	brigand	shadow_archer		dark_sapper			dark_disciple		dark_knight	dark_slayer	death_rider	necromancer		dark_construct	darkling	tainted_wolf
+#	cant.					0	0	6	0		0			2		0	0	0	0		0	0	0
+#	gold	260				0	0	120	0		0			60		0	0	0	0		0	0	0
+#	wave		3
+					25												brigand_kr6
+					2														brigand_kr6
+	event	start_bubbles	8		1
+	event	spawn_swamp_husks	8	5	3
+	event	spawn_swamp_husks	8	5	8
+					1																	dark_disciple
+					5														brigand_kr6
+					2												brigand_kr6
+	event	spawn_swamp_husks	8	5	4
+	event	spawn_swamp_husks	8	5	6
+					3																		dark_disciple
+					4														brigand_kr6
+					2												brigand_kr6
+	event	end_bubbles	8		0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	66
+#	Arrancamos a mandar por la salida de abajo. Acá lo más lógico es arrancar por p4 con unos brigandsitos, para que se necesiten barracas.
+Sumamos swarm por p6, para hacer uso del arbol AoE que deberíamos tener del lado derecho y demandar dps en area.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 4
+#	enemies					skeleton	gargoyle	brigand	shadow_archer		dark_sapper	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer		dark_construct	darkling	tainted_wolf
+#	cant.					0	3	0	0		0	0	0	1		0	0	0	0		0	0	8
+#	gold	352				0	90	0	0		0	0	0	30		0	0	0	0		0	0	112
+#	wave		4
+	event	start_bubbles	7		24																				``
+	event	spawn_swamp_thing	7	1	5
+					5												gargoyle_kr6
+	event	end_bubbles	7		0
+					4														gargoyle_kr6				dark_disciple
+					5													gargoyle_kr6
+					10								tainted_wolf				tainted_wolf
+					3									tainted_wolf				tainted_wolf
+					2.5									tainted_wolf			tainted_wolf
+					3								tainted_wolf				tainted_wolf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	61.5
+#	Repite patron push 3 pero con variables de mayor dificultad.
+Introducimos Swamp Thing por p1. Levantar Treant High Level
+
+
+
+
+
+
+
+
+#	WAVE 5																																								S. Thing x1 S. Husk x18
+#	enemies					skeleton	gargoyle	brigand	shadow_archer		dark_sapper	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer		dark_construct	darkling	tainted_wolf
+#	cant.					0	3	0	0		1	0	0	1		0	0	0	0		0	0	0
+#	gold	330				0	90	0	0		30	0	0	30		0	0	0	0		0	0	0
+#	wave		5
+					22																		dark_disciple
+					3													gargoyle_kr6
+					3.5														gargoyle_kr6			dark_disciple
+					4												gargoyle_kr6
+					3.5								dark_sapper
+	event	start_bubbles	7		7
+	event	spawn_swamp_thing	7	1	3
+	event	end_bubbles	7		5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	51
+#	Volvemos el foco a lado izq. Introducimos threat nuevo con wave comp por p1 y brigands p2. Reforzar la infantería del choke. 
+Gargoyles demandan más Wildcatts. Finalizamos con algo por la salida de abajo semi simultáneo preparando el final.
+
+
+
+
+
+
+
+#	WAVE 6																																													S. Thing x1
+#	enemies					skeleton	gargoyle	brigand	shadow_archer		dark_sapper	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer		dark_construct	darkling	tainted_wolf
+#	cant.					0	0	0	0		3	0	0	0		0	0	0	1		0	0	0
+#	gold	548				0	0	0	0		90	0	0	0		0	0	0	50		0		0
+#	wave		6
+#	death rider?
+	event	tirar_treants	tree_1	2	28
+	event	start_bubbles	7		3
+	event	spawn_swamp_husks	7	5	3
+					3																		dark_sapper
+
+	event	tirar_treants	tree_2	1	15
+	event	spawn_swamp_husks	7	5	5
+					2													necromancer_kr6
+	event	end_bubbles	7		5
+					6								dark_sapper
+					2												dark_sapper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	72
+#	Final con Summon Treants Arriba con soporte
+
+
+
+
+
+
+#	TOTAL DURATION (min):	5.52

@@ -15809,3 +15809,126 @@ tt.timed_actions.list[1].summon_offsets = {{1, 3, 9}, {2, 3, 8}, {3, 3, 8}, {2, 
 tt.timed_actions.list[1].summon_skeleton_node_limit = 60
 tt.sound_events.death = "EnemyNecromancerDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
+
+-- enemy_death_rider（死亡骑士，冲刺 + 瘟疫光环 + 滑行尸体）
+tt = RT("enemy_death_rider", "enemy")
+AC(tt, "auras", "death_spawns", "timed_attacks")
+tt.unit.head_offset = v(3, 39)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 77
+tt.health.hp_max = 1100
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 60)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0053"
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.hide_during_death = true
+tt.unit.death_animation = nil
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_death_rider.update
+tt.motion.max_speed = 52
+tt.render.sprites[1].prefix = "death_rider_death_rider"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.unit.show_blood_pool = false
+tt.unit.hit_offset = v(0, 30)
+tt.unit.mod_offset = v(0, 15)
+tt.ui.click_rect = r(-30, 0, 55, 55)
+tt.vis.bans = bor(F_BLOCK)
+tt.vis.flags = bor(F_ENEMY)
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "aura_death_rider_plague_aura"
+tt.auras.list[1].cooldown = 0
+tt.death_spawns.name = "decal_death_rider_dead_sliding"
+tt.death_spawns.spawn_animation = "death"
+tt.death_spawns.concurrent_with_death = true
+tt.slide_speed_factor = 2
+tt.timed_attacks.list[1] = CC("custom_attack")
+tt.timed_attacks.list[1].cooldown = 10
+tt.timed_attacks.list[1].range = 70
+tt.timed_attacks.list[1].vis_flags = bor(F_FRIEND)
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[1].mod = "mod_death_rider_gallop"
+tt.timed_attacks.list[1].duration = 1.8
+tt.timed_attacks.list[1].sound = "Stage16DeathRiderLaugh"
+
+-- aura_death_rider_plague_aura
+tt = RT("aura_death_rider_plague_aura", "aura")
+tt.aura.radius = 50
+tt.aura.cycle_time = 0.25
+tt.aura.duration = 1e+99
+tt.aura.damage_min = 8.8
+tt.aura.damage_max = 17.6
+tt.aura.damage_type = DAMAGE_MAGICAL
+tt.aura.track_source = true
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.vis_flags = bor(F_AREA)
+tt.main_script.update = scripts.aura_apply_damage.update
+
+-- mod_death_rider_gallop
+tt = RT("mod_death_rider_gallop", "mod_slow")
+tt.slow.factor = 1.923
+tt.modifier.type = MOD_TYPE_FAST
+tt.modifier.duration = 1.8
+
+-- decal_death_rider_dead_sliding
+tt = RT("decal_death_rider_dead_sliding", "decal")
+AC(tt, "main_script", "tween", "motion", "nav_path")
+tt.render.sprites[1].prefix = "death_rider_death_rider"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].loop = false
+tt.tween.props[1].keys = {{0, 0}, {1, 255}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].name = "alpha"
+tt.tween.disabled = true
+tt.motion.max_speed = 52 * 2
+tt.motion.speed_limit = 1e+99
+tt.motion.accel = -90
+tt.wait_time_after_stop = 4
+tt.main_script.update = scripts.decal_troll_pathfinder_dead_sliding.update
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+tt.sound_in = "EnemyDeathRiderDeath"
+
+-- enemy_rotten_tree_kr6（KR6 腐烂树精，被树精塔投掷的敌人）
+tt = RT("enemy_rotten_tree_kr6", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(0, 0)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 66
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = {1375, 1512.5, 1650, 2062.5}
+tt.health.armor = 0.5
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 60)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0061"
+tt.info.i18n_key = "ENEMY_ROTTEN_TREE"
+tt.unit.blood_color = BLOOD_GRAY
+tt.unit.can_explode = false
+tt.unit.hit_offset = v(0, 16)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 16)
+tt.unit.show_blood_pool = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 18
+tt.render.sprites[1].prefix = "evil_tree"
+tt.render.sprites[1].scale = vv(1.15)
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 33
+tt.melee.attacks[1].damage_max = 49.5
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(9)
+tt.sound_events.death = "Stage16RottenTreantDeath"
+tt.sound_events.death_args = {
+	delay = 0.5
+}
+tt.ui.click_rect = r(-22, -1, 44, 40)

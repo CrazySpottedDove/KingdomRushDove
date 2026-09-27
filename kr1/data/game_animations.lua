@@ -54609,5 +54609,170 @@ return {
 		from = 1,
 		prefix = "zombie_goat_hit",
 		to = 5
+	},
+	["stage_216_easteregg_deku_deku_sprout_idle"] = {
+		from = 1,
+		prefix = "stage_216_easteregg_deku_deku_sprout",
+		to = 1
+	},
+	["stage_216_easteregg_deku_deku_sprout_shake"] = {
+		from = 2,
+		prefix = "stage_216_easteregg_deku_deku_sprout",
+		to = 36
+	},
+	["stage_216_easteregg_deku_deku_sprout_run"] = {
+		from = 37,
+		prefix = "stage_216_easteregg_deku_deku_sprout",
+		to = 161
+	},
+	["t_decalpath1_run"] = {
+		from = 1,
+		prefix = "t_decalpath1",
+		to = 13
+	},
+	["t_decalpath1_idle"] = {
+		from = 14,
+		prefix = "t_decalpath1",
+		to = 14
+	},
+	["t_decalpath1_leave"] = {
+		from = 15,
+		prefix = "t_decalpath1",
+		to = 32
+	},
+	["t_decalpath1_full"] = {
+		from = 1,
+		prefix = "t_decalpath1",
+		to = 32
+	},
+	["t_decalpath2_run"] = {
+		from = 1,
+		prefix = "t_decalpath2",
+		to = 13
+	},
+	["t_decalpath2_idle"] = {
+		from = 14,
+		prefix = "t_decalpath2",
+		to = 14
+	},
+	["t_decalpath2_leave"] = {
+		from = 15,
+		prefix = "t_decalpath2",
+		to = 25
+	},
+	["t_decalpath2_full"] = {
+		from = 1,
+		prefix = "t_decalpath2",
+		to = 25
+	},
+	["t_decalpath3_run"] = {
+		from = 1,
+		prefix = "t_decalpath3",
+		to = 12
+	},
+	["t_decalpath3_idle"] = {
+		from = 13,
+		prefix = "t_decalpath3",
+		to = 13
+	},
+	["t_decalpath3_leave"] = {
+		from = 14,
+		prefix = "t_decalpath3",
+		to = 24
+	},
+	["t_decalpath3_full"] = {
+		from = 1,
+		prefix = "t_decalpath3",
+		to = 24
+	},
+	["t_healmist_loop"] = {
+		from = 1,
+		prefix = "t_healingmist",
+		to = 40
+	},
+	["t_unitproy_s16_flyandspin"] = {
+		from = 1,
+		prefix = "t_explodeproy",
+		to = 1
+	},
+	["t_unitproy_s16_landandspawnunit"] = {
+		from = 2,
+		prefix = "t_explodeproy",
+		to = 55
+	},
+	["pasto_transicion_proxy_grass_run"] = {
+		from = 1,
+		prefix = "pasto_transicion_proxy_grass",
+		to = 11
+	},
+	["evil_tree_idle"] = {
+		from = 1,
+		prefix = "evil_tree",
+		to = 1
+	},
+	["evil_tree_walkingRightLeft"] = {
+		from = 2,
+		prefix = "evil_tree",
+		to = 25
+	},
+	["evil_tree_walkingDown"] = {
+		from = 26,
+		prefix = "evil_tree",
+		to = 49
+	},
+	["evil_tree_walkingUp"] = {
+		from = 50,
+		prefix = "evil_tree",
+		to = 73
+	},
+	["evil_tree_attack"] = {
+		from = 74,
+		prefix = "evil_tree",
+		to = 103
+	},
+	["evil_tree_death"] = {
+		from = 104,
+		prefix = "evil_tree",
+		to = 138
+	},
+	["evil_tree_raise"] = {
+		from = 139,
+		prefix = "evil_tree",
+		to = 184
+	},
+	["trenant_trail_run"] = {
+		from = 1,
+		prefix = "trenant_trail",
+		to = 9
+	},
+	["death_rider_death_rider_spawn"] = {
+		from = 1,
+		prefix = "death_rider_death_rider",
+		to = 26
+	},
+	["death_rider_death_rider_idle"] = {
+		from = 27,
+		prefix = "death_rider_death_rider",
+		to = 36
+	},
+	["death_rider_death_rider_walk"] = {
+		from = 37,
+		prefix = "death_rider_death_rider",
+		to = 46
+	},
+	["death_rider_death_rider_walk_down"] = {
+		from = 47,
+		prefix = "death_rider_death_rider",
+		to = 56
+	},
+	["death_rider_death_rider_walk_up"] = {
+		from = 57,
+		prefix = "death_rider_death_rider",
+		to = 66
+	},
+	["death_rider_death_rider_death"] = {
+		from = 67,
+		prefix = "death_rider_death_rider",
+		to = 104
 	}
 }

@@ -26258,4 +26258,69 @@ tt.regen.health = 4
 tt.regen.ignore_stun = true
 tt.regen.ignore_freeze = false
 
+-- ==================== kr6：沼泽控制器（全局，stage15/16 共用） ====================
+
+tt = E:register_t("decal_swamp_bubbles_in_loop_out", "decal_scripted")
+tt.render.sprites[1].prefix = "stage_215_bubbles"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_DECALS + 1
+tt.duration = 3
+tt.animation_start = "in"
+tt.animation_idle = "loop"
+tt.animation_end = "out"
+tt.main_script.update = scripts.decal_utils.animation_in_loop_out.update
+
+tt = E:register_t("controller_swamp_spawn_points")
+AC(tt, "pos", "graveyard")
+tt.swamp_id = nil
+tt.interrupt = true
+
+tt = E:register_t("controller_swamp_spawner")
+AC(tt, "main_script")
+tt.spawn_interval = 1
+tt.spawn_cooldown = 3
+tt.main_script.update = scripts.controller_swamp_spawner.update
+
+tt = E:register_t("controller_swamps")
+AC(tt, "pos", "events")
+tt.path_spawner_map = {
+	[6] = 2,
+	[5] = 1
+}
+tt.swamp_t = "controller_swamp_spawn_points"
+tt.spawner_t = "controller_swamp_spawner"
+tt.events.list[1].name = "spawn_swamp_husks"
+tt.events.list[1].on_event = scripts.controller_swamps.spawn_husks
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "spawn_swamp_thing"
+tt.events.list[2].on_event = scripts.controller_swamps.spawn_thing
+
+tt = E:register_t("controller_swamp_bubbles_spawner")
+AC(tt, "main_script", "pos")
+tt.swamp_id = nil
+tt.bubble_t = "decal_swamp_bubbles_in_loop_out"
+tt.bubble_sound = "Stage15SwampBubbling"
+tt.bubble_sound_interval = {3, 7}
+tt.radius = 30
+tt.main_script.update = scripts.controller_swamp_bubbles_spawner.update
+
+tt = E:register_t("controller_swamp_bubbles")
+AC(tt, "events")
+tt.spawn_interval = 1
+tt.bubble_spawner_t = "controller_swamp_bubbles_spawner"
+tt.bubble_count = {5, 6}
+tt.bubble_scales = {0.4, 1}
+tt.bubble_intervals = {fts(5), fts(10)}
+tt.path_spawner_map = {
+	[6] = 2,
+	[5] = 1
+}
+tt.events.list[1].name = "start_bubbles"
+tt.events.list[1].on_event = scripts.controller_swamp_bubbles.on_start
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "end_bubbles"
+tt.events.list[2].on_event = scripts.controller_swamp_bubbles.on_end
+
 return scripts

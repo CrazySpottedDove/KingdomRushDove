@@ -76218,4 +76218,264 @@ function scripts.mod_utils.wait_then_remove_update(this, store)
 	queue_remove(store, this)
 end
 
+-- ==================== kr6：death_rider ====================
+
+scripts.enemy_death_rider = {}
+
+function scripts.enemy_death_rider.update(this, store, script)
+	local a = this.timed_attacks.list[1]
+
+	a.ts = store.tick_ts - a.cooldown
+
+	local normal_speed = this.motion.max_speed
+	local galloping = false
+	local gallop_ts = 0
+	local mod
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+				local soldiers = U.find_soldiers_in_range(store.entities, this.pos, 0, a.range, a.vis_flags, a.vis_bans, function(v, o)
+					local ni = P:nearest_nodes(v.pos.x, v.pos.y, {this.nav_path.pi})[1][3]
+
+					return ni > this.nav_path.ni
+				end)
+
+				if soldiers and #soldiers > 0 then
+					a.ts = store.tick_ts
+					mod = E:create_entity(a.mod)
+					mod.modifier.target_id = this.id
+					mod.modifier.source_id = this.id
+
+					queue_insert(store, mod)
+					S:queue(a.sound)
+				end
+			end
+
+			SU.y_enemy_walk_step(store, this)
+		end
+	end
+end
+
+-- ==================== kr6：沼泽控制器（全局，stage15/16 共用） ====================
+
+local function random_point_in_ellipse(cx, cy, a, b)
+	local t = 2 * math.pi * math.random()
+	local r = math.sqrt(math.random())
+	local x = r * math.cos(t)
+	local y = r * math.sin(t)
+
+	return cx + x * a, cy + y * b
+end
+
+local function generate_blue_noise_cluster(count, candidates, random_fn, ...)
+	local points = {}
+	local x, y = random_fn(...)
+
+	points[1] = {
+		x = x,
+		y = y
+	}
+
+	for i = 2, count do
+		local best_candidate
+		local best_distance2 = -1
+
+		for c = 1, candidates do
+			local px, py = random_fn(...)
+			local min_dist2 = math.huge
+
+			for _, p in ipairs(points) do
+				local d2 = V.dist2(px, py, p.x, p.y)
+
+				if d2 < min_dist2 then
+					min_dist2 = d2
+				end
+			end
+
+			if best_distance2 < min_dist2 then
+				best_distance2 = min_dist2
+				best_candidate = {
+					x = px,
+					y = py
+				}
+			end
+		end
+
+		points[i] = best_candidate
+	end
+
+	return points
+end
+
+scripts.controller_swamp_spawner = {}
+
+function scripts.controller_swamp_spawner.update(this, store)
+	local spawn_set = this.spawn_data
+	local aux = {}
+
+	for i = 1, spawn_set[2] do
+		local e, s_pos, pi, spi, ni
+		local spawn_points = store.entities[spawn_set[4]]
+
+		if spawn_set[5] then
+			s_pos = spawn_points.center_spawn
+			pi, spi, ni = spawn_set[3], 1, 1
+		else
+			s_pos = spawn_points.graveyard.spawn_pos[get_random_round_robin(aux, #spawn_points.graveyard.spawn_pos)]
+			local nearest_nodes = P:nearest_nodes(s_pos.x, s_pos.y, spawn_set[3] and {spawn_set[3]} or nil, {1, 2, 3})
+
+			if #nearest_nodes < 1 then
+				log.error("swamps controller %s could not spawn enemy. node not found near %s,%s", this.id, s_pos.x, s_pos.y)
+
+				break
+			end
+
+			pi, spi, ni = unpack(nearest_nodes[1])
+		end
+
+		local enemy = spawn_set[1]
+
+		if not U.is_seen(store, enemy) then
+			signal.emit("wave-notification", "icon", enemy)
+			U.mark_seen(store, enemy)
+		end
+
+		e = E:create_entity(enemy)
+		e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, spi, ni
+		e.pos = V.vclone(s_pos)
+		e.render.sprites[1].name = "raise"
+		e.motion.forced_waypoint = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+		queue_insert(store, e)
+		U.y_wait(store, this.spawn_interval)
+	end
+
+	queue_remove(store, this)
+end
+
+local function swamps_spawn_event(this, store, spawn, path_id, amount, force_center)
+	local int_pid = tonumber(path_id)
+	local int_am = tonumber(amount)
+	local swamp_id = this.path_spawner_map[int_pid]
+	local swamp = find_all_t(store, this.swamp_t, false, function(k, value)
+		return value.swamp_id == swamp_id
+	end)[1]
+
+	if not swamp then
+		log.error("ERROR: No swamp found of id: %s", swamp_id)
+
+		return
+	end
+
+	local spawner = E:create_entity(this.spawner_t)
+
+	spawner.spawn_data = {spawn, int_am, int_pid, swamp.id, force_center}
+	queue_insert(store, spawner)
+end
+
+scripts.controller_swamps = {}
+
+function scripts.controller_swamps.spawn_husks(this, store, action, path_id, amount)
+	swamps_spawn_event(this, store, "enemy_swamp_husk", path_id, amount)
+end
+
+function scripts.controller_swamps.spawn_thing(this, store, action, path_id)
+	swamps_spawn_event(this, store, "enemy_swamp_thing_kr6", path_id, "1", true)
+end
+
+scripts.controller_swamp_bubbles = {}
+
+function scripts.controller_swamp_bubbles.on_start(this, store, action, path_id)
+	local int_pid = tonumber(path_id)
+	local swamp_id = this.path_spawner_map[int_pid]
+	local bubbler = find_all_t(store, this.bubble_spawner_t, false, function(k, value)
+		return value.swamp_id == swamp_id
+	end)[1]
+
+	if not bubbler then
+		log.error("ERROR: No swamp found of id: %s", swamp_id)
+
+		return
+	end
+
+	bubbler.bubble = true
+	bubbler.spawn_data = {this.bubble_count, this.bubble_scales, this.bubble_intervals}
+end
+
+function scripts.controller_swamp_bubbles.on_end(this, store, action, path_id)
+	local int_pid = tonumber(path_id)
+	local swamp_id = this.path_spawner_map[int_pid]
+	local bubbler = find_all_t(store, this.bubble_spawner_t, false, function(k, value)
+		return value.swamp_id == swamp_id
+	end)[1]
+
+	if not bubbler then
+		log.error("ERROR: No swamp found of id: %s", swamp_id)
+
+		return
+	end
+
+	bubbler.bubble = false
+end
+
+scripts.controller_swamp_bubbles_spawner = {}
+
+function scripts.controller_swamp_bubbles_spawner.update(this, store, script)
+	local bubble_positions = generate_blue_noise_cluster(8, 40, random_point_in_ellipse, this.pos.x, this.pos.y, this.radius, this.radius * 0.7)
+	local bubbling = false
+	local bubbles = {}
+	local sound_ts
+
+	while true do
+		if this.bubble and not bubbling then
+			bubbling = true
+			sound_ts = store.tick_ts + U.frandom(this.bubble_sound_interval[1], this.bubble_sound_interval[2])
+			local bubble_count_range = this.spawn_data[1]
+			local bubble_scale_range = this.spawn_data[2]
+			local bubble_interval_range = this.spawn_data[3]
+			local aux = {}
+
+			for i = 1, math.random(bubble_count_range[1], bubble_count_range[2]) do
+				local scale = U.frandom(bubble_scale_range[1], bubble_scale_range[2])
+				local bubble_pos = bubble_positions[get_random_round_robin(aux, 8)]
+				local bubble = E:create_entity(this.bubble_t)
+
+				bubble.duration = 1e+99
+				bubble.pos = V.v(bubble_pos.x, bubble_pos.y)
+				bubble.render.sprites[1].scale = V.vv(scale)
+				queue_insert(store, bubble)
+				table.insert(bubbles, bubble)
+				U.y_wait(store, U.frandom(bubble_interval_range[1], bubble_interval_range[2]))
+			end
+		end
+
+		if not this.bubble and bubbling then
+			bubbling = false
+			local bubble_interval_range = this.spawn_data[3]
+
+			for i, b in ipairs(bubbles) do
+				b.duration = 0
+				U.y_wait(store, U.frandom(bubble_interval_range[1], bubble_interval_range[2]))
+			end
+
+			bubbles = {}
+		end
+
+		if bubbling and sound_ts <= store.tick_ts then
+			S:queue(this.bubble_sound)
+			sound_ts = store.tick_ts + U.frandom(this.bubble_sound_interval[1], this.bubble_sound_interval[2])
+		end
+
+		coroutine.yield()
+	end
+end
+
 return scripts

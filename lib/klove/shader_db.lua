@@ -44,4 +44,23 @@ function shader_db:get(name)
 	return self.shaders[name]
 end
 
+function shader_db:clone(name, new_name)
+	if self.shaders[new_name] then
+		return self.shaders[new_name]
+	end
+
+	local filename = self.path .. "/" .. name .. ".c"
+	local ok, sh = pcall(love.graphics.newShader, filename)
+
+	if not ok then
+		log.error("error loading shader:%s from file:%s\n%s", name, filename, tostring(sh))
+
+		return nil
+	end
+
+	self.shaders[new_name] = sh
+
+	return sh
+end
+
 return shader_db

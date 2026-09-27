@@ -2425,10 +2425,17 @@ function atlas_manager:_frame_content_key(sel)
 		end
 		return hash and ("png:" .. hash) or nil
 	end
-	local fq = f.f_quad or {0, 0, 0, 0}
-	local tr = f.trim or {0, 0, 0, 0}
-	local sz = f.size or {0, 0}
-	return string.format("atlas:%s:%d,%d,%d,%d:%d,%d,%d,%d:%d,%d:%.6f", tostring(f.a_name), fq[1], fq[2], fq[3], fq[4], tr[1], tr[2], tr[3], tr[4], sz[1], sz[2], f.ref_scale or 1)
+	local fq = f.f_quad or {}
+	local tr = f.trim or {}
+	local sz = f.size or {}
+
+	-- 容错：历史/合并产物里可能存在裁剪/尺寸字段缺项的帧（如 trim={x}），
+	-- 直接索引会让 string.format 收到 nil 而崩溃。缺失项按 0 处理并打日志。
+	if fq[1] == nil or tr[1] == nil or tr[2] == nil or sz[1] == nil then
+		print(string.format("[atlas_manager] _frame_content_key: incomplete frame %s.%s (trim={%s,%s,%s,%s} size={%s,%s} f_quad={%s,%s,%s,%s})", tostring(sel.group), tostring(sel.frame_name), tostring(tr[1]), tostring(tr[2]), tostring(tr[3]), tostring(tr[4]), tostring(sz[1]), tostring(sz[2]), tostring(fq[1]), tostring(fq[2]), tostring(fq[3]), tostring(fq[4])))
+	end
+
+	return string.format("atlas:%s:%d,%d,%d,%d:%d,%d,%d,%d:%d,%d:%.6f", tostring(f.a_name), fq[1] or 0, fq[2] or 0, fq[3] or 0, fq[4] or 0, tr[1] or 0, tr[2] or 0, tr[3] or 0, tr[4] or 0, sz[1] or 0, sz[2] or 0, f.ref_scale or 1)
 end
 
 --- 按内容指纹去重选中的帧（原地排序 selected）。
@@ -2555,13 +2562,18 @@ function atlas_manager:_make_merge_frame(sel)
 		end
 	end
 	local logical = orig
+	local lsize = (logical and logical.size) or src.size or {}
+	local ltrim = (logical and logical.trim) or src.trim or {}
+	local sa = src.a_size or {}
+	local sq = src.f_quad or {}
+	local oa = (logical and logical.a_size) or sa
 	return {
 		a_name = src.a_name,
-		size = logical and {logical.size[1], logical.size[2]} or {src.size[1], src.size[2]},
-		trim = logical and {logical.trim[1], logical.trim[2], logical.trim[3], logical.trim[4]} or {src.trim[1], src.trim[2], src.trim[3], src.trim[4]},
-		a_size = {src.a_size[1], src.a_size[2]},
-		_orig_a_size = logical and {logical.a_size[1], logical.a_size[2]} or {src.a_size[1], src.a_size[2]},
-		f_quad = {src.f_quad[1], src.f_quad[2], src.f_quad[3], src.f_quad[4]},
+		size = {lsize[1] or 0, lsize[2] or 0},
+		trim = {ltrim[1] or 0, ltrim[2] or 0, ltrim[3] or 0, ltrim[4] or 0},
+		a_size = {sa[1] or 0, sa[2] or 0},
+		_orig_a_size = {oa[1] or 0, oa[2] or 0},
+		f_quad = {sq[1] or 0, sq[2] or 0, sq[3] or 0, sq[4] or 0},
 		alias = type(src.alias) == "table" and src.alias or {},
 		ref_scale = logical and (logical.ref_scale or 1) or (src.ref_scale or 1),
 		dds_key = src.dds_key,
