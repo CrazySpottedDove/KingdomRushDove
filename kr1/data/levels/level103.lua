@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level01")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -15,13 +14,6 @@ function level:load(store)
 P:deactivate_path(4)
 end
 function level:update(store)
-local heart
-for k,v in pairs(store.entities) do
-if v.template_name=="trees_heart_of_the_arborean_decal" then
-heart=v
-break
-end
-end
 while store.wave_group_number<1 do
 coroutine.yield()
 end

@@ -4,8 +4,6 @@ local E=require("entity_db")
 local U=require("utils")
 local V=require("lib.klua.vector")
 local v=V.v
-local vv=V.vv
-local r=V.r
 local I=require("lib.klove.image_db")
 local S=require("sound_db")
 local scripts=require("scripts")
@@ -182,7 +180,7 @@ points[#points+1]=n.pos
 end
 else
 local pred_time=aa.cast_time+E:get_template(E:get_template(aa.bullet).bullet.payload).time_to_blow
-local target,targets=U.find_foremost_enemy(store,this.pos,aa.min_range,aa.max_range,pred_time,aa.vis_flags,aa.vis_bans)
+local _,targets=U.find_foremost_enemy(store,this.pos,aa.min_range,aa.max_range,pred_time,aa.vis_flags,aa.vis_bans)
 local nearest=P:nearest_nodes(this.pos.x,this.pos.y)
 local in_range=table.filter(nearest,function(k,v)
 return v[4]<this.attacks.range
@@ -492,7 +490,7 @@ end
 local nightfall={}
 function nightfall.quad_screen_rect(pos,s)
 local sd=I:s(s.name)
-local vx,vy,vw,vh=frame_quad(sd)
+local vx,_,vw,vh=frame_quad(sd)
 if not vx or not sd.size then
 return nil
 end
@@ -1147,7 +1145,7 @@ local ps=store.entities[em.id] or em.e
 if ps and ps.particle_system then
 ps.particle_system.emit=false
 end
-em.last_x,em.last_y=nil
+em.last_x,em.last_y=nil,nil
 end
 end
 local function update_grass_emitters(threshold,dt)

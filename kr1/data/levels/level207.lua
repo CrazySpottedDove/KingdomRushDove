@@ -121,7 +121,7 @@ end
 U.animation_start(bush,"idle",nil,store.tick_ts,true)
 U.y_wait(store,this.spawn_delay-(store.tick_ts-start_ts))
 local nearest_nodes=P:nearest_nodes(bush.pos.x,bush.pos.y,{this.path_id},{1})
-local pi,spi,ni=unpack(nearest_nodes[1])
+local _,_,ni=unpack(nearest_nodes[1])
 S:queue(this.sound_exit)
 for i=1,this.enemies_count do
 local fx=E:create_entity(this.spawn_fx)
@@ -147,12 +147,9 @@ local barn=find_all_t(store,"controller_stage_207_barn")[1]
 barn.soldier_arrived=true
 end
 local function controller_stage_207_barn_update(this,store)
-local barn,tower
+local tower
 local horse_conts={}
 for k,v in pairs(store.entities) do
-if v.template_name==this.barn_t then
-barn=v
-end
 if v.template_name==this.tower_t then
 tower=v
 end
@@ -233,7 +230,7 @@ this.release_horse=nil
 this.horse_ready=false
 U.y_animation_play(horses[this.horse_id],"out",nil,store.tick_ts,1)
 local nearest_nodes=P:nearest_nodes(this.pos.x,this.pos.y,{this.knight_path},{1})
-local pi,spi,ni=unpack(nearest_nodes[1])
+local _,_,ni=unpack(nearest_nodes[1])
 local knight=E:create_entity(this.knight_t)
 knight.pos=V.vclone(this.pos)
 knight.path_id=this.knight_path
@@ -309,7 +306,6 @@ end
 end
 end
 local function run_backwards()
-local last_pos=this.pos
 distSq=V.dist2(target_pos.x,target_pos.y,this.pos.x,this.pos.y)
 if distSq<25 then
 path_ni=path_ni-3

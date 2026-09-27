@@ -290,7 +290,7 @@ if this.do_spawn then
 local start_ts=store.tick_ts
 U.y_wait(store,this.spawn_delay-(store.tick_ts-start_ts))
 local nearest_nodes=P:nearest_nodes(house.pos.x,house.pos.y,{this.path_id},{1})
-local pi,spi,ni=unpack(nearest_nodes[1])
+local _,_,ni=unpack(nearest_nodes[1])
 for i=1,this.enemies_count do
 local enemy=E:create_entity(this.enemy_t)
 enemy.nav_path.pi=this.path_id

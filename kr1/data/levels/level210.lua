@@ -13,7 +13,6 @@ local S=require("sound_db")
 local scripts=require("scripts")
 local r=V.r
 local v=V.v
-local vv=V.vv
 local function AC(tpl,...)
 return E:add_comps(tpl,...)
 end

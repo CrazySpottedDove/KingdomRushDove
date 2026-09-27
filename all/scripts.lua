@@ -4981,6 +4981,176 @@ function scripts.tunnel.update(this, store)
 	end
 end
 
+scripts.tunnel_KR6 = {}
+
+function scripts.tunnel_KR6.insert(this, store, script)
+	local tu = this.tunnel
+
+	if not tu.pick_ni then
+		tu.pick_ni = P:get_end_node(tu.pick_pi) - 1
+	end
+
+	if not tu.place_ni then
+		tu.place_ni = 1
+	end
+
+	local pick_end = P:get_end_node(tu.pick_pi)
+	local place_start = P:get_start_node(tu.place_pi)
+	local pick_start = pick_end - this.untargetable_distance
+	local place_end = place_start + this.untargetable_distance
+
+	P:add_invalid_range(tu.pick_pi, pick_start, pick_end)
+	P:add_invalid_range(tu.place_pi, place_start, place_end)
+
+	return scripts.aura_apply_mod.insert(this, store, script)
+end
+
+function scripts.tunnel_KR6.update(this, store, script)
+	local tu = this.tunnel
+
+	if not tu.pick_ni then
+		tu.pick_ni = P:get_end_node(tu.pick_pi) - 1
+	end
+
+	if not tu.place_ni then
+		tu.place_ni = 1
+	end
+
+	local pf = P:node_pos(tu.pick_pi, 1, tu.pick_ni)
+	local pt = P:node_pos(tu.place_pi, 1, tu.place_ni)
+	local length = V.dist(pf.x, pf.y, pt.x, pt.y)
+	local picked_enemies = tu.picked_enemies
+
+	tu.length = length
+	this.total_picked_enemies = 0
+
+	while true do
+		local enemies = table.filter(store.enemies, function(_, e)
+			return e and e.enemy and e.health and not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and e.nav_path.pi == tu.pick_pi and e.nav_path.ni >= tu.pick_ni and (tu.pick_pi ~= tu.place_pi or e.nav_path.ni < tu.place_ni)
+		end)
+
+		for _, enemy in pairs(enemies) do
+			if tu.pick_fx then
+				local fx = E:create_entity(tu.pick_fx)
+
+				fx.pos = V.v(enemy.pos.x, enemy.pos.y)
+
+				if tu.fx_use_unit_offset and enemy.unit and enemy.unit.mod_offset then
+					fx.pos.x, fx.pos.y = fx.pos.x + enemy.unit.mod_offset.x, fx.pos.y + enemy.unit.mod_offset.y
+				end
+
+				fx.render.sprites[1].ts = store.tick_ts
+
+				simulation:queue_insert_entity(fx)
+			end
+
+			if tu.pick_sound then
+				S:queue(tu.pick_sound)
+			end
+
+			local release_ts = store.tick_ts + length / (tu.speed_factor * enemy.motion.max_speed)
+
+			log.debug("tunnel %s picked %s", this.id, enemy.id)
+
+			if this.transformer and this.transformer[enemy.template_name] then
+				table.insert(picked_enemies, {
+					release_ts = release_ts,
+					entity = enemy,
+					transform_to = this.transformer[enemy.template_name]
+				})
+			else
+				table.insert(picked_enemies, {
+					release_ts = release_ts,
+					entity = enemy
+				})
+			end
+
+			SU.remove_modifiers(store, enemy)
+			SU.remove_auras(store, enemy)
+			simulation:queue_remove_entity(enemy)
+			U.unblock_all(store, enemy)
+
+			if enemy.ui then
+				enemy.ui.can_click = false
+			end
+
+			enemy.main_script.co = nil
+			enemy.main_script.runs = 0
+
+			if enemy.count_group then
+				enemy.count_group.in_limbo = true
+			end
+
+			this.total_picked_enemies = this.total_picked_enemies + 1
+		end
+
+		for i = #picked_enemies, 1, -1 do
+			local p = picked_enemies[i]
+
+			if p.release_ts > store.tick_ts then
+			-- block empty
+			else
+				local enemy
+
+				if not p.transform_to then
+					enemy = p.entity
+				else
+					enemy = E:create_entity(p.transform_to)
+				end
+
+				enemy.nav_path.pi = tu.place_pi
+				enemy.nav_path.ni = tu.place_ni
+				enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
+				enemy.main_script.runs = 1
+				enemy._placed_from_tunnel = true
+
+				if enemy.ui then
+					enemy.ui.can_click = true
+				end
+
+				if store.kill_tunnel_releases then
+					enemy.health.hp = 0
+
+					if enemy.death_spawns then
+						enemy.health.last_damage_types = DAMAGE_NO_SPAWNS
+					end
+
+					if enemy.enemy then
+						enemy.enemy.gold = 0
+					end
+				end
+
+				simulation:queue_insert_entity(enemy)
+
+				if p.transform_to and not U.is_seen(store, p.transform_to) then
+					signal.emit("wave-notification", "icon", p.transform_to)
+					U.mark_seen(store, p.transform_to)
+				end
+
+				table.remove(picked_enemies, i)
+
+				if tu.place_fx then
+					local fx = E:create_entity(tu.place_fx)
+
+					fx.pos = V.v(enemy.pos.x, enemy.pos.y)
+
+					if enemy.vis and band(enemy.vis.flags, F_FLYING) ~= 0 and enemy.unit and enemy.unit.hit_offset then
+						fx.render.sprites[1].offset = V.v(enemy.unit.hit_offset.x, enemy.unit.hit_offset.y)
+					end
+
+					fx.render.sprites[1].ts = store.tick_ts
+
+					simulation:queue_insert_entity(fx)
+				end
+
+				log.debug("tunnel %s placed %s", this.id, enemy.id)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
 scripts.tunnel_KR5 = {}
 
 function scripts.tunnel_KR5.insert(this, store)

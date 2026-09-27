@@ -112,7 +112,7 @@ coroutine.yield()
 end
 end
 local function decal_stage_211_giant_spider_rappel_spawn_update(this,store,script)
-local shadow,string,max_height=scripts.decal_rappel_utils.y_descend(this,store)
+local shadow,string=scripts.decal_rappel_utils.y_descend(this,store)
 U.animation_start(this,this.short_rappel_anim,nil,store.tick_ts,nil,1)
 U.y_wait(store,this.wait_detach)
 string.dissolve=true
@@ -223,7 +223,7 @@ local function decal_stage_211_sarelgaz_descent_update(this,store,script)
 this.render.sprites[1].ts=store.tick_ts
 local start_y=scripts.decal_rappel_utils.set_y(this,store)
 this.pos.y=start_y
-local shadow,string,max_height=scripts.decal_rappel_utils.y_descend(this,store)
+local shadow=scripts.decal_rappel_utils.y_descend(this,store)
 local boss=find_all_t(store,this.boss_t)[1]
 if boss then
 boss.lower_trigger=true
@@ -290,11 +290,8 @@ queue_remove(store,this)
 end
 local function controller_stage_211_shadows_update(this,store,script)
 this._ease=false
-local start_ts
-local torches_durations=this.ease_durations*0.8
 while true do
 if this._ease and this._ease_from and this._ease_to then
-start_ts=store.tick_ts
 local i=1
 local torches=find_all_t(store,this.torch_t,false,function(k,v)
 return v.camp_level==this._camp_level
@@ -681,7 +678,7 @@ local nodes_in_fly_time=nodes_vel*aa.pred_time
 local nodes_to_end=P:nodes_to_goal(e.nav_path.pi,e.nav_path.spi,e.nav_path.ni)
 return nodes_in_fly_time<nodes_to_end
 end)
-local final_enemy,final_pos,shooter,b,boffset,hoffset,af
+local final_enemy,final_pos,shooter,af
 if not trigger_enemy then
 SU.delay_attack(store,aa,fts(10))
 goto label_1226_0

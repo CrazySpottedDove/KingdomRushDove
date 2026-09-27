@@ -73,7 +73,6 @@ elseif not ab.disabled then
 local enemy,pred_pos=find_target(ab)
 if not enemy then
 else
-local enemy_id=enemy.id
 local enemy_pos=V.vclone(enemy.pos)
 S:queue(ab.sound)
 U.animation_start(this,ab.animation,nil,store.tick_ts,false)

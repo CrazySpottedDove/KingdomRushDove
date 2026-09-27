@@ -15186,6 +15186,25 @@ tt.sound_events.hit = "Stage13KamikazeGliderDeathImpact"
 tt = RT("fx_brigand_hit", "fx")
 tt.render.sprites[1].name = "brigand_hit_run"
 
+tt = RT("fx_dark_knight_hit", "fx")
+tt.render.sprites[1].name = "dark_knight_hit_run"
+
+tt = RT("fx_dark_slayer_hit", "fx")
+tt.render.sprites[1].name = "dark_slayer_hit_run"
+
+tt = RT("decal_dark_knight_on_kill", "decal")
+AC(tt, "main_script", "timed")
+tt.main_script.update = scripts.decal_utils.track_target_update
+tt.animation_start = "run"
+tt.render.sprites[1].prefix = "dark_knight_killfx"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].offset = v(0, 8)
+tt.target_id = nil
+tt.timed.runs = 1
+
 tt = RT("fx_dark_sapper_hit", "fx")
 tt.render.sprites[1].name = "dark_sapper_hit_run"
 
@@ -15932,3 +15951,96 @@ tt.sound_events.death_args = {
 	delay = 0.5
 }
 tt.ui.click_rect = r(-22, -1, 44, 40)
+
+-- KR6 stage17 dark army (必须 _kr6 后缀：enemy_dark_knight 与 dove 本体 KR1 同名敌人冲突)
+tt = RT("enemy_dark_knight_kr6", "enemy")
+AC(tt, "melee", "death_spawns", "track_kills")
+tt.unit.head_offset = v(5, 22)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.enemy.gold = 66
+tt.enemy.melee_slot = v(36, 0)
+tt.enemy.lives_cost = 1
+tt.health.hp_max = {962.5, 1182.5, 1320, 1650}
+tt.health.armor = 0.8
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 39)
+tt.info.portrait = "kr6_info_portraits_enemies_0052"
+tt.unit.show_blood_pool = false
+tt.unit.hit_offset = v(0, 15)
+tt.unit.mod_offset = v(0, 15)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_dark_knight.update
+tt.motion.max_speed = 28
+tt.death_spawns.name = "enemy_dark_slayer"
+tt.death_spawns.delay = fts(32)
+tt.death_spawns.concurrent_with_death = false
+tt.death_spawns.dead_lifetime = 0
+tt.death_spawns.no_spawn_damage_types = DAMAGE_ALL_TYPES
+tt.render.sprites[1].prefix = "dark_knight_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.melee.attacks[1].animation = "mele"
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 33
+tt.melee.attacks[1].damage_max = 50.6
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(18)
+tt.melee.attacks[1].dodge_time = fts(18)
+tt.melee.attacks[1].hit_fx = "fx_dark_knight_hit"
+tt.melee.attacks[1].hit_fx_offset = v(35, 15)
+tt.sound_events.death = "EnemyDarkKnightDeath"
+tt.ui.click_rect = r(-20, -3, 40, 35)
+tt.kills_to_transform = 1000
+tt.transformation_sound = "EnemyDarkKnightTransform"
+tt.decal_on_kill = "decal_dark_knight_on_kill"
+
+tt = RT("enemy_dark_slayer", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(6, 32)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.enemy.gold = 176
+tt.enemy.melee_slot = v(36, 0)
+tt.enemy.lives_cost = 2
+tt.health.hp_max = {1650, 1980, 2200, 2750}
+tt.health.armor = 1
+tt.health.magic_armor = 0
+tt.health.spiked_armor = 0.3
+tt.health_bar.offset = v(0, 50)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0056"
+tt.unit.hit_offset = v(0, 18)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 15)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.unit.show_blood_pool = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 24
+tt.render.sprites[1].prefix = "dark_slayer_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.melee.attacks[1].animation = "attack_1"
+tt.melee.attacks[1].cooldown = 2
+tt.melee.attacks[1].damage_min = 38.5
+tt.melee.attacks[1].damage_max = 57.2
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_fx = "fx_dark_slayer_hit"
+tt.melee.attacks[1].hit_offset = v(40, 15)
+tt.melee.attacks[1].hit_times = {fts(14), fts(26)}
+tt.melee.attacks[1].dodge_time = fts(14)
+tt.melee.attacks[2] = CC("melee_attack")
+tt.melee.attacks[2].cooldown = 10
+tt.melee.attacks[2].chance = 0.3
+tt.melee.attacks[2].animation = "instakill"
+tt.melee.attacks[2].damage_type = DAMAGE_INSTAKILL
+tt.melee.attacks[2].vis_bans = bor(F_HERO)
+tt.melee.attacks[2].hit_fx = "fx_dark_slayer_hit"
+tt.melee.attacks[2].hit_time = fts(18)
+tt.melee.attacks[2].dodge_time = fts(18)
+tt.melee.attacks[2].hit_offset = v(50, 15)
+tt.melee.attacks[2].hp_threshold = 1
+tt.sound_events.death = "EnemyDarkSlayerDeath"
+tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
+tt.ui.click_rect = r(-25, 0, 50, 45)

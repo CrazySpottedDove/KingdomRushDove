@@ -450,7 +450,6 @@ queue_insert(store,ray_decal)
 queue_insert(store,b)
 end
 local function y_shoot_ray(a)
-local target
 local trigger_target,targets=U.find_foremost_enemy(store,this.pos,a.min_range,a.max_range,a.node_prediction,a.vis_flags,a.vis_bans,function(e,o)
 return e.template_name~="enemy_boss_stage_213" and GR:cell_is(e.pos.x,e.pos.y,a.accepted_terrains)
 end)
@@ -463,7 +462,7 @@ S:queue(this.sound_events.ray_fire)
 animation_start_all(this,a.start_anim,nil,store.tick_ts)
 U.y_wait(store,a.shoot_time)
 S:queue(this.sound_events.ray_loop)
-local t2,targets2=U.find_foremost_enemy(store,this.pos,a.min_range,a.max_range,a.node_prediction,a.vis_flags,a.vis_bans,function(e,o)
+local _,targets2=U.find_foremost_enemy(store,this.pos,a.min_range,a.max_range,a.node_prediction,a.vis_flags,a.vis_bans,function(e,o)
 return e.template_name~="enemy_boss_stage_213" and GR:cell_is(e.pos.x,e.pos.y,a.accepted_terrains)
 end)
 if targets2 and #targets2>0 then
@@ -497,7 +496,6 @@ a.ts=store.tick_ts
 return true
 end
 local function y_shoot_ray_at_boss(boss,a)
-local target
 local target_pos=V.vclone(boss.pos)
 is_shooting=true
 S:queue(this.sound_events.ray_fire)
@@ -658,7 +656,7 @@ brk,sta=SU.y_soldier_melee_block_and_attacks(store,this)
 if brk or sta~=A_NO_TARGET then
 if sta==A_DONE then
 local nearest=P:nearest_nodes(this.pos.x,this.pos.y,{this.path_id})
-local pi,spi,ni=unpack(nearest[1])
+local _,spi,ni=unpack(nearest[1])
 path_ni=ni+2
 target_pos=P:node_pos(this.path_id,spi,path_ni)
 end
@@ -1287,7 +1285,6 @@ return
 end
 local S=require("sound_db")
 local signal=require("lib.hump.signal")
-local v=V.v
 local fts=function(t)
 return t/30
 end

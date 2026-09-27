@@ -2,9 +2,6 @@ local log=require("lib.klua.log"):new("level11")
 local signal=require("lib.hump.signal")
 local km=require("lib.klua.macros")
 local bit=require("bit")
-local bor=bit.bor
-local band=bit.band
-local bnot=bit.bnot
 local AC=require("achievements")
 local E=require("entity_db")
 local P=require("path_db")
@@ -251,7 +248,6 @@ end
 function level:y_puzzle_complete(store)
 local boulder_from=v(830+OX,626)
 local boulder_to=v(1071+OX+65,580)
-local boulder_speed=V.dist(boulder_to.x,boulder_to.y,boulder_from.x,boulder_from.y)/2.2
 local decal_boulder=E:create_entity("decal_indiana_boulder")
 decal_boulder.pos=boulder_from
 U.set_destination(decal_boulder,boulder_to)

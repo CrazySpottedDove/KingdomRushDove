@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level01")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -32,13 +31,6 @@ signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",3,{x=512,y=384},1)
 signal.emit("show-gui")
 signal.emit("end-cinematic")
-local platform_c
-for i,v in ipairs(store.entities) do
-if v.template_name=="controller_stage_27_platform" then
-platform_c=v
-break
-end
-end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end

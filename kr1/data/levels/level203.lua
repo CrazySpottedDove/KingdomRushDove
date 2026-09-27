@@ -12,7 +12,6 @@ local scripts=require("scripts")
 local V=require("lib.klua.vector")
 local r=V.r
 local v=V.v
-local vv=V.vv
 local signal=require("lib.hump.signal")
 local function AC(tpl,...)
 return E:add_comps(tpl,...)
@@ -43,7 +42,6 @@ local eat_cd=fts(math.random(5*FPS,8*FPS))
 while not this.ui.clicked do
 coroutine.yield()
 if eat_cd<store.tick_ts-eat_ts then
-local eat_cd=fts(math.random(5*FPS,8*FPS))
 eat_ts=store.tick_ts
 U.animation_start(this,"eat",nil,store.tick_ts,false)
 end
@@ -149,7 +147,6 @@ this.ui.can_click=false
 end
 end
 if jump_cd<store.tick_ts-jump_ts then
-local jump_cd=fts(math.random(5,10)*30)
 jump_ts=store.tick_ts
 this.render.sprites[1].hidden=false
 this.ui.can_click=true

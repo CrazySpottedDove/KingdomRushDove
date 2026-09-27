@@ -76478,4 +76478,56 @@ function scripts.controller_swamp_bubbles_spawner.update(this, store, script)
 	end
 end
 
+scripts.enemy_dark_knight = {}
+
+function scripts.enemy_dark_knight.update(this, store, script)
+	local kill_count = 0
+
+	local function create_decal_on_kill()
+		local decal = E:create_entity(this.decal_on_kill)
+
+		decal.render.sprites[1].ts = store.tick_ts
+		decal.target_id = this.id
+
+		simulation:queue_insert_entity(decal)
+	end
+
+	local function check_transformation()
+		if #this.track_kills.killed > kill_count then
+			kill_count = #this.track_kills.killed
+		end
+
+		if #this.track_kills.killed >= this.kills_to_transform then
+			this.health.ignore_damage = true
+
+			S:queue(this.transformation_sound)
+			U.y_animation_play(this, "transform", nil, store.tick_ts, 1)
+			SU.do_death_spawns(store, this)
+			simulation:queue_remove_entity(this)
+		end
+	end
+
+	::label_dark_knight::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, nil, nil, nil) then
+				goto label_dark_knight
+			else
+				check_transformation()
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
 return scripts

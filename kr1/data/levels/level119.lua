@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level01")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -92,7 +91,7 @@ boss.nav_path.pi=2
 boss.nav_path.spi=1
 boss.pos=V.v(765,424)
 local node=P:nearest_nodes(boss.pos.x,boss.pos.y,{boss.nav_path.pi},{boss.nav_path.spi})[1]
-local pi,spi,ni=unpack(node)
+local _,_,ni=unpack(node)
 boss.nav_path.ni=ni
 boss.render.sprites[1].hidden=true
 LU.queue_insert(store,boss)

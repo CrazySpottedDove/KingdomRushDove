@@ -142,7 +142,7 @@ local function phases_register_defend_points(this,store)
 for phase,decals in ipairs(this.defend_points_per_phase) do
 for _,d in pairs(decals) do
 for _,item in pairs(P:nearest_nodes(d.pos.x,d.pos.y,this.paths_per_phase[phase])) do
-local pi,spi,ni,dist=unpack(item,1,4)
+local pi,_,ni,dist=unpack(item,1,4)
 if dist<P:path_width(pi)/2 then
 P:set_defend_point_node(pi,ni)
 end
@@ -302,10 +302,10 @@ if enemies then
 for k,v in pairs(enemies) do
 v.nav_path.pi=v.nav_path.pi==1 and 3 or 4
 local nearest_nodes=P:nearest_nodes(this.pos.x,this.pos.y,{v.nav_path.pi})
-local pi,spi,ni=unpack(nearest_nodes[1])
+local _,spi,ni=unpack(nearest_nodes[1])
 v.nav_path.spi=spi
 v.nav_path.ni=ni
-local nxt,new=P:next_entity_node(v,store.tick_length)
+local nxt=P:next_entity_node(v,store.tick_length)
 U.set_destination(v,nxt)
 end
 end
@@ -355,7 +355,6 @@ end
 for k,v in pairs(this.paths_per_phase[3]) do
 P:activate_path(v)
 end
-local keys=table.keys(this.path_change_map)
 if enemies_2 then
 for k,v in pairs(enemies_2) do
 if P:nodes_to_goal(v.nav_path.pi,v.nav_path.spi,v.nav_path.ni)<52 then
@@ -370,10 +369,10 @@ local path_to_change_to=this.path_change_map[v.nav_path.pi]
 if path_to_change_to then
 v.nav_path.pi=path_to_change_to
 local nearest_nodes=P:nearest_nodes(v.pos.x,v.pos.y,{v.nav_path.pi},{v.nav_path.spi},true)
-local pi,spi,ni=unpack(nearest_nodes[1])
+local _,spi,ni=unpack(nearest_nodes[1])
 v.nav_path.spi=spi
 v.nav_path.ni=ni
-local nxt,new=P:next_entity_node(v,store.tick_length)
+local nxt=P:next_entity_node(v,store.tick_length)
 U.set_destination(v,nxt)
 end
 end
@@ -409,10 +408,10 @@ if enemies then
 for k,v in pairs(enemies) do
 v.nav_path.pi=this.path_change_map[v.nav_path.pi]
 local nearest_nodes=P:nearest_nodes(v.pos.x,v.pos.y,{v.nav_path.pi},{v.nav_path.spi},true)
-local pi,spi,ni=unpack(nearest_nodes[1])
+local _,spi,ni=unpack(nearest_nodes[1])
 v.nav_path.spi=spi
 v.nav_path.ni=ni
-local nxt,new=P:next_entity_node(v,store.tick_length)
+local nxt=P:next_entity_node(v,store.tick_length)
 U.set_destination(v,nxt)
 end
 end

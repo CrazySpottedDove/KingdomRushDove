@@ -632,6 +632,13 @@ tt.main_script.update = scripts.tunnel_KR5.update
 tt.untargetable_distance = 10
 tt.flags_to_tag = {F_RANGED, F_BLOCK}
 
+tt = E:register_t("tunnel_KR6", "tunnel")
+tt.main_script.insert = scripts.tunnel_KR6.insert
+tt.main_script.update = scripts.tunnel_KR6.update
+tt.untargetable_distance = 10
+tt.transformer = {}
+tt.flags_to_tag = {F_RANGED, F_BLOCK}
+
 tt = E:register_t("tunnel_KR5_destructible", "tunnel_KR5")
 tt.main_script.update = scripts.tunnel_KR5_destructible.update
 tt.destroyed = false

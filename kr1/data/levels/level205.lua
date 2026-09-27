@@ -12,10 +12,8 @@ local SU=require("script_utils")
 local scripts=require("scripts")
 local V=require("lib.klua.vector")
 local signal=require("lib.hump.signal")
-local log=require("lib.klua.log"):new("level205")
 local r=V.r
 local v=V.v
-local vv=V.vv
 local function AC(tpl,...)
 return E:add_comps(tpl,...)
 end

@@ -15,7 +15,6 @@ local level={}
 function level:init(store)
 self.manual_hero_insertion=false
 if store.level_mode==GAME_MODE_CAMPAIGN then
-local user_data=storage:load_slot()
 local already_passed_level=true
 if not already_passed_level then
 self.manual_hero_insertion=true
@@ -23,7 +22,6 @@ end
 end
 end
 function level:load(store)
-local user_data=storage:load_slot()
 local already_passed_level=true
 if not already_passed_level then
 local veznan=E:create_entity("decal_stage_02_veznan")
@@ -34,10 +32,9 @@ end
 end
 function level:update(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
-local user_data=storage:load_slot()
 local already_passed_level=true
 if not already_passed_level then
-local raelyn,defend_point,veznan
+local defend_point,veznan
 for _,e in pairs(store.entities) do
 if e.template_name=="decal_defend_point" then
 defend_point=e

@@ -2,9 +2,6 @@ local log=require("lib.klua.log"):new("level14")
 local signal=require("lib.hump.signal")
 local km=require("lib.klua.macros")
 local bit=require("bit")
-local bor=bit.bor
-local band=bit.band
-local bnot=bit.bnot
 local A=require("achievements")
 local E=require("entity_db")
 local P=require("path_db")
@@ -16,7 +13,6 @@ require("all.constants")
 local function fts(v)
 return v/FPS
 end
-local v=V.v
 local level={}
 level.required_sounds={"music_stage40","FrontiersUndergroundAmbienceSounds","DwarfSounds","DwarfHeroSounds","SpecialMountainDoor"}
 level.required_textures={"go_enemies_underground","go_stages_underground","go_stage40","go_stage40_bg"}

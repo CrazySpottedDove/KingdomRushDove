@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level01")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -12,7 +11,7 @@ require("all.constants")
 local function fts(v)
 return v/FPS
 end
-local boss_shadow_waves,moving_island,ballista
+local boss_shadow_waves,moving_island
 local function y_set_middle_path_walkable(store)
 for x=2,87 do
 for y=32,15,-1 do

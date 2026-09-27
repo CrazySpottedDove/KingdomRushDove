@@ -72,7 +72,6 @@ local E=require("entity_db")
 local scripts=require("scripts")
 local S=require("sound_db")
 local v=V.v
-local vv=V.vv
 local r=V.r
 local function AC(tpl,...)
 return E:add_comps(tpl,...)
@@ -259,7 +258,6 @@ end
 end
 local function accusation_update(this,store,script)
 local cauldron=find_all_t(store,this.cauldron_t)[1]
-local mist=find_all_t(store,this.mist_t)[1]
 while true do
 if this.cinematic_trigger then
 local bb=find_all_t(store,this.blackburn_t)[1]
@@ -682,7 +680,6 @@ return bbb.bossfight_ended
 end)
 store.custom_game_outcome={postpone_unload=true,after_victory_screen=true}
 elseif store.level_mode==GAME_MODE_IRON then
-local bb=insert_stage_hero(store,3)
 local bb_idle=find_all_t(store,"decal_stage_215_lord_blackburn_corrupt_level_3_idle")[1]
 if bb_idle then
 simulation:queue_remove_entity(bb_idle)

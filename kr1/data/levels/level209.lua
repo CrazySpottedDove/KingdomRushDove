@@ -205,7 +205,7 @@ return true
 end
 local function tower_holder_pillar_update(this,store)
 local tap_count=0
-local last_tap,crumble
+local crumble
 local wait=math.random(this.random_min,this.random_max)
 local start_ts=store.tick_ts
 while wait>store.tick_ts-start_ts do

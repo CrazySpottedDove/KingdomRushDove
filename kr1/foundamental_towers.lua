@@ -218,6 +218,20 @@ tt.tower.terrain_style = TERRAIN_STYLE_KR6_TERRAIN_2_2
 tt.tower_holder.unblock_price = 100
 tt.render.sprites[1].name = "kr6_build_terrain_blocked_0007"
 
+-- kr6 地形 3_6 / 3_7 的 blocked 塔位（关卡 217）
+-- tower.type 用通用 "blocked_holder"，避免点击无响应
+tt = E:register_t("tower_holder_blocked_terrain_3_6", "tower_holder_blocked")
+tt.tower.type = "blocked_holder"
+tt.tower.terrain_style = TERRAIN_STYLE_KR6_TERRAIN_3_6
+tt.tower_holder.unblock_price = 120
+tt.render.sprites[1].name = "kr6_build_terrain_blocked_0015"
+
+tt = E:register_t("tower_holder_blocked_terrain_3_7", "tower_holder_blocked")
+tt.tower.type = "blocked_holder"
+tt.tower.terrain_style = TERRAIN_STYLE_KR6_TERRAIN_3_7
+tt.tower_holder.unblock_price = 120
+tt.render.sprites[1].name = "kr6_build_terrain_blocked_0016"
+
 tt = RT("tower_build_archer", "tower_build")
 tt.build_name = "tower_archer_1"
 tt.render.sprites[2].name = "tower_constructing_0004"

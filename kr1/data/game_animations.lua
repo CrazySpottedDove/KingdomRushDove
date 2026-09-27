@@ -54774,5 +54774,165 @@ return {
 		from = 67,
 		prefix = "death_rider_death_rider",
 		to = 104
+	},
+	dark_knight_killfx_run = {
+		from = 1,
+		prefix = "dark_knight_killfx",
+		to = 21
+	},
+	dark_knight_hit_run = {
+		from = 1,
+		prefix = "dark_knight_hit",
+		to = 6
+	},
+	dark_knight_creep_idle = {
+		from = 1,
+		prefix = "dark_knight_creep",
+		to = 1
+	},
+	dark_knight_creep_walk = {
+		from = 2,
+		prefix = "dark_knight_creep",
+		to = 25
+	},
+	dark_knight_creep_walk_down = {
+		from = 26,
+		prefix = "dark_knight_creep",
+		to = 49
+	},
+	dark_knight_creep_walk_up = {
+		from = 50,
+		prefix = "dark_knight_creep",
+		to = 73
+	},
+	dark_knight_creep_mele = {
+		from = 74,
+		prefix = "dark_knight_creep",
+		to = 103
+	},
+	dark_knight_creep_death = {
+		from = 104,
+		prefix = "dark_knight_creep",
+		to = 141
+	},
+	dark_knight_creep_transform = {
+		from = 142,
+		prefix = "dark_knight_creep",
+		to = 211
+	},
+	dark_slayer_spike_run = {
+		from = 1,
+		prefix = "dark_slayer_spike",
+		to = 14
+	},
+	dark_slayer_hit_run = {
+		from = 1,
+		prefix = "dark_slayer_hit",
+		to = 10
+	},
+	dark_slayer_creep_idle = {
+		from = 1,
+		prefix = "dark_slayer_creep",
+		to = 8
+	},
+	dark_slayer_creep_walk = {
+		from = 9,
+		prefix = "dark_slayer_creep",
+		to = 38
+	},
+	dark_slayer_creep_walk_down = {
+		from = 39,
+		prefix = "dark_slayer_creep",
+		to = 68
+	},
+	dark_slayer_creep_walk_up = {
+		from = 69,
+		prefix = "dark_slayer_creep",
+		to = 98
+	},
+	dark_slayer_creep_attack_1 = {
+		from = 99,
+		prefix = "dark_slayer_creep",
+		to = 138
+	},
+	dark_slayer_creep_death = {
+		from = 139,
+		prefix = "dark_slayer_creep",
+		to = 184
+	},
+	dark_slayer_creep_instakill = {
+		from = 185,
+		prefix = "dark_slayer_creep",
+		to = 224
+	},
+	stage217_fogata_fire_idle = {
+		from = 1,
+		prefix = "stage7_fogata_fire",
+		to = 12
+	},
+	stage217_fogata_fire_action = {
+		from = 13,
+		prefix = "stage7_fogata_fire",
+		to = 75
+	},
+	stage217_fogata_fire_idle_ashes = {
+		from = 76,
+		prefix = "stage7_fogata_fire",
+		to = 76
+	},
+	stage_217_mod_enemies_in = {
+		from = 1,
+		prefix = "Stage217Layers_s17decalevil",
+		to = 22
+	},
+	stage_217_mod_enemies_loop = {
+		from = 23,
+		prefix = "Stage217Layers_s17decalevil",
+		to = 64
+	},
+	stage_217_mod_enemies_pillar_in = {
+		from = 1,
+		prefix = "Stage217Layers_s17decalevilcolumn",
+		to = 14
+	},
+	stage_217_mod_soldiers_in = {
+		from = 1,
+		prefix = "Stage217Layers_s17decalgood",
+		to = 22
+	},
+	stage_217_mod_soldiers_loop = {
+		from = 23,
+		prefix = "Stage217Layers_s17decalgood",
+		to = 64
+	},
+	stage_217_mod_soldiers_pillar_in = {
+		from = 1,
+		prefix = "Stage217Layers_s17decalgoodcolumn",
+		to = 14
+	},
+	stage217_paladin_soldier_idle = {
+		from = 1,
+		prefix = "KR1_barracks_tower_lvl4_unit_paladin",
+		to = 1
+	},
+	stage217_paladin_soldier_running = {
+		from = 2,
+		prefix = "KR1_barracks_tower_lvl4_unit_paladin",
+		to = 21
+	},
+	stage217_paladin_soldier_attack = {
+		from = 22,
+		prefix = "KR1_barracks_tower_lvl4_unit_paladin",
+		to = 44
+	},
+	stage217_paladin_soldier_attack2 = {
+		from = 45,
+		prefix = "KR1_barracks_tower_lvl4_unit_paladin",
+		to = 69
+	},
+	stage217_paladin_soldier_death = {
+		from = 146,
+		prefix = "KR1_barracks_tower_lvl4_unit_paladin",
+		to = 166
 	}
 }

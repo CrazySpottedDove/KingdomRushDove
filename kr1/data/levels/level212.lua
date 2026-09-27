@@ -154,8 +154,7 @@ local function controller_stage_212_elevator_on_rise_event(this,store,action)
 this.rise=true
 end
 local function decal_stage_212_troll_warrior_rappel_spawn_update(this,store,script)
-local start_y=store.visible_coords and store.visible_coords.top or REF_H
-local shadow,string,max_height=scripts.decal_rappel_utils.y_descend(this,store)
+local shadow,string=scripts.decal_rappel_utils.y_descend(this,store)
 string.dissolve=true
 local sp=E:create_entity(this.spawn_t)
 sp.pos.x,sp.pos.y=this.target_pos.x,this.target_pos.y

@@ -1,0 +1,454 @@
+#	COMANDOS					1 - Derecha-Arriba a Izquierda-Arriba					2 - Derecha-Arriba a Izquierda-Abajo					3 - Derecha-Abajo a Izquierda-Arriba					4 - Derecha-Abajo a Izquierda-abajo					5 - Abajo a Izquierda-Abajo					6- Dark Knights to Fort
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties
+	description	main JA
+	lives	20
+	gold	1540
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	-
+#	stage total gold	10740
+#	stage gold curve	-
+#	WAVE 1				25	Brigand x8 D. Sapper x1										S. Archer x6
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					6	0	0	8		1	0	0	0		0	0
+#	gold	300				90	0	0	160		30	0	0	0		0	0	0
+	wave		1		-1
+					0			dark_sapper
+					2		brigand_kr6
+					0.6				brigand_kr6
+					3		brigand_kr6
+					0.6				brigand_kr6
+					1													shadow_archer_kr6
+					1.2												shadow_archer_kr6
+					1.2														shadow_archer_kr6
+  					8		brigand_kr6
+					0.6				brigand_kr6
+					3		brigand_kr6
+					0.6				brigand_kr6
+					1												shadow_archer_kr6
+					1														shadow_archer_kr6
+					1													shadow_archer_kr6
+
+
+
+
+
+#	WAVE 2				30						T. Wolf x					T. Wolf x
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	14	0		0	0	0	0		0	0
+#	gold	210				0	0	196	0		0	0	0	0		0	0	0
+	wave		2		20
+					0														tainted_wolf
+					1.5													tainted_wolf
+					1.5														tainted_wolf
+					4																	tainted_wolf
+					1.5																		tainted_wolf
+					1.5																	tainted_wolf
+					8													tainted_wolf
+					1.5														tainted_wolf
+					1.4																		tainted_wolf
+					1.5																	tainted_wolf
+					4																		tainted_wolf
+					1.2													tainted_wolf
+					1.2																	tainted_wolf
+					1.2														tainted_wolf
+
+
+
+#	WAVE 3				24	Brigand x10					D. Sapper x																				D. Knight x2
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	0	2		1	0	0	0		5	0
+#	gold	400				0	0	0	40		30	0	0	0		300	0	0
+	wave		3		20
+					0		brigand_kr6
+					1.4				brigand_kr6
+					1.5		dark_knight_kr6
+					1.4				dark_knight_kr6
+					4								dark_sapper
+					10		brigand_kr6
+					1.4				brigand_kr6
+					1.5			dark_knight_kr6
+					1.4																													dark_knight_kr6
+					1.5		dark_knight_kr6
+
+
+
+#	WAVE 4				43						Gargoyle x										Gargoyle x					T. Wolf x
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	10	6	0		0	0	0	0		0	0
+#	gold	180				0	80	84	0		0	0	0	0		0	0	0
+	wave		4		28
+					0						gargoyle_kr6
+					1.6						gargoyle_kr6
+					4																gargoyle_kr6
+					1.6																gargoyle_kr6
+					8																						tainted_wolf
+					1.3																								tainted_wolf
+					6						gargoyle_kr6
+					2																gargoyle_kr6
+					2						gargoyle_kr6
+					2						gargoyle_kr6
+					2																gargoyle_kr6
+					2																gargoyle_kr6
+					6																					tainted_wolf
+					1.2																					tainted_wolf
+					2																					tainted_wolf
+					1.3																					tainted_wolf
+
+
+#	WAVE 5				32	D. Knight x4										D. Disciple x
+S. Archer x															D. Knight x1
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					8	0	0	0		0	0	2	0		3	0
+#	gold	390				120	0	0	0		0	0	60	0		180	0	0
+	wave		5		22
+	event	duel_call			0
+					2				dark_knight_kr6
+					1.2		dark_knight_kr6
+					8													dark_disciple
+					1												shadow_archer_kr6
+					1.2														shadow_archer_kr6
+					1.4												shadow_archer_kr6
+					1.2														shadow_archer_kr6
+					10				dark_knight_kr6
+					1.2		dark_knight_kr6
+					4														shadow_archer_kr6
+					1.2												shadow_archer_kr6
+					0																												dark_knight_kr6
+					2													dark_disciple
+					1														shadow_archer_kr6
+					0.2												shadow_archer_kr6
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 6				35											Brigand x					Necromancer x					Brigand x
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	0	16		0	1	0	0		0	0
+#	gold	460				0	0	0	320		0	50	0	0		0	0	50
+	wave		6		28
+	event	duel_call			0
+					2												brigand_kr6
+					1.2												brigand_kr6		brigand_kr6
+					1.2														brigand_kr6
+					0																		necromancer_kr6
+					8																								brigand_kr6
+					1.2																						brigand_kr6
+					1.2																						brigand_kr6
+					1.2																								brigand_kr6
+					6												brigand_kr6
+					0.2														brigand_kr6
+					1.2												brigand_kr6
+					0.1														brigand_kr6
+					8																						brigand_kr6
+					1.2																								brigand_kr6
+					1.2																								brigand_kr6
+					1.2																						brigand_kr6
+
+
+
+#	WAVE 7				32											D. Rider x					D. Rider x					Gargoyle x
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	6	0	0		0	0	0	4		0	0
+#	gold	360				0	48	0	0		0	0	0	280		0	0	0
+	wave		7		26
+					0													death_rider
+					4																	death_rider
+					6																					gargoyle_kr6
+					1.6																					gargoyle_kr6
+					1.5																					gargoyle_kr6
+					8																		death_rider
+					4														death_rider
+					4																					gargoyle_kr6
+					1.6																					gargoyle_kr6
+					1.5																					gargoyle_kr6
+
+
+
+
+
+
+
+
+#	WAVE 8				32	D. Knight x										T. Wolf x															D. Knight x
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	9	13		0	0	0	0		4	0
+#	gold	680				0	0	126	260		0	0	0	0		240	0	0
+	wave		8		22
+					0			brigand_kr6
+					1.2		brigand_kr6		brigand_kr6
+					1.2		brigand_kr6
+					0.1				brigand_kr6
+	event	duel_call			2
+					0			brigand_kr6
+					1.2		brigand_kr6		brigand_kr6
+					1.2			brigand_kr6
+					4											tainted_wolf
+					1.2											tainted_wolf
+					1.2											tainted_wolf
+					1.2											tainted_wolf
+					2		dark_knight_kr6
+					1.2																												dark_knight_kr6
+					1.2				dark_knight_kr6
+	event	duel_call			4
+					0											tainted_wolf
+					1.2											tainted_wolf
+					1.3											tainted_wolf
+					1.2											tainted_wolf
+					1.1											tainted_wolf
+					1				brigand_kr6
+					0.3		brigand_kr6
+					1.2																												dark_knight_kr6
+					1.2				brigand_kr6
+					0.1		brigand_kr6
+
+
+
+
+
+
+#	WAVE 9				48
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	16	0		2	2	0	0		0	0
+#	gold	530				0	0	224	0		60	100	0	0		0	0	100
+	wave		9		24
+					0																		necromancer_kr6
+					2																	tainted_wolf
+					1.2																			tainted_wolf
+					4																							dark_sapper
+					4																					tainted_wolf
+					1.5																					tainted_wolf
+					1.6																					tainted_wolf
+					8																					tainted_wolf
+					1.2																					tainted_wolf
+					1.1																					tainted_wolf
+					1.2																					tainted_wolf
+					4																		necromancer_kr6
+					6																	tainted_wolf
+					1.2																			tainted_wolf
+					1.2																	tainted_wolf
+					1.4																			tainted_wolf
+					2																							dark_sapper
+					4																					tainted_wolf
+					1.2																					tainted_wolf
+					1.2																					tainted_wolf
+
+
+
+
+
+#	WAVE 10				34
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					13	0	0	0		0	0	3	3		0	0
+#	gold	540				195	0	0	0		0	0	90	210		0	0	0
+	wave		10		20
+	event	duel_call			0.4
+					2												shadow_archer_kr6
+					1.2														shadow_archer_kr6
+					2								death_rider
+					4																							dark_disciple
+					2																						shadow_archer_kr6		shadow_archer_kr6
+					1.5																						shadow_archer_kr6
+					0.2																								shadow_archer_kr6
+					6								death_rider
+					1.2
+					1.2
+	event	duel_call			0
+					4												shadow_archer_kr6
+					0.2														shadow_archer_kr6
+					0													dark_disciple
+					2														shadow_archer_kr6
+					0.1												shadow_archer_kr6
+					4								death_rider
+					2																							shadow_archer_kr6
+					1.5																						shadow_archer_kr6		shadow_archer_kr6
+					0																							dark_disciple
+
+
+#	WAVE 11				29
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	0	10		4	0	0	0		7	0
+#	gold	810				0	0	0	200		120	0	0	0		420	0	0
+	wave		11		22
+					1.2		dark_knight_kr6
+					1.2				dark_knight_kr6
+					1.2																												dark_knight_kr6
+					2							dark_sapper
+					1																		brigand_kr6
+					1.2																	brigand_kr6
+					0.1																			brigand_kr6
+					1.3																	brigand_kr6		brigand_kr6
+					6									dark_sapper
+					2			dark_knight_kr6
+					1.2		dark_knight_kr6
+					1.2																													dark_knight_kr6
+					1.2																												dark_knight_kr6
+	event	duel_call			0
+					2																	brigand_kr6
+					0.2																			brigand_kr6
+					1.3																	brigand_kr6		brigand_kr6
+					1.2																		brigand_kr6
+					2							dark_sapper
+					1									dark_sapper
+
+
+
+
+
+
+
+
+#	WAVE 12				44
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	16	0	0		0	0	0	5		0	0
+#	gold	520				0	128	0	0		0	0	0	350		0	0	0
+	wave		12		20
+					0											gargoyle_kr6
+					1.4											gargoyle_kr6
+					1.5											gargoyle_kr6
+					1.3											gargoyle_kr6
+					2								death_rider
+					3																		death_rider
+					2																					gargoyle_kr6
+					1.5																					gargoyle_kr6
+					1.4																					gargoyle_kr6
+					1.5																					gargoyle_kr6
+					8							death_rider
+					4									death_rider
+					2											gargoyle_kr6
+					1.4											gargoyle_kr6
+					1.5											gargoyle_kr6
+					1.4											gargoyle_kr6
+					4																		death_rider
+					2																					gargoyle_kr6
+					1.4																					gargoyle_kr6
+					1.5																					gargoyle_kr6
+					1.4																					gargoyle_kr6
+
+
+#	WAVE 13				40
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	0	14		0	2	0	0		8	0
+#	gold	1050				0	0	0	280		0	100	0	0		480	0	100
+	wave		13		20
+					0												brigand_kr6
+					0.1														brigand_kr6
+					1.2																		necromancer_kr6
+					2												brigand_kr6		brigand_kr6
+	event	duel_call			2
+					4		dark_knight_kr6
+					1.3																													dark_knight_kr6
+					1.2		dark_knight_kr6
+					1.4																													dark_knight_kr6
+					2																					brigand_kr6
+					1.2																					brigand_kr6
+					1.2																					brigand_kr6
+					1.1																					brigand_kr6
+					4														brigand_kr6
+					0.6												brigand_kr6
+					0.5																		necromancer_kr6
+					0.5												brigand_kr6		brigand_kr6
+					0.7
+	event	duel_call			2
+					6																					brigand_kr6
+					1.2																					brigand_kr6
+					1.2																					brigand_kr6
+					1.1																					brigand_kr6
+					0				dark_knight_kr6
+					1.3																												dark_knight_kr6
+					1.2				dark_knight_kr6
+					1.4																												dark_knight_kr6
+
+
+
+#	WAVE 14				36
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	16	7		2	0	0	0		6	0
+#	gold	860				0	0	224	140		60	0	0	0		360	0	0
+	wave		14		26
+					0							brigand_kr6
+					1.2									brigand_kr6
+					1.2									brigand_kr6
+					1.2							brigand_kr6
+					0.5								dark_sapper
+					1		dark_knight_kr6
+					1.2				dark_knight_kr6
+					2											tainted_wolf
+					1.2											tainted_wolf
+					1.1											tainted_wolf
+					1.6																tainted_wolf
+					1.2																tainted_wolf
+					1.2																tainted_wolf
+	event	duel_call			2
+					4									brigand_kr6
+					0.1							brigand_kr6
+					1.2							brigand_kr6
+					0.2									brigand_kr6
+					0.5								dark_sapper
+					1		dark_knight_kr6
+					1.2				dark_knight_kr6
+					1.2				dark_knight_kr6
+					1.2		dark_knight_kr6
+					1.2											tainted_wolf
+					1.1											tainted_wolf
+					1.4																tainted_wolf
+																					tainted_wolf
+					1.2																tainted_wolf
+					1.4											tainted_wolf
+					1.2											tainted_wolf
+					1.4																tainted_wolf
+																					tainted_wolf
+					1.2																tainted_wolf
+
+
+#	WAVE 15				49
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	0	20		0	0	6	0		13	2
+#	gold	1840				0	0	0	400		0	0	180	0		780	320
+	wave		15		26
+					0			dark_slayer
+	event	duel_call			2
+					2		dark_knight_kr6		dark_knight_kr6
+					2																													dark_knight_kr6
+					0.1		dark_knight_kr6
+					2																			brigand_kr6
+					0.4																	brigand_kr6
+					1.5																	brigand_kr6		brigand_kr6
+					1																		dark_disciple
+					1.5																	brigand_kr6		brigand_kr6
+	event	duel_call			2
+					2																							dark_disciple
+					2																						brigand_kr6		brigand_kr6
+					1.3																						brigand_kr6		brigand_kr6
+					1																						dark_disciple		dark_disciple
+					2		dark_knight_kr6		dark_knight_kr6
+					1.2																												dark_knight_kr6
+					2																	brigand_kr6
+					0.8																			brigand_kr6
+					1.2																			brigand_kr6
+					0.8																	brigand_kr6
+					1.2																	brigand_kr6
+					0.8																			brigand_kr6
+	event	duel_call			2
+					1			dark_slayer
+					4		dark_knight_kr6
+					0.4				dark_knight_kr6
+					1.8																												dark_knight_kr6
+					2		dark_knight_kr6		dark_knight_kr6
+					1.8																												dark_knight_kr6
+					1.2																						brigand_kr6		brigand_kr6
+					1.2																							dark_disciple
+					1.2																						brigand_kr6		brigand_kr6
+					1.2																							dark_disciple

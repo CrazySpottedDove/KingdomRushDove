@@ -1,0 +1,187 @@
+#	COMANDOS					1 - Derecha-Arriba a Izquierda-Arriba					2 - Derecha-Arriba a Izquierda-Abajo					3 - Derecha-Abajo a Izquierda-Arriba					4 - Derecha-Abajo a Izquierda-abajo					5 - Abajo a Izquierda-Abajo					6- Dark Knights to Fort
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties
+	description	Iron Rodri
+	lives	20
+	gold	1650
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	-
+#	stage total gold	3940
+#	stage gold curve
+#	WAVE 1				54.2
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	7	10		0	0	0	0		0	0
+#	gold	320				0	0	98	200		0	0	0	0		0	0	0
+	wave		1		-1
+					0		brigand_kr6
+					0.1			brigand_kr6
+					7													brigand_kr6
+					0.1												brigand_kr6
+					10			brigand_kr6
+					0.5		brigand_kr6		brigand_kr6
+					8													brigand_kr6
+					0.5												brigand_kr6		brigand_kr6
+					13																							tainted_wolf
+					5																						tainted_wolf
+					3																								tainted_wolf
+					3																							tainted_wolf
+					2																								tainted_wolf
+					1																						tainted_wolf
+					1																							tainted_wolf
+
+
+
+
+#	Tiramos brigands por p1 y p3 para exigir armar Alchemist y blocks adelante. 
+Terminando hacia ambas salidas, no va a haber otra que construir adelante por los blocked holders. 
+Mostramos NoArmor creeps por p5 para exigir Ranger por ahí.
+#	WAVE 2				57.6
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	10	0		0	0	1	0		3	0
+#	gold	380				0	0	140	0		0	0	30	0		180	0	0
+	wave		2
+	event	duel_call			7
+					10.5																											dark_knight_kr6
+					0.1																												dark_knight_kr6
+					12																		dark_disciple
+
+					6																			tainted_wolf
+					1.3																	tainted_wolf
+					1																			tainted_wolf
+					0.7																	tainted_wolf
+					3																	tainted_wolf
+	event	duel_call			0
+					1																			tainted_wolf
+					1.2																			tainted_wolf
+					1																	tainted_wolf
+					1.3																	tainted_wolf
+					1.5																			tainted_wolf
+					10																												dark_knight_kr6
+
+#	Introducimos mecánica duel para bloquear Dark Knights y repite.
+Reforzamos planteo de push 1 pero con Wolves por p3, para que salgan por camino de abajo pero vayan hacia arriba, forzando aún más el Ranger en el holder de la isla central.
+Wolves por p3 refuerzan compra de Sticky Pillage o Bramble.
+#	WAVE 3				38
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					5	0	0	5		0	0	1	1		0	0
+#	gold	300				75	0	0	100		0	0	30	70		0	0	0
+	wave		3
+					12																							brigand_kr6
+					3																						brigand_kr6
+					1																								brigand_kr6
+					0.7																						brigand_kr6		brigand_kr6
+					3																		dark_disciple
+					7																	shadow_archer_kr6
+					0.8																		shadow_archer_kr6
+					1																			shadow_archer_kr6
+					0.7																	shadow_archer_kr6
+					0.8																		shadow_archer_kr6
+					8								death_rider
+
+
+
+
+
+
+
+
+
+
+
+
+#	Sugerimos construcción de Alchemist en el holder abajo izquierda mandando brigands por p5. Dos grupos bien juntos, uno lidiamos con alchemist + heroes y el otro RoF.
+Continuamos con el formato de p2 pero insistimos un poco más, exigiendo más atención y recursos.
+#	WAVE 4				0
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	0	0		0	0	0	0		0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0
+	wave		4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 5				45.5
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	0	5		1	0	3	1		0	0
+#	gold	310				0	0	0	100		30	0	90	70		0	0	0
+	wave		5
+					8													necromancer_kr6
+	event	duel_call			0
+					8												dark_sapper
+					4														dark_disciple
+					10								death_rider
+
+																							dark_sapper
+					4																	brigand_kr6
+					1.5																	brigand_kr6		brigand_kr6
+					1.2																			brigand_kr6
+					0.8																	brigand_kr6
+					6																						dark_disciple
+					2																								dark_disciple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	Arranca Necro con buen soporte por p3, lidiar con esto rápido. Duel after into Dark Knights arriba.
+Termina de sugerir Sticky/Bramble. Combinaciones complicadas all arround.
+
+#	WAVE 6				81.5
+#	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
+#	cant.					0	0	16	0		0	0	0	3		2	2
+#	gold	960				0	0	224	0		0	0	0	210		120	320	0
+	wave		6
+	event	duel_call			14
+					5																		death_rider
+					7				dark_slayer
+					5																											dark_knight_kr6
+					0.2																													dark_knight_kr6
+	event	duel_call			6.3
+					10																							tainted_wolf
+					0.8																								tainted_wolf
+					1.5																								tainted_wolf
+					1																						tainted_wolf	tainted_wolf
+	event	duel_call			5
+					0.8		dark_slayer											tainted_wolf									tainted_wolf
+					1												tainted_wolf											tainted_wolf
+					1.2														tainted_wolf										tainted_wolf
+					1													tainted_wolf
+					1.2			death_rider											tainted_wolf
+					11																							death_rider
+					6																						tainted_wolf
+					1.5																								tainted_wolf
+					2																						tainted_wolf
+
+
+
+#	TOTAL DURATION (min):	4.61

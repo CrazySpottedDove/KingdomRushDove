@@ -6,7 +6,6 @@ local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local P=require("path_db")
-local G=love.graphics
 local SU=require("script_utils")
 local storage=require("all.storage")
 local W=require("wave_db")
@@ -76,11 +75,8 @@ signal.emit("tutorial-tower-enable-all")
 set_can_click_on_all_holders(store,true)
 end
 local level={}
-local holder_to_enable_archer={}
-local holder_to_enable_barrack={}
 level.tower_menu_hiding=true
 level.hide_notifications=false
-local zoom_in_depth=1.25
 local signal_handlers
 local function unregister_signals()
 for _,row in pairs(signal_handlers) do
@@ -92,9 +88,6 @@ signal_handlers={}
 end
 function level:init(store)
 self.manual_hero_insertion=false
-local user_data=storage:load_slot()
-local already_passed_tutorial=user_data.levels[1] and user_data.levels[1][1]~=nil
-local unlocked_raelyn=user_data.levels[2] and user_data.levels[2][1]~=nil
 end
 function level:preprocess(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
@@ -108,7 +101,7 @@ end},{"_game_quit","game-quit",function()
 unregister_signals()
 end}}
 for _,row in pairs(signal_handlers) do
-local id,sn,sf=unpack(row)
+local _,sn,sf=unpack(row)
 signal.register(sn,sf)
 end
 end
@@ -150,7 +143,6 @@ coroutine.yield()
 end
 return enemies
 end
-local user_data=storage:load_slot()
 local bushes=table.filter(store.entities,function(k,e)
 return e.template_name=="stage_01_bush"
 end)

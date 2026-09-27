@@ -108,7 +108,7 @@ end
 return target, targets, pred_pos
 end
 local function y_shoot_magic_missiles()
-local target,targets,pred_pos=find_target(this.magic_missiles,true)
+local target=find_target(this.magic_missiles,true)
 if not target then
 return
 end
@@ -593,7 +593,6 @@ queue_remove(store,broom)
 end
 return true
 end
-local mask_z={Z_OBJECTS_COVERS,Z_OBJECTS_COVERS,Z_OBJECTS_COVERS,Z_OBJECTS_COVERS,Z_OBJECTS_COVERS,Z_OBJECTS_COVERS,Z_OBJECTS,Z_OBJECTS_COVERS,Z_OBJECTS,Z_OBJECTS_COVERS+1}
 local tt=E:register_t_hot("decal_stage_206_mask_1","decal",true)
 tt.render.sprites[1].name="Stage_6_tower_mask"
 tt.render.sprites[1].animated=false

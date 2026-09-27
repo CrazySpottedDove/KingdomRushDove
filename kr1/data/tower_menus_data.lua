@@ -99,6 +99,23 @@ return {
 		tt_title = _("TOWER_STAGE_208_CATAPULT_BUY_NAME"),
 		tt_desc = _("TOWER_STAGE_208_CATAPULT_BUY_DESC")
 	})}},
+	stage_217_joust = {{M(tpl.buy_attack, {
+		action = "tw_custom_no_close",
+		action_arg = "red",
+		halo = "glow_ico_main",
+		image = "kr6_quickmenu_main_icon_joust_red",
+		place = 1,
+		tt_title = _("TOWER_STAGE_217_JOUST_BET_RED_NAME"),
+		tt_desc = _("TOWER_STAGE_217_JOUST_BET_RED_DESC")
+	}), M(tpl.buy_attack, {
+		action = "tw_custom_no_close",
+		action_arg = "blue",
+		halo = "glow_ico_main",
+		image = "kr6_quickmenu_main_icon_joust_blue",
+		place = 2,
+		tt_title = _("TOWER_STAGE_217_JOUST_BET_BLUE_NAME"),
+		tt_desc = _("TOWER_STAGE_217_JOUST_BET_BLUE_DESC")
+	})}},
 	stage_11_camp = {},
 	stage_11_spider_eggs_nest = {{M(tpl.buy_attack, {
 		action = "tw_custom_no_close",

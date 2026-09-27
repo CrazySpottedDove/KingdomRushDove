@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level01")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -12,7 +11,6 @@ require("all.constants")
 local function fts(v)
 return v/FPS
 end
-local level={}
 local function set_terrain(cells,terrain)
 for _,cell in ipairs(cells) do
 GR:set_cell(cell[1],cell[2],terrain)

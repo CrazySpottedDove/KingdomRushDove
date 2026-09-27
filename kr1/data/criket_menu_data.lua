@@ -1,6 +1,5 @@
 local templates = require("data.tower_menus_data_templates")
 local scripts = require("kr1.data.tower_menus_data_scripts")
-local merge = scripts.merge
 local tower_menus_data = require("kr1.data.tower_menus_data")
 local mage = tower_menus_data.mage[3]
 local archer = tower_menus_data.archer[3]

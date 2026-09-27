@@ -11,7 +11,6 @@ require("all.constants")
 local function fts(v)
 return v/FPS
 end
-local v=V.v
 local level={}
 level.required_sounds={"music_stage34","FrontiersJungleAmbienceSounds","PiratesSounds","SpecialCarnivorePlantSounds","SpecialMermaid"}
 level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage34","go_stage34_bg","go_stage36"}
