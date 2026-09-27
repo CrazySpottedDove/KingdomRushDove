@@ -9079,6 +9079,6 @@ return {
 	TAUNT_STAGE_18_BOSS_0001 = "Looks like it's time for me to go POSTAL!",
 	TAUNT_STAGE_18_BOSS_0002 = "Well played... but the REAL game starts now!",
 	TAUNT_STAGE_18_PHASE3_0001 = "Moloch, come to bargain!",
-	LEVEL_218_TITLE = "18. VEZ'NAN'S TOWER",
+	LEVEL_218_TITLE = "VEZ'NAN'S TOWER",
 	LEVEL_218_HISTORY = "It is a relief to have reached Arcania before Vez'nan can put his plans to expand the Rift of Cinders into motion, but the city seems quiet - too quiet.\n\nNevertheless, we must defeat Vez'nan's army, destroy the Tear of Elynie, and set things right once and for all!"
 }
