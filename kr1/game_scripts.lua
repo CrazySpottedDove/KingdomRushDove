@@ -20936,101 +20936,109 @@ function scripts.ray5_simple.update(this, store)
 		end
 	end
 
-	if target and b.damage_type ~= DAMAGE_NONE then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-
-		queue_damage(store, d)
-	end
-
 	local mods_added = {}
+	local fx
+	local hit_counter = 0
 
-	if target and (b.mod or b.mods) then
-		local mods = b.mods or {b.mod}
+	local function do_hit()
+		hit_counter = hit_counter + 1
 
-		for _, mod_name in ipairs(mods) do
-			local m = E:create_entity(mod_name)
+		if target and b.damage_type ~= DAMAGE_NONE then
+			local d = SU.create_bullet_damage(b, target.id, this.id)
 
-			m.modifier.target_id = b.target_id
-			m.modifier.source_id = this.id
-			U.modifier_inherit_bullet(m.modifier, b)
+			queue_damage(store, d)
+		end
 
-			if m.damage_from_bullet then
-				if m.dps then
-					m.dps.damage_min = b.damage_min
-					m.dps.damage_max = b.damage_max
+		if target and (b.mod or b.mods) then
+			local mods = b.mods or {b.mod}
+
+			for _, mod_name in ipairs(mods) do
+				local m = E:create_entity(mod_name)
+
+				m.modifier.target_id = b.target_id
+				m.modifier.source_id = this.id
+				U.modifier_inherit_bullet(m.modifier, b)
+
+				if m.damage_from_bullet then
+					if m.dps then
+						m.dps.damage_min = b.damage_min
+						m.dps.damage_max = b.damage_max
+					else
+						m.modifier.damage_min = b.damage_min
+						m.modifier.damage_max = b.damage_max
+					end
 				else
-					m.modifier.damage_min = b.damage_min
-					m.modifier.damage_max = b.damage_max
+					local level
+
+					if not tower then
+						level = this.bullet.level
+					else
+						level = tower.level
+						level = level or this.bullet.level
+					end
+
+					m.modifier.level = level
 				end
+
+				table.insert(mods_added, m)
+				simulation:queue_insert_entity(m)
+			end
+		end
+
+		if b.hit_payload then
+			local hp
+
+			if type(b.hit_payload) == "string" then
+				hp = E:create_entity(b.hit_payload)
 			else
-				local level
-
-				if not tower then
-					level = this.bullet.level
-				else
-					level = tower.level
-					level = level or this.bullet.level
-				end
-
-				m.modifier.level = level
+				hp = b.hit_payload
 			end
 
-			table.insert(mods_added, m)
-			simulation:queue_insert_entity(m)
-		end
-	end
+			if hp.aura then
+				hp.aura.level = this.bullet.level
+				hp.aura.source_id = this.id
+				hp.aura.damage_factor = b.damage_factor
 
-	if b.hit_payload then
-		local hp
-
-		if type(b.hit_payload) == "string" then
-			hp = E:create_entity(b.hit_payload)
-		else
-			hp = b.hit_payload
-		end
-
-		if hp.aura then
-			hp.aura.level = this.bullet.level
-			hp.aura.source_id = this.id
-			hp.aura.damage_factor = b.damage_factor
-
-			if target then
-				hp.pos.x, hp.pos.y = target.pos.x, target.pos.y
+				if target then
+					hp.pos.x, hp.pos.y = target.pos.x, target.pos.y
+				else
+					hp.pos.x, hp.pos.y = dest.x, dest.y
+				end
 			else
 				hp.pos.x, hp.pos.y = dest.x, dest.y
 			end
-		else
-			hp.pos.x, hp.pos.y = dest.x, dest.y
+
+			simulation:queue_insert_entity(hp)
 		end
 
-		simulation:queue_insert_entity(hp)
-	end
+		local disable_hit = false
 
-	local disable_hit = false
-
-	if this.hit_fx_only_no_target then
-		disable_hit = target ~= nil and not target.health.dead
-	end
-
-	local fx
-
-	if b.hit_fx and not disable_hit then
-		local is_air = target and band(target.vis.flags, F_FLYING) ~= 0
-
-		fx = E:create_entity(b.hit_fx)
-
-		if b.hit_fx_ignore_hit_offset and target and not is_air then
-			fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
-		else
-			fx.pos.x, fx.pos.y = dest.x, dest.y
+		if this.hit_fx_only_no_target then
+			disable_hit = target ~= nil and not target.health.dead
 		end
 
-		fx.render.sprites[1].ts = store.tick_ts
+		if b.hit_fx and not disable_hit then
+			local is_air = target and band(target.vis.flags, F_FLYING) ~= 0
 
-		simulation:queue_insert_entity(fx)
+			fx = E:create_entity(b.hit_fx)
+
+			if b.hit_fx_ignore_hit_offset and target and not is_air then
+				fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+			else
+				fx.pos.x, fx.pos.y = dest.x, dest.y
+			end
+
+			fx.render.sprites[1].ts = store.tick_ts
+
+			simulation:queue_insert_entity(fx)
+		end
 	end
+
+	do_hit()
 
 	if this.ray_duration then
+		local last_hit_ts = store.tick_ts
+
 		while store.tick_ts - s.ts < this.ray_duration do
 			if this.track_target then
 				update_sprite()
@@ -21048,6 +21056,12 @@ function scripts.ray5_simple.update(this, store)
 				end
 
 				break
+			end
+
+			if this.hit_over_duration and store.tick_ts - last_hit_ts > this.hit_cycle_time then
+				last_hit_ts = store.tick_ts
+
+				do_hit()
 			end
 
 			coroutine.yield()
@@ -72637,9 +72651,9 @@ function scripts.enemy_troll_warrior_landing.update(this, store)
 	scripts.enemy_mixed_cliff.update(this, store)
 end
 
-scripts.enemy_troll_warrior_stage_13_suicide_glider = {}
+scripts.enemy_troll_warrior_stage_213_suicide_glider = {}
 
-function scripts.enemy_troll_warrior_stage_13_suicide_glider.insert(this, store)
+function scripts.enemy_troll_warrior_stage_213_suicide_glider.insert(this, store)
 	local np = this.nav_path
 	local banned_paths = {np.pi, 7, 8, 9, 10, 11, 12}
 	local paths = {}
@@ -72660,9 +72674,9 @@ function scripts.enemy_troll_warrior_stage_13_suicide_glider.insert(this, store)
 	return scripts.enemy_basic.insert(this, store)
 end
 
-scripts.enemy_troll_glider_stage_13_suicide = {}
+scripts.enemy_troll_glider_stage_213_suicide = {}
 
-function scripts.enemy_troll_glider_stage_13_suicide.update(this, store)
+function scripts.enemy_troll_glider_stage_213_suicide.update(this, store)
 	local sunray = kr6_find_all_t(store, this.sunray_t)[1]
 	local shadow_sprite = this.render.sprites[2]
 	local is_suicide = true
@@ -72827,9 +72841,9 @@ function scripts.enemy_troll_glider_stage_13_suicide.update(this, store)
 	end
 end
 
-scripts.bullet_troll_glider_stage_13_suicide = {}
+scripts.bullet_troll_glider_stage_213_suicide = {}
 
-function scripts.bullet_troll_glider_stage_13_suicide.update(this, store, script)
+function scripts.bullet_troll_glider_stage_213_suicide.update(this, store, script)
 	local b = this.bullet
 	local ease_tables = {this.pos, this.pos}
 	local ease_keys = {"x", "y"}

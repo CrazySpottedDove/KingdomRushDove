@@ -97,7 +97,7 @@ function RU.init()
 											x = p_x + render_base_x
 											y = -p_y + f.pos.y + f.offset.y
 										else
-											x = p_x_s + render_base_y
+											x = p_x_s + render_base_x
 											y = -p_y_s + f.pos.y + f.offset.y
 										end
 
@@ -376,7 +376,7 @@ function RU.init()
 										x = p_x + render_base_x
 										y = -p_y + f.pos.y + f.offset.y
 									else
-										x = p_x_s + render_base_y
+										x = p_x_s + render_base_x
 										y = -p_y_s + f.pos.y + f.offset.y
 									end
 

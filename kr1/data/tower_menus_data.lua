@@ -3047,6 +3047,15 @@ return {
 		tt_title = _("TOWER_STAGE_13_SUNRAY_REPAIR_NAME"),
 		tt_desc = _("TOWER_STAGE_13_SUNRAY_REPAIR_DESCRIPTION")
 	}, tpl.sell}},
+	stage_213_sunray_tower = {},
+	stage_213_broken_sunray_obelisk = {{M(tpl.upgrade, {
+		action_arg = "tower_stage_213_sunray_obelisk",
+		image = "main_icons_0005",
+		place = 5,
+		tt_title = _("TOWER_STAGE_213_SUNRAY_OBELISK_UPGRADE_NAME"),
+		tt_desc = _("TOWER_STAGE_213_SUNRAY_OBELISK_UPGRADE_DESCRIPTION")
+	})}},
+	stage_213_sunray_obelisk = {},
 	tower_stage_18_elven_barrack = {{{
 		check = "main_icons_0019",
 		action_arg = "soldier_tower_stage_18_elven_barrack",

@@ -1,0 +1,982 @@
+#	COMANDOS					1 - Izquierda a Arriba Izquierda (MR)					2 - Derecha a Derecha Arriba (Armor)					3 - Abajo Izquierda a Izquierda Arriba					4 - Abajo Derecha Derecha Arriba					5 - Columna Izquierda a Arriba Izquierda					6 - Columna Derecha a Arriba Derecha					7 - Ventana Izquierda a Arriba Izquierda					8 - Ventana Derecha a Arriba Derecha					9 - Claustro Izquierda a Torre Izquierda (Sorcerer Left)					10 - Claustro Derecha a Torre Derecha (Sorcerer Right)					11 - Izquierda a Torre Izquierda (Boss P1)					12 - Derecha a Torre Derecha (Boss P2)					13 - Izquierda a Izquierda Arriba (Glider retcon path)					14 - Derecha a Derecha Arriba (Glider retcon path)			
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3		10:*	10:2	10:1	10:3		11:*	11:2	11:1	11:3		12:*	12:2	12:1	12:3		13:*	13:2	13:1	13:3		14:*	14:2	14:1	14:3
+#	level properties																																																																									
+	description	main JC																																																																								
+	lives	20																																																																								
+	gold	1400																																																																								
+	gems	150																																																																								
+	enemy_prefix	enemy_																																																																								
+	default_increment	1																																																																								
+	default_interval	20																																																																								
+#	expected gold	1200																																																																								
+#	stage total gold	9525																																																																								
+#	stage gold curve																																																																									
+#	WAVE 1					F. Herald x1 T. Warrior x12															T. Champion x6																																																					
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					6	5	0	0		1	6	0	0		0	0	0	0		0	0																																																				
+#	gold	338				48	150	0	0		80	60	0	0		0	0	0	0		0	0																																																				
+																																																																										
+	wave		1		-1																																																																					
+																																																																										
+					0																	troll_champion																																																				
+					2																			troll_champion																																																		
+					2																																																																					
+					10		frost_icecaller																																																																			
+					1			troll_warrior																																																																		
+					0.8				troll_warrior																																																																	
+					0.7				troll_warrior																																																																	
+					0.8			troll_warrior																																																																		
+					0.6				troll_warrior																																																																	
+					0.7			troll_warrior																																																																		
+					12																			troll_champion																																																		
+					2																	troll_champion																																																				
+					2																		troll_champion																																																			
+					2				troll_pathfinder																																																																	
+					0.7			troll_pathfinder																																																																		
+					0.8				troll_pathfinder																																																																	
+					1.2			troll_pathfinder																																																																		
+					0.7			troll_pathfinder																																																																		
+					0.7				troll_pathfinder																																																																	
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 2					F. Herald x2										T. Chieftain x1 T. Warrior x16																																																										
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					26	0	0	0		0	0	0	0		1	0	0	0		0	0																																																				
+#	gold	268				208	0	0	0		0	0	0	0		60	0	0	0		0	0																																																				
+	wave		2		20																																																																					
+																																																																										
+					0														troll_chieftain_kr6																																																							
+					2			troll_warrior									troll_warrior																																																									
+					0.8		troll_warrior											troll_warrior																																																								
+					0.7			troll_warrior									troll_warrior																																																									
+					0.8		troll_warrior																																																																			
+					7																																																																					
+					0.6												troll_warrior																																																									
+					0.7													troll_warrior																																																								
+					0.7												troll_warrior																																																									
+					0																																																																					
+					10		troll_warrior		troll_warrior										troll_warrior																																																							
+					0.8												troll_warrior																																																									
+					0.6																																																																					
+					0.7		troll_warrior												troll_warrior																																																							
+					0.8				troll_warrior								troll_warrior																																																									
+					10			troll_warrior										troll_warrior																																																								
+					0.6		troll_warrior										troll_warrior																																																									
+					0.8			troll_warrior											troll_warrior																																																							
+					0.7				troll_warrior									troll_warrior																																																								
+					0.6																																																																					
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 3										T. Crusher x1 T. Warrior x6										T. Champion x4					T. Warrior x10																																																
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					16	4	0	1		0	0	0	0		0	0	0	0		0	0																																																				
+#	gold	378				128	120	0	130		0	0	0	0		0	0	0	0		0	0																																																				
+	wave		3		20																																																																					
+					0								troll_crusher																																																													
+					3							troll_warrior																																																														
+					1									troll_warrior																																																												
+					1									troll_warrior																																																												
+					2							troll_warrior																																																														
+					1							troll_warrior																																																														
+					1									troll_warrior																																																												
+					2																					troll_warrior										troll_glider_stage_213_suicide																																						
+					1																					troll_warrior																																																
+					1																					troll_warrior																																																
+					1																					troll_warrior																																																
+					1																					troll_warrior										troll_glider_stage_213_suicide																																						
+					5																					troll_warrior																																																
+					1																					troll_warrior										troll_glider_stage_213_suicide																																						
+					1																		troll_champion			troll_warrior																																																
+					1																					troll_warrior																																																
+					1																	troll_champion				troll_warrior																																																
+					2																			troll_champion												troll_glider_stage_213_suicide																																						
+					2																		troll_champion																																																			
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 4															F. Baiter x16					T. Warrior x10					T. Warrior x16					T. Warrior x11																																											
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					36	0	0	0		0	0	17	0		0	0	0	0		0	0																																																				
+#	gold	339				288	0	0	0		0	0	51	0		0	0	0	0		0	0																																																				
+	wave		4		22																																																																					
+	event	spawn_sorcerer	9		0																																																																					
+					4											frost_baiter																																																										
+					0.6											frost_baiter																																																										
+					0.5											frost_baiter																																																										
+					0.7											frost_baiter																																																										
+					0.5											frost_baiter																																																										
+					0.6											frost_baiter																																																										
+					1																					troll_warrior																																																
+					1																					troll_warrior																																																
+					1																					troll_warrior																																																
+					1																					troll_warrior																																																
+					1																					troll_warrior																																																
+					7											frost_baiter															troll_warrior																																											
+					0.5											frost_baiter															troll_warrior																																											
+					0.7											frost_baiter															troll_warrior																																											
+					0.6											frost_baiter															troll_warrior																																											
+					0.7											frost_baiter															troll_warrior																																											
+					1																			troll_warrior		troll_warrior																																																
+					1																	troll_warrior				troll_warrior																																																
+					1																			troll_warrior		troll_warrior																																																
+					1																		troll_warrior			troll_warrior																																																
+					1																			troll_warrior		troll_warrior																																																
+					1																					troll_warrior																																																
+					7											frost_baiter															troll_warrior																																											
+					0.6											frost_baiter																																																										
+					0.5											frost_baiter															troll_warrior																																											
+					0.7											frost_baiter																																																										
+					0.6											frost_baiter															troll_warrior																																											
+					0.5											frost_baiter																																																										
+					0																					troll_warrior																																																
+					1																		troll_warrior			troll_warrior					troll_warrior																																											
+					1																	troll_warrior				troll_warrior					troll_warrior																																											
+					1																		troll_warrior			troll_warrior					troll_warrior																																											
+					1																			troll_warrior		troll_warrior																																																
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 5					T. Champion x6					T. Chieftain x1 T. Warrior x6 T. Champion x4																				T. Warrior x8																																											
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					18	10	0	0		0	0	0	0		1	0	0	0		0	0																																																				
+#	gold	504				144	300	0	0		0	0	0	0		60	0	0	0		0	0																																																				
+																																																																										
+	wave		5		22																																																																					
+					0																													troll_warrior																																								
+					1																												troll_warrior																																									
+					1																													troll_warrior																																								
+					0																																																																					
+	event	spawn_sorcerer	10		0																																																																					
+					0								troll_chieftain_kr6																																																													
+					4		troll_champion		troll_champion																							troll_warrior																																										
+					1																												troll_warrior																																									
+					1			troll_champion																								troll_warrior																																										
+					0																																																																					
+					12								troll_champion																																																													
+					2							troll_champion																																																														
+					2									troll_champion																																																												
+					2								troll_champion																																																													
+					2																																																																					
+					8		troll_champion		troll_champion			troll_warrior		troll_warrior																																																												
+					1								troll_warrior																																																													
+					1							troll_warrior		troll_warrior																																																												
+					1			troll_champion																																																																		
+					3																											troll_warrior																																										
+					1																												troll_warrior																																									
+					1																											troll_warrior																																										
+																																																																										
+					5																										troll_warrior																																											
+					1																										troll_warrior																																											
+					1																										troll_warrior																																											
+					1																										troll_warrior																																											
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 6					F. Herald x1 T. Champion x4										F. Herald x1					T. Champion x8 T. Warrior x16																				T. Glider x8																																	
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					16	12	0	0		2	0	0	0		0	0	0	0		0	0																																																				
+#	gold	648				128	360	0	0		160	0	0	0		0	0	0	0		0																																																					
+																																																																										
+	wave		6		20																																																																					
+	event	spawn_sorcerer	10		0																																																																					
+					0		troll_champion		troll_champion														troll_warrior																																																			
+					0.8																	troll_warrior		troll_warrior																																																		
+					0.8			frost_icecaller														troll_warrior		troll_warrior																																																		
+					0.8																	troll_warrior		troll_warrior																																																		
+					0.8		troll_champion		troll_champion														troll_warrior																																																			
+					5																	troll_champion		troll_champion																																																		
+					2																		troll_champion																																																			
+					4																		troll_champion																		troll_glider_stage_213_suicide																																	
+					2													frost_icecaller																							troll_glider_stage_213_suicide																																	
+					0																																																																					
+					4																																				troll_glider_stage_213_suicide																																	
+					2																																				troll_glider_stage_213_suicide																																	
+																																																																										
+					5																		troll_champion																																																			
+					2																	troll_champion		troll_champion																																																		
+					4																		troll_champion																																																			
+					5																	troll_warrior		troll_warrior																																																		
+					0.8																		troll_warrior																																																			
+					5																	troll_warrior		troll_warrior																																																		
+					0.8																		troll_warrior																																																			
+					0.9																	troll_warrior		troll_warrior																																																		
+					3																																				troll_glider_stage_213_suicide																																	
+					2																																				troll_glider_stage_213_suicide																																	
+					0																																																																					
+					4																																				troll_glider_stage_213_suicide																																	
+					2																																				troll_glider_stage_213_suicide																																	
+	event	spawn_sorcerer	10		0																																																																					
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 7					F. Brute x1										T. Pathfinder x20																				T. Glider x6																																						
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					0	0	12	0		1	20	0	1		0	0	0	0		0	0																																																				
+#	gold	588				0	0	48	0		80	200	0	260		0	0	0	0		0	0																																																				
+																																																																										
+	wave		7		15																																																																					
+					0											frost_icecaller																																																										
+					4											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+					0.8											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+	event	spawn_sorcerer	9		0																																																																					
+					2											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+					0.8											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+					0			frost_brute																												troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					4											frost_icecaller																				troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					2											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+																																																																										
+					2											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					4																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					4																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 8					T. Chieftain x1					T. Chieftain x1					F. Baiter x					F. Baiter x					T. Warrior x12					T. Warrior x12					T. Glider x6					T. Glider x6																																	
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					17	0	8	0		0	0	30	0		2	0	0	0		0	0																																																				
+#	gold	378				136	0	32	0		0	0	90	0		120	0	0	0		0	0																																																				
+																																																																										
+	wave		8		17																																																																					
+					0			troll_chieftain_kr6																																																																		
+					0		frost_baiter										frost_baiter		frost_baiter																																																							
+					1				frost_baiter				troll_chieftain_kr6				frost_baiter																																																									
+					1		frost_baiter							frost_baiter				frost_baiter										troll_warrior																																														
+					1				frost_baiter			frost_baiter							frost_baiter								troll_warrior																																															
+					1		frost_baiter							frost_baiter					frost_baiter										troll_warrior																																													
+					1				frost_baiter			frost_baiter					frost_baiter											troll_warrior																																														
+					1									frost_baiter				frost_baiter									troll_warrior																																															
+					1							frost_baiter						frost_baiter																																																								
+					5																															troll_glider_stage_213_suicide																																						
+					1.2																															troll_glider_stage_213_suicide																																						
+					0																																																																					
+					3.5																															troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					1.2																															troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					3.5																																				troll_glider_stage_213_suicide																																	
+					1.2																																				troll_glider_stage_213_suicide																																	
+					4																		frost_baiter						troll_warrior			troll_warrior																																										
+					1																	frost_baiter		frost_baiter				troll_warrior						troll_warrior																																								
+					1																		frost_baiter				troll_warrior						troll_warrior																																									
+					1																	frost_baiter		frost_baiter					troll_warrior			troll_warrior																																										
+					1																		frost_baiter				troll_warrior						troll_warrior																																									
+					1																	frost_baiter		frost_baiter				troll_warrior						troll_warrior																																								
+	wait				3																																																																					
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 9					F. Herald x3 T. Pathfinder x6										F. Herald x1 T. Pathfinder x18																																																										
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					0	0	0	0		4	23	0	0		0	0	0	0		0	0																																																				
+#	gold	550				0	0	0	0		320	230	0	0		0	0	0	0		0	0																																																				
+	wave		9		20																																																																					
+																																																																										
+					0		frost_icecaller																																																																			
+					2				frost_icecaller																																																																	
+					0											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0.4											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0													frost_icecaller																																																								
+					0.6												troll_pathfinder																																																									
+					0.7														troll_pathfinder																																																							
+					0.8														troll_pathfinder																																																							
+					0.7												troll_pathfinder																																																									
+					0.6														troll_pathfinder																																																							
+	event	spawn_sorcerer	9		6																																																																					
+					0														troll_pathfinder																																																							
+					0.7													troll_pathfinder																																																								
+					0.6														troll_pathfinder																																																							
+					0.7													troll_pathfinder																																																								
+					0.6													troll_pathfinder																																																								
+					0.8														troll_pathfinder																																																							
+					0			frost_icecaller																																																																		
+					3		troll_pathfinder																																																																			
+					0.6			troll_pathfinder																																																																		
+					0.7			troll_pathfinder																																																																		
+					0.6		troll_pathfinder																																																																			
+					0.5		troll_pathfinder																																																																			
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 10										T. Champion x4										T. Champion x4										T. Warrior x16										T. Glider x9																																	
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					16	8	12	0		0	0	0	0		0	0	0	0		0	0																																																				
+#	gold	416				128	240	48	0		0	0	0	0		0	0	0	0		0	0																																																				
+	wave		10		16																																																																					
+					0																													troll_warrior																																								
+					1																												troll_warrior																																									
+					1																													troll_warrior																																								
+					1																	troll_champion		troll_champion								troll_warrior																																										
+					1																												troll_warrior																																									
+					1																	troll_champion		troll_champion										troll_warrior																																								
+					1																											troll_warrior									troll_glider_stage_213_suicide																																	
+					1																												troll_warrior																																									
+					1																																				troll_glider_stage_213_suicide																																	
+					0																																																																					
+					4																																				troll_glider_stage_213_suicide																																	
+					2																																				troll_glider_stage_213_suicide																																	
+																																																																										
+					0								troll_champion																																																													
+					2							troll_champion		troll_champion																																																												
+					2								troll_champion																												troll_glider_stage_213_suicide																																	
+					2																																				troll_glider_stage_213_suicide																																	
+					0																																																																					
+					3																																				troll_glider_stage_213_suicide																																	
+					2																																				troll_glider_stage_213_suicide																																	
+	event	spawn_sorcerer	10		0																																																																					
+					2																													troll_warrior																																								
+					1																												troll_warrior																																									
+					1																													troll_warrior																																								
+					1																											troll_warrior																																										
+					1																												troll_warrior																																									
+					1																													troll_warrior																																								
+					1																											troll_warrior									troll_glider_stage_213_suicide																																	
+					1																												troll_warrior																																									
+					1																																				troll_glider_stage_213_suicide																																	
+					4																																				troll_glider_stage_213_suicide																																	
+					2																																				troll_glider_stage_213_suicide																																	
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 11					F. Brute x1 T. Chieftain x1										F. Baiter x20																				T. Glider x9																																						
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					0	0	12	0		0	0	20	1		1	0	0	0		0	0																																																				
+#	gold	428				0	0	48	0		0	0	60	260		60	0	0	0		0	0																																																				
+	wave		11		20																																																																					
+																																																																										
+					0			frost_brute																																																																		
+					0											frost_baiter																																																										
+					0.5											frost_baiter																																																										
+					0.6											frost_baiter																																																										
+					0.4											frost_baiter																																																										
+					0.6											frost_baiter																																																										
+					0.5				troll_chieftain_kr6							frost_baiter																																																										
+					0.6											frost_baiter																																																										
+					0.3											frost_baiter																																																										
+					0.5											frost_baiter																																																										
+					0.4											frost_baiter																																																										
+					1																															troll_glider_stage_213_suicide																																						
+					1.3																															troll_glider_stage_213_suicide																																						
+					4																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+	event	spawn_sorcerer	9		0																																																																					
+					4																															troll_glider_stage_213_suicide																																						
+					1.3											frost_baiter																				troll_glider_stage_213_suicide																																						
+					0.5											frost_baiter																																																										
+					0.4											frost_baiter																																																										
+					0.6											frost_baiter																																																										
+					0.4											frost_baiter																																																										
+					0.5											frost_baiter																																																										
+					0.6											frost_baiter																																																										
+					0.7											frost_baiter																																																										
+					0.4											frost_baiter																																																										
+					0.5											frost_baiter																				troll_glider_stage_213_suicide																																						
+					1.3																															troll_glider_stage_213_suicide																																						
+					1.4																															troll_glider_stage_213_suicide																																						
+					4																															troll_glider_stage_213_suicide																																						
+					1.4																															troll_glider_stage_213_suicide																																						
+					1.4																															troll_glider_stage_213_suicide																																						
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 12										T. Crusher x2										F. Baiter x20																																																					
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					0	0	0	2		0	0	40	0		1	0	0	0		0	0																																																				
+#	gold	440				0	0	0	260		0	0	120	0		60	0	0	0		0	0																																																				
+	wave		12		18																																																																					
+					0								troll_crusher																																																													
+					1																frost_baiter																																																					
+					0.4																frost_baiter																																																					
+					0.6																frost_baiter																																																					
+					0.5																frost_baiter																																																					
+					0.5																frost_baiter																																																					
+					3						frost_baiter										frost_baiter																																																					
+					0.5						frost_baiter										frost_baiter																																																					
+					0.7						frost_baiter										frost_baiter																																																					
+					0.6						frost_baiter										frost_baiter																																																					
+					0.6						frost_baiter										frost_baiter																																																					
+					3						frost_baiter		troll_crusher										troll_chieftain_kr6																																																			
+					0.5						frost_baiter																																																															
+					0.7						frost_baiter																																																															
+					0.6						frost_baiter																																																															
+					0.6						frost_baiter																																																															
+					3																frost_baiter																																																					
+					0.4																frost_baiter																																																					
+					0.6																frost_baiter																																																					
+					0.5																frost_baiter																																																					
+					0.5																frost_baiter																																																					
+					3						frost_baiter										frost_baiter																																																					
+					0.5						frost_baiter										frost_baiter																																																					
+					0.7						frost_baiter										frost_baiter																																																					
+					0.6						frost_baiter										frost_baiter																																																					
+					0.6						frost_baiter										frost_baiter																																																					
+					3						frost_baiter																																																															
+					0.5						frost_baiter																																																															
+					0.7						frost_baiter																																																															
+					0.6						frost_baiter																																																															
+					0.6						frost_baiter																																																															
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 13					F. Herald x2					F. Herald x2					F. Brute x1					T. Crusher x1																																																					
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					0	0	0	1		4	20	0	1		0	0	0	0		0	0																																																				
+#	gold	910				0	0	0	130		320	200	0	260		0	0	0	0		0	0																																																				
+	wave		13		15																																																																					
+					0												frost_brute																																																									
+	event	spawn_sorcerer	9		0																																																																					
+					1																			troll_crusher																																																		
+																																																																										
+	event	spawn_sorcerer	10		1																																																																					
+					2						frost_icecaller																																																															
+					0	frost_icecaller																																																																				
+	event	spawn_sorcerer	9		0																																																																					
+					2						frost_icecaller																																																															
+					0	frost_icecaller																																																																				
+																																																																										
+	event	spawn_sorcerer	10		2																																																																					
+	wait				5																																																																					
+					1		troll_pathfinder		troll_pathfinder																																																																	
+					1		troll_pathfinder		troll_pathfinder																																																																	
+					1							troll_pathfinder		troll_pathfinder																																																												
+					1							troll_pathfinder		troll_pathfinder																																																												
+					2		troll_pathfinder		troll_pathfinder																																																																	
+					1		troll_pathfinder		troll_pathfinder																																																																	
+					1		troll_pathfinder		troll_pathfinder			troll_pathfinder		troll_pathfinder																																																												
+					1							troll_pathfinder		troll_pathfinder																																																												
+					1							troll_pathfinder		troll_pathfinder																																																												
+					1																																																																					
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 14					T. Warrior x12					T. Champion x6					T. Warrior x12					T. Champion x6															T. Glider x12					T. Glider x12																																	
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					25	12	24	0		0	0	0	0		0	0	0	0		0	0																																																				
+#	gold	656				200	360	96	0		0	0	0	0		0	0	0	0		0	0																																																				
+	wave		14		20																																																																					
+	event	spawn_sorcerer	9		0																																																																					
+	event	spawn_sorcerer	10		0																																																																					
+					0																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					3																															troll_glider_stage_213_suicide																																						
+					1.6																															troll_glider_stage_213_suicide																																						
+					0																																				troll_glider_stage_213_suicide																																	
+					1.5																																				troll_glider_stage_213_suicide																																	
+					3																																				troll_glider_stage_213_suicide																																	
+					1.6																																				troll_glider_stage_213_suicide																																	
+					0																		troll_champion																																																			
+					2																	troll_champion		troll_champion																																																		
+					2																	troll_champion		troll_champion																																																		
+					2																		troll_champion																																																			
+	event	spawn_sorcerer	9		0																																																																					
+					0		troll_warrior																																																																			
+					0.5				troll_warrior																																																																	
+					0.6			troll_warrior																																																																		
+					0.5		troll_warrior																																																																			
+					0.4				troll_warrior																																																																	
+					0.6			troll_warrior																																																																		
+					0.4		troll_warrior																																																																			
+					0																															troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					1.2																															troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					3																															troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					1.4																															troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					0																						troll_warrior																																															
+					1																								troll_warrior																																													
+					1																						troll_warrior																																															
+					1																							troll_warrior																																														
+					1																								troll_warrior																																													
+					1																						troll_warrior																																															
+					2																							troll_warrior																																														
+	event	spawn_sorcerer	10		0																																																																					
+					1							troll_champion		troll_champion													troll_warrior									troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					1																								troll_warrior																																													
+					1							troll_champion		troll_champion														troll_warrior								troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					1.2																						troll_warrior																																															
+					1.4							troll_champion		troll_champion														troll_warrior								troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					1.3																								troll_warrior							troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+	event	spawn_sorcerer	10		0																																																																					
+					2		troll_warrior		troll_warrior																																																																	
+					0.9			troll_warrior																																																																		
+					0.8		troll_warrior		troll_warrior																																																																	
+	event	spawn_sorcerer	9		0																																																																					
+	event	spawn_sorcerer	10		0																																																																					
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+																																																																										
+#	WAVE 15					F. Brute x1 F. Herald x3					T. Crusher x2 T. Warrior x12					T. Pathfinder x20															T. Warrior x12																																											
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					18	0	0	2		2	20	0	2		0	0	0	0		0	0																																																				
+#	gold	1284				144	0	0	260		160	200	0	520		0	0	0	0		0	0																																																				
+	wave		15		16																																																																					
+	event	spawn_sorcerer	10		0																																																																					
+	event	spawn_sorcerer	9		0																																																																					
+					2		frost_icecaller																																																																			
+					1			frost_brute																																																																		
+					0											troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					2								troll_crusher			troll_pathfinder																																																										
+					0.6											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					0.4											troll_pathfinder																																																										
+					0.4											troll_pathfinder																																																										
+					4																											troll_warrior																																										
+					1																												troll_warrior																																									
+					1																													troll_warrior																																								
+					1																												troll_warrior																																									
+					1																											troll_warrior																																										
+					1																												troll_warrior																																									
+	event	spawn_sorcerer	10		0																																																																					
+	event	spawn_sorcerer	9		1																																																																					
+					0		frost_brute																																																																			
+					1				frost_icecaller			troll_warrior																																																														
+					0.7									troll_warrior																																																												
+					0.6							troll_warrior																																																														
+					0.8									troll_warrior																																																												
+					0.7							troll_warrior																																																														
+					0.8									troll_warrior																																																												
+					2								troll_crusher			troll_pathfinder																																																										
+					1											troll_pathfinder																		troll_warrior																																								
+					1											troll_pathfinder																troll_warrior																																										
+					1											troll_pathfinder																	troll_warrior																																									
+					1											troll_pathfinder																troll_warrior																																										
+					1																													troll_warrior																																								
+					1											troll_pathfinder																	troll_warrior																																									
+					0.6											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					0.7											troll_pathfinder																																																										
+																																																																										
+#	BOSS WAVE																																																																									
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		troll_chieftain_kr6	spiderling	giant_spider	leaper_spider		spider_matriarch	son_of_sarelgaz																																																				
+#	cant.					24	15	0	0		1	13	0	0		1	0	0	0		0	0																																																				
+#	gold	912				192	450	0	0		80	130	0	0		60	0	0	0		0	0																																																				
+	manual_wave	BOSS_1			0																																																																					
+	event	activate_automatic_spawn_sorcerer			0																																																																					
+					3																						troll_warrior														troll_glider_stage_213_suicide																																	
+					1																								troll_warrior																																													
+					1									troll_champion															troll_warrior												troll_glider_stage_213_suicide																																	
+					4							troll_champion															troll_warrior																																															
+					1																								troll_warrior												troll_glider_stage_213_suicide																																	
+					1									troll_champion													troll_warrior																																															
+					1																																				troll_glider_stage_213_suicide																																	
+					6												troll_warrior							troll_chieftain_kr6																																																		
+					0.7													troll_warrior																																																								
+					0.8													troll_warrior																																																								
+					0.6												troll_warrior																																																									
+					0.7													troll_warrior																																																								
+					0.6												troll_warrior																																																									
+					0.7																		troll_champion																																																			
+					2																			troll_champion																																																		
+					2																		troll_champion																																																			
+					8	troll_warrior							troll_champion																												troll_glider_stage_213_suicide																																	
+					0.7	troll_warrior																																																																				
+					0.8	troll_warrior								troll_champion																											troll_glider_stage_213_suicide																																	
+					0.6	troll_warrior																																																																				
+					0.7	troll_warrior																																																																				
+					0.8	troll_warrior							troll_champion																																																													
+					0.4																																				troll_glider_stage_213_suicide																																	
+					1.3																																				troll_glider_stage_213_suicide																																	
+	wait				1																																																																					
+	manual_wave_repeat	-1			0																																																																					
+	manual_wave	BOSS_2			4																																																																					
+					6		frost_icecaller																													troll_glider_stage_213_suicide																																						
+					1.2																															troll_glider_stage_213_suicide																																						
+					1.3							troll_champion																																																														
+					2											troll_pathfinder																																																										
+					0.4											troll_pathfinder																				troll_glider_stage_213_suicide																																						
+					0.6											troll_pathfinder																																																										
+					0.5											troll_pathfinder																																																										
+					0.6									troll_champion																						troll_glider_stage_213_suicide																																						
+					12	troll_pathfinder						troll_champion				troll_pathfinder																				troll_glider_stage_213_suicide																																						
+					0.4	troll_pathfinder										troll_pathfinder																																																										
+					0.5	troll_pathfinder										troll_pathfinder																				troll_glider_stage_213_suicide																																						
+					0.6	troll_pathfinder								troll_champion		troll_pathfinder																																																										
+					0.5	troll_pathfinder																											troll_warrior			troll_glider_stage_213_suicide																																						
+					1																											troll_warrior																																										
+					1																													troll_warrior																																								
+					1																												troll_warrior			troll_glider_stage_213_suicide																																						
+					1																											troll_warrior																																										
+					1																													troll_warrior		troll_glider_stage_213_suicide																																						
+					10							troll_champion																																																														
+					2									troll_champion																																																												
+					2																																																																					
+					0																																																																					
+	wait				1																																																																					
+	manual_wave_repeat	-1			2																																																																					
+	manual_wave	BOSS_3			4																																																																					
+					6				frost_brute																																																																	
+					3											troll_pathfinder																				troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					0.6											troll_pathfinder																																																										
+					0.4											troll_pathfinder																									troll_glider_stage_213_suicide																																	
+					1											troll_pathfinder																				troll_glider_stage_213_suicide																																						
+					0.5											troll_pathfinder																									troll_glider_stage_213_suicide																																	
+					6											troll_pathfinder																				troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					0.7											troll_pathfinder																																																										
+					1											troll_pathfinder																				troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					0.6											troll_pathfinder																																																										
+					0.5											troll_pathfinder																									troll_glider_stage_213_suicide																																	
+					4							troll_champion																																																														
+					2									troll_champion																																																												
+					2							troll_champion																																																														
+					0																																																																					
+					12	troll_pathfinder																	troll_chieftain_kr6													troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					0.7	troll_pathfinder																troll_champion																																																				
+					0.6	troll_pathfinder																														troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					0.8	troll_pathfinder																																																																				
+					0.5																			troll_champion																	troll_glider_stage_213_suicide																																	
+					2																															troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					2	troll_pathfinder																troll_champion														troll_glider_stage_213_suicide																																						
+					0.7	troll_pathfinder																																																																				
+					0.5	troll_pathfinder																		troll_champion												troll_glider_stage_213_suicide																																						
+					0.7	troll_pathfinder																																																																				
+	wait				1																																																																					
+	manual_wave_repeat	-1			2																																																																					
+	manual_wave	BOSS_4			4																																																																					
+					8																		troll_crusher																																																			
+					2																			troll_chieftain_kr6																																																		
+					4			frost_brute																																																																		
+					2																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide																																						
+					1.5																																																																					
+					1.5		frost_icecaller																													troll_glider_stage_213_suicide																																						
+					1.5							troll_champion				troll_pathfinder																				troll_glider_stage_213_suicide																																						
+					0.6											troll_pathfinder																																																										
+					1.2											troll_pathfinder																																																										
+					0.5									troll_champion		troll_pathfinder																				troll_glider_stage_213_suicide																																						
+					0.6											troll_pathfinder																																																										
+					0.7																															troll_glider_stage_213_suicide																																						
+					10				frost_icecaller			troll_champion				troll_pathfinder																																																										
+					0.6											troll_pathfinder																				troll_glider_stage_213_suicide																																						
+					0.7											troll_pathfinder																									troll_glider_stage_213_suicide																																	
+					1.2											troll_pathfinder																				troll_glider_stage_213_suicide																																						
+					0.5											troll_pathfinder																									troll_glider_stage_213_suicide																																	
+					0.5																															troll_glider_stage_213_suicide																																						
+					1.7																																				troll_glider_stage_213_suicide																																	
+					1.5																															troll_glider_stage_213_suicide																																						
+					1.5																															troll_glider_stage_213_suicide					troll_glider_stage_213_suicide																																	
+					1.5																															troll_glider_stage_213_suicide																																						
+					0																																																																					
+	manual_wave_repeat	-1			2																																																																					

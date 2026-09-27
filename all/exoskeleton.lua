@@ -151,6 +151,20 @@ function EXO:get_last_attach_point_xform(entity, sprite_id, name)
 	return f and f.last_attach_point_xform and f.last_attach_point_xform[idx]
 end
 
+--- 把 tracker 吸附到 target 的骨骼挂点上。
+--- 读取 tracker.render.sprites[sprite_id] 的 track_sprite_id / track_attach_point，
+--- 从 target 对应 sprite 的挂点世界坐标写回 tracker.pos。
+--- KR6 引擎在渲染阶段自动做这件事，dove 未实现；脚本里每帧调用本方法即可。
+--- 约定（调用者保证）：tracker / target 存在，且 target 对应 sprite 已完成渲染
+--- （exo_frame 与 last_attach_point_xform 就绪）。
+function EXO:track_attach_point(tracker, target, sprite_id)
+	local sp = tracker.render.sprites[sprite_id or 1]
+	local ts = target.render.sprites[sp.track_sprite_id or 1]
+	local xf = ts.last_attach_point_xform[self.exos[ts.exo_frame.exo_name].attach_idx[sp.track_attach_point]]
+
+	tracker.pos.x, tracker.pos.y = xf.x, xf.y
+end
+
 --- 简短查看当前 EXO 的加载情况
 function EXO:dump()
 	local exo_names = ""

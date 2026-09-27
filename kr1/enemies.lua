@@ -14694,10 +14694,10 @@ tt.render.sprites[1].prefix = "troll_warrior_creep"
 tt.render.sprites[1].name = "rope_land"
 tt.main_script.update = scripts.enemy_troll_warrior_landing.update
 
--- enemy_troll_warrior_stage_13_suicide_glider —— 落地到 stage13 自杀滑翔兵
-tt = RT("enemy_troll_warrior_stage_13_suicide_glider", "enemy_troll_warrior")
+-- enemy_troll_warrior_stage_213_suicide_glider —— 落地到 stage13 自杀滑翔兵
+tt = RT("enemy_troll_warrior_stage_213_suicide_glider", "enemy_troll_warrior")
 tt.info.i18n_key = "ENEMY_TROLL_WARRIOR"
-tt.main_script.insert = scripts.enemy_troll_warrior_stage_13_suicide_glider.insert
+tt.main_script.insert = scripts.enemy_troll_warrior_stage_213_suicide_glider.insert
 tt.suicide_hit_time = fts(5)
 
 -- enemy_troll_champion_jumper_stage_12 —— 关卡 12 跳跃点
@@ -14707,20 +14707,20 @@ tt.jump_points = {{1, 16, true}, {22, 33, true}, {40, 56, false, {40, 51}}}
 tt.disappearing_shadows = true
 tt.y_to_die = -50
 
--- enemy_troll_glider_stage_13_suicide —— stage13 自杀式滑翔撞塔
-tt = RT("enemy_troll_glider_stage_13_suicide", "enemy_troll_glider")
+-- enemy_troll_glider_stage_213_suicide —— stage13 自杀式滑翔撞塔
+tt = RT("enemy_troll_glider_stage_213_suicide", "enemy_troll_glider")
 tt.info.i18n_key = "ENEMY_TROLL_GLIDER"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[2] = nil
 tt.health_bar.z = Z_OBJECTS_COVERS + 1
-tt.death_spawns.name = "enemy_troll_warrior_stage_13_suicide_glider"
+tt.death_spawns.name = "enemy_troll_warrior_stage_213_suicide_glider"
 tt.fallback_death_spawn_name = "enemy_troll_warrior"
 tt.trigger_distance = 170
 tt.anim_suicide = "crash"
-tt.bullet = "bullet_troll_glider_stage_13_suicide"
+tt.bullet = "bullet_troll_glider_stage_213_suicide"
 tt.bullet_spawn_offset = v(112, 102)
 tt.main_script.insert = scripts.enemy_basic.insert
-tt.main_script.update = scripts.enemy_troll_glider_stage_13_suicide.update
+tt.main_script.update = scripts.enemy_troll_glider_stage_213_suicide.update
 tt.node_to_consider_too_far = 63
 tt.left_path = 7
 tt.sunray_t = "tower_stage_213_sunray_tower"
@@ -15171,8 +15171,8 @@ tt.modifier.animation_phases = true
 tt.modifier.use_mod_offset = false
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 
--- bullet_troll_glider_stage_13_suicide —— stage13 自杀滑翔弹
-tt = RT("bullet_troll_glider_stage_13_suicide", "bullet")
+-- bullet_troll_glider_stage_213_suicide —— stage13 自杀滑翔弹
+tt = RT("bullet_troll_glider_stage_213_suicide", "bullet")
 tt.render.sprites[1].prefix = "troll_glider_creep"
 tt.render.sprites[1].name = "crash_projectile"
 tt.render.sprites[1].animated = true
@@ -15190,5 +15190,5 @@ tt.bullet.hit_fx = "fx_troll_glider_death"
 tt.bullet.flight_time = fts(5)
 tt.bullet.pop = {"pop_pow"}
 tt.bullet.pop_conds = DR_KILL
-tt.main_script.update = scripts.bullet_troll_glider_stage_13_suicide.update
+tt.main_script.update = scripts.bullet_troll_glider_stage_213_suicide.update
 tt.sound_events.hit = "Stage13KamikazeGliderDeathImpact"

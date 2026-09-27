@@ -13593,9 +13593,9 @@ function scripts.enemy_boss_stage_11.update(this, store, script)
 	end
 end
 
-scripts.enemy_boss_stage_13 = {}
+scripts.enemy_boss_stage_213 = {}
 
-function scripts.enemy_boss_stage_13.insert(this, store, script)
+function scripts.enemy_boss_stage_213.insert(this, store, script)
 	this.shield = E:create_entity(this.shield_t)
 	this.shield.render.sprites[1].ts = store.tick_ts
 	this.shield.render.sprites[1].track_attach_point = "shield"
@@ -13607,7 +13607,7 @@ function scripts.enemy_boss_stage_13.insert(this, store, script)
 	return scripts.enemy_basic.insert(this, store, script)
 end
 
-function scripts.enemy_boss_stage_13.update(this, store, script)
+function scripts.enemy_boss_stage_213.update(this, store, script)
 	local tower_health = boss_find_all_t(store, this.sunray_tower_health_t)[1]
 	local sunray_tower = boss_find_all_t(store, this.sunray_tower_t)[1]
 
@@ -13795,7 +13795,7 @@ function scripts.enemy_boss_stage_13.update(this, store, script)
 			this._jump_flags_added = nil
 		end
 
-		local debris_fx = E:create_entity("fx_boss_stage_13_land")
+		local debris_fx = E:create_entity("fx_boss_stage_213_land")
 
 		debris_fx.pos.x, debris_fx.pos.y = 512, 384
 		debris_fx.render.sprites[1].ts = store.tick_ts

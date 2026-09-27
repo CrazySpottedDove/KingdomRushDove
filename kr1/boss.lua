@@ -4521,7 +4521,7 @@ tt.loss_positions = {
 }
 
 -- ===== KR6 stage 13 boss：Moglok-Hai（deep_trolls.troll_boss）=====
-tt = RT("enemy_boss_stage_13", "boss")
+tt = RT("enemy_boss_stage_213", "boss")
 AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 1
 tt.enemy.lives_cost = 20
@@ -4534,8 +4534,8 @@ tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.info.i18n_key = "ENEMY_BOSS_STAGE_13"
 tt.info.portrait = "kr6_info_portraits_enemies_0036"
 tt.info.portrait_boss = "boss_health_bar_icon_0004"
-tt.main_script.insert = scripts.enemy_boss_stage_13.insert
-tt.main_script.update = scripts.enemy_boss_stage_13.update
+tt.main_script.insert = scripts.enemy_boss_stage_213.insert
+tt.main_script.update = scripts.enemy_boss_stage_213.update
 tt.sound_events.shieldbreak = "Stage13TrollKingShieldbreak"
 tt.sound_events.jump = "Stage13TrollKingEntranceJump"
 tt.sound_events.land = "Stage13TrollKingEntranceLand"
@@ -4611,10 +4611,10 @@ tt.sunray_stun = 5
 tt.offstage_wait_min = 4
 tt.offstage_wait_max = 6
 tt.turn_off_wave_wait = 0.5
-tt.jump_bullet_shieldless = "bullet_boss_stage_13_jump_shieldless"
-tt.jump_bullet_shield = "bullet_boss_stage_13_jump_shield_shakeless"
-tt.jump_bullet_shield_return = "bullet_boss_stage_13_jump_shield_shake"
-tt.shield_bullet = "bullet_boss_stage_13_shield"
+tt.jump_bullet_shieldless = "bullet_boss_stage_213_jump_shieldless"
+tt.jump_bullet_shield = "bullet_boss_stage_213_jump_shield_shakeless"
+tt.jump_bullet_shield_return = "bullet_boss_stage_213_jump_shield_shake"
+tt.shield_bullet = "bullet_boss_stage_213_shield"
 tt.shield_bullet_offset = v(0, 70)
 tt.shield_hit_offset = v(54, 100)
 tt.boss_tower_hit_offset = v(105, 0)
@@ -4643,12 +4643,12 @@ tt.melee.attacks[1].sound_args = {
 tt.ui.click_rect = r(-45, 10, 90, 100)
 
 -- stage 13 boss 投射物
-tt = RT("bullet_boss_stage_13_shield", "bomb")
+tt = RT("bullet_boss_stage_213_shield", "bomb")
 tt.bullet.flight_time = fts(50)
 tt.bullet.pop_chance = 0
 tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 10
-tt.bullet.particles_name = "ps_boss_stage_13_flying_shield"
+tt.bullet.particles_name = "ps_boss_stage_213_flying_shield"
 tt.bullet.hide_radius = 0
 tt.bullet.hit_fx = nil
 tt.bullet.hit_decal = nil
@@ -4665,9 +4665,9 @@ tt.render.sprites[1].name = "spindependingonvelocity"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BULLETS
-tt.decal_shadow = "decal_boss_stage_13_shield_fly_shadow"
+tt.decal_shadow = "decal_boss_stage_213_shield_fly_shadow"
 
-tt = RT("bullet_boss_stage_13_jump_shieldless", "bomb")
+tt = RT("bullet_boss_stage_213_jump_shieldless", "bomb")
 tt.bullet.flight_time = fts(48)
 tt.bullet.hit_fx = "decal_stage_213_boss_land_cracks"
 tt.bullet.hit_decal = "decal_stage_213_boss_land_dust"
@@ -4691,35 +4691,35 @@ tt.render.sprites[1].name = "jumpup"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BULLETS
-tt.decal_shadow = "decal_boss_stage_13_fly_shadow"
+tt.decal_shadow = "decal_boss_stage_213_fly_shadow"
 
-tt = RT("bullet_boss_stage_13_jump_shield_shakeless", "bullet_boss_stage_13_jump_shieldless")
+tt = RT("bullet_boss_stage_213_jump_shield_shakeless", "bullet_boss_stage_213_jump_shieldless")
 tt.render.sprites[1].name = "jumpupshield"
 tt.bullet.anim_rising = "jumpupshield"
 tt.bullet.anim_falling = "jumpdownshield"
 
-tt = RT("bullet_boss_stage_13_jump_shield_shake", "bullet_boss_stage_13_jump_shield_shakeless")
+tt = RT("bullet_boss_stage_213_jump_shield_shake", "bullet_boss_stage_213_jump_shield_shakeless")
 tt.screenshake_amplitude = 1
 tt.screenshake_duration = 0.5
 tt.screenshake_freq_factor = 2
 
-tt = RT("decal_boss_stage_13_fly_shadow", "decal")
+tt = RT("decal_boss_stage_213_fly_shadow", "decal")
 tt.render.sprites[1].name = "decal_flying_shadow_big"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 
-tt = RT("decal_boss_stage_13_shield_fly_shadow", "decal")
+tt = RT("decal_boss_stage_213_shield_fly_shadow", "decal")
 tt.render.sprites[1].name = "decal_flying_shadow_big"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 
-tt = RT("fx_boss_stage_13_land", "fx")
+tt = RT("fx_boss_stage_213_land", "fx")
 tt.timed.runs = 1
 tt.render.sprites[1].prefix = "trollboss_leveldecowhenlandDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 
-tt = RT("ps_boss_stage_13_flying_shield", "particle_system")
+tt = RT("ps_boss_stage_213_flying_shield", "particle_system")
 tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.z = Z_BULLET_PARTICLES
