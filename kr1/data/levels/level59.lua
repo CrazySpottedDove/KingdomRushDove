@@ -12,7 +12,6 @@ require("all.constants")
 local function fts(v)
 return v/FPS
 end
-local v=V.v
 local level={}
 function level:load(store)
 P:add_invalid_range(10,nil,nil,bit.bor(NF_RALLY,NF_POWER_1,NF_POWER_2,NF_POWER_3))
@@ -95,7 +94,7 @@ local groups=self.boss_waves[wave_number]
 if not groups then
 return
 end
-local start_ts,last_ts=store.tick_ts,store.tick_ts
+local start_ts=store.tick_ts
 for _,group in pairs(groups) do
 local t_elapsed=store.tick_ts-start_ts
 local t_total=group[2]
@@ -107,7 +106,7 @@ end) then
 return
 end
 if group[1]=="summoner" then
-local _,__,pack_idx,conf_idx,hp=unpack(group)
+local _,_,pack_idx,conf_idx,hp=unpack(group)
 local cfg=self.summoner_config[conf_idx]
 hp=10*math.ceil(hp*GS.difficulty_enemy_hp_max_factor[store.level_difficulty]/10)
 local zealots=table.filter(store.entities,function(_,e)

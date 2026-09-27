@@ -30,7 +30,7 @@ P:add_invalid_range(pid,v.from,v.to,NF_ALL)
 end
 else
 for _,d in pairs(self.serpent_action_data[OPEN_PATH]) do
-local back_pos,back_flip,scream_pos,scream_flip,zone_ids,path_ids=unpack(d)
+local path_ids=d[6]
 for _,pid in pairs(path_ids) do
 P:activate_path(pid)
 end

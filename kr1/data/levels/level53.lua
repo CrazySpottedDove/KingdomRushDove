@@ -21,7 +21,7 @@ end
 end
 function level:update(store)
 coroutine.yield()
-local h=LU.insert_hero(store,"hero_alleria",V.v(40,190))
+LU.insert_hero(store,"hero_alleria",V.v(40,190))
 while store.wave_group_number<1 do
 coroutine.yield()
 end

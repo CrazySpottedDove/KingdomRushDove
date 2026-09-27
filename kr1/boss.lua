@@ -4899,3 +4899,348 @@ tt.tween.reverse = false
 tt.tween.run_once = true
 tt.tween.disabled = false
 tt.tween_prop_replace = {fts(5), 255}
+
+-- ============================================================
+-- KR6 stage 18（最终关）Veznan / Moloch 支援 FX
+-- 注：stage_218 专属的 controller/decal/bullet/mod/tunnel 模板由
+--     level218.lua 热注册（Group A），这里只补齐通用 veznan FX。
+-- ============================================================
+tt = RT("fx_veznan_bolt_hit", "fx")
+tt.render.sprites[1].name = "veznan_fx_bolt_hit"
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+
+tt = RT("fx_veznan_hit_rojo", "fx")
+tt.render.sprites[1].name = "veznan_fx_hit_rojo"
+
+tt = RT("fx_veznan_explosion_bolt", "fx")
+tt.render.sprites[1].name = "veznan_fx_explosion_bolt"
+
+tt = RT("fx_veznan_f1_bolt_spawn", "fx")
+tt.render.sprites[1].name = "veznan_fx_f1_bolt_spawn"
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+
+tt = RT("fx_veznan_f2_bolt_spawn", "fx")
+tt.render.sprites[1].name = "veznan_fx_f2_bolt_spawn"
+
+tt = RT("fx_veznan_fogonazo", "fx")
+tt.render.sprites[1].name = "veznan_fx_fogonazo"
+
+tt = RT("fx_veznan_teleport", "fx")
+tt.render.sprites[1].prefix = "teleportDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -2
+
+tt = RT("fx_veznan_heal", "fx")
+tt.render.sprites[1].name = "veznan_fx_heal"
+
+tt = RT("fx_veznan_heal_decal", "fx")
+tt.render.sprites[1].prefix = "heal_decalDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("fx_veznan_healpump", "fx")
+tt.render.sprites[1].prefix = "healpump_decalDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+
+tt = RT("fx_veznan_shockwave", "fx")
+tt.render.sprites[1].prefix = "shockwaveDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].scale = vv(0.3)
+
+tt = RT("fx_veznan_shockwave_full", "fx_veznan_shockwave")
+tt.render.sprites[1].scale = nil
+
+tt = RT("fx_veznan_ghost_out", "fx")
+tt.render.sprites[1].name = "veznan_fx_ghost_projectile_out"
+
+tt = RT("fx_veznan_summon_explosion", "fx")
+tt.render.sprites[1].name = "veznan_fx_summon_explosion"
+
+tt = RT("fx_veznan_desintegracion_chica", "fx")
+AC(tt, "tween")
+tt.render.sprites[1].name = "veznan_fx_desintegracion_chica"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+tt.timed.runs = 1e+99
+tt.tween.remove = true
+tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2.5, 0}}
+
+tt = RT("fx_veznan_desintegracion_grande", "fx")
+AC(tt, "tween")
+tt.render.sprites[1].name = "veznan_fx_desintegracion_grande"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+tt.timed.runs = 1e+99
+tt.tween.remove = true
+tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2.5, 0}}
+
+tt = RT("ps_veznan_f1_bolt_trail", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.name = "veznan_fx_f1_bolt_trail"
+tt.particle_system.emission_rate = 50
+tt.particle_system.animation_fps = 60
+tt.particle_system.track_rotation = true
+tt.particle_system.z = Z_OBJECTS_SKY
+
+tt = RT("ps_veznan_f2_bolt_trail", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.name = "veznan_fx_f2_bolt_trail"
+tt.particle_system.emission_rate = 50
+tt.particle_system.animation_fps = 60
+tt.particle_system.track_rotation = true
+
+tt = RT("ps_veznan_ghost_trail", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.name = "veznan_fx_ghost_projectile_trail"
+tt.particle_system.emission_rate = 30
+tt.particle_system.animation_fps = 60
+tt.particle_system.track_rotation = true
+
+tt = RT("fx_screen_white_flash", "decal_tween")
+tt.pos = v(512, 384)
+-- dove 没有 KR6 的 _1x1_white 内置贴图，改用常驻图集 go_towers_group6 里的白色方块
+tt.render.sprites[1].name = "square_ffffff"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_SCREEN_FIXED
+tt.render.sprites[1].scale = vv(80)
+tt.render.sprites[1].alpha = 0
+tt.tween.props[1].keys = {{0, 0}, {fts(2), 255}, {fts(15), 255}, {fts(35), 0}}
+
+-- ============================================================
+-- enemy_stage_218_veznan_illusion / enemy_stage_218_veznan
+-- ============================================================
+tt = RT("enemy_stage_218_veznan_illusion", "boss")
+AC(tt, "melee", "death_spawns")
+tt.enemy.gold = 1
+tt.enemy.lives_cost = 20
+tt.enemy.melee_slot = v(40, 0)
+tt.health.hp_max = {7790.75, 9165.75, 10540.75, 11915.75}
+tt.health.dead_lifetime = 100
+tt.health_bar.offset = v(0, 60)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.info.i18n_key = "EB_VEZNAN"
+tt.info.portrait = "kr6_info_portraits_enemies_0069"
+tt.info.portrait_boss = "boss_health_bar_icon_0006"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_stage_218_veznan_illusion.update
+tt.motion.max_speed = 10
+tt.render.sprites[1].prefix = "veznan_fase2Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].scale = vv(1.2)
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].prefix = "auraDef"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].ignore_start = true
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = 1
+tt.aura_fade_time = 0.5
+tt.unit.can_explode = false
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.hit_offset = v(0, 26)
+tt.unit.mod_offset = v(0, 19)
+tt.vis.bans = bor(F_STUN, F_INSTAKILL)
+tt.spawn_delay = 4
+tt.melee.cooldown = 2.2
+tt.melee.order = {1}
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].animation = "mele_1"
+tt.melee.attacks[1].chance = 1
+tt.melee.attacks[1].shared_cooldown = true
+tt.melee.attacks[1].cooldown = 2.2
+tt.melee.attacks[1].damage_min = 275
+tt.melee.attacks[1].damage_max = 385
+tt.melee.attacks[1].damage_radius = 75
+tt.melee.attacks[1].damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
+tt.melee.attacks[1].hit_time = fts(28)
+tt.melee.attacks[1].hit_offset = v(40, 18)
+tt.melee.attacks[1].hit_fx = "fx_veznan_hit_rojo"
+tt.melee.attacks[1].hit_fx_flip = true
+tt.melee.attacks[1].sound_hit = "Stage218BossVeznanBasicAttackCast"
+tt.melee.attacks[1].uninterruptible = true
+tt.melee.attacks[1].vis_flags = F_AREA
+tt.cast_time = 1
+tt.skill_master_delay = 2
+tt.melee_engage = {
+	cooldown = 0,
+	duration = 3
+}
+tt.gem_blast_animation = "bolt"
+tt.gem_blast_shot_time = fts(57)
+tt.disable_animation = "tower_stun"
+tt.gem_blast = {
+	min_radius = 100,
+	cooldown = 5,
+	count = 1,
+	radius = 260
+}
+tt.gem_blast_bullet_t = "bullet_stage_218_veznan_gem_blast_f2"
+tt.gem_blast_spawn_fx = "fx_veznan_f2_bolt_spawn"
+tt.gem_blast_muzzle_offset = v(14, 102)
+tt.gem_blast_vis_flags = bor(F_RANGED)
+tt.gem_blast_vis_bans = 0
+tt.gem_blast_sound = "Stage218BossVeznanBoltCast"
+tt.gem_blast_release_sound = "Stage218BossVeznanBoltRelease"
+tt.disable = {
+	cooldown = 15,
+	count = 2,
+	radius = 300
+}
+tt.disable_mod_t = "mod_stage_218_veznan_tower_jail"
+tt.disable_cast_sound = "EnemyDarkDiscipleTowerTetherSummon"
+tt.illusion_death_animation = "death_fake"
+tt.illusion_death_sound = "Stage218BossVeznanIllusionDeath"
+tt.death_blast = {
+	radius = 200,
+	soul_time = 2,
+	soul_offset_x = 150,
+	soul_offset_y = {200, 300},
+	death_soul_count = 15
+}
+tt.death_blast_bullet_t = "bullet_stage_218_veznan_soul_release"
+tt.death_blast_action_time = fts(40)
+tt.death_blast_stagger = fts(2)
+tt.death_souls_action_time = fts(50)
+tt.death_souls_stagger = fts(7)
+tt.death_blast_shockwave_fx = "fx_veznan_shockwave"
+tt.death_blast_shockwave_action_time = fts(50)
+tt.death_spawns_lead_time = fts(22)
+tt.death_blast_flash_fx = "fx_veznan_fogonazo"
+tt.death_blast_flash_soul_time = fts(4)
+tt.death_blast_soul_disintegrate_time = fts(4)
+tt.death_blast_disintegrate_kill_time = fts(4)
+tt.death_blast_disintegrate_fx = "fx_veznan_desintegracion_grande"
+tt.death_spawns.name = "enemy_demon_lord"
+tt.death_spawns.no_spawn_damage_types = DAMAGE_ALL_TYPES
+tt.reveal_fx = "fx_demon_flareon_explosion"
+tt.skill_stagger = 4
+tt.wave_illusions = "Boss_1"
+tt.real_template = "enemy_stage_218_veznan"
+tt.ui.click_rect = r(-18, 0, 36, 45)
+
+tt = RT("enemy_stage_218_veznan", "enemy_stage_218_veznan_illusion")
+tt.main_script.update = scripts.enemy_stage_218_veznan.update
+tt.info.portrait = "kr6_info_portraits_enemies_0069"
+tt.death_spawns.name = nil
+tt.real_overrides = {
+	hp_max = {8248.625, 9623.625, 10998.625, 13748.625},
+	center_reveal = true,
+	disable_towers_off = true
+}
+tt.reveal_full_heal = true
+tt.render.sprites[2].prefix = "aura_bossDef"
+tt.render.sprites[3] = CC("sprite")
+tt.render.sprites[3].prefix = "aura_rayDef"
+tt.render.sprites[3].name = "idle"
+tt.render.sprites[3].exo = true
+tt.render.sprites[3].loop = false
+tt.render.sprites[3].hidden = true
+tt.render.sprites[3].ignore_start = true
+tt.render.sprites[3].z = Z_OBJECTS
+tt.render.sprites[3].sort_y_offset = -1
+tt.siphon = {
+	cooldown = 7,
+	count = 5,
+	radius = 250,
+	min_radius = 0,
+	damage_min = 605,
+	damage_max = 825,
+	heal_per_soul = 100,
+	soul_time = 0.5,
+	stagger = 0.25
+}
+tt.siphon_bullet_t = "bullet_stage_218_veznan_soul"
+tt.siphon_animations = {"lifesteal_in", "lifesteal_loop", "lifesteal_out"}
+tt.siphon_shoot_time = fts(18)
+tt.siphon_vis_flags = bor(F_RANGED)
+tt.siphon_vis_bans = 0
+tt.siphon_sound = "Stage218BossVeznanSoulSiphonCast"
+tt.siphon_flash_fx = "fx_veznan_fogonazo"
+tt.siphon_flash_soul_time = fts(4)
+tt.siphon_soul_disintegrate_time = fts(4)
+tt.siphon_disintegrate_kill_time = fts(4)
+tt.siphon_heal_fx = "fx_veznan_heal"
+tt.siphon_cast_decal = "fx_veznan_heal_decal"
+tt.siphon_arrive_fx = "fx_veznan_ghost_out"
+tt.siphon_disintegrate_fx = "fx_veznan_desintegracion_grande"
+tt.siphon_catch_offset = v(24, 35)
+tt.death_animations = {"death_in", "death_loop", "death_out"}
+tt.death_sound = "Stage218BossVeznanDeathFullSeq"
+tt.death_loop_time = 7
+tt.death_cam_in = {
+	time = 1.5,
+	zoom = 1.5
+}
+tt.death_cam_out = {
+	zoom = 1,
+	time = 1.5,
+	pos = v(512, 384)
+}
+tt.death_end_flash_fx = "fx_screen_white_flash"
+tt.death_end_shake = {
+	freq_factor = 6,
+	amplitude = 0.8,
+	duration = fts(50)
+}
+tt.death_end_shake_lead = fts(5)
+tt.death_loop_shockwave_fx = "fx_veznan_shockwave_full"
+tt.death_loop_shake = {
+	freq_factor = 6,
+	amplitude = 0.6,
+	duration = fts(30)
+}
+tt.death_loop_soul_t = "bullet_stage_218_veznan_soul_escape"
+tt.death_loop_soul_delay = {fts(5), fts(1)}
+tt.death_loop_soul_delay_tail_ptg = 0.15
+tt.death_loop_soul_offset = v(0, 50)
+tt.death_loop_soul_time = 1
+tt.center_reveal = true
+tt.disable_towers_off = true
+tt.center_reveal_fx = "fx_veznan_teleport"
+tt.center_reveal_sound = "Stage218BossVeznanMidCinematicTeleportIn"
+tt.center_reveal_pos = v(506, 372)
+tt.center_reveal_path = 15
+tt.center_reveal_show_time = fts(16)
+tt.death_teleport_cam = {
+	time = 0.6,
+	zoom = 1.5
+}
+tt.center_reveal_shockwave_fx = "fx_veznan_shockwave_full"
+tt.wave_real = "Boss_2"
+tt.reveal = {
+	loop_time = 4,
+	soul_count = 12,
+	soul_time = 0.8,
+	soul_fade = 0.3,
+	soul_offset_x = 250,
+	soul_offset_y = {200, 300},
+	soul_curve = {60, 120},
+	taunt_pre_delay = 1,
+	taunt_post_delay = 1,
+	hero_damage_min = 0,
+	hero_damage_max = 0,
+	hero_stun_duration = 14
+}
+tt.reveal_animations = {"in_reveal_boss", "loop_reveal_boss", "end_reveal_boss"}
+tt.reveal_in_sound = "Stage218BossVeznanMidCinematicExplosion"
+tt.reveal_bullet_t = "bullet_stage_218_veznan_soul_reveal"
+tt.reveal_cast_decal = "fx_veznan_heal_decal"
+tt.reveal_catch_offset = v(0, 26)
+tt.reveal_taunt_animation = "idle"
+tt.reveal_taunt_balloon = "S18_BOSS_02"
+tt.reveal_taunt_balloon_offset = v(0, 65)
+tt.reveal_hero_stun_mod = "mod_stage_218_veznan_reveal_stun"

@@ -1,0 +1,1 @@
+return {Stage218_0001={a_name="go_stage218_bg-1.dds",size={3938,2160},trim={0,0,0,0},a_size={3944,5512},f_quad={6,6,3938,2160},alias={},ref_scale=0.5},Stage218_0002={a_name="go_stage218_bg-1.dds",size={3938,2160},trim={0,0,0,0},a_size={3944,5512},f_quad={6,2172,3938,2160},alias={},ref_scale=0.5}}

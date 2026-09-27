@@ -1,0 +1,321 @@
+#	COMANDOS					1 - Tower Left - Portal Left - Exit Left					2 - Tower Left - Portal Bottom - Exit Left					3 - Tower Left - Portal Bottom - Exit Right					4 - Tower Left - Portal Right - Exit Right					5 - Tower Right - Portal Right - Exit Right					6 - Tower Right - Portal Bottom - Exit Left					7 - Tower Right - Portal Bottom - Exit Right					8 - Tower Right - Portal Left - Exit Left					9 - Tower Front - Exit Left					10 - Tower Front - Exit Right					11 - Tower Right - Phase 3 - Exit Bottom					12 - Tower Right - Phase 3 - Left Right					13 - Spawn Central - Left - Exit Left 					14 - Spawn Central - Left - Exit Bottom 					15 - Spawn Central - Right - Exit Right 					16 - Spawn Central - Right - Exit Bottom 					18- Portal Bottom - Exit Left 					19 - Portal Bottom - Exit Right 					22 - Torre frente left- Exit bottom					21 - Torre frente right - Exit bottom
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3		10:*	10:2	10:1	10:3		11:*	11:2	11:1	11:3		12:*	12:2	12:1	12:3		13:*	13:2	13:1	13:3		14:*	14:2	14:1	14:3		15:*	15:2	15:1	15:3		16:*	16:2	16:1	16:3		18:*	18:2	18:1	18:3		19:*	19:2	19:1	19:3		22:*	22:2	22:1	22:3		21:*	21:2	21:1	21:3
+#	level properties
+	description	NH Rodri
+	lives	20
+	gold	1650
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	2276
+#	stage gold curve
+#	WAVE 1										Skeleton x15
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		dark_sapper	crowcaller	crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	0	9	0		0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	135				0	0	135	0		0	0	0	0		0	0	0	0		0	0	0	0
+	wave		1		-1
+	event	stage_218_portal	1	open	0
+	event	stage_218_portal	2	open	0
+					1		brigand_kr6		brigand_kr6
+					1		brigand_kr6		brigand_kr6
+					5																																					dark_knight_kr6
+					3																																							dark_knight_kr6
+	event	stage_218_puerta	open		0
+					6																																											shadow_archer_kr6
+					1																																										shadow_archer_kr6
+					1																																												shadow_archer_kr6
+					10			brigand_kr6																																													shadow_archer_kr6
+					1		brigand_kr6		brigand_kr6																																											shadow_archer_kr6
+					1		brigand_kr6		brigand_kr6																																													shadow_archer_kr6
+					5																																					dark_knight_kr6
+					0.6																																							dark_knight_kr6
+#	event	stage_218_puerta	close		0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 4										Gargoyle x8					S. Archer x6					Brigand x8
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	0	8	0		0	0	0	0		0	0	0	1		0	0	0	0
+#	gold	170				0	0	120	0		0	0	0	0		0	0	0	50		0	0	0	0
+	wave		2		22
+					0																							dark_sapper
+					2			necromancer_kr6
+#	event	stage_218_puerta	open		0
+					4																																																dark_slayer
+					1																	brigand_kr6		brigand_kr6
+					1																	brigand_kr6		brigand_kr6
+					12																							dark_sapper
+					4																	brigand_kr6
+					2																			brigand_kr6
+
+					4																	brigand_kr6																										dark_slayer
+					2																			brigand_kr6
+#	event	stage_218_puerta	close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 7					Necromancer x1					Skeleton x12
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	7	7	0		0	0	0	3		0	0	0	0		0	0	0	0
+#	gold	405				0	210	105	0		0	0	0	90		0	0	0	0		0	0	0	0
+	wave		3		28
+					0
+					0.6			dark_disciple
+#	event	stage_218_puerta	open		0
+					4																			brigand_kr6																														dark_knight_kr6
+					4																	brigand_kr6
+
+					1																		dark_disciple																									dark_knight_kr6
+					4		gargoyle_kr6
+					2				gargoyle_kr6
+					2			gargoyle_kr6
+					2																		brigand_kr6
+					2																	gargoyle_kr6																																																																																	dark_knight_kr6
+					2																			gargoyle_kr6																																																																											dark_knight_kr6
+					0.6			dark_disciple
+					6		brigand_kr6
+#	event	stage_218_puerta	close		0
+					1				brigand_kr6
+					1			brigand_kr6
+					1																			gargoyle_kr6
+					1																		brigand_kr6
+																						gargoyle_kr6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 8										Skeleton x12					Necromancer x1 S. Archer x4
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	0	0	0		0	0	0	0		4	0	0	1		0	0	0	0
+#	gold	66				0	0	0	0		0	0	0	0		16	0	0	50		0	0	0	0
+
+	wave		4		25
+					0																	dark_knight_kr6
+					2																			dark_knight_kr6
+					3																		necromancer_kr6
+					1																																					shadow_archer_kr6		shadow_archer_kr6
+					2																																						shadow_archer_kr6
+					5			demon_hound
+					2		demon_hound
+					1.5				demon_hound
+					1.8			demon_hound
+					1.5		demon_hound
+					5																																					shadow_archer_kr6
+					2																																							shadow_archer_kr6
+					5																																																																																																		dark_sapper
+					7			demon_hound																																																																																														dark_knight_kr6
+					2				demon_hound																																																																																															dark_knight_kr6
+					1.5				demon_hound
+					1.8		demon_hound
+					1.5		demon_hound
+					12																		dark_knight_kr6																																																																											dark_sapper
+					1																	dark_knight_kr6		dark_knight_kr6																																																																									dark_knight_kr6
+					5																																							brigand_kr6
+					2																																					brigand_kr6
+					2																																						brigand_kr6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 12																				S. Blade x6					S. Blade x6										Necromancer x1 B. Golem x1 S. Blade x6
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades		skeleton_big
+#	cant.					0	0	0	0		0	0	0	0		0	1	0	0		0	0	0	0		0
+#	gold	60				0	0	0	0		0	0	0	0		0	60	0	0		0	0	0	0		0
+	wave		5		28
+#	event	stage_218_puerta	open		0
+					2																																																																																																			demon_spawn
+					2			dark_slayer																																																																																															demon_spawn
+					2																																																																																																	demon_spawn
+					6																																																																																												demon_spawn
+					1.2																																																																																														demon_spawn
+					1																																																																																													demon_spawn
+					1.2																																																																																																			demon_flareon_kr6
+					1																																																																																																	demon_flareon_kr6
+					4																																						magma_elemental
+					6																																										demon_spawn
+					1																																												demon_spawn
+					1.2																																											demon_lord
+					1																																										demon_flareon_kr6
+					1.2																																												demon_flareon_kr6
+					8																																																dark_disciple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 14					Crowcaller x2					S. Blade x8					Crowcaller x2 Skeleton x12
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades		skeleton_big
+#	cant.					0	0	0	0		0	0	0	0		0	1	0	0		0	0	0	0		0
+#	gold	60				0	0	0	0		0	0	0	0		0	60	0	0		0	0	0	0		0
+	wave		6		26
+					2			demon_hound																																												demon_spawn
+					2		demon_hound																																															demon_spawn
+					2				demon_hound																																												demon_spawn
+					2			demon_hound																																												demon_spawn
+					8																																					demon_spawn
+					0.8																																							demon_spawn
+					1.2			dark_slayer																																			demon_lord
+					0.8																																					demon_flareon_kr6
+					1																																							demon_flareon_kr6
+					8																																																																																												demon_spawn
+					0.8																																																																																														demon_spawn
+					1.2																																																																																													demon_lord
+					0.8																																																																																												demon_flareon_kr6
+					1																																																																																														demon_flareon_kr6
+					8																																						dark_slayer
+					1.5																																					dark_knight_kr6
+					1.2																																							dark_knight_kr6
+					1.3																																					dark_knight_kr6
+					8																																											magma_elemental
+					5																																																																																																		demon_lord
+					0.8																																																																																																	demon_spawn
+					1.2																																																																																																			demon_spawn
+					0.8																																																																																																	demon_flareon_kr6
+					1.2																																																																																																			demon_flareon_kr6
+					8			demon_hound
+					2				demon_hound
+					3		demon_hound
+					2			demon_hound
+
+
+
+
+#	75.6

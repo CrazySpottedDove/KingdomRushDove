@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level20")
 local bit=require("bit")
 local E=require("entity_db")
 local U=require("utils")

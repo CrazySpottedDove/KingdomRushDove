@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level17")
 local E=require("entity_db")
 local U=require("utils")
 local LU=require("level_utils")

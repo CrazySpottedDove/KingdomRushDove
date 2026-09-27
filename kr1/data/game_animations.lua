@@ -54934,5 +54934,665 @@ return {
 		from = 146,
 		prefix = "KR1_barracks_tower_lvl4_unit_paladin",
 		to = 166
+	},
+	molochbuff_back_in = {
+		from = 1,
+		prefix = "molochbuff_back",
+		to = 10
+	},
+	molochbuff_back_loop = {
+		from = 11,
+		prefix = "molochbuff_back",
+		to = 35
+	},
+	molochbuff_back_out = {
+		from = 36,
+		prefix = "molochbuff_back",
+		to = 44
+	},
+	molochbuff_front_in = {
+		from = 1,
+		prefix = "molochbuff_front",
+		to = 10
+	},
+	molochbuff_front_loop = {
+		from = 11,
+		prefix = "molochbuff_front",
+		to = 35
+	},
+	molochbuff_front_out = {
+		from = 36,
+		prefix = "molochbuff_front",
+		to = 44
+	},
+	molochproyectile_run = {
+		from = 1,
+		prefix = "molochproyectile",
+		to = 8
+	},
+	molochproyectiletrail_run = {
+		from = 1,
+		prefix = "molochproyectiletrail",
+		to = 22
+	},
+	molochsmashwarning_run = {
+		from = 1,
+		prefix = "molochsmashwarning",
+		to = 29
+	},
+	denas_reinforcements_lvl1_1_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl1_1",
+		to = 17
+	},
+	denas_reinforcements_lvl1_1_attack = {
+		from = 18,
+		prefix = "reinforcements_lvl1_1",
+		to = 41
+	},
+	denas_reinforcements_lvl1_1_death = {
+		from = 42,
+		prefix = "reinforcements_lvl1_1",
+		to = 60
+	},
+	denas_reinforcements_lvl2_hit_hit = {
+		from = 1,
+		prefix = "reinforcements_lvl2_hit",
+		to = 6
+	},
+	denas_reinforcements_lvl2_3_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl2_3",
+		to = 1
+	},
+	denas_reinforcements_lvl2_3_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl2_3",
+		to = 19
+	},
+	denas_reinforcements_lvl2_3_attack = {
+		from = 20,
+		prefix = "reinforcements_lvl2_3",
+		to = 46
+	},
+	denas_reinforcements_lvl2_3_death = {
+		from = 47,
+		prefix = "reinforcements_lvl2_3",
+		to = 67
+	},
+	denas_reinforcements_lvl2_2_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl2_2",
+		to = 1
+	},
+	denas_reinforcements_lvl2_2_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl2_2",
+		to = 17
+	},
+	denas_reinforcements_lvl2_2_attack = {
+		from = 18,
+		prefix = "reinforcements_lvl2_2",
+		to = 44
+	},
+	denas_reinforcements_lvl2_2_death = {
+		from = 45,
+		prefix = "reinforcements_lvl2_2",
+		to = 64
+	},
+	denas_reinforcements_lvl2_1_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl2_1",
+		to = 1
+	},
+	denas_reinforcements_lvl2_1_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl2_1",
+		to = 19
+	},
+	denas_reinforcements_lvl2_1_attack = {
+		from = 20,
+		prefix = "reinforcements_lvl2_1",
+		to = 43
+	},
+	denas_reinforcements_lvl2_1_death = {
+		from = 44,
+		prefix = "reinforcements_lvl2_1",
+		to = 65
+	},
+	denas_reinforcements_lvl3_hit_hit = {
+		from = 1,
+		prefix = "reinforcements_lvl3_hit",
+		to = 6
+	},
+	denas_reinforcements_lvl3_in_decal = {
+		from = 1,
+		prefix = "reinforcements_lvl3_in_decal",
+		to = 36
+	},
+	denas_reinforcements_lvl3_buff_decal = {
+		from = 1,
+		prefix = "reinforcements_lvl3_buff_decal",
+		to = 1
+	},
+	denas_reinforcements_lvl3_1_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl3_1",
+		to = 1
+	},
+	denas_reinforcements_lvl3_1_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl3_1",
+		to = 19
+	},
+	denas_reinforcements_lvl3_1_attack = {
+		from = 20,
+		prefix = "reinforcements_lvl3_1",
+		to = 47
+	},
+	denas_reinforcements_lvl3_1_death = {
+		from = 48,
+		prefix = "reinforcements_lvl3_1",
+		to = 69
+	},
+	denas_reinforcements_lvl3_2_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl3_2",
+		to = 1
+	},
+	denas_reinforcements_lvl3_2_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl3_2",
+		to = 19
+	},
+	denas_reinforcements_lvl3_2_attack = {
+		from = 20,
+		prefix = "reinforcements_lvl3_2",
+		to = 49
+	},
+	denas_reinforcements_lvl3_2_death = {
+		from = 50,
+		prefix = "reinforcements_lvl3_2",
+		to = 71
+	},
+	denas_reinforcements_lvl3_3_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl3_3",
+		to = 1
+	},
+	denas_reinforcements_lvl3_3_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl3_3",
+		to = 19
+	},
+	denas_reinforcements_lvl3_3_attack = {
+		from = 20,
+		prefix = "reinforcements_lvl3_3",
+		to = 48
+	},
+	denas_reinforcements_lvl3_3_death = {
+		from = 49,
+		prefix = "reinforcements_lvl3_3",
+		to = 70
+	},
+	denas_reinforcements_lvl3_special_unit_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl3_special_unit",
+		to = 20
+	},
+	denas_reinforcements_lvl3_special_unit_walk = {
+		from = 21,
+		prefix = "reinforcements_lvl3_special_unit",
+		to = 40
+	},
+	denas_reinforcements_lvl3_special_unit_attack_in = {
+		from = 41,
+		prefix = "reinforcements_lvl3_special_unit",
+		to = 46
+	},
+	denas_reinforcements_lvl3_special_unit_attack_loop = {
+		from = 47,
+		prefix = "reinforcements_lvl3_special_unit",
+		to = 70
+	},
+	denas_reinforcements_lvl3_special_unit_attack_out = {
+		from = 71,
+		prefix = "reinforcements_lvl3_special_unit",
+		to = 78
+	},
+	denas_reinforcements_lvl3_special_unit_death = {
+		from = 79,
+		prefix = "reinforcements_lvl3_special_unit",
+		to = 112
+	},
+	denas_vfx_multiexport_trail_catapulta_run = {
+		from = 1,
+		prefix = "denas_vfx_multiexport_trail_catapulta",
+		to = 10
+	},
+	denas_reinforcements_lvl1_hit_hit = {
+		from = 1,
+		prefix = "reinforcements_lvl1_hit",
+		to = 6
+	},
+	denas_reinforcements_lvl1_3_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl1_3",
+		to = 1
+	},
+	denas_reinforcements_lvl1_3_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl1_3",
+		to = 19
+	},
+	denas_reinforcements_lvl1_3_attack = {
+		from = 20,
+		prefix = "reinforcements_lvl1_3",
+		to = 42
+	},
+	denas_reinforcements_lvl1_3_death = {
+		from = 43,
+		prefix = "reinforcements_lvl1_3",
+		to = 64
+	},
+	denas_reinforcements_lvl1_2_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl1_2",
+		to = 1
+	},
+	denas_reinforcements_lvl3_special_unit_in = {
+		from = 113,
+		prefix = "reinforcements_lvl3_special_unit",
+		to = 132
+	},
+	denas_reinforcements_lvl1_2_walk = {
+		from = 2,
+		prefix = "reinforcements_lvl1_2",
+		to = 19
+	},
+	denas_reinforcements_lvl1_2_attack = {
+		from = 20,
+		prefix = "reinforcements_lvl1_2",
+		to = 46
+	},
+	denas_reinforcements_lvl1_2_death = {
+		from = 47,
+		prefix = "reinforcements_lvl1_2",
+		to = 66
+	},
+	denas_reinforcements_lvl1_1_idle = {
+		from = 1,
+		prefix = "reinforcements_lvl1_1",
+		to = 1
+	},
+	vfx_transition_stage_desintegrate_01 = {
+		from = 1,
+		prefix = "vfx_transition_stage_desintegrate_01",
+		to = 48
+	},
+	vfx_transition_stage_desintegrate_02 = {
+		from = 1,
+		prefix = "vfx_transition_stage_desintegrate_02",
+		to = 55
+	},
+	vfx_transition_stage_desintegrate_03 = {
+		from = 1,
+		prefix = "vfx_transition_stage_desintegrate_03",
+		to = 55
+	},
+	vfx_transition_stage_desintegrate_04 = {
+		from = 1,
+		prefix = "vfx_transition_stage_desintegrate_04",
+		to = 64
+	},
+	ray_exp_run = {
+		from = 1,
+		prefix = "ray_exp",
+		to = 17
+	},
+	veznan_fx_bolt_hit = {
+		from = 1,
+		prefix = "veznan_fx_bolt_hit",
+		to = 23
+	},
+	veznan_fx_hit_rojo = {
+		from = 1,
+		prefix = "veznan_fx_hit_rojo",
+		to = 23
+	},
+	veznan_fx_explosion_bolt = {
+		from = 1,
+		prefix = "veznan_fx_explosion_bolt",
+		to = 21
+	},
+	veznan_fx_f1_bolt_projectile_flying = {
+		from = 1,
+		prefix = "veznan_fx_f1_bolt_projectile",
+		to = 10
+	},
+	veznan_fx_f1_bolt_trail = {
+		from = 1,
+		prefix = "veznan_fx_f1_bolt_trail",
+		to = 12
+	},
+	veznan_fx_f1_bolt_spawn = {
+		from = 1,
+		prefix = "veznan_fx_f1_bolt_spawn",
+		to = 24
+	},
+	veznan_fx_f2_bolt_projectile_flying = {
+		from = 1,
+		prefix = "veznan_fx_f2_bolt_projectile",
+		to = 10
+	},
+	veznan_fx_f2_bolt_trail = {
+		from = 1,
+		prefix = "veznan_fx_f2_bolt_trail",
+		to = 12
+	},
+	veznan_fx_f2_bolt_spawn = {
+		from = 1,
+		prefix = "veznan_fx_f2_bolt_spawn",
+		to = 24
+	},
+	veznan_fx_ghost_projectile_in = {
+		from = 1,
+		prefix = "veznan_fx_ghost_projectile",
+		to = 4
+	},
+	veznan_fx_ghost_projectile_flying = {
+		from = 5,
+		prefix = "veznan_fx_ghost_projectile",
+		to = 18
+	},
+	veznan_fx_ghost_projectile_out = {
+		from = 19,
+		prefix = "veznan_fx_ghost_projectile",
+		to = 22
+	},
+	veznan_fx_ghost_projectile_trail = {
+		from = 1,
+		prefix = "veznan_fx_ghost_projectile_trail",
+		to = 22
+	},
+	veznan_fx_fogonazo = {
+		from = 1,
+		prefix = "veznan_fx_fogonazo",
+		to = 24
+	},
+	veznan_fx_heal = {
+		from = 1,
+		prefix = "veznan_fx_heal",
+		to = 22
+	},
+	veznan_fx_desintegracion_chica = {
+		from = 1,
+		prefix = "veznan_fx_desintegracion_chica",
+		to = 24
+	},
+	veznan_fx_desintegracion_grande = {
+		from = 1,
+		prefix = "veznan_fx_desintegracion_grande",
+		to = 24
+	},
+	veznan_fx_summon_explosion = {
+		from = 1,
+		prefix = "veznan_fx_summon_explosion",
+		to = 25
+	},
+	vfx_transition_stage_flares_run = {
+		from = 1,
+		prefix = "vfx_transition_stage_flares",
+		to = 90
+	},
+	demon_flareon_creep_walk = {
+		from = 13,
+		prefix = "demon_flareon_creep",
+		to = 32
+	},
+	demon_flareon_creep_walk_down = {
+		from = 33,
+		prefix = "demon_flareon_creep",
+		to = 52
+	},
+	demon_flareon_creep_walk_up = {
+		from = 53,
+		prefix = "demon_flareon_creep",
+		to = 72
+	},
+	demon_flareon_creep_melee = {
+		from = 73,
+		prefix = "demon_flareon_creep",
+		to = 102
+	},
+	demon_flareon_creep_ranged = {
+		from = 103,
+		prefix = "demon_flareon_creep",
+		to = 142
+	},
+	demon_flareon_creep_death = {
+		from = 143,
+		prefix = "demon_flareon_creep",
+		to = 171
+	},
+	demon_flareon_bullet_run = {
+		from = 1,
+		prefix = "demon_flareon_bullet",
+		to = 24
+	},
+	demon_flareon_trail_run = {
+		from = 1,
+		prefix = "demon_flareon_trail",
+		to = 7
+	},
+	demon_flareon_explosion = {
+		from = 1,
+		prefix = "demon_flareon_explosion",
+		to = 19
+	},
+	demon_flareon_decal = {
+		from = 1,
+		prefix = "demon_flareon_decal",
+		to = 24
+	},
+	demon_flareon_creep_idle = {
+		from = 1,
+		prefix = "demon_flareon_creep",
+		to = 12
+	},
+	demon_hound_creep_idle = {
+		from = 1,
+		prefix = "demon_hound_creep",
+		to = 1
+	},
+	demon_hound_creep_walk = {
+		from = 2,
+		prefix = "demon_hound_creep",
+		to = 12
+	},
+	demon_hound_creep_walk_down = {
+		from = 13,
+		prefix = "demon_hound_creep",
+		to = 23
+	},
+	demon_hound_creep_walk_up = {
+		from = 24,
+		prefix = "demon_hound_creep",
+		to = 34
+	},
+	demon_hound_creep_melee = {
+		from = 35,
+		prefix = "demon_hound_creep",
+		to = 66
+	},
+	demon_hound_creep_death = {
+		from = 67,
+		prefix = "demon_hound_creep",
+		to = 97
+	},
+	demon_imp_creep_death = {
+		from = 41,
+		prefix = "demon_imp_creep",
+		to = 71
+	},
+	demon_imp_creep_idle = {
+		from = 1,
+		prefix = "demon_imp_creep",
+		to = 10
+	},
+	demon_imp_creep_walk = {
+		from = 11,
+		prefix = "demon_imp_creep",
+		to = 20
+	},
+	demon_imp_creep_walk_down = {
+		from = 21,
+		prefix = "demon_imp_creep",
+		to = 30
+	},
+	demon_imp_creep_walk_up = {
+		from = 31,
+		prefix = "demon_imp_creep",
+		to = 40
+	},
+	demon_lord_creep_idle = {
+		from = 1,
+		prefix = "demon_lord_creep",
+		to = 1
+	},
+	demon_lord_creep_walk = {
+		from = 2,
+		prefix = "demon_lord_creep",
+		to = 24
+	},
+	demon_lord_creep_walk_down = {
+		from = 25,
+		prefix = "demon_lord_creep",
+		to = 48
+	},
+	demon_lord_creep_walk_up = {
+		from = 49,
+		prefix = "demon_lord_creep",
+		to = 72
+	},
+	demon_lord_creep_melee = {
+		from = 73,
+		prefix = "demon_lord_creep",
+		to = 121
+	},
+	demon_lord_creep_skill = {
+		from = 122,
+		prefix = "demon_lord_creep",
+		to = 157
+	},
+	demon_lord_creep_death = {
+		from = 158,
+		prefix = "demon_lord_creep",
+		to = 196
+	},
+	demon_lord_shield_start = {
+		from = 1,
+		prefix = "demon_lord_shield",
+		to = 12
+	},
+	demon_lord_shield_loop = {
+		from = 13,
+		prefix = "demon_lord_shield",
+		to = 48
+	},
+	demon_lord_shield_end = {
+		from = 49,
+		prefix = "demon_lord_shield",
+		to = 64
+	},
+	demon_spawn_creep_walk = {
+		from = 2,
+		prefix = "demon_spawn_creep",
+		to = 21
+	},
+	demon_spawn_creep_walk_down = {
+		from = 22,
+		prefix = "demon_spawn_creep",
+		to = 41
+	},
+	demon_spawn_creep_idle = {
+		from = 1,
+		prefix = "demon_spawn_creep",
+		to = 1
+	},
+	demon_spawn_creep_melee = {
+		from = 62,
+		prefix = "demon_spawn_creep",
+		to = 83
+	},
+	demon_spawn_creep_death = {
+		from = 84,
+		prefix = "demon_spawn_creep",
+		to = 114
+	},
+	demon_spawn_creep_walk_up = {
+		from = 42,
+		prefix = "demon_spawn_creep",
+		to = 61
+	},
+	magma_elemental_creep_melee = {
+		from = 110,
+		prefix = "magma_elemental_creep",
+		to = 160
+	},
+	magma_elemental_creep_spawn_loop = {
+		from = 161,
+		prefix = "magma_elemental_creep",
+		to = 161
+	},
+	magma_elemental_creep_spawn = {
+		from = 162,
+		prefix = "magma_elemental_creep",
+		to = 190
+	},
+	magma_elemental_creep_death = {
+		from = 191,
+		prefix = "magma_elemental_creep",
+		to = 239
+	},
+	magma_elemental_explosion_run = {
+		from = 1,
+		prefix = "magma_elemental_explosion",
+		to = 22
+	},
+	magma_elemental_fire_decal_in = {
+		from = 1,
+		prefix = "magma_elemental_fire_decal",
+		to = 4
+	},
+	magma_elemental_fire_decal_idle = {
+		from = 5,
+		prefix = "magma_elemental_fire_decal",
+		to = 5
+	},
+	magma_elemental_fire_decal_out = {
+		from = 6,
+		prefix = "magma_elemental_fire_decal",
+		to = 18
+	},
+	magma_elemental_creep_idle = {
+		from = 1,
+		prefix = "magma_elemental_creep",
+		to = 1
+	},
+	magma_elemental_creep_walk = {
+		from = 2,
+		prefix = "magma_elemental_creep",
+		to = 37
+	},
+	magma_elemental_creep_walk_down = {
+		from = 38,
+		prefix = "magma_elemental_creep",
+		to = 73
+	},
+	magma_elemental_creep_walk_up = {
+		from = 74,
+		prefix = "magma_elemental_creep",
+		to = 109
 	}
 }

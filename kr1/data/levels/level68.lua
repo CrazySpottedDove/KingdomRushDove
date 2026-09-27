@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level20")
 local km=require("lib.klua.macros")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")

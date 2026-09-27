@@ -1196,7 +1196,7 @@ function SU.y_hero_death_and_respawn(store, this)
 	h.ignore_damage = true
 
 	S:queue(this.sound_events.respawn)
-	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
+	U.y_animation_play(this, he.respawn_animation or "respawn", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
 	this.ui.can_click = true

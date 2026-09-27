@@ -25,7 +25,7 @@ local tpl=E:get_template("hero_baby_malik")
 tpl.hero.level=10
 tpl.hero.skills.smash.level=3
 tpl.hero.skills.fissure.level=3
-local h=LU.insert_hero(store,"hero_baby_malik",store.level.locations.exits[2].pos)
+LU.insert_hero(store,"hero_baby_malik",store.level.locations.exits[2].pos)
 end
 while store.wave_group_number<1 do
 coroutine.yield()
