@@ -930,6 +930,11 @@ function level:update(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 P:deactivate_path(5)
 LU.insert_hero(store,"hero_stage_205_alleria",V.v(620,270))
+local signal=require("lib.hump.signal")
+signal.emit("show-balloon_tutorial-pos","S05_INTRO_01",false,V.v(620,320))
+U.y_wait(store,2)
+signal.emit("show-balloon_tutorial-pos","S05_INTRO_02",false,V.v(620,320))
+U.y_wait(store,2)
 local upper_path
 for k,vv in pairs(store.entities) do
 if vv.template_name=="decal_stage_205_upper_path" then

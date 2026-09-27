@@ -1,0 +1,428 @@
+#	COMANDOS					1 - Izquierda a Derecha-Arriba					2 - Arriba a Derecha-Arriba					3 - Abajo a Derecha-Abajo					4 - Izquierda a Derecha-Abajo					5 - SWAMP a Derecha-Arriba					6 - SWAMP a Derecha-Abajo
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties
+	description	main JC
+	lives	20
+	gold	1200
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	3409
+#	stage gold curve
+#	WAVE 1					T. Wolf x10															Brigand x10
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	dark_sapper	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	10	0		10	0	0	0		0	0	0	0		0	0	0	0
+#	gold	290				0	0	150	0		140	0	0	0		0	0	0	0		0	0	0	0
+	wave		1		-1
+					0	tainted_wolf
+					1.1	tainted_wolf
+					1.2	tainted_wolf
+					2																			brigand_kr6
+					1.1																		brigand_kr6
+					1.2																	brigand_kr6
+					1.3																		brigand_kr6
+					1.2																			brigand_kr6
+					10	tainted_wolf
+					1.2	tainted_wolf
+					1.1	tainted_wolf
+					2																		brigand_kr6
+					1.2																			brigand_kr6
+					1.3																		brigand_kr6
+					1.2																			brigand_kr6
+					1.1																		brigand_kr6
+					8	tainted_wolf
+					1.1	tainted_wolf
+					1.3	tainted_wolf
+					1.1	tainted_wolf
+
+#	WAVE 2															Brigand x8 Sapper x1					Brigand x10
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	dark_sapper	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	17	0		0	0	0	0		0	0	0	0		0	1	0	0
+#	gold	285				0	0	255	0		0	0	0	0		0	0	0	0		0	30	0	0
+	wave		2		26
+					0																brigand_kr6
+					1																brigand_kr6
+					1.1																brigand_kr6
+					0.9																brigand_kr6
+					5													brigand_kr6
+					1														brigand_kr6
+					0.1												brigand_kr6
+					8																brigand_kr6
+					0.9																brigand_kr6
+					1																brigand_kr6
+					4																brigand_kr6
+					1.1																brigand_kr6
+					1																brigand_kr6
+					10													dark_sapper
+					4														brigand_kr6
+					0.1												brigand_kr6
+					1.5												brigand_kr6		brigand_kr6
+
+
+#	WAVE 3					T. Wolf x8					S. Archer x8										T. Wolf x8
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	dark_sapper	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	0	8		16	0	0	0		0	0	0	0		0	0	0	0
+#	gold	344				0	0	0	120		224	0	0	0		0	0	0	0		0	0	0	0
+	wave		3		22
+					0	tainted_wolf
+					1.5	tainted_wolf
+					1.4	tainted_wolf
+					1.3	tainted_wolf
+					5							shadow_archer_kr6									tainted_wolf
+					1.4								shadow_archer_kr6								tainted_wolf
+					1.4									shadow_archer_kr6							tainted_wolf
+					1.3								shadow_archer_kr6
+					8	tainted_wolf
+					1.4	tainted_wolf
+					1.2	tainted_wolf
+					1.5	tainted_wolf
+					4							shadow_archer_kr6									tainted_wolf
+					1.2									shadow_archer_kr6							tainted_wolf
+					1.3							shadow_archer_kr6									tainted_wolf
+					1.4									shadow_archer_kr6							tainted_wolf
+					1.1																tainted_wolf
+
+#	WAVE 4					Disciple x3 S. Archer x10					Disciple x1 S. Archer x8
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	sapper	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	0	18		0	0	0	4		0	0	0	0		0	0	0	0
+#	gold	390				0	0	0	270		0	0	0	120		0	0	0	0		0	0	0	0
+	wave		4		28
+					0			dark_disciple
+					2		shadow_archer_kr6
+					0.1				shadow_archer_kr6
+					1				shadow_archer_kr6
+					0.05		shadow_archer_kr6
+					6								shadow_archer_kr6
+					1							shadow_archer_kr6
+					0.9									shadow_archer_kr6
+					2								shadow_archer_kr6
+					8			dark_disciple
+					2				shadow_archer_kr6
+					0.1		shadow_archer_kr6
+					1		shadow_archer_kr6
+					0.05				shadow_archer_kr6
+					1.9			dark_disciple
+					2				shadow_archer_kr6
+					0.1		shadow_archer_kr6
+					6							shadow_archer_kr6
+					1									shadow_archer_kr6
+					1							shadow_archer_kr6
+					0								dark_disciple
+					1									shadow_archer_kr6
+
+#	WAVE 5					Sapper x2 Brigand x8															Brigand x14
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	dark_sapper	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	22	0		0	0	0	0		0	0	0	0		0	2	0	0
+#	gold	390				0	0	330	0		0	0	0	0		0	0	0	0		0	60	0	0
+	wave		5		20
+					0																		brigand_kr6
+					1																	brigand_kr6
+					0.05																			brigand_kr6
+					1.2																	brigand_kr6		brigand_kr6
+					2			dark_sapper
+					4				brigand_kr6
+					1.2		brigand_kr6
+					1.1		brigand_kr6
+					1.2				brigand_kr6
+					6																			brigand_kr6
+					0.2																	brigand_kr6
+					1																	brigand_kr6		brigand_kr6
+					8			dark_sapper
+					4																			brigand_kr6
+					0.1																	brigand_kr6
+					1.1																	brigand_kr6		brigand_kr6
+					1.2																			brigand_kr6
+					4		brigand_kr6
+					0.1				brigand_kr6
+					1.2				brigand_kr6
+					1		brigand_kr6
+	wait_signal	all_enemies_died			-1
+	wait				0
+	event	accusation_cinematic
+	wait_signal	accusation_cinematic_end			-1
+
+
+#	WAVE 6																									Swamp Thing x1					Husk x16
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0		0		0	0
+	wave		6		1
+	wait				2
+#	Nota Ñ: La cinemática de la acusación tiene un "start_bubbles" interno para el path 5 y 6. Quedan abiertos para que los apaguen desde remote balance. Haganlo cuando quieran.
+	event	spawn_swamp_husks	5	5	8
+	event	end_bubbles	5		6
+	event	spawn_swamp_husks	6	4	6
+	event	spawn_swamp_thing	6	1	10
+	event	spawn_swamp_husks	6	6	8
+	event	end_bubbles	6		7
+
+
+#	WAVE 7					T. Wolf x					Gargoyle x					Gargoyle x					T. Wolf x
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	14	0	0		12	0	0	0		0	0	0	0		0	0	0	0
+#	gold	280				0	112	0	0		168	0	0	0		0	0	0	0		0	0	0	0
+	wave		7		20
+					0	tainted_wolf
+					1.2	tainted_wolf
+					1.3																tainted_wolf
+					1.1																tainted_wolf
+					4													gargoyle_kr6
+					1.5											gargoyle_kr6
+					1.5											gargoyle_kr6
+					2						gargoyle_kr6
+					1.2						gargoyle_kr6
+					1.3						gargoyle_kr6
+					2		tainted_wolf
+					1.2																			tainted_wolf
+					1.2			tainted_wolf
+					1.2																			tainted_wolf
+					1.2		tainted_wolf
+					1.2																		tainted_wolf
+					1.2		tainted_wolf
+					1.1																		tainted_wolf
+					4								gargoyle_kr6
+					1.3						gargoyle_kr6
+					1.3						gargoyle_kr6
+					1.3						gargoyle_kr6
+					2													gargoyle_kr6
+					1.5											gargoyle_kr6
+					1.5											gargoyle_kr6
+					1.5											gargoyle_kr6
+
+#	WAVE 8					Necromancer x2 S. Archer x																				Husk x16
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	0	12		0	0	0	0		0	0	0	1		0	0	0	0
+#	gold	230				0	0	0	180		0	0	0	0		0	0	0	50		0	0	0	0
+	wave		8		18
+					0			necromancer_kr6
+					12		shadow_archer_kr6
+					0.1				shadow_archer_kr6
+					1.3		shadow_archer_kr6		shadow_archer_kr6
+					6			shadow_archer_kr6
+					1				shadow_archer_kr6
+					0.1		shadow_archer_kr6
+					1			shadow_archer_kr6
+					6			necromancer_kr6
+					8				shadow_archer_kr6
+					0.2		shadow_archer_kr6
+					1.3		shadow_archer_kr6		shadow_archer_kr6
+
+
+#	WAVE 9															Sapper x2					Brigand x12										Swamp Thing x1
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	15	0		0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	225				0	0	225	0		0	0	0	0		0	0	0	0		0	0	0	0
+	wave		9		22
+					0																	brigand_kr6
+					1																		brigand_kr6
+					1																			brigand_kr6
+					0.8																	brigand_kr6
+					1																		brigand_kr6
+					1													dark_sapper						brigand_kr6
+	event	start_bubbles	6		2
+	event	spawn_swamp_thing	6	1	2
+	event	spawn_swamp_husks	6	5	4
+	event	end_bubbles	6		6
+					2																		brigand_kr6
+					1.1												dark_sapper					brigand_kr6
+					0.1																			brigand_kr6
+					1.2																			brigand_kr6
+					0.1																	brigand_kr6
+					1.2														dark_sapper			brigand_kr6		brigand_kr6
+					1																	brigand_kr6
+					0.1																			brigand_kr6
+
+#	WAVE 10					Necromancer x2															Necromancer x1					Swamp Thing x1					Husk x24
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	3		0	0	0	0
+#	gold	150				0	0	0	0		0	0	0	0		0	0	0	150		0	0	0	0
+	wave		10		18
+					4			necromancer_kr6
+	event	start_bubbles	5		2
+	event	spawn_swamp_thing	5	1	2
+	event	end_bubbles	5		2
+	event	start_bubbles	6		4
+	event	spawn_swamp_husks	6	4	2
+					2																		necromancer_kr6
+	event	spawn_swamp_husks	6	4	10
+	event	spawn_swamp_thing	6	1	6
+					6																		necromancer_kr6
+	event	spawn_swamp_husks	6	4	12
+	event	end_bubbles	6		5
+
+#	WAVE 11										D. Disciple x2 Brigand x					D. Disciple x3															Husk x36
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	dark_sapper	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf
+#	cant.					0	0	10	0		0	0	0	7		0	0	0	0		0	2	0	0
+#	gold	470				0	0	200	0		0	0	0	210		0	0	0	0		0	60	0	0
+	wave		11		22
+	event	start_bubbles	6		0
+	event	spawn_swamp_husks	6	6	2
+					1													dark_sapper
+					4												dark_disciple
+					1														dark_disciple
+	event	start_bubbles	5		2
+	event	spawn_swamp_husks	5	5	4
+					4								dark_disciple
+					1.8									brigand_kr6
+					0.1							brigand_kr6
+					2							brigand_kr6		brigand_kr6
+	event	spawn_swamp_husks	6	6	6
+	event	spawn_swamp_husks	5	5	8
+					2							brigand_kr6		brigand_kr6
+					1.6							brigand_kr6
+					0.1									brigand_kr6
+					1.6							brigand_kr6		brigand_kr6
+					1.5							dark_disciple
+					1.5									dark_disciple
+	event	end_bubbles	5		1
+					1													dark_sapper
+					4														dark_disciple
+					1												dark_disciple
+	event	spawn_swamp_husks	6	6	0.5
+	event	end_bubbles	6		9
+
+
+#	WAVE 12					Gargoyle x14															T. Wolf x10										Swamp Thing x2
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf		swamp_thing
+#	cant.					0	20	0	0		0	0	0	0		0	0	0	0		0	0	0	0		2
+#	gold	400				0	160	0	0		0	0	0	0		0	0	0	0		0	0	0	0		240
+	wave		12		16
+					0		gargoyle_kr6
+					1.2			gargoyle_kr6
+					1.1	gargoyle_kr6
+					1.1	gargoyle_kr6
+	event	start_bubbles	5		1
+	event	spawn_swamp_husks	5	5	2
+					2									gargoyle_kr6
+					1.2						gargoyle_kr6
+					1.1						gargoyle_kr6
+	event	spawn_swamp_thing	5	1	6
+	event	spawn_swamp_husks	5	4	0
+	event	end_bubbles	5		5
+					2																			gargoyle_kr6
+					1.3																		gargoyle_kr6
+					1.1																gargoyle_kr6
+					1.1																gargoyle_kr6
+	event	start_bubbles	6		2
+	event	spawn_swamp_husks	6	6	2
+	event	spawn_swamp_thing	5	1	8
+	event	end_bubbles	6		2
+					2											gargoyle_kr6
+					1.2											gargoyle_kr6
+					1.2											gargoyle_kr6
+					2			gargoyle_kr6
+					1		gargoyle_kr6
+					1.2																			gargoyle_kr6
+					1.1																		gargoyle_kr6
+					1.2		gargoyle_kr6
+					1.2																			gargoyle_kr6
+
+#	WAVE 13					Brigand x12					S. Archer x12					Sapper x2 Brigand x12
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	dark_sapper	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf		skeleton_big
+#	cant.					0	0	26	9		0	0	0	0		0	0	0	0		0	4	0	0		0
+#	gold	645				0	0	390	135		0	0	0	0		0	0	0	0		0	120	0	0
+	wave		13		20
+					0		brigand_kr6
+					0.2				brigand_kr6
+					1.4		brigand_kr6		brigand_kr6
+					1.5				brigand_kr6
+					0.1		brigand_kr6											dark_sapper
+					3														brigand_kr6
+					1.2														brigand_kr6
+					1												brigand_kr6
+					1.2												brigand_kr6
+					1.1							shadow_archer_kr6						brigand_kr6
+					1.2									shadow_archer_kr6			brigand_kr6		brigand_kr6
+					1							shadow_archer_kr6						brigand_kr6
+					1.2									shadow_archer_kr6
+					1								shadow_archer_kr6
+					4													dark_sapper
+					1.1												brigand_kr6
+					0.2														brigand_kr6
+					1.2												brigand_kr6		brigand_kr6
+					4								shadow_archer_kr6				dark_sapper
+					1		brigand_kr6					shadow_archer_kr6							dark_sapper
+					0.2				brigand_kr6					shadow_archer_kr6
+					1.3		brigand_kr6		brigand_kr6				shadow_archer_kr6
+					1.2				brigand_kr6
+					0.1		brigand_kr6
+					1.3		brigand_kr6		brigand_kr6
+
+
+#	WAVE 14					Necromancer x2															Necromancer x1					Swamp Thing x2 Husk x24
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf		swamp_thing
+#	cant.					0	0	0	0		0	0	0	4		0	0	0	2		0	0	0	0		2
+#	gold	460				0	0	0	0		0	0	0	120		0	0	0	100		0	0	0	0		240
+	wave		14		20
+					0			necromancer_kr6
+	event	start_bubbles	5		2
+	event	spawn_swamp_thing	5	1	2
+	event	spawn_swamp_husks	5	6	4
+					2									dark_disciple
+					1							dark_disciple
+	event	start_bubbles	6		7
+	event	spawn_swamp_husks	6	6	2
+					4																		necromancer_kr6
+	event	spawn_swamp_thing	6	1	2
+	event	spawn_swamp_husks	6	6	6
+					2														dark_disciple
+					1												dark_disciple
+	event	end_bubbles	6		5
+	event	spawn_swamp_husks	5	8	4
+					2			necromancer_kr6
+	event	end_bubbles	5		7
+
+
+
+	event	end_wave_14
+	wait_signal	boss_fight_start			-1
+
+#	WAVE 15					T. Wolf x					S. Archer x					D. Sapper x					T. Wolf x										Swamp Thing x2
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		tainted_wolf	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_shadow_archer	cloud_of_crows_tainted_wolf		skeleton_big
+#	cant.					0	0	0	8		14	0	0	0		0	0	0	0		0	0	0	0		0
+#	gold	316				0	0	0	120		196	0	0	0		0	0	0	0		0	0	0	0		0
+	wave		15		16
+	manual_wave	BOSS1			0
+	event	spawn_swamp_husks	5	5	6
+					4								shadow_archer_kr6
+					1.5									shadow_archer_kr6
+					0.1							shadow_archer_kr6
+					1.4								shadow_archer_kr6
+					6																tainted_wolf
+					1.2																tainted_wolf
+					1.1																tainted_wolf
+					1.2																tainted_wolf
+					1.1																tainted_wolf
+	event	spawn_swamp_thing	6	1	8
+					1												dark_sapper
+					2														dark_sapper
+					8	tainted_wolf
+					1.2	tainted_wolf
+					1.1	tainted_wolf
+					1.2	tainted_wolf
+					4							shadow_archer_kr6
+					0.2									shadow_archer_kr6
+					1.2							shadow_archer_kr6
+					0.1									shadow_archer_kr6
+	event	spawn_swamp_husks	5	5	10
+					2														dark_sapper
+					1.5												dark_sapper
+	event	spawn_swamp_thing	6	1	4
+					6																tainted_wolf
+					1.2																tainted_wolf
+					1.1																tainted_wolf
+					1.2																tainted_wolf
+					1.1																tainted_wolf
+	wait				18
+	manual_wave_repeat	-1			2
+#
+	manual_wave	BOSS_BUBBLES			0
+	event	start_bubbles	5		6
+	event	start_bubbles	6		12
+					0
+	wait_signal	boss_fight_end			-1
+					0
+	event	end_bubbles	5		0
+	event	end_bubbles	6		0

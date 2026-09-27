@@ -11,10 +11,10 @@ local function flag_has(flags, token)
 	return string.find(flags, token, 1, true) ~= nil
 end
 
-local function build_callout_balloon(parent, max_size, flags, text, text_padding, background_color, line_color, text_color)
+local function build_callout_balloon(parent, max_size, flags, text, text_padding, background_color, line_color, text_color, body_font)
 	max_size = max_size or V.v(256, 0)
 
-	local text_font = "body"
+	local text_font = body_font or "body"
 	local text_font_size = 28
 	local text_align, text_vertical_align = "left", "middle"
 	local text_line_height = 0.85
@@ -124,22 +124,52 @@ local function build_callout_balloon(parent, max_size, flags, text, text_padding
 		background.anchor = V.v(bw / 2, bh / 2)
 		background.pos = V.v(bw / 2, bh / 2)
 
+		if flag_has(flags, "bg_shadow-") then
+			local shadow_color = {0, 0, 0, 255}
+
+			if flag_has(flags, "bg_shadow-red") then
+				shadow_color = {255, 0, 0, 255}
+			elseif flag_has(flags, "bg_shadow-green") then
+				shadow_color = {0, 255, 0, 255}
+			elseif flag_has(flags, "bg_shadow-yellow") then
+				shadow_color = {255, 255, 0, 255}
+			elseif flag_has(flags, "bg_shadow-transparent") then
+				shadow_color = {0, 0, 0, 0}
+			end
+
+			local back_background = KView:new(V.v(bw, bh))
+
+			back_background.scale = table.deepclone(background.scale)
+			back_background.shape = {
+				name = "polygon",
+				args = vertices
+			}
+			back_background.colors.background = shadow_color
+			back_background.propagate_on_click = true
+			back_background.anchor = table.deepclone(background.anchor)
+			back_background.pos = V.v(background.pos.x, background.pos.y + background.pos.y * 0.1)
+
+			parent:add_child(back_background)
+		end
+
 		parent:add_child(background)
 
-		local border_vertices = table.clone(vertices)
+		if not flag_has(flags, "borderless") then
+			local border_vertices = table.clone(vertices)
 
-		border_vertices[1] = "line"
+			border_vertices[1] = "line"
 
-		local line = KView:new(V.v(bw, bh))
+			local line = KView:new(V.v(bw, bh))
 
-		line.colors.background = line_color
-		line.shape = {
-			name = "polygon",
-			args = border_vertices
-		}
-		line.propagate_on_click = true
+			line.colors.background = line_color
+			line.shape = {
+				name = "polygon",
+				args = border_vertices
+			}
+			line.propagate_on_click = true
 
-		background:add_child(line)
+			background:add_child(line)
+		end
 	end
 
 	local x_margin = math.floor((parent.size.x - block_size.x) * 0.5)
@@ -163,7 +193,7 @@ function Kr5TextBalloon:initialize(id, pos_override, gui)
 	local flags = bd.flags or ""
 	local text = tb.get_text(id, bd)
 
-	build_callout_balloon(self, bd.size, flags, text, bd.padding, bd.bg_color, bd.line_color, bd.text_color)
+	build_callout_balloon(self, bd.size, flags, text, bd.padding, bd.bg_color, bd.line_color, bd.text_color, bd.body_font)
 
 	self.id = id
 	self.propagate_on_click = true

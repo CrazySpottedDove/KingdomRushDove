@@ -23020,3 +23020,175 @@ tt.tween.props[1].name = "alpha"
 tt.tween.remove = false
 tt.tween.reverse = false
 tt.ui.click_rect = r(-13, -2, 26, 20)
+
+-- ======== KR6 level215 特殊关卡英雄 Lord Blackburn ========
+tt = RT("fx_stage_215_lord_blackburn_hit_01", "fx")
+tt.render.sprites[1].prefix = "BB_hit_01Def"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+
+tt = RT("fx_stage_215_lord_blackburn_hit_02", "fx")
+tt.render.sprites[1].prefix = "BB_hit_02Def"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+
+tt = RT("decal_stage_215_lord_blackburn_corrupt_level_1_idle", "decal")
+AC(tt, "editor")
+tt.render.sprites[1].prefix = "BB_V1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].flip_x = true
+
+tt = RT("decal_stage_215_lord_blackburn_corrupt_level_3_idle", "decal_stage_215_lord_blackburn_corrupt_level_1_idle")
+tt.render.sprites[1].prefix = "BB_V3Def"
+
+tt = RT("decal_stage_215_lord_blackburn_tombstone_lvl1", "decal")
+tt.render.sprites[1].prefix = "BB_V1Def"
+tt.render.sprites[1].name = "deathloop"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].scale = vv(1)
+
+tt = RT("decal_stage_215_lord_blackburn_tombstone_lvl2", "decal_stage_215_lord_blackburn_tombstone_lvl1")
+tt.render.sprites[1].prefix = "BB_V2Def"
+
+tt = RT("decal_stage_215_lord_blackburn_tombstone_lvl3", "decal_stage_215_lord_blackburn_tombstone_lvl1")
+tt.render.sprites[1].prefix = "BB_V3Def"
+
+tt = RT("decal_stage_215_lord_blackburn_death_explosion", "decal_timed")
+AC(tt, "sound_events")
+tt.render.sprites[1].prefix = "BB_explosionDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[1].scale = vv(1.1)
+tt.timed.runs = 1
+
+tt = RT("decal_stage_215_lord_blackburn_explosion_ground", "decal_timed")
+tt.render.sprites[1].prefix = "BB_decalDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[1].scale = vv(1.1)
+tt.timed.runs = 1
+
+tt = RT("decal_stage_215_lord_blackburn_ray", "decal_scripted")
+tt.render.sprites[1].prefix = "BB_rayDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.main_script.update = scripts.stage_215_lord_blackburn_ray.update
+tt.decal_explosion_ground = "decal_stage_215_lord_blackburn_explosion_ground"
+tt.hit_time = fts(3)
+tt.aura = "aura_stage_215_lord_blackburn"
+
+tt = RT("aura_stage_215_lord_blackburn", "aura")
+tt.aura.radius = 120
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = 0
+tt.aura.cycles = 1
+tt.aura.cycle_time = 0
+tt.aura.duration = 1e+99
+tt.aura.damage_min = 1e+99
+tt.aura.damage_max = 1e+99
+tt.aura.damage_type = DAMAGE_NO_SPAWNS
+tt.aura.excluded_templates = {"enemy_boss_stage_215"}
+tt.main_script.update = scripts.aura_apply_damage.update
+
+tt = RT("mod_stage_215_black_burn_mind_control", "modifier")
+tt.modifier.duration = 1e+99
+tt.modifier.speed_factor = 2
+tt.main_script.insert = scripts.mod_stage_215_black_burn_mind_control.insert
+tt.main_script.remove = scripts.mod_stage_215_black_burn_mind_control.remove
+
+tt = RT("hero_stage_215_lord_blackburn", "stage_hero")
+AC(tt, "melee")
+tt.hero.respawn_animation = "deathout"
+tt.health.armor = 0.3
+tt.health.dead_lifetime = 18
+tt.health.hp_max = 450
+tt.health_bar.offset = v(0, 60)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.hero.stage_hero = true
+tt.hero.stage_hero_w_portrait = true
+tt.hero.tombstone_show_time = fts(18)
+tt.hero.tombstone_decal = "decal_stage_215_lord_blackburn_tombstone_lvl1"
+tt.hero.tombstone_concurrent_with_death = true
+tt.hero.remove_tombstone_before_respawn = true
+tt.idle_flip.chance = 0.4
+tt.idle_flip.cooldown = 4
+tt.unit.hide_after_death = true
+tt.info.fn = scripts.hero_basic.get_info
+tt.info.hero_portrait = "kr6_hero_portraits_0015"
+tt.info.portrait = "kr6_info_portraits_heroes_0015"
+tt.info.i18n_key = "HERO_LORD_BLACKBURN"
+tt.motion.max_speed = 45
+tt.regen.cooldown = 1
+tt.regen.health = 36
+tt.render.sprites[1].prefix = "BB_V1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].flip_x = true
+tt.unit.hit_offset = v(0, 5)
+tt.unit.mod_offset = v(0, 30)
+tt.unit.marker_offset = v(0, -1)
+tt.vis.bans = bor(F_BLOOD)
+tt.vis.flags = bor(F_BLOCK, F_FRIEND)
+tt.main_script.insert = scripts.hero_stage_215_lord_blackburn.insert
+tt.main_script.update = scripts.hero_stage_215_lord_blackburn.update
+tt.main_script.remove = scripts.hero_stage_215_lord_blackburn.remove
+tt.melee.range = 75
+tt.melee.attacks[1] = CC("melee_attack")
+tt.melee.attacks[1].cooldown = 2
+tt.melee.attacks[1].damage_min = 26
+tt.melee.attacks[1].damage_max = 40
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].animation = "attack_01"
+tt.melee.attacks[1].hit_time = fts(21)
+tt.melee.attacks[1].hit_fx = "fx_stage_215_lord_blackburn_hit_01"
+tt.melee.attacks[1].hit_offset = v(45, 12)
+tt.melee.attacks[1].sound_hit = "Stage15BlackburnBasicAttack"
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].animation = "attack_02"
+tt.melee.attacks[2].hit_time = fts(17)
+tt.melee.attacks[2].chance = 0.5
+tt.soldier.melee_slot_offset = v(20, 0)
+tt.sound_events.change_rally_point = "Stage15BlackburnTaunt"
+tt.sound_events.death = "Stage15BlackburnDeath"
+tt.sound_events.respawn = "Stage15BlackburnRespawn"
+tt.sound_events.insert = nil
+tt.sound_drink = "Stage15BlackburnDrinkPotion"
+tt.sound_power_up = "Stage15BlackburnPowerUp"
+tt.sound_explosion = "Stage15BlackburnExplosion"
+tt.sound_jump = "Stage15BlackburnJumpOut"
+tt.sound_energy = "Stage15MidCinematicDarkEnergy"
+tt.corrupt_count = 1
+tt.death_aura = "aura_stage_215_lord_blackburn"
+tt.intro_drink_time = fts(90)
+tt.intro_explosion_time = fts(85)
+tt.death_explosion_decal = "decal_stage_215_lord_blackburn_death_explosion"
+tt.explosion_ground_decal = "decal_stage_215_lord_blackburn_explosion_ground"
+tt.offset_decal_explosion = v(-20, 8)
+tt.offset_decal_ground = v(-6, 3)
+tt.corruption = {}
+tt.corruption.renders = {"BB_V1Def", "BB_V2Def", "BB_V3Def"}
+tt.corruption.portraits = {"kr6_info_portraits_heroes_0015", "kr6_info_portraits_heroes_0016", "kr6_info_portraits_heroes_0017"}
+tt.corruption.tombstones = {"decal_stage_215_lord_blackburn_tombstone_lvl1", "decal_stage_215_lord_blackburn_tombstone_lvl2", "decal_stage_215_lord_blackburn_tombstone_lvl3"}
+tt.corruption.hero_portraits = {"kr6_hero_portraits_0015", "kr6_hero_portraits_0016", "kr6_hero_portraits_0017"}
+tt.corruption.hp_max = {450, 650, 800}
+tt.corruption.armor = {0.3, 0.5, 0.6}
+tt.corruption.magic_armor = {0, 0, 0}
+tt.corruption.regen_health = {36, 44, 64}
+tt.corruption.damage_min = {26, 34, 52}
+tt.corruption.damage_max = {40, 50, 78}
+tt.corruption.hit_fx = {"fx_stage_215_lord_blackburn_hit_01", "fx_stage_215_lord_blackburn_hit_02", "fx_stage_215_lord_blackburn_hit_02"}
+tt.corruption.click_rects = {r(-30, 0, 60, 50), r(-30, 0, 60, 55), r(-30, 0, 60, 65)}
+tt.corruption.melee_offsets = {v(20, 0), v(25, 0), v(25, 0)}
+tt.corruption.health_bar_offsets = {v(0, 60), v(0, 65), v(0, 70)}
+tt.corruption.boss = "enemy_boss_stage_215"
+tt.ui.click_rect = r(-30, 0, 60, 50)

@@ -75597,4 +75597,625 @@ function scripts.controller_graveyard_kr6.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
+-- ==================== kr6 stage15：新敌人脚本 ====================
+
+scripts.enemy_dark_disciple = {}
+
+function scripts.enemy_dark_disciple.update(this, store, script)
+	local ab = this.timed_attacks.list[1]
+	local trigger_tower_block
+	local book_in_hand = true
+	local tower_to_block
+	local block_ts = store.tick_ts - ab.block_cooldown
+	local block_max_range = SU.get_difficulty_field_value(store, ab.max_range)
+	local block_tether_range = SU.get_difficulty_field_value(store, ab.tether_range)
+	local remove_book = false
+	local remove_cage = false
+
+	this.recall_book = false
+	this.mark_mod = nil
+
+	local function find_first_tower()
+		local towers = U.find_towers_in_range(store.towers, this.pos, {
+			min_range = ab.min_range,
+			max_range = block_max_range
+		}, function(v, o)
+			return v.tower.type ~= "holder" and v.tower.type ~= "build_animation" and v.vis and band(v.vis.flags, ab.vis_bans) == 0 and band(v.vis.bans, ab.vis_flags) == 0 and (not v.tower_holder or not v.tower_holder.blocked) and v.tower.can_be_mod and not SU.has_modifiers(store, v, ab.mark_mod) and not U.has_modifier_types(store, v, MOD_TYPE_PROTECTION)
+		end)
+
+		if not towers or #towers == 0 then
+			return nil
+		end
+
+		table.sort(towers, function(v1, v2)
+			local dist2_v1 = V.dist2(this.pos.x, this.pos.y, v1.pos.x, v1.pos.y)
+			local dist2_v2 = V.dist2(this.pos.x, this.pos.y, v2.pos.x, v2.pos.y)
+
+			return dist2_v1 < dist2_v2
+		end)
+
+		return towers[1]
+	end
+
+	local function should_block_tower()
+		if not this.enemy.can_do_magic then
+			return false
+		end
+
+		tower_to_block = find_first_tower()
+		trigger_tower_block = tower_to_block and book_in_hand and store.tick_ts - ab.ts > ab.cooldown and #this.enemy.blockers == 0 and store.tick_ts - block_ts > ab.block_cooldown
+
+		return trigger_tower_block
+	end
+
+	local function remove_mark()
+		if this.mark_mod then
+			queue_remove(store, this.mark_mod)
+
+			this.mark_mod = nil
+		end
+	end
+
+	local function book_call(from_walk)
+		this.recall_book = true
+
+		U.y_animation_play(this, "attack_in", nil, store.tick_ts, 1)
+
+		book_in_hand = true
+
+		if not from_walk then
+			this.render.sprites[1].prefix = "dark_disciple_creep_book"
+		end
+
+		ab.ts = store.tick_ts
+
+		remove_mark()
+
+		if from_walk then
+			U.y_animation_play(this, "attack_out", nil, store.tick_ts, 1)
+		end
+	end
+
+	local function walk_break()
+		if this.recall_book then
+			this.recall_book = false
+		end
+
+		if this.mark_mod then
+			local target = store.entities[this.mark_mod.modifier.target_id]
+
+			if not target then
+				book_call(true)
+			end
+
+			if target and not U.is_inside_ellipse(target.pos, this.pos, block_tether_range) then
+				book_call(true)
+			end
+		end
+
+		return should_block_tower()
+	end
+
+	local function melee_break()
+		if not book_in_hand then
+			book_call(false)
+		end
+
+		return false
+	end
+
+	local function range_break()
+		if not book_in_hand then
+			book_call(false)
+		end
+
+		return false
+	end
+
+	::label_218_0::
+
+	while true do
+		if this.health.dead then
+			this.recall_book = true
+
+			remove_mark()
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			this.recall_book = true
+
+			remove_mark()
+			SU.y_enemy_stun(store, this)
+		else
+			if trigger_tower_block then
+				S:queue(ab.sound_channel)
+
+				this.mark_mod = E:create_entity(ab.mark_mod)
+				this.mark_mod.modifier.target_id = tower_to_block.id
+				this.mark_mod.modifier.source_id = this.id
+
+				queue_insert(store, this.mark_mod)
+
+				local af = tower_to_block.pos.x < this.pos.x
+
+				U.animation_start(this, ab.animation, af, store.tick_ts, false)
+				S:queue(ab.sound)
+
+				trigger_tower_block = false
+
+				if SU.y_enemy_wait(store, this, ab.cast_time) then
+					goto label_218_0
+				end
+
+				local final_tower_to_block = tower_to_block
+
+				if not final_tower_to_block or not store.entities[final_tower_to_block.id] or final_tower_to_block.pending_removal then
+					queue_remove(store, this.mark_mod)
+
+					this.mark_mod = nil
+					final_tower_to_block = find_first_tower()
+				end
+
+				if not final_tower_to_block then
+					SU.delay_attack(store, ab, fts(10))
+				else
+					local af = final_tower_to_block.pos.x < this.pos.x
+
+					this.render.sprites[1].flip_x = af
+
+					if not this.mark_mod then
+						this.mark_mod = E:create_entity(ab.mark_mod)
+						this.mark_mod.modifier.target_id = final_tower_to_block.id
+						this.mark_mod.modifier.source_id = this.id
+
+						queue_insert(store, this.mark_mod)
+					end
+
+					local af = this.render.sprites[1].flip_x
+					local bullet = E:create_entity(ab.bullet)
+					local offset = ab.bullet_start_offset
+
+					bullet.pos = V.v(this.pos.x + offset.x * (af and -1 or 1), this.pos.y + offset.y)
+					bullet.bullet.from = V.vclone(bullet.pos)
+
+					local tower_name = string.sub(final_tower_to_block.template_name, string.len(this.tower_prefix) + 1, string.len(final_tower_to_block.template_name))
+					local offset_height = ab.custom_heights[tower_name] or ab.default_height
+
+					bullet.bullet.to = V.v(final_tower_to_block.pos.x, final_tower_to_block.pos.y + offset_height)
+					bullet.bullet.target_id = final_tower_to_block.id
+					bullet.bullet.source_id = this.id
+
+					queue_insert(store, bullet)
+
+					ab.ts = store.tick_ts
+					book_in_hand = false
+
+					U.y_animation_wait(this)
+				end
+			end
+
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, walk_break, melee_break, range_break) then
+				goto label_218_0
+			else
+				block_ts = store.tick_ts
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+function scripts.enemy_dark_disciple.remove(this, store, script)
+	if this.mark_mod then
+		queue_remove(store, this.mark_mod)
+	end
+
+	return true
+end
+
+scripts.decal_dark_disciple_book = {}
+
+function scripts.decal_dark_disciple_book.update(this, store, script)
+	local source = store.entities[this.source_id]
+
+	while true do
+		if not source or not store.entities[this.source_id] or source.pending_removal then
+			break
+		end
+
+		if source.health.dead or source.recall_book then
+			break
+		end
+
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, "death", nil, store.tick_ts, 1, 1)
+	queue_remove(store, this)
+end
+
+scripts.bullet_dark_disciple_tower_stun = {}
+
+function scripts.bullet_dark_disciple_tower_stun.update(this, store, script)
+	local b = this.bullet
+	local mspeed = b.min_speed
+	local target, ps
+	local source = store.entities[b.source_id]
+	local s = this.render.sprites[1]
+
+	if b.rotation_speed then
+		b.rotation_speed = b.rotation_speed * (b.to.x > this.pos.x and -1 or 1)
+
+		if b.rotation_speed > 0 then
+			s.flip_x = not s.flip_x
+		end
+	end
+
+	if b.target_id then
+		S:queue(this.sound_events.travel)
+	else
+		S:queue(this.sound_events.summon)
+	end
+
+	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+		if b.target_id then
+			target = store.entities[b.target_id]
+		end
+
+		if not source or not store.entities[b.source_id] or source.pending_removal or source.recall_book or source.health.dead or not target then
+			if source then
+				source.recall_book = true
+			end
+
+			U.y_animation_play(this, "death", nil, store.tick_ts, 1, 1)
+			queue_remove(store, this)
+
+			return
+		end
+
+		if target then
+			if b.max_track_distance then
+				local d = math.max(math.abs(target.pos.x - b.to.x), math.abs(target.pos.y - b.to.y))
+
+				if d > b.max_track_distance then
+					b.target_id = nil
+					target = nil
+				end
+			else
+				b.to.x, b.to.y = target.pos.x, target.pos.y
+			end
+		end
+
+		if b.rotation_speed then
+			s.r = s.r + b.rotation_speed * store.tick_length
+		else
+			s.r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+		end
+
+		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+
+		if ps then
+			ps.particle_system.emit_direction = this.render.sprites[1].r
+		end
+
+		coroutine.yield()
+	end
+
+	if target then
+		if b.mod then
+			local mod = E:create_entity(b.mod)
+
+			mod.modifier.source_id = b.source_id
+			mod.modifier.target_id = target.id
+
+			queue_insert(store, mod)
+		end
+
+		if b.hit_payload then
+			local hp = E:create_entity(b.hit_payload)
+
+			hp.pos.x, hp.pos.y = b.to.x, b.to.y
+			hp.source_id = b.source_id
+
+			queue_insert(store, hp)
+		end
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.mod_enemy_dark_disciple_cage = {}
+
+function scripts.mod_enemy_dark_disciple_cage.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+	local source = store.entities[m.source_id]
+
+	if not target or not source then
+		queue_remove(store, this)
+
+		return
+	end
+
+	m.ts = store.tick_ts
+
+	SU.tower_block_inc(target)
+
+	this.pos = target.pos
+
+	if this.tween and not this.tween.disabled then
+		this.tween.ts = store.tick_ts
+	end
+
+	S:queue(this.sound_in)
+	U.animation_start(this, "in", nil, store.tick_ts)
+	U.y_wait(store, fts(10))
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	local start_ts = store.tick_ts
+
+	while true do
+		if not source or not store.entities[m.source_id] or source.pending_removal then
+			break
+		end
+
+		if source.health.dead or this.remove or source.recall_book then
+			break
+		end
+
+		coroutine.yield()
+	end
+
+	U.animation_start(this, "out", nil, store.tick_ts)
+	S:queue(this.sound_out)
+	U.y_wait(store, fts(11))
+	SU.tower_block_dec(target)
+	queue_remove(store, this)
+end
+
+scripts.enemy_necromancer = {}
+
+function scripts.enemy_necromancer.get_info(this)
+	local min, max, damage_type
+
+	if this.timed_attacks and this.timed_attacks.list then
+		local ba = this.timed_attacks.list[1]
+
+		min, max = ba.damage_min, ba.damage_max
+		damage_type = ba.damage_type
+	end
+
+	if min and max then
+		min, max = math.ceil(min), math.ceil(max)
+	end
+
+	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+
+	return {
+		type = STATS_TYPE_ENEMY,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_min = min,
+		damage_max = max,
+		damage_type = damage_type,
+		damage_icon = this.info.damage_icon,
+		armor = armor,
+		magic_armor = magic_armor,
+		lives = this.enemy.lives_cost,
+		immune = this.health.immune_to == DAMAGE_ALL_TYPES
+	}
+end
+
+function scripts.enemy_necromancer.update(this, store, script)
+	local ca = this.timed_attacks.list[1]
+	local bullet_return_offset = V.v(-7, 35)
+	local ca_damage = math.ceil(U.frandom(ca.damage_min, ca.damage_max))
+	local sa = this.timed_actions.list[1]
+	local cg = store.count_groups[sa.count_group_type]
+
+	sa.ts = store.tick_ts + sa.first_cooldown
+
+	local summon_amount = SU.get_difficulty_field_value(store, sa.max_count)
+	local summon_delay = fts(30 / summon_amount)
+
+	local function break_animation()
+		return this.health.dead or this.unit.is_stunned
+	end
+
+	local function custom_ranged_attack(target, attack)
+		if store.tick_ts - attack.ts < attack.cooldown then
+			return false
+		end
+
+		attack.ts = store.tick_ts
+
+		local an, af, ai = U.animation_name_facing_point(this, ca.animations[1], target.pos)
+
+		U.animation_start(this, an, af, store.tick_ts, false)
+
+		while store.tick_ts - attack.ts < attack.shoot_time do
+			if this.health.dead or this.unit.is_stunned and not attack.ignore_stun then
+				return false
+			end
+
+			coroutine.yield()
+		end
+
+		local target_pos_x = target.pos.x + target.unit.hit_offset.x
+		local target_pos_y = target.pos.y + target.unit.hit_offset.y
+		local distance_to_target = V.dist(this.pos.x, this.pos.y, target_pos_x, target_pos_y)
+		local bullet_speed = distance_to_target / ca.duration
+		local bullet = E:create_entity(attack.bullet)
+
+		bullet.pos = V.v(target_pos_x, target_pos_y)
+		bullet.bullet.from = V.vclone(bullet.pos)
+		bullet.bullet.to = V.v(this.pos.x + bullet_return_offset.x, this.pos.y + bullet_return_offset.y)
+		bullet.bullet.target_id = target.id
+		bullet.bullet.source_id = this.id
+		bullet.bullet.min_speed = bullet_speed
+		bullet.bullet.max_speed = bullet_speed
+
+		queue_insert(store, bullet)
+
+		local d = E:create_entity("damage")
+
+		d.damage_type = ca.damage_type
+		d.value = ca_damage
+		d.target_id = target.id
+		d.source_id = this.id
+
+		queue_damage(store, d)
+
+		local particle = E:create_entity("ps_bullet_soul_trail_necromancer")
+
+		particle.particle_system.track_id = bullet.id
+
+		queue_insert(store, particle)
+		U.animation_start(this, ca.animations[2], af, store.tick_ts, true)
+
+		if U.y_wait(store, ca.duration + fts(3), break_animation) then
+			queue_remove(store, bullet)
+		end
+
+		if this and this.health then
+			this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + ca_damage * ca.lifesteal)
+		end
+
+		U.y_animation_play(this, ca.animations[3], nil, store.tick_ts, 1)
+		U.animation_start(this, "idle", af, store.tick_ts, false)
+
+		return true
+	end
+
+	local function summon_count_exceeded()
+		return cg[sa.count_group_name] and cg[sa.count_group_name] >= sa.count_group_max
+	end
+
+	local function summon_skeletons()
+		if summon_count_exceeded() or not this.enemy.can_do_magic then
+			return false
+		end
+
+		U.animation_start(this, sa.animation, nil, store.tick_ts, false)
+		S:queue(sa.sound)
+
+		for i = 1, summon_amount do
+			if SU.y_enemy_wait(store, this, summon_delay) then
+				return false
+			end
+
+			if i ~= 1 and summon_count_exceeded() then
+				break
+			end
+
+			local e = E:create_entity(sa.entity_names[1])
+			local noff = sa.summon_offsets[i] or sa.summon_offsets[1]
+
+			e.nav_path.pi = this.nav_path.pi
+			e.nav_path.spi = noff[1]
+			e.nav_path.ni = this.nav_path.ni + math.random(noff[2], noff[3])
+			e.enemy.gold = 0
+
+			E:add_comps(e, "count_group")
+
+			e.count_group.name = sa.count_group_name
+			e.count_group.type = sa.count_group_type
+
+			if P:is_node_valid(e.nav_path.pi, e.nav_path.ni) then
+				queue_insert(store, e)
+			end
+
+			coroutine.yield()
+		end
+
+		if SU.y_enemy_animation_wait(this) then
+			return false
+		end
+
+		sa.ts = store.tick_ts
+	end
+
+	local function ready_to_summon()
+		if U.get_blocker(store, this) then
+			sa.ts = store.tick_ts
+
+			return false
+		elseif store.tick_ts - sa.ts >= sa.cooldown and not summon_count_exceeded() and P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > sa.summon_skeleton_node_limit then
+			summon_skeletons()
+		end
+	end
+
+	::label_238_0::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, ready_to_summon)
+
+			if not cont then
+				goto label_238_0
+			elseif blocker then
+				SU.y_enemy_melee_attacks(store, this, blocker)
+			else
+				custom_ranged_attack(ranged, ca)
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.enemy_swamp_husk = {}
+
+function scripts.enemy_swamp_husk.insert(this, store, script)
+	local bubbles = E:create_entity(this.bubbles_t)
+
+	bubbles.pos.x, bubbles.pos.y = this.pos.x, this.pos.y
+	bubbles.render.sprites[1].ts = store.tick_ts
+
+	queue_insert(store, bubbles)
+
+	return scripts.enemy_basic.insert(this, store, script)
+end
+
+scripts.mod_utils = {}
+
+function scripts.mod_utils.wait_then_remove_update(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	if this.tween then
+		this.tween.ts = store.tick_ts
+	end
+
+	this.pos = target.pos
+
+	U.y_wait(store, this.modifier.duration)
+
+	while store.tick_ts - this.modifier.ts < this.modifier.duration do
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
 return scripts

@@ -14335,4 +14335,229 @@ function scripts.enemy_boss_stage_213.update(this, store, script)
 	end
 end
 
+scripts.enemy_boss_stage_215 = {}
+
+function scripts.enemy_boss_stage_215.update(this, store, script)
+	local ab = this.timed_attacks.list[1]
+	local block_check_ts = store.tick_ts
+
+	ab.ts = store.tick_ts
+
+	local trigger_block
+	local old_bans = this.vis.bans
+
+	U.bans_add(this.vis, F_ALL)
+
+	local function cinematic_entrance()
+		U.y_animation_play(this, "fromspawntoidle", nil, store.tick_ts, 1, 1)
+		U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+
+		local np = P:node_pos(this.start_path, 1, this.start_node)
+		local shake, death_aura
+		local nearest = false
+
+		if V.dist2(this.pos.x, this.pos.y, np.x, np.y) <= math.pow(this.safe_area_to_jump, 2) then
+			this.render.sprites[1].flip_x = false
+			nearest = true
+			this.final_cinematic_skip_jump = true
+		else
+			U.animation_start(this, "jump", nil, store.tick_ts, false, 1)
+			U.y_wait(store, fts(31))
+
+			shake = E:create_entity("aura_screen_shake")
+			shake.aura.amplitude = 0.5
+			shake.aura.duration = 0.2
+			shake.aura.freq_factor = 1
+
+			queue_insert(store, shake)
+			U.y_animation_wait(this, 1)
+			U.y_wait(store, 1)
+
+			this.pos.x, this.pos.y = np.x, np.y
+			this.render.sprites[1].flip_x = false
+
+			U.animation_start(this, "jump2", nil, store.tick_ts, false, 1)
+			U.y_wait(store, fts(5))
+
+			death_aura = E:create_entity(this.fall_death_aura)
+			death_aura.pos.x, death_aura.pos.y = np.x, np.y
+
+			queue_insert(store, death_aura)
+
+			shake = E:create_entity("aura_screen_shake")
+			shake.aura.amplitude = 2
+			shake.aura.duration = 0.2
+			shake.aura.freq_factor = 4
+
+			queue_insert(store, shake)
+		end
+
+		this.nav_path.pi = this.start_path
+		this.nav_path.spi = 1
+		this.nav_path.ni = not nearest and this.start_node or P:nearest_nodes(this.pos.x, this.pos.y, {this.start_path}, {1}, true)[1][3]
+
+		U.y_wait(store, 0.5)
+		signal.emit("show-balloon_tutorial-pos", "S15_PRE_BOSS_03", false, V.v(this.pos.x + 6, this.pos.y + 85))
+		U.y_wait(store, 3)
+		U.y_animation_wait(this, 1)
+
+		U.bans_remove(this.vis, F_ALL)
+
+		if old_bans ~= 0 then
+			U.bans_add(this.vis, old_bans)
+		end
+	end
+
+	local function can_block()
+		if this.cinematic then
+			return true
+		end
+
+		if trigger_block then
+			return true
+		end
+
+		if store.tick_ts - block_check_ts < 0.25 then
+			return false
+		end
+
+		if store.tick_ts - ab.ts < ab.cooldown then
+			return false
+		end
+
+		block_check_ts = store.tick_ts
+
+		local aura_t = E:get_template(ab.aura)
+		local towers = U.find_towers_in_range(store.towers, this.pos, {
+			min_range = 0,
+			max_range = aura_t.aura.radius
+		}, function(v, o)
+			return v.tower.type ~= "holder" and v.tower.type ~= "build_animation" and (not v.tower_holder or not v.tower_holder.blocked) and (not aura_t.aura.allowed_templates or table.contains(aura_t.aura.allowed_templates, v.template_name)) and (not aura_t.aura.excluded_templates or not table.contains(aura_t.aura.excluded_templates, v.template_name))
+		end)
+
+		trigger_block = towers and #towers > 0
+
+		return trigger_block
+	end
+
+	local function stop_wave(name)
+		local ws = W:get_wave_status(name)
+
+		if ws and (ws.state == W.WS_PENDING or ws.state == W.WS_RUNNING) then
+			W:stop_manual_wave(name)
+		end
+	end
+
+	local function y_on_death()
+		signal.emit("boss_fight_end")
+		LU.kill_all_enemies(store, true)
+		S:stop_all()
+		stop_wave("BOSS1")
+
+		local death_decal = E:create_entity(this.death_decal)
+
+		death_decal.pos.x, death_decal.pos.y = this.pos.x, this.pos.y
+
+		queue_insert(store, death_decal)
+		S:queue(this.sound_death)
+
+		this.render.sprites[1].hidden = true
+
+		U.animation_start(death_decal, "end", nil, store.tick_ts, false)
+		U.y_animation_wait(death_decal, 1)
+		U.animation_start(death_decal, "endloop", nil, store.tick_ts, true, 1)
+		U.y_wait(store, 2)
+		stop_wave("BOSS_BUBBLES")
+		signal.emit("boss-killed", this)
+
+		this.bossfight_ended = true
+	end
+
+	this.in_cinematic = true
+
+	cinematic_entrance()
+
+	::label_1381_0::
+
+	while true do
+		this.in_cinematic = false
+
+		if this.health.dead then
+			y_on_death()
+
+			return
+		end
+
+		if trigger_block then
+			U.animation_start(this, ab.animation, nil, store.tick_ts, false)
+			S:queue(ab.sound, {
+				delay = fts(6)
+			})
+
+			local fl = this.render.sprites[1].flip_x
+			local hit_pos = V.vclone(this.pos)
+
+			if ab.hit_offset then
+				hit_pos.x = hit_pos.x + (fl and -1 or 1) * ab.hit_offset.x
+				hit_pos.y = hit_pos.y + ab.hit_offset.y
+			end
+
+			if ab.hit_decal then
+				local fx = E:create_entity(ab.hit_decal)
+
+				fx.pos = V.vclone(hit_pos)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+			end
+
+			if SU.y_enemy_wait(store, this, ab.hit_time) then
+				goto label_1381_0
+			end
+
+			ab.ts = store.tick_ts
+
+			if ab.hit_fx then
+				local fx = E:create_entity(ab.hit_fx)
+
+				fx.pos = V.vclone(hit_pos)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+			end
+
+			local dmg_aura = E:create_entity(ab.damage_aura)
+
+			dmg_aura.pos = V.vclone(this.pos)
+
+			queue_insert(store, dmg_aura)
+
+			local shake = E:create_entity("aura_screen_shake")
+
+			shake.aura.amplitude = 2
+			shake.aura.duration = 0.35
+			shake.aura.freq_factor = 2
+
+			queue_insert(store, shake)
+
+			local aura = E:create_entity(ab.aura)
+
+			aura.aura.source_id = this.id
+			aura.aura.ts = store.tick_ts
+			aura.pos = V.vclone(this.pos)
+
+			queue_insert(store, aura)
+			U.y_animation_wait(this)
+
+			trigger_block = false
+		end
+
+		if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, can_block, can_block) then
+		-- block empty
+		else
+			coroutine.yield()
+		end
+	end
+end
+
 return scripts

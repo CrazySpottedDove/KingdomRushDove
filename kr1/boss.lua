@@ -4729,3 +4729,173 @@ tt.particle_system.particle_lifetime = {fts(15), fts(15)}
 tt.particle_system.emission_rate = 10
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_spread = math.pi * 2
+
+-- ===== KR6 stage 15 boss：Lord Blackburn（lord_blackburn_boss）=====
+tt = RT("enemy_boss_stage_215", "boss")
+AC(tt, "melee", "timed_attacks")
+tt.enemy.gold = 1
+tt.enemy.lives_cost = 20
+tt.enemy.melee_slot = v(60, 0)
+tt.health.armor = {0.5, 0.6, 0.6, 0.74}
+tt.health.dead_lifetime = 100
+tt.health.hp_max = {12375, 15125, 16500, 19250}
+tt.health_bar.offset = v(0, 85)
+tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
+tt.info.i18n_key = "ENEMY_BOSS_STAGE_215"
+tt.info.portrait = "kr6_info_portraits_enemies_0060"
+tt.info.portrait_boss = "boss_health_bar_icon_0005"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_boss_stage_215.update
+tt.motion.max_speed = 12
+tt.render.sprites[1].prefix = "blackburnDef"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].name = "fromspawntoidle"
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.render.sprites[1].scale = vv(1.07)
+tt.unit.can_explode = false
+tt.unit.hit_offset = v(0, 40)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 30)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_LARGE
+tt.vis.flags = bor(F_ENEMY, F_BOSS)
+tt.vis.bans = bor(F_STUN, F_INSTAKILL)
+tt.safe_area_to_jump = 200
+tt.start_path = 1
+tt.start_node = 50
+tt.fall_death_aura = "aura_stage_215_lord_blackburn"
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].animation = "attack1"
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 175
+tt.melee.attacks[1].damage_max = 225
+tt.melee.attacks[1].damage_radius = 75
+tt.melee.attacks[1].damage_type = bor(DAMAGE_TRUE, DAMAGE_NO_DODGE)
+tt.melee.attacks[1].hit_time = fts(12)
+tt.melee.attacks[1].hit_offset = v(65, 15)
+tt.melee.attacks[1].hit_fx = "fx_boss_stage_215_hit"
+tt.melee.attacks[1].uninterruptible = true
+tt.melee.attacks[1].vis_flags = F_AREA
+tt.melee.attacks[1].sound_hit = "Stage15BlackburnBasicAttack"
+tt.timed_attacks.list[1] = CC("custom_attack")
+tt.timed_attacks.list[1].animation = "attack2"
+tt.timed_attacks.list[1].aura = "aura_boss_stage_215_tower_block"
+tt.timed_attacks.list[1].damage_aura = "aura_boss_stage_215_tower_block_damage"
+tt.timed_attacks.list[1].hit_decal = "decal_boss_stage_215_tower_block_hit_anticipation"
+tt.timed_attacks.list[1].hit_fx = "fx_boss_stage_215_tower_block_hit"
+tt.timed_attacks.list[1].disabled = false
+tt.timed_attacks.list[1].cooldown = 18
+tt.timed_attacks.list[1].hit_time = fts(24)
+tt.timed_attacks.list[1].vis_flags = bor(F_AREA)
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[1].sound = "Stage15BossBlackburnBlockTower"
+tt.shadow_decal = "decal_boss_stage_215_shadow"
+tt.death_decal = "decal_boss_stage_215_death"
+tt.sound_death = "Stage15BlackburnDefeat"
+tt.sound_events.defeat_chest_bang = "Stage10JTChestTaunt"
+tt.sound_events.defeat_roar = "Stage10JTRoar"
+tt.sound_events.defeat_rumble = "Stage10JTCaveRumble"
+tt.sound_events.tower_freeze = "Stage10JTTowerFreeze"
+tt.sound_events.insert = "Stage15BlackburnJumpIn"
+tt.sound_events.insert_args = {
+	delay = 3.4
+}
+tt.ui.click_rect = r(-50, -5, 90, 90)
+
+tt = RT("fx_boss_stage_215_hit", "decal_timed")
+tt.timed.runs = 1
+tt.render.sprites[1].prefix = "enemy_boss_stage_215_attack_1_hit"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_EFFECTS
+
+tt = RT("fx_boss_stage_215_tower_block_hit", "decal_timed")
+tt.timed.runs = 1
+tt.render.sprites[1].prefix = "enemy_boss_stage_215_attack_2_fx"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_EFFECTS
+
+tt = RT("decal_boss_stage_215_tower_block_hit_anticipation", "decal_timed")
+tt.timed.runs = 1
+tt.render.sprites[1].prefix = "enemy_boss_stage_215_attack_2_decal"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("decal_boss_stage_215_shadow", "decal")
+tt.render.sprites[1].name = "decal_flying_shadow"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("decal_boss_stage_215_death", "decal")
+tt.render.sprites[1].prefix = "BB_LoseDef"
+tt.render.sprites[1].name = "end"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt = RT("decal_entity_marker_soldier_med", "decal_entity_marker_soldier_small")
+tt.render.sprites[1].scale = vv(1.7)
+
+tt = RT("decal_entity_marker_soldier_big", "decal_entity_marker_soldier_small")
+tt.render.sprites[1].scale = vv(2)
+
+tt = RT("decal_entity_marker_hero_small", "decal_entity_marker_soldier_small")
+tt.render.sprites[1].name = "selected_hero_small"
+
+tt = RT("decal_entity_marker_hero_med", "decal_entity_marker_hero_small")
+tt.render.sprites[1].scale = vv(1.7)
+
+tt = RT("aura_boss_stage_215_tower_block", "aura")
+tt.aura.mods = {"mod_boss_stage_215_tower_block", "mod_boss_stage_215_tower_block_visuals"}
+tt.aura.radius = 250
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = 0
+tt.aura.cycle_time = 0.6
+tt.aura.duration = 1
+tt.aura.max_count = 4
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod_towers.update
+
+tt = RT("aura_boss_stage_215_tower_block_damage", "aura")
+tt.aura.radius = 100
+tt.aura.vis_flags = bor(F_AREA, F_FRIEND)
+tt.aura.vis_bans = bor(F_ENEMY, F_FLYING)
+tt.aura.cycles = 1
+tt.aura.cycle_time = 0
+tt.aura.duration = 1e+99
+tt.aura.damage_min = 175
+tt.aura.damage_max = 225
+tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.main_script.update = scripts.aura_apply_damage.update
+
+-- 注意：dove 的 mod_tower_stun 定义在 game_templates.lua，且晚于本文件被 require，
+-- 因此不能作为父模板，这里内联其字段（parent 用 modifier）。
+tt = RT("mod_boss_stage_215_tower_block", "modifier")
+tt.modifier.duration = 4
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.main_script.insert = scripts.mod_tower_stun.insert
+tt.main_script.update = scripts.mod_tower_stun.update
+tt.main_script.remove = scripts.mod_tower_stun.remove
+
+tt = RT("mod_boss_stage_215_tower_block_visuals", "modifier")
+AC(tt, "render", "tween")
+tt.modifier.duration = 4
+tt.main_script.update = scripts.mod_utils.wait_then_remove_update
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+tt.render.sprites[1].prefix = "enemy_boss_stage_215_attack_2_stun"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].name = "alpha"
+tt.tween.remove = false
+tt.tween.reverse = false
+tt.tween.run_once = true
+tt.tween.disabled = false
+tt.tween_prop_replace = {fts(5), 255}

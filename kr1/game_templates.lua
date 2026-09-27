@@ -26126,4 +26126,136 @@ tt.graveyard.vis_has = F_ENEMY
 tt.graveyard.vis_flags = F_SKELETON
 tt.graveyard.vis_bans = F_BOSS
 
+-- ==================== kr6 stage15：新敌人子实体（dark_disciple / swamp_husk / swamp_thing / necromancer） ====================
+
+tt = RT("fx_swamp_husk_hit", "fx")
+tt.render.sprites[1].name = "husk_hit_run"
+
+tt = RT("fx_swamp_thing_hit", "fx")
+tt.render.sprites[1].name = "swamp_thing_hit_run"
+
+tt = RT("fx_bullet_dark_disciple_basic_hit", "fx")
+tt.render.sprites[1].name = "dark_disciple_hit_run"
+
+tt = RT("fx_necromancer_hit", "fx")
+tt.render.sprites[1].name = "necromancer_hit_run"
+
+tt = RT("decal_swamp_husk_bubbles", "decal_scripted")
+tt.main_script.update = scripts.decal_utils.animation_in_loop_out.update
+tt.animation_start = "in"
+tt.animation_idle = "run"
+tt.animation_end = "out"
+tt.duration = fts(15)
+tt.render.sprites[1].prefix = "husk_bubles"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("decal_dark_disciple_book", "decal_scripted")
+tt.render.sprites[1].prefix = "dark_disciple_libro_projectile"
+tt.render.sprites[1].name = "on_tower"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS + 1
+tt.main_script.update = scripts.decal_dark_disciple_book.update
+
+tt = RT("bullet_dark_disciple_basic", "bolt_enemy")
+tt.render.sprites[1].prefix = "dark_disciple_proyectile"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.bullet.damage_min = 39.6
+tt.bullet.damage_max = 74.8
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.align_with_trajectory = true
+tt.bullet.hit_fx = "fx_bullet_dark_disciple_basic_hit"
+
+tt = RT("bullet_dark_disciple_tower_stun", "bullet_dark_disciple_basic")
+tt.main_script.update = scripts.bullet_dark_disciple_tower_stun.update
+tt.render.sprites[1].prefix = "dark_disciple_libro_projectile"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.bullet.rotation_speed = math.pi / 2
+tt.bullet.hit_payload = "decal_dark_disciple_book"
+tt.bullet.mod = "mod_dark_disciple_tower_block"
+tt.bullet.damage_min = nil
+tt.bullet.damage_max = nil
+tt.bullet.damage_type = nil
+tt.bullet.hit_fx = nil
+tt.sound_events.travel = nil
+
+tt = RT("bullet_necromancer", "bolt_enemy")
+tt.render.sprites[1].prefix = "necromancer_proyectile"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_type = F_NONE
+tt.bullet.hit_blood_fx = nil
+tt.bullet.align_with_trajectory = true
+tt.bullet.particles_name = "ps_bullet_trail_necromancer"
+tt.bullet.hit_fx = nil
+
+tt = RT("ps_bullet_trail_necromancer", "particle_system")
+tt.particle_system.name = "necromancer_proyectile_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.particle_lifetime = {fts(6), fts(6)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_area_spread = v(0, 4)
+
+tt = RT("ps_bullet_soul_trail_necromancer", "particle_system")
+tt.particle_system.name = "necromancer_soul_projectile_trail_2"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.particle_system.emission_rate = 3
+tt.particle_system.emit_area_spread = v(0, 50)
+
+tt = RT("mod_swamp_husk_poison", "mod_poison")
+tt.dps.damage_every = 0.25
+tt.dps.damage_min = 4
+tt.dps.damage_max = 4
+tt.dps.kill = true
+tt.modifier.duration = 2
+tt.modifier.vis_flags = bor(F_MOD, F_POISON)
+tt.render.sprites[1].prefix = "poison"
+tt.render.sprites[1].size_names = {"small", "small", "big"}
+tt.render.sprites[1].draw_order = DO_MOD_FX
+
+tt = RT("mod_dark_disciple_tower_block", "modifier")
+AC(tt, "render")
+tt.main_script.update = scripts.mod_enemy_dark_disciple_cage.update
+tt.modifier.duration = 1e+99
+tt.offset_to_ground = 25
+tt.render.sprites[1].prefix = "dark_disciple_cage"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].offset = v(0, tt.offset_to_ground)
+tt.render.sprites[1].sort_y_offset = -1
+tt.sound_in = "EnemyDarkDiscipleTowerTetherCastLock"
+tt.sound_out = "EnemyDarkDiscipleTowerTetherCastUnlock"
+
+tt = RT("mod_enemy_dark_disciple_mark", "modifier")
+AC(tt, "mark_flags")
+tt.mark_flags.vis_bans = F_CUSTOM
+tt.modifier.duration = 1e+99
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
+tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
+
+tt = RT("aura_swamp_thing_regeneration", "aura")
+AC(tt, "regen")
+tt.main_script.update = scripts.aura_unit_regen.update
+tt.regen.cooldown = fts(10)
+tt.regen.health = 4
+tt.regen.ignore_stun = true
+tt.regen.ignore_freeze = false
+
 return scripts

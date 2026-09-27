@@ -30,6 +30,89 @@ local function tpos(e)
 	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
 end
 
+local function find_all_t(store, template_name, contains, fn)
+	if not store or not store.entities then
+		return {}
+	end
+
+	return table.filter(store.entities, function(k, v)
+		return (contains and string.find(v.template_name, template_name) or v.template_name == template_name) and (not fn or fn(k, v))
+	end)
+end
+
+local function get_random_round_robin(mutable_history, n, m)
+	if not m then
+		m = n
+		n = 1
+	end
+
+	if m < n then
+		log.error("ERROR: Random round robin needs M to be bigger or equal than N")
+	end
+
+	if #mutable_history == 0 then
+		for i = n, m do
+			table.insert(mutable_history, i)
+		end
+	end
+
+	local pos = math.random(1, #mutable_history)
+	local v = mutable_history[pos]
+
+	table.remove(mutable_history, pos)
+
+	return v
+end
+
+local function generate_blue_noise_cluster(count, candidates, random_fn, ...)
+	local points = {}
+	local x, y = random_fn(...)
+
+	points[1] = {
+		x = x,
+		y = y
+	}
+
+	for i = 2, count do
+		local bestCandidate
+		local bestDistance2 = -1
+
+		for c = 1, candidates do
+			local px, py = random_fn(...)
+			local minDist2 = math.huge
+
+			for _, p in ipairs(points) do
+				local d2 = V.dist2(px, py, p.x, p.y)
+
+				if d2 < minDist2 then
+					minDist2 = d2
+				end
+			end
+
+			if bestDistance2 < minDist2 then
+				bestDistance2 = minDist2
+				bestCandidate = {
+					x = px,
+					y = py
+				}
+			end
+		end
+
+		points[i] = bestCandidate
+	end
+
+	return points
+end
+
+local function random_point_in_ellipse(cx, cy, a, b)
+	local t = 2 * math.pi * math.random()
+	local r = math.sqrt(math.random())
+	local x = r * math.cos(t)
+	local y = r * math.sin(t)
+
+	return cx + x * a, cy + y * b
+end
+
 local function enemy_ready_to_magic_attack(this, store, attack)
 	return this.enemy.can_do_magic and store.tick_ts - attack.ts > attack.cooldown
 end
@@ -45330,6 +45413,317 @@ function scripts.hero_stage_205_alleria.update(this, store)
 
 		coroutine.yield()
 	end
+end
+
+-- ======== KR6 level215 特殊关卡英雄 Lord Blackburn ========
+scripts.hero_stage_215_lord_blackburn = {}
+
+function scripts.hero_stage_215_lord_blackburn.insert(this, store)
+	this.melee.order = U.attack_order(this.melee.attacks)
+
+	return true
+end
+
+function scripts.hero_stage_215_lord_blackburn.update(this, store)
+	local brk, stam, star, blocked_enemy, counted_id
+	local cauldron = find_all_t(store, "decal_stage_215_cauldron")[1]
+
+	this.health_bar.hidden = false
+
+	local function do_corruption(count)
+		this.render.sprites[1].prefix = this.corruption.renders[count]
+		this.info.portrait = this.corruption.portraits[count]
+		this.info.hero_portrait = this.corruption.hero_portraits[count]
+		this.ui.click_rect = this.corruption.click_rects[count]
+		this.soldier.melee_slot_offset = this.corruption.melee_offsets[count]
+		local hb_offset = this.corruption.health_bar_offsets[count]
+		U.change_health_bar_offset_x_run_time(this.health_bar, hb_offset.x)
+		U.change_health_bar_offset_run_time(this.health_bar, hb_offset.y)
+		this.hero.tombstone_decal = this.corruption.tombstones[count]
+		this.health.hp_max = this.corruption.hp_max[count]
+		this.health.hp = this.corruption.hp_max[count]
+		this.health.armor = this.corruption.armor[count]
+		this.health.magic_armor = this.corruption.magic_armor[count]
+		this.regen.health = this.corruption.regen_health[count]
+		this.melee.attacks[1].damage_min = this.corruption.damage_min[count]
+		this.melee.attacks[1].damage_max = this.corruption.damage_max[count]
+		this.melee.attacks[2].damage_min = this.corruption.damage_min[count]
+		this.melee.attacks[2].damage_max = this.corruption.damage_max[count]
+		this.melee.attacks[1].hit_fx = this.corruption.hit_fx[count]
+		this.melee.attacks[2].hit_fx = this.corruption.hit_fx[count]
+
+		signal.emit("change-stage-hero-image", this)
+	end
+
+	local function y_corrupt(count)
+		this.corrupting = true
+		this.ui.can_click = false
+		this.health_bar.hidden = true
+		this.health.ignore_damage = true
+
+		local old_vis_bans = this.vis.bans
+
+		U.bans_add(this.vis, F_ALL)
+
+		U.unblock_target(store, this)
+		SU.remove_modifiers(store, this, nil, "mod_stage_215_black_burn_mind_control")
+
+		if count == 4 then
+			S:queue(this.sound_energy)
+		end
+
+		if count == 2 then
+			U.animation_start(this, "cinematic", nil, store.tick_ts, false, 1)
+			U.y_wait(store, fts(50))
+		else
+			U.animation_start(this, "transform", nil, store.tick_ts, false, 1)
+			S:queue(this.sound_energy)
+			U.y_wait(store, fts(52))
+		end
+
+		if count == 2 then
+			U.y_wait(store, fts(19))
+			U.animation_start(this, "cinematictalkloop2", nil, store.tick_ts, true, 1)
+			U.y_wait(store, store.level_mode ~= GAME_MODE_KR1 and 10.5 or 0)
+			U.animation_start(this, "cinematiccontinue2", nil, store.tick_ts, false, 1)
+			U.y_wait(store, fts(29))
+
+			local decal = E:create_entity(this.explosion_ground_decal)
+
+			decal.pos = V.vclone(this.pos)
+			decal.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, decal)
+			S:queue(this.sound_power_up)
+			U.y_wait(store, fts(82))
+		elseif count == 4 then
+			U.y_wait(store, fts(18))
+			U.animation_start(this, "transformtalk", nil, store.tick_ts, true, 1)
+			U.y_wait(store, 0.5)
+			signal.emit("show-balloon_tutorial-pos", "S15_PRE_BOSS_01", false, V.v(this.pos.x - 6, this.pos.y + 60))
+			U.y_wait(store, 3)
+			U.animation_start(this, "transform2", nil, store.tick_ts, false, 1)
+			S:queue(this.sound_power_up, {
+				delay = 0.85
+			})
+			U.y_wait(store, fts(33))
+			signal.emit("show-balloon_tutorial-pos", "S15_PRE_BOSS_02", false, V.v(this.pos.x - 6, this.pos.y + 85))
+			S:queue(this.sound_jump, {
+				delay = 4
+			})
+			U.y_wait(store, fts(73))
+		else
+			U.y_wait(store, fts(66))
+
+			local decal = E:create_entity(this.explosion_ground_decal)
+
+			decal.pos = V.vclone(this.pos)
+			decal.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, decal)
+			S:queue(this.sound_power_up)
+			U.y_wait(store, fts(82))
+		end
+
+		if count >= 4 then
+			local boss = E:create_entity(this.corruption.boss)
+
+			boss.pos.x, boss.pos.y = this.pos.x, this.pos.y
+			boss.render.sprites[1].flip_x = this.render.sprites[1].flip_x
+			boss.render.sprites[1].hidden = true
+
+			queue_insert(store, boss)
+			coroutine.yield()
+
+			boss.render.sprites[1].hidden = false
+			this.render.sprites[1].hidden = true
+
+			signal.emit("hide-stage-hero", this.id)
+			queue_remove(store, this)
+
+			return
+		end
+
+		this.health_bar.hidden = false
+		this.ui.can_click = true
+		this.health.ignore_damage = false
+		U.bans_remove(this.vis, F_ALL)
+
+		if old_vis_bans ~= 0 then
+			U.bans_add(this.vis, old_vis_bans)
+		end
+
+		this.unit.is_stunned = false
+
+		U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+		do_corruption(count)
+
+		this.corrupting = false
+	end
+
+	if not this.skip_cutscene then
+		while not this.start_intro do
+			coroutine.yield()
+		end
+
+		if string.find(this.render.sprites[1].prefix, "1") then
+			U.y_wait(store, this.intro_drink_time)
+			S:queue(this.sound_drink)
+			U.y_wait(store, this.intro_explosion_time)
+			S:queue(this.sound_power_up)
+		end
+
+		while not U.animation_finished(this, 1) do
+			coroutine.yield()
+		end
+	end
+
+	U.animation_start(this, "idle", nil, store.tick_ts, false, 1)
+	do_corruption(this.corrupt_count)
+
+	while true do
+		if blocked_enemy then
+			if this.soldier.target_id ~= blocked_enemy.id then
+				blocked_enemy = nil
+			elseif blocked_enemy.health.dead then
+				signal.emit("lord-of-destruction-stage215")
+
+				counted_id = blocked_enemy.id
+				blocked_enemy = nil
+			end
+		end
+
+		if not blocked_enemy and this.soldier.target_id and this.soldier.target_id ~= counted_id then
+			blocked_enemy = store.entities[this.soldier.target_id]
+		end
+
+		if this.corrupt then
+			this.corrupt_count = this.corrupt_count + 1
+
+			y_corrupt(this.corrupt_count)
+
+			this.corrupt = false
+		end
+
+		if this.cutscene then
+		-- block empty
+		else
+			if this.health.dead then
+				SU.y_hero_death_and_respawn(store, this)
+			end
+
+			while this.nav_rally.new do
+				if SU.y_hero_new_rally(store, this) then
+					goto label_stage_215_lord_blackburn_0
+				end
+			end
+
+			if this.melee then
+				brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
+
+				if brk or stam == A_DONE or stam == A_IN_COOLDOWN and not this.melee.continue_in_cooldown then
+					goto label_stage_215_lord_blackburn_0
+				end
+			end
+
+			if this.melee.continue_in_cooldown and stam == A_IN_COOLDOWN then
+			-- block empty
+			elseif SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+			end
+		end
+
+		::label_stage_215_lord_blackburn_0::
+
+		coroutine.yield()
+	end
+end
+
+function scripts.hero_stage_215_lord_blackburn.remove(this, store)
+	return true
+end
+
+scripts.stage_215_lord_blackburn_ray = {}
+
+function scripts.stage_215_lord_blackburn_ray.update(this, store)
+	U.y_wait(store, this.hit_time)
+
+	local explosion = E:create_entity(this.decal_explosion_ground)
+
+	explosion.render.sprites[1].ts = store.tick_ts
+	explosion.pos = V.vclone(this.pos)
+
+	queue_insert(store, explosion)
+
+	local aura = E:create_entity(this.aura)
+
+	aura.pos = this.pos
+
+	queue_insert(store, aura)
+
+	if this._tower then
+		SU.remove_modifiers(store, this._tower)
+		queue_remove(store, store.entities[this._tower.id])
+
+		local holder = table.filter(store.entities, function(k, v)
+			return v.tower and v.tower.type == "holder" and v.tower_holder.holder_id == this._tower.tower.holder_id
+		end)[1]
+
+		if holder then
+			queue_remove(store, store.entities[holder.id])
+		end
+	end
+
+	while not U.animation_finished(this, 1) do
+		coroutine.yield()
+	end
+
+	signal.emit("hide-stage-hero", this.id)
+	queue_remove(store, this)
+end
+
+scripts.mod_stage_215_black_burn_mind_control = {}
+
+function scripts.mod_stage_215_black_burn_mind_control.insert(this, store, script)
+	local target = store.entities[this.modifier.target_id]
+
+	if target.sound_events then
+		this.saved_rally_sound = target.sound_events.change_rally_point
+		target.sound_events.change_rally_point = nil
+	end
+
+	target.nav_rally.new = true
+	target.nav_rally.pos = this.target_pos
+	target.nav_rally.center = this.target_pos
+	target.nav_grid.waypoints = GR:find_waypoints(target.pos, this.target_pos, this.target_pos, target.nav_grid.valid_terrains, true) or {}
+	U.speed_mul(target, this.modifier.speed_factor)
+	target.ui.can_click = false
+	target.ui.can_select = false
+	target.ui.can_hover = false
+	target.ui.can_drag = false
+	this.inserted = true
+
+	return true
+end
+
+function scripts.mod_stage_215_black_burn_mind_control.remove(this, store, script)
+	local target = store.entities[this.modifier.target_id]
+
+	if target.sound_events then
+		target.sound_events.change_rally_point = this.saved_rally_sound
+	end
+
+	target.nav_grid.waypoints = {}
+	U.speed_div(target, this.modifier.speed_factor)
+	target.ui.can_click = true
+	target.ui.can_select = true
+	target.ui.can_hover = true
+	target.ui.can_drag = true
+
+	return true
 end
 
 return scripts
