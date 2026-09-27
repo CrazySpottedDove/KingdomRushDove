@@ -26072,4 +26072,12 @@ tt.modifier.duration = 1
 tt.modifier.vis_flags = bor(F_MOD)
 tt.modifier.resets_same = true
 
+-- 通用：让目标精灵短暂抖动（KR6 stage10 boss 冰冻解冻、tower block 敲击反馈等）
+tt = RT("mod_shake_sprite", "modifier")
+tt.modifier.duration = 1
+tt.modifier.intensity = 1
+tt.modifier.resets_same = true
+tt.sprites_idx = {1}
+tt.main_script.update = scripts.mod_shake_sprite.update
+
 return scripts

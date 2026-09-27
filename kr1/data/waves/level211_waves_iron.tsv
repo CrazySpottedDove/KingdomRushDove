@@ -1,0 +1,210 @@
+#	COMANDOS					1 - Izquierda a Centro por Abajo					2 - Arriba a Centro por Izquierda					3 - Derecha a Centro por Arriba					4 - Abajo a Centro por Derecha					5 - Izquierda a Centro por Arriba					6 - Arriba a Centro por Derecha					7 - Derecha a Centro por Abajo					8 - Abajo a Centro por Izquierda
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3
+#	level properties
+	description	Iron Rodri
+	lives	20
+	gold	1500
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	4328
+#	stage gold curve
+#	WAVE 1				31.4
+#	enemies															spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.															35	0	12	0		0
+#	gold	214														70	0	144	0		0
+	wave		1		-1
+					0													spiderling_kr6
+					1																			spiderling_kr6
+					0.7												spiderling_kr6
+					1.1													spiderling_kr6				spiderling_kr6
+					0.1														spiderling_kr6					spiderling_kr6
+					1.2												spiderling_kr6						spiderling_kr6
+					1												spiderling_kr6						spiderling_kr6
+					0.7														spiderling_kr6			spiderling_kr6
+					1													spiderling_kr6						spiderling_kr6
+					3							leaper_spider		leaper_spider								spiderling_kr6
+					2		leaper_spider		leaper_spider
+					5													spiderling_kr6
+					1												spiderling_kr6
+					0.7												spiderling_kr6						spiderling_kr6
+					1													spiderling_kr6				spiderling_kr6
+					0.1														spiderling_kr6					spiderling_kr6
+					0.5												spiderling_kr6						spiderling_kr6
+					1.3																		spiderling_kr6
+					0.8												spiderling_kr6							spiderling_kr6
+					0.7														spiderling_kr6					spiderling_kr6
+					0.5																	spiderling_kr6
+					1													spiderling_kr6						spiderling_kr6
+					0.7																	spiderling_kr6
+					2							leaper_spider		leaper_spider
+					1								leaper_spider
+					1							leaper_spider
+					0.3		leaper_spider		leaper_spider
+					1			leaper_spider
+					1				leaper_spider
+#	Marcamos el patrón. Spiderlings mitad derecha, grupos de 4 (2 knights + 1 miners). 
+Mitad izquierda/arriba mostramos leapers desde la oscuridad.
+
+
+
+#	WAVE 2				52.6
+#	enemies															spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.															18	14	10	0		0
+#	gold	408														36	252	120	0		0
+#	wave		2
+					10																												giant_spider
+					1.3																													giant_spider
+					1.5																											giant_spider
+					1																																giant_spider
+					1.5																																		giant_spider
+					1.2																																	giant_spider
+					6			leaper_spider
+					0.1		leaper_spider																						leaper_spider
+					2				leaper_spider																		leaper_spider
+					0.1																							leaper_spider
+					4			leaper_spider
+					0.5				spiderling_kr6
+					0.7		spiderling_kr6
+					1.3		spiderling_kr6		leaper_spider
+					0.8			spiderling_kr6
+					3																							leaper_spider
+					0.5																								spiderling_kr6
+					0.7																						spiderling_kr6
+					1.3																						spiderling_kr6		leaper_spider
+					0.8																							spiderling_kr6
+					3																												giant_spider
+					0.7																											spiderling_kr6
+					0.5																													spiderling_kr6
+					2																											giant_spider		spiderling_kr6
+					0.7																												spiderling_kr6
+					2																											giant_spider						giant_spider
+					0.7																												spiderling_kr6	giant_spider			spiderling_kr6
+					0.5																																		spiderling_kr6
+					2																																giant_spider		spiderling_kr6
+					0.7																																	spiderling_kr6
+					1																																giant_spider
+					0.5																																	spiderling_kr6	giant_spider
+
+
+#	Sumamos Giant spiders por ariba/izquierda.
+Sumamos spiderlings abajo con Leapers, deberían complicar con los leapers agarrando el agro antes. Penaliza early barracs en el path
+
+
+
+#	WAVE 3				47.8
+#	enemies															spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.															36	0	0	4		0
+#	gold	472														72	0	0	400		0
+#	wave		3
+					13													spider_matriarch
+					3																												spider_matriarch
+					5												spider_matriarch
+					3																													spider_matriarch
+					10																		spiderling_kr6
+					0.4																			spiderling_kr6																			spiderling_kr6
+					0.6																			spiderling_kr6																			spiderling_kr6
+					0.3																		spiderling_kr6																			spiderling_kr6
+					0.4																		spiderling_kr6
+					0.5																			spiderling_kr6																			spiderling_kr6
+					0.6																		spiderling_kr6
+					0.3																			spiderling_kr6																			spiderling_kr6
+					3																		spiderling_kr6																			spiderling_kr6
+					0.5																		spiderling_kr6																			spiderling_kr6
+					0.4																			spiderling_kr6
+					0.6																			spiderling_kr6																			spiderling_kr6
+					0.3																		spiderling_kr6
+					0.4																		spiderling_kr6																			spiderling_kr6
+					0.5																			spiderling_kr6																		spiderling_kr6
+					0.4																			spiderling_kr6																			spiderling_kr6
+					3																			spiderling_kr6																		spiderling_kr6
+					0.3																			spiderling_kr6
+					0.4																		spiderling_kr6																				spiderling_kr6
+					0.5																		spiderling_kr6																			spiderling_kr6
+					0.4																			spiderling_kr6																			spiderling_kr6
+
+
+
+
+#	Sumamos matriarchs arriba. Se alargan los pushes. Abajo presionamos con Spiderlings
+
+
+
+#	WAVE 4				66
+#	enemies															spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.															12	18	0	0		4
+#	gold	668														24	324	0	0		320
+#	wave		4
+					14			son_of_sarelgaz
+					6																	giant_spider
+					2													son_of_sarelgaz				giant_spider
+					3																																	giant_spider
+					2																																giant_spider
+					4																		giant_spider
+					2																			giant_spider
+					2																																giant_spider
+					2																																		giant_spider
+					6				son_of_sarelgaz
+					4														son_of_sarelgaz
+					7			spiderling_kr6															giant_spider										spiderling_kr6
+					2		spiderling_kr6															giant_spider										spiderling_kr6							giant_spider
+					2				spiderling_kr6													giant_spider												spiderling_kr6
+					2			spiderling_kr6																giant_spider									spiderling_kr6					giant_spider
+					2																																giant_spider
+					2		spiderling_kr6																giant_spider									spiderling_kr6							giant_spider
+					2				spiderling_kr6																									spiderling_kr6			giant_spider
+
+
+
+
+
+
+
+
+
+#	Aflojamos un poco entrando en el final. Introducimos SoS por arriba. Abajo vamos tranqui con giants/algun spiderling_kr6?
+Variamos salidas con respecto a push 3 pero mantenemos estructura
+
+
+
+#	WAVE 5				87.4
+#	enemies															spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.															11	10	12	4		4
+#	gold	1066														22	180	144	400		320
+#	wave		5
+					18			leaper_spider																									spider_matriarch
+					3				son_of_sarelgaz			leaper_spider
+					2								leaper_spider
+					1			leaper_spider				leaper_spider
+					3		leaper_spider							son_of_sarelgaz																				spider_matriarch
+					12																		spiderling_kr6
+					0.7																	spiderling_kr6
+					0.5																																						spiderling_kr6
+					0.6																																	spider_matriarch					spiderling_kr6
+					0.5																			spiderling_kr6
+					0.7																			spiderling_kr6
+					0.6																																						spiderling_kr6
+					0.5																			spiderling_kr6																		spiderling_kr6
+					0.7																																					spiderling_kr6
+					0.8																		spiderling_kr6
+					12			son_of_sarelgaz						leaper_spider																			spider_matriarch
+					2							leaper_spider
+					2							leaper_spider
+					5		leaper_spider							son_of_sarelgaz
+					2			leaper_spider
+					2				leaper_spider
+					5																			giant_spider																		giant_spider
+					2																			giant_spider																		giant_spider
+					2.5																																						giant_spider
+					2.3																		giant_spider
+					2																																					giant_spider
+					2.2																		giant_spider																			giant_spider
+					1.8																			giant_spider
+
+#	Final con Matriarchs, giants y lings por mtad de abajo. 
+Grandesitos con Matriarchs, SoS y Leapers por arriba en pares de a 2 y 4.
+
+
+#	TOTAL DURATION (min):	4.75

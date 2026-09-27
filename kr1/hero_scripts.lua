@@ -39192,7 +39192,7 @@ function scripts.aura_eiskalt_skill_rider.update(this, store)
 
 	local flip_x = target_pos.x < this.pos.x
 
-	U.animation_start(this, "spawn", flip_x, store.tick_ts, 1, sid_rider)
+	U.animation_start(this, "spawn", flip_x, store.tick_ts, false, sid_rider)
 	hit_enemies()
 
 	local psA = E:create_entity(this.particles_name_A)
@@ -39222,7 +39222,7 @@ function scripts.aura_eiskalt_skill_rider.update(this, store)
 			else
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-				U.animation_start(this, an, af, store.tick_ts, -1, sid_rider)
+				U.animation_start(this, an, af, store.tick_ts, true, sid_rider)
 
 				return true
 			end
@@ -43610,7 +43610,7 @@ function scripts.hero_tramin.update(this, store)
 					fx.render.sprites[1].offset = v(0, 20)
 					simulation:queue_insert_entity(fx)
 					U.y_animation_play(this, "outJetpack", af, store.tick_ts, 1)
-					U.animation_start(this, "idle", af, store.tick_ts, 1)
+					U.animation_start(this, "idle", af, store.tick_ts, false)
 				end
 			end
 
@@ -44769,7 +44769,7 @@ function scripts.hero_naga.update(this, store)
 					local start_ts = store.tick_ts
 					local af = enemy.pos.x < this.pos.x
 					S:queue(a.sound)
-					U.animation_start(this, a.animation, af, store.tick_ts, 1)
+					U.animation_start(this, a.animation, af, store.tick_ts, false)
 
 					if SU.y_hero_wait(store, this, a.cast_time) then
 						goto label_naga_0
@@ -44846,7 +44846,7 @@ function scripts.hero_naga.update(this, store)
 					local start_ts = store.tick_ts
 					local af = soldier.pos.x < this.pos.x
 					S:queue(a.sound)
-					U.animation_start(this, a.animation, af, store.tick_ts, 1)
+					U.animation_start(this, a.animation, af, store.tick_ts, false)
 
 					if SU.y_hero_wait(store, this, a.cast_time) then
 						goto label_naga_0
@@ -45101,7 +45101,7 @@ function scripts.aura_totem_naga.update(this, store)
 
 	this.render.sprites[ring_sid].ts = store.tick_ts
 
-	U.animation_start(this, "start", nil, store.tick_ts, 1, totem_sid)
+	U.animation_start(this, "start", nil, store.tick_ts, false, totem_sid)
 
 	while not U.animation_finished(this, totem_sid) do
 		coroutine.yield()
@@ -45149,7 +45149,7 @@ function scripts.aura_totem_naga.update(this, store)
 
 	S:queue("TotemVanish")
 
-	U.animation_start(this, "end", nil, store.tick_ts, 1, totem_sid)
+	U.animation_start(this, "end", nil, store.tick_ts, false, totem_sid)
 
 	while not U.animation_finished(this, totem_sid) do
 		coroutine.yield()
@@ -45282,7 +45282,7 @@ function scripts.hero_stage_205_alleria.update(this, store)
 
 					local an, af = U.animation_name_facing_point(this, wa.animation, enemies[1].pos)
 
-					U.animation_start(this, an, af, store.tick_ts, 1)
+					U.animation_start(this, an, af, store.tick_ts, false)
 					U.y_wait(store, wa.cast_time)
 
 					local e = E:create_entity(wa.entity)

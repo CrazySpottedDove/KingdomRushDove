@@ -1,0 +1,1 @@
+return {version=3,partScaleCompensation=1.40625,fps=30,parts={{'trollboss_shieldfly_asst_trollboss_shieldup',34.3,59.25}},attach_points={},animations={{name='spindependingonvelocity',frames={{{1,1,1,-9.15,79.95,1.191716,-1.107093,-0.563937,-0.019637,0}}}}}}

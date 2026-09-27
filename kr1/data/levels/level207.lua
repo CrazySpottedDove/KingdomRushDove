@@ -108,7 +108,7 @@ while true do
 if this.do_spawn then
 local bush=this.bush_ref
 local start_ts=store.tick_ts
-U.animation_start(bush,"action",nil,store.tick_ts,1)
+U.animation_start(bush,"action",nil,store.tick_ts,false)
 U.y_wait(store,fts(3))
 S:queue(this.sound_rustle)
 U.y_wait(store,fts(44))

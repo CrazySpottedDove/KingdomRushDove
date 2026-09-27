@@ -44,9 +44,9 @@ coroutine.yield()
 end
 local smoke=find_all_t(store,this.smoke_t)[1]
 local lights=find_all_t(store,this.lights_t)[1]
-U.animation_start(smoke,"out",nil,store.tick_ts,1)
-U.animation_start(lights,"out",nil,store.tick_ts,1)
-U.animation_start(this,"tap",nil,store.tick_ts,1)
+U.animation_start(smoke,"out",nil,store.tick_ts,false)
+U.animation_start(lights,"out",nil,store.tick_ts,false)
+U.animation_start(this,"tap",nil,store.tick_ts,false)
 for i,snd in ipairs(this.sounds) do
 U.y_wait(store,this.waits_sound[i])
 S:queue(snd)
@@ -56,7 +56,7 @@ local function decal_stage_206_flush_stick_update(this,store,script)
 while not this.ui.clicked do
 coroutine.yield()
 end
-U.animation_start(this,"tap",nil,store.tick_ts,1)
+U.animation_start(this,"tap",nil,store.tick_ts,false)
 S:queue(this.sound_flush)
 U.y_wait(store,fts(15))
 local wave=find_all_t(store,this.wave_t)[1]

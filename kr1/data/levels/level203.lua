@@ -93,17 +93,17 @@ this.bubble=E:create_entity(this.bubble_t)
 this.bubble.pos=V.vclone(this.pos)
 this.bubble.render.sprites[1].ts=store.tick_ts+3
 queue_insert(store,this.bubble)
-U.animation_start(this.bubble,"tap",nil,store.tick_ts,1)
+U.animation_start(this.bubble,"tap",nil,store.tick_ts,false)
 while fishes_tapped<5 do
 if tap_bubble_cd<store.tick_ts-bubble_ts then
-U.animation_start(this.bubble,"tap",nil,store.tick_ts,1)
+U.animation_start(this.bubble,"tap",nil,store.tick_ts,false)
 bubble_ts=store.tick_ts
 end
 if this.fish_tapped then
 fishes_tapped=fishes_tapped+1
 this.fish_tapped=false
 S:queue(this.sound_feedback)
-U.animation_start(this,"action_"..fishes_tapped,nil,store.tick_ts,1)
+U.animation_start(this,"action_"..fishes_tapped,nil,store.tick_ts,false)
 U.y_wait(store,this.wait_sound_single)
 if fishes_tapped>=3 then
 S:queue(this.sound_pile)

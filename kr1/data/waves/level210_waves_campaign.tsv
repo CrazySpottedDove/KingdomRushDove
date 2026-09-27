@@ -1,0 +1,811 @@
+#	COMANDOS						1 - Izquierda Abajo a Derecha Abajo					2 - Izquierda Medio a Derecha Abajo por hielo					3 - Izquierda Medio a Derecha Arriba por hielo					4 - Izquierda Arriba a Derecha Abajo					5 - Izquierda Arriba a Derecha Arriba					6 - Izquierda Arriba a Derecha Abajo por hielo
+	column_names					inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties
+	description	main JC
+	lives	20
+	gold	1300
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	3462
+#	stage gold curve
+#	WAVE 1						T. Warrior x12 T. Glider x10															T. Warrior x T. Champion x
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						15	2	6	0		0	0	0	0
+#	gold	204					120	60	24	0		0	0	0	0
+	wave		1			-1
+						0			troll_warrior															troll_champion
+						0.8		troll_warrior															troll_warrior
+						0.8				troll_warrior															troll_warrior
+						0.8		troll_warrior															troll_warrior
+						0.8				troll_warrior															troll_warrior
+						0.8																		troll_warrior
+						12	troll_glider
+						1.2
+						1.2	troll_glider
+						12	troll_glider
+						0
+						1.2	troll_glider
+						10	troll_glider																troll_warrior		troll_champion
+						0.8																		troll_warrior
+						0.8																	troll_warrior
+						0.8	troll_glider																	troll_warrior
+						0.8																	troll_warrior
+
+
+
+
+
+
+
+
+
+
+#	WAVE 2						T. Warrior x12 T. Champion x2															T. Warrior x8					T. Champion x4
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						21	6	0	0		0	0	0	0
+#	gold	348					168	180	0	0		0	0	0	0
+	wave		2			25
+						0																						troll_champion
+						0.8			troll_warrior
+						0.8		troll_warrior		troll_warrior
+						0.8			troll_warrior																				troll_champion
+						0
+						0
+						13		troll_champion															troll_warrior		troll_warrior
+						1																	troll_warrior		troll_warrior
+						1				troll_champion													troll_warrior		troll_warrior
+						9
+						8		troll_warrior		troll_warrior															troll_warrior			troll_champion
+						0.8			troll_warrior															troll_warrior
+						0.8																			troll_warrior
+						0.8																		troll_warrior
+						0.8																						troll_champion
+						0.8
+						7				troll_warrior
+						0.7		troll_warrior
+						0.3				troll_warrior
+						0.8			troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 3						T. Pathfinder x16															T. Warrior x12
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						12	0	0	0		0	18	0	0
+#	gold	240					96	0	0	0		0	144	0	0
+	wave		3			28
+						0			troll_pathfinder
+						0.8		troll_pathfinder
+						0.8				troll_pathfinder
+						6		troll_pathfinder
+						0.8				troll_pathfinder
+						0.8			troll_pathfinder
+						0.8		troll_pathfinder
+						12				troll_pathfinder													troll_warrior
+						0.8		troll_pathfinder																	troll_warrior
+						0.8			troll_pathfinder														troll_warrior
+						0.8				troll_pathfinder														troll_warrior
+						0.8		troll_pathfinder																	troll_warrior
+						18		troll_pathfinder															troll_warrior
+						0.8			troll_pathfinder																troll_warrior
+						0.8		troll_pathfinder															troll_warrior
+						4				troll_pathfinder															troll_warrior
+						0.8			troll_pathfinder															troll_warrior
+						0.8				troll_pathfinder													troll_warrior		troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 4						Herald x1, Troll Glider x6					T. Warrior x20
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						20	0	6	0		1	0	0	0
+#	gold	254					160	0	24	0		70	0	0	0
+	wave		4			26
+						0						troll_warrior
+						1						troll_warrior
+						3						troll_warrior
+						1						troll_warrior
+						1						troll_warrior
+						8						troll_warrior
+						1						troll_warrior
+						3						troll_warrior
+						1						troll_warrior
+						1						troll_warrior
+						2			frost_icecaller
+						6		troll_glider				troll_warrior
+						1				troll_glider		troll_warrior
+						1			troll_glider			troll_warrior
+						1						troll_warrior
+						12	troll_glider
+						1	troll_glider
+						1	troll_glider
+						1						troll_warrior
+						1						troll_warrior
+						1						troll_warrior
+						4						troll_warrior
+						1						troll_warrior
+						1						troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 5																T. Warrior x20										T. Pathfinder x12, Herald x2
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						16	0	0	0		2	12	0	0
+#	gold	364					128	0	0	0		140	96	0	0
+	wave		5			24
+						0											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+						2											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+						0
+						8																							frost_icecaller
+						3																					troll_pathfinder
+						1																					troll_pathfinder
+						1																					troll_pathfinder
+						1																					troll_pathfinder
+	event	jt_icicles	2	2	0	4
+						4																							frost_icecaller
+						4																					troll_pathfinder
+						1																					troll_pathfinder
+						1																					troll_pathfinder
+						2											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+	event	jt_icicles	2	2	0	0
+						4											troll_warrior										troll_pathfinder
+						1											troll_warrior										troll_pathfinder
+						2											troll_warrior										troll_pathfinder
+						1											troll_warrior										troll_pathfinder
+						1											troll_warrior										troll_pathfinder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 6																										T. Champion x2, Baiter x15
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						0	4	0	0		0	0	18	0
+#	gold	174					0	120	0	0		0	0	54	0
+	wave		6			28
+						0																					troll_champion
+						3																					troll_champion
+						5																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						10																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						6																					troll_champion
+						3																					troll_champion
+						8																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						1.2																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						1.2																					frost_baiter
+						0.7																					frost_baiter
+						0.6																					frost_baiter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 7						T. Warrior x16					Baiter x12										T. Champion x3
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						17	4	0	0		0	0	12	0
+#	gold	292					136	120	0	0		0	0	36	0
+	wave		7			25
+						0		troll_warrior		troll_warrior
+						0.8			troll_warrior
+						1.5			troll_warrior
+						0.8		troll_warrior		troll_warrior
+						0.8		troll_warrior		troll_warrior														troll_champion
+						4						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+	event	jt_icicles	3	1	0
+						6						frost_baiter												troll_champion
+						3																		troll_champion
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						4			troll_warrior
+						0.8		troll_warrior		troll_warrior
+						0.8			troll_warrior
+						2		troll_warrior		troll_warrior														troll_champion
+	event	jt_icicles	2	2	0	0
+						0.8			troll_warrior
+						0.8		troll_warrior		troll_warrior
+						4						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 8																T. Champion x4										Pathfinder x12, Herald x1
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						0	4	0	0		1	12	0	0
+#	gold	286					0	120	0	0		70	96	0	0
+	wave		8			22
+						0												troll_champion
+						3														troll_champion
+						3																							frost_icecaller
+						10																					troll_pathfinder
+						0.8																					troll_pathfinder
+						0.8																					troll_pathfinder
+						0.8																					troll_pathfinder
+						3														troll_champion
+						3												troll_champion
+						3																					troll_pathfinder
+						0.8																					troll_pathfinder
+						0.8																					troll_pathfinder
+						6																					troll_pathfinder
+						0.8																					troll_pathfinder
+						0.8																					troll_pathfinder
+						0.8																					troll_pathfinder
+						0.8																					troll_pathfinder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 9																					T. Glider x12					T. Warrior x12					T. Warrior x12
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						24	0	12	0		0	0	0	0
+#	gold	240					192	0	48	0		0	0	0	0
+	wave		9			28
+						0																										troll_warrior
+						0.8																										troll_warrior
+						1.2																										troll_warrior
+						0.8																										troll_warrior
+						0.8																										troll_warrior
+						0.8																										troll_warrior
+						0
+						4																							troll_warrior
+						0.8																						troll_warrior		troll_warrior
+						0.8																							troll_warrior
+						0.8																						troll_warrior
+						0.8																								troll_warrior
+						3																troll_glider
+						1																troll_glider
+						4																troll_glider
+						1																troll_glider
+						2																						troll_warrior		troll_warrior
+	event	jt_icicles	3	2	0	0
+						0.8																							troll_warrior
+						0.8																						troll_warrior		troll_warrior
+						0.8																							troll_warrior
+						3																troll_glider
+						1																troll_glider
+						4																troll_glider
+						1																troll_glider
+						4																										troll_warrior
+						0.8																										troll_warrior
+						0.8																										troll_warrior
+						0.8																										troll_warrior
+						0.8																										troll_warrior
+						0.8																										troll_warrior
+						4																troll_glider
+						1																troll_glider
+						4																troll_glider
+						1																troll_glider
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 10						Brute x1
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						0	0	0	0		0	0	18	1
+#	gold	314					0	0	0	0		0	0	54	260
+	wave		10			27
+						0			frost_brute
+						3						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						5						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						5						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						4						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 11						Pahtfinder x12, Herald x2															T. Champion x7, Herald x3										T. Champion x6
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						0	13	0	0		5	12	0	0
+#	gold	836					0	390	0	0		350	96	0	0
+	wave		11			28
+						0																												troll_champion
+						2			frost_icecaller																										troll_champion
+						1
+						4																	frost_icecaller
+						2																			frost_icecaller
+						0	troll_pathfinder
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						1.2	troll_pathfinder															troll_champion
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						1.2																troll_champion
+						2																troll_champion
+						4																												troll_champion
+						3																											troll_champion
+						10																												troll_champion
+						3																													troll_champion
+						8	troll_pathfinder																frost_icecaller
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						1			frost_icecaller
+						1	troll_pathfinder
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder															troll_champion
+						2																troll_champion
+						2																troll_champion
+						2																troll_champion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 12						T. Glider x12					T. Warrior x12					T. Champion x8
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						12	8	12	0		0	0	0	0
+#	gold	384					96	240	48	0		0	0	0	0
+	wave		12			22
+						0											troll_champion
+						3											troll_champion
+						6											troll_champion
+						3											troll_champion
+						3											troll_champion
+						1	troll_glider
+						1	troll_glider
+						2	troll_glider
+						1	troll_glider
+	event	jt_icicles	3	1	0	0
+						2						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						3											troll_champion
+						3											troll_champion
+						3											troll_champion
+						6						troll_warrior
+	event	jt_icicles	2	2	0	0
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						1	troll_glider
+						1	troll_glider
+						2	troll_glider
+						1	troll_glider
+						4	troll_glider
+						1	troll_glider
+						2	troll_glider
+						1	troll_glider
+
+#	WAVE 13																Baiter x14										Brute x1, Herald x3
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						0	0	0	0		3	0	14	1
+#	gold	512					0	0	0	0		210	0	42	260
+	wave		13			24
+						0																						frost_icecaller
+						2																							frost_brute
+						6																								frost_icecaller
+						3																						frost_icecaller
+						2											frost_baiter
+						0.8											frost_baiter
+						0.8											frost_baiter
+						2											frost_baiter
+						0.8											frost_baiter
+						0.8											frost_baiter
+						0.8											frost_baiter
+						0.8											frost_baiter
+						3											frost_baiter
+						0.8											frost_baiter
+						0.8											frost_baiter
+						0.8											frost_baiter
+						0.8											frost_baiter
+						0.8											frost_baiter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 14						Pathfinder x18					Baiter x12															Baiter x20
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						0	0	0	0		0	18	32	0
+#	gold	240					0	0	0	0		0	144	96	0
+	wave		14			22
+						0																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						0.8						frost_baiter
+						1	troll_pathfinder
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						3																					frost_baiter
+	event	jt_icicles	3	2	0	0
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						0.8																					frost_baiter
+						4																					frost_baiter
+						0.8						frost_baiter															frost_baiter
+						0.8						frost_baiter															frost_baiter
+						0.8	troll_pathfinder					frost_baiter															frost_baiter
+						0.8	troll_pathfinder					frost_baiter
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+						0.8	troll_pathfinder
+	event	jt_icicles	4	1	0	0
+						6	troll_pathfinder					frost_baiter															frost_baiter
+						0.8	troll_pathfinder					frost_baiter															frost_baiter
+						0.8	troll_pathfinder					frost_baiter															frost_baiter
+						0.8	troll_pathfinder					frost_baiter															frost_baiter
+						0.8	troll_pathfinder																				frost_baiter
+						0.8	troll_pathfinder																				frost_baiter
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 15						Brute x1 F. Herald x2										T. Warrior x12										T. Champion x10
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						12	10	0	0		2	0	0	1
+#	gold	796					96	300	0	0		140	0	0	260
+	wave		15			25
+						0			frost_brute
+						6		frost_icecaller
+						4				frost_icecaller																			troll_champion
+						2																						troll_champion
+						2											troll_warrior													troll_champion
+						1											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+						10																						troll_champion
+	event	jt_icicles	3	1	0	0
+						2																								troll_champion
+						2																							troll_champion
+						2											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+						6																							troll_champion
+						2																						troll_champion		troll_champion
+						2											troll_warrior												troll_champion
+	event	jt_icicles	4	1	0	0
+						1											troll_warrior
+						1											troll_warrior
+						1											troll_warrior
+
+
+
+
+
+#	WAVE BOSS											T. Warrior x12					T. Champion x9					Pathfinder x15, T. Champion x6										T. Champion x8
+#	enemies						troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute
+#	cant.						12	23	0	0		0	15	0	0
+#	gold	906					96	690	0	0		0	120	0	0
+	manual_wave	BOSS1				0
+						3																	troll_champion
+						0.2																			troll_champion
+						1.5																													troll_champion
+						0.1																											troll_champion
+						6						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						4											troll_champion
+						1											troll_champion
+						1											troll_champion
+						8																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+						6																			troll_champion
+						0.2																	troll_champion
+						1																	troll_champion
+						0.1																			troll_champion
+						1																													troll_champion
+						0.6																											troll_champion
+						1																												troll_champion
+						10											troll_champion
+						1											troll_champion
+						1											troll_champion
+						6						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						0.8						troll_warrior
+						4																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+						2																												troll_champion
+						1																											troll_champion
+						1																													troll_champion
+						6											troll_champion
+						1											troll_champion
+						1											troll_champion
+						2																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+						1																troll_pathfinder
+	wait					12
+	manual_wave_repeat	-1				0

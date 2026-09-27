@@ -4322,3 +4322,402 @@ tt.modifier.duration = 5
 tt = RT("mod_boss_stage_208_shout_buff_speed", "mod_slow")
 tt.slow.factor = 1.25
 tt.modifier.duration = 5
+
+-- ==================== KR6 stage 10 / 11 / 13 Boss + 战斗子实体 ====================
+-- KR6 balance.enemies.*.boss hp 每档 ×1.375；数值全部内联。
+
+-- ===== KR6 stage 10 boss：J.T.（jt_boss）=====
+tt = RT("enemy_boss_stage_10", "boss")
+AC(tt, "melee", "timed_attacks")
+tt.enemy.gold = 1
+tt.enemy.lives_cost = 999
+tt.enemy.melee_slot = v(60, 0)
+tt.health.armor = 0
+tt.health.dead_lifetime = 100
+tt.health.hp_max = {9212.5, 11550, 13062.5, 15125}
+tt.health_bar.offset = v(0, 130)
+tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
+tt.info.i18n_key = "ENEMY_BOSS_STAGE_10"
+tt.info.portrait = "kr6_info_portraits_enemies_0028"
+tt.info.portrait_boss = "boss_health_bar_icon_0002"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_boss_stage_10.update
+tt.motion.max_speed = 12
+tt.render.sprites[1].prefix = "JT_stage10_unitDef"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.unit.can_explode = false
+tt.unit.hit_offset = v(0, 40)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 30)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_LARGE
+tt.vis.flags = bor(F_ENEMY, F_BOSS)
+tt.vis.bans = bor(F_STUN, F_INSTAKILL)
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 150
+tt.melee.attacks[1].damage_max = 200
+tt.melee.attacks[1].damage_radius = 75
+tt.melee.attacks[1].damage_type = bor(DAMAGE_EAT, DAMAGE_NO_DODGE)
+tt.melee.attacks[1].hit_time = fts(13)
+tt.melee.attacks[1].hit_offset = v(75, 0)
+tt.melee.attacks[1].uninterruptible = true
+tt.melee.attacks[1].vis_flags = F_AREA
+tt.melee.attacks[1].sound = "Stage10JTDevour"
+tt.melee.attacks[1].sound_args = {
+	delay = fts(13)
+}
+tt.timed_attacks.list[1] = CC("custom_attack")
+tt.timed_attacks.list[1].animation = "skill"
+tt.timed_attacks.list[1].animation_tired = "tired_loop"
+tt.timed_attacks.list[1].animation_tired_end = "tired_out"
+tt.timed_attacks.list[1].tired_time = 3
+tt.timed_attacks.list[1].aura = "aura_boss_stage_10_tower_freeze"
+tt.timed_attacks.list[1].hit_decal = "decal_boss_stage_10_tower_freeze_hit"
+tt.timed_attacks.list[1].icicle_controller = "controller_stage_210_jt_icicles"
+tt.timed_attacks.list[1].random_icicles = 5
+tt.timed_attacks.list[1].allies_icicles = 2
+tt.timed_attacks.list[1].disabled = false
+tt.timed_attacks.list[1].cooldown = 20
+tt.timed_attacks.list[1].hit_time = fts(16)
+tt.timed_attacks.list[1].vis_flags = bor(F_AREA)
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[1].sound = "TowerKnightsOrderResilienceCast"
+tt.death_rumble_fx = "fx_boss_stage_10_death"
+tt.ui.click_rect = r(-70, 0, 140, 100)
+tt.sound_events.defeat_chest_bang = "Stage10JTChestTaunt"
+tt.sound_events.defeat_roar = "Stage10JTRoar"
+tt.sound_events.defeat_rumble = "Stage10JTCaveRumble"
+tt.sound_events.tower_freeze = "Stage10JTTowerFreeze"
+
+tt = RT("aura_boss_stage_10_tower_freeze", "aura")
+tt.aura.mod = "mod_boss_stage_10_tower_freeze"
+tt.aura.radius = 400
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = 0
+tt.aura.cycle_time = 0.6
+tt.aura.duration = 1
+tt.aura.max_count = 4
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod_towers.update
+
+tt = RT("decal_boss_stage_10_tower_freeze_hit", "decal_timed")
+tt.timed.runs = 1
+tt.render.sprites[1].prefix = "JT_stage10_unit_decalDef"
+tt.render.sprites[1].name = "skill"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("fx_boss_stage_10_death", "fx")
+tt.timed.runs = 10
+tt.render.sprites[1].prefix = "JT_stage10_death_debrisDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+
+-- 注意：dove 的 mod_tower_stun 定义在 game_templates.lua，且晚于本文件被 require，
+-- 因此不能作为父模板，这里内联其字段（parent 用 modifier）。
+tt = RT("mod_boss_stage_10_tower_freeze", "modifier")
+AC(tt, "render", "ui")
+tt.main_script.insert = scripts.mod_boss_tower_block.insert
+tt.main_script.update = scripts.mod_boss_tower_block.update
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.duration = 15
+tt.tap_removable = true
+tt.taps_to_remove = 5
+tt.tut_offset = v(17, 5)
+tt.anim_start = "in"
+tt.anim_loop = "idle"
+tt.tap_tutorial = "decal_tapping_hand"
+tt.fx_out = "fx_stage_210_tower_freeze_thaw_out"
+tt.end_anim_duration = fts(41)
+tt.spawn_delay_max = 1
+tt.render.sprites[1].prefix = "JT_stage10_unit_tower_fxDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.ui.click_rect = r(-50, -15, 100, 100)
+tt.sound_events.free_tower = "Stage10FreeTower"
+
+-- ===== KR6 stage 11 boss：Sarelgaz（spiders.boss_spider）=====
+tt = RT("enemy_boss_stage_11", "boss")
+AC(tt, "melee", "timed_attacks")
+tt.enemy.gold = 1
+tt.enemy.lives_cost = 999
+tt.enemy.melee_slot = v(75, -5)
+tt.health.armor = 0
+tt.health.magic_armor = 0.76
+tt.health.dead_lifetime = 100
+tt.health.hp_max = {10587.5, 12375, 15125, 16500}
+tt.health_bar.offset = v(0, 110)
+tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
+tt.info.i18n_key = "ENEMY_BOSS_STAGE_11"
+tt.info.portrait = "kr6_info_portraits_enemies_0035"
+tt.info.portrait_boss = "boss_health_bar_icon_0003"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_boss_stage_11.update
+tt.motion.max_speed = 15
+tt.render.sprites[1].prefix = "boss_stage_11Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk_side", "walk_side", "walk_down"}
+tt.render.sprites[1].angles_custom = {
+	walk = {45, 115, 225, 315}
+}
+tt.render.sprites[1].angles_stickiness = {
+	walk = 10
+}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.unit.can_explode = false
+tt.unit.hit_offset = v(0, 40)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 30)
+tt.unit.show_blood_pool = false
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.size = UNIT_SIZE_LARGE
+tt.phases_health_thresholds = {0.75, 0.45}
+tt.vis.flags = bor(F_ENEMY, F_BOSS)
+tt.vis.bans = bor(F_STUN, F_INSTAKILL)
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].cooldown = 4
+tt.melee.attacks[1].damage_min = 150
+tt.melee.attacks[1].damage_max = 200
+tt.melee.attacks[1].damage_radius = 45
+tt.melee.attacks[1].damage_type = bor(DAMAGE_EAT, DAMAGE_NO_DODGE)
+tt.melee.attacks[1].hit_time = fts(18)
+tt.melee.attacks[1].hit_offset = v(75, 0)
+tt.melee.attacks[1].uninterruptible = true
+tt.melee.attacks[1].sound = "Stage11SarelgazBite"
+tt.melee.attacks[1].sound_args = {
+	delay = fts(10)
+}
+tt.death_rumble_fx = "fx_boss_stage_10_death"
+tt.ui.click_rect = r(-70, 0, 140, 100)
+tt.ui.alert_view = true
+tt.sound_events.death = "Stage11SarelgazDeath"
+tt.controller_t = "controller_stage_211_spider_block_and_spawn"
+tt.ascend_y = 1000
+tt.descend_offset_y = 0
+tt.wait_for_ascend_decal = fts(11)
+tt.ascend_decal = "decal_stage_211_sarelgaz_ascent"
+tt.shadow_decal = "decal_stage_211_sarelgaz_rappel_shadow"
+tt.camp_prefix_t = "tower_stage_211_camp"
+tt.nodes_to_consider_lost = 7
+tt.loss_positions = {
+	v(343.2, 382.1),
+	[6] = v(622.7, 459.4),
+	[3] = v(622.7, 459.4),
+	[7] = v(670.6, 381.5)
+}
+
+-- ===== KR6 stage 13 boss：Moglok-Hai（deep_trolls.troll_boss）=====
+tt = RT("enemy_boss_stage_13", "boss")
+AC(tt, "melee", "timed_attacks")
+tt.enemy.gold = 1
+tt.enemy.lives_cost = 999
+tt.enemy.melee_slot = v(60, 0)
+tt.health.armor = 0
+tt.health.dead_lifetime = 100
+tt.health.hp_max = {12375, 14437.5, 17875, 23375}
+tt.health_bar.offset = v(0, 130)
+tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
+tt.info.i18n_key = "ENEMY_BOSS_STAGE_13"
+tt.info.portrait = "kr6_info_portraits_enemies_0036"
+tt.info.portrait_boss = "boss_health_bar_icon_0004"
+tt.main_script.insert = scripts.enemy_boss_stage_13.insert
+tt.main_script.update = scripts.enemy_boss_stage_13.update
+tt.sound_events.shieldbreak = "Stage13TrollKingShieldbreak"
+tt.sound_events.jump = "Stage13TrollKingEntranceJump"
+tt.sound_events.land = "Stage13TrollKingEntranceLand"
+tt.sound_events.tower_hit_1 = "Stage13TrollKingHit1"
+tt.sound_events.tower_hit_2 = "Stage13TrollKingHit2"
+tt.sound_events.tower_hit_3 = "Stage13TrollKingTowerBreak"
+tt.motion.max_speed = 13
+tt.render.sprites[1].prefix = "trollbossDef"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk", "walk", "walk"}
+tt.render.sprites[1].angles_custom = {
+	walk = {45, 105, 245, 315}
+}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.unit.can_explode = false
+tt.unit.hit_offset = v(0, 40)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 60)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_LARGE
+tt.vis.flags = bor(F_ENEMY, F_BOSS)
+tt.vis.bans = bor(F_STUN, F_INSTAKILL)
+tt.amount_of_manual_waves = 4
+tt.shield_t = "decal_stage_213_boss_shield"
+tt.shielded_armor = 0.98
+tt.shielded_magic_armor = 0.98
+tt.hit_tower_positions = {
+	[11] = v(446.71, 452),
+	[12] = v(580, 451)
+}
+tt.path_jump_alternations = {
+	[12] = 11,
+	[11] = 12
+}
+tt.path_jump_destinations = {{
+	[11] = 8,
+	[12] = 26
+}, {
+	[11] = 25,
+	[12] = 29
+}, {
+	[11] = 28,
+	[12] = 32
+}, {
+	[11] = 31,
+	[12] = 35
+}, {
+	[11] = 34,
+	[12] = 38
+}, {
+	[11] = 37,
+	[12] = 38
+}}
+tt.shield_fly_target_pos = {
+	[11] = v(1000.4, -150),
+	[12] = v(-80, -150)
+}
+tt.shield_fly_x_variation = 30
+tt.jump_target_pos = {
+	[11] = v(158.3, -150),
+	[12] = v(868.4, -150)
+}
+tt.jump_x_variation = 30
+tt.land_dust = "decal_stage_213_boss_land_dust"
+tt.land_decal = "decal_stage_213_boss_land_cracks"
+tt.jump_dust = "decal_stage_213_boss_jump_dust"
+tt.sunray_tower_health_t = "controller_stage_213_sunray_tower_health"
+tt.sunray_tower_t = "tower_stage_213_sunray_tower"
+tt.broken_sunray_tower_t = "tower_stage_213_broken_sunray_tower"
+tt.sunray_stun = 5
+tt.offstage_wait_min = 4
+tt.offstage_wait_max = 6
+tt.turn_off_wave_wait = 0.5
+tt.jump_bullet_shieldless = "bullet_boss_stage_13_jump_shieldless"
+tt.jump_bullet_shield = "bullet_boss_stage_13_jump_shield_shakeless"
+tt.jump_bullet_shield_return = "bullet_boss_stage_13_jump_shield_shake"
+tt.shield_bullet = "bullet_boss_stage_13_shield"
+tt.shield_bullet_offset = v(0, 70)
+tt.shield_hit_offset = v(54, 100)
+tt.boss_tower_hit_offset = v(105, 0)
+tt.boss_tower_hit_fx = "fx_stage_213_boss_hit_tower"
+tt.boss_strike = "decal_stage_213_boss_strik_tower_cinematic"
+tt.anim_hit_tower = "DestroyTower"
+tt.anim_destroy_tower = "Loss"
+tt.anim_loop_scream = "LossLoop"
+tt.hit_tower_hit_time = fts(46)
+tt.anim_sunray_tower_receive_hit = "attack"
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 150
+tt.melee.attacks[1].damage_max = 250
+tt.melee.attacks[1].damage_radius = 75
+tt.melee.attacks[1].damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
+tt.melee.attacks[1].hit_time = fts(28)
+tt.melee.attacks[1].hit_decal = "decal_stage_213_boss_hit_fx"
+tt.melee.attacks[1].hit_offset = v(75, 0)
+tt.melee.attacks[1].uninterruptible = true
+tt.melee.attacks[1].vis_flags = F_AREA
+tt.melee.attacks[1].sound = "Stage13TrollKingBasicAttack"
+tt.melee.attacks[1].sound_args = {
+	delay = fts(28)
+}
+tt.ui.click_rect = r(-45, 10, 90, 100)
+
+-- stage 13 boss 投射物
+tt = RT("bullet_boss_stage_13_shield", "bomb")
+tt.bullet.flight_time = fts(50)
+tt.bullet.pop_chance = 0
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = 10
+tt.bullet.particles_name = "ps_boss_stage_13_flying_shield"
+tt.bullet.hide_radius = 0
+tt.bullet.hit_fx = nil
+tt.bullet.hit_decal = nil
+tt.main_script.insert = scripts.bomb.insert
+tt.main_script.update = scripts.bomb.update
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = nil
+tt.sound_events.insert = nil
+tt.render.sprites[1].prefix = "trollboss_shieldflyDef"
+tt.render.sprites[1].name = "spindependingonvelocity"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.decal_shadow = "decal_boss_stage_13_shield_fly_shadow"
+
+tt = RT("bullet_boss_stage_13_jump_shieldless", "bomb")
+tt.bullet.flight_time = fts(48)
+tt.bullet.hit_fx = "decal_stage_213_boss_land_cracks"
+tt.bullet.hit_decal = "decal_stage_213_boss_land_dust"
+tt.bullet.pop_chance = 0
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = nil
+tt.bullet.hide_radius = 0
+tt.bullet.anim_rising = "jumpup"
+tt.bullet.anim_rising_loops = false
+tt.bullet.anim_falling = "jumpdown"
+tt.bullet.anim_falling_loops = false
+tt.main_script.insert = scripts.bomb.insert
+tt.main_script.update = scripts.bomb.update
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = nil
+tt.sound_events.insert = nil
+tt.render.sprites[1].prefix = "trollbossDef"
+tt.render.sprites[1].name = "jumpup"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.decal_shadow = "decal_boss_stage_13_fly_shadow"
+
+tt = RT("bullet_boss_stage_13_jump_shield_shakeless", "bullet_boss_stage_13_jump_shieldless")
+tt.render.sprites[1].name = "jumpupshield"
+tt.bullet.anim_rising = "jumpupshield"
+tt.bullet.anim_falling = "jumpdownshield"
+
+tt = RT("bullet_boss_stage_13_jump_shield_shake", "bullet_boss_stage_13_jump_shield_shakeless")
+tt.screenshake_amplitude = 1
+tt.screenshake_duration = 0.5
+tt.screenshake_freq_factor = 2
+
+tt = RT("decal_boss_stage_13_fly_shadow", "decal")
+tt.render.sprites[1].name = "decal_flying_shadow_big"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("decal_boss_stage_13_shield_fly_shadow", "decal")
+tt.render.sprites[1].name = "decal_flying_shadow_big"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("fx_boss_stage_13_land", "fx")
+tt.timed.runs = 1
+tt.render.sprites[1].prefix = "trollboss_leveldecowhenlandDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+
+tt = RT("ps_boss_stage_13_flying_shield", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.name = "trollboss_shieldfly_trail_run"
+tt.particle_system.particle_lifetime = {fts(15), fts(15)}
+tt.particle_system.emission_rate = 10
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_spread = math.pi * 2

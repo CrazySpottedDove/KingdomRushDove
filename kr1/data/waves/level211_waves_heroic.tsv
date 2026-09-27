@@ -1,0 +1,327 @@
+#	COMANDOS					1 - Izquierda a Centro por Abajo					2 - Arriba a Centro por Izquierda					3 - Derecha a Centro por Arriba					4 - Abajo a Centro por Derecha					5 - Izquierda a Centro por Arriba					6 - Arriba a Centro por Derecha					7 - Derecha a Centro por Abajo					8 - Abajo a Centro por Izquierda
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3
+#	level properties
+	description	NH Rodri
+	lives	20
+	gold	550
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	1806
+#	stage gold curve
+#	WAVE 3										G. Spider x6										G. Spider x6										G. Spider x6										G. Spider x6
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.					0	0	0	0		0	0	0	0		0	28	0	0		0
+#	gold	504				0	0	0	0		0	0	0	0		0	504	0	0		0
+	wave		1		-1
+					0																giant_spider
+					2																																				giant_spider
+					2																giant_spider
+					2																																				giant_spider
+					4						giant_spider
+					2																										giant_spider
+					4						giant_spider
+					2																										giant_spider
+					4																																				giant_spider
+					2																giant_spider
+					2																																				giant_spider
+					2																giant_spider
+					4																										giant_spider
+					2						giant_spider
+					2																										giant_spider
+					4						giant_spider
+					2																																				giant_spider
+
+					2																giant_spider																				giant_spider
+					2																										giant_spider
+					2						giant_spider										giant_spider
+					2																										giant_spider
+					4						giant_spider
+					2																giant_spider
+					2																																				giant_spider
+					2																giant_spider
+					2																																				giant_spider
+
+#	62
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 5					G. Spider x6																														Matriarch x2					Spiderling x20
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.					0	0	0	0		0	0	0	0		20	8	0	2		0
+#	gold	384				0	0	0	0		0	0	0	0		40	144	0	200		0
+	wave		2		28
+					0																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					3																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					2	giant_spider
+					2	giant_spider
+					3																																	spider_matriarch
+					4																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					2																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					2	giant_spider
+					2	giant_spider
+					2	giant_spider
+					4																																	spider_matriarch
+					2	giant_spider
+					2	giant_spider
+					2	giant_spider
+					2																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					2																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+					0.6																																				spiderling_kr6
+
+
+#	44.4
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 7										G. Spider x8
+(Rappel)					Leaper x10																				G. Spider x8
+(Rappel)					Matriarch x2
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.					0	0	0	0		0	0	0	0		0	4	8	2		0
+#	gold	368				0	0	0	0		0	0	0	0		0	72	96	200		0
+	wave		3		22
+					0						giant_spider
+					2						giant_spider
+	event	spider_rappel	1	2	4	2
+					1																																						spider_matriarch
+					2											leaper_spider
+					0.9											leaper_spider
+	wait				3
+					0.8											leaper_spider
+					0.9											leaper_spider
+					0
+	event	spider_rappel	2	7	4	2
+	event	spider_rappel	2	7	4	2
+					6											leaper_spider																												spider_matriarch
+					1.1											leaper_spider
+	wait				0.8
+					0.9											leaper_spider
+					0.7											leaper_spider
+	event	spider_rappel	2	7	4	2
+	event	spider_rappel	2	7	4	2
+					0						giant_spider
+					2						giant_spider
+	event	spider_rappel	1	2	4	2
+	wait				4
+
+
+
+#	50.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 9
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.					0	0	0	0		0	0	0	0		0	18	10	0		0
+#	gold	444				0	0	0	0		0	0	0	0		0	324	120	0		0
+	wave		4		22
+					0																																giant_spider
+					0.9																																	leaper_spider
+					1.1																																giant_spider
+					0.8																																		leaper_spider
+					1.4																																giant_spider
+					0.8																																	leaper_spider
+					0																					giant_spider
+					1.2																					giant_spider
+					1.4																					giant_spider
+	wait				1
+					4																															giant_spider
+					1.2																															giant_spider
+					1.3																															giant_spider
+					2																															giant_spider
+					1.4																															giant_spider
+					1.2																															giant_spider
+					1.3																															giant_spider
+					2																					giant_spider
+					1.2																					giant_spider
+	wait				1
+					1																					giant_spider
+					1.4																					giant_spider
+					1.3																					giant_spider
+					0																															leaper_spider
+					0.7																															leaper_spider
+					0.9																															leaper_spider
+					0.8																															leaper_spider
+					1																															leaper_spider
+					0.8																															leaper_spider
+					0.7																															leaper_spider
+
+
+
+
+
+
+#	WAVE 11					SoS x1										Spiderling					Giant Spider										Giant Spider					Spiderling					G. Spider x9
+(Rappel)
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.
+#	gold	0
+	wave		5		20
+	event	spider_rappel	3	8	0	3
+					0			son_of_sarelgaz
+					0											spiderling_kr6					giant_spider
+					0.4											spiderling_kr6
+					0.4											spiderling_kr6
+					0.5											spiderling_kr6					giant_spider
+					0.4											spiderling_kr6
+					0.5											spiderling_kr6
+					0
+					5											spiderling_kr6					giant_spider
+					0.3											spiderling_kr6
+					0.4											spiderling_kr6
+					0.5											spiderling_kr6					giant_spider
+					0.4											spiderling_kr6
+					0.4											spiderling_kr6					giant_spider
+	event	spider_rappel	3	8	4	3
+					4			spider_matriarch
+					0																										giant_spider					spiderling_kr6
+					0.4																															spiderling_kr6
+					0.4																															spiderling_kr6
+					0.5																										giant_spider					spiderling_kr6
+					0.4																															spiderling_kr6
+					0.5																															spiderling_kr6
+					0
+					5																										giant_spider					spiderling_kr6
+					0.3																															spiderling_kr6
+					0.4																															spiderling_kr6
+					0.5																										giant_spider					spiderling_kr6
+					0.4																															spiderling_kr6
+					0.4																										giant_spider					spiderling_kr6
+	event	spider_rappel	3	8	6	3
+	wait				4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 15															Egg Spiderling x16
+Leaper x6										Egg Spiderling x16										Leaper x12					Egg Spiderling x16
+Matriarch x1
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller	troll_pathfinder	frost_baiter	frost_brute		spiderling_kr6	giant_spider	leaper_spider	spider_matriarch		son_of_sarelgaz
+#	cant.					0	0	0	0		0	0	0	0		36	0	0	3		3
+#	gold	612				0	0	0	0		0	0	0	0		72	0	0	300		240
+	wave		6		22
+					0														spider_matriarch
+					2												spiderling_kr6																						spider_matriarch
+					0.4													spiderling_kr6
+					0.5												spiderling_kr6
+					0.4													spiderling_kr6
+					0.3												spiderling_kr6
+					1																	son_of_sarelgaz															spiderling_kr6
+					0.4																		spiderling_kr6															spiderling_kr6
+					0.6																			spiderling_kr6													spiderling_kr6
+					0.4																		spiderling_kr6															spiderling_kr6
+					0.5																			spiderling_kr6													spiderling_kr6
+					0.5																		spiderling_kr6															spiderling_kr6
+					1		son_of_sarelgaz
+
+					1				spiderling_kr6
+					0.6			spiderling_kr6
+					0.3				spiderling_kr6
+					0.4			spiderling_kr6
+					0.4				spiderling_kr6
+					0																																						spiderling_kr6	spider_matriarch
+					0.4																																					spiderling_kr6
+					0.6		spiderling_kr6																																				spiderling_kr6
+					0.4				spiderling_kr6																																	spiderling_kr6
+					0.5			spiderling_kr6																																			spiderling_kr6
+					0.4																																					spiderling_kr6
+
+					1						son_of_sarelgaz
+					1						spiderling_kr6
+					0.3						spiderling_kr6
+					0.5						spiderling_kr6
+					0.4						spiderling_kr6
+					0.4						spiderling_kr6
+					0.5						spiderling_kr6

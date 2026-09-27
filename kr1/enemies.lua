@@ -14349,3 +14349,743 @@ tt.death_spawns.spawn_animation = "in"
 tt.death_spawns.delay = fts(41)
 tt.sound_events.death = "EnemyFrostHeraldDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
+
+-- ==================== KR6 stage 10-13：deep_trolls / spiders 共享敌人 ====================
+-- 数值取自 kr6/data/balance/balance.lua，hp_max 每档 ×1.375，gold = floor(kr6.gold ×1.1)
+-- enemy_KR6 增量字段（head_offset / disintegrate_fx / fade_*）直接铺开，父模板用 dove 的 "enemy"。
+
+-- enemy_troll_pathfinder —— 冰面高速滑行，冰上无法被阻挡
+tt = RT("enemy_troll_pathfinder", "enemy")
+AC(tt, "melee", "auras", "death_spawns")
+tt.unit.head_offset = v(6, 17)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.enemy.gold = 11
+tt.enemy.melee_slot = v(28, 0)
+tt.enemy.lives_cost = 1
+tt.health.hp_max = {123.75, 137.5, 165, 247.5}
+tt.health.armor = 0.3
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 34)
+tt.info.portrait = "kr6_info_portraits_enemies_0027"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.unit.death_animation = "death_standing"
+tt.main_script.insert = scripts.enemy_troll_pathfinder.insert
+tt.main_script.update = scripts.enemy_troll_pathfinder.update
+tt.motion.max_speed = 50
+tt.render.sprites[1].prefix = "troll_pathfinder_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[1].angles.slide = {"sliding", "sliding_back", "sliding_front"}
+tt.melee.attacks[1].animation = "mele"
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 6
+tt.melee.attacks[1].damage_max = 9
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(12)}
+tt.melee.attacks[1].dodge_time = fts(12)
+tt.melee.attacks[1].hit_fx = "fx_troll_pathfinder_hit"
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "aura_troll_pathfinder_regeneration"
+tt.auras.list[1].cooldown = 0
+tt.death_spawns.name = "decal_troll_pathfinder_dead_sliding"
+tt.death_spawns.spawn_animation = "death_sliding"
+tt.death_spawns.quantity = 0
+tt.vis.bans_slide = bor(F_BLOCK)
+tt.slide_speed_factor = 2
+tt.on_ice_mod = "mod_movement_terrain_troll_pathfinder"
+tt.sound_events.death = "EnemyTrollMediumDeath"
+tt.ui.click_rect = r(-18, 0, 35, 38)
+
+-- enemy_frost_baiter —— 被阻挡时跳跃并留下冰替身
+tt = RT("enemy_frost_baiter", "enemy")
+AC(tt, "melee", "bullet", "death_spawns")
+tt.unit.head_offset = v(3, 14)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.enemy.gold = 3
+tt.enemy.melee_slot = v(28, 0)
+tt.enemy.lives_cost = 1
+tt.enemy.has_magic = true
+tt.health.hp_max = {41.25, 55, 55, 68.75}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 30)
+tt.info.portrait = "kr6_info_portraits_enemies_0024"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_SMALL
+tt.bullet.flight_time = fts(30)
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = nil
+tt.bullet.ignore_hit_offset = true
+tt.bullet.g = -0.8 / (fts(1) * fts(1))
+tt.main_script.insert = scripts.enemy_frost_baiter.insert
+tt.main_script.update = scripts.enemy_frost_baiter.update
+tt.motion.max_speed = 64
+tt.render.sprites[1].prefix = "frost_baiter_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].animation = "mele"
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 3
+tt.melee.attacks[1].damage_max = 4
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(12)}
+tt.melee.attacks[1].dodge_time = fts(12)
+tt.melee.attacks[1].hit_fx = "fx_frost_baiter_hit"
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "troll_champion_sombra"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2]._ignore_stage_10_puddles = true
+tt.decoy_t = "enemy_frost_baiter_decoy"
+tt.bait_cooldown = 30
+tt.bait_max_nodes_to_exit = 55
+tt.min_jump_distance = 20
+tt.max_jump_distance = 25
+tt.node_water_tolerance = 5
+tt.death_spawns.name = "aura_frost_baiter_death_stun"
+tt.death_spawns.quantity = 1
+tt.death_spawns.delay = fts(16)
+tt.on_ice_mod = "mod_movement_terrain_frost_baiter"
+tt.sound_events.death = "EnemyFrostBaiterDeath"
+tt.sound_events.jump = "EnemyFrostBaiterCloneJump"
+tt.ui.click_rect = r(-18, 0, 35, 38)
+
+-- enemy_frost_baiter_jumper_stage_12 —— 关卡 12 沿路径跳跃版
+tt = RT("enemy_frost_baiter_jumper_stage_12", "enemy_frost_baiter")
+AC(tt, "tween")
+tt.main_script.update = scripts.enemy_frost_baiter_jumper.update
+tt.jump_points = {{1, 16, true}, {22, 33, true}, {40, 56, false, {40, 49}}}
+tt.disappearing_shadows = true
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.run_once = true
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 2
+tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
+
+-- enemy_frost_baiter_decoy —— 冰替身，只吸引阻挡
+tt = RT("enemy_frost_baiter_decoy", "enemy")
+AC(tt, "melee", "death_spawns")
+tt.unit.head_offset = v(0, 5)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.enemy.gold = 0
+tt.enemy.melee_slot = v(28, 0)
+tt.health.hp_max = {41.25, 55, 55, 68.75}
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 30)
+tt.info.portrait = "kr6_info_portraits_enemies_0032"
+tt.unit.hit_offset = v(3, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.unit.death_animation = nil
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_SMALL
+tt.unit.can_explode = false
+tt.main_script.insert = scripts.enemy_frost_baiter_decoy.insert
+tt.main_script.update = scripts.enemy_frost_baiter_decoy.update
+tt.motion.max_speed = 0
+tt.render.sprites[1].prefix = "frost_baiter_decoy"
+tt.render.sprites[1].animated = false
+tt.melee.attacks[1].animation = "mele"
+tt.melee.attacks[1].cooldown = 1000
+tt.melee.attacks[1].damage_min = 0
+tt.melee.attacks[1].damage_max = 0
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(120)}
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.death_spawns.fx = "fx_frost_baiter_decoy_death"
+tt.death_spawns.quantity = 0
+tt.duration = 4
+tt.sound_events.death = "EnemyIceCloneDeath"
+tt.ui.click_rect = r(-18, 0, 35, 38)
+
+-- enemy_frost_brute —— 小 Boss，未阻挡时物理免疫，吐息冻结
+tt = RT("enemy_frost_brute", "enemy")
+AC(tt, "melee", "timed_attacks", "death_spawns")
+tt.unit.head_offset = v(12, 34)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.enemy.gold = 286
+tt.enemy.melee_slot = v(36, 0)
+tt.enemy.lives_cost = 2
+tt.health.hp_max = {2475, 3025, 3437.5, 4675}
+tt.health.armor = 1
+tt.health.magic_armor = 0.6
+tt.health_bar.offset = v(0, 70)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.info.portrait = "kr6_info_portraits_enemies_0019"
+tt.unit.hit_offset = v(5, 21)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 25)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.main_script.insert = scripts.enemy_frost_brute.insert
+tt.main_script.update = scripts.enemy_frost_brute.update
+tt.motion.max_speed = 24
+tt.render.sprites[1].prefix = "frost_brute_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.melee.attacks[1] = CC("melee_attack")
+tt.melee.attacks[1].animation = "mele"
+tt.melee.attacks[1].damage_min = 30
+tt.melee.attacks[1].damage_max = 46
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].cooldown = 2.1
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = fts(14)
+tt.melee.attacks[1].hit_fx = "fx_frost_brute_hit"
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.melee.attacks[2] = CC("melee_attack")
+tt.melee.attacks[2].animation = "mele_2"
+tt.melee.attacks[2].damage_min = 30
+tt.melee.attacks[2].damage_max = 46
+tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[2].cooldown = 2
+tt.melee.attacks[2].hit_time = fts(18)
+tt.melee.attacks[2].dodge_time = fts(18)
+tt.melee.attacks[2].hit_fx = "fx_frost_brute_hit"
+tt.melee.attacks[2].hit_offset = v(30, 15)
+tt.timed_attacks.list[1] = CC("area_attack")
+tt.timed_attacks.list[1].animation = "cold_breath"
+tt.timed_attacks.list[1].cooldown = {35, 35, 35, 16}
+tt.timed_attacks.list[1].damage_min = 20
+tt.timed_attacks.list[1].damage_max = 30
+tt.timed_attacks.list[1].damage_type = DAMAGE_PHYSICAL
+tt.timed_attacks.list[1].trigger_radius = 110
+tt.timed_attacks.list[1].min_targets = 1
+tt.timed_attacks.list[1].aura = "aura_frost_brute_cold_breath"
+tt.timed_attacks.list[1].aura_time = fts(24)
+tt.timed_attacks.list[1].fx = "fx_frost_brute_cold_breath"
+tt.timed_attacks.list[1].offset = v(40, 20)
+tt.timed_attacks.list[1].sound = "EnemyFrostBruteBreath"
+tt.timed_attacks.list[1].ignore_offset_y = 10
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
+tt.death_spawns.name = "aura_frost_brute_death_ice_slow"
+tt.death_spawns.spawn_animation = "in"
+tt.death_spawns.delay = fts(48)
+tt.animation_start_combat = "transform_mele"
+tt.animation_end_combat = "transform_walk"
+tt.on_ice_mod = "mod_movement_terrain_frost_brute"
+tt.sound_events.death = "EnemyFrostBruteDeath"
+tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
+tt.ui.click_rect = r(-25, 0, 45, 55)
+
+-- enemy_troll_warrior_landing —— 索降落地动画版
+tt = RT("enemy_troll_warrior_landing", "enemy_troll_warrior")
+tt.info.i18n_key = "ENEMY_TROLL_WARRIOR"
+tt.render.sprites[1].prefix = "troll_warrior_creep"
+tt.render.sprites[1].name = "rope_land"
+tt.main_script.update = scripts.enemy_troll_warrior_landing.update
+
+-- enemy_troll_warrior_stage_13_suicide_glider —— 落地到 stage13 自杀滑翔兵
+tt = RT("enemy_troll_warrior_stage_13_suicide_glider", "enemy_troll_warrior")
+tt.info.i18n_key = "ENEMY_TROLL_WARRIOR"
+tt.main_script.insert = scripts.enemy_troll_warrior_stage_13_suicide_glider.insert
+tt.suicide_hit_time = fts(5)
+
+-- enemy_troll_champion_jumper_stage_12 —— 关卡 12 跳跃点
+tt = RT("enemy_troll_champion_jumper_stage_12", "enemy_troll_champion_jumper")
+tt.info.i18n_key = "ENEMY_TROLL_CHAMPION"
+tt.jump_points = {{1, 16, true}, {22, 33, true}, {40, 56, false, {40, 51}}}
+tt.disappearing_shadows = true
+tt.y_to_die = -50
+
+-- enemy_troll_glider_stage_13_suicide —— stage13 自杀式滑翔撞塔
+tt = RT("enemy_troll_glider_stage_13_suicide", "enemy_troll_glider")
+tt.info.i18n_key = "ENEMY_TROLL_GLIDER"
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+tt.render.sprites[2] = nil
+tt.health_bar.z = Z_OBJECTS_COVERS + 1
+tt.death_spawns.name = "enemy_troll_warrior_stage_13_suicide_glider"
+tt.fallback_death_spawn_name = "enemy_troll_warrior"
+tt.trigger_distance = 170
+tt.anim_suicide = "crash"
+tt.bullet = "bullet_troll_glider_stage_13_suicide"
+tt.bullet_spawn_offset = v(112, 102)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_troll_glider_stage_13_suicide.update
+tt.node_to_consider_too_far = 63
+tt.left_path = 7
+tt.sunray_t = "tower_stage_213_sunray_tower"
+tt.suicide_hit_time = fts(8)
+tt.sound_events.suicide = "Stage13KamikazeGliderPreparation"
+
+-- ==================== KR6 stage 11：spiders 敌人（避免与 dove 的 enemy_spider / enemy_spiderling 撞名） ====================
+
+-- enemy_spider_kr6（原 kr6 enemy_spider）—— 基础蜘蛛，仅提供 insert/eyes_t
+tt = RT("enemy_spider_kr6", "enemy")
+tt.main_script.insert = scripts.enemy_stage_11_spider.insert
+tt.chance = 1
+tt.eyes_t = "decal_stage_211_spider_eyes_medium"
+
+-- enemy_spiderling_kr6
+tt = RT("enemy_spiderling_kr6", "enemy_spider_kr6")
+AC(tt, "melee")
+tt.enemy.gold = 2
+tt.enemy.melee_slot = v(18, 0)
+tt.enemy.lives_cost = 1
+tt.health.hp_max = {20.625, 27.5, 27.5, 41.25}
+tt.health.armor = 0
+tt.health.magic_armor = 0.2
+tt.health_bar.offset = v(0, 25)
+tt.info.portrait = "kr6_info_portraits_enemies_0031"
+tt.unit.hit_offset = v(0, 10)
+tt.unit.head_offset = v(2, 6)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 8)
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.size = UNIT_SIZE_SMALL
+tt.eyes_t = "decal_stage_211_spider_eyes_small"
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 80
+tt.render.sprites[1].prefix = "spiderling_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 0.8
+tt.melee.attacks[1].damage_min = 2
+tt.melee.attacks[1].damage_max = 3
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(12)}
+tt.melee.attacks[1].dodge_time = fts(12)
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.sound_events.death = "EnemySpiderSmallDeath"
+tt.ui.click_rect = r(-9, 0, 22, 18)
+
+-- enemy_giant_spider
+tt = RT("enemy_giant_spider", "enemy_spider_kr6")
+AC(tt, "melee")
+tt.enemy.gold = 19
+tt.enemy.melee_slot = v(28, 0)
+tt.enemy.lives_cost = 1
+tt.health.hp_max = {192.5, 247.5, 275, 412.5}
+tt.health.armor = 0
+tt.health.magic_armor = 0.2
+tt.health_bar.offset = v(0, 32)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0029"
+tt.unit.hit_offset = v(0, 10)
+tt.unit.head_offset = v(9, 11)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 8)
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 36
+tt.render.sprites[1].prefix = "giant_spider_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 14
+tt.melee.attacks[1].damage_max = 21
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(12)}
+tt.melee.attacks[1].dodge_time = fts(12)
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.sound_events.death = "EnemySpiderBigDeath"
+tt.ui.click_rect = r(-20, -5, 44, 38)
+
+-- enemy_giant_spider_dropped
+tt = RT("enemy_giant_spider_dropped", "enemy_giant_spider")
+tt.drop_anim = "land"
+tt.main_script.update = scripts.enemy_giant_spider_dropped.update
+
+-- enemy_spider_matriarch —— 产卵
+tt = RT("enemy_spider_matriarch", "enemy_spider_kr6")
+AC(tt, "melee", "timed_attacks")
+tt.enemy.gold = 110
+tt.enemy.melee_slot = v(36, 0)
+tt.enemy.lives_cost = 2
+tt.health.hp_max = {893.75, 1031.25, 1237.5, 1856.25}
+tt.health.armor = 0
+tt.health.magic_armor = 0.6
+tt.health_bar.offset = v(0, 50)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0030"
+tt.unit.hit_offset = v(0, 15)
+tt.unit.head_offset = v(16, 14)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 13)
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.eyes_t = "decal_stage_211_spider_eyes_big"
+tt.unit.can_explode = false
+tt.main_script.update = scripts.enemy_spider_matriarch.update
+tt.motion.max_speed = 32
+tt.render.sprites[1].prefix = "spider_matriarch_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 17
+tt.melee.attacks[1].damage_max = 26
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(12)}
+tt.melee.attacks[1].dodge_time = fts(12)
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.timed_attacks.list[1] = CC("spawn_attack")
+tt.timed_attacks.list[1].cast_time = fts(22)
+tt.timed_attacks.list[1].animation = "egg"
+tt.timed_attacks.list[1].cooldown = 6
+tt.timed_attacks.list[1].spawn_offset = v(13, -5)
+tt.timed_attacks.list[1].entity = "decal_matriarch_spider_egg_spiderling"
+tt.timed_attacks.list[1].max_nodes_to_exit = 30
+tt.timed_attacks.list[1].count_group_type = COUNT_GROUP_CONCURRENT
+tt.timed_attacks.list[1].count_group_name = "decal_matriarch_spider_egg_spiderling"
+tt.timed_attacks.list[1].count_group_max = 4
+tt.timed_attacks.list[1].sound = "EnemySpiderMatriarchLayEgg"
+tt.timed_attacks.list[1].sound_args = {
+	delay = fts(22)
+}
+tt.sound_events.death = "EnemySpiderBigDeath"
+tt.ui.click_rect = r(-20, 0, 46, 44)
+
+-- enemy_leaper_spider —— 远距离跳跃+毒
+tt = RT("enemy_leaper_spider", "enemy_spider_kr6")
+AC(tt, "melee", "bullet", "timed_attacks")
+tt.enemy.gold = 13
+tt.enemy.melee_slot = v(28, 0)
+tt.enemy.lives_cost = 1
+tt.health.hp_max = {116.875, 137.5, 165, 247.5}
+tt.health.armor = 0.25
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 32)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0033"
+tt.unit.hit_offset = v(0, 10)
+tt.unit.head_offset = v(9, 8)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 8)
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.main_script.update = scripts.enemy_leaper_spider.update
+tt.motion.max_speed = 40
+tt.bullet.flight_time = fts(20)
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = nil
+tt.bullet.ignore_hit_offset = true
+tt.bullet.g = -0.8 / (fts(1) * fts(1))
+tt.render.sprites[1].prefix = "leaper_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "leaper_shadow"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].scale = vv(0.8)
+tt.render.sprites[2].sort_y_offset = 1
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 14
+tt.melee.attacks[1].damage_max = 21
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(12)}
+tt.melee.attacks[1].dodge_time = fts(12)
+tt.melee.attacks[1].hit_fx = "fx_leaper_spider_hit"
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.melee.attacks[1].mod = "mod_leaper_spider_poison"
+tt.timed_attacks.list[1] = CC("custom_attack")
+tt.timed_attacks.list[1].cast_time = fts(22)
+tt.timed_attacks.list[1].animations = {"jump_in", "air_up", "air_down", "jump_out"}
+tt.timed_attacks.list[1].cooldown = 3
+tt.timed_attacks.list[1].min_nodes = 10
+tt.timed_attacks.list[1].max_nodes = 20
+tt.timed_attacks.list[1].max_nodes_to_exit = 30
+tt.timed_attacks.list[1].vis_flags = F_TELEPORT
+tt.timed_attacks.list[1].vis_bans = F_FLYING
+tt.timed_attacks.list[1].sound = "EnemyCrowcallerCrowSummon"
+tt.sound_events.death = "EnemySpiderBigDeath"
+tt.ui.click_rect = r(-20, -5, 44, 38)
+
+-- enemy_son_of_sarelgaz —— 蛛网茧困住单位
+tt = RT("enemy_son_of_sarelgaz", "enemy_spider_kr6")
+AC(tt, "melee", "timed_attacks")
+tt.enemy.gold = 88
+tt.enemy.melee_slot = v(36, 0)
+tt.enemy.lives_cost = 2
+tt.health.hp_max = {1168.75, 1375, 1650, 2475}
+tt.health.armor = 0.4
+tt.health.magic_armor = 0.4
+tt.health_bar.offset = v(0, 48)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0034"
+tt.unit.hit_offset = v(0, 10)
+tt.unit.head_offset = v(15, 13)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 8)
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.eyes_t = "decal_stage_211_spider_eyes_big"
+tt.unit.can_explode = false
+tt.main_script.update = scripts.enemy_son_of_sarelgaz.update
+tt.motion.max_speed = 30
+tt.render.sprites[1].prefix = "son_of_sarelgaz_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].animation = "attack"
+tt.melee.attacks[1].damage_min = 30
+tt.melee.attacks[1].damage_max = 45
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_times = {fts(14)}
+tt.melee.attacks[1].dodge_time = fts(14)
+tt.melee.attacks[1].hit_offset = v(30, 15)
+tt.timed_attacks.list[1] = CC("custom_attack")
+tt.timed_attacks.list[1].trap_time = fts(13)
+tt.timed_attacks.list[1].mod = "mod_son_of_sarelgaz_cocoon_stun"
+tt.timed_attacks.list[1].cooldown = 8
+tt.timed_attacks.list[1].animation = "skill"
+tt.timed_attacks.list[1].vis_flags = F_STUN
+tt.timed_attacks.list[1].vis_bans = 0
+tt.timed_attacks.list[1].sound = "EnemySonOfSarelgazCocoonUnit"
+tt.timed_attacks.list[1].sound_args = {
+	delay = fts(14)
+}
+tt.sound_events.death = "EnemySpiderBigDeath"
+tt.ui.click_rect = r(-20, -5, 44, 38)
+
+-- ==================== KR6 stage 10-13：战斗子实体 ====================
+
+-- fx
+tt = RT("fx_troll_pathfinder_hit", "fx")
+tt.render.sprites[1].name = "troll_pathfinder_hit_fx_run"
+
+tt = RT("fx_frost_baiter_hit", "fx")
+tt.render.sprites[1].name = "frost_baiter_hit_fx_run"
+
+tt = RT("fx_frost_baiter_decoy_death", "fx")
+tt.render.sprites[1].name = "frost_baiter_decoy_snow_run"
+
+tt = RT("fx_frost_brute_hit", "fx")
+tt.render.sprites[1].name = "frost_brute_hit_run"
+
+tt = RT("fx_frost_brute_cold_breath", "fx")
+tt.render.sprites[1].name = "frost_brute_breath_run"
+
+tt = RT("fx_leaper_spider_hit", "fx")
+tt.render.sprites[1].name = "leaper_hit_idle"
+
+-- decal_troll_pathfinder_dead_sliding —— 冰上滑行死亡
+tt = RT("decal_troll_pathfinder_dead_sliding", "decal")
+AC(tt, "main_script", "tween", "motion", "nav_path")
+tt.render.sprites[1].prefix = "troll_pathfinder_creep"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].loop = false
+tt.tween.props[1].keys = {{0, 0}, {1, 255}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].name = "alpha"
+tt.tween.disabled = true
+tt.motion.max_speed = 50 * 2
+tt.motion.speed_limit = 1e+99
+tt.motion.accel = -90
+tt.wait_time_after_stop = 4
+tt.main_script.update = scripts.decal_troll_pathfinder_dead_sliding.update
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+
+-- decal_tapping_hand —— 通用点按教学
+tt = RT("decal_tapping_hand", "decal")
+tt.render.sprites[1].name = "decal_veznan_tap"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].sort_y_offset = -11
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
+-- decal_spider_egg —— 蛛卵基类
+tt = RT("decal_spider_egg", "decal_scripted")
+AC(tt, "sound_events")
+tt.render.sprites[1].prefix = "son_of_sarelgaz_boss_egg"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.path_id = nil
+tt.hatch_spawn_delay = fts(26)
+tt.delay_between_spawns = fts(2)
+tt.spawn_offset_min = 7
+tt.spawn_offset_max = 12
+tt.anim_idle = "idle"
+tt.anim_hatch = "hatch"
+tt.anim_dead = "death"
+tt.spawn_e = nil
+tt.main_script.update = scripts.decal_spider_egg.update
+tt.sound_events.hatch = "Stage11EggNestHatch"
+tt.sound_events.death = "Stage11EggNestDestroyed"
+
+tt = RT("decal_matriarch_spider_egg_spiderling", "decal_spider_egg")
+tt.render.sprites[1].prefix = "spider_matriarch_egg"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.hatch_spawn_delay = fts(16)
+tt.delay_between_spawns = fts(4)
+tt.spawn_offset_min = 3
+tt.spawn_offset_max = 6
+tt.spawn_e = "enemy_spiderling_kr6"
+tt.time_to_spawn = 5
+tt.hatch_amount = {3, 3, 3, 4}
+tt.sound_events.hatch = "EnemySpiderMatriarchEggHatch"
+
+-- aura_troll_pathfinder_regeneration
+-- 注意：dove 的 aura_troll_warrior_regeneration 定义在 game_templates.lua，且晚于本文件被 require，
+-- 因此不能作为父模板，这里按父亲字段内联（parent 用 aura）。
+tt = RT("aura_troll_pathfinder_regeneration", "aura")
+AC(tt, "regen")
+tt.main_script.update = scripts.aura_unit_regen.update
+tt.regen.cooldown = fts(15)
+tt.regen.health = 3
+tt.regen.ignore_stun = true
+tt.regen.ignore_freeze = false
+
+-- aura_frost_brute_death_ice_slow
+tt = RT("aura_frost_brute_death_ice_slow", "aura")
+AC(tt, "render", "tween")
+tt.aura.mod = "mod_frost_brute_death_ice_slow"
+tt.aura.radius = 70
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.cycle_time = 0.1
+tt.aura.duration = 16
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+tt.render.sprites[1].prefix = "frost_brute_ice_decal"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = false
+tt.tween.props[1].keys = {{0, 0}, {fts(17), 255}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].name = "alpha"
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].keys = {{0, vv(0.3)}, {fts(4), vv(1)}}
+tt.tween.props[2].name = "scale"
+tt.tween.props[2].loop = false
+tt.tween.props[2].ignore_reverse = true
+tt.tween.disabled = true
+
+-- aura_frost_baiter_death_stun
+tt = RT("aura_frost_baiter_death_stun", "aura")
+tt.aura.mod = "mod_frost_baiter_death_stun"
+tt.aura.radius = 50
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.cycle_time = 2
+tt.aura.duration = 1
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+-- aura_frost_brute_cold_breath
+tt = RT("aura_frost_brute_cold_breath", "aura")
+tt.aura.radius = 110
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+tt.aura.cycle_time = 0.5
+tt.aura.duration = fts(30)
+tt.aura.damage_min = 20
+tt.aura.damage_max = 30
+tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.aura.mod = "mod_frost_breath_cold_breath_freeze"
+tt.aura.hit_fx = "fx_frost_brute_hit"
+tt.main_script.update = scripts.aura_apply_damage.update
+
+-- mods
+tt = RT("mod_movement_terrain", "modifier")
+tt.modifier.duration = 1e+99
+tt.terrain = nil
+tt.speed_factor = 1
+tt.mods = nil
+tt.add_vis_bans = nil
+tt.add_vis_flags = nil
+tt.on_entered_terrain_fn = nil
+tt.auras_to_consider_terrain = nil
+tt.main_script.update = scripts.mod_movement_terrain.update
+tt.main_script.remove = scripts.mod_movement_terrain.remove
+
+tt = RT("mod_movement_terrain_ice", "mod_movement_terrain")
+tt.terrain = TERRAIN_ICE
+tt.auras_to_consider_terrain = {"aura_frost_icecaller_death_ice_slow", "aura_frost_brute_death_ice_slow"}
+
+tt = RT("mod_terrain_troll_pathfinder_speed", "mod_slow")
+tt.slow.factor = 2
+tt.modifier.type = MOD_TYPE_FAST
+tt.modifier.duration = 1e+99
+
+tt = RT("mod_movement_terrain_troll_pathfinder", "mod_movement_terrain_ice")
+tt.mods = {"mod_terrain_troll_pathfinder_speed"}
+tt.add_vis_bans = bor(F_BLOCK)
+
+tt = RT("mod_terrain_frost_baiter_speed", "mod_slow")
+tt.slow.factor = 1.33
+tt.modifier.type = MOD_TYPE_FAST
+tt.modifier.duration = 1e+99
+
+tt = RT("mod_movement_terrain_frost_baiter", "mod_movement_terrain_ice")
+tt.mods = {"mod_terrain_frost_baiter_speed"}
+
+tt = RT("mod_frost_baiter_death_stun", "mod_stun")
+tt.modifier.duration = 1
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_ENEMY)
+
+tt = RT("mod_terrain_frost_brute_speed", "mod_slow")
+tt.slow.factor = 1.2
+tt.modifier.type = MOD_TYPE_FAST
+tt.modifier.duration = 1e+99
+
+tt = RT("mod_movement_terrain_frost_brute", "mod_movement_terrain_ice")
+tt.mods = {"mod_terrain_frost_brute_speed"}
+
+tt = RT("mod_frost_brute_death_ice_slow", "mod_slow")
+tt.slow.factor = 0.5
+tt.modifier.duration = 1
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.resets_same = true
+
+tt = RT("mod_frost_breath_cold_breath_freeze", "mod_stun")
+tt.modifier.duration = 6
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_ENEMY)
+
+tt = RT("mod_leaper_spider_poison", "mod_poison")
+tt.dps.damage_every = 0.25
+tt.dps.damage_min = 2
+tt.dps.damage_max = 2
+tt.dps.kill = true
+tt.modifier.duration = 3
+tt.modifier.vis_flags = bor(F_MOD, F_POISON)
+tt.render.sprites[1].prefix = "poison"
+tt.render.sprites[1].size_names = {"small", "small", "big"}
+tt.render.sprites[1].draw_order = DO_MOD_FX
+
+tt = RT("mod_son_of_sarelgaz_cocoon_stun", "mod_stun")
+tt.render.sprites[1].prefix = "son_of_sarelgaz_cocoon"
+tt.render.sprites[1].size_names = nil
+tt.modifier.duration = 3
+tt.modifier.hide_target_delay = fts(5)
+tt.modifier.animation_phases = true
+tt.modifier.use_mod_offset = false
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+
+-- bullet_troll_glider_stage_13_suicide —— stage13 自杀滑翔弹
+tt = RT("bullet_troll_glider_stage_13_suicide", "bullet")
+tt.render.sprites[1].prefix = "troll_glider_creep"
+tt.render.sprites[1].name = "crash_projectile"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.bullet.damage_min = 1000
+tt.bullet.damage_max = 1000
+tt.bullet.damage_type = DAMAGE_INSTAKILL
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.align_with_trajectory = true
+tt.bullet.hit_fx = "fx_troll_glider_death"
+tt.bullet.flight_time = fts(5)
+tt.bullet.pop = {"pop_pow"}
+tt.bullet.pop_conds = DR_KILL
+tt.main_script.update = scripts.bullet_troll_glider_stage_13_suicide.update
+tt.sound_events.hit = "Stage13KamikazeGliderDeathImpact"

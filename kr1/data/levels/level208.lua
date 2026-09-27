@@ -715,7 +715,7 @@ queue_insert(store,d)
 if ab.sound_load then
 S:queue(ab.sound_load)
 end
-U.animation_start(this,"load",nil,store.tick_ts,1)
+U.animation_start(this,"load",nil,store.tick_ts,false)
 local ts=store.tick_ts
 local p=false
 while not U.animation_finished(this,1) do

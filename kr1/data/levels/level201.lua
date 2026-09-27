@@ -41,7 +41,7 @@ coroutine.yield()
 end
 this.render.sprites[1].hidden=false
 U.y_animation_play(this,"entrance",nil,store.tick_ts,1,1)
-U.animation_start(this,"idle",nil,store.tick_ts,1,1)
+U.animation_start(this,"idle",nil,store.tick_ts,false,1)
 local aa=this.attacks.list[1]
 local min_range=this.attacks.min_range
 local max_range=this.attacks.max_range
@@ -175,7 +175,7 @@ while taps_count<3 do
 if this.ui.clicked then
 taps_count=taps_count+1
 U.y_animation_play(this,"tap",nil,store.tick_ts,1)
-U.animation_start(this,"idle",nil,store.tick_ts,1)
+U.animation_start(this,"idle",nil,store.tick_ts,false)
 this.ui.clicked=nil
 end
 coroutine.yield()
@@ -292,10 +292,10 @@ taps_count=1
 end
 local idle=taps_count==3 and "idle" or "idle_"..taps_count
 S:queue(this.sound_tap)
-U.animation_start(w,taps_count==3 and "action_2" or "action_1",nil,store.tick_ts,1)
+U.animation_start(w,taps_count==3 and "action_2" or "action_1",nil,store.tick_ts,false)
 U.y_animation_play(this,"tap_"..taps_count,nil,store.tick_ts,1)
-U.animation_start(this,idle,nil,store.tick_ts,1)
-U.animation_start(w,"idle",nil,store.tick_ts,-1)
+U.animation_start(this,idle,nil,store.tick_ts,false)
+U.animation_start(w,"idle",nil,store.tick_ts,true)
 this.ui.clicked=nil
 end
 coroutine.yield()

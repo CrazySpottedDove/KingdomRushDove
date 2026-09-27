@@ -2357,6 +2357,14 @@ function MapView:show_flags(num)
 
 				flag.pos = flag_pos
 
+				if num == 6 then
+					-- KR6 的 StageFlag5 旗子轴心是插地点 (43.95,106.55)（贴图 96x132），
+					-- dove 的 LevelFlagView 默认是中心锚点 (size/2)。这里把 KR6 轴心按旗面
+					-- 尺寸比例映射到 dove 旗面（map_flag_0181 = 88x120），使旗子插在相同位置，
+					-- 而不是简单平移坐标。
+					flag.anchor = v(43.95 * flag.size.x / 96, 106.55 * flag.size.y / 132)
+				end
+
 				flag:set_mode("nostar")
 
 				if table.contains(ud.unlocked_levels, i + jnum) then

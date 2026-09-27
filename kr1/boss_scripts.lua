@@ -13132,4 +13132,1174 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 	end
 end
 
+-- ==================== KR6 stage 10 / 11 / 13 boss 脚本 ====================
+-- 移植自 kr6/scripts_game.lua。约定同 game_scripts：queue_insert/remove -> simulation:queue_*_entity；
+--   vis.flags/bans 直写 -> U.flags_add/bans_add 引用计数接口。
+
+local function boss_find_all_t(store, template_name)
+	local t = {}
+
+	for _, e in pairs(store.entities) do
+		if e.template_name == template_name then
+			t[#t + 1] = e
+		end
+	end
+
+	return t
+end
+
+scripts.enemy_boss_stage_10 = {}
+
+function scripts.enemy_boss_stage_10.update(this, store, script)
+	local af = this.timed_attacks.list[1]
+	local controller_icicles = boss_find_all_t(store, af.icicle_controller)[1]
+	local freeze_check_ts = store.tick_ts
+
+	af.ts = store.tick_ts
+
+	local trigger_freeze
+
+	local function can_freeze()
+		if this.cinematic then
+			return true
+		end
+
+		if trigger_freeze then
+			return true
+		end
+
+		if store.tick_ts - freeze_check_ts < 0.25 then
+			return false
+		end
+
+		if store.tick_ts - af.ts < af.cooldown then
+			return false
+		end
+
+		freeze_check_ts = store.tick_ts
+
+		local aura_t = E:get_template(af.aura)
+		local towers = U.find_towers_in_range(store.towers, this.pos, {
+			max_range = aura_t.aura.radius,
+			min_range = 0
+		}, function(v, o)
+			return v.tower.type ~= "holder" and v.tower.type ~= "build_animation" and (not v.tower_holder or not v.tower_holder.blocked) and (not aura_t.aura.allowed_templates or table.contains(aura_t.aura.allowed_templates, v.template_name)) and (not aura_t.aura.excluded_templates or not table.contains(aura_t.aura.excluded_templates, v.template_name))
+		end)
+
+		trigger_freeze = towers and #towers > 0
+
+		return trigger_freeze
+	end
+
+	local function y_on_death()
+		U.animation_start(this, af.animation_tired, nil, store.tick_ts, true, 1)
+
+		if store.level_mode == GAME_MODE_CAMPAIGN then
+			signal.emit("show-curtains")
+			signal.emit("hide-gui")
+			signal.emit("start-cinematic")
+		end
+
+		LU.kill_all_enemies(store, true)
+		S:stop_all()
+		W:stop_manual_wave("BOSS1")
+
+		if store.level_mode == GAME_MODE_CAMPAIGN then
+			signal.emit("pan-zoom-camera", 2, {
+				x = this.pos.x,
+				y = this.pos.y
+			}, OVm(1, 1.3))
+		end
+
+		U.y_wait(store, store.level_mode == GAME_MODE_CAMPAIGN and 2.5 or 0.5)
+		S:queue(this.sound_death)
+		S:queue(this.sound_events.defeat_chest_bang)
+		U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+		S:queue(this.sound_events.defeat_roar)
+		U.animation_start(this, "death_loop", nil, store.tick_ts, true, 1)
+		S:queue(this.sound_events.defeat_rumble)
+
+		local collapse = E:create_entity(this.death_rumble_fx)
+
+		collapse.pos.x, collapse.pos.y = 512, 384
+		collapse.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(collapse)
+
+		local shake = E:create_entity("aura_screen_shake")
+
+		shake.aura.amplitude = 1
+		shake.aura.duration = 8
+		shake.aura.freq_factor = 3
+
+		simulation:queue_insert_entity(shake)
+		LU.kill_all_enemies(store, true)
+		U.y_animation_wait(this)
+		signal.emit("boss-killed", this)
+
+		this.bossfight_ended = true
+	end
+
+	::label_1174_0::
+
+	while true do
+		while this.cinematic do
+			coroutine.yield()
+		end
+
+		if this.health.dead then
+			y_on_death()
+
+			return
+		end
+
+		if trigger_freeze then
+			U.animation_start(this, af.animation, nil, store.tick_ts, false)
+
+			local fl = this.render.sprites[1].flip_x
+			local hit_pos = V.vclone(this.pos)
+
+			if af.hit_offset then
+				hit_pos.x = hit_pos.x + (fl and -1 or 1) * af.hit_offset.x
+				hit_pos.y = hit_pos.y + af.hit_offset.y
+			end
+
+			if af.hit_decal then
+				local fx = E:create_entity(af.hit_decal)
+
+				fx.pos = V.vclone(hit_pos)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				simulation:queue_insert_entity(fx)
+			end
+
+			if SU.y_enemy_wait(store, this, af.hit_time) then
+				goto label_1174_0
+			end
+
+			S:queue(this.sound_events.tower_freeze)
+
+			af.ts = store.tick_ts
+
+			scripts.controller_stage_210_jt_icicles.on_event(controller_icicles, store, nil, af.random_icicles, af.allies_icicles, 0)
+
+			local aura = E:create_entity(af.aura)
+
+			aura.aura.source_id = this.id
+			aura.aura.ts = store.tick_ts
+			aura.pos = V.vclone(this.pos)
+
+			simulation:queue_insert_entity(aura)
+			U.y_animation_wait(this)
+			U.animation_start(this, af.animation_tired, nil, store.tick_ts, true, 1)
+
+			local ts = store.tick_ts
+
+			while not this.health.dead and store.tick_ts - ts < af.tired_time do
+				coroutine.yield()
+			end
+
+			U.y_animation_play(this, af.animation_tired_end, nil, store.tick_ts, 1)
+
+			trigger_freeze = false
+		end
+
+		if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, can_freeze, can_freeze) then
+		-- block empty
+		else
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.mod_boss_tower_block = {}
+
+function scripts.mod_boss_tower_block.insert(this, store, script)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+	local source = store.entities[m.source_id]
+
+	if not target then
+		simulation:queue_remove_entity(this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	return true
+end
+
+function scripts.mod_boss_tower_block.update(this, store)
+	local tr = this.tap_removable
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+	local source = store.entities[m.source_id]
+	local tap_tut
+
+	if tr then
+		tap_tut = E:create_entity(this.tap_tutorial)
+		tap_tut.pos = v(this.pos.x + this.tut_offset.x, this.pos.y + this.tut_offset.y)
+		tap_tut.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(tap_tut)
+	end
+
+	if this.anim_start then
+		U.animation_start(this, this.anim_start, nil, store.tick_ts, nil, 1)
+	end
+
+	U.y_wait(store, U.frandom(0, this.spawn_delay_max))
+	SU.tower_block_inc(target)
+
+	m.ts = store.tick_ts
+
+	U.y_animation_wait(this)
+
+	if this.anim_loop then
+		U.animation_start(this, this.anim_loop, nil, store.tick_ts)
+	end
+
+	local taps = 0
+	local tap_ts = store.tick_ts
+
+	while store.tick_ts - m.ts < m.duration - this.end_anim_duration and (not tr or taps < this.taps_to_remove) do
+		if tr and this.ui then
+			if this.ui.clicked and store.tick_ts - tap_ts > 0.11 then
+				taps = taps + 1
+				tap_ts = store.tick_ts
+
+				local shake = E:create_entity("mod_shake_sprite")
+
+				shake.modifier.target_id = this.id
+				shake.modifier.duration = 0.1
+				shake.modifier.intensity = 4
+
+				simulation:queue_insert_entity(shake)
+			end
+
+			this.ui.clicked = false
+		end
+
+		coroutine.yield()
+	end
+
+	if this.fx_out then
+		local fx = E:create_entity(this.fx_out)
+
+		fx.pos = V.vclone(this.pos)
+		fx.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(fx)
+	end
+
+	S:queue(this.sound_events.free_tower)
+
+	if tap_tut then
+		simulation:queue_remove_entity(tap_tut)
+	end
+
+	this.render.sprites[1].hidden = true
+
+	U.y_wait(store, 0.5)
+	simulation:queue_remove_entity(this)
+end
+
+scripts.enemy_boss_stage_11 = {}
+
+function scripts.enemy_boss_stage_11.update(this, store, script)
+	local OFF_SCREEN_X, OFF_SCREEN_Y = 512, 1000
+	local controller = boss_find_all_t(store, this.controller_t)[1]
+	local phase = 1
+
+	this.rose = false
+	this.lower_trigger = false
+
+	local reached_end = false
+	local defeat_controller = boss_find_all_t(store, "controller_stage_211_loss")[1]
+
+	local function y_land_animation(dest)
+		local af = P:node_pos(this.lower_path_id, 1, this.lower_node_id + 1).x - dest.x < 0
+
+		U.animation_start(this, "land", af, store.tick_ts, nil, 1)
+		U.y_wait(store, fts(10))
+
+		local sh = E:create_entity(this.shadow_decal)
+
+		sh.pos.x, sh.pos.y = dest.x, dest.y
+		sh.render.sprites[1].name = "land"
+		sh.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(sh)
+		U.y_wait(store, fts(4))
+		simulation:queue_remove_entity(sh)
+
+		local shake = E:create_entity("aura_screen_shake")
+
+		shake.aura.amplitude = 0.5
+		shake.aura.duration = 0.5
+		shake.aura.freq_factor = 1
+
+		simulation:queue_insert_entity(shake)
+		U.y_animation_wait(this, 1)
+	end
+
+	local function y_on_death()
+		S:stop_all()
+		W:stop_manual_wave("BOSS3")
+		S:queue(this.sound_events.death)
+		U.animation_start(this, "death", nil, store.tick_ts, false)
+		LU.kill_all_enemies(store, true)
+		U.y_animation_wait(this)
+		signal.emit("boss-killed", this)
+
+		this.bossfight_ended = true
+	end
+
+	local function y_check_phase_out()
+		if phase <= #this.phases_health_thresholds and this.health.hp < this.health.hp_max * this.phases_health_thresholds[phase] then
+			W:stop_manual_wave("BOSS" .. phase)
+
+			phase = phase + 1
+
+			W:start_manual_wave("BOSS" .. phase)
+			U.animation_start(this, "jump", nil, store.tick_ts, nil, 1)
+			U.y_wait(store, this.wait_for_ascend_decal)
+			U.unblock_all(store, this)
+			SU.remove_modifiers(store, this)
+
+			if not this._rise_bans_added then
+				U.bans_add(this.vis, F_ALL)
+				this._rise_bans_added = true
+			end
+
+			U.flags_add(this.vis, F_BOSS)
+			this.ui.can_click = false
+			this.ui.can_hover = false
+			this.health.ignore_damage = true
+
+			if game.game_gui.selected_entity and game.game_gui.selected_entity.id == this.id then
+				signal.emit("hide-bottom-info")
+			end
+
+			this.health_bar.hidden = true
+
+			local ascent = E:create_entity(this.ascend_decal)
+
+			ascent.pos.x, ascent.pos.y = this.pos.x, this.pos.y
+			ascent.render.sprites[1].ts = store.tick_ts
+
+			simulation:queue_insert_entity(ascent)
+
+			this.rose = true
+			this.pos.x, this.pos.y = OFF_SCREEN_X, OFF_SCREEN_Y
+			this.render.sprites[1].hidden = true
+
+			U.y_wait(store, 2)
+
+			controller._spawn_eggs = true
+
+			while not this.lower_trigger or controller.in_use do
+				coroutine.yield()
+			end
+
+			this.rose = false
+			this.lower_trigger = false
+			controller._spawn_eggs = false
+			this.motion.forced_waypoint = nil
+
+			local dest = P:node_pos(this.lower_path_id, 1, this.lower_node_id)
+
+			this.nav_path.pi = this.lower_path_id
+			this.nav_path.spi = 1
+			this.nav_path.ni = this.lower_node_id
+			this.pos.x, this.pos.y = dest.x, dest.y
+
+			if this._rise_bans_added then
+				U.bans_remove(this.vis, F_ALL)
+				this._rise_bans_added = nil
+			end
+
+			U.flags_remove(this.vis, F_BOSS)
+			this.health_bar.hidden = false
+			this.render.sprites[1].hidden = false
+			this.ui.can_click = true
+			this.ui.can_hover = true
+			this.health.ignore_damage = false
+
+			y_land_animation(dest)
+
+			return true
+		end
+
+		return false
+	end
+
+	local function loss_check()
+		local pos_close = this.loss_positions[this.nav_path.pi]
+		local n = P:nearest_nodes(pos_close.x, pos_close.y, {this.nav_path.pi}, {1}, true)[1][3]
+
+		if n <= this.nav_path.ni then
+			store.game_outcome = {}
+			store.ephemeral.defeat_cinematic = true
+			defeat_controller.defeat_cinematic = true
+			defeat_controller.sarelgaz_defeat = true
+			reached_end = true
+
+			return true
+		end
+
+		return false
+	end
+
+	local function break_fn()
+		return loss_check() or y_check_phase_out()
+	end
+
+	y_land_animation(this.pos)
+
+	while not reached_end do
+		if this.health.dead then
+			y_on_death()
+
+			while true do
+				U.y_wait(store, fts(10))
+				LU.kill_all_enemies(store, true)
+			end
+
+			return
+		end
+
+		if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_fn, break_fn) then
+		-- block empty
+		else
+			coroutine.yield()
+		end
+	end
+
+	while reached_end do
+		coroutine.yield()
+	end
+end
+
+scripts.enemy_boss_stage_13 = {}
+
+function scripts.enemy_boss_stage_13.insert(this, store, script)
+	this.shield = E:create_entity(this.shield_t)
+	this.shield.render.sprites[1].ts = store.tick_ts
+	this.shield.render.sprites[1].track_attach_point = "shield"
+	this.shield.render.sprites[1].track_sprite_id = 1
+	this.shield.render.sprites[1].track_id = this.id
+
+	simulation:queue_insert_entity(this.shield)
+
+	return scripts.enemy_basic.insert(this, store, script)
+end
+
+function scripts.enemy_boss_stage_13.update(this, store, script)
+	local tower_health = boss_find_all_t(store, this.sunray_tower_health_t)[1]
+	local sunray_tower = boss_find_all_t(store, this.sunray_tower_t)[1]
+
+	this.on_ground = true
+
+	local last_jump_ts = store.tick_ts - 10
+	local health_range = 1
+	local original_armor = this.health.armor
+	local original_magic_armor = this.health.magic_armor
+	local original_hit_offset = this.unit.hit_offset
+	local original_blood = this.unit.blood_color
+
+	this.health.armor = this.shielded_armor
+	this.health.magic_armor = this.shielded_magic_armor
+	this.unit.hit_offset = this.shield_hit_offset
+	this.unit.blood_color = BLOOD_NONE
+
+	local boss_waves = 0
+	local jumps = 0
+	local boss_strike = E:create_entity(this.boss_strike)
+
+	boss_strike.pos = this.pos
+
+	simulation:queue_insert_entity(boss_strike)
+
+	local function on_damage(e, store, damage)
+		if not this.shield.render.sprites[1].hidden then
+			this.shield.shake = true
+			this.shield.damage_received = damage.value
+		end
+
+		return true
+	end
+
+	local function y_on_death()
+		LU.kill_all_enemies(store, true)
+		S:stop_all()
+		W:stop_manual_wave("BOSS_" .. boss_waves % this.amount_of_manual_waves + 1)
+		S:queue(this.sound_death)
+
+		this.shield.render.sprites[1].hidden = true
+
+		U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+		LU.kill_all_enemies(store, true)
+		U.y_animation_wait(this)
+		signal.emit("boss-killed", this)
+
+		this.bossfight_ended = true
+	end
+
+	local function y_jump_below_and_return(with_shield)
+		jumps = jumps + 1
+
+		local first_jump_destination = v(this.jump_target_pos[this.nav_path.pi].x + U.frandom(-this.jump_x_variation, this.jump_x_variation), this.jump_target_pos[this.nav_path.pi].y)
+
+		U.animation_start(this, "jump", nil, store.tick_ts, false, 1)
+
+		while not U.animation_finished(this, 1) do
+			if this.health.dead then
+				return true
+			end
+
+			coroutine.yield()
+		end
+
+		this.on_ground = false
+
+		S:queue(this.sound_events.jump)
+
+		local shake = E:create_entity("aura_screen_shake")
+
+		shake.aura.amplitude = 0.5
+		shake.aura.duration = 0.5
+		shake.aura.freq_factor = 1
+
+		LU.queue_insert(store, shake)
+
+		local jump_dust = E:create_entity(this.land_dust)
+
+		jump_dust.pos.x, jump_dust.pos.y = this.pos.x, this.pos.y
+		jump_dust.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(jump_dust)
+
+		this._jump_bans_added = false
+		this._jump_flags_added = false
+
+		U.bans_add(this.vis, F_ALL)
+		this._jump_bans_added = true
+		U.flags_add(this.vis, F_BOSS)
+		this._jump_flags_added = true
+		this.health.ignore_damage = true
+		this.ui.can_click = false
+		this.ui.can_hover = false
+
+		U.unblock_all(store, this)
+		SU.remove_modifiers(store, this)
+
+		this.health_bar.hidden = true
+
+		if game.game_gui.selected_entity and game.game_gui.selected_entity.id == this.id then
+			signal.emit("hide-bottom-info")
+		end
+
+		local jump_out = E:create_entity(with_shield and this.jump_bullet_shield or this.jump_bullet_shieldless)
+
+		jump_out.pos.x, jump_out.pos.y = this.pos.x, this.pos.y
+		jump_out.bullet.from = V.vclone(jump_out.pos)
+		jump_out.bullet.to = first_jump_destination
+		jump_out.render.sprites[1].flip_x = this.pos.x > first_jump_destination.x
+
+		LU.queue_insert(store, jump_out)
+		coroutine.yield()
+		coroutine.yield()
+
+		this.render.sprites[1].hidden = true
+
+		local random_wait = U.frandom(this.offstage_wait_min, this.offstage_wait_max)
+		local return_ts = store.tick_ts
+		local wave_stop_ts = store.tick_ts
+		local wave_stopped = false
+
+		while random_wait > store.tick_ts - return_ts do
+			if store.tick_ts - wave_stop_ts > this.turn_off_wave_wait and not wave_stopped then
+				wave_stopped = true
+
+				W:stop_manual_wave("BOSS_" .. boss_waves % this.amount_of_manual_waves + 1)
+
+				boss_waves = boss_waves + 1
+			end
+
+			coroutine.yield()
+		end
+
+		if not wave_stopped then
+			wave_stopped = true
+
+			W:stop_manual_wave("BOSS_" .. boss_waves % this.amount_of_manual_waves + 1)
+
+			boss_waves = boss_waves + 1
+		end
+
+		W:start_manual_wave("BOSS_" .. boss_waves % this.amount_of_manual_waves + 1)
+
+		local destination = km.clamp(1, #this.path_jump_destinations, math.ceil((jumps + 1) / 2))
+		local target_path = this.path_jump_alternations[this.nav_path.pi]
+		local target_pos = P:node_pos(target_path, 1, this.path_jump_destinations[destination][target_path])
+
+		this.pos.x, this.pos.y = target_pos.x, target_pos.y
+		this.nav_path.pi = target_path
+		this.nav_path.spi = 1
+		this.nav_path.ni = this.path_jump_destinations[destination][target_path]
+
+		U.set_heading(this, P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni + 1))
+
+		this.health.armor = this.shielded_armor
+		this.health.magic_armor = this.shielded_magic_armor
+		this.unit.hit_offset = this.shield_hit_offset
+		this.unit.blood_color = BLOOD_NONE
+
+		local jump_in = E:create_entity(this.jump_bullet_shield_return)
+		local jump_from_pos = v(this.jump_target_pos[this.nav_path.pi].x, this.jump_target_pos[this.nav_path.pi].y)
+
+		jump_in.pos.x, jump_in.pos.y = jump_from_pos.x, jump_from_pos.y
+		jump_in.bullet.from = V.vclone(jump_in.pos)
+		jump_in.bullet.to = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+		jump_in.render.sprites[1].flip_x = jump_in.pos.x > jump_in.bullet.to.x
+
+		LU.queue_insert(store, jump_in)
+		U.y_wait(store, jump_in.bullet.flight_time + fts(1))
+
+		this.render.sprites[1].hidden = false
+		this.health.ignore_damage = false
+		this.health_bar.hidden = false
+		this.ui.can_click = true
+		this.ui.can_hover = true
+
+		if this._jump_bans_added then
+			U.bans_remove(this.vis, F_ALL)
+			this._jump_bans_added = nil
+		end
+
+		if this._jump_flags_added then
+			U.flags_remove(this.vis, F_BOSS)
+			this._jump_flags_added = nil
+		end
+
+		local debris_fx = E:create_entity("fx_boss_stage_13_land")
+
+		debris_fx.pos.x, debris_fx.pos.y = 512, 384
+		debris_fx.render.sprites[1].ts = store.tick_ts
+
+		LU.queue_insert(store, debris_fx)
+
+		this.on_ground = true
+
+		S:queue(this.sound_events.land)
+
+		this.unit.hit_offset.x = target_path == 12 and -1 * math.abs(this.unit.hit_offset.x) or math.abs(this.unit.hit_offset.x)
+
+		U.animation_start(this, "land", target_path == 12, store.tick_ts, false, 1)
+
+		while not U.animation_finished(this, 1) do
+			if this.health.dead or this.tanking_ray then
+				return true
+			end
+
+			coroutine.yield()
+		end
+
+		this.shield.render.sprites[1].hidden = false
+		last_jump_ts = store.tick_ts
+
+		return false
+	end
+
+	local function y_tower_sunray_shot()
+		if this.tanking_ray then
+			this.shield.render.sprites[1].hidden = true
+
+			local af = this.pos.x > sunray_tower.pos.x
+
+			U.animation_start(this, "shieldblast", af, store.tick_ts, false, 1)
+			U.y_wait(store, fts(59))
+			S:queue(this.sound_events.shieldbreak)
+
+			this.tanking_ray = false
+
+			local shield = E:create_entity(this.shield_bullet)
+
+			shield.pos.x, shield.pos.y = this.pos.x + this.shield_bullet_offset.x, this.pos.y + this.shield_bullet_offset.y
+			shield.bullet.from = V.vclone(shield.pos)
+			shield.bullet.to = v(this.shield_fly_target_pos[this.nav_path.pi].x + U.frandom(-this.shield_fly_x_variation, this.shield_fly_x_variation), this.shield_fly_target_pos[this.nav_path.pi].y)
+
+			LU.queue_insert(store, shield)
+
+			this.health.armor = original_armor
+			this.health.magic_armor = original_magic_armor
+			this.unit.hit_offset = original_hit_offset
+			this.unit.blood_color = original_blood
+
+			U.y_animation_wait(this, 1)
+			U.animation_start(this, "stun", nil, store.tick_ts, true, 1)
+
+			local stun_ts = store.tick_ts
+
+			while store.tick_ts - stun_ts < this.sunray_stun do
+				if this.health.dead then
+					return true
+				end
+
+				coroutine.yield()
+			end
+
+			y_jump_below_and_return(false)
+
+			return true
+		end
+
+		return false
+	end
+
+	local function in_front_of_tower()
+		return this.nav_path.ni >= P:get_end_node(this.nav_path.pi) - 5
+	end
+
+	local function y_strike_tower()
+		if in_front_of_tower() and not this.tanking_ray then
+			this.shield.render.sprites[1].hidden = true
+			this.render.sprites[1].hidden = true
+			boss_strike.render.sprites[1].hidden = false
+			this.unit.hit_offset.x = this.render.sprites[1].flip_x and -1 * math.abs(this.unit.hit_offset.x) or math.abs(this.unit.hit_offset.x)
+
+			if tower_health.current_health_boss_hits <= 1 then
+				U.animation_start(boss_strike, this.anim_destroy_tower, this.render.sprites[1].flip_x, store.tick_ts, false, 1)
+			else
+				U.animation_start(boss_strike, this.anim_hit_tower, this.render.sprites[1].flip_x, store.tick_ts, false, 1)
+			end
+
+			local ts = store.tick_ts
+
+			while store.tick_ts - ts < this.hit_tower_hit_time do
+				if this.tanking_ray then
+					boss_strike.render.sprites[1].hidden = true
+					this.shield.render.sprites[1].hidden = false
+					this.render.sprites[1].hidden = false
+
+					return false
+				end
+
+				coroutine.yield()
+			end
+
+			local tower = boss_find_all_t(store, this.sunray_tower_t)[1]
+
+			S:queue(this.sound_events["tower_hit_" .. 4 - tower_health.current_health_boss_hits])
+
+			tower_health.current_health_boss_hits = tower_health.current_health_boss_hits - 1
+
+			tower.on_lose_health(tower_health.current_health_boss_hits)
+
+			local flipped = this.render.sprites[1].flip_x
+			local hit_fx = E:create_entity(this.boss_tower_hit_fx)
+
+			hit_fx.pos = v(this.pos.x + this.boss_tower_hit_offset.x * (flipped and -1 or 1), this.pos.y + this.boss_tower_hit_offset.y)
+			hit_fx.render.sprites[1].ts = store.tick_ts
+
+			simulation:queue_insert_entity(hit_fx)
+
+			while not U.animation_finished(boss_strike, 1) do
+				if this.tanking_ray then
+					boss_strike.render.sprites[1].hidden = true
+					this.shield.render.sprites[1].hidden = false
+					this.render.sprites[1].hidden = false
+
+					return false
+				end
+
+				coroutine.yield()
+			end
+
+			if tower_health.current_health_boss_hits <= 0 then
+				U.animation_start(boss_strike, this.anim_loop_scream, this.render.sprites[1].flip_x, store.tick_ts, true, 1)
+
+				while true do
+					coroutine.yield()
+				end
+			end
+
+			boss_strike.render.sprites[1].hidden = true
+			this.shield.render.sprites[1].hidden = false
+			this.render.sprites[1].hidden = false
+			this.render.sprites[1].ts = store.tick_ts
+
+			if this.tanking_ray then
+				return false
+			end
+
+			return true
+		end
+
+		return false
+	end
+
+	local function break_fn()
+		return y_strike_tower() or y_tower_sunray_shot()
+	end
+
+	local function y_enemy_melee_attacks(target, break_fn)
+		for _, i in ipairs(this.melee.order) do
+			local ma = this.melee.attacks[i]
+			local cooldown = ma.cooldown
+
+			if ma.shared_cooldown then
+				cooldown = this.melee.cooldown
+			end
+
+			if not ma.disabled and cooldown <= store.tick_ts - ma.ts and band(ma.vis_flags, target.vis.bans) == 0 and band(ma.vis_bans, target.vis.flags) == 0 and (not ma.fn_can or ma.fn_can(this, store, ma, target)) then
+				ma.ts = store.tick_ts
+
+				if math.random() >= ma.chance then
+				-- block empty
+				else
+					log.paranoid("attack %i selected for entity %s", i, this.template_name)
+
+					for _, aa in pairs(this.melee.attacks) do
+						if aa ~= ma and aa.shared_cooldown then
+							aa.ts = ma.ts
+						end
+					end
+
+					ma.ts = store.tick_ts
+
+					S:queue(ma.sound, ma.sound_args)
+
+					local an, af = U.animation_name_facing_point(this, ma.animation, target.pos)
+
+					this.unit.hit_offset.x = af and -1 * math.abs(this.unit.hit_offset.x) or math.abs(this.unit.hit_offset.x)
+
+					for i = 1, #this.render.sprites do
+						if this.render.sprites[i].animated then
+							U.animation_start(this, an, af, store.tick_ts, false, i)
+
+							this.shield.render.sprites[1].hidden = true
+						end
+					end
+
+					local hit_pos = V.vclone(this.pos)
+
+					if ma.hit_offset then
+						hit_pos.x = hit_pos.x + (af and -1 or 1) * ma.hit_offset.x
+						hit_pos.y = hit_pos.y + ma.hit_offset.y
+					end
+
+					local hit_times = ma.hit_times and ma.hit_times or {ma.hit_time}
+
+					for i = 1, #hit_times do
+						local hit_time = hit_times[i]
+
+						while hit_time > store.tick_ts - ma.ts do
+							if this.health.dead or this.unit.is_stunned and not ma.ignore_stun or this.dodge and this.dodge.active and not this.dodge.silent or break_fn and break_fn() then
+								return false
+							end
+
+							coroutine.yield()
+						end
+
+						S:queue(ma.sound_hit, ma.sound_hit_args)
+
+						if ma.type == "melee" and table.contains(this.enemy.blockers, target.id) then
+							local d = E:create_entity("damage")
+
+							d.source_id = this.id
+							d.target_id = target.id
+							d.track_kills = this.track_kills ~= nil
+							d.track_damage = ma.track_damage
+							d.pop = ma.pop
+							d.pop_chance = ma.pop_chance
+							d.pop_conds = ma.pop_conds
+
+							if ma.instakill then
+								d.damage_type = DAMAGE_INSTAKILL
+
+								queue_damage(store, d)
+							elseif ma.damage_min then
+								d.damage_type = ma.damage_type
+
+								local hit_factor = ma.hit_damage_factor and ma.hit_damage_factor[i] or 1
+
+								d.value = math.ceil(this.unit.damage_factor * hit_factor * math.random(ma.damage_min, ma.damage_max))
+
+								queue_damage(store, d)
+							end
+
+							if ma.mod then
+								local mod = E:create_entity(ma.mod)
+
+								mod.modifier.target_id = target.id
+								mod.modifier.source_id = this.id
+
+								simulation:queue_insert_entity(mod)
+							end
+						elseif ma.type == "area" then
+							local targets = table.filter(store.entities, function(_, e)
+								return e.soldier and e.vis and e.health and not e.health.dead and band(e.vis.flags, ma.vis_bans) == 0 and band(e.vis.bans, ma.vis_flags) == 0 and U.is_inside_ellipse(e.pos, hit_pos, ma.damage_radius) and (not ma.fn_filter or ma.fn_filter(this, store, ma, e))
+							end)
+
+							for i, e in ipairs(targets) do
+								if e == target and dodged then
+								-- block empty
+								else
+									if ma.count and i > ma.count then
+										break
+									end
+
+									local d = E:create_entity("damage")
+
+									d.source_id = this.id
+									d.target_id = e.id
+									d.damage_type = ma.damage_type
+									d.value = math.ceil(this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max))
+									d.pop = ma.pop
+									d.pop_chance = ma.pop_chance
+									d.pop_conds = ma.pop_conds
+
+									queue_damage(store, d)
+
+									if ma.mod then
+										local mod = E:create_entity(ma.mod)
+
+										mod.modifier.target_id = e.id
+										mod.modifier.source_id = this.id
+
+										simulation:queue_insert_entity(mod)
+									end
+								end
+							end
+						end
+
+						if ma.hit_fx and (not ma.hit_fx_once or i == 1) then
+							local fx = E:create_entity(ma.hit_fx)
+
+							fx.pos = V.vclone(hit_pos)
+
+							if ma.hit_fx_offset then
+								fx.pos.x = fx.pos.x + (af and -1 or 1) * ma.hit_fx_offset.x
+								fx.pos.y = fx.pos.y + ma.hit_fx_offset.y
+							end
+
+							for i = 1, #fx.render.sprites do
+								if ma.hit_fx_flip then
+									fx.render.sprites[i].flip_x = af
+								end
+
+								fx.render.sprites[i].ts = store.tick_ts
+							end
+
+							simulation:queue_insert_entity(fx)
+						end
+
+						if ma.hit_decal then
+							local fx = E:create_entity(ma.hit_decal)
+
+							fx.pos = V.vclone(hit_pos)
+
+							for i = 1, #fx.render.sprites do
+								fx.render.sprites[i].ts = store.tick_ts
+							end
+
+							simulation:queue_insert_entity(fx)
+						end
+					end
+
+					while not U.animation_finished(this) do
+						if this.health.dead or ma.ignore_stun and this.unit.is_stunned or this.dodge and this.dodge.active and not this.dodge.silent or break_fn and break_fn() then
+							return false
+						end
+
+						coroutine.yield()
+					end
+
+					U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+					this.shield.render.sprites[1].hidden = false
+
+					U.animation_start(this.shield, "idle", nil, store.tick_ts, true, 1)
+
+					return true
+				end
+			end
+		end
+
+		return true
+	end
+
+	local function can_melee_blocker(blocker)
+		return not this.health.dead and not this.unit.is_stunned and blocker and not blocker.health.dead and table.contains(this.enemy.blockers, blocker.id) and store.entities[blocker.id]
+	end
+
+	local function y_wait_for_blocker(blocker)
+		local pos = blocker.motion.arrived and blocker.pos or blocker.motion.dest
+		local an, af = U.animation_name_facing_point(this, "idle", pos)
+
+		this.unit.hit_offset.x = af and -1 * math.abs(this.unit.hit_offset.x) or math.abs(this.unit.hit_offset.x)
+
+		U.animation_start(this, an, af, store.tick_ts, true)
+		U.animation_start(this.shield, "idle", nil, store.tick_ts, true)
+
+		while not blocker.motion.arrived do
+			coroutine.yield()
+
+			if this.health.dead or this.unit.is_stunned or not table.contains(this.enemy.blockers, blocker.id) or blocker.health.dead or not store.entities[blocker.id] then
+				return false
+			end
+
+			if blocker.unit.is_stunned then
+				U.unblock_target(store, blocker)
+
+				return false
+			end
+		end
+
+		return true
+	end
+
+	local function y_walk_step(animation_name, sprite_id)
+		animation_name = animation_name or "walk"
+
+		local next, new, use_path
+
+		if this.motion.forced_waypoint then
+			local w = this.motion.forced_waypoint
+
+			next = w
+
+			if V.dist(w.x, w.y, this.pos.x, this.pos.y) < 2 * this.motion.max_speed * store.tick_length then
+				this.pos.x, this.pos.y = w.x, w.y
+				this.motion.forced_waypoint = nil
+
+				return false
+			end
+		else
+			use_path = true
+			next, new = P:next_entity_node(this, store.tick_length)
+
+			if not next then
+				log.debug("enemy %s ran out of nodes to walk", this.id)
+				coroutine.yield()
+
+				return false
+			end
+		end
+
+		U.set_destination(this, next)
+
+		local an, af = U.animation_name_facing_point(this, animation_name, this.motion.dest, sprite_id, nil, use_path)
+
+		if this.sound_events and new then
+			S:queue(this.sound_events.new_node, this.sound_events.new_node_args)
+		end
+
+		this.unit.hit_offset.x = af and -1 * math.abs(this.unit.hit_offset.x) or math.abs(this.unit.hit_offset.x)
+
+		U.animation_start(this, an, af, store.tick_ts, true, sprite_id)
+		U.animation_start(this.shield, "walk", nil, store.tick_ts, true, 1)
+		U.walk(this, store.tick_length)
+		coroutine.yield()
+
+		this.motion.speed.x, this.motion.speed.y = 0, 0
+
+		return true
+	end
+
+	local function y_walk_until_blocked(walk_break_fn)
+		local blocker
+		local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND))
+
+		while not blocker do
+			if this.unit.is_stunned then
+				return false
+			end
+
+			if walk_break_fn and walk_break_fn() then
+				return false, nil, nil
+			end
+
+			if this.health.dead then
+				return false
+			end
+
+			local node_valid = P:is_node_valid(this.nav_path.pi, this.nav_path.ni)
+
+			if node_valid and #this.enemy.blockers > 0 then
+				U.cleanup_blockers(store, this)
+
+				blocker = store.entities[this.enemy.blockers[1]]
+			end
+
+			if not blocker then
+				y_walk_step("walk", 1)
+			else
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+				U.animation_start(this.shield, "idle", nil, store.tick_ts, true)
+			end
+
+			if terrain_type ~= band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND)) then
+				return false, nil
+			end
+		end
+
+		return true, blocker
+	end
+
+	local function y_walk_melee(walk_break_fn, melee_break_fn)
+		local cont, blocker = y_walk_until_blocked(walk_break_fn)
+
+		if not cont then
+			return false
+		end
+
+		if blocker then
+			if not y_wait_for_blocker(blocker) then
+				return false
+			end
+
+			while can_melee_blocker(blocker) and (not melee_break_fn or not melee_break_fn()) do
+				if not y_enemy_melee_attacks(blocker, melee_break_fn) then
+					return false
+				end
+
+				coroutine.yield()
+			end
+		end
+
+		return true
+	end
+
+	this.health.on_damage = on_damage
+
+	::label_1321_0::
+
+	while true do
+		while this.cinematic do
+			coroutine.yield()
+		end
+
+		if this.health.dead then
+			y_on_death()
+
+			return
+		end
+
+		if not in_front_of_tower() then
+			if not y_walk_melee(break_fn, break_fn) then
+				goto label_1321_0
+			end
+		else
+			y_strike_tower()
+			y_tower_sunray_shot()
+		end
+
+		coroutine.yield()
+	end
+end
+
 return scripts

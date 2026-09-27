@@ -52704,6 +52704,990 @@ return {
 		["from"] = 50,
 		["prefix"] = "frost_brute_ice_decal",
 		["to"] = 66
+	},
+	["boss_jt_eat"] = {
+		["from"] = 69,
+		["prefix"] = "boss_jt",
+		["to"] = 107
+	},
+	["boss_jt_idle"] = {
+		["from"] = 1,
+		["prefix"] = "boss_jt",
+		["to"] = 1
+	},
+	["boss_jt_smash"] = {
+		["from"] = 108,
+		["prefix"] = "boss_jt",
+		["to"] = 136
+	},
+	["boss_jt_tired"] = {
+		["from"] = 137,
+		["prefix"] = "boss_jt",
+		["to"] = 166
+	},
+	["boss_jt_walk"] = {
+		["from"] = 1,
+		["prefix"] = "boss_jt",
+		["to"] = 33
+	},
+	["boss_jt_walk_front"] = {
+		["from"] = 34,
+		["prefix"] = "boss_jt",
+		["to"] = 65
+	},
+	["frost_baiter_creep_death"] = {
+		["from"] = 106,
+		["prefix"] = "frost_baiter_creep",
+		["to"] = 137
+	},
+	["frost_baiter_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "frost_baiter_creep",
+		["to"] = 1
+	},
+	["frost_baiter_creep_jumpball"] = {
+		["from"] = 100,
+		["prefix"] = "frost_baiter_creep",
+		["to"] = 105
+	},
+	["frost_baiter_creep_mele"] = {
+		["from"] = 68,
+		["prefix"] = "frost_baiter_creep",
+		["to"] = 99
+	},
+	["frost_baiter_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "frost_baiter_creep",
+		["to"] = 23
+	},
+	["frost_baiter_creep_walk_back"] = {
+		["from"] = 46,
+		["prefix"] = "frost_baiter_creep",
+		["to"] = 67
+	},
+	["frost_baiter_creep_walk_front"] = {
+		["from"] = 24,
+		["prefix"] = "frost_baiter_creep",
+		["to"] = 45
+	},
+	["frost_baiter_decoy_decoy_001"] = {
+		["from"] = 1,
+		["prefix"] = "frost_baiter_decoy",
+		["to"] = 1
+	},
+	["frost_baiter_decoy_decoy_002"] = {
+		["from"] = 2,
+		["prefix"] = "frost_baiter_decoy",
+		["to"] = 2
+	},
+	["frost_baiter_decoy_decoy_003"] = {
+		["from"] = 3,
+		["prefix"] = "frost_baiter_decoy",
+		["to"] = 3
+	},
+	["frost_baiter_decoy_decoy_004"] = {
+		["from"] = 4,
+		["prefix"] = "frost_baiter_decoy",
+		["to"] = 4
+	},
+	["frost_baiter_decoy_decoy_005"] = {
+		["from"] = 5,
+		["prefix"] = "frost_baiter_decoy",
+		["to"] = 5
+	},
+	["frost_baiter_decoy_decoy_006"] = {
+		["from"] = 6,
+		["prefix"] = "frost_baiter_decoy",
+		["to"] = 6
+	},
+	["frost_baiter_decoy_decoy_007"] = {
+		["from"] = 7,
+		["prefix"] = "frost_baiter_decoy",
+		["to"] = 7
+	},
+	["frost_baiter_decoy_decoy_008"] = {
+		["from"] = 8,
+		["prefix"] = "frost_baiter_decoy",
+		["to"] = 8
+	},
+	["frost_baiter_decoy_snow_run"] = {
+		["from"] = 1,
+		["prefix"] = "frost_baiter_decoy_snow",
+		["to"] = 17
+	},
+	["frost_baiter_hit_fx_run"] = {
+		["from"] = 1,
+		["prefix"] = "frost_baiter_hit_fx",
+		["to"] = 6
+	},
+	["frost_brute_breath_run"] = {
+		["from"] = 1,
+		["prefix"] = "frost_brute_breath",
+		["to"] = 30
+	},
+	["frost_brute_creep_cold_breath"] = {
+		["from"] = 194,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 239
+	},
+	["frost_brute_creep_combat_cold_breath"] = {
+		["from"] = 194,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 239
+	},
+	["frost_brute_creep_combat_death"] = {
+		["from"] = 240,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 305
+	},
+	["frost_brute_creep_combat_idle"] = {
+		["from"] = 136,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 136
+	},
+	["frost_brute_creep_combat_mele"] = {
+		["from"] = 136,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 161
+	},
+	["frost_brute_creep_combat_mele_2"] = {
+		["from"] = 162,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 193
+	},
+	["frost_brute_creep_death"] = {
+		["from"] = 240,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 305
+	},
+	["frost_brute_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 1
+	},
+	["frost_brute_creep_mele"] = {
+		["from"] = 136,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 161
+	},
+	["frost_brute_creep_mele_2"] = {
+		["from"] = 162,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 193
+	},
+	["frost_brute_creep_transform_mele"] = {
+		["from"] = 110,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 121
+	},
+	["frost_brute_creep_transform_walk"] = {
+		["from"] = 122,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 135
+	},
+	["frost_brute_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 37
+	},
+	["frost_brute_creep_walk_back"] = {
+		["from"] = 38,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 73
+	},
+	["frost_brute_creep_walk_front"] = {
+		["from"] = 74,
+		["prefix"] = "frost_brute_creep",
+		["to"] = 109
+	},
+	["frost_brute_hit_run"] = {
+		["from"] = 1,
+		["prefix"] = "frost_brute_hit",
+		["to"] = 6
+	},
+	["frost_brute_ice_decal_in"] = {
+		["from"] = 1,
+		["prefix"] = "frost_brute_ice_decal",
+		["to"] = 4
+	},
+	["frost_brute_ice_decal_loop"] = {
+		["from"] = 5,
+		["prefix"] = "frost_brute_ice_decal",
+		["to"] = 48
+	},
+	["frost_brute_ice_decal_out"] = {
+		["from"] = 49,
+		["prefix"] = "frost_brute_ice_decal",
+		["to"] = 66
+	},
+	["giant_spider_creep_attack"] = {
+		["from"] = 26,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 57
+	},
+	["giant_spider_creep_death"] = {
+		["from"] = 58,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 75
+	},
+	["giant_spider_creep_drop_1"] = {
+		["from"] = 76,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 87
+	},
+	["giant_spider_creep_drop_2"] = {
+		["from"] = 88,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 97
+	},
+	["giant_spider_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 1
+	},
+	["giant_spider_creep_land"] = {
+		["from"] = 98,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 105
+	},
+	["giant_spider_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 9
+	},
+	["giant_spider_creep_walk_back"] = {
+		["from"] = 18,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 25
+	},
+	["giant_spider_creep_walk_front"] = {
+		["from"] = 10,
+		["prefix"] = "giant_spider_creep",
+		["to"] = 17
+	},
+	["giant_spider_shadow_drop"] = {
+		["from"] = 11,
+		["prefix"] = "giant_spider_shadow",
+		["to"] = 16
+	},
+	["giant_spider_shadow_idle"] = {
+		["from"] = 11,
+		["prefix"] = "giant_spider_shadow",
+		["to"] = 11
+	},
+	["giant_spider_web_end"] = {
+		["from"] = 3,
+		["prefix"] = "giant_spider_web",
+		["to"] = 11
+	},
+	["giant_spider_web_idle"] = {
+		["from"] = 1,
+		["prefix"] = "giant_spider_web",
+		["to"] = 2
+	},
+	["leaper_creep_air_down"] = {
+		["from"] = 73,
+		["prefix"] = "leaper_creep",
+		["to"] = 78
+	},
+	["leaper_creep_air_up"] = {
+		["from"] = 67,
+		["prefix"] = "leaper_creep",
+		["to"] = 72
+	},
+	["leaper_creep_attack"] = {
+		["from"] = 26,
+		["prefix"] = "leaper_creep",
+		["to"] = 60
+	},
+	["leaper_creep_death"] = {
+		["from"] = 87,
+		["prefix"] = "leaper_creep",
+		["to"] = 104
+	},
+	["leaper_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "leaper_creep",
+		["to"] = 1
+	},
+	["leaper_creep_jump_in"] = {
+		["from"] = 61,
+		["prefix"] = "leaper_creep",
+		["to"] = 66
+	},
+	["leaper_creep_jump_out"] = {
+		["from"] = 79,
+		["prefix"] = "leaper_creep",
+		["to"] = 86
+	},
+	["leaper_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "leaper_creep",
+		["to"] = 9
+	},
+	["leaper_creep_walk_back"] = {
+		["from"] = 18,
+		["prefix"] = "leaper_creep",
+		["to"] = 25
+	},
+	["leaper_creep_walk_front"] = {
+		["from"] = 10,
+		["prefix"] = "leaper_creep",
+		["to"] = 17
+	},
+	["leaper_hit_idle"] = {
+		["from"] = 1,
+		["prefix"] = "leaper_hit",
+		["to"] = 11
+	},
+	["leaper_shadow_idle"] = {
+		["from"] = 1,
+		["prefix"] = "leaper_shadow",
+		["to"] = 1
+	},
+	["sarelgaz_spawns_hit_fx_run"] = {
+		["from"] = 1,
+		["prefix"] = "KR6_stage_11_BOSS_spawns_hit_fx",
+		["to"] = 11
+	},
+	["sarelgaz_spawns_web_end"] = {
+		["from"] = 3,
+		["prefix"] = "KR6_stage_11_BOSS_spawns_web",
+		["to"] = 10
+	},
+	["sarelgaz_spawns_web_idle"] = {
+		["from"] = 1,
+		["prefix"] = "KR6_stage_11_BOSS_spawns_web",
+		["to"] = 2
+	},
+	["sarelgaz_spawns_webbed_tower_fx_end"] = {
+		["from"] = 30,
+		["prefix"] = "KR6_stage_11_BOSS_spawns_webbed_tower_fx",
+		["to"] = 41
+	},
+	["sarelgaz_spawns_webbed_tower_fx_idle"] = {
+		["from"] = 29,
+		["prefix"] = "KR6_stage_11_BOSS_spawns_webbed_tower_fx",
+		["to"] = 29
+	},
+	["sarelgaz_spawns_webbed_tower_fx_start"] = {
+		["from"] = 1,
+		["prefix"] = "KR6_stage_11_BOSS_spawns_webbed_tower_fx",
+		["to"] = 28
+	},
+	["son_of_sarelgaz_boss_egg_death"] = {
+		["from"] = 59,
+		["prefix"] = "son_of_sarelgaz_boss_egg",
+		["to"] = 71
+	},
+	["son_of_sarelgaz_boss_egg_hatch"] = {
+		["from"] = 20,
+		["prefix"] = "son_of_sarelgaz_boss_egg",
+		["to"] = 58
+	},
+	["son_of_sarelgaz_boss_egg_idle"] = {
+		["from"] = 19,
+		["prefix"] = "son_of_sarelgaz_boss_egg",
+		["to"] = 19
+	},
+	["son_of_sarelgaz_boss_egg_spawn"] = {
+		["from"] = 1,
+		["prefix"] = "son_of_sarelgaz_boss_egg",
+		["to"] = 18
+	},
+	["son_of_sarelgaz_cocoon_end"] = {
+		["from"] = 12,
+		["prefix"] = "son_of_sarelgaz_cocoon",
+		["to"] = 19
+	},
+	["son_of_sarelgaz_cocoon_loop"] = {
+		["from"] = 11,
+		["prefix"] = "son_of_sarelgaz_cocoon",
+		["to"] = 11
+	},
+	["son_of_sarelgaz_cocoon_start"] = {
+		["from"] = 1,
+		["prefix"] = "son_of_sarelgaz_cocoon",
+		["to"] = 10
+	},
+	["son_of_sarelgaz_creep_attack"] = {
+		["from"] = 50,
+		["prefix"] = "son_of_sarelgaz_creep",
+		["to"] = 83
+	},
+	["son_of_sarelgaz_creep_death"] = {
+		["from"] = 137,
+		["prefix"] = "son_of_sarelgaz_creep",
+		["to"] = 153
+	},
+	["son_of_sarelgaz_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "son_of_sarelgaz_creep",
+		["to"] = 1
+	},
+	["son_of_sarelgaz_creep_out"] = {
+		["from"] = 123,
+		["prefix"] = "son_of_sarelgaz_creep",
+		["to"] = 136
+	},
+	["son_of_sarelgaz_creep_skill"] = {
+		["from"] = 84,
+		["prefix"] = "son_of_sarelgaz_creep",
+		["to"] = 122
+	},
+	["son_of_sarelgaz_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "son_of_sarelgaz_creep",
+		["to"] = 17
+	},
+	["son_of_sarelgaz_creep_walk_back"] = {
+		["from"] = 34,
+		["prefix"] = "son_of_sarelgaz_creep",
+		["to"] = 49
+	},
+	["son_of_sarelgaz_creep_walk_front"] = {
+		["from"] = 18,
+		["prefix"] = "son_of_sarelgaz_creep",
+		["to"] = 33
+	},
+	["spider_matriarch_creep_attack"] = {
+		["from"] = 50,
+		["prefix"] = "spider_matriarch_creep",
+		["to"] = 83
+	},
+	["spider_matriarch_creep_death"] = {
+		["from"] = 132,
+		["prefix"] = "spider_matriarch_creep",
+		["to"] = 179
+	},
+	["spider_matriarch_creep_egg"] = {
+		["from"] = 84,
+		["prefix"] = "spider_matriarch_creep",
+		["to"] = 131
+	},
+	["spider_matriarch_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "spider_matriarch_creep",
+		["to"] = 1
+	},
+	["spider_matriarch_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "spider_matriarch_creep",
+		["to"] = 17
+	},
+	["spider_matriarch_creep_walk_back"] = {
+		["from"] = 34,
+		["prefix"] = "spider_matriarch_creep",
+		["to"] = 49
+	},
+	["spider_matriarch_creep_walk_front"] = {
+		["from"] = 18,
+		["prefix"] = "spider_matriarch_creep",
+		["to"] = 33
+	},
+	["spider_matriarch_egg_hatch"] = {
+		["from"] = 20,
+		["prefix"] = "spider_matriarch_egg",
+		["to"] = 43
+	},
+	["spider_matriarch_egg_idle"] = {
+		["from"] = 19,
+		["prefix"] = "spider_matriarch_egg",
+		["to"] = 19
+	},
+	["spider_matriarch_egg_spawn"] = {
+		["from"] = 1,
+		["prefix"] = "spider_matriarch_egg",
+		["to"] = 18
+	},
+	["spiderling_creep_attack"] = {
+		["from"] = 29,
+		["prefix"] = "spiderling_creep",
+		["to"] = 48
+	},
+	["spiderling_creep_death"] = {
+		["from"] = 49,
+		["prefix"] = "spiderling_creep",
+		["to"] = 62
+	},
+	["spiderling_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "spiderling_creep",
+		["to"] = 1
+	},
+	["spiderling_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "spiderling_creep",
+		["to"] = 10
+	},
+	["spiderling_creep_walk_back"] = {
+		["from"] = 20,
+		["prefix"] = "spiderling_creep",
+		["to"] = 28
+	},
+	["spiderling_creep_walk_front"] = {
+		["from"] = 11,
+		["prefix"] = "spiderling_creep",
+		["to"] = 19
+	},
+	["troll_pathfinder_creep_death_sliding"] = {
+		["from"] = 178,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 207
+	},
+	["troll_pathfinder_creep_death_standing"] = {
+		["from"] = 148,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 177
+	},
+	["troll_pathfinder_creep_idle"] = {
+		["from"] = 1,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 1
+	},
+	["troll_pathfinder_creep_mele"] = {
+		["from"] = 74,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 105
+	},
+	["troll_pathfinder_creep_sliding"] = {
+		["from"] = 106,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 119
+	},
+	["troll_pathfinder_creep_sliding_back"] = {
+		["from"] = 134,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 147
+	},
+	["troll_pathfinder_creep_sliding_front"] = {
+		["from"] = 120,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 133
+	},
+	["troll_pathfinder_creep_walk"] = {
+		["from"] = 2,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 25
+	},
+	["troll_pathfinder_creep_walk_back"] = {
+		["from"] = 50,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 73
+	},
+	["troll_pathfinder_creep_walk_front"] = {
+		["from"] = 26,
+		["prefix"] = "troll_pathfinder_creep",
+		["to"] = 49
+	},
+	["troll_pathfinder_hit_fx_run"] = {
+		["from"] = 1,
+		["prefix"] = "troll_pathfinder_hit_fx",
+		["to"] = 6
+	},
+	["trollboss_shieldfly_trail_run"] = {
+		["from"] = 1,
+		["prefix"] = "trollboss_shieldfly_trail",
+		["to"] = 15
+	},
+	JT_icicles_decal_idle = {
+		from = 1,
+		prefix = "JT_icicles_decal",
+		to = 1
+	},
+	JT_icicles_hit_fx_run = {
+		from = 1,
+		prefix = "JT_icicles_hit_fx",
+		to = 17
+	},
+	JT_icicles_particle_run = {
+		from = 1,
+		prefix = "JT_icicles_particle",
+		to = 8
+	},
+	JT_icicles_projectile_hit_hit = {
+		from = 1,
+		prefix = "JT_icicles_projectile_hit",
+		to = 19
+	},
+	JT_icicles_projectile_hit_idle = {
+		from = 20,
+		prefix = "JT_icicles_projectile_hit",
+		to = 20
+	},
+	JT_icicles_projectile_idle = {
+		from = 1,
+		prefix = "JT_icicles_projectile",
+		to = 1
+	},
+	water_splash_underice_shadow_particle_run = {
+		from = 1,
+		prefix = "water_splash_underice_shadow_particle",
+		to = 12
+	},
+	water_splash_underice_shadow_run = {
+		from = 1,
+		prefix = "water_splash_underice_shadow",
+		to = 24
+	},
+	water_splash_waterSplash_run = {
+		from = 1,
+		prefix = "water_splash_waterSplash",
+		to = 17
+	},
+	stage_10_waterfall_run = {
+		from = 1,
+		prefix = "stage_10_decos_waterfall_st10",
+		to = 21
+	},
+	Archer_Arrow_Fire_hit = {
+		from = 11,
+		prefix = "Archer_Arrow_Fire",
+		to = 35
+	},
+	Archer_Arrow_Fire_idle = {
+		from = 1,
+		prefix = "Archer_Arrow_Fire",
+		to = 10
+	},
+	Archer_Arrow_Fire_trail = {
+		from = 1,
+		prefix = "Archer_Arrow_Fire_Trail",
+		to = 27
+	},
+	Archer_Arrow_idle = {
+		from = 1,
+		prefix = "Archer_Arrow",
+		to = 1
+	},
+	Archer_Arrow_miss = {
+		from = 2,
+		prefix = "Archer_Arrow",
+		to = 10
+	},
+	Archer_Arrow_missidle = {
+		from = 11,
+		prefix = "Archer_Arrow",
+		to = 11
+	},
+	Archer_attack = {
+		from = 3,
+		prefix = "Archer",
+		to = 28
+	},
+	Archer_hit = {
+		from = 29,
+		prefix = "Archer",
+		to = 50
+	},
+	Archer_idle = {
+		from = 1,
+		prefix = "Archer",
+		to = 2
+	},
+	spider_eyes_down = {
+		from = 7,
+		prefix = "spidereyeoverlay",
+		to = 12
+	},
+	spider_eyes_down_idle = {
+		from = 7,
+		prefix = "spidereyeoverlay",
+		to = 7
+	},
+	spider_eyes_right = {
+		from = 1,
+		prefix = "spidereyeoverlay",
+		to = 6
+	},
+	spider_eyes_right_idle = {
+		from = 1,
+		prefix = "spidereyeoverlay",
+		to = 1
+	},
+	spider_eyes_up = {
+		from = 13,
+		prefix = "spidereyeoverlay",
+		to = 18
+	},
+	spider_eyes_up_idle = {
+		from = 13,
+		prefix = "spidereyeoverlay",
+		to = 13
+	},
+	silk_dissolve_1 = {
+		from = 2,
+		prefix = "silk",
+		to = 10
+	},
+	silk_dissolve_2 = {
+		from = 12,
+		prefix = "silk",
+		to = 19
+	},
+	silk_idle_1 = {
+		from = 1,
+		prefix = "silk",
+		to = 1
+	},
+	silk_idle_2 = {
+		from = 11,
+		prefix = "silk",
+		to = 11
+	},
+	stage11_soldier_attack = {
+		from = 18,
+		prefix = "Knight",
+		to = 41
+	},
+	stage11_soldier_death = {
+		from = 42,
+		prefix = "Knight",
+		to = 62
+	},
+	stage11_soldier_idle = {
+		from = 1,
+		prefix = "Knight",
+		to = 1
+	},
+	stage11_soldier_walk = {
+		from = 2,
+		prefix = "Knight",
+		to = 17
+	},
+	Sorcerer_attack = {
+		from = 61,
+		prefix = "Sorcerer",
+		to = 95
+	},
+	Sorcerer_body = {
+		from = 124,
+		prefix = "Sorcerer",
+		to = 124
+	},
+	Sorcerer_castingback = {
+		from = 159,
+		prefix = "Sorcerer",
+		to = 160
+	},
+	Sorcerer_castingfront = {
+		from = 136,
+		prefix = "Sorcerer",
+		to = 137
+	},
+	Sorcerer_death = {
+		from = 96,
+		prefix = "Sorcerer",
+		to = 123
+	},
+	Sorcerer_idle = {
+		from = 1,
+		prefix = "Sorcerer",
+		to = 1
+	},
+	Sorcerer_idlecastingback = {
+		from = 148,
+		prefix = "Sorcerer",
+		to = 148
+	},
+	Sorcerer_idlecastingfront = {
+		from = 125,
+		prefix = "Sorcerer",
+		to = 125
+	},
+	Sorcerer_startcastingback = {
+		from = 148,
+		prefix = "Sorcerer",
+		to = 158
+	},
+	Sorcerer_startcastingfront = {
+		from = 125,
+		prefix = "Sorcerer",
+		to = 135
+	},
+	Sorcerer_stopcastingback = {
+		from = 161,
+		prefix = "Sorcerer",
+		to = 170
+	},
+	Sorcerer_stopcastingfront = {
+		from = 138,
+		prefix = "Sorcerer",
+		to = 147
+	},
+	Sorcerer_walk = {
+		from = 1,
+		prefix = "Sorcerer",
+		to = 20
+	},
+	Sorcerer_walkback = {
+		from = 41,
+		prefix = "Sorcerer",
+		to = 60
+	},
+	Sorcerer_walkfront = {
+		from = 21,
+		prefix = "Sorcerer",
+		to = 40
+	},
+	RayDecal_decal = {
+		from = 1,
+		prefix = "RayDecal",
+		to = 1
+	},
+	RayHitFX_hit = {
+		from = 1,
+		prefix = "RayHitFX",
+		to = 26
+	},
+	RayHit_run = {
+		from = 1,
+		prefix = "RayHit",
+		to = 12
+	},
+	Ray_run = {
+		from = 1,
+		prefix = "Ray",
+		to = 20
+	},
+	MiniRay_run = {
+		from = 1,
+		prefix = "MiniRay",
+		to = 10
+	},
+	tower_catapult_projectiles_blazing_ball_decal_idle = {
+		from = 48,
+		prefix = "tower_catapult_projectiles_blazing_ball_decal",
+		to = 48
+	},
+	tower_catapult_projectiles_blazing_ball_decal_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_decal",
+		to = 47
+	},
+	tower_catapult_projectiles_blazing_ball_explosion_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_explosion_fx",
+		to = 21
+	},
+	tower_catapult_projectiles_blazing_ball_floor_particle_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_floor_particle",
+		to = 14
+	},
+	tower_catapult_projectiles_blazing_ball_hit_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_hit_fx",
+		to = 12
+	},
+	tower_catapult_projectiles_blazing_ball_projectile_particle_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_projectile_particle",
+		to = 8
+	},
+	tower_catapult_projectiles_blazing_ball_projectile_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_projectile",
+		to = 10
+	},
+	tower_catapult_projectiles_blazing_ball_run_down = {
+		from = 21,
+		prefix = "tower_catapult_projectiles_blazing_ball",
+		to = 30
+	},
+	tower_catapult_projectiles_blazing_ball_run_side = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball",
+		to = 10
+	},
+	tower_catapult_projectiles_blazing_ball_run_up = {
+		from = 11,
+		prefix = "tower_catapult_projectiles_blazing_ball",
+		to = 20
+	},
+	tower_catapult_projectiles_pojectile = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile",
+		to = 1
+	},
+	tower_catapult_projectiles_pojectile_barrel = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_barrel",
+		to = 1
+	},
+	tower_catapult_projectiles_pojectile_hit_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_hit_fx",
+		to = 18
+	},
+	tower_catapult_projectiles_pojectile_lvl4 = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4",
+		to = 1
+	},
+	tower_catapult_projectiles_pojectile_lvl4_explosive = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4_explosive",
+		to = 1
+	},
+	tower_catapult_projectiles_pojectile_lvl4_explosive_fx_activate = {
+		from = 10,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4_explosive_fx",
+		to = 35
+	},
+	tower_catapult_projectiles_pojectile_lvl4_explosive_fx_fall = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4_explosive_fx",
+		to = 8
+	},
+	tower_catapult_projectiles_pojectile_lvl4_explosive_fx_idle = {
+		from = 9,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4_explosive_fx",
+		to = 9
+	},
+	tower_catapult_projectiles_pojectile_particle = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_particle",
+		to = 1
+	},
+	tower_catapult_projectiles_tarred_zone_decal_idle = {
+		from = 46,
+		prefix = "tower_catapult_projectiles_tarred_zone_decal",
+		to = 46
+	},
+	tower_catapult_projectiles_tarred_zone_decal_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_tarred_zone_decal",
+		to = 45
+	},
+	tower_catapult_projectiles_tarred_zone_hit_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_tarred_zone_hit_fx",
+		to = 10
+	},
+	tower_catapult_projectiles_trap_activate = {
+		from = 21,
+		prefix = "tower_catapult_projectiles_trap",
+		to = 48
+	},
+	tower_catapult_projectiles_trap_hit_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_trap_hit_fx",
+		to = 6
+	},
+	tower_catapult_projectiles_trap_idle = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_trap",
+		to = 1
+	},
+	tower_catapult_projectiles_trap_ready = {
+		from = 20,
+		prefix = "tower_catapult_projectiles_trap",
+		to = 20
+	},
+	tower_catapult_projectiles_trap_set = {
+		from = 2,
+		prefix = "tower_catapult_projectiles_trap",
+		to = 19
 	}
-
 }

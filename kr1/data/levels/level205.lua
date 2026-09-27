@@ -91,7 +91,7 @@ U.animation_start(this,"idlestart",nil,store.tick_ts,true)
 end
 coroutine.yield()
 end
-U.animation_start(this,"goblinout",nil,store.tick_ts,1)
+U.animation_start(this,"goblinout",nil,store.tick_ts,false)
 U.y_wait(store,fts(134))
 S:queue(this.sound_barrel)
 while not U.animation_finished(this) do
@@ -101,7 +101,7 @@ U.animation_start(this,"idlebarrel",nil,store.tick_ts,true)
 while not this.open_path do
 coroutine.yield()
 end
-U.animation_start(this,"openpath",nil,store.tick_ts,1)
+U.animation_start(this,"openpath",nil,store.tick_ts,false)
 U.y_wait(store,fts(44))
 S:queue(this.sound_fling)
 U.y_wait(store,fts(45))
@@ -307,7 +307,7 @@ local aura=E:create_entity(this.aura_t)
 aura.pos=aura_pos
 queue_insert(store,aura)
 U.y_animation_play(zone,"appear2",nil,store.tick_ts,1)
-U.animation_start(zone,"idle2",nil,store.tick_ts,1)
+U.animation_start(zone,"idle2",nil,store.tick_ts,false)
 this.path_unlocked=false
 while true do
 if this.ui.clicked then
@@ -358,9 +358,9 @@ U.y_animation_wait(tree)
 U.animation_start(tree,"idlecharging",nil,store.tick_ts,true)
 U.y_wait(store,this.cooldown)
 if this.path_unlocked then
-U.animation_start(zone,"appear",nil,store.tick_ts,1)
+U.animation_start(zone,"appear",nil,store.tick_ts,false)
 else
-U.animation_start(zone,"appear2",nil,store.tick_ts,1)
+U.animation_start(zone,"appear2",nil,store.tick_ts,false)
 end
 aura=E:create_entity(this.aura_t)
 aura.pos=aura_pos

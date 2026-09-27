@@ -198,7 +198,7 @@ return true
 end
 local function minecraft_update(this,store)
 local function loop_then_wait(animation,wait,break_fn)
-U.animation_start(this,animation,nil,store.tick_ts,1)
+U.animation_start(this,animation,nil,store.tick_ts,false)
 while not U.animation_finished(this,1,1) do
 if break_fn and break_fn(store,wait) then
 break
@@ -230,7 +230,7 @@ ever_clicked=true
 this.ui.clicked=nil
 taps=taps+1
 if taps==4 then
-U.animation_start(this,"tap_"..taps-1,nil,store.tick_ts,1)
+U.animation_start(this,"tap_"..taps-1,nil,store.tick_ts,false)
 S:queue(this.sound_last_tap)
 U.y_wait(store,this.wait_creeper_loop)
 S:queue(this.sound_lap)
@@ -243,7 +243,7 @@ S:queue(this.sound_tap)
 U.y_animation_play(this,"tap_"..taps-1,nil,store.tick_ts,1)
 end
 if taps~=4 then
-U.animation_start(this,"idle_"..taps,nil,store.tick_ts,-1)
+U.animation_start(this,"idle_"..taps,nil,store.tick_ts,true)
 end
 end
 end
