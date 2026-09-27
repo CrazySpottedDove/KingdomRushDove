@@ -25939,8 +25939,8 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].loop = false
 tt.damage_radius = 25
-tt.damage_min = 20
-tt.damage_max = 40
+tt.damage_min = 22
+tt.damage_max = 44
 tt.damage_type = DAMAGE_MAGICAL
 tt.damage_delay = fts(21)
 tt.vis_flags = 0
@@ -25961,16 +25961,16 @@ tt.bullet.prediction_error = false
 tt.bullet.predict_target_pos = false
 tt.bullet.miss_decal = nil
 tt.bullet.hit_fx = "fx_troll_champion_projectile_hit"
-tt.bullet.damage_min = 15
-tt.bullet.damage_max = 24
+tt.bullet.damage_min = 16.5
+tt.bullet.damage_max = 26.4
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 
 tt = RT("bullet_frost_icecaller", "bolt_enemy")
 tt.render.sprites[1].prefix = "icecaller_proyectil"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
-tt.bullet.damage_min = 28
-tt.bullet.damage_max = 43
+tt.bullet.damage_min = 30.8
+tt.bullet.damage_max = 47.3
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.hit_blood_fx = nil
 tt.bullet.acceleration_factor = 0.1
@@ -26079,5 +26079,36 @@ tt.modifier.intensity = 1
 tt.modifier.resets_same = true
 tt.sprites_idx = {1}
 tt.main_script.update = scripts.mod_shake_sprite.update
+
+-- ==================== KR6 通用 rappel / 远程平衡 基类（关卡 211 使用） ====================
+tt = RT("decal_rappel_string", "decal")
+AC(tt, "main_script")
+tt.dissolution_duration = 1
+tt.dissolution_ease = "e_o_cubic"
+tt.dissolution_movement_duration = 1
+tt.dissolution_movement_ease = "linear"
+tt.string_prefix = nil
+tt.string_start_anim = nil
+tt.string_parts = 1
+tt.string_offset = 0
+tt.is_animated = true
+tt.main_script.insert = scripts.decal_rappel_string.insert
+tt.main_script.update = scripts.decal_rappel_string.update
+
+tt = RT("controller_remote_balance_rappel_spawning")
+AC(tt, "main_script", "events")
+tt.spawner_t = nil
+tt.main_script.update = scripts.controller_remote_balance_rappel_spawning.update
+tt.events.list[1].name = "spawn_rappel"
+tt.events.list[1].on_event = scripts.controller_remote_balance_rappel_spawning.on_event
+
+tt = RT("controller_remote_balance_rappel_spawner")
+AC(tt, "pos", "main_script", "editor")
+tt.main_script.update = scripts.controller_remote_balance_rappel_spawner.update
+tt.spawn_decal = nil
+tt.node_random = nil
+tt.wait_random = 0.5
+tt.spawner_id = 0
+tt.editor.props = {{"spawner_id", PT_NUMBER}}
 
 return scripts

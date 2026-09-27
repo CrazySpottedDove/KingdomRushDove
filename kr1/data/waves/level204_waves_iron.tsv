@@ -6,7 +6,7 @@
 #	level properties
 	description	main JC
 	lives	1
-	gold	900
+	gold	990
 	gems	150
 	enemy_prefix	enemy_
 	default_increment	1

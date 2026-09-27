@@ -99,6 +99,15 @@ return {
 		tt_title = _("TOWER_STAGE_208_CATAPULT_BUY_NAME"),
 		tt_desc = _("TOWER_STAGE_208_CATAPULT_BUY_DESC")
 	})}},
+	stage_11_camp = {},
+	stage_11_spider_eggs_nest = {{M(tpl.buy_attack, {
+		check = "main_icons_0019",
+		action_arg = 1,
+		image = "kr6_quickmenu_main_icon_s11_archers",
+		place = 5,
+		tt_title = _("TOWER_STAGE_211_CAMP_3_ATTACK_NAME"),
+		tt_desc = _("TOWER_STAGE_211_CAMP_3_ATTACK_DESCRIPTION")
+	})}},
 	mage = {{M(tpl.common_upgrade, {
 		action_arg = "tower_mage_2",
 		tt_title = _("TOWER_MAGE_2_NAME"),

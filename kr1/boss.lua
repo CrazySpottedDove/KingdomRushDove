@@ -4163,7 +4163,7 @@ tt.walk_thunders_offset = {v(600, -190), v(400, -200), v(510, -150), v(380, -100
 -- ===== KR6 stage 08 boss（推车兽人酋长 Acaroth）+ 战斗子实体 =====
 tt = RT("enemy_boss_stage_208", "boss")
 AC(tt, "melee", "timed_attacks", "auras")
-tt.enemy.gold = 1
+tt.enemy.gold = 1.1
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)
 tt.health.armor = 0
@@ -4196,8 +4196,8 @@ tt.vis.bans = bor(F_INSTAKILL, F_STUN)
 tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].disabled = true
 tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].damage_min = 120
-tt.melee.attacks[1].damage_max = 160
+tt.melee.attacks[1].damage_min = 132
+tt.melee.attacks[1].damage_max = 176
 tt.melee.attacks[1].damage_radius = 75
 tt.melee.attacks[1].damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
 tt.melee.attacks[1].hit_decal = "decal_boss_stage_208"
@@ -4331,7 +4331,7 @@ tt.modifier.duration = 5
 -- ===== KR6 stage 10 boss：J.T.（jt_boss）=====
 tt = RT("enemy_boss_stage_10", "boss")
 AC(tt, "melee", "timed_attacks")
-tt.enemy.gold = 1
+tt.enemy.gold = 1.1
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)
 tt.health.armor = 0
@@ -4361,8 +4361,8 @@ tt.vis.flags = bor(F_ENEMY, F_BOSS)
 tt.vis.bans = bor(F_STUN, F_INSTAKILL)
 tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].damage_min = 150
-tt.melee.attacks[1].damage_max = 200
+tt.melee.attacks[1].damage_min = 165
+tt.melee.attacks[1].damage_max = 220
 tt.melee.attacks[1].damage_radius = 75
 tt.melee.attacks[1].damage_type = bor(DAMAGE_EAT, DAMAGE_NO_DODGE)
 tt.melee.attacks[1].hit_time = fts(13)
@@ -4451,7 +4451,7 @@ tt.sound_events.free_tower = "Stage10FreeTower"
 -- ===== KR6 stage 11 boss：Sarelgaz（spiders.boss_spider）=====
 tt = RT("enemy_boss_stage_11", "boss")
 AC(tt, "melee", "timed_attacks")
-tt.enemy.gold = 1
+tt.enemy.gold = 1.1
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(75, -5)
 tt.health.armor = 0
@@ -4490,8 +4490,8 @@ tt.vis.flags = bor(F_ENEMY, F_BOSS)
 tt.vis.bans = bor(F_STUN, F_INSTAKILL)
 tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].cooldown = 4
-tt.melee.attacks[1].damage_min = 150
-tt.melee.attacks[1].damage_max = 200
+tt.melee.attacks[1].damage_min = 165
+tt.melee.attacks[1].damage_max = 220
 tt.melee.attacks[1].damage_radius = 45
 tt.melee.attacks[1].damage_type = bor(DAMAGE_EAT, DAMAGE_NO_DODGE)
 tt.melee.attacks[1].hit_time = fts(18)

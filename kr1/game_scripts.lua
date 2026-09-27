@@ -73519,67 +73519,6 @@ function scripts.enemy_stage_11_spider.insert(this, store, script)
 	return true
 end
 
-scripts.decal_stage_211_spider_eyes = {}
-
-function scripts.decal_stage_211_spider_eyes.update(this, store, script)
-	local target = store.entities[this.target_id]
-
-	if not target or not target.pos then
-		simulation:queue_remove_entity(this)
-
-		return
-	end
-
-	this.pos = target.pos
-
-	if this.render then
-		for _, s in pairs(this.render.sprites) do
-			s.ts = store.tick_ts
-		end
-	end
-
-	if this.tween then
-		this.tween.ts = store.tick_ts
-	end
-
-	local left_shadow = false
-	local radius_offset = 110
-	local shadow = kr6_find_all_t(store, this.shadow_t)[1]
-
-	while true do
-		target = store.entities[this.target_id]
-
-		if not target or target.health.dead then
-			simulation:queue_remove_entity(this)
-
-			return
-		end
-
-		local animation = "walk"
-		local target_speed = target.motion and target.motion.max_speed
-
-		if target_speed == 0 then
-			animation = "idle"
-		end
-
-		local an, af = U.animation_name_facing_point(this, animation, target.motion.dest, 1)
-
-		U.animation_start(this, an, af, store.tick_ts, true, 1)
-
-		if not left_shadow and U.is_inside_ellipse(this.pos, shadow.pos, shadow.aura.radius + radius_offset, 0.63) then
-			left_shadow = true
-			this.tween.ts = store.tick_ts
-			this.tween.props[1].keys = this.remove_keys
-		elseif left_shadow and not U.is_inside_ellipse(this.pos, shadow.pos, shadow.aura.radius + radius_offset, 0.63) then
-			left_shadow = false
-			this.tween.ts = store.tick_ts
-			this.tween.props[1].keys = this.insert_keys
-		end
-
-		coroutine.yield()
-	end
-end
-
 scripts.enemy_giant_spider_dropped = {}
 
 function scripts.enemy_giant_spider_dropped.update(this, store, script)
@@ -74851,6 +74790,332 @@ function scripts.mod_shake_sprite.update(this, store, script)
 	target.render.sprites[1].offset.y = base_offset.y
 
 	simulation:queue_remove_entity(this)
+end
+
+-- ==================== KR6 rappel / 远程平衡 通用脚本（关卡 211 等使用） ====================
+scripts.decal_rappel_utils = {}
+
+function scripts.decal_rappel_utils.set_y(this, store)
+	local min_y = (store.visible_coords and store.visible_coords.top or REF_H) + 100
+	local ideal_distance = 500
+	local dist = math.abs(this.target_pos.y - min_y)
+	local start_y = min_y
+
+	if dist < ideal_distance then
+		start_y = start_y + ideal_distance
+	end
+
+	return start_y
+end
+
+function scripts.decal_rappel_utils.y_descend(this, store)
+	S:queue(this.sound_events.rappel_down)
+
+	local string = E:create_entity(this.string_t)
+
+	string.target_id = this.id
+
+	queue_insert(store, string)
+
+	local shadow = E:create_entity(this.shadow_t)
+
+	shadow.pos.x, shadow.pos.y = this.target_pos.x, this.target_pos.y
+	shadow.render.sprites[1].ts = store.tick_ts
+
+	queue_insert(store, shadow)
+
+	local start_y = this.pos.y
+	local max_height = start_y - shadow.pos.y
+	local a = 1
+
+	U.y_ease_key(store, this.pos, "y", start_y, this.target_pos.y + this.offset_drop, this.descend_rappel_duration, this.descend_rappel_ease, function(dt, p)
+		local height = this.pos.y - shadow.pos.y
+		local scale = km.clamp(0.2, 1, (max_height - height) / max_height)
+
+		shadow.render.sprites[1].scale = V.vv(scale)
+
+		local dy = this.pos.y - this.target_pos.y
+		local s = this.render.sprites[1]
+		local flight_height = this.rappel_flight_height and this.rappel_flight_height or 180
+
+		if flight_height <= dy then
+			s.z = Z_FLYING_HEROES
+		else
+			s.z = Z_OBJECTS
+		end
+
+		s.sort_y_offset = -dy + this.offset_extra
+
+		for i, v in ipairs(string.render.sprites) do
+			local syo = v.offset.y
+
+			v.sort_y_offset = -syo
+
+			local dy = string.pos.y + v.offset.y - this.target_pos.y
+
+			if flight_height <= dy then
+				v.z = Z_FLYING_HEROES
+			else
+				v.z = Z_OBJECTS
+			end
+		end
+
+		if this.animation_rappel_descent_sequence and a <= #this.animation_rappel_descent_sequence and dt > this.animation_rappel_descent_sequence[a][2] then
+			U.animation_start(this, this.animation_rappel_descent_sequence[a][1], nil, store.tick_ts, nil, 1)
+
+			a = a + 1
+		end
+	end)
+
+	return shadow, string, max_height
+end
+
+function scripts.decal_rappel_utils.y_ascend(this, store, start_y, max_height, shadow, string)
+	S:queue(this.sound_events.rappel_up)
+	U.y_ease_key(store, this.pos, "y", this.pos.y, start_y, this.ascend_rappel_duration, this.ascend_rappel_ease, function(dt, p)
+		if shadow then
+			local height = this.pos.y - shadow.pos.y
+			local scale = km.clamp(0.1, 1, (max_height - height) / max_height)
+
+			shadow.render.sprites[1].scale = V.vv(scale)
+		end
+
+		local dy = this.pos.y - this.target_pos.y
+		local s = this.render.sprites[1]
+		local flight_height = 180
+
+		if flight_height <= dy then
+			s.z = Z_FLYING_HEROES
+		else
+			s.z = Z_OBJECTS
+		end
+
+		s.sort_y_offset = -dy + this.offset_extra
+
+		if string then
+			for i, v in ipairs(string.render.sprites) do
+				local dy = this.pos.y - v.offset.y - this.target_pos.y
+
+				v.sort_y_offset = -dy
+			end
+		end
+	end)
+end
+
+scripts.decal_rappel_string = {}
+
+function scripts.decal_rappel_string.insert(this, store, script)
+	local rhp = math.ceil(REF_H / this.string_parts)
+
+	for i = 1, rhp do
+		local s = E:clone_c("sprite")
+
+		s.animated = this.is_animated
+
+		if s.animated then
+			s.prefix = this.string_prefix
+			s.name = this.string_start_anim
+		elseif this.string_start_anim then
+			s.name = this.string_prefix .. "_" .. this.string_start_anim
+		else
+			s.name = this.string_prefix
+		end
+
+		s.loop = false
+		s.anchor.y = 0
+		s.offset.y = this.string_offset + (i - 1) * this.string_parts
+		s.scale = v(1, 1)
+		this.render.sprites[i] = s
+	end
+
+	return true
+end
+
+function scripts.decal_rappel_string.update(this, store, script)
+	local target = store.entities[this.target_id]
+
+	if not target or not target.pos then
+		queue_remove(store, this)
+
+		return
+	end
+
+	local eases = {
+		linear = function(x)
+			return x
+		end,
+		e_o_quad = function(x)
+			return 1 - (1 - x) * (1 - x)
+		end,
+		e_i_quad = function(x)
+			return x * x
+		end,
+		e_o_cubic = function(x)
+			return 1 - (1 - x) * (1 - x) * (1 - x)
+		end,
+		e_i_cubic = function(x)
+			return x * x * x
+		end,
+		e_i_quint = function(x)
+			return x * x * x * x * x
+		end,
+		e_i_circ = function(x)
+			return 1 - math.sqrt(1 - x * x)
+		end
+	}
+
+	local function map_range_01(start, finish, value)
+		return (value - start) / (finish - start)
+	end
+
+	local next_to_dissolve = 0
+	local last_dissolved = 0
+	local dissolving = false
+	local moving = false
+	local easing = false
+	local t, tm = 0, 0
+	local top_y = store.visible_coords and store.visible_coords.top or REF_H
+
+	this.pos = target.pos
+
+	while true do
+		target = store.entities[this.target_id]
+
+		if not target or this.dissolve then
+			this.pos = V.vclone(this.pos)
+			this.render.sprites[1].hidden = true
+			dissolving = true
+			moving = true
+			easing = true
+
+			local dist = top_y - this.pos.y
+			local start_y = this.pos.y
+
+			while easing do
+				local x = map_range_01(0, this.dissolution_duration, t)
+				local xm = map_range_01(0, this.dissolution_movement_duration, tm)
+				local p = eases[this.dissolution_ease](x)
+				local pm = eases[this.dissolution_movement_ease](xm)
+
+				next_to_dissolve = math.floor(#this.render.sprites * p)
+
+				if moving then
+					this.pos.y = start_y + dist * pm
+				end
+
+				if dissolving and last_dissolved < next_to_dissolve then
+					for i = last_dissolved + 1, next_to_dissolve do
+						local s = this.render.sprites[i]
+
+						s.name = "end"
+						s.ts = store.tick_ts
+						last_dissolved = i
+					end
+				end
+
+				if x >= 1 then
+					dissolving = false
+				end
+
+				if xm >= 1 then
+					moving = false
+				end
+
+				if x >= 1 and xm >= 1 then
+					easing = false
+				end
+
+				coroutine.yield()
+
+				t = t + store.tick_length
+				tm = tm + store.tick_length
+			end
+
+			U.y_wait(store, fts(10))
+			queue_remove(store, this)
+
+			return
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.controller_remote_balance_rappel_spawning = {}
+
+function scripts.controller_remote_balance_rappel_spawning.update(this, store, script)
+	local spawners = kr6_find_all_t(store, this.spawner_t)
+
+	table.sort(spawners, function(v1, v2)
+		return v1.spawner_id < v2.spawner_id
+	end)
+
+	while true do
+		if this.cache_invalidated then
+			this.cache_invalidated = false
+			spawners = kr6_find_all_t(store, this.spawner_t)
+
+			table.sort(spawners, function(v1, v2)
+				return v1.spawner_id < v2.spawner_id
+			end)
+		end
+
+		if this.spawn_rappel then
+			this.spawn_rappel = false
+
+			local mid = this.marker_id == -1 and math.random(1, #spawners) or this.marker_id
+			local sp = spawners[mid]
+
+			sp.amount = this.amount
+			sp.path_id = this.path_id
+			sp.trigger_spawn = true
+		end
+
+		coroutine.yield()
+	end
+end
+
+function scripts.controller_remote_balance_rappel_spawning.on_event(this, store, action, marker_id, path_id, amount)
+	this.spawn_rappel = true
+	this.marker_id = tonumber(marker_id)
+	this.path_id = tonumber(path_id)
+	this.amount = tonumber(amount)
+end
+
+scripts.controller_remote_balance_rappel_spawner = {}
+
+function scripts.controller_remote_balance_rappel_spawner.update(this, store, script)
+	local start_y = store.visible_coords and store.visible_coords.top or REF_H
+
+	while true do
+		if this.trigger_spawn then
+			this.trigger_spawn = false
+
+			local o = {}
+			local path = this.path_id
+			local current_node = P:nearest_nodes(this.pos.x, this.pos.y, {path}, nil, true)[1][3]
+
+			for i = 1, this.amount do
+				local subpath = get_random_round_robin(o, 3)
+				local r = math.random(-this.node_random, this.node_random)
+				local node = km.clamp(P:get_start_node(path), P:get_end_node(path), current_node + r)
+				local fpos = P:node_pos(path, subpath, node)
+				local decal = E:create_entity(this.spawn_decal)
+
+				decal.pos = V.v(fpos.x, start_y)
+				decal.target_pos = V.vclone(fpos)
+				decal.render.sprites[1].flip_x = this.flip_spawns and this.flip_spawns or false
+				decal.pi = path
+				decal.spi = subpath
+				decal.ni = node
+
+				queue_insert(store, decal)
+				U.y_wait(store, U.frandom(0, this.wait_random))
+			end
+		end
+
+		coroutine.yield()
+	end
 end
 
 return scripts

@@ -3736,9 +3736,15 @@ end
 ---@param x number
 function U.change_health_bar_offset_x_run_time(health_bar, x)
 	health_bar.offset.x = x
+	local new_x = health_bar.offset.x
+	if health_bar.frames[1] then
+		if health_bar.frames[1].bar_width then
+			new_x = new_x - health_bar.frames[1].bar_width * 0.5
+		end
+	end
 
 	for i = 1, #health_bar.frames do
-		health_bar.frames[i].offset.x = x
+		health_bar.frames[i].offset.x = new_x
 	end
 end
 

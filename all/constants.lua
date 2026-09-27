@@ -417,6 +417,8 @@ MOD_TYPE_TELEPORT = "teleport"
 MOD_TYPE_TIMELAPSE = "timelapse"
 MOD_TYPE_BUFF = "buff"
 MOD_TYPE_PROTECTION = "protection"
+-- 系统事件名（KR6 关卡用于监听敌人到达终点，如 stage 11 营地被打）
+SYSTEM_EVENT_ENEMY_REACHED_GOAL = "-system-event-enemy-reached-goal"
 -- 索敌模式
 MODE_FIND_FOREMOST = 0
 MODE_FIND_MAXHP = 1

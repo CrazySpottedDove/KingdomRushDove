@@ -3,7 +3,7 @@
 #	level properties																						
 	description	NH Rodri																					
 	lives	20																					
-	gold	850																					
+	gold	930																					
 	gems	150																					
 	enemy_prefix	enemy_																					
 	default_increment	1																					

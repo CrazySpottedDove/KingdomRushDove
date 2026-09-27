@@ -841,6 +841,10 @@ target.repair={}
 target.repair.cost=this.repair_cost
 target.repair.active=false
 end
+if target.ui then
+target.ui.can_click=true
+target.ui.force_can_select=true
+end
 end
 local function unblock_tower()
 local t=target.tower
@@ -850,6 +854,9 @@ t.blocked=nil
 t.block_count=0
 if target.tower and not target.tower_holder then
 t.can_be_sold=true
+end
+if target.ui then
+target.ui.force_can_select=nil
 end
 end
 end
@@ -916,6 +923,9 @@ local target=store.entities[this.modifier.target_id]
 if target then
 target.tower.type=target.tower._type
 target.tower._type=nil
+if target.ui then
+target.ui.force_can_select=nil
+end
 end
 return true
 end

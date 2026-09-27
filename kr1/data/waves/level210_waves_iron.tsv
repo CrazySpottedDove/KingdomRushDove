@@ -3,7 +3,7 @@
 #	level properties
 	description	Iron Rodri
 	lives	20
-	gold	2000
+	gold	2200
 	gems	150
 	enemy_prefix	enemy_
 	default_increment	1

@@ -134,6 +134,14 @@ function enemy:on_update(dt, ts, store)
 		local end_node = P.path_end_node[pi] or #P.paths[pi]
 
 		if end_node <= node_index and not P.path_connections[pi] and e.enemy.remove_at_goal_line then
+			local handlers = store.event_handlers and store.event_handlers[SYSTEM_EVENT_ENEMY_REACHED_GOAL]
+
+			if handlers then
+				for _, ev in pairs(handlers) do
+					ev.on_event(store.entities[ev.entity_id], store, ev.name, e)
+				end
+			end
+
 			signal.emit("enemy-reached-goal", e)
 			store.lives = km.clamp(-1000000, 1000000, store.lives - e.enemy.lives_cost)
 			store.player_gold = store.player_gold + e.enemy.gold
