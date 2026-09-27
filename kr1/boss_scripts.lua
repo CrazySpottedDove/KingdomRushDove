@@ -12973,6 +12973,9 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 		this.bossfight_ended = true
 	end
 
+	-- 推车阶段不可拦截（F_BLOCK）。转阶段卸车时移除，落地后可被士兵拦截。
+	U.bans_add(this.vis, F_BLOCK)
+
 	U.animation_start(this, "walk", nil, store.tick_ts, true)
 
 	while true do
@@ -13064,6 +13067,12 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 					if this._f_all_bans_active then
 						U.bans_remove(this.vis, F_ALL)
 						this._f_all_bans_active = false
+					end
+
+					-- KR6 卸车时会去掉 F_BLOCK（band old_bans bnot F_BLOCK）；这里用引用计数移除推车期的 F_BLOCK
+					if not this._f_block_bans_removed then
+						U.bans_remove(this.vis, F_BLOCK)
+						this._f_block_bans_removed = true
 					end
 
 					this.is_pushing_cart = false

@@ -3087,6 +3087,16 @@ return {
 		tt_title = _("TOWER_CROCS_EATEN_NAME"),
 		tt_desc = _("TOWER_CROCS_EATEN_DESCRIPTION")
 	}}},
+	tower_broken_stage_208 = {{{
+		check = "main_icons_0019",
+		action_arg = "",
+		action = "tw_repair",
+		halo = "glow_ico_main",
+		image = "kr6_quickmenu_main_icon_water",
+		place = 5,
+		tt_title = _("TOWER_BROKEN_NAME"),
+		tt_desc = _("TOWER_BROKEN_DESCRIPTION")
+	}}},
 	tower_priests_barrack = {{M(tpl.buy_soldier, {
 		image = "kr5_main_icons_0041",
 		action_arg = "soldier_priests_barrack",

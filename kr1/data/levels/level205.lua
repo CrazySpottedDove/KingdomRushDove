@@ -924,7 +924,7 @@ tt.particle_system.particle_lifetime={20,25}
 tt.particle_system.scale_var={0.8999999999999999,1.328571428571427}
 tt.particle_system.spin={1,-0.5}
 tt.particle_system.z=3500
-self.manual_hero_insertion=(store.level_mode==GAME_MODE_CAMPAIGN)
+self.manual_hero_insertion=false
 end
 function level:update(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then

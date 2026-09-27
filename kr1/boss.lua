@@ -4190,7 +4190,9 @@ tt.unit.size = UNIT_SIZE_LARGE
 tt.unit.fade_time_after_death = 3
 tt.unit.fade_duration_after_death = 0.3
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
-tt.vis.bans = bor(F_BLOCK, F_INSTAKILL, F_STUN)
+-- F_BLOCK 不内联到模板：推车阶段由脚本 bans_add(F_BLOCK)，卸车（转阶段）时 bans_remove(F_BLOCK)，
+-- 否则引用计数接口无法把内联在模板默认值里的 F_BLOCK 去掉，落地后仍不可拦截。
+tt.vis.bans = bor(F_INSTAKILL, F_STUN)
 tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].disabled = true
 tt.melee.attacks[1].cooldown = 1
@@ -4330,7 +4332,7 @@ tt.modifier.duration = 5
 tt = RT("enemy_boss_stage_10", "boss")
 AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 1
-tt.enemy.lives_cost = 999
+tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)
 tt.health.armor = 0
 tt.health.dead_lifetime = 100
@@ -4450,7 +4452,7 @@ tt.sound_events.free_tower = "Stage10FreeTower"
 tt = RT("enemy_boss_stage_11", "boss")
 AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 1
-tt.enemy.lives_cost = 999
+tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(75, -5)
 tt.health.armor = 0
 tt.health.magic_armor = 0.76
@@ -4522,7 +4524,7 @@ tt.loss_positions = {
 tt = RT("enemy_boss_stage_13", "boss")
 AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 1
-tt.enemy.lives_cost = 999
+tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)
 tt.health.armor = 0
 tt.health.dead_lifetime = 100
@@ -4650,8 +4652,11 @@ tt.bullet.particles_name = "ps_boss_stage_13_flying_shield"
 tt.bullet.hide_radius = 0
 tt.bullet.hit_fx = nil
 tt.bullet.hit_decal = nil
+-- 敌方炮弹：伤害目标是玩家的士兵/英雄，必须用 enemy_bomb.update（damage_bans=F_ENEMY）。
+-- 用 scripts.bomb.update 只会对敌人（F_ENEMY）造成伤害。
+tt.bullet.damage_bans = F_ENEMY
 tt.main_script.insert = scripts.bomb.insert
-tt.main_script.update = scripts.bomb.update
+tt.main_script.update = scripts.enemy_bomb.update
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = nil
 tt.sound_events.insert = nil
@@ -4674,8 +4679,10 @@ tt.bullet.anim_rising = "jumpup"
 tt.bullet.anim_rising_loops = false
 tt.bullet.anim_falling = "jumpdown"
 tt.bullet.anim_falling_loops = false
+-- 敌方炮弹：boss 跳跃落点伤害玩家士兵/英雄，用 enemy_bomb.update（damage_bans=F_ENEMY）。
+tt.bullet.damage_bans = F_ENEMY
 tt.main_script.insert = scripts.bomb.insert
-tt.main_script.update = scripts.bomb.update
+tt.main_script.update = scripts.enemy_bomb.update
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = nil
 tt.sound_events.insert = nil

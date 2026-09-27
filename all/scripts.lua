@@ -2922,7 +2922,7 @@ function scripts.enemy_bomb.update(this, store)
 
 		if b.align_with_trajectory then
 			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
-		else
+		elseif b.rotation_speed then
 			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
 		end
 
