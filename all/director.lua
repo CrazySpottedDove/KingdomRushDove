@@ -106,7 +106,8 @@ function director:init(params)
 			level_idx = tonumber(params.autoplay),
 			level_mode = params.mode and tonumber(params.mode) or GAME_MODE_CAMPAIGN,
 			level_difficulty = params.diff and tonumber(params.diff) or DIFFICULTY_NORMAL,
-			auto_click = not params.no_click
+			auto_click = not params.no_click,
+			build_towers = not params.no_towers
 		}
 	elseif params.level or params.screen then
 		if not storage:load_slot(1) then

@@ -12897,8 +12897,6 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 
 	simulation:queue_insert_entity(sound_controller)
 
-	local old_bans = this.vis.bans
-
 	local function walk_cart_break_fn(store, this)
 		local nodes_to_end = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
@@ -12993,7 +12991,11 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 				if this.enraged then
 					this.triggered_explosion = true
 					this.trigger_deselect = true
-					this.vis.bans = F_ALL
+
+					if not this._f_all_bans_active then
+						U.bans_add(this.vis, F_ALL)
+						this._f_all_bans_active = true
+					end
 
 					S:queue(this.sound_explosion)
 
@@ -13031,8 +13033,8 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 					b.render.sprites[1].hidden = true
 					this.render.sprites[1].hidden = false
 					this.render.sprites[1].prefix = "boss_stage_208Def"
-					this.health_bar.offset.x = 0
-					this.health_bar.offset.y = 130
+					U.change_health_bar_offset_x_run_time(this.health_bar, 0)
+					U.change_health_bar_offset_run_time(this.health_bar, 130)
 					this.unit.hit_offset.x = 0
 					this.unit.marker_offset.x = 0
 					this.unit.mod_offset.x = 0
@@ -13058,7 +13060,12 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 					U.y_animation_play(this, "land_get_up", nil, store.tick_ts, 1)
 
 					this.health.ignore_damage = false
-					this.vis.bans = band(old_bans, bnot(F_BLOCK))
+
+					if this._f_all_bans_active then
+						U.bans_remove(this.vis, F_ALL)
+						this._f_all_bans_active = false
+					end
+
 					this.is_pushing_cart = false
 					this.trigger_deselect = nil
 
@@ -13074,8 +13081,11 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 
 					S:queue(this.sound_angry)
 
-					old_bans = this.vis.bans
-					this.vis.bans = F_ALL
+					if not this._f_all_bans_active then
+						U.bans_add(this.vis, F_ALL)
+						this._f_all_bans_active = true
+					end
+
 					this.health.ignore_damage = true
 
 					U.y_animation_play(this, "angry", nil, store.tick_ts, 1)

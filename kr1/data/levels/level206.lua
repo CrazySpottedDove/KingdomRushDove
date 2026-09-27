@@ -470,7 +470,7 @@ end
 end
 U.y_wait(store,fts(1))
 if this.chain_pos<this.max_chain_length and target then
-local chain_target=U.find_nearest_enemy(store,target.pos,0,this.chain_range,this.vis_flags,this.vis_bans,function(e,o)
+local chain_target=U.find_nearest_enemy(store,target.pos,0,this.chain_range,this.bullet.vis_flags,this.bullet.vis_bans,function(e,o)
 return source and source.chain_targets and not table.contains(source.chain_targets,e.id) and e.template_name~="enemy_nivus_broom" and e.template_name~="enemy_nivus_broom_flying"
 end)
 if chain_target then
@@ -801,6 +801,8 @@ tt.track_target=true
 tt.ray_duration=10
 tt.max_chain_length=5
 tt.chain_range=120
+tt.bullet.vis_flags=F_RANGED
+tt.bullet.vis_bans=F_BOSS
 tt.chain_ray_t="bullet_nivus_brooms_short"
 tt.transform_fx="fx_nivus_brooms_magic"
 tt=E:register_t_hot("bullet_nivus_brooms_short","bullet_nivus_brooms_long",true)

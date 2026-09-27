@@ -5,6 +5,7 @@
 --   love . -autoplay 201 -mode 3      -- iron
 --   love . -autoplay 201 -diff 3      -- 难度
 --   love . -autoplay 201 -noclick     -- 关闭自动点击（只测纯战斗）
+--   love . -autoplay 201 -notowers    -- 不铺塔（只测无塔时敌人推平/结算）
 --
 -- 做的事就一件：跳过其它所有场景，完整跑一局，看看有没有报错。
 --   * 走一遍 game 的初始化（关卡数据 / 资源 / 骨骼 / 模拟器）
@@ -156,6 +157,7 @@ function autoplay:init(w, h, done_callback)
 	stats.level_difficulty = level_difficulty
 
 	self.auto_click = (args.auto_click ~= false)
+	self.build_towers_enabled = (args.build_towers ~= false)
 	self.next_click_ts = 0
 	stats.auto_clicks = 0
 
@@ -475,7 +477,10 @@ function autoplay:update(dt)
 
 		-- 等关卡加载协程彻底跑完，再铺塔
 		if self.warmup_frames >= 10 and self.game.progress >= 1 then
-			self:build_towers()
+			if self.build_towers_enabled then
+				self:build_towers()
+			end
+
 			self.phase = "run"
 		end
 

@@ -1,0 +1,272 @@
+#	COMANDOS					1 - Izquierda a Centro (Mid / Rápidos)					2 - Arriba a Centro (MR / Rápidos / No Res)					3 - Derecha a Centro (Armor / Lentos)							
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3				
+#	level properties																						
+	description	NH Rodri																					
+	lives	20																					
+	gold	850																					
+	gems	150																					
+	enemy_prefix	enemy_																					
+	default_increment	1																					
+	default_interval	20																					
+#	expected gold	1200																					
+#	stage total gold	1124																					
+#	stage gold curve																						
+#	WAVE 2					Bandit x12 S. Archer x6										Blackguard x8 Bandit x12							
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg	orc_shaman		orc_wildling	rider_goblin	ogre_kr6
+#	cant.					24	8	0	6		0	0	0	0		0	0	0	0		0	0	0
+#	gold	274				120	64	0	90		0	0	0	0		0	0	0	0		0	0	0
+	wave		1		-1																		
+					0													bandit_kr6					
+					0.6												bandit_kr6		bandit_kr6				
+					1												bandit_kr6		bandit_kr6				
+					0.6													bandit_kr6					
+					4												blackguard						
+					1														blackguard				
+					2														blackguard				
+					1												blackguard						
+					2		bandit_kr6		bandit_kr6														
+					0.6		bandit_kr6		bandit_kr6														
+					0.6		bandit_kr6		bandit_kr6														
+					4		shadow_archer_kr6																
+					1				shadow_archer_kr6														
+					1			shadow_archer_kr6															
+					10												blackguard						
+					1														blackguard				
+					1												blackguard						
+					1														blackguard				
+					3												bandit_kr6		bandit_kr6				
+					0.6												bandit_kr6		bandit_kr6				
+					0.6												bandit_kr6		bandit_kr6				
+					5		bandit_kr6		bandit_kr6														
+					0.6				bandit_kr6														
+					0.6		bandit_kr6																
+					0.6		bandit_kr6		bandit_kr6														
+					4			shadow_archer_kr6															
+					1		shadow_archer_kr6																
+					1				shadow_archer_kr6														
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+#	WAVE 5										Wulf x18					Headhunter x3 Shadow Archers x8							
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg	orc_shaman		orc_wildling	rider_goblin	ogre_kr6
+#	cant.					0	0	0	8		0	0	3	0		0	24	0	0		0	0	0
+#	gold	456				0	0	0	120		0	0	240	0		0	96	0	0		0	0	0
+	wave		2		28																		
+					0							wulf						headhunter					
+					0.5								wulf										
+					0.5							wulf											
+					0.5								wulf										
+					2							wulf											
+					0.5								wulf										
+					0.5							wulf											
+					0.5								wulf				shadow_archer_kr6						
+					1.2														shadow_archer_kr6				
+					1.2												shadow_archer_kr6						
+					1.2														shadow_archer_kr6				
+					13									wulf			headhunter						
+					0.5								wulf										
+					0.5									wulf									
+					0.5								wulf										
+					2									wulf									
+					0.5								wulf										
+					0.5									wulf									
+					0.5								wulf										
+					0																		
+					9							wulf						headhunter					
+					0.6									wulf									
+					0.6							wulf											
+					0.6									wulf									
+					0.6							wulf											
+					0.6									wulf									
+					0.6							wulf											
+					0.6									wulf			shadow_archer_kr6						
+					1.2														shadow_archer_kr6				
+					1.2												shadow_archer_kr6						
+					1.2														shadow_archer_kr6				
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+#	WAVE 8										Worg x6 Wildling x4					Headhunter x3 O. Warrior x12							
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg	orc_shaman		orc_wildling	rider_goblin	ogre_kr6
+#	cant.					0	0	0	0		0	2	3	0		0	0	6	0		4	0	0
+#	gold	460				0	0	0	0		0	80	240	0		0	0	60	0		80	0	0
+	wave		3		24																		
+					0									orc_wildling			headhunter						
+					1.2							worg											
+					1.2								worg										
+					1.2									orc_wildling				crowcaller					
+					1							worg											
+					1														headhunter				
+					24													headhunter					
+					3												crowcaller						
+					3							orc_wildling											
+					2									orc_wildling									
+					3								worg										
+					1							worg											
+					1.2								worg										
+																							
+																							
+																							
+																							
+#	WAVE 10					Goblin x20 O. Warrior x10 S. Blade x14																	
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg	orc_shaman		orc_wildling	rider_goblin	ogre_kr6
+#	cant.					0	0	20	0		0	0	0	0		10	0	0	0		0	0	0
+#	gold	350				0	0	200	0		0	0	0	0		150	0	0	0		0	0	0
+	wave		4		30																		
+					0			shadow_blades															
+					0.6		shadow_blades		shadow_blades														
+					0.6		shadow_blades		shadow_blades														
+					2			shadow_blades															
+					0.6		shadow_blades																
+					0.6				shadow_blades														
+					0.6		shadow_blades																
+					0.6				shadow_blades														
+					0		orc_warrior																
+					1				orc_warrior														
+					4			orc_warrior															
+					2		orc_warrior		orc_warrior														
+					0																		
+					5		shadow_blades																
+					0.6				shadow_blades														
+					0.6		shadow_blades																
+					0.6				shadow_blades														
+					1		orc_warrior		orc_warrior														
+					1.5		orc_warrior		orc_warrior														
+					1.5			orc_warrior															
+					6		shadow_blades		shadow_blades														
+					0.8		shadow_blades		shadow_blades														
+					0.8		shadow_blades		shadow_blades														
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+																							
+#	WAVE 12										Wulf x18 S. Blade x12					O. Warrior x8 O. Wildling x4							
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg	orc_shaman		orc_wildling	rider_goblin	ogre_kr6
+#	cant.					0	0	34	0		0	0	0	0		8	18	0	0		4	0	0
+#	gold	612				0	0	340	0		0	0	0	0		120	72	0	0		80	0	0
+	wave		5		25																		
+					0							shadow_blades											
+					0.6									shadow_blades									
+					0.6								shadow_blades										
+					0.6							shadow_blades											
+					0.6									shadow_blades									
+					0.6								shadow_blades				orc_wildling						
+					5						wulf												
+					0.6		shadow_blades				wulf												
+					0.6			shadow_blades			wulf												
+					0.6				shadow_blades		wulf								orc_wildling				
+					0.6		shadow_blades				wulf												
+					0.6			shadow_blades			wulf						orc_warrior						
+					1.2														orc_warrior				
+					1.2													orc_warrior					
+					1.2												orc_warrior						
+					4						wulf												
+					0.6						wulf												
+					0.6						wulf												
+					0.6						wulf												
+					0.6						wulf												
+					0.6						wulf												
+					6							shadow_blades		shadow_blades									
+					0.6		shadow_blades						shadow_blades										
+					0.6				shadow_blades			shadow_blades		shadow_blades									
+					0.6		shadow_blades						shadow_blades										
+					0.6			shadow_blades										orc_warrior					
+					1.2				shadow_blades								orc_warrior						
+					1.2														orc_warrior				
+					1.2													orc_warrior					
+					3							shadow_blades		shadow_blades									
+					0.6							shadow_blades		shadow_blades									
+					0.6							shadow_blades		shadow_blades									
+					1.5												orc_wildling						
+					3		shadow_blades				wulf												
+					0.6			shadow_blades			wulf												
+					0.6		shadow_blades				wulf												
+					0.6				shadow_blades		wulf												
+					0.6			shadow_blades			wulf								orc_wildling				
+					0.6		shadow_blades				wulf												
+																							
+#	WAVE 15					Headhunter x2 //Bandit x26 S. Blades x14					Worg x18 O. Wildling x6					Headhunter x5 O. Wildling x6							
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg	orc_shaman		orc_wildling	rider_goblin	ogre_kr6
+#	cant.					0	0	20	0		0	0	7	0		0	0	12	0		10	0	0
+#	gold	1080				0	0	200	0		0	0	560	0		0	0	120	0		200	0	0
+	wave		6		25																		
+					0			headhunter				worg	orc_wildling										
+					1									worg									
+					1								orc_wildling										
+					1		shadow_blades					worg					headhunter						
+					1				shadow_blades					worg									
+					1								orc_wildling										
+					1		shadow_blades		shadow_blades			worg											
+					1		shadow_blades		shadow_blades					worg									
+					8													headhunter					
+					2														orc_wildling				
+					3												orc_wildling						
+					3														orc_wildling				
+					10			headhunter					orc_wildling										
+					1							worg					headhunter						
+					1									worg									
+					3		shadow_blades						orc_wildling										
+					1				shadow_blades			worg											
+					1		shadow_blades							worg					headhunter				
+					1				shadow_blades				orc_wildling										
+					1		shadow_blades		shadow_blades			worg											
+					1		shadow_blades		shadow_blades					worg									
+					12													headhunter					
+					1		shadow_blades										orc_wildling						
+					0.7				shadow_blades														
+					0.7		shadow_blades																
+					0.7				shadow_blades														
+					0.7		shadow_blades																
+					0.7				shadow_blades														
+																							
+																							
+#	59.5																						

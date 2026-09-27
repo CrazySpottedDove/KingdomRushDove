@@ -1,0 +1,735 @@
+#	COMANDOS					1 - Derecha a Izquierda por Arriba					2 - Derecha a Izquierda por Abajo					3 - Abajo Derecha a Izquierda por Abajo					4 - Abajo Centro a Izquierda por Abajo					5 - Abajo Izquierda a Izquierda					6 - Abajo Derecha a Izquierda por Arriba					7 - Derecha Arriba a Izquierda por Arriba					8 - Derecha Arriba a Izquierda por Arriba
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3
+#	level properties
+	description	main JC
+	lives	20
+	gold	1000
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	2860
+#	stage gold curve
+#	WAVE 1					Troll Warrior x10					Troll Warrior x10
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					20	0	0	0		0	0	0	0		0	0	0	0		0	0	0
+#	gold	160				160	0	0	0		0	0	0	0		0	0	0	0		0	0	0
+	wave		1		-1
+					0	troll_warrior
+					1	troll_warrior
+					1	troll_warrior
+					1	troll_warrior
+					6						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					10			troll_warrior
+					1		troll_warrior		troll_warrior
+					1			troll_warrior
+					1		troll_warrior		troll_warrior
+					8								troll_warrior
+					1							troll_warrior		troll_warrior
+					1							troll_warrior		troll_warrior
+					1								troll_warrior
+
+
+
+
+
+
+
+
+
+
+#	WAVE 2					T. Champion x3
+T. Warrior x20
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					20	3	0	0		0	0	0	0		0	0	0	0		0	0	0
+#	gold	250				160	90	0	0		0	0	0	0		0	0	0	0		0	0	0
+	wave		2		25
+					0		troll_warrior		troll_warrior
+					1		troll_warrior		troll_warrior
+					0			troll_champion
+					0
+					12		troll_warrior		troll_warrior
+					1		troll_warrior		troll_warrior
+					1		troll_warrior		troll_warrior
+					0
+					12		troll_warrior		troll_warrior
+					0			troll_champion
+					1		troll_warrior		troll_warrior
+					12		troll_warrior		troll_warrior
+					1		troll_warrior		troll_warrior
+					1		troll_warrior		troll_warrior
+					0			troll_champion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 3					T. Champion x5					T. Warrior x15
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					15	5	0	0		0	0	0	0		0	0	0	0		0	0	0
+#	gold	270				120	150	0	0		0	0	0	0		0	0	0	0		0	0	0
+	wave		3		28
+					0							troll_warrior
+					1								troll_warrior
+					1							troll_warrior
+					1								troll_warrior
+					1							troll_warrior
+					0		troll_champion
+					2				troll_champion
+					6								troll_warrior
+					1							troll_warrior
+					1							troll_warrior
+					1								troll_warrior
+					1							troll_warrior
+					11			troll_champion
+					2		troll_champion
+					2				troll_champion
+					10							troll_warrior
+					1							troll_warrior
+					1								troll_warrior
+					1								troll_warrior
+					1							troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 4										T. Warior x14					T. Warrior x8																				T. Champion x3
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					22	0	0	0		0	0	0	0		0	0	0	0		0	0	0
+#	gold	176				176	0	0	0		0	0	0	0		0	0	0	0		0	0	0
+	flags															n	n	n	n		n	n	n	n		n	n	n	n		n	n	n	n							n	n	n	n
+	wave		4		26
+					2																																	troll_champion_jumper_stage_09
+					0
+					0						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					2						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					8											troll_warrior
+					1											troll_warrior
+					1											troll_warrior
+					1											troll_warrior
+					3											troll_warrior																						troll_champion_jumper_stage_09
+					1											troll_warrior
+					1											troll_warrior
+					1											troll_warrior
+					0
+					12						troll_warrior																											troll_champion_jumper_stage_09
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 5																				T. Warrior x										T. Warrior x					T. Champion x4
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					36	0	0	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	288				288	0	0	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		5		22
+					0																																	troll_champion_jumper_stage_09
+					0																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					0																																	troll_champion_jumper_stage_09
+					2.5																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					1																troll_warrior
+					2																troll_warrior
+					1																troll_warrior
+					1																troll_warrior
+					3																troll_warrior
+					1																troll_warrior
+					1																troll_warrior
+					1																troll_warrior
+					6																troll_warrior
+					0																																	troll_champion_jumper_stage_09
+					1																troll_warrior
+					1																troll_warrior
+					1																troll_warrior
+					0																																	troll_champion_jumper_stage_09
+					3																troll_warrior										troll_warrior
+					1																troll_warrior										troll_warrior
+					1																troll_warrior										troll_warrior
+					1																troll_warrior										troll_warrior
+					1																troll_warrior										troll_warrior
+					1																troll_warrior										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 6										T. Warrior x																				T. Warrior x					T. Glider x8
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					30	0	8	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	272				240	0	32	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		6		26
+					0																															troll_glider
+					2																															troll_glider
+					2																															troll_glider
+					2																															troll_glider
+					4						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+					1						troll_warrior																				troll_warrior
+					1																											troll_warrior
+					1																													troll_warrior
+					1																												troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					5																															troll_glider
+					2																															troll_glider
+					2																															troll_glider
+					2																															troll_glider
+					4																											troll_warrior
+					1																													troll_warrior
+					1																											troll_warrior
+					2																												troll_warrior
+					1																													troll_warrior
+					1																											troll_warrior
+					1																												troll_warrior
+					1																													troll_warrior
+					0
+					0
+					0
+					6						troll_warrior															troll_warrior
+					1						troll_warrior															troll_warrior
+					1						troll_warrior															troll_warrior
+					2						troll_warrior															troll_warrior
+					1						troll_warrior
+					1						troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 7					T. Champion x3					T. Champion x3																									T. Glider x10
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					0	6	6	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	204				0	180	24	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		7		25
+					0			troll_champion																																			troll_glider
+					0																																	troll_champion_jumper_stage_09
+					3							troll_champion																										troll_champion_jumper_stage_09					troll_glider
+					0
+					6																															troll_glider
+					2																															troll_glider
+					2																															troll_glider
+					0
+					0
+					12							troll_champion		troll_champion																								troll_champion_jumper_stage_09					troll_glider
+					2																																	troll_champion_jumper_stage_09					troll_glider
+					0
+					0
+					8		troll_champion		troll_champion																											troll_glider
+					2																															troll_glider
+					2																															troll_glider
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 8																				T. Warrior x12					T. Warrior x12					T. Warrior x12					T. Champion x8
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					30	0	0	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	240				240	0	0	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		8		22
+					0																										troll_warrior							troll_champion_jumper_stage_09
+					1																										troll_warrior
+					1.5																										troll_warrior
+					1																					troll_warrior					troll_warrior							troll_champion_jumper_stage_09
+					1																					troll_warrior					troll_warrior
+					1																					troll_warrior
+					1.5																troll_warrior					troll_warrior												troll_champion_jumper_stage_09
+					1																troll_warrior					troll_warrior
+					1																troll_warrior
+					1.5																troll_warrior
+					1																troll_warrior
+					0
+					2																																	troll_champion_jumper_stage_09
+					6																																	troll_champion_jumper_stage_09
+					9																										troll_warrior							troll_champion_jumper_stage_09
+					1																										troll_warrior
+					1																										troll_warrior
+					1.5																troll_warrior										troll_warrior
+					1																troll_warrior										troll_warrior
+					1																troll_warrior					troll_warrior
+					1																troll_warrior					troll_warrior												troll_champion_jumper_stage_09
+					1																troll_warrior					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+					0
+					3																																	troll_champion_jumper_stage_09
+					6																																	troll_champion_jumper_stage_09
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 9										T. Crusher x1					T. Warrior x12					T. Warrior x8					T. Warrior x8
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					28	0	0	1		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	354				224	0	0	130		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		9		26
+					0								troll_crusher
+					10												troll_warrior					troll_warrior		troll_warrior
+					1														troll_warrior				troll_warrior
+					1												troll_warrior					troll_warrior		troll_warrior
+					1														troll_warrior				troll_warrior
+					1												troll_warrior					troll_warrior		troll_warrior
+					1														troll_warrior
+					6														troll_warrior								troll_warrior		troll_warrior
+					1												troll_warrior											troll_warrior
+					1														troll_warrior								troll_warrior		troll_warrior
+					1												troll_warrior											troll_warrior
+					1														troll_warrior								troll_warrior		troll_warrior
+					1												troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 10
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					23	0	5	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	204				184	0	20	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		10		25
+					0																																						troll_glider
+					2																																						troll_glider
+					2																																						troll_glider
+					2																															troll_glider
+					2																															troll_glider
+					1																						troll_warrior
+					1																troll_warrior								troll_warrior
+					1																troll_warrior							troll_warrior
+					2																troll_warrior						troll_warrior
+					1																troll_warrior								troll_warrior
+					1																troll_warrior							troll_warrior
+					8
+					1																															troll_glider
+					0
+					1																															troll_glider
+					0
+					1																															troll_glider
+					0
+					8																							troll_warrior															troll_glider
+					1																troll_warrior						troll_warrior
+					1																troll_warrior								troll_warrior														troll_glider
+					2																troll_warrior							troll_warrior
+					1																troll_warrior						troll_warrior																troll_glider
+					1																troll_warrior								troll_warrior
+					1																							troll_warrior															troll_glider
+
+
+
+
+
+
+
+
+
+
+#	WAVE 11					F. Herald x1
+T. Champion x2										T. Warrior x12																				T. Champion x4
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					12	2	0	0		1	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	226				96	60	0	0		70	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		11		22
+					0		troll_champion		troll_champion																													troll_champion_jumper_stage_09
+					3			frost_icecaller																														troll_champion_jumper_stage_09
+					3																		troll_warrior
+					1																	troll_warrior
+					1																			troll_warrior
+					1																	troll_warrior
+					1																			troll_warrior
+					1																	troll_warrior
+					5												troll_warrior																					troll_champion_jumper_stage_09
+					1														troll_warrior
+					1												troll_warrior
+					1														troll_warrior																			troll_champion_jumper_stage_09
+					1												troll_warrior
+					1														troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 12																				T. Warrior x10					T. Warrior x10
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					10	4	0	0		1	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	270				80	120	0	0		70	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		12		20
+					0							troll_champion		troll_champion
+					2								frost_icecaller
+					2							troll_champion		troll_champion
+					2																troll_warrior					troll_warrior												troll_champion_jumper_stage_09
+					1																troll_warrior					troll_warrior
+					1																troll_warrior					troll_warrior												troll_champion_jumper_stage_09
+					1																troll_warrior					troll_warrior
+					1																troll_warrior					troll_warrior
+					8																troll_warrior																	troll_champion_jumper_stage_09
+					1																troll_warrior
+					1																troll_warrior																	troll_champion_jumper_stage_09
+					1																troll_warrior
+					1																troll_warrior
+					6																					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 13										T. Champion x6																									T. Champion x6
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					0	6	0	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	180				0	180	0	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		13		28
+					0									troll_champion
+					2							troll_champion
+					2								troll_champion
+					4																																	troll_champion_jumper_stage_09
+					2																																	troll_champion_jumper_stage_09
+					2																																	troll_champion_jumper_stage_09
+					12																																	troll_champion_jumper_stage_09
+					2																																	troll_champion_jumper_stage_09
+					2							troll_champion		troll_champion																								troll_champion_jumper_stage_09
+					2								troll_champion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 14					T. Warrior x12															T. Warrior x12					T. Warrior x12					T. Warrior x12										Glider x 8
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					48	0	0	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	384				384	0	0	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		14		22
+					0																											troll_warrior											troll_glider
+					0.8																												troll_warrior
+					0.8																												troll_warrior										troll_glider
+					0.8																											troll_warrior
+					0.8																											troll_warrior											troll_glider
+					0.8																												troll_warrior
+					0.8																																						troll_glider
+					4.2			troll_warrior
+					1				troll_warrior
+					1				troll_warrior
+					1			troll_warrior													troll_warrior
+					1			troll_warrior													troll_warrior
+					1				troll_warrior												troll_warrior
+					1																troll_warrior					troll_warrior
+					1																troll_warrior					troll_warrior
+					1																troll_warrior					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+					8	troll_warrior
+					1	troll_warrior
+					1	troll_warrior															troll_warrior																						troll_glider
+					1	troll_warrior															troll_warrior
+					1	troll_warrior															troll_warrior										troll_warrior												troll_glider
+					1	troll_warrior															troll_warrior										troll_warrior
+					1																troll_warrior										troll_warrior												troll_glider
+					1																troll_warrior										troll_warrior
+					1																										troll_warrior												troll_glider
+					1																					troll_warrior					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+					1																					troll_warrior
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 15					Crusher x1
+F. Herald x1					F. Herald x1					T. Warrior x															T. Warrior x					Glider x
+#	enemies					troll_warrior	troll_champion	troll_glider	troll_crusher		frost_icecaller
+#	cant.					36	0	10	1		2	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+#	gold	598				288	0	40	130		140	0	0	0		0	0	0	0		0	0	0			0	0	0			0	0	0			0	0	0
+	wave		15		25
+					0			troll_crusher
+					2												troll_warrior
+					1														troll_warrior
+					1												troll_warrior
+					1														troll_warrior
+					1												troll_warrior
+					1														troll_warrior
+					1												troll_warrior																			troll_glider
+					1																															troll_glider
+					1.5																															troll_glider
+					1.5																															troll_glider
+					1.5																															troll_glider
+					1.5																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					2																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					2				frost_icecaller
+					3							frost_icecaller									troll_warrior																						troll_glider
+					1																troll_warrior																						troll_glider
+					1																troll_warrior
+					1																troll_warrior																						troll_glider
+					1																troll_warrior																						troll_glider
+					1																troll_warrior
+					0																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					1																										troll_warrior
+					0
+					2																										troll_warrior					troll_glider
+					1																troll_warrior										troll_warrior					troll_glider
+					1																troll_warrior										troll_warrior					troll_glider
+					1																troll_warrior										troll_warrior					troll_glider
+					1																troll_warrior															troll_glider
+					1																troll_warrior
+					1																troll_warrior
+					1																troll_warrior

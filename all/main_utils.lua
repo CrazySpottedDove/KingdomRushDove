@@ -118,7 +118,7 @@ function mu.parse_args(arg, params)
 		params.atlas_manager_on = true
 	end
 
-	-- 无人值守自动测试：-autoplay <关卡号>[-mode <模式>][-diff <难度>][-noclick]
+	-- 无人值守自动测试：-autoplay <关卡号>[-mode <模式>][-diff <难度>][-noclick][-notowers]
 	-- 直接进入 autoplay 场景，跳过其它所有场景。
 	if has_arg("autoplay") then
 		params.autoplay = argv("autoplay")
@@ -126,6 +126,10 @@ function mu.parse_args(arg, params)
 
 	if has_arg("noclick") then
 		params.no_click = true
+	end
+
+	if has_arg("notowers") then
+		params.no_towers = true
 	end
 end
 

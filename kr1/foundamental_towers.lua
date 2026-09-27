@@ -201,6 +201,13 @@ tt.tower.terrain_style = TERRAIN_STYLE_KR6_TERRAIN_1_3
 tt.tower_holder.unblock_price = 60
 tt.render.sprites[1].name = "kr6_build_terrain_blocked_0003"
 
+-- kr6 地形 2_1 的 blocked 塔位（关卡 209 柱子敲碎后生成）
+tt = E:register_t("tower_holder_blocked_terrain_2_1", "tower_holder_blocked")
+tt.tower.type = "holder_blocked_sea_of_trees"
+tt.tower.terrain_style = TERRAIN_STYLE_KR6_TERRAIN_2_1
+tt.tower_holder.unblock_price = 100
+tt.render.sprites[1].name = "kr6_build_terrain_blocked_0006"
+
 tt = RT("tower_build_archer", "tower_build")
 tt.build_name = "tower_archer_1"
 tt.render.sprites[2].name = "tower_constructing_0004"

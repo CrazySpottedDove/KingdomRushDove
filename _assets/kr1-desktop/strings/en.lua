@@ -8880,5 +8880,26 @@ return {
 	SOLDIER_STAGE_208_TEMPLAR_SWORDSMAN_1_NAME = "ARMAND",
 	SOLDIER_STAGE_208_TEMPLAR_SWORDSMAN_2_NAME = "BERTRAND",
 	SOLDIER_STAGE_208_TEMPLAR_SWORDSMAN_12_NAME = "WILLIAM",
-	TOWER_STAGE_208_CATAPULT_BUY_NAME = "STONE THROW"
+	TOWER_STAGE_208_CATAPULT_BUY_NAME = "STONE THROW",
+	-- ===== KR6 stage 09 =====
+	LEVEL_209_TITLE = "9. PATH OF PERIL",
+	LEVEL_209_HISTORY = "The treacherous path through the mountains will lead us to the Stormcloud Temple from inside, but we'll be completely isolated until then.\n\nWell, except for the territorial Trolls that seem to dwell here, and won't tolerate our presence. We must prepare for the worst.",
+	ENEMY_TROLL_WARRIOR_NAME = "Troll Warrior",
+	ENEMY_TROLL_WARRIOR_DESCRIPTION = "These hunters from the deep mountains favor spears to hunt their prey.",
+	ENEMY_TROLL_WARRIOR_EXTRA = "- Health regeneration",
+	ENEMY_TROLL_CHAMPION_NAME = "Troll Champion",
+	ENEMY_TROLL_CHAMPION_DESCRIPTION = "Stronger than the average troll, their athletic prowess allows them to throw their axes over long distances.",
+	ENEMY_TROLL_CHAMPION_EXTRA = "- Health regeneration\n- Throws axes from afar",
+	ENEMY_TROLL_CHAMPION_JUMPER_STAGE_09_NAME = "Troll Champion",
+	ENEMY_TROLL_CHAMPION_JUMPER_STAGE_09_DESCRIPTION = "Stronger than the average troll, their athletic prowess allows them to throw their axes over long distances.",
+	ENEMY_TROLL_CHAMPION_JUMPER_STAGE_09_EXTRA = "- Medium armor\n- Health regeneration\n- Throws axes from afar",
+	ENEMY_TROLL_GLIDER_NAME = "Troll Glider",
+	ENEMY_TROLL_GLIDER_DESCRIPTION = "To traverse deep chasms, the trolls developed crude gliders to jump from crag to crag.",
+	ENEMY_TROLL_GLIDER_EXTRA = "- Flying\n- When destroyed, drops a Troll Warrior on the path",
+	ENEMY_TROLL_CRUSHER_NAME = "Troll Crusher",
+	ENEMY_TROLL_CRUSHER_DESCRIPTION = "Slow yet mighty, the Crushers use stone pillars to deliver strikes that shake the solid ground.",
+	ENEMY_TROLL_CRUSHER_EXTRA = "- Health regeneration\n- Stuns nearby towers\n- Mini boss",
+	ENEMY_FROST_ICECALLER_NAME = "Frost Herald",
+	ENEMY_FROST_ICECALLER_DESCRIPTION = "Trolls that dedicate themselves to magic have a unique connection with the frozen depths.",
+	ENEMY_FROST_ICECALLER_EXTRA = "- High magic resistance\n- Casts icicles over units"
 }

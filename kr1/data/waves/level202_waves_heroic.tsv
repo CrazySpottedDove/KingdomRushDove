@@ -1,0 +1,204 @@
+#	COMANDOS					1 - Abajo a Arriba Izquierda					2 - Derecha a Arriba Derecha					3 - Abajo a Arriba Derecha					4 - Derecha a Arriba Izquierda			
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3
+#	level properties																							
+	description	NH Rodri																						
+	lives	20																						
+	gold	300																						
+	gems	150																						
+	enemy_prefix	enemy_																						
+	default_increment	1																						
+	default_interval	20																						
+#	expected gold	1200																						
+#	stage total gold	1146																						
+#	stage gold curve																							
+#	WAVE 1										Bandit x4 S. Archer x3					Bandit x4 S. Archer x3								
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg						
+#	cant.					16	0	0	0		0	0	0	0		0	0	0	0					
+#	gold	80				80	0	0	0		0	0	0	0		0	0	0						
+	wave		1		-1																			
+					0						bandit_kr6													
+					0.6						bandit_kr6													
+					2						bandit_kr6													
+					0.6						bandit_kr6													
+																								
+					0											bandit_kr6								
+					0.6											bandit_kr6								
+					2											bandit_kr6								
+					0.6											bandit_kr6								
+																								
+					6						bandit_kr6													
+					0.6						bandit_kr6													
+					2						bandit_kr6													
+					0.6						bandit_kr6													
+																								
+					0											bandit_kr6								
+					0.6											bandit_kr6								
+					2											bandit_kr6								
+					0.6											bandit_kr6								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+#	WAVE 2					Blackguard x8															Bandit x12			
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg						
+#	cant.					12	6	0	0		0	0	0	0		0	0	0	0					
+#	gold	108				60	48	0	0		0	0	0	0		0	0	0						
+	wave		2		22																			
+					0																		bandit_kr6	
+					0.6																	bandit_kr6		bandit_kr6
+					4		blackguard		blackguard															
+					2																		bandit_kr6	
+					0.6																	bandit_kr6		bandit_kr6
+					8		blackguard		blackguard															
+					4																	bandit_kr6		bandit_kr6
+					1																	bandit_kr6		bandit_kr6
+					1																	bandit_kr6		bandit_kr6
+					6		blackguard																	
+					0.8				blackguard															
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+#	WAVE 4															Bandit x10					Blackguard x6 S. Archer x9			
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg						
+#	cant.					10	6	0	4		0	0	0	0		0	0	0	0					
+#	gold	158				50	48	0	60		0	0	0	0		0	0	0						
+	wave		3		23																			
+					0																	blackguard		blackguard
+					1																		blackguard	
+					6																	shadow_archer_kr6		
+					1																			shadow_archer_kr6
+					4												bandit_kr6		bandit_kr6					
+					0.6													bandit_kr6						
+					0.6												bandit_kr6		bandit_kr6					
+					10																	shadow_archer_kr6		shadow_archer_kr6
+					10																	blackguard		blackguard
+					1																		blackguard	
+					6												bandit_kr6		bandit_kr6					
+					0.6													bandit_kr6						
+					0.6												bandit_kr6		bandit_kr6					
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+#	WAVE 6					Blackguard x8					S. Blades x12													
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg						
+#	cant.					0	8	10	0		0	0	0	0		0	0	0	0					
+#	gold	164				0	64	100	0		0	0	0	0		0	0	0						
+	wave		4		22																			
+					0							shadow_blades												
+					0.8									shadow_blades										
+					0.8							shadow_blades												
+					0.8									shadow_blades										
+					0		blackguard		blackguard															
+					1			blackguard																
+					12							shadow_blades												
+					0.8									shadow_blades										
+					0.8		blackguard		blackguard				shadow_blades											
+					0.8							shadow_blades												
+					10								shadow_blades											
+					1		blackguard							shadow_blades										
+					1				blackguard															
+					1			blackguard																
+																								
+																								
+																								
+																								
+																								
+																								
+#	WAVE 7					S. Blades x10															S. Blades x10			
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg						
+#	cant.					0	0	14	0		0	0	0	0		0	0	0	0					
+#	gold	140				0	0	140	0		0	0	0	0		0	0	0						
+	wave		5		20																			
+					0																			shadow_blades
+					0.8																		shadow_blades	
+					0.8		shadow_blades																	
+					0.8			shadow_blades																
+					0.8				shadow_blades															
+					10																	shadow_blades		
+					0.8			shadow_blades															shadow_blades	
+					0.8		shadow_blades																	
+					0.8				shadow_blades															
+					9																		shadow_blades	
+					0.8																	shadow_blades		shadow_blades
+					0.8																		shadow_blades	
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+#	WAVE 8					Blackguard x10					S. Archer x6 S. Blades x8													
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	goblin_kr6		orc_warrior	wulf	worg						
+#	cant.					0	12	9	6		0	0	0	0		0	0	0	0					
+#	gold	276				0	96	90	90		0	0	0	0		0	0	0						
+	wave		6		20																			
+					0						shadow_blades													
+					1						shadow_blades													
+					1						shadow_blades													
+					3						shadow_blades													
+					1						shadow_blades													
+					1			blackguard																
+					1		blackguard		blackguard															
+					3						shadow_archer_kr6													
+					1			blackguard			shadow_archer_kr6													
+					1						shadow_archer_kr6													
+					1		blackguard		blackguard															
+					10						shadow_blades													
+					1						shadow_blades													
+					1			blackguard																
+					1						shadow_blades													
+					1		blackguard		blackguard		shadow_blades													
+					1			blackguard																
+					7				blackguard		shadow_archer_kr6													
+					1						shadow_archer_kr6													
+					1		blackguard				shadow_archer_kr6													

@@ -3731,6 +3731,17 @@ function U.change_health_bar_offset_run_time(health_bar, y)
 	end
 end
 
+--- 运行时修改 health_bar 横向偏移时请调用本函数，避免修改不生效
+---@param health_bar table
+---@param x number
+function U.change_health_bar_offset_x_run_time(health_bar, x)
+	health_bar.offset.x = x
+
+	for i = 1, #health_bar.frames do
+		health_bar.frames[i].offset.x = x
+	end
+end
+
 function U.change_health_bar_z_run_time(health_bar, z)
 	health_bar.z = z
 
