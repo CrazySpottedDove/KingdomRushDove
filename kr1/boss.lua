@@ -4163,7 +4163,7 @@ tt.walk_thunders_offset = {v(600, -190), v(400, -200), v(510, -150), v(380, -100
 -- ===== KR6 stage 08 boss（推车兽人酋长 Acaroth）+ 战斗子实体 =====
 tt = RT("enemy_boss_stage_208", "boss")
 AC(tt, "melee", "timed_attacks", "auras")
-tt.enemy.gold = 1.1
+tt.enemy.gold = 250
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)
 tt.health.armor = 0
@@ -4331,7 +4331,7 @@ tt.modifier.duration = 5
 -- ===== KR6 stage 10 boss：J.T.（jt_boss）=====
 tt = RT("enemy_boss_stage_10", "boss")
 AC(tt, "melee", "timed_attacks")
-tt.enemy.gold = 1.1
+tt.enemy.gold = 250
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)
 tt.health.armor = 0
@@ -4451,8 +4451,8 @@ tt.sound_events.free_tower = "Stage10FreeTower"
 
 -- ===== KR6 stage 11 boss：Sarelgaz（spiders.boss_spider）=====
 tt = RT("enemy_boss_stage_11", "boss")
-AC(tt, "melee", "timed_attacks")
-tt.enemy.gold = 1.1
+AC(tt, "melee")
+tt.enemy.gold = 250
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(75, -5)
 tt.health.armor = 0
@@ -4524,7 +4524,7 @@ tt.loss_positions = {
 -- ===== KR6 stage 13 boss：Moglok-Hai（deep_trolls.troll_boss）=====
 tt = RT("enemy_boss_stage_213", "boss")
 AC(tt, "melee")
-tt.enemy.gold = 1
+tt.enemy.gold = 250
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)
 tt.health.armor = 0
@@ -4733,7 +4733,7 @@ tt.particle_system.emit_spread = math.pi * 2
 -- ===== KR6 stage 15 boss：Lord Blackburn（lord_blackburn_boss）=====
 tt = RT("enemy_boss_stage_215", "boss")
 AC(tt, "melee", "timed_attacks")
-tt.enemy.gold = 1
+tt.enemy.gold = 250
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(60, 0)
 tt.health.armor = {0.5, 0.6, 0.6, 0.74}
@@ -5019,7 +5019,7 @@ tt.tween.props[1].keys = {{0, 0}, {fts(2), 255}, {fts(15), 255}, {fts(35), 0}}
 -- ============================================================
 tt = RT("enemy_stage_218_veznan_illusion", "boss")
 AC(tt, "melee", "death_spawns")
-tt.enemy.gold = 1
+tt.enemy.gold = 250
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(40, 0)
 tt.health.hp_max = {7790.75, 9165.75, 10540.75, 11915.75}
