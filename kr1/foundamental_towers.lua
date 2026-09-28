@@ -9,7 +9,7 @@ local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
 local U = require("utils")
-
+local RLU = require("all.rally_utils")
 require("templates")
 
 local function adx(v)
@@ -488,6 +488,7 @@ tt.render.sprites[3].offset = vec_2(0, 38)
 tt.barrack.soldier_type = "soldier_militia"
 tt.barrack.rally_range = 145
 tt.barrack.respawn_offset = vec_2(0, 0)
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_barrack.update
 tt.main_script.remove = scripts.tower_barrack.remove

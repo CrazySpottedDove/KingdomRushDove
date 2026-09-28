@@ -71,7 +71,7 @@ end
 end
 function level:y_serpent_seq(store,action,data)
 if action==WARNING then
-local t,idx=table.random(self.serpent_action_data[WARNING])
+local t=table.random(self.serpent_action_data[WARNING])
 local pos,flip_x=unpack(t)
 self:add_serpent_back(store,pos,flip_x)
 elseif action==ATTACK then

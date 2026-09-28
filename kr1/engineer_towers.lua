@@ -22,6 +22,7 @@ end
 local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv
+local RLU = require("all.rally_utils")
 
 require("game_templates_utils")
 
@@ -446,6 +447,7 @@ tt.main_script.update = scripts.tower_mech.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.barrack.soldier_type = "soldier_mecha"
 tt.barrack.rally_range = 175
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_artillery_%04i"
 tt.render.sprites[1].offset = vec_2(0, 6)
@@ -597,6 +599,7 @@ tt.main_script.update = scripts.tower_frankenstein.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.barrack.soldier_type = "soldier_frankenstein"
 tt.barrack.rally_range = 180
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.attacks.range = 205
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "ray_frankenstein"
@@ -785,6 +788,8 @@ tt.attacks.list[1].multi_rate = 0.2
 tt.barrack.rally_range = 150
 tt.barrack.soldier_type = "soldier_druid_bear"
 tt.barrack.max_soldiers = 1
+tt.barrack.rally_angle_offset = math.pi * 0.25
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.powers.nature = CC("power")
 tt.powers.nature.price_base = 250
 tt.powers.nature.price_inc = 250
@@ -1739,6 +1744,7 @@ tt.barrack.rally_range = 145
 tt.barrack.soldier_type = "soldier_tower_barrel_skill_warrior"
 tt.barrack.max_soldiers = 1
 tt.barrack.respawn_offset = vec_2(0, 0)
+tt.barrack.rally_fn = RLU.rally_fn_default
 
 tt = RT("controller_soldier_tower_barrel_skill_warrior_spawn")
 AC(tt, "pos", "render", "main_script")
@@ -2567,6 +2573,7 @@ tt.main_script.type = 1
 tt.barrack.soldier_type = "soldier_balloon"
 tt.barrack.rally_range = 190
 tt.barrack.rally_anywhere = true
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrains_%04i"
 tt.render.sprites[1].offset = v(0, 10)
@@ -2850,6 +2857,7 @@ tt.attacks.list[1].node_prediction = fts(36)
 tt.barrack.soldier_type = "soldier_ignis_altar_elemental"
 tt.barrack.rally_range = 195
 tt.barrack.max_soldiers = 0
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.shooter = "ignis_altar_subunit"
 tt.ui.click_rect = r(-42, 0, 84, 90)
 tt.powers.burning_elemental = CC("power")

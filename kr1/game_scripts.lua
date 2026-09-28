@@ -9864,27 +9864,6 @@ function scripts.druid_shooter_nature.update(this, store)
 					s.nav_rally.new = true
 				end
 			end
-
-			if b.rally_new then
-				formation_offset = U.frandom(math.pi / 4, 2 * math.pi / 5)
-				b.rally_new = false
-
-				signal.emit("rally-point-changed", this)
-
-				local all_dead = true
-
-				for i, s in ipairs(b.soldiers) do
-					local s = b.soldiers[i]
-
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, formation_offset)
-					s.nav_rally.new = true
-					all_dead = all_dead and s.health.dead
-				end
-
-				if not all_dead then
-					S:queue(this.owner.sound_events.change_rally_point)
-				end
-			end
 		end
 
 		coroutine.yield()
@@ -38851,36 +38830,6 @@ function scripts.tower_stage_18_elven_barrack.update(this, store)
 	local door_sid = this.render.door_sid or 2
 	local formation_offset = 0
 
-	local function check_change_rally()
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local sounds = {}
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
-				s.nav_rally.new = true
-
-				if s.sound_events.change_rally_point then
-					table.insert(sounds, s.sound_events.change_rally_point)
-				end
-
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				if #sounds > 0 then
-					S:queue(sounds[math.random(1, #sounds)])
-				else
-					S:queue(this.sound_events.change_rally_point)
-				end
-			end
-		end
-	end
-
 	while true do
 		local old_count = #b.soldiers
 
@@ -38907,8 +38856,6 @@ function scripts.tower_stage_18_elven_barrack.update(this, store)
 
 			store.player_gold = store.player_gold - price
 		end
-
-		check_change_rally()
 
 		if not this.tower.blocked then
 			for i = 1, this.barrack.current_soldiers do
@@ -60531,24 +60478,6 @@ function scripts.stage_37_barrack_dragon_wardens.update(this, store, script)
 			end
 		end
 
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
-			end
-		end
-
 		coroutine.yield()
 	end
 end
@@ -69951,8 +69880,6 @@ function scripts.decal_terrain_1_sheep.update(this, store, script)
 		end
 
 		if eat_cd < store.tick_ts - eat_ts then
-			local eat_cd = fts(math.random(3 * FPS, 7 * FPS))
-
 			eat_ts = store.tick_ts
 
 			U.animation_start(this, "eat", nil, store.tick_ts, false)
@@ -71104,7 +71031,7 @@ function scripts.soldier_walk_to_objective.update(this, store)
 		if brk or sta ~= A_NO_TARGET then
 			if sta == A_DONE then
 				local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {this.path_id}, nil)
-				local pi, spi, ni = unpack(nearest[1])
+				local _, _, ni = unpack(nearest[1])
 
 				path_ni = ni + 2
 				target_pos = P:node_pos(this.path_id, path_spi, path_ni)
@@ -71265,8 +71192,6 @@ end
 scripts.enemy_cloud_of_crows = {}
 
 function scripts.enemy_cloud_of_crows.update(this, store)
-	local shadow_sprite = this.render.sprites[2]
-
 	local function break_fn_1(store, this)
 		return this.nav_path.ni > this.nodes_to_explode
 	end
@@ -71368,13 +71293,6 @@ scripts.aura_stage_208_archers_visibility = {}
 
 function scripts.aura_stage_208_archers_visibility.update(this, store, script)
 	local last_ts = 0
-	local controller_phases
-
-	for k, v in pairs(store.entities) do
-		if v.template_name == "controller_stage_208_phases" then
-			controller_phases = v
-		end
-	end
 
 	while true do
 		if this.enabled and store.tick_ts - last_ts >= this.aura.cycle_time then
@@ -71668,7 +71586,7 @@ function scripts.enemy_troll_champion_jumper.update(this, store)
 	U.flags_remove(this.vis, F_FLYING)
 	this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {1})[1][3]
 
-	local next, new = P:next_entity_node(this, store.tick_length)
+	local next = P:next_entity_node(this, store.tick_length)
 
 	if not next then
 		log.debug("(%s) %s has no valid next node", this.id, this.template_name)
@@ -72004,7 +71922,7 @@ function scripts.enemy_frost_icecaller.update(this, store, script)
 		local nearest = P:nearest_nodes(pos.x, pos.y, available_paths, nil, true)
 
 		if #nearest > 0 then
-			local pi, spi, ni = unpack(nearest[1])
+			local pi, _, ni = unpack(nearest[1])
 
 			ni = ni - direction * ai.icicles_row_anticipation
 
@@ -73180,7 +73098,6 @@ function scripts.enemy_frost_baiter.y_jump(this, store, dest, break_fn)
 	b.last_pos = V.vclone(this.pos)
 	this.bullet.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
 
-	local original_y = this.pos.y
 	local max_height = 90
 
 	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
@@ -73399,8 +73316,6 @@ function scripts.enemy_frost_baiter_jumper.update(this, store, script)
 			if not walk then
 				dest = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.jump_points[jump_i][2])
 
-				local np = this.nav_path
-
 				S:queue(this.sound_events.jump)
 				U.animation_start(this, "jumpball", nil, store.tick_ts, true)
 
@@ -73450,7 +73365,7 @@ function scripts.enemy_frost_baiter_jumper.update(this, store, script)
 	U.flags_remove(this.vis, F_BLOCK)
 	this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi})[1][3]
 
-	local next, new = P:next_entity_node(this, store.tick_length)
+	local next = P:next_entity_node(this, store.tick_length)
 
 	if not next then
 		log.debug("(%s) %s has no valid next node", this.id, this.template_name)
@@ -73599,7 +73514,6 @@ function scripts.enemy_frost_brute.update(this, store, script)
 				end
 
 				local af = this.render.sprites[1].flip_x
-				local start_pos = V.v(this.pos.x + (af and -1 or 1) * acb.offset.x, this.pos.y + acb.offset.y)
 				local dirx, diry = V.normalize(breath_target_pos.x - this.pos.x, breath_target_pos.y - this.pos.y)
 				local aura = E:create_entity(acb.aura)
 
@@ -73893,7 +73807,6 @@ function scripts.enemy_leaper_spider.update(this, store, script)
 		b.last_pos = V.vclone(this.pos)
 		this.bullet.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
 
-		local original_y = this.pos.y
 		local max_height = 70
 
 		while store.tick_ts - b.ts + store.tick_length < b.flight_time do
@@ -74075,7 +73988,6 @@ function scripts.enemy_son_of_sarelgaz.update(this, store, script)
 				end
 
 				if not this.health.dead and not this.unit.is_stunned and this.blocker_to_cocoon and table.contains(this.enemy.blockers, this.blocker_to_cocoon.id) and not this.blocker_to_cocoon.health.dead and store.entities[this.blocker_to_cocoon.id] then
-					local af = this.render.sprites[1].flip_x
 					local cocoon = E:create_entity(ac.mod)
 
 					cocoon.pos.x, cocoon.pos.y = this.blocker_to_cocoon.pos.x, this.blocker_to_cocoon.pos.y
@@ -75609,8 +75521,6 @@ function scripts.enemy_dark_disciple.update(this, store, script)
 	local block_ts = store.tick_ts - ab.block_cooldown
 	local block_max_range = SU.get_difficulty_field_value(store, ab.max_range)
 	local block_tether_range = SU.get_difficulty_field_value(store, ab.tether_range)
-	local remove_book = false
-	local remove_cage = false
 
 	this.recall_book = false
 	this.mark_mod = nil
@@ -75958,8 +75868,6 @@ function scripts.mod_enemy_dark_disciple_cage.update(this, store)
 	U.y_wait(store, fts(10))
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
-	local start_ts = store.tick_ts
-
 	while true do
 		if not source or not store.entities[m.source_id] or source.pending_removal then
 			break
@@ -76004,7 +75912,7 @@ function scripts.enemy_necromancer_kr6.update(this, store, script)
 
 		attack.ts = store.tick_ts
 
-		local an, af, ai = U.animation_name_facing_point(this, ca.animations[1], target.pos)
+		local an, af = U.animation_name_facing_point(this, ca.animations[1], target.pos)
 
 		U.animation_start(this, an, af, store.tick_ts, false)
 
@@ -76195,9 +76103,6 @@ function scripts.enemy_death_rider.update(this, store, script)
 
 	a.ts = store.tick_ts - a.cooldown
 
-	local normal_speed = this.motion.max_speed
-	local galloping = false
-	local gallop_ts = 0
 	local mod
 
 	while true do

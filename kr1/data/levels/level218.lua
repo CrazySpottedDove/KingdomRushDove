@@ -10,6 +10,7 @@ local log=require("lib.klua.log"):new("level218")
 local signal=require("lib.hump.signal")
 local S=require("sound_db")
 local scripts=require("scripts")
+local RLU=require("all.rally_utils")
 require("all.constants")
 require("lib.klua.table")
 local level={}
@@ -2380,8 +2381,7 @@ local def=tw.tower.default_rally_pos
 if def then
 local mask=tw.barrack.rally_terrains or bor(TERRAIN_LAND,TERRAIN_ICE)
 local dest=is_walkable(def.x,def.y,mask) and V.vclone(def) or nearest_walkable_pos(def.x,def.y,mask) or V.vclone(def)
-tw.barrack.rally_pos=V.vclone(dest)
-tw.barrack.rally_new=true
+RLU.fire_rally_fn(tw,store,dest.x,dest.y)
 end
 towers[#towers+1]=tw
 end

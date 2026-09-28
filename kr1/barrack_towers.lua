@@ -9,6 +9,7 @@ local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
 local V = require("lib.klua.vector")
+local RLU = require("all.rally_utils")
 
 require("templates")
 
@@ -26,9 +27,7 @@ local vv = V.vv
 require("game_templates_utils")
 
 tt = RT("tower_paladin", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.info.portrait = "info_portraits_towers_0005"
 tt.info.enc_icon = 14
 tt.tower.type = "paladin"
@@ -893,13 +892,13 @@ tt = RT("mod_djinn_shock", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.duration_inc = 1
 tt.duration_base = 1
+
 tt = RT("tower_barrack_pirates", "tower")
-
 AC(tt, "barrack", "powers")
-
 tt.tower.type = "mercenaries_pirates"
 tt.tower.price = 195
 tt.barrack.max_soldiers = 4
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.mercenary = true
 tt.info.fn = scripts.tower_barrack.get_info
 tt.info.portrait = "kr2_info_portraits_towers_0014"
@@ -1506,6 +1505,7 @@ tt.barrack.rally_range = 350
 tt.barrack.rally_anywhere = true
 tt.barrack.respawn_offset = vec_2(-4, 36)
 tt.barrack.max_soldiers = 1
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_baby_ashbite.update
 tt.main_script.remove = scripts.tower_barrack.remove
@@ -1749,10 +1749,9 @@ tt = RT("decal_tower_panda_skill_red_tp_soldier_fire", "fx")
 tt.render.sprites[1].name = "tower_pandas_red_lvl4_tp_decal_run"
 tt.render.sprites[1].scale = vv(2)
 tt.render.sprites[1].z = Z_DECALS
+
 tt = RT("tower_pandas_lvl4", "tower")
-
 AC(tt, "attacks", "barrack", "user_selection", "powers")
-
 tt.tower.type = "pandas"
 tt.tower.price = 270
 tt.tower.menu_offset = v(0, 35)
@@ -1780,6 +1779,7 @@ tt.barrack.solder_upgrade_map = {
 }
 tt.barrack.rally_range = 180
 tt.barrack.rally_radius = 30
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_pandas.update
 tt.main_script.remove = scripts.tower_pandas.remove
@@ -2098,6 +2098,7 @@ tt.barrack.respawn_offset = vec_2(0, 34)
 tt.barrack.max_soldiers = 2
 tt.barrack.has_door = false
 tt.barrack.rally_anywhere = true
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.sound_events.insert = "TowerPaladinCovenantTaunt"
 tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
 tt.info.fn = scripts.tower_barrack.get_info
@@ -2400,6 +2401,7 @@ tt.barrack.respawn_offset = v(0, 12)
 tt.barrack.max_soldiers = 2
 tt.barrack.rally_radius = 30
 tt.barrack.scattered = true
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_dwarf.update
 tt.main_script.remove = scripts.tower_barrack.remove
@@ -2598,6 +2600,7 @@ tt.barrack.soldier_type = "soldier_tower_ghost_lvl4"
 tt.barrack.rally_range = 155
 tt.barrack.respawn_offset = v(0, 40)
 tt.barrack.max_soldiers = 2
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_ghost.update
 tt.main_script.remove = scripts.tower_barrack.remove
@@ -2864,10 +2867,9 @@ tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "paladin_soldiers_lvl4_captain_armor_buff"
 tt.render.sprites[2].loop = false
 tt.render.sprites[2].hide_after_runs = 1
+
 tt = RT("tower_paladin_covenant_lvl4", "tower")
-
 AC(tt, "powers", "barrack")
-
 tt.info.portrait = "kr5_portraits_towers_0001"
 tt.info.enc_icon = 8
 tt.info.fn = scripts.tower_barrack.get_info
@@ -2904,6 +2906,7 @@ tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_barrack.update
 tt.main_script.remove = scripts.tower_barrack.remove
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.ui.click_rect = r(-42, 0, 84, 90)
 
 tt = E:register_t("tower_arborean_sentinels", "tower")
@@ -2942,6 +2945,7 @@ tt.render.door_sid = 3
 tt.barrack.soldier_type = "soldier_arborean_sentinels_spearmen"
 tt.barrack.rally_range = 209.28
 tt.barrack.respawn_offset = v(0, 5)
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.sound_events.change_rally_point = "Stage04ArboreanThornspears"
 
 tt = E:register_t("soldier_arborean_sentinels_spearmen", "soldier_militia")
@@ -3034,6 +3038,7 @@ tt.barrack.scattered = true
 tt.barrack.respawn_offset = v(0, 5)
 tt.barrack.max_soldiers = 4
 tt.barrack.rally_radius = 30
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.powers.abomination = CC("power")
 tt.powers.abomination.max_level = 2
 tt.powers.abomination.price_base = 120
@@ -3450,6 +3455,7 @@ tt.attacks.range = 180
 tt.barrack.rally_range = 180
 tt.barrack.banned = true
 tt.barrack.max_soldiers = 5
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "aura_grim_cemetery_hand"
 tt.attacks.list[1].cooldown = 20

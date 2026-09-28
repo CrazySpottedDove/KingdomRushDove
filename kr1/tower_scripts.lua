@@ -33,6 +33,7 @@ local animation_start = U.animation_start
 local animation_name_facing_point = U.animation_name_facing_point
 local animation_finished = U.animation_finished
 local y_animation_wait = U.y_animation_wait
+local RLU = require("all.rally_utils")
 
 local function T(name)
 	return E:get_template(name)
@@ -2952,22 +2953,6 @@ scripts.tower_sorcerer = {
 						ba.soldiers[1] = ns
 						s = ns
 					end
-
-					if ba.rally_new then
-						ba.rally_new = false
-
-						signal.emit("rally-point-changed", this)
-
-						if s then
-							s.nav_rally.pos = vclone(ba.rally_pos)
-							s.nav_rally.center = vclone(ba.rally_pos)
-							s.nav_rally.new = true
-
-							if not s.health.dead then
-								S:queue(this.sound_events.change_rally_point)
-							end
-						end
-					end
 				end
 
 				for i, aa in ipairs(attacks) do
@@ -3580,23 +3565,6 @@ scripts.tower_necromancer = {
 						simulation:queue_insert_entity(s)
 
 						b.soldiers[1] = s
-					end
-
-					if b.rally_new then
-						b.rally_new = false
-
-						signal.emit("rally-point-changed", this)
-
-						if s then
-							s.nav_rally.pos:copy(b.rally_pos)
-							s.nav_rally.center:copy(b.rally_pos)
-
-							s.nav_rally.new = true
-
-							if not s.health.dead then
-								S:queue(this.sound_events.change_rally_point)
-							end
-						end
 					end
 				end
 
@@ -5254,19 +5222,6 @@ scripts.tower_mech = {
 				end
 			end
 
-			if b.rally_new then
-				b.rally_new = false
-
-				signal.emit("rally-point-changed", this)
-				S:queue(this.sound_events.change_rally_point)
-
-				for i, s in ipairs(b.soldiers) do
-					s.nav_rally.pos = vclone(b.rally_pos)
-					s.nav_rally.center = vclone(b.rally_pos)
-					s.nav_rally.new = true
-				end
-			end
-
 			if this.powers.missile.changed then
 				this.powers.missile.changed = nil
 
@@ -5741,22 +5696,6 @@ scripts.tower_frankenstein = {
 						simulation:queue_insert_entity(s)
 
 						b.soldiers[1] = s
-					end
-
-					if b.rally_new then
-						b.rally_new = false
-
-						signal.emit("rally-point-changed", this)
-
-						if s then
-							s.nav_rally.pos = vclone(b.rally_pos)
-							s.nav_rally.center = vclone(b.rally_pos)
-							s.nav_rally.new = true
-
-							if not s.health.dead then
-								S:queue(this.sound_events.change_rally_point)
-							end
-						end
 					end
 				end
 
@@ -6233,24 +6172,6 @@ function scripts.tower_baby_ashbite.update(this, store)
 
 					signal.emit("tower-spawn", this, s)
 				end
-			end
-		end
-
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
 			end
 		end
 
@@ -7253,24 +7174,6 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 
 					goto label_1008_0
 				end
-			end
-		end
-
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, math.pi * 0.25)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.tower_ref.sound_events.change_rally_point)
 			end
 		end
 
@@ -9556,43 +9459,12 @@ end
 
 function scripts.tower_pandas.update(this, store)
 	local b = this.barrack
-	local formation_offset = 0
 	local at = this.attacks
 	local a = at.list[1]
 	local a2 = at.list[2]
 
 	a2.force_retreat_until_ts = store.tick_ts
 	a2.next_force_retreat_kill = store.tick_ts
-
-	local function check_change_rally()
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local sounds = {}
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
-				s.nav_rally.new = true
-
-				if s.sound_events.change_rally_point then
-					table.insert(sounds, s.sound_events.change_rally_point)
-				end
-
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				if #sounds > 0 then
-					S:queue(sounds[random(1, #sounds)])
-				else
-					S:queue(this.sound_events.change_rally_point)
-				end
-			end
-		end
-	end
 
 	local function check_powers()
 		for pn, p in pairs(this.powers) do
@@ -9632,7 +9504,6 @@ function scripts.tower_pandas.update(this, store)
 	end
 
 	local function update_checks()
-		check_change_rally()
 		check_powers()
 		check_retreat()
 	end
@@ -14112,26 +13983,6 @@ function scripts.tower_rocket_gunners.update(this, store)
 	local pow_p = this.powers.phosphoric
 	local pow_s = this.powers.sting_missiles
 
-	local function check_change_rally()
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
-			end
-		end
-	end
-
 	local function check_change_mode()
 		if this.change_mode then
 			this.change_mode = false
@@ -14194,7 +14045,6 @@ function scripts.tower_rocket_gunners.update(this, store)
 					S:queue(this.spawn_sound)
 
 					while store.tick_ts - spawn_ts < fts(this.spawn_time) do
-						check_change_rally()
 						check_change_mode()
 						coroutine.yield()
 					end
@@ -17023,24 +16873,6 @@ function scripts.tower_barrel.update(this, store)
 
 		::label_965_0::
 
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
-			end
-		end
-
 		coroutine.yield()
 	end
 end
@@ -19088,19 +18920,18 @@ function scripts.tower_dwarf.update(this, store)
 
 	local formation_angles = {math.pi * 0.25, math.pi, math.pi * 0.25}
 	local angle_offset = math.pi * 0.25
-	local mute_spawn = false
 	local b = this.barrack
 	local pow_f = this.powers.formation
 	local pow_i = this.powers.incendiary_ammo
 	local tw = this.tower
+	local wait_for_rerally = false
 
 	while true do
 		if pow_f.changed then
 			pow_f.changed = nil
 			b.max_soldiers = this.original_max_soldiers + pow_f.level
-			b.rally_new = true
 			angle_offset = formation_angles[pow_f.level]
-			mute_spawn = true
+			wait_for_rerally = true
 		end
 
 		if pow_i.changed then
@@ -19164,27 +18995,9 @@ function scripts.tower_dwarf.update(this, store)
 			b.door_open = false
 		end
 
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos = U.rally_formation_position(i, b, b.max_soldiers, angle_offset)
-
-				s.nav_rally.center:copy(s.nav_rally.pos)
-
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead and not mute_spawn then
-				S:queue(this.sound_events.change_rally_point)
-			end
-
-			mute_spawn = false
+		if wait_for_rerally then
+			RLU.fire_rally_fn(this, store, this.barrack.rally_pos.x, this.barrack.rally_pos.y, true)
+			wait_for_rerally = false
 		end
 
 		coroutine.yield()
@@ -19483,24 +19296,6 @@ function scripts.tower_ghost.update(this, store)
 
 					this.render.sprites[spawn_id].hidden = true
 				end
-			end
-		end
-
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, math.pi * 0.25)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
 			end
 		end
 
@@ -24273,28 +24068,6 @@ function scripts.tower_orc_warriors.update(this, store)
 			b.door_open = false
 		end
 
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i = 1, b.max_soldiers do
-				local s = b.soldiers[i]
-
-				if s then
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-					s.nav_rally.new = true
-					all_dead = all_dead and s.health.dead
-				end
-			end
-
-			if not all_dead and this.sound_events.change_rally_point then
-				S:queue(this.sound_events.change_rally_point)
-			end
-		end
-
 		coroutine.yield()
 	end
 end
@@ -24516,28 +24289,6 @@ function scripts.tower_dark_knights.update(this, store)
 			end
 
 			b.door_open = false
-		end
-
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i = 1, b.max_soldiers do
-				local s = b.soldiers[i]
-
-				if s then
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-					s.nav_rally.new = true
-					all_dead = all_dead and s.health.dead
-				end
-			end
-
-			if not all_dead and this.sound_events.change_rally_point then
-				S:queue(this.sound_events.change_rally_point)
-			end
 		end
 
 		coroutine.yield()
@@ -24918,28 +24669,6 @@ function scripts.tower_bone_flingers.update(this, store)
 					if s then
 						s.nav_rally.new = true
 					end
-				end
-			end
-
-			if barrack.rally_new then
-				barrack.rally_new = false
-
-				signal.emit("rally-point-changed", this)
-
-				local all_dead = true
-
-				for i = 1, #barrack.soldiers do
-					local s = barrack.soldiers[i]
-
-					if s then
-						s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, barrack, barrack.max_soldiers, formation_offset)
-						s.nav_rally.new = true
-						all_dead = all_dead and s.health.dead
-					end
-				end
-
-				if not all_dead and this.sound_events.change_rally_point then
-					S:queue(this.sound_events.change_rally_point)
 				end
 			end
 
@@ -25476,28 +25205,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 			end
 
 			b.door_open = false
-		end
-
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i = 1, b.max_soldiers do
-				local s = b.soldiers[i]
-
-				if s then
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-					s.nav_rally.new = true
-					all_dead = all_dead and s.health.dead
-				end
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
-			end
 		end
 
 		coroutine.yield()
@@ -26793,19 +26500,6 @@ function scripts.tower_balloon.update(this, store)
 		table.insert(this.barrack.soldiers, balloon)
 	end
 
-	if b.rally_new then
-		b.rally_new = false
-
-		signal.emit("rally-point-changed", this)
-		S:queue(this.sound_events.change_rally_point)
-
-		for i, s in ipairs(b.soldiers) do
-			s.nav_rally.pos = V.vclone(b.rally_pos)
-			s.nav_rally.center = V.vclone(b.rally_pos)
-			s.nav_rally.new = true
-		end
-	end
-
 	if this.powers.oil.changed then
 		this.powers.oil.changed = nil
 
@@ -27413,24 +27107,6 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 					barrack.soldiers[i] = new_s
 
 					signal.emit("tower-spawn", this, new_s)
-				end
-			end
-
-			if barrack.rally_new then
-				barrack.rally_new = false
-
-				signal.emit("rally-point-changed", this)
-
-				local all_dead = true
-
-				for i, s in ipairs(barrack.soldiers) do
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, barrack, barrack.max_soldiers, barrack.rally_angle_offset)
-					s.nav_rally.new = true
-					all_dead = all_dead and s.health.dead
-				end
-
-				if not all_dead and this.sound_events.change_rally_point then
-					S:queue(this.sound_events.change_rally_point)
 				end
 			end
 
@@ -28624,24 +28300,6 @@ function scripts.tower_deep_devils.update(this, store)
 			end
 		end
 
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
-			end
-		end
-
 		coroutine.yield()
 	end
 end
@@ -28963,24 +28621,6 @@ function scripts.tower_ignis_altar.update(this, store)
 
 					signal.emit("tower-spawn", this, ns)
 				end
-			end
-		end
-
-		if this.barrack.rally_new then
-			this.barrack.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(this.barrack.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, this.barrack, this.barrack.max_soldiers, this.barrack.rally_angle_offset)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
 			end
 		end
 	end
@@ -29481,24 +29121,6 @@ function scripts.tower_shaolin.update(this, store)
 				else
 					aa.ts = aa.ts + 0.1
 				end
-			end
-		end
-
-		if this.barrack.rally_new then
-			this.barrack.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-
-			local all_dead = true
-
-			for i, s in ipairs(this.barrack.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, this.barrack, this.barrack.max_soldiers, this.barrack.rally_angle_offset)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
-			end
-
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
 			end
 		end
 
@@ -30505,27 +30127,6 @@ function scripts.tower_swamp_monster.update(this, store)
 			end
 		end
 
-		-- 作为兵营时，检查士兵的调集
-		if current_mode == 1 then
-			if b.rally_new then
-				b.rally_new = false
-
-				signal.emit("rally-point-changed", this)
-
-				local all_dead = true
-
-				for i, s in ipairs(b.soldiers) do
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-					s.nav_rally.new = true
-					all_dead = all_dead and s.health.dead
-				end
-
-				if not all_dead then
-					S:queue(this.sound_events.change_rally_point)
-				end
-			end
-		end
-
 		-- 处理 mode_changing 的情况
 		if mode_changing then
 			local s = b.soldiers[1]
@@ -31069,17 +30670,6 @@ function scripts.tower_wicked_sisters.update(this, store)
 			end
 
 			this.tower_upgrade_persistent_data.current_mode = current_mode
-		end
-
-		if b.rally_new then
-			b.rally_new = false
-
-			signal.emit("rally-point-changed", this)
-			S:queue(this.sound_events.change_rally_point)
-			witch.nav_rally.pos:copy(b.rally_pos)
-			witch.nav_rally.center:copy(b.rally_pos)
-
-			witch.nav_rally.new = true
 		end
 
 		if pow_s.changed then

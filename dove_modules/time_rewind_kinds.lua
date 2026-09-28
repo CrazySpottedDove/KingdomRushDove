@@ -11,6 +11,7 @@ local P = require("path_db")
 local GR = require("grid_db")
 local LU = require("level_utils")
 local U = require("utils")
+local RLU = require("all.rally_utils")
 
 require("i18n")
 
@@ -184,8 +185,7 @@ local KIND_BARRACK_RALLY = time_rewind.register("barrack_rally", {
 		local t = tower_by_holder_id(game.simulation.store, holder_id)
 
 		if t and t.barrack then
-			t.barrack.rally_pos = V.v(x, y)
-			t.barrack.rally_new = true
+			RLU.fire_rally_fn(t, game.simulation.store, x, y)
 		end
 	end,
 	valid = function(game, holder_id, x, y)

@@ -504,10 +504,10 @@ barrack.door_hold_time = fts(15)
 barrack.door_open = false
 barrack.door_open_ts = 0
 barrack.soldiers = {}
-barrack.rally_pos = nil
-barrack.rally_new = false
+barrack.rally_pos = v(0, 0)
 barrack.unit_bought = nil
 -- barrack.scattered 控制士兵是否使用同一个 center。scattered 为 true 时，士兵 nav_rally.center 不一致
+-- barrack.rally_new 已废弃，改为使用 rally_utils 中提供的接口。实体只需定义 barrack.rally_fn 即可。
 
 local melee_attack = E:register_c("melee_attack")
 melee_attack.type = "melee"

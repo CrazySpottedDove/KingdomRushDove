@@ -1940,6 +1940,7 @@ function scripts.tower_barrack.update(this, store)
 			b.door_open = false
 		end
 
+		-- 出于兼容性保留，实际冗余。
 		if b.rally_new then
 			b.rally_new = false
 
@@ -2089,6 +2090,7 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 			b.door_open = false
 		end
 
+		-- 出于兼容性保留，实际冗余。
 		if b.rally_new then
 			b.rally_new = false
 
@@ -10083,6 +10085,28 @@ scripts.mod_shield = {
 		end
 
 		return not blocked
+	end
+}
+
+scripts.rally_fn = {
+	default = function(this, store)
+		signal.emit("rally-point-changed", this)
+		local b = this.barrack
+		local all_dead = true
+		for i = 1, #b.soldiers do
+			local s = b.soldiers[i]
+			if b.scattered then
+				s.nav_rally.pos = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+				s.nav_rally.center:copy(b.nav_rally.pos)
+			else
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+			end
+			s.nav_rally.new = true
+			all_dead = all_dead and s.health.dead
+		end
+		if not all_dead then
+			S:queue(this.sound_events.change_rally_point)
+		end
 	end
 }
 
