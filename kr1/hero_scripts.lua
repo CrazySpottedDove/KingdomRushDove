@@ -45726,4 +45726,469 @@ function scripts.mod_stage_215_black_burn_mind_control.remove(this, store, scrip
 	return true
 end
 
+-- ============================================================
+-- KR6 stage 18（最终关）英雄 Denas
+-- ============================================================
+scripts.hero_stage_218_denas = {}
+
+local function denas_spawn_guard_squad(store, dg, spawn_pos, entity_name, walk_from, turn_y)
+	local squad_id
+	local out = {}
+
+	for j = 1, 2 do
+		local e = E:create_entity(entity_name or dg.entity)
+
+		squad_id = squad_id or e.id
+		e.reinforcement.squad_id = squad_id
+		e.render.sprites[1].prefix = e.render.sprites[1].prefix .. j
+		e.pos.x = j == 1 and spawn_pos.x + 10 or spawn_pos.x - 10
+		e.pos.y = j == 1 and spawn_pos.y - 10 or spawn_pos.y + 10
+
+		if j == 2 then
+			e.info.random_name_format = "SOLDIER_REINFORCEMENTS_F_%i_NAME"
+			e.info.random_name_count = 4
+		end
+
+		e.info.portrait = string.format("kr6_info_portraits_soldiers_%04i", 6 + j)
+		e.nav_rally.center = V.vclone(spawn_pos)
+
+		if walk_from then
+			e.nav_rally.pos = V.v(e.pos.x, e.pos.y)
+			e.pos.x = walk_from.x + (j == 1 and 12 or -12)
+			e.pos.y = walk_from.y + (j == 1 and -8 or 8)
+			e.nav_grid.waypoints = turn_y and {V.v(e.pos.x, turn_y)} or {}
+			e.nav_rally.new = true
+			e.sound_events.change_rally_point = nil
+		else
+			e.nav_rally.pos = V.vclone(e.pos)
+		end
+
+		queue_insert(store, e)
+
+		out[#out + 1] = e
+	end
+
+	return out
+end
+
+function scripts.hero_stage_218_denas.insert(this, store)
+	this.melee.order = U.attack_order(this.melee.attacks)
+
+	return true
+end
+
+local function denas_find_bomb_cluster(store, this, ba, predict_time)
+	local enemies = U.find_enemies_in_range(store, this.pos, 0, ba.max_range, ba.vis_flags, ba.vis_bans)
+
+	if not enemies then
+		return nil, 0
+	end
+
+	local pos = {}
+
+	for i = 1, #enemies do
+		local e = enemies[i]
+		local p = e.pos
+
+		if predict_time and e.motion and e.motion.speed then
+			if e.motion.forced_waypoint then
+				p = V.v(e.pos.x + predict_time * e.motion.speed.x, e.pos.y + predict_time * e.motion.speed.y)
+			else
+				local node_offset = P:predict_enemy_node_advance(e, predict_time)
+
+				p = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni + node_offset)
+			end
+		end
+
+		pos[i] = p
+	end
+
+	local vc = store.visible_coords
+	local best, best_count = nil, 0
+
+	for i = 1, #enemies do
+		local epos = pos[i]
+
+		if epos.x > vc.left + ba.edge_margin and epos.x < vc.right - ba.edge_margin and not U.is_inside_ellipse(epos, this.pos, ba.hero_margin) then
+			local count = 0
+
+			for j = 1, #enemies do
+				if U.is_inside_ellipse(pos[j], epos, ba.cluster_radius) then
+					count = count + 1
+				end
+			end
+
+			if best_count < count then
+				best, best_count = epos, count
+			end
+		end
+	end
+
+	return best, best_count
+end
+
+function scripts.hero_stage_218_denas.y_bombardement(store, this)
+	local ba = this.timed_attacks.list[1]
+
+	if store.tick_ts - ba.ts <= ba.cooldown then
+		return false
+	end
+
+	local best, best_count = denas_find_bomb_cluster(store, this, ba, nil)
+
+	if not best or best_count < ba.min_targets then
+		SU.delay_attack(store, ba, 1.5)
+
+		return false
+	end
+
+	local target_pos = V.vclone(best)
+	local start_ts = store.tick_ts
+	local flip = target_pos.x < this.pos.x
+
+	U.animation_start(this, ba.animation, flip, store.tick_ts)
+
+	while store.tick_ts - start_ts < ba.cast_time do
+		if this.nav_rally.new or this.health.dead or this.unit.is_stunned then
+			SU.delay_attack(store, ba, 1.5)
+
+			return true
+		end
+
+		coroutine.yield()
+	end
+
+	ba.ts = store.tick_ts
+
+	local flight_time = E:get_template(ba.bullet).bullet.flight_time
+	local pbest, pcount = denas_find_bomb_cluster(store, this, ba, flight_time)
+
+	if pbest and pcount >= ba.min_targets then
+		target_pos = V.vclone(pbest)
+	end
+
+	local vc = store.visible_coords
+	local mid_x = (vc.left + vc.right) / 2
+	local offset_border = 50
+	local from_x = mid_x > target_pos.x and vc.left + offset_border or vc.right - offset_border
+	local from_y = vc.bottom - 60
+
+	for i = 1, ba.shots do
+		local e = E:create_entity(ba.bullet)
+		local p
+
+		if i == 1 then
+			p = V.v(target_pos.x, target_pos.y)
+		else
+			local spread = math.random(ba.min_spread, ba.max_spread)
+
+			p = V.v(target_pos.x + math.random(-spread, spread), target_pos.y + math.random(-spread, spread))
+		end
+
+		e.pos.x, e.pos.y = from_x, from_y
+		e.bullet.from = V.vclone(e.pos)
+		e.bullet.to = p
+		e.bullet.source_id = this.id
+		e.bullet.damage_factor = 1
+
+		queue_insert(store, e)
+
+		local ts = store.tick_ts
+
+		while store.tick_ts - ts < ba.burst_interval do
+			if this.nav_rally.new or this.health.dead or this.unit.is_stunned then
+				return true
+			end
+
+			coroutine.yield()
+		end
+	end
+
+	while not U.animation_finished(this) do
+		if this.nav_rally.new or this.health.dead or this.unit.is_stunned then
+			return true
+		end
+
+		coroutine.yield()
+	end
+
+	return true
+end
+
+function scripts.hero_stage_218_denas.y_denas_guards(store, this)
+	local dg = this.timed_attacks.list[2]
+
+	if store.tick_ts - dg.ts <= dg.cooldown then
+		return false
+	end
+
+	local info = U.find_enemies_in_paths(store.enemies, this.pos, dg.range_nodes_min, dg.range_nodes_max, dg.max_path_dist, 0, bor(F_FLYING, F_WATER, F_CLIFF), nil)
+
+	if not info then
+		SU.delay_attack(store, dg, 1.5)
+
+		return false
+	end
+
+	local target = info[1].enemy
+	local spawn_pos = P:node_pos(target.nav_path.pi, 1, target.nav_path.ni + dg.ahead_nodes)
+	local start_ts = store.tick_ts
+
+	U.animation_start(this, dg.animation, spawn_pos.x < this.pos.x, store.tick_ts)
+
+	while store.tick_ts - start_ts < dg.cast_time do
+		if this.nav_rally.new or this.health.dead or this.unit.is_stunned then
+			SU.delay_attack(store, dg, 1.5)
+
+			return true
+		end
+
+		coroutine.yield()
+	end
+
+	dg.ts = store.tick_ts
+
+	denas_spawn_guard_squad(store, dg, spawn_pos)
+
+	while not U.animation_finished(this) do
+		if this.nav_rally.new or this.health.dead or this.unit.is_stunned then
+			return true
+		end
+
+		coroutine.yield()
+	end
+
+	return true
+end
+
+function scripts.hero_stage_218_denas.y_cinematic_entrance(store, this)
+	local dest = this.cinematic_entrance_to
+	local entry = V.v(this.pos.x, this.pos.y)
+	local speed = this.motion.max_speed
+	local dg = this.timed_attacks.list[2]
+
+	local function dist_left()
+		return V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
+	end
+
+	local taunted = false
+	local gallop_ts
+	local gallop_y = store.visible_coords.bottom - speed * (this.cinematic_gallop_lead or 0)
+
+	local function y_walk_while(cond)
+		while cond() do
+			U.walk(this, store.tick_length)
+
+			if not gallop_ts and this.pos.y >= gallop_y then
+				gallop_ts = store.tick_ts
+
+				S:queue(this.sound_events.cinematic_gallop)
+				S:queue(this.sound_events.cinematic_neigh, {
+					delay = this.cinematic_neigh_delay
+				})
+			end
+
+			if not taunted and this.pos.y >= store.visible_coords.bottom then
+				taunted = true
+
+				S:queue(this.sound_events.cinematic_entrance)
+			end
+
+			coroutine.yield()
+		end
+	end
+
+	U.set_destination(this, dest)
+	U.animation_start(this, "cinematic_walk_up", nil, store.tick_ts, true)
+	y_walk_while(function()
+		return dist_left() > speed * fts(22)
+	end)
+	U.animation_start(this, "cinematic_drift_in", nil, store.tick_ts, false)
+	y_walk_while(function()
+		return not U.animation_finished(this)
+	end)
+	U.animation_start(this, "cinematic_drift_loop", nil, store.tick_ts, true)
+
+	while not U.walk(this, store.tick_length) do
+		coroutine.yield()
+	end
+
+	this.pos.x, this.pos.y = dest.x, dest.y
+	this.nav_rally.center = V.vclone(dest)
+	this.nav_rally.pos = V.vclone(dest)
+	this.nav_rally.new = false
+
+	U.animation_start(this, "cinematic_drift_out", nil, store.tick_ts, false)
+	U.y_animation_wait(this)
+	U.animation_start(this, "summon_royal_guard", nil, store.tick_ts, false)
+	U.y_wait(store, dg.cast_time)
+	signal.emit("show-balloon_tutorial-pos", "S18_TRANS_01", false, V.v(this.pos.x, this.pos.y + 80))
+
+	local turn_y = dest.y + (entry.y > dest.y and 50 or -50)
+	local guards = {}
+
+	for _, sp in ipairs(this.initial_squads_pos or {}) do
+		local from = V.v(entry.x + sp.entry_offset.x, entry.y + sp.entry_offset.y)
+
+		for _, g in ipairs(denas_spawn_guard_squad(store, dg, sp.pos, dg.initial_entity, from, turn_y)) do
+			guards[#guards + 1] = g
+		end
+
+		U.y_wait(store, 0.25)
+	end
+
+	U.y_animation_wait(this)
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	local deadline = store.tick_ts + 12
+
+	local function arrived(g)
+		if not store.entities[g.id] then
+			return true
+		end
+
+		if g.health and g.health.dead then
+			return true
+		end
+
+		return not g.nav_rally.new and V.dist(g.pos.x, g.pos.y, g.nav_rally.pos.x, g.nav_rally.pos.y) <= 8
+	end
+
+	while deadline > store.tick_ts do
+		local all = true
+
+		for _, g in ipairs(guards) do
+			if not arrived(g) then
+				all = false
+
+				break
+			end
+		end
+
+		if all then
+			break
+		end
+
+		coroutine.yield()
+	end
+
+	this.cinematic_entrance_done = true
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	while not this.cinematic_look_start do
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, "look_around_in", nil, store.tick_ts, 1)
+	U.animation_start(this, "look_around_loop", nil, store.tick_ts, true)
+
+	while not this.cinematic_look_end do
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, "look_around_out", nil, store.tick_ts, 1)
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	this.cinematic_look_done = true
+end
+
+function scripts.hero_stage_218_denas.update(this, store)
+	local h = this.health
+	local brk, sta
+
+	this.health_bar.hidden = false
+
+	local ba = this.timed_attacks.list[1]
+
+	SU.delay_attack(store, ba, 2)
+
+	local dg = this.timed_attacks.list[2]
+
+	SU.delay_attack(store, dg, 4)
+
+	if not this.ignore_in_animation then
+		U.y_animation_play(this, "revive", this.in_cinematic, store.tick_ts, 1)
+	end
+
+	U.animation_start(this, "idle", this.in_cinematic, store.tick_ts, true)
+
+	if not this.cinematic_entrance_to then
+		for _, sp in ipairs(this.initial_squads_pos or {}) do
+			denas_spawn_guard_squad(store, dg, sp.pos, dg.initial_entity)
+		end
+	end
+
+	if this.cinematic_entrance_to then
+		scripts.hero_stage_218_denas.y_cinematic_entrance(store, this)
+	end
+
+	while this.in_cinematic do
+		coroutine.yield()
+	end
+
+	while true do
+		if h.dead then
+			SU.y_hero_death_and_respawn(store, this)
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				local rsb = this.rally_speed_boost
+				local walk_angles = this.render.sprites[1].angles.walk
+				local boosted = false
+
+				if V.dist(this.pos.x, this.pos.y, this.nav_rally.pos.x, this.nav_rally.pos.y) > rsb.min_dist then
+					U.speed_mul(this, rsb.speed_factor)
+					walk_angles[1] = "walk"
+					boosted = true
+				end
+
+				local out = SU.y_hero_new_rally(store, this)
+
+				if boosted then
+					U.speed_div(this, rsb.speed_factor)
+				end
+
+				walk_angles[1] = "walk_slow"
+
+				if out then
+					goto label_308_0
+				end
+			end
+
+			do
+				local target = SU.soldier_pick_melee_target(store, this)
+
+				if not target or this.soldier.target_id == target.id and this.motion.arrived then
+					if scripts.hero_stage_218_denas.y_bombardement(store, this) then
+						goto label_308_0
+					end
+
+					if scripts.hero_stage_218_denas.y_denas_guards(store, this) then
+						goto label_308_0
+					end
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+			-- block empty
+			elseif SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+			end
+		end
+
+		::label_308_0::
+
+		coroutine.yield()
+	end
+end
+
 return scripts

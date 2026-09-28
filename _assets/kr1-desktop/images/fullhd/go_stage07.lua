@@ -1,1 +1,0 @@
-return {stage7_cave1={a_name="go_stage07.dds",a_size={1024,512},f_quad={2,295,233,206},size={268,230},trim={35,0,0,24}},stage7_cave2={a_name="go_stage07.dds",a_size={1024,512},f_quad={2,0,278,291},size={278,292},trim={0,1,0,0}},stage7_cave3={a_name="go_stage07.dds",a_size={1024,512},f_quad={284,0,246,268},size={246,268},trim={0,0,0,0}}}

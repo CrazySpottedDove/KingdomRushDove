@@ -1,0 +1,234 @@
+#	COMZZDOS					1 - Tower Left - Portal Left - Exit Left					2 - Tower Left - Portal Bottom - Exit Left					3 - Tower Left - Portal Bottom - Exit Right					4 - Tower Left - Portal Right - Exit Right					5 - Tower Right - Portal Left - Exit Left					6 - Tower Right - Portal Bottom - Exit Left					7 - Tower Right - Portal Bottom - Exit Right					8 - Tower Right - Portal Right - Exit Right					9 - Tower Front - Exit Left					10 - Tower Front - Exit Right					11 - Tower Right - Phase 3 - Exit Bottom					12 - Tower Right - Phase 3 - Exit Right					13 - Spawn Central - Left - Exit Left 					14 - Spawn Central - Left - Exit Bottom 					15 - Spawn Central - Right - Exit Right 					16 - Spawn Central - Right - Exit Bottom 					18- Portal Bottom - Exit Left 					19 - Portal Bottom - Exit Right 					22 - Torre frente left- Exit bottom					21 - Torre frente right - Exit bottom
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3		10:*	10:2	10:1	10:3		11:*	11:2	11:1	11:3		12:*	12:2	12:1	12:3		13:*	13:2	13:1	13:3		14:*	14:2	14:1	14:3		15:*	15:2	15:1	15:3		16:*	16:2	16:1	16:3		18:*	18:2	18:1	18:3		19:*	19:2	19:1	19:3		22:*	22:2	22:1	22:3		21:*	21:2	21:1	21:3
+#	level properties
+	description	Iron Rodri
+	lives	20
+	gold	2420
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	3296
+#	stage gold curve
+#	WAVE 1				27.95
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	shadow_archer_kr6		dark_sapper	crowcaller	crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	0	5	0		0	0	0	0		1	0	0	0		0	0	0	0
+#	gold	79				0	0	75	0		0	0	0	0		4	0	0	0		0	0	0	0
+	wave		1		-1
+	event	stage_218_portal	1	open	0
+	event	stage_218_portal	2	open	0
+	event	stage_218_puerta	open		0.25
+					1																																												dark_slayer
+					1																																															demon_lord
+					5		brigand_kr6																																																							demon_spawn
+					2				brigand_kr6																																																							demon_spawn
+					1.5		brigand_kr6																																																							demon_spawn
+					5																																																																																														shadow_archer_kr6				shadow_archer_kr6
+					1.25																																																																																													shadow_archer_kr6				shadow_archer_kr6
+					1.5																																																																																														shadow_archer_kr6				shadow_archer_kr6
+					1.25			dark_knight_kr6																																																																																										shadow_archer_kr6				shadow_archer_kr6
+					5				brigand_kr6																																																						demon_spawn
+					2		brigand_kr6																																																									demon_spawn
+					1.2				brigand_kr6																																																					demon_spawn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	Planteo Inicial, división clara de resistencias y tipos por salida.
+
+
+
+#	WAVE 2				51.8
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	0	12	0		0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	180				0	0	180	0		0	0	0	0		0	0	0	0		0	0	0	0
+#	wave		2
+					20																																										brigand_kr6
+					1.5																																											brigand_kr6
+					1.3																																											brigand_kr6
+					1																																												brigand_kr6
+					1.2																																										brigand_kr6
+					1																																											brigand_kr6
+					5																																																																																													demon_spawn
+					1.5																																																																																												demon_spawn
+					1.8																																																																																													demon_spawn
+					1.2																																																																																														demon_spawn
+					1.8																																																																																												demon_spawn
+					7																																																				brigand_kr6		brigand_kr6
+					1																																																					brigand_kr6																																								demon_lord
+					3																																																				brigand_kr6																																								demon_flareon_kr6
+					1.2																																																						brigand_kr6																																								demon_flareon_kr6
+					1																																																					brigand_kr6																																							demon_flareon_kr6
+					1.3																																																																																													demon_flareon_kr6
+
+
+
+
+
+
+
+
+#	Segunda parte del planteo, apretamos en salida de abajo con las resistencias invertidas según las salidas de los costados.
+Resuelve las swarms por izquierda con slow de la Crossbows.
+
+
+
+
+#	WAVE 3				67
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	gargoyle_kr6		dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	0	6	0		0	0	0	1		2	1	0	0		0	0	0	0
+#	gold	188				0	0	90	0		0	0	0	30		8	60	0	0		0	0	0	0
+#	wave		3
+					18			dark_slayer
+					3																																																										demon_lord
+					3																																											brigand_kr6
+					2																																										brigand_kr6
+					1.5																																																																																													brigand_kr6
+					1																																										brigand_kr6																																																				brigand_kr6
+					1.5																																																																																													brigand_kr6
+					8		dark_knight_kr6																																																																																																demon_lord
+					2				dark_knight_kr6																																																																																															demon_flareon_kr6
+					2.5																																																																																																	demon_flareon_kr6
+					2.5																																																																																																			demon_flareon_kr6
+					8																																																				dark_disciple
+					3																																																						dark_sapper
+					5																																																demon_hound
+					2																																																	demon_hound
+					2																																															demon_hound
+					2																																																demon_hound
+
+
+
+
+
+
+
+
+#	Juntamos P1 y P2 en un push fulero, dando bastante oro y complicando.
+Demandamos AoE de la forger izquierda, more DPS por derecha.
+
+
+
+#	WAVE 4				45
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	13	0	0		0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	390				0	390	0	0		0	0	0	0		0	0	0	0		0	0	0	0
+#	wave		4
+					20			gargoyle_kr6																																																							demon_imp_kr6
+					2		gargoyle_kr6
+					2			gargoyle_kr6																																																						demon_imp_kr6
+					2				gargoyle_kr6
+					2																																																											demon_imp_kr6
+					4			gargoyle_kr6																																												gargoyle_kr6
+					2																																															gargoyle_kr6
+					2		gargoyle_kr6																																															gargoyle_kr6
+					2																																																gargoyle_kr6									demon_imp_kr6
+					3			gargoyle_kr6
+					2				gargoyle_kr6
+					2		gargoyle_kr6																																																									demon_imp_kr6
+
+
+
+
+
+
+
+
+
+
+#	Push combinación de voladores.
+
+
+#	WAVE 5				48.4
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	0	13	0		0	0	0	0		1	0	0	0		0	0	0	0
+#	gold	199				0	0	195	0		0	0	0	0		4	0	0	0		0	0	0	0
+#	wave		5
+					10																																																										brigand_kr6
+					1.5																																																						brigand_kr6			brigand_kr6
+					1																																																					brigand_kr6
+					1.2																																																										brigand_kr6
+					1																																																						brigand_kr6			brigand_kr6
+					1.2																																																						brigand_kr6
+					1																																																					dark_knight_kr6				brigand_kr6
+					5																																																																																														brigand_kr6				shadow_archer_kr6
+					1																																																																																														brigand_kr6			shadow_archer_kr6
+					1.2																																																																																													brigand_kr6
+					1.5																																																																																																		shadow_archer_kr6
+					1																																																																																													brigand_kr6				shadow_archer_kr6
+					1.5																																																																																														brigand_kr6			shadow_archer_kr6
+					5																																																demon_lord
+					7																																																									demon_hound
+					2																																																											demon_hound
+					2.5																																																									demon_hound
+					2																																																											demon_hound
+					1.8																																																									demon_hound
+
+
+
+
+
+
+
+#	Push fuerte por medio y derecha. Le damos suave e incrementamos presión, cuestión de demandar torres contrarias a las que en teoría predominan.
+
+
+
+
+
+
+#	WAVE 6				71.1
+#	enemies					skeleton	gargoyle_kr6	brigand_kr6	exalted_shadow_archer		exalted_shadow_blades	exalted_crowcaller	exalted_crow	dark_disciple		dark_knight_kr6	dark_slayer	death_rider	necromancer_kr6		dark_construct	darkling	cloud_of_crows_exalted_shadow_archer	cloud_of_crows_exalted_shadow_blades
+#	cant.					0	0	0	0		0	0	0	0		0	1	0	0		0	0	0	0
+#	gold	60				0	0	0	0		0	0	0	0		0	60	0	0		0		0	0
+#	wave		6
+					15			magma_elemental
+					2																																																demon_lord
+					2																																												dark_disciple																																																					demon_lord
+					8																																																									demon_hound
+					3																																																						demon_hound			demon_hound
+					2.25																																																					demon_hound
+					1.8																																																										demon_hound
+					6																																																									demon_hound
+					1.75																																																					demon_hound
+					2.25																																																					demon_hound
+					1.75																																																						demon_hound			demon_hound
+					2			dark_slayer
+					6																																											demon_lord
+					8		demon_hound
+					1.5				demon_hound
+					4		demon_hound
+					2			demon_hound
+					1.8				demon_hound
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	Push final con un poco de todo, cross va y viene.
+
+#	TOTAL DURATION (min):	5.19

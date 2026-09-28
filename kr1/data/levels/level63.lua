@@ -96,7 +96,6 @@ until s_mactans.phase=="idle" and s_malicia.phase=="idle"
 U.y_wait_unconditional(store,1.5)
 s_statue.phase_signal="break"
 s_crystal.tween.disabled=true
-local crystal_s=s_crystal.render.sprites[1]
 U.y_ease_keys(store,{s_crystal.pos,s_crystal.render.sprites[1].offset},{"y","y"},{s_crystal.pos.y,s_crystal.render.sprites[1].offset.y},{s_crystal.pos.y-27,0},fts(20),{"quad-in"})
 while s_statue.phase~="broken" do
 coroutine.yield()

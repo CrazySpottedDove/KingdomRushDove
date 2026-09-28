@@ -14,8 +14,6 @@ EXO.exo_lists_to_load = {}
 -- 持久化的 exo，永远不会卸载，避免重复加载卸载的开销
 local persistent_exos = table.to_map({"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava"})
 
--- TODO: 为 EXO 添加 unload 方法，避免 exo 数据过多导致内存占用过高的问题；优化 EXO 数据结构。
-
 --- director 调用，将资源列表加入 EXO.exo_lists_to_load 中，在进入对局时被加载
 ---@param exo_list any
 function EXO:queue_load(exo_list)

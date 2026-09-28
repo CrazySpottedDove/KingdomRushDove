@@ -1,4 +1,3 @@
-local log=require("lib.klua.log"):new("level22")
 local km=require("lib.klua.macros")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
@@ -17,7 +16,7 @@ return
 end
 function level:update(store)
 coroutine.yield()
-local h=LU.insert_hero(store,"hero_bolverk",V.v(769,75))
+LU.insert_hero(store,"hero_bolverk",V.v(769,75))
 while store.wave_group_number<1 do
 coroutine.yield()
 end

@@ -16044,3 +16044,648 @@ tt.melee.attacks[2].hp_threshold = 1
 tt.sound_events.death = "EnemyDarkSlayerDeath"
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.ui.click_rect = r(-25, 0, 50, 45)
+
+-- ============================================================
+-- KR6 stage 18（最终关）恶魔敌人
+-- 专属脚本就近定义在本文件（不改 game_scripts.lua，避免与其它 workstream 冲突）。
+-- ============================================================
+local SU = require("script_utils")
+local S = require("sound_db")
+local Vv = require("lib.klua.vector")
+
+local function q_insert(e)
+	simulation:queue_insert_entity(e)
+end
+
+local function q_remove(e)
+	simulation:queue_remove_entity(e)
+end
+
+scripts.enemy_demon_imp = scripts.enemy_demon_imp or {}
+
+function scripts.enemy_demon_imp.update(this, store)
+	local shadow_sprite = this.render.sprites[2]
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	while true do
+		if this.health.dead then
+			shadow_sprite.hidden = true
+
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			SU.y_enemy_walk_until_blocked(store, this)
+		end
+	end
+end
+
+scripts.enemy_demon_lord = scripts.enemy_demon_lord or {}
+
+function scripts.enemy_demon_lord.update(this, store)
+	local a = this.timed_attacks.list[1]
+
+	a.ts = store.tick_ts
+
+	local function ready_to_shield()
+		return this.enemy.can_do_magic and store.tick_ts - a.ts > a.cooldown
+	end
+
+	local function get_shield_targets()
+		return U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
+			return table.contains(a.allowed_templates, e.template_name)
+		end)
+	end
+
+	::label_70_0::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if ready_to_shield() then
+				local targets = get_shield_targets()
+
+				if not targets then
+					SU.delay_attack(store, a, 0.5)
+				else
+					a.ts = store.tick_ts
+
+					U.animation_start(this, a.animation, nil, store.tick_ts, false)
+
+					if a.sound then
+						S:queue(a.sound)
+					end
+
+					if SU.y_enemy_wait(store, this, a.cast_time) then
+						goto label_70_0
+					end
+
+					targets = get_shield_targets()
+
+					if targets then
+						local shielded_count = 0
+
+						for _, target in ipairs(targets) do
+							if shielded_count >= a.max_count then
+								break
+							end
+
+							shielded_count = shielded_count + 1
+
+							local m = E:create_entity(a.mod)
+
+							m.modifier.source_id = this.id
+							m.modifier.target_id = target.id
+
+							q_insert(m)
+						end
+					end
+
+					if SU.y_enemy_animation_wait(this) then
+						goto label_70_0
+					end
+				end
+			end
+
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, ready_to_shield, ready_to_shield) then
+			else
+				coroutine.yield()
+			end
+		end
+	end
+end
+
+scripts.enemy_magma_elemental = scripts.enemy_magma_elemental or {}
+
+function scripts.enemy_magma_elemental.insert(this, store, script)
+	if not scripts.enemy_basic.insert(this, store, script) then
+		return false
+	end
+
+	if this.play_spawn_animation then
+		this._spawn_vis_bans = this.vis.bans
+		this._spawn_ignore_damage = this.health.ignore_damage
+
+		U.bans_add(this.vis, F_ALL)
+		this._spawn_f_all_active = true
+		this.health.ignore_damage = true
+		this.health_bar.hidden = true
+	end
+
+	return true
+end
+
+function scripts.enemy_magma_elemental.update(this, store, script)
+	if this.play_spawn_animation then
+		U.animation_start(this, "spawn_loop", true, store.tick_ts, true)
+		U.y_wait(store, this.spawn_loop_time)
+		U.animation_start(this, "spawn", true, store.tick_ts, false)
+		U.y_animation_wait(this)
+
+		this.health_bar.hidden = nil
+
+		if this._spawn_f_all_active then
+			U.bans_remove(this.vis, F_ALL)
+			this._spawn_f_all_active = nil
+		end
+
+		this.health.ignore_damage = this._spawn_ignore_damage
+
+		if this.die_after_spawn then
+			this.health_bar.hidden = true
+			this.health.hp = 0
+
+			while not this.health.dead do
+				coroutine.yield()
+			end
+		end
+	end
+
+	return scripts.enemy_mixed.update(this, store, script)
+end
+
+scripts.fx_magma_elemental_fire = scripts.fx_magma_elemental_fire or {}
+
+function scripts.fx_magma_elemental_fire.update(this, store, script)
+	U.animation_start(this, "in", nil, store.tick_ts, false, 1)
+	U.y_animation_wait(this)
+	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+	U.y_wait(store, this.idle_duration)
+	U.animation_start(this, "out", nil, store.tick_ts, false, 1)
+	U.y_animation_wait(this)
+	q_remove(this)
+end
+
+scripts.bullet_demon_flareon = scripts.bullet_demon_flareon or {}
+
+function scripts.bullet_demon_flareon.update(this, store, script)
+	local b = this.bullet
+	local s = this.render.sprites[1]
+	local ps
+
+	if not b.last_pos then
+		b.last_pos = Vv.vclone(b.from)
+	end
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+
+		q_insert(ps)
+	end
+
+	while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
+		coroutine.yield()
+
+		local target = store.entities[b.target_id]
+
+		if target and not target.health.dead then
+			local ho = target.unit.hit_offset
+
+			b.to.x, b.to.y = target.pos.x + ho.x, target.pos.y + ho.y
+			b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
+		end
+
+		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+		s.r = Vv.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+
+		if ps then
+			ps.particle_system.emit_direction = s.r
+		end
+	end
+
+	local target = store.entities[b.target_id]
+
+	if target and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+
+		store.damage_queue[#store.damage_queue + 1] = d
+
+		if b.mod then
+			local m = E:create_entity(b.mod)
+
+			m.modifier.target_id = target.id
+			m.modifier.source_id = b.source_id
+
+			q_insert(m)
+		end
+	end
+
+	if b.hit_fx then
+		local fx = E:create_entity(b.hit_fx)
+
+		fx.pos.x, fx.pos.y = b.to.x, b.to.y
+		fx.render.sprites[1].ts = store.tick_ts
+
+		q_insert(fx)
+	end
+
+	if this.sound_events.hit then
+		S:queue(this.sound_events.hit)
+	end
+
+	q_remove(this)
+end
+
+-- enemy_demon_spawn（小恶魔，死亡自爆）
+tt = RT("enemy_demon_spawn", "enemy")
+AC(tt, "melee", "death_spawns")
+tt.unit.head_offset = v(4, 12)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 6.6
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = {288.75, 330, 412.5, 453.75}
+tt.health.armor = 0
+tt.health.magic_armor = 0.4
+tt.health_bar.offset = v(0, 32)
+tt.info.portrait = "kr6_info_portraits_enemies_0067"
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.unit.show_blood_pool = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 40
+tt.render.sprites[1].prefix = "demon_spawn_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.melee.attacks[1].cooldown = 1.2
+tt.melee.attacks[1].damage_min = 6.6
+tt.melee.attacks[1].damage_max = 11
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].animation = "melee"
+tt.melee.attacks[1].hit_time = fts(6)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.death_spawns.name = "aura_demon_spawn_death_explosion"
+tt.death_spawns.delay = fts(14)
+tt.death_spawns.fx = "decal_demon_spawn_death"
+tt.sound_events.death = "Stage218DemonSpawnDeath"
+tt.ui.click_rect = r(-13, 0, 26, 30)
+
+-- enemy_demon_flareon_kr6（远程火焰恶魔，必须 _kr6 后缀：与 KR1 本体 enemy_demon_flareon 冲突）
+tt = RT("enemy_demon_flareon_kr6", "enemy")
+AC(tt, "melee", "ranged", "death_spawns")
+tt.unit.head_offset = v(5.5, 13)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 8.8
+tt.enemy.melee_slot = v(35, 0)
+tt.health.hp_max = {316.25, 385, 453.75, 495}
+tt.health.armor = 0
+tt.health.magic_armor = 0.4
+tt.health_bar.offset = v(0, 39)
+tt.info.portrait = "kr6_info_portraits_enemies_0063"
+tt.info.i18n_key = "ENEMY_DEMON_FLAREON"
+tt.main_script.insert = scripts.enemy_basic_with_random_range.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 40
+tt.render.sprites[1].prefix = "demon_flareon_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.melee.attacks[1].cooldown = 1.3
+tt.melee.attacks[1].damage_min = 11
+tt.melee.attacks[1].damage_max = 16.5
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_time = fts(10)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].animation = "melee"
+tt.ranged.attacks[1].bullet = "bullet_demon_flareon"
+tt.ranged.attacks[1].hold_advance = true
+tt.ranged.attacks[1].shoot_time = fts(13)
+tt.ranged.attacks[1].cooldown = 1.5
+tt.ranged.attacks[1].min_range = 60
+tt.ranged.attacks[1].max_range = 150
+tt.ranged.attacks[1].max_range_variance = 60
+tt.ranged.attacks[1].bullet_start_offset = {v(20, 22)}
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[1].animation = "ranged"
+tt.death_spawns.name = "aura_demon_flareon_death_explosion"
+tt.death_spawns.delay = fts(14)
+tt.death_spawns.fx = "decal_demon_flareon_death"
+tt.unit.hit_offset = v(0, 18)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 16)
+tt.unit.show_blood_pool = false
+tt.sound_events.death = "Stage218DemonSpawnDeath"
+tt.ui.click_rect = r(-13, -3, 32, 35)
+
+-- enemy_demon_hound（闪避恶魔犬，死亡自爆）
+tt = RT("enemy_demon_hound", "enemy")
+AC(tt, "melee", "dodge", "death_spawns")
+tt.unit.head_offset = v(15, 14)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 6.6
+tt.enemy.melee_slot = v(43, 0)
+tt.health.hp_max = {336.875, 481.25, 618.75, 687.5}
+tt.health.armor = 0
+tt.health.magic_armor = 0.5
+tt.health_bar.offset = v(0, 40)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0064"
+tt.unit.hit_offset = v(0, 20)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 17)
+tt.unit.show_blood_pool = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.motion.max_speed = 60
+tt.render.sprites[1].prefix = "demon_hound_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 23.1
+tt.melee.attacks[1].damage_max = 42.9
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].animation = "melee"
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.dodge.chance = 0.3
+tt.dodge.show_pop = true
+tt.dodge.silent = true
+tt.death_spawns.name = "aura_demon_hound_death_explosion"
+tt.death_spawns.delay = fts(16)
+tt.death_spawns.fx = "decal_demon_hound_death"
+tt.sound_events.death = "Stage218DemonHoundDeath"
+tt.ui.click_rect = r(-26, -3, 52, 32)
+
+-- enemy_demon_lord（恶魔领主，给友军套盾，死亡自爆）
+tt = RT("enemy_demon_lord", "enemy")
+AC(tt, "melee", "timed_attacks", "death_spawns")
+tt.unit.head_offset = v(5, 22)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 22
+tt.enemy.melee_slot = v(36, 0)
+tt.health.hp_max = {1251.25, 1718.75, 1856.25, 2062.5}
+tt.health.armor = 0
+tt.health.magic_armor = 0.8
+tt.health_bar.offset = v(0, 47)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr6_info_portraits_enemies_0066"
+tt.unit.hit_offset = v(0, 25)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 25)
+tt.unit.show_blood_pool = false
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_demon_lord.update
+tt.motion.max_speed = 32
+tt.render.sprites[1].prefix = "demon_lord_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.melee.attacks[1].cooldown = 1.5
+tt.melee.attacks[1].damage_min = 38.5
+tt.melee.attacks[1].damage_max = 71.5
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].animation = "melee"
+tt.melee.attacks[1].hit_time = fts(24)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.timed_attacks.list[1] = CC("mod_attack")
+tt.timed_attacks.list[1].animation = "skill"
+tt.timed_attacks.list[1].cast_time = fts(15)
+tt.timed_attacks.list[1].cooldown = 6
+tt.timed_attacks.list[1].max_count = 4
+tt.timed_attacks.list[1].max_range = 180
+tt.timed_attacks.list[1].mod = "mod_demon_shield"
+tt.timed_attacks.list[1].sound = "Stage218DemonLordShieldCast"
+tt.timed_attacks.list[1].vis_flags = bor(F_MOD)
+tt.timed_attacks.list[1].allowed_templates = {"enemy_demon_spawn", "enemy_demon_hound", "enemy_demon_flareon_kr6", "enemy_demon_legion", "enemy_gulaemon", "enemy_cerberus"}
+tt.death_spawns.name = "aura_demon_lord_death"
+tt.death_spawns.delay = fts(17)
+tt.death_spawns.fx = "decal_demon_lord_death"
+tt.sound_events.death = "Stage218DemonLordDeath"
+tt.ui.click_rect = r(-20, -3, 40, 35)
+
+-- enemy_magma_elemental（岩浆元素，范围灼烧）
+tt = RT("enemy_magma_elemental", "enemy")
+AC(tt, "melee")
+tt.unit.head_offset = v(0, 40)
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
+tt.health.dead_lifetime = 3
+tt.render.sprites[1].angles_custom = {
+	walk = {55, 115, 245, 305}
+}
+tt.enemy.gold = 121
+tt.enemy.melee_slot = v(51, 0)
+tt.enemy.lives_cost = 2
+tt.health.hp_max = {2750, 3437.5, 3918.75, 4400}
+tt.health.armor = 0.8
+tt.health.magic_armor = 0
+tt.health_bar.offset = v(0, 74)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.info.portrait = "kr6_info_portraits_enemies_0068"
+tt.unit.hit_offset = v(0, 35)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 32)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.main_script.insert = scripts.enemy_magma_elemental.insert
+tt.main_script.update = scripts.enemy_magma_elemental.update
+tt.spawn_loop_time = fts(70)
+tt.motion.max_speed = 20
+tt.render.sprites[1].prefix = "magma_elemental_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].animation = "melee"
+tt.melee.attacks[1].cooldown = 2.5
+tt.melee.attacks[1].count = 6
+tt.melee.attacks[1].damage_min = 77
+tt.melee.attacks[1].damage_max = 110
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].damage_radius = 50
+tt.melee.attacks[1].hit_time = fts(22)
+tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
+tt.melee.attacks[1].hit_fx = "fx_magma_elemental_fire"
+tt.melee.attacks[1].hit_offset = v(50, 0)
+tt.melee.attacks[1].vis_flags = F_AREA
+tt.melee.attacks[1].mod = "mod_magma_elemental_burn"
+tt.sound_events.death = "Stage218MagmaElementalDeath"
+tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
+tt.ui.click_rect = r(-34, -2, 68, 65)
+
+-- enemy_demon_imp_kr6（飞行小恶魔，必须 _kr6 后缀：与 KR1 本体 enemy_demon_imp 冲突）
+tt = RT("enemy_demon_imp_kr6", "enemy")
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
+tt.health.dead_lifetime = 3
+tt.enemy.gold = 5.5
+tt.flight_height = 30
+tt.health.hp_max = {247.5, 275, 343.75, 385}
+tt.health_bar.offset = v(0, 30 + 45)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health.armor = 0
+tt.health.magic_armor = 0.25
+tt.info.portrait = "kr6_info_portraits_enemies_0065"
+tt.info.i18n_key = "ENEMY_DEMON_IMP"
+tt.main_script.update = scripts.enemy_demon_imp.update
+tt.motion.max_speed = 60
+tt.render.sprites[1].offset = v(0, 30)
+tt.render.sprites[1].prefix = "demon_imp_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "gargoyle_shadow"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].scale = vv(1)
+tt.unit.can_explode = false
+tt.unit.hide_after_death = true
+tt.unit.show_blood_pool = false
+tt.unit.hit_offset = v(0, 50)
+tt.unit.head_offset = v(0, 49)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 47)
+tt.vis.bans = bor(F_BLOCK, F_SKELETON)
+tt.vis.flags = bor(F_ENEMY, F_FLYING)
+tt.sound_events.death = "Stage218DemonImpDeath"
+tt.sound_events.death_args = {
+	delay = fts(10)
+}
+tt.ui.click_rect = r(-15, 35, 30, 30)
+
+-- 恶魔战斗子实体
+tt = RT("bullet_demon_flareon", "arrow")
+tt.main_script.insert = scripts.arrow.insert
+tt.main_script.update = scripts.bullet_demon_flareon.update
+tt.render.sprites[1].prefix = "demon_flareon_bullet"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.bullet.flight_time = fts(16)
+tt.bullet.hide_radius = nil
+tt.bullet.prediction_error = false
+tt.bullet.predict_target_pos = false
+tt.bullet.hit_blood_fx = nil
+tt.bullet.miss_decal = nil
+tt.bullet.pop = nil
+tt.bullet.pop_chance = 0
+tt.bullet.damage_min = 11
+tt.bullet.damage_max = 17.6
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.particles_name = "ps_bullet_trail_demon_flareon"
+tt.bullet.hit_fx = "fx_demon_flareon_explosion"
+tt.bullet.mod = "mod_demon_flareon_burn"
+tt.sound_events.insert = "Stage218DemonFlareonAttack"
+
+tt = RT("ps_bullet_trail_demon_flareon", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.name = "demon_flareon_trail_run"
+tt.particle_system.particle_lifetime = {fts(7), fts(7)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_area_spread = v(0, 4)
+
+tt = RT("fx_demon_flareon_explosion", "fx")
+tt.render.sprites[1].name = "demon_flareon_explosion"
+
+tt = RT("mod_demon_flareon_burn", "mod_lava")
+tt.modifier.duration = 3
+tt.modifier.vis_flags = bor(F_MOD, F_BURN)
+tt.modifier.vis_bans = bor(F_ENEMY)
+tt.dps.damage_min = 8.8
+tt.dps.damage_max = 13.2
+tt.dps.damage_inc = 0
+tt.dps.damage_every = 0.5
+tt.dps.damage_type = DAMAGE_TRUE
+
+tt = RT("mod_magma_elemental_burn", "mod_lava")
+tt.modifier.duration = 3
+tt.modifier.vis_flags = bor(F_MOD, F_BURN)
+tt.modifier.vis_bans = bor(F_ENEMY)
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.dps.damage_min = 8.8
+tt.dps.damage_max = 13.2
+tt.dps.damage_inc = 0
+tt.dps.damage_every = 0.5
+tt.dps.damage_type = DAMAGE_TRUE
+
+tt = RT("aura_demon_spawn_death_explosion", "aura")
+tt.aura.radius = 45
+tt.aura.vis_flags = F_AREA
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.cycles = 1
+tt.aura.damage_min = 22
+tt.aura.damage_max = 27.5
+tt.aura.damage_type = DAMAGE_EXPLOSION
+tt.main_script.update = scripts.aura_apply_damage.update
+
+tt = RT("aura_demon_flareon_death_explosion", "aura")
+tt.aura.radius = 45
+tt.aura.vis_flags = F_AREA
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.cycles = 1
+tt.aura.damage_min = 33
+tt.aura.damage_max = 44
+tt.aura.damage_type = DAMAGE_EXPLOSION
+tt.main_script.update = scripts.aura_apply_damage.update
+
+tt = RT("aura_demon_hound_death_explosion", "aura")
+tt.aura.radius = 45
+tt.aura.vis_flags = F_AREA
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.cycles = 1
+tt.aura.damage_min = 55
+tt.aura.damage_max = 77
+tt.aura.damage_type = DAMAGE_EXPLOSION
+tt.main_script.update = scripts.aura_apply_damage.update
+
+tt = RT("aura_demon_lord_death", "aura")
+tt.aura.radius = 60
+tt.aura.vis_flags = F_AREA
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.cycles = 1
+tt.aura.damage_min = 99
+tt.aura.damage_max = 132
+tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.main_script.update = scripts.aura_apply_damage.update
+
+tt = RT("decal_demon_flareon_death", "decal_timed")
+tt.render.sprites[1].name = "demon_flareon_decal"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("decal_demon_hound_death", "decal_demon_flareon_death")
+tt.render.sprites[1].offset = v(0, 5)
+
+tt = RT("decal_demon_spawn_death", "decal_demon_flareon_death")
+tt.render.sprites[1].offset = v(0, 0)
+
+tt = RT("decal_demon_lord_death", "decal_demon_flareon_death")
+tt.render.sprites[1].offset = v(0, 0)
+
+tt = RT("fx_magma_elemental_fire")
+AC(tt, "pos", "render", "main_script")
+tt.render.sprites[1].prefix = "magma_elemental_fire_decal"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].prefix = "magma_elemental_explosion"
+tt.render.sprites[2].name = "run"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = -10
+tt.idle_duration = fts(3)
+tt.main_script.update = scripts.fx_magma_elemental_fire.update

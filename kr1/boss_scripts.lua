@@ -14560,4 +14560,1617 @@ function scripts.enemy_boss_stage_215.update(this, store, script)
 	end
 end
 
+-- ============================================================
+-- KR6 stage 18（最终关）Veznan boss
+-- ============================================================
+local A = require("animation_db")
+
+scripts.enemy_stage_218_veznan_illusion = {}
+
+function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
+	local shared = this.shared or {
+		illusions_killed = 0
+	}
+
+	this.shared = shared
+
+	local function set_block_bans(on)
+		if on then
+			if not this._f_block_bans_active then
+				this._f_block_bans_active = true
+
+				U.bans_add(this.vis, F_BLOCK)
+			end
+		elseif this._f_block_bans_active then
+			this._f_block_bans_active = false
+
+			U.bans_remove(this.vis, F_BLOCK)
+		end
+	end
+
+	if this.melee_engage then
+		this._melee_window = false
+		this._melee_engage_ts = store.tick_ts
+
+		set_block_bans(true)
+	end
+
+	local stagger = (this.stagger_idx or 0) * (this.skill_stagger or 0)
+	local gem_ts = store.tick_ts + stagger - this.gem_blast.cooldown * 0.5
+	local disable_ts = store.tick_ts + stagger
+	local check_ts = store.tick_ts
+	local skill_ts = 0
+	local trigger_skill
+
+	function this.health.on_damage(e, st, d)
+		if e.health.dead or e._revealing then
+			return false
+		end
+
+		if U.predict_damage(e, d) < e.health.hp then
+			return true
+		end
+
+		if shared.illusions_killed < 2 then
+			shared.illusions_killed = shared.illusions_killed + 1
+			e._revealing = true
+			e.health.ignore_damage = true
+		end
+
+		return false
+	end
+
+	local function gem_target_in_front(t)
+		local dir = this.render.sprites[1].flip_x and -1 or 1
+
+		return (t.pos.x - this.pos.x) * dir >= 0
+	end
+
+	local function aura_set_alpha(a)
+		for i = 2, #this.render.sprites do
+			this.render.sprites[i].alpha = a
+		end
+	end
+
+	local function y_aura_fade_out()
+		if not this.render.sprites[2] or not this.aura_fade_time then
+			return
+		end
+
+		this._aura_fade_in_ts = nil
+
+		local from = this.render.sprites[2].alpha or 255
+		local ts = store.tick_ts
+
+		while store.tick_ts - ts < this.aura_fade_time do
+			aura_set_alpha(from * (1 - (store.tick_ts - ts) / this.aura_fade_time))
+			coroutine.yield()
+		end
+
+		aura_set_alpha(0)
+	end
+
+	local function aura_fade_in_start()
+		if not this.render.sprites[2] or not this.aura_fade_time then
+			return
+		end
+
+		this._aura_fade_in_ts = store.tick_ts
+	end
+
+	local function aura_fade_in_tick()
+		if not this._aura_fade_in_ts then
+			return
+		end
+
+		local t = (store.tick_ts - this._aura_fade_in_ts) / this.aura_fade_time
+
+		if t >= 1 then
+			aura_set_alpha(255)
+
+			this._aura_fade_in_ts = nil
+		else
+			aura_set_alpha(255 * t)
+		end
+	end
+
+	local function find_jailable_towers()
+		return U.find_towers_in_range(store.towers, this.pos, {
+			min_range = 0,
+			max_range = this.disable.radius
+		}, function(v, o)
+			return not v.pending_removal and not v.tower.blocked and v.tower.type ~= "holder" and v.tower.type ~= "build_animation" and v.tower.can_be_mod and (not v.tower_holder or not v.tower_holder.blocked) and not U.has_modifier_types(store, v, MOD_TYPE_PROTECTION)
+		end)
+	end
+
+	local function can_cast()
+		aura_fade_in_tick()
+
+		if this.cinematic or this._revealing then
+			return true
+		end
+
+		if shared.illusions_killed >= 2 then
+			return true
+		end
+
+		if trigger_skill then
+			return true
+		end
+
+		local me = this.melee_engage
+
+		if me then
+			if not this._melee_window and store.tick_ts - this._melee_engage_ts >= me.cooldown then
+				this._melee_window = true
+				this._melee_window_ts = store.tick_ts
+
+				set_block_bans(false)
+			elseif this._melee_window and store.tick_ts - this._melee_window_ts >= me.duration then
+				this._melee_window = false
+				this._melee_engage_ts = store.tick_ts
+
+				set_block_bans(true)
+
+				for i = #this.enemy.blockers, 1, -1 do
+					local blocker = store.entities[this.enemy.blockers[i]]
+
+					if blocker then
+						U.unblock_target(store, blocker)
+					end
+
+					table.remove(this.enemy.blockers, i)
+				end
+			end
+		end
+
+		if store.tick_ts - check_ts < 0.25 then
+			return false
+		end
+
+		check_ts = store.tick_ts
+
+		if store.tick_ts - skill_ts < this.skill_master_delay then
+			return false
+		end
+
+		if store.tick_ts - gem_ts >= this.gem_blast.cooldown and U.find_soldiers_in_range(store.entities, this.pos, this.gem_blast.min_radius or 0, this.gem_blast.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front) then
+			trigger_skill = "gem_blast"
+
+			return true
+		end
+
+		if store.tick_ts - disable_ts >= this.disable.cooldown then
+			local towers = find_jailable_towers()
+
+			if towers and #towers > 0 then
+				trigger_skill = "disable"
+
+				return true
+			end
+		end
+
+		return false
+	end
+
+	local function y_cast_windup(sound, animation, time)
+		S:queue(sound)
+		U.animation_start(this, animation, nil, store.tick_ts, false)
+		y_aura_fade_out()
+
+		local t = (time or this.cast_time) - (this.aura_fade_time or 0)
+
+		if SU.y_enemy_wait(store, this, math.max(0, t)) then
+			return false
+		end
+
+		return not this._revealing
+	end
+
+	local function y_cast_gem_blast()
+		gem_ts = store.tick_ts
+
+		local gb = this.gem_blast
+		local pre = U.find_soldiers_in_range(store.entities, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
+		local last_pos = pre and V.vclone(pre[1].pos)
+
+		if not y_cast_windup(this.gem_blast_sound, this.gem_blast_animation, this.gem_blast_shot_time) then
+			return
+		end
+
+		if this.gem_blast_release_sound then
+			S:queue(this.gem_blast_release_sound)
+		end
+
+		local targets = U.find_soldiers_in_range(store.entities, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
+
+		if targets then
+			targets = table.random_order(targets)
+
+			for i = 1, math.min(gb.count, #targets) do
+				local target = targets[i]
+				local bullet = E:create_entity(this.gem_blast_bullet_t)
+				local mo = this.gem_blast_muzzle_offset
+
+				bullet.pos = V.v(this.pos.x + mo.x * (this.render.sprites[1].flip_x and -1 or 1), this.pos.y + mo.y)
+				bullet.bullet.from = V.vclone(bullet.pos)
+				bullet.bullet.to = V.vclone(target.pos)
+				bullet.bullet.target_id = target.id
+				bullet.bullet.source_id = this.id
+
+				if gb.damage_min then
+					bullet.bullet.damage_min = gb.damage_min
+				end
+
+				if gb.damage_max then
+					bullet.bullet.damage_max = gb.damage_max
+				end
+
+				if this.gem_blast_spawn_fx then
+					local sfx = E:create_entity(this.gem_blast_spawn_fx)
+
+					sfx.pos = V.vclone(bullet.pos)
+					sfx.render.sprites[1].ts = store.tick_ts
+					sfx.render.sprites[1].r = V.angleTo(bullet.bullet.to.x - bullet.pos.x, bullet.bullet.to.y - bullet.pos.y)
+
+					queue_insert(store, sfx)
+				end
+
+				queue_insert(store, bullet)
+
+				if SU.y_enemy_wait(store, this, fts(4)) or this._revealing then
+					return
+				end
+			end
+		elseif last_pos then
+			local bullet = E:create_entity(this.gem_blast_bullet_t)
+			local mo = this.gem_blast_muzzle_offset
+
+			bullet.pos = V.v(this.pos.x + mo.x * (this.render.sprites[1].flip_x and -1 or 1), this.pos.y + mo.y)
+			bullet.bullet.from = V.vclone(bullet.pos)
+			bullet.bullet.to = V.vclone(last_pos)
+			bullet.bullet.source_id = this.id
+
+			if this.gem_blast_spawn_fx then
+				local sfx = E:create_entity(this.gem_blast_spawn_fx)
+
+				sfx.pos = V.vclone(bullet.pos)
+				sfx.render.sprites[1].ts = store.tick_ts
+				sfx.render.sprites[1].r = V.angleTo(bullet.bullet.to.x - bullet.pos.x, bullet.bullet.to.y - bullet.pos.y)
+
+				queue_insert(store, sfx)
+			end
+
+			queue_insert(store, bullet)
+		end
+
+		while not U.animation_finished(this) and not this._revealing do
+			coroutine.yield()
+		end
+
+		aura_fade_in_start()
+
+		skill_ts = store.tick_ts
+	end
+
+	local function y_cast_disable()
+		disable_ts = store.tick_ts
+
+		for i = #this.enemy.blockers, 1, -1 do
+			local blocker = store.entities[this.enemy.blockers[i]]
+
+			if blocker then
+				U.unblock_target(store, blocker)
+			end
+
+			table.remove(this.enemy.blockers, i)
+		end
+
+		set_block_bans(true)
+
+		this.health.ignore_damage = true
+
+		if y_cast_windup(this.disable_cast_sound, this.disable_animation) then
+			local towers = find_jailable_towers()
+
+			if towers and #towers > 0 then
+				towers = table.random_order(towers)
+
+				for i = 1, math.min(this.disable.count, #towers) do
+					local m = E:create_entity(this.disable_mod_t)
+
+					m.modifier.target_id = towers[i].id
+					m.modifier.source_id = this.id
+
+					queue_insert(store, m)
+				end
+			end
+
+			U.y_animation_wait(this)
+		end
+
+		if not this.melee_engage or this._melee_window then
+			set_block_bans(false)
+		end
+
+		this.health.ignore_damage = false
+
+		aura_fade_in_start()
+
+		skill_ts = store.tick_ts
+	end
+
+	local function y_reveal_illusion()
+		log.debug("stage_218 veznan: ilusion revelada (%s/2)", shared.illusions_killed)
+
+		local db = this.death_blast
+
+		S:queue(this.illusion_death_sound)
+
+		this.health_bar.hidden = true
+
+		U.animation_start(this, this.illusion_death_animation, nil, store.tick_ts, false)
+
+		local anim_start = store.tick_ts
+		local souls_emitted = 0
+		local anim_name = this.render.sprites[1].prefix .. "_" .. this.illusion_death_animation
+		local anim_duration = A:has_animation(anim_name) and A:animation_duration(anim_name) or 0
+		local spawn_time = anim_duration - (this.death_spawns_lead_time or 0)
+		local spawn_done = false
+
+		local function spawn_demon_lord()
+			if spawn_done or store.tick_ts - anim_start < spawn_time then
+				return
+			end
+
+			spawn_done = true
+			this.render.sprites[1].sort_y_offset = -10
+
+			SU.do_death_spawns(store, this)
+		end
+
+		local aura_from = this.render.sprites[2] and this.aura_fade_time and (this.render.sprites[2].alpha or 255) or nil
+
+		local function update_aura_fade()
+			if not aura_from then
+				return
+			end
+
+			local k = math.min(1, (store.tick_ts - anim_start) / this.aura_fade_time)
+			local a = aura_from * (1 - k)
+
+			for i = 2, #this.render.sprites do
+				this.render.sprites[i].alpha = a
+			end
+
+			if k >= 1 then
+				aura_from = nil
+			end
+		end
+
+		local function spawn_release_soul(from, to)
+			to = to or V.v(from.x + U.frandom(-db.soul_offset_x, db.soul_offset_x), from.y + U.frandom(db.soul_offset_y[1], db.soul_offset_y[2]))
+
+			local blt = E:create_entity(this.death_blast_bullet_t)
+
+			blt.pos = V.vclone(from)
+			blt.bullet.from = V.vclone(from)
+			blt.bullet.to = to
+			blt.bullet.source_id = this.id
+
+			local speed = V.dist(from.x, from.y, to.x, to.y) / db.soul_time
+
+			blt.bullet.min_speed = speed
+			blt.bullet.max_speed = speed
+			blt.tween.ts = store.tick_ts
+
+			queue_insert(store, blt)
+		end
+
+		local shockwave_done = false
+
+		local function emit_pending_death_souls()
+			local elapsed = store.tick_ts - anim_start
+
+			if not shockwave_done and elapsed >= this.death_blast_shockwave_action_time then
+				shockwave_done = true
+
+				if this.death_blast_shockwave_fx then
+					local swfx = E:create_entity(this.death_blast_shockwave_fx)
+
+					swfx.pos = V.vclone(this.pos)
+					swfx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, swfx)
+				end
+			end
+
+			while souls_emitted < db.death_soul_count and elapsed >= this.death_souls_action_time + souls_emitted * (this.death_souls_stagger or this.death_blast_stagger) do
+				spawn_release_soul(V.v(this.pos.x, this.pos.y + this.unit.hit_offset.y))
+
+				souls_emitted = souls_emitted + 1
+			end
+		end
+
+		local victims
+		local blast_pending = 0
+
+		local function pump_blast()
+			local elapsed = store.tick_ts - anim_start
+
+			if not victims then
+				if elapsed < this.death_blast_action_time then
+					return
+				end
+
+				local targets = U.find_enemies_in_range(store, this.pos, 0, db.radius, F_INSTAKILL, 0) or {}
+				local allies = U.find_soldiers_in_range(store.entities, this.pos, 0, db.radius, F_INSTAKILL, F_ENEMY)
+
+				if allies then
+					for _, a in ipairs(allies) do
+						table.insert(targets, a)
+					end
+				end
+
+				targets = table.random_order(targets) or {}
+				victims = {}
+
+				for i, v in ipairs(targets) do
+					victims[i] = {
+						stage = 1,
+						e = v,
+						start = this.death_blast_action_time + (i - 1) * this.death_blast_stagger
+					}
+				end
+
+				blast_pending = #victims
+			end
+
+			for _, w in ipairs(victims) do
+				while w.stage < 5 do
+					local v = w.e
+
+					if not store.entities[v.id] or v.health.dead then
+						w.stage = 5
+						blast_pending = blast_pending - 1
+
+						break
+					end
+
+					local due = w.start
+
+					if w.stage >= 2 then
+						due = due + (this.death_blast_flash_soul_time or 0)
+					end
+
+					if w.stage >= 3 then
+						due = due + (this.death_blast_soul_disintegrate_time or 0)
+					end
+
+					if w.stage >= 4 then
+						due = due + (this.death_blast_disintegrate_kill_time or 0)
+					end
+
+					if elapsed < due then
+						break
+					end
+
+					if w.stage == 1 then
+						w.from = V.v(v.pos.x, v.pos.y + (v.unit and v.unit.hit_offset and v.unit.hit_offset.y or 0))
+						w.to = V.v(w.from.x + U.frandom(-db.soul_offset_x, db.soul_offset_x), w.from.y + U.frandom(db.soul_offset_y[1], db.soul_offset_y[2]))
+						w.doomed = not v.hero and v.unit
+
+						if this.death_blast_flash_fx then
+							local sfx = E:create_entity(this.death_blast_flash_fx)
+
+							sfx.pos = V.vclone(w.from)
+							sfx.render.sprites[1].ts = store.tick_ts
+							sfx.render.sprites[1].r = V.angleTo(w.to.x - w.from.x, w.to.y - w.from.y)
+
+							queue_insert(store, sfx)
+						end
+
+						w.stage = 2
+					elseif w.stage == 2 then
+						spawn_release_soul(w.from, w.to)
+
+						if w.doomed then
+							w.stage = 3
+						else
+							local d = E:create_entity("damage")
+
+							d.source_id = this.id
+							d.target_id = v.id
+							d.damage_type = DAMAGE_INSTAKILL
+
+							queue_damage(store, d)
+
+							w.stage = 5
+							blast_pending = blast_pending - 1
+						end
+					elseif w.stage == 3 then
+						v.unit.hide_during_death = true
+						v.unit.show_blood_pool = false
+
+						local dis_fx = E:create_entity(this.death_blast_disintegrate_fx)
+
+						dis_fx.pos = V.vclone(v.pos)
+						dis_fx.render.sprites[1].ts = store.tick_ts
+
+						queue_insert(store, dis_fx)
+
+						w.stage = 4
+					elseif w.stage == 4 then
+						local d = E:create_entity("damage")
+
+						d.source_id = this.id
+						d.target_id = v.id
+						d.damage_type = bor(DAMAGE_TRUE, DAMAGE_EAT)
+
+						queue_damage(store, d)
+
+						w.stage = 5
+						blast_pending = blast_pending - 1
+					end
+				end
+			end
+		end
+
+		while not U.animation_finished(this) or not victims or blast_pending > 0 or souls_emitted < db.death_soul_count or not shockwave_done or not spawn_done do
+			update_aura_fade()
+			pump_blast()
+			emit_pending_death_souls()
+			spawn_demon_lord()
+			coroutine.yield()
+		end
+
+		shared.reveals_done = (shared.reveals_done or 0) + 1
+
+		queue_remove(store, this)
+	end
+
+	local function y_swap_to_real()
+		local real = E:create_entity(this.real_template)
+
+		real.pos = V.vclone(this.pos)
+		real.nav_path.pi = this.nav_path.pi
+		real.nav_path.spi = this.nav_path.spi
+		real.nav_path.ni = this.nav_path.ni
+
+		local rs, is = real.render.sprites[1], this.render.sprites[1]
+
+		rs.name = is.name
+		rs.ts = is.ts
+		rs.time_offset = is.time_offset
+		rs.loop = is.loop
+		rs.flip_x = is.flip_x
+		real._inherited_hp = this.health.hp
+		real.shared = this.shared
+
+		queue_insert(store, real)
+		queue_remove(store, this)
+	end
+
+	while true do
+		while this.cinematic do
+			coroutine.yield()
+		end
+
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this._revealing then
+			y_reveal_illusion()
+
+			return
+		end
+
+		if shared.illusions_killed >= 2 then
+			y_swap_to_real()
+
+			return
+		end
+
+		if trigger_skill then
+			local skill = trigger_skill
+
+			trigger_skill = nil
+
+			if skill == "gem_blast" then
+				y_cast_gem_blast()
+			elseif skill == "disable" then
+				y_cast_disable()
+			end
+		end
+
+		if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, can_cast, can_cast) then
+		-- block empty
+		else
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.enemy_stage_218_veznan = {}
+
+function scripts.enemy_stage_218_veznan.update(this, store, script)
+	local gem_ts = store.tick_ts
+	local disable_ts = store.tick_ts
+	local siphon_ts = store.tick_ts
+	local check_ts = store.tick_ts
+	local skill_ts = 0
+	local trigger_skill
+
+	local function set_block_bans(on)
+		if on then
+			if not this._f_block_bans_active then
+				this._f_block_bans_active = true
+
+				U.bans_add(this.vis, F_BLOCK)
+			end
+		elseif this._f_block_bans_active then
+			this._f_block_bans_active = false
+
+			U.bans_remove(this.vis, F_BLOCK)
+		end
+	end
+
+	local function gem_target_in_front(t)
+		local dir = this.render.sprites[1].flip_x and -1 or 1
+
+		return (t.pos.x - this.pos.x) * dir >= 0
+	end
+
+	local function aura_set_alpha(a)
+		for i = 2, #this.render.sprites do
+			this.render.sprites[i].alpha = a
+		end
+	end
+
+	local function y_aura_fade_out()
+		if not this.render.sprites[2] or not this.aura_fade_time then
+			return
+		end
+
+		this._aura_fade_in_ts = nil
+
+		local from = this.render.sprites[2].alpha or 255
+		local ts = store.tick_ts
+
+		while store.tick_ts - ts < this.aura_fade_time do
+			aura_set_alpha(from * (1 - (store.tick_ts - ts) / this.aura_fade_time))
+			coroutine.yield()
+		end
+
+		aura_set_alpha(0)
+	end
+
+	local function aura_fade_in_start()
+		if not this.render.sprites[2] or not this.aura_fade_time then
+			return
+		end
+
+		this._aura_fade_in_ts = store.tick_ts
+	end
+
+	local function aura_fade_in_tick()
+		if not this._aura_fade_in_ts then
+			return
+		end
+
+		local t = (store.tick_ts - this._aura_fade_in_ts) / this.aura_fade_time
+
+		if t >= 1 then
+			aura_set_alpha(255)
+
+			this._aura_fade_in_ts = nil
+		else
+			aura_set_alpha(255 * t)
+		end
+	end
+
+	local function find_jailable_towers()
+		return U.find_towers_in_range(store.towers, this.pos, {
+			min_range = 0,
+			max_range = this.disable.radius
+		}, function(v, o)
+			return not v.pending_removal and not v.tower.blocked and v.tower.type ~= "holder" and v.tower.type ~= "build_animation" and v.tower.can_be_mod and (not v.tower_holder or not v.tower_holder.blocked) and not U.has_modifier_types(store, v, MOD_TYPE_PROTECTION)
+		end)
+	end
+
+	local function can_cast()
+		aura_fade_in_tick()
+
+		if this.cinematic then
+			return true
+		end
+
+		if trigger_skill then
+			return true
+		end
+
+		local rs = this.render.sprites[3]
+
+		if rs then
+			if not rs.hidden and rs.runs and rs.runs > 0 then
+				rs.hidden = true
+				this._ray_next_ts = store.tick_ts + U.frandom(1, 2)
+			elseif rs.hidden and store.tick_ts >= (this._ray_next_ts or 0) then
+				rs.hidden = false
+				rs.ts = store.tick_ts
+				rs.runs = 0
+			end
+		end
+
+		local me = this.melee_engage
+
+		if me then
+			if not this._melee_window and store.tick_ts - this._melee_engage_ts >= me.cooldown then
+				this._melee_window = true
+				this._melee_window_ts = store.tick_ts
+
+				set_block_bans(false)
+			elseif this._melee_window and store.tick_ts - this._melee_window_ts >= me.duration then
+				this._melee_window = false
+				this._melee_engage_ts = store.tick_ts
+
+				set_block_bans(true)
+
+				for i = #this.enemy.blockers, 1, -1 do
+					local blocker = store.entities[this.enemy.blockers[i]]
+
+					if blocker then
+						U.unblock_target(store, blocker)
+					end
+
+					table.remove(this.enemy.blockers, i)
+				end
+			end
+		end
+
+		if store.tick_ts - check_ts < 0.25 then
+			return false
+		end
+
+		check_ts = store.tick_ts
+
+		if store.tick_ts - skill_ts < this.skill_master_delay then
+			return false
+		end
+
+		if store.tick_ts - gem_ts >= this.gem_blast.cooldown and U.find_soldiers_in_range(store.entities, this.pos, this.gem_blast.min_radius or 0, this.gem_blast.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front) then
+			trigger_skill = "gem_blast"
+
+			return true
+		end
+
+		if not this.disable_towers_off and store.tick_ts - disable_ts >= this.disable.cooldown then
+			local towers = find_jailable_towers()
+
+			if towers and #towers > 0 then
+				trigger_skill = "disable"
+
+				return true
+			end
+		end
+
+		if store.tick_ts - siphon_ts >= this.siphon.cooldown and U.find_soldiers_in_range(store.entities, this.pos, this.siphon.min_radius or 0, this.siphon.radius, this.siphon_vis_flags, this.siphon_vis_bans) then
+			trigger_skill = "siphon"
+
+			return true
+		end
+
+		return false
+	end
+
+	local function y_cast_windup(sound, animation, time)
+		S:queue(sound)
+		U.animation_start(this, animation, nil, store.tick_ts, false)
+		y_aura_fade_out()
+
+		local t = (time or this.cast_time) - (this.aura_fade_time or 0)
+
+		return not SU.y_enemy_wait(store, this, math.max(0, t))
+	end
+
+	local function y_cast_gem_blast()
+		gem_ts = store.tick_ts
+
+		local gb = this.gem_blast
+		local pre = U.find_soldiers_in_range(store.entities, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
+		local last_pos = pre and V.vclone(pre[1].pos)
+
+		if not y_cast_windup(this.gem_blast_sound, this.gem_blast_animation, this.gem_blast_shot_time) then
+			return
+		end
+
+		if this.gem_blast_release_sound then
+			S:queue(this.gem_blast_release_sound)
+		end
+
+		local targets = U.find_soldiers_in_range(store.entities, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
+
+		if targets then
+			targets = table.random_order(targets)
+
+			for i = 1, math.min(gb.count, #targets) do
+				local target = targets[i]
+				local bullet = E:create_entity(this.gem_blast_bullet_t)
+				local mo = this.gem_blast_muzzle_offset
+
+				bullet.pos = V.v(this.pos.x + mo.x * (this.render.sprites[1].flip_x and -1 or 1), this.pos.y + mo.y)
+				bullet.bullet.from = V.vclone(bullet.pos)
+				bullet.bullet.to = V.vclone(target.pos)
+				bullet.bullet.target_id = target.id
+				bullet.bullet.source_id = this.id
+
+				if gb.damage_min then
+					bullet.bullet.damage_min = gb.damage_min
+				end
+
+				if gb.damage_max then
+					bullet.bullet.damage_max = gb.damage_max
+				end
+
+				if this.gem_blast_spawn_fx then
+					local sfx = E:create_entity(this.gem_blast_spawn_fx)
+
+					sfx.pos = V.vclone(bullet.pos)
+					sfx.render.sprites[1].ts = store.tick_ts
+					sfx.render.sprites[1].r = V.angleTo(bullet.bullet.to.x - bullet.pos.x, bullet.bullet.to.y - bullet.pos.y)
+
+					queue_insert(store, sfx)
+				end
+
+				queue_insert(store, bullet)
+
+				if SU.y_enemy_wait(store, this, fts(4)) then
+					return
+				end
+			end
+		elseif last_pos then
+			local bullet = E:create_entity(this.gem_blast_bullet_t)
+			local mo = this.gem_blast_muzzle_offset
+
+			bullet.pos = V.v(this.pos.x + mo.x * (this.render.sprites[1].flip_x and -1 or 1), this.pos.y + mo.y)
+			bullet.bullet.from = V.vclone(bullet.pos)
+			bullet.bullet.to = V.vclone(last_pos)
+			bullet.bullet.source_id = this.id
+
+			if this.gem_blast_spawn_fx then
+				local sfx = E:create_entity(this.gem_blast_spawn_fx)
+
+				sfx.pos = V.vclone(bullet.pos)
+				sfx.render.sprites[1].ts = store.tick_ts
+				sfx.render.sprites[1].r = V.angleTo(bullet.bullet.to.x - bullet.pos.x, bullet.bullet.to.y - bullet.pos.y)
+
+				queue_insert(store, sfx)
+			end
+
+			queue_insert(store, bullet)
+		end
+
+		while not U.animation_finished(this) and not this.health.dead do
+			coroutine.yield()
+		end
+
+		aura_fade_in_start()
+
+		skill_ts = store.tick_ts
+	end
+
+	local function y_cast_disable()
+		disable_ts = store.tick_ts
+
+		for i = #this.enemy.blockers, 1, -1 do
+			local blocker = store.entities[this.enemy.blockers[i]]
+
+			if blocker then
+				U.unblock_target(store, blocker)
+			end
+
+			table.remove(this.enemy.blockers, i)
+		end
+
+		set_block_bans(true)
+
+		this.health.ignore_damage = true
+
+		if y_cast_windup(this.disable_cast_sound, this.disable_animation) then
+			local towers = find_jailable_towers()
+
+			if towers and #towers > 0 then
+				towers = table.random_order(towers)
+
+				for i = 1, math.min(this.disable.count, #towers) do
+					local m = E:create_entity(this.disable_mod_t)
+
+					m.modifier.target_id = towers[i].id
+					m.modifier.source_id = this.id
+
+					queue_insert(store, m)
+				end
+			end
+
+			U.y_animation_wait(this)
+		end
+
+		if not this.melee_engage or this._melee_window then
+			set_block_bans(false)
+		end
+
+		this.health.ignore_damage = false
+
+		aura_fade_in_start()
+
+		skill_ts = store.tick_ts
+	end
+
+	local function y_cast_siphon()
+		siphon_ts = store.tick_ts
+
+		local sp = this.siphon
+		local targets = U.find_soldiers_in_range(store.entities, this.pos, sp.min_radius or 0, sp.radius, this.siphon_vis_flags, this.siphon_vis_bans)
+
+		if not targets then
+			return
+		end
+
+		targets = table.random_order(targets)
+
+		local count = math.min(sp.count, #targets)
+
+		S:queue(this.siphon_sound)
+
+		if this.siphon_cast_decal then
+			local cfx = E:create_entity(this.siphon_cast_decal)
+
+			cfx.pos = V.vclone(this.pos)
+			cfx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, cfx)
+		end
+
+		U.animation_start(this, this.siphon_animations[1], nil, store.tick_ts, false)
+		y_aura_fade_out()
+
+		if SU.y_enemy_wait(store, this, math.max(0, this.siphon_shoot_time - (this.aura_fade_time or 0))) then
+			return
+		end
+
+		U.animation_start(this, this.siphon_animations[2], nil, store.tick_ts, true)
+
+		local bullets = {}
+
+		for i = 1, count do
+			do
+				local target = targets[i]
+
+				if not store.entities[target.id] or target.health.dead then
+				-- block empty
+				else
+					local co = this.siphon_catch_offset or this.unit.hit_offset
+					local to = V.v(this.pos.x + co.x * (this.render.sprites[1].flip_x and -1 or 1), this.pos.y + co.y)
+					local d = E:create_entity("damage")
+
+					d.damage_type = DAMAGE_TRUE
+					d.value = math.ceil(U.frandom(sp.damage_min, sp.damage_max))
+					d.target_id = target.id
+					d.source_id = this.id
+
+					local doomed = not target.hero and target.unit and U.predict_damage(target, d) >= target.health.hp
+					local from = V.v(target.pos.x, target.pos.y + (target.unit and target.unit.hit_offset and target.unit.hit_offset.y or 0))
+
+					if this.siphon_flash_fx then
+						local sfx = E:create_entity(this.siphon_flash_fx)
+
+						sfx.pos = V.vclone(from)
+						sfx.render.sprites[1].ts = store.tick_ts
+						sfx.render.sprites[1].r = V.angleTo(to.x - from.x, to.y - from.y)
+
+						queue_insert(store, sfx)
+					end
+
+					if SU.y_enemy_wait(store, this, this.siphon_flash_soul_time or 0) then
+						return
+					end
+
+					if not store.entities[target.id] or target.health.dead then
+					-- block empty
+					else
+						from = V.v(target.pos.x, target.pos.y + (target.unit and target.unit.hit_offset and target.unit.hit_offset.y or 0))
+
+						local speed = V.dist(from.x, from.y, to.x, to.y) / sp.soul_time
+						local bullet = E:create_entity(this.siphon_bullet_t)
+
+						bullet.pos = V.vclone(from)
+						bullet.bullet.from = V.vclone(from)
+						bullet.bullet.to = to
+						bullet.bullet.source_id = this.id
+						bullet.bullet.min_speed = speed
+						bullet.bullet.max_speed = speed
+
+						queue_insert(store, bullet)
+						table.insert(bullets, bullet)
+
+						if doomed then
+							if SU.y_enemy_wait(store, this, this.siphon_soul_disintegrate_time or 0) then
+								return
+							end
+
+							if not store.entities[target.id] or target.health.dead then
+								goto label_1582_0
+							end
+
+							d.damage_type = bor(DAMAGE_TRUE, DAMAGE_EAT)
+							target.unit.hide_during_death = true
+							target.unit.show_blood_pool = false
+
+							local dis_fx = E:create_entity(this.siphon_disintegrate_fx)
+
+							dis_fx.pos = V.vclone(target.pos)
+							dis_fx.render.sprites[1].ts = store.tick_ts
+
+							queue_insert(store, dis_fx)
+
+							if SU.y_enemy_wait(store, this, this.siphon_disintegrate_kill_time or 0) then
+								return
+							end
+
+							if not store.entities[target.id] or target.health.dead then
+								goto label_1582_0
+							end
+						end
+
+						queue_damage(store, d)
+
+						if i < count and sp.stagger and sp.stagger > 0 and SU.y_enemy_wait(store, this, sp.stagger) then
+							return
+						end
+					end
+				end
+			end
+
+			::label_1582_0::
+		end
+
+		SU.y_enemy_wait(store, this, sp.soul_time + fts(3))
+
+		for _, blt in ipairs(bullets) do
+			if store.entities[blt.id] then
+				if this.siphon_arrive_fx then
+					local afx = E:create_entity(this.siphon_arrive_fx)
+
+					afx.pos = V.vclone(blt.pos)
+					afx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, afx)
+				end
+
+				if blt.arrive_pump_fx then
+					local pfx = E:create_entity(blt.arrive_pump_fx)
+
+					pfx.pos = V.vclone(this.pos)
+					pfx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, pfx)
+				end
+
+				queue_remove(store, blt)
+			end
+		end
+
+		if this.health.dead then
+			return
+		end
+
+		if this.siphon_heal_fx then
+			local hfx = E:create_entity(this.siphon_heal_fx)
+
+			hfx.pos = V.vclone(this.pos)
+			hfx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, hfx)
+		end
+
+		this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + count * sp.heal_per_soul)
+
+		local spr = this.render.sprites[1]
+		local loop_runs = spr.runs
+
+		while spr.runs == loop_runs and not this.health.dead do
+			coroutine.yield()
+		end
+
+		if this.health.dead then
+			return
+		end
+
+		U.y_animation_play(this, this.siphon_animations[3], nil, store.tick_ts, 1)
+		aura_fade_in_start()
+
+		skill_ts = store.tick_ts
+	end
+
+	local function y_on_death()
+		this._death_started = true
+
+		if this._wave_real_started then
+			W:stop_manual_wave(this.wave_real)
+		end
+
+		pcall(signal.emit, "boss_fight_end")
+
+		store.kill_tunnel_releases = true
+
+		LU.kill_all_enemies(store, true)
+
+		local shake = E:create_entity("aura_screen_shake")
+
+		shake.aura.amplitude = 1
+		shake.aura.duration = 2
+		shake.aura.freq_factor = 3
+
+		queue_insert(store, shake)
+		signal.emit("boss-killed", this)
+
+		local function cam_out()
+			local c = this.death_cam_out
+
+			if not c then
+				return
+			end
+
+			signal.emit("pan-zoom-camera", c.time, {
+				x = c.pos.x,
+				y = c.pos.y
+			}, c.zoom)
+		end
+
+		signal.emit("hide-gui")
+
+		store.ephemeral.stage_218_final_cinematic = true
+
+		signal.emit("start-cinematic")
+
+		if this.death_cam_in then
+			signal.emit("pan-zoom-camera", this.death_cam_in.time, {
+				x = this.pos.x,
+				y = this.pos.y
+			}, this.death_cam_in.zoom)
+		end
+
+		U.animation_start(this, "idle", nil, store.tick_ts, true, nil, true)
+		y_aura_fade_out()
+		U.y_wait(store, math.max(0, this.death_cam_in.time - (this.aura_fade_time or 0)))
+		S:queue(this.death_sound)
+		U.y_animation_play(this, this.death_animations[1], nil, store.tick_ts, 1)
+		U.animation_start(this, this.death_animations[2], nil, store.tick_ts, true, nil, true)
+
+		this._death_loop_ts = store.tick_ts
+
+		if this.death_loop_shockwave_fx then
+			local off = this.death_loop_soul_offset
+			local swfx = E:create_entity(this.death_loop_shockwave_fx)
+
+			swfx.pos = V.v(this.pos.x + off.x, this.pos.y + off.y)
+			swfx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, swfx)
+		end
+
+		cam_out()
+
+		if this.death_loop_shake then
+			local shake = E:create_entity("aura_screen_shake")
+
+			shake.aura.amplitude = this.death_loop_shake.amplitude
+			shake.aura.duration = this.death_loop_shake.duration
+			shake.aura.freq_factor = this.death_loop_shake.freq_factor
+
+			queue_insert(store, shake)
+		end
+
+		local sd = this.death_loop_soul_delay
+		local ramp_time = this.death_loop_time * (1 - this.death_loop_soul_delay_tail_ptg)
+		local soul_ts = store.tick_ts
+		local next_delay = sd[1]
+		local end_shake_done = false
+
+		while store.tick_ts - this._death_loop_ts < this.death_loop_time do
+			if not end_shake_done and store.tick_ts - this._death_loop_ts >= this.death_loop_time - this.death_end_shake_lead then
+				end_shake_done = true
+
+				local shake = E:create_entity("aura_screen_shake")
+
+				shake.aura.amplitude = this.death_end_shake.amplitude
+				shake.aura.duration = this.death_end_shake.duration
+				shake.aura.freq_factor = this.death_end_shake.freq_factor
+
+				queue_insert(store, shake)
+			end
+
+			if next_delay <= store.tick_ts - soul_ts then
+				soul_ts = store.tick_ts
+
+				local k = ramp_time > 0 and math.min(1, (soul_ts - this._death_loop_ts) / ramp_time) or 1
+
+				next_delay = sd[1] + (sd[2] - sd[1]) * k
+
+				local off = this.death_loop_soul_offset
+				local from = V.v(this.pos.x + off.x, this.pos.y + off.y)
+				local vc = store.visible_coords
+				local to = V.v(vc and U.frandom(vc.left, vc.right) or from.x, (vc and vc.top or REF_H) + 100)
+				local blt = E:create_entity(this.death_loop_soul_t)
+
+				blt.pos = V.vclone(from)
+				blt.bullet.from = V.vclone(from)
+				blt.bullet.to = to
+				blt.bullet.source_id = this.id
+
+				local speed = V.dist(from.x, from.y, to.x, to.y) / this.death_loop_soul_time
+
+				blt.bullet.min_speed = speed
+				blt.bullet.max_speed = speed
+
+				queue_insert(store, blt)
+			end
+
+			coroutine.yield()
+		end
+
+		if this.death_end_flash_fx then
+			local flash = E:create_entity(this.death_end_flash_fx)
+
+			flash.tween.ts = store.tick_ts
+
+			queue_insert(store, flash)
+		end
+
+		U.y_animation_play(this, this.death_animations[3], nil, store.tick_ts, 1)
+		LU.kill_all_enemies(store, true)
+		signal.emit("end-cinematic")
+
+		store.ephemeral.stage_218_final_cinematic = nil
+		this._death_finished = true
+		this.unit.death_animation = nil
+
+		SU.y_enemy_death(store, this)
+	end
+
+	local ro = this.real_overrides or {}
+
+	if ro.hp_max then
+		this.health.hp_max = SU.get_difficulty_field_value(store, ro.hp_max)
+	end
+
+	this.health.hp = km.clamp(0, this.health.hp_max, this._inherited_hp or this.health.hp_max)
+
+	if ro.speed then
+		U.update_max_speed(this, ro.speed)
+	end
+
+	if ro.basic_attack then
+		if ro.basic_attack.cooldown then
+			this.melee.cooldown = ro.basic_attack.cooldown
+		end
+
+		for _, a in ipairs(this.melee.attacks) do
+			a.cooldown = ro.basic_attack.cooldown or a.cooldown
+			a.damage_min = ro.basic_attack.damage_min or a.damage_min
+			a.damage_max = ro.basic_attack.damage_max or a.damage_max
+			a.damage_radius = ro.basic_attack.damage_radius or a.damage_radius
+		end
+	end
+
+	if ro.gem_blast then
+		for k, v in pairs(ro.gem_blast) do
+			this.gem_blast[k] = v
+		end
+	end
+
+	if ro.disable_towers then
+		for k, v in pairs(ro.disable_towers) do
+			this.disable[k] = v
+		end
+	end
+
+	if not U.is_seen(store, "enemy_stage_218_veznan") then
+		signal.emit("wave-notification", "icon", "enemy_stage_218_veznan")
+		U.mark_seen(store, "enemy_stage_218_veznan")
+	end
+
+	W:stop_manual_wave(this.wave_illusions)
+
+	if not S:sound_is_playing("MusicBossFight_218") then
+		S:stop_group("MUSIC")
+		S:queue("MusicBossFight_218")
+	end
+
+	function this.health.on_damage(e, st, d)
+		if e.health.dead then
+			return false
+		end
+
+		return U.predict_damage(e, d) < e.health.hp
+	end
+
+	local shared = this.shared
+
+	local function reveal_ready()
+		return not shared or (shared.reveals_done or 0) >= 2
+	end
+
+	while not reveal_ready() do
+		if this.health.dead then
+			y_on_death()
+
+			return
+		end
+
+		if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, reveal_ready, reveal_ready) then
+		-- block empty
+		else
+			coroutine.yield()
+		end
+	end
+
+	local rv = this.reveal
+
+	while #this.enemy.blockers > 0 do
+		local blocker = store.entities[this.enemy.blockers[1]]
+
+		if blocker then
+			U.unblock_target(store, blocker)
+		else
+			table.remove(this.enemy.blockers, 1)
+		end
+	end
+
+	local reveal_bans = this.vis.bans
+
+	U.bans_add(this.vis, F_ALL)
+	this.health.ignore_damage = true
+
+	if this.center_reveal then
+		signal.emit("hide-gui")
+		signal.emit("start-cinematic")
+
+		store.ephemeral.disable_live_costs = true
+
+		local tc = this.death_teleport_cam
+		local cam_ts = store.tick_ts
+
+		if tc then
+			signal.emit("pan-zoom-camera", tc.time, {
+				x = this.center_reveal_pos.x,
+				y = this.center_reveal_pos.y
+			}, tc.zoom)
+		end
+
+		U.animation_start(this, "idle", nil, store.tick_ts, true, nil, true)
+
+		if this.health_bar then
+			this.health_bar.hidden = true
+		end
+
+		local ray_ts = store.tick_ts
+
+		S:queue(this.center_reveal_sound)
+
+		if this.center_reveal_fx then
+			local tfx = E:create_entity(this.center_reveal_fx)
+
+			tfx.pos = V.vclone(this.pos)
+			tfx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, tfx)
+		end
+
+		y_aura_fade_out()
+		U.y_wait(store, math.max(0, this.center_reveal_show_time - (store.tick_ts - ray_ts)))
+		U.sprites_hide(this)
+
+		this.pos.x, this.pos.y = this.center_reveal_pos.x, this.center_reveal_pos.y
+
+		if tc then
+			U.y_wait(store, math.max(0, tc.time - (store.tick_ts - cam_ts)))
+		end
+
+		S:queue(this.center_reveal_sound)
+
+		if this.center_reveal_fx then
+			local tfx = E:create_entity(this.center_reveal_fx)
+
+			tfx.pos = V.vclone(this.pos)
+			tfx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, tfx)
+		end
+
+		U.y_wait(store, this.center_reveal_show_time)
+		U.sprites_show(this)
+	end
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true, nil, true)
+	SU.y_enemy_wait(store, this, rv.taunt_pre_delay)
+
+	local bo = this.reveal_taunt_balloon_offset
+
+	signal.emit("show-balloon_tutorial-pos", this.reveal_taunt_balloon, false, V.v(this.pos.x + bo.x, this.pos.y + bo.y))
+	U.y_animation_play(this, this.reveal_taunt_animation, nil, store.tick_ts, 1)
+	U.animation_start(this, "idle", nil, store.tick_ts, true, nil, true)
+	SU.y_enemy_wait(store, this, rv.taunt_post_delay)
+	S:queue(this.reveal_in_sound)
+	U.y_animation_play(this, this.reveal_animations[1], nil, store.tick_ts, 1)
+	U.animation_start(this, this.reveal_animations[2], nil, store.tick_ts, true)
+
+	local loop_start = store.tick_ts
+
+	if this.center_reveal then
+		if this.center_reveal_shockwave_fx then
+			local swfx = E:create_entity(this.center_reveal_shockwave_fx)
+
+			swfx.pos = V.vclone(this.pos)
+			swfx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, swfx)
+		end
+
+		LU.kill_all_enemies(store, false)
+
+		for _, e in pairs(store.entities) do
+			if e.soldier and e.health and not e.health.dead and e.vis and band(e.vis.flags, F_ENEMY) == 0 and band(e.vis.bans, F_INSTAKILL) == 0 then
+				if e.hero then
+					local d = E:create_entity("damage")
+
+					d.damage_type = DAMAGE_TRUE
+					d.value = math.ceil(U.frandom(rv.hero_damage_min, rv.hero_damage_max))
+					d.target_id = e.id
+					d.source_id = this.id
+
+					queue_damage(store, d)
+
+					local s = E:create_entity(this.reveal_hero_stun_mod)
+
+					s.modifier.target_id = e.id
+					s.modifier.source_id = this.id
+
+					queue_insert(store, s)
+				else
+					local d = E:create_entity("damage")
+
+					d.damage_type = DAMAGE_INSTAKILL
+					d.target_id = e.id
+					d.source_id = this.id
+
+					queue_damage(store, d)
+				end
+			end
+		end
+	end
+
+	local cfx = E:create_entity(this.reveal_cast_decal)
+
+	cfx.pos = V.vclone(this.pos)
+	cfx.render.sprites[1].ts = store.tick_ts
+
+	queue_insert(store, cfx)
+
+	local ok, err = pcall(signal.emit, "boss_fight_start_tweened", this, 0.3)
+
+	if not ok then
+		log.error("enemy_stage_218_veznan: boss_fight_start_tweened fallo (widget destruido tras restart?): %s", err)
+	end
+
+	local co = this.reveal_catch_offset or this.unit.hit_offset
+	local to = V.v(this.pos.x + co.x * (this.render.sprites[1].flip_x and -1 or 1), this.pos.y + co.y)
+	local stagger = (rv.loop_time - rv.soul_time) / math.max(1, rv.soul_count - 1)
+	local heal_chunk = this.reveal_full_heal and (this.health.hp_max - this.health.hp) / rv.soul_count or 0
+
+	for i = 1, rv.soul_count do
+		local from = V.v(this.pos.x + U.frandom(-rv.soul_offset_x, rv.soul_offset_x), this.pos.y + U.frandom(rv.soul_offset_y[1], rv.soul_offset_y[2]))
+		local speed = V.dist(from.x, from.y, to.x, to.y) / rv.soul_time
+		local bullet = E:create_entity(this.reveal_bullet_t)
+
+		bullet.pos = V.vclone(from)
+		bullet.bullet.from = V.vclone(from)
+		bullet.bullet.to = V.vclone(to)
+		bullet.bullet.source_id = this.id
+		bullet.bullet.min_speed = speed
+		bullet.bullet.max_speed = speed
+		bullet.tween.ts = store.tick_ts
+		bullet.reveal_heal = heal_chunk
+
+		queue_insert(store, bullet)
+
+		if i < rv.soul_count then
+			SU.y_enemy_wait(store, this, stagger)
+		end
+	end
+
+	SU.y_enemy_wait(store, this, rv.loop_time - (store.tick_ts - loop_start))
+
+	if this.reveal_full_heal then
+		this.health.hp = this.health.hp_max
+	end
+
+	U.y_animation_play(this, this.reveal_animations[3], nil, store.tick_ts, 1)
+
+	if this.center_reveal then
+		signal.emit("show-gui")
+		signal.emit("end-cinematic")
+
+		store.ephemeral.disable_live_costs = nil
+
+		aura_fade_in_start()
+	end
+
+	this._wave_real_started = true
+
+	W:start_manual_wave(this.wave_real)
+
+	U.bans_remove(this.vis, F_ALL)
+	this.health.ignore_damage = false
+	this.health.on_damage = nil
+	gem_ts = store.tick_ts
+	disable_ts = store.tick_ts
+
+	if this.melee_engage then
+		this._melee_window = false
+		this._melee_engage_ts = store.tick_ts
+
+		set_block_bans(true)
+	end
+
+	this._ray_next_ts = store.tick_ts + U.frandom(1, 2)
+
+	if this.center_reveal then
+		local n = P:nearest_nodes(this.pos.x, this.pos.y, {this.center_reveal_path})[1]
+
+		if n then
+			this.nav_path.pi, this.nav_path.spi, this.nav_path.ni = n[1], n[2], n[3]
+		else
+			log.error("enemy_stage_218_veznan: sin nodos del path %s cerca del centro, sigue con el heredado", this.center_reveal_path)
+		end
+	end
+
+	siphon_ts = store.tick_ts
+
+	while true do
+		while this.cinematic do
+			coroutine.yield()
+		end
+
+		if this.health.dead then
+			y_on_death()
+
+			return
+		end
+
+		if trigger_skill then
+			local skill = trigger_skill
+
+			trigger_skill = nil
+
+			if skill == "gem_blast" then
+				y_cast_gem_blast()
+			elseif skill == "disable" then
+				y_cast_disable()
+			elseif skill == "siphon" then
+				y_cast_siphon()
+			end
+		end
+
+		if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, can_cast, can_cast) then
+		-- block empty
+		else
+			coroutine.yield()
+		end
+	end
+end
+
 return scripts

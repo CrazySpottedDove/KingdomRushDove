@@ -15,6 +15,10 @@
 #   - 读取 .gitignore 每一行，转为 --exclude 参数
 #   - 在 GITIGNORE_ALLOW 中的条目会被跳过（它们在 .gitignore 中但需要打包进游戏）
 #   - MANUAL_EXCLUDES 中的条目是 .gitignore 之外但要排除的（手写维护）
+#   - “仅源码”文件（有编译产物的 .lua，见 gen_release_source_paths.sh）也排除，
+#     与 master 投影使用同一份规则，避免发行包带入运行时不需要的源码
+
+RELEASE_SOURCE_PATHS="makefiles/.release_source_paths"
 
 gitignore_excludes() {
     [ ! -f .gitignore ] && return
@@ -41,4 +45,10 @@ gitignore_excludes() {
     for ex in "${MANUAL_EXCLUDES[@]}"; do
         echo "--exclude=$ex"
     done
+
+    # 与 master 投影同源的“仅源码”排除（生成清单后交给 rsync --exclude-from）
+    if [ -f makefiles/gen_release_source_paths.sh ]; then
+        bash makefiles/gen_release_source_paths.sh > "$RELEASE_SOURCE_PATHS" || true
+        echo "--exclude-from=$PWD/$RELEASE_SOURCE_PATHS"
+    fi
 }

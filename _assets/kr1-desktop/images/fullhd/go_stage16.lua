@@ -1,1 +1,0 @@
-return {stage_16_0002={a_name="go_stage16.dds",a_size={1024,512},f_quad={2,0,490,333},size={1920,1080},trim={582,628,848,119}},stage_16_0003={a_name="go_stage16.dds",a_size={1024,512},f_quad={496,0,505,212},size={1920,1080},trim={713,35,702,833}}}

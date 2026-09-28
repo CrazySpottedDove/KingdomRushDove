@@ -1,5 +1,4 @@
 local scripts = require("kr1.data.tower_menus_data_scripts")
-local merge = scripts.merge
 local templates = {}
 templates.common_upgrade = {
 	action_arg = nil,

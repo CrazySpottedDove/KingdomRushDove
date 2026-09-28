@@ -38,7 +38,6 @@ local from=V.vclone(entity.pos)
 local duration=V.dist(from.x,from.y,to.x,to.y)/speed
 local start_ts=store.tick_ts
 local phase=0
-local eased_phase=0
 while phase<1 do
 phase=math.min(1,(store.tick_ts-start_ts)/duration)
 entity.pos.x=U.ease_value(from.x,to.x,phase,easing)
