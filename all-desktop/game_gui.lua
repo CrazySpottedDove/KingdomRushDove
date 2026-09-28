@@ -2787,6 +2787,55 @@ function HeroPortraitBlock:update(dt)
 	end
 end
 
+local INFO_BAR_PORTRAIT_DIAMETER_RATIO = 68 / 84
+
+-- 相框内容中心（相对 v_portrait 自身的局部坐标，两者几何参数一致所以可以共用）
+-- 和 portrait 的目标绘制直径。
+-- 注意：anchor 平移由 KView:draw 统一施加，相框与 portrait 共享，
+-- 这里的 center 是 _draw_self 坐标系内的偏移，不要再减 anchor。
+local function info_bar_portrait_geometry(portrait_bo)
+	local ss = portrait_bo.image_ss
+	local _, _, qw, qh = ss.quad:getViewport()
+	local ref_scale = ss.ref_scale * portrait_bo.image_scale
+	local center = v((ss.trim[1] + qw * 0.5) * ref_scale, (ss.trim[2] + qh * 0.5) * ref_scale)
+	local diameter = math.min(qw, qh) * ref_scale * INFO_BAR_PORTRAIT_DIAMETER_RATIO
+
+	return center, diameter
+end
+
+-- 自适应各种尺寸的 portrait：只缩小不放大，居中到相框中心，并裁剪成圆形。
+-- 这样 KR6 那种方形、尺寸偏大的移植头图不会溢出圆形相框，而原本就是圆形的头图保持原样。
+local function draw_info_bar_portrait(self)
+	local ss = self.image_ss
+
+	if not ss then
+		return
+	end
+
+	local _, _, qw, qh = ss.quad:getViewport()
+	local ref_scale = ss.ref_scale * self.image_scale
+	local content_w, content_h = qw * ref_scale, qh * ref_scale
+
+	if content_w <= 0 or content_h <= 0 then
+		return
+	end
+
+	local diameter = self.portrait_diameter
+	local scale = math.min(1, diameter / math.min(content_w, content_h))
+	local center = self.portrait_center
+
+	G.push()
+	G.translate(center.x, center.y)
+	G.stencil(function()
+		G.circle("fill", 0, 0, diameter * 0.5)
+	end)
+	G.setStencilTest("greater", 0)
+	G.scale(scale, scale)
+	G.draw(self.image, ss.quad, -content_w * 0.5, -content_h * 0.5, 0, ref_scale)
+	G.setStencilTest()
+	G.pop()
+end
+
 InfoBar = class("InfoBar", KImageView)
 
 function InfoBar:initialize()
@@ -2813,6 +2862,9 @@ function InfoBar:initialize()
 	self.portrait_bo = portrait_bo
 
 	self:add_child(portrait_bo)
+
+	v_portrait.portrait_center, v_portrait.portrait_diameter = info_bar_portrait_geometry(portrait_bo)
+	v_portrait._draw_self = draw_info_bar_portrait
 
 	local l_name = GGTextLabel:new(V.v(130, 15))
 
@@ -3018,7 +3070,7 @@ function InfoBar:update_portrait()
 
 	if self.v_portrait_image_name ~= e.info.portrait then
 		if e.info.portrait then
-			self.v_portrait:set_image(e.info.portrait)
+			self.v_portrait:set_image(e.info.portrait, v(68, 68))
 
 			self.v_portrait.hidden = false
 			self.v_portrait_image_name = e.info.portrait

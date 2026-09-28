@@ -141,6 +141,8 @@ function level:init_coroutined(store)
 			store.hero_xp_multiplier = 0.1 * (store.level_idx - 48) * store.hero_xp_multiplier
 		elseif store.level_idx <= 109 and store.level_idx > 100 then
 			store.hero_xp_multiplier = 0.1 * (store.level_idx - 100) * store.hero_xp_multiplier
+		elseif store.level_idx <= 209 and store.level_idx > 200 then
+			store.hero_xp_multiplier = 0.1 * (store.level_idx - 200) * store.hero_xp_multiplier
 		end
 	end
 
