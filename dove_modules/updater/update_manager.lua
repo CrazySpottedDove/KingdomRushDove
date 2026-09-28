@@ -975,7 +975,7 @@ local function upgrade_new_version(info)
 		if cached_info and cached_info.size and cached_info.size > 0 then
 			log_info(_("UPDATER_UI_LOG_ALREADY_CACHED"))
 		else
-			local ok, _ = download_to_lovefs_chunked(url_base, file_path, cached_path)
+			local ok, _unused = download_to_lovefs_chunked(url_base, file_path, cached_path)
 
 			if not ok then
 				log_error(_("UPDATER_UI_ERR_DOWNLOAD") .. file_path)
