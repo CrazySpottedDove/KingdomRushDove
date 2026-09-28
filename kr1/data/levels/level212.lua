@@ -51,7 +51,7 @@ local function controller_stage_212_elevator_update(this,store)
 local right_pos_elevator,left_pos_elevator=this.elevator.pos.x,this.elevator.pos.x+this.left_offset_x
 local left_pos_mask_1,left_pos_mask_2,right_pos_mask_1,right_pos_mask_2
 local function deal_area_damage(hit_pos)
-local targets=U.find_soldiers_in_range(store.entities,hit_pos,0,this.elevator.crush.damage_radius,this.elevator.crush.vis_flags,this.elevator.crush.vis_bans)
+local targets=U.find_soldiers_in_range(store.soldiers,hit_pos,0,this.elevator.crush.damage_radius,this.elevator.crush.vis_flags,this.elevator.crush.vis_bans)
 if targets then
 for i,e in ipairs(targets) do
 local d=E.assign_damage(DAMAGE_TRUE,1e+99,this.id,e.id)

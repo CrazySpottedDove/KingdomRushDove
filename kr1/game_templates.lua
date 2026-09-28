@@ -5583,21 +5583,6 @@ tt.render.sprites[1].name = "fx_power_thunder_rain_splash"
 tt = RT("decal_water_sparks", "decal_loop")
 tt.render.sprites[1].name = "decal_water_sparks_idle"
 
-tt = RT("decal_water_sparks_small", "decal_loop")
-tt.render.sprites[1].name = "decal_water_sparks_idle"
-tt.render.sprites[1].scale = vec_2(0.6, 0.6)
-
-tt = RT("decal_jumping_fish", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_elves_fish"
-tt.render.sprites[1].name = "jump"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.delayed_play.min_delay = 5
-tt.delayed_play.max_delay = 10
-tt.delayed_play.flip_chance = 0.5
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "jump"
-
 tt = RT("decal_water_wave_delayed_2", "decal_delayed_play")
 tt.render.sprites[1].prefix = "decal_water_wave_2"
 tt.render.sprites[1].name = "play"
@@ -5612,23 +5597,6 @@ tt.render.sprites[1].name = "decal_water_wave_1_play"
 
 tt = RT("decal_water_wave_2", "decal_loop")
 tt.render.sprites[1].name = "decal_water_wave_2_play"
-
-tt = RT("decal_water_wave_3", "decal_loop")
-tt.render.sprites[1].name = "decal_water_wave_3_play"
-
-tt = RT("decal_water_wave_4", "decal_loop")
-tt.render.sprites[1].name = "decal_water_wave_4_play"
-
-tt = RT("decal_water_splash", "decal_loop")
-tt.render.sprites[1].name = "decal_water_splash_play"
-
-tt = RT("decal_stage01_gandalf", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_gandalf"
-tt.render.sprites[1].name = "idle"
-tt.delayed_play.min_delay = 5
-tt.delayed_play.max_delay = 15
-tt.delayed_play.idle_animation = "idle"
-tt.delayed_play.play_animation = "smoke"
 
 tt = RT("decal_stage01_bird1", "decal_delayed_play")
 AC(tt, "tween")
@@ -5652,35 +5620,12 @@ tt.batch_count = 2
 tt.batch_delay = {1, 5}
 tt.fly_speed = 116
 
-tt = RT("decal_stage_02_waterfall_1", "decal")
-tt.render.sprites[1].name = "decal_stage_02_waterfall_1_idle"
-
-tt = RT("decal_stage_02_waterfall_2", "decal")
-tt.render.sprites[1].name = "decal_stage_02_waterfall_2_idle"
-
-tt = RT("decal_stage_02_waterfall_3", "decal")
-tt.render.sprites[1].name = "decal_stage_02_waterfall_3_idle"
-
-tt = RT("decal_stage_02_waterfall_4", "decal")
-tt.render.sprites[1].name = "decal_stage_02_waterfall_4_idle"
-
-tt = RT("decal_stage_02_bigwaves", "decal")
-tt.render.sprites[1].name = "decal_stage_02_bigwaves_idle"
-
 for i = 1, 6 do
 
 	tt = RT("decal_stage_02_stone_" .. i, "decal")
 	tt.render.sprites[1].name = "stage2_stones_000" .. i
 	tt.render.sprites[1].animated = false
 end
-
-tt = RT("decal_stage_02_bridge_mask", "decal")
-tt.render.sprites[1].name = "stage2_bridge"
-tt.render.sprites[1].animated = false
-
-tt = RT("decal_stage_02_bridge_shadows", "decal")
-tt.render.sprites[1].name = "stage2_shadows"
-tt.render.sprites[1].animated = false
 
 tt = RT("decal_bambi", "decal_scripted")
 AC(tt, "ui", "motion")
@@ -5705,39 +5650,6 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
 tt.tween.ts = 0
 tt.ani_sequence = {{"ears", 5, 15}, {"popout", 1, 3, "hide1"}, {"travel1", 1, 3, "hide2"}, {"travel2", 1.5, 3, "hide3"}, {"travel3", 1, 3, "hide1"}, {"hide1"}, {nil, 10, 20}}
-
-tt = RT("decal_s03_bridge", "decal_static")
-AC(tt, "ui")
-tt.ui.click_rect = r(-83, -48, 166, 96)
-tt.ui.can_select = false
-tt.render.sprites[1].name = "stage3_bridge"
-tt.render.sprites[1].z = Z_DECALS + 2
-tt.render.sprites[1].sort_y_offset = 48
-
-tt = RT("decal_crane", "decal_scripted")
-AC(tt, "ui")
-tt.render.sprites[1].prefix = "decal_crane"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "decal_crane_fx"
-tt.render.sprites[2].draw_order = -1
-tt.ui.click_rect = r(-20, -40, 40, 40)
-tt.ui.can_select = false
-tt.main_script.update = scripts.decal_crane.update
-tt.play_animation = "play"
-tt.click_animation = "click"
-tt.final_click_animation = "final_click"
-tt.play_time = {10, 45}
-tt.final_clicks = {3, 6}
-
-tt = RT("river_object_controller")
-AC(tt, "main_script")
-tt.main_script.update = scripts.river_object_controller.update
-tt.river_objects = {"barrel", "barrel", "chest", "wilson", "submarine"}
-tt.min_time = 12
-tt.max_time = 24
-tt.max_chests = 3
-tt.max_hobbits = 13
 
 tt = RT("decal_river_object", "decal_scripted")
 AC(tt, "nav_path", "motion", "ui", "tween", "sound_events")
@@ -5796,130 +5708,10 @@ tt.render.sprites[1].sort_y_offset = -1
 tt.render.sprites[1].z = Z_OBJECTS
 tt.sound_events.insert = "ElvesWaterfallMid"
 
-tt = RT("decal_s04_land_1", "decal_background")
-AC(tt, "tween")
-tt.render.sprites[1].name = "Stage04_0003"
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.editor.game_mode = 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-
-tt = RT("decal_s04_land_2", "decal_s04_land_1")
-tt.render.sprites[1].name = "Stage04_0004"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = RT("decal_s04_tree_burn", "decal_timed")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "decal_s04_tree_burn"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0
-tt.render.sprites[1].scale = vec_2(1, 1)
--- tt.timed.disabled = true
-tt.timed.runs = INT_32_MAX
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-
-tt = RT("decal_s04_charcoal_1", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage4_fire_decal_0001"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = vec_2(1, 1)
-tt.render.sprites[1].z = Z_BACKGROUND + 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.4, 255}, {1.7, 0}}
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-
-tt = RT("decal_s04_charcoal_2", "decal_s04_charcoal_1")
-tt.render.sprites[1].name = "stage4_fire_decal_0002"
-
-tt = RT("decal_s04_charcoal_3", "decal_s04_charcoal_1")
-tt.render.sprites[1].name = "stage4_fire_decal_0003"
-
 tt = RT("decal_gnoll_burner", "decal")
 tt.render.sprites[1].anchor = vec_2(0.5, 0.21428571428571427)
 tt.render.sprites[1].prefix = "gnoll_burner"
 tt.render.sprites[1].name = "idle"
-
-tt = RT("fx_torch_gnoll_burner_explosion_stage04", "fx")
-tt.render.sprites[1].name = "fx_torch_gnoll_burner_explosion_stage04"
-
-tt = RT("fx_s04_tree_fire_1", "decal_timed")
-AC(tt, "editor")
--- tt.timed.disabled = true
-tt.timed.runs = INT_32_MAX
-tt.render.sprites[1].name = "fx_s04_tree_fire_1"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_EFFECTS
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-tt.editor.overrides = {
-	["render.sprites[1].hidden"] = false,
-	["render.sprites[1].loop"] = true
-}
-
-tt = RT("fx_s04_tree_fire_2", "fx_s04_tree_fire_1")
-tt.render.sprites[1].name = "fx_s04_tree_fire_2"
-
-tt = RT("decal_george_jungle", "decal_scripted")
-AC(tt, "ui", "tween")
-tt.main_script.update = scripts.decal_george_jungle.update
-tt.render.sprites[1].anchor.y = 1
-tt.render.sprites[1].prefix = "decal_george_jungle_liana"
-tt.render.sprites[1].r = 50 * math.pi / 180
-tt.render.sprites[1].offset = vec_2(768, 830)
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "decal_george_jungle"
-tt.render.sprites[2].name = "fall"
-tt.render.sprites[2].hidden = true
-tt.render.sprites[2].offset = vec_2(566, 457)
-tt.render.sprites[2].sort_y = 343
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].prefix = "decal_george_jungle_bush"
-tt.render.sprites[3].name = "idle"
-tt.render.sprites[3].anchor.y = 0
-tt.render.sprites[3].offset = vec_2(553, 296)
-tt.render.sprites[3].sort_y = 296
-tt.final_clicks = {3, 5}
-tt.play_time = {3, 5}
-tt.ui.click_rect = r(0, 0, 200, 120)
-tt.ui.can_select = false
-tt.tween.remove = false
-tt.tween.disabled = true
-tt.tween.props[1].name = "r"
-tt.tween.props[1].keys = {{0, 50 * math.pi / 180}, {0.3, 0}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].name = "offset"
-tt.tween.props[2].keys = {{0, v(0, 0)}, {0.3, v(0, 0)}}
-tt.achievement = "GEORGE_FALL"
-
-tt = RT("decal_tree_ewok", "decal_scripted")
-AC(tt, "motion", "nav_path", "ranged", "unit")
-tt.main_script.update = scripts.decal_tree_ewok.update
-tt.render.sprites[1].anchor.y = 0.08333333333333333
-tt.render.sprites[1].prefix = "decal_tree_ewok"
-tt.ranged.attacks[1].min_range = 150
-tt.ranged.attacks[1].max_range = 300
-tt.ranged.attacks[1].bullet = "spear_tree_ewok"
-tt.ranged.attacks[1].shoot_time = fts(7)
-tt.ranged.attacks[1].cooldown = 1
-tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 15)}
-tt.wait_time = 5
-tt.dance_animations = {"dance1", "dance2"}
-tt.ranged_center = vec_2(550, 380)
-tt.motion.max_speed = 45
-
-tt = RT("spear_tree_ewok", "arrow")
-tt.bullet.damage_max = 10
-tt.bullet.hit_chance = 0.4
-tt.bullet.miss_decal = "ewok_2_proy_0002"
-tt.bullet.flight_time = fts(33)
-tt.render.sprites[1].name = "ewok_2_proy_0001"
-tt.sound_events.insert = "AxeSound"
 
 tt = RT("tower_ewok_holder")
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor")
@@ -5936,65 +5728,6 @@ tt.render.sprites[2].name = "ewok_hut_0001"
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = vec_2(0, 32)
 tt.ui.click_rect = r(-40, -10, 80, 90)
-
-tt = RT("decal_s05_tree_round", "decal")
-tt.render.sprites[1].name = "stage5_tree"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.13953488372093023
-
-tt = RT("decal_s05_tree_pine", "decal")
-tt.render.sprites[1].name = "stage5_pine"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.08333333333333333
-
-tt = RT("decal_bush_statue", "decal_scripted")
-AC(tt, "ui")
-tt.main_script.insert = scripts.decal_bush_statue.insert
-tt.main_script.update = scripts.decal_bush_statue.update
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage5_bushes_0001"
-tt.render.sprites[1].anchor.y = 0.1744186046511628
-tt.bush_frame_prefix = "stage5_bushes_"
-tt.bush_frames = {"0001", "0002", "0003", "0004", "0005", "0006", "0007"}
-tt.ui.click_rect = r(-40, 0, 80, 66)
-tt.ui.can_select = false
-
-tt = RT("fx_bush_statue_click", "fx")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "fx_bush_statue_click"
-tt.render.sprites[1].offset.y = 34
-tt.sound_events.insert = "ElvesAchievementScissorFingers"
-
-tt = RT("decal_s06_eagle", "decal_delayed_sequence")
-AC(tt, "editor")
-tt.delayed_sequence.animations = {"1", "2", "3", "4"}
-tt.delayed_sequence.random = true
-tt.delayed_sequence.max_delay = 3
-tt.render.sprites[1].prefix = "decal_s06_eagle"
-tt.render.sprites[1].name = "1"
-tt.render.sprites[1].z = Z_OBJECTS + 1
-
-tt = RT("decal_s06_boxed_boss", "decal_delayed_play")
-tt.delayed_play.min_delay = 5
-tt.delayed_play.min_delay = 10
-tt.render.sprites[1].prefix = "decal_s06_boxed_boss_l1"
-tt.render.sprites[1].z = Z_OBJECTS + 1
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "decal_s06_boxed_boss_l2"
-tt.render.sprites[2].z = Z_OBJECTS + 1
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].prefix = "decal_s06_boxed_boss_l3"
-tt.render.sprites[3].z = Z_OBJECTS + 1
-
-tt = RT("decal_s06_jailed_boss", "decal")
-for i = 1, 6 do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "decal_s06_jailed_boss_l" .. i
-	tt.render.sprites[i].name = "walk"
-	tt.render.sprites[i].anchor.y = 0.26373626373626374
-end
-
-tt.render.sprites[6].sort_y_offset = -10
 
 tt = RT("soldier_gryphon_guard", "soldier_barrack_1")
 AC(tt, "ranged")
@@ -6054,50 +5787,6 @@ tt.hidden_max = 3
 tt.hidden_min = 1
 tt.idle_time_to_hide = 5
 
-tt = RT("decal_gryphon", "decal_scripted")
-AC(tt, "attacks", "ui", "sound_events")
-tt.attacks.list[1] = CC("bullet_attack")
-tt.attacks.list[1].cooldown = fts(3)
-tt.attacks.list[1].bullet = "bullet_gryphon"
-tt.attacks.list[1].loops = 3
-tt.attacks.list[1].bullet_start_offset = vec_2(102, -22)
-tt.main_script.update = scripts.decal_gryphon.update
-tt.render.sprites[1].prefix = "gryphon_l1"
-tt.render.sprites[1].z = Z_BULLETS
-tt.render.sprites[1].group = "layers"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "gryphon_l2"
-tt.render.sprites[2].z = Z_BULLETS
-tt.render.sprites[2].group = "layers"
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].animated = false
-tt.render.sprites[3].name = "ally_gryphon_0000"
-tt.render.sprites[3].alpha = 60
-tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].hidden = true
-tt.render.sprites[4].loop = false
-tt.render.sprites[4].name = "gryphon_attack_flash"
-tt.ui.click_rect = r(-40, -106, 80, 100)
-tt.ui.can_select = false
-tt.custom = {
-	left = {},
-	right = {}
-}
-tt.custom.left.initial_duration = 4.6
-tt.custom.left.default_duration = 4
-tt.custom.left.approach_duration = 0.7
-tt.custom.left.attack_ranges = {{-50, 500}}
-tt.custom.left.initial_curve_id = 5
-tt.custom.left.default_curve_id = 6
-tt.custom.left.land_curve_id = 7
-tt.custom.right.initial_duration = 5
-tt.custom.right.default_duration = 4.5
-tt.custom.right.approach_duration = 0.7
-tt.custom.right.attack_ranges = {{1050, 750}, {600, 200}}
-tt.custom.right.initial_curve_id = 8
-tt.custom.right.default_curve_id = 9
-tt.custom.right.land_curve_id = 10
-
 tt = RT("bullet_gryphon", "bullet")
 tt.main_script.update = scripts.bullet_gryphon.update
 tt.render.sprites[1].name = "bolt_gryphon_travel"
@@ -6129,21 +5818,6 @@ tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_2(0.75, 0.75)}, {fts(4), vec_2(1.075, 1.075)}, {fts(7), vec_2(0.96, 0.96)}, {fts(9), vec_2(1, 1)}}
-
-tt = RT("gryphon_controller")
-AC(tt, "main_script")
-tt.main_script.update = scripts.gryphon_controller.update
-
-tt = RT("decal_obelix", "decal_delayed_click_play")
-tt.render.sprites[1].prefix = "decal_obelix"
-tt.ui.click_rect = r(-50, -40, 100, 80)
-tt.ui.can_select = false
-tt.delayed_play.min_delay = 2
-tt.delayed_play.max_delay = 3
-tt.delayed_play.clicked_animation = "eat"
-tt.delayed_play.clicked_sound = "ElvesObelix"
-tt.delayed_play.play_animation = "hammer"
-tt.delayed_play.required_clicks = 1
 
 for i = 1, 4 do
 
@@ -6177,55 +5851,6 @@ for i = 5, 10 do
 	tt.delayed_play.idle_animation = nil
 end
 
-tt = RT("decal_s08_magic_bean", "decal_scripted")
-AC(tt, "ui")
-tt.achievement_id = "BEANS"
-tt.main_script.update = scripts.decal_s08_magic_bean.update
-tt.ui.click_rect = r(-25, -25, 50, 50)
-tt.ui.can_select = false
-tt.reward_gold = 150
-tt.reward_fx = "fx_coin_jump"
-
-for i = 1, 5 do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "decal_s08_magic_bean_l" .. i
-	tt.render.sprites[i].name = "step1"
-	tt.render.sprites[i].loop = false
-	tt.render.sprites[i].anchor.y = 0.1076923076923077
-end
-
-tt = RT("decal_s08_peekaboo", "decal_scripted")
-AC(tt, "ui")
-tt.main_script.update = scripts.decal_s08_peakaboo.update
-tt.render.sprites[1].name = "out"
-tt.ui.click_rect = r(-30, -25, 60, 50)
-tt.ui.can_select = false
-tt.sound = "ElvesPeekaboo"
-
-tt = RT("decal_s08_peekaboo_wolf", "decal_s08_peekaboo")
-tt.render.sprites[1].prefix = "decal_s08_peekaboo_wolf"
-tt.achievement_flag = {"PEEKABOO", 1}
-
-tt = RT("decal_s08_peekaboo_rrh", "decal_s08_peekaboo")
-tt.render.sprites[1].prefix = "decal_s08_peekaboo_rrh"
-tt.achievement_flag = {"PEEKABOO", 2}
-
-tt = RT("decal_s08_peekaboo_pork", "decal_s08_peekaboo")
-tt.render.sprites[1].prefix = "decal_s08_peekaboo_pork"
-tt.achievement_flag = {"PEEKABOO", 4}
-
-tt = RT("decal_s08_hansel_gretel", "decal_scripted")
-AC(tt, "ui")
-tt.main_script.update = scripts.decal_s08_hansel_gretel.update
-tt.ui.click_rect = r(-70, -60, 140, 120)
-tt.ui.can_select = false
-tt.render.sprites[1].name = "stage10_witchHouse_layer1_0001"
-tt.render.sprites[1].animated = false
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "decal_s08_hansel_gretel_door"
-tt.render.sprites[2].name = "close"
-tt.render.sprites[2].loop = false
-
 tt = RT("decal_s08_witch", "decal_scripted")
 AC(tt, "ui", "motion")
 tt.render.sprites[1].prefix = "decal_s08_witch"
@@ -6246,49 +5871,6 @@ tt.tween.props[2].keys = {{0, vec_2(47, -46)}, {fts(37), vec_2(182, -58)}}
 tt = RT("decal_s08_gretel", "decal_s08_hansel")
 tt.render.sprites[1].name = "decal_s08_gretel_walk"
 tt.tween.props[2].keys = {{0, vec_2(31, -44)}, {fts(37), vec_2(166, -56)}}
-
-tt = RT("aura_waterfall_entrance", "aura")
-tt.main_script.update = scripts.aura_waterfall_entrance.update
-tt.show_fx = "fx_waterfall_splash"
-
-tt = RT("decal_s09_land_3", "decal_background")
-AC(tt, "tween")
-tt.render.sprites[1].name = "Stage09_0002"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt.editor.game_mode = 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{fts(9), 255}, {fts(18), 0}}
-
-tt = RT("decal_s09_land_2", "decal_s09_land_3")
-tt.render.sprites[1].name = "Stage09_0003"
-
-tt = RT("decal_s09_land_1", "decal_s09_land_3")
-tt.render.sprites[1].name = "Stage09_0004"
-
-tt = RT("decal_s09_crystal_1", "decal_timed")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "decal_s09_crystal_1"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.3941176470588235
-tt.render.sprites[1].scale = vec_2(1, 1)
--- tt.timed.disabled = true
-tt.timed.runs = INT_32_MAX
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-tt.debris_pos = vec_2(-5, 1)
-
-tt = RT("decal_s09_crystal_2", "decal_s09_crystal_1")
-tt.render.sprites[1].prefix = "decal_s09_crystal_2"
-tt.debris_pos = vec_2(9, 4)
-
-tt = RT("decal_s09_crystal_3", "decal_s09_crystal_1")
-tt.render.sprites[1].prefix = "decal_s09_crystal_3"
-tt.debris_pos = vec_2(9, -5)
-
-tt = RT("decal_s09_crystal_4", "decal_s09_crystal_1")
-tt.render.sprites[1].prefix = "decal_s09_crystal_4"
-tt.debris_pos = vec_2(-6, 6)
 
 tt = RT("decal_s09_crystal_debris", "decal_tween")
 tt.render.sprites[1].name = "decal_s09_crystal_debris_1"
@@ -6333,32 +5915,6 @@ tt = RT("decal_s09_crystal_debris_mod", "decal_s09_crystal_debris")
 tt.render.sprites[3].sort_y_offset = 1
 tt.render.sprites[4].sort_y_offset = 1
 
-tt = RT("decal_s09_crystal_serpent_back", "decal_tween")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "crystal_serpent_appear"
-tt.render.sprites[1].loop = false
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(80), vec_2(0, 0)}, {fts(114), vec_2(0, 0)}}
-tt.sound_events.insert = "ElvesCrystalSerpentPassby"
-
-tt = RT("decal_s09_crystal_serpent_attack", "decal_scripted")
-tt.render.sprites[1].prefix = "crystal_serpent"
-tt.main_script.update = scripts.decal_s09_crystal_serpent_attack.update
-
-tt = RT("decal_s09_crystal_serpent_scream", "decal_s09_crystal_serpent_attack")
-tt.main_script.update = scripts.decal_s09_crystal_serpent_scream.update
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].hidden = true
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[3].hidden = true
-
-tt = RT("bullet_crystal_serpent", "bullet")
-tt.render.sprites[1].hidden = true
-tt.bullet.mod = "mod_crystal_serpent"
-tt.bullet.flight_time = fts(17)
-tt.bullet.particles_name = "ps_bullet_crystal_serpent_fly"
-tt.main_script.update = scripts.bullet_crystal_serpent.update
-
 tt = RT("mod_crystal_serpent", "modifier")
 AC(tt, "render")
 tt.main_script.update = scripts.mod_tower_block.update
@@ -6393,44 +5949,10 @@ tt.particle_system.scale_var = {1, 1.3}
 tt.particle_system.scales_x = {0.2, 1, 1.15}
 tt.particle_system.scales_y = {0.2, 1, 1.15}
 
-tt = RT("decal_s09_waterfall", "decal_scripted")
-tt.render.sprites[1].name = "decal_s09_waterfall_lines1"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "decal_s09_waterfall_lines2"
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].name = "decal_s09_waterfall_top"
-tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].name = "decal_s09_waterfall_bottom"
-
-tt = RT("decal_crystal_water_waves2", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_water_wave_2"
-tt.render.sprites[1].name = "play"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_DECALS
-tt.delayed_play.max_delay = 3
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "play"
-
 tt = RT("decal_faerie_dragon_freeze_enemy", "decal_freeze_enemy")
 tt.shader_args = {
 	tint_color = {0.9725490196078431, 0.6627450980392157, 0.9882352941176471, 1}
 }
-
-tt = RT("decal_s10_gnome", "decal_scripted")
-AC(tt, "ui")
-tt.ui.click_rect = r(-23, -19, 46, 38)
-tt.ui.can_select = false
-tt.render.sprites[1].prefix = "decal_s10_gnome"
-tt.render.sprites[1].anchor.y = 0.23684210526315788
-tt.main_script.update = scripts.decal_s10_gnome.update
-tt.min_delay = 5
-tt.max_delay = 20
-tt.gnome_actions = {"guitar", "diamond", "sleep", "teleport", "flip"}
-
-tt = RT("decal_s10_gnome_walking", "decal_s10_gnome")
-tt.walk_time = 1.5
-
-table.insert(tt.gnome_actions, "walk")
 
 tt = RT("decal_faerie_crystal", "decal_scripted")
 AC(tt, "tween")
@@ -6481,65 +6003,6 @@ tt.tween.props[1].keys = {{0, vec_1(1)}, {fts(10), vec_1(0.8)}, {fts(20), vec_1(
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 
-tt = RT("simon_controller")
-AC(tt, "main_script")
-tt.main_script.update = scripts.simon_controller.update
-tt.initial_sequence_length = 4
-tt.reward_base = 25
-tt.reward_inc = 15
-tt.achievement_id = "SIMON"
-tt.achievement_count = 9
-
-tt = RT("simon_mushroom_1", "decal_tween")
-AC(tt, "ui", "sound_events")
-tt.ui.click_rect = r(-20, 10, 40, 30)
-tt.ui.can_select = false
-tt.render.sprites[1].name = "stage8_symon_fungus1_0001"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].name = "stage8_symon_fungus1_0002"
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[3].name = "stage8_symon_fungus1_0003"
-tt.tween.props[1].keys = {{0, 0}}
-tt.tween.props[1].sprite_id = 2
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].keys = {{0, 0}}
-tt.tween.props[2].sprite_id = 3
-tt.tween.remove = false
-tt.sound_events.touch = "ElvesSimonYellow"
-
-tt = RT("simon_mushroom_2", "simon_mushroom_1")
-tt.render.sprites[1].name = "stage8_symon_fungus2_0001"
-tt.render.sprites[2].name = "stage8_symon_fungus2_0002"
-tt.render.sprites[3].name = "stage8_symon_fungus2_0003"
-tt.sound_events.touch = "ElvesSimonGreen"
-
-tt = RT("simon_mushroom_3", "simon_mushroom_1")
-tt.render.sprites[1].name = "stage8_symon_fungus3_0001"
-tt.render.sprites[2].name = "stage8_symon_fungus3_0002"
-tt.render.sprites[3].name = "stage8_symon_fungus3_0003"
-tt.sound_events.touch = "ElvesSimonRed"
-
-tt = RT("simon_mushroom_4", "simon_mushroom_1")
-tt.render.sprites[1].name = "stage8_symon_fungus4_0001"
-tt.render.sprites[2].name = "stage8_symon_fungus4_0002"
-tt.render.sprites[3].name = "stage8_symon_fungus4_0003"
-tt.sound_events.touch = "ElvesSimonBlue"
-
-tt = RT("simon_gnome_mushrooom_glow", "decal_tween")
-AC(tt, "ui")
-tt.ui.can_select = false
-tt.ui.click_rect = r(-20, -20, 40, 50)
-tt.render.sprites[1].name = "stage8_symon_bigGlow"
-tt.render.sprites[1].animated = false
-tt.tween.props[1].keys = {{0, 0}}
-tt.tween.remove = false
-
-tt = RT("simon_gnome", "decal")
-tt.render.sprites[1].prefix = "simon_gnome"
-tt.render.sprites[1].sort_y_offset = -38
-
 tt = RT("simon_gnome_fx", "fx")
 tt.render.sprites[1].name = "simon_gnome_fx"
 
@@ -6547,72 +6010,9 @@ tt = RT("simon_gnome_sign", "fx")
 tt.render.sprites[1].name = "simon_gnome_sign"
 tt.render.sprites[1].offset = vec_2(30, 15)
 
-tt = RT("decal_drow_queen_portal", "decal_scripted")
-AC(tt, "editor", "tween")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage11_portal_0001"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].name = "stage11_portal_0002"
-tt.render.sprites[2].alpha = 0
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[3].name = "stage11_portal_0003"
-tt.render.sprites[4] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[4].name = "stage11_portal_0004"
-tt.main_script.update = scripts.decal_drow_queen_portal.update
-tt.spawn_offsets = {vec_2(0, 0), vec_2(0, -20), vec_2(0, 20)}
-tt.tween.disabled = true
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}
-tt.tween.props[1].sprite_id = 2
-tt.tween.props[2] = table.deepclone(tt.tween.props[1])
-tt.tween.props[2].sprite_id = 3
-tt.tween.props[3] = table.deepclone(tt.tween.props[1])
-tt.tween.props[3].sprite_id = 4
-tt.tween.props[4] = CC("tween_prop")
-tt.tween.props[4].sprite_id = 4
-tt.tween.props[4].name = "scale"
-tt.tween.props[4].keys = {{0, vec_1(1)}, {fts(23), vec_1(1.2)}}
-tt.tween.props[4].loop = true
-tt.tween.props[4].ignore_reverse = true
-
 tt = RT("fx_drow_queen_portal", "fx")
 tt.render.sprites[1].name = "fx_drow_queen_portal"
 tt.render.sprites[1].anchor.y = 0.22
-
-tt = RT("decal_s11_door_glow", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage11_doorGlow"
-tt.render.sprites[1].alpha = 0
-tt.render.sprites[1].sort_y_offset = -30
-tt.tween.disabled = true
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 100}, {0.3, 200}, {0.6, 130}, {0.9, 255}, {1.2, 100}}
-tt.tween.props[1].loop = true
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].keys = {{0, 0}, {0.5, 1}, {4.8, 1}, {6, 0}}
-tt.tween.props[2].multiply = true
-tt.editor.tag = 1
-tt.editor.props = {{"editor.tag", PT_NUMBER}}
-tt.editor.overrides = {
-	["render.sprites[1].alpha"] = 255
-}
-
-tt = RT("decal_s11_zealot_rune", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].alpha = 0
-tt.render.sprites[1].offset = vec_2(-40, 0)
-tt.render.sprites[1].name = "stage11_zealotRune"
-tt.tween.remove = false
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}}
-tt.editor.tag = 1
-tt.editor.props = {{"editor.tag", PT_NUMBER}}
-tt.editor.overrides = {
-	["render.sprites[1].alpha"] = 255
-}
 
 tt = RT("decal_s11_mactans", "decal")
 tt.render.sprites[1].prefix = "mactans"
@@ -6669,25 +6069,6 @@ tt.tween.remove = false
 tt.tween.props[1].name = "offset"
 tt.tween.props[1].keys = {{0, vec_2(0, 1)}, {fts(20), vec_2(0, 2)}, {fts(40), vec_2(0, 1)}, {fts(60), vec_2(0, 0)}, {fts(80), vec_2(0, 1)}}
 tt.tween.props[1].loop = true
-
-tt = RT("decal_s12_lemur", "decal_scripted")
-AC(tt, "nav_path", "motion", "tween", "ui")
-tt.render.sprites[1].prefix = "decal_s12_lemur"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.13333333333333333
-tt.render.sprites[1].alpha = 0
-tt.motion.max_speed = 60
-tt.achievement = "LIKE_TO_MOVE_IT"
-tt.action_ni = 12
-tt.fade_ni = 18
-tt.wait_time = {5, 10}
-tt.show_time = {1, 3}
-tt.tween.remove = false
-tt.tween.reverse = true
-tt.tween.ts = -1
-tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
-tt.main_script.update = scripts.decal_s12_lemur.update
-tt.ui.click_rect = r(-15, 0, 30, 30)
 
 tt = RT("birds_formation_controller")
 AC(tt, "main_script")
@@ -6759,40 +6140,6 @@ tt.fx_end = "fx_teleport_metropolis"
 tt = RT("fx_teleport_metropolis", "fx")
 tt.render.sprites[1].name = "fx_teleport_metropolis"
 tt.render.sprites[1].size_scales = {vec_1(0.83), vec_1(1), vec_1(1.5)}
-
-tt = RT("decal_s13_relic_book", "decal_delayed_click_play")
-AC(tt, "tween")
-tt.render.sprites[1].prefix = "decal_s13_relic_book"
-tt.ui.click_rect = r(-20, -30, 40, 30)
-tt.delayed_play.min_delay = 3
-tt.delayed_play.max_delay = 6
-tt.delayed_play.required_clicks = 1
-tt.delayed_play.achievement_flag = {"SORCERERS_APPRENTICE", 1}
-tt.delayed_play.play_once = true
-tt.delayed_play.clicked_sound = "ElvesAchievementSorcapprenticeBook"
-tt.tween.remove = false
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].loop = true
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(20), vec_2(0, 1)}, {fts(60), vec_2(0, -1)}, {fts(80), vec_2(0, 0)}}
-
-tt = RT("decal_s13_relic_broom", "decal_click_play")
-tt.render.sprites[1].prefix = "decal_s13_relic_broom"
-tt.ui.click_rect = r(24, 0, 40, 50)
-tt.click_play.achievement_flag = {"SORCERERS_APPRENTICE", 2}
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "ElvesAchievementSorcapprenticeBroom"
-
-tt = RT("decal_s13_relic_hat", "decal_click_play")
-AC(tt, "tween")
-tt.render.sprites[1].prefix = "decal_s13_relic_hat"
-tt.ui.click_rect = r(-20, -40, 40, 30)
-tt.tween.remove = false
-tt.tween.props[1].loop = true
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(20), vec_2(0, 1)}, {fts(60), vec_2(0, -1)}, {fts(80), vec_2(0, 0)}}
-tt.click_play.achievement_flag = {"SORCERERS_APPRENTICE", 4}
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "ElvesAchievementSorcapprenticeHat"
 
 tt = RT("tower_black_baby_dragon", "tower")
 AC(tt, "attacks", "user_selection")
@@ -6935,19 +6282,6 @@ tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 
-tt = RT("decal_s14_break_egg", "decal_scripted")
-AC(tt, "ui", "click_play", "tween")
-tt.render.sprites[1].prefix = "decal_s14_break_egg"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.38235294117647056
-tt.main_script.update = scripts.decal_s14_break_spider.update
-tt.click_play.required_clicks = 5
-tt.ui.can_select = false
-tt.ui.click_rect = r(-15, -5, 30, 30)
-tt.tween.remove = false
-tt.tween.props[1].name = "scale"
-tt.tween.props[1].keys = {{0, vec_1(1)}, {fts(1), vec_1(1.2)}, {fts(6), vec_1(1)}}
-
 tt = RT("decal_s14_break_spider", "decal_scripted")
 AC(tt, "tween")
 tt.render.sprites[1] = CC("sprite")
@@ -6956,138 +6290,6 @@ tt.tween.props[1].keys = {{0, 255}, {0.75, 255}, {1, 0}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "offset"
 tt.tween.props[2].keys = {{0, vec_2(0, 0)}, {2, vec_2(1, 1)}}
-
-tt = RT("decal_s15_mactans", "decal_scripted")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "stage15_mactans_l1"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.09047619047619047
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].prefix = "stage15_mactans_l2"
-tt.main_script.update = scripts.decal_s15_mactans.update
-
-tt = RT("decal_s15_malicia", "decal_scripted")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "stage15_malicia"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.057692307692307696
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "stage15_malicia_ray"
-tt.render.sprites[2].hidden = true
-tt.render.sprites[2].anchor = vec_2(0.64, 0.21666666666666667)
-tt.render.sprites[2].offset = vec_2(-2, 57)
-tt.main_script.update = scripts.decal_s15_malicia.update
-
-tt = RT("decal_s15_statue", "decal_scripted")
-AC(tt, "editor")
-tt.main_script.update = scripts.decal_s15_statue.update
-tt.render.sprites[1].prefix = "stage15_shield"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.20161290322580644
-
-tt = RT("decal_s15_crystal", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage15_crystal"
-tt.render.sprites[1].animated = false
-tt.tween.remove = false
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 2)}, {fts(25), vec_2(0, -2)}, {fts(50), vec_2(0, 2)}}
-tt.tween.props[1].loop = true
-tt.tween.props[1].interp = "sine"
-
-tt = RT("fx_s15_crystal_shine", "fx")
-tt.render.sprites[1].name = "stage15_crystal_fx"
-
-tt = RT("fx_s15_crystal_transformation", "fx")
-for i = 1, 4 do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "stage15_crystal_l" .. i
-	tt.render.sprites[i].name = "explosion"
-end
-
-tt = RT("fx_s15_white_circle", "decal_tween")
-tt.render.sprites[1].name = "spiderQueen_deathShapes_0002"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].z = Z_GUI - 2
-tt.tween.props[1].name = "scale"
-tt.tween.props[1].keys = {{fts(3), vec_1(0.3)}, {fts(6), vec_1(70)}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].keys = {{0, 255}, {1, 255}, {2, 0}}
-
-tt = RT("decal_s15_finished_gem", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage15_bossDecal_gem"
-tt.render.sprites[1].anchor.y = 0.22580645161290322
-tt.render.sprites[1].animated = false
-
-tt = RT("decal_s15_finished_veznan", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_s15_finished_veznan"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.1111111111111111
-tt.delayed_play.min_delay = 5
-tt.delayed_play.max_delay = 15
-
-tt = RT("decal_s15_finished_guard", "decal_delayed_sequence")
-AC(tt, "editor")
-for i = 1, 4 do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "decal_s15_finished_guard_layer" .. i
-	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].anchor.y = 0.12195121951219512
-	tt.render.sprites[i].loop = i > 2
-	tt.render.sprites[i].hidden = i == 4
-end
-
-tt.delayed_sequence.animations = {"idle", "blink", "blink", "sleep"}
-tt.delayed_sequence.min_delay = 5
-tt.delayed_sequence.max_delay = 15
-
-tt = RT("decal_s15_finished_guard_flipped", "decal_s15_finished_guard")
-for i = 1, 4 do
-	tt.render.sprites[i].flip_x = true
-	tt.render.sprites[i].hidden = i == 3
-end
-
-tt = RT("taunts_s15_controller")
-AC(tt, "main_script", "taunts", "editor")
-tt.load_file = "level63_taunts"
-tt.main_script.insert = scripts.taunts_controller.insert
-tt.main_script.update = scripts.taunts_controller.update
-tt.taunts.delay_min = 10
-tt.taunts.sets = {}
-tt.taunts.sets.mactans = CC("taunt_set")
-tt.taunts.sets.mactans.format = "ELVES_ENEMY_MACTANS_TAUNT_%04i"
-tt.taunts.sets.mactans.end_idx = 8
-tt.taunts.sets.mactans.decal_name = "decal_s15_mactans_shoutbox"
-tt.taunts.sets.mactans.pos = vec_2(453, 591)
-tt.taunts.sets.malicia = CC("taunt_set")
-tt.taunts.sets.malicia.format = "ELVES_ENEMY_MALICIA_TAUNT_%04i"
-tt.taunts.sets.malicia.end_idx = 8
-tt.taunts.sets.malicia.decal_name = "decal_s15_malicia_shoutbox"
-tt.taunts.sets.malicia.pos = vec_2(653, 591)
-tt.taunts.sets.welcome_mactans = table.deepclone(tt.taunts.sets.mactans)
-tt.taunts.sets.welcome_mactans.format = "ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_0001"
-tt.taunts.sets.welcome_malicia = table.deepclone(tt.taunts.sets.malicia)
-tt.taunts.sets.welcome_malicia.format = "ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_0002"
-tt.taunts.sets.pre_mactans = table.deepclone(tt.taunts.sets.mactans)
-tt.taunts.sets.pre_mactans.format = "ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_%04i"
-tt.taunts.sets.pre_mactans.idxs = {2, 4}
-tt.taunts.sets.pre_malicia = table.deepclone(tt.taunts.sets.malicia)
-tt.taunts.sets.pre_malicia.format = "ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_%04i"
-tt.taunts.sets.pre_malicia.idxs = {1, 3}
-tt.taunts.sets.custom_malicia = table.deepclone(tt.taunts.sets.malicia)
-tt.taunts.sets.custom_malicia.format = "ELVES_ENEMY_MALICIA_TAUNT_KIND_%s"
-tt.taunts.sets.custom_mactans = table.deepclone(tt.taunts.sets.mactans)
-tt.taunts.sets.custom_mactans.format = "ELVES_ENEMY_MALICIA_TAUNT_KIND_%s"
-
-tt = RT("decal_s15_mactans_shoutbox", "decal_eb_spider_shoutbox")
-tt.render.sprites[1].name = "stage15_taunts_0004"
-tt.render.sprites[2].name = "stage15_taunts_0005"
-tt.texts.list[1].color = {247, 133, 102}
-
-tt = RT("decal_s15_malicia_shoutbox", "decal_eb_spider_shoutbox")
-tt.render.sprites[2].name = "stage15_taunts_0002"
 
 tt = RT("decal_hr_crystal_skull", "decal_delayed_click_play")
 tt.render.sprites[1].prefix = "decal_hr_crystal_skull"
@@ -7098,26 +6300,6 @@ tt.delayed_play.clicked_sound = "ElvesCrystalSkull"
 tt.ui.can_select = false
 tt.ui.click_rect = r(-13, -13, 28, 24)
 
-tt = RT("decal_s16_land_1", "decal_background")
-AC(tt, "tween")
-tt.render.sprites[1].name = "Stage16_0003"
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-
-tt = RT("decal_s16_land_2", "decal_s16_land_1")
-tt.render.sprites[1].name = "Stage04_0002"
-tt.render.sprites[1].z = Z_DECALS - 1
-
-tt = RT("decal_s16_ground_archers_land", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].name = "groundArchers"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.2857142857142857
-tt.render.sprites[1].z = Z_DECALS - 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-
 tt = RT("soldier_s16_ground_archer", "soldier_gryphon_guard_upper")
 AC(tt, "editor")
 tt.ranged.attacks[1].filter_fn = nil
@@ -7125,43 +6307,6 @@ tt.render.sprites[1].prefix = "soldier_s16_ground_archer"
 tt.ranged.attacks[1].max_range = 150
 tt.ranged.attacks[1].min_range = 30
 tt.render.sprites[1].z = Z_OBJECTS
-
-tt = RT("decal_s16_bush_holder", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage16_bushHolders"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.2857142857142857
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-
-tt = RT("decal_s16_bush_burner", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage16_bushGnollBurner"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.2777777777777778
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-
-tt = RT("fx_s16_bush_burner", "fx")
-tt.render.sprites[1].name = "fx_s16_bush_burner"
-tt.render.sprites[1].anchor.y = 0.3548387096774194
-
-tt = RT("fx_s16_burner_explosion", "decal_timed")
-AC(tt, "editor")
--- tt.timed.disabled = true
-tt.timed.runs = INT_32_MAX
-tt.render.sprites[1].name = "fx_s16_burner_explosion"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].anchor.y = 0.09740259740259741
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-tt.editor.overrides = {
-	["render.sprites[1].hidden"] = false,
-	["render.sprites[1].loop"] = true
-}
 
 tt = RT("gnoll_bush_spawner", "decal_scripted")
 AC(tt, "spawner", "editor")
@@ -7195,100 +6340,6 @@ tt.spawner.patch_props = {
 tt.walk_nodes_range = {5, 10}
 tt.walk_wait = 1
 
-tt = RT("decal_hr_cart", "decal")
-tt.render.sprites[1].name = "stage17_carret"
-tt.render.sprites[1].anchor.y = 0.08333333333333333
-tt.render.sprites[1].animated = false
-
-tt = RT("decal_hr_worker_a", "decal")
-tt.render.sprites[1].name = "decal_hr_worker_a"
-tt.render.sprites[1].anchor.y = 0.027777777777777776
-
-tt = RT("decal_hr_worker_b", "decal")
-tt.render.sprites[1].name = "decal_hr_worker_b"
-tt.render.sprites[1].anchor.y = 0.20833333333333334
-
-tt = RT("malik_slave_controller", "decal_scripted")
-AC(tt, "editor")
-tt.fn_can_power = scripts.malik_slave_controller.fn_can_power
-tt.hero_spawn_pos = vec_2(736, 639)
-tt.main_script.update = scripts.malik_slave_controller.update
-tt.starting_wave = 2
-tt.thunder_rect = r(655, 595, 164, 56)
-tt.wait_time = fts(159)
-tt.achievement_id = "FREEDOM_FIGHTER"
-tt.walk_points = {
-	malik = {vec_2(973, 655), vec_2(808, 632), vec_2(748, 666)},
-	gnoll_left = {vec_2(935, 651), vec_2(700, 605)},
-	gnoll_right = {vec_2(1016, 673), vec_2(795, 631)}
-}
-
-tt = RT("decal_gnoll_gnawer", "decal_scripted")
-AC(tt, "motion", "nav_grid", "tween")
-tt.render.sprites[1].anchor = vec_2(0.5, 0.25)
-tt.render.sprites[1].prefix = "gnoll_gnawer"
-tt.render.sprites[1].name = "idle"
-tt.motion.max_speed = 2 * FPS
-tt.main_script.update = scripts.decal_walking.update
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
-tt = RT("decal_baby_malik_slave", "decal_scripted")
-AC(tt, "motion", "nav_grid")
-tt.render.sprites[1].anchor.y = 0.184
-tt.render.sprites[1].prefix = "decal_baby_malik"
-tt.render.sprites[1].name = "idle"
-tt.main_script.update = scripts.decal_walking.update
-tt.motion.max_speed = 2 * FPS
-
-tt = RT("decal_baby_malik_slave_banner", "decal_tween")
-tt.render.sprites[1].name = "malikAfro_sign"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].offset = vec_2(30, 66)
-tt.tween.ts = -10
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 100}, {fts(4), 255}, {fts(71), 255}, {fts(75), 0}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_1(0.75)}, {fts(4), vec_1(1.075)}, {fts(7), vec_1(0.9625)}, {fts(9), vec_1(1)}, {fts(69), vec_1(1)}, {fts(71), vec_1(1.075)}, {fts(75), vec_1(0.75)}}
-
-tt = RT("decal_baby_malik_slave_free", "decal")
-tt.render.sprites[1].name = "decal_baby_malik_free"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].anchor = vec_2(0.33101851851851855, 0.27976190476190477)
-
-tt = RT("decal_s18_statue", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage18_statue"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.176056338028169
-
-tt = RT("decal_s18_roadrunner_bush", "decal_scripted")
-AC(tt, "editor", "ui")
-tt.render.sprites[1].name = "decal_s18_roadrunner_bush_shake"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].anchor.y = 0.3
-tt.main_script.update = scripts.decal_s18_roadrunner_bush.update
-tt.required_clicks = {3, 5}
-tt.shake_cooldown = {3, 5}
-tt.sound_clicked = "ElvesGnollTrailOut"
-tt.ui.click_rect = r(-22, -10, 44, 40)
-tt.ui.can_select = false
-
-tt = RT("fx_roadruner_bush_explode", "fx")
-tt.render.sprites[1].name = "gnollBush_explode"
-tt.render.sprites[1].anchor.y = 0.3548387096774194
-
-tt = RT("decal_s18_roadrunner", "decal_tween")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "decal_s18_roadrunner_run"
-tt.render.sprites[1].anchor.y = 0.125
-tt.pos = vec_2(464, 473)
-tt.sound_events.insert = "ElvesRoadRunner"
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {2.2, vec_2(-369, 14)}}
-
 tt = RT("decal_s18_coyote", "decal")
 AC(tt, "sound_events")
 tt.render.sprites[1].prefix = "decal_s18_coyote"
@@ -7296,33 +6347,6 @@ tt.render.sprites[1].name = "pull"
 tt.render.sprites[1].anchor.y = 0.19230769230769232
 tt.pos = vec_2(138, 383)
 tt.sound_events.push = "BombExplosionSound"
-
-tt = RT("decal_s18_flag_head", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "decal_s18_flag_head"
-
-tt = RT("decal_s18_boss_head", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage_18_head"
-tt.render.sprites[1].animated = false
-
-tt = RT("taunts_s18_defeated_controller")
-AC(tt, "main_script", "taunts", "editor")
-tt.load_file = "level66_taunts"
-tt.main_script.insert = scripts.taunts_controller.insert
-tt.main_script.update = scripts.taunts_controller.update
-tt.taunts.delay_min = 10
-tt.taunts.sets = {}
-tt.taunts.sets.left_head = CC("taunt_set")
-tt.taunts.sets.left_head.end_idx = 8
-tt.taunts.sets.left_head.format = "ELVES_ENEMY_BRAM_TAUNT_%04i"
-tt.taunts.sets.left_head.decal_name = "decal_s18_shoutbox"
-tt.taunts.sets.left_head.pos = vec_2(727, 700)
-tt.taunts.sets.right_head = CC("taunt_set")
-tt.taunts.sets.right_head.end_idx = 8
-tt.taunts.sets.right_head.format = "ELVES_ENEMY_DEATH_TAUNT_%04i"
-tt.taunts.sets.right_head.decal_name = "decal_s18_shoutbox"
-tt.taunts.sets.right_head.pos = vec_2(791, 680)
 
 tt = RT("decal_s18_shoutbox", "decal_tween")
 AC(tt, "texts")
@@ -7351,22 +6375,6 @@ tt.tween.props[3].loop = true
 tt.tween.props[4] = table.deepclone(tt.tween.props[3])
 tt.tween.props[4].sprite_id = 2
 
-tt = RT("decal_s19_drizzt", "decal_scripted")
-AC(tt, "editor", "ui")
-tt.render.sprites[1].prefix = "decal_s19_drizzt"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].loop = false
-tt.main_script.update = scripts.decal_s19_drizzt.update
-tt.idle_cooldown = {3, 5}
-tt.spawn_cooldown = {10, 15}
-tt.sound_clicked = "ElvesDrizztGrowl"
-tt.sound_chase = "ElvesDrizztUnsheathe"
-tt.sound_chase_params = {
-	delay = fts(23)
-}
-tt.ui.click_rect = r(90, -30, 40, 30)
-tt.ui.can_select = false
-
 tt = RT("decal_s19_drizzt_gnoll", "decal_scripted")
 tt.render.sprites[1].prefix = "decal_s19_drizzt_gnoll"
 tt.render.sprites[1].name = "idle"
@@ -7394,14 +6402,6 @@ tt.delayed_play.min_delay = 2
 tt.delayed_play.flip_chance = 0.5
 tt.delayed_play.idle_animation = nil
 
-tt = RT("decal_s22_lava_hole", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_s22_lava_hole"
-tt.render.sprites[1].name = "play"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.delayed_play.max_delay = 2
-tt.delayed_play.idle_animation = nil
-
 tt = RT("decal_s22_lava_smoke", "decal_delayed_play")
 tt.render.sprites[1].prefix = "decal_s22_lava_smoke"
 tt.render.sprites[1].name = "play"
@@ -7411,33 +6411,6 @@ tt.render.sprites[1].z = Z_DECALS + 1
 tt.delayed_play.min_delay = 3
 tt.delayed_play.max_delay = 8
 tt.delayed_play.idle_animation = nil
-
-tt = RT("lava_fireball_controller")
-AC(tt, "main_script")
-tt.main_script.update = scripts.lava_fireball_controller.update
-tt.bullet = "bomb_lava_fireball"
-tt.launch_fx = "fx_bomb_lava_fireball_launch"
-
-tt = RT("bomb_lava_fireball", "bullet")
-tt.bullet.damage_bans = F_ENEMY
-tt.bullet.damage_flags = F_AREA
-tt.bullet.damage_max = 250
-tt.bullet.damage_min = 200
-tt.bullet.damage_radius = 45
-tt.bullet.flight_time_base = fts(25)
-tt.bullet.flight_time_factor = fts(0.05)
-tt.bullet.g = -0.8 / (fts(1) * fts(1))
-tt.bullet.hit_decal = "decal_bomb_crater"
-tt.bullet.hit_fx = "fx_bomb_lava_fireball_explosion"
-tt.bullet.mod = "mod_veznan_demon_fire"
-tt.bullet.particles_name = "ps_bomb_lava_fireball"
-tt.bullet.pop = {"pop_entwood"}
-tt.bullet.rotation_speed = 20 * FPS * math.pi / 180
-tt.main_script.insert = scripts.enemy_bomb.insert
-tt.main_script.update = scripts.enemy_bomb.update
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "Stage9_lavaShot"
-tt.sound_events.hit = "BombExplosionSound"
 
 tt = RT("fx_bomb_lava_fireball_launch", "fx")
 tt.render.sprites[1].name = "fx_bomb_lava_fireball_launch"
@@ -25568,9 +24541,6 @@ tt.render.sprites[1].animated = true
 tt.bullet.rotation_speed = math.pi / 2
 tt.bullet.hit_payload = "decal_dark_disciple_book"
 tt.bullet.mod = "mod_dark_disciple_tower_block"
-tt.bullet.damage_min = nil
-tt.bullet.damage_max = nil
-tt.bullet.damage_type = nil
 tt.bullet.hit_fx = nil
 tt.sound_events.travel = nil
 
@@ -25580,7 +24550,7 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
 tt.bullet.damage_min = 0
 tt.bullet.damage_max = 0
-tt.bullet.damage_type = F_NONE
+tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.hit_blood_fx = nil
 tt.bullet.align_with_trajectory = true
 tt.bullet.particles_name = "ps_bullet_trail_necromancer"
@@ -25711,3 +24681,4 @@ tt.events.list[2].name = "end_bubbles"
 tt.events.list[2].on_event = scripts.controller_swamp_bubbles.on_end
 
 return scripts
+
