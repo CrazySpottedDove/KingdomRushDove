@@ -1,1 +1,1 @@
-return {{date="2026-09-28",author="CrazySpottedDove",message="fix: 修正新master脚本导致的master分支commit信息丢失问题"}}
+return {{date="2026-09-28",author="CrazySpottedDove",message="fix: 修正新master脚本导致的master分支commit信息丢失问题"},{date="2026-09-28",author="CrazySpottedDove",message="fix: 修正六代死灵法师敌人和一代死灵法师敌人的命名冲突问题"}}

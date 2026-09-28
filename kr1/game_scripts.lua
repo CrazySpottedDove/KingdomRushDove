@@ -75979,41 +75979,9 @@ function scripts.mod_enemy_dark_disciple_cage.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.enemy_necromancer = {}
+scripts.enemy_necromancer_kr6 = {}
 
-function scripts.enemy_necromancer.get_info(this)
-	local min, max, damage_type
-
-	if this.timed_attacks and this.timed_attacks.list then
-		local ba = this.timed_attacks.list[1]
-
-		min, max = ba.damage_min, ba.damage_max
-		damage_type = ba.damage_type
-	end
-
-	if min and max then
-		min, max = math.ceil(min), math.ceil(max)
-	end
-
-	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
-	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		damage_type = damage_type,
-		damage_icon = this.info.damage_icon,
-		armor = armor,
-		magic_armor = magic_armor,
-		lives = this.enemy.lives_cost,
-		immune = this.health.immune_to == DAMAGE_ALL_TYPES
-	}
-end
-
-function scripts.enemy_necromancer.update(this, store, script)
+function scripts.enemy_necromancer_kr6.update(this, store, script)
 	local ca = this.timed_attacks.list[1]
 	local bullet_return_offset = V.v(-7, 35)
 	local ca_damage = math.ceil(U.frandom(ca.damage_min, ca.damage_max))
