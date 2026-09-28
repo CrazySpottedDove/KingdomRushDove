@@ -963,58 +963,6 @@ function scripts.eb_veznan.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-scripts.veznan_portal = {}
-
-function scripts.veznan_portal.update(this, store)
-	local spawns = this.spawn_groups[this.portal_idx]
-	local ni = this.out_nodes[this.pi]
-
-	while true do
-		while not this.spawn_signal do
-			coroutine.yield()
-		end
-
-		U.y_animation_play(this, "start", nil, store.tick_ts)
-
-		local roll = math.random()
-		local entity_data
-
-		for _, s in pairs(spawns) do
-			if roll <= s[1] then
-				entity_data = s[2]
-
-				break
-			end
-		end
-
-		U.animation_start_default(this, "active", nil, store.tick_ts, true)
-
-		for _, d in pairs(entity_data) do
-			local min, max, template = unpack(d)
-			local count = min ~= max and math.random(min, max) or min
-
-			for i = 1, count do
-				local e = E:create_entity(template)
-
-				e.nav_path.pi = this.pi
-				e.nav_path.spi = math.random(1, 3)
-				e.nav_path.ni = ni
-				e.pos = V.vclone(this.pos)
-
-				simulation:queue_insert_entity(e)
-				U.y_wait_unconditional(store, this.spawn_interval)
-			end
-		end
-
-		U.y_animation_wait_default(this)
-		U.y_animation_play(this, "end", nil, store.tick_ts)
-
-		this.spawn_signal = nil
-
-		coroutine.yield()
-	end
-end
-
 scripts.mod_veznan_tower = {}
 
 function scripts.mod_veznan_tower.update(this, store)

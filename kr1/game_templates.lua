@@ -307,17 +307,6 @@ tt = RT("decal_blackburn_smash_ground", "decal_timed")
 tt.render.sprites[1].name = "fx_blackburn_smash_ground"
 tt.render.sprites[1].z = Z_DECALS
 
-tt = RT("veznan_portal", "decal_scripted")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "veznan_portal"
-tt.render.sprites[1].z = Z_DECALS
-tt.fx_out = "fx_demon_portal_out"
-tt.main_script.update = scripts.veznan_portal.update
-tt.spawn_groups = {{{0.5, {{4, 7, "enemy_demon"}}}, {0.8, {{3, 3, "enemy_demon_wolf"}}}, {1, {{5, 5, "enemy_demon"}, {1, 1, "enemy_demon_mage"}}}}, {{0.5, {{2, 5, "enemy_demon"}}}, {0.8, {{2, 2, "enemy_demon_wolf"}}}, {1, {{3, 3, "enemy_demon"}}}}, {{1, {{3, 3, "enemy_demon"}}}}}
-tt.portal_idx = 1
-tt.spawn_interval = fts(30)
-tt.pi = 1
-
 tt = RT("decal_s12_shoutbox", "decal_tween")
 AC(tt, "texts")
 tt.render.sprites[1].animated = false
@@ -942,29 +931,6 @@ tt.graveyard.keep_gold = false
 tt.graveyard.vis_has = F_FRIEND
 tt.graveyard.vis_bans = F_HERO
 
-tt = RT("s15_rotten_spawner")
-AC(tt, "main_script", "editor")
-tt.main_script.update = scripts.s15_rotten_spawner.update
-tt.entity = "enemy_rotten_tree"
-tt.spawn_margin = {30, 60}
-tt.spawn_timers = {
-	{10, 0},
-	[11] = {15, 1},
-	[14] = {10, 0},
-	[15] = {15, 2},
-	[17] = {15, 3},
-	[20] = {15, 6}
-}
-
-tt = RT("s11_lava_spawner")
-AC(tt, "main_script")
-tt.main_script.update = scripts.s11_lava_spawner.update
-tt.entity = "enemy_lava_elemental"
-tt.cooldown = 400
-tt.cooldown_after = 120
-tt.pi = 4
-tt.sound = "RockElementalDeath"
-
 tt = RT("jt_spawner_aura", "aura")
 tt.main_script.update = scripts.jt_spawner_aura.update
 tt.aura.track_source = true
@@ -1293,17 +1259,6 @@ tt = RT("decal_mill_small", "decal_mill_big")
 tt.render.sprites[1].name = "decal_mill_small"
 tt.ui.click_rect = r(-10, -25, 35, 55)
 
-tt = RT("decal_s01_trees", "decal")
-tt.render.sprites[1].name = "stage1_trees"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.234375
-
-tt = RT("decal_boat_big", "decal_loop")
-tt.render.sprites[1].name = "decal_boat_big_idle"
-
-tt = RT("decal_boat_small", "decal_loop")
-tt.render.sprites[1].name = "decal_boat_small_idle"
-
 tt = RT("decal_fish", "decal_scripted")
 AC(tt, "ui")
 tt.render.sprites[1].prefix = "decal_fish"
@@ -1338,40 +1293,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].loop = true
 tt.tween.props[1].keys = {{0, 255}, {0.15, 200}, {0.3, 255}, {0.4, 220}, {0.7, 255}}
 
-tt = RT("decal_burner_big", "decal_loop")
-tt.render.sprites[1].anchor = vec_2(0.5, 0.13)
-tt.render.sprites[1].name = "decal_burner_big_idle"
-
-tt = RT("decal_burner_small", "decal_loop")
-tt.render.sprites[1].anchor = vec_2(0.5, 0.11)
-tt.render.sprites[1].name = "decal_burner_small_idle"
-
-tt = RT("decal_fredo", "decal_scripted")
-AC(tt, "ui")
-tt.render.sprites[1].prefix = "decal_fredo"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor = vec_2(0.5, 0.1)
-tt.render.sprites[1].loop = false
-tt.main_script.update = scripts.decal_fredo.update
-tt.ui.click_rect = r(-33, 104, 30, 30)
-
-tt = RT("decal_orc_burner", "decal_loop")
-tt.render.sprites[1].name = "decal_orc_burner_idle"
-tt.render.sprites[1].random_ts = fts(14)
-
-tt = RT("decal_orc_flag", "decal_loop")
-tt.render.sprites[1].anchor = vec_2(0.5, 0.07)
-tt.render.sprites[1].random_ts = fts(14)
-tt.render.sprites[1].name = "decal_orc_flag_idle"
-
-tt = RT("decal_swamp_bubble", "decal_delayed_play")
-tt.render.sprites[1].name = "decal_swamp_bubble_jump"
-tt.delayed_play.flip_chance = 0.5
-tt.delayed_play.min_delay = fts(150)
-tt.delayed_play.max_delay = fts(400)
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "decal_swamp_bubble_jump"
-
 tt = RT("decal_demon_portal_big", "decal_scripted")
 AC(tt, "tween")
 tt.render.sprites[1].name = "decal_demon_portal_big_active"
@@ -1384,53 +1305,10 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{fts(0), 0}, {fts(30), 180}, {fts(40), 255}}
 tt.shutdown_timeout = 5
 
-tt = RT("decal_s17_barricade", "decal")
-AC(tt, "editor", "main_script")
-tt.boss_name = "eb_kingpin"
-tt.boss_spawn_wave = 15
-tt.main_script.update = scripts.decal_s17_barricade.update
-tt.render.sprites[1].prefix = "decal_s17_barricade"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.x = 0.4
-tt.render.sprites[1].loop = false
-tt.editor.props = {{"editor.game_mode", PT_NUMBER}}
-
-tt = RT("decal_bandits_flag", "decal_loop")
-tt.render.sprites[1].random_ts = fts(14)
-tt.render.sprites[1].name = "decal_bandits_flag_idle"
-
-tt = RT("decal_scrat", "decal_scripted")
-AC(tt, "ui")
-tt.render.sprites[1].prefix = "decal_scrat"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "decal_scrat_ice"
-tt.render.sprites[2].name = "idle"
-tt.render.sprites[2].loop = false
-tt.touch_fx = "fx_decal_scrat_touch"
-tt.main_script.update = scripts.decal_scrat.update
-tt.ui.click_rect = r(-45, 5, 40, 40)
-
 tt = RT("fx_decal_scrat_touch", "fx")
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "decal_scrat_touch_fx"
 tt.sound_events.insert = "JtHitIce"
-
-tt = RT("decal_troll_flag", "decal_loop")
-tt.render.sprites[1].random_ts = fts(18)
-tt.render.sprites[1].name = "decal_troll_flag_idle"
-
-tt = RT("decal_troll_burner", "decal_loop")
-tt.render.sprites[1].random_ts = fts(11)
-tt.render.sprites[1].name = "decal_troll_burner_idle"
-
-tt = RT("decal_frozen_mushroom", "decal_click_play")
-tt.render.sprites[1].prefix = "decal_frozen_mushroom"
-tt.click_play.clicked_sound = "MushroomPoof"
-tt.click_play.play_once = true
-
-tt = RT("decal_lava_fall", "decal_loop")
-tt.render.sprites[1].name = "decal_lava_fall_idle"
 
 tt = RT("decal_inferno_bubble", "decal_delayed_play")
 tt.render.sprites[1].name = "decal_inferno_bubble_jump"
@@ -1444,37 +1322,10 @@ tt = RT("decal_lava_splash", "decal_inferno_bubble")
 tt.render.sprites[1].name = "decal_lava_splash_jump"
 tt.delayed_play.play_animation = "decal_lava_splash_jump"
 
-tt = RT("decal_inferno_portal", "decal_demon_portal_big")
-tt.render.sprites[1].name = "decal_inferno_portal_active"
-
-tt = RT("decal_inferno_ground_portal", "decal_demon_portal_big")
-tt.render.sprites[1].name = "decal_inferno_ground_portal_active"
-
-tt = RT("decal_s21_veznan", "decal")
-tt.render.sprites[1].name = "Inferno_Stg21_Veznan_0001"
-tt.render.sprites[1].animated = false
-
-tt = RT("decal_s21_veznan_free", "decal")
-tt.render.sprites[1].name = "Inferno_Stg21_Veznan_0002"
-tt.render.sprites[1].animated = false
-
-tt = RT("decal_s21_hellboy", "decal")
-tt.render.sprites[1].name = "decal_s21_hellboy_idle"
-
 tt = RT("background_sounds_blackburn", "background_sounds")
 tt.min_delay = 20
 tt.max_delay = 30
 tt.sounds = {}
-
-tt = RT("decal_s23_splinter", "decal_click_play")
-tt.render.sprites[1].prefix = "decal_s23_splinter"
-tt.ui.can_select = false
-tt.ui.click_rect.pos.x = -6
-tt.ui.click_rect.size.x = 25
-
-tt = RT("decal_s23_splinter_pizza", "decal_s23_splinter")
-tt.main_script.update = scripts.decal_s23_splinter_pizza.update
-tt.render.sprites[1].prefix = "decal_s23_splinter_pizza"
 
 tt = RT("decal_bat_flying", "decal_delayed_play")
 AC(tt, "tween")
@@ -1839,21 +1690,6 @@ for i, b in ipairs(bat_paths) do
 	tt.delayed_play.play_duration = t
 end
 
-tt = RT("decal_s24_nevermore", "decal_click_play")
-AC(tt, "tween")
-tt.render.sprites[1].scale = vec_2(0.7, 0.7)
-tt.render.sprites[1].prefix = "decal_s24_nevermore"
-tt.leave_time = 2
-tt.main_script.update = scripts.decal_s24_nevermore.update
-tt.sound = "ExtraBlackburnCrow"
-tt.tween.remove = false
-tt.tween.reverse = true
-tt.tween.ts = -10
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{fts(0), vec_2(0, 0)}, {fts(60), vec_2(334, 44)}}
-tt.ui.can_select = false
-tt.ui.click_rect.pos.y = -26
-
 tt = RT("decal_blackburn_weed", "decal_loop")
 tt.render.sprites[1].random_ts = fts(34)
 tt.render.sprites[1].name = "decal_blackburn_weed_idle"
@@ -1875,28 +1711,6 @@ tt.delayed_play.play_animation = "decal_blackburn_bubble_jump"
 tt = RT("decal_blackburn_smoke", "decal_loop")
 tt.render.sprites[1].random_ts = fts(21)
 tt.render.sprites[1].name = "decal_blackburn_smoke_jump"
-
-tt = RT("decal_s25_nessie", "decal_click_play")
-tt.render.sprites[1].anchor = vec_2(0.5, 0.43478260869565216)
-tt.render.sprites[1].prefix = "decal_s25_nessie"
-tt.main_script.update = scripts.decal_s25_nessie.update
-tt.out_pos = {vec_2(555, 600), vec_2(131, 530), vec_2(415, 450)}
-tt.animation_duration = {3, 4}
-tt.pause_duration = {7, 10}
-tt.sound = "ExtraBlackburnNessie"
-tt.ui.can_select = false
-tt.ui.click_rect.pos = vec_2(-22, 2)
-tt.ui.click_rect.size = vec_2(30, 20)
-
-tt = RT("decal_s26_cage", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_s26_cage"
-tt.delayed_play.min_delay = 2
-tt.delayed_play.max_delay = 6
-tt.delayed_play.idle_animation = "idle"
-tt.delayed_play.play_animation = "play"
-
-tt = RT("decal_s26_hangmen", "decal_s26_cage")
-tt.render.sprites[1].prefix = "decal_s26_hangmen"
 
 tt = RT("decal_endless_burner", "decal_loop")
 tt.render.sprites[1].name = "decal_orc_burner_idle"

@@ -1705,7 +1705,7 @@ function upgrades:patch_templates(max_level)
 					end
 					s.fps = s._origin_fps * t.tower.cooldown_factor
 				end
-				scale_fps_based_keys(t, t.tower.cooldown_factor_divider)
+				scale_fps_based_keys(t, t.tower.cooldown_factor)
 			end
 		end
 	end
