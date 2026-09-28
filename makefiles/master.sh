@@ -5,6 +5,9 @@
 # 采用 git read-tree 快照而非 merge：因为 merge 会把开发分支的源码重新带回 master，
 # 且下次合并会产生大量 delete/modify 冲突。master 因此不与开发分支共享合并历史，
 # 只保留线性快照提交，保证服务端的 git pull 仍是 fast-forward。
+#
+# 提交信息对齐：快照提交复用源分支 HEAD 的提交信息/作者/作者日期，
+# 使 master 的 commit 信息与 dev 保持一致（便于追溯）。
 set -euo pipefail
 
 cd "$(git rev-parse --show-toplevel)"
@@ -34,6 +37,11 @@ bash makefiles/gen_release_source_paths.sh "$SOURCE_BRANCH" > "$MANIFEST"
 echo "仅源码文件数: $(wc -l < "$MANIFEST")"
 
 # 3) 生成 master 投影快照
+# 采集源分支 HEAD 的提交信息，用于让 master 快照的提交信息与源分支一致
+SRC_SUBJECT="$(git log -1 --format=%s "$SOURCE_BRANCH")"
+SRC_AUTHOR="$(git log -1 --format='%an <%ae>' "$SOURCE_BRANCH")"
+SRC_DATE="$(git log -1 --format=%aI "$SOURCE_BRANCH")"
+
 git checkout master
 
 # 让工作区与索引精确等于源分支的树（同时处理新增、修改与删除）
@@ -50,7 +58,12 @@ fi
 if git diff --cached --quiet; then
 	echo "master 相对源分支无变化，跳过提交。"
 else
-	VERSION_ID="$(sed -n 's/^[[:space:]]*id[[:space:]]*=[[:space:]]*"\(.*\)".*/\1/p' version.lua | head -1)"
-	git commit -m "release: ${VERSION_ID:-snapshot}"
-	echo "master 已更新为投影快照（仅编译产物）。"
+	# 提交信息/作者/作者日期与源分支 HEAD 完全一致（正文原样）
+	if git log -1 --format=%B "$SOURCE_BRANCH" | git commit --author="$SRC_AUTHOR" --date="$SRC_DATE" -F -; then
+		echo "master 已更新为投影快照（仅编译产物，提交信息对齐 $SOURCE_BRANCH）。"
+	else
+		# 兜底：正文为空等情况，退回 subject
+		git commit --author="$SRC_AUTHOR" --date="$SRC_DATE" -m "${SRC_SUBJECT:-snapshot}"
+		echo "master 已更新为投影快照（仅编译产物）。"
+	fi
 fi
