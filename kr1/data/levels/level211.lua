@@ -204,6 +204,16 @@ U.animation_start(this,this.place_egg_anim,nil,store.tick_ts,nil,1)
 U.y_wait(store,this.egg_spawn_time)
 S:queue(this.sound_events.egg)
 local spawner=store.entities[this.nest_id]
+if not spawner then
+U.animation_start(this,this.ascend_anim,nil,store.tick_ts,true,1)
+scripts.decal_rappel_utils.y_ascend(this,store,start_y,max_height,shadow,string)
+if this.controller then
+this.controller._done=true
+end
+queue_remove(store,shadow)
+queue_remove(store,this)
+return
+end
 local egg=E:create_entity(this.egg_prefix.."_"..this.to_spawn)
 egg.pos.x,egg.pos.y=this.target_pos.x,this.target_pos.y
 egg.hatch_amount=this.amount
@@ -406,7 +416,9 @@ queue_remove(store,this)
 end
 local function tower_stage_211_spider_eggs_nest_update(this,store,script)
 local function activate(camp)
+if camp then
 camp._target_nest_id=this.nest_id
+end
 end
 local can_shoot=false
 local camp
@@ -415,6 +427,8 @@ while true do
 camp=camp or find_all_t(store,this.camp_t)[1]
 if camp then
 can_shoot=not camp.arrow_in_cooldown
+else
+can_shoot=false
 end
 local usable=can_shoot and this.has_eggs
 this.user_selection.allowed=usable
@@ -1765,22 +1779,28 @@ while store.wave_group_number<camp_level_ups[1] do
 coroutine.yield()
 end
 local old_camp=find_all_t("tower_stage_211_camp_lvl1")[1]
+if old_camp and old_camp.tower then
 old_camp.tower.upgrade_to="tower_stage_211_camp_lvl2"
+end
 while store.wave_group_number<camp_level_ups[2] do
 coroutine.yield()
 end
 local old_camp2=find_all_t("tower_stage_211_camp_lvl2")[1]
+if old_camp2 and old_camp2.tower then
 old_camp2.tower.upgrade_to="tower_stage_211_camp_lvl3"
+end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
 local c=find_all_t("controller_stage_211_spider_block_and_spawn")[1]
+if c then
 while c.in_use do
 coroutine.yield()
 end
 c._tower_block=false
 c._spawn_eggs=false
 c.eggs_queue={}
+end
 U.y_wait(store,2)
 local node=30
 local descent=E:create_entity("decal_stage_211_sarelgaz_descent")
