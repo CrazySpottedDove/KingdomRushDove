@@ -411,19 +411,34 @@ local function rewind_render_update(self, dt, ts, store)
 
 						if exo_frame then
 							s.exo_frame = exo_frame
+							s.exo_hidden = nil
 							local exo = EXO:get_exo_by_frame(exo_frame)
 
 							if s.exo_hide_prefix then
-								for i = 1, #exo_frame do
-									local p = exo_frame[i]
-									if p[1] == 1 then
-										local pname = exo.parts[p[2]][1]
+								local buf = exo.floats
+								local base = exo_frame.base
+								local hcount = exo_frame.count
+								local hidden = s.exo_hidden
 
-										p.hidden = false
+								if not hidden then
+									hidden = {}
+									s.exo_hidden = hidden
+								end
+
+								for k = 1, hcount do
+									hidden[k] = false
+								end
+
+								for i = 0, hcount - 1 do
+									local o = base + i * 10
+									if buf[o] == 1 then
+										local pname = exo.parts[buf[o + 1]][1]
+
+										hidden[i + 1] = false
 
 										for j = 1, #s.exo_hide_prefix do
 											if string.find(pname, s.exo_hide_prefix[j], 1, true) then
-												p.hidden = true
+												hidden[i + 1] = true
 
 												break
 											end
@@ -432,7 +447,7 @@ local function rewind_render_update(self, dt, ts, store)
 								end
 							end
 						else
-							s.exo_frame = {}
+							s.exo_frame = nil
 						end
 					else
 						s.sync_flag = last_runs ~= s.runs
