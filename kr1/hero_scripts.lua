@@ -45425,9 +45425,7 @@ function scripts.hero_stage_215_lord_blackburn.insert(this, store)
 end
 
 function scripts.hero_stage_215_lord_blackburn.update(this, store)
-	local brk, stam, star, blocked_enemy, counted_id
-	local cauldron = find_all_t(store, "decal_stage_215_cauldron")[1]
-
+	local brk, stam, blocked_enemy, counted_id
 	this.health_bar.hidden = false
 
 	local function do_corruption(count)

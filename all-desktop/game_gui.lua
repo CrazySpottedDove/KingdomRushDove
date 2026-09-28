@@ -26,6 +26,7 @@ local S = require("sound_db")
 local SU = require("screen_utils")
 local E = require("entity_db")
 local U = require("utils")
+local RLU = require("all.rally_utils")
 local configer = require("dove_modules.configer")
 
 local V = require("lib.klua.vector")
@@ -1053,9 +1054,7 @@ function game_gui:keypressed(key, isrepeat)
 					local enemy = U.find_foremost_enemy(store, t.pos, 0, t.barrack.rally_range, nil, F_BLOCK, F_FLYING)
 
 					if enemy then
-						t.barrack.rally_pos.x = enemy.pos.x
-						t.barrack.rally_pos.y = enemy.pos.y
-						t.barrack.rally_new = true
+						RLU.fire_rally_fn(t, store, enemy.pos.x, enemy.pos.y)
 					end
 				end
 			end
@@ -7545,8 +7544,8 @@ function PickView:on_down(button, x, y)
 					time_rewind:record_decision(RK.barrack_rally, game_gui.game.store.tick_ts, holder_id, target_pos.x, target_pos.y)
 				end
 
-				e.barrack.rally_pos = target_pos
-				e.barrack.rally_new = true
+				RLU.fire_rally_fn(e, game_gui.game.store, target_pos.x, target_pos.y)
+
 				game_gui:show_rally_flag(game_gui:g2u(target_pos))
 				game_gui:hide_rally_range()
 				game_gui:deselect_entity()

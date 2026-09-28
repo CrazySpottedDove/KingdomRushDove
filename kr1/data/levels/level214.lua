@@ -236,19 +236,6 @@ coroutine.yield()
 end
 b.door_open=false
 end
-if b.rally_new then
-b.rally_new=false
-signal.emit("rally-point-changed",this)
-local all_dead=true
-for i,s in ipairs(b.soldiers) do
-s.nav_rally.pos,s.nav_rally.center=U.rally_formation_position(i,b,b.max_soldiers,b.rally_angle_offset)
-s.nav_rally.new=true
-all_dead=all_dead and s.health.dead
-end
-if not all_dead then
-S:queue(this.sound_events.change_rally_point)
-end
-end
 coroutine.yield()
 end
 end
@@ -728,6 +715,7 @@ tt.barrack.rally_range=200
 tt.barrack.respawn_offset=v(0,9)
 tt.barrack.has_door=false
 tt.barrack.soldier_type="soldier_stage_214_armory_lvl1"
+tt.barrack.rally_fn=require("all.rally_utils").rally_fn_default
 tt.first_rally_offset=v(-67,-12)
 tt.ui.click_rect=r(-65,-20,130,120)
 tt.ui.force_can_select=true

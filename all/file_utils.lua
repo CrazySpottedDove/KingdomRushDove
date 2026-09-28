@@ -1,6 +1,6 @@
-local file_utlis = {}
+local file_utils = {}
 local P = require("lib.klua.persistence")
-local log = require("lib.klua.log"):new("file_utlis")
+local log = require("lib.klua.log"):new("file_utils")
 local is_windows = package.config:sub(1, 1) == "\\"
 local FS = love.filesystem
 
@@ -8,7 +8,7 @@ local FS = love.filesystem
 ---@param file_path string 文件路径
 ---@param content string 文件内容
 ---@return boolean success 是否成功
-function file_utlis.write_file(file_path, content)
+function file_utils.write_file(file_path, content)
 	local f, err = io.open(file_path, "wb")
 	if not f then
 		log.error("Failed to open file: %s, error: %s", file_path, err)
@@ -22,15 +22,15 @@ end
 --- 把 lua 数据写入文件
 ---@param file_path string 文件路径
 ---@param data any lua 数据
-function file_utlis.write_lua(file_path, data)
+function file_utils.write_lua(file_path, data)
 	local content = P.serialize_to_string(data)
-	return file_utlis.write_file(file_path, content)
+	return file_utils.write_file(file_path, content)
 end
 
 --- 确认某个路径的父路径存在。如不存在，创建父目录。
 ---@param file_path string 路径
 ---@return boolean 为 false 时，创建父目录失败
-function file_utlis.ensure_parent_dir(file_path)
+function file_utils.ensure_parent_dir(file_path)
 	local parent_dir = file_path:match("(.+)[/\\]")
 	if parent_dir then
 		if is_windows then
@@ -45,7 +45,7 @@ end
 --- 获取目录下的子目录列表。
 ---@param path string 目录路径
 ---@return table 子目录列表，相对路径。
-function file_utlis.get_subdirs(path)
+function file_utils.get_subdirs(path)
 	local files = FS.getDirectoryItems(path)
 
 	if not files then
@@ -69,8 +69,8 @@ end
 
 --- 删除文件
 ---@param file_path string 文件路径
-function file_utlis.delete_file(file_path)
+function file_utils.delete_file(file_path)
 	return os.remove(file_path)
 end
 
-return file_utlis
+return file_utils

@@ -12882,7 +12882,6 @@ end
 scripts.enemy_boss_stage_208 = {}
 
 function scripts.enemy_boss_stage_208.update(this, store, script)
-	local spawn_ts = store.tick_ts
 	local aa = this.melee.attacks[1]
 	local as = this.timed_attacks.list[1]
 	local path_controller = E:create_entity("controller_stage_208_boss_path")
@@ -12988,7 +12987,7 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		elseif this.is_pushing_cart then
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, true, walk_cart_break_fn)
+			local cont = SU.y_enemy_walk_until_blocked(store, this, true, walk_cart_break_fn)
 
 			if not cont then
 				if this.enraged then
@@ -13103,7 +13102,7 @@ function scripts.enemy_boss_stage_208.update(this, store, script)
 				end
 			end
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, walk_break_fn)
+			local cont, blocker = SU.y_enemy_walk_until_blocked(store, this, false, walk_break_fn)
 
 			if not cont then
 				if store.tick_ts - as.ts > as.cooldown then
@@ -13326,7 +13325,6 @@ scripts.mod_boss_tower_block = {}
 function scripts.mod_boss_tower_block.insert(this, store, script)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
-	local source = store.entities[m.source_id]
 
 	if not target then
 		simulation:queue_remove_entity(this)
@@ -13343,7 +13341,6 @@ function scripts.mod_boss_tower_block.update(this, store)
 	local tr = this.tap_removable
 	local m = this.modifier
 	local target = store.entities[m.target_id]
-	local source = store.entities[m.source_id]
 	local tap_tut
 
 	if tr then
@@ -13635,8 +13632,6 @@ function scripts.enemy_boss_stage_213.update(this, store, script)
 
 	this.on_ground = true
 
-	local last_jump_ts = store.tick_ts - 10
-	local health_range = 1
 	local original_armor = this.health.armor
 	local original_magic_armor = this.health.magic_armor
 	local original_hit_offset = this.unit.hit_offset
@@ -15929,8 +15924,6 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			table.remove(this.enemy.blockers, 1)
 		end
 	end
-
-	local reveal_bans = this.vis.bans
 
 	U.bans_add(this.vis, F_ALL)
 	this.health.ignore_damage = true

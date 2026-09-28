@@ -20,7 +20,7 @@ local function ady(v)
 end
 local V = require("lib.klua.vector")
 local v = V.v
-
+local RLU = require("all.rally_utils")
 require("game_templates_utils")
 
 tt = RT("tower_ranger", "tower_archer_1")
@@ -1122,6 +1122,8 @@ tt.barrack.rally_range = 170
 tt.barrack.soldier_type = "soldier_tower_dark_elf"
 tt.barrack.max_soldiers = 2
 tt.barrack.respawn_offset = vec_2(0, 0)
+tt.barrack.rally_fn = RLU.rally_fn_default
+tt.barrack.rally_angle_offset = math.pi * 0.25
 tt.controller_soldiers_template = "controller_tower_dark_elf_soldiers"
 tt.sound_events.change_rally_point = "TowerDarkElfUnitTaunt"
 tt.sound_events.insert = "TowerDarkElfTaunt"
@@ -1910,6 +1912,7 @@ tt.powers.golem.max_level = 1
 tt.barrack.soldier_type = "soldier_bone_golem"
 tt.barrack.rally_range = 186
 tt.barrack.max_soldiers = 0
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.main_script.remove = scripts.tower_bone_flingers.remove
 tt.main_script.update = scripts.tower_bone_flingers.update
 tt.render.sprites[1].name = "terrain_archer_%04i"
@@ -2107,6 +2110,7 @@ tt.barrack.soldier_types = {"soldier_ogre_shipwreck_cook", "soldier_ogre_shipwre
 tt.barrack.respawn_offset = v(0, 0)
 tt.barrack.rally_range = 165
 tt.barrack.max_soldiers = 2
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.remove = scripts.tower_ogre_shipwreck.remove
 tt.main_script.update = scripts.tower_ogre_shipwreck.update
@@ -2527,6 +2531,7 @@ tt.barrack.soldier_type = "soldier_dragon"
 tt.barrack.rally_range = 180
 tt.barrack.respawn_offset = v(0, 0)
 tt.barrack.max_soldiers = 0
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.attacks.range = 192
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_shaolin"
@@ -2672,6 +2677,7 @@ tt.barrack.max_soldiers = 1
 tt.barrack.soldier_type = "soldier_swamp_monster"
 tt.barrack.rally_range = 150
 tt.barrack.rally_angle_offset = -0.4
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.render.sprites[1].name = "terrains_%04i"
 tt.render.sprites[1].offset = v(0, 17)
 tt.render.sprites[2].name = "swamp_monster_towers_lvl4_0001"

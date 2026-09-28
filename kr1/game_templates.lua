@@ -8,6 +8,7 @@ local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
+local RLU = require("all.rally_utils")
 require("templates")
 
 local function adx(v)
@@ -403,6 +404,7 @@ tt.barrack.rally_range = 288
 tt.barrack.respawn_offset = vec_2(-60, 0)
 tt.barrack.soldier_type = "soldier_sasquash"
 tt.barrack.has_door = nil
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.editor.props = table.append(tt.editor.props, {{"barrack.rally_pos", PT_COORDS}}, true)
 tt.info.fn = scripts.tower_sasquash_holder.get_info
 tt.main_script.insert = scripts.tower_barrack.insert
@@ -14468,6 +14470,7 @@ tt.barrack.soldier_type = "soldier_tower_stage_18_elven_barrack"
 tt.barrack.rally_range = 160
 tt.barrack.respawn_offset = v(0, -8)
 tt.barrack.current_soldiers = 0
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.sound_events.change_rally_point = "TowerElvenBarrackUnitTaunt"
 tt.corruption_kr5.corruption_phases = {1, 2, 3}
 tt.corruption_kr5.on_corrupt = scripts.tower_stage_18_elven_barrack.on_corrupt
@@ -24292,6 +24295,7 @@ tt.render.door_sid = 3
 tt.barrack.soldier_type = "soldier_dragon_warden_warrior"
 tt.barrack.rally_range = 300
 tt.barrack.respawn_offset = v(-3, 2)
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.respawn_time = 30
 tt.destroyed = false
 

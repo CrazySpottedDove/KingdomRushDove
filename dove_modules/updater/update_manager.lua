@@ -13,7 +13,7 @@ local FS = love.filesystem
 local font_title = require("lib.klove.font_db"):f("msyh", 28)
 local font_normal = require("lib.klove.font_db"):f("msyh", 18)
 local font_small = require("lib.klove.font_db"):f("msyh", 14)
-local FU = require("all.file_utlis")
+local FU = require("all.file_utils")
 local zip = require("lib.zip")
 local utf8_util = require("lib.utf8_utils")
 

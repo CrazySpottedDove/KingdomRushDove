@@ -7,7 +7,7 @@ local v = V.v
 local S = require("sound_db")
 local I = require("lib.klove.image_db")
 local SU = require("screen_utils")
-local file_utlis = require("file_utlis")
+local file_utils = require("file_utils")
 local atlas_binpack = require("dove_modules.atlas_manager.atlas_binpack")
 local atlas_util = require("dove_modules.atlas_manager.atlas_util")
 
@@ -66,8 +66,8 @@ local function read_fs(path)
 end
 
 local function write_real(path, data)
-	file_utlis.ensure_parent_dir(path)
-	return file_utlis.write_file(path, data)
+	file_utils.ensure_parent_dir(path)
+	return file_utils.write_file(path, data)
 end
 
 --- 文件内容 md5（十六进制字符串）。love.data.hash 是 C 实现；失败时退回纯 lua 实现。
@@ -3322,7 +3322,7 @@ function atlas_manager:do_split(max_size)
 	local written = 0
 	for pi, page in ipairs(page_entries) do
 		local png_path = real_path(IMAGES_DIR) .. "/" .. merge_name .. "-" .. pi .. ".png"
-		file_utlis.ensure_parent_dir(png_path)
+		file_utils.ensure_parent_dir(png_path)
 		local png_data = self:merged_idata_to_png(page.idata)
 		if write_real(png_path, png_data) then
 			written = written + 1
@@ -3403,7 +3403,7 @@ function atlas_manager:export_png()
 		local count = 0
 		for pi, page in ipairs(state.merge_pages) do
 			local png_path = real_path(IMAGES_DIR) .. "/" .. name .. "-" .. pi .. ".png"
-			file_utlis.ensure_parent_dir(png_path)
+			file_utils.ensure_parent_dir(png_path)
 			local png_data = self:merged_idata_to_png(page.idata)
 			local ok = write_real(png_path, png_data)
 			if ok then
@@ -3429,7 +3429,7 @@ function atlas_manager:export_png()
 		return
 	end
 	local png_path = real_path(IMAGES_DIR) .. "/" .. name .. ".png"
-	file_utlis.ensure_parent_dir(png_path)
+	file_utils.ensure_parent_dir(png_path)
 	local png_data = self:merged_idata_to_png(state._merged_idata)
 	local ok = write_real(png_path, png_data)
 	if ok then

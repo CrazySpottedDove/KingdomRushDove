@@ -24,6 +24,7 @@ local GS = require("kr1.game_settings")
 local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv
+local RLU = require("all.rally_utils")
 
 require("game_templates_utils")
 
@@ -169,6 +170,7 @@ tt.info.enc_icon = 19
 tt.info.portrait = "info_portraits_towers_0011"
 tt.barrack.soldier_type = "soldier_elemental"
 tt.barrack.rally_range = 200
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.powers.polymorph = CC("power")
 tt.powers.polymorph.price_base = 300
 tt.powers.polymorph.price_inc = 100
@@ -462,6 +464,7 @@ tower_necromancer.main_script.update = scripts.tower_necromancer.update
 tower_necromancer.main_script.remove = scripts.tower_barrack.remove
 tower_necromancer.barrack.soldier_type = "soldier_death_rider"
 tower_necromancer.barrack.rally_range = 180
+tower_necromancer.barrack.rally_fn = RLU.rally_fn_default
 tower_necromancer.attacks.range = 200
 tower_necromancer.attacks.list[1] = CC("bullet_attack")
 tower_necromancer.attacks.list[1].bullet = "bolt_necromancer_tower"
@@ -3034,6 +3037,7 @@ tt.need_heal_factor = 0.99
 
 tt = RT("tower_dragons_lvl4", "tower")
 AC(tt, "attacks", "barrack", "user_selection", "powers")
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.tower.type = "dragons"
 tt.tower.kind = TOWER_KIND_MAGE
 tt.tower.price = 280
@@ -3715,6 +3719,7 @@ tt.attacks.list[2].min_hp = 500
 tt.barrack.soldier_type = "soldier_gargoyle"
 tt.barrack.rally_range = 160
 tt.barrack.max_soldiers = 0
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.sound_events.change_rally_point = "fallen_ones_spirit_mausoleum_build_taunt"
 tt.powers.spectral_communion = CC("power")
 tt.powers.spectral_communion.price_base = 250
@@ -3895,6 +3900,7 @@ tt.barrack.soldier_type = "soldier_deep_devils"
 tt.barrack.rally_range = 180
 tt.barrack.max_soldiers = 2
 tt.barrack.respawn_offset = v(0, 3)
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.attacks.range = 180
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "bolt_tower_deep_devils"
@@ -4287,6 +4293,7 @@ tt.barrack.soldier_type = "soldier_wicked_sisters"
 tt.barrack.rally_range = 125
 tt.barrack.max_soldiers = 1
 tt.barrack.rally_anywhere = true
+tt.barrack.rally_fn = RLU.rally_fn_default
 tt.attacks.range = 125
 tt.tower_upgrade_persistent_data.max_current_mode = 1
 tt.render.sprites[1].animated = false
