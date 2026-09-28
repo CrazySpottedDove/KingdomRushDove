@@ -1,8 +1,13 @@
 -- chunkname: @./all/exoskeleton.lua
 local log = require("lib.klua.log"):new("exoskeleton")
+local ffi = require("ffi")
 local FS = love.filesystem
 local A = require("animation_db")
 local EXO = {}
+
+-- EXO3 二进制格式常量（见 scripts/compile_exoskeletons.lua）
+local MAGIC = 0x334F5845
+local FORMAT_VERSION = 1
 
 EXO.exos = {}
 EXO.exos_count = {}
@@ -32,7 +37,8 @@ function EXO:load()
 	for _, exo_list in ipairs(self.exo_lists_to_load) do
 		for _, exo_name in ipairs(exo_list) do
 			if not self.exos[exo_name] then
-				local exo = self:load_lua(exo_name, EXO.exo_path)
+				-- 优先加载编译后的 EXO3；缺失/损坏时回退到文本源
+				local exo = self:load_packed(exo_name) or self:load_lua(exo_name, EXO.exo_path)
 				local db_animation = A.db
 				for _, animation in ipairs(exo.animations) do
 					local name = exo.name .. "_" .. animation.name
@@ -85,6 +91,207 @@ function EXO:unload(exo_list)
 			end
 		end
 	end
+end
+
+local bytes4 = ffi.new("uint8_t[4]")
+
+local function read_u16(s, p)
+	local a, b = s:byte(p, p + 1)
+
+	return a + b * 256, p + 2
+end
+
+local function read_u32(s, p)
+	local a, b, c, d = s:byte(p, p + 3)
+
+	return a + b * 256 + c * 65536 + d * 16777216, p + 4
+end
+
+-- 小端 float32；通过临时对齐缓冲 reinterpret，避免非对齐指针读取
+local function read_f32(s, p)
+	bytes4[0] = s:byte(p)
+	bytes4[1] = s:byte(p + 1)
+	bytes4[2] = s:byte(p + 2)
+	bytes4[3] = s:byte(p + 3)
+
+	return ffi.cast("float*", bytes4)[0], p + 4
+end
+
+--- 解析已解压的 payload，构建运行时 exo 结构：
+--- parts/attach_idx 为普通 Lua 表；帧数据统一存放于 exo.floats（FFI float 数组），
+--- 每帧为一个共享记录 {exo_name, base, count}，base 为 floats 中的起始下标（0 基）。
+local function parse_payload(payload, exo_name)
+	local p = 1
+	local part_count, attach_count, anim_count, unique_frame_count, total_unique_entries
+	part_count, p = read_u16(payload, p)
+	attach_count, p = read_u16(payload, p)
+	anim_count, p = read_u16(payload, p)
+	unique_frame_count, p = read_u32(payload, p)
+	total_unique_entries, p = read_u32(payload, p)
+
+	local parts = {}
+
+	for i = 1, part_count do
+		local n
+		n, p = read_u16(payload, p)
+
+		local name = payload:sub(p, p + n - 1)
+		p = p + n
+
+		local ox, oy
+		ox, p = read_f32(payload, p)
+		oy, p = read_f32(payload, p)
+		parts[i] = {name, ox, oy}
+		parts[name] = parts[i]
+	end
+
+	local attach_points = {}
+	local attach_idx = {}
+
+	for i = 1, attach_count do
+		local n
+		n, p = read_u16(payload, p)
+
+		local name = payload:sub(p, p + n - 1)
+		p = p + n
+		attach_points[i] = {name}
+		attach_points[name] = attach_points[i]
+		attach_idx[name] = i
+	end
+
+	local anims = {}
+
+	for i = 1, anim_count do
+		local n
+		n, p = read_u16(payload, p)
+
+		local name = payload:sub(p, p + n - 1)
+		p = p + n
+
+		local fcount
+		fcount, p = read_u32(payload, p)
+
+		local refs = {}
+
+		for j = 1, fcount do
+			refs[j], p = read_u32(payload, p)
+		end
+
+		anims[i] = {
+			name = name,
+			refs = refs
+		}
+	end
+
+	local counts = {}
+	local bases = {}
+	local acc = 0
+
+	for i = 1, unique_frame_count do
+		local c
+		c, p = read_u16(payload, p)
+		counts[i] = c
+		bases[i] = acc
+		acc = acc + c
+	end
+
+	if acc ~= total_unique_entries then
+		return nil, "entry 数量不一致"
+	end
+
+	local nfloats = total_unique_entries * 10
+
+	if p - 1 + nfloats * 4 > #payload then
+		return nil, "浮点数据越界"
+	end
+
+	local arr = ffi.new("float[?]", nfloats)
+	ffi.copy(arr, ffi.cast("const uint8_t*", payload) + (p - 1), nfloats * 4)
+
+	local records = {}
+
+	for i = 1, unique_frame_count do
+		records[i] = {
+			exo_name = exo_name,
+			base = bases[i] * 10,
+			count = counts[i]
+		}
+	end
+
+	local animations = {}
+
+	for i, ar in ipairs(anims) do
+		local frames = {}
+
+		for j, ref in ipairs(ar.refs) do
+			frames[j] = records[ref]
+		end
+
+		animations[i] = {
+			name = ar.name,
+			frames = frames
+		}
+	end
+
+	return {
+		name = exo_name,
+		parts = parts,
+		attach_points = attach_points,
+		attach_idx = attach_idx,
+		floats = arr,
+		animations = animations
+	}
+end
+
+--- 加载编译后的 EXO3 二进制；文件缺失或校验失败时返回 nil（由调用方回退到文本加载）
+function EXO:load_packed(exo_name)
+	local fn = EXO.base_path .. "/" .. exo_name .. ".exo3"
+
+	if not FS.isFile(fn) then
+		return nil
+	end
+
+	local raw = FS.read(fn)
+
+	if not raw or #raw < 12 then
+		log.error("EXO3 文件读取失败: %s", fn)
+
+		return nil
+	end
+
+	local magic = read_u32(raw, 1)
+	local version = read_u16(raw, 5)
+	local flags = raw:byte(7)
+	local payload_size = read_u32(raw, 9)
+
+	if magic ~= MAGIC or version ~= FORMAT_VERSION then
+		log.error("EXO3 版本/魔数不匹配: %s", fn)
+
+		return nil
+	end
+
+	local body = raw:sub(13)
+	local payload = body
+
+	if flags % 2 == 1 then
+		payload = love.data.decompress("string", "zlib", body)
+	end
+
+	if #payload ~= payload_size then
+		log.error("EXO3 数据长度不匹配: %s (%d ~= %d)", fn, #payload, payload_size)
+
+		return nil
+	end
+
+	local exo, err = parse_payload(payload, exo_name)
+
+	if not exo then
+		log.error("EXO3 解析失败: %s (%s)", fn, tostring(err))
+
+		return nil
+	end
+
+	return exo
 end
 
 --- 加载存放在 lua 文件中的 v3 格式的 exo 数据

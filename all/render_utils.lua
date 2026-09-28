@@ -61,20 +61,24 @@ function RU.init()
 				if not f.hidden then
 					if f.exo_frame then
 						local exo = EXO:get_exo_by_frame(f.exo_frame)
+						local exo_buf = exo.floats
+						local exo_base = f.exo_frame.base
+						local exo_count = f.exo_frame.count
+						local exo_hidden = f.exo_hidden
 						local f_sx = f.flip_x and -1 or 1
 						local f_sy = f.flip_y and -1 or 1
 						local flipf = f_sx * f_sy
 						local render_base_x = f.pos.x + f.offset.x
 						local render_base_y = REF_H - (f.pos.y + f.offset.y)
 
-						for part_idx = 1, #f.exo_frame do
-							local part = f.exo_frame[part_idx]
+						for part_idx = 0, exo_count - 1 do
+							local o = exo_base + part_idx * 10
 							do
 								-- local part_type, part_name_idx, alpha, x, y, sx, sy, rotation, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
 
-								if not part.hidden then
-									local part_name_idx, x, y, sx, sy, rotation = part[2], part[4], part[5], part[6], part[7], part[8]
-									if part[1] == 8 then
+								if not (exo_hidden and exo_hidden[part_idx + 1]) then
+									local part_name_idx, x, y, sx, sy, rotation = exo_buf[o + 1], exo_buf[o + 3], exo_buf[o + 4], exo_buf[o + 5], exo_buf[o + 6], exo_buf[o + 7]
+									if exo_buf[o] == 8 then
 										sx = sx * f_sx
 										sy = sy * f_sy
 
@@ -194,13 +198,13 @@ function RU.init()
 											r, g, b = 1, 1, 1
 										end
 
-										a = f.alpha * (part[3] or 1)
+										a = f.alpha * exo_buf[o + 2]
 										if a ~= la or r ~= lr or g ~= lg or b ~= lb then
 											batch:setColor(r, g, b, a * 0.00392156862745098)
 											lr, lg, lb, la = r, g, b, a
 										end
 
-										batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - exo.parts[part_name_idx][3] / ref_scale, part[9], part[10])
+										batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - exo.parts[part_name_idx][3] / ref_scale, exo_buf[o + 8], exo_buf[o + 9])
 										batch_count = batch_count + 1
 									end
 
@@ -338,22 +342,26 @@ function RU.init()
 				-- block empty
 				elseif f.exo_frame then
 					local exo = EXO:get_exo_by_frame(f.exo_frame)
+					local exo_buf = exo.floats
+					local exo_base = f.exo_frame.base
+					local exo_count = f.exo_frame.count
+					local exo_hidden = f.exo_hidden
 					local f_sx = f.flip_x and -1 or 1
 					local f_sy = f.flip_y and -1 or 1
 					local flipf = f_sx * f_sy
 					local render_base_x = f.pos.x + f.offset.x
 					local render_base_y = REF_H - (f.pos.y + f.offset.y)
 
-					for part_idx = 1, #f.exo_frame do
-						local part = f.exo_frame[part_idx]
+					for part_idx = 0, exo_count - 1 do
+						local o = exo_base + part_idx * 10
 						do
 							-- local part_type, part_name_idx, alpha, x, y, sx, sy, rotation, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
 
-							if part.hidden then
+							if exo_hidden and exo_hidden[part_idx + 1] then
 							-- block empty
 							else
-								local part_name_idx, x, y, sx, sy, rotation = part[2], part[4], part[5], part[6], part[7], part[8]
-								if part[1] == 8 then
+								local part_name_idx, x, y, sx, sy, rotation = exo_buf[o + 1], exo_buf[o + 3], exo_buf[o + 4], exo_buf[o + 5], exo_buf[o + 6], exo_buf[o + 7]
+								if exo_buf[o] == 8 then
 									sx = sx * f_sx
 									sy = sy * f_sy
 
@@ -442,7 +450,7 @@ function RU.init()
 									r, g, b = 1, 1, 1
 								end
 
-								a = f.alpha * (part[3] or 1)
+								a = f.alpha * exo_buf[o + 2]
 
 								if a ~= la or r ~= lr or g ~= lg or b ~= lb then
 									batch:setColor(r, g, b, a * 0.00392156862745098)
@@ -493,7 +501,7 @@ function RU.init()
 									y = p_y_s + render_base_y
 								end
 
-								batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - exo.parts[part_name_idx][3] / ref_scale, part[9], part[10])
+								batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - exo.parts[part_name_idx][3] / ref_scale, exo_buf[o + 8], exo_buf[o + 9])
 								batch_count = batch_count + 1
 							end
 						end
