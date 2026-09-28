@@ -1226,7 +1226,7 @@ table.insert(this._queue,{skill="explode_statue",x=tonumber(x),y=tonumber(y)})
 end
 function S18.controller_stage_218_veznan.update(this,store,script)
 this._queue=this._queue or {}
-local body,sigil_pi,sigil_spi,sigil_ni
+local body,sigil_pi,sigil_ni
 local function body_idle()
 if body then
 U.animation_start(body,"idle",nil,store.tick_ts,true)
@@ -1889,7 +1889,7 @@ end
 for _,u in ipairs(units) do
 local nodes=P:nearest_nodes(u.pos.x,u.pos.y,lb.paths)
 if #nodes>0 then
-local pi,spi,ni,dist=unpack(nodes[1])
+local pi,_,ni,dist=unpack(nodes[1])
 if dist and dist<=lb.unit_snap_radius and P:is_path_active(pi) and lava_safe(pi,ni) and lava_node_onscreen(pi,ni) then
 local n=P.paths[pi][1][ni]
 table.insert(result,{pi=pi,ni=ni,pos=V.v(n.x,n.y)})

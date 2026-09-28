@@ -40,12 +40,12 @@ assets_check: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" assets
 
 # 用于发布小的版本更新，使得更新器端可以在 master 分支上检查到最新更新
+# master 为“只含编译产物”的投影分支，由 master.sh 生成（不再 merge dev）
 package:
 # 	@bash $(MAKE_FILE_DIR)/package.sh
 # 	git add .
 # 	git commit -m "UPDATE VERSION COMMIT HASH"
-	git checkout master
-	git merge --ff-only dev
+	@bash $(MAKE_FILE_DIR)/master.sh
 	@if ping -c 1 -W 1 10.112.99.5 > /dev/null 2>&1; then \
 		echo "内网，使用 IPv4 直连"; \
 		git push ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git master; \
