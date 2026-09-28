@@ -13158,19 +13158,7 @@ tt.aura.track_source = true
 --   * kr6 用 balance.xxx 引用的数值，这里按 dove 的「不使用 balance」约定内联成字面量
 --   * 敌人 hp_max 统一内部联成 4 档难度表（dove 的 difficulty PT 会按难度取），每档乘 1.375
 --   * 移速 motion.max_speed 在 kr6 原值上统一乘 0.84（KR6→dove 速度换算）
---   * 与 dove 同名模板一律加 _kr6 后缀（enemy_bandit / enemy_blackguard 在 dove 里指的是完全不同的单位）
---   * 原 kr6 的 enemy_KR6/enemy_KR5 基础模板字段直接内联到每个敌人（父模板用 dove 的 "enemy"）
 
--- kr6 stage01 的三种敌人。kr6 里它们都继承 enemy_KR6（= dove 的 enemy + kr6 增量），
--- 这里不使用中间基础模板，直接把 enemy_KR6 的字段铺到每个敌人上。
--- 共同增量（原 enemy_KR5 + enemy_KR6）：
---   unit.head_offset = v(0, 0)
---   unit.disintegrate_fx = "fx_enemy_desintegrate"
---   unit.fade_time_after_death = 3
---   unit.fade_duration_after_death = 0.3
---   render.sprites[1].angles_custom.walk = {55, 115, 245, 305}
-
--- enemy_bandit_kr6 —— 与 dove 的 enemy_bandit 同名但完全是另一个单位，故加后缀
 tt = RT("enemy_bandit_kr6", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(3, 17)
@@ -13202,14 +13190,12 @@ tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
 tt.sound_events.death = "EnemyBanditDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
 
--- enemy_bandit_tut_kr6（kr6 教学用，血量/速度单独一套）
 tt = RT("enemy_bandit_tut_kr6", "enemy_bandit_kr6")
 tt.info.i18n_key = "ENEMY_BANDIT_KR6"
 tt.health.hp_max = 33
 tt.motion.max_speed = 40.32
 tt.ui.click_rect = r(0, 0, 0, 0)
 
--- enemy_blackguard（kr6；dove 无同名模板，直接用原名）
 tt = RT("enemy_blackguard", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(4.5, 19)
@@ -13242,7 +13228,6 @@ tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_times[1]
 tt.sound_events.death = "EnemyBlackguardDeath"
 tt.ui.click_rect = r(-18, 0, 26, 30)
 
--- enemy_headhunter（kr6；暗影猎头者；单体高伤+处决；dove 无同名模板）
 tt = RT("enemy_headhunter", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(4, 28)
@@ -13292,11 +13277,9 @@ tt.sound_events.death = "EnemyHeadhunterDeath"
 tt.vis.flags = bor(F_ENEMY)
 tt.ui.click_rect = r(-25, 0, 50, 45)
 
--- fx_headhunter_hit
 tt = RT("fx_headhunter_hit", "fx")
 tt.render.sprites[1].name = "headhunter_hit_fx_idle"
 
--- enemy_crow（kr6；暗影召唤流的乌鸦小怪；dove 无同名模板）
 tt = RT("enemy_crow", "enemy")
 AC(tt, "count_group")
 tt.unit.head_offset = v(5, 43)
@@ -13332,11 +13315,8 @@ tt.vis.flags = bor(F_ENEMY, F_FLYING)
 tt.sound_events.death = "EnemyCrowDeath"
 tt.ui.click_rect = r(-15, tt.flight_height - 15, 30, 30)
 
--- kr6 关卡 202：暗影之刃（波次引用的敌人及其依赖）
 tt = RT("enemy_shadow_blades", "enemy")
-
 AC(tt, "melee")
-
 tt.enemy.gold = 11
 tt.enemy.melee_slot = v(30, 0)
 tt.health.hp_max = {82.5, 96.25, 110, 220}
@@ -13390,9 +13370,7 @@ tt.main_script.remove = scripts.aura_shadow_blades_smoke.remove
 tt.decal_t = "decal_shadow_blades_smoke"
 
 tt = RT("mod_shadow_blades_smoke", "modifier")
-
 AC(tt, "render")
-
 tt.modifier.duration = 0.25
 tt.main_script.insert = scripts.mod_shadow_blades_smoke.insert
 tt.main_script.update = scripts.mod_track_target.update
@@ -13415,11 +13393,8 @@ tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
 tt.tween.props[1].loop = false
 tt.tween.remove = false
 
--- kr6 关卡 202：暗影弓手（_kr6，避免与 dove 本体同名）
 tt = RT("enemy_shadow_archer_kr6", "enemy")
-
 AC(tt, "melee", "ranged")
-
 tt.enemy.gold = 16.5
 tt.enemy.melee_slot = v(30, 0)
 tt.health.hp_max = {137.5, 151.25, 192.5, 385}
@@ -13457,8 +13432,6 @@ tt.unit.mod_offset = v(0, 14)
 tt.sound_events.death = "EnemyShadowArcherDeath"
 tt.ui.click_rect = r(-13, -3, 26, 25)
 
--- 路径复用共享 arrow5_fixed_height（insert 算好 flight_time 后转 scripts.arrow.insert，
--- update 走共享 scripts.arrow.update，会被 precompile 特化），无需 KR6 专用脚本
 tt = RT("bullet_shadow_archer", "arrow5_fixed_height")
 tt.render.sprites[1].name = "shadow_archer_arrow"
 tt.bullet.fixed_height = 30
@@ -13471,17 +13444,13 @@ tt.bullet.damage_max = 17.6
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 
 -- ==================== kr6 关卡 204：shadow_order / orcs 敌人 ====================
--- 数值取自 kr6/data/balance/balance.lua，hp_max 每档统一 ×1.375（含飞行怪），见文件顶部约定。
 
--- fx_crowcaller_hit
 tt = RT("fx_crowcaller_hit", "fx")
 tt.render.sprites[1].name = "crowcaller_hit_idle"
 
--- fx_bullet_orc_shaman_hit
 tt = RT("fx_bullet_orc_shaman_hit", "fx")
 tt.render.sprites[1].name = "orc_shaman_hit"
 
--- ps_bullet_orc_shaman
 tt = RT("ps_bullet_orc_shaman", "particle_system")
 tt.particle_system.name = "orc_shaman_particle"
 tt.particle_system.animated = true
@@ -13489,7 +13458,6 @@ tt.particle_system.loop = false
 tt.particle_system.particle_lifetime = {fts(6), fts(6)}
 tt.particle_system.emission_rate = 30
 
--- bullet_orc_shaman（远程萨满的法术弹）
 tt = RT("bullet_orc_shaman", "bolt_enemy")
 tt.render.sprites[1].name = "orc_shaman_projectile"
 tt.render.sprites[1].animated = false
@@ -13504,7 +13472,6 @@ tt.bullet.align_with_trajectory = true
 tt.bullet.hit_fx = "fx_bullet_orc_shaman_hit"
 tt.bullet.particles_name = "ps_bullet_orc_shaman"
 
--- enemy_crowcaller（暗影军团召唤者）
 tt = RT("enemy_crowcaller", "enemy")
 AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 44
@@ -13548,7 +13515,6 @@ tt.sound_events.death = "EnemyCrowcallerDeath"
 tt.spawn_crow_node_limit = 60
 tt.ui.click_rect = r(-18, 0, 36, 30)
 
--- enemy_goblin_kr6（与 dove 的 enemy_goblin 同名，故加后缀）
 tt = RT("enemy_goblin_kr6", "enemy")
 tt.info.i18n_key = "ENEMY_GOBLIN"
 AC(tt, "melee")
@@ -13577,7 +13543,6 @@ tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
 tt.sound_events.death = "EnemyGoblinDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
 
--- enemy_orc_warrior
 tt = RT("enemy_orc_warrior", "enemy")
 AC(tt, "melee")
 tt.enemy.gold = 16.5
@@ -13616,7 +13581,6 @@ tt.rage.sound = "EnemyOrcWarriorRageCast"
 tt.sound_events.death = "EnemyOrcWarriorDeath"
 tt.ui.click_rect = r(-18, 0, 36, 30)
 
--- aura_orc_warrior_rage_check
 tt = RT("aura_orc_warrior_rage_check", "aura")
 tt.aura.radius = 60
 tt.aura.cycle_time = 0.3
@@ -13625,7 +13589,6 @@ tt.aura.requires_magic = true
 tt.aura.allowed_templates = {"enemy_orc_warrior", "enemy_orc_shaman"}
 tt.main_script.update = scripts.aura_orc_warrior_rage_check.update
 
--- mod_orc_warrior_rage
 tt = RT("mod_orc_warrior_rage", "modifier")
 AC(tt, "render", "tween")
 tt.inflicted_damage_factor = 2
@@ -13644,8 +13607,8 @@ tt.render.sprites[2].name = "buff_loop"
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}}
+tt.tween.remove = false
 
--- enemy_orc_shaman
 tt = RT("enemy_orc_shaman", "enemy")
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.enemy.gold = 13.2
@@ -13694,7 +13657,6 @@ tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
 tt.sound_events.death = "EnemyOrcShamanDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
 
--- aura_orc_shaman_heal
 tt = RT("aura_orc_shaman_heal", "aura")
 AC(tt, "render", "tween")
 tt.aura.mod = "mod_orc_shaman_heal"
@@ -13714,7 +13676,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
 tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}
 
--- mod_orc_shaman_heal
 tt = RT("mod_orc_shaman_heal", "modifier")
 AC(tt, "hps", "render", "tween")
 tt.modifier.duration = 0.5
@@ -13736,19 +13697,15 @@ tt.tween.props[1].sprite_id = 1
 tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}
 
 -- ==================== kr6 关卡 205：orcs 野猪狼骑敌人 ====================
--- 数值取自 kr6/data/balance/balance.lua，hp_max 每档 ×1.375，见文件顶部约定。
 
--- fx_orc_wildling_hit
 tt = RT("fx_orc_wildling_hit", "fx")
 tt.render.sprites[1].name = "wildling_hit_fx_run"
 
--- mod_orc_wildling_worg_mode（附近有狼/狼骑时提速，借用 mod_slow 机制）
 tt = RT("mod_orc_wildling_worg_mode", "mod_slow")
 tt.slow.factor = 2
 tt.modifier.type = MOD_TYPE_FAST
 tt.modifier.duration = 1e+99
 
--- enemy_wulf
 tt = RT("enemy_wulf", "enemy")
 AC(tt, "melee", "dodge")
 tt.unit.head_offset = v(11, 9)
@@ -13784,7 +13741,6 @@ tt.dodge.silent = true
 tt.sound_events.death = "EnemyWulfDeath"
 tt.ui.click_rect = r(-18, -3, 36, 32)
 
--- enemy_worg
 tt = RT("enemy_worg", "enemy")
 AC(tt, "melee", "dodge")
 tt.unit.head_offset = v(15, 14)
@@ -13821,7 +13777,6 @@ tt.dodge.silent = true
 tt.sound_events.death = "EnemyWorgDeath"
 tt.ui.click_rect = r(-22, -3, 44, 32)
 
--- enemy_orc_wildling（靠近狼时会切换成坐骑冲锋）
 tt = RT("enemy_orc_wildling", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(13, 20)
@@ -13865,9 +13820,7 @@ tt.sound_events.death = "EnemyOrcWildlingDeath"
 tt.ui.click_rect = r(-22, 0, 44, 40)
 
 -- ==================== kr6 关卡 207：goblin 狼骑（rider_goblin） ====================
--- 数值取自 kr6/data/balance/balance.lua，hp_max 每档 ×1.375。
 
--- enemy_rider_goblin
 tt = RT("enemy_rider_goblin", "enemy")
 AC(tt, "melee")
 tt.enemy.gold = 11
@@ -13899,7 +13852,6 @@ tt.ui.click_rect = r(-22, -3, 44, 38)
 tt.no_spawn_damage_types = bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS, DAMAGE_DISINTEGRATE)
 tt.spawn_controller = "controller_rider_goblin_spawn"
 
--- controller_rider_goblin_spawn
 tt = RT("controller_rider_goblin_spawn")
 AC(tt, "main_script")
 tt.main_script.update = scripts.controller_rider_goblin_spawn.update
@@ -13910,12 +13862,10 @@ tt.spawn_max_nodes_to_exit = 70
 tt.start_offset = v(-10, 25)
 tt.sound_spawn = "EnemyMindlessHuskSpawnDeath"
 
--- decal_rider_goblin_bullet_shadow
 tt = RT("decal_rider_goblin_bullet_shadow", "decal")
 tt.render.sprites[1].name = "decal_flying_shadow"
 tt.render.sprites[1].animated = false
 
--- bullet_enemy_flying（rider_goblin 死亡后抛出的 goblin）
 tt = RT("bullet_enemy_flying", "bomb")
 tt.bullet.flight_time = fts(30)
 tt.bullet.align_with_trajectory = false
@@ -13935,9 +13885,7 @@ tt.main_script.update = scripts.bullet_enemy_flying.update
 tt.decal_shadow = "decal_rider_goblin_bullet_shadow"
 
 -- ==================== kr6 关卡 207：ogre 食人魔 ====================
--- 数值取自 kr6/data/balance/balance.lua，hp_max 每档 ×1.375。
 
--- enemy_ogre_kr6
 tt = RT("enemy_ogre_kr6", "enemy")
 tt.info.i18n_key = "ENEMY_OGRE"
 AC(tt, "melee")
@@ -13976,14 +13924,12 @@ tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.sound_events.death = "EnemyOgreDeath"
 tt.ui.click_rect = r(-28, 0, 56, 60)
 
--- decal_ogre_hit
 tt = RT("decal_ogre_hit", "decal_timed")
 tt.render.sprites[1].prefix = "ogre_area_fx"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].sort_y_offset = 2
 
--- ===== KR6 stage 08 乌鸦群 =====
 tt = RT("enemy_cloud_of_crows", "enemy")
 AC(tt, "tween")
 tt.enemy.gold = 0
@@ -14029,9 +13975,7 @@ tt.spawn_count = 4
 tt.enemy_spawn = "enemy_shadow_blades"
 
 -- ============ KR6 关卡 209：deep trolls 敌人 ============
--- kr6 balance.enemies.deep_trolls 数值内联；hp 每档 ×1.375；enemy_KR6 增量字段直接铺开
 
--- enemy_troll_warrior —— kr6 deep trolls 基础近战，带自我回复，会爬悬崖
 tt = RT("enemy_troll_warrior", "enemy")
 AC(tt, "melee", "auras", "cliff")
 tt.unit.head_offset = v(6, 17)
@@ -14071,7 +14015,6 @@ tt.cliff.fall_accel = 400
 tt.sound_events.death = "EnemyTrollMediumDeath"
 tt.ui.click_rect = r(-13, 0, 27, 26)
 
--- enemy_troll_champion —— 近战+远程投掷，群体回复
 tt = RT("enemy_troll_champion", "enemy")
 AC(tt, "melee", "ranged", "auras")
 tt.unit.head_offset = v(6, 23)
@@ -14120,7 +14063,6 @@ tt.auras.list[1].cooldown = 0
 tt.sound_events.death = "EnemyTrollMediumDeath"
 tt.ui.click_rect = r(-18, 0, 35, 38)
 
--- enemy_troll_champion_jumper —— 沿路径跳跃，跨越沟壑
 tt = RT("enemy_troll_champion_jumper", "enemy_troll_champion")
 AC(tt, "tween")
 tt.unit.fade_time_after_death = nil
@@ -14151,7 +14093,6 @@ tt.disappearing_shadows = true
 tt.fall_void_z = Z_BACKGROUND_COVERS - 2
 tt.y_to_die = 457.3
 
--- enemy_troll_glider —— 飞行，死亡后掉落一只 troll_warrior
 tt = RT("enemy_troll_glider", "enemy")
 AC(tt, "death_spawns", "auras")
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
@@ -14201,7 +14142,6 @@ tt.death_fx_offset = v(-5, 5)
 tt.fall_speed = 70
 tt.ui.click_rect = r(-20, 40, 35, 40)
 
--- enemy_troll_crusher —— 大只，范围普攻+定时砸地眩晕塔
 tt = RT("enemy_troll_crusher", "enemy")
 AC(tt, "melee", "auras", "timed_attacks")
 tt.unit.head_offset = v(6, 33)
@@ -14265,7 +14205,6 @@ tt.sound_events.death = "EnemyTrollLargeDeath"
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.ui.click_rect = r(-25, 0, 45, 55)
 
--- enemy_frost_icecaller —— 远程法师，冰锥技能+死亡冰缓
 tt = RT("enemy_frost_icecaller", "enemy")
 AC(tt, "melee", "ranged", "timed_attacks", "death_spawns")
 tt.unit.head_offset = v(8, 17)
@@ -14339,10 +14278,7 @@ tt.sound_events.death = "EnemyFrostHeraldDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
 
 -- ==================== KR6 stage 10-13：deep_trolls / spiders 共享敌人 ====================
--- 数值取自 kr6/data/balance/balance.lua，hp_max 每档 ×1.375，gold = kr6.gold ×1.1，攻击力 ×1.1（均不取整）
--- enemy_KR6 增量字段（head_offset / disintegrate_fx / fade_*）直接铺开，父模板用 dove 的 "enemy"。
 
--- enemy_troll_pathfinder —— 冰面高速滑行，冰上无法被阻挡
 tt = RT("enemy_troll_pathfinder", "enemy")
 AC(tt, "melee", "auras", "death_spawns")
 tt.unit.head_offset = v(6, 17)
@@ -14387,7 +14323,6 @@ tt.on_ice_mod = "mod_movement_terrain_troll_pathfinder"
 tt.sound_events.death = "EnemyTrollMediumDeath"
 tt.ui.click_rect = r(-18, 0, 35, 38)
 
--- enemy_frost_baiter —— 被阻挡时跳跃并留下冰替身
 tt = RT("enemy_frost_baiter", "enemy")
 AC(tt, "melee", "bullet", "death_spawns")
 tt.unit.head_offset = v(3, 14)
@@ -14445,7 +14380,6 @@ tt.sound_events.death = "EnemyFrostBaiterDeath"
 tt.sound_events.jump = "EnemyFrostBaiterCloneJump"
 tt.ui.click_rect = r(-18, 0, 35, 38)
 
--- enemy_frost_baiter_jumper_stage_12 —— 关卡 12 沿路径跳跃版
 tt = RT("enemy_frost_baiter_jumper_stage_12", "enemy_frost_baiter")
 AC(tt, "tween")
 tt.main_script.update = scripts.enemy_frost_baiter_jumper.update
@@ -14457,11 +14391,8 @@ tt.tween.run_once = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
--- 该模板已有阴影 tween，dove 的 SU.fade_out_entity 不会给带 tween 的实体再补死亡淡出
--- （会刷 "already has tween"），故禁用运行时淡出，交由 dead_lifetime 移除。
 tt.unit.fade_time_after_death = nil
 
--- enemy_frost_baiter_decoy —— 冰替身，只吸引阻挡
 tt = RT("enemy_frost_baiter_decoy", "enemy")
 AC(tt, "melee", "death_spawns")
 tt.unit.head_offset = v(0, 5)
@@ -14499,7 +14430,6 @@ tt.duration = 4
 tt.sound_events.death = "EnemyIceCloneDeath"
 tt.ui.click_rect = r(-18, 0, 35, 38)
 
--- enemy_frost_brute —— 小 Boss，未阻挡时物理免疫，吐息冻结
 tt = RT("enemy_frost_brute", "enemy")
 AC(tt, "melee", "timed_attacks", "death_spawns")
 tt.unit.head_offset = v(12, 34)
@@ -14572,8 +14502,6 @@ tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.ui.click_rect = r(-25, 0, 45, 55)
 
 -- ==================== kr6 关卡 12 首现：troll chieftain（鼓 buff 巨魔首领） ====================
--- 数值取自 kr6/data/balance/balance.lua deep_trolls.troll_chieftain，hp_max 每档 ×1.375，gold ×1.1 向下取整。
--- 与 dove 原生 enemy_troll_chieftain（KR1 冰原巨魔首领，前缀 troll_chieftain）同名但完全不同，故加 _kr6 后缀。
 
 tt = RT("fx_troll_chieftain_hit", "fx")
 tt.render.sprites[1].name = "trolls_chieftain_hit_fx_run"
@@ -14670,27 +14598,23 @@ tt.auras.list[1].cooldown = 0
 tt.sound_events.death = "EnemyTrollLargeDeath"
 tt.ui.click_rect = r(-25, 0, 45, 55)
 
--- enemy_troll_warrior_landing —— 索降落地动画版
 tt = RT("enemy_troll_warrior_landing", "enemy_troll_warrior")
 tt.info.i18n_key = "ENEMY_TROLL_WARRIOR"
 tt.render.sprites[1].prefix = "troll_warrior_creep"
 tt.render.sprites[1].name = "rope_land"
 tt.main_script.update = scripts.enemy_troll_warrior_landing.update
 
--- enemy_troll_warrior_stage_213_suicide_glider —— 落地到 stage13 自杀滑翔兵
 tt = RT("enemy_troll_warrior_stage_213_suicide_glider", "enemy_troll_warrior")
 tt.info.i18n_key = "ENEMY_TROLL_WARRIOR"
 tt.main_script.insert = scripts.enemy_troll_warrior_stage_213_suicide_glider.insert
 tt.suicide_hit_time = fts(5)
 
--- enemy_troll_champion_jumper_stage_12 —— 关卡 12 跳跃点
 tt = RT("enemy_troll_champion_jumper_stage_12", "enemy_troll_champion_jumper")
 tt.info.i18n_key = "ENEMY_TROLL_CHAMPION"
 tt.jump_points = {{1, 16, true}, {22, 33, true}, {40, 56, false, {40, 51}}}
 tt.disappearing_shadows = true
 tt.y_to_die = -50
 
--- enemy_troll_glider_stage_213_suicide —— stage13 自杀式滑翔撞塔
 tt = RT("enemy_troll_glider_stage_213_suicide", "enemy_troll_glider")
 tt.info.i18n_key = "ENEMY_TROLL_GLIDER"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
@@ -14710,15 +14634,13 @@ tt.sunray_t = "tower_stage_213_sunray_tower"
 tt.suicide_hit_time = fts(8)
 tt.sound_events.suicide = "Stage13KamikazeGliderPreparation"
 
--- ==================== KR6 stage 11：spiders 敌人（避免与 dove 的 enemy_spider / enemy_spiderling 撞名） ====================
+-- ==================== KR6 stage 11：spiders 敌人 ====================
 
--- enemy_spider_kr6（原 kr6 enemy_spider）—— 基础蜘蛛，仅提供 insert/eyes_t
 tt = RT("enemy_spider_kr6", "enemy")
 tt.main_script.insert = scripts.enemy_stage_11_spider.insert
 tt.chance = 1
 tt.eyes_t = "decal_stage_211_spider_eyes_medium"
 
--- enemy_spiderling_kr6
 tt = RT("enemy_spiderling_kr6", "enemy_spider_kr6")
 AC(tt, "melee")
 tt.enemy.gold = 2.2
@@ -14750,7 +14672,6 @@ tt.melee.attacks[1].hit_offset = v(30, 15)
 tt.sound_events.death = "EnemySpiderSmallDeath"
 tt.ui.click_rect = r(-9, 0, 22, 18)
 
--- enemy_giant_spider
 tt = RT("enemy_giant_spider", "enemy_spider_kr6")
 AC(tt, "melee")
 tt.enemy.gold = 19.8
@@ -14782,12 +14703,10 @@ tt.melee.attacks[1].hit_offset = v(30, 15)
 tt.sound_events.death = "EnemySpiderBigDeath"
 tt.ui.click_rect = r(-20, -5, 44, 38)
 
--- enemy_giant_spider_dropped
 tt = RT("enemy_giant_spider_dropped", "enemy_giant_spider")
 tt.drop_anim = "land"
 tt.main_script.update = scripts.enemy_giant_spider_dropped.update
 
--- enemy_spider_matriarch —— 产卵
 tt = RT("enemy_spider_matriarch", "enemy_spider_kr6")
 AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 110
@@ -14836,7 +14755,6 @@ tt.timed_attacks.list[1].sound_args = {
 tt.sound_events.death = "EnemySpiderBigDeath"
 tt.ui.click_rect = r(-20, 0, 46, 44)
 
--- enemy_leaper_spider —— 远距离跳跃+毒
 tt = RT("enemy_leaper_spider", "enemy_spider_kr6")
 AC(tt, "melee", "bullet", "timed_attacks")
 tt.enemy.gold = 13.2
@@ -14891,7 +14809,6 @@ tt.timed_attacks.list[1].sound = "EnemyCrowcallerCrowSummon"
 tt.sound_events.death = "EnemySpiderBigDeath"
 tt.ui.click_rect = r(-20, -5, 44, 38)
 
--- enemy_son_of_sarelgaz —— 蛛网茧困住单位
 tt = RT("enemy_son_of_sarelgaz", "enemy_spider_kr6")
 AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 88
@@ -14939,7 +14856,6 @@ tt.ui.click_rect = r(-20, -5, 44, 38)
 
 -- ==================== KR6 stage 10-13：战斗子实体 ====================
 
--- fx
 tt = RT("fx_troll_pathfinder_hit", "fx")
 tt.render.sprites[1].name = "troll_pathfinder_hit_fx_run"
 
@@ -14958,7 +14874,6 @@ tt.render.sprites[1].name = "frost_brute_breath_run"
 tt = RT("fx_leaper_spider_hit", "fx")
 tt.render.sprites[1].name = "leaper_hit_idle"
 
--- decal_troll_pathfinder_dead_sliding —— 冰上滑行死亡
 tt = RT("decal_troll_pathfinder_dead_sliding", "decal")
 AC(tt, "main_script", "tween", "motion", "nav_path")
 tt.render.sprites[1].prefix = "troll_pathfinder_creep"
@@ -14975,14 +14890,12 @@ tt.wait_time_after_stop = 4
 tt.main_script.update = scripts.decal_troll_pathfinder_dead_sliding.update
 tt.main_script.remove = scripts.tween_utils.reverse_remove
 
--- decal_tapping_hand —— 通用点按教学
 tt = RT("decal_tapping_hand", "decal")
 tt.render.sprites[1].name = "decal_veznan_tap"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].sort_y_offset = -11
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
--- decal_spider_egg —— 蛛卵基类
 tt = RT("decal_spider_egg", "decal_scripted")
 AC(tt, "sound_events")
 tt.render.sprites[1].prefix = "son_of_sarelgaz_boss_egg"
@@ -15014,9 +14927,6 @@ tt.time_to_spawn = 5
 tt.hatch_amount = {3, 3, 3, 4}
 tt.sound_events.hatch = "EnemySpiderMatriarchEggHatch"
 
--- aura_troll_pathfinder_regeneration
--- 注意：dove 的 aura_troll_warrior_regeneration 定义在 game_templates.lua，且晚于本文件被 require，
--- 因此不能作为父模板，这里按父亲字段内联（parent 用 aura）。
 tt = RT("aura_troll_pathfinder_regeneration", "aura")
 AC(tt, "regen")
 tt.main_script.update = scripts.aura_unit_regen.update
@@ -15025,7 +14935,6 @@ tt.regen.health = 3
 tt.regen.ignore_stun = true
 tt.regen.ignore_freeze = false
 
--- aura_frost_brute_death_ice_slow
 tt = RT("aura_frost_brute_death_ice_slow", "aura")
 AC(tt, "render", "tween")
 tt.aura.mod = "mod_frost_brute_death_ice_slow"
@@ -15051,7 +14960,6 @@ tt.tween.props[2].loop = false
 tt.tween.props[2].ignore_reverse = true
 tt.tween.disabled = true
 
--- aura_frost_baiter_death_stun
 tt = RT("aura_frost_baiter_death_stun", "aura")
 tt.aura.mod = "mod_frost_baiter_death_stun"
 tt.aura.radius = 50
@@ -15062,7 +14970,6 @@ tt.aura.duration = 1
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 
--- aura_frost_brute_cold_breath
 tt = RT("aura_frost_brute_cold_breath", "aura")
 tt.aura.radius = 110
 tt.aura.vis_flags = bor(F_AREA)
@@ -15076,7 +14983,6 @@ tt.aura.mod = "mod_frost_breath_cold_breath_freeze"
 tt.aura.hit_fx = "fx_frost_brute_hit"
 tt.main_script.update = scripts.aura_apply_damage.update
 
--- mods
 tt = RT("mod_movement_terrain", "modifier")
 tt.modifier.duration = 1e+99
 tt.terrain = nil
@@ -15154,7 +15060,6 @@ tt.modifier.animation_phases = true
 tt.modifier.use_mod_offset = false
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 
--- bullet_troll_glider_stage_213_suicide —— stage13 自杀滑翔弹
 tt = RT("bullet_troll_glider_stage_213_suicide", "bullet")
 tt.render.sprites[1].prefix = "troll_glider_creep"
 tt.render.sprites[1].name = "crash_projectile"
@@ -15177,11 +15082,6 @@ tt.main_script.update = scripts.bullet_troll_glider_stage_213_suicide.update
 tt.sound_events.hit = "Stage13KamikazeGliderDeathImpact"
 
 -- ==================== kr6 关卡 214：dark_army 敌人 ====================
--- 数值取自 kr6/data/balance/balance.lua，hp_max ×1.375、gold ×1.1、主动伤害 ×1.1（见文件顶部约定）。
--- 敌人基础增量（原 enemy_KR5 + enemy_KR6）：
---   unit.head_offset = v(0,0)、unit.disintegrate_fx = "fx_enemy_desintegrate"、
---   unit.fade_time_after_death = 3、unit.fade_duration_after_death = 0.3、
---   render.sprites[1].angles_custom.walk = {55,115,245,305}
 
 -- fx 命中特效
 tt = RT("fx_brigand_hit", "fx")
@@ -15220,7 +15120,6 @@ tt.render.sprites[1].name = "darkworg_hit_run"
 tt = RT("fx_skeleton_big_hit", "fx")
 tt.render.sprites[1].name = "skeleton_big_hit"
 
--- ps_bullet_dark_sapper
 tt = RT("ps_bullet_dark_sapper", "particle_system")
 tt.particle_system.name = "dark_sapper_trail_run"
 tt.particle_system.animated = true
@@ -15230,7 +15129,6 @@ tt.particle_system.emission_rate = 25
 tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.emit_area_spread = v(3, 3)
 
--- mod_brigand_bleed（brigand 血刺 DoT）
 tt = RT("mod_brigand_bleed", "mod_blood")
 tt.dps.damage_every = 0.25
 tt.dps.damage_min = 3.3
@@ -15240,7 +15138,6 @@ tt.dps.kill = true
 tt.modifier.duration = 2
 tt.modifier.vis_flags = bor(F_MOD, F_BLOOD)
 
--- mod_gargoyle_stone_form_heal
 tt = RT("mod_gargoyle_stone_form_heal", "modifier")
 AC(tt, "hps")
 tt.modifier.duration = {4, 4, 4, 6}
@@ -15250,7 +15147,6 @@ tt.hps.heal_max = 30 * tt.hps.heal_every
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 
--- aura_dark_sapper_death_explosion
 tt = RT("aura_dark_sapper_death_explosion", "aura")
 tt.aura.vis_flags = F_AREA
 tt.aura.vis_bans = bor(F_ENEMY)
@@ -15261,7 +15157,6 @@ tt.aura.damage_max = 165
 tt.aura.damage_type = DAMAGE_EXPLOSION
 tt.main_script.update = scripts.aura_apply_damage.update
 
--- bullet_dark_sapper（敌方自爆投射物，必须用 scripts.enemy_bomb.update）
 tt = RT("bullet_dark_sapper", "bomb")
 tt.render.sprites[1].name = "dark_sapper_projectile_0001"
 tt.render.sprites[1].animated = false
@@ -15280,7 +15175,6 @@ tt.bullet.damage_flags = bor(F_AREA, F_FRIEND)
 tt.bullet.damage_bans = bor(F_ENEMY)
 tt.main_script.update = scripts.enemy_bomb.update
 
--- enemy_brigand_kr6（brigand：高护甲、血刺）
 tt = RT("enemy_brigand_kr6", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(4, 21)
@@ -15378,7 +15272,6 @@ tt.sound_events.death_args = {
 }
 tt.ui.click_rect = r(-25, -2, 50, 50)
 
--- enemy_gargoyle_kr6（石化回血飞行怪）
 tt = RT("enemy_gargoyle_kr6", "enemy")
 tt.unit.head_offset = v(0, 0)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
@@ -15410,8 +15303,8 @@ tt.stone_form = {}
 tt.stone_form.trigger_hp = 60
 tt.stone_form.max_heal_uses = 1
 tt.stone_form.duration = {4, 4, 4, 6}
-tt.stone_form.armor = 0
-tt.stone_form.magic_armor = 0
+tt.stone_form.armor_inc = 0
+tt.stone_form.magic_armor_inc = 0
 tt.stone_form.floor_height = 0
 tt.stone_form.lower_duration = 0.2
 tt.stone_form.ease_down = "linear"
@@ -15434,12 +15327,11 @@ tt.unit.hit_offset = v(0, tt.flight_height + 5 + 10)
 tt.unit.head_offset = v(0, tt.flight_height + 5 + 14)
 tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, tt.flight_height + 2 + 10)
-tt.vis.bans = bor(F_SKELETON)
-tt.vis.flags = bor(F_ENEMY)
+tt.vis.bans = bor(F_SKELETON, F_BLOCK)
+tt.vis.flags = bor(F_ENEMY, F_FLYING)
 tt.sound_events.death = "EnemyGargoyleDeath"
 tt.ui.click_rect = r(-15, tt.flight_height - 15 + 20, 30, 30)
 
--- enemy_tainted_wolf（高闪避魔狼）
 tt = RT("enemy_tainted_wolf", "enemy")
 AC(tt, "melee", "dodge")
 tt.unit.head_offset = v(15, 14)
@@ -15480,7 +15372,6 @@ tt.ui.click_rect = r(-22, -3, 44, 32)
 tt.vis.bans = bor(F_SKELETON)
 tt.vis.flags = bor(F_ENEMY)
 
--- enemy_skeleton_kr6（墓地召唤；与 dove 的 enemy_skeleton 不同，加后缀）
 tt = RT("enemy_skeleton_kr6", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(6, 16)
@@ -15519,7 +15410,6 @@ tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
 tt.sound_events.death = "EnemySkeletonDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
 
--- enemy_skeleton_big_kr6（墓地召唤大骷髅）
 tt = RT("enemy_skeleton_big_kr6", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(11, 26)
@@ -15563,7 +15453,6 @@ tt.melee.attacks[1].dodge_time = tt.melee.attacks[1].hit_time
 tt.sound_events.death = "EnemySkeletonDeath"
 tt.ui.click_rect = r(-25, 0, 50, 45)
 
--- enemy_skeleton_goat（墓地召唤羊骷髅）
 tt = RT("enemy_skeleton_goat", "enemy")
 tt.unit.head_offset = v(8, 13)
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate"
@@ -15596,7 +15485,6 @@ tt.sound_events.death = "EnemySkeletonDeath"
 
 -- ==================== kr6 stage15：新敌人 ====================
 
--- enemy_swamp_husk（沼泽尸骸，近战带毒）
 tt = RT("enemy_swamp_husk", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(6, 16)
@@ -15638,7 +15526,6 @@ tt.sound_events.insert = "Stage15SwampOutSmallCreep"
 tt.sound_events.death = "EnemySkeletonDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
 
--- enemy_swamp_thing_kr6（沼泽巨怪，范围攻击 + 自愈）
 tt = RT("enemy_swamp_thing_kr6", "enemy")
 AC(tt, "melee", "auras")
 tt.unit.head_offset = v(6, 32)
@@ -15689,7 +15576,6 @@ tt.sound_events.death = "EnemySwampThingDeath"
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.ui.click_rect = r(-25, 0, 50, 45)
 
--- enemy_dark_disciple（远程 + 封塔，黑暗门徒）
 tt = RT("enemy_dark_disciple", "enemy")
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.unit.head_offset = v(3, 20)
@@ -15759,7 +15645,6 @@ tt.timed_attacks.list[1].sound_out = "EnemyShacklerBlockTowerUnblock"
 tt.sound_events.death = "EnemyDarkDiscipleDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
 
--- enemy_necromancer_kr6（召唤骷髅的黑暗法师）
 tt = RT("enemy_necromancer_kr6", "enemy")
 AC(tt, "melee", "ranged", "timed_attacks", "timed_actions")
 tt.unit.head_offset = v(6, 18)
@@ -15829,7 +15714,6 @@ tt.timed_actions.list[1].summon_skeleton_node_limit = 60
 tt.sound_events.death = "EnemyNecromancerDeath"
 tt.ui.click_rect = r(-13, 0, 26, 25)
 
--- enemy_death_rider（死亡骑士，冲刺 + 瘟疫光环 + 滑行尸体）
 tt = RT("enemy_death_rider", "enemy")
 AC(tt, "auras", "death_spawns", "timed_attacks")
 tt.unit.head_offset = v(3, 39)
@@ -15875,7 +15759,6 @@ tt.timed_attacks.list[1].mod = "mod_death_rider_gallop"
 tt.timed_attacks.list[1].duration = 1.8
 tt.timed_attacks.list[1].sound = "Stage16DeathRiderLaugh"
 
--- aura_death_rider_plague_aura
 tt = RT("aura_death_rider_plague_aura", "aura")
 tt.aura.radius = 50
 tt.aura.cycle_time = 0.25
@@ -15888,13 +15771,11 @@ tt.aura.vis_bans = bor(F_ENEMY)
 tt.aura.vis_flags = bor(F_AREA)
 tt.main_script.update = scripts.aura_apply_damage.update
 
--- mod_death_rider_gallop
 tt = RT("mod_death_rider_gallop", "mod_slow")
 tt.slow.factor = 1.923
 tt.modifier.type = MOD_TYPE_FAST
 tt.modifier.duration = 1.8
 
--- decal_death_rider_dead_sliding
 tt = RT("decal_death_rider_dead_sliding", "decal")
 AC(tt, "main_script", "tween", "motion", "nav_path")
 tt.render.sprites[1].prefix = "death_rider_death_rider"
@@ -15912,7 +15793,6 @@ tt.main_script.update = scripts.decal_troll_pathfinder_dead_sliding.update
 tt.main_script.remove = scripts.tween_utils.reverse_remove
 tt.sound_in = "EnemyDeathRiderDeath"
 
--- enemy_rotten_tree_kr6（KR6 腐烂树精，被树精塔投掷的敌人）
 tt = RT("enemy_rotten_tree_kr6", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(0, 0)
@@ -15952,7 +15832,6 @@ tt.sound_events.death_args = {
 }
 tt.ui.click_rect = r(-22, -1, 44, 40)
 
--- KR6 stage17 dark army (必须 _kr6 后缀：enemy_dark_knight 与 dove 本体 KR1 同名敌人冲突)
 tt = RT("enemy_dark_knight_kr6", "enemy")
 AC(tt, "melee", "death_spawns", "track_kills")
 tt.unit.head_offset = v(5, 22)
@@ -16047,258 +15926,7 @@ tt.ui.click_rect = r(-25, 0, 50, 45)
 
 -- ============================================================
 -- KR6 stage 18（最终关）恶魔敌人
--- 专属脚本就近定义在本文件（不改 game_scripts.lua，避免与其它 workstream 冲突）。
 -- ============================================================
-local SU = require("script_utils")
-local S = require("sound_db")
-local Vv = require("lib.klua.vector")
-
-local function q_insert(e)
-	simulation:queue_insert_entity(e)
-end
-
-local function q_remove(e)
-	simulation:queue_remove_entity(e)
-end
-
-scripts.enemy_demon_imp = scripts.enemy_demon_imp or {}
-
-function scripts.enemy_demon_imp.update(this, store)
-	local shadow_sprite = this.render.sprites[2]
-
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
-
-	while true do
-		if this.health.dead then
-			shadow_sprite.hidden = true
-
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if this.unit.is_stunned then
-			SU.y_enemy_stun(store, this)
-		else
-			SU.y_enemy_walk_until_blocked(store, this)
-		end
-	end
-end
-
-scripts.enemy_demon_lord = scripts.enemy_demon_lord or {}
-
-function scripts.enemy_demon_lord.update(this, store)
-	local a = this.timed_attacks.list[1]
-
-	a.ts = store.tick_ts
-
-	local function ready_to_shield()
-		return this.enemy.can_do_magic and store.tick_ts - a.ts > a.cooldown
-	end
-
-	local function get_shield_targets()
-		return U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
-			return table.contains(a.allowed_templates, e.template_name)
-		end)
-	end
-
-	::label_70_0::
-
-	while true do
-		if this.health.dead then
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if this.unit.is_stunned then
-			SU.y_enemy_stun(store, this)
-		else
-			if ready_to_shield() then
-				local targets = get_shield_targets()
-
-				if not targets then
-					SU.delay_attack(store, a, 0.5)
-				else
-					a.ts = store.tick_ts
-
-					U.animation_start(this, a.animation, nil, store.tick_ts, false)
-
-					if a.sound then
-						S:queue(a.sound)
-					end
-
-					if SU.y_enemy_wait(store, this, a.cast_time) then
-						goto label_70_0
-					end
-
-					targets = get_shield_targets()
-
-					if targets then
-						local shielded_count = 0
-
-						for _, target in ipairs(targets) do
-							if shielded_count >= a.max_count then
-								break
-							end
-
-							shielded_count = shielded_count + 1
-
-							local m = E:create_entity(a.mod)
-
-							m.modifier.source_id = this.id
-							m.modifier.target_id = target.id
-
-							q_insert(m)
-						end
-					end
-
-					if SU.y_enemy_animation_wait(this) then
-						goto label_70_0
-					end
-				end
-			end
-
-			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, ready_to_shield, ready_to_shield) then
-			else
-				coroutine.yield()
-			end
-		end
-	end
-end
-
-scripts.enemy_magma_elemental = scripts.enemy_magma_elemental or {}
-
-function scripts.enemy_magma_elemental.insert(this, store, script)
-	if not scripts.enemy_basic.insert(this, store, script) then
-		return false
-	end
-
-	if this.play_spawn_animation then
-		this._spawn_vis_bans = this.vis.bans
-		this._spawn_ignore_damage = this.health.ignore_damage
-
-		U.bans_add(this.vis, F_ALL)
-		this._spawn_f_all_active = true
-		this.health.ignore_damage = true
-		this.health_bar.hidden = true
-	end
-
-	return true
-end
-
-function scripts.enemy_magma_elemental.update(this, store, script)
-	if this.play_spawn_animation then
-		U.animation_start(this, "spawn_loop", true, store.tick_ts, true)
-		U.y_wait(store, this.spawn_loop_time)
-		U.animation_start(this, "spawn", true, store.tick_ts, false)
-		U.y_animation_wait(this)
-
-		this.health_bar.hidden = nil
-
-		if this._spawn_f_all_active then
-			U.bans_remove(this.vis, F_ALL)
-			this._spawn_f_all_active = nil
-		end
-
-		this.health.ignore_damage = this._spawn_ignore_damage
-
-		if this.die_after_spawn then
-			this.health_bar.hidden = true
-			this.health.hp = 0
-
-			while not this.health.dead do
-				coroutine.yield()
-			end
-		end
-	end
-
-	return scripts.enemy_mixed.update(this, store, script)
-end
-
-scripts.fx_magma_elemental_fire = scripts.fx_magma_elemental_fire or {}
-
-function scripts.fx_magma_elemental_fire.update(this, store, script)
-	U.animation_start(this, "in", nil, store.tick_ts, false, 1)
-	U.y_animation_wait(this)
-	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
-	U.y_wait(store, this.idle_duration)
-	U.animation_start(this, "out", nil, store.tick_ts, false, 1)
-	U.y_animation_wait(this)
-	q_remove(this)
-end
-
-scripts.bullet_demon_flareon = scripts.bullet_demon_flareon or {}
-
-function scripts.bullet_demon_flareon.update(this, store, script)
-	local b = this.bullet
-	local s = this.render.sprites[1]
-	local ps
-
-	if not b.last_pos then
-		b.last_pos = Vv.vclone(b.from)
-	end
-
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.track_id = this.id
-
-		q_insert(ps)
-	end
-
-	while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
-		coroutine.yield()
-
-		local target = store.entities[b.target_id]
-
-		if target and not target.health.dead then
-			local ho = target.unit.hit_offset
-
-			b.to.x, b.to.y = target.pos.x + ho.x, target.pos.y + ho.y
-			b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
-		end
-
-		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
-		s.r = Vv.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
-
-		if ps then
-			ps.particle_system.emit_direction = s.r
-		end
-	end
-
-	local target = store.entities[b.target_id]
-
-	if target and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-
-		store.damage_queue[#store.damage_queue + 1] = d
-
-		if b.mod then
-			local m = E:create_entity(b.mod)
-
-			m.modifier.target_id = target.id
-			m.modifier.source_id = b.source_id
-
-			q_insert(m)
-		end
-	end
-
-	if b.hit_fx then
-		local fx = E:create_entity(b.hit_fx)
-
-		fx.pos.x, fx.pos.y = b.to.x, b.to.y
-		fx.render.sprites[1].ts = store.tick_ts
-
-		q_insert(fx)
-	end
-
-	if this.sound_events.hit then
-		S:queue(this.sound_events.hit)
-	end
-
-	q_remove(this)
-end
 
 -- enemy_demon_spawn（小恶魔，死亡自爆）
 tt = RT("enemy_demon_spawn", "enemy")
