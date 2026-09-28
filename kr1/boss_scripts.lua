@@ -13289,7 +13289,7 @@ function scripts.enemy_boss_stage_10.update(this, store, script)
 
 			af.ts = store.tick_ts
 
-			scripts.controller_stage_210_jt_icicles.on_event(controller_icicles, store, nil, af.random_icicles, af.allies_icicles, 0)
+			controller_icicles.events.list[1].on_event(controller_icicles, store, nil, af.random_icicles, af.allies_icicles, 0)
 
 			local aura = E:create_entity(af.aura)
 
