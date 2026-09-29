@@ -4542,16 +4542,19 @@ function EncyclopediaTabLabel:initialize(text, selected, rotation)
 end
 
 local encyclopedia_view_size_map = {
-	tower_thumb = v(84, 78),
 	tower_detail = v(260, 250),
 	tower_special_icon = v(58, 57)
 }
+
+-- 前置声明：实现见下方缩略图边框工具区（缓存持有图集纹理，需在建视图时清空）
+local reset_thumb_caches
 
 EncyclopediaView = class("EncyclopediaView", PopUpView)
 
 function EncyclopediaView:initialize(sw, sh)
 	-- perf.tmp_start("EncyclopediaView:initialize")
 	PopUpView.initialize(self, V.v(sw, sh))
+	reset_thumb_caches()
 
 	self.scale = V.vv(1.2)
 	self.back = KView:new(V.v(sw, sh))
@@ -4687,6 +4690,529 @@ function EncyclopediaView:show()
 	self.tower_button.hidden = true
 end
 
+-- 复用一个老页码框贴图：Builtin 的 encyclopedia_pageNbr_0001..0005 把数字烘焙在
+-- 贴图里，只够 5 页。这里先用 replace 混合把中间的数字抹掉，得到一张“只有花边
+-- 外框、中间透明”的空白页码框；再在运行时绘制状态底色和数字。这样既复用了老美术，
+-- 又能支持任意页数，样式也与原版一致。
+local ENCYCLOPEDIA_PAGE_BTN_SLOT = 40
+-- 一屏最多显示的书页按钮数（含首尾翻页箭头），超出后窗口化滑动
+local ENCYCLOPEDIA_PAGE_MAX_SLOTS = 11
+
+local PAGE_NBR_SOURCE = "encyclopedia_pageNbr_0001"
+-- 内框（数字所在区域）占整张图的比例，用于抹除数字与绘制状态底色。
+-- 实测原图内框为 x=10..32、y=9..32（44x42 中），即 23x24。
+local PAGE_INNER_FRAC = {10 / 44, 9 / 42, 23 / 44, 24 / 42}
+local PAGE_FILL = {
+	over = {255, 255, 0, 255},
+	selected = {99, 89, 49, 255},
+	disabled = {45, 40, 30, 160}
+}
+local PAGE_FONT = {
+	normal = {99, 81, 49, 255},
+	over = {165, 136, 16, 255},
+	selected = {247, 231, 0, 255},
+	disabled = {160, 145, 115, 180}
+}
+
+local page_clean_frame
+
+--- 从内置页码框贴图生成“无数字”的空白框，只做一次并缓存。
+local function get_clean_page_frame()
+	if page_clean_frame then
+		return page_clean_frame
+	end
+
+	local ss = I:s(PAGE_NBR_SOURCE)
+	local atlas = I:i(ss.atlas)
+	local _, _, qw, qh = ss.quad:getViewport()
+	local scale = ss.ref_scale or 1
+	local w, h = math.floor(qw * scale + 0.5), math.floor(qh * scale + 0.5)
+	local ix, iy = math.floor(PAGE_INNER_FRAC[1] * w), math.floor(PAGE_INNER_FRAC[2] * h)
+	local iw, ih = math.floor(PAGE_INNER_FRAC[3] * w), math.floor(PAGE_INNER_FRAC[4] * h)
+	local canvas = G.newCanvas(w, h)
+
+	G.push("all")
+	G.setCanvas(canvas)
+	G.clear(0, 0, 0, 0)
+	G.setBlendMode("replace", "premultiplied")
+	G.setColor(1, 1, 1, 1)
+	G.draw(atlas, ss.quad, ss.trim[1] * scale, ss.trim[2] * scale, 0, scale)
+
+	-- 用 replace 混合把数字区域清成透明，保留花边外框
+	G.setColor(0, 0, 0, 0)
+	G.rectangle("fill", ix, iy, iw, ih)
+	G.setBlendMode("alpha", "alphamultiply")
+	G.setCanvas()
+	G.pop()
+
+	local image = G.newImage(canvas:newImageData())
+
+	canvas:release()
+
+	page_clean_frame = {
+		image = image,
+		w = w,
+		h = h,
+		ix = ix,
+		iy = iy,
+		iw = iw,
+		ih = ih
+	}
+
+	return page_clean_frame
+end
+
+--- 页码/箭头按钮：复用老页码框（数字已抹除），运行时叠加状态底色和文字。
+function EncyclopediaView:make_page_button(text, selected, enabled, on_click)
+	local frame = get_clean_page_frame()
+	local b = KView:new(V.v(frame.w, frame.h))
+	local label = GGLabel:new(V.v(frame.w, frame.h))
+
+	label.font_name = "h_book"
+	label.font_size = #text <= 1 and 20 or (#text == 2 and 15 or 11)
+	label.text_align = "center"
+	label.vertical_align = "middle"
+	label.text = text
+	label.fit_lines = 1
+	label.propagate_on_click = true
+
+	b:add_child(label)
+
+	function b:set_page_state(state)
+		self._page_state = state
+		self._page_fill = PAGE_FILL[state]
+		label.colors.text = PAGE_FONT[state] or PAGE_FONT.normal
+	end
+
+	function b:_draw_self()
+		local pr, pg, pb, pa = G.getColor()
+
+		G.setColor(1, 1, 1, pa)
+		G.draw(frame.image, 0, 0)
+
+		if self._page_fill then
+			G.setColor_old(self._page_fill)
+			G.rectangle("fill", frame.ix, frame.iy, frame.iw, frame.ih)
+		end
+
+		G.setColor(pr, pg, pb, pa)
+	end
+
+	if not enabled then
+		b:set_page_state("disabled")
+	elseif selected then
+		b:set_page_state("selected")
+	else
+		b:set_page_state("normal")
+
+		function b.on_enter()
+			if b._page_state == "normal" then
+				b:set_page_state("over")
+			end
+		end
+
+		function b.on_exit()
+			if b._page_state == "over" then
+				b:set_page_state("normal")
+			end
+		end
+
+		if on_click then
+			function b.on_click()
+				S:queue("GUIButtonCommon")
+				on_click()
+			end
+		end
+	end
+
+	return b
+end
+
+--- 创建单个页码按钮：统一复用老框样式，页数无上限。
+function EncyclopediaView:create_page_button(page, current, on_select)
+	if page == current then
+		return self:make_page_button(tostring(page), true, true, nil)
+	end
+
+	return self:make_page_button(tostring(page), false, true, function()
+		on_select(page)
+	end)
+end
+
+--- 构建百科页码栏。total_pages 无上限：页数多时显示滑动窗口与首尾翻页箭头。
+function EncyclopediaView:build_page_bar(parent, total_pages, current_index, on_select)
+	self.page_buttons = {}
+
+	if total_pages < 1 then
+		return
+	end
+
+	local by = 530
+	local bx = 192
+	local max_slots = math.min(total_pages, ENCYCLOPEDIA_PAGE_MAX_SLOTS)
+	local needs_arrows = total_pages > ENCYCLOPEDIA_PAGE_MAX_SLOTS
+	local number_slots = needs_arrows and max_slots - 2 or max_slots
+	local first_number = 1
+
+	if needs_arrows then
+		first_number = current_index - math.floor((number_slots - 1) / 2)
+		first_number = math.max(1, math.min(first_number, total_pages - number_slots + 1))
+	end
+
+	local slots = {}
+
+	if needs_arrows then
+		slots[#slots + 1] = {
+			text = "<",
+			enabled = current_index > 1,
+			page = math.max(1, current_index - number_slots)
+		}
+	end
+
+	for page = first_number, first_number + number_slots - 1 do
+		slots[#slots + 1] = {
+			page = page
+		}
+	end
+
+	if needs_arrows then
+		slots[#slots + 1] = {
+			text = ">",
+			enabled = current_index < total_pages,
+			page = math.min(total_pages, current_index + number_slots)
+		}
+	end
+
+	local start_x = bx - ENCYCLOPEDIA_PAGE_BTN_SLOT * (#slots - 1) / 2
+
+	for i, slot in ipairs(slots) do
+		local b
+
+		if slot.text then
+			b = self:make_page_button(slot.text, false, slot.enabled, function()
+				on_select(slot.page)
+			end)
+		else
+			b = self:create_page_button(slot.page, current_index, on_select)
+		end
+
+		b.anchor = v(b.size.x / 2, b.size.y / 2)
+		b.pos = v(start_x + ENCYCLOPEDIA_PAGE_BTN_SLOT * (i - 1), by)
+
+		parent:add_child(b)
+		table.insert(self.page_buttons, b)
+	end
+end
+
+-- 图鉴塔/敌缩略图统一边框：
+-- 官方缩略图自带奶油色边框(255,251,222)，插件图则可能没有。这里在运行时把精灵
+-- 画到 canvas 再回读像素（DDS 压缩纹理无法直接 getData），用“连续同色边框带”
+-- 判断是否带框。边框不再使用美术贴图，而是三态共用同一几何（外框/内框/圆角/粗细
+-- 完全一致），只更换颜色直接绘制，避免原 over/select 环粗细不一的问题：
+--   带框图 -> 整体拉伸到整个外框，自带边框被推到边框区域外，再用内框开口 clip；
+--   无框图 -> 整体拉伸到边框内部。
+-- 采用填充（拉伸）而非等比缩放，保证内容铺满、不会在某些方向露出原边框。
+local THUMB_DETECT_FRAC = 0.8
+local THUMB_DETECT_MAX_INSET = 14
+local THUMB_DETECT_MAX_SKIP = 3
+local THUMB_DETECT_MIN_CHANNEL = 170 / 255
+local THUMB_DETECT_MIN_ALPHA = 200 / 255
+local THUMB_SOLID_ALPHA = 210 / 255
+
+local thumb_info_cache = {}
+local thumb_frame_cache = {}
+
+local thumb_frame_sources = {
+	tower = {
+		source = "encyclopedia_tower_thumbs_0001",
+		lock = "encyclopedia_tower_thumbs_lock",
+		cell_scale = 1,
+		-- 相对贴图逻辑尺寸四周收紧多少像素（贴图含透明边距，按外轮廓算会偏大）
+		shrink = 6,
+		-- 视觉边框厚度（逻辑像素），三态一致
+		border = 5,
+		-- 从缩略图不透明包围盒各边裁掉多少，用于去掉自带边框+底部投影
+		crop = {
+			top = 6,
+			bottom = 9,
+			left = 7,
+			right = 8
+		}
+	},
+	creep = {
+		source = "encyclopedia_creep_thumbs_0001",
+		lock = "encyclopedia_creep_thumbs_lock",
+		cell_scale = 0.75,
+		shrink = 8,
+		border = 4,
+		crop = {
+			top = 4,
+			bottom = 6,
+			left = 5,
+			right = 6
+		}
+	}
+}
+
+-- 三态边框颜色（同一几何，仅换色）+ 外描边颜色
+local THUMB_FRAME_COLORS = {
+	normal = {255, 251, 222, 255},
+	hover = {247, 243, 181, 255},
+	select = {255, 219, 51, 255}
+}
+local THUMB_FRAME_OUTLINE = {140, 125, 90, 255}
+
+local function thumb_is_light(r, g, b, a)
+	return a >= THUMB_DETECT_MIN_ALPHA and r >= THUMB_DETECT_MIN_CHANNEL and g >= THUMB_DETECT_MIN_CHANNEL and b >= THUMB_DETECT_MIN_CHANNEL
+end
+
+--- 清空缓存：缓存里持有图集纹理引用，图集重载后必须重建。
+function reset_thumb_caches()
+	thumb_info_cache = {}
+	thumb_frame_cache = {}
+end
+
+--- 分析一张缩略图精灵，返回内容矩形与是否带框。结果按精灵名缓存。
+local function analyze_thumb_sprite(name)
+	local cached = thumb_info_cache[name]
+
+	if cached ~= nil then
+		return cached or nil
+	end
+
+	local ss = I:s(name)
+
+	if not ss then
+		thumb_info_cache[name] = false
+
+		return nil
+	end
+
+	local image = I:i(ss.atlas)
+	local qx, qy, qw, qh = ss.quad:getViewport()
+	local canvas = G.newCanvas(qw, qh)
+
+	G.push("all")
+	G.setCanvas(canvas)
+	G.clear(0, 0, 0, 0)
+	G.setBlendMode("replace", "premultiplied")
+	G.setColor(1, 1, 1, 1)
+	G.draw(image, ss.quad, 0, 0, 0, 1)
+	G.setBlendMode("alpha", "alphamultiply")
+	G.setCanvas()
+	G.pop()
+
+	local data = canvas:newImageData()
+
+	canvas:release()
+
+	-- 一次性读入像素：light 为“边框色候选”判定，solid 用于求不透明包围盒
+	local light = table.new and table.new(qw * qh, 0) or {}
+	local x0, y0, x1, y1 = qw, qh, -1, -1
+
+	for y = 0, qh - 1 do
+		local row = y * qw
+
+		for x = 0, qw - 1 do
+			local r, g, b, a = data:getPixel(x, y)
+			local i = row + x + 1
+
+			light[i] = thumb_is_light(r, g, b, a)
+
+			if a >= THUMB_SOLID_ALPHA then
+				if x < x0 then
+					x0 = x
+				end
+				if y < y0 then
+					y0 = y
+				end
+				if x > x1 then
+					x1 = x
+				end
+				if y > y1 then
+					y1 = y
+				end
+			end
+		end
+	end
+
+	local framed = false
+	local insets = {0, 0, 0, 0}
+
+	if x1 >= x0 and y1 >= y0 then
+		local function band_fraction(dir, k)
+			local total, hits = 0, 0
+
+			if dir == 1 or dir == 2 then
+				local y = dir == 1 and y0 + k or y1 - k
+				local row = y * qw
+
+				for x = x0, x1 do
+					total = total + 1
+
+					if light[row + x + 1] then
+						hits = hits + 1
+					end
+				end
+			else
+				local x = dir == 3 and x0 + k or x1 - k
+
+				for y = y0, y1 do
+					total = total + 1
+
+					if light[y * qw + x + 1] then
+						hits = hits + 1
+					end
+				end
+			end
+
+			return total > 0 and hits / total or 0
+		end
+
+		for dir = 1, 4 do
+			local k = 0
+			local skipped = 0
+
+			while k < THUMB_DETECT_MAX_INSET and band_fraction(dir, k) < THUMB_DETECT_FRAC and skipped < THUMB_DETECT_MAX_SKIP do
+				k = k + 1
+				skipped = skipped + 1
+			end
+
+			local run = 0
+
+			while k < THUMB_DETECT_MAX_INSET and band_fraction(dir, k) >= THUMB_DETECT_FRAC do
+				run = run + 1
+				k = k + 1
+			end
+
+			insets[dir] = run >= 2 and k or 0
+		end
+
+		framed = math.max(insets[1], insets[2], insets[3], insets[4]) >= 2
+	end
+
+	-- 内容矩形统一取不透明包围盒：带框图整体填充外框（自带边框被我们的框盖住），
+	-- 无框图整体填充内框。这样不依赖逐边检测，避免雪地等内容导致边框残留。
+	local cx, cy, cw, ch
+
+	if x1 < x0 or y1 < y0 then
+		cx, cy, cw, ch = 0, 0, 0, 0
+	else
+		cx, cy, cw, ch = x0, y0, x1 - x0 + 1, y1 - y0 + 1
+	end
+
+	local info = {
+		image = image,
+		tex_w = image:getWidth(),
+		tex_h = image:getHeight(),
+		qx = qx,
+		qy = qy,
+		bx = cx,
+		by = cy,
+		bw = cw,
+		bh = ch,
+		framed = framed
+	}
+
+	thumb_info_cache[name] = info
+
+	return info
+end
+
+--- 构建某类（tower/creep）的统一边框几何：三态共用同一外框/内框/圆角/粗细。
+local function get_thumb_frame(kind)
+	if thumb_frame_cache[kind] then
+		return thumb_frame_cache[kind]
+	end
+
+	local cfg = thumb_frame_sources[kind]
+	local ss = I:s(cfg.source)
+	local ref = ss.ref_scale
+	local shrink = math.floor((cfg.shrink or 0) * ref + 0.5)
+	local outer_w = math.floor(ss.size[1] * ref + 0.5) - shrink
+	local outer_h = math.floor(ss.size[2] * ref + 0.5) - shrink
+	local border = math.max(1, math.floor(cfg.border * ref + 0.5))
+	local frame = {
+		outer_w = outer_w,
+		outer_h = outer_h,
+		cell_scale = cfg.cell_scale,
+		inner_x = border,
+		inner_y = border,
+		inner_w = outer_w - 2 * border,
+		inner_h = outer_h - 2 * border,
+		radius = 0,
+		outline_w = 1,
+		crop = cfg.crop
+	}
+
+	thumb_frame_cache[kind] = frame
+
+	return frame
+end
+
+--- 创建一个统一边框的缩略图格子。state: normal / hover / select。
+function EncyclopediaView:create_thumb_cell(kind, sprite_name, pos)
+	local frame = get_thumb_frame(kind)
+	local info = analyze_thumb_sprite(sprite_name)
+	local b = KView:new(V.v(frame.outer_w, frame.outer_h))
+
+	b._state = "normal"
+	b.anchor = v(frame.outer_w / 2, frame.outer_h / 2)
+	b.pos = pos
+	b.scale = v(frame.cell_scale, frame.cell_scale)
+
+	-- 预计算内容裁剪 quad：带框图按各边 crop 去掉自带边框+底部投影，无框图取整个包围盒
+	local content_quad, content_w, content_h
+
+	if info and info.bw > 0 and info.bh > 0 then
+		local bx, by, bw, bh
+
+		if info.framed then
+			local c = frame.crop
+
+			bx = info.bx + c.left
+			by = info.by + c.top
+			bw = math.max(1, info.bw - c.left - c.right)
+			bh = math.max(1, info.bh - c.top - c.bottom)
+		else
+			bx, by, bw, bh = info.bx, info.by, info.bw, info.bh
+		end
+
+		content_quad = G.newQuad(info.qx + bx, info.qy + by, bw, bh, info.tex_w, info.tex_h)
+		content_w, content_h = bw, bh
+	end
+
+	function b:_draw_self()
+		local pr, pg, pb, pa = G.getColor()
+		local color = THUMB_FRAME_COLORS[self._state] or THUMB_FRAME_COLORS.normal
+
+		-- 1) 边框底色：填充整个外框，中间由内容盖住
+		G.setColor_old(color)
+		G.rectangle("fill", 0, 0, frame.outer_w, frame.outer_h, frame.radius, frame.radius, 8)
+
+		-- 2) 内容：拉伸填充内框，统一 clip 到内框开口，绝不溢出
+		if info and content_quad then
+			G.stencil(function()
+				G.rectangle("fill", frame.inner_x, frame.inner_y, frame.inner_w, frame.inner_h)
+			end)
+			G.setStencilTest("greater", 0)
+			G.setColor(1, 1, 1, pa)
+			G.draw(info.image, content_quad, frame.inner_x, frame.inner_y, 0, frame.inner_w / content_w, frame.inner_h / content_h)
+			G.setStencilTest()
+		end
+
+		-- 3) 外层勾线
+		G.setColor_old(THUMB_FRAME_OUTLINE)
+		G.setLineWidth(frame.outline_w)
+		G.rectangle("line", frame.outline_w / 2, frame.outline_w / 2, frame.outer_w - frame.outline_w, frame.outer_h - frame.outline_w, frame.radius, frame.radius, 8)
+		G.setLineWidth(1)
+
+		G.setColor(pr, pg, pb, pa)
+	end
+
+	return b
+end
+
 function EncyclopediaView:load_towers(index)
 	if self.creep then
 		self.creep.hidden = true
@@ -4729,13 +5255,11 @@ function EncyclopediaView:load_towers(index)
 
 	self.towers:add_child(right_deco)
 
-	self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_over")
-	self.select_sprite = KImageView:new("encyclopedia_tower_thumbs_select")
-	self.select_sprite.pos = v(50, 120)
-	self.select_sprite.hidden = false
+	self._selected_cell = nil
 
 	local tower_count = #screen_map.tower_data
 	local towers_per_page = 20
+	local first_cell
 
 	for d = 1, towers_per_page do
 		local i = d + (index - 1) * towers_per_page
@@ -4743,7 +5267,11 @@ function EncyclopediaView:load_towers(index)
 		if i <= tower_count then
 			local t = screen_map.tower_data[i]
 			local image_name
-			if t.thumb_image_name then
+			local locked = table.find(screen_map.user_data.locked_towers, t.name) ~= nil
+
+			if locked then
+				image_name = thumb_frame_sources.tower.lock
+			elseif t.thumb_image_name then
 				image_name = t.thumb_image_name
 			else
 				local f = string.format("encyclopedia_tower_thumbs_%04i", t.icon)
@@ -4751,124 +5279,58 @@ function EncyclopediaView:load_towers(index)
 			end
 
 			local off_y = 120
+			local cell = self:create_thumb_cell("tower", image_name, v(math.fmod(d - 1, 4) * 88 + 50, math.floor((d - 1) / 4) * 85 + off_y))
 
-			self:create_tower(image_name, v(math.fmod(d - 1, 4) * 88 + 50, math.floor((d - 1) / 4) * 85 + off_y), i, true)
-		end
-	end
+			self.towers:add_child(cell)
 
-	self.towers:add_child(self.over_sprite)
-
-	self.over_sprite.hidden = true
-	self.over_sprite.anchor = v(self.over_sprite.size.x / 2, self.over_sprite.size.y / 2)
-	self.over_sprite.propagate_on_click = true
-
-	self.towers:add_child(self.select_sprite)
-
-	self.select_sprite.pos = v(50, 120)
-	self.select_sprite.anchor = v(self.select_sprite.size.x / 2, self.select_sprite.size.y / 2)
-	self.select_sprite.hidden = false
-	self.page_buttons = {}
-
-	local total_pages = math.ceil(tower_count / towers_per_page)
-	local boffset = 40
-	local bx, by = 192 - 40 * (total_pages - 1) / 2, 530
-
-	for i = 1, total_pages do
-		if i == index then
-			local b = KImageView:new("encyclopedia_pageNbrSelected_000" .. i)
-
-			b.anchor = v(b.size.x / 2, b.size.y / 2)
-			b.pos = v(bx + boffset * (i - 1), by)
-
-			self.towers:add_child(b)
-			table.insert(self.page_buttons, b)
-		else
-			local b = KImageButton:new("encyclopedia_pageNbr_000" .. i, "encyclopedia_pageNbrOver_000" .. i, "encyclopedia_pageNbrSelected_000" .. i)
-
-			b.anchor = v(b.size.x / 2, b.size.y / 2)
-			b.pos = v(bx + boffset * (i - 1), by)
-
-			function b.on_click(this, button, x, y)
-				local this_idx = i
-
-				S:queue("GUIButtonCommon")
-				self:load_towers(this_idx)
+			if not first_cell then
+				first_cell = cell
 			end
 
-			self.towers:add_child(b)
-			table.insert(self.page_buttons, b)
+			if not locked then
+				function cell.on_enter()
+					cell._state = "hover"
+				end
+
+				function cell.on_exit()
+					cell._state = self._selected_cell == cell and "select" or "normal"
+				end
+
+				function cell.on_click()
+					S:queue("GUINotificationPaperOver")
+
+					if self._selected_cell and self._selected_cell ~= cell then
+						self._selected_cell._state = "normal"
+					end
+
+					self._selected_cell = cell
+					cell._state = "select"
+
+					if self.detail_tower_level == 2 then
+						self:detail_tower_second(i)
+					else
+						self:detail_tower(i)
+					end
+				end
+			end
 		end
 	end
+
+	if first_cell then
+		first_cell._state = "select"
+		self._selected_cell = first_cell
+	end
+
+	local total_pages = math.ceil(tower_count / towers_per_page)
+
+	self:build_page_bar(self.towers, total_pages, index, function(page)
+		self:load_towers(page)
+	end)
 
 	if self.detail_tower_level == 2 then
 		self:detail_tower_second((index - 1) * towers_per_page + 1)
 	else
 		self:detail_tower((index - 1) * towers_per_page + 1)
-	end
-end
-
-function EncyclopediaView:create_tower(icon, pos, information, enabled)
-	if table.find(screen_map.user_data.locked_towers, screen_map.tower_data[information].name) then
-		local tower = KImageView:new("encyclopedia_tower_thumbs_lock")
-
-		tower.anchor = v(tower.size.x / 2, tower.size.y / 2)
-		tower.pos = pos
-
-		self.towers:add_child(tower)
-	else
-		local tower = KButtonNoText:new()
-		local ss = I:s(icon)
-		local target_size = encyclopedia_view_size_map["tower_thumb"]
-		local image_scale = 1
-		if target_size then
-			local scale_x = target_size.x / ss.ref_scale / ss.size[1]
-			local scale_y = target_size.y / ss.ref_scale / ss.size[2]
-			image_scale = math.min(scale_x, scale_y)
-		end
-		if image_scale == 1 then
-			tower:set_image(icon)
-		else
-			tower.image_scale = image_scale
-			tower:set_image(icon, target_size)
-		end
-
-		tower.anchor = v(tower.size.x / 2, tower.size.y / 2)
-		tower.pos = pos
-
-		self.towers:add_child(tower)
-
-		function tower.on_enter()
-			self:update_over_sprite(tower.pos)
-		end
-
-		function tower.on_exit()
-			self:remove_over_sprite()
-		end
-
-		function tower.on_click()
-			S:queue("GUINotificationPaperOver")
-			self:tower_clicked(information, pos)
-		end
-	end
-end
-
-function EncyclopediaView:update_over_sprite(pos)
-	self.over_sprite.hidden = false
-	self.over_sprite.pos = pos
-end
-
-function EncyclopediaView:remove_over_sprite()
-	self.over_sprite.hidden = true
-end
-
-function EncyclopediaView:tower_clicked(information, pos)
-	self.select_sprite.hidden = false
-	self.select_sprite.pos = pos
-
-	if self.detail_tower_level == 2 then
-		self:detail_tower_second(information)
-	else
-		self:detail_tower(information)
 	end
 end
 
@@ -5389,7 +5851,6 @@ function EncyclopediaView:load_creeps(index)
 
 	if self.towers then
 		self.towers.hidden = true
-		self.select_sprite.hidden = true
 	end
 
 	self.creep = KView:new(V.v(372, 444))
@@ -5397,8 +5858,7 @@ function EncyclopediaView:load_creeps(index)
 
 	self.back:add_child(self.creep)
 
-	self.over_sprite = KImageView:new("encyclopedia_creep_thumbs_over")
-	self.select_sprite2 = KImageView:new("encyclopedia_creep_thumbs_selected")
+	self._selected_cell = nil
 
 	local title = GGLabel:new(V.v(self.creep.size.x, 70))
 
@@ -5430,6 +5890,11 @@ function EncyclopediaView:load_creeps(index)
 
 	local creeps_per_page = 64
 	local max_creeps = #GS.encyclopedia_enemies
+	local first_cell
+
+	if not screen_map.user_data.seen then
+		screen_map.user_data.seen = {}
+	end
 
 	for d = 1, creeps_per_page do
 		local i = d + creeps_per_page * (index - 1)
@@ -5440,112 +5905,57 @@ function EncyclopediaView:load_creeps(index)
 
 			local f = string.format("encyclopedia_creep_thumbs_%04i", t.info.enc_icon)
 			local enemy_thumb_fmt = U.splicing_from_kr(from_kr, f)
+			local pos = v(math.fmod(d - 1, 8) * 47.25 + 35, math.floor((d - 1) / 8) * 47.25 + 140)
+			local seen = screen_map.user_data.seen[GS.encyclopedia_enemies[i]] and true or false
+			local cell = self:create_thumb_cell("creep", seen and enemy_thumb_fmt or thumb_frame_sources.creep.lock, pos)
 
-			self:create_creep(enemy_thumb_fmt, v(math.fmod(d - 1, 8) * 47.25 + 35, math.floor((d - 1) / 8) * 47.25 + 140), i, true)
-		end
-	end
+			self.creep:add_child(cell)
 
-	self.creep:add_child(self.over_sprite)
-
-	self.over_sprite.hidden = true
-	self.over_sprite.anchor = v(self.over_sprite.size.x / 2, self.over_sprite.size.y / 2)
-	self.over_sprite.propagate_on_click = true
-	self.over_sprite.scale = v(0.75, 0.75)
-
-	self.creep:add_child(self.select_sprite2)
-
-	self.select_sprite2.anchor = v(self.select_sprite2.size.x / 2, self.select_sprite2.size.y / 2)
-	self.select_sprite2.hidden = false
-	self.select_sprite2.pos = v(35, 140)
-	self.select_sprite2.scale = v(0.75, 0.75)
-	self.page_buttons = {}
-
-	local total_pages = math.ceil(max_creeps / creeps_per_page)
-	local boffset = 40
-	local bx, by = 192 - 40 * (total_pages - 1) / 2, 530
-
-	for i = 1, total_pages do
-		if i == index then
-			local b = KImageView:new("encyclopedia_pageNbrSelected_000" .. i)
-
-			b.anchor = v(b.size.x / 2, b.size.y / 2)
-			b.pos = v(bx + boffset * (i - 1), by)
-
-			self.creep:add_child(b)
-			table.insert(self.page_buttons, b)
-		else
-			local b = KImageButton:new("encyclopedia_pageNbr_000" .. i, "encyclopedia_pageNbrOver_000" .. i, "encyclopedia_pageNbrSelected_000" .. i)
-
-			b.anchor = v(b.size.x / 2, b.size.y / 2)
-			b.pos = v(bx + boffset * (i - 1), by)
-
-			function b.on_click(this, button, x, y)
-				local this_idx = i
-
-				S:queue("GUIButtonCommon")
-				self:load_creeps(this_idx)
+			if not first_cell then
+				first_cell = cell
 			end
 
-			self.creep:add_child(b)
-			table.insert(self.page_buttons, b)
+			if seen then
+				function cell.on_enter()
+					cell._state = "hover"
+				end
+
+				function cell.on_exit()
+					cell._state = self._selected_cell == cell and "select" or "normal"
+				end
+
+				function cell.on_click()
+					S:queue("GUINotificationPaperOver")
+
+					if self._selected_cell and self._selected_cell ~= cell then
+						self._selected_cell._state = "normal"
+					end
+
+					self._selected_cell = cell
+					cell._state = "select"
+
+					self:detail_creep(i)
+				end
+			end
 		end
 	end
+
+	local total_pages = math.ceil(max_creeps / creeps_per_page)
+
+	self:build_page_bar(self.creep, total_pages, index, function(page)
+		self:load_creeps(page)
+	end)
 
 	local first_creep = GS.encyclopedia_enemies[(index - 1) * creeps_per_page + 1]
 
 	if first_creep and screen_map.user_data.seen[first_creep] then
+		if first_cell then
+			first_cell._state = "select"
+			self._selected_cell = first_cell
+		end
+
 		self:detail_creep((index - 1) * creeps_per_page + 1)
-	else
-		self.select_sprite2.hidden = true
 	end
-end
-
-function EncyclopediaView:create_creep(icon, pos, idx, enabled)
-	if not screen_map.user_data.seen then
-		screen_map.user_data.seen = {}
-	end
-
-	local creep_name = GS.encyclopedia_enemies[idx]
-
-	if screen_map.user_data.seen[creep_name] then
-		local b = KButtonNoText:new()
-
-		b:set_image(icon)
-
-		b.anchor = v(b.size.x / 2, b.size.y / 2)
-		b.pos = pos
-		b.scale = V.v(0.75, 0.75)
-
-		self.creep:add_child(b)
-
-		function b.on_enter()
-			self:update_over_sprite(b.pos)
-		end
-
-		function b.on_exit()
-			self:remove_over_sprite()
-		end
-
-		function b.on_click()
-			S:queue("GUINotificationPaperOver")
-			self:creep_clicked(idx, pos)
-		end
-	else
-		local b = KImageView:new("encyclopedia_creep_thumbs_lock")
-
-		b.scale = V.v(0.75, 0.75)
-		b.anchor = v(b.size.x / 2, b.size.y / 2)
-		b.pos = pos
-
-		self.creep:add_child(b)
-	end
-end
-
-function EncyclopediaView:creep_clicked(idx, pos)
-	self.select_sprite2.hidden = false
-	self.select_sprite2.pos = pos
-
-	self:detail_creep(idx)
 end
 
 function EncyclopediaView:detail_creep(index)
