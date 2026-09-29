@@ -191,6 +191,49 @@ tt.render.sprites[1].z = Z_DECALS
 tt.delayed_play.max_delay = 3
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "play"
+local scripts = require("scripts")
+local km = require("lib.klua.macros")
+local function bullet_crystal_serpent_update(this, store)
+	local b = this.bullet
+	b.ts = store.tick_ts
+	local psf = E:create_entity(b.particles_name)
+	psf.particle_system.track_id = this.id
+	simulation:queue_insert_entity(psf)
+	while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
+		coroutine.yield()
+		local phase = km.clamp(0, 1, (store.tick_ts - b.ts) / b.flight_time)
+		this.pos.x = b.from.x + (b.to.x - b.from.x) * phase
+		this.pos.y = b.from.y + (b.to.y - b.from.y) * phase
+	end
+	psf.particle_system.emit = false
+	local target = store.entities[b.target_id]
+	if target then
+		local psh = E:create_entity("ps_bullet_crystal_serpent_hit")
+		psh.pos.x, psh.pos.y = target.pos.x, target.pos.y + 20
+		psh.particle_system.emit = true
+		simulation:queue_insert_entity(psh)
+		U.y_wait_unconditional(store, fts(7))
+		psh.particle_system.emit = false
+	end
+	local wait_time
+	if target and target.tower and target.tower.can_be_mod and not target.tower.blocked then
+		local m = E:create_entity(b.mod)
+		m.modifier.target_id = b.target_id
+		m.pos.x, m.pos.y = target.pos.x, target.pos.y
+		wait_time = m.modifier.duration
+		simulation:queue_insert_entity(m)
+	end
+	if wait_time then
+		U.y_wait_unconditional(store, wait_time)
+		S:queue("ElvesCrystalSerpentBreakingCrystal")
+		local s = E:create_entity("decal_s09_crystal_debris_mod")
+		s.pos.x, s.pos.y = target.pos.x, target.pos.y
+		U.animation_start_default(s, nil, nil, store.tick_ts)
+		s.tween.ts = store.tick_ts
+		simulation:queue_insert_entity(s)
+	end
+	simulation:queue_remove_entity(this)
+end
 
 tt = E:register_t_hot("bullet_crystal_serpent", "bullet", true)
 tt.render.sprites[1].hidden = true
