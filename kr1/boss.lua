@@ -2495,19 +2495,6 @@ tt.sound_land = "Stage06BossPigLand"
 tt.sound_falling = "Stage06BossPigFalling"
 tt.sound_events.death = "Stage06BossPigDeath"
 
-tt = E:register_t("decal_boss_pig_pool", "decal_scripted")
-E:add_comps(tt, "taunts", "editor")
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].prefix = "GoregrindPoolDef"
-tt.render.sprites[1].name = "sleeping"
-tt.main_script.update = scripts.decal_boss_pig_pool.update
-tt.taunts.delay_min = 10
-tt.taunts.sets = {}
-tt.taunts.sets.from_pool = CC("taunt_set")
-tt.taunts.sets.from_pool.format = "LV06_BOSS_TAUNT_%02i"
-tt.taunts.sets.from_pool.end_idx = 6
-tt.sound_horn = "Stage06BossPigHorn"
-
 tt = E:register_t("decal_boss_pig_flying", "decal")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "GoregrindFlying_asst_goregrind_flying"
@@ -3109,45 +3096,6 @@ tt.check_radius = 150
 tt.check_vis_flags = F_ENEMY
 tt.check_vis_bans = F_BOSS
 
-tt = E:register_t("controller_stage_16_mouth_right", "controller_stage_16_mouth_left")
-tt.render.sprites[1].flip_x = true
-tt.check_pos = v(721, 553)
-
-tt = E:register_t("controller_stage_16_tentacle_left")
-E:add_comps(tt, "editor", "pos", "main_script", "render")
-tt.main_script.update = scripts.controller_stage_16_overseer_tentacle.update
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "overseer_tentacleDef"
-tt.render.sprites[1].name = "idletrapped"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-tt.config = {
-	cooldown = {nil, nil, nil, 40, 30, 20},
-	cooldown_attack_soldiers = {nil, nil, nil, nil, 35, 25}
-}
-tt.shot_delay = fts(24)
-tt.bullet = "bullet_stage_16_overseer_tentacle_spawn"
-tt.spawn_offset = v(90, -130)
-tt.spawn_pos = {v(76, 332), v(218, 424)}
-tt.spawn_path = {1, 2}
-tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_left"
-tt.first_cooldown = 5
-tt.sound_rumble = "Stage16OverseerRumble"
-tt.sound_unchain = "Stage16OverseerUnchainLeftRight"
-tt.sound_spawn = "Stage16OverseerSpawnerCast"
-
-tt = E:register_t("controller_stage_16_tentacle_right", "controller_stage_16_tentacle_left")
-tt.render.sprites[1].flip_x = true
-tt.config = {
-	cooldown = {nil, nil, 45, 45, 35, 25},
-	cooldown_attack_soldiers = {nil, nil, nil, 40, 30, 20}
-}
-tt.is_right = true
-tt.spawn_offset = v(-80, -150)
-tt.spawn_pos = {v(850, 446), v(860, 206)}
-tt.spawn_path = {3, 4}
-tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_right"
-
 tt = E:register_t("bullet_stage_16_overseer_tentacle_spawn", "bomb")
 tt.sound_events.hit_water = nil
 tt.render.sprites[1].name = "overseer_fx_overseer_proyectile"
@@ -3196,41 +3144,6 @@ tt.blink_max_cooldown = 5
 tt.idle_not_damaged = {"anim1", "anim2", "anim3"}
 tt.idle_damaged = {"eyehurttwitch"}
 tt.life_hurt_threshold = 66
-
-tt = E:register_t("controller_stage_16_overseer_eye2", "controller_stage_16_overseer_eye1")
-tt.render.sprites[1].prefix = "overseer_minieye2Def"
-tt.life_hurt_threshold = 33
-
-tt = E:register_t("controller_stage_16_overseer_eye3", "controller_stage_16_overseer_eye1")
-tt.render.sprites[1].prefix = "overseer_minieye3Def"
-tt.life_hurt_threshold = 33
-
-tt = E:register_t("controller_stage_16_overseer_eye4", "controller_stage_16_overseer_eye1")
-tt.render.sprites[1].prefix = "overseer_minieye4Def"
-
-tt = E:register_t("controller_stage_16_tentacle_bottom_left")
-E:add_comps(tt, "editor", "pos", "render", "main_script")
-tt.main_script.update = scripts.controller_stage_16_tentacle_bottom.update
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "overseer_undertent1Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "overseer_underbacktents1Def"
-tt.render.sprites[2].name = "loop"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].z = Z_BACKGROUND_COVERS - 1
-tt.render.sprites[2].offset = v(-140, -350)
-tt.phase_to_free = 4
-tt.sound_rumble = "Stage16OverseerRumble"
-tt.sound_unchain = "Stage16OverseerUnchainDown"
-
-tt = E:register_t("controller_stage_16_tentacle_bottom_right", "controller_stage_16_tentacle_bottom_left")
-tt.render.sprites[1].prefix = "overseer_undertent2Def"
-tt.render.sprites[2].prefix = "overseer_underbacktents2Def"
-tt.render.sprites[2].offset = v(350, -20)
-tt.phase_to_free = 5
 
 tt = E:register_t("boss_spider_queen", "boss")
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
