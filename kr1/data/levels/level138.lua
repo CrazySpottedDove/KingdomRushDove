@@ -44,7 +44,7 @@ while controller_cinematic.last_taunt~=key do
 coroutine.yield()
 end
 end
-if not store.restarted and not main.params.skip_cutscenes then
+if not store.restarted and not main.params.skip_cutscenes and store.main_hero then
 signal.emit("pan-zoom-camera",0,{x=800,y=344},1.8)
 local fly_hero=U.flag_has(store.main_hero.vis.flags,F_FLYING)
 store.main_hero.pos.x=445

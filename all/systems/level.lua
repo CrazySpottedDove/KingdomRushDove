@@ -73,11 +73,21 @@ function level:init_coroutined(store)
 	game.progress = 0.3
 	coroutine.yield()
 
-	-- level:init 紧跟在 E:Load() 后面，保证自定义 store.level.init 中自定义的敌人能够吃到各种数值补丁
+	-- 预加载关卡的 required_templates
+	if store.level.data and store.level.data.required_templates then
+		local groups = store.level.data.required_templates
+		for i = 1, #groups do
+			local module_name = "kr1.template_groups." .. groups[i]
+			require(module_name)
+			package.loaded[module_name] = nil
+		end
+	end
+
+	-- 支持在插件中在 level:init(store) 里面定义关卡独占的模板
 	if store.level.init then
 		store.level:init(store)
-		E:precompile_hot()
 	end
+	E:precompile_hot()
 
 	DI:patch_templates()
 	E:precompute()
@@ -116,9 +126,12 @@ function level:init_coroutined(store)
 	coroutine.yield()
 
 	if store.level.data then
-		store.level.locations = {}
+		if store.level.data.entities_list then
+			store.level.locations = {}
 
-		LU.insert_entities(store, store.level.data.entities_list)
+			LU.insert_entities(store, store.level.data.entities_list)
+		end
+
 		LU.insert_invalid_path_ranges(store, store.level.data.invalid_path_ranges)
 	end
 

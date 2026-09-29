@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_templates={"level31_templates"},required_sounds={"music_stage31","PiratesSounds","SpecialCutTreeSounds"},required_textures={"go_enemies_desert","go_stages_desert","go_stage31","go_stage31_bg"}}

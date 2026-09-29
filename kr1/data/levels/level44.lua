@@ -8,17 +8,8 @@ local P=require("path_db")
 local signal=require("lib.hump.signal")
 require("all.constants")
 local level={}
-level.required_sounds={"music_stage44","RisingTidesSounds","SpecialMermaid"}
-level.required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage44","go_stage44_bg"}
 function level:init(store)
-local E=require("entity_db")
 local LU=require("level_utils")
-require("all.constants")
-require("lib.klua.table")
-local tt
-tt=E:register_t_hot("decal_water_barricade","decal",true)
-tt.render.sprites[1].prefix="decal_water_barricade"
-tt.render.sprites[1].name="idle"
 store.level_terrain_style=TERRAIN_STYLE_BEACH
 self.locations=LU.load_locations(store,self)
 self.locked_hero=false

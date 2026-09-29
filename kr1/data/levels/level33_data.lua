@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_templates={"level33_templates"},required_sounds={"music_stage33","FrontiersJungleAmbienceSounds","AmazonSounds","SpecialCutTreeSounds"},required_textures={"go_enemies_jungle","go_stages_jungle","go_stage33","go_stage33_bg","go_stage36"},show_comic_idx=11}

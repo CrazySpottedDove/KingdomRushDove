@@ -43,7 +43,7 @@ break
 end
 U.mark_seen(store,"controller_stage_39_boss")
 end
-if not store.restarted and not main.params.skip_cutscenes then
+if not store.restarted and not main.params.skip_cutscenes and store.main_hero then
 local fly_hero=U.flag_has(store.main_hero.vis.flags,F_FLYING)
 store.main_hero.render.sprites[1].flip_x=true
 signal.emit("show-curtains")

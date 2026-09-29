@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_templates={"level29_templates"},required_sounds={"music_stage29","SpecialBanthaSounds","SpecialFrog","SpecialTusken"},required_textures={"go_enemies_desert","go_stages_desert","go_stage29","go_stage29_bg"}}

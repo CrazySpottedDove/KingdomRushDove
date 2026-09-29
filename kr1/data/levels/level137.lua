@@ -39,7 +39,7 @@ while controller_boss_prefight.last_taunt~=key do
 coroutine.yield()
 end
 end
-if not store.restarted and not main.params.skip_cutscenes then
+if not store.restarted and not main.params.skip_cutscenes and store.main_hero then
 store.main_hero.nav_grid.waypoints={}
 local hero_path=1
 local hero_subpath=1

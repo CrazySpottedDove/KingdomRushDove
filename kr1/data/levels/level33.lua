@@ -14,18 +14,8 @@ return v/FPS
 end
 local v=V.v
 local level={}
-level.required_sounds={"music_stage33","FrontiersJungleAmbienceSounds","AmazonSounds","SpecialCutTreeSounds"}
-level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage33","go_stage33_bg","go_stage36"}
-level.show_comic_idx=11
 function level:init(store)
-local E=require("entity_db")
 local LU=require("level_utils")
-require("all.constants")
-require("lib.klua.table")
-local tt
-tt=E:register_t_hot("decal_lumberjack_shaman","decal",true)
-tt.render.sprites[1].prefix="lumberjack_shaman"
-tt.render.sprites[1].anchor.y=0.18
 store.level_terrain_style=TERRAIN_STYLE_JUNGLE
 self.locations=LU.load_locations(store,self)
 if store.level_mode==GAME_MODE_CAMPAIGN then

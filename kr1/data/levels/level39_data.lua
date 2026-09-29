@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_templates={"level39_templates"},required_sounds={"music_stage39","FrontiersUndergroundAmbienceSounds","SpecialBlackDragon"},required_textures={"go_enemies_underground","go_stages_underground","go_stage39","go_stage39_bg"}}

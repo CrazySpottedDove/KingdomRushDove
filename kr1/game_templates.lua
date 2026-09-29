@@ -5583,21 +5583,6 @@ tt.render.sprites[1].name = "fx_power_thunder_rain_splash"
 tt = RT("decal_water_sparks", "decal_loop")
 tt.render.sprites[1].name = "decal_water_sparks_idle"
 
-tt = RT("decal_water_sparks_small", "decal_loop")
-tt.render.sprites[1].name = "decal_water_sparks_idle"
-tt.render.sprites[1].scale = vec_2(0.6, 0.6)
-
-tt = RT("decal_jumping_fish", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_elves_fish"
-tt.render.sprites[1].name = "jump"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.delayed_play.min_delay = 5
-tt.delayed_play.max_delay = 10
-tt.delayed_play.flip_chance = 0.5
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "jump"
-
 tt = RT("decal_water_wave_delayed_2", "decal_delayed_play")
 tt.render.sprites[1].prefix = "decal_water_wave_2"
 tt.render.sprites[1].name = "play"
@@ -5612,23 +5597,6 @@ tt.render.sprites[1].name = "decal_water_wave_1_play"
 
 tt = RT("decal_water_wave_2", "decal_loop")
 tt.render.sprites[1].name = "decal_water_wave_2_play"
-
-tt = RT("decal_water_wave_3", "decal_loop")
-tt.render.sprites[1].name = "decal_water_wave_3_play"
-
-tt = RT("decal_water_wave_4", "decal_loop")
-tt.render.sprites[1].name = "decal_water_wave_4_play"
-
-tt = RT("decal_water_splash", "decal_loop")
-tt.render.sprites[1].name = "decal_water_splash_play"
-
-tt = RT("decal_stage01_gandalf", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_gandalf"
-tt.render.sprites[1].name = "idle"
-tt.delayed_play.min_delay = 5
-tt.delayed_play.max_delay = 15
-tt.delayed_play.idle_animation = "idle"
-tt.delayed_play.play_animation = "smoke"
 
 tt = RT("decal_stage01_bird1", "decal_delayed_play")
 AC(tt, "tween")
@@ -5652,35 +5620,12 @@ tt.batch_count = 2
 tt.batch_delay = {1, 5}
 tt.fly_speed = 116
 
-tt = RT("decal_stage_02_waterfall_1", "decal")
-tt.render.sprites[1].name = "decal_stage_02_waterfall_1_idle"
-
-tt = RT("decal_stage_02_waterfall_2", "decal")
-tt.render.sprites[1].name = "decal_stage_02_waterfall_2_idle"
-
-tt = RT("decal_stage_02_waterfall_3", "decal")
-tt.render.sprites[1].name = "decal_stage_02_waterfall_3_idle"
-
-tt = RT("decal_stage_02_waterfall_4", "decal")
-tt.render.sprites[1].name = "decal_stage_02_waterfall_4_idle"
-
-tt = RT("decal_stage_02_bigwaves", "decal")
-tt.render.sprites[1].name = "decal_stage_02_bigwaves_idle"
-
 for i = 1, 6 do
 
 	tt = RT("decal_stage_02_stone_" .. i, "decal")
 	tt.render.sprites[1].name = "stage2_stones_000" .. i
 	tt.render.sprites[1].animated = false
 end
-
-tt = RT("decal_stage_02_bridge_mask", "decal")
-tt.render.sprites[1].name = "stage2_bridge"
-tt.render.sprites[1].animated = false
-
-tt = RT("decal_stage_02_bridge_shadows", "decal")
-tt.render.sprites[1].name = "stage2_shadows"
-tt.render.sprites[1].animated = false
 
 tt = RT("decal_bambi", "decal_scripted")
 AC(tt, "ui", "motion")
@@ -5705,39 +5650,6 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
 tt.tween.ts = 0
 tt.ani_sequence = {{"ears", 5, 15}, {"popout", 1, 3, "hide1"}, {"travel1", 1, 3, "hide2"}, {"travel2", 1.5, 3, "hide3"}, {"travel3", 1, 3, "hide1"}, {"hide1"}, {nil, 10, 20}}
-
-tt = RT("decal_s03_bridge", "decal_static")
-AC(tt, "ui")
-tt.ui.click_rect = r(-83, -48, 166, 96)
-tt.ui.can_select = false
-tt.render.sprites[1].name = "stage3_bridge"
-tt.render.sprites[1].z = Z_DECALS + 2
-tt.render.sprites[1].sort_y_offset = 48
-
-tt = RT("decal_crane", "decal_scripted")
-AC(tt, "ui")
-tt.render.sprites[1].prefix = "decal_crane"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "decal_crane_fx"
-tt.render.sprites[2].draw_order = -1
-tt.ui.click_rect = r(-20, -40, 40, 40)
-tt.ui.can_select = false
-tt.main_script.update = scripts.decal_crane.update
-tt.play_animation = "play"
-tt.click_animation = "click"
-tt.final_click_animation = "final_click"
-tt.play_time = {10, 45}
-tt.final_clicks = {3, 6}
-
-tt = RT("river_object_controller")
-AC(tt, "main_script")
-tt.main_script.update = scripts.river_object_controller.update
-tt.river_objects = {"barrel", "barrel", "chest", "wilson", "submarine"}
-tt.min_time = 12
-tt.max_time = 24
-tt.max_chests = 3
-tt.max_hobbits = 13
 
 tt = RT("decal_river_object", "decal_scripted")
 AC(tt, "nav_path", "motion", "ui", "tween", "sound_events")
@@ -5796,130 +5708,10 @@ tt.render.sprites[1].sort_y_offset = -1
 tt.render.sprites[1].z = Z_OBJECTS
 tt.sound_events.insert = "ElvesWaterfallMid"
 
-tt = RT("decal_s04_land_1", "decal_background")
-AC(tt, "tween")
-tt.render.sprites[1].name = "Stage04_0003"
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.editor.game_mode = 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-
-tt = RT("decal_s04_land_2", "decal_s04_land_1")
-tt.render.sprites[1].name = "Stage04_0004"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = RT("decal_s04_tree_burn", "decal_timed")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "decal_s04_tree_burn"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0
-tt.render.sprites[1].scale = vec_2(1, 1)
--- tt.timed.disabled = true
-tt.timed.runs = INT_32_MAX
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-
-tt = RT("decal_s04_charcoal_1", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage4_fire_decal_0001"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = vec_2(1, 1)
-tt.render.sprites[1].z = Z_BACKGROUND + 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.4, 255}, {1.7, 0}}
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-
-tt = RT("decal_s04_charcoal_2", "decal_s04_charcoal_1")
-tt.render.sprites[1].name = "stage4_fire_decal_0002"
-
-tt = RT("decal_s04_charcoal_3", "decal_s04_charcoal_1")
-tt.render.sprites[1].name = "stage4_fire_decal_0003"
-
 tt = RT("decal_gnoll_burner", "decal")
 tt.render.sprites[1].anchor = vec_2(0.5, 0.21428571428571427)
 tt.render.sprites[1].prefix = "gnoll_burner"
 tt.render.sprites[1].name = "idle"
-
-tt = RT("fx_torch_gnoll_burner_explosion_stage04", "fx")
-tt.render.sprites[1].name = "fx_torch_gnoll_burner_explosion_stage04"
-
-tt = RT("fx_s04_tree_fire_1", "decal_timed")
-AC(tt, "editor")
--- tt.timed.disabled = true
-tt.timed.runs = INT_32_MAX
-tt.render.sprites[1].name = "fx_s04_tree_fire_1"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_EFFECTS
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-tt.editor.overrides = {
-	["render.sprites[1].hidden"] = false,
-	["render.sprites[1].loop"] = true
-}
-
-tt = RT("fx_s04_tree_fire_2", "fx_s04_tree_fire_1")
-tt.render.sprites[1].name = "fx_s04_tree_fire_2"
-
-tt = RT("decal_george_jungle", "decal_scripted")
-AC(tt, "ui", "tween")
-tt.main_script.update = scripts.decal_george_jungle.update
-tt.render.sprites[1].anchor.y = 1
-tt.render.sprites[1].prefix = "decal_george_jungle_liana"
-tt.render.sprites[1].r = 50 * math.pi / 180
-tt.render.sprites[1].offset = vec_2(768, 830)
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "decal_george_jungle"
-tt.render.sprites[2].name = "fall"
-tt.render.sprites[2].hidden = true
-tt.render.sprites[2].offset = vec_2(566, 457)
-tt.render.sprites[2].sort_y = 343
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].prefix = "decal_george_jungle_bush"
-tt.render.sprites[3].name = "idle"
-tt.render.sprites[3].anchor.y = 0
-tt.render.sprites[3].offset = vec_2(553, 296)
-tt.render.sprites[3].sort_y = 296
-tt.final_clicks = {3, 5}
-tt.play_time = {3, 5}
-tt.ui.click_rect = r(0, 0, 200, 120)
-tt.ui.can_select = false
-tt.tween.remove = false
-tt.tween.disabled = true
-tt.tween.props[1].name = "r"
-tt.tween.props[1].keys = {{0, 50 * math.pi / 180}, {0.3, 0}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].name = "offset"
-tt.tween.props[2].keys = {{0, v(0, 0)}, {0.3, v(0, 0)}}
-tt.achievement = "GEORGE_FALL"
-
-tt = RT("decal_tree_ewok", "decal_scripted")
-AC(tt, "motion", "nav_path", "ranged", "unit")
-tt.main_script.update = scripts.decal_tree_ewok.update
-tt.render.sprites[1].anchor.y = 0.08333333333333333
-tt.render.sprites[1].prefix = "decal_tree_ewok"
-tt.ranged.attacks[1].min_range = 150
-tt.ranged.attacks[1].max_range = 300
-tt.ranged.attacks[1].bullet = "spear_tree_ewok"
-tt.ranged.attacks[1].shoot_time = fts(7)
-tt.ranged.attacks[1].cooldown = 1
-tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 15)}
-tt.wait_time = 5
-tt.dance_animations = {"dance1", "dance2"}
-tt.ranged_center = vec_2(550, 380)
-tt.motion.max_speed = 45
-
-tt = RT("spear_tree_ewok", "arrow")
-tt.bullet.damage_max = 10
-tt.bullet.hit_chance = 0.4
-tt.bullet.miss_decal = "ewok_2_proy_0002"
-tt.bullet.flight_time = fts(33)
-tt.render.sprites[1].name = "ewok_2_proy_0001"
-tt.sound_events.insert = "AxeSound"
 
 tt = RT("tower_ewok_holder")
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor")
@@ -5936,65 +5728,6 @@ tt.render.sprites[2].name = "ewok_hut_0001"
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = vec_2(0, 32)
 tt.ui.click_rect = r(-40, -10, 80, 90)
-
-tt = RT("decal_s05_tree_round", "decal")
-tt.render.sprites[1].name = "stage5_tree"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.13953488372093023
-
-tt = RT("decal_s05_tree_pine", "decal")
-tt.render.sprites[1].name = "stage5_pine"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.08333333333333333
-
-tt = RT("decal_bush_statue", "decal_scripted")
-AC(tt, "ui")
-tt.main_script.insert = scripts.decal_bush_statue.insert
-tt.main_script.update = scripts.decal_bush_statue.update
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage5_bushes_0001"
-tt.render.sprites[1].anchor.y = 0.1744186046511628
-tt.bush_frame_prefix = "stage5_bushes_"
-tt.bush_frames = {"0001", "0002", "0003", "0004", "0005", "0006", "0007"}
-tt.ui.click_rect = r(-40, 0, 80, 66)
-tt.ui.can_select = false
-
-tt = RT("fx_bush_statue_click", "fx")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "fx_bush_statue_click"
-tt.render.sprites[1].offset.y = 34
-tt.sound_events.insert = "ElvesAchievementScissorFingers"
-
-tt = RT("decal_s06_eagle", "decal_delayed_sequence")
-AC(tt, "editor")
-tt.delayed_sequence.animations = {"1", "2", "3", "4"}
-tt.delayed_sequence.random = true
-tt.delayed_sequence.max_delay = 3
-tt.render.sprites[1].prefix = "decal_s06_eagle"
-tt.render.sprites[1].name = "1"
-tt.render.sprites[1].z = Z_OBJECTS + 1
-
-tt = RT("decal_s06_boxed_boss", "decal_delayed_play")
-tt.delayed_play.min_delay = 5
-tt.delayed_play.min_delay = 10
-tt.render.sprites[1].prefix = "decal_s06_boxed_boss_l1"
-tt.render.sprites[1].z = Z_OBJECTS + 1
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "decal_s06_boxed_boss_l2"
-tt.render.sprites[2].z = Z_OBJECTS + 1
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].prefix = "decal_s06_boxed_boss_l3"
-tt.render.sprites[3].z = Z_OBJECTS + 1
-
-tt = RT("decal_s06_jailed_boss", "decal")
-for i = 1, 6 do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "decal_s06_jailed_boss_l" .. i
-	tt.render.sprites[i].name = "walk"
-	tt.render.sprites[i].anchor.y = 0.26373626373626374
-end
-
-tt.render.sprites[6].sort_y_offset = -10
 
 tt = RT("soldier_gryphon_guard", "soldier_barrack_1")
 AC(tt, "ranged")
@@ -6054,50 +5787,6 @@ tt.hidden_max = 3
 tt.hidden_min = 1
 tt.idle_time_to_hide = 5
 
-tt = RT("decal_gryphon", "decal_scripted")
-AC(tt, "attacks", "ui", "sound_events")
-tt.attacks.list[1] = CC("bullet_attack")
-tt.attacks.list[1].cooldown = fts(3)
-tt.attacks.list[1].bullet = "bullet_gryphon"
-tt.attacks.list[1].loops = 3
-tt.attacks.list[1].bullet_start_offset = vec_2(102, -22)
-tt.main_script.update = scripts.decal_gryphon.update
-tt.render.sprites[1].prefix = "gryphon_l1"
-tt.render.sprites[1].z = Z_BULLETS
-tt.render.sprites[1].group = "layers"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "gryphon_l2"
-tt.render.sprites[2].z = Z_BULLETS
-tt.render.sprites[2].group = "layers"
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].animated = false
-tt.render.sprites[3].name = "ally_gryphon_0000"
-tt.render.sprites[3].alpha = 60
-tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].hidden = true
-tt.render.sprites[4].loop = false
-tt.render.sprites[4].name = "gryphon_attack_flash"
-tt.ui.click_rect = r(-40, -106, 80, 100)
-tt.ui.can_select = false
-tt.custom = {
-	left = {},
-	right = {}
-}
-tt.custom.left.initial_duration = 4.6
-tt.custom.left.default_duration = 4
-tt.custom.left.approach_duration = 0.7
-tt.custom.left.attack_ranges = {{-50, 500}}
-tt.custom.left.initial_curve_id = 5
-tt.custom.left.default_curve_id = 6
-tt.custom.left.land_curve_id = 7
-tt.custom.right.initial_duration = 5
-tt.custom.right.default_duration = 4.5
-tt.custom.right.approach_duration = 0.7
-tt.custom.right.attack_ranges = {{1050, 750}, {600, 200}}
-tt.custom.right.initial_curve_id = 8
-tt.custom.right.default_curve_id = 9
-tt.custom.right.land_curve_id = 10
-
 tt = RT("bullet_gryphon", "bullet")
 tt.main_script.update = scripts.bullet_gryphon.update
 tt.render.sprites[1].name = "bolt_gryphon_travel"
@@ -6129,21 +5818,6 @@ tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_2(0.75, 0.75)}, {fts(4), vec_2(1.075, 1.075)}, {fts(7), vec_2(0.96, 0.96)}, {fts(9), vec_2(1, 1)}}
-
-tt = RT("gryphon_controller")
-AC(tt, "main_script")
-tt.main_script.update = scripts.gryphon_controller.update
-
-tt = RT("decal_obelix", "decal_delayed_click_play")
-tt.render.sprites[1].prefix = "decal_obelix"
-tt.ui.click_rect = r(-50, -40, 100, 80)
-tt.ui.can_select = false
-tt.delayed_play.min_delay = 2
-tt.delayed_play.max_delay = 3
-tt.delayed_play.clicked_animation = "eat"
-tt.delayed_play.clicked_sound = "ElvesObelix"
-tt.delayed_play.play_animation = "hammer"
-tt.delayed_play.required_clicks = 1
 
 for i = 1, 4 do
 
@@ -6177,55 +5851,6 @@ for i = 5, 10 do
 	tt.delayed_play.idle_animation = nil
 end
 
-tt = RT("decal_s08_magic_bean", "decal_scripted")
-AC(tt, "ui")
-tt.achievement_id = "BEANS"
-tt.main_script.update = scripts.decal_s08_magic_bean.update
-tt.ui.click_rect = r(-25, -25, 50, 50)
-tt.ui.can_select = false
-tt.reward_gold = 150
-tt.reward_fx = "fx_coin_jump"
-
-for i = 1, 5 do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "decal_s08_magic_bean_l" .. i
-	tt.render.sprites[i].name = "step1"
-	tt.render.sprites[i].loop = false
-	tt.render.sprites[i].anchor.y = 0.1076923076923077
-end
-
-tt = RT("decal_s08_peekaboo", "decal_scripted")
-AC(tt, "ui")
-tt.main_script.update = scripts.decal_s08_peakaboo.update
-tt.render.sprites[1].name = "out"
-tt.ui.click_rect = r(-30, -25, 60, 50)
-tt.ui.can_select = false
-tt.sound = "ElvesPeekaboo"
-
-tt = RT("decal_s08_peekaboo_wolf", "decal_s08_peekaboo")
-tt.render.sprites[1].prefix = "decal_s08_peekaboo_wolf"
-tt.achievement_flag = {"PEEKABOO", 1}
-
-tt = RT("decal_s08_peekaboo_rrh", "decal_s08_peekaboo")
-tt.render.sprites[1].prefix = "decal_s08_peekaboo_rrh"
-tt.achievement_flag = {"PEEKABOO", 2}
-
-tt = RT("decal_s08_peekaboo_pork", "decal_s08_peekaboo")
-tt.render.sprites[1].prefix = "decal_s08_peekaboo_pork"
-tt.achievement_flag = {"PEEKABOO", 4}
-
-tt = RT("decal_s08_hansel_gretel", "decal_scripted")
-AC(tt, "ui")
-tt.main_script.update = scripts.decal_s08_hansel_gretel.update
-tt.ui.click_rect = r(-70, -60, 140, 120)
-tt.ui.can_select = false
-tt.render.sprites[1].name = "stage10_witchHouse_layer1_0001"
-tt.render.sprites[1].animated = false
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "decal_s08_hansel_gretel_door"
-tt.render.sprites[2].name = "close"
-tt.render.sprites[2].loop = false
-
 tt = RT("decal_s08_witch", "decal_scripted")
 AC(tt, "ui", "motion")
 tt.render.sprites[1].prefix = "decal_s08_witch"
@@ -6246,49 +5871,6 @@ tt.tween.props[2].keys = {{0, vec_2(47, -46)}, {fts(37), vec_2(182, -58)}}
 tt = RT("decal_s08_gretel", "decal_s08_hansel")
 tt.render.sprites[1].name = "decal_s08_gretel_walk"
 tt.tween.props[2].keys = {{0, vec_2(31, -44)}, {fts(37), vec_2(166, -56)}}
-
-tt = RT("aura_waterfall_entrance", "aura")
-tt.main_script.update = scripts.aura_waterfall_entrance.update
-tt.show_fx = "fx_waterfall_splash"
-
-tt = RT("decal_s09_land_3", "decal_background")
-AC(tt, "tween")
-tt.render.sprites[1].name = "Stage09_0002"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt.editor.game_mode = 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{fts(9), 255}, {fts(18), 0}}
-
-tt = RT("decal_s09_land_2", "decal_s09_land_3")
-tt.render.sprites[1].name = "Stage09_0003"
-
-tt = RT("decal_s09_land_1", "decal_s09_land_3")
-tt.render.sprites[1].name = "Stage09_0004"
-
-tt = RT("decal_s09_crystal_1", "decal_timed")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "decal_s09_crystal_1"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.3941176470588235
-tt.render.sprites[1].scale = vec_2(1, 1)
--- tt.timed.disabled = true
-tt.timed.runs = INT_32_MAX
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-tt.debris_pos = vec_2(-5, 1)
-
-tt = RT("decal_s09_crystal_2", "decal_s09_crystal_1")
-tt.render.sprites[1].prefix = "decal_s09_crystal_2"
-tt.debris_pos = vec_2(9, 4)
-
-tt = RT("decal_s09_crystal_3", "decal_s09_crystal_1")
-tt.render.sprites[1].prefix = "decal_s09_crystal_3"
-tt.debris_pos = vec_2(9, -5)
-
-tt = RT("decal_s09_crystal_4", "decal_s09_crystal_1")
-tt.render.sprites[1].prefix = "decal_s09_crystal_4"
-tt.debris_pos = vec_2(-6, 6)
 
 tt = RT("decal_s09_crystal_debris", "decal_tween")
 tt.render.sprites[1].name = "decal_s09_crystal_debris_1"
@@ -6333,32 +5915,6 @@ tt = RT("decal_s09_crystal_debris_mod", "decal_s09_crystal_debris")
 tt.render.sprites[3].sort_y_offset = 1
 tt.render.sprites[4].sort_y_offset = 1
 
-tt = RT("decal_s09_crystal_serpent_back", "decal_tween")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "crystal_serpent_appear"
-tt.render.sprites[1].loop = false
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(80), vec_2(0, 0)}, {fts(114), vec_2(0, 0)}}
-tt.sound_events.insert = "ElvesCrystalSerpentPassby"
-
-tt = RT("decal_s09_crystal_serpent_attack", "decal_scripted")
-tt.render.sprites[1].prefix = "crystal_serpent"
-tt.main_script.update = scripts.decal_s09_crystal_serpent_attack.update
-
-tt = RT("decal_s09_crystal_serpent_scream", "decal_s09_crystal_serpent_attack")
-tt.main_script.update = scripts.decal_s09_crystal_serpent_scream.update
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].hidden = true
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[3].hidden = true
-
-tt = RT("bullet_crystal_serpent", "bullet")
-tt.render.sprites[1].hidden = true
-tt.bullet.mod = "mod_crystal_serpent"
-tt.bullet.flight_time = fts(17)
-tt.bullet.particles_name = "ps_bullet_crystal_serpent_fly"
-tt.main_script.update = scripts.bullet_crystal_serpent.update
-
 tt = RT("mod_crystal_serpent", "modifier")
 AC(tt, "render")
 tt.main_script.update = scripts.mod_tower_block.update
@@ -6393,44 +5949,10 @@ tt.particle_system.scale_var = {1, 1.3}
 tt.particle_system.scales_x = {0.2, 1, 1.15}
 tt.particle_system.scales_y = {0.2, 1, 1.15}
 
-tt = RT("decal_s09_waterfall", "decal_scripted")
-tt.render.sprites[1].name = "decal_s09_waterfall_lines1"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "decal_s09_waterfall_lines2"
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].name = "decal_s09_waterfall_top"
-tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].name = "decal_s09_waterfall_bottom"
-
-tt = RT("decal_crystal_water_waves2", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_water_wave_2"
-tt.render.sprites[1].name = "play"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_DECALS
-tt.delayed_play.max_delay = 3
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "play"
-
 tt = RT("decal_faerie_dragon_freeze_enemy", "decal_freeze_enemy")
 tt.shader_args = {
 	tint_color = {0.9725490196078431, 0.6627450980392157, 0.9882352941176471, 1}
 }
-
-tt = RT("decal_s10_gnome", "decal_scripted")
-AC(tt, "ui")
-tt.ui.click_rect = r(-23, -19, 46, 38)
-tt.ui.can_select = false
-tt.render.sprites[1].prefix = "decal_s10_gnome"
-tt.render.sprites[1].anchor.y = 0.23684210526315788
-tt.main_script.update = scripts.decal_s10_gnome.update
-tt.min_delay = 5
-tt.max_delay = 20
-tt.gnome_actions = {"guitar", "diamond", "sleep", "teleport", "flip"}
-
-tt = RT("decal_s10_gnome_walking", "decal_s10_gnome")
-tt.walk_time = 1.5
-
-table.insert(tt.gnome_actions, "walk")
 
 tt = RT("decal_faerie_crystal", "decal_scripted")
 AC(tt, "tween")
@@ -6481,65 +6003,6 @@ tt.tween.props[1].keys = {{0, vec_1(1)}, {fts(10), vec_1(0.8)}, {fts(20), vec_1(
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 
-tt = RT("simon_controller")
-AC(tt, "main_script")
-tt.main_script.update = scripts.simon_controller.update
-tt.initial_sequence_length = 4
-tt.reward_base = 25
-tt.reward_inc = 15
-tt.achievement_id = "SIMON"
-tt.achievement_count = 9
-
-tt = RT("simon_mushroom_1", "decal_tween")
-AC(tt, "ui", "sound_events")
-tt.ui.click_rect = r(-20, 10, 40, 30)
-tt.ui.can_select = false
-tt.render.sprites[1].name = "stage8_symon_fungus1_0001"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].name = "stage8_symon_fungus1_0002"
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[3].name = "stage8_symon_fungus1_0003"
-tt.tween.props[1].keys = {{0, 0}}
-tt.tween.props[1].sprite_id = 2
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].keys = {{0, 0}}
-tt.tween.props[2].sprite_id = 3
-tt.tween.remove = false
-tt.sound_events.touch = "ElvesSimonYellow"
-
-tt = RT("simon_mushroom_2", "simon_mushroom_1")
-tt.render.sprites[1].name = "stage8_symon_fungus2_0001"
-tt.render.sprites[2].name = "stage8_symon_fungus2_0002"
-tt.render.sprites[3].name = "stage8_symon_fungus2_0003"
-tt.sound_events.touch = "ElvesSimonGreen"
-
-tt = RT("simon_mushroom_3", "simon_mushroom_1")
-tt.render.sprites[1].name = "stage8_symon_fungus3_0001"
-tt.render.sprites[2].name = "stage8_symon_fungus3_0002"
-tt.render.sprites[3].name = "stage8_symon_fungus3_0003"
-tt.sound_events.touch = "ElvesSimonRed"
-
-tt = RT("simon_mushroom_4", "simon_mushroom_1")
-tt.render.sprites[1].name = "stage8_symon_fungus4_0001"
-tt.render.sprites[2].name = "stage8_symon_fungus4_0002"
-tt.render.sprites[3].name = "stage8_symon_fungus4_0003"
-tt.sound_events.touch = "ElvesSimonBlue"
-
-tt = RT("simon_gnome_mushrooom_glow", "decal_tween")
-AC(tt, "ui")
-tt.ui.can_select = false
-tt.ui.click_rect = r(-20, -20, 40, 50)
-tt.render.sprites[1].name = "stage8_symon_bigGlow"
-tt.render.sprites[1].animated = false
-tt.tween.props[1].keys = {{0, 0}}
-tt.tween.remove = false
-
-tt = RT("simon_gnome", "decal")
-tt.render.sprites[1].prefix = "simon_gnome"
-tt.render.sprites[1].sort_y_offset = -38
-
 tt = RT("simon_gnome_fx", "fx")
 tt.render.sprites[1].name = "simon_gnome_fx"
 
@@ -6547,72 +6010,9 @@ tt = RT("simon_gnome_sign", "fx")
 tt.render.sprites[1].name = "simon_gnome_sign"
 tt.render.sprites[1].offset = vec_2(30, 15)
 
-tt = RT("decal_drow_queen_portal", "decal_scripted")
-AC(tt, "editor", "tween")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage11_portal_0001"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].name = "stage11_portal_0002"
-tt.render.sprites[2].alpha = 0
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[3].name = "stage11_portal_0003"
-tt.render.sprites[4] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[4].name = "stage11_portal_0004"
-tt.main_script.update = scripts.decal_drow_queen_portal.update
-tt.spawn_offsets = {vec_2(0, 0), vec_2(0, -20), vec_2(0, 20)}
-tt.tween.disabled = true
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}
-tt.tween.props[1].sprite_id = 2
-tt.tween.props[2] = table.deepclone(tt.tween.props[1])
-tt.tween.props[2].sprite_id = 3
-tt.tween.props[3] = table.deepclone(tt.tween.props[1])
-tt.tween.props[3].sprite_id = 4
-tt.tween.props[4] = CC("tween_prop")
-tt.tween.props[4].sprite_id = 4
-tt.tween.props[4].name = "scale"
-tt.tween.props[4].keys = {{0, vec_1(1)}, {fts(23), vec_1(1.2)}}
-tt.tween.props[4].loop = true
-tt.tween.props[4].ignore_reverse = true
-
 tt = RT("fx_drow_queen_portal", "fx")
 tt.render.sprites[1].name = "fx_drow_queen_portal"
 tt.render.sprites[1].anchor.y = 0.22
-
-tt = RT("decal_s11_door_glow", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage11_doorGlow"
-tt.render.sprites[1].alpha = 0
-tt.render.sprites[1].sort_y_offset = -30
-tt.tween.disabled = true
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 100}, {0.3, 200}, {0.6, 130}, {0.9, 255}, {1.2, 100}}
-tt.tween.props[1].loop = true
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].keys = {{0, 0}, {0.5, 1}, {4.8, 1}, {6, 0}}
-tt.tween.props[2].multiply = true
-tt.editor.tag = 1
-tt.editor.props = {{"editor.tag", PT_NUMBER}}
-tt.editor.overrides = {
-	["render.sprites[1].alpha"] = 255
-}
-
-tt = RT("decal_s11_zealot_rune", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].alpha = 0
-tt.render.sprites[1].offset = vec_2(-40, 0)
-tt.render.sprites[1].name = "stage11_zealotRune"
-tt.tween.remove = false
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}}
-tt.editor.tag = 1
-tt.editor.props = {{"editor.tag", PT_NUMBER}}
-tt.editor.overrides = {
-	["render.sprites[1].alpha"] = 255
-}
 
 tt = RT("decal_s11_mactans", "decal")
 tt.render.sprites[1].prefix = "mactans"
@@ -6669,25 +6069,6 @@ tt.tween.remove = false
 tt.tween.props[1].name = "offset"
 tt.tween.props[1].keys = {{0, vec_2(0, 1)}, {fts(20), vec_2(0, 2)}, {fts(40), vec_2(0, 1)}, {fts(60), vec_2(0, 0)}, {fts(80), vec_2(0, 1)}}
 tt.tween.props[1].loop = true
-
-tt = RT("decal_s12_lemur", "decal_scripted")
-AC(tt, "nav_path", "motion", "tween", "ui")
-tt.render.sprites[1].prefix = "decal_s12_lemur"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.13333333333333333
-tt.render.sprites[1].alpha = 0
-tt.motion.max_speed = 60
-tt.achievement = "LIKE_TO_MOVE_IT"
-tt.action_ni = 12
-tt.fade_ni = 18
-tt.wait_time = {5, 10}
-tt.show_time = {1, 3}
-tt.tween.remove = false
-tt.tween.reverse = true
-tt.tween.ts = -1
-tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
-tt.main_script.update = scripts.decal_s12_lemur.update
-tt.ui.click_rect = r(-15, 0, 30, 30)
 
 tt = RT("birds_formation_controller")
 AC(tt, "main_script")
@@ -6759,40 +6140,6 @@ tt.fx_end = "fx_teleport_metropolis"
 tt = RT("fx_teleport_metropolis", "fx")
 tt.render.sprites[1].name = "fx_teleport_metropolis"
 tt.render.sprites[1].size_scales = {vec_1(0.83), vec_1(1), vec_1(1.5)}
-
-tt = RT("decal_s13_relic_book", "decal_delayed_click_play")
-AC(tt, "tween")
-tt.render.sprites[1].prefix = "decal_s13_relic_book"
-tt.ui.click_rect = r(-20, -30, 40, 30)
-tt.delayed_play.min_delay = 3
-tt.delayed_play.max_delay = 6
-tt.delayed_play.required_clicks = 1
-tt.delayed_play.achievement_flag = {"SORCERERS_APPRENTICE", 1}
-tt.delayed_play.play_once = true
-tt.delayed_play.clicked_sound = "ElvesAchievementSorcapprenticeBook"
-tt.tween.remove = false
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].loop = true
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(20), vec_2(0, 1)}, {fts(60), vec_2(0, -1)}, {fts(80), vec_2(0, 0)}}
-
-tt = RT("decal_s13_relic_broom", "decal_click_play")
-tt.render.sprites[1].prefix = "decal_s13_relic_broom"
-tt.ui.click_rect = r(24, 0, 40, 50)
-tt.click_play.achievement_flag = {"SORCERERS_APPRENTICE", 2}
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "ElvesAchievementSorcapprenticeBroom"
-
-tt = RT("decal_s13_relic_hat", "decal_click_play")
-AC(tt, "tween")
-tt.render.sprites[1].prefix = "decal_s13_relic_hat"
-tt.ui.click_rect = r(-20, -40, 40, 30)
-tt.tween.remove = false
-tt.tween.props[1].loop = true
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(20), vec_2(0, 1)}, {fts(60), vec_2(0, -1)}, {fts(80), vec_2(0, 0)}}
-tt.click_play.achievement_flag = {"SORCERERS_APPRENTICE", 4}
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "ElvesAchievementSorcapprenticeHat"
 
 tt = RT("tower_black_baby_dragon", "tower")
 AC(tt, "attacks", "user_selection")
@@ -6935,19 +6282,6 @@ tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 
-tt = RT("decal_s14_break_egg", "decal_scripted")
-AC(tt, "ui", "click_play", "tween")
-tt.render.sprites[1].prefix = "decal_s14_break_egg"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.38235294117647056
-tt.main_script.update = scripts.decal_s14_break_spider.update
-tt.click_play.required_clicks = 5
-tt.ui.can_select = false
-tt.ui.click_rect = r(-15, -5, 30, 30)
-tt.tween.remove = false
-tt.tween.props[1].name = "scale"
-tt.tween.props[1].keys = {{0, vec_1(1)}, {fts(1), vec_1(1.2)}, {fts(6), vec_1(1)}}
-
 tt = RT("decal_s14_break_spider", "decal_scripted")
 AC(tt, "tween")
 tt.render.sprites[1] = CC("sprite")
@@ -6956,138 +6290,6 @@ tt.tween.props[1].keys = {{0, 255}, {0.75, 255}, {1, 0}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "offset"
 tt.tween.props[2].keys = {{0, vec_2(0, 0)}, {2, vec_2(1, 1)}}
-
-tt = RT("decal_s15_mactans", "decal_scripted")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "stage15_mactans_l1"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.09047619047619047
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].prefix = "stage15_mactans_l2"
-tt.main_script.update = scripts.decal_s15_mactans.update
-
-tt = RT("decal_s15_malicia", "decal_scripted")
-AC(tt, "editor")
-tt.render.sprites[1].prefix = "stage15_malicia"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.057692307692307696
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "stage15_malicia_ray"
-tt.render.sprites[2].hidden = true
-tt.render.sprites[2].anchor = vec_2(0.64, 0.21666666666666667)
-tt.render.sprites[2].offset = vec_2(-2, 57)
-tt.main_script.update = scripts.decal_s15_malicia.update
-
-tt = RT("decal_s15_statue", "decal_scripted")
-AC(tt, "editor")
-tt.main_script.update = scripts.decal_s15_statue.update
-tt.render.sprites[1].prefix = "stage15_shield"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.20161290322580644
-
-tt = RT("decal_s15_crystal", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage15_crystal"
-tt.render.sprites[1].animated = false
-tt.tween.remove = false
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 2)}, {fts(25), vec_2(0, -2)}, {fts(50), vec_2(0, 2)}}
-tt.tween.props[1].loop = true
-tt.tween.props[1].interp = "sine"
-
-tt = RT("fx_s15_crystal_shine", "fx")
-tt.render.sprites[1].name = "stage15_crystal_fx"
-
-tt = RT("fx_s15_crystal_transformation", "fx")
-for i = 1, 4 do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "stage15_crystal_l" .. i
-	tt.render.sprites[i].name = "explosion"
-end
-
-tt = RT("fx_s15_white_circle", "decal_tween")
-tt.render.sprites[1].name = "spiderQueen_deathShapes_0002"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].z = Z_GUI - 2
-tt.tween.props[1].name = "scale"
-tt.tween.props[1].keys = {{fts(3), vec_1(0.3)}, {fts(6), vec_1(70)}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].keys = {{0, 255}, {1, 255}, {2, 0}}
-
-tt = RT("decal_s15_finished_gem", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage15_bossDecal_gem"
-tt.render.sprites[1].anchor.y = 0.22580645161290322
-tt.render.sprites[1].animated = false
-
-tt = RT("decal_s15_finished_veznan", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_s15_finished_veznan"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.1111111111111111
-tt.delayed_play.min_delay = 5
-tt.delayed_play.max_delay = 15
-
-tt = RT("decal_s15_finished_guard", "decal_delayed_sequence")
-AC(tt, "editor")
-for i = 1, 4 do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "decal_s15_finished_guard_layer" .. i
-	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].anchor.y = 0.12195121951219512
-	tt.render.sprites[i].loop = i > 2
-	tt.render.sprites[i].hidden = i == 4
-end
-
-tt.delayed_sequence.animations = {"idle", "blink", "blink", "sleep"}
-tt.delayed_sequence.min_delay = 5
-tt.delayed_sequence.max_delay = 15
-
-tt = RT("decal_s15_finished_guard_flipped", "decal_s15_finished_guard")
-for i = 1, 4 do
-	tt.render.sprites[i].flip_x = true
-	tt.render.sprites[i].hidden = i == 3
-end
-
-tt = RT("taunts_s15_controller")
-AC(tt, "main_script", "taunts", "editor")
-tt.load_file = "level63_taunts"
-tt.main_script.insert = scripts.taunts_controller.insert
-tt.main_script.update = scripts.taunts_controller.update
-tt.taunts.delay_min = 10
-tt.taunts.sets = {}
-tt.taunts.sets.mactans = CC("taunt_set")
-tt.taunts.sets.mactans.format = "ELVES_ENEMY_MACTANS_TAUNT_%04i"
-tt.taunts.sets.mactans.end_idx = 8
-tt.taunts.sets.mactans.decal_name = "decal_s15_mactans_shoutbox"
-tt.taunts.sets.mactans.pos = vec_2(453, 591)
-tt.taunts.sets.malicia = CC("taunt_set")
-tt.taunts.sets.malicia.format = "ELVES_ENEMY_MALICIA_TAUNT_%04i"
-tt.taunts.sets.malicia.end_idx = 8
-tt.taunts.sets.malicia.decal_name = "decal_s15_malicia_shoutbox"
-tt.taunts.sets.malicia.pos = vec_2(653, 591)
-tt.taunts.sets.welcome_mactans = table.deepclone(tt.taunts.sets.mactans)
-tt.taunts.sets.welcome_mactans.format = "ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_0001"
-tt.taunts.sets.welcome_malicia = table.deepclone(tt.taunts.sets.malicia)
-tt.taunts.sets.welcome_malicia.format = "ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_0002"
-tt.taunts.sets.pre_mactans = table.deepclone(tt.taunts.sets.mactans)
-tt.taunts.sets.pre_mactans.format = "ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_%04i"
-tt.taunts.sets.pre_mactans.idxs = {2, 4}
-tt.taunts.sets.pre_malicia = table.deepclone(tt.taunts.sets.malicia)
-tt.taunts.sets.pre_malicia.format = "ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_%04i"
-tt.taunts.sets.pre_malicia.idxs = {1, 3}
-tt.taunts.sets.custom_malicia = table.deepclone(tt.taunts.sets.malicia)
-tt.taunts.sets.custom_malicia.format = "ELVES_ENEMY_MALICIA_TAUNT_KIND_%s"
-tt.taunts.sets.custom_mactans = table.deepclone(tt.taunts.sets.mactans)
-tt.taunts.sets.custom_mactans.format = "ELVES_ENEMY_MALICIA_TAUNT_KIND_%s"
-
-tt = RT("decal_s15_mactans_shoutbox", "decal_eb_spider_shoutbox")
-tt.render.sprites[1].name = "stage15_taunts_0004"
-tt.render.sprites[2].name = "stage15_taunts_0005"
-tt.texts.list[1].color = {247, 133, 102}
-
-tt = RT("decal_s15_malicia_shoutbox", "decal_eb_spider_shoutbox")
-tt.render.sprites[2].name = "stage15_taunts_0002"
 
 tt = RT("decal_hr_crystal_skull", "decal_delayed_click_play")
 tt.render.sprites[1].prefix = "decal_hr_crystal_skull"
@@ -7098,26 +6300,6 @@ tt.delayed_play.clicked_sound = "ElvesCrystalSkull"
 tt.ui.can_select = false
 tt.ui.click_rect = r(-13, -13, 28, 24)
 
-tt = RT("decal_s16_land_1", "decal_background")
-AC(tt, "tween")
-tt.render.sprites[1].name = "Stage16_0003"
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-
-tt = RT("decal_s16_land_2", "decal_s16_land_1")
-tt.render.sprites[1].name = "Stage04_0002"
-tt.render.sprites[1].z = Z_DECALS - 1
-
-tt = RT("decal_s16_ground_archers_land", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].name = "groundArchers"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.2857142857142857
-tt.render.sprites[1].z = Z_DECALS - 1
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-
 tt = RT("soldier_s16_ground_archer", "soldier_gryphon_guard_upper")
 AC(tt, "editor")
 tt.ranged.attacks[1].filter_fn = nil
@@ -7125,43 +6307,6 @@ tt.render.sprites[1].prefix = "soldier_s16_ground_archer"
 tt.ranged.attacks[1].max_range = 150
 tt.ranged.attacks[1].min_range = 30
 tt.render.sprites[1].z = Z_OBJECTS
-
-tt = RT("decal_s16_bush_holder", "decal_tween")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage16_bushHolders"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.2857142857142857
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-
-tt = RT("decal_s16_bush_burner", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage16_bushGnollBurner"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.2777777777777778
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-
-tt = RT("fx_s16_bush_burner", "fx")
-tt.render.sprites[1].name = "fx_s16_bush_burner"
-tt.render.sprites[1].anchor.y = 0.3548387096774194
-
-tt = RT("fx_s16_burner_explosion", "decal_timed")
-AC(tt, "editor")
--- tt.timed.disabled = true
-tt.timed.runs = INT_32_MAX
-tt.render.sprites[1].name = "fx_s16_burner_explosion"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].anchor.y = 0.09740259740259741
-tt.editor.game_mode = 1
-tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-tt.editor.overrides = {
-	["render.sprites[1].hidden"] = false,
-	["render.sprites[1].loop"] = true
-}
 
 tt = RT("gnoll_bush_spawner", "decal_scripted")
 AC(tt, "spawner", "editor")
@@ -7195,100 +6340,6 @@ tt.spawner.patch_props = {
 tt.walk_nodes_range = {5, 10}
 tt.walk_wait = 1
 
-tt = RT("decal_hr_cart", "decal")
-tt.render.sprites[1].name = "stage17_carret"
-tt.render.sprites[1].anchor.y = 0.08333333333333333
-tt.render.sprites[1].animated = false
-
-tt = RT("decal_hr_worker_a", "decal")
-tt.render.sprites[1].name = "decal_hr_worker_a"
-tt.render.sprites[1].anchor.y = 0.027777777777777776
-
-tt = RT("decal_hr_worker_b", "decal")
-tt.render.sprites[1].name = "decal_hr_worker_b"
-tt.render.sprites[1].anchor.y = 0.20833333333333334
-
-tt = RT("malik_slave_controller", "decal_scripted")
-AC(tt, "editor")
-tt.fn_can_power = scripts.malik_slave_controller.fn_can_power
-tt.hero_spawn_pos = vec_2(736, 639)
-tt.main_script.update = scripts.malik_slave_controller.update
-tt.starting_wave = 2
-tt.thunder_rect = r(655, 595, 164, 56)
-tt.wait_time = fts(159)
-tt.achievement_id = "FREEDOM_FIGHTER"
-tt.walk_points = {
-	malik = {vec_2(973, 655), vec_2(808, 632), vec_2(748, 666)},
-	gnoll_left = {vec_2(935, 651), vec_2(700, 605)},
-	gnoll_right = {vec_2(1016, 673), vec_2(795, 631)}
-}
-
-tt = RT("decal_gnoll_gnawer", "decal_scripted")
-AC(tt, "motion", "nav_grid", "tween")
-tt.render.sprites[1].anchor = vec_2(0.5, 0.25)
-tt.render.sprites[1].prefix = "gnoll_gnawer"
-tt.render.sprites[1].name = "idle"
-tt.motion.max_speed = 2 * FPS
-tt.main_script.update = scripts.decal_walking.update
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
-tt = RT("decal_baby_malik_slave", "decal_scripted")
-AC(tt, "motion", "nav_grid")
-tt.render.sprites[1].anchor.y = 0.184
-tt.render.sprites[1].prefix = "decal_baby_malik"
-tt.render.sprites[1].name = "idle"
-tt.main_script.update = scripts.decal_walking.update
-tt.motion.max_speed = 2 * FPS
-
-tt = RT("decal_baby_malik_slave_banner", "decal_tween")
-tt.render.sprites[1].name = "malikAfro_sign"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].offset = vec_2(30, 66)
-tt.tween.ts = -10
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 100}, {fts(4), 255}, {fts(71), 255}, {fts(75), 0}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_1(0.75)}, {fts(4), vec_1(1.075)}, {fts(7), vec_1(0.9625)}, {fts(9), vec_1(1)}, {fts(69), vec_1(1)}, {fts(71), vec_1(1.075)}, {fts(75), vec_1(0.75)}}
-
-tt = RT("decal_baby_malik_slave_free", "decal")
-tt.render.sprites[1].name = "decal_baby_malik_free"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].anchor = vec_2(0.33101851851851855, 0.27976190476190477)
-
-tt = RT("decal_s18_statue", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage18_statue"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.176056338028169
-
-tt = RT("decal_s18_roadrunner_bush", "decal_scripted")
-AC(tt, "editor", "ui")
-tt.render.sprites[1].name = "decal_s18_roadrunner_bush_shake"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].anchor.y = 0.3
-tt.main_script.update = scripts.decal_s18_roadrunner_bush.update
-tt.required_clicks = {3, 5}
-tt.shake_cooldown = {3, 5}
-tt.sound_clicked = "ElvesGnollTrailOut"
-tt.ui.click_rect = r(-22, -10, 44, 40)
-tt.ui.can_select = false
-
-tt = RT("fx_roadruner_bush_explode", "fx")
-tt.render.sprites[1].name = "gnollBush_explode"
-tt.render.sprites[1].anchor.y = 0.3548387096774194
-
-tt = RT("decal_s18_roadrunner", "decal_tween")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "decal_s18_roadrunner_run"
-tt.render.sprites[1].anchor.y = 0.125
-tt.pos = vec_2(464, 473)
-tt.sound_events.insert = "ElvesRoadRunner"
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {2.2, vec_2(-369, 14)}}
-
 tt = RT("decal_s18_coyote", "decal")
 AC(tt, "sound_events")
 tt.render.sprites[1].prefix = "decal_s18_coyote"
@@ -7296,33 +6347,6 @@ tt.render.sprites[1].name = "pull"
 tt.render.sprites[1].anchor.y = 0.19230769230769232
 tt.pos = vec_2(138, 383)
 tt.sound_events.push = "BombExplosionSound"
-
-tt = RT("decal_s18_flag_head", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "decal_s18_flag_head"
-
-tt = RT("decal_s18_boss_head", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "stage_18_head"
-tt.render.sprites[1].animated = false
-
-tt = RT("taunts_s18_defeated_controller")
-AC(tt, "main_script", "taunts", "editor")
-tt.load_file = "level66_taunts"
-tt.main_script.insert = scripts.taunts_controller.insert
-tt.main_script.update = scripts.taunts_controller.update
-tt.taunts.delay_min = 10
-tt.taunts.sets = {}
-tt.taunts.sets.left_head = CC("taunt_set")
-tt.taunts.sets.left_head.end_idx = 8
-tt.taunts.sets.left_head.format = "ELVES_ENEMY_BRAM_TAUNT_%04i"
-tt.taunts.sets.left_head.decal_name = "decal_s18_shoutbox"
-tt.taunts.sets.left_head.pos = vec_2(727, 700)
-tt.taunts.sets.right_head = CC("taunt_set")
-tt.taunts.sets.right_head.end_idx = 8
-tt.taunts.sets.right_head.format = "ELVES_ENEMY_DEATH_TAUNT_%04i"
-tt.taunts.sets.right_head.decal_name = "decal_s18_shoutbox"
-tt.taunts.sets.right_head.pos = vec_2(791, 680)
 
 tt = RT("decal_s18_shoutbox", "decal_tween")
 AC(tt, "texts")
@@ -7351,22 +6375,6 @@ tt.tween.props[3].loop = true
 tt.tween.props[4] = table.deepclone(tt.tween.props[3])
 tt.tween.props[4].sprite_id = 2
 
-tt = RT("decal_s19_drizzt", "decal_scripted")
-AC(tt, "editor", "ui")
-tt.render.sprites[1].prefix = "decal_s19_drizzt"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].loop = false
-tt.main_script.update = scripts.decal_s19_drizzt.update
-tt.idle_cooldown = {3, 5}
-tt.spawn_cooldown = {10, 15}
-tt.sound_clicked = "ElvesDrizztGrowl"
-tt.sound_chase = "ElvesDrizztUnsheathe"
-tt.sound_chase_params = {
-	delay = fts(23)
-}
-tt.ui.click_rect = r(90, -30, 40, 30)
-tt.ui.can_select = false
-
 tt = RT("decal_s19_drizzt_gnoll", "decal_scripted")
 tt.render.sprites[1].prefix = "decal_s19_drizzt_gnoll"
 tt.render.sprites[1].name = "idle"
@@ -7394,14 +6402,6 @@ tt.delayed_play.min_delay = 2
 tt.delayed_play.flip_chance = 0.5
 tt.delayed_play.idle_animation = nil
 
-tt = RT("decal_s22_lava_hole", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_s22_lava_hole"
-tt.render.sprites[1].name = "play"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.delayed_play.max_delay = 2
-tt.delayed_play.idle_animation = nil
-
 tt = RT("decal_s22_lava_smoke", "decal_delayed_play")
 tt.render.sprites[1].prefix = "decal_s22_lava_smoke"
 tt.render.sprites[1].name = "play"
@@ -7411,33 +6411,6 @@ tt.render.sprites[1].z = Z_DECALS + 1
 tt.delayed_play.min_delay = 3
 tt.delayed_play.max_delay = 8
 tt.delayed_play.idle_animation = nil
-
-tt = RT("lava_fireball_controller")
-AC(tt, "main_script")
-tt.main_script.update = scripts.lava_fireball_controller.update
-tt.bullet = "bomb_lava_fireball"
-tt.launch_fx = "fx_bomb_lava_fireball_launch"
-
-tt = RT("bomb_lava_fireball", "bullet")
-tt.bullet.damage_bans = F_ENEMY
-tt.bullet.damage_flags = F_AREA
-tt.bullet.damage_max = 250
-tt.bullet.damage_min = 200
-tt.bullet.damage_radius = 45
-tt.bullet.flight_time_base = fts(25)
-tt.bullet.flight_time_factor = fts(0.05)
-tt.bullet.g = -0.8 / (fts(1) * fts(1))
-tt.bullet.hit_decal = "decal_bomb_crater"
-tt.bullet.hit_fx = "fx_bomb_lava_fireball_explosion"
-tt.bullet.mod = "mod_veznan_demon_fire"
-tt.bullet.particles_name = "ps_bomb_lava_fireball"
-tt.bullet.pop = {"pop_entwood"}
-tt.bullet.rotation_speed = 20 * FPS * math.pi / 180
-tt.main_script.insert = scripts.enemy_bomb.insert
-tt.main_script.update = scripts.enemy_bomb.update
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "Stage9_lavaShot"
-tt.sound_events.hit = "BombExplosionSound"
 
 tt = RT("fx_bomb_lava_fireball_launch", "fx")
 tt.render.sprites[1].name = "fx_bomb_lava_fireball_launch"
@@ -8272,34 +7245,6 @@ tt.damage_max = 0.0016
 -- 		y = x
 -- 	}
 -- end
-tt = E:register_t("decal_stage_01_wisps", "decal")
-tt.render.sprites[1].prefix = "stage_1_wisps_1Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "stage_1_wisps_2Def"
-tt.render.sprites[2].name = "loop"
-tt.render.sprites[2].exo = true
-
-tt = E:register_t("decal_stage_01_butterfly_1", "decal_delayed_play")
-tt.render.sprites[1].prefix = "stage_1_butterfly_1Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].loop = false
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "loop"
-tt.delayed_play.min_delay = 10
-tt.delayed_play.max_delay = 30
-
-tt = E:register_t("decal_stage_01_butterfly_2", "decal_delayed_play")
-tt.render.sprites[1].prefix = "stage_1_butterfly_2Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].loop = false
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "loop"
-tt.delayed_play.min_delay = 15
-tt.delayed_play.max_delay = 35
 
 tt = E:register_t("decal_wisp_501", "decal_delayed_play")
 tt.render.sprites[1].name = "props_wisp"
@@ -8309,96 +7254,10 @@ tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "props_wisp"
 tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"render.sprites[1].scale", PT_COORDS}}
 
-tt = E:register_t("stage_01_bush", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "Stage_1_tutorial_bush"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("stage_01_shaman", "decal")
-tt.render.sprites[1].prefix = "Stage_1_tutorial_shaman"
-tt.render.sprites[1].name = "idle1"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].z = Z_OBJECTS
-
-tt = E:register_t("decal_stage1_waterfall1", "decal_loop")
-tt.render.sprites[1].name = "stage1_waterfall_1"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage1_waterfall2", "decal_loop")
-tt.render.sprites[1].name = "stage1_waterfall_2"
-
-tt = E:register_t("decal_stage1_waterfall_ripples", "decal_loop")
-tt.render.sprites[1].name = "stage1_waterfall_ripples"
-
-tt = E:register_t("decal_stage1_decos_waterfalltop", "decal")
-tt.render.sprites[1].name = "Stage_1_decos_waterfalltop"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_01_decos_waterfall", "decal")
-tt.render.sprites[1].name = "Stage_1_decos_waterfall_1"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("decal_stage_01_robin_hood", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script", "ui")
-for i = 2, 6 do
-	tt.render.sprites[i] = E:clone_c("sprite")
-	tt.render.sprites[i].prefix = "robin_hood_easter_egg_layer" .. i - 1
-	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].group = "layers"
-end
-
-tt.clicked_sound = "Stage01RobinHood"
-tt.animation_idle = "idle"
-tt.animation_click = "fall"
-tt.animation_attack = "attack"
-tt.attack_cooldown_min = 4
-tt.attack_cooldown_max = 7
-tt.ui.click_rect = r(-30, -10, 60, 60)
-tt.main_script.update = scripts.decal_stage_01_robin_hood.update
-tt.mask_to_spawn = "decal_stage_01_robin_hood_mask"
-
 tt = E:register_t("decal_stage_01_robin_hood_mask", "decal_static")
 tt.render.sprites[1].name = "robin_hood_mask"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].hidden = true
-
-tt = E:register_t("decal_stage_01_campfire_guy_campfire", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].name = "campfire_guy_tent_back"
-tt.render.sprites[1].animated = false
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "campfire_guy_guy"
-tt.render.sprites[2].offset = v(-36, 5)
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].prefix = "campfire_guy_campfire"
-tt.render.sprites[4] = E:clone_c("sprite")
-tt.render.sprites[4].prefix = "campfire_guy_tent_front"
-tt.render.sprites[4].offset = v(-36, 5)
-tt.render.sprites[4].draw_order = 11
-tt.main_script.update = scripts.decal_stage_01_campfire_guy_campfire.update
-tt.ui.click_rect = r(-30, -10, 60, 60)
-tt.sound_fire_off = "Stage01FireOff"
-tt.sound_fire_on = "Stage01FireOn"
-tt.sound_fire_final = "Stage01FireFinal"
-tt.guy_sprite_id = 2
-tt.campfire_sprite_id = 3
-tt.tent_front_sprite_id = 4
-
-tt = E:register_t("decal_stage_01_elder_rune", "decal_click_play")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "Stage_1_rapido_elder_rune_1"
-tt.render.sprites[1].loop = true
-tt.main_script.update = scripts.decal_stage_01_rune.update
-tt.click_play.idle_animation = "idle"
-tt.click_play.click_animation = "activation"
-tt.click_play.idle_on_animation = "idle_2"
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "Stage01Rune"
-tt.ui.can_click = true
-tt.ui.click_rect = r(-30, -30, 60, 60)
 
 tt = E:register_t("decal_stage_02_elder_rune", "decal_click_play")
 E:add_comps(tt, "editor")
@@ -8420,36 +7279,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage_2_rapido_elder_rune_2_base"
 tt.render.sprites[1].sort_y_offset = 1
 
-tt = E:register_t("decal_stage_02_elder_rune_static", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "stage_2_rapido_elder_rune_2_0117"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].loop = false
-
-tt = E:register_t("decal_stage_02_fishing_link", "decal_click_play")
-tt.render.sprites[1].prefix = "fishing_link"
-tt.render.sprites[1].loop = true
-tt.main_script.insert = scripts.decal_stage_02_fishing_link.insert
-tt.main_script.update = scripts.decal_stage_02_fishing_link.update
-tt.click_play.idle_animation = "idle_2"
-tt.click_play.click_animation = "activation"
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "Stage02LinkFishing"
-tt.ui.can_click = true
-tt.ui.click_rect = r(-30, -30, 60, 60)
-tt.entity_line = "decal_stage_02_fishing_link_line"
-tt.entity_water_splash = "decal_stage_02_fishing_link_water_splash"
-tt.min_water_move_cd = 3
-tt.max_water_move_cd = 7
-tt.min_line_move_cd = 60
-tt.max_line_move_cd = 90
-tt.min_window_duration = 3
-tt.max_window_duration = 3
-tt.animation_line_move = ""
-tt.gold_pos_offset = v(-10, 40)
-tt.gold_amount = 25
-tt.fish_animations = {"fishing_nothing", "fishing_nothing", "fishing_fish_or_boot", "fishing_nothing", "fishing_nothing"}
-
 tt = E:register_t("decal_stage_02_fishing_link_line", "decal_scripted")
 tt.render.sprites[1].prefix = "fishing_link_line"
 tt.render.sprites[1].loop = true
@@ -8461,28 +7290,6 @@ E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "water_splash"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = true
-
-tt = E:register_t("decal_stage_02_lion_king", "decal_scripted")
-E:add_comps(tt, "ui")
-for i = 1, 4 do
-	tt.render.sprites[i] = E:clone_c("sprite")
-	tt.render.sprites[i].animated = true
-	tt.render.sprites[i].prefix = "lion_king_easter_egg_layer" .. i
-	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].group = "layers"
-end
-
-tt.main_script.insert = scripts.decal_stage_02_lion_king.insert
-tt.main_script.update = scripts.decal_stage_02_lion_king.update
-tt.ui.can_click = true
-tt.ui.click_rect = r(-30, -30, 60, 60)
-tt.clicked_sound = "Stage02LionKing"
-tt.animation_idle = "idle"
-tt.animation_idle2 = "stick"
-tt.animation_click = "action"
-tt.min_cooldown_idle = 4
-tt.max_cooldown_idle = 7
-tt.entity_light = "decal_stage_02_lion_king_light"
 
 tt = E:register_t("decal_stage_02_lion_king_light", "decal_scripted")
 E:add_comps(tt, "ui", "tween")
@@ -8591,12 +7398,6 @@ tt.tween.remove = true
 tt = E:register_t("decal_water_shine", "decal_loop")
 tt.render.sprites[1].name = "props_water_shine"
 
-tt = E:register_t("decal_waterfall", "decal_loop")
-tt.render.sprites[1].name = "stage_2_props_waterfall"
-
-tt = E:register_t("decal_waterfall_splash", "decal_loop")
-tt.render.sprites[1].name = "stage_2_props_waterfall_splash"
-
 tt = E:register_t("decal_waterfall_waves", "decal_loop")
 tt.render.sprites[1].name = "props_waterfall_waves"
 tt.render.sprites[1].z = Z_DECALS + 1
@@ -8697,11 +7498,6 @@ tt.tween.props[6] = table.deepclone(tt.tween.props[4])
 tt.tween.props[6].sprite_id = 3
 tt.tween.remove = true
 
-tt = E:register_t("decal_stage_02_veznan", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-tt.render.sprites[1].prefix = "veznan_cinematic_veznan"
-tt.render.sprites[1].name = "idle"
-
 tt = E:register_t("stage_02_arborean_old", "decal_scripted")
 E:add_comps(tt, "editor", "editor_script")
 tt.render.sprites[1].prefix = "stage2_decos_viejo"
@@ -8711,10 +7507,6 @@ tt = E:register_t("stage_02_arborean_baby1", "decal_scripted")
 E:add_comps(tt, "editor", "editor_script")
 tt.render.sprites[1].prefix = "stage2_decos_bebe1"
 tt.main_script.update = scripts.stage_02_arborean_baby1.update
-
-tt = E:register_t("controller_stage_03_arborean_babies")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_03_arborean_babies.update
 
 tt = E:register_t("decal_arborean_baby_clickeable", "decal_scripted")
 E:add_comps(tt, "editor", "editor_script", "ui")
@@ -8733,49 +7525,6 @@ tt = E:register_t("stage_3_treeTop", "decal")
 tt.render.sprites[1].name = "stage_3_treeTop"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_03_fat_arborean", "decal_click_play")
-tt.render.sprites[1].prefix = "stage3_decos_gordito"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].scale = vv(1.1)
-tt.main_script.update = scripts.decal_stage_03_fat_arborean.update
-tt.click_play.idle_animation = "idle"
-tt.click_play.click_animation = "comer"
-tt.click_play.end_animation = "muerte"
-tt.click_play.required_clicks = 3
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "EasterEggCommonTap"
-tt.ui.can_click = true
-tt.ui.click_rect = r(-60, -10, 60, 60)
-
-tt = E:register_t("stage3_decos_barriles2", "decal_scripted")
-local time_between_animations = fts(30 * math.random(10, 30))
-
-tt.render.sprites[1].prefix = "stage3_decos_barriles2"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.animations = {{"action", time_between_animations}, {"idle", time_between_animations}}
-tt.main_script.update = scripts.decal_scripted_loop_play.update
-
-tt = E:register_t("stage3_decos_barriles1", "decal_scripted")
-local time_between_animations = fts(30 * math.random(10, 30))
-
-tt.render.sprites[1].prefix = "stage3_decos_barriles1"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.animations = {{"action", time_between_animations}, {"idle", time_between_animations}}
-tt.main_script.update = scripts.decal_scripted_loop_play.update
-
-tt = E:register_t("decal_stage_03_elder_rune", "decal_click_play")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "stage_3_decos_REF_elder_rune_3"
-tt.render.sprites[1].loop = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.main_script.update = scripts.decal_stage_03_elder_rune.update
-tt.click_play.idle_animation = "idle_2"
-tt.click_play.click_animation = "activation"
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "Stage0203Rune"
-tt.ui.can_click = true
-tt.ui.click_rect = r(-30, -30, 60, 60)
 
 tt = E:register_t("ps_bullet_stage_03_heart_of_the_arborean")
 E:add_comps(tt, "pos", "particle_system")
@@ -8835,45 +7584,6 @@ tt.force_motion.max_a = 1800
 tt.force_motion.max_v = 600
 tt.sound_events.insert = nil
 
-tt = E:register_t("decal_stage_03_wisps", "decal")
-tt.render.sprites[1].prefix = "stage_3_wisps_1Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "stage_3_wisps_2Def"
-tt.render.sprites[2].name = "loop"
-tt.render.sprites[2].exo = true
-
-tt = E:register_t("decal_stage_03_butterfly_1", "decal_delayed_play")
-tt.render.sprites[1].prefix = "stage_3_butterfly_1Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].loop = false
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "loop"
-tt.delayed_play.min_delay = 10
-tt.delayed_play.max_delay = 30
-
-tt = E:register_t("decal_stage_03_butterfly_2", "decal_delayed_play")
-tt.render.sprites[1].prefix = "stage_3_butterfly_2Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].loop = false
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "loop"
-tt.delayed_play.min_delay = 15
-tt.delayed_play.max_delay = 35
-
-tt = E:register_t("decal_stage_03_butterfly_3", "decal_delayed_play")
-tt.render.sprites[1].prefix = "stage_3_butterfly_3Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].loop = false
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "loop"
-tt.delayed_play.min_delay = 12
-tt.delayed_play.max_delay = 32
-
 tt = E:register_t("decal_stage_04_easteregg_sheepy_baby", "decal_scripted")
 E:add_comps(tt, "force_motion")
 tt.render.sprites[1].prefix = "sheepy_stage4_baby"
@@ -8904,10 +7614,6 @@ tt.render.sprites[1].name = "stage4_elevatormask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
 
-tt = E:register_t("stage_04_mask_bottom", "stage_04_mask_top")
-tt.render.sprites[1].name = "stage4_elevatormask2"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
-
 tt = E:register_t("stage_04_shadowtop", "decal")
 tt.render.sprites[1].name = "stage4_shadowtop"
 tt.render.sprites[1].animated = false
@@ -8930,78 +7636,6 @@ tt.render.sprites[1].name = "Stage4_center_bridge_back_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 3
 tt.render.sprites[1].pos = v(512, 384)
-
-tt = E:register_t("stage_04_mask_bridge_center_front", "stage_04_mask_bridge_center_back")
-tt.render.sprites[1].name = "Stage4_center_bridge_front_mask"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
-
-tt = E:register_t("stage_04_mask_bridge_left_back", "stage_04_mask_bridge_center_back")
-tt.render.sprites[1].name = "Stage4_left_bridge_back_mask"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 1
-
-tt = E:register_t("stage_04_mask_bridge_left_front", "stage_04_mask_bridge_center_back")
-tt.render.sprites[1].name = "Stage4_left_bridge_front_mask"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 1
-
-tt = E:register_t("stage_04_mask_bridge_right_back", "stage_04_mask_bridge_center_back")
-tt.render.sprites[1].name = "Stage4_right_bridge_back_mask"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 3
-
-tt = E:register_t("stage_04_mask_bridge_right_front", "stage_04_mask_bridge_center_back")
-tt.render.sprites[1].name = "Stage4_right_bridge_front_mask"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
-
-tt = E:register_t("decal_stage_04_arborean_right", "decal_scripted")
-E:add_comps(tt, "ui", "motion", "force_motion")
-tt.render.sprites[1].prefix = "stage_4_arboreans_arborean_01"
-tt.render.sprites[1].name = "walk"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 4
-tt.main_script.update = scripts.decal_stage_04_arborean.update
-tt.walk_destination = {v(0, 0), v(100, -70), v(175, -100), v(100, -70)}
-tt.motion.speed = v(10, 10)
-tt.motion.max_speed = 30
-tt.ui.click_rect = r(-20, -10, 40, 40)
-tt.jump_distance = 20
-tt.fall_to_y = 440
-tt.force_motion.max_a = 1200
-tt.force_motion.max_v = 450
-tt.force_motion.ramp_radius = 30
-tt.force_motion.fr = 0.1
-tt.force_motion.a_step = 20
-tt.sound_fall = "Stage04ArboreanFall"
-
-tt = E:register_t("decal_stage_04_arborean_left", "decal_stage_04_arborean_right")
-tt.render.sprites[1].prefix = "stage_4_arboreans_arborean_02"
-tt.main_script.update = scripts.decal_stage_04_arborean.update
-tt.walk_destination = {v(0, 0), v(54, 8), v(151, 55), v(54, 8)}
-tt.fall_to_y = 580
-
-tt = E:register_t("decal_stage_04_arborean_center", "decal_stage_04_arborean_right")
-tt.render.sprites[1].prefix = "stage_4_arboreans_arborean_03"
-tt.main_script.update = scripts.decal_stage_04_arborean.update
-tt.walk_destination = {v(0, 0), v(142, -75)}
-tt.fall_to_y = 300
-tt.sprite_change = {"stage_4_arboreans_arborean_04", "stage_4_arboreans_arborean_03"}
-
-tt = E:register_t("stage_4_leaf_anim", "decal_delayed_play")
-E:add_comps(tt, "tween")
-local duration = 2.8
-local fade_time = 0.2
-
-tt.render.sprites[1].name = "stage_4_leaf_anim_idle"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.delayed_play.min_delay = 5
-tt.delayed_play.max_delay = 15
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "stage_4_leaf_anim_idle"
-tt.delayed_play.play_duration = duration
-tt.tween.disabled = false
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 0}, {fade_time, 255}, {duration - fade_time, 255}, {duration, 0}}
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].name = "offset"
-tt.tween.props[2].keys = {{0, v(0, 0)}, {duration, v(0, -130)}}
-tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"render.sprites[1].scale", PT_COORDS}}
 
 tt = E:register_t("stage_4_arborean_bridge_1", "decal_scripted")
 E:add_comps(tt, "editor", "editor_script")
@@ -9031,170 +7665,17 @@ tt.render.sprites[1].name = "action1"
 tt.animations = {{"action1", time_between_animations}, {"idle", time_between_animations}, {"action2", time_between_animations}, {"action3", time_between_animations}}
 tt.main_script.update = scripts.decal_scripted_loop_play.update
 
-tt = E:register_t("stage_4_arborean_vine", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].prefix = "anim_liana"
-tt.ui.can_click = true
-tt.ui.click_rect = r(-30, -22, 60, 50)
-tt.main_script.update = scripts.stage_4_arborean_vine.update
-tt.animation_idle = "idle1"
-tt.animation_down = "down"
-tt.animation_down_idle = "idle2"
-tt.animation_click = "no_tap"
-tt.animation_up = "tap"
-tt.down_cooldown = 14
-tt.down_duration = 3
-tt.sound_fall = "Stage04ArboreanFall"
-
-tt = E:register_t("decal_stage_04_mask_tunnel", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "Stage4_NEW_Topmask"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].name = "Stage4_NEW_Submask"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].z = Z_OBJECTS
-tt.render.sprites[2].sort_y_offset = 35
-
-tt = E:register_t("decal_stage_04_waterfall", "decal_scripted")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "anim_waterfall"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-
-tt = E:register_t("decal_stage_04_elder_rune", "decal_click_play")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "stage_4_elder_rune_4"
-tt.render.sprites[1].loop = true
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "stage_4_elder_rune_4_fx"
-tt.render.sprites[2].loop = true
-tt.main_script.update = scripts.decal_stage_04_elder_rune.update
-tt.click_play.idle_animation = "idle"
-tt.click_play.click_animation = "activation"
-tt.click_play.idle_on_animation = "idle_2"
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "Stage04Rune"
-tt.ui.can_click = true
-tt.ui.click_rect = r(-35, -100, 70, 70)
-
-tt = E:register_t("decal_stage_04_elder_rune_static", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "stage_4_elder_rune_4_0119"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].loop = false
-
 tt = E:register_t("decal_stage_05_elder_rune_base", "decal")
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_5_elder_rune_5_base"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].draw_order = 0
 
-tt = E:register_t("decal_stage_05_elder_rune", "decal_click_play")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "stage_5_elder_rune_5"
-tt.render.sprites[1].loop = true
-tt.render.sprites[1].draw_order = 1
-tt.main_script.update = scripts.decal_stage_05_elder_rune.update
-tt.click_play.idle_animation = "idle_2"
-tt.click_play.click_animation = "activation"
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "Stage0506Rune"
-tt.ui.can_click = true
-tt.ui.click_rect = r(-50, -10, 50, 50)
-
-tt = E:register_t("decal_stage_05_elder_rune_static", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "stage_5_elder_rune_5_0125"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].loop = false
-
-tt = E:register_t("stage_05_bridge_mask_left", "decal")
-tt.render.sprites[1].name = "stage_5_MaskBridge_left"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("stage_05_bridge_mask_right", "decal")
-tt.render.sprites[1].name = "stage_5_MaskBridge_right"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
 tt = E:register_t("stage_05_trees_mask", "decal")
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_5_MaskTree"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("trees_guardian_tree", "decal_scripted")
-E:add_comps(tt, "custom_attack", "cheats", "editor")
-tt.tree_disabled = false
-tt.wave_config = {true, true, true, true, true, true, true, true}
-tt.custom_attack.cooldown = nil
-tt.custom_attack.cooldown_min = 16
-tt.custom_attack.cooldown_max = 16
-tt.custom_attack.max_range = 450
-tt.custom_attack.min_range = 15
-tt.custom_attack.animation = "attack"
-tt.custom_attack.aura = "trees_guardian_tree_vine_aura_decal"
-tt.custom_attack.sound = "ElvesPlantMissile"
-tt.custom_attack.shoot_time = fts(35)
-tt.custom_attack.entity = "trees_guardian_tree_wave_of_roots"
-tt.custom_attack.vis_flags = bor(F_RANGED)
-tt.custom_attack.vis_bans = bor(F_BOSS, F_FLYING, F_FRIEND, F_HERO)
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "Stage02TreePart2Def"
-tt.render.sprites[1].name = "idle_sleep"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].group = "layers"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "Stage02TreeDef"
-tt.render.sprites[2].name = "idle_sleep"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].group = "layers"
-tt.render.sprites[2].sort_y_offset = -40
-tt.animation_idle_sleep = "idle_sleep"
-tt.animation_go_to_awake = "back_to_idle_awake"
-tt.animation_idle_awake = "idle_awake"
-tt.animation_go_to_sleep = "back_to_idle_sleep"
-tt.main_script.insert = scripts.trees_guardian_tree.insert
-tt.main_script.update = scripts.trees_guardian_tree.update
-tt.editor.overrides = {
-	["render.sprites[2].name"] = "idle_sleep"
-}
-tt.cheats.buttons[1].text = "TreeDecal"
-tt.cheats.buttons[1].fn = function(button, store, e)
-end
-tt.cheats.buttons[2] = E:clone_c("cheats_text_button")
-tt.cheats.buttons[2].text = "TreeCD"
-tt.cheats.buttons[2].fn = function(button, store, e)
-	e.custom_attack.ts = store.tick_ts - e.custom_attack.cooldown
-end
-tt.cheats.buttons[3] = E:clone_c("cheats_text_button")
-tt.cheats.buttons[3].text = "TreeRanges"
-tt.cheats.buttons[3].fn = function(button, store, e)
-	for _, range in ipairs({e.custom_attack.max_range, e.custom_attack.min_range}) do
-		local hp = E:create_entity("decal_debug_range")
-
-		hp.pos.x, hp.pos.y = e.pos.x, e.pos.y
-		hp.radius = range
-
-		simulation:queue_insert_entity(hp)
-	end
-end
-tt.cheats.buttons[4] = E:clone_c("cheats_text_button")
-tt.cheats.buttons[4].text = "TreeONOFF"
-tt.cheats.buttons[4].fn = function(button, store, e)
-	local current_wave = store.wave_group_number
-	local current_config = e.wave_config[current_wave]
-
-	e.wave_config[current_wave] = not current_config
-end
-tt.sound_pre_cast = "Stage02GuardianTreePreCast"
-tt.sound_cast = "Stage02GuardianTreeCast"
-tt.sound_roots = "Stage02GuardianTreeRoots"
 
 tt = E:register_t("trees_guardian_tree_wave_of_roots")
 E:add_comps(tt, "pos", "main_script")
@@ -9222,42 +7703,6 @@ tt.render.sprites[1].anchor.y = 0.3181818181818182
 tt.render.sprites[1].z = Z_DECALS
 tt.sequence.steps = {"start", nil, "end"}
 
-tt = E:register_t("trees_heart_of_the_arborean_decal", "decal_scripted")
-E:add_comps(tt, "custom_attack", "ui", "cheats")
-tt.render.sprites[1].prefix = "heartDef"
-tt.render.sprites[1].name = "idleLoading"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.insert = scripts.trees_heart_of_the_arborean_decal.insert
-tt.main_script.update = scripts.trees_heart_of_the_arborean_decal.update
-tt.custom_attack.cooldown_max = 90
-tt.custom_attack.cooldown_min = 90
-tt.custom_attack.max_range = 1400
-tt.custom_attack.damage_radius = 80
-tt.custom_attack.damage_max = 40
-tt.custom_attack.damage_min = 30
-tt.custom_attack.damage_type = DAMAGE_TRUE
-tt.custom_attack.max_targets = 10
-tt.custom_attack.min_targets = 10
-tt.custom_attack.door1Pos = v(757, 568)
-tt.custom_attack.door2Pos = v(318, 566)
-tt.custom_attack.cast_time = fts(21)
-tt.custom_attack.wait_between_shots = fts(2)
-tt.custom_attack.min_dist_between_tgts = 130
-tt.custom_attack.node_prediction = fts(45)
-tt.custom_attack.sound = nil
-tt.custom_attack.bullet = "bullet_stage_03_heart_of_the_arborean"
-tt.custom_attack.bullet_start_offset = v(0, 90)
-tt.ui.click_rect = r(-100, -100, 200, 200)
-tt.cheats.buttons[1].text = "H_CD"
-tt.cheats.buttons[1].fn = function(button, store, e)
-	if e.custom_attack.cooldown then
-		e.custom_attack.ts = store.tick_ts - e.custom_attack.cooldown
-	end
-end
-tt.sound_ready = "Stage03HeartOfTheForestReady"
-tt.sound_cast = "Stage03HeartOfTheForestCast"
-
 tt = E:register_t("trees_heart_of_the_arborean_decal_hit", "fx")
 E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "explosiondecalDef"
@@ -9272,20 +7717,6 @@ tt.render.sprites[1].prefix = "explosionDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS - 1
-
-tt = E:register_t("decal_stage_03_heart_back_waves", "decal")
-tt.render.sprites[1].prefix = "heart_back_wavesDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].loop = true
-
-tt = E:register_t("decal_stage_03_heart_front_waves", "decal")
-tt.render.sprites[1].prefix = "heart_front_wavesDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].loop = true
 
 tt = E:register_t("arborean_shaman_bullet", "bullet")
 E:add_comps(tt, "force_motion")
@@ -9316,18 +7747,6 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS
 tt.main_script.insert = scripts.trees_heart_of_the_arborean_shaman_decal.insert
 tt.main_script.update = scripts.trees_heart_of_the_arborean_shaman_decal.update
-
-tt = E:register_t("trees_heart_of_the_arborean_shaman_water_decal", "decal")
-tt.render.sprites[1].prefix = "wavesDef"
-tt.render.sprites[1].name = "Idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_03_river", "decal")
-tt.render.sprites[1].prefix = "riverDef"
-tt.render.sprites[1].name = "riverRunning"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
 
 tt = E:register_t("bush_ladder", "decal_scripted")
 E:add_comps(tt, "spawner", "tween")
@@ -9388,18 +7807,6 @@ tt.rustle_times = 1
 tt.rustle_delay = 1
 tt.cut_down_delay = 1
 
-tt = E:register_t("decal_stage_05_bear_woodcutter", "decal_scripted")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "bear_woodcutterDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].group = "layers"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt.main_script.update = scripts.decal_stage_05_bear_woodcutter.update
-tt.entity = "enemy_bear_woodcutter"
-tt.spawn_pos = v(242, 459)
-tt.waypoint_pos = v(220, 459)
-
 tt = E:register_t("decal_ground_enemy_bear_vanguard", "decal")
 E:add_comps(tt, "tween")
 tt.render.sprites[1].name = "bear_vanguard_decal_ground_0001"
@@ -9441,31 +7848,12 @@ tt.main_script.insert = scripts.trees_guardian_tree_vine_mod.insert
 tt.main_script.remove = scripts.trees_guardian_tree_vine_mod.remove
 tt.main_script.update = scripts.trees_guardian_tree_vine_mod.update
 
-tt = E:register_t("controller_stage_04_easteregg_sheepy")
-E:add_comps(tt, "ui", "pos", "main_script")
-tt.main_script.update = scripts.controller_stage_04_easteregg_sheepy.update
-tt.entity_baby = "decal_stage_04_easteregg_sheepy_baby"
-tt.entity_old_man = "decal_stage_04_easteregg_sheepy_old_man"
-tt.entity_sheepy = "decal_stage_04_easteregg_sheepy_sheepy"
-tt.old_man_cooldown = 5
-tt.sheepy_man_cooldown = 5
-tt.ui.click_rect = r(-65, -10, 80, 40)
-
 tt = E:register_t("controller_stage_06_pool_party")
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.update = scripts.controller_stage_06_pool_party.update
 tt.entity_demon_in_pool = "decal_pool_party2"
 tt.entity_demon_jumping = "decal_pool_party4"
 tt.entity_volleyball = "decal_pool_party5"
-
-tt = E:register_t("controller_stage_06_tiki_bar")
-E:add_comps(tt, "editor", "pos", "main_script")
-tt.main_script.insert = scripts.controller_stage_06_tiki_bar.insert
-tt.main_script.update = scripts.controller_stage_06_tiki_bar.update
-tt.entity_baby1 = "decal_tiki_bar2"
-tt.entity_baby2 = "decal_tiki_bar3"
-tt.entity_barman = "decal_tiki_bar5"
-tt.entity_old_man = "decal_tiki_bar4"
 
 tt = E:register_t("controller_stage_08_elf_rescue")
 E:add_comps(tt, "editor", "pos", "main_script")
@@ -9479,76 +7867,6 @@ tt.pos_guard = v(490, 550)
 tt.pos_chain = v(448, 541)
 tt.pos_elf_slave = v(428, 540)
 tt.spawn_cooldown = 90
-
-tt = E:register_t("controller_stage_09_spawn_nightmares")
-E:add_comps(tt, "editor", "pos", "main_script")
-tt.main_script.insert = scripts.controller_stage_09_spawn_nightmares.insert
-tt.main_script.update = scripts.controller_stage_09_spawn_nightmares.update
-tt.wave_config = {{
-	{},
-	{},
-	{{
-		duration = 28,
-		time_start = 10
-	}},
-	{{
-		duration = 28,
-		time_start = 10
-	}},
-	{},
-	{},
-	{{
-		duration = 30,
-		time_start = 10
-	}},
-	{},
-	{{
-		duration = 30,
-		time_start = 10
-	}},
-	{},
-	{{
-		duration = 52,
-		time_start = 10
-	}},
-	{{
-		duration = 40,
-		time_start = 10
-	}},
-	{},
-	{{
-		duration = 40,
-		time_start = 12
-	}},
-	{{
-		duration = 70,
-		time_start = 10
-	}}
-}, {{}, {}, {}, {{
-	duration = 70,
-	time_start = 20
-}}, {}, {{
-	duration = 107,
-	time_start = 21
-}}}, {{{
-	duration = 110,
-	time_start = 74
-}, {
-	duration = 330,
-	time_start = 310
-}}}}
-tt.entity_portal = "decal_stage_09_portal"
-tt.entity_aura = "aura_stage_09_spawn_nightmare_convert"
-tt.spawn_fx_aura = "aura_stage_09_spawn_nightmare_convert_spawn_fx"
-tt.entity_candles = {"decal_stage_09_candle_back1", "decal_stage_09_candle_back2", "decal_stage_09_candle_back3", "decal_stage_09_candle_front1", "decal_stage_09_candle_front2", "decal_stage_09_candle_front3"}
-tt.entity_glows = {"decal_stage_09_candle_glow_back", "decal_stage_09_candle_glow_front"}
-tt.path_portal = "decal_stage_09_portal_path_spawn"
-tt.portal_offset = v(-15, 0)
-tt.pos_portal = v(1048 + tt.portal_offset.x, 446 + tt.portal_offset.y)
-tt.pos_aura = {v(661 + tt.portal_offset.x, 280 + tt.portal_offset.y), v(659 + tt.portal_offset.x, 300 + tt.portal_offset.y), v(658 + tt.portal_offset.x, 260 + tt.portal_offset.y)}
-tt.path_portal_off_delay = 10
-tt.sound_candles_in = "Stage09NightmarePortalCandles"
-tt.sound_portal_in = "Stage09NightmarePortalEye"
 
 tt = E:register_t("controller_stage_10_obelisk")
 E:add_comps(tt, "editor", "pos", "main_script")
@@ -9737,40 +8055,6 @@ tt.force_motion.a_step = 5
 tt.force_motion.max_a = 900
 tt.force_motion.max_v = 300
 
-tt = E:register_t("controller_stage_10_obelisk_iron", "controller_stage_10_obelisk")
-tt.main_script.update = scripts.controller_stage_10_obelisk_iron.update
-tt.golem_holder_pos = {v(74, 524), v(310, 440), v(60, 308), v(700, 400), v(328, 204)}
-tt.golem_walk_pos = {v(26, -34), v(50, 50), v(30, 0), v(0, -70), v(54, 60)}
-tt.golem_activate_holder = {"2", "4", "1", "11", "6"}
-tt.golem_selected_paths = {4, 3, 2, 3, 1}
-tt.prepare_delay = 3
-
-tt = E:register_t("controller_stage_10_obelisk_wave_fixed", "controller_stage_10_obelisk")
-tt.main_script.update = scripts.controller_stage_10_obelisk_wave_fixed.update
-
-tt = E:register_t("controller_stage_10_ymca")
-E:add_comps(tt, "editor", "pos", "main_script")
-tt.main_script.insert = scripts.controller_stage_10_ymca.insert
-tt.main_script.update = scripts.controller_stage_10_ymca.update
-tt.entities_soldiers = {"soldier_stage_10_ymca_indio", "soldier_stage_10_ymca_constructor", "soldier_stage_10_ymca_biker", "soldier_stage_10_ymca_policia"}
-tt.entity_statue = "decal_stage_10_ymca_statue"
-tt.entity_dots = "decal_stage_10_ymca_dots"
-tt.entity_fireworks = "decal_stage_10_ymca_fireworks"
-tt.entity_lights = "decal_stage_10_ymca_lights"
-tt.dots_pos = v(1025, 590)
-tt.start_formation = {3, 4, 2, 1}
-
-local sb = v(-30, -30)
-
-tt.statue_position = {v(sb.x + 975, sb.y + 620), v(sb.x + 1030, sb.y + 650), v(sb.x + 1090, sb.y + 645), v(sb.x + 1133, sb.y + 590)}
-tt.soldier_spawn_pos = {v(985, 585), v(1015, 600), v(1045, 580), v(1015, 560)}
-tt.soldier_line_pos_offset = {v(25, -20), v(20, -10), v(-15, 5), v(-25, -10)}
-
-local base = v(925, 445)
-
-tt.soldier_path_pos = {v(base.x - 20, base.y + 20), v(base.x + 13, base.y + 33), v(base.x + 25, base.y), v(base.x - 10, base.y - 10)}
-tt.soldier_spawn_delay = {1.5, 1.8, 1.7, 1.5}
-
 tt = E:register_t("controller_stage_11_cult_leader")
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = scripts.controller_stage_11_cult_leader.insert
@@ -9877,49 +8161,6 @@ tt.cultist_stun_time = 15
 tt.illusion_delay_between = fts(24)
 tt.sound_illusion_summon_cast = "Stage11MydriasIllusionSummonCast"
 
-tt = E:register_t("controller_stage_11_portal")
-E:add_comps(tt, "editor", "pos", "main_script")
-tt.main_script.insert = scripts.controller_stage_11_portal.insert
-tt.main_script.update = scripts.controller_stage_11_portal.update
-tt.entity_portal = "decal_stage_11_portal"
-tt.portal_pos = v(512, 384)
-tt.entity_aura = "aura_stage_11_portal"
-tt.aura_pos = v(880, 580)
-tt.entity_torches = "decal_stage_11_torches"
-tt.torches_pos = v(512, 384)
-tt.entity_crystals_prefix = "decal_stage_11_portal_crystal_"
-tt.crystals_count = 8
-tt.crystals_pos = v(512, 384)
-tt.config = {
-	waves_campaign = {
-		3,
-		4,
-		5,
-		6,
-		7,
-		8,
-		9,
-		10,
-		12,
-		13,
-		14,
-		15
-	},
-	waves_heroic = {2, 3, 4, 5, 6},
-	waves_iron = {1}
-}
-tt.sound_thunder = "Stage11AmbienceThunder"
-tt.sound_thunder_cd_min = 8
-tt.sound_thunder_cd_max = 12
-tt.sound_portal_open = "Stage11PortalOpen"
-tt.sound_portal_close = "Stage11PortalClose"
-
-tt = E:register_t("controller_stage_11_cultist_leader_modes")
-E:add_comps(tt, "editor", "main_script")
-tt.main_script.update = scripts.controller_stage_11_cultist_leader_modes.update
-tt.entity_tables = "decal_stage_11_cultist_leader_modes"
-tt.entity_worker = "decal_stage_11_cultist_leader_modes_worker"
-
 tt = E:register_t("controller_terrain_3_floating_elements")
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.update = scripts.controller_terrain_3_floating_elements.update
@@ -9946,19 +8187,6 @@ function tt.main_script.insert(this, store)
 end
 
 tt.main_script.update = scripts.controller_terrain_3_stage_15_glare.update
-
-tt = E:register_t("controller_terrain_3_stage_16_glare1", "controller_terrain_3_local_glare")
-
-tt.main_script.update = scripts.controller_terrain_3_stage_16_glare.update
-tt.phase_config = {{-1, 0}, {-1, 0}, {-1, 0}, {6, 30}, {6, 20}, {60, 30}}
-tt.decal_ground = "decal_stage_16_glare_1"
-tt.eyes_t = {"decal_stage_16_glare_eye_big", "decal_stage_16_glare_eye_small_1", "decal_stage_16_glare_eye_small_2", "decal_stage_16_glare_eye_small_3"}
-
-tt = E:register_t("controller_terrain_3_stage_16_glare2", "controller_terrain_3_local_glare")
-
-tt.main_script.update = scripts.controller_terrain_3_stage_16_glare.update
-tt.phase_config = {{-1, 0}, {8, 25}, {6, 30}, {-1, 0}, {-1, 0}, {6, 30}}
-tt.decal_ground = "decal_stage_16_glare_2"
 
 tt = E:register_t("controller_stage_14_amalgam")
 E:add_comps(tt, "main_script")
@@ -10087,45 +8315,6 @@ tt.flags = bor(F_FRIEND, F_MOD)
 tt.aura = "aura_stage_15_cult_leader_tower_stun"
 tt.boss_to_spawn = "boss_cult_leader"
 
-tt = E:register_t("controller_stage_18_eridan", "decal_scripted")
-E:add_comps(tt, "bullet_attack", "custom_attack", "editor", "taunts")
-tt.render.sprites[1].prefix = "eridan_s18_eridan"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.render.sprites[1].sort_y_offset = -10
-tt.main_script.update = scripts.controller_stage_18_eridan.update
-tt.bullet_attack.max_range = 380
-tt.bullet_attack.bullet = "bullet_stage_18_eridan_arrow"
-tt.bullet_attack.shoot_times = {fts(11), fts(17), fts(23)}
-tt.bullet_attack.cooldown = 4
-tt.bullet_attack.bullet_start_offset = {v(20, 30), v(-20, 30)}
-tt.bullet_attack.animation = "shoot"
-tt.custom_attack.max_range = 250
-tt.custom_attack.shoot_time = fts(3)
-tt.custom_attack.cooldown = 18
-tt.custom_attack.animation_start = "dash_out"
-tt.custom_attack.animation_fight = "fight_sequence"
-tt.custom_attack.animation_end = "dash_in"
-tt.custom_attack.hp_threshold = 700
-tt.custom_attack.melee_slot_x = 40
-tt.custom_attack.mod = "mod_stage_18_eridan_stun"
-tt.custom_attack.hit_time = fts(46)
-tt.custom_attack.pop = {"pop_crit"}
-tt.custom_attack.damage_type = DAMAGE_INSTAKILL
-tt.custom_attack.vis_flags = bor(F_TELEPORT)
-tt.custom_attack.vis_bans = bor(F_FLYING)
-tt.sound_in_out = "Stage18EridanInOut"
-tt.sound_instakill = "Stage18EridanInstakill"
-tt.taunts.delay_min = 20
-tt.taunts.delay_max = 30
-tt.taunts.sets = {}
-tt.taunts.sets.preparation = CC("taunt_set")
-tt.taunts.sets.preparation.format = "LV18_ERIDAN_PREPARATION_TAUNT_%02i"
-tt.taunts.sets.preparation.end_idx = 4
-tt.taunts.sets.fight = CC("taunt_set")
-tt.taunts.sets.fight.format = "LV18_ERIDAN_FIGHT_TAUNT_%02i"
-tt.taunts.sets.fight.end_idx = 8
-
 tt = E:register_t("controller_stage_19_mausoleum", "decal_scripted")
 E:add_comps(tt, "editor")
 tt.main_script.update = scripts.controller_stage_19_mausoleum.update
@@ -10197,39 +8386,6 @@ tt.wave_config = {{
 	duration = 325,
 	time_start = 2
 }}}}
-
-tt = E:register_t("controller_stage_19_navira", "decal_scripted")
-E:add_comps(tt, "taunts", "editor")
-tt.main_script.update = scripts.controller_stage_19_navira.update
-tt.render.sprites[1].prefix = "navira_navira"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.render.sprites[1].flip_x = true
-tt.render.sprites[1].hidden = true
-tt.taunts.delay_min = 20
-tt.taunts.delay_max = 30
-tt.taunts.sets = {}
-tt.taunts.sets.pre_bossfight = CC("taunt_set")
-tt.taunts.sets.pre_bossfight.format = "LV19_NAVIRA_TAUNT_%02i"
-tt.taunts.sets.pre_bossfight.end_idx = 6
-tt.fire_balls_count = 3
-tt.fire_balls_cd = 25
-tt.fire_balls_wait_between_balls = 5
-tt.fire_balls_wait_before_shoot = 1
-tt.fire_balls_wait_between_shots = 0.2
-tt.fire_ball_t = "navira_fire_ball"
-tt.fire_ball_bullet_t = "bullet_stage_19_navira_fire_ball_ray"
-tt.fire_ball_rotation_controller_t = "controller_stage_19_navira_ball_rotation"
-tt.hands_dust_1_t = "fx_stage_19_statue_hands_dust_1"
-tt.hands_dust_2_t = "fx_stage_19_statue_hands_dust_2"
-tt.hands_stones_1_t = "fx_stage_19_statue_hands_stones_1"
-tt.hands_stones_2_t = "fx_stage_19_statue_hands_stones_2"
-tt.cape_t = "decal_stage_19_navira_cape"
-tt.sound_enter = "Stage19NaviraEnter"
-tt.sound_fireball_spawn = "Stage19NaviraFireballSpawn"
-tt.sound_fireball_cast = "Stage19NaviraFireballCast"
-tt.sound_hands_down = "Stage19NaviraHandsDown"
-tt.sound_hands_up = "Stage19NaviraHandsUp"
 
 tt = E:register_t("controller_stage_19_navira_ball_rotation")
 E:add_comps(tt, "main_script")
@@ -10363,11 +8519,6 @@ tt.particle_system.track_offset = v(0, 20)
 tt.particle_system.animation_fps = 15
 tt.particle_system.z = Z_DECALS
 
-tt = E:register_t("stage_06_mask_1", "decal")
-tt.render.sprites[1].name = "stage_6_mask1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-
 tt = E:register_t("stage_06_mask_2", "decal")
 tt.render.sprites[1].name = "stage_6_mask2"
 tt.render.sprites[1].animated = false
@@ -10380,84 +8531,6 @@ tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
 tt = E:register_t("stage_06_mask_4", "decal")
 tt.render.sprites[1].name = "stage_6_mask4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("stage_06_hole", "decal")
-tt.render.sprites[1].prefix = "stage_6_madriguera"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("stage_06_door", "decal_scripted")
-E:add_comps(tt, "spawner", "sound_events", "editor", "ui", "tween")
-tt.main_script.update = scripts.decal_stage_06_door.update
-for i = 1, 4 do
-	tt.render.sprites[i] = E:clone_c("sprite")
-	tt.render.sprites[i].animated = true
-	tt.render.sprites[i].prefix = "stage_6_ascensor_ascensor_layer" .. i
-	tt.render.sprites[i].name = "idle1_1"
-	tt.render.sprites[i].group = "layers"
-end
-tt.render.sprites[5] = E:clone_c("sprite")
-tt.render.sprites[5].name = "stage_6_ascensor_door"
-tt.render.sprites[5].animated = false
-tt.render.sprites[5].z = Z_OBJECTS_COVERS
-tt.render.sprites[5].offset.x = 8.9
-tt.render.sprites[5].offset.y = -13.2
-tt.render.sprites[6] = E:clone_c("sprite")
-tt.render.sprites[6].prefix = "tusked_brawler"
-tt.render.sprites[6].hidden = true
-tt.render.sprites[7] = E:clone_c("sprite")
-tt.render.sprites[7].prefix = "stage_6_ascensor_jabali"
-tt.render.sprites[7].hidden = true
-tt.render.sprites[7].offset.x = -70
-tt.render.sprites[7].offset.y = 15
-tt.render.sprites[8] = E:clone_c("sprite")
-tt.render.sprites[8].name = "stage_6_ascensor_ascensor_dust"
-tt.render.sprites[8].animated = false
-tt.render.sprites[8].z = Z_DECALS
-tt.spawner.eternal = true
-tt.render.sprites[8] = E:clone_c("sprite")
-tt.render.sprites[8].name = "stage_6_ascensor_ascensor_dust"
-tt.render.sprites[8].animated = false
-tt.render.sprites[8].z = Z_DECALS
-tt.render.sprites[8].offset.x = 15
-tt.render.sprites[8].offset.y = -55
-tt.render.sprites[7].z = Z_OBJECTS_COVERS + 1
-tt.render.sprites[4].z = Z_OBJECTS_COVERS + 2
-tt.render.sprites[3].z = Z_OBJECTS_COVERS + 1
-tt.render.sprites[2].z = Z_DECALS
-tt.render.sprites[1].z = Z_DECALS
-tt.ui.can_click = false
-tt.ui.click_rect = r(0, 0, 50, 50)
-tt.clicks_to_kill = 3
-tt.pig_death_sound = "EnemyTuskedBrawlerDeath"
-tt.pig_click_sound = "Stage06EasterEggMinecraftClick"
-tt.tween.props[1].keys = {{0, 255}, {3, 255}, {5, 0}}
-tt.tween.props[1].sprite_id = 6
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, v(1, 1)}, {fts(1), v(1.2, 1.2)}, {fts(3), v(1, 1)}}
-tt.tween.props[2].disabled = true
-tt.tween.props[2].sprite_id = 6
-tt.tween.props[3] = E:clone_c("tween_prop")
-tt.tween.props[3].name = "scale"
-tt.tween.props[3].keys = {{0, v(1, 1)}, {fts(1), v(1.2, 1.2)}, {fts(3), v(1, 1)}}
-tt.tween.props[3].disabled = true
-tt.tween.props[3].sprite_id = 7
-tt.tween.disabled = true
-tt.tween.remove = false
-tt.tween.run_once = false
-
-tt = E:register_t("stage_06_hole_mask", "decal")
-tt.render.sprites[1].name = "stage_6_maskmadriguera"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].sort_y_offset = -75
-
-tt = E:register_t("stage_06_mask_door", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "stage_6_maskascensor"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
@@ -10572,100 +8645,6 @@ tt.clicks_to_kill = 3
 tt.change_anim_cd_min = 4
 tt.change_anim_cd_max = 7
 
-tt = E:register_t("controller_stage_06_minecraft_easter_egg")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_06_minecraft_easter_egg.update
-
-tt = E:register_t("decal_stage_06_elder_rune", "decal_click_play")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "stage_6_elder_rune_6"
-tt.render.sprites[1].loop = true
-tt.main_script.update = scripts.decal_stage_06_elder_rune.update
-tt.click_play.idle_animation = "idle_2"
-tt.click_play.click_animation = "activation"
-tt.click_play.play_once = true
-tt.click_play.clicked_sound = "Stage0506Rune"
-tt.ui.click_rect = r(-70, -10, 90, 60)
-
-tt = E:register_t("decal_stage_06_elder_rune_static", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "stage_6_elder_rune_6_0125"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].loop = false
-
-tt = E:register_t("decal_stage_06_cult_leader", "decal_scripted")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "mydrias_cinematic"
-tt.render.sprites[1].name = "idle"
-
-tt = E:register_t("decal_pool_party1", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage_6_poolparty_deco_water"
-tt.render.sprites[1].z = Z_DECALS - 1
-
-tt = E:register_t("decal_pool_party2", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "stage_6_poolparty_deco"
-tt.render.sprites[1].z = Z_DECALS - 1
-
-tt = E:register_t("decal_pool_party3", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].name = "stage_6_poolparty_deco_sleeping_arborean"
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_pool_party4", "decal")
-E:add_comps(tt, "editor")
-for i = 1, 2 do
-	tt.render.sprites[i] = E:clone_c("sprite")
-	tt.render.sprites[i].prefix = "stage_6_poolparty_deco_demon_jump_layer" .. i
-	tt.render.sprites[i].group = "layers"
-	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].z = Z_DECALS
-end
-
-tt = E:register_t("decal_pool_party5", "decal")
-E:add_comps(tt, "editor")
-for i = 1, 4 do
-	tt.render.sprites[i] = E:clone_c("sprite")
-	tt.render.sprites[i].prefix = "stage_6_poolparty_deco_volleyball_layer" .. i
-	tt.render.sprites[i].group = "layers"
-	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].z = Z_DECALS
-end
-
-tt = E:register_t("decal_pool_party6", "decal")
-E:add_comps(tt, "editor")
-for i = 1, 2 do
-	tt.render.sprites[i] = E:clone_c("sprite")
-	tt.render.sprites[i].prefix = "stage_6_poolparty_deco_music_arborean_layer" .. i
-	tt.render.sprites[i].group = "layers"
-	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].z = Z_DECALS
-end
-
-tt = E:register_t("decal_pool_party7", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].animated = TEXTURE_SIZE_ALIAS
-tt.render.sprites[1].name = "stage_6_poolparty_deco_baby"
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_pool_party8", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage_6_poolparty_deco_weapons"
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_gold_mount", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage_06_parches_espada"
-tt.render.sprites[1].z = Z_DECALS - 1
-
 tt = E:register_t("decal_tiki_bar1", "decal")
 E:add_comps(tt, "editor")
 tt.render.sprites[1].animated = false
@@ -10697,10 +8676,6 @@ tt.render.sprites[1].prefix = "stage_06_parches_tiki_top_pibe"
 tt.render.sprites[1].name = "Idle"
 tt.render.sprites[1].sort_y_offset = 1
 
-tt = E:register_t("decal_tiki_bar6", "decal_tiki_bar1")
-tt.render.sprites[1].name = "stage_06_parches_tiki_top"
-tt.render.sprites[1].sort_y_offset = -1
-
 tt = E:register_t("decal_terrain_2_smoke", "decal")
 tt.render.sprites[1].prefix = "t2_smokeDef"
 tt.render.sprites[1].name = "loop"
@@ -10713,55 +8688,6 @@ tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t("decal_stage_07_fire", "decal")
-tt.render.sprites[1].prefix = "fireDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS - 1
-
-tt = E:register_t("decal_stage_07_fireMask", "decal")
-tt.render.sprites[1].prefix = "fire_maskDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS - 1
-
-tt = E:register_t("decal_stage_07_mask", "decal")
-tt.render.sprites[1].name = "T2_Stage_7_mask"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_07_cave_mask_smoke", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "T2_Stage_7_mask_cave"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_07_dust", "decal_terrain_2_dust")
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.render.sprites[1].random_ts = 1
-
-tt = E:register_t("decal_stage_07_temple", "decal_scripted")
-tt.render.sprites[1].prefix = "templeDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
-tt.main_script.update = scripts.decal_stage_07_temple.update
-tt.activation_wave = 10
-tt.temple_mask = "decal_stage_07_temple_mask"
-tt.cave_mask = "decal_stage_07_cave_mask_smoke"
-tt.sound = "Stage07CultTemple"
-
-tt = E:register_t("decal_stage_07_temple_mask", "decal")
-tt.render.sprites[1].prefix = "temple_maskDef"
-tt.render.sprites[1].name = "idle_in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.render.sprites[1].hidden = true
-
-tt = E:register_t("controller_stage_07_crows")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_07_crows.update
-
 tt = E:register_t("decal_stage_07_crow_clickable", "decal_scripted")
 E:add_comps(tt, "editor", "ui")
 tt.render.sprites[1].name = "idle"
@@ -10769,34 +8695,6 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.main_script.update = scripts.stage_07_crow.update
 tt.ui.click_rect = r(-15, -15, 30, 30)
-
-tt = E:register_t("decal_stage_07_crow_clickable_1", "decal_stage_07_crow_clickable")
-tt.render.sprites[1].prefix = "stage_7_crow1Def"
-
-tt = E:register_t("decal_stage_07_crow_clickable_2", "decal_stage_07_crow_clickable")
-tt.render.sprites[1].prefix = "stage_7_crow2Def"
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("decal_stage_07_crow_clickable_3", "decal_stage_07_crow_clickable")
-tt.render.sprites[1].prefix = "stage_7_crow3Def"
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("decal_stage_07_crow_clickable_4", "decal_stage_07_crow_clickable")
-tt.render.sprites[1].prefix = "stage_7_crow4Def"
-tt.render.sprites[1].z = Z_FLYING_HEROES - 1
-
-tt = E:register_t("decal_stage_07_crow_clickable_5", "decal_stage_07_crow_clickable")
-tt.render.sprites[1].prefix = "stage_7_crow5Def"
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("decal_stage_07_witcher_easter_egg", "decal_scripted")
-E:add_comps(tt, "editor", "ui")
-tt.render.sprites[1].prefix = "the_witcherDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.stage_07_witcher.update
-tt.ui.click_rect = r(520, -220, 50, 50)
 
 tt = E:register_t("stage_08_mask_1", "decal")
 tt.render.sprites[1].name = "T2_Stage_8_mask_1"
@@ -10848,11 +8746,6 @@ tt.render.sprites[1].prefix = "stage_8_gems_basket_thirdDef"
 tt.ui.click_rect = r(477, -260, 50, 50)
 tt.gold_pos_offset = nil
 
-tt = E:register_t("decal_stage_09_mask", "decal")
-tt.render.sprites[1].name = "T2_Stage_9_chains_mask"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
 tt = E:register_t("decal_stage_09_bridge", "decal_scripted")
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = true
@@ -10873,13 +8766,6 @@ tt = E:register_t("decal_stage_09_bridge2", "decal_stage_09_bridge")
 tt.render.sprites[1].prefix = "stage_9_bridge2Def"
 tt.mask_entity = "decal_stage_09_bridge2_mask"
 tt.in_delay = 2.5
-
-tt = E:register_t("decal_stage_09_bridge3", "decal_stage_09_bridge")
-tt.render.sprites[1].prefix = "stage_9_bridge3Def"
-tt.mask_entity = "decal_stage_09_bridge3_mask"
-tt.mask_before = true
-tt.mask_in_animation = "in"
-tt.mask_loop_animation = "loop"
 
 tt = E:register_t("decal_stage_09_bridge_mask", "decal")
 tt.render.sprites[1].name = "loop"
@@ -10932,12 +8818,6 @@ tt.render.sprites[1].name = "off"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t("decal_stage_09_fire", "decal")
-tt.render.sprites[1].prefix = "stage_9_fireDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS + 1
-
 tt = E:register_t("decal_stage_09_portal_path_spawn", "decal_scripted")
 tt.render.sprites[1].prefix = "stage_9_portal_pathDef"
 tt.render.sprites[1].name = "idle"
@@ -10951,35 +8831,10 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t("decal_stage_09_sheepy_easteregg", "decal_scripted")
-E:add_comps(tt, "ui", "editor")
-tt.render.sprites[1].prefix = "stage_9_sheepyDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS - 1
-tt.main_script.update = scripts.decal_stage_09_sheepy_easteregg.update
-tt.ui.click_rect = r(-20, -10, 40, 40)
-
 tt = E:register_t("decal_stage_10_mask", "decal")
 tt.render.sprites[1].name = "T2_Stage_10_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_10_fire", "decal")
-tt.render.sprites[1].prefix = "stage_10_fireDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_10_obelisk", "decal")
-tt.render.sprites[1].name = "stage10_obelisk_base"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("decal_stage_10_obelisk_back", "decal")
-tt.render.sprites[1].name = "stage10_obelisk_base_back"
-tt.render.sprites[1].z = Z_DECALS - 1
-tt.render.sprites[1].animated = false
 
 tt = E:register_t("decal_stage_10_obelisk_priests", "decal")
 tt.render.sprites[1].prefix = "stage10_obelisk_priests"
@@ -10994,11 +8849,6 @@ tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].prefix = "stage10_obelisk_base_cristalitos_back"
 tt.render.sprites[2].name = "idle"
 tt.render.sprites[2].z = Z_DECALS - 1
-
-tt = E:register_t("decal_stage_10_ymca_ground_decos", "decal")
-tt.render.sprites[1].name = "ymca_spawn_fx_layer_2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
 
 tt = E:register_t("decal_stage_10_obelisk_crystal", "decal_tween")
 tt.render.sprites[1].prefix = "stage10_obelisk_crystal"
@@ -11071,67 +8921,6 @@ tt.tween.props[1].keys = {{0, v(0, 0)}, {fts(35), v(0, 7)}, {fts(70), v(0, 0)}}
 tt.tween.props[1].interp = "sine"
 tt.tween.disabled = true
 tt.tween.remove = false
-
-tt = E:register_t("decal_stage_11_boss_corrupted_denas_intro_base", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "denas_intro_baseDef"
-tt.render.sprites[1].name = "start"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_11_boss_corrupted_denas_intro_chains", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "denas_intro_chainsDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-
-tt = E:register_t("decal_stage_11_boss_corrupted_denas_intro_jump", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "denas_intro_jumpDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].loop = false
-
-tt = E:register_t("decal_stage_11_veznan", "tower")
-E:add_comps(tt, "user_selection", "attacks")
-tt.tower.type = "stage_11_veznan"
-tt.tower.can_be_sold = false
-tt.tower.can_be_mod = false
-tt.render.sprites[1].prefix = "stage11_veznan_export_veznan"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].scale = vv(1.15)
-tt.info = nil
-tt.user_selection = CC("user_selection")
-tt.user_selection.can_select_point_fn = scripts.decal_stage_11_veznan.can_select_point
-tt.main_script.update = scripts.decal_stage_11_veznan.update
-tt.attacks.list[1] = E:clone_c("custom_attack")
-tt.attacks.list[1].bullet = "bullet_stage_11_veznan_skill_1"
-tt.attacks.list[1].bullet_spawn_pos = v(0, 50)
-tt.attacks.list[2] = E:clone_c("custom_attack")
-tt.attacks.list[2].preparation_time = fts(25)
-tt.attacks.list[2].spawn_time = fts(30)
-tt.attacks.list[2].decal = "decal_stage_11_veznan_skill_soldiers"
-tt.attacks.list[2].decal_pos = {v(-40, 333), v(540, 91)}
-tt.attacks.list[2].entity = "soldier_stage_11_veznan_skill_soldiers"
-tt.attacks.list[2].available_paths = {{1, 4}, {2, 3, 5}}
-tt.attacks.list[3] = E:clone_c("custom_attack")
-tt.attacks.list[3].preparation_time = fts(25)
-tt.attacks.list[3].mod = "mod_stage_11_veznan_skill_cage"
-tt.skill_cooldown = 12
-tt.hint_cooldown = 10
-tt.illusion_template_name = "enemy_stage_11_cult_leader_illusion"
-tt.cult_leader_template_name = "decal_stage_11_cult_leader"
-tt.boss_corrupted_denas_template_name = "boss_corrupted_denas"
-tt.hint_template_name = "decal_stage_11_veznan_hint"
-tt.bullet_formation = {{v(0, 50)}, {v(-20, 30), v(20, 30)}, {v(-20, 30), v(20, 30), v(0, 50)}, {v(-20, 40), v(20, 40), v(0, 60), v(0, 30)}}
-tt.spawn_fx = "fx_stage_11_veznan_spawn"
-tt.spawn_fx_base = "fx_stage_11_veznan_spawn_base"
-tt.spawn_delay = fts(42)
-tt.sound_events.insert = "Stage11MidCinematicVeznanTeleport"
-tt.sound_ready = "Stage11MidCinematicVeznanTeleport"
-tt.sound_soul_impact_cast = "Stage11VeznanSoulImpactCast"
-tt.sound_demon_guard_cast = "Stage11VeznanDemonGuardCast"
 
 tt = E:register_t("bullet_stage_11_veznan_skill_1", "bolt")
 tt.render.sprites[1].prefix = "stage11_veznan_export_proyectile"
@@ -11246,10 +9035,6 @@ tt.decal_spawn_range = 50
 tt.distance_between = 20
 tt.decal_amount = 5
 
-tt = E:register_t("decal_boss_corrupted_denas_dust", "decal")
-tt.render.sprites[1].name = "denas_dustexplosion_run"
-tt.render.sprites[1].hide_after_runs = 1
-
 tt = E:register_t("decal_stage_11_portal", "decal")
 E:add_comps(tt, "editor")
 tt.render.sprites[1].random_ts = 1
@@ -11357,104 +9142,6 @@ tt.editor.props = {{"tween_amplitude", PT_NUMBER}, {"tween_frecueny", PT_NUMBER}
 tt = E:register_t("decal_stage_11_rock_2", "decal_stage_11_rock_1")
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_2"
 
-tt = E:register_t("decal_stage_11_rock_3", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_3"
-
-tt = E:register_t("decal_stage_11_rock_4", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_4"
-
-tt = E:register_t("decal_stage_11_rock_5", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_5"
-tt.render.sprites[1].scale = vv(0.65)
-
-tt = E:register_t("decal_stage_11_rock_6", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_6"
-
-tt = E:register_t("decal_stage_11_rock_7", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_7"
-
-tt = E:register_t("decal_stage_11_rock_8", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_8"
-tt.render.sprites[1].scale = vv(0.75)
-
-tt = E:register_t("decal_stage_11_rock_9", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_9"
-
-tt = E:register_t("decal_stage_11_rock_10", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_10"
-
-tt = E:register_t("decal_stage_11_rock_11", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_11"
-
-tt = E:register_t("decal_stage_11_rock_12", "decal_stage_11_rock_11")
-tt.render.sprites[1].scale = vv(1.35)
-
-tt = E:register_t("decal_stage_11_rock_13", "decal_stage_11_rock_1")
-tt.render.sprites[1].scale = vv(0.85)
-
-tt = E:register_t("decal_stage_11_rock_14", "decal_stage_11_rock_13")
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("decal_stage_11_rock_15", "decal_stage_11_rock_2")
-tt.render.sprites[1].scale = vv(2)
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("decal_stage_11_rock_16", "decal_stage_11_rock_4")
-tt.render.sprites[1].scale = vv(1.25)
-
-tt = E:register_t("decal_stage_11_rock_17", "decal_stage_11_rock_4")
-tt.render.sprites[1].scale = v(0.75, 0.5)
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("decal_stage_11_rock_18", "decal_stage_11_rock_1")
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_12"
-
-tt = E:register_t("decal_stage_11_rock_19", "decal_stage_11_rock_18")
-tt.render.sprites[1].scale = v(0.5, 0.5)
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("decal_stage_11_cultist_leader_modes", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].prefix = "stage_11_deco_mydrias_baseDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].draw_order = 1
-
-tt = E:register_t("decal_stage_11_cultist_leader_modes_worker", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].prefix = "stage_11_deco_mydrias_workerDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].draw_order = 2
-
-tt = E:register_t("decal_stage_11_veznan_modes", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].name = "deco_veznan_statue_statue"
-tt.render.sprites[1].animated = false
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "deco_veznan_statue_torch"
-tt.render.sprites[2].name = "idle"
-tt.render.sprites[2].draw_order = 2
-tt.render.sprites[2].offset = v(0, -66)
-
-tt = E:register_t("decal_stage_11_sam_and_frodo", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].prefix = "sam_and_frodoDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt.main_script.update = scripts.decal_stage_11_sam_and_frodo.update
-tt.ui.click_rect = r(370, -270, 50, 40)
-tt.push_up_cooldown = 7
-
-tt = E:register_t("decal_stage_11_sam_and_frodo_mask", "decal")
-tt.render.sprites[1].name = "sam_and_frodo_easter_egg_mask"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
-
 tt = E:register_t("decal_glare_terrain_3_overlay", "decal")
 E:add_comps(tt, "tween")
 tt.pos = v(512, 384)
@@ -11508,21 +9195,6 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].interp = "sine"
 tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"render.sprites[1].scale", PT_COORDS}, {"render.sprites[1].draw_order", PT_NUMBER}, {"render.sprites[1].name", PT_STRING}, {"render.sprites[1].z", PT_NUMBER}}
 
-tt = E:register_t("decal_terrain_3_floating_rock_1", "decal_terrain_3_floating_rock")
-tt.render.sprites[1].name = "t3_crater_asst_crater_rock1"
-
-tt = E:register_t("decal_terrain_3_floating_rock_2", "decal_terrain_3_floating_rock")
-tt.render.sprites[1].name = "t3_crater_asst_crater_rock2"
-
-tt = E:register_t("decal_terrain_3_floating_rock_3", "decal_terrain_3_floating_rock")
-tt.render.sprites[1].name = "t3_crater_asst_crater_rock3"
-
-tt = E:register_t("decal_terrain_3_floating_rock_4", "decal_terrain_3_floating_rock")
-tt.render.sprites[1].name = "t3_crater_asst_crater_rock4"
-
-tt = E:register_t("decal_terrain_3_floating_rock_5", "decal_terrain_3_floating_rock")
-tt.render.sprites[1].name = "t3_crater_asst_crater_rock5"
-
 tt = E:register_t("decal_terrain_3_glare_eye_big", "decal_scripted")
 tt.render.sprites[1].name = "glare_eye_big"
 tt.render.sprites[1].animated = false
@@ -11569,15 +9241,6 @@ tt = E:register_t("decal_terrain_3_glare_eye_small_3", "decal_terrain_3_glare_ey
 tt.render.sprites[1].prefix = "glare_eyes_3"
 tt.render.sprites[2].prefix = "glare_eyelids_3"
 
-tt = E:register_t("decal_stage_12_sheepy_easteregg", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].prefix = "stage_12_sheepyDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_12_sheepy_easteregg.update
-tt.ui.click_rect = r(410, 230, 40, 40)
-
 tt = E:register_t("decal_stage_12_tentacles", "decal")
 tt.render.sprites[1].prefix = "BKtentacleDef"
 tt.render.sprites[1].name = "run"
@@ -11596,60 +9259,8 @@ tt.render.sprites[1].name = "T3_12_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS + 1
 
-tt = E:register_t("decal_stage_12_mask_2", "decal_stage_12_mask_1")
-tt.render.sprites[1].name = "T3_12_mask_02"
-
-tt = E:register_t("decal_stage_12_mask_3", "decal_stage_12_mask_1")
-tt.render.sprites[1].name = "T3_12_mask_03"
-
-tt = E:register_t("decal_stage_12_mask_4", "decal_stage_12_mask_1")
-tt.render.sprites[1].name = "T3_12_mask_04"
-
-tt = E:register_t("decal_stage_12_windmill", "decal_click_pause")
-E:add_comps(tt, "tween")
-tt.render.sprites[1].prefix = "t3_windmillDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.ui.click_rect = r(-25, -5, 50, 70)
-tt.tween_amplitude = 15
-tt.tween_frecuency = 150
-tt.tween.disabled = false
-tt.tween.remove = false
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].loop = true
-tt.tween.props[1].interp = "sine"
-tt.tween.props[1].keys = {{fts(0), v(0, 0)}, {fts(tt.tween_frecuency), v(0, tt.tween_amplitude)}, {fts(tt.tween_frecuency * 2), v(0, 0)}}
-tt.main_script.update = scripts.decal_stage_12_windmill.update
-
-tt = E:register_t("decal_stage_12_easter_egg_strangerthings", "decal")
-E:add_comps(tt, "ui", "main_script")
-tt.main_script.update = scripts.decal_stage_12_easter_egg_strangerthings.update
-tt.render.sprites[1].prefix = "stranger_thingsDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS + 1
-tt.ui.click_rect = r(-365, -240, 95, 55)
-
 tt = E:register_t("decal_stage_13_tentacles", "decal_stage_12_tentacles")
 tt.render.sprites[1].prefix = "BKtentacle13Def"
-
-tt = E:register_t("decal_stage_13_mask_1", "decal")
-tt.render.sprites[1].name = "stage13_mask1"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("decal_stage_13_mask_2", "decal_stage_13_mask_1")
-tt.render.sprites[1].name = "stage13_mask2"
-
-tt = E:register_t("decal_stage_13_mask_3", "decal_stage_13_mask_1")
-tt.render.sprites[1].name = "stage13_masktentacle1"
-tt.render.sprites[1].z = Z_DECALS + 1
-
-tt = E:register_t("decal_stage_13_mask_4", "decal_stage_13_mask_1")
-tt.render.sprites[1].name = "stage13_masktentacle2"
-tt.render.sprites[1].z = Z_DECALS + 1
-
-tt = E:register_t("decal_stage_13_glare", "decal_stage_12_glare")
-tt.render.sprites[1].prefix = "stage_13_glareDef"
 
 tt = E:register_t("decal_stage_14_easter_egg_rickmorty", "decal")
 E:add_comps(tt, "editor", "main_script", "ui")
@@ -11664,109 +9275,18 @@ tt.ui.click_rect = r(-40, -30, 80, 50)
 tt.pos_spawn = {v(130, 210), v(1033, 468)}
 tt.prefix_names = {"Rick2Def", "Rick3Def"}
 
-tt = E:register_t("decal_stage_14_glare_1", "decal_stage_12_glare")
-tt.render.sprites[1].prefix = "stage_14_glare_1Def"
-
-tt = E:register_t("decal_stage_14_glare_2", "decal_stage_12_glare")
-tt.render.sprites[1].prefix = "stage_14_glare_2Def"
-
-tt = E:register_t("decal_terrain_3_glare_eye_big_stage_14", "decal_terrain_3_glare_eye_big")
-tt.render.sprites[1].name = "glare_stage_14_eye_2_big"
-tt.render.sprites[2].prefix = "glare_stage_14_eyelid_2_big"
-tt.render.sprites[3].prefix = "glare_stage_14_eye_2_big_pupil"
-
-tt = E:register_t("decal_terrain_3_glare_eye_small_1_stage_14", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_14_eye_2_1"
-tt.render.sprites[2].prefix = "glare_stage_14_eyelid_2_1"
-
-tt = E:register_t("decal_terrain_3_glare_eye_small_2_stage_14", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_14_eye_2_2"
-tt.render.sprites[2].prefix = "glare_stage_14_eyelid_2_2"
-
-tt = E:register_t("decal_terrain_3_glare_eye_small_3_stage_14", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_14_eye_2_3"
-tt.render.sprites[2].prefix = "glare_stage_14_eyelid_2_3"
-
-tt = E:register_t("decal_stage_14_tentacles", "decal_stage_12_tentacles")
-tt.render.sprites[1].prefix = "BKtentacle14Def"
-
 tt = E:register_t("decal_stage_14_mask_1", "decal")
 tt.render.sprites[1].name = "T3_S14_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_14_mask_2", "decal_stage_14_mask_1")
-tt.render.sprites[1].name = "T3_S14_mask_02"
-
-tt = E:register_t("decal_stage_14_mask_3", "decal_stage_14_mask_1")
-tt.render.sprites[1].name = "T3_S14_mask_03"
-
-tt = E:register_t("decal_stage_14_mask_4", "decal_stage_14_mask_1")
-tt.render.sprites[1].name = "T3_S14_mask_04"
-
-tt = E:register_t("decal_stage_14_mask_amalgam", "decal_stage_14_mask_1")
-tt.render.sprites[1].name = "T3_S14_mask_amalgam"
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].sort_y_offset = 90
 
 tt = E:register_t("decal_controller_stage_14_amalgam", "decal_stage_14_mask_1")
 tt.render.sprites[1].prefix = "Amalgam_dude"
 tt.render.sprites[1].name = "state_1"
 tt.render.sprites[1].animated = true
 
-tt = E:register_t("decal_stage_14_hidden_path", "decal")
-tt.render.sprites[1].prefix = "hidden_pathDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_14_hidden_path_dust", "decal")
-tt.render.sprites[1].prefix = "dust_pathDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
 tt = E:register_t("decal_stage_15_glare", "decal_stage_12_glare")
 tt.render.sprites[1].prefix = "stage_15_glareDef"
-
-tt = E:register_t("decal_stage_15_tentacles", "decal_stage_12_tentacles")
-tt.render.sprites[1].prefix = "BKtentacle_S15Def"
-
-tt = E:register_t("decal_stage_15_mask_1", "decal")
-tt.render.sprites[1].name = "T3_15_mask_01"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_15_mask_2", "decal_stage_15_mask_1")
-tt.render.sprites[1].name = "T3_15_mask_02"
-
-tt = E:register_t("decal_stage_15_mask_3", "decal_stage_15_mask_1")
-tt.render.sprites[1].name = "T3_15_mask_03"
-
-tt = E:register_t("decal_stage_15_mask_4", "decal_stage_15_mask_1")
-tt.render.sprites[1].name = "T3_15_mask_04"
-tt.render.sprites[1].z = Z_OBJECTS
-
-tt = E:register_t("decal_stage_15_mask_5", "decal_stage_15_mask_1")
-tt.render.sprites[1].name = "T3_15_mask_05"
-tt.render.sprites[1].z = Z_OBJECTS
-
-tt = E:register_t("decal_terrain_3_glare_eye_big_stage_15", "decal_terrain_3_glare_eye_big")
-tt.render.sprites[1].name = "glare_stage_15_eye_big"
-tt.render.sprites[2].prefix = "glare_stage_15_eyelids_big"
-tt.render.sprites[3].prefix = "glare_stage_15_eye_big_pupil"
-
-tt = E:register_t("decal_terrain_3_glare_eye_small_1_stage_15", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_15_eyes_1"
-tt.render.sprites[2].prefix = "glare_stage_15_eyelids_1"
-
-tt = E:register_t("decal_terrain_3_glare_eye_small_2_stage_15", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_15_eyes_2"
-tt.render.sprites[2].prefix = "glare_stage_15_eyelids_2"
-
-tt = E:register_t("decal_terrain_3_glare_eye_small_3_stage_15", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_15_eyes_3"
-tt.render.sprites[2].prefix = "glare_stage_15_eyelids_3"
 
 tt = E:register_t("decal_soldier_reinforcement_stage_15_denas_spawn", "decal_timed")
 tt.render.sprites[1].name = "denas_floor_fx_idle"
@@ -11775,12 +9295,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt = E:register_t("decal_soldier_reinforcement_stage_15_denas_floor", "decal_timed")
 tt.render.sprites[1].name = "denas_decal_Idle"
 tt.render.sprites[1].z = Z_DECALS + 1
-
-tt = E:register_t("decal_stage_15_cult_leader_tower_mask", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "mutamydrias_fx_Mutamydrias_balcon"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 15
-tt.render.sprites[1].animated = false
 
 tt = E:register_t("decal_stage_15_tentacle_stun_out", "decal")
 E:add_comps(tt, "editor", "tween")
@@ -11827,21 +9341,6 @@ tt.tween.props[4] = table.deepclone(tt.tween.props[1])
 tt.tween.props[4].sprite_id = 4
 tt.tween.props[5] = table.deepclone(tt.tween.props[1])
 tt.tween.props[5].sprite_id = 5
-
-tt = E:register_t("taunts_s115_controller")
-E:add_comps(tt, "main_script", "taunts", "editor")
-tt.load_file = "level115_taunts"
-tt.main_script.insert = scripts.taunts_controller.insert
-tt.main_script.update = scripts.taunts_controller.update
-tt.taunts.delay_min = 10
-tt.taunts.sets = {}
-tt.taunts.sets.stage_15_cult_leader_greetings = CC("taunt_set")
-tt.taunts.sets.stage_15_cult_leader_greetings.format = "TAUNT_STAGE15_CULTIST_%04i"
-tt.taunts.sets.stage_15_cult_leader_greetings.decal_name = "decal_stage15_cultist_shoutbox"
-tt.taunts.sets.in_bossfight = CC("taunt_set")
-tt.taunts.sets.in_bossfight.format = "LV15_CULTIST01_BOSSFIGHT_%02i"
-tt.taunts.sets.in_bossfight.decal_name = "decal_stage11_cultist_shoutbox"
-tt.taunts.sets.in_bossfight.end_idx = 6
 
 tt = E:register_t("decal_stage15_cultist_shoutbox", "decal_tween")
 E:add_comps(tt, "texts")
@@ -11892,47 +9391,14 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS + 1
 tt.tween.props[1].keys = {{0, 255}, {fts(20), 255}}
 
-tt = E:register_t("decal_stage_15_easter_egg_goblin", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.main_script.update = scripts.decal_stage_15_easter_egg_goblin.update
-tt.render.sprites[1].prefix = "t3stage15_eastereggDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 10
-tt.out_cooldown = 5
-tt.sweep_cooldown = 2
-tt.time_to_in_cooldown = 20
-tt.ui.click_rect = r(-10, -30, 50, 50)
-
 tt = E:register_t("decal_stage_15_easter_egg_goblin_portal", "decal")
 tt.render.sprites[1].prefix = "t3stage15_easteregg_tempportalDef"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 10
 
-tt = E:register_t("decal_stage_15_mask_modes", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "stage15modos"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 20
-
 tt = E:register_t("decal_stage_16_mask_1", "decal")
 tt.render.sprites[1].name = "stage16_mask1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_16_mask_2", "decal")
-tt.render.sprites[1].name = "stage16_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_16_mask_3", "decal")
-tt.render.sprites[1].name = "stage16_mask3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_16_mask_4", "decal")
-tt.render.sprites[1].name = "stage16_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
@@ -12049,156 +9515,15 @@ tt.appear_duration_max = 7
 tt.sound_in = "Terrain4CheshireCatIn"
 tt.sound_out = "Terrain4CheshireCatOut"
 
-tt = E:register_t("decal_stage_17_mask_3", "decal")
-tt.render.sprites[1].name = "stage17_mask3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_17_hidden_path_1", "decal")
-tt.render.sprites[1].prefix = "hidden_path_01Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_17_hidden_path_2", "decal")
-tt.render.sprites[1].prefix = "hidden_path_02Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_17_hidden_path_unlock_soulcaller", "decal")
-tt.render.sprites[1].prefix = "hidden_path_reventant_revenant_roots_reveal"
-tt.render.sprites[1].name = "revenant_idle"
-tt.render.sprites[1].z = Z_OBJECTS + 1
-
-tt = E:register_t("decal_stage_17_bubbles", "decal")
-tt.render.sprites[1].prefix = "stage_17_bubblesDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_17_bubbles_water", "decal")
-tt.render.sprites[1].prefix = "stage_17_bubbles_waterDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_17_tree_1", "decal_scripted")
-E:add_comps(tt, "editor", "ui")
-tt.render.sprites[1].prefix = "stage_17_tree_1Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.main_script.update = scripts.decal_stage_17_tree.update
-tt.ui.click_rect = r(-75, -290, 90, 80)
-tt.sound_tap = "Terrain4HowlingTree"
-
-tt = E:register_t("decal_stage_17_tree_2", "decal_stage_17_tree_1")
-tt.render.sprites[1].prefix = "stage_17_tree_2Def"
-tt.ui.click_rect = r(-570, -230, 90, 80)
-
-tt = E:register_t("decal_stage_17_tree_3", "decal_stage_17_tree_1")
-tt.render.sprites[1].prefix = "stage_17_tree_3Def"
-tt.ui.click_rect = r(20, 300, 90, 80)
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_17_tree_4", "decal_stage_17_tree_1")
-tt.render.sprites[1].prefix = "stage_17_tree_4Def"
-tt.render.sprites[1].z = Z_DECALS
-tt.ui.click_rect = r(-227, 270, 90, 80)
-
 tt = E:register_t("decal_stage_18_mask_1", "decal")
 tt.render.sprites[1].name = "stage18_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t("decal_stage_18_tree_1", "decal_scripted")
-E:add_comps(tt, "editor", "ui")
-tt.render.sprites[1].prefix = "stage_18_tree_1Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.main_script.update = scripts.decal_stage_17_tree.update
-tt.ui.click_rect = r(-335, -200, 80, 80)
-tt.sound_tap = "Terrain4HowlingTree"
-
-tt = E:register_t("decal_stage_18_tree_2", "decal_stage_18_tree_1")
-tt.render.sprites[1].prefix = "stage_18_tree_2Def"
-tt.ui.click_rect = r(495, -170, 80, 80)
-
-tt = E:register_t("decal_stage_18_bubbles", "decal")
-tt.render.sprites[1].prefix = "stage_18_bubblesDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_18_bubbles_water", "decal")
-tt.render.sprites[1].prefix = "stage_18_bubbles_waterDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_18_streetlight_1", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script", "ui")
-tt.render.sprites[1].prefix = "stage_18_light_1Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -250
-tt.main_script.update = scripts.decal_stage_18_streetlight.update
-tt.ui.click_rect = r(-60, -210, 30, 40)
-tt.sound_break = "Stage18LampBreak"
-
-tt = E:register_t("decal_stage_18_streetlight_2", "decal_stage_18_streetlight_1")
-tt.render.sprites[1].prefix = "stage_18_light_2Def"
-tt.render.sprites[1].sort_y_offset = 250
-tt.ui.click_rect = r(135, 290, 30, 40)
-
-tt = E:register_t("decal_stage_18_streetlight_3", "decal_stage_18_streetlight_1")
-tt.render.sprites[1].prefix = "stage_18_light_3Def"
-tt.render.sprites[1].sort_y_offset = 223
-tt.ui.click_rect = r(535, 263, 30, 40)
-
-tt = E:register_t("decal_stage_18_streetlight_4", "decal_stage_18_streetlight_1")
-tt.render.sprites[1].prefix = "stage_18_light_4Def"
-tt.render.sprites[1].sort_y_offset = 33
-tt.ui.click_rect = r(520, 73, 30, 40)
-
-tt = E:register_t("decal_stage_18_cuckoo", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.ui.click_rect = r(-30, -30, 60, 60)
-tt.main_script.update = scripts.decal_stage_18_cuckoo.update
-tt.render.sprites[1].prefix = "cuckoo_easter_egg_door"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.touches_needed = 3
-tt.touchable_after_anim = false
-tt.reset_touches = false
-tt.duration = 0.6
-tt.sound_in = "Stage18CuckooIn"
-tt.sound_out = "Stage18CuckooOut"
-
 tt = E:register_t("decal_stage_19_mask_1", "decal")
 tt.render.sprites[1].name = "stage19_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 194
-
-tt = E:register_t("decal_stage_19_mask_2", "decal")
-tt.render.sprites[1].name = "stage19_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_19_mask_3", "decal")
-tt.render.sprites[1].name = "stage19_mask3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_19_statue", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.ui.click_rect = r(272, 110, 60, 60)
-tt.main_script.update = scripts.decal_stage_19_statue.update
-tt.render.sprites[1].prefix = "stage_19_statue_decoDef"
-tt.render.sprites[1].name = "idle_campaign"
-tt.render.sprites[1].exo = true
-tt.sound_12 = "Stage19Statue12"
-tt.sound_3 = "Stage19Statue3"
 
 tt = E:register_t("decal_stage_19_statue_hands", "decal")
 E:add_comps(tt, "editor")
@@ -12206,24 +9531,6 @@ tt.render.sprites[1].prefix = "navira_hands"
 tt.render.sprites[1].name = "hands_idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[1].draw_order = -1
-
-tt = E:register_t("decal_stage_19_bubbles", "decal")
-tt.render.sprites[1].prefix = "stage_19_bubblesDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_19_bubbles_water", "decal")
-tt.render.sprites[1].prefix = "stage_19_bubbles_waterDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_19_smoke", "decal")
-tt.render.sprites[1].prefix = "stage_19_smokeDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 
 tt = E:register_t("decal_stage_19_navira_cape", "decal_scripted")
 E:add_comps(tt, "tween")
@@ -12260,39 +9567,6 @@ tt.health.ignore_delete_after = true
 tt.ui.click_rect = r(-30, -10, 60, 60)
 tt.vis.flags = bor(F_FRIEND, F_RANGED)
 tt.vis.bans = bor(F_AREA, F_MOD)
-
-tt = E:register_t("decal_stage_21_mask_1", "decal")
-tt.render.sprites[1].name = "stage21_mask1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_21_mask_2", "decal")
-tt.render.sprites[1].name = "stage21_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 1
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_21_mask_3", "decal")
-tt.render.sprites[1].name = "stage21_mask3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 2
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_21_mask_4", "decal")
-tt.render.sprites[1].name = "stage21_mask4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_21_bubbles", "decal")
-tt.render.sprites[1].prefix = "stage_21_bubbles_02Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_21_mask_lianas", "decal")
-tt.render.sprites[1].name = "stage21_mask_lianas"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_FLYING_HEROES + 1
 
 tt = E:register_t("decal_stage_21_falling_rocks", "decal_scripted")
 E:add_comps(tt, "editor", "editor_script", "ui")
@@ -12374,55 +9648,6 @@ tt.waves = {{
 	[6] = {{0, 5}, {25, 63}}
 }, {{{115, 319}}}}
 
-tt = E:register_t("decal_stage_22_puerta1", "decal")
-tt.render.sprites[1].name = "stage_22_puerta1"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("decal_stage_22_puerta2", "decal")
-tt.render.sprites[1].name = "stage_22_puerta2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_22_puerta3", "decal")
-tt.render.sprites[1].name = "stage_22_puerta3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 290
-
-tt = E:register_t("decal_stage_22_puerta4", "decal")
-tt.render.sprites[1].name = "stage_22_puerta4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 290
-
-tt = E:register_t("decal_stage_22_puerta5", "decal")
-tt.render.sprites[1].name = "stage_22_puerta5"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("decal_stage_22_puerta6", "decal")
-tt.render.sprites[1].name = "stage_22_puerta6"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_22_sombras", "decal")
-tt.render.sprites[1].name = "stage_22_sombras"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
-tt = E:register_t("decal_stage_22_water_vfx1", "decal")
-tt.render.sprites[1].prefix = "stage_22_bubbles_01Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_22_water_vfx2", "decal_stage_22_water_vfx1")
-tt.render.sprites[1].prefix = "stage_22_bubbles_02Def"
-
-tt = E:register_t("decal_stage_22_easteregg_sheepy", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.main_script.update = scripts.decal_stage_22_easteregg_sheepy.update
-tt.render.sprites[1].prefix = "croco_sheepy"
-tt.render.sprites[1].name = "idle"
-tt.ui.click_rect = r(-15, -5, 30, 50)
-
 tt = E:register_t("decal_stage20_ruperto_easter_egg", "decal_scripted")
 E:add_comps(tt)
 tt.render.sprites[1].prefix = "anim_arborean_ruperto_arborean"
@@ -12438,28 +9663,6 @@ E:add_comps(tt)
 tt.render.sprites[1].name = "anim_arborean_ruperto_ruperto"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_achievement_stage_21_croc_boat", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.ui.click_rect = r(-55, -20, 90, 60)
-tt.main_script.update = scripts.decal_achievement_stage_21_croc_boat.update
-tt.touches_needed = 2
-tt.render.sid_croc = 3
-tt.render.sprites[1].name = "Achievement_lagarto_juancho_boat"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].offset = v(-8, -20)
-tt.render.sprites[1].anchor = v(0.5833333333333334, 0.21052631578947367)
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].name = "Achievement_lagarto_juancho_water"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].anchor = v(0.7289156626506024, 0.29464285714285715)
-tt.render.sprites[2].offset = v(-2, -16)
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].prefix = "Achievement_lagarto_juancho_creep"
-tt.render.sprites[3].name = "idle1"
-tt.render.sprites[3].anchor = v(0.5, 0.38636363636363635)
-tt.sound_engine_fail = "Stage21JuanchoEngineFail"
-tt.sound_engine_success = "Stage21JuanchoEngineSuccess"
 
 tt = E:register_t("decal_achievement_stage_22_croc_king", "decal_scripted")
 E:add_comps(tt, "ui")
@@ -12480,22 +9683,6 @@ tt.delayed_play.min_delay = 15
 tt.delayed_play.max_delay = 35
 tt.delayed_play.start_min_delay = 1
 tt.delayed_play.start_max_delay = 3
-
-tt = E:register_t("decal_stage_21_dragonfly_2", "decal_stage_21_dragonfly_1")
-tt.render.sprites[1].prefix = "stage_21_dragonfly_02Def"
-tt.delayed_play.start_min_delay = 13
-tt.delayed_play.start_max_delay = 20
-
-tt = E:register_t("decal_stage_21_particlesLeft", "decal_delayed_play")
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.main_script.update = scripts.delayed_play_kr5.update
-tt.render.sprites[1].prefix = "stage_21_particlesDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.delayed_play.idle_animation = nil
-tt.delayed_play.play_animation = "loop"
-tt.delayed_play.min_delay = 15
-tt.delayed_play.max_delay = 35
 
 tt = E:register_t("soldier_elf_stage_08", "decal_scripted")
 E:add_comps(tt, "bullet_attack", "editor")
@@ -13480,13 +10667,6 @@ tt.aura.radius = 170
 tt.aura.allowed_templates = {"enemy_glareling"}
 tt.main_script.update = scripts.aura_controller_stage_14_amalgam.update
 
-tt = E:register_t("aura_stage_14_prevent_polymorph", "aura")
-tt.aura.duration = 1e+99
-tt.aura.cycle_time = 0.25
-tt.aura.radius = 100
-tt.aura.allowed_templates = {"enemy_glareling"}
-tt.main_script.update = scripts.aura_stage_14_prevent_polymorph.update
-
 tt = E:register_t("aura_stage_15_cult_leader_tower_stun", "aura")
 E:add_comps(tt, "render", "tween")
 tt.aura.mod = "mod_stage_15_cult_leader_tower_stun"
@@ -13657,14 +10837,6 @@ tt = E:register_t("mod_soldier_reinforcement_stage_15_denas_spawn_stun", "mod_st
 tt = E:register_t("controller_soldier_reinforcement_stage_15_denas_timeout")
 E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.controller_soldier_reinforcement_stage_15_denas_timeout.update
-
-tt = E:register_t("power_denas_control", "power_reinforcements_control")
-tt.main_script.insert = scripts.power_stage_15_denas_control.insert
-tt.denas_t = "soldier_reinforcement_stage_15_denas"
-
-function tt.power_cooldown_fn()
-	return E:get_template("soldier_reinforcement_stage_15_denas").power_cooldown
-end
 
 tt = E:register_t("controller_tower_swap_overseer", "controller_tower_swap")
 tt.fx_out = "decal_tower_swap_fx_in"
@@ -14231,32 +11403,6 @@ tt.custom_attack.vis_flags = bor(F_RANGED)
 tt.custom_attack.vis_bans = bor(F_FLYING)
 tt.sound_hit_floor = "Stage20TreeHitFloor"
 tt.sound_hit_floor_repeat = "Stage20TreeHitFloorRepeat"
-
-tt = RT("stage_20_arborean_oldtree_tree_2", "decal_scripted")
-AC(tt, "nav_path", "motion", "custom_attack")
-tt.render.sprites[1].prefix = "arborean_woodDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].angles = {}
-tt.render.sprites[1].angles.walk = {"idle", "idle", "idle"}
-tt.render.sprites[1].angles_stickiness = {
-	walk = 10
-}
-tt.render.sprites[1].sort_y_offset = -50
-tt.render.sprites[1].exo = true
-tt.main_script.update = scripts.stage_20_arborean_oldtree_tree.update
-tt.nav_path.dir = -1
-tt.nav_path.pi = 3
-tt.nav_path.ni = 105
-tt.nav_path.spi = 1
-tt.motion.max_speed = 5 * FPS
-tt.custom_attack.max_range = 50
-tt.custom_attack.damage_min = 350
-tt.custom_attack.damage_max = 450
-tt.custom_attack.damage_type = DAMAGE_PHYSICAL
-tt.custom_attack.hit_fx = "fx_tower_arborean_oldtree_hit"
-tt.custom_attack.cycle_time = 0.3
-tt.custom_attack.vis_flags = bor(F_RANGED)
-tt.custom_attack.vis_bans = bor(F_FLYING)
 
 tt = E:register_t("tower_stage_20_arborean_honey", "tower")
 E:add_comps(tt, "attacks", "user_selection")
@@ -14948,10 +12094,6 @@ tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].anchor = v(0.5, 0.6)
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {tt.modifier.duration - fts(10), 255}, {tt.modifier.duration, 0}}
 
-tt = E:register_t("tunnel_KR5_stage22_boss", "tunnel_KR5")
-tt.untargetable_distance = 20
-tt.tunnel.speed_factor = 1000
-
 tt = E:register_t("mod_boss_crocs_tower_timed_destroy", "modifier")
 E:add_comps(tt, "render")
 tt.main_script.insert = scripts.mod_boss_crocs_tower_timed_destroy.insert
@@ -15054,14 +12196,6 @@ tt.main_script.update = scripts.mod_dps.update
 tt = E:register_t("fx_bullet_tower_arborean_mage_hit", "fx")
 tt.render.sprites[1].name = "Stage_22_shaman_shaman_hitfx_run"
 
-tt = E:register_t("controller_darksteel_guardian")
-E:add_comps(tt, "main_script", "editor")
-tt.main_script.insert = scripts.controller_darksteel_guardian.insert
-tt.guardian_t = "enemy_darksteel_guardian"
-tt.editor.flip_x = false
-tt.editor.path = 1
-tt.editor.props = {{"editor.flip_x", PT_NUMBER}, {"editor.path", PT_NUMBER}}
-
 tt = E:register_t("controller_darksteel_guardian_death")
 E:add_comps(tt, "main_script", "render")
 tt.main_script.update = scripts.controller_darksteel_guardian_death.update
@@ -15088,121 +12222,6 @@ tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
 tt.vis.bans = F_ALL
 tt.ui.can_click = false
 tt.guardian_t = "enemy_darksteel_guardian"
-
-tt = E:register_t("controller_stage_23_roboboots", "decal_scripted")
-E:add_comps(tt, "editor")
-tt.main_script.update = scripts.controller_stage_23_roboboots.update
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "dclenanos_stage01_robobootDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].offset = v(0, -1)
-tt.render.sprites[1].sort_y_offset = 200
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "dclenanos_stage01_roboboot2Def"
-tt.render.sprites[2].name = "idle"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].offset = v(2.3, -3.1)
-tt.render.sprites[2].sort_y_offset = 50
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].prefix = "dclenanos_stage01_roboboot_topDef"
-tt.render.sprites[3].name = "idle"
-tt.render.sprites[3].exo = true
-tt.render.sprites[3].sort_y_offset = 200
-tt.render.sprites[4] = E:clone_c("sprite")
-tt.render.sprites[4].prefix = "dclenanos_stage01_roboboot2_topDef"
-tt.render.sprites[4].name = "idle"
-tt.render.sprites[4].exo = true
-tt.render.sprites[4].offset = v(2.3, -2.1)
-tt.render.sprites[4].sort_y_offset = 50
-tt.wave_config = {{
-	{},
-	{{
-		leg = 2,
-		timings = {{0}}
-	}},
-	{{
-		leg = 2,
-		timings = {{nil, 1}}
-	}},
-	{},
-	{{
-		leg = 1,
-		timings = {{10}}
-	}},
-	{{
-		leg = 1,
-		timings = {{nil, 7}}
-	}, {
-		leg = 2,
-		timings = {{17}}
-	}},
-	{{
-		leg = 2,
-		timings = {{nil, 8}}
-	}},
-	{},
-	{{
-		leg = 1,
-		timings = {{1}}
-	}},
-	{{
-		leg = 1,
-		timings = {{nil, 8}}
-	}, {
-		leg = 2,
-		timings = {{1}}
-	}},
-	{{
-		leg = 1,
-		timings = {{5, 25}}
-	}, {
-		leg = 2,
-		timings = {{nil, 10}}
-	}},
-	{},
-	{{
-		leg = 2,
-		timings = {{1}}
-	}},
-	{{
-		leg = 2,
-		timings = {{nil, 5}}
-	}},
-	{{
-		leg = 1,
-		timings = {{10, 76}}
-	}, {
-		leg = 2,
-		timings = {{1, 72}}
-	}}
-}, {{}, {}, {{
-	leg = 1,
-	timings = {{1}}
-}}, {{
-	leg = 1,
-	timings = {{nil, 6}}
-}, {
-	leg = 2,
-	timings = {{1}}
-}}, {{
-	leg = 2,
-	timings = {{nil, 6}}
-}}, {{
-	leg = 1,
-	timings = {{20, 46}}
-}, {
-	leg = 2,
-	timings = {{13, 72}}
-}}}, {{{
-	leg = 1,
-	timings = {{2, 45}, {114, 163}, {200, 230}, {295, 340}, {345, 370}}
-}, {
-	leg = 2,
-	timings = {{170, 205}, {280, 345}}
-}}}}
-tt.sound_open = "Stage23BootOpen"
-tt.sound_close = "Stage23BootClose"
 
 tt = E:register_t("controller_stage_24_machinist")
 E:add_comps(tt, "main_script")
@@ -15254,310 +12273,6 @@ tt.taunts.sets.stage_24_boss_machinist_before_bossfight.format = "TAUNT_STAGE24_
 tt.taunts.sets.stage_24_boss_machinist_before_bossfight.decal_name = "decal_stage24_boss_machinist_shoutbox"
 tt.taunts.sets.stage_24_boss_machinist_before_bossfight.pos = v(460, 550)
 
-tt = E:register_t("controller_stage_25_torso")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_25_torso.update
-tt.wave_config = {{
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{{
-		action = "open",
-		time_start = 8
-	}, {
-		action = "fist",
-		time_start = 13
-	}, {
-		action = "close",
-		time_start = 23
-	}},
-	{{
-		action = "open",
-		time_start = 13
-	}, {
-		action = "missile",
-		time_start = 18
-	}, {
-		action = "close",
-		time_start = 28
-	}},
-	{},
-	{{
-		action = "open",
-		time_start = 2
-	}, {
-		action = "fist",
-		time_start = 8
-	}, {
-		action = "fist",
-		time_start = 16
-	}},
-	{{
-		action = "missile",
-		time_start = 12
-	}, {
-		action = "missile",
-		time_start = 22
-	}},
-	{{
-		action = "fist",
-		time_start = 10
-	}, {
-		action = "fist",
-		time_start = 26
-	}},
-	{{
-		action = "missile",
-		time_start = 2
-	}, {
-		action = "missile",
-		time_start = 9
-	}, {
-		action = "missile",
-		time_start = 17
-	}},
-	{{
-		action = "missile",
-		time_start = 11
-	}, {
-		action = "missile",
-		time_start = 23
-	}, {
-		action = "missile",
-		time_start = 33
-	}, {
-		action = "missile",
-		time_start = 47
-	}, {
-		action = "missile",
-		time_start = 57
-	}, {
-		action = "missile",
-		time_start = 67
-	}, {
-		action = "missile",
-		time_start = 77
-	}, {
-		action = "missile",
-		time_start = 87
-	}, {
-		action = "missile",
-		time_start = 97
-	}}
-}, {{{
-	action = "open",
-	time_start = 2
-}, {
-	action = "fist",
-	time_start = 17
-}, {
-	action = "fist",
-	time_start = 27
-}}, {{
-	action = "missile",
-	time_start = 12
-}, {
-	action = "missile",
-	time_start = 22
-}, {
-	action = "missile",
-	time_start = 32
-}}, {{
-	action = "missile",
-	time_start = 8
-}, {
-	action = "missile",
-	time_start = 26
-}, {
-	action = "missile",
-	time_start = 38
-}}, {{
-	action = "fist",
-	time_start = 12
-}, {
-	action = "fist",
-	time_start = 28
-}}, {{
-	action = "fist",
-	time_start = 17
-}, {
-	action = "fist",
-	time_start = 26
-}}, {{
-	action = "fist",
-	time_start = 17
-}, {
-	action = "missile",
-	time_start = 24
-}, {
-	action = "missile",
-	time_start = 34
-}, {
-	action = "fist",
-	time_start = 46
-}, {
-	action = "missile",
-	time_start = 59
-}, {
-	action = "missile",
-	time_start = 72
-}, {
-	action = "missile",
-	time_start = 83
-}, {
-	action = "missile",
-	time_start = 94
-}, {
-	action = "missile",
-	time_start = 106
-}, {
-	action = "missile",
-	time_start = 120
-}}}, {{
-	{
-		action = "open",
-		time_start = 12
-	},
-	{
-		action = "missile",
-		time_start = 24
-	},
-	{
-		action = "missile",
-		time_start = 48
-	},
-	{
-		action = "fist",
-		time_start = 66
-	},
-	{
-		action = "missile",
-		time_start = 84
-	},
-	{
-		action = "missile",
-		time_start = 104
-	},
-	{
-		action = "missile",
-		time_start = 132
-	},
-	{
-		action = "missile",
-		time_start = 145
-	},
-	{
-		action = "fist",
-		time_start = 160
-	},
-	{
-		action = "fist",
-		time_start = 180
-	},
-	{
-		action = "missile",
-		time_start = 230
-	},
-	{
-		action = "missile",
-		time_start = 260
-	},
-	{
-		action = "missile",
-		time_start = 272
-	},
-	{
-		action = "missile",
-		time_start = 300
-	},
-	{
-		action = "fist",
-		time_start = 312
-	},
-	{
-		action = "missile",
-		time_start = 325
-	},
-	{
-		action = "missile",
-		time_start = 347
-	},
-	{
-		action = "fist",
-		time_start = 360
-	},
-	{
-		action = "missile",
-		time_start = 372
-	},
-	{
-		action = "missile",
-		time_start = 383
-	},
-	{
-		action = "missile",
-		time_start = 405
-	},
-	{
-		action = "missile",
-		time_start = 416
-	},
-	{
-		action = "fist",
-		time_start = 430
-	},
-	{
-		action = "missile",
-		time_start = 442
-	},
-	{
-		action = "missile",
-		time_start = 455
-	},
-	{
-		action = "missile",
-		time_start = 472
-	},
-	{
-		action = "missile",
-		time_start = 483
-	},
-	{
-		action = "missile",
-		time_start = 505
-	},
-	{
-		action = "missile",
-		time_start = 516
-	},
-	{
-		action = "missile",
-		time_start = 527
-	}
-}}}
-tt.action_duration = fts(220)
-tt.fist_radius = 140
-tt.fist_damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS, DAMAGE_IGNORE_SHIELD, DAMAGE_NO_DODGE)
-tt.torso_t = "decal_stage_25_torso"
-tt.torso_modes_t = "decal_stage_25_torso_modes"
-tt.fist_t = "decal_stage_25_fist"
-tt.fist_decal_t = "decal_stage_25_fist_shadow"
-tt.missile_shoot_time = fts(66)
-tt.missile_mark_mod = "mod_stage_25_torso_missile_mark"
-tt.missile_t = "bullet_stage_25_torso_missile"
-tt.missile_spawn_pos = v(750, 585)
-tt.sound_torso_open = "Stage25TorsoOpen"
-tt.sound_torso_close = "Stage25TorsoClose"
-tt.sound_torso_lever_1 = "Stage25TorsoOperateLever1"
-tt.sound_torso_lever_2 = "Stage25TorsoOperateLever2"
-tt.sound_torso_button = "Stage25TorsoButton"
-tt.sound_fist = "Stage25FistSlam"
-tt.sound_missile = "Stage25MissileLaunch"
-
 tt = E:register_t("decal_stage25_machinist_shoutbox", "decal_stage06_cultist_shoutbox")
 
 tt = E:register_t("taunts_s25_controller")
@@ -15571,11 +12286,6 @@ tt.taunts.sets.stage_25_machinist_end.format = "TAUNT_STAGE25_MACHINIST_END_%04i
 tt.taunts.sets.stage_25_machinist_end.decal_name = "decal_stage25_machinist_shoutbox"
 tt.taunts.sets.stage_25_machinist_end.pos = v(460, 550)
 
-tt = E:register_t("controller_stage_25_tunnel_glow")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_25_tunnel_glow.update
-tt.glow_t = "decal_stage_25_mask_2_glow"
-
 tt = E:register_t("controller_stage_26_taunts")
 E:add_comps(tt, "main_script", "taunts", "editor")
 tt.main_script.update = scripts.controller_stage_26_taunts.update
@@ -15588,760 +12298,6 @@ tt.taunts.sets.preparation.end_idx = 4
 tt.taunts.sets.fight = CC("taunt_set")
 tt.taunts.sets.fight.format = "LV26_GRYMBEARD_FIGHT_TAUNT_%02i"
 tt.taunts.sets.fight.end_idx = 4
-
-tt = E:register_t("controller_stage_26_spawners")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_26_spawners.update
-tt.wave_config = {{
-	{},
-	{},
-	{{
-		action = "open",
-		time_start = 8,
-		spawner = "fist",
-		count = 2
-	}, {
-		action = "close",
-		time_start = 17,
-		spawner = "fist"
-	}, {
-		action = "open",
-		time_start = 18,
-		spawner = "fist",
-		count = 2
-	}, {
-		action = "close",
-		time_start = 27,
-		spawner = "fist"
-	}},
-	{},
-	{{
-		action = "open",
-		time_start = 1,
-		spawner = "clone_left"
-	}, {
-		action = "open",
-		time_start = 6,
-		spawner = "fist",
-		count = 2
-	}, {
-		action = "close",
-		time_start = 11,
-		spawner = "clone_left"
-	}, {
-		action = "close",
-		time_start = 16,
-		spawner = "fist"
-	}, {
-		action = "open",
-		time_start = 18,
-		spawner = "clone_left"
-	}, {
-		action = "close",
-		time_start = 38,
-		spawner = "clone_left"
-	}},
-	{{
-		action = "activate",
-		time_start = 1,
-		spawner = "hulk"
-	}, {
-		action = "open",
-		time_start = 4,
-		spawner = "fist",
-		count = 4
-	}, {
-		action = "close",
-		time_start = 25,
-		spawner = "fist"
-	}},
-	{{
-		action = "open",
-		time_start = 1,
-		spawner = "clone_right"
-	}, {
-		action = "close",
-		time_start = 9,
-		spawner = "clone_right"
-	}, {
-		action = "open",
-		time_start = 10,
-		spawner = "clone_right"
-	}, {
-		action = "close",
-		time_start = 19,
-		spawner = "clone_right"
-	}, {
-		action = "open",
-		time_start = 23,
-		spawner = "clone_right"
-	}, {
-		action = "close",
-		time_start = 32,
-		spawner = "clone_right"
-	}},
-	{{
-		action = "open",
-		time_start = 1,
-		spawner = "clone_left"
-	}, {
-		action = "open",
-		time_start = 4,
-		spawner = "fist",
-		count = 2
-	}, {
-		action = "close",
-		time_start = 13,
-		spawner = "fist"
-	}, {
-		action = "close",
-		time_start = 11,
-		spawner = "clone_left"
-	}, {
-		action = "open",
-		time_start = 12,
-		spawner = "clone_left"
-	}, {
-		action = "open",
-		time_start = 14,
-		spawner = "fist",
-		count = 4
-	}, {
-		action = "close",
-		time_start = 24,
-		spawner = "clone_left"
-	}, {
-		action = "open",
-		time_start = 26,
-		spawner = "clone_left"
-	}, {
-		action = "close",
-		time_start = 30,
-		spawner = "fist"
-	}, {
-		action = "close",
-		time_start = 36,
-		spawner = "clone_left"
-	}},
-	{{
-		action = "activate",
-		time_start = 1,
-		spawner = "hulk"
-	}},
-	{{
-		action = "activate",
-		time_start = 1,
-		spawner = "hulk"
-	}},
-	{{
-		action = "open",
-		time_start = 2,
-		spawner = "fist",
-		count = 4
-	}, {
-		action = "open",
-		time_start = 9,
-		spawner = "clone_right"
-	}, {
-		action = "close",
-		time_start = 18,
-		spawner = "fist"
-	}, {
-		action = "close",
-		time_start = 19,
-		spawner = "clone_right"
-	}, {
-		action = "open",
-		time_start = 31,
-		spawner = "fist",
-		count = 4
-	}, {
-		action = "open",
-		time_start = 38,
-		spawner = "clone_right"
-	}, {
-		action = "close",
-		time_start = 47,
-		spawner = "fist"
-	}, {
-		action = "close",
-		time_start = 48,
-		spawner = "clone_right"
-	}},
-	{{
-		action = "open",
-		time_start = 1,
-		spawner = "fist",
-		count = 2
-	}, {
-		action = "open",
-		time_start = 4,
-		spawner = "clone_left"
-	}, {
-		action = "close",
-		time_start = 10,
-		spawner = "fist"
-	}, {
-		action = "close",
-		time_start = 15,
-		spawner = "clone_left"
-	}, {
-		action = "open",
-		time_start = 16,
-		spawner = "fist",
-		count = 2
-	}, {
-		action = "open",
-		time_start = 20,
-		spawner = "clone_left"
-	}, {
-		action = "close",
-		time_start = 26,
-		spawner = "fist"
-	}, {
-		action = "close",
-		time_start = 31,
-		spawner = "clone_left"
-	}},
-	{{
-		action = "activate",
-		time_start = 1,
-		spawner = "hulk"
-	}, {
-		action = "open",
-		time_start = 3,
-		spawner = "clone_right"
-	}, {
-		action = "close",
-		time_start = 14,
-		spawner = "clone_right"
-	}, {
-		action = "activate",
-		time_start = 20,
-		spawner = "hulk"
-	}, {
-		action = "open",
-		time_start = 26,
-		spawner = "clone_right"
-	}, {
-		action = "close",
-		time_start = 38,
-		spawner = "clone_right"
-	}},
-	{
-		{
-			action = "open",
-			time_start = 1,
-			spawner = "clone_left"
-		},
-		{
-			action = "open",
-			time_start = 3,
-			spawner = "clone_right"
-		},
-		{
-			action = "open",
-			time_start = 5,
-			spawner = "fist",
-			count = 4
-		},
-		{
-			action = "close",
-			time_start = 13,
-			spawner = "clone_left"
-		},
-		{
-			action = "close",
-			time_start = 14,
-			spawner = "clone_right"
-		},
-		{
-			action = "open",
-			time_start = 15,
-			spawner = "clone_left"
-		},
-		{
-			action = "open",
-			time_start = 17,
-			spawner = "clone_right"
-		},
-		{
-			action = "close",
-			time_start = 20.5,
-			spawner = "fist"
-		},
-		{
-			action = "open",
-			time_start = 20.5,
-			spawner = "fist",
-			count = 4
-		},
-		{
-			action = "close",
-			time_start = 28,
-			spawner = "clone_left"
-		},
-		{
-			action = "close",
-			time_start = 30,
-			spawner = "clone_right"
-		},
-		{
-			action = "close",
-			time_start = 37,
-			spawner = "fist"
-		},
-		{
-			action = "open",
-			time_start = 38,
-			spawner = "clone_left"
-		},
-		{
-			action = "open",
-			time_start = 40,
-			spawner = "clone_right"
-		},
-		{
-			action = "close",
-			time_start = 48,
-			spawner = "clone_left"
-		},
-		{
-			action = "close",
-			time_start = 50,
-			spawner = "clone_right"
-		}
-	},
-	{{
-		action = "open",
-		time_start = 1,
-		spawner = "fist",
-		count = 4
-	}, {
-		action = "activate",
-		time_start = 3,
-		spawner = "hulk"
-	}, {
-		action = "close",
-		time_start = 16,
-		spawner = "fist"
-	}, {
-		action = "open",
-		time_start = 23,
-		spawner = "fist",
-		count = 4
-	}, {
-		action = "activate",
-		time_start = 27,
-		spawner = "hulk"
-	}, {
-		action = "close",
-		time_start = 38,
-		spawner = "fist"
-	}, {
-		action = "open",
-		time_start = 48,
-		spawner = "fist",
-		count = 4
-	}, {
-		action = "activate",
-		time_start = 52,
-		spawner = "hulk"
-	}, {
-		action = "close",
-		time_start = 63,
-		spawner = "fist"
-	}}
-}, {{}, {{
-	action = "open",
-	time_start = 0,
-	spawner = "fist",
-	count = 4
-}, {
-	action = "close",
-	time_start = 16,
-	spawner = "fist"
-}, {
-	action = "open",
-	time_start = 34,
-	spawner = "fist",
-	count = 4
-}, {
-	action = "close",
-	time_start = 50,
-	spawner = "fist"
-}}, {{
-	action = "activate",
-	time_start = 0,
-	spawner = "hulk"
-}, {
-	action = "open",
-	time_start = 4,
-	spawner = "clone_right"
-}, {
-	action = "close",
-	time_start = 15,
-	spawner = "clone_right"
-}, {
-	action = "open",
-	time_start = 33,
-	spawner = "clone_right"
-}, {
-	action = "close",
-	time_start = 43,
-	spawner = "clone_right"
-}, {
-	action = "open",
-	time_start = 53,
-	spawner = "clone_right"
-}, {
-	action = "close",
-	time_start = 63,
-	spawner = "clone_right"
-}}, {{
-	action = "activate",
-	time_start = 0,
-	spawner = "hulk"
-}}, {{
-	action = "open",
-	time_start = 0,
-	spawner = "fist",
-	count = 4
-}, {
-	action = "open",
-	time_start = 7,
-	spawner = "clone_left"
-}, {
-	action = "close",
-	time_start = 16,
-	spawner = "fist"
-}, {
-	action = "open",
-	time_start = 21,
-	spawner = "fist",
-	count = 4
-}, {
-	action = "close",
-	time_start = 23,
-	spawner = "clone_left"
-}, {
-	action = "open",
-	time_start = 28,
-	spawner = "clone_left"
-}, {
-	action = "close",
-	time_start = 37,
-	spawner = "fist"
-}, {
-	action = "close",
-	time_start = 42,
-	spawner = "clone_left"
-}}, {{
-	action = "open",
-	time_start = 0,
-	spawner = "fist",
-	count = 4
-}, {
-	action = "activate",
-	time_start = 10,
-	spawner = "hulk"
-}, {
-	action = "close",
-	time_start = 16,
-	spawner = "fist"
-}, {
-	action = "open",
-	time_start = 34,
-	spawner = "clone_left"
-}, {
-	action = "activate",
-	time_start = 56,
-	spawner = "hulk"
-}, {
-	action = "close",
-	time_start = 62,
-	spawner = "clone_left"
-}, {
-	action = "activate",
-	time_start = 74,
-	spawner = "hulk"
-}, {
-	action = "open",
-	time_start = 76,
-	spawner = "fist",
-	count = 4
-}, {
-	action = "close",
-	time_start = 92,
-	spawner = "fist"
-}}}, {{
-	{
-		action = "open",
-		time_start = 1,
-		spawner = "clone_left"
-	},
-	{
-		action = "close",
-		time_start = 9,
-		spawner = "clone_left"
-	},
-	{
-		action = "open",
-		time_start = 15,
-		spawner = "clone_left"
-	},
-	{
-		action = "close",
-		time_start = 24,
-		spawner = "clone_left"
-	},
-	{
-		action = "open",
-		time_start = 54,
-		spawner = "clone_left"
-	},
-	{
-		action = "close",
-		time_start = 64,
-		spawner = "clone_left"
-	},
-	{
-		action = "open",
-		time_start = 80,
-		spawner = "fist",
-		count = 6
-	},
-	{
-		action = "close",
-		time_start = 106,
-		spawner = "fist"
-	},
-	{
-		action = "open",
-		time_start = 109,
-		spawner = "fist",
-		count = 4
-	},
-	{
-		action = "close",
-		time_start = 125,
-		spawner = "fist"
-	},
-	{
-		action = "open",
-		time_start = 142,
-		spawner = "clone_right"
-	},
-	{
-		action = "open",
-		time_start = 145,
-		spawner = "fist",
-		count = 3
-	},
-	{
-		action = "close",
-		time_start = 151,
-		spawner = "clone_right"
-	},
-	{
-		action = "open",
-		time_start = 154,
-		spawner = "clone_right"
-	},
-	{
-		action = "close",
-		time_start = 158,
-		spawner = "fist"
-	},
-	{
-		action = "open",
-		time_start = 159,
-		spawner = "fist",
-		count = 7
-	},
-	{
-		action = "close",
-		time_start = 163,
-		spawner = "clone_right"
-	},
-	{
-		action = "open",
-		time_start = 173,
-		spawner = "clone_right"
-	},
-	{
-		action = "close",
-		time_start = 188,
-		spawner = "fist"
-	},
-	{
-		action = "close",
-		time_start = 195,
-		spawner = "clone_right"
-	},
-	{
-		action = "activate",
-		time_start = 260,
-		spawner = "hulk"
-	},
-	{
-		action = "open",
-		time_start = 264,
-		spawner = "fist",
-		count = 4
-	},
-	{
-		action = "close",
-		time_start = 279,
-		spawner = "fist"
-	},
-	{
-		action = "open",
-		time_start = 294,
-		spawner = "clone_right"
-	},
-	{
-		action = "open",
-		time_start = 295,
-		spawner = "fist",
-		count = 4
-	},
-	{
-		action = "close",
-		time_start = 305,
-		spawner = "clone_right"
-	},
-	{
-		action = "close",
-		time_start = 309,
-		spawner = "fist"
-	},
-	{
-		action = "open",
-		time_start = 325,
-		spawner = "clone_right"
-	},
-	{
-		action = "close",
-		time_start = 335,
-		spawner = "clone_right"
-	},
-	{
-		action = "open",
-		time_start = 342,
-		spawner = "clone_left"
-	},
-	{
-		action = "close",
-		time_start = 352,
-		spawner = "clone_left"
-	},
-	{
-		action = "open",
-		time_start = 370,
-		spawner = "clone_left"
-	},
-	{
-		action = "close",
-		time_start = 380,
-		spawner = "clone_left"
-	},
-	{
-		action = "open",
-		time_start = 397,
-		spawner = "clone_right"
-	},
-	{
-		action = "open",
-		time_start = 400,
-		spawner = "clone_left"
-	},
-	{
-		action = "activate",
-		time_start = 419,
-		spawner = "hulk"
-	},
-	{
-		action = "close",
-		time_start = 430,
-		spawner = "clone_right"
-	},
-	{
-		action = "open",
-		time_start = 431,
-		spawner = "fist",
-		count = 4
-	},
-	{
-		action = "close",
-		time_start = 432,
-		spawner = "clone_left"
-	},
-	{
-		action = "close",
-		time_start = 445,
-		spawner = "fist"
-	},
-	{
-		action = "activate",
-		time_start = 464,
-		spawner = "hulk"
-	},
-	{
-		action = "open",
-		time_start = 469,
-		spawner = "fist",
-		count = 8
-	},
-	{
-		action = "close",
-		time_start = 506,
-		spawner = "fist"
-	}
-}}}
-tt.fist_spawner_controller_t = "controller_stage_26_fist_spawner"
-tt.tube_left_t = "decal_stage_26_tube_left"
-tt.tube_right_t = "decal_stage_26_tube_right"
-tt.clone_spawner_controller_t = "controller_stage_26_clone_spawner"
-tt.clone_spawner_t = "decal_stage_26_clone_spawner"
-tt.hulk_spawner_controller_t = "controller_stage_26_hulk_spawner"
-tt.hulk_spawner_t = "decal_stage_26_hulk_spawner"
-
-tt = E:register_t("controller_stage_26_fist_spawner")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_26_fist_spawner.update
-tt.boss_t = "decal_stage_26_boss"
-tt.hand_controller_t = "controller_stage_26_fist_spawner_hand"
-
-tt = E:register_t("controller_stage_26_fist_spawner_hand")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_26_fist_spawner_hand.update
-tt.fist_spawner_t = "decal_stage_26_fist_spawner"
-tt.fist_spawner_light_t = "decal_stage_26_fist_spawner_light"
-tt.sound_hand = "Stage26FistSpawnerHand"
-tt.sound_open = "Stage26FistSpawnerBoothFrontDoorOpen"
-tt.sound_close = "Stage26FistSpawnerBoothFrontDoorClose"
-
-tt = E:register_t("controller_stage_26_clone_spawner")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_26_clone_spawner.update
-tt.clone_spawner_t = "decal_stage_26_fist_spawner"
-tt.tube_t = "decal_stage_26_fist_spawner_light"
-tt.boss_t = "decal_stage_26_boss"
-tt.sound_in = "Stage26CloneSpawnerIn"
-tt.sound_out = "Stage26CloneSpawnerOut"
-tt.sound_chain = "Stage26Chain"
-
-tt = E:register_t("controller_stage_26_hulk_spawner")
-E:add_comps(tt, "main_script", "events")
-tt.main_script.update = scripts.controller_stage_26_hulk_spawner.update
-tt.hulk_spawner_t = "decal_stage_26_hulk_spawner"
-tt.hulk_t = "enemy_darksteel_hulk"
-tt.hulk_spawn_delay = fts(322)
-tt.path_to_spawn = 9
-tt.events.list[1].name = "hulk_spawn"
-tt.events.list[1].on_event = scripts.controller_stage_26_hulk_spawner.on_event
-tt.sound_shot = "Stage26HulkSpawnerShotTransform"
 
 tt = E:register_t("decal_stage26_boss_shoutbox", "decal_stage06_cultist_shoutbox")
 
@@ -16357,47 +12313,6 @@ tt.taunts.sets.stage_26_boss_before_bossfight.decal_name = "decal_stage26_boss_s
 tt.taunts.sets.stage_26_boss_before_bossfight.pos = v(460, 550)
 
 tt = E:register_t("decal_stage27_boss_shoutbox", "decal_stage06_cultist_shoutbox")
-
-tt = E:register_t("controller_stage_27_platform")
-E:add_comps(tt, "main_script", "events", "taunts", "editor")
-tt.main_script.insert = scripts.taunts_controller.insert
-tt.main_script.update = scripts.controller_stage_27_platform.update
-tt.platform_t = "decal_stage_27_platform"
-tt.platform_bars_t = "decal_stage_27_platform_bars"
-tt.cannon_left_t = "decal_stage_27_cannon_left"
-tt.cannon_right_t = "decal_stage_27_cannon_right"
-tt.cannon_controller_t_l = "controller_stage_27_cannon_L"
-tt.cannon_controller_t_r = "controller_stage_27_cannon_R"
-tt.head_controller_t = "controller_stage_27_head"
-tt.door_mask_t = "decal_stage_27_mask_3"
-tt.events.list[1].name = "platform_up"
-tt.events.list[1].on_event = scripts.controller_stage_27_platform.on_platform_up_event
-tt.events.list[2] = E:clone_c("event")
-tt.events.list[2].name = "platform_down"
-tt.events.list[2].on_event = scripts.controller_stage_27_platform.on_platform_down_event
-tt.events.list[3] = E:clone_c("event")
-tt.events.list[3].name = "platform_destroy"
-tt.events.list[3].on_event = scripts.controller_stage_27_platform.on_platform_destroy_event
-tt.events.list[4] = E:clone_c("event")
-tt.events.list[4].name = "cannons"
-tt.events.list[4].on_event = scripts.controller_stage_27_platform.on_cannons_event
-tt.events.list[5] = E:clone_c("event")
-tt.events.list[5].name = "taunt"
-tt.events.list[5].on_event = scripts.controller_stage_27_platform.on_taunt_event
-tt.load_file = "level101_taunts"
-tt.taunts.sets = {}
-tt.taunts.sets.preparation = CC("taunt_set")
-tt.taunts.sets.preparation.format = "LV27_GRYMBEARD_PREPARATION_TAUNT_%02i"
-tt.taunts.sets.preparation.end_idx = 4
-tt.taunts.sets.fight = CC("taunt_set")
-tt.taunts.sets.fight.format = "LV27_GRYMBEARD_FIGHT_TAUNT_%02i"
-tt.taunts.sets.fight.end_idx = 4
-tt.sound_intro = "Stage27Intro"
-tt.sound_platform_up = "Stage27PlatformUp"
-tt.sound_platform_down = "Stage27PlatformDown"
-tt.sound_platform_destroy_chains = "Stage27PlatformDestroyChains"
-tt.sound_platform_destroy_impacts = "Stage27PlatformDestroyHeadImpacts"
-tt.sound_cannon_alarm = "Stage27CloneCannonAlarm"
 
 tt = E:register_t("controller_stage_27_cannon")
 E:add_comps(tt, "main_script")
@@ -16472,23 +12387,6 @@ tt.sound_cancel_tap = "Stage27HeadFireblastCancelTap"
 tt.sound_interrupt = "Stage27HeadFireblastInterrupt"
 tt.sound_return = "Stage27HeadReturn"
 
-tt = E:register_t("decal_stage_23_mask_1", "decal")
-tt.render.sprites[1].name = "stage23_mask1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 170
-
-tt = E:register_t("decal_stage_23_mask_2", "decal")
-tt.render.sprites[1].name = "stage23_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 51
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_23_mask_4", "decal")
-tt.render.sprites[1].name = "stage23_mask4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -8
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
 tt = E:register_t("decal_stage_23_mask_5", "decal")
 tt.render.sprites[1].name = "stage23_mask5"
 tt.render.sprites[1].animated = false
@@ -16500,29 +12398,6 @@ tt.render.sprites[1].name = "stage23_mask6"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 123
 tt.render.sprites[1].hidden = true
-
-tt = E:register_t("decal_stage_23_snow", "decal")
-tt.render.sprites[1].prefix = "dclenanos_stage01_snowfallDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_23_torches", "decal")
-tt.render.sprites[1].prefix = "dclenanos_stage01_torchesDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_23_crane", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].prefix = "DLCenanos_stage1_deco_gruaDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_23_crane.update
-tt.ui.click_rect = r(400, -220, 110, 100)
-tt.sound_tap_1_2 = "Stage23TruckOneShot"
-tt.sound_tap_3 = "Stage23TruckTap3"
 
 tt = E:register_t("decal_stage_23_rock", "decal")
 tt.render.sprites[1].prefix = "darksteel_guardian_stage_rock"
@@ -16538,12 +12413,6 @@ tt.main_script.update = scripts.decal_stage_24_factory.update
 tt.spawner.eternal = true
 tt.sound_factory_turn_on_end = "Stage24FactoryTurnOnEnd"
 tt.sound_factory_turn_off = "Stage24FactoryTurnOff"
-
-tt = E:register_t("decal_stage_24_gear_factory", "decal")
-tt.render.sprites[1].prefix = "factory2Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
 
 tt = E:register_t("decal_stage_24_factory_conveyor_belt", "decal")
 tt.render.sprites[1].prefix = "dlc_enanos_stage_02_LAYERS_factorygate"
@@ -16570,33 +12439,11 @@ tt.main_script.update = scripts.decal_stage_24_elevator.update
 tt.sound_machinist_in = "Stage24MachinistEnter"
 tt.sound_machinist_out = "Stage24MachinistExit"
 
-tt = E:register_t("decal_stage_24_mask_1", "decal")
-tt.render.sprites[1].name = "stage24_mask1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].draw_order = 1
-tt.render.sprites[1].hidden = true
-
-tt = E:register_t("decal_stage_24_mask_2", "decal")
-tt.render.sprites[1].name = "stage24_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_24_mask_3", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "stage24_mask3"
-tt.render.sprites[1].animated = false
-
 tt = E:register_t("decal_stage_24_mask_4", "decal")
 tt.render.sprites[1].name = "stage24_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = 44
-
-tt = E:register_t("decal_stage_24_mask_5", "decal")
-tt.render.sprites[1].name = "stage24_mask5"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
 
 tt = E:register_t("decal_stage_24_mask_6", "decal")
 tt.render.sprites[1].name = "stage24_mask6"
@@ -16604,153 +12451,10 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = 95
 
-tt = E:register_t("decal_stage_24_fans", "decal")
-tt.render.sprites[1].prefix = "stage2dlcanimsfansDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-
-tt = E:register_t("decal_stage_24_gears", "decal")
-tt.render.sprites[1].prefix = "stage2dlcanimstuercasDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_24_gear_floor", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].prefix = "dlc_enanos_stage_02_LAYERS_gear"
-tt.render.sprites[1].name = "loop"
-tt.main_script.update = scripts.decal_stage_24_gears.update
-tt.ui.click_rect = r(-25, -5, 50, 35)
-
-tt = E:register_t("decal_stage_24_gear_tower", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].prefix = "towerDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.main_script.update = scripts.decal_stage_24_gears.update
-tt.ui.click_rect = r(15, -35, 40, 65)
-
-tt = E:register_t("decal_stage_24_bubble", "decal_scripted")
-tt.render.sprites[1].prefix = "lavabubbleDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.render.sprites[1].hidden = true
-tt.main_script.update = scripts.decal_stage_24_bubble.update
-
-tt = E:register_t("decal_stage_24_dust", "decal")
-tt.render.sprites[1].prefix = "t5_dustDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-
-tt = E:register_t("decal_stage_24_smoke", "decal")
-tt.render.sprites[1].prefix = "t5_smokeDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-
-tt = E:register_t("decal_stage_24_upgrade_station", "decal_scripted")
-
-tt.render.sprites[1].prefix = "converterDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.main_script.update = scripts.decal_stage_24_upgrade_station.update
-tt.hammerer_t = "enemy_darksteel_hammerer"
-tt.fist_t = "enemy_darksteel_fist"
-tt.wave_config = {{
-	{},
-	{},
-	{},
-	{},
-	{{
-		duration = 60,
-		time_start = 1
-	}},
-	{},
-	{},
-	{{
-		duration = 60,
-		time_start = 10
-	}},
-	{},
-	{},
-	{},
-	{{
-		duration = 50,
-		time_start = 1
-	}},
-	{},
-	{{
-		duration = 45,
-		time_start = 1
-	}},
-	{}
-}, {{}, {{
-	duration = 55,
-	time_start = 2
-}}, {}, {}, {{
-	duration = 56,
-	time_start = 2
-}}, {}}, {{{
-	duration = 560,
-	time_start = 2
-}}}}
-tt.path_in = 8
-tt.path_out = 9
-tt.sound_open = "Stage24UpgradeStationIn"
-tt.sound_close = "Stage24UpgradeStationOut"
-tt.sound_transform = "Stage24UpgradeStationTransform"
-
-tt = E:register_t("decal_stage_24_modes_decos", "decal_scripted")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "stage2DLC_ascensor_modosDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_24_modes_decos.update
-
 tt = E:register_t("decal_stage_25_mask_1", "decal")
 tt.render.sprites[1].name = "stage25_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 32
-
-tt = E:register_t("decal_stage_25_mask_2", "decal")
-tt.render.sprites[1].name = "stage25_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 18
-
-tt = E:register_t("decal_stage_25_mask_2_glow", "decal_tween")
-tt.render.sprites[1].name = "stage25_mask2_glow"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 19
-tt.render.sprites[1].alpha = 0
-tt.tween.disabled = true
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 0}, {fts(30), 255}}
-
-tt = E:register_t("decal_stage_25_mask_3", "decal")
-tt.render.sprites[1].name = "stage25_mask3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 4
-
-tt = E:register_t("decal_stage_25_mask_4", "decal")
-tt.render.sprites[1].name = "stage25_mask4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_25_torso", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "DLC_stage3_dwarf_machinistDef"
-tt.render.sprites[1].name = "idle_doors"
-tt.render.sprites[1].exo = true
-
-tt = E:register_t("decal_stage_25_torso_modes", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "DLC_stage3_dwarf_machinist_modesDef"
-tt.render.sprites[1].name = "idle_doors"
-tt.render.sprites[1].exo = true
 
 tt = E:register_t("decal_stage_25_fist", "decal")
 tt.render.sprites[1].prefix = "DLC_stage3_robot_armDef"
@@ -16764,12 +12468,6 @@ tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t("decal_stage_25_dwarf_intro", "decal_timed")
-tt.render.sprites[1].prefix = "DLC_stage3_dwarf_inDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
 tt = E:register_t("decal_mod_stage_25_torso_missile_stun_water", "decal_timed")
 tt.render.sprites[1].name = "DLC_stage_03_missile_water_splash"
 tt.render.sprites[1].sort_y_offset = -9
@@ -16782,65 +12480,10 @@ tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].offset = v(23, 10)
 tt.tween.props[1].keys = {{0, 0}, {fts(15), 255}, {fts(45), 255}, {fts(60), 0}}
 
-tt = E:register_t("decal_stage_25_solid_snake", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].prefix = "DLC_Enanos_S3_EasterEgg_SolidSnakeDef"
-tt.render.sprites[1].name = "idle_1"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_25_solid_snake.update
-tt.ui.click_rect = r(-325, 290, 50, 45)
-tt.click_rect_1 = r(-325, 290, 50, 45)
-tt.click_rect_2 = r(-335, 283, 50, 45)
-tt.sound_1_2 = "Stage25SolidSnakeTap12"
-tt.sound_3 = "Stage25SolidSnakeTap3"
-
 tt = E:register_t("decal_stage_26_mask_1", "decal")
 tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_26_mask_2", "decal")
-tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_26_mask_3", "decal")
-tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_26_mask_4", "decal")
-tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 200
-
-tt = E:register_t("decal_stage_26_mask_5", "decal")
-tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_5"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("decal_stage_26_foreground_1", "decal")
-tt.render.sprites[1].name = "DLC_enanos_stage_04_foreground_a"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
-tt = E:register_t("decal_stage_26_foreground_2", "decal")
-tt.render.sprites[1].name = "DLC_enanos_stage_04_foreground_b"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
-tt = E:register_t("decal_stage_26_mewtwo_capsules", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.render.sprites[1].prefix = "DLC_Enanos_S4_EasterEgg_Mewtwo_CanistersDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_26_mewtwo.update
-tt.ui.click_rect = r(100, 270, 50, 80)
-tt.mewtwo_t = "decal_stage_26_mewtwo"
-tt.sound_1_2 = "Stage26MewtwoTap12"
-tt.sound_3 = "Stage26MewtwoTap3"
-tt.sound_end = "Stage26MewtwoFlightFullSequence"
 
 tt = E:register_t("decal_stage_26_mewtwo", "decal_timed")
 E:add_comps(tt, "ui")
@@ -16895,79 +12538,11 @@ tt.render.sprites[2].name = "idle"
 tt.render.sprites[2].exo = true
 tt.render.sprites[2].z = Z_OBJECTS_COVERS
 
-tt = E:register_t("decal_stage_26_gears_front", "decal")
-tt.render.sprites[1].prefix = "DLC_Enanos_S4_GearsDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-
-tt = E:register_t("decal_stage_26_gears_back", "decal")
-tt.render.sprites[1].prefix = "DLC_Enanos_S4_GearsBackDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND
-
-tt = E:register_t("decal_stage_26_bubbles", "decal")
-tt.render.sprites[1].prefix = "DLC_Enanos_S4_BubblesDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_26_modes_decos", "decal_scripted")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "DLCstage4_deco_modosDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_26_modes_decos.update
-
 tt = E:register_t("decal_stage_27_mask_1", "decal")
 tt.render.sprites[1].name = "stage27_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.render.sprites[1].draw_order = 3
-
-tt = E:register_t("decal_stage_27_mask_2", "decal")
-tt.render.sprites[1].name = "stage27_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_27_mask_3", "decal")
-tt.render.sprites[1].name = "stage27_mask3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].hidden = true
-
-tt = E:register_t("decal_stage_27_mask_4", "decal")
-tt.render.sprites[1].name = "stage27_mask4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt.render.sprites[1].draw_order = 2
-
-tt = E:register_t("decal_stage_27_mask_5", "decal")
-tt.render.sprites[1].name = "stage27_mask5"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt.render.sprites[1].draw_order = 2
-
-tt = E:register_t("decal_stage_27_snow", "decal")
-tt.render.sprites[1].prefix = "dclenanos_stage05_snowfallDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_EFFECTS
-
-tt = E:register_t("decal_stage_27_platform", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "dclenanos_stage05_platformDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("decal_stage_27_platform_bars", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].prefix = "dclenanos_stage05_platform_barsDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 
 tt = E:register_t("decal_stage_27_cannon_right", "decal")
 tt.render.sprites[1].prefix = "dlcenanos_stage05_cannonDef"
@@ -17040,25 +12615,6 @@ tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
 
-tt = E:register_t("decal_stage_27_modes_decos", "decal_scripted")
-E:add_comps(tt, "editor", "ui")
-tt.render.sprites[1].prefix = "DLCstage5_deco_modosDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_27_modes_decos.update
-tt.ui.click_rect = r(-33, 60, 20, 20)
-
-tt = E:register_t("decal_stage_27_beam", "decal_scripted")
-E:add_comps(tt, "ui", "editor")
-tt.render.sprites[1].prefix = "DLCstage5_enanos_vigaDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
-tt.main_script.update = scripts.decal_stage_27_beam.update
-tt.ui.click_rect = r(-470, 200, 150, 60)
-tt.sound_prefix = "Stage27BeamWorkersTap"
-
 tt = E:register_t("decal_boss_grymbeard_area_attack", "decal_tween")
 tt.render.sprites[1].prefix = "dclenanos_stage05_grymbossdecalDef"
 tt.render.sprites[1].name = "run"
@@ -17100,9 +12656,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.main_script.update = scripts.decal_terrain_6_exodia_part.update
 tt.ui.click_rect = r(-15, -5, 30, 20)
 tt.sound_click = "Terrain6ExodiaPart"
-
-tt = E:register_t("decal_terrain_6_exodia_arm_2", "decal_terrain_6_exodia_arm")
-tt.render.sprites[1].flip_x = true
 
 tt = E:register_t("decal_terrain_6_exodia_head", "decal_terrain_6_exodia_arm")
 tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_head"
@@ -17705,40 +13258,6 @@ tt.render.sprites[1].animated = true
 tt.bullet.hide_radius = 0
 tt.bullet.hit_distance = 20
 
-tt = E:register_t("decal_stage_28_mask_1", "decal")
-tt.render.sprites[1].name = "stage_28_mask_01"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 106
-
-tt = E:register_t("decal_stage_28_mask_2", "decal")
-tt.render.sprites[1].name = "stage_28_mask_02"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("decal_stage_28_mask_3", "decal")
-tt.render.sprites[1].name = "stage_28_mask_03"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_TOWER_BASES
-
-tt = E:register_t("decal_stage_28_torches", "decal")
-tt.render.sprites[1].prefix = "stage_28_antorchasDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = 200
-
-tt = E:register_t("decal_achievement_into_the_ogreverse", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.ui.click_rect = r(-20, -40, 40, 50)
-tt.main_script.update = scripts.decal_achievement_into_the_ogreverse.update
-tt.render.sprites[1].name = "ogreverse_web"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor = v(0.5, 0)
-tt.render.sprites[1].sort_y_offset = -30
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "ogreverse_character"
-tt.render.sprites[2].name = "cultist_idle"
-tt.render.sprites[2].offset = v(0, 20)
-tt.render.sprites[2].sort_y_offset = -30
-
 tt = E:register_t("decal_achievement_a_coon_of_surprises_fredo", "decal_scripted")
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(-20, -50, 40, 40)
@@ -17759,66 +13278,6 @@ tt.render.sprites[tt.render.sid_animated].z = Z_OBJECTS_SKY
 tt.render.sprites[tt.render.sid_animated].offset = v(5, 4)
 tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.973404255319149)
 
-tt = E:register_t("decal_achievement_a_coon_of_surprises_silksong", "decal_achievement_a_coon_of_surprises_fredo")
-tt.give_achievement = false
-tt.change_z_time = fts(36)
-tt.change_y_sort_offset = -400
-tt.ui.click_rect = r(-18, -70, 40, 60)
-tt.render.sprites[1].name = "coonsuprices_cuerdasilksong"
-tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_silksong"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].offset = v(2, -30)
-tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
-
-tt = E:register_t("decal_achievement_a_coon_of_surprises_jarra", "decal_achievement_a_coon_of_surprises_fredo")
-tt.give_achievement = false
-tt.change_z_time = fts(32)
-tt.change_y_sort_offset = -210
-tt.ui.click_rect = r(-20, -60, 47, 55)
-tt.render.sprites[1].name = "coonsuprices_cuerdajarra"
-tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_jarra"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].offset = v(-2, -22)
-tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
-
-tt = E:register_t("decal_achievement_a_coon_of_surprises_darkcrystal", "decal_achievement_a_coon_of_surprises_fredo")
-tt.give_achievement = false
-tt.change_z_time = fts(37)
-tt.change_y_sort_offset = -260
-tt.ui.click_rect = r(-20, -80, 40, 80)
-tt.render.sprites[1].name = "coonsuprices_cuerdadarkcrystal"
-tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_darkcrystal"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
-tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
-
-tt = E:register_t("decal_achievement_a_coon_of_surprises_sheepy", "decal_achievement_a_coon_of_surprises_fredo")
-tt.give_achievement = false
-tt.change_z_time = fts(30)
-tt.change_y_sort_offset = -336
-tt.ui.click_rect = r(-17, -60, 40, 70)
-tt.render.sprites[1].name = "coonsuprices_cuerdadarkcrystal"
-tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_sheepy"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
-tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.5173913043478261)
-
-tt = E:register_t("decal_achievement_a_coon_of_surprises_arak", "decal_achievement_a_coon_of_surprises_fredo")
-tt.give_achievement = false
-tt.ui.click_rect = r(-20, -40, 62, 75)
-tt.change_y_sort_offset = 0
-tt.render.sid_animated = 1
-tt.render.sprites[2] = nil
-tt.render.sprites[tt.render.sid_animated].z = Z_OBJECTS
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_arak"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].animated = true
-tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
-
 tt = E:register_t("decal_achievement_lucas_spider", "decal_scripted")
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(-20, -10, 40, 40)
@@ -17836,44 +13295,6 @@ tt = E:register_t("mask_stage_30_1", "decal")
 tt.render.sprites[1].name = "stage_30_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -60
-
-tt = E:register_t("mask_stage_30_2", "decal")
-tt.render.sprites[1].name = "stage_30_mask_02"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -112
-
-tt = E:register_t("mask_stage_30_3", "decal")
-tt.render.sprites[1].name = "stage_30_mask_03"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 0
-
-tt = E:register_t("mask_stage_30_4", "decal")
-tt.render.sprites[1].name = "stage_30_mask_04"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 0
-
-tt = E:register_t("mask_stage_30_5", "decal")
-tt.render.sprites[1].name = "stage_30_mask_05"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 0
-
-tt = E:register_t("decal_stage_30_door", "decal_scripted")
-tt.render.sprites[1].prefix = "stage_30_spider_doorDef"
-tt.render.sprites[1].name = "idle1"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = 100
-tt.main_script.update = scripts.decal_stage_30_door.update
-tt.animation_idle_open = "idle2"
-tt.animation_idle_closed = "idle1"
-tt.animation_open = "open"
-tt.animation_close = "close"
-tt.waves = {{
-	[5] = {{32, 42}, {58, 68}},
-	[9] = {{21, 31}, {48, 58}},
-	[11] = {{10, 25}, {43, 58}},
-	[13] = {{1, 10}, {18, 28}, {41, 55}},
-	[15] = {{1, 10}, {18, 28}, {52, 62}}
-}, {{{44, 52}}, {{57, 67}}, {{0.2, 10}, {44, 60}}, {{46, 60}}, {{0.5, 19}}, {{24, 34}, {70, 80}}}, {{{155, 180}, {220, 250}}}}
 
 tt = E:register_t("mod_enemy_glarenwarden_melee_lifesteal", "modifier")
 tt.main_script.insert = scripts.mod_lifesteal_kr5.insert
@@ -18283,408 +13704,10 @@ tt.aura.mod = "mod_spider_web_slowness"
 tt.aura.vis_bans = bor(F_ENEMY, F_FLYING)
 tt.aura.excluded_templates = {"hero_spider", "soldier_hero_spider_ultimate", "hero_witch", "hero_space_elf"}
 
-tt = E:register_t("controller_stage_29_spider_holders", "decal_scripted")
-E:add_comps(tt, "editor", "ui")
-tt.main_script.update = scripts.controller_stage_29_spider_holders.update
-tt.render.sprites[1].prefix = "spiderholder_spiderholder"
-tt.render.sprites[1].anchor = v(0.5, 0.4)
-tt.render.sprites[1].name = "climbing_up_idle"
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.waves = {{5, 6, 7, 9, 10, 11, 12, 13, 14, 15}, {2, 3, 4, 5, 6}, {1}}
-tt.first_cooldown = {{5, 40, 5, 45, 1, 22, 1, 1, 1, 1}, {1, 35, 5, 25, 40}, {30}}
-tt.cooldown = {{35, 20, 0, 0, 30, 30, 40, 30, 30, 25}, {0, 0, 42, 0, 20}, {50}}
-tt.max_casts = {{2, 2, 1, 1, 3, 2, 2, 3, 3, 4}, {1, 1, 2, 1, 2}, {50}}
-tt.game_start_blocked_holders = {{}, {}, {
-	"1",
-	"2",
-	"3",
-	"4",
-	"5",
-	"6",
-	"7",
-	"8",
-	"9",
-	"10",
-	"11",
-	"12",
-	"13",
-	"14",
-	"15"
-}}
-tt.time_to_down = 3
-tt.time_to_up = 2
-tt.time_netting = 5
-tt.taps_to_cancel = 3
-tt.hand_decal_t = "decal_mod_stage_29_holder_block_hand"
-tt.ui.click_rect = r(-35, -40, 70, 70)
-tt.vis_bans = 0
-tt.vis_flags = 0
-tt.threads_separation = 38
-tt.threads_amount = math.ceil(REF_H / tt.threads_separation)
-tt.threads_idles = {"idle1", "idle1", "idle2", "idle3", "idle4", "idle4"}
-
-for i = 1, tt.threads_amount do
-	local s = E:clone_c("sprite")
-
-	s.prefix = "glarewarden_web_spiderweb"
-	s.name = tt.threads_idles[1]
-	s.loop = false
-	s.anchor.y = 0
-	s.offset.y = (i - 1) * tt.threads_separation
-	s.z = Z_OBJECTS_SKY - 1
-	s.hidden = true
-	tt.render.sprites[i + 1] = s
-end
-
-tt.sound_loop = "EnemySpidersMechanicTowerSpiderWorkingLoop"
-tt.sound_death = "EnemySpidersMechanicTowerSpiderDeath"
-
 tt = E:register_t("tower_holder_pre_blocked_spiders", "decal_scripted")
 tt.render.sprites[1].name = "terrains_holders_00017_flag"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor = v(0.5, 0.3)
-
-tt = E:register_t("controller_stage_30_boss_spiders", "decal_scripted")
-E:add_comps(tt, "editor")
-tt.main_script.update = scripts.controller_stage_30_boss_spiders.update
-tt.spawn_path = 1
-tt.spawn_node = 45
-tt.render.sid_queen_podium = 1
-tt.wave_spawns = {
-	[3] = {{
-		delay = 16,
-		spawns = {{
-			pi = 2,
-			spi = 1,
-			ni = 95
-		}}
-	}},
-	[4] = {{
-		delay = 3,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}}
-	}, {
-		delay = 7,
-		spawns = {{
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}}
-	}, {
-		delay = 43,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}}
-	}},
-	[7] = {{
-		delay = 50,
-		spawns = {{
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}}
-	}},
-	[10] = {{
-		delay = 2,
-		spawns = {{
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}, {
-		delay = 28,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}, {
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}}
-	}},
-	[12] = {{
-		delay = 2,
-		spawns = {{
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}, {
-		delay = 42,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}, {
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}, {
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}},
-	[15] = {{
-		delay = 2,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}, {
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}, {
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}, {
-		delay = 15,
-		spawns = {{
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}, {
-		delay = 45,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}, {
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}, {
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 7,
-			spi = 1,
-			ni = 70
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 90
-		}}
-	}}
-}
-tt.wave_spawns_impossible = {
-	[3] = {{
-		delay = 16,
-		spawns = {{
-			pi = 2,
-			spi = 1,
-			ni = 95
-		}}
-	}},
-	[4] = {{
-		delay = 3,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}}
-	}, {
-		delay = 7,
-		spawns = {{
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}}
-	}, {
-		delay = 43,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}}
-	}, {
-		delay = 47,
-		spawns = {{
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}}
-	}},
-	[6] = {{
-		delay = 50,
-		spawns = {{
-			pi = 2,
-			spi = 1,
-			ni = 95
-		}}
-	}},
-	[7] = {{
-		delay = 50,
-		spawns = {{
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}}
-	}},
-	[10] = {{
-		delay = 2,
-		spawns = {{
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}, {
-		delay = 28,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}, {
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}}
-	}},
-	[12] = {{
-		delay = 2,
-		spawns = {{
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}, {
-		delay = 42,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}, {
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}, {
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}},
-	[15] = {{
-		delay = 2,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}, {
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}, {
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}, {
-		delay = 15,
-		spawns = {{
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}}
-	}, {
-		delay = 45,
-		spawns = {{
-			pi = 1,
-			spi = 1,
-			ni = 78
-		}, {
-			pi = 5,
-			spi = 1,
-			ni = 55
-		}, {
-			pi = 7,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 35
-		}, {
-			pi = 7,
-			spi = 1,
-			ni = 70
-		}, {
-			pi = 8,
-			spi = 1,
-			ni = 90
-		}}
-	}}
-}
-tt.wave_spawns_object = "glarenwarden_thread_spawner"
-tt.render.sprites[tt.render.sid_queen_podium].prefix = "spiderqueen_spider_queenDef"
-tt.render.sprites[tt.render.sid_queen_podium].exo = true
-tt.render.sprites[tt.render.sid_queen_podium].name = "walk"
-tt.render.sprites[tt.render.sid_queen_podium].sort_y_offset = 0
-tt.render.sid_jump = 2
-tt.render.sprites[tt.render.sid_jump] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[tt.render.sid_jump].prefix = "spiderqueen_queen_assetDef"
-tt.render.sprites[tt.render.sid_jump].hidden = true
-tt.render.sprites[tt.render.sid_jump].name = "in"
-tt.render.sid_land = 3
-tt.render.sprites[tt.render.sid_land] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[tt.render.sid_land].prefix = "spiderqueen_spider_jumpDef"
-tt.render.sid_smoke = 4
-tt.render.sprites[tt.render.sid_smoke] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[tt.render.sid_smoke].prefix = "spiderqueen_smokeDef"
 
 tt = E:register_t("stage_29_cocoon", "decal_scripted")
 E:add_comps(tt, "spawner")
@@ -18827,34 +13850,6 @@ tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].keys = {{0, vv(0.8)}, {fts(2), vv(0.8)}, {fts(7), vv(1)}, {fts(7) + tt.duration, vv(1)}, {fts(7) + tt.duration + fts(27), vv(0.8)}}
 tt.tween.props[2].name = "scale"
 
-tt = E:register_t("decal_stage_31_easter_egg_oogway", "decal_scripted")
-E:add_comps(tt, "ui", "editor")
-tt.main_script.update = scripts.decal_stage_31_easter_egg_oogway.update
-tt.render.sprites[1].prefix = "stage_31_oogwayDef"
-tt.render.sprites[1].name = "idle1"
-tt.render.sprites[1].exo = true
-tt.idle_cooldown_max = 20
-tt.idle_cooldown_min = 5
-tt.ui.click_rect = r(-30, -20, 60, 60)
-
-tt = E:register_t("decal_stage_31_easter_egg_littledragon", "decal_scripted")
-E:add_comps(tt, "ui", "editor")
-tt.main_script.update = scripts.decal_stage_31_easter_egg_littledragon.update
-tt.render.sprites[1].prefix = "littledragon_easteregg_stage1_easteregg"
-tt.render.sprites[1].name = "idle_1"
-tt.render.sprites[1].sort_y_offset = -30
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].name = "littledragon_easteregg_stage1_easter_egg_dead"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].offset = v(5, -30)
-tt.render.sprites[2].z = Z_DECALS
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].name = "littledragon_easteregg_stage1_tree"
-tt.render.sprites[3].animated = false
-tt.render.sprites[3].anchor = v(0, 0)
-tt.render.sprites[3].offset = v(-69, -23)
-tt.ui.click_rect = r(-30, -20, 60, 60)
-
 tt = E:register_t("decal_stage_32_easter_egg_sheepy", "decal_scripted")
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = scripts.decal_stage_32_easter_egg_sheepy.update
@@ -18872,9 +13867,9 @@ tt.render.sprites[3].offset = v(-20, 0)
 tt.render.sprites[3].sort_y_offset = 2
 tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "sheepylava_crater_3"
--- 铁皮此处代码基于bug运行，修复不了。
 tt.render.sprites[4].name = "idle"
 tt.render.sprites[4].offset = v(25, -20)
+tt.render.sprites[4].ignore_start = true
 tt.ui.click_rect = r(-30, -20, 60, 60)
 
 tt = E:register_t("decal_achievement_saitam_stage31", "decal_scripted")
@@ -18887,9 +13882,6 @@ tt.render.sprites[1].anchor = v(0.3333333333333333, 0.5222222222222223)
 tt.ui.click_rect = r(-50, -5, 40, 30)
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.5, 0}}
-
-tt = E:register_t("decal_achievement_saitam_stage32", "decal_achievement_saitam_stage31")
-tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_2"
 
 tt = E:register_t("decal_achievement_saitam_stage33", "decal_achievement_saitam_stage31")
 tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_3"
@@ -18906,321 +13898,6 @@ tt.render.sprites[1].name = "tap"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].offset = v(23, 10)
 tt.tween.props[1].keys = {{0, 0}, {fts(15), 255}, {fts(15), 255}, {fts(60), 0}}
-
-tt = RT("controller_stage_33_lightning_strike")
-AC(tt, "pos", "main_script", "editor", "editor_script")
-tt.main_script.update = scripts.controller_stage_33_lightning_strike.update
-tt.force_target_soldier_chance = 0.2
-tt.chain_strikes_chance = 0
-tt.max_chains = 2
-tt.areas_configs = {
-	CAMPAIGN = {
-		["1"] = {
-			[5] = {{
-				max_casts = 10,
-				first_cd = 1,
-				max_cd = 6,
-				min_cd = 4.5
-			}},
-			[6] = {{
-				max_casts = 15,
-				first_cd = 3,
-				max_cd = 5.5,
-				min_cd = 4
-			}},
-			[8] = {{
-				max_casts = 4,
-				first_cd = 3,
-				max_cd = 5,
-				min_cd = 4
-			}},
-			[10] = {{
-				max_casts = 15,
-				first_cd = 5,
-				max_cd = 5,
-				min_cd = 4
-			}},
-			[11] = {{
-				max_casts = 10,
-				first_cd = 15,
-				max_cd = 7,
-				min_cd = 5
-			}},
-			[13] = {{
-				max_casts = 40,
-				first_cd = 5,
-				max_cd = 3.5,
-				min_cd = 3
-			}},
-			[15] = {{
-				max_casts = 75,
-				first_cd = 1,
-				max_cd = 4,
-				min_cd = 3.75
-			}}
-		},
-		["10"] = {},
-		["2"] = {
-			[6] = {{
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 10,
-				max_casts = 6,
-				max_cd = 3,
-				min_cd = 2
-			}, {
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 42,
-				max_casts = 6,
-				max_cd = 3,
-				min_cd = 2
-			}},
-			[8] = {{
-				max_casts = 8,
-				first_cd = 1,
-				max_cd = 4,
-				min_cd = 2
-			}},
-			[9] = {{
-				max_casts = 11,
-				first_cd = 2,
-				max_cd = 6,
-				min_cd = 5
-			}},
-			[11] = {{
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 48.5,
-				max_casts = 6,
-				max_cd = 3,
-				min_cd = 2.5
-			}},
-			[13] = {{
-				max_casts = 10,
-				first_cd = 2,
-				max_cd = 1.5,
-				min_cd = 1
-			}, {
-				max_casts = 20,
-				first_cd = 70,
-				max_cd = 1.25,
-				min_cd = 0.75
-			}},
-			[15] = {{
-				spawn_unit = "enemy_storm_elemental",
-				first_cd = 6.5,
-				max_casts = 1,
-				max_cd = 1,
-				min_cd = 1
-			}, {
-				spawn_unit = "enemy_storm_elemental",
-				first_cd = 52,
-				max_casts = 1,
-				max_cd = 12,
-				min_cd = 10
-			}}
-		},
-		["3"] = {
-			[9] = {{
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 6,
-				max_casts = 7,
-				max_cd = 1.5,
-				min_cd = 1
-			}, {
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 70,
-				max_casts = 7,
-				max_cd = 1.5,
-				min_cd = 1
-			}},
-			[11] = {{
-				max_casts = 6,
-				first_cd = 3,
-				max_cd = 8,
-				min_cd = 6
-			}},
-			[13] = {{
-				max_casts = 10,
-				first_cd = 10,
-				max_cd = 1.25,
-				min_cd = 0.75
-			}, {
-				spawn_unit = "enemy_storm_elemental",
-				first_cd = 25,
-				max_casts = 2,
-				max_cd = 23,
-				min_cd = 23
-			}},
-			[15] = {{
-				max_casts = 1e+99,
-				first_cd = 1,
-				max_cd = 4,
-				min_cd = 3
-			}}
-		},
-		["4"] = {
-			[9] = {{
-				max_casts = 11,
-				first_cd = 5,
-				max_cd = 6,
-				min_cd = 5
-			}},
-			[11] = {{
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 4,
-				max_casts = 8,
-				max_cd = 3,
-				min_cd = 2
-			}, {
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 50,
-				max_casts = 6,
-				max_cd = 3,
-				min_cd = 2.5
-			}},
-			[15] = {{
-				spawn_unit = "enemy_storm_elemental",
-				first_cd = 8,
-				max_casts = 1,
-				max_cd = 12,
-				min_cd = 10
-			}, {
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 22,
-				max_casts = 6,
-				max_cd = 1.25,
-				min_cd = 1
-			}, {
-				spawn_unit = "enemy_storm_elemental",
-				first_cd = 50,
-				max_casts = 1,
-				max_cd = 12,
-				min_cd = 10
-			}, {
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 63,
-				max_casts = 8,
-				max_cd = 0.75,
-				min_cd = 0.5
-			}}
-		},
-		["5"] = {
-			[13] = {{
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 5,
-				max_casts = 8,
-				max_cd = 1.5,
-				min_cd = 1
-			}, {
-				spawn_unit = "enemy_water_spirit_spawnless",
-				first_cd = 34,
-				max_casts = 8,
-				max_cd = 1.5,
-				min_cd = 1
-			}}
-		},
-		["6"] = {
-			[10] = {{
-				max_casts = 3,
-				first_cd = 3,
-				max_cd = 1,
-				min_cd = 0.75
-			}, {
-				spawn_unit = "enemy_storm_elemental",
-				first_cd = 39,
-				max_casts = 1,
-				max_cd = 1,
-				min_cd = 0.75
-			}},
-			[13] = {{
-				max_casts = 10,
-				first_cd = 13,
-				max_cd = 1.25,
-				min_cd = 0.75
-			}},
-			[15] = {{
-				spawn_unit = "enemy_storm_elemental",
-				first_cd = 5,
-				max_casts = 1,
-				max_cd = 12,
-				min_cd = 10
-			}, {
-				spawn_unit = "enemy_storm_elemental",
-				first_cd = 54,
-				max_casts = 1,
-				max_cd = 12,
-				min_cd = 10
-			}, {
-				max_casts = 11,
-				first_cd = 60,
-				max_cd = 6,
-				min_cd = 5
-			}}
-		},
-		["7"] = {
-			[15] = {{
-				max_casts = 10,
-				first_cd = 6,
-				max_cd = 5,
-				min_cd = 4
-			}}
-		},
-		["8"] = {}
-	},
-	HEROIC = {},
-	IRON = {
-		["1"] = {{{
-			max_casts = 1e+99,
-			first_cd = 169,
-			max_cd = 7,
-			min_cd = 4
-		}}},
-		["2"] = {{{
-			max_casts = 10,
-			first_cd = 171,
-			max_cd = 5,
-			min_cd = 4
-		}, {
-			spawn_unit = "enemy_water_spirit_spawnless",
-			first_cd = 225,
-			max_casts = 10,
-			max_cd = 2,
-			min_cd = 1.5
-		}}},
-		["3"] = {{{
-			spawn_unit = "enemy_storm_elemental",
-			first_cd = 174,
-			max_casts = 1,
-			max_cd = 1,
-			min_cd = 1
-		}, {
-			max_casts = 1e+99,
-			first_cd = 176,
-			max_cd = 8,
-			min_cd = 5
-		}}},
-		["4"] = {{{
-			max_casts = 6,
-			first_cd = 172.5,
-			max_cd = 7,
-			min_cd = 4
-		}, {
-			spawn_unit = "enemy_water_spirit_spawnless",
-			first_cd = 212,
-			max_casts = 7,
-			max_cd = 2.5,
-			min_cd = 2
-		}}}
-	}
-}
-tt.strikes_spawn_radius = 100
-tt.area_id = 1
-tt.editor.components = {"render", "texts"}
-tt.editor.overrides = {
-	["render.sprites[1].animated"] = false,
-	["render.sprites[1].name"] = "editor_cyan_circle"
-}
-tt.editor.props = {{"strikes_spawn_radius", PT_NUMBER}, {"area_id", PT_NUMBER}}
-tt.editor_script.update = scripts.controller_stage_33_lightning_strike.editor_update
 
 tt = RT("stage_33_lightning_strike", "decal_scripted")
 AC(tt, "tween")
@@ -19323,125 +14000,12 @@ tt.paths_y = {
 tt.vis_flags = 0
 tt.vis_bans = 0
 
-tt = E:register_t("controller_stage_32_lava_splash_2", "controller_stage_32_lava_splash")
-tt.mod = "mod_stage_32_lava_splash_2"
-tt.paths_y = {
-	[3] = 560
-}
-
 tt = E:register_t("controller_stage_34_ponds_spawner")
 E:add_comps(tt, "main_script", "events")
 tt.main_script.update = scripts.controller_stage_34_ponds_spawner.update
 tt.unit_t = "enemy_water_spirit_spawnless"
 tt.events.list[1].name = "pond_spawn_water_spirit"
 tt.events.list[1].on_event = scripts.controller_stage_34_ponds_spawner.on_event
-
-tt = E:register_t("controller_boss_princess_iron_fan_waves", "decal_scripted")
-E:add_comps(tt, "editor")
-tt.force_capture_hero = scripts.controller_boss_princess_iron_fan_waves.force_capture_hero
-tt.force_go_middle = scripts.controller_boss_princess_iron_fan_waves.force_go_middle
-tt.force_go_back = scripts.controller_boss_princess_iron_fan_waves.force_go_back
-tt.main_script.update = scripts.controller_boss_princess_iron_fan_waves.update
-tt.render.sid_unit = 1
-tt.render.sprites[tt.render.sid_unit].prefix = "boss_princessDef"
-tt.render.sprites[tt.render.sid_unit].exo = true
-tt.render.sprites[tt.render.sid_unit].name = "idle"
-tt.pos_sitting = v(1060, 405)
-tt.pos_standing = v(605, 355)
-tt.illusory_summon = {
-	[7] = {
-		cd = 13,
-		first_cd = {3},
-		wave = {"mud_spawner_w7_1", "mud_spawner_w7_2", "mud_spawner_w7_3"}
-	},
-	[10] = {
-		cd = 26,
-		first_cd = {23},
-		wave = {"mud_spawner_w10_1", "mud_spawner_w10_2"}
-	},
-	[12] = {
-		cd = 90,
-		first_cd = {20},
-		wave = {"mud_spawner_w12_1"}
-	},
-	[15] = {
-		cd = 25,
-		first_cd = {1},
-		wave = {"mud_spawner_w15_1", "mud_spawner_w15_2"}
-	}
-}
-tt.block_tower = {
-	spawn_every = 5,
-	quantity_formations_spawns = 1,
-	spawn_formations = {{{
-		enemy = "enemy_big_terracota",
-		subpath = 1
-	}, {
-		delay = 2,
-		enemy = "enemy_terracota",
-		subpath = 3
-	}, {
-		enemy = "enemy_terracota",
-		subpath = 2
-	}, {
-		delay = 2,
-		enemy = "enemy_terracota",
-		subpath = 3
-	}, {
-		enemy = "enemy_terracota",
-		subpath = 2
-	}}},
-	holders_not_to_block = {"3", "4", "5"},
-	[12] = {
-		cd = 18,
-		first_cd = {10},
-		towers = {1, 2, 6, 7, 8}
-	},
-	[14] = {
-		cd = 18,
-		first_cd = {8},
-		towers = {1, 2, 6, 7, 8}
-	},
-	[15] = {
-		cd = 11,
-		first_cd = {6},
-		towers = {1, 2, 6, 7, 8}
-	}
-}
-tt.block_tower_loop_duration = 3
-tt.block_tower_mod = "boss_princess_iron_fan_tower_debuff"
-tt.boss_unit_spawn = "boss_princess_iron_fan"
-tt.stun_hero = {
-	WARNING_DURATION = 4,
-	DURATION = 13,
-	[5] = {
-		cd = 15,
-		first_cd = {5}
-	},
-	[9] = {
-		cd = 12.5,
-		first_cd = {8}
-	},
-	[14] = {
-		cd = 8,
-		first_cd = {13}
-	},
-	[15] = {
-		cd = 7.5,
-		first_cd = {10}
-	}
-}
-tt.stun_hero_decal = "decal_boss_princess_iron_fan_stun_heroes_waves"
-tt.stun_hero_warning_duration = 4
-tt.stun_hero_vis_flags = bor(F_MOD, F_STUN, F_AREA)
-tt.stun_hero_vis_bans = bor(0)
-tt.shield_duration = 40
-tt.shield_decal = "decal_boss_princess_iron_fan_waves_shield"
-tt.sound_teleport_in = "EnemyBossPrincessTeleportIn"
-tt.sound_teleport_out = "EnemyBossPrincessTeleportOut"
-tt.sound_stun_hero_channel = "EnemyBossPrincessHeroStunChannel"
-tt.sound_stun_hero_fail = "EnemyBossPrincessHeroStunFail"
-tt.sound_stun_hero_success = "EnemyBossPrincessHeroStunSuccess"
 
 tt = E:register_t("controller_stage_33_ciclone", "decal_scripted")
 E:add_comps(tt, "editor", "ui", "events")
@@ -19522,51 +14086,6 @@ tt.render.sprites[tt.render.sid_escombros].z = Z_DECALS
 tt.render.sprites[tt.render.sid_escombros].hidden = true
 tt.events.list[1].name = "ciclone"
 tt.events.list[1].on_event = scripts.controller_stage_33_ciclone.on_event
-
-tt = E:register_t("controller_stage_33_house_doors")
-E:add_comps(tt, "main_script")
-tt.main_script.insert = scripts.controller_stage_33_house_doors.insert
-tt.citizen_spawned = scripts.controller_stage_33_house_doors.citizen_spawned
-tt.door_positions = {{
-	template = "stage_33_citizen_house_1",
-	pos = v(72, 348)
-}, {
-	template = "stage_33_citizen_house_2",
-	pos = v(197, 348)
-}, {
-	template = "stage_33_citizen_house_1",
-	pos = v(235, 693)
-}, {
-	template = "stage_33_citizen_house_2",
-	pos = v(387, 693)
-}, {
-	template = "stage_33_citizen_house_1",
-	pos = v(799, 692)
-}, {
-	template = "stage_33_citizen_house_2",
-	pos = v(925, 696)
-}, {
-	template = "stage_33_citizen_house_2",
-	pos = v(1030, 348)
-}}
-
-tt = E:register_t("controller_stage_33_boat", "decal_scripted")
-tt.main_script.update = scripts.controller_stage_33_boat.update
-E:add_comps(tt, "events")
-tt.render.sid_boat = 1
-tt.render.sid_sail = 2
-tt.render.sprites[tt.render.sid_boat].prefix = "stage_3_barcoDef"
-tt.render.sprites[tt.render.sid_boat].exo = true
-tt.render.sprites[tt.render.sid_boat].name = "idle"
-tt.render.sprites[tt.render.sid_boat].z = Z_DECALS
-tt.render.sprites[tt.render.sid_boat].hidden = true
-tt.render.sprites[tt.render.sid_sail] = E:clone_c("sprite")
-tt.render.sprites[tt.render.sid_sail].prefix = "stage_3_barco_velaDef"
-tt.render.sprites[tt.render.sid_sail].exo = true
-tt.render.sprites[tt.render.sid_sail].name = "idle"
-tt.render.sprites[tt.render.sid_sail].z = Z_DECALS
-tt.events.list[1].name = "boat"
-tt.events.list[1].on_event = scripts.controller_stage_33_boat.on_event
 
 tt = RT("controller_stage_33_tambor", "decal_scripted")
 tt.do_tambor = scripts.controller_stage_33_tambor.do_tambor
@@ -20129,13 +14648,6 @@ tt.paths_x = {
 	[7] = 0
 }
 
-tt = E:register_t("controller_stage_35_water_splash", "controller_stage_35_lava_splash")
-tt.apply_if_enemy_is_to_right = true
-tt.mod = "mod_stage_35_water_splash"
-tt.paths_x = {
-	[8] = 1025
-}
-
 tt = E:register_t("controller_stage_35_small_spawner", "decal_scripted")
 E:add_comps(tt, "events", "editor")
 tt.unit_spawned = scripts.controller_stage_35_small_spawner.unit_spawned
@@ -20201,11 +14713,6 @@ tt.path_id = 5
 tt.empty_wait = 2
 tt.golden_eyed_entity = "enemy_golden_eyed"
 tt.summon_sound = "EnemyGoldenEyedSummon"
-
-tt = E:register_t("controller_stage_35_golden_eyed_right", "controller_stage_35_golden_eyed_left")
-tt.render.sprites[1].prefix = "spawner_golden_beastDef"
-tt.events.list[1].name = "golden_beast_right"
-tt.path_id = 6
 
 tt = E:register_t("mod_bull_king_tower_debuff", "mod_hide_tower")
 E:add_comps(tt, "render")
@@ -20296,19 +14803,6 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = 20
 
-tt = E:register_t("controller_stage_35", "decal_scripted")
-E:add_comps(tt, "editor", "ui", "events")
-tt.main_script.update = scripts.controller_stage_35.update
-tt.render.sprites[1].prefix = "stage_5_cinematicaDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_SCREEN_FIXED
-tt.render.sprites[1].pos = v(0, 0)
-tt.events.list[1].name = "barrage"
-tt.events.list[1].on_event = scripts.controller_stage_35.on_event
-tt.fixed_screen_offset = v(40, 40)
-
 tt = E:register_t("debug_draw_ability_area", "decal_scripted")
 tt.main_script.update = scripts.debug_draw_ability_area.update
 tt.check_function = nil
@@ -20353,12 +14847,6 @@ tt = E:register_t("stage_31_mask_burned_03", "stage_31_mask_burned_01")
 tt.render.sprites[1].name = "stage_31_mask_burned_03"
 tt.render.sprites[1].sort_y_offset = -80
 
-tt = E:register_t("stage_31_mask_shadow_top", "decal")
-tt.render.sprites[1].prefix = "stage_31_shadowDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
 tt = E:register_t("stage_31_exo_fire_a", "decal")
 E:add_comps(tt, "editor", "editor_script")
 tt.render.sprites[1].prefix = "stage_31_fire_ADef"
@@ -20370,9 +14858,6 @@ tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
 tt.render.sprites[1].hidden = true
 tt.show_in_editor = true
 tt.editor_script.insert = scripts.editor_mask.insert
-
-tt = E:register_t("stage_31_exo_fire_b", "stage_31_exo_fire_a")
-tt.render.sprites[1].prefix = "stage_31_fire_BDef"
 
 tt = E:register_t("stage_31_exo_fire_c", "stage_31_exo_fire_a")
 tt.render.sprites[1].prefix = "stage_31_fire_CDef"
@@ -20454,54 +14939,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 160
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = E:register_t("stage_32_mask_heads_2", "stage_32_mask_heads")
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("stage_32_mask_front", "decal")
-tt.render.sprites[1].prefix = "stage_32_lava_shadow_dragonDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
-tt = E:register_t("stage_32_mask_waterfall_1", "decal")
-tt.render.sprites[1].prefix = "stage_32_lava_waterfall_1Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = E:register_t("stage_32_mask_waterfall_2", "stage_32_mask_waterfall_1")
-tt.render.sprites[1].prefix = "stage_32_lava_waterfall_2Def"
-tt.render.sprites[1].sort_y_offset = 175
-tt.render.sprites[1].z = Z_OBJECTS
-
-tt = E:register_t("stage_32_mask_waterfall_3", "stage_32_mask_waterfall_2")
-tt.render.sprites[1].prefix = "stage_32_lava_waterfall_3Def"
-
-tt = E:register_t("stage_32_mask_lava_bubbles", "decal")
-tt.render.sprites[1].prefix = "stage_32_lava_bubbleDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = 176
-tt.render.sprites[1].z = Z_OBJECTS
-
-tt = E:register_t("stage_32_mask_lava_rocks", "decal")
-tt.render.sprites[1].prefix = "stage_32_rockDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("stage_32_mask_fire_decals", "decal")
-tt.render.sprites[1].prefix = "stage_32_lava_buffDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].loop = true
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
 tt = E:register_t("stage_33_mask_props", "decal")
 tt.render.sprites[1].prefix = "stage_33_anim_propsDef"
 tt.render.sprites[1].name = "run"
@@ -20509,67 +14946,6 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("stage_33_mask_water_small", "decal")
-tt.render.sprites[1].prefix = "stage_33_olas_chicasDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].loop = true
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND - 1
-
-tt = E:register_t("stage_33_mask_water_big", "decal")
-tt.render.sprites[1].prefix = "stage_33_olas_grandesDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].loop = true
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND - 2
-
-tt = E:register_t("stage_33_mask_1", "decal")
-tt.render.sprites[1].name = "stage33_mask_1_casa_grande"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS
-tt.pos = v(512, 384)
-tt.render.sprites[1].sort_y_offset = 550 - tt.pos.y
-
-tt = E:register_t("stage_33_mask_1_destroyed", "stage_33_mask_1")
-tt.render.sprites[1].name = "stage 33_mask_intersection"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt.render.sprites[1].hidden = true
-
-tt = E:register_t("stage_33_mask_2", "stage_33_mask_1")
-tt.render.sprites[1].name = "stage33_mask_2_casita"
-tt.render.sprites[1].sort_y_offset = 581 - tt.pos.y
-
-tt = E:register_t("stage_33_mask_3", "stage_33_mask_1")
-tt.render.sprites[1].name = "stage33_mask_3_casita"
-tt.render.sprites[1].sort_y_offset = 544 - tt.pos.y
-
-tt = E:register_t("stage_33_mask_4", "stage_33_mask_1")
-tt.render.sprites[1].name = "stage33_mask_4_plataforma"
-tt.render.sprites[1].sort_y_offset = 371 - tt.pos.y
-
-tt = E:register_t("stage_33_mask_5", "stage_33_mask_1")
-tt.render.sprites[1].name = "stage33_mask_5_carpa"
-tt.render.sprites[1].sort_y_offset = 365 - tt.pos.y
-
-tt = E:register_t("stage_33_mask_6", "stage_33_mask_1")
-tt.render.sprites[1].name = "stage33_mask_6_casita"
-tt.render.sprites[1].sort_y_offset = 374 - tt.pos.y
-
-tt = E:register_t("stage_33_mask_7", "stage_33_mask_1")
-tt.render.sprites[1].name = "stage33_mask_7_casita"
-tt.render.sprites[1].sort_y_offset = 374 - tt.pos.y
-
-tt = E:register_t("stage_33_mask_8", "stage_33_mask_1")
-tt.render.sprites[1].name = "stage33_mask_8_casitas"
-tt.render.sprites[1].sort_y_offset = 530 - tt.pos.y
-
-tt = E:register_t("stage_33_mask_9", "stage_33_mask_1")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "stage33_mask_9_modos_relleno_holders"
-tt.render.sprites[1].sort_y_offset = 450 - tt.pos.y
 
 tt = E:register_t("stage_33_house_destroyed_decal_1", "decal")
 tt.render.sprites[1].name = "stage33_casa_holder_escombros_1"
@@ -20612,113 +14988,10 @@ tt.render.sprites[tt.render.sid_door].prefix = "stage33_casa2_pescadores_door"
 tt.render.sprites[tt.render.sid_door].sort_y_offset = 0
 tt.render.sprites[tt.render.sid_floor].name = "stage33_casa2_pescadores_sombra"
 
-tt = E:register_t("controller_stage_34_fuentes")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_34_fuentes.update
-tt.nodes_range = 15
-tt.open_duration = 3
-
-tt = E:register_t("decal_stage_34_fuente_1", "decal_scripted")
-E:add_comps(tt, "events")
-tt.start_remolino = scripts.decal_stage_34_fuente.start_remolino
-tt.end_remolino = scripts.decal_stage_34_fuente.end_remolino
-tt.main_script.update = scripts.decal_stage_34_fuente.update
-tt.events.list[1].name = "fuente_remolino_start"
-tt.events.list[1].on_event = scripts.decal_stage_34_fuente.on_event_start
-tt.events.list[2] = E:clone_c("event")
-tt.events.list[2].name = "fuente_remolino_end"
-tt.events.list[2].on_event = scripts.decal_stage_34_fuente.on_event_end
-tt.event_listen_number = 1
-tt.remolino_count = 0
-tt.render.sprites[1].prefix = "stage_34_fuente_1Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt.connections = {{nil, 12}}
-tt.sound_mud_pool_transformation = "EnemyBossPrincessMudPoolTransformation"
-
-tt = E:register_t("decal_stage_34_fuente_2", "decal_stage_34_fuente_1")
-tt.event_listen_number = 2
-tt.render.sprites[1].prefix = "stage_34_fuente_2Def"
-tt.connections = {{3, 9}, {4, 10}, {5, 11}}
-
-tt = E:register_t("decal_stage_34_fuente_3", "decal_stage_34_fuente_1")
-tt.event_listen_number = 3
-tt.render.sprites[1].prefix = "stage_34_fuente_4Def"
-tt.connections = {{6, 9}, {7, 10}, {8, 12}}
-
-tt = E:register_t("decal_stage_34_fuente_4", "decal_stage_34_fuente_1")
-tt.event_listen_number = 4
-tt.render.sprites[1].prefix = "stage_34_fuente_5Def"
-tt.connections = {{nil, 9}}
-
-tt = E:register_t("decal_stage_34_fuente_5", "decal_stage_34_fuente_1")
-tt.event_listen_number = 5
-tt.render.sprites[1].prefix = "stage_34_fuente_6Def"
-tt.connections = {{nil, 10}, {nil, 11}}
-
-tt = E:register_t("decal_stage_34_fuente_6", "decal_stage_34_fuente_1")
-tt.event_listen_number = 6
-tt.render.sprites[1].prefix = "stage_34_fuente_3Def"
-tt.connections = nil
-
-tt = E:register_t("decal_stage_34_mask_2", "decal")
-tt.render.sprites[1].name = "mascara2_puertas"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -100
-
-tt = E:register_t("decal_stage_34_mask_3", "decal")
-tt.render.sprites[1].name = "mascara3_gazebo"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("decal_stage_34_mask_cascadas_1", "decal")
-tt.render.sprites[1].name = "stage_34_cascadas_1_run"
-
-tt = E:register_t("decal_stage_34_mask_cascadas_2", "decal_stage_34_mask_cascadas_1")
-tt.render.sprites[1].name = "stage_34_cascadas_2_run"
-
-tt = E:register_t("decal_stage_34_mask_cascadas_3", "decal_stage_34_mask_cascadas_1")
-tt.render.sprites[1].name = "stage_34_cascadas_3_run"
-
-tt = E:register_t("decal_stage_34_mask_cascadas_6", "decal_stage_34_mask_cascadas_1")
-tt.render.sprites[1].name = "stage_34_cascadas_6_run"
-
-tt = E:register_t("decal_stage_34_easter_egg_mono", "decal_scripted")
-E:add_comps(tt, "ui")
-tt.main_script.update = scripts.decal_stage_34_easter_egg_mono.update
-tt.render.sprites[1].prefix = "wkstatue_sixear"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].name = "wkstatue_ofrendas"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].z = Z_EFFECTS
-tt.render.sprites[2].offset = v(12, -12)
-tt.ui.click_rect = r(-30, -20, 60, 60)
-
-tt = E:register_t("stage_34_nubes_camino", "decal")
-tt.render.sprites[1].prefix = "stage_4_nubescaminoDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("stage_34_nubes", "decal")
-tt.render.sprites[1].prefix = "stage_4_nubesDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
 tt = E:register_t("decal_stage_35_mask_boss_bull", "decal")
 tt.render.sprites[1].name = "stage35_mask_boss"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 200
-
-tt = E:register_t("decal_stage_35_mask_boss_bull_left", "decal")
-tt.render.sprites[1].name = "stage35_mask_shadow_creeps"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_35_mask_boss_bull_right", "decal_stage_35_mask_boss_bull_left")
-tt.render.sprites[1].flip_x = true
 
 tt = E:register_t("decal_stage_35_mask_path_open", "decal")
 tt.render.sprites[1].name = "stage35_mask_path_open"
@@ -20737,17 +15010,6 @@ tt.render.sprites[1].name = "stage35_mask_bosses"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
 tt.render.sprites[1].sort_y_offset = -86
-
-tt = E:register_t("decal_stage_35_mask_princess_top", "decal_stage_35_mask_redboy_top")
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("decal_stage_35_mask_redboy_bottom", "decal")
-tt.render.sprites[1].name = "stage35_mask_mask_creeps"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -30
-
-tt = E:register_t("decal_stage_35_mask_princess_bottom", "decal_stage_35_mask_redboy_bottom")
-tt.render.sprites[1].flip_x = true
 
 tt = E:register_t("decal_stage_35_escombros_holder_1", "decal")
 tt.render.sprites[1].name = "stage35_escombros_holder_1"
@@ -20776,13 +15038,6 @@ tt.tween.disabled = false
 tt = E:register_t("decal_stage_35_escombros_cannonball_holder", "decal_stage_35_escombros_cannonball_camino")
 tt.render.sprites[1].name = "destruccion_holder_escombros_oro"
 tt.render.sprites[1].offset = v(0, 20)
-
-tt = E:register_t("decal_stage_35_fume_entradas", "decal_scripted")
-tt.main_script.update = scripts.decal_stage_35_fume_entradas.update
-tt.render.sprites[1].prefix = "stage_35_fumeDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
 tt = E:register_t("decal_dlc_wukong_flaming_ground", "decal_scripted")
 E:add_comps(tt, "auras")
@@ -21105,27 +15360,6 @@ tt.dps.damage_every = 1e+99
 tt.main_script.insert = scripts.mod_stage31_water_mechanic_dps.insert
 tt.main_script.update = scripts.mod_stage31_water_mechanic_dps.update
 tt.allowed_templates = {"enemy_fire_phoenix", "enemy_fire_fox", "enemy_nine_tailed_fox", "enemy_burning_treant", "enemy_ash_spirit"}
-
-tt = E:register_t("fx_stage_31_fireball_a", "fx")
-tt.render.sprites[1].prefix = "stage_31_fireball_ADef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.kill_area_id = 1
-
-tt = E:register_t("fx_stage_31_fireball_b", "fx")
-tt.render.sprites[1].prefix = "stage_31_fireball_BDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.kill_area_id = 2
-
-tt = E:register_t("fx_stage_31_fireball_c", "fx")
-tt.render.sprites[1].prefix = "stage_31_fireball_CDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.kill_area_id = 3
 
 tt = E:register_t("fx_stage_32_dragon_mouth_fire_left", "fx")
 tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_01Def"
@@ -21845,16 +16079,6 @@ tt.editor.overrides = {
 	["render.sprites[1].hidden"] = false
 }
 
-tt = E:register_t("controller_stage33_envelops")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage33_envelops.update
-tt.envelop_t = "decal_stage33_envelop"
-tt.decoy_t = "decal_stage33_envelop_decoy"
-tt.envelop_spawn_pos_t = "decal_stage33_envelop_spawn_pos"
-tt.decoy_chance = 0.5
-tt.cooldown_min = 20
-tt.cooldown_max = 40
-
 tt = E:register_t("decal_stage33_envelop", "decal_scripted")
 E:add_comps(tt, "ui")
 tt.main_script.update = scripts.decal_stage33_envelop.update
@@ -21952,11 +16176,6 @@ tt = E:register_t("decal_stage33_envelop_decoy", "decal_stage33_envelop")
 tt.render.sprites[1].prefix = "envelops_decoy_1"
 tt.decoy = true
 tt.ui.click_rect = r(-18, -7, 36, 20)
-
-tt = E:register_t("stage_33_spawner")
-E:add_comps(tt, "main_script", "spawner")
-tt.main_script.update = scripts.stage_33_spawner.update
-tt.spawner.eternal = true
 
 tt = E:register_t("tower_holder_blocked_stage_33_house_1", "tower_holder_blocked")
 tt.pre_destroy_thunders = scripts.stage_33_house_holder.pre_destroy_thunders
@@ -22260,18 +16479,6 @@ tt.particle_system.particle_lifetime = {10, 23}
 tt.particle_system.spin = {0.5, 5}
 tt.particle_system.z = Z_OBJECTS_SKY
 
-tt = E:register_t("ps_stage_34_petalos_2", "ps_stage_34_petalos_1")
-tt.particle_system.name = "stage34_petalos_2"
-
-tt = E:register_t("tunnel_KR5_stage_34_ponds", "tunnel_KR5")
-tt.main_script.update = scripts.tunnel_KR5_stage_34_ponds.update
-tt.untargetable_distance = 5
-tt.tunnel.speed_factor = 8
-tt.tunnel.fx_use_unit_offset = false
-tt.tunnel.pick_fx = "fx_stage_34_fuentes_splash"
-tt.tunnel.place_fx = "fx_stage_34_fuentes_splash"
-tt.tunnel.place_fx_barro = "fx_stage_34_fuentes_splash_barro"
-
 tt = E:register_t("fx_enemy_fan_guard_melee_hit", "fx")
 tt.render.sprites[1].name = "fan_guard_hit_run"
 tt.render.sprites[1].sort_y_offset = -30
@@ -22539,24 +16746,6 @@ tt.tween.props[1].disabled = true
 tt.tween.disabled = false
 tt.tween.remove = false
 
-tt = RT("decal_stage_36_mask_path_main", "decal")
-tt.render.sprites[1].name = "stage_36_mask_path"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 0
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = RT("decal_stage_36_mask_1", "decal")
-tt.render.sprites[1].name = "stage_36_mask_1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 0
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-
-tt = RT("decal_stage_36_mask_portal", "decal")
-tt.render.sprites[1].prefix = "stage_1_portalDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = 25
-
 tt = RT("decal_stage_36_mask_islas", "decal_tween")
 E:add_comps(tt, "main_script")
 tt.main_script.insert = scripts.decal_stage_36_mask_islas.insert
@@ -22705,140 +16894,6 @@ end
 tt.temp_i = nil
 tt.tween.remove = false
 
-tt = RT("decal_stage_37_layer01", "decal")
-tt.render.sprites[1].name = "stage_37_layer01"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 0
-tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
-
-tt = RT("decal_stage_37_layer02", "decal")
-tt.render.sprites[1].name = "stage_37_layer02"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 0
-tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN + 1
-
-tt = RT("decal_stage_37_mask_01", "decal")
-tt.render.sprites[1].name = "stage_37_mask_01"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 263
-
-tt = RT("decal_stage_37_mask_02", "decal")
-tt.render.sprites[1].name = "stage_37_mask_02"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 145
-
-tt = RT("decal_stage_37_mask_03", "decal")
-tt.render.sprites[1].name = "stage_37_mask_03"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 192
-
-tt = RT("decal_stage_37_mask_04", "decal")
-tt.render.sprites[1].name = "stage_37_mask_04"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 86
-
-tt = RT("decal_stage_37_mask_05", "decal")
-tt.render.sprites[1].name = "stage_37_mask_05"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -239
-
-tt = RT("decal_stage_37_mask_islas", "decal_tween")
-E:add_comps(tt, "main_script")
-tt.main_script.insert = scripts.decal_stage_36_mask_islas.insert
-tt.islas_levels = {
-	TOP = Z_BACKGROUND_COVERS + 2,
-	MID = Z_BACKGROUND_BETWEEN - 1,
-	BACK = Z_BACKGROUND_BETWEEN - 2
-}
-tt.islas_settings = {
-	{
-		str = -6,
-		z = "TOP",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "TOP",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "TOP",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "TOP",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	}
-}
-tt.temp_i = 0
-
-for i = 1, #tt.islas_settings do
-	if not tt.islas_settings[i].skip then
-		tt.temp_i = tt.temp_i + 1
-
-		local str = tt.islas_settings[i].str
-		local freq = tt.islas_settings[i].freq
-		local z = tt.islas_levels[tt.islas_settings[i].z]
-
-		freq = freq + math.random(-20, 20)
-		tt.render.sprites[tt.temp_i] = E:clone_c("sprite")
-		tt.render.sprites[tt.temp_i].name = "stage_02_islas_flotantes00" .. (i < 10 and "0" or "") .. i
-		tt.render.sprites[tt.temp_i].animated = false
-		tt.render.sprites[tt.temp_i].z = z
-		tt.tween.props[tt.temp_i] = E:clone_c("tween_prop")
-		tt.tween.props[tt.temp_i].sprite_id = tt.temp_i
-		tt.tween.props[tt.temp_i].name = "offset"
-		tt.tween.props[tt.temp_i].interp = "sine"
-		tt.tween.props[tt.temp_i].keys = {{fts(0), v(0, 0)}, {fts(freq), v(0, -str)}, {fts(freq * 2), v(0, 0)}}
-		tt.tween.props[tt.temp_i].loop = true
-	end
-end
-
-tt.temp_i = nil
-tt.tween.remove = false
-
 tt = RT("decal_stage_37_tall_tower_mid", "decal_scripted")
 tt.sid_back = 1
 tt.sid_front = 2
@@ -22903,13 +16958,6 @@ tt = RT("fx_spyro_smoke", "fx")
 tt.render.sprites[1].name = "spyro_me_fx_humo_run"
 tt.render.sprites[1].offset = v(0, -10)
 
-tt = RT("decal_stage_36_easter_egg_ranger_verde", "decal_scripted")
-E:add_comps(tt, "ui", "editor")
-tt.main_script.update = scripts.decal_stage_36_easter_egg_ranger_verde.update
-tt.render.sprites[1].prefix = "ranger_verde_character"
-tt.render.sprites[1].name = "idle1"
-tt.ui.click_rect = r(-25, -10, 50, 50)
-
 tt = RT("decal_stage_37_easter_daenerys", "decal_scripted")
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = scripts.decal_stage_37_easter_daenerys.update
@@ -22918,14 +16966,6 @@ tt.render.sprites[1].name = "idle_1"
 tt.render.sprites[1].exo = true
 tt.ui.click_rect = r(-25, -10, 50, 50)
 
-tt = RT("decal_stage_37_easter_egg_how_to_train_dragon", "decal_scripted")
-E:add_comps(tt, "ui", "editor")
-tt.main_script.update = scripts.decal_stage_37_easter_egg_how_to_train_dragon.update
-tt.render.sprites[1].prefix = "train_dragon_characters"
-tt.render.sprites[1].name = "idle1"
-tt.ui.click_rect = r(-25, -20, 75, 40)
-tt.spawn_entity = "soldier_dragon_warden_dragon_raider_mounted"
-
 tt = RT("fx_ender_egg_explosion_normal", "fx")
 tt.render.sprites[1].name = "ender_egg_particle_drop_run"
 tt.render.sprites[1].offset = v(0, 5)
@@ -22933,26 +16973,6 @@ tt.render.sprites[1].offset = v(0, 5)
 tt = RT("fx_ender_egg_explosion_final", "fx")
 tt.render.sprites[1].name = "ender_egg_particle_explosion_run"
 tt.render.sprites[1].offset = v(0, 10)
-
-tt = RT("decal_stage_38_easter_egg_ender_egg", "decal_scripted")
-E:add_comps(tt, "ui", "editor")
-tt.main_script.insert = scripts.decal_stage_38_easter_ender_egg.insert
-tt.main_script.update = scripts.decal_stage_38_easter_ender_egg.update
-tt.render.sprites[1].prefix = "ender_egg_egg"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].name = "ender_egg_mask"
-tt.render.sprites[2].ignore_start = true
-tt.render.sprites[2].z = Z_OBJECTS_COVERS
-tt.render.sprites[2].pos = v(811, 427)
-tt.render.sprites[2].animated = false
-tt.fx_normal = "fx_ender_egg_explosion_normal"
-tt.fx_final = "fx_ender_egg_explosion_final"
-tt.ui.click_rect = r(-20, -10, 40, 45)
-tt.positions = {{v(621, 131), Z_OBJECTS}, {v(558, 680), Z_OBJECTS}, {v(1103, 603), Z_OBJECTS}, {v(305, 282), Z_OBJECTS}}
-tt.last_position = {v(805, 554), Z_OBJECTS_COVERS}
-tt.gold_fx = "fx_elemental_metal_holder_coins"
-tt.gold_amount = 150
 
 tt = RT("decal_stage_39_easter_egg_sheepy", "decal_scripted")
 E:add_comps(tt, "ui", "editor")
@@ -23043,145 +17063,6 @@ for k, v in pairs(tt.spr_cfgs) do
 	tt.render.sprites[i].sort_y_offset = v.sort_y_offset
 end
 
-tt = RT("decal_stage_38_mask_01", "decal")
-tt.render.sprites[1].name = "stage_38_mask_01"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 142
-
-tt = RT("decal_stage_38_mask_02", "decal")
-tt.render.sprites[1].name = "stage_38_mask_02"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = 106
-
-tt = RT("decal_stage_38_mask_03", "decal")
-tt.render.sprites[1].name = "stage_38_mask_03"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -20
-
-tt = RT("decal_stage_38_mask_04", "decal")
-tt.render.sprites[1].name = "stage_38_mask_04"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -100
-
-tt = RT("decal_stage_38_mask_07", "decal")
-tt.render.sprites[1].name = "stage_38_mask_07"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -200
-
-tt = RT("decal_stage_38_mask_08", "decal")
-tt.render.sprites[1].name = "stage_38_mask_08"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
-tt = RT("decal_stage_38_mask_09", "decal")
-tt.render.sprites[1].name = "stage_38_mask_09"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
-tt = RT("decal_stage_38_mask_10", "decal")
-tt.render.sprites[1].name = "stage_38_mask_10"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-
-tt = RT("decal_stage_38_mask_islas", "decal_tween")
-E:add_comps(tt, "main_script")
-tt.main_script.insert = scripts.decal_stage_36_mask_islas.insert
-tt.islas_levels = {
-	TOP = Z_BACKGROUND_COVERS + 2,
-	MID = Z_BACKGROUND_BETWEEN - 1,
-	BACK = Z_BACKGROUND_BETWEEN - 2
-}
-tt.islas_settings = {
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	},
-	{
-		str = -6,
-		z = "BACK",
-		freq = 120
-	}
-}
-tt.temp_i = 0
-
-for i = 1, #tt.islas_settings do
-	if not tt.islas_settings[i].skip then
-		tt.temp_i = tt.temp_i + 1
-
-		local str = tt.islas_settings[i].str
-		local freq = tt.islas_settings[i].freq
-		local z = tt.islas_levels[tt.islas_settings[i].z]
-
-		freq = freq + math.random(-20, 20)
-		tt.render.sprites[tt.temp_i] = E:clone_c("sprite")
-		tt.render.sprites[tt.temp_i].name = "stage_03_islas_flotantes_00" .. (i < 10 and "0" or "") .. i
-		tt.render.sprites[tt.temp_i].animated = false
-		tt.render.sprites[tt.temp_i].z = z
-		tt.tween.props[tt.temp_i] = E:clone_c("tween_prop")
-		tt.tween.props[tt.temp_i].sprite_id = tt.temp_i
-		tt.tween.props[tt.temp_i].name = "offset"
-		tt.tween.props[tt.temp_i].interp = "sine"
-		tt.tween.props[tt.temp_i].keys = {{fts(0), v(0, 0)}, {fts(freq), v(0, -str)}, {fts(freq * 2), v(0, 0)}}
-		tt.tween.props[tt.temp_i].loop = true
-	end
-end
-
-tt.temp_i = nil
-tt.tween.remove = false
-
-tt = RT("decal_stage_38_to_the_stars", "decal_scripted")
-E:add_comps(tt, "ui", "editor")
-tt.main_script.update = scripts.decal_stage_38_to_the_stars.update
-tt.render.sprites[1].prefix = "to_the_stars_guy"
-tt.render.sprites[1].name = "idle1"
-tt.ui.click_rect = r(-60, -20, 70, 70)
-
 tt = RT("decal_stage_38_to_the_stars_drakefx", "decal_scripted")
 tt.render.sprites[1].prefix = "to_the_stars_drakefx"
 tt.render.sprites[1].name = "run"
@@ -23200,57 +17081,6 @@ tt.render.sprites[1].prefix = "warden_warlock_stage3_globo_rider"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].sort_y_offset = -50
 
-tt = RT("decal_stage_39_floor_veins_controller")
-E:add_comps(tt, "pos", "main_script")
-tt.main_script.update = scripts.decal_stage_39_floor_veins_controller.update
-tt.activate_veins = scripts.decal_stage_39_floor_veins_controller.activate_veins_fn
-tt.veins_configs = {{
-	holder_id = "4"
-}, {
-	holder_id = "2"
-}, {
-	holder_id = "10"
-}, {
-	holder_id = "8"
-}, {
-	holder_id = "6"
-}}
-tt.veins_sequences = {{
-	veins = {{
-		vein = 4
-	}}
-}, {
-	veins = {{
-		vein = 3
-	}, {
-		vein = 5
-	}}
-}, {
-	kill_units = "END",
-	veins = {{
-		vein = 1
-	}, {
-		vein = 2
-	}}
-}, {
-	delay = 7,
-	veins_per_cast = 2,
-	veins = {{
-		vein = 1
-	}, {
-		delay = 10,
-		vein = 2
-	}, {
-		delay = 5,
-		vein = 3
-	}, {
-		delay = 15,
-		vein = 4
-	}, {
-		vein = 5
-	}}
-}}
-
 tt = RT("decal_stage_39_floor_vein", "decal_scripted")
 tt.main_script.update = scripts.decal_stage_39_floor_vein.update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -23268,61 +17098,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].sort_y_offset = -10
 tt.render.sprites[1].scale = vv(1.5)
 tt.render.sprites[1].offset = v(0, -30)
-
-tt = RT("decal_stage_40_storm_decos", "decal")
-tt.render.sprites[1].prefix = "stage_40_storm_01Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.render.sprites[1].scale = vv(4)
-tt.render.sprites[1].pos = v(512, 384)
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].flip_y = true
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[3].prefix = "stage_40_storm_02Def"
-tt.render.sprites[3].z = Z_OBJECTS_COVERS
-tt.render.sprites[3].scale = vv(1)
-tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
-tt.render.sprites[4].prefix = "stage_40_storm_04Def"
-tt.render.sprites[4].z = Z_BACKGROUND_COVERS
-tt.render.sprites[4].sort_y_offset = -1
-tt.render.sprites[5] = table.deepclone(tt.render.sprites[3])
-tt.render.sprites[5].pos = v(300, 330)
-tt.render.sprites[5].prefix = "stage_40_storm_04Def"
-tt.render.sprites[5].z = Z_BACKGROUND_COVERS + 2
-tt.render.sprites[5].sort_y_offset = 55
-tt.render.sprites[5].hidden = true
-tt.render.sprites[6] = table.deepclone(tt.render.sprites[3])
-tt.render.sprites[6].prefix = "stage_40_storm_05Def"
-tt.render.sprites[6].z = Z_BACKGROUND_COVERS - 1
-tt.render.sprites[7] = table.deepclone(tt.render.sprites[3])
-tt.render.sprites[7].pos = v(800, 340)
-tt.render.sprites[7].prefix = "stage_40_storm_04Def"
-tt.render.sprites[7].z = Z_BACKGROUND_COVERS
-tt.render.sprites[7].sort_y_offset = -1
-tt.render.sprites[8] = table.deepclone(tt.render.sprites[3])
-tt.render.sprites[8].pos = v(800, 370)
-tt.render.sprites[8].prefix = "stage_40_storm_04Def"
-tt.render.sprites[8].z = Z_BACKGROUND_COVERS - 1
-
-tt = RT("decal_stage_40_bottom_mask", "decal")
-tt.render.sprites[1].name = "stage_40_mask_1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 2
-
-tt = RT("decal_stage_40_top_mask", "decal")
-tt.render.sprites[1].name = "stage_40_mask_2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
-tt = RT("decal_stage_40_holders_mask", "decal")
-tt.render.sprites[1].name = "stage_40_holder_mask_1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 10
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].name = "stage_40_holder_mask_2"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].z = Z_BACKGROUND_COVERS + 10
 
 tt = RT("decal_stage_40_boss_fires_steps", "decal_scripted")
 tt.main_script.update = scripts.decal_stage_40_boss_fires_steps.update
@@ -23347,10 +17122,6 @@ tt.render.sprites[1].name = "rocas_in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
-
-tt = RT("decal_stage_40_open_middle_mask_iron", "decal_stage_40_open_middle_mask")
-E:add_comps(tt, "editor")
-tt.render.sprites[1].name = "rocas_idle"
 
 tt = RT("decal_stage_40_path_rock_1", "decal_tween")
 E:add_comps(tt, "main_script")
@@ -23921,152 +17692,6 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].scale = vv(1)
 tt.render.sprites[1].size_names = nil
 
-tt = RT("controller_stage_37_dragon_boss", "decal_scripted")
-E:add_comps(tt, "events", "editor", "tween")
-tt.boss_controler_balance = {
-	hp = 10400,
-	max_towers_blocked = 2,
-	spawn_node = 50,
-	magic_armor = 0,
-	speed = 27,
-	armor = 0,
-	basic_attack = {
-		only_foward = true,
-		min_range = 50,
-		max_range = 150,
-		cooldown = 1.3,
-		damage_max = 150,
-		hold_advance = true,
-		damage_min = 100,
-		damage_radius = 50,
-		only_foward_range = 50,
-		damage_type = DAMAGE_MAGICAL
-	},
-	block_towers_bossfight = {
-		repair_cost = 100,
-		first_cooldown = 10,
-		duration = 10,
-		nodes_limit = 30,
-		cooldown = 5,
-		max_towers_blocked = 1,
-		min_range = 100,
-		max_range = 250
-	},
-	geisers_bossfight = {
-		only_foward = true,
-		first_cooldown = 10,
-		duration = 6,
-		geisers_amount = 7,
-		cooldown = 13,
-		max_damage = 15,
-		min_damage = 10,
-		nodes_limit = 30,
-		damage_every = 0.3,
-		damage_type = DAMAGE_MAGICAL
-	},
-	feral_bite = {
-		cooldown = 5,
-		first_cooldown = 10,
-		nodes_limit = 30,
-		area_damage = {
-			min_damage = 300,
-			radius = 50,
-			max_damage = 500,
-			damage_type = DAMAGE_PHYSICAL
-		}
-	},
-	campaign = {
-		area_attack_damage_max = 30,
-		max_towers_blocked = 1,
-		area_attack_cooldown = 20,
-		area_attack_duration = 10,
-		area_attack_extension = 7,
-		pre_fight_area_attack = {
-			start = {
-				left = {
-					node = 90,
-					path = 2
-				},
-				right = {
-					node = 90,
-					path = 2
-				}
-			},
-			mid = {
-				left = {
-					node = 120,
-					path = 4
-				},
-				right = {
-					node = 87,
-					path = 4
-				}
-			},
-			final = {
-				left = {
-					node = 100,
-					path = 1
-				},
-				right = {
-					node = 65,
-					path = 1
-				}
-			}
-		},
-		area_attack_damage_type = DAMAGE_EXPLOSION
-	},
-	heroic = {
-		path = {1},
-		node = {50}
-	},
-	pre_fight_area_attack = {},
-	iron = {
-		max_towers_blocked = 2,
-		pre_fight_area_attack = {
-			path = {1},
-			node = {50}
-		}
-	}
-}
-tt.main_script.insert = scripts.controller_stage_37_dragon_boss.insert
-tt.main_script.update = scripts.controller_stage_37_dragon_boss.update
-tt.decal_bullet = {
-	[GAME_MODE_CAMPAIGN] = "bullet_boss_stage_37_geisers_waves_campaign",
-	[GAME_MODE_IRON] = "bullet_boss_stage_37_geisers_waves_campaign",
-	[GAME_MODE_HEROIC] = "bullet_boss_stage_37_geisers_waves_campaign"
-}
-tt.decal_bullets_offset = v(45, -20)
-tt.render.sprites[1].prefix = "boss_murglun_boss"
-tt.render.sprites[1].name = "torre_idle"
-tt.render.sprites[1].flip_x = true
-tt.render.sprites[1].z = Z_FLYING_HEROES
-tt.render.sprites[1].sort_y_offset = -50
-tt.render.sid_shadow = 2
-tt.render.sprites[tt.render.sid_shadow] = E:clone_c("sprite")
-tt.render.sprites[tt.render.sid_shadow].animated = false
-tt.render.sprites[tt.render.sid_shadow].name = "decal_flying_shadow_hard"
-tt.render.sprites[tt.render.sid_shadow].hidden = false
-tt.render.sprites[tt.render.sid_shadow].scale = vv(2)
-tt.render.sprites[tt.render.sid_shadow].z = Z_DECALS
-tt.render.sprites[tt.render.sid_shadow].offset = v(0, -80)
-tt.events.list[1].name = "block_tower"
-tt.events.list[1].on_event = scripts.controller_stage_37_dragon_boss.on_block_towers
-tt.events.list[2] = E:clone_c("event")
-tt.events.list[2].name = "go_to_tower"
-tt.events.list[2].on_event = scripts.controller_stage_37_dragon_boss.on_go_to_tower
-tt.flight_height = 70
-tt.towers_idle_position_offset = v(0, 85)
-tt.tween.remove = false
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].interp = "sine"
-tt.tween.props[1].keys = {{0, v(0, 0)}, {fts(3), v(0, tt.flight_height * 0.8)}, {fts(10), v(0, tt.flight_height)}}
-tt.tween.props[1].disabled = true
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].name = "offset"
-tt.tween.props[2].interp = "sine"
-tt.tween.props[2].keys = {{0, v(0, tt.flight_height)}, {fts(6), v(0, tt.flight_height)}, {fts(11), v(0, tt.flight_height + 50)}, {fts(19), v(0, tt.flight_height + 70)}, {fts(24), v(0, tt.flight_height + 70)}, {fts(26), v(0, 0)}}
-tt.tween.props[2].disabled = true
-
 tt = RT("controller_stage_38_cinematic")
 E:add_comps(tt, "editor", "main_script")
 tt.main_script.update = scripts.controller_stage_38_cinematic.update
@@ -24098,85 +17723,6 @@ tt.sound_events.start = "Stage39EggsGrow"
 tt.sound_events.start_args = {
 	delay = fts(25)
 }
-
-tt = RT("stage_36_paths_controller", "decal_scripted")
-E:add_comps(tt, "events", "editor")
-tt.main_script.update = scripts.stage_36_paths_controller.update
-tt.render.sprites[1].prefix = "mecanica_camino_1_stage_1Def"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "mecanica_camino_2_stage_1Def"
-tt.render.sprites[2].name = "in"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].hidden = true
-tt.render.sprites[2].z = Z_BACKGROUND_BETWEEN
-tt.events.list[1].name = "show_path"
-tt.events.list[1].on_event = scripts.stage_36_paths_controller.on_show_path
-tt.holders_list = {{{
-	ts = fts(92),
-	pos = v(727, 517)
-}, {
-	shake = true,
-	ts = fts(120)
-}}, {{
-	ts = fts(80),
-	pos = v(184, 573)
-}, {
-	ts = fts(88),
-	pos = v(64, 451)
-}, {
-	objects = true,
-	shake = true,
-	ts = fts(126)
-}}}
-tt.path_unlocks = {{
-	islands_required = {1},
-	paths = {3},
-	terrain_paths = {3},
-	extra_terrains = {{
-		radius = 64,
-		x = 730,
-		y = 510,
-		terrain_type = bor(TERRAIN_LAND, TERRAIN_NOWALK)
-	}}
-}, {
-	islands_required = {2},
-	paths = {2},
-	terrain_paths = {2},
-	extra_terrains = {}
-}, {
-	islands_required = {1, 2},
-	paths = {4},
-	terrain_paths = {},
-	extra_terrains = {}
-}}
-tt.hide_exits_rects = {{
-	pos = v(-REF_W, 384),
-	size = v(REF_W, REF_H)
-}}
-tt.cinematic = {
-	[2] = {
-		zoom = 1,
-		time = fts(67),
-		pos = v(200, 600)
-	}
-}
-tt.show_fx = "fx_stage_36_path_dust"
-tt.editor.overrides = {
-	["render.sprites[1].hidden"] = false,
-	["render.sprites[1].name"] = "idle"
-}
-
-tt = RT("controller_stage_36_portal_splash")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_36_portal_splash.update
-tt.mod = "mod_stage_36_portal_splash"
-tt.paths_nodes = {23, 23, 23, 23}
-tt.vis_flags = 0
-tt.vis_bans = 0
 
 tt = RT("stage_37_paths_controller", "decal_scripted")
 E:add_comps(tt, "events", "editor")
@@ -24230,42 +17776,6 @@ tt.editor.overrides = {
 	["render.sprites[1].name"] = "idle"
 }
 
-tt = RT("stage_38_paths_controller", "decal_scripted")
-E:add_comps(tt, "events", "editor")
-tt.main_script.update = scripts.stage_36_paths_controller.update
-tt.render.sprites[1].prefix = "mecanica_camino_stage_3Def"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
-tt.events.list[1].name = "show_path"
-tt.events.list[1].on_event = scripts.stage_36_paths_controller.on_show_path
-tt.skip_shake = true
-tt.holders_list = {{{
-	ts = fts(165),
-	pos = v(235, 210)
-}, {
-	shake = true,
-	ts = fts(165)
-}}}
-tt.path_unlocks = {{
-	islands_required = {1},
-	paths = {4},
-	terrain_paths = {4},
-	extra_terrains = {}
-}}
-tt.hide_exits_rects = {}
-tt.cinematic = {{
-	zoom = 1,
-	time = fts(67),
-	pos = v(200, 300)
-}}
-tt.show_fx = "fx_stage_36_path_dust"
-tt.editor.overrides = {
-	["render.sprites[1].hidden"] = false,
-	["render.sprites[1].name"] = "idle"
-}
-
 tt = RT("controller_stage_40_ballista", "decal_scripted")
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = scripts.controller_stage_40_ballista.update
@@ -24283,38 +17793,6 @@ tt.cooldown = 20
 tt.damage = {2000, 2500, 3000, 4000, 5000, 7000, 7000}
 tt.shoot_nmbr = 0
 tt.hand_decal_t = "dlc2_generic_tap_hand"
-
-tt = RT("controller_stage_40_boss_shadow_waves", "decal_scripted")
-E:add_comps(tt, "editor", "timed_attacks", "events")
-tt.main_script.update = scripts.controller_stage_40_boss_shadow_waves.update
-tt.render.sprites[1].prefix = "stage_40_bossDef"
-tt.render.sprites[1].name = "fly"
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].exo = true
-tt.attack_towers_index = 1
-tt.timed_attacks.list[tt.attack_towers_index] = E:clone_c("mod_attack")
-tt.timed_attacks.list[tt.attack_towers_index].decal_stun = "decal_boss_40_waves_stun_towers"
-tt.timed_attacks.list[tt.attack_towers_index].decal_warning = "decal_stage_40_boss_shadow_waves_warning"
-tt.timed_attacks.list[tt.attack_towers_index].max_range = 99999999
-tt.timed_attacks.list[tt.attack_towers_index].min_range = 0
-tt.timed_attacks.list[tt.attack_towers_index].holders_ids = {
-	RIGHT = {"1", "4", "5", "10", "12", "6", "7", "8", "9"},
-	LEFT = {"1", "4", "5", "10", "12", "6", "7", "8", "9"}
-}
-tt.attack_units_index = 2
-tt.timed_attacks.list[tt.attack_units_index] = E:clone_c("mod_attack")
-tt.timed_attacks.list[tt.attack_units_index].vis_flags = bor(F_MOD, F_STUN)
-tt.timed_attacks.list[tt.attack_units_index].decal_stun = "decal_boss_40_waves_stun_units"
-tt.timed_attacks.list[tt.attack_units_index].decal_warning = "decal_stage_40_boss_shadow_waves_warning"
-tt.timed_attacks.list[tt.attack_units_index].max_range = 99999999
-tt.timed_attacks.list[tt.attack_units_index].min_range = 0
-tt.timed_attacks.list[tt.attack_units_index].enabled = true
-tt.timed_attacks.list[tt.attack_units_index].stun_fliers = true
-tt.timed_attacks.list[tt.attack_units_index].mod_stun_wardens = "mod_boss_stage_40_stun_wardens"
-tt.events.list[1].name = "stun_stage"
-tt.events.list[1].on_event = scripts.controller_stage_40_boss_shadow_waves.on_stun_stage
 
 tt = RT("decal_boss_40_waves_stun_towers", "decal_scripted")
 tt.main_script.insert = scripts.decal_boss_40_waves_stun_towers.insert
@@ -24726,57 +18204,6 @@ tt.active = "active"
 tt.events = nil
 tt.render.sprites[1].sort_y_offset = -11
 tt.animation_spawner_idle_broken = "idle"
-
-tt = RT("stage_39_cocoon_center_2", "stage_39_cocoon_center_1")
-tt.render.sprites[1].prefix = "spawner_centro_2_frontDef"
-tt.render.sprites[1].sort_y_offset = -25
-tt.back = "decal_stage_39_cocoon_center_2_back"
-
-tt = RT("decal_stage_39_cocoon_center_2_back", "decal_scripted")
-tt.render.sprites[1].prefix = "spawner_centro_2_backDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = 5
-
-tt = RT("stage_39_cocoon_center_3", "stage_39_cocoon_center_1")
-tt.render.sprites[1].prefix = "spawner_centro_3Def"
-tt.render.sprites[1].sort_y_offset = 68
-
-tt = RT("stage_39_cocoon_center_4", "stage_39_cocoon_center_1")
-tt.render.sprites[1].prefix = "spawner_centro_4Def"
-tt.render.sprites[1].sort_y_offset = 134
-
-tt = RT("stage_39_cocoon_center_5", "stage_39_cocoon_center_1")
-tt.render.sprites[1].prefix = "spawner_centro_5_frontDef"
-tt.render.sprites[1].sort_y_offset = 16
-tt.back = "decal_stage_39_cocoon_center_5_back"
-
-tt = RT("decal_stage_39_cocoon_center_5_back", "decal_scripted")
-tt.render.sprites[1].prefix = "spawner_centro_5_backDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = 55
-
-tt = RT("decal_stage_39_cocoon_vena_1", "decal_scripted")
-tt.render.sprites[1].prefix = "stage_39_venas_spawner_01Def"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].exo = true
-
-tt = RT("decal_stage_39_cocoon_vena_2", "decal_stage_39_cocoon_vena_1")
-tt.render.sprites[1].prefix = "stage_39_venas_spawner_02Def"
-
-tt = RT("decal_stage_39_cocoon_vena_2_2", "decal_stage_39_cocoon_vena_1")
-tt.render.sprites[1].prefix = "stage_39_venas_spawner_02_02Def"
-
-tt = RT("decal_stage_39_cocoon_vena_3", "decal_stage_39_cocoon_vena_1")
-tt.render.sprites[1].prefix = "stage_39_venas_spawner_03Def"
-
-tt = RT("decal_stage_39_cocoon_vena_4", "decal_stage_39_cocoon_vena_1")
-tt.render.sprites[1].prefix = "stage_39_venas_spawner_04Def"
-
-tt = RT("decal_stage_39_cocoon_vena_5", "decal_stage_39_cocoon_vena_1")
-tt.render.sprites[1].prefix = "stage_39_venas_spawner_05Def"
 
 tt = RT("ps_bullet_enemy_basic_acid")
 E:add_comps(tt, "pos", "particle_system")
@@ -25568,9 +18995,6 @@ tt.render.sprites[1].animated = true
 tt.bullet.rotation_speed = math.pi / 2
 tt.bullet.hit_payload = "decal_dark_disciple_book"
 tt.bullet.mod = "mod_dark_disciple_tower_block"
-tt.bullet.damage_min = nil
-tt.bullet.damage_max = nil
-tt.bullet.damage_type = nil
 tt.bullet.hit_fx = nil
 tt.sound_events.travel = nil
 
@@ -25580,7 +19004,7 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
 tt.bullet.damage_min = 0
 tt.bullet.damage_max = 0
-tt.bullet.damage_type = F_NONE
+tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.hit_blood_fx = nil
 tt.bullet.align_with_trajectory = true
 tt.bullet.particles_name = "ps_bullet_trail_necromancer"
@@ -25711,3 +19135,4 @@ tt.events.list[2].name = "end_bubbles"
 tt.events.list[2].on_event = scripts.controller_swamp_bubbles.on_end
 
 return scripts
+

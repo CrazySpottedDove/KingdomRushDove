@@ -19,6 +19,8 @@ end
 end
 local level={}
 function level:init(store)
+local E=require("entity_db")
+local LU=require("level_utils")
 for i=1,2 do
 local bridge=E:create_entity("decal_stage_09_bridge"..i)
 bridge.pos.x,bridge.pos.y=512,384

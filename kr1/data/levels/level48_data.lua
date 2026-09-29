@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_templates={"level48_templates"},required_sounds={"music_stage48","FrontiersUndergroundAmbienceSounds","SaurianKingBoss","SaurianSniperSounds","DwarfSounds"},required_textures={"go_enemies_underground","go_stages_underground","go_stage48","go_stage48_bg"},show_comic_idx=18}
