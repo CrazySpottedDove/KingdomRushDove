@@ -5,8 +5,6 @@ local LU=require("level_utils")
 local V=require("lib.klua.vector")
 require("all.constants")
 local level={}
-level.required_sounds={"music_stage28","SpecialStargate"}
-level.required_textures={"go_enemies_desert","go_stages_desert","go_stage28","go_stage28_bg"}
 function level:init(store)
 store.level_terrain_style=TERRAIN_STYLE_DESERT
 self.locations=LU.load_locations(store,self)

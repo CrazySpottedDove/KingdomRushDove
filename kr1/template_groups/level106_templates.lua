@@ -9,7 +9,7 @@ local function fts(v)
 	return v / FPS
 end
 require("lib.klua.table")
-local AC = require("achievements")
+local ACH = require("achievements")
 local scripts = require("scripts")
 local v = V.v
 local r = V.r
@@ -266,10 +266,10 @@ decal_stage_06_elder_rune_update = function(this, store)
 			end
 			signal.emit("achievements_custom_event", "RUNEQUEST_6")
 			if c.achievement then
-				AC:got(c.achievement)
+				ACH:got(c.achievement)
 			end
 			if c.achievement_flag then
-				AC:flag_check(unpack(c.achievement_flag))
+				ACH:flag_check(unpack(c.achievement_flag))
 			end
 		end
 		coroutine.yield()
@@ -315,6 +315,128 @@ decal_boss_pig_pool_update = function(this, store)
 	end
 end
 local tt
+local decal_stage_06_minecraft_easter_egg
+decal_stage_06_minecraft_easter_egg = {}
+
+function decal_stage_06_minecraft_easter_egg.update(this, store)
+	local clicks = 0
+	local last_change = store.tick_ts
+	local change_anim_cd = math.random(this.change_anim_cd_min, this.change_anim_cd_max)
+
+	local function click_and_die()
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			clicks = clicks + 1
+
+			if clicks >= this.clicks_to_kill then
+				this.ui.can_click = false
+
+				S:queue(this.sound_death)
+
+				if this.controller then
+					this.controller.dead = this.controller.dead + 1
+				end
+
+				U.y_animation_play(this, this.animation_death, nil, store.tick_ts, 1)
+
+				this.tween.props[1].disabled = false
+				this.tween.props[1].ts = store.tick_ts
+
+				U.y_wait_unconditional(store, 3)
+
+				return true
+			else
+				S:queue(this.sound_click)
+
+				this.tween.props[2].disabled = false
+				this.tween.props[2].ts = store.tick_ts
+				this.tween.disabled = false
+			end
+		end
+
+		return false
+	end
+
+	while true do
+		if click_and_die() then
+			break
+		end
+
+		if change_anim_cd < store.tick_ts - last_change then
+			U.animation_start_default(this, this.animation_attack, nil, store.tick_ts, false)
+
+			while not U.animation_finished_default(this) do
+				if click_and_die() then
+					goto label_1066_0
+				end
+
+				coroutine.yield()
+			end
+
+			last_change = store.tick_ts
+			change_anim_cd = math.random(this.change_anim_cd_min, this.change_anim_cd_max)
+		else
+			U.animation_start_default(this, this.animation_idle, nil, store.tick_ts, false)
+		end
+
+		coroutine.yield()
+	end
+
+	::label_1066_0::
+
+	simulation:queue_remove_entity(this)
+end
+
+local controller_stage_06_pool_party = {}
+
+function controller_stage_06_pool_party.update(this, store)
+	local demon_in_pool_cd = math.random(4, 8)
+	local demon_in_pool_ts = store.tick_ts - demon_in_pool_cd
+	local demon_jumping_cd = math.random(10, 15)
+	local demon_jumping_ts = store.tick_ts - demon_jumping_cd
+	local volleyball_cd = math.random(8, 12)
+	local volleyball_ts = store.tick_ts - volleyball_cd
+
+	for _, e in pairs(store.entities) do
+		if e.template_name == this.entity_demon_in_pool then
+			this.demon_in_pool = e
+		end
+
+		if e.template_name == this.entity_demon_jumping then
+			this.demon_jumping = e
+		end
+
+		if e.template_name == this.entity_volleyball then
+			this.volleyball = e
+		end
+	end
+
+	while true do
+		if demon_in_pool_cd < store.tick_ts - demon_in_pool_ts then
+			U.animation_start_default(this.demon_in_pool, "demon", false, store.tick_ts, false)
+
+			demon_in_pool_ts = store.tick_ts
+			demon_in_pool_cd = math.random(4, 8)
+		end
+
+		if demon_jumping_cd < store.tick_ts - demon_jumping_ts then
+			U.animation_start_default(this.demon_jumping, "idle", false, store.tick_ts, false)
+
+			demon_jumping_ts = store.tick_ts
+			demon_jumping_cd = math.random(10, 15)
+		end
+
+		if volleyball_cd < store.tick_ts - volleyball_ts then
+			U.animation_start_default(this.volleyball, "idle", false, store.tick_ts, false)
+
+			volleyball_ts = store.tick_ts
+			volleyball_cd = math.random(8, 12)
+		end
+
+		coroutine.yield()
+	end
+end
+
 tt = E:register_t_hot("decal_pool_party5", "decal", true)
 E:add_comps(tt, "editor")
 for i = 1, 4 do
@@ -324,11 +446,13 @@ for i = 1, 4 do
 	tt.render.sprites[i].name = "idle"
 	tt.render.sprites[i].z = Z_DECALS
 end
+
 tt = E:register_t_hot("stage_06_hole_mask", "decal", true)
 tt.render.sprites[1].name = "stage_6_maskmadriguera"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = -75
+
 tt = E:register_t_hot("decal_boss_pig_pool", "decal_scripted", true)
 E:add_comps(tt, "taunts", "editor")
 tt.render.sprites[1].exo = true
@@ -341,25 +465,30 @@ tt.taunts.sets.from_pool = CC("taunt_set")
 tt.taunts.sets.from_pool.format = "LV06_BOSS_TAUNT_%02i"
 tt.taunts.sets.from_pool.end_idx = 6
 tt.sound_horn = "Stage06BossPigHorn"
+
 tt = E:register_t_hot("stage_06_hole", "decal", true)
 tt.render.sprites[1].prefix = "stage_6_madriguera"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_pool_party1", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage_6_poolparty_deco_water"
 tt.render.sprites[1].z = Z_DECALS - 1
+
 tt = E:register_t_hot("decal_pool_party2", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "stage_6_poolparty_deco"
 tt.render.sprites[1].z = Z_DECALS - 1
+
 tt = E:register_t_hot("stage_06_mask_door", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_6_maskascensor"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
 tt = E:register_t_hot("decal_pool_party4", "decal", true)
 E:add_comps(tt, "editor")
 for i = 1, 2 do
@@ -369,6 +498,7 @@ for i = 1, 2 do
 	tt.render.sprites[i].name = "idle"
 	tt.render.sprites[i].z = Z_DECALS
 end
+
 tt = E:register_t_hot("stage_06_door", "decal_scripted", true)
 E:add_comps(tt, "spawner", "sound_events", "editor", "ui", "tween")
 tt.main_script.update = decal_stage_06_door_update
@@ -429,6 +559,7 @@ tt.tween.props[3].sprite_id = 7
 tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.run_once = false
+
 tt = E:register_t_hot("controller_stage_06_tiki_bar", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = controller_stage_06_tiki_bar_insert
@@ -437,6 +568,7 @@ tt.entity_baby1 = "decal_tiki_bar2"
 tt.entity_baby2 = "decal_tiki_bar3"
 tt.entity_barman = "decal_tiki_bar5"
 tt.entity_old_man = "decal_tiki_bar4"
+
 tt = E:register_t_hot("decal_pool_party6", "decal", true)
 E:add_comps(tt, "editor")
 for i = 1, 2 do
@@ -446,47 +578,53 @@ for i = 1, 2 do
 	tt.render.sprites[i].name = "idle"
 	tt.render.sprites[i].z = Z_DECALS
 end
+
 tt = E:register_t_hot("decal_pool_party7", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].animated = TEXTURE_SIZE_ALIAS
 tt.render.sprites[1].name = "stage_6_poolparty_deco_baby"
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_stage_06_cult_leader", "decal_scripted", true)
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "mydrias_cinematic"
 tt.render.sprites[1].name = "idle"
+
 tt = E:register_t_hot("controller_stage_06_minecraft_easter_egg", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_06_minecraft_easter_egg_update
+
 tt = E:register_t_hot("decal_gold_mount", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage_06_parches_espada"
 tt.render.sprites[1].z = Z_DECALS - 1
+
 tt = E:register_t_hot("decal_pool_party3", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].name = "stage_6_poolparty_deco_sleeping_arborean"
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("stage_06_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage_6_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_stage_06_elder_rune_static", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_6_elder_rune_6_0125"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
+
 tt = E:register_t_hot("decal_pool_party8", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage_6_poolparty_deco_weapons"
 tt.render.sprites[1].z = Z_DECALS
-tt = E:register_t_hot("decal_tiki_bar6", "decal_tiki_bar1", true)
-tt.render.sprites[1].name = "stage_06_parches_tiki_top"
-tt.render.sprites[1].sort_y_offset = -1
+
 tt = E:register_t_hot("decal_stage_06_elder_rune", "decal_click_play", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage_6_elder_rune_6"
@@ -497,3 +635,44 @@ tt.click_play.click_animation = "activation"
 tt.click_play.play_once = true
 tt.click_play.clicked_sound = "Stage0506Rune"
 tt.ui.click_rect = r(-70, -10, 90, 60)
+
+tt = E:register_t_hot("decal_stage_06_minecraft_easter_egg", "decal_scripted", true)
+E:add_comps(tt, "ui", "tween")
+tt.render.sprites[1].prefix = "minecraft_easter_egg"
+tt.ui.click_rect = r(-30, -30, 60, 60)
+tt.main_script.update = decal_stage_06_minecraft_easter_egg.update
+tt.animation_idle = "idle"
+tt.animation_attack = "attack"
+tt.animation_death = "death"
+tt.sound_click = "Stage06EasterEggMinecraftClick"
+tt.sound_death = "Stage06EasterEggMinecraftDeath"
+tt.tween.props[1].keys = {{0, 255}, {2, 0}}
+tt.tween.props[1].disabled = true
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "scale"
+tt.tween.props[2].keys = {{0, v(1, 1)}, {fts(1), v(1.2, 1.2)}, {fts(3), v(1, 1)}}
+tt.tween.props[2].disabled = true
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.clicks_to_kill = 3
+tt.change_anim_cd_min = 4
+tt.change_anim_cd_max = 7
+
+tt = E:register_t_hot("decal_tiki_bar1", "decal", true)
+E:add_comps(tt, "editor")
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "stage_06_parches_tiki_bottom"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].sort_y_offset = 0
+
+tt = E:register_t_hot("decal_tiki_bar6", "decal_tiki_bar1", true)
+tt.render.sprites[1].name = "stage_06_parches_tiki_top"
+tt.render.sprites[1].sort_y_offset = -1
+
+tt = E:register_t_hot("controller_stage_06_pool_party", nil, true)
+E:add_comps(tt, "editor", "pos", "main_script")
+tt.main_script.update = controller_stage_06_pool_party.update
+tt.entity_demon_in_pool = "decal_pool_party2"
+tt.entity_demon_jumping = "decal_pool_party4"
+tt.entity_volleyball = "decal_pool_party5"
+

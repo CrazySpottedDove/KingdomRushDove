@@ -185,8 +185,9 @@ function PluginItemRow:initialize(opts, row_w)
 	self.opts = opts or {}
 	-- 三态 accent（on=绿 / off=红 / partial=黄）；nil 时退回 legacy 两态行为
 	self.accent_state = opts.accent_state
-	self._base_bg = {24, 18, 12, 210}
-	self._hover_bg = {40, 30, 18, 230}
+	self._base_bg = opts.bg_color or {24, 18, 12, 210}
+	self._hover_bg = opts.hover_bg_color or {40, 30, 18, 230}
+	self._default_hover_bg = self._hover_bg
 	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
 	self.propagate_on_down = true
 	self.propagate_on_up = true
@@ -430,7 +431,7 @@ function PluginItemRow:set_dimmed(dimmed)
 			self:_refresh_accent(self.toggle.value)
 		end
 	end
-	self._hover_bg = dimmed and {18, 14, 10, 200} or {40, 30, 18, 230}
+	self._hover_bg = dimmed and {18, 14, 10, 200} or self._default_hover_bg
 end
 
 function PluginItemRow:on_enter()

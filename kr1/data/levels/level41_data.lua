@@ -1,0 +1,1 @@
+return {required_templates={"background_sounds_underground"},level_mode_overrides={},required_sounds={"music_stage41","FrontiersUndergroundAmbienceSounds","FrontiersFinalBoss"},required_textures={"go_enemies_underground","go_stages_underground","go_stage41","go_stage41_bg"},show_comic_idx=13}

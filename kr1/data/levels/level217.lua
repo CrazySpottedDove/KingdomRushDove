@@ -11,9 +11,6 @@ local scripts=require("scripts")
 require("all.constants")
 require("lib.klua.table")
 local level={}
-local v=V.v
-local vv=V.vv
-local r=V.r
 local function fts(t)
 return t/30
 end

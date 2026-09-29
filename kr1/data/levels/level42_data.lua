@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_sounds={"music_stage42","PiratesSounds","PirateBigSounds","PirateTowerSounds","RisingTidesSounds","SpecialMermaid","SpecialVolcanoSounds"},required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage42","go_stage42_bg"},show_comic_idx=16}

@@ -195,11 +195,74 @@ trees_guardian_tree_update = function(this, store)
 	end
 end
 local tt
+local decal_stage_02_rune
+local ACH = require("achievements")
+decal_stage_02_rune = {}
+
+function decal_stage_02_rune.insert(this, store)
+	this.base_rock = E:create_entity(this.base_rock_entity)
+	this.base_rock.pos = this.pos
+
+	simulation:queue_insert_entity(this.base_rock)
+
+	return true
+end
+
+function decal_stage_02_rune.update(this, store)
+	local s = this.render.sprites[1]
+	local c = this.click_play
+	local clicks = 0
+	local already_played = false
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			clicks = clicks + 1
+		end
+
+		if c.play_once and already_played then
+		-- block empty
+		elseif clicks >= c.required_clicks then
+			if this.tween then
+				this.tween.disabled = false
+			elseif not c.idle_animation then
+				s.hidden = false
+			end
+
+			S:queue(c.clicked_sound)
+			U.y_animation_play(this, c.click_animation, nil, store.tick_ts, 1)
+
+			this.ui.clicked = nil
+			clicks = 0
+			already_played = true
+
+			if not c.idle_animation then
+				s.hidden = true
+			else
+				U.animation_start_default(this, c.idle_animation, nil, store.tick_ts, true)
+			end
+
+			signal.emit("achievements_custom_event", "RUNEQUEST_2")
+
+			if c.achievement then
+				ACH:got(c.achievement)
+			end
+
+			if c.achievement_flag then
+				ACH:flag_check(unpack(c.achievement_flag))
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
 tt = E:register_t_hot("decal_stage_02_elder_rune_static", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_2_rapido_elder_rune_2_0117"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
+
 tt = E:register_t_hot("decal_stage_02_lion_king", "decal_scripted", true)
 E:add_comps(tt, "ui")
 for i = 1, 4 do
@@ -220,10 +283,12 @@ tt.animation_click = "action"
 tt.min_cooldown_idle = 4
 tt.max_cooldown_idle = 7
 tt.entity_light = "decal_stage_02_lion_king_light"
+
 tt = E:register_t_hot("decal_stage_02_veznan", "decal_scripted", true)
 E:add_comps(tt, "editor", "editor_script")
 tt.render.sprites[1].prefix = "veznan_cinematic_veznan"
 tt.render.sprites[1].name = "idle"
+
 tt = E:register_t_hot("decal_stage_02_fishing_link", "decal_click_play", true)
 tt.render.sprites[1].prefix = "fishing_link"
 tt.render.sprites[1].loop = true
@@ -247,10 +312,13 @@ tt.animation_line_move = ""
 tt.gold_pos_offset = v(-10, 40)
 tt.gold_amount = 25
 tt.fish_animations = {"fishing_nothing", "fishing_nothing", "fishing_fish_or_boot", "fishing_nothing", "fishing_nothing"}
+
 tt = E:register_t_hot("decal_waterfall_splash", "decal_loop", true)
 tt.render.sprites[1].name = "stage_2_props_waterfall_splash"
+
 tt = E:register_t_hot("decal_waterfall", "decal_loop", true)
 tt.render.sprites[1].name = "stage_2_props_waterfall"
+
 tt = E:register_t_hot("trees_guardian_tree", "decal_scripted", true)
 E:add_comps(tt, "custom_attack", "cheats", "editor")
 tt.tree_disabled = false
@@ -316,3 +384,24 @@ end
 tt.sound_pre_cast = "Stage02GuardianTreePreCast"
 tt.sound_cast = "Stage02GuardianTreeCast"
 tt.sound_roots = "Stage02GuardianTreeRoots"
+
+tt = E:register_t_hot("decal_stage_02_elder_rune", "decal_click_play", true)
+E:add_comps(tt, "editor")
+tt.render.sprites[1].prefix = "stage_2_rapido_elder_rune_2_fx"
+tt.render.sprites[1].loop = true
+tt.main_script.insert = decal_stage_02_rune.insert
+tt.main_script.update = decal_stage_02_rune.update
+tt.click_play.idle_animation = "idle_2"
+tt.click_play.click_animation = "activation"
+tt.click_play.play_once = true
+tt.click_play.clicked_sound = "Stage0203Rune"
+tt.ui.can_click = true
+tt.ui.click_rect = r(0, -30, 60, 60)
+tt.base_rock_entity = "decal_stage_02_elder_rune_base"
+
+tt = E:register_t_hot("decal_stage_02_fishing_link_water_splash", "decal", true)
+E:add_comps(tt, "editor")
+tt.render.sprites[1].prefix = "water_splash"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = true
+

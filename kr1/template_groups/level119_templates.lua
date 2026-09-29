@@ -171,15 +171,105 @@ decal_stage_19_statue_update = function(this, store)
 	end
 end
 local tt
+local v = V.v
+local function fts(v)
+	return v / FPS
+end
+
+local controller_stage_19_mausoleum = {}
+
+function controller_stage_19_mausoleum.update(this, store)
+	while store.wave_group_number == 0 do
+		coroutine.yield()
+	end
+
+	local last_wave = 0
+	local start_wave_ts = store.tick_ts
+	local last_index_processed = 0
+
+	local function get_wave_data_index(current_wave_data)
+		for index, wave_data in ipairs(current_wave_data) do
+			if index > last_index_processed and wave_data.time_start + wave_data.duration > store.tick_ts - start_wave_ts then
+				return index
+			end
+		end
+
+		return nil
+	end
+
+	while true do
+		if store.waves_finished then
+			local found_navira = false
+
+			while not found_navira do
+				for k, v in pairs(store.entities) do
+					if v.template_name == "boss_navira" then
+						found_navira = true
+
+						break
+					end
+				end
+
+				U.y_wait_unconditional(store, 0.5)
+			end
+
+			this.render.sprites[2].hidden = false
+
+			U.y_animation_play(this, "on", nil, store.tick_ts, 1, 2)
+			U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
+
+			while true do
+				coroutine.yield()
+			end
+		end
+
+		local current_wave = store.wave_group_number
+		local current_wave_data = this.wave_config[store.level_mode][current_wave]
+
+		if current_wave ~= last_wave then
+			last_wave = current_wave
+			start_wave_ts = store.tick_ts
+			last_index_processed = 0
+		end
+
+		if current_wave_data and #current_wave_data > 0 then
+			local next_index_to_check = get_wave_data_index(current_wave_data)
+
+			if next_index_to_check and next_index_to_check ~= last_index_processed then
+				local wave_data = current_wave_data[next_index_to_check]
+
+				if store.tick_ts - start_wave_ts >= wave_data.time_start then
+					this.render.sprites[2].hidden = false
+
+					U.y_animation_play(this, "on", nil, store.tick_ts, 1, 2)
+					U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
+
+					local turn_off_delay = fts(45)
+
+					U.y_wait_unconditional(store, wave_data.duration + turn_off_delay)
+
+					last_index_processed = next_index_to_check
+
+					U.y_animation_play(this, "off", nil, store.tick_ts, 1, 2)
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
 tt = E:register_t_hot("decal_stage_19_bubbles_water", "decal", true)
 tt.render.sprites[1].prefix = "stage_19_bubbles_waterDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
 tt = E:register_t_hot("decal_stage_19_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage19_mask3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
 tt = E:register_t_hot("controller_stage_19_navira", "decal_scripted", true)
 E:add_comps(tt, "taunts", "editor")
 tt.main_script.update = controller_stage_19_navira_update
@@ -212,20 +302,24 @@ tt.sound_fireball_spawn = "Stage19NaviraFireballSpawn"
 tt.sound_fireball_cast = "Stage19NaviraFireballCast"
 tt.sound_hands_down = "Stage19NaviraHandsDown"
 tt.sound_hands_up = "Stage19NaviraHandsUp"
+
 tt = E:register_t_hot("decal_stage_19_smoke", "decal", true)
 tt.render.sprites[1].prefix = "stage_19_smokeDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+
 tt = E:register_t_hot("decal_stage_19_bubbles", "decal", true)
 tt.render.sprites[1].prefix = "stage_19_bubblesDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
 tt = E:register_t_hot("decal_stage_19_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage19_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
 tt = E:register_t_hot("decal_stage_19_statue", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(272, 110, 60, 60)
@@ -235,3 +329,88 @@ tt.render.sprites[1].name = "idle_campaign"
 tt.render.sprites[1].exo = true
 tt.sound_12 = "Stage19Statue12"
 tt.sound_3 = "Stage19Statue3"
+
+tt = E:register_t_hot("decal_stage_19_mask_1", "decal", true)
+tt.render.sprites[1].name = "stage19_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 194
+
+tt = E:register_t_hot("decal_stage_19_statue_hands", "decal", true)
+E:add_comps(tt, "editor")
+tt.render.sprites[1].prefix = "navira_hands"
+tt.render.sprites[1].name = "hands_idle"
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+tt.render.sprites[1].draw_order = -1
+
+tt = E:register_t_hot("controller_stage_19_mausoleum", "decal_scripted", true)
+E:add_comps(tt, "editor")
+tt.main_script.update = controller_stage_19_mausoleum.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "spawner_mausoleumDef"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].flip_x = true
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "spawner_mausoleum_lightDef"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].flip_x = true
+tt.render.sprites[2].offset = v(5, 0)
+tt.render.sprites[2].hidden = true
+tt.render.sprites[2].sort_y_offset = -10
+tt.wave_config = {{
+	{},
+	{},
+	{},
+	{{
+		duration = 60,
+		time_start = 2
+	}},
+	{},
+	{{
+		duration = 42,
+		time_start = 2
+	}},
+	{},
+	{{
+		duration = 50,
+		time_start = 2
+	}},
+	{{
+		duration = 55,
+		time_start = 2
+	}},
+	{},
+	{{
+		duration = 30,
+		time_start = 2
+	}},
+	{},
+	{},
+	{{
+		duration = 68,
+		time_start = 2
+	}},
+	{{
+		duration = 75,
+		time_start = 2
+	}}
+}, {{}, {{
+	duration = 55,
+	time_start = 2
+}}, {{
+	duration = 27,
+	time_start = 2
+}}, {{
+	duration = 56,
+	time_start = 2
+}}, {}, {{
+	duration = 75,
+	time_start = 2
+}}}, {{{
+	duration = 325,
+	time_start = 2
+}}}}
+

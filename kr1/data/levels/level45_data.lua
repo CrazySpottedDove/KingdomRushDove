@@ -1,0 +1,1 @@
+return {required_templates={"decal_moon"},level_mode_overrides={},required_sounds={"music_stage45","HalloweenSounds","HWFrankensteinTower"},required_textures={"go_enemies_halloween","go_enemies_blackburn","go_stages_halloween","go_stage45","go_stage45_bg"},show_comic_idx=17}

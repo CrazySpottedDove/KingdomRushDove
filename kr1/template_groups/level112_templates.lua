@@ -91,8 +91,7 @@ tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS + 1
 tt.ui.click_rect = r(-365, -240, 95, 55)
-tt = E:register_t_hot("decal_stage_12_mask_2", "decal_stage_12_mask_1", true)
-tt.render.sprites[1].name = "T3_12_mask_02"
+
 tt = E:register_t_hot("decal_stage_12_sheepy_easteregg", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "stage_12_sheepyDef"
@@ -101,6 +100,7 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.main_script.update = decal_stage_12_sheepy_easteregg_update
 tt.ui.click_rect = r(410, 230, 40, 40)
+
 tt = E:register_t_hot("decal_stage_12_windmill", "decal_click_pause", true)
 E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "t3_windmillDef"
@@ -116,7 +116,18 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].interp = "sine"
 tt.tween.props[1].keys = {{fts(0), v(0, 0)}, {fts(tt.tween_frecuency), v(0, tt.tween_amplitude)}, {fts(tt.tween_frecuency * 2), v(0, 0)}}
 tt.main_script.update = decal_stage_12_windmill_update
+
+tt = E:register_t_hot("decal_stage_12_mask_1", "decal", true)
+tt.render.sprites[1].name = "T3_12_mask_01"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS + 1
+
+tt = E:register_t_hot("decal_stage_12_mask_2", "decal_stage_12_mask_1", true)
+tt.render.sprites[1].name = "T3_12_mask_02"
+
 tt = E:register_t_hot("decal_stage_12_mask_3", "decal_stage_12_mask_1", true)
 tt.render.sprites[1].name = "T3_12_mask_03"
+
 tt = E:register_t_hot("decal_stage_12_mask_4", "decal_stage_12_mask_1", true)
 tt.render.sprites[1].name = "T3_12_mask_04"
+

@@ -9,7 +9,7 @@ local function fts(v)
 end
 require("lib.klua.table")
 local SU = require("script_utils")
-local AC = require("achievements")
+local ACH = require("achievements")
 local scripts = require("scripts")
 local v = V.v
 local r = V.r
@@ -44,10 +44,10 @@ decal_stage_05_elder_rune_update = function(this, store)
 			end
 			signal.emit("achievements_custom_event", "RUNEQUEST_5")
 			if c.achievement then
-				AC:got(c.achievement)
+				ACH:got(c.achievement)
 			end
 			if c.achievement_flag then
-				AC:flag_check(unpack(c.achievement_flag))
+				ACH:flag_check(unpack(c.achievement_flag))
 			end
 		end
 		coroutine.yield()
@@ -110,6 +110,7 @@ tt.main_script.update = decal_stage_05_bear_woodcutter_update
 tt.entity = "enemy_bear_woodcutter"
 tt.spawn_pos = v(242, 459)
 tt.waypoint_pos = v(220, 459)
+
 tt = E:register_t_hot("decal_stage_05_elder_rune", "decal_click_play", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage_5_elder_rune_5"
@@ -122,16 +123,32 @@ tt.click_play.play_once = true
 tt.click_play.clicked_sound = "Stage0506Rune"
 tt.ui.can_click = true
 tt.ui.click_rect = r(-50, -10, 50, 50)
+
 tt = E:register_t_hot("decal_stage_05_elder_rune_static", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_5_elder_rune_5_0125"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
+
 tt = E:register_t_hot("stage_05_bridge_mask_right", "decal", true)
 tt.render.sprites[1].name = "stage_5_MaskBridge_right"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
 tt = E:register_t_hot("stage_05_bridge_mask_left", "decal", true)
 tt.render.sprites[1].name = "stage_5_MaskBridge_left"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
+tt = E:register_t_hot("decal_stage_05_elder_rune_base", "decal", true)
+E:add_comps(tt, "editor")
+tt.render.sprites[1].name = "stage_5_elder_rune_5_base"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].draw_order = 0
+
+tt = E:register_t_hot("stage_05_trees_mask", "decal", true)
+E:add_comps(tt, "editor")
+tt.render.sprites[1].name = "stage_5_MaskTree"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+

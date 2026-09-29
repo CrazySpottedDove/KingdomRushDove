@@ -44781,31 +44781,6 @@ return {
 		prefix = "boss_veznan_infernalPortal",
 		to = 11
 	},
-	veznan_wrath_explosion_fx_idle = {
-		from = 1,
-		prefix = "veznan_wrath_explosion_fx",
-		to = 21
-	},
-	veznan_wrath_instakill_effect_fx_idle = {
-		from = 1,
-		prefix = "veznan_wrath_instakill_effect_fx",
-		to = 18
-	},
-	veznan_wrath_instakill_fx = {
-		from = 1,
-		prefix = "veznan_wrath_instakill_fx",
-		to = 52
-	},
-	veznan_wrath_instakill_fx_idle = {
-		from = 1,
-		prefix = "veznan_wrath_instakill_fx",
-		to = 52
-	},
-	veznan_wrath_instakill_voladores_fx_idle = {
-		from = 1,
-		prefix = "veznan_wrath_instakill_voladores_fx",
-		to = 52
-	},
 	vfx_dragon_crack_fire_loop = {
 		from = 1,
 		prefix = "vfx_dragon_crack_fire",

@@ -176,24 +176,29 @@ tt.render.sprites[1].sort_y_offset = -250
 tt.main_script.update = decal_stage_18_streetlight_update
 tt.ui.click_rect = r(-60, -210, 30, 40)
 tt.sound_break = "Stage18LampBreak"
+
 tt = E:register_t_hot("decal_stage_18_streetlight_4", "decal_stage_18_streetlight_1", true)
 tt.render.sprites[1].prefix = "stage_18_light_4Def"
 tt.render.sprites[1].sort_y_offset = 33
 tt.ui.click_rect = r(520, 73, 30, 40)
+
 tt = E:register_t_hot("decal_stage_18_bubbles_water", "decal", true)
 tt.render.sprites[1].prefix = "stage_18_bubbles_waterDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_stage_18_bubbles", "decal", true)
 tt.render.sprites[1].prefix = "stage_18_bubblesDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_stage_18_streetlight_3", "decal_stage_18_streetlight_1", true)
 tt.render.sprites[1].prefix = "stage_18_light_3Def"
 tt.render.sprites[1].sort_y_offset = 223
 tt.ui.click_rect = r(535, 263, 30, 40)
+
 tt = E:register_t_hot("controller_stage_18_eridan", "decal_scripted", true)
 E:add_comps(tt, "bullet_attack", "custom_attack", "editor", "taunts")
 tt.render.sprites[1].prefix = "eridan_s18_eridan"
@@ -232,6 +237,7 @@ tt.taunts.sets.preparation.end_idx = 4
 tt.taunts.sets.fight = CC("taunt_set")
 tt.taunts.sets.fight.format = "LV18_ERIDAN_FIGHT_TAUNT_%02i"
 tt.taunts.sets.fight.end_idx = 8
+
 tt = E:register_t_hot("decal_stage_18_cuckoo", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(-30, -30, 60, 60)
@@ -245,10 +251,12 @@ tt.reset_touches = false
 tt.duration = 0.6
 tt.sound_in = "Stage18CuckooIn"
 tt.sound_out = "Stage18CuckooOut"
+
 tt = E:register_t_hot("decal_stage_18_streetlight_2", "decal_stage_18_streetlight_1", true)
 tt.render.sprites[1].prefix = "stage_18_light_2Def"
 tt.render.sprites[1].sort_y_offset = 250
 tt.ui.click_rect = r(135, 290, 30, 40)
+
 tt = E:register_t_hot("decal_stage_18_tree_1", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui")
 tt.render.sprites[1].prefix = "stage_18_tree_1Def"
@@ -257,6 +265,13 @@ tt.render.sprites[1].exo = true
 tt.main_script.update = scripts.decal_stage_17_tree.update
 tt.ui.click_rect = r(-335, -200, 80, 80)
 tt.sound_tap = "Terrain4HowlingTree"
+
 tt = E:register_t_hot("decal_stage_18_tree_2", "decal_stage_18_tree_1", true)
 tt.render.sprites[1].prefix = "stage_18_tree_2Def"
 tt.ui.click_rect = r(495, -170, 80, 80)
+
+tt = E:register_t_hot("decal_stage_18_mask_1", "decal", true)
+tt.render.sprites[1].name = "stage18_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+

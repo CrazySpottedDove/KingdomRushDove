@@ -33,6 +33,10 @@ local ROW_H = 156
 local LIST_TOP_Y = 208
 local STORE_PAGE_SIZE = 20
 
+-- 本地版本高于远端（存在未上传更新）时的开发者提示行背景色
+local LOCAL_AHEAD_BG = {74, 36, 22, 225}
+local LOCAL_AHEAD_HOVER_BG = {98, 50, 30, 235}
+
 local STORE_BACKUP_SITES = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
 
 local CATEGORY_OPTIONS = {{
@@ -1538,6 +1542,8 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 
 	self.remote_by_entry = self._remote_entry_cache
 	self._remote_lookup_done = true
+	-- 查询到远端版本后重排：含未上传更新的插件置顶
+	self:_sort_local_plugins()
 	self:_render_current_list()
 	if found_count >= total_targets then
 		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_REMOTE_QUERY_DONE"), found_count, total_targets), 100)
@@ -1572,8 +1578,25 @@ function PluginManagerView:_reload_local_plugins()
 	self:_sort_local_plugins()
 end
 
+--- 本地版本是否高于远端（作者本地改动尚未上传到商店）
+---@param plugin_data table
+---@return boolean
+function PluginManagerView:_is_local_ahead(plugin_data)
+	local remote = self.remote_by_entry and self.remote_by_entry[plugin_data.config.entry]
+	if not remote or not remote.version or not plugin_data.config.version then
+		return false
+	end
+	return version_lt(remote.version, plugin_data.config.version)
+end
+
 function PluginManagerView:_sort_local_plugins()
 	table.sort(self.local_plugins, function(a, b)
+		-- 含未上传更新的插件排最前，方便开发者一眼看到
+		local ahead_a = self:_is_local_ahead(a)
+		local ahead_b = self:_is_local_ahead(b)
+		if ahead_a ~= ahead_b then
+			return ahead_a
+		end
 		local t_a = a.config.last_used_at or 0
 		local t_b = b.config.last_used_at or 0
 		if t_a ~= t_b then
@@ -2468,9 +2491,13 @@ function PluginManagerView:_render_local_list()
 		if (category_option.value == "all" or category_option.value == plugin_category) and (not self._my_plugins_only or cfg.by == self._developer_config.account) then
 			local remote = self.remote_by_entry[plugin_data.config.entry]
 			local status = ""
+			local local_ahead = self:_is_local_ahead(plugin_data)
 
 			if remote and version_lt(cfg.version, remote.version) then
 				status = string.format(_("PLUGIN_MGR_STATUS_UPDATE_AVAILABLE"), utf8_util.sanitize(cfg.version), utf8_util.sanitize(remote.version))
+			elseif local_ahead then
+				-- 本地版本高于远端：作者本地的改动尚未上传到商店
+				status = _("PLUGIN_MGR_STATUS_LOCAL_AHEAD")
 			elseif remote then
 				status = _("PLUGIN_MGR_STATUS_UP_TO_DATE")
 			else
@@ -2541,6 +2568,9 @@ function PluginManagerView:_render_local_list()
 				end,
 				manager = self, -- 供配置编辑器延迟写盘与记忆待应用修改
 				actions = global_disabled and {} or actions,
+				-- 含未上传更新：用高亮背景提示开发者
+				bg_color = local_ahead and LOCAL_AHEAD_BG or nil,
+				hover_bg_color = local_ahead and LOCAL_AHEAD_HOVER_BG or nil,
 				_sw = self._sw,
 				_sh = self._sh,
 				_keyboard = self._keyboard,
@@ -3112,6 +3142,15 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	local entry = plugin_data.config.entry
 	local version = plugin_data.config.version
 
+	-- 上传成功后远端内容即与本地一致：同步刷新远端缓存版本，
+	-- 否则本行会继续命中「含未上传更新」的高亮与置顶。
+	local function mark_remote_synced()
+		local cached = self._remote_entry_cache[entry]
+		if cached then
+			cached.version = version
+		end
+	end
+
 	local cover_data = nil
 	local cover_ext = nil
 	if upload_cover then
@@ -3146,6 +3185,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 		if #changed == 0 and #deleted == 0 then
 			print(_("PLUGIN_MGR_LOG_NO_CHANGES"))
+			mark_remote_synced()
 			self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_NO_CHANGES"), entry), plugin_data.config.entry)
 			return true, nil
 		end
@@ -3155,6 +3195,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 				if cover_data and cover_ext then
 					self:_upload_cover(entry, cover_data, cover_ext)
 				end
+				mark_remote_synced()
 				self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
 				return true, nil
 			end
@@ -3208,6 +3249,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		self:_upload_cover(entry, cover_data, cover_ext)
 	end
 
+	mark_remote_synced()
 	self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
 	return true, nil
 end

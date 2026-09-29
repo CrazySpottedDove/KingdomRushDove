@@ -48,17 +48,65 @@ decal_stage_09_sheepy_easteregg_update = function(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
+local decal_stage_09_bridge = {}
+
+function decal_stage_09_bridge.insert(this, store)
+	local mask = E:create_entity(this.mask_entity)
+
+	mask.pos.x, mask.pos.y = this.pos.x, this.pos.y
+
+	simulation:queue_insert_entity(mask)
+
+	this.mask = mask
+
+	return true
+end
+
+function decal_stage_09_bridge.update(this, store)
+	if this.start_in_loop then
+		U.animation_start_default(this.mask, this.mask_loop_animation, nil, store.tick_ts, true)
+	else
+		this.render.sprites[1].hidden = true
+		this.mask.render.sprites[1].hidden = true
+
+		if this.in_delay then
+			U.y_wait_unconditional(store, this.in_delay)
+		end
+
+		this.render.sprites[1].hidden = false
+		this.render.sprites[1].ts = store.tick_ts
+
+		if this.mask_before then
+			this.mask.render.sprites[1].hidden = false
+			this.mask.render.sprites[1].ts = store.tick_ts
+
+			U.animation_start_default(this.mask, this.mask_in_animation, nil, store.tick_ts)
+		end
+
+		U.y_animation_play(this, this.animation_in, nil, store.tick_ts)
+
+		if not this.mask_before then
+			this.mask.render.sprites[1].hidden = false
+			this.mask.render.sprites[1].ts = store.tick_ts
+		else
+			U.animation_start_default(this.mask, this.mask_loop_animation, nil, store.tick_ts, true)
+		end
+	end
+
+	while true do
+		U.y_animation_play(this, this.animation_loop, nil, store.tick_ts)
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
 tt = E:register_t_hot("decal_stage_09_fire", "decal", true)
 tt.render.sprites[1].prefix = "stage_9_fireDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS + 1
-tt = E:register_t_hot("decal_stage_09_bridge3", "decal_stage_09_bridge", true)
-tt.render.sprites[1].prefix = "stage_9_bridge3Def"
-tt.mask_entity = "decal_stage_09_bridge3_mask"
-tt.mask_before = true
-tt.mask_in_animation = "in"
-tt.mask_loop_animation = "loop"
+
 tt = E:register_t_hot("decal_stage_09_sheepy_easteregg", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.render.sprites[1].prefix = "stage_9_sheepyDef"
@@ -67,6 +115,7 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS - 1
 tt.main_script.update = decal_stage_09_sheepy_easteregg_update
 tt.ui.click_rect = r(-20, -10, 40, 40)
+
 tt = E:register_t_hot("controller_stage_09_spawn_nightmares", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = scripts.controller_stage_09_spawn_nightmares.insert
@@ -136,7 +185,37 @@ tt.pos_aura = {v(661 + tt.portal_offset.x, 280 + tt.portal_offset.y), v(659 + tt
 tt.path_portal_off_delay = 10
 tt.sound_candles_in = "Stage09NightmarePortalCandles"
 tt.sound_portal_in = "Stage09NightmarePortalEye"
+
 tt = E:register_t_hot("decal_stage_09_mask", "decal", true)
 tt.render.sprites[1].name = "T2_Stage_9_chains_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
+tt = E:register_t_hot("decal_stage_09_bridge", "decal_scripted", true)
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].loop = false
+tt.animation_in = "in"
+tt.animation_loop = "loop"
+tt.mask_before = false
+tt.main_script.insert = decal_stage_09_bridge.insert
+tt.main_script.update = decal_stage_09_bridge.update
+
+tt = E:register_t_hot("decal_stage_09_bridge1", "decal_stage_09_bridge", true)
+tt.render.sprites[1].prefix = "stage_9_bridge1Def"
+tt.mask_entity = "decal_stage_09_bridge1_mask"
+tt.in_delay = 1
+
+tt = E:register_t_hot("decal_stage_09_bridge2", "decal_stage_09_bridge", true)
+tt.render.sprites[1].prefix = "stage_9_bridge2Def"
+tt.mask_entity = "decal_stage_09_bridge2_mask"
+tt.in_delay = 2.5
+
+tt = E:register_t_hot("decal_stage_09_bridge3", "decal_stage_09_bridge", true)
+tt.render.sprites[1].prefix = "stage_9_bridge3Def"
+tt.mask_entity = "decal_stage_09_bridge3_mask"
+tt.mask_before = true
+tt.mask_in_animation = "in"
+tt.mask_loop_animation = "loop"
+

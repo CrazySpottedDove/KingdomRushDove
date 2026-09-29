@@ -560,14 +560,17 @@ end
 local tt
 tt = E:register_t_hot("controller_stage_10_obelisk_wave_fixed", "controller_stage_10_obelisk", true)
 tt.main_script.update = controller_stage_10_obelisk_wave_fixed_update
+
 tt = E:register_t_hot("decal_stage_10_ymca_ground_decos", "decal", true)
 tt.render.sprites[1].name = "ymca_spawn_fx_layer_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_stage_10_obelisk_back", "decal", true)
 tt.render.sprites[1].name = "stage10_obelisk_base_back"
 tt.render.sprites[1].z = Z_DECALS - 1
 tt.render.sprites[1].animated = false
+
 tt = E:register_t_hot("controller_stage_10_obelisk_iron", "controller_stage_10_obelisk", true)
 tt.main_script.update = controller_stage_10_obelisk_iron_update
 tt.golem_holder_pos = {v(74, 524), v(310, 440), v(60, 308), v(700, 400), v(328, 204)}
@@ -575,10 +578,12 @@ tt.golem_walk_pos = {v(26, -34), v(50, 50), v(30, 0), v(0, -70), v(54, 60)}
 tt.golem_activate_holder = {"2", "4", "1", "11", "6"}
 tt.golem_selected_paths = {4, 3, 2, 3, 1}
 tt.prepare_delay = 3
+
 tt = E:register_t_hot("decal_stage_10_obelisk", "decal", true)
 tt.render.sprites[1].name = "stage10_obelisk_base"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false
+
 tt = E:register_t_hot("controller_stage_10_ymca", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = controller_stage_10_ymca_insert
@@ -597,8 +602,15 @@ tt.soldier_line_pos_offset = {v(25, -20), v(20, -10), v(-15, 5), v(-25, -10)}
 local base = v(925, 445)
 tt.soldier_path_pos = {v(base.x - 20, base.y + 20), v(base.x + 13, base.y + 33), v(base.x + 25, base.y), v(base.x - 10, base.y - 10)}
 tt.soldier_spawn_delay = {1.5, 1.8, 1.7, 1.5}
+
 tt = E:register_t_hot("decal_stage_10_fire", "decal", true)
 tt.render.sprites[1].prefix = "stage_10_fireDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t_hot("decal_stage_10_mask", "decal", true)
+tt.render.sprites[1].name = "T2_Stage_10_mask"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+

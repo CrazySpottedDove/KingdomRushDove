@@ -126,8 +126,10 @@ function LU.load_level(store, name)
 end
 
 --- 读取单个关卡文件，返回数据
-function LU.eval_file(filename)
-	local f, err = love.filesystem.loadWithPreference(filename, {EDITOR_PATH, KR_PATH_GAME})
+---@param filename string
+---@param prefixes table|nil 搜索前缀，默认优先编辑器目录（game_editor）
+function LU.eval_file(filename, prefixes)
+	local f, err = love.filesystem.loadWithPreference(filename, prefixes or {EDITOR_PATH, KR_PATH_GAME})
 
 	if not f then
 		return nil, "File does not exist"

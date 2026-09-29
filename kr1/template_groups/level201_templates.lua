@@ -15,7 +15,7 @@ local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
 local function RT(name, ref)
-	return E:register_t(name, ref)
+	return E:register_t_hot(name, ref, true)
 end
 local signal = require("lib.hump.signal")
 local function fts(t)

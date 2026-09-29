@@ -1,0 +1,1 @@
+return {required_templates={"decal_tunnel_light","background_sounds_underground"},level_mode_overrides={},required_sounds={"music_stage38","FrontiersUndergroundAmbienceSounds"},required_textures={"go_enemies_underground","go_stages_underground","go_stage38","go_stage38_bg"},show_comic_idx=12}

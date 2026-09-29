@@ -8,7 +8,7 @@ local function fts(v)
 	return v / FPS
 end
 require("lib.klua.table")
-local AC = require("achievements")
+local ACH = require("achievements")
 local scripts = require("scripts")
 local v = V.v
 local r = V.r
@@ -98,10 +98,10 @@ decal_stage_03_elder_rune_update = function(this, store)
 			end
 			signal.emit("achievements_custom_event", "RUNEQUEST_3")
 			if c.achievement then
-				AC:got(c.achievement)
+				ACH:got(c.achievement)
 			end
 			if c.achievement_flag then
-				AC:flag_check(unpack(c.achievement_flag))
+				ACH:flag_check(unpack(c.achievement_flag))
 			end
 		end
 		coroutine.yield()
@@ -297,6 +297,7 @@ tt.cheats.buttons[1].fn = function(button, store, e)
 end
 tt.sound_ready = "Stage03HeartOfTheForestReady"
 tt.sound_cast = "Stage03HeartOfTheForestCast"
+
 tt = E:register_t_hot("decal_stage_03_butterfly_2", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "stage_3_butterfly_2Def"
 tt.render.sprites[1].name = "loop"
@@ -306,9 +307,11 @@ tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "loop"
 tt.delayed_play.min_delay = 15
 tt.delayed_play.max_delay = 35
+
 tt = E:register_t_hot("controller_stage_03_arborean_babies", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_03_arborean_babies_update
+
 tt = E:register_t_hot("decal_stage_03_elder_rune", "decal_click_play", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage_3_decos_REF_elder_rune_3"
@@ -321,11 +324,13 @@ tt.click_play.play_once = true
 tt.click_play.clicked_sound = "Stage0203Rune"
 tt.ui.can_click = true
 tt.ui.click_rect = r(-30, -30, 60, 60)
+
 tt = E:register_t_hot("trees_heart_of_the_arborean_shaman_water_decal", "decal", true)
 tt.render.sprites[1].prefix = "wavesDef"
 tt.render.sprites[1].name = "Idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_stage_03_wisps", "decal", true)
 tt.render.sprites[1].prefix = "stage_3_wisps_1Def"
 tt.render.sprites[1].name = "loop"
@@ -334,29 +339,34 @@ tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].prefix = "stage_3_wisps_2Def"
 tt.render.sprites[2].name = "loop"
 tt.render.sprites[2].exo = true
+
 tt = E:register_t_hot("decal_stage_03_river", "decal", true)
 tt.render.sprites[1].prefix = "riverDef"
 tt.render.sprites[1].name = "riverRunning"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_stage_03_heart_back_waves", "decal", true)
 tt.render.sprites[1].prefix = "heart_back_wavesDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].loop = true
+
 tt = E:register_t_hot("decal_stage_03_heart_front_waves", "decal", true)
 tt.render.sprites[1].prefix = "heart_front_wavesDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].loop = true
+
 tt = E:register_t_hot("stage3_decos_barriles2", "decal_scripted", true)
 local time_between_animations = fts(30 * math.random(10, 30))
 tt.render.sprites[1].prefix = "stage3_decos_barriles2"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.animations = {{"action", time_between_animations}, {"idle", time_between_animations}}
 tt.main_script.update = scripts.decal_scripted_loop_play.update
+
 tt = E:register_t_hot("decal_stage_03_butterfly_3", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "stage_3_butterfly_3Def"
 tt.render.sprites[1].name = "loop"
@@ -366,6 +376,7 @@ tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "loop"
 tt.delayed_play.min_delay = 12
 tt.delayed_play.max_delay = 32
+
 tt = E:register_t_hot("decal_stage_03_fat_arborean", "decal_click_play", true)
 tt.render.sprites[1].prefix = "stage3_decos_gordito"
 tt.render.sprites[1].z = Z_DECALS
@@ -379,6 +390,7 @@ tt.click_play.play_once = true
 tt.click_play.clicked_sound = "EasterEggCommonTap"
 tt.ui.can_click = true
 tt.ui.click_rect = r(-60, -10, 60, 60)
+
 tt = E:register_t_hot("decal_stage_03_butterfly_1", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "stage_3_butterfly_1Def"
 tt.render.sprites[1].name = "loop"
@@ -388,9 +400,16 @@ tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "loop"
 tt.delayed_play.min_delay = 10
 tt.delayed_play.max_delay = 30
+
 tt = E:register_t_hot("stage3_decos_barriles1", "decal_scripted", true)
 local time_between_animations = fts(30 * math.random(10, 30))
 tt.render.sprites[1].prefix = "stage3_decos_barriles1"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.animations = {{"action", time_between_animations}, {"idle", time_between_animations}}
 tt.main_script.update = scripts.decal_scripted_loop_play.update
+
+tt = E:register_t_hot("stage_3_treeTop", "decal", true)
+tt.render.sprites[1].name = "stage_3_treeTop"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+

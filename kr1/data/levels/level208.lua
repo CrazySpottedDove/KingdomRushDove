@@ -4,7 +4,6 @@ local GR=require("grid_db")
 local E=require("entity_db")
 local U=require("utils")
 local V=require("lib.klua.vector")
-local log=require("lib.klua.log"):new("level208")
 require("all.constants")
 require("lib.klua.table")
 local level={}

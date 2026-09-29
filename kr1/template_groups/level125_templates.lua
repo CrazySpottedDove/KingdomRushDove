@@ -611,28 +611,34 @@ tt.sound_torso_lever_2 = "Stage25TorsoOperateLever2"
 tt.sound_torso_button = "Stage25TorsoButton"
 tt.sound_fist = "Stage25FistSlam"
 tt.sound_missile = "Stage25MissileLaunch"
+
 tt = E:register_t_hot("decal_stage_25_torso", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "DLC_stage3_dwarf_machinistDef"
 tt.render.sprites[1].name = "idle_doors"
 tt.render.sprites[1].exo = true
+
 tt = E:register_t_hot("decal_stage_25_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage25_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 18
+
 tt = E:register_t_hot("decal_stage_25_mask_4", "decal", true)
 tt.render.sprites[1].name = "stage25_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
 tt = E:register_t_hot("decal_stage_25_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage25_mask3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 4
+
 tt = E:register_t_hot("decal_stage_25_torso_modes", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "DLC_stage3_dwarf_machinist_modesDef"
 tt.render.sprites[1].name = "idle_doors"
 tt.render.sprites[1].exo = true
+
 tt = E:register_t_hot("decal_stage_25_mask_2_glow", "decal_tween", true)
 tt.render.sprites[1].name = "stage25_mask2_glow"
 tt.render.sprites[1].animated = false
@@ -641,6 +647,7 @@ tt.render.sprites[1].alpha = 0
 tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(30), 255}}
+
 tt = E:register_t_hot("decal_stage_25_solid_snake", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "DLC_Enanos_S3_EasterEgg_SolidSnakeDef"
@@ -653,12 +660,20 @@ tt.click_rect_1 = r(-325, 290, 50, 45)
 tt.click_rect_2 = r(-335, 283, 50, 45)
 tt.sound_1_2 = "Stage25SolidSnakeTap12"
 tt.sound_3 = "Stage25SolidSnakeTap3"
+
 tt = E:register_t_hot("decal_stage_25_dwarf_intro", "decal_timed", true)
 tt.render.sprites[1].prefix = "DLC_stage3_dwarf_inDef"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
+
 tt = E:register_t_hot("controller_stage_25_tunnel_glow", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_25_tunnel_glow_update
 tt.glow_t = "decal_stage_25_mask_2_glow"
+
+tt = E:register_t_hot("decal_stage_25_mask_1", "decal", true)
+tt.render.sprites[1].name = "stage25_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 32
+
