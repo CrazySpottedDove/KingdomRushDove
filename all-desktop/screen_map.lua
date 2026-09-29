@@ -4964,6 +4964,23 @@ local THUMB_FRAME_COLORS = {
 }
 local THUMB_FRAME_OUTLINE = {140, 125, 90, 255}
 
+--- f > 0 向白提亮，f < 0 向黑压暗。
+local function thumb_shade(color, f)
+	local out = {}
+
+	for i = 1, 3 do
+		if f >= 0 then
+			out[i] = color[i] + (255 - color[i]) * f
+		else
+			out[i] = color[i] * (1 + f)
+		end
+	end
+
+	out[4] = color[4]
+
+	return out
+end
+
 local function thumb_is_light(r, g, b, a)
 	return a >= THUMB_DETECT_MIN_ALPHA and r >= THUMB_DETECT_MIN_CHANNEL and g >= THUMB_DETECT_MIN_CHANNEL and b >= THUMB_DETECT_MIN_CHANNEL
 end
@@ -5142,10 +5159,59 @@ local function get_thumb_frame(kind)
 		inner_y = border,
 		inner_w = outer_w - 2 * border,
 		inner_h = outer_h - 2 * border,
-		radius = 0,
-		outline_w = 1,
 		crop = cfg.crop
 	}
+	local ix, iy, iw, ih = frame.inner_x, frame.inner_y, frame.inner_w, frame.inner_h
+
+	-- 烘焙三态浮雕边框（中心透明，供内容透出）
+	local borders = {}
+
+	for state, color in pairs(THUMB_FRAME_COLORS) do
+		local light = thumb_shade(color, 0.55)
+		local dark = thumb_shade(color, -0.35)
+		local canvas = G.newCanvas(outer_w, outer_h)
+
+		G.push("all")
+		G.setCanvas(canvas)
+		G.clear(0, 0, 0, 0)
+		G.setBlendMode("replace", "premultiplied")
+		G.setColor(color[1] / 255, color[2] / 255, color[3] / 255, 1)
+		G.rectangle("fill", 0, 0, outer_w, outer_h)
+		G.setColor(0, 0, 0, 0)
+		G.rectangle("fill", ix, iy, iw, ih)
+		G.setBlendMode("alpha", "alphamultiply")
+
+		G.setLineWidth(1)
+
+		-- 外沿（凸起）：上/左高光，下/右阴影
+		G.setColor(light[1] / 255, light[2] / 255, light[3] / 255, 1)
+		G.line(1, 1.5, outer_w - 1, 1.5)
+		G.line(1.5, 1, 1.5, outer_h - 1)
+		G.setColor(dark[1] / 255, dark[2] / 255, dark[3] / 255, 1)
+		G.line(1, outer_h - 1.5, outer_w - 1, outer_h - 1.5)
+		G.line(outer_w - 1.5, 1, outer_w - 1.5, outer_h - 1)
+
+		-- 内沿（凹陷）：上/左阴影，下/右高光
+		G.setColor(dark[1] / 255, dark[2] / 255, dark[3] / 255, 1)
+		G.line(ix, iy - 0.5, ix + iw, iy - 0.5)
+		G.line(ix - 0.5, iy, ix - 0.5, iy + ih)
+		G.setColor(light[1] / 255, light[2] / 255, light[3] / 255, 1)
+		G.line(ix, iy + ih + 0.5, ix + iw, iy + ih + 0.5)
+		G.line(ix + iw + 0.5, iy, ix + iw + 0.5, iy + ih)
+
+		-- 外层勾线
+		G.setColor(THUMB_FRAME_OUTLINE[1] / 255, THUMB_FRAME_OUTLINE[2] / 255, THUMB_FRAME_OUTLINE[3] / 255, 1)
+		G.rectangle("line", 0.5, 0.5, outer_w - 1, outer_h - 1)
+		G.setLineWidth(1)
+		G.setCanvas()
+		G.pop()
+
+		borders[state] = G.newImage(canvas:newImageData())
+
+		canvas:release()
+	end
+
+	frame.borders = borders
 
 	thumb_frame_cache[kind] = frame
 
@@ -5186,13 +5252,8 @@ function EncyclopediaView:create_thumb_cell(kind, sprite_name, pos)
 
 	function b:_draw_self()
 		local pr, pg, pb, pa = G.getColor()
-		local color = THUMB_FRAME_COLORS[self._state] or THUMB_FRAME_COLORS.normal
 
-		-- 1) 边框底色：填充整个外框，中间由内容盖住（alpha 跟随父级淡出）
-		G.setColor(color[1] / 255, color[2] / 255, color[3] / 255, color[4] / 255 * pa)
-		G.rectangle("fill", 0, 0, frame.outer_w, frame.outer_h, frame.radius, frame.radius, 8)
-
-		-- 2) 内容：拉伸填充内框，统一 clip 到内框开口，绝不溢出
+		-- 1) 内容：拉伸填充内框，统一 clip 到内框开口，绝不溢出
 		if info and content_quad then
 			G.stencil(function()
 				G.rectangle("fill", frame.inner_x, frame.inner_y, frame.inner_w, frame.inner_h)
@@ -5203,11 +5264,9 @@ function EncyclopediaView:create_thumb_cell(kind, sprite_name, pos)
 			G.setStencilTest()
 		end
 
-		-- 3) 外层勾线
-		G.setColor(THUMB_FRAME_OUTLINE[1] / 255, THUMB_FRAME_OUTLINE[2] / 255, THUMB_FRAME_OUTLINE[3] / 255, THUMB_FRAME_OUTLINE[4] / 255 * pa)
-		G.setLineWidth(frame.outline_w)
-		G.rectangle("line", frame.outline_w / 2, frame.outline_w / 2, frame.outer_w - frame.outline_w, frame.outer_h - frame.outline_w, frame.radius, frame.radius, 8)
-		G.setLineWidth(1)
+		-- 2) 浮雕边框（中心透明），alpha 跟随父级淡出
+		G.setColor(1, 1, 1, pa)
+		G.draw(frame.borders[self._state] or frame.borders.normal, 0, 0)
 
 		G.setColor(pr, pg, pb, pa)
 	end
