@@ -4791,7 +4791,9 @@ function EncyclopediaView:make_page_button(text, selected, enabled, on_click)
 		G.draw(frame.image, 0, 0)
 
 		if self._page_fill then
-			G.setColor_old(self._page_fill)
+			local f = self._page_fill
+
+			G.setColor(f[1] / 255, f[2] / 255, f[3] / 255, f[4] / 255 * pa)
 			G.rectangle("fill", frame.ix, frame.iy, frame.iw, frame.ih)
 		end
 
@@ -5186,8 +5188,8 @@ function EncyclopediaView:create_thumb_cell(kind, sprite_name, pos)
 		local pr, pg, pb, pa = G.getColor()
 		local color = THUMB_FRAME_COLORS[self._state] or THUMB_FRAME_COLORS.normal
 
-		-- 1) 边框底色：填充整个外框，中间由内容盖住
-		G.setColor_old(color)
+		-- 1) 边框底色：填充整个外框，中间由内容盖住（alpha 跟随父级淡出）
+		G.setColor(color[1] / 255, color[2] / 255, color[3] / 255, color[4] / 255 * pa)
 		G.rectangle("fill", 0, 0, frame.outer_w, frame.outer_h, frame.radius, frame.radius, 8)
 
 		-- 2) 内容：拉伸填充内框，统一 clip 到内框开口，绝不溢出
@@ -5202,7 +5204,7 @@ function EncyclopediaView:create_thumb_cell(kind, sprite_name, pos)
 		end
 
 		-- 3) 外层勾线
-		G.setColor_old(THUMB_FRAME_OUTLINE)
+		G.setColor(THUMB_FRAME_OUTLINE[1] / 255, THUMB_FRAME_OUTLINE[2] / 255, THUMB_FRAME_OUTLINE[3] / 255, THUMB_FRAME_OUTLINE[4] / 255 * pa)
 		G.setLineWidth(frame.outline_w)
 		G.rectangle("line", frame.outline_w / 2, frame.outline_w / 2, frame.outer_w - frame.outline_w, frame.outer_h - frame.outline_w, frame.radius, frame.radius, 8)
 		G.setLineWidth(1)
