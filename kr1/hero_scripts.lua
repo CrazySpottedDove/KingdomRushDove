@@ -9424,7 +9424,7 @@ function scripts.hero_crab.update(this, store)
 					S:queue(this.sound_events.burrow_in)
 					U.y_animation_play(this, "burrow_in", r.pos.x < this.pos.x, store.tick_ts)
 
-					this.health_bar._orig_offset = this.health_bar.offset
+					this.health_bar._orig_offset_y = this.health_bar.offset.y
 					-- this.health_bar.offset = b.health_bar_offset
 					U.change_health_bar_offset_run_time(this.health_bar, b.health_bar_offset.y)
 					this.unit._orig_hit_offset = this.unit.hit_offset
@@ -9538,8 +9538,7 @@ function scripts.hero_crab.update(this, store)
 						end
 					end
 
-					-- this.health_bar.offset = this.health_bar._orig_offset
-					U.change_health_bar_offset_run_time(this.health_bar, this.health_bar._orig_offset.y)
+					U.change_health_bar_offset_run_time(this.health_bar, this.health_bar._orig_offset_y)
 					this.unit.hit_offset = this.unit._orig_hit_offset
 					this.unit.mod_offset = this.unit._orig_mod_offset
 

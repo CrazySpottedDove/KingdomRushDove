@@ -408,7 +408,7 @@ local function aura_stage_210_puddle_entrance_update(this, store, script)
 				end
 				if e.health_bar then
 					if this.override_health_bar_offset then
-						e.health_bar._orig_offset = e.health_bar.offset
+						e.health_bar._orig_offset_y = e.health_bar.offset.y
 						U.change_health_bar_offset_run_time(e.health_bar, this.override_health_bar_offset.y)
 					end
 					if this.hide_healthbar then
@@ -484,8 +484,8 @@ local function aura_stage_210_puddle_exit_update(this, store, script)
 				U.flags_remove(e.vis, bor(F_WATER))
 				U.bans_remove(e.vis, STAGE_210_PUDDLE_BANS)
 				if e.health_bar then
-					if e.health_bar._orig_offset then
-						U.change_health_bar_offset_run_time(e.health_bar, e.health_bar._orig_offset.y)
+					if e.health_bar._orig_offset_y then
+						U.change_health_bar_offset_run_time(e.health_bar, e.health_bar._orig_offset_y)
 					end
 					e.health_bar.hidden = false
 				end
