@@ -74,10 +74,10 @@ function level:init_coroutined(store)
 	coroutine.yield()
 
 	-- 预加载关卡的 required_templates
-	if store.level.data.required_templates then
+	if store.level.data and store.level.data.required_templates then
 		local groups = store.level.data.required_templates
 		for i = 1, #groups do
-			local module_name = "kr1.hot_templates." .. groups[i]
+			local module_name = "kr1.template_groups." .. groups[i]
 			require(module_name)
 			package.loaded[module_name] = nil
 		end
@@ -126,9 +126,12 @@ function level:init_coroutined(store)
 	coroutine.yield()
 
 	if store.level.data then
-		store.level.locations = {}
+		if store.level.data.entities_list then
+			store.level.locations = {}
 
-		LU.insert_entities(store, store.level.data.entities_list)
+			LU.insert_entities(store, store.level.data.entities_list)
+		end
+
 		LU.insert_invalid_path_ranges(store, store.level.data.invalid_path_ranges)
 	end
 

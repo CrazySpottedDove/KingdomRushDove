@@ -13867,9 +13867,9 @@ tt.render.sprites[3].offset = v(-20, 0)
 tt.render.sprites[3].sort_y_offset = 2
 tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "sheepylava_crater_3"
--- 铁皮此处代码基于bug运行，修复不了。
 tt.render.sprites[4].name = "idle"
 tt.render.sprites[4].offset = v(25, -20)
+tt.render.sprites[4].ignore_start = true
 tt.ui.click_rect = r(-30, -20, 60, 60)
 
 tt = E:register_t("decal_achievement_saitam_stage31", "decal_scripted")

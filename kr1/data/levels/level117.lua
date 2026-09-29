@@ -19,59 +19,6 @@ GR:set_cell(cell[1],cell[2],terrain)
 end
 end
 local level={}
-function level:init(store)
-require("lib.klua.table")
-local scripts=require("scripts")
-local r=V.r
-local tt
-tt=E:register_t_hot("decal_stage_17_bubbles_water","decal",true)
-tt.render.sprites[1].prefix="stage_17_bubbles_waterDef"
-tt.render.sprites[1].name="loop"
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].z=Z_DECALS
-tt=E:register_t_hot("decal_stage_17_hidden_path_1","decal",true)
-tt.render.sprites[1].prefix="hidden_path_01Def"
-tt.render.sprites[1].name="idle"
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].z=Z_DECALS
-tt=E:register_t_hot("decal_stage_17_tree_1","decal_scripted",true)
-E:add_comps(tt,"editor","ui")
-tt.render.sprites[1].prefix="stage_17_tree_1Def"
-tt.render.sprites[1].name="idle"
-tt.render.sprites[1].exo=true
-tt.main_script.update=scripts.decal_stage_17_tree.update
-tt.ui.click_rect=r(-75,-290,90,80)
-tt.sound_tap="Terrain4HowlingTree"
-tt=E:register_t_hot("decal_stage_17_tree_4","decal_stage_17_tree_1",true)
-tt.render.sprites[1].prefix="stage_17_tree_4Def"
-tt.render.sprites[1].z=Z_DECALS
-tt.ui.click_rect=r(-227,270,90,80)
-tt=E:register_t_hot("decal_stage_17_bubbles","decal",true)
-tt.render.sprites[1].prefix="stage_17_bubblesDef"
-tt.render.sprites[1].name="loop"
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].z=Z_DECALS
-tt=E:register_t_hot("decal_stage_17_hidden_path_2","decal",true)
-tt.render.sprites[1].prefix="hidden_path_02Def"
-tt.render.sprites[1].name="idle"
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].z=Z_DECALS
-tt=E:register_t_hot("decal_stage_17_tree_3","decal_stage_17_tree_1",true)
-tt.render.sprites[1].prefix="stage_17_tree_3Def"
-tt.ui.click_rect=r(20,300,90,80)
-tt.render.sprites[1].z=Z_DECALS
-tt=E:register_t_hot("decal_stage_17_tree_2","decal_stage_17_tree_1",true)
-tt.render.sprites[1].prefix="stage_17_tree_2Def"
-tt.ui.click_rect=r(-570,-230,90,80)
-tt=E:register_t_hot("decal_stage_17_mask_3","decal",true)
-tt.render.sprites[1].name="stage17_mask3"
-tt.render.sprites[1].animated=false
-tt.render.sprites[1].z=Z_DECALS
-tt=E:register_t_hot("decal_stage_17_hidden_path_unlock_soulcaller","decal",true)
-tt.render.sprites[1].prefix="hidden_path_reventant_revenant_roots_reveal"
-tt.render.sprites[1].name="revenant_idle"
-tt.render.sprites[1].z=Z_OBJECTS+1
-end
 function level:preprocess(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 level.show_comic_idx=25

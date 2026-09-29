@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_templates={"level32_templates"},required_sounds={"music_stage32","BossEfreeti"},required_textures={"go_enemies_desert","go_stages_desert","go_stage32","go_stage32_bg"}}

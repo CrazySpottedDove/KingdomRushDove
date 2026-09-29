@@ -12,55 +12,6 @@ local function fts(v)
 return v/FPS
 end
 local level={}
-function level:init(store)
-require("lib.klua.table")
-local tt
-tt=E:register_t_hot("stage_32_mask_waterfall_1","decal",true)
-tt.render.sprites[1].prefix="stage_32_lava_waterfall_1Def"
-tt.render.sprites[1].name="loop"
-tt.render.sprites[1].animated=true
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].z=Z_BACKGROUND_COVERS
-tt=E:register_t_hot("stage_32_mask_waterfall_2","stage_32_mask_waterfall_1",true)
-tt.render.sprites[1].prefix="stage_32_lava_waterfall_2Def"
-tt.render.sprites[1].sort_y_offset=175
-tt.render.sprites[1].z=Z_OBJECTS
-tt=E:register_t_hot("stage_32_mask_lava_rocks","decal",true)
-tt.render.sprites[1].prefix="stage_32_rockDef"
-tt.render.sprites[1].name="loop"
-tt.render.sprites[1].animated=true
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].z=Z_DECALS
-tt=E:register_t_hot("stage_32_mask_fire_decals","decal",true)
-tt.render.sprites[1].prefix="stage_32_lava_buffDef"
-tt.render.sprites[1].name="loop"
-tt.render.sprites[1].animated=true
-tt.render.sprites[1].loop=true
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].z=Z_DECALS
-tt=E:register_t_hot("stage_32_mask_heads_2","stage_32_mask_heads",true)
-tt.render.sprites[1].flip_x=true
-tt=E:register_t_hot("stage_32_mask_front","decal",true)
-tt.render.sprites[1].prefix="stage_32_lava_shadow_dragonDef"
-tt.render.sprites[1].name="loop"
-tt.render.sprites[1].animated=true
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].z=Z_OBJECTS_SKY
-tt=E:register_t_hot("controller_stage_32_lava_splash_2","controller_stage_32_lava_splash",true)
-tt.mod="mod_stage_32_lava_splash_2"
-tt.paths_y={[3]=560}
-tt=E:register_t_hot("stage_32_mask_waterfall_3","stage_32_mask_waterfall_2",true)
-tt.render.sprites[1].prefix="stage_32_lava_waterfall_3Def"
-tt=E:register_t_hot("decal_achievement_saitam_stage32","decal_achievement_saitam_stage31",true)
-tt.render.sprites[1].prefix="easter_egg_saitam_saitam_stage_2"
-tt=E:register_t_hot("stage_32_mask_lava_bubbles","decal",true)
-tt.render.sprites[1].prefix="stage_32_lava_bubbleDef"
-tt.render.sprites[1].name="loop"
-tt.render.sprites[1].animated=true
-tt.render.sprites[1].exo=true
-tt.render.sprites[1].sort_y_offset=176
-tt.render.sprites[1].z=Z_OBJECTS
-end
 function level:load(store)
 return
 end
