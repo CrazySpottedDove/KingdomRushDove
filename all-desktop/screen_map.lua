@@ -4933,11 +4933,11 @@ local thumb_frame_sources = {
 		shrink = 6,
 		-- 视觉边框厚度（逻辑像素），三态一致
 		border = 5,
-		-- 从缩略图不透明包围盒各边裁掉多少，用于去掉自带边框+底部投影
+		-- 从贴图 quad 各边裁掉多少（相对 quad，规避透明边距差异），去掉自带边框+底部投影
 		crop = {
 			top = 6,
-			bottom = 9,
-			left = 7,
+			bottom = 10,
+			left = 9,
 			right = 8
 		}
 	},
@@ -4949,9 +4949,9 @@ local thumb_frame_sources = {
 		border = 4,
 		crop = {
 			top = 4,
-			bottom = 6,
-			left = 5,
-			right = 6
+			bottom = 7,
+			left = 7,
+			right = 7
 		}
 	}
 }
@@ -5126,6 +5126,8 @@ local function analyze_thumb_sprite(name)
 		tex_h = image:getHeight(),
 		qx = qx,
 		qy = qy,
+		qw = qw,
+		qh = qh,
 		bx = cx,
 		by = cy,
 		bw = cw,
@@ -5236,12 +5238,13 @@ function EncyclopediaView:create_thumb_cell(kind, sprite_name, pos)
 		local bx, by, bw, bh
 
 		if info.framed then
+			-- 相对 quad 裁剪：所有官方缩略图画框在 quad 内位置一致，规避透明边距差异
 			local c = frame.crop
 
-			bx = info.bx + c.left
-			by = info.by + c.top
-			bw = math.max(1, info.bw - c.left - c.right)
-			bh = math.max(1, info.bh - c.top - c.bottom)
+			bx = c.left
+			by = c.top
+			bw = math.max(1, info.qw - c.left - c.right)
+			bh = math.max(1, info.qh - c.top - c.bottom)
 		else
 			bx, by, bw, bh = info.bx, info.by, info.bw, info.bh
 		end
