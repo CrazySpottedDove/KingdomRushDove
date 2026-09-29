@@ -78,12 +78,14 @@ tt.render.sprites[1].exo = true
 tt.idle_cooldown_max = 20
 tt.idle_cooldown_min = 5
 tt.ui.click_rect = r(-30, -20, 60, 60)
+
 tt = E:register_t_hot("fx_stage_31_fireball_b", "fx", true)
 tt.render.sprites[1].prefix = "stage_31_fireball_BDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt.kill_area_id = 2
+
 tt = E:register_t_hot("decal_stage_31_easter_egg_littledragon", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_31_easter_egg_littledragon_update
@@ -101,22 +103,59 @@ tt.render.sprites[3].animated = false
 tt.render.sprites[3].anchor = v(0, 0)
 tt.render.sprites[3].offset = v(-69, -23)
 tt.ui.click_rect = r(-30, -20, 60, 60)
+
 tt = E:register_t_hot("stage_31_mask_shadow_top", "decal", true)
 tt.render.sprites[1].prefix = "stage_31_shadowDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt = E:register_t_hot("stage_31_exo_fire_b", "stage_31_exo_fire_a", true)
-tt.render.sprites[1].prefix = "stage_31_fire_BDef"
+
 tt = E:register_t_hot("fx_stage_31_fireball_a", "fx", true)
 tt.render.sprites[1].prefix = "stage_31_fireball_ADef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt.kill_area_id = 1
+
 tt = E:register_t_hot("fx_stage_31_fireball_c", "fx", true)
 tt.render.sprites[1].prefix = "stage_31_fireball_CDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt.kill_area_id = 3
+
+tt = E:register_t_hot("stage_31_mask_burned_01", "decal", true)
+E:add_comps(tt, "editor", "editor_script")
+tt.render.sprites[1].name = "stage_31_mask_burned_01"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = -60
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].hidden = true
+tt.show_in_editor = true
+tt.editor_script.insert = scripts.editor_mask.insert
+
+tt = E:register_t_hot("stage_31_mask_burned_02", "stage_31_mask_burned_01", true)
+tt.render.sprites[1].name = "stage_31_mask_burned_02"
+tt.render.sprites[1].sort_y_offset = -112
+
+tt = E:register_t_hot("stage_31_mask_burned_03", "stage_31_mask_burned_01", true)
+tt.render.sprites[1].name = "stage_31_mask_burned_03"
+tt.render.sprites[1].sort_y_offset = -80
+
+tt = E:register_t_hot("stage_31_exo_fire_a", "decal", true)
+E:add_comps(tt, "editor", "editor_script")
+tt.render.sprites[1].prefix = "stage_31_fire_ADef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
+tt.render.sprites[1].hidden = true
+tt.show_in_editor = true
+tt.editor_script.insert = scripts.editor_mask.insert
+
+tt = E:register_t_hot("stage_31_exo_fire_c", "stage_31_exo_fire_a", true)
+tt.render.sprites[1].prefix = "stage_31_fire_CDef"
+
+tt = E:register_t_hot("stage_31_exo_fire_b", "stage_31_exo_fire_a", true)
+tt.render.sprites[1].prefix = "stage_31_fire_BDef"

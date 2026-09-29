@@ -116,6 +116,7 @@ local tt
 tt = E:register_t_hot("aura_waterfall_entrance", "aura", true)
 tt.main_script.update = aura_waterfall_entrance_update
 tt.show_fx = "fx_waterfall_splash"
+
 tt = E:register_t_hot("decal_s09_land_3", "decal_background", true)
 AC(tt, "tween")
 tt.render.sprites[1].name = "Stage09_0002"
@@ -123,10 +124,13 @@ tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.editor.game_mode = 1
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{fts(9), 255}, {fts(18), 0}}
+
 tt = E:register_t_hot("decal_s09_land_2", "decal_s09_land_3", true)
 tt.render.sprites[1].name = "Stage09_0003"
+
 tt = E:register_t_hot("decal_s09_land_1", "decal_s09_land_3", true)
 tt.render.sprites[1].name = "Stage09_0004"
+
 tt = E:register_t_hot("decal_s09_crystal_1", "decal_timed", true)
 AC(tt, "editor")
 tt.render.sprites[1].prefix = "decal_s09_crystal_1"
@@ -138,15 +142,19 @@ tt.editor.game_mode = 1
 tt.editor.tag = 1
 tt.editor.props = {{"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
 tt.debris_pos = vec_2(-5, 1)
+
 tt = E:register_t_hot("decal_s09_crystal_2", "decal_s09_crystal_1", true)
 tt.render.sprites[1].prefix = "decal_s09_crystal_2"
 tt.debris_pos = vec_2(9, 4)
+
 tt = E:register_t_hot("decal_s09_crystal_3", "decal_s09_crystal_1", true)
 tt.render.sprites[1].prefix = "decal_s09_crystal_3"
 tt.debris_pos = vec_2(9, -5)
+
 tt = E:register_t_hot("decal_s09_crystal_4", "decal_s09_crystal_1", true)
 tt.render.sprites[1].prefix = "decal_s09_crystal_4"
 tt.debris_pos = vec_2(-6, 6)
+
 tt = E:register_t_hot("decal_s09_crystal_serpent_back", "decal_tween", true)
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "crystal_serpent_appear"
@@ -154,15 +162,18 @@ tt.render.sprites[1].loop = false
 tt.tween.props[1].name = "offset"
 tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(80), vec_2(0, 0)}, {fts(114), vec_2(0, 0)}}
 tt.sound_events.insert = "ElvesCrystalSerpentPassby"
+
 tt = E:register_t_hot("decal_s09_crystal_serpent_attack", "decal_scripted", true)
 tt.render.sprites[1].prefix = "crystal_serpent"
 tt.main_script.update = decal_s09_crystal_serpent_attack_update
+
 tt = E:register_t_hot("decal_s09_crystal_serpent_scream", "decal_s09_crystal_serpent_attack", true)
 tt.main_script.update = decal_s09_crystal_serpent_scream_update
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].hidden = true
 tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[3].hidden = true
+
 tt = E:register_t_hot("decal_s09_waterfall", "decal_scripted", true)
 tt.render.sprites[1].name = "decal_s09_waterfall_lines1"
 tt.render.sprites[2] = CC("sprite")
@@ -171,6 +182,7 @@ tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].name = "decal_s09_waterfall_top"
 tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].name = "decal_s09_waterfall_bottom"
+
 tt = E:register_t_hot("decal_crystal_water_waves2", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "decal_water_wave_2"
 tt.render.sprites[1].name = "play"
@@ -179,52 +191,54 @@ tt.render.sprites[1].z = Z_DECALS
 tt.delayed_play.max_delay = 3
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "play"
-local scripts = require("scripts")
-local km = require("lib.klua.macros")
-local function bullet_crystal_serpent_update(this, store)
-	local b = this.bullet
-	b.ts = store.tick_ts
-	local psf = E:create_entity(b.particles_name)
-	psf.particle_system.track_id = this.id
-	simulation:queue_insert_entity(psf)
-	while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
-		coroutine.yield()
-		local phase = km.clamp(0, 1, (store.tick_ts - b.ts) / b.flight_time)
-		this.pos.x = b.from.x + (b.to.x - b.from.x) * phase
-		this.pos.y = b.from.y + (b.to.y - b.from.y) * phase
-	end
-	psf.particle_system.emit = false
-	local target = store.entities[b.target_id]
-	if target then
-		local psh = E:create_entity("ps_bullet_crystal_serpent_hit")
-		psh.pos.x, psh.pos.y = target.pos.x, target.pos.y + 20
-		psh.particle_system.emit = true
-		simulation:queue_insert_entity(psh)
-		U.y_wait_unconditional(store, fts(7))
-		psh.particle_system.emit = false
-	end
-	local wait_time
-	if target and target.tower and target.tower.can_be_mod and not target.tower.blocked then
-		local m = E:create_entity(b.mod)
-		m.modifier.target_id = b.target_id
-		m.pos.x, m.pos.y = target.pos.x, target.pos.y
-		wait_time = m.modifier.duration
-		simulation:queue_insert_entity(m)
-	end
-	if wait_time then
-		U.y_wait_unconditional(store, wait_time)
-		S:queue("ElvesCrystalSerpentBreakingCrystal")
-		local s = E:create_entity("decal_s09_crystal_debris_mod")
-		s.pos.x, s.pos.y = target.pos.x, target.pos.y
-		U.animation_start_default(s, nil, nil, store.tick_ts)
-		s.tween.ts = store.tick_ts
-		simulation:queue_insert_entity(s)
-	end
-	simulation:queue_remove_entity(this)
-end
+
 tt = E:register_t_hot("bullet_crystal_serpent", "bullet", true)
 tt.render.sprites[1].hidden = true
 tt.bullet.mod = "mod_crystal_serpent"
 tt.bullet.flight_time = fts(17)
 tt.bullet.particles_name = "ps_bullet_crystal_serpent_fly"
 tt.main_script.update = bullet_crystal_serpent_update
+
+tt = E:register_t_hot("decal_s09_crystal_debris", "decal_tween", true)
+tt.render.sprites[1].name = "decal_s09_crystal_debris_1"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].offset = vec_2(16, 12)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].name = "decal_s09_crystal_debris_1"
+tt.render.sprites[2].flip_x = true
+tt.render.sprites[2].offset = vec_2(-14, 9)
+tt.render.sprites[3] = CC("sprite")
+tt.render.sprites[3].loop = false
+tt.render.sprites[3].name = "decal_s09_crystal_debris_2"
+tt.render.sprites[3].offset = vec_2(2, 42)
+tt.render.sprites[3].time_offset = fts(-2)
+tt.render.sprites[4] = CC("sprite")
+tt.render.sprites[4].loop = false
+tt.render.sprites[4].name = "decal_s09_crystal_debris_2"
+tt.render.sprites[4].flip_x = true
+tt.render.sprites[4].offset = vec_2(-32, 46)
+tt.render.sprites[4].time_offset = fts(-2)
+tt.render.sprites[5] = CC("sprite")
+tt.render.sprites[5].name = "stage9_crystals_smoke"
+tt.render.sprites[5].animated = false
+tt.render.sprites[5].offset = vec_2(0, 30)
+tt.tween.props[1].keys = {{fts(27), 255}, {fts(35), 0}}
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].sprite_id = 5
+tt.tween.props[2].keys = {{0, 0}, {fts(1), 255}, {fts(8), 255}, {fts(16), 0}}
+tt.tween.props[3] = CC("tween_prop")
+tt.tween.props[3].name = "scale"
+tt.tween.props[3].sprite_id = 5
+tt.tween.props[3].keys = {{0, vec_2(0.3, 0.3)}, {fts(16), vec_2(1.03, 1.03)}}
+tt.tween.props[4] = table.clone(tt.tween.props[1])
+tt.tween.props[4].sprite_id = 2
+tt.tween.props[5] = table.clone(tt.tween.props[1])
+tt.tween.props[5].sprite_id = 3
+tt.tween.props[6] = table.clone(tt.tween.props[1])
+tt.tween.props[6].sprite_id = 4
+
+tt = E:register_t_hot("decal_s09_crystal_debris_mod", "decal_s09_crystal_debris", true)
+tt.render.sprites[3].sort_y_offset = 1
+tt.render.sprites[4].sort_y_offset = 1
+

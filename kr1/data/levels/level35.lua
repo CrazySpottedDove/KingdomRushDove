@@ -12,8 +12,6 @@ local function fts(v)
 return v/FPS
 end
 local level={}
-level.required_sounds={"music_stage35","FrontiersJungleAmbienceSounds","SpecialAlienSounds"}
-level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage35_bg","go_stage36"}
 function level:init(store)
 store.level_terrain_style=TERRAIN_STYLE_JUNGLE
 self.locations=LU.load_locations(store,self)

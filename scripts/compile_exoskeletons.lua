@@ -558,7 +558,7 @@ local function main()
 		die("未在 %s 找到任何 .lua 文件", input_dir)
 	end
 
-	local total_source, total_out, total_frames, total_unique = 0, 0, 0, 0
+	local total_source, total_out = 0, 0
 
 	for _, path in ipairs(files) do
 		local exo = load_v3(path)

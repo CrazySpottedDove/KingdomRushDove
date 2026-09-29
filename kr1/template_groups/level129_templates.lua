@@ -191,50 +191,96 @@ controller_stage_29_spider_holders_update = function(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_arak", "decal_achievement_a_coon_of_surprises_fredo", true)
-tt.give_achievement = false
-tt.ui.click_rect = r(-20, -40, 62, 75)
-tt.change_y_sort_offset = 0
-tt.render.sid_animated = 1
-tt.render.sprites[2] = nil
-tt.render.sprites[tt.render.sid_animated].z = Z_OBJECTS
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_arak"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].animated = true
-tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_darkcrystal", "decal_achievement_a_coon_of_surprises_fredo", true)
-tt.give_achievement = false
-tt.change_z_time = fts(37)
-tt.change_y_sort_offset = -260
-tt.ui.click_rect = r(-20, -80, 40, 80)
-tt.render.sprites[1].name = "coonsuprices_cuerdadarkcrystal"
-tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_darkcrystal"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
-tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_silksong", "decal_achievement_a_coon_of_surprises_fredo", true)
-tt.give_achievement = false
-tt.change_z_time = fts(36)
-tt.change_y_sort_offset = -400
-tt.ui.click_rect = r(-18, -70, 40, 60)
-tt.render.sprites[1].name = "coonsuprices_cuerdasilksong"
-tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_silksong"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].offset = v(2, -30)
-tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_jarra", "decal_achievement_a_coon_of_surprises_fredo", true)
-tt.give_achievement = false
-tt.change_z_time = fts(32)
-tt.change_y_sort_offset = -210
-tt.ui.click_rect = r(-20, -60, 47, 55)
-tt.render.sprites[1].name = "coonsuprices_cuerdajarra"
-tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
-tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_jarra"
-tt.render.sprites[tt.render.sid_animated].name = "idle"
-tt.render.sprites[tt.render.sid_animated].offset = v(-2, -22)
-tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+local decal_achievement_a_coon_of_surprises
+decal_achievement_a_coon_of_surprises = {}
+
+function decal_achievement_a_coon_of_surprises.update(this, store)
+	local touch_times = 0
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			this.ui.can_click = false
+			touch_times = touch_times + 1
+
+			if touch_times < this.required_touches then
+				U.y_animation_play(this, "clicked", nil, store.tick_ts, 1, this.render.sid_animated)
+				U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_animated)
+
+				this.ui.can_click = true
+			else
+				U.animation_start(this, "broken", nil, store.tick_ts, false, this.render.sid_animated)
+				U.y_wait_unconditional(store, this.change_z_time)
+
+				this.render.sprites[this.render.sid_animated].z = Z_OBJECTS
+				this.render.sprites[this.render.sid_animated].sort_y_offset = this.change_y_sort_offset
+
+				U.y_animation_wait(this, this.render.sid_animated, 1)
+				U.animation_start(this, "idle_2", nil, store.tick_ts, true, this.render.sid_animated)
+
+				if this.give_achievement then
+					signal.emit("spiders-a-coon-of-surprises")
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+local function fts(v)
+	return v / FPS
+end
+
+local stage_29_cocoon = {}
+
+function stage_29_cocoon.update(this, store)
+	if this.broken_on_iron and store.level_mode == GAME_MODE_IRON or this.broken_on_heroic and store.level_mode == GAME_MODE_HEROIC then
+		U.animation_start(this, this.animation_spawner_idle_broken, nil, store.tick_ts, true, 1)
+
+		return
+	end
+
+	local sp = this.spawner
+	local state = 1
+
+	U.animation_start(this, this.animation_spawner_idle, nil, store.tick_ts - fts(math.random(0, 20)), true, 1, true)
+
+	while true do
+		if sp.interrupt then
+		-- block empty
+		elseif state == 1 then
+			if sp.spawn_data then
+				local enable = sp.spawn_data.enable
+
+				if enable then
+					state = 2
+
+					S:queue(this.sound_inflate)
+					S:queue(this.sound_explode)
+					U.y_animation_play(this, this.animation_spawner_start, nil, store.tick_ts, 1, 1)
+				end
+			end
+		elseif state == 2 and sp.spawn_data then
+			local enable = sp.spawn_data.enable
+
+			if not enable then
+				S:queue(this.sound_regenerate)
+				U.y_animation_play(this, this.animation_spawner_end, nil, store.tick_ts, 1, 1)
+				U.animation_start(this, this.animation_spawner_idle, nil, store.tick_ts, true, 1)
+
+				state = 1
+			end
+		end
+
+		sp.interrupt = nil
+
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
 tt = E:register_t_hot("controller_stage_29_spider_holders", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui")
 tt.main_script.update = controller_stage_29_spider_holders_update
@@ -287,6 +333,81 @@ for i = 1, tt.threads_amount do
 end
 tt.sound_loop = "EnemySpidersMechanicTowerSpiderWorkingLoop"
 tt.sound_death = "EnemySpidersMechanicTowerSpiderDeath"
+
+tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_fredo", "decal_scripted", true)
+E:add_comps(tt, "ui")
+tt.ui.click_rect = r(-20, -50, 40, 40)
+tt.main_script.update = decal_achievement_a_coon_of_surprises.update
+tt.give_achievement = true
+tt.required_touches = 3
+tt.change_z_time = fts(8)
+tt.change_y_sort_offset = -160
+tt.render.sid_animated = 2
+tt.render.sprites[1].name = "coonsuprices_cuerdafredo"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.render.sprites[1].anchor = v(0.5, 0.11538461538461539)
+tt.render.sprites[tt.render.sid_animated] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_fredo"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_animated].offset = v(5, 4)
+tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.973404255319149)
+
+tt = E:register_t_hot("decal_stage_29_background_eyes", "decal", true)
+tt.render.sprites[1].prefix = "spiders_stage29_eyes_stageDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_arak", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt.give_achievement = false
+tt.ui.click_rect = r(-20, -40, 62, 75)
+tt.change_y_sort_offset = 0
+tt.render.sid_animated = 1
+tt.render.sprites[2] = nil
+tt.render.sprites[tt.render.sid_animated].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_arak"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].animated = true
+tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+
+tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_darkcrystal", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt.give_achievement = false
+tt.change_z_time = fts(37)
+tt.change_y_sort_offset = -260
+tt.ui.click_rect = r(-20, -80, 40, 80)
+tt.render.sprites[1].name = "coonsuprices_cuerdadarkcrystal"
+tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_darkcrystal"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
+tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+
+tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_silksong", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt.give_achievement = false
+tt.change_z_time = fts(36)
+tt.change_y_sort_offset = -400
+tt.ui.click_rect = r(-18, -70, 40, 60)
+tt.render.sprites[1].name = "coonsuprices_cuerdasilksong"
+tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_silksong"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].offset = v(2, -30)
+tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+
+tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_jarra", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt.give_achievement = false
+tt.change_z_time = fts(32)
+tt.change_y_sort_offset = -210
+tt.ui.click_rect = r(-20, -60, 47, 55)
+tt.render.sprites[1].name = "coonsuprices_cuerdajarra"
+tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_jarra"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].offset = v(-2, -22)
+tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+
 tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_sheepy", "decal_achievement_a_coon_of_surprises_fredo", true)
 tt.give_achievement = false
 tt.change_z_time = fts(30)
@@ -298,3 +419,20 @@ tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_sheepy"
 tt.render.sprites[tt.render.sid_animated].name = "idle"
 tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
 tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.5173913043478261)
+
+tt = E:register_t_hot("stage_29_cocoon", "decal_scripted", true)
+E:add_comps(tt, "spawner")
+tt.render.sprites[1].prefix = "cocon_stage2_coocoon"
+tt.render.sprites[1].name = "idle"
+tt.animation_spawner_start = "summon_in"
+tt.animation_spawner_idle = "idle_anim"
+tt.animation_spawner_end = "summon_out"
+tt.animation_spawner_idle_broken = "idle_broken"
+tt.broken_on_heroic = true
+tt.broken_on_iron = true
+tt.main_script.update = stage_29_cocoon.update
+tt.spawner.eternal = true
+tt.sound_inflate = "EnemySpidersMechanicSpawnerInflate"
+tt.sound_explode = "EnemySpidersMechanicSpawnerExplode"
+tt.sound_regenerate = "EnemySpidersMechanicSpawnerRegenerate"
+

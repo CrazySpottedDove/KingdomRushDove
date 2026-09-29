@@ -1,0 +1,1 @@
+return {required_templates={"decal_whale"},level_mode_overrides={},required_sounds={"music_stage43","PirateBoatSounds","RisingTidesSounds","SpecialMermaid"},required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage43","go_stage43_bg","go_hero_pirate"}}

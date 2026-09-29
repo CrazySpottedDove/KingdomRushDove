@@ -7,7 +7,7 @@ local function fts(v)
 	return v / FPS
 end
 require("lib.klua.table")
-local AC = require("achievements")
+local ACH = require("achievements")
 local scripts = require("scripts")
 local v = V.v
 local r = V.r
@@ -110,10 +110,10 @@ decal_stage_01_rune_update = function(this, store)
 				U.animation_start_default(this, c.idle_on_animation, nil, store.tick_ts, true)
 				signal.emit("achievements_custom_event", "RUNEQUEST_1")
 				if c.achievement then
-					AC:got(c.achievement)
+					ACH:got(c.achievement)
 				end
 				if c.achievement_flag then
-					AC:flag_check(unpack(c.achievement_flag))
+					ACH:flag_check(unpack(c.achievement_flag))
 				end
 			end
 		end

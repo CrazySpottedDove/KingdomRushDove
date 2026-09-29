@@ -253,9 +253,93 @@ controller_stage_16_tentacle_bottom_update = function(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("controller_stage_16_overseer_eye3", "controller_stage_16_overseer_eye1", true)
-tt.render.sprites[1].prefix = "overseer_minieye3Def"
-tt.life_hurt_threshold = 33
+local controller_stage_16_overseer_eye = {}
+
+function controller_stage_16_overseer_eye.update(this, store)
+	local blink_cooldown = math.random(this.blink_min_cooldown, this.blink_max_cooldown)
+	local last_blink = store.tick_ts
+	local overseer = table.filter(store.entities, function(k, v)
+		return v.template_name == "controller_stage_16_overseer"
+	end)[1]
+	local damaged = false
+
+	this.idle_anims = this.idle_not_damaged
+
+	local function check_change_damaged_state()
+		if not damaged then
+			local life_percentage = overseer.health.hp * 100 / overseer.health.hp_max
+
+			if life_percentage < this.life_hurt_threshold then
+				U.y_animation_play(this, "eyehurt", nil, store.tick_ts)
+
+				this.idle_anims = this.idle_damaged
+				damaged = true
+			end
+		end
+	end
+
+	while true do
+		if blink_cooldown <= store.tick_ts - last_blink then
+			U.y_animation_play(this, this.idle_anims[math.random(1, #this.idle_anims)], nil, store.tick_ts)
+
+			blink_cooldown = math.random(this.blink_min_cooldown, this.blink_max_cooldown)
+			last_blink = store.tick_ts
+		end
+
+		check_change_damaged_state()
+		coroutine.yield()
+	end
+end
+
+local controller_stage_16_overseer_mouth_door = {}
+
+function controller_stage_16_overseer_mouth_door.update(this, store)
+	local last_check_enemy = store.tick_ts
+	local is_open = false
+
+	U.animation_start_default(this, "closeidle", nil, store.tick_ts, true)
+
+	while store.wave_group_number == 0 do
+		coroutine.yield()
+	end
+
+	local function search_enemies_nearby()
+		local targets = U.find_enemies_in_range_filter_on(this.check_pos, this.check_radius, this.check_vis_flags, this.check_vis_bans, function(e)
+			return e.enemy and e.health and not e.health.dead
+		end)
+
+		if targets and #targets > 0 then
+			if not is_open then
+				U.y_animation_wait_default(this)
+				U.y_animation_play(this, "open", nil, store.tick_ts)
+				U.animation_start(this, "openidle", nil, store.tick_ts, true, 1, true)
+
+				is_open = true
+			end
+		elseif is_open then
+			U.y_animation_wait_default(this)
+			U.y_animation_play(this, "close", nil, store.tick_ts)
+			U.animation_start_default(this, "closeidle", nil, store.tick_ts, true)
+
+			is_open = false
+		end
+	end
+
+	last_check_enemy = store.tick_ts
+
+	while true do
+		if store.tick_ts - last_check_enemy >= this.check_cooldown then
+			search_enemies_nearby()
+
+			last_check_enemy = store.tick_ts
+		end
+
+		coroutine.yield()
+	end
+end
+
+-- 大眼的触手控制
+
 tt = E:register_t_hot("controller_stage_16_tentacle_bottom_left", nil, true)
 E:add_comps(tt, "editor", "pos", "render", "main_script")
 tt.main_script.update = controller_stage_16_tentacle_bottom_update
@@ -273,13 +357,13 @@ tt.render.sprites[2].offset = v(-140, -350)
 tt.phase_to_free = 4
 tt.sound_rumble = "Stage16OverseerRumble"
 tt.sound_unchain = "Stage16OverseerUnchainDown"
+
 tt = E:register_t_hot("controller_stage_16_tentacle_bottom_right", "controller_stage_16_tentacle_bottom_left", true)
 tt.render.sprites[1].prefix = "overseer_undertent2Def"
 tt.render.sprites[2].prefix = "overseer_underbacktents2Def"
 tt.render.sprites[2].offset = v(350, -20)
 tt.phase_to_free = 5
-tt = E:register_t_hot("controller_stage_16_overseer_eye4", "controller_stage_16_overseer_eye1", true)
-tt.render.sprites[1].prefix = "overseer_minieye4Def"
+
 tt = E:register_t_hot("controller_stage_16_tentacle_left", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script", "render")
 tt.main_script.update = controller_stage_16_overseer_tentacle_update
@@ -302,6 +386,7 @@ tt.first_cooldown = 5
 tt.sound_rumble = "Stage16OverseerRumble"
 tt.sound_unchain = "Stage16OverseerUnchainLeftRight"
 tt.sound_spawn = "Stage16OverseerSpawnerCast"
+
 tt = E:register_t_hot("controller_stage_16_tentacle_right", "controller_stage_16_tentacle_left", true)
 tt.render.sprites[1].flip_x = true
 tt.config = {
@@ -313,40 +398,93 @@ tt.spawn_offset = v(-80, -150)
 tt.spawn_pos = {v(850, 446), v(860, 206)}
 tt.spawn_path = {3, 4}
 tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_right"
+
 tt = E:register_t_hot("decal_terrain_3_floating_rock_1", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock1"
+
 tt = E:register_t_hot("decal_terrain_3_floating_rock_5", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock5"
+
 tt = E:register_t_hot("decal_stage_16_mask_4", "decal", true)
 tt.render.sprites[1].name = "stage16_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
 tt = E:register_t_hot("decal_terrain_3_floating_rock_3", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock3"
+
 tt = E:register_t_hot("controller_terrain_3_stage_16_glare1", "controller_terrain_3_local_glare", true)
 tt.main_script.update = controller_terrain_3_stage_16_glare_update
 tt.phase_config = {{-1, 0}, {-1, 0}, {-1, 0}, {6, 30}, {6, 20}, {60, 30}}
 tt.decal_ground = "decal_stage_16_glare_1"
 tt.eyes_t = {"decal_stage_16_glare_eye_big", "decal_stage_16_glare_eye_small_1", "decal_stage_16_glare_eye_small_2", "decal_stage_16_glare_eye_small_3"}
-tt = E:register_t_hot("controller_stage_16_mouth_right", "controller_stage_16_mouth_left", true)
-tt.render.sprites[1].flip_x = true
-tt.check_pos = v(721, 553)
+
 tt = E:register_t_hot("decal_stage_16_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage16_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt = E:register_t_hot("controller_stage_16_overseer_eye2", "controller_stage_16_overseer_eye1", true)
-tt.render.sprites[1].prefix = "overseer_minieye2Def"
-tt.life_hurt_threshold = 33
+
 tt = E:register_t_hot("controller_terrain_3_stage_16_glare2", "controller_terrain_3_local_glare", true)
 tt.main_script.update = controller_terrain_3_stage_16_glare_update
 tt.phase_config = {{-1, 0}, {8, 25}, {6, 30}, {-1, 0}, {-1, 0}, {6, 30}}
 tt.decal_ground = "decal_stage_16_glare_2"
+
 tt = E:register_t_hot("decal_stage_16_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage16_mask3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
 tt = E:register_t_hot("decal_terrain_3_floating_rock_4", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock4"
+
 tt = E:register_t_hot("decal_terrain_3_floating_rock_2", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock2"
+
+tt = E:register_t_hot("decal_stage_16_mask_1", "decal", true)
+tt.render.sprites[1].name = "stage16_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
+tt = E:register_t_hot("controller_stage_16_mouth_left", nil, true)
+E:add_comps(tt, "editor", "pos", "main_script", "render")
+tt.main_script.update = controller_stage_16_overseer_mouth_door.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseer_mouthDef"
+tt.render.sprites[1].name = "closeidle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 4
+tt.check_pos = v(282, 556)
+tt.check_cooldown = fts(5)
+tt.check_radius = 150
+tt.check_vis_flags = F_ENEMY
+tt.check_vis_bans = F_BOSS
+
+tt = E:register_t_hot("controller_stage_16_overseer_eye1", nil, true)
+E:add_comps(tt, "editor", "pos", "main_script", "render")
+tt.main_script.update = controller_stage_16_overseer_eye.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseer_minieye1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = -10
+tt.blink_min_cooldown = 3
+tt.blink_max_cooldown = 5
+tt.idle_not_damaged = {"anim1", "anim2", "anim3"}
+tt.idle_damaged = {"eyehurttwitch"}
+tt.life_hurt_threshold = 66
+
+tt = E:register_t_hot("controller_stage_16_overseer_eye3", "controller_stage_16_overseer_eye1", true)
+tt.render.sprites[1].prefix = "overseer_minieye3Def"
+tt.life_hurt_threshold = 33
+
+tt = E:register_t_hot("controller_stage_16_overseer_eye4", "controller_stage_16_overseer_eye1", true)
+tt.render.sprites[1].prefix = "overseer_minieye4Def"
+
+tt = E:register_t_hot("controller_stage_16_mouth_right", "controller_stage_16_mouth_left", true)
+tt.render.sprites[1].flip_x = true
+tt.check_pos = v(721, 553)
+
+tt = E:register_t_hot("controller_stage_16_overseer_eye2", "controller_stage_16_overseer_eye1", true)
+tt.render.sprites[1].prefix = "overseer_minieye2Def"
+tt.life_hurt_threshold = 33
+

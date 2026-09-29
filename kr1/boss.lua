@@ -3082,20 +3082,6 @@ tt.vis.bans = bor(F_BLOCK, F_FREEZE, F_STUN) --bor(F_MOD, F_BLOCK)
 tt.move_bounds = v(25, 25)
 tt.move_speed = v(0.2, 0.2)
 
-tt = E:register_t("controller_stage_16_mouth_left")
-E:add_comps(tt, "editor", "pos", "main_script", "render")
-tt.main_script.update = scripts.controller_stage_16_overseer_mouth_door.update
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "overseer_mouthDef"
-tt.render.sprites[1].name = "closeidle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = 4
-tt.check_pos = v(282, 556)
-tt.check_cooldown = fts(5)
-tt.check_radius = 150
-tt.check_vis_flags = F_ENEMY
-tt.check_vis_bans = F_BOSS
-
 tt = E:register_t("bullet_stage_16_overseer_tentacle_spawn", "bomb")
 tt.sound_events.hit_water = nil
 tt.render.sprites[1].name = "overseer_fx_overseer_proyectile"
@@ -3130,20 +3116,6 @@ tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
 
 tt = E:register_t("controller_stage_16_tentacle_mouth_right", "controller_stage_16_tentacle_mouth_left")
 tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("controller_stage_16_overseer_eye1")
-E:add_comps(tt, "editor", "pos", "main_script", "render")
-tt.main_script.update = scripts.controller_stage_16_overseer_eye.update
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "overseer_minieye1Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -10
-tt.blink_min_cooldown = 3
-tt.blink_max_cooldown = 5
-tt.idle_not_damaged = {"anim1", "anim2", "anim3"}
-tt.idle_damaged = {"eyehurttwitch"}
-tt.life_hurt_threshold = 66
 
 tt = E:register_t("boss_spider_queen", "boss")
 E:add_comps(tt, "melee", "ranged", "timed_attacks")

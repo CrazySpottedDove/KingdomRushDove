@@ -5466,6 +5466,7 @@ return {
 	PLUGIN_MGR_STATUS_INSTALLED_LATEST = "Installed and up to date",
 	PLUGIN_MGR_STATUS_INSTALLED_UPDATE_AVAILABLE = "Installed: v%s (v%s available)",
 	PLUGIN_MGR_STATUS_INSTALLING_PLUGIN = "Installing plugin: %s",
+	PLUGIN_MGR_STATUS_LOCAL_AHEAD = "Has un-uploaded updates",
 	PLUGIN_MGR_STATUS_LOCAL_GROUPS_REFRESHED = "Local group list refreshed",
 	PLUGIN_MGR_STATUS_LOCAL_PLUGIN_NO_ENTRY = "A local plugin is missing a matchable entry field",
 	PLUGIN_MGR_STATUS_LOGGING_IN = "Signing in to the developer account…",

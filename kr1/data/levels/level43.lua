@@ -6,8 +6,6 @@ local S=require("sound_db")
 local P=require("path_db")
 require("all.constants")
 local level={}
-level.required_sounds={"music_stage43","PirateBoatSounds","RisingTidesSounds","SpecialMermaid"}
-level.required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage43","go_stage43_bg","go_hero_pirate"}
 local x=nil
 level.nav_mesh={[0]={7,1,x,10},{2,x,x,0},{21,x,1,7},{4,21,21,5},{x,3,5,6},{4,3,7,66},{x,4,66,x},{5,2,0,8},{66,7,10,x},[10]={8,0,x,x},[21]={3,x,2,7},[66]={6,5,8,x}}
 function level:init(store)

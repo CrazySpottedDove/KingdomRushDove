@@ -3707,6 +3707,50 @@ scripts.tower_necromancer = {
 		end
 	end
 }
+
+scripts.aura_tower_faerie_dragon = {
+	update = function(this, store)
+		local a = this.aura
+
+		while true do
+			local source = store.entities[this.aura.source_id]
+
+			if not source then
+				simulation:queue_remove_entity(this)
+
+				return
+			end
+
+			if store.tick_ts - a.ts >= source.attacks.list[1].cooldown * source.tower.cooldown_factor then
+				a.ts = store.tick_ts
+
+				local targets = U.find_enemies_in_range_filter_off(this.pos, source.attacks.range, bor(F_MOD, F_STUN), F_NONE)
+
+				if targets then
+					for _, target in ipairs(targets) do
+						if math.random() < source.aura_rate then
+							if band(target.vis.flags, F_BOSS) == 0 then
+								local mod = E:create_entity(a.mod)
+
+								mod.modifier.target_id = target.id
+								mod.modifier.source_id = a.source_id
+
+								simulation:queue_insert_entity(mod)
+							end
+
+							local d = E.assign_damage(a.damage_type, a.damage * source.tower.damage_factor, source.id, target.id)
+
+							queue_damage(store, d)
+						end
+					end
+				end
+			end
+
+			coroutine.yield()
+		end
+	end
+}
+
 -- 仙女龙
 scripts.tower_faerie_dragon = {
 	get_info = function(this)

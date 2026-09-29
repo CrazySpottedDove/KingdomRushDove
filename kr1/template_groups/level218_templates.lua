@@ -29,8 +29,8 @@ end
 local function queue_damage(store, damage)
 	store.damage_queue[#store.damage_queue + 1] = damage
 end
-local band, bnot, bor = bit.band, bit.bnot, bit.bor
-local band, bnot, bor = bit.band, bit.bnot, bit.bor
+local bit = require("bit")
+local band, bor = bit.band, bit.bor
 local function get_random_round_robin(mutable_history, n, m)
 	if not m then
 		m = n
@@ -1256,7 +1256,7 @@ function S18.controller_stage_218_veznan.on_explode_statue(this, store, event_na
 end
 function S18.controller_stage_218_veznan.update(this, store, script)
 	this._queue = this._queue or {}
-	local body, sigil_pi, sigil_ni
+	local body, sigil_pi, sigil_spi, sigil_ni
 	local function body_idle()
 		if body then
 			U.animation_start(body, "idle", nil, store.tick_ts, true)

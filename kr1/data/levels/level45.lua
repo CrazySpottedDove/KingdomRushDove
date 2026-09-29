@@ -10,9 +10,6 @@ return v/FPS
 end
 local v=V.v
 local level={}
-level.required_sounds={"music_stage45","HalloweenSounds","HWFrankensteinTower"}
-level.required_textures={"go_enemies_halloween","go_enemies_blackburn","go_stages_halloween","go_stage45","go_stage45_bg"}
-level.show_comic_idx=17
 function level:init(store)
 store.level_terrain_style=TERRAIN_STYLE_HALLOWEEN
 self.locations=LU.load_locations(store,self)

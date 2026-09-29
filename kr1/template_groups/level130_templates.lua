@@ -161,14 +161,49 @@ controller_stage_30_boss_spiders_update = function(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
+local decal_achievement_lucas_spider
+decal_achievement_lucas_spider = {}
+
+function decal_achievement_lucas_spider.update(this, store)
+	local touch_times = 0
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			this.ui.can_click = false
+			touch_times = touch_times + 1
+
+			if touch_times == 1 then
+				U.y_animation_play(this, "tap_1", nil, store.tick_ts)
+				U.animation_start_default(this, "idle_2", nil, store.tick_ts, true)
+
+				this.ui.can_click = true
+			elseif touch_times == 2 then
+				U.y_animation_play(this, "tap_2", nil, store.tick_ts)
+				U.animation_start_default(this, "idle_2", nil, store.tick_ts, true)
+
+				this.ui.can_click = true
+			elseif touch_times == 3 then
+				U.y_animation_play(this, "tap_3", nil, store.tick_ts)
+				U.animation_start_default(this, "idle_3", nil, store.tick_ts, true)
+				signal.emit("spiders-lucas-spider")
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
 tt = E:register_t_hot("mask_stage_30_5", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_05"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
+
 tt = E:register_t_hot("mask_stage_30_4", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_04"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
+
 tt = E:register_t_hot("controller_stage_30_boss_spiders", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.main_script.update = controller_stage_30_boss_spiders_update
@@ -510,14 +545,17 @@ tt.render.sprites[tt.render.sid_land].prefix = "spiderqueen_spider_jumpDef"
 tt.render.sid_smoke = 4
 tt.render.sprites[tt.render.sid_smoke] = table.deepclone(tt.render.sprites[2])
 tt.render.sprites[tt.render.sid_smoke].prefix = "spiderqueen_smokeDef"
+
 tt = E:register_t_hot("mask_stage_30_2", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_02"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -112
+
 tt = E:register_t_hot("mask_stage_30_3", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_03"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
+
 tt = E:register_t_hot("decal_stage_30_door", "decal_scripted", true)
 tt.render.sprites[1].prefix = "stage_30_spider_doorDef"
 tt.render.sprites[1].name = "idle1"
@@ -535,3 +573,11 @@ tt.waves = {{
 	[13] = {{1, 10}, {18, 28}, {41, 55}},
 	[15] = {{1, 10}, {18, 28}, {52, 62}}
 }, {{{44, 52}}, {{57, 67}}, {{0.2, 10}, {44, 60}}, {{46, 60}}, {{0.5, 19}}, {{24, 34}, {70, 80}}}, {{{155, 180}, {220, 250}}}}
+
+tt = E:register_t_hot("decal_achievement_lucas_spider", "decal_scripted", true)
+E:add_comps(tt, "ui")
+tt.ui.click_rect = r(-20, -10, 40, 40)
+tt.main_script.update = decal_achievement_lucas_spider.update
+tt.render.sprites[1].prefix = "export_easter_egg_lucas"
+tt.render.sprites[1].name = "idle"
+

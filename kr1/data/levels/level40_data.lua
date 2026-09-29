@@ -1,0 +1,1 @@
+return {required_templates={"background_sounds_underground"},level_mode_overrides={},required_sounds={"music_stage40","FrontiersUndergroundAmbienceSounds","DwarfSounds","DwarfHeroSounds","SpecialMountainDoor"},required_textures={"go_enemies_underground","go_stages_underground","go_stage40","go_stage40_bg"}}

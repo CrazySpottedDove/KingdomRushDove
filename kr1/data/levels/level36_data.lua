@@ -1,1 +1,1 @@
-return {level_mode_overrides={},required_templates={"level36_templates"},required_sounds={"music_stage36","FrontiersJungleAmbienceSounds","SpecialVolcanoSounds"},required_textures={"go_enemies_jungle","go_stages_jungle","go_stage36","go_stage36_bg"}}
+return {level_mode_overrides={},required_templates={"level36_templates","background_sounds_jungle","decal_whale"},required_sounds={"music_stage36","FrontiersJungleAmbienceSounds","SpecialVolcanoSounds"},required_textures={"go_enemies_jungle","go_stages_jungle","go_stage36","go_stage36_bg"}}

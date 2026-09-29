@@ -366,6 +366,324 @@ decal_stage_11_sam_and_frodo_update = function(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
+local SU = require("script_utils")
+local LU = require("level_utils")
+local controller_stage_11_cult_leader = {}
+
+function controller_stage_11_cult_leader.insert(this, store)
+	if store.level_mode == GAME_MODE_CAMPAIGN then
+		local cultist = E:create_entity(this.entity_cultist)
+
+		cultist.pos = this.cultist_pos
+
+		simulation:queue_insert_entity(cultist)
+
+		this.cultist = cultist
+
+		return true
+	end
+
+	return false
+end
+
+function controller_stage_11_cult_leader.update(this, store)
+	local last_wave_processed = 0
+	local wave_config = {}
+	local last_ability_ts = store.tick_ts
+	local ability_cd = this.config.ability_cooldown
+
+	this.projections_in_bossfight = 0
+	this.active_illusions = {}
+	this.selected_paths = {}
+
+	local MODE_SHIELD = 1
+	local MODE_CHAIN = 2
+
+	this.is_denas_dead = false
+	this.leave = false
+
+	if not this._ability_deck then
+		this._ability_deck = SU.deck_new(this.config.deck_chain_ability, this.config.deck_total_cards)
+	end
+
+	local function get_illusion_pos(mode)
+		local available_paths = {}
+
+		if mode == MODE_SHIELD then
+			local radius_check_enemies = this.spawn_check_enemies_range
+
+			for _, available in ipairs(this.spawn_available_pos) do
+				local found = false
+
+				for _, selected in ipairs(this.selected_paths) do
+					if selected.x == available.x and selected.y == available.y then
+						found = true
+
+						break
+					end
+				end
+
+				if not found then
+					local enemies = table.filter(store.entities, function(k, v)
+						return v.enemy and v.vis and v.health and not v.health.dead and U.is_inside_ellipse(v.pos, available, radius_check_enemies)
+					end)
+
+					table.insert(available_paths, {
+						pos = available,
+						enemies = #enemies
+					})
+				end
+			end
+
+			table.sort(available_paths, function(e1, e2)
+				return e1.enemies > e2.enemies
+			end)
+		elseif mode == MODE_CHAIN then
+			local radius_check_towers = this.spawn_check_towers_range
+
+			for _, available in ipairs(this.spawn_available_pos) do
+				local found = false
+
+				for _, selected in ipairs(this.selected_paths) do
+					if selected.x == available.x and selected.y == available.y then
+						found = true
+
+						break
+					end
+				end
+
+				if not found then
+					local towers = table.filter(store.towers, function(k, v)
+						return v.tower and not v.tower_holder and U.is_inside_ellipse(v.pos, available, radius_check_towers)
+					end)
+
+					if #towers > 0 then
+						table.insert(available_paths, {
+							pos = available,
+							towers = #towers
+						})
+					end
+				end
+			end
+
+			table.sort(available_paths, function(e1, e2)
+				return e1.towers > e2.towers
+			end)
+		end
+
+		return #available_paths > 0 and available_paths[1].pos or nil
+	end
+
+	local function do_chain_ability()
+		for _, illusion in ipairs(this.active_illusions) do
+			illusion.dissapear = true
+		end
+
+		this.active_illusions = {}
+		this.selected_paths = {}
+
+		for i = 1, wave_config.illusions do
+			local illusion_pos = get_illusion_pos(MODE_CHAIN)
+
+			if illusion_pos then
+				local illusion = E:create_entity(this.entity_illusion)
+
+				illusion.pos = V.vclone(illusion_pos)
+				illusion.mode = MODE_CHAIN
+
+				simulation:queue_insert_entity(illusion)
+				S:queue(this.sound_illusion_summon_spawn)
+				table.insert(this.active_illusions, illusion)
+				table.insert(this.selected_paths, illusion_pos)
+				U.y_wait_unconditional(store, this.illusion_delay_between)
+			end
+		end
+	end
+
+	local function do_shield_ability()
+		for _, illusion in ipairs(this.active_illusions) do
+			illusion.dissapear = true
+		end
+
+		this.active_illusions = {}
+		this.selected_paths = {}
+
+		for i = 1, wave_config.illusions do
+			local illusion_pos = get_illusion_pos(MODE_SHIELD)
+
+			if illusion_pos then
+				local illusion = E:create_entity(this.entity_illusion)
+
+				illusion.pos = V.vclone(illusion_pos)
+				illusion.mode = MODE_SHIELD
+
+				simulation:queue_insert_entity(illusion)
+				table.insert(this.active_illusions, illusion)
+				table.insert(this.selected_paths, illusion_pos)
+				U.y_wait_unconditional(store, this.illusion_delay_between)
+			end
+		end
+	end
+
+	while store.wave_group_number == 0 do
+		coroutine.yield()
+	end
+
+	local taunt_delay = math.random(this.cultist.taunts.delay_min, this.cultist.taunts.delay_max)
+
+	this.last_taunt = store.tick_ts
+	this.taunts_enabled = true
+
+	local function break_fn()
+		return this.is_denas_dead or this.cultist.veznan_hit
+	end
+
+	while true do
+		::label_1170_0::
+
+		if this.is_denas_dead then
+			U.animation_start_default(this.cultist, "idle", nil, store.tick_ts, true)
+
+			while not this.leave do
+				coroutine.yield()
+			end
+
+			U.animation_start_default(this.cultist, "leave", nil, store.tick_ts)
+			U.y_wait_unconditional(store, 1.4)
+			S:queue("Stage11MidCinematicPlatformMove")
+			S:queue("Stage11CultLeaderLeave")
+			U.y_wait_unconditional(store, 1.6)
+			S:queue("Stage11MidCinematicPlatformMove")
+			U.y_animation_wait_default(this.cultist)
+			simulation:queue_remove_entity(this)
+
+			return
+		end
+
+		if this.cultist.veznan_hit then
+			this.cultist.veznan_hit = false
+
+			U.y_animation_play(this.cultist, "stunnedin", nil, store.tick_ts)
+			U.animation_start_default(this.cultist, "stunnedloop", nil, store.tick_ts, true)
+
+			local start_ts = store.tick_ts
+
+			while true do
+				if store.tick_ts - start_ts >= this.cultist_stun_time then
+					break
+				end
+
+				if break_fn() then
+					U.y_animation_play(this.cultist, "stunnedout", nil, store.tick_ts)
+					U.animation_start_default(this.cultist, "idle", nil, store.tick_ts, true)
+
+					goto label_1170_0
+				end
+
+				coroutine.yield()
+			end
+
+			U.y_animation_play(this.cultist, "stunnedout", nil, store.tick_ts)
+			U.animation_start_default(this.cultist, "idle", nil, store.tick_ts, true)
+		end
+
+		if taunt_delay <= store.tick_ts - this.last_taunt and this.taunts_enabled then
+			local taunt_set = "pre_bossfight"
+
+			if store.waves_finished and LU.has_alive_enemies(store) then
+				taunt_set = "in_bossfight"
+			end
+
+			SU.y_show_taunt_set(store, this.cultist.taunts, taunt_set, false)
+
+			this.last_taunt = store.tick_ts
+			taunt_delay = math.random(this.cultist.taunts.delay_min, this.cultist.taunts.delay_max)
+		end
+
+		if store.wave_group_number ~= last_wave_processed and last_wave_processed < 15 then
+			last_wave_processed = store.wave_group_number
+			wave_config = this.config.config_per_wave[last_wave_processed]
+			last_ability_ts = store.tick_ts - ability_cd + this.config.ability_first_delay
+		end
+
+		if last_wave_processed == 15 then
+			local bossfight = false
+
+			for _, v in pairs(store.entities) do
+				if v.template_name == "boss_corrupted_denas" then
+					bossfight = true
+
+					break
+				end
+			end
+
+			if bossfight then
+				last_wave_processed = 16
+				wave_config = this.config.config_per_wave[last_wave_processed]
+				ability_cd = this.config.ability_cooldown_bossfight
+				last_ability_ts = store.tick_ts
+			end
+		end
+
+		if ability_cd <= store.tick_ts - last_ability_ts then
+			local is_in_cinematic = not this.taunts_enabled
+
+			if LU.has_alive_enemies(store, {"enemy_stage_11_cult_leader_illusion"}) and not is_in_cinematic then
+				if SU.deck_draw(this._ability_deck) then
+					local illusion_pos = get_illusion_pos(MODE_CHAIN)
+
+					if illusion_pos then
+						S:queue(this.sound_illusion_summon_cast)
+						U.y_animation_play(this.cultist, "attack", nil, store.tick_ts)
+						U.animation_start_default(this.cultist, "attackloop", nil, store.tick_ts, true)
+
+						if last_wave_processed == 16 then
+							this.projections_in_bossfight = this.projections_in_bossfight + 1
+						end
+
+						do_chain_ability()
+
+						if U.y_wait_conditional(store, this.cultist_attack_time, break_fn) then
+							U.y_animation_play(this.cultist, "attackleave", false, store.tick_ts)
+							U.animation_start_default(this.cultist, "idle", nil, store.tick_ts, true)
+
+							goto label_1170_0
+						end
+
+						U.y_animation_play(this.cultist, "attackleave", false, store.tick_ts)
+					end
+				else
+					S:queue(this.sound_illusion_summon_cast)
+					U.y_animation_play(this.cultist, "attack", nil, store.tick_ts)
+					U.animation_start_default(this.cultist, "attackloop", nil, store.tick_ts, true)
+
+					if last_wave_processed == 16 then
+						this.projections_in_bossfight = this.projections_in_bossfight + 1
+					end
+
+					do_shield_ability()
+
+					if U.y_wait_conditional(store, this.cultist_attack_time, break_fn) then
+						U.y_animation_play(this.cultist, "attackleave", false, store.tick_ts)
+						U.animation_start_default(this.cultist, "idle", nil, store.tick_ts, true)
+
+						goto label_1170_0
+					end
+
+					U.y_animation_play(this.cultist, "attackleave", false, store.tick_ts)
+				end
+
+				U.y_animation_wait_default(this.cultist)
+				U.animation_start_default(this.cultist, "idle", nil, store.tick_ts, true)
+
+				last_ability_ts = store.tick_ts
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
 tt = E:register_t_hot("decal_stage_11_cultist_leader_modes_worker", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].z = Z_DECALS
@@ -373,16 +691,14 @@ tt.render.sprites[1].prefix = "stage_11_deco_mydrias_workerDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].draw_order = 2
+
 tt = E:register_t_hot("decal_stage_11_boss_corrupted_denas_intro_base", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "denas_intro_baseDef"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
-tt = E:register_t_hot("decal_stage_11_rock_4", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_4"
-tt = E:register_t_hot("decal_stage_11_rock_13", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].scale = vv(0.85)
+
 tt = E:register_t_hot("decal_stage_11_sam_and_frodo", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "sam_and_frodoDef"
@@ -392,6 +708,7 @@ tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.main_script.update = decal_stage_11_sam_and_frodo_update
 tt.ui.click_rect = r(370, -270, 50, 40)
 tt.push_up_cooldown = 7
+
 tt = E:register_t_hot("controller_stage_11_portal", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = controller_stage_11_portal_insert
@@ -428,50 +745,35 @@ tt.sound_thunder_cd_min = 8
 tt.sound_thunder_cd_max = 12
 tt.sound_portal_open = "Stage11PortalOpen"
 tt.sound_portal_close = "Stage11PortalClose"
-tt = E:register_t_hot("decal_stage_11_rock_11", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_11"
-tt = E:register_t_hot("decal_stage_11_rock_12", "decal_stage_11_rock_11", true)
-tt.render.sprites[1].scale = vv(1.35)
+
 tt = E:register_t_hot("decal_boss_corrupted_denas_dust", "decal", true)
 tt.render.sprites[1].name = "denas_dustexplosion_run"
 tt.render.sprites[1].hide_after_runs = 1
+
 tt = E:register_t_hot("controller_stage_11_cultist_leader_modes", nil, true)
 E:add_comps(tt, "editor", "main_script")
 tt.main_script.update = controller_stage_11_cultist_leader_modes_update
 tt.entity_tables = "decal_stage_11_cultist_leader_modes"
 tt.entity_worker = "decal_stage_11_cultist_leader_modes_worker"
-tt = E:register_t_hot("decal_stage_11_rock_5", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_5"
-tt.render.sprites[1].scale = vv(0.65)
+
 tt = E:register_t_hot("decal_stage_11_boss_corrupted_denas_intro_jump", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "denas_intro_jumpDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].loop = false
-tt = E:register_t_hot("decal_stage_11_rock_6", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_6"
-tt = E:register_t_hot("decal_stage_11_rock_8", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_8"
-tt.render.sprites[1].scale = vv(0.75)
-tt = E:register_t_hot("decal_stage_11_rock_3", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_3"
+
 tt = E:register_t_hot("decal_stage_11_boss_corrupted_denas_intro_chains", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "denas_intro_chainsDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
-tt = E:register_t_hot("decal_stage_11_rock_18", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_12"
-tt = E:register_t_hot("decal_stage_11_rock_19", "decal_stage_11_rock_18", true)
-tt.render.sprites[1].scale = v(0.5, 0.5)
-tt.render.sprites[1].flip_x = true
+
 tt = E:register_t_hot("decal_stage_11_sam_and_frodo_mask", "decal", true)
 tt.render.sprites[1].name = "sam_and_frodo_easter_egg_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
-tt = E:register_t_hot("decal_stage_11_rock_16", "decal_stage_11_rock_4", true)
-tt.render.sprites[1].scale = vv(1.25)
+
 tt = E:register_t_hot("decal_stage_11_veznan", "tower", true)
 E:add_comps(tt, "user_selection", "attacks")
 tt.tower.type = "stage_11_veznan"
@@ -512,11 +814,7 @@ tt.sound_events.insert = "Stage11MidCinematicVeznanTeleport"
 tt.sound_ready = "Stage11MidCinematicVeznanTeleport"
 tt.sound_soul_impact_cast = "Stage11VeznanSoulImpactCast"
 tt.sound_demon_guard_cast = "Stage11VeznanDemonGuardCast"
-tt = E:register_t_hot("decal_stage_11_rock_10", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_10"
-tt = E:register_t_hot("decal_stage_11_rock_15", "decal_stage_11_rock_2", true)
-tt.render.sprites[1].scale = vv(2)
-tt.render.sprites[1].flip_x = true
+
 tt = E:register_t_hot("decal_stage_11_cultist_leader_modes", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].z = Z_DECALS
@@ -524,13 +822,7 @@ tt.render.sprites[1].prefix = "stage_11_deco_mydrias_baseDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].draw_order = 1
-tt = E:register_t_hot("decal_stage_11_rock_9", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_9"
-tt = E:register_t_hot("decal_stage_11_rock_7", "decal_stage_11_rock_1", true)
-tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_7"
-tt = E:register_t_hot("decal_stage_11_rock_17", "decal_stage_11_rock_4", true)
-tt.render.sprites[1].scale = v(0.75, 0.5)
-tt.render.sprites[1].flip_x = true
+
 tt = E:register_t_hot("decal_stage_11_veznan_modes", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].z = Z_DECALS
@@ -541,5 +833,217 @@ tt.render.sprites[2].prefix = "deco_veznan_statue_torch"
 tt.render.sprites[2].name = "idle"
 tt.render.sprites[2].draw_order = 2
 tt.render.sprites[2].offset = v(0, -66)
+
+tt = E:register_t_hot("decal_stage_11_lightnings_1", "decal", true)
+tt.render.sprites[1].prefix = "stage_11_elec1Def"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
+tt = E:register_t_hot("decal_stage_11_lightnings_2", "decal", true)
+tt.render.sprites[1].prefix = "stage_11_elec2Def"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
+tt = E:register_t_hot("decal_stage_11_lightnings_3", "decal", true)
+tt.render.sprites[1].prefix = "stage_11_elec3Def"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
+-- {
+-- 	template = "decal_stage_11_mask",
+-- 	pos = {
+-- 		x = 512,
+-- 		y = 384
+-- 	}
+-- },
+-- 原在 stage111 中使用，但我们没有这个 sprite
+
+tt = E:register_t_hot("decal_stage_11_rock_1", "decal", true)
+E:add_comps(tt, "tween", "editor")
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].draw_order = 2
+tt.tween_amplitude = 30
+tt.tween_frecueny = 200
+tt.tween.disabled = false
+tt.tween.remove = false
+tt.tween.props[1].name = "offset"
+tt.tween.props[1].loop = true
+tt.tween.props[1].interp = "sine"
+tt.editor.props = {{"tween_amplitude", PT_NUMBER}, {"tween_frecueny", PT_NUMBER}}
+
+tt = E:register_t_hot("decal_stage_11_rock_2", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_2"
+
+tt = E:register_t_hot("decal_stage_11_rock_4", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_4"
+
+tt = E:register_t_hot("decal_stage_11_rock_13", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].scale = vv(0.85)
+
+tt = E:register_t_hot("decal_stage_11_rock_11", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_11"
+
+tt = E:register_t_hot("decal_stage_11_rock_12", "decal_stage_11_rock_11", true)
+tt.render.sprites[1].scale = vv(1.35)
+
+tt = E:register_t_hot("decal_stage_11_rock_5", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_5"
+tt.render.sprites[1].scale = vv(0.65)
+
+tt = E:register_t_hot("decal_stage_11_rock_6", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_6"
+
+tt = E:register_t_hot("decal_stage_11_rock_8", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_8"
+tt.render.sprites[1].scale = vv(0.75)
+
+tt = E:register_t_hot("decal_stage_11_rock_3", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_3"
+
+tt = E:register_t_hot("decal_stage_11_rock_18", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_12"
+
+tt = E:register_t_hot("decal_stage_11_rock_19", "decal_stage_11_rock_18", true)
+tt.render.sprites[1].scale = v(0.5, 0.5)
+tt.render.sprites[1].flip_x = true
+
+tt = E:register_t_hot("decal_stage_11_rock_16", "decal_stage_11_rock_4", true)
+tt.render.sprites[1].scale = vv(1.25)
+
+tt = E:register_t_hot("decal_stage_11_rock_10", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_10"
+
+tt = E:register_t_hot("decal_stage_11_rock_15", "decal_stage_11_rock_2", true)
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].flip_x = true
+
+tt = E:register_t_hot("decal_stage_11_rock_9", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_9"
+
+tt = E:register_t_hot("decal_stage_11_rock_7", "decal_stage_11_rock_1", true)
+tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_7"
+
+tt = E:register_t_hot("decal_stage_11_rock_17", "decal_stage_11_rock_4", true)
+tt.render.sprites[1].scale = v(0.75, 0.5)
+tt.render.sprites[1].flip_x = true
+
 tt = E:register_t_hot("decal_stage_11_rock_14", "decal_stage_11_rock_13", true)
 tt.render.sprites[1].flip_x = true
+
+tt = E:register_t_hot("controller_stage_11_cult_leader", nil, true)
+E:add_comps(tt, "editor", "pos", "main_script")
+tt.main_script.insert = controller_stage_11_cult_leader.insert
+tt.main_script.update = controller_stage_11_cult_leader.update
+tt.entity_cultist = "decal_stage_11_cult_leader"
+tt.entity_illusion = "enemy_stage_11_cult_leader_illusion"
+tt.cultist_pos = v(730, 510)
+tt.spawn_available_pos = {v(340, 476), v(546, 478), v(366, 296), v(648, 284), v(920, 390)}
+tt.config = {
+	deck_chain_ability = 1,
+	ability_cooldown_bossfight = 30,
+	ability_first_delay = 30,
+	stun_time = 15,
+	ability_cooldown = 90,
+	deck_total_cards = 2,
+	illusion = {
+		max_speed = 20,
+		hp_max = 150,
+		magic_armor = 0,
+		armor = 0,
+		spawn_charge_time = 5,
+		nodes_limit = 20,
+		melee_attack = {
+			cooldown = 1,
+			damage_min = 5,
+			damage_max = 5
+		},
+		ranged_attack = {
+			max_range = 100,
+			damage_max = 24,
+			damage_min = 16,
+			cooldown = 1.5,
+			min_range = 10,
+			damage_type = DAMAGE_MAGICAL
+		},
+		chain = {
+			max_range = 160,
+			duration = 12,
+			cooldown = 1
+		},
+		shield = {
+			duration = 12,
+			radius = 80
+		}
+	},
+	config_per_wave = {
+		{
+			illusions = 1
+		},
+		{
+			illusions = 1
+		},
+		{
+			illusions = 1
+		},
+		{
+			illusions = 1
+		},
+		{
+			illusions = 1
+		},
+		{
+			illusions = 1
+		},
+		{
+			illusions = 1
+		},
+		{
+			illusions = 1
+		},
+		{
+			illusions = 1
+		},
+		{
+			illusions = 2
+		},
+		{
+			illusions = 2
+		},
+		{
+			illusions = 2
+		},
+		{
+			illusions = 2
+		},
+		{
+			illusions = 2
+		},
+		{
+			illusions = 2
+		},
+		{
+			illusions = 3
+		},
+		{
+			illusions = 3
+		}
+	}
+}
+tt.spawn_check_enemies_range = 150
+tt.spawn_check_towers_range = 150
+tt.cultist_attack_time = 5
+tt.cultist_stun_time = 15
+tt.illusion_delay_between = fts(24)
+tt.sound_illusion_summon_cast = "Stage11MydriasIllusionSummonCast"
+
+tt = E:register_t_hot("decal_boss_corrupted_denas_hit_floor", "decal_tween", true)
+tt.render.sprites[1].name = "denas_decal"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].animated = false
+tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {1.9, 255}, {2.3, 0}}
+

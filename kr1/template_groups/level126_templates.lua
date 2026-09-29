@@ -289,12 +289,43 @@ decal_stage_26_modes_decos_update = function(this, store)
 	end
 end
 local tt
+local SU = require("script_utils")
+local controller_stage_26_taunts = {}
+
+function controller_stage_26_taunts.update(this, store)
+	local taunt_ts = store.tick_ts
+	local taunt_cd = math.random(this.taunts.delay_min, this.taunts.delay_max)
+
+	while store.wave_group_number == 0 do
+		if taunt_cd < store.tick_ts - taunt_ts then
+			SU.y_show_taunt_set(store, this.taunts, "preparation", false)
+
+			taunt_ts = store.tick_ts
+			taunt_cd = math.random(this.taunts.delay_min, this.taunts.delay_max)
+		end
+
+		coroutine.yield()
+	end
+
+	while not store.waves_finished do
+		if taunt_cd < store.tick_ts - taunt_ts then
+			SU.y_show_taunt_set(store, this.taunts, "fight", false)
+
+			taunt_ts = store.tick_ts
+			taunt_cd = math.random(this.taunts.delay_min, this.taunts.delay_max)
+		end
+
+		coroutine.yield()
+	end
+end
+
 tt = E:register_t_hot("decal_stage_26_bubbles", "decal", true)
 tt.render.sprites[1].prefix = "DLC_Enanos_S4_BubblesDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
 tt = E:register_t_hot("controller_stage_26_fist_spawner_hand", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_26_fist_spawner_hand_update
@@ -303,10 +334,12 @@ tt.fist_spawner_light_t = "decal_stage_26_fist_spawner_light"
 tt.sound_hand = "Stage26FistSpawnerHand"
 tt.sound_open = "Stage26FistSpawnerBoothFrontDoorOpen"
 tt.sound_close = "Stage26FistSpawnerBoothFrontDoorClose"
+
 tt = E:register_t_hot("decal_stage_26_foreground_2", "decal", true)
 tt.render.sprites[1].name = "DLC_enanos_stage_04_foreground_b"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
+
 tt = E:register_t_hot("decal_stage_26_modes_decos", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "DLCstage4_deco_modosDef"
@@ -314,6 +347,7 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.main_script.update = decal_stage_26_modes_decos_update
+
 tt = E:register_t_hot("controller_stage_26_hulk_spawner", nil, true)
 E:add_comps(tt, "main_script", "events")
 tt.main_script.update = controller_stage_26_hulk_spawner_update
@@ -324,13 +358,16 @@ tt.path_to_spawn = 9
 tt.events.list[1].name = "hulk_spawn"
 tt.events.list[1].on_event = controller_stage_26_hulk_spawner_on_event
 tt.sound_shot = "Stage26HulkSpawnerShotTransform"
+
 tt = E:register_t_hot("decal_stage_26_mask_5", "decal", true)
 tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_5"
 tt.render.sprites[1].animated = false
+
 tt = E:register_t_hot("decal_stage_26_gears_front", "decal", true)
 tt.render.sprites[1].prefix = "DLC_Enanos_S4_GearsDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
+
 tt = E:register_t_hot("controller_stage_26_spawners", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_26_spawners_update
@@ -1048,6 +1085,7 @@ tt.clone_spawner_controller_t = "controller_stage_26_clone_spawner"
 tt.clone_spawner_t = "decal_stage_26_clone_spawner"
 tt.hulk_spawner_controller_t = "controller_stage_26_hulk_spawner"
 tt.hulk_spawner_t = "decal_stage_26_hulk_spawner"
+
 tt = E:register_t_hot("decal_stage_26_mewtwo_capsules", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "DLC_Enanos_S4_EasterEgg_Mewtwo_CanistersDef"
@@ -1060,24 +1098,29 @@ tt.mewtwo_t = "decal_stage_26_mewtwo"
 tt.sound_1_2 = "Stage26MewtwoTap12"
 tt.sound_3 = "Stage26MewtwoTap3"
 tt.sound_end = "Stage26MewtwoFlightFullSequence"
+
 tt = E:register_t_hot("controller_stage_26_fist_spawner", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_26_fist_spawner_update
 tt.boss_t = "decal_stage_26_boss"
 tt.hand_controller_t = "controller_stage_26_fist_spawner_hand"
+
 tt = E:register_t_hot("decal_stage_26_mask_2", "decal", true)
 tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
 tt = E:register_t_hot("decal_stage_26_gears_back", "decal", true)
 tt.render.sprites[1].prefix = "DLC_Enanos_S4_GearsBackDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND
+
 tt = E:register_t_hot("decal_stage_26_mask_4", "decal", true)
 tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 200
+
 tt = E:register_t_hot("controller_stage_26_clone_spawner", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_26_clone_spawner_update
@@ -1087,13 +1130,82 @@ tt.boss_t = "decal_stage_26_boss"
 tt.sound_in = "Stage26CloneSpawnerIn"
 tt.sound_out = "Stage26CloneSpawnerOut"
 tt.sound_chain = "Stage26Chain"
+
 tt = E:register_t_hot("decal_stage_26_foreground_1", "decal", true)
 tt.render.sprites[1].name = "DLC_enanos_stage_04_foreground_a"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
+
 tt = E:register_t_hot("decal_stage_26_mask_3", "decal", true)
 tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
 tt = E:register_t_hot("decal_terrain_6_exodia_arm_2", "decal_terrain_6_exodia_arm", true)
 tt.render.sprites[1].flip_x = true
+
+tt = E:register_t_hot("decal_stage_26_mask_1", "decal", true)
+tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+
+tt = E:register_t_hot("decal_stage_26_boss", "decal", true)
+E:add_comps(tt, "editor")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_Boss01Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 104
+
+tt = E:register_t_hot("decal_stage_26_clone_spawner", "decal", true)
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_ElevatorDef"
+tt.render.sprites[1].name = "idle_1"
+tt.render.sprites[1].exo = true
+
+tt = E:register_t_hot("decal_stage_26_tube_left", "decal", true)
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_ElevatorTubeADef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND
+
+tt = E:register_t_hot("decal_stage_26_tube_right", "decal", true)
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_ElevatorTubeBDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND
+
+tt = E:register_t_hot("decal_stage_26_fist_spawner", "decal", true)
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_CloneActivatorDef"
+tt.render.sprites[1].name = "idle_1"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t_hot("decal_stage_26_fist_spawner_light", "decal", true)
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_ActivatorLightDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
+tt = E:register_t_hot("decal_stage_26_hulk_spawner", "decal", true)
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_HulkSpawnerDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "DLC_Enanos_S4_HulkSpawnerSyringeDef"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].z = Z_OBJECTS_COVERS
+
+tt = E:register_t_hot("controller_stage_26_taunts", nil, true)
+E:add_comps(tt, "main_script", "taunts", "editor")
+tt.main_script.update = controller_stage_26_taunts.update
+tt.taunts.delay_min = 20
+tt.taunts.delay_max = 30
+tt.taunts.sets = {}
+tt.taunts.sets.preparation = CC("taunt_set")
+tt.taunts.sets.preparation.format = "LV26_GRYMBEARD_PREPARATION_TAUNT_%02i"
+tt.taunts.sets.preparation.end_idx = 4
+tt.taunts.sets.fight = CC("taunt_set")
+tt.taunts.sets.fight.format = "LV26_GRYMBEARD_FIGHT_TAUNT_%02i"
+tt.taunts.sets.fight.end_idx = 4
+
