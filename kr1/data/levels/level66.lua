@@ -27,7 +27,7 @@ end
 while store.wave_group_number<1 do
 coroutine.yield()
 end
-while not store.waves_finished or select(2,LU.has_alive_enemies(store))>1 do
+while not store.waves_finished or LU.has_alive_enemies(store,{"eb_bram"}) do
 coroutine.yield()
 end
 boss.phase_signal="prebattle"
