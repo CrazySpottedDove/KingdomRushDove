@@ -8,6 +8,9 @@ local function fts(v)
 	return v / FPS
 end
 require("lib.klua.table")
+local function queue_damage(store, damage)
+	store.damage_queue[#store.damage_queue + 1] = damage
+end
 local ACH = require("achievements")
 local scripts = require("scripts")
 local v = V.v
@@ -413,3 +416,249 @@ tt.render.sprites[1].name = "stage_3_treeTop"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
+tt = E:register_t_hot("ps_bullet_stage_03_heart_of_the_arborean", true)
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "stage_3_HeartProy_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(5), fts(5)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_area_spread = vv(0)
+tt.particle_system.scales_y = {1, 0.5}
+tt.particle_system.scales_x = {1, 0.5}
+
+tt = E:register_t_hot("decal_bullet_stage_03_heart_of_the_arborean", "decal", true)
+E:add_comps(tt, "tween")
+tt.render.sprites[1].name = "explosiondecal_asst_heart_decal"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.disabled = false
+tt.tween.remove = true
+tt.tween.props[1].keys = {{0, 255}, {3, 255}, {4, 0}}
+
+tt = E:register_t_hot("bullet_stage_03_heart_of_the_arborean", "bolt", true)
+E:add_comps(tt, "force_motion")
+tt.render.sprites[1].prefix = "stage_3_HeartProy_proyectile"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "stage_3_HeartProy_glow"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].z = Z_BULLETS - 1
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.height_attack = 70
+tt.initial_vel_y = 50
+tt.transition_time = 1
+tt.target_distance_detection = 20
+tt.main_script.insert = function(this, store)
+	local b = this.bullet
+
+	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
+
+	local s = this.render.sprites[1]
+
+	if not b.ignore_rotation then
+		s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+	end
+
+	U.animation_start_default(this, "run", nil, store.tick_ts, s.loop)
+
+	return true
+end
+tt.main_script.update = function(this, store)
+	local b = this.bullet
+	local fm = this.force_motion
+	local target = store.entities[b.target_id]
+	local ps
+	local dmin, dmax = b.damage_min, b.damage_max
+	local dradius = b.damage_radius
+
+	local function move_step(dest)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
+		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
+
+		if dist <= 4 * fm.max_v * store.tick_length then
+			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
+		end
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
+		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = 0, 0
+
+		return dist <= fm.max_v * store.tick_length
+	end
+
+	local function do_hit(hit_pos)
+		local targets = U.find_enemies_in_range_filter_off(hit_pos, b.damage_radius, b.vis_flags, b.vis_bans)
+
+		if targets then
+			for _, t in ipairs(targets) do
+				local dist_factor = U.dist_factor_inside_ellipse(t.pos, b.to, dradius)
+
+				local d = E.assign_damage(b.damage_type, math.ceil(b.damage_factor * math.floor(dmax - (dmax - dmin) * dist_factor)), this.id, t.id)
+
+				queue_damage(store, d)
+			end
+		end
+
+		S:queue(b.hit_sound)
+
+		local fx = E:create_entity(b.hit_fx)
+
+		fx.pos = V.vclone(hit_pos)
+
+		U.animation_start_default(fx, "idle", nil, store.tick_ts, false)
+		simulation:queue_insert_entity(fx)
+
+		local decal = E:create_entity(b.hit_decal)
+
+		decal.pos = V.vclone(hit_pos)
+
+		U.animation_start_default(decal, "idle", nil, store.tick_ts, false)
+
+		decal.tween.ts = store.tick_ts
+
+		simulation:queue_insert_entity(decal)
+	end
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.emit = true
+		ps.particle_system.track_id = this.id
+
+		simulation:queue_insert_entity(ps)
+	end
+
+	local pred_pos
+
+	if target then
+		pred_pos = P:predict_enemy_pos(target, fts(5))
+	else
+		pred_pos = b.to
+	end
+
+	local iix, iiy = V.normalize(pred_pos.x - this.pos.x, pred_pos.y - this.pos.y)
+	local last_pos = V.vclone(this.pos)
+
+	b.ts = store.tick_ts
+
+	while true do
+		target = store.entities[b.target_id]
+
+		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
+			local hit_offset = V.v(0, 0)
+
+			if not b.ignore_hit_offset then
+				hit_offset.x = target.unit.hit_offset.x
+				hit_offset.y = target.unit.hit_offset.y
+			end
+
+			local d = math.max(math.abs(target.pos.x + hit_offset.x - b.to.x), math.abs(target.pos.y + hit_offset.y - b.to.y))
+
+			if d > b.max_track_distance then
+				target = nil
+				b.target_id = nil
+			else
+				b.to.x, b.to.y = target.pos.x + hit_offset.x, target.pos.y + hit_offset.y
+			end
+		end
+
+		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
+			local t = store.tick_ts - b.ts
+
+			if this.initial_impulse_angle_abs then
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
+			else
+				local angle = this.initial_impulse_angle
+
+				if iix < 0 then
+					angle = angle * -1
+				end
+
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
+			end
+		end
+
+		last_pos.x, last_pos.y = this.pos.x, this.pos.y
+
+		if move_step(b.to) then
+			break
+		end
+
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+		end
+
+		coroutine.yield()
+	end
+
+	this.render.sprites[1].hidden = true
+
+	do_hit(b.to)
+
+	if ps and ps.particle_system.emit then
+		ps.particle_system.emit = false
+	end
+
+	U.y_wait_unconditional(store, fts(10))
+	simulation:queue_remove_entity(this)
+end
+tt.bullet.damage_max = 40
+tt.bullet.damage_min = 30
+tt.bullet.damage_radius = 80
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.particles_name = "ps_bullet_stage_03_heart_of_the_arborean"
+tt.bullet.max_speed = 1800
+tt.bullet.min_speed = 30
+tt.bullet.hit_sound = "Stage03HeartOfTheForestBlast"
+tt.bullet.hit_decal = "decal_bullet_stage_03_heart_of_the_arborean"
+tt.bullet.hit_fx = "trees_heart_of_the_arborean_decal_hit_fx"
+tt.bullet.align_with_trajectory = true
+tt.initial_impulse = 12000
+tt.initial_impulse_duration = 0.2
+tt.initial_impulse_angle = math.pi / 2
+tt.force_motion.a_step = 15
+tt.force_motion.max_a = 1800
+tt.force_motion.max_v = 600
+tt.sound_events.insert = nil
+
+tt = E:register_t_hot("trees_heart_of_the_arborean_shaman_decal", "decal_scripted", true)
+tt.render.sprites[1].prefix = "shamanDef"
+tt.render.sprites[1].name = "Idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.insert = nil
+tt.main_script.update = function(this, store)
+	while this.shaman_state == "waiting" do
+		coroutine.yield()
+	end
+
+	while true do
+		U.animation_start_default(this, "Absorb", nil, store.tick_ts, true)
+
+		while this.shaman_state ~= "charged" do
+			coroutine.yield()
+		end
+
+		U.y_animation_play(this, "TransitionToReadyToCast", nil, store.tick_ts)
+		U.animation_start_default(this, "ReadyToCast", nil, store.tick_ts, true)
+
+		while this.shaman_state ~= "shoot" do
+			coroutine.yield()
+		end
+
+		U.animation_start_default(this, "Cast", nil, store.tick_ts)
+		U.y_wait_unconditional(store, 1)
+		U.animation_start_default(this, "CastIdle", nil, store.tick_ts, true)
+		U.y_wait_unconditional(store, 3)
+		U.y_animation_play(this, "CastEnd", nil, store.tick_ts)
+
+		this.shaman_state = "charging"
+	end
+end

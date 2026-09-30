@@ -5595,10 +5595,6 @@ tt.render.sprites[1].name = "fireball_explosion"
 tt.render.sprites[1].anchor.y = 0.15
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = RT("decal_stage81_burner", "decal")
-AC(tt, "editor")
-tt.render.sprites[1].name = "decal_s81_burner"
-
 tt = RT("decal_endless_shoutbox", "decal_s18_shoutbox")
 tt.render.sprites[1].name = "hee-haw_taunt"
 tt.texts.list[1].color = {233, 189, 255}
@@ -6414,56 +6410,6 @@ tt.damage_min = 0.0016
 tt.damage_max = 0.0016
 
 -- G5
--- local function vv(x)
--- 	return {
--- 		x = x,
--- 		y = x
--- 	}
--- end
-
-tt = E:register_t("decal_stage_01_robin_hood_mask", "decal_static")
-tt.render.sprites[1].name = "robin_hood_mask"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.render.sprites[1].hidden = true
-
-tt = E:register_t("decal_stage_02_elder_rune_base", "decal")
-E:add_comps(tt, "main_script")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "stage_2_rapido_elder_rune_2_base"
-tt.render.sprites[1].sort_y_offset = 1
-
-tt = E:register_t("decal_stage_02_fishing_link_line", "decal_scripted")
-tt.render.sprites[1].prefix = "fishing_link_line"
-tt.render.sprites[1].loop = true
-tt.main_script.update = scripts.decal_stage_02_fishing_link_line.update
-tt.fish_animations = {"fishing_nothing", "fishing_boot", "fishing_fish", "fishing_rupee", "fishing_nothing"}
-
-tt = E:register_t("decal_stage_02_lion_king_light", "decal_scripted")
-E:add_comps(tt, "ui", "tween")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "light_copy"
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].hidden = true
-tt.tween.props[1].keys = {{0, 0}, {fts(29), 255}, {fts(77), 255}, {fts(102), 0}}
-tt.tween.remove = false
-tt.tween.disabled = true
-
-tt = E:register_t("taunts_s01_controller")
-AC(tt, "main_script", "taunts", "editor")
-tt.load_file = "level101_taunts"
-tt.main_script.insert = scripts.taunts_controller.insert
-tt.taunts.delay_min = 10
-tt.taunts.delay_max = 20
-tt.taunts.sets = {}
-tt.taunts.sets.tutorial_arborean_build_barrack = CC("taunt_set")
-tt.taunts.sets.tutorial_arborean_build_barrack.format = "TAUNT_TUTORIAL_ARBOREAN_BARRACK_%04i"
-tt.taunts.sets.tutorial_arborean_build_barrack.decal_name = "decal_tutorial_arborean_shoutbox"
-tt.taunts.sets.tutorial_arborean_build_barrack.pos = v(860, 650)
-tt.taunts.sets.tutorial_arborean_build_all = CC("taunt_set")
-tt.taunts.sets.tutorial_arborean_build_all.format = "TAUNT_TUTORIAL_ARBOREAN_ALL_%04i"
-tt.taunts.sets.tutorial_arborean_build_all.decal_name = "decal_tutorial_arborean_shoutbox"
-tt.taunts.sets.tutorial_arborean_build_all.pos = v(860, 650)
 
 tt = E:register_t("decal_tutorial_arborean_shoutbox", "decal_tween")
 E:add_comps(tt, "texts")
@@ -6506,166 +6452,6 @@ tt.tween.remove = true
 tt = E:register_t("decal_waves", "decal_loop")
 tt.render.sprites[1].name = "stage_2_props_waves"
 
-tt = E:register_t("taunts_s02_controller")
-E:add_comps(tt, "main_script", "taunts", "editor")
-tt.load_file = "level101_taunts"
-tt.main_script.insert = scripts.taunts_controller.insert
-tt.taunts.delay_min = 10
-tt.taunts.delay_max = 20
-tt.taunts.sets = {}
-tt.taunts.sets.stage_02_veznan = CC("taunt_set")
-tt.taunts.sets.stage_02_veznan.format = "TAUNT_STAGE02_VEZNAN_%04i"
-tt.taunts.sets.stage_02_veznan.decal_name = "decal_stage02_veznan_shoutbox"
-tt.taunts.sets.stage_02_veznan.pos = v(740, 670)
-tt.taunts.sets.stage_02_raelyn = CC("taunt_set")
-tt.taunts.sets.stage_02_raelyn.format = "TAUNT_STAGE02_RAELYN_%04i"
-tt.taunts.sets.stage_02_raelyn.decal_name = "decal_stage02_raelyn_shoutbox"
-tt.taunts.sets.stage_02_raelyn.pos = v(460, 550)
-
-tt = E:register_t("decal_stage02_veznan_shoutbox", "decal_tween")
-E:add_comps(tt, "texts")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "cultist_taunt_0001"
-tt.render.sprites[1].z = Z_BULLETS
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].name = "cultist_taunt_0003"
-tt.render.sprites[2].z = Z_BULLETS
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].animated = false
-tt.render.sprites[3].z = Z_BULLETS
-tt.render.sprites[3].offset = v(13, -13)
-tt.texts.list[1].text = "Hello world"
-tt.texts.list[1].size = v(158, 56)
-tt.texts.list[1].font_name = "taunts"
-tt.texts.list[1].font_size = i18n:cjk(28, nil, 22, nil)
-tt.texts.list[1].color = {107, 255, 10, 255}
-tt.texts.list[1].line_height = i18n:cjk(0.8, 0.9, 1.1, 0.7)
-tt.texts.list[1].sprite_id = 3
-tt.texts.list[1].fit_height = true
-tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.duration-0.25", 255}, {"this.duration", 0}}
-tt.tween.props[1].sprite_id = 1
-tt.tween.props[2] = table.deepclone(tt.tween.props[1])
-tt.tween.props[2].sprite_id = 2
-tt.tween.props[3] = table.deepclone(tt.tween.props[1])
-tt.tween.props[3].sprite_id = 3
-tt.tween.props[4] = E:clone_c("tween_prop")
-tt.tween.props[4].name = "scale"
-tt.tween.props[4].keys = {{0, v(1.01, 1.01)}, {0.4, v(0.99, 0.99)}, {0.8, v(1.01, 1.01)}}
-tt.tween.props[4].sprite_id = 1
-tt.tween.props[4].loop = true
-tt.tween.props[5] = table.deepclone(tt.tween.props[4])
-tt.tween.props[5].sprite_id = 2
-tt.tween.props[6] = table.deepclone(tt.tween.props[4])
-tt.tween.props[6].sprite_id = 3
-tt.tween.remove = true
-
-tt = E:register_t("decal_stage02_raelyn_shoutbox", "decal_tween")
-E:add_comps(tt, "texts")
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "cultist_taunt_0001"
-tt.render.sprites[1].z = Z_BULLETS
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].name = "cultist_taunt_0003"
-tt.render.sprites[2].z = Z_BULLETS
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].animated = false
-tt.render.sprites[3].z = Z_BULLETS
-tt.render.sprites[3].offset = v(13, -13)
-tt.texts.list[1].text = "Hello world"
-tt.texts.list[1].size = v(158, 56)
-tt.texts.list[1].font_name = "taunts"
-tt.texts.list[1].font_size = i18n:cjk(28, nil, 22, nil)
-tt.texts.list[1].color = {233, 189, 255}
-tt.texts.list[1].line_height = i18n:cjk(0.8, 0.9, 1.1, 0.7)
-tt.texts.list[1].sprite_id = 3
-tt.texts.list[1].fit_height = true
-tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.duration-0.25", 255}, {"this.duration", 0}}
-tt.tween.props[1].sprite_id = 1
-tt.tween.props[2] = table.deepclone(tt.tween.props[1])
-tt.tween.props[2].sprite_id = 2
-tt.tween.props[3] = table.deepclone(tt.tween.props[1])
-tt.tween.props[3].sprite_id = 3
-tt.tween.props[4] = E:clone_c("tween_prop")
-tt.tween.props[4].name = "scale"
-tt.tween.props[4].keys = {{0, v(1.01, 1.01)}, {0.4, v(0.99, 0.99)}, {0.8, v(1.01, 1.01)}}
-tt.tween.props[4].sprite_id = 1
-tt.tween.props[4].loop = true
-tt.tween.props[5] = table.deepclone(tt.tween.props[4])
-tt.tween.props[5].sprite_id = 2
-tt.tween.props[6] = table.deepclone(tt.tween.props[4])
-tt.tween.props[6].sprite_id = 3
-tt.tween.remove = true
-
-tt = E:register_t("stage_02_arborean_old", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-tt.render.sprites[1].prefix = "stage2_decos_viejo"
-tt.main_script.update = scripts.stage_02_arborean_old.update
-
-tt = E:register_t("stage_02_arborean_baby1", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-tt.render.sprites[1].prefix = "stage2_decos_bebe1"
-tt.main_script.update = scripts.stage_02_arborean_baby1.update
-
-tt = E:register_t("ps_bullet_stage_03_heart_of_the_arborean")
-E:add_comps(tt, "pos", "particle_system")
-tt.particle_system.name = "stage_3_HeartProy_trail"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(5), fts(5)}
-tt.particle_system.emission_rate = 30
-tt.particle_system.emit_area_spread = vv(0)
-tt.particle_system.scales_y = {1, 0.5}
-tt.particle_system.scales_x = {1, 0.5}
-
-tt = E:register_t("decal_bullet_stage_03_heart_of_the_arborean", "decal")
-E:add_comps(tt, "tween")
-tt.render.sprites[1].name = "explosiondecal_asst_heart_decal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.disabled = false
-tt.tween.remove = true
-tt.tween.props[1].keys = {{0, 255}, {3, 255}, {4, 0}}
-
-tt = E:register_t("bullet_stage_03_heart_of_the_arborean", "bolt")
-E:add_comps(tt, "force_motion")
-tt.render.sprites[1].prefix = "stage_3_HeartProy_proyectile"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].z = Z_BULLETS
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].name = "stage_3_HeartProy_glow"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].z = Z_BULLETS - 1
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.height_attack = 70
-tt.initial_vel_y = 50
-tt.transition_time = 1
-tt.target_distance_detection = 20
-tt.main_script.insert = scripts.bullet_heart_of_the_arborean.insert
-tt.main_script.update = scripts.bullet_heart_of_the_arborean.update
-tt.bullet.damage_max = 40
-tt.bullet.damage_min = 30
-tt.bullet.damage_radius = 80
-tt.bullet.acceleration_factor = 0.1
-tt.bullet.min_speed = 30
-tt.bullet.max_speed = 300
-tt.bullet.particles_name = "ps_bullet_stage_03_heart_of_the_arborean"
-tt.bullet.max_speed = 1800
-tt.bullet.min_speed = 30
-tt.bullet.hit_sound = "Stage03HeartOfTheForestBlast"
-tt.bullet.hit_decal = "decal_bullet_stage_03_heart_of_the_arborean"
-tt.bullet.hit_fx = "trees_heart_of_the_arborean_decal_hit_fx"
-tt.bullet.align_with_trajectory = true
-tt.initial_impulse = 12000
-tt.initial_impulse_duration = 0.2
-tt.initial_impulse_angle = math.pi / 2
-tt.force_motion.a_step = 15
-tt.force_motion.max_a = 1800
-tt.force_motion.max_v = 600
-tt.sound_events.insert = nil
-
 tt = E:register_t("stage_04_shadowtop", "decal")
 tt.render.sprites[1].name = "stage4_shadowtop"
 tt.render.sprites[1].animated = false
@@ -6706,32 +6492,6 @@ tt.render.sprites[1].name = "action1"
 tt.animations = {{"action1", time_between_animations}, {"idle", time_between_animations}, {"action2", time_between_animations}, {"action3", time_between_animations}}
 tt.main_script.update = scripts.decal_scripted_loop_play.update
 
-tt = E:register_t("trees_guardian_tree_wave_of_roots")
-E:add_comps(tt, "pos", "main_script")
-tt.main_script.update = scripts.trees_guardian_tree_wave_of_roots.update
-tt.sep_nodes_min = 4
-tt.sep_nodes_max = 5
-tt.show_delay_min = 0.04
-tt.show_delay_max = 0.04
-tt.count = 14
-tt.radius = 50
-tt.wave_pi = 1
-tt.root_hand_L_pos = v(0, 350)
-tt.root_hand_R_pos = v(250, 450)
-tt.start_offset = -20
-tt.root_hand_offset_path_merge = -8
-tt.decal = "trees_guardian_tree_wave_of_roots_decal"
-tt.vis_flags = bor(F_STUN)
-tt.vis_bans = bor(F_FLYING, F_BOSS)
-tt.mod = "mod_stage_guardian_tree_wave_of_roots_stun"
-
-tt = E:register_t("trees_guardian_tree_wave_of_roots_decal", "decal_sequence")
-tt.render.sprites[1].prefix = "stage_2_special_treeFX_groundFX0"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.3181818181818182
-tt.render.sprites[1].z = Z_DECALS
-tt.sequence.steps = {"start", nil, "end"}
-
 tt = E:register_t("trees_heart_of_the_arborean_decal_hit", "fx")
 E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "explosiondecalDef"
@@ -6769,73 +6529,6 @@ tt.force_motion.max_a = 3000
 tt.force_motion.max_v = 300
 tt.main_script.update = scripts.hero_muyrn_ranged_attack_bullet.update
 
-tt = E:register_t("trees_heart_of_the_arborean_shaman_decal", "decal_scripted")
-tt.render.sprites[1].prefix = "shamanDef"
-tt.render.sprites[1].name = "Idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS
-tt.main_script.insert = scripts.trees_heart_of_the_arborean_shaman_decal.insert
-tt.main_script.update = scripts.trees_heart_of_the_arborean_shaman_decal.update
-
-tt = E:register_t("bush_ladder", "decal_scripted")
-E:add_comps(tt, "spawner", "tween")
-tt.render.sprites[1].prefix = "elevator_cosoDef"
-tt.render.sprites[1].name = "idleraise"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].anchor.y = 1
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 3
-tt.render.sprites[1].hidden = true
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "elevatorDef"
-tt.render.sprites[1].name = "idleraise"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].z = Z_BACKGROUND_COVERS - 3
-tt.render.sprites[2].anchor.y = 1
-tt.render.sprites[2].hidden = true
-tt.animation_spawner_start = "start"
-tt.animation_spawner_idle = "idleraise"
-tt.main_script.update = scripts.bush_ladder_decal.update
-tt.spawn_data = nil
-tt.spawner.eternal = true
-tt.spawner_template = "bush_spawner"
-tt.break_time = fts(20)
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 255}, {fts(9), 255}}
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].name = "offset"
-tt.tween.props[2].keys = {{0, v(0, 80)}, {fts(5), v(0, 0)}}
-tt.tween.props[2].sprite_id = 1
-tt.tween.props[3] = E:clone_c("tween_prop")
-tt.tween.props[3].name = "offset"
-tt.tween.props[3].keys = {{0, v(0, 100)}, {fts(5), v(0, 0)}}
-tt.tween.props[3].sprite_id = 2
-
-tt = E:register_t("bush_spawner", "decal_scripted")
-E:add_comps(tt, "spawner", "editor")
-tt.render.sprites[1].prefix = "elevatorDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].anchor.y = 0.5
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.animation_spawner_start = "start"
-tt.animation_spawner_end = "end"
-tt.animation_spawner_idle = "idle"
-tt.main_script.update = scripts.bush_spawner_decal.update
-tt.spawner.eternal = true
-
-tt = E:register_t("decal_stage_05_blocked_path", "decal_scripted")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "stage5TreesDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].group = "layers"
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_05_blocked_path.update
-tt.rustle_times = 1
-tt.rustle_delay = 1
-tt.cut_down_delay = 1
-
 tt = E:register_t("decal_ground_enemy_bear_vanguard", "decal")
 E:add_comps(tt, "tween")
 tt.render.sprites[1].name = "bear_vanguard_decal_ground_0001"
@@ -6860,22 +6553,6 @@ tt.modifier.bans = {}
 tt.modifier.duration = 1
 -- 原素材：instant_heal_mod_fx，暂用这个代替
 tt.render.sprites[1].name = "amazona_healing"
-
-tt = E:register_t("mod_stage_guardian_tree_wave_of_roots_stun", "modifier")
-E:add_comps(tt, "render")
-tt.modifier.duration = 4
-tt.modifier.replaces_lower = false
-tt.modifier.resets_same = false
-tt.modifier.use_mod_offset = false
-tt.modifier.immune_for_seconds = 3
-tt.render.sprites[1].prefix = "stage_2_special_treeFX_holdFX"
-tt.render.sprites[1].name = "start"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt.render.sprites[1].scale = v(1, 1)
-tt.render.sprites[1].sort_y_offset = -3
-tt.main_script.insert = scripts.trees_guardian_tree_vine_mod.insert
-tt.main_script.remove = scripts.trees_guardian_tree_vine_mod.remove
-tt.main_script.update = scripts.trees_guardian_tree_vine_mod.update
 
 tt = E:register_t("controller_stage_10_obelisk")
 E:add_comps(tt, "editor", "pos", "main_script")
