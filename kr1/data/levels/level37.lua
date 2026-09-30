@@ -216,7 +216,7 @@ coroutine.yield()
 end
 U.y_wait_unconditional(store,2)
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",2.5,{x=660,y=460},1.95)
+signal.emit("pan-zoom-camera",2.5,v(660,460),1.95)
 signal.emit("hide-gui")
 S:queue("MusicBossPreFight")
 S:queue("BossMonkeyTotemSpawn")
@@ -233,7 +233,7 @@ LU.queue_insert(store,boss)
 self.boss=boss
 U.y_wait_unconditional(store,3)
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 signal.emit("show-gui")
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do

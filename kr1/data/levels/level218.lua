@@ -1581,7 +1581,7 @@ shake.aura.freq_factor=this.ray_shake.freq_factor
 queue_insert(store,shake)
 U.y_wait(store,fts(this.ray_cam_delay_frames))
 prev=prev+this.ray_cam_delay_frames
-signal.emit("pan-zoom-camera",this.ray_cam_speed,{x=this.ray_cam_start.x+i*cam_step,y=this.ray_cam_start.y},this.ray_cam_zoom)
+signal.emit("pan-zoom-camera",this.ray_cam_speed,v(this.ray_cam_start.x+i*cam_step,this.ray_cam_start.y),this.ray_cam_zoom)
 end
 end
 local ADB=require("animation_db")
@@ -2220,7 +2220,7 @@ end
 controller.hold_casts=nil
 end
 end
-local BOTTOM_EXIT_DEFEND_POINT={x=515,y=44}
+local BOTTOM_EXIT_DEFEND_POINT=v(515,44)
 local BOTTOM_EXIT_FLAGS={{flip=1,x=440,y=40},{flip=1,x=590,y=40}}
 local function hide_back_portal(store)
 local p=find_entity(store,"decal_stage_218_portal_back")
@@ -2295,7 +2295,7 @@ local i,j=GR:get_coords(x,y)
 local function vfn(_,_,cell)
 return band(cell,bnot(mask))==0
 end
-local c=GA.find_nearest_valid({x=i,y=j},GR.grid,vfn,24)
+local c=GA.find_nearest_valid(v(i,j),GR.grid,vfn,24)
 if not c then
 return nil
 end
@@ -2681,7 +2681,7 @@ return
 end
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-signal.emit("pan-zoom-camera",0.8,{x=512,y=768},1.3)
+signal.emit("pan-zoom-camera",0.8,v(512,768),1.3)
 U.y_wait(store,1)
 body.render.sprites[1].hidden=false
 S:queue("Stage218IntroCinematicVeznanEyesAppear")
@@ -2693,7 +2693,7 @@ U.y_animation_play(body,taunt[1],nil,store.tick_ts,1)
 end
 U.animation_start(body,"idle",nil,store.tick_ts,true,nil,true)
 U.y_wait(store,0.5)
-signal.emit("pan-zoom-camera",0.6,{x=512,y=450},1)
+signal.emit("pan-zoom-camera",0.6,v(512,450),1)
 signal.emit("show-gui")
 signal.emit("end-cinematic")
 end
@@ -2771,7 +2771,7 @@ end
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
 close_portals(store)
-signal.emit("pan-zoom-camera",0.6,{x=512,y=400},1)
+signal.emit("pan-zoom-camera",0.6,v(512,400),1)
 U.y_wait(store,1.5)
 local body=find_entity(store,"decal_stage_218_veznan_body")
 if body then
@@ -2859,7 +2859,7 @@ while not denas.cinematic_look_done do
 coroutine.yield()
 end
 switch_to_phase_2_music()
-signal.emit("pan-zoom-camera",0.6,{x=512,y=450},1)
+signal.emit("pan-zoom-camera",0.6,v(512,450),1)
 signal.emit("show-gui")
 signal.emit("end-cinematic")
 launch_next_wave(store)
@@ -2892,7 +2892,7 @@ end
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
 close_portals(store)
-signal.emit("pan-zoom-camera",0.6,{x=512,y=400},1)
+signal.emit("pan-zoom-camera",0.6,v(512,400),1)
 local controller=find_entity(store,"controller_stage_218_veznan")
 if controller then
 controller.hold_casts=true
@@ -2901,7 +2901,7 @@ local tracked=apply_phase_terrain(store,3,true)
 if tracked then
 y_wait_relocation_settled(store,tracked,6)
 end
-signal.emit("pan-zoom-camera",0.8,{x=512,y=768},1.3)
+signal.emit("pan-zoom-camera",0.8,v(512,768),1.3)
 U.y_wait(store,1)
 local body=find_entity(store,"decal_stage_218_veznan_body")
 if body then
@@ -2940,7 +2940,7 @@ U.y_wait(store,10)
 if controller then
 controller.hold_casts=nil
 end
-signal.emit("pan-zoom-camera",0.6,{x=512,y=450},1)
+signal.emit("pan-zoom-camera",0.6,v(512,450),1)
 signal.emit("show-gui")
 signal.emit("end-cinematic")
 launch_next_wave(store)
@@ -2967,7 +2967,7 @@ signal.emit("start-cinematic")
 S:stop_group("MUSIC")
 S:queue("MusicBossPreFight_218")
 close_portals(store)
-signal.emit("pan-zoom-camera",0.8,{x=512,y=768},1.3)
+signal.emit("pan-zoom-camera",0.8,v(512,768),1.3)
 U.y_wait(store,1)
 signal.emit("show-balloon_tutorial-pos",BOSS_TAUNT[2],false,balcony_balloon_pos(body))
 U.y_animation_play(body,BOSS_TAUNT[1],nil,store.tick_ts,1)
@@ -2978,7 +2978,7 @@ S18.decal_stage_218_puerta.fire(store,"open")
 U.y_animation_wait(body)
 U.animation_start(body,"idle_balcononly",nil,store.tick_ts,true,nil,true)
 U.y_wait(store,0.3)
-signal.emit("pan-zoom-camera",0.6,{x=512,y=450},1)
+signal.emit("pan-zoom-camera",0.6,v(512,450),1)
 U.y_wait(store,0.6)
 S:stop_group("MUSIC")
 S:queue("MusicBossFight_218")

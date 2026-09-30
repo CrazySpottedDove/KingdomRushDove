@@ -192,7 +192,7 @@ end
 LU.queue_remove(store,self.decal_taunting_dracula)
 U.y_wait_unconditional(store,2)
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",2.5,{x=512,y=550},2)
+signal.emit("pan-zoom-camera",2.5,v(512,550),2)
 signal.emit("hide-gui")
 local boss=E:create_entity("eb_dracula")
 boss.nav_path.pi=2
@@ -208,7 +208,7 @@ coroutine.yield()
 end
 signal.emit("show-gui")
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 while self.boss.phase~="angry" do
 if not store.entities[self.boss.id] then
 goto label_4_0

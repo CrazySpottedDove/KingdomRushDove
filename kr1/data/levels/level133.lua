@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
@@ -40,7 +41,7 @@ end
 function level.open_middle_path(store,skip_anim)
 local kill_area
 local all_ray_offsets=V.v(0,0)
-local ray_positions={{x=545,y=555},{x=697,y=669},{x=609,y=641},{x=649,y=571},{x=523,y=700},{x=727,y=573},{x=595,y=530},{x=507,y=640},{x=620,y=669},{x=490,y=526}}
+local ray_positions={v(545,555),v(697,669),v(609,641),v(649,571),v(523,700),v(727,573),v(595,530),v(507,640),v(620,669),v(490,526)}
 if not skip_anim then
 local shake=E:create_entity("aura_screen_shake")
 shake.aura.amplitude=1

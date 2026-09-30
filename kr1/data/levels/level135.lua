@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
@@ -78,21 +79,21 @@ if not store.restarted and not main.params.skip_cutscenes then
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-signal.emit("pan-zoom-camera",1,{x=512,y=500},OVtargets(nil,1.4))
+signal.emit("pan-zoom-camera",1,v(512,500),OVtargets(nil,1.4))
 U.y_wait_unconditional(store,2)
 controller_boss_prefight.do_taunt="LV35_BOSS_INTRO_01"
 controller_princess.appear=true
 U.y_wait_unconditional(store,3.2)
-signal.emit("pan-zoom-camera",1,{x=800,y=500},OVtargets(nil,1.2))
+signal.emit("pan-zoom-camera",1,v(800,500),OVtargets(nil,1.2))
 U.y_wait_unconditional(store,1.5)
 controller_redboy.appear=true
 controller_princess.do_taunt="LV35_BOSS_INTRO_02"
 U.y_wait_unconditional(store,2.5)
-signal.emit("pan-zoom-camera",1,{x=300,y=500},OVtargets(nil,1.2))
+signal.emit("pan-zoom-camera",1,v(300,500),OVtargets(nil,1.2))
 U.y_wait_unconditional(store,1.5)
 controller_redboy.do_taunt="LV35_BOSS_INTRO_03"
 U.y_wait_unconditional(store,2.5)
-signal.emit("pan-zoom-camera",1,{x=512,y=382},OVtargets(nil,1))
+signal.emit("pan-zoom-camera",1,v(512,382),OVtargets(nil,1))
 U.y_wait_unconditional(store,1.5)
 fume_entradas.finish=true
 signal.emit("hide-curtains")

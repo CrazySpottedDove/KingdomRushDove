@@ -62,11 +62,11 @@ mactans.mactans_deco=s_mactans
 coroutine.yield()
 if not store.restarted then
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",3,{x=512,y=672},2)
+signal.emit("pan-zoom-camera",3,v(512,672),2)
 signal.emit("hide-gui")
 U.y_wait_unconditional(store,8)
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 signal.emit("show-gui")
 end
 while store.wave_group_number<1 do
@@ -78,7 +78,7 @@ end
 c_taunt.interrupt=true
 signal.emit("hide-gui")
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",3,{x=512,y=672},2)
+signal.emit("pan-zoom-camera",3,v(512,672),2)
 s_mactans.phase_signal="stop"
 s_malicia.phase_signal="stop"
 repeat
@@ -129,7 +129,7 @@ LU.queue_remove(store,s_statue)
 while boss.phase~="fight" do
 coroutine.yield()
 end
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 signal.emit("hide-curtains")
 signal.emit("show-gui")
 S:queue("MusicBossFight")

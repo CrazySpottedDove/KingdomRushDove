@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
@@ -29,7 +30,7 @@ end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
-signal.emit("pan-zoom-camera",1.5,{x=200,y=450},2)
+signal.emit("pan-zoom-camera",1.5,v(200,450),2)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
@@ -63,7 +64,7 @@ end
 coroutine.yield()
 U.y_wait_unconditional(store,1)
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=400,y=384},1.5)
+signal.emit("pan-zoom-camera",2,v(400,384),1.5)
 signal.emit("show-gui")
 signal.emit("end-cinematic")
 while not boss.health.dead do
@@ -78,7 +79,7 @@ signal.emit("hide-gui")
 signal.emit("start-cinematic")
 U.y_wait_unconditional(store,7)
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},OVm(1,1.3))
+signal.emit("pan-zoom-camera",2,v(512,384),OVm(1,1.3))
 signal.emit("show-gui")
 signal.emit("end-cinematic")
 elseif store.level_mode==GAME_MODE_IRON then

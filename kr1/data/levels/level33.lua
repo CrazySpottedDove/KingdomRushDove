@@ -191,7 +191,7 @@ local lumberjack=E:create_entity("decal_lumberjack_shaman")
 lumberjack.render.sprites[1].flip_x=true
 LU.queue_insert(store,lumberjack)
 lumberjack.pos=v(1180,436)
-local cut_steps={{x=1130,y=438},{x=1063,y=438},{x=1000,y=440}}
+local cut_steps={v(1130,438),v(1063,438),v(1000,440)}
 for i,step in ipairs(cut_steps) do
 U.animation_start_default(lumberjack,"cut",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,0.5)
@@ -215,7 +215,7 @@ local lumberjack=E:create_entity("decal_lumberjack_shaman")
 lumberjack.render.sprites[1].flip_x=false
 LU.queue_insert(store,lumberjack)
 lumberjack.pos=v(-160,200)
-local cut_steps={{x=-108,y=222},{x=26,y=252},{x=57,y=266},{x=142,y=294},{x=192,y=310}}
+local cut_steps={v(-108,222),v(26,252),v(57,266),v(142,294),v(192,310)}
 for i,step in ipairs(cut_steps) do
 U.animation_start_default(lumberjack,"cut",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,0.5)

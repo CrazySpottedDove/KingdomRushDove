@@ -6,6 +6,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local GS=require("kr1.game_settings")
 require("all.constants")
@@ -56,7 +57,7 @@ LU.queue_insert(store,boss)
 coroutine.yield()
 if not store.restarted then
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",2,{x=1000,y=400},2)
+signal.emit("pan-zoom-camera",2,v(1000,400),2)
 signal.emit("hide-gui")
 end
 U.y_wait_unconditional(store,1)
@@ -67,7 +68,7 @@ coroutine.yield()
 end
 if not store.restarted then
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 signal.emit("show-gui")
 end
 while store.wave_group_number<1 do
@@ -79,13 +80,13 @@ self:y_boss_wave(store,store.wave_group_number)
 coroutine.yield()
 end
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",2,{x=680,y=400},2)
+signal.emit("pan-zoom-camera",2,v(680,400),2)
 signal.emit("hide-gui",true)
 while self.boss.phase~="dead" do
 coroutine.yield()
 end
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 U.y_wait_unconditional(store,2.5)
 end
 end

@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
@@ -45,7 +46,7 @@ coroutine.yield()
 end
 end
 if not store.restarted and not main.params.skip_cutscenes and store.main_hero then
-signal.emit("pan-zoom-camera",0,{x=800,y=344},1.8)
+signal.emit("pan-zoom-camera",0,v(800,344),1.8)
 local fly_hero=U.flag_has(store.main_hero.vis.flags,F_FLYING)
 store.main_hero.pos.x=445
 store.main_hero.pos.y=340
@@ -58,7 +59,7 @@ local wait_until_ts=store.tick_ts+3
 while wait_until_ts>store.tick_ts do
 coroutine.yield()
 end
-signal.emit("pan-zoom-camera",3,{x=690,y=404},OVtargets(nil,1.17,1.17,1,1.2))
+signal.emit("pan-zoom-camera",3,v(690,404),OVtargets(nil,1.17,1.17,1,1.2))
 U.y_wait_unconditional(store,4)
 if fly_hero then
 y_do_boss_taunt("LV38_INTRO_TAUNT_FLY_01")
@@ -72,7 +73,7 @@ else
 y_do_boss_taunt("LV38_INTRO_TAUNT_02")
 end
 U.y_wait_unconditional(store,3)
-signal.emit("pan-zoom-camera",2,{x=400,y=380},1)
+signal.emit("pan-zoom-camera",2,v(400,380),1)
 U.y_wait_unconditional(store,2)
 signal.emit("hide-curtains")
 signal.emit("show-gui")

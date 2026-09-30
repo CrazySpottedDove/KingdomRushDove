@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
@@ -38,7 +39,7 @@ controller_pre_bossfight=e
 break
 end
 end
-signal.emit("pan-zoom-camera",0,{x=800,y=800},2)
+signal.emit("pan-zoom-camera",0,v(800,800),2)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
@@ -65,13 +66,13 @@ U.animation_start(controller_pre_bossfight,"idle",true,store.tick_ts,true,1,true
 signal.emit("show-balloon_tutorial","LV19_NAVIRA_START_03",false)
 U.y_wait_unconditional(store,4)
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=440,y=430},OVm(1,1.2))
+signal.emit("pan-zoom-camera",2,v(440,430),OVm(1,1.2))
 signal.emit("show-gui")
 signal.emit("end-cinematic")
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
-signal.emit("pan-zoom-camera",1.5,{x=800,y=800},2)
+signal.emit("pan-zoom-camera",1.5,v(800,800),2)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
@@ -102,7 +103,7 @@ coroutine.yield()
 LU.queue_remove(store,controller_pre_bossfight)
 U.y_wait_unconditional(store,1)
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},OVm(1,1.3))
+signal.emit("pan-zoom-camera",2,v(512,384),OVm(1,1.3))
 signal.emit("show-gui")
 signal.emit("end-cinematic")
 S:stop_group("MUSIC")

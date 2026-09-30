@@ -49,7 +49,7 @@ end
 local function generate_blue_noise_cluster(count,candidates,random_fn,...)
 local points={}
 local x,y=random_fn(...)
-points[1]={x=x,y=y}
+points[1]=v(x,y)
 for i=2,count do
 local best_candidate
 local best_distance2=-1
@@ -64,7 +64,7 @@ end
 end
 if best_distance2<min_dist2 then
 best_distance2=min_dist2
-best_candidate={x=px,y=py}
+best_candidate=v(px,py)
 end
 end
 points[i]=best_candidate
@@ -1009,7 +1009,7 @@ bg_corrupt.fire_corromper(store,item.tree)
 end
 for _,item in ipairs(this.overlay_list or {}) do
 if item.replace_from then
-local old=nightfall.find_replace_from({replace_from=item.replace_from,pos={x=item.x,y=item.y}},store)
+local old=nightfall.find_replace_from({replace_from=item.replace_from,pos=v(item.x,item.y)},store)
 if old then
 for _,s in ipairs(old.render.sprites) do
 s.hidden=true
@@ -1036,7 +1036,7 @@ s.shader=nil
 end
 insert_now(o)
 elseif item.swap_from and item.swap_to then
-nightfall.do_swap({swap_from=item.swap_from,swap_to=item.swap_to,holder_id=item.holder_id,pos={x=item.x,y=item.y}},store,insert_now)
+nightfall.do_swap({swap_from=item.swap_from,swap_to=item.swap_to,holder_id=item.holder_id,pos=v(item.x,item.y)},store,insert_now)
 end
 end
 end
@@ -1392,7 +1392,7 @@ end
 function level:init(store)
 self.manual_hero_insertion=false
 end
-local CORRUPTIONS={{decal="decal_stage_216_bg_corrupt",after_wave=4,rider_interval=1,sound="Stage16GoldenGroveCorruption1",shader_delay=5,camera={x=820,y=500},rider_paths={6,2}},{decal="decal_stage_216_bg_corrupt_2",after_wave=9,rider_interval=2,sound="Stage16GoldenGroveCorruption2",shader_delay=5,camera={x=270,y=380},rider_paths={1,3}}}
+local CORRUPTIONS={{decal="decal_stage_216_bg_corrupt",after_wave=4,rider_interval=1,sound="Stage16GoldenGroveCorruption1",shader_delay=5,camera=v(820,500),rider_paths={6,2}},{decal="decal_stage_216_bg_corrupt_2",after_wave=9,rider_interval=2,sound="Stage16GoldenGroveCorruption2",shader_delay=5,camera=v(270,380),rider_paths={1,3}}}
 local CAM_PAN_TIME=1.8
 local CAM_PAN_EASE="in-out-sine"
 local RIDERS_ENTRY_DELAY=0
