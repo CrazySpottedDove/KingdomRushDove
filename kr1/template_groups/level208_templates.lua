@@ -349,8 +349,8 @@ local function controller_stage_208_phases_update(this, store, script)
 				local d = E:create_entity("damage")
 				d.source_id = this.id
 				d.target_id = v.id
-				d.damage_type = DAMAGE_TRUE
-				d.value = 1e+99
+				d.damage_type = DAMAGE_INSTAKILL
+				d.value = 999999
 				queue_damage(store, d)
 			else
 				local path_to_change_to = this.path_change_map[v.nav_path.pi]
