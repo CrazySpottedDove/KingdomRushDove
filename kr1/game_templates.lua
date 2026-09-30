@@ -7713,19 +7713,15 @@ tt.render.sprites[1].prefix = "Rocks_Paths3Def"
 tt = E:register_t("fx_stage_22_rocks_paths_fall4", "fx_stage_22_rocks_paths_fall1")
 tt.render.sprites[1].prefix = "Rocks_Paths4Def"
 
--- 似乎是废案，没什么用，留着只是因为代码要能跑
 tt = E:register_t("bullet_enemy_blinker", "bullet")
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.hit_time = fts(0)
 tt.image_width = 112.5
--- tt.main_script.update = scripts.bullet_enemy_blinker.update
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].hidden = true
 tt.sound_events.insert = "EnemyVoidBlinkerStareCast"
 tt.track_target = true
 tt.ray_duration = 4
-
-tt = E:register_t("bullet_enemy_blinker_glare", "bullet_enemy_blinker")
 
 tt = E:register_t("bullet_tower_stage_13_sunray", "bullet")
 tt.bullet.damage_type = DAMAGE_NONE
@@ -10256,29 +10252,6 @@ tt.damage_type = DAMAGE_PHYSICAL
 tt.only_predict_damage = true
 tt.heal_fx = "fx_glarenwarden_healing"
 tt.heal_fx_offset = v(0, 12)
-
-tt = E:register_t("mod_test_head_pos_kr5", "modifier")
-E:add_comps(tt, "render")
-tt.modifier.duration = 5
-tt.render.sprites[1].prefix = "poison"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].scale = vv(0.4)
-tt.render.sprites[1].draw_order = 2
-
-for i = 2, 20 do
-	tt.render.sprites[i] = table.deepclone(tt.render.sprites[1])
-	tt.render.sprites[i].r = math.rad(math.random(0, 360))
-end
-
-tt.position_test = "HEAD"
-tt.main_script.update = scripts.mod_test_unit_pos_kr5.update
-
-tt = E:register_t("mod_test_mod_pos_kr5", "mod_test_head_pos_kr5")
-tt.position_test = "MOD"
-
-tt = E:register_t("mod_test_hit_pos_kr5", "mod_test_head_pos_kr5")
-tt.position_test = "HIT"
 
 tt = E:register_t("mod_cultbrood_poison", "modifier")
 E:add_comps(tt, "render", "dps")
