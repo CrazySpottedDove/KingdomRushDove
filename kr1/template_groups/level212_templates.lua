@@ -49,7 +49,7 @@ local function controller_stage_212_elevator_update(this, store)
 		local targets = U.find_soldiers_in_range(store.soldiers, hit_pos, 0, this.elevator.crush.damage_radius, this.elevator.crush.vis_flags, this.elevator.crush.vis_bans)
 		if targets then
 			for i, e in ipairs(targets) do
-				local d = E.assign_damage(DAMAGE_TRUE, 1e+99, this.id, e.id)
+				local d = E.assign_damage(DAMAGE_INSTAKILL, 1, this.id, e.id)
 				store.damage_queue[#store.damage_queue + 1] = d
 			end
 		end
