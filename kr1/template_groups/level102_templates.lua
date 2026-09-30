@@ -405,3 +405,315 @@ tt.render.sprites[1].prefix = "water_splash"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = true
 
+tt = E:register_t_hot("decal_stage_02_elder_rune_base", "decal", true)
+E:add_comps(tt, "main_script")
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "stage_2_rapido_elder_rune_2_base"
+tt.render.sprites[1].sort_y_offset = 1
+
+tt = E:register_t_hot("decal_stage_02_fishing_link_line", "decal_scripted", true)
+tt.render.sprites[1].prefix = "fishing_link_line"
+tt.render.sprites[1].loop = true
+tt.main_script.update = function(this, store)
+	local water_splash
+
+	for _, v in pairs(store.entities) do
+		if v.template_name == "decal_stage_02_fishing_link_water_splash" then
+			water_splash = v
+
+			break
+		end
+	end
+
+	water_splash.render.sprites[1].hidden = true
+
+	while true do
+		if this.fishing_link.water_move then
+			water_splash.render.sprites[1].hidden = false
+
+			U.y_animation_play(water_splash, "idle", nil, store.tick_ts, false)
+
+			water_splash.render.sprites[1].hidden = true
+			this.fishing_link.water_move = false
+		end
+
+		if this.fishing_link.line_move then
+			U.y_animation_play(this, "fishing_rupee_in", nil, store.tick_ts)
+			U.animation_start_default(this, "fishing_rupee_loop", nil, store.tick_ts, true)
+
+			local start_ts = store.tick_ts
+
+			while not this.fishing_link.fishing do
+				if store.tick_ts - start_ts > this.fishing_link.window_duration then
+					U.y_animation_play(this, "fishing_rupee_out", nil, store.tick_ts)
+
+					break
+				end
+
+				coroutine.yield()
+			end
+		end
+
+		if this.fishing_link.fishing then
+			if this.render.sprites[1].name == "fishing_rupee_loop" then
+				water_splash.render.sprites[1].hidden = false
+
+				U.animation_start_default(water_splash, "splash_out", nil, store.tick_ts, false)
+				U.animation_start_default(this, "fishing_rupee_clicked", nil, store.tick_ts)
+				U.y_wait_unconditional(store, fts(61))
+				U.animation_start_default(water_splash, "splash_in", nil, store.tick_ts, false)
+				U.y_animation_wait_default(this)
+			else
+				if this.fishing_link.fish_anim == 1 or this.fishing_link.fish_anim == 2 then
+					U.y_wait_unconditional(store, fts(1))
+				end
+
+				U.animation_start_default(this, this.fish_animations[this.fishing_link.fish_anim], nil, store.tick_ts, false)
+				U.y_wait_unconditional(store, fts(41))
+
+				water_splash.render.sprites[1].hidden = false
+
+				if this.fishing_link.fish_anim ~= 1 and this.fishing_link.fish_anim ~= 5 then
+					U.animation_start_default(water_splash, "splash_out", nil, store.tick_ts, false)
+				end
+
+				if this.fishing_link.fish_anim == 3 then
+					U.y_wait_unconditional(store, fts(78))
+				else
+					U.y_wait_unconditional(store, fts(52))
+				end
+
+				U.animation_start_default(water_splash, "splash_in", nil, store.tick_ts, false)
+			end
+
+			U.y_animation_wait_default(this.fishing_link)
+
+			this.fishing_link.water_move = false
+		end
+
+		coroutine.yield()
+	end
+end
+tt.fish_animations = {"fishing_nothing", "fishing_boot", "fishing_fish", "fishing_rupee", "fishing_nothing"}
+
+tt = E:register_t_hot("decal_stage_02_lion_king_light", "decal_scripted", true)
+E:add_comps(tt, "ui", "tween")
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "light_copy"
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].hidden = true
+tt.tween.props[1].keys = {{0, 0}, {fts(29), 255}, {fts(77), 255}, {fts(102), 0}}
+tt.tween.remove = false
+tt.tween.disabled = true
+
+tt = E:register_t_hot("trees_guardian_tree_wave_of_roots", nil, true)
+E:add_comps(tt, "pos", "main_script")
+tt.main_script.update = function(this, store)
+	local count = this.count
+	local wave_pi = this.wave_pi
+	local wave_ni = this.wave_ni + this.start_offset
+	local rootCounter = 0
+	local max_duration = 6
+
+	local function createDecal(node_pos)
+		local e = E:create_entity(this.decal)
+
+		e.render.sprites[1].prefix = e.render.sprites[1].prefix .. 1 + rootCounter % 5
+		rootCounter = rootCounter + 1
+		e.pos = node_pos
+		e.pos.x = e.pos.x + math.random(-10, 10)
+		e.render.sprites[1].ts = store.tick_ts
+		e.render.sprites[1].flip_x = math.random(0, 1) == 1
+		e.sequence.steps[2] = max_duration - rootCounter * 0.1
+
+		simulation:queue_insert_entity(e)
+	end
+
+	local pos1 = this.root_hand_L_pos
+	local pos2 = this.root_hand_R_pos
+	local node_pos = P:node_pos(wave_pi, 1, wave_ni + this.root_hand_offset_path_merge)
+	local length1 = V.dist(pos1.x, pos1.y, node_pos.x, node_pos.y)
+	local length2 = V.dist(pos2.x, pos2.y, node_pos.x, node_pos.y)
+	local v1 = v(node_pos.x - pos1.x, node_pos.y - pos1.y)
+	local v2 = v(node_pos.x - pos2.x, node_pos.y - pos2.y)
+
+	v1.x = v1.x / length1
+	v1.y = v1.y / length1
+
+	local v1perpendicular = v(v1.y, -v1.x)
+
+	v2.x = v2.x / length2
+	v2.y = v2.y / length2
+
+	local v2perpendicular = v(v2.y, -v2.x)
+	local distance = 0
+	local patterns = {{20, -20}, {0}}
+	local counter = 0
+
+	while length1 > distance + 50 do
+		local pattern = patterns[1 + counter % #patterns]
+
+		counter = counter + 1
+
+		for i = 1, #pattern do
+			local x = pos1.x + v1.x * distance + v1perpendicular.x * pattern[i]
+			local y = pos1.y + v1.y * distance + v1perpendicular.y * pattern[i]
+
+			createDecal(v(x, y))
+
+			x = pos2.x + v2.x * distance + v2perpendicular.x * pattern[i]
+			y = pos2.y + v2.y * distance + v2perpendicular.y * pattern[i]
+
+			createDecal(v(x, y))
+		end
+
+		U.y_wait_unconditional(store, U.frandom(this.show_delay_min, this.show_delay_max))
+
+		distance = distance + math.random(10, 30)
+	end
+
+	patterns = {{3, 2}, {1}}
+
+	for j = 1, count do
+		local pattern = patterns[1 + j % #patterns]
+
+		wave_ni = wave_ni - math.random(this.sep_nodes_min, this.sep_nodes_max)
+
+		for i = 1, #pattern do
+			local node = {
+				pi = wave_pi,
+				spi = pattern[i],
+				ni = wave_ni
+			}
+			local node_pos = P:node_pos(node.pi, node.spi, node.ni)
+
+			if P:is_node_valid(node.pi, node.ni) then
+				createDecal(node_pos)
+
+				local targets = U.find_enemies_in_range_filter_off(node_pos, this.radius, this.vis_flags, this.vis_bans)
+
+				if targets then
+					for _, target in ipairs(targets) do
+						local m = E:create_entity(this.mod)
+
+						m.modifier.target_id = target.id
+						m.modifier.source_id = this.id
+
+						simulation:queue_insert_entity(m)
+					end
+				end
+			end
+
+			U.y_wait_unconditional(store, U.frandom(this.show_delay_min, this.show_delay_max))
+		end
+	end
+
+	simulation:queue_remove_entity(this)
+end
+tt.sep_nodes_min = 4
+tt.sep_nodes_max = 5
+tt.show_delay_min = 0.04
+tt.show_delay_max = 0.04
+tt.count = 14
+tt.radius = 50
+tt.wave_pi = 1
+tt.root_hand_L_pos = v(0, 350)
+tt.root_hand_R_pos = v(250, 450)
+tt.start_offset = -20
+tt.root_hand_offset_path_merge = -8
+tt.decal = "trees_guardian_tree_wave_of_roots_decal"
+tt.vis_flags = bor(F_STUN)
+tt.vis_bans = bor(F_FLYING, F_BOSS)
+tt.mod = "mod_stage_guardian_tree_wave_of_roots_stun"
+
+tt = E:register_t_hot("trees_guardian_tree_wave_of_roots_decal", "decal_sequence", true)
+tt.render.sprites[1].prefix = "stage_2_special_treeFX_groundFX0"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].anchor.y = 0.3181818181818182
+tt.render.sprites[1].z = Z_DECALS
+tt.sequence.steps = {"start", nil, "end"}
+
+tt = E:register_t_hot("mod_stage_guardian_tree_wave_of_roots_stun", "modifier", true)
+E:add_comps(tt, "render")
+tt.modifier.duration = 4
+tt.modifier.replaces_lower = false
+tt.modifier.resets_same = false
+tt.modifier.use_mod_offset = false
+tt.modifier.immune_for_seconds = 3
+tt.render.sprites[1].prefix = "stage_2_special_treeFX_holdFX"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].size_names = {"small", "big", "big"}
+tt.render.sprites[1].scale = v(1, 1)
+tt.render.sprites[1].sort_y_offset = -3
+tt.main_script.insert = function(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead then
+		return false
+	end
+
+	if target.guardian_tree_vine_mod_ts and store.tick_ts - target.guardian_tree_vine_mod_ts < this.modifier.immune_for_seconds then
+		return false
+	end
+
+	if target and target.unit and this.render then
+		local s = this.render.sprites[1]
+
+		if s.size_names then
+			s.prefix = s.prefix .. "_" .. s.size_names[target.unit.size]
+			s.flip_x = target.render.sprites[1].flip_x
+		end
+
+		if s.size_scales then
+			local scale = s.size_scales[target.unit.size]
+
+			s.scale = V.v(s.scale.x * scale, s.scale.y * scale)
+		end
+
+		if this.modifier.use_mod_offset and target.unit.mod_offset then
+			s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+		end
+
+		s.flip_x = false
+	end
+
+	this.modifier.ts = store.tick_ts
+
+	local target = store.entities[this.modifier.target_id]
+
+	if target and not target.health.dead then
+		SU.stun_inc(target)
+	end
+
+	target.guardian_tree_vine_mod_ts = store.tick_ts
+
+	return true
+end
+tt.main_script.remove = function(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target then
+		SU.stun_dec(target)
+	end
+
+	return true
+end
+tt.main_script.update = function(this, store)
+	local m = this.modifier
+	local target = store.entities[this.modifier.target_id]
+
+	if target and not target.health.dead then
+		this.pos = target.pos
+
+		U.animation_start_default(this, "start", nil, store.tick_ts)
+
+		while store.tick_ts - m.ts < m.duration and target and not target.health.dead do
+			coroutine.yield()
+		end
+
+		U.y_animation_play(this, "end", nil, store.tick_ts, 1)
+	end
+
+	simulation:queue_remove_entity(this)
+end

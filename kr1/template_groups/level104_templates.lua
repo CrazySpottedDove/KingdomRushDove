@@ -451,3 +451,146 @@ tt = E:register_t_hot("stage_04_mask_bridge_center_front", "stage_04_mask_bridge
 tt.render.sprites[1].name = "Stage4_center_bridge_front_mask"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
 
+tt = E:register_t_hot("bush_ladder", "decal_scripted", true)
+E:add_comps(tt, "spawner", "tween")
+tt.render.sprites[1].prefix = "elevator_cosoDef"
+tt.render.sprites[1].name = "idleraise"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].anchor.y = 1
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 3
+tt.render.sprites[1].hidden = true
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].prefix = "elevatorDef"
+tt.render.sprites[1].name = "idleraise"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].z = Z_BACKGROUND_COVERS - 3
+tt.render.sprites[2].anchor.y = 1
+tt.render.sprites[2].hidden = true
+tt.animation_spawner_start = "start"
+tt.animation_spawner_idle = "idleraise"
+tt.main_script.update = function(this, store)
+	local sp = this.spawner
+	local sprite_base = this.render.sprites[1]
+	local sprite_top = this.render.sprites[2]
+	local state_waiting = 1
+	local state_going_up = 2
+	local state_is_up = 3
+	local state_going_down = 4
+	local state = state_waiting
+	local spawner
+
+	this.tween.disabled = true
+
+	while true do
+		if sp.interrupt then
+		-- block empty
+		elseif state == state_going_up then
+			if this.render.sprites[1].offset.y == 0 then
+				state = state_is_up
+				sprite_top.hidden = true
+				spawner.disabled = false
+
+				U.y_animation_play(this, this.animation_spawner_start, false, store.tick_ts, 1, 1)
+
+				sprite_base.hidden = true
+			end
+		elseif state == state_is_up then
+			if sp.spawn_data then
+				local enable = sp.spawn_data.enable
+
+				if not enable then
+					state = state_going_down
+					spawner.disabled = true
+
+					S:queue("Stage04ElevatorOut")
+					U.y_wait_unconditional(store, this.break_time)
+
+					this.tween.ts = store.tick_ts
+					this.tween.reverse = true
+				end
+			end
+		elseif state == state_waiting then
+			if sp.spawn_data then
+				local enable = sp.spawn_data.enable
+
+				if enable then
+					S:queue("Stage04ElevatorIn")
+					U.y_wait_unconditional(store, 1)
+
+					state = state_going_up
+					this.tween.disabled = false
+					this.tween.reverse = false
+					this.tween.ts = store.tick_ts
+					sprite_base.hidden = false
+					sprite_top.hidden = false
+
+					U.animation_start_default(this, this.animation_spawner_idle, false, store.tick_ts, true)
+
+					spawner = E:create_entity(this.spawner_template)
+					spawner.pos = V.vclone(this.pos)
+					spawner.disabled = true
+
+					simulation:queue_insert_entity(spawner)
+				end
+			end
+		elseif state == state_going_down and this.render.sprites[1].offset.y == this.tween.props[2].keys[1][2].y then
+			this.tween.disabled = true
+			state = state_waiting
+		end
+
+		sp.interrupt = nil
+
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+tt.spawn_data = nil
+tt.spawner.eternal = true
+tt.spawner_template = "bush_spawner"
+tt.break_time = fts(20)
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, 255}, {fts(9), 255}}
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "offset"
+tt.tween.props[2].keys = {{0, v(0, 80)}, {fts(5), v(0, 0)}}
+tt.tween.props[2].sprite_id = 1
+tt.tween.props[3] = E:clone_c("tween_prop")
+tt.tween.props[3].name = "offset"
+tt.tween.props[3].keys = {{0, v(0, 100)}, {fts(5), v(0, 0)}}
+tt.tween.props[3].sprite_id = 2
+
+tt = E:register_t_hot("bush_spawner", "decal_scripted", true)
+E:add_comps(tt, "spawner", "editor")
+tt.render.sprites[1].prefix = "elevatorDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].anchor.y = 0.5
+tt.render.sprites[1].z = Z_DECALS + 1
+tt.animation_spawner_start = "start"
+tt.animation_spawner_end = "end"
+tt.animation_spawner_idle = "idle"
+tt.main_script.update = function(this, store)
+	local activated = false
+
+	while true do
+		if not this.disabled and not activated then
+			activated = true
+			this.render.sprites[1].hidden = false
+
+			U.animation_start_default(this, this.animation_spawner_start, nil, store.tick_ts, false)
+			U.y_wait_unconditional(store, fts(57))
+			S:queue("Stage04ElevatorBreak")
+			U.y_animation_wait_default(this)
+			U.animation_start_default(this, this.animation_spawner_idle, nil, store.tick_ts, false)
+		elseif activated and this.disabled then
+			U.animation_start_default(this, this.animation_spawner_end, nil, store.tick_ts, false)
+			U.y_animation_wait_default(this)
+			simulation:queue_remove_entity(this)
+		end
+
+		coroutine.yield()
+	end
+end
+tt.spawner.eternal = true

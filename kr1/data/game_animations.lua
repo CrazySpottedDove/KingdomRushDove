@@ -39854,41 +39854,6 @@ return {
 		prefix = "Stage_1_decos_wisps8",
 		to = 74
 	},
-	stage2_decos_bebe1_action1 = {
-		from = 2,
-		prefix = "stage2_decos_bebe1",
-		to = 49
-	},
-	stage2_decos_bebe1_action2 = {
-		from = 95,
-		prefix = "stage2_decos_bebe1",
-		to = 130
-	},
-	stage2_decos_bebe1_idle1 = {
-		from = 1,
-		prefix = "stage2_decos_bebe1",
-		to = 1
-	},
-	stage2_decos_bebe1_idle2 = {
-		from = 50,
-		prefix = "stage2_decos_bebe1",
-		to = 94
-	},
-	stage2_decos_viejo_action1 = {
-		from = 10,
-		prefix = "stage2_decos_viejo",
-		to = 65
-	},
-	stage2_decos_viejo_idle1 = {
-		from = 1,
-		prefix = "stage2_decos_viejo",
-		to = 1
-	},
-	stage2_decos_viejo_idle2 = {
-		from = 2,
-		prefix = "stage2_decos_viejo",
-		to = 9
-	},
 	stage31_mecanica_elemental_holder_wood_PROXY_holder_idle = {
 		from = 1,
 		prefix = "stage31_mecanica_elemental_holder_wood_PROXY_holder",
