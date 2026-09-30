@@ -1309,56 +1309,6 @@ return {
 		prefix = "anim_liana",
 		to = 138
 	},
-	anim_puente1_action1 = {
-		from = 1,
-		prefix = "anim_puente1",
-		to = 121
-	},
-	anim_puente1_action2 = {
-		from = 123,
-		prefix = "anim_puente1",
-		to = 272
-	},
-	anim_puente1_idle = {
-		from = 122,
-		prefix = "anim_puente1",
-		to = 122
-	},
-	anim_puente2_action1 = {
-		from = 1,
-		prefix = "anim_puente2",
-		to = 116
-	},
-	anim_puente2_action2 = {
-		from = 118,
-		prefix = "anim_puente2",
-		to = 237
-	},
-	anim_puente2_idle = {
-		from = 117,
-		prefix = "anim_puente2",
-		to = 117
-	},
-	anim_puente3_action1 = {
-		from = 1,
-		prefix = "anim_puente3",
-		to = 138
-	},
-	anim_puente3_action2 = {
-		from = 140,
-		prefix = "anim_puente3",
-		to = 319
-	},
-	anim_puente3_action3 = {
-		from = 320,
-		prefix = "anim_puente3",
-		to = 409
-	},
-	anim_puente3_idle = {
-		from = 139,
-		prefix = "anim_puente3",
-		to = 139
-	},
 	anim_waterfall_idle = {
 		from = 1,
 		prefix = "anim_waterfall",

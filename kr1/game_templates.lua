@@ -6452,49 +6452,6 @@ tt.tween.remove = true
 tt = E:register_t("decal_waves", "decal_loop")
 tt.render.sprites[1].name = "stage_2_props_waves"
 
-tt = E:register_t("stage_4_arborean_bridge_1", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-local time_between_animations = fts(30 * math.random(3, 5))
-
-tt.render.sprites[1].prefix = "anim_puente1"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-tt.animations = {{"action1", time_between_animations}, {"idle", time_between_animations}, {"action2", time_between_animations}}
-tt.main_script.update = scripts.decal_scripted_loop_play.update
-
-tt = E:register_t("stage_4_arborean_bridge_2", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-local time_between_animations = fts(30 * math.random(3, 5))
-
-tt.render.sprites[1].prefix = "anim_puente2"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-tt.animations = {{"action1", time_between_animations}, {"idle", time_between_animations}, {"action2", time_between_animations}}
-tt.main_script.update = scripts.decal_scripted_loop_play.update
-
-tt = E:register_t("stage_4_arborean_bridge_3", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-local time_between_animations = fts(30 * math.random(3, 5))
-
-tt.render.sprites[1].prefix = "anim_puente3"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-tt.render.sprites[1].name = "action1"
-tt.animations = {{"action1", time_between_animations}, {"idle", time_between_animations}, {"action2", time_between_animations}, {"action3", time_between_animations}}
-tt.main_script.update = scripts.decal_scripted_loop_play.update
-
-tt = E:register_t("trees_heart_of_the_arborean_decal_hit", "fx")
-E:add_comps(tt, "tween")
-tt.render.sprites[1].prefix = "explosiondecalDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
-tt = E:register_t("trees_heart_of_the_arborean_decal_hit_fx", "fx")
-tt.render.sprites[1].prefix = "explosionDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS - 1
-
 tt = E:register_t("arborean_shaman_bullet", "bullet")
 E:add_comps(tt, "force_motion")
 tt.render.sprites[1].name = "tricannon_tower_lvl2_bomb"
