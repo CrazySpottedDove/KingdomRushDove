@@ -1,1 +1,1 @@
-return {{date="2026-09-29",author="CrazySpottedDove",message="fix：修正图鉴按钮边框计算问题"},{date="2026-09-29",author="CrazySpottedDove",message="fix: 修正三代水晶龙吐息失效的问题"},{date="2026-09-29",author="CrazySpottedDove",message="fix: 修正水陆交替时的血条偏移错误问题"}}
+return {{date="2026-09-29",author="CrazySpottedDove",message="fix：修正图鉴按钮边框计算问题"},{date="2026-09-29",author="CrazySpottedDove",message="fix: 修正三代水晶龙吐息失效的问题"},{date="2026-09-29",author="CrazySpottedDove",message="fix: 修正水陆交替时的血条偏移错误问题"},{date="2026-09-30",author="CrazySpottedDove",message="feat: 支持安卓端二指缩放大地图"}}

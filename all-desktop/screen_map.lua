@@ -196,8 +196,30 @@ screen_map.signal_handlers = {}
 
 local scroll_hotpot_width = 100
 
+--- 打开任意界面时，地图的滚轮平移/触摸平移缩放都不得被透传。
+--- 判定方式（自动化，新增界面无需再改这里）：
+---   1. window 的直接子视图里存在可见的 PopUpView（所有弹窗/面板基类）；
+---   2. 或任何显式标记了 blocks_map_input = true 的可见视图（给非 PopUpView 的浮层用）；
+---   3. 或地图本身被隐藏（如自制关卡列表世代）。
+--- 普通按钮/装饰视图既不是 PopUpView 也不带标记，因此不影响地图操作。
 local function should_block_map_scroll(this)
-	return (this.level_select and not this.level_select.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.upgrades and not this.upgrades.hidden) or (this.encyclopedia and not this.encyclopedia.hidden) or (this.achievements and not this.achievements.hidden) or (this.option_panel and not this.option_panel.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden) or (this.plugin_manager_view and not this.plugin_manager_view.hidden) or (this.changelog_view and not this.changelog_view.hidden)
+	if this.map_view and this.map_view.hidden then
+		return true
+	end
+
+	local win = this.window
+
+	if not win then
+		return false
+	end
+
+	for _, c in ipairs(win.children) do
+		if not c.hidden and (c.blocks_map_input or c:isInstanceOf(PopUpView)) then
+			return true
+		end
+	end
+
+	return false
 end
 
 function screen_map:init_coro(w, h, done_callback)
@@ -626,6 +648,7 @@ function screen_map:init(w, h)
 
 	local cat_dropdown = KView:new(V.v(sw, sh))
 	cat_dropdown.hidden = true
+	cat_dropdown.blocks_map_input = true
 	cat_dropdown.propagate_on_click = false
 	cat_dropdown.colors.background = {0, 0, 0, 100}
 	self.window:add_child(cat_dropdown)
@@ -732,6 +755,7 @@ function screen_map:init(w, h)
 
 	local gen_dropdown = KView:new(V.v(sw, sh))
 	gen_dropdown.hidden = true
+	gen_dropdown.blocks_map_input = true
 	gen_dropdown.propagate_on_click = false
 	gen_dropdown.colors.background = {0, 0, 0, 100}
 
@@ -1355,6 +1379,7 @@ function screen_map:refresh_custom_map_view()
 		self:show_custom_level_select(map)
 	end)
 	list_view.pos = v(20, 8)
+	list_view.blocks_map_input = true
 	self.window:add_child(list_view, 1)
 	self._custom_map_view = list_view
 	if was_hidden or self.generation ~= screen_map.CUSTOM_GEN then
@@ -1765,7 +1790,7 @@ function screen_map:mousereleased(x, y, button)
 	self.window:mousereleased(x, y, button)
 end
 
--- 处理移动端的触摸事件，实现地图跟手滚动且不灵敏
+-- 处理移动端的触摸事件：单指跟手滚动、双指捏合缩放
 if IS_ANDROID then
 	local touch_last_y = 0
 	local touch_last_x = 0
@@ -1774,60 +1799,159 @@ if IS_ANDROID then
 	local touch_total_delta_x = 0
 	local TOUCH_SCROLL_THRESHOLD = 15 -- 滑动阈值，像素
 	local TOUCH_SCROLL_SENSITIVITY = 2.25 -- 灵敏度系数，0.5~1.0之间
+	local active_touches = {} -- id -> {x=, y=}
+	local pinch_active = false
+	local pinch_last_dist = 0
+
+	-- 打开其它界面（或地图被隐藏）时，触摸事件不得透传到地图
 	local function should_block_map_touch(this)
-		return (this.plugin_manager_view and not this.plugin_manager_view.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden)
+		return should_block_map_scroll(this) or this.window.responder ~= nil
+	end
+
+	local function sorted_touch_ids()
+		local ids = {}
+
+		for id in pairs(active_touches) do
+			ids[#ids + 1] = id
+		end
+
+		return ids
+	end
+
+	-- 单指平移基准重置到指定触摸点，避免手里多根手指状态切换时跳变
+	local function reset_pan_from(id)
+		local t = active_touches[id]
+
+		if t then
+			touch_last_x, touch_last_y = t.x, t.y
+			touch_total_delta_x, touch_total_delta_y = 0, 0
+			touch_scrolling = true
+		else
+			touch_scrolling = false
+		end
+	end
+
+	-- 屏幕坐标转窗口局部坐标（map_view.pos 所在坐标系）
+	local function screen_to_window(this, sx, sy)
+		local win = this.window
+
+		return (sx - win.origin.x) / win.scale.x, (sy - win.origin.y) / win.scale.y
 	end
 
 	function screen_map:touchpressed(id, x, y, dx, dy, pressure)
 		self.window:touchpressed(id, x, y, dx, dy, pressure)
+
 		if should_block_map_touch(self) then
+			active_touches = {}
 			touch_scrolling = false
+			pinch_active = false
 			return
 		end
-		touch_last_y = y
-		touch_scrolling = true
-		touch_total_delta_y = 0
-		touch_last_x = x
-		touch_total_delta_x = 0
+
+		active_touches[id] = {
+			x = x,
+			y = y
+		}
+
+		local ids = sorted_touch_ids()
+
+		if #ids >= 2 then
+			-- 双指按下：进入缩放模式，禁止单指平移抢占
+			local t1 = active_touches[ids[1]]
+			local t2 = active_touches[ids[2]]
+
+			pinch_active = true
+			touch_scrolling = false
+			pinch_last_dist = math.sqrt((t1.x - t2.x) ^ 2 + (t1.y - t2.y) ^ 2)
+		else
+			pinch_active = false
+			reset_pan_from(id)
+		end
 	end
 
 	function screen_map:touchmoved(id, x, y, dx, dy, pressure)
 		self.window:touchmoved(id, x, y, dx, dy, pressure)
+
 		if should_block_map_touch(self) then
+			active_touches = {}
+			touch_scrolling = false
+			pinch_active = false
 			return
 		end
-		if touch_scrolling then
+
+		if not active_touches[id] then
+			return
+		end
+
+		active_touches[id].x = x
+		active_touches[id].y = y
+
+		if pinch_active then
+			local ids = sorted_touch_ids()
+
+			if #ids < 2 then
+				pinch_active = false
+				return
+			end
+
+			local t1 = active_touches[ids[1]]
+			local t2 = active_touches[ids[2]]
+			local dist = math.sqrt((t1.x - t2.x) ^ 2 + (t1.y - t2.y) ^ 2)
+
+			if pinch_last_dist > 0 and dist > 0 and self.map_view then
+				local cx = (t1.x + t2.x) * 0.5
+				local cy = (t1.y + t2.y) * 0.5
+				local wx, wy = screen_to_window(self, cx, cy)
+
+				self.map_view:zoom_by(dist / pinch_last_dist, wx, wy)
+			end
+
+			pinch_last_dist = dist
+
+			return
+		end
+
+		if touch_scrolling and self.map_view then
+			-- 平移位移随缩放倍数放大，保证放大后拖拽同样距离能移动同样的地图内容比例
+			local pan_zoom = self.map_view.zoom or 1
 			local delta_y = y - touch_last_y
+
 			touch_last_y = y
 			touch_total_delta_y = touch_total_delta_y + math.abs(delta_y)
+
 			if touch_total_delta_y > TOUCH_SCROLL_THRESHOLD then
 				-- 只有累计滑动超过阈值才开始移动地图
-				local move_y = delta_y * TOUCH_SCROLL_SENSITIVITY
+				local move_y = delta_y * TOUCH_SCROLL_SENSITIVITY * pan_zoom
 				local new_y = self.map_view.pos.y + move_y
 				local min_y = self.map_view.screen_h - self.map_view.size.y
-				local max_y = 0
+
 				if new_y < min_y then
 					new_y = min_y
 				end
-				if new_y > max_y then
-					new_y = max_y
+				if new_y > 0 then
+					new_y = 0
 				end
+
 				self.map_view.pos.y = new_y
 			end
+
 			local delta_x = x - touch_last_x
+
 			touch_last_x = x
 			touch_total_delta_x = touch_total_delta_x + math.abs(delta_x)
+
 			if touch_total_delta_x > TOUCH_SCROLL_THRESHOLD then
-				local move_x = delta_x * TOUCH_SCROLL_SENSITIVITY
+				local move_x = delta_x * TOUCH_SCROLL_SENSITIVITY * pan_zoom
 				local new_x = self.map_view.pos.x + move_x
 				local min_x = self.map_view.screen_w - self.map_view.size.x
-				local max_x = 0
+
 				if new_x < min_x then
 					new_x = min_x
 				end
-				if new_x > max_x then
-					new_x = max_x
+				if new_x > 0 then
+					new_x = 0
 				end
+
 				self.map_view.pos.x = new_x
 			end
 		end
@@ -1835,7 +1959,27 @@ if IS_ANDROID then
 
 	function screen_map:touchreleased(id, x, y, dx, dy, pressure)
 		self.window:touchreleased(id, x, y, dx, dy, pressure)
-		touch_scrolling = false
+
+		active_touches[id] = nil
+
+		local ids = sorted_touch_ids()
+
+		if #ids >= 2 then
+			-- 仍有双指：维持缩放
+			pinch_active = true
+		elseif #ids == 1 then
+			-- 松开一根手指后回退到单指平移，避免位置跳变
+			pinch_active = false
+
+			if should_block_map_touch(self) then
+				touch_scrolling = false
+			else
+				reset_pan_from(ids[1])
+			end
+		else
+			pinch_active = false
+			touch_scrolling = false
+		end
 	end
 end
 
@@ -1868,6 +2012,12 @@ function MapView:initialize(screen_w, screen_h)
 	local scale = math.max(self.screen_w / self.size.x, self.screen_h / self.size.y)
 	self.scale = v(scale, scale)
 	self.size = v(self.size.x * self.scale.x, self.size.y * self.scale.y)
+	-- 缩放支持：base_scale 为铺满屏幕的基准缩放，zoom 为用户缩放倍数
+	self.base_scale = scale
+	self.natural_size = v(self.size.x / scale, self.size.y / scale)
+	self.zoom = 1
+	self.min_zoom = 1
+	self.max_zoom = 3
 	self.stime = 0
 	self.max_scroll_speed = 350
 	self.scrolling_dir = 0
@@ -1921,6 +2071,49 @@ function MapView:initialize(screen_w, screen_h)
 	self:load_map_animations(screen_map.generation)
 	self:show_flags(screen_map.generation)
 	self.pos.y = (self.screen_h - self.size.y) * 0.5
+end
+
+--- 将地图位置限制在可视范围内
+function MapView:clamp_pos()
+	if self.size.x <= self.screen_w then
+		self.pos.x = (self.screen_w - self.size.x) * 0.5
+	else
+		self.pos.x = km.clamp(self.screen_w - self.size.x, 0, self.pos.x)
+	end
+
+	if self.size.y <= self.screen_h then
+		self.pos.y = (self.screen_h - self.size.y) * 0.5
+	else
+		self.pos.y = km.clamp(self.screen_h - self.size.y, 0, self.pos.y)
+	end
+end
+
+--- 以窗口局部坐标 (px, py) 为锚点缩放地图，保证锚点下方的地图内容不移动
+---@param zoom number 目标缩放倍数
+---@param px number 锚点窗口局部 X
+---@param py number 锚点窗口局部 Y
+function MapView:set_zoom(zoom, px, py)
+	zoom = km.clamp(self.min_zoom, self.max_zoom, zoom)
+
+	if zoom == self.zoom then
+		return
+	end
+
+	local old_scale = self.base_scale * self.zoom
+	local new_scale = self.base_scale * zoom
+	local lx = (px - self.pos.x) / old_scale
+	local ly = (py - self.pos.y) / old_scale
+
+	self.zoom = zoom
+	self.scale.x, self.scale.y = new_scale, new_scale
+	self.size.x, self.size.y = self.natural_size.x * new_scale, self.natural_size.y * new_scale
+	self.pos.x, self.pos.y = px - lx * new_scale, py - ly * new_scale
+
+	self:clamp_pos()
+end
+
+function MapView:zoom_by(factor, px, py)
+	self:set_zoom(self.zoom * factor, px, py)
 end
 
 function MapView:load_map_animations(num)
@@ -4699,6 +4892,9 @@ local ENCYCLOPEDIA_PAGE_BTN_SLOT = 40
 local ENCYCLOPEDIA_PAGE_MAX_SLOTS = 11
 
 local PAGE_NBR_SOURCE = "encyclopedia_pageNbr_0001"
+-- 页码框固定逻辑尺寸（与原贴图 44x42 一致），不随图集/DPI 变化
+local PAGE_BTN_W = 44
+local PAGE_BTN_H = 42
 -- 内框（数字所在区域）占整张图的比例，用于抹除数字与绘制状态底色。
 -- 实测原图内框为 x=10..32、y=9..32（44x42 中），即 23x24。
 local PAGE_INNER_FRAC = {10 / 44, 9 / 42, 23 / 44, 24 / 42}
@@ -4725,18 +4921,21 @@ local function get_clean_page_frame()
 	local ss = I:s(PAGE_NBR_SOURCE)
 	local atlas = I:i(ss.atlas)
 	local _, _, qw, qh = ss.quad:getViewport()
-	local scale = ss.ref_scale or 1
-	local w, h = math.floor(qw * scale + 0.5), math.floor(qh * scale + 0.5)
+	local w, h = PAGE_BTN_W, PAGE_BTN_H
+	-- 贴图 quad 缩放到固定逻辑尺寸，规避图集分辨率/DPI 差异
+	local sx, sy = w / qw, h / qh
 	local ix, iy = math.floor(PAGE_INNER_FRAC[1] * w), math.floor(PAGE_INNER_FRAC[2] * h)
 	local iw, ih = math.floor(PAGE_INNER_FRAC[3] * w), math.floor(PAGE_INNER_FRAC[4] * h)
-	local canvas = G.newCanvas(w, h)
+	local canvas = G.newCanvas(w, h, {
+		dpiscale = 1
+	})
 
 	G.push("all")
 	G.setCanvas(canvas)
 	G.clear(0, 0, 0, 0)
 	G.setBlendMode("replace", "premultiplied")
 	G.setColor(1, 1, 1, 1)
-	G.draw(atlas, ss.quad, ss.trim[1] * scale, ss.trim[2] * scale, 0, scale)
+	G.draw(atlas, ss.quad, ss.trim[1] * sx, ss.trim[2] * sy, 0, sx, sy)
 
 	-- 用 replace 混合把数字区域清成透明，保留花边外框
 	G.setColor(0, 0, 0, 0)
@@ -4909,11 +5108,11 @@ end
 -- 图鉴塔/敌缩略图统一边框：
 -- 官方缩略图自带奶油色边框(255,251,222)，插件图则可能没有。这里在运行时把精灵
 -- 画到 canvas 再回读像素（DDS 压缩纹理无法直接 getData），用“连续同色边框带”
--- 判断是否带框。边框不再使用美术贴图，而是三态共用同一几何（外框/内框/圆角/粗细
--- 完全一致），只更换颜色直接绘制，避免原 over/select 环粗细不一的问题：
---   带框图 -> 整体拉伸到整个外框，自带边框被推到边框区域外，再用内框开口 clip；
---   无框图 -> 整体拉伸到边框内部。
--- 采用填充（拉伸）而非等比缩放，保证内容铺满、不会在某些方向露出原边框。
+-- 判断是否带框。边框不再使用美术贴图，而是三态共用同一固定逻辑尺寸（外框/内框/
+-- 边框粗细完全一致），只更换颜色，避免原 over/select 环粗细不一的问题：
+--   带框图 -> 按 quad 比例裁掉自带边框+底部投影后，拉伸填充内框；
+--   无框图 -> 整体包围盒拉伸填充内框。
+-- 统一 clip 到内框开口，采用填充（拉伸）保证内容铺满、不会在某些方向露出原边框。
 local THUMB_DETECT_FRAC = 0.8
 local THUMB_DETECT_MAX_INSET = 14
 local THUMB_DETECT_MAX_SKIP = 3
@@ -4929,8 +5128,9 @@ local thumb_frame_sources = {
 		source = "encyclopedia_tower_thumbs_0001",
 		lock = "encyclopedia_tower_thumbs_lock",
 		cell_scale = 1,
-		-- 相对贴图逻辑尺寸四周收紧多少像素（贴图含透明边距，按外轮廓算会偏大）
-		shrink = 6,
+		-- 外框固定逻辑尺寸，不随图集/DPI 变化（原来的 tower_thumb 也是固定 84x78）
+		outer_w = 80,
+		outer_h = 76,
 		-- 视觉边框厚度（逻辑像素），三态一致
 		border = 5,
 		-- 从贴图 quad 各边裁掉多少（相对 quad，规避透明边距差异），去掉自带边框+底部投影
@@ -4945,7 +5145,8 @@ local thumb_frame_sources = {
 		source = "encyclopedia_creep_thumbs_0001",
 		lock = "encyclopedia_creep_thumbs_lock",
 		cell_scale = 0.75,
-		shrink = 8,
+		outer_w = 56,
+		outer_h = 54,
 		border = 4,
 		crop = {
 			top = 4,
@@ -4963,23 +5164,6 @@ local THUMB_FRAME_COLORS = {
 	select = {255, 219, 51, 255}
 }
 local THUMB_FRAME_OUTLINE = {140, 125, 90, 255}
-
---- f > 0 向白提亮，f < 0 向黑压暗。
-local function thumb_shade(color, f)
-	local out = {}
-
-	for i = 1, 3 do
-		if f >= 0 then
-			out[i] = color[i] + (255 - color[i]) * f
-		else
-			out[i] = color[i] * (1 + f)
-		end
-	end
-
-	out[4] = color[4]
-
-	return out
-end
 
 local function thumb_is_light(r, g, b, a)
 	return a >= THUMB_DETECT_MIN_ALPHA and r >= THUMB_DETECT_MIN_CHANNEL and g >= THUMB_DETECT_MIN_CHANNEL and b >= THUMB_DETECT_MIN_CHANNEL
@@ -5140,7 +5324,7 @@ local function analyze_thumb_sprite(name)
 	return info
 end
 
---- 构建某类（tower/creep）的统一边框几何：三态共用同一外框/内框/圆角/粗细。
+--- 构建某类（tower/creep）的统一边框几何：三态共用同一固定外框/内框/粗细。
 local function get_thumb_frame(kind)
 	if thumb_frame_cache[kind] then
 		return thumb_frame_cache[kind]
@@ -5148,11 +5332,12 @@ local function get_thumb_frame(kind)
 
 	local cfg = thumb_frame_sources[kind]
 	local ss = I:s(cfg.source)
-	local ref = ss.ref_scale
-	local shrink = math.floor((cfg.shrink or 0) * ref + 0.5)
-	local outer_w = math.floor(ss.size[1] * ref + 0.5) - shrink
-	local outer_h = math.floor(ss.size[2] * ref + 0.5) - shrink
-	local border = math.max(1, math.floor(cfg.border * ref + 0.5))
+	local _, _, sqw, sqh = ss.quad:getViewport()
+	-- 外框/边框用固定逻辑像素（与平台、图集分辨率、DPI 无关）；
+	-- crop 存成占 quad 的比例，绘制时按各自精灵的 quad 尺寸换算，保证成比例。
+	local outer_w = cfg.outer_w
+	local outer_h = cfg.outer_h
+	local border = math.max(1, cfg.border)
 	local frame = {
 		outer_w = outer_w,
 		outer_h = outer_h,
@@ -5161,17 +5346,22 @@ local function get_thumb_frame(kind)
 		inner_y = border,
 		inner_w = outer_w - 2 * border,
 		inner_h = outer_h - 2 * border,
-		crop = cfg.crop
+		crop_frac = {
+			top = cfg.crop.top / sqh,
+			bottom = cfg.crop.bottom / sqh,
+			left = cfg.crop.left / sqw,
+			right = cfg.crop.right / sqw
+		}
 	}
 	local ix, iy, iw, ih = frame.inner_x, frame.inner_y, frame.inner_w, frame.inner_h
 
-	-- 烘焙三态浮雕边框（中心透明，供内容透出）
+	-- 烘焙三态纯色边框（中心透明，供内容透出）。显式 dpiscale=1，避免高 DPI 平台被额外缩放
 	local borders = {}
 
 	for state, color in pairs(THUMB_FRAME_COLORS) do
-		local light = thumb_shade(color, 0.55)
-		local dark = thumb_shade(color, -0.35)
-		local canvas = G.newCanvas(outer_w, outer_h)
+		local canvas = G.newCanvas(outer_w, outer_h, {
+			dpiscale = 1
+		})
 
 		G.push("all")
 		G.setCanvas(canvas)
@@ -5184,24 +5374,6 @@ local function get_thumb_frame(kind)
 		G.setBlendMode("alpha", "alphamultiply")
 
 		G.setLineWidth(1)
-
-		-- 外沿（凸起）：上/左高光，下/右阴影
-		G.setColor(light[1] / 255, light[2] / 255, light[3] / 255, 1)
-		G.line(1, 1.5, outer_w - 1, 1.5)
-		G.line(1.5, 1, 1.5, outer_h - 1)
-		G.setColor(dark[1] / 255, dark[2] / 255, dark[3] / 255, 1)
-		G.line(1, outer_h - 1.5, outer_w - 1, outer_h - 1.5)
-		G.line(outer_w - 1.5, 1, outer_w - 1.5, outer_h - 1)
-
-		-- 内沿（凹陷）：上/左阴影，下/右高光
-		G.setColor(dark[1] / 255, dark[2] / 255, dark[3] / 255, 1)
-		G.line(ix, iy - 0.5, ix + iw, iy - 0.5)
-		G.line(ix - 0.5, iy, ix - 0.5, iy + ih)
-		G.setColor(light[1] / 255, light[2] / 255, light[3] / 255, 1)
-		G.line(ix, iy + ih + 0.5, ix + iw, iy + ih + 0.5)
-		G.line(ix + iw + 0.5, iy, ix + iw + 0.5, iy + ih)
-
-		-- 外层勾线
 		G.setColor(THUMB_FRAME_OUTLINE[1] / 255, THUMB_FRAME_OUTLINE[2] / 255, THUMB_FRAME_OUTLINE[3] / 255, 1)
 		G.rectangle("line", 0.5, 0.5, outer_w - 1, outer_h - 1)
 		G.setLineWidth(1)
@@ -5238,13 +5410,14 @@ function EncyclopediaView:create_thumb_cell(kind, sprite_name, pos)
 		local bx, by, bw, bh
 
 		if info.framed then
-			-- 相对 quad 裁剪：所有官方缩略图画框在 quad 内位置一致，规避透明边距差异
-			local c = frame.crop
+			-- 相对 quad 按比例裁剪：所有官方缩略图画框在 quad 内位置一致，
+			-- 且不依赖图集分辨率，规避透明边距/写死像素的问题。
+			local c = frame.crop_frac
 
-			bx = c.left
-			by = c.top
-			bw = math.max(1, info.qw - c.left - c.right)
-			bh = math.max(1, info.qh - c.top - c.bottom)
+			bx = math.floor(c.left * info.qw + 0.5)
+			by = math.floor(c.top * info.qh + 0.5)
+			bw = math.max(1, info.qw - bx - math.floor(c.right * info.qw + 0.5))
+			bh = math.max(1, info.qh - by - math.floor(c.bottom * info.qh + 0.5))
 		else
 			bx, by, bw, bh = info.bx, info.by, info.bw, info.bh
 		end
@@ -5267,7 +5440,7 @@ function EncyclopediaView:create_thumb_cell(kind, sprite_name, pos)
 			G.setStencilTest()
 		end
 
-		-- 2) 浮雕边框（中心透明），alpha 跟随父级淡出
+		-- 2) 纯色边框（中心透明），alpha 跟随父级淡出
 		G.setColor(1, 1, 1, pa)
 		G.draw(frame.borders[self._state] or frame.borders.normal, 0, 0)
 
