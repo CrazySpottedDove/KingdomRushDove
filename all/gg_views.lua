@@ -287,6 +287,45 @@ function GGLabel:do_fit_lines(max_lines, start_size, step)
 	end
 end
 
+--- 与 do_fit_lines 结果等价，但针对“单行 fit、无 fit_size”的情况，
+--- 先用一次宽度测量按线性比例估算目标字号，再让 _fit_text 从该值附近微调。
+--- 这样可避免 _fit_text 逐 0.5 步下降时每级都新建字体（大字号 CJK 字体创建极慢）。
+function GGLabel:do_fit_lines_fast(max_lines, start_size, step)
+	max_lines = max_lines or self.fit_lines
+	start_size = start_size or self.font_size
+
+	local can_estimate = max_lines == 1 and not self.fit_size and self.text and self.text ~= "" and self.text_size and self.text_size.x > 0
+
+	if can_estimate then
+		self.fit_lines = 1
+		self.fit_size = nil
+		self.fit_step = step or 1
+		self.font_size = start_size
+		self._fitted_font_size = nil
+		self.font = nil
+
+		self:_load_font()
+
+		if self.font then
+			local avail = self.text_size.x * self._font_scale
+			local w = self.font:getWidth(self.text)
+
+			if w > 0 and avail > 0 and w > avail then
+				-- 单行宽度随字号近似线性，向上取整避免过小，再由 _fit_text 逐步收敛
+				local est = math.max(1, math.ceil(start_size * avail / w))
+
+				self.font_size = est
+				self._fitted_font_size = nil
+				self.font = nil
+			end
+		end
+
+		return self:do_fit_lines(1, self.font_size, self.fit_step)
+	end
+
+	return self:do_fit_lines(max_lines, start_size, step)
+end
+
 GGTextLabel = class("GGTextLabel", GGLabel)
 
 function GGTextLabel:initialize(size)
