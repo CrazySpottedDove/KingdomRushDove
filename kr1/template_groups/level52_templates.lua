@@ -194,7 +194,7 @@ tt.achievement = "GEORGE_FALL"
 tt = E:register_t_hot("decal_tree_ewok", "decal_scripted", true)
 AC(tt, "motion", "nav_path", "ranged", "unit")
 tt.main_script.update = decal_tree_ewok_update
-tt.render.sprites[1].anchor.y = 0.08333333333333333
+tt.render.sprites[1].anchor.y = 0.083333
 tt.render.sprites[1].prefix = "decal_tree_ewok"
 tt.ranged.attacks[1].min_range = 150
 tt.ranged.attacks[1].max_range = 300

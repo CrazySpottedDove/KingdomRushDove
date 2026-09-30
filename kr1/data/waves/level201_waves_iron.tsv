@@ -9,7 +9,7 @@
 	default_increment	1
 	default_interval	20
 #	expected gold	1200
-#	stage total gold	576.8933333
+#	stage total gold	576.893333
 #	stage gold curve
 #	WAVE 1					Bandit x20
 #	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter	goblin		orc_warrior	wulf	worg
@@ -96,4 +96,4 @@ Blackguard x14
 
 
 
-#	TOTAL DURATION (min):	1.893333333
+#	TOTAL DURATION (min):	1.893333

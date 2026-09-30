@@ -306,7 +306,7 @@ function controller_stage_32_boss.update(this, store)
 
 		fx.pos = V.v(this.pos.x + -32, this.pos.y + 102)
 		fx.render.sprites[1].ts = store.tick_ts
-		fx.render.sprites[1].scale = V.vv(0.45499999999999996)
+		fx.render.sprites[1].scale = V.vv(0.455)
 
 		simulation:queue_insert_entity(fx)
 		U.y_wait_unconditional(store, fts(20))

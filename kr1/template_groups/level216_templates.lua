@@ -1129,7 +1129,7 @@ function bg_corrupt.update(this, store)
 		end
 		return p
 	end
-	local grass_life = 0.7333333333333333
+	local grass_life = 0.733333
 	do
 		local pt = this.grass_ps and E:get_template(this.grass_ps)
 		local pl = pt and pt.particle_system and pt.particle_system.particle_lifetime
@@ -1631,7 +1631,7 @@ tt.particle_system.name = "pasto_transicion_proxy_grass_run"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.animation_fps = 15
-tt.particle_system.particle_lifetime = {0.7333333333333333, 0.7333333333333333}
+tt.particle_system.particle_lifetime = {0.733333, 0.733333}
 tt.particle_system.alphas = {255}
 tt.particle_system.scales_x = {1}
 tt.particle_system.scales_y = {1}

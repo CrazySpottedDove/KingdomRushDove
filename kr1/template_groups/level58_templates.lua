@@ -262,7 +262,7 @@ AC(tt, "ui")
 tt.ui.click_rect = r(-23, -19, 46, 38)
 tt.ui.can_select = false
 tt.render.sprites[1].prefix = "decal_s10_gnome"
-tt.render.sprites[1].anchor.y = 0.23684210526315788
+tt.render.sprites[1].anchor.y = 0.236842
 tt.main_script.update = decal_s10_gnome_update
 tt.min_delay = 5
 tt.max_delay = 20

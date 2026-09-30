@@ -62,7 +62,7 @@ end
 tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_1"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].offset = v(-30, 5)
-tt.render.sprites[1].anchor = v(0.3333333333333333, 0.5222222222222223)
+tt.render.sprites[1].anchor = v(0.333333, 0.522222)
 tt.ui.click_rect = r(-50, -5, 40, 30)
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.5, 0}}

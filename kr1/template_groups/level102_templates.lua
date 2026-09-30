@@ -164,7 +164,7 @@ trees_guardian_tree_update = function(this, store)
 				if can_shoot() then
 					local enemies = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 					if not enemies then
-						SU.delay_attack(store, a, 0.13333333333333333)
+						SU.delay_attack(store, a, 0.133333)
 						goto label_790_0
 					end
 					a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)

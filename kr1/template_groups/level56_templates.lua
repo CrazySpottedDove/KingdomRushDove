@@ -132,7 +132,7 @@ for i = 1, 5 do
 	tt.render.sprites[i].prefix = "decal_s08_magic_bean_l" .. i
 	tt.render.sprites[i].name = "step1"
 	tt.render.sprites[i].loop = false
-	tt.render.sprites[i].anchor.y = 0.1076923076923077
+	tt.render.sprites[i].anchor.y = 0.107692
 end
 local km = require("lib.klua.macros")
 local function decal_s08_peakaboo_update(this, store)

@@ -1338,7 +1338,7 @@ tt = E:register_t_hot("controller_stage_208_boss_path", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_208_boss_path_update
 tt.start_offset = -50
-tt.sections_width = 79.64444444444445
+tt.sections_width = 79.644444
 tt.sections_decals_t = "decal_stage_208_path"
 tt.sections_decals_prefix = "stage208_floorpath_"
 tt.sections_count = 10

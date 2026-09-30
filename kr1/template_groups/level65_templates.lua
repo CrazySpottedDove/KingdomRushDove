@@ -128,14 +128,14 @@ end
 local tt
 tt = E:register_t_hot("decal_hr_cart", "decal", true)
 tt.render.sprites[1].name = "stage17_carret"
-tt.render.sprites[1].anchor.y = 0.08333333333333333
+tt.render.sprites[1].anchor.y = 0.083333
 tt.render.sprites[1].animated = false
 tt = E:register_t_hot("decal_hr_worker_a", "decal", true)
 tt.render.sprites[1].name = "decal_hr_worker_a"
-tt.render.sprites[1].anchor.y = 0.027777777777777776
+tt.render.sprites[1].anchor.y = 0.027778
 tt = E:register_t_hot("decal_hr_worker_b", "decal", true)
 tt.render.sprites[1].name = "decal_hr_worker_b"
-tt.render.sprites[1].anchor.y = 0.20833333333333334
+tt.render.sprites[1].anchor.y = 0.208333
 tt = E:register_t_hot("malik_slave_controller", "decal_scripted", true)
 AC(tt, "editor")
 tt.fn_can_power = malik_slave_controller_fn_can_power
@@ -205,4 +205,4 @@ tt = E:register_t_hot("decal_baby_malik_slave_free", "decal", true)
 tt.render.sprites[1].name = "decal_baby_malik_free"
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].loop = false
-tt.render.sprites[1].anchor = vec_2(0.33101851851851855, 0.27976190476190477)
+tt.render.sprites[1].anchor = vec_2(0.331019, 0.279762)

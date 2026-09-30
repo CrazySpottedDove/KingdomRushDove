@@ -105,7 +105,7 @@ table.sort(charcoals,function(e1,e2)
 return sort_fn(e1,e2)
 end)
 local tree_delay=0.37/#trees
-local tree_fire_delay=0.5549999999999999/#tree_fires
+local tree_fire_delay=0.555/#tree_fires
 local charcoal_delay=0.2/#charcoals
 local land_delay=0.46
 log.error("#charcoals:%s #trees:%s",#charcoals,#trees)

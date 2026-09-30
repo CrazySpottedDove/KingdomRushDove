@@ -1130,7 +1130,7 @@ p=threshold*(1+amp)-amp*(1-n)
 end
 return p
 end
-local grass_life=0.7333333333333333
+local grass_life=0.733333
 do
 local pt=this.grass_ps and E:get_template(this.grass_ps)
 local pl=pt and pt.particle_system and pt.particle_system.particle_lifetime
