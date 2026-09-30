@@ -6397,7 +6397,7 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 
 	longest_l.text = parts[longest_idx]
 
-	longest_l:do_fit_lines(1, fs)
+	longest_l:do_fit_lines_fast(1, fs)
 
 	longest_l.size.y = longest_l:get_font_height()
 
