@@ -27,3 +27,9 @@ tt.render.sprites[1].animated = false
 tt = E:register_t_hot("decal_stage_02_bridge_shadows", "decal", true)
 tt.render.sprites[1].name = "stage2_shadows"
 tt.render.sprites[1].animated = false
+
+for i = 1, 6 do
+	tt = E:register_t_hot("decal_stage_02_stone_" .. i, "decal", true)
+	tt.render.sprites[1].name = "stage2_stones_000" .. i
+	tt.render.sprites[1].animated = false
+end
