@@ -1256,7 +1256,7 @@ function S18.controller_stage_218_veznan.on_explode_statue(this, store, event_na
 end
 function S18.controller_stage_218_veznan.update(this, store, script)
 	this._queue = this._queue or {}
-	local body, sigil_pi, sigil_spi, sigil_ni
+	local body, sigil_pi, _, sigil_ni
 	local function body_idle()
 		if body then
 			U.animation_start(body, "idle", nil, store.tick_ts, true)
@@ -1519,7 +1519,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 		queue_remove(store, this)
 		return
 	end
-	sigil_pi, sigil_spi, sigil_ni = unpack(nodes[1])
+	sigil_pi, _, sigil_ni = unpack(nodes[1])
 	local gem_ts = store.tick_ts
 	local taunt_ts = store.tick_ts
 	local taunt_wait = U.frandom(this.taunt_cooldown_min, this.taunt_cooldown_max)
