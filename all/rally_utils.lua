@@ -12,13 +12,14 @@ function rally_utils.rally_fn_default(this, store, force_silent)
 	local b = this.barrack
 	local all_dead = true
 	local sounds = {}
-	for i = 1, #b.soldiers do
+	local soldier_count = #b.soldiers
+	for i = 1, soldier_count do
 		local s = b.soldiers[i]
 		if b.scattered then
-			s.nav_rally.pos = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+			s.nav_rally.pos = U.rally_formation_position(i, b, soldier_count, b.rally_angle_offset)
 			s.nav_rally.center:copy(s.nav_rally.pos)
 		else
-			s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+			s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, soldier_count, b.rally_angle_offset)
 		end
 		s.nav_rally.new = true
 		all_dead = all_dead and (s.health and s.health.dead)

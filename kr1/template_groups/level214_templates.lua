@@ -521,7 +521,7 @@ tt.animation = "glow"
 tt.graveyard.dead_time = 1
 tt.graveyard.check_interval = 0.25
 tt.graveyard.spawn_interval = 1
-tt.graveyard.spawns_by_health = {{"enemy_skeleton_goat", 2}, {"enemy_skeleton_kr6", 599}, {"enemy_skeleton_big_kr6", 1e+99}}
+tt.graveyard.spawns_by_health = {{"enemy_skeleton_goat", 2 * 1.375}, {"enemy_skeleton_kr6", 599 * 1.375}, {"enemy_skeleton_big_kr6", 1e+99}}
 tt = E:register_t_hot("controller_stage_214_community_building_achievement", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_214_community_building_achievement_update
