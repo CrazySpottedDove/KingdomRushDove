@@ -6452,49 +6452,6 @@ tt.tween.remove = true
 tt = E:register_t("decal_waves", "decal_loop")
 tt.render.sprites[1].name = "stage_2_props_waves"
 
-tt = E:register_t("stage_4_arborean_bridge_1", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-local time_between_animations = fts(30 * math.random(3, 5))
-
-tt.render.sprites[1].prefix = "anim_puente1"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-tt.animations = {{"action1", time_between_animations}, {"idle", time_between_animations}, {"action2", time_between_animations}}
-tt.main_script.update = scripts.decal_scripted_loop_play.update
-
-tt = E:register_t("stage_4_arborean_bridge_2", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-local time_between_animations = fts(30 * math.random(3, 5))
-
-tt.render.sprites[1].prefix = "anim_puente2"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-tt.animations = {{"action1", time_between_animations}, {"idle", time_between_animations}, {"action2", time_between_animations}}
-tt.main_script.update = scripts.decal_scripted_loop_play.update
-
-tt = E:register_t("stage_4_arborean_bridge_3", "decal_scripted")
-E:add_comps(tt, "editor", "editor_script")
-local time_between_animations = fts(30 * math.random(3, 5))
-
-tt.render.sprites[1].prefix = "anim_puente3"
-tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
-tt.render.sprites[1].name = "action1"
-tt.animations = {{"action1", time_between_animations}, {"idle", time_between_animations}, {"action2", time_between_animations}, {"action3", time_between_animations}}
-tt.main_script.update = scripts.decal_scripted_loop_play.update
-
-tt = E:register_t("trees_heart_of_the_arborean_decal_hit", "fx")
-E:add_comps(tt, "tween")
-tt.render.sprites[1].prefix = "explosiondecalDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
-tt = E:register_t("trees_heart_of_the_arborean_decal_hit_fx", "fx")
-tt.render.sprites[1].prefix = "explosionDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS - 1
-
 tt = E:register_t("arborean_shaman_bullet", "bullet")
 E:add_comps(tt, "force_motion")
 tt.render.sprites[1].name = "tricannon_tower_lvl2_bomb"
@@ -6657,21 +6614,6 @@ tt.particle_system.track_offset = v(0, 20)
 tt.particle_system.animation_fps = 15
 tt.particle_system.z = Z_DECALS
 
-tt = E:register_t("stage_06_mask_2", "decal")
-tt.render.sprites[1].name = "stage_6_mask2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("stage_06_mask_3", "decal")
-tt.render.sprites[1].name = "stage_6_mask3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("stage_06_mask_4", "decal")
-tt.render.sprites[1].name = "stage_6_mask4"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
 tt = E:register_t("taunts_s06_controller")
 E:add_comps(tt, "main_script", "taunts", "editor")
 tt.load_file = "level101_taunts"
@@ -6760,30 +6702,6 @@ tt.tween.props[5] = table.deepclone(tt.tween.props[4])
 tt.tween.props[5].sprite_id = 2
 tt.tween.props[6] = table.deepclone(tt.tween.props[4])
 tt.tween.props[6].sprite_id = 3
-
-tt = E:register_t("decal_tiki_bar2", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].prefix = "stage_06_parches_tiki_top_bebe2"
-tt.render.sprites[1].name = "Idle1"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].sort_y_offset = -2
-
-tt = E:register_t("decal_tiki_bar3", "decal_tiki_bar2")
-tt.render.sprites[1].prefix = "stage_06_parches_tiki_top_bebe1"
-tt.render.sprites[1].name = "idle1"
-
-tt = E:register_t("decal_tiki_bar4", "decal")
-E:add_comps(tt, "editor")
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].name = "stage_06_parches_tiki_top_viejo"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].sort_y_offset = -2
-
-tt = E:register_t("decal_tiki_bar5", "decal_tiki_bar2")
-tt.render.sprites[1].prefix = "stage_06_parches_tiki_top_pibe"
-tt.render.sprites[1].name = "Idle"
-tt.render.sprites[1].sort_y_offset = 1
 
 tt = E:register_t("decal_stage_11_cult_leader", "decal")
 E:add_comps(tt, "taunts", "tween")
@@ -6973,10 +6891,6 @@ tt.render.sprites[1].draw_order = 0
 tt = E:register_t("decal_stage_11_portal_crystal_8", "decal_stage_11_portal_crystal_1")
 tt.render.sprites[1].prefix = "stage_11_crystal2_6Def"
 
--- tt = E:register_t("decal_stage_11_mask", "decal")
--- tt.render.sprites[1].name = "T2_Stage_11"
--- tt.render.sprites[1].animated = false
--- tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt = E:register_t("decal_glare_terrain_3_overlay", "decal")
 E:add_comps(tt, "tween")
 tt.pos = v(512, 384)

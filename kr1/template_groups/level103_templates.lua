@@ -265,6 +265,20 @@ trees_heart_of_the_arborean_decal_update = function(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
+tt = E:register_t_tmp("trees_heart_of_the_arborean_decal_hit", "fx")
+E:add_comps(tt, "tween")
+tt.render.sprites[1].prefix = "explosiondecalDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {1, 0}}
+
+tt = E:register_t_tmp("trees_heart_of_the_arborean_decal_hit_fx", "fx")
+tt.render.sprites[1].prefix = "explosionDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS - 1
 tt = E:register_t_hot("trees_heart_of_the_arborean_decal", "decal_scripted", true)
 E:add_comps(tt, "custom_attack", "ui", "cheats")
 tt.render.sprites[1].prefix = "heartDef"
