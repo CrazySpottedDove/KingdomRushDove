@@ -23601,12 +23601,14 @@ function scripts.soldier_reinforcement_stage_15_denas.update(this, store)
 		end
 
 		local attack_done
+		local an = U.animation_name_facing_point(this, attack.animation, target.pos)
 
 		if attack.type == "area" then
 			attack_done = SU.y_soldier_do_single_area_attack(store, this, target, attack)
 		else
 			attack_done = SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 		end
+		this.render.sprites[1].name = an
 
 		if attack_done then
 			if attack == a[1] then

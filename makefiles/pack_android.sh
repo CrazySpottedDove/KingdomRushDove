@@ -159,7 +159,9 @@ calc_love_fingerprint() {
             -path "./.agents" -prune -o \
             -path "./.images" -prune -o \
             -path "./.images_backup" -prune -o \
+            -path "*/__pycache__" -prune -o \
             -type f ! -name "*.dds" ! -name "*.exe" \
+            ! -name "*.pyc" ! -name "*.pyo" \
             ! -name "client.log" ! -name "client" \
             ! -name "https.dll" ! -name "https.so" \
             ! -name "run.bat" ! -name "launch.bat" \
