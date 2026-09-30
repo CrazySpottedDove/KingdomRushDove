@@ -59,6 +59,14 @@ function birds_formation_controller.update(this, store)
 	end
 end
 
+tt = E:register_t_hot("decal_bird_1", "decal_tween", true)
+tt.render.sprites[1].prefix = "decal_bird_1"
+tt.render.sprites[1].name = "play"
+tt.tween.props[1].name = "offset"
+
+tt = E:register_t_hot("decal_bird_2", "decal_bird_1", true)
+tt.render.sprites[1].prefix = "decal_bird_2"
+
 tt = E:register_t_hot("birds_controller", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = birds_controller.update

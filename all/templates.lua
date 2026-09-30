@@ -767,6 +767,12 @@ tt.render.sprites[1].name = "pop_0014"
 tt = E:register_t("pop_zapow", "pop")
 tt.render.sprites[1].name = "pop_0017"
 
+tt = E:register_t("pop_crit", "pop")
+tt.render.sprites[1].name = "pop_0003"
+
+tt = E:register_t("pop_headshot", "pop")
+tt.render.sprites[1].name = "pop_0007"
+
 tt = E:register_t("editor_wave_flag")
 E:add_comps(tt, "pos", "editor", "editor_script", "main_script", "render")
 tt.editor.path_id = 1

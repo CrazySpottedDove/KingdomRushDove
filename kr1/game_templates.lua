@@ -35,11 +35,6 @@ require("enemies")
 require("boss")
 
 ----------
-tt = RT("pop_crit", "pop")
-tt.render.sprites[1].name = "pop_0003"
-
-tt = RT("pop_headshot", "pop")
-tt.render.sprites[1].name = "pop_0007"
 
 tt = RT("ps_bolt_sorcerer", "particle_system")
 tt.particle_system.alphas = {255, 0}
@@ -5009,73 +5004,6 @@ tt.render.sprites[1].name = "decal_water_wave_1_play"
 
 tt = RT("decal_water_wave_2", "decal_loop")
 tt.render.sprites[1].name = "decal_water_wave_2_play"
-
-tt = RT("decal_stage01_bird1", "decal_delayed_play")
-AC(tt, "tween")
-
-tt = RT("decal_bird_1", "decal_tween")
-tt.render.sprites[1].prefix = "decal_bird_1"
-tt.render.sprites[1].name = "play"
-tt.tween.props[1].name = "offset"
-
-tt = RT("decal_bird_2", "decal_bird_1")
-tt.render.sprites[1].prefix = "decal_bird_2"
-
-for i = 1, 6 do
-
-	tt = RT("decal_stage_02_stone_" .. i, "decal")
-	tt.render.sprites[1].name = "stage2_stones_000" .. i
-	tt.render.sprites[1].animated = false
-end
-
-tt = RT("decal_river_object", "decal_scripted")
-AC(tt, "nav_path", "motion", "ui", "tween", "sound_events")
-tt.main_script.update = scripts.decal_river_object.update
-tt.motion.max_speed = 1.5 * FPS
-tt.ui.click_rect = r(-18, -5, 36, 36)
-tt.ui.can_select = false
-tt.ui.z = -1
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.nav_path.pi = 5
-tt.sink_nodes = 5
-tt.falls = 1
-tt.fall_time = 0.5
-tt.fall_wait = 0.6
-tt.fall_1_tween = {{0, 255}, {0.4, 255}, {0.5, 0}}
-tt.travel_2_tween = {{0, 0}, {1, 255}}
-tt.tween.disabled = true
-tt.tween.remove = false
-tt.sound_events.fall = "ElvesWaterfallStrong"
-
-tt = RT("decal_river_object_hobbit", "decal_river_object")
-tt.render.sprites[1].prefix = "decal_river_object_hobbit"
-tt.render.sprites[1].anchor.y = 0.2818181818181818
-tt.falls = 2
-tt.sink_nodes = nil
-tt.achievement_inc = "DWARF_FALL"
-tt.sound_events.save = "ElvesAchievementHobbit"
-tt.sound_events.crash = "ElvesAchievementDwarfFall"
-
-tt = RT("decal_river_object_barrel", "decal_river_object")
-tt.render.sprites[1].prefix = "decal_river_object_barrel"
-tt.render.sprites[1].anchor.y = 0.45454545454545453
-tt.sound_events.save = "ElvesWaterfallMid"
-
-tt = RT("decal_river_object_chest", "decal_river_object")
-tt.render.sprites[1].prefix = "decal_river_object_chest"
-tt.render.sprites[1].anchor.y = 0.20588235294117646
-tt.gold = 20
-tt.sound_events.save = "ElvesGoldCoin"
-
-tt = RT("decal_river_object_wilson", "decal_river_object")
-tt.render.sprites[1].prefix = "decal_river_object_wilson"
-tt.render.sprites[1].anchor.y = 0.1527777777777778
-tt.sound_events.save = "ElvesAchievementWilson"
-
-tt = RT("decal_river_object_submarine", "decal_river_object")
-tt.render.sprites[1].prefix = "decal_river_object_submarine"
-tt.render.sprites[1].anchor.y = 0.20454545454545456
-tt.sound_events.save = "ElvesAchievementYellowSubmarine"
 
 tt = RT("fx_waterfall_splash", "fx")
 AC(tt, "sound_events")

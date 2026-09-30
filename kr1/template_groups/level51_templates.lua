@@ -95,3 +95,52 @@ tt.min_time = 12
 tt.max_time = 24
 tt.max_chests = 3
 tt.max_hobbits = 13
+
+tt = E:register_t_hot("decal_river_object", "decal_scripted", true)
+AC(tt, "nav_path", "motion", "ui", "tween", "sound_events")
+tt.main_script.update = scripts.decal_river_object.update
+tt.motion.max_speed = 1.5 * FPS
+tt.ui.click_rect = r(-18, -5, 36, 36)
+tt.ui.can_select = false
+tt.ui.z = -1
+tt.render.sprites[1].z = Z_DECALS + 1
+tt.nav_path.pi = 5
+tt.sink_nodes = 5
+tt.falls = 1
+tt.fall_time = 0.5
+tt.fall_wait = 0.6
+tt.fall_1_tween = {{0, 255}, {0.4, 255}, {0.5, 0}}
+tt.travel_2_tween = {{0, 0}, {1, 255}}
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.sound_events.fall = "ElvesWaterfallStrong"
+
+tt = E:register_t_hot("decal_river_object_hobbit", "decal_river_object", true)
+tt.render.sprites[1].prefix = "decal_river_object_hobbit"
+tt.render.sprites[1].anchor.y = 0.2818181818181818
+tt.falls = 2
+tt.sink_nodes = nil
+tt.achievement_inc = "DWARF_FALL"
+tt.sound_events.save = "ElvesAchievementHobbit"
+tt.sound_events.crash = "ElvesAchievementDwarfFall"
+
+tt = E:register_t_hot("decal_river_object_barrel", "decal_river_object", true)
+tt.render.sprites[1].prefix = "decal_river_object_barrel"
+tt.render.sprites[1].anchor.y = 0.45454545454545453
+tt.sound_events.save = "ElvesWaterfallMid"
+
+tt = E:register_t_hot("decal_river_object_chest", "decal_river_object", true)
+tt.render.sprites[1].prefix = "decal_river_object_chest"
+tt.render.sprites[1].anchor.y = 0.20588235294117646
+tt.gold = 20
+tt.sound_events.save = "ElvesGoldCoin"
+
+tt = E:register_t_hot("decal_river_object_wilson", "decal_river_object", true)
+tt.render.sprites[1].prefix = "decal_river_object_wilson"
+tt.render.sprites[1].anchor.y = 0.1527777777777778
+tt.sound_events.save = "ElvesAchievementWilson"
+
+tt = E:register_t_hot("decal_river_object_submarine", "decal_river_object", true)
+tt.render.sprites[1].prefix = "decal_river_object_submarine"
+tt.render.sprites[1].anchor.y = 0.20454545454545456
+tt.sound_events.save = "ElvesAchievementYellowSubmarine"
