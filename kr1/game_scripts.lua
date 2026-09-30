@@ -54679,7 +54679,7 @@ function scripts.enemy_leaper_spider.update(this, store, script)
 			return false
 		end
 
-		if store.tick_ts - al.ts < al.cooldown then
+		if not enemy_ready_to_magic_attack(this, store, al) then
 			return false
 		end
 
@@ -54690,7 +54690,7 @@ function scripts.enemy_leaper_spider.update(this, store, script)
 			return false
 		end
 
-		local targets = table.filter(store.entities, function(k, v)
+		local targets = table.filter(store.soldiers, function(k, v)
 			return not v.pending_removal and v.soldier and v.vis and v.health and not v.health.dead and band(v.vis.flags, al.vis_bans) == 0 and band(v.vis.bans, al.vis_flags) == 0 and soldier_is_within_path(v, this.nav_path.pi) and within_nodes(v, this.nav_path.pi, al.max_nodes, al.min_nodes)
 		end)
 
@@ -54777,8 +54777,11 @@ function scripts.enemy_leaper_spider.update(this, store, script)
 				U.y_animation_play(this, al.animations[1], af, store.tick_ts, 1, 1)
 				U.animation_start(this, al.animations[2], nil, store.tick_ts, false, 1)
 
-				U.bans_add(this.vis, F_BLOCK)
-				this._leap_bans_added = true
+				if not this._leap_bans_added then
+					U.bans_add(this.vis, F_ALL)
+					this._leap_bans_added = true
+				end
+
 				this.render.sprites[1].z = Z_BULLETS
 
 				y_bullet_fly(target_pos)
@@ -54786,7 +54789,7 @@ function scripts.enemy_leaper_spider.update(this, store, script)
 				this.render.sprites[1].z = Z_OBJECTS
 
 				if this._leap_bans_added then
-					U.bans_remove(this.vis, F_BLOCK)
+					U.bans_remove(this.vis, F_ALL)
 					this._leap_bans_added = nil
 				end
 
