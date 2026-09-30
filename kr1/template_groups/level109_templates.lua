@@ -101,6 +101,264 @@ function decal_stage_09_bridge.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
+tt = E:register_t_tmp("aura_stage_09_spawn_nightmare_convert", "aura")
+tt.aura.duration = 1e+99
+tt.aura.radius = 4
+tt.include_templates = {"enemy_lesser_sister_nightmare"}
+tt.entity_to_spawn = "enemy_armored_nightmare"
+tt.spawn_fx = "fx_stage_09_portal_path_spawn_fx"
+tt.portal_offset = v(-15, 0)
+tt.main_script.update = function(this, store)
+	this.entities_spawned = 0
+
+	while true do
+
+		if this.path_portal.render.sprites[1].name ~= "idle" then
+			local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
+				return e ~= this and e.health.hp and e.can_be_converted and (this.include_templates and table.contains(this.include_templates, e.template_name) or not this.include_templates)
+			end)
+
+			if targets and #targets > 0 then
+				for _, enemy in ipairs(targets) do
+					local pos = V.vclone(enemy.pos)
+					local nav_path = enemy.nav_path
+
+					simulation:queue_remove_entity(enemy)
+
+					local entity = E:create_entity(this.spawn_fx)
+
+					entity.pos = v(512 + this.portal_offset.x, 384 + this.portal_offset.y)
+					entity.render.sprites[1].ts = store.tick_ts
+
+					simulation:queue_insert_entity(entity)
+
+					entity = E:create_entity(this.entity_to_spawn)
+					entity.pos = pos
+					entity.nav_path = nav_path
+
+					local original_speed = entity.motion.max_speed
+					U.update_max_speed(entity, 0)
+					entity.source_id = this.id
+
+					simulation:queue_insert_entity(entity)
+					S:queue(this.sound_spawn)
+					U.y_wait_unconditional(store, fts(5))
+
+					U.update_max_speed(entity, original_speed)
+					this.entities_spawned = this.entities_spawned + 1
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+tt.wave_config = {{
+	{},
+	{},
+	{{
+		duration = 28,
+		time_start = 10
+	}},
+	{{
+		duration = 28,
+		time_start = 10
+	}},
+	{},
+	{},
+	{{
+		duration = 30,
+		time_start = 10
+	}},
+	{},
+	{{
+		duration = 30,
+		time_start = 10
+	}},
+	{},
+	{{
+		duration = 52,
+		time_start = 10
+	}},
+	{{
+		duration = 40,
+		time_start = 10
+	}},
+	{},
+	{{
+		duration = 40,
+		time_start = 12
+	}},
+	{{
+		duration = 70,
+		time_start = 10
+	}}
+}, {{}, {}, {}, {{
+	duration = 70,
+	time_start = 20
+}}, {}, {{
+	duration = 107,
+	time_start = 21
+}}}, {{{
+	duration = 110,
+	time_start = 74
+}, {
+	duration = 330,
+	time_start = 310
+}}}}
+tt.sound_spawn = "EnemyTwistedSisterSummonSpawn"
+
+tt = E:register_t_tmp("aura_stage_09_spawn_nightmare_convert_spawn_fx", "aura")
+tt.aura.duration = 1e+99
+tt.aura.radius = 80
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.vis_flags = F_RANGED
+tt.include_templates = {"enemy_lesser_sister_nightmare"}
+tt.main_script.update = function(this, store)
+	local enemies_spawned = {}
+
+	while true do
+		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
+			return table.contains(this.include_templates, e.template_name)
+		end)
+
+		if targets and #targets > 0 then
+			for _, e in ipairs(targets) do
+				if not table.contains(enemies_spawned, e.id) then
+					e.can_be_converted = true
+
+					table.insert(enemies_spawned, e.id)
+
+					this.portal.enemy_spawned = true
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+tt = E:register_t_tmp("fx_stage_09_portal_path_spawn_fx", "fx")
+tt.render.sprites[1].prefix = "stage_9_portal_path_spawn_FXDef"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].exo = true
+
+tt = E:register_t_hot("decal_stage_09_bridge_mask", "decal", true)
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t_hot("decal_stage_09_bridge1_mask", "decal_stage_09_bridge_mask", true)
+tt.render.sprites[1].prefix = "stage_9_bridge1_maskDef"
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
+tt = E:register_t_hot("decal_stage_09_bridge2_mask", "decal_stage_09_bridge_mask", true)
+tt.render.sprites[1].prefix = "stage_9_bridge2_maskDef"
+
+tt = E:register_t_hot("decal_stage_09_bridge3_mask", "decal_stage_09_bridge_mask", true)
+tt.render.sprites[1].prefix = "stage_9_bridge3_maskDef"
+
+tt = E:register_t_hot("decal_stage_09_candle", "decal_scripted", true)
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].name = "idle_off"
+tt.main_script.update = function(this, store)
+	local is_on = false
+
+	while true do
+		if this.turn_on then
+			this.turn_on = nil
+
+			U.y_animation_play(this, "on", nil, store.tick_ts)
+
+			is_on = true
+		elseif this.turn_off then
+			this.turn_off = nil
+
+			U.y_animation_play(this, "off", nil, store.tick_ts)
+
+			is_on = false
+		end
+
+		if is_on then
+			U.animation_start_default(this, "idle_on", nil, store.tick_ts, true)
+		else
+			U.animation_start_default(this, "idle_off", nil, store.tick_ts, true)
+		end
+
+		coroutine.yield()
+	end
+end
+
+tt = E:register_t_hot("decal_stage_09_candle_back1", "decal_stage_09_candle", true)
+tt.render.sprites[1].prefix = "stage_9_candles_back_1Def"
+
+tt = E:register_t_hot("decal_stage_09_candle_back2", "decal_stage_09_candle", true)
+tt.render.sprites[1].prefix = "stage_9_candles_back_2Def"
+
+tt = E:register_t_hot("decal_stage_09_candle_back3", "decal_stage_09_candle", true)
+tt.render.sprites[1].prefix = "stage_9_candles_back_3Def"
+
+tt = E:register_t_hot("decal_stage_09_candle_front1", "decal_stage_09_candle", true)
+tt.render.sprites[1].prefix = "stage_9_candles_front_1Def"
+
+tt = E:register_t_hot("decal_stage_09_candle_front2", "decal_stage_09_candle", true)
+tt.render.sprites[1].prefix = "stage_9_candles_front_2Def"
+
+tt = E:register_t_hot("decal_stage_09_candle_front3", "decal_stage_09_candle", true)
+tt.render.sprites[1].prefix = "stage_9_candles_front_3Def"
+
+tt = E:register_t_hot("decal_stage_09_candle_glow_back", "decal", true)
+tt.render.sprites[1].prefix = "stage_9_candles_glow_backDef"
+tt.render.sprites[1].name = "off"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t_hot("decal_stage_09_candle_glow_front", "decal", true)
+tt.render.sprites[1].prefix = "stage_9_candles_glow_frontDef"
+tt.render.sprites[1].name = "off"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t_hot("decal_stage_09_portal_path_spawn", "decal_scripted", true)
+tt.render.sprites[1].prefix = "stage_9_portal_pathDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = function(this, store)
+	local is_on = false
+
+	while true do
+		if this.turn_on then
+			this.turn_on = nil
+
+			U.y_animation_play(this, "light_on", nil, store.tick_ts)
+
+			is_on = true
+		elseif this.turn_off then
+			this.turn_off = nil
+
+			U.y_animation_play(this, "light_off", nil, store.tick_ts)
+
+			is_on = false
+		end
+
+		if is_on then
+			U.animation_start_default(this, "idle_on", nil, store.tick_ts, true)
+		else
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+		end
+
+		coroutine.yield()
+	end
+end
+
+tt = E:register_t_hot("decal_stage_09_portal", "decal", true)
+tt.render.sprites[1].prefix = "stage_9_portalDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t_hot("decal_stage_09_fire", "decal", true)
 tt.render.sprites[1].prefix = "stage_9_fireDef"
 tt.render.sprites[1].name = "idle"
@@ -118,8 +376,156 @@ tt.ui.click_rect = r(-20, -10, 40, 40)
 
 tt = E:register_t_hot("controller_stage_09_spawn_nightmares", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
-tt.main_script.insert = scripts.controller_stage_09_spawn_nightmares.insert
-tt.main_script.update = scripts.controller_stage_09_spawn_nightmares.update
+tt.main_script.insert = function(this, store)
+	local portal_spawned = E:create_entity(this.entity_portal)
+
+	portal_spawned.pos = v(526, 380)
+
+	simulation:queue_insert_entity(portal_spawned)
+
+	this.portal_spawned = portal_spawned
+
+	local path_portal = E:create_entity(this.path_portal)
+
+	path_portal.pos = v(512 + this.portal_offset.x, 384 + this.portal_offset.y)
+
+	simulation:queue_insert_entity(path_portal)
+
+	this.path_portal = path_portal
+	this.candles = {}
+	this.glows = {}
+
+	return true
+end
+tt.main_script.update = function(this, store)
+	local portal_spawned = this.portal_spawned
+
+	while store.wave_group_number == 0 do
+		coroutine.yield()
+	end
+
+	local last_wave = 0
+	local start_wave_ts = store.tick_ts
+	local last_index_processed = 0
+	local auras = {}
+
+	local function get_wave_data_index(current_wave_data)
+		for index, wave_data in ipairs(current_wave_data) do
+			if index > last_index_processed and wave_data.time_start + wave_data.duration > store.tick_ts - start_wave_ts then
+				return index
+			end
+		end
+
+		return nil
+	end
+
+	for _, pos in ipairs(this.pos_aura) do
+		local aura_spawned = E:create_entity(this.entity_aura)
+
+		aura_spawned.pos = pos
+		aura_spawned.path_portal = this.path_portal
+
+		simulation:queue_insert_entity(aura_spawned)
+		table.insert(auras, aura_spawned)
+	end
+
+	local aura_spawned_fx = E:create_entity(this.spawn_fx_aura)
+
+	aura_spawned_fx.pos = this.pos_portal
+	aura_spawned_fx.portal = this
+
+	simulation:queue_insert_entity(aura_spawned_fx)
+
+	while true do
+		if store.game_outcome and store.game_outcome.victory then
+			local entities_spawned = false
+
+			for _, aura in ipairs(auras) do
+				if aura.entities_spawned > 0 then
+					entities_spawned = true
+
+					break
+				end
+			end
+
+			if not entities_spawned then
+				signal.emit("portal_not_spawned-stage09", this)
+			end
+		end
+
+		local current_wave = store.wave_group_number
+		local current_wave_data = this.wave_config[store.level_mode][current_wave]
+
+		if current_wave ~= last_wave then
+			last_wave = current_wave
+			start_wave_ts = store.tick_ts
+			last_index_processed = 0
+		end
+
+		if current_wave_data and #current_wave_data > 0 then
+			local next_index_to_check = get_wave_data_index(current_wave_data)
+
+			if next_index_to_check and next_index_to_check ~= last_index_processed then
+				local wave_data = current_wave_data[next_index_to_check]
+
+				if store.tick_ts - start_wave_ts >= wave_data.time_start then
+					S:queue(this.sound_candles_in)
+
+					for _, candle in ipairs(this.candles) do
+						candle.turn_on = true
+					end
+
+					for _, glow in ipairs(this.glows) do
+						glow.render.sprites[1].hidden = false
+
+						U.animation_start_default(glow, "on", nil, store.tick_ts)
+					end
+
+					this.path_portal.turn_on = true
+
+					S:queue(this.sound_portal_in)
+					U.y_animation_play(portal_spawned, "on", nil, store.tick_ts)
+					U.y_animation_play(portal_spawned, "idle_on", nil, store.tick_ts)
+
+					local start_ts = store.tick_ts
+
+					while store.tick_ts - start_ts < wave_data.duration do
+						if this.enemy_spawned then
+							this.enemy_spawned = nil
+
+							U.y_animation_play(portal_spawned, "spawn", nil, store.tick_ts)
+						end
+
+						coroutine.yield()
+					end
+
+					last_index_processed = next_index_to_check
+
+					for _, candle in ipairs(this.candles) do
+						candle.turn_off = true
+					end
+
+					for _, glow in ipairs(this.glows) do
+						U.animation_start_default(glow, "off", nil, store.tick_ts)
+					end
+
+					U.y_animation_play(portal_spawned, "off", nil, store.tick_ts)
+					U.y_animation_play(portal_spawned, "idle", nil, store.tick_ts)
+
+					local start_ts = store.tick_ts
+
+					while store.tick_ts - start_ts < this.path_portal_off_delay and current_wave == store.wave_group_number do
+						coroutine.yield()
+					end
+
+					this.path_portal.turn_off = true
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
 tt.wave_config = {{
 	{},
 	{},

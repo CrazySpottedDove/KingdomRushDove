@@ -267,6 +267,24 @@ function entity_db:register_t_hot(name, base, is_tmp)
 	return t
 end
 
+--- 临时热加载实体
+---@param name string 模板名
+---@param base string 父模板名
+function entity_db:register_t_tmp(name, base)
+	local t = base and quickcopy(self.entities[base]) or {}
+	self.entities[name] = t
+	self.hots[#self.hots + 1] = {name, true}
+
+	if t.main_script then
+		local compiler = require("precompile.interface")
+		compiler:restore_main_script(t)
+	end
+
+	t.template_name = name
+
+	return t
+end
+
 function entity_db:register_c(name, base)
 	-- if self.components[name] then
 	-- 	log.error("component %s already exists", name)

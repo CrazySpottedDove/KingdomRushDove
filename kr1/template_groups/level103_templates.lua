@@ -416,7 +416,7 @@ tt.render.sprites[1].name = "stage_3_treeTop"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("ps_bullet_stage_03_heart_of_the_arborean", true)
+tt = E:register_t_hot("ps_bullet_stage_03_heart_of_the_arborean", nil, true)
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "stage_3_HeartProy_trail"
 tt.particle_system.animated = true
