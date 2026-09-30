@@ -480,56 +480,68 @@ function LU.list_entities(t, template_name, tag)
 end
 
 function LU.has_alive_enemies(store, excluded_templates)
-	local store_enemies = table.filter(store.enemies, function(_, e)
-		return e.main_script and (e.main_script.co or e.main_script.runs > 0) and (e.health and not e.health.dead or e.death_spawns or e.spawner and not e.spawner.eternal or e.picked_enemies and #e.picked_enemies > 0 or e.tunnel and #e.tunnel.picked_enemies > 0 or e.template_name == "nav_faerie") and (not excluded_templates or not table.contains(excluded_templates, e.template_name))
-	end)
-	local pending_enemies = table.filter(store.pending_inserts, function(_, e)
-		return e.enemy or e.template_name == "nav_faerie"
-	end)
-	local wait_for_graveyard = false
-
-	if #store_enemies == 0 and #pending_enemies == 0 then
-		local graveyards = E:filter(store.entities, "graveyard")
-
-		if #graveyards > 0 then
+	-- 无分配 + 命中即早退，只返回 bool
+	for _, e in pairs(store.enemies) do
+		if e.main_script and (e.main_script.co or e.main_script.runs > 0) and (e.health and not e.health.dead or e.death_spawns or e.spawner and not e.spawner.eternal or e.picked_enemies and #e.picked_enemies > 0 or e.tunnel and #e.tunnel.picked_enemies > 0 or e.template_name == "nav_faerie") and (not excluded_templates or not table.contains(excluded_templates, e.template_name)) then
 			if store._graveyards_check_ts then
-				local wait_time = 0
+				log.debug("enemies appear. resetting graveyard timeout check")
 
-				for _, g in pairs(graveyards) do
-					if g.interrupt then
-						wait_for_graveyard = false
+				store._graveyards_check_ts = nil
+			end
 
-						goto label_23_0
-					else
-						wait_time = math.max(wait_time, g.graveyard.dead_time + g.graveyard.check_interval)
-					end
+			return true
+		end
+	end
 
-					wait_time = wait_time + 2 * store.tick_length
+	for _, e in pairs(store.pending_inserts) do
+		if e.enemy or e.template_name == "nav_faerie" then
+			if store._graveyards_check_ts then
+				log.debug("enemies appear. resetting graveyard timeout check")
+
+				store._graveyards_check_ts = nil
+			end
+
+			return true
+		end
+	end
+
+	if store._graveyards_check_ts then
+		local any_graveyard = false
+		local wait_time = 0
+
+		for _, g in pairs(store.entities) do
+			if g.graveyard then
+				any_graveyard = true
+
+				if g.interrupt then
+					return false
 				end
 
-				if wait_time < store.tick_ts - store._graveyards_check_ts then
-					log.debug("graveyard wait done")
+				wait_time = math.max(wait_time, g.graveyard.dead_time + g.graveyard.check_interval)
+				wait_time = wait_time + 2 * store.tick_length
+			end
+		end
 
-					wait_for_graveyard = false
-				else
-					wait_for_graveyard = true
-				end
-			else
+		if any_graveyard then
+			if store.tick_ts - store._graveyards_check_ts <= wait_time then
+				return true
+			end
+
+			log.debug("graveyard wait done")
+		end
+	else
+		for _, g in pairs(store.entities) do
+			if g.graveyard then
 				log.debug("starting new graveyard timeout check")
 
 				store._graveyards_check_ts = store.tick_ts
-				wait_for_graveyard = true
+
+				return true
 			end
 		end
-	elseif store._graveyards_check_ts then
-		log.debug("enemies appear. resetting graveyard timeout check")
-
-		store._graveyards_check_ts = nil
 	end
 
-	::label_23_0::
-
-	return #store_enemies > 0 or #pending_enemies > 0 or wait_for_graveyard, #store_enemies, #pending_enemies
+	return false
 end
 
 function LU.kill_all_enemies(store, discard_gold, keep_spawners)

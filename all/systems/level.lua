@@ -335,6 +335,19 @@ function level:on_update(dt, ts, store)
 		LU.insert_hero(store)
 	end
 
+	-- 只在有 wait_signal all_enemies_died 挂着时才轮询（否则每帧扫描全实体太贵）
+	if store._waiting_all_enemies_died then
+		if store.ephemeral._had_enemies then
+			if not LU.has_alive_enemies(store) then
+				signal.emit("all_enemies_died")
+
+				store.ephemeral._had_enemies = false
+			end
+		elseif LU.has_alive_enemies(store) then
+			store.ephemeral._had_enemies = true
+		end
+	end
+
 	if not store.game_outcome then
 		if store.lives < 1 and (not configer.criket() or not configer.criket().on) then
 			log.info("++++ DEFEAT ++++")

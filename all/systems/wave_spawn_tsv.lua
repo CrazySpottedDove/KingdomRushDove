@@ -230,6 +230,11 @@ end
 
 function wave_spawn_tsv.cmd_fns.wait_signal(store, cmd)
 	local signal_name = cmd.signal_name
+	local waits_all_enemies_died = signal_name == "all_enemies_died"
+
+	if waits_all_enemies_died then
+		store._waiting_all_enemies_died = (store._waiting_all_enemies_died or 0) + 1
+	end
 
 	store.wait_signal_done = nil
 
@@ -263,6 +268,12 @@ function wave_spawn_tsv.cmd_fns.wait_signal(store, cmd)
 
 	log.debug("wait_signal: deregistering signal %s", signal_name)
 	signal.remove(signal_name, fn)
+
+	if waits_all_enemies_died then
+		local waiting = store._waiting_all_enemies_died - 1
+
+		store._waiting_all_enemies_died = waiting > 0 and waiting or nil
+	end
 end
 
 function wave_spawn_tsv.cmd_fns.wait(store, cmd)
