@@ -52,6 +52,7 @@ end
 local function is_story_mode(store)
 return store.level_mode==GAME_MODE_CAMPAIGN
 end
+local bit=require("bit")
 local band,bnot,bor=bit.band,bit.bnot,bit.bor
 local function get_random_round_robin(mutable_history,n,m)
 if not m then

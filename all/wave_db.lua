@@ -228,7 +228,7 @@ function wave_db:parse_signal(cmd, row, row_idx)
 	local cmd_default_increment = self:find_prev_cmd("default_increment", cmd)
 	local default_increment = cmd_default_increment.value or 1
 	local signal_name = row[tsv_value_col]
-	local increment = row[cmd_cols.path_columns.inc] or default_increment
+	local increment = row[cmd_cols.time_columns.inc] or default_increment
 	local params = {}
 
 	for i = tsv_value_col + 1, #row do
@@ -239,7 +239,7 @@ function wave_db:parse_signal(cmd, row, row_idx)
 
 	cmd.signal_name = signal_name
 	cmd.signal_params = params
-	cmd.wait_time = increment
+	cmd.wait_time = tonumber(increment)
 end
 
 function wave_db:parse_wait_signal(cmd, row, row_idx)
@@ -252,12 +252,12 @@ function wave_db:parse_wait_signal(cmd, row, row_idx)
 	local cmd_default_increment = self:find_prev_cmd("default_increment", cmd)
 	local default_increment = cmd_default_increment.value or 1
 	local signal_name = row[tsv_value_col]
-	local increment = row[cmd_cols.path_columns.inc] or default_increment
+	local increment = row[cmd_cols.time_columns.inc] or default_increment
 
 	log.debug("waiting for signal %s...", signal_name)
 
 	cmd.signal_name = signal_name
-	cmd.wait_time = increment
+	cmd.wait_time = tonumber(increment)
 end
 
 function wave_db:parse_number(cmd, row, row_idx)

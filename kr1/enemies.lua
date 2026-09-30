@@ -13592,7 +13592,7 @@ tt.ui.click_rect = r(-13, 0, 26, 25)
 
 tt = RT("aura_orc_shaman_heal", "aura")
 AC(tt, "render", "tween")
-tt.aura.mod = "mod_orc_shaman_heal"
+tt.aura.mod = "mod_orc_shaman_heal_kr6"
 tt.aura.radius = 100
 tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FRIEND)
@@ -13609,14 +13609,14 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
 tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}
 
-tt = RT("mod_orc_shaman_heal", "modifier")
+tt = RT("mod_orc_shaman_heal_kr6", "modifier")
 AC(tt, "hps", "render", "tween")
 tt.modifier.duration = 0.5
 tt.hps.heal_every = 0.2
 tt.hps.heal_per_second_min = {60, 60, 60, 135}
 tt.hps.heal_per_second_max = {80, 80, 80, 180}
-tt.main_script.insert = scripts.mod_orc_shaman_heal.insert
-tt.main_script.update = scripts.mod_orc_shaman_heal.update
+tt.main_script.insert = scripts.mod_orc_shaman_heal_kr6.insert
+tt.main_script.update = scripts.mod_orc_shaman_heal_kr6.update
 tt.render.sprites[1].name = "orc_shaman_heal_fx"
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].prefix = "orc_shaman_heal_decal"

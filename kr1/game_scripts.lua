@@ -50409,9 +50409,9 @@ function scripts.aura_orc_shaman_heal.update(this, store, script)
 	scripts.aura_apply_mod.update(this, store, script)
 end
 
-scripts.mod_orc_shaman_heal = {}
+scripts.mod_orc_shaman_heal_kr6 = {}
 
-function scripts.mod_orc_shaman_heal.insert(this, store, script)
+function scripts.mod_orc_shaman_heal_kr6.insert(this, store, script)
 	local target = store.entities[this.modifier.target_id]
 
 	this.pos = target.pos
@@ -50421,7 +50421,7 @@ function scripts.mod_orc_shaman_heal.insert(this, store, script)
 	return scripts.mod_hps.insert(this, store, script)
 end
 
-function scripts.mod_orc_shaman_heal.update(this, store, script)
+function scripts.mod_orc_shaman_heal_kr6.update(this, store, script)
 	U.y_animation_play(this, "in", nil, store.tick_ts, 1, 2)
 	U.animation_start(this, "Idle", nil, store.tick_ts, true, 2)
 	scripts.mod_hps.update(this, store, script)
