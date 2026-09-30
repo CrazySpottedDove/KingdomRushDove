@@ -135,7 +135,7 @@ tt = E:register_t_hot("decal_s09_crystal_1", "decal_timed", true)
 AC(tt, "editor")
 tt.render.sprites[1].prefix = "decal_s09_crystal_1"
 tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.3941176470588235
+tt.render.sprites[1].anchor.y = 0.394118
 tt.render.sprites[1].scale = vec_2(1, 1)
 tt.timed.runs = INT_32_MAX
 tt.editor.game_mode = 1

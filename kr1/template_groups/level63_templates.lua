@@ -128,7 +128,7 @@ tt = E:register_t_hot("decal_s15_mactans", "decal_scripted", true)
 AC(tt, "editor")
 tt.render.sprites[1].prefix = "stage15_mactans_l1"
 tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.09047619047619047
+tt.render.sprites[1].anchor.y = 0.090476
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].prefix = "stage15_mactans_l2"
 tt.main_script.update = decal_s15_mactans_update
@@ -136,11 +136,11 @@ tt = E:register_t_hot("decal_s15_malicia", "decal_scripted", true)
 AC(tt, "editor")
 tt.render.sprites[1].prefix = "stage15_malicia"
 tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.057692307692307696
+tt.render.sprites[1].anchor.y = 0.057692
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "stage15_malicia_ray"
 tt.render.sprites[2].hidden = true
-tt.render.sprites[2].anchor = vec_2(0.64, 0.21666666666666667)
+tt.render.sprites[2].anchor = vec_2(0.64, 0.216667)
 tt.render.sprites[2].offset = vec_2(-2, 57)
 tt.main_script.update = decal_s15_malicia_update
 tt = E:register_t_hot("decal_s15_statue", "decal_scripted", true)
@@ -148,7 +148,7 @@ AC(tt, "editor")
 tt.main_script.update = decal_s15_statue_update
 tt.render.sprites[1].prefix = "stage15_shield"
 tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.20161290322580644
+tt.render.sprites[1].anchor.y = 0.201613
 tt = E:register_t_hot("decal_s15_crystal", "decal_tween", true)
 AC(tt, "editor")
 tt.render.sprites[1].name = "stage15_crystal"
@@ -178,12 +178,12 @@ tt.tween.props[2].keys = {{0, 255}, {1, 255}, {2, 0}}
 tt = E:register_t_hot("decal_s15_finished_gem", "decal", true)
 AC(tt, "editor")
 tt.render.sprites[1].name = "stage15_bossDecal_gem"
-tt.render.sprites[1].anchor.y = 0.22580645161290322
+tt.render.sprites[1].anchor.y = 0.225806
 tt.render.sprites[1].animated = false
 tt = E:register_t_hot("decal_s15_finished_veznan", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "decal_s15_finished_veznan"
 tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.1111111111111111
+tt.render.sprites[1].anchor.y = 0.111111
 tt.delayed_play.min_delay = 5
 tt.delayed_play.max_delay = 15
 tt = E:register_t_hot("decal_s15_finished_guard", "decal_delayed_sequence", true)
@@ -192,7 +192,7 @@ for i = 1, 4 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "decal_s15_finished_guard_layer" .. i
 	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].anchor.y = 0.12195121951219512
+	tt.render.sprites[i].anchor.y = 0.121951
 	tt.render.sprites[i].loop = i > 2
 	tt.render.sprites[i].hidden = i == 4
 end

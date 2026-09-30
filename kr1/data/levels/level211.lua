@@ -3,6 +3,7 @@ local P=require("path_db")
 local E=require("entity_db")
 local U=require("utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local GR=require("grid_db")
 local log=require("lib.klua.log"):new("level211")
 require("all.constants")
@@ -11,7 +12,7 @@ local level={}
 local function generate_blue_noise_cluster(count,candidates,random_fn,...)
 local points={}
 local x,y=random_fn(...)
-points[1]={x=x,y=y}
+points[1]=v(x,y)
 for i=2,count do
 local bestCandidate
 local bestDistance2=-1
@@ -26,7 +27,7 @@ end
 end
 if bestDistance2<minDist2 then
 bestDistance2=minDist2
-bestCandidate={x=px,y=py}
+bestCandidate=v(px,py)
 end
 end
 points[i]=bestCandidate

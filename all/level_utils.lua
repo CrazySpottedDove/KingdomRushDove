@@ -201,20 +201,13 @@ end
 ---@param store table
 function LU.load_locations(store)
 	local fn = "data/levels/" .. store.level_name .. "_loc.lua"
-	local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
+	local l, err = LU.eval_file(fn)
 
-	if not f then
-		log.info("Level locations file does not exist for %s", fn)
-		return nil
-	end
-
-	if err then
-		log.info("Level has no locations file %s: %s", fn, err)
+	if not l then
+		log.info("Level locations file does not exist for %s: %s", fn, err)
 
 		return nil
 	end
-
-	local l = f()
 
 	if not l._patched_y then
 		for _, h in pairs(l.holders) do

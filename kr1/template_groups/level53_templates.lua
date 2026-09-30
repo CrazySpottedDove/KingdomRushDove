@@ -60,18 +60,18 @@ local tt
 tt = E:register_t_hot("decal_s05_tree_round", "decal", true)
 tt.render.sprites[1].name = "stage5_tree"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.13953488372093023
+tt.render.sprites[1].anchor.y = 0.139535
 tt = E:register_t_hot("decal_s05_tree_pine", "decal", true)
 tt.render.sprites[1].name = "stage5_pine"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.08333333333333333
+tt.render.sprites[1].anchor.y = 0.083333
 tt = E:register_t_hot("decal_bush_statue", "decal_scripted", true)
 AC(tt, "ui")
 tt.main_script.insert = decal_bush_statue_insert
 tt.main_script.update = decal_bush_statue_update
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage5_bushes_0001"
-tt.render.sprites[1].anchor.y = 0.1744186046511628
+tt.render.sprites[1].anchor.y = 0.174419
 tt.bush_frame_prefix = "stage5_bushes_"
 tt.bush_frames = {"0001", "0002", "0003", "0004", "0005", "0006", "0007"}
 tt.ui.click_rect = r(-40, 0, 80, 66)

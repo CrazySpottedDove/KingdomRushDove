@@ -43,7 +43,7 @@ tt = E:register_t_hot("decal_s12_lemur", "decal_scripted", true)
 AC(tt, "nav_path", "motion", "tween", "ui")
 tt.render.sprites[1].prefix = "decal_s12_lemur"
 tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.13333333333333333
+tt.render.sprites[1].anchor.y = 0.133333
 tt.render.sprites[1].alpha = 0
 tt.motion.max_speed = 60
 tt.achievement = "LIKE_TO_MOVE_IT"

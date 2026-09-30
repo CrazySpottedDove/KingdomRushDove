@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
@@ -48,7 +49,7 @@ store.main_hero.nav_rally.center=V.vclone(store.main_hero.nav_grid.waypoints[#st
 store.main_hero.nav_rally.pos=V.vclone(store.main_hero.nav_rally.center)
 local old_vo=table.deepclone(store.main_hero.sound_events.change_rally_point)
 store.main_hero.sound_events.change_rally_point=nil
-signal.emit("pan-zoom-camera",4,{x=512,y=384},OVtargets(nil,1.2))
+signal.emit("pan-zoom-camera",4,v(512,384),OVtargets(nil,1.2))
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")

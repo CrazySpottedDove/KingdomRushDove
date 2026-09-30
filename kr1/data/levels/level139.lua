@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local W=require("wave_db")
 local storage=require("all.storage")
@@ -49,7 +50,7 @@ store.main_hero.render.sprites[1].flip_x=true
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-signal.emit("pan-zoom-camera",1,{x=530,y=1000},1.18)
+signal.emit("pan-zoom-camera",1,v(530,1000),1.18)
 U.y_wait_unconditional(store,1.5)
 if fly_hero then
 signal.emit("show-balloon_tutorial","LV39_INTRO_TAUNT_FLY_01",false)

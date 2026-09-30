@@ -3,6 +3,7 @@ local E=require("entity_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local S=require("sound_db")
 local P=require("path_db")
 local signal=require("lib.hump.signal")
@@ -86,7 +87,7 @@ while LU.has_alive_enemies(store) do
 coroutine.yield()
 end
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",2.5,{x=738,y=576},2)
+signal.emit("pan-zoom-camera",2.5,v(738,576),2)
 signal.emit("hide-gui")
 S:queue("MusicBossPreFightEnd")
 U.y_wait_unconditional(store,1)
@@ -105,7 +106,7 @@ end
 S:queue("MusicBossFight2")
 U.y_wait_unconditional(store,1)
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 signal.emit("show-gui")
 local spawn_start_ts=store.tick_ts+6
 local spawn_queue={}

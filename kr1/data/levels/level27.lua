@@ -68,7 +68,7 @@ end
 log.debug("-- WON")
 signal.emit("hide-gui")
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",1.5,V.v(341.3333333333333,480),1.4)
+signal.emit("pan-zoom-camera",1.5,V.v(341.333333,480),1.4)
 U.y_wait_unconditional(store,1)
 self:y_end_cinematic(store)
 signal.emit("hide-curtains")

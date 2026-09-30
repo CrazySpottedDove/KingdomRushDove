@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
@@ -34,7 +35,7 @@ end
 if store.level_mode==GAME_MODE_CAMPAIGN then
 self.bossfight_ended=false
 if not store.restarted and not main.params.skip_cutscenes then
-signal.emit("pan-zoom-camera",0.5,{x=512,y=450},1.65)
+signal.emit("pan-zoom-camera",0.5,v(512,450),1.65)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
@@ -43,11 +44,11 @@ y_do_boss_taunt("LV32_BOSS_INTRO_02")
 controller_boss_prefight.end_intro=true
 U.y_wait_unconditional(store,1.5)
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=533,y=430},OVm(1,1.2))
+signal.emit("pan-zoom-camera",2,v(533,430),OVm(1,1.2))
 signal.emit("show-gui")
 signal.emit("end-cinematic",true)
 else
-signal.emit("pan-zoom-camera",0,{x=533,y=430},OVm(1,1.2))
+signal.emit("pan-zoom-camera",0,v(533,430),OVm(1,1.2))
 controller_boss_prefight.restarted=true
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do

@@ -51,7 +51,7 @@ tt = E:register_t_hot("decal_s18_statue", "decal", true)
 AC(tt, "editor")
 tt.render.sprites[1].name = "stage18_statue"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.176056338028169
+tt.render.sprites[1].anchor.y = 0.176056
 tt = E:register_t_hot("decal_s18_roadrunner_bush", "decal_scripted", true)
 AC(tt, "editor", "ui")
 tt.render.sprites[1].name = "decal_s18_roadrunner_bush_shake"
@@ -91,7 +91,7 @@ local A = require("achievements")
 local km = require("lib.klua.macros")
 tt = E:register_t_hot("fx_roadruner_bush_explode", "fx", true)
 tt.render.sprites[1].name = "gnollBush_explode"
-tt.render.sprites[1].anchor.y = 0.3548387096774194
+tt.render.sprites[1].anchor.y = 0.354839
 tt = E:register_t_hot("decal_s18_roadrunner", "decal_tween", true)
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "decal_s18_roadrunner_run"

@@ -1072,12 +1072,12 @@ tt.do_tambor = controller_stage_33_tambor.do_tambor
 tt.main_script.update = controller_stage_33_tambor.update
 tt.render.sprites[1].prefix = "stage_33_barco_call_tambor"
 tt.render.sprites[1].name = "idle_tambor"
-tt.render.sprites[1].anchor = v(0.05777310924369748, 0.55625)
+tt.render.sprites[1].anchor = v(0.057773, 0.55625)
 tt.render.sprites[1].sort_y_offset = -50
 tt.render.sprites[1].group = "group"
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].prefix = "stage_33_barco_call_body"
-tt.render.sprites[2].anchor = v(0.11346863468634687, 0.5290697674418605)
+tt.render.sprites[2].anchor = v(0.113469, 0.52907)
 tt.render.sprites[2].sort_y_offset = -49
 
 tt = E:register_t_hot("stage_33_mask_props", "decal", true)

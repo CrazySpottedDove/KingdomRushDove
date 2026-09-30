@@ -4,6 +4,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local P=require("path_db")
 require("all.constants")
 local function fts(v)
@@ -50,7 +51,7 @@ end
 if store.level_mode==GAME_MODE_CAMPAIGN then
 U.y_wait_unconditional(store,2)
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",2,{x=120,y=500},2)
+signal.emit("pan-zoom-camera",2,v(120,500),2)
 signal.emit("hide-gui")
 local jail=E:create_entity("decal_s06_jailed_boss")
 jail.pos.x,jail.pos.y=store.visible_coords.left-132,459
@@ -80,7 +81,7 @@ while self.boss.phase~="loop" do
 coroutine.yield()
 end
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 signal.emit("show-gui")
 while self.boss.phase~="dead" do
 coroutine.yield()

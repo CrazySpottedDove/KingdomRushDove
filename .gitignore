@@ -61,4 +61,7 @@ config.json
 .agents/
 .images/
 .images_backup/
+__pycache__/
+*.pyc
+*.pyo
 args.lua

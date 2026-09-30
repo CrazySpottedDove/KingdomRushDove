@@ -56,7 +56,7 @@ for i = 1, 6 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "decal_s06_jailed_boss_l" .. i
 	tt.render.sprites[i].name = "walk"
-	tt.render.sprites[i].anchor.y = 0.26373626373626374
+	tt.render.sprites[i].anchor.y = 0.263736
 end
 tt.render.sprites[6].sort_y_offset = -10
 tt = E:register_t_hot("gryphon_controller", nil, true)

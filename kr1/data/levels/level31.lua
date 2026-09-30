@@ -144,7 +144,7 @@ end
 local lumberjack=E:create_entity("decal_lumberjack")
 lumberjack.pos=v(1160,440)
 LU.queue_insert(store,lumberjack)
-local cut_steps={{x=1079,y=430},{x=927,y=420},{x=837,y=408},{x=810,y=401},{x=760,y=395}}
+local cut_steps={v(1079,430),v(927,420),v(837,408),v(810,401),v(760,395)}
 for i,step in ipairs(cut_steps) do
 U.animation_start_default(lumberjack,"cut",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,0.5)

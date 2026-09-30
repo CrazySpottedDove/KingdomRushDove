@@ -47,7 +47,7 @@ tt = E:register_t_hot("decal_stage22_reptile", "decal_scripted", true)
 AC(tt, "ui", "motion")
 tt.render.sprites[1].prefix = "decal_stage22_reptile"
 tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor = vec_2(0.6935483870967742, 0.05555555555555555)
+tt.render.sprites[1].anchor = vec_2(0.693548, 0.055556)
 tt.ui.click_rect = r(-15, -5, 30, 40)
 tt.main_script.update = decal_stage22_reptile_update
 tt.climb_distance = 140

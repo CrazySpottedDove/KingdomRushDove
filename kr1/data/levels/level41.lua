@@ -116,7 +116,7 @@ coroutine.yield()
 end
 U.y_wait_unconditional(store,3)
 signal.emit("show-curtains")
-signal.emit("pan-zoom-camera",2.5,{x=560,y=600},1.5)
+signal.emit("pan-zoom-camera",2.5,v(560,600),1.5)
 signal.emit("hide-gui")
 S:queue("MusicBossPreFight")
 self.guy.phase="death"
@@ -134,7 +134,7 @@ while self.boss.phase~="loop" do
 coroutine.yield()
 end
 signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
+signal.emit("pan-zoom-camera",2,v(512,384),1)
 signal.emit("show-gui")
 S:queue("MusicBossFight2")
 while self.boss.phase~="death-animation" do

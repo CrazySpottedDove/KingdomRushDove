@@ -3,6 +3,7 @@ local P=require("path_db")
 local E=require("entity_db")
 local U=require("utils")
 local V=require("lib.klua.vector")
+local v=V.v
 local log=require("lib.klua.log"):new("level215")
 local signal=require("lib.hump.signal")
 local W=require("wave_db")
@@ -45,7 +46,7 @@ end
 local function generate_blue_noise_cluster(count,candidates,random_fn,...)
 local points={}
 local x,y=random_fn(...)
-points[1]={x=x,y=y}
+points[1]=v(x,y)
 for i=2,count do
 local best_candidate
 local best_distance2=-1
@@ -60,7 +61,7 @@ end
 end
 if best_distance2<min_dist2 then
 best_distance2=min_dist2
-best_candidate={x=px,y=py}
+best_candidate=v(px,py)
 end
 end
 points[i]=best_candidate
@@ -117,7 +118,7 @@ end
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-signal.emit("pan-zoom-camera",2,{x=bb.pos.x,y=bb.pos.y},1.5)
+signal.emit("pan-zoom-camera",2,v(bb.pos.x,bb.pos.y),1.5)
 U.y_wait(store,2.25)
 corrupt_black_burn(bb)
 if bb.sound_events then
