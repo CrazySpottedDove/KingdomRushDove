@@ -7324,49 +7324,6 @@ tt.vis_flags = bor(F_AREA)
 tt.vis_bans = 0
 tt.fall_fx = "fx_decal_stage_21_falling_rocks"
 
-tt = E:register_t("soldier_elf_stage_08", "decal_scripted")
-E:add_comps(tt, "bullet_attack", "editor")
-tt.render.sprites[1].prefix = "elven_warrior"
-tt.render.sprites[1].name = "idle"
-tt.main_script.update = scripts.soldier_elf_stage_08.update
-tt.bullet_attack.max_range = 202
-tt.bullet_attack.bullet = "arrow_soldier_elf_stage_08"
-tt.bullet_attack.shoot_time = fts(3)
-tt.bullet_attack.cooldown_min = 1.2
-tt.bullet_attack.cooldown_max = 1.6
-tt.bullet_attack.bullet_start_offset = {v(20, 20), v(-20, 20)}
-tt.bullet_attack.animation = "shoot"
-tt.bullet_attack.vis_bans = bor(F_MINIBOSS)
-tt.idle_rest_cooldown = 2
-
-tt = E:register_t("arrow_soldier_elf_stage_08", "arrow5_45degrees")
-tt.bullet.damage_min = 36
-tt.bullet.damage_max = 54
-tt.bullet.fixed_height = 50
-tt.bullet.miss_decal = "elven_warrior_arrow_0002"
-tt.bullet.mod = "mod_arrow_soldier_elf_stage_08"
-tt.render.sprites[1].name = "elven_warrior_arrow_0001"
-
-tt = E:register_t("decal_stage_08_elf_rescue_chains", "decal_scripted")
-tt.render.sprites[1].prefix = "ChainDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_08_elf_rescue_chains.update
-
-tt = E:register_t("decal_stage_08_elf_rescue_elf_slave", "decal_scripted")
-tt.render.sprites[1].prefix = "ElfSlaveDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.action_cooldown_min = fts(20)
-tt.action_cooldown_max = fts(20)
-tt.main_script.update = scripts.decal_stage_08_elf_rescue_elf_slave.update
-tt.sound_rescue = "Stage08RescuedElves"
-
-tt = E:register_t("mod_arrow_soldier_elf_stage_08", "mod_stun")
-tt.modifier.duration = fts(24)
-tt.modifier.vis_flags = bor(F_MOD, F_STUN)
-
 tt = E:register_t("mod_enemy_blinker_stun", "mod_stun")
 tt.modifier.duration = 1
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)

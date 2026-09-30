@@ -3,6 +3,7 @@ local E = require("entity_db")
 local V = require("lib.klua.vector")
 local v = V.v
 local S = require("sound_db")
+local SU = require("script_utils")
 local U = require("utils")
 local signal = require("lib.hump.signal")
 local tt
@@ -145,6 +146,178 @@ function controller_stage_08_gem_baskets.update(this, store)
 		coroutine.yield()
 	end
 end
+
+tt = E:register_t_tmp("soldier_elf_stage_08", "decal_scripted")
+E:add_comps(tt, "bullet_attack", "editor")
+tt.render.sprites[1].prefix = "elven_warrior"
+tt.render.sprites[1].name = "idle"
+tt.main_script.update = function(this, store)
+	local a = this.bullet_attack
+
+	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
+
+	if this.elf_rescued == 3 or this.elf_rescued == 2 then
+		U.y_animation_play(this, "walk1", nil, store.tick_ts, 1)
+	else
+		U.y_animation_play(this, "walk2", nil, store.tick_ts, 1)
+	end
+
+	local is_resting = true
+	local last_shoot = store.tick_ts
+
+	a.ts = store.tick_ts - a.cooldown
+
+	while true do
+		if store.tick_ts - a.ts > a.cooldown then
+			local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, false, a.vis_flags, a.vis_bans)
+
+			if not target then
+				SU.delay_attack(store, a, 0.2)
+
+				goto label_1083_0
+			elseif target and target.health and not target.health.dead then
+				a.ts = store.tick_ts
+
+				local b = E:create_entity(a.bullet)
+				local shooting_right = this.pos.x < target.pos.x
+				local boffset = a.bullet_start_offset[shooting_right and 1 or 2]
+
+				b.bullet.from = V.v(this.pos.x + boffset.x, this.pos.y + boffset.y)
+				b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+				b.bullet.target_id = target.id
+				b.bullet.source_id = this.id
+				b.pos = V.vclone(b.bullet.from)
+
+				local target_pos = target.pos
+				local an, af = U.animation_name_facing_point(this, a.animation, target_pos)
+
+				U.animation_start_default(this, an, af, store.tick_ts, false)
+				U.y_wait_unconditional(store, a.shoot_time)
+				simulation:queue_insert_entity(b)
+				S:queue("ArrowSound")
+				U.y_animation_wait_default(this)
+
+				local an, af = U.animation_name_facing_point(this, "back_to_idle2", target_pos)
+
+				U.animation_start_default(this, an, af, store.tick_ts, false)
+
+				is_resting = false
+				last_shoot = store.tick_ts
+
+				U.y_animation_wait_default(this)
+			end
+		end
+
+		if is_resting then
+			U.animation_start_default(this, "idle1", nil, store.tick_ts)
+		else
+			U.animation_start_default(this, "idle2", nil, store.tick_ts)
+
+			if store.tick_ts - last_shoot > this.idle_rest_cooldown then
+				U.y_animation_play(this, "back_to_idle1", nil, store.tick_ts, 1)
+
+				is_resting = true
+			end
+		end
+
+		U.y_animation_wait_default(this)
+
+		::label_1083_0::
+
+		coroutine.yield()
+	end
+end
+tt.bullet_attack.max_range = 202
+tt.bullet_attack.bullet = "arrow_soldier_elf_stage_08"
+tt.bullet_attack.shoot_time = fts(3)
+tt.bullet_attack.cooldown_min = 1.2
+tt.bullet_attack.cooldown_max = 1.6
+tt.bullet_attack.bullet_start_offset = {v(20, 20), v(-20, 20)}
+tt.bullet_attack.animation = "shoot"
+tt.bullet_attack.vis_bans = bor(F_MINIBOSS)
+tt.idle_rest_cooldown = 2
+
+tt = E:register_t_tmp("arrow_soldier_elf_stage_08", "arrow5_45degrees")
+tt.bullet.damage_min = 36
+tt.bullet.damage_max = 54
+tt.bullet.fixed_height = 50
+tt.bullet.miss_decal = "elven_warrior_arrow_0002"
+tt.bullet.mod = "mod_arrow_soldier_elf_stage_08"
+tt.render.sprites[1].name = "elven_warrior_arrow_0001"
+
+tt = E:register_t_tmp("decal_stage_08_elf_rescue_chains", "decal_scripted")
+tt.render.sprites[1].prefix = "ChainDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = function(this, store)
+	this.render.sprites[1].z = Z_DECALS
+
+	U.y_animation_play(this, "walk", nil, store.tick_ts)
+
+	this.render.sprites[1].z = Z_OBJECTS
+
+	U.y_animation_play(this, "idle", nil, store.tick_ts)
+
+	while true do
+		if this.guard_entity.health.dead then
+			U.y_wait_unconditional(store, fts(40))
+			U.y_animation_play(this, "death", nil, store.tick_ts)
+			simulation:queue_remove_entity(this)
+		end
+
+		coroutine.yield()
+	end
+end
+
+tt = E:register_t_tmp("decal_stage_08_elf_rescue_elf_slave", "decal_scripted")
+tt.render.sprites[1].prefix = "ElfSlaveDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.action_cooldown_min = fts(20)
+tt.action_cooldown_max = fts(20)
+tt.main_script.update = function(this, store)
+	this.render.sprites[1].z = Z_DECALS
+
+	U.y_animation_play(this, "walk1", nil, store.tick_ts)
+
+	this.render.sprites[1].z = Z_OBJECTS
+
+	U.y_animation_play(this, "to_idle", nil, store.tick_ts)
+	U.y_animation_play(this, "idle", nil, store.tick_ts)
+
+	local action_cooldown = math.random(this.action_cooldown_min, this.action_cooldown_max)
+	local last_action_ts = store.tick_ts
+
+	while true do
+		if action_cooldown <= store.tick_ts - last_action_ts then
+			U.y_animation_play(this, "picando", nil, store.tick_ts)
+
+			last_action_ts = store.tick_ts
+			action_cooldown = math.random(this.action_cooldown_min, this.action_cooldown_max)
+		end
+
+		if this.guard_entity.health.dead then
+			U.y_wait_unconditional(store, fts(65))
+			S:queue(this.sound_rescue, {
+				delay = fts(20)
+			})
+			U.y_animation_play(this, "escape", nil, store.tick_ts)
+
+			this.render.sprites[1].z = Z_DECALS
+
+			U.y_animation_play(this, "walk2", nil, store.tick_ts)
+			simulation:queue_remove_entity(this)
+		end
+
+		coroutine.yield()
+	end
+end
+tt.sound_rescue = "Stage08RescuedElves"
+
+tt = E:register_t_tmp("mod_arrow_soldier_elf_stage_08", "mod_stun")
+tt.modifier.duration = fts(24)
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 
 tt = E:register_t_hot("decal_stage_08_fire", "decal", true)
 tt.render.sprites[1].prefix = "fire_stage_8Def"
