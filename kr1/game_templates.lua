@@ -6805,70 +6805,6 @@ tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.main_script.update = scripts.stage_07_crow.update
 tt.ui.click_rect = r(-15, -15, 30, 30)
 
-tt = E:register_t("decal_stage_09_bridge_mask", "decal")
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_09_bridge1_mask", "decal_stage_09_bridge_mask")
-tt.render.sprites[1].prefix = "stage_9_bridge1_maskDef"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_09_bridge2_mask", "decal_stage_09_bridge_mask")
-tt.render.sprites[1].prefix = "stage_9_bridge2_maskDef"
-
-tt = E:register_t("decal_stage_09_bridge3_mask", "decal_stage_09_bridge_mask")
-tt.render.sprites[1].prefix = "stage_9_bridge3_maskDef"
-
-tt = E:register_t("decal_stage_09_candle", "decal_scripted")
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].name = "idle_off"
-tt.main_script.update = scripts.decal_stage_09_candle.update
-
-tt = E:register_t("decal_stage_09_candle_back1", "decal_stage_09_candle")
-tt.render.sprites[1].prefix = "stage_9_candles_back_1Def"
-
-tt = E:register_t("decal_stage_09_candle_back2", "decal_stage_09_candle")
-tt.render.sprites[1].prefix = "stage_9_candles_back_2Def"
-
-tt = E:register_t("decal_stage_09_candle_back3", "decal_stage_09_candle")
-tt.render.sprites[1].prefix = "stage_9_candles_back_3Def"
-
-tt = E:register_t("decal_stage_09_candle_front1", "decal_stage_09_candle")
-tt.render.sprites[1].prefix = "stage_9_candles_front_1Def"
-
-tt = E:register_t("decal_stage_09_candle_front2", "decal_stage_09_candle")
-tt.render.sprites[1].prefix = "stage_9_candles_front_2Def"
-
-tt = E:register_t("decal_stage_09_candle_front3", "decal_stage_09_candle")
-tt.render.sprites[1].prefix = "stage_9_candles_front_3Def"
-
-tt = E:register_t("decal_stage_09_candle_glow_back", "decal")
-tt.render.sprites[1].prefix = "stage_9_candles_glow_backDef"
-tt.render.sprites[1].name = "off"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_09_candle_glow_front", "decal")
-tt.render.sprites[1].prefix = "stage_9_candles_glow_frontDef"
-tt.render.sprites[1].name = "off"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_09_portal_path_spawn", "decal_scripted")
-tt.render.sprites[1].prefix = "stage_9_portal_pathDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_09_path_portal.update
-
-tt = E:register_t("decal_stage_09_portal", "decal")
-tt.render.sprites[1].prefix = "stage_9_portalDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
 tt = E:register_t("decal_stage_11_cult_leader", "decal")
 E:add_comps(tt, "taunts", "tween")
 tt.render.sprites[1].prefix = "mydriasDef"
@@ -7643,11 +7579,6 @@ tt.render.sprites[1].exo = true
 tt = E:register_t("fx_werebeast_boss_cultist_smoke", "fx")
 tt.render.sprites[1].name = "werebeast_boss_cultist_smoke_cultist_boss_smoke"
 tt.render.sprites[1].hide_after_runs = 1
-
-tt = E:register_t("fx_stage_09_portal_path_spawn_fx", "fx")
-tt.render.sprites[1].prefix = "stage_9_portal_path_spawn_FXDef"
-tt.render.sprites[1].name = "spawn"
-tt.render.sprites[1].exo = true
 
 tt = E:register_t("fx_stage_11_cult_leader_attack_hit", "fx")
 tt.render.sprites[1].name = "mydrias_proyectile_hit"

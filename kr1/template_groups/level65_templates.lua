@@ -4,6 +4,7 @@ local U = require("utils")
 local V = require("lib.klua.vector")
 require("all.constants")
 require("lib.klua.table")
+local LU = require("level_utils")
 local function fts(t)
 	return t / FPS
 end
