@@ -9667,58 +9667,6 @@ function scripts.mod_lifesteal_kr5.insert(this, store)
 	return false
 end
 
-scripts.mod_test_unit_pos_kr5 = {}
-
-function scripts.mod_test_unit_pos_kr5.update(this, store)
-	local m = this.modifier
-
-	m.ts = store.tick_ts
-
-	local target = store.entities[m.target_id]
-
-	if not target then
-		simulation:queue_remove_entity(this)
-
-		return
-	end
-
-	this.pos = target.pos
-
-	local targetZ = Z_EFFECTS
-	local targetOffset = V.vv(0)
-
-	if target.render then
-		targetZ = target.render.sprites[1].z
-	end
-
-	if target.unit then
-		if this.position_test == "HEAD" and target.unit.head_offset then
-			targetOffset = V.vclone(target.unit.head_offset)
-		elseif this.position_test == "MOD" and target.unit.mod_offset then
-			targetOffset = V.vclone(target.unit.mod_offset)
-		elseif this.position_test == "HIT" and target.unit.hit_offset then
-			targetOffset = V.vclone(target.unit.hit_offset)
-		end
-	end
-
-	for _, s in ipairs(this.render.sprites) do
-		s.offset = targetOffset
-		s.z = targetZ
-	end
-
-	while true do
-		target = store.entities[m.target_id]
-
-		if not target or target.health and target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
-			simulation:queue_remove_entity(this)
-
-			return
-		end
-
-		coroutine.yield()
-	end
-end
-
 scripts.aura_tower_holder_capture = {}
 
 function scripts.aura_tower_holder_capture.update(this, store)
