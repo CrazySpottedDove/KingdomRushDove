@@ -6,6 +6,7 @@ local S = require("sound_db")
 local SU = require("script_utils")
 local U = require("utils")
 local signal = require("lib.hump.signal")
+local P = require("path_db")
 local tt
 stage_08_gem_basket = {}
 
@@ -146,6 +147,155 @@ function controller_stage_08_gem_baskets.update(this, store)
 		coroutine.yield()
 	end
 end
+
+tt = E:register_t_tmp("enemy_unblinded_abomination_stage_8", "enemy")
+E:add_comps(tt, "melee", "regen")
+tt.enemy.melee_slot = v(25, 0)
+tt.health.hp_max = 800
+tt.health.magic_armor = 0
+tt.health.armor = 0
+tt.health.dead_lifetime = 3
+tt.health_bar.offset = v(0, 50)
+tt.regen.cooldown = 0.8
+tt.regen.health = 60
+tt.unit.hit_offset = v(0, 21)
+tt.unit.head_offset = v(0, 21)
+tt.unit.mod_offset = v(0, 16)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.render.sprites[1].prefix = "Abomination2Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.info.enc_icon = 21
+tt.info.portrait = "kr5_info_portraits_enemies_0028"
+tt.main_script.update = function(this, store)
+	local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, false)
+	local pi, spi, ni = unpack(nodes[1])
+	local last_idle = store.tick_ts
+	local idle_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
+
+	this.nav_path.pi = pi
+	this.nav_path.spi = spi
+	this.nav_path.ni = ni
+	this.ui.can_click = false
+
+	local function regen(store, this)
+		if this.regen and store.tick_ts - this.regen.last_hit_ts > this.regen.last_hit_standoff_time then
+			this.regen.ts_counter = this.regen.ts_counter + store.tick_length
+
+			if this.regen.ts_counter > this.regen.cooldown then
+				if this.health.hp < this.health.hp_max then
+					U.heal(this, this.regen.health)
+
+					signal.emit("health-regen", this, this.regen.health)
+				end
+
+				this.regen.ts_counter = 0
+			end
+		end
+	end
+
+	this.vis._original_flags = this.vis.flags
+	this.vis._original_bans = this.vis.bans
+	this.vis.flags = 0
+	this.vis.bans = bor(F_RANGED, F_BLOCK)
+
+	U.unblock_all(store, this)
+
+	this.render.sprites[1].z = Z_DECALS
+
+	U.y_animation_play(this, "walk", nil, store.tick_ts)
+
+	this.render.sprites[1].z = Z_OBJECTS
+
+	U.animation_start_default(this, "idle", nil, store.tick_ts)
+	U.y_animation_play(this, "action", nil, store.tick_ts)
+	U.animation_start_default(this, "idle2", nil, store.tick_ts, true)
+
+	this.vis.flags = this.vis._original_flags
+	this.vis.bans = this.vis._original_bans
+	last_idle = store.tick_ts
+
+	local hb = E:create_entity("enemy_unblinded_abomination_stage_8_lifebar")
+
+	hb.pos = this.pos
+
+	simulation:queue_insert_entity(hb)
+
+	this.ui.can_click = true
+
+	::label_1081_0::
+
+	while true do
+		if this.health.dead then
+			this.heading.angle = 0
+
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if store.waves_finished and not LU.has_alive_enemies(store, {this.template_name}) then
+				this.heading.angle = 0
+
+				SU.y_enemy_death(store, this)
+
+				return
+			end
+
+			if idle_cooldown < store.tick_ts - last_idle then
+				U.y_animation_play(this, "action", false, store.tick_ts)
+				U.animation_start_default(this, "idle2", false, store.tick_ts, true)
+
+				idle_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
+				last_idle = store.tick_ts
+			end
+
+			regen(store, this)
+
+			if #this.enemy.blockers > 0 then
+				U.cleanup_blockers(store, this)
+
+				local blocker = store.entities[this.enemy.blockers[1]]
+
+				if not SU.y_wait_for_blocker(store, this, blocker) then
+					goto label_1081_0
+				end
+
+				while SU.can_melee_blocker(store, this, blocker) do
+					if not SU.y_enemy_melee_attacks(store, this, blocker) then
+						goto label_1081_0
+					end
+
+					coroutine.yield()
+				end
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+tt.melee.attacks[1].cooldown = 2
+tt.melee.attacks[1].damage_max = 75
+tt.melee.attacks[1].damage_min = 40
+tt.melee.attacks[1].hit_time = fts(12)
+tt.melee.attacks[1].hit_fx = "fx_enemy_unblinded_abomination_hit_melee"
+tt.melee.attacks[1].hit_fx_offset = v(40, 20)
+tt.idle_cooldown_min = 7
+tt.idle_cooldown_max = 12
+tt.sleep_cooldown = 20
+tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
+tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
+tt.sound_events.death = "EnemyAbominationDeath"
+
+tt = E:register_t_tmp("enemy_unblinded_abomination_stage_8_lifebar")
+E:add_comps(tt, "health_bar", "pos", "render", "health")
+tt.render.sprites[1].name = "square_ffffff"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = v(0, 0)
 
 tt = E:register_t_tmp("soldier_elf_stage_08", "decal_scripted")
 E:add_comps(tt, "bullet_attack", "editor")

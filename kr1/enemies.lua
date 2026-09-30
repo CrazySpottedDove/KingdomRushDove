@@ -7574,46 +7574,6 @@ tt.main_script.update = scripts.mod_enemy_unblinded_abomination_eat.update
 tt.explode_fx = "fx_enemy_unblinded_abomination_eat"
 tt.required_hp = 0.3
 
-tt = E:register_t("enemy_unblinded_abomination_stage_8", "enemy")
-E:add_comps(tt, "melee", "regen")
-tt.enemy.melee_slot = v(25, 0)
-tt.health.hp_max = 800
-tt.health.magic_armor = 0
-tt.health.armor = 0
-tt.health.dead_lifetime = 3
-tt.health_bar.offset = v(0, 50)
-tt.regen.cooldown = 0.8
-tt.regen.health = 60
-tt.unit.hit_offset = v(0, 21)
-tt.unit.head_offset = v(0, 21)
-tt.unit.mod_offset = v(0, 16)
-tt.unit.show_blood_pool = false
-tt.unit.size = UNIT_SIZE_MEDIUM
-tt.render.sprites[1].prefix = "Abomination2Def"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.info.enc_icon = 21
-tt.info.portrait = "kr5_info_portraits_enemies_0028"
-tt.main_script.update = scripts.enemy_unblinded_abomination_stage_8.update
-tt.melee.attacks[1].cooldown = 2
-tt.melee.attacks[1].damage_max = 75
-tt.melee.attacks[1].damage_min = 40
-tt.melee.attacks[1].hit_time = fts(12)
-tt.melee.attacks[1].hit_fx = "fx_enemy_unblinded_abomination_hit_melee"
-tt.melee.attacks[1].hit_fx_offset = v(40, 20)
-tt.idle_cooldown_min = 7
-tt.idle_cooldown_max = 12
-tt.sleep_cooldown = 20
-tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
-tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
-tt.sound_events.death = "EnemyAbominationDeath"
-
-tt = E:register_t("enemy_unblinded_abomination_stage_8_lifebar")
-E:add_comps(tt, "health_bar", "pos", "render", "health")
-tt.render.sprites[1].name = "square_ffffff"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = v(0, 0)
-
 tt = E:register_t("enemy_spiderling", "enemy")
 E:add_comps(tt, "melee", "cliff")
 tt.enemy.gold = 10
