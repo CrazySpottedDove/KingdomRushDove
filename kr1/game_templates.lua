@@ -6452,18 +6452,6 @@ tt.tween.remove = true
 tt = E:register_t("decal_waves", "decal_loop")
 tt.render.sprites[1].name = "stage_2_props_waves"
 
-tt = E:register_t("stage_04_shadowtop", "decal")
-tt.render.sprites[1].name = "stage4_shadowtop"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("stage_04_shadowside", "decal")
-tt.render.sprites[1].name = "stage4_shadowside"
-tt.render.sprites[1].animated = false
-
-tt = E:register_t("stage_04_shadowbottom", "decal")
-tt.render.sprites[1].name = "stage4_shadowbottom"
-tt.render.sprites[1].animated = false
-
 tt = E:register_t("stage_4_arborean_bridge_1", "decal_scripted")
 E:add_comps(tt, "editor", "editor_script")
 local time_between_animations = fts(30 * math.random(3, 5))
@@ -6796,14 +6784,6 @@ tt = E:register_t("decal_tiki_bar5", "decal_tiki_bar2")
 tt.render.sprites[1].prefix = "stage_06_parches_tiki_top_pibe"
 tt.render.sprites[1].name = "Idle"
 tt.render.sprites[1].sort_y_offset = 1
-
-tt = E:register_t("decal_stage_07_crow_clickable", "decal_scripted")
-E:add_comps(tt, "editor", "ui")
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.main_script.update = scripts.stage_07_crow.update
-tt.ui.click_rect = r(-15, -15, 30, 30)
 
 tt = E:register_t("decal_stage_11_cult_leader", "decal")
 E:add_comps(tt, "taunts", "tween")

@@ -171,6 +171,54 @@ stage_07_witcher_update = function(this, store)
 	return true
 end
 local tt
+tt = E:register_t_tmp("decal_stage_07_crow_clickable", "decal_scripted")
+E:add_comps(tt, "editor", "ui")
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.main_script.update = function(this, store)
+	local tap_count = 0
+	local taps_to_fly = 3
+	local chance_to_die = 0.1
+
+	this.gone_away = false
+
+	while true do
+		if this.ui.clicked then
+			tap_count = tap_count + 1
+			this.ui.clicked = nil
+			this.ui.can_click = false
+
+			if tap_count == taps_to_fly then
+				if chance_to_die > math.random(0, 100) / 100 then
+					S:queue("Stage07CrowCaw")
+					U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+
+					this.gone_away = true
+
+					break
+				else
+					S:queue("Stage07CrowFly")
+					U.y_animation_play(this, "flying", nil, store.tick_ts, 1)
+
+					this.gone_away = true
+
+					break
+				end
+			else
+				S:queue("Stage07CrowCaw")
+				U.y_animation_play(this, "tap", nil, store.tick_ts, 1)
+			end
+
+			this.ui.can_click = true
+		end
+
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+tt.ui.click_rect = r(-15, -15, 30, 30)
 tt = E:register_t_hot("decal_stage_07_crow_clickable_2", "decal_stage_07_crow_clickable", true)
 tt.render.sprites[1].prefix = "stage_7_crow2Def"
 tt.render.sprites[1].flip_x = true
