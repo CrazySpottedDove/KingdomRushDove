@@ -705,14 +705,6 @@ function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
 
 			if cmd.name ~= "#" then
 				table.insert(self.db_cmds, cmd)
-			-- if cmd.name == "spawn" and self.user_data.liuhui.enemy_count and self.user_data.liuhui.enemy_count >= 2 then
-			-- 	if self.user_data.liuhui.enemy_count == 2 then
-			-- 		table.insert(self.db_cmds, cmd)
-			-- 	elseif self.user_data.liuhui.enemy_count == 3 then
-			-- 		table.insert(self.db_cmds, cmd)
-			-- 		table.insert(self.db_cmds, cmd)
-			-- 	end
-			-- end
 			end
 
 			if cmd.name == "manual_wave" then

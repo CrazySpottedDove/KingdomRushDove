@@ -23,6 +23,8 @@ local entity_db = {
 	loaded = false
 }
 
+require("table.clear")
+
 function entity_db:Load()
 	self.last_id = 1
 	self.loaded = true
@@ -33,7 +35,10 @@ function entity_db:Load()
 		self.entities_backup = quickcopy(self.entities)
 	else
 		-- 已有实体数据库备份时，直接拷贝即可。components 约定为只读数据，无需重复拷贝。
-		self.entities = quickcopy(self.entities_backup)
+		table.clear(self.entities)
+		for k, v in pairs(self.entities_backup) do
+			self.entities[k] = quickcopy(v)
+		end
 	end
 end
 

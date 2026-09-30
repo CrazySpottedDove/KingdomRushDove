@@ -12399,32 +12399,6 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = 20
 
-tt = E:register_t("debug_draw_ability_area", "decal_scripted")
-tt.main_script.update = scripts.debug_draw_ability_area.update
-tt.check_function = nil
-tt.check_every = 0.1
-tt.radius_check = 300
-tt.show_red = false
-tt.sprites_x = math.ceil(REF_W / 10)
-tt.sprites_y = math.ceil(REF_H / 5)
-tt.sprite_size = v(REF_W / tt.sprites_x, REF_H / tt.sprites_y)
-
-for xx = 1, tt.sprites_x do
-	for yy = 1, tt.sprites_y do
-		local index_x = xx
-		local index_y = (yy - 1) * tt.sprites_x
-		local sprite_i = index_x + index_y
-		local pos = v(xx * tt.sprite_size.x, yy * tt.sprite_size.y)
-
-		tt.render.sprites[sprite_i] = E:clone_c("sprite")
-		tt.render.sprites[sprite_i].pos = pos
-		tt.render.sprites[sprite_i].scale = vv(0.5)
-		tt.render.sprites[sprite_i].animated = false
-		tt.render.sprites[sprite_i].z = Z_DECALS
-		tt.render.sprites[sprite_i].name = "decal_blood_0001"
-	end
-end
-
 for i = 1, 3 do
 
 	tt = E:register_t("stage_31_exo_forest_" .. i, "decal")

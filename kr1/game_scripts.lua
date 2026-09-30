@@ -42764,63 +42764,6 @@ function scripts.fx_stage_35_cannonball_block_path.update(this, store)
 	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 end
 
-scripts.debug_draw_ability_area = {}
-
-function scripts.debug_draw_ability_area.update(this, store)
-	local this_sprites = this.render.sprites
-	local sprites_x = this.sprites_x
-	local sprites_y = this.sprites_y
-
-	while true do
-		if this.check_function then
-			local min_x_pos = this.pos.x - this.radius_check
-			local max_x_pos = this.pos.x + this.radius_check
-			local min_y_pos = this.pos.y - this.radius_check
-			local max_y_pos = this.pos.y + this.radius_check
-			local min_sprite_x = km.clamp(1, sprites_x, math.floor(min_x_pos / (REF_W / sprites_x)))
-			local max_sprite_x = km.clamp(1, sprites_x, math.ceil(max_x_pos / (REF_W / sprites_x)))
-			local min_sprite_y = km.clamp(1, sprites_y, math.floor(min_y_pos / (REF_H / sprites_y)))
-			local max_sprite_y = km.clamp(1, sprites_y, math.ceil(max_y_pos / (REF_H / sprites_y)))
-
-			for xx = 1, sprites_x do
-				local index_x = xx
-
-				for yy = 1, sprites_y do
-					local index_y = (yy - 1) * sprites_x
-					local sprite_i = index_x + index_y
-
-					this_sprites[sprite_i].name = "decal_blood_0001"
-					this_sprites[sprite_i].hidden = not this.show_red
-				end
-			end
-
-			for xx = min_sprite_x, max_sprite_x do
-				local index_x = xx
-
-				for yy = min_sprite_y, max_sprite_y do
-					local index_y = (yy - 1) * sprites_x
-					local sprite_i = index_x + index_y
-					local value = this.check_function(this_sprites[sprite_i].pos)
-
-					if value == 3 then
-						this_sprites[sprite_i].name = "decal_blood_0004"
-					elseif value == 2 then
-						this_sprites[sprite_i].name = "decal_blood_0003"
-					elseif value == 1 then
-						this_sprites[sprite_i].name = "decal_blood_0001"
-					elseif value == 0 then
-						this_sprites[sprite_i].name = "decal_blood_0002"
-					end
-
-					this_sprites[sprite_i].hidden = value == 1 and not this.show_red
-				end
-			end
-		end
-
-		U.y_wait_unconditional(store, this.check_every)
-	end
-end
-
 scripts.mod_stage_32_tower_blocked = {}
 
 function scripts.mod_stage_32_tower_blocked.update(this, store)
