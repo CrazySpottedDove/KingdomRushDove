@@ -14121,7 +14121,6 @@ function scripts.tower_rocket_gunners.update(this, store)
 			end
 		end
 
-		check_change_rally()
 		coroutine.yield()
 	end
 end
