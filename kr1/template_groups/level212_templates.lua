@@ -112,7 +112,7 @@ local function controller_stage_212_elevator_update(this, store)
 			this.mask1.render.sprites[1].hidden = true
 			this.mask2.render.sprites[1].hidden = true
 			P:deactivate_path(this._last_activated_path)
-			local path_enemies = table.filter(store.entities, function(k, v)
+			local path_enemies = table.filter(store.enemies, function(k, v)
 				return v.nav_path and v.nav_path.pi == this._last_activated_path
 			end)
 			for _, e in pairs(path_enemies) do
