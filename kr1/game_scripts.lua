@@ -54662,8 +54662,8 @@ function scripts.enemy_death_rider.update(this, store, script)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-				local soldiers = U.find_soldiers_in_range(store.entities, this.pos, 0, a.range, a.vis_flags, a.vis_bans, function(v, o)
+			if enemy_ready_to_magic_attack(this, store, a) then
+				local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.range, a.vis_flags, a.vis_bans, function(v, o)
 					local ni = P:nearest_nodes(v.pos.x, v.pos.y, {this.nav_path.pi})[1][3]
 
 					return ni > this.nav_path.ni
