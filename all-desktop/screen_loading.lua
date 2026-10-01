@@ -13,6 +13,7 @@ screen.required_textures = {}
 screen.required_sounds = {}
 screen.plugin_required_textures = {}
 screen.plugin_required_sounds = {}
+screen.plugin_required_exoskeletons = {}
 screen.ref_w = 1920
 screen.ref_h = 1080
 screen.ref_res = TEXTURE_SIZE_ALIAS.fullhd

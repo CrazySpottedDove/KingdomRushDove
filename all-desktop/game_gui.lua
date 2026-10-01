@@ -100,6 +100,7 @@ end
 game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia_creeps", "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
 game_gui.plugin_required_textures = {}
 game_gui.plugin_required_sounds = {}
+game_gui.plugin_required_exoskeletons = {}
 game_gui.ref_h = GUI_REF_H
 game_gui.ref_w = GUI_REF_W
 game_gui.ref_res = TEXTURE_SIZE_ALIAS.ipad

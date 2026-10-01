@@ -116,6 +116,7 @@ game.required_sounds = {
 game.required_exoskeletons = {"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava"}
 game.plugin_required_textures = {}
 game.plugin_required_sounds = {}
+game.plugin_required_exoskeletons = {}
 game.simulation_systems = {
 	"level",
 	"wave_spawn",

@@ -25,6 +25,26 @@ function EXO:queue_load(exo_list)
 	table.insert(self.exo_lists_to_load, exo_list)
 end
 
+--- 插件 exo 列表：exo_name -> {path = 相对 plugins 的目录}。
+--- 支持由插件指明 exo 路径，统一并入 exo_lists_to_load，在进入对局时被加载。
+---@param plugin_exo_list table
+function EXO:queue_load_plugin(plugin_exo_list)
+	if not plugin_exo_list then
+		return
+	end
+
+	local exo_list = {}
+
+	for exo_name, exo_info in pairs(plugin_exo_list) do
+		exo_list[#exo_list + 1] = {
+			name = exo_name,
+			path = "plugins/" .. exo_info.path
+		}
+	end
+
+	table.insert(self.exo_lists_to_load, exo_list)
+end
+
 --- 为了避免自引用，选择为 exo_frame 添加属性 exo_name，而不是直接让它引用 exo。因此，EXO 数据库需要暴露通过 exo_frame 查询 exo 的方法。
 ---@param exo_frame any
 function EXO:get_exo_by_frame(exo_frame)
@@ -35,10 +55,19 @@ end
 function EXO:load()
 	-- perf.tmp_start("EXO:load")
 	for _, exo_list in ipairs(self.exo_lists_to_load) do
-		for _, exo_name in ipairs(exo_list) do
+		for _, entry in ipairs(exo_list) do
+			local exo_name, exo_path
+
+			if type(entry) == "table" then
+				exo_name = entry.name
+				exo_path = entry.path
+			else
+				exo_name = entry
+			end
+
 			if not self.exos[exo_name] then
 				-- 优先加载编译后的 EXO3；缺失/损坏时回退到文本源
-				local exo = self:load_packed(exo_name) or self:load_lua(exo_name, EXO.exo_path)
+				local exo = self:load_packed(exo_name, exo_path) or self:load_lua(exo_name, exo_path or EXO.exo_path)
 				local db_animation = A.db
 				for _, animation in ipairs(exo.animations) do
 					local name = exo.name .. "_" .. animation.name
@@ -81,27 +110,59 @@ function EXO:load()
 -- perf.tmp_stop("EXO:load")
 end
 
---- 卸载 exo 数据
----@param exo_list table of string exo_name
-function EXO:unload(exo_list)
-	for _, exo_name in ipairs(exo_list) do
-		if not persistent_exos[exo_name] then
-			self.exos_count[exo_name] = self.exos_count[exo_name] - 1
-			if self.exos_count[exo_name] <= 0 then
-				local exo = self.exos[exo_name]
-				local db_animation = A.db
-				for _, animation in ipairs(exo.animations) do
-					local name = exo.name .. "_" .. animation.name
-					local def = db_animation[name]
+--- 卸载单个 exo，未加载过时安全跳过
+---@param exo_name string
+local function unload_exo(self, exo_name)
+	if persistent_exos[exo_name] then
+		return
+	end
 
-					for i = 1, def[1] do
-						self.db[A:def_frame_name(def, i)] = nil
-					end
+	local count = self.exos_count[exo_name]
 
-					db_animation[name] = nil
-				end
-				self.exos[exo_name] = nil
+	if not count then
+		return
+	end
+
+	count = count - 1
+	self.exos_count[exo_name] = count
+
+	if count > 0 then
+		return
+	end
+
+	local exo = self.exos[exo_name]
+
+	if not exo then
+		return
+	end
+
+	local db_animation = A.db
+
+	for _, animation in ipairs(exo.animations) do
+		local name = exo.name .. "_" .. animation.name
+		local def = db_animation[name]
+
+		if def then
+			for i = 1, def[1] do
+				self.db[A:def_frame_name(def, i)] = nil
 			end
+		end
+
+		db_animation[name] = nil
+	end
+
+	self.exos[exo_name] = nil
+end
+
+--- 卸载 exo 数据，同时支持两种形状：
+--- 本体数组 {exo_name, ...}（数字键，值为名字）与插件映射 {exo_name = {path = ...}}（字符串键）。
+---@param exo_list table
+function EXO:unload(exo_list)
+	for k, v in pairs(exo_list) do
+		if type(k) == "number" then
+			unload_exo(self, v)
+		else
+			unload_exo(self, k)
 		end
 	end
 end
@@ -257,8 +318,10 @@ local function parse_payload(payload, exo_name)
 end
 
 --- 加载编译后的 EXO3 二进制；文件缺失或校验失败时返回 nil（由调用方回退到文本加载）
-function EXO:load_packed(exo_name)
-	local fn = EXO.base_path .. "/" .. exo_name .. ".exo3"
+---@param exo_name string
+---@param exo_path string|nil 自定义 exo 目录，缺省使用本体路径
+function EXO:load_packed(exo_name, exo_path)
+	local fn = (exo_path or EXO.base_path) .. "/" .. exo_name .. ".exo3"
 
 	if not FS.isFile(fn) then
 		return nil
