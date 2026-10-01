@@ -16,6 +16,10 @@ local configer = require("dove_modules.configer")
 local S = require("sound_db")
 local AC = require("achievements")
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
+local floor = math.floor
+local ceil = math.ceil
+local max = math.max
+local min = math.min
 local perf = require("dove_modules.perf.perf")
 local hook_utils = require("hook_utils")
 local PS = require("all.systems.particle_system")
@@ -442,13 +446,64 @@ local function rewind_render_update(self, dt, ts, store)
 					local last_runs = s.runs
 
 					if s.animated then
-						local fn
-						fn, s.runs, s.frame_idx = A:f(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+						local link = s._link
+
+						if link == nil or s._link_name ~= s.name or s._link_prefix ~= s.prefix then
+							local key = s.prefix and (s.prefix .. "_" .. s.name) or s.name
+							local a = A.db[key]
+
+							if a then
+								link = a.link
+
+								if not link then
+									link = A:build_link(a, key)
+								end
+
+								s._link_len = a[1]
+							else
+								if not A.missing_animations[key] then
+									log.error("animation %s not found", key)
+
+									A.missing_animations[key] = true
+								end
+
+								link = A.EMPTY_LINK
+								s._link_len = 0
+							end
+
+							s._link = link
+							s._link_name = s.name
+							s._link_prefix = s.prefix
+						end
+
+						local len = s._link_len
+						local runs, idx
+
+						if len > 0 then
+							local fps = s.fps or A.fps
+							local t = (ts - s.ts + s.time_offset) * fps
+
+							runs = max(0, floor((ceil(t + adaptive_fps.tick_length * fps) - 1) / len))
+
+							if s.loop then
+								idx = floor(t) % len + 1
+							else
+								idx = max(1, min(len, ceil(t)))
+							end
+						else
+							runs = 0
+							idx = 1
+						end
+
+						s.runs = runs
+						s.frame_idx = idx
+
+						local fn = link[idx]
 
 						if s.exo then
 							apply_exo(s, fn and fn.exo_name and fn or nil)
 						else
-							s.sync_flag = last_runs ~= s.runs
+							s.sync_flag = last_runs ~= runs
 							s.ss = fn
 						end
 					else

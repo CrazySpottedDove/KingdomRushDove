@@ -17,6 +17,8 @@ animation_db.fps = FPS
 -- animation_db.tick_length = TICK_LENGTH
 animation_db.missing_animations = {}
 animation_db.loaded = false
+-- 缺失动画时供渲染热路径复用的空 link（避免调用方判空）
+animation_db.EMPTY_LINK = {}
 
 local function build_frame_numbers(frame_numbers, frame_count)
 	local nums = ffi.new("uint32_t[?]", frame_count)
