@@ -96,9 +96,111 @@ tt.max_time = 24
 tt.max_chests = 3
 tt.max_hobbits = 13
 
+local S = require("sound_db")
+local P = require("path_db")
+local V = require("lib.klua.vector")
+
 tt = E:register_t_hot("decal_river_object", "decal_scripted", true)
 AC(tt, "nav_path", "motion", "ui", "tween", "sound_events")
-tt.main_script.update = scripts.decal_river_object.update
+tt.main_script.update = function(this, store)
+	local next
+	local fall_count = 0
+
+	local function check_clicked()
+		if this.ui.clicked then
+			if this.gold then
+				store.player_gold = store.player_gold + this.gold
+			end
+
+			S:queue(this.sound_events.save)
+			U.y_animation_play(this, "save", nil, store.tick_ts)
+			simulation:queue_remove_entity(this)
+
+			if this.achievement then
+			-- AC:got(this.achievement)
+			end
+
+			if this.achievement_inc then
+			-- AC:inc_check(this.achievement_inc)
+			end
+
+			return
+		end
+	end
+
+	::label_514_0::
+
+	this.ui.clicked = nil
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+
+	U.animation_start_default(this, "travel", nil, store.tick_ts, true)
+
+	while true do
+		check_clicked()
+
+		next = P:next_entity_node(this, store.tick_length)
+
+		if next == nil then
+			break
+		end
+
+		local remaining_nodes = P:get_end_node(this.nav_path.pi) - this.nav_path.ni
+
+		if fall_count == 1 and this.sink_nodes and remaining_nodes <= this.sink_nodes then
+			break
+		end
+
+		U.set_destination(this, next)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
+		coroutine.yield()
+	end
+
+	if fall_count < this.falls then
+		fall_count = fall_count + 1
+
+		U.animation_start_default(this, "fall", nil, store.tick_ts, true)
+
+		if fall_count == 1 then
+			this.tween.ts = store.tick_ts
+			this.tween.disabled = nil
+			this.tween.props[1].keys = this.fall_1_tween
+		end
+
+		this.nav_path.pi = this.nav_path.pi + 1
+		this.nav_path.ni = 1
+
+		local normal_speed = this.motion.max_speed
+		local fall_dest = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+
+		U.update_max_speed(this, V.dist(fall_dest.x, fall_dest.y, this.pos.x, this.pos.y) / this.fall_time)
+		U.set_destination(this, fall_dest)
+
+		while not U.walk_off__accel__unsnapped(this, store.tick_length) do
+			coroutine.yield()
+		end
+
+		U.update_max_speed(this, normal_speed)
+
+		if fall_count == 1 then
+			S:queue(this.sound_events.fall)
+			U.y_wait_unconditional(store, this.fall_wait)
+
+			this.tween.ts = store.tick_ts
+			this.tween.disabled = nil
+			this.tween.props[1].keys = this.travel_2_tween
+
+			goto label_514_0
+		else
+			S:queue(this.sound_events.crash)
+			U.y_animation_play(this, "crash", nil, store.tick_ts)
+			simulation:queue_remove_entity(this)
+		end
+	else
+		S:queue(this.sound_events.sink)
+		U.y_animation_play(this, "sink", nil, store.tick_ts)
+		simulation:queue_remove_entity(this)
+	end
+end
 tt.motion.max_speed = 1.5 * FPS
 tt.ui.click_rect = r(-18, -5, 36, 36)
 tt.ui.can_select = false
