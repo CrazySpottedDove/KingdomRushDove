@@ -1,5 +1,16 @@
+local ffi = require("ffi")
+
 local input_file = arg[1] or "kr1/data/game_animations.lua"
-local output_luac_file = arg[2] or "kr1/data/game_animations.luac"
+local output_file = arg[2] or "kr1/data/game_animations.bin"
+
+-- 文件布局（全部小端）：
+--   header: u32 anim_count
+--   directory: anim_count * (u16 name_len, name, u16 prefix_len, prefix, u32 frame_count)
+--   frames: total_frames * u16  （按 directory 顺序连续存放）
+-- 帧名（prefix_0001）不入文件，运行时按 prefix + 帧号生成。
+
+local u16 = ffi.new("uint16_t[1]")
+local u32 = ffi.new("uint32_t[1]")
 
 local function load_table_from_file(filename)
 	local chunk, err = loadfile(filename)
@@ -25,52 +36,7 @@ local function load_table_from_file(filename)
 	return tbl
 end
 
-local function append_serialized(buf, v)
-	local tv = type(v)
-
-	if tv == "table" then
-		buf[#buf + 1] = "{"
-		local n = #v
-		local first = true
-
-		for i = 1, n do
-			if not first then
-				buf[#buf + 1] = ","
-			end
-			first = false
-			append_serialized(buf, v[i])
-		end
-
-		for k, vv in pairs(v) do
-			if type(k) ~= "number" or k < 1 or k > n or k % 1 ~= 0 then
-				if not first then
-					buf[#buf + 1] = ","
-				end
-				first = false
-				buf[#buf + 1] = "["
-				buf[#buf + 1] = string.format("%q", k)
-				buf[#buf + 1] = "]="
-				append_serialized(buf, vv)
-			end
-		end
-
-		buf[#buf + 1] = "}"
-	elseif tv == "string" then
-		buf[#buf + 1] = string.format("%q", v)
-	else
-		buf[#buf + 1] = tostring(v)
-	end
-end
-
-local function serialize(tbl)
-	local out = {}
-	append_serialized(out, tbl)
-	return table.concat(out)
-end
-
--- 运行时紧凑格式：{frame_count, prefix, frame_numbers}
--- 只保存前缀和帧编号，帧名（prefix_0001）在运行时按需生成。
--- 这样 animation_db 不再常驻保存约 20 万个展开后的帧名字符串。
+-- 从原始定义里展开出帧号，返回 {frame_count, prefix, frame_numbers}
 local function extract_frame_from(a)
 	local prefix = a.prefix
 	local frame_numbers = {}
@@ -172,26 +138,106 @@ for k, v in pairs(src) do
 		end
 	end
 end
-local source_lua = "return " .. serialize(compiled)
-local compile_loader = loadstring or load
-local chunk, chunk_err = compile_loader(source_lua, "@" .. output_luac_file)
 
-if not chunk then
-	error("Failed to compile generated lua chunk:\n" .. tostring(chunk_err))
+-- 排序，保证产物可复现（帧池顺序与 directory 顺序一致）
+local keys = {}
+
+for k in pairs(compiled) do
+	keys[#keys + 1] = k
 end
 
-local bytecode = string.dump(chunk)
-local luac_file = assert(io.open(output_luac_file, "wb"))
-luac_file:write(bytecode)
-luac_file:close()
+table.sort(keys)
+
+local total_frames = 0
+local size = 4
+
+for i = 1, #keys do
+	local def = compiled[keys[i]]
+	total_frames = total_frames + def[1]
+	size = size + 2 + #keys[i] + 2 + #(def[2] or "") + 4
+end
+
+size = size + total_frames * 2
+
+local buf = ffi.new("uint8_t[?]", size)
+local p = 0
+
+local function put_u16(v)
+	u16[0] = v
+	ffi.copy(buf + p, u16, 2)
+	p = p + 2
+end
+
+local function put_u32(v)
+	u32[0] = v
+	ffi.copy(buf + p, u32, 4)
+	p = p + 4
+end
+
+local function put_bytes(s)
+	if #s > 0 then
+		ffi.copy(buf + p, s, #s)
+		p = p + #s
+	end
+end
+
+put_u32(#keys)
+
+for i = 1, #keys do
+	local name = keys[i]
+	local prefix = compiled[name][2] or ""
+
+	if #name > 65535 or #prefix > 65535 then
+		error(string.format("animation %s name/prefix too long", name))
+	end
+
+	put_u16(#name)
+	put_bytes(name)
+	put_u16(#prefix)
+	put_bytes(prefix)
+	put_u32(compiled[name][1])
+end
+
+local frame_buf = ffi.new("uint16_t[?]", total_frames > 0 and total_frames or 1)
+local cursor = 0
+
+for i = 1, #keys do
+	local def = compiled[keys[i]]
+	local count = def[1]
+	local numbers = def[3]
+
+	for j = 1, count do
+		local n = numbers[j]
+
+		if type(n) ~= "number" or n < 0 or n > 65535 or n % 1 ~= 0 then
+			error(string.format("animation %s frame number out of uint16 range: %s", keys[i], tostring(n)))
+		end
+
+		frame_buf[cursor + j - 1] = n
+	end
+
+	cursor = cursor + count
+end
+
+ffi.copy(buf + p, frame_buf, total_frames * 2)
+p = p + total_frames * 2
+
+assert(p == size, string.format("binary size mismatch: %d ~= %d", p, size))
+
+local out = assert(io.open(output_file, "wb"))
+out:write(ffi.string(buf, size))
+out:close()
 
 print(string.format("Compiled %d source animations into %d runtime animations.", source_count, compiled_count))
+
 if duplicate_count > 0 then
 	print(string.format("Skipped %d duplicate animation keys (kept first occurrence).", duplicate_count))
 	table.sort(duplicate_keys)
 	print("Duplicate animation keys:")
+
 	for i = 1, #duplicate_keys do
 		print(duplicate_keys[i])
 	end
 end
-print("LUAC output: " .. output_luac_file)
+
+print(string.format("Output: %s (%d animations, %d frames, %.1f KB)", output_file, #keys, total_frames, size / 1024))

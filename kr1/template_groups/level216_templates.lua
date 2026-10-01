@@ -1206,7 +1206,7 @@ function bg_corrupt.update(this, store)
 			local A = require("animation_db")
 			local pt = E:get_template(tpl)
 			local pname = pt and pt.particle_system and pt.particle_system.name
-			local psd = pname and A:fn(pname, 0, false)
+			local psd = pname and A:f(pname, 0, false)
 			if psd and psd.size then
 				area_x = psd.size[1] * area_frac
 				area_y = psd.size[2] * area_frac

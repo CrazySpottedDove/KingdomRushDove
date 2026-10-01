@@ -366,6 +366,50 @@ local A = require("animation_db")
 local I = require("lib.klove.image_db")
 local table_clear = require("table.clear")
 
+local function apply_exo(s, exo_frame)
+	if exo_frame then
+		s.exo_frame = exo_frame
+		s.exo_hidden = nil
+		local exo = EXO:get_exo_by_frame(exo_frame)
+
+		if s.exo_hide_prefix then
+			local buf = exo.floats
+			local base = exo_frame.base
+			local hcount = exo_frame.count
+			local hidden = s.exo_hidden
+
+			if not hidden then
+				hidden = {}
+				s.exo_hidden = hidden
+			end
+
+			for k = 1, hcount do
+				hidden[k] = false
+			end
+
+			for i = 0, hcount - 1 do
+				local o = base + i * 10
+
+				if buf[o] == 1 then
+					local pname = exo.parts[buf[o + 1]][1]
+
+					hidden[i + 1] = false
+
+					for j = 1, #s.exo_hide_prefix do
+						if string.find(pname, s.exo_hide_prefix[j], 1, true) then
+							hidden[i + 1] = true
+
+							break
+						end
+					end
+				end
+			end
+		end
+	else
+		s.exo_frame = nil
+	end
+end
+
 local function rewind_render_update(self, dt, ts, store)
 	if store.render_frames_count > store.render_frames_ffi_cap then
 		store.render_frames_ffi_cap = store.render_frames_ffi_cap * 2
@@ -395,74 +439,28 @@ local function rewind_render_update(self, dt, ts, store)
 				end
 
 				do
-					local fn
 					local last_runs = s.runs
 
 					if s.animated then
-						fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+						local fn
+						fn, s.runs, s.frame_idx = A:f(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+
+						if s.exo then
+							apply_exo(s, fn and fn.exo_name and fn or nil)
+						else
+							s.sync_flag = last_runs ~= s.runs
+							s.ss = fn
+						end
 					else
+						local fn = s.name
+
 						s.runs = 0
 						s.frame_idx = 1
-						fn = s.name
-					end
 
-					if s.exo then
-						local exo_frame
-
-						if s.animated then
-							if fn and fn.exo_name then
-								exo_frame = fn
-							end
-						elseif fn then
-							exo_frame = EXO:f(fn)
-						end
-
-						if exo_frame then
-							s.exo_frame = exo_frame
-							s.exo_hidden = nil
-							local exo = EXO:get_exo_by_frame(exo_frame)
-
-							if s.exo_hide_prefix then
-								local buf = exo.floats
-								local base = exo_frame.base
-								local hcount = exo_frame.count
-								local hidden = s.exo_hidden
-
-								if not hidden then
-									hidden = {}
-									s.exo_hidden = hidden
-								end
-
-								for k = 1, hcount do
-									hidden[k] = false
-								end
-
-								for i = 0, hcount - 1 do
-									local o = base + i * 10
-									if buf[o] == 1 then
-										local pname = exo.parts[buf[o + 1]][1]
-
-										hidden[i + 1] = false
-
-										for j = 1, #s.exo_hide_prefix do
-											if string.find(pname, s.exo_hide_prefix[j], 1, true) then
-												hidden[i + 1] = true
-
-												break
-											end
-										end
-									end
-								end
-							end
+						if s.exo then
+							apply_exo(s, EXO:f(fn))
 						else
-							s.exo_frame = nil
-						end
-					else
-						s.sync_flag = last_runs ~= s.runs
-
-						if s.animated then
-							s.ss = fn
-						else
+							s.sync_flag = last_runs ~= s.runs
 							s.ss = I:s(fn)
 						end
 					end

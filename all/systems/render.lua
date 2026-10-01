@@ -1,5 +1,4 @@
 local render = {}
-local log = require("lib.klua.log"):new("render")
 local perf = require("dove_modules.perf.perf")
 local A = require("animation_db")
 local I = require("lib.klove.image_db")
@@ -11,7 +10,6 @@ local ffi = require("ffi")
 
 require("all.constants")
 local table_clear = require("table.clear")
-MISSED_SS = {}
 
 ffi.cdef[[
 typedef struct {
@@ -108,6 +106,52 @@ end
 
 render.name = "render"
 local F = require("lib.klove.font_db")
+
+--- 应用 exo 帧（含 exo_hide_prefix 的部件隐藏计算）。只在 exo 精灵上调用，避免把这段
+--- 逻辑复制进动画/静态两个分支。
+local function apply_exo(s, exo_frame)
+	if exo_frame then
+		s.exo_frame = exo_frame
+		s.exo_hidden = nil
+		local exo = EXO:get_exo_by_frame(exo_frame)
+
+		if s.exo_hide_prefix then
+			local buf = exo.floats
+			local base = exo_frame.base
+			local hcount = exo_frame.count
+			local hidden = s.exo_hidden
+
+			if not hidden then
+				hidden = {}
+				s.exo_hidden = hidden
+			end
+
+			for k = 1, hcount do
+				hidden[k] = false
+			end
+
+			for i = 0, hcount - 1 do
+				local o = base + i * 10
+
+				if buf[o] == 1 then
+					local pname = exo.parts[buf[o + 1]][1]
+
+					hidden[i + 1] = false
+
+					for j = 1, #s.exo_hide_prefix do
+						if string.find(pname, s.exo_hide_prefix[j], 1, true) then
+							hidden[i + 1] = true
+
+							break
+						end
+					end
+				end
+			end
+		end
+	else
+		s.exo_frame = nil
+	end
+end
 
 function render:init(store)
 	store.render_frames = {}
@@ -338,110 +382,30 @@ function render:on_render_update(dt, ts, store)
 				end
 
 				do
-					local fn
 					local last_runs = s.runs
 
 					if s.animated then
-						fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+						local fn
+						fn, s.runs, s.frame_idx = A:f(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+
+						if s.exo then
+							apply_exo(s, fn and fn.exo_name and fn or nil)
+						else
+							s.sync_flag = last_runs ~= s.runs
+							s.ss = fn
+						end
 					else
+						local fn = s.name
+
 						s.runs = 0
 						s.frame_idx = 1
-						fn = s.name
-					end
 
-					if s.exo then
-						local exo_frame
-
-						if s.animated then
-							-- A:fn 对 exo 动画直接返回 exo_frame
-							if fn and fn.exo_name then
-								exo_frame = fn
-							end
-						elseif fn then
-							exo_frame = EXO:f(fn)
-						end
-
-						if exo_frame then
-							s.exo_frame = exo_frame
-							s.exo_hidden = nil
-							local exo = EXO:get_exo_by_frame(exo_frame)
-
-							if s.exo_hide_prefix then
-								local buf = exo.floats
-								local base = exo_frame.base
-								local hcount = exo_frame.count
-								local hidden = s.exo_hidden
-
-								if not hidden then
-									hidden = {}
-									s.exo_hidden = hidden
-								end
-
-								for k = 1, hcount do
-									hidden[k] = false
-								end
-
-								for i = 0, hcount - 1 do
-									local o = base + i * 10
-									if buf[o] == 1 then
-										local pname = exo.parts[buf[o + 1]][1]
-
-										hidden[i + 1] = false
-
-										for j = 1, #s.exo_hide_prefix do
-											if string.find(pname, s.exo_hide_prefix[j], 1, true) then
-												hidden[i + 1] = true
-
-												break
-											end
-										end
-									end
-								end
-							end
+						if s.exo then
+							apply_exo(s, EXO:f(fn))
 						else
-							-- if not MISSED_SS[fn] then
-							-- 	-- fallback, 仅在开发时启用，用于检查美术资源
-							-- 	local e = store.entities[s._render_e_id]
-							-- 	print(string.format("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i))
-							-- 	print(string.format("EXO name: %s", fn or "nil"))
-							-- 	MISSED_SS[fn] = true
-							-- end
-							s.exo_frame = nil
-						end
-					else
-						s.sync_flag = last_runs ~= s.runs
-
-						if s.animated then
-							-- A:fn 已返回 db_atlas item，无需再走 I:s
-							s.ss = fn
-						else
+							s.sync_flag = last_runs ~= s.runs
 							s.ss = I:s(fn)
 						end
-
-					-- DEBUG:仅在开发时启用，用于检查美术资源
-					-- if s.ss == nil then
-					-- 	local e = store.entities[s._render_e_id]
-					-- 	if s.animation then
-					-- 		if not MISSED_SS[s.animation] then
-					-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-					-- 			print(string.format("Animation name: %s", s.animation))
-					-- 			MISSED_SS[s.animation] = true
-					-- 		end
-					-- 	elseif s.animated then
-					-- 		if not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
-					-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-					-- 			print(string.format("Animated prefix: %s", s.prefix))
-					-- 			print(string.format("Animated name: %s", s.name))
-					-- 			MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
-					-- 		end
-					-- 	else
-					-- 		if not MISSED_SS[s.name] then
-					-- 			print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-					-- 			print(string.format("Static sprite name: %s", s.name))
-					-- 			MISSED_SS[s.name] = true
-					-- 		end
-					-- 	end
-					-- end
 					end
 				end
 
