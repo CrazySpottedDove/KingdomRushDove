@@ -2603,7 +2603,12 @@ function MapView:show_flags(num)
 
 					wing:order_below(flag)
 
-					wing.pos = v(flag_pos.x - 3, flag_pos.y)
+					-- 旗帜锚点可能不是中心（如 KR6 用插地点锚点），此时 flag_pos 已不再是
+					-- 旗面中心。翅膀需补上「旗面中心 - 锚点」的偏移，才能始终对齐旗面中心。
+					local flag_center_dx = flag.size.x / 2 - flag.anchor.x
+					local flag_center_dy = flag.size.y / 2 - flag.anchor.y
+
+					wing.pos = v(flag_pos.x - 3 + flag_center_dx, flag_pos.y + flag_center_dy)
 					wing.anchor = v(wing.size.x / 2, wing.size.y / 2)
 					wing.hidden = ud.heroic_level == i + jnum
 				end

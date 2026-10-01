@@ -52271,7 +52271,7 @@ function scripts.enemy_leaper_spider.update(this, store, script)
 			return not v.pending_removal and v.soldier and v.vis and v.health and not v.health.dead and band(v.vis.flags, al.vis_bans) == 0 and band(v.vis.bans, al.vis_flags) == 0 and soldier_is_within_path(v, this.nav_path.pi) and within_nodes(v, this.nav_path.pi, al.max_nodes, al.min_nodes)
 		end)
 
-		if not targets or #targets == 0 then
+		if #targets == 0 then
 			return false
 		end
 
