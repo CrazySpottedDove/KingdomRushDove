@@ -68,22 +68,12 @@ local function serialize(tbl)
 	return table.concat(out)
 end
 
-local frame_suffix_cache = {}
-
-local function frame_suffix(frame)
-	local suffix = frame_suffix_cache[frame]
-
-	if not suffix then
-		suffix = string.format("_%04i", frame)
-		frame_suffix_cache[frame] = suffix
-	end
-
-	return suffix
-end
-
+-- 运行时紧凑格式：{frame_count, prefix, frame_numbers}
+-- 只保存前缀和帧编号，帧名（prefix_0001）在运行时按需生成。
+-- 这样 animation_db 不再常驻保存约 20 万个展开后的帧名字符串。
 local function extract_frame_from(a)
 	local prefix = a.prefix
-	local frame_names = {}
+	local frame_numbers = {}
 	local frame_count = 0
 
 	if a.ranges then
@@ -97,12 +87,12 @@ local function extract_frame_from(a)
 
 				for frame = from, to, inc do
 					frame_count = frame_count + 1
-					frame_names[frame_count] = prefix .. frame_suffix(frame)
+					frame_numbers[frame_count] = frame
 				end
 			else
 				for j = 1, #range do
 					frame_count = frame_count + 1
-					frame_names[frame_count] = prefix .. frame_suffix(range[j])
+					frame_numbers[frame_count] = range[j]
 				end
 			end
 		end
@@ -110,7 +100,7 @@ local function extract_frame_from(a)
 		if a.pre then
 			for i = 1, #a.pre do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(a.pre[i])
+				frame_numbers[frame_count] = a.pre[i]
 			end
 		end
 
@@ -119,26 +109,26 @@ local function extract_frame_from(a)
 
 			for frame = a.from, a.to, inc do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(frame)
+				frame_numbers[frame_count] = frame
 			end
 		end
 
 		if a.post then
 			for i = 1, #a.post do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(a.post[i])
+				frame_numbers[frame_count] = a.post[i]
 			end
 		end
 
 		if a.frames then
 			for i = 1, #a.frames do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(a.frames[i])
+				frame_numbers[frame_count] = a.frames[i]
 			end
 		end
 	end
 
-	return {frame_count, frame_names}
+	return {frame_count, prefix, frame_numbers}
 end
 
 local src = load_table_from_file(input_file)

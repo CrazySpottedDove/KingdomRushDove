@@ -99,6 +99,8 @@ function level:init_coroutined(store)
 	coroutine.yield()
 
 	A:load()
+	-- 清掉上一局遗留的链接缓存，避免 atlas 卸载后悬垂
+	A:unlink()
 	game.progress = 0.6
 	coroutine.yield()
 

@@ -20,6 +20,7 @@ local storage = require("all.storage")
 local director_data = require("data.director_data")
 local GS = require("kr1.game_settings")
 local EXO = require("all.exoskeleton")
+local A = require("animation_db")
 local configer = require("dove_modules.configer")
 
 local function replace_locale(list, locale)
@@ -310,6 +311,9 @@ function director:unload_item(item)
 		end
 
 		EXO:unload(game.required_exoskeletons)
+
+		-- 释放本局 animation_db -> image_db 的链接缓存，必须在 atlas 卸载前执行
+		A:unlink()
 
 		self:unload_texture_groups(groups, game.ref_res, "game")
 		self:unload_plugin_texture_groups(game.plugin_required_textures, game.ref_res, "game")

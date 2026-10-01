@@ -51,10 +51,20 @@ function EXO:load()
 						})
 					end
 
-					for i = 1, db_animation[name][1] do
-						self.db[db_animation[name][2][i]] = animation.frames[i]
-						animation.frames[i].exo_name = exo.name
+					local def = db_animation[name]
+					def.exo = true
+
+					for i = 1, def[1] do
+						local frame = animation.frames[i]
+
+						if frame then
+							self.db[A:def_frame_name(def, i)] = frame
+							frame.exo_name = exo.name
+						end
 					end
+
+					-- exo 帧不经过 image_db，直接把 exo_frame 数组作为 link 缓存
+					def.link = animation.frames
 				end
 
 				self.exos[exo_name] = exo
@@ -79,12 +89,15 @@ function EXO:unload(exo_list)
 			self.exos_count[exo_name] = self.exos_count[exo_name] - 1
 			if self.exos_count[exo_name] <= 0 then
 				local exo = self.exos[exo_name]
+				local db_animation = A.db
 				for _, animation in ipairs(exo.animations) do
 					local name = exo.name .. "_" .. animation.name
-					local db_animation = A.db
-					for i = 1, db_animation[name][1] do
-						self.db[db_animation[name][2][i]] = nil
+					local def = db_animation[name]
+
+					for i = 1, def[1] do
+						self.db[A:def_frame_name(def, i)] = nil
 					end
+
 					db_animation[name] = nil
 				end
 				self.exos[exo_name] = nil

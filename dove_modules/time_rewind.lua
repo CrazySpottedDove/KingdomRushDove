@@ -407,7 +407,15 @@ local function rewind_render_update(self, dt, ts, store)
 					end
 
 					if s.exo then
-						local exo_frame = EXO:f(fn)
+						local exo_frame
+
+						if s.animated then
+							if fn and fn.exo_name then
+								exo_frame = fn
+							end
+						elseif fn then
+							exo_frame = EXO:f(fn)
+						end
 
 						if exo_frame then
 							s.exo_frame = exo_frame
@@ -451,7 +459,12 @@ local function rewind_render_update(self, dt, ts, store)
 						end
 					else
 						s.sync_flag = last_runs ~= s.runs
-						s.ss = I:s(fn)
+
+						if s.animated then
+							s.ss = fn
+						else
+							s.ss = I:s(fn)
+						end
 					end
 				end
 

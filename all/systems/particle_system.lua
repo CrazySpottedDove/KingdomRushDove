@@ -253,7 +253,7 @@ function particle_system:on_render_update(dt, ts, store)
 						to = to * ps.animation_fps / FPS
 					end
 
-					f.ss = I:s(A:fn(f.animation_name, to, ps.loop))
+					f.ss = A:fn(f.animation_name, to, ps.loop)
 				else
 					f.ss = I:s(f.animation_name)
 				end

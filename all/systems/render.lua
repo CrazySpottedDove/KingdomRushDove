@@ -350,7 +350,16 @@ function render:on_render_update(dt, ts, store)
 					end
 
 					if s.exo then
-						local exo_frame = EXO:f(fn)
+						local exo_frame
+
+						if s.animated then
+							-- A:fn 对 exo 动画直接返回 exo_frame
+							if fn and fn.exo_name then
+								exo_frame = fn
+							end
+						elseif fn then
+							exo_frame = EXO:f(fn)
+						end
 
 						if exo_frame then
 							s.exo_frame = exo_frame
@@ -401,7 +410,13 @@ function render:on_render_update(dt, ts, store)
 						end
 					else
 						s.sync_flag = last_runs ~= s.runs
-						s.ss = I:s(fn)
+
+						if s.animated then
+							-- A:fn 已返回 db_atlas item，无需再走 I:s
+							s.ss = fn
+						else
+							s.ss = I:s(fn)
+						end
 
 					-- DEBUG:仅在开发时启用，用于检查美术资源
 					-- if s.ss == nil then
