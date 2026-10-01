@@ -22234,17 +22234,6 @@ function scripts.mod_stage_15_cult_leader_tower_stun.remove(this, store)
 	return true
 end
 
-scripts.decal_stage_16_holder_destroy_crater = {}
-
-function scripts.decal_stage_16_holder_destroy_crater.update(this, store)
-	U.y_animation_play(this, "start", nil, store.tick_ts)
-	U.animation_start_default(this, "loop", false, store.tick_ts, true)
-
-	while true do
-		coroutine.yield()
-	end
-end
-
 scripts.decal_stage_21_falling_rocks = {}
 
 function scripts.decal_stage_21_falling_rocks.update(this, store)

@@ -9,6 +9,21 @@ local V = require("lib.klua.vector")
 local SU = require("script_utils")
 local scripts = require("scripts")
 local v = V.v
+local r = V.r
+local LU = require("level_utils")
+local P = require("path_db")
+local GR = require("grid_db")
+local UP = require("kr1.upgrades")
+local SH = require("klove.shader_db")
+local bit = require("bit")
+local band = bit.band
+local signal = require("lib.hump.signal")
+local log = require("lib.klua.log"):new("level116_templates")
+
+local function queue_damage(store, damage)
+	store.damage_queue[#store.damage_queue + 1] = damage
+end
+
 local controller_terrain_3_stage_16_glare_update
 local controller_stage_16_overseer_tentacle_update
 local controller_stage_16_tentacle_bottom_update
@@ -338,6 +353,970 @@ function controller_stage_16_overseer_mouth_door.update(this, store)
 	end
 end
 
+-- 大眼本体及大眼关卡独占脚本
+
+-- 大眼本体
+local controller_stage_16_overseer = {}
+
+function controller_stage_16_overseer.get_info(this)
+	return {
+		damage_max = 0,
+		damage_min = 0,
+		lives = 0,
+		magic_armor = 0,
+		armor = 0,
+		type = STATS_TYPE_ENEMY,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_icon = this.info.damage_icon,
+		immune = this.health.immune_to == DAMAGE_ALL_TYPES
+	}
+end
+
+function controller_stage_16_overseer.update(this, store)
+	local change_phase_ts = store.tick_ts
+	local change_tower_ts = store.tick_ts
+	local destroy_holder_last_ts = store.tick_ts
+	local glare_last_ts = store.tick_ts
+	local downgrade_last_ts = store.tick_ts
+	local slow_last_ts = store.tick_ts
+	local last_heal_ts = store.tick_ts
+	local next_holder_to_destroy_i = 1
+	local next_idle_anim_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
+	local last_idle_anim_ts = store.tick_ts
+	local change_tower_cooldown
+	local change_tower_first_time = true
+	local spawners = LU.list_entities(store.entities, "mega_spawner")
+	local megaspawner_boss
+
+	for _, value in pairs(spawners) do
+		if value.load_file == "level116_spawner" then
+			megaspawner_boss = value
+		end
+	end
+
+	local function set_phase(new_phase)
+		this.phase = new_phase
+		change_phase_ts = store.tick_ts
+		megaspawner_boss.manual_wave = string.format("BOSS%i", this.phase)
+
+		if this.change_tower_cooldown[this.phase] then
+			if change_tower_first_time then
+				change_tower_cooldown = this.first_time_cooldown
+				change_tower_first_time = false
+			else
+				change_tower_cooldown = this.change_tower_cooldown[this.phase]
+			end
+		end
+	end
+
+	local function check_change_phase()
+		for i, v in ipairs(this.phase_per_hp_threshold) do
+			if this.health.hp <= this.health.hp_max * (this.phase_per_hp_threshold[i] / 100) and i > this.phase then
+				set_phase(i)
+
+				return
+			end
+		end
+
+		if this.phase <= #this.phase_per_time and store.tick_ts - change_phase_ts >= this.phase_per_time[this.phase] then
+			set_phase(this.phase + 1)
+
+			return
+		end
+	end
+
+	local function check_change_idle_anim()
+		if store.tick_ts - last_idle_anim_ts >= next_idle_anim_cooldown then
+			U.y_animation_play(this, this.idle_anims[math.random(1, #this.idle_anims)], nil, store.tick_ts, 1, 1)
+
+			next_idle_anim_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
+			last_idle_anim_ts = store.tick_ts
+		end
+	end
+
+	local function spawn_blood()
+		S:queue(this.sound_hurt)
+
+		local blood = E:create_entity("decal_stage_16_overseer_blood")
+
+		blood.pos = V.vclone(this.pos)
+		blood.pos.y = blood.pos.y + 100
+
+		simulation:queue_insert_entity(blood)
+	end
+
+	local function check_change_damaged_state()
+		local life_percentage = this.health.hp * 100 / this.health.hp_max
+
+		if life_percentage < this.life_hurt_threshold[1] then
+			if table.contains(this.render.sprites[1].exo_hide_prefix, "hurt2") then
+				table.remove(this.render.sprites[1].exo_hide_prefix, 1)
+				spawn_blood()
+			end
+		elseif life_percentage < this.life_hurt_threshold[2] and table.contains(this.render.sprites[1].exo_hide_prefix, "hurt1") then
+			table.remove(this.render.sprites[1].exo_hide_prefix, 2)
+			table.insert(this.render.sprites[1].exo_hide_prefix, "hurt0")
+			spawn_blood()
+		end
+	end
+
+	local function check_last_phase_repeat()
+		if this.phase >= #this.phase_per_hp_threshold then
+			local time_to_wait = megaspawner_boss.spawner_waves.BOSS6[#megaspawner_boss.spawner_waves.BOSS6][1]
+
+			if time_to_wait <= store.tick_ts - change_phase_ts then
+				megaspawner_boss.manual_wave = nil
+
+				coroutine.yield()
+
+				change_phase_ts = store.tick_ts
+				megaspawner_boss.manual_wave = string.format("BOSS%i", this.phase)
+			end
+		end
+	end
+
+	local function check_greatly_hurt()
+		if this._greatly_hurt then
+			this._greatly_hurt = false
+			spawn_blood()
+			change_tower_ts = change_tower_ts - 1
+			destroy_holder_last_ts = destroy_holder_last_ts - 1
+			glare_last_ts = glare_last_ts - 1
+			downgrade_last_ts = downgrade_last_ts - 1
+			last_heal_ts = last_heal_ts - 1
+			slow_last_ts = slow_last_ts - 1
+		end
+	end
+
+	local function check_spawner()
+		if megaspawner_boss._spawned_all then
+			megaspawner_boss._spawned_all = false
+			-- megaspawner_boss.manual_wave = nil
+			-- coroutine.yield()
+			-- megaspawner_boss.manual_wave = string.format("BOSS%i", this.phase)
+			megaspawner_boss.respawn = true
+		end
+	end
+
+	U.animation_start_specific(this, "startidle1", false, store.tick_ts, false, 1)
+
+	for i = 1, #this.hit_point_pos do
+		local h = E:create_entity(this.hit_point_template)
+
+		h.pos = V.vclone(this.hit_point_pos[i])
+		h.boss = this
+
+		simulation:queue_insert_entity(h)
+	end
+
+	this.idle_anims = this.idle_start_anims
+
+	while store.wave_group_number == 0 do
+		check_change_idle_anim()
+		coroutine.yield()
+	end
+
+	signal.emit("boss_fight_start", this)
+	S:queue(this.sound_unchain_center)
+	U.animation_start(this, "startend1", nil, store.tick_ts, false, 1)
+	U.y_wait_unconditional(store, fts(10))
+	S:queue(this.sound_rumble)
+
+	local shake = E:create_entity("aura_screen_shake")
+
+	shake.aura.amplitude = 0.4
+	shake.aura.duration = fts(30)
+	shake.aura.freq_factor = 2
+
+	simulation:queue_insert_entity(shake)
+	U.y_wait_unconditional(store, fts(30))
+
+	local shake = E:create_entity("aura_screen_shake")
+
+	shake.aura.amplitude = 0.7
+	shake.aura.duration = fts(20)
+	shake.aura.freq_factor = 3
+
+	simulation:queue_insert_entity(shake)
+	U.y_animation_wait_default(this)
+
+	this.idle_anims = this.idle_fight_anims
+	last_idle_anim_ts = store.tick_ts
+
+	set_phase(1)
+
+	while true do
+		if this.health.hp < 0 then
+			this.health.dead = true
+		end
+
+		if this.health.dead then
+			LU.kill_all_enemies(store, true)
+
+			megaspawner_boss.interrupt = true
+
+			signal.emit("boss_fight_end")
+			signal.emit("pan-zoom-camera", 2, {
+				x = 505,
+				y = 520
+			}, 1.5)
+			signal.emit("show-curtains")
+			signal.emit("hide-gui")
+			signal.emit("start-cinematic")
+			U.y_wait_unconditional(store, 2)
+			signal.emit("boss-killed", this)
+			S:queue(this.sound_death)
+			U.y_animation_play(this, "deathstart", nil, store.tick_ts, 1)
+			U.animation_start(this, "deathloop", nil, store.tick_ts, true, 1, true)
+			U.y_wait_unconditional(store, 0.5)
+			signal.emit("show-balloon_tutorial", "LV16_DENAS01_BOSSFIGHT_01", false)
+			U.y_wait_unconditional(store, 3.5)
+			S:queue(this.sound_rumble)
+			U.y_animation_wait_default(this)
+
+			local death_fx = E:create_entity("decal_stage_16_death_bright")
+
+			death_fx.pos = V.vclone(this.pos)
+
+			simulation:queue_insert_entity(death_fx)
+			U.animation_start(death_fx, "death", nil, store.tick_ts, false, 1)
+			U.animation_start(this, "death", nil, store.tick_ts, false, 1)
+			U.y_wait_unconditional(store, 2)
+
+			local shake = E:create_entity("aura_screen_shake")
+
+			shake.aura.amplitude = 0.3
+			shake.aura.duration = 8
+			shake.aura.freq_factor = 2.5
+
+			simulation:queue_insert_entity(shake)
+			U.y_animation_wait_default(this)
+			LU.kill_all_enemies(store, true)
+
+			break
+		end
+
+		if this.destroy_holder_cooldown[this.phase] ~= nil and store.tick_ts - destroy_holder_last_ts >= this.destroy_holder_cooldown[this.phase] and next_holder_to_destroy_i <= #this.holders_to_destroy then
+			local holder_by_id = table.filter(store.towers, function(k, v)
+				return v.tower and not v.pending_removal and v.tower.holder_id == this.holders_to_destroy[next_holder_to_destroy_i]
+			end)
+
+			if holder_by_id and #holder_by_id > 0 then
+				S:queue(this.sound_destroy_charge)
+				U.animation_start_specific(this, "swaptowers1", false, store.tick_ts, nil, 1)
+
+				if holder_by_id[1].tower and holder_by_id[1].tower.can_be_sold then
+					holder_by_id[1].tower.blocked = true
+					holder_by_id[1].ui.can_click = false
+				end
+
+				U.y_wait_unconditional(store, fts(70))
+				S:queue(this.sound_destroy_ray)
+
+				local bullet = E:create_entity(this.destroy_holders_bullet)
+
+				bullet.pos = V.vclone(this.pos)
+				bullet.pos.y = bullet.pos.y + 65
+				bullet.bullet.from = V.vclone(bullet.pos)
+				bullet.bullet.to = V.vclone(holder_by_id[1].pos)
+				bullet.bullet.to.y = bullet.bullet.to.y + 20
+				bullet.bullet.target_id = nil
+				bullet.bullet.source_id = this.id
+
+				simulation:queue_insert_entity(bullet)
+				U.y_wait_unconditional(store, fts(2))
+
+				local overseer_fx = E:create_entity("decal_stage_16_overseer_destroy_holder_bright")
+
+				overseer_fx.pos = V.vclone(holder_by_id[1].pos)
+				overseer_fx.render.sprites[1].ts = store.tick_ts
+				overseer_fx.tween.ts = store.tick_ts
+
+				simulation:queue_insert_entity(overseer_fx)
+				U.y_wait_unconditional(store, fts(12))
+				S:queue(this.sound_destroy_explosion)
+
+				local holder_destroy = E:create_entity(this.destroy_holders_template)
+
+				holder_destroy.pos = V.vclone(holder_by_id[1].pos)
+				holder_destroy.render.sprites[1].ts = store.tick_ts
+
+				simulation:queue_insert_entity(holder_destroy)
+
+				local holder_crater = E:create_entity(this.destroy_holders_crater_template)
+
+				holder_crater.pos = V.vclone(holder_by_id[1].pos)
+				holder_crater.render.sprites[1].ts = store.tick_ts
+
+				simulation:queue_insert_entity(holder_crater)
+				simulation:queue_remove_entity(holder_by_id[1])
+
+				destroy_holder_last_ts = store.tick_ts
+				next_holder_to_destroy_i = next_holder_to_destroy_i + 1
+
+				local nav_mesh_patch = this.nav_mesh_patches[holder_by_id[1].ui.nav_mesh_id]
+
+				if nav_mesh_patch then
+					log.todo("fixing nav_mesh for mesh_id:%s", holder_by_id[1].ui.nav_mesh_id)
+
+					for k, v in pairs(nav_mesh_patch) do
+						store.level.nav_mesh[k] = v
+					end
+				end
+
+				S:queue(this.sound_rumble)
+
+				local shake = E:create_entity("aura_screen_shake")
+
+				shake.aura.amplitude = 0.7
+				shake.aura.duration = fts(20)
+				shake.aura.freq_factor = 3
+
+				simulation:queue_insert_entity(shake)
+				U.y_animation_wait_default(this)
+
+				last_idle_anim_ts = store.tick_ts
+			end
+		end
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
+		if this.downgrade_cooldown[this.phase] ~= nil and store.tick_ts - downgrade_last_ts >= this.downgrade_cooldown[this.phase] then
+			local can_downgrade_towers = table.filter(store.towers, function(k, t)
+				return (not t.tower_holder) and not t.pending_removal and not t.tower.blocked and t.tower.type ~= "build_animation" and t.template_name ~= "tower_barrack_1" and t.template_name ~= "tower_archer_1" and t.template_name ~= "tower_mage_1" and t.template_name ~= "tower_engineer_1"
+			end)
+			if #can_downgrade_towers > 0 then
+				local random_can_downgrade_towers = table.random_order(can_downgrade_towers)
+				local downgrade_count = math.min(this.downgrade_count[this.phase], #random_can_downgrade_towers)
+
+				downgrade_last_ts = store.tick_ts
+				S:queue(this.sound_destroy_charge)
+				U.animation_start_specific(this, "swaptowers1", false, store.tick_ts, nil, 1)
+				for i = 1, downgrade_count do
+					local target = random_can_downgrade_towers[i]
+					target.tower.blocked = true
+					target.ui.can_click = false
+				end
+				U.y_wait_unconditional(store, fts(70))
+				S:queue(this.sound_destroy_ray)
+
+				for i = 1, downgrade_count do
+					local target = random_can_downgrade_towers[i]
+					local bullet = E:create_entity("bullet_stage_16_overseer_downgrade_towers")
+					bullet.pos = V.vclone(this.pos)
+					bullet.pos.y = bullet.pos.y + 65
+					bullet.bullet.from = V.vclone(bullet.pos)
+					bullet.bullet.to = V.vclone(target.pos)
+					bullet.bullet.to.y = bullet.bullet.to.y + 20
+					bullet.bullet.target_id = nil
+					bullet.bullet.source_id = this.id
+
+					simulation:queue_insert_entity(bullet)
+				end
+				U.y_wait_unconditional(store, fts(2))
+
+				for i = 1, downgrade_count do
+					local target = random_can_downgrade_towers[i]
+					local overseer_fx = E:create_entity("decal_stage_16_overseer_destroy_holder_bright")
+
+					overseer_fx.pos = V.vclone(target.pos)
+					overseer_fx.render.sprites[1].ts = store.tick_ts
+					overseer_fx.tween.ts = store.tick_ts
+
+					simulation:queue_insert_entity(overseer_fx)
+				end
+
+				U.y_wait_unconditional(store, fts(12))
+				S:queue(this.sound_destroy_explosion)
+
+				for i = 1, downgrade_count do
+					SU.downgrade_tower(store, random_can_downgrade_towers[i])
+				end
+
+				S:queue(this.sound_rumble)
+
+				local shake = E:create_entity("aura_screen_shake")
+
+				shake.aura.amplitude = 0.6
+				shake.aura.duration = fts(20)
+				shake.aura.freq_factor = 3
+
+				simulation:queue_insert_entity(shake)
+				U.y_animation_wait_default(this)
+
+				last_idle_anim_ts = store.tick_ts
+			else
+				downgrade_last_ts = downgrade_last_ts + 1
+			end
+		end
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
+		if this.glare_cooldown[this.phase] ~= nil and store.tick_ts - glare_last_ts >= this.glare_cooldown[this.phase] then
+			local can_affect_paths = {}
+			local direction
+			for _, enemy in pairs(store.enemies) do
+				if enemy.template_name ~= "enemy_overseer_hit_point" then
+					can_affect_paths[enemy.nav_path.pi] = true
+				end
+			end
+
+			local can_affect_path_count = 0
+			for _, path in pairs(can_affect_paths) do
+				if can_affect_paths[path] then
+					can_affect_path_count = can_affect_path_count + 1
+				end
+			end
+
+			local index = math.random(1, can_affect_path_count)
+			for path, _ in pairs(can_affect_paths) do
+				index = index - 1
+				if index == 0 then
+					direction = path + 1
+				end
+			end
+
+			if not direction then
+				glare_last_ts = glare_last_ts + 1
+			else
+				glare_last_ts = store.tick_ts
+				local affect_paths = direction <= 3 and {1, 2} or {3, 4}
+
+				U.y_animation_play(this, "marktower" .. direction, false, store.tick_ts, 1, 1)
+				for _, enemy in pairs(store.enemies) do
+					if table.contains(affect_paths, enemy.nav_path.pi) and enemy.template_name ~= "enemy_overseer_hit_point" then
+						local glare_mod = E:create_entity("mod_glare")
+						glare_mod.modifier.source_id = this.id
+						glare_mod.modifier.target_id = enemy.id
+						glare_mod.modifier.duration = this.glare_duration[this.phase]
+						simulation:queue_insert_entity(glare_mod)
+					end
+				end
+				last_idle_anim_ts = store.tick_ts
+			end
+		end
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
+		if this.heal_cooldown[this.phase] ~= nil and store.tick_ts - last_heal_ts >= this.heal_cooldown[this.phase] then
+			last_heal_ts = store.tick_ts
+			local heal_duration = this.heal_duration[this.phase]
+			local heal_per_second = this.heal_per_second[this.phase]
+
+			U.y_animation_play(this, "swaptowers1", false, store.tick_ts, nil, 1)
+
+			for _, e in pairs(store.enemies) do
+				if e.template_name == "enemy_overseer_hit_point" then
+					local glare_mod = E:create_entity("mod_glare")
+					glare_mod.modifier.source_id = this.id
+					glare_mod.modifier.target_id = e.id
+					glare_mod.modifier.duration = heal_duration
+					simulation:queue_insert_entity(glare_mod)
+				end
+			end
+
+			local heal_mod = E:create_entity("mod_heal_overseer")
+			heal_mod.modifier.source_id = this.id
+			heal_mod.modifier.target_id = this.id
+			heal_mod.modifier.duration = heal_duration
+			heal_mod.hps.heal_min = heal_per_second
+			heal_mod.hps.heal_max = heal_per_second
+			simulation:queue_insert_entity(heal_mod)
+
+			last_idle_anim_ts = store.tick_ts
+		end
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
+		if this.change_tower_cooldown[this.phase] and change_tower_cooldown and change_tower_cooldown <= store.tick_ts - change_tower_ts then
+			local towers = table.filter(store.towers, function(k, v)
+				return not v.pending_removal and not v.tower_holder and v.tower and not v.tower.blocked and v.tower.type ~= "build_animation" and v.tower.can_be_sold and v.tower.can_be_mod
+			end)
+			local holders = table.filter(store.towers, function(k, v)
+				return not v.pending_removal and v.tower and v.tower.type == "holder"
+			end)
+
+			if towers and #towers > 0 then
+				towers = table.random_order(towers)
+
+				if holders and #holders > 0 then
+					holders = table.random_order(holders)
+				end
+
+				S:queue(this.sound_teleport_charge)
+
+				local start_ts = store.tick_ts
+
+				U.animation_start_specific(this, "swaptowers1", false, store.tick_ts, nil, 1)
+
+				local tower_index = 1
+
+				for i = 1, this.change_tower_amount[this.phase] do
+					if tower_index <= #towers and holders and tower_index <= #holders then
+						local change_tower_fx = E:create_entity(this.change_towers_template)
+
+						change_tower_fx.pos = towers[tower_index].pos
+						change_tower_fx.render.sprites[1].ts = store.tick_ts
+						change_tower_fx.tween.ts = store.tick_ts
+
+						simulation:queue_insert_entity(change_tower_fx)
+
+						local change_tower_fx = E:create_entity(this.change_towers_template)
+
+						change_tower_fx.pos = holders[tower_index].pos
+						change_tower_fx.render.sprites[1].ts = store.tick_ts
+						change_tower_fx.tween.ts = store.tick_ts
+
+						simulation:queue_insert_entity(change_tower_fx)
+						towers[tower_index].ui.can_click = false
+						holders[tower_index].ui.can_click = false
+						towers[tower_index].tower.blocked = true
+						holders[tower_index].tower.blocked = true
+						signal.emit("force-tower-swap", towers[tower_index], holders[tower_index])
+					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
+						local change_tower_fx = E:create_entity(this.change_towers_template)
+
+						change_tower_fx.pos = towers[tower_index].pos
+						change_tower_fx.render.sprites[1].ts = store.tick_ts
+						change_tower_fx.tween.ts = store.tick_ts
+
+						simulation:queue_insert_entity(change_tower_fx)
+
+						local change_tower_fx = E:create_entity(this.change_towers_template)
+
+						change_tower_fx.pos = towers[tower_index + 1].pos
+						change_tower_fx.render.sprites[1].ts = store.tick_ts
+						change_tower_fx.tween.ts = store.tick_ts
+
+						simulation:queue_insert_entity(change_tower_fx)
+						signal.emit("force-tower-swap", towers[tower_index], towers[tower_index + 1])
+						towers[tower_index].ui.can_click = false
+						towers[tower_index + 1].ui.can_click = false
+						towers[tower_index].tower.blocked = true
+						towers[tower_index + 1].tower.blocked = true
+						tower_index = tower_index + 1
+					end
+
+					tower_index = tower_index + 1
+				end
+
+				U.y_wait_unconditional(store, this.swap_delay + 1)
+				tower_index = 1
+
+				for i = 1, this.change_tower_amount[this.phase] do
+					if tower_index <= #towers and holders and tower_index <= #holders then
+						local controller = E:create_entity("controller_tower_swap_overseer")
+
+						controller.tower_1 = towers[tower_index]
+						controller.tower_2 = holders[tower_index]
+
+						simulation:queue_insert_entity(controller)
+					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
+						local controller = E:create_entity("controller_tower_swap_overseer")
+
+						controller.tower_1 = towers[tower_index]
+						controller.tower_2 = towers[tower_index + 1]
+
+						simulation:queue_insert_entity(controller)
+
+						tower_index = tower_index + 1
+					end
+
+					tower_index = tower_index + 1
+				end
+
+				U.y_animation_wait_default(this)
+
+				tower_index = 1
+				for i = 1, this.change_tower_amount[this.phase] do
+					if tower_index <= #towers and holders and tower_index <= #holders then
+						towers[tower_index].ui.can_click = true
+						holders[tower_index].ui.can_click = true
+						towers[tower_index].tower.blocked = false
+						holders[tower_index].tower.blocked = false
+					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
+						towers[tower_index].ui.can_click = true
+						towers[tower_index + 1].ui.can_click = true
+						towers[tower_index].tower.blocked = false
+						towers[tower_index + 1].tower.blocked = false
+						tower_index = tower_index + 1
+					end
+
+					tower_index = tower_index + 1
+				end
+
+				last_idle_anim_ts = store.tick_ts
+				change_tower_ts = start_ts
+				change_tower_cooldown = this.change_tower_cooldown[this.phase]
+			else
+				change_tower_ts = change_tower_ts + 1
+			end
+		end
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
+		if this.slow_cooldown[this.phase] ~= nil and store.tick_ts - slow_last_ts >= this.slow_cooldown[this.phase] then
+			local towers = table.filter(store.towers, function(k, v)
+				return not v.tower_holder
+			end)
+			local slow_count = math.min(this.slow_count[this.phase], #towers)
+			if #towers > 0 then
+				towers = table.random_order(towers)
+				S:queue(this.sound_teleport_charge)
+				slow_last_ts = store.tick_ts
+
+				U.animation_start_specific(this, "swaptowers1", false, store.tick_ts, nil, 1)
+
+				for i = 1, slow_count do
+					local change_tower_fx = E:create_entity(this.change_towers_template)
+					change_tower_fx.pos = towers[i].pos
+					change_tower_fx.render.sprites[1].ts = store.tick_ts
+					change_tower_fx.tween.ts = store.tick_ts
+					simulation:queue_insert_entity(change_tower_fx)
+				end
+
+				U.y_wait_unconditional(store, this.swap_delay + 1)
+
+				for i = 1, slow_count do
+					local slow_mod = E:create_entity("mod_slow_overseer")
+					slow_mod.modifier.source_id = this.id
+					slow_mod.modifier.target_id = towers[i].id
+					simulation:queue_insert_entity(slow_mod)
+				end
+
+				U.y_animation_wait_default(this)
+				last_idle_anim_ts = store.tick_ts
+			else
+				slow_last_ts = slow_last_ts + 1
+			end
+		end
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
+		check_change_phase()
+		check_last_phase_repeat()
+		check_change_damaged_state()
+		check_spawner()
+		check_change_idle_anim()
+		check_greatly_hurt()
+
+		::continue::
+		coroutine.yield()
+	end
+end
+
+local decal_stage_16_overseer_blood = {}
+
+function decal_stage_16_overseer_blood.update(this, store)
+	for i, v in ipairs(this.blood_pos) do
+		local blood = E:create_entity(this.fx_template)
+
+		blood.pos.x, blood.pos.y = this.pos.x + v.x, this.pos.y + v.y
+		blood.render.sprites[1].ts = store.tick_ts
+		blood.tween.ts = store.tick_ts
+
+		simulation:queue_insert_entity(blood)
+		U.y_wait_unconditional(store, fts(1))
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+-- 大眼的触手嘴巴
+
+local controller_stage_16_overseer_tentacle_mouth = {}
+
+function controller_stage_16_overseer_tentacle_mouth.update(this, store)
+	this.render.sprites[1].hidden = true
+
+	while true do
+		if this.anim_free then
+			this.render.sprites[1].hidden = false
+
+			U.y_animation_play(this, "free", nil, store.tick_ts, false)
+			U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
+
+			this.anim_free = nil
+		end
+
+		if this.anim_shot then
+			U.y_animation_play(this, "spawnenemies", nil, store.tick_ts, false)
+			U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
+
+			this.anim_shot = nil
+		end
+
+		coroutine.yield()
+	end
+end
+
+local mod_slow_overseer = {}
+
+function mod_slow_overseer.insert(this, store)
+	local target = store.towers[this.modifier.target_id]
+	if not target then
+		return false
+	end
+	-- insert_tower_cooldown_buff 会做 divider += (1 - c)，而攻击间隔 = base * (1/divider)。
+	-- 想减速到 1/slow_factor（即 divider 变为 slow_factor），需要 c = 2 - slow_factor。
+	SU.insert_tower_cooldown_buff(store.tick_ts, target, 2 - this.slow_factor)
+	U.entity_insert_shader(target, SH:get(this.shader), this.shader_args, this.id)
+	return true
+end
+
+function mod_slow_overseer.update(this, store)
+	local target = store.towers[this.modifier.target_id]
+	if not target then
+		simulation:queue_remove_entity(this)
+		return
+	end
+
+	local stop_time = store.tick_ts + this.modifier.duration
+	while store.tick_ts < stop_time do
+		coroutine.yield()
+	end
+
+	SU.remove_tower_cooldown_buff(store.tick_ts, target, 2 - this.slow_factor)
+	U.entity_remove_shader(target, this.id)
+
+	simulation:queue_remove_entity(this)
+end
+
+-- 受击点
+local enemy_overseer_hit_point = {}
+
+function enemy_overseer_hit_point.update(this, store)
+	local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
+	local path_pi, path_spi, path_ni
+	if #nearest > 0 then
+		path_pi, path_spi, path_ni = unpack(nearest[1])
+	end
+
+	this.nav_path.pi = path_pi
+	this.nav_path.spi = path_spi
+	this.nav_path.ni = path_ni
+
+	this.vis._bans = this.vis.bans
+	this.vis.bans = bit.bor(F_ALL)
+
+	while store.wave_group_number == 0 do
+		coroutine.yield()
+	end
+
+	U.y_wait_unconditional(store, fts(60))
+
+	this.vis.bans = this.vis._bans
+
+	local overseer = this.boss
+
+	while true do
+		if overseer.health.dead then
+			break
+		end
+
+		coroutine.yield()
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+function enemy_overseer_hit_point.on_damage(this, store, damage)
+	local d = E.assign_damage(damage.damage_type, damage.value, damage.source_id, this.boss.id)
+	queue_damage(store, d)
+
+	if damage.value >= 600 then
+		this.boss._greatly_hurt = true
+	end
+
+	return true
+end
+
+local bullet_stage_16_overseer_tentacle_spawn = {}
+
+function bullet_stage_16_overseer_tentacle_spawn.update(this, store)
+	local b = this.bullet
+	local dmin, dmax = b.damage_min, b.damage_max
+	local dradius = b.damage_radius
+
+	if b.level and b.level > 0 then
+		if b.damage_radius_inc then
+			dradius = dradius + b.level * b.damage_radius_inc
+		end
+
+		if b.damage_min_inc then
+			dmin = dmin + b.level * b.damage_min_inc
+		end
+
+		if b.damage_max_inc then
+			dmax = dmax + b.level * b.damage_max_inc
+		end
+	end
+
+	local ps
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+
+		simulation:queue_insert_entity(ps)
+	end
+
+	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+		coroutine.yield()
+
+		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+		elseif b.rotation_speed then
+			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+		end
+
+		if b.hide_radius then
+			this.render.sprites[1].hidden = V.dist(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius or V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius
+		end
+	end
+
+	local enemies = table.filter(store.entities, function(k, v)
+		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, dradius)
+	end)
+
+	for _, enemy in ipairs(enemies) do
+		local d = E.assign_damage(b.damage_type, 0, this.id, enemy.id)
+		d.reduce_armor = b.reduce_armor
+		d.reduce_magic_armor = b.reduce_magic_armor
+
+		if b.damage_decay_random then
+			d.value = U.frandom(dmin, dmax)
+		elseif this.up_alchemical_powder_chance and math.random() < this.up_alchemical_powder_chance or UP:get_upgrade("engineer_efficiency") then
+			d.value = dmax
+		else
+			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
+
+			d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+		end
+
+		d.value = math.ceil(b.damage_factor * d.value)
+
+		queue_damage(store, d)
+
+		if b.mod then
+			local mod = E:create_entity(b.mod)
+
+			mod.modifier.target_id = enemy.id
+			mod.modifier.source_id = this.id
+
+			simulation:queue_insert_entity(mod)
+		end
+	end
+
+	local p = SU.create_bullet_pop(store, this)
+
+	if p then
+		simulation:queue_insert_entity(p)
+
+	end
+
+	local cell_type = GR:cell_type(b.to.x, b.to.y)
+
+	if b.hit_fx_water and band(cell_type, TERRAIN_WATER) ~= 0 then
+		S:queue(this.sound_events.hit_water)
+
+		local water_fx = E:create_entity(b.hit_fx_water)
+
+		water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
+		water_fx.render.sprites[1].ts = store.tick_ts
+		water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+
+		simulation:queue_insert_entity(water_fx)
+	elseif b.hit_fx then
+		S:queue(this.sound_events.hit)
+
+		local sfx = E:create_entity(b.hit_fx)
+
+		sfx.pos = V.vclone(b.to)
+		sfx.render.sprites[1].ts = store.tick_ts
+		sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+
+		simulation:queue_insert_entity(sfx)
+	end
+
+	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
+		local decal = E:create_entity(b.hit_decal)
+
+		decal.pos = V.vclone(b.to)
+		decal.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(decal)
+	end
+
+	local enemy_template = "enemy_glareling"
+	local path_pi, path_spi, path_ni
+
+	for i = 1, this.spawn_amounts_per_phase[this.overseer.phase] do
+		local enemy = E:create_entity(enemy_template)
+		local enemy_pos = V.v(b.to.x + this.spawn_offset[i].x, b.to.y + this.spawn_offset[i].y)
+		local nearest = P:nearest_nodes(enemy_pos.x, enemy_pos.y, {this.spawn_path}, {1, 2, 3})
+
+		if #nearest > 0 then
+			path_pi, path_spi, path_ni = unpack(nearest[1])
+			enemy_pos = P:node_pos(path_pi, path_spi, path_ni)
+		end
+
+		enemy.pos.x, enemy.pos.y = enemy_pos.x, enemy_pos.y
+		enemy.nav_path.pi = path_pi
+		enemy.nav_path.spi = path_spi
+		enemy.nav_path.ni = path_ni
+		enemy.nav_path_data = nearest[1]
+
+		simulation:queue_insert_entity(enemy)
+	end
+
+	local soldiers = U.find_soldiers_in_range(store.soldiers, b.to, 0, this.explosion_damage.range, this.explosion_damage.vis_flags, this.explosion_damage.vis_bans)
+
+	if soldiers then
+		for _, soldier in ipairs(soldiers) do
+			local dist_factor = U.dist_factor_inside_ellipse(soldier.pos, b.to, this.explosion_damage.range)
+			local d = E.assign_damage(this.explosion_damage.damage_type, math.floor(this.explosion_damage.damage_max - (this.explosion_damage.damage_max - this.explosion_damage.damage_min) * dist_factor), this.id, soldier.id)
+
+			queue_damage(store, d)
+		end
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
+local decal_stage_16_holder_destroy_crater = {}
+
+function decal_stage_16_holder_destroy_crater.update(this, store)
+	U.y_animation_play(this, "start", nil, store.tick_ts)
+	U.animation_start_default(this, "loop", false, store.tick_ts, true)
+
+	while true do
+		coroutine.yield()
+	end
+end
+
 -- 大眼的触手控制
 
 tt = E:register_t_hot("controller_stage_16_tentacle_bottom_left", nil, true)
@@ -488,3 +1467,346 @@ tt = E:register_t_hot("controller_stage_16_overseer_eye2", "controller_stage_16_
 tt.render.sprites[1].prefix = "overseer_minieye2Def"
 tt.life_hurt_threshold = 33
 
+tt = E:register_t_hot("controller_stage_16_overseer", nil, true)
+E:add_comps(tt, "editor", "pos", "main_script", "render", "health", "info", "ui")
+tt.main_script.update = controller_stage_16_overseer.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseerDef"
+tt.render.sprites[1].name = "idle1_1"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 2
+tt.render.sprites[1].exo_hide_prefix = {"hurt2", "hurt1"}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "overseer_backDef"
+tt.render.sprites[2].name = "loop"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].sort_y_offset = 3
+tt.render.sprites[2].offset = v(20, 620)
+tt.hit_point_template = "enemy_overseer_hit_point"
+tt.hit_point_pos = {v(415, 425), v(520, 400), v(625, 425)}
+tt.health.hp_max = 40000
+tt.health.ignore_delete_after = true
+tt.info.enc_icon = 38
+tt.info.portrait_boss = "boss_health_bar_icon_0004"
+tt.phase_per_hp_threshold = {100, 90, 80, 70, 50, 20}
+tt.phase_per_time = {30, 75, 90, 120, 100000000}
+tt.change_tower_cooldown = {nil, 60, 60, 45, 30}
+tt.change_tower_amount = {nil, 1, 1, 2, 3}
+tt.glare_cooldown = {nil, nil, nil, 36, 33, 30}
+tt.glare_duration = {nil, nil, nil, 4, 5, 6}
+tt.heal_cooldown = {nil, nil, nil, 30, 30, 15}
+tt.heal_duration = {nil, nil, nil, 6, 8, 10}
+tt.heal_per_second = {nil, nil, nil, 150, 450, 200}
+tt.downgrade_cooldown = {nil, nil, 60, 55, 45, 40}
+tt.downgrade_count = {nil, nil, 1, 2, 2, 2}
+tt.slow_cooldown = {nil, 50, 50, 45, 40, 35}
+tt.slow_count = {nil, 1, 2, 3, 3, 2}
+tt.holders_close = {"6", "7", "8", "9", "10"}
+tt.swap_delay = fts(60)
+tt.destroy_holder_cooldown = {nil, nil, nil, nil, nil, 20}
+tt.holders_to_destroy = {
+	"1",
+	"13",
+	"10",
+	"2",
+	"12",
+	"4",
+	"9",
+	"5",
+	"14",
+	"3",
+	"11",
+	"6",
+	"8",
+	"15",
+	"7"
+}
+tt.nav_mesh_patches = {
+	["1"] = {
+		[2] = {3, 4}
+	},
+	["13"] = {
+		[11] = {nil, 12, 10, 14},
+		[14] = {nil, 10, 15}
+	},
+	["10"] = {
+		[9] = {11, nil, 8, 14},
+		[11] = {nil, 12, 9, 14},
+		[14] = {nil, 11, 15}
+	},
+	["2"] = {
+		[3] = {15, 6},
+		[4] = {6, 5, nil, 3}
+	},
+	["12"] = {
+		[11] = {nil, nil, 9, 14},
+		[5] = {6, nil, nil, 4}
+	},
+	["4"] = {
+		[5] = {6, nil, nil, 3},
+		[6] = {7, nil, 5, 3}
+	},
+	["9"] = {
+		[8] = {11, nil, 7, 15},
+		[11] = {nil, nil, 8, 14},
+		[14] = {nil, 11, 15}
+	},
+	["5"] = {
+		[6] = {7, nil, nil, 3},
+		[3] = {15, 6}
+	},
+	["14"] = {
+		[11] = {nil, nil, 8},
+		[15] = {nil, 8, 3}
+	},
+	["3"] = {
+		[6] = {7},
+		[15] = {nil, 8}
+	},
+	["11"] = {
+		[8] = {nil, nil, 7, 15}
+	},
+	["6"] = {
+		[7] = {8, nil, nil, 15}
+	},
+	["8"] = {
+		[7] = {nil, nil, nil, 15},
+		[15] = {nil, 7}
+	},
+	["15"] = {
+		[7] = {}
+	},
+	["7"] = {}
+}
+tt.idle_cooldown_min = 2
+tt.idle_cooldown_max = 6
+tt.idle_start_anims = {"startidle2", "startidle1"}
+tt.idle_fight_anims = {"idle1", "idle2", "idle4", "idle5", "idle6"}
+tt.first_time_cooldown = 5
+tt.life_hurt_threshold = {33, 66}
+tt.destroy_holders_template = "decal_stage_16_holder_destroy_fx"
+tt.destroy_holders_crater_template = "decal_stage_16_holder_destroy_crater"
+tt.destroy_holders_bullet = "bullet_stage_16_overseer_destroy_holders"
+tt.change_towers_template = "decal_stage_16_tower_change_fx"
+tt.ui.click_rect = r(-120, -30, 240, 180)
+tt.info.fn = controller_stage_16_overseer.get_info
+tt.info.portrait = "kr5_info_portraits_enemies_0043"
+tt.phase = 1
+tt.sound_rumble = "Stage16OverseerRumble"
+tt.sound_unchain_center = "Stage16OverseerUnchainCenter"
+tt.sound_teleport_charge = "Stage16OverseerTeleportCharge"
+tt.sound_teleport = "Stage16OverseerTeleport"
+tt.sound_destroy_charge = "Stage16OverseerDestroyCharge"
+tt.sound_destroy_ray = "Stage16OverseerDestroyRay"
+tt.sound_destroy_explosion = "Stage16OverseerDestroyExplosion"
+tt.sound_hurt = "Stage16OverseerHurt"
+tt.sound_death = "Stage16OverseerDeath"
+
+tt = E:register_t_hot("mod_heal_overseer", "modifier", true)
+E:add_comps(tt, "hps")
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hps.update
+
+tt = E:register_t_hot("mod_slow_overseer", "modifier", true)
+tt.main_script.insert = mod_slow_overseer.insert
+tt.main_script.update = mod_slow_overseer.update
+tt.shader = "p_tint"
+tt.shader_args = {
+	tint_factor = 0.5,
+	tint_color = {0.5, 0, 0.5, 1}
+}
+tt.slow_factor = 0.5
+tt.modifier.duration = 12
+
+tt = E:register_t_hot("bullet_stage_16_overseer_destroy_holders", "bullet", true)
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.hit_time = fts(2)
+tt.hit_fx_only_no_target = true
+tt.image_width = 381
+tt.main_script.update = scripts.ray5_simple.update
+tt.render.sprites[1].name = "overseer_fx_overseer_destroyray_loop"
+tt.render.sprites[1].loop = false
+tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
+tt.track_target = true
+tt.ray_duration = fts(26)
+
+tt = E:register_t_hot("bullet_stage_16_overseer_downgrade_towers", "bullet_stage_16_overseer_destroy_holders", true)
+
+tt = E:register_t_hot("enemy_overseer_hit_point", "enemy", true)
+E:add_comps(tt, "glare_kr5")
+tt.enemy.gold = 250
+tt.enemy.melee_slot = v(0, 0)
+tt.health.hp_max = 40000
+tt.unit.blood_color = BLOOD_VIOLET
+tt.main_script.update = enemy_overseer_hit_point.update
+tt.health.on_damage = enemy_overseer_hit_point.on_damage
+tt.render = nil
+tt.glare_kr5.regen_hp = 15
+tt.ui.click_rect = r(-30, -3, 60, 65)
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt.vis.flags = bor(F_ENEMY, F_BOSS)
+tt.vis.bans = bor(F_BLOCK, F_FREEZE, F_STUN) --bor(F_MOD, F_BLOCK)
+tt.move_bounds = v(25, 25)
+tt.move_speed = v(0.2, 0.2)
+
+tt = E:register_t_hot("bullet_stage_16_overseer_tentacle_spawn", "bomb", true)
+tt.sound_events.hit_water = nil
+tt.render.sprites[1].name = "overseer_fx_overseer_proyectile"
+tt.bullet.hit_fx = "fx_stage_16_overseer_tentacle_hit_decal"
+tt.bullet.hit_decal = "decal_stage_16_overseer_tentacle_projectile"
+tt.bullet.particles_name = "ps_bullet_stage_16_overseer_tentacle_spawn"
+tt.bullet.rotation_speed = 5
+tt.bullet.pop = nil
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.main_script.update = bullet_stage_16_overseer_tentacle_spawn.update
+tt.spawn_offset = {v(-40, 0), v(0, 20), v(30, 0), v(0, -30), v(-20, 0)}
+tt.explosion_damage = {}
+tt.explosion_damage.range = 70
+tt.explosion_damage.vis_flags = bor(F_RANGED)
+tt.explosion_damage.vis_bans = bor(F_ENEMY)
+tt.explosion_damage.damage_type = DAMAGE_PHYSICAL
+tt.explosion_damage.damage_min = 120
+tt.explosion_damage.damage_max = 180
+tt.spawn_amounts_per_phase = {0, 0, 3, 3, 4, 5}
+tt.sound_events.insert = nil
+tt.sound_events.hit = "Stage16OverseerSpawnerImpact"
+
+tt = E:register_t_hot("controller_stage_16_tentacle_mouth_left", nil, true)
+E:add_comps(tt, "editor", "pos", "main_script", "render")
+tt.main_script.update = controller_stage_16_overseer_tentacle_mouth.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseer_tentacle2Def"
+tt.render.sprites[1].name = "free"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
+
+tt = E:register_t_hot("controller_stage_16_tentacle_mouth_right", "controller_stage_16_tentacle_mouth_left", true)
+tt.render.sprites[1].flip_x = true
+
+tt = E:register_t_hot("decal_stage_16_holder_destroy_fx", "decal", true)
+tt.render.sprites[1].name = "overseer_fx_overseer_crater_run"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].offset.y = 10
+tt.render.sprites[1].sort_y_offset = -1
+
+tt = E:register_t_hot("decal_stage_16_holder_destroy_crater", "decal_scripted", true)
+tt.render.sprites[1].prefix = "t3_craterDef"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = false
+tt.main_script.update = decal_stage_16_holder_destroy_crater.update
+
+tt = E:register_t_hot("decal_stage_16_tower_change_fx", "decal_tween", true)
+tt.render.sprites[1].prefix = "overseer_fx_overseer_teleportdecal"
+tt.render.sprites[1].name = "decalin"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].offset = v(-2, 5)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "overseer_fx_overseer_teleportdecal"
+tt.render.sprites[2].name = "decalactivate"
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[2].offset = v(-2, 5)
+tt.duration = 2.8 + fts(60)
+tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.duration-0.25", 255}, {"this.duration", 0}}
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].sprite_id = 2
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].keys = {{0, 0}, {1, 255}, {"this.duration-0.25", 255}, {"this.duration", 0}}
+
+tt = E:register_t_hot("decal_stage_16_overseer_tentacle_projectile", "decal_tween", true)
+tt.render.sprites[1].name = "overseer_fx_overseer_proyectile_decal"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.duration = 2.5
+tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.duration-0.5", 255}, {"this.duration", 0}}
+
+tt = E:register_t_hot("decal_stage_16_glare_1", "decal_stage_12_glare", true)
+tt.render.sprites[1].prefix = "stage_16_glare_1Def"
+
+tt = E:register_t_hot("decal_stage_16_glare_2", "decal_stage_12_glare", true)
+tt.render.sprites[1].prefix = "stage_16_glare_2Def"
+
+tt = E:register_t_hot("decal_stage_16_glare_eye_big", "decal_scripted", true)
+tt.render.sprites[1].name = "glare_stage_16_eye_big"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "glare_stage_16_eyelids_big"
+tt.render.sprites[2].name = "idle_close"
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[2].draw_order = 4
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "glare_stage_16_eye_big_pupil"
+tt.render.sprites[3].name = "look"
+tt.render.sprites[3].z = Z_DECALS
+tt.render.sprites[3].draw_order = 3
+tt.main_script.update = scripts.decal_terrain_3_glare_eye.update
+tt.sid_eyelids = 2
+tt.sid_pupil = 3
+tt.is_big_eye = true
+
+tt = E:register_t_hot("decal_stage_16_glare_eye_small_1", "decal_terrain_3_glare_eye_small", true)
+tt.render.sprites[1].prefix = "glare_stage_16_eyes_1"
+tt.render.sprites[2].prefix = "glare_stage_16_eyelids_1"
+
+tt = E:register_t_hot("decal_stage_16_glare_eye_small_2", "decal_terrain_3_glare_eye_small", true)
+tt.render.sprites[1].prefix = "glare_stage_16_eyes_2"
+tt.render.sprites[2].prefix = "glare_stage_16_eyelids_2"
+
+tt = E:register_t_hot("decal_stage_16_glare_eye_small_3", "decal_terrain_3_glare_eye_small", true)
+tt.render.sprites[1].prefix = "glare_stage_16_eyes_3"
+tt.render.sprites[2].prefix = "glare_stage_16_eyelids_3"
+
+tt = E:register_t_hot("decal_stage_16_overseer_blood", nil, true)
+E:add_comps(tt, "pos", "main_script")
+tt.main_script.update = decal_stage_16_overseer_blood.update
+tt.blood_pos = {v(20, 20), v(100, 100), v(-100, 100), v(-150, -30), v(150, -70), v(-30, 40)}
+tt.fx_template = "decal_stage_16_overseer_single_blood_fx"
+
+tt = E:register_t_hot("decal_stage_16_overseer_single_blood_fx", "decal_tween", true)
+tt.render.sprites[1].name = "overseer_fx_overseer_blood"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].offset = v(20, 20)
+tt.tween.props[1].keys = {{0, 255}, {fts(13), 255}, {fts(16), 0}}
+
+tt = E:register_t_hot("decal_stage_16_death_bright", "decal", true)
+tt.render.sprites[1].prefix = "overseer_deathbrightDef"
+tt.render.sprites[1].name = "areaattack"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_SKY + 1
+
+tt = E:register_t_hot("decal_stage_16_overseer_destroy_holder_bright", "decal_tween", true)
+tt.render.sprites[1].name = "overseer_fx_overseer_destroyray_bright_run"
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}, {fts(25), 255}, {fts(26), 0}}
+
+tt = E:register_t_hot("fx_stage_16_overseer_tentacle_hit_decal", "fx", true)
+tt.render.sprites[1].prefix = "overseer_fx_overseer_proyectile_explosion"
+tt.render.sprites[1].name = "run"
+
+tt = E:register_t_hot("controller_tower_swap_overseer", "controller_tower_swap", true)
+tt.fx_out = "decal_tower_swap_fx_in"
+tt.fx_in = "decal_tower_swap_fx_in"
+tt.fx_spawn_delay = 0
+tt.fx_in_delay = 0
+tt.fx_delay_between = fts(14)
+tt.swap_sound = "Stage16OverseerTeleport"
+
+tt = E:register_t_hot("decal_tower_swap_fx_in", "decal_timed", true)
+tt.render.sprites[1].name = "overseer_fx_overseer_teleportfx_run"
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+tt.render.sprites[1].offset = v(0, 10)
+tt.timed.duration = fts(20)
+
+tt = E:register_t_hot("ps_bullet_stage_16_overseer_tentacle_spawn", nil, true)
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "overseer_fx_overseer_proyectile_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 15
+tt.particle_system.emit_rotation_spread = math.pi / 2
