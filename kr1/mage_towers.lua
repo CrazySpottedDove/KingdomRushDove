@@ -4440,7 +4440,6 @@ tt.bullet.particles_name = "ps_bullet_tower_wicked_sisters_violet_trail"
 
 -- Stun modifier
 tt = RT("mod_wicked_sisters_stun", "mod_stun")
-AC(tt, "render")
 tt.render.sprites[1].prefix = "stun"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].z = Z_EFFECTS

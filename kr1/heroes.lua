@@ -19037,7 +19037,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.source_lifetime = fts(20)
 
 tt = RT("aura_beresad_firestorm", "aura")
-AC(tt, "render", "tween", "sound_events")
+AC(tt, "render", "tween")
 tt.sound_events.insert = "hero_beresad_flameloop"
 tt.aura.cycle_time = 0.2
 tt.aura.duration = 5
@@ -19841,7 +19841,7 @@ AC(tt, "pos", "main_script")
 tt.main_script.update = scripts.aura_isfet_necromancy.update
 
 tt = RT("hero_isfet_mummy", "soldier_militia")
-AC(tt, "melee", "nav_path")
+AC(tt, "nav_path")
 tt.main_script.update = scripts.hero_isfet_mummy.update
 tt.health.hp_max = 180
 tt.health.dead_lifetime = 0
@@ -22404,7 +22404,7 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 
 tt = RT("hero_tank_expendables", "soldier_militia")
-AC(tt, "melee", "nav_grid", "ranged")
+AC(tt, "nav_grid", "ranged")
 tt.info.portrait = "kr4_info_portraits_soldiers_0039"
 tt.info.fn = scripts.soldier_reinforcement.get_info
 tt.info.random_name_count = nil
