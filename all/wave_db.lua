@@ -55,6 +55,26 @@ local function is_file(path)
 	return info and info.type == "file"
 end
 
+--- 按优先级构造波次文件的搜索前缀：编辑器目录优先，其次自定义地图目录，最后游戏目录。
+--- 与 love.filesystem.loadWithPreference 的候选顺序保持一致。
+local function wave_search_prefixes()
+	local prefixes = {EDITOR_PATH}
+
+	if _G.CUSTOM_MAP_ROOT then
+		if type(_G.CUSTOM_MAP_ROOT) == "table" then
+			for _, p in ipairs(_G.CUSTOM_MAP_ROOT) do
+				prefixes[#prefixes + 1] = p
+			end
+		else
+			prefixes[#prefixes + 1] = _G.CUSTOM_MAP_ROOT
+		end
+	end
+
+	prefixes[#prefixes + 1] = KR_PATH_GAME
+
+	return prefixes
+end
+
 -- tsv
 
 function wave_db:parse_column_names(cmd, row, row_idx)
@@ -643,7 +663,7 @@ function wave_db:get_next_cmd(wave_name)
 	return next_cmd, next_idx
 end
 
-function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
+function wave_db:load_tsv(level_name, game_mode, wave_ss_data, prefix)
 	self.parse_errors = nil
 
 	local rows
@@ -652,11 +672,11 @@ function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
 		rows = tsv.parse_tsv(wave_ss_data)
 	else
 		local suffix = gms[game_mode]
-		local wn = string.format("%s/data/waves/%s_waves_%s", KR_PATH_GAME, level_name, suffix)
+		local wn = string.format("%s/data/waves/%s_waves_%s", prefix or KR_PATH_GAME, level_name, suffix)
 		local wf = string.format("%s.tsv", wn)
 
 		if not is_file(wf) then
-			log.info("wave file in tsv format not found: %s", wf)
+			log.debug("wave file in tsv format not found: %s", wf)
 
 			return
 		end
@@ -818,17 +838,14 @@ end
 
 --tsv end
 
-function wave_db:load_lua(level_name, game_mode, endless)
-	self.game_mode = game_mode
-	self.format = "lua"
-	self.is_endless = endless
-
+function wave_db:load_lua(level_name, game_mode, endless, prefix)
+	local base = prefix or KR_PATH_GAME
 	local suffix = gms[game_mode]
 
-	local filename = string.format("data/waves/%s_waves_%s.lua", level_name, suffix)
-	local f, err = love.filesystem.loadWithPreference(filename, {EDITOR_PATH, KR_PATH_GAME})
+	local filename = string.format("%s/data/waves/%s_waves_%s.lua", base, level_name, suffix)
+	local f, err = love.filesystem.load(filename)
 	if not f then
-		log.error("No wave file found for level %s and game mode %s. Tried to load %s. Error: %s", level_name, game_mode, filename, err)
+		log.debug("wave file in lua format not found: %s (%s)", filename, tostring(err))
 		return
 	end
 
@@ -837,12 +854,16 @@ function wave_db:load_lua(level_name, game_mode, endless)
 		return
 	end
 
+	self.game_mode = game_mode
+	self.format = "lua"
+	self.is_endless = endless
+
 	local wtable = f()
 
 	wave_db.db = wtable
 
-	local extra_filename = string.format("data/waves/%s_waves_%s_extra.lua", level_name, suffix)
-	f, err = love.filesystem.loadWithPreference(extra_filename, {EDITOR_PATH, KR_PATH_GAME})
+	local extra_filename = string.format("%s/data/waves/%s_waves_%s_extra.lua", base, level_name, suffix)
+	f, err = love.filesystem.load(extra_filename)
 	if f then
 		if err then
 			log.error("Failed to load extra wave file %s: %s", extra_filename, err)
@@ -860,13 +881,20 @@ function wave_db:load_lua(level_name, game_mode, endless)
 end
 
 function wave_db:load(level_name, game_mode, endless)
-	if self:load_tsv(level_name, game_mode) then
-		return "tsv"
+	local prefixes = wave_search_prefixes()
+
+	-- 优先在编辑器目录加载 tsv/lua，再回退到游戏目录
+	for _, prefix in ipairs(prefixes) do
+		if self:load_tsv(level_name, game_mode, nil, prefix) then
+			return "tsv"
+		end
+
+		if self:load_lua(level_name, game_mode, endless, prefix) then
+			return "lua"
+		end
 	end
 
-	if self:load_lua(level_name, game_mode, endless) then
-		return "lua"
-	end
+	log.error("No wave file found for level %s and game mode %s. Tried tsv/lua under: %s", level_name, game_mode, table.concat(prefixes, ", "))
 
 	return nil
 end
