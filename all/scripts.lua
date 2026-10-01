@@ -1661,10 +1661,6 @@ function scripts.tower_mage.get_info(this)
 	return o
 end
 
-function scripts.tower_mage.insert(this, store)
-	return true
-end
-
 function scripts.tower_mage.update(this, store)
 	local tower_sid = this.render.sid_tower
 	local shooter_sid = this.render.sid_shooter

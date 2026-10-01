@@ -976,6 +976,15 @@ function love.errorhandler(msg)
 		font = cn_font
 	}
 
+	-- 报错信息可能来自插件/日志，包含非法 UTF-8 字节；LÖVE 的 printf/getWrap
+	-- 遇到非法序列会直接抛错，导致崩溃界面本身再次崩溃。绘制前统一清理。
+	local utf8_utils = require("lib.utf8_utils")
+	local sanitize = utf8_utils.sanitize
+
+	for _, sec in ipairs(sections) do
+		sec.text = sanitize(sec.text)
+	end
+
 	local sum_up = ""
 	local y = margin
 	for _, sec in ipairs(sections) do

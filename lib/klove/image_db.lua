@@ -505,8 +505,10 @@ function image_db:preload_atlas(ref_scale, path, name)
 			size = {v.size[1], v.size[2]}
 		}
 		-- alias 只有指针
-		for i = 1, #v.alias do
-			self.db_atlas[v.alias[i]] = self.db_atlas[k]
+		if v.alias then
+			for i = 1, #v.alias do
+				self.db_atlas[v.alias[i]] = self.db_atlas[k]
+			end
 		end
 	end
 
