@@ -2545,9 +2545,7 @@ function upgrades:patch_templates(max_level)
 		local v = self:get_upgrade("reinforcement_level_6")
 
 		if u then
-			for i = 1, 3 do
-				E:set_template("re_current_" .. i, T(u.template_name .. "_" .. i))
-			end
+			E:set_template("re_current", T(u.template_name))
 		end
 
 		if v then

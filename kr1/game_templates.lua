@@ -478,7 +478,12 @@ tt.health.hp_max = 30
 tt.health_bar.offset = vec_2(0, ady(32))
 tt.info.portrait_idxs = {9, 10, 11}
 tt.controable = true
-tt.main_script.insert = scripts.soldier_reinforcement.insert
+tt.main_script.insert = fn_group(function(this, store)
+	local i = math.random(1, 3)
+	this.info.portrait = string.format("info_portraits_soldiers_%04d", this.info.portrait_idxs[i])
+	this.render.sprites[1].prefix = this.template_name .. "_" .. i
+	return true
+end, scripts.soldier_reinforcement.insert)
 tt.main_script.update = scripts.soldier_reinforcement.update
 tt.melee.attacks[1].cooldown = 0.9
 tt.melee.attacks[1].damage_max = 2
@@ -539,20 +544,7 @@ tt.ranged.attacks[1].min_range = 27
 tt.ranged.attacks[1].animation = "ranged_attack"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(6, 13)}
 
-for i = 1, 3 do
-	for j, name in ipairs({"re_farmer", "re_farmer_well_fed", "re_conscript", "re_warrior", "re_legionnaire", "re_legionnaire_ranged"}) do
-		local fn = name .. "_" .. i
-
-		-- local base_t = E:get_template(name)
-		local t = RT(fn, name)
-		t.render.sprites[1].prefix = fn
-		t.info.portrait = string.format("info_portraits_soldiers_%04d", t.info.portrait_idxs[i])
-	end
-end
-
-for i = 1, 3 do
-	E:register_t("re_current_" .. i, "re_farmer_" .. i)
-end
+E:register_t("re_current", "re_farmer")
 
 tt = RT("spear_legionnaire", "arrow")
 tt.bullet.damage_min = 24
@@ -3032,7 +3024,7 @@ tt = RT("fx_bomb_tramin_ultimate_explosion", "fx")
 tt.render.sprites[1].name = "hero_tramin_ultimate_explosion"
 tt.render.sprites[1].sort_y_offset = -2
 
-tt = RT("soldier_re_0", "soldier_militia")
+-- tt = RT("soldier_re_0", "soldier_militia")
 
 -- AC(tt, "reinforcement", "tween")
 -- image_y = 54
@@ -3067,7 +3059,7 @@ tt = RT("soldier_re_0", "soldier_militia")
 -- tt.unit.mod_offset = vec_2(0, 14)
 -- tt.unit.level = 0
 -- tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
-tt = RT("soldier_re_1", "soldier_re_0")
+-- tt = RT("soldier_re_1", "soldier_re_0")
 
 -- tt.unit.level = 1
 -- tt.health.hp_max = 60
@@ -3075,7 +3067,7 @@ tt = RT("soldier_re_1", "soldier_re_0")
 -- tt.melee.attacks[1].damage_max = 5
 -- tt.melee.attacks[1].damage_min = 3
 -- tt.render.sprites[1].prefix = "soldier_re_%s0"
-tt = RT("soldier_re_2", "soldier_re_1")
+-- tt = RT("soldier_re_2", "soldier_re_1")
 
 -- AC(tt, "ranged")
 -- tt.unit.level = 2
@@ -3092,7 +3084,7 @@ tt = RT("soldier_re_2", "soldier_re_1")
 -- tt.ranged.attacks[1].min_range = 10
 -- tt.ranged.attacks[1].animation = "shoot"
 -- tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 22)}
-tt = RT("soldier_re_3", "soldier_re_2")
+-- tt = RT("soldier_re_3", "soldier_re_2")
 
 -- tt.unit.level = 3
 -- tt.health.hp_max = 100
@@ -3103,7 +3095,7 @@ tt = RT("soldier_re_3", "soldier_re_2")
 -- tt.render.sprites[1].prefix = "soldier_re_%s2"
 -- tt.ranged.attacks[1].bullet = "arrow_soldier_re_3"
 -- tt.ranged.attacks[1].max_range = 150
-tt = RT("soldier_re_4", "soldier_re_3")
+-- tt = RT("soldier_re_4", "soldier_re_3")
 
 -- tt.cooldown = 10
 -- tt.unit.level = 4
@@ -3115,7 +3107,7 @@ tt = RT("soldier_re_4", "soldier_re_3")
 -- tt.render.sprites[1].prefix = "soldier_re_%s2"
 -- tt.ranged.attacks[1].bullet = "arrow_soldier_re_4"
 -- tt.ranged.attacks[1].max_range = 150
-tt = RT("soldier_re_5", "soldier_re_4")
+-- tt = RT("soldier_re_5", "soldier_re_4")
 
 -- tt.unit.level = 5
 -- tt.health.hp_max = 150
@@ -3562,56 +3554,58 @@ tt.render.sprites[1].name = "fx_paralyzing_tree_2"
 tt = RT("fx_paralyzing_tree_3", "fx_paralyzing_tree_1")
 tt.render.sprites[1].name = "fx_paralyzing_tree_3"
 
-tt = RT("bolt_elves_1", "bolt_elves")
-tt.bullet.damage_min = 4
-tt.bullet.damage_max = 6
-tt.bullet.particles_name = "ps_bolt_elves_1"
-tt.render.sprites[1].scale = vec_2(0.8, 0.8)
+-- tt = RT("bolt_elves_1", "bolt_elves")
+-- tt.bullet.damage_min = 4
+-- tt.bullet.damage_max = 6
+-- tt.bullet.particles_name = "ps_bolt_elves_1"
+-- tt.render.sprites[1].scale = vec_2(0.8, 0.8)
 
-tt = RT("bolt_elves_2", "bolt_elves_1")
-tt.bullet.damage_min = 9
-tt.bullet.damage_max = 15
-tt.bullet.particles_name = "ps_bolt_elves_2"
-tt.render.sprites[1].scale = vec_2(0.9, 0.9)
+-- tt = RT("bolt_elves_2", "bolt_elves_1")
+-- tt.bullet.damage_min = 9
+-- tt.bullet.damage_max = 15
+-- tt.bullet.particles_name = "ps_bolt_elves_2"
+-- tt.render.sprites[1].scale = vec_2(0.9, 0.9)
 
-tt = RT("bolt_elves_3", "bolt_elves_1")
-tt.bullet.damage_min = 17
-tt.bullet.damage_max = 28
-tt.bullet.particles_name = "ps_bolt_elves_3"
-tt.render.sprites[1].scale = vec_2(1, 1)
+-- tt = RT("bolt_elves_3", "bolt_elves_1")
+-- tt.bullet.damage_min = 17
+-- tt.bullet.damage_max = 28
+-- tt.bullet.particles_name = "ps_bolt_elves_3"
+-- tt.render.sprites[1].scale = vec_2(1, 1)
 
-tt = RT("arrow_soldier_barrack_2", "arrow")
-tt.bullet.damage_max = 7
-tt.bullet.damage_min = 3
+-- tt = RT("arrow_soldier_barrack_2", "arrow")
+-- tt.bullet.damage_max = 7
+-- tt.bullet.damage_min = 3
+-- tt.bullet.flight_time = fts(15)
+-- tt.bullet.reset_to_target_pos = true
+
+tt = RT("arrow_soldier_barrack_3", "arrow")
+tt.bullet.damage_max = 18
+tt.bullet.damage_min = 12
 tt.bullet.flight_time = fts(15)
 tt.bullet.reset_to_target_pos = true
 
-tt = RT("arrow_soldier_barrack_3", "arrow_soldier_barrack_2")
-tt.bullet.damage_max = 18
-tt.bullet.damage_min = 12
+-- tt = RT("arrow_soldier_re_2", "arrow")
+-- tt.bullet.damage_max = 10
+-- tt.bullet.damage_min = 6
+-- tt.bullet.reset_to_target_pos = true
+-- tt.bullet.flight_time = fts(13)
+-- tt.bullet.hide_radius = 2
+-- tt.bullet.hit_fx = "fx_arrow_soldier_re_hit"
+-- tt.bullet.miss_decal = "reinforce_proy_0010"
+-- tt.bullet.rotation_speed = 40 * FPS * math.pi / 180
+-- tt.render.sprites[1].name = "reinforce_proy_0001"
 
-tt = RT("arrow_soldier_re_2", "arrow")
-tt.bullet.damage_max = 10
-tt.bullet.damage_min = 6
-tt.bullet.reset_to_target_pos = true
-tt.bullet.flight_time = fts(13)
-tt.bullet.hide_radius = 2
-tt.bullet.hit_fx = "fx_arrow_soldier_re_hit"
-tt.bullet.miss_decal = "reinforce_proy_0010"
-tt.bullet.rotation_speed = 40 * FPS * math.pi / 180
-tt.render.sprites[1].name = "reinforce_proy_0001"
+-- tt = RT("arrow_soldier_re_3", "arrow_soldier_re_2")
+-- tt.bullet.damage_max = 20
+-- tt.bullet.damage_min = 10
 
-tt = RT("arrow_soldier_re_3", "arrow_soldier_re_2")
-tt.bullet.damage_max = 20
-tt.bullet.damage_min = 10
+-- tt = RT("arrow_soldier_re_4", "arrow_soldier_re_2")
+-- tt.bullet.damage_max = 20
+-- tt.bullet.damage_min = 10
 
-tt = RT("arrow_soldier_re_4", "arrow_soldier_re_2")
-tt.bullet.damage_max = 20
-tt.bullet.damage_min = 10
-
-tt = RT("arrow_soldier_re_5", "arrow_soldier_re_2")
-tt.bullet.damage_max = 30
-tt.bullet.damage_min = 20
+-- tt = RT("arrow_soldier_re_5", "arrow_soldier_re_2")
+-- tt.bullet.damage_max = 30
+-- tt.bullet.damage_min = 20
 
 tt = RT("bullet_bravebark_seed", "bomb")
 tt.bullet.damage_type = DAMAGE_NONE
