@@ -1,1 +1,1 @@
-return {{date="2026-10-01",author="CrazySpottedDove",message="feat: 支持使用plugin_required_exoskeletons定义game需要的exo，格式同plugin_required_textures"},{date="2026-10-01",author="CrazySpottedDove",message="fix: 修复212关英雄模式塔位丢失的问题"}}
+return {{date="2026-10-01",author="CrazySpottedDove",message="feat: 支持使用plugin_required_exoskeletons定义game需要的exo，格式同plugin_required_textures"},{date="2026-10-01",author="CrazySpottedDove",message="fix: 修复212关英雄模式塔位丢失的问题"},{date="2026-10-01",author="CrazySpottedDove",message="fix: 修复地图编辑器未适配关卡独占模板的问题"}}

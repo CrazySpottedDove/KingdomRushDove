@@ -442,6 +442,27 @@ end
 -- 	end
 -- end
 
+--- 加载关卡 data 中 required_templates 声明的关卡独占模板组
+--- 与 all/systems/level.lua 中的加载时机保持一致
+local function load_required_templates(level)
+	local groups = level and level.data and level.data.required_templates
+
+	if type(groups) ~= "table" then
+		return
+	end
+
+	for i = 1, #groups do
+		local module_name = "kr1.template_groups." .. groups[i]
+		local ok, err = pcall(require, module_name)
+
+		if not ok then
+			log.error("Failed to load required template group %s: %s", module_name, err)
+		end
+
+		package.loaded[module_name] = nil
+	end
+end
+
 local function gather_wave_enemy_templates(wave_data)
 	local names = {}
 	E:ensure_loaded()
@@ -744,6 +765,7 @@ function editor:load_level(idx, mode, recover)
 			end
 		end
 	end
+	load_required_templates(s.level)
 	-- custom_resource_table(s.level.data)
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
 
@@ -761,6 +783,8 @@ function editor:load_level(idx, mode, recover)
 	if s.level.init then
 		s.level:init(s)
 	end
+
+	E:precompile_hot()
 
 	if s.level.data.entities_list then
 		LU.insert_entities(self.store, s.level.data.entities_list, true)
@@ -896,6 +920,8 @@ function editor:load_plugin_level(entry, mode)
 		end
 	end
 
+	load_required_templates(s.level)
+
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
 	if s.level.plugin_required_textures then
 		director:load_plugin_texture_groups(s.level.plugin_required_textures, self.ref_res, false, "game_editor")
@@ -918,6 +944,8 @@ function editor:load_plugin_level(entry, mode)
 	if s.level.init then
 		s.level:init(s)
 	end
+
+	E:precompile_hot()
 
 	if s.level.data.entities_list then
 		LU.insert_entities(self.store, s.level.data.entities_list, true)
