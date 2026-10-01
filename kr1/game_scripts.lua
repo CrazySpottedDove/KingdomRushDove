@@ -53024,9 +53024,9 @@ end
 
 -- ==================== kr6 stage14：dark_army 敌人脚本 ====================
 
-scripts.enemy_skeleton = {}
+scripts.enemy_skeleton_kr6 = {}
 
-function scripts.enemy_skeleton.insert(this, store, script)
+function scripts.enemy_skeleton_kr6.insert(this, store, script)
 	if not scripts.enemy_basic.insert(this, store, script) then
 		return false
 	end
@@ -53046,7 +53046,7 @@ function scripts.enemy_skeleton.insert(this, store, script)
 	return true
 end
 
-function scripts.enemy_skeleton.update(this, store, script)
+function scripts.enemy_skeleton_kr6.update(this, store, script)
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
 			S:queue(this.sound_events.raise, this.sound_events.raise_args)
@@ -53072,9 +53072,9 @@ function scripts.enemy_skeleton.update(this, store, script)
 	return scripts.enemy_mixed.update(this, store, script)
 end
 
-scripts.enemy_gargoyle = {}
+scripts.enemy_gargoyle_kr6 = {}
 
-function scripts.enemy_gargoyle.update(this, store)
+function scripts.enemy_gargoyle_kr6.update(this, store)
 	local heal_uses = 0
 	local in_stone_form = false
 	local old_prefix = this.render.sprites[1].prefix
@@ -53211,7 +53211,7 @@ function scripts.enemy_gargoyle.update(this, store)
 	end
 end
 
-function scripts.enemy_gargoyle.remove(this, store)
+function scripts.enemy_gargoyle_kr6.remove(this, store)
 	if not this.stone_form.used then
 		signal.emit("stone-cold-dead")
 	end
@@ -54333,48 +54333,5 @@ function scripts.bullet_demon_flareon.update(this, store, script)
 
 	simulation:queue_remove_entity(this)
 end
-
-scripts.aura_tower_faerie_dragon = {
-	update = function(this, store)
-		local a = this.aura
-
-		while true do
-			local source = store.entities[this.aura.source_id]
-
-			if not source then
-				simulation:queue_remove_entity(this)
-
-				return
-			end
-
-			if store.tick_ts - a.ts >= source.attacks.list[1].cooldown * source.tower.cooldown_factor then
-				a.ts = store.tick_ts
-
-				local targets = U.find_enemies_in_range_filter_off(this.pos, source.attacks.range, bor(F_MOD, F_STUN), F_NONE)
-
-				if targets then
-					for _, target in ipairs(targets) do
-						if math.random() < source.aura_rate then
-							if band(target.vis.flags, F_BOSS) == 0 then
-								local mod = E:create_entity(a.mod)
-
-								mod.modifier.target_id = target.id
-								mod.modifier.source_id = a.source_id
-
-								simulation:queue_insert_entity(mod)
-							end
-
-							local d = E.assign_damage(a.damage_type, a.damage * source.tower.damage_factor, source.id, target.id)
-
-							queue_damage(store, d)
-						end
-					end
-				end
-			end
-
-			coroutine.yield()
-		end
-	end
-}
 
 return scripts

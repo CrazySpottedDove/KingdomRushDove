@@ -2577,7 +2577,7 @@ tt.gold_factor_2 = 1.05
 
 -- Soldier: Dragon Warrior
 tt = RT("soldier_dragon", "soldier_militia")
-AC(tt, "melee", "nav_grid")
+AC(tt, "nav_grid")
 image_y = 64
 anchor_y = 0.15
 tt.health.armor_inc = 0
@@ -2654,7 +2654,6 @@ tt.main_script.remove = scripts.mod_gold_indicator.remove
 
 -- Decal: Gold coin
 tt = E:register_t("fx_shaolin_gold", "fx")
-AC(tt, "render")
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].name = "shaolin_abundance_coin_run"
 tt.render.sprites[1].loop = false
