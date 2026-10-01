@@ -214,7 +214,13 @@ function autoplay:init(w, h, done_callback)
 		EXO:queue_load(game.store.level.required_exoskeletons)
 	end
 
+	if game.store.level.plugin_required_exoskeletons then
+		EXO:queue_load_plugin(game.store.level.plugin_required_exoskeletons)
+	end
+
 	EXO:queue_load(game.required_exoskeletons)
+	EXO:queue_load_plugin(game.plugin_required_exoskeletons)
+	EXO:queue_load_plugin(game_gui.plugin_required_exoskeletons)
 
 	-- 走一遍 game 的初始化协程（内部就是 simulation:init + 关卡加载）
 	self.init_co = game:init_coro(w, h, nil)

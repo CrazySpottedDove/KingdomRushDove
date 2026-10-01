@@ -34,6 +34,7 @@ local gui = {}
 gui.required_textures = {}
 gui.plugin_required_textures = {}
 gui.plugin_required_sounds = {}
+gui.plugin_required_exoskeletons = {}
 
 local function wid(id)
 	return gui.window:get_child_by_id(id)

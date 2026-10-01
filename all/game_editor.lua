@@ -99,6 +99,7 @@ editor.required_textures = {
 }
 editor.plugin_required_textures = {}
 editor.plugin_required_sounds = {}
+editor.plugin_required_exoskeletons = {}
 editor.ref_h = REF_H
 editor.ref_w = REF_W
 editor.ref_res = TEXTURE_SIZE_ALIAS.ipad
@@ -722,6 +723,9 @@ function editor:load_level(idx, mode, recover)
 			"required_textures",
 			"required_sounds",
 			"required_exoskeletons",
+			"plugin_required_textures",
+			"plugin_required_sounds",
+			"plugin_required_exoskeletons",
 			"locked_hero",
 			"locked_powers",
 			"locked_towers",
@@ -745,8 +749,13 @@ function editor:load_level(idx, mode, recover)
 
 	if s.level.required_exoskeletons then
 		EXO:queue_load(s.level.required_exoskeletons)
-		EXO:load(s.level.required_exoskeletons)
 	end
+
+	if s.level.plugin_required_exoskeletons then
+		EXO:queue_load_plugin(s.level.plugin_required_exoskeletons)
+	end
+
+	EXO:load()
 	-- self:load_custom_resources()
 
 	if s.level.init then
@@ -865,6 +874,9 @@ function editor:load_plugin_level(entry, mode)
 			"required_textures",
 			"required_sounds",
 			"required_exoskeletons",
+			"plugin_required_textures",
+			"plugin_required_sounds",
+			"plugin_required_exoskeletons",
 			"locked_hero",
 			"locked_powers",
 			"locked_towers",
@@ -896,8 +908,12 @@ function editor:load_plugin_level(entry, mode)
 	end
 	if s.level.required_exoskeletons then
 		EXO:queue_load(s.level.required_exoskeletons)
-		EXO:load(s.level.required_exoskeletons)
 	end
+	if s.level.plugin_required_exoskeletons then
+		EXO:queue_load_plugin(s.level.plugin_required_exoskeletons)
+	end
+
+	EXO:load()
 
 	if s.level.init then
 		s.level:init(s)
@@ -2492,7 +2508,8 @@ return level
 	required_sounds = {},
 	required_textures = {},
     plugin_required_textures = {},
-    plugin_required_sounds = {}
+    plugin_required_sounds = {},
+    plugin_required_exoskeletons = {}
 }
 ]]
 

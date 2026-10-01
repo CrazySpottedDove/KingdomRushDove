@@ -97,6 +97,7 @@ function LU.load_level(store, name)
 			"required_exoskeletons",
 			"plugin_required_textures",
 			"plugin_required_sounds",
+			"plugin_required_exoskeletons",
 			"locked_hero",
 			"locked_powers",
 			"locked_towers",

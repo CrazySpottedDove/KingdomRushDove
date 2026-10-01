@@ -310,7 +310,13 @@ function director:unload_item(item)
 			EXO:unload(game.store.level.required_exoskeletons)
 		end
 
+		if game.store.level.plugin_required_exoskeletons then
+			EXO:unload(game.store.level.plugin_required_exoskeletons)
+		end
+
 		EXO:unload(game.required_exoskeletons)
+		EXO:unload(game.plugin_required_exoskeletons)
+		EXO:unload(game.game_gui.plugin_required_exoskeletons)
 
 		-- 释放本局 animation_db -> image_db 的链接缓存，必须在 atlas 卸载前执行
 		A:unlink()
@@ -497,7 +503,13 @@ function director:queue_load_item_named(name)
 			EXO:queue_load(game.store.level.required_exoskeletons)
 		end
 
+		if game.store.level.plugin_required_exoskeletons then
+			EXO:queue_load_plugin(game.store.level.plugin_required_exoskeletons)
+		end
+
 		EXO:queue_load(game.required_exoskeletons)
+		EXO:queue_load_plugin(game.plugin_required_exoskeletons)
+		EXO:queue_load_plugin(game_gui.plugin_required_exoskeletons)
 
 		if args.custom_map_root then
 			local level = game.store.level

@@ -27,6 +27,7 @@ atlas_manager.required_textures = {}
 atlas_manager.required_sounds = {}
 atlas_manager.plugin_required_textures = {}
 atlas_manager.plugin_required_sounds = {}
+atlas_manager.plugin_required_exoskeletons = {}
 atlas_manager.ref_w = REF_W
 atlas_manager.ref_h = 1080
 atlas_manager.ref_res = TEXTURE_SIZE_ALIAS.fullhd
