@@ -7064,105 +7064,6 @@ tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 10
 
-tt = E:register_t("decal_stage_16_holder_destroy_fx", "decal")
-tt.render.sprites[1].name = "overseer_fx_overseer_crater_run"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].offset.y = 10
-tt.render.sprites[1].sort_y_offset = -1
-
-tt = E:register_t("decal_stage_16_holder_destroy_crater", "decal_scripted")
-tt.render.sprites[1].prefix = "t3_craterDef"
-tt.render.sprites[1].name = "start"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].loop = false
-tt.main_script.update = scripts.decal_stage_16_holder_destroy_crater.update
-
-tt = E:register_t("decal_stage_16_tower_change_fx", "decal_tween")
-tt.render.sprites[1].prefix = "overseer_fx_overseer_teleportdecal"
-tt.render.sprites[1].name = "decalin"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].offset = v(-2, 5)
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "overseer_fx_overseer_teleportdecal"
-tt.render.sprites[2].name = "decalactivate"
-tt.render.sprites[2].z = Z_DECALS
-tt.render.sprites[2].offset = v(-2, 5)
-tt.duration = 2.8 + fts(60)
-tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.duration-0.25", 255}, {"this.duration", 0}}
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].sprite_id = 2
-tt.tween.props[2].name = "alpha"
-tt.tween.props[2].keys = {{0, 0}, {1, 255}, {"this.duration-0.25", 255}, {"this.duration", 0}}
-
-tt = E:register_t("decal_stage_16_overseer_tentacle_projectile", "decal_tween")
-tt.render.sprites[1].name = "overseer_fx_overseer_proyectile_decal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.duration = 2.5
-tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.duration-0.5", 255}, {"this.duration", 0}}
-
-tt = E:register_t("decal_stage_16_glare_1", "decal_stage_12_glare")
-tt.render.sprites[1].prefix = "stage_16_glare_1Def"
-
-tt = E:register_t("decal_stage_16_glare_2", "decal_stage_12_glare")
-tt.render.sprites[1].prefix = "stage_16_glare_2Def"
-
-tt = E:register_t("decal_stage_16_glare_eye_big", "decal_scripted")
-tt.render.sprites[1].name = "glare_stage_16_eye_big"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].draw_order = 2
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "glare_stage_16_eyelids_big"
-tt.render.sprites[2].name = "idle_close"
-tt.render.sprites[2].z = Z_DECALS
-tt.render.sprites[2].draw_order = 4
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].prefix = "glare_stage_16_eye_big_pupil"
-tt.render.sprites[3].name = "look"
-tt.render.sprites[3].z = Z_DECALS
-tt.render.sprites[3].draw_order = 3
-tt.main_script.update = scripts.decal_terrain_3_glare_eye.update
-tt.sid_eyelids = 2
-tt.sid_pupil = 3
-tt.is_big_eye = true
-
-tt = E:register_t("decal_stage_16_glare_eye_small_1", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_16_eyes_1"
-tt.render.sprites[2].prefix = "glare_stage_16_eyelids_1"
-
-tt = E:register_t("decal_stage_16_glare_eye_small_2", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_16_eyes_2"
-tt.render.sprites[2].prefix = "glare_stage_16_eyelids_2"
-
-tt = E:register_t("decal_stage_16_glare_eye_small_3", "decal_terrain_3_glare_eye_small")
-tt.render.sprites[1].prefix = "glare_stage_16_eyes_3"
-tt.render.sprites[2].prefix = "glare_stage_16_eyelids_3"
-
-tt = E:register_t("decal_stage_16_overseer_blood")
-E:add_comps(tt, "pos", "main_script")
-tt.main_script.update = scripts.decal_stage_16_overseer_blood.update
-tt.blood_pos = {v(20, 20), v(100, 100), v(-100, 100), v(-150, -30), v(150, -70), v(-30, 40)}
-tt.fx_template = "decal_stage_16_overseer_single_blood_fx"
-
-tt = E:register_t("decal_stage_16_overseer_single_blood_fx", "decal_tween")
-tt.render.sprites[1].name = "overseer_fx_overseer_blood"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.render.sprites[1].offset = v(20, 20)
-tt.tween.props[1].keys = {{0, 255}, {fts(13), 255}, {fts(16), 0}}
-
-tt = E:register_t("decal_stage_16_death_bright", "decal")
-tt.render.sprites[1].prefix = "overseer_deathbrightDef"
-tt.render.sprites[1].name = "areaattack"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_SKY + 1
-
-tt = E:register_t("decal_stage_16_overseer_destroy_holder_bright", "decal_tween")
-tt.render.sprites[1].name = "overseer_fx_overseer_destroyray_bright_run"
-tt.render.sprites[1].z = Z_BULLETS + 1
-tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}, {fts(25), 255}, {fts(26), 0}}
-
 tt = E:register_t("decal_stage_19_navira_cape", "decal_scripted")
 E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "navira_naviracape"
@@ -7653,10 +7554,6 @@ tt.render.sprites[1].name = "areaattack"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t("fx_stage_16_overseer_tentacle_hit_decal", "fx")
-tt.render.sprites[1].prefix = "overseer_fx_overseer_proyectile_explosion"
-tt.render.sprites[1].name = "run"
-
 tt = E:register_t("fx_enemy_specter_hit", "fx")
 tt.render.sprites[1].name = "spectre_fx_idle"
 
@@ -8136,29 +8033,6 @@ tt = E:register_t("mod_soldier_reinforcement_stage_15_denas_spawn_stun", "mod_st
 tt = E:register_t("controller_soldier_reinforcement_stage_15_denas_timeout")
 E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.controller_soldier_reinforcement_stage_15_denas_timeout.update
-
-tt = E:register_t("controller_tower_swap_overseer", "controller_tower_swap")
-tt.fx_out = "decal_tower_swap_fx_in"
-tt.fx_in = "decal_tower_swap_fx_in"
-tt.fx_spawn_delay = 0
-tt.fx_in_delay = 0
-tt.fx_delay_between = fts(14)
-tt.swap_sound = "Stage16OverseerTeleport"
-
-tt = E:register_t("decal_tower_swap_fx_in", "decal_timed")
-tt.render.sprites[1].name = "overseer_fx_overseer_teleportfx_run"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt.render.sprites[1].offset = v(0, 10)
-tt.timed.duration = fts(20)
-
-tt = E:register_t("ps_bullet_stage_16_overseer_tentacle_spawn")
-E:add_comps(tt, "pos", "particle_system")
-tt.particle_system.name = "overseer_fx_overseer_proyectile_trail_run"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(10), fts(10)}
-tt.particle_system.emission_rate = 15
-tt.particle_system.emit_rotation_spread = math.pi / 2
 
 tt = E:register_t("hero_muyrn_treewalk_trail")
 E:add_comps(tt, "pos", "particle_system")
