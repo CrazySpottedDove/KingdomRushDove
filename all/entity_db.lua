@@ -239,6 +239,10 @@ function entity_db:register_t(name, base)
 
 	-- 	return self.entities[name]
 	-- end
+	-- if base and not self.entities[base] then
+	-- log.error("base template %s does not exist", base)
+	-- return nil
+	-- end
 
 	local t = base and quickcopy(self.entities[base]) or {}
 
@@ -341,9 +345,9 @@ end
 --- 只接收字符串模板名，创建对应实体
 ---@param t string 模板名
 function entity_db:create_entity(t)
-	if not self.entities[t] then
-		print("DBG miss: " .. tostring(t))
-	end
+	-- if not self.entities[t] then
+	-- 	print("DBG miss: " .. tostring(t))
+	-- end
 	local tpl = self.entities[t]
 	-- DEBUG USE
 	-- if not tpl then

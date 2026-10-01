@@ -11190,120 +11190,6 @@ tt.render.sprites[3].hidden = true
 tt.render.sprites[3].delay_start = 0.3
 tt.sound_events.insert = "EnemyBossPrincessRangedImpact"
 
-tt = E:register_t("controller_stage_35_small_spawner", "decal_scripted")
-E:add_comps(tt, "events", "editor")
-tt.unit_spawned = scripts.controller_stage_35_small_spawner.unit_spawned
-tt.main_script.update = scripts.controller_stage_35_small_spawner.update
-tt.render.sprites[1].name = "stage35_spawner_base"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].name = "stage35_spawner_puerta"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].sort_y_offset = -23
-tt.render.sprites[3] = E:clone_c("sprite")
-tt.render.sprites[3].prefix = "stage_5_spawnerDef"
-tt.render.sprites[3].name = "in"
-tt.render.sprites[3].exo = true
-tt.render.sprites[3].hidden = true
-tt.render.sprites[3].sort_y_offset = -23
-tt.spawner_nmbr = 0
-tt.events.list[1].name = "spawner_open"
-tt.events.list[1].on_event = scripts.controller_stage_35_small_spawner.on_portal_open
-tt.events.list[2] = E:clone_c("event")
-tt.events.list[2].name = "spawner_close"
-tt.events.list[2].on_event = scripts.controller_stage_35_small_spawner.on_portal_close
-tt.sound_open = "Stage35Spawners"
-
-tt = E:register_t("mod_bull_king_tower_debuff", "mod_hide_tower")
-E:add_comps(tt, "render")
-tt.main_script.update = scripts.mod_bull_king_tower_debuff.update
-tt.main_script.remove = nil
-tt.modifier.duration = {4, 4.5, 5, 5.5}
-tt.modifier.vis_flags = F_CUSTOM
-tt.modifier.handle_stun = true
-tt.render.sprites[1].prefix = "stage_35_stun_towerDef"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].offset.y = 5
-tt.render.sprites[1].draw_order = 20
-tt.render.sprites[1].sort_y_offset = -5
-tt.offset_y_per_tower = {
-	hermit_toad = 4
-}
-
-tt = RT("mod_bull_king_stun", "mod_stun")
-tt.modifier.duration = {7, 8.5, 10, 11}
-tt.main_script.insert = scripts.mod_bull_king_stun.insert
-tt.main_script.remove = scripts.mod_bull_king_stun.remove
-tt.render.sprites[1].prefix = "stage_35_stun_unitDef"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -5
-tt.modifier.animation_phases = true
-tt.modifier.hide_target_delay = fts(3)
-tt.modifier.use_mod_offset = false
-
-tt = E:register_t("fx_boss_bull_king_spawn", "decal_scripted")
-tt.main_script.update = scripts.fx_boss_bull_king_spawn.update
-tt.render.sprites[1].prefix = "stage_35_stun_towerDef"
-tt.render.sprites[1].name = "start"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].sort_y_offset = -20
-
-tt = E:register_t("fx_boss_bull_king_hit", "fx")
-tt.render.sprites[1].prefix = "stage_35_hitDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].scale = vv(2)
-
-tt = E:register_t("fx_boss_bull_king_hit_area", "fx")
-tt.render.sprites[1].prefix = "stage_35_areaattackDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("fx_boss_bull_king_domo", "decal_scripted")
-tt.main_script.update = scripts.multi_sprite_fx.update
-tt.render.sprites[1].prefix = "stage_35_domoDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].scale = vv(2)
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].sort_y_offset = -10
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].delay_start = fts(11)
-
-tt = E:register_t("fx_boss_bull_king_anime", "decal_scripted")
-tt.main_script.update = scripts.multi_sprite_fx.update
-tt.render.sprites[1].prefix = "stage_35_fx_animeDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].scale = vv(2)
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].delay_start = 1
-
-tt = E:register_t("fx_boss_bull_king_anime_white", "decal_scripted")
-tt.main_script.update = scripts.fx_boss_bull_king_anime_color.update
-tt.render.sprites[1].name = "stage_35_box_asst_box1"
-tt.render.sprites[1].scale = vv(200)
-tt.render.sprites[1].z = Z_OBJECTS_SKY - 1
-tt.render.sprites[1].sort_y_offset = 10
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].hidden = true
-tt.delay_start = 1.15
-
-tt = E:register_t("fx_boss_bull_king_anime_black", "fx_boss_bull_king_anime_white")
-tt.render.sprites[1].name = "stage_35_box_asst_box2"
-tt.delay_start = 1.05
-
-tt = E:register_t("fx_boss_bull_king_explosion", "decal_scripted")
-tt.main_script.update = scripts.multi_sprite_fx.update
-tt.render.sprites[1].prefix = "stage_35_explosion_pathDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = 20
-
 for i = 1, 3 do
 
 	tt = E:register_t("stage_31_exo_forest_" .. i, "decal")
@@ -11415,40 +11301,6 @@ tt.render.sprites[tt.render.sid_base].name = "stage33_casa2_pescadores_base"
 tt.render.sprites[tt.render.sid_door].prefix = "stage33_casa2_pescadores_door"
 tt.render.sprites[tt.render.sid_door].sort_y_offset = 0
 tt.render.sprites[tt.render.sid_floor].name = "stage33_casa2_pescadores_sombra"
-
-tt = E:register_t("stage_35_bloqueo_path", "decal")
-tt.render.sprites[1].prefix = "stage_5_bloqueo_pathDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("decal_stage_35_escombros_holder_1", "decal")
-tt.render.sprites[1].name = "stage35_escombros_holder_1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].offset = v(2, -16)
-
-tt = E:register_t("decal_stage_35_escombros_holder_2", "decal")
-tt.render.sprites[1].name = "stage35_escombros_holder_2"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].offset = v(0, -3)
-
-tt = E:register_t("decal_stage_35_escombros_holder_3", "decal")
-tt.render.sprites[1].name = "stage35_escombros_holder_3"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-
-tt = E:register_t("decal_stage_35_escombros_cannonball_camino", "decal_tween")
-tt.render.sprites[1].name = "destruccion_holder_escombros_camino"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].keys = {{0, 255}, {14, 255}, {16, 0}}
-tt.tween.disabled = false
-
-tt = E:register_t("decal_stage_35_escombros_cannonball_holder", "decal_stage_35_escombros_cannonball_camino")
-tt.render.sprites[1].name = "destruccion_holder_escombros_oro"
-tt.render.sprites[1].offset = v(0, 20)
 
 tt = E:register_t("decal_dlc_wukong_flaming_ground", "decal_scripted")
 E:add_comps(tt, "auras")
@@ -11789,102 +11641,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -20
 tt.render.sprites[1].offset = v(0, 15)
 
-tt = E:register_t("fx_stage_32_redboy_transform_fire", "fx")
-tt.render.sprites[1].prefix = "dragon_redboy_transformDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].offset = v(0, -30)
-
-tt = E:register_t("fx_stage_32_fireball_right", "decal_scripted")
-tt.main_script.update = scripts.fx_stage_32_fireball_right.update
-tt.render.sprites[1].prefix = "stage_32_fireball_rDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].z = Z_OBJECTS_SKY
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "stage_31_sign_decal_rDef"
-tt.render.sprites[2].name = "run"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].loop = false
-tt.render.sprites[2].z = Z_DECALS
-tt.shake_time = 150
-tt.flags_meteorite = bor(F_RANGED, F_AREA)
-tt.bans_meteorite = bor(F_BOSS)
-tt.ni_step = 3
-tt.path = 3
-tt.kill_radius = 80
-tt.force_move_impact_positions = {v(800, 326)}
-tt.fire_duration = 15
-tt.path_fires = {
-	[3] = {
-		finish = 100,
-		begin = 20
-	},
-	[4] = {
-		finish = 60,
-		begin = 50
-	}
-}
-
-tt = E:register_t("fx_stage_32_fireball_left", "fx_stage_32_fireball_right")
-tt.render.sprites[1].prefix = "stage_32_fireball_lDef"
-tt.render.sprites[2].prefix = "stage_31_sign_decal_lDef"
-tt.path = 2
-tt.force_move_impact_positions = {v(207, 226)}
-tt.path_fires = {
-	[2] = {
-		finish = 120,
-		begin = 20
-	},
-	{
-		finish = 50,
-		begin = 40
-	}
-}
-
-tt = E:register_t("fx_stage_35_fireball_left", "fx_stage_32_fireball_right")
-tt.render.sprites[1].prefix = "stage_35_fireball_lDef"
-tt.render.sprites[2].prefix = "stage5_samadhi_2Def"
-tt.kill_area_id = 1
-tt.path_fires = {{
-	finish = 180,
-	begin = 20
-}}
-
-tt = E:register_t("fx_stage_35_fireball_right", "fx_stage_32_fireball_right")
-tt.render.sprites[1].prefix = "stage_35_fireball_rDef"
-tt.render.sprites[2].prefix = "stage5_samadhi_1Def"
-tt.kill_area_id = 2
-tt.path_fires = {
-	[2] = {
-		finish = 130,
-		begin = 20
-	}
-}
-
-tt = E:register_t("fx_stage_32_lava_splash", "fx")
-tt.render.sprites[1].prefix = "stage_32_lava_splashDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -40
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].scale = vv(0.5599999999999999)
-
-tt = E:register_t("fx_stage_32_lava_splash_2", "fx_stage_32_lava_splash")
-tt.render.sprites[1].flip_x = true
-
-tt = E:register_t("fx_stage_32_lava_splash_big", "fx")
-tt.render.sprites[1].prefix = "stage_32_lava_splash_bigDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -40
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].scale = vv(0.7)
-
-tt = E:register_t("fx_stage_32_lava_splash_big_2", "fx_stage_32_lava_splash_big")
-tt.render.sprites[1].flip_x = true
-
 tt = E:register_t("fx_stage_32_lava_geyser", "fx")
 tt.render.sprites[1].prefix = "dragon_cracks_geyserDef"
 tt.render.sprites[1].name = "run"
@@ -11895,23 +11651,6 @@ tt = E:register_t("fx_stage_33_house_destroy", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].name = "vfx_mecanicas_destroy_house_run"
 tt.render.sprites[1].sort_y_offset = -5
-
-tt = E:register_t("fx_stage_35_lava_splash", "fx")
-tt.render.sprites[1].prefix = "stage_5_splash_lavaDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -40
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].scale = vv(0.5599999999999999)
-
-tt = E:register_t("fx_stage_35_lava_splash_big", "fx_stage_35_lava_splash")
-tt.render.sprites[1].scale = vv(1)
-
-tt = E:register_t("fx_stage_35_water_splash", "fx_stage_35_lava_splash")
-tt.render.sprites[1].prefix = "stage_5_splash_aguaDef"
-
-tt = E:register_t("fx_stage_35_water_splash_big", "fx_stage_35_water_splash")
-tt.render.sprites[1].scale = vv(1)
 
 tt = E:register_t("fx_water_spirit_splash", "fx")
 tt.render.sprites[1].name = "wukong_water_spirit_fx_splash"
@@ -12260,56 +11999,6 @@ tt.skip_modifiers = {"mod_boss_crocs_tower_eat"}
 tt.click_rect = r(-30, 0, 60, 60)
 tt.menu_offset = v(0, 12)
 
-tt = E:register_t("mod_stage_32_lava_splash", "modifier")
-tt.main_script.insert = scripts.mod_track_target.insert
-tt.main_script.update = scripts.mod_stage_32_lava_splash.update
-tt.paths_y = {
-	[2] = 555
-}
-tt.paths_y_big = {
-	[2] = 555
-}
-tt.modifier.duration = 1e+99
-tt.fx = "fx_stage_32_lava_splash"
-tt.fx_big = "fx_stage_32_lava_splash_big"
-
-tt = E:register_t("mod_stage_32_lava_splash_2", "mod_stage_32_lava_splash")
-tt.paths_y = {
-	[3] = 555
-}
-tt.paths_y_big = {
-	[3] = 555
-}
-tt.fx = "fx_stage_32_lava_splash_2"
-tt.fx_big = "fx_stage_32_lava_splash_big_2"
-
-tt = E:register_t("mod_stage_35_lava_splash", "mod_stage_32_lava_splash")
-tt.main_script.insert = scripts.mod_stage_35_lava_splash.insert
-tt.main_script.update = scripts.mod_stage_35_lava_splash.update
-tt.main_script.remove = scripts.mod_stage_35_lava_splash.remove
-tt.apply_if_enemy_is_to_right = true
-tt.paths_x = {
-	[15] = 0,
-	[7] = 0
-}
-tt.paths_x_big = {
-	[15] = 0,
-	[7] = 0
-}
-tt.fx = "fx_stage_35_lava_splash"
-tt.fx_big = "fx_stage_35_lava_splash_big"
-
-tt = E:register_t("mod_stage_35_water_splash", "mod_stage_35_lava_splash")
-tt.apply_if_enemy_is_to_right = false
-tt.paths_x = {
-	[8] = 1025
-}
-tt.paths_x_big = {
-	[8] = 1025
-}
-tt.fx = "fx_stage_35_water_splash"
-tt.fx_big = "fx_stage_35_water_splash_big"
-
 tt = E:register_t("decal_stage33_envelop", "decal_scripted")
 E:add_comps(tt, "ui")
 tt.main_script.update = scripts.decal_stage33_envelop.update
@@ -12508,103 +12197,6 @@ tt.render.sprites[1].hidden = true
 tt.ui.can_click = false
 tt.ui.can_select = false
 
-tt = E:register_t("tower_holder_blocked_stage_35_house_1", "tower_holder_blocked")
-tt.pre_destroy = scripts.stage_35_house_holder.pre_destroy
-tt.destroy_house = scripts.stage_35_house_holder.destroy_house
-tt.render.sprites[1] = E:clone_c("sprite")
-tt.render.sprites[1].name = "stage35_deco1"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor = v(0.13035714285714287, 0.2727864583333333)
-tt.cannonball_fx = "fx_stage_35_cannonball"
-tt.spawn_escombro = "holder"
-tt.sound = "Stage35Cinematic1"
-tt.unit_spawns = {{
-	unit = "soldier_stage_35_cannonball",
-	spi = 2,
-	ni_offset = 0
-}, {
-	unit = "soldier_stage_35_cannonball",
-	spi = 1,
-	ni_offset = 8
-}, {
-	unit = "soldier_stage_35_cannonball",
-	spi = 3,
-	ni_offset = 4
-}}
-tt.pre_destroy_cannonballs_list = {{
-	delay = 5.6,
-	spawn_escombro = "camino",
-	pos = v(150, 240)
-}, {
-	delay = 6,
-	spawn_escombro = "camino",
-	pos = v(80, 350)
-}}
-tt.cinematic_camera_duration_offset = 0
-tt.ui.can_click = false
-tt.ui.can_select = false
-
-tt = E:register_t("tower_holder_blocked_stage_35_house_2", "tower_holder_blocked_stage_35_house_1")
-tt.render.sprites[1].name = "stage35_deco2"
-tt.render.sprites[1].anchor = v(0.7857142857142857, 0.7272135416666666)
-tt.unit_spawns = nil
-tt.spawn_escombro = "holder"
-tt.cinematic_camera_duration_offset = -1.4
-tt.pre_destroy_cannonballs_list = nil
-tt.sound = nil
-
-tt = E:register_t("tower_holder_blocked_stage_35_house_3", "tower_holder_blocked_stage_35_house_1")
-tt.render.sprites[1].name = "stage35_deco3"
-tt.render.sprites[1].anchor = v(0.23, 0.673828125)
-tt.unit_spawns = nil
-tt.spawn_escombro = nil
-tt.pre_destroy_cannonballs_list = {{
-	delay = 5.5,
-	spawn_escombro = "camino",
-	pos = v(300, 460)
-}}
-tt.sound = "Stage35Cinematic3"
-
-tt = E:register_t("tower_holder_blocked_stage_35_house_4", "tower_holder_blocked_stage_35_house_1")
-tt.render.sprites[1].name = "stage35_deco4"
-tt.render.sprites[1].anchor = v(0.7767857142857143, 0.3190104166666667)
-tt.spawn_escombro = "holder"
-tt.pre_destroy_cannonballs_list = {{
-	delay = 5.8,
-	spawn_escombro = "camino",
-	pos = v(883, 397)
-}}
-tt.sound = "Stage35Cinematic2"
-
-tt = E:register_t("tower_holder_blocked_stage_35_house_5", "tower_holder_blocked_stage_35_house_1")
-tt.render.sprites[1].hidden = true
-tt.destroy_small_spawner_nmbr = 1
-tt.decal = "decal_stage_35_escombros_holder_2"
-tt.cinematic_camera_duration_offset = -0.4
-tt.spawn_escombro = nil
-tt.pre_destroy_cannonballs_list = {{
-	delay = 1.1,
-	spawn_escombro = "camino",
-	pos = v(872, 527)
-}}
-tt.sound = nil
-
-tt = E:register_t("tower_holder_blocked_stage_35_house_6", "tower_holder_blocked_stage_35_house_1")
-tt.render.sprites[1].hidden = true
-tt.destroy_small_spawner_nmbr = 3
-tt.decal = "decal_stage_35_escombros_holder_1"
-tt.spawn_escombro = "holder"
-tt.pre_destroy_cannonballs_list = nil
-tt.sound = nil
-
-tt = E:register_t("tower_holder_blocked_stage_35_house_7", "tower_holder_blocked_stage_35_house_1")
-tt.render.sprites[1].hidden = true
-tt.destroy_small_spawner_nmbr = 2
-tt.decal = "decal_stage_35_escombros_holder_3"
-tt.spawn_escombro = nil
-tt.pre_destroy_cannonballs_list = nil
-tt.sound = nil
-
 tt = E:register_t("bullet_qiongqi_lightning", "bullet")
 tt.bullet.damage_min = 225
 tt.bullet.damage_max = 418.75
@@ -12660,39 +12252,6 @@ E:add_comps(tt, "sound_events")
 tt.render.sprites[1].prefix = "stage_34_barro_splash"
 tt.sound_events.insert = "EnemyBossPrincessMudPoolSummon"
 
-tt = E:register_t("fx_stage_35_cannonball", "decal_scripted")
-tt.main_script.update = scripts.fx_stage_35_cannonball.update
-tt.render.sprites[1].prefix = "stage5_destruccion_holderDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -30
-tt.escombro_camino = "decal_stage_35_escombros_cannonball_camino"
-tt.escombro_holder = "decal_stage_35_escombros_cannonball_holder"
-
-tt = E:register_t("fx_stage_35_cannonball_open_path", "decal_scripted")
-tt.main_script.update = scripts.fx_stage_35_cannonball_open_path.update
-tt.render.sprites[1].prefix = "stage_5_pokebola_tntDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].sort_y_offset = -130
-
-tt = E:register_t("fx_stage_35_cannonball_block_path", "decal_scripted")
-tt.main_script.update = scripts.fx_stage_35_cannonball_block_path.update
-tt.render.sprites[1].prefix = "stage_5_bloqueo_pathDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -450
-
-tt = E:register_t("fx_stage_35_small_spawner_fx", "decal_scripted")
-tt.main_script.update = scripts.multi_sprite_fx.update
-tt.render.sprites[1].prefix = "stage_5_spawner_fxDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].delay_start = fts(2)
-tt.render.sprites[1].hidden = true
-
 tt = E:register_t("fx_enemy_fan_guard_melee_hit", "fx")
 tt.render.sprites[1].name = "fan_guard_hit_run"
 tt.render.sprites[1].sort_y_offset = -30
@@ -12746,45 +12305,6 @@ tt.particle_system.emission_rate = 3
 tt.particle_system.track_offset = v(0, 20)
 tt.particle_system.z = Z_DECALS
 tt.particle_system.particle_lifetime = {fts(44), fts(44)}
-
-tt = E:register_t("soldier_stage_35_cannonball", "soldier_militia")
-E:add_comps(tt, "reinforcement", "nav_path", "tween")
--- tt.info.portrait = "gui_bottom_info_image_soldiers_0076"
-tt.info.portrait = "kr5_info_portraits_soldiers_0001"
-tt.health.hp_max = 90
-tt.health.armor = 0
-tt.health_bar.offset = v(0, 35)
-tt.info.fn = scripts.soldier_charge.get_info
-tt.info.random_name_count = 5
-tt.info.random_name_format = "SOLDIER_CANNONBALL_%i_NAME"
-tt.main_script.insert = scripts.soldier_reinforcement.insert
-tt.main_script.update = scripts.soldier_stage_35_cannonball.update
-tt.melee.range = 100
-tt.melee.attacks[1].animation = "attack_melee"
-tt.melee.attacks[1].damage_min = 8
-tt.melee.attacks[1].damage_max = 13
-tt.melee.attacks[1].shared_cooldown = true
-tt.melee.attacks[1].hit_time = fts(11)
-tt.soldier.melee_slot_offset = v(8, 0)
-tt.render.sprites[1].prefix = "sate_5_mono_unit"
-tt.render.sprites[1].angles = {}
-tt.render.sprites[1].angles.walk = {"walk"}
-tt.render.sprites[1].anchor = vv(0.5)
-tt.soldier.melee_slot_offset.x = 3
-tt.reinforcement.fade = false
-tt.reinforcement.fade_in = false
-tt.reinforcement.fade_out = false
-tt.unit.mod_offset = v(0, ady(22))
-tt.ui.click_rect = r(-15, -2, 30, 35)
-tt.patrol_pos_offset = v(15, 10)
-tt.patrol_min_cd = 5
-tt.patrol_max_cd = 10
-tt.nav_path.dir = -1
-tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
-tt.tween.props[1].name = "alpha"
-tt.tween.remove = false
-tt.tween.loop = false
-tt.tween.disabled = true
 
 tt = RT("ps_bullet_tower_stage_37_dragons_wardens_trail")
 E:add_comps(tt, "pos", "particle_system")
@@ -13397,10 +12917,17 @@ tt = RT("aura_boss_37_geiser_decal_dmg_campaign", "aura_boss_37_geiser_decal_dmg
 tt.aura.damage_max = 30
 tt.aura.damage_type = DAMAGE_EXPLOSION
 
-tt = RT("mod_stage_36_portal_splash", "mod_stage_32_lava_splash")
+tt = RT("mod_stage_36_portal_splash", "modifier")
 tt.main_script.insert = scripts.mod_stage_36_portal_splash.insert
 tt.main_script.update = scripts.mod_stage_36_portal_splash.update
 tt.main_script.remove = scripts.mod_stage_36_portal_splash.remove
+tt.paths_y = {
+	[2] = 555
+}
+tt.paths_y_big = {
+	[2] = 555
+}
+tt.modifier.duration = 1e+99
 tt.coords_portal = {v(991, 536), v(1100, 500)}
 tt.fx = "fx_stage_36_portal_splash"
 tt.fx_big = "fx_stage_36_portal_splash"

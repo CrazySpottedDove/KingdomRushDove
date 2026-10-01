@@ -2899,6 +2899,141 @@ tt.death_bullet_boss = "bullet_boss_grymbeard_death_boss"
 tt.death_bullet_scrap = "bullet_boss_grymbeard_death_scrap_"
 tt.sound_death = "Stage27BFGrymbeardDeath"
 
+tt = E:register_t("controller_stage_16_overseer")
+E:add_comps(tt, "editor", "pos", "main_script", "render", "health", "info", "ui")
+tt.main_script.update = scripts.controller_stage_16_overseer.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseerDef"
+tt.render.sprites[1].name = "idle1_1"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 2
+tt.render.sprites[1].exo_hide_prefix = {"hurt2", "hurt1"}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "overseer_backDef"
+tt.render.sprites[2].name = "loop"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].sort_y_offset = 3
+tt.render.sprites[2].offset = v(20, 620)
+tt.hit_point_template = "enemy_overseer_hit_point"
+tt.hit_point_pos = {v(415, 425), v(520, 400), v(625, 425)}
+tt.health.hp_max = 40000
+tt.health.ignore_delete_after = true
+tt.info.enc_icon = 38
+tt.info.portrait_boss = "boss_health_bar_icon_0004"
+tt.phase_per_hp_threshold = {100, 90, 80, 70, 50, 20}
+tt.phase_per_time = {30, 75, 90, 120, 100000000}
+tt.change_tower_cooldown = {nil, 60, 60, 45, 30}
+tt.change_tower_amount = {nil, 1, 1, 2, 3}
+tt.glare_cooldown = {nil, nil, nil, 36, 33, 30}
+tt.glare_duration = {nil, nil, nil, 4, 5, 6}
+tt.heal_cooldown = {nil, nil, nil, 30, 30, 15}
+tt.heal_duration = {nil, nil, nil, 6, 8, 10}
+tt.heal_per_second = {nil, nil, nil, 150, 450, 200}
+tt.downgrade_cooldown = {nil, nil, 60, 55, 45, 40}
+tt.downgrade_count = {nil, nil, 1, 2, 2, 2}
+tt.slow_cooldown = {nil, 50, 50, 45, 40, 35}
+tt.slow_count = {nil, 1, 2, 3, 3, 2}
+tt.holders_close = {"6", "7", "8", "9", "10"}
+tt.swap_delay = fts(60)
+tt.destroy_holder_cooldown = {nil, nil, nil, nil, nil, 20}
+tt.holders_to_destroy = {
+	"1",
+	"13",
+	"10",
+	"2",
+	"12",
+	"4",
+	"9",
+	"5",
+	"14",
+	"3",
+	"11",
+	"6",
+	"8",
+	"15",
+	"7"
+}
+tt.nav_mesh_patches = {
+	["1"] = {
+		[2] = {3, 4}
+	},
+	["13"] = {
+		[11] = {nil, 12, 10, 14},
+		[14] = {nil, 10, 15}
+	},
+	["10"] = {
+		[9] = {11, nil, 8, 14},
+		[11] = {nil, 12, 9, 14},
+		[14] = {nil, 11, 15}
+	},
+	["2"] = {
+		[3] = {15, 6},
+		[4] = {6, 5, nil, 3}
+	},
+	["12"] = {
+		[11] = {nil, nil, 9, 14},
+		[5] = {6, nil, nil, 4}
+	},
+	["4"] = {
+		[5] = {6, nil, nil, 3},
+		[6] = {7, nil, 5, 3}
+	},
+	["9"] = {
+		[8] = {11, nil, 7, 15},
+		[11] = {nil, nil, 8, 14},
+		[14] = {nil, 11, 15}
+	},
+	["5"] = {
+		[6] = {7, nil, nil, 3},
+		[3] = {15, 6}
+	},
+	["14"] = {
+		[11] = {nil, nil, 8},
+		[15] = {nil, 8, 3}
+	},
+	["3"] = {
+		[6] = {7},
+		[15] = {nil, 8}
+	},
+	["11"] = {
+		[8] = {nil, nil, 7, 15}
+	},
+	["6"] = {
+		[7] = {8, nil, nil, 15}
+	},
+	["8"] = {
+		[7] = {nil, nil, nil, 15},
+		[15] = {nil, 7}
+	},
+	["15"] = {
+		[7] = {}
+	},
+	["7"] = {}
+}
+tt.idle_cooldown_min = 2
+tt.idle_cooldown_max = 6
+tt.idle_start_anims = {"startidle2", "startidle1"}
+tt.idle_fight_anims = {"idle1", "idle2", "idle4", "idle5", "idle6"}
+tt.first_time_cooldown = 5
+tt.life_hurt_threshold = {33, 66}
+tt.destroy_holders_template = "decal_stage_16_holder_destroy_fx"
+tt.destroy_holders_crater_template = "decal_stage_16_holder_destroy_crater"
+tt.destroy_holders_bullet = "bullet_stage_16_overseer_destroy_holders"
+tt.change_towers_template = "decal_stage_16_tower_change_fx"
+tt.ui.click_rect = r(-120, -30, 240, 180)
+tt.info.fn = scripts.controller_stage_16_overseer.get_info
+tt.info.portrait = "kr5_info_portraits_enemies_0043"
+tt.phase = 1
+tt.sound_rumble = "Stage16OverseerRumble"
+tt.sound_unchain_center = "Stage16OverseerUnchainCenter"
+tt.sound_teleport_charge = "Stage16OverseerTeleportCharge"
+tt.sound_teleport = "Stage16OverseerTeleport"
+tt.sound_destroy_charge = "Stage16OverseerDestroyCharge"
+tt.sound_destroy_ray = "Stage16OverseerDestroyRay"
+tt.sound_destroy_explosion = "Stage16OverseerDestroyExplosion"
+tt.sound_hurt = "Stage16OverseerHurt"
+tt.sound_death = "Stage16OverseerDeath"
+
 tt = E:register_t("boss_spider_queen", "boss")
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 tt.vis.flags_jumping = bor(F_ENEMY, F_BOSS)
@@ -3350,6 +3485,95 @@ tt.timed_attacks.list[1].vis_flags = bor(F_AREA)
 tt.timed_attacks.list[1].vis_flags_stun = bor(F_AREA)
 tt.timed_attacks.list[1].vis_bans_stun = bor(F_FLYING)
 tt.sound_death = "Stage35BossBullKingDeath"
+
+tt = E:register_t("mod_bull_king_tower_debuff", "mod_hide_tower")
+E:add_comps(tt, "render")
+tt.main_script.update = scripts.mod_bull_king_tower_debuff.update
+tt.main_script.remove = nil
+tt.modifier.duration = {4, 4.5, 5, 5.5}
+tt.modifier.vis_flags = F_CUSTOM
+tt.modifier.handle_stun = true
+tt.render.sprites[1].prefix = "stage_35_stun_towerDef"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].offset.y = 5
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].sort_y_offset = -5
+tt.offset_y_per_tower = {
+	hermit_toad = 4
+}
+
+tt = RT("mod_bull_king_stun", "mod_stun")
+tt.modifier.duration = {7, 8.5, 10, 11}
+tt.main_script.insert = scripts.mod_bull_king_stun.insert
+tt.main_script.remove = scripts.mod_bull_king_stun.remove
+tt.render.sprites[1].prefix = "stage_35_stun_unitDef"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = -5
+tt.modifier.animation_phases = true
+tt.modifier.hide_target_delay = fts(3)
+tt.modifier.use_mod_offset = false
+
+tt = E:register_t("fx_boss_bull_king_spawn", "decal_scripted")
+tt.main_script.update = scripts.fx_boss_bull_king_spawn.update
+tt.render.sprites[1].prefix = "stage_35_stun_towerDef"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].sort_y_offset = -20
+
+tt = E:register_t("fx_boss_bull_king_hit", "fx")
+tt.render.sprites[1].prefix = "stage_35_hitDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].scale = vv(2)
+
+tt = E:register_t("fx_boss_bull_king_hit_area", "fx")
+tt.render.sprites[1].prefix = "stage_35_areaattackDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t("fx_boss_bull_king_domo", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].prefix = "stage_35_domoDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].delay_start = fts(11)
+
+tt = E:register_t("fx_boss_bull_king_anime", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].prefix = "stage_35_fx_animeDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].delay_start = 1
+
+tt = E:register_t("fx_boss_bull_king_anime_white", "decal_scripted")
+tt.main_script.update = scripts.fx_boss_bull_king_anime_color.update
+tt.render.sprites[1].name = "stage_35_box_asst_box1"
+tt.render.sprites[1].scale = vv(200)
+tt.render.sprites[1].z = Z_OBJECTS_SKY - 1
+tt.render.sprites[1].sort_y_offset = 10
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = true
+tt.delay_start = 1.15
+
+tt = E:register_t("fx_boss_bull_king_anime_black", "fx_boss_bull_king_anime_white")
+tt.render.sprites[1].name = "stage_35_box_asst_box2"
+tt.delay_start = 1.05
+
+tt = E:register_t("fx_boss_bull_king_explosion", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].prefix = "stage_35_explosion_pathDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 20
 
 -- 墨尔古伦
 tt = RT("boss_murglum", "boss")

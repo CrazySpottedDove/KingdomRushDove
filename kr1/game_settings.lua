@@ -402,7 +402,6 @@ GS.encyclopedia_enemies = {
 	"enemy_spiderling",
 	"enemy_unblinded_priest",
 	"enemy_unblinded_abomination",
-	"enemy_unblinded_abomination_stage_8",
 	"enemy_armored_nightmare",
 	"enemy_unblinded_shackler",
 	"enemy_corrupted_stalker",
