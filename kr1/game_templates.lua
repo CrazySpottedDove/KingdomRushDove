@@ -10105,11 +10105,6 @@ tt.render.sprites[1].animated = true
 tt.bullet.hide_radius = 0
 tt.bullet.hit_distance = 20
 
-tt = E:register_t("mask_stage_30_1", "decal")
-tt.render.sprites[1].name = "stage_30_mask_01"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -60
-
 tt = E:register_t("mod_enemy_glarenwarden_melee_lifesteal", "modifier")
 tt.main_script.insert = scripts.mod_lifesteal_kr5.insert
 tt.damage_min = 56

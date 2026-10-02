@@ -546,6 +546,11 @@ tt.render.sid_smoke = 4
 tt.render.sprites[tt.render.sid_smoke] = table.deepclone(tt.render.sprites[2])
 tt.render.sprites[tt.render.sid_smoke].prefix = "spiderqueen_smokeDef"
 
+tt = E:register_t_hot("mask_stage_30_1", "decal", true)
+tt.render.sprites[1].name = "stage_30_mask_01"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = -60
+
 tt = E:register_t_hot("mask_stage_30_2", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_02"
 tt.render.sprites[1].animated = false
