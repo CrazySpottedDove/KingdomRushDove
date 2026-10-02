@@ -2077,9 +2077,6 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 				e.nav_path.spi = 1
 				e.nav_path.ni = im.ni
 				e.pos.x, e.pos.y = im.pos.x, im.pos.y
-				if e.enemy then
-					e.enemy.gold = 0
-				end
 				queue_insert(store, e)
 			end
 			local pis = {}

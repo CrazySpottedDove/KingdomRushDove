@@ -11995,15 +11995,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 tt.render.sprites[1].scale = vv(1.5)
 
-tt = E:register_t("fx_stage_34_fuentes_splash", "fx")
-tt.render.sprites[1].prefix = "stage_34_agua_splash"
-tt.render.sprites[1].name = "in"
-
-tt = E:register_t("fx_stage_34_fuentes_splash_barro", "fx_stage_34_fuentes_splash")
-E:add_comps(tt, "sound_events")
-tt.render.sprites[1].prefix = "stage_34_barro_splash"
-tt.sound_events.insert = "EnemyBossPrincessMudPoolSummon"
-
 tt = E:register_t("fx_enemy_fan_guard_melee_hit", "fx")
 tt.render.sprites[1].name = "fan_guard_hit_run"
 tt.render.sprites[1].sort_y_offset = -30
