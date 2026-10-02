@@ -58,6 +58,7 @@ game.required_textures = {
 	"go_towers_group23",
 	"go_towers_group24",
 	"go_towers_group25",
+	"go_towers_catapult",
 	"go_stage128",
 	"tower_holders"
 }
@@ -111,9 +112,10 @@ game.required_sounds = {
 	"tower_melting_furnace",
 	"tower_wicked_sisters",
 	"tower_sandworm",
-	"tower_stage_28_priests_barrack"
+	"tower_stage_28_priests_barrack",
+	"tower_catapult"
 }
-game.required_exoskeletons = {"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava"}
+game.required_exoskeletons = {"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava", "tower_catapult_level_4Def", "tower_catapult_level_4_rockyDef", "tower_catapult_level_4_ballsDef"}
 game.plugin_required_textures = {}
 game.plugin_required_sounds = {}
 game.plugin_required_exoskeletons = {}

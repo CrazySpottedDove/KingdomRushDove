@@ -412,7 +412,7 @@ function util.generate_nvcompress_commands(png_dir, dds_dir, base_name, num_page
 	for i = 1, num_pages do
 		local png_path = png_dir .. "/" .. base_name .. "-" .. i .. ".png"
 		local dds_path = dds_dir .. "/" .. base_name .. "-" .. i .. ".dds"
-		commands[#commands + 1] = string.format("nvcompress.exe -bc3 -maximum %q %q", png_path, dds_path)
+		commands[#commands + 1] = string.format("nvcompress.exe -bc3 -highest %q %q", png_path, dds_path)
 	end
 	return commands
 end

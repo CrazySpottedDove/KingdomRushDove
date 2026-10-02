@@ -55421,5 +55421,140 @@ return {
 		from = 74,
 		prefix = "magma_elemental_creep",
 		to = 109
+	},
+	tower_catapult_projectiles_pojectile_barrel = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_barrel",
+		to = 1
+	},
+	tower_catapult_projectiles_pojectile = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile",
+		to = 1
+	},
+	tower_catapult_projectiles_pojectile_lvl4 = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4",
+		to = 1
+	},
+	tower_catapult_projectiles_pojectile_lvl4_explosive = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4_explosive",
+		to = 1
+	},
+	tower_catapult_projectiles_pojectile_hit_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_hit_fx",
+		to = 18
+	},
+	tower_catapult_projectiles_pojectile_lvl4_explosive_fx_fall = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4_explosive_fx",
+		to = 8
+	},
+	tower_catapult_projectiles_pojectile_lvl4_explosive_fx_idle = {
+		from = 9,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4_explosive_fx",
+		to = 9
+	},
+	tower_catapult_projectiles_pojectile_lvl4_explosive_fx_activate = {
+		from = 10,
+		prefix = "tower_catapult_projectiles_pojectile_lvl4_explosive_fx",
+		to = 35
+	},
+	tower_catapult_projectiles_pojectile_particle = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_pojectile_particle",
+		to = 1
+	},
+	tower_catapult_projectiles_tarred_zone_decal_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_tarred_zone_decal",
+		to = 45
+	},
+	tower_catapult_projectiles_tarred_zone_decal_idle = {
+		from = 46,
+		prefix = "tower_catapult_projectiles_tarred_zone_decal",
+		to = 46
+	},
+	tower_catapult_projectiles_tarred_zone_hit_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_tarred_zone_hit_fx",
+		to = 10
+	},
+	tower_catapult_projectiles_trap_hit_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_trap_hit_fx",
+		to = 6
+	},
+	tower_catapult_projectiles_trap_idle = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_trap",
+		to = 1
+	},
+	tower_catapult_projectiles_trap_set = {
+		from = 2,
+		prefix = "tower_catapult_projectiles_trap",
+		to = 19
+	},
+	tower_catapult_projectiles_trap_ready = {
+		from = 20,
+		prefix = "tower_catapult_projectiles_trap",
+		to = 20
+	},
+	tower_catapult_projectiles_trap_activate = {
+		from = 21,
+		prefix = "tower_catapult_projectiles_trap",
+		to = 48
+	},
+	tower_catapult_projectiles_blazing_ball_projectile_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_projectile",
+		to = 10
+	},
+	tower_catapult_projectiles_blazing_ball_projectile_particle_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_projectile_particle",
+		to = 8
+	},
+	tower_catapult_projectiles_blazing_ball_explosion_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_explosion_fx",
+		to = 21
+	},
+	tower_catapult_projectiles_blazing_ball_run_side = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball",
+		to = 10
+	},
+	tower_catapult_projectiles_blazing_ball_run_up = {
+		from = 11,
+		prefix = "tower_catapult_projectiles_blazing_ball",
+		to = 20
+	},
+	tower_catapult_projectiles_blazing_ball_run_down = {
+		from = 21,
+		prefix = "tower_catapult_projectiles_blazing_ball",
+		to = 30
+	},
+	tower_catapult_projectiles_blazing_ball_floor_particle_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_floor_particle",
+		to = 14
+	},
+	tower_catapult_projectiles_blazing_ball_decal_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_decal",
+		to = 47
+	},
+	tower_catapult_projectiles_blazing_ball_decal_idle = {
+		from = 48,
+		prefix = "tower_catapult_projectiles_blazing_ball_decal",
+		to = 48
+	},
+	tower_catapult_projectiles_blazing_ball_hit_fx_run = {
+		from = 1,
+		prefix = "tower_catapult_projectiles_blazing_ball_hit_fx",
+		to = 12
 	}
 }

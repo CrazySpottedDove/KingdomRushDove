@@ -73,7 +73,8 @@ GS.engineer_towers = {
 	"tower_balloon",
 	"tower_ignis_altar",
 	"tower_melting_furnace",
-	"tower_sandworm"
+	"tower_sandworm",
+	"tower_catapult"
 }
 GS.barrack_towers = {
 	"tower_barrack_1",

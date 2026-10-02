@@ -440,6 +440,14 @@ return {
 			tt_title = _("TOWER_SANDWORM_NAME"),
 			tt_desc = _("TOWER_SANDWORM_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_catapult",
+			image = "kr6_quickmenu_main_icon_catapult",
+			type = "catapult",
+			place = 25,
+			tt_title = _("TOWER_CATAPULT_NAME"),
+			tt_desc = _("TOWER_CATAPULT_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	archer = {{M(tpl.common_upgrade, {
@@ -3850,6 +3858,55 @@ return {
 			tt_desc = _("TOWER_BALLOON_OIL_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
+	catapult = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_catapult_0001",
+		sounds = {"TowerRoyalCatapultSkillATaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_CATAPULT_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_CATAPULT_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_CATAPULT_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_CATAPULT_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_catapult_0002",
+		sounds = {"TowerRoyalCatapultSkillBTaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_CATAPULT_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_CATAPULT_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_CATAPULT_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_CATAPULT_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_catapult_0003",
+		sounds = {"TowerRoyalCatapultSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_CATAPULT_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_CATAPULT_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_CATAPULT_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_CATAPULT_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_CATAPULT_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
 	twilight_elves_barrack = {{M(tpl.upgrade_power, {
 		action_arg = "arrow_storm",
 		image = "kr4_special_icons_0050",
