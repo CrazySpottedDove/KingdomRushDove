@@ -43673,34 +43673,6 @@ return {
 		layer_to = 10,
 		to = 118
 	},
-	tricannon_tower_lvl4_tower_layerX_skill_2_attack = {
-		from = 213,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl4_tower_layer%i",
-		layer_to = 10,
-		to = 280
-	},
-	tricannon_tower_lvl4_tower_layerX_skill_2_charge = {
-		from = 143,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl4_tower_layer%i",
-		layer_to = 10,
-		to = 201
-	},
-	tricannon_tower_lvl4_tower_layerX_skill_2_fade_out = {
-		from = 281,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl4_tower_layer%i",
-		layer_to = 10,
-		to = 290
-	},
-	tricannon_tower_lvl4_tower_layerX_skill_2_idle = {
-		from = 202,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl4_tower_layer%i",
-		layer_to = 10,
-		to = 212
-	},
 	tricannon_tower_overheat_fire_fx = {
 		from = 1,
 		prefix = "tricannon_tower_fissure_hit",
