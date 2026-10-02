@@ -91,10 +91,10 @@ controller_stage_23_roboboots_update = function(this, store)
 						local leg_index = wave_data.leg
 						local current_leg = legs_data[leg_index]
 						if current_leg.state == BOOT_STATE_OPEN then
-							current_leg.next_ts = start_wave_ts + wave_data.timings[1][2] or 0
+							current_leg.next_ts = start_wave_ts + (wave_data.timings[1][2] or 0)
 							log.info("BOOT_STATE_OPEN " .. current_leg.next_ts)
 						else
-							current_leg.next_ts = start_wave_ts + wave_data.timings[1][1] or 0
+							current_leg.next_ts = start_wave_ts + (wave_data.timings[1][1] or 0)
 							log.info("BOOT_STATE_CLOSE " .. current_leg.next_ts)
 						end
 					end
