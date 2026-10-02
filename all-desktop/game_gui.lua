@@ -2381,6 +2381,10 @@ function PowerButton:initialize(default_image, mask_image)
 	end
 end
 
+function PowerButton:set_cooldown_time(t)
+	self.cooldown_time = t
+end
+
 function PowerButton:set_mode(mode)
 	self.mode = mode
 
@@ -2589,10 +2593,6 @@ function Power1Button:fire(wx, wy)
 
 	game_gui.game.simulation:insert_entity(e)
 	signal.emit("power-used", 1)
-end
-
-function Power1Button:set_cooldown_time(t)
-	self.cooldown_time = t
 end
 
 function Power1Button:wait_time_dec(dt)

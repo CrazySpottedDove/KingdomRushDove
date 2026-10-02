@@ -1661,10 +1661,6 @@ function scripts.tower_mage.get_info(this)
 	return o
 end
 
-function scripts.tower_mage.insert(this, store)
-	return true
-end
-
 function scripts.tower_mage.update(this, store)
 	local tower_sid = this.render.sid_tower
 	local shooter_sid = this.render.sid_shooter
@@ -8218,8 +8214,7 @@ end
 scripts.power_reinforcements_control = {}
 
 function scripts.power_reinforcements_control.insert(this, store)
-	local i = math.random(1, 3)
-	local e = E:create_entity("re_current_" .. i)
+	local e = E:create_entity("re_current")
 
 	e.pos.x = this.pos.x + 10
 	e.pos.y = this.pos.y - 10
@@ -8228,8 +8223,7 @@ function scripts.power_reinforcements_control.insert(this, store)
 	e.reinforcement.duration = this.duration
 	simulation:queue_insert_entity(e)
 
-	i = math.random(1, 3)
-	e = E:create_entity("re_current_" .. i)
+	e = E:create_entity("re_current")
 	e.pos.x = this.pos.x - 10
 	e.pos.y = this.pos.y + 10
 	e.nav_rally.center:copy(e.pos)
