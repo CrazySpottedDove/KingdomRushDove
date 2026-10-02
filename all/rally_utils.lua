@@ -12,19 +12,21 @@ function rally_utils.rally_fn_default(this, store, force_silent)
 	local b = this.barrack
 	local all_dead = true
 	local sounds = {}
-	local soldier_count = #b.soldiers
+	local soldier_count = this.mercenary and #b.soldiers or b.max_soldiers
 	for i = 1, soldier_count do
 		local s = b.soldiers[i]
-		if b.scattered then
-			s.nav_rally.pos = U.rally_formation_position(i, b, soldier_count, b.rally_angle_offset)
-			s.nav_rally.center:copy(s.nav_rally.pos)
-		else
-			s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, soldier_count, b.rally_angle_offset)
-		end
-		s.nav_rally.new = true
-		all_dead = all_dead and (s.health and s.health.dead)
-		if s.sound_events and s.sound_events.change_rally_point then
-			sounds[#sounds + 1] = s.sound_events.change_rally_point
+		if s then
+			if b.scattered then
+				s.nav_rally.pos = U.rally_formation_position(i, b, soldier_count, b.rally_angle_offset)
+				s.nav_rally.center:copy(s.nav_rally.pos)
+			else
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, soldier_count, b.rally_angle_offset)
+			end
+			s.nav_rally.new = true
+			all_dead = all_dead and (s.health and s.health.dead)
+			if s.sound_events and s.sound_events.change_rally_point then
+				sounds[#sounds + 1] = s.sound_events.change_rally_point
+			end
 		end
 	end
 	if not (all_dead or force_silent) then

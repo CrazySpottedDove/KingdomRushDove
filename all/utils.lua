@@ -2321,6 +2321,23 @@ function U.get_modifiers(store, entity, list)
 	return result
 end
 
+--- 获取作用于该实体的特定模板名的单个 modifier
+---@param entity table
+---@param template_name string
+---@return table? modifier entity
+function U.get_modifier(entity, template_name)
+	if not entity._applied_mods then
+		return nil
+	end
+	for i = 1, #entity._applied_mods do
+		local mod = entity._applied_mods[i]
+		if mod.template_name == template_name then
+			return mod
+		end
+	end
+	return nil
+end
+
 ---检查实体是否有指定mod
 ---@param store table game.store
 ---@param entity table 实体
