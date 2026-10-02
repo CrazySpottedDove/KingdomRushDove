@@ -2908,8 +2908,10 @@ function U.get_enemy_encyclopedia_creep_from_kr(index)
 		end
 	elseif index <= 173 then
 		return 3
-	else
+	elseif index <= 299 then
 		return 5
+	else
+		return 6
 	end
 end
 

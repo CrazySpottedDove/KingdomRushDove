@@ -5673,7 +5673,7 @@ function EncyclopediaView:detail_tower(index)
 	desc_label.colors.text = {0, 0, 0, 255}
 	desc_label.text = _(string.upper(dt.info.i18n_key or tower_name) .. "_DESCRIPTION")
 	desc_label.text_align = "center"
-	desc_label.fit_lines = 4
+	desc_label.fit_lines = 3
 
 	self.right_panel:add_child(desc_label)
 
@@ -6277,7 +6277,7 @@ function EncyclopediaView:detail_creep(index)
 	desc_label.colors.text = {0, 0, 0, 255}
 	desc_label.text = _(name_prefix .. "_DESCRIPTION")
 	desc_label.text_align = "center"
-	desc_label.fit_lines = 4
+	desc_label.fit_lines = 3
 
 	self.right_panel:add_child(desc_label)
 
