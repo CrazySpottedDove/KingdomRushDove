@@ -1582,6 +1582,10 @@ end
 ---@param plugin_data table
 ---@return boolean
 function PluginManagerView:_is_local_ahead(plugin_data)
+	-- 仅开发者可见本地高于远端的提示（普通用户不会遇到该场景）
+	if not self._developer_mode then
+		return false
+	end
 	local remote = self.remote_by_entry and self.remote_by_entry[plugin_data.config.entry]
 	if not remote or not remote.version or not plugin_data.config.version then
 		return false
