@@ -144,10 +144,9 @@ tt.render.sprites[1].prefix = "vanhelsing_silence"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].sort_y_offset = -2
+
 tt = RT("tower_barbarian", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.info.portrait = "info_portraits_towers_0012"
 tt.info.enc_icon = 18
 tt.tower.type = "barbarian"
@@ -171,10 +170,9 @@ tt.render.sprites[3].prefix = "towerbarracklvl4_barbarian_door"
 tt.render.sprites[3].offset = vec_2(0, 39)
 tt.sound_events.insert = "BarrackBarbarianTaunt"
 tt.sound_events.change_rally_point = "BarrackBarbarianTaunt"
+
 tt = RT("soldier_barbarian", "soldier_militia")
-
 AC(tt, "powers", "ranged")
-
 anchor_y = 0.3
 image_y = 62
 tt.health.hp_max = 310
@@ -219,7 +217,7 @@ tt.ranged.attacks[1].cooldown = 2.5 + fts(14)
 tt.ranged.attacks[1].disabled = true
 tt.ranged.attacks[1].level = 0
 tt.ranged.attacks[1].max_range = 155
-tt.ranged.attacks[1].min_range = 55
+tt.ranged.attacks[1].min_range = 0
 tt.ranged.attacks[1].power_name = "throwing"
 tt.ranged.attacks[1].range_inc = 13
 tt.ranged.attacks[1].shoot_time = fts(7)

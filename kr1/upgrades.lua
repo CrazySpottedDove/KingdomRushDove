@@ -1464,7 +1464,6 @@ upgrades.engineer_bombs = {
 	"rock_entwood",
 	"rock_firey_nut",
 	"tower_tricannon_bomb",
-	"tower_tricannon_bomb_overheated",
 	"bullet_tower_demon_pit_basic_attack_lvl4",
 	"bullet_tower_demon_pit_big_guy_lvl4",
 	"bullet_tower_barrel_lvl4",
@@ -2552,6 +2551,8 @@ function upgrades:patch_templates(max_level)
 			T("user_power_2").cooldown = T("user_power_2").cooldown - v.cooldown_dec
 			T("user_power_2").duration = T("user_power_2").duration + v.duration_inc
 		end
+	else
+		E:set_template("re_current", T("re_farmer"))
 	end
 end
 

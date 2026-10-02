@@ -6229,18 +6229,14 @@ function scripts.tower_tricannon.update(this, store)
 	local a = this.attacks
 	local ab = this.attacks.list[1]
 	local am = this.attacks.list[2]
-	local ao = this.attacks.list[3]
 	local pow_m = this.powers.bombardment
 	local pow_o = this.powers.overheat
 	local last_ts = store.tick_ts - ab.cooldown
 
 	ab.ts = store.tick_ts
 	am.ts = store.tick_ts
-	ao.ts = store.tick_ts
 
 	local tpos = tpos(this)
-
-	this.decal_mod = nil
 
 	local tw = this.tower
 
@@ -6255,7 +6251,7 @@ function scripts.tower_tricannon.update(this, store)
 
 		b.bullet.to = dest
 
-		if ao.active then
+		if pow_o.level > 0 then
 			b.bullet.hit_payload = "tower_tricannon_overheat_scorch_aura"
 			b.bullet.level = pow_o.level
 			b.render.sprites[1].name = "tricannon_tower_lvl4_bomb_overheat"
@@ -6263,11 +6259,10 @@ function scripts.tower_tricannon.update(this, store)
 		end
 
 		if attack == am then
-			b.bullet.damage_max = b.bullet.damage_max_config[pow_m.level]
-			b.bullet.damage_min = b.bullet.damage_min_config[pow_m.level]
+			b.bullet.damage_max = pow_m.damage_max_config[pow_m.level]
+			b.bullet.damage_min = pow_m.damage_min_config[pow_m.level]
 		end
 
-		b.bullet.target_id = enemy and enemy.id
 		b.bullet.source_id = this.id
 
 		simulation:queue_insert_entity(b)
@@ -6286,40 +6281,6 @@ function scripts.tower_tricannon.update(this, store)
 
 			if pow_o.changed then
 				pow_o.changed = nil
-				ao.cooldown = pow_o.cooldown[pow_o.level]
-				ao.duration = pow_o.duration[pow_o.level]
-			end
-
-			if ao.active and store.tick_ts - ao.ts > ao.duration then
-				ao.active = nil
-
-				simulation:queue_remove_entity(this.decal_mod)
-
-				this.decal_mod = nil
-			end
-
-			if U.tower_ready_to_use_power(pow_o, ao, store, tw) then
-				local trigger = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range + 160, ao.vis_flags, ao.vis_bans)
-
-				if trigger and U.is_inside_ellipse(tpos, U.calculate_enemy_ffe_pos(trigger, fts(60)), a.range) then
-					ao.active = true
-
-					S:queue(ao.sound)
-					U.y_animation_play_group(this, ao.animation_charge, nil, store.tick_ts, false, "layers")
-
-					local mod = E:create_entity("decalmod_tricannon_overheat")
-
-					mod.modifier.target_id = this.id
-					mod.modifier.source_id = this.id
-					mod.pos = this.pos
-
-					simulation:queue_insert_entity(mod)
-
-					this.decal_mod = mod
-					ao.ts = store.tick_ts
-				else
-					ao.ts = ao.ts + fts(5)
-				end
 			end
 
 			if U.tower_ready_to_use_power(pow_m, am, store, tw) then
@@ -6372,10 +6333,7 @@ function scripts.tower_tricannon.update(this, store)
 
 						shoot_bullet(am, nil, destination, 1)
 
-						local min_time = am.time_between_bombs_min
-						local max_time = am.time_between_bombs_max
-
-						U.y_wait_unconditional(store, fts(random(min_time, max_time)) * tw.cooldown_factor)
+						U.y_wait_unconditional(store, am.time_between_bombs * tw.cooldown_factor)
 					end
 
 					U.y_animation_wait_group(this, "layers")
@@ -6478,17 +6436,6 @@ function scripts.tower_tricannon.update(this, store)
 			coroutine.yield()
 		end
 	end
-end
-
-function scripts.tower_tricannon.remove(this, store)
-	if this.decal_mod then
-		simulation:queue_remove_entity(this.decal_mod)
-
-		this.decal_mod = nil
-		this.attacks.list[3].active = false
-	end
-
-	return true
 end
 
 scripts.mod_tricannon_overheat_dps = {}

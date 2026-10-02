@@ -5845,19 +5845,8 @@ AC(tt, "pos", "particle_system")
 tt.particle_system.name = "tricannon_tower_lvl4_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
-tt.particle_system.emission_rate = 70
+tt.particle_system.emission_rate = 50
 tt.particle_system.animation_fps = 15
-tt.particle_system.emit_rotation_spread = math.pi * 2
-tt.particle_system.emit_area_spread = vec_2(2, 2)
-tt.particle_system.particle_lifetime = {0.7, 0.85}
-
-tt = RT("tower_tricannon_bomb_4_bombardment_trail")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "tricannon_tower_lvl4_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.emission_rate = 60
-tt.particle_system.animation_fps = 25
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(2, 2)
 tt.particle_system.particle_lifetime = {0.7, 0.85}
@@ -5867,7 +5856,7 @@ AC(tt, "pos", "particle_system")
 tt.particle_system.name = "tricannon_tower_lvl4_particle_overheat"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
-tt.particle_system.emission_rate = 70
+tt.particle_system.emission_rate = 50
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(3, 3)
 tt.particle_system.particle_lifetime = {0.7, 0.85}

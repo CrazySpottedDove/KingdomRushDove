@@ -1093,15 +1093,14 @@ tt.powers.bombardment = CC("power")
 tt.powers.bombardment.price_base = 200
 tt.powers.bombardment.price_inc = 250
 tt.powers.bombardment.cooldown = {15, 15, 15}
-tt.powers.bombardment.damage_min = {21, 27, 33}
-tt.powers.bombardment.damage_max = {45, 59, 73}
+tt.powers.bombardment.damage_min_config = {21, 27, 33}
+tt.powers.bombardment.damage_max_config = {45, 59, 73}
 tt.powers.overheat = CC("power")
 tt.powers.overheat.price_base = 210
 tt.powers.overheat.price_inc = 210
 tt.powers.overheat.cooldown = {30, 25, 20}
 tt.powers.overheat.duration = {6, 10, 12}
 tt.main_script.update = scripts.tower_tricannon.update
-tt.main_script.remove = scripts.tower_tricannon.remove
 tt.sound_events.insert = "TowerTricannonTaunt"
 tt.attacks.min_cooldown = 3
 tt.attacks.range = 180
@@ -1123,10 +1122,8 @@ tt.attacks.list[2] = table.deepclone(tt.attacks.list[1])
 tt.attacks.list[2].bullet = "tower_tricannon_bomb_bombardment_bomb"
 tt.attacks.list[2].bullet_start_offset = {vec_2(0, 71)}
 tt.attacks.list[2].cooldown = 15
-tt.attacks.list[2].bomb_amount = nil -- 无效字段，所以清空
 tt.attacks.list[2].vis_flags = bor(F_MOD, F_RANGED)
-tt.attacks.list[2].time_between_bombs_min = 3
-tt.attacks.list[2].time_between_bombs_max = 5
+tt.attacks.list[2].time_between_bombs = fts(3)
 tt.attacks.list[2].spread = {18, 18, 16}
 tt.attacks.list[2].node_skip = {6, 3, 2}
 tt.attacks.list[2].animation_start = "skill1"
@@ -1134,17 +1131,6 @@ tt.attacks.list[2].animation_loop = "loop"
 tt.attacks.list[2].animation_end = "loop_end"
 tt.attacks.list[2].shoot_time = fts(45)
 tt.attacks.list[2].sounds = {"TowerTricannonBombardmentLvl1", "TowerTricannonBombardmentLvl2", "TowerTricannonBombardmentLvl3"}
-tt.attacks.list[3] = table.deepclone(tt.attacks.list[1])
-tt.attacks.list[3].cooldown = 30
-tt.attacks.list[3].duration = 6
-tt.attacks.list[3].bullet = nil
-tt.attacks.list[3].bomb_amount = nil
-tt.attacks.list[3].bullet_start_offset = nil
-tt.attacks.list[3].animation_charge = "skill_2_charge"
-tt.attacks.list[3].animation_idle = "skill_2_idle"
-tt.attacks.list[3].animation_shoot = "skill_2_attack"
-tt.attacks.list[3].animation_end = "skill_2_fade_out"
-tt.attacks.list[3].sound = "TowerTricannonOverheat"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_artillery_%04i"
 tt.render.sprites[1].offset = vec_2(0, 10)
@@ -1157,31 +1143,6 @@ for i = 2, 11 do
 end
 
 tt.ui.click_rect = r(-45, -3, 90, 78)
-
-tt = RT("decalmod_tricannon_overheat", "modifier")
-AC(tt, "render", "tween")
-tt.main_script.insert = scripts.mod_tower_decal.insert
-tt.main_script.remove = scripts.mod_tower_decal.remove
-tt.tween.remove = false
-tt.tween.props[1].name = "scale"
-tt.tween.props[1].loop = true
-tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.5, vec_2(1, 1)}, {1, vec_2(1, 1)}}
-
-for i, p in ipairs({vec_2(22, 45), vec_2(31, 40), vec_2(40, 35), vec_2(49, 32.5), vec_2(58, 30), vec_2(67.5, 32.5), vec_2(77, 35), vec_2(86, 40), vec_2(95, 45)}) do
-	tt.render.sprites[i] = CC("sprite")
-	tt.render.sprites[i].prefix = "crossbow_eagle_buff"
-	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].anchor.y = 0.21
-	tt.render.sprites[i].offset = vec_2(p.x - 58, p.y - 27)
-	tt.render.sprites[i].ts = math.random()
-end
-
--- tt.render.sprites[1].offset = vec_1(0)
-for _, sprite in ipairs(tt.render.sprites) do
-	sprite.offset.y = sprite.offset.y + 5 -- 向上平移 10 单位
-	sprite.color = {255, 100, 50}
--- sprite.scale = vec_2(1.2, 1.2)  -- 放大 20%
-end
 
 tt = RT("tower_tricannon_overheat_scorch_aura", "aura")
 AC(tt, "render", "tween")
@@ -1209,15 +1170,15 @@ tt.tween.props[2].keys = {{0, 0}, {0.5, 255}, {1, 0}}
 tt = RT("tower_tricannon_overheat_scorch_aura_mod", "modifier")
 AC(tt, "dps", "render")
 tt.modifier.duration = 3
-tt.dps.damage_min = 2
-tt.dps.damage_max = 2
+tt.dps.damage_inc = 5
+tt.dps.damage_min = 0
+tt.dps.damage_max = 0
 tt.dps.damage_type = DAMAGE_TRUE
-tt.dps.damage_every = 0.2
+tt.dps.damage_every = 0.5
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].prefix = "fire"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].draw_order = 2
-tt.modifier.max_duplicates = 5
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 
@@ -1233,18 +1194,9 @@ tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb"
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
 
-tt = RT("tower_tricannon_bomb_overheated", "tower_tricannon_bomb")
-tt.bullet.hit_payload = "tower_tricannon_overheat_scorch_aura"
-tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb_overheat"
-tt.bullet.particles_name = "tower_tricannon_bomb_4_overheated_trail"
-tt.bullet.flight_time = fts(28)
-tt.bullet.g = -1.5 / (fts(1) * fts(1))
-
 tt = RT("tower_tricannon_bomb_bombardment_bomb", "bomb")
-tt.bullet.damage_max = nil
-tt.bullet.damage_min = nil
-tt.bullet.damage_max_config = {45, 59, 73}
-tt.bullet.damage_min_config = {21, 27, 33}
+tt.bullet.damage_max = 45
+tt.bullet.damage_min = 21
 tt.bullet.damage_radius = 55
 tt.bullet.flight_time = fts(26)
 tt.bullet.g = -1.4 / (fts(1) * fts(1))
@@ -1253,7 +1205,7 @@ tt.bullet.pop = nil
 tt.bullet.align_with_trajectory = true
 tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb"
 tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
-tt.bullet.particles_name = "tower_tricannon_bomb_4_bombardment_trail"
+tt.bullet.particles_name = "tower_tricannon_bomb_4_trail"
 -- 三管加农炮_END
 -- 恶魔澡坑_START
 

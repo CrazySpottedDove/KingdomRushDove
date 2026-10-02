@@ -282,6 +282,12 @@ function LU.insert_entities(store, items, store_back_references)
 						end
 					end
 
+					if e.barrack then
+						if e.barrack.rally_pos.x == 0 and e.barrack.rally_pos.y == 0 and e.tower then
+							e.barrack.rally_pos:copy(e.tower.default_rally_pos)
+						end
+					end
+
 					if e.sound_events and e.sound_events.mute_on_level_insert then
 						e.sound_events.insert = nil
 					end
