@@ -10105,11 +10105,6 @@ tt.render.sprites[1].animated = true
 tt.bullet.hide_radius = 0
 tt.bullet.hit_distance = 20
 
-tt = E:register_t("mask_stage_30_1", "decal")
-tt.render.sprites[1].name = "stage_30_mask_01"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].sort_y_offset = -60
-
 tt = E:register_t("mod_enemy_glarenwarden_melee_lifesteal", "modifier")
 tt.main_script.insert = scripts.mod_lifesteal_kr5.insert
 tt.damage_min = 56
@@ -11999,15 +11994,6 @@ tt.render.sprites[1].name = "vfx_mecanicas_ray_spawner_run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 tt.render.sprites[1].scale = vv(1.5)
-
-tt = E:register_t("fx_stage_34_fuentes_splash", "fx")
-tt.render.sprites[1].prefix = "stage_34_agua_splash"
-tt.render.sprites[1].name = "in"
-
-tt = E:register_t("fx_stage_34_fuentes_splash_barro", "fx_stage_34_fuentes_splash")
-E:add_comps(tt, "sound_events")
-tt.render.sprites[1].prefix = "stage_34_barro_splash"
-tt.sound_events.insert = "EnemyBossPrincessMudPoolSummon"
 
 tt = E:register_t("fx_enemy_fan_guard_melee_hit", "fx")
 tt.render.sprites[1].name = "fan_guard_hit_run"

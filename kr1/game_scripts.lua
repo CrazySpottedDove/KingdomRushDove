@@ -33291,7 +33291,7 @@ function scripts.enemy_water_spirit.update(this, store)
 
 	simulation:queue_insert_entity(ps_jump)
 
-	if game.store.level_idx == 34 then
+	if store.level_idx == 134 then
 		local fx = E:create_entity("fx_stage_34_fuentes_splash")
 
 		fx.pos = V.v(this.pos.x, this.pos.y)
@@ -35312,7 +35312,7 @@ function scripts.enemy_terracota.update(this, store)
 		end
 	end
 
-	if game.store.level_idx == 34 and not this.not_fx_barro then
+	if store.level_idx == 134 and not this.not_fx_barro then
 		local fx = E:create_entity("fx_stage_34_fuentes_splash_barro")
 
 		fx.pos = V.v(this.pos.x, this.pos.y)

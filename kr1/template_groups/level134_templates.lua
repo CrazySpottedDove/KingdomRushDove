@@ -749,6 +749,15 @@ tt.tunnel.pick_fx = "fx_stage_34_fuentes_splash"
 tt.tunnel.place_fx = "fx_stage_34_fuentes_splash"
 tt.tunnel.place_fx_barro = "fx_stage_34_fuentes_splash_barro"
 
+tt = E:register_t_tmp("fx_stage_34_fuentes_splash", "fx")
+tt.render.sprites[1].prefix = "stage_34_agua_splash"
+tt.render.sprites[1].name = "in"
+
+tt = E:register_t_tmp("fx_stage_34_fuentes_splash_barro", "fx_stage_34_fuentes_splash")
+E:add_comps(tt, "sound_events")
+tt.render.sprites[1].prefix = "stage_34_barro_splash"
+tt.sound_events.insert = "EnemyBossPrincessMudPoolSummon"
+
 tt = E:register_t_hot("controller_stage_34_ponds_spawner", nil, true)
 E:add_comps(tt, "main_script", "events")
 tt.main_script.update = controller_stage_34_ponds_spawner.update
