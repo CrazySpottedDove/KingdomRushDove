@@ -31310,21 +31310,6 @@ scripts.aura_bomb_tower_sandworm_spit = {
 }
 
 -- 投石机（移植自 KR6 scripts.tower_catapult / aura_catapult_* / mod_catapult_*；已适配 dove 索敌与伤害接口）
-local function catapult_towers_swaped(store, this, attacks)
-	if this.tower_upgrade_persistent_data.swaped then
-		for _, a in pairs(attacks) do
-			a.ts = store.tick_ts
-		end
-
-		for _, pow in pairs(this.powers) do
-			if pow.level > 0 and pow.show_rally then
-				this.tower.show_rally = true
-			end
-		end
-
-		this.tower_upgrade_persistent_data.swaped = nil
-	end
-end
 
 scripts.tower_catapult = {}
 
@@ -31360,52 +31345,12 @@ function scripts.tower_catapult.update(this, store)
 
 	this.active_traps = {}
 
-	local ult_start_cd = store.wave_group_number == 0
-
-	sua.ts = store.tick_ts
-
-	local shoot_ulti = false
 	local ulti_trigger_enemy, ulti_pred_pos
 	local next_attack = ba
 	local bft = E:get_template(ba.bullet).bullet.flight_time
 
 	if not a._last_target_pos then
 		a._last_target_pos = {}
-	end
-
-	local function check_upgrades_purchase()
-		for _, pow in pairs(this.powers) do
-			if pow.changed then
-				pow.changed = nil
-
-				if pow == sa then
-					saa.disabled = false
-					saa.cooldown = pow.cooldown[pow.level]
-					saa.bullet = sa.bullets[pow.level]
-
-					if pow.level == 1 then
-						saa.ts = store.tick_ts - saa.cooldown
-					end
-				elseif pow == sb then
-					sba.disabled = false
-					sba.ts = store.tick_ts - sba.cooldown
-
-					U.animation_start(this, "idle_2_explosive", nil, store.tick_ts, true, this.tower_sid)
-					U.animation_start(this, "idle_2", nil, store.tick_ts, false, this.balls_sid)
-
-					if next_attack == ba then
-						next_attack = sba
-					end
-				elseif pow == sc then
-					sca.disabled = false
-					sca.cooldown = pow.cooldown[pow.level]
-
-					if pow.level == 1 then
-						sca.ts = store.tick_ts - sca.cooldown
-					end
-				end
-			end
-		end
 	end
 
 	local function get_direction(target_pos)
@@ -31464,7 +31409,7 @@ function scripts.tower_catapult.update(this, store)
 
 	local function y_aim_anim(aa, dir)
 		if dir == 2 then
-			U.y_wait(store, this.rotation_time)
+			U.y_wait(store, this.rotation_time * this.tower.cooldown_factor)
 		else
 			U.y_animation_play(this, get_anim_name(dir, aa, "in"), nil, store.tick_ts, 1, this.tower_sid)
 		end
@@ -31472,33 +31417,33 @@ function scripts.tower_catapult.update(this, store)
 
 	local function y_return_anim(aa, dir)
 		if dir == 2 then
-			U.y_wait(store, this.rotation_time)
+			U.y_wait(store, this.rotation_time * this.tower.cooldown_factor)
 		else
 			U.y_animation_play(this, get_anim_name(dir, aa, "out"), nil, store.tick_ts, 1, this.tower_sid)
 		end
 	end
 
 	local function y_reload_anim()
-		if sb and not sba.disabled then
+		if not sba.disabled then
 			U.animation_start(this, "ball_reload_2", nil, store.tick_ts, false, this.balls_sid)
 		else
 			U.animation_start(this, "ball_reload", nil, store.tick_ts, false, this.balls_sid)
 		end
 
-		if sa and not saa.disabled and store.tick_ts - saa.ts > saa.cooldown then
+		if not saa.disabled and ready_to_attack(saa, store, this.tower.cooldown_factor) then
 			U.animation_start(this, "reload_tarred_zone", nil, store.tick_ts, false, this.loader_sid)
 			U.y_animation_play(this, "reload_tarred_zone", nil, store.tick_ts, 1, this.tower_sid)
 			U.animation_start(this, "idle_2_tarred_zone", nil, store.tick_ts, true, this.tower_sid)
 			U.animation_start(this, "idle", nil, store.tick_ts, true, this.loader_sid)
 
-			if sb and not sba.disabled then
+			if not sba.disabled then
 				U.animation_start(this, "idle_2", nil, store.tick_ts, false, this.balls_sid)
 			else
 				U.animation_start(this, "idle", nil, store.tick_ts, false, this.balls_sid)
 			end
 
 			next_attack = saa
-		elseif sb and not sba.disabled then
+		elseif not sba.disabled then
 			U.animation_start(this, "reload_explosive", nil, store.tick_ts, false, this.loader_sid)
 			U.y_animation_play(this, "reload_explosive", nil, store.tick_ts, 1, this.tower_sid)
 			U.animation_start(this, "idle_2_explosive", nil, store.tick_ts, true, this.tower_sid)
@@ -31522,7 +31467,7 @@ function scripts.tower_catapult.update(this, store)
 
 		b.bullet.damage_factor = this.tower.damage_factor
 		b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
-		b.bullet.from = V.vclone(b.pos)
+		b.bullet.from:copy(b.pos)
 		b.bullet.to = target_pos
 		b.bullet.source_id = this.id
 
@@ -31562,7 +31507,7 @@ function scripts.tower_catapult.update(this, store)
 	end
 
 	local function can_shoot_ulti()
-		if store.tick_ts - sua.ts < sua.cooldown then
+		if not ready_to_attack(sua, store, this.tower.cooldown_factor) then
 			return false
 		end
 
@@ -31578,90 +31523,90 @@ function scripts.tower_catapult.update(this, store)
 	::label_catapult_loop::
 
 	while true do
-		if ult_start_cd and store.wave_group_number > 0 then
-			ult_start_cd = false
-			sua.ts = store.tick_ts
-		end
-
 		if this.tower.blocked then
 			coroutine.yield()
 		else
-			check_upgrades_purchase()
-			catapult_towers_swaped(store, this, this.attacks.list)
+			if sa.changed then
+				sa.changed = nil
+				saa.disabled = false
+				saa.cooldown = sa.cooldown[sa.level]
 
-			if shoot_ulti then
-				shoot_ulti = false
-				sua.ts = store.tick_ts
-				ba.ts = store.tick_ts
-
-				signal.emit("tower-ultimate-used", this)
-				U.animation_start(this, sua.animation, nil, store.tick_ts, false, 2)
-				U.y_wait(store, sua.cast_time)
-
-				local enemy, _, new_pred_pos = U.find_foremost_enemy(store, tpos(this), sua.min_range, sua.max_range, fts(40), sua.vis_flags, sua.vis_bans)
-
-				if not enemy or not new_pred_pos then
-					enemy = ulti_trigger_enemy
-					new_pred_pos = ulti_pred_pos
+				if sa.level == 1 then
+					saa.ts = store.tick_ts - saa.cooldown
 				end
+			end
+			if sb.changed then
+				sb.changed = nil
+				sba.disabled = false
+			end
+			if sc.changed then
+				sc.changed = nil
+				sca.disabled = false
+				sca.cooldown = sc.cooldown[sc.level]
 
-				local nearest = P:nearest_nodes(new_pred_pos.x, new_pred_pos.y)
-				local pi, spi, ni = unpack(nearest[1])
-				local pos = P:node_pos(pi, 1, ni)
-
-				shoot_bullet(pos, sua)
-				U.y_animation_wait(this, 2)
-				check_upgrades_purchase()
-				y_reload_anim()
+				if sc.level == 1 then
+					sca.ts = store.tick_ts - sca.cooldown
+				end
 			end
 
-			if store.tick_ts - ba.ts > a.cooldown then
-				local aa = next_attack
-				local trigger_enemy, _, pred_pos = find_target(aa, nil, false)
+			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
+				local trigger_enemy, _, pred_pos = find_target(next_attack, nil, false)
 
-				if not trigger_enemy or not pred_pos then
-					SU.delay_attack(store, aa, fts(10))
+				if not trigger_enemy then
+					ba.ts = ba.ts + 0.1
 				else
-					aa.ts = store.tick_ts
+					next_attack.ts = store.tick_ts
 					ba.ts = store.tick_ts
 
-					local aim_pos = trigger_enemy.motion and P:predict_enemy_pos(trigger_enemy, this.rotation_time + aa.shoot_time + bft) or pred_pos
+					local aim_pos = trigger_enemy.motion and P:predict_enemy_pos(trigger_enemy, this.rotation_time + next_attack.shoot_time + bft) or pred_pos
 					local dir = get_direction(aim_pos)
 
-					y_aim_anim(aa, dir)
-					U.animation_start(this, get_anim_name(dir, aa, "attack"), nil, store.tick_ts, false, 2)
-					U.y_wait(store, aa.shoot_time)
+					y_aim_anim(next_attack, dir)
+					U.animation_start(this, get_anim_name(dir, next_attack, "attack"), nil, store.tick_ts, false, 2)
+					U.y_wait(store, next_attack.shoot_time)
 
-					local enemy, _, new_pred_pos = find_target(aa, dir, true)
+					local enemy, _, new_pred_pos = find_target(next_attack, dir, true)
 
 					new_pred_pos = enemy and new_pred_pos or pred_pos
 
-					shoot_bullet(new_pred_pos, aa)
+					shoot_bullet(new_pred_pos, next_attack)
 					U.y_animation_wait(this, 2)
-					y_return_anim(aa, dir)
-					check_upgrades_purchase()
+					y_return_anim(next_attack, dir)
 
 					if can_shoot_ulti() then
-						shoot_ulti = true
+						U.animation_start(this, sua.animation, nil, store.tick_ts, false, 2)
+						U.y_wait_unconditional(store, sua.cast_time)
 
-						goto label_catapult_loop
+						local enemy, _, new_pred_pos = U.find_foremost_enemy(store, tpos(this), sua.min_range, sua.max_range, fts(40), sua.vis_flags, sua.vis_bans)
+
+						if not enemy or not new_pred_pos then
+							enemy = ulti_trigger_enemy
+							new_pred_pos = ulti_pred_pos
+						end
+
+						local nearest = P:nearest_nodes(new_pred_pos.x, new_pred_pos.y)
+						local pi, _, ni = unpack(nearest[1])
+						local pos = P:node_pos(pi, 1, ni)
+
+						shoot_bullet(pos, sua)
+						U.y_animation_wait(this, 2)
 					end
 
 					y_reload_anim()
 				end
 			end
 
-			if sc and not sca.disabled and store.tick_ts - sca.ts > sca.cooldown and store.wave_group_number > 0 then
+			if not sca.disabled and ready_to_attack(sca, store, this.tower.cooldown_factor) then
 				if #this.active_traps >= sc.max_traps[sc.level] then
-					SU.delay_attack(store, a, fts(10))
+					sca.ts = sca.ts + 0.3
 				else
-					local near_traps = table.filter(store.entities, function(k, v)
+					local near_traps = table.filter(store.auras, function(k, v)
 						return v.template_name == "aura_catapult_skill_c_trap" and V.dist2(v.pos.x, v.pos.y, this.pos.x, this.pos.y) <= a.range * a.range
 					end)
 					local trap_pos = calculate_trap_pos(near_traps)
 
 					if not trap_pos then
-						SU.delay_attack(store, a, fts(10))
+						sca.ts = sca.ts + 0.3
 					else
 						sca.ts = store.tick_ts
 
@@ -31670,11 +31615,12 @@ function scripts.tower_catapult.update(this, store)
 
 						local b = E:create_entity(sca.bullet)
 
-						b.bullet.from = V.v(this.pos.x + sca.bullet_start_offset.x, this.pos.y + sca.bullet_start_offset.y)
-						b.bullet.to = V.v(trap_pos.x, trap_pos.y)
+						b.bullet.from:set(this.pos.x + sca.bullet_start_offset.x, this.pos.y + sca.bullet_start_offset.y)
+						b.bullet.to:set(trap_pos.x, trap_pos.y)
 						b.bullet.source_id = this.id
 						b.bullet.level = sc.level
-						b.pos = V.vclone(b.bullet.from)
+						b.pos:copy(b.bullet.from)
+						b.bullet.damage_factor = this.tower.damage_factor
 
 						queue_insert(store, b)
 						U.y_animation_wait(this, 2)
@@ -31717,14 +31663,19 @@ function scripts.aura_catapult_skill_b_bomb.update(this, store, script)
 	local enemies = U.find_enemies_in_range(store, this.pos, 0, this.damage_radius, 0, 0)
 
 	if enemies then
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.damage_type
+			if UP:get_upgrade("engineer_efficiency") then
+				d.value = this.damage_max
+			else
+				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.damage_radius)
 
-			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.damage_radius)
+				d.value = math.floor(this.damage_max - (this.damage_max - this.damage_min) * dist_factor)
+			end
+			d.value = d.value * this.aura.damage_factor
 
-			d.value = math.floor(this.damage_max - (this.damage_max - this.damage_min) * dist_factor)
 			d.source_id = this.id
 			d.target_id = enemy.id
 
@@ -31779,13 +31730,13 @@ function scripts.aura_catapult_skill_c_trap.update(this, store)
 
 			targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
-			if targets and #targets > 0 then
+			if targets then
 				for _, enemy in ipairs(targets) do
-					if enemy and not (enemy.health and enemy.health.dead) then
+					if not enemy.health.dead then
 						local d = E:create_entity("damage")
 
 						d.damage_type = this.damage_type
-						d.value = math.random(this.damage_min, this.damage_max)
+						d.value = math.random(this.damage_min, this.damage_max) * this.aura.damage_factor
 						d.source_id = this.id
 						d.target_id = enemy.id
 
@@ -31795,6 +31746,7 @@ function scripts.aura_catapult_skill_c_trap.update(this, store)
 
 						mod.modifier.target_id = enemy.id
 						mod.modifier.source_id = this.id
+						mod.modifier.damage_factor = this.aura.damage_factor
 						mod.modifier.level = this.aura.level
 
 						queue_insert(store, mod)
@@ -31885,6 +31837,7 @@ function scripts.aura_catapult_ultimate.update(this, store, script)
 
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
+					new_mod.modifier.damage_factor = this.aura.damage_factor
 
 					queue_insert(store, new_mod)
 				end
@@ -31915,8 +31868,6 @@ function scripts.aura_catapult_ultimate.update(this, store, script)
 	end
 
 	local function run_backwards()
-		local last_pos = this.pos
-
 		distSq = V.dist2(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
 
 		if distSq < 25 then
@@ -31966,9 +31917,15 @@ function scripts.aura_catapult_ultimate.update(this, store, script)
 
 					d.damage_type = this.explosion_damage_type
 
-					local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, dradius)
+					if UP:get_upgrade("engineer_efficiency") then
+						d.value = dmax
+					else
+						local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, dradius)
 
-					d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+						d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+					end
+					d.value = d.value * this.aura.damage_factor
+
 					d.source_id = this.id
 					d.target_id = enemy.id
 

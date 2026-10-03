@@ -3337,8 +3337,7 @@ tt.info.i18n_key = "SOLDIER_TOWER_SANDWORM_1"
 tt.melee.attacks[1].damage_max = 10
 tt.melee.attacks[1].damage_min = 8
 
--- 投石机（移植自 KR6 tower_catapult_lvl4；四级合并为单实体 + powers）
--- 数值内联自 kr6/data/balance/balance.lua b.towers.catapult，不使用 balance 文件。
+-- 投石机
 tt = RT("tower_catapult", "tower")
 AC(tt, "attacks", "powers")
 tt.tower.type = "catapult"
@@ -3354,26 +3353,22 @@ tt.powers.skill_a.price_base = 100
 tt.powers.skill_a.price_inc = 100
 tt.powers.skill_a.max_level = 3
 tt.powers.skill_a.cooldown = {15, 15, 15}
-tt.powers.skill_a.bullets = {"bullet_catapult_skill_a", "bullet_catapult_skill_a", "bullet_catapult_skill_a"}
 tt.powers.skill_b = CC("power")
 tt.powers.skill_b.price_base = 200
 tt.powers.skill_b.price_inc = 200
 tt.powers.skill_b.max_level = 3
-tt.powers.skill_b.damage_min = {18, 36, 52}
-tt.powers.skill_b.damage_max = {32, 64, 92}
 tt.powers.skill_c = CC("power")
 tt.powers.skill_c.price_base = 150
 tt.powers.skill_c.price_inc = 100
 tt.powers.skill_c.max_level = 3
 tt.powers.skill_c.cooldown = {7, 7, 7}
 tt.powers.skill_c.max_traps = {3, 4, 5}
--- ultimate 为自动触发的 timed_attack，不作为可购买 power（dove 图鉴按 power 逐项取菜单图标，无菜单项会崩）
 tt.attacks.range = 300
-tt.attacks.cooldown = 3
 tt.attacks.attack_delay_on_spawn = fts(0)
+-- 5.12-6.25
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_catapult"
-tt.attacks.list[1].cooldown = 3
+tt.attacks.list[1].cooldown = 6.3
 tt.attacks.list[1].shoot_time = fts(13)
 tt.attacks.list[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.attacks.list[1].bullet_start_offset = v(0, 95)
@@ -3436,8 +3431,9 @@ tt.sound_events.room_select = "TowerRoyalCatapultTauntSelect"
 tt.ui.click_rect = r(-40, -3, 80, 75)
 
 tt = RT("bullet_catapult", "bomb")
-tt.bullet.damage_min = 80
-tt.bullet.damage_max = 120
+-- 攻速惩罚下，给到大贝莎同级dps
+tt.bullet.damage_min = 114
+tt.bullet.damage_max = 225
 tt.bullet.damage_type = DAMAGE_EXPLOSION
 tt.bullet.damage_radius = 60
 tt.bullet.flight_time = fts(30)
@@ -3453,8 +3449,8 @@ tt.sound_events.hit = "TowerRoyalCatapultBasicAttackImpact"
 tt.sound_events.insert = "TowerRoyalCatapultBasicAttackFire"
 
 tt = RT("bullet_catapult_skill_a", "bomb")
-tt.bullet.damage_min = 80
-tt.bullet.damage_max = 120
+tt.bullet.damage_min = 114
+tt.bullet.damage_max = 225
 tt.bullet.damage_type = DAMAGE_EXPLOSION
 tt.bullet.damage_radius = 60
 tt.bullet.flight_time = fts(30)
@@ -3499,8 +3495,6 @@ tt.bullet.hit_decal = "decal_catapult_ultimate"
 tt.bullet.particles_name = "ps_catapult_ultimate"
 tt.bullet.pop_chance = 0
 tt.bullet.flight_time = fts(40)
-tt.bullet.damage_min = 60
-tt.bullet.damage_max = 60
 tt.bullet.damage_radius = 55
 tt.bullet.damage_type = DAMAGE_EXPLOSION
 tt.bullet.align_with_trajectory = true
@@ -3515,7 +3509,7 @@ tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
 tt.aura.cycle_time = 0.2
 tt.aura.duration_conf = {6, 8, 10}
-tt.aura.duration = nil
+tt.aura.duration = 1
 tt.render.sprites[1].prefix = "tower_catapult_projectiles_tarred_zone_decal"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
@@ -3536,10 +3530,10 @@ tt.render.sprites[1].name = "fall"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_DECALS
 tt.explosion_delay = 0.1
-tt.damage_min = nil
-tt.damage_max = nil
-tt.damage_min_conf = {18, 36, 52}
-tt.damage_max_conf = {32, 64, 92}
+tt.damage_min = 0
+tt.damage_max = 0
+tt.damage_min_conf = {38, 75, 113}
+tt.damage_max_conf = {75, 150, 225}
 tt.damage_radius = 60
 tt.damage_type = DAMAGE_EXPLOSION
 tt.cast_time = fts(10)
@@ -3584,8 +3578,8 @@ tt.motion.max_speed = 100
 tt.damage_min = 75
 tt.damage_max = 75
 tt.damage_type = DAMAGE_EXPLOSION
-tt.explosion_damage_min = 60
-tt.explosion_damage_max = 60
+tt.explosion_damage_min = 120
+tt.explosion_damage_max = 120
 tt.explosion_damage_radius = 55
 tt.explosion_damage_type = DAMAGE_EXPLOSION
 tt.max_nodes = 50
