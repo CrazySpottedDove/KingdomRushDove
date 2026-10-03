@@ -9408,17 +9408,6 @@ tt.taunts.sets.stage_26_boss_before_bossfight.format = "TAUNT_STAGE26_BOSS_BEFOR
 tt.taunts.sets.stage_26_boss_before_bossfight.decal_name = "decal_stage26_boss_shoutbox"
 tt.taunts.sets.stage_26_boss_before_bossfight.pos = v(460, 550)
 
-tt = E:register_t("decal_stage27_boss_shoutbox", "decal_stage06_cultist_shoutbox")
-
-tt = E:register_t("controller_stage_27_cannon")
-E:add_comps(tt, "main_script")
-tt.main_script.update = scripts.controller_stage_27_cannon.update
-tt.cannon_shot_fx_t = "fx_stage_27_cannon_shot"
-tt.cannon_shoot_time = fts(30)
-tt.bullet_clone_dead_t = "bullet_stage_27_clone_dead"
-tt.bullet_clone_alive_t = "bullet_stage_27_clone_alive"
-tt.sound_shot = "Stage27CloneCannonOneShot"
-
 tt = E:register_t("decal_stage_25_fist", "decal")
 tt.render.sprites[1].prefix = "DLC_stage3_robot_armDef"
 tt.render.sprites[1].name = "in"
@@ -9449,29 +9438,6 @@ tt.render.sprites[1].prefix = "DLC_Enanos_S4_EasterEgg_MewtwoDef"
 tt.render.sprites[1].name = "spawn"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t("decal_stage_27_clone_dead", "decal_tween")
-tt.render.sprites[1].prefix = "cannonLAYERS_clonedecorative"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].loop = false
-tt.tween.props[1].keys = {{0, 255}, {fts(30), 255}, {fts(55), 0}}
-
-tt = E:register_t("decal_stage_27_clone_alive", "decal_timed")
-tt.render.sprites[1].prefix = "cannonLAYERS_cloneland"
-tt.render.sprites[1].name = "idle"
-
-tt = E:register_t("decal_stage_27_ray", "decal")
-tt.render.sprites[1].prefix = "dclenanos_stage05_headrayDef"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.render.sprites[1].scale = vv(2)
-
-tt = E:register_t("decal_stage_27_goblins", "decal")
-tt.render.sprites[1].prefix = "dclenanos_head_goblinsDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].sort_y_offset = -350
-
 tt = E:register_t("decal_boss_grymbeard_area_attack", "decal_tween")
 tt.render.sprites[1].prefix = "dclenanos_stage05_grymbossdecalDef"
 tt.render.sprites[1].name = "run"
@@ -9487,7 +9453,10 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].keys = {{0, 255}, {fts(30), 255}, {fts(60), 0}}
 
-tt = E:register_t("decal_bullet_boss_grymbeard_death_clone", "decal_stage_27_clone_dead")
+tt = E:register_t("decal_bullet_boss_grymbeard_death_clone", "decal_tween")
+tt.render.sprites[1].prefix = "cannonLAYERS_clonedecorative"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = false
 tt.tween.props[1].keys = {{0, 255}, {1e+99, 255}}
 
 tt = E:register_t("decal_bullet_boss_grymbeard_death_boss", "decal")
@@ -9587,28 +9556,6 @@ tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_offset = v(0, 0)
 tt.particle_system.scales_y = {0.9, 1.1}
 tt.particle_system.scales_x = {0.9, 1.1}
-
-tt = E:register_t("ps_bullet_stage_27_scrap")
-E:add_comps(tt, "pos", "particle_system")
-tt.particle_system.name = "dclenanos_stage05_ScrapProjectileTrail_asst_scrap_projectile_trail"
-tt.particle_system.emission_rate = 15
-tt.particle_system.spin = {math.pi / 6, math.pi / 4}
-tt.particle_system.emit_area_spread = v(10, 10)
-tt.particle_system.particle_lifetime = {fts(25), fts(25)}
-tt.particle_system.alphas = {255, 0}
-tt.particle_system.scales_x = {0.9, 1.2}
-tt.particle_system.scales_y = {0.9, 1.2}
-
-tt = E:register_t("ps_bullet_stage_27_tower_stun")
-E:add_comps(tt, "pos", "particle_system")
-tt.particle_system.name = "boss_fx_scrap_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.emission_rate = 60
-tt.particle_system.emit_area_spread = v(10, 10)
-tt.particle_system.particle_lifetime = {fts(6), fts(6)}
-tt.particle_system.scales_x = {0.9, 1.1}
-tt.particle_system.scales_y = {0.9, 1.1}
 
 tt = E:register_t("ps_bullet_boss_grymbeard_trail")
 E:add_comps(tt, "pos", "particle_system")
@@ -9805,57 +9752,11 @@ tt.flight_positions = {
 	v(389, 522)
 }
 
-tt = E:register_t("bullet_stage_27_clone_dead", "bomb")
-tt.bullet.flight_time = fts(35)
-tt.bullet.hit_fx = nil
-tt.bullet.hit_decal = "decal_stage_27_clone_dead"
-tt.bullet.damage_min = 0
-tt.bullet.damage_max = 0
-tt.bullet.damage_radius = 0
-tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
-tt.bullet.pop_chance = 0
-tt.render.sprites[1].name = "cannonLAYERS_flyclone"
-
-tt = E:register_t("bullet_stage_27_clone_alive", "bullet_stage_27_clone_dead")
-tt.bullet.hit_decal = "decal_stage_27_clone_alive"
-tt.bullet.hit_payload = "controller_spawn_enemy_common_clone"
-
 tt = E:register_t("controller_spawn_enemy_common_clone")
 E:add_comps(tt, "main_script", "pos")
 tt.main_script.update = scripts.controller_spawn_enemy_common_clone.update
 tt.spawn_t = "enemy_common_clone"
 tt.spawn_delay = fts(32)
-
-tt = E:register_t("bullet_stage_27_scrap", "bomb")
-tt.bullet.damage_max = 72
-tt.bullet.damage_min = 48
-tt.bullet.damage_radius = 50
-tt.bullet.damage_bans = bor(F_ENEMY)
-tt.bullet.flight_time = fts(60)
-tt.bullet.hit_fx = "fx_bullet_stage_27_scrap"
-tt.bullet.particles_name = "ps_bullet_stage_27_scrap"
-tt.bullet.hit_payload = "decal_scrap"
-tt.sound_events.hit_water = nil
-tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
-tt.render.sprites[1].name = "dclenanos_stage05_ScrapProjectile_asst_scrap"
-tt.render.sprites[1].hidden = false
-tt.sound_events.insert = "TowerBallistaScrapBombCast"
-tt.sound_events.hit = "TowerBallistaScrapBombExplosion"
-tt.main_script.insert = scripts.enemy_bomb.insert
-tt.main_script.update = scripts.enemy_bomb.update
-
-tt = E:register_t("bullet_stage_27_tower_stun", "bomb")
-tt.bullet.flight_time = fts(60)
-tt.bullet.particles_name = "ps_bullet_stage_27_tower_stun"
-tt.bullet.hit_fx = "fx_bullet_stage_27_tower_stun"
-tt.bullet.ignore_hit_offset = true
-tt.bullet.mod = "mod_bullet_stage_27_tower_stun"
-tt.bullet.align_with_trajectory = true
-tt.render.sprites[1].name = "boss_fx_scrap_projectile"
-tt.main_script.insert = scripts.enemy_bomb.insert
-tt.main_script.update = scripts.bullet_stage_27_tower_stun.update
-tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
-tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
 
 tt = E:register_t("bullet_boss_grymbeard", "bullet")
 E:add_comps(tt, "force_motion")
@@ -9880,11 +9781,24 @@ tt.force_motion.max_v = 450
 tt.sound_events.insert = "Stage27BFGrymbeardRangedAttackCast"
 tt.sound_events.hit = "Stage27BFGrymbeardRangedAttackImpact"
 
-tt = E:register_t("bullet_boss_grymbeard_death_clone", "bullet_stage_27_clone_dead")
+tt = E:register_t("bullet_boss_grymbeard_death_clone", "bomb")
+tt.bullet.hit_fx = nil
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_radius = 0
+tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
+tt.bullet.pop_chance = 0
+tt.render.sprites[1].name = "cannonLAYERS_flyclone"
 tt.bullet.flight_time = fts(32)
 tt.bullet.hit_decal = "decal_bullet_boss_grymbeard_death_clone"
 
-tt = E:register_t("bullet_boss_grymbeard_death_boss", "bullet_stage_27_clone_dead")
+tt = E:register_t("bullet_boss_grymbeard_death_boss", "bomb")
+tt.bullet.hit_fx = nil
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_radius = 0
+tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
+tt.bullet.pop_chance = 0
 tt.bullet.flight_time = fts(40)
 tt.bullet.hit_decal = "decal_bullet_boss_grymbeard_death_boss"
 tt.bullet.align_with_trajectory = true
@@ -9893,7 +9807,15 @@ tt.render.sprites[1].prefix = "grymbeardbossLAYERS_flyboss"
 tt.render.sprites[1].name = "fly"
 tt.render.sprites[1].animated = true
 
-tt = E:register_t("bullet_boss_grymbeard_death_scrap_1", "bullet_stage_27_clone_dead")
+tt = E:register_t("bullet_boss_grymbeard_death_scrap_1", "bomb")
+tt.bullet.flight_time = fts(35)
+tt.bullet.hit_fx = nil
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_radius = 0
+tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
+tt.bullet.pop_chance = 0
+tt.render.sprites[1].name = "cannonLAYERS_flyclone"
 tt.bullet.hit_decal = "decal_bullet_boss_grymbeard_death_scrap_1"
 tt.render.sprites[1].name = "dclenanos_stage05_grymdebree1_Asst_grymbeardebree1"
 
@@ -9974,24 +9896,6 @@ tt.render.sprites[1].exo = true
 tt = E:register_t("fx_bullet_stage_25_torso_missile_hit", "fx")
 tt.render.sprites[1].prefix = "DLC_stage_03_missile_hit"
 tt.render.sprites[1].name = "run"
-
-tt = E:register_t("fx_stage_27_cannon_shot", "fx")
-tt.render.sprites[1].prefix = "dlcenanos_stage05_cannon_explosionDef"
-tt.render.sprites[1].name = "shoot"
-tt.render.sprites[1].exo = true
-
-tt = E:register_t("fx_stage_27_scrap", "fx")
-tt.render.sprites[1].prefix = "dclenanos_stage05_ScrapProjectileFXDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-
-tt = E:register_t("fx_bullet_stage_27_scrap", "fx")
-tt.render.sprites[1].prefix = "dclenanos_stage05_ScrapProjectileHitFXDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-
-tt = E:register_t("fx_bullet_stage_27_tower_stun", "fx")
-tt.render.sprites[1].name = "boss_fx_scrap_hit"
 
 tt = E:register_t("fx_bullet_boss_grymbeard_hit", "fx")
 tt.render.sprites[1].prefix = "dclenanos_stage05_grymmissileDef"
@@ -10537,77 +10441,11 @@ for i = 1, tt.threads_amount do
 	tt.render.sprites[i + 1] = s
 end
 
-tt = RT("controller_stage_31_water_mechanic", "decal_scripted")
-AC(tt, "ui", "editor")
-tt.main_script.update = scripts.controller_stage_31_water_mechanic.update
-tt.duration = 4
-tt.cooldown = 50
-tt.path = {1, 4}
-tt.nodes = {{46, 138}, {50, 130}}
-tt.warn_duration = 5
-tt.unlock_wave = 4
-tt.spawn_every_nodes = 9
-tt.check_every = 3
-tt.check_radius = 60
-tt.first_warn_minimum_targets = 3
-tt.fx_entity = "stage_31_water_mechanic_fx"
-tt.fx_entity_decal = "stage_31_water_mechanic_fx_decal"
-tt.hand_decal_t = "dlc2_generic_tap_hand"
-tt.render.sprites[1].prefix = "fuente_unitDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "water_cracksDef"
-tt.render.sprites[2].name = "idle"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].sort_y_offset = 0
-tt.render.sprites[2].z = Z_DECALS - 1
-tt.render.sprites[2].pos = v(512, 384)
-tt.ui.has_nav_mesh = true
-tt.ui.click_rect = r(-50, -90, 103, 190)
-tt.extra_ui_click_rects = {r(-120, -60, 243, 120), r(-85, -80, 173, 160)}
-tt.extra_ui_click_rect_speach_bubble = r(50, 58, 78, 67)
-tt.mods = {"mod_stage31_water_mechanic_dps"}
-tt.enemies_detection = {"enemy_fire_phoenix", "enemy_fire_fox", "enemy_nine_tailed_fox", "enemy_burning_treant", "enemy_ash_spirit"}
-
 tt = RT("generic_extra_touch_controller")
 AC(tt, "pos", "ui", "main_script")
 tt.main_script.update = scripts.generic_extra_touch_controller.update
 tt.ui.can_select = false
 tt.ui.has_nav_mesh = false
-
-tt = RT("stage_31_water_mechanic_fx", "decal_scripted")
-tt.main_script.update = scripts.stage_31_water_mechanic_fx.update
-tt.render.sprites[1].prefix = "water_splash_unitDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-
-tt = RT("stage_31_water_mechanic_fx_decal", "decal_tween")
-AC(tt, "main_script")
-tt.render.sprites[1].prefix = "charco_unitDef"
-tt.render.sprites[1].name = "Idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.duration = 4
-tt.added_scale = 1
-
-function tt.main_script.insert(this, store)
-	this.render.sprites[1].ts = store.tick_ts
-	this.tween.ts = store.tick_ts
-	this.render.sprites[1].flip_x = math.random() > 0.5
-
-	local start_delay = math.random() * fts(8)
-
-	this.tween.props[1].keys = {{0, 0}, {start_delay, 0}, {start_delay + fts(7), 255}, {start_delay + fts(7) + this.duration, 255}, {start_delay + fts(7) + this.duration + fts(27), 0}}
-	this.tween.props[2].keys = {{0, vv(0.8 * this.added_scale)}, {start_delay, vv(0.8 * this.added_scale)}, {start_delay + fts(7), vv(1 * this.added_scale)}, {start_delay + fts(7) + this.duration, vv(1 * this.added_scale)}, {start_delay + fts(7) + this.duration + fts(27), vv(0.8 * this.added_scale)}}
-
-	return true
-end
-
-tt.tween.props[1].keys = {{0, 0}, {fts(2), 0}, {fts(7), 255}, {fts(7) + tt.duration, 255}, {fts(7) + tt.duration + fts(27), 0}}
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].keys = {{0, vv(0.8)}, {fts(2), vv(0.8)}, {fts(7), vv(1)}, {fts(7) + tt.duration, vv(1)}, {fts(7) + tt.duration + fts(27), vv(0.8)}}
-tt.tween.props[2].name = "scale"
 
 tt = E:register_t("dlc2_generic_tap_hand", "decal_tween")
 tt.render.sprites[1].prefix = "dlc2_generic_tap_hand"
@@ -11077,51 +10915,6 @@ tt.render.sprites[3].hidden = true
 tt.render.sprites[3].delay_start = 0.3
 tt.sound_events.insert = "EnemyBossPrincessRangedImpact"
 
-for i = 1, 3 do
-
-	tt = E:register_t("stage_31_exo_forest_" .. i, "decal")
-	AC(tt, "editor_script")
-	tt.render.sprites[1].prefix = "stage_31_forest_0" .. i .. "Def"
-	tt.render.sprites[1].name = "loop"
-	tt.render.sprites[1].animated = true
-	tt.render.sprites[1].exo = true
-	tt.show_in_editor = false
-	tt.editor_script.insert = scripts.editor_mask.insert
-
-	if i == 3 then
-		tt.render.sprites[1].z = Z_OBJECTS + 1
-		tt.render.sprites[1].sort_y_offset = -700
-	else
-		tt.render.sprites[1].z = Z_DECALS
-	end
-end
-
-for lyr_nmbr = 1, 7 do
-
-	tt = E:register_t("stage_31_exo_waterfall_layer_" .. lyr_nmbr, "decal")
-	tt.render.sprites[1].prefix = "stage_31_waterfall_layer_" .. lyr_nmbr .. "Def"
-	tt.render.sprites[1].name = "loop"
-	tt.render.sprites[1].animated = true
-	tt.render.sprites[1].exo = true
-	tt.render.sprites[1].z = Z_OBJECTS
-
-	if lyr_nmbr == 1 then
-		tt.render.sprites[1].sort_y_offset = -201
-	elseif lyr_nmbr == 2 then
-		tt.render.sprites[1].sort_y_offset = -200
-	elseif lyr_nmbr == 3 then
-		tt.render.sprites[1].sort_y_offset = 3
-	elseif lyr_nmbr == 4 then
-		tt.render.sprites[1].sort_y_offset = 4
-	elseif lyr_nmbr == 5 then
-		tt.render.sprites[1].sort_y_offset = 5
-	elseif lyr_nmbr == 6 then
-		tt.render.sprites[1].sort_y_offset = 220
-	elseif lyr_nmbr == 7 then
-		tt.render.sprites[1].sort_y_offset = 2001
-	end
-end
-
 tt = RT("decal_generic_kill_area")
 AC(tt, "pos", "editor", "editor_script")
 tt.kill_area_fn = scripts.decal_generic_kill_area.kill_area_fn
@@ -11194,22 +10987,6 @@ tt.sid_explotion_aura = #tt.auras.list + 1
 tt.auras.list[tt.sid_explotion_aura] = E:clone_c("aura_attack")
 tt.auras.list[tt.sid_explotion_aura].name = "aura_fire_fox_explotion_dps"
 tt.auras.list[tt.sid_explotion_aura].cooldown = 0
-
-tt = E:register_t("decal_stage_32_boss_fissure_ability", "decal_dlc_wukong_flaming_ground")
-tt.main_script.update = scripts.decal_stage_32_boss_fissure_ability.update
-tt.render.sprites[1].prefix = "dragon_cracks_floorDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].pos = v(512, 384)
-tt.render.sprites[1].z = Z_DECALS - 1
-tt.fx = "fx_stage_32_lava_geyser"
-tt.idle_anim = "idle"
-tt.in_anim = "active_in"
-tt.loop_anim = "active_loop"
-tt.end_anim = "active_end"
-tt.max_geysers = 5
-tt.geyser_delay_max = 0.5
-tt.geyser_delay_min = 0.2
 
 tt = E:register_t("decal_water_sorceress_heal_wave", "decal_scripted")
 tt.main_script.insert = scripts.decal_water_sorceress_heal_wave.insert
@@ -11469,29 +11246,6 @@ tt.dps.damage_every = 1e+99
 tt.main_script.insert = scripts.mod_stage31_water_mechanic_dps.insert
 tt.main_script.update = scripts.mod_stage31_water_mechanic_dps.update
 tt.allowed_templates = {"enemy_fire_phoenix", "enemy_fire_fox", "enemy_nine_tailed_fox", "enemy_burning_treant", "enemy_ash_spirit"}
-
-tt = E:register_t("fx_stage_32_dragon_mouth_fire_left", "fx")
-tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_01Def"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = DAMAGE_TRUE
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("fx_stage_32_dragon_mouth_fire_right", "fx_stage_32_dragon_mouth_fire_left")
-tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_02Def"
-
-tt = E:register_t("fx_stage_32_dragon_down_splash", "fx")
-tt.render.sprites[1].prefix = "dragon_redboy_splashDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].sort_y_offset = -20
-tt.render.sprites[1].offset = v(0, 15)
-
-tt = E:register_t("fx_stage_32_lava_geyser", "fx")
-tt.render.sprites[1].prefix = "dragon_cracks_geyserDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS
 
 tt = E:register_t("fx_water_spirit_splash", "fx")
 tt.render.sprites[1].name = "wukong_water_spirit_fx_splash"
@@ -11808,37 +11562,6 @@ tt.render.sprites[2].anchor = v(0.5, 0.5128205128205128)
 tt.render.sprites[2].r = math.rad(180)
 tt.sound_events.insert = "EnemyWarlockRangedCast"
 tt.sound_events.hit = "EnemyWarlockRangedImpact"
-
-tt = E:register_t("decal_stage_32_boss_bubbles", "decal_scripted")
-E:add_comps(tt, "tween")
-tt.main_script.update = scripts.decal_stage_32_boss_bubbles.update
-tt.render.sprites[1].prefix = "dragon_redboy_bubblesDef"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].alpha = 0
-tt.render.sprites[1].draw_order = 2
-tt.render.sprites[1].offset = v(0, 15)
-tt.render.sprites[1].sort_y_offset = -tt.render.sprites[1].offset.y
-tt.down_splash_fx = "fx_stage_32_dragon_down_splash"
-tt.tween.remove = false
-tt.tween.disabled = true
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
-
-tt = E:register_t("mod_stage_32_tower_block", "mod_hide_tower")
-E:add_comps(tt, "render")
-tt.main_script.update = scripts.mod_stage_32_tower_blocked.update
-tt.main_script.remove = nil
-tt.render.sid_lava = 1
-tt.render.sprites[tt.render.sid_lava].prefix = "dragon_rock_stunDef"
-tt.render.sprites[tt.render.sid_lava].exo = true
-tt.render.sprites[tt.render.sid_lava].name = "idle"
-tt.render.sprites[tt.render.sid_lava].draw_order = 20
-tt.sound_restore = "Stage22TowerRestore"
-tt.hand_decal_t = "dlc2_generic_tap_hand"
-tt.skip_modifiers = {"mod_boss_crocs_tower_eat"}
-tt.click_rect = r(-30, 0, 60, 60)
-tt.menu_offset = v(0, 12)
 
 tt = E:register_t("decal_stage33_envelop", "decal_scripted")
 E:add_comps(tt, "ui")

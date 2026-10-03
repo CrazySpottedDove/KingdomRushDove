@@ -10043,44 +10043,6 @@ tt.repair_cost = 50
 tt.water_decal_t = "decal_mod_stage_25_torso_missile_stun_water"
 tt.hand_decal_t = "decal_mod_stage_25_torso_missile_stun_hand"
 
-tt = E:register_t("mod_stage_27_ray_stun", "modifier")
-E:add_comps(tt, "render", "tween")
-tt.main_script.update = scripts.mod_stage_27_ray_stun.update
-tt.modifier.duration = 15
-tt.render.sprites[1].prefix = "dclenanos_stage05_headplasmaDef"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].draw_order = 20
-tt.render.sprites[1].sort_y_offset = -10
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "dclenanos_stage05_headplasmabgDef"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].draw_order = 20
-tt.render.sprites[2].sort_y_offset = 15
-tt.tween.props[1].keys = {{0, 0}, {fts(15), 255}}
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].name = "alpha"
-tt.tween.props[2].sprite_id = 2
-tt.tween.props[2].keys = {{0, 0}, {fts(15), 255}}
-tt.tween.remove = false
-tt.sound_events.insert = "EnemyRevenantSoulcallerBlockTowerIn"
-tt.sound_events.remove = "EnemyRevenantSoulcallerBlockTowerOut"
-
-tt = E:register_t("mod_bullet_stage_27_tower_stun", "modifier")
-E:add_comps(tt, "render")
-tt.main_script.update = scripts.mod_bullet_stage_27_tower_stun.update
-tt.main_script.remove = scripts.mod_bullet_stage_27_tower_stun.remove
-tt.render.sprites[1].prefix = "boss_fx_scrap_tower_fx"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].draw_order = 20
-tt.render.sprites[1].offset = v(-1, 10)
-tt.render.sprites[1].sort_y_offset = -10
-tt.sound_events.insert = "EnemyRevenantSoulcallerBlockTowerIn"
-tt.sound_events.remove = "EnemyRevenantSoulcallerBlockTowerOut"
-tt.repair_cost = {50, 75, 100, 125, 150, 175, 200, 225, 250, 275}
-tt.hand_decal_t = "decal_mod_stage_25_torso_missile_stun_hand"
-tt.modifier.duration = 4
-
 tt = E:register_t("enemy_darksteel_anvil", "enemy")
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 tt.info.enc_icon = 71
