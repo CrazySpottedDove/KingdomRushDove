@@ -10537,77 +10537,11 @@ for i = 1, tt.threads_amount do
 	tt.render.sprites[i + 1] = s
 end
 
-tt = RT("controller_stage_31_water_mechanic", "decal_scripted")
-AC(tt, "ui", "editor")
-tt.main_script.update = scripts.controller_stage_31_water_mechanic.update
-tt.duration = 4
-tt.cooldown = 50
-tt.path = {1, 4}
-tt.nodes = {{46, 138}, {50, 130}}
-tt.warn_duration = 5
-tt.unlock_wave = 4
-tt.spawn_every_nodes = 9
-tt.check_every = 3
-tt.check_radius = 60
-tt.first_warn_minimum_targets = 3
-tt.fx_entity = "stage_31_water_mechanic_fx"
-tt.fx_entity_decal = "stage_31_water_mechanic_fx_decal"
-tt.hand_decal_t = "dlc2_generic_tap_hand"
-tt.render.sprites[1].prefix = "fuente_unitDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[2] = E:clone_c("sprite")
-tt.render.sprites[2].prefix = "water_cracksDef"
-tt.render.sprites[2].name = "idle"
-tt.render.sprites[2].exo = true
-tt.render.sprites[2].sort_y_offset = 0
-tt.render.sprites[2].z = Z_DECALS - 1
-tt.render.sprites[2].pos = v(512, 384)
-tt.ui.has_nav_mesh = true
-tt.ui.click_rect = r(-50, -90, 103, 190)
-tt.extra_ui_click_rects = {r(-120, -60, 243, 120), r(-85, -80, 173, 160)}
-tt.extra_ui_click_rect_speach_bubble = r(50, 58, 78, 67)
-tt.mods = {"mod_stage31_water_mechanic_dps"}
-tt.enemies_detection = {"enemy_fire_phoenix", "enemy_fire_fox", "enemy_nine_tailed_fox", "enemy_burning_treant", "enemy_ash_spirit"}
-
 tt = RT("generic_extra_touch_controller")
 AC(tt, "pos", "ui", "main_script")
 tt.main_script.update = scripts.generic_extra_touch_controller.update
 tt.ui.can_select = false
 tt.ui.has_nav_mesh = false
-
-tt = RT("stage_31_water_mechanic_fx", "decal_scripted")
-tt.main_script.update = scripts.stage_31_water_mechanic_fx.update
-tt.render.sprites[1].prefix = "water_splash_unitDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-
-tt = RT("stage_31_water_mechanic_fx_decal", "decal_tween")
-AC(tt, "main_script")
-tt.render.sprites[1].prefix = "charco_unitDef"
-tt.render.sprites[1].name = "Idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.duration = 4
-tt.added_scale = 1
-
-function tt.main_script.insert(this, store)
-	this.render.sprites[1].ts = store.tick_ts
-	this.tween.ts = store.tick_ts
-	this.render.sprites[1].flip_x = math.random() > 0.5
-
-	local start_delay = math.random() * fts(8)
-
-	this.tween.props[1].keys = {{0, 0}, {start_delay, 0}, {start_delay + fts(7), 255}, {start_delay + fts(7) + this.duration, 255}, {start_delay + fts(7) + this.duration + fts(27), 0}}
-	this.tween.props[2].keys = {{0, vv(0.8 * this.added_scale)}, {start_delay, vv(0.8 * this.added_scale)}, {start_delay + fts(7), vv(1 * this.added_scale)}, {start_delay + fts(7) + this.duration, vv(1 * this.added_scale)}, {start_delay + fts(7) + this.duration + fts(27), vv(0.8 * this.added_scale)}}
-
-	return true
-end
-
-tt.tween.props[1].keys = {{0, 0}, {fts(2), 0}, {fts(7), 255}, {fts(7) + tt.duration, 255}, {fts(7) + tt.duration + fts(27), 0}}
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].keys = {{0, vv(0.8)}, {fts(2), vv(0.8)}, {fts(7), vv(1)}, {fts(7) + tt.duration, vv(1)}, {fts(7) + tt.duration + fts(27), vv(0.8)}}
-tt.tween.props[2].name = "scale"
 
 tt = E:register_t("dlc2_generic_tap_hand", "decal_tween")
 tt.render.sprites[1].prefix = "dlc2_generic_tap_hand"
@@ -11076,51 +11010,6 @@ tt.render.sprites[3].offset = v(-38, 20)
 tt.render.sprites[3].hidden = true
 tt.render.sprites[3].delay_start = 0.3
 tt.sound_events.insert = "EnemyBossPrincessRangedImpact"
-
-for i = 1, 3 do
-
-	tt = E:register_t("stage_31_exo_forest_" .. i, "decal")
-	AC(tt, "editor_script")
-	tt.render.sprites[1].prefix = "stage_31_forest_0" .. i .. "Def"
-	tt.render.sprites[1].name = "loop"
-	tt.render.sprites[1].animated = true
-	tt.render.sprites[1].exo = true
-	tt.show_in_editor = false
-	tt.editor_script.insert = scripts.editor_mask.insert
-
-	if i == 3 then
-		tt.render.sprites[1].z = Z_OBJECTS + 1
-		tt.render.sprites[1].sort_y_offset = -700
-	else
-		tt.render.sprites[1].z = Z_DECALS
-	end
-end
-
-for lyr_nmbr = 1, 7 do
-
-	tt = E:register_t("stage_31_exo_waterfall_layer_" .. lyr_nmbr, "decal")
-	tt.render.sprites[1].prefix = "stage_31_waterfall_layer_" .. lyr_nmbr .. "Def"
-	tt.render.sprites[1].name = "loop"
-	tt.render.sprites[1].animated = true
-	tt.render.sprites[1].exo = true
-	tt.render.sprites[1].z = Z_OBJECTS
-
-	if lyr_nmbr == 1 then
-		tt.render.sprites[1].sort_y_offset = -201
-	elseif lyr_nmbr == 2 then
-		tt.render.sprites[1].sort_y_offset = -200
-	elseif lyr_nmbr == 3 then
-		tt.render.sprites[1].sort_y_offset = 3
-	elseif lyr_nmbr == 4 then
-		tt.render.sprites[1].sort_y_offset = 4
-	elseif lyr_nmbr == 5 then
-		tt.render.sprites[1].sort_y_offset = 5
-	elseif lyr_nmbr == 6 then
-		tt.render.sprites[1].sort_y_offset = 220
-	elseif lyr_nmbr == 7 then
-		tt.render.sprites[1].sort_y_offset = 2001
-	end
-end
 
 tt = RT("decal_generic_kill_area")
 AC(tt, "pos", "editor", "editor_script")
