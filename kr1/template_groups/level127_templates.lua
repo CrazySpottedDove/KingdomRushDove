@@ -3,12 +3,14 @@ local E = require("entity_db")
 local S = require("sound_db")
 local U = require("utils")
 local V = require("lib.klua.vector")
+local SU = require("script_utils")
 local function fts(v)
 	return v / FPS
 end
 require("lib.klua.table")
 local scripts = require("scripts")
 local r = V.r
+local vv = V.vv
 local log = require("lib.klua.log"):new("level127")
 local controller_stage_27_platform_update
 local controller_stage_27_platform_on_platform_up_event
@@ -20,7 +22,6 @@ local decal_stage_27_modes_decos_update
 local decal_stage_27_beam_update
 controller_stage_27_platform_update = function(this, store)
 	local platform, platform_bars, cannon_left, cannon_right, door_mask, cannon_c_right, cannon_c_left
-	print("insert controller_stage_27_platform")
 	for i, v in pairs(store.entities) do
 		if v.template_name == this.platform_t then
 			platform = v
@@ -874,6 +875,366 @@ function controller_stage_27_head.on_scrap_event(this, store, action, scrap_coun
 	this.scrap_count = scrap_count
 end
 
+tt = E:register_t_tmp("decal_stage27_boss_shoutbox", "decal_stage06_cultist_shoutbox")
+
+tt = E:register_t_tmp("controller_stage_27_cannon")
+E:add_comps(tt, "main_script")
+tt.main_script.update = function(this, store)
+	local function shoot_clone(pos, dies)
+		local b
+
+		if dies then
+			b = E:create_entity(this.bullet_clone_dead_t)
+		else
+			b = E:create_entity(this.bullet_clone_alive_t)
+		end
+
+		b.pos = V.vclone(this.cannon.shot_pos)
+		b.bullet.from = V.vclone(b.pos)
+		b.bullet.to = V.vclone(pos)
+		b.bullet.source_id = this.id
+		b.bullet.flight_time = b.bullet.flight_time + fts(math.random(-7, 7))
+		b.bullet.rotation_speed = b.bullet.rotation_speed * (0.5 + math.random() * 1.5)
+
+		if math.random(1, 2) == 1 then
+			b.bullet.rotation_speed = -b.bullet.rotation_speed
+		end
+
+		simulation:queue_insert_entity(b)
+	end
+
+	local function shoot_cannon()
+		local explotion = E:create_entity(this.cannon_shot_fx_t)
+
+		explotion.pos = this.cannon.pos
+		explotion.render.sprites[1].ts = store.tick_ts
+
+		if this.cannon.pos.x < 512 then
+			explotion.render.sprites[1].flip_x = true
+		end
+
+		simulation:queue_insert_entity(explotion)
+
+		local positions_aux = P:get_all_valid_pos(this.cannon.shot_target_pos.x, this.cannon.shot_target_pos.y, 0, 150, bor(TERRAIN_LAND, TERRAIN_ICE), nil, 0, {1, 2, 3})
+		local positions = {}
+
+		for i = 1, this.clones_count * 2 do
+			local idx = math.random(1, #positions_aux)
+
+			table.insert(positions, positions_aux[idx])
+			table.remove(positions_aux, idx)
+		end
+
+		local dies = false
+
+		for k, v in pairs(positions) do
+			shoot_clone(v, dies)
+
+			dies = not dies
+		end
+	end
+
+	for i, v in pairs(store.entities) do
+		if v.template_name == this._decal then
+			this.cannon = v
+		end
+	end
+
+	while true do
+		if this.shoot_cannon then
+			this.cannon.render.sprites[1].hidden = false
+
+			U.y_animation_play(this.cannon, "start", nil, store.tick_ts, 1)
+			U.y_wait_unconditional(store, fts(21))
+			S:queue(this.sound_shot)
+			U.animation_start_default(this.cannon, "shoot", nil, store.tick_ts, false)
+			U.y_wait_unconditional(store, this.cannon_shoot_time)
+			shoot_cannon()
+			U.y_animation_wait_default(this.cannon)
+
+			this.cannon.render.sprites[1].hidden = true
+			this.shoot_cannon = false
+		end
+
+		coroutine.yield()
+	end
+end
+tt.cannon_shot_fx_t = "fx_stage_27_cannon_shot"
+tt.cannon_shoot_time = fts(30)
+tt.bullet_clone_dead_t = "bullet_stage_27_clone_dead"
+tt.bullet_clone_alive_t = "bullet_stage_27_clone_alive"
+tt.sound_shot = "Stage27CloneCannonOneShot"
+
+tt = E:register_t_tmp("decal_stage_27_clone_dead", "decal_tween")
+tt.render.sprites[1].prefix = "cannonLAYERS_clonedecorative"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = false
+tt.tween.props[1].keys = {{0, 255}, {fts(30), 255}, {fts(55), 0}}
+
+tt = E:register_t_tmp("decal_stage_27_clone_alive", "decal_timed")
+tt.render.sprites[1].prefix = "cannonLAYERS_cloneland"
+tt.render.sprites[1].name = "idle"
+
+tt = E:register_t_tmp("decal_stage_27_ray", "decal")
+tt.render.sprites[1].prefix = "dclenanos_stage05_headrayDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].scale = vv(2)
+
+tt = E:register_t_tmp("decal_stage_27_goblins", "decal")
+tt.render.sprites[1].prefix = "dclenanos_head_goblinsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = -350
+
+tt = E:register_t_tmp("bullet_stage_27_clone_dead", "bomb")
+tt.bullet.flight_time = fts(35)
+tt.bullet.hit_fx = nil
+tt.bullet.hit_decal = "decal_stage_27_clone_dead"
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_radius = 0
+tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
+tt.bullet.pop_chance = 0
+tt.render.sprites[1].name = "cannonLAYERS_flyclone"
+
+tt = E:register_t_tmp("bullet_stage_27_clone_alive", "bullet_stage_27_clone_dead")
+tt.bullet.hit_decal = "decal_stage_27_clone_alive"
+tt.bullet.hit_payload = "controller_spawn_enemy_common_clone"
+
+tt = E:register_t_tmp("bullet_stage_27_scrap", "bomb")
+tt.bullet.damage_max = 72
+tt.bullet.damage_min = 48
+tt.bullet.damage_radius = 50
+tt.bullet.damage_bans = bor(F_ENEMY)
+tt.bullet.flight_time = fts(60)
+tt.bullet.hit_fx = "fx_bullet_stage_27_scrap"
+tt.bullet.particles_name = "ps_bullet_stage_27_scrap"
+tt.bullet.hit_payload = "decal_scrap"
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
+tt.render.sprites[1].name = "dclenanos_stage05_ScrapProjectile_asst_scrap"
+tt.render.sprites[1].hidden = false
+tt.sound_events.insert = "TowerBallistaScrapBombCast"
+tt.sound_events.hit = "TowerBallistaScrapBombExplosion"
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.enemy_bomb.update
+
+tt = E:register_t_tmp("bullet_stage_27_tower_stun", "bomb")
+tt.bullet.flight_time = fts(60)
+tt.bullet.particles_name = "ps_bullet_stage_27_tower_stun"
+tt.bullet.hit_fx = "fx_bullet_stage_27_tower_stun"
+tt.bullet.ignore_hit_offset = true
+tt.bullet.mod = "mod_bullet_stage_27_tower_stun"
+tt.bullet.align_with_trajectory = true
+tt.render.sprites[1].name = "boss_fx_scrap_projectile"
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = function(this, store)
+	local b = this.bullet
+	local ps
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+
+		simulation:queue_insert_entity(ps)
+	end
+
+	local warp_factor = b.warp_time and b.warp_time or 1
+
+	while (store.tick_ts - b.ts + store.tick_length) * warp_factor < b.flight_time do
+		coroutine.yield()
+
+		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+		this.pos.x, this.pos.y = SU.position_in_parabola((store.tick_ts - b.ts) * warp_factor, b.from, b.speed, b.g)
+
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+		else
+			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+		end
+
+		if b.hide_radius then
+			this.render.sprites[1].hidden = V.dist(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius or V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius
+		end
+	end
+
+	local target = b.target_id and store.entities[b.target_id]
+
+	if b.mod and target then
+		local mod = E:create_entity(b.mod)
+
+		mod.modifier.target_id = target.id
+		mod.modifier.source_id = this.id
+
+		simulation:queue_insert_entity(mod)
+	end
+
+	S:queue(this.sound_events.hit)
+
+	if b.hit_fx then
+		local sfx = E:create_entity(b.hit_fx)
+
+		sfx.pos = V.vclone(b.to)
+		sfx.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(sfx)
+	end
+
+	simulation:queue_remove_entity(this)
+end
+tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
+tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
+
+tt = E:register_t_tmp("mod_bullet_stage_27_tower_stun", "modifier")
+E:add_comps(tt, "render")
+tt.main_script.update = function(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target then
+		simulation:queue_remove_entity(this)
+
+		return
+	end
+
+	local remove_time = store.tick_ts + 2 * math.random(0, 1) * m.duration + m.duration
+
+	this.pos = target.pos
+
+	U.tower_block_inc(target)
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1)
+
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+
+	while store.tick_ts < remove_time do
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, "out", nil, store.tick_ts, 1)
+	simulation:queue_remove_entity(this)
+end
+tt.main_script.remove = function(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target then
+		U.tower_block_dec(target)
+	end
+
+	return true
+end
+tt.render.sprites[1].prefix = "boss_fx_scrap_tower_fx"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].offset = v(-1, 10)
+tt.render.sprites[1].sort_y_offset = -10
+tt.sound_events.insert = "EnemyRevenantSoulcallerBlockTowerIn"
+tt.sound_events.remove = "EnemyRevenantSoulcallerBlockTowerOut"
+tt.repair_cost = {50, 75, 100, 125, 150, 175, 200, 225, 250, 275}
+tt.hand_decal_t = "decal_mod_stage_25_torso_missile_stun_hand"
+tt.modifier.duration = 4
+
+tt = E:register_t_tmp("mod_stage_27_ray_stun", "modifier")
+E:add_comps(tt, "render", "tween")
+tt.main_script.update = function(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target then
+		simulation:queue_remove_entity(this)
+
+		return
+	end
+
+	m.ts = store.tick_ts
+
+	SU.tower_block_inc(target)
+
+	this.pos = target.pos
+	this.tween.ts = store.tick_ts
+
+	U.animation_start(this, "run", nil, store.tick_ts, true, 2)
+	U.y_animation_play(this, "start", nil, store.tick_ts, 1, 1)
+	U.animation_start(this, "loop", nil, store.tick_ts, true, 1)
+
+	local start_ts = store.tick_ts
+
+	while store.tick_ts - start_ts < m.duration do
+		if this.remove then
+			break
+		end
+
+		coroutine.yield()
+	end
+
+	SU.tower_block_dec(target)
+
+	this.tween.ts = store.tick_ts
+	this.tween.reverse = true
+	this.tween.remove = true
+end
+
+tt.modifier.duration = 15
+tt.render.sprites[1].prefix = "dclenanos_stage05_headplasmaDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "dclenanos_stage05_headplasmabgDef"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].draw_order = 20
+tt.render.sprites[2].sort_y_offset = 15
+tt.tween.props[1].keys = {{0, 0}, {fts(15), 255}}
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].sprite_id = 2
+tt.tween.props[2].keys = {{0, 0}, {fts(15), 255}}
+tt.tween.remove = false
+tt.sound_events.insert = "EnemyRevenantSoulcallerBlockTowerIn"
+tt.sound_events.remove = "EnemyRevenantSoulcallerBlockTowerOut"
+
+tt = E:register_t_tmp("fx_stage_27_cannon_shot", "fx")
+tt.render.sprites[1].prefix = "dlcenanos_stage05_cannon_explosionDef"
+tt.render.sprites[1].name = "shoot"
+tt.render.sprites[1].exo = true
+
+tt = E:register_t_tmp("fx_stage_27_scrap", "fx")
+tt.render.sprites[1].prefix = "dclenanos_stage05_ScrapProjectileFXDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+
+tt = E:register_t_tmp("fx_bullet_stage_27_scrap", "fx")
+tt.render.sprites[1].prefix = "dclenanos_stage05_ScrapProjectileHitFXDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+
+tt = E:register_t_tmp("fx_bullet_stage_27_tower_stun", "fx")
+tt.render.sprites[1].name = "boss_fx_scrap_hit"
+
+tt = E:register_t_tmp("ps_bullet_stage_27_scrap")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "dclenanos_stage05_ScrapProjectileTrail_asst_scrap_projectile_trail"
+tt.particle_system.emission_rate = 15
+tt.particle_system.spin = {math.pi / 6, math.pi / 4}
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.particle_lifetime = {fts(25), fts(25)}
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.scales_x = {0.9, 1.2}
+tt.particle_system.scales_y = {0.9, 1.2}
+
+tt = E:register_t_tmp("ps_bullet_stage_27_tower_stun")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "boss_fx_scrap_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 60
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.particle_lifetime = {fts(6), fts(6)}
+tt.particle_system.scales_x = {0.9, 1.1}
+tt.particle_system.scales_y = {0.9, 1.1}
+
 tt = E:register_t_hot("decal_stage_27_modes_decos", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui")
 tt.render.sprites[1].prefix = "DLCstage5_deco_modosDef"
@@ -1030,17 +1391,22 @@ tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
 
+local function controller_stage_27_cannon_on_cannons_event(this, store, action, clones_count)
+	this.shoot_cannon = true
+	this.clones_count = clones_count
+end
+
 tt = E:register_t_hot("controller_stage_27_cannon_L", "controller_stage_27_cannon", true)
 E:add_comps(tt, "events")
 tt.events.list[1].name = "shoot-cannons-L"
 tt._decal = "decal_stage_27_cannon_left"
-tt.events.list[1].on_event = scripts.controller_stage_27_cannon.on_cannons_event
+tt.events.list[1].on_event = controller_stage_27_cannon_on_cannons_event
 
 tt = E:register_t_hot("controller_stage_27_cannon_R", "controller_stage_27_cannon", true)
 E:add_comps(tt, "events")
 tt.events.list[1].name = "shoot-cannons-R"
 tt._decal = "decal_stage_27_cannon_right"
-tt.events.list[1].on_event = scripts.controller_stage_27_cannon.on_cannons_event
+tt.events.list[1].on_event = controller_stage_27_cannon_on_cannons_event
 
 tt = E:register_t_hot("controller_stage_27_head", nil, true)
 E:add_comps(tt, "main_script", "events", "ui", "editor")

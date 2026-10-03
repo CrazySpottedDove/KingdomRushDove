@@ -7,7 +7,7 @@ local r = V.r
 local U = require("utils")
 local tt
 
-tt = E:register_t("decal_stage_32_boss_bubbles", "decal_scripted")
+tt = E:register_t_tmp("decal_stage_32_boss_bubbles", "decal_scripted")
 E:add_comps(tt, "tween")
 tt.main_script.update = function(this, store)
 	if not this.moving_towards then
@@ -70,7 +70,7 @@ tt.tween.disabled = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 
-tt = E:register_t("mod_stage_32_tower_block", "mod_hide_tower")
+tt = E:register_t_tmp("mod_stage_32_tower_block", "mod_hide_tower")
 E:add_comps(tt, "render")
 tt.main_script.update = function(this, store)
 	local m = this.modifier
@@ -229,16 +229,16 @@ tt.skip_modifiers = {"mod_boss_crocs_tower_eat"}
 tt.click_rect = r(-30, 0, 60, 60)
 tt.menu_offset = v(0, 12)
 
-tt = E:register_t("fx_stage_32_dragon_mouth_fire_left", "fx")
+tt = E:register_t_tmp("fx_stage_32_dragon_mouth_fire_left", "fx")
 tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_01Def"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = DAMAGE_TRUE
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t("fx_stage_32_dragon_mouth_fire_right", "fx_stage_32_dragon_mouth_fire_left")
+tt = E:register_t_tmp("fx_stage_32_dragon_mouth_fire_right", "fx_stage_32_dragon_mouth_fire_left")
 tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_02Def"
 
-tt = E:register_t("fx_stage_32_dragon_down_splash", "fx")
+tt = E:register_t_tmp("fx_stage_32_dragon_down_splash", "fx")
 tt.render.sprites[1].prefix = "dragon_redboy_splashDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
@@ -246,13 +246,13 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -20
 tt.render.sprites[1].offset = v(0, 15)
 
-tt = E:register_t("fx_stage_32_lava_geyser", "fx")
+tt = E:register_t_tmp("fx_stage_32_lava_geyser", "fx")
 tt.render.sprites[1].prefix = "dragon_cracks_geyserDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = E:register_t("decal_stage_32_boss_fissure_ability", "decal_dlc_wukong_flaming_ground")
+tt = E:register_t_tmp("decal_stage_32_boss_fissure_ability", "decal_dlc_wukong_flaming_ground")
 tt.main_script.update = function(this, store)
 	local function set_auras_enabled(enabled)
 		for _, id in ipairs(this.cached_auras) do
