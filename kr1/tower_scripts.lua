@@ -31339,9 +31339,8 @@ function scripts.tower_catapult.update(this, store)
 	local a = this.attacks
 	local ba = this.attacks.list[1]
 	local saa = this.attacks.list[2]
-	local sba = this.attacks.list[3]
-	local sca = this.attacks.list[4]
-	local sua = this.attacks.list[5]
+	local sca = this.attacks.list[3]
+	local sua = this.attacks.list[4]
 
 	this.active_traps = {}
 
@@ -31372,8 +31371,6 @@ function scripts.tower_catapult.update(this, store)
 
 		if attack == saa then
 			sufix = "_tarred_zone"
-		elseif attack == sba then
-			sufix = "_explosive"
 		end
 
 		if dir == 1 then
@@ -31424,11 +31421,7 @@ function scripts.tower_catapult.update(this, store)
 	end
 
 	local function y_reload_anim()
-		if not sba.disabled then
-			U.animation_start(this, "ball_reload_2", nil, store.tick_ts, false, this.balls_sid)
-		else
-			U.animation_start(this, "ball_reload", nil, store.tick_ts, false, this.balls_sid)
-		end
+		U.animation_start(this, "ball_reload", nil, store.tick_ts, false, this.balls_sid)
 
 		if not saa.disabled and ready_to_attack(saa, store, this.tower.cooldown_factor) then
 			U.animation_start(this, "reload_tarred_zone", nil, store.tick_ts, false, this.loader_sid)
@@ -31436,21 +31429,9 @@ function scripts.tower_catapult.update(this, store)
 			U.animation_start(this, "idle_2_tarred_zone", nil, store.tick_ts, true, this.tower_sid)
 			U.animation_start(this, "idle", nil, store.tick_ts, true, this.loader_sid)
 
-			if not sba.disabled then
-				U.animation_start(this, "idle_2", nil, store.tick_ts, false, this.balls_sid)
-			else
-				U.animation_start(this, "idle", nil, store.tick_ts, false, this.balls_sid)
-			end
+			U.animation_start(this, "idle", nil, store.tick_ts, false, this.balls_sid)
 
 			next_attack = saa
-		elseif not sba.disabled then
-			U.animation_start(this, "reload_explosive", nil, store.tick_ts, false, this.loader_sid)
-			U.y_animation_play(this, "reload_explosive", nil, store.tick_ts, 1, this.tower_sid)
-			U.animation_start(this, "idle_2_explosive", nil, store.tick_ts, true, this.tower_sid)
-			U.animation_start(this, "idle_2", nil, store.tick_ts, false, this.balls_sid)
-			U.animation_start(this, "idle", nil, store.tick_ts, true, this.loader_sid)
-
-			next_attack = sba
 		else
 			U.animation_start(this, "reload", nil, store.tick_ts, false, this.loader_sid)
 			U.y_animation_play(this, "reload", nil, store.tick_ts, 1, this.tower_sid)
@@ -31473,8 +31454,10 @@ function scripts.tower_catapult.update(this, store)
 
 		if aa == saa then
 			b.bullet.level = sa.level
-		elseif aa == sba then
-			b.bullet.level = sb.level
+		end
+
+		if sb.level > 0 then
+			b._with_catapult_explosion_level = sb.level
 		end
 
 		queue_insert(store, b)
@@ -31511,11 +31494,13 @@ function scripts.tower_catapult.update(this, store)
 			return false
 		end
 
-		local enemies
+		local ulti_trigger_enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, sua.vis_flags, sua.vis_bans)
 
-		ulti_trigger_enemy, enemies, ulti_pred_pos = U.find_foremost_enemy(store, tpos(this), sua.min_range, sua.max_range, sua.cast_time + fts(40), sua.vis_flags, sua.vis_bans)
+		if ulti_trigger_enemy then
+			ulti_pred_pos = U.calculate_enemy_ffe_pos(ulti_trigger_enemy, sua.cast_time + fts(35))
+		end
 
-		return ulti_trigger_enemy and ulti_pred_pos and #enemies >= sua.min_targets and (not store.level.ignore_walk_backwards_paths or not table.contains(store.level.ignore_walk_backwards_paths, ulti_trigger_enemy.nav_path.pi)) and P:is_path_active(ulti_trigger_enemy.nav_path.pi)
+		return ulti_trigger_enemy and (not store.level.ignore_walk_backwards_paths or not table.contains(store.level.ignore_walk_backwards_paths, ulti_trigger_enemy.nav_path.pi)) and P:is_path_active(ulti_trigger_enemy.nav_path.pi)
 	end
 
 	ba.ts = store.tick_ts - ba.cooldown
@@ -31529,24 +31514,14 @@ function scripts.tower_catapult.update(this, store)
 			if sa.changed then
 				sa.changed = nil
 				saa.disabled = false
-				saa.cooldown = sa.cooldown[sa.level]
-
-				if sa.level == 1 then
-					saa.ts = store.tick_ts - saa.cooldown
-				end
 			end
 			if sb.changed then
 				sb.changed = nil
-				sba.disabled = false
+			-- sba.disabled = false
 			end
 			if sc.changed then
 				sc.changed = nil
 				sca.disabled = false
-				sca.cooldown = sc.cooldown[sc.level]
-
-				if sc.level == 1 then
-					sca.ts = store.tick_ts - sca.cooldown
-				end
 			end
 
 			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
@@ -31579,11 +31554,13 @@ function scripts.tower_catapult.update(this, store)
 						U.animation_start(this, sua.animation, nil, store.tick_ts, false, 2)
 						U.y_wait_unconditional(store, sua.cast_time)
 
-						local enemy, _, new_pred_pos = U.find_foremost_enemy(store, tpos(this), sua.min_range, sua.max_range, fts(40), sua.vis_flags, sua.vis_bans)
+						local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, sua.vis_flags, sua.vis_bans)
 
-						if not enemy or not new_pred_pos then
+						if not enemy then
 							enemy = ulti_trigger_enemy
 							new_pred_pos = ulti_pred_pos
+						else
+							new_pred_pos = U.calculate_enemy_ffe_pos(enemy, fts(35))
 						end
 
 						local nearest = P:nearest_nodes(new_pred_pos.x, new_pred_pos.y)
@@ -31634,6 +31611,20 @@ function scripts.tower_catapult.update(this, store)
 		end
 	end
 end
+
+scripts.bullet_catapult = {
+	update = function(this, store)
+		scripts.bomb.update(this, store)
+		if this._with_catapult_explosion_level then
+			local e = E:create_entity("aura_catapult_skill_b_bomb")
+			e.aura.source_id = this.bullet.source_id
+			e.aura.damage_factor = this.bullet.damage_factor
+			e.aura.level = this._with_catapult_explosion_level
+			e.pos:copy(this.pos)
+			simulation:queue_insert_entity(e)
+		end
+	end
+}
 
 scripts.aura_catapult_skill_a = {}
 
