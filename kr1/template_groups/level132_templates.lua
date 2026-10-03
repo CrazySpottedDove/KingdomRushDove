@@ -1,6 +1,345 @@
 local E = require("entity_db")
 require("lib.klua.table")
+local V = require("lib.klua.vector")
+local SU = require("script_utils")
+local v = V.v
+local r = V.r
+local U = require("utils")
 local tt
+
+tt = E:register_t("decal_stage_32_boss_bubbles", "decal_scripted")
+E:add_comps(tt, "tween")
+tt.main_script.update = function(this, store)
+	if not this.moving_towards then
+		this.moving_towards = "up"
+	end
+
+	local function move_boss_pos()
+		this.pos.y = this.pos.y + ((this.moving_towards == "down" and this.dragon_down_pos_y or this.dragon_up_pos_y) - this.pos.y) * 2 * store.tick_length
+	end
+
+	while true do
+		move_boss_pos()
+
+		if this.activate_ts and this.activate_ts < store.tick_ts then
+			this.activate_ts = nil
+
+			if this.do_splash ~= false then
+				local splash = E:create_entity(this.down_splash_fx)
+
+				splash.pos = V.vclone(this.pos)
+				splash.render.sprites[1].ts = store.tick_ts
+
+				simulation:queue_insert_entity(splash)
+
+				local shake = E:create_entity("aura_screen_shake")
+
+				shake.aura.amplitude = this.going_down and 0.35 or 0.15
+				shake.aura.duration = this.going_down and 1 or 0.6
+				shake.aura.freq_factor = 2
+
+				simulation:queue_insert_entity(shake)
+
+				local wait_ts = store.tick_ts + fts(4)
+
+				while wait_ts > store.tick_ts do
+					move_boss_pos()
+					coroutine.yield()
+				end
+			end
+
+			this.tween.disabled = false
+			this.tween.ts = store.tick_ts
+			this.tween.reverse = not this.going_down
+			this.moving_towards = this.going_down and "down" or "up"
+		end
+
+		coroutine.yield()
+	end
+end
+tt.render.sprites[1].prefix = "dragon_redboy_bubblesDef"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].alpha = 0
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[1].sort_y_offset = -tt.render.sprites[1].offset.y
+tt.down_splash_fx = "fx_stage_32_dragon_down_splash"
+tt.tween.remove = false
+tt.tween.disabled = true
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
+
+tt = E:register_t("mod_stage_32_tower_block", "mod_hide_tower")
+E:add_comps(tt, "render")
+tt.main_script.update = function(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target then
+		simulation:queue_remove_entity(this)
+
+		return
+	end
+
+	m.ts = store.tick_ts
+
+	if target.tower and not target.tower._type then
+		target.tower._type = target.tower.type
+		target.tower.type = "tower_broken_stage_32"
+		target.trigger_deselect = true
+		target.repair = {}
+		target.repair.cost = this.repair_cost
+		target.repair.active = false
+
+		if not target.user_selection then
+			E:add_comps(target, "user_selection")
+		end
+
+		if target.ui then
+			this._ui_click_rect = table.deepclone(target.ui.click_rect)
+			target.ui.click_rect = table.deepclone(this.click_rect)
+		end
+
+		this._menu_offset = V.vclone(target.tower.menu_offset)
+		target.tower.menu_offset = V.vclone(this.menu_offset)
+		this._can_be_sold = target.tower.can_be_sold
+		target.tower.can_be_sold = false
+	end
+
+	this.pos = target.pos
+
+	if target.ui and target.tower.block_count <= 1 then
+		target.ui.can_click = true
+		target.ui.force_can_select = true
+	end
+
+	U.animation_start(this, "in", nil, store.tick_ts, false, this.render.sid_lava, true)
+
+	local tap_ts = store.tick_ts
+	local hand
+	local hand_times = 0
+	local hand_times_max = store.has_restored_destroyed_tower and 0 or 3
+
+	while store.tick_ts - m.ts < m.duration - 0.5 do
+		if target.user_selection and target.user_selection.in_progress and not target.repair.active then
+			target.user_selection.in_progress = nil
+			target.user_selection.allowed = false
+			store.player_gold = store.player_gold - target.repair.cost
+			target.repair.active = true
+			target.ui.can_click = false
+
+			break
+		end
+
+		if this.render.sprites[this.render.sid_lava].name == "in" and U.animation_finished_default(this) then
+			U.animation_start(this, "loop", nil, store.tick_ts, true, this.render.sid_lava, true)
+		end
+
+		if store.tick_ts - tap_ts > 4 and hand_times < hand_times_max then
+			tap_ts = store.tick_ts
+			hand_times = hand_times + 1
+			hand = E:create_entity(this.hand_decal_t)
+			hand.pos = this.pos
+			hand.render.sprites[1].ts = store.tick_ts
+			hand.tween.ts = store.tick_ts
+
+			simulation:queue_insert_entity(hand)
+		end
+
+		coroutine.yield()
+	end
+
+	target.user_selection.allowed = true
+	store.has_restored_destroyed_tower = true
+
+	if hand then
+		simulation:queue_remove_entity(hand)
+	end
+
+	U.animation_start(this, "end", nil, store.tick_ts, false, this.render.sid_lava)
+
+	target = store.entities[m.target_id]
+
+	if target then
+		target.tower.type = target.tower._type
+		target.tower._type = nil
+
+		for i, spr in ipairs(target.render.sprites) do
+			if table.contains(this.skip_sprite_index, i) then
+			-- block empty
+			else
+				local tower_specific_indexes = this.skip_sprite_index[target.tower.type]
+
+				if tower_specific_indexes and table.contains(tower_specific_indexes, i) then
+				-- block empty
+				else
+					U.sprites_show(target, i, i, true)
+				end
+			end
+		end
+
+		for _, id in pairs(this.hidden_particles) do
+			local ps = store.entities[id]
+
+			if ps then
+				ps.particle_system.emit = true
+			end
+		end
+
+		if not this.skip_all_modifiers then
+			SU.show_modifiers(store, target, true, this.skip_modifier)
+		end
+
+		if not this.skip_all_auras then
+			SU.show_auras(store, target, true, this.skip_aura)
+		end
+
+		SU.tower_block_dec(target)
+
+		if this._ui_click_rect then
+			target.ui.click_rect = table.deepclone(this._ui_click_rect)
+			this._ui_click_rect = nil
+		end
+		target.ui.force_can_select = nil
+
+		target.tower.menu_offset = V.vclone(this._menu_offset)
+		this._menu_offset = nil
+		target.tower.can_be_sold = this._can_be_sold
+		this._can_be_sold = nil
+	end
+
+	while not U.animation_finished(this, this.render.sid_lava) do
+		coroutine.yield()
+	end
+
+	target.trigger_deselect = nil
+
+	simulation:queue_remove_entity(this)
+end
+tt.main_script.remove = nil
+tt.render.sid_lava = 1
+tt.render.sprites[tt.render.sid_lava].prefix = "dragon_rock_stunDef"
+tt.render.sprites[tt.render.sid_lava].exo = true
+tt.render.sprites[tt.render.sid_lava].name = "idle"
+tt.render.sprites[tt.render.sid_lava].draw_order = 20
+tt.sound_restore = "Stage22TowerRestore"
+tt.hand_decal_t = "dlc2_generic_tap_hand"
+tt.skip_modifiers = {"mod_boss_crocs_tower_eat"}
+tt.click_rect = r(-30, 0, 60, 60)
+tt.menu_offset = v(0, 12)
+
+tt = E:register_t("fx_stage_32_dragon_mouth_fire_left", "fx")
+tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_01Def"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = DAMAGE_TRUE
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+
+tt = E:register_t("fx_stage_32_dragon_mouth_fire_right", "fx_stage_32_dragon_mouth_fire_left")
+tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_02Def"
+
+tt = E:register_t("fx_stage_32_dragon_down_splash", "fx")
+tt.render.sprites[1].prefix = "dragon_redboy_splashDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -20
+tt.render.sprites[1].offset = v(0, 15)
+
+tt = E:register_t("fx_stage_32_lava_geyser", "fx")
+tt.render.sprites[1].prefix = "dragon_cracks_geyserDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt = E:register_t("decal_stage_32_boss_fissure_ability", "decal_dlc_wukong_flaming_ground")
+tt.main_script.update = function(this, store)
+	local function set_auras_enabled(enabled)
+		for _, id in ipairs(this.cached_auras) do
+			local aura = store.entities[id]
+
+			if aura then
+				if enabled then
+					aura.aura.cycle_time = aura.aura._cycle_time
+					aura.aura._cycle_time = nil
+				else
+					aura.aura._cycle_time = aura.aura.cycle_time
+					aura.aura.cycle_time = 1e+99
+				end
+			end
+		end
+	end
+
+	local function spawn_geyser()
+		local fx = E:create_entity(this.fx)
+
+		fx.pos = V.v(this.pos.x + -20 + 40 * math.random(), this.pos.y + -20 + 40 * math.random())
+		fx.render.sprites[1].ts = store.tick_ts
+		fx.render.sprites[1].scale = V.vv(0.7 + 0.3 * math.random())
+
+		simulation:queue_insert_entity(fx)
+	end
+
+	coroutine.yield()
+
+	U.animation_start(this, this.idle_anim, nil, store.tick_ts, true, 1, true)
+	set_auras_enabled(false)
+
+	while true do
+		if this.activate then
+			local geyser_next_ts = store.tick_ts + this.geyser_delay_min + (this.geyser_delay_max - this.geyser_delay_min) * math.random()
+			local geysers_cast = 1
+
+			spawn_geyser()
+			set_auras_enabled(true)
+			U.y_animation_play(this, this.in_anim, nil, store.tick_ts, 1, 1)
+			U.animation_start(this, this.loop_anim, nil, store.tick_ts, true, 1, true)
+
+			local start_ts = store.tick_ts
+
+			while store.tick_ts - start_ts < this.duration do
+				if this.stop then
+					this.stop = nil
+
+					break
+				end
+
+				if geyser_next_ts <= store.tick_ts and geysers_cast < this.max_geysers then
+					geysers_cast = geysers_cast + 1
+
+					spawn_geyser()
+
+					geyser_next_ts = store.tick_ts + this.geyser_delay_min + (this.geyser_delay_max - this.geyser_delay_min) * math.random()
+				end
+
+				coroutine.yield()
+			end
+
+			U.y_animation_play(this, this.end_anim, nil, store.tick_ts, 1, 1)
+			U.animation_start(this, this.idle_anim, nil, store.tick_ts, true, 1, true)
+			set_auras_enabled(false)
+
+			this.activate = false
+		end
+
+		coroutine.yield()
+	end
+end
+
+tt.render.sprites[1].prefix = "dragon_cracks_floorDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].pos = v(512, 384)
+tt.render.sprites[1].z = Z_DECALS - 1
+tt.fx = "fx_stage_32_lava_geyser"
+tt.idle_anim = "idle"
+tt.in_anim = "active_in"
+tt.loop_anim = "active_loop"
+tt.end_anim = "active_end"
+tt.max_geysers = 5
+tt.geyser_delay_max = 0.5
+tt.geyser_delay_min = 0.2
+
 tt = E:register_t_hot("stage_32_mask_waterfall_1", "decal", true)
 tt.render.sprites[1].prefix = "stage_32_lava_waterfall_1Def"
 tt.render.sprites[1].name = "loop"

@@ -11084,22 +11084,6 @@ tt.auras.list[tt.sid_explotion_aura] = E:clone_c("aura_attack")
 tt.auras.list[tt.sid_explotion_aura].name = "aura_fire_fox_explotion_dps"
 tt.auras.list[tt.sid_explotion_aura].cooldown = 0
 
-tt = E:register_t("decal_stage_32_boss_fissure_ability", "decal_dlc_wukong_flaming_ground")
-tt.main_script.update = scripts.decal_stage_32_boss_fissure_ability.update
-tt.render.sprites[1].prefix = "dragon_cracks_floorDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].pos = v(512, 384)
-tt.render.sprites[1].z = Z_DECALS - 1
-tt.fx = "fx_stage_32_lava_geyser"
-tt.idle_anim = "idle"
-tt.in_anim = "active_in"
-tt.loop_anim = "active_loop"
-tt.end_anim = "active_end"
-tt.max_geysers = 5
-tt.geyser_delay_max = 0.5
-tt.geyser_delay_min = 0.2
-
 tt = E:register_t("decal_water_sorceress_heal_wave", "decal_scripted")
 tt.main_script.insert = scripts.decal_water_sorceress_heal_wave.insert
 tt.main_script.update = scripts.decal_water_sorceress_heal_wave.update
@@ -11358,29 +11342,6 @@ tt.dps.damage_every = 1e+99
 tt.main_script.insert = scripts.mod_stage31_water_mechanic_dps.insert
 tt.main_script.update = scripts.mod_stage31_water_mechanic_dps.update
 tt.allowed_templates = {"enemy_fire_phoenix", "enemy_fire_fox", "enemy_nine_tailed_fox", "enemy_burning_treant", "enemy_ash_spirit"}
-
-tt = E:register_t("fx_stage_32_dragon_mouth_fire_left", "fx")
-tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_01Def"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].exo = DAMAGE_TRUE
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
-tt = E:register_t("fx_stage_32_dragon_mouth_fire_right", "fx_stage_32_dragon_mouth_fire_left")
-tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_02Def"
-
-tt = E:register_t("fx_stage_32_dragon_down_splash", "fx")
-tt.render.sprites[1].prefix = "dragon_redboy_splashDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].sort_y_offset = -20
-tt.render.sprites[1].offset = v(0, 15)
-
-tt = E:register_t("fx_stage_32_lava_geyser", "fx")
-tt.render.sprites[1].prefix = "dragon_cracks_geyserDef"
-tt.render.sprites[1].name = "run"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECTS
 
 tt = E:register_t("fx_water_spirit_splash", "fx")
 tt.render.sprites[1].name = "wukong_water_spirit_fx_splash"
@@ -11697,37 +11658,6 @@ tt.render.sprites[2].anchor = v(0.5, 0.5128205128205128)
 tt.render.sprites[2].r = math.rad(180)
 tt.sound_events.insert = "EnemyWarlockRangedCast"
 tt.sound_events.hit = "EnemyWarlockRangedImpact"
-
-tt = E:register_t("decal_stage_32_boss_bubbles", "decal_scripted")
-E:add_comps(tt, "tween")
-tt.main_script.update = scripts.decal_stage_32_boss_bubbles.update
-tt.render.sprites[1].prefix = "dragon_redboy_bubblesDef"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].alpha = 0
-tt.render.sprites[1].draw_order = 2
-tt.render.sprites[1].offset = v(0, 15)
-tt.render.sprites[1].sort_y_offset = -tt.render.sprites[1].offset.y
-tt.down_splash_fx = "fx_stage_32_dragon_down_splash"
-tt.tween.remove = false
-tt.tween.disabled = true
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
-
-tt = E:register_t("mod_stage_32_tower_block", "mod_hide_tower")
-E:add_comps(tt, "render")
-tt.main_script.update = scripts.mod_stage_32_tower_blocked.update
-tt.main_script.remove = nil
-tt.render.sid_lava = 1
-tt.render.sprites[tt.render.sid_lava].prefix = "dragon_rock_stunDef"
-tt.render.sprites[tt.render.sid_lava].exo = true
-tt.render.sprites[tt.render.sid_lava].name = "idle"
-tt.render.sprites[tt.render.sid_lava].draw_order = 20
-tt.sound_restore = "Stage22TowerRestore"
-tt.hand_decal_t = "dlc2_generic_tap_hand"
-tt.skip_modifiers = {"mod_boss_crocs_tower_eat"}
-tt.click_rect = r(-30, 0, 60, 60)
-tt.menu_offset = v(0, 12)
 
 tt = E:register_t("decal_stage33_envelop", "decal_scripted")
 E:add_comps(tt, "ui")
