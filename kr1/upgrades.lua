@@ -1475,7 +1475,11 @@ upgrades.engineer_bombs = {
 	"missile_rr",
 	"missile_rr_nitro",
 	"bomb_balloon",
-	"bullet_balloon_oil"
+	"bullet_balloon_oil",
+	"bullet_catapult",
+	"bullet_catapult_skill_a",
+	"bullet_catapult_skill_b",
+	"bullet_catapult_ultimate"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1496,7 +1500,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_balloon",
 	"tower_ignis_altar",
 	"tower_melting_furnace",
-	"tower_sandworm"
+	"tower_sandworm",
+	"tower_catapult"
 }
 
 local fps_based_keys = table.to_map({"hit_time", "cast_time", "shoot_time", "dodge_time", "cycle_time", "shoot_times", "hit_times"})

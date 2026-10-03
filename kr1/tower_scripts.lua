@@ -31309,4 +31309,654 @@ scripts.aura_bomb_tower_sandworm_spit = {
 	end
 }
 
+-- 投石机（移植自 KR6 scripts.tower_catapult / aura_catapult_* / mod_catapult_*；已适配 dove 索敌与伤害接口）
+
+scripts.tower_catapult = {}
+
+function scripts.tower_catapult.insert(this, store, script)
+	local ba = this.attacks.list[1]
+	local target
+
+	if store.tick_ts > 0 then
+		target = U.find_foremost_enemy(store, tpos(this), 0, this.attacks.range, 0, ba.vis_flags, ba.vis_bans)
+	end
+
+	local dir = 2
+
+	if target then
+		dir = target.pos.x > tpos(this).x and (target.pos.y > tpos(this).y and 3 or 2) or target.pos.y > tpos(this).y and 7 or 5
+	end
+
+	U.animation_start(this, "idle_" .. dir, nil, store.tick_ts, true, this.tower_sid)
+
+	return true
+end
+
+function scripts.tower_catapult.update(this, store)
+	local sa = this.powers.skill_a
+	local sb = this.powers.skill_b
+	local sc = this.powers.skill_c
+	local a = this.attacks
+	local ba = this.attacks.list[1]
+	local saa = this.attacks.list[2]
+	local sba = this.attacks.list[3]
+	local sca = this.attacks.list[4]
+	local sua = this.attacks.list[5]
+
+	this.active_traps = {}
+
+	local ulti_trigger_enemy, ulti_pred_pos
+	local next_attack = ba
+	local bft = E:get_template(ba.bullet).bullet.flight_time
+
+	if not a._last_target_pos then
+		a._last_target_pos = {}
+	end
+
+	local function get_direction(target_pos)
+		if target_pos.x > tpos(this).x then
+			if target_pos.y > tpos(this).y then
+				return 1
+			else
+				return 2
+			end
+		elseif target_pos.y > tpos(this).y then
+			return 4
+		else
+			return 3
+		end
+	end
+
+	local function get_anim_name(dir, attack, mode)
+		local sufix = ""
+
+		if attack == saa then
+			sufix = "_tarred_zone"
+		elseif attack == sba then
+			sufix = "_explosive"
+		end
+
+		if dir == 1 then
+			if mode == "in" then
+				return "rotation_1" .. sufix
+			elseif mode == "attack" then
+				return "attack_2" .. sufix
+			else
+				return "rotation_2" .. sufix
+			end
+		elseif dir == 2 then
+			if mode == "in" or mode == "out" then
+				return nil
+			else
+				return "attack_1" .. sufix
+			end
+		elseif dir == 3 then
+			if mode == "in" then
+				return "rotation_3" .. sufix
+			elseif mode == "attack" then
+				return "attack_3" .. sufix
+			else
+				return "rotation_4" .. sufix
+			end
+		elseif mode == "in" then
+			return "rotation_5" .. sufix
+		elseif mode == "attack" then
+			return "attack_4" .. sufix
+		else
+			return "rotation_6" .. sufix
+		end
+	end
+
+	local function y_aim_anim(aa, dir)
+		if dir == 2 then
+			U.y_wait(store, this.rotation_time * this.tower.cooldown_factor)
+		else
+			U.y_animation_play(this, get_anim_name(dir, aa, "in"), nil, store.tick_ts, 1, this.tower_sid)
+		end
+	end
+
+	local function y_return_anim(aa, dir)
+		if dir == 2 then
+			U.y_wait(store, this.rotation_time * this.tower.cooldown_factor)
+		else
+			U.y_animation_play(this, get_anim_name(dir, aa, "out"), nil, store.tick_ts, 1, this.tower_sid)
+		end
+	end
+
+	local function y_reload_anim()
+		if not sba.disabled then
+			U.animation_start(this, "ball_reload_2", nil, store.tick_ts, false, this.balls_sid)
+		else
+			U.animation_start(this, "ball_reload", nil, store.tick_ts, false, this.balls_sid)
+		end
+
+		if not saa.disabled and ready_to_attack(saa, store, this.tower.cooldown_factor) then
+			U.animation_start(this, "reload_tarred_zone", nil, store.tick_ts, false, this.loader_sid)
+			U.y_animation_play(this, "reload_tarred_zone", nil, store.tick_ts, 1, this.tower_sid)
+			U.animation_start(this, "idle_2_tarred_zone", nil, store.tick_ts, true, this.tower_sid)
+			U.animation_start(this, "idle", nil, store.tick_ts, true, this.loader_sid)
+
+			if not sba.disabled then
+				U.animation_start(this, "idle_2", nil, store.tick_ts, false, this.balls_sid)
+			else
+				U.animation_start(this, "idle", nil, store.tick_ts, false, this.balls_sid)
+			end
+
+			next_attack = saa
+		elseif not sba.disabled then
+			U.animation_start(this, "reload_explosive", nil, store.tick_ts, false, this.loader_sid)
+			U.y_animation_play(this, "reload_explosive", nil, store.tick_ts, 1, this.tower_sid)
+			U.animation_start(this, "idle_2_explosive", nil, store.tick_ts, true, this.tower_sid)
+			U.animation_start(this, "idle_2", nil, store.tick_ts, false, this.balls_sid)
+			U.animation_start(this, "idle", nil, store.tick_ts, true, this.loader_sid)
+
+			next_attack = sba
+		else
+			U.animation_start(this, "reload", nil, store.tick_ts, false, this.loader_sid)
+			U.y_animation_play(this, "reload", nil, store.tick_ts, 1, this.tower_sid)
+			U.animation_start(this, "idle_2", nil, store.tick_ts, true, this.tower_sid)
+			U.animation_start(this, "idle", nil, store.tick_ts, false, this.balls_sid)
+			U.animation_start(this, "idle", nil, store.tick_ts, true, this.loader_sid)
+
+			next_attack = ba
+		end
+	end
+
+	local function shoot_bullet(target_pos, aa)
+		local b = E:create_entity(aa.bullet)
+
+		b.bullet.damage_factor = this.tower.damage_factor
+		b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
+		b.bullet.from:copy(b.pos)
+		b.bullet.to = target_pos
+		b.bullet.source_id = this.id
+
+		if aa == saa then
+			b.bullet.level = sa.level
+		elseif aa == sba then
+			b.bullet.level = sb.level
+		end
+
+		queue_insert(store, b)
+	end
+
+	local function calculate_trap_pos(near_mines)
+		local dist_sq = sca.min_dist_between_traps * sca.min_dist_between_traps
+		local valid_positions = P:get_all_valid_pos(this.pos.x, this.pos.y, 0, sca.max_range, TERRAIN_LAND, function(x, y)
+			for _, mine in ipairs(near_mines) do
+				if V.dist2(mine.pos.x, mine.pos.y, x, y) <= dist_sq then
+					return false
+				end
+			end
+
+			return true
+		end)
+
+		return valid_positions[math.random(1, #valid_positions)]
+	end
+
+	local function find_target(aa, dir, predict)
+		local pred = predict and bft or 0
+		local dir_filter = dir and function(e, o)
+			local future_pos = P:predict_enemy_pos(e, bft)
+
+			return get_direction(future_pos) == dir
+		end
+
+		return U.find_foremost_enemy(store, tpos(this), 0, a.range, pred, aa.vis_flags, aa.vis_bans, dir_filter)
+	end
+
+	local function can_shoot_ulti()
+		if not ready_to_attack(sua, store, this.tower.cooldown_factor) then
+			return false
+		end
+
+		local enemies
+
+		ulti_trigger_enemy, enemies, ulti_pred_pos = U.find_foremost_enemy(store, tpos(this), sua.min_range, sua.max_range, sua.cast_time + fts(40), sua.vis_flags, sua.vis_bans)
+
+		return ulti_trigger_enemy and ulti_pred_pos and #enemies >= sua.min_targets and (not store.level.ignore_walk_backwards_paths or not table.contains(store.level.ignore_walk_backwards_paths, ulti_trigger_enemy.nav_path.pi)) and P:is_path_active(ulti_trigger_enemy.nav_path.pi)
+	end
+
+	ba.ts = store.tick_ts - ba.cooldown
+
+	::label_catapult_loop::
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if sa.changed then
+				sa.changed = nil
+				saa.disabled = false
+				saa.cooldown = sa.cooldown[sa.level]
+
+				if sa.level == 1 then
+					saa.ts = store.tick_ts - saa.cooldown
+				end
+			end
+			if sb.changed then
+				sb.changed = nil
+				sba.disabled = false
+			end
+			if sc.changed then
+				sc.changed = nil
+				sca.disabled = false
+				sca.cooldown = sc.cooldown[sc.level]
+
+				if sc.level == 1 then
+					sca.ts = store.tick_ts - sca.cooldown
+				end
+			end
+
+			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
+				local trigger_enemy, _, pred_pos = find_target(next_attack, nil, false)
+
+				if not trigger_enemy then
+					ba.ts = ba.ts + 0.1
+				else
+					next_attack.ts = store.tick_ts
+					ba.ts = store.tick_ts
+
+					local aim_pos = trigger_enemy.motion and P:predict_enemy_pos(trigger_enemy, this.rotation_time + next_attack.shoot_time + bft) or pred_pos
+					local dir = get_direction(aim_pos)
+
+					y_aim_anim(next_attack, dir)
+					U.animation_start(this, get_anim_name(dir, next_attack, "attack"), nil, store.tick_ts, false, 2)
+					U.y_wait(store, next_attack.shoot_time)
+
+					local enemy, _, new_pred_pos = find_target(next_attack, dir, true)
+
+					new_pred_pos = enemy and new_pred_pos or pred_pos
+
+					shoot_bullet(new_pred_pos, next_attack)
+					U.y_animation_wait(this, 2)
+					y_return_anim(next_attack, dir)
+
+					if can_shoot_ulti() then
+						U.animation_start(this, sua.animation, nil, store.tick_ts, false, 2)
+						U.y_wait_unconditional(store, sua.cast_time)
+
+						local enemy, _, new_pred_pos = U.find_foremost_enemy(store, tpos(this), sua.min_range, sua.max_range, fts(40), sua.vis_flags, sua.vis_bans)
+
+						if not enemy or not new_pred_pos then
+							enemy = ulti_trigger_enemy
+							new_pred_pos = ulti_pred_pos
+						end
+
+						local nearest = P:nearest_nodes(new_pred_pos.x, new_pred_pos.y)
+						local pi, _, ni = unpack(nearest[1])
+						local pos = P:node_pos(pi, 1, ni)
+
+						shoot_bullet(pos, sua)
+						U.y_animation_wait(this, 2)
+					end
+
+					y_reload_anim()
+				end
+			end
+
+			if not sca.disabled and ready_to_attack(sca, store, this.tower.cooldown_factor) then
+				if #this.active_traps >= sc.max_traps[sc.level] then
+					sca.ts = sca.ts + 0.3
+				else
+					local near_traps = table.filter(store.auras, function(k, v)
+						return v.template_name == "aura_catapult_skill_c_trap" and V.dist2(v.pos.x, v.pos.y, this.pos.x, this.pos.y) <= a.range * a.range
+					end)
+					local trap_pos = calculate_trap_pos(near_traps)
+
+					if not trap_pos then
+						sca.ts = sca.ts + 0.3
+					else
+						sca.ts = store.tick_ts
+
+						U.animation_start(this, "traps", nil, store.tick_ts, false, 3)
+						U.y_wait(store, sca.cast_time)
+
+						local b = E:create_entity(sca.bullet)
+
+						b.bullet.from:set(this.pos.x + sca.bullet_start_offset.x, this.pos.y + sca.bullet_start_offset.y)
+						b.bullet.to:set(trap_pos.x, trap_pos.y)
+						b.bullet.source_id = this.id
+						b.bullet.level = sc.level
+						b.pos:copy(b.bullet.from)
+						b.bullet.damage_factor = this.tower.damage_factor
+
+						queue_insert(store, b)
+						U.y_animation_wait(this, 2)
+					end
+				end
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.aura_catapult_skill_a = {}
+
+function scripts.aura_catapult_skill_a.insert(this, store, script)
+	this.aura.duration = this.aura.duration_conf[this.aura.level]
+
+	return scripts.aura_apply_mod.insert(this, store, script)
+end
+
+scripts.mod_catapult_skill_a_slow = {}
+
+function scripts.mod_catapult_skill_a_slow.insert(this, store, script)
+	this.slow.factor = this.slow_factor_config[this.modifier.level]
+
+	return scripts.mod_slow.insert(this, store, script)
+end
+
+scripts.aura_catapult_skill_b_bomb = {}
+
+function scripts.aura_catapult_skill_b_bomb.update(this, store, script)
+	this.damage_min = this.damage_min_conf[this.aura.level]
+	this.damage_max = this.damage_max_conf[this.aura.level]
+
+	U.y_wait(store, this.explosion_delay)
+	U.animation_start(this, "activate", nil, store.tick_ts, false)
+	U.y_wait(store, this.cast_time)
+	S:queue(this.sound_explosion)
+
+	local enemies = U.find_enemies_in_range(store, this.pos, 0, this.damage_radius, 0, 0)
+
+	if enemies then
+		for _, enemy in ipairs(enemies) do
+			local d = E:create_entity("damage")
+
+			d.damage_type = this.damage_type
+			if UP:get_upgrade("engineer_efficiency") then
+				d.value = this.damage_max
+			else
+				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.damage_radius)
+
+				d.value = math.floor(this.damage_max - (this.damage_max - this.damage_min) * dist_factor)
+			end
+			d.value = d.value * this.aura.damage_factor
+
+			d.source_id = this.id
+			d.target_id = enemy.id
+
+			queue_damage(store, d)
+		end
+	end
+
+	U.y_animation_wait(this)
+	queue_remove(store, this)
+end
+
+scripts.aura_catapult_skill_c_trap = {}
+
+function scripts.aura_catapult_skill_c_trap.insert(this, store)
+	this.aura.ts = store.tick_ts
+
+	if this.render then
+		for _, s in pairs(this.render.sprites) do
+			s.ts = store.tick_ts
+		end
+	end
+
+	U.animation_start(this, "set", nil, store.tick_ts, false)
+
+	this.actual_duration = this.aura.duration
+	this.damage_min = this.damage_min_conf[this.aura.level]
+	this.damage_max = this.damage_max_conf[this.aura.level]
+
+	return true
+end
+
+function scripts.aura_catapult_skill_c_trap.update(this, store)
+	local catapult = store.entities[this.source_id]
+
+	if catapult then
+		table.insert(catapult.active_traps, this)
+	end
+
+	S:queue(this.sound_open)
+	U.y_animation_wait(this)
+	U.animation_start(this, "ready", nil, store.tick_ts, true)
+
+	while true do
+		local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+
+		if not targets or #targets == 0 then
+		-- block empty
+		else
+			U.animation_start(this, "activate", nil, store.tick_ts, false)
+			U.y_wait(store, fts(12))
+			S:queue(this.sound_trigger)
+
+			targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+
+			if targets then
+				for _, enemy in ipairs(targets) do
+					if not enemy.health.dead then
+						local d = E:create_entity("damage")
+
+						d.damage_type = this.damage_type
+						d.value = math.random(this.damage_min, this.damage_max) * this.aura.damage_factor
+						d.source_id = this.id
+						d.target_id = enemy.id
+
+						queue_damage(store, d)
+
+						local mod = E:create_entity(this.aura.mod)
+
+						mod.modifier.target_id = enemy.id
+						mod.modifier.source_id = this.id
+						mod.modifier.damage_factor = this.aura.damage_factor
+						mod.modifier.level = this.aura.level
+
+						queue_insert(store, mod)
+					end
+				end
+			end
+
+			U.y_animation_wait(this)
+
+			this.render.sprites[1].hidden = true
+
+			if catapult then
+				for k, v in pairs(catapult.active_traps) do
+					if v == this then
+						table.remove(catapult.active_traps, k)
+
+						break
+					end
+				end
+			end
+
+			break
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.mod_catapult_skill_c_stun = {}
+
+function scripts.mod_catapult_skill_c_stun.insert(this, store, script)
+	this.modifier.duration = this.stun_duration_config[this.modifier.level]
+
+	return scripts.mod_stun.insert(this, store, script)
+end
+
+scripts.aura_catapult_ultimate = {}
+
+function scripts.aura_catapult_ultimate.update(this, store, script)
+	local first_hit_ts
+	local last_hit_ts = 0
+	local available_paths = {}
+
+	for k, v in pairs(P.paths) do
+		table.insert(available_paths, k)
+	end
+
+	if store.level.ignore_walk_backwards_paths then
+		available_paths = table.filter(available_paths, function(k, v)
+			return not table.contains(store.level.ignore_walk_backwards_paths, v)
+		end)
+	end
+
+	local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, available_paths, {1}, true)
+	local pi, spi, ni = unpack(nearest_nodes[1])
+	local starting_ni = ni
+	local distSq = 0
+
+	last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+	if this.aura.apply_delay then
+		last_hit_ts = last_hit_ts + this.aura.apply_delay
+	end
+
+	local last_fire_ni = ni + 2
+
+	local function hit_enemies()
+		local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(v, o)
+			return (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id) and not U.has_modifiers(store, v, this.aura.mod)
+		end)
+
+		if targets then
+			for i, target in pairs(targets) do
+				if target and not target.health.dead and target.enemy then
+					queue_damage(store, SU.create_attack_damage(this, target.id, this))
+
+					local hit_fx = E:create_entity(this.hit_fx)
+
+					hit_fx.pos = V.vclone(target.pos)
+					hit_fx.pos.x, hit_fx.pos.y = hit_fx.pos.x + target.unit.hit_offset.x, hit_fx.pos.y + target.unit.hit_offset.y
+					hit_fx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, hit_fx)
+
+					local new_mod = E:create_entity(this.aura.mod)
+
+					new_mod.modifier.target_id = target.id
+					new_mod.modifier.source_id = this.id
+					new_mod.modifier.damage_factor = this.aura.damage_factor
+
+					queue_insert(store, new_mod)
+				end
+			end
+		end
+	end
+
+	local target_pos = P:node_pos(pi, spi, ni)
+
+	local function go_back_step()
+		if V.veq(this.pos, target_pos) then
+			this.motion.arrived = true
+
+			return false
+		else
+			U.set_destination(this, target_pos)
+
+			if U.walk(this, store.tick_length) then
+				return false
+			else
+				local an, af = U.animation_name_facing_point(this, "run", this.motion.dest, 1, nil, true)
+
+				U.animation_start(this, an, af, store.tick_ts, true)
+
+				return true
+			end
+		end
+	end
+
+	local function run_backwards()
+		distSq = V.dist2(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
+
+		if distSq < 25 then
+			ni = ni - 3
+			target_pos = P:node_pos(pi, spi, ni)
+		end
+
+		go_back_step()
+	end
+
+	while true do
+		if this.interrupt then
+			last_hit_ts = 1e+99
+		end
+
+		if ni <= 3 then
+			break
+		end
+
+		if last_fire_ni - ni >= 2 then
+			last_fire_ni = ni
+
+			local pos = P:node_pos(pi, math.random(1, 3), ni + 6)
+			local fire_decal = E:create_entity(this.fire_decal)
+
+			fire_decal.pos = pos
+			fire_decal.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fire_decal)
+		end
+
+		if starting_ni - ni > this.max_nodes then
+			local explosion_fx = E:create_entity(this.explosion_fx)
+
+			explosion_fx.pos = V.vclone(this.pos)
+			explosion_fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, explosion_fx)
+
+			local dradius = this.explosion_damage_radius
+			local dmax, dmin = this.explosion_damage_max, this.explosion_damage_min
+			local enemies = U.find_enemies_in_range(store, this.pos, 0, dradius, 0, 0)
+
+			if enemies then
+				for _, enemy in pairs(enemies) do
+					local d = E:create_entity("damage")
+
+					d.damage_type = this.explosion_damage_type
+
+					if UP:get_upgrade("engineer_efficiency") then
+						d.value = dmax
+					else
+						local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, dradius)
+
+						d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+					end
+					d.value = d.value * this.aura.damage_factor
+
+					d.source_id = this.id
+					d.target_id = enemy.id
+
+					queue_damage(store, d)
+				end
+			end
+
+			U.y_wait(store, fts(2))
+
+			break
+		end
+
+		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
+			if this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
+				goto label_catapult_ulti_done
+			end
+
+			first_hit_ts = first_hit_ts or store.tick_ts
+			last_hit_ts = store.tick_ts
+
+			hit_enemies()
+		end
+
+		run_backwards()
+
+		::label_catapult_ulti_done::
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
 return scripts

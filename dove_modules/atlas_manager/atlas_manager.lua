@@ -3417,7 +3417,7 @@ function atlas_manager:export_png()
 			-- 记录本次导出的各页 PNG 对应的 DDS 转换命令
 			local cmds = {}
 			for pi = 1, #state.merge_pages do
-				cmds[#cmds + 1] = string.format("nvcompress.exe -bc3 -maximum %q %q", real_path(IMAGES_DIR) .. "/" .. name .. "-" .. pi .. ".png", real_path(ATLAS_DIR) .. "/" .. name .. "-" .. pi .. ".dds")
+				cmds[#cmds + 1] = string.format("nvcompress.exe -bc3 -highest %q %q", real_path(IMAGES_DIR) .. "/" .. name .. "-" .. pi .. ".png", real_path(ATLAS_DIR) .. "/" .. name .. "-" .. pi .. ".dds")
 			end
 			self._pending_dds_commands = cmds
 		else
@@ -3437,7 +3437,7 @@ function atlas_manager:export_png()
 		print(string.format("[atlas_manager] export_png: %s (%dx%d)", png_path, state.merge_w, state.merge_h))
 		self:set_status(string.format(_("ATLAS_MGR_STATUS_EXPORTED_PNG_S"), png_path))
 		-- 记录本次导出的 PNG 对应的 DDS 转换命令，避免后续「DDS转换」误用旧命令
-		self._pending_dds_commands = {string.format("nvcompress.exe -bc3 -maximum %q %q", png_path, real_path(ATLAS_DIR) .. "/" .. name .. ".dds")}
+		self._pending_dds_commands = {string.format("nvcompress.exe -bc3 -highest %q %q", png_path, real_path(ATLAS_DIR) .. "/" .. name .. ".dds")}
 	else
 		self:set_status(_("ATLAS_MGR_ERR_PNG_EXPORT_FAILED"))
 	end
@@ -3579,7 +3579,7 @@ function atlas_manager:save(hot_reload)
 						}
 					end
 				end
-				dds_commands[#dds_commands + 1] = string.format("nvcompress.exe -bc3 -maximum %q %q", real_path(IMAGES_DIR) .. "/" .. page_name .. ".png", real_path(ATLAS_DIR) .. "/" .. page_name .. ".dds")
+				dds_commands[#dds_commands + 1] = string.format("nvcompress.exe -bc3 -highest %q %q", real_path(IMAGES_DIR) .. "/" .. page_name .. ".png", real_path(ATLAS_DIR) .. "/" .. page_name .. ".dds")
 			end
 		else
 			local placements = self._merge_placements
@@ -3604,7 +3604,7 @@ function atlas_manager:save(hot_reload)
 					}
 				end
 			end
-			dds_commands[#dds_commands + 1] = string.format("nvcompress.exe -bc3 -maximum %q %q", real_path(IMAGES_DIR) .. "/" .. name .. ".png", real_path(ATLAS_DIR) .. "/" .. name .. ".dds")
+			dds_commands[#dds_commands + 1] = string.format("nvcompress.exe -bc3 -highest %q %q", real_path(IMAGES_DIR) .. "/" .. name .. ".png", real_path(ATLAS_DIR) .. "/" .. name .. ".dds")
 		end
 		local atlas_real_dir = real_path(ATLAS_DIR)
 		-- alias 安全网：alias 名字若本身也作为独立帧写出，同文件内会重复定义，剔除掉
@@ -3709,7 +3709,7 @@ function atlas_manager:print_dds_commands()
 	if #commands == 0 then
 		local png_path = real_path(IMAGES_DIR) .. "/" .. name .. ".png"
 		local dds_path = real_path(ATLAS_DIR) .. "/" .. name .. ".dds"
-		commands = {string.format("nvcompress.exe -bc3 -maximum %q %q", png_path, dds_path)}
+		commands = {string.format("nvcompress.exe -bc3 -highest %q %q", png_path, dds_path)}
 	end
 	print(_("ATLAS_MGR_LOG_DDS_CONVERT_HEADER"))
 	for _i, cmd in ipairs(commands) do
@@ -5172,7 +5172,7 @@ function atlas_manager:rpk_commit()
 	end
 	-- 4) nvcompress 生成 dds
 	for _i, o in ipairs(rp.outs_staged) do
-		local cmd = string.format("nvcompress.exe -bc3 -maximum %q %q", imgs_real .. "/" .. o.page .. ".png", atlas_real .. "/" .. o.page .. ".dds")
+		local cmd = string.format("nvcompress.exe -bc3 -highest %q %q", imgs_real .. "/" .. o.page .. ".png", atlas_real .. "/" .. o.page .. ".dds")
 		print("[atlas_manager] " .. cmd)
 		local okrun = os.execute(cmd)
 		if not okrun then
