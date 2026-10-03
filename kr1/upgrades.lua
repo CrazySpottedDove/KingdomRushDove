@@ -1478,7 +1478,6 @@ upgrades.engineer_bombs = {
 	"bullet_balloon_oil",
 	"bullet_catapult",
 	"bullet_catapult_skill_a",
-	"bullet_catapult_skill_b",
 	"bullet_catapult_ultimate"
 }
 
@@ -2313,7 +2312,10 @@ function upgrades:patch_templates(max_level)
 			T("soldier_balloon").attacks.list[2],
 			T("soldier_balloon").attacks.list[3],
 			T("tower_melting_furnace").attacks.list[2],
-			T("tower_melting_furnace").attacks.list[4]
+			T("tower_melting_furnace").attacks.list[4],
+			T("tower_catapult").attacks.list[2],
+			T("tower_catapult").attacks.list[3],
+			T("tower_catapult").attacks.list[4]
 		}) do
 			a.cooldown = a.cooldown * u.cooldown_factor
 		end
