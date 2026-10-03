@@ -4,6 +4,7 @@
 仅转换键恰好只有 x、y 两个（顺序不限）的表；含其它键（如 {flip=1,x=,y=}）不转换。
 处理时会跳过字符串与注释，并优先转换最内层表，因此嵌套表也能处理。
 支持值含表达式（如 {x=this.x,y=px}）、y 在 x 前、逗号/分号分隔、尾随逗号等。
+键支持两种写法：裸标识符（x = 1）与带引号方括号（["x"] = 1 / ['x'] = 1）。
 
 重要前提：
   转换后的文件需要能解析到 v（= lib.klua.vector 的 V.v）。请确保目标文件
@@ -26,6 +27,7 @@ DEFAULT_TARGETS = [
 ]
 
 KEY_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+BRACKET_KEY_RE = re.compile(r"^\[\s*([\"'])([A-Za-z_][A-Za-z0-9_]*)\1\s*\]$")
 EQ_RE = re.compile(r"(?<![=<>~])=(?!=)")
 
 
@@ -156,6 +158,9 @@ def parse_kv(part):
         return None, None
     key = part[: m.start()].strip()
     val = part[m.end():].strip()
+    bm = BRACKET_KEY_RE.match(key)
+    if bm:
+        key = bm.group(2)
     if not KEY_RE.match(key):
         return None, None
     return key, val
