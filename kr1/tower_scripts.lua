@@ -31555,8 +31555,9 @@ function scripts.tower_catapult.update(this, store)
 				if not trigger_enemy then
 					ba.ts = ba.ts + 0.1
 				else
-					next_attack.ts = store.tick_ts
-					ba.ts = store.tick_ts
+					local start_ts = store.tick_ts
+					next_attack.ts = start_ts
+					ba.ts = start_ts
 
 					local aim_pos = trigger_enemy.motion and P:predict_enemy_pos(trigger_enemy, this.rotation_time + next_attack.shoot_time + bft) or pred_pos
 					local dir = get_direction(aim_pos)
@@ -31574,6 +31575,7 @@ function scripts.tower_catapult.update(this, store)
 					y_return_anim(next_attack, dir)
 
 					if can_shoot_ulti() then
+						sua.ts = start_ts
 						U.animation_start(this, sua.animation, nil, store.tick_ts, false, 2)
 						U.y_wait_unconditional(store, sua.cast_time)
 
