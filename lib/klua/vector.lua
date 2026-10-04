@@ -44,9 +44,19 @@ ffi.metatype("vec2", {
 			local dy = self.y - other.y
 			return math.sqrt(dx * dx + dy * dy)
 		end,
+		edist = function(self, other)
+			local dx = self.x - other.x
+			local dy = (self.y - other.y) * 1.42857142857
+			return math.sqrt(dx * dx + dy * dy)
+		end,
 		dist2 = function(self, other)
 			local dx = self.x - other.x
 			local dy = self.y - other.y
+			return dx * dx + dy * dy
+		end,
+		edist2 = function(self, other)
+			local dx = self.x - other.x
+			local dy = (self.y - other.y) * 1.42857142857
 			return dx * dx + dy * dy
 		end,
 		-- 就地使用向量加法

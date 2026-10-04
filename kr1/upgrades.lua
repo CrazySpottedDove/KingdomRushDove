@@ -1216,7 +1216,9 @@ upgrades.arrows = {
 	"bullet_shaolin",
 	"bullet_swamp_monster",
 	"bullet_swamp_monster_bomb",
-	"bullet_swamp_monster_bomb_tosky"
+	"bullet_swamp_monster_bomb_tosky",
+	"bullet_archers",
+	"bullet_archers_skill_a"
 }
 
 upgrades.soldiers = {
