@@ -9129,7 +9129,7 @@ return {
 	TOWER_CATAPULT_SKILL_C_DESCRIPTION_3 = "Arms a trap in a nearby path every %$T('tower_catapult').attacks.list[3].cooldown * tcd%$ seconds. The trap deals %$T('aura_catapult_skill_c_trap').damage_min_conf[level] * tdmg%$-%$T('aura_catapult_skill_c_trap').damage_max_conf[level] * tdmg%$ physical damage and stuns enemies for %$T('mod_catapult_skill_c_stun').stun_duration_config[level]%$ seconds.",
 	TOWER_ARCHERS_NAME = "ARCHER GARRISON",
 	TOWER_ARCHERS_DESCRIPTION = "Archers perched atop a watchtower, striking down your enemies from a distance.",
-	TOWER_ARCHERS_SPECIAL = "Ultimate: enters a frenzy, rapidly firing a barrage of arrows for several seconds to unleash massive burst damage.",
+	TOWER_ARCHERS_SPECIAL = "rapidly firing a barrage of arrows for several seconds",
 	TOWER_ARCHERS_SKILL_A_NAME_1 = "TENDON PIERCE",
 	TOWER_ARCHERS_SKILL_A_NAME_2 = "TENDON PIERCEII",
 	TOWER_ARCHERS_SKILL_A_NAME_3 = "TENDON PIERCEIII",
