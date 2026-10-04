@@ -1,1 +1,1 @@
-return {{date="2026-10-04",author="CrazySpottedDove",message="fix: 优化弓兵要塞的特技文本"},{date="2026-10-04",author="CrazySpottedDove",message="fix: 修复弓兵要塞的悬浮bug"}}
+return {{date="2026-10-04",author="CrazySpottedDove",message="fix: 优化弓兵要塞的特技文本"},{date="2026-10-04",author="CrazySpottedDove",message="fix: 修复弓兵要塞的悬浮bug"},{date="2026-10-04",author="CrazySpottedDove",message="balance: 调整要塞弓兵buff技能造价"}}
