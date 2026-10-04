@@ -32127,6 +32127,13 @@ function scripts.tower_archers.update(this, store)
 					return t.tower.can_be_mod and not t.tower.blocked and max_factor < skill_b_range_factor(t) and band(t.vis.flags, sba.vis_bans) == 0 and band(t.vis.bans, sba.vis_flags) == 0 and U.is_inside_ellipse(t.pos, this.pos, a.range)
 				end
 
+				for _, t in pairs(store.towers) do
+					local mod = U.get_modifier(t, sba.mod)
+					if mod and mod.modifier.source_id == this.id and not U.is_inside_ellipse(t.pos, this.pos, a.range) then
+						simulation:queue_remove_entity(mod)
+					end
+				end
+
 				local towers = table.filter(store.towers, tower_filter)
 
 				if #towers <= 0 then
