@@ -31433,20 +31433,21 @@ function scripts.tower_catapult.update(this, store)
 		U.animation_start(this, "ball_reload", nil, store.tick_ts, false, this.balls_sid)
 
 		if U.tower_ready_to_use_power(sa, saa, store, this.tower) then
-			U.animation_start(this, "reload_tarred_zone", nil, store.tick_ts, false, this.loader_sid)
-			U.y_animation_play(this, "reload_tarred_zone", nil, store.tick_ts, 1, this.tower_sid)
-			U.animation_start(this, "idle_2_tarred_zone", nil, store.tick_ts, true, this.tower_sid)
-			U.animation_start(this, "idle", nil, store.tick_ts, true, this.loader_sid)
+			this.loader_cont.reload = "tarred_zone"
 
+			U.y_animation_play(this, "reload_tarred_zone", nil, store.tick_ts, 1, this.tower_sid)
+			U.y_animation_wait_specific(this, this.loader_sid)
+			U.animation_start(this, "idle_2_tarred_zone", nil, store.tick_ts, true, this.tower_sid)
 			U.animation_start(this, "idle", nil, store.tick_ts, false, this.balls_sid)
 
 			next_attack = saa
 		else
-			U.animation_start(this, "reload", nil, store.tick_ts, false, this.loader_sid)
+			this.loader_cont.reload = "normal"
+
 			U.y_animation_play(this, "reload", nil, store.tick_ts, 1, this.tower_sid)
+			U.y_animation_wait_specific(this, this.loader_sid)
 			U.animation_start(this, "idle_2", nil, store.tick_ts, true, this.tower_sid)
 			U.animation_start(this, "idle", nil, store.tick_ts, false, this.balls_sid)
-			U.animation_start(this, "idle", nil, store.tick_ts, true, this.loader_sid)
 
 			next_attack = ba
 		end
@@ -31511,6 +31512,11 @@ function scripts.tower_catapult.update(this, store)
 
 		return ulti_trigger_enemy and (not store.level.ignore_walk_backwards_paths or not table.contains(store.level.ignore_walk_backwards_paths, ulti_trigger_enemy.nav_path.pi)) and P:is_path_active(ulti_trigger_enemy.nav_path.pi)
 	end
+
+	this.loader_cont = E:create_entity("controller_catapult_loader")
+	this.loader_cont.tower_ref = this
+
+	queue_insert(store, this.loader_cont)
 
 	ba.ts = store.tick_ts - ba.cooldown
 	::label_catapult_loop::
@@ -31593,26 +31599,88 @@ function scripts.tower_catapult.update(this, store)
 					else
 						sca.ts = store.tick_ts
 
-						U.animation_start(this, "traps", nil, store.tick_ts, false, 3)
-						U.y_wait(store, sca.cast_time)
-
-						local b = E:create_entity(sca.bullet)
-
-						b.bullet.from:set(this.pos.x + sca.bullet_start_offset.x, this.pos.y + sca.bullet_start_offset.y)
-						b.bullet.to:set(trap_pos.x, trap_pos.y)
-						b.bullet.source_id = this.id
-						b.bullet.level = sc.level
-						b.pos:copy(b.bullet.from)
-						b.bullet.damage_factor = this.tower.damage_factor
-
-						queue_insert(store, b)
-					-- 不等待 loader 动画
+						-- 动画与释放交由 loader controller 处理，避免 y_wait(cast_time) 阻塞普攻
+						this.loader_cont.trap_pos = trap_pos
+						this.loader_cont.play_traps = true
 					end
 				end
 			end
 
 			coroutine.yield()
 		end
+	end
+end
+
+function scripts.tower_catapult.remove(this, store)
+	if this.loader_cont then
+		queue_remove(store, this.loader_cont)
+
+		this.loader_cont = nil
+	end
+
+	return true
+end
+
+-- loader（装填手）动画控制器：tower 只发信号，控制器负责播放动画与陷阱释放
+scripts.controller_catapult_loader = {}
+
+function scripts.controller_catapult_loader.update(this, store)
+	local tower = this.tower_ref
+
+	if not tower or tower.pending_removal or not store.entities[tower.id] then
+		simulation:queue_remove_entity(this)
+
+		return
+	end
+
+	local loader_sid = tower.loader_sid
+
+	while true do
+		tower = this.tower_ref
+
+		if not tower or tower.pending_removal or not store.entities[tower.id] then
+			simulation:queue_remove_entity(this)
+
+			return
+		end
+
+		if this.reload then
+			local animation = this.reload == "tarred_zone" and "reload_tarred_zone" or "reload"
+
+			this.reload = nil
+
+			U.animation_start(tower, animation, nil, store.tick_ts, false, loader_sid)
+			U.y_animation_wait(tower, loader_sid)
+			U.animation_start(tower, "idle", nil, store.tick_ts, true, loader_sid)
+		end
+
+		if this.play_traps then
+			local trap_pos = this.trap_pos
+			local sca = tower.attacks.list[3]
+			local sc = tower.powers.skill_c
+
+			this.trap_pos = nil
+			this.play_traps = nil
+
+			U.animation_start(tower, "traps", nil, store.tick_ts, false, loader_sid)
+			U.y_wait(store, sca.cast_time)
+
+			local b = E:create_entity(sca.bullet)
+
+			b.bullet.from:set(tower.pos.x + sca.bullet_start_offset.x, tower.pos.y + sca.bullet_start_offset.y)
+			b.bullet.to:set(trap_pos.x, trap_pos.y)
+			b.bullet.source_id = tower.id
+			b.bullet.level = sc.level
+			b.pos:copy(b.bullet.from)
+			b.bullet.damage_factor = tower.tower.damage_factor
+
+			queue_insert(store, b)
+
+			U.y_animation_wait(tower, loader_sid)
+			U.animation_start(tower, "idle", nil, store.tick_ts, true, loader_sid)
+		end
+
+		coroutine.yield()
 	end
 end
 

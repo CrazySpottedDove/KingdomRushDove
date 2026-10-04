@@ -3348,6 +3348,7 @@ tt.info.portrait = "kr6_info_portraits_towers_0002"
 tt.info.fn = scripts.tower_common.get_info
 tt.main_script.insert = scripts.tower_catapult.insert
 tt.main_script.update = scripts.tower_catapult.update
+tt.main_script.remove = scripts.tower_catapult.remove
 tt.powers.skill_a = CC("power")
 tt.powers.skill_a.price_base = 100
 tt.powers.skill_a.price_inc = 100
@@ -3363,10 +3364,9 @@ tt.powers.skill_c.max_level = 3
 tt.powers.skill_c.max_traps = {3, 4, 5}
 tt.attacks.range = 300
 tt.attacks.attack_delay_on_spawn = fts(0)
--- 5.12-6.25
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_catapult"
-tt.attacks.list[1].cooldown = 6.3
+tt.attacks.list[1].cooldown = 5.3
 tt.attacks.list[1].shoot_time = fts(13)
 tt.attacks.list[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.attacks.list[1].bullet_start_offset = v(0, 95)
@@ -3420,10 +3420,14 @@ tt.sound_events.insert = "TowerRoyalCatapultTauntLevel4"
 tt.sound_events.room_select = "TowerRoyalCatapultTauntSelect"
 tt.ui.click_rect = r(-40, -3, 80, 75)
 
+tt = RT("controller_catapult_loader")
+AC(tt, "main_script")
+tt.main_script.update = scripts.controller_catapult_loader.update
+
 tt = RT("bullet_catapult", "bomb")
 -- 攻速惩罚下，给到大贝莎同级dps
 tt.bullet.damage_min = 114
-tt.bullet.damage_max = 225
+tt.bullet.damage_max = 189
 tt.bullet.damage_type = DAMAGE_EXPLOSION
 tt.bullet.damage_radius = 60
 tt.bullet.flight_time = fts(25)
@@ -3441,7 +3445,7 @@ tt.main_script.update = scripts.bullet_catapult.update
 
 tt = RT("bullet_catapult_skill_a", "bullet_catapult")
 tt.bullet.damage_min = 114
-tt.bullet.damage_max = 225
+tt.bullet.damage_max = 189
 tt.bullet.hit_fx = "fx_catapult_skill_a"
 tt.bullet.align_with_trajectory = false
 tt.bullet.hit_payload = "aura_catapult_skill_a"
@@ -3511,7 +3515,7 @@ tt.explosion_delay = 0.1
 tt.damage_min = 0
 tt.damage_max = 0
 tt.damage_min_conf = {38, 75, 113}
-tt.damage_max_conf = {75, 150, 225}
+tt.damage_max_conf = {63, 126, 189}
 tt.damage_radius = 60
 tt.damage_type = DAMAGE_EXPLOSION
 tt.cast_time = fts(10)
