@@ -8967,7 +8967,6 @@ function scripts.boss_pig.update(this, store)
 		local start_ts = store.tick_ts
 		local phase
 
-		U.flags_add(this.vis, band(this.vis.flags_jumping, bnot(this.vis.flags_normal)))
 		U.bans_add(this.vis, band(this.vis.bans_jumping, bnot(this.vis.bans_normal)))
 		s_flying.hidden = false
 
@@ -9015,7 +9014,6 @@ function scripts.boss_pig.update(this, store)
 
 		this.pos.x, this.pos.y = to.x, to.y
 		s_flying.hidden = true
-		U.flags_remove(this.vis, band(this.vis.flags_jumping, bnot(this.vis.flags_normal)))
 		U.bans_remove(this.vis, band(this.vis.bans_jumping, bnot(this.vis.bans_normal)))
 
 		for _, value in pairs(this.render.sprites) do
@@ -9042,7 +9040,6 @@ function scripts.boss_pig.update(this, store)
 	end
 
 	local function y_fly(to, speed, dest_pi)
-		U.flags_add(this.vis, band(this.vis.flags_jumping, bnot(this.vis.flags_normal)))
 		U.bans_add(this.vis, band(this.vis.bans_jumping, bnot(this.vis.bans_normal)))
 
 		local from = this.pos
@@ -9122,7 +9119,6 @@ function scripts.boss_pig.update(this, store)
 
 		this.pos.x, this.pos.y = to.x, to.y
 		s_flying.hidden = true
-		U.flags_remove(this.vis, band(this.vis.flags_jumping, bnot(this.vis.flags_normal)))
 		U.bans_remove(this.vis, band(this.vis.bans_jumping, bnot(this.vis.bans_normal)))
 
 		for _, value in pairs(this.render.sprites) do
@@ -9164,8 +9160,6 @@ function scripts.boss_pig.update(this, store)
 		U.y_wait_unconditional(store, 1)
 	end
 
-	U.flags_add(this.vis, band(this.vis.flags_jumping, bnot(this.vis.flags_normal)))
-	U.bans_add(this.vis, band(this.vis.bans_jumping, bnot(this.vis.bans_normal)))
 	this.phase = "intro"
 	this.health_bar.hidden = true
 	this.health_bar.hidden = nil
