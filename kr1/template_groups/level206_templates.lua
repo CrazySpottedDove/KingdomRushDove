@@ -284,7 +284,7 @@ local function controller_stage_206_nivus_update(this, store)
 				queue_insert(store, m)
 				target_picked.health.ignore_damage = true
 				U.y_wait(store, fts(1))
-				target_picked.vis.bans = F_ALL
+				U.bans_add(target_picked.vis, F_ALL)
 				local nivus_on_the_right = math.abs(km.signed_unroll(target_picked.heading.angle)) < math.pi / 2
 				target_pos = V.v(target_picked.pos.x + (target_picked.enemy.melee_slot.x + 20) * (nivus_on_the_right and 1 or -1), target_picked.pos.y + target_picked.enemy.melee_slot.y)
 			end

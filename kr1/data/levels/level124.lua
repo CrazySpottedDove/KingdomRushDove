@@ -54,8 +54,8 @@ boss.nav_path.spi=1
 boss.nav_path.ni=10
 boss.pos=P:node_pos(7,1,10)
 boss.tween.ts=store.tick_ts
-boss.vis._bans=boss.vis.bans
-boss.vis.bans=F_ALL
+U.bans_add(boss.vis,F_ALL)
+boss._bans_added=true
 LU.queue_insert(store,boss)
 U.y_wait_unconditional(store,2.5)
 while machinist and not machinist.ended_cinematic do

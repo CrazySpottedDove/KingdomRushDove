@@ -3546,11 +3546,11 @@ scripts.hero_van_helsing = {
 					U.unblock_target(store, this)
 
 					local death_ts = store.tick_ts
-					local bans, flags = this.vis.bans, this.vis.flags
+					local flags = this.vis.flags
 					local prefix = this.render.sprites[1].prefix
 
-					this.vis.bans = F_ALL
-					this.vis.flags = F_NONE
+					U.bans_add(this.vis, F_ALL)
+					U.flags_remove(this.vis, flags)
 					this.render.sprites[1].prefix = prefix .. "_ghost"
 					this.health.ignore_damage = true
 					this.info.hero_portrait = this.info.hero_portrait_dead
@@ -3567,9 +3567,9 @@ scripts.hero_van_helsing = {
 						coroutine.yield()
 					end
 
-					this.vis.bans = bans
+					U.bans_remove(this.vis, F_ALL)
 					this.force_respawn = false
-					this.vis.flags = flags
+					U.flags_add(this.vis, flags)
 					this.render.sprites[1].prefix = prefix
 					update_hp(this)
 					this.health.dead = false
@@ -4281,9 +4281,8 @@ scripts.hero_priest = {
 					S:queue(this.sound_events.change_rally_point)
 
 					if SU.hero_will_teleport(this, this.nav_rally.pos) then
-						local vis_bans = this.vis.bans
 
-						this.vis.bans = F_ALL
+						U.bans_add(this.vis, F_ALL)
 						this.health_bar.hidden = true
 						this.health.ignore_damage = true
 
@@ -4301,19 +4300,18 @@ scripts.hero_priest = {
 
 						this.health.ignore_damage = false
 						this.health_bar.hidden = nil
-						this.vis.bans = vis_bans
+						U.bans_remove(this.vis, F_ALL)
 
 						goto label_365_0
 					else
-						local vis_bans = this.vis.bans
 
-						this.vis.bans = F_ALL
+						U.bans_add(this.vis, F_ALL)
 
 						local out = SU.y_hero_walk_waypoints(store, this)
 
 						U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
-						this.vis.bans = vis_bans
+						U.bans_remove(this.vis, F_ALL)
 
 						if out == true then
 							goto label_365_0
@@ -6604,7 +6602,6 @@ scripts.hero_ignus = {
 						if not target then
 						-- block empty
 						else
-							local vis_bans = this.vis.bans
 
 							local function surge(target)
 								U.unblock_target(store, this)
@@ -6613,7 +6610,7 @@ scripts.hero_ignus = {
 
 								local slot_pos = U.melee_slot_position(this, target, 1)
 
-								this.vis.bans = F_ALL
+								U.bans_add(this.vis, F_ALL)
 								this.health.ignore_damage = true
 
 								U.speed_mul(this, a.speed_factor)
@@ -6648,7 +6645,7 @@ scripts.hero_ignus = {
 								U.y_animation_play(this, a.animations[2], nil, store.tick_ts)
 
 								a.ts = store.tick_ts
-								this.vis.bans = vis_bans
+								U.bans_remove(this.vis, F_ALL)
 								this.health.ignore_damage = nil
 							end
 
@@ -8390,7 +8387,6 @@ function scripts.hero_vampiress.update(this, store)
 	local r = this.nav_rally
 	local brk, sta, should_fly, already_flying
 	local orig_prefix = this.render.sprites[1].prefix
-	local orig_vis_bans = this.vis.bans
 	local orig_speed = this.motion.max_speed
 	local a, skill
 
@@ -8411,7 +8407,7 @@ function scripts.hero_vampiress.update(this, store)
 
 					if should_fly then
 						already_flying = true
-						this.vis.bans = F_ALL
+						U.bans_add(this.vis, F_ALL)
 						this.health.ignore_damage = true
 						this.render.sprites[1].prefix = this.fly_to.animation_prefix
 						this.render.sprites[2].hidden = false
@@ -8446,7 +8442,7 @@ function scripts.hero_vampiress.update(this, store)
 
 					U.update_max_speed(this, orig_speed)
 
-					this.vis.bans = orig_vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.ignore_damage = false
 				end
 			end
@@ -8818,9 +8814,8 @@ scripts.hero_monk = {
 					if not target or target.health.dead then
 					-- block empty
 					else
-						local vis_bans = this.vis.bans
 
-						this.vis.bans = F_ALL
+						U.bans_add(this.vis, F_ALL)
 						this.health_bar.hidden = true
 						SU.hide_modifiers(store, this, true)
 
@@ -8833,7 +8828,7 @@ scripts.hero_monk = {
 						U.animation_start_default(this, a.animation, nil, store.tick_ts)
 
 						if SU.y_soldier_wait(store, this, a.hit_time) then
-							this.vis.bans = vis_bans
+							U.bans_remove(this.vis, F_ALL)
 							this.health_bar.hidden = this.health.dead
 							goto label_393_2
 						end
@@ -8842,7 +8837,7 @@ scripts.hero_monk = {
 
 						queue_damage(store, d)
 
-						this.vis.bans = vis_bans
+						U.bans_remove(this.vis, F_ALL)
 						this.health_bar.hidden = false
 						SU.show_modifiers(store, this, true)
 
@@ -9409,9 +9404,7 @@ function scripts.hero_crab.update(this, store)
 
 					U.unblock_target(store, this)
 
-					local vis_bans = this.vis.bans
-
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 					this.health.immune_to = F_ALL
 
 					local original_speed = this.motion.max_speed
@@ -9546,7 +9539,7 @@ function scripts.hero_crab.update(this, store)
 					U.y_animation_play(this, "burrow_out", r.pos.x < this.pos.x, store.tick_ts)
 					U.update_max_speed(this, original_speed)
 
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = 0
 					this.unit.marker_hidden = nil
 				elseif SU.y_hero_new_rally(store, this) then
@@ -10040,9 +10033,7 @@ scripts.hero_minotaur = {
 					this.health_bar.hidden = true
 					this.health.ignore_damage = true
 
-					local vis_bans = this.vis.bans
-
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 
 					U.speed_mul_self(this, a.speed_factor)
 
@@ -10116,7 +10107,7 @@ scripts.hero_minotaur = {
 
 					this.health_bar.hidden = nil
 					this.health.ignore_damage = false
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 
 					U.speed_div_self(this, a.speed_factor)
 
@@ -10324,9 +10315,7 @@ scripts.hero_monkey_god = {
 
 						U.unblock_target(store, this)
 
-						local vis_bans = this.vis.bans
-
-						this.vis.bans = F_ALL
+						U.bans_add(this.vis, F_ALL)
 						this.health.immune_to = F_ALL
 
 						local original_speed = this.motion.max_speed
@@ -10393,7 +10382,7 @@ scripts.hero_monkey_god = {
 
 						U.update_max_speed(this, original_speed)
 
-						this.vis.bans = vis_bans
+						U.bans_remove(this.vis, F_ALL)
 						this.health.immune_to = 0
 						this.unit.marker_hidden = nil
 						this.health_bar.hidden = nil
@@ -13113,11 +13102,8 @@ function scripts.hero_durax.update(this, store)
 					this.health_bar.hidden = true
 					this.health.ignore_damage = true
 
-					local vis_flags = this.vis.flags
-					local vis_bans = this.vis.bans
-
-					this.vis.flags = U.flag_clear(this.vis.flags, F_RANGED)
-					this.vis.bans = F_ALL
+					U.flags_remove(this.vis, F_RANGED)
+					U.bans_add(this.vis, F_ALL)
 
 					U.y_animation_play(this, a.animations[1], nil, store.tick_ts)
 					U.animation_start_default(this, a.animations[2], nil, store.tick_ts, true)
@@ -13144,8 +13130,8 @@ function scripts.hero_durax.update(this, store)
 
 					U.y_animation_play(this, a.animations[3], nil, store.tick_ts)
 
-					this.vis.flags = vis_flags
-					this.vis.bans = vis_bans
+					U.flags_add(this.vis, F_RANGED)
+					U.bans_remove(this.vis, F_ALL)
 					this.health.ignore_damage = nil
 					this.health_bar.hidden = nil
 					a.ts = store.tick_ts
@@ -14196,9 +14182,9 @@ function scripts.aura_arivan_stone_dance.update(this, store)
 		end
 
 		if #this.stones < 1 then
-			owner.vis.bans = band(owner.vis.bans, bnot(this.owner_vis_bans))
+			U.bans_remove(owner.vis, this.owner_vis_bans)
 		else
-			owner.vis.bans = bor(owner.vis.bans, this.owner_vis_bans)
+			U.bans_add(owner.vis, this.owner_vis_bans)
 		end
 
 		coroutine.yield()
@@ -15981,10 +15967,9 @@ function scripts.hero_xin.update(this, store)
 				local target = targets[1]
 				local initial_pos = V.vclone(this.pos)
 				local initial_flip = this.render.sprites[1].flip_x
-				local _bans = this.vis.bans
 				local shadow
 
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 				this.health.ignore_damage = true
 
 				S:queue(a.sounds[1])
@@ -16075,7 +16060,7 @@ function scripts.hero_xin.update(this, store)
 
 				-- U.y_wait_unconditional(store, fts(5))
 				this.health_bar.hidden = nil
-				this.vis.bans = _bans
+				U.bans_remove(this.vis, F_ALL)
 				this.health.ignore_damage = nil
 
 				U.y_animation_wait_default(this)
@@ -17989,9 +17974,7 @@ function scripts.hero_hunter.update(this, store)
 
 					U.unblock_target(store, this)
 
-					local vis_bans = this.vis.bans
-
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 					this.health.immune_to = F_ALL
 
 					local original_speed = this.motion.max_speed
@@ -18086,7 +18069,7 @@ function scripts.hero_hunter.update(this, store)
 					SU.show_modifiers(store, this, true)
 					U.update_max_speed(this, original_speed)
 
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = 0
 					this.unit.marker_hidden = nil
 					this.health_bar.hidden = nil
@@ -19311,13 +19294,12 @@ function scripts.hero_space_elf.update(this, store)
 
 			if SU.hero_will_teleport(this, r.pos) then
 				local tp = this.teleport
-				local vis_bans = this.vis.bans
 
 				tp.pending = true
 
 				U.set_destination(this, r.pos)
 
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
 				S:queue(tp.sound_in)
@@ -19367,7 +19349,7 @@ function scripts.hero_space_elf.update(this, store)
 
 				tp.pending = false
 				this.health_bar.hidden = false
-				this.vis.bans = vis_bans
+				U.bans_remove(this.vis, F_ALL)
 				this.health.ignore_damage = false
 
 				return false
@@ -19375,9 +19357,8 @@ function scripts.hero_space_elf.update(this, store)
 				local tr = this.transfer
 				local interrupt = false
 				local ps
-				local vis_bans = this.vis.bans
 
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
 				S:queue(tr.sound_loop)
@@ -19451,7 +19432,7 @@ function scripts.hero_space_elf.update(this, store)
 				U.y_animation_play(this, tr.animations[3], nil, store.tick_ts)
 
 				this.health_bar.hidden = false
-				this.vis.bans = vis_bans
+				U.bans_remove(this.vis, F_ALL)
 				this.health.ignore_damage = false
 
 				return interrupt
@@ -21033,9 +21014,7 @@ function scripts.hero_venom.update(this, store)
 
 					U.unblock_target(store, this)
 
-					local vis_bans = this.vis.bans
-
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 					this.health.immune_to = F_ALL
 
 					U.speed_inc_self(this, tw.extra_speed)
@@ -21097,7 +21076,7 @@ function scripts.hero_venom.update(this, store)
 					SU.show_modifiers(store, this, true)
 					U.speed_dec_self(this, tw.extra_speed)
 
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = 0
 					this.unit.marker_hidden = nil
 					this.health_bar.hidden = nil
@@ -23491,10 +23470,9 @@ function scripts.hero_witch.update(this, store)
 				S:queue(this.sound_events.change_rally_point)
 			end
 
-			local vis_bans = this.vis.bans
 			local prev_immune = this.health.immune_to
 
-			this.vis.bans = F_ALL
+			U.bans_add(this.vis, F_ALL)
 			this.health.immune_to = r.immune_to
 
 			local out = SU.y_hero_walk_waypoints(store, this)
@@ -23502,7 +23480,7 @@ function scripts.hero_witch.update(this, store)
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 			p_sys.particle_system.emit = false
-			this.vis.bans = vis_bans
+			U.bans_remove(this.vis, F_ALL)
 			this.health.immune_to = prev_immune
 
 			return out
@@ -23644,9 +23622,7 @@ function scripts.hero_witch.update(this, store)
 					S:queue(this.dodge.sound)
 					U.unblock_target(store, this)
 
-					local bans = this.vis.bans
-
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 
 					SU.hide_modifiers(store, this, true)
 					SU.hide_auras(store, this, true)
@@ -23669,8 +23645,7 @@ function scripts.hero_witch.update(this, store)
 					SU.hero_gain_xp_from_skill(this, this.hero.skills.disengage)
 					U.y_animation_play(this, this.dodge.animation_appear, nil, store.tick_ts)
 
-					this.vis.bans = bans
-					this.vis._bans = nil
+					U.bans_remove(this.vis, F_ALL)
 
 					SU.show_modifiers(store, this, true)
 					SU.show_auras(store, this, true)
@@ -27185,9 +27160,7 @@ function scripts.hero_wukong.update(this, store)
 
 					U.unblock_target(store, this)
 
-					local vis_bans = this.vis.bans
-
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 					this.health.immune_to = F_ALL
 
 					U.speed_mul_self(this, tw.extra_speed_mult)
@@ -27278,7 +27251,7 @@ function scripts.hero_wukong.update(this, store)
 
 					U.speed_div_self(this, tw.extra_speed_mult)
 
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = 0
 					this.unit.marker_hidden = nil
 					this.health_bar.hidden = nil
@@ -27479,7 +27452,6 @@ function scripts.hero_wukong.update(this, store)
 								local an, af, _ = U.animation_name_facing_point(this, a.animation, target.pos)
 
 								U.animation_start_default(this, an, af, store.tick_ts, false)
-								-- local pushed_bans = U.push_bans(this.vis, F_ALL)
 								U.y_wait_unconditional(store, a.staff_appear_time)
 
 								this.health_bar.hidden = true
@@ -27544,7 +27516,7 @@ function scripts.hero_wukong.update(this, store)
 								SU.y_hero_animation_wait(this)
 								U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
-								this.health_bar.hidden = false -- U.pop_bans(this.vis, pushed_bans)
+								this.health_bar.hidden = false
 								this.health.immune_to = 0
 
 								goto label_882_1
@@ -28409,7 +28381,7 @@ function scripts.hero_vesper.update(this, store)
 
 					local bans = this.vis.bans
 
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 
 					SU.hide_modifiers(store, this, true)
 					SU.hide_auras(store, this, true)
@@ -28424,8 +28396,7 @@ function scripts.hero_vesper.update(this, store)
 					SU.hero_gain_xp_from_skill(this, this.hero.skills.disengage)
 					U.y_animation_play(this, this.dodge.animation_appear, nil, store.tick_ts)
 
-					this.vis.bans = bans
-					this.vis._bans = nil
+					U.bans_remove(this.vis, F_ALL)
 
 					SU.show_modifiers(store, this, true)
 					SU.show_auras(store, this, true)
@@ -28915,9 +28886,7 @@ function scripts.hero_muyrn.update(this, store)
 
 					U.unblock_target(store, this)
 
-					local vis_bans = this.vis.bans
-
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 					this.health.immune_to = F_ALL
 
 					U.speed_inc_self(this, tw.extra_speed)
@@ -28965,7 +28934,7 @@ function scripts.hero_muyrn.update(this, store)
 					SU.show_modifiers(store, this, true)
 
 					U.speed_dec_self(this, tw.extra_speed)
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = 0
 					this.unit.marker_hidden = nil
 					this.health_bar.hidden = nil
@@ -30120,17 +30089,16 @@ function scripts.hero_dragon_arb.update(this, store)
 				S:queue(this.sound_events.change_rally_point)
 			end
 
-			local vis_bans = this.vis.bans
 			local prev_immune = this.health.immune_to
 
-			this.vis.bans = F_ALL
+			U.bans_add(this.vis, F_ALL)
 			this.health.immune_to = r.immune_to
 
 			local out = y_hero_dragon_arb_walk_waypoints(store, this)
 
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
-			this.vis.bans = vis_bans
+			U.bans_remove(this.vis, F_ALL)
 			this.health.immune_to = prev_immune
 
 			return out
@@ -32568,8 +32536,8 @@ function scripts.hero_builder.update(this, store)
 						local _vis = {}
 
 						_vis.bans, _vis.flags = this.vis.bans, this.vis.flags
-						this.vis.bans = F_ALL
-						this.vis.flags = F_NONE
+						U.bans_add(this.vis, F_ALL)
+						U.flags_remove(this.vis, _vis.flags)
 						this.ui.can_select = false
 
 						SU.remove_modifiers(store, this)
@@ -32600,8 +32568,8 @@ function scripts.hero_builder.update(this, store)
 						end
 
 						this.health_bar.hidden = false
-						this.vis.bans = _vis.bans
-						this.vis.flags = _vis.flags
+						U.bans_remove(this.vis, F_ALL)
+						U.flags_add(this.vis, _vis.flags)
 						this.ui.can_select = true
 
 						goto label_builder_1
@@ -32979,9 +32947,7 @@ function scripts.hero_robot.update(this, store)
 
 					U.unblock_target(store, this)
 
-					local vis_bans = this.vis.bans
-
-					this.vis.bans = F_ALL
+					U.bans_add(this.vis, F_ALL)
 					this.health.immune_to = F_ALL
 
 					U.speed_inc_self(this, tw.extra_speed)
@@ -33036,7 +33002,7 @@ function scripts.hero_robot.update(this, store)
 
 					this.ui.click_rect = this.ui.click_rect_nofly
 					U.speed_dec_self(this, tw.extra_speed)
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = 0
 					this.unit.marker_hidden = nil
 					this.health_bar.hidden = nil
@@ -33099,9 +33065,7 @@ function scripts.hero_robot.update(this, store)
 								S:queue(a.sound_cast)
 								U.unblock_target(store, this)
 
-								local bans = this.vis.bans
-
-								this.vis.bans = F_ALL
+								U.bans_add(this.vis, F_ALL)
 
 								SU.hide_modifiers(store, this, true)
 								SU.hide_auras(store, this, true)
@@ -33171,8 +33135,7 @@ function scripts.hero_robot.update(this, store)
 								simulation:queue_insert_entity(aura)
 								explosion_damage(dest, a.damage_radius, a.damage_min, a.damage_max, a.damage_type, a.damage_bans, a.damage_flags)
 
-								this.vis.bans = bans
-								this.vis._bans = nil
+								U.bans_remove(this.vis, F_ALL)
 
 								SU.show_modifiers(store, this, true)
 								SU.show_auras(store, this, true)
@@ -33681,7 +33644,7 @@ function scripts.mod_hero_robot_skill_uppercut.insert(this, store)
 
 	SU.stun_inc(target)
 
-	target.vis.bans = F_ALL
+	U.bans_add(target.vis, F_ALL)
 	target.ui.can_click = false
 	target.ui.can_select = false
 	target.health_bar.hidden = true
@@ -33733,7 +33696,7 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 	if target then
 		SU.stun_dec(target)
 
-		target.vis.bans = 0
+		U.bans_remove(target.vis, F_ALL)
 		target.ui.can_click = true
 		target.ui.can_select = true
 		target.health_bar.hidden = false
@@ -35059,11 +35022,11 @@ function scripts.hero_lava.update(this, store)
 			U.unblock_target(store, this)
 
 			local death_ts = store.tick_ts
-			local bans, flags = this.vis.bans, this.vis.flags
+			local flags = this.vis.flags
 			local prefix = this.render.sprites[1].prefix
 
-			this.vis.bans = F_ALL
-			this.vis.flags = F_NONE
+			U.bans_add(this.vis, F_ALL)
+			U.flags_remove(this.vis, flags)
 			this.health.ignore_damage = true
 
 			if this._death_by_ultimate then
@@ -35080,7 +35043,6 @@ function scripts.hero_lava.update(this, store)
 			else
 				U.y_animation_play(this, "death", nil, store.tick_ts)
 			end
-
 			this.render.sprites[1].prefix = prefix .. "_death"
 
 			local aura = E:create_entity(this.death_aura)
@@ -35107,8 +35069,8 @@ function scripts.hero_lava.update(this, store)
 
 			this.force_respawn = nil
 			this.render.sprites[1].z = Z_OBJECTS
-			this.vis.bans = bans
-			this.vis.flags = flags
+			U.bans_remove(this.vis, F_ALL)
+			U.flags_add(this.vis, flags)
 			this.render.sprites[1].prefix = prefix
 			update_hp(this)
 			this.health.dead = false
@@ -35595,9 +35557,8 @@ function scripts.hero_spider.update(this, store)
 
 			if SU.hero_will_teleport(this, r.pos) then
 				local tp = this.teleport
-				local vis_bans = this.vis.bans
 
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
 				local an, af = U.animation_name_facing_point(this, tp.animations[1], r.pos)
@@ -35700,22 +35661,21 @@ function scripts.hero_spider.update(this, store)
 				U.y_animation_play(this, tp.animations[2], nil, store.tick_ts)
 
 				this.health_bar.hidden = false
-				this.vis.bans = vis_bans
+				U.bans_remove(this.vis, F_ALL)
 				this.health.ignore_damage = false
 
 				return true
 			else
-				local vis_bans = this.vis.bans
 				local prev_immune = this.health.immune_to
 
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 				this.health.immune_to = r.immune_to
 
 				local out = SU.y_hero_walk_waypoints(store, this)
 
 				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
-				this.vis.bans = vis_bans
+				U.bans_remove(this.vis, F_ALL)
 				this.health.immune_to = prev_immune
 
 				return out
@@ -35825,9 +35785,8 @@ function scripts.hero_spider.update(this, store)
 				local target = targets[1]
 				local initial_pos = V.vclone(this.pos)
 				local initial_flip = this.render.sprites[1].flip_x
-				local _bans = this.vis.bans
 
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 				this.health.ignore_damage = true
 
 				S:queue(a.sound_supreme)
@@ -35886,7 +35845,7 @@ function scripts.hero_spider.update(this, store)
 				U.y_wait_unconditional(store, fts(5))
 
 				this.health_bar.hidden = nil
-				this.vis.bans = _bans
+				U.bans_remove(this.vis, F_ALL)
 				this.health.ignore_damage = nil
 
 				U.y_animation_wait_default(this)
@@ -36037,7 +35996,7 @@ function scripts.mod_hero_spider_skill_instakill_melee.insert(this, store)
 
 	SU.stun_inc(target)
 
-	target.vis.bans = F_ALL
+	U.bans_add(target.vis, F_ALL)
 	target.ui.can_click = false
 	target.ui.can_select = false
 	target.health_bar.hidden = true
@@ -40851,13 +40810,12 @@ function scripts.hero_isfet.update(this, store)
 		local rally = this.nav_rally
 		local grid = this.nav_grid
 		local destination = rally.pos
-		local vis_bans = this.vis.bans
 		local immune_to = this.health.immune_to
 
 		rally.new = false
 		U.unblock_target(store, this)
 		S:queue(this.sound_events.change_rally_point)
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
 		this.health.immune_to = rally.immune_to
 
 		while not V.veq(this.pos, destination) do
@@ -40870,20 +40828,20 @@ function scripts.hero_isfet.update(this, store)
 
 			while not this.motion.arrived do
 				if h.dead and not h.ignore_damage then
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = immune_to
 					return "dead"
 				end
 
 				if rally.new then
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = immune_to
 					return "new_rally"
 				end
 
 				if isfet_frog_target(this, store, frog_attack) then
 					rally.new = true
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = immune_to
 					return "frog"
 				end
@@ -40895,7 +40853,7 @@ function scripts.hero_isfet.update(this, store)
 		end
 
 		U.animation_start(this, "idle", nil, store.tick_ts, true)
-		this.vis.bans = vis_bans
+		U.bans_remove(this.vis, F_ALL)
 		this.health.immune_to = immune_to
 
 		return "arrived"
@@ -41220,7 +41178,7 @@ function scripts.aura_isfet_necromancy.update(this, store)
 						dead._isfet_necromancy_checked = true
 
 						if math.random() < this.chance then
-							dead.vis.bans = bor(dead.vis.bans, F_SKELETON)
+							U.bans_add(dead.vis, F_SKELETON)
 							dead.health.delete_after = 0
 
 							local mummy = E:create_entity(this.entity)
@@ -43056,7 +43014,7 @@ function scripts.aura_mortemis_zombie.update(this, store)
 						dead_enemies = table.slice(dead_enemies, 1, max_spawns)
 
 						for _, dead in ipairs(dead_enemies) do
-							dead.vis.bans = bor(dead.vis.bans, F_SKELETON)
+							U.bans_add(dead.vis, F_SKELETON)
 							dead.health.delete_after = 0
 
 							local e = E:create_entity(this.spawn_name)
@@ -44177,16 +44135,15 @@ function scripts.hero_tank.update(this, store)
 					S:queue(this.sound_events.change_rally_point)
 				end
 
-				local vis_bans = this.vis.bans
 				local prev_immune = this.health.immune_to
 
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 				this.health.immune_to = r.immune_to
 
 				out = y_hero_walk_waypoints(store, this)
 				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
-				this.vis.bans = vis_bans
+				U.bans_remove(this.vis, F_ALL)
 				this.health.immune_to = prev_immune
 			end
 

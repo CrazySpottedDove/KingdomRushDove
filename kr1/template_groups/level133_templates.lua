@@ -713,7 +713,8 @@ tt.main_script.update = function(this, store)
 
 		simulation:queue_insert_entity(fx_spawn)
 
-		this._pushed_bans = U.push_bans(enemy.vis, F_ALL)
+		this._pushed_bans = true
+		U.bans_add(enemy.vis, F_ALL)
 
 		SU.stun_inc(enemy)
 	end
@@ -733,7 +734,7 @@ tt.main_script.update = function(this, store)
 
 		if enemy then
 			if this._pushed_bans then
-				U.pop_bans(enemy.vis, this._pushed_bans)
+				U.bans_remove(enemy.vis, F_ALL)
 
 				this._pushed_bans = nil
 			end

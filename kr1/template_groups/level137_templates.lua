@@ -484,7 +484,7 @@ controller_stage_37_dragon_boss_update = function(this, store, script)
 			boss.nav_path.spi = 1
 			boss.nav_path.ni = boss.spawn_node
 			boss.pos = P:node_pos(boss.nav_path.pi, boss.nav_path.spi, boss.nav_path.ni)
-			local boss_pushed_bans = U.push_bans(boss.vis, F_ALL)
+			U.bans_add(boss.vis, F_ALL)
 			U.sprites_hide(boss)
 			local boss_speed = boss.motion.max_speed
 			U.update_max_speed(boss, 0)
@@ -532,7 +532,7 @@ controller_stage_37_dragon_boss_update = function(this, store, script)
 				update_shadow()
 				coroutine.yield()
 			end
-			U.pop_bans(boss.vis, boss_pushed_bans)
+			U.bans_remove(boss.vis, F_ALL)
 			U.sprites_show(boss)
 			U.sprites_hide(this)
 			boss.render.sprites[1].ts = this.render.sprites[1].ts

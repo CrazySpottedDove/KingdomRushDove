@@ -98,7 +98,7 @@ controller_stage_18_eridan_update = function(this, store)
 				simulation:queue_insert_entity(mod)
 				target.health.ignore_damage = true
 				U.y_wait_unconditional(store, fts(1))
-				target.vis.bans = F_ALL
+				U.bans_add(target.vis, F_ALL)
 				S:queue(this.sound_in_out)
 				U.y_animation_play(this, ai.animation_start, false, store.tick_ts)
 				this.pos = V.vclone(target.pos)

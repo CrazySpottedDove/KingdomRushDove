@@ -197,8 +197,9 @@ tt.main_script.update = function(this, store)
 
 	this.vis._original_flags = this.vis.flags
 	this.vis._original_bans = this.vis.bans
-	this.vis.flags = 0
-	this.vis.bans = bor(F_RANGED, F_BLOCK)
+	U.flags_remove(this.vis, this.vis._original_flags)
+	U.bans_add(this.vis, band(bor(F_RANGED, F_BLOCK), bnot(this.vis._original_bans)))
+	U.bans_remove(this.vis, band(this.vis._original_bans, bnot(bor(F_RANGED, F_BLOCK))))
 
 	U.unblock_all(store, this)
 
@@ -212,8 +213,11 @@ tt.main_script.update = function(this, store)
 	U.y_animation_play(this, "action", nil, store.tick_ts)
 	U.animation_start_default(this, "idle2", nil, store.tick_ts, true)
 
-	this.vis.flags = this.vis._original_flags
-	this.vis.bans = this.vis._original_bans
+	U.flags_add(this.vis, this.vis._original_flags)
+	U.bans_remove(this.vis, band(bor(F_RANGED, F_BLOCK), bnot(this.vis._original_bans)))
+	U.bans_add(this.vis, band(this.vis._original_bans, bnot(bor(F_RANGED, F_BLOCK))))
+	this.vis._original_flags = nil
+	this.vis._original_bans = nil
 	last_idle = store.tick_ts
 
 	local hb = E:create_entity("enemy_unblinded_abomination_stage_8_lifebar")

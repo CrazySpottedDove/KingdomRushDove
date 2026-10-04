@@ -620,7 +620,10 @@ local function soldier_stage_213_sorcerer_update(this, store)
 	local path_ni = 1
 	local path_spi = 1
 	local target_pos = P:node_pos(this.path_id, path_spi, path_ni)
-	this.vis.bans = 0
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
+	end
 	local function do_step()
 		if V.veq(this.pos, target_pos) then
 			this.motion.arrived = true
@@ -685,7 +688,7 @@ local function soldier_stage_213_sorcerer_update(this, store)
 	this.ui.can_click = false
 	this.ui.can_select = false
 	this.ui.can_hover = false
-	this.vis.bans = F_ALL
+	U.bans_add(this.vis, F_ALL)
 	if game.game_gui.selected_entity and game.game_gui.selected_entity.id == this.id then
 		signal.emit("hide-bottom-info")
 	end

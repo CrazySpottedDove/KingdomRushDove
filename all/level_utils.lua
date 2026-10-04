@@ -13,7 +13,6 @@ local G = require("love.graphics")
 local configer = require("dove_modules.configer")
 local P = require("path_db")
 local bit = require("bit")
-local bor = bit.bor
 local U = require("utils")
 local LU = {}
 
@@ -569,7 +568,7 @@ function LU.kill_all_enemies(store, discard_gold, keep_spawners)
 					e.enemy.gold = 0
 				end
 
-				e.vis.bans = bor(e.vis.bans, F_MOD)
+				U.bans_add(e.vis, F_MOD)
 
 				if e.regen then
 					e.regen.cooldown = 1e+99
