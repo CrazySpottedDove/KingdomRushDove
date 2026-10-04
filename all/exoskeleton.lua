@@ -17,7 +17,28 @@ EXO.base_path = KR_PATH_GAME .. "/data/exoskeletons"
 EXO.exo_lists_to_load = {}
 
 -- 持久化的 exo，永远不会卸载，避免重复加载卸载的开销
-local persistent_exos = table.to_map({"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava", "tower_catapult_level_4Def", "tower_catapult_level_4_rockyDef", "tower_catapult_level_4_ballsDef"})
+local persistent_exos = table.to_map({
+	"ignis_altar_lava_golem",
+	"ignis_altar_lvl4",
+	"ignis_altar_decal",
+	"ignis_altar_decal_lava",
+	"tower_catapult_level_4Def",
+	"tower_catapult_level_4_rockyDef",
+	"tower_catapult_level_4_ballsDef",
+	"archer4Def",
+	"archer4_overborderDef",
+	"archer4_torreDef",
+	"archer4_torre_borderDef",
+	"archer4_torre_pillarDef",
+	"archerarrow2Def",
+	"archerarrow3_hitDef",
+	"archer_buffdecalDef",
+	"archer_buffdecal_2Def",
+	"archer_buffbirdDef",
+	"archer_markbirdDef",
+	"archer_markDef",
+	"archer_ultbgDef"
+})
 
 --- director 调用，将资源列表加入 EXO.exo_lists_to_load 中，在进入对局时被加载
 ---@param exo_list any

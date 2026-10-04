@@ -586,8 +586,65 @@ return {
 			tt_title = _("TOWER_SWAMP_MONSTER_NAME"),
 			tt_desc = _("TOWER_SWAMP_MONSTER_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_archers",
+			type = "archers",
+			image = "kr6_quickmenu_main_icon_archers",
+			place = 25,
+			tt_title = _("TOWER_ARCHERS_NAME"),
+			tt_desc = _("TOWER_ARCHERS_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
+	archers = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_archers_0001",
+		sounds = {"TowerArcherGarrisonSkillATaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_ARCHERS_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ARCHERS_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ARCHERS_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ARCHERS_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_archers_0002",
+		sounds = {"TowerArcherGarrisonSkillBTaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_ARCHERS_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ARCHERS_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ARCHERS_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ARCHERS_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_archers_0003",
+		sounds = {"TowerArcherGarrisonSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_ARCHERS_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ARCHERS_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ARCHERS_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ARCHERS_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_ARCHERS_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
 	barrack = {{M(tpl.common_upgrade, {
 		action_arg = "tower_barrack_2",
 		tt_title = _("TOWER_BARRACK_2_NAME"),
