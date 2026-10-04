@@ -340,24 +340,21 @@ local function aura_stage_211_shadow_update(this, store)
 	local grid_copy = {}
 	this.grid_changeup = true
 	local function enemy_invulnerability()
-		local targets = table.filter(store.entities, function(k, v)
-			return v.enemy and v.unit and v.vis and v.health and not v.health.dead and not affected_enemies[v.id] and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and not U.is_inside_ellipse(v.pos, this.pos, this.aura.radius, 0.63)
+		local targets = table.filter(store.enemies, function(k, v)
+			return v.unit and v.vis and v.health and not v.health.dead and not affected_enemies[v.id] and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and not U.is_inside_ellipse(v.pos, this.pos, this.aura.radius, 0.63)
 		end)
 		for k, v in pairs(targets) do
-			affected_enemies[v.id] = {
-				enemy = v
-			}
-			v._pushed_bans = U.push_bans(v.vis, F_ALL)
+			if not affected_enemies[v.id] then
+				affected_enemies[v.id] = v
+				U.bans_add(v.vis, F_ALL)
+			end
 		end
 		local remove = table.filter(affected_enemies, function(k, v)
-			return U.is_inside_ellipse(v.enemy.pos, this.pos, this.aura.radius, 0.63) and v.enemy.unit
+			return U.is_inside_ellipse(v.pos, this.pos, this.aura.radius, 0.63)
 		end)
 		for k, v in pairs(remove) do
-			if v.enemy._pushed_bans then
-				U.pop_bans(v.enemy.vis, v.enemy._pushed_bans)
-				v.enemy._pushed_bans = nil
-			end
-			affected_enemies[v.enemy.id] = nil
+			affected_enemies[v.id] = nil
+			U.bans_remove(v.vis, F_ALL)
 		end
 	end
 	local function grid_save()
