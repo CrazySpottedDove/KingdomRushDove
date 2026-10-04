@@ -32062,12 +32062,6 @@ function scripts.tower_archers.update(this, store)
 					decal.render.sprites[1].ts = store.tick_ts
 					decal.tween.ts = store.tick_ts
 
-					local mt = E:get_template(sba.mod)
-
-					if mt.offset_per_tower[target.tower.type] then
-						decal.render.sprites[1].offset = mt.offset_per_tower[target.tower.type]
-					end
-
 					queue_insert(store, decal)
 					table.insert(skill_b_previews, decal)
 				end
@@ -32092,7 +32086,9 @@ function scripts.tower_archers.update(this, store)
 			end
 
 			if U.tower_ready_to_use_power(sb, sba, store, this.tower) then
+				local eagle_released = false
 				if skill_b_eagle_cd < store.tick_ts - skill_b_eagle_ts then
+					eagle_released = true
 					this.skill_b_eagle = E:create_entity(sba.eagle)
 					this.skill_b_eagle.pos = this.pos
 					this.skill_b_eagle.render.sprites[1].ts = store.tick_ts
@@ -32132,8 +32128,9 @@ function scripts.tower_archers.update(this, store)
 				end
 
 				sba.ts = store.tick_ts
-
-				S:queue(sba.sound)
+				if eagle_released then
+					S:queue(sba.sound)
+				end
 
 				for _, tower in ipairs(towers) do
 					local m = E:create_entity(sba.mod)
