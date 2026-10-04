@@ -8759,8 +8759,8 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 	this.nav_rally.pos = vclone(this.pos)
 	this.nav_rally.center = vclone(this.pos)
 	this.render.sprites[1].hidden = true
-	this._vis_bans = this.vis.bans
-	this.vis.bans = F_ALL
+	this._vis_bans_added = true
+	U.bans_add(this.vis, F_ALL)
 	this.ui.can_click = false
 
 	if source and source.unit.fade_time_after_death then
@@ -8769,7 +8769,11 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 		U.y_wait_unconditional(store, random(this.spawn_delay_min, this.spawn_delay_max))
 	end
 
-	this.vis.bans = this._vis_bans
+	if this._vis_bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this._vis_bans_added = nil
+	end
+
 	this.ui.can_click = true
 	this.source_necromancer = nil
 
@@ -10444,7 +10448,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 
 	U.sprites_hide(this, nil, nil, true)
 
-	this._spawn_pushed_bans = U.push_bans(this.vis, F_ALL)
+	U.bans_add(this.vis, F_ALL)
 
 	while not this.bullet_arrived do
 		coroutine.yield()
@@ -10468,9 +10472,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 		this.nav_rally.new = false
 	end
 
-	U.pop_bans(this.vis, this._spawn_pushed_bans)
-
-	this._spawn_pushed_bans = nil
+	U.bans_remove(this.vis, F_ALL)
 
 	local brk, stam, star
 	-- this.render.sprites[1].ts = store.tick_ts
@@ -12163,7 +12165,7 @@ function scripts.tower_stargazers.update(this, store)
 									place_ni = 1
 								end
 
-								enemy.vis.bans = bor(enemy.vis.bans, F_TELEPORT)
+								U.bans_add(enemy.vis, F_TELEPORT)
 
 								table.insert(this.teleport_targets, {
 									ni = place_ni,
@@ -12211,7 +12213,7 @@ function scripts.tower_stargazers.update(this, store)
 
 						U.sprites_show(enemy, nil, nil, true)
 
-						enemy.vis.bans = U.flag_clear(enemy.vis.bans, F_TELEPORT)
+						U.bans_remove(enemy.vis, F_TELEPORT)
 
 						U.unblock_all(store, enemy)
 						table.remove(this.teleport_targets, i)
@@ -12273,9 +12275,7 @@ function scripts.tower_stargazers.remove(this, store)
 			end
 
 			U.sprites_show(enemy, nil, nil, true)
-			U.pop_bans(enemy.vis, enemy._stargazer_bans)
-
-			enemy._stargazer_bans = nil
+			U.bans_remove(enemy.vis, F_TELEPORT)
 
 			table.remove(this.teleport_targets, i)
 
@@ -13463,7 +13463,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.insert(
 	if U.enemy_is_silent_target(target) then
 		if band(target.vis.flags, F_MOCKING) == 0 then
 			this.mocking_added = true
-			target.vis.flags = bor(target.vis.flags, F_MOCKING)
+			U.flags_add(target.vis, F_MOCKING)
 		end
 	end
 
@@ -13475,7 +13475,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.remove(
 
 	if target then
 		if this.mocking_added then
-			target.vis.flags = U.flag_clear(target.vis.flags, F_MOCKING)
+			U.flags_remove(target.vis, F_MOCKING)
 		end
 	end
 
@@ -14120,11 +14120,11 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 
 	this.melee.attacks[1].level = this.unit.level
 	this.ranged.attacks[1].level = this.unit.level
-	this.vis.flags = bor(this.vis.flags, F_FLYING)
+	U.flags_add(this.vis, F_FLYING)
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	local MODE_FLY = 0
@@ -14196,7 +14196,11 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 			local start_ts = store.tick_ts
 
 			if is_taking_off then
-				this.vis.bans = this.vis_bans_before_take_off
+				if not this._take_off_bans_added then
+					U.bans_add(this.vis, F_ALL)
+					this._take_off_bans_added = true
+				end
+
 				this.shadow_decal = E:create_entity(this.shadow_decal_t)
 				this.shadow_decal.pos = this.pos
 				this.shadow_decal.soldier_height = this.flight_height
@@ -14311,7 +14315,11 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 
 		::label_540_0::
 
-		this.vis.bans = this.vis_bans_after_take_off
+		if this._take_off_bans_added then
+			U.bans_remove(this.vis, F_ALL)
+			this._take_off_bans_added = nil
+		end
+
 		this.health.immune_to = prev_immune
 
 		return out
@@ -14360,7 +14368,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 		this.tween.disabled = false
 		this.tween.props[1].ts = store.tick_ts
 		this.render.sprites[1].angles.walk = {"idle_air"}
-		this.vis.flags = bor(this.vis.flags, F_FLYING)
+		U.flags_add(this.vis, F_FLYING)
 	end
 
 	local function change_mode_ground()
@@ -14412,7 +14420,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 
 		this.idle_flip.last_animation = "idle_floor"
 		this.render.sprites[1].angles.walk = {"walk"}
-		this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
+		U.flags_remove(this.vis, F_FLYING)
 	end
 
 	local function soldier_idle(store, this)
@@ -14515,7 +14523,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 	if not this.spawned_from_tower then
 		this.current_mode = tower.tower_upgrade_persistent_data.current_mode
 		this.change_mode = false
-		this.vis.bans = this.vis_bans_after_take_off
+		U.bans_remove(this.vis, this.vis.bans)
 		this.shadow_decal = E:create_entity(this.shadow_decal_t)
 		this.shadow_decal.pos = this.pos
 		this.shadow_decal.soldier_height = this.flight_height
@@ -14543,7 +14551,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 			U.update_max_speed(this, this.speed_flight)
 
 			this.melee.attacks[1].disabled = true
-			this.vis.flags = bor(this.vis.flags, F_FLYING)
+			U.flags_add(this.vis, F_FLYING)
 		else
 			U.update_max_speed(this, this.speed_ground)
 
@@ -14567,7 +14575,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 
 			this.idle_flip.last_animation = "idle_floor"
 			this.render.sprites[1].angles.walk = {"walk"}
-			this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
+			U.flags_remove(this.vis, F_FLYING)
 		end
 
 		adjust_height()
@@ -17053,11 +17061,10 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 	local function y_soldier_new_rally_break_attack(store, this, break_fn)
 		local r = this.nav_rally
 		local out = false
-		local vis_bans = this.vis.bans
 		local prev_immune = this.health.immune_to
 
 		this.health.immune_to = r.immune_to
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
 
 		if r.new then
 			r.new = false
@@ -17103,7 +17110,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 
 		::label_972_0::
 
-		this.vis.bans = vis_bans
+		U.bans_remove(this.vis, F_ALL)
 		this.health.immune_to = prev_immune
 
 		return out
@@ -17606,7 +17613,7 @@ function scripts.tower_hermit_toad.update(this, store)
 
 					simulation:queue_insert_entity(mark_mod)
 
-					local pushed_bans = U.push_bans(target.vis, F_EAT)
+					U.bans_add(target.vis, F_EAT)
 					local start_ts = store.tick_ts
 
 					this.attacks._last_target_pos = pred_pos
@@ -17617,7 +17624,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					pause_pipe_ps()
 					U.animation_start(this, an, af, store.tick_ts, false, 3)
 					coroutine.yield()
-					U.pop_bans(target.vis, pushed_bans)
+					U.bans_remove(target.vis, F_EAT)
 					coroutine.yield()
 					y_toad_wait_time_check_change_mode(attack.shoot_time)
 					S:queue(attack.sound)
@@ -18734,7 +18741,9 @@ function scripts.mod_tower_sparking_geode_stun.insert(this, store)
 	end
 
 	m.ts = store.tick_ts
-	this._pushed_bans = U.push_bans(target.vis, F_CUSTOM)
+	U.bans_add(target.vis, F_CUSTOM)
+
+	this._pushed_bans = true
 
 	SU.stun_inc(target)
 	log.paranoid("mod_stun.insert (%s)-%s for target (%s)-%s", this.id, this.template_name, target.id, target.template_name)
@@ -18855,7 +18864,7 @@ function scripts.mod_tower_sparking_geode_stun.remove(this, store)
 	SU.show_auras(store, target, true)
 
 	if this._pushed_bans then
-		U.pop_bans(target.vis, this._pushed_bans)
+		U.bans_remove(target.vis, F_CUSTOM)
 
 		this._pushed_bans = nil
 	end
@@ -19002,19 +19011,18 @@ function scripts.soldier_tower_dwarf.update(this, store)
 	local a_i = this.ranged.attacks[2]
 	local first_walk = true
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	local function y_soldier_new_rally_break_attack(store, this, first_walk)
 		local r = this.nav_rally
 		local out = false
-		local vis_bans = this.vis.bans
 		local prev_immune = this.health.immune_to
 
 		this.health.immune_to = r.immune_to
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
 
 		if r.new then
 			r.new = false
@@ -19121,7 +19129,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 
 		::label_1205_0::
 
-		this.vis.bans = vis_bans
+		U.bans_remove(this.vis, F_ALL)
 		this.health.immune_to = prev_immune
 
 		return out
@@ -19304,9 +19312,9 @@ function scripts.tower_ghost.user_selection_func(this, store)
 end
 
 function scripts.tower_ghost.soldier_update(this, store)
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	-- this.nav_rally._first_time = true
@@ -19315,11 +19323,10 @@ function scripts.tower_ghost.soldier_update(this, store)
 	local function y_soldier_new_rally_break_attack(store, this)
 		local r = this.nav_rally
 		local out = false
-		local vis_bans = this.vis.bans
 		local prev_immune = this.health.immune_to
 
 		this.health.immune_to = r.immune_to
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
 
 		if r.new then
 			r.new = false
@@ -19359,7 +19366,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 
 		::label_970_0::
 
-		this.vis.bans = vis_bans
+		U.bans_remove(this.vis, F_ALL)
 		this.health.immune_to = prev_immune
 
 		return out
@@ -19799,9 +19806,9 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 	local a_h = this.timed_attacks.list[1]
 	local a_l = this.timed_attacks.list[2]
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	while true do
@@ -20936,9 +20943,9 @@ scripts.soldier_priests_barrack = {}
 function scripts.soldier_priests_barrack.update(this, store)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	local function priest_transformation()
@@ -21060,9 +21067,9 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 
 	this.reinforcement.ts = store.tick_ts
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	if this.render.sprites[1].name == "raise" then
@@ -21091,8 +21098,8 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 		end
 
 		if this.cloak then
-			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
-			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
+			U.flags_remove(this.vis, this.cloak.flags)
+			U.bans_remove(this.vis, this.cloak.bans)
 			this.render.sprites[1].alpha = 255
 		end
 
@@ -21193,8 +21200,8 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 			SU.soldier_idle(store, this)
 
 			if this.cloak then
-				this.vis.flags = bor(this.vis.flags, this.cloak.flags)
-				this.vis.bans = bor(this.vis.bans, this.cloak.bans)
+				U.flags_add(this.vis, this.cloak.flags)
+				U.bans_add(this.vis, this.cloak.bans)
 
 				if this.cloak.alpha then
 					this.render.sprites[1].alpha = this.cloak.alpha
@@ -23047,9 +23054,9 @@ function scripts.soldier_rotten_forest_tree.update(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 	this.nav_rally.pos = V.vclone(this.pos)
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	if this.sound_events and this.sound_events.raise then
@@ -24067,9 +24074,9 @@ scripts.soldier_orc_warrior = {}
 function scripts.soldier_orc_warrior.update(this, store)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	while true do
@@ -24310,8 +24317,9 @@ function scripts.soldier_dark_knight.insert(this, store)
 end
 
 function scripts.soldier_dark_knight.update(this, store)
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	local brk, sta
@@ -26091,7 +26099,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 					for i = 1, spawn_count do
 						local dead = dead_enemies[i]
 
-						dead.vis.bans = bor(dead.vis.bans, F_SKELETON)
+						U.bans_add(dead.vis, F_SKELETON)
 						dead.health.delete_after = 0
 
 						local spawn_pos = V.vclone(dead.pos)
@@ -26159,9 +26167,9 @@ function scripts.soldier_zombie.update(this, store, script)
 
 	this.idle_flip.ts = store.tick_ts
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	do
@@ -27593,9 +27601,9 @@ scripts.soldier_elves_harasser = {}
 function scripts.soldier_elves_harasser.update(this, store, script)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	if this.render.sprites[1].name == "raise" then
@@ -28843,9 +28851,9 @@ scripts.soldier_ignis_altar_elemental = {}
 function scripts.soldier_ignis_altar_elemental.update(this, store, script)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	this.health_bar.hidden = true

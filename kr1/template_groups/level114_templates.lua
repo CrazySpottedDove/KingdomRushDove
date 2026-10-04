@@ -17,7 +17,7 @@ aura_stage_14_prevent_polymorph_update = function(this, store)
 				return v.unit and v.health and not v.health.dead and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and not U.flag_has(v.vis.bans, F_POLYMORPH) and (v.nav_path.pi == 2 or v.nav_path.pi == 3) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name))
 			end)
 			for i, target in ipairs(targets) do
-				target.vis.bans = U.flag_set(target.vis.bans, F_POLYMORPH)
+				U.bans_add(target.vis, F_POLYMORPH)
 			end
 		end
 		coroutine.yield()

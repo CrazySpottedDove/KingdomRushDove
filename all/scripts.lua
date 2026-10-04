@@ -23,7 +23,6 @@ local V = require("lib.klua.vector")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
-local bnot = bit.bnot
 
 local function is_file(path)
 	local info = love.filesystem.getInfo(path)
@@ -703,8 +702,8 @@ function scripts.soldier_barrack.insert(this, store)
 		this.info.i18n_key = string.format(string.gsub(this.info.random_name_format, "_NAME", ""), math.random(this.info.random_name_count))
 	end
 
-	this.vis._bans = this.vis.bans
-	this.vis.bans = F_ALL
+	U.bans_add(this.vis, F_ALL)
+	this.vis._bans_added = true
 
 	if this.render then
 		for i = 1, #this.render.sprites do
@@ -718,9 +717,9 @@ end
 function scripts.soldier_barrack.update(this, store)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	if this.render.sprites[1].name == "raise" then
@@ -748,8 +747,12 @@ function scripts.soldier_barrack.update(this, store)
 		end
 
 		if this.cloak and this.soldier.target_id then
-			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
-			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
+			if not this._cloak_hidden then
+				U.flags_remove(this.vis, this.cloak.flags)
+				U.bans_remove(this.vis, this.cloak.bans)
+				this._cloak_hidden = true
+			end
+
 			this.render.sprites[1].alpha = 255
 		end
 
@@ -839,8 +842,11 @@ function scripts.soldier_barrack.update(this, store)
 			SU.soldier_idle(store, this)
 
 			if this.cloak then
-				this.vis.flags = bor(this.vis.flags, this.cloak.flags)
-				this.vis.bans = bor(this.vis.bans, this.cloak.bans)
+				if this._cloak_hidden then
+					U.flags_add(this.vis, this.cloak.flags)
+					U.bans_add(this.vis, this.cloak.bans)
+					this._cloak_hidden = nil
+				end
 
 				if this.cloak.alpha then
 					this.render.sprites[1].alpha = this.cloak.alpha
@@ -7404,7 +7410,7 @@ function scripts.mod_polymorph.insert(this, store)
 
 	queue_damage(store, d)
 
-	target.vis.bans = F_ALL
+	U.bans_add(target.vis, F_ALL)
 
 	if pm.hit_fx_sizes then
 		local fx = E:create_entity(pm.hit_fx_sizes[target.unit.size])

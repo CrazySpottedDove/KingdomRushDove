@@ -54,8 +54,8 @@ return function(this, store)
 	this.info.i18n_key = string.format(string.gsub(this.info.random_name_format, "_NAME", ""), math.random(this.info.random_name_count))
 	constend
 
-	this.vis._bans = this.vis.bans
-	this.vis.bans = F_ALL
+	U.bans_add(this.vis, F_ALL)
+	this.vis._bans_added = true
 
 	constif(this.render)
 	constfor i = 1, #this.render.sprites do
@@ -71,9 +71,9 @@ soldier_barrack.update = [[
 return function(this, store)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	if this.render.sprites[1].name == "raise" then
@@ -102,8 +102,11 @@ return function(this, store)
 
         constif(this.cloak)
         if this.soldier.target_id then
-            this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
-            this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
+            if not this._cloak_hidden then
+                U.flags_remove(this.vis, this.cloak.flags)
+                U.bans_remove(this.vis, this.cloak.bans)
+                this._cloak_hidden = true
+            end
             this.render.sprites[1].alpha = 255
         end
         constend
@@ -208,8 +211,11 @@ return function(this, store)
 			SU.soldier_idle(store, this)
 
 			constif(this.cloak)
-				this.vis.flags = bor(this.vis.flags, this.cloak.flags)
-				this.vis.bans = bor(this.vis.bans, this.cloak.bans)
+				if this._cloak_hidden then
+					U.flags_add(this.vis, this.cloak.flags)
+					U.bans_add(this.vis, this.cloak.bans)
+					this._cloak_hidden = nil
+				end
 
 				@constif(this.cloak.alpha)
 				this.render.sprites[1].alpha = this.cloak.alpha

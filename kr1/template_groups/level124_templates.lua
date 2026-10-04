@@ -92,7 +92,7 @@ decal_stage_24_upgrade_station_update = function(this, store)
 						else
 							local original_path = hammerer.nav_path.pi
 							hammerer.nav_path.pi = this.path_in
-							hammerer.vis.bans = U.flag_set(hammerer.vis.bans, F_POLYMORPH)
+							U.bans_add(hammerer.vis, F_POLYMORPH)
 							if not hammerer.enemy.counts.mod_teleport then
 								hammerer.enemy.counts.mod_teleport = 0
 							end
@@ -103,7 +103,7 @@ decal_stage_24_upgrade_station_update = function(this, store)
 								end
 								if start_tel_count < hammerer.enemy.counts.mod_teleport then
 									hammerer.nav_path.pi = original_path
-									hammerer.vis.bans = U.flag_clear(hammerer.vis.bans, F_POLYMORPH)
+									U.bans_remove(hammerer.vis, F_POLYMORPH)
 									goto label_1580_0
 								end
 								coroutine.yield()

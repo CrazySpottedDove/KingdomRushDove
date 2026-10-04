@@ -315,7 +315,7 @@ function scripts.necromancer_aura.update(this, store)
 					dead_enemies = table.slice(dead_enemies, 1, max_spawns)
 
 					for _, dead in ipairs(dead_enemies) do
-						dead.vis.bans = bor(dead.vis.bans, F_SKELETON)
+						U.bans_add(dead.vis, F_SKELETON)
 						dead.health.delete_after = 0
 
 						local e
@@ -540,9 +540,9 @@ scripts.soldier_dwarf = {}
 function scripts.soldier_dwarf.update(this, store)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	if this.reinforcement then
@@ -1852,8 +1852,8 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 
 				sp.prefix = sp.prefix_ground
 				sp.name = "idle"
-				this.vis.bans = U.flag_clear(this.vis.bans, a.bans_air)
-				this.vis.flags = U.flag_clear(this.vis.flags, a.flags_air)
+				U.bans_remove(this.vis, a.bans_air)
+				U.flags_remove(this.vis, a.flags_air)
 				this.unit.disintegrate_fx = "fx_enemy_desintegrate"
 				a.ts = store.tick_ts
 
@@ -1875,8 +1875,8 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 						patch_offsets(1)
 
 						sp.prefix = sp.prefix_air
-						this.vis.bans = U.flag_set(this.vis.bans, a.bans_air)
-						this.vis.flags = U.flag_set(this.vis.flags, a.flags_air)
+						U.bans_add(this.vis, a.bans_air)
+						U.flags_add(this.vis, a.flags_air)
 						this.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
 						this.health_bar.hidden = true
 						local an, af = U.animation_name_facing_point(this, "takeoff", this.motion.dest)
@@ -2208,12 +2208,11 @@ end
 scripts.enemy_demon_cerberus = {
 	update = function(this, store)
 		if this.sleeping then
-			local original_bans = this.vis.bans
 
 			this.health_bar.hidden = true
 			this.health.immune_to = DAMAGE_ALL
 			this.ui.can_select = false
-			this.vis.bans = F_ALL
+			U.bans_add(this.vis, F_ALL)
 
 			U.animation_start_default(this, "sleeping", nil, store.tick_ts, true)
 
@@ -2224,7 +2223,7 @@ scripts.enemy_demon_cerberus = {
 			this.health_bar.hidden = false
 			this.health.immune_to = 0
 			this.ui.can_select = true
-			this.vis.bans = original_bans
+			U.bans_remove(this.vis, F_ALL)
 			this.render.sprites[1].name = "raise"
 		end
 
@@ -2245,7 +2244,7 @@ function scripts.enemy_troll_skater.update(this, store)
 	end
 
 	this._last_on_ice = false
-	this.vis.bans = U.flag_clear(this.vis.bans, this.skate.vis_bans_extra)
+	U.bans_remove(this.vis, this.skate.vis_bans_extra)
 	this.render.sprites[1].angles.walk = walking_angles
 	if this.skate._mod then
 		simulation:queue_remove_entity(this.skate._mod)
@@ -2265,7 +2264,7 @@ function scripts.enemy_troll_skater.update(this, store)
 			if ice_changed() then
 				if on_ice() then
 					this._last_on_ice = true
-					this.vis.bans = U.flag_set(this.vis.bans, this.skate.vis_bans_extra)
+					U.bans_add(this.vis, this.skate.vis_bans_extra)
 					this.render.sprites[1].angles.walk = this.skate.walk_angles
 
 					local m = E:create_entity(this.skate.mod)
@@ -2278,7 +2277,7 @@ function scripts.enemy_troll_skater.update(this, store)
 					this.skate._mod = m
 				else
 					this._last_on_ice = false
-					this.vis.bans = U.flag_clear(this.vis.bans, this.skate.vis_bans_extra)
+					U.bans_remove(this.vis, this.skate.vis_bans_extra)
 					this.render.sprites[1].angles.walk = walking_angles
 
 					if this.skate._mod then
@@ -2317,9 +2316,9 @@ function scripts.enemy_spectral_knight.insert(this, store)
 	end
 
 	if this.render.sprites[1].name == "raise" then
-		this._raise_vis_bans = this.vis.bans
+		this._raise_vis_bans = true
 		this._raise_ignore_damage = this.health.ignore_damage
-		this.vis.bans = bor(F_ALL)
+		U.bans_add(this.vis, F_ALL)
 		this.health.ignore_damage = true
 		this.health_bar.hidden = true
 	end
@@ -2342,7 +2341,8 @@ function scripts.enemy_spectral_knight.update(this, store)
 		end
 
 		if this._raise_vis_bans then
-			this.vis.bans = this._raise_vis_bans
+			U.bans_remove(this.vis, F_ALL)
+			this._raise_vis_bans = nil
 			this.health.ignore_damage = this._raise_ignore_damage
 		end
 
@@ -4308,7 +4308,8 @@ function scripts.enemy_tremor.update(this, store)
 			U.cleanup_blockers(store, this)
 
 			if not burrowed and not U.get_blocker(store, this) then
-				this.vis.bans = this.vis.bans_below_surface
+				U.bans_add(this.vis, band(this.vis.bans_below_surface, bnot(this.vis.bans_above_surface)))
+				U.bans_remove(this.vis, band(this.vis.bans_above_surface, bnot(this.vis.bans_below_surface)))
 
 				SU.remove_modifiers(store, this)
 				U.animation_start_default(this, "burrow", nil, store.tick_ts, false)
@@ -4335,7 +4336,8 @@ function scripts.enemy_tremor.update(this, store)
 							coroutine.yield()
 						end
 
-						this.vis.bans = this.vis.bans_above_surface
+						U.bans_add(this.vis, band(this.vis.bans_above_surface, bnot(this.vis.bans_below_surface)))
+						U.bans_remove(this.vis, band(this.vis.bans_below_surface, bnot(this.vis.bans_above_surface)))
 						burrowed = false
 					end
 
@@ -4531,7 +4533,7 @@ scripts.enemy_cannibal = {}
 function scripts.enemy_cannibal.update(this, store)
 	local terrain_type
 
-	this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
+	U.bans_remove(this.vis, F_BLOCK)
 
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
@@ -4605,7 +4607,7 @@ function scripts.enemy_cannibal.update(this, store)
 
 					U.unblock_all(store, this)
 
-					this.vis.bans = bor(this.vis.bans, F_BLOCK)
+					U.bans_add(this.vis, F_BLOCK)
 					this.motion.forced_waypoint = v(target.pos.x, target.pos.y)
 
 					while SU.y_enemy_walk_step_default(store, this) do
@@ -4618,7 +4620,7 @@ function scripts.enemy_cannibal.update(this, store)
 						end
 					end
 
-					this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
+					U.bans_remove(this.vis, F_BLOCK)
 
 					U.animation_start_default(this, "cannibalize", nil, store.tick_ts, false)
 					S:queue(this.sound_events.cannibalize)
@@ -4639,7 +4641,7 @@ function scripts.enemy_cannibal.update(this, store)
 
 					::label_12_1::
 
-					this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
+					U.bans_remove(this.vis, F_BLOCK)
 					this.motion.forced_waypoint = nil
 
 					local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi})
@@ -4780,7 +4782,7 @@ function scripts.enemy_alien_breeder.update(this, store)
 						goto label_19_0
 					end
 
-					this.vis.bans = bor(this.vis.bans, F_TWISTER, F_BLOCK)
+					U.bans_add(this.vis, bor(F_TWISTER, F_BLOCK))
 
 					-- SU.stun_inc(blocker)
 
@@ -4883,8 +4885,8 @@ function scripts.enemy_alien_breeder.update(this, store)
 						return
 					end
 
-					this.vis.bans = band(this.vis.bans, bnot(F_TWISTER))
-					this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
+					U.bans_remove(this.vis, F_TWISTER)
+					U.bans_remove(this.vis, F_BLOCK)
 					this.health_bar.hidden = true
 				end
 
@@ -4927,7 +4929,7 @@ function scripts.enemy_shaman_necro.update(this, store)
 
 				if #dead_enemies > 0 then
 					for _, dead in pairs(dead_enemies) do
-						dead.vis.bans = bor(dead.vis.bans, F_UNDEAD)
+						U.bans_add(dead.vis, F_UNDEAD)
 					end
 
 					S:queue("EnemyHealing", {
@@ -5184,7 +5186,7 @@ function scripts.enemy_nightscale.update(this, store)
 
 				U.unblock_all(store, this)
 
-				this.vis.bans = bor(F_BLOCK, F_RANGED, F_BLOOD, F_TWISTER)
+				U.bans_add(this.vis, bor(F_BLOCK, F_RANGED, F_BLOOD, F_TWISTER))
 
 				S:queue(this.sound_events.hide)
 				U.y_animation_play(this, "hide", nil, store.tick_ts)
@@ -5202,7 +5204,7 @@ function scripts.enemy_nightscale.update(this, store)
 				end
 
 				this.render.sprites[1].alpha = 255
-				this.vis.bans = 0
+				U.bans_remove(this.vis, bor(F_BLOCK, F_RANGED, F_BLOOD, F_TWISTER))
 			end
 
 			local ignore_soldiers = terrain_type == TERRAIN_CLIFF
@@ -5275,7 +5277,7 @@ function scripts.enemy_darter.update(this, store)
 
 				U.unblock_all(store, this)
 
-				this.vis.bans = bor(F_ALL)
+				U.bans_add(this.vis, F_ALL)
 				this.render.sprites[1].hidden = true
 				this.health_bar.hidden = true
 				SU.hide_modifiers(store, this, true)
@@ -5308,7 +5310,7 @@ function scripts.enemy_darter.update(this, store)
 
 				this.render.sprites[1].hidden = false
 				this.health_bar.hidden = false
-				this.vis.bans = 0
+				U.bans_remove(this.vis, F_ALL)
 
 				SU.show_modifiers(store, this, true)
 				SU.show_auras(store, this, true)
@@ -6046,8 +6048,8 @@ function scripts.enemy_deviltide_shark.update(this, store)
 			local npos = P:node_pos(n.pi, n.spi, n.ni + 6)
 
 			if band(GR:cell_type(npos.x, npos.y), TERRAIN_LAND) ~= 0 then
-				this.vis.flags = F_NONE
-				this.vis.bans = F_ALL
+				U.flags_remove(this.vis, this.vis.flags)
+				U.bans_add(this.vis, F_ALL)
 				this.health.immune_to = DAMAGE_ALL
 
 				SU.remove_modifiers(store, this)
@@ -6144,14 +6146,13 @@ function scripts.enemy_headless_horseman.update(this, store)
 
 	local ra = this.ranged.attacks[1]
 	local flip = this.idle_flip
-	local bans = this.vis.bans
 
 	if this.custom_spawn_data and this.custom_spawn_data.lifespan then
 		this.lifespan.duration = this.custom_spawn_data.lifespan
 	end
 
 	this.health_bar.hidden = true
-	this.vis.bans = F_ALL
+	U.bans_add(this.vis, F_ALL)
 
 	if this.motion.forced_waypoint then
 		U.y_animation_play(this, "rise", this.pos.x > this.motion.forced_waypoint.x, store.tick_ts, 1)
@@ -6161,7 +6162,7 @@ function scripts.enemy_headless_horseman.update(this, store)
 	-- block empty
 	end
 
-	this.vis.bans = bans
+	U.bans_remove(this.vis, F_ALL)
 	this.health_bar.hidden = nil
 	::label_62_0::
 
@@ -6190,8 +6191,8 @@ function scripts.enemy_headless_horseman.update(this, store)
 
 		if store.tick_ts - this.lifespan.ts > this.lifespan.duration then
 			this.health_bar.hidden = true
-			this.vis.bans = F_ALL
-			this.vis.flags = F_NONE
+			U.bans_add(this.vis, F_ALL)
+			U.flags_remove(this.vis, this.vis.flags)
 
 			U.unblock_all(store, this)
 			SU.remove_modifiers(store, this)
@@ -6242,15 +6243,13 @@ function scripts.enemy_headless_horseman.update(this, store)
 				new_pos.x = new_pos.x + flip.last_dir * flip.walk_dist
 				this.motion.forced_waypoint = new_pos
 
-				local bans = this.vis.bans
-
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 
 				while SU.y_enemy_walk_step_default(store, this) do
 				-- block empty
 				end
 
-				this.vis.bans = bans
+				U.bans_remove(this.vis, F_ALL)
 			end
 
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
@@ -8367,11 +8366,9 @@ function scripts.aura_crab_invuln.update(this, store)
 
 	this.pos = hero.pos
 
-	local vis_bans = 0
 	local a = this.aura
 
-	vis_bans = hero.vis.bans
-	hero.vis.bans = bor(hero.vis.bans, F_STUN)
+	U.bans_add(hero.vis, F_STUN)
 	hero.invuln.active = true
 	-- hero.health.immune_to = F_ALL
 	this.tween.ts = store.tick_ts
@@ -8385,7 +8382,7 @@ function scripts.aura_crab_invuln.update(this, store)
 		coroutine.yield()
 	end
 
-	hero.vis.bans = vis_bans
+	U.bans_remove(hero.vis, F_STUN)
 	-- hero.health.immune_to = 0
 	hero.invuln.active = false
 	this.tween.ts = store.tick_ts - a.duration
@@ -8800,9 +8797,9 @@ function scripts.soldier_blade.update(this, store)
 	local brk, sta
 	local bda = this.timed_attacks.list[1]
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	while true do
@@ -9006,9 +9003,9 @@ function scripts.soldier_forest.update(this, store)
 	local pow_c = this.powers.circle
 	local pow_e = this.powers.eerie
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	while true do
@@ -9221,9 +9218,9 @@ function scripts.soldier_druid_bear.update(this, store)
 		end
 	end
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	this.health_bar.hidden = true
@@ -9342,9 +9339,9 @@ function scripts.soldier_drow.update(this, store)
 	local brk, sta
 	local aura = this.render.sprites[2]
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	while true do
@@ -9870,7 +9867,7 @@ function scripts.enemy_hyena.update(this, store)
 
 					coward_ts = store.tick_ts
 					coward = true
-					this.vis.bans = F_BLOCK
+					U.bans_add(this.vis, F_BLOCK)
 
 					U.speed_mul(this, this.coward_speed_factor)
 
@@ -9879,7 +9876,7 @@ function scripts.enemy_hyena.update(this, store)
 				end
 			elseif store.tick_ts - coward_ts > this.coward_duration then
 				coward = false
-				this.vis.bans = 0
+				U.bans_remove(this.vis, F_BLOCK)
 
 				U.speed_div(this, this.coward_speed_factor)
 
@@ -10066,9 +10063,7 @@ function scripts.enemy_twilight_elf_harasser.update(this, store)
 
 				U.unblock_all(store, this)
 
-				local bans = this.vis.bans
-
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 
 				SU.hide_modifiers(store, this, true)
 				SU.hide_auras(store, this, true)
@@ -10082,8 +10077,7 @@ function scripts.enemy_twilight_elf_harasser.update(this, store)
 
 				U.y_animation_play(this, "jumpIn", nil, store.tick_ts)
 
-				this.vis.bans = bans
-				this.vis._bans = nil
+				U.bans_remove(this.vis, F_ALL)
 
 				SU.show_modifiers(store, this, true)
 				SU.show_auras(store, this, true)
@@ -10216,10 +10210,8 @@ function scripts.enemy_catapult.update(this, store)
 		if phase == 1 or phase == 3 then
 			U.unblock_all(store, this)
 
-			local bans = this.vis.bans
-
 			this.health_bar.hidden = true
-			this.vis.bans = F_ALL
+			U.bans_add(this.vis, F_ALL)
 			this.nav_path.dir = phase == 1 and 1 or -1
 
 			local stop_ni = phase == 1 and this.stop_ni or nil
@@ -10245,7 +10237,7 @@ function scripts.enemy_catapult.update(this, store)
 			end
 
 			this.health_bar.hidden = false
-			this.vis.bans = bans
+			U.bans_remove(this.vis, F_ALL)
 			phase = phase + 1
 		end
 
@@ -10266,7 +10258,8 @@ function scripts.enemy_bandersnatch.update(this, store)
 	local ta = this.timed_attacks.list[1]
 
 	ta.ts = store.tick_ts
-	this.vis.bans = this.vis.bans_rolling
+	U.bans_add(this.vis, band(this.vis.bans_rolling, bnot(this.vis.bans_standing)))
+	U.bans_remove(this.vis, band(this.vis.bans_standing, bnot(this.vis.bans_rolling)))
 
 	local function ready_to_spines()
 		return enemy_ready_to_magic_attack(this, store, ta)
@@ -10316,7 +10309,8 @@ function scripts.enemy_bandersnatch.update(this, store)
 			U.cleanup_blockers(store, this)
 
 			if not rolling and not U.get_blocker(store, this) then
-				this.vis.bans = this.vis.bans_rolling
+				U.bans_add(this.vis, band(this.vis.bans_rolling, bnot(this.vis.bans_standing)))
+				U.bans_remove(this.vis, band(this.vis.bans_standing, bnot(this.vis.bans_rolling)))
 
 				SU.remove_modifiers(store, this)
 				U.y_animation_play(this, "idle2ball", nil, store.tick_ts)
@@ -10337,7 +10331,8 @@ function scripts.enemy_bandersnatch.update(this, store)
 
 						U.y_animation_play(this, an, af, store.tick_ts)
 
-						this.vis.bans = this.vis.bans_standing
+						U.bans_add(this.vis, band(this.vis.bans_standing, bnot(this.vis.bans_rolling)))
+						U.bans_remove(this.vis, band(this.vis.bans_rolling, bnot(this.vis.bans_standing)))
 						rolling = false
 					end
 
@@ -10686,7 +10681,7 @@ function scripts.enemy_twilight_avenger.update(this, store)
 				if targets then
 					local target = targets[1]
 
-					target.vis.flags = bor(target.vis.flags, F_DARK_ELF)
+					U.flags_add(target.vis, F_DARK_ELF)
 					a.ts = store.tick_ts
 
 					U.animation_start_default(this, a.animation, nil, store.tick_ts, false)
@@ -11050,7 +11045,7 @@ function scripts.enemy_zealot.update(this, store)
 			SU.y_enemy_stun(store, this)
 		elseif ready_to_summon() then
 			this.is_summoning = true
-			this.vis.bans = bor(this.vis.bans, F_STUN, F_FREEZE, F_TELEPORT)
+			U.bans_add(this.vis, bor(F_STUN, F_FREEZE, F_TELEPORT))
 			this.rune.tween.disabled = nil
 			this.rune.tween.reverse = false
 			this.rune.tween.ts = store.tick_ts
@@ -11470,8 +11465,8 @@ function scripts.enemy_mantaray.update(this, store)
 					end
 
 					this.unit.ignore_stun = true
-					this.vis.bans = U.flag_set(this.vis.bans, bor(F_BLOCK, F_TELEPORT))
-					this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
+					U.bans_add(this.vis, bor(F_BLOCK, F_TELEPORT))
+					U.flags_remove(this.vis, F_FLYING)
 
 					SU.stun_inc(blocker)
 
@@ -11590,8 +11585,8 @@ function scripts.enemy_mantaray.update(this, store)
 					end
 
 					this.unit.ignore_stun = nil
-					this.vis.bans = U.flag_clear(this.vis.bans, bor(F_BLOCK, F_TELEPORT))
-					this.vis.flags = U.flag_set(this.vis.flags, F_FLYING)
+					U.bans_remove(this.vis, bor(F_BLOCK, F_TELEPORT))
+					U.flags_add(this.vis, F_FLYING)
 					this.health_bar.hidden = false
 					this.unit.mod_offset = this.unit.mod_offset_fly
 					this.unit.hit_offset = this.unit.hit_offset_fly
@@ -11608,8 +11603,8 @@ function scripts.enemy_mantaray.remove(this, store)
 		SU.stun_dec(this._hugging)
 
 		this._hugging = nil
-		this.vis.bans = U.flag_clear(this.vis.bans, bor(F_STUN, F_BLOCK, F_TELEPORT))
-		this.vis.flags = U.flag_set(this.vis.flags, F_FLYING)
+		U.bans_remove(this.vis, bor(F_STUN, F_BLOCK, F_TELEPORT))
+		U.flags_add(this.vis, F_FLYING)
 		this.health_bar.hidden = false
 		this.unit.mod_offset = this.unit.mod_offset_fly
 		this.unit.hit_offset = this.unit.hit_offset_fly
@@ -11673,7 +11668,7 @@ function scripts.enemy_razorboar.update(this, store)
 
 						simulation:queue_insert_entity(ms)
 
-						this.vis.bans = U.flag_set(this.vis.bans, F_BLOCK)
+						U.bans_add(this.vis, F_BLOCK)
 
 						S:queue(a.sound)
 
@@ -11728,7 +11723,7 @@ function scripts.enemy_razorboar.update(this, store)
 						end
 
 						ps.particle_system.emit = false
-						this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
+						U.bans_remove(this.vis, F_BLOCK)
 					end
 				end
 			end
@@ -14680,7 +14675,7 @@ function scripts.mod_bravebark_branchball.insert(this, store)
 		return false
 	end
 
-	target.vis.bans = F_ALL
+	U.bans_add(target.vis, F_ALL)
 
 	SU.stun_inc(target)
 	return true
@@ -14804,7 +14799,7 @@ function scripts.mod_rag_raggified.update(this, store)
 		return
 	end
 
-	target.vis.bans = U.flag_set(target.vis.bans, F_RAGGIFY)
+	U.bans_add(target.vis, F_RAGGIFY)
 
 	add_fx(target, target.pos)
 	SU.remove_modifiers(store, target, nil, "mod_rag_raggified")
@@ -14875,7 +14870,7 @@ function scripts.mod_rag_raggified.update(this, store)
 			target.count_group.in_limbo = nil
 		end
 
-		target.vis.bans = U.flag_clear(target.vis.bans, F_RAGGIFY)
+		U.bans_remove(target.vis, F_RAGGIFY)
 
 		simulation:queue_insert_entity(target)
 	else
@@ -15161,7 +15156,7 @@ function scripts.mod_twilight_avenger_last_service.remove(this, store)
 	end
 
 	if not target.health.dead then
-		target.vis.flags = band(target.vis.flags, bnot(F_DARK_ELF))
+		U.flags_remove(target.vis, F_DARK_ELF)
 	else
 		local targets = table.filter(store.entities, function(k, v)
 			return not v.pending_removal and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.explode_vis_bans) == 0 and band(v.vis.bans, this.explode_vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.explode_range) and not table.contains(this.explode_excluded_templates, v.template_name)
@@ -15388,7 +15383,7 @@ function scripts.mod_twilight_heretic_servant.update(this, store)
 
 	m.ts = store.tick_ts
 	dps.ts = store.tick_ts - dps.damage_every
-	target.vis.flags = U.flag_set(target.vis.flags, F_SERVANT)
+	U.flags_add(target.vis, F_SERVANT)
 
 	U.animation_start_default(this, "start", nil, store.tick_ts, false)
 
@@ -15417,7 +15412,7 @@ function scripts.mod_twilight_heretic_servant.update(this, store)
 	end
 
 	if target then
-		target.vis.flags = U.flag_clear(target.vis.flags, F_SERVANT)
+		U.flags_remove(target.vis, F_SERVANT)
 	end
 
 	this.tween.disabled = nil
@@ -15609,9 +15604,7 @@ function scripts.mod_bloodsydian_warlock.update(this, store)
 
 	SU.stun_inc(target)
 
-	local _vis_bans = target.vis.bans
-
-	target.vis.bans = bor(F_MOD, F_TELEPORT, F_RANGED)
+	U.bans_add(target.vis, bor(F_MOD, F_TELEPORT, F_RANGED))
 	target.health.ignore_damage = true
 	target.ui.can_select = false
 
@@ -15628,7 +15621,7 @@ function scripts.mod_bloodsydian_warlock.update(this, store)
 	end)
 	U.sprites_show(target, nil, nil, true)
 
-	target.vis.bans = _vis_bans
+	U.bans_remove(target.vis, bor(F_MOD, F_TELEPORT, F_RANGED))
 	target.health.ignore_damage = false
 
 	if this.modifier.kill then
@@ -16121,9 +16114,9 @@ scripts.soldier_ewok = {}
 function scripts.soldier_ewok.update(this, store)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	while true do
@@ -16992,8 +16985,8 @@ function scripts.soldier_baby_ashbite.insert(this, store)
 		end
 	end
 
-	this.vis._bans = this.vis.bans
-	this.vis.bans = F_ALL
+	U.bans_add(this.vis, F_ALL)
+	this.vis._bans_added = true
 
 	return true
 end
@@ -17001,9 +16994,9 @@ end
 function scripts.soldier_baby_ashbite.update(this, store)
 	local brk, sta
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	this.render.sprites[1].z = Z_BULLETS
@@ -19766,8 +19759,8 @@ function scripts.enemy_stage_11_cult_leader_illusion.update(this, store)
 		end
 	end
 
-	this.vis._bans = this.vis.bans
-	this.vis.bans = F_ALL
+	U.bans_add(this.vis, F_ALL)
+	this._bans_added = true
 
 	local fx = E:create_entity(this.fx_spawn)
 
@@ -19787,7 +19780,8 @@ function scripts.enemy_stage_11_cult_leader_illusion.update(this, store)
 	else
 		S:queue(this.sound_spawn)
 
-		this.vis.bans = this.vis._bans
+		U.bans_remove(this.vis, F_ALL)
+		this._bans_added = nil
 		this.render.sprites[1].hidden = false
 
 		U.y_animation_play(this, "spawn", nil, store.tick_ts)
@@ -21813,7 +21807,7 @@ function scripts.soldier_reinforcement_stage_15_denas.update(this, store)
 				S:queue(this.sound_events.change_rally_point)
 			end
 
-			this.vis.bans = F_ALL
+			U.bans_add(this.vis, F_ALL)
 			this.health.immune_to = r.immune_to
 
 			return SU.y_hero_walk_waypoints(store, this)
@@ -21907,20 +21901,19 @@ function scripts.soldier_reinforcement_stage_15_denas.update(this, store)
 					U.y_animation_play(this, "sword_out", nil, store.tick_ts, 1)
 				end
 
-				local vis_bans = this.vis.bans
 				local prev_immune = this.health.immune_to
 
 				if y_denas_new_rally(store, this) and SU.soldier_pick_melee_target(store, this) then
 					U.y_animation_play(this, "sword_in", nil, store.tick_ts, 1)
 					U.animation_start_default(this, "idle_a", nil, store.tick_ts, true)
 
-					this.vis.bans = vis_bans
+					U.bans_remove(this.vis, F_ALL)
 					this.health.immune_to = prev_immune
 
 					goto label_1262_0
 				end
 
-				this.vis.bans = vis_bans
+				U.bans_remove(this.vis, F_ALL)
 				this.health.immune_to = prev_immune
 			end
 
@@ -22369,7 +22362,7 @@ function scripts.enemy_cutthroat_rat.update(this, store)
 
 				U.unblock_all(store, this)
 
-				this.vis.bans = bor(F_BLOCK, F_RANGED)
+				U.bans_add(this.vis, bor(F_BLOCK, F_RANGED))
 				this.render.sprites[1].alpha = 40
 
 				local invis_ts = store.tick_ts
@@ -22379,7 +22372,7 @@ function scripts.enemy_cutthroat_rat.update(this, store)
 				end
 
 				this.render.sprites[1].alpha = 255
-				this.vis.bans = 0
+				U.bans_remove(this.vis, bor(F_BLOCK, F_RANGED))
 			end
 
 			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_fn, break_fn) then
@@ -22527,7 +22520,7 @@ end
 scripts.enemy_hyena5 = {}
 
 function scripts.enemy_hyena5.update(this, store)
-	this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
+	U.bans_remove(this.vis, F_BLOCK)
 
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
@@ -22591,7 +22584,7 @@ function scripts.enemy_hyena5.update(this, store)
 
 					U.unblock_all(store, this)
 
-					this.vis.bans = bor(this.vis.bans, F_BLOCK)
+					U.bans_add(this.vis, F_BLOCK)
 					this.motion.forced_waypoint = V.v(target.pos.x, target.pos.y)
 
 					while SU.y_enemy_walk_step_default(store, this) do
@@ -22604,7 +22597,7 @@ function scripts.enemy_hyena5.update(this, store)
 						end
 					end
 
-					this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
+					U.bans_remove(this.vis, F_BLOCK)
 
 					do
 						local start_ts = store.tick_ts
@@ -22642,7 +22635,7 @@ function scripts.enemy_hyena5.update(this, store)
 
 					::label_43_1::
 
-					this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
+					U.bans_remove(this.vis, F_BLOCK)
 					this.motion.forced_waypoint = nil
 
 					for _, mod_id in ipairs(this.feast.mods) do
@@ -22752,7 +22745,7 @@ function scripts.enemy_acolyte.update(this, store)
 					this.unit.hide_after_death = false
 					this.sound_events.death = this.sound_death_no_spawn
 				else
-					this.vis.bans = bor(this.vis.bans, F_SKELETON)
+					U.bans_add(this.vis, F_SKELETON)
 					this.unit.death_animation = this.death_spawns.death_animation
 					this.health.delete_after = store.tick_ts + this.death_spawns.dead_lifetime
 					this.sound_events.death = this.sound_death_with_spawn
@@ -22864,8 +22857,8 @@ function scripts.enemy_acolyte_tentacle.update(this, store)
 	end
 
 	this.health_bar.hidden = true
-	this.vis.bans = F_ALL
-	this.vis.flags = F_NONE
+	U.bans_add(this.vis, F_ALL)
+	U.flags_remove(this.vis, this.vis.flags)
 
 	U.unblock_all(store, this)
 	SU.remove_modifiers(store, this)
@@ -23172,7 +23165,7 @@ function scripts.enemy_small_stalker.update(this, store)
 		else
 			if this.skill_teleport.active then
 				this.health_bar.hidden = true
-				this.vis.bans = U.flag_set(this.vis.bans, F_RANGED)
+				U.bans_add(this.vis, F_RANGED)
 
 				S:queue(this.skill_teleport.sound)
 				U.animation_start_default(this, "teleport_in", nil, store.tick_ts, false)
@@ -23200,7 +23193,7 @@ function scripts.enemy_small_stalker.update(this, store)
 				U.animation_start_default(this, "teleport_out", nil, store.tick_ts, false)
 
 				animation = "teleport_out"
-				this.vis.bans = U.flag_clear(this.vis.bans, F_RANGED)
+				U.bans_remove(this.vis, F_RANGED)
 				this.skill_teleport.ts = store.tick_ts
 				this.skill_teleport.active = nil
 			end
@@ -23220,7 +23213,7 @@ function scripts.enemy_small_stalker.update(this, store)
 			if animation == "teleport_out" and this.render.sprites[1].runs > 0 then
 				animation = "walk"
 				this.health_bar.hidden = false
-				this.vis.bans = U.flag_clear(this.vis.bans, F_RANGED)
+				U.bans_remove(this.vis, F_RANGED)
 			end
 		end
 	end
@@ -23345,7 +23338,7 @@ function scripts.mod_enemy_unblinded_abomination_eat.insert(this, store)
 		return false
 	end
 
-	target.vis.bans = F_ALL
+	U.bans_add(target.vis, F_ALL)
 
 	SU.stun_inc(target)
 
@@ -23537,7 +23530,7 @@ function scripts.enemy_unblinded_shackler.update(this, store)
 					U.animation_start_default(this, an, af, store.tick_ts, true)
 
 					is_shackling = true
-					this.vis.bans = this.vis.bans_on_shackles
+					U.bans_add(this.vis, this.vis.bans_on_shackles)
 				end
 			end
 
@@ -23752,8 +23745,8 @@ scripts.enemy_crystal_golem = {}
 
 function scripts.enemy_crystal_golem.update(this, store)
 	if this.start_as_rock then
-		this.vis._bans = this.vis.bans
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
+		this._bans_added = true
 		this.motion._max_speed = this.motion.max_speed
 		this.motion.max_speed = 0
 		this.ui.can_click = false
@@ -23787,7 +23780,8 @@ function scripts.enemy_crystal_golem.update(this, store)
 
 				holder.ui.can_click = true
 				this.health.dead = false
-				this.vis.bans = this.vis._bans
+				U.bans_remove(this.vis, F_ALL)
+				this._bans_added = nil
 				this.ui.can_click = true
 				this.health_bar.hidden = false
 				break
@@ -24491,9 +24485,7 @@ function scripts.enemy_evolving_scourge.update(this, store)
 					this.health.hp = this.health.hp_max * current_hp_ptg
 					this.health_bar.alpha = 0
 
-					local old_bans = this.vis.bans
-
-					this.vis.bans = bor(F_ALL)
+					U.bans_add(this.vis, F_ALL)
 
 					S:queue(this.sound_events.evolve)
 
@@ -24520,7 +24512,7 @@ function scripts.enemy_evolving_scourge.update(this, store)
 
 					U.unblock_all(store, this)
 
-					this.vis.bans = old_bans
+					U.bans_remove(this.vis, F_ALL)
 
 					if this.current_phase == 2 then
 						this.melee.attacks[1].disabled = true
@@ -24531,8 +24523,8 @@ function scripts.enemy_evolving_scourge.update(this, store)
 						this.melee.attacks[4].ts = store.tick_ts
 					else
 						this.render.sprites[2].hidden = false
-						this.vis.flags = bor(F_ENEMY, F_FLYING)
-						this.vis.bans = bor(F_BLOCK)
+						U.flags_add(this.vis, bor(F_ENEMY, F_FLYING))
+						U.bans_add(this.vis, F_BLOCK)
 
 						for k, v in pairs(this.melee.attacks) do
 							v.disabled = true
@@ -24567,7 +24559,7 @@ function scripts.mod_enemy_evolving_scourge_eat.insert(this, store)
 		return false
 	end
 
-	target.vis.bans = F_ALL
+	U.bans_add(target.vis, F_ALL)
 
 	SU.stun_inc(target)
 	return true
@@ -24850,7 +24842,7 @@ function scripts.enemy_specter.update(this, store)
 					local c = this.corruption_target
 
 					this.motion.forced_waypoint = c.pos
-					this.vis.bans = bor(this.vis.bans, F_BLOCK)
+					U.bans_add(this.vis, F_BLOCK)
 
 					while SU.y_enemy_walk_step_default(store, this) do
 						if corruption_break_fn() then
@@ -26768,7 +26760,7 @@ function scripts.enemy_crocs_tank.update(this, store)
 		else
 			if this._placed_from_tunnel then
 				this._placed_from_tunnel = nil
-				this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
+				U.bans_remove(this.vis, F_BLOCK)
 
 				if this.on_charge then
 					a.ts = store.tick_ts - this.elapsed_time
@@ -26798,7 +26790,7 @@ function scripts.enemy_crocs_tank.update(this, store)
 					end
 
 					this.on_charge = true
-					this.vis.bans = U.flag_set(this.vis.bans, F_BLOCK)
+					U.bans_add(this.vis, F_BLOCK)
 
 					local ps
 
@@ -26843,7 +26835,7 @@ function scripts.enemy_crocs_tank.update(this, store)
 
 					U.y_animation_play(this, a.animation_end, nil, store.tick_ts, 1)
 
-					this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
+					U.bans_remove(this.vis, F_BLOCK)
 					this.on_charge = false
 
 					goto label_175_0
@@ -27184,8 +27176,8 @@ function scripts.enemy_crocs_hydra.on_damage(this, store, damage)
 		if this.health.hp - pd <= 0 then
 			this.transform_hydra = true
 			this.health.hp = 1
-			this.vis.bans = U.flag_set(this.vis.bans, F_RANGED)
-			this.vis.bans = U.flag_set(this.vis.bans, F_BLOCK)
+			U.bans_add(this.vis, F_RANGED)
+			U.bans_add(this.vis, F_BLOCK)
 
 			return false
 		end
@@ -27527,8 +27519,8 @@ function scripts.enemy_crocs_hydra.update(this, store)
 			this.health.dead = false
 			this.health_bar.hidden = false
 			this.ui.can_click = true
-			this.vis.bans = U.flag_clear(this.vis.bans, F_RANGED)
-			this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
+			U.bans_remove(this.vis, F_RANGED)
+			U.bans_remove(this.vis, F_BLOCK)
 			this.transform_hydra = false
 			this.transformed_hydra = true
 		end
@@ -27745,7 +27737,7 @@ function scripts.stage20_arborean_house.update(this, store)
 		this.health.hp = 0
 		this.health.dead = true
 		this.health.death_finished_ts = store.tick_ts
-		this.vis.flags = 0
+		U.flags_remove(this.vis, this.vis.flags)
 		this.render.sprites[1].name = "idle" .. #this.life_thresholds + 1
 	end
 
@@ -29131,7 +29123,7 @@ function scripts.enemy_machinist.update(this, store)
 		SU.remove_modifiers(store, this)
 		U.unblock_all(store, this)
 
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
 		this.health_bar.hidden = true
 		this.ui.can_click = false
 	end
@@ -29172,7 +29164,7 @@ function scripts.enemy_machinist.update(this, store)
 	end
 
 	if this.bossfight then
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
 		this.health_bar.hidden = true
 		this.ui.can_click = false
 	end
@@ -30653,8 +30645,8 @@ function scripts.enemy_darksteel_guardian.update(this, store)
 	end
 
 	if this.start_asleep then
-		this.vis._bans = this.vis.bans
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
+		this._bans_added = true
 		this.motion._max_speed = this.motion.max_speed
 		this.motion.max_speed = 0
 		this.ui.can_click = false
@@ -30681,7 +30673,8 @@ function scripts.enemy_darksteel_guardian.update(this, store)
 
 		U.update_max_speed(this, this.motion._max_speed)
 		this.health.dead = false
-		this.vis.bans = this.vis._bans
+		U.bans_remove(this.vis, F_ALL)
+		this._bans_added = nil
 		this.ui.can_click = true
 		this.health_bar.hidden = false
 		this.health.immune_to = this.health._immune_to
@@ -31086,13 +31079,13 @@ function scripts.enemy_darksteel_hulk.update(this, store)
 				end
 
 				U.update_max_speed(this, this.base_speed)
-				this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
+				U.bans_remove(this.vis, F_BLOCK)
 			end
 
 			if ready_to_charge() then
 				a.ts = store.tick_ts
 				U.speed_mul_self(this, a.speed_mult)
-				this.vis.bans = U.flag_set(this.vis.bans, F_BLOCK)
+				U.bans_add(this.vis, F_BLOCK)
 				ps_a = E:create_entity(a.particles_name_a)
 				ps_a.particle_system.track_id = this.id
 
@@ -31161,7 +31154,7 @@ function scripts.enemy_darksteel_hulk.update(this, store)
 				ps_a.particle_system.emit = false
 				ps_b.particle_system.emit = false
 				U.speed_div_self(this, a.speed_mult)
-				this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
+				U.bans_remove(this.vis, F_BLOCK)
 			end
 
 			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_fn, break_fn) then
@@ -31619,7 +31612,9 @@ function scripts.enemy_ballooning_spider.update(this, store)
 			SU.y_enemy_stun(store, this)
 		else
 			if can_takeoff() then
-				this.vis.bans = bor(F_BLOCK, F_MOD)
+				local _old_bans = this.vis.bans
+				U.bans_add(this.vis, band(bor(F_BLOCK, F_MOD), bnot(_old_bans)))
+				U.bans_remove(this.vis, band(_old_bans, bnot(bor(F_BLOCK, F_MOD))))
 
 				change_motion_speed(this.takeoff.max_speed)
 
@@ -31670,7 +31665,7 @@ function scripts.enemy_ballooning_spider.update(this, store)
 
 						U.animation_start_default(this, an, af, store.tick_ts, true)
 
-						this.vis.flags = U.flag_set(this.vis.flags, F_FLYING)
+						U.flags_add(this.vis, F_FLYING)
 					end
 
 					local elapsed_time = store.tick_ts - start_ts
@@ -31691,7 +31686,9 @@ function scripts.enemy_ballooning_spider.update(this, store)
 					end
 				end
 
-				this.vis.bans = bor(F_BLOCK)
+				local _old_bans = this.vis.bans
+				U.bans_add(this.vis, band(bor(F_BLOCK), bnot(_old_bans)))
+				U.bans_remove(this.vis, band(_old_bans, bnot(bor(F_BLOCK))))
 
 				set_flying_vars()
 			end
@@ -31867,7 +31864,9 @@ function scripts.enemy_glarebrood_crystal.update(this, store)
 		end
 
 		if store.tick_ts - start_ts > this.transform_time then
-			this.vis.bans = bor(F_AREA, F_MOD)
+			local _old_bans = this.vis.bans
+			U.bans_add(this.vis, band(bor(F_AREA, F_MOD), bnot(_old_bans)))
+			U.bans_remove(this.vis, band(_old_bans, bnot(bor(F_AREA, F_MOD))))
 			this._blazing_deselect = true
 
 			U.y_animation_play(this, this.transform_anim, nil, store.tick_ts)
@@ -32563,7 +32562,8 @@ function scripts.enemy_nine_tailed_fox.update(this, store)
 	local function tp_power()
 		local tp_trail, an, af, soldiers, fx
 
-		this._teleport_pushed_bans = U.push_bans(this.vis, F_TELEPORT) --U.push_bans(this.vis, F_ALL)
+		this._teleport_pushed_bans = true
+		U.bans_add(this.vis, F_TELEPORT)
 
 		local target_ni = this.nav_path.ni + a_tp.nodes_min + (a_tp.nodes_max - a_tp.nodes_min) * math.random()
 
@@ -32661,7 +32661,7 @@ function scripts.enemy_nine_tailed_fox.update(this, store)
 		end
 
 		if this._teleport_pushed_bans then
-			U.pop_bans(this.vis, this._teleport_pushed_bans)
+			U.bans_remove(this.vis, F_TELEPORT)
 
 			this._teleport_pushed_bans = nil
 		end
@@ -32843,7 +32843,8 @@ function scripts.enemy_storm_spirit.update(this, store)
 				local nodes_to_jump = math.floor(this.jump_ahead.min_nodes + (this.jump_ahead.max_nodes - this.jump_ahead.min_nodes) * math.random())
 				local target_node = this.nav_path.ni + nodes_to_jump
 
-				this._jump_pushed_bans = U.push_bans(this.vis, F_ALL)
+				this._jump_pushed_bans = true
+				U.bans_add(this.vis, F_ALL)
 
 				SU.remove_auras(store, this)
 				SU.remove_modifiers(store, this)
@@ -32894,7 +32895,7 @@ function scripts.enemy_storm_spirit.update(this, store)
 				U.y_wait_unconditional(store, fts(2))
 
 				if this._jump_pushed_bans then
-					U.pop_bans(this.vis, this._jump_pushed_bans)
+					U.bans_remove(this.vis, F_ALL)
 				end
 
 				did_jump_ahead = true
@@ -32909,7 +32910,8 @@ scripts.enemy_water_spirit = {}
 
 function scripts.enemy_water_spirit.insert(this, store)
 	if not this.skip_spawn_anim then
-		this._pushed_bans = U.push_bans(this.vis, F_ALL)
+		this._pushed_bans = true
+		U.bans_add(this.vis, F_ALL)
 		this.ui.can_click = false
 	end
 
@@ -33065,7 +33067,7 @@ function scripts.enemy_water_spirit.update(this, store)
 		U.y_animation_play(this, anim_land, af, store.tick_ts, 1)
 
 		if this._pushed_bans then
-			U.pop_bans(this.vis, this._pushed_bans)
+			U.bans_remove(this.vis, F_ALL)
 
 			this._pushed_bans = nil
 		end
@@ -34860,7 +34862,7 @@ function scripts.enemy_citizen.insert(this, store)
 
 		spawn_scale.unit_id = this.id
 
-		spawn_scale:push_and_pop_bans(store, F_ALL)
+		spawn_scale:add_tracked_bans(store, F_ALL)
 		simulation:queue_insert_entity(spawn_scale)
 	end
 
@@ -34869,14 +34871,15 @@ end
 
 scripts.generic_unit_spawn_scale = {}
 
-function scripts.generic_unit_spawn_scale.push_and_pop_bans(this, store, bans)
+function scripts.generic_unit_spawn_scale.add_tracked_bans(this, store, bans)
 	local unit = store.entities[this.unit_id]
 
 	if not unit then
 		return
 	end
 
-	this._pushed_bans = U.push_bans(unit.vis, bans)
+	U.bans_add(unit.vis, bans)
+	this._pushed_bans = bans
 end
 
 function scripts.generic_unit_spawn_scale.update(this, store)
@@ -34919,7 +34922,7 @@ function scripts.generic_unit_spawn_scale.update(this, store)
 	unit.render.scale = V.vv(1)
 
 	if this._pushed_bans then
-		U.pop_bans(unit.vis, this._pushed_bans)
+		U.bans_remove(unit.vis, this._pushed_bans)
 
 		this._pushed_bans = nil
 	end
@@ -35079,7 +35082,8 @@ scripts.enemy_golden_eyed = {}
 
 function scripts.enemy_golden_eyed.insert(this, store)
 	if this.do_jump_anim then
-		this._pushed_bans = U.push_bans(this.vis, F_ALL)
+		this._pushed_bans = true
+		U.bans_add(this.vis, F_ALL)
 		this.ui.can_click = false
 	end
 
@@ -35264,7 +35268,7 @@ function scripts.enemy_golden_eyed.update(this, store)
 		U.y_animation_play(this, anim_land, af_land, store.tick_ts, 1)
 
 		if this._pushed_bans then
-			U.pop_bans(this.vis, this._pushed_bans)
+			U.bans_remove(this.vis, F_ALL)
 
 			this._pushed_bans = nil
 		end
@@ -36542,7 +36546,8 @@ function scripts.mod_boss_princess_iron_fan_stun_heroes.insert(this, store)
 		simulation:queue_insert_entity(fx)
 	end
 
-	this.pushed_bans = U.push_bans(target.vis, F_ALL)
+	this.pushed_bans = true
+	U.bans_add(target.vis, F_ALL)
 
 	U.unblock_target(store, target)
 	SU.hide_modifiers(store, target, true, this)
@@ -36698,7 +36703,7 @@ function scripts.mod_boss_princess_iron_fan_stun_heroes.remove(this, store)
 	end
 
 	if this.pushed_bans then
-		U.pop_bans(target.vis, this.pushed_bans)
+		U.bans_remove(target.vis, F_ALL)
 
 		this.pushed_bans = nil
 	end
@@ -36714,7 +36719,8 @@ function scripts.mod_boss_princess_iron_fan_death.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
-	this.pushed_bans = U.push_bans(target.vis, F_ALL)
+	this.pushed_bans = true
+	U.bans_add(target.vis, F_ALL)
 
 	U.unblock_all(store, target)
 	SU.hide_modifiers(store, target, true, this)
@@ -36875,7 +36881,7 @@ function scripts.boss_princess_iron_fan_tower_debuff.update(this, store)
 			spawn_scale.unit_id = e.id
 			spawn_scale.scale_start_delay = 1.8
 
-			spawn_scale:push_and_pop_bans(store, F_ALL)
+			spawn_scale:add_tracked_bans(store, F_ALL)
 			simulation:queue_insert_entity(spawn_scale)
 		end
 
@@ -36985,7 +36991,8 @@ function scripts.boss_princess_iron_fan.insert(this, store)
 	end
 
 	if this.template_name ~= "boss_princess_iron_fan_clone" then
-		this._pushed_bans = U.push_bans(this.vis, F_ALL)
+		this._pushed_bans = true
+		U.bans_add(this.vis, F_ALL)
 	end
 
 	return true
@@ -37478,7 +37485,7 @@ function scripts.boss_princess_iron_fan.update(this, store)
 				skip_run_melee_ranged = false
 
 				if this._pushed_bans then
-					U.pop_bans(this.vis, this._pushed_bans)
+					U.bans_remove(this.vis, F_ALL)
 
 					this._pushed_bans = nil
 				end
@@ -40218,18 +40225,20 @@ function scripts.controller_stage_40_boss.update(this, store)
 
 	local function ban_ranged_attacks()
 		for _, h in ipairs(this.hit_points) do
-			h._pushed_bans = U.push_bans(h.vis, F_RANGED)
+			h._pushed_bans = true
+			U.bans_add(h.vis, F_RANGED)
 		end
 
 		for _, h in ipairs(this.hit_points_feet) do
-			h._pushed_bans = U.push_bans(h.vis, F_RANGED)
+			h._pushed_bans = true
+			U.bans_add(h.vis, F_RANGED)
 		end
 	end
 
 	local function unban_ranged_attacks()
 		for _, h in ipairs(this.hit_points) do
 			if h._pushed_bans then
-				U.pop_bans(h.vis, h._pushed_bans)
+				U.bans_remove(h.vis, F_RANGED)
 
 				h._pushed_bans = nil
 			end
@@ -40237,7 +40246,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 
 		for _, h in ipairs(this.hit_points_feet) do
 			if h._pushed_bans then
-				U.pop_bans(h.vis, h._pushed_bans)
+				U.bans_remove(h.vis, F_RANGED)
 
 				h._pushed_bans = nil
 			end
@@ -41564,8 +41573,8 @@ end
 scripts.enemy_stage_40_boss_hit_point = {}
 
 function scripts.enemy_stage_40_boss_hit_point.update(this, store)
-	this.vis._bans = this.vis.bans
-	this.vis.bans = bit.bor(F_ALL)
+	U.bans_add(this.vis, F_ALL)
+	this._bans_added = true
 
 	while store.wave_group_number == 0 do
 		coroutine.yield()
@@ -41573,7 +41582,8 @@ function scripts.enemy_stage_40_boss_hit_point.update(this, store)
 
 	U.y_wait_unconditional(store, fts(60))
 
-	this.vis.bans = this.vis._bans
+	U.bans_remove(this.vis, F_ALL)
+	this._bans_added = nil
 
 	local boss = table.filter(store.entities, function(k, v)
 		return v.template_name == "controller_stage_40_boss"
@@ -41830,7 +41840,7 @@ function scripts.enemy_basic_lava.update(this, store, script)
 			SU.y_enemy_stun(store, this)
 		else
 			if ready_to_evolve() then
-				this.pushed_bans = U.push_bans(this.vis, F_ALL)
+				U.bans_add(this.vis, F_ALL)
 				this.health.ignore_damage = true
 
 				local an, af = U.animation_name_facing_point(this, this.transform_anim_in, picked_evolve_decal.pos)
@@ -41966,8 +41976,8 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 	end
 
 	local function adjust_flight_settings()
-		this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
-		this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
+		U.flags_remove(this.vis, F_FLYING)
+		U.bans_remove(this.vis, F_BLOCK)
 		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset.y - this.flight_height)
 		this.unit.hit_offset.y = this.unit.hit_offset.y - this.flight_height
 		this.unit.mod_offset.y = this.unit.mod_offset.y - this.flight_height
@@ -42695,7 +42705,7 @@ function scripts.enemy_basic_acid.update(this, store, script)
 					simulation:queue_remove_entity(sheep)
 				end
 
-				this.pushed_bans = U.push_bans(this.vis, F_ALL)
+				U.bans_add(this.vis, F_ALL)
 				this.health.ignore_damage = true
 
 				U.y_animation_play(this, this.transform_anim_in, af, store.tick_ts, false, 1, true)
@@ -43363,7 +43373,7 @@ function scripts.enemy_alfa_acid.update(this, store, script)
 						simulation:queue_insert_entity(m_mod)
 
 						enemy.has_sheep_waiting = enemy.has_sheep_waiting + 1
-						enemy.vis.bans = U.flag_set(enemy.vis.bans, F_BLOCK)
+						U.bans_add(enemy.vis, F_BLOCK)
 
 						local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
 
@@ -43590,7 +43600,7 @@ function scripts.enemy_alfa_acid_sheep.update(this, store, script)
 				this.target_id = enemy.id
 				target = store.entities[this.target_id]
 				target.has_sheep_waiting = target.has_sheep_waiting + 1
-				target.vis.bans = U.flag_set(target.vis.bans, F_BLOCK)
+				U.bans_add(target.vis, F_BLOCK)
 			end
 		end
 
@@ -43605,7 +43615,7 @@ function scripts.enemy_alfa_acid_sheep.update(this, store, script)
 		target.has_sheep_waiting = target.has_sheep_waiting - 1
 
 		if target.has_sheep_waiting == 0 then
-			target.vis.bans = U.flag_clear(target.vis.bans, F_BLOCK)
+			U.bans_remove(target.vis, F_BLOCK)
 		end
 	end
 
@@ -43976,7 +43986,7 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 
 				this.tween.ts = store.tick_ts
 				this.tween.disabled = false
-				this.pushed_bans = U.push_bans(this.vis, F_ALL)
+				U.bans_add(this.vis, F_ALL)
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
 				local decal = E:create_entity(this.evolve_decal)
@@ -44076,7 +44086,6 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 
 		U.bans_add(this.vis, this.shadow_vis_bans)
 		this.shadow_pushed_bans = true
-		-- this.shadow_pushed_bans = U.push_bans(this.vis, this.shadow_vis_bans)
 		this.render.sprites[1].angles.idle = table.deepclone(this.render.sprites[1].angles.walk_shadow)
 		this.render.sprites[1].angles.walk = table.deepclone(this.render.sprites[1].angles.walk_shadow)
 	end
@@ -44287,7 +44296,8 @@ function scripts.enemy_alfa_shadow.update(this, store, script)
 		end
 
 		local target_pos = P:node_pos(target_pi, target_spi, target_ni)
-		local pushed_bans = U.push_bans(this.vis, F_ALL)
+		U.bans_add(this.vis, F_ALL)
+		local pushed_bans = true
 
 		U.animation_start(this, evolve_tp.animation_in, target_pos.x < this.pos.x, store.tick_ts, false, 1, true)
 		U.y_wait_unconditional(store, evolve_tp.cast_time)
@@ -44391,7 +44401,7 @@ function scripts.enemy_alfa_shadow.update(this, store, script)
 		U.y_animation_wait_default(this)
 
 		if pushed_bans then
-			U.pop_bans(this.vis, pushed_bans)
+			U.bans_remove(this.vis, F_ALL)
 
 			pushed_bans = nil
 		end
@@ -45092,7 +45102,8 @@ function scripts.enemy_executioner_storm.update(this, store, script)
 		else
 			if can_instakill() then
 				a_instakill.ts = store.tick_ts
-				this.instakill_pushed_bans = U.push_bans(this.vis, bor(F_INSTAKILL, F_DISINTEGRATED, F_POLYMORPH, F_STUN, F_TELEPORT))
+				this.instakill_pushed_bans = bor(F_INSTAKILL, F_DISINTEGRATED, F_POLYMORPH, F_STUN, F_TELEPORT)
+				U.bans_add(this.vis, this.instakill_pushed_bans)
 				this.health.ignore_damage = true
 
 				if a_instakill.removes_charged_status then
@@ -45116,7 +45127,8 @@ function scripts.enemy_executioner_storm.update(this, store, script)
 
 				this.health.ignore_damage = nil
 
-				U.pop_bans(this.vis, this.instakill_pushed_bans)
+				U.bans_remove(this.vis, this.instakill_pushed_bans)
+				this.instakill_pushed_bans = nil
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 			end
 
@@ -46246,7 +46258,7 @@ function scripts.soldier_dragon_warden_charge.update(this, store, script)
 		U.y_wait_unconditional(store, this.balloon_duration)
 	end
 
-	this.vis.bans = 0
+	U.bans_remove(this.vis, this.vis.bans)
 
 	local goal = store.entities[this.goal_id]
 	local going_to_goal = false
@@ -47492,7 +47504,7 @@ function scripts.enemy_shadow_blades.update(this, store, script)
 				this.health_bar.alpha = 0
 				this.health.hp = this.health.hp_max
 				this.health.ignore_damage = true
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 				this.trigger_deselect = true
 
 				S:queue(this.smokebomb.sound)
@@ -48187,7 +48199,10 @@ function scripts.soldier_walk_to_objective.update(this, store)
 	local path_spi = 1
 	local target_pos = P:node_pos(this.path_id, path_spi, path_ni)
 
-	this.vis.bans = 0
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
+	end
 
 	local function do_step()
 		if V.veq(this.pos, target_pos) then
@@ -48505,9 +48520,9 @@ scripts.soldier_stage_208_templar_swordsman = {}
 function scripts.soldier_stage_208_templar_swordsman.update(this, store)
 	local path_ni = this.starting_ni
 
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
 	end
 
 	this.nav_rally.pos = P:node_pos(this.path_id, this.subpath_id, path_ni)

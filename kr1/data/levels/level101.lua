@@ -49,7 +49,8 @@ e._lastmaxspeed=e.motion.max_speed
 e.render.sprites[1].fps=0
 e.motion.max_speed=0
 e.un_freez_flags=e.vis.flags
-e.vis.flags=F_CUSTOM
+U.flags_remove(e.vis,e.un_freez_flags)
+U.flags_add(e.vis,F_CUSTOM)
 if e.ui then
 e.ui.can_click=false
 e.ui.can_select=false
@@ -62,7 +63,8 @@ for _,e in ipairs(enemies) do
 e.render.sprites[1].fps=e._lastfps
 e.motion.max_speed=e._lastmaxspeed
 if e.un_freez_flags then
-e.vis.flags=e.un_freez_flags
+U.flags_remove(e.vis,F_CUSTOM)
+U.flags_add(e.vis,e.un_freez_flags)
 end
 if e.ui then
 e.ui.can_click=true

@@ -18,7 +18,6 @@ local SH = require("klove.shader_db")
 local bit = require("bit")
 local band = bit.band
 local signal = require("lib.hump.signal")
-local log = require("lib.klua.log"):new("level116_templates")
 
 local function queue_damage(store, damage)
 	store.damage_queue[#store.damage_queue + 1] = damage
@@ -446,8 +445,8 @@ function enemy_overseer_hit_point.update(this, store)
 	this.nav_path.spi = path_spi
 	this.nav_path.ni = path_ni
 
-	this.vis._bans = this.vis.bans
-	this.vis.bans = bit.bor(F_ALL)
+	U.bans_add(this.vis, F_ALL)
+	this._bans_added = true
 
 	while store.wave_group_number == 0 do
 		coroutine.yield()
@@ -455,7 +454,8 @@ function enemy_overseer_hit_point.update(this, store)
 
 	U.y_wait_unconditional(store, fts(60))
 
-	this.vis.bans = this.vis._bans
+	U.bans_remove(this.vis, F_ALL)
+	this._bans_added = nil
 
 	local overseer = this.boss
 

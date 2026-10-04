@@ -21,7 +21,6 @@ local V = require("lib.klua.vector")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
-local bnot = bit.bnot
 
 require("i18n")
 
@@ -864,13 +863,12 @@ function SU.y_hero_new_rally(store, this)
 
 		if SU.hero_will_teleport(this, r.pos) then
 			local tp = this.teleport
-			local vis_bans = this.vis.bans
 
 			tp.pending = true
 
 			U.set_destination(this, r.pos)
 
-			this.vis.bans = F_ALL
+			U.bans_add(this.vis, F_ALL)
 			this.health.ignore_damage = true
 			this.health_bar.hidden = true
 			S:queue(tp.sound)
@@ -920,7 +918,7 @@ function SU.y_hero_new_rally(store, this)
 
 			tp.pending = false
 			this.health_bar.hidden = false
-			this.vis.bans = vis_bans
+			U.bans_remove(this.vis, F_ALL)
 			this.health.ignore_damage = false
 
 			return false
@@ -928,9 +926,8 @@ function SU.y_hero_new_rally(store, this)
 			local tr = this.transfer
 			local interrupt = false
 			local ps
-			local vis_bans = this.vis.bans
 
-			this.vis.bans = F_ALL
+			U.bans_add(this.vis, F_ALL)
 			this.health.ignore_damage = true
 			this.health_bar.hidden = true
 			local prev_scale
@@ -975,22 +972,21 @@ function SU.y_hero_new_rally(store, this)
 			end
 
 			this.health_bar.hidden = false
-			this.vis.bans = vis_bans
+			U.bans_remove(this.vis, F_ALL)
 			this.health.ignore_damage = false
 
 			return interrupt
 		else
-			local vis_bans = this.vis.bans
 			local prev_immune = this.health.immune_to
 
-			this.vis.bans = F_ALL
+			U.bans_add(this.vis, F_ALL)
 			this.health.immune_to = r.immune_to
 
 			local out = SU.y_hero_walk_waypoints(store, this)
 
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
-			this.vis.bans = vis_bans
+			U.bans_remove(this.vis, F_ALL)
 			this.health.immune_to = prev_immune
 
 			return out
@@ -1255,11 +1251,10 @@ end
 function SU.y_soldier_new_rally(store, this)
 	local r = this.nav_rally
 	local out = false
-	local vis_bans = this.vis.bans
 	local prev_immune = this.health.immune_to
 
 	this.health.immune_to = r.immune_to
-	this.vis.bans = F_ALL
+	U.bans_add(this.vis, F_ALL)
 
 	if r.new then
 		r.new = false
@@ -1291,7 +1286,7 @@ function SU.y_soldier_new_rally(store, this)
 		end
 	end
 
-	this.vis.bans = vis_bans
+	U.bans_remove(this.vis, F_ALL)
 	this.health.immune_to = prev_immune
 
 	return out
@@ -3192,9 +3187,8 @@ function SU.enemy_cliff_change(store, this)
 				c.fall_to_pos = V.v(this.pos.x, this.pos.y)
 			end
 
-			this.vis.flags = bor(this.vis.flags, F_CLIFF)
-			c._orig_vis_bans = this.vis.bans
-			this.vis.bans = bor(this.vis.bans, c.vis_bans)
+			U.flags_add(this.vis, F_CLIFF)
+			U.bans_add(this.vis, c.vis_bans)
 
 			U.speed_mul_self(this, c.speed_factor)
 
@@ -3216,11 +3210,10 @@ function SU.enemy_cliff_change(store, this)
 
 			U.change_health_bar_z_run_time(this.health_bar, Z_BACKGROUND_BETWEEN + 1)
 		elseif c.last_terrain_type == TERRAIN_CLIFF and terrain_type == TERRAIN_LAND then
-			this.vis.flags = band(this.vis.flags, bnot(F_CLIFF))
-			this.vis.bans = c._orig_vis_bans
+			U.flags_remove(this.vis, F_CLIFF)
+			U.bans_remove(this.vis, c.vis_bans)
 
 			U.speed_div_self(this, c.speed_factor)
-
 			this.health.dead_lifetime = 2
 
 			for i = 1, #this.render.sprites do
@@ -4689,17 +4682,16 @@ function SU.y_controable_new_rally(store, this)
 			S:queue(this.sound_events.change_rally_point)
 		end
 
-		local vis_bans = this.vis.bans
 		local prev_immune = this.health.immune_to
 
-		this.vis.bans = F_ALL
+		U.bans_add(this.vis, F_ALL)
 		this.health.immune_to = r.immune_to
 
 		local out = SU.y_hero_walk_waypoints(store, this)
 
 		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
-		this.vis.bans = vis_bans
+		U.bans_remove(this.vis, F_ALL)
 		this.health.immune_to = prev_immune
 
 		return out

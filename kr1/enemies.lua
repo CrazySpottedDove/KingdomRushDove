@@ -11427,7 +11427,7 @@ E:add_comps(tt, "main_script")
 tt.scale_down = 0.7
 tt.scale_duration = 0.6
 tt.scale_start_delay = 0.5
-tt.push_and_pop_bans = scripts.generic_unit_spawn_scale.push_and_pop_bans
+tt.add_tracked_bans = scripts.generic_unit_spawn_scale.add_tracked_bans
 tt.main_script.update = scripts.generic_unit_spawn_scale.update
 
 tt = E:register_t("enemy_terracota", "enemy")
