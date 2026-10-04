@@ -31412,9 +31412,10 @@ function scripts.tower_catapult.update(this, store)
 		end
 	end
 
+	-- 隐藏特性：不用转向时，投石车攻速加快
 	local function y_aim_anim(aa, dir)
 		if dir == 2 then
-			U.y_wait(store, this.rotation_time * this.tower.cooldown_factor)
+			ba.ts = ba.ts - this.rotation_time * this.tower.cooldown_factor
 		else
 			U.y_animation_play(this, get_anim_name(dir, aa, "in"), nil, store.tick_ts, 1, this.tower_sid)
 		end
@@ -31422,7 +31423,7 @@ function scripts.tower_catapult.update(this, store)
 
 	local function y_return_anim(aa, dir)
 		if dir == 2 then
-			U.y_wait(store, this.rotation_time * this.tower.cooldown_factor)
+			ba.ts = ba.ts - this.rotation_time * this.tower.cooldown_factor
 		else
 			U.y_animation_play(this, get_anim_name(dir, aa, "out"), nil, store.tick_ts, 1, this.tower_sid)
 		end
@@ -31494,7 +31495,7 @@ function scripts.tower_catapult.update(this, store)
 			return get_direction(future_pos) == dir
 		end
 
-		return U.find_foremost_enemy(store, tpos(this), 0, a.range, pred, aa.vis_flags, aa.vis_bans, dir_filter)
+		return U.find_foremost_enemy(store, tpos(this), 0, a.range * (predict and 1.1 or 1), pred, aa.vis_flags, aa.vis_bans, dir_filter)
 	end
 
 	local function can_shoot_ulti()
@@ -31512,7 +31513,6 @@ function scripts.tower_catapult.update(this, store)
 	end
 
 	ba.ts = store.tick_ts - ba.cooldown
-
 	::label_catapult_loop::
 
 	while true do
@@ -31535,9 +31535,8 @@ function scripts.tower_catapult.update(this, store)
 				if not trigger_enemy then
 					ba.ts = ba.ts + 0.1
 				else
-					local start_ts = store.tick_ts
-					next_attack.ts = start_ts
-					ba.ts = start_ts
+					next_attack.ts = store.tick_ts
+					ba.ts = store.tick_ts
 
 					local aim_pos = trigger_enemy.motion and P:predict_enemy_pos(trigger_enemy, this.rotation_time + next_attack.shoot_time + bft) or pred_pos
 					local dir = get_direction(aim_pos)
@@ -31555,7 +31554,7 @@ function scripts.tower_catapult.update(this, store)
 					y_return_anim(next_attack, dir)
 
 					if can_shoot_ulti() then
-						sua.ts = start_ts
+						sua.ts = store.tick_ts
 						U.animation_start(this, sua.animation, nil, store.tick_ts, false, 2)
 						U.y_wait_unconditional(store, sua.cast_time)
 
@@ -31607,7 +31606,7 @@ function scripts.tower_catapult.update(this, store)
 						b.bullet.damage_factor = this.tower.damage_factor
 
 						queue_insert(store, b)
-						U.y_animation_wait(this, 2)
+					-- 不等待 loader 动画
 					end
 				end
 			end
