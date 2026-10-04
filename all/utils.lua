@@ -2844,135 +2844,86 @@ function U.is_inside_square(o, half_x, half_y, r, p)
 	return false
 end
 
--- 根据标志位的引用计数表计算最终标志位
-local function gain_f(f_refs)
+-- 每一位（bit）对应的值，F_BITS[i] = 2^(i-1)
+local F_BITS = {}
+
+for i = 1, 32 do
+	F_BITS[i] = 2 ^ (i - 1)
+end
+
+-- 根据每一位的引用计数（净引用数 > 0 则置位）计算最终标志位
+local function gain_f(f_counts)
 	local new_f = F_NONE
 
-	for _, flag_pair in pairs(f_refs) do
-		if flag_pair[2] > 0 then
-			new_f = bor(new_f, flag_pair[1])
-		elseif flag_pair[2] < 0 then
-			new_f = band(new_f, bnot(flag_pair[1]))
+	for i = 1, 32 do
+		if f_counts[i] > 0 then
+			new_f = bor(new_f, F_BITS[i])
 		end
 	end
 
 	return new_f
 end
 
---- 为 vis.flags 添加引用计数标志位，并更新 vis.flags
----@param vis number
+--- 对 vis 的 flag_refs/ban_refs 逐位引用计数做增减，并回写最终值
+---@param vis table
+---@param ref_key string 逐位引用计数数组键名（"flag_refs" / "ban_refs"）
+---@param value_key string 目标值键名（"flags" / "bans"）
 ---@param mask number
-function U.flags_add(vis, mask)
-	local f_refs = vis.flag_refs
-
-	if not f_refs then
-		f_refs = {{vis.flags, 1}}
-		vis.flag_refs = f_refs
+---@param delta number 引用数增量（+1 添加 / -1 移除）
+local function ref_adjust(vis, ref_key, value_key, mask, delta)
+	if mask == 0 then
+		return
 	end
 
-	for _, flag_pair in pairs(f_refs) do
-		if flag_pair[1] == mask then
-			flag_pair[2] = flag_pair[2] + 1
+	local f_counts = vis[ref_key]
 
-			if flag_pair[2] == 0 then
-				table.removeobject(f_refs, flag_pair)
-			end
+	if not f_counts then
+		f_counts = {}
 
-			vis.flags = gain_f(f_refs)
+		local v = vis[value_key]
 
-			return
+		for i = 1, 32 do
+			f_counts[i] = band(v, F_BITS[i]) ~= 0 and 1 or 0
+		end
+
+		vis[ref_key] = f_counts
+	end
+
+	for i = 1, 32 do
+		if band(mask, F_BITS[i]) ~= 0 then
+			f_counts[i] = f_counts[i] + delta
 		end
 	end
 
-	f_refs[#f_refs + 1] = {mask, 1}
-	vis.flags = gain_f(f_refs)
+	vis[value_key] = gain_f(f_counts)
+end
+
+--- 为 vis.flags 添加引用计数标志位，并更新 vis.flags
+---@param vis table
+---@param mask number
+function U.flags_add(vis, mask)
+	ref_adjust(vis, "flag_refs", "flags", mask, 1)
 end
 
 --- 为 vis.flags 移除引用计数标志位，并更新 vis.flags
----@param vis number
+---@param vis table
 ---@param mask number
 function U.flags_remove(vis, mask)
-	local f_refs = vis.flag_refs
-
-	if not f_refs then
-		f_refs = {{vis.flags, 1}}
-		vis.flag_refs = f_refs
-	end
-
-	for _, flag_pair in pairs(f_refs) do
-		if flag_pair[1] == mask then
-			flag_pair[2] = flag_pair[2] - 1
-
-			if flag_pair[2] == 0 then
-				table.removeobject(f_refs, flag_pair)
-			end
-
-			vis.flags = gain_f(f_refs)
-
-			return
-		end
-	end
-
-	f_refs[#f_refs + 1] = {mask, -1}
-	vis.flags = gain_f(f_refs)
+	ref_adjust(vis, "flag_refs", "flags", mask, -1)
 end
 
 --- 为 vis.bans 添加引用计数标志位，并更新 vis.bans
----@param vis number
+---@param vis table
 ---@param mask number
 function U.bans_add(vis, mask)
-	local f_refs = vis.ban_refs
-
-	if not f_refs then
-		f_refs = {{vis.bans, 1}}
-		vis.ban_refs = f_refs
-	end
-
-	for _, flag_pair in pairs(f_refs) do
-		if flag_pair[1] == mask then
-			flag_pair[2] = flag_pair[2] + 1
-
-			if flag_pair[2] == 0 then
-				table.removeobject(f_refs, flag_pair)
-			end
-
-			vis.bans = gain_f(f_refs)
-
-			return
-		end
-	end
-
-	f_refs[#f_refs + 1] = {mask, 1}
-	vis.bans = gain_f(f_refs)
+	ref_adjust(vis, "ban_refs", "bans", mask, 1)
 end
 
 --- 为 vis.bans 移除引用计数标志位，并更新 vis.bans
----@param vis number
+---@param vis table
 ---@param mask number
 function U.bans_remove(vis, mask)
-	local f_refs = vis.ban_refs
-
-	if not f_refs then
-		f_refs = {{vis.bans, 1}}
-		vis.ban_refs = f_refs
-	end
-
-	for _, flag_pair in pairs(f_refs) do
-		if flag_pair[1] == mask then
-			flag_pair[2] = flag_pair[2] - 1
-
-			if flag_pair[2] == 0 then
-				table.removeobject(f_refs, flag_pair)
-			end
-
-			vis.bans = gain_f(f_refs)
-
-			return
-		end
-	end
-
-	f_refs[#f_refs + 1] = {mask, -1}
-	vis.bans = gain_f(f_refs)
+	ref_adjust(vis, "ban_refs", "bans", mask, -1)
 end
 
 function U.find_first_target(entities, origin, min_range, max_range, flags, bans, filter_func)
