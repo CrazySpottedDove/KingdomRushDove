@@ -96,6 +96,7 @@ function EXO:load()
 			if not self.exos[exo_name] then
 				-- 优先加载编译后的 EXO3；缺失/损坏时回退到文本源
 				local exo = self:load_packed(exo_name, exo_path) or self:load_lua(exo_name, exo_path or EXO.exo_path)
+
 				local db_animation = A.db
 				for _, animation in ipairs(exo.animations) do
 					local name = exo.name .. "_" .. animation.name
@@ -398,17 +399,50 @@ function EXO:load_packed(exo_name, exo_path)
 	return exo
 end
 
---- 加载存放在 lua 文件中的 v3 格式的 exo 数据
-function EXO:load_lua(exo_name, exo_path)
-	local fn = (exo_path or EXO.base_path) .. "/" .. exo_name
+local EMPTY_FRAME_ENTRY = {}
 
-	local f = FS.load(fn .. ".lua")
-	local exo = f()
+--- 把文本 v3 格式的一帧编码为 10*N 个 float32 的字节串（与 compile_exoskeletons.lua 一致），
+--- 返回 (bytes, entry_count)。文本源（尤其插件）可能省略 alpha/kx/ky，此处补齐默认值：
+--- alpha=1，kx=ky=0，避免渲染热路径因缺字段拿到 nil。
+local function encode_text_frame(frame)
+	local n = frame and #frame or 0
+	local tmp = ffi.new("float[?]", n > 0 and n * 10 or 1)
 
+	for i = 0, n - 1 do
+		local e = frame[i + 1]
+
+		if type(e) ~= "table" then
+			e = EMPTY_FRAME_ENTRY
+		end
+
+		local b = i * 10
+
+		tmp[b] = e[1] or 0
+		tmp[b + 1] = e[2] or 0
+		tmp[b + 2] = e[3] or 1
+		tmp[b + 3] = e[4] or 0
+		tmp[b + 4] = e[5] or 0
+		tmp[b + 5] = e[6] or 1
+		tmp[b + 6] = e[7] or 1
+		tmp[b + 7] = e[8] or 0
+		tmp[b + 8] = e[9] or 0
+		tmp[b + 9] = e[10] or 0
+	end
+
+	return ffi.string(tmp, n * 40), n
+end
+
+--- 把文本 v3 的 exo 适配成与 parse_payload 完全相同的运行时结构：
+--- parts/attach 建好名字索引；每帧一条共享记录 {exo_name, base, count}；帧数据汇总到 exo.floats。
+--- 去重策略与编译器一致（按帧的 float 字节串去重），保证内存占用与打包路径相当。
+local function adapt_text_exo(exo_name, exo)
 	exo.name = exo_name
+	exo.parts = exo.parts or {}
+	exo.attach_points = exo.attach_points or {}
+	exo.animations = exo.animations or {}
 	exo.attach_idx = {}
 
-	for _, v in pairs(exo.parts) do
+	for _, v in ipairs(exo.parts) do
 		exo.parts[v[1]] = v
 	end
 
@@ -417,7 +451,95 @@ function EXO:load_lua(exo_name, exo_path)
 		exo.attach_idx[v[1]] = i
 	end
 
+	local unique = {}
+	local dedup = {}
+	local total_entries = 0
+
+	for _, anim in ipairs(exo.animations) do
+		local frames = anim.frames or {}
+		local refs = {}
+
+		for i = 1, #frames do
+			local bytes, count = encode_text_frame(frames[i])
+			local uidx = dedup[bytes]
+
+			if not uidx then
+				uidx = #unique + 1
+				unique[uidx] = {
+					bytes = bytes,
+					count = count
+				}
+				dedup[bytes] = uidx
+				total_entries = total_entries + count
+			end
+
+			refs[i] = uidx
+		end
+
+		anim.refs = refs
+	end
+
+	local nfloats = total_entries * 10
+	local arr = ffi.new("float[?]", nfloats > 0 and nfloats or 1)
+
+	local bases = {}
+	local acc = 0
+
+	for i = 1, #unique do
+		local uf = unique[i]
+
+		bases[i] = acc
+		ffi.copy(arr + acc * 10, uf.bytes, uf.count * 40)
+		acc = acc + uf.count
+	end
+
+	local records = {}
+
+	for i = 1, #unique do
+		records[i] = {
+			exo_name = exo_name,
+			base = bases[i] * 10,
+			count = unique[i].count
+		}
+	end
+
+	for _, anim in ipairs(exo.animations) do
+		local frames = {}
+
+		for j, ref in ipairs(anim.refs) do
+			frames[j] = records[ref]
+		end
+
+		anim.frames = frames
+	end
+
+	exo.floats = arr
+	exo._nfloats = nfloats
+
 	return exo
+end
+
+--- 加载存放在 lua 文件中的 v3 格式的 exo 数据（缺失/损坏返回 nil）
+function EXO:load_lua(exo_name, exo_path)
+	local fn = (exo_path or EXO.base_path) .. "/" .. exo_name
+
+	local f = FS.load(fn .. ".lua")
+
+	if not f then
+		log.error("EXO 文本源读取失败: %s.lua", fn)
+
+		return nil
+	end
+
+	local ok, exo = pcall(f)
+
+	if not ok or type(exo) ~= "table" then
+		log.error("EXO 文本源执行失败: %s.lua (%s)", fn, tostring(exo))
+
+		return nil
+	end
+
+	return adapt_text_exo(exo_name, exo)
 end
 
 function EXO:f(frame_name)

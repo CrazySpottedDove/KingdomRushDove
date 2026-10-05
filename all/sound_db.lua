@@ -13,10 +13,23 @@ local ffi = require("ffi")
 ffi.cdef[[
 	typedef struct { float last_play_ts; int32_t every_counter; int32_t sequence; } SdSoundExtra;
 ]]
--- 随着 sound 变多手动调整。
 local _EXTRAS_CAP = 3072
 local _extras_arr = ffi.new("SdSoundExtra[?]", _EXTRAS_CAP) -- 零初始化
 local _extras_cnt = 0
+
+--- 保证 _extras_arr 至少有 needed 个槽位。
+--- sound_extras 里存的是下标而非指针，所以扩容后已登记的项依然有效。
+local function _ensure_extras_cap(needed)
+	if needed <= _EXTRAS_CAP then
+		return
+	end
+
+	while _EXTRAS_CAP < needed do
+		_EXTRAS_CAP = _EXTRAS_CAP * 2
+	end
+
+	_extras_arr = ffi.new("SdSoundExtra[?]", _EXTRAS_CAP)
+end
 
 -- 请求对象池：重用 req 表，避免每次 queue() 堆分配
 local _req_pool = {}
@@ -172,9 +185,9 @@ end
 -- 预缓存 per-sound 热路径字段，在 init() 和 mod 懒初始化时调用。
 -- 只写 _ 前缀字段，不影响声音定义的公共字段。
 function sound_db:_precache_sound(id, sd)
-	local se = _extras_arr + _extras_cnt
+	_ensure_extras_cap(_extras_cnt + 1)
+	self.sound_extras[id] = _extras_cnt
 	_extras_cnt = _extras_cnt + 1
-	self.sound_extras[id] = se
 
 	sd._files_n = sd.files and #sd.files or 0
 end
@@ -663,7 +676,7 @@ end
 
 function sound_db:play(request)
 	local options = request.options
-	local se = self.sound_extras[request.id]
+	local se = _extras_arr + self.sound_extras[request.id]
 	local last_play_ts = se.last_play_ts -- FFI float，零初始化，无需 or 0
 	local play_due = true
 
