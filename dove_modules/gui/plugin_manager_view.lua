@@ -1590,6 +1590,9 @@ function PluginManagerView:_is_local_ahead(plugin_data)
 	if not remote or not remote.version or not plugin_data.config.version then
 		return false
 	end
+	if remote.by ~= self._developer_config.account then
+		return false
+	end
 	return version_lt(remote.version, plugin_data.config.version)
 end
 
