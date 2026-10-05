@@ -7,8 +7,10 @@ function M.sanitize(s)
 		return tostring(s)
 	end
 	s = s:gsub("%z", "")
-	local ok = pcall(utf8.len, s)
-	if ok then
+	-- utf8.len 对非法序列返回 nil（不抛错），pcall 的布尔返回值恒为 true，
+	-- 因此必须检查第二个返回值 len，否则非法串会被原样放行。
+	local ok, len = pcall(utf8.len, s)
+	if ok and len then
 		return s
 	end
 	local parts = {}

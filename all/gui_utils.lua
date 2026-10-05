@@ -26,7 +26,11 @@ function GU.measure_sprite_content(ss)
 		local N = 64
 		local sx, sy = N / qw, N / qh
 		local prev_canvas = G.getCanvas()
-		local canvas = G.newCanvas(N, N)
+		-- dpiscale=1：安卓高 DPI 下 newCanvas 会产生 N*dpi 的物理缓冲，
+		-- 而下面的 getPixel 按 [0,N) 逻辑坐标读取，不加会只扫到左上角一小块，导致测量错误。
+		local canvas = G.newCanvas(N, N, {
+			dpiscale = 1
+		})
 
 		G.push("all")
 		G.setCanvas(canvas)
