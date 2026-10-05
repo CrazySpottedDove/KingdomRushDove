@@ -209,6 +209,14 @@ for _, range in ipairs(GS.level_ranges5) do
 	end
 end
 
+for _, range in ipairs(GS.level_ranges6) do
+	if #range == 2 then
+		GS.max_stars = GS.max_stars + (range[2] - range[1] + 1) * 5
+	else
+		GS.max_stars = GS.max_stars + 5
+	end
+end
+
 GS.hero_xp_thresholds = {300, 900, 2000, 4000, 8000, 12000, 16000, 20000, 26000}
 
 GS.encyclopedia_enemies = {
