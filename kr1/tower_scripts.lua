@@ -32952,7 +32952,7 @@ function scripts.tower_wizard.update(this, store)
 					U.animation_start(this, an, false, store.tick_ts, false, shooter_sid)
 					U.y_wait_unconditional(store, saa.shoot_time)
 
-					local new_enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range * 1.1, saa.vis_flags, saa.vis_bans)
+					local new_enemy, _, new_pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos(this), a.range * 1.1, T(saa.bullet).bullet.flight_time, saa.vis_flags, saa.vis_bans, T(saa.bullet).bullet.damage_radius)
 
 					local b = E:create_entity(saa.bullet)
 
@@ -32965,7 +32965,7 @@ function scripts.tower_wizard.update(this, store)
 					b.pos.x, b.pos.y = this.pos.x + saa.bullet_start_offset.x, this.pos.y + saa.bullet_start_offset.y
 					b.bullet.from:copy(b.pos)
 					if new_enemy then
-						b.bullet.to = U.calculate_enemy_ffe_pos(new_enemy, b.bullet.flight_time)
+						b.bullet.to:copy(new_pred_pos)
 					else
 						b.bullet.to:copy(pred_pos)
 					end
@@ -33035,34 +33035,16 @@ function scripts.tower_wizard.update(this, store)
 						return U.is_inside_ellipse(v.pos, this.pos, a.range) and v.tower.can_be_mod and not v.tower.blocked and band(v.vis.flags, sba.vis_bans) == 0 and band(v.vis.bans, sba.vis_flags) == 0
 					end)
 					for _, tower in ipairs(towers) do
-						local m = E:create_entity(sba.mod_fx)
+						local m = E:create_entity(sba.mod)
 
 						m.modifier.source_id = this.id
 						m.modifier.target_id = tower.id
 						m.modifier.level = sb.level
-						m.pos.x, m.pos.y = tower.pos.x, tower.pos.y - 1
+						m.damage_factor = sba.damage_factor[sb.level]
 						m.modifier.duration = sba.duration[sb.level]
+						m.tween.ts = store.tick_ts
 
 						queue_insert(store, m)
-
-						local decal = E:create_entity(sba.decal)
-
-						decal.render.sprites[1].ts = store.tick_ts
-						decal.pos.x, decal.pos.y = tower.pos.x, tower.pos.y - 1.01
-						decal.tween.ts = store.tick_ts
-						decal.duration = sba.duration[sb.level]
-
-						queue_insert(store, decal)
-
-						local m2 = E:create_entity(sba.mod)
-
-						m2.modifier.source_id = this.id
-						m2.modifier.target_id = tower.id
-						m2.modifier.level = sb.level
-						m2.damage_factor = sba.damage_factor[sb.level]
-						m2.modifier.duration = sba.duration[sb.level]
-
-						queue_insert(store, m2)
 					end
 
 					while U.y_animation_wait(this, shooter_sid, 1) do
@@ -33322,22 +33304,6 @@ function scripts.mod_wizard_ultimate.update(this, store)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			queue_insert(store, decal)
-		end
-
-		coroutine.yield()
-	end
-end
-
-scripts.decal_tower_wizard_skill_b = {}
-
-function scripts.decal_tower_wizard_skill_b.update(this, store)
-	local s = this.render.sprites[1]
-
-	while true do
-		if this.duration >= 0 and store.tick_ts - s.ts > this.duration then
-			queue_remove(store, this)
-
-			return
 		end
 
 		coroutine.yield()

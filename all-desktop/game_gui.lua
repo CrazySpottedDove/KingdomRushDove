@@ -880,45 +880,54 @@ function game_gui:build_random_towers(resolved)
 		time_rewind:record_decision(RK.random_towers, game_gui.game.store.tick_ts, resolved)
 	end
 
+	local overwrite = love.keyboard.isDown("lctrl", "rctrl")
+
 	for k, v in pairs(game_gui.game.store.towers) do
-		local new_tower = E:create_entity(resolved[v.tower.holder_id] or table.random(GS.advanced_towers))
-		new_tower.pos = V.vclone(v.pos)
-		new_tower.tower.holder_id = v.tower.holder_id
-		new_tower.tower.flip_x = v.tower.flip_x
-
-		if v.tower.default_rally_pos then
-			new_tower.tower.default_rally_pos = V.vclone(v.tower.default_rally_pos)
+		local replace = v.ui and v.ui.can_click
+		if not overwrite then
+			replace = replace and v.tower and v.tower.type == "holder" or (v.tower_holder and v.tower_holder.blocked)
 		end
 
-		if v.tower.terrain_style then
-			U.set_terrain_style(new_tower, v.tower.terrain_style)
-		end
+		if replace then
+			local new_tower = E:create_entity(resolved[v.tower.holder_id] or table.random(GS.advanced_towers))
+			new_tower.pos = V.vclone(v.pos)
+			new_tower.tower.holder_id = v.tower.holder_id
+			new_tower.tower.flip_x = v.tower.flip_x
 
-		if new_tower.ui and v.ui then
-			new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
-		end
-
-		queue_remove(game_gui.game.store, v)
-		queue_insert(game_gui.game.store, new_tower)
-
-		game_gui.game.store.towers[k] = new_tower
-
-		if new_tower.powers then
-			for _, p in pairs(new_tower.powers) do
-				p.level = p.max_level
-				p.changed = true
+			if v.tower.default_rally_pos then
+				new_tower.tower.default_rally_pos = V.vclone(v.tower.default_rally_pos)
 			end
-		end
 
-		if new_tower.barrack then
-			new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
-		end
+			if v.tower.terrain_style then
+				U.set_terrain_style(new_tower, v.tower.terrain_style)
+			end
 
-		if new_tower.mercenary then
-			for i = 1, new_tower.barrack.max_soldiers do
-				new_tower.barrack.soldiers[i] = E:create_entity(new_tower.barrack.soldier_type)
-				new_tower.barrack.soldiers[i].health.dead = true
-				new_tower.barrack.soldiers[i].id = -1
+			if new_tower.ui and v.ui then
+				new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
+			end
+
+			queue_remove(game_gui.game.store, v)
+			queue_insert(game_gui.game.store, new_tower)
+
+			game_gui.game.store.towers[k] = new_tower
+
+			if new_tower.powers then
+				for _, p in pairs(new_tower.powers) do
+					p.level = p.max_level
+					p.changed = true
+				end
+			end
+
+			if new_tower.barrack then
+				new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
+			end
+
+			if new_tower.mercenary then
+				for i = 1, new_tower.barrack.max_soldiers do
+					new_tower.barrack.soldiers[i] = E:create_entity(new_tower.barrack.soldier_type)
+					new_tower.barrack.soldiers[i].health.dead = true
+					new_tower.barrack.soldiers[i].id = -1
+				end
 			end
 		end
 	end
@@ -7897,7 +7906,7 @@ function CriketMenu:show()
 
 				if not self.tweening and not this.click_disabled then
 					-- 辅助输入：按住 Ctrl 点 = “不覆盖造塔”，只填空塔位
-					local no_overwrite = love.keyboard.isDown("lctrl", "rctrl")
+					local no_overwrite = not love.keyboard.isDown("lctrl", "rctrl")
 
 					stm:button_callback(this, item, no_overwrite)
 				end
@@ -7972,8 +7981,8 @@ function CriketMenu:button_callback(button, item, no_overwrite)
 	-- local total_cost = 0
 
 	for k, v in pairs(game_gui.game.store.towers) do
-		-- 覆盖模式（默认）= 替换所有可点塔；
-		-- 不覆盖模式（Ctrl）= 只填空塔位（tower.type == "holder"），其它一律跳过
+		-- 覆盖模式（ctrl）= 替换所有可点塔；
+		-- 不覆盖模式（默认）= 只填空塔位（tower.type == "holder"），其它一律跳过
 		local replace = v.ui and v.ui.can_click
 
 		if no_overwrite then
