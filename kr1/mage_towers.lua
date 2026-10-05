@@ -4595,8 +4595,6 @@ tt.attacks.list[3] = CC("custom_attack")
 tt.attacks.list[3].cooldown = 25
 tt.attacks.list[3].shoot_time = fts(14)
 tt.attacks.list[3].mod = "mod_wizard_skill_b"
-tt.attacks.list[3].mod_fx = "mod_wizard_skill_b_fx"
-tt.attacks.list[3].decal = "decal_tower_wizard_skill_b"
 tt.attacks.list[3].decal_preview = "decal_tower_wizard_empowerment_preview"
 tt.attacks.list[3].damage_factor = {1.5, 1.75, 2}
 tt.attacks.list[3].duration = {8, 10, 12}
@@ -4751,15 +4749,11 @@ tt.sound_events.hit_water = nil
 tt.sound_events.insert = nil
 tt.sound_events.hit = "TowerScholarMageTomeOfFlamesImpact"
 
-tt = RT("mod_firebook_aura", "modifier")
-AC(tt, "dps")
+tt = RT("mod_firebook_aura", "mod_lava")
 tt.modifier.duration = 4
 tt.dps.damage_min = 2
 tt.dps.damage_max = 2
-tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.damage_every = 0.25
-tt.main_script.insert = scripts.mod_dps.insert
-tt.main_script.update = scripts.mod_dps.update
 
 tt = RT("decal_tower_wizard_empowerment_preview", "decal_tween")
 tt.range_factor = 1
@@ -4772,44 +4766,32 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}}
 tt.tween.remove = false
 
-tt = RT("decal_tower_wizard_skill_b", "decal_tween")
-AC(tt, "main_script")
-tt.render.sprites[1].name = "wizardbuffdecal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].scale = vv(1)
-tt.main_script.update = scripts.decal_tower_wizard_skill_b.update
-tt.main_script.remove = scripts.tween_utils.reverse_remove
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
-tt.tween.remove = false
-tt.tween.disabled = false
-tt.tween.run_once = true
-
 tt = RT("mod_wizard_skill_b", "modifier")
+AC(tt, "render", "tween")
 tt.main_script.insert = scripts.mod_tower_factors.insert
 tt.main_script.remove = scripts.mod_tower_factors.remove
 tt.main_script.update = scripts.mod_tower_factors.update
 tt.modifier.duration = 1
 tt.modifier.use_mod_offset = false
 tt.modifier.keep_on_tower_upgrade = true
-
-tt = RT("mod_wizard_skill_b_fx", "modifier")
-AC(tt, "render", "tween")
-tt.main_script.update = scripts.tower_arcane_wizard_power_empowerment_mark_mod.update
-tt.main_script.remove = scripts.tween_utils.reverse_remove
-tt.modifier.duration = nil
-tt.modifier.use_mod_offset = false
-tt.modifier.keep_on_tower_upgrade = true
-tt.render.sprites[1].prefix = "wizardbuffDef"
-tt.render.sprites[1].name = "buffidle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].animated = true
+tt.render.sprites[1].name = "wizardbuffdecal"
+tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].offset = v(0, 8)
-tt.render.sprites[1].scale = vv(0.8)
+tt.render.sprites[1].scale = vv(1)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].prefix = "wizardbuffDef"
+tt.render.sprites[2].name = "buffidle"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].offset = v(0, 8)
+tt.render.sprites[2].scale = vv(0.8)
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].sprite_id = 2
+tt.tween.props[2].keys = {{0, 0}, {0.5, 255}}
 tt.tween.remove = false
 tt.tween.disabled = false
 tt.tween.run_once = true

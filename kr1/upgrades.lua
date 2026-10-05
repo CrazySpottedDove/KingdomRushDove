@@ -1422,8 +1422,7 @@ upgrades.mage_tower_bolts = {
 	"bullet_tower_blazing_watcher",
 	"wicked_sisters_proy_green",
 	"wicked_sisters_proy_pink",
-	"bolt_tower_wizard",
-	"bullet_firebook_wizard"
+	"bolt_tower_wizard"
 }
 
 local other_bolts = {
@@ -1483,7 +1482,6 @@ upgrades.engineer_bombs = {
 	"bullet_catapult",
 	"bullet_catapult_skill_a",
 	"bullet_catapult_ultimate",
-	"bullet_firebook_wizard",
 	"bullet_skill_c_wizard_2"
 }
 
