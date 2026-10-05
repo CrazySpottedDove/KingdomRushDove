@@ -752,6 +752,9 @@ end
 
 local MAX_RAW_BUNDLE_SIZE = 20 * 1024 * 1024
 
+-- 增量更新可接受的资源总量上限：超过则拒绝增量更新，提示玩家直接安装新本体
+local MAX_INCREMENTAL_ASSET_SIZE = 100 * 1024 * 1024
+
 local function diff_assets()
 	set_state(STATE_CHECKING_ASSETS)
 	local tmp_dir = ".assets_diff_tmp"
@@ -1251,6 +1254,20 @@ local function do_update()
 			status = "Error",
 			title = _("UPDATER_UI_UPGRADE_FAILED"),
 			message = _("UPDATER_UI_ERR_CHECK_ASSETS") .. table.concat(error_log_lines, "\n")
+		}
+	end
+
+	-- 1.5 资源总量超过上限：拒绝增量更新，要求玩家直接安装新本体（确认后继续启动旧版本）
+	local total_asset_size = 0
+	for _i, file_path in ipairs(added_or_modified_assets) do
+		local file_info = asset_sizes and asset_sizes[file_path]
+		total_asset_size = total_asset_size + ((file_info and file_info[1]) or 0)
+	end
+	if total_asset_size > MAX_INCREMENTAL_ASSET_SIZE then
+		return {
+			status = "Error",
+			title = _("UPDATER_UI_TOO_LARGE_TITLE"),
+			message = string.format(_("UPDATER_UI_ERR_ASSET_TOO_LARGE"), total_asset_size / 1024 / 1024)
 		}
 	end
 
