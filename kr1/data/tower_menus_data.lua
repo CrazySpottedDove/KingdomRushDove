@@ -604,11 +604,13 @@ return {
 		}),
 		tpl.sell
 	}},
+	-- 技能按钮从左到右固定为 skill_a(place 6，左) / skill_b(place 5，中) / skill_c(place 7，右)，
+	-- 与 balloon/paladin/barbarian 等既有塔一致；place 5 是中上、6 是左、7 是右，切勿写反。
 	archers = {{M(tpl.upgrade_power, {
 		action_arg = "skill_a",
 		image = "kr6_quickmenu_special_icons_archers_0001",
 		sounds = {"TowerArcherGarrisonSkillATaunt"},
-		place = 5,
+		place = 6,
 		tt_phrase = _("TOWER_ARCHERS_SKILL_A_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_ARCHERS_SKILL_A_NAME_1"),
@@ -624,7 +626,7 @@ return {
 		action_arg = "skill_b",
 		image = "kr6_quickmenu_special_icons_archers_0002",
 		sounds = {"TowerArcherGarrisonSkillBTaunt"},
-		place = 6,
+		place = 5,
 		tt_phrase = _("TOWER_ARCHERS_SKILL_B_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_ARCHERS_SKILL_B_NAME_1"),
@@ -3923,11 +3925,12 @@ return {
 			tt_desc = _("TOWER_BALLOON_OIL_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
+	-- 技能按钮从左到右固定为 skill_a(place 6，左) / skill_b(place 5，中) / skill_c(place 7，右)，切勿写反。
 	catapult = {{M(tpl.upgrade_power, {
 		action_arg = "skill_a",
 		image = "kr6_quickmenu_special_icons_catapult_0001",
 		sounds = {"TowerRoyalCatapultSkillATaunt"},
-		place = 5,
+		place = 6,
 		tt_phrase = _("TOWER_CATAPULT_SKILL_A_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_CATAPULT_SKILL_A_NAME_1"),
@@ -3943,7 +3946,7 @@ return {
 		action_arg = "skill_b",
 		image = "kr6_quickmenu_special_icons_catapult_0002",
 		sounds = {"TowerRoyalCatapultSkillBTaunt"},
-		place = 6,
+		place = 5,
 		tt_phrase = _("TOWER_CATAPULT_SKILL_B_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_CATAPULT_SKILL_B_NAME_1"),
@@ -3972,11 +3975,12 @@ return {
 			tt_desc = _("TOWER_CATAPULT_SKILL_C_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
+	-- 技能按钮从左到右固定为 skill_a(place 6，左) / skill_b(place 5，中) / skill_c(place 7，右)，切勿写反。
 	wizard = {{M(tpl.upgrade_power, {
 		action_arg = "skill_a",
 		image = "kr6_quickmenu_special_icons_wizard_0001",
 		sounds = {"TowerScholarMageSkillATaunt"},
-		place = 5,
+		place = 6,
 		tt_phrase = _("TOWER_WIZARD_SKILL_A_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_WIZARD_SKILL_A_NAME_1"),
@@ -3992,7 +3996,7 @@ return {
 		action_arg = "skill_b",
 		image = "kr6_quickmenu_special_icons_wizard_0002",
 		sounds = {"TowerScholarMageSkillBTaunt"},
-		place = 6,
+		place = 5,
 		tt_phrase = _("TOWER_WIZARD_SKILL_B_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_WIZARD_SKILL_B_NAME_1"),
