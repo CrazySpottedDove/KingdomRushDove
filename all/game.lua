@@ -60,6 +60,7 @@ game.required_textures = {
 	"go_towers_group25",
 	"go_towers_catapult",
 	"go_towers_archers",
+	"go_towers_wizard",
 	"go_stage128",
 	"tower_holders"
 }
@@ -115,7 +116,8 @@ game.required_sounds = {
 	"tower_sandworm",
 	"tower_stage_28_priests_barrack",
 	"tower_catapult",
-	"tower_archers"
+	"tower_archers",
+	"tower_wizard"
 }
 game.required_exoskeletons = {
 	"ignis_altar_lava_golem",
@@ -137,7 +139,14 @@ game.required_exoskeletons = {
 	"archer_buffbirdDef",
 	"archer_markbirdDef",
 	"archer_markDef",
-	"archer_ultbgDef"
+	"archer_ultbgDef",
+	"wizard4Def",
+	"wizard_scroll4Def",
+	"wizard_shine4Def",
+	"wizard_stars4Def",
+	"wizard_tower4Def",
+	"wizardbuffDef",
+	"wizard4ultiDef"
 }
 game.plugin_required_textures = {}
 game.plugin_required_sounds = {}

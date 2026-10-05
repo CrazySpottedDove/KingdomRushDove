@@ -296,6 +296,14 @@ return {
 			tt_title = _("TOWER_WICKED_SISTERS_NAME"),
 			tt_desc = _("TOWER_WICKED_SISTERS_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_wizard",
+			image = "kr6_quickmenu_main_icon_wizard",
+			type = "wizard",
+			place = 29,
+			tt_title = _("TOWER_WIZARD_NAME"),
+			tt_desc = _("TOWER_WIZARD_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -3962,6 +3970,55 @@ return {
 		}, {
 			tt_title = _("TOWER_CATAPULT_SKILL_C_NAME_3"),
 			tt_desc = _("TOWER_CATAPULT_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
+	wizard = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_wizard_0001",
+		sounds = {"TowerScholarMageSkillATaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_WIZARD_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_WIZARD_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_WIZARD_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_WIZARD_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_WIZARD_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_WIZARD_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_WIZARD_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_wizard_0002",
+		sounds = {"TowerScholarMageSkillBTaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_WIZARD_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_WIZARD_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_WIZARD_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_WIZARD_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_WIZARD_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_WIZARD_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_WIZARD_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_wizard_0003",
+		sounds = {"TowerScholarMageSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_WIZARD_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_WIZARD_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_WIZARD_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_WIZARD_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_WIZARD_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_WIZARD_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_WIZARD_SKILL_C_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	twilight_elves_barrack = {{M(tpl.upgrade_power, {
