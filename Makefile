@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text android windows publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text organize_strings android windows publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check
 
 all: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -144,7 +144,16 @@ push:
 format:
 	dlfmt --json-task ./dlfmt_task.json
 
+# 整理 i18n 文本：排序 + 把内容完全相同的动态文案提成文件开头的 local，重复 key 引用它。
+# 仅当 en.lua / zh-Hans.lua 相对 HEAD 有改动时才重写文件。
+organize_strings:
+	@luajit ./scripts/organize_strings.lua
+	@dlfmt --json-task ./dlfmt_task.json
+
+# 先 format，再整理文本，整理完后再 format 一次（脚本的原始输出需要 dlfmt 统一格式）
 add:
+	dlfmt --json-task ./dlfmt_task.json
+	luajit ./scripts/organize_strings.lua
 	dlfmt --json-task ./dlfmt_task.json
 	git add .
 
