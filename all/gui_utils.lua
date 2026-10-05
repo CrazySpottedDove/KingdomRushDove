@@ -1,6 +1,86 @@
 -- chunkname: @./all/gui_utils.lua
 local GU = {}
 local E = require("entity_db")
+local I = require("lib.klove.image_db")
+local V = require("lib.klua.vector")
+local v = V.v
+local G = love.graphics
+
+-- 测量图集帧 ss 中不透明内容（可见像素）相对 quad 的位置与大小（单位：图集像素），并缓存到 ss 上。
+-- 带大量透明边的移植图（插件大图、半身像）需要以可见内容为准做缩放/居中，否则会按整个 quad 算错。
+-- 返回 {off = v(x, y), visible = v(w, h)}；off 为可见内容左上角相对 quad 原点的偏移。
+function GU.measure_sprite_content(ss)
+	local cached = ss._content_bbox
+
+	if cached then
+		return cached
+	end
+
+	local _, _, qw, qh = ss.quad:getViewport()
+	local image = qw > 0 and qh > 0 and I:i(ss.atlas)
+	local off, visible
+
+	if not image then
+		off, visible = v(0, 0), v(math.max(1, qw), math.max(1, qh))
+	else
+		local N = 64
+		local sx, sy = N / qw, N / qh
+		local prev_canvas = G.getCanvas()
+		local canvas = G.newCanvas(N, N)
+
+		G.push("all")
+		G.setCanvas(canvas)
+		G.clear(0, 0, 0, 0)
+		G.setColor(1, 1, 1, 1)
+		G.draw(image, ss.quad, 0, 0, 0, sx, sy)
+		G.setCanvas(prev_canvas)
+		G.pop()
+
+		local data = canvas:newImageData()
+
+		canvas:release()
+
+		local x0, y0, x1, y1 = N, N, -1, -1
+
+		for y = 0, N - 1 do
+			for x = 0, N - 1 do
+				local _, _, _, a = data:getPixel(x, y)
+
+				if a > 0.1 then
+					if x < x0 then
+						x0 = x
+					end
+					if x > x1 then
+						x1 = x
+					end
+					if y < y0 then
+						y0 = y
+					end
+					if y > y1 then
+						y1 = y
+					end
+				end
+			end
+		end
+
+		data:release()
+
+		if x1 < x0 then
+			off, visible = v(0, 0), v(qw, qh)
+		else
+			off = v(x0 / sx, y0 / sy)
+			visible = v((x1 - x0 + 1) / sx, (y1 - y0 + 1) / sy)
+		end
+	end
+
+	cached = {
+		off = off,
+		visible = visible
+	}
+	ss._content_bbox = cached
+
+	return cached
+end
 
 function GU.lives_desc(v)
 	if not v or type(v) ~= "number" then
