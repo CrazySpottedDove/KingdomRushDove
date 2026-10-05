@@ -27169,15 +27169,15 @@ scripts.enemy_crocs_hydra = {}
 
 function scripts.enemy_crocs_hydra.on_damage(this, store, damage)
 	if not this.transformed_hydra then
-		log.debug("  HYDRA ON_DAMAGE: %s", damage.value)
-
 		local pd = U.predict_damage(this, damage)
 
 		if this.health.hp - pd <= 0 then
 			this.transform_hydra = true
 			this.health.hp = 1
-			U.bans_add(this.vis, F_RANGED)
-			U.bans_add(this.vis, F_BLOCK)
+			if not this.transform_hydra then
+				U.bans_add(this.vis, F_RANGED)
+				U.bans_add(this.vis, F_BLOCK)
+			end
 
 			return false
 		end
