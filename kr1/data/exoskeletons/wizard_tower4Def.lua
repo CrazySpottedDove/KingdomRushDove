@@ -1,0 +1,1 @@
+return {version=3,partScaleCompensation=1.40625,fps=30,parts={{'wizard_tower4_asst_wizard1_shad',9.1,2.1},{'wizard_tower4_asst_wizard4_tower',42.35,29.55}},attach_points={},animations={{name='idle',frames={{{1,2,1,-45.35,-48,1,1.015549,0,0,0},{1,1,1,-9,-42.05,0.976547,0.976547,0,0,0}}}}}}

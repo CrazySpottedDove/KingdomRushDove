@@ -37,7 +37,14 @@ local persistent_exos = table.to_map({
 	"archer_buffbirdDef",
 	"archer_markbirdDef",
 	"archer_markDef",
-	"archer_ultbgDef"
+	"archer_ultbgDef",
+	"wizard4Def",
+	"wizard_scroll4Def",
+	"wizard_shine4Def",
+	"wizard_stars4Def",
+	"wizard_tower4Def",
+	"wizardbuffDef",
+	"wizard4ultiDef"
 })
 
 --- director 调用，将资源列表加入 EXO.exo_lists_to_load 中，在进入对局时被加载

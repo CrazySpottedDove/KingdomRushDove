@@ -1396,6 +1396,7 @@ upgrades.mage_tower_bolts = {
 	"bolt_1",
 	"bolt_2",
 	"bolt_3",
+	"ray_arcane",
 	"bolt_sorcerer",
 	"bolt_archmage",
 	"ray_sunray",
@@ -1420,11 +1421,12 @@ upgrades.mage_tower_bolts = {
 	"ray_deep_devils",
 	"bullet_tower_blazing_watcher",
 	"wicked_sisters_proy_green",
-	"wicked_sisters_proy_pink"
+	"wicked_sisters_proy_pink",
+	"bolt_tower_wizard",
+	"bullet_firebook_wizard"
 }
 
 local other_bolts = {
-	"ray_arcane",
 	"bolt_elora_freeze",
 	"bolt_elora_slow",
 	"bolt_magnus",
@@ -1480,7 +1482,9 @@ upgrades.engineer_bombs = {
 	"bullet_balloon_oil",
 	"bullet_catapult",
 	"bullet_catapult_skill_a",
-	"bullet_catapult_ultimate"
+	"bullet_catapult_ultimate",
+	"bullet_firebook_wizard",
+	"bullet_skill_c_wizard_2"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1562,6 +1566,30 @@ function upgrades:bomb_damage_mul(damage_factor)
 	T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * damage_factor
 	T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_min = T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_min * damage_factor
 	T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_max = T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_max * damage_factor
+end
+
+function upgrades:mage_bolt_damage_mul(damage_factor)
+	for _, n in ipairs(self.mage_tower_bolts) do
+		T(n).bullet.damage_min = T(n).bullet.damage_min * damage_factor
+		T(n).bullet.damage_max = T(n).bullet.damage_max * damage_factor
+	end
+
+	T("mod_ray_arcane").dps.damage_min = T("mod_ray_arcane").dps.damage_min * damage_factor
+	T("mod_ray_arcane").dps.damage_max = T("mod_ray_arcane").dps.damage_max * damage_factor
+	T("mod_pixie_pickpocket").modifier.damage_min = T("mod_pixie_pickpocket").modifier.damage_min * damage_factor
+	T("mod_pixie_pickpocket").modifier.damage_max = T("mod_pixie_pickpocket").modifier.damage_max * damage_factor
+	T("mod_ultimate_wizard").damage = T("mod_ultimate_wizard").damage * damage_factor
+
+	local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
+
+	for k, v in ipairs(d) do
+		d[k] = v * damage_factor
+	end
+
+	T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * damage_factor
+	T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * damage_factor
+	T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * damage_factor
+	T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * damage_factor
 end
 
 function upgrades:patch_templates(max_level)
@@ -2091,45 +2119,22 @@ function upgrades:patch_templates(max_level)
 		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * 1.1
 	end
 
-	local function apply_mage_bolts_damage_factor(factor)
-		for _, n in ipairs(self.mage_tower_bolts) do
-			T(n).bullet.damage_min = T(n).bullet.damage_min * factor
-			T(n).bullet.damage_max = T(n).bullet.damage_max * factor
-		end
-
-		T("mod_ray_arcane").dps.damage_min = T("mod_ray_arcane").dps.damage_min * factor
-		T("mod_ray_arcane").dps.damage_max = T("mod_ray_arcane").dps.damage_max * factor
-		T("mod_pixie_pickpocket").modifier.damage_min = T("mod_pixie_pickpocket").modifier.damage_min * factor
-		T("mod_pixie_pickpocket").modifier.damage_max = T("mod_pixie_pickpocket").modifier.damage_max * factor
-
-		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
-
-		for k, v in ipairs(d) do
-			d[k] = v * factor
-		end
-
-		T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * factor
-		T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * factor
-		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * factor
-		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * factor
-	end
-
 	u = self:get_upgrade("mage_empowered_magic")
 
 	if u then
-		apply_mage_bolts_damage_factor(u.damage_factor)
+		self:mage_bolt_damage_mul(u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_arcane_spell")
 
 	if u then
-		apply_mage_bolts_damage_factor(u.damage_factor)
+		self:mage_bolt_damage_mul(u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_power")
 
 	if u then
-		apply_mage_bolts_damage_factor(u.damage_factor)
+		self:mage_bolt_damage_mul(u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_harmony")
@@ -2166,6 +2171,8 @@ function upgrades:patch_templates(max_level)
 		damage = (T("mod_wicked_sister_poison").dps.damage_min + T("mod_wicked_sister_poison").dps.damage_max) * 0.5 * u.damage_factor
 		T("mod_wicked_sister_poison").dps.damage_min = damage
 		T("mod_wicked_sister_poison").dps.damage_max = damage
+
+		T("mod_ultimate_wizard").damage = T("mod_ultimate_wizard").damage * u.damage_factor
 	end
 
 	u = self:get_upgrade("mage_slow_curse")
