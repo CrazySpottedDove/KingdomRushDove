@@ -6602,7 +6602,7 @@ scripts.hero_ignus = {
 						if not target then
 						-- block empty
 						else
-
+							local bans_added = false
 							local function surge(target)
 								U.unblock_target(store, this)
 								U.block_enemy(store, this, target)
@@ -6610,7 +6610,10 @@ scripts.hero_ignus = {
 
 								local slot_pos = U.melee_slot_position(this, target, 1)
 
-								U.bans_add(this.vis, F_ALL)
+								if not bans_added then
+									U.bans_add(this.vis, F_ALL)
+									bans_added = true
+								end
 								this.health.ignore_damage = true
 
 								U.speed_mul(this, a.speed_factor)
@@ -6645,7 +6648,10 @@ scripts.hero_ignus = {
 								U.y_animation_play(this, a.animations[2], nil, store.tick_ts)
 
 								a.ts = store.tick_ts
-								U.bans_remove(this.vis, F_ALL)
+								if bans_added then
+									U.bans_remove(this.vis, F_ALL)
+									bans_added = false
+								end
 								this.health.ignore_damage = nil
 							end
 
