@@ -8,7 +8,7 @@
   - 按四舍五入保留指定位数，并去掉多余的尾零。
 
 注意：
-  - 运行时优先加载编译后的二进制（如 .exo3、.luac）时，源码文本截断不会影响
+  - 运行时优先加载编译后的二进制（如 .exo3、.bin）时，源码文本截断不会影响
     运行时体积/行为，只减小仓库体积；如需源码与二进制一致请重新执行对应编译
     （例：make compile_exos）。
   - 默认目标为常见数据目录；也可显式传入任意文件/目录。
@@ -123,16 +123,27 @@ def scan_and_replace(src, places):
     return ''.join(out), count
 
 
+# 不截断的目标：exoskeleton 源会被编译成 .exo3 二进制，位数免费，不应丢精度。
+SKIP_PARTS = ("/exoskeletons/",)
+
+
 def iter_files(targets, exts):
     for t in targets:
         if os.path.isfile(t):
+            if any(p in t for p in SKIP_PARTS):
+                continue
             if t.rsplit('.', 1)[-1] in exts:
                 yield t
         else:
             for dp, _, fns in os.walk(t):
+                if any(p in (dp + "/") for p in SKIP_PARTS):
+                    continue
                 for fn in sorted(fns):
+                    p = os.path.join(dp, fn)
+                    if any(s in p for s in SKIP_PARTS):
+                        continue
                     if fn.rsplit('.', 1)[-1] in exts:
-                        yield os.path.join(dp, fn)
+                        yield p
 
 
 def main():

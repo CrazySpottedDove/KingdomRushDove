@@ -11,8 +11,9 @@ end
 
 require("lib.klua.table")
 require("lib.klua.dump")
+local atlas_binary = require("lib.klove.atlas_binary")
 
-local extension_name = IS_ANDROID and ".aluac" or ".luac"
+local extension_name = IS_ANDROID and ".abin" or ".bin"
 
 local km = require("lib.klua.macros")
 local image_db = {}
@@ -536,15 +537,24 @@ function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
 
 	local group_file = path .. "/" .. name .. extension_name
 
-	-- 使用 pcall 进行保护，避免加载不存在的资源文件。如果不存在，报错提醒。
-	-- local info = FS.load(group_file)()
-	local success, chunk = pcall(FS.load, group_file)
-	if not success or type(chunk) ~= "function" then
-		log.error("Failed to load atlas bytecode: %s. Error: %s", group_file, chunk)
+	-- 优先按紧凑二进制解析（见 lib/klove/atlas_binary.lua）；否则回退旧 Lua 字节码。
+	local info
+	local data = FS.read(group_file)
+	if not data then
+		log.error("Failed to load atlas data: %s", group_file)
 		return
 	end
-
-	local info = chunk()
+	if atlas_binary.is_binary(data) then
+		info = atlas_binary.unpack(data)
+	else
+		-- DEPRECATED: 旧 Lua 字节码解析，未来会删除
+		local success, chunk = pcall(FS.load, group_file)
+		if not success or type(chunk) ~= "function" then
+			log.error("Failed to load atlas bytecode: %s. Error: %s", group_file, chunk)
+			return
+		end
+		info = chunk()
+	end
 
 	local image_names = {}
 

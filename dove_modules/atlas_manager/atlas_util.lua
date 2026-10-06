@@ -1,5 +1,6 @@
 local G = love.graphics
 local FS = love.filesystem
+local AB = require("lib.klove.atlas_binary")
 local util = {}
 
 local is_ident
@@ -140,17 +141,9 @@ function util.write_atlas_files(dir, base_name, frames, write_fn)
 		return nil, "Failed to write " .. lua_path
 	end
 
-	local bc, err = util.compile_bytecode("return " .. serialize(compile_table(frames, false)), "@" .. base_name .. ".luac")
-	if not bc then
-		return nil, "Compile .luac failed: " .. err
-	end
-	write_fn(dir .. "/" .. base_name .. ".luac", bc)
-
-	local bc_android, err2 = util.compile_bytecode("return " .. serialize(compile_table(frames, true)), "@" .. base_name .. ".aluac")
-	if not bc_android then
-		return nil, "Compile .aluac failed: " .. err2
-	end
-	write_fn(dir .. "/" .. base_name .. ".aluac", bc_android)
+	-- 紧凑二进制（见 lib/klove/atlas_binary.lua）
+	write_fn(dir .. "/" .. base_name .. ".bin", AB.pack(frames, false))
+	write_fn(dir .. "/" .. base_name .. ".abin", AB.pack(frames, true))
 
 	return true, nil
 end
@@ -348,7 +341,7 @@ local function backup_list_dir(dir)
 	return out
 end
 
--- 备份 lua/luac/aluac + base.dds + base-N.dds 到 backup_dir/<ts>_<base>/
+-- 备份 lua/bin/abin + base.dds + base-N.dds 到 backup_dir/<ts>_<base>/
 -- 目录列举与读写均带真实文件系统兜底，确保 .dds 不会漏备份。
 -- 返回 (target目录, 成功拷贝的文件名列表)
 function util.backup_files(dir, base_name, backup_dir, read_fn, write_fn)
@@ -365,7 +358,7 @@ function util.backup_files(dir, base_name, backup_dir, read_fn, write_fn)
 		os.execute('mkdir -p "' .. tostring(target):gsub('"', '\\"') .. '"')
 	end
 	local wanted = {}
-	for _, ext in ipairs({".lua", ".luac", ".aluac"}) do
+	for _, ext in ipairs({".lua", ".bin", ".abin"}) do
 		wanted[base_name .. ext] = true
 	end
 	wanted[base_name .. ".dds"] = true
