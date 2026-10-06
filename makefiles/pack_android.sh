@@ -77,13 +77,13 @@ if [ "$HD_MODE" -eq 1 ]; then
     ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端.zip"
     OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端.apk
     CACHE_DIR=".versions/.android_image_cache_hd"
-    CACHE_KEY="resize=100%|strip=1|astc=1|tool=$IM_CMD|pngsrc=1"
+    CACHE_KEY="resize=100%|strip=1|astc=1|tool=$IM_CMD|pngsrc=1|astc_bg=10x10|astc_def=8x8"
     AUDIO_CACHE_DIR=".versions/.android_audio_cache_hd"
 else
     ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.zip"
     OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.apk
     CACHE_DIR=".versions/.android_image_cache"
-    CACHE_KEY="resize=50%|strip=1|astc=1|tool=$IM_CMD|pngsrc=1"
+    CACHE_KEY="resize=50%|strip=1|astc=1|tool=$IM_CMD|pngsrc=1|astc_bg=10x10|astc_def=8x8"
     AUDIO_CACHE_DIR=".versions/.android_audio_cache"
 fi
 
@@ -253,7 +253,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         "lldebugger.lua"
         "kr1/data/game_animations.lua"
         "_assets/kr1-desktop/images/fullhd/*.lua"
-        "_assets/kr1-desktop/images/fullhd/*.luac"
+        "_assets/kr1-desktop/images/fullhd/*.bin"
         "_assets/kr1-desktop/images/fullhd/*.png"
     )
     if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
@@ -265,7 +265,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         EXCLUDE_ARGS+=("$arg")
     done < <(gitignore_excludes)
     rsync -a --delete \
-        --include="_assets/kr1-desktop/images/fullhd/*.aluac" \
+        --include="_assets/kr1-desktop/images/fullhd/*.abin" \
         "${EXCLUDE_ARGS[@]}" ./ "$stage_dir"/
 
     # 分析图像大小，生成缩放映射
@@ -298,6 +298,12 @@ if [ "$rebuild_love" -eq 1 ]; then
             rel="${src#./}"
             base_name="${rel%.dds}"
             base_name_only="$(basename "$base_name")"
+
+            # 差分 ASTC 块尺寸：背景图 (-bg) 用 10x10，其余 8x8
+            astc_blocksize="8x8"
+            case "$base_name_only" in
+                *_bg*|*-bg*) astc_blocksize="10x10" ;;
+            esac
 
             cache_file="$CACHE_DIR/${base_name}.astc"
             dest="$stage_dir/${base_name}.astc"
@@ -332,7 +338,7 @@ if [ "$rebuild_love" -eq 1 ]; then
                     "$IM_CMD" "$src_actual" -strip "png:$temp_png" 2>/dev/null
                 fi
 
-                astcenc -cs "$temp_png" "$cache_file" 8x8 -thorough -silent 2>/dev/null
+                astcenc -cs "$temp_png" "$cache_file" "$astc_blocksize" -thorough -silent 2>/dev/null
                 rm -f "$temp_png"
                 cp -f "$cache_file" "$dest"
             fi
@@ -346,6 +352,13 @@ if [ "$rebuild_love" -eq 1 ]; then
                 src="$1"
                 rel="${src#./}"
                 base_name="${rel%.png}"
+                base_name_only="$(basename "$base_name")"
+
+                # 差分 ASTC 块尺寸：背景图 (-bg) 用 10x10，其余 8x8
+                astc_blocksize="8x8"
+                case "$base_name_only" in
+                    *_bg*|*-bg*) astc_blocksize="10x10" ;;
+                esac
 
                 cache_file="$CACHE_DIR/${base_name}.astc"
                 dest="$stage_dir/${base_name}.astc"
@@ -356,7 +369,7 @@ if [ "$rebuild_love" -eq 1 ]; then
                 if [ -f "$cache_file" ] && [ "$cache_file" -nt "$src" ]; then
                     cp -f "$cache_file" "$dest"
                 else
-                    astcenc -cs "$src" "$cache_file" 8x8 -thorough -silent 2>/dev/null
+                    astcenc -cs "$src" "$cache_file" "$astc_blocksize" -thorough -silent 2>/dev/null
                     cp -f "$cache_file" "$dest"
                 fi
             ' _ {}

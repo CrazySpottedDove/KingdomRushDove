@@ -52,7 +52,7 @@ client
 .gdb_history
 .plugins/
 config.json
-*.aluac
+*.abin
 .zed/
 .codex/
 .deepseek/

@@ -3634,7 +3634,7 @@ function atlas_manager:save(hot_reload)
 		if not ok then
 			return self:set_status(string.format(_("ATLAS_MGR_ERR_WRITE_FILE_FAILED_S"), (err or "unknown")))
 		end
-		print(string.format("[atlas_manager] save_compile: %s .lua/.luac/.aluac written", name))
+		print(string.format("[atlas_manager] save_compile: %s .lua/.bin/.abin written", name))
 		self._pending_dds_commands = dds_commands
 		if alias_conflicts and #alias_conflicts > 0 then
 			self:set_status(string.format(_("ATLAS_MGR_STATUS_SAVED_ALIAS_CONFLICT"), name, #alias_conflicts))
@@ -5040,7 +5040,7 @@ function atlas_manager:rpk_stage()
 	self:set_status(_("ATLAS_MGR_STATUS_STAGED_WAITING_CONFIRM"))
 end
 
--- 可靠备份：把 base 相关旧文件（lua/luac/aluac、base.dds、base-N.dds、旧PNG）逐一
+-- 可靠备份：把 base 相关旧文件（lua/bin/abin、base.dds、base-N.dds、旧PNG）逐一
 -- 用 io 直接拷贝到 .images_backup/<时间戳>_<base>/，并返回成功拷贝的文件清单。
 function atlas_manager:rpk_backup_old(base)
 	local back_dir = real_path(BACKUP_DIR)
@@ -5071,7 +5071,7 @@ function atlas_manager:rpk_backup_old(base)
 		return true
 	end
 	-- 资源目录：lua 三件套 + 单页 dds + 分页 dds
-	for _, ext in ipairs({".lua", ".luac", ".aluac"}) do
+	for _, ext in ipairs({".lua", ".bin", ".abin"}) do
 		copy_if_exists(atlas_real .. "/" .. base .. ext)
 	end
 	copy_if_exists(atlas_real .. "/" .. base .. ".dds")
@@ -5180,7 +5180,7 @@ function atlas_manager:rpk_commit()
 			return
 		end
 	end
-	-- 5) 写 lua/luac/aluac
+	-- 5) 写 lua/bin/abin
 	local okw, errw = atlas_util.write_atlas_files(atlas_real, base, new_frames, write_real)
 	if not okw then
 		self:set_status(string.format(_("ATLAS_MGR_ERR_WRITE_LUA_BACKED_UP"), tostring(errw), bp.dir))
@@ -5220,7 +5220,7 @@ function atlas_manager:rpk_commit()
 		if h then
 			local deleted = 0
 			for name in h:lines() do
-				if name ~= base .. ".lua" and name ~= base .. ".luac" and name ~= base .. ".aluac" then
+				if name ~= base .. ".lua" and name ~= base .. ".bin" and name ~= base .. ".abin" then
 					-- 注意：name 带扩展名（如 go_x-3.dds），取页名前缀时要含扩展名匹配
 					local page = name:match("^(" .. base .. "%-%d+)%.[%w]+$")
 					if page and not keep[page] and name:match(pattern) then
@@ -5243,7 +5243,7 @@ function atlas_manager:rpk_commit()
 		end
 	end
 	-- 仅处理资源目录/PNG 存档中旧分页文件（三件套与单页由新文件覆盖，无需清理）
-	sweep(atlas_real, "^" .. base .. "%-%d+%.(dds|astc|lua|luac|aluac)$")
+	sweep(atlas_real, "^" .. base .. "%-%d+%.(dds|astc|lua|bin|abin)$")
 	sweep(imgs_real, "^" .. base .. "%-%d+%.png$")
 	-- 7) 清理暂存目录
 	os.execute("rm -rf " .. rp.stage.dir:gsub(" ", "\\ "))

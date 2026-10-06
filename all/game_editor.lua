@@ -230,11 +230,11 @@ end
 -- 		for _, item in ipairs(items) do
 -- 			local group
 
--- 			if item:match("%.luac$") then
--- 				group = item:gsub("%.luac$", "")
+-- 			if item:match("%.bin$") then
+-- 				group = item:gsub("%.bin$", "")
 -- 				selected[group] = selected[group] or item
--- 			elseif item:match("%.aluac$") then
--- 				group = item:gsub("%.aluac$", "")
+-- 			elseif item:match("%.abin$") then
+-- 				group = item:gsub("%.abin$", "")
 -- 				selected[group] = selected[group] or item
 -- 			elseif item:match("%.lua$") then
 -- 				group = item:gsub("%.lua$", "")

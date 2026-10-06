@@ -7291,6 +7291,12 @@ function OptionsView:initialize(sw, sh)
 		main.params.fps = new_fps
 		DRAW_FPS = new_fps
 		TICK_LENGTH = 1 / new_fps
+
+		-- 同步 Android 目标帧率（显示刷新率 + ADPF 调度目标）；非 Android 为 no-op
+		if love.system and love.system.setTargetFrameRate then
+			love.system.setTargetFrameRate(new_fps)
+		end
+
 		local settings = storage:load_settings()
 		settings.fps = new_fps
 		storage:save_settings(settings)
