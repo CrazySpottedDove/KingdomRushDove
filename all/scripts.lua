@@ -747,10 +747,10 @@ function scripts.soldier_barrack.update(this, store)
 		end
 
 		if this.cloak and this.soldier.target_id then
-			if not this._cloak_hidden then
+			if this._cloak_enabled then
 				U.flags_remove(this.vis, this.cloak.flags)
 				U.bans_remove(this.vis, this.cloak.bans)
-				this._cloak_hidden = true
+				this._cloak_enabled = nil
 			end
 
 			this.render.sprites[1].alpha = 255
@@ -842,10 +842,10 @@ function scripts.soldier_barrack.update(this, store)
 			SU.soldier_idle(store, this)
 
 			if this.cloak then
-				if this._cloak_hidden then
+				if not this._cloak_enabled then
 					U.flags_add(this.vis, this.cloak.flags)
 					U.bans_add(this.vis, this.cloak.bans)
-					this._cloak_hidden = nil
+					this._cloak_enabled = true
 				end
 
 				if this.cloak.alpha then
