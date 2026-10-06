@@ -42,7 +42,7 @@ Mostramos NoArmor creeps por p5 para exigir Ranger por ahí.
 #	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
 #	cant.					0	0	10	0		0	0	1	0		3	0
 #	gold	380				0	0	140	0		0	0	30	0		180	0	0
-	wave		2
+#	wave		2
 	event	duel_call			7
 					10.5																											dark_knight_kr6
 					0.1																												dark_knight_kr6
@@ -68,7 +68,7 @@ Wolves por p3 refuerzan compra de Sticky Pillage o Bramble.
 #	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
 #	cant.					5	0	0	5		0	0	1	1		0	0
 #	gold	300				75	0	0	100		0	0	30	70		0	0	0
-	wave		3
+#	wave		3
 					12																							brigand_kr6
 					3																						brigand_kr6
 					1																								brigand_kr6
@@ -98,7 +98,7 @@ Continuamos con el formato de p2 pero insistimos un poco más, exigiendo más at
 #	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
 #	cant.					0	0	0	0		0	0	0	0		0	0
 #	gold	0				0	0	0	0		0	0	0	0		0	0	0
-	wave		4
+#	wave		4
 
 
 
@@ -125,7 +125,7 @@ Continuamos con el formato de p2 pero insistimos un poco más, exigiendo más at
 #	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
 #	cant.					0	0	0	5		1	0	3	1		0	0
 #	gold	310				0	0	0	100		30	0	90	70		0	0	0
-	wave		5
+#	wave		5
 					8													necromancer_kr6
 	event	duel_call			0
 					8												dark_sapper
@@ -160,7 +160,7 @@ Termina de sugerir Sticky/Bramble. Combinaciones complicadas all arround.
 #	enemies					shadow_archer_kr6	gargoyle_kr6	tainted_wolf	brigand_kr6		dark_sapper	necromancer_kr6	dark_disciple	death_rider		dark_knight_kr6	dark_slayer
 #	cant.					0	0	16	0		0	0	0	3		2	2
 #	gold	960				0	0	224	0		0	0	0	210		120	320	0
-	wave		6
+#	wave		6
 	event	duel_call			14
 					5																		death_rider
 					7				dark_slayer
