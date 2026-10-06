@@ -56,4 +56,13 @@
 # zip "$OUTPUT_ZIP" -@  < "$BASE_DIR/makefiles/.tmp_files"
 # cd - >/dev/null
 
-git rev-parse HEAD > ./current_version_commit_hash.txt
+# 更新器服务端（git_services.rs: /commits）以 master 为基准：
+#   rev_range = "<client_hash>..<git rev-parse master>"，diff 也用 <client_hash> <master>。
+# 因此客户端记录的必须是 master 上的提交，不能是 dev（master 是独立投影分支，dev 不是其祖先，
+# 否则 <dev_hash>..master 会等于整个 master 历史，导致每次全新安装都误报"有更新"）。
+if master_hash="$(git rev-parse --verify --quiet master)"; then
+    printf '%s\n' "$master_hash" > ./current_version_commit_hash.txt
+else
+    echo "WARN: 本地没有 master 分支，回退记录 HEAD；请先执行 make package 生成 master 投影" >&2
+    git rev-parse HEAD > ./current_version_commit_hash.txt
+fi
