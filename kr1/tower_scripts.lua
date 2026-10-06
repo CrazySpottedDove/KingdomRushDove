@@ -12060,8 +12060,8 @@ function scripts.tower_stargazers.update(this, store)
 							if not dead_hit[enemy.id] then
 								dead_hit[enemy.id] = true
 
-								-- 死亡敌人触发星爆，伤害系数为 1
-								scripts.tower_stargazers.create_star_death(this, store, enemy, 1)
+								-- 死亡敌人触发星爆，伤害系数为 0.5
+								scripts.tower_stargazers.create_star_death(this, store, enemy, 0.5)
 							end
 						end
 
