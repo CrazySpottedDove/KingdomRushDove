@@ -5859,7 +5859,7 @@ function scripts.druid_shooter_sylvan.update(this, store)
 		if this.owner.tower.blocked or not this.owner.tower.can_do_magic then
 		-- block empty
 		elseif store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
-			local target, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this.owner), a.range, nil, a.vis_flags, a.vis_bans, function(v)
+			local target, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this.owner), this.owner.attacks.range, nil, a.vis_flags, a.vis_bans, function(v)
 				return not table.contains(a.excluded_templates, v.template_name) and not U.has_modifier(store, v, "mod_druid_sylvan")
 			end)
 
@@ -5906,6 +5906,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 
 				new_mod.modifier.target_id = new_target.id
 				new_mod.modifier.level = this.modifier.level
+				new_mod.modifier.damage_factor = this.modifier.damage_factor
 				new_mod.modifier.source_id = this.modifier.source_id
 				new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
 
@@ -5941,7 +5942,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 		end
 
 		if store.tick_ts - ray_ts > this.ray_cooldown then
-			local damage = E.assign_damage(DAMAGE_TRUE, this.damage, this.id, target.id)
+			local damage = E.assign_damage(DAMAGE_TRUE, this.damage * m.damage_factor * m.level, this.id, target.id)
 
 			queue_damage(store, damage)
 
@@ -5962,9 +5963,9 @@ function scripts.mod_druid_sylvan.update(this, store)
 						b.bullet.damage_min = b.bullet.damage_max
 						b.bullet.target_id = t.id
 						b.bullet.source_id = this.id
-						b.bullet.from = v(target.pos.x + target.unit.mod_offset.x, target.pos.y + target.unit.mod_offset.y)
-						b.bullet.to = v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
-						b.pos = vclone(b.bullet.from)
+						b.bullet.from:set(target.pos.x + target.unit.mod_offset.x, target.pos.y + target.unit.mod_offset.y)
+						b.bullet.to:set(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
+						b.pos:copy(b.bullet.from)
 						b.bullet.damage_factor = m.damage_factor
 
 						simulation:queue_insert_entity(b)
@@ -5987,6 +5988,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 				new_mod.modifier.source_id = this.modifier.source_id
 				new_mod.modifier.level = this.modifier.level
 				new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
+				new_mod.modifier.damage_factor = this.modifier.damage_factor
 
 				simulation:queue_insert_entity(new_mod)
 			end
