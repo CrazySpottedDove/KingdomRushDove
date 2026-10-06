@@ -165,6 +165,12 @@ function mu.apply_params(params, game_name, game_target, game_platform)
 	TICK_LENGTH = 1 / DRAW_FPS
 	SOUND_POOL_SIZE_FACTOR = params.sound_pool_size
 
+	-- 告诉 Android 目标帧率：系统据此选择显示刷新率并设置 ADPF 调度目标。
+	-- 非 Android 平台为 no-op。注意这里用的是用户选择的帧率上限，不是自适应降帧后的值。
+	if love.system and love.system.setTargetFrameRate then
+		love.system.setTargetFrameRate(DRAW_FPS)
+	end
+
 	-- 安卓端禁止自定义参数
 	-- autoplay（无人值守自动测试）不重置窗口：conf.lua 已经把窗口建成不可见，
 	-- 这里再 setMode 会把它重新显示出来，打断正在全屏游玩的本体。
