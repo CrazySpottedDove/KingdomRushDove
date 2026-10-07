@@ -5966,7 +5966,6 @@ function scripts.mod_druid_sylvan.update(this, store)
 						b.bullet.from:set(target.pos.x + target.unit.mod_offset.x, target.pos.y + target.unit.mod_offset.y)
 						b.bullet.to:set(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
 						b.pos:copy(b.bullet.from)
-						b.bullet.damage_factor = m.damage_factor
 
 						simulation:queue_insert_entity(b)
 					end
@@ -5985,10 +5984,10 @@ function scripts.mod_druid_sylvan.update(this, store)
 				local new_mod = E:create_entity(this.template_name)
 
 				new_mod.modifier.target_id = new_target.id
-				new_mod.modifier.source_id = this.modifier.source_id
-				new_mod.modifier.level = this.modifier.level
-				new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
-				new_mod.modifier.damage_factor = this.modifier.damage_factor
+				new_mod.modifier.source_id = m.source_id
+				new_mod.modifier.level = m.level
+				new_mod.modifier.duration = m.duration - (store.tick_ts - m.ts) + 1
+				new_mod.modifier.damage_factor = m.damage_factor
 
 				simulation:queue_insert_entity(new_mod)
 			end
