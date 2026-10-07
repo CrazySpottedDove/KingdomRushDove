@@ -32166,7 +32166,7 @@ function scripts.tower_archers.update(this, store)
 				elseif assign_shoot(saa, enemy, enemy.pos) then
 					saa.ts = store.tick_ts
 
-					S:queue(saa.sound)
+					S:queue(saa.sound, saa.sound_args)
 				end
 			end
 
@@ -32281,11 +32281,11 @@ function scripts.tower_archers.update(this, store)
 			end
 
 			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-				local trigger_enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ba.vis_flags, ba.vis_bans)
+				local trigger_enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), a.range, ba.vis_flags, ba.vis_bans)
 
 				if not trigger_enemy then
 					ba.ts = ba.ts + fts(10)
-				elseif assign_shoot(ba, trigger_enemy, pred_pos) then
+				elseif assign_shoot(ba, trigger_enemy, trigger_enemy.pos) then
 					ba.ts = store.tick_ts
 				end
 			end
@@ -32408,7 +32408,7 @@ function scripts.controller_archers_shooter.update(this, store)
 		b.bullet.to = V.v(pred_pos.x + hoffset.x, pred_pos.y + hoffset.y)
 		b.bullet.target_id = enemy and enemy.id
 		b.bullet.source_id = this.tower_ref.id
-		b.bullet.damage_factor = this.tower_ref.tower.damage_factor or 1
+		b.bullet.damage_factor = this.tower_ref.tower.damage_factor
 
 		b.bullet.flight_time = 2 * (math.sqrt(2 * b.bullet.fixed_height * b.bullet.g * -1) / b.bullet.g * -1)
 		b.bullet.predict_target_pos = predict_pos
@@ -32418,10 +32418,20 @@ function scripts.controller_archers_shooter.update(this, store)
 
 	local function skill_a_targets(aa, enemy, enemies)
 		local tower = this.tower_ref
-		local targets = {enemy}
-		local first_target_on_left = enemy.pos.x < tower.pos.x
 
 		if enemies and #enemies > 0 then
+			table.sort(enemies, function(e1, e2)
+				local ban_stun_e1 = band(e1.vis.bans, F_STUN) ~= 0 or band(e1.vis.flags, F_BOSS) ~= 0
+				local ban_stun_e2 = band(e2.vis.bans, F_STUN) ~= 0 or band(e2.vis.flags, F_BOSS) ~= 0
+				if ban_stun_e1 and not ban_stun_e2 then
+					return false
+				elseif ban_stun_e2 and not ban_stun_e1 then
+					return true
+				end
+				return false
+			end)
+			local targets = {enemies[1]}
+			local first_target_on_left = enemy.pos.x < tower.pos.x
 			for i = 2, aa.targets do
 				local e = enemies[km.zmod(i, #enemies)]
 
@@ -32433,12 +32443,12 @@ function scripts.controller_archers_shooter.update(this, store)
 					table.insert(targets, targets[i - 1])
 				end
 			end
-
-			table.sort(targets, function(e1, e2)
-				return V.dist2(tower.pos.x, tower.pos.y, e1.pos.x, e1.pos.y) > V.dist2(tower.pos.x, tower.pos.y, e2.pos.x, e2.pos.y)
-			end)
+			return targets
 		end
-
+		local targets = {enemy}
+		for i = 2, aa.targets do
+			targets[i] = enemy
+		end
 		return targets
 	end
 
@@ -32485,7 +32495,7 @@ function scripts.controller_archers_shooter.update(this, store)
 			ss.flip_x = true
 		end
 
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			shoot_skill_a_bullet(aa, target)
 		end
 	end
@@ -32503,9 +32513,12 @@ function scripts.controller_archers_shooter.update(this, store)
 			U.y_wait(store, aa.shoot_time)
 
 			local enemy = this.trigger_enemy
-			local new_enemy, new_enemies = U.find_foremost_enemy(store, tpos(tower), 0, a.range, fts(10), aa.vis_flags, aa.vis_bans)
+			local new_enemy, new_enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(tower), a.range * 1.1, aa.vis_flags, aa.vis_bans)
 
 			if new_enemy then
+				if this.shooter_id % 2 == 0 and new_enemies[2] and new_enemies[1].health.hp < BIG_ENEMY_HP and not is_skill_a then
+					new_enemy = new_enemies[2]
+				end
 				this.pred_pos = new_enemy.pos
 
 				shot_animation(ss.ts)
