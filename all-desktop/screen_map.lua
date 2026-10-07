@@ -5176,7 +5176,7 @@ local function thumb_is_light(r, g, b, a)
 end
 
 --- 清空缓存：缓存里持有图集纹理引用，图集重载后必须重建。
-function reset_thumb_caches()
+reset_thumb_caches = function()
 	thumb_info_cache = {}
 	thumb_frame_cache = {}
 end

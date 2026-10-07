@@ -2967,7 +2967,7 @@ return {
 	barrel_tower_berserker_unit_attack = {
 		from = 41,
 		prefix = "barrel_tower_berserker_unit",
-		to = 60
+		to = 82
 	},
 	barrel_tower_berserker_unit_attack_2 = {
 		from = 61,
