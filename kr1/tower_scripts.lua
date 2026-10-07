@@ -17040,12 +17040,6 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 	a1.damage_max = a1.damage_max_config[this.level]
 	a1.ts = store.tick_ts
 
-	local a2 = this.melee.attacks[2]
-
-	a2.damage_min = a2.damage_min_config[this.level]
-	a2.damage_max = a2.damage_max_config[this.level]
-	a2.ts = store.tick_ts
-
 	local tower = store.entities[this.source_id]
 
 	if not tower then
