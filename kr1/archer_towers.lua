@@ -1069,14 +1069,13 @@ tt.powers.skill_buff.price_inc = 125
 tt.powers.skill_buff.damage_min = 1
 tt.powers.skill_buff.damage_max = 1
 tt.powers.skill_buff.max_times = 0
-tt.powers.skill_buff.max_times_table = {20, 50, 999999}
+tt.powers.skill_buff.max_times_table = {20, 50, 9999999}
 tt.powers.skill_buff.times = 0
--- 以下 4 个数值同时被 skill_buff 的脚本与技能文案引用（脚本里不再写死字面量）
 -- 买下技能时给自身攻速的冷却系数（0.9 → 攻速 +10%）
 tt.powers.skill_buff.cooldown_factor = 0.9
--- 每个灵魂给自身的攻速冷却系数（0.99 → 每层 +1%）与层数上限
-tt.powers.skill_buff.soul_cooldown_factor = 0.99
-tt.powers.skill_buff.soul_cooldown_max_stacks = 25
+-- 每个灵魂给自身的攻速冷却系数（0.99 → 每层 +0.78125%）与层数上限
+tt.powers.skill_buff.soul_cooldown_factor = 0.9921875
+tt.powers.skill_buff.soul_cooldown_max_stacks = 32
 -- 给附近随机一座防御塔的伤害加成（0.008 → +0.8%）
 tt.powers.skill_buff.soul_tower_damage_factor = 0.008
 tt.info.fn = scripts.tower_dark_elf.get_info
@@ -1087,9 +1086,7 @@ tt.main_script.remove = scripts.tower_dark_elf.remove
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.attacks.range = 300
 tt.attacks.list[1] = CC("bullet_attack")
-tt.attacks.list[1].cooldown = 2.75
--- exactly, cooldown only based on the animation time 3.38 * 5 / 6 = 2.8166, bigger than this cooldown assigned
--- tt.attacks.list[1].shoot_time = fts(13)
+tt.attacks.list[1].cooldown = 2.9
 tt.attacks.list[1].shoot_time = fts(65 / 6)
 tt.attacks.list[1].node_prediction_prepare = fts(60)
 tt.attacks.list[1].node_prediction = fts(15)
@@ -1162,8 +1159,8 @@ tt = RT("bullet_tower_dark_elf_lvl4", "bullet")
 tt.bullet.hit_fx = "fx_bullet_tower_dark_elf_hit"
 tt.bullet.flight_time = fts(23)
 tt.bullet.hit_time = fts(1)
-tt.bullet.damage_max = 146
-tt.bullet.damage_min = 134
+tt.bullet.damage_max = 152
+tt.bullet.damage_min = 136
 tt.bullet.level = 1
 tt.main_script.update = scripts.bullet_tower_dark_elf.update
 tt.render.sprites[1].name = "shot_run"
