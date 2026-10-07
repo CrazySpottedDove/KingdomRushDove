@@ -349,7 +349,7 @@ function controller_stage_40_ballista.update(this, store, script)
 			}, 1)
 		end
 
-		this.shoot_nmbr = this.shoot_nmbr + 1
+		this.shoot_nmbr = math.min(this.shoot_nmbr + 1, #this.damage)
 
 		if this.shoot_nmbr == 1 then
 			U.y_wait_unconditional(store, 0.5)
