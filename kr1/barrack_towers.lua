@@ -3863,6 +3863,8 @@ tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_min = 9
 tt.melee.attacks[1].damage_max = 13
 tt.melee.attacks[1].hit_time = fts(10)
+tt.melee.attacks[1].mod = "mod_knights_stun"
+tt.melee.attacks[1].mod_change = 0.2
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].animation = "attack_2"
 tt.melee.attacks[2].hit_time = fts(6)
@@ -3896,6 +3898,9 @@ tt.timed_attacks.list[2].hp_trigger = 0.35
 tt.timed_attacks.list[2].sound = "TowerKnightsOrderLastStandCast"
 tt.sound_events.death = "TowerKnightsOrderUnitDeath"
 tt.ui.click_rect = r(-18, -2, 36, 32)
+
+tt = RT("mod_knights_stun", "mod_stun")
+tt.modifier.duration = 1
 
 tt = RT("aura_knights_skill_a", "aura")
 tt.aura.track_source = true
