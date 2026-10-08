@@ -2748,8 +2748,8 @@ function scripts.aura_ranger_thorn.update(this, store)
 
 	a.ts = store.tick_ts
 
-	local function find_targets()
-		local targets = U.find_enemies_in_range_filter_on(this.pos, a.radius, a.vis_flags, a.vis_bans, function(e)
+	local function find_targets(owner)
+		local targets = U.find_enemies_in_range_filter_on(this.pos, owner.attacks.range, a.vis_flags, a.vis_bans, function(e)
 			return not e.enemy._ranger_thorn_ts or store.tick_ts - e.enemy._ranger_thorn_ts >= a.cooldown * (store.entities[a.source_id] and store.entities[a.source_id].tower.cooldown_factor or 1) * 0.8
 		end)
 
@@ -2766,7 +2766,7 @@ function scripts.aura_ranger_thorn.update(this, store)
 		if owner.tower.blocked then
 		-- block empty
 		elseif store.tick_ts - a.ts >= a.cooldown * owner.tower.cooldown_factor then
-			local targets = find_targets()
+			local targets = find_targets(owner)
 
 			if not targets or #targets < a.min_count then
 				a.ts = a.ts + 0.05
@@ -2776,7 +2776,7 @@ function scripts.aura_ranger_thorn.update(this, store)
 				U.animation_start(owner, a.owner_animation, nil, store.tick_ts, false, a.owner_sid)
 				U.y_wait_unconditional(store, a.hit_time)
 
-				targets = find_targets()
+				targets = find_targets(owner)
 
 				if not targets or #targets < a.min_count then
 				-- block empty

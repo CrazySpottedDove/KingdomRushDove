@@ -10027,26 +10027,26 @@ scripts.mod_shield = {
 	end
 }
 
-scripts.rally_fn = {
-	default = function(this, store)
-		signal.emit("rally-point-changed", this)
-		local b = this.barrack
-		local all_dead = true
-		for i = 1, #b.soldiers do
-			local s = b.soldiers[i]
-			if b.scattered then
-				s.nav_rally.pos = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-				s.nav_rally.center:copy(b.nav_rally.pos)
-			else
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-			end
-			s.nav_rally.new = true
-			all_dead = all_dead and s.health.dead
-		end
-		if not all_dead then
-			S:queue(this.sound_events.change_rally_point)
-		end
+scripts.fx_utils = {}
+
+function scripts.fx_utils.in_loop_out(this, store, script)
+	if this.animation_in then
+		U.y_animation_play(this, this.animation_in, nil, store.tick_ts, 1, 1)
 	end
-}
+
+	if this.animation_loop then
+		this.render.sprites[1].loop = true
+		this.render.sprites[1].ts = store.tick_ts
+
+		U.animation_start(this, this.animation_loop, nil, store.tick_ts, true)
+		U.y_wait(store, this.loop_time)
+	end
+
+	if this.animation_end then
+		U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1, 1)
+	end
+
+	simulation:queue_remove_entity(this)
+end
 
 return scripts

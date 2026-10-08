@@ -90,6 +90,7 @@ return {
 		"tower_knights",
 		"tower_archers",
 		"tower_wizard",
-		"tower_catapult"
+		"tower_catapult",
+		"tower_culverine"
 	}
 }
