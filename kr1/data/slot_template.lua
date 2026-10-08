@@ -86,6 +86,10 @@ return {
 		"tower_barrel_lvl4",
 		"tower_paladin_covenant_lvl4",
 		"tower_dragons_lvl4",
-		"tower_stage_28_priests_barrack"
+		"tower_stage_28_priests_barrack",
+		"tower_knights",
+		"tower_archers",
+		"tower_wizard",
+		"tower_catapult"
 	}
 }

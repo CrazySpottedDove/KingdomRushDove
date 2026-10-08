@@ -288,7 +288,7 @@ function SU.update_armor(this)
 		this.health.raw_armor = this.health.armor
 	end
 
-	this.health.armor = km.clamp(0, 1, this.health.raw_armor + this.health.armor_buff)
+	this.health.armor = km.clamp(0, this.health.raw_armor >= 1 and 1 or 0.99, this.health.raw_armor + this.health.armor_buff)
 end
 
 ---更新魔法护甲
@@ -299,7 +299,7 @@ function SU.update_magic_armor(this)
 		this.health.raw_magic_armor = this.health.magic_armor
 	end
 
-	this.health.magic_armor = km.clamp(0, 1, this.health.raw_magic_armor + this.health.magic_armor_buff)
+	this.health.magic_armor = km.clamp(0, this.heatlh.raw_magic_armor >= 1 and 1 or 0.99, this.health.raw_magic_armor + this.health.magic_armor_buff)
 end
 
 ---增加护甲buff

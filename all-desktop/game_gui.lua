@@ -66,6 +66,8 @@ local tower_menu_button_size_map = {
 	}
 }
 
+local notification_photo_size = v(260, 250)
+
 -- 跨版本图标：按 ss._content_bbox（可见内容，由 GU.measure_sprite_content 缓存）在按钮框内居中绘制。
 -- 边框（bo）在图标之后绘制，会自然遮住超出的部分。tint 用于禁用态变灰。
 local function draw_centered_tower_icon(self)
@@ -6330,7 +6332,20 @@ function NotificationView:show(id, no_transition, force_show)
 	end
 
 	local function create_photo(image, rotation, small_shadow)
-		local v_image = KImageView:new(image)
+		local ss = I:s(image)
+		local v_image
+
+		if ss and not (ss.size[1] == notification_photo_size.x and ss.size[2] == notification_photo_size.y) then
+			local target = v(notification_photo_size.x * ss.ref_scale, notification_photo_size.y * ss.ref_scale)
+			local content = GU.measure_sprite_content(ss)
+			local visible = content.visible
+
+			v_image = KImageView:new(image, target)
+			v_image.image_scale = math.min(target.x / (visible.x * ss.ref_scale), target.y / (visible.y * ss.ref_scale))
+			v_image._draw_self = draw_centered_tower_icon
+		else
+			v_image = KImageView:new(image)
+		end
 
 		v_image.anchor = V.v(v_image.size.x * 0.5, v_image.size.y * 0.5)
 		v_image.r = rotation
