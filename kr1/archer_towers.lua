@@ -74,7 +74,6 @@ tt.sound_events.insert = "ArcherRangerTaunt"
 tt = RT("aura_ranger_thorn", "aura")
 tt.aura.mod = "mod_thorn"
 tt.aura.duration = -1
-tt.aura.radius = 200
 tt.aura.vis_flags = bor(F_THORN, F_MOD)
 tt.aura.vis_bans = bor(F_FLYING, F_BOSS, F_CLIFF)
 tt.aura.cooldown = 9

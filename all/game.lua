@@ -62,6 +62,7 @@ game.required_textures = {
 	"go_towers_archers",
 	"go_towers_wizard",
 	"go_towers_knights",
+	"go_towers_culverine",
 	"go_stage128",
 	"tower_holders"
 }
@@ -119,7 +120,8 @@ game.required_sounds = {
 	"tower_catapult",
 	"tower_knights",
 	"tower_archers",
-	"tower_wizard"
+	"tower_wizard",
+	"tower_culverine"
 }
 game.required_exoskeletons = {
 	"ignis_altar_lava_golem",
@@ -129,6 +131,13 @@ game.required_exoskeletons = {
 	"tower_catapult_level_4Def",
 	"tower_catapult_level_4_rockyDef",
 	"tower_catapult_level_4_ballsDef",
+	"DC_4_TurretDef",
+	"DC_4_BodyDef",
+	"DC_4_TurretBackDef",
+	"DC_4_BodyBackDef",
+	"DC_4_FullThrottle_bgDef",
+	"DC_4_FullThrottle_fgDef",
+	"DC_4_UltDef",
 	"archer4Def",
 	"archer4_overborderDef",
 	"archer4_torreDef",

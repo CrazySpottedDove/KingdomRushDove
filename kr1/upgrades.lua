@@ -10,6 +10,102 @@ local function T(name)
 	return E:get_template(name)
 end
 
+-- 数值缩放小工具 ----------------------------------------------------------
+-- 把 obj[key] 乘以 factor
+local function mul_field(obj, key, factor)
+	obj[key] = obj[key] * factor
+end
+
+-- 把 obj 上列出的若干字段同乘 factor
+local function mul_keys(obj, factor, ...)
+	for _, k in ipairs({...}) do
+		obj[k] = obj[k] * factor
+	end
+end
+
+-- 把 owner[min_key]/owner[max_key] 同乘 factor（默认 damage_min / damage_max）
+local function mul_dmg(owner, factor, min_key, max_key)
+	local mn = min_key or "damage_min"
+	local mx = max_key or "damage_max"
+	owner[mn] = owner[mn] * factor
+	owner[mx] = owner[mx] * factor
+end
+
+-- 把数组里的每个元素同乘 factor
+local function mul_arr(arr, factor)
+	for i = 1, #arr do
+		arr[i] = arr[i] * factor
+	end
+end
+
+-- 把 damage_min / damage_max 统一为“平均值 * factor”
+local function avg_dmg_mul(owner, factor)
+	local damage = (owner.damage_min + owner.damage_max) * 0.5 * factor
+	owner.damage_min = damage
+	owner.damage_max = damage
+end
+
+-- 给一组模板的 bullet.damage_hooks 追加同一个 hook
+local function add_damage_hooks(template_names, hook)
+	for _, n in ipairs(template_names) do
+		local b = T(n).bullet
+		b.damage_hooks[#b.damage_hooks + 1] = hook
+	end
+end
+
+-- 缩放一组塔的建造价格
+local function scale_tower_price(towers, factor, round_fn)
+	for _, n in pairs(towers) do
+		local t = T(n)
+		if t.tower and t.tower.price then
+			t.tower.price = round_fn(t.tower.price * factor)
+		end
+	end
+end
+
+-- 缩放一组塔的技能价格（price_base / price_inc）
+local function scale_power_prices(towers, factor, round_fn)
+	for _, n in pairs(towers) do
+		local t = T(n)
+		if t.powers then
+			for _, p in pairs(t.powers) do
+				if p.price_base then
+					p.price_base = round_fn(p.price_base * factor)
+				end
+				if p.price_inc then
+					p.price_inc = round_fn(p.price_inc * factor)
+				end
+			end
+		end
+	end
+end
+
+-- 缩放一组塔的伤害倍率
+local function scale_tower_damage(towers, factor)
+	for _, n in pairs(towers) do
+		T(n).tower.damage_factor = T(n).tower.damage_factor * factor
+	end
+end
+
+-- 缩放一组塔的攻击射程（可用 skip 表跳过指定塔）
+local function scale_tower_attack_range(towers, factor, skip)
+	for _, n in pairs(towers) do
+		if not (skip and skip[n]) then
+			T(n).attacks.range = T(n).attacks.range * factor
+		end
+	end
+end
+
+-- 等比缩放 sprite 的 scale（无 scale 时以 factor 初始化）
+local function scale_sprite(s, factor)
+	if s.scale then
+		s.scale.x = s.scale.x * factor
+		s.scale.y = s.scale.y * factor
+	else
+		s.scale = V.v(factor, factor)
+	end
+end
+
 local upgrades = {}
 
 upgrades.max_level = nil
@@ -1507,7 +1603,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_ignis_altar",
 	"tower_melting_furnace",
 	"tower_sandworm",
-	"tower_catapult"
+	"tower_catapult",
+	"tower_culverine"
 }
 
 local fps_based_keys = table.to_map({"hit_time", "cast_time", "shoot_time", "dodge_time", "cycle_time", "shoot_times", "hit_times"})
@@ -1543,43 +1640,32 @@ local function scale_fps_based_keys(tbl, factor, visited)
 end
 
 function upgrades:bomb_damage_mul(damage_factor)
-	local engineer_bombs = self.engineer_bombs
-	for _, n in ipairs(engineer_bombs) do
-		T(n).bullet.damage_min = T(n).bullet.damage_min * damage_factor
-		T(n).bullet.damage_max = T(n).bullet.damage_max * damage_factor
+	for _, n in ipairs(self.engineer_bombs) do
+		mul_dmg(T(n).bullet, damage_factor)
 	end
 
-	T("tower_dwaarp").attacks.list[1].damage_min = T("tower_dwaarp").attacks.list[1].damage_min * damage_factor
-	T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * damage_factor
-	T("tower_melting_furnace").attacks.list[1].damage_min = T("tower_melting_furnace").attacks.list[1].damage_min * damage_factor
-	T("tower_melting_furnace").attacks.list[1].damage_max = T("tower_melting_furnace").attacks.list[1].damage_max * damage_factor
-	T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * damage_factor
-	T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * damage_factor
-	T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * damage_factor
-	T("mod_ray_frankenstein").dps.damage_max = T("mod_ray_frankenstein").dps.damage_max * damage_factor
-	T("tower_flamespitter_lvl4").attacks.list[1].damage_min = T("tower_flamespitter_lvl4").attacks.list[1].damage_min * damage_factor
-	T("tower_flamespitter_lvl4").attacks.list[1].damage_max = T("tower_flamespitter_lvl4").attacks.list[1].damage_max * damage_factor
-	T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * damage_factor
-	T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * damage_factor
-	T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * damage_factor
-	T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * damage_factor
-	T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * damage_factor
-	T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * damage_factor
-	T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_min = T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_min * damage_factor
-	T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_max = T("soldier_tower_demon_pit_basic_attack_lvl4").explosion_damage_max * damage_factor
+	mul_dmg(T("tower_dwaarp").attacks.list[1], damage_factor)
+	mul_dmg(T("tower_melting_furnace").attacks.list[1], damage_factor)
+	mul_dmg(T("ray_tesla"), damage_factor, "bounce_damage_min", "bounce_damage_max")
+	mul_dmg(T("mod_ray_frankenstein").dps, damage_factor)
+	mul_dmg(T("tower_flamespitter_lvl4").attacks.list[1], damage_factor)
+	mul_dmg(T("mod_tower_rotten_forest_burst_damage").dps, damage_factor)
+	mul_dmg(T("mod_ignis_altar_damage"), damage_factor)
+	mul_dmg(T("aura_tower_sandworm").aura, damage_factor)
+	mul_dmg(T("soldier_tower_demon_pit_basic_attack_lvl4"), damage_factor, "explosion_damage_min", "explosion_damage_max")
+	mul_dmg(T("aura_bullet_culverine").aura, damage_factor)
+	mul_dmg(T("aura_bullet_culverine_skill_b").aura, damage_factor)
+	mul_dmg(T("aura_culverine_ultimate").aura, damage_factor)
 end
 
 function upgrades:mage_bolt_damage_mul(damage_factor)
 	for _, n in ipairs(self.mage_tower_bolts) do
-		T(n).bullet.damage_min = T(n).bullet.damage_min * damage_factor
-		T(n).bullet.damage_max = T(n).bullet.damage_max * damage_factor
+		mul_dmg(T(n).bullet, damage_factor)
 	end
 
-	T("mod_ray_arcane").dps.damage_min = T("mod_ray_arcane").dps.damage_min * damage_factor
-	T("mod_ray_arcane").dps.damage_max = T("mod_ray_arcane").dps.damage_max * damage_factor
-	T("mod_pixie_pickpocket").modifier.damage_min = T("mod_pixie_pickpocket").modifier.damage_min * damage_factor
-	T("mod_pixie_pickpocket").modifier.damage_max = T("mod_pixie_pickpocket").modifier.damage_max * damage_factor
-	T("mod_ultimate_wizard").damage = T("mod_ultimate_wizard").damage * damage_factor
+	mul_dmg(T("mod_ray_arcane").dps, damage_factor)
+	mul_dmg(T("mod_pixie_pickpocket").modifier, damage_factor)
+	mul_field(T("mod_ultimate_wizard"), "damage", damage_factor)
 
 	local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
 
@@ -1587,10 +1673,8 @@ function upgrades:mage_bolt_damage_mul(damage_factor)
 		d[k] = v * damage_factor
 	end
 
-	T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * damage_factor
-	T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * damage_factor
-	T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * damage_factor
-	T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * damage_factor
+	mul_dmg(T("mod_lava_infernal_mage").dps, damage_factor)
+	mul_dmg(T("mod_wicked_sister_poison").dps, damage_factor)
 end
 
 function upgrades:patch_templates(max_level)
@@ -1604,19 +1688,13 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("archer_salvage")
 
 	if u then
-		for _, n in pairs(archer_towers) do
-			T(n).tower.price = math.ceil(T(n).tower.price * u.cost_factor)
-		end
+		scale_tower_price(archer_towers, u.cost_factor, math.ceil)
 	end
 
 	u = self:get_upgrade("archer_eagle_eye")
 
 	if u then
-		for _, n in pairs(archer_towers) do
-			T(n).attacks.range = T(n).attacks.range * u.range_factor
-		end
-
-		T("aura_ranger_thorn").aura.radius = T("aura_ranger_thorn").aura.radius * u.range_factor
+		scale_tower_attack_range(archer_towers, u.range_factor)
 	end
 
 	u = self:get_upgrade("archer_piercing")
@@ -1638,36 +1716,17 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("archer_far_shots")
 
 	if u then
-		for _, n in pairs(archer_towers) do
-			T(n).attacks.range = T(n).attacks.range * u.range_factor
-		end
-
-		T("aura_ranger_thorn").aura.radius = T("aura_ranger_thorn").aura.radius * u.range_factor
+		scale_tower_attack_range(archer_towers, u.range_factor)
 	end
 
 	u = self:get_upgrade("archer_logger")
 	if u then
-		for _, n in pairs(archer_towers) do
-			local t = T(n)
-			if t.powers then
-				for _, p in pairs(t.powers) do
-					if p.price_base then
-						p.price_base = math.ceil(p.price_base * u.cost_factor)
-					end
-					if p.price_inc then
-						p.price_inc = math.ceil(p.price_inc * u.cost_factor)
-					end
-				end
-			end
-		end
+		scale_power_prices(archer_towers, u.cost_factor, math.ceil)
 	end
 
 	u = self:get_upgrade("archer_critical")
 	if u then
-		for _, n in pairs(GS.archer_towers) do
-			local t = T(n)
-			t.tower.damage_factor = t.tower.damage_factor * u.damage_factor
-		end
+		scale_tower_damage(GS.archer_towers, u.damage_factor)
 	end
 
 	local function apply_mod(bullet, mod_name)
@@ -1684,14 +1743,11 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("archer_obsidian")
 	if u then
 		local archer_obsidian_factor = u.damage_factor
-		for _, n in ipairs(self.arrows) do
-			local b = T(n).bullet
-			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
-				if protection <= 0.1 then
-					damage.value = damage.value * archer_obsidian_factor
-				end
+		add_damage_hooks(self.arrows, function(entity, damage, protection)
+			if protection <= 0.1 then
+				damage.value = damage.value * archer_obsidian_factor
 			end
-		end
+		end)
 	end
 
 	u = self:get_upgrade("archer_tear")
@@ -1746,10 +1802,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("archer_fly_killer")
 	if u then
-		for _, n in ipairs(archer_towers) do
-			local t = T(n)
-			t.tower.damage_factor = t.tower.damage_factor * u.damage_factor
-		end
+		scale_tower_damage(archer_towers, u.damage_factor)
 		local damage_factor_fly = u.damage_factor_fly
 		for _, n in ipairs(self.arrows) do
 			local tpl = T(n)
@@ -1919,27 +1972,13 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("barrack_mobilize")
 	if u then
-		for _, n in ipairs(barrack_towers) do
-			T(n).tower.price = math.floor(T(n).tower.price * u.price_factor)
-		end
+		scale_tower_price(barrack_towers, u.price_factor, math.floor)
 	end
 
 	u = self:get_upgrade("barrack_skill_master")
 	if u then
-		for _, n in ipairs(barrack_towers) do
-			T(n).tower.price = math.floor(T(n).tower.price * u.price_factor)
-			local powers = T(n).powers
-			if powers then
-				for _, p in pairs(powers) do
-					if p.price_base then
-						p.price_base = math.ceil(p.price_base * u.price_factor)
-					end
-					if p.price_inc then
-						p.price_inc = math.ceil(p.price_inc * u.price_factor)
-					end
-				end
-			end
-		end
+		scale_tower_price(barrack_towers, u.price_factor, math.floor)
+		scale_power_prices(barrack_towers, u.price_factor, math.ceil)
 	end
 
 	u = self:get_upgrade("barrack_dominant")
@@ -1959,16 +1998,12 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("mage_spell_reach")
 
 	if u then
-		for _, n in ipairs(mage_towers) do
-			T(n).attacks.range = T(n).attacks.range * u.range_factor
-		end
+		scale_tower_attack_range(mage_towers, u.range_factor)
 	end
 
 	u = self:get_upgrade("mage_spell_reach_2")
 	if u then
-		for _, n in ipairs(mage_towers) do
-			T(n).attacks.range = T(n).attacks.range * u.range_factor
-		end
+		scale_tower_attack_range(mage_towers, u.range_factor)
 	end
 
 	u = self:get_upgrade("mage_arcane_shatter")
@@ -2017,28 +2052,14 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("mage_hermetic_study")
 
 	if u then
-		for _, n in ipairs(mage_towers) do
-			T(n).tower.price = math.ceil(T(n).tower.price * u.cost_factor)
-		end
+		scale_tower_price(mage_towers, u.cost_factor, math.ceil)
 	end
 
 	u = self:get_upgrade("mage_rune_analysis")
 
 	if u then
-		for _, n in ipairs(mage_towers) do
-			local t = T(n)
-			t.tower.price = math.ceil(t.tower.price * u.cost_factor)
-			if t.powers then
-				for _, p in pairs(t.powers) do
-					if p.price_base then
-						p.price_base = math.ceil(p.price_base * u.cost_factor)
-					end
-					if p.price_inc then
-						p.price_inc = math.ceil(p.price_inc * u.cost_factor)
-					end
-				end
-			end
-		end
+		scale_tower_price(mage_towers, u.cost_factor, math.ceil)
+		scale_power_prices(mage_towers, u.cost_factor, math.ceil)
 	end
 
 	u = self:get_upgrade("mage_purge_field")
@@ -2072,19 +2093,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("mage_old_folk")
 	if u then
-		for _, n in ipairs(mage_towers) do
-			local t = T(n)
-			if t.powers then
-				for _, p in pairs(t.powers) do
-					if p.price_base then
-						p.price_base = math.ceil(p.price_base * u.cost_factor)
-					end
-					if p.price_inc then
-						p.price_inc = math.ceil(p.price_inc * u.cost_factor)
-					end
-				end
-			end
-		end
+		scale_power_prices(mage_towers, u.cost_factor, math.ceil)
 	end
 
 	u = self:get_upgrade("mage_strike")
@@ -2094,14 +2103,10 @@ function upgrades:patch_templates(max_level)
 				damage.value = damage.value * 1.2
 			end
 		end
-		for _, n in ipairs(self.mage_tower_bolts) do
-			local b = T(n).bullet
-			b.damage_hooks[#b.damage_hooks + 1] = mage_strike
-		end
+		add_damage_hooks(self.mage_tower_bolts, mage_strike)
 
 		-- 女巫的毒伤吃不到这个科技，进行伤害补偿
-		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * 1.15
-		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * 1.15
+		mul_dmg(T("mod_wicked_sister_poison").dps, 1.15)
 	end
 
 	u = self:get_upgrade("mage_unsteady")
@@ -2111,13 +2116,9 @@ function upgrades:patch_templates(max_level)
 				damage.value = damage.value * 2 / (1 - protection)
 			end
 		end
-		for _, n in ipairs(self.mage_tower_bolts) do
-			local b = T(n).bullet
-			b.damage_hooks[#b.damage_hooks + 1] = mage_unsteady
-		end
+		add_damage_hooks(self.mage_tower_bolts, mage_unsteady)
 		-- 女巫的毒伤吃不到这个科技，进行伤害补偿
-		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * 1.1
-		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * 1.1
+		mul_dmg(T("mod_wicked_sister_poison").dps, 1.1)
 	end
 
 	u = self:get_upgrade("mage_empowered_magic")
@@ -2141,23 +2142,14 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("mage_harmony")
 
 	if u then
-		for _, n in ipairs(mage_towers) do
-			T(n).attacks.range = T(n).attacks.range * u.range_factor
-		end
+		scale_tower_attack_range(mage_towers, u.range_factor)
 
 		for _, n in ipairs(self.mage_tower_bolts) do
-			local damage = (T(n).bullet.damage_min + T(n).bullet.damage_max) * 0.5 * u.damage_factor
-			T(n).bullet.damage_min = damage
-			T(n).bullet.damage_max = damage
+			avg_dmg_mul(T(n).bullet, u.damage_factor)
 		end
 
-		local damage = (T("mod_ray_arcane").dps.damage_min + T("mod_ray_arcane").dps.damage_max) * 0.5 * u.damage_factor
-		T("mod_ray_arcane").dps.damage_min = damage
-		T("mod_ray_arcane").dps.damage_max = damage
-
-		damage = (T("mod_pixie_pickpocket").modifier.damage_min + T("mod_pixie_pickpocket").modifier.damage_max) * 0.5 * u.damage_factor
-		T("mod_pixie_pickpocket").modifier.damage_min = damage
-		T("mod_pixie_pickpocket").modifier.damage_max = damage
+		avg_dmg_mul(T("mod_ray_arcane").dps, u.damage_factor)
+		avg_dmg_mul(T("mod_pixie_pickpocket").modifier, u.damage_factor)
 
 		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
 
@@ -2165,15 +2157,10 @@ function upgrades:patch_templates(max_level)
 			d[k] = v * u.damage_factor
 		end
 
-		damage = (T("mod_lava_infernal_mage").dps.damage_min + T("mod_lava_infernal_mage").dps.damage_max) * 0.5 * u.damage_factor
-		T("mod_lava_infernal_mage").dps.damage_min = damage
-		T("mod_lava_infernal_mage").dps.damage_max = damage
+		avg_dmg_mul(T("mod_lava_infernal_mage").dps, u.damage_factor)
+		avg_dmg_mul(T("mod_wicked_sister_poison").dps, u.damage_factor)
 
-		damage = (T("mod_wicked_sister_poison").dps.damage_min + T("mod_wicked_sister_poison").dps.damage_max) * 0.5 * u.damage_factor
-		T("mod_wicked_sister_poison").dps.damage_min = damage
-		T("mod_wicked_sister_poison").dps.damage_max = damage
-
-		T("mod_ultimate_wizard").damage = T("mod_ultimate_wizard").damage * u.damage_factor
+		mul_field(T("mod_ultimate_wizard"), "damage", u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_slow_curse")
@@ -2201,18 +2188,17 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_range_finder")
 
 	if u then
-		for _, n in ipairs(engineer_towers) do
-			if n ~= "tower_mech" and n ~= "tower_balloon" then
-				T(n).attacks.range = T(n).attacks.range * u.range_factor
-			end
-		end
+		scale_tower_attack_range(engineer_towers, u.range_factor, {
+			tower_mech = true,
+			tower_balloon = true
+		})
 
-		T("tower_bfg").attacks.list[2].range_base = T("tower_bfg").attacks.list[2].range_base * u.range_factor
-		T("druid_shooter_sylvan").attacks.list[1].range = T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor
-		T("tower_flamespitter_lvl4").attacks.list[2].max_range = T("tower_flamespitter_lvl4").attacks.list[2].max_range * u.range_factor
-		T("tower_flamespitter_lvl4").attacks.list[3].max_range = T("tower_flamespitter_lvl4").attacks.list[3].max_range * u.range_factor
-		T("soldier_balloon").attacks.list[1].max_range = T("soldier_balloon").attacks.list[1].max_range * u.range_factor
-		T("soldier_mecha").attacks.list[1].max_range = T("soldier_mecha").attacks.list[1].max_range * u.range_factor
+		mul_field(T("tower_bfg").attacks.list[2], "range_base", u.range_factor)
+		mul_field(T("druid_shooter_sylvan").attacks.list[1], "range", u.range_factor)
+		mul_field(T("tower_flamespitter_lvl4").attacks.list[2], "max_range", u.range_factor)
+		mul_field(T("tower_flamespitter_lvl4").attacks.list[3], "max_range", u.range_factor)
+		mul_field(T("soldier_balloon").attacks.list[1], "max_range", u.range_factor)
+		mul_field(T("soldier_mecha").attacks.list[1], "max_range", u.range_factor)
 	end
 
 	u = self:get_upgrade("engineer_magic_dust")
@@ -2222,24 +2208,18 @@ function upgrades:patch_templates(max_level)
 				damage.value = damage.value + entity.health.hp_max * 0.05 * math.sqrt(damage.value + 1) / 12.5
 			end
 		end
-		for _, n in ipairs(engineer_bombs) do
-			local n = T(n)
-			local b = n.bullet
-			b.damage_hooks[#b.damage_hooks + 1] = u.hook
-		end
-		-- 地震、喷火在他们的逻辑里处理这个科技。
+		add_damage_hooks(engineer_bombs, u.hook)
 
+		-- 地震、喷火在他们的逻辑里处理这个科技。
 		-- 作为吃不到这个科技的补偿，腐森，特斯拉和弗兰肯斯坦的攻击得到伤害提升
-		T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * u.damage_factor
-		T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * u.damage_factor
-		T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * u.damage_factor
-		T("mod_ray_frankenstein").dps.damage_max = T("mod_ray_frankenstein").dps.damage_max * u.damage_factor
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor
-		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * u.damage_factor
-		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * u.damage_factor
-		T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * u.damage_factor
-		T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * u.damage_factor
+		mul_dmg(T("ray_tesla"), u.damage_factor, "bounce_damage_min", "bounce_damage_max")
+		mul_dmg(T("mod_ray_frankenstein").dps, u.damage_factor)
+		mul_dmg(T("mod_tower_rotten_forest_burst_damage").dps, u.damage_factor)
+		mul_dmg(T("mod_ignis_altar_damage"), u.damage_factor)
+		mul_dmg(T("aura_tower_sandworm").aura, u.damage_factor)
+		mul_dmg(T("aura_bullet_culverine").aura, u.damage_factor)
+		mul_dmg(T("aura_bullet_culverine_skill_b").aura, u.damage_factor)
+		mul_dmg(T("aura_culverine_ultimate").aura, u.damage_factor)
 	end
 
 	u = self:get_upgrade("engineer_diffusion")
@@ -2248,68 +2228,61 @@ function upgrades:patch_templates(max_level)
 			local n = T(n)
 			local b = n.bullet
 			if b.damage_radius then
-				b.damage_radius = b.damage_radius * u.radius_factor
+				mul_field(b, "damage_radius", u.radius_factor)
 				if n.hit_fx then
 					local fx = T(n.hit_fx)
 					if fx.render then
-						local s = fx.render.sprites[1]
-						if s.scale then
-							s.scale.x = s.scale.x * u.radius_factor
-							s.scale.y = s.scale.y * u.radius_factor
-						else
-							s.scale = V.v(u.radius_factor, u.radius_factor)
-						end
+						scale_sprite(fx.render.sprites[1], u.radius_factor)
 					end
 				end
 			end
 		end
-		T("tower_rotten_forest").attacks.range = T("tower_rotten_forest").attacks.range * u.radius_factor
-		T("tower_dwaarp").attacks.range = T("tower_dwaarp").attacks.range * u.radius_factor
-		T("aura_bullet_ignis_altar").render.sprites[1].scale.x = T("aura_bullet_ignis_altar").render.sprites[1].scale.x * u.radius_factor
-		T("aura_bullet_ignis_altar").render.sprites[1].scale.y = T("aura_bullet_ignis_altar").render.sprites[1].scale.y * u.radius_factor
-		T("aura_bullet_ignis_altar").aura.radius = T("aura_bullet_ignis_altar").aura.radius * u.radius_factor
-		T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.x = T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.x * u.radius_factor
-		T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.y = T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.y * u.radius_factor
-		T("aura_bullet_tower_hermit_toad_engineer_basic").aura.radius = T("aura_bullet_tower_hermit_toad_engineer_basic").aura.radius * u.radius_factor
-		T("tower_melting_furnace").attacks.range = T("tower_melting_furnace").attacks.range * u.radius_factor
-		T("aura_tower_sandworm").render.sprites[1].scale.x = T("aura_tower_sandworm").render.sprites[1].scale.x * u.radius_factor
-		T("aura_tower_sandworm").render.sprites[1].scale.y = T("aura_tower_sandworm").render.sprites[1].scale.y * u.radius_factor
-		T("aura_tower_sandworm").aura.radius = T("aura_tower_sandworm").aura.radius * u.radius_factor
+
+		mul_field(T("tower_rotten_forest").attacks, "range", u.radius_factor)
+		mul_field(T("tower_dwaarp").attacks, "range", u.radius_factor)
+
+		for _, name in ipairs({"aura_bullet_ignis_altar", "aura_bullet_tower_hermit_toad_engineer_basic", "aura_tower_sandworm"}) do
+			local t = T(name)
+			scale_sprite(t.render.sprites[1], u.radius_factor)
+			mul_field(t.aura, "radius", u.radius_factor)
+		end
+
+		mul_field(T("tower_melting_furnace").attacks, "range", u.radius_factor)
+
 		-- 补偿喷火
-		T("tower_flamespitter_lvl4").attacks.range = T("tower_flamespitter_lvl4").attacks.range * (1 + (u.radius_factor - 1) * 0.5)
+		mul_field(T("tower_flamespitter_lvl4").attacks, "range", 1 + (u.radius_factor - 1) * 0.5)
+
+		mul_field(T("aura_bullet_culverine").aura, "radius", u.radius_factor)
+		mul_field(T("aura_bullet_culverine_skill_b").aura, "radius", u.radius_factor)
+		scale_sprite(T("fx_bullet_culverine_hit").render.sprites[1], u.radius_factor)
+		scale_sprite(T("fx_bullet_culverine_skill_b_hit").render.sprites[1], u.radius_factor)
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")
 
 	if u then
-		for _, n in ipairs(engineer_towers) do
-			T(n).tower.price = math.floor(T(n).tower.price * u.cost_factor)
-		end
+		scale_tower_price(engineer_towers, u.cost_factor, math.floor)
 	end
 
 	u = self:get_upgrade("engineer_emergency_expansion")
 
 	if u then
-		for _, n in ipairs(engineer_towers) do
-			T(n).tower.price = math.floor(T(n).tower.price * u.cost_factor)
-		end
+		scale_tower_price(engineer_towers, u.cost_factor, math.floor)
 		self:bomb_damage_mul(u.damage_factor)
 	end
 
 	u = self:get_upgrade("engineer_industrialization")
 
 	if u then
-		for _, n in ipairs(self.engineer_advanced_tower) do
-			for pk, pv in pairs(T(n).powers) do
-				pv.price_base = math.floor(pv.price_base * u.cost_factor)
-				pv.price_inc = math.floor(pv.price_inc * u.cost_factor)
-			end
-		end
+		scale_power_prices(self.engineer_advanced_tower, u.cost_factor, math.floor)
 	end
 
 	u = self:get_upgrade("engineer_gnomish_tinkering")
 
 	if u then
+		local cd = u.cooldown_factor
+		local cd_e = u.cooldown_factor_electric
+
 		for _, a in ipairs({
 			T("tower_dwaarp").attacks.list[2],
 			T("tower_dwaarp").attacks.list[3],
@@ -2325,105 +2298,48 @@ function upgrades:patch_templates(max_level)
 			T("tower_melting_furnace").attacks.list[4],
 			T("tower_catapult").attacks.list[2],
 			T("tower_catapult").attacks.list[3],
-			T("tower_catapult").attacks.list[4]
+			T("tower_catapult").attacks.list[4],
+			T("tower_culverine").attacks.list[2],
+			T("tower_culverine").attacks.list[3]
 		}) do
-			a.cooldown = a.cooldown * u.cooldown_factor
+			mul_field(a, "cooldown", cd)
 		end
 
-		local at
-
-		at = T("tower_entwood").attacks.list[2]
-		at.cooldown_factor = at.cooldown_factor * u.cooldown_factor
-		at.cooldown = at.cooldown * u.cooldown_factor
-		at = T("tower_bfg").attacks.list[2]
-		at.cooldown_base = at.cooldown_base * u.cooldown_factor
-		at.cooldown_mixed_base = at.cooldown_mixed_base * u.cooldown_factor
-		at.cooldown_flying = at.cooldown_flying * u.cooldown_factor
-		at = T("tower_bfg").attacks.list[3]
-		at.cooldown_base = at.cooldown_base * u.cooldown_factor
-		at = T("tower_bfg").powers.missile
-		at.cooldown_dec = at.cooldown_dec * u.cooldown_factor
-		at.cooldown_mixed_dec = at.cooldown_mixed_dec * u.cooldown_factor
-		at = T("tower_bfg").powers.cluster
-		at.cooldown_dec = at.cooldown_dec * u.cooldown_factor
-		at = T("tower_bfg").attacks
-		at.min_cooldown = at.min_cooldown * u.cooldown_factor
-		at = T("tower_dwaarp").attacks.list[3]
-		at.cooldown_inc = at.cooldown_inc * u.cooldown_factor
-		at.cooldown_base = at.cooldown_base * u.cooldown_factor
-		at = T("tower_frankenstein").attacks.list[1]
-		at.cooldown = at.cooldown * u.cooldown_factor_electric
-		at = T("tower_tesla").attacks.list[1]
-		at.cooldown = at.cooldown * u.cooldown_factor_electric
-		at = T("tower_tesla").attacks
-		at.min_cooldown = at.min_cooldown * u.cooldown_factor_electric
-		at = T("tower_tricannon_lvl4").powers.bombardment
-		at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
-		at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
-		at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
-		at = T("tower_tricannon_lvl4").powers.overheat
-		at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
-		at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
-		at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
-		at = T("tower_demon_pit_lvl4").powers.big_guy
-		at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
-		at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
-		at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
-		at = T("tower_flamespitter_lvl4").powers.skill_bomb
-		at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
-		at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
-		at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
-		at = T("tower_flamespitter_lvl4").powers.skill_columns
-		at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
-		at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
-		at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
-		at = T("tower_sparking_geode_lvl4").powers.crystalize
-		for i = 1, #at.cooldown do
-			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
-		end
-		at = T("tower_sparking_geode_lvl4").powers.spike_burst
-		for i = 1, #at.cooldown do
-			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
-		end
-		at = T("tower_rotten_forest").powers.tree
-		at.cooldown = at.cooldown * u.cooldown_factor
-		at.cooldown_inc = at.cooldown_inc * u.cooldown_factor
-		at = T("tower_ogre_shipwreck").powers.goblin_launcher
-		for i = 1, #at.cooldown do
-			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
-		end
-		at = T("tower_rocket_riders").attacks.list[2]
-		at.cooldown = at.cooldown * u.cooldown_factor
-		at = T("rr_mine_box").attacks.list[1]
-		at.cooldown = at.cooldown * u.cooldown_factor
-
-		at = T("ignis_altar_subunit").attacks.list[1]
-		at.cooldown = at.cooldown * u.cooldown_factor
-
-		at = T("tower_sandworm").powers.worm
-		for i = 1, #at.cooldown do
-			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
-		end
-
-		at = T("tower_sandworm").powers.slime
-		for i = 1, #at.cooldown do
-			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
-		end
-
-		at = T("tower_sandworm").powers.eat
-		for i = 1, #at.cooldown do
-			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
-		end
+		mul_keys(T("tower_entwood").attacks.list[2], cd, "cooldown_factor", "cooldown")
+		mul_keys(T("tower_bfg").attacks.list[2], cd, "cooldown_base", "cooldown_mixed_base", "cooldown_flying")
+		mul_field(T("tower_bfg").attacks.list[3], "cooldown_base", cd)
+		mul_keys(T("tower_bfg").powers.missile, cd, "cooldown_dec", "cooldown_mixed_dec")
+		mul_field(T("tower_bfg").powers.cluster, "cooldown_dec", cd)
+		mul_field(T("tower_bfg").attacks, "min_cooldown", cd)
+		mul_keys(T("tower_dwaarp").attacks.list[3], cd, "cooldown_inc", "cooldown_base")
+		mul_field(T("tower_frankenstein").attacks.list[1], "cooldown", cd_e)
+		mul_field(T("tower_tesla").attacks.list[1], "cooldown", cd_e)
+		mul_field(T("tower_tesla").attacks, "min_cooldown", cd_e)
+		mul_arr(T("tower_tricannon_lvl4").powers.bombardment.cooldown, cd)
+		mul_arr(T("tower_tricannon_lvl4").powers.overheat.cooldown, cd)
+		mul_arr(T("tower_demon_pit_lvl4").powers.big_guy.cooldown, cd)
+		mul_arr(T("tower_flamespitter_lvl4").powers.skill_bomb.cooldown, cd)
+		mul_arr(T("tower_flamespitter_lvl4").powers.skill_columns.cooldown, cd)
+		mul_arr(T("tower_sparking_geode_lvl4").powers.crystalize.cooldown, cd)
+		mul_arr(T("tower_sparking_geode_lvl4").powers.spike_burst.cooldown, cd)
+		mul_keys(T("tower_rotten_forest").powers.tree, cd, "cooldown", "cooldown_inc")
+		mul_arr(T("tower_ogre_shipwreck").powers.goblin_launcher.cooldown, cd)
+		mul_field(T("tower_rocket_riders").attacks.list[2], "cooldown", cd)
+		mul_field(T("rr_mine_box").attacks.list[1], "cooldown", cd)
+		mul_field(T("ignis_altar_subunit").attacks.list[1], "cooldown", cd)
+		mul_arr(T("tower_sandworm").powers.worm.cooldown, cd)
+		mul_arr(T("tower_sandworm").powers.slime.cooldown, cd)
+		mul_arr(T("tower_sandworm").powers.eat.cooldown, cd)
 	end
 
 	u = self:get_upgrade("engineer_efficiency")
 	if u then
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * 1.25
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * 1.25
-		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * 1.25
-		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * 1.25
-		T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * 1.25
-		T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * 1.25
+		mul_dmg(T("mod_tower_rotten_forest_burst_damage").dps, 1.25)
+		mul_dmg(T("mod_ignis_altar_damage"), 1.25)
+		mul_dmg(T("aura_tower_sandworm").aura, 1.25)
+		mul_dmg(T("aura_bullet_culverine").aura, 1.25)
+		mul_dmg(T("aura_bullet_culverine_skill_b").aura, 1.25)
+		mul_dmg(T("aura_culverine_ultimate").aura, 1.25)
 	end
 
 	if self.list_id == 1 or self.list_id == 2 then

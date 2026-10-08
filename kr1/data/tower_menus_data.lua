@@ -456,6 +456,14 @@ return {
 			tt_title = _("TOWER_CATAPULT_NAME"),
 			tt_desc = _("TOWER_CATAPULT_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_culverine",
+			image = "kr6_quickmenu_main_icon_culverine",
+			type = "culverine",
+			place = 26,
+			tt_title = _("TOWER_CULVERINE_NAME"),
+			tt_desc = _("TOWER_CULVERINE_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	archer = {{M(tpl.common_upgrade, {
@@ -3981,6 +3989,55 @@ return {
 		}, {
 			tt_title = _("TOWER_CATAPULT_SKILL_C_NAME_3"),
 			tt_desc = _("TOWER_CATAPULT_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
+	culverine = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_culverine_0001",
+		sounds = {"TowerDwarvenCulverinSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_CULVERINE_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_CULVERINE_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_CULVERINE_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_CULVERINE_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_culverine_0002",
+		sounds = {"TowerDwarvenCulverinSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_CULVERINE_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_CULVERINE_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_CULVERINE_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_CULVERINE_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_culverine_0003",
+		sounds = {"TowerDwarvenCulverinSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_CULVERINE_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_CULVERINE_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_CULVERINE_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_CULVERINE_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_CULVERINE_SKILL_C_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	-- 技能按钮从左到右固定为 skill_a(place 6，左) / skill_b(place 5，中) / skill_c(place 7，右)，切勿写反。
