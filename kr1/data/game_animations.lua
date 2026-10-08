@@ -30022,6 +30022,81 @@ return {
 		prefix = "killertile_creep",
 		to = 65
 	},
+	knights_order_armor_FX = {
+		from = 1,
+		prefix = "knights_order_armor_FX",
+		to = 1
+	},
+	knights_order_armor_decal = {
+		from = 1,
+		prefix = "knights_order_armor_decal",
+		to = 1
+	},
+	knights_order_door_lvl4_close = {
+		from = 11,
+		prefix = "knights_order_door_lvl4",
+		to = 18
+	},
+	knights_order_door_lvl4_open = {
+		from = 1,
+		prefix = "knights_order_door_lvl4",
+		to = 10
+	},
+	knights_order_soldier_lvl4_attack_1 = {
+		from = 22,
+		prefix = "knights_order_soldier_lvl4",
+		to = 47
+	},
+	knights_order_soldier_lvl4_attack_2 = {
+		from = 48,
+		prefix = "knights_order_soldier_lvl4",
+		to = 63
+	},
+	knights_order_soldier_lvl4_death = {
+		from = 163,
+		prefix = "knights_order_soldier_lvl4",
+		to = 181
+	},
+	knights_order_soldier_lvl4_heal = {
+		from = 64,
+		prefix = "knights_order_soldier_lvl4",
+		to = 93
+	},
+	knights_order_soldier_lvl4_idle = {
+		from = 1,
+		prefix = "knights_order_soldier_lvl4",
+		to = 1
+	},
+	knights_order_soldier_lvl4_ultimate_hit = {
+		from = 131,
+		prefix = "knights_order_soldier_lvl4",
+		to = 151
+	},
+	knights_order_soldier_lvl4_ultimate_idle = {
+		from = 130,
+		prefix = "knights_order_soldier_lvl4",
+		to = 130
+	},
+	knights_order_soldier_lvl4_ultimate_in = {
+		from = 94,
+		prefix = "knights_order_soldier_lvl4",
+		to = 129
+	},
+	knights_order_soldier_lvl4_ultimate_out = {
+		from = 152,
+		prefix = "knights_order_soldier_lvl4",
+		to = 162
+	},
+	knights_order_soldier_lvl4_walk = {
+		from = 2,
+		prefix = "knights_order_soldier_lvl4",
+		to = 21
+	},
+	knights_order_tower_lvl4 = {
+		from = 1,
+		prefix = "knights_order_tower_lvl4",
+		to = 1
+	},
 	kraken_tentacle_big_end = {
 		from = 82,
 		prefix = "hero_pirate_tentacle_big",
