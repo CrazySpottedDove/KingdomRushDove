@@ -61,6 +61,7 @@ game.required_textures = {
 	"go_towers_catapult",
 	"go_towers_archers",
 	"go_towers_wizard",
+	"go_towers_knights",
 	"go_stage128",
 	"tower_holders"
 }
@@ -116,6 +117,7 @@ game.required_sounds = {
 	"tower_sandworm",
 	"tower_stage_28_priests_barrack",
 	"tower_catapult",
+	"tower_knights",
 	"tower_archers",
 	"tower_wizard"
 }

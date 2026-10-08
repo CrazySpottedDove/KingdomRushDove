@@ -33318,4 +33318,263 @@ function scripts.mod_wizard_ultimate.update(this, store)
 	end
 end
 
+scripts.soldier_knights = {}
+
+function scripts.soldier_knights.update(this, store)
+	local brk, sta
+	local sa = this.powers.skill_a
+	local sb = this.powers.skill_b
+	local sc = this.powers.skill_c
+	local sba = this.timed_attacks.list[1]
+	local sca = this.melee.attacks[2]
+	local sua = this.timed_attacks.list[2]
+
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
+	end
+
+	local aura_sa, aura_sc
+
+	-- 士兵可能在技能购买后才出生：按已购买等级初始化
+	if sa.level >= 1 then
+		aura_sa = E:create_entity(sa.aura_t)
+		aura_sa.aura.target_id = this.id
+		aura_sa.aura.source_id = this.id
+		aura_sa.aura.level = sa.level
+		aura_sa.armor_inc_per_hero = sa.extra_armor[sa.level]
+		aura_sa.hero_damage_factor = sa.hero_damage_factor[sa.level]
+
+		queue_insert(store, aura_sa)
+	end
+
+	if sb.level >= 1 then
+		sba.disabled = nil
+		sba.hp_ptg = sb.hp_ptg[sb.level]
+	end
+
+	if sc.level >= 1 then
+		aura_sc = E:create_entity(sc.aura_check)
+		aura_sc.aura.target_id = this.id
+		aura_sc.aura.source_id = this.id
+
+		queue_insert(store, aura_sc)
+
+		sca.cooldown = this.melee.attacks[1].cooldown * sc.cd_mult[sc.level]
+	end
+
+	while true do
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
+
+				SU.soldier_power_upgrade(this, pn)
+
+				if p == sa then
+					if not aura_sa then
+						aura_sa = E:create_entity(sa.aura_t)
+						aura_sa.aura.target_id = this.id
+						aura_sa.aura.source_id = this.id
+						aura_sa.armor_inc_per_hero = 0
+						aura_sa.hero_damage_factor = 0
+
+						queue_insert(store, aura_sa)
+					end
+
+					aura_sa.aura.level = p.level
+					aura_sa.armor_inc_per_hero = sa.extra_armor[p.level]
+					aura_sa.hero_damage_factor = sa.hero_damage_factor[p.level]
+				elseif p == sb then
+					sba.disabled = nil
+					sba.hp_ptg = p.hp_ptg[p.level]
+				elseif p == sc then
+					if not aura_sc then
+						aura_sc = E:create_entity(sc.aura_check)
+						aura_sc.aura.target_id = this.id
+						aura_sc.aura.source_id = this.id
+
+						queue_insert(store, aura_sc)
+					end
+
+					if sca then
+						sca.cooldown = this.melee.attacks[1].cooldown * p.cd_mult[p.level]
+					end
+				end
+			end
+		end
+
+		if this.health.dead then
+			this.ui.can_click = false
+
+			SU.y_soldier_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_soldier_new_rally(store, this) then
+					goto label_573_0
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+				if sta == A_IN_COOLDOWN and not sba.disabled and ready_to_attack(sba, store, this.unit.cooldown_factor) and this.health.hp < this.health.hp_max * sb.hp_overflow_factor then
+					local start_ts = store.tick_ts
+
+					U.animation_start(this, sba.animation, nil, store.tick_ts, false)
+					S:queue(sba.sound)
+
+					if SU.y_soldier_wait(store, this, sba.cast_times[1]) then
+						goto label_573_0
+					end
+
+					sba.ts = start_ts
+					local heal_amount = this.health.hp_max * sba.hp_ptg / 2
+					U.heal_with_overflow(this, heal_amount, sb.hp_overflow_factor)
+
+					U.y_wait(store, sba.cast_times[2] - sba.cast_times[1])
+
+					U.heal_with_overflow(this, heal_amount, sb.hp_overflow_factor)
+
+					U.y_animation_wait(this)
+				end
+
+				if sta == A_IN_COOLDOWN and not sua.disabled and ready_to_attack(sua, store, this.unit.cooldown_factor) and this.health.hp < this.health.hp_max * sua.hp_trigger then
+					local start_ts = store.tick_ts
+
+					local index
+					index = U.insert_on_damage(this, function(_this, _store, _damage)
+						if _store.tick_ts - sua.ts > sua.duration then
+							U.remove_on_damage(_this, index)
+							return true
+						end
+						S:queue(sua.sound)
+						U.animation_start(_this, sua.animation_hit, nil, _store.tick_ts, false)
+
+						return false
+					end)
+
+					U.animation_start(this, sua.animation_in, nil, store.tick_ts, false)
+					sua.ts = start_ts
+					SU.y_soldier_wait(store, this, sua.cast_time)
+				end
+			elseif SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+			end
+		end
+
+		::label_573_0::
+
+		coroutine.yield()
+	end
+end
+
+scripts.aura_knights_skill_a = {}
+
+function scripts.aura_knights_skill_a.update(this, store, script)
+	local soldier = store.entities[this.aura.source_id]
+	local skill_ts = store.tick_ts
+	local soldier_mod
+
+	while true do
+		soldier = store.entities[this.aura.source_id]
+
+		if not soldier then
+			if soldier_mod then
+				queue_remove(store, soldier_mod)
+			end
+
+			queue_remove(store, this)
+
+			return
+		end
+
+		this.pos.x, this.pos.y = soldier.pos.x, soldier.pos.y
+
+		if store.tick_ts - skill_ts > this.aura.cycle_time then
+			skill_ts = store.tick_ts
+
+			local near_heroes = table.filter(store.soldiers, function(k, v)
+				return v.hero and not v.health.dead and U.is_inside_ellipse(soldier.pos, v.pos, this.aura.radius)
+			end)
+			local hero_count = #near_heroes
+
+			-- 士兵护甲：每名英雄叠加，数值写进 mod 的 armor_buff.max_factor
+			if hero_count > 0 then
+				local armor_target = this.armor_inc_per_hero * hero_count
+
+				if not soldier_mod or not store.entities[soldier_mod.id] then
+					soldier_mod = E:create_entity("mod_knights_skill_a_soldier")
+					soldier_mod.modifier.target_id = soldier.id
+					soldier_mod.modifier.source_id = soldier.id
+					soldier_mod.armor_buff.max_factor = armor_target
+
+					queue_insert(store, soldier_mod)
+				elseif soldier_mod.armor_buff.max_factor ~= armor_target then
+					scripts.mod_armor_buff.remove(soldier_mod, store)
+
+					soldier_mod.armor_buff.max_factor = armor_target
+
+					scripts.mod_armor_buff.insert(soldier_mod, store)
+				end
+
+				soldier_mod.modifier.ts = store.tick_ts
+			end
+
+			-- 英雄伤害：范围内持续，按技能等级刷新
+			for i = 1, hero_count do
+				local m = E:create_entity("mod_knights_skill_a_hero")
+
+				m.inflicted_damage_factor = 1 + this.hero_damage_factor
+				m.modifier.level = this.aura.level
+				m.modifier.target_id = near_heroes[i].id
+				m.modifier.source_id = this.id
+
+				queue_insert(store, m)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.aura_knights_skill_c_check = {}
+
+function scripts.aura_knights_skill_c_check.update(this, store, script)
+	local last_cycle_ts = 0
+
+	while true do
+		local ts = store.entities[this.aura.source_id]
+
+		if not ts then
+			break
+		end
+
+		if ts.melee.attacks[2].disabled and store.tick_ts - last_cycle_ts >= this.aura.cycle_time then
+			last_cycle_ts = store.tick_ts
+
+			local targets = table.filter(store.soldiers, function(k, v)
+				return (not v.reinforcement or store.tick_ts - v.reinforcement.ts < v.reinforcement.duration) and (v.health and v.health.dead) and U.is_inside_ellipse(v.pos, ts.pos, this.aura.radius)
+			end)
+
+			if #targets > 0 then
+				ts.melee.attacks[2].disabled = false
+				ts.melee.attacks[1].disabled = true
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
 return scripts
