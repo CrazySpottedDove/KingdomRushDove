@@ -33420,6 +33420,44 @@ function scripts.soldier_knights.update(this, store)
 				end
 			end
 
+			if not sua.disabled and ready_to_attack(sua, store, this.unit.cooldown_factor) and this.health.hp < this.health.hp_max * sua.hp_trigger then
+				if U.find_first_enemy_in_range_filter_off(this.pos, 200, F_BLOCK, F_FLYING) then
+					local start_ts = store.tick_ts
+
+					local index
+					index = U.insert_on_damage(this, function(_this, _store, _damage)
+						if _store.tick_ts - sua.ts > sua.duration then
+							U.remove_on_damage(_this, index)
+							return true
+						end
+						S:queue(sua.sound)
+						U.animation_start(_this, sua.animation_hit, nil, _store.tick_ts, false)
+						if _damage.source_id then
+							local t = _store.entities[_damage.source_id]
+
+							if not t or not t.health then
+								local target_id = this.soldier.target_id
+								if target_id then
+									t = _store.entities[target_id]
+								end
+							end
+							if t and t.health then
+								local d = E.assign_damage(DAMAGE_TRUE, _damage.value * _this.unit.damage_factor, _this.id, t.id)
+								queue_damage(_store, d)
+							end
+						end
+
+						return false
+					end)
+
+					U.animation_start(this, sua.animation_in, nil, store.tick_ts, false)
+					sua.ts = start_ts
+					SU.y_soldier_wait(store, this, sua.cast_time)
+				else
+					sua.ts = sua.ts + 0.2
+				end
+			end
+
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 			if brk or sta ~= A_NO_TARGET then
@@ -33442,26 +33480,6 @@ function scripts.soldier_knights.update(this, store)
 					U.heal_with_overflow(this, heal_amount, sb.hp_overflow_factor)
 
 					U.y_animation_wait(this)
-				end
-
-				if sta == A_IN_COOLDOWN and not sua.disabled and ready_to_attack(sua, store, this.unit.cooldown_factor) and this.health.hp < this.health.hp_max * sua.hp_trigger then
-					local start_ts = store.tick_ts
-
-					local index
-					index = U.insert_on_damage(this, function(_this, _store, _damage)
-						if _store.tick_ts - sua.ts > sua.duration then
-							U.remove_on_damage(_this, index)
-							return true
-						end
-						S:queue(sua.sound)
-						U.animation_start(_this, sua.animation_hit, nil, _store.tick_ts, false)
-
-						return false
-					end)
-
-					U.animation_start(this, sua.animation_in, nil, store.tick_ts, false)
-					sua.ts = start_ts
-					SU.y_soldier_wait(store, this, sua.cast_time)
 				end
 			elseif SU.soldier_go_back_step(store, this) then
 			-- block empty
@@ -33562,7 +33580,7 @@ function scripts.aura_knights_skill_c_check.update(this, store, script)
 			last_cycle_ts = store.tick_ts
 
 			local targets = table.filter(store.soldiers, function(k, v)
-				return (not v.reinforcement or store.tick_ts - v.reinforcement.ts < v.reinforcement.duration) and (v.health and v.health.dead) and U.is_inside_ellipse(v.pos, ts.pos, this.aura.radius)
+				return (not v.reinforcement or (v.reinforcement.ts and store.tick_ts - v.reinforcement.ts < v.reinforcement.duration)) and (v.health and v.health.dead) and U.is_inside_ellipse(v.pos, ts.pos, this.aura.radius)
 			end)
 
 			if #targets > 0 then
