@@ -34300,7 +34300,7 @@ function scripts.tower_elf_ranger.update(this, store)
 		local enemy, enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), a.range, apta.vis_flags, apta.vis_bans)
 		if enemies then
 			for _, e in ipairs(enemies) do
-				if not table.arraycontains(last_enemies_shot, e.id) and not U.has_modifier(store, e, modifier) then
+				if not table.arraycontains(last_enemies_shot, e.id) and not U.has_modifier(store, e, modifier) and band(e.vis.bans, F_POISON) == 0 then
 					return e
 				end
 			end
