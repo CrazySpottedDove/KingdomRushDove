@@ -55641,5 +55641,385 @@ return {
 		prefix = "DC_UltSmoke",
 		to = 28,
 		from = 1
+	},
+	elven_elite_ranger_arrow_bramble_shot_idle = {
+		from = 1,
+		prefix = "elven_elite_ranger_arrow_bramble_shot",
+		to = 1
+	},
+	elven_elite_ranger_arrow_bramble_shot_miss = {
+		from = 2,
+		prefix = "elven_elite_ranger_arrow_bramble_shot",
+		to = 10
+	},
+	elven_elite_ranger_arrow_bramble_shot_missidle = {
+		from = 11,
+		prefix = "elven_elite_ranger_arrow_bramble_shot",
+		to = 11
+	},
+	elven_elite_ranger_arrow_hit_fx_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_arrow_hit_fx",
+		to = 6
+	},
+	elven_elite_ranger_arrow_poison_tip_idle = {
+		from = 1,
+		prefix = "elven_elite_ranger_arrow_poison_tip",
+		to = 1
+	},
+	elven_elite_ranger_arrow_poison_tip_miss = {
+		from = 2,
+		prefix = "elven_elite_ranger_arrow_poison_tip",
+		to = 10
+	},
+	elven_elite_ranger_arrow_poison_tip_missidle = {
+		from = 11,
+		prefix = "elven_elite_ranger_arrow_poison_tip",
+		to = 11
+	},
+	elven_elite_ranger_arrow_ricochet_idle = {
+		from = 1,
+		prefix = "elven_elite_ranger_arrow_ricochet",
+		to = 1
+	},
+	elven_elite_ranger_arrow_ricochet_miss = {
+		from = 2,
+		prefix = "elven_elite_ranger_arrow_ricochet",
+		to = 10
+	},
+	elven_elite_ranger_arrow_ricochet_missidle = {
+		from = 11,
+		prefix = "elven_elite_ranger_arrow_ricochet",
+		to = 11
+	},
+	elven_elite_ranger_bramble_shot_floor_hit_fx_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_floor_hit_fx",
+		to = 12
+	},
+	elven_elite_ranger_bramble_shot_hit_fx_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_hit_fx",
+		to = 16
+	},
+	elven_elite_ranger_bramble_shot_root_1_end = {
+		from = 13,
+		prefix = "elven_elite_ranger_bramble_shot_root_1",
+		to = 27
+	},
+	elven_elite_ranger_bramble_shot_root_1_idle = {
+		from = 12,
+		prefix = "elven_elite_ranger_bramble_shot_root_1",
+		to = 12
+	},
+	elven_elite_ranger_bramble_shot_root_1_start = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_root_1",
+		to = 11
+	},
+	elven_elite_ranger_bramble_shot_root_2_end = {
+		from = 13,
+		prefix = "elven_elite_ranger_bramble_shot_root_2",
+		to = 27
+	},
+	elven_elite_ranger_bramble_shot_root_2_idle = {
+		from = 12,
+		prefix = "elven_elite_ranger_bramble_shot_root_2",
+		to = 12
+	},
+	elven_elite_ranger_bramble_shot_root_2_start = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_root_2",
+		to = 11
+	},
+	elven_elite_ranger_bramble_shot_root_3_end = {
+		from = 13,
+		prefix = "elven_elite_ranger_bramble_shot_root_3",
+		to = 27
+	},
+	elven_elite_ranger_bramble_shot_root_3_idle = {
+		from = 12,
+		prefix = "elven_elite_ranger_bramble_shot_root_3",
+		to = 12
+	},
+	elven_elite_ranger_bramble_shot_root_3_start = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_root_3",
+		to = 11
+	},
+	elven_elite_ranger_bramble_shot_root_4_end = {
+		from = 13,
+		prefix = "elven_elite_ranger_bramble_shot_root_4",
+		to = 27
+	},
+	elven_elite_ranger_bramble_shot_root_4_idle = {
+		from = 12,
+		prefix = "elven_elite_ranger_bramble_shot_root_4",
+		to = 12
+	},
+	elven_elite_ranger_bramble_shot_root_4_start = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_root_4",
+		to = 11
+	},
+	elven_elite_ranger_bramble_shot_root_5_end = {
+		from = 13,
+		prefix = "elven_elite_ranger_bramble_shot_root_5",
+		to = 27
+	},
+	elven_elite_ranger_bramble_shot_root_5_idle = {
+		from = 12,
+		prefix = "elven_elite_ranger_bramble_shot_root_5",
+		to = 12
+	},
+	elven_elite_ranger_bramble_shot_root_5_start = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_root_5",
+		to = 11
+	},
+	elven_elite_ranger_bramble_shot_stun_big_end = {
+		from = 13,
+		prefix = "elven_elite_ranger_bramble_shot_stun_big",
+		to = 31
+	},
+	elven_elite_ranger_bramble_shot_stun_big_idle = {
+		from = 12,
+		prefix = "elven_elite_ranger_bramble_shot_stun_big",
+		to = 12
+	},
+	elven_elite_ranger_bramble_shot_stun_big_start = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_stun_big",
+		to = 11
+	},
+	elven_elite_ranger_bramble_shot_stun_small_end = {
+		from = 13,
+		prefix = "elven_elite_ranger_bramble_shot_stun",
+		to = 31
+	},
+	elven_elite_ranger_bramble_shot_stun_small_idle = {
+		from = 12,
+		prefix = "elven_elite_ranger_bramble_shot_stun",
+		to = 12
+	},
+	elven_elite_ranger_bramble_shot_stun_small_start = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_stun",
+		to = 11
+	},
+	elven_elite_ranger_bramble_shot_trail_particle_trail = {
+		from = 1,
+		prefix = "elven_elite_ranger_bramble_shot_trail_particle",
+		to = 9
+	},
+	elven_elite_ranger_lvl1_arrow_trail_particle_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_lvl1_arrow_trail_particle",
+		to = 4
+	},
+	elven_elite_ranger_lvl4_arrow_idle = {
+		from = 1,
+		prefix = "elven_elite_ranger_lvl4_arrow",
+		to = 1
+	},
+	elven_elite_ranger_lvl4_arrow_miss = {
+		from = 2,
+		prefix = "elven_elite_ranger_lvl4_arrow",
+		to = 10
+	},
+	elven_elite_ranger_lvl4_arrow_missidle = {
+		from = 11,
+		prefix = "elven_elite_ranger_lvl4_arrow",
+		to = 11
+	},
+	elven_elite_ranger_lvl4_ranger_attack_1 = {
+		from = 29,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 50
+	},
+	elven_elite_ranger_lvl4_ranger_attack_2 = {
+		from = 51,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 72
+	},
+	elven_elite_ranger_lvl4_ranger_attack_3 = {
+		from = 73,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 94
+	},
+	elven_elite_ranger_lvl4_ranger_attack_4 = {
+		from = 95,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 116
+	},
+	elven_elite_ranger_lvl4_ranger_bramble_shot = {
+		from = 185,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 214
+	},
+	elven_elite_ranger_lvl4_ranger_end_attack_1 = {
+		from = 127,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 133
+	},
+	elven_elite_ranger_lvl4_ranger_end_attack_2 = {
+		from = 144,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 150
+	},
+	elven_elite_ranger_lvl4_ranger_end_attack_3 = {
+		from = 161,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 167
+	},
+	elven_elite_ranger_lvl4_ranger_end_attack_4 = {
+		from = 178,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 184
+	},
+	elven_elite_ranger_lvl4_ranger_idle = {
+		from = 1,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 28
+	},
+	elven_elite_ranger_lvl4_ranger_loop_attack_1 = {
+		from = 121,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 126
+	},
+	elven_elite_ranger_lvl4_ranger_loop_attack_2 = {
+		from = 138,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 143
+	},
+	elven_elite_ranger_lvl4_ranger_loop_attack_3 = {
+		from = 155,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 160
+	},
+	elven_elite_ranger_lvl4_ranger_loop_attack_4 = {
+		from = 172,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 177
+	},
+	elven_elite_ranger_lvl4_ranger_merciless_aim_1 = {
+		from = 311,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 340
+	},
+	elven_elite_ranger_lvl4_ranger_merciless_aim_2 = {
+		from = 341,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 370
+	},
+	elven_elite_ranger_lvl4_ranger_merciless_aim_3 = {
+		from = 371,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 400
+	},
+	elven_elite_ranger_lvl4_ranger_merciless_aim_4 = {
+		from = 401,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 430
+	},
+	elven_elite_ranger_lvl4_ranger_ricochet_1 = {
+		from = 215,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 238
+	},
+	elven_elite_ranger_lvl4_ranger_ricochet_2 = {
+		from = 239,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 262
+	},
+	elven_elite_ranger_lvl4_ranger_ricochet_3 = {
+		from = 263,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 286
+	},
+	elven_elite_ranger_lvl4_ranger_ricochet_4 = {
+		from = 287,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 310
+	},
+	elven_elite_ranger_lvl4_ranger_start_attack_1 = {
+		from = 117,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 120
+	},
+	elven_elite_ranger_lvl4_ranger_start_attack_2 = {
+		from = 134,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 137
+	},
+	elven_elite_ranger_lvl4_ranger_start_attack_3 = {
+		from = 151,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 154
+	},
+	elven_elite_ranger_lvl4_ranger_start_attack_4 = {
+		from = 168,
+		prefix = "elven_elite_ranger_lvl4_ranger",
+		to = 171
+	},
+	elven_elite_ranger_lvl4_tower = {
+		from = 1,
+		prefix = "elven_elite_ranger_lvl4_tower",
+		to = 1
+	},
+	elven_elite_ranger_merciless_aim_hit_fx_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_merciless_aim_hit_fx",
+		to = 11
+	},
+	elven_elite_ranger_merciless_aim_instakill_fx = {
+		from = 1,
+		prefix = "elven_elite_ranger_merciless_aim_instakill_fx",
+		to = 11
+	},
+	elven_elite_ranger_merciless_aim_shot_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_merciless_aim_shot",
+		to = 23
+	},
+	elven_elite_ranger_poison_ranger_fx_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_poison_ranger_fx",
+		to = 22
+	},
+	elven_elite_ranger_poison_ranger_shoot_fx_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_poison_ranger_shoot_fx",
+		to = 12
+	},
+	elven_elite_ranger_poison_tip_hit_fx_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_poison_tip_hit_fx",
+		to = 20
+	},
+	elven_elite_ranger_poison_tip_projectile_mod_big = {
+		from = 1,
+		prefix = "elven_elite_ranger_poison_tip_projectile_mod_big",
+		to = 26
+	},
+	elven_elite_ranger_poison_tip_projectile_mod_small = {
+		from = 1,
+		prefix = "elven_elite_ranger_poison_tip_projectile_mod",
+		to = 26
+	},
+	elven_elite_ranger_poison_tip_trial_particle_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_poison_tip_trial_particle",
+		to = 10
+	},
+	elven_elite_ranger_ricochet_hit_fx_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_ricochet_hit_fx",
+		to = 6
+	},
+	elven_elite_ranger_ricochet_trail_particle_run = {
+		from = 1,
+		prefix = "elven_elite_ranger_ricochet_trail_particle",
+		to = 9
 	}
 }

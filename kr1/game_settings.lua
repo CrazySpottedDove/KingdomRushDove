@@ -24,7 +24,8 @@ GS.archer_towers = {
 	"tower_goblirang",
 	"tower_shaolin",
 	"tower_swamp_monster",
-	"tower_archers"
+	"tower_archers",
+	"tower_elf_ranger"
 }
 GS.mage_towers = {
 	"tower_mage_1",

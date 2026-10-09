@@ -18,6 +18,7 @@ signal.emit("show-balloon_tutorial-pos","S05_INTRO_01",false,V.v(620,320))
 U.y_wait(store,2)
 signal.emit("show-balloon_tutorial-pos","S05_INTRO_02",false,V.v(620,320))
 U.y_wait(store,2)
+signal.emit("wave-notification","view","TOWER_ELF_RANGER")
 local upper_path
 for k,vv in pairs(store.entities) do
 if vv.template_name=="decal_stage_205_upper_path" then

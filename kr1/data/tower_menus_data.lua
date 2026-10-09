@@ -610,6 +610,14 @@ return {
 			tt_title = _("TOWER_ARCHERS_NAME"),
 			tt_desc = _("TOWER_ARCHERS_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_elf_ranger",
+			type = "elf_ranger",
+			image = "kr6_quickmenu_main_icon_rangers",
+			place = 26,
+			tt_title = _("TOWER_ELF_RANGER_NAME"),
+			tt_desc = _("TOWER_ELF_RANGER_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	-- 技能按钮从左到右固定为 skill_a(place 6，左) / skill_b(place 5，中) / skill_c(place 7，右)，
@@ -661,6 +669,55 @@ return {
 		}, {
 			tt_title = _("TOWER_ARCHERS_SKILL_C_NAME_3"),
 			tt_desc = _("TOWER_ARCHERS_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
+	elf_ranger = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_rangers_0001",
+		sounds = {"TowerElvenRangerSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_ELF_RANGER_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ELF_RANGER_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ELF_RANGER_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ELF_RANGER_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_rangers_0002",
+		sounds = {"TowerElvenRangerSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_ELF_RANGER_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ELF_RANGER_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ELF_RANGER_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ELF_RANGER_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_rangers_0003",
+		sounds = {"TowerElvenRangerSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_ELF_RANGER_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ELF_RANGER_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ELF_RANGER_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ELF_RANGER_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_ELF_RANGER_SKILL_C_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	barrack = {{M(tpl.common_upgrade, {
