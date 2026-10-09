@@ -1314,7 +1314,12 @@ upgrades.arrows = {
 	"bullet_swamp_monster_bomb",
 	"bullet_swamp_monster_bomb_tosky",
 	"bullet_archers",
-	"bullet_archers_skill_a"
+	"bullet_archers_skill_a",
+	"bullet_elf_ranger",
+	"bullet_elf_ranger_skill_a",
+	"bullet_elf_ranger_skill_b",
+	"bullet_elf_ranger_skill_c",
+	"bullet_elf_ranger_skill_c_bounce_clone"
 }
 
 upgrades.soldiers = {

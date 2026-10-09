@@ -34174,4 +34174,721 @@ function scripts.tower_culverine.remove(this, store)
 	return true
 end
 
+-- 精灵精英游侠
+scripts.tower_elf_ranger = {}
+
+function scripts.tower_elf_ranger.update(this, store)
+	local shooter_sid = 3
+	local a = this.attacks
+	local ba = this.attacks.list[1]
+	local apta = this.attacks.list[2]
+	local abs = this.attacks.list[3]
+	local ama = this.attacks.list[4]
+	local sa = this.powers.skill_a
+	local sb = this.powers.skill_b
+	local sc = this.powers.skill_c
+
+	local idle_reset_ts = store.tick_ts
+
+	local function shoot_animation(attack, pos, name)
+		local soffset = this.render.sprites[shooter_sid].offset
+		local an, af = U.animation_name_facing_point(this, attack.animation, pos, shooter_sid, soffset)
+
+		an = name == nil and an or name .. "_" .. an
+
+		U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
+
+		return an
+	end
+
+	local function shoot_skill_a_arrow_in_out(animation, attack, pos)
+		local soffset = this.render.sprites[shooter_sid].offset
+		local an, af = U.animation_name_facing_point(this, attack.animation, pos, shooter_sid, soffset)
+
+		an = animation .. "_" .. an
+
+		U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
+	end
+
+	local function shoot_skill_b_animation(animation, e_pos)
+		local af = this.pos.x - e_pos.x > 0 and true or false
+
+		U.animation_start(this, animation, af, store.tick_ts, false, shooter_sid)
+	end
+
+	local function shoot_bullet(attack, enemy, animation_direction, spawn_fx)
+		local shooting_right = not this.render.sprites[shooter_sid].flip_x
+		local soffset = this.render.sprites[shooter_sid].offset
+		local boffset = attack.bullet_start_offset[animation_direction]
+		local hoffset = V.vclone(enemy.unit.hit_offset)
+
+		if enemy.render.sprites[1].flip_x then
+			hoffset.x = -hoffset.x
+		end
+
+		local b = E:create_entity(attack.bullet)
+
+		b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
+		b.pos.y = this.pos.y + soffset.y + boffset.y
+		b.bullet.from = V.vclone(b.pos)
+		b.bullet.to = V.v(enemy.pos.x + hoffset.x, enemy.pos.y + hoffset.y)
+		b.bullet.target_id = enemy.id
+		b.bullet.source_id = this.id
+		b.bullet.damage_factor = this.tower.damage_factor
+
+		if attack == abs then
+			b.bullet.damage_min = sb.damage_min[sb.level]
+			b.bullet.damage_max = sb.damage_max[sb.level]
+			b.bullet.level = sb.level
+		elseif attack == apta then
+			b.bullet.level = sa.level
+		elseif sc.level > 0 then
+			b.bullet.level = sc.level
+			b.bullet.payload_props = {
+				bounce_damage_mult = sc.bounce_damage_mult[sc.level],
+				level = sc.level,
+				damage_factor = this.tower.damage_factor
+			}
+		end
+
+		if b.bullet.fixed_height then
+			b.bullet.flight_time = 2 * (math.sqrt(2 * b.bullet.fixed_height * b.bullet.g * -1) / b.bullet.g * -1)
+		end
+
+		queue_insert(store, b)
+
+		if spawn_fx then
+			local fx = E:create_entity(spawn_fx)
+
+			fx.pos = V.vclone(b.pos)
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
+		end
+	end
+
+	local function shoot_bullet_pos(attack, target_pos, animation_direction, spawn_fx)
+		local shooting_right = not this.render.sprites[shooter_sid].flip_x
+		local soffset = this.render.sprites[shooter_sid].offset
+		local boffset = attack.bullet_start_offset[animation_direction]
+		local b = E:create_entity(attack.bullet)
+
+		b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
+		b.pos.y = this.pos.y + soffset.y + boffset.y
+		b.bullet.from:copy(b.pos)
+		b.bullet.to:copy(target_pos)
+		b.bullet.source_id = this.id
+		b.bullet.damage_factor = this.tower.damage_factor
+
+		if b.bullet.fixed_height then
+			b.bullet.flight_time = 2 * (math.sqrt(2 * b.bullet.fixed_height * b.bullet.g * -1) / b.bullet.g * -1)
+		end
+
+		queue_insert(store, b)
+
+		if spawn_fx then
+			local fx = E:create_entity(spawn_fx)
+
+			fx.pos = V.vclone(b.pos)
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
+		end
+	end
+
+	local function get_frontmost_non_poisoned_enemy(trigger_enemy, last_enemies_shot, modifier)
+		local enemy, enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), a.range, apta.vis_flags, apta.vis_bans)
+		if enemies then
+			for _, e in ipairs(enemies) do
+				if not table.arraycontains(last_enemies_shot, e.id) and not U.has_modifier(store, e, modifier) then
+					return e
+				end
+			end
+			return enemy
+		end
+		return trigger_enemy
+	end
+
+	local function hp_filter_fn(e)
+		return e.health.hp <= e.health.hp_max * ama.instakill_hp_threshold and e.health.hp > BIG_ENEMY_HP
+	end
+
+	ba.ts = store.tick_ts - ba.cooldown + a.attack_delay_on_spawn
+	apta.ts = store.tick_ts - apta.cooldown
+	abs.ts = store.tick_ts - abs.cooldown
+	ama.ts = store.tick_ts - ama.cooldown
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if sa.changed then
+				sa.changed = nil
+			end
+			if sb.changed then
+				sb.changed = nil
+			end
+			if sc.changed then
+				sc.changed = nil
+				ba.bullet = "bullet_elf_ranger_skill_c"
+				ba.animation = "skill_c"
+			end
+
+			if ready_to_attack(ama, store, this.tower.cooldown_factor) then
+				local trigger_enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_on(tpos(this), a.range, ama.vis_flags, ama.vis_bans, hp_filter_fn)
+
+				if not trigger_enemy then
+					ama.ts = ama.ts + fts(10)
+				else
+					local aux_pos = trigger_enemy.pos
+
+					ama.ts = store.tick_ts
+
+					local an = shoot_animation(ama, aux_pos)
+
+					S:queue(ama.sound_cast)
+
+					while store.tick_ts - ama.ts < ama.shoot_time do
+						coroutine.yield()
+					end
+
+					local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_on(tpos(this), a.range, ama.vis_flags, ama.vis_bans, hp_filter_fn)
+
+					enemy = enemy or trigger_enemy
+
+					if enemy then
+						this.render.sprites[shooter_sid].flip_x = enemy.pos.x < this.pos.x
+
+						shoot_bullet(ama, enemy, an)
+					else
+						this.render.sprites[shooter_sid].flip_x = aux_pos.x < this.pos.x
+
+						shoot_bullet_pos(ama, aux_pos, an)
+					end
+
+					U.y_animation_wait(this, shooter_sid)
+				end
+			end
+
+			if U.tower_ready_to_use_power(sa, apta, store, this.tower) then
+				local trigger_enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), a.range, apta.vis_flags, apta.vis_bans)
+
+				if not trigger_enemy then
+					apta.ts = apta.ts + fts(10)
+				else
+					local fx = E:create_entity(sa.start_fx)
+
+					fx.pos.x, fx.pos.y = this.pos.x + this.render.sprites[shooter_sid].offset.x, this.pos.y + this.render.sprites[shooter_sid].offset.y
+					fx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, fx)
+
+					apta.ts = store.tick_ts
+
+					shoot_skill_a_arrow_in_out("start", apta, trigger_enemy.pos)
+
+					U.y_animation_wait(this, shooter_sid)
+
+					local b = E:get_template(apta.bullet)
+					local last_enemies_shot = {}
+					local inner_ts
+
+					for i = 1, sa.arrow_count do
+						local enemy = get_frontmost_non_poisoned_enemy(trigger_enemy, last_enemies_shot, b.bullet.mod)
+
+						inner_ts = store.tick_ts
+
+						local an = shoot_animation(apta, trigger_enemy.pos, "loop")
+
+						while store.tick_ts - inner_ts < apta.shoot_time do
+							coroutine.yield()
+						end
+
+						enemy = get_frontmost_non_poisoned_enemy(trigger_enemy, last_enemies_shot, b.bullet.mod)
+						enemy = enemy or trigger_enemy
+						this.render.sprites[shooter_sid].flip_x = enemy.pos.x < this.pos.x
+
+						table.insert(last_enemies_shot, enemy.id)
+						shoot_bullet(apta, enemy, an, sa.poison_shot_fx)
+						U.y_animation_wait(this, shooter_sid)
+					end
+
+					shoot_skill_a_arrow_in_out("end", apta, trigger_enemy.pos)
+					U.y_animation_wait(this, shooter_sid)
+				end
+			end
+
+			if U.tower_ready_to_use_power(sb, abs, store, this.tower) then
+				local trigger_enemy, _, pred_pos = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, abs.shoot_time, abs.vis_flags, abs.vis_bans, function(e, o)
+					return e.nav_path and P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
+				end)
+
+				if not trigger_enemy then
+					abs.ts = abs.ts + fts(10)
+				else
+					abs.ts = store.tick_ts
+
+					shoot_skill_b_animation(sb.animation_name, pred_pos)
+
+					while store.tick_ts - abs.ts < abs.shoot_time do
+						coroutine.yield()
+					end
+
+					local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_on(tpos(this), a.range, abs.vis_flags, abs.vis_bans, function(e, o)
+						return e.nav_path and P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
+					end)
+
+					enemy = enemy or trigger_enemy
+
+					this.render.sprites[shooter_sid].flip_x = enemy.pos.x < this.pos.x
+
+					shoot_bullet(abs, enemy, sb.animation_name)
+					U.y_animation_wait(this, shooter_sid)
+				end
+			end
+
+			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
+				local trigger_enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), a.range, ba.vis_flags, ba.vis_bans)
+
+				if not trigger_enemy then
+					ba.ts = ba.ts + fts(10)
+
+					if store.tick_ts - idle_reset_ts > this.tower.long_idle_cooldown then
+						idle_reset_ts = store.tick_ts
+
+						U.animation_start(this, "idle", false, store.tick_ts, true, shooter_sid)
+					end
+				else
+					ba.ts = store.tick_ts
+
+					local an = shoot_animation(ba, trigger_enemy.pos)
+
+					while store.tick_ts - ba.ts < ba.shoot_time do
+						coroutine.yield()
+					end
+
+					local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), a.range, ba.vis_flags, ba.vis_bans)
+
+					enemy = enemy or trigger_enemy
+					this.render.sprites[shooter_sid].flip_x = enemy.pos.x < this.pos.x
+
+					shoot_bullet(ba, enemy, an)
+					U.y_animation_wait(this, shooter_sid)
+
+					if not string.find(an, "_3") then
+						U.animation_start(this, "idle", nil, store.tick_ts, true, shooter_sid)
+					end
+				end
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+local function get_random_round_robin(mutable_history, n, m)
+	if not m then
+		m = n
+		n = 1
+	end
+
+	if m < n then
+		log.error("ERROR: Random round robin needs M to be bigger or equal than N")
+	end
+
+	if #mutable_history == 0 then
+		for i = n, m do
+			table.insert(mutable_history, i)
+		end
+	end
+
+	local pos = math.random(1, #mutable_history)
+	local value = mutable_history[pos]
+
+	table.remove(mutable_history, pos)
+
+	return value
+end
+
+scripts.controller_bramble_spawner = {}
+
+function scripts.controller_bramble_spawner.insert(this, store)
+	local level = this.aura.level
+	local target_pos
+	local target = store.entities[this.target_id]
+
+	if target and not target.health.dead then
+		target_pos = V.v(target.pos.x, target.pos.y)
+	else
+		target_pos = V.v(this.pos.x, this.pos.y)
+	end
+
+	local nearest_nodes = P:nearest_nodes(target_pos.x, target_pos.y)
+	local selected_node
+
+	for i, v in ipairs(nearest_nodes) do
+		if P:is_node_valid(nearest_nodes[i][1], nearest_nodes[i][3]) then
+			selected_node = nearest_nodes[i]
+
+			break
+		end
+	end
+
+	if not selected_node then
+		return false
+	end
+
+	local opi, ospi, oni = unpack(selected_node, 1, 3)
+	local pos_middle_path = P:node_pos(opi, ospi, oni)
+	local sa = E:create_entity(this.slow_aura)
+
+	sa.aura.level = level
+	sa.pos.x, sa.pos.y = pos_middle_path.x, pos_middle_path.y
+
+	queue_insert(store, sa)
+
+	local angle_aux = 0
+	local rad_aux, bramble_round
+	local bramble_spread = {0.5, 0.3, 0.2}
+	local rad_start = sa.aura.radius * 0.85
+	local pos_offset_r = {-6, 6}
+	local aux = {}
+
+	for i = 1, 3 do
+		bramble_round = math.ceil(this.bramble_count * bramble_spread[i])
+		rad_aux = rad_start * (0.2 + 0.3 * i)
+
+		local angle_inc = 2 * math.pi / bramble_round
+		local delay = 0.1 * (i - 1)
+
+		for j = 1, bramble_round do
+			angle_aux = angle_aux + angle_inc
+
+			local pos = U.point_on_ellipse(pos_middle_path, rad_aux, angle_aux)
+
+			if P:valid_node_nearby(pos.x, pos.y) then
+				local brambles = E:create_entity(this.brambles .. "_" .. get_random_round_robin(aux, 5))
+
+				brambles.pos = V.v(pos.x + U.frandom(pos_offset_r[1], pos_offset_r[2]), pos.y + U.frandom(pos_offset_r[1], pos_offset_r[2]))
+				brambles.duration = sa.aura.duration
+				brambles.delay_animation_start = delay
+
+				queue_insert(store, brambles)
+			end
+		end
+	end
+
+	return false
+end
+
+scripts.decal_elf_ranger_skill_b = {}
+
+function scripts.decal_elf_ranger_skill_b.update(this, store, script)
+	local function check_validity()
+		if not P:valid_node_nearby(this.pos.x, this.pos.y) then
+			if this.animation_end then
+				U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1, this.end_sprite_idx)
+			end
+
+			queue_remove(store, this)
+		end
+	end
+
+	if not this.start_sprite_idx then
+		this.start_sprite_idx = 1
+	end
+
+	if not this.idle_sprite_idx then
+		this.idle_sprite_idx = 1
+	end
+
+	if not this.end_sprite_idx then
+		this.end_sprite_idx = 1
+	end
+
+	U.y_wait(store, this.delay_animation_start)
+
+	this.render.sprites[1].animated = true
+
+	U.animation_start(this, this.animation_start, nil, store.tick_ts, false, 1)
+
+	while not U.animation_finished(this) do
+		check_validity()
+		coroutine.yield()
+	end
+
+	U.animation_start(this, this.animation_idle, nil, store.tick_ts, true, this.idle_sprite_idx, this.idle_force_ts)
+
+	this.ts = store.tick_ts
+
+	while store.tick_ts - this.ts < this.duration do
+		check_validity()
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1, this.end_sprite_idx)
+
+	queue_remove(store, this)
+end
+
+scripts.mod_elf_ranger_skill_b_stun = {}
+
+function scripts.mod_elf_ranger_skill_b_stun.update(this, store, script)
+	local m = this.modifier
+	local target = store.entities[this.modifier.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
+	U.animation_start(this, this.animation_idle, nil, store.tick_ts, false)
+
+	while store.tick_ts - m.ts < m.duration - this.out_before and target and not target.health.dead do
+		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
+			for i = 1, #this.render.sprites do
+				local s = this.render.sprites[i]
+
+				s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
+	queue_remove(store, this)
+end
+
+scripts.mod_elf_ranger_skill_a_poison = {}
+
+function scripts.mod_elf_ranger_skill_a_poison.insert(this, store)
+	local level = this.modifier.level
+
+	this.modifier.duration = this.modifier.duration_config[level]
+
+	return scripts.mod_dps.insert(this, store)
+end
+
+scripts.aura_elf_ranger_skill_b = {}
+
+function scripts.aura_elf_ranger_skill_b.insert(this, store)
+	local level = this.aura.level
+
+	this.aura.duration = this.aura.duration_conf[level]
+
+	return scripts.aura_apply_mod.insert(this, store)
+end
+
+scripts.bullet_tower_elf_ranger_skill_c_bounce_clone = {}
+
+function scripts.bullet_tower_elf_ranger_skill_c_bounce_clone.insert(this, store)
+	local b = this.bullet
+
+	b.damage_factor = (this.damage_factor or 1) * b.damage_factor
+
+	local targets = U.find_enemies_in_range(store, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans, function(v)
+		return v.id ~= this.target_id
+	end)
+
+	if not targets or #targets == 0 or this.missed then
+		return false
+	end
+
+	local target = table.find_best(targets, function(e)
+		return -this.pos:dist2(e.pos)
+	end)
+
+	b.from:copy(this.pos)
+	b.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+	b.target_id = target.id
+	b.damage_min = b.damage_min * this.bounce_damage_mult
+	b.damage_max = b.damage_max * this.bounce_damage_mult
+
+	return true
+end
+
+function scripts.bullet_tower_elf_ranger_skill_c_bounce_clone.update(this, store)
+	local b = this.bullet
+	local target, ps
+
+	this.bounces = 1
+
+	local already_hit = {this.target_id}
+
+	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+
+		queue_insert(store, ps)
+	end
+
+	::label_633_0::
+
+	while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > b.fixed_speed * store.tick_length * (b.fixed_speed * store.tick_length) do
+		target = store.entities[b.target_id]
+
+		if target and target.health and not target.health.dead then
+			b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+		end
+
+		b.speed.x, b.speed.y = V.mul(b.fixed_speed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+		this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+
+		coroutine.yield()
+	end
+
+	if target and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+
+		queue_damage(store, d)
+
+		local mods = b.mods or (b.mod and {b.mod})
+		if mods then
+			for i = 1, #mods do
+				local mod_name = mods[i]
+				if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+					local m = E:create_entity(mod_name)
+					m.modifier.source_id = this.id
+					m.modifier.target_id = target.id
+					m.modifier.source_damage = d
+					m.modifier.level = b.level
+					m.modifier.damage_factor = b.damage_factor
+					simulation:queue_insert_entity(m)
+				end
+			end
+		end
+
+		table.insert(already_hit, target.id)
+	end
+
+	if b.hit_fx then
+		local sfx = E:create_entity(b.hit_fx)
+
+		sfx.pos = V.vclone(b.to)
+		sfx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, sfx)
+	end
+
+	if this.sound_events.hit then
+		S:queue(this.sound_events.hit)
+	end
+
+	if this.bounces < this.max_bounces then
+		local targets = U.find_enemies_in_range(store, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans, function(v)
+			return not table.contains(already_hit, v.id)
+		end)
+
+		if targets then
+			local target = table.find_best(targets, function(e)
+				return -this.pos:dist2(e.pos)
+			end)
+
+			this.bounces = this.bounces + 1
+			b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+			b.target_id = target.id
+			b.damage_min = b.damage_min * this.bounce_damage_mult
+			b.damage_max = b.damage_max * this.bounce_damage_mult
+
+			goto label_633_0
+		end
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.bullet_tower_elf_ranger_ultimate = {}
+
+function scripts.bullet_tower_elf_ranger_ultimate.update(this, store)
+	local b = this.bullet
+	local s = this.render.sprites[1]
+	local target = store.entities[b.target_id]
+	local source = store.entities[b.source_id]
+	local dest = V.vclone(b.to)
+
+	local function update_sprite()
+		local angle = V.angleTo(dest.x - this.pos.x, dest.y - this.pos.y)
+
+		s.r = angle
+		s.scale.x = V.dist(dest.x, dest.y, this.pos.x, this.pos.y) / this.image_width
+	end
+
+	local function hit_target()
+		if target then
+			local d = SU.create_bullet_damage(b, target.id, this.id)
+
+			queue_damage(store, d)
+
+			local mods = b.mods or (b.mod and {b.mod})
+			if mods then
+				for i = 1, #mods do
+					local mod_name = mods[i]
+					if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+						local m = E:create_entity(mod_name)
+						m.modifier.source_id = this.id
+						m.modifier.target_id = target.id
+						m.modifier.source_damage = d
+						m.modifier.level = b.level
+						m.modifier.damage_factor = b.damage_factor
+						simulation:queue_insert_entity(m)
+					end
+				end
+			end
+
+			local fx = E:create_entity(b.hit_fx)
+
+			fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			fx.render.sprites[1].ts = store.tick_ts
+			fx.render.sprites[1].r = this.render.sprites[1].r
+
+			queue_insert(store, fx)
+		end
+	end
+
+	s.scale = s.scale or V.v(1, 1)
+	s.ts = store.tick_ts
+
+	update_sprite()
+
+	if b.hit_time > fts(1) then
+		while store.tick_ts - s.ts < b.hit_time do
+			coroutine.yield()
+
+			if target and U.flag_has(target.vis.bans, F_RANGED) then
+				target = nil
+			end
+		end
+	end
+
+	local already_hit_target = false
+
+	while store.tick_ts - s.ts < this.ray_duration do
+		if source and not store.entities[source.id] then
+			queue_remove(store, this)
+
+			break
+		end
+
+		if not already_hit_target and store.tick_ts - s.ts > this.hit_delay then
+			hit_target()
+
+			already_hit_target = true
+		end
+
+		coroutine.yield()
+
+		s.hidden = false
+	end
+
+	queue_remove(store, this)
+end
+
 return scripts

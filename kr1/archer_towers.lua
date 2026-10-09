@@ -3161,3 +3161,393 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].offset = v(7, 15)
 tt.render.sprites[1].draw_order = -1
+
+-- 六代
+-- 精灵游侠_START
+
+tt = RT("tower_elf_ranger", "tower")
+AC(tt, "attacks", "powers")
+tt.tower.type = "elf_ranger"
+tt.tower.kind = TOWER_KIND_ARCHER
+tt.tower.price = 260
+tt.tower.size = TOWER_SIZE_LARGE
+tt.tower.menu_offset = v(0, 32)
+tt.tower.long_idle_cooldown = 2
+tt.info.portrait = "kr6_info_portraits_towers_0005"
+tt.info.fn = scripts.tower_common.get_info
+tt.main_script.insert = scripts.tower_archer.insert
+tt.main_script.update = scripts.tower_elf_ranger.update
+tt.powers.skill_a = CC("power")
+tt.powers.skill_a.price_base = 200
+tt.powers.skill_a.price_inc = 200
+tt.powers.skill_a.max_level = 3
+tt.powers.skill_a.arrow_count = 3
+tt.powers.skill_a.start_fx = "fx_tower_elf_ranger_skill_a_activate"
+tt.powers.skill_a.poison_shot_fx = "fx_tower_elf_ranger_skill_a_shoot"
+tt.powers.skill_b = CC("power")
+tt.powers.skill_b.price_base = 150
+tt.powers.skill_b.price_inc = 150
+tt.powers.skill_b.max_level = 3
+tt.powers.skill_b.animation_name = "bramble_shot"
+tt.powers.skill_b.damage_min = {90, 135, 180}
+tt.powers.skill_b.damage_max = {135, 205, 270}
+tt.powers.skill_c = CC("power")
+tt.powers.skill_c.price_base = 200
+tt.powers.skill_c.price_inc = 200
+tt.powers.skill_c.max_level = 3
+tt.powers.skill_c.bounce_damage_mult = {0.4, 0.65, 0.8}
+tt.attacks.range = 235
+tt.attacks.attack_delay_on_spawn = fts(5)
+tt.attacks.list[1] = CC("bullet_attack")
+tt.attacks.list[1].bullet = "bullet_elf_ranger"
+tt.attacks.list[1].cooldown = 1.5
+tt.attacks.list[1].shoot_time = fts(11)
+tt.attacks.list[1].bullet_start_offset = {
+	attack_1 = v(5, 18),
+	attack_3 = v(11, 18),
+	attack_2 = v(6.8, 8.8),
+	ricochet_1 = v(5, 18),
+	ricochet_3 = v(11, 18),
+	ricochet_2 = v(6.8, 8.8)
+}
+tt.attacks.list[1].vis_flags = bor(F_RANGED)
+tt.attacks.list[1].vis_bans = 0
+tt.attacks.list[2] = CC("bullet_attack")
+tt.attacks.list[2].bullet = "bullet_elf_ranger_skill_a"
+tt.attacks.list[2].cooldown = 15
+tt.attacks.list[2].shoot_time = fts(2)
+tt.attacks.list[2].bullet_start_offset = {
+	loop_attack_1 = v(5, 18),
+	loop_attack_3 = v(11, 18),
+	loop_attack_2 = v(6.8, 8.8)
+}
+tt.attacks.list[2].vis_flags = bor(F_RANGED, F_MOD)
+tt.attacks.list[2].vis_bans = 0
+tt.attacks.list[3] = CC("bullet_attack")
+tt.attacks.list[3].bullet = "bullet_elf_ranger_skill_b"
+tt.attacks.list[3].cooldown = 25
+tt.attacks.list[3].shoot_time = fts(18)
+tt.attacks.list[3].bullet_start_offset = {
+	bramble_shot = v(0, 30)
+}
+tt.attacks.list[3].vis_flags = bor(F_RANGED)
+tt.attacks.list[3].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.attacks.list[4] = CC("bullet_attack")
+tt.attacks.list[4].bullet = "bullet_elf_ranger_ultimate"
+tt.attacks.list[4].cooldown = 32
+tt.attacks.list[4].shoot_time = fts(18)
+tt.attacks.list[4].bullet_start_offset = {
+	merciless_aim_1 = v(10.5, 12.5),
+	merciless_aim_3 = v(10, 28),
+	merciless_aim_2 = v(-1.5, -4)
+}
+tt.attacks.list[4].vis_flags = bor(F_RANGED, F_INSTAKILL)
+tt.attacks.list[4].vis_bans = bor(F_BOSS, F_MINIBOSS)
+tt.attacks.list[4].sound_cast = "TowerElvenRangerMercilessAimCast"
+tt.attacks.list[4].instakill_hp_threshold = 0.5
+tt.attacks.list[4].animation = "ultimate"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 13)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "elven_elite_ranger_lvl4_tower"
+tt.render.sprites[2].offset = v(2, 14)
+tt.render.sprites[3] = CC("sprite")
+tt.render.sprites[3].prefix = "elven_elite_ranger_lvl4_ranger"
+tt.render.sprites[3].name = "idle"
+tt.render.sprites[3].angles = {}
+tt.render.sprites[3].angles.idle = {"idle_1"}
+tt.render.sprites[3].angles.shoot = {"attack_1", "attack_3", "attack_2"}
+tt.render.sprites[3].angles.skill_c = {"ricochet_1", "ricochet_3", "ricochet_2"}
+tt.render.sprites[3].angles.ultimate = {"merciless_aim_1", "merciless_aim_3", "merciless_aim_2"}
+tt.render.sprites[3].angles_custom = {
+	shoot = {10, 170, 215, 315},
+	skill_c = {10, 170, 215, 315},
+	ultimate = {10, 170, 215, 315}
+}
+tt.render.sprites[3].offset = v(3, 62)
+tt.render.sprites[3].angles_flip_vertical = {
+	skill_c = true,
+	shoot = true,
+	ultimate = true
+}
+tt.sound_events.insert = "TowerElvenRangerTauntLevel4"
+tt.sound_events.room_select = "TowerElvenRangerTauntSelect"
+tt.ui.click_rect = r(-30, 3, 63, 86)
+
+tt = RT("ps_bullet_elf_ranger", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.name = "elven_elite_ranger_lvl1_arrow_trail_particle_run"
+tt.particle_system.particle_lifetime = {fts(5), fts(5)}
+tt.particle_system.emission_rate = 250
+
+tt = RT("ps_bullet_elf_ranger_skill_a", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.name = "elven_elite_ranger_poison_tip_trial_particle_run"
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 70
+tt.particle_system.emit_rotation_spread = math.pi
+tt.particle_system.emit_area_spread = v(5, 5)
+
+tt = RT("ps_bullet_elf_ranger_skill_b", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.name = "elven_elite_ranger_bramble_shot_trail_particle_trail"
+tt.particle_system.particle_lifetime = {fts(9), fts(9)}
+tt.particle_system.emission_rate = 50
+tt.particle_system.emit_rotation_spread = math.pi
+tt.particle_system.emit_area_spread = v(3, 3)
+
+tt = RT("ps_bullet_elf_ranger_skill_c", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.name = "elven_elite_ranger_ricochet_trail_particle_run"
+tt.particle_system.particle_lifetime = {fts(9), fts(9)}
+tt.particle_system.emission_rate = 250
+
+tt = RT("fx_bullet_elf_ranger_arrow_hit", "fx")
+tt.render.sprites[1].prefix = "elven_elite_ranger_arrow_hit_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("fx_tower_elf_ranger_skill_a_activate", "fx")
+tt.render.sprites[1].prefix = "elven_elite_ranger_poison_ranger_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("fx_tower_elf_ranger_skill_a_shoot", "fx")
+tt.render.sprites[1].prefix = "elven_elite_ranger_poison_ranger_shoot_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("fx_bullet_elf_ranger_skill_a_hit", "fx")
+tt.render.sprites[1].prefix = "elven_elite_ranger_poison_tip_hit_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("fx_bullet_elf_ranger_skill_b_hit", "fx")
+tt.render.sprites[1].prefix = "elven_elite_ranger_bramble_shot_hit_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("fx_bullet_elf_ranger_skill_c_hit", "fx")
+tt.render.sprites[1].prefix = "elven_elite_ranger_ricochet_hit_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("fx_bullet_elf_ranger_ultimate_hit", "fx")
+tt.render.sprites[1].prefix = "elven_elite_ranger_merciless_aim_hit_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("decal_elf_ranger_miss", "decal_tween")
+AC(tt, "main_script")
+tt.render.sprites[1].prefix = "elven_elite_ranger_lvl4_arrow"
+tt.render.sprites[1].name = "miss"
+tt.main_script.update = scripts.decal_utils.animation_in_loop_out.update
+tt.main_script.remove = scripts.tween_utils.reverse_remove
+tt.duration = 2
+tt.animation_start = "miss"
+tt.animation_idle = "missidle"
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.run_once = true
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {2, 255}}
+tt.tween.props[1].reverse = false
+tt.tween.reverse = false
+
+tt = RT("decal_elf_ranger_miss_skill_a", "decal_elf_ranger_miss")
+tt.render.sprites[1].prefix = "elven_elite_ranger_arrow_poison_tip"
+
+tt = RT("decal_elf_ranger_miss_skill_b", "decal_elf_ranger_miss")
+tt.render.sprites[1].prefix = "elven_elite_ranger_arrow_bramble_shot"
+
+tt = RT("decal_elf_ranger_miss_skill_c", "decal_elf_ranger_miss")
+tt.render.sprites[1].prefix = "elven_elite_ranger_arrow_ricochet"
+
+tt = RT("decal_elf_ranger_skill_b_root_1", "decal_scripted")
+tt.render.sprites[1].prefix = "elven_elite_ranger_bramble_shot_root_1"
+tt.render.sprites[1].name = "idle"
+tt.main_script.update = scripts.decal_elf_ranger_skill_b.update
+tt.duration = 3
+tt.delay_animation_start = 0
+tt.animation_start = "start"
+tt.animation_idle = "idle"
+tt.animation_end = "end"
+
+tt = RT("decal_elf_ranger_skill_b_root_2", "decal_elf_ranger_skill_b_root_1")
+tt.render.sprites[1].prefix = "elven_elite_ranger_bramble_shot_root_2"
+
+tt = RT("decal_elf_ranger_skill_b_root_3", "decal_elf_ranger_skill_b_root_1")
+tt.render.sprites[1].prefix = "elven_elite_ranger_bramble_shot_root_3"
+
+tt = RT("decal_elf_ranger_skill_b_root_4", "decal_elf_ranger_skill_b_root_1")
+tt.render.sprites[1].prefix = "elven_elite_ranger_bramble_shot_root_4"
+
+tt = RT("decal_elf_ranger_skill_b_root_5", "decal_elf_ranger_skill_b_root_1")
+tt.render.sprites[1].prefix = "elven_elite_ranger_bramble_shot_root_5"
+
+tt = RT("aura_elf_ranger_skill_b", "aura")
+tt.aura.mod = "mod_elf_ranger_skill_b_slow"
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.radius = 60
+tt.aura.cycle_time = 0.25
+tt.aura.duration = 6
+tt.aura.duration_conf = {6, 7, 9}
+tt.main_script.insert = scripts.aura_elf_ranger_skill_b.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = RT("mod_elf_ranger_skill_a_poison", "mod_poison")
+tt.modifier.vis_flags = bor(F_MOD, F_POISON)
+tt.modifier.duration = 3
+tt.render.sprites[1].prefix = "elven_elite_ranger_poison_tip_projectile_mod"
+tt.render.sprites[1].size_names = {"small", "small", "big"}
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop = true
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_min = 0
+tt.dps.damage_max = 0
+tt.dps.damage_inc = 2
+tt.dps.damage_every = 0.25
+tt.dps.kill = true
+tt.modifier.duration_config = {3, 5, 8}
+tt.main_script.insert = scripts.mod_elf_ranger_skill_a_poison.insert
+
+tt = RT("mod_elf_ranger_skill_b_stun", "mod_stun")
+tt.render.sprites[1].prefix = "elven_elite_ranger_bramble_shot_stun"
+tt.render.sprites[1].size_names = {"small", "big", "big"}
+tt.render.sprites[1].name = "small"
+tt.modifier.duration = 2
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.use_mod_offset = false
+tt.modifier.duration_config = {2, 2, 2}
+tt.out_before = 0
+tt.animation_start = "start"
+tt.animation_idle = "idle"
+tt.animation_end = "end"
+tt.main_script.update = scripts.mod_elf_ranger_skill_b_stun.update
+
+tt = RT("mod_elf_ranger_skill_b_slow", "mod_slow")
+tt.slow.factor = 0.4
+tt.modifier.duration = 0.5
+
+tt = RT("controller_bramble_spawner")
+AC(tt, "pos", "main_script", "aura")
+tt.main_script.insert = scripts.controller_bramble_spawner.insert
+tt.slow_aura = "aura_elf_ranger_skill_b"
+tt.brambles = "decal_elf_ranger_skill_b_root"
+tt.bramble_count = 16
+
+tt = RT("bullet_elf_ranger", "arrow5_fixed_height")
+tt.bullet.particles_name = "ps_bullet_elf_ranger"
+tt.bullet.level = 1
+tt.bullet.damage_min = 59
+tt.bullet.damage_max = 70
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.g = -1000
+tt.bullet.fixed_height = 20
+tt.bullet.hit_distance = 30
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.miss_fx = "decal_elf_ranger_miss"
+tt.bullet.hide_radius = 0
+tt.bullet.hit_fx = "fx_bullet_elf_ranger_arrow_hit"
+tt.render.sprites[1].prefix = "elven_elite_ranger_lvl4_arrow"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.sound_events.insert = "TowerArcherGarrisonBasicAttack"
+
+tt = RT("bullet_elf_ranger_skill_a", "arrow5_fixed_height")
+tt.bullet.particles_name = "ps_bullet_elf_ranger_skill_a"
+tt.bullet.level = 1
+tt.bullet.damage_min = 59
+tt.bullet.damage_max = 70
+tt.bullet.mod = "mod_elf_ranger_skill_a_poison"
+tt.bullet.g = -1000
+tt.bullet.fixed_height = 20
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.miss_fx = "decal_elf_ranger_miss_skill_a"
+tt.bullet.hide_radius = 0
+tt.bullet.hit_fx = "fx_bullet_elf_ranger_skill_a_hit"
+tt.bullet.hit_distance = 30
+tt.render.sprites[1].prefix = "elven_elite_ranger_arrow_poison_tip"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.sound_events.insert = "TowerArcherGarrisonBasicAttack"
+tt.sound_events.hit = "TowerElvenRangerPoisonTipArrowImpact"
+
+tt = RT("bullet_elf_ranger_skill_b", "arrow5_fixed_height")
+tt.bullet.particles_name = "ps_bullet_elf_ranger_skill_b"
+tt.bullet.level = 1
+tt.bullet.damage_min = 90
+tt.bullet.damage_max = 135
+tt.bullet.mod = "mod_elf_ranger_skill_b_stun"
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.g = -600
+tt.bullet.fixed_height = 40
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.hit_distance = 35
+tt.bullet.miss_fx = "decal_elf_ranger_miss_skill_b"
+tt.bullet.hide_radius = 0
+tt.bullet.hit_fx = "fx_bullet_elf_ranger_skill_b_hit"
+tt.bullet.payload = "controller_bramble_spawner"
+tt.render.sprites[1].prefix = "elven_elite_ranger_arrow_bramble_shot"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.sound_events.insert = "TowerArcherGarrisonBasicAttack"
+tt.sound_events.hit = "TowerElvenRangerBrambleShotRootGrowth"
+
+tt = RT("bullet_elf_ranger_skill_c", "arrow5_fixed_height")
+tt.bullet.particles_name = "ps_bullet_elf_ranger_skill_c"
+tt.bullet.level = 1
+tt.bullet.damage_min = E:get_template("bullet_elf_ranger").bullet.damage_min
+tt.bullet.damage_max = E:get_template("bullet_elf_ranger").bullet.damage_max
+tt.bullet.g = -1000
+tt.bullet.fixed_height = 20
+tt.bullet.hit_distance = 30
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.miss_fx = "decal_elf_ranger_miss_skill_c"
+tt.bullet.hide_radius = 0
+tt.bullet.hit_fx = "fx_bullet_elf_ranger_skill_c_hit"
+tt.bullet.payload = "bullet_elf_ranger_skill_c_bounce_clone"
+tt.bullet.payload_props = {}
+tt.render.sprites[1].prefix = "elven_elite_ranger_arrow_ricochet"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.sound_events.insert = "TowerArcherGarrisonBasicAttack"
+tt.sound_events.hit = "TowerElvenRangerWoodlandTrickImpact"
+
+tt = RT("bullet_elf_ranger_skill_c_bounce_clone", "bullet")
+tt.bullet.particles_name = "ps_bullet_elf_ranger_skill_c"
+tt.bullet.level = 1
+tt.bullet.damage_min = E:get_template("bullet_elf_ranger").bullet.damage_min
+tt.bullet.damage_max = E:get_template("bullet_elf_ranger").bullet.damage_max
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.g = 0
+tt.bullet.fixed_speed = FPS * 12
+tt.bullet.hide_radius = 0
+tt.bullet.hit_fx = "fx_bullet_elf_ranger_skill_c_hit"
+tt.render.sprites[1].prefix = "elven_elite_ranger_arrow_ricochet"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.sound_events.hit = "TowerElvenRangerWoodlandTrickImpact"
+tt.main_script.insert = scripts.bullet_tower_elf_ranger_skill_c_bounce_clone.insert
+tt.main_script.update = scripts.bullet_tower_elf_ranger_skill_c_bounce_clone.update
+tt.bounces = 0
+tt.max_bounces = 3
+tt.bounce_range = 100
+tt.bounce_damage_mult = 0.25
+
+tt = RT("bullet_elf_ranger_ultimate", "bullet")
+tt.bullet.hit_fx = "fx_bullet_elf_ranger_ultimate_hit"
+tt.bullet.flight_time = fts(6)
+tt.bullet.hit_time = fts(1)
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.damage_min = 500
+tt.bullet.damage_max = 500
+tt.bullet.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
+tt.bullet.level = 1
+tt.main_script.update = scripts.bullet_tower_elf_ranger_ultimate.update
+tt.render.sprites[1].name = "elven_elite_ranger_merciless_aim_shot_run"
+tt.render.sprites[1].loop = false
+tt.image_width = 170
+tt.ray_duration = fts(23)
+tt.hit_delay = fts(1)
