@@ -3409,7 +3409,7 @@ tt.dps.damage_max = 0
 tt.dps.damage_inc = 2
 tt.dps.damage_every = 0.25
 tt.dps.kill = true
-tt.modifier.duration_config = {3, 5, 8}
+tt.modifier.duration_config = {3, 6, 9}
 tt.main_script.insert = scripts.mod_elf_ranger_skill_a_poison.insert
 
 tt = RT("mod_elf_ranger_skill_b_stun", "mod_stun")
@@ -3419,7 +3419,6 @@ tt.render.sprites[1].name = "small"
 tt.modifier.duration = 2
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.use_mod_offset = false
-tt.modifier.duration_config = {2, 2, 2}
 tt.out_before = 0
 tt.animation_start = "start"
 tt.animation_idle = "idle"
