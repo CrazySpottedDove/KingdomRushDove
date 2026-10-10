@@ -665,6 +665,30 @@ tt.render.sprites[1].name = "stage_06_parches_tiki_bottom"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].sort_y_offset = 0
 
+tt = E:register_t("decal_tiki_bar2", "decal")
+E:add_comps(tt, "editor")
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "stage_06_parches_tiki_top_bebe2"
+tt.render.sprites[1].name = "Idle1"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].sort_y_offset = -2
+
+tt = E:register_t("decal_tiki_bar3", "decal_tiki_bar2")
+tt.render.sprites[1].prefix = "stage_06_parches_tiki_top_bebe1"
+tt.render.sprites[1].name = "idle1"
+
+tt = E:register_t("decal_tiki_bar4", "decal")
+E:add_comps(tt, "editor")
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].name = "stage_06_parches_tiki_top_viejo"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].sort_y_offset = -2
+
+tt = E:register_t("decal_tiki_bar5", "decal_tiki_bar2")
+tt.render.sprites[1].prefix = "stage_06_parches_tiki_top_pibe"
+tt.render.sprites[1].name = "Idle"
+tt.render.sprites[1].sort_y_offset = 1
+
 tt = E:register_t_hot("decal_tiki_bar6", "decal_tiki_bar1", true)
 tt.render.sprites[1].name = "stage_06_parches_tiki_top"
 tt.render.sprites[1].sort_y_offset = -1

@@ -34222,7 +34222,7 @@ function scripts.tower_elf_ranger.update(this, store)
 		local boffset = attack.bullet_start_offset[animation_direction]
 		local hoffset = V.vclone(enemy.unit.hit_offset)
 
-		if enemy.render.sprites[1].flip_x then
+		if enemy.render and enemy.render.sprites[1].flip_x then
 			hoffset.x = -hoffset.x
 		end
 
