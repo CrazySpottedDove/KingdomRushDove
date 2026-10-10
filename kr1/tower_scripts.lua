@@ -33580,7 +33580,7 @@ function scripts.aura_knights_skill_c_check.update(this, store)
 			last_cycle_ts = store.tick_ts
 
 			local targets = table.filter(store.soldiers, function(k, v)
-				return (not v.reinforcement or (v.reinforcement.ts and store.tick_ts - v.reinforcement.ts < v.reinforcement.duration)) and (v.health and v.health.dead) and U.is_inside_ellipse(v.pos, ts.pos, this.aura.radius)
+				return (not v.reinforcement or (v.reinforcement.ts and v.reinforcement.duration and store.tick_ts - v.reinforcement.ts < v.reinforcement.duration)) and (v.health and v.health.dead) and U.is_inside_ellipse(v.pos, ts.pos, this.aura.radius)
 			end)
 
 			if #targets > 0 then
@@ -35226,13 +35226,11 @@ function scripts.bullet_skill_a_wildcat.update(this, store)
 	this.bounces = 0
 
 	local already_hit = {}
-	local bounce_damage = -1
 	local soldier = store.entities[b.source_id]
 	local pow = soldier.powers.skill_a
 	local lvl = pow.level
 	local max_bounces = pow.max_bounces[lvl]
 	local bounce_range = this.bounce_range
-	local bounce_damage_mult = this.bounce_damage_mult
 	local bounce_speed_mult = this.bounce_speed_mult
 
 	b.damage_min = pow.damage_min[lvl] + soldier.unit.damage_buff
@@ -35265,12 +35263,6 @@ function scripts.bullet_skill_a_wildcat.update(this, store)
 
 	if target and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
-
-		if bounce_damage == -1 then
-			bounce_damage = d.value
-		else
-			d.value = bounce_damage
-		end
 
 		queue_damage(store, d)
 
@@ -35318,9 +35310,6 @@ function scripts.bullet_skill_a_wildcat.update(this, store)
 			b.to.x, b.to.y = ntarget.pos.x + ntarget.unit.hit_offset.x, ntarget.pos.y + ntarget.unit.hit_offset.y
 			b.target_id = ntarget.id
 			b.fixed_speed = b.fixed_speed * bounce_speed_mult
-			b.damage_min = bounce_damage * bounce_damage_mult
-			b.damage_max = bounce_damage * bounce_damage_mult
-			bounce_damage = bounce_damage * bounce_damage_mult
 
 			goto label_wildcat_684_0
 		end
