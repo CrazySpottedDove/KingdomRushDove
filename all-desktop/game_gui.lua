@@ -8664,7 +8664,8 @@ function TowerMenu:button_enter(button, item, entity)
 			end
 
 			game_gui:show_tower_range_upgrade(ux, uy, new_range)
-		elseif nt.barrack and nt.barrack.rally_range then
+		end
+		if nt.barrack and nt.barrack.rally_range then
 			game_gui:show_rally_range(ux, uy, nt.barrack.rally_range)
 		end
 	elseif item.action == "upgrade_power" and entity.template_name == "tower_crossbow" and item.action_arg == "eagle" and entity.powers.eagle.level < 3 then

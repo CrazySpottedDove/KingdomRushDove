@@ -56056,5 +56056,152 @@ return {
 		from = 1,
 		prefix = "stage_06_parches_tiki_top_viejo",
 		to = 17
+	},
+
+	-- wildcat (KR6)
+	wildcat_huntresses_tower_arrow = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_arrow",
+		to = 1
+	},
+	wildcat_huntresses_tower_attack_2_hit_fx_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_attack_2_hit_fx",
+		to = 10
+	},
+	wildcat_huntresses_tower_grievous_bite_hit_fx_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_grievous_bite_hit_fx",
+		to = 10
+	},
+	wildcat_huntresses_tower_hit_fx_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_hit_fx",
+		to = 6
+	},
+	wildcat_huntresses_tower_knife = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_knife",
+		to = 1
+	},
+	wildcat_huntresses_tower_lvl4_tower = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_lvl4_tower",
+		to = 1
+	},
+	wildcat_huntresses_tower_lvl4_tower_door_close = {
+		from = 15,
+		prefix = "wildcat_huntresses_tower_lvl4_tower_door",
+		to = 28
+	},
+	wildcat_huntresses_tower_lvl4_tower_door_idle = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_lvl4_tower_door",
+		to = 2
+	},
+	wildcat_huntresses_tower_lvl4_tower_door_open = {
+		from = 3,
+		prefix = "wildcat_huntresses_tower_lvl4_tower_door",
+		to = 14
+	},
+	wildcat_huntresses_tower_lvl4_unit_attack_1 = {
+		from = 29,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 56
+	},
+	wildcat_huntresses_tower_lvl4_unit_attack_2 = {
+		from = 57,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 86
+	},
+	wildcat_huntresses_tower_lvl4_unit_death = {
+		from = 87,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 118
+	},
+	wildcat_huntresses_tower_lvl4_unit_grievous_bite = {
+		from = 155,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 198
+	},
+	wildcat_huntresses_tower_lvl4_unit_idle = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 16
+	},
+	wildcat_huntresses_tower_lvl4_unit_knife = {
+		from = 119,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 154
+	},
+	wildcat_huntresses_tower_lvl4_unit_raining_arrows = {
+		from = 199,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 232
+	},
+	wildcat_huntresses_tower_lvl4_unit_run = {
+		from = 17,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 28
+	},
+	wildcat_huntresses_tower_lvl4_unit_transfer_in = {
+		from = 17,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 17
+	},
+	wildcat_huntresses_tower_lvl4_unit_transfer_out = {
+		from = 28,
+		prefix = "wildcat_huntresses_tower_lvl4_unit",
+		to = 28
+	},
+	wildcat_huntresses_tower_raining_arrows_arrow_a = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_raining_arrows_arrow_a",
+		to = 1
+	},
+	wildcat_huntresses_tower_raining_arrows_arrow_b_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_raining_arrows_arrow_b",
+		to = 6
+	},
+	wildcat_huntresses_tower_raining_arrows_floor_idle = {
+		from = 11,
+		prefix = "wildcat_huntresses_tower_raining_arrows_floor",
+		to = 11
+	},
+	wildcat_huntresses_tower_raining_arrows_floor_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_raining_arrows_floor",
+		to = 10
+	},
+	wildcat_huntresses_tower_raining_arrows_fx_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_raining_arrows_fx",
+		to = 12
+	},
+	wildcat_huntresses_tower_raining_arrows_trail_particle_trail = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_raining_arrows_trail_particle",
+		to = 9
+	},
+	wildcat_huntresses_tower_trail_particle_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_trail_particle",
+		to = 4
+	},
+	wildcat_huntresses_tower_ult_elf_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_ult_elf",
+		to = 112
+	},
+	wildcat_huntresses_tower_ult_panther_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_ult_panther",
+		to = 40
+	},
+	wildcat_huntresses_tower_ult_target_run = {
+		from = 1,
+		prefix = "wildcat_huntresses_tower_ult_target",
+		to = 14
 	}
 }
