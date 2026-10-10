@@ -3168,7 +3168,6 @@ tt.render.sprites[1].draw_order = -1
 tt = RT("tower_elf_ranger", "tower")
 AC(tt, "attacks", "powers")
 tt.tower.type = "elf_ranger"
-tt.tower.kind = TOWER_KIND_ARCHER
 tt.tower.price = 260
 tt.tower.size = TOWER_SIZE_LARGE
 tt.tower.menu_offset = v(0, 32)
@@ -3472,6 +3471,24 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
 tt.sound_events.insert = "TowerArcherGarrisonBasicAttack"
 tt.sound_events.hit = "TowerElvenRangerPoisonTipArrowImpact"
+
+tt = RT("bullet_elf_ranger_skill_a_bounce", "bullet_elf_ranger_skill_a")
+tt.bullet.payload = "bullet_elf_ranger_skill_a_bounce_clone"
+tt.bullet.fixed_height = 20
+tt.bullet.g = -1000
+tt.bullet.payload_props = {}
+
+tt = RT("bullet_elf_ranger_skill_a_bounce_clone", "bullet_elf_ranger_skill_a")
+tt.bullet.g = 0
+tt.bullet.fixed_speed = FPS * 12
+tt.bullet.fixed_height = nil
+tt.bullet.hide_radius = 0
+tt.bounces = 0
+tt.max_bounces = 3
+tt.bounce_range = 100
+tt.bounce_damage_mult = 0.25
+tt.main_script.insert = scripts.bullet_tower_elf_ranger_skill_c_bounce_clone.insert
+tt.main_script.update = scripts.bullet_tower_elf_ranger_skill_c_bounce_clone.update
 
 tt = RT("bullet_elf_ranger_skill_b", "arrow5_fixed_height")
 tt.bullet.particles_name = "ps_bullet_elf_ranger_skill_b"
