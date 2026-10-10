@@ -1,1 +1,1 @@
-return {{date="2026-10-09",author="CrazySpottedDove",message="balance: 调整六代游侠的毒为毒伤"},{date="2026-10-09",author="CrazySpottedDove",message="balance: 调整六代游侠的毒箭数值"}}
+return {{date="2026-10-09",author="CrazySpottedDove",message="balance: 调整六代游侠的毒为毒伤"},{date="2026-10-09",author="CrazySpottedDove",message="balance: 调整六代游侠的毒箭数值"},{date="2026-10-10",author="CrazySpottedDove",message="fix: 修复106关英雄模式无法进入的问题"}}

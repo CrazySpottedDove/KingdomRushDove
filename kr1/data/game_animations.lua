@@ -56021,5 +56021,40 @@ return {
 		from = 1,
 		prefix = "elven_elite_ranger_ricochet_trail_particle",
 		to = 9
+	},
+	stage_06_parches_tiki_top_bebe1_idle1 = {
+		from = 1,
+		prefix = "stage_06_parches_tiki_top_bebe1",
+		to = 1
+	},
+	stage_06_parches_tiki_top_bebe1_idle2 = {
+		from = 2,
+		prefix = "stage_06_parches_tiki_top_bebe1",
+		to = 60
+	},
+	stage_06_parches_tiki_top_bebe2_Idle1 = {
+		from = 1,
+		prefix = "stage_06_parches_tiki_top_bebe2",
+		to = 1
+	},
+	stage_06_parches_tiki_top_bebe2_Idle2 = {
+		from = 2,
+		prefix = "stage_06_parches_tiki_top_bebe2",
+		to = 60
+	},
+	stage_06_parches_tiki_top_pibe_Idle = {
+		from = 1,
+		prefix = "stage_06_parches_tiki_top_pibe",
+		to = 1
+	},
+	stage_06_parches_tiki_top_pibe_action = {
+		from = 2,
+		prefix = "stage_06_parches_tiki_top_pibe",
+		to = 76
+	},
+	stage_06_parches_tiki_top_viejo = {
+		from = 1,
+		prefix = "stage_06_parches_tiki_top_viejo",
+		to = 17
 	}
 }
