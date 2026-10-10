@@ -1384,7 +1384,8 @@ upgrades.soldiers = {
 	"soldier_tower_sandworm_2",
 	"soldier_priests_barrack",
 	"soldier_abomination_priests_barrack",
-	"soldier_knights"
+	"soldier_knights",
+	"soldier_wildcat"
 }
 
 upgrades.barrack_soldiers = {
@@ -1427,7 +1428,8 @@ upgrades.barrack_soldiers = {
 	"soldier_swamp_monster",
 	"soldier_priests_barrack",
 	"soldier_abomination_priests_barrack",
-	"soldier_knights"
+	"soldier_knights",
+	"soldier_wildcat"
 }
 
 upgrades.towers_with_barrack = {
@@ -1474,7 +1476,8 @@ upgrades.towers_with_barrack = {
 	"tower_ignis_altar",
 	"tower_shaolin",
 	"tower_stage_28_priests_barrack",
-	"tower_knights"
+	"tower_knights",
+	"tower_wildcat"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {

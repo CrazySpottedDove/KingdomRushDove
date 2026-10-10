@@ -108,7 +108,8 @@ GS.barrack_towers = {
 	"tower_grim_cemetery",
 	"tower_twilight_elves_barrack",
 	"tower_stage_28_priests_barrack",
-	"tower_knights"
+	"tower_knights",
+	"tower_wildcat"
 }
 GS.advanced_towers = {}
 for i = 4, #GS.archer_towers do

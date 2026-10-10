@@ -62,6 +62,7 @@ game.required_textures = {
 	"go_towers_archers",
 	"go_towers_wizard",
 	"go_towers_knights",
+	"go_towers_wildcat",
 	"go_towers_culverine",
 	"go_towers_ranger",
 	"go_stage128",
@@ -123,6 +124,7 @@ game.required_sounds = {
 	"tower_archers",
 	"tower_wizard",
 	"tower_culverine",
+	"tower_wildcat",
 	"tower_elf_ranger"
 }
 game.required_exoskeletons = {

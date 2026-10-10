@@ -14619,7 +14619,7 @@ function scripts.mod_eldritch.update(this, store)
 
 	if targets then
 		for _, t in ipairs(targets) do
-			local d = E.assign_damage(this.damage_type, this.damage_levels[m.level], this.id, t.id)
+			local d = E.assign_damage(this.damage_type, this.damage_levels[m.level] * m.damage_factor, this.id, t.id)
 
 			queue_damage(store, d)
 		end

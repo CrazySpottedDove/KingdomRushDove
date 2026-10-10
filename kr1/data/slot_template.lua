@@ -92,6 +92,7 @@ return {
 		"tower_wizard",
 		"tower_catapult",
 		"tower_culverine",
-		"tower_elf_ranger"
+		"tower_elf_ranger",
+		"tower_wildcat"
 	}
 }
