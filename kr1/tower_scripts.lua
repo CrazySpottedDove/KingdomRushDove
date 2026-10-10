@@ -34242,13 +34242,20 @@ function scripts.tower_elf_ranger.update(this, store)
 			b.bullet.level = sb.level
 		elseif attack == apta then
 			b.bullet.level = sa.level
-		elseif sc.level > 0 then
-			b.bullet.level = sc.level
-			b.bullet.payload_props = {
-				bounce_damage_mult = sc.bounce_damage_mult[sc.level],
-				level = sc.level,
-				damage_factor = this.tower.damage_factor
-			}
+			if sc.level > 0 then
+				local props = b.bullet.payload_props
+				props.bounce_damage_mult = sc.bounce_damage_mult[sc.level]
+				props.level = sc.level
+				props.damage_factor = this.tower.damage_factor
+			end
+		elseif attack == ba then
+			if sc.level > 0 then
+				b.bullet.level = sc.level
+				local props = b.bullet.payload_props
+				props.bounce_damage_mult = sc.bounce_damage_mult[sc.level]
+				props.level = sc.level
+				props.damage_factor = this.tower.damage_factor
+			end
 		end
 
 		if b.bullet.fixed_height then
@@ -34332,6 +34339,7 @@ function scripts.tower_elf_ranger.update(this, store)
 				sc.changed = nil
 				ba.bullet = "bullet_elf_ranger_skill_c"
 				ba.animation = "skill_c"
+				apta.bullet = "bullet_elf_ranger_skill_a_bounce"
 			end
 
 			if ready_to_attack(ama, store, this.tower.cooldown_factor) then
