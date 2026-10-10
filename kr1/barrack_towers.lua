@@ -3790,7 +3790,7 @@ tt.bullet.damage_max = 4
 tt.bullet.damage_min = -4
 tt.bullet.damage_inc = 22
 
--- 守卫骑士团（移植自 KR6 tower_knights，合并为单实体，取 lvl4 数值/贴图）
+-- 守卫骑士团
 tt = RT("tower_knights", "tower")
 AC(tt, "barrack", "powers")
 tt.tower.type = "knights"
@@ -4066,7 +4066,7 @@ tt.powers.skill_b.damage_min = {200, 400, 600}
 tt.powers.skill_b.damage_max = {240, 480, 720}
 tt.powers.skill_c = CC("power")
 tt.powers.skill_c.arrow_count = {8, 10, 12}
-tt.powers.skill_c.damage_min = {8, 13, 18}
+tt.powers.skill_c.damage_min = {8, 12, 18}
 tt.powers.skill_c.damage_max = {12, 16, 22}
 tt.timed_attacks.list[1] = CC("custom_attack")
 tt.timed_attacks.list[1].disabled = true
@@ -4100,9 +4100,9 @@ tt.timed_attacks.list[3] = CC("custom_attack")
 tt.timed_attacks.list[3].disabled = true
 tt.timed_attacks.list[3].animation = "raining_arrows"
 tt.timed_attacks.list[3].cast_time = fts(19)
-tt.timed_attacks.list[3].min_range = 75
+tt.timed_attacks.list[3].min_range = 0
 tt.timed_attacks.list[3].max_range = 150
-tt.timed_attacks.list[3].min_targets = 2
+tt.timed_attacks.list[3].min_targets = 1
 tt.timed_attacks.list[3].vis_flags = bor(F_AREA)
 tt.timed_attacks.list[3].vis_bans = bor(F_NIGHTMARE, F_CLIFF)
 tt.timed_attacks.list[3].bullet = "bullet_wildcat_skill_c"
@@ -4161,7 +4161,7 @@ tt.arrow_t = "decal_wildcat_skill_c_arrow"
 tt.hit_time = fts(3)
 tt.vis_flags = F_AREA
 tt.vis_bans = bor(F_FLYING, F_FRIEND, F_HERO, F_CLIFF)
-tt.nodes_between_arrows = 0.5
+tt.nodes_between_arrows = 1
 
 tt = RT("decal_wildcat_skill_c_arrow", "decal_tween")
 AC(tt, "main_script")

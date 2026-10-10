@@ -35376,13 +35376,14 @@ function scripts.bullet_skill_c_wildcat.update(this, store)
 			queue_insert(store, a)
 		end
 
-		local nearest = P:nearest_nodes(this.bullet.to.x, this.bullet.to.y, {path})
+		local anchor = targets[1] and {targets[1].nav_path.pi, targets[1].nav_path.spi, targets[1].nav_path.ni} or P:nearest_nodes(this.bullet.to.x, this.bullet.to.y, {path})[1]
 
-		if #nearest > 0 then
-			local pi, _, ni = unpack(nearest[1])
-			local initial_offset = 1
-
-			ni = ni - initial_offset
+		if anchor then
+			local pi, _, ni_f = unpack(anchor)
+			-- 以首个敌人所在节点 ni_f 为前方锚点，整体平移箭场：
+			-- 箭场以 ni 为中心前后按 nodes_between_arrows 对称铺开，
+			-- 中心落在敌人后方半个箭场长度处，使约 1/4 的箭在敌人前方、3/4 在后方。
+			local ni = ni_f - this.arrow_count * this.nodes_between_arrows * 0.5
 
 			for i = 1, this.arrow_count do
 				if i == 1 then
@@ -35395,7 +35396,7 @@ function scripts.bullet_skill_c_wildcat.update(this, store)
 						spawn_arrow(pi, math.random(3), ni_aux)
 					end
 
-					ni_aux = ni + i * (this.nodes_between_arrows + 1)
+					ni_aux = ni + i * this.nodes_between_arrows
 
 					if P:is_node_valid(pi, ni_aux) then
 						spawn_arrow(pi, math.random(3), ni_aux)
