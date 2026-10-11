@@ -1459,6 +1459,8 @@ scripts.tower_arcane = {
 		local tw = this.tower
 		local tpos = tpos(this)
 		local sprites = this.render.sprites
+		local pow_b = this.powers.burst
+		local pow_s = this.powers.slumber
 
 		local function shot_animation(attack, shooter_idx, enemy)
 			local ssid = shooter_sids[shooter_idx]
@@ -1480,8 +1482,8 @@ scripts.tower_arcane = {
 
 			local bl = b.bullet
 
-			bl.from = vclone(b.pos)
-			bl.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+			bl.from:copy(b.pos)
+			bl.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 			bl.target_id = enemy.id
 			bl.source_id = this.id
 			bl.level = level
@@ -1493,17 +1495,14 @@ scripts.tower_arcane = {
 
 			apply_precision(b)
 
-			local dist = V.dist(b.bullet.to.x, b.bullet.to.y, b.bullet.from.x, b.bullet.from.y)
+			local dist = bl.from:dist(bl.to)
 
-			b.bullet.flight_time = b.bullet.flight_time_min + dist / a.range * b.bullet.flight_time_factor
+			bl.flight_time = bl.flight_time_min + dist / a.range * bl.flight_time_factor
 
 			simulation:queue_insert_entity(b)
 		end
 
 		aa.ts = store.tick_ts
-
-		local pow_b = this.powers.burst
-		local pow_s = this.powers.slumber
 
 		local function attack_sort_fn(a, b)
 			local a_flying = band(a.vis.flags, F_FLYING) ~= 0
@@ -1533,11 +1532,14 @@ scripts.tower_arcane = {
 				if pow_s.changed then
 					pow_s.changed = nil
 					this.attacks.list[3].chance = this.attacks.list[3].chance_base + pow_s.level * this.attacks.list[3].chance_inc
+					if not pow_s.last_damage_factor then
+						pow_s.last_damage_factor = 1
+					end
+					SU.insert_tower_damage_factor_buff(this, pow_s.damage_factor[pow_s.level] - pow_s.last_damage_factor)
 				end
 
 				local sa = this.attacks.list[2]
 
-				-- local pow = this.powers.burst
 				if U.tower_ready_to_use_power(pow_b, sa, store, tw) then
 					local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, nil, sa.vis_flags, sa.vis_bans, 57.5)
 
