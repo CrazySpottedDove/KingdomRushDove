@@ -2393,20 +2393,8 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 		end
 
 		if attack.mod then
-			local mod = E:create_entity(attack.mod)
-
-			mod.modifier.ts = store.tick_ts
-			mod.modifier.target_id = target.id
-			mod.modifier.source_id = this.id
-			mod.modifier.level = attack.level
-			mod.modifier.damage_factor = this.unit.damage_factor
-
-			simulation:queue_insert_entity(mod)
-		end
-
-		if attack.mods then
-			for _, m in ipairs(attack.mods) do
-				local mod = E:create_entity(m)
+			if not attack.mod_chance or math.random() < attack.mod_chance then
+				local mod = E:create_entity(attack.mod)
 
 				mod.modifier.ts = store.tick_ts
 				mod.modifier.target_id = target.id
@@ -2415,6 +2403,22 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 				mod.modifier.damage_factor = this.unit.damage_factor
 
 				simulation:queue_insert_entity(mod)
+			end
+		end
+
+		if attack.mods then
+			if not attack.mod_chance or math.random() < attack.mod_chance then
+				for _, m in ipairs(attack.mods) do
+					local mod = E:create_entity(m)
+
+					mod.modifier.ts = store.tick_ts
+					mod.modifier.target_id = target.id
+					mod.modifier.source_id = this.id
+					mod.modifier.level = attack.level
+					mod.modifier.damage_factor = this.unit.damage_factor
+
+					simulation:queue_insert_entity(mod)
+				end
 			end
 		end
 
