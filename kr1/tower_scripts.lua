@@ -34594,7 +34594,7 @@ end
 
 scripts.decal_elf_ranger_skill_b = {}
 
-function scripts.decal_elf_ranger_skill_b.update(this, store, script)
+function scripts.decal_elf_ranger_skill_b.update(this, store)
 	local function check_validity()
 		if not P:valid_node_nearby(this.pos.x, this.pos.y) then
 			if this.animation_end then
@@ -34644,7 +34644,7 @@ end
 
 scripts.mod_elf_ranger_skill_b_stun = {}
 
-function scripts.mod_elf_ranger_skill_b_stun.update(this, store, script)
+function scripts.mod_elf_ranger_skill_b_stun.update(this, store)
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
 
@@ -35478,13 +35478,13 @@ end
 
 scripts.bullet_skill_c_wildcat_arrows = {}
 
-function scripts.bullet_skill_c_wildcat_arrows.insert(this, store, script)
+function scripts.bullet_skill_c_wildcat_arrows.insert(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 
 	return true
 end
 
-function scripts.bullet_skill_c_wildcat_arrows.update(this, store, script)
+function scripts.bullet_skill_c_wildcat_arrows.update(this, store)
 	local s = this.render.sprites[1]
 	local flip_x = this.pos.x > this.to.x
 	local mspeed = this.min_speed
@@ -35531,7 +35531,7 @@ end
 
 scripts.decal_wildcat_ult_panther = {}
 
-function scripts.decal_wildcat_ult_panther.update(this, store, script)
+function scripts.decal_wildcat_ult_panther.update(this, store)
 	S:queue(this.sound, {
 		delay = fts(7)
 	})
@@ -35558,7 +35558,7 @@ end
 
 scripts.decal_wildcat_ult_target = {}
 
-function scripts.decal_wildcat_ult_target.update(this, store, script)
+function scripts.decal_wildcat_ult_target.update(this, store)
 	U.y_wait(store, this.duration)
 	queue_remove(store, this)
 end
@@ -35637,6 +35637,1010 @@ function scripts.controller_wildcat_ult.update(this, store)
 
 		this.target_id = nil
 		this.cast_ult = false
+
+		coroutine.yield()
+	end
+end
+
+-- 淘金矮人
+local function miners_point_in_valid_path(x, y, path_indexes)
+	local pi, spi, ni, dist = unpack(P:nearest_nodes(x, y, path_indexes)[1])
+	local width = P:path_width(pi)
+	local node_pos = P:node_pos(pi, spi, ni)
+
+	return dist <= width and P:is_node_valid(pi, ni) and GR:cell_is(node_pos.x, node_pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and not GR:cell_is(node_pos.x, node_pos.y, bor(TERRAIN_NOWALK)) and P:is_path_active(pi)
+end
+
+scripts.mod_miners_skill_b_stun = {}
+
+function scripts.mod_miners_skill_b_stun.insert(this, store)
+	local m = this.modifier
+
+	m.duration = m.duration_base + (m.level - 1) * m.duration_inc
+
+	return scripts.mod_stun.insert(this, store)
+end
+
+scripts.tower_miners = {}
+
+function scripts.tower_miners.update(this, store)
+	local WORKING_MODE = 1
+	local DISABLED_MODE = 3
+	local FIGHTING_MODE = 4
+
+	this.mode_animation_map = {
+		[WORKING_MODE] = {"farm_loop", true},
+		[DISABLED_MODE] = {"idle", true},
+		[FIGHTING_MODE] = {"idle", true}
+	}
+
+	local td = this.tower_upgrade_persistent_data
+	local b = this.barrack
+	local gg = this.gold_generation
+	local tower_sid = 2
+	local whistle_sid = 4
+	local pow_a = this.powers.skill_a
+	local pow_b = this.powers.skill_b
+	local pow_c = this.powers.skill_c
+	local ult = this.ultimate
+	local ts_idx = 2
+	local spawn_soldier_ts = store.tick_ts - this.spawn_soldier_interval
+	local mode_pre_block = WORKING_MODE
+	local soldier_t = E:get_template(b.soldier_type)
+	local respawn_time = soldier_t.health.dead_lifetime
+	local tunnel_return_time = soldier_t.tunneling_time + fts(15)
+
+	local function change_animation(mode, ts)
+		U.animation_start(this, this.mode_animation_map[mode][1], nil, ts, this.mode_animation_map[mode][2], ts_idx)
+	end
+
+	local function prune_soldiers()
+		for i = #b.soldiers, 1, -1 do
+			local s = b.soldiers[i]
+
+			if not store.entities[s.id] or s.health.dead and store.tick_ts - (s.health.death_ts or 0) >= respawn_time then
+				table.remove(b.soldiers, i)
+			end
+		end
+	end
+
+	local function check_spawn_soldier()
+		prune_soldiers()
+
+		if store.tick_ts - spawn_soldier_ts <= this.spawn_soldier_interval then
+			return
+		end
+
+		if #b.soldiers >= b.max_soldiers then
+			return
+		end
+
+		local e = U.find_foremost_enemy(store, tpos(this), 0, b.rally_range, nil, F_BLOCK, bor(F_FLYING, F_CLIFF), function(e)
+			return #e.enemy.blockers == 0 and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0
+		end)
+
+		if not e then
+			return
+		end
+
+		spawn_soldier_ts = store.tick_ts
+
+		local s = E:create_entity(b.soldier_type)
+
+		s.soldier.tower_id = this.id
+		s.first_enemy_id = e.id
+		s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
+		s.nav_rally.pos, s.nav_rally.center = V.vv(0), V.vv(0)
+
+		if pow_b.level > 0 then
+			s.powers.skill_b.level = pow_b.level
+		end
+
+		SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
+
+		b.soldiers[#b.soldiers + 1] = s
+
+		queue_insert(store, s)
+		signal.emit("tower-spawn", this, s)
+	end
+
+	local function y_enter_fighting_mode()
+		U.y_animation_play(this, "unit_deploy", nil, store.tick_ts, 1, whistle_sid)
+		U.animation_start(this, "idle", nil, store.tick_ts, true, whistle_sid)
+	end
+
+	local function y_leave_fighting_mode()
+		local waiting = false
+
+		for _, s in pairs(this.barrack.soldiers) do
+			if not s.health.dead then
+				s._tower_will_remove = true
+
+				if not s._burrowed and not s.unit.is_stunned then
+					U.animation_start(s, "buriedIn", nil, store.tick_ts, false, 1)
+
+					s.health_bar.hidden = true
+
+					U.y_wait(store, fts(math.random(1, 10)))
+				end
+
+				waiting = true
+			end
+		end
+
+		while waiting do
+			local finished = true
+
+			for _, s in pairs(this.barrack.soldiers) do
+				if store.entities[s.id] and not s.health.dead and not U.animation_finished(s, 1) then
+					finished = false
+
+					break
+				end
+			end
+
+			if finished then
+				break
+			end
+
+			coroutine.yield()
+		end
+
+		for _, s in pairs(this.barrack.soldiers) do
+			if s.health and s.health.dead then
+			-- block empty
+			else
+				if s.health then
+					s.health.dead = true
+				end
+
+				s.render.sprites[1].hidden = true
+
+				queue_remove(store, s)
+			end
+		end
+
+		if waiting then
+			U.y_wait(store, tunnel_return_time)
+		end
+	end
+
+	local function change_mode(nm)
+		td.gold_rush = nil
+
+		if td.mode == FIGHTING_MODE then
+			y_leave_fighting_mode()
+		end
+
+		if nm == FIGHTING_MODE then
+			y_enter_fighting_mode()
+		end
+
+		td.mode = nm
+		td.gold_ts = store.tick_ts
+		td.mode_switch_ts = store.tick_ts
+
+		change_animation(td.mode, store.tick_ts)
+	end
+
+	local DETECT_SCAN_INTERVAL = fts(6)
+	local detect_last_ts, detect_last_result = nil, false
+
+	local function detect_enemies_to_block()
+		if detect_last_ts and store.tick_ts - detect_last_ts < DETECT_SCAN_INTERVAL then
+			return detect_last_result
+		end
+
+		detect_last_ts = store.tick_ts
+
+		local e, enemies = U.find_foremost_enemy(store, tpos(this), 0, b.rally_range, nil, F_BLOCK, bor(F_FLYING, F_CLIFF), function(e)
+			return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0
+		end)
+
+		detect_last_result = e and enemies and #enemies > 0
+
+		return detect_last_result
+	end
+
+	local function detect_soldiers_blocking()
+		for _, s in pairs(this.barrack.soldiers) do
+			if s.health and not s.health.dead and (s.soldier.target_id or s._in_transit or s.unit.is_stunned) then
+				return true
+			end
+		end
+
+		return false
+	end
+
+	local function check_generate_gold(factor)
+		local tick_cooldown = (td.gold_rush and ult.tick_cooldown or gg.tick_cooldown) * this.tower.cooldown_factor
+
+		if tick_cooldown <= store.tick_ts - td.gold_ts then
+			local min_gold, max_gold = gg.min_gold, gg.max_gold
+
+			if td.gold_rush then
+				min_gold, max_gold = ult.min_gold, ult.max_gold
+			end
+
+			local value = U.frandom(min_gold, max_gold) * factor
+			if this.total_gold_generated > this.gold_threshold then
+				value = value * this.beyond_threshold_gold_factor
+			end
+
+			local pos = V.v(this.pos.x + this.gold_effect_offset.x, this.pos.y + this.gold_effect_offset.y)
+
+			store.player_gold = store.player_gold + value
+
+			local fx = E:create_entity("fx_coin_jump")
+
+			fx.pos.x, fx.pos.y = pos.x, pos.y
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
+
+			td.gold_ts = store.tick_ts
+		end
+	end
+
+	local function apply_tower_upgrade()
+		change_animation(td.mode, td.mode_switch_ts)
+	end
+
+	local carried_over = {}
+
+	for i = 1, b.max_soldiers do
+		if b.soldiers[i] then
+			carried_over[#carried_over + 1] = b.soldiers[i]
+		end
+	end
+
+	b.soldiers = carried_over
+
+	apply_tower_upgrade()
+
+	if not td.gold_ts then
+		td.gold_ts = store.tick_ts
+	end
+
+	if not td.ult_acum then
+		td.ult_acum = 0
+	end
+
+	td.gold_rush = nil
+
+	while true do
+		local gold_factor = pow_c.level > 0 and pow_c.gold_factor[pow_c.level] or 1
+
+		if pow_a.changed then
+			pow_a.changed = nil
+
+			if not this.controller_skill_a then
+				this.controller_skill_a = E:create_entity(this.attacks.list[1].controller)
+				this.controller_skill_a.pos = V.vclone(this.pos)
+				this.controller_skill_a.tower_miners = this
+
+				queue_insert(store, this.controller_skill_a)
+			end
+		end
+
+		if pow_c.changed then
+			pow_c.changed = nil
+
+			U.animation_start(this, "reserve miners loop", nil, store.tick_ts, true, 5)
+		end
+
+		if pow_b.changed then
+			pow_b.changed = nil
+		end
+
+		if td.mode ~= DISABLED_MODE and this.tower.blocked then
+			mode_pre_block = td.mode
+
+			change_mode(DISABLED_MODE)
+		end
+
+		if td.mode == DISABLED_MODE then
+			if store.wave_group_number > 0 and not this.tower.blocked then
+				change_mode(mode_pre_block)
+			end
+		else
+			if not td.gold_rush then
+				if td.mode == WORKING_MODE then
+					td.ult_acum = td.ult_acum + store.tick_length
+
+					if td.ult_acum >= ult.cooldown * this.tower.cooldown_factor then
+						td.ult_acum = 0
+						td.gold_rush = true
+						td.gold_rush_acum = 0
+
+						U.animation_start(this, "ultimate", nil, store.tick_ts, false, tower_sid)
+					end
+				elseif pow_c.level > 0 then
+					td.ult_acum = td.ult_acum + store.tick_length
+				end
+			end
+
+			if td.mode == WORKING_MODE then
+				check_generate_gold(gold_factor)
+
+				if detect_enemies_to_block() then
+					change_mode(FIGHTING_MODE)
+
+					goto label_miners_work
+				end
+
+				if td.gold_rush then
+					td.gold_rush_acum = td.gold_rush_acum + store.tick_length / this.tower.cooldown_factor
+
+					if td.gold_rush_acum >= ult.duration then
+						td.gold_rush = false
+						td.ult_acum = 0
+						td.gold_rush_acum = 0
+
+						U.animation_start(this, "farm_loop", nil, store.tick_ts, true, tower_sid)
+					end
+				end
+			end
+
+			if td.mode == FIGHTING_MODE then
+				if pow_c.level > 0 then
+					check_generate_gold(gold_factor)
+				end
+
+				check_spawn_soldier()
+
+				if not detect_enemies_to_block() and not detect_soldiers_blocking() then
+					change_mode(WORKING_MODE)
+				end
+			end
+		end
+
+		::label_miners_work::
+
+		coroutine.yield()
+	end
+end
+
+function scripts.tower_miners.remove(this, store)
+	if this.controller_skill_a then
+		queue_remove(store, this.controller_skill_a)
+	end
+
+	local skill_a_spawns = table.filter(store.entities, function(k, v)
+		return v.tower_id == this.id and (v.template_name == "decal_miners_cart_skill_a" or string.find(v.template_name, "soldier_miners_skill_a"))
+	end)
+
+	for _, v in pairs(skill_a_spawns) do
+		queue_remove(store, v)
+	end
+
+	return scripts.tower_barrack.remove(this, store)
+end
+
+scripts.controller_miners_skill_a = {}
+
+function scripts.controller_miners_skill_a.update(this, store)
+	local tower = this.tower_miners
+	local a = tower.attacks.list[1]
+	a.ts = store.tick_ts - a.cooldown
+	local tower_base_sid = 3
+	local valid_paths = {}
+	local nearest_nodes_per_path = P:nearest_nodes(tower.pos.x, tower.pos.y, nil, nil, true)
+
+	for _, nn in ipairs(nearest_nodes_per_path) do
+		if nn[4] <= this.path_detection_range then
+			table.insert(valid_paths, nn[1])
+		end
+	end
+
+	while true do
+		-- if ready_to_attack(a, store, tower.tower.cooldown_factor) and tower.tower_upgrade_persistent_data.mode ~= 3 then
+		if ready_to_attack(a, store, tower.tower.cooldown_factor) and tower.tower_upgrade_persistent_data.mode ~= 3 then
+			local targets = U.find_enemies_in_range(store, this.pos, 0, tower.attacks.range, a.vis_flags, a.vis_bans, function(v, o)
+				return table.contains(valid_paths, v.nav_path.pi)
+			end)
+
+			if not targets then
+				goto label_miners_cart
+			end
+
+			local pi, ni
+
+			for _, t in ipairs(targets) do
+				local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {t.nav_path.pi})
+
+				if nearest and #nearest > 0 then
+					local npi, _, nni = unpack(nearest[1])
+
+					if nni > t.nav_path.ni then
+						pi, ni = npi, nni
+
+						break
+					end
+				end
+			end
+
+			if not pi then
+				goto label_miners_cart
+			end
+
+			local pos = P:node_pos(pi, 1, ni)
+
+			if not miners_point_in_valid_path(pos.x, pos.y, {pi}) then
+				goto label_miners_cart
+			end
+
+			a.ts = store.tick_ts
+
+			U.y_animation_play(tower, "skill03", nil, store.tick_ts, 1, tower_base_sid)
+			U.animation_start(tower, "idle", nil, store.tick_ts, true, tower_base_sid)
+
+			local sa = tower.powers.skill_a
+			local c = E:create_entity(this.cart_t)
+
+			c.pos = V.v(tower.pos.x + tower.cart_start_offset.x, tower.pos.y + tower.cart_start_offset.y)
+			c.nav_path.pi = pi
+			c.nav_path.spi = 1
+			c.nav_path.ni = ni
+			c.nav_path.dir = -1
+			c.damage_min = sa.cart_damage_min[sa.level]
+			c.damage_max = sa.cart_damage_max[sa.level]
+			c.damage_factor = tower.tower.damage_factor
+			c.soldier_t = sa.soldier_t
+			c.soldier_hp_factor = sa.soldier_hp[sa.level] / sa.soldier_hp[1]
+			c.soldier_damage_min = sa.soldier_damage_min[sa.level]
+			c.soldier_damage_max = sa.soldier_damage_max[sa.level]
+			c.controller = this
+			c.tower_id = tower.id
+
+			queue_insert(store, c)
+		end
+
+		::label_miners_cart::
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_miners_cart_skill_a = {}
+
+function scripts.decal_miners_cart_skill_a.update(this, store)
+	local nodes_traveled = 0
+	local last_an, last_af
+	local diag_tan = math.tan(math.rad(22.5))
+	local ps = E:create_entity(this.ps_trail)
+
+	ps.particle_system.track_id = this.id
+	ps.particle_system.emit = true
+
+	queue_insert(store, ps)
+
+	local function update_cart_animation()
+		local dx = this.motion.dest.x - this.pos.x
+		local dy = this.motion.dest.y - this.pos.y
+
+		if dx == 0 and dy == 0 then
+			return
+		end
+
+		local adx, ady = math.abs(dx), math.abs(dy)
+		local an, af
+
+		if adx <= diag_tan * ady then
+			an, af = dy > 0 and "up" or "down", false
+		elseif ady <= diag_tan * adx then
+			an, af = "left", dx < 0
+		else
+			an, af = dy > 0 and "diagonal_up" or "diagonal_down", dx < 0
+		end
+
+		if an ~= last_an or af ~= last_af then
+			U.animation_start(this, an, af, store.tick_ts, true, 1)
+
+			last_an, last_af = an, af
+
+			local ps_offset = V.v(this.render.sprites[1].flip_x and this.particles_offsets[an].x or -this.particles_offsets[an].x, this.particles_offsets[an].y)
+
+			ps.particle_system.track_offset = ps_offset
+
+			if string.find(an, "down") then
+				ps.particle_system.z = Z_DECALS
+			else
+				ps.particle_system.z = Z_OBJECTS
+			end
+		end
+	end
+
+	local function spawn_soldiers()
+		local tower = store.entities[this.tower_id]
+
+		for i = 1, this.soldiers_count do
+			local ni_offset = i % 2 == 0 and 2 or -2
+			local spos = P:node_pos(this.nav_path.pi, 1, this.nav_path.ni + ni_offset)
+			local s = E:create_entity(this.soldier_t)
+
+			s.health.hp_max = s.health.hp_max * this.soldier_hp_factor
+			s.health.hp = s.health.hp_max
+			s.melee.attacks[1].damage_min = this.soldier_damage_min
+			s.melee.attacks[1].damage_max = this.soldier_damage_max
+
+			s.pos = spos
+			s.nav_rally.pos = V.vclone(spos)
+			s.nav_rally.center = V.v(this.pos.x, this.pos.y)
+			s.nav_rally.new = false
+			s.tower_id = this.tower_id
+			s.reinforcement.squad_id = this.id
+
+			SU.soldier_inherit_tower_buff_factor(s, tower, store.tick_ts)
+
+			queue_insert(store, s)
+		end
+	end
+
+	local function explode()
+		local fx = E:create_entity(this.explosion_fx_t)
+
+		fx.pos = V.vclone(this.pos)
+		fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, fx)
+
+		local enemies = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, F_AREA, bor(F_FLYING, F_CLIFF))
+		if enemies then
+			for _, enemy in ipairs(enemies) do
+				local d = E.assign_damage(this.damage_type, math.random(this.damage_min, this.damage_max) * this.damage_factor, this.id, enemy.id)
+
+				queue_damage(store, d)
+			end
+		end
+
+		spawn_soldiers()
+
+		this.controller.cart_done = true
+
+		queue_remove(store, this)
+	end
+
+	while true do
+		local next_node, new_node = P:next_entity_node(this, store.tick_length)
+
+		if not next_node or not P:is_node_valid(this.nav_path.pi, this.nav_path.ni, NF_NO_BACKWARDS) or GR:cell_is(next_node.x, next_node.y, this.banned_terrains) then
+			explode()
+
+			return
+		end
+
+		if new_node then
+			nodes_traveled = nodes_traveled + 1
+
+			if nodes_traveled >= this.max_nodes then
+				explode()
+
+				return
+			end
+		end
+
+		U.set_destination(this, next_node)
+		update_cart_animation()
+		U.walk(this, store.tick_length)
+
+		local hits = U.find_enemies_in_range(store, this.pos, 0, this.hit_radius, 0, bor(F_FLYING, F_CLIFF))
+
+		if hits then
+			explode()
+
+			return
+		end
+
+		coroutine.yield()
+
+		this.motion.speed.x, this.motion.speed.y = 0, 0
+	end
+end
+
+scripts.soldier_miners_skill_a = {}
+
+function scripts.soldier_miners_skill_a.update(this, store)
+	this.health_bar.hidden = true
+
+	U.y_animation_play(this, "spawn", nil, store.tick_ts, 1, 1)
+
+	if not this.health.dead then
+		this.health_bar.hidden = nil
+	end
+
+	return scripts.soldier_reinforcement.update(this, store)
+end
+
+scripts.soldier_miners = {}
+
+function scripts.soldier_miners.update(this, store)
+	local brk, sta
+	local tower = store.entities[this.soldier.tower_id]
+	local ps_dust = E:create_entity(this.ps_trail_dust)
+
+	ps_dust.particle_system.track_id = this.id
+
+	queue_insert(store, ps_dust)
+
+	local ps_ground = E:create_entity(this.ps_trail_ground)
+
+	ps_ground.particle_system.track_id = this.id
+
+	queue_insert(store, ps_ground)
+
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
+	end
+
+	this.nav_rally.pos = V.vv(0)
+	this.nav_rally.center = V.vv(0)
+
+	local unburrow_time = fts(15)
+	local tunnel_cycle_time = unburrow_time + this.tunneling_time + unburrow_time
+	local walk_range = this.normal_speed * tunnel_cycle_time
+	local leaving_mine = V.dist2(this.pos.x, this.pos.y, tower.pos.x + tower.barrack.respawn_offset.x, tower.pos.y + tower.barrack.respawn_offset.y) < 4
+
+	local function transferred_underground()
+		local n = this.render.sprites[1].name
+
+		if n == this.bury_in_anim then
+			return true
+		end
+
+		for _, a in ipairs(this.render.sprites[1].angles.bury) do
+			if n == a then
+				return true
+			end
+		end
+
+		return false
+	end
+
+	local underground = leaving_mine or transferred_underground()
+
+	this._burrowed = underground
+	this._in_transit = underground or nil
+
+	if underground and not this._burrowed_ban then
+		U.bans_add(this.vis, F_ALL)
+		this._burrowed_ban = true
+	end
+
+	local function other_soldiers_blocking()
+		for _, s in pairs(tower.barrack.soldiers) do
+			if not s.health.dead and s.soldier.target_id ~= nil and store.entities[s.soldier.target_id] and not store.entities[s.soldier.target_id].health.dead then
+				return s.soldier.target_id
+			end
+		end
+
+		return nil
+	end
+
+	local function predict_enemy_slot(target, pred)
+		local p_offset = P:predict_enemy_node_advance(target, pred)
+		local p_ni = target.nav_path.ni + p_offset
+		local p_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, p_ni, true)
+		local p_angle = target.heading.angle
+
+		if p_offset > 0 then
+			local next_p_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, p_ni + 1, true)
+
+			p_angle = V.angleTo(next_p_pos.x - p_pos.x, next_p_pos.y - p_pos.y)
+		end
+
+		local rank = table.keyforobject(target.enemy.blockers, this.id) or 1
+		local idx = km.zmod(rank, 3)
+		local x_off, y_off = 0, 0
+
+		if idx ~= 1 then
+			x_off = this.soldier.melee_slot_spread and this.soldier.melee_slot_spread.x or -3
+			y_off = this.soldier.melee_slot_spread and this.soldier.melee_slot_spread.y or -6
+
+			if idx == 3 then
+				y_off = -1 * y_off
+			end
+		end
+
+		local on_the_right = math.abs(km.signed_unroll(p_angle)) < math.pi / 2
+
+		return V.v(p_pos.x + (target.enemy.melee_slot.x + x_off + this.soldier.melee_slot_offset.x) * (on_the_right and 1 or -1), p_pos.y + target.enemy.melee_slot.y + y_off + this.soldier.melee_slot_offset.y)
+	end
+
+	local function go_underground(this)
+		if not this._burrowed_ban then
+			U.bans_add(this.vis, F_ALL)
+			this._burrowed_ban = true
+		end
+	end
+
+	local function surface(this)
+		this._burrowed = nil
+
+		if this._burrowed_ban then
+			U.bans_remove(this.vis, F_ALL)
+			this._burrowed_ban = nil
+		end
+
+		ps_dust.particle_system.emit = false
+		ps_ground.particle_system.emit = false
+
+		if not this._skill_b_pending then
+			S:queue(this.sound_surface)
+		end
+	end
+
+	local function trigger_skill_b()
+		local sb = this.powers.skill_b
+
+		if sb.level <= 0 then
+			return
+		end
+
+		local tb = tower.powers.skill_b
+		local level = sb.level
+		local aura = E:create_entity(tb.aura_t)
+
+		aura.pos.x, aura.pos.y = this.pos.x, this.pos.y
+		aura.aura.level = level
+		aura.aura.damage_min = tb.damage_min[level]
+		aura.aura.damage_max = tb.damage_max[level]
+		aura.aura.damage_factor = tower.tower.damage_factor
+
+		queue_insert(store, aura)
+
+		for _, vi in ipairs(tb.visuals) do
+			local visuals = E:create_entity(vi)
+
+			visuals.pos.x, visuals.pos.y = this.pos.x, this.pos.y
+			visuals.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, visuals)
+		end
+	end
+
+	local function y_soldier_tunnel_or_walk_to_slot_step(store, this, target)
+		if not leaving_mine and V.dist2(this.pos.x, this.pos.y, target.pos.x, target.pos.y) <= walk_range * walk_range then
+			if this._burrowed then
+				surface(this)
+				U.y_animation_play(this, this.bury_out_anim, nil, store.tick_ts, 1, 1)
+
+				this._in_transit = nil
+			end
+
+			return SU.soldier_move_to_slot_step(store, this, target), target
+		end
+
+		leaving_mine = false
+
+		if not this._burrowed and not this._tower_will_remove then
+			this._burrowed = true
+			this._in_transit = true
+
+			go_underground(this)
+			U.y_animation_play(this, this.bury_in_anim, nil, store.tick_ts, 1, 1)
+		end
+
+		local dig_ts = store.tick_ts
+		local dig_dest
+
+		while true do
+			if this._tower_will_remove then
+				return true, target
+			end
+
+			if this.health.dead then
+				return true, target
+			end
+
+			local remaining = this.tunneling_time - (store.tick_ts - dig_ts)
+			local e_pos
+
+			if target and store.entities[target.id] and not target.health.dead then
+				e_pos = predict_enemy_slot(target, math.max(remaining, 0))
+
+				if #target.enemy.blockers == 0 and not U.is_inside_ellipse(e_pos, tpos(tower), tower.barrack.rally_range) then
+					e_pos = nil
+				end
+			end
+
+			if not e_pos then
+				e_pos = dig_dest or target and V.v(target.pos.x, target.pos.y) or V.v(this.pos.x, this.pos.y)
+
+				if target then
+					U.unblock_target(store, this)
+
+					target = nil
+				end
+			end
+
+			dig_dest = e_pos
+
+			U.set_destination(this, e_pos)
+
+			if target then
+				U.block_enemy(store, this, target)
+			end
+
+			if remaining <= store.tick_length then
+				this.pos.x, this.pos.y = e_pos.x, e_pos.y
+				this.motion.arrived = true
+
+				break
+			end
+
+			local an, af = U.animation_name_facing_point(this, "bury", this.motion.dest)
+
+			U.animation_start(this, an, af, store.tick_ts, true)
+
+			U.update_max_speed(this, V.dist(this.pos.x, this.pos.y, e_pos.x, e_pos.y) / remaining)
+
+			U.walk(this, store.tick_length)
+			coroutine.yield()
+		end
+
+		this._skill_b_pending = this.powers.skill_b.level > 0 or nil
+
+		surface(this)
+
+		this._skill_b_pending = nil
+
+		trigger_skill_b()
+		U.y_animation_play(this, this.bury_out_anim, nil, store.tick_ts, 1, 1)
+
+		this._in_transit = nil
+		U.update_max_speed(this, this.normal_speed)
+
+		if not target then
+			return false, nil
+		end
+
+		return SU.soldier_move_to_slot_step(store, this, target), target
+	end
+
+	local function y_burrow_idle_in_place_then_remove(store, this)
+		if this._removing or this._tower_will_remove then
+			return
+		end
+
+		this.motion.speed.x, this.motion.speed.y = 0, 0
+
+		if not this._burrowed and not this._tower_will_remove then
+			this._burrowed = true
+
+			go_underground(this)
+			U.y_animation_play(this, this.bury_in_anim, nil, store.tick_ts, 1, 1)
+
+			this.render.sprites[1].hidden = true
+		end
+
+		this._removing = true
+
+		queue_remove(store, this)
+	end
+
+	local function y_soldier_melee_tunnels_blocks_first_enemy(store, this)
+		local on_route
+		local target = store.entities[this.first_enemy_id]
+
+		if not target then
+			local target_id = other_soldiers_blocking()
+
+			if target_id then
+				target = store.entities[target_id]
+			else
+				if this._burrowed then
+					surface(this)
+					U.y_animation_play(this, this.bury_out_anim, nil, store.tick_ts, 1, 1)
+				end
+
+				this._in_transit = nil
+
+				return false, A_NO_TARGET
+			end
+		end
+
+		on_route, target = y_soldier_tunnel_or_walk_to_slot_step(store, this, target)
+
+		if on_route or not target then
+			return true
+		end
+
+		local attack = SU.soldier_pick_melee_attack(store, this, target)
+
+		if not attack then
+			return false, A_IN_COOLDOWN
+		end
+
+		local attack_done
+
+		if attack.loops then
+			attack_done = SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
+		elseif attack.type == "area" then
+			attack_done = SU.y_soldier_do_single_area_attack(store, this, target, attack)
+		else
+			attack_done = SU.y_soldier_do_single_melee_attack(store, this, target, attack)
+		end
+
+		if attack_done then
+			return false, A_DONE
+		else
+			return true
+		end
+	end
+
+	if underground then
+		if not this.first_enemy_id then
+			this.first_enemy_id = this.soldier.target_id
+		end
+
+		y_soldier_melee_tunnels_blocks_first_enemy(store, this)
+	end
+
+	this.nav_rally.pos, this.nav_rally.center = V.vclone(this.pos), V.vclone(this.pos)
+
+	local idle_ts = store.tick_ts
+	local idle = false
+
+	while true do
+		if this._tower_will_remove then
+		-- block empty
+		else
+			if not this.health.dead or SU.y_soldier_revive(store, this) then
+			-- block empty
+			else
+				SU.y_soldier_death(store, this)
+
+				return
+			end
+
+			if this.unit.is_stunned then
+				SU.soldier_idle(store, this)
+			else
+				if this.dodge and this.dodge.active then
+					this.dodge.active = false
+
+					if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
+						this.dodge.counter_attack_pending = true
+					elseif this.dodge.animation then
+						U.animation_start(this, this.dodge.animation, nil, store.tick_ts, false)
+
+						while not U.animation_finished(this) do
+							coroutine.yield()
+						end
+					end
+
+					signal.emit("soldier-dodge", this)
+				end
+
+				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+				if not idle and sta == A_NO_TARGET then
+					idle = true
+					idle_ts = store.tick_ts
+				end
+
+				if brk or sta ~= A_NO_TARGET then
+					idle = false
+
+					goto label_miners_soldier
+				end
+
+				if SU.soldier_go_back_step(store, this) then
+				-- block empty
+				else
+					if idle and store.tick_ts - idle_ts > 1.5 then
+						y_burrow_idle_in_place_then_remove(store, this)
+					end
+
+					SU.soldier_regen(store, this)
+					SU.soldier_idle(store, this)
+				end
+			end
+		end
+
+		::label_miners_soldier::
 
 		coroutine.yield()
 	end

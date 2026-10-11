@@ -1385,7 +1385,9 @@ upgrades.soldiers = {
 	"soldier_priests_barrack",
 	"soldier_abomination_priests_barrack",
 	"soldier_knights",
-	"soldier_wildcat"
+	"soldier_wildcat",
+	"soldier_miners",
+	"soldier_miners_skill_a"
 }
 
 upgrades.barrack_soldiers = {
@@ -1429,7 +1431,9 @@ upgrades.barrack_soldiers = {
 	"soldier_priests_barrack",
 	"soldier_abomination_priests_barrack",
 	"soldier_knights",
-	"soldier_wildcat"
+	"soldier_wildcat",
+	"soldier_miners",
+	"soldier_miners_skill_a"
 }
 
 upgrades.towers_with_barrack = {
@@ -1477,7 +1481,8 @@ upgrades.towers_with_barrack = {
 	"tower_shaolin",
 	"tower_stage_28_priests_barrack",
 	"tower_knights",
-	"tower_wildcat"
+	"tower_wildcat",
+	"tower_miners"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {
@@ -1873,13 +1878,14 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_bodies")
 
 	if u then
+		local special_towers = {"tower_baby_ashbite", "tower_pandas_lvl4", "tower_miners"}
 		for _, n in pairs(GS.barrack_towers) do
-			if n ~= "tower_baby_ashbite" and n ~= "tower_pandas_lvl4" then
+			if not table.arraycontains(special_towers, n) then
 				local t = T(n)
 				t.barrack.max_soldiers = t.barrack.max_soldiers + 1
 			end
 		end
-		local special_soldiers = {"soldier_baby_ashbite", "soldier_tower_pandas_green_lvl4", "soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_blue_lvl4", "soldier_ogre_shipwreck_cook", "soldier_ogre_shipwreck_deckhand", "soldier_ogre_shipwreck_red_goblin", "soldier_ogre_shipwreck_red_goblin_elite", "soldier_swamp_monster"}
+		local special_soldiers = {"soldier_baby_ashbite", "soldier_tower_pandas_green_lvl4", "soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_blue_lvl4", "soldier_ogre_shipwreck_cook", "soldier_ogre_shipwreck_deckhand", "soldier_ogre_shipwreck_red_goblin", "soldier_ogre_shipwreck_red_goblin_elite", "soldier_swamp_monster", "soldier_miners"}
 
 		for _, n in ipairs(special_soldiers) do
 			local t = T(n)

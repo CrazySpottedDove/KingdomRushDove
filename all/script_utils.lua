@@ -5359,7 +5359,9 @@ local function enemy_betray_logic(this, store)
 	U.remove_silence(this, store.tick_ts)
 	this.nav_path.dir = 1
 	local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi}, true)
-	this.nav_path.ni = nearest_nodes[1][3]
+	if nearest_nodes[1] then
+		this.nav_path.ni = nearest_nodes[1][3]
+	end
 	this.nav_rally = nil
 	this.soldier = nil
 	this.idle_flip = nil

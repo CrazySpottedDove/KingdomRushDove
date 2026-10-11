@@ -23,6 +23,16 @@ end
 local function queue_damage(store, damage)
 	store.damage_queue[#store.damage_queue + 1] = damage
 end
+local function gain_gold(store, pos, amount)
+	store.player_gold = store.player_gold + amount
+
+	local fx = E:create_entity("fx_coin_jump")
+
+	fx.pos.x, fx.pos.y = pos.x, pos.y
+	fx.render.sprites[1].ts = store.tick_ts
+
+	simulation:queue_insert_entity(fx)
+end
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -112,7 +122,7 @@ local function fisherman_update(this, store, script)
 	this._found_all_fish = true
 	U.y_animation_wait(this)
 	signal.emit("thats-a-lot-of-fish-stage03")
-	signal.emit("got-gold", this.fisherman_pos, this.reward)
+	gain_gold(store, this.fisherman_pos, this.reward)
 end
 local function fish_update_editor(this, store)
 	while true do

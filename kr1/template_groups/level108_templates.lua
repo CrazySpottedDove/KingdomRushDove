@@ -8,6 +8,16 @@ local U = require("utils")
 local signal = require("lib.hump.signal")
 local P = require("path_db")
 local tt
+local function gain_gold(store, pos, amount)
+	store.player_gold = store.player_gold + amount
+
+	local fx = E:create_entity("fx_coin_jump")
+
+	fx.pos.x, fx.pos.y = pos.x, pos.y
+	fx.render.sprites[1].ts = store.tick_ts
+
+	simulation:queue_insert_entity(fx)
+end
 stage_08_gem_basket = {}
 
 function stage_08_gem_basket.update(this, store)
@@ -37,7 +47,7 @@ function stage_08_gem_basket.update(this, store)
 					local rect_pos = v(this.ui.click_rect.pos.x + this.ui.click_rect.size.x / 2, this.ui.click_rect.pos.y + this.ui.click_rect.size.y / 2)
 					local gold_pos = V.v(this.pos.x + rect_pos.x + this.gold_pos_offset.x, this.pos.y + rect_pos.y + this.gold_pos_offset.y)
 
-					signal.emit("got-gold", gold_pos, this.gold_amount)
+					gain_gold(store, gold_pos, this.gold_amount)
 				end
 
 				break
