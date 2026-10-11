@@ -8171,6 +8171,7 @@ return {
 	TOWER_MELTING_FURNACE_NAME = "Melting Furnace",
 	TOWER_MELTING_FURNACE_SPECIAL = "Basic attacks ignore 75 armor and briefly stun enemies",
 	TOWER_MINERS_DESCRIPTION = "Daring dwarves that can use their picks both to fight off enemies and to extract gold wherever they go.",
+	TOWER_MINERS_EXTRA = "Dwarves have a natural advantage when it comes to mining, because mine tunnels don't need to be dug two blocks high like Steve's.",
 	TOWER_MINERS_NAME = "GOLD PROSPECTORS",
 	TOWER_MINERS_SKILL_A_DESCRIPTION_1 = TOWER_MINERS_SKILL_A_DESCRIPTION_1,
 	TOWER_MINERS_SKILL_A_DESCRIPTION_2 = TOWER_MINERS_SKILL_A_DESCRIPTION_1,
