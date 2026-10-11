@@ -34594,7 +34594,7 @@ end
 
 scripts.decal_elf_ranger_skill_b = {}
 
-function scripts.decal_elf_ranger_skill_b.update(this, store, script)
+function scripts.decal_elf_ranger_skill_b.update(this, store)
 	local function check_validity()
 		if not P:valid_node_nearby(this.pos.x, this.pos.y) then
 			if this.animation_end then
@@ -34644,7 +34644,7 @@ end
 
 scripts.mod_elf_ranger_skill_b_stun = {}
 
-function scripts.mod_elf_ranger_skill_b_stun.update(this, store, script)
+function scripts.mod_elf_ranger_skill_b_stun.update(this, store)
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
 
@@ -35478,13 +35478,13 @@ end
 
 scripts.bullet_skill_c_wildcat_arrows = {}
 
-function scripts.bullet_skill_c_wildcat_arrows.insert(this, store, script)
+function scripts.bullet_skill_c_wildcat_arrows.insert(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 
 	return true
 end
 
-function scripts.bullet_skill_c_wildcat_arrows.update(this, store, script)
+function scripts.bullet_skill_c_wildcat_arrows.update(this, store)
 	local s = this.render.sprites[1]
 	local flip_x = this.pos.x > this.to.x
 	local mspeed = this.min_speed
@@ -35531,7 +35531,7 @@ end
 
 scripts.decal_wildcat_ult_panther = {}
 
-function scripts.decal_wildcat_ult_panther.update(this, store, script)
+function scripts.decal_wildcat_ult_panther.update(this, store)
 	S:queue(this.sound, {
 		delay = fts(7)
 	})
@@ -35558,7 +35558,7 @@ end
 
 scripts.decal_wildcat_ult_target = {}
 
-function scripts.decal_wildcat_ult_target.update(this, store, script)
+function scripts.decal_wildcat_ult_target.update(this, store)
 	U.y_wait(store, this.duration)
 	queue_remove(store, this)
 end
@@ -35663,7 +35663,7 @@ end
 
 scripts.tower_miners = {}
 
-function scripts.tower_miners.update(this, store, script)
+function scripts.tower_miners.update(this, store)
 	local WORKING_MODE = 1
 	local DISABLED_MODE = 3
 	local FIGHTING_MODE = 4
@@ -36001,7 +36001,7 @@ function scripts.tower_miners.update(this, store, script)
 	end
 end
 
-function scripts.tower_miners.remove(this, store, script)
+function scripts.tower_miners.remove(this, store)
 	if this.controller_skill_a then
 		queue_remove(store, this.controller_skill_a)
 	end
@@ -36019,7 +36019,7 @@ end
 
 scripts.controller_miners_skill_a = {}
 
-function scripts.controller_miners_skill_a.update(this, store, script)
+function scripts.controller_miners_skill_a.update(this, store)
 	local tower = this.tower_miners
 	local a = tower.attacks.list[1]
 	a.ts = store.tick_ts - a.cooldown
@@ -36104,7 +36104,7 @@ end
 
 scripts.decal_miners_cart_skill_a = {}
 
-function scripts.decal_miners_cart_skill_a.update(this, store, script)
+function scripts.decal_miners_cart_skill_a.update(this, store)
 	local nodes_traveled = 0
 	local last_an, last_af
 	local diag_tan = math.tan(math.rad(22.5))
@@ -36240,7 +36240,7 @@ end
 
 scripts.soldier_miners_skill_a = {}
 
-function scripts.soldier_miners_skill_a.update(this, store, script)
+function scripts.soldier_miners_skill_a.update(this, store)
 	this.health_bar.hidden = true
 
 	U.y_animation_play(this, "spawn", nil, store.tick_ts, 1, 1)
