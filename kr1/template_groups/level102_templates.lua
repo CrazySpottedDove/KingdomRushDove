@@ -12,6 +12,16 @@ local SU = require("script_utils")
 local scripts = require("scripts")
 local v = V.v
 local r = V.r
+local function gain_gold(store, pos, amount)
+	store.player_gold = store.player_gold + amount
+
+	local fx = E:create_entity("fx_coin_jump")
+
+	fx.pos.x, fx.pos.y = pos.x, pos.y
+	fx.render.sprites[1].ts = store.tick_ts
+
+	simulation:queue_insert_entity(fx)
+end
 local decal_stage_02_fishing_link_insert
 local decal_stage_02_fishing_link_update
 local decal_stage_02_lion_king_insert
@@ -81,7 +91,7 @@ decal_stage_02_fishing_link_update = function(this, store)
 					S:queue(c.clicked_sound)
 					U.y_wait_unconditional(store, fts(30))
 					local gold_pos = V.v(this.pos.x + this.gold_pos_offset.x, this.pos.y + this.gold_pos_offset.y)
-					signal.emit("got-gold", gold_pos, this.gold_amount)
+					gain_gold(store, gold_pos, this.gold_amount)
 					signal.emit("link-stage02", this)
 					U.y_animation_wait_default(this)
 					this.ui.clicked = nil

@@ -453,12 +453,14 @@ function scripts.entity_marker_controller.insert(this, store)
 			end
 		end
 
-		local m = E:create_entity("decal")
-		m.render.sprites[1].name = "decal_rally_feedback"
-		m.target = t
-		m.pos = t.barrack.rally_pos
-		simulation:queue_insert_entity(m)
-		table.insert(this.markers, m)
+		if not t.barrack.banned then
+			local m = E:create_entity("decal")
+			m.render.sprites[1].name = "decal_rally_feedback"
+			m.target = t
+			m.pos = t.barrack.rally_pos
+			simulation:queue_insert_entity(m)
+			table.insert(this.markers, m)
+		end
 	else
 		insert_marker(t)
 	end

@@ -11157,6 +11157,21 @@ return {
 		prefix = "dwarven_flamespitter_tower_scorching_torches_particle",
 		to = 10
 	},
+	dwarven_miners_trail_FX_kart_trail_idle = {
+		from = 1,
+		prefix = "dwarven_miners_trail_FX_kart_trail",
+		to = 35
+	},
+	dwarven_miners_trail_FX_unit_decal_in = {
+		from = 1,
+		prefix = "dwarven_miners_trail_FX_unit_decal",
+		to = 13
+	},
+	dwarven_miners_trail_FX_unit_trail_idle = {
+		from = 1,
+		prefix = "dwarven_miners_trail_FX_unit_trail",
+		to = 27
+	},
 	easter_egg_saitam_saitam_stage_1_click_1 = {
 		from = 200,
 		prefix = "easter_egg_saitam_saitam_stage_1",

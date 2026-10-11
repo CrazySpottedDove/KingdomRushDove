@@ -65,6 +65,7 @@ game.required_textures = {
 	"go_towers_wildcat",
 	"go_towers_culverine",
 	"go_towers_ranger",
+	"go_towers_miners",
 	"go_stage128",
 	"tower_holders"
 }
@@ -125,6 +126,7 @@ game.required_sounds = {
 	"tower_wizard",
 	"tower_culverine",
 	"tower_wildcat",
+	"tower_miners",
 	"tower_elf_ranger"
 }
 game.required_exoskeletons = {
@@ -161,7 +163,19 @@ game.required_exoskeletons = {
 	"wizard_stars4Def",
 	"wizard_tower4Def",
 	"wizardbuffDef",
-	"wizard4ultiDef"
+	"wizard4ultiDef",
+	"miners_lvl_4Def",
+	"miners_lvl_4_baseDef",
+	"miners_lvl_4_silbatoDef",
+	"miners_lvl_4_casitaDef",
+	"miners_unit_lvl_4Def",
+	"miners_cart_unitDef",
+	"miners_kartDef",
+	"miners_explosionDef",
+	"miners_hitDef",
+	"miners_emerging_blastDef",
+	"miners_emerging_blast_floorDef",
+	"miners_emerging_blast_backDef"
 }
 game.plugin_required_textures = {}
 game.plugin_required_sounds = {}

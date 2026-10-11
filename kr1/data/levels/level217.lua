@@ -104,9 +104,16 @@ end
 coroutine.yield()
 end
 end
+local function gain_gold(store,pos,amount)
+store.player_gold=store.player_gold+amount
+local fx=E:create_entity("fx_coin_jump")
+fx.pos.x,fx.pos.y=pos.x,pos.y
+fx.render.sprites[1].ts=store.tick_ts
+simulation:queue_insert_entity(fx)
+end
 local function decal_stage_217_joust_gold_reward_insert(this,store)
 local pos=V.v(this.pos.x+this.offset_number.x,this.pos.y+this.offset_number.y)
-signal.emit("got-gold-generic",pos,this.reward)
+gain_gold(store,pos,this.reward)
 return true
 end
 local function soldier_stage_217_paladin_update(this,store)
