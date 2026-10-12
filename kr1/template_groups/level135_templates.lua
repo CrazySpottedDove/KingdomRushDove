@@ -4,6 +4,7 @@ local U = require("utils")
 local V = require("lib.klua.vector")
 require("lib.klua.table")
 local scripts = require("scripts")
+local TU = require("tower_utils")
 local v = V.v
 local GR = require("grid_db")
 local SU = require("script_utils")
@@ -1090,7 +1091,7 @@ tt.destroy_house = function(this, store)
 
 	simulation:queue_insert_entity(shake)
 
-	this.tower.upgrade_to = this.unlock_holder_type
+	TU.upgrade_tower(store, this, this.unlock_holder_type)
 	this.tower.can_hover = true
 	this.ui.can_click = true
 

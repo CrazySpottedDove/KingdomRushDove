@@ -9,6 +9,7 @@ local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
+local TU=require("all.tower_utils")
 local function fts(v)
 return v/FPS
 end
@@ -81,11 +82,11 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="5"
 end)[1]
-holder.tower.upgrade_to="tower_barrack_1"
+TU.upgrade_tower(store,holder,"tower_barrack_1")
 holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="11"
 end)[1]
-holder.tower.upgrade_to="tower_barrack_1"
+TU.upgrade_tower(store,holder,"tower_barrack_1")
 coroutine.yield()
 store.player_gold=starting_gold
 end

@@ -13,6 +13,7 @@ local GS = require("kr1.game_settings")
 local P = require("path_db")
 local S = require("sound_db")
 local U = require("utils")
+local TU = require("tower_utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
 local kr5_tb = require("kr5_taunt_balloon")
@@ -4933,9 +4934,9 @@ end
 ---@param target table 塔实体
 function SU.downgrade_tower(store, target)
 	local function to_tower(template_name)
-		target.tower.upgrade_to = template_name
 		target.tower.spent = 0
 		store.player_gold = store.player_gold + E:get_template(template_name).tower.price
+		TU.upgrade_tower(store, target, template_name)
 	end
 	if table.arraycontains(GS.archer_towers, target.template_name) then
 		if target.tower.level == 1 and target.template_name ~= "tower_archer_1" then

@@ -376,7 +376,7 @@ function ah:h_tower_spawn(tower, entity)
 end
 
 function ah:h_tower_removed(tower)
-	if tower.tower and tower.tower.sell then
+	if tower.tower then
 		self.A:inc_check("REAL_STATE")
 		self.A:inc_check("INDECISIVE")
 	end

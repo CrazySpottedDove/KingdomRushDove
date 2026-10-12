@@ -9,6 +9,7 @@ local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
+local TU=require("all.tower_utils")
 local function fts(v)
 return v/FPS
 end
@@ -75,7 +76,7 @@ cinematic_tower_template.tower.hide_dust=true
 local cinematic_tower=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="4"
 end)[1]
-cinematic_tower.tower.upgrade_to="tower_engineer_1"
+TU.upgrade_tower(store,cinematic_tower,"tower_engineer_1")
 coroutine.yield()
 cinematic_tower_template.sound_events=table.deepclone(tower_template_sounds)
 cinematic_tower_template.tower.hide_dust=tower_template_hide_dust

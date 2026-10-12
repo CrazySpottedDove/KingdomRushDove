@@ -14248,12 +14248,6 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 						this.motion.arrived = true
 					end
 
-					if tower and tower.tower.upgrade_to then
-						is_taking_off = false
-
-						break
-					end
-
 					coroutine.yield()
 				end
 

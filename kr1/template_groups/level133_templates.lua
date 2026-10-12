@@ -5,6 +5,7 @@ local P = require("path_db")
 require("lib.klua.table")
 local AC = require("achievements")
 local scripts = require("scripts")
+local TU = require("tower_utils")
 local v = V.v
 local controller_stage_33_lightning_strike_update
 local controller_stage_33_lightning_strike_editor_update
@@ -1006,7 +1007,7 @@ tt.destroy_house = function(this, store)
 
 	simulation:queue_insert_entity(decal)
 
-	this.tower.upgrade_to = this.unlock_holder_type
+	TU.upgrade_tower(store, this, this.unlock_holder_type)
 	this.tower.can_hover = true
 	this.ui.can_click = true
 end
@@ -1102,8 +1103,8 @@ tt.pre_destroy_thunders_list = {{
 }}
 
 tt = E:register_t_tmp("tower_holder_blocked_stage_33_invisible", "tower_holder_blocked")
-tt.appear = function(this)
-	this.tower.upgrade_to = this.unlock_holder_type
+tt.appear = function(this, store)
+	TU.upgrade_tower(store, this, this.unlock_holder_type)
 	this.tower.can_hover = true
 	this.ui.can_click = true
 end

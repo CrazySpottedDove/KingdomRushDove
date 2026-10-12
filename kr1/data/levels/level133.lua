@@ -8,6 +8,7 @@ local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
+local TU=require("tower_utils")
 require("all.constants")
 local function fts(v)
 return v/FPS
@@ -66,7 +67,7 @@ LU.queue_remove(store,e)
 elseif e.template_name=="stage_33_mask_1_destroyed" then
 e.render.sprites[1].hidden=false
 elseif e.template_name=="tower_holder_blocked_stage_33_invisible" then
-e:appear()
+e:appear(store)
 end
 end
 if not skip_anim then
@@ -98,7 +99,7 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="47"
 end)[1]
-holder.tower.upgrade_to="tower_barrack_1"
+TU.upgrade_tower(store,holder,"tower_barrack_1")
 coroutine.yield()
 store.player_gold=starting_gold
 end

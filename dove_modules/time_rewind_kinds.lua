@@ -12,6 +12,7 @@ local GR = require("grid_db")
 local LU = require("level_utils")
 local U = require("utils")
 local RLU = require("all.rally_utils")
+local TU = require("all.tower_utils")
 
 require("i18n")
 
@@ -298,8 +299,8 @@ local KIND_TOWER_UPGRADE = time_rewind.register("tower_upgrade", {
 		local t = tower_by_holder_id(game.simulation.store, holder_id)
 
 		if t then
-			t.tower.upgrade_to = upgrade_to
 			signal.emit("tower-built")
+			TU.upgrade_tower(game.simulation.store, t, upgrade_to)
 		end
 	end,
 	valid = function(game, holder_id)
@@ -311,7 +312,7 @@ local KIND_TOWER_SELL = time_rewind.register("tower_sell", {
 		local t = tower_by_holder_id(game.simulation.store, holder_id)
 
 		if t then
-			t.tower.sell = true
+			TU.sell_tower(game.simulation.store, t)
 		end
 	end,
 	valid = function(game, holder_id)
