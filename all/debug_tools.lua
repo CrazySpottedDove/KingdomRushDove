@@ -1,5 +1,6 @@
 -- chunkname: @./all/debug_tools.lua
 local log = require("lib.klua.log"):new("debug_tools")
+local TU = require("tower_utils")
 
 log:set_level("debug")
 dd = {}
@@ -258,7 +259,7 @@ function dd.build(template)
 				i = 1
 			end
 
-			h.tower.upgrade_to = tn
+			TU.upgrade_tower(game.store, h, tn)
 		elseif h.tower and h.powers then
 			for k, v in pairs(h.powers) do
 				if v.level == 0 then

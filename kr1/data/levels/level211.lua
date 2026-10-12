@@ -7,6 +7,7 @@ local v=V.v
 local GR=require("grid_db")
 local log=require("lib.klua.log"):new("level211")
 require("all.constants")
+local TU=require("all.tower_utils")
 require("lib.klua.table")
 local level={}
 local function generate_blue_noise_cluster(count,candidates,random_fn,...)
@@ -57,14 +58,14 @@ coroutine.yield()
 end
 local old_camp=find_all_t("tower_stage_211_camp_lvl1")[1]
 if old_camp and old_camp.tower then
-old_camp.tower.upgrade_to="tower_stage_211_camp_lvl2"
+TU.upgrade_tower(store,old_camp,"tower_stage_211_camp_lvl2")
 end
 while store.wave_group_number<camp_level_ups[2] do
 coroutine.yield()
 end
 local old_camp2=find_all_t("tower_stage_211_camp_lvl2")[1]
 if old_camp2 and old_camp2.tower then
-old_camp2.tower.upgrade_to="tower_stage_211_camp_lvl3"
+TU.upgrade_tower(store,old_camp2,"tower_stage_211_camp_lvl3")
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()

@@ -773,12 +773,12 @@ local function controller_stage_208_tower_stun_moment_update(this, store, script
 		S:queue(this.sound_fire)
 		U.y_wait(store, this.hit_time)
 		S:queue(this.sound_hit)
-		if not tower or tower.pending_removal or tower.tower.upgrade_to then
+		if not tower or tower.pending_removal then
 			local towers2 = U.find_towers_in_range(store.towers, bomb.pos, {
 				max_range = 20,
 				min_range = 0
 			}, function(v, o)
-				return v.tower.can_be_mod and v.tower.type ~= "holder" and not v.tower.upgrade_to and (not v.vis or band(v.vis.bans, F_STUN) == 0)
+				return v.tower.can_be_mod and v.tower.type ~= "holder" and (not v.vis or band(v.vis.bans, F_STUN) == 0)
 			end)
 			tower = towers2 and #towers2 > 0 and towers2[1]
 		end

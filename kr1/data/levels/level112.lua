@@ -7,6 +7,7 @@ local V=require("lib.klua.vector")
 local P=require("path_db")
 local SU=require("script_utils")
 require("all.constants")
+local TU=require("all.tower_utils")
 local function fts(v)
 return v/FPS
 end
@@ -23,15 +24,15 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="6"
 end)[1]
-holder.tower.upgrade_to="tower_archer_1"
+TU.upgrade_tower(store,holder,"tower_archer_1")
 holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="7"
 end)[1]
-holder.tower.upgrade_to="tower_archer_1"
+TU.upgrade_tower(store,holder,"tower_archer_1")
 holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="10"
 end)[1]
-holder.tower.upgrade_to="tower_archer_1"
+TU.upgrade_tower(store,holder,"tower_archer_1")
 coroutine.yield()
 store.player_gold=starting_gold
 end

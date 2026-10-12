@@ -27,6 +27,7 @@ local SU = require("screen_utils")
 local E = require("entity_db")
 local U = require("utils")
 local RLU = require("all.rally_utils")
+local TU = require("all.tower_utils")
 local configer = require("dove_modules.configer")
 
 local V = require("lib.klua.vector")
@@ -8781,33 +8782,34 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 
 		self:hide()
 	elseif item.action == "tw_upgrade" or item.action == "tw_unblock" then
-		entity.tower.upgrade_to = item.action_arg
+		local upgrade_to = item.action_arg
 
 		if item.action == "tw_unblock" and entity.tower.type == "blocked_holder" then
-			entity.tower.upgrade_to = entity.tower.terrain_style
+			upgrade_to = entity.tower.terrain_style
 		end
 
 		if item.action_arg == "tower_random_foundamental" then
-			entity.tower.upgrade_to = table.random({"tower_archer_1", "tower_mage_1", "tower_engineer_1", "tower_barrack_1"})
+			upgrade_to = table.random({"tower_archer_1", "tower_mage_1", "tower_engineer_1", "tower_barrack_1"})
 		elseif item.action_arg == "tower_random_advanced_archer" then
-			entity.tower.upgrade_to = GS.archer_towers[math.random(4, #GS.archer_towers)]
+			upgrade_to = GS.archer_towers[math.random(4, #GS.archer_towers)]
 		elseif item.action_arg == "tower_random_advanced_mage" then
-			entity.tower.upgrade_to = GS.mage_towers[math.random(4, #GS.mage_towers)]
+			upgrade_to = GS.mage_towers[math.random(4, #GS.mage_towers)]
 		elseif item.action_arg == "tower_random_advanced_engineer" then
-			entity.tower.upgrade_to = GS.engineer_towers[math.random(4, #GS.engineer_towers)]
+			upgrade_to = GS.engineer_towers[math.random(4, #GS.engineer_towers)]
 		elseif item.action_arg == "tower_random_advanced_barrack" then
-			entity.tower.upgrade_to = GS.barrack_towers[math.random(4, #GS.barrack_towers)]
+			upgrade_to = GS.barrack_towers[math.random(4, #GS.barrack_towers)]
 		end
 
 		-- 记「解析完的目标」：随机塔已经摇出来了，重演必须复现同一座（键 = 塔位，不是 entity.id）
 		local holder_id = entity.tower.holder_id
 
 		if holder_id then
-			time_rewind:record_decision(RK.tower_upgrade, game_gui.game.store.tick_ts, holder_id, entity.tower.upgrade_to)
+			time_rewind:record_decision(RK.tower_upgrade, game_gui.game.store.tick_ts, holder_id, upgrade_to)
 		end
 
 		signal.emit("tower-built")
 		game_gui:deselect_entity()
+		TU.upgrade_tower(game_gui.game.store, entity, upgrade_to)
 	elseif item.action == "upgrade_power" then
 		local power = entity.powers[item.action_arg]
 
@@ -8858,8 +8860,6 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 			inhibit_sounds = true
 		end
 	elseif item.action == "tw_sell" then
-		entity.tower.sell = true
-
 		local holder_id = entity.tower.holder_id
 
 		if holder_id then
@@ -8867,6 +8867,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		end
 
 		game_gui:deselect_entity()
+		TU.sell_tower(game_gui.game.store, entity)
 	elseif item.action == "tw_buy_soldier" then
 		entity.barrack.unit_bought = item.action_arg
 

@@ -14,6 +14,7 @@ local P = require("path_db")
 local S = require("sound_db")
 local SU = require("script_utils")
 local U = require("utils")
+local TU = require("tower_utils")
 local configer = require("dove_modules.configer")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
@@ -1508,7 +1509,7 @@ function scripts.tower_build.update(this, store)
 		coroutine.yield()
 	end
 
-	this.tower.upgrade_to = this.build_name
+	TU.upgrade_tower(store, this, this.build_name)
 end
 
 scripts.tower_random = {}
@@ -6825,7 +6826,7 @@ function scripts.mod_tower_remove.update(this, store)
 			coroutine.yield()
 		end
 
-		target.tower.destroy = true
+		TU.destroy_tower(store, target)
 
 		U.y_animation_wait_default(this)
 

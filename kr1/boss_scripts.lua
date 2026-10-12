@@ -18,6 +18,7 @@ local P = require("path_db")
 local S = require("sound_db")
 local SU = require("script_utils")
 local U = require("utils")
+local TU = require("tower_utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
 
@@ -7876,7 +7877,7 @@ function scripts.mod_boss_crocs_tower_timed_destroy.update(this, store)
 			U.animation_start(this, "destroytower", nil, store.tick_ts, false, 2)
 			U.y_wait_unconditional(store, fts(40))
 
-			target.tower.destroy = true
+			TU.destroy_tower(store, target)
 
 			U.y_animation_wait_default(this)
 			simulation:queue_remove_entity(this)
@@ -8809,7 +8810,7 @@ function scripts.mod_boss_crocs_tower_eat.update(this, store)
 
 	local h_id = target.tower.holder_id
 
-	target.tower.destroy = true
+	TU.destroy_tower(store, target)
 
 	coroutine.yield()
 

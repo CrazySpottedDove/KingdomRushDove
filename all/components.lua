@@ -417,9 +417,7 @@ tower.block_count = 0
 tower.blocked = nil
 tower.destroy = nil
 tower.holder_id = nil
-tower.sell = nil
 tower.spent = 0
-tower.upgrade_to = nil
 
 local tower_holder = E:register_c("tower_holder")
 tower_holder.blocked = false

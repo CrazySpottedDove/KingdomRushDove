@@ -17,6 +17,7 @@ local configer = require("dove_modules.configer")
 local SU = require("script_utils")
 local configer = require("dove_modules.configer")
 local U = require("utils")
+local TU = require("tower_utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
 
@@ -644,7 +645,7 @@ function scripts.tower_sasquash_holder.update(this, store)
 		if #items > 0 then
 			for _, e in pairs(items) do
 				if U.is_inside_ellipse(tpos(this), e.pos, this.unfreeze_radius) then
-					this.tower.upgrade_to = this.unfreeze_upgrade_to
+					TU.upgrade_tower(store, this, this.unfreeze_upgrade_to)
 
 					SU.insert_sprite(store, this.unfreeze_fx, this.pos)
 					simulation:queue_remove_entity(this)
@@ -10894,27 +10895,17 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store)
 		end
 
 		if not SU.y_enemy_walk_step_default(store, this) and kamikaze_target then
-			if kamikaze_target.tower and kamikaze_target.tower.upgrade_to then
-				for _, e in pairs(store.towers) do
-					if e.tower.holder_id == kamikaze_target.tower.holder_id and V.veq(e.pos, kamikaze_target.pos) then
-						log.debug("banshee target %s changed for %s", kamikaze_target.id, e.id)
+			if store.entities[kamikaze_target.id] then
+				local m = E:create_entity(a.mod)
 
-						kamikaze_target = e
+				m.modifier.target_id = kamikaze_target.id
+				m.modifier.source_id = this.id
+				m.pos.x, m.pos.y = kamikaze_target.pos.x, kamikaze_target.pos.y
+				m.render.sprites[4].hidden = kamikaze_target.tower.size ~= TOWER_SIZE_LARGE
+				m.render.sprites[5].hidden = kamikaze_target.tower.size ~= TOWER_SIZE_LARGE
 
-						break
-					end
-				end
+				simulation:queue_insert_entity(m)
 			end
-
-			local m = E:create_entity(a.mod)
-
-			m.modifier.target_id = kamikaze_target.id
-			m.modifier.source_id = this.id
-			m.pos.x, m.pos.y = kamikaze_target.pos.x, kamikaze_target.pos.y
-			m.render.sprites[4].hidden = kamikaze_target.tower.size ~= TOWER_SIZE_LARGE
-			m.render.sprites[5].hidden = kamikaze_target.tower.size ~= TOWER_SIZE_LARGE
-
-			simulation:queue_insert_entity(m)
 
 			this.health.hp = 0
 
@@ -27828,9 +27819,7 @@ function scripts.tower_stage_17_weirdwood.update(this, store)
 	aa.ts = store.tick_ts
 
 	while true do
-		if this.tower.sell then
-			coroutine.yield()
-		elseif this.tower.blocked then
+		if this.tower.blocked then
 			coroutine.yield()
 		else
 			if not this.loaded then
@@ -28061,7 +28050,7 @@ function scripts.tower_stage_18_elven_barrack.update(this, store)
 
 				simulation:queue_insert_entity(spawner)
 
-				this.tower.sell = true
+				TU.sell_tower(store, this)
 				this.trigger_deselect = true
 
 				return

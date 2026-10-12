@@ -9,6 +9,7 @@ local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
+local TU=require("all.tower_utils")
 local function fts(v)
 return v/FPS
 end
@@ -87,7 +88,7 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="11"
 end)[1]
-holder.tower.upgrade_to="tower_dwarf_lvl4"
+TU.upgrade_tower(store,holder,"tower_dwarf_lvl4")
 coroutine.yield()
 store.player_gold=starting_gold
 while not store.waves_finished or LU.has_alive_enemies(store) do
