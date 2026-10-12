@@ -4311,7 +4311,6 @@ tt.attacks.list[1].vis_bans = bor(F_FLYING)
 tt.ultimate = {
 	cooldown = 50,
 	duration = 1.5,
-	tick_cooldown = 0.5,
 	min_gold = 27,
 	max_gold = 36
 }

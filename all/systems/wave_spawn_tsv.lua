@@ -12,6 +12,7 @@ local W = require("wave_db")
 local configer = require("dove_modules.configer")
 local DI = require("difficulty")
 local log = require("lib.klua.log"):new("systems")
+local WU = require("all.wave_utils")
 
 local function fts(v)
 	return v / FPS
@@ -115,26 +116,7 @@ function wave_spawn_tsv.cmd_fns.wave(store, cmd)
 	end
 
 	if store.send_next_wave == true and store.wave_group_number > 1 then
-		local score_reward
-		local remaining_secs = km.round(wait_time - actual_wait_time)
-
-		if store.level_mode == GAME_MODE_ENDLESS then
-			store.early_wave_reward = math.ceil(remaining_secs * GS.early_wave_reward_per_second * W:get_endless_early_wave_reward_factor())
-
-			local conf = W:get_endless_score_config()
-			local time_factor = km.clamp(0, 1, remaining_secs / fts(group.interval))
-
-			score_reward = km.round((wave_number - 1) * conf.scorePerWave * conf.scoreNextWaveMultiplier * time_factor * #group.waves)
-			store.player_score = store.player_score + score_reward
-
-			log.debug("ENDLESS: early wave %s reward %s (time_factor:%s scorePerWave:%s scoreNextWaveMultiplier:%s flags:%s", wave_number, score_reward, time_factor, conf.scorePerWave, conf.scoreNextWaveMultiplier, #group.waves)
-		else
-			store.early_wave_reward = math.ceil(remaining_secs * GS.early_wave_reward_per_second)
-		end
-
-		store.player_gold = store.player_gold + store.early_wave_reward
-
-		signal.emit("early-wave-called", group, store.early_wave_reward, remaining_secs, score_reward)
+		WU.next_wave_reward(store, group, km.round(wait_time - actual_wait_time))
 	else
 		store.early_wave_reward = 0
 	end
