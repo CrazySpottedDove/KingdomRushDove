@@ -31543,8 +31543,14 @@ function scripts.tower_catapult.update(this, store)
 					U.y_wait(store, next_attack.shoot_time)
 
 					local enemy, _, new_pred_pos = find_target(next_attack, dir, true)
-
-					new_pred_pos = enemy and new_pred_pos or pred_pos
+					if enemy then
+						local nodes = P:nearest_nodes(new_pred_pos.x, new_pred_pos.y, {enemy.nav_path.pi}, nil)
+						if nodes then
+							new_pred_pos = P:node_pos(nodes[1][1], nodes[1][2], nodes[1][3])
+						end
+					else
+						new_pred_pos = pred_pos
+					end
 
 					shoot_bullet(new_pred_pos, next_attack)
 					U.y_animation_wait(this, 2)
