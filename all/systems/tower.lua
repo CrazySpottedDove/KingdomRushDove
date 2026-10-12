@@ -8,6 +8,7 @@ local V = require("lib.klua.vector")
 local S = require("sound_db")
 local U = require("utils")
 local UP = require("kr1.upgrades")
+local SU = require("script_utils")
 
 function tower:init(store)
 	store.towers = {}
@@ -161,9 +162,7 @@ function tower:on_update(dt, ts, store)
 				local refund = store.wave_group_number == 0 and e.tower.spent or km.round(e.tower.refund_factor * e.tower.spent)
 
 				store.player_gold = store.player_gold + refund
-			end
 
-			if e.tower.sell then
 				if e._applied_mods then
 					for _, mod in pairs(e._applied_mods) do
 						simulation:queue_remove_entity(mod)
@@ -317,6 +316,8 @@ function tower:on_update(dt, ts, store)
 
 								U.replace_blocker(store, s, ns)
 							end
+
+							SU.soldier_inherit_tower_buff_factor(ns, ne, store.tick_ts)
 
 							ns.soldier.tower_soldier_idx = i
 							ne.barrack.soldiers[i] = ns
