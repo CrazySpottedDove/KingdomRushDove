@@ -35852,33 +35852,36 @@ function scripts.tower_miners.update(this, store)
 		return false
 	end
 
+	local function push_gold(min_gold, max_gold, factor, fx_delay)
+		local value = U.frandom(min_gold, max_gold) * factor
+		if this.total_gold_generated > this.gold_threshold then
+			value = value * this.beyond_threshold_gold_factor
+		end
+
+		local pos = V.v(this.pos.x + this.gold_effect_offset.x, this.pos.y + this.gold_effect_offset.y)
+
+		store.player_gold = store.player_gold + value
+
+		local fx = E:create_entity("fx_coin_jump")
+
+		fx.pos.x, fx.pos.y = pos.x, pos.y
+		fx.render.sprites[1].ts = store.tick_ts + (fx_delay or 0)
+
+		queue_insert(store, fx)
+	end
+
 	local function check_generate_gold(factor)
-		local tick_cooldown = (td.gold_rush and ult.tick_cooldown or gg.tick_cooldown) * this.tower.cooldown_factor
+		-- 淘金热金币在触发时一次性结算，这里不再按 tick 产出，避免被中断而只触发两次
+		if td.gold_rush then
+			return
+		end
+
+		local tick_cooldown = gg.tick_cooldown * this.tower.cooldown_factor
 
 		if tick_cooldown <= store.tick_ts - td.gold_ts then
-			local min_gold, max_gold = gg.min_gold, gg.max_gold
+			push_gold(gg.min_gold, gg.max_gold, factor)
 
-			if td.gold_rush then
-				min_gold, max_gold = ult.min_gold, ult.max_gold
-			end
-
-			local value = U.frandom(min_gold, max_gold) * factor
-			if this.total_gold_generated > this.gold_threshold then
-				value = value * this.beyond_threshold_gold_factor
-			end
-
-			local pos = V.v(this.pos.x + this.gold_effect_offset.x, this.pos.y + this.gold_effect_offset.y)
-
-			store.player_gold = store.player_gold + value
-
-			local fx = E:create_entity("fx_coin_jump")
-
-			fx.pos.x, fx.pos.y = pos.x, pos.y
-			fx.render.sprites[1].ts = store.tick_ts
-
-			queue_insert(store, fx)
-
-			td.gold_ts = store.tick_ts
+			td.gold_ts = td.gold_ts + tick_cooldown
 		end
 	end
 
@@ -35946,17 +35949,22 @@ function scripts.tower_miners.update(this, store)
 		else
 			if not td.gold_rush then
 				if td.mode == WORKING_MODE then
-					td.ult_acum = td.ult_acum + store.tick_length
+					td.ult_acum = td.ult_acum + store.tick_length / this.tower.cooldown_factor
 
-					if td.ult_acum >= ult.cooldown * this.tower.cooldown_factor then
+					if td.ult_acum >= ult.cooldown then
 						td.ult_acum = 0
 						td.gold_rush = true
 						td.gold_rush_acum = 0
 
+						-- 触发时直接连续三次获得淘金热金币数额，避免某些情况下只触发两次金币
+						for i = 1, 3 do
+							push_gold(ult.min_gold, ult.max_gold, gold_factor, (i - 1) * 0.5)
+						end
+
 						U.animation_start(this, "ultimate", nil, store.tick_ts, false, tower_sid)
 					end
 				elseif pow_c.level > 0 then
-					td.ult_acum = td.ult_acum + store.tick_length
+					td.ult_acum = td.ult_acum + store.tick_length / this.tower.cooldown_factor
 				end
 			end
 
