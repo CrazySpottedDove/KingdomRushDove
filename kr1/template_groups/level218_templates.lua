@@ -1277,7 +1277,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 	end
 	local function y_cast_gem_blast()
 		local gb = this.gem_blast
-		local targets = U.find_soldiers_in_range(store.entities, this.sigil_pos, 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans)
+		local targets = U.find_soldiers_in_range(store.soldiers, this.sigil_pos, 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans)
 		if not targets then
 			return false
 		end
@@ -1306,7 +1306,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 		for i, frame in ipairs(this.gem_blast_shot_frames) do
 			U.y_wait(store, fts(frame - prev_frame))
 			prev_frame = frame
-			targets = U.find_soldiers_in_range(store.entities, this.sigil_pos, 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans)
+			targets = U.find_soldiers_in_range(store.soldiers, this.sigil_pos, 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans)
 			local target
 			if targets then
 				targets = table.random_order(targets)
@@ -1871,7 +1871,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 		queue_insert(store, sdecal)
 		local kills = 0
 		local killed = {}
-		local targets = U.find_soldiers_in_range(store.entities, target_pos, 0, cs.damage_radius, F_INSTAKILL, bor(F_ENEMY, F_HERO))
+		local targets = U.find_soldiers_in_range(store.soldiers, target_pos, 0, cs.damage_radius, F_INSTAKILL, bor(F_ENEMY, F_HERO))
 		if targets then
 			for _, e in ipairs(targets) do
 				local d = E:create_entity("damage")
@@ -1883,7 +1883,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 				kills = kills + 1
 			end
 		end
-		local shock_targets = U.find_soldiers_in_range(store.entities, target_pos, 0, cs.shock_radius, 0, bor(F_ENEMY))
+		local shock_targets = U.find_soldiers_in_range(store.soldiers, target_pos, 0, cs.shock_radius, 0, bor(F_ENEMY))
 		if shock_targets then
 			for _, e in ipairs(shock_targets) do
 				if not killed[e.id] then
@@ -1928,7 +1928,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 	local function find_lava_unit_nodes(area)
 		local result = {}
 		local lb = this.lava_ball
-		local units = U.find_soldiers_in_range(store.entities, area.pos, 0, area.range, 0, bor(F_ENEMY))
+		local units = U.find_soldiers_in_range(store.soldiers, area.pos, 0, area.range, 0, bor(F_ENEMY))
 		if not units then
 			return result
 		end
