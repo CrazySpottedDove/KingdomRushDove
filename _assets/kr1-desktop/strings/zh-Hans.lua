@@ -9228,7 +9228,7 @@ return {
 	UPGRADE_2_archer_logger_NAME = "伐木工",
 	UPGRADE_2_archer_tear_DESCRIPTION = "箭矢依据伤害，降低敌人0.16到1点护甲。",
 	UPGRADE_2_archer_tear_NAME = "撕裂射击",
-	UPGRADE_2_barrack_bodies_DESCRIPTION = "士兵生命上限降低20%，但是兵营的人数上限提升一名。特殊兵营的人数不提升，但是伤害提升30%。",
+	UPGRADE_2_barrack_bodies_DESCRIPTION = "士兵生命上限降低20%，但是兵营的人数上限提升1名。特殊兵营的人数不提升，但是伤害提升30%。",
 	UPGRADE_2_barrack_bodies_NAME = "人海战术",
 	UPGRADE_2_barrack_el_enchanted_armor_DESCRIPTION = "提高士兵10点魔抗和10%免伤。",
 	UPGRADE_2_barrack_el_enchanted_armor_NAME = "附魔护甲",

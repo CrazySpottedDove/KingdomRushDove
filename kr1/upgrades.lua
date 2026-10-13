@@ -1883,6 +1883,18 @@ function upgrades:patch_templates(max_level)
 		for _, n in pairs(GS.barrack_towers) do
 			if not table.arraycontains(special_towers, n) then
 				local t = T(n)
+				local soldier_t = t.barrack.soldier_type
+				if soldier_t then
+					local soldier_tpl = T(soldier_t)
+					if soldier_tpl then
+						local x = t.barrack.max_soldiers
+						if n == "tower_dwarf_lvl4" then
+							x = x + 3
+						end
+						local factor = (4 * x) / (3 * (x + 1))
+						soldier_tpl.unit.damage_factor = soldier_tpl.unit.damage_factor * factor
+					end
+				end
 				t.barrack.max_soldiers = t.barrack.max_soldiers + 1
 			end
 		end
