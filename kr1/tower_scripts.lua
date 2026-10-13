@@ -33939,70 +33939,62 @@ function scripts.tower_culverine.update(this, store)
 					delay = fts(21)
 				})
 				U.animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.base_sid)
-				U.y_wait(store, aa.buff_time * this.tower.cooldown_factor)
+				U.y_wait_unconditional(store, aa.buff_time * this.tower.cooldown_factor)
 
 				local center_pos = tpos(this)
 
 				this._buff_fg_sc = E:create_entity(aa.buff_fg)
-				this._buff_fg_sc.pos = V.vclone(center_pos)
+				this._buff_fg_sc.pos:copy(center_pos)
 				this._buff_fg_sc.tween.ts = store.tick_ts
 				this._buff_fg_sc.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(this._buff_fg_sc)
 
 				this._buff_bg_sc = E:create_entity(aa.buff_bg)
-				this._buff_bg_sc.pos = V.vclone(center_pos)
+				this._buff_bg_sc.pos:copy(center_pos)
 				this._buff_bg_sc.tween.ts = store.tick_ts
 				this._buff_bg_sc.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(this._buff_bg_sc)
 				U.y_animation_wait(this, this.base_sid)
 
-				local shoot_enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, fts(1), aa.vis_flags, aa.vis_bans)
-
-				while not shoot_enemy do
-					shoot_enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, fts(1), aa.vis_flags, aa.vis_bans)
-
+				while not U.find_first_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans) do
 					coroutine.yield()
 				end
 
-				local default_pos = V.vclone(pred_pos)
 				local shots = 0
 
 				while shots < aa.shots and not this.tower.blocked do
-					local shoot_enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, fts(1), aa.vis_flags, aa.vis_bans)
+					-- local shoot_enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, fts(1), aa.vis_flags, aa.vis_bans)
+					local shoot_enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
 
 					if not shoot_enemy then
-						pred_pos = default_pos
+						-- 找不到敌人，冷静一会
+						U.y_wait_unconditional(store, 0.1)
 					else
-						default_pos = V.vclone(pred_pos)
-					end
+						local pred_pos = U.calculate_enemy_ffe_pos(shoot_enemy, ba.shoot_time)
+						local q = play_cannon_animation_given_target_position(ba.animation, pred_pos, false)
 
-					local q = play_cannon_animation_given_target_position(ba.animation, pred_pos, false)
+						U.animation_start(this, aa.animation, false, store.tick_ts, false, this.base_sid)
+						U.animation_start(this, ba.animation, false, store.tick_ts, false, this.bullets_sid)
+						U.y_wait(store, ba.shoot_time)
 
-					U.animation_start(this, aa.animation, false, store.tick_ts, false, this.base_sid)
-					U.animation_start(this, ba.animation, false, store.tick_ts, false, this.bullets_sid)
-					U.y_wait(store, ba.shoot_time)
+						this._buff_bg_sc.render.sprites[1].ts = store.tick_ts
 
-					if this.tower.blocked then
-						break
-					end
+						S:queue(aa.sound)
+						shoot_ray(shoot_enemy, pred_pos, ba, q)
 
-					this._buff_bg_sc.render.sprites[1].ts = store.tick_ts
+						normal_bullet_loaded = false
+						aa_count = aa_count + 1
+						shots = shots + 1
 
-					S:queue(aa.sound)
-					shoot_ray(shoot_enemy, pred_pos, ba, q)
+						U.y_wait(store, aa.rest_time * this.tower.cooldown_factor)
 
-					normal_bullet_loaded = false
-					aa_count = aa_count + 1
-					shots = shots + 1
+						if can_shoot_ulti() then
+							aa_count = 0
 
-					U.y_wait(store, aa.rest_time * this.tower.cooldown_factor)
-
-					if can_shoot_ulti() then
-						aa_count = 0
-
-						ultimate(true)
+							ultimate(true)
+						end
 					end
 				end
 
