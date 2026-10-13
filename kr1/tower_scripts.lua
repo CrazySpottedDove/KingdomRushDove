@@ -34700,16 +34700,18 @@ function scripts.bullet_tower_elf_ranger_skill_c_bounce_clone.insert(this, store
 
 	b.damage_factor = (this.damage_factor or 1) * b.damage_factor
 
-	local targets = U.find_enemies_in_range(store, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans, function(v)
+	local targets = U.find_enemies_in_range_filter_on_consider_hit_offset(this.pos, this.bounce_range, b.vis_flags, b.vis_bans, function(v)
 		return v.id ~= this.target_id
 	end)
 
-	if not targets or #targets == 0 or this.missed then
+	if not targets or this.missed then
 		return false
 	end
 
 	local target = table.find_best(targets, function(e)
-		return -this.pos:dist2(e.pos)
+		local dx = e.pos.x + e.unit.hit_offset.x - this.pos.x
+		local dy = e.pos.y + e.unit.hit_offset.y - this.pos.y
+		return -(dx * dx + dy * dy)
 	end)
 
 	b.from:copy(this.pos)
