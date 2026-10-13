@@ -33794,13 +33794,18 @@ function scripts.tower_culverine.update(this, store)
 	local function shoot_ray(enemy, pred_pos, attack, q)
 		local shooting_right = not this.render.sprites[this.cannon_sid].flip_x
 		local boffset = attack.bullet_start_offset[q]
-		local b = E:create_entity(attack.bullet)
+		local is_air = enemy and band(enemy.vis.flags, bor(F_FLYING, F_CLIFF)) ~= 0 or false
+		local b = E:create_entity(is_air and attack.bullet_air or attack.bullet)
 
 		b.pos.x = this.pos.x + boffset.x * (shooting_right and 1 or -1)
 		b.pos.y = this.pos.y + boffset.y
-		b.bullet.from = V.vclone(b.pos)
-		b.bullet.to = V.v(pred_pos.x, pred_pos.y)
-		b.bullet.target_id = enemy and enemy.id or nil
+		b.bullet.from:copy(b.pos)
+		if is_air then
+			b.bullet.to:set(pred_pos.x + enemy.unit.hit_offset.x, pred_pos.y + enemy.unit.hit_offset.y)
+			b.bullet.target_id = enemy.id
+		else
+			b.bullet.to:copy(pred_pos)
+		end
 		b.bullet.source_id = this.id
 		b.bullet.damage_factor = this.tower.damage_factor
 		b.bullet.level = sb.level > 0 and sb.level or 1
@@ -33860,7 +33865,6 @@ function scripts.tower_culverine.update(this, store)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			queue_insert(store, decal)
-			signal.emit("tower-ultimate-used", this)
 
 			inc = math.pi / 4
 
@@ -33920,6 +33924,7 @@ function scripts.tower_culverine.update(this, store)
 			if sb.changed then
 				sb.changed = nil
 				ba.bullet = "bullet_culverine_skill_b"
+				ba.bullet_air = "bullet_culverine_skill_b_air"
 			end
 			if sc.changed then
 				sc.changed = nil
@@ -33941,17 +33946,19 @@ function scripts.tower_culverine.update(this, store)
 				U.animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.base_sid)
 				U.y_wait_unconditional(store, aa.buff_time * this.tower.cooldown_factor)
 
-				local center_pos = tpos(this)
+				-- local center_pos = tpos(this)
 
 				this._buff_fg_sc = E:create_entity(aa.buff_fg)
-				this._buff_fg_sc.pos:copy(center_pos)
+				this._buff_fg_sc.pos:copy(this.pos)
+				this._buff_fg_sc.render.sprites[1].offset:copy(this.tower.range_offset)
 				this._buff_fg_sc.tween.ts = store.tick_ts
 				this._buff_fg_sc.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(this._buff_fg_sc)
 
 				this._buff_bg_sc = E:create_entity(aa.buff_bg)
-				this._buff_bg_sc.pos:copy(center_pos)
+				this._buff_bg_sc.pos:copy(this.pos)
+				this._buff_bg_sc.render.sprites[1].offset:copy(this.tower.range_offset)
 				this._buff_bg_sc.tween.ts = store.tick_ts
 				this._buff_bg_sc.render.sprites[1].ts = store.tick_ts
 
@@ -33965,7 +33972,6 @@ function scripts.tower_culverine.update(this, store)
 				local shots = 0
 
 				while shots < aa.shots and not this.tower.blocked do
-					-- local shoot_enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, fts(1), aa.vis_flags, aa.vis_bans)
 					local shoot_enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
 
 					if not shoot_enemy then
