@@ -1594,7 +1594,8 @@ upgrades.engineer_bombs = {
 	"bullet_catapult",
 	"bullet_catapult_skill_a",
 	"bullet_catapult_ultimate",
-	"bullet_skill_c_wizard_2"
+	"bullet_culverine_air",
+	"bullet_culverine_skill_b_air"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -2268,6 +2269,8 @@ function upgrades:patch_templates(max_level)
 
 		mul_field(T("aura_bullet_culverine").aura, "radius", u.radius_factor)
 		mul_field(T("aura_bullet_culverine_skill_b").aura, "radius", u.radius_factor)
+		mul_field(T("bullet_culverine_air").bullet, "damage_radius", u.radius_factor)
+		mul_field(T("bullet_culverine_skill_b_air").bullet, "damage_radius", u.radius_factor)
 		scale_sprite(T("fx_bullet_culverine_hit").render.sprites[1], u.radius_factor)
 		scale_sprite(T("fx_bullet_culverine_skill_b_hit").render.sprites[1], u.radius_factor)
 	end
@@ -2353,6 +2356,8 @@ function upgrades:patch_templates(max_level)
 		mul_dmg(T("aura_tower_sandworm").aura, 1.25)
 		mul_dmg(T("aura_bullet_culverine").aura, 1.25)
 		mul_dmg(T("aura_bullet_culverine_skill_b").aura, 1.25)
+		mul_dmg(T("bullet_culverine_air").bullet, 1.25)
+		mul_dmg(T("bullet_culverine_skill_b_air").bullet, 1.25)
 		mul_dmg(T("aura_culverine_ultimate").aura, 1.25)
 	end
 
