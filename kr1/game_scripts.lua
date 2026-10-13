@@ -48918,7 +48918,7 @@ function scripts.enemy_troll_crusher.update(this, store, script)
 	end
 
 	local function deal_area_damage(hit_pos, attack)
-		local targets = U.find_soldiers_in_range(store.entities, hit_pos, 0, attack.damage_radius, attack.vis_flags, attack.vis_bans, function(v, o)
+		local targets = U.find_soldiers_in_range(store.soldiers, hit_pos, 0, attack.damage_radius, attack.vis_flags, attack.vis_bans, function(v, o)
 			return not attack.fn_filter or attack.fn_filter(this, store, attack, v)
 		end)
 
@@ -49038,7 +49038,7 @@ function scripts.enemy_frost_icecaller.update(this, store, script)
 	local target_pos, trigger_icicles
 
 	local function find_soldiers_and_heroes(center, range)
-		local targets = U.find_soldiers_in_range(store.entities, center, ai.min_range, range, ai.vis_flags, ai.vis_bans, function(v, o)
+		local targets = U.find_soldiers_in_range(store.soldiers, center, ai.min_range, range, ai.vis_flags, ai.vis_bans, function(v, o)
 			return not v.pending_removal and (v.soldier or v.hero)
 		end)
 
@@ -49196,7 +49196,7 @@ function scripts.decal_frost_icecaller_icicle.update(this, store)
 	U.animation_start(this, this.anim_in, nil, store.tick_ts)
 	U.y_wait(store, this.damage_delay)
 
-	local targets = U.find_soldiers_in_range(store.entities, this.pos, 0, this.damage_radius, this.vis_flags, this.vis_bans, function(v, o)
+	local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.damage_radius, this.vis_flags, this.vis_bans, function(v, o)
 		return not v.pending_removal and (v.soldier or v.hero)
 	end)
 
@@ -50557,7 +50557,7 @@ function scripts.enemy_frost_brute.update(this, store, script)
 
 	local function get_closest_soldiers()
 		local aura_t = E:get_template(acb.aura)
-		local soldiers = U.find_soldiers_in_range(store.entities, this.pos, 0, acb.trigger_radius, acb.vis_flags, acb.vis_bans, function(v, o)
+		local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, acb.trigger_radius, acb.vis_flags, acb.vis_bans, function(v, o)
 			return v.pos.y < this.pos.y + acb.ignore_offset_y and not is_behind(v) and not v.unit.ignore_stun and not v.unit.is_stunned and (not aura_t.aura.allowed_templates or table.contains(aura_t.aura.allowed_templates, v.template_name)) and (not aura_t.aura.excluded_templates or not table.contains(aura_t.aura.excluded_templates, v.template_name))
 		end)
 

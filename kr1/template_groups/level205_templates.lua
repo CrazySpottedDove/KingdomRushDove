@@ -509,7 +509,7 @@ local function aura_tree_update(this, store, script)
 		else
 			first_hit_ts = first_hit_ts or store.tick_ts
 			last_hit_ts = store.tick_ts
-			local targets = U.find_soldiers_in_range(store.entities, this.pos, 0, this.aura.radius, 0, 0, function(vv, o)
+			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius, 0, 0, function(vv, o)
 				return not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, vv.template_name)
 			end)
 			if targets then

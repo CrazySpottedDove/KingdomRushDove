@@ -13911,7 +13911,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 			return false
 		end
 
-		if store.tick_ts - gem_ts >= this.gem_blast.cooldown and U.find_soldiers_in_range(store.entities, this.pos, this.gem_blast.min_radius or 0, this.gem_blast.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front) then
+		if store.tick_ts - gem_ts >= this.gem_blast.cooldown and U.find_soldiers_in_range(store.soldiers, this.pos, this.gem_blast.min_radius or 0, this.gem_blast.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front) then
 			trigger_skill = "gem_blast"
 
 			return true
@@ -13948,7 +13948,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 		gem_ts = store.tick_ts
 
 		local gb = this.gem_blast
-		local pre = U.find_soldiers_in_range(store.entities, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
+		local pre = U.find_soldiers_in_range(store.soldiers, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
 		local last_pos = pre and V.vclone(pre[1].pos)
 
 		if not y_cast_windup(this.gem_blast_sound, this.gem_blast_animation, this.gem_blast_shot_time) then
@@ -13959,7 +13959,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 			S:queue(this.gem_blast_release_sound)
 		end
 
-		local targets = U.find_soldiers_in_range(store.entities, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
+		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
 
 		if targets then
 			targets = table.random_order(targets)
@@ -14181,7 +14181,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 				end
 
 				local targets = U.find_enemies_in_range(store, this.pos, 0, db.radius, F_INSTAKILL, 0) or {}
-				local allies = U.find_soldiers_in_range(store.entities, this.pos, 0, db.radius, F_INSTAKILL, F_ENEMY)
+				local allies = U.find_soldiers_in_range(store.soldiers, this.pos, 0, db.radius, F_INSTAKILL, F_ENEMY)
 
 				if allies then
 					for _, a in ipairs(allies) do
@@ -14518,7 +14518,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			return false
 		end
 
-		if store.tick_ts - gem_ts >= this.gem_blast.cooldown and U.find_soldiers_in_range(store.entities, this.pos, this.gem_blast.min_radius or 0, this.gem_blast.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front) then
+		if store.tick_ts - gem_ts >= this.gem_blast.cooldown and U.find_soldiers_in_range(store.soldiers, this.pos, this.gem_blast.min_radius or 0, this.gem_blast.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front) then
 			trigger_skill = "gem_blast"
 
 			return true
@@ -14534,7 +14534,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			end
 		end
 
-		if store.tick_ts - siphon_ts >= this.siphon.cooldown and U.find_soldiers_in_range(store.entities, this.pos, this.siphon.min_radius or 0, this.siphon.radius, this.siphon_vis_flags, this.siphon_vis_bans) then
+		if store.tick_ts - siphon_ts >= this.siphon.cooldown and U.find_soldiers_in_range(store.soldiers, this.pos, this.siphon.min_radius or 0, this.siphon.radius, this.siphon_vis_flags, this.siphon_vis_bans) then
 			trigger_skill = "siphon"
 
 			return true
@@ -14557,7 +14557,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 		gem_ts = store.tick_ts
 
 		local gb = this.gem_blast
-		local pre = U.find_soldiers_in_range(store.entities, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
+		local pre = U.find_soldiers_in_range(store.soldiers, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
 		local last_pos = pre and V.vclone(pre[1].pos)
 
 		if not y_cast_windup(this.gem_blast_sound, this.gem_blast_animation, this.gem_blast_shot_time) then
@@ -14568,7 +14568,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			S:queue(this.gem_blast_release_sound)
 		end
 
-		local targets = U.find_soldiers_in_range(store.entities, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
+		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, gb.min_radius or 0, gb.radius, this.gem_blast_vis_flags, this.gem_blast_vis_bans, gem_target_in_front)
 
 		if targets then
 			targets = table.random_order(targets)
@@ -14690,7 +14690,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 		siphon_ts = store.tick_ts
 
 		local sp = this.siphon
-		local targets = U.find_soldiers_in_range(store.entities, this.pos, sp.min_radius or 0, sp.radius, this.siphon_vis_flags, this.siphon_vis_bans)
+		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, sp.min_radius or 0, sp.radius, this.siphon_vis_flags, this.siphon_vis_bans)
 
 		if not targets then
 			return
