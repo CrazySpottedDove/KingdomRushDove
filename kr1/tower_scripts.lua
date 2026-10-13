@@ -28638,7 +28638,7 @@ function scripts.tower_ignis_altar.update(this, store)
 
 						local pred_pos = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
 
-						bullet.bullet.to = U.find_best_center_node_containing_point(pred_pos, E:get_template("aura_bullet_ignis_altar").aura.radius, target.nav_path.pi)
+						bullet.bullet.to = U.find_best_road_center_pos(pred_pos, target.nav_path.pi)
 						bullet.bullet.source_id = this.id
 						bullet.bullet.damage_factor = this.tower.damage_factor
 						bullet.bullet.level = pow_fire.level
@@ -31086,7 +31086,7 @@ function scripts.tower_sandworm.update(this, store)
 
 					local pred_pos = U.calculate_enemy_ffe_pos(target, fts(26))
 
-					a.pos = U.find_best_center_node_containing_point(pred_pos, a.aura.radius, target.nav_path.pi)
+					a.pos = U.find_best_road_center_pos(pred_pos, target.nav_path.pi)
 					a.aura.source_id = this.id
 
 					simulation:queue_insert_entity(a)
@@ -31156,7 +31156,7 @@ function scripts.tower_sandworm.update(this, store)
 					b.pos:set(this.pos.x + as.bullet_start_offset.x, this.pos.y + as.bullet_start_offset.y)
 					b.bullet.from:copy(b.pos)
 
-					b.bullet.to = U.find_best_center_node_containing_point(U.calculate_enemy_ffe_pos(target, b.bullet.flight_time), E:get_template("aura_bomb_tower_sandworm_spit").aura.radius, target.nav_path.pi)
+					b.bullet.to = U.find_best_road_center_pos(U.calculate_enemy_ffe_pos(target, b.bullet.flight_time), target.nav_path.pi)
 					b.bullet.source_id = this.id
 					b.bullet.level = pow_s.level
 
@@ -31308,8 +31308,7 @@ scripts.aura_bomb_tower_sandworm_spit = {
 	end
 }
 
--- 投石机（移植自 KR6 scripts.tower_catapult / aura_catapult_* / mod_catapult_*；已适配 dove 索敌与伤害接口）
-
+-- 投石机
 scripts.tower_catapult = {}
 
 function scripts.tower_catapult.insert(this, store)
@@ -31544,10 +31543,7 @@ function scripts.tower_catapult.update(this, store)
 
 					local enemy, _, new_pred_pos = find_target(next_attack, dir, true)
 					if enemy then
-						local nodes = P:nearest_nodes(new_pred_pos.x, new_pred_pos.y, {enemy.nav_path.pi}, nil)
-						if nodes then
-							new_pred_pos = P:node_pos(nodes[1][1], nodes[1][2], nodes[1][3])
-						end
+						new_pred_pos = U.find_best_road_center_pos(new_pred_pos, enemy.nav_path.pi)
 					else
 						new_pred_pos = pred_pos
 					end
@@ -33945,8 +33941,6 @@ function scripts.tower_culverine.update(this, store)
 				})
 				U.animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.base_sid)
 				U.y_wait_unconditional(store, aa.buff_time * this.tower.cooldown_factor)
-
-				-- local center_pos = tpos(this)
 
 				this._buff_fg_sc = E:create_entity(aa.buff_fg)
 				this._buff_fg_sc.pos:copy(this.pos)

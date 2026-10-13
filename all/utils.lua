@@ -3580,27 +3580,64 @@ function U.change_health_bar_sort_y_offset_run_time(health_bar, sort_y_offset)
 	end
 end
 
---- 用于寻找保证可以包括某个点的情况下，离家最近的中心路径节点的位置
+--- 用于寻找本路径（spi 为 1 的子路径）上离 pos 最近的两个节点，
+--- 并返回 pos 在这两个节点连线上的投影点
 ---@param pos ffi.cdata
----@param radius number
 ---@param pi number
 ---@note 当找不到合适的点的时候，返回点本身
 ---@return ffi.cdata
-function U.find_best_center_node_containing_point(pos, radius, pi)
-	local nodes = P:nearest_nodes(pos.x, pos.y, {pi}, nil)
-	local node = nodes[1]
+function U.find_best_road_center_pos(pos, pi)
+	local path = P:path(pi, 1)
 
-	if node and node[4] < radius then
-		local node_pos = P:node_pos_ref(node[1], node[2], node[3])
-
-		if node_pos:dist(pos) < radius then
-			return node_pos:clone()
-		else
-			return P:node_pos(node[1], node[2], node[3])
-		end
-	else
+	if not path or #path == 0 then
 		return pos
 	end
+
+	-- 先找到离 pos 最近的节点
+	local first_ni = 1
+	local first_dist2 = math.huge
+	for ni = 1, #path do
+		local dist2 = path[ni]:dist2(pos)
+		if dist2 < first_dist2 then
+			first_dist2 = dist2
+			first_ni = ni
+		end
+	end
+
+	-- 第二近的节点必在最近节点的相邻节点中，取其中更近的一个
+	local second_ni = first_ni - 1
+	local second_dist2 = math.huge
+	if second_ni >= 1 and second_ni <= #path then
+		second_dist2 = path[second_ni]:dist2(pos)
+	end
+	local candidate_second_ni = first_ni + 1
+	if candidate_second_ni <= #path then
+		if path[candidate_second_ni]:dist2(pos) < second_dist2 then
+			second_ni = candidate_second_ni
+		end
+	end
+
+	-- 子路径只有一个节点时，直接返回该节点
+	if not path[second_ni] then
+		return P:node_pos(pi, 1, first_ni)
+	end
+
+	local a = path[first_ni]
+	local b = path[second_ni]
+
+	local abx = b.x - a.x
+	local aby = b.y - a.y
+	local len2 = abx * abx + aby * aby
+
+	-- 两个节点重合，无法确定连线，返回节点本身
+	if len2 == 0 then
+		return V.v(a.x, a.y)
+	end
+
+	-- pos 在这两个节点连线上的投影参数
+	local t = ((pos.x - a.x) * abx + (pos.y - a.y) * aby) / len2
+
+	return V.v(a.x + abx * t, a.y + aby * t)
 end
 
 function U.tower_ready_to_use_power(power, power_attack, store, tw)
