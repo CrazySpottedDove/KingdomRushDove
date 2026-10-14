@@ -35221,7 +35221,6 @@ function scripts.bullet_skill_a_wildcat.update(this, store)
 
 	this.bounces = 0
 
-	local already_hit = {}
 	local soldier = store.entities[b.source_id]
 	local pow = soldier.powers.skill_a
 	local lvl = pow.level
@@ -35262,8 +35261,6 @@ function scripts.bullet_skill_a_wildcat.update(this, store)
 
 		queue_damage(store, d)
 
-		already_hit[#already_hit + 1] = target.id
-
 		S:queue(this.sound_hit)
 	end
 
@@ -35279,28 +35276,19 @@ function scripts.bullet_skill_a_wildcat.update(this, store)
 	S:queue(this.sound)
 
 	if this.bounces < max_bounces then
-		local targets = U.find_enemies_in_range(store, this.pos, 0, bounce_range, b.vis_flags, b.vis_bans, function(vv)
-			return not table.contains(already_hit, vv.id)
+		local targets = U.find_enemies_in_range_filter_on_consider_hit_offset(this.pos, bounce_range, b.vis_flags, b.vis_bans, function(vv)
+			return vv.id ~= b.target_id
 		end)
-
-		if not targets then
-			if target and not target.health.dead then
-				already_hit = {target.id}
-			else
-				already_hit = {}
-			end
-
-			targets = U.find_enemies_in_range(store, this.pos, 0, bounce_range, b.vis_flags, b.vis_bans, function(vv)
-				return not table.contains(already_hit, vv.id)
-			end)
-		end
 
 		if targets then
 			table.sort(targets, function(e1, e2)
 				return V.dist2(this.pos.x, this.pos.y, e1.pos.x, e1.pos.y) < V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
 			end)
-
-			local ntarget = targets[1]
+			local ntarget = table.find_best(targets, function(e)
+				local dx = e.pos.x + e.unit.hit_offset.x - this.pos.x
+				local dy = e.pos.y + e.unit.hit_offset.y - this.pos.y
+				return -(dx * dx + dy * dy)
+			end)
 
 			this.bounces = this.bounces + 1
 			b.to.x, b.to.y = ntarget.pos.x + ntarget.unit.hit_offset.x, ntarget.pos.y + ntarget.unit.hit_offset.y

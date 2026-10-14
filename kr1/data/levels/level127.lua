@@ -64,6 +64,7 @@ boss=v
 break
 end
 end
+U.mark_seen(store,"boss_grymbeard")
 while not boss.bossfight_ended do
 coroutine.yield()
 end

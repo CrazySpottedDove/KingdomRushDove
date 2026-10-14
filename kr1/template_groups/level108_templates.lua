@@ -4,6 +4,7 @@ local V = require("lib.klua.vector")
 local v = V.v
 local S = require("sound_db")
 local SU = require("script_utils")
+local LU = require("level_utils")
 local U = require("utils")
 local signal = require("lib.hump.signal")
 local P = require("path_db")

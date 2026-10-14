@@ -20145,7 +20145,7 @@ function scripts.aura_enemy_stage_11_cult_leader_illusion_shield.update(this, st
 			last_hit_ts = store.tick_ts
 			cycles_count = cycles_count + 1
 
-			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans) or {}
+			local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans) or {}
 
 			for i, target in ipairs(targets) do
 				if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
