@@ -4024,6 +4024,13 @@ function scripts.shotgun.update(this, store)
 
 			simulation:queue_insert_entity(sfx)
 		end
+
+		if b.hit_fx then
+			local sfx = E:create_entity(b.hit_fx)
+			sfx.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			sfx.render.sprites[1].ts = store.tick_ts
+			simulation:queue_insert_entity(sfx)
+		end
 	elseif b.miss_fx_water and GR:cell_is(b.to.x, b.to.y, TERRAIN_WATER) then
 		local fx = E:create_entity(b.miss_fx_water)
 
