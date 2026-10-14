@@ -2059,7 +2059,7 @@ end
 
 ---检查是否已见过
 ---@param store table game.store
----@param id number 实体ID
+---@param id string 实体名称
 ---@return boolean 是否已见过
 function U.is_seen(store, id)
 	return store.seen[id]
@@ -2067,7 +2067,7 @@ end
 
 ---标记为已见过
 ---@param store table game.store
----@param id number 实体ID
+---@param id string 实体名称
 function U.mark_seen(store, id)
 	if not store.seen[id] then
 		store.seen[id] = true
