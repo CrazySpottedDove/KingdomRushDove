@@ -7858,7 +7858,7 @@ ConfigPanelView = class("ConfigPanelView", EditablePanelView)
 function ConfigPanelView:initialize(sw, sh, keyboard, controller)
 	EditablePanelView.initialize(self, sw, sh, _("MAP_UI_CUSTOM_CONFIG_TITLE"), keyboard, controller, configer.default("config"))
 	self:set_key_label_map({
-		hero_full_level_at_start = _("MAP_UI_CFG_HERO_FULL_LEVEL_AT_START"),
+		hero_level_at_start = _("MAP_UI_CFG_HERO_LEVEL_AT_START"),
 		reverse_path = _("MAP_UI_CFG_REVERSE_PATH"),
 		enabled = _("MAP_UI_CFG_ENABLED"),
 		endless = _("MAP_UI_CFG_ENDLESS"),
