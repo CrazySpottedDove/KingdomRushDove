@@ -194,10 +194,15 @@ function M.register_templates(E)
 
 		local hp = E:create_entity(b.hit_payload)
 
-		hp.pos.x, hp.pos.y = dest.x, dest.y
+		if target then
+			hp.pos:copy(target.pos)
+		else
+			hp.pos:copy(dest)
+		end
 
 		hp.aura.level = b.level or 1
 		hp.aura.source_id = this.id
+		hp.aura.damage_factor = b.damage_factor
 
 		simulation:queue_insert_entity(hp)
 
