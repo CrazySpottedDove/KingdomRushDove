@@ -506,10 +506,10 @@ function M.register_templates(E)
 			if this.l6_active and not this._l6_shot then
 				ra.animation = "special_attack"
 				ra.bullet = this.bullet_l6
-			elseif this.l4a_active and is_disabled(store, target) then
-				ra.bullet = this.bullet_l4a
 			elseif this.l5b_active and band(target.vis.flags, F_MINIBOSS) == 0 and band(target.vis.flags, F_BOSS) == 0 and band(target.vis.flags, F_INSTAKILL) == 0 and target.health.hp <= target.health.hp_max * this.instakill_threshold and math.random() <= this.instakill_chance then
 				ra.bullet = this.bullet_l5b
+			elseif this.l4a_active and is_disabled(store, target) then
+				ra.bullet = this.bullet_l4a
 			else
 				ra.bullet = this.bullet_basic
 			end
@@ -651,7 +651,7 @@ function M.apply(level)
 
 	if level >= 5 then
 		ctrl.cooldown = 18
-		tt.ranged.attacks[1].cooldown = 1.25
+		tt.ranged.attacks[1].cooldown = 1
 		tt.l5b_active = true
 	end
 
