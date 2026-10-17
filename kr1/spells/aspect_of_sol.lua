@@ -122,7 +122,6 @@ function M.register_templates(E)
 	tt.info.fn = scripts.soldier_reinforcement.get_info
 	tt.info.portrait = "kr6_info_portraits_soldiers_0045"
 	tt.info.i18n_key = "POWER_ASPECT_OF_SOL"
-	tt.info.damage_icon = "d_true"
 	tt.main_script.insert = function(this, store)
 		this.original_attack_min = this.melee.attacks[1].damage_min
 		this.original_attack_max = this.melee.attacks[1].damage_max

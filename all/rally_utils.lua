@@ -117,7 +117,8 @@ function rally_utils.group_rally_formation(units, x, y)
 	-- 其余单位左右交替展开，离 front 越近的排位越靠前，整体仍是一个圆。
 	local front_angle = math.atan2(-dir_y, -dir_x)
 	local step = 2 * math.pi / count
-	local radius = 15
+	local b = 15
+	local a = b * math.sqrt(math.log(1 + count) + 1)
 
 	for i, e in ipairs(ordered) do
 		local angle_offset = 0
@@ -128,8 +129,8 @@ function rally_utils.group_rally_formation(units, x, y)
 			angle_offset = (i % 2 == 0 and k or -k) * step
 		end
 
-		local angle = front_angle + angle_offset
-		local ring_pos = V.v(x + radius * math.cos(angle), y + radius * math.sin(angle))
+		-- local angle = front_angle + angle_offset
+		local ring_pos = V.v(x + a * math.cos(angle_offset) * math.cos(front_angle) - b * math.sin(angle_offset) * math.sin(front_angle), y + a * math.cos(angle_offset) * math.sin(front_angle) + b * math.sin(angle_offset) * math.cos(front_angle))
 
 		-- 圆形站位若不可站立，退回到落点中心再试一次
 		for _, pos in ipairs({ring_pos, V.v(x, y)}) do

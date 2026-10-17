@@ -273,7 +273,7 @@ function M.register_templates(E)
 			end
 
 			if not attack3.disabled and not this.nav_rally.new and store.tick_ts - attack3.ts > attack3.cooldown then
-				local enemy, enemies, enemy_pos = U.find_foremost_enemy(store, this.pos, 0, attack3.range, attack_3_flight_time, attack.vis_flags, attack.vis_bans)
+				local enemy, _, enemy_pos = U.find_foremost_enemy(store, this.pos, 0, attack3.range, attack_3_flight_time, attack.vis_flags, attack.vis_bans)
 
 				if enemy and not enemy.health.dead then
 					s.flip_x = enemy.pos.x < this.pos.x
@@ -304,7 +304,7 @@ function M.register_templates(E)
 			end
 
 			if not attack2.disabled and not this.nav_rally.new and store.tick_ts - attack2.ts > attack2.cooldown then
-				local enemy, enemies, enemy_pos = U.find_foremost_enemy(store, this.pos, 0, attack.range, basic_flight_time, attack.vis_flags, attack.vis_bans)
+				local enemy = U.find_foremost_enemy(store, this.pos, 0, attack.range, basic_flight_time, attack.vis_flags, attack.vis_bans)
 
 				if enemy and not enemy.health.dead then
 					U.animation_start(this, "attack_2", nil, store.tick_ts, false, 1)
@@ -339,7 +339,7 @@ function M.register_templates(E)
 			end
 
 			if not this.nav_rally.new and store.tick_ts - attack.ts > attack.cooldown then
-				local enemy, enemies, enemy_pos = U.find_foremost_enemy(store, this.pos, 0, attack.range, basic_flight_time, attack.vis_flags, attack.vis_bans)
+				local enemy, _, enemy_pos = U.find_foremost_enemy(store, this.pos, 0, attack.range, basic_flight_time, attack.vis_flags, attack.vis_bans)
 
 				if enemy and not enemy.health.dead then
 					s.flip_x = enemy.pos.x < this.pos.x
