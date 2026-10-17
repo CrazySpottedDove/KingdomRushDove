@@ -1,1 +1,1 @@
-return {{date="2026-10-17",author="CrazySpottedDove",message="fix: 纠正援兵法术的描述"},{date="2026-10-17",author="CrazySpottedDove",message="fix: 修正索罗化身面对boss时伤害归零的bug"},{date="2026-10-17",author="CrazySpottedDove",message="fix: 修正索罗化身的文本描述"}}
+return {{date="2026-10-17",author="CrazySpottedDove",message="fix: 纠正援兵法术的描述"},{date="2026-10-17",author="CrazySpottedDove",message="fix: 修正索罗化身面对boss时伤害归零的bug"},{date="2026-10-17",author="CrazySpottedDove",message="fix: 修正索罗化身的文本描述"},{date="2026-10-18",author="CrazySpottedDove",message="fix: 修复新的技能边框选中状态下过细的问题"}}
