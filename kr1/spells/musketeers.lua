@@ -651,7 +651,7 @@ function M.apply(level)
 
 	if level >= 5 then
 		ctrl.cooldown = 18
-		tt.ranged.attacks[1].cooldown = 1.25
+		tt.ranged.attacks[1].cooldown = 1
 		tt.l5b_active = true
 	end
 
