@@ -60,8 +60,15 @@ function level:init_coroutined(store)
 	UP:set_levels(slot.upgrades)
 	UP:set_list_id(slot.upgrade_list_id)
 	DI:set_level(store.level_difficulty)
+
+	-- autoplay 法术冒烟：只在内存里覆盖，不写回存档
+	if _G.AUTOPLAY_SPELL_LEVEL then
+		UP.levels.rain = _G.AUTOPLAY_SPELL_LEVEL
+		UP.levels.reinforcements = _G.AUTOPLAY_SPELL_LEVEL
+	end
+
 	-- power3 法术：解析本局选择（可为 nil = 未选择）
-	SPELLS:set_selected(slot.spell_power_id)
+	SPELLS:set_selected(_G.AUTOPLAY_SPELL_ID or slot.spell_power_id)
 
 	GR:load(store.level_name)
 	P:load(store.level_name, store.visible_coords)
@@ -117,6 +124,9 @@ function level:init_coroutined(store)
 	coroutine.yield()
 
 	store.selected_hero = slot.heroes.selected
+
+	-- 先进行 spell apply，以使 spell 中模板可受 UP 影响
+	SPELLS:apply(store)
 	UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
 
 	-- 防护：避免某些不合适的插件破坏存档中的科技。这表现为 user_power_1 未正确设置具体模板
@@ -125,9 +135,6 @@ function level:init_coroutined(store)
 		UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
 		storage:save_slot(slot, nil, true)
 	end
-
-	-- power3 法术：按 rain/reinforcements 的派生等级施加法术效果
-	SPELLS:apply(store)
 
 	E:patch_config(configer.config())
 

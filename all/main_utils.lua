@@ -124,6 +124,14 @@ function mu.parse_args(arg, params)
 		params.autoplay = argv("autoplay")
 	end
 
+	if has_arg("spell") then
+		params.spell_id = argv("spell")
+	end
+
+	if has_arg("spell_level") then
+		params.spell_level = tonumber(argv("spell_level"))
+	end
+
 	if has_arg("noclick") then
 		params.no_click = true
 	end

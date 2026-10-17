@@ -6,6 +6,8 @@
 --   love . -autoplay 201 -diff 3      -- 难度
 --   love . -autoplay 201 -noclick     -- 关闭自动点击（只测纯战斗）
 --   love . -autoplay 201 -notowers    -- 不铺塔（只测无塔时敌人推平/结算）
+--   love . -autoplay 201 -spell aspect_of_sol            -- 自动释放 power3 法术
+--   love . -autoplay 201 -spell aspect_of_sol -spell_level 6  -- 强制法术满级
 --
 -- 做的事就一件：跳过其它所有场景，完整跑一局，看看有没有报错。
 --   * 走一遍 game 的初始化（关卡数据 / 资源 / 骨骼 / 模拟器）
@@ -23,6 +25,8 @@ require("all.constants")
 local V = require("lib.klua.vector")
 local LU = require("level_utils")
 local E = require("entity_db")
+local P = require("path_db")
+local signal = require("lib.hump.signal")
 local U = require("utils")
 local I = require("lib.klove.image_db")
 local EXO = require("all.exoskeleton")
@@ -124,6 +128,7 @@ local function report(reason)
 	print(string.format("AUTOPLAY %-22s %s", "towers_built", tostring(stats.towers_built or 0)))
 	print(string.format("AUTOPLAY %-22s %s", "auto_clicks", tostring(stats.auto_clicks or 0)))
 	print(string.format("AUTOPLAY %-22s %s", "auto_hires", tostring(stats.auto_hires or 0)))
+	print(string.format("AUTOPLAY %-22s %s", "spell_casts", tostring(stats.spell_casts or 0)))
 	print(string.format("AUTOPLAY %-22s %s", "victory", tostring(stats.victory)))
 	print(string.format("AUTOPLAY %-22s %s", "verdict", verdict))
 
@@ -160,6 +165,13 @@ function autoplay:init(w, h, done_callback)
 
 	self.auto_click = (args.auto_click ~= false)
 	self.build_towers_enabled = (args.build_towers ~= false)
+	self.spell_id = args.spell_id
+	self.spell_level = args.spell_level
+	self._last_spell_ts = nil
+
+	-- 法术冒烟：用全局内存覆盖，level/init 读取但不写回存档。
+	_G.AUTOPLAY_SPELL_ID = self.spell_id
+	_G.AUTOPLAY_SPELL_LEVEL = self.spell_level
 	self.next_click_ts = 0
 	stats.auto_clicks = 0
 
@@ -221,6 +233,25 @@ function autoplay:init(w, h, done_callback)
 	EXO:queue_load(game.required_exoskeletons)
 	EXO:queue_load_plugin(game.plugin_required_exoskeletons)
 	EXO:queue_load_plugin(game_gui.plugin_required_exoskeletons)
+
+	-- power3 法术：像 director 那样按需加载选中法术的资源
+	if self.spell_id then
+		local SPELLS = require("spell_system")
+		local spell = SPELLS:get(self.spell_id)
+
+		if not spell then
+			errors[#errors + 1] = "spell not found: " .. tostring(self.spell_id)
+			print("AUTOPLAY_ERROR spell not found: " .. tostring(self.spell_id))
+			love.event.quit(1)
+		else
+			director:load_texture_groups(spell.required_textures or {}, director.params.texture_size, game.ref_res, true, "game")
+			director:load_plugin_texture_groups(spell.plugin_required_textures or {}, game.ref_res, true, "game")
+			director:load_sound_groups(spell.required_sounds or {})
+			director:load_sound_groups(spell.plugin_required_sounds or {})
+			EXO:queue_load(spell.required_exoskeletons or {})
+			EXO:queue_load_plugin(spell.plugin_required_exoskeletons or {})
+		end
+	end
 
 	-- 走一遍 game 的初始化协程（内部就是 simulation:init + 关卡加载）
 	self.init_co = game:init_coro(w, h, nil)
@@ -456,6 +487,70 @@ function autoplay:run_clicks()
 	end
 end
 
+--- power3 法术冒烟：每冷却一次就在一个有效节点释放当前法术
+function autoplay:cast_spell(store)
+	if not self.spell_id then
+		return
+	end
+
+	local up = E:get_template("user_power_3")
+
+	if not up or not up.cooldown or up.template_name == "user_power_3" then
+		return
+	end
+
+	if self._last_spell_ts and store.tick_ts - self._last_spell_ts < up.cooldown then
+		return
+	end
+
+	if not self._spell_level_printed then
+		self._spell_level_printed = true
+		local SPELLS = require("spell_system")
+		local soldier = E:get_template("soldier_aspect_of_sol")
+		print(string.format("AUTOPLAY_SPELL level=%s soldier_prefix=%s", tostring(SPELLS:compute_level(store)), soldier and tostring(soldier.render.sprites[1].prefix) or "nil"))
+	end
+
+	local pos
+
+	for _, t in pairs(store.towers or {}) do
+		if t.pos then
+			pos = t.pos
+
+			break
+		end
+	end
+
+	if not pos then
+		local nearest = P:nearest_nodes(REF_W * 0.5, REF_H * 0.5)
+
+		if nearest and nearest[1] then
+			local pi, spi, ni = unpack(nearest[1])
+
+			pos = P:node_pos(pi, spi, ni)
+		end
+	end
+
+	if not pos then
+		return
+	end
+
+	local fn = up.user_selection and up.user_selection.can_select_point_fn
+
+	if fn and not fn(up, pos.x, pos.y, store) then
+		pos = P:node_pos(1, 1, math.min(10, #P.paths[1][1]))
+	end
+
+	local e = E:create_entity("user_power_3")
+
+	e.pos.x, e.pos.y = pos.x, pos.y
+	simulation:queue_insert_entity(e)
+	signal.emit("power-used", 3)
+
+	self._last_spell_ts = store.tick_ts
+	stats.spell_casts = (stats.spell_casts or 0) + 1
+	print(string.format("AUTOPLAY_SPELL cast %s #%d at (%.0f, %.0f)", self.spell_id, stats.spell_casts, pos.x, pos.y))
+end
+
 --- 推进若干步模拟（不渲染）
 function autoplay:run_sim()
 	local store = self.game.simulation.store
@@ -475,6 +570,7 @@ function autoplay:run_sim()
 		end
 
 		self:force_boss_phases()
+		self:cast_spell(store)
 
 		if not self._sndchk2 then
 			self._sndchk2 = true
