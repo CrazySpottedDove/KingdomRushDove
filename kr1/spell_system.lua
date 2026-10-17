@@ -22,7 +22,7 @@ SPELLS.selected_id = nil
 SPELLS.spell_hp_factor = 1.1
 
 -- spell 模块路径注册表
-SPELLS.module_names = {"kr1.spells.royal_edict", "kr1.spells.aspect_of_sol", "kr1.spells.musketeers", "kr1.spells.wintersongs_wrath", "kr1.spells.rain_of_fire", "kr1.spells.teleportation_sigil"}
+SPELLS.module_names = {"kr1.spells.royal_edict", "kr1.spells.aspect_of_sol", "kr1.spells.musketeers", "kr1.spells.wintersongs_wrath", "kr1.spells.rain_of_fire", "kr1.spells.teleportation_sigil", "kr1.spells.thunder_zapper"}
 
 --- 按法术 id 懒加载模块（id 必须等于 module_names 路径最后一段）
 --- 先确认 module_names 里仍有这个路径，避免插件卸载后还命中旧缓存。
