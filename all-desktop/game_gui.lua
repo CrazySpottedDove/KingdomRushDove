@@ -7733,28 +7733,8 @@ function PickView:on_down(button, x, y)
 				game_gui:show_invalid_point_cross(x, y)
 			end
 		elseif game_gui.mode == GUI_MODE_RALLY_CONTROABLES then
-			local function calc_rally_pos(idx)
-				local r = 15
-
-				return V.v(wx + r * math.cos(idx * 2 * math.pi / #game_gui.selected_controables), wy + r * math.sin(idx * 2 * math.pi / #game_gui.selected_controables))
-			end
-
 			if P:valid_node_nearby(wx, wy, nil, NF_RALLY) then
-
-				for idx, e in ipairs(game_gui.selected_controables) do
-					local rally_pos = calc_rally_pos(idx)
-
-					if GR:cell_is_only(rally_pos.x, rally_pos.y, e.nav_grid.valid_terrains_dest) then
-						local waypoints = GR:find_waypoints(e.pos, e.nav_rally.pos, rally_pos, e.nav_grid.valid_terrains)
-
-						if waypoints then
-							e.nav_grid.waypoints = waypoints
-							e.nav_rally.new = true
-							e.nav_rally.pos = rally_pos
-							e.nav_rally.center = rally_pos
-						end
-					end
-				end
+				RLU.apply_group_rally(game_gui.selected_controables, wx, wy)
 
 				-- 两组互斥：选中里有 controable_other 就是援军那一组
 				local reinf = false

@@ -228,34 +228,18 @@ local KIND_UNIT_RALLY = time_rewind.register("unit_rally", {
 })
 -- 集体调遣：本体是两组互斥的可调集单位（援军 = controable_other，其余 = 非 controable_other），
 -- 两个热键各选一组，所以决定也分两种。只记落点；当时选了哪些属于 UI 状态，不进日志。
--- 单位绕点击点摆成一圈，顺序由遍历顺序决定。
+-- 站位与 game_gui 共用 RLU.apply_group_rally（绕落点摆圆，最靠近 ni 小方向的位置给近战/高血量单位）。
 local function rally_units(game, x, y, want_other)
 	local store = game.simulation.store
 	local units = {}
-	local n = 0
 
 	for _, e in pairs(store.soldiers) do
 		if e.controable and not e.health.dead and (e.controable_other and true or false) == want_other then
-			n = n + 1
-			units[n] = e
+			units[#units + 1] = e
 		end
 	end
 
-	for idx = 1, n do
-		local e = units[idx]
-		local rally_pos = V.v(x + 15 * math.cos(idx * 2 * math.pi / n), y + 15 * math.sin(idx * 2 * math.pi / n))
-
-		if GR:cell_is_only(rally_pos.x, rally_pos.y, e.nav_grid.valid_terrains_dest) then
-			local waypoints = GR:find_waypoints(e.pos, e.nav_rally.pos, rally_pos, e.nav_grid.valid_terrains)
-
-			if waypoints then
-				e.nav_grid.waypoints = waypoints
-				e.nav_rally.new = true
-				e.nav_rally.pos = rally_pos
-				e.nav_rally.center = rally_pos
-			end
-		end
-	end
+	RLU.apply_group_rally(units, x, y)
 end
 
 local function register_group_rally(name, want_other)
