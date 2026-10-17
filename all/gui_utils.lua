@@ -86,6 +86,41 @@ function GU.measure_sprite_content(ss)
 	return cached
 end
 
+--- 把 view 的可见内容等比缩放到 box_w x box_h。
+--- cover=true 时按铺满目标框缩放（多出的部分由调用方裁剪）；否则按完整放入目标框缩放。
+--- 返回渲染后的可见内容尺寸与左上角偏移（偏移已包含 trim，用于把内容居中到目标框）。
+---@return number w
+---@return number h
+---@return number off_x
+---@return number off_y
+function GU.fit_sprite_content(view, box_w, box_h, cover)
+	local ss = view.image_ss or (view.image_name and I:s(view.image_name))
+
+	if not ss then
+		return 0, 0, 0, 0
+	end
+
+	local b = GU.measure_sprite_content(ss)
+	local ref = (ss.ref_scale or 1) * (view.image_scale or 1)
+	local vis_w = math.max(1, b.visible.x * ref)
+	local vis_h = math.max(1, b.visible.y * ref)
+	local s
+
+	if cover then
+		s = math.max(box_w / vis_w, box_h / vis_h)
+	else
+		s = math.min(box_w / vis_w, box_h / vis_h)
+	end
+
+	view.scale.x, view.scale.y = s, s
+
+	local trim = ss.trim or {0, 0, 0, 0}
+	local off_x = (trim[1] + b.off.x) * ref * s
+	local off_y = (trim[2] + b.off.y) * ref * s
+
+	return vis_w * s, vis_h * s, off_x, off_y
+end
+
 function GU.lives_desc(v)
 	if not v or type(v) ~= "number" then
 		return _("None")

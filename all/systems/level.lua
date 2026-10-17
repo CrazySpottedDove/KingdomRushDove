@@ -13,6 +13,7 @@ local GS = require("kr1.game_settings")
 local P = require("path_db")
 local W = require("wave_db")
 local UP = require("kr1.upgrades")
+local SPELLS = require("spell_system")
 local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
@@ -59,6 +60,8 @@ function level:init_coroutined(store)
 	UP:set_levels(slot.upgrades)
 	UP:set_list_id(slot.upgrade_list_id)
 	DI:set_level(store.level_difficulty)
+	-- power3 法术：解析本局选择（可为 nil = 未选择）
+	SPELLS:set_selected(slot.spell_power_id)
 
 	GR:load(store.level_name)
 	P:load(store.level_name, store.visible_coords)
@@ -87,8 +90,13 @@ function level:init_coroutined(store)
 	if store.level.init then
 		store.level:init(store)
 	end
+
+	-- power3 法术：在预编译前热注册本局选中法术的模板
+	SPELLS:register_templates(E)
 	E:precompile_hot()
 
+	-- 选中法术时对全体敌人额外加生命
+	DI:set_spell_hp_factor(SPELLS:hp_factor())
 	DI:patch_templates()
 	E:precompute()
 	game.progress = 0.4
@@ -117,6 +125,9 @@ function level:init_coroutined(store)
 		UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
 		storage:save_slot(slot, nil, true)
 	end
+
+	-- power3 法术：按 rain/reinforcements 的派生等级施加法术效果
+	SPELLS:apply(store)
 
 	E:patch_config(configer.config())
 

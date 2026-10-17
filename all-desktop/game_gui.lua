@@ -44,6 +44,7 @@ local TimeRewindView = require("dove_modules.gui.time_rewind_view")
 local P = require("path_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
+local SPELLS = require("spell_system")
 local GU = require("gui_utils")
 local LU = require("level_utils")
 local storage = require("all.storage")
@@ -210,7 +211,7 @@ local signals = {
 			if not locks or #locks == 0 or locks[2] == false then
 				unlock_user_power(2)
 			end
-			if game_gui.heroes and #game_gui.heroes > 0 and (not locks or #locks == 0 or locks[3] == false) then
+			if game_gui.power_3 and (not locks or #locks == 0 or locks[3] == false) then
 				unlock_user_power(3)
 			end
 
@@ -1011,6 +1012,8 @@ function game_gui:keypressed(key, isrepeat)
 		self.power_1:toggle_selection()
 	elseif ks.pow_2 == key and not self.power_2:is_disabled() then
 		self.power_2:toggle_selection()
+	elseif ks.pow_3 == key and self.power_3 and not self.power_3:is_disabled() then
+		self.power_3:toggle_selection()
 	elseif ks.hero_1 == key then
 		if self.heroes and self.heroes[1] then
 			self.heroes[1]:on_click(1, 0, 0)
@@ -2539,6 +2542,72 @@ end
 
 PowerButton.draw = KF.draw_without_clip_and_scroll
 
+local p = "power_button_frame"
+-- 通用的技能边框动画
+local power_frame_animations = {
+	default = {
+		prefix = p,
+		from = 1,
+		to = 1
+	},
+	highlighted = {
+		prefix = p,
+		from = 2,
+		to = 2
+	},
+	cooldown = {
+		prefix = p,
+		from = 1,
+		to = 1
+	},
+	locked = {
+		prefix = p,
+		from = 4,
+		to = 4
+	},
+	unlocked = {
+		prefix = p,
+		frames = {
+			15,
+			16,
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28,
+			29
+		}
+	},
+	selected = {
+		prefix = p,
+		from = 3,
+		to = 3
+	},
+	ready = {
+		prefix = p,
+		frames = {
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14,
+			1
+		}
+	}
+}
+
 Power1Button = class("Power1Button", PowerButton)
 
 function Power1Button:initialize()
@@ -2583,47 +2652,8 @@ function Power1Button:initialize()
 			}
 		}
 	elseif E:get_template("user_power_1").template_name == "power_thunder_control" then
-		Power1Button.super.initialize(self, "power_button_icons_0017", "power_button_mask_0001")
-		local mask_prefix = "power_button_mask"
-
-		self.animations = {
-			default = {
-				to = 1,
-				from = 1,
-				prefix = mask_prefix
-			},
-			highlighted = {
-				to = 45,
-				from = 45,
-				prefix = mask_prefix
-			},
-			cooldown = {
-				to = 1,
-				from = 1,
-				prefix = mask_prefix
-			},
-			locked = {
-				to = 30,
-				from = 30,
-				prefix = mask_prefix
-			},
-			unlocked = {
-				to = 44,
-				from = 30,
-				prefix = mask_prefix
-			},
-			selected = {
-				to = 29,
-				from = 29,
-				prefix = mask_prefix
-			},
-			ready = {
-				to = 28,
-				from = 1,
-				prefix = mask_prefix,
-				post = {1}
-			}
-		}
+		Power1Button.super.initialize(self, "power_button_icon_thunder", "power_button_frame_0001")
+		self.animations = power_frame_animations
 	end
 
 	self.selected_gui_mode = GUI_MODE_POWER_1
@@ -2723,6 +2753,29 @@ function Power2Button:fire(wx, wy)
 	game_gui.game.simulation:insert_entity(e)
 
 	signal.emit("power-used", 2)
+end
+
+-- 可选，6代自定义法术槽位
+Power3Button = class("Power3Button", PowerButton)
+
+function Power3Button:initialize(def)
+	Power3Button.super.initialize(self, def.button_icon, "power_button_frame_0001")
+
+	self.spell_def = def
+	self.animations = power_frame_animations
+	self.selected_gui_mode = GUI_MODE_POWER_3
+
+	self:set_mode("locked")
+end
+
+function Power3Button:fire(wx, wy)
+	Power3Button.super.fire(self, wx, wy)
+
+	local e = E:create_entity("user_power_3")
+	e.pos.x, e.pos.y = wx, wy
+	game_gui.game.simulation:insert_entity(e)
+
+	signal.emit("power-used", 3)
 end
 
 PowerButtonBlock = class("PowerButtonBlock", KImageView)
@@ -3254,13 +3307,18 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 		self:add_child(bg_bar)
 	end
 
+	local spell_def = SPELLS:get_selected()
+	-- 面板宽度随技能槽数量自适应：2 槽 247，每多一个槽 +66（面板需完整包住所有按钮）
+	local power_slot_count = spell_def and 3 or 2
+	local powers_width = 247 + (power_slot_count - 2) * 66
+
 	local powers
 	if configer.ui_settings().game_gui_minified then
-		powers = KVirtualView:new(V.v(247, 36))
+		powers = KVirtualView:new(V.v(powers_width, 36))
 		powers.anchor = v(0, 26)
 		powers.scale:set(ui_scale * 1.1, ui_scale * 1.1)
 	else
-		powers = GG9View:new("bg_bottom_left", V.v(247, 36), V.r(140, 36, 10, 1))
+		powers = GG9View:new("bg_bottom_left", V.v(powers_width, 36), V.r(140, 36, 10, 1))
 		powers.anchor = v(0, powers.size.y)
 		powers.draw = KF.draw_without_clip_and_scroll
 		powers.scale:set(ui_scale, ui_scale)
@@ -3272,13 +3330,17 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	self:add_child(powers)
 
 	if not configer.ui_settings().game_gui_minified then
-		local base_powers = KImageView:new("base_powers_bg")
+		-- 技能底板：3 槽用预合成的三格底板 base_powers_bg_3（带两条隔条），2 槽用原始底板。
+		-- （GG9View 会拉伸并把中间隔条拉掉，所以这里用固定底板；隔条落在按钮缝隙里自然可见。）
+		local base_powers = KImageView:new(power_slot_count >= 3 and "base_powers_bg_3" or "base_powers_bg")
+
 		base_powers.anchor = v(103, base_powers.size.y)
 		base_powers.pos = v(123.5, powers.size.y)
 		base_powers._disabled = true
 		base_powers.draw = KF.draw_without_children_and_clip
 		base_powers._draw_self = KF._draw_self_KView_no_color
 		powers:add_child(base_powers)
+		self.base_powers = base_powers
 	end
 
 	self.power_buttons = {}
@@ -3301,8 +3363,21 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 
 	self.power_buttons[2] = power_2
 
+	-- power3 法术：仅当存在选中法术时创建
+	local power_3
+
+	if spell_def then
+		power_3 = Power3Button:new(spell_def)
+		power_3.cooldown_time = E:get_template(spell_def.control).cooldown
+		power_3.pos = v(191, 30)
+
+		powers:add_child(power_3)
+
+		self.power_buttons[3] = power_3
+	end
+
 	if not configer.ui_settings().game_gui_minified then
-		for i = 1, 2 do
+		for i = 1, #self.power_buttons do
 			local pb = powers.children[1 + i]
 			local pn = KImageView:new("power_nbrs_000" .. i)
 
@@ -3358,6 +3433,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 
 	game_gui.power_1 = power_1
 	game_gui.power_2 = power_2
+	game_gui.power_3 = power_3
 end
 
 function HudBottomView:hide()
@@ -6070,6 +6146,29 @@ function MousePointer:initialize(window)
 	p2i.draw = KF.draw_without_children_and_clip
 	p2i._draw_self = KF._draw_self_KView_no_color
 
+	p3b = KImageView:new("pointer_point_orange_0001")
+	p3b.anchor = V.v(p3b.size.x * 0.5, p3b.size.y * 0.5)
+	p3b.animation = {
+		to = 10,
+		prefix = "pointer_point_orange",
+		from = 1
+	}
+	p3b.loop = true
+	p3b.update = KF.update_only_own_animation
+	p3b.draw = KF.draw_without_clip_and_scroll
+	p3b._draw_self = KF._draw_self_KView_no_color_animated
+
+	-- 第三技能（法术）的鼠标指针随选中法术变化，缺省回退到原援军指针
+	local spell_def = SPELLS:get_selected()
+	local p3_pointer_icon = (spell_def and (spell_def.pointer_icon or ("pointer_power_" .. spell_def.id))) or "pointer_user_power_0002"
+	local p3i = KImageView:new(p3_pointer_icon)
+
+	p3i.anchor = V.v(p3i.size.x * 0.5, p3i.size.y * 100 / 100)
+	p3i.pos.x, p3i.pos.y = p3b.size.x * 0.5, p3b.size.y * 0.5
+	p3b:add_child(p3i)
+	p3i.draw = KF.draw_without_children_and_clip
+	p3i._draw_self = KF._draw_self_KView_no_color
+
 	sunray_tower = KImageView:new("pointer_point_orange_0001")
 	sunray_tower.anchor = V.v(sunray_tower.size.x * 0.5, sunray_tower.size.y * 0.5)
 	sunray_tower.animation = {
@@ -7713,12 +7812,12 @@ function PickView:on_down(button, x, y)
 				game_gui:show_invalid_point_cross(x, y)
 			end
 		elseif game_gui.mode == GUI_MODE_POWER_3 then
-			local he = game_gui:entity_by_id(game_gui.heroes[1].hero_id)
-			local un = he.hero.skills.ultimate
-			local ut = E:get_template(un.controller_name)
+			local up = E:get_template("user_power_3")
+			local fn = up and up.user_selection.can_select_point_fn
 
-			if not ut.can_fire_fn or ut.can_fire_fn(ut, wx, wy, game_gui.game.store) then
+			if game_gui.power_3 and (not fn or fn(up, wx, wy, game_gui.game.store)) then
 				game_gui.power_3:fire(wx, wy)
+				time_rewind:record_decision(RK.power_fire, game_gui.game.store.tick_ts, 3, wx, wy)
 			else
 				game_gui:show_invalid_point_cross(x, y)
 			end

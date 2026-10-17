@@ -7,6 +7,12 @@ require("all.constants")
 
 local difficulty = {}
 
+difficulty.spell_hp_factor = 1
+
+function difficulty:set_spell_hp_factor(f)
+	self.spell_hp_factor = f
+end
+
 function difficulty:set_level(level)
 	self.level = level
 end
@@ -52,7 +58,9 @@ function difficulty:patch_templates()
 		end
 
 		if t.enemy then
-			if not PT(t.health, "hp_max") and hp_factor_enemy ~= 1 then
+			local hp_max_is_table = PT(t.health, "hp_max")
+
+			if not hp_max_is_table and hp_factor_enemy ~= 1 then
 				if self.level == DIFFICULTY_IMPOSSIBLE and t.health.hp_max > 2000 then
 					local delta = t.health.hp_max - 2000
 					t.health.instakill_resistance = 1 - (2000 + delta * math.exp(-delta / 2000)) / t.health.hp_max
@@ -64,6 +72,11 @@ function difficulty:patch_templates()
 				else
 					t.health.hp_max = math.floor(t.health.hp_max * hp_factor_enemy)
 				end
+			end
+
+			-- 选中 power3 法术：全体敌人额外 +10% 生命（含按难度取表的 hp_max）
+			if self.spell_hp_factor ~= 1 then
+				t.health.hp_max = math.floor(t.health.hp_max * self.spell_hp_factor)
 			end
 
 			if not PT(t.motion, "max_speed") and speed_factor_enemy ~= 1 then
@@ -163,6 +176,10 @@ function difficulty:patch_templates()
 	local overseer = E:get_template("controller_stage_16_overseer")
 	if overseer then
 		overseer.health.hp_max = overseer.health.hp_max * GS.difficulty_enemy_hp_max_factor[self.level]
+
+		if self.spell_hp_factor ~= 1 then
+			overseer.health.hp_max = overseer.health.hp_max * self.spell_hp_factor
+		end
 	end
 end
 

@@ -350,6 +350,19 @@ function director:unload_item(item)
 			end
 		end
 
+		-- power3 法术：卸载本局按需加载的法术资源
+		local SPELLS_U = require("spell_system")
+		local spell_def_u = SPELLS_U:get_selected()
+
+		if spell_def_u then
+			self:unload_texture_groups(spell_def_u.required_textures or {}, game.ref_res, "game")
+			self:unload_plugin_texture_groups(spell_def_u.plugin_required_textures or {}, game.ref_res, "game")
+			self:unload_sound_groups(spell_def_u.required_sounds or {})
+			self:unload_sound_groups(spell_def_u.plugin_required_sounds or {})
+			EXO:unload(spell_def_u.required_exoskeletons or {})
+			EXO:unload(spell_def_u.plugin_required_exoskeletons or {})
+		end
+
 		game:destroy()
 
 		game.store = nil
@@ -489,6 +502,22 @@ function director:queue_load_item_named(name)
 			game.store.level_mode_override = GAME_MODE_ENDLESS
 		end
 
+		-- power3 法术：先解析选择，再按选择 queue 本局资源（写法与 scene/game/level 一致）
+		local slot = storage:load_slot()
+		local SPELLS = require("spell_system")
+
+		SPELLS:set_selected(slot.spell_power_id)
+		local spell = SPELLS:get_selected()
+
+		if spell then
+			self:load_texture_groups(spell.required_textures or {}, self.params.texture_size, game.ref_res, true, "game")
+			self:load_plugin_texture_groups(spell.plugin_required_textures or {}, game.ref_res, true, "game")
+			self:load_sound_groups(spell.required_sounds)
+			self:load_sound_groups(spell.plugin_required_sounds)
+			EXO:queue_load(spell.required_exoskeletons or {})
+			EXO:queue_load_plugin(spell.plugin_required_exoskeletons or {})
+		end
+
 		self:load_texture_groups(replace_locale(game.required_textures), self.params.texture_size, game.ref_res, true, "game")
 		self:load_plugin_texture_groups(game.plugin_required_textures, game.ref_res, true, "game")
 		self:load_texture_groups(replace_locale(game.store.level.required_textures), self.params.texture_size, game.ref_res, true, "game")
@@ -522,8 +551,6 @@ function director:queue_load_item_named(name)
 				end
 			end
 		end
-
-		local slot = storage:load_slot()
 
 		if configer.config().enabled and configer.config().random_hero then
 			if not slot.heroes.selected then
