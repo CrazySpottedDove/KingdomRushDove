@@ -164,6 +164,7 @@ return {
     ["kr1-desktop/images/fullhd/go_power_aspect_of_sol-1.dds"] = {34928224, "a8570050"},
     ["kr1-desktop/images/fullhd/go_power_musketeers-1.dds"] = {6833120, "b7ac5aa9"},
     ["kr1-desktop/images/fullhd/go_power_rain_of_fire-1.dds"] = {1286080, "720666a4"},
+    ["kr1-desktop/images/fullhd/go_power_reinforcements-1.dds"] = {6130704, "e70349f1"},
     ["kr1-desktop/images/fullhd/go_power_royal_edict-1.dds"] = {487280, "79bcfed0"},
     ["kr1-desktop/images/fullhd/go_power_teleportation_sigil-1.dds"] = {2446224, "40688158"},
     ["kr1-desktop/images/fullhd/go_power_thunder_zapper-1.dds"] = {4401728, "5e6ee6e9"},
