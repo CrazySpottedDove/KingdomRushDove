@@ -5969,7 +5969,7 @@ return {
 	POWER_REINFORCEMENTS_CONTROL_NAME = "援军",
 	POWER_REINFORCEMENTS_DESCRIPTION = "召唤援军阻截并攻击敌人。",
 	POWER_REINFORCEMENTS_KR6_DESCRIPTION = "非常时期需要非常手段，王国的平民们已准备好伸出援手（以及他们的草叉）来一同抵御入侵者。",
-	POWER_REINFORCEMENTS_KR6_LARGE_DESCRIPTION = "冷却12秒。召唤两名驻场17秒的民兵与一名冠军骑士。民兵拥有53点生命值、55点护甲与20%反伤，每次攻击造成4-9点伤害。冠军骑士拥有161点生命值、55点护甲、20%反伤，每次攻击造成22-32点伤害，并可使70范围内友军获得10%伤害提升与15点护甲，持续12秒。",
+	POWER_REINFORCEMENTS_KR6_LARGE_DESCRIPTION = "冷却12秒。召唤两名驻场17秒的民兵与一名骑士楷模。民兵拥有53点生命值、55点护甲与20%反伤，每次攻击造成4-9点伤害。骑士楷模拥有161点生命值、55点护甲、20%反伤，每次攻击造成22-32点伤害，并可使70范围内友军获得10%伤害提升与15点护甲，持续12秒。",
 	POWER_REINFORCEMENTS_KR6_NAME = "援军",
 	POWER_REINFORCEMENTS_LARGE_DESCRIPTION = "你可以在战场上召唤军队帮助你。\n\n援军是免费的，每%$T('power_reinforcements_control').cooldown%$秒就可召唤一次。",
 	POWER_REINFORCEMENTS_NAME = "呼叫援军",
