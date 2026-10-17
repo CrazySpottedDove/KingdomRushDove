@@ -26,13 +26,13 @@ function M.register_templates(E)
 	local vv = V.vv
 	local r = V.r
 	local bit = require("bit")
-	local band = bit.band
 	local bor = bit.bor
 	local U = require("utils")
 	local S = require("sound_db")
 	local SU = require("script_utils")
 	local GR = require("grid_db")
 	local P = require("path_db")
+	local UP = require("kr1.upgrades")
 	local scripts = require("game_scripts")
 
 	require("lib.klua.table")
@@ -80,7 +80,7 @@ function M.register_templates(E)
 	E:add_comps(tt, "sound_events")
 	tt.main_script.insert = function(this, store)
 		local nearest = P:nearest_nodes(this.pos.x, this.pos.y)[1]
-		local pi, spi, ni = unpack(nearest)
+		local pi, _, ni = unpack(nearest)
 
 		this.pos.x, this.pos.y = P:node_pos(pi, 1, ni).x, P:node_pos(pi, 1, ni).y
 
@@ -100,12 +100,9 @@ function M.register_templates(E)
 
 		simulation:queue_insert_entity(ray)
 
-		return true
+		return false
 	end
-	tt.main_script.update = function(this, store)
-		coroutine.yield()
-		simulation:queue_remove_entity(this)
-	end
+	tt.main_script.update = nil
 	tt.user_selection.can_select_point_fn = function(this, x, y, store)
 		return GR:cell_is(x, y, bor(TERRAIN_LAND, TERRAIN_ICE)) and not GR:cell_is(x, y, bor(TERRAIN_NOWALK)) and P:valid_node_nearby(x, y, nil, NF_RALLY)
 	end
@@ -140,13 +137,13 @@ function M.register_templates(E)
 
 		this.health_bar.hidden = true
 		this.aura = E:create_entity(this.damage_aura)
-		this.aura.pos.x, this.aura.pos.y = this.pos.x, this.pos.y
+		this.aura.pos = this.pos
 
 		simulation:queue_insert_entity(this.aura)
 
 		local range_decal = E:create_entity(this.decal_damage_range)
 
-		range_decal.pos.x, range_decal.pos.y = this.pos.x, this.pos.y
+		range_decal.pos = this.pos
 		range_decal.render.sprites[1].ts = store.tick_ts
 		this.decal_damage_range_entity = range_decal
 
@@ -334,6 +331,7 @@ function M.register_templates(E)
 	tt.excluded_templates = {"enemy_spectral_knight"}
 	tt.image_width = 100
 	tt.seen_targets = {}
+	tt.render.sprites[1].anchor = v(0, 0.5)
 	tt.render.sprites[1].name = "ray_tesla"
 	tt.render.sprites[1].loop = false
 	tt.render.sprites[1].z = Z_BULLETS
@@ -395,7 +393,9 @@ function M.register_templates(E)
 
 				d.source_id = b.source_id
 				d.target_id = target.id
-				d.value = math.floor(math.random(this.bounce_damage_min, this.bounce_damage_max) * (not this.bounces and 1 or this.bounce_damage_factor))
+				local bounce_factor = (not this.bounces or UP:get_upgrade("engineer_efficiency")) and 1 or this.bounce_damage_factor
+
+				d.value = math.floor(math.random(this.bounce_damage_min, this.bounce_damage_max) * bounce_factor)
 				d.damage_type = b.damage_type
 				d.pop = b.pop
 				d.pop_conds = b.pop_conds

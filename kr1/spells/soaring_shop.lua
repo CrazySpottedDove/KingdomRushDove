@@ -181,9 +181,7 @@ function M.register_templates(E)
 	tt.speed = 0.2
 
 	tt = E:register_t_tmp("soldier_soaring_shop", "soldier_militia")
-
 	E:add_comps(tt, "reinforcement", "nav_grid", "ranged", "timed_attacks")
-
 	tt.info.fn = scripts.soldier_reinforcement.get_info
 	tt.info.portrait = "kr6_info_portraits_soldiers_0048"
 	tt.info.i18n_key = "POWER_SOARING_SHOP"
@@ -283,6 +281,9 @@ function M.register_templates(E)
 					local flip = s.flip_x and -1 or 1
 
 					U.animation_start(this, "attack_3", nil, store.tick_ts, false, 1)
+
+					attack3.ts = store.tick_ts
+
 					U.y_wait(store, attack3.hit_time)
 
 					local b = E:create_entity(attack3.bullet)
@@ -299,8 +300,6 @@ function M.register_templates(E)
 					while not U.animation_finished(this, 1) do
 						coroutine.yield()
 					end
-
-					attack3.ts = store.tick_ts
 				end
 			end
 
@@ -309,6 +308,8 @@ function M.register_templates(E)
 
 				if enemy and not enemy.health.dead then
 					U.animation_start(this, "attack_2", nil, store.tick_ts, false, 1)
+
+					attack2.ts = store.tick_ts
 
 					for i = 0, #attack2.hit_times - 1 do
 						U.y_wait(store, attack2.hit_times[i + 1])
@@ -334,8 +335,6 @@ function M.register_templates(E)
 					while not U.animation_finished(this, 1) do
 						coroutine.yield()
 					end
-
-					attack2.ts = store.tick_ts
 				end
 			end
 
@@ -351,6 +350,9 @@ function M.register_templates(E)
 					attacks = attacks + 1
 
 					U.animation_start(this, anim, nil, store.tick_ts, false, 1)
+
+					attack.ts = store.tick_ts
+
 					U.y_wait(store, attack.hit_time)
 
 					local b = E:create_entity(bullet)
@@ -366,8 +368,6 @@ function M.register_templates(E)
 					while not U.animation_finished(this, 1) do
 						coroutine.yield()
 					end
-
-					attack.ts = store.tick_ts
 				end
 			end
 
@@ -412,7 +412,7 @@ function M.register_templates(E)
 	tt.render.sid_shadow = 2
 	tt.sound_events.insert = {"PowersSoaringShopSummon", "PowersSoaringShopSummonTaunt"}
 	tt.sound_events.change_rally_point = "PowersSoaringShopMoveTaunt"
-	tt.ranged.attacks[1].cooldown = 0.64
+	tt.ranged.attacks[1].cooldown = 2.04
 	tt.ranged.attacks[1].damage_min = 15
 	tt.ranged.attacks[1].damage_max = 25
 	tt.ranged.attacks[1].damage_type = DAMAGE_EXPLOSION
@@ -450,6 +450,8 @@ function M.register_templates(E)
 	tt.unit.marker_offset = v(0, 0)
 	tt.vis.bans = F_ALL
 	tt.controller_float_anim = "controller_soaring_shop_float_anim"
+	tt.controable = true
+	tt.controable_other = true
 end
 
 function M.apply(level)
@@ -463,6 +465,7 @@ function M.apply(level)
 	local base_damage_max = {25, 20, 300, 25, 25}
 	local radius_factor = level >= 2 and 1.2 or 1
 	local damage_factor = level >= 4 and 1.1 or 1
+	local basic_attack_anim = 1.4
 
 	for i = 1, #bullet_names do
 		local bt = E:get_template(bullet_names[i])
@@ -475,7 +478,7 @@ function M.apply(level)
 	ctrl.cooldown = level >= 2 and 40 or 50
 
 	soldier.reinforcement.duration = level >= 5 and 24 or 20
-	soldier.ranged.attacks[1].cooldown = level >= 5 and 0.14 or 0.64
+	soldier.ranged.attacks[1].cooldown = basic_attack_anim + (level >= 5 and 0.14 or 0.64)
 	soldier.timed_attacks.list[1].disabled = level < 3
 	soldier.timed_attacks.list[1].cooldown = level >= 4 and 15 or 20
 	soldier.timed_attacks.list[2].disabled = level < 6

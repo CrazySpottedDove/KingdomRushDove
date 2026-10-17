@@ -93,6 +93,7 @@ function M.register_templates(E)
 	tt.main_script.update = function(this, store)
 		local max_times_applied = E:get_template(this.mod_teleport).max_times_applied
 		local count = 0
+		local queued = {}
 
 		this.ts = store.tick_ts
 
@@ -148,12 +149,14 @@ function M.register_templates(E)
 			local targets = U.find_enemies_in_range(store, this.pos, 0, this.range, F_TELEPORT, this.vis_bans)
 
 			if targets and #targets > 0 then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					if count >= this.max_count then
 						break
 					end
 
-					if target and target.health and not target.health.dead and (not target.enemy.counts or not target.enemy.counts.mod_teleport or max_times_applied > target.enemy.counts.mod_teleport) then
+					if target and not queued[target.id] and target.health and not target.health.dead and (not target.enemy.counts or not target.enemy.counts.mod_teleport or max_times_applied > target.enemy.counts.mod_teleport) then
+						queued[target.id] = true
+
 						local mod_teleport = E:create_entity(this.mod_teleport)
 
 						mod_teleport.modifier.target_id = target.id
@@ -264,7 +267,7 @@ function M.register_templates(E)
 			return
 		end
 
-		if this.instakill_chance and target.health.hp >= this.instakill_min_hp and band(target.vis.flags, F_BOSS) == 0 then
+		if this.instakill_chance and band(target.vis.flags, F_BOSS) == 0 then
 			if math.random() < this.instakill_chance then
 				instakill = true
 			end
@@ -424,7 +427,7 @@ function M.register_templates(E)
 			d.source_id = this.id
 			d.target_id = target.id
 			d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_NO_SPAWNS)
-			d.value = 1e99
+			d.value = 1
 
 			queue_damage(store, d)
 			signal.emit("mod-applied", this, target)
@@ -578,7 +581,6 @@ function M.apply(level)
 	mod.hold_time = 1
 	mod.second_tp_chance = nil
 	mod.instakill_chance = nil
-	mod.instakill_min_hp = nil
 	mod.mod_slow = nil
 	mod.mod_silence = nil
 	mod.mod_damage_red = nil
@@ -609,7 +611,6 @@ function M.apply(level)
 
 	if level >= 6 then
 		mod.instakill_chance = 0.2
-		mod.instakill_min_hp = 50
 		decal.render.sprites[1].prefix = "sigil_lvl3Def"
 	end
 end
