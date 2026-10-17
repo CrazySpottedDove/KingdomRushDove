@@ -91,10 +91,6 @@ function M.register_templates(E)
 				SU.soldier_idle(store, this)
 			else
 				while this.nav_rally.new do
-					if this.nav_rally.move_order then
-						U.y_wait(store, this.nav_rally.move_order * math.random() * 0.3)
-					end
-
 					if SU.y_controable_new_rally(store, this) then
 						goto label_rally
 					end
@@ -228,7 +224,7 @@ function M.register_templates(E)
 	tt = E:register_t_tmp("soldier_reinforcement_base_kr6", "soldier_militia")
 
 	E:add_comps(tt, "reinforcement", "nav_grid", "tween")
-
+	tt.controable = true
 	tt.cooldown = 15
 	tt.health.armor = 0
 	tt.health.hp_max = 40
@@ -280,7 +276,7 @@ function M.register_templates(E)
 	tt = E:register_t_tmp("soldier_reinforcement_special_kr6", "soldier_militia")
 
 	E:add_comps(tt, "reinforcement", "nav_grid", "tween")
-
+	tt.controable = true
 	tt.health.armor = 0.4
 	tt.health.hp_max = 140
 	tt.health.spiked_armor = 0
