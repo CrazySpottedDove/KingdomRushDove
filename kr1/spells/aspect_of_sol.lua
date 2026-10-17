@@ -1,7 +1,3 @@
--- power3 法术：索罗化身（KR6 aspect_of_sol）
--- 模块契约见 kr1/spell_system.lua：
---   register_templates(E) 在 E:precompile_hot() 之前调用，负责注册本局所有模板；
---   apply(level) 在 precompile 之后调用，只改数值/贴图前缀等元数据。
 local M = {}
 
 M.id = "aspect_of_sol"
