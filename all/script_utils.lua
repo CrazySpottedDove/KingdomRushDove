@@ -5485,4 +5485,18 @@ function SU.apply_batch_bullet_simulation(bullet_entity, targets, store)
 	end
 end
 
+--- 获取金币，自带特效和音效
+---@param store table
+---@param amount number
+---@param x number
+---@param y number
+---@param fx_delay number?
+function SU.get_gold(store, amount, x, y, fx_delay)
+	store.player_gold = store.player_gold + amount
+	local fx = E:create_entity("fx_coin_jump")
+	fx.pos:set(x, y)
+	fx.render.sprites[1].ts = store.tick_ts + (fx_delay or 0)
+	simulation:queue_insert_entity(fx)
+end
+
 return SU

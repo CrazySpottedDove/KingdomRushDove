@@ -35840,16 +35840,7 @@ function scripts.tower_miners.update(this, store)
 			value = value * this.beyond_threshold_gold_factor
 		end
 
-		local pos = V.v(this.pos.x + this.gold_effect_offset.x, this.pos.y + this.gold_effect_offset.y)
-
-		store.player_gold = store.player_gold + value
-
-		local fx = E:create_entity("fx_coin_jump")
-
-		fx.pos.x, fx.pos.y = pos.x, pos.y
-		fx.render.sprites[1].ts = store.tick_ts + (fx_delay or 0)
-
-		queue_insert(store, fx)
+		SU.get_gold(store, value, this.pos.x + this.gold_effect_offset.x, this.pos.y + this.gold_effect_offset.y, fx_delay)
 	end
 
 	local function check_generate_gold(factor)

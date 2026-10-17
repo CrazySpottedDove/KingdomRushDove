@@ -8028,6 +8028,11 @@ function scripts.taunts_controller.update(this, store)
 	::label_161_2::
 end
 
+scripts.user_power_3 = {}
+function scripts.user_power_3.can_select_point(this, x, y, store)
+	return not GR:cell_is(x, y, TERRAIN_CLIFF) and (P:valid_node_nearby(x, y, 1.4285714285714286, NF_POWER_3) or GR:cell_is(x, y, TERRAIN_WATER))
+end
+
 scripts.power_fireball_control = {}
 
 function scripts.power_fireball_control.can_select_point(this, x, y, store)

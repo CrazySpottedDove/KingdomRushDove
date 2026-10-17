@@ -2359,6 +2359,7 @@ function upgrades:patch_templates(max_level)
 		mul_arr(T("tower_sandworm").powers.worm.cooldown, cd)
 		mul_arr(T("tower_sandworm").powers.slime.cooldown, cd)
 		mul_arr(T("tower_sandworm").powers.eat.cooldown, cd)
+		mul_field(T("aura_rotten_forest_thorn").aura, "cooldown", cd)
 	end
 
 	u = self:get_upgrade("engineer_efficiency")

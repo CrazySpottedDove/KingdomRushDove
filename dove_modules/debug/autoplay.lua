@@ -476,6 +476,16 @@ function autoplay:run_sim()
 
 		self:force_boss_phases()
 
+		if not self._sndchk2 then
+			self._sndchk2 = true
+			local SDS = require("sound_db")
+			local f1 = "kr6_sfx_powers_royalDecree_lvl1_v4.ogg"
+			local f2 = "kr6_sfx_powers_royalDecree_lvl3_v3.ogg"
+			print(string.format("SNDCHK2 lvl1=%s lvl6=%s uses_lvl1=%s uses_lvl6=%s", tostring(SDS.sources[f1] ~= nil), tostring(SDS.sources[f2] ~= nil), tostring(SDS.source_uses[f1]), tostring(SDS.source_uses[f2])))
+			S:queue("PowersRoyalDecreeCastLvl6")
+			S:queue("PowersRoyalDecreeCastLvl1")
+		end
+
 		simulation:update(STEP)
 
 		-- 一帧的渲染侧更新也要跑：render / tween / particle_system 的 on_render_update

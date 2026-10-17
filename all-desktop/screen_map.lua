@@ -13,6 +13,7 @@ local SH = require("klove.shader_db")
 local SU = require("screen_utils")
 local U = require("utils")
 local UPGR = require("kr1.upgrades")
+local SPELLS = require("spell_system")
 local V = require("lib.klua.vector")
 local v = V.v
 local km = require("lib.klua.macros")
@@ -70,7 +71,8 @@ screen_map.required_textures = {
 	"encyclopedia_creeps",
 	"gui_ico",
 	"gui_common",
-	"gui_portraits"
+	"gui_portraits",
+	"power_portraits"
 }
 screen_map.plugin_required_textures = {}
 screen_map.plugin_required_sounds = {}
@@ -236,6 +238,7 @@ function screen_map:init_coro(w, h, done_callback)
 		self.level_data = map_data.level_data
 
 		self.user_data = storage:load_slot()
+		SPELLS:set_selected(self.user_data.spell_power_id)
 		self.generation = self.user_data.last_generation
 		local map_gen = self.generation == self.CUSTOM_GEN and 1 or self.generation
 		self.map_points = get_map_points_for_generation(map_gen)
@@ -636,6 +639,10 @@ function screen_map:init(w, h)
 	local cat_filter_btn = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
 	cat_filter_btn.anchor = v(cat_filter_btn.size.x / 2, cat_filter_btn.size.y / 2)
 	cat_filter_btn.pos = v(h_button.pos.x - 170, sh - 90)
+
+	-- 记录原自制地图分类按钮位置，法术按钮就放在这里
+	local original_cat_filter_pos = v(cat_filter_btn.pos.x, cat_filter_btn.pos.y)
+
 	cat_filter_btn.label.pos = v(50, 121)
 	cat_filter_btn.label.size = v(126, 30)
 	cat_filter_btn.label.text_size = cat_filter_btn.label.size
@@ -738,12 +745,13 @@ function screen_map:init(w, h)
 		end
 	end
 
-	local change_btn_x = cat_filter_btn.pos.x - 170
+	-- 切换地图 / 自制地图分类按钮移到左下角，居左对齐
+	local footer_left = o_button.pos.x - o_button.size.x / 2
 	local change_btn_y = sh - 90
 
 	local change_button = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
 	change_button.anchor = v(change_button.size.x / 2, change_button.size.y / 2)
-	change_button.pos = v(change_btn_x, change_btn_y)
+	change_button.pos = v(footer_left + change_button.size.x / 2, change_btn_y)
 	change_button.label.pos = v(50, 121)
 	change_button.label.size = v(126, 30)
 	change_button.label.text_size = change_button.label.size
@@ -753,6 +761,25 @@ function screen_map:init(w, h)
 	change_button.label.fit_lines = 1
 
 	self.window:add_child(change_button)
+
+	local footer_spacing = change_button.size.x * 0.75
+
+	cat_filter_btn.pos = v(change_button.pos.x + footer_spacing, change_btn_y)
+
+	-- 法术按钮占用原自制地图分类按钮的位置
+	local spell_button = SpellMapButton:new()
+
+	spell_button.anchor = v(spell_button.size.x / 2, spell_button.size.y / 2)
+	spell_button.pos = original_cat_filter_pos
+
+	function spell_button.on_click()
+		S:queue("GUIButtonCommon")
+		self:ensure_spell_view():show()
+	end
+
+	self.window:add_child(spell_button)
+	self.spell_button = spell_button
+	self:refresh_spell_button_state()
 
 	local gen_dropdown = KView:new(V.v(sw, sh))
 	gen_dropdown.hidden = true
@@ -1081,6 +1108,43 @@ function screen_map:ensure_hero_room_view()
 	self.hero_room = hero_room
 
 	return hero_room
+end
+
+function screen_map:ensure_spell_view()
+	if self.spell_view then
+		return self.spell_view
+	end
+
+	local ctx = {
+		ref_h = self.ref_h
+	}
+
+	function ctx.cjk(default, zh, ja, kr)
+		return i18n.cjk(i18n, default, zh, ja, kr)
+	end
+
+	-- 复用英雄殿堂的布局和 heroroom_bg，只是把内容换成法术
+	local tt = kui_db:get_table("spell_select_view", ctx)
+	local spell_view = SpellSelectView:new_from_table(tt)
+	local back = spell_view:get_child_by_id("back")
+	local back_w, back_h = back.size.x, back.size.y
+	local s = math.min(1.35, self.sw * 0.94 / back_w, self.sh * 0.94 / back_h)
+
+	spell_view.scale = v(s, s)
+	spell_view.pos = v((self.sw - spell_view.size.x * s) / 2, (self.sh - spell_view.size.y * s) / 2)
+
+	self.window:add_child(spell_view)
+	self.spell_view = spell_view
+
+	return spell_view
+end
+
+function screen_map:refresh_spell_button_state()
+	if not self.spell_button then
+		return
+	end
+
+	self.spell_button:set_spell(SPELLS:get_selected())
 end
 
 function screen_map:ensure_option_panel()
@@ -4879,6 +4943,8 @@ function EncyclopediaView:show()
 	UPGR:set_list_id(user_data.upgrade_list_id)
 	DI:set_level(screen_map.user_data.difficulty)
 	UPGR:patch_templates(6)
+	SPELLS:set_selected(user_data.spell_power_id)
+	DI:set_spell_hp_factor(SPELLS:hp_factor())
 	DI:patch_templates()
 	E:patch_config(configer.config())
 	self:load_towers(1)
@@ -7090,6 +7156,358 @@ function HeroRoomViewKR1:show_special_description(special_name)
 	local special_text = special_map[special_name]
 
 	self.special_description_area.text = special_text
+end
+
+SpellMapButton = class("SpellMapButton", GGButton)
+
+function SpellMapButton:initialize()
+	GGButton.initialize(self, "mapButtons_notxt_0001", "mapButtons_notxt_0002")
+
+	self.label.pos = v(50, 121)
+	self.label.size = v(126, 30)
+	self.label.text_size = self.label.size
+	self.label.font_size = 18
+	self.label.vertical_align = CJK("middle", "top", nil, "top")
+	self.label.text = _("SPELLS")
+	self.label.fit_lines = 1
+
+	-- 复用英雄殿堂按钮的盾牌窗口：从空窗口图读取 trim 和 quad，避免写死显示区域
+	local mask_name = "mapButtons_portrait_hero_0000"
+	local mask_ss = I:s(mask_name)
+	local ref = mask_ss.ref_scale or 1
+	local _, _, mask_w, mask_h = mask_ss.quad:getViewport()
+	local mask_x, mask_y = mask_ss.trim[1] * ref, mask_ss.trim[2] * ref
+	local window_w, window_h = mask_w * ref, mask_h * ref
+
+	self.icon_window = KView:new(v(window_w, window_h))
+	self.icon_window.pos = v(mask_x, mask_y)
+	self.icon_window.clip = true
+	self.icon_window.clip_fn = function()
+		G.ellipse("fill", window_w * 0.5, window_h * 0.5, window_w * 0.5, window_h * 0.5)
+	end
+	self.icon_window.propagate_on_click = true
+	self.icon_window.propagate_on_up = true
+	self.icon_window.propagate_on_down = true
+	self.icon_window.propagate_on_touch_down = true
+	self.icon_window.propagate_on_touch_up = true
+	self.icon_window.propagate_on_touch_move = true
+	self:add_child(self.icon_window)
+
+	-- 空窗口底图：让未选择法术时也保持英雄殿堂按钮的盾牌内窗口
+	self.icon_window_bg = KImageView:new(mask_name)
+	self.icon_window_bg.pos = v(-mask_x, -mask_y)
+	self.icon_window:add_child(self.icon_window_bg)
+
+	self.icon = KImageView:new(nil, v(1, 1))
+	self.icon.hidden = true
+	self.icon_window:add_child(self.icon)
+end
+
+function SpellMapButton:set_spell(spell)
+	local icon_name = spell and spell.button_icon or nil
+
+	if icon_name and I:s(icon_name) then
+		self.icon:set_image(icon_name)
+		self.icon.hidden = false
+
+		local box_w = self.icon_window.size.x
+		local box_h = self.icon_window.size.y
+		local w, h, off_x, off_y = GU.fit_sprite_content(self.icon, box_w, box_h)
+
+		self.icon.pos = v((self.icon_window.size.x - w) * 0.5 - off_x, (self.icon_window.size.y - h) * 0.5 - off_y)
+	else
+		self.icon.hidden = true
+	end
+end
+
+-- 法术选择视图：复用英雄殿堂的 kui 模板和布局
+SpellSelectView = class("SpellSelectView", PopUpView)
+
+function SpellSelectView:initialize(size)
+	SpellSelectView.super.initialize(self, size)
+	self.back = self:get_child_by_id("back")
+	self.thumbs = self:get_child_by_id("spell_thumbs")
+	self.portrait_area = self:get_child_by_id("spell_portrait_area")
+	self.portrait = self:get_child_by_id("spell_portrait")
+	self.name_label = self:get_child_by_id("spell_name_label")
+	self.bio_desc = self:get_child_by_id("spell_desc")
+	self.spec_desc = self:get_child_by_id("spell_max_desc")
+	self.select_button = self:get_child_by_id("spell_sel_select")
+	self.deselect_button = self:get_child_by_id("spell_sel_deselect")
+	self.done_button = self:get_child_by_id("done_button")
+	self.close_button = self:get_child_by_id("close_button")
+
+	self.portrait_box_w = self.portrait_area.size.x
+	self.portrait_box_h = self.portrait_area.size.y
+
+	-- 列表样式
+	self.thumbs.colors.scroller_background = {40, 30, 20, 180}
+	self.thumbs.colors.scroller_foreground = {140, 110, 60, 220}
+	self.thumbs.drag_scroll_threshold = IS_ANDROID and 20 or 6
+
+	-- 关闭 / 完成
+	self.close_button.on_click = function()
+		S:queue("GUIButtonCommon")
+		self:hide()
+	end
+
+	self.done_button.on_click = self.close_button.on_click
+
+	self.select_button.on_click = function()
+		self:select_shown()
+	end
+
+	self.deselect_button.on_click = function()
+		self:clear_selection()
+	end
+
+	self.tiles = {}
+	self.modules = {}
+
+	self:build_list()
+end
+
+function SpellSelectView:build_list()
+	self.thumbs:clear_rows()
+	self.tiles = {}
+	self.modules = SPELLS:modules()
+
+	if #self.modules == 0 then
+		local l = GGLabel:new(v(self.thumbs.size.x, 40))
+
+		l.pos = v(0, (self.thumbs.size.y - 40) * 0.5)
+		l.font_name = "h"
+		l.font_size = 18
+		l.text_align = "center"
+		l.vertical_align = "middle"
+		l.colors.text = {231, 225, 181, 255}
+		l.text = _("SPELL_SELECT_EMPTY")
+		self.thumbs:add_child(l)
+		self.preview_image = nil
+		self.selected_image = nil
+		self.hover_image = nil
+
+		return
+	end
+
+	local base = 84
+	local gap = base * 0.05
+	local list_w = self.thumbs.size.x - self.thumbs.scroller_width - 2 * self.thumbs.scroller_margin
+	local target_cell = base * (IS_ANDROID and 0.9 or 0.7)
+	local cols = math.max(1, math.floor((list_w + gap) / (target_cell + gap)))
+	local cell = (list_w - (cols - 1) * gap) / cols
+	local tile_scale = cell / base
+	local row_h = cell + gap
+	local rows = math.ceil(#self.modules / cols)
+
+	self.thumbs._bottom_y = rows * row_h - gap
+	self.thumbs.scroll_amount = row_h
+
+	for i, def in ipairs(self.modules) do
+		local col = (i - 1) % cols
+		local row = math.floor((i - 1) / cols)
+		local pos = v(col * row_h, row * row_h)
+		local tile = KView:new(v(cell, cell))
+
+		tile.pos = pos
+
+		local frame = KImageView:new("hero_room_thumbs_0000")
+
+		frame.scale = v(tile_scale, tile_scale)
+		tile:add_child(frame)
+
+		local icon_name = def.button_icon or nil
+
+		if icon_name and I:s(icon_name) then
+			local icon = KImageView:new(icon_name)
+			local w, h, off_x, off_y = GU.fit_sprite_content(icon, cell * 0.8, cell * 0.8)
+
+			icon.pos = v((cell - w) * 0.5 - off_x, (cell - h) * 0.5 - off_y)
+			tile:add_child(icon)
+		else
+			local q = GGLabel:new(v(cell, cell))
+
+			q.text = "?"
+			q.font_name = "h"
+			q.font_size = 28
+			q.text_align = "center"
+			q.vertical_align = "middle"
+			q.colors.text = {231, 225, 181, 255}
+			q.propagate_on_click = true
+			tile:add_child(q)
+		end
+
+		function tile.on_click(this, button, x, y, istouch, moved)
+			if moved then
+				return
+			end
+
+			S:queue("GUIButtonCommon")
+			self:show_spell(def)
+		end
+
+		function tile.on_enter(this)
+			if self.hover_image then
+				self.hover_image.pos = this.pos
+				self.hover_image.hidden = false
+			end
+		end
+
+		function tile.on_exit(this)
+			if self.hover_image then
+				self.hover_image.hidden = true
+			end
+		end
+
+		self.thumbs:add_child(tile)
+		self.tiles[def.id] = tile
+	end
+
+	-- 当前预览但尚未确认选择的法术：淡金色框
+	self.preview_image = KImageView:new("hero_room_thumbs_select_0000")
+	self.preview_image.scale = v(tile_scale, tile_scale)
+	self.preview_image.alpha = 0.45
+	self.preview_image.hidden = true
+	self.preview_image.propagate_on_click = true
+	self.thumbs:add_child(self.preview_image)
+
+	self.selected_image = KImageView:new("hero_room_thumbs_select_0000")
+	self.selected_image.scale = v(tile_scale, tile_scale)
+	self.selected_image.hidden = true
+	self.selected_image.propagate_on_click = true
+	self.thumbs:add_child(self.selected_image)
+
+	self.hover_image = KImageView:new("hero_room_thumbs_select_0003")
+	self.hover_image.scale = v(tile_scale, tile_scale)
+	self.hover_image.hidden = true
+	self.hover_image.propagate_on_click = true
+	self.thumbs:add_child(self.hover_image)
+end
+
+function SpellSelectView:show_spell(spell)
+	self.shown_def = spell
+	self.shown_id = spell and spell.id or nil
+
+	if spell then
+		local key = spell.i18n or ("POWER_" .. string.upper(spell.id))
+		local style = spell.name_style
+
+		self.name_label.font_name = style and style.font_name or "h"
+		self.name_label.font_size = style and style.font_size or 30
+		self.name_label.colors.text = style and style.color or {250, 240, 200, 255}
+		self.name_label.shaders = style and style.shaders or {"p_outline", "p_glow"}
+		self.name_label.shader_args = style and style.shader_args or nil
+		self.name_label.shader_margin = style and style.shader_margin or 16
+		self.name_label.text = _(key .. "_NAME")
+		self.name_label.hidden = false
+
+		self.bio_desc.text = _(key .. "_DESCRIPTION")
+		self.spec_desc.text = _(key .. "_LARGE_DESCRIPTION")
+
+		local portrait_name = spell.portrait
+
+		if portrait_name and I:s(portrait_name) then
+			self.portrait:set_image(portrait_name)
+			self.portrait.hidden = false
+
+			local w, h, off_x, off_y = GU.fit_sprite_content(self.portrait, self.portrait_box_w, self.portrait_box_h)
+
+			self.portrait.pos = v((self.portrait_box_w - w) * 0.5 - off_x, (self.portrait_box_h - h) * 0.5 - off_y)
+		else
+			self.portrait.hidden = true
+		end
+	else
+		self.name_label.hidden = true
+		self.portrait.hidden = true
+		self.bio_desc.text = ""
+		self.spec_desc.text = ""
+	end
+
+	self:refresh_selection()
+end
+
+function SpellSelectView:refresh_selection()
+	local selected_id = SPELLS.selected_id
+
+	if self.preview_image then
+		local preview_tile = self.shown_id and self.tiles[self.shown_id] or nil
+
+		if preview_tile and self.shown_id ~= selected_id then
+			self.preview_image.pos = preview_tile.pos
+			self.preview_image.hidden = false
+		else
+			self.preview_image.hidden = true
+		end
+	end
+
+	if self.selected_image then
+		local tile = selected_id and self.tiles[selected_id] or nil
+
+		if tile then
+			self.selected_image.pos = tile.pos
+			self.selected_image.hidden = false
+		else
+			self.selected_image.hidden = true
+		end
+	end
+
+	local selected = self.shown_def and selected_id == self.shown_def.id
+
+	self.select_button.hidden = not self.shown_def or selected
+	self.deselect_button.hidden = not selected
+end
+
+function SpellSelectView:select_shown()
+	if not self.shown_id then
+		return
+	end
+
+	SPELLS:set_selected(self.shown_id)
+	screen_map.user_data.spell_power_id = self.shown_id
+
+	storage:save_slot(screen_map.user_data)
+	S:queue("GUIButtonCommon")
+	self:refresh_selection()
+	screen_map:refresh_spell_button_state()
+end
+
+function SpellSelectView:clear_selection()
+	SPELLS:set_selected(nil)
+	screen_map.user_data.spell_power_id = nil
+
+	storage:save_slot(screen_map.user_data)
+	S:queue("GUIButtonCommon")
+	self:refresh_selection()
+	screen_map:refresh_spell_button_state()
+end
+
+function SpellSelectView:show()
+	if #self.modules ~= #SPELLS.module_names then
+		self:build_list()
+	end
+
+	local spell = SPELLS:get_selected()
+
+	if not spell then
+		spell = self.modules[1]
+	end
+
+	self:show_spell(spell)
+	PopUpView.show(self)
+
+	local tile = spell and self.tiles[spell.id] or nil
+
+	if tile then
+		self.thumbs:scroll_to_show_y(tile.pos.y + tile.size.y * 0.5)
+	end
+end
+
+function SpellSelectView:hide()
+	if self.hover_image then
+		self.hover_image.hidden = true
+	end
+
+	PopUpView.hide(self)
 end
 
 OptionsView = class("OptionsView", PopUpView)
