@@ -437,13 +437,13 @@ function M.register_templates(E)
 	tt.main_script.update = scripts.aura_apply_mod.update
 
 	tt = E:register_t_tmp("aura_power_wintersongs_wrath_spike", "aura")
-	tt.aura.radius = 32
+	tt.aura.radius = 45
 	tt.aura.vis_flags = bor(F_AREA)
 	tt.aura.vis_bans = bor(F_HERO, F_FRIEND, F_FLYING)
 	tt.aura.cycles = 1
 	tt.aura.duration = 1e99
-	tt.aura.damage_min = 24
-	tt.aura.damage_max = 36
+	tt.aura.damage_min = 27
+	tt.aura.damage_max = 38.5
 	tt.aura.damage_type = DAMAGE_MAGICAL
 	tt.aura.hit_fx = "fx_power_wintersongs_wrath_hit"
 	tt.main_script.update = scripts.aura_apply_damage.update
@@ -576,8 +576,8 @@ function M.apply(level)
 	end
 
 	if level >= 5 then
-		spike_aura.aura.damage_min = 24 * 1.3
-		spike_aura.aura.damage_max = 36 * 1.3
+		spike_aura.aura.damage_min = 27 * 1.3
+		spike_aura.aura.damage_max = 38.5 * 1.3
 		spike_aura.aura.mod = "mod_power_wintersongs_wrath_freeze"
 	end
 

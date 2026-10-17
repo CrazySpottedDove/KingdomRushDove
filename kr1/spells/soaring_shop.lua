@@ -461,8 +461,8 @@ function M.apply(level)
 
 	local bullet_names = {"bullet_power_soaring_shop_attack_1", "bullet_power_soaring_shop_attack_2", "bullet_power_soaring_shop_attack_3", "bullet_power_soaring_shop_special_1", "bullet_power_soaring_shop_special_2"}
 	local base_radius = {50, 75, 90, 50, 50}
-	local base_damage_min = {15, 10, 100, 15, 15}
-	local base_damage_max = {25, 20, 300, 25, 25}
+	local base_damage_min = {15, 10, 82, 15, 15}
+	local base_damage_max = {25, 20, 246, 25, 25}
 	local radius_factor = level >= 2 and 1.2 or 1
 	local damage_factor = level >= 4 and 1.1 or 1
 	local basic_attack_anim = 1.4

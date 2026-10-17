@@ -101,8 +101,8 @@ function M.register_templates(E)
 	tt.aura.vis_flags = bor(F_AREA)
 	tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
 	tt.explosion_delay = fts(14)
-	tt.damage_min = 20
-	tt.damage_max = 25
+	tt.damage_min = 28
+	tt.damage_max = 35
 	tt.damage_type = DAMAGE_TRUE
 	tt.main_script.update = function(this, store)
 		U.animation_start(this, "hit", nil, store.tick_ts, false)
@@ -162,8 +162,8 @@ function M.register_templates(E)
 	tt.render.sprites[1].prefix = "rain_of_fire_burning_mod"
 	tt.render.sprites[1].z = Z_EFFECTS
 	tt.render.sprites[1].animated = true
-	tt.dps.damage_min = 3
-	tt.dps.damage_max = 5
+	tt.dps.damage_min = 4
+	tt.dps.damage_max = 7
 	tt.dps.damage_inc = 0
 	tt.dps.damage_every = 0.25
 	tt.dps.damage_type = DAMAGE_TRUE
@@ -174,15 +174,15 @@ function M.register_templates(E)
 	tt.main_script.remove = scripts.tween_utils.reverse_remove
 
 	tt = E:register_t_tmp("bullet_power_rain_of_fire", "bullet")
-	tt.bullet.min_speed = 0
-	tt.bullet.max_speed = 30 * FPS
-	tt.bullet.acceleration_factor = 0.2
+	tt.bullet.min_speed = 13 * FPS
+	tt.bullet.max_speed = 13 * FPS
+	tt.bullet.acceleration_factor = 0
 	tt.bullet.hit_fx = "fx_power_rain_of_fire_hit"
 	tt.bullet.hit_decal = "decal_power_rain_of_fire_crack"
 	tt.bullet.damage_type = DAMAGE_TRUE
 	tt.bullet.damage_radius = 60
-	tt.bullet.damage_min = 30
-	tt.bullet.damage_max = 45
+	tt.bullet.damage_min = 45
+	tt.bullet.damage_max = 63
 	tt.bullet.damage_factor = 1
 	tt.bullet.damage_flags = F_AREA
 	tt.bullet.damage_bans = 0
@@ -199,7 +199,7 @@ function M.register_templates(E)
 	tt.upgrade_extra_explosion = false
 	tt.main_script.update = function(this, store)
 		local b = this.bullet
-		local mspeed = 10 * FPS
+		local mspeed = b.min_speed
 		local particle = E:create_entity(this.particles)
 
 		particle.particle_system.track_id = this.id
@@ -295,6 +295,28 @@ function M.register_templates(E)
 			simulation:queue_insert_entity(e)
 		end
 
+		local function predict_dest(target)
+			local nav_path = target.nav_path
+
+			if not target.motion or not target.motion.speed or not nav_path then
+				return target.pos
+			end
+
+			local nodes = P.paths[nav_path.pi] and P.paths[nav_path.pi][nav_path.spi]
+
+			if not nodes then
+				return target.pos
+			end
+
+			local fall_speed = target.motion.speed.y + 13 * FPS
+			local predicted_time = fall_speed > 0 and (start_y - target.pos.y) / fall_speed or 0
+			local current_node = P:node_pos(nav_path.pi, nav_path.spi, nav_path.ni)
+			local node_advance = math.ceil((predicted_time * (target.motion.real_speed or 0) + V.dist(target.pos.x, target.pos.y, current_node.x, current_node.y)) / P.average_node_dist)
+			local predicted_node = math.min(#nodes, math.max(1, nav_path.ni + node_advance))
+
+			return P:node_pos(nav_path.pi, nav_path.spi, predicted_node)
+		end
+
 		for i = 1, math.max(this.meteor_count, this.cataclysm_count) do
 			if i <= this.meteor_count then
 				if i == 1 then
@@ -307,7 +329,16 @@ function M.register_templates(E)
 			end
 
 			if this.upgrade_cataclysm and i <= this.cataclysm_count then
-				local dest = P:get_random_position(10, bor(TERRAIN_LAND))
+				local dest
+				local enemies = table.filter(store.enemies, function(_, enemy)
+					return enemy and enemy.health and not enemy.health.dead and band(enemy.vis.bans, F_RANGED) == 0
+				end)
+
+				if #enemies > 0 then
+					dest = predict_dest(table.random(enemies))
+				else
+					dest = P:get_random_position(10, bor(TERRAIN_LAND))
+				end
 
 				if dest then
 					spawn_meteor(dest.x, dest.y)
@@ -372,7 +403,7 @@ function M.apply(level)
 	if level >= 4 then
 		burn.aura.duration = 7
 		slow.aura.duration = 7
-		burn_mod.dps.damage_inc = 1.5
+		burn_mod.dps.damage_inc = 2
 		scorch.duration = 4.5
 		ctrl.meteor_count = 5
 	end
