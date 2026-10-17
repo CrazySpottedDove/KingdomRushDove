@@ -586,8 +586,8 @@ function M.apply(level)
 	soldier.timed_attacks.list[1].disabled = true
 	soldier.timed_attacks.list[2].disabled = true
 
-	damage_aura.aura.damage_min = 6
-	damage_aura.aura.damage_max = 10
+	damage_aura.aura.damage_min = 5.5
+	damage_aura.aura.damage_max = 8
 	damage_aura.aura.radius = 80
 	damage_aura.aura.mods = {}
 
@@ -597,7 +597,7 @@ function M.apply(level)
 	summon_aura.aura.mods = {}
 
 	strike_aura.aura.damage_min = 80
-	strike_aura.aura.damage_max = 125
+	strike_aura.aura.damage_max = 120
 	strike_aura.aura.radius = 120
 	strike_aura.aura.mods = {}
 
@@ -611,7 +611,7 @@ function M.apply(level)
 		end
 
 		scale_damage(damage_aura, 1.5)
-		scale_damage(strike_aura, 1.5)
+		scale_damage(strike_aura, 1.25)
 
 		soldier.duration = 10 * 1.2
 	end

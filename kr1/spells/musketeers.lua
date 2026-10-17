@@ -472,7 +472,7 @@ function M.register_templates(E)
 	tt.l4b_active = false
 	tt.l5b_active = false
 	tt.l6_active = false
-	tt.instakill_chance = 0.2
+	tt.instakill_chance = 0.18
 	tt.instakill_threshold = 0.25
 	tt.instakill_aim = "mod_power_musketeers_instakill_aim"
 	tt.casing = "fx_bullet_musketeer_casing"
@@ -651,7 +651,7 @@ function M.apply(level)
 
 	if level >= 5 then
 		ctrl.cooldown = 18
-		tt.ranged.attacks[1].cooldown = 1
+		tt.ranged.attacks[1].cooldown = 1.25
 		tt.l5b_active = true
 	end
 

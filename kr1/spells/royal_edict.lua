@@ -347,7 +347,7 @@ function M.register_templates(E)
 	tt.confetti_cycle_time = 1
 	tt.confetti_range = 60
 	tt.range_factor = 1
-	tt.damage_factor = 1.75
+	tt.damage_factor = 1.4
 	tt.respawn_barracks = false
 	tt.reset_skills_cd = false
 
@@ -364,7 +364,7 @@ function M.register_templates(E)
 		return true
 	end
 	tt.modifier.duration = 1
-	tt.extra_gold = 4
+	tt.extra_gold = 3
 end
 
 -- 法术的科技生效接口
