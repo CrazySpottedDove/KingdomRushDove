@@ -325,15 +325,15 @@ function M.register_templates(E)
 
 				if target then
 					if band(target.vis.flags, F_BOSS) ~= 0 then
-						this.melee.attacks[1].damage_min = this.melee.attacks[1].damage_min * this.melee.attacks[1].boss_damage_cap
-						this.melee.attacks[1].damage_max = this.melee.attacks[1].damage_max * this.melee.attacks[1].boss_damage_cap
-						this.melee.attacks[2].damage_min = this.melee.attacks[2].damage_min * this.melee.attacks[2].boss_damage_cap
-						this.melee.attacks[2].damage_max = this.melee.attacks[2].damage_max * this.melee.attacks[2].boss_damage_cap
+						this.melee.attacks[1].damage_min = this.original_attack_min * this.melee.attacks[1].boss_damage_cap
+						this.melee.attacks[1].damage_max = this.original_attack_max * this.melee.attacks[1].boss_damage_cap
+						this.melee.attacks[2].damage_min = this.original_special_attack_min * this.melee.attacks[2].boss_damage_cap
+						this.melee.attacks[2].damage_max = this.original_special_attack_max * this.melee.attacks[2].boss_damage_cap
 					elseif band(target.vis.flags, F_MINIBOSS) ~= 0 then
-						this.melee.attacks[1].damage_min = this.melee.attacks[1].damage_min * this.melee.attacks[1].miniboss_damage_cap
-						this.melee.attacks[1].damage_max = this.melee.attacks[1].damage_max * this.melee.attacks[1].miniboss_damage_cap
-						this.melee.attacks[2].damage_min = this.melee.attacks[2].damage_min * this.melee.attacks[2].miniboss_damage_cap
-						this.melee.attacks[2].damage_max = this.melee.attacks[2].damage_max * this.melee.attacks[2].miniboss_damage_cap
+						this.melee.attacks[1].damage_min = this.original_attack_min * this.melee.attacks[1].miniboss_damage_cap
+						this.melee.attacks[1].damage_max = this.original_attack_max * this.melee.attacks[1].miniboss_damage_cap
+						this.melee.attacks[2].damage_min = this.original_special_attack_min * this.melee.attacks[2].miniboss_damage_cap
+						this.melee.attacks[2].damage_max = this.original_special_attack_max * this.melee.attacks[2].miniboss_damage_cap
 					else
 						this.melee.attacks[1].damage_min = this.original_attack_min
 						this.melee.attacks[1].damage_max = this.original_attack_max
