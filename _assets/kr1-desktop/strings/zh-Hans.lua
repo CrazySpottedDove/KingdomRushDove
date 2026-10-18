@@ -5983,7 +5983,7 @@ return {
 	POWER_SUMMON_LARGE_DESCRIPTION = "你可以在战场上召唤部队前来助阵。\n\n援军是免费的，每隔15秒就能召唤一次。",
 	POWER_SUMMON_NAME = "召唤援军",
 	POWER_TELEPORTATION_SIGIL_DESCRIPTION = "广泛运用于战场上的奥术魔法，以空间传送的能力扰乱敌人的阵型。",
-	POWER_TELEPORTATION_SIGIL_LARGE_DESCRIPTION = "冷却40秒。放置持续40秒的传送符印，最多传送6名敌人。被传送的敌人在2秒后重新出现，在4秒内减速30%、并且受到沉默、伤害降低50%，持续5秒。敌人有30%概率被二次传送，并额外眩晕3秒。敌人有20%概率在传送途中永远消失。",
+	POWER_TELEPORTATION_SIGIL_LARGE_DESCRIPTION = "冷却40秒。放置持续40秒的传送符印，最多传送6名敌人。被传送的敌人在2秒后重新出现，在4秒内减速30%、并且受到沉默，伤害降低50%，持续5秒。敌人有30%概率被二次传送，并额外眩晕3秒。敌人有20%概率在传送途中永远消失。",
 	POWER_TELEPORTATION_SIGIL_NAME = "传送符印",
 	POWER_THUNDER_CONTROL_NAME = "闪电风暴",
 	POWER_THUNDER_DESCRIPTION = "以天空之怒，轰炸敌人！",

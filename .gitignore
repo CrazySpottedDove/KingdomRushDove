@@ -65,3 +65,4 @@ __pycache__/
 *.pyc
 *.pyo
 args.lua
+AGENTS.md
