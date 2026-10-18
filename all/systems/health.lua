@@ -487,6 +487,10 @@ local function damage_trace_disabled(store, d, e)
 end
 
 local function damage_trace_enabled(store, d, e)
+	if d.ignore_damage_trace then
+		return
+	end
+
 	local wave_bucket = damage_trace_wave_bucket(store.wave_group_number or 0)
 
 	if d.source_id then

@@ -6049,6 +6049,7 @@ function scripts.mod_dps.update(this, store)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
+		d.ignore_damage_trace = dps.ignore_damage_trace
 
 		queue_damage(store, d)
 	end
@@ -6195,6 +6196,7 @@ scripts.mod_dps_with_fade = {
 					d.pop = dps.pop
 					d.pop_chance = dps.pop_chance
 					d.pop_conds = dps.pop_conds
+					d.ignore_damage_trace = dps.ignore_damage_trace
 
 					queue_damage(store, d)
 				end
@@ -6232,6 +6234,7 @@ scripts.mod_dps_with_fade = {
 					d.pop = dps.pop
 					d.pop_chance = dps.pop_chance
 					d.pop_conds = dps.pop_conds
+					d.ignore_damage_trace = dps.ignore_damage_trace
 
 					queue_damage(store, d)
 

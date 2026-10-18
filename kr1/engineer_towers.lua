@@ -2296,6 +2296,7 @@ tt.dps.damage_every = 0.2
 tt.dps.damage_min = 5
 tt.dps.damage_max = 5
 tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.ignore_damage_trace = true
 tt.modifier.duration = 1e30
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update

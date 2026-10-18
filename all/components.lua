@@ -893,6 +893,7 @@ dps.damage_inc = 0
 dps.damage_last = nil
 dps.damage_every = 1
 dps.damage_type = DAMAGE_PHYSICAL
+dps.ignore_damage_trace = nil
 dps.kill = true
 dps.fx = nil
 dps.fx_target_flip = nil

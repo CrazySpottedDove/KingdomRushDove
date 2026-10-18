@@ -81,6 +81,7 @@ return function(this, store)
             d.pop = dps.pop
             d.pop_chance = dps.pop_chance
             d.pop_conds = dps.pop_conds
+			d.ignore_damage_trace = dps.ignore_damage_trace
 
             queue_damage(store, d)
         constend
@@ -117,6 +118,7 @@ return function(this, store)
             d.pop = dps.pop
             d.pop_chance = dps.pop_chance
             d.pop_conds = dps.pop_conds
+			d.ignore_damage_trace = dps.ignore_damage_trace
 
             queue_damage(store, d)
 
