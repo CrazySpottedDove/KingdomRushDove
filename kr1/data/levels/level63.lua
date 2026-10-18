@@ -132,7 +132,7 @@ end
 signal.emit("pan-zoom-camera",2,v(512,384),1)
 signal.emit("hide-curtains")
 signal.emit("show-gui")
-S:queue("MusicBossFight")
+S:queue("MusicBossFight3")
 while boss.phase~="death-animation" do
 coroutine.yield()
 end
