@@ -530,6 +530,11 @@ local function damage_trace_init(store)
 		function health:on_queue_unconditional(e, d)
 			if d._dominant_entity then
 				local parent = d._dominant_entity
+
+				if e.tower and parent.tower and parent.tower.type == "build_animation" then
+					return
+				end
+
 				-- 如果创建该实体的实体拥有根实体，则将 parent 指向其根实体
 				if store.root_entity_map[parent.id] then
 					parent = store.root_entity_map[parent.id]
