@@ -340,6 +340,7 @@ function M.register_templates(E)
 		U.sprites_hide(target, nil, nil, true)
 		SU.hide_modifiers(store, target, true)
 		SU.hide_auras(store, target, true)
+		U.bans_add(target.vis, F_ALL)
 		U.y_wait_unconditional(store, this.hold_time)
 
 		if target.motion then
@@ -420,13 +421,14 @@ function M.register_templates(E)
 			simulation:queue_insert_entity(ashes)
 
 			target.health.ignore_damage = false
+			U.bans_remove(target.vis, F_ALL)
 			target.unit.show_blood_pool = false
 
 			local d = E:create_entity("damage")
 
 			d.source_id = this.id
 			d.target_id = target.id
-			d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_NO_SPAWNS)
+			d.damage_type = DAMAGE_EAT
 			d.value = 1
 
 			queue_damage(store, d)
@@ -487,6 +489,7 @@ function M.register_templates(E)
 		U.sprites_show(target, nil, nil, true)
 		SU.show_modifiers(store, target, true)
 		SU.show_auras(store, target, true)
+		U.bans_remove(target.vis, F_ALL)
 
 		local nn = P:next_entity_node(target, store.tick_length)
 
