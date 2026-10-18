@@ -5187,7 +5187,7 @@ function scripts.enemy_nightscale.update(this, store)
 
 				U.unblock_all(store, this)
 
-				U.bans_add(this.vis, bor(F_BLOCK, F_RANGED, F_BLOOD, F_TWISTER))
+				U.bans_add(this.vis, bor(F_BLOCK, F_RANGED, F_BLOOD, F_TWISTER, F_MOCKING, F_SCARE))
 
 				S:queue(this.sound_events.hide)
 				U.y_animation_play(this, "hide", nil, store.tick_ts)
@@ -5205,7 +5205,7 @@ function scripts.enemy_nightscale.update(this, store)
 				end
 
 				this.render.sprites[1].alpha = 255
-				U.bans_remove(this.vis, bor(F_BLOCK, F_RANGED, F_BLOOD, F_TWISTER))
+				U.bans_remove(this.vis, bor(F_BLOCK, F_RANGED, F_BLOOD, F_TWISTER, F_MOCKING, F_SCARE))
 			end
 
 			local ignore_soldiers = terrain_type == TERRAIN_CLIFF
