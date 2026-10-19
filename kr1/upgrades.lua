@@ -1621,38 +1621,6 @@ upgrades.engineer_advanced_tower = {
 	"tower_culverine"
 }
 
-local fps_based_keys = table.to_map({"hit_time", "cast_time", "shoot_time", "dodge_time", "cycle_time", "shoot_times", "hit_times"})
-
-local function scale_fps_based_keys(tbl, factor, visited)
-	visited = visited or {}
-
-	if visited[tbl] then
-		return
-	end
-
-	visited[tbl] = true
-
-	for k, v in pairs(tbl) do
-		-- 跳过 _origin_xxx 字段，避免递归
-		if fps_based_keys[k] then
-			local _origin_key = "_origin_" .. k
-
-			if not tbl[_origin_key] then
-				tbl[_origin_key] = table.deepclone(v)
-			end
-			if type(v) == "number" then
-				tbl[k] = tbl[_origin_key] * factor
-			else
-				for i = 1, #v do
-					v[i] = tbl[_origin_key][i] * factor
-				end
-			end
-		elseif type(v) == "table" then
-			scale_fps_based_keys(v, factor, visited)
-		end
-	end
-end
-
 function upgrades:bomb_damage_mul(damage_factor)
 	for _, n in ipairs(self.engineer_bombs) do
 		mul_dmg(T(n).bullet, damage_factor)
@@ -1692,6 +1660,7 @@ function upgrades:mage_bolt_damage_mul(damage_factor)
 end
 
 function upgrades:patch_templates(max_level)
+	local SU = require("script_utils")
 	if max_level then
 		self.max_level = max_level
 	end
@@ -1796,21 +1765,7 @@ function upgrades:patch_templates(max_level)
 	if u then
 		for _, n in pairs(archer_towers) do
 			local t = T(n)
-			t.tower.cooldown_factor_divider = t.tower.cooldown_factor_divider + (1 - u.cooldown_factor)
-			t.tower.cooldown_factor = 1.0 / t.tower.cooldown_factor_divider
-			if t.render then
-				for _, s in pairs(t.render.sprites) do
-					if not s._origin_fps then
-						if not s.fps then
-							s._origin_fps = FPS
-						else
-							s._origin_fps = s.fps
-						end
-					end
-					s.fps = s._origin_fps * t.tower.cooldown_factor
-				end
-				scale_fps_based_keys(t, t.tower.cooldown_factor)
-			end
+			SU.insert_tower_cooldown_buff(0, t, u.cooldown_factor)
 		end
 	end
 

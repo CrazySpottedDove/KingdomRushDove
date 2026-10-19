@@ -580,6 +580,10 @@ function entity_db:patch_config(config)
 			t.tower.damage_factor = t.tower.damage_factor * config.tower_damage_multiplier
 			if t.attacks then
 				t.attacks.range = t.attacks.range * config.tower_range_multiplier
+
+				if t.attacks._range_buff_base then
+					t.attacks._range_buff_base = t.attacks._range_buff_base * config.tower_range_multiplier
+				end
 			end
 			if t.template_name ~= "tower_baby_ashbite" and t.template_name ~= "tower_pandas_lvl4" and table.arraycontains(barrack_towers, t.template_name) then
 				t.barrack.max_soldiers = t.barrack.max_soldiers + config.extra_soldiers

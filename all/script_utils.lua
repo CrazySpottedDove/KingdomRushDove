@@ -4434,28 +4434,49 @@ function SU.y_spawner_spawn(store, this)
 	return false, spawns
 end
 
----增加塔攻击范围（乘算）
+local function add_range_buff_value(holder, key, factor)
+	local base_key = "_" .. key .. "_buff_base"
+	local base = holder[base_key]
+
+	if not base then
+		base = holder[key]
+		holder[base_key] = base
+	end
+
+	holder[key] = holder[key] + base * (factor - 1)
+end
+
+local function remove_range_buff_value(holder, key, factor)
+	local base_key = "_" .. key .. "_buff_base"
+	local base = holder[base_key] or holder[key]
+
+	holder[base_key] = base
+	holder[key] = holder[key] - base * (factor - 1)
+end
+
+---增加塔攻击范围（加算）
 ---@param target table 塔实体
----@param range_factor number 范围系数
+---@param range_factor number 范围系数，1 表示 +0%
 ---@param allow_barrack boolean 是否允许兵营范围加成
-function SU.insert_tower_range_buff(target, range_factor, allow_barrack)
+---@param rally_range_factor number 兵营集结范围系数，默认与 range_factor 相同
+function SU.insert_tower_range_buff(target, range_factor, allow_barrack, rally_range_factor)
 	if not target then
 		return
 	end
 
-	if target.attacks and target.attacks.range then
-		target.attacks.range = target.attacks.range * range_factor
+	if target.attacks then
+		add_range_buff_value(target.attacks, "range", range_factor)
 	end
 
 	if target.template_name == "tower_mech" or target.template_name == "tower_wicked_sisters" then
 		for _, s in ipairs(target.barrack.soldiers) do
-			s.attacks.list[1].max_range = s.attacks.list[1].max_range * range_factor
-			s.attacks.list[2].max_range = s.attacks.list[2].max_range * range_factor
+			add_range_buff_value(s.attacks.list[1], "max_range", range_factor)
+			add_range_buff_value(s.attacks.list[2], "max_range", range_factor)
 		end
 	end
 
 	if allow_barrack and target.barrack then
-		target.barrack.rally_range = target.barrack.rally_range * range_factor
+		add_range_buff_value(target.barrack, "rally_range", rally_range_factor or range_factor)
 	end
 end
 
@@ -4566,28 +4587,29 @@ function SU.soldier_inherit_tower_buff_factor(soldier, tower, ts)
 	SU.insert_unit_cooldown_buff(ts, soldier, tower.tower.cooldown_factor)
 end
 
----移除塔攻击范围加成（乘算逆操作）
+---移除塔攻击范围加成（加算逆操作）
 ---@param target table 塔实体
----@param range_factor number 范围系数
+---@param range_factor number 范围系数，1 表示 +0%
 ---@param allow_barrack boolean 是否允许兵营范围加成
-function SU.remove_tower_range_buff(target, range_factor, allow_barrack)
+---@param rally_range_factor number 兵营集结范围系数，默认与 range_factor 相同
+function SU.remove_tower_range_buff(target, range_factor, allow_barrack, rally_range_factor)
 	if not target then
 		return
 	end
 
-	if target.attacks and target.attacks.range then
-		target.attacks.range = target.attacks.range / range_factor
+	if target.attacks then
+		remove_range_buff_value(target.attacks, "range", range_factor)
 	end
 
 	if target.template_name == "tower_mech" or target.template_name == "tower_wicked_sisters" then
 		for _, s in ipairs(target.barrack.soldiers) do
-			s.attacks.list[1].max_range = s.attacks.list[1].max_range / range_factor
-			s.attacks.list[2].max_range = s.attacks.list[2].max_range / range_factor
+			remove_range_buff_value(s.attacks.list[1], "max_range", range_factor)
+			remove_range_buff_value(s.attacks.list[2], "max_range", range_factor)
 		end
 	end
 
 	if allow_barrack and target.barrack then
-		target.barrack.rally_range = target.barrack.rally_range / range_factor
+		remove_range_buff_value(target.barrack, "rally_range", rally_range_factor or range_factor)
 	end
 end
 

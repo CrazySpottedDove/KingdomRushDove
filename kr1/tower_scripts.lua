@@ -13103,7 +13103,7 @@ function scripts.tower_royal_archers.update(this, store)
 					this.rapacious_hunter_tamer.attacks.list[1].range = pow_r.range_config[pow_r.level]
 				end
 
-				a.range = a.range / (pow_r.attack_range_factor[pow_r._last_level] or 1) * pow_r.attack_range_factor[pow_r.level]
+				SU.insert_tower_range_buff(this, 1 + pow_r.attack_range_factor[pow_r.level] - (pow_r.attack_range_factor[pow_r._last_level] or 1))
 				pow_r._last_level = pow_r.level
 			end
 
@@ -17454,10 +17454,18 @@ function scripts.tower_hermit_toad.update(this, store)
 		this.render.sprites[2].name = this.idle_modes[new_mode + 1]
 
 		if not is_init then
+			local range_ratio
+
 			if new_mode == MODE_ENGINEER then
-				this.attacks.range = this.attacks.range / attack_mage.range * attack_engineer.range
+				range_ratio = attack_engineer.range / attack_mage.range
 			else
-				this.attacks.range = this.attacks.range / attack_engineer.range * attack_mage.range
+				range_ratio = attack_mage.range / attack_engineer.range
+			end
+
+			this.attacks.range = this.attacks.range * range_ratio
+
+			if this.attacks._range_buff_base then
+				this.attacks._range_buff_base = this.attacks._range_buff_base * range_ratio
 			end
 		end
 
@@ -30677,7 +30685,7 @@ function scripts.tower_wicked_sisters.update(this, store)
 		if pow_r.changed then
 			pow_r.changed = nil
 
-			SU.insert_tower_range_buff(this, pow_r.range_factor[pow_r.level] / pow_r.last_range_factor, true)
+			SU.insert_tower_range_buff(this, 1 + pow_r.range_factor[pow_r.level] - pow_r.last_range_factor, true)
 
 			pow_r.last_range_factor = pow_r.range_factor[pow_r.level]
 		end

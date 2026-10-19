@@ -64,16 +64,19 @@ local function patch_barrack_rally(level)
 	for _, name in pairs(UP.towers_with_barrack) do
 		local t = E:get_template(name)
 		t.barrack.rally_range = math.huge
+		t.barrack._rally_range_buff_base = math.huge
 	end
 
 	local pixie_tower = E:get_template("tower_pixie")
 	pixie_tower.attacks.range = math.huge
+	pixie_tower.attacks._range_buff_base = math.huge
 end
 
 local function patch_barrack_rally_runtime(level, store)
 	for _, t in pairs(store.towers) do
 		if t.barrack then
 			t.barrack.rally_range = math.huge
+			t.barrack._rally_range_buff_base = math.huge
 		end
 	end
 end
@@ -84,6 +87,7 @@ local function patch_barrack_unity_runtime(level, store, ctx)
 			t.barrack.max_soldiers = t.barrack.max_soldiers + ctx.friend_buff.barrack_unity_count
 		elseif t.template_name == "tower_pixie" then
 			t.attacks.range = math.huge
+			t.attacks._range_buff_base = math.huge
 		end
 	end
 end
