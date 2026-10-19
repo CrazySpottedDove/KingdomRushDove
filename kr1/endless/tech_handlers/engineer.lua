@@ -13,6 +13,14 @@ local function fts(t)
 	return t / FPS
 end
 
+local function scale_attack_range(t, factor)
+	t.attacks.range = t.attacks.range * factor
+
+	if t.attacks._range_buff_base then
+		t.attacks._range_buff_base = t.attacks._range_buff_base * factor
+	end
+end
+
 local function fireball_quick_up(this, store, ctx)
 	store.game_gui.power_1:wait_time_dec(ctx.friend_buff.engineer_fireball * store.endless.upgrade_levels.engineer_fireball / FPS)
 	return true
@@ -166,13 +174,13 @@ local function patch_engineer_seek(level, ctx)
 	clear_flying_bans(t.attacks.list[1])
 
 	t = E:get_template("tower_tesla")
-	t.attacks.range = t.attacks.range * (1 + level * ctx.friend_buff.engineer_seek)
+	scale_attack_range(t, 1 + level * ctx.friend_buff.engineer_seek)
 	t = E:get_template("tower_frankenstein")
-	t.attacks.range = t.attacks.range * (1 + level * ctx.friend_buff.engineer_seek)
+	scale_attack_range(t, 1 + level * ctx.friend_buff.engineer_seek)
 	t = E:get_template("tower_dwaarp")
-	t.attacks.range = t.attacks.range * (1 + level * ctx.friend_buff.engineer_seek)
+	scale_attack_range(t, 1 + level * ctx.friend_buff.engineer_seek)
 	t = E:get_template("tower_flamespitter_lvl4")
-	t.attacks.range = t.attacks.range * (1 + level * ctx.friend_buff.engineer_seek)
+	scale_attack_range(t, 1 + level * ctx.friend_buff.engineer_seek)
 end
 
 local function patch_engineer_seek_runtime(level, store, endless, ctx)
@@ -186,17 +194,17 @@ local function patch_engineer_seek_runtime(level, store, endless, ctx)
 		if t.template_name == "tower_entwood" or t.template_name == "tower_tricannon_lvl4" then
 			t.attacks.list[2].vis_bans = U.flag_clear(t.attacks.list[2].vis_bans, F_FLYING)
 		elseif t.template_name == "tower_tesla" then
-			t.attacks.range = t.attacks.range * (1 + ctx.friend_buff.engineer_seek)
+			scale_attack_range(t, 1 + ctx.friend_buff.engineer_seek)
 		elseif t.template_name == "tower_frankenstein" then
-			t.attacks.range = t.attacks.range * (1 + ctx.friend_buff.engineer_seek)
+			scale_attack_range(t, 1 + ctx.friend_buff.engineer_seek)
 		elseif t.template_name == "tower_dwaarp" then
-			t.attacks.range = t.attacks.range * (1 + ctx.friend_buff.engineer_seek)
+			scale_attack_range(t, 1 + ctx.friend_buff.engineer_seek)
 		elseif t.template_name == "tower_mech" then
 			for _, s in pairs(t.barrack.soldiers) do
 				s.attacks.list[1].vis_bans = U.flag_clear(s.attacks.list[1].vis_bans, F_FLYING)
 			end
 		elseif t.template_name == "tower_flamespitter_lvl4" then
-			t.attacks.range = t.attacks.range * (1 + ctx.friend_buff.engineer_seek)
+			scale_attack_range(t, 1 + ctx.friend_buff.engineer_seek)
 		end
 	end
 end
@@ -334,7 +342,7 @@ local function patch_engineer_aftermath(level, ctx)
 
 	local tower = E:get_template("tower_flamespitter_lvl4")
 	if not tower._endless_engineer_aftermath then
-		tower.attacks.range = tower.attacks.range * (1 + ctx.friend_buff.engineer_seek)
+		scale_attack_range(tower, 1 + ctx.friend_buff.engineer_seek)
 		tower._endless_engineer_aftermath = true
 		tower._endless_engineer_aftermath_last_level = 0
 	end
