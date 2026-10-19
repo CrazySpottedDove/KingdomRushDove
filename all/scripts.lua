@@ -1509,7 +1509,10 @@ function scripts.tower_build.update(this, store)
 		coroutine.yield()
 	end
 
+	local last_dominant_entity = store._dominant_entity
+	store._dominant_entity = nil
 	TU.upgrade_tower(store, this, this.build_name)
+	store._dominant_entity = last_dominant_entity
 end
 
 scripts.tower_random = {}
