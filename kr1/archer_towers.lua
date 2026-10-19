@@ -1060,9 +1060,7 @@ tt.powers.skill_soldiers.hp = {50, 115, 180}
 tt.powers.skill_soldiers.damage_min = {5, 10, 15}
 tt.powers.skill_soldiers.damage_max = {8, 16, 24}
 tt.powers.skill_soldiers.dodge_chance = {0.6, 0.6, 0.6}
--- 士兵护甲随技能等级成长（controller_tower_dark_elf_soldiers 按 pow_level 应用）
 tt.powers.skill_soldiers.armor = {0.2, 0.25, 0.3}
-tt.powers.skill_soldiers.show_rally = true
 tt.powers.skill_buff = CC("power")
 tt.powers.skill_buff.price_base = 250
 tt.powers.skill_buff.price_inc = 125

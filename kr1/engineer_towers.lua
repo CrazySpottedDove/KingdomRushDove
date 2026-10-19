@@ -1682,7 +1682,6 @@ tt.powers.skill_warrior.hp_max = {300, 400, 500}
 tt.powers.skill_warrior.armor = {0, 0, 0}
 tt.powers.skill_warrior.sound_evict = "TowerBarrelElixirOfMightEvict"
 tt.powers.skill_warrior.sound_drink = "TowerBarrelElixirOfMightDrink"
-tt.powers.skill_warrior.show_rally = true
 tt.powers.skill_warrior.spawn_fx = "controller_soldier_tower_barrel_skill_warrior_spawn"
 tt.powers.skill_barrel = CC("power")
 tt.powers.skill_barrel.cooldown = {27, 24, 21}

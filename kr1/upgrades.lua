@@ -1387,7 +1387,8 @@ upgrades.soldiers = {
 	"soldier_knights",
 	"soldier_wildcat",
 	"soldier_miners",
-	"soldier_miners_skill_a"
+	"soldier_miners_skill_a",
+	"soldier_sunray_master"
 }
 
 upgrades.barrack_soldiers = {
@@ -1433,7 +1434,8 @@ upgrades.barrack_soldiers = {
 	"soldier_knights",
 	"soldier_wildcat",
 	"soldier_miners",
-	"soldier_miners_skill_a"
+	"soldier_miners_skill_a",
+	"soldier_sunray_master"
 }
 
 upgrades.towers_with_barrack = {
@@ -1482,7 +1484,8 @@ upgrades.towers_with_barrack = {
 	"tower_stage_28_priests_barrack",
 	"tower_knights",
 	"tower_wildcat",
-	"tower_miners"
+	"tower_miners",
+	"tower_sunray_master"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {
@@ -1499,7 +1502,8 @@ upgrades.non_barrack_towers_with_barrack_attribute = {
 	"tower_ignis_altar",
 	"tower_shaolin",
 	"tower_swamp_monster",
-	"tower_wicked_sisters"
+	"tower_wicked_sisters",
+	"tower_sunray_master"
 }
 
 upgrades.mage_towers = GS.mage_towers
@@ -1534,7 +1538,9 @@ upgrades.mage_tower_bolts = {
 	"bullet_tower_blazing_watcher",
 	"wicked_sisters_proy_green",
 	"wicked_sisters_proy_pink",
-	"bolt_tower_wizard"
+	"bolt_tower_wizard",
+	"bullet_sunray_master_rapid_fire",
+	"bullet_sunray_master_skill_c"
 }
 
 local other_bolts = {
@@ -1657,6 +1663,9 @@ function upgrades:mage_bolt_damage_mul(damage_factor)
 
 	mul_dmg(T("mod_lava_infernal_mage").dps, damage_factor)
 	mul_dmg(T("mod_wicked_sister_poison").dps, damage_factor)
+
+	mul_dmg(T("aura_sunray_master_beam").aura, damage_factor)
+	mul_dmg(T("aura_sunray_master_ult_beam").aura, damage_factor)
 end
 
 function upgrades:patch_templates(max_level)
@@ -2089,6 +2098,8 @@ function upgrades:patch_templates(max_level)
 
 		-- 女巫的毒伤吃不到这个科技，进行伤害补偿
 		mul_dmg(T("mod_wicked_sister_poison").dps, 1.15)
+		mul_dmg(T("aura_sunray_master_beam").aura, 1.15)
+		mul_dmg(T("aura_sunray_master_ult_beam").aura, 1.15)
 	end
 
 	u = self:get_upgrade("mage_unsteady")
@@ -2101,6 +2112,8 @@ function upgrades:patch_templates(max_level)
 		add_damage_hooks(self.mage_tower_bolts, mage_unsteady)
 		-- 女巫的毒伤吃不到这个科技，进行伤害补偿
 		mul_dmg(T("mod_wicked_sister_poison").dps, 1.1)
+		mul_dmg(T("aura_sunray_master_beam").aura, 1.1)
+		mul_dmg(T("aura_sunray_master_ult_beam").aura, 1.1)
 	end
 
 	u = self:get_upgrade("mage_empowered_magic")
@@ -2143,6 +2156,8 @@ function upgrades:patch_templates(max_level)
 		avg_dmg_mul(T("mod_wicked_sister_poison").dps, u.damage_factor)
 
 		mul_field(T("mod_ultimate_wizard"), "damage", u.damage_factor)
+		avg_dmg_mul(T("aura_sunray_master_beam").aura, u.damage_factor)
+		avg_dmg_mul(T("aura_sunray_master_ult_beam").aura, u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_slow_curse")

@@ -3684,6 +3684,147 @@ function scripts.bolt.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
+scripts.bolt_curve = {}
+
+--- 沿 source -> target 的弧线飞行；curve_angle 为 0-360 度的仰角
+function scripts.bolt_curve.insert(this, store)
+	return true
+end
+
+function scripts.bolt_curve.update(this, store)
+	local b = this.bullet
+	local target = store.entities[b.target_id]
+	local from = b.from
+	local to = b.to
+	local flight_time = b.flight_time or fts(5)
+	local angle = math.rad(b.curve_angle or 0)
+	local dx, dy = to.x - from.x, to.y - from.y
+	local dist = math.sqrt(dx * dx + dy * dy)
+	local c1x, c1y, c2x, c2y
+
+	if dist > 0.001 then
+		local ux, uy = dx / dist, dy / dist
+		local ca, sa = math.cos(angle), math.sin(angle)
+		local t1x, t1y = ca * ux - sa * uy, sa * ux + ca * uy
+		local t2x, t2y = ca * ux + sa * uy, -sa * ux + ca * uy
+		local k = dist / 3
+
+		c1x, c1y = from.x + t1x * k, from.y + t1y * k
+		c2x, c2y = to.x - t2x * k, to.y - t2y * k
+	else
+		c1x, c1y = from.x, from.y
+		c2x, c2y = to.x, to.y
+	end
+
+	local ps
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+		ps.particle_system.emit = true
+
+		simulation:queue_insert_entity(ps)
+	end
+
+	local start_ts = store.tick_ts
+
+	while true do
+		local t = (store.tick_ts - start_ts) / flight_time
+
+		if t >= 1 then
+			break
+		end
+
+		local mt = 1 - t
+		local mt2 = mt * mt
+		local t2 = t * t
+
+		this.pos.x = mt2 * mt * from.x + 3 * mt2 * t * c1x + 3 * mt * t2 * c2x + t2 * t * to.x
+		this.pos.y = mt2 * mt * from.y + 3 * mt2 * t * c1y + 3 * mt * t2 * c2y + t2 * t * to.y
+
+		if b.align_with_trajectory then
+			local vx = 3 * mt2 * (c1x - from.x) + 6 * mt * t * (c2x - c1x) + 3 * t2 * (to.x - c2x)
+			local vy = 3 * mt2 * (c1y - from.y) + 6 * mt * t * (c2y - c1y) + 3 * t2 * (to.y - c2y)
+
+			if vx * vx + vy * vy > 0.0001 then
+				this.render.sprites[1].r = V.angleTo(vx, vy)
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	this.pos.x, this.pos.y = to.x, to.y
+
+	if not b.damage_factor then
+		b.damage_factor = 1
+	end
+
+	target = store.entities[b.target_id]
+
+	if target and target.health and not target.health.dead then
+		queue_damage(store, SU.create_bullet_damage(b, target.id, this.id))
+
+		local mods = b.mods or (b.mod and {b.mod})
+
+		if mods then
+			for _, mod_name in ipairs(mods) do
+				local m = E:create_entity(mod_name)
+
+				m.modifier.target_id = target.id
+				m.modifier.source_id = this.id
+				m.modifier.level = b.level
+				m.modifier.damage_factor = b.damage_factor
+
+				simulation:queue_insert_entity(m)
+			end
+		end
+	elseif b.damage_radius and b.damage_radius > 0 then
+		local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+
+		if targets then
+			for _, t in ipairs(targets) do
+				queue_damage(store, SU.create_bullet_damage(b, t.id, this.id))
+			end
+		end
+	end
+
+	this.render.sprites[1].hidden = true
+
+	if this.render.sprites[2] then
+		this.render.sprites[2].hidden = true
+	end
+
+	if b.hit_fx then
+		local fx = E:create_entity(b.hit_fx)
+
+		fx.pos.x, fx.pos.y = to.x, to.y
+		fx.render.sprites[1].ts = store.tick_ts
+		fx.render.sprites[1].runs = 0
+
+		simulation:queue_insert_entity(fx)
+	end
+
+	if b.hit_decal then
+		local decal = E:create_entity(b.hit_decal)
+
+		decal.pos = V.vclone(to)
+		decal.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(decal)
+	end
+
+	if ps then
+		ps.particle_system.emit = false
+
+		if ps.particle_system.particle_lifetime then
+			U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
+		end
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
 scripts.bolt_trace_target = {}
 
 function scripts.bolt_trace_target.update(this, store)

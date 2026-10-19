@@ -36622,4 +36622,540 @@ function scripts.soldier_miners.update(this, store)
 	end
 end
 
+-- 日耀大师
+scripts.tower_sunray_master = {}
+
+function scripts.tower_sunray_master.get_info(this)
+	local a = this.attacks.list[1]
+	local aura = E:get_template(E:get_template(a.bullet).bullet.hit_payload).aura
+	local b = E:get_template(a.bullet)
+	local info = scripts.tower_common.get_info(this)
+
+	info.damage_min = aura.damage_min * this.tower.damage_factor * b.ray_duration / b.hit_cycle_time
+	info.damage_max = aura.damage_max * this.tower.damage_factor * b.ray_duration / b.hit_cycle_time
+	info.damage_type = aura.damage_type
+	return info
+end
+
+function scripts.tower_sunray_master.update(this, store)
+	local last_ts = store.tick_ts
+	local sid_mage = this.render.sid_mage
+	local sid_gem = this.render.sid_gem
+	local sid_tower_glow = this.render.sid_tower_glow
+	local did_overcharge = false
+	local beam_attack = this.attacks.list[1]
+	local beam_attack_duration = E:get_template(beam_attack.bullet).ray_duration
+	local rapid_fire_attack = this.attacks.list[2]
+	local ult_attack = this.attacks.list[3]
+	local pow_a = this.powers.skill_a
+	local pow_b = this.powers.skill_b
+	local pow_c = this.powers.skill_c
+	local base_range = E:get_template("tower_sunray_master").base_range
+	local basic_angle = 45
+
+	this.spawn_golem_flag = false
+	this.can_spawn_golem = true
+
+	local function create_gem_glow()
+		this.decal_glow = E:create_entity(this.decal_gem_glow)
+		this.decal_glow.tween.ts = store.tick_ts
+		this.decal_glow.pos = v(tpos(this).x + 2, tpos(this).y + 70)
+
+		queue_insert(store, this.decal_glow)
+	end
+
+	local function destroy_gem_glow()
+		if this.decal_glow then
+			this.decal_glow.tween.disabled = true
+
+			queue_remove(store, this.decal_glow)
+
+			this.decal_glow = nil
+		end
+	end
+
+	local function create_gem_fx()
+		this.gem_fx = E:create_entity(this.decal_beam_gem_fx)
+		this.gem_fx.pos = v(this.pos.x + beam_attack.offset.x, this.pos.y + beam_attack.offset.y)
+		this.gem_fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, this.gem_fx)
+	end
+
+	local function destroy_gem_fx()
+		if this.gem_fx then
+			queue_remove(store, this.gem_fx)
+
+			this.gem_fx = nil
+		end
+	end
+
+	local function fire_bolt(target, angle)
+		local is_skill_shot = pow_c.level > 0 and random() < rapid_fire_attack.skill_c_chance
+		local bullet
+
+		if is_skill_shot then
+			local base = E:get_template(rapid_fire_attack.bullet).bullet
+
+			bullet = E:create_entity("bullet_sunray_master_skill_c")
+			bullet.bullet.damage_min = base.damage_min * pow_c.dmg_factor[pow_c.level]
+			bullet.bullet.damage_max = base.damage_max * pow_c.dmg_factor[pow_c.level]
+			bullet.bullet.level = pow_c.level
+		else
+			bullet = E:create_entity(rapid_fire_attack.bullet)
+		end
+
+		local origin = v(this.pos.x + beam_attack.offset.x, this.pos.y + beam_attack.offset.y)
+
+		bullet.pos = origin
+		bullet.bullet.from = V.vclone(origin)
+		bullet.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+		bullet.bullet.target_id = target.id
+		bullet.bullet.source_id = this.id
+		bullet.bullet.damage_factor = this.tower.damage_factor
+		bullet.bullet.curve_angle = angle
+
+		queue_insert(store, bullet)
+
+		local sfx = E:create_entity(is_skill_shot and "fx_sunray_master_skill_c_spawn" or rapid_fire_attack.spawn_fx)
+
+		sfx.pos = V.vclone(origin)
+		sfx.render.sprites[1].ts = store.tick_ts
+		sfx.render.sprites[1].r = V.angleTo(target.pos.x - origin.x, target.pos.y - origin.y)
+
+		queue_insert(store, sfx)
+	end
+
+	local function volley_angle(i, count)
+		local half = math.ceil(count / 2)
+
+		if i % 2 == 1 then
+			local k = (i + 1) / 2
+
+			return 10 + (k - 1) * 70 / math.max(half - 1, 1)
+		end
+
+		local k = i / 2
+
+		return 350 - (k - 1) * 70 / math.max(count - half - 1, 1)
+	end
+
+	local function fire_skill_b_volley()
+		local enemies = U.find_enemies_in_range(store, tpos(this), 0, this.attacks.range, rapid_fire_attack.vis_flags, rapid_fire_attack.vis_bans)
+
+		if not enemies or #enemies == 0 then
+			return
+		end
+
+		local count = math.max(#enemies, pow_b.min_bolts)
+		local first = random(1, #enemies)
+
+		for i = 1, count do
+			fire_bolt(enemies[(first + i - 2) % #enemies + 1], volley_angle(i, count))
+		end
+	end
+
+	local function check_conditions_animation()
+		if this.tower.blocked then
+			local an = U.animation_name_facing_point(this, "idle", this.attacks._last_target_pos, sid_mage)
+
+			U.animation_start(this, an, nil, store.tick_ts, false, sid_mage)
+		end
+	end
+
+	beam_attack.ts = store.tick_ts - beam_attack.cooldown * this.tower.cooldown_factor
+
+	rapid_fire_attack.ts = store.tick_ts - rapid_fire_attack.cooldown * this.tower.cooldown_factor
+
+	if not this.attacks._last_target_pos then
+		this.attacks._last_target_pos = v(REF_W, 0)
+	end
+
+	U.animation_start(this, "idle_gem", nil, store.tick_ts, true, sid_gem)
+	U.animation_start(this, "gem_form_glow", nil, store.tick_ts, true, sid_tower_glow)
+	create_gem_glow()
+	U.animation_start(this, "idle_1", nil, store.tick_ts, true, sid_mage)
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if pow_a.changed then
+				pow_a.changed = nil
+
+				if not this.controller_soldiers then
+					if not this.barrack.rally_pos and this.tower.default_rally_pos then
+						this.barrack.rally_pos = V.vclone(this.tower.default_rally_pos)
+					end
+
+					this.controller_soldiers = E:create_entity(this.controller_soldiers_template)
+					this.controller_soldiers.tower_ref = this
+					this.controller_soldiers.pos = this.pos
+
+					queue_insert(store, this.controller_soldiers)
+				end
+
+				this.controller_soldiers.pow_level = pow_a.level
+				this.controller_soldiers.upgraded = true
+			end
+
+			if pow_b.changed then
+				pow_b.changed = nil
+				if not pow_b.cooldown_inc_applied then
+					pow_b.cooldown_inc_applied = true
+					beam_attack.cooldown = beam_attack.cooldown + pow_b.cooldown_inc
+				end
+			end
+
+			if pow_c.changed then
+				pow_c.changed = nil
+			end
+
+			if this.spawn_golem_flag then
+				this.spawn_golem_flag = false
+				this.can_spawn_golem = false
+
+				U.animation_start(this, "golem_spawn", nil, store.tick_ts, false, sid_mage)
+				U.animation_start(this, "golem_spawn", nil, store.tick_ts, false, sid_tower_glow)
+
+				while not U.animation_finished(this, sid_mage, 1) do
+					check_conditions_animation()
+					coroutine.yield()
+				end
+			end
+
+			if ready_to_attack(ult_attack, store, this.tower.cooldown_factor) then
+				local _, enemies = U.find_foremost_enemy(store, tpos(this), 0, this.attacks.range, ult_attack.cast_time, ult_attack.vis_flags, ult_attack.vis_bans)
+
+				if enemies and #enemies >= ult_attack.min_targets then
+					ult_attack.ts = store.tick_ts
+
+					U.animation_start(this, "solarblast", nil, store.tick_ts, false, sid_mage)
+					U.animation_start(this, "solarblast_glow", nil, store.tick_ts, false, sid_tower_glow)
+					S:queue(ult_attack.sound)
+					U.y_wait(store, ult_attack.cast_time)
+
+					local enemy_after, enemies_after = U.find_foremost_enemy(store, tpos(this), 0, this.attacks.range, ult_attack.cast_time, ult_attack.vis_flags, ult_attack.vis_bans)
+
+					if enemies_after and #enemies_after >= ult_attack.min_targets then
+						local start_ts = store.tick_ts
+
+						for i = 1, ult_attack.number_of_beams do
+							local spread = math.random(ult_attack.min_spread, ult_attack.max_spread)
+							local pos = enemy_after.pos
+							local rand_pos = v(pos.x + math.random(-spread, spread), pos.y + math.random(-spread, spread))
+							local decal = E:create_entity(ult_attack.decal)
+
+							decal.render.sprites[1].ts = store.tick_ts
+							decal.pos = rand_pos
+							decal.source_id = this.id
+							decal.damage_factor = this.tower.damage_factor
+
+							if i == 1 or band(GR:cell_type(rand_pos.x, rand_pos.y), TERRAIN_NOWALK) ~= 0 then
+								decal.pos = pos
+							end
+
+							queue_insert(store, decal)
+							U.y_wait(store, ult_attack.delay_between_shots * this.tower.cooldown_factor)
+						end
+
+						while not U.animation_finished(this, sid_mage, 1) do
+							coroutine.yield()
+						end
+
+						last_ts = start_ts
+					end
+				else
+					ult_attack.ts = store.tick_ts + fts(10)
+				end
+			end
+
+			if ready_to_attack(beam_attack, store, this.tower.cooldown_factor) then
+				local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, beam_attack.vis_flags, beam_attack.vis_bans)
+
+				if not target or band(GR:cell_type(target.pos.x, target.pos.y), TERRAIN_NOWALK) ~= 0 then
+					beam_attack.ts = beam_attack.ts + fts(10)
+				else
+					beam_attack.ts = store.tick_ts
+					local pred_pos = U.calculate_enemy_ffe_pos(target, fts(16))
+					this.attacks._last_target_pos = pred_pos
+
+					local an = U.animation_name_facing_point(this, "attack_1", this.attacks._last_target_pos, sid_mage)
+
+					U.animation_start(this, an .. "_start", nil, store.tick_ts, false, sid_mage)
+					U.animation_start(this, "attack_1_gem_start", nil, store.tick_ts, false, sid_gem)
+					U.animation_start(this, "attack_1_glow_start", nil, store.tick_ts, false, sid_tower_glow)
+					S:queue(beam_attack.sfx_start)
+					create_gem_fx()
+
+					while not U.animation_finished(this, sid_mage, 1) do
+						check_conditions_animation()
+						coroutine.yield()
+					end
+
+					this.can_spawn_golem = false
+
+					local start_ts = store.tick_ts
+					local new_target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, beam_attack.vis_flags, beam_attack.vis_bans)
+
+					if new_target then
+						pred_pos:copy(new_target.pos)
+					end
+
+					U.animation_start(this, an .. "_loop", nil, store.tick_ts, true, sid_mage)
+					U.animation_start(this, "attack_1_gem_loop", nil, store.tick_ts, true, sid_gem)
+					U.animation_start(this, "attack_1_glow_loop", nil, store.tick_ts, true, sid_tower_glow)
+					S:queue(beam_attack.sfx_loop)
+
+					local bullet = E:create_entity(beam_attack.bullet)
+
+					bullet.pos:set(this.pos.x + beam_attack.offset.x, this.pos.y + beam_attack.offset.y)
+					bullet.bullet.from:copy(bullet.pos)
+					bullet.bullet.to:copy(pred_pos)
+					bullet.bullet.target_id = nil
+					bullet.bullet.source_id = this.id
+					bullet.bullet.damage_factor = this.tower.damage_factor
+
+					if target.pos.y > tpos(this).y + beam_attack.offset.y then
+						bullet.render.sprites[1].z = Z_OBJECTS_COVERS
+					end
+
+					queue_insert(store, bullet)
+
+					local hit_fx = E:create_entity(beam_attack.hit_fx)
+
+					hit_fx.pos = V.vclone(pred_pos)
+					hit_fx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, hit_fx)
+
+					local beam_start_ts = store.tick_ts
+
+					-- fts(30)
+					while store.tick_ts - beam_start_ts < beam_attack_duration do
+						if ready_to_attack(rapid_fire_attack, store, this.tower.cooldown_factor) then
+							local target = U.detect_foremost_enemy_in_range_filter_off(pred_pos, E:get_template("aura_sunray_master_beam").aura.radius * 1.5, rapid_fire_attack.vis_flags, rapid_fire_attack.vis_bans)
+							if target then
+								fire_bolt(target, basic_angle)
+
+								basic_angle = basic_angle == 45 and 315 or 45
+							end
+
+							rapid_fire_attack.ts = store.tick_ts
+						end
+
+						coroutine.yield()
+					end
+
+					while not U.animation_finished(this, sid_mage, 1) do
+						coroutine.yield()
+					end
+
+					if pow_b.level > 0 then
+						S:stop(beam_attack.sfx_loop)
+						S:queue(beam_attack.sfx_end)
+						destroy_gem_fx()
+						U.animation_start(this, "overcharge", nil, store.tick_ts, false, sid_mage)
+						U.animation_start(this, "overcharge", nil, store.tick_ts, false, sid_gem)
+						U.animation_start(this, "overcharge_glow", nil, store.tick_ts, false, sid_tower_glow)
+						U.y_wait(store, fts(67) * this.tower.cooldown_factor)
+						S:queue(this.overcharge_sfx)
+
+						local aura = E:create_entity("aura_sunray_master_skill_b")
+
+						aura.pos = V.vclone(tpos(this))
+						aura.aura.level = pow_b.level
+						aura.aura.radius = this.attacks.range
+						aura.aura.damage_min = pow_b.damage_min[pow_b.level]
+						aura.aura.damage_max = pow_b.damage_max[pow_b.level]
+						aura.aura.damage_factor = this.tower.damage_factor
+
+						queue_insert(store, aura)
+
+						local range_scale = this.attacks.range / base_range
+						local decal = E:create_entity("decal_sunray_master_skill_b_explosion")
+
+						decal.pos = V.vclone(tpos(this))
+						decal.render.sprites[1].ts = store.tick_ts
+						decal.render.sprites[1].scale = v(range_scale, range_scale)
+
+						queue_insert(store, decal)
+
+						fire_skill_b_volley()
+
+						did_overcharge = true
+					else
+						U.animation_start(this, an .. "_end", nil, store.tick_ts, false, sid_mage)
+						U.animation_start(this, "attack_1_gem_end", nil, store.tick_ts, false, sid_gem)
+						U.animation_start(this, "attack_1_glow_end", nil, store.tick_ts, false, sid_tower_glow)
+						destroy_gem_fx()
+						S:stop(beam_attack.sfx_loop)
+						S:queue(beam_attack.sfx_end)
+					end
+
+					last_ts = start_ts
+
+					if not did_overcharge then
+						-- fts(17)
+						U.y_animation_play(this, "gem_break", nil, store.tick_ts, 1, sid_gem)
+					else
+						did_overcharge = false
+					end
+
+					destroy_gem_glow()
+					-- fts(20)
+					U.y_animation_play(this, "fragments", nil, store.tick_ts, 1, sid_gem)
+					-- fts(34)
+					U.y_animation_play(this, "gem_form", nil, store.tick_ts, 1, sid_gem)
+					U.animation_start(this, "idle_gem", nil, store.tick_ts, true, sid_gem)
+					create_gem_glow()
+				end
+			end
+
+			if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
+				U.animation_start(this, "idle_1", false, store.tick_ts, true, sid_mage)
+			end
+
+			this.can_spawn_golem = true
+
+			coroutine.yield()
+		end
+	end
+end
+
+function scripts.tower_sunray_master.remove(this, store)
+	local beam = table.filter(store.entities, function(k, e)
+		return e.template_name == "bullet_sunray_master_beam" and e.bullet and e.bullet.source_id == this.id
+	end)
+
+	if #beam > 0 then
+		queue_remove(store, beam[1])
+	end
+
+	if this.decal_glow then
+		queue_remove(store, this.decal_glow)
+	end
+
+	if this.controller_soldiers then
+		queue_remove(store, this.controller_soldiers)
+	end
+
+	if this.gem_fx then
+		queue_remove(store, this.gem_fx)
+		this.gem_fx = nil
+	end
+
+	return true
+end
+
+scripts.decal_sunray_master_beam_hit = {}
+
+function scripts.decal_sunray_master_beam_hit.insert(this, store)
+	if this.payload then
+		local p = E:create_entity(this.payload)
+
+		p.pos = V.vclone(this.pos)
+
+		queue_insert(store, p)
+	end
+
+	return true
+end
+
+scripts.decal_sunray_master_beam_ult = {}
+
+function scripts.decal_sunray_master_beam_ult.insert(this, store)
+	local aura = E:create_entity(this.aura)
+
+	aura.pos = V.vclone(this.pos)
+	aura.aura.damage_factor = this.damage_factor or 1
+
+	queue_insert(store, aura)
+
+	local decal = E:create_entity(this.hit_decal)
+
+	decal.pos = V.vclone(this.pos)
+	decal.wait_time = this.hit_decal_wait_time
+
+	queue_insert(store, decal)
+
+	return true
+end
+
+scripts.controller_tower_sunray_master_soldiers = {}
+
+function scripts.controller_tower_sunray_master_soldiers.update(this, store)
+	local b = this.tower_ref.barrack
+	local pow = this.tower_ref.powers.skill_a
+	local tower_id = this.tower_ref.id
+	local check_soldiers_ts = store.tick_ts
+	local last_pow_level = this.pow_level or 1
+
+	local function apply_level_delta(s, from_level, to_level)
+		if from_level == to_level then
+			return
+		end
+
+		s.health.hp_max = s.health.hp_max + pow.hp[to_level] - pow.hp[from_level]
+		SU.armor_inc_self(s, pow.armor[to_level] - pow.armor[from_level])
+		s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min + pow.damage_min[to_level] - pow.damage_min[from_level]
+		s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + pow.damage_max[to_level] - pow.damage_max[from_level]
+	end
+
+	while true do
+		if this.pow_level ~= last_pow_level then
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+
+				if s and store.entities[s.id] then
+					apply_level_delta(s, last_pow_level, this.pow_level)
+					U.heal(s, s.health.hp_max)
+				end
+			end
+
+			last_pow_level = this.pow_level
+		end
+
+		if store.tick_ts - check_soldiers_ts > this.check_soldiers_cooldown and not this.tower_ref.blocked and this.tower_ref.can_spawn_golem then
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+
+				if not s or s.health.dead and not store.entities[s.id] then
+					this.tower_ref.spawn_golem_flag = true
+					s = E:create_entity(b.soldier_type)
+					s.soldier.tower_id = tower_id
+					s.soldier.tower_soldier_idx = i
+					s.pos = v(V.add(this.tower_ref.pos.x, this.tower_ref.pos.y, b.respawn_offset.x, b.respawn_offset.y))
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+					s.nav_rally.new = true
+					s.source_id = this.tower_ref.id
+
+					apply_level_delta(s, 1, this.pow_level)
+					s.health.hp = s.health.hp_max
+
+					SU.soldier_inherit_tower_buff_factor(s, this.tower_ref, store.tick_ts)
+					queue_insert(store, s)
+
+					b.soldiers[i] = s
+					check_soldiers_ts = store.tick_ts
+
+					break
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+function scripts.controller_tower_sunray_master_soldiers.remove(this, store)
+	if this.tower_ref then
+		SU.queue_remove_clean_table(store, this.tower_ref.barrack.soldiers)
+	end
+
+	return true
+end
+
 return scripts

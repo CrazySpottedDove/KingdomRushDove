@@ -304,6 +304,14 @@ return {
 			tt_title = _("TOWER_WIZARD_NAME"),
 			tt_desc = _("TOWER_WIZARD_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_sunray_master",
+			image = "kr6_quickmenu_main_icon_sunray_master",
+			type = "sunray_master",
+			place = 30,
+			tt_title = _("TOWER_SUNRAY_MASTER_NAME"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -1764,6 +1772,55 @@ return {
 			tt_desc = _("TOWER_SUNRAY_CHARGE_DESCRIPTION_1")
 		}}
 	}), tpl.sell}},
+	sunray_master = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_sunray_master_0001",
+		place = 6,
+		sounds = {"TowerSunrayMasterSkillATaunt"},
+		tt_phrase = _("TOWER_SUNRAY_MASTER_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_sunray_master_0002",
+		place = 5,
+		sounds = {"TowerSunrayMasterSkillBTaunt"},
+		tt_phrase = _("TOWER_SUNRAY_MASTER_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_sunray_master_0003",
+		place = 7,
+		sounds = {"TowerSunrayMasterSkillCTaunt"},
+		tt_phrase = _("TOWER_SUNRAY_MASTER_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SUNRAY_MASTER_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}},
 	mercenaries_desert = {{M(tpl.buy_soldier, {
 		action_arg = "soldier_djinn",
 		image = "main_icons_0030",
