@@ -8,6 +8,7 @@ local V=require("lib.klua.vector")
 local v=V.v
 local km=require("lib.klua.macros")
 local log=require("lib.klua.log"):new("level213")
+local signal=require("lib.hump.signal")
 require("all.constants")
 require("lib.klua.table")
 local level={}
@@ -17,6 +18,9 @@ end
 function level:update(store)
 P:deactivate_path(9)
 P:deactivate_path(10)
+if store.level_mode==GAME_MODE_CAMPAIGN then
+signal.emit("wave-notification","view","TOWER_SUNRAY_MASTER")
+end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
