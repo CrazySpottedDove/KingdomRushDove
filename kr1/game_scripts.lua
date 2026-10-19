@@ -17772,7 +17772,9 @@ local function controller_elemental_generic_insert_buff_to_target(this)
 end
 
 local function controller_elemental_generic_remove_buff_from_target(this)
-	SU.remove_tower_range_buff(this.target, this.range_factor, this.rally_range_factor ~= nil, this.rally_range_factor)
+	if this.range_factor then
+		SU.remove_tower_range_buff(this.target, this.range_factor, this.rally_range_factor ~= nil, this.rally_range_factor)
+	end
 
 	if this.damage_factor then
 		SU.remove_tower_damage_factor_buff(this.target, this.damage_factor - 1)
