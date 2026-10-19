@@ -96,6 +96,7 @@ return {
 		"tower_culverine",
 		"tower_elf_ranger",
 		"tower_wildcat",
-		"tower_miners"
+		"tower_miners",
+		"tower_sunray_master"
 	}
 }

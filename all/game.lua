@@ -65,6 +65,7 @@ game.required_textures = {
 	"go_towers_wildcat",
 	"go_towers_culverine",
 	"go_towers_ranger",
+	"go_towers_sunray_master",
 	"go_towers_miners",
 	"go_stage128",
 	"tower_holders"
@@ -77,6 +78,7 @@ game.required_sounds = {
 	"ElvesTowerTaunts",
 	"ElvesCommonSounds",
 	"tower_dark_elf",
+	"tower_sunray_master",
 	"tower_tricannon",
 	"tower_demon_pit",
 	"tower_necromancer",

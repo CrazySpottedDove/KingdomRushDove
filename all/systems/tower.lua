@@ -5,6 +5,70 @@ local E = require("entity_db")
 local km = require("lib.klua.macros")
 local UP = require("kr1.upgrades")
 
+--- 缩放组件的 damage_min / damage_max，首次调用时记录原始值
+---@param component table 组件表
+---@param factor number 倍率
+local function scale_damage(component, factor)
+	local orig_min = component._orig_damage_min
+
+	if not orig_min then
+		orig_min = component.damage_min
+		component._orig_damage_min = orig_min
+		component._orig_damage_max = component.damage_max
+	end
+
+	component.damage_min = orig_min * factor
+	component.damage_max = component._orig_damage_max * factor
+end
+
+--- 缩放组件上的一维数字数组字段，首次调用时记录原始值
+---@param component table 组件表
+---@param field string 数组字段名
+---@param factor number 倍率
+local function scale_damage_config(component, field, factor)
+	local config = component[field]
+	local orig_field = "_orig_" .. field
+	local orig = component[orig_field]
+
+	if not orig then
+		orig = {}
+		component[orig_field] = orig
+
+		for i = 1, #config do
+			orig[i] = config[i]
+		end
+	end
+
+	for i = 1, #config do
+		config[i] = orig[i] * factor
+	end
+end
+
+--- 统一处理 mage_brilliance 涉及的所有伤害模板
+---@param factor number 当前层数对应的伤害倍率
+local function scale_mage_brilliance_damage(factor)
+	for _, name in ipairs(UP.mage_tower_bolts) do
+		scale_damage(E:get_template(name).bullet, factor)
+	end
+
+	local arcane_dps = E:get_template("mod_ray_arcane").dps
+	local high_elven_bullet = E:get_template("ray_high_elven_sentinel").bullet
+	local pixie_modifier = E:get_template("mod_pixie_pickpocket").modifier
+	local infernal_dps = E:get_template("mod_lava_infernal_mage").dps
+	local wicked_sister_dps = E:get_template("mod_wicked_sister_poison").dps
+	local arcane_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
+
+	scale_damage(arcane_dps, factor)
+	scale_damage(high_elven_bullet, factor)
+	scale_damage(pixie_modifier, factor)
+	scale_damage(infernal_dps, factor)
+	scale_damage(wicked_sister_dps, factor)
+	scale_damage_config(arcane_disintegrate, "boss_damage_config", factor)
+
+	scale_damage(E:get_template("aura_sunray_master_beam").aura, factor)
+	scale_damage(E:get_template("aura_sunray_master_ult_beam").aura, factor)
+end
+
 function tower:init(store)
 	store.towers = {}
 	require("lib.klua.table")
@@ -17,7 +81,6 @@ function tower:on_insert_unconditional(entity, store)
 		store.towers[entity.id] = entity
 
 		-- mage_brilliance
-		local mage_bullet_names = UP.mage_tower_bolts
 		local mage_tower_map = self.mage_tower_map
 		local u = UP:get_upgrade("mage_brilliance")
 
@@ -25,123 +88,26 @@ function tower:on_insert_unconditional(entity, store)
 			local existing_towers = table.filter(store.towers, function(_, e)
 				return mage_tower_map[e.template_name]
 			end)
-			local dps = E:get_template("mod_ray_arcane").dps
-			local bullet_ray_high_elven = E:get_template("ray_high_elven_sentinel").bullet
-			local modifier_pixie = E:get_template("mod_pixie_pickpocket").modifier
-			local dps_infernal_mage = E:get_template("mod_lava_infernal_mage").dps
-			local dps_wicked_sister = E:get_template("mod_wicked_sister_poison").dps
+			local factor = u.damage_factors[km.clamp(1, #u.damage_factors, #existing_towers + 1)]
 
-			local f = u.damage_factors[km.clamp(1, #u.damage_factors, #existing_towers + 1)]
-
-			for _, bn in ipairs(mage_bullet_names) do
-				local b = E:get_template(bn).bullet
-
-				if not b._orig_damage_min then
-					b._orig_damage_min = b.damage_min
-					b._orig_damage_max = b.damage_max
-				end
-
-				b.damage_min = b._orig_damage_min * f
-				b.damage_max = b._orig_damage_max * f
-			end
-
-			if not dps._orig_damage_min then
-				dps._orig_damage_min = dps.damage_min
-				dps._orig_damage_max = dps.damage_max
-			end
-
-			dps.damage_min = dps._orig_damage_min * f
-			dps.damage_max = dps._orig_damage_max * f
-
-			if not bullet_ray_high_elven._orig_damage_min then
-				bullet_ray_high_elven._orig_damage_min = bullet_ray_high_elven.damage_min
-				bullet_ray_high_elven._orig_damage_max = bullet_ray_high_elven.damage_max
-			end
-
-			bullet_ray_high_elven.damage_min = bullet_ray_high_elven._orig_damage_min * f
-			bullet_ray_high_elven.damage_max = bullet_ray_high_elven._orig_damage_max * f
-
-			if not modifier_pixie._orig_damage_min then
-				modifier_pixie._orig_damage_min = modifier_pixie.damage_min
-				modifier_pixie._orig_damage_max = modifier_pixie.damage_max
-			end
-
-			modifier_pixie.damage_min = modifier_pixie._orig_damage_min * f
-			modifier_pixie.damage_max = modifier_pixie._orig_damage_max * f
-
-			local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
-
-			if not arcane5_disintegrate._origin_damage_config then
-				arcane5_disintegrate._origin_damage_config = {}
-				arcane5_disintegrate._origin_damage_config[1] = arcane5_disintegrate.boss_damage_config[1]
-				arcane5_disintegrate._origin_damage_config[2] = arcane5_disintegrate.boss_damage_config[2]
-				arcane5_disintegrate._origin_damage_config[3] = arcane5_disintegrate.boss_damage_config[3]
-			end
-
-			for i = 1, 3 do
-				arcane5_disintegrate.boss_damage_config[i] = arcane5_disintegrate._origin_damage_config[i] * f
-			end
-
-			if not dps_infernal_mage._orig_damage_min then
-				dps_infernal_mage._orig_damage_min = dps_infernal_mage.damage_min
-				dps_infernal_mage._orig_damage_max = dps_infernal_mage.damage_max
-			end
-
-			dps_infernal_mage.damage_min = dps_infernal_mage._orig_damage_min * f
-			dps_infernal_mage.damage_max = dps_infernal_mage._orig_damage_max * f
-
-			if not dps_wicked_sister._orig_damage_min then
-				dps_wicked_sister._orig_damage_min = dps_wicked_sister.damage_min
-				dps_wicked_sister._orig_damage_max = dps_wicked_sister.damage_max
-			end
-
-			dps_wicked_sister.damage_min = dps_wicked_sister._orig_damage_min * f
-			dps_wicked_sister.damage_max = dps_wicked_sister._orig_damage_max * f
+			scale_mage_brilliance_damage(factor)
 		end
 	end
 end
 
 function tower:on_remove_unconditional(entity, store)
 	if entity.tower then
-		local mage_bullet_names = UP.mage_tower_bolts
+		-- mage_brilliance
 		local mage_tower_map = self.mage_tower_map
 		local u = UP:get_upgrade("mage_brilliance")
 
-		if entity.tower and u and mage_tower_map[entity.template_name] then
+		if u and mage_tower_map[entity.template_name] then
 			local existing_towers = table.filter(store.towers, function(_, e)
 				return mage_tower_map[e.template_name]
 			end)
-			local dps = E:get_template("mod_ray_arcane").dps
-			local bullet_ray_high_elven = E:get_template("ray_high_elven_sentinel").bullet
-			local modifier_pixie = E:get_template("mod_pixie_pickpocket").modifier
-			local dps_infernal_mage = E:get_template("mod_lava_infernal_mage").dps
-			local dps_wicked_sister = E:get_template("mod_wicked_sister_poison").dps
-			local f = u.damage_factors[km.clamp(1, #u.damage_factors, #existing_towers - 1)]
+			local factor = u.damage_factors[km.clamp(1, #u.damage_factors, #existing_towers - 1)]
 
-			for _, bn in ipairs(mage_bullet_names) do
-				local b = E:get_template(bn).bullet
-
-				b.damage_min = b._orig_damage_min * f
-				b.damage_max = b._orig_damage_max * f
-			end
-
-			dps.damage_min = dps._orig_damage_min * f
-			dps.damage_max = dps._orig_damage_max * f
-			bullet_ray_high_elven.damage_min = bullet_ray_high_elven._orig_damage_min * f
-			bullet_ray_high_elven.damage_max = bullet_ray_high_elven._orig_damage_max * f
-			modifier_pixie.damage_min = modifier_pixie._orig_damage_min * f
-			modifier_pixie.damage_max = modifier_pixie._orig_damage_max * f
-
-			local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
-
-			for i = 1, 3 do
-				arcane5_disintegrate.boss_damage_config[i] = arcane5_disintegrate._origin_damage_config[i] * f
-			end
-
-			dps_infernal_mage.damage_min = dps_infernal_mage._orig_damage_min * f
-			dps_infernal_mage.damage_max = dps_infernal_mage._orig_damage_max * f
-			dps_wicked_sister.damage_min = dps_wicked_sister._orig_damage_min * f
-			dps_wicked_sister.damage_max = dps_wicked_sister._orig_damage_max * f
+			scale_mage_brilliance_damage(factor)
 		end
 
 		-- tower index

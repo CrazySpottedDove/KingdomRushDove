@@ -53,7 +53,8 @@ GS.mage_towers = {
 	"tower_deep_devils",
 	"tower_blazing_watcher",
 	"tower_wicked_sisters",
-	"tower_wizard"
+	"tower_wizard",
+	"tower_sunray_master"
 }
 GS.engineer_towers = {
 	"tower_engineer_1",
