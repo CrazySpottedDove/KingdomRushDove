@@ -48,10 +48,6 @@ function _(s, default)
 		-- DEBUG_USE
 		-- print("Missing translation for '" .. s .. "' in locale '" .. i18n.current_locale .. "'")
 		-- print(debug.traceback())
-		if _G.I18N_DEBUG or os.getenv("I18N_DEBUG") == "1" then
-			print("I18N_MISSING\t" .. tostring(s) .. "\t" .. tostring(i18n.current_locale))
-			print(debug.traceback("", 2))
-		end
 		return s
 	end
 end
