@@ -23039,14 +23039,11 @@ end
 scripts.soldier_rotten_forest_tree = {}
 
 function scripts.soldier_rotten_forest_tree.insert(this, store)
-	local last_dominant_entity = store._dominant_entity
-	store._dominant_entity = nil
 	local m = E:create_entity("mod_soldier_rotten_forest_tree_lose_hp")
-
 	m.modifier.target_id = this.id
+	m._is_invalid_damage_trace_source = true
 
 	simulation:queue_insert_entity(m)
-	store._dominant_entity = last_dominant_entity
 	return true
 end
 

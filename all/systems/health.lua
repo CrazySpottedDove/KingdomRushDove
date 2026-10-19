@@ -493,6 +493,10 @@ local function damage_trace_enabled(store, d, e)
 		local source = store.entities[d.source_id]
 
 		if source then
+			-- 排除路径，直接排除某些特定实体造成的伤害，避免污染数据
+			if source._is_invalid_damage_trace_source then
+				return
+			end
 			local root = store.root_entity_map[source.id] or source
 			local value = math.min(d.damage_applied, math.max(e.health.hp, 0))
 
