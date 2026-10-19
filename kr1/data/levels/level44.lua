@@ -103,7 +103,7 @@ self.boss=boss
 while self.boss.phase~="loop" do
 coroutine.yield()
 end
-S:queue("MusicBossFight2")
+S:queue("MusicBossFight")
 U.y_wait_unconditional(store,1)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,v(512,384),1)
