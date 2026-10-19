@@ -4599,20 +4599,6 @@ end
 -- ============================================================
 -- 图表共用：实体模板 -> 颜色（饼图/折线图同色，跨波次稳定）
 -- ============================================================
-local damage_trace_entity_palette = {
-	{0.92, 0.30, 0.28}, -- 红
-	{0.28, 0.55, 0.95}, -- 蓝
-	{0.30, 0.78, 0.40}, -- 绿
-	{0.96, 0.66, 0.15}, -- 橙
-	{0.72, 0.42, 0.92}, -- 紫
-	{0.20, 0.78, 0.78}, -- 青
-	{0.92, 0.52, 0.76}, -- 粉
-	{0.62, 0.62, 0.28}, -- 橄榄
-	{0.92, 0.84, 0.30}, -- 黄
-	{0.45, 0.72, 0.95}, -- 浅蓝
-	{0.85, 0.44, 0.34}, -- 砖红
-	{0.52, 0.74, 0.52} -- 灰绿
-}
 local damage_trace_entity_color_map = {}
 local damage_trace_entity_color_count = 0
 
@@ -4620,8 +4606,16 @@ local function damage_trace_entity_color(template_name)
 	local c = damage_trace_entity_color_map[template_name]
 
 	if not c then
+		local h = (damage_trace_entity_color_count * 0.618033988749895) % 1
 		damage_trace_entity_color_count = damage_trace_entity_color_count + 1
-		c = damage_trace_entity_palette[((damage_trace_entity_color_count - 1) % #damage_trace_entity_palette) + 1]
+		local saturation, brightness = 0.65, 0.95
+
+		local function channel(offset)
+			local k = (offset + h * 6) % 6
+			return brightness * (1 - saturation * math.max(0, math.min(k, 4 - k, 1)))
+		end
+
+		c = {channel(5), channel(3), channel(1)}
 		damage_trace_entity_color_map[template_name] = c
 	end
 
@@ -5385,6 +5379,9 @@ DamageTraceView = class("DamageTraceView", PopUpView)
 
 function DamageTraceView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
+
+	damage_trace_entity_color_map = {}
+	damage_trace_entity_color_count = 0
 
 	self.pos = v(0, 0)
 	self.tab_idx = 1
