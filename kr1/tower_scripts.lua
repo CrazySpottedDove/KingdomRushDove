@@ -23042,6 +23042,7 @@ function scripts.soldier_rotten_forest_tree.insert(this, store)
 	local m = E:create_entity("mod_soldier_rotten_forest_tree_lose_hp")
 
 	m.modifier.target_id = this.id
+	this._rotten_forest_hp_loss_source_id = m.id
 
 	simulation:queue_insert_entity(m)
 
