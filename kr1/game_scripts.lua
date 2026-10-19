@@ -17750,14 +17750,16 @@ local function controller_elemental_generic_find_tower(this, store)
 end
 
 local function controller_elemental_generic_insert_buff_to_target(this)
-	SU.insert_tower_range_buff(this.target, this.range_factor, this.rally_range_factor ~= nil, this.rally_range_factor)
+	if this.range_factor then
+		SU.insert_tower_range_buff(this.target, this.range_factor, this.rally_range_factor ~= nil, this.rally_range_factor)
 
-	if this.range_factor and this.target.attacks and this.target.attacks.range then
-		this.max_range = this.target.attacks.range
-	end
+		if this.target.attacks and this.target.attacks.range then
+			this.max_range = this.target.attacks.range
+		end
 
-	if this.rally_range_factor and this.target.barrack and this.target.barrack.rally_range then
-		this.max_range = this.target.barrack.rally_range
+		if this.target.barrack and this.target.barrack.rally_range then
+			this.max_range = this.target.barrack.rally_range
+		end
 	end
 
 	if not this.max_range then
