@@ -100,7 +100,6 @@ function enemy:on_update(dt, ts, store)
 			end
 
 			store.player_gold = store.player_gold + e.enemy.gold
-			signal.emit("got-enemy-gold", e, e.enemy.gold)
 		end
 
 		if not h.dead then

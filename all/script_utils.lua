@@ -5334,7 +5334,6 @@ local function enemy_betray_logic(this, store)
 
 	while store.tick_ts - this._betray_data.ts < this._betray_data.duration do
 		if this.health.dead then
-			store.player_gold = store.player_gold + this.enemy.gold
 			break
 		end
 
@@ -5369,6 +5368,10 @@ local function enemy_betray_logic(this, store)
 		::continue::
 
 		coroutine.yield()
+	end
+
+	if this.health.dead then
+		store.player_gold = store.player_gold + this.enemy.gold
 	end
 
 	store.enemy_spatial_index.insert_entity(this)
