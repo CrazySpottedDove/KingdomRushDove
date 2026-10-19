@@ -1536,6 +1536,7 @@ scripts.tower_arcane = {
 						pow_s.last_damage_factor = 1
 					end
 					SU.insert_tower_damage_factor_buff(this, pow_s.damage_factor[pow_s.level] - pow_s.last_damage_factor)
+					pow_s.last_damage_factor = pow_s.damage_factor[pow_s.level]
 				end
 
 				local sa = this.attacks.list[2]
