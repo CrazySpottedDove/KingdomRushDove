@@ -14866,8 +14866,6 @@ function scripts.mod_rag_raggified.update(this, store)
 		simulation:queue_insert_entity(target)
 	else
 		store.player_gold = store.player_gold + target.enemy.gold
-
-		signal.emit("got-enemy-gold", target, target.enemy.gold)
 	end
 
 	add_fx(target, e.pos)
