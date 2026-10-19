@@ -3636,7 +3636,7 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
 tt.timed.runs = 1
 
--- 矮人重炮（移植自 KR6 tower_culverine_lvl4；合并单实体 + powers）
+-- 矮人扩散炮
 tt = RT("tower_culverine", "tower")
 AC(tt, "attacks", "powers")
 tt.tower.type = "culverine"
@@ -3651,8 +3651,8 @@ tt.main_script.insert = scripts.tower_engineer.insert
 tt.main_script.update = scripts.tower_culverine.update
 tt.main_script.remove = scripts.tower_culverine.remove
 tt.powers.skill_a = CC("power")
-tt.powers.skill_a.price_base = 150
-tt.powers.skill_a.price_inc = 150
+tt.powers.skill_a.price_base = 200
+tt.powers.skill_a.price_inc = 180
 tt.powers.skill_a.max_level = 3
 tt.powers.skill_b = CC("power")
 tt.powers.skill_b.price_base = 100
@@ -3790,7 +3790,7 @@ tt.bullet.damage_max = 178
 tt.bullet.hit_payload = nil
 
 tt = RT("bullet_culverine_skill_a", "bomb")
-tt.bullet.damage_type = DAMAGE_EXPLOSION
+tt.bullet.damage_type = DAMAGE_AGAINST_MAGIC_ARMOR
 tt.bullet.damage_radius = 90
 tt.bullet.flight_time = fts(35)
 tt.bullet.hit_fx = "fx_bullet_culverine_skill_a_hit"
@@ -3799,8 +3799,8 @@ tt.bullet.align_with_trajectory = false
 tt.bullet.ignore_hit_offset = true
 tt.bullet.rotation_speed = 10
 tt.bullet.particles_name = "ps_culverine_skill_a"
-tt.damage_min_conf = {70, 120, 170}
-tt.damage_max_conf = {90, 160, 230}
+tt.damage_min_conf = {98, 168, 238}
+tt.damage_max_conf = {126, 224, 322}
 tt.render.sprites[1].prefix = "DC_Sulfurblast_Projectile"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
@@ -3846,7 +3846,6 @@ tt.modifier.duration = 0.3
 tt.magic_armor_red_factor = 1
 tt.main_script.insert = scripts.mod_bullet_culverine_skill_a.insert
 tt.main_script.update = scripts.mod_bullet_culverine_skill_a.update
-tt.main_script.remove = scripts.mod_bullet_culverine_skill_a.remove
 
 tt = RT("mod_bullet_culverine_skill_b", "modifier")
 tt.modifier.armor_red_factor = 0.03

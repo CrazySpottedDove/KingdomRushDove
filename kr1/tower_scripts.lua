@@ -1536,6 +1536,7 @@ scripts.tower_arcane = {
 						pow_s.last_damage_factor = 1
 					end
 					SU.insert_tower_damage_factor_buff(this, pow_s.damage_factor[pow_s.level] - pow_s.last_damage_factor)
+					pow_s.last_damage_factor = pow_s.damage_factor[pow_s.level]
 				end
 
 				local sa = this.attacks.list[2]
@@ -33647,25 +33648,7 @@ function scripts.mod_bullet_culverine_skill_a.insert(this, store)
 		return false
 	end
 
-	local red = target.health.magic_armor * this.magic_armor_red_factor
-
-	SU.magic_armor_dec(target, red)
-
-	this._magic_armor_lost = red
-
 	signal.emit("mod-applied", this, target)
-
-	return true
-end
-
-function scripts.mod_bullet_culverine_skill_a.remove(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if target then
-		SU.magic_armor_inc(target, this._magic_armor_lost)
-
-		this._magic_armor_lost = 0
-	end
 
 	return true
 end
@@ -33682,10 +33665,13 @@ function scripts.mod_bullet_culverine_skill_a.update(this, store)
 
 	this.pos = target.pos
 
-	while true do
-		target = store.entities[m.target_id]
+	coroutine.yield()
 
-		if not target or target.health.dead or store.tick_ts - m.ts >= m.duration then
+	SU.magic_armor_dec(target, 1)
+
+	while true do
+		if target.health.dead or not store.entities[m.target_id] or store.tick_ts - m.ts >= m.duration then
+			SU.magic_armor_inc(target, 1)
 			queue_remove(store, this)
 
 			return
@@ -34112,6 +34098,7 @@ function scripts.tower_culverine.update(this, store)
 						local b = shoot_bullet(pred_pos, aa)
 
 						saa.ts = store.tick_ts
+						aa_count = aa_count + 1
 						b.render.sprites[1].z = Z_OBJECTS
 						b.render.sprites[1].sort_y_offset = 1
 
