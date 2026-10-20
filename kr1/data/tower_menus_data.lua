@@ -472,6 +472,14 @@ return {
 			tt_title = _("TOWER_CULVERINE_NAME"),
 			tt_desc = _("TOWER_CULVERINE_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_alchemist",
+			image = "kr6_quickmenu_main_icon_alchemist",
+			type = "alchemist",
+			place = 27,
+			tt_title = _("TOWER_ALCHEMIST_NAME"),
+			tt_desc = _("TOWER_ALCHEMIST_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	archer = {{M(tpl.common_upgrade, {
@@ -4119,6 +4127,55 @@ return {
 		}, {
 			tt_title = _("TOWER_CATAPULT_SKILL_C_NAME_3"),
 			tt_desc = _("TOWER_CATAPULT_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
+	alchemist = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_alchemist_0001",
+		sounds = {"TowerAlchemistShackSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_ALCHEMIST_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ALCHEMIST_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ALCHEMIST_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ALCHEMIST_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_alchemist_0002",
+		sounds = {"TowerAlchemistShackSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_ALCHEMIST_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ALCHEMIST_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ALCHEMIST_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ALCHEMIST_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_alchemist_0003",
+		sounds = {"TowerAlchemistShackSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_ALCHEMIST_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ALCHEMIST_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ALCHEMIST_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ALCHEMIST_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_ALCHEMIST_SKILL_C_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	culverine = {{M(tpl.upgrade_power, {

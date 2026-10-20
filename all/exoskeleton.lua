@@ -25,6 +25,7 @@ local persistent_exos = table.to_map({
 	"tower_catapult_level_4Def",
 	"tower_catapult_level_4_rockyDef",
 	"tower_catapult_level_4_ballsDef",
+	"tower_alchemist_back_bubblesDef",
 	"miners_lvl_4Def",
 	"miners_lvl_4_baseDef",
 	"miners_lvl_4_silbatoDef",
