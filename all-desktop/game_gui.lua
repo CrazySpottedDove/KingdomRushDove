@@ -8467,11 +8467,6 @@ function TowerMenu:show(tower_menu)
 		return b
 	end
 
-	local function place_button(b, place)
-		b.pos = V.vclone(place)
-		b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
-	end
-
 	for i = 1, #tm do
 		local item = tm[i]
 
@@ -8479,7 +8474,8 @@ function TowerMenu:show(tower_menu)
 			local b = create_menu_button(item)
 
 			if b then
-				place_button(b, data.tower_menu_button_places[item.place])
+				b.pos:set(data.tower_menu_button_places[item.place].x - b.size.x * 0.5, data.tower_menu_button_places[item.place].y - b.size.y * 0.5)
+
 				self:add_child(b)
 			end
 		end
