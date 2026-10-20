@@ -7100,7 +7100,7 @@ return {
 	TIP_TITLE = "提示：",
 	TOGGLE = "切换",
 	TOWER_ALCHEMIST_DESCRIPTION = "投出爆炸性化学药剂的疯狂炼金术士，其威力甚至可以跟女巫最危险的魔药相提并论。",
-	TOWER_ALCHEMIST_EXTRA = "来自瓦拉杜勒的炼金术士拥有独门的战斗手法，他们运用调配出的药水与补剂来妨碍或攻击敌人。",
+	TOWER_ALCHEMIST_EXTRA = "来自瓦拉杜勒的炼金术士拥有独门的战斗手法，他们运用调配出的药水与九龙补剂来妨碍或攻击敌人。",
 	TOWER_ALCHEMIST_NAME = "炼金术士小屋",
 	TOWER_ALCHEMIST_SKILL_A_DESCRIPTION_1 = TOWER_ALCHEMIST_SKILL_A_DESCRIPTION_1,
 	TOWER_ALCHEMIST_SKILL_A_DESCRIPTION_2 = TOWER_ALCHEMIST_SKILL_A_DESCRIPTION_1,
