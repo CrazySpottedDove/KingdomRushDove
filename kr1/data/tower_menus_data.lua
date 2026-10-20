@@ -159,84 +159,72 @@ return {
 		M(tpl.upgrade, {
 			action_arg = "tower_necromancer",
 			image = "main_icons_0021",
-			place = 10,
 			tt_title = _("TOWER_NECROMANCER_LVL4_NAME"),
 			tt_desc = _("TOWER_NECROMANCER_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_archmage",
 			image = "main_icons_0022",
-			place = 11,
 			tt_title = _("TOWER_ARCHMAGE_NAME"),
 			tt_desc = _("TOWER_ARCHMAGE_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_wild_magus",
 			image = "kr3_main_icons_0003",
-			place = 12,
 			tt_title = _("TOWER_WILD_MAGUS_NAME"),
 			tt_desc = _("TOWER_WILD_MAGUS_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_high_elven",
 			image = "kr3_main_icons_0004",
-			place = 13,
 			tt_title = _("TOWER_HIGH_ELVEN_NAME"),
 			tt_desc = _("TOWER_HIGH_ELVEN_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_faerie_dragon",
 			image = "kr3_main_icons_0013",
-			place = 14,
 			tt_title = _("TOWER_FAERIE_DRAGON_NAME"),
 			tt_desc = _("TOWER_FAERIE_DRAGON_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_pixie",
 			image = "kr3_main_icons_0012",
-			place = 15,
 			tt_title = _("TOWER_PIXIE_NAME"),
 			tt_desc = _("TOWER_PIXIE_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_necromancer_lvl4",
 			image = "kr5_main_icons_0011",
-			place = 16,
 			tt_title = _("TOWER_NECROMANCER_LVL4_NAME"),
 			tt_desc = _("TOWER_NECROMANCER_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_ray_lvl4",
 			image = "kr5_main_icons_0018",
-			place = 17,
 			tt_title = _("TOWER_RAY_LVL4_NAME"),
 			tt_desc = _("TOWER_RAY_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_elven_stargazers_lvl4",
 			image = "kr5_main_icons_0008",
-			place = 18,
 			tt_title = _("TOWER_ELVEN_STARGAZERS_LVL4_NAME"),
 			tt_desc = _("TOWER_ELVEN_STARGAZERS_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_arcane_wizard_lvl4",
 			image = "kr5_main_icons_0003",
-			place = 19,
 			tt_title = _("TOWER_ARCANE_WIZARD_LVL4_NAME"),
 			tt_desc = _("TOWER_ARCANE_WIZARD_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_hermit_toad_lvl4",
 			image = "kr5_main_icons_0034",
-			place = 20,
 			tt_title = _("TOWER_HERMIT_TOAD_LVL4_NAME"),
 			tt_desc = _("TOWER_HERMIT_TOAD_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_arborean_emissary_lvl4",
 			image = "kr5_main_icons_0006",
-			place = 21,
 			tt_title = _("TOWER_ARBOREAN_EMISSARY_LVL4_NAME"),
 			tt_desc = _("TOWER_ARBOREAN_EMISSARY_LVL4_DESCRIPTION")
 		}),
@@ -244,7 +232,6 @@ return {
 			action_arg = "tower_dragons_lvl4",
 			image = "kr5_main_icons_0051",
 			type = "dragons",
-			place = 22,
 			tt_title = _("TOWER_DRAGONS_LVL4_NAME"),
 			tt_desc = _("TOWER_DRAGONS_LVL4_DESCRIPTION")
 		}),
@@ -252,7 +239,6 @@ return {
 			action_arg = "tower_infernal_mage",
 			image = "kr4_main_icons_0003",
 			type = "infernal_mage",
-			place = 23,
 			tt_title = _("TOWER_INFERNAL_MAGE_NAME"),
 			tt_desc = _("TOWER_INFERNAL_MAGE_DESCRIPTION")
 		}),
@@ -260,7 +246,6 @@ return {
 			action_arg = "tower_orc_shaman",
 			image = "kr4_main_icons_0014",
 			type = "orc_shaman",
-			place = 24,
 			tt_title = _("TOWER_ORC_SHAMAN_NAME"),
 			tt_desc = _("TOWER_ORC_SHAMAN_DESCRIPTION")
 		}),
@@ -268,7 +253,6 @@ return {
 			action_arg = "tower_spirit_mausoleum",
 			image = "kr4_main_icons_0007",
 			type = "spirit_mausoleum",
-			place = 25,
 			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_NAME"),
 			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_DESCRIPTION")
 		}),
@@ -276,7 +260,6 @@ return {
 			action_arg = "tower_deep_devils",
 			image = "kr4_main_icons_0017",
 			type = "deep_devils",
-			place = 26,
 			tt_title = _("TOWER_DEEP_DEVILS_NAME"),
 			tt_desc = _("TOWER_DEEP_DEVILS_DESCRIPTION")
 		}),
@@ -284,7 +267,6 @@ return {
 			action_arg = "tower_blazing_watcher",
 			image = "kr4_main_icons_0016",
 			type = "blazing_watcher",
-			place = 27,
 			tt_title = _("TOWER_BLAZING_WATCHER_NAME"),
 			tt_desc = _("TOWER_BLAZING_WATCHER_DESCRIPTION")
 		}),
@@ -292,7 +274,6 @@ return {
 			action_arg = "tower_wicked_sisters",
 			image = "kr4_main_icons_0013",
 			type = "wicked_sisters",
-			place = 28,
 			tt_title = _("TOWER_WICKED_SISTERS_NAME"),
 			tt_desc = _("TOWER_WICKED_SISTERS_DESCRIPTION")
 		}),
@@ -300,7 +281,6 @@ return {
 			action_arg = "tower_wizard",
 			image = "kr6_quickmenu_main_icon_wizard",
 			type = "wizard",
-			place = 29,
 			tt_title = _("TOWER_WIZARD_NAME"),
 			tt_desc = _("TOWER_WIZARD_DESCRIPTION")
 		}),
@@ -308,7 +288,6 @@ return {
 			action_arg = "tower_sunray_master",
 			image = "kr6_quickmenu_main_icon_sunray_master",
 			type = "sunray_master",
-			place = 30,
 			tt_title = _("TOWER_SUNRAY_MASTER_NAME"),
 			tt_desc = _("TOWER_SUNRAY_MASTER_DESCRIPTION")
 		}),
@@ -347,28 +326,24 @@ return {
 		M(tpl.upgrade, {
 			action_arg = "tower_mech",
 			image = "main_icons_0028",
-			place = 10,
 			tt_title = _("TOWER_MECH_NAME"),
 			tt_desc = _("TOWER_MECH_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_frankenstein",
 			image = "main_icons_0039",
-			place = 11,
 			tt_title = _("TOWER_FRANKENSTEIN_NAME"),
 			tt_desc = _("TOWER_FRANKENSTEIN_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_druid",
 			image = "kr3_main_icons_0008",
-			place = 12,
 			tt_title = _("TOWER_DRUID_NAME"),
 			tt_desc = _("TOWER_DRUID_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_entwood",
 			image = "kr3_main_icons_0007",
-			place = 13,
 			tt_title = _("TOWER_ENTWOOD_NAME"),
 			tt_desc = _("TOWER_ENTWOOD_DESCRIPTION")
 		}),
@@ -389,14 +364,12 @@ return {
 		M(tpl.upgrade, {
 			action_arg = "tower_flamespitter_lvl4",
 			image = "kr5_main_icons_0012",
-			place = 16,
 			tt_title = _("TOWER_FLAMESPITTER_LVL4_NAME"),
 			tt_desc = _("TOWER_FLAMESPITTER_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_barrel_lvl4",
 			image = "kr5_main_icons_0017",
-			place = 17,
 			tt_title = _("TOWER_BARREL_LVL4_NAME"),
 			tt_desc = _("TOWER_BARREL_LVL4_DESCRIPTION")
 		}),
@@ -404,7 +377,6 @@ return {
 			action_arg = "tower_sparking_geode_lvl4",
 			image = "kr5_main_icons_0042",
 			type = "sparking_geode",
-			place = 18,
 			tt_title = _("TOWER_SPARKING_GEODE_LVL4_NAME"),
 			tt_desc = _("TOWER_SPARKING_GEODE_LVL4_DESCRIPTION")
 		}),
@@ -412,7 +384,6 @@ return {
 			action_arg = "tower_rotten_forest",
 			image = "kr4_main_icons_0012",
 			type = "rotten_forest",
-			place = 19,
 			tt_title = _("TOWER_ROTTEN_FOREST_NAME"),
 			tt_desc = _("TOWER_ROTTEN_FOREST_DESCRIPTION")
 		}),
@@ -420,7 +391,6 @@ return {
 			action_arg = "tower_rocket_riders",
 			image = "kr4_main_icons_0004",
 			type = "rocket_riders",
-			place = 20,
 			tt_title = _("TOWER_ROCKET_RIDERS_NAME"),
 			tt_desc = _("TOWER_ROCKET_RIDERS_DESCRIPTION")
 		}),
@@ -428,7 +398,6 @@ return {
 			action_arg = "tower_balloon",
 			image = "kr4_main_icons_0015",
 			type = "balloon",
-			place = 21,
 			tt_title = _("TOWER_BALLOON_NAME"),
 			tt_desc = _("TOWER_BALLOON_DESCRIPTION")
 		}),
@@ -436,7 +405,6 @@ return {
 			action_arg = "tower_ignis_altar",
 			image = "kr4_main_icons_0020",
 			type = "ignis_altar",
-			place = 22,
 			tt_title = _("TOWER_IGNIS_ALTAR_NAME"),
 			tt_desc = _("TOWER_IGNIS_ALTAR_DESCRIPTION")
 		}),
@@ -444,7 +412,6 @@ return {
 			action_arg = "tower_melting_furnace",
 			image = "kr4_main_icons_0006",
 			type = "melting_furnace",
-			place = 23,
 			tt_title = _("TOWER_MELTING_FURNACE_NAME"),
 			tt_desc = _("TOWER_MELTING_FURNACE_DESCRIPTION")
 		}),
@@ -452,7 +419,6 @@ return {
 			action_arg = "tower_sandworm",
 			image = "kr4_main_icons_0021",
 			type = "sandworm",
-			place = 24,
 			tt_title = _("TOWER_SANDWORM_NAME"),
 			tt_desc = _("TOWER_SANDWORM_DESCRIPTION")
 		}),
@@ -460,7 +426,6 @@ return {
 			action_arg = "tower_catapult",
 			image = "kr6_quickmenu_main_icon_catapult",
 			type = "catapult",
-			place = 25,
 			tt_title = _("TOWER_CATAPULT_NAME"),
 			tt_desc = _("TOWER_CATAPULT_DESCRIPTION")
 		}),
@@ -468,7 +433,6 @@ return {
 			action_arg = "tower_culverine",
 			image = "kr6_quickmenu_main_icon_culverine",
 			type = "culverine",
-			place = 26,
 			tt_title = _("TOWER_CULVERINE_NAME"),
 			tt_desc = _("TOWER_CULVERINE_DESCRIPTION")
 		}),
@@ -476,7 +440,6 @@ return {
 			action_arg = "tower_alchemist",
 			image = "kr6_quickmenu_main_icon_alchemist",
 			type = "alchemist",
-			place = 27,
 			tt_title = _("TOWER_ALCHEMIST_NAME"),
 			tt_desc = _("TOWER_ALCHEMIST_DESCRIPTION")
 		}),
@@ -515,98 +478,84 @@ return {
 		M(tpl.upgrade, {
 			action_arg = "tower_totem",
 			image = "main_icons_0026",
-			place = 10,
 			tt_title = _("TOWER_TOTEM_NAME"),
 			tt_desc = _("TOWER_TOTEM_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_archer_dwarf",
 			image = "main_icons_0034",
-			place = 11,
 			tt_title = _("TOWER_ARCHER_DWARF_NAME"),
 			tt_desc = _("TOWER_ARCHER_DWARF_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_pirate_watchtower",
 			image = "main_icons_0032",
-			place = 12,
 			tt_title = _("TOWER_PIRATE_WATCHTOWER_NAME"),
 			tt_desc = _("TOWER_PIRATE_WATCHTOWER_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_arcane",
 			image = "kr3_main_icons_0005",
-			place = 13,
 			tt_title = _("TOWER_ARCANE_NAME"),
 			tt_desc = _("TOWER_ARCANE_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_silver",
 			image = "kr3_main_icons_0006",
-			place = 14,
 			tt_title = _("TOWER_SILVER_NAME"),
 			tt_desc = _("TOWER_SILVER_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_dark_elf_lvl4",
 			image = "kr5_main_icons_0032",
-			place = 15,
 			tt_title = _("TOWER_DARK_ELF_LVL4_NAME"),
 			tt_desc = _("TOWER_DARK_ELF_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_sand_lvl4",
 			image = "kr5_main_icons_0013",
-			place = 16,
 			tt_title = _("TOWER_SAND_LVL4_NAME"),
 			tt_desc = _("TOWER_SAND_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_royal_archers_lvl4",
 			image = "kr5_main_icons_0002",
-			place = 17,
 			tt_title = _("TOWER_ROYAL_ARCHERS_LVL4_NAME"),
 			tt_desc = _("TOWER_ROYAL_ARCHERS_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_ballista_lvl4",
 			image = "kr5_main_icons_0010",
-			place = 18,
 			tt_title = _("TOWER_BALLISTA_LVL4_NAME"),
 			tt_desc = _("TOWER_BALLISTA_LVL4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_shadow_archer",
 			image = "kr4_main_icons_0001",
-			place = 19,
 			tt_title = _("TOWER_SHADOW_ARCHER_NAME"),
 			tt_desc = _("TOWER_SHADOW_ARCHER_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_bone_flingers",
 			image = "kr4_main_icons_0009",
-			place = 20,
 			tt_title = _("TOWER_BONE_FLINGERS_NAME"),
 			tt_desc = _("TOWER_BONE_FLINGERS_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_ogre_shipwreck",
 			image = "kr4_main_icons_0022",
-			place = 21,
 			tt_title = _("TOWER_OGRE_SHIPWRECK_NAME"),
 			tt_desc = _("TOWER_OGRE_SHIPWRECK_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_goblirang",
 			image = "kr4_main_icons_0008",
-			place = 22,
 			tt_title = _("TOWER_GOBLIRANG_NAME"),
 			tt_desc = _("TOWER_GOBLIRANG_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_shaolin",
 			image = "kr4_main_icons_0018",
-			place = 23,
 			tt_title = _("TOWER_SHAOLIN_NAME"),
 			tt_desc = _("TOWER_SHAOLIN_DESCRIPTION")
 		}),
@@ -614,7 +563,6 @@ return {
 			action_arg = "tower_swamp_monster",
 			type = "swamp_monster",
 			image = "kr4_main_icons_0019",
-			place = 24,
 			tt_title = _("TOWER_SWAMP_MONSTER_NAME"),
 			tt_desc = _("TOWER_SWAMP_MONSTER_DESCRIPTION")
 		}),
@@ -622,7 +570,6 @@ return {
 			action_arg = "tower_archers",
 			type = "archers",
 			image = "kr6_quickmenu_main_icon_archers",
-			place = 25,
 			tt_title = _("TOWER_ARCHERS_NAME"),
 			tt_desc = _("TOWER_ARCHERS_DESCRIPTION")
 		}),
@@ -630,7 +577,6 @@ return {
 			action_arg = "tower_elf_ranger",
 			type = "elf_ranger",
 			image = "kr6_quickmenu_main_icon_rangers",
-			place = 26,
 			tt_title = _("TOWER_ELF_RANGER_NAME"),
 			tt_desc = _("TOWER_ELF_RANGER_DESCRIPTION")
 		}),
@@ -769,84 +715,72 @@ return {
 		M(tpl.upgrade, {
 			action_arg = "tower_templar",
 			image = "main_icons_0023",
-			place = 10,
 			tt_title = _("TOWER_TEMPLAR_NAME"),
 			tt_desc = _("TOWER_TEMPLAR_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_assassin",
 			image = "main_icons_0024",
-			place = 11,
 			tt_title = _("TOWER_ASSASSIN_NAME"),
 			tt_desc = _("TOWER_ASSASSIN_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_barrack_dwarf",
 			image = "main_icons_0015",
-			place = 12,
 			tt_title = _("TOWER_BARRACK_DWARF_NAME"),
 			tt_desc = _("TOWER_BARRACK_DWARF_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_barrack_amazonas",
 			image = "main_icons_0033",
-			place = 13,
 			tt_title = _("TOWER_BARRACK_AMAZONAS_NAME"),
 			tt_desc = _("TOWER_BARRACK_AMAZONAS_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_barrack_mercenaries",
 			image = "main_icons_0030",
-			place = 14,
 			tt_title = _("TOWER_BARRACK_MERCENARIES_NAME"),
 			tt_desc = _("TOWER_BARRACK_MERCENARIES_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_barrack_pirates",
 			image = "main_icons_0032",
-			place = 15,
 			tt_title = _("TOWER_BARRACK_PIRATES_NAME"),
 			tt_desc = _("TOWER_BARRACK_PIRATES_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_blade",
 			image = "kr3_main_icons_0001",
-			place = 16,
 			tt_title = _("TOWER_BLADE_NAME"),
 			tt_desc = _("TOWER_BLADE_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_forest",
 			image = "kr3_main_icons_0002",
-			place = 17,
 			tt_title = _("TOWER_FOREST_NAME"),
 			tt_desc = _("TOWER_FOREST_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_drow",
 			image = "kr3_main_icons_0014",
-			place = 18,
 			tt_title = _("TOWER_DROW_NAME"),
 			tt_desc = _("TOWER_DROW_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_ewok",
 			image = "kr3_main_icons_0009",
-			place = 19,
 			tt_title = _("TOWER_EWOK_NAME"),
 			tt_desc = _("TOWER_EWOK_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_baby_ashbite",
 			image = "kr3_main_icons_0010",
-			place = 20,
 			tt_title = _("TOWER_BABY_ASHBITE_BROKEN_NAME"),
 			tt_desc = _("TOWER_BABY_ASHBITE_BROKEN_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_pandas_lvl4",
 			image = "kr5_main_icons_0049",
-			place = 21,
 			tt_title = _("TOWER_PANDAS_LVL4_NAME"),
 			tt_desc = _("TOWER_PANDAS_LVL4_DESCRIPTION")
 		}),
@@ -854,7 +788,6 @@ return {
 			action_arg = "tower_rocket_gunners_lvl4",
 			type = "rocket_gunners",
 			image = "kr5_main_icons_0009",
-			place = 22,
 			tt_title = _("TOWER_ROCKET_GUNNERS_LVL4_NAME"),
 			tt_desc = _("TOWER_ROCKET_GUNNERS_LVL4_DESCRIPTION")
 		}),
@@ -862,7 +795,6 @@ return {
 			action_arg = "tower_dwarf_lvl4",
 			type = "dwarf",
 			image = "kr5_main_icons_0039",
-			place = 23,
 			tt_title = _("TOWER_DWARF_LVL4_NAME"),
 			tt_desc = _("TOWER_DWARF_LVL4_DESCRIPTION")
 		}),
@@ -870,7 +802,6 @@ return {
 			action_arg = "tower_ghost_lvl4",
 			type = "ghost",
 			image = "kr5_main_icons_0016",
-			place = 24,
 			tt_title = _("TOWER_GHOST_LVL4_NAME"),
 			tt_desc = _("TOWER_GHOST_LVL4_DESCRIPTION")
 		}),
@@ -878,7 +809,6 @@ return {
 			action_arg = "tower_paladin_covenant_lvl4",
 			type = "paladin_covenant",
 			image = "kr5_main_icons_0001",
-			place = 25,
 			tt_title = _("TOWER_PALADIN_COVENANT_LVL4_NAME"),
 			tt_desc = _("TOWER_PALADIN_COVENANT_LVL4_DESCRIPTION")
 		}),
@@ -886,7 +816,6 @@ return {
 			action_arg = "tower_orc_warriors",
 			type = "orc_warriors",
 			image = "kr4_main_icons_0002",
-			place = 26,
 			tt_title = _("TOWER_ORC_WARRIORS_NAME"),
 			tt_desc = _("TOWER_ORC_WARRIORS_DESCRIPTION")
 		}),
@@ -894,7 +823,6 @@ return {
 			action_arg = "tower_dark_knights",
 			type = "dark_knights",
 			image = "kr4_main_icons_0005",
-			place = 27,
 			tt_title = _("TOWER_DARK_KNIGHTS_NAME"),
 			tt_desc = _("TOWER_DARK_KNIGHTS_DESCRIPTION")
 		}),
@@ -902,7 +830,6 @@ return {
 			action_arg = "tower_grim_cemetery",
 			type = "grim_cemetery",
 			image = "kr4_main_icons_0010",
-			place = 28,
 			tt_title = _("TOWER_GRIM_CEMETERY_NAME"),
 			tt_desc = _("TOWER_GRIM_CEMETERY_DESCRIPTION")
 		}),
@@ -910,7 +837,6 @@ return {
 			action_arg = "tower_twilight_elves_barrack",
 			type = "twilight_elves_barrack",
 			image = "kr4_main_icons_0011",
-			place = 29,
 			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_NAME"),
 			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_DESCRIPTION")
 		}),
@@ -918,7 +844,6 @@ return {
 			action_arg = "tower_stage_28_priests_barrack",
 			type = "tower_priests_barrack",
 			image = "kr5_main_icons_0041",
-			place = 30,
 			tt_title = _("TOWER_STAGE_28_PRIESTS_BARRACK_NAME"),
 			tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_DESCRIPTION")
 		}),
@@ -926,7 +851,6 @@ return {
 			action_arg = "tower_knights",
 			type = "knights",
 			image = "kr6_quickmenu_main_icon_knights",
-			place = 31,
 			tt_title = _("TOWER_KNIGHTS_NAME"),
 			tt_desc = _("TOWER_KNIGHTS_DESCRIPTION")
 		}),
@@ -934,7 +858,6 @@ return {
 			action_arg = "tower_wildcat",
 			type = "wildcat",
 			image = "kr6_quickmenu_main_icon_wildcat",
-			place = 32,
 			tt_title = _("TOWER_WILDCAT_NAME"),
 			tt_desc = _("TOWER_WILDCAT_DESCRIPTION")
 		}),
@@ -942,7 +865,6 @@ return {
 			action_arg = "tower_miners",
 			type = "miners",
 			image = "kr6_quickmenu_main_icon_dwarven_miners",
-			place = 33,
 			tt_title = _("TOWER_MINERS_NAME"),
 			tt_desc = _("TOWER_MINERS_DESCRIPTION")
 		}),
