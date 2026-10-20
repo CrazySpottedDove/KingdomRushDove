@@ -2169,15 +2169,24 @@ function KScrollList:on_exit()
 -- 拖拽状态只在 on_up（鼠标松开）时才清除
 end
 
-function KScrollList:on_scroll(button)
+---按像素滚动内容，实际位置由 update 平滑插值
+---@param amount number 正数向上滚，负数向下滚
+---@return boolean 是否发生了滚动
+function KScrollList:scroll_by(amount)
 	if self._bottom_y <= self.size.y then
 		return false
 	end
 
-	-- 累积到目标位置，由 update 做平滑插值
 	local current = self._target_y ~= nil and self._target_y or self.scroll_origin_y
 
-	self._target_y = km.clamp(-(self._bottom_y - self.size.y), 0, current + (button == "wu" and 1 or -1) * self.scroll_amount)
+	self._target_y = km.clamp(-(self._bottom_y - self.size.y), 0, current + amount)
+
+	return true
+end
+
+function KScrollList:on_scroll(button)
+	-- 累积到目标位置，由 update 做平滑插值
+	self:scroll_by((button == "wu" and 1 or -1) * self.scroll_amount)
 
 	return false
 end

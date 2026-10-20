@@ -552,8 +552,6 @@ function game_gui:init(w, h, game)
 	layer_gui_game:add_child(tower_range_upgrade)
 	layer_gui_game:add_child(meleerange)
 	layer_gui_game:add_child(rangedrange)
-	layer_gui_game:add_child(towertooltip)
-	layer_gui_game:add_child(towermenu)
 
 	if configer.ui_settings().tower_menu_enabled then
 		local criketmenu = CriketMenu:new()
@@ -577,6 +575,8 @@ function game_gui:init(w, h, game)
 	layer_gui_hud:add_child(hud_pause)
 	layer_gui_hud:add_child(hud_noti_queue)
 	layer_gui_hud:add_child(hud_bottom)
+	layer_gui_hud:add_child(towertooltip)
+	layer_gui_hud:add_child(towermenu)
 	layer_gui_hud:add_child(mouse_pointer)
 
 	layer_gui_top:add_child(overlay)
@@ -868,6 +868,11 @@ function game_gui:wheelmoved(dx, dy)
 	if time_rewind.panel_open then
 		self.window:wheelmoved(dx, dy)
 
+		return true
+	end
+
+	-- 升级网格打开时滚轮用于连续滚动菜单，禁止地图缩放；Android 只允许翻页按钮
+	if not IS_ANDROID and not self.towermenu.hidden and self.towermenu:scroll_grid(dy) then
 		return true
 	end
 end
@@ -8316,6 +8321,8 @@ TowerMenu = class("TowerMenu", KImageView)
 function TowerMenu:initialize()
 	TowerMenu.super.initialize(self, "gui_ring")
 	self._game_pos = V.v(0, 0)
+	self._ring_image_ss = self.image_ss
+	self.buttons = {}
 	self.can_drag = false
 	self.propagate_on_click = true
 	self.propagate_on_down = true
@@ -8379,54 +8386,169 @@ function TowerMenu:show(tower_menu)
 		end
 	end
 
-	self:remove_children()
+	local grid_config = data.tower_menu_grid
+	local grid_items = {}
 
-	for _, item in pairs(tm) do
+	for i = 1, #tm do
+		if tm[i].action == "tw_upgrade" then
+			grid_items[#grid_items + 1] = tm[i]
+		end
+	end
+
+	local use_grid = #grid_items > grid_config.cols * grid_config.rows
+
+	if use_grid then
+		self.image_ss = nil
+	else
+		self.image_ss = self._ring_image_ss
+	end
+
+	self:remove_children()
+	self.buttons = {}
+	self.grid_list = nil
+	self.grid_prev_button = nil
+	self.grid_next_button = nil
+
+	local grid_bg
+
+	if use_grid then
+		grid_bg = KView:new(v(1, 1))
+		grid_bg.hidden = true
+		grid_bg.colors.background = grid_config.background_color
+		grid_bg.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, 1, 1, grid_config.background_radius, grid_config.background_radius}
+		}
+
+		self:add_child(grid_bg)
+	end
+
+	local function create_menu_button(item)
 		if item.action == "tw_upgrade" and game_gui.game.store.level.locked_towers and table.contains(game_gui.game.store.level.locked_towers, item.action_arg) then
 			local b = KImageView:new("main_icons_0014")
-
-			b.pos = V.vclone(data.tower_menu_button_places[item.place])
-			b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
-
-			self:add_child(b)
-
 			local bo = KImageView:new("main_icons_0000")
 
 			bo.x = math.floor((b.size.x - bo.size.x) * 0.5)
 			bo.y = math.floor((b.size.y - bo.size.y) * 0.5)
 
 			b:add_child(bo)
+
+			return b
 		elseif item.action == "tw_sell" and entity.tower and not entity.tower.can_be_sold then
-		-- block empty
+			return nil
+		end
+
+		local b = TowerMenuButton:new(item, entity)
+
+		b.item_props = item
+
+		if item.action == "tw_none" then
+			b:disable()
 		else
-			local b = TowerMenuButton:new(item, entity)
-
-			b.pos = V.vclone(data.tower_menu_button_places[item.place])
-			b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
-			b.item_props = item
-
-			if item.action == "tw_none" then
-				b:disable()
-			else
-				function b.on_click(this, button, x, y)
-					if not self.tweening and not this.click_disabled then
-						self:button_callback(this, item, entity, button, x, y)
-					end
-				end
-
-				function b.on_enter(this, drag_view)
-					if not self.tweening then
-						self:button_enter(this, item, entity)
-					end
-				end
-
-				function b.on_exit(this, drag_view)
-					self:button_exit(this, item, entity)
+			function b.on_click(this, button, x, y)
+				if not self.tweening and not this.click_disabled then
+					self:button_callback(this, item, entity, button, x, y)
 				end
 			end
 
-			self:add_child(b)
+			function b.on_enter(this, drag_view)
+				if not self.tweening then
+					self:button_enter(this, item, entity)
+				end
+			end
+
+			function b.on_exit(this, drag_view)
+				self:button_exit(this, item, entity)
+			end
 		end
+
+		table.insert(self.buttons, b)
+
+		return b
+	end
+
+	local function place_button(b, place)
+		b.pos = V.vclone(place)
+		b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
+	end
+
+	for i = 1, #tm do
+		local item = tm[i]
+
+		if not (use_grid and item.action == "tw_upgrade") then
+			local b = create_menu_button(item)
+
+			if b then
+				place_button(b, data.tower_menu_button_places[item.place])
+				self:add_child(b)
+			end
+		end
+	end
+
+	if use_grid then
+		local list = KScrollList:new(V.vclone(grid_config.view_size))
+
+		list.pos = V.vclone(grid_config.view_pos)
+		list.scroller_hidden = true
+		list.scroll_amount = grid_config.y_unit
+		-- 网格只由滚轮和翻页按钮驱动，禁用 KScrollList 自带的拖拽滚动
+		list.on_down = nil
+		list.on_up = nil
+
+		self:add_child(list)
+		self.grid_list = list
+
+		local row_count = math.ceil(#grid_items / grid_config.cols)
+
+		for r = 1, row_count do
+			local row = KView:new(v(grid_config.view_size.x, grid_config.y_unit))
+
+			list:add_row(row)
+
+			for c = 1, grid_config.cols do
+				local item = grid_items[(r - 1) * grid_config.cols + c]
+
+				if item then
+					local b = create_menu_button(item)
+
+					if b then
+						b.pos = v((c - 0.5) * grid_config.x_unit - b.size.x * 0.5, (grid_config.y_unit - b.size.y) * 0.5)
+						row:add_child(b)
+					end
+				end
+			end
+		end
+
+		list:add_row(KView:new(v(grid_config.view_size.x, grid_config.view_bottom_padding)))
+
+		local function add_page_button(image, page_pos, amount)
+			local size = grid_config.page_button_size
+			local holder = KView:new(V.vclone(size))
+
+			holder.pos = v(page_pos.x - size.x * 0.5, page_pos.y - size.y * 0.5)
+			holder.propagate_on_click = true
+
+			local ss = I:s(image)
+			local arrow = KImageView:new(image, nil, 36 / (ss.size[1] * ss.ref_scale))
+
+			arrow.pos = v((size.x - arrow.size.x) * 0.5, (size.y - arrow.size.y) * 0.5)
+			holder.arrow = arrow
+			holder:add_child(arrow)
+
+			holder.on_click = function(this, button, x, y)
+				if not self.tweening and not this.click_disabled then
+					game_gui.towertooltip:hide()
+					list:scroll_by(amount * grid_config.rows * grid_config.y_unit)
+				end
+			end
+
+			self:add_child(holder)
+
+			return holder
+		end
+
+		self.grid_prev_button = add_page_button(grid_config.page_prev_image, grid_config.page_prev_pos, 1)
+		self.grid_next_button = add_page_button(grid_config.page_next_image, grid_config.page_next_pos, -1)
 	end
 
 	if self.tweeners then
@@ -8442,28 +8564,71 @@ function TowerMenu:show(tower_menu)
 	-- 统一处理菜单可视性
 	do
 		local visible_coords = game_gui.game.store.visible_coords
-		local x_left = 0
-		local x_right = 0
-		local y_top = 0
-		local y_bottom = 0
-		for i = 1, #tm do
-			local item = tm[i]
-			local button_offset = data.tower_menu_button_places[item.place]
-			if x_left > button_offset.x then
-				x_left = button_offset.x
+		local x_left, x_right, y_top, y_bottom
+
+		if use_grid then
+			x_left = grid_config.view_pos.x
+			x_right = grid_config.view_pos.x + grid_config.view_size.x
+			y_top = grid_config.view_pos.y
+			y_bottom = grid_config.view_pos.y + grid_config.view_size.y
+
+			for _, b in ipairs({self.grid_prev_button, self.grid_next_button}) do
+				x_left = math.min(x_left, b.pos.x)
+				x_right = math.max(x_right, b.pos.x + b.size.x)
+				y_top = math.min(y_top, b.pos.y)
+				y_bottom = math.max(y_bottom, b.pos.y + b.size.y)
 			end
-			if x_right < button_offset.x then
-				x_right = button_offset.x
+
+			for i = 1, #tm do
+				local item = tm[i]
+
+				if item.action ~= "tw_upgrade" then
+					local p = data.tower_menu_button_places[item.place]
+
+					x_left = math.min(x_left, p.x - 25)
+					x_right = math.max(x_right, p.x + 25)
+					y_top = math.min(y_top, p.y - 25)
+					y_bottom = math.max(y_bottom, p.y + 25)
+				end
 			end
-			if y_top < -button_offset.y then
-				y_top = -button_offset.y
-			end
-			if y_bottom > -button_offset.y then
-				y_bottom = -button_offset.y
+		else
+			x_left = 0
+			x_right = 0
+			y_top = 0
+			y_bottom = 0
+
+			for i = 1, #tm do
+				local item = tm[i]
+				local button_offset = data.tower_menu_button_places[item.place]
+
+				if x_left > button_offset.x then
+					x_left = button_offset.x
+				end
+				if x_right < button_offset.x then
+					x_right = button_offset.x
+				end
+				if y_top < -button_offset.y then
+					y_top = -button_offset.y
+				end
+				if y_bottom > -button_offset.y then
+					y_bottom = -button_offset.y
+				end
 			end
 		end
+
+		if use_grid then
+			local pad = grid_config.background_padding
+
+			x_left, x_right, y_top, y_bottom = x_left - pad, x_right + pad, y_top - pad, y_bottom + pad
+			grid_bg.pos = v(x_left, y_top)
+			grid_bg.size = v(x_right - x_left, y_bottom - y_top)
+			grid_bg.shape.args = {"fill", 0, 0, grid_bg.size.x, grid_bg.size.y, grid_config.background_radius, grid_config.background_radius}
+			grid_bg.hidden = false
+		end
+
 		x_left, x_right = x_left - data.tower_menu_center_x - 25, x_right - data.tower_menu_center_x + 25
-		y_top, y_bottom = y_top + data.tower_menu_center_y, y_bottom + data.tower_menu_center_y
+		y_top, y_bottom = data.tower_menu_center_y - y_top, data.tower_menu_center_y - y_bottom
+
 		if ewy_g + y_top > visible_coords.top then
 			ewy_g = visible_coords.top - y_top
 		end
@@ -8554,7 +8719,12 @@ function TowerMenu:update(dt)
 
 	local store = game_gui.game.store
 
-	for _, c in ipairs(self.children) do
+	if self.grid_list then
+		self.grid_list:update(dt)
+		self:update_grid_page_buttons()
+	end
+
+	for _, c in ipairs(self.buttons) do
 		if c:isInstanceOf(TowerMenuButton) and c.item_props then
 			c:update(dt)
 			if c.item_props.action == "tw_point" and e.user_selection then
@@ -8703,6 +8873,37 @@ function TowerMenu:update(dt)
 			end
 		end
 	end
+end
+
+function TowerMenu:update_grid_page_buttons()
+	local list = self.grid_list
+	local prev_button, next_button = self.grid_prev_button, self.grid_next_button
+
+	if not list or not prev_button or not next_button then
+		return
+	end
+
+	local offset = list._target_y ~= nil and list._target_y or list.scroll_origin_y
+	local max_offset = -(list._bottom_y - list.size.y)
+	local at_top = offset >= -0.5
+	local at_bottom = offset <= max_offset + 0.5
+
+	prev_button.click_disabled = at_top
+	prev_button.arrow.alpha = at_top and 0.35 or 1
+	next_button.click_disabled = at_bottom
+	next_button.arrow.alpha = at_bottom and 0.35 or 1
+end
+
+function TowerMenu:scroll_grid(dy)
+	local list = self.grid_list
+
+	if not list or dy == 0 then
+		return false
+	end
+
+	game_gui.towertooltip:hide()
+
+	return list:scroll_by(dy > 0 and list.scroll_amount or -list.scroll_amount)
 end
 
 TowerMenu.draw = KF.draw_without_clip_and_scroll

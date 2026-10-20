@@ -1,1 +1,1 @@
-return {{date="2026-10-20",author="CrazySpottedDove",message="feat: 新增防御塔：炼金术士小屋"},{date="2026-10-20",author="CrazySpottedDove",message="feat: 设置炼金术士小屋于214关解锁"}}
+return {{date="2026-10-20",author="CrazySpottedDove",message="feat: 新增防御塔：炼金术士小屋"},{date="2026-10-20",author="CrazySpottedDove",message="feat: 设置炼金术士小屋于214关解锁"},{date="2026-10-20",author="CrazySpottedDove",message="feat: 使防御塔菜单按钮过多时，按照网格收纳。可以滑动鼠标中键来查看，也可以点击翻页。"}}
