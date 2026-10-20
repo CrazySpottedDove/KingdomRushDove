@@ -1388,7 +1388,8 @@ upgrades.soldiers = {
 	"soldier_wildcat",
 	"soldier_miners",
 	"soldier_miners_skill_a",
-	"soldier_sunray_master"
+	"soldier_sunray_master",
+	"soldier_alchemist"
 }
 
 upgrades.barrack_soldiers = {
@@ -1601,7 +1602,9 @@ upgrades.engineer_bombs = {
 	"bullet_catapult_skill_a",
 	"bullet_catapult_ultimate",
 	"bullet_culverine_air",
-	"bullet_culverine_skill_b_air"
+	"bullet_culverine_skill_b_air",
+	"bullet_alchemist_basic",
+	"bullet_alchemist_skill_c"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1624,7 +1627,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_melting_furnace",
 	"tower_sandworm",
 	"tower_catapult",
-	"tower_culverine"
+	"tower_culverine",
+	"tower_alchemist"
 }
 
 function upgrades:bomb_damage_mul(damage_factor)
@@ -1644,6 +1648,11 @@ function upgrades:bomb_damage_mul(damage_factor)
 	mul_dmg(T("aura_bullet_culverine").aura, damage_factor)
 	mul_dmg(T("aura_bullet_culverine_skill_b").aura, damage_factor)
 	mul_dmg(T("aura_culverine_ultimate").aura, damage_factor)
+	mul_dmg(T("aura_alchemist_hit_green").aura, damage_factor)
+
+	local alchemist_aura_c = T("aura_alchemist_skill_c").aura
+	mul_dmg(alchemist_aura_c, damage_factor)
+	alchemist_aura_c.damage_inc = alchemist_aura_c.damage_inc * damage_factor
 end
 
 function upgrades:mage_bolt_damage_mul(damage_factor)
@@ -1869,9 +1878,9 @@ function upgrades:patch_templates(max_level)
 			t.unit.damage_factor = t.unit.damage_factor * 1.3
 		end
 
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in ipairs(barrack_soldiers) do
 			local t = T(n)
-			if t.health.hp_max and not table.contains(special_soldiers, n) then
+			if t.health.hp_max and not table.arraycontains(special_soldiers, n) then
 				t.health.hp_max = t.health.hp_max * 0.8
 			end
 		end
@@ -2217,6 +2226,13 @@ function upgrades:patch_templates(max_level)
 		mul_dmg(T("aura_bullet_culverine").aura, u.damage_factor)
 		mul_dmg(T("aura_bullet_culverine_skill_b").aura, u.damage_factor)
 		mul_dmg(T("aura_culverine_ultimate").aura, u.damage_factor)
+
+		-- 炼金术士主伤害在 aura 上，吃不到 magic dust 的命中 hook，按惯例直接补伤害
+		mul_dmg(T("aura_alchemist_hit_green").aura, u.damage_factor)
+
+		local alchemist_dust_aura_c = T("aura_alchemist_skill_c").aura
+		mul_dmg(alchemist_dust_aura_c, u.damage_factor)
+		alchemist_dust_aura_c.damage_inc = alchemist_dust_aura_c.damage_inc * u.damage_factor
 	end
 
 	u = self:get_upgrade("engineer_diffusion")
@@ -2255,6 +2271,12 @@ function upgrades:patch_templates(max_level)
 		mul_field(T("bullet_culverine_skill_b_air").bullet, "damage_radius", u.radius_factor)
 		scale_sprite(T("fx_bullet_culverine_hit").render.sprites[1], u.radius_factor)
 		scale_sprite(T("fx_bullet_culverine_skill_b_hit").render.sprites[1], u.radius_factor)
+
+		for _, name in ipairs({"aura_alchemist_hit_green", "aura_alchemist_skill_a", "aura_alchemist_skill_c"}) do
+			local t = T(name)
+			mul_field(t.aura, "radius", u.radius_factor)
+			scale_sprite(t.render.sprites[1], u.radius_factor)
+		end
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")
@@ -2299,7 +2321,9 @@ function upgrades:patch_templates(max_level)
 			T("tower_catapult").attacks.list[3],
 			T("tower_catapult").attacks.list[4],
 			T("tower_culverine").attacks.list[2],
-			T("tower_culverine").attacks.list[3]
+			T("tower_culverine").attacks.list[3],
+			T("tower_alchemist").attacks.list[2],
+			T("tower_alchemist").attacks.list[3]
 		}) do
 			mul_field(a, "cooldown", cd)
 		end
@@ -2330,6 +2354,7 @@ function upgrades:patch_templates(max_level)
 		mul_arr(T("tower_sandworm").powers.slime.cooldown, cd)
 		mul_arr(T("tower_sandworm").powers.eat.cooldown, cd)
 		mul_field(T("aura_rotten_forest_thorn").aura, "cooldown", cd)
+		mul_field(T("controller_alchemist_skill_b"), "cooldown", cd)
 	end
 
 	u = self:get_upgrade("engineer_efficiency")
@@ -2342,6 +2367,13 @@ function upgrades:patch_templates(max_level)
 		mul_dmg(T("bullet_culverine_air").bullet, 1.25)
 		mul_dmg(T("bullet_culverine_skill_b_air").bullet, 1.25)
 		mul_dmg(T("aura_culverine_ultimate").aura, 1.25)
+		mul_dmg(T("bullet_alchemist_basic").bullet, 1.25)
+		mul_dmg(T("bullet_alchemist_skill_c").bullet, 1.25)
+		mul_dmg(T("aura_alchemist_hit_green").aura, 1.25)
+
+		local alchemist_efficiency_aura_c = T("aura_alchemist_skill_c").aura
+		mul_dmg(alchemist_efficiency_aura_c, 1.25)
+		alchemist_efficiency_aura_c.damage_inc = alchemist_efficiency_aura_c.damage_inc * 1.25
 	end
 
 	if self.list_id == 1 or self.list_id == 2 then
