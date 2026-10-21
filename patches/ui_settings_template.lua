@@ -7,5 +7,7 @@ return {
 	hero_menu_enabled = false,
 	tower_menu_enabled = false,
 	game_gui_minified = IS_ANDROID and true or false,
-	damage_trace_enabled = false
+	damage_trace_enabled = false,
+	tower_menu_grid_rows = 4,
+	tower_menu_grid_cols = 7
 }

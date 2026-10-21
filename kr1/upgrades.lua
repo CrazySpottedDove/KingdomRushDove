@@ -1319,7 +1319,10 @@ upgrades.arrows = {
 	"bullet_elf_ranger_skill_a",
 	"bullet_elf_ranger_skill_b",
 	"bullet_elf_ranger_skill_c",
-	"bullet_elf_ranger_skill_c_bounce_clone"
+	"bullet_elf_ranger_skill_c_bounce_clone",
+	"bullet_crossbows",
+	"bullet_crossbows_skill_a",
+	"bullet_crossbows_skill_c"
 }
 
 upgrades.soldiers = {
@@ -1389,7 +1392,8 @@ upgrades.soldiers = {
 	"soldier_miners",
 	"soldier_miners_skill_a",
 	"soldier_sunray_master",
-	"soldier_alchemist"
+	"soldier_alchemist",
+	"soldier_crossbows_ult"
 }
 
 upgrades.barrack_soldiers = {
@@ -1435,8 +1439,7 @@ upgrades.barrack_soldiers = {
 	"soldier_knights",
 	"soldier_wildcat",
 	"soldier_miners",
-	"soldier_miners_skill_a",
-	"soldier_sunray_master"
+	"soldier_miners_skill_a"
 }
 
 upgrades.towers_with_barrack = {

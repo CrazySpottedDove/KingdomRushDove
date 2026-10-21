@@ -406,7 +406,7 @@ local function create_hero(store, name, pos, force_full_level)
 	hero.hero.level = 1
 
 	if (configer.config().enabled and configer.config().hero_level_at_start > 1 or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
-		local level = force_full_level and 10 or math.min(math.ceil(configer.config().hero_level_at_start), 10)
+		local level = (store.level_mode_override == GAME_MODE_ENDLESS or force_full_level) and 10 or math.min(math.ceil(configer.config().hero_level_at_start), 10)
 		if hero.hero.fn_level_up then
 			for i = 1, level do
 				hero.hero.level = i

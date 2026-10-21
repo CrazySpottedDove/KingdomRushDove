@@ -8433,6 +8433,8 @@ function UISettingsPanelView:initialize(sw, sh, keyboard, controller)
 		coordinate_enabled = _("MAP_UI_UISET_COORDINATE"),
 		hero_menu_enabled = _("MAP_UI_UISET_HERO_MENU"),
 		tower_menu_enabled = _("MAP_UI_UISET_TOWER_MENU"),
+		tower_menu_grid_rows = _("MAP_UI_UISET_TOWER_MENU_GRID_ROWS"),
+		tower_menu_grid_cols = _("MAP_UI_UISET_TOWER_MENU_GRID_COLS"),
 		game_gui_minified = _("MAP_UI_UISET_GAME_GUI_MINIFIED"),
 		damage_trace_enabled = _("MAP_UI_UISET_DAMAGE_TRACE")
 	})

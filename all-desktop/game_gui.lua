@@ -575,8 +575,8 @@ function game_gui:init(w, h, game)
 	layer_gui_hud:add_child(hud_pause)
 	layer_gui_hud:add_child(hud_noti_queue)
 	layer_gui_hud:add_child(hud_bottom)
-	layer_gui_hud:add_child(towertooltip)
 	layer_gui_hud:add_child(towermenu)
+	layer_gui_hud:add_child(towertooltip)
 	layer_gui_hud:add_child(mouse_pointer)
 
 	layer_gui_top:add_child(overlay)
@@ -8386,16 +8386,21 @@ function TowerMenu:show(tower_menu)
 		end
 	end
 
-	local grid_config = data.tower_menu_grid
+	local grid_config = data.tower_menu_grid(configer.ui_settings())
+
+	local non_grid_actions = {"tw_sell", "tw_rally", "tw_point", "tw_change_mode"}
+	local function is_grid_item(tower_menu_item)
+		return not table.arraycontains(non_grid_actions, tower_menu_item.action)
+	end
 	local grid_items = {}
 
 	for i = 1, #tm do
-		if tm[i].action == "tw_upgrade" then
+		if is_grid_item(tm[i]) then
 			grid_items[#grid_items + 1] = tm[i]
 		end
 	end
 
-	local use_grid = #grid_items > grid_config.cols * grid_config.rows
+	local use_grid = #grid_items > math.min(grid_config.cols * grid_config.rows, 15)
 
 	if use_grid then
 		self.image_ss = nil
@@ -8406,6 +8411,7 @@ function TowerMenu:show(tower_menu)
 	self:remove_children()
 	self.buttons = {}
 	self.grid_list = nil
+	self.grid_bg = nil
 	self.grid_prev_button = nil
 	self.grid_next_button = nil
 
@@ -8421,6 +8427,7 @@ function TowerMenu:show(tower_menu)
 		}
 
 		self:add_child(grid_bg)
+		self.grid_bg = grid_bg
 	end
 
 	local function create_menu_button(item)
@@ -8470,7 +8477,7 @@ function TowerMenu:show(tower_menu)
 	for i = 1, #tm do
 		local item = tm[i]
 
-		if not (use_grid and item.action == "tw_upgrade") then
+		if not (use_grid and is_grid_item(item)) then
 			local b = create_menu_button(item)
 
 			if b then
@@ -8869,6 +8876,40 @@ function TowerMenu:update(dt)
 			end
 		end
 	end
+end
+
+function TowerMenu:get_tooltip_bounds(zoom)
+	local x1, y1, x2, y2 = 0, 0, 0, 0
+
+	if self.image_ss then
+		x2, y2 = self.size.x, self.size.y
+	end
+
+	local function include(child)
+		if not child or child.hidden then
+			return
+		end
+
+		local sx, sy = child.scale.x, child.scale.y
+		local cx1 = child.pos.x - child.anchor.x * sx
+		local cy1 = child.pos.y - child.anchor.y * sy
+		local cx2 = cx1 + child.size.x * sx
+		local cy2 = cy1 + child.size.y * sy
+
+		x1, y1 = math.min(x1, cx1), math.min(y1, cy1)
+		x2, y2 = math.max(x2, cx2), math.max(y2, cy2)
+	end
+
+	for _, b in ipairs(self.buttons) do
+		include(b)
+	end
+
+	include(self.grid_bg)
+	include(self.grid_list)
+	include(self.grid_prev_button)
+	include(self.grid_next_button)
+
+	return self.pos.x + (x1 - self.anchor.x) * zoom, self.pos.y + (y1 - self.anchor.y) * zoom, self.pos.x + (x2 - self.anchor.x) * zoom, self.pos.y + (y2 - self.anchor.y) * zoom
 end
 
 function TowerMenu:update_grid_page_buttons()
@@ -9515,13 +9556,8 @@ function TowerMenuTooltip:show(entity, item)
 		self.phrase_label.pos.y = self.size.y - 22
 	end
 
-	local oy = 142
-
-	self.pos.x = game_gui.towermenu.pos.x - math.floor(self.size.x * 0.5)
-	self.pos.y = game_gui.towermenu.pos.y - self.size.y - oy - 20
-
-	if self.pos.y < self.size.y / 3 then
-		self.pos.y = game_gui.towermenu.pos.y + 76
+	if not self.hidden then
+		self:update_position()
 	end
 end
 
@@ -9534,22 +9570,46 @@ end
 -- 如果tooltip正在显示，根据相机动态更新位置和缩放
 function TowerMenuTooltip:update(dt)
 	if not self.hidden and self.current_entity and self.current_item then
-		local camera = game_gui.game.camera
-
-		-- tooltip随相机缩放
-		self.scale.x = camera.zoom
-		self.scale.y = camera.zoom
-
-		-- 基础偏移（不需要乘以zoom，因为tooltip自身会缩放）
-		local oy = 142
-
-		self.pos.x = game_gui.towermenu.pos.x - math.floor(self.size.x * camera.zoom * 0.5)
-		self.pos.y = game_gui.towermenu.pos.y - self.size.y * camera.zoom - oy - 20
-
-		if self.pos.y < self.size.y * camera.zoom / 3 then
-			self.pos.y = game_gui.towermenu.pos.y + 76
-		end
+		self:update_position()
 	end
+end
+
+---根据菜单占用区域与屏幕剩余空间，自适应选择上/下/左/右摆放
+function TowerMenuTooltip:update_position()
+	local zoom = game_gui.game.camera.zoom
+	local sw, sh = game_gui.sw, game_gui.sh
+	local tw, th = self.size.x * zoom, self.size.y * zoom
+	local mx1, my1, mx2, my2 = game_gui.towermenu:get_tooltip_bounds(zoom)
+
+	self.scale.x, self.scale.y = zoom, zoom
+
+	local margin = 8
+	local gap = 12 * zoom
+	local cx, cy = (mx1 + mx2) * 0.5, (my1 + my2) * 0.5
+	local space_top, space_bottom = my1 - margin, sh - my2 - margin
+	local space_left, space_right = mx1 - margin, sw - mx2 - margin
+	local x, y
+
+	if space_top >= th + gap then
+		x, y = cx - tw * 0.5, my1 - gap - th
+	elseif space_bottom >= th + gap then
+		x, y = cx - tw * 0.5, my2 + gap
+	elseif space_left >= tw + gap then
+		x, y = mx1 - gap - tw, cy - th * 0.5
+	elseif space_right >= tw + gap then
+		x, y = mx2 + gap, cy - th * 0.5
+	elseif space_top >= space_bottom and space_top >= space_left and space_top >= space_right then
+		x, y = cx - tw * 0.5, my1 - gap - th
+	elseif space_bottom >= space_left and space_bottom >= space_right then
+		x, y = cx - tw * 0.5, my2 + gap
+	elseif space_left >= space_right then
+		x, y = mx1 - gap - tw, cy - th * 0.5
+	else
+		x, y = mx2 + gap, cy - th * 0.5
+	end
+
+	self.pos.x = km.clamp(margin, sw - tw - margin, x)
+	self.pos.y = km.clamp(margin, sh - th - margin, y)
 end
 
 TowerMenuTooltip.draw = KF.draw_without_clip_and_scroll
