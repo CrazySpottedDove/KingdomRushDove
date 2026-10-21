@@ -1960,22 +1960,6 @@ function U.cleanup_blockers(store, blocked)
 	end
 end
 
-local function calc_explosion_protection(armor)
-	return armor * (0.2 * armor + 0.4)
-end
-
-local function calc_stab_protection(armor)
-	return armor * (2 - armor)
-end
-
-local function calc_mixed_protection(armor, magic_armor)
-	if magic_armor > armor then
-		return armor
-	else
-		return (magic_armor + armor) * 0.5
-	end
-end
-
 function U.calc_protection(health, d)
 	local protection = 0
 
@@ -1988,19 +1972,22 @@ function U.calc_protection(health, d)
 	elseif band(d.damage_type, DAMAGE_MAGICAL) ~= 0 or band(d.damage_type, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
 		protection = health.magic_armor - d.reduce_magic_armor
 	elseif band(d.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
-		protection = calc_explosion_protection(health.magic_armor - d.reduce_magic_armor)
+		protection = health.magic_armor - d.reduce_magic_armor
+		protection = protection * (0.2 * protection + 0.4)
 	elseif band(d.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
 		protection = 0
 	elseif band(d.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_RUDE)) ~= 0 then
-		protection = calc_explosion_protection(health.armor - d.reduce_armor)
+		protection = health.armor - d.reduce_armor
+		protection = protection * (0.2 * protection + 0.4)
 	elseif band(d.damage_type, DAMAGE_ELECTRICAL) ~= 0 then
 		protection = (health.armor - d.reduce_armor) * 0.5
 	elseif band(d.damage_type, DAMAGE_SHOT) ~= 0 then
 		protection = (health.armor - d.reduce_armor) * 0.7
 	elseif band(d.damage_type, DAMAGE_STAB) ~= 0 then
-		protection = calc_stab_protection(health.armor - d.reduce_armor)
+		protection = health.armor - d.reduce_armor
+		protection = protection * (2 - protection)
 	elseif band(d.damage_type, DAMAGE_MIXED) ~= 0 then
-		protection = calc_mixed_protection(health.armor - d.reduce_armor, health.magic_armor - d.reduce_magic_armor)
+		protection = (health.armor - d.reduce_armor + health.magic_armor - d.reduce_magic_armor) * 0.5
 	elseif d.damage_type == DAMAGE_NONE then
 		protection = 1
 	end
