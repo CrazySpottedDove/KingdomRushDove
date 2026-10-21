@@ -38283,7 +38283,7 @@ function scripts.mod_crossbows_skill_b.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
-	if not target or target.health.dead then
+	if not target then
 		return false
 	end
 
