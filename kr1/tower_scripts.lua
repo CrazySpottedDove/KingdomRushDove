@@ -26894,8 +26894,10 @@ function scripts.soldier_balloon_goblin.update(this, store)
 				if patrol_cd < store.tick_ts - idle_ts then
 					if this.nav_rally.pos == starting_pos then
 						this.nav_rally.pos = patrol_pos
+						this.nav_rally.center:copy(this.nav_rally.pos)
 					else
 						this.nav_rally.pos = starting_pos
+						this.nav_rally.center:copy(this.nav_rally.pos)
 					end
 
 					idle_ts = store.tick_ts

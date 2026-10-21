@@ -89,7 +89,8 @@ function M.register_templates(E)
 	E:set_template("user_power_3", tt)
 
 	tt = E:register_t_tmp("decal_power_wintersongs_wrath_elora", "decal_scripted")
-	E:add_comps(tt, "sound_events")
+	E:add_comps(tt, "sound_events", "info")
+	tt.info.i18n_key = "POWER_WINTERSONGS_WRATH"
 	tt.main_script.update = function(this, store)
 		local spikes = {}
 		local ts = store.tick_ts
