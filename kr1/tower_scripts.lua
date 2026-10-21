@@ -38097,6 +38097,8 @@ function scripts.tower_crossbows.update(this, store)
 								local spawn = s[s_sids[shooter_idx]]
 
 								b.bullet.damage_factor = this.tower.damage_factor
+								b.bullet.damage_min = b.bullet.damage_min * sa.damage_factor
+								b.bullet.damage_max = b.bullet.damage_max * sa.damage_factor
 								b.pos.x = tpos(this).x + spawn.offset.x + ba.bullet_start_offset[an].x * (spawn.flip_x and -1 or 1)
 								b.pos.y = tpos(this).y + spawn.offset.y + ba.bullet_start_offset[an].y
 								b.bullet.from:copy(b.pos)
@@ -38123,6 +38125,7 @@ function scripts.tower_crossbows.update(this, store)
 						coroutine.yield()
 					end
 
+					-- fts(12)
 					animation_start("skill_a_out", false, nil, true, true)
 				end
 			end
