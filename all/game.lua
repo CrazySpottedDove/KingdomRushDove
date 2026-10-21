@@ -66,6 +66,7 @@ game.required_textures = {
 	"go_towers_wildcat",
 	"go_towers_culverine",
 	"go_towers_ranger",
+	"go_towers_crossbows",
 	"go_towers_sunray_master",
 	"go_towers_miners",
 	"go_stage128",
@@ -131,7 +132,8 @@ game.required_sounds = {
 	"tower_culverine",
 	"tower_wildcat",
 	"tower_miners",
-	"tower_elf_ranger"
+	"tower_elf_ranger",
+	"tower_crossbows"
 }
 game.required_exoskeletons = {
 	"ignis_altar_lava_golem",

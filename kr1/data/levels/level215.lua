@@ -108,6 +108,7 @@ end
 if witch then
 witch.render.sprites[1].hidden=true
 end
+signal.emit("wave-notification","view","TOWER_CROSSBOWS")
 while store.wave_group_number<10 do
 coroutine.yield()
 end

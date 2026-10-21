@@ -1484,7 +1484,7 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table 最前面的敌人
-function U.refind_foremost_enemy(last_enemy, store, flags, bans)
+function U.refind_foremost_enemy(last_enemy, flags, bans)
 	local new_enemy = U.detect_foremost_enemy_in_range_filter_off(last_enemy.pos, 50, flags, bans)
 
 	if new_enemy then

@@ -4283,6 +4283,7 @@ function scripts.ray_simple.update(this, store)
 		if hp.aura then
 			hp.aura.level = this.bullet.level
 			hp.aura.source_id = this.id
+			hp.aura.damage_factor = b.damage_factor
 
 			if target then
 				hp.pos.x, hp.pos.y = target.pos.x, target.pos.y

@@ -368,7 +368,7 @@ scripts.tower_ranger = {
 						U.y_wait_unconditional(store, aa.shoot_time)
 
 						if enemy.health.dead then
-							enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
+							enemy = U.refind_foremost_enemy(enemy, aa.vis_flags, aa.vis_bans)
 						end
 
 						shot_bullet(aa, shooter_idx, enemy, pow_p.level)
@@ -518,7 +518,7 @@ scripts.tower_musketeer = {
 							U.y_wait_unconditional(store, ax.shoot_time)
 
 							if enemy.health.dead then
-								enemy = U.refind_foremost_enemy(enemy, store, ax.vis_flags, ax.vis_bans)
+								enemy = U.refind_foremost_enemy(enemy, ax.vis_flags, ax.vis_bans)
 							end
 
 							shot_bullet(ax, shooter_idx, ai, enemy, pow_sn.level)
@@ -892,7 +892,7 @@ scripts.tower_crossbow = {
 						end
 
 						if enemy.health.dead then
-							enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
+							enemy = U.refind_foremost_enemy(enemy, aa.vis_flags, aa.vis_bans)
 						end
 
 						local b1 = E:create_entity(aa.bullet)
@@ -1041,7 +1041,7 @@ scripts.tower_totem = {
 						end
 
 						if enemy.health.dead then
-							enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
+							enemy = U.refind_foremost_enemy(enemy, aa.vis_flags, aa.vis_bans)
 						end
 
 						local b1 = E:create_entity(aa.bullet)
@@ -1360,7 +1360,7 @@ scripts.tower_pirate_watchtower = {
 						end
 
 						if enemy.health.dead then
-							enemy = U.refind_foremost_enemy(enemy, store, a.vis_flags, a.vis_bans)
+							enemy = U.refind_foremost_enemy(enemy, a.vis_flags, a.vis_bans)
 						end
 
 						local b1 = E:create_entity(a.bullet)
@@ -1591,7 +1591,7 @@ scripts.tower_arcane = {
 							enemy = enemies[1]
 
 							if enemy.health.dead then
-								enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
+								enemy = U.refind_foremost_enemy(enemy, aa.vis_flags, aa.vis_bans)
 							end
 
 							if enemy.health and enemy.health.magic_armor > 0 then
@@ -1664,7 +1664,7 @@ scripts.tower_silver = {
 			U.y_wait_unconditional(store, shoot_time)
 
 			if enemy.health.dead then
-				enemy = U.refind_foremost_enemy(enemy, store, attack.vis_flags, attack.vis_bans)
+				enemy = U.refind_foremost_enemy(enemy, attack.vis_flags, attack.vis_bans)
 			end
 
 			local boffset = attack.bullet_start_offsets[lidx][ai]
@@ -22223,7 +22223,7 @@ function scripts.tower_shadow_archer.update(this, store)
 		U.y_wait_unconditional(store, shoot_time)
 
 		if enemy.health.dead then
-			enemy = U.refind_foremost_enemy(enemy, store, attack.vis_flags, attack.vis_bans)
+			enemy = U.refind_foremost_enemy(enemy, attack.vis_flags, attack.vis_bans)
 		end
 
 		local boffset = attack.bullet_start_offset[ai]
@@ -37935,6 +37935,495 @@ function scripts.mod_alchemist_ult_polymorph.remove(this, store)
 	end
 
 	return true
+end
+
+scripts.tower_crossbows = {}
+
+function scripts.tower_crossbows.update(this, store)
+	local sa = this.powers.skill_a
+	local sb = this.powers.skill_b
+	local sc = this.powers.skill_c
+	local ba = this.attacks.list[1]
+	local saa = this.attacks.list[2]
+	local sca = this.attacks.list[3]
+	local ua = this.attacks.list[4]
+	local s = this.render.sprites
+	local s_sids = this.shooters_sids
+	local c_sids = this.crossbows_sids
+	local shooter_idx = 1
+	local last_ts = store.tick_ts
+
+	ba.ts = store.tick_ts - ba.cooldown
+
+	local function animation_start(anim, use_af, pred_pos, wait_for_anim, all_shooters, loop)
+		local point = pred_pos or v(REF_W, 0)
+		local shooters = all_shooters and s_sids or {shooter_idx}
+		local an, af
+
+		for i = 1, #shooters do
+			local idx = #shooters ~= 1 and i or shooter_idx
+
+			an, af = animation_name_facing_point(this, anim, point, s_sids[idx])
+			s[c_sids[idx]].hidden = string.find(an, "back")
+
+			if not use_af then
+				af = nil
+			end
+
+			U.animation_start(this, an, af, store.tick_ts, loop, s_sids[idx])
+
+			if not s[c_sids[idx]].hidden then
+				U.animation_start(this, an, af, store.tick_ts, loop, c_sids[idx])
+			end
+		end
+
+		if wait_for_anim then
+			U.y_animation_wait(this, s_sids[shooter_idx], 1)
+		end
+
+		return an
+	end
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if sa.changed then
+				sa.changed = nil
+				saa.cooldown = sa.cooldown[sa.level]
+			end
+
+			if sb.changed then
+				sb.changed = nil
+			end
+
+			if sc.changed then
+				sc.changed = nil
+				sca.cooldown = sc.cooldown[sc.level]
+			end
+
+			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
+				local target = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), this.attacks.range, ba.vis_flags, ba.vis_bans)
+
+				if not target then
+					ba.ts = ba.ts + fts(5)
+				else
+					local pred_pos = U.calculate_enemy_ffe_pos(target, ba.node_prediction)
+					local an = animation_start("shoot", true, pred_pos)
+					ba.ts = store.tick_ts
+
+					-- fts(27)
+					for i = 1, #ba.shoot_times do
+						U.y_wait(store, ba.shoot_times[i])
+
+						if not target.health.dead then
+							target = U.refind_foremost_enemy(target, ba.vis_flags, ba.vis_bans)
+						end
+
+						if not target.health.dead then
+							pred_pos = U.calculate_enemy_ffe_pos(target, ba.node_prediction)
+
+							local b = E:create_entity(ba.bullet)
+							local spawn = s[s_sids[shooter_idx]]
+
+							b.bullet.damage_factor = this.tower.damage_factor
+							b.pos.x = tpos(this).x + spawn.offset.x + ba.bullet_start_offset[an].x * (spawn.flip_x and -1 or 1)
+							b.pos.y = tpos(this).y + spawn.offset.y + ba.bullet_start_offset[an].y
+							b.bullet.from:copy(b.pos)
+							b.bullet.to:set(pred_pos.x + target.unit.hit_offset.x, pred_pos.y + target.unit.hit_offset.y)
+							b.bullet.source_id = this.id
+							b.bullet.target_id = target.id
+
+							if sb.level > 0 then
+								b.bullet.mod = "mod_crossbows_skill_b"
+								b.bullet.level = sb.level
+							end
+
+							b.render.sprites[1].r = V.angleTo(b.bullet.to.x - this.pos.x, b.bullet.to.y - this.pos.y)
+
+							queue_insert(store, b)
+						end
+
+						if this.tower.blocked then
+							break
+						end
+					end
+
+					U.y_animation_wait(this, s_sids[shooter_idx], 1)
+					animation_start("idle", true, pred_pos)
+
+					shooter_idx = km.zmod(shooter_idx + 1, #s_sids)
+					last_ts = store.tick_ts
+				end
+			end
+
+			if U.tower_ready_to_use_power(sa, saa, store, this.tower) then
+				local target = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), this.attacks.range, ba.vis_flags, ba.vis_bans)
+
+				if not target then
+					saa.ts = saa.ts + fts(5)
+				else
+					saa.ts = store.tick_ts
+
+					S:queue(saa.sound)
+					-- fts(30)
+					animation_start("skill_a_in", false, target.pos, true, true)
+					animation_start("skill_a_idle", true, target.pos, false, true, true)
+
+					local ts = store.tick_ts
+
+					while store.tick_ts - ts < sa.duration[sa.level] do
+						if this.tower.blocked then
+							break
+						end
+
+						local target = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), this.attacks.range, ba.vis_flags, ba.vis_bans)
+
+						-- fts(6)
+						if target then
+							local tpred_pos = U.calculate_enemy_ffe_pos(target, ba.node_prediction)
+							local an = animation_start("shoot_skill_a", true, tpred_pos)
+
+							U.y_wait(store, fts(2) * this.tower.cooldown_factor)
+
+							if target.health.dead then
+								target = U.refind_foremost_enemy(target, ba.vis_flags, ba.vis_bans)
+							end
+
+							if not target.health.dead then
+								local pred_pos = U.calculate_enemy_ffe_pos(target, ba.node_prediction)
+
+								local b = E:create_entity(saa.bullet)
+								local spawn = s[s_sids[shooter_idx]]
+
+								b.bullet.damage_factor = this.tower.damage_factor
+								b.pos.x = tpos(this).x + spawn.offset.x + ba.bullet_start_offset[an].x * (spawn.flip_x and -1 or 1)
+								b.pos.y = tpos(this).y + spawn.offset.y + ba.bullet_start_offset[an].y
+								b.bullet.from:copy(b.pos)
+								b.bullet.to:set(pred_pos.x + target.unit.hit_offset.x, pred_pos.y + target.unit.hit_offset.y)
+								b.bullet.source_id = this.id
+								b.bullet.target_id = target.id
+
+								if sb.level > 0 then
+									U.append_mod(b.bullet, "mod_crossbows_skill_b")
+									b.bullet.level = sb.level
+								end
+
+								b.render.sprites[1].r = V.angleTo(b.bullet.to.x - this.pos.x, b.bullet.to.y - this.pos.y)
+
+								queue_insert(store, b)
+							end
+
+							U.y_animation_wait(this, s_sids[shooter_idx], 1)
+							animation_start("skill_a_idle", true, tpred_pos, false, false, true)
+
+							shooter_idx = km.zmod(shooter_idx + 1, #s_sids)
+						end
+
+						coroutine.yield()
+					end
+
+					animation_start("skill_a_out", false, nil, true, true)
+				end
+			end
+
+			if U.tower_ready_to_use_power(sc, sca, store, this.tower) then
+				local target = U.detect_foremost_enemy_with_flying_preference_in_range_filter_on(tpos(this), this.attacks.range, sca.vis_flags, sca.vis_bans, function(e)
+					return e.health.hp > sc.damage_min[sc.level]
+				end)
+
+				if not target then
+					sca.ts = sca.ts + fts(5)
+				else
+					sca.ts = store.tick_ts
+					local pred_pos = U.calculate_enemy_ffe_pos(target, sca.node_prediction)
+					local an = animation_start("skill_c", true, pred_pos)
+
+					S:queue(sca.sound)
+					U.y_wait(store, fts(23) * this.tower.cooldown_factor)
+
+					local hoffset = vclone(target.unit.hit_offset)
+					local b = E:create_entity(sca.bullet)
+					local spawn = s[s_sids[shooter_idx]]
+
+					b.bullet.damage_factor = this.tower.damage_factor
+					b.pos.x = tpos(this).x + spawn.offset.x + ba.bullet_start_offset[an].x * (spawn.flip_x and -1 or 1)
+					b.pos.y = tpos(this).y + spawn.offset.y + ba.bullet_start_offset[an].y
+					b.bullet.from:copy(b.pos)
+					b.bullet.to:set(pred_pos.x + hoffset.x, pred_pos.y + hoffset.y)
+					b.bullet.source_id = this.id
+					b.bullet.target_id = target.id
+
+					if sb.level > 0 then
+						U.append_mod(b.bullet, "mod_crossbows_skill_b")
+						b.bullet.level = sb.level
+					end
+
+					b.bullet.damage_min = sc.damage_min[sc.level]
+					b.bullet.damage_max = sc.damage_max[sc.level]
+
+					if band(target.vis.flags, bor(F_BOSS, F_MINIBOSS)) == 0 and band(target.vis.bans, F_INSTAKILL) == 0 then
+						local mod = U.get_modifier(target, "mod_crossbows_skill_b_weak")
+						local chance = sc.instakill_chance[sc.level]
+						if mod then
+							chance = chance + mod.modifier.damage_factor * sc.instakill_chance_inc / mod.modifier.level
+						end
+						if math.random() < chance then
+							b.bullet.damage_type = DAMAGE_INSTAKILL
+						end
+					end
+
+					queue_insert(store, b)
+					U.y_animation_wait(this, s_sids[shooter_idx], 1)
+					animation_start("idle", true, pred_pos)
+
+					shooter_idx = km.zmod(shooter_idx + 1, #s_sids)
+					last_ts = store.tick_ts
+				end
+			end
+
+			if ready_to_attack(ua, store, this.tower.cooldown_factor) then
+				if this.soldier_id and store.entities[this.soldier_id] then
+					ua.ts = ua.ts + fts(10)
+				else
+					local enemies = U.find_enemies_in_range_filter_off(tpos(this), this.attacks.range, ua.vis_flags, ua.vis_bans)
+
+					if enemies and store.level.ignore_walk_backwards_paths then
+						enemies = table.filter(enemies, function(_, e)
+							return not table.contains(store.level.ignore_walk_backwards_paths, e.nav_path.pi)
+						end)
+					end
+
+					if not enemies then
+						ua.ts = ua.ts + fts(10)
+					else
+						local available_paths = {}
+
+						for pi in pairs(P.paths) do
+							available_paths[#available_paths + 1] = pi
+						end
+
+						if store.level.ignore_walk_backwards_paths then
+							available_paths = table.filter(available_paths, function(_, pi)
+								return not table.contains(store.level.ignore_walk_backwards_paths, pi)
+							end)
+						end
+
+						local counts = {}
+
+						for _, e in ipairs(enemies) do
+							local pi = e.nav_path.pi
+
+							counts[pi] = (counts[pi] or 0) + 1
+						end
+
+						local best_pi, best_count
+
+						for pi, count in pairs(counts) do
+							if (not best_count or count > best_count) and table.contains(available_paths, pi) then
+								best_pi, best_count = pi, count
+							end
+						end
+
+						local nearest = best_pi and P:nearest_nodes(this.pos.x, this.pos.y, {best_pi})
+						local soldier
+
+						if nearest and #nearest > 0 then
+							soldier = E:create_entity(ua.soldier)
+							soldier.pos = v(this.pos.x + ua.soldier_spawn_pos.x, this.pos.y + ua.soldier_spawn_pos.y)
+							soldier.pi = nearest[1][1]
+							soldier.spi = 1
+							soldier.ni = nearest[1][3]
+							soldier.move = true
+							soldier.tower_id = this.id
+							soldier.nav_rally.center = vclone(soldier.pos)
+							soldier.nav_rally.pos = vclone(soldier.pos)
+							SU.soldier_inherit_tower_buff_factor(soldier, this, store.tick_ts)
+							queue_insert(store, soldier)
+							this.soldier_id = soldier.id
+							ua.ts = store.tick_ts
+						else
+							ua.ts = ua.ts + fts(10)
+						end
+					end
+				end
+			end
+
+			if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
+				animation_start("idle", true, nil, nil, true, true)
+
+				last_ts = store.tick_ts
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+function scripts.tower_crossbows.remove(this, store)
+	if this.soldier_id then
+		local soldier = store.entities[this.soldier_id]
+
+		if soldier then
+			queue_remove(store, soldier)
+		end
+	end
+
+	return true
+end
+
+scripts.mod_crossbows_skill_b = {}
+
+function scripts.mod_crossbows_skill_b.insert(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target or target.health.dead then
+		return false
+	end
+
+	local mod = U.get_modifier(target, "mod_crossbows_skill_b_weak")
+	if not mod then
+		mod = E:create_entity("mod_crossbows_skill_b_weak")
+		mod.modifier.target_id = target.id
+		mod.modifier.source_id = this.id
+		mod.modifier.damage_factor = m.damage_factor * m.level
+		mod.modifier.level = m.level
+		queue_insert(store, mod)
+	else
+		mod.modifier.level = math.max(mod.modifier.level, m.level)
+		mod.modifier.damage_factor = mod.modifier.damage_factor + m.damage_factor * m.level
+		mod.modifier.ts = store.tick_ts
+	end
+
+	mod = U.get_modifier(target, this.template_name)
+	if mod then
+		mod.modifier.ts = store.tick_ts
+		return false
+	end
+
+	return true
+end
+
+function scripts.mod_crossbows_skill_b.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	m.ts = store.tick_ts
+
+	if not target or not target.pos then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if target and target.health.dead then
+			local pos
+
+			if band(target.vis.flags, F_FLYING) ~= 0 then
+				pos = v(target.pos.x + target.unit.mod_offset.x, target.pos.y + target.unit.mod_offset.y)
+			else
+				pos = vclone(target.pos)
+			end
+
+			local dh = E:create_entity(this.decal_hit)
+
+			dh.render.sprites[1].ts = store.tick_ts
+			dh.pos = pos
+			queue_insert(store, dh)
+
+			local dg = E:create_entity(this.decal_ground)
+
+			dg.render.sprites[1].ts = store.tick_ts
+			dg.pos = pos
+			queue_insert(store, dg)
+
+			local aura = E:create_entity(this.aura)
+
+			aura.pos = vclone(target.pos)
+			aura.aura.level = m.level
+			aura.aura.source_id = this.id
+			queue_insert(store, aura)
+			queue_remove(store, this)
+
+			return
+		end
+
+		if not target or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
+			queue_remove(store, this)
+
+			return
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_crossbows_ult = {}
+
+function scripts.soldier_crossbows_ult.update(this, store)
+	local path_pi = this.pi
+	local path_ni = math.max(1, this.ni - 3)
+
+	this.reinforcement.ts = store.tick_ts
+	this.nav_rally.center = vclone(this.pos)
+	this.nav_rally.pos = P:node_pos(path_pi, 1, path_ni)
+	this.health.ignore_damage = true
+	U.bans_add(this.vis, F_ALL)
+	U.animation_start(this, "in_armor", nil, store.tick_ts, false, 1)
+	U.y_animation_wait_default(this)
+	U.animation_start(this, "in_spectre", nil, store.tick_ts, false, 1)
+	U.y_animation_wait_default(this)
+	this.ui.click_rect = this.click_rect_soldier
+	this.health.ignore_damage = false
+	U.bans_remove(this.vis, F_ALL)
+
+	if this.sound_events.raise then
+		S:queue(this.sound_events.raise)
+	end
+
+	while true do
+		if this.health.dead or store.tick_ts - this.reinforcement.ts > this.reinforcement.duration or not P:is_node_valid(path_pi, path_ni) then
+			this.health.hp = 0
+			this.ui.can_click = false
+			this.health_bar.hidden = true
+
+			U.bans_add(this.vis, F_ALL)
+			SU.remove_modifiers(store, this)
+			SU.y_soldier_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			local brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if not (brk or stam == A_DONE or stam == A_IN_COOLDOWN and not this.melee.continue_in_cooldown) then
+				local node_pos = this.nav_rally.pos
+
+				if V.dist2(node_pos.x, node_pos.y, this.pos.x, this.pos.y) < 625 then
+					path_ni = math.max(1, path_ni - 3)
+					this.nav_rally.pos = P:node_pos(path_pi, 1, path_ni)
+					this.nav_rally.center:copy(this.nav_rally.pos)
+				end
+
+				if not SU.soldier_go_back_step(store, this) then
+					SU.soldier_regen(store, this)
+
+				end
+			end
+		end
+
+		SU.soldier_idle(store, this)
+		coroutine.yield()
+	end
 end
 
 return scripts

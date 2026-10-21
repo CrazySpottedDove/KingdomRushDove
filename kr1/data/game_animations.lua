@@ -41641,6 +41641,231 @@ return {
 		prefix = "effect_buildSmoke",
 		to = 12
 	},
+	tower_crossbows_basic_arrow_idle = {
+		from = 1,
+		prefix = "tower_crossbows_basic_arrow",
+		to = 1
+	},
+	tower_crossbows_basic_arrow_miss = {
+		from = 2,
+		prefix = "tower_crossbows_basic_arrow",
+		to = 10
+	},
+	tower_crossbows_basic_arrow_missidle = {
+		from = 11,
+		prefix = "tower_crossbows_basic_arrow",
+		to = 11
+	},
+	tower_crossbows_basic_hit_idle = {
+		from = 1,
+		prefix = "tower_crossbows_basic_hit",
+		to = 6
+	},
+	tower_crossbows_basic_particle_run = {
+		from = 1,
+		prefix = "tower_crossbows_basic_particle",
+		to = 13
+	},
+	tower_crossbows_lvl4_ulti_hit_run = {
+		from = 1,
+		prefix = "tower_crossbows_lvl4_ulti_hit",
+		to = 6
+	},
+	tower_crossbows_lvl4_ulti_spectre_attack = {
+		from = 101,
+		prefix = "tower_crossbows_lvl4_ulti_spectre",
+		to = 135
+	},
+	tower_crossbows_lvl4_ulti_spectre_death = {
+		from = 136,
+		prefix = "tower_crossbows_lvl4_ulti_spectre",
+		to = 159
+	},
+	tower_crossbows_lvl4_ulti_spectre_idle = {
+		from = 49,
+		prefix = "tower_crossbows_lvl4_ulti_spectre",
+		to = 80
+	},
+	tower_crossbows_lvl4_ulti_spectre_idle_armor = {
+		from = 15,
+		prefix = "tower_crossbows_lvl4_ulti_spectre",
+		to = 15
+	},
+	tower_crossbows_lvl4_ulti_spectre_in_armor = {
+		from = 1,
+		prefix = "tower_crossbows_lvl4_ulti_spectre",
+		to = 14
+	},
+	tower_crossbows_lvl4_ulti_spectre_in_spectre = {
+		from = 16,
+		prefix = "tower_crossbows_lvl4_ulti_spectre",
+		to = 48
+	},
+	tower_crossbows_lvl4_ulti_spectre_walk = {
+		from = 81,
+		prefix = "tower_crossbows_lvl4_ulti_spectre",
+		to = 100
+	},
+	tower_crossbows_skill_a_arrow_idle = {
+		from = 1,
+		prefix = "tower_crossbows_skill_a_arrow",
+		to = 1
+	},
+	tower_crossbows_skill_a_arrow_miss = {
+		from = 2,
+		prefix = "tower_crossbows_skill_a_arrow",
+		to = 10
+	},
+	tower_crossbows_skill_a_arrow_missidle = {
+		from = 11,
+		prefix = "tower_crossbows_skill_a_arrow",
+		to = 11
+	},
+	tower_crossbows_skill_a_hit_run = {
+		from = 1,
+		prefix = "tower_crossbows_skill_a_hit",
+		to = 12
+	},
+	tower_crossbows_skill_a_particle_action = {
+		from = 1,
+		prefix = "tower_crossbows_skill_a_particle",
+		to = 7
+	},
+	tower_crossbows_skill_b_decal_run = {
+		from = 1,
+		prefix = "tower_crossbows_skill_b_decal",
+		to = 12
+	},
+	tower_crossbows_skill_b_hit_idle = {
+		from = 1,
+		prefix = "tower_crossbows_skill_b_hit",
+		to = 27
+	},
+	tower_crossbows_skill_b_mod_big_idle = {
+		from = 1,
+		prefix = "tower_crossbows_skill_b_mod_big",
+		to = 26
+	},
+	tower_crossbows_skill_b_mod_idle = {
+		from = 1,
+		prefix = "tower_crossbows_skill_b_mod",
+		to = 26
+	},
+	tower_crossbows_skill_c_hit_run = {
+		from = 1,
+		prefix = "tower_crossbows_skill_c_hit",
+		to = 15
+	},
+	tower_crossbows_skill_c_shot_run = {
+		from = 1,
+		prefix = "tower_crossbows_skill_c_shot",
+		to = 23
+	},
+	tower_crossbows_unit_lvl4_attack = {
+		from = 2,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 44
+	},
+	tower_crossbows_unit_lvl4_attack_back = {
+		from = 46,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 88
+	},
+	tower_crossbows_unit_lvl4_idle = {
+		from = 1,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 1
+	},
+	tower_crossbows_unit_lvl4_idle_back = {
+		from = 45,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 45
+	},
+	tower_crossbows_unit_lvl4_over_idle = {
+		from = 1,
+		prefix = "tower_crossbows_unit_lvl4_over",
+		to = 1
+	},
+	tower_crossbows_unit_lvl4_over_attack = {
+		from = 2,
+		prefix = "tower_crossbows_unit_lvl4_over",
+		to = 44
+	},
+	tower_crossbows_unit_lvl4_over_skill_a_idle = {
+		from = 81,
+		prefix = "tower_crossbows_unit_lvl4_over",
+		to = 90
+	},
+	tower_crossbows_unit_lvl4_over_skill_a_in = {
+		from = 45,
+		prefix = "tower_crossbows_unit_lvl4_over",
+		to = 74
+	},
+	tower_crossbows_unit_lvl4_over_skill_a_loop = {
+		from = 75,
+		prefix = "tower_crossbows_unit_lvl4_over",
+		to = 80
+	},
+	tower_crossbows_unit_lvl4_over_skill_a_out = {
+		from = 91,
+		prefix = "tower_crossbows_unit_lvl4_over",
+		to = 102
+	},
+	tower_crossbows_unit_lvl4_over_skill_c = {
+		from = 103,
+		prefix = "tower_crossbows_unit_lvl4_over",
+		to = 143
+	},
+	tower_crossbows_unit_lvl4_skill_a_idle = {
+		from = 125,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 134
+	},
+	tower_crossbows_unit_lvl4_skill_a_idle_back = {
+		from = 183,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 192
+	},
+	tower_crossbows_unit_lvl4_skill_a_in = {
+		from = 89,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 118
+	},
+	tower_crossbows_unit_lvl4_skill_a_in_back = {
+		from = 147,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 176
+	},
+	tower_crossbows_unit_lvl4_skill_a_loop = {
+		from = 119,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 124
+	},
+	tower_crossbows_unit_lvl4_skill_a_loop_back = {
+		from = 177,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 182
+	},
+	tower_crossbows_unit_lvl4_skill_a_out = {
+		from = 135,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 146
+	},
+	tower_crossbows_unit_lvl4_skill_a_out_back = {
+		from = 193,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 204
+	},
+	tower_crossbows_unit_lvl4_skill_c = {
+		from = 205,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 245
+	},
+	tower_crossbows_unit_lvl4_skill_c_back = {
+		from = 246,
+		prefix = "tower_crossbows_unit_lvl4",
+		to = 286
+	},
 	tower_drow_door_close = {
 		from = 21,
 		prefix = "mercenaryDraw_tower_layer2",
