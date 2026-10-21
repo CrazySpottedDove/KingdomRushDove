@@ -5362,6 +5362,7 @@ local function enemy_betray_logic(this, store)
 				U.animation_start_default(this, an, af, store.tick_ts, true)
 				U.walk_off__accel__unsnapped(this, store.tick_length)
 				this.nav_rally.pos:copy(this.pos)
+				this.nav_rally.center:copy(this.pos)
 			end
 		end
 
