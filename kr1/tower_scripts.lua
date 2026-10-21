@@ -38161,15 +38161,17 @@ function scripts.tower_crossbows.update(this, store)
 
 					b.bullet.damage_min = sc.damage_min[sc.level]
 					b.bullet.damage_max = sc.damage_max[sc.level]
+					local mod = U.get_modifier(target, "mod_crossbows_skill_b_weak")
+					local chance = sc.instakill_chance[sc.level]
+					if mod then
+						chance = chance + mod.modifier.damage_factor * sc.instakill_chance_inc / mod.modifier.level
+					end
 
-					if band(target.vis.flags, bor(F_BOSS, F_MINIBOSS)) == 0 and band(target.vis.bans, F_INSTAKILL) == 0 then
-						local mod = U.get_modifier(target, "mod_crossbows_skill_b_weak")
-						local chance = sc.instakill_chance[sc.level]
-						if mod then
-							chance = chance + mod.modifier.damage_factor * sc.instakill_chance_inc / mod.modifier.level
-						end
-						if math.random() < chance then
+					if math.random() < chance then
+						if band(target.vis.flags, bor(F_BOSS, F_MINIBOSS)) == 0 and band(target.vis.bans, F_INSTAKILL) == 0 then
 							b.bullet.damage_type = DAMAGE_INSTAKILL
+						else
+							b.bullet.damage_factor = b.bullet.damage_factor * 2
 						end
 					end
 
@@ -38348,6 +38350,7 @@ function scripts.mod_crossbows_skill_b.update(this, store)
 			aura.pos = vclone(target.pos)
 			aura.aura.level = m.level
 			aura.aura.source_id = this.id
+			aura.aura.damage_factor = m.damage_factor
 			queue_insert(store, aura)
 			queue_remove(store, this)
 
