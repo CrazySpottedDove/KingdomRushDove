@@ -746,12 +746,12 @@ function screen_map:init(w, h)
 	end
 
 	-- 切换地图 / 自制地图分类按钮移到左下角，居左对齐
-	local footer_left = o_button.pos.x - o_button.size.x / 2
 	local change_btn_y = sh - 90
 
 	local change_button = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
 	change_button.anchor = v(change_button.size.x / 2, change_button.size.y / 2)
-	change_button.pos = v(footer_left + change_button.size.x / 2, change_btn_y)
+	-- change_button.pos = v(footer_left + change_button.size.x / 2, change_btn_y)
+	change_button.pos = v(o_button.pos.x, change_btn_y)
 	change_button.label.pos = v(50, 121)
 	change_button.label.size = v(126, 30)
 	change_button.label.text_size = change_button.label.size

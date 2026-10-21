@@ -1,1 +1,1 @@
-return {{date="2026-10-21",author="CrazySpottedDove",message="balance: 调整诅咒弩手技能效果"},{date="2026-10-21",author="CrazySpottedDove",message="balance: 优化诅咒弩手连射输出"}}
+return {{date="2026-10-21",author="CrazySpottedDove",message="balance: 调整诅咒弩手技能效果"},{date="2026-10-21",author="CrazySpottedDove",message="balance: 优化诅咒弩手连射输出"},{date="2026-10-21",author="CrazySpottedDove",message="fix: 修复部分六代防御塔的塔位偏移问题"}}
