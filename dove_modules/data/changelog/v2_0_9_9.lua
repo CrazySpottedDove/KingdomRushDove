@@ -1,1 +1,1 @@
-return {{date="2026-10-21",author="CrazySpottedDove",message="balance: 调整诅咒弩手技能效果"}}
+return {{date="2026-10-21",author="CrazySpottedDove",message="balance: 调整诅咒弩手技能效果"},{date="2026-10-21",author="CrazySpottedDove",message="balance: 优化诅咒弩手连射输出"}}

@@ -46,7 +46,7 @@ local TOWER_BONE_FLINGERS_MILK_DESCRIPTION_1 = "攻击伤害提升%$T('tower_bon
 local TOWER_CATAPULT_SKILL_A_DESCRIPTION_1 = "每%$T('tower_catapult').attacks.list[2].cooldown * tcd%$秒，将焦油桶投向敌群，造成%$T('bullet_catapult_skill_a').bullet.damage_min * tdmg%$-%$T('bullet_catapult_skill_a').bullet.damage_max * tdmg%$点爆炸伤害，并使其减速%$(1 - T('mod_catapult_skill_a_slow').slow_factor_config[level])%$%，持续%$T('aura_catapult_skill_a').aura.duration_conf[level]%$秒。"
 local TOWER_CATAPULT_SKILL_B_DESCRIPTION_1 = "投出的石弹现在会在落地不久之后爆炸，对周围的敌人造成%$T('aura_catapult_skill_b_bomb').damage_min_conf[level] * tdmg%$-%$T('aura_catapult_skill_b_bomb').damage_max_conf[level] * tdmg%$点爆炸伤害。"
 local TOWER_CATAPULT_SKILL_C_DESCRIPTION_1 = "每%$T('tower_catapult').attacks.list[3].cooldown * tcd%$秒在周边路径设置一枚防卫陷阱。陷阱触发时造成%$T('aura_catapult_skill_c_trap').damage_min_conf[level] * tdmg%$-%$T('aura_catapult_skill_c_trap').damage_max_conf[level] * tdmg%$点物理伤害，并使敌人眩晕%$T('mod_catapult_skill_c_stun').stun_duration_config[level]%$秒。"
-local TOWER_CROSSBOWS_SKILL_A_DESCRIPTION_1 = "每隔%$T('tower_crossbows').powers.skill_a.cooldown[level] * tcd%$秒，进入狂暴状态，大幅提升攻击速度并造成混合伤害，持续%$T('tower_crossbows').powers.skill_a.duration[level]%$秒。"
+local TOWER_CROSSBOWS_SKILL_A_DESCRIPTION_1 = "每隔%$T('tower_crossbows').powers.skill_a.cooldown[level] * tcd%$秒，进入狂暴状态，大幅提升攻击速度并造成普攻%$T('tower_crossbows').powers.skill_a.damage_factor%$倍混合伤害，持续%$T('tower_crossbows').powers.skill_a.duration[level]%$秒。"
 local TOWER_CROSSBOWS_SKILL_B_DESCRIPTION_1 = "使攻击附带诅咒，令敌人每%$T('mod_crossbows_skill_b_weak').dps.damage_every%$秒受到%$T('mod_crossbows_skill_b_weak').dps.damage_min*level%$点魔法伤害，持续%$T('mod_crossbows_skill_b_weak').modifier.duration%$秒。重复诅咒时，刷新持续时间并叠加伤害。敌人被诅咒弩手击杀时，触发诅咒爆发，对周围敌人造成%$T('aura_crossbows_skill_b').aura.damage_inc * level * tdmg%$点魔法伤害、施加诅咒，并使他们减速%$(1-T('mod_crossbows_skill_b_slow').slow.factor)%$%。"
 local TOWER_CROSSBOWS_SKILL_C_DESCRIPTION_1 = "每%$T('tower_crossbows').powers.skill_c.cooldown[level] * tcd%$秒发射一支强力弩箭，造成%$T('tower_crossbows').powers.skill_c.damage_min[level] * tdmg%$-%$T('tower_crossbows').powers.skill_c.damage_max[level] * tdmg%$点真实伤害。强力弩箭有%$T('tower_crossbows').powers.skill_c.instakill_chance[level]%$%概率秒杀敌人，且每层诅咒提升该概率%$T('tower_crossbows').powers.skill_c.instakill_chance_inc%$%。"
 local TOWER_CROSSBOW_EAGLE_DESCRIPTION_1 = "提升%$T('tower_crossbow').attacks.list[3].range + T('tower_crossbow').attacks.list[3].range_inc * level%$范围内防御塔%$T('mod_crossbow_eagle').range_factor + T('mod_crossbow_eagle').range_factor_inc * level - 1%$%的射程与%$(1 - (T('mod_crossbow_eagle').cooldown_factor + T('mod_crossbow_eagle').cooldown_factor_inc * level))%$%攻速，并赋予弩堡%$T('tower_crossbow').attacks.list[1].critical_chance + T('tower_crossbow').attacks.list[1].critical_chance_inc * level%$%的暴击几率。"
@@ -6130,6 +6130,7 @@ return {
 	SOLDIER_CANNONBALL_4_NAME = "嘉良",
 	SOLDIER_CANNONBALL_5_NAME = "余音",
 	SOLDIER_CATHA_NAME = "仙子战士",
+	SOLDIER_CROSSBOWS_ULT_NAME = "灵魂骑士",
 	SOLDIER_DARK_KNIGHT = "黑暗骑士",
 	SOLDIER_DARK_KNIGHT_NAME = "黑暗骑士",
 	SOLDIER_DARK_KNIGHT_RANDOM_1_NAME = "莫格兰",
