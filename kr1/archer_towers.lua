@@ -3160,9 +3160,7 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].offset = v(7, 15)
 tt.render.sprites[1].draw_order = -1
 
--- 六代
--- 精灵游侠_START
-
+-- 精英精灵游侠
 tt = RT("tower_elf_ranger", "tower")
 AC(tt, "attacks", "powers")
 tt.tower.type = "elf_ranger"
@@ -3245,7 +3243,7 @@ tt.attacks.list[4].instakill_hp_threshold = 0.5
 tt.attacks.list[4].animation = "ultimate"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrains_%04i"
-tt.render.sprites[1].offset = v(0, 13)
+tt.render.sprites[1].offset = v(0, 17)
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "elven_elite_ranger_lvl4_tower"
