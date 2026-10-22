@@ -12047,8 +12047,7 @@ function scripts.tower_stargazers.update(this, store)
 							if not dead_hit[enemy.id] then
 								dead_hit[enemy.id] = true
 
-								-- 死亡敌人触发星爆，伤害系数为 0.5
-								scripts.tower_stargazers.create_star_death(this, store, enemy, 0.5)
+								scripts.tower_stargazers.create_star_death(this, store, enemy, 1)
 							end
 						end
 
@@ -12338,9 +12337,8 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 	local time = store.tick_ts
 	local duration = this.modifier.duration
 
-	if not target or not target.health or target.health.dead then
+	if not target or not target.health then
 		simulation:queue_remove_entity(this)
-
 		return
 	end
 
@@ -12351,8 +12349,8 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 
 		b.pos.x = this.pos.x
 		b.pos.y = this.pos.y
-		b.bullet.from = vclone(b.pos)
-		b.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+		b.bullet.from:copy(b.pos)
+		b.bullet.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 		b.bullet.target_id = enemy.id
 		b.bullet.level = level
 		b.bullet.damage_factor = m.damage_factor
@@ -12363,14 +12361,12 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 	end
 
 	while true do
-		if not target or not target.health or target.health.dead then
-			if target then
-				local targets = U.find_enemies_in_range_filter_off(target.pos, radius, F_ENEMY, F_NONE)
+		if target.health.dead then
+			local targets = U.find_enemies_in_range_filter_off(target.pos, radius, F_ENEMY, F_NONE)
 
-				if targets then
-					for i = 1, total_stars do
-						shoot_bullet(targets[km.zmod(i, #targets)], m.level)
-					end
+			if targets then
+				for i = 1, total_stars do
+					shoot_bullet(targets[km.zmod(i, #targets)], m.level)
 				end
 			end
 

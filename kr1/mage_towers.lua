@@ -2301,7 +2301,6 @@ tt.render.sprites[1].z = Z_BULLETS + 1
 tt = RT("mod_tower_elven_stargazers_star_death", "modifier")
 tt.main_script.update = scripts.mod_stargazers_stars_death.update
 tt.modifier.duration = 0.8
-tt.modifier.allows_duplicates = true
 tt.modifier.bullet = "arrow_tower_stargazers_death_star"
 tt.modifier.stars_death_min_range = 0
 tt.modifier.stars_death_max_range = 120

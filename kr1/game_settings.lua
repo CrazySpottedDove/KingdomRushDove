@@ -610,7 +610,8 @@ GS.wraith = {
 	hero_margosa = true,
 	hero_mortemis = true,
 	hero_mortemis_zombie = true,
-	hero_mortemis_golem = true
+	hero_mortemis_golem = true,
+	soldier_crossbows_ult = true
 }
 
 GS.hero_exoskeletons = {
