@@ -5000,6 +5000,7 @@ tt.health.hp_max = 100
 tt.health.armor = 0.15
 tt.health_bar.offset = v(0, 40)
 tt.health.dead_lifetime = 12
+tt.health.ignore_delete_after_death = true
 tt.motion.max_speed = 60
 tt.melee.range = 70
 tt.vis.flags = bor(F_BLOCK, F_FRIEND)

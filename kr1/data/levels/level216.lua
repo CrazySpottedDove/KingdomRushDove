@@ -1474,6 +1474,9 @@ signal.emit("end-cinematic")
 end
 function level:update(store)
 coroutine.yield()
+if store.level_mode==GAME_MODE_CAMPAIGN then
+signal.emit("wave-notification","view","TOWER_TREE")
+end
 if store.level_mode~=GAME_MODE_CAMPAIGN and store.level_mode~=GAME_MODE_BLITZ and store.level_mode~=GAME_MODE_KR1 then
 for _,ph in ipairs(CORRUPTIONS) do
 local decal=find_entity(store,ph.decal) or E:create_entity(ph.decal)

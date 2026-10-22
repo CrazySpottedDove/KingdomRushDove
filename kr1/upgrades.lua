@@ -1393,7 +1393,9 @@ upgrades.soldiers = {
 	"soldier_miners_skill_a",
 	"soldier_sunray_master",
 	"soldier_alchemist",
-	"soldier_crossbows_ult"
+	"soldier_crossbows_ult",
+	"soldier_tree",
+	"soldier_tree_ultimate_seedling"
 }
 
 upgrades.barrack_soldiers = {
@@ -1439,7 +1441,8 @@ upgrades.barrack_soldiers = {
 	"soldier_knights",
 	"soldier_wildcat",
 	"soldier_miners",
-	"soldier_miners_skill_a"
+	"soldier_miners_skill_a",
+	"soldier_tree"
 }
 
 upgrades.towers_with_barrack = {
@@ -1489,7 +1492,8 @@ upgrades.towers_with_barrack = {
 	"tower_knights",
 	"tower_wildcat",
 	"tower_miners",
-	"tower_sunray_master"
+	"tower_sunray_master",
+	"tower_tree"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {
@@ -1631,7 +1635,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_sandworm",
 	"tower_catapult",
 	"tower_culverine",
-	"tower_alchemist"
+	"tower_alchemist",
+	"tower_tree"
 }
 
 function upgrades:bomb_damage_mul(damage_factor)
@@ -1640,6 +1645,8 @@ function upgrades:bomb_damage_mul(damage_factor)
 	end
 
 	mul_dmg(T("tower_dwaarp").attacks.list[1], damage_factor)
+	mul_dmg(T("aura_tree_attack").aura, damage_factor)
+	mul_dmg(T("aura_tree_ultimate_bomb").aura, damage_factor)
 	mul_dmg(T("tower_melting_furnace").attacks.list[1], damage_factor)
 	mul_dmg(T("ray_tesla"), damage_factor, "bounce_damage_min", "bounce_damage_max")
 	mul_dmg(T("mod_ray_frankenstein").dps, damage_factor)
@@ -1874,7 +1881,19 @@ function upgrades:patch_templates(max_level)
 				t.barrack.max_soldiers = t.barrack.max_soldiers + 1
 			end
 		end
-		local special_soldiers = {"soldier_baby_ashbite", "soldier_tower_pandas_green_lvl4", "soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_blue_lvl4", "soldier_ogre_shipwreck_cook", "soldier_ogre_shipwreck_deckhand", "soldier_ogre_shipwreck_red_goblin", "soldier_ogre_shipwreck_red_goblin_elite", "soldier_swamp_monster", "soldier_miners"}
+		local special_soldiers = {
+			"soldier_baby_ashbite",
+			"soldier_tower_pandas_green_lvl4",
+			"soldier_tower_pandas_red_lvl4",
+			"soldier_tower_pandas_blue_lvl4",
+			"soldier_ogre_shipwreck_cook",
+			"soldier_ogre_shipwreck_deckhand",
+			"soldier_ogre_shipwreck_red_goblin",
+			"soldier_ogre_shipwreck_red_goblin_elite",
+			"soldier_swamp_monster",
+			"soldier_miners",
+			"soldier_tree"
+		}
 
 		for _, n in ipairs(special_soldiers) do
 			local t = T(n)
@@ -2229,6 +2248,8 @@ function upgrades:patch_templates(max_level)
 		mul_dmg(T("aura_bullet_culverine").aura, u.damage_factor)
 		mul_dmg(T("aura_bullet_culverine_skill_b").aura, u.damage_factor)
 		mul_dmg(T("aura_culverine_ultimate").aura, u.damage_factor)
+		mul_dmg(T("aura_tree_attack").aura, u.damage_factor)
+		mul_dmg(T("aura_tree_ultimate_bomb").aura, u.damage_factor)
 
 		-- 炼金术士主伤害在 aura 上，吃不到 magic dust 的命中 hook，按惯例直接补伤害
 		mul_dmg(T("aura_alchemist_hit_green").aura, u.damage_factor)
@@ -2256,6 +2277,7 @@ function upgrades:patch_templates(max_level)
 
 		mul_field(T("tower_rotten_forest").attacks, "range", u.radius_factor)
 		mul_field(T("tower_dwaarp").attacks, "range", u.radius_factor)
+		mul_field(T("tower_tree").attacks, "range", u.radius_factor)
 
 		for _, name in ipairs({"aura_bullet_ignis_altar", "aura_bullet_tower_hermit_toad_engineer_basic", "aura_tower_sandworm"}) do
 			local t = T(name)
@@ -2358,6 +2380,10 @@ function upgrades:patch_templates(max_level)
 		mul_arr(T("tower_sandworm").powers.eat.cooldown, cd)
 		mul_field(T("aura_rotten_forest_thorn").aura, "cooldown", cd)
 		mul_field(T("controller_alchemist_skill_b"), "cooldown", cd)
+		mul_arr(T("tower_tree").powers.skill_a.cooldown, cd)
+		mul_arr(T("tower_tree").powers.skill_c.cooldown, cd)
+		mul_arr(T("soldier_tree").powers.skill_b.cooldown, cd)
+		mul_field(T("tower_tree").attacks.list[4], "cooldown", cd)
 	end
 
 	u = self:get_upgrade("engineer_efficiency")
