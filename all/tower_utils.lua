@@ -223,4 +223,23 @@ function tower_utils.upgrade_tower(store, e, upgrade_to)
 	end
 end
 
+---设置技能等级：初始化完成后立即调用 on_power_upgrade，否则先记 changed 等脚本初始化时统一应用
+---@param store table game.store
+---@param tower table 防御塔实体
+---@param power_name string 技能名
+---@param level number 新等级
+function tower_utils.set_power_level(store, tower, power_name, level)
+	local power = tower.powers[power_name]
+
+	power.level = level
+
+	local fn = power.on_power_upgrade
+
+	if fn then
+		fn(tower, power_name, power, store)
+	else
+		power.changed = true
+	end
+end
+
 return tower_utils

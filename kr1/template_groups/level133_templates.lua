@@ -5,7 +5,7 @@ local P = require("path_db")
 require("lib.klua.table")
 local AC = require("achievements")
 local scripts = require("scripts")
-local TU = require("tower_utils")
+local TU = require("all.tower_utils")
 local v = V.v
 local controller_stage_33_lightning_strike_update
 local controller_stage_33_lightning_strike_editor_update

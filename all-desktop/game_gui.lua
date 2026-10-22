@@ -921,9 +921,8 @@ function game_gui:build_random_towers(resolved)
 			game_gui.game.store.towers[k] = new_tower
 
 			if new_tower.powers then
-				for _, p in pairs(new_tower.powers) do
-					p.level = p.max_level
-					p.changed = true
+				for n, p in pairs(new_tower.powers) do
+					TU.set_power_level(game_gui.game.store, new_tower, n, p.max_level)
 				end
 			end
 
@@ -8112,9 +8111,8 @@ function CriketMenu:button_callback(button, item, no_overwrite)
 			game_gui.game.store.towers[k] = new_tower
 
 			if new_tower.powers then
-				for _, p in pairs(new_tower.powers) do
-					p.level = p.max_level
-					p.changed = true
+				for n, p in pairs(new_tower.powers) do
+					TU.set_power_level(game_gui.game.store, new_tower, n, p.max_level)
 				end
 			end
 
@@ -9128,8 +9126,9 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		local power = entity.powers[item.action_arg]
 
 		if power.level < power.max_level then
-			power.level = power.level + 1
-			power.changed = true
+			local store = game_gui.game.store
+
+			TU.set_power_level(store, entity, item.action_arg, power.level + 1)
 
 			if not item.no_upgrade_lights then
 				for i, pv in ipairs(button.power_buttons) do
@@ -9142,7 +9141,6 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 				button.ufx.ts = 0
 			end
 
-			local store = game_gui.game.store
 			local spent
 
 			if power.level == 1 then

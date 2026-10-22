@@ -16,6 +16,7 @@ local UP = require("kr1.upgrades")
 local SPELLS = require("spell_system")
 local U = require("utils")
 local LU = require("level_utils")
+local TU = require("all.tower_utils")
 local V = require("lib.klua.vector")
 local storage = require("all.storage")
 require("lib.klua.table")
@@ -61,14 +62,8 @@ function level:init_coroutined(store)
 	UP:set_list_id(slot.upgrade_list_id)
 	DI:set_level(store.level_difficulty)
 
-	-- autoplay 法术冒烟：只在内存里覆盖，不写回存档
-	if _G.AUTOPLAY_SPELL_LEVEL then
-		UP.levels.rain = _G.AUTOPLAY_SPELL_LEVEL
-		UP.levels.reinforcements = _G.AUTOPLAY_SPELL_LEVEL
-	end
-
 	-- power3 法术：解析本局选择（可为 nil = 未选择）
-	SPELLS:set_selected(_G.AUTOPLAY_SPELL_ID or slot.spell_power_id)
+	SPELLS:set_selected(slot.spell_power_id)
 
 	GR:load(store.level_name)
 	P:load(store.level_name, store.visible_coords)
@@ -283,15 +278,6 @@ function level:init_coroutined(store)
 						U.set_terrain_style(tower, tower_data.terrain_style)
 					end
 
-					if tower_data.powers and tower.powers then
-						for power_name, power_data in pairs(tower_data.powers) do
-							if tower.powers[power_name] then
-								tower.powers[power_name].level = power_data.level
-								tower.powers[power_name].changed = true
-							end
-						end
-					end
-
 					if tower_data.rally_pos and tower.barrack then
 						tower.barrack.rally_pos = V.v(tower_data.rally_pos.x, tower_data.rally_pos.y)
 
@@ -305,6 +291,14 @@ function level:init_coroutined(store)
 					end
 
 					simulation:queue_insert_entity(tower)
+
+					if tower_data.powers and tower.powers then
+						for power_name, power_data in pairs(tower_data.powers) do
+							if tower.powers[power_name] then
+								TU.set_power_level(store, tower, power_name, power_data.level)
+							end
+						end
+					end
 
 					::continue::
 				end

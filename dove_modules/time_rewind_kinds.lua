@@ -307,18 +307,14 @@ local KIND_TOWER_SELL = time_rewind.register("tower_sell", {
 local KIND_POWER_UPGRADE = time_rewind.register("tower_power_upgrade", {
 	apply = function(game, holder_id, power_name, level, spent)
 		local t = tower_by_holder_id(game.simulation.store, holder_id)
-
-		local power = t.powers[power_name]
-
-		power.level = level
-		power.changed = true
-
 		local store = game.simulation.store
+
+		TU.set_power_level(store, t, power_name, level)
 
 		store.player_gold = store.player_gold - spent
 		t.tower.spent = t.tower.spent + spent
 
-		signal.emit("tower-power-upgraded", t, power)
+		signal.emit("tower-power-upgraded", t, t.powers[power_name])
 	end,
 	valid = function(game, holder_id, power_name, level)
 		local t = tower_by_holder_id(game.simulation.store, holder_id)

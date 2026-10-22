@@ -8,7 +8,7 @@ local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
-local TU=require("tower_utils")
+local TU=require("all.tower_utils")
 require("all.constants")
 local function fts(v)
 return v/FPS

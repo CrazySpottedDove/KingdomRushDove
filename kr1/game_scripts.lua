@@ -17,7 +17,7 @@ local configer = require("dove_modules.configer")
 local SU = require("script_utils")
 local configer = require("dove_modules.configer")
 local U = require("utils")
-local TU = require("tower_utils")
+local TU = require("all.tower_utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
 
