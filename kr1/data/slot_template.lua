@@ -98,6 +98,8 @@ return {
 		"tower_wildcat",
 		"tower_miners",
 		"tower_sunray_master",
-		"tower_alchemist"
+		"tower_alchemist",
+		"tower_crossbows",
+		"tower_tree"
 	}
 }

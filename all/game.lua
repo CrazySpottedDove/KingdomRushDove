@@ -69,6 +69,7 @@ game.required_textures = {
 	"go_towers_crossbows",
 	"go_towers_sunray_master",
 	"go_towers_miners",
+	"go_towers_tree",
 	"go_stage128",
 	"tower_holders"
 }
@@ -133,7 +134,8 @@ game.required_sounds = {
 	"tower_wildcat",
 	"tower_miners",
 	"tower_elf_ranger",
-	"tower_crossbows"
+	"tower_crossbows",
+	"tower_tree"
 }
 game.required_exoskeletons = {
 	"ignis_altar_lava_golem",
@@ -182,7 +184,13 @@ game.required_exoskeletons = {
 	"miners_hitDef",
 	"miners_emerging_blastDef",
 	"miners_emerging_blast_floorDef",
-	"miners_emerging_blast_backDef"
+	"miners_emerging_blast_backDef",
+	"t_4Def",
+	"t_4_unitDef",
+	"t_unitminiDef",
+	"t_changemodehideDef",
+	"t_instakillDef",
+	"t_decalDef"
 }
 game.plugin_required_textures = {}
 game.plugin_required_sounds = {}

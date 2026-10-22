@@ -1530,6 +1530,7 @@ function scripts.tower_common.get_info(this)
 
 	if this.attacks and this.attacks.list[1].damage_min then
 		min, max = this.attacks.list[1].damage_min, this.attacks.list[1].damage_max
+		d_type = this.attacks.list[1].damage_type
 	elseif this.attacks and this.attacks.list[1].bullet then
 		local b = E:get_template(this.attacks.list[1].bullet)
 
