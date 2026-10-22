@@ -3842,6 +3842,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
 tt.tween.props[1].keys = {{0, 0}, {1, 255}}
 tt.vis.flags = bor(F_FRIEND)
-tt.vis.bans = bor(F_BLOOD, F_POISON)
+tt.vis.bans = bor(F_BLOOD, F_POISON, F_LYCAN)
 tt.sound_events.raise = "TowerCursedCrossbowsFallenKnightCast"
 tt.click_rect_soldier = r(-20, 0, 40, 45)
