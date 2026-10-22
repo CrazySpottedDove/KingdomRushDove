@@ -4559,6 +4559,7 @@ tt.timed_attacks.list[1].damage_type = DAMAGE_INSTAKILL
 tt.timed_attacks.list[1].hit_time = fts(11)
 tt.timed_attacks.list[1].instakill = "decal_tree_skill_b_instakill"
 tt.timed_attacks.list[1].sound = "TowerIronbarkTreantNaturesHandCast"
+tt.timed_attacks.list[1].cooldown = 25
 tt.render.sprites[1].prefix = "t_4_unitDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
