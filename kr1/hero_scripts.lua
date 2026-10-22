@@ -776,7 +776,7 @@ scripts.mirage_shadow = {
 			return false
 		end
 
-		b.to = V.vclone(target.pos)
+		b.to:copy(target.pos)
 
 		return true
 	end,
@@ -834,7 +834,7 @@ scripts.mirage_shadow = {
 		if b.hit_fx and target.unit.blood_color then
 			local fx = E:create_entity(b.hit_fx)
 
-			fx.pos = V.vclone(target.pos)
+			fx.pos:copy(target.pos)
 
 			if target.unit.hit_offset then
 				fx.pos.x, fx.pos.y = fx.pos.x + target.unit.hit_offset.x, fx.pos.y + target.unit.hit_offset.y
@@ -1120,7 +1120,7 @@ scripts.hero_mirage = {
 							if d.damage_type ~= DAMAGE_INSTAKILL and a_l.hit_fx and target.unit.blood_color then
 								local fx = E:create_entity(a_l.hit_fx)
 
-								fx.pos = V.vclone(target.pos)
+								fx.pos:copy(target.pos)
 
 								if target.unit.hit_offset then
 									fx.pos.x = fx.pos.x + target.unit.hit_offset.x
@@ -1313,7 +1313,7 @@ scripts.ray_wizard_chain = {
 				b.mods = {b.mod}
 			end
 
-			for _, modname in pairs(b.mods) do
+			for _, modname in ipairs(b.mods) do
 				local mod = E:create_entity(modname)
 
 				mod.modifier.source_id = b.source_id
@@ -1337,8 +1337,8 @@ scripts.ray_wizard_chain = {
 
 					local r = E:create_entity(this.template_name)
 
-					r.pos = V.vclone(dest)
-					r.bullet.to = V.vclone(bounce_target.pos)
+					r.pos:copy(dest)
+					r.bullet.to:copy(bounce_target.pos)
 
 					if not b.ignore_hit_offset and bounce_target.unit and bounce_target.unit.hit_offset then
 						r.bullet.to.x = r.bullet.to.x + bounce_target.unit.hit_offset.x
@@ -1956,7 +1956,7 @@ scripts.decal_bolin_mine = {
 			if targets and #targets > 0 then
 				local dec = E:create_entity(this.hit_decal)
 
-				dec.pos = V.vclone(this.pos)
+				dec.pos:copy(this.pos)
 				dec.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(dec)
@@ -1964,7 +1964,7 @@ scripts.decal_bolin_mine = {
 
 				local fx = E:create_entity(this.hit_fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(fx)
@@ -2088,7 +2088,7 @@ scripts.hero_bolin = {
 
 								b.bullet.from = V.v(this.pos.x + (af and -1 or 1) * o.x, this.pos.y + o.y)
 								b.bullet.to = P:node_pos(pi, spi, ni)
-								b.pos = V.vclone(b.bullet.from)
+								b.pos:copy(b.bullet.from)
 								b.bullet.source_id = this.id
 
 								simulation:queue_insert_entity(b)
@@ -2152,7 +2152,7 @@ scripts.hero_bolin = {
 
 							b.bullet.from = V.v(this.pos.x + (af and -1 or 1) * o.x, this.pos.y + o.y)
 							b.bullet.to = mine_pos
-							b.pos = V.vclone(b.bullet.from)
+							b.pos:copy(b.bullet.from)
 							b.bullet.source_id = this.id
 
 							simulation:queue_insert_entity(b)
@@ -2234,7 +2234,7 @@ scripts.hero_bolin = {
 								for i = 1, a.count do
 									target = targets[km.zmod(i, #targets)]
 									b = E:create_entity(a.bullet)
-									b.pos = V.vclone(this.pos)
+									b.pos:copy(this.pos)
 									b.bullet.damage_type = a.damage_type
 
 									if a == this.timed_attacks.list[4] then
@@ -2248,7 +2248,7 @@ scripts.hero_bolin = {
 										b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * offset.x, b.pos.y + offset.y
 									end
 
-									b.bullet.from = V.vclone(b.pos)
+									b.bullet.from:copy(b.pos)
 									b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 									b.bullet.target_id = target.id
 									b.bullet.shot_index = si
@@ -2314,7 +2314,7 @@ scripts.denas_catapult_controller = {
 			local bullet = E:create_entity(this.bullet)
 
 			bullet.pos = V.v(rock_x, rock_y)
-			bullet.bullet.from = V.vclone(bullet.pos)
+			bullet.bullet.from:copy(bullet.pos)
 			bullet.bullet.to = U.point_on_ellipse(this.pos, r, a)
 			bullet.bullet.target_id = nil
 			bullet.bullet.source_id = this.id
@@ -2546,7 +2546,7 @@ scripts.hero_denas = {
 			end
 
 			bullet = E:create_entity(bullet_name)
-			bullet.pos = V.vclone(this.pos)
+			bullet.pos:copy(this.pos)
 
 			if attack.bullet_start_offset then
 				local offset = attack.bullet_start_offset[ai]
@@ -2554,8 +2554,8 @@ scripts.hero_denas = {
 				bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
 			end
 
-			bullet.bullet.from = V.vclone(bullet.pos)
-			bullet.bullet.to = V.vclone(bullet_to)
+			bullet.bullet.from:copy(bullet.pos)
+			bullet.bullet.to:copy(bullet_to)
 			bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
 			bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
 			bullet.bullet.target_id = target.id
@@ -3385,7 +3385,7 @@ scripts.van_helsing_grenade = {
 		local fx = E:create_entity(b.hit_fx)
 
 		fx.render.sprites[1].ts = store.tick_ts
-		fx.pos = V.vclone(b.to)
+		fx.pos:copy(b.to)
 
 		simulation:queue_insert_entity(fx)
 		simulation:queue_remove_entity(this)
@@ -3643,8 +3643,8 @@ scripts.hero_van_helsing = {
 
 								b.pos.x = this.pos.x + (af and -1 or 1) * a.bullet_start_offset[aidx].x
 								b.pos.y = this.pos.y + a.bullet_start_offset[aidx].y
-								b.bullet.from = V.vclone(b.pos)
-								b.bullet.to = V.vclone(target.pos)
+								b.bullet.from:copy(b.pos)
+								b.bullet.to:copy(target.pos)
 								b.bullet.target_id = target.id
 								b.bullet.damage_factor = this.unit.damage_factor
 
@@ -3751,8 +3751,8 @@ scripts.hero_van_helsing = {
 
 								b.pos.x = this.pos.x + (af and -1 or 1) * a.bullet_start_offset[aidx].x
 								b.pos.y = this.pos.y + a.bullet_start_offset[aidx].y
-								b.bullet.from = V.vclone(b.pos)
-								b.bullet.to = V.vclone(target.pos)
+								b.bullet.from:copy(b.pos)
+								b.bullet.to:copy(target.pos)
 								b.bullet.target_id = target.id
 								b.bullet.damage_factor = (is_werewolf(target) and a.werewolf_damage_factor or 1) * this.unit.damage_factor
 
@@ -3797,8 +3797,8 @@ scripts.hero_van_helsing = {
 
 							b.pos.x = this.pos.x + (af and -1 or 1) * a.bullet_start_offset[1].x
 							b.pos.y = this.pos.y + a.bullet_start_offset[1].y
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = V.vclone(pred_pos)
+							b.bullet.from:copy(b.pos)
+							b.bullet.to:copy(pred_pos)
 							b.bullet.target_id = target.id
 
 							simulation:queue_insert_entity(b)
@@ -4257,7 +4257,7 @@ scripts.hero_priest = {
 
 			local fx = E:create_entity("fx_priest_wave_" .. (out and "out" or "in"))
 
-			fx.pos = V.vclone(pos)
+			fx.pos:copy(pos)
 			fx.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(fx)
@@ -4339,7 +4339,7 @@ scripts.hero_priest = {
 						end)
 						local could_revive = false
 
-						for _, t in pairs(dead_targets) do
+						for _, t in ipairs(dead_targets) do
 							if not t.reinforcement and not U.is_wraith(t.template_name) then
 								could_revive = true
 
@@ -4383,7 +4383,7 @@ scripts.hero_priest = {
 
 									local fx = E:create_entity("fx_priest_revive")
 
-									fx.pos = V.vclone(s.pos)
+									fx.pos:copy(s.pos)
 									fx.render.sprites[1].ts = store.tick_ts
 
 									simulation:queue_insert_entity(fx)
@@ -5533,7 +5533,7 @@ function scripts.hero_dracolich.update(this, store)
 			else
 				local target
 
-				for _, ti in pairs(targets_info) do
+				for _, ti in ipairs(targets_info) do
 					if GR:cell_is(ti.enemy.pos.x, ti.enemy.pos.y, TERRAIN_LAND) then
 						target = ti.enemy
 
@@ -5633,10 +5633,10 @@ function scripts.hero_dracolich.update(this, store)
 					b = E:create_entity(a.bullet)
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
-					b.pos = V.vclone(this.pos)
+					b.pos:copy(this.pos)
 					b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[ai].x
 					b.pos.y = b.pos.y + a.bullet_start_offset[ai].y
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = V.v(t_pos.x, t_pos.y)
 
 					simulation:queue_insert_entity(b)
@@ -5886,7 +5886,7 @@ function scripts.hero_pirate.update(this, store)
 
 					local bullet = E:create_entity(a.bullet)
 
-					bullet.pos = V.vclone(this.pos)
+					bullet.pos:copy(this.pos)
 
 					if a.bullet_start_offset then
 						local offset = a.bullet_start_offset[ai]
@@ -5894,7 +5894,7 @@ function scripts.hero_pirate.update(this, store)
 						bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
 					end
 
-					bullet.bullet.from = V.vclone(bullet.pos)
+					bullet.bullet.from:copy(bullet.pos)
 					bullet.bullet.to = npos
 
 					simulation:queue_insert_entity(bullet)
@@ -6365,7 +6365,7 @@ scripts.hero_ingvar = {
 			ba.ts = store.tick_ts
 		end
 
-		-- for _, an in pairs(this.auras.list) do
+		-- for _, an in ipairs(this.auras.list) do
 		-- 	local aura = E:create_entity(an.name)
 
 		-- 	aura.aura.source_id = this.id
@@ -6715,7 +6715,7 @@ scripts.hero_ignus = {
 								for _, t in ipairs(targets) do
 									local fx = E:create_entity(a.hit_fx)
 
-									fx.pos = V.vclone(t.pos)
+									fx.pos:copy(t.pos)
 
 									if t.unit and t.unit.mod_offset then
 										fx.pos.x, fx.pos.y = fx.pos.x + t.unit.mod_offset.x, fx.pos.y + t.unit.mod_offset.y
@@ -7527,7 +7527,7 @@ scripts.power_fireball_10yr = {
 			if b.hit_decal then
 				local decal = E:create_entity(b.hit_decal)
 
-				decal.pos = V.vclone(b.to)
+				decal.pos:copy(b.to)
 				decal.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(decal)
@@ -7639,7 +7639,7 @@ scripts.power_giant_fireball_10yr = {
 			if b.hit_decal then
 				local decal = E:create_entity(b.hit_decal)
 
-				decal.pos = V.vclone(b.to)
+				decal.pos:copy(b.to)
 				decal.render.sprites[1].ts = store.tick_ts
 				decal.render.sprites[1].scale = V.vv(2)
 
@@ -7905,10 +7905,10 @@ scripts.hero_dragon = {
 						b.bullet.damage_factor = this.unit.damage_factor
 						b.bullet.damage_min = b.bullet.damage_min + this.unit.damage_buff
 						b.bullet.damage_max = b.bullet.damage_max + this.unit.damage_buff
-						b.pos = V.vclone(this.pos)
+						b.pos:copy(this.pos)
 						b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[ai].x
 						b.pos.y = b.pos.y + a.bullet_start_offset[ai].y
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 						b.bullet.to = V.v(t_pos.x, t_pos.y)
 
 						simulation:queue_insert_entity(b)
@@ -8295,7 +8295,7 @@ function scripts.wildfirebarrage_dragon.update(this, store)
 				simulation:queue_insert_entity(fx)
 
 				decal = E:create_entity("decal_wildfirebarrage_explosion")
-				decal.pos = V.vclone(pos)
+				decal.pos:copy(pos)
 				decal.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(decal)
@@ -8381,7 +8381,7 @@ function scripts.hero_vampiress.insert(this, store)
 
 	m.modifier.target_id = this.id
 	m.modifier.source_id = this.id
-	m.pos = V.vclone(this.pos)
+	m.pos:copy(this.pos)
 
 	simulation:queue_insert_entity(m)
 
@@ -9476,7 +9476,7 @@ function scripts.hero_crab.update(this, store)
 									fx.render.sprites[1].name = "big"
 									fx.render.sprites[1].ts = store.tick_ts
 									fx.render.sprites[1].sort_y_offset = 0
-									fx.pos = V.vclone(this.pos)
+									fx.pos:copy(this.pos)
 
 									simulation:queue_insert_entity(fx)
 
@@ -9746,7 +9746,7 @@ scripts.mod_minotaur_daedalus = {
 
 		local fx = E:create_entity("decal_minotaur_daedalus")
 
-		fx.pos = V.vclone(target.pos)
+		fx.pos:copy(target.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -9777,7 +9777,7 @@ scripts.mod_minotaur_daedalus = {
 		es.tween.reverse = true
 		es.tween.ts = store.tick_ts
 		fx = E:create_entity("decal_minotaur_daedalus")
-		fx.pos = V.vclone(target.pos)
+		fx.pos:copy(target.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -9982,7 +9982,7 @@ scripts.hero_minotaur = {
 
 							local fx = E:create_entity(a.shoot_fx)
 
-							fx.pos = V.vclone(this.pos)
+							fx.pos:copy(this.pos)
 							fx.render.sprites[1].anchor = V.vclone(this.render.sprites[1].anchor)
 							fx.render.sprites[1].ts = store.tick_ts
 							fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
@@ -10822,7 +10822,7 @@ scripts.hero_elves_archer = {
 
 							local b = E:create_entity(attack.bullet)
 
-							b.pos = V.vclone(this.pos)
+							b.pos:copy(this.pos)
 
 							if attack.bullet_start_offset then
 								local offset = attack.bullet_start_offset[1]
@@ -10830,7 +10830,7 @@ scripts.hero_elves_archer = {
 								b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * offset.x, b.pos.y + offset.y
 							end
 
-							b.bullet.from = V.vclone(b.pos)
+							b.bullet.from:copy(b.pos)
 							b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 							b.bullet.target_id = target.id
 							b.bullet.source_id = this.id
@@ -10933,7 +10933,7 @@ scripts.hero_elves_archer_ultimate = {
 			b.bullet.from = V.v(pos.x + math.random(-170, -140), pos.y + REF_H)
 			b.bullet.to = pos
 			b.bullet.damage_factor = this.damage_factor
-			b.pos = V.vclone(b.bullet.from)
+			b.pos:copy(b.bullet.from)
 
 			simulation:queue_insert_entity(b)
 		end
@@ -11022,7 +11022,7 @@ scripts.arrow_hero_elves_archer_ultimate = {
 		if b.arrive_decal then
 			local decal = E:create_entity(b.arrive_decal)
 
-			decal.pos = V.vclone(b.to)
+			decal.pos:copy(b.to)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(decal)
@@ -11231,7 +11231,7 @@ scripts.hero_regson = {
 										local whirlwind_targets = U.find_enemies_in_range_filter_off(this.pos, a.damage_radius, a.vis_flags, a.vis_bans)
 
 										if whirlwind_targets then
-											for _, target in pairs(whirlwind_targets) do
+											for _, target in ipairs(whirlwind_targets) do
 												local m = E:create_entity(a.mod)
 
 												m.modifier.target_id = target.id
@@ -12304,8 +12304,8 @@ function scripts.hero_wilbur.update(this, store)
 
 				b.pos.x = this.pos.x + (flip and -1 or 1) * a.bullet_start_offset.x
 				b.pos.y = this.pos.y + a.bullet_start_offset.y
-				b.bullet.from = V.vclone(b.pos)
-				b.bullet.to = V.vclone(e.pos)
+				b.bullet.from:copy(b.pos)
+				b.bullet.to:copy(e.pos)
 				b.bullet.hit_payload = e
 
 				simulation:queue_insert_entity(b)
@@ -12767,7 +12767,7 @@ function scripts.hero_veznan.update(this, store)
 
 						b.from = V.v(target.pos.x + target.unit.mod_offset.x, target.pos.y + target.unit.mod_offset.y)
 						b.to = V.v(this.pos.x + o.x, this.pos.y + o.y)
-						b.pos = V.vclone(b.from)
+						b.pos:copy(b.from)
 						b.target = target
 
 						simulation:queue_insert_entity(b)
@@ -13125,8 +13125,8 @@ function scripts.hero_durax.update(this, store)
 							b.bullet.target_id = target.id
 							b.bullet.source_id = this.id
 							b.pos = V.v(this.pos.x + bo.x, this.pos.y + bo.y)
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = V.vclone(target.pos)
+							b.bullet.from:copy(b.pos)
+							b.bullet.to:copy(target.pos)
 
 							simulation:queue_insert_entity(b)
 						end
@@ -13987,10 +13987,10 @@ function scripts.hero_arivan.update(this, store)
 							end
 
 							a.ts = store.tick_ts
-							b.pos = V.vclone(this.pos)
+							b.pos:copy(this.pos)
 							b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * offset.x, b.pos.y + offset.y
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = V.vclone(pred_pos)
+							b.bullet.from:copy(b.pos)
+							b.bullet.to:copy(pred_pos)
 							b.bullet.to.x, b.bullet.to.y = b.bullet.to.x + U.frandom(-1, 1), b.bullet.to.y + U.frandom(-1, 1)
 							b.bullet.source_id = this.id
 							b.bullet.xp_dest_id = this.id
@@ -14128,7 +14128,7 @@ function scripts.fireball_arivan.update(this, store)
 	if b.hit_fx then
 		local fx = E:create_entity(b.hit_fx)
 
-		fx.pos = V.vclone(b.to)
+		fx.pos:copy(b.to)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -14293,10 +14293,10 @@ function scripts.hero_arivan_ultimate.update(this, store)
 							local target = table.random(targets)
 							local b = E:create_entity(a.bullet)
 
-							b.pos = V.vclone(this.pos)
+							b.pos:copy(this.pos)
 							b.pos.x = b.pos.x + (target.pos.x > this.pos.x and 1 or -1) * a.bullet_start_offset[1].x
 							b.pos.y = b.pos.y + a.bullet_start_offset[1].y
-							b.bullet.from = V.vclone(b.pos)
+							b.bullet.from:copy(b.pos)
 							b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 							b.bullet.target_id = target.id
 							b.bullet.source_id = this.id
@@ -14812,8 +14812,8 @@ function scripts.hero_bravebark.update(this, store)
 								local b = E:create_entity(a.bullet)
 
 								b.pos.x, b.pos.y = this.pos.x + (af and -1 or 1) * a.spawn_offset.x, this.pos.y + a.spawn_offset.y
-								b.bullet.from = V.vclone(b.pos)
-								b.bullet.to = V.vclone(e.pos)
+								b.bullet.from:copy(b.pos)
+								b.bullet.to:copy(e.pos)
 								b.bullet.hit_payload = e
 
 								simulation:queue_insert_entity(b)
@@ -15257,7 +15257,7 @@ function scripts.hero_catha.update(this, store)
 				local target_found = false
 
 				if target then
-					target = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, this.ranged.attacks[1].max_range, 0, bor(F_RANGED, F_MOD), 0, nil, nil, this.ultimate.range)
+					target = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(this.pos, this.ranged.attacks[1].max_range, 0, bor(F_RANGED, F_MOD), 0, this.ultimate.range)
 
 					if target and target.pos and valid_land_node_nearby(target.pos) then
 						target_found = true
@@ -15464,7 +15464,7 @@ function scripts.hero_lilith.update(this, store)
 				h.dead = false
 				h.hp = h.hp_max
 
-				for _, s in pairs(this.render.sprites) do
+				for _, s in ipairs(this.render.sprites) do
 					s.hidden = false
 				end
 
@@ -15609,7 +15609,7 @@ function scripts.hero_lilith_ultimate.update(this, store)
 
 		b.bullet.from = V.v(pos.x + math.random(140, 170), pos.y + REF_H)
 		b.bullet.to = pos
-		b.pos = V.vclone(b.bullet.from)
+		b.pos:copy(b.bullet.from)
 		b.bullet.damage_factor = this.damage_factor
 
 		simulation:queue_insert_entity(b)
@@ -15773,7 +15773,7 @@ function scripts.hero_xin.level_up(this, store, initial)
 
 		local e = E:get_template(u.entity)
 
-		for _, ma in pairs(e.melee.attacks) do
+		for _, ma in ipairs(e.melee.attacks) do
 			ma.damage_max = s.damage[s.level]
 			ma.damage_min = s.damage[s.level]
 		end
@@ -15833,8 +15833,8 @@ function scripts.hero_xin.update(this, store)
 
 					shadow = E:create_entity("soldier_xin_shadow")
 					shadow.pos.x, shadow.pos.y = this.pos.x, this.pos.y
-					shadow.nav_rally.center = V.vclone(this.pos)
-					shadow.nav_rally.pos = V.vclone(this.pos)
+					shadow.nav_rally.center:copy(this.pos)
+					shadow.nav_rally.pos:copy(this.pos)
 					shadow.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 
 					simulation:queue_insert_entity(shadow)
@@ -15996,8 +15996,8 @@ function scripts.hero_xin.update(this, store)
 
 					shadow = E:create_entity("soldier_xin_shadow")
 					shadow.pos.x, shadow.pos.y = this.pos.x, this.pos.y
-					shadow.nav_rally.center = V.vclone(this.pos)
-					shadow.nav_rally.pos = V.vclone(this.pos)
+					shadow.nav_rally.center:copy(this.pos)
+					shadow.nav_rally.pos:copy(this.pos)
 					shadow.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 
 					simulation:queue_insert_entity(shadow)
@@ -16404,10 +16404,10 @@ function scripts.hero_faustus.update(this, store)
 							b.bullet.source_id = this.id
 							b.bullet.xp_dest_id = this.id
 							b.bullet.damage_factor = this.unit.damage_factor
-							b.pos = V.vclone(this.pos)
+							b.pos:copy(this.pos)
 							b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[ai].x
 							b.pos.y = b.pos.y + a.bullet_start_offset[ai].y
-							b.bullet.from = V.vclone(b.pos)
+							b.bullet.from:copy(b.pos)
 							b.bullet.to = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
 							b.bullet.shot_index = i
 
@@ -16645,8 +16645,8 @@ function scripts.hero_rag.update(this, store)
 
 								b.pos.x = this.pos.x + math.random(-3, 3) + a.spawn_offset.x
 								b.pos.y = this.pos.y + math.random(0, 3) + a.spawn_offset.y
-								b.bullet.from = V.vclone(b.pos)
-								b.bullet.to = V.vclone(e.pos)
+								b.bullet.from:copy(b.pos)
+								b.bullet.to:copy(e.pos)
 								b.bullet.hit_payload = e
 								b.bullet.damage_factor = this.unit.damage_factor
 								b.render.sprites[1].flip_x = flip
@@ -16892,7 +16892,7 @@ function scripts.rabbit_kamihare.update(this, store)
 
 	local aura = E:create_entity(a.aura)
 
-	aura.pos = V.vclone(this.pos)
+	aura.pos:copy(this.pos)
 	aura.aura.damage_factor = this.damage_factor or 1
 
 	simulation:queue_insert_entity(aura)
@@ -16900,7 +16900,7 @@ function scripts.rabbit_kamihare.update(this, store)
 	if a.hit_fx then
 		local fx = E:create_entity(a.hit_fx)
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -17204,7 +17204,7 @@ function scripts.lion_bruce.update(this, store)
 
 						goto label_179_0
 					elseif U.flags_pass(e.vis, attack) then
-						for _, mn in pairs(attack.mods) do
+						for _, mn in ipairs(attack.mods) do
 							local m = E:create_entity(mn)
 
 							m.modifier.target_id = e.id
@@ -17515,7 +17515,7 @@ scripts.hero_dwarf = {
 
 								local fx = E:create_entity(ring.hit_fx)
 
-								fx.pos = V.vclone(hit_pos)
+								fx.pos:copy(hit_pos)
 								fx.render.sprites[1].ts = store.tick_ts
 								fx.render.sprites[1].scale.x = a.scale
 								fx.render.sprites[1].scale.y = a.scale
@@ -17524,7 +17524,7 @@ scripts.hero_dwarf = {
 
 								local decal = E:create_entity(ring.hit_decal)
 
-								decal.pos = V.vclone(hit_pos)
+								decal.pos:copy(hit_pos)
 								decal.render.sprites[1].ts = store.tick_ts
 								decal.render.sprites[1].scale.x = a.scale * decal.render.sprites[1].scale.x
 								decal.render.sprites[1].scale.y = a.scale * decal.render.sprites[1].scale.y
@@ -17719,9 +17719,9 @@ function scripts.hero_hunter.update(this, store)
 		S:queue(attack.sound_shoot)
 
 		bullet = E:create_entity(attack.bullet)
-		bullet.pos = V.vclone(this.pos)
-		bullet.bullet.from = V.vclone(bullet.pos)
-		bullet.bullet.to = V.vclone(bullet_to)
+		bullet.pos:copy(this.pos)
+		bullet.bullet.from:copy(bullet.pos)
+		bullet.bullet.to:copy(bullet_to)
 		bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
 		bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
 		bullet.bullet.target_id = target.id
@@ -17827,7 +17827,7 @@ function scripts.hero_hunter.update(this, store)
 		S:queue(attack.sound_shoot)
 
 		bullet = E:create_entity(attack.bullet)
-		bullet.pos = V.vclone(this.pos)
+		bullet.pos:copy(this.pos)
 
 		if attack.bullet_start_offset then
 			local offset = attack.bullet_start_offset[ai]
@@ -17835,8 +17835,8 @@ function scripts.hero_hunter.update(this, store)
 			bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
 		end
 
-		bullet.bullet.from = V.vclone(bullet.pos)
-		bullet.bullet.to = V.vclone(bullet_to)
+		bullet.bullet.from:copy(bullet.pos)
+		bullet.bullet.to:copy(bullet_to)
 		bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
 		bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
 		bullet.bullet.target_id = target.id
@@ -17889,7 +17889,7 @@ function scripts.hero_hunter.update(this, store)
 			attack.ts = start_ts
 
 			if attack.shared_cooldown then
-				for _, aa in pairs(hero.ranged.attacks) do
+				for _, aa in ipairs(hero.ranged.attacks) do
 					if aa ~= attack and aa.shared_cooldown then
 						aa.ts = attack.ts
 					end
@@ -18376,9 +18376,9 @@ function scripts.arrow_hero_hunter_ricochet.update(this, store)
 	local function create_arrow_trail(from, target)
 		local bullet = E:create_entity(this.trail_arrow)
 
-		bullet.pos = V.vclone(this.pos)
-		bullet.bullet.from = V.vclone(from)
-		bullet.bullet.to = V.vclone(target.pos)
+		bullet.pos:copy(this.pos)
+		bullet.bullet.from:copy(from)
+		bullet.bullet.to:copy(target.pos)
 		bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
 		bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
 		bullet.bullet.target_id = target.id
@@ -18909,7 +18909,7 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 				if math.random() <= this.chance_to_steal then
 					local fx = E:create_entity(this.steal_fx)
 
-					fx.pos = V.vclone(target.pos)
+					fx.pos:copy(target.pos)
 					fx.pos.y = fx.pos.y + this.fx_offset_y
 					fx.render.sprites[1].ts = store.tick_ts
 
@@ -19658,7 +19658,7 @@ function scripts.hero_space_elf.update(this, store)
 						local pos = P:node_pos(target.nav_path.pi, 1, distance_index)
 
 						distance_index = distance_index - a.border_cracks_distance
-						aura.pos = V.vclone(pos)
+						aura.pos:copy(pos)
 						last_node_pos = pos
 
 						simulation:queue_insert_entity(aura)
@@ -19684,7 +19684,7 @@ function scripts.hero_space_elf.update(this, store)
 						local pos = P:node_pos(target.nav_path.pi, 1, distance_index)
 
 						distance_index = distance_index - a.border_cracks_distance
-						aura_2.pos = V.vclone(pos)
+						aura_2.pos:copy(pos)
 						last_node_pos = pos
 
 						simulation:queue_insert_entity(aura_2)
@@ -19895,7 +19895,7 @@ function scripts.soldier_hero_space_elf_astral_reflection.update(this, store)
 
 	local spawn_fx = E:create_entity(this.spawn_fx)
 
-	spawn_fx.pos = V.vclone(this.pos)
+	spawn_fx.pos:copy(this.pos)
 	spawn_fx.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(spawn_fx)
@@ -20899,7 +20899,7 @@ function scripts.hero_venom.update(this, store)
 		if this.is_transformed then
 			local fx = E:create_entity(this.beast.lvl_up_fx)
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 
 			for i = 1, #fx.render.sprites do
 				fx.render.sprites[i].ts = store.tick_ts
@@ -21127,7 +21127,7 @@ function scripts.hero_venom.update(this, store)
 						end)
 
 						if eat_targets then
-							for _, eat_target in pairs(eat_targets) do
+							for _, eat_target in ipairs(eat_targets) do
 								local d = E.assign_damage(DAMAGE_TRUE, 0, this.id, eat_target.id)
 
 								if eat_target.health.hp <= eat_target.health.hp_max * eat_enemy_attack.hp_trigger then
@@ -21396,8 +21396,8 @@ function scripts.hero_venom.update(this, store)
 							local b = E:create_entity(a.bullet)
 
 							b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = V.vclone(pred_pos)
+							b.bullet.from:copy(b.pos)
+							b.bullet.to:copy(pred_pos)
 							b.bullet.to.x = b.bullet.to.x + target.unit.hit_offset.x
 							b.bullet.to.y = b.bullet.to.y + target.unit.hit_offset.y
 							b.bullet.target_id = enemy_id
@@ -21530,7 +21530,7 @@ function scripts.mod_hero_venom_eat_enemy_regen.update(this, store)
 		end
 
 		if this.render and target.unit then
-			for _, s in pairs(this.render.sprites) do
+			for _, s in ipairs(this.render.sprites) do
 				local flip_sign = 1
 
 				if target.render then
@@ -21877,7 +21877,7 @@ function scripts.hero_dragon_gem.update(this, store)
 			if this.unit.show_blood_pool and this.unit.blood_color ~= BLOOD_NONE then
 				local decal = E:create_entity("decal_blood_pool")
 
-				decal.pos = V.vclone(this.pos)
+				decal.pos:copy(this.pos)
 				decal.render.sprites[1].ts = store.tick_ts
 				decal.render.sprites[1].name = this.unit.blood_color
 
@@ -21891,7 +21891,7 @@ function scripts.hero_dragon_gem.update(this, store)
 		this.health.death_finished_ts = store.tick_ts
 
 		if this.unit.hide_after_death then
-			for _, s in pairs(this.render.sprites) do
+			for _, s in ipairs(this.render.sprites) do
 				s.hidden = true
 			end
 		end
@@ -21937,7 +21937,7 @@ function scripts.hero_dragon_gem.update(this, store)
 			this.nav_rally.new = false
 		end
 
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.hidden = false
 		end
 
@@ -22031,7 +22031,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
 						local target
 
-						for _, ti in pairs(targets_info) do
+						for _, ti in ipairs(targets_info) do
 							if GR:cell_is(ti.enemy.pos.x, ti.enemy.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) then
 								target = ti.enemy
 
@@ -22060,7 +22060,7 @@ function scripts.hero_dragon_gem.update(this, store)
 						b.bullet.target_id = target.id
 						b.bullet.source_id = this.id
 						b.bullet.damage_factor = this.unit.damage_factor
-						b.pos = V.vclone(this.pos)
+						b.pos:copy(this.pos)
 
 						local bullet_start_offset = V.v(0, 0)
 
@@ -22072,7 +22072,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
 						b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
 						b.pos.y = b.pos.y + bullet_start_offset.y
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 
 						if b.bullet.ignore_hit_offset then
 							b.bullet.to = V.v(target.pos.x, target.pos.y)
@@ -22101,7 +22101,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
 						local target
 
-						for _, ti in pairs(targets_info) do
+						for _, ti in ipairs(targets_info) do
 							if GR:cell_is(ti.enemy.pos.x, ti.enemy.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) then
 								target = ti.enemy
 
@@ -22303,7 +22303,7 @@ function scripts.hero_dragon_gem.update(this, store)
 					end
 
 					if i == 5 then
-						local aim_target, enemies = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a.max_range_trigger, a.shoot_time + E:get_template(a.bullet).bullet.flight_time, a.vis_flags, a.vis_bans, nil, nil, E:get_template(E:get_template(a.bullet).bullet.hit_payload).aura.radius)
+						local aim_target, enemies = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(this.pos, a.max_range_trigger, a.shoot_time + E:get_template(a.bullet).bullet.flight_time, a.vis_flags, a.vis_bans, E:get_template(E:get_template(a.bullet).bullet.hit_payload).aura.radius)
 
 						if not enemies or #enemies < a.min_targets then
 							a.ts = a.ts + 0.4
@@ -22332,11 +22332,11 @@ function scripts.hero_dragon_gem.update(this, store)
 						U.animation_start_default(this, an, af, store.tick_ts)
 						U.y_wait_unconditional(store, a.shoot_time)
 
-						bullet.pos = V.vclone(this.pos)
+						bullet.pos:copy(this.pos)
 						bullet.pos.x = bullet.pos.x + a.bullet_start_offset.x
 						bullet.pos.y = bullet.pos.y + a.bullet_start_offset.y
-						bullet.bullet.from = V.vclone(bullet.pos)
-						bullet.bullet.to = V.vclone(bullet_to)
+						bullet.bullet.from:copy(bullet.pos)
+						bullet.bullet.to:copy(bullet_to)
 						bullet.bullet.target_id = aim_target.id
 						bullet.bullet.source_id = this.id
 						bullet.bullet.damage_factor = this.unit.damage_factor
@@ -22384,7 +22384,7 @@ function scripts.hero_dragon_gem.update(this, store)
 								b.bullet.target_id = target.id
 								b.bullet.source_id = this.id
 								b.bullet.xp_dest_id = this.id
-								b.pos = V.vclone(this.pos)
+								b.pos:copy(this.pos)
 
 								local bullet_start_offset = V.v(0, 0)
 
@@ -22396,7 +22396,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
 								b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
 								b.pos.y = b.pos.y + bullet_start_offset.y
-								b.bullet.from = V.vclone(b.pos)
+								b.bullet.from:copy(b.pos)
 
 								if b.bullet.ignore_hit_offset then
 									b.bullet.to = V.v(target.pos.x, target.pos.y)
@@ -22920,7 +22920,7 @@ function scripts.mod_hero_dragon_gem_crystal_instakill.update(this, store)
 
 		local explode_fx = E:create_entity(this.explode_fx)
 
-		explode_fx.pos = V.vclone(target.pos)
+		explode_fx.pos:copy(target.pos)
 		explode_fx.tween.ts = store.tick_ts
 
 		simulation:queue_insert_entity(explode_fx)
@@ -23154,7 +23154,7 @@ function scripts.hero_dragon_gem_ultimate.update(this, store)
 	for _, pos in ipairs(target_pos) do
 		local decal = E:create_entity(this.decal)
 
-		decal.pos = V.vclone(pos)
+		decal.pos:copy(pos)
 
 		simulation:queue_insert_entity(decal)
 		U.y_wait_unconditional(store, this.spawn_delay)
@@ -23203,7 +23203,7 @@ function scripts.bullet_hero_dragon_gem_ultimate_shard.update(this, store)
 	if b.arrive_decal then
 		local decal = E:create_entity(b.arrive_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 		decal.tween.ts = store.tick_ts
 
@@ -23227,10 +23227,10 @@ function scripts.decal_hero_dragon_gem_ultimate_shard.update(this, store)
 
 		bullet_pos.x = bullet_pos.x + x_bullet_offset[i]
 		bullet_pos.y = bullet_pos.y + y_bullet_offset[i]
-		bullet.pos = V.vclone(bullet_pos)
+		bullet.pos:copy(bullet_pos)
 		bullet.pos.y = bullet.pos.y + 200
-		bullet.bullet.from = V.vclone(bullet.pos)
-		bullet.bullet.to = V.vclone(bullet_pos)
+		bullet.bullet.from:copy(bullet.pos)
+		bullet.bullet.to:copy(bullet_pos)
 
 		simulation:queue_insert_entity(bullet)
 		U.y_wait_unconditional(store, fts(2))
@@ -23243,7 +23243,7 @@ function scripts.decal_hero_dragon_gem_ultimate_shard.update(this, store)
 	for _, v in ipairs(this.fx_on_arrival) do
 		local fx = E:create_entity(v)
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].runs = 0
 
@@ -23574,7 +23574,7 @@ function scripts.hero_witch.update(this, store)
 			skill = this.hero.skills.path_aoe
 
 			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
-				local _, targets, pred_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, nil, nil, E:get_template("aura_hero_witch_path_aoe").aura.radius)
+				local _, targets, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(this.pos, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, E:get_template("aura_hero_witch_path_aoe").aura.radius)
 
 				if not targets or #targets < a.min_targets or not pred_pos then
 					a.ts = a.ts + fts(10)
@@ -23697,7 +23697,7 @@ function scripts.hero_witch.update(this, store)
 								bullet.bullet.from = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 								bullet.bullet.xp_dest_id = this.id
 								bullet.bullet.xp_gain_factor = basic_ranged.xp_gain_factor
-								bullet.pos = V.vclone(bullet.bullet.from)
+								bullet.pos:copy(bullet.bullet.from)
 
 								simulation:queue_insert_entity(bullet)
 							end
@@ -23744,7 +23744,7 @@ function scripts.hero_witch.update(this, store)
 							bullet.bullet.xp_dest_id = this.id
 							bullet.bullet.xp_gain_factor = basic_ranged.xp_gain_factor
 							bullet.bullet.level = this.hero.skills.polymorph.level
-							bullet.pos = V.vclone(bullet.bullet.from)
+							bullet.pos:copy(bullet.bullet.from)
 							bullet.pred_pos = enemy_pos
 							bullet.source_id = this.id
 
@@ -24025,7 +24025,7 @@ function scripts.bullet_hero_witch_basic.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -24056,7 +24056,7 @@ function scripts.aura_hero_witch_path_aoe.update(this, store)
 
 	local start_fx = E:create_entity(this.start_fx)
 
-	start_fx.pos = V.vclone(this.pos)
+	start_fx.pos:copy(this.pos)
 	start_fx.render.sprites[1].ts = store.tick_ts
 	start_fx.render.sprites[1].runs = 0
 	start_fx.render.sprites[2].ts = store.tick_ts
@@ -24495,7 +24495,7 @@ function scripts.soldier_hero_witch_decoy.update(this, store)
 			if this.unit.show_blood_pool and this.unit.blood_color ~= BLOOD_NONE then
 				local decal = E:create_entity("decal_blood_pool")
 
-				decal.pos = V.vclone(this.pos)
+				decal.pos:copy(this.pos)
 				decal.render.sprites[1].ts = store.tick_ts
 				decal.render.sprites[1].name = this.unit.blood_color
 
@@ -24524,7 +24524,7 @@ function scripts.soldier_hero_witch_decoy.update(this, store)
 		end
 
 		if this.unit.hide_during_death or this.unit.hide_after_death then
-			for _, s in pairs(this.render.sprites) do
+			for _, s in ipairs(this.render.sprites) do
 				s.hidden = true
 			end
 		end
@@ -24739,15 +24739,15 @@ function scripts.hero_dragon_bone.update(this, store)
 
 			b.bullet.target_id = target.id
 			b.bullet.source_id = this.id
-			b.pos = V.vclone(this.pos)
+			b.pos:copy(this.pos)
 
 			local offset_index = af and 2 or 1
 			local bullet_start_offset = a.bullet_start_offset[offset_index]
 
 			b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
 			b.pos.y = b.pos.y + bullet_start_offset.y
-			b.bullet.from = V.vclone(b.pos)
-			b.bullet.to = V.vclone(pred_pos)
+			b.bullet.from:copy(b.pos)
+			b.bullet.to:copy(pred_pos)
 
 			simulation:queue_insert_entity(b)
 
@@ -24918,7 +24918,7 @@ function scripts.hero_dragon_bone.update(this, store)
 					local b = E:create_entity(a.bullet)
 
 					b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = e_pos
 					b.bullet.damage_factor = this.unit.damage_factor
 					b.bullet.source_id = this.id
@@ -24933,7 +24933,7 @@ function scripts.hero_dragon_bone.update(this, store)
 					local b = E:create_entity(a.bullet)
 
 					b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = pos
 					b.bullet.source_id = this.id
 					b.bullet.damage_factor = this.unit.damage_factor
@@ -24987,7 +24987,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 				shuffle_table(selected_targets)
 
-				for _, t in pairs(selected_targets) do
+				for _, t in ipairs(selected_targets) do
 					shoot_bullet_to_target(t)
 					U.y_wait_unconditional(store, a.wait_between_shots)
 				end
@@ -25042,7 +25042,7 @@ function scripts.hero_dragon_bone.update(this, store)
 				b.bullet.target_id = target.id
 				b.bullet.source_id = this.id
 				b.bullet.xp_dest_id = this.id
-				b.pos = V.vclone(this.pos)
+				b.pos:copy(this.pos)
 
 				if a.bullet_start_offset and #a.bullet_start_offset == 2 then
 					local bullet_start_offset = v(0, 0)
@@ -25059,7 +25059,7 @@ function scripts.hero_dragon_bone.update(this, store)
 					b.pos.y = b.pos.y + bullet_start_offset.y
 				end
 
-				b.bullet.from = V.vclone(b.pos)
+				b.bullet.from:copy(b.pos)
 
 				if b.bullet.ignore_hit_offset then
 					b.bullet.to = V.v(target.pos.x, target.pos.y)
@@ -25166,7 +25166,7 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store)
 		end
 
 		if target and target.health and not target.health.dead then
-			b.to = V.vclone(target.pos)
+			b.to:copy(target.pos)
 
 			if not b.ignore_hit_offset then
 				b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
@@ -25285,7 +25285,7 @@ function scripts.mod_dragon_bone_plague.remove(this, store)
 
 		local fx = E:create_entity(this.spread_fx)
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 
 		if target and this.modifier.use_mod_offset and target.unit.mod_offset then
 			local mo = target.unit.mod_offset
@@ -25485,7 +25485,7 @@ function scripts.bullet_dragon_bone_rain.update(this, store)
 
 	local fx = E:create_entity(b.hit_fx)
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[1].runs = 0
 
@@ -25497,7 +25497,7 @@ function scripts.bullet_dragon_bone_rain.update(this, store)
 
 	local decal = E:create_entity(b.hit_decal)
 
-	decal.pos = V.vclone(this.pos)
+	decal.pos:copy(this.pos)
 	decal.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(decal)
@@ -25527,7 +25527,7 @@ function scripts.bullet_dragon_bone_rain.update(this, store)
 
 	local fx = E:create_entity(b.vanish_fx)
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[1].runs = 0
 
@@ -25606,14 +25606,14 @@ function scripts.bolt_dragon_bone_burst.update(this, store)
 		if is_flying then
 			local fx = E:create_entity(b.hit_fx_flying)
 
-			fx.pos = V.vclone(hit_pos)
+			fx.pos:copy(hit_pos)
 			fx.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(fx)
 		else
 			local fx = E:create_entity(b.hit_fx_floor)
 
-			fx.pos = V.vclone(hit_pos)
+			fx.pos:copy(hit_pos)
 			fx.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(fx)
@@ -25722,14 +25722,14 @@ function scripts.hero_dragon_bone_ultimate.update(this, store)
 	local pos2 = V.v(x - 12, y + 12)
 	local fx = E:create_entity(this.spawn_fx)
 
-	fx.pos = V.vclone(pos1)
+	fx.pos:copy(pos1)
 	fx.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(fx)
 
 	local fx = E:create_entity(this.spawn_fx)
 
-	fx.pos = V.vclone(pos2)
+	fx.pos:copy(pos2)
 	fx.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(fx)
@@ -26025,7 +26025,7 @@ function scripts.hero_lumenir.update(this, store)
 
 			local target
 
-			for _, ti in pairs(targets_info) do
+			for _, ti in ipairs(targets_info) do
 				if GR:cell_is(ti.enemy.pos.x, ti.enemy.pos.y, TERRAIN_LAND) then
 					target = ti.enemy
 
@@ -26121,10 +26121,10 @@ function scripts.hero_lumenir.update(this, store)
 				b.bullet.target_id = target.id
 				b.bullet.source_id = this.id
 				b.bullet.xp_dest_id = this.id
-				b.pos = V.vclone(this.pos)
+				b.pos:copy(this.pos)
 				b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[ai].x
 				b.pos.y = b.pos.y + a.bullet_start_offset[ai].y
-				b.bullet.from = V.vclone(b.pos)
+				b.bullet.from:copy(b.pos)
 				b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.shot_index = 1
 				b.initial_impulse = 10
@@ -26349,7 +26349,7 @@ function scripts.soldier_lumenir_ultimate.update(this, store)
 
 					attack.ts = start_ts
 
-					for _, aa in pairs(this.melee.attacks) do
+					for _, aa in ipairs(this.melee.attacks) do
 						if aa ~= attack and aa.shared_cooldown then
 							aa.ts = attack.ts
 						end
@@ -26441,7 +26441,7 @@ function scripts.mod_hero_lumenir_sword_hit.update(this, store)
 
 			local decal = E:create_entity(this.hit_decal)
 
-			decal.pos = V.vclone(this.pos)
+			decal.pos:copy(this.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(decal)
@@ -26628,10 +26628,10 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
 					b.bullet.xp_dest_id = this.id
-					b.pos = V.vclone(this.pos)
+					b.pos:copy(this.pos)
 					b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset.x
 					b.pos.y = b.pos.y + a.bullet_start_offset.y + flight_height
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 					b.bullet.shot_index = 1
 					b.initial_impulse = 10
@@ -26894,7 +26894,7 @@ function scripts.bolt_lumenir.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -26913,7 +26913,7 @@ end
 scripts.hero_wukong = {}
 
 function scripts.hero_wukong.choose_next_random_attack(this)
-	for k, v in pairs(this.melee.attacks) do
+	for k, v in ipairs(this.melee.attacks) do
 		v.disabled = true
 	end
 
@@ -27700,7 +27700,7 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 	if this.respawn_fx then
 		local respawn_fx = E:create_entity(this.respawn_fx)
 
-		respawn_fx.pos = V.vclone(this.pos)
+		respawn_fx.pos:copy(this.pos)
 		respawn_fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(respawn_fx)
@@ -27746,7 +27746,7 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 			if this.unit.show_blood_pool and this.unit.blood_color ~= BLOOD_NONE then
 				local decal = E:create_entity("decal_blood_pool")
 
-				decal.pos = V.vclone(this.pos)
+				decal.pos:copy(this.pos)
 				decal.render.sprites[1].ts = store.tick_ts
 				decal.render.sprites[1].name = this.unit.blood_color
 
@@ -27763,7 +27763,7 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 		end
 
 		if this.unit.hide_after_death then
-			for _, s in pairs(this.render.sprites) do
+			for _, s in ipairs(this.render.sprites) do
 				s.hidden = true
 			end
 		end
@@ -27782,7 +27782,7 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 
 		this.health.death_finished_ts = nil
 
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			if this.use_hidden_count_on_respawn and s.hidden_count then
 				s.hidden = s.hidden_count > 0
 			else
@@ -27797,7 +27797,7 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 		if this.respawn_fx then
 			local respawn_fx = E:create_entity(this.respawn_fx)
 
-			respawn_fx.pos = V.vclone(this.pos)
+			respawn_fx.pos:copy(this.pos)
 			respawn_fx.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(respawn_fx)
@@ -27921,7 +27921,7 @@ function scripts.controller_hero_wukong_ultimate.update(this, store)
 
 	local fx = E:create_entity(this.dragon_fx)
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 
 	simulation:queue_insert_entity(fx)
 
@@ -28138,7 +28138,7 @@ function scripts.decal_hero_wukong_ranged_attack_staff.update(this, store)
 
 	local decal = E:create_entity(this.decal)
 
-	decal.pos = V.vclone(this.pos)
+	decal.pos:copy(this.pos)
 	decal.render.sprites[1].ts = store.tick_ts
 	decal.tween.ts = store.tick_ts
 
@@ -28299,9 +28299,9 @@ function scripts.hero_vesper.update(this, store)
 		local bo = this.dodge.bullet_start_offset[ai]
 		local b = E:create_entity(this.dodge.bullet)
 
-		b.pos = V.vclone(this.pos)
+		b.pos:copy(this.pos)
 		b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * bo.x, b.pos.y + bo.y
-		b.bullet.from = V.vclone(b.pos)
+		b.bullet.from:copy(b.pos)
 		b.bullet.to = bullet_to
 		b.bullet.target_id = target_id
 
@@ -28610,7 +28610,7 @@ function scripts.hero_vesper_ultimate.update(this, store)
 		b.bullet.damage_type = DAMAGE_TRUE
 		b.bullet.from = V.v(pos.x + math.random(-170, -140), pos.y + REF_H)
 		b.bullet.to = pos
-		b.pos = V.vclone(b.bullet.from)
+		b.pos:copy(b.bullet.from)
 
 		simulation:queue_insert_entity(b)
 	end
@@ -28701,7 +28701,7 @@ function scripts.hero_vesper_ultimate_arrow.update(this, store)
 	if b.arrive_decal then
 		local decal = E:create_entity(b.arrive_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -28840,7 +28840,7 @@ function scripts.hero_muyrn.update(this, store)
 		local b = E:create_entity(attack.bullet)
 
 		b.pos.x, b.pos.y = this.pos.x + attack.bullet_start_offset.x, this.pos.y + attack.bullet_start_offset.y
-		b.bullet.from = V.vclone(b.pos)
+		b.bullet.from:copy(b.pos)
 		b.bullet.to = dest
 		b.bullet.target_id = enemy and enemy.id
 		b.bullet.source_id = this.id
@@ -29143,7 +29143,7 @@ function scripts.hero_muyrn.update(this, store)
 
 					shoot_bullet(a, enemy, enemy_pos, flying)
 
-					for _, aa in pairs(this.ranged.attacks) do
+					for _, aa in ipairs(this.ranged.attacks) do
 						aa.ts = store.tick_ts
 					end
 
@@ -29482,7 +29482,7 @@ function scripts.hero_muyrn_ranged_attack_bullet.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -29623,7 +29623,7 @@ function scripts.hero_muyrn_sentinel_wisps_entity.update(this, store)
 				local b = E:create_entity(a.bullet)
 
 				b.pos.x, b.pos.y = this.pos.x + sb.offset.x, this.pos.y + sb.offset.y
-				b.bullet.from = V.vclone(b.pos)
+				b.bullet.from:copy(b.pos)
 				b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
 				b.bullet.source_id = this.id
@@ -30235,9 +30235,9 @@ function scripts.hero_dragon_arb.update(this, store)
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
 					b.bullet.xp_dest_id = this.id
-					b.pos = V.vclone(bullet_from_pos)
-					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = V.vclone(bullet_dest_pos)
+					b.pos:copy(bullet_from_pos)
+					b.bullet.from:copy(b.pos)
+					b.bullet.to:copy(bullet_dest_pos)
 
 					simulation:queue_insert_entity(b)
 
@@ -30275,7 +30275,7 @@ function scripts.hero_dragon_arb.update(this, store)
 						b.bullet.source_id = this.id
 						b.bullet.xp_dest_id = this.id
 						b.pos = V.v(bullet_from_pos.x + math.random(-5, 5), bullet_from_pos.y + math.random(-5, 5))
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 						b.fliers_damage_pos = V.vclone(fliers_bullet_damage_pos)
 						b.bullet.to = V.v(bullet_dest_pos.x + math.random(-20, 20), bullet_dest_pos.y + math.random(-20, 20))
 
@@ -30304,7 +30304,7 @@ function scripts.hero_dragon_arb.update(this, store)
 						b.bullet.xp_gain_factor = a.xp_gain_factor
 						b.bullet.xp_dest_id = this.id
 						b.pos = V.v(bullet_from_pos.x + math.random(-5, 5), bullet_from_pos.y + math.random(-5, 5))
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 						b.fliers_damage_pos = V.vclone(fliers_bullet_damage_pos)
 						b.bullet.to = V.v(bullet_dest_pos.x + math.random(-20, 20), bullet_dest_pos.y + math.random(-20, 20))
 						b.bullet.damage_max = b.bullet.damage_max / #a.shoot_times
@@ -30394,7 +30394,7 @@ function scripts.hero_dragon_arb.update(this, store)
 					b.bullet.target_id = nil
 					b.bullet.source_id = this.id
 					b.bullet.xp_dest_id = this.id
-					b.pos = V.vclone(this.pos)
+					b.pos:copy(this.pos)
 
 					local bullet_start_offset = v(0, 0)
 					local af = this.render.sprites[1].flip_x
@@ -30407,7 +30407,7 @@ function scripts.hero_dragon_arb.update(this, store)
 
 					b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
 					b.pos.y = b.pos.y + bullet_start_offset.y
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = V.v(zone_target.x, zone_target.y)
 					b.bullet.level = skill.level
 					b.bullet.payload = (this.ultimate_active and a.spawn_evolved or a.spawn) .. "_lvl" .. skill.level
@@ -30471,7 +30471,7 @@ function scripts.hero_dragon_arb.update(this, store)
 						b.bullet.target_id = target.id
 						b.bullet.source_id = this.id
 						b.bullet.xp_dest_id = this.id
-						b.pos = V.vclone(this.pos)
+						b.pos:copy(this.pos)
 
 						local bullet_start_offset = v(0, 0)
 						local af = this.render.sprites[1].flip_x
@@ -30484,7 +30484,7 @@ function scripts.hero_dragon_arb.update(this, store)
 
 						b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
 						b.pos.y = b.pos.y + bullet_start_offset.y
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 						b.bullet.to = V.v(target.pos.x, target.pos.y + 16)
 
 						simulation:queue_insert_entity(b)
@@ -30545,7 +30545,7 @@ function scripts.hero_dragon_arb.update(this, store)
 						b.bullet.target_id = target.id
 						b.bullet.source_id = this.id
 						b.bullet.xp_dest_id = this.id
-						b.pos = V.vclone(this.pos)
+						b.pos:copy(this.pos)
 
 						local bullet_start_offset = v(0, 0)
 						local af = this.render.sprites[1].flip_x
@@ -30558,8 +30558,8 @@ function scripts.hero_dragon_arb.update(this, store)
 
 						b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
 						b.pos.y = b.pos.y + bullet_start_offset.y
-						b.bullet.from = V.vclone(b.pos)
-						b.bullet.to = V.vclone(target.tower.default_rally_pos)
+						b.bullet.from:copy(b.pos)
+						b.bullet.to:copy(target.tower.default_rally_pos)
 
 						if math.random() < 0.5 then
 							b.bullet.hit_payload = a.plant_linirea
@@ -31350,7 +31350,7 @@ function scripts.mod_hero_dragon_arb_bleed.update(this, store, script)
 						fx.render.sprites[1].offset.y = target.unit.mod_offset.y
 					end
 				else
-					fx.pos = V.vclone(this.pos)
+					fx.pos:copy(this.pos)
 
 					if m.use_mod_offset and target.unit.mod_offset then
 						fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
@@ -31543,7 +31543,7 @@ function scripts.decal_hero_dragon_arb_tower_plant_linirea.update(this, store, s
 				b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
 				b.bullet.source_id = this.id
-				b.pos = V.vclone(b.bullet.from)
+				b.pos:copy(b.bullet.from)
 
 				local target_pos = target.pos
 				local an, af = U.animation_name_facing_point(this, a.animation, target_pos)
@@ -31739,7 +31739,7 @@ function scripts.bullet_hero_dragon_arb_linirea_plant_heal.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -31796,7 +31796,7 @@ function scripts.mod_hero_dragon_arb_plant_linirea_heal.update(this, store, scri
 	end
 
 	if target.unit and target.unit.size == UNIT_SIZE_LARGE then
-		for _, v in pairs(this.render.sprites) do
+		for _, v in ipairs(this.render.sprites) do
 			v.scale = V.v(1.4, 1.4)
 		end
 	end
@@ -31840,7 +31840,7 @@ function scripts.mod_hero_dragon_arb_plant_linirea_heal.update(this, store, scri
 			if hps.fx then
 				local fx = E:create_entity(hps.fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].runs = 0
 
@@ -32670,7 +32670,7 @@ function scripts.decal_hero_builder_defensive_turret.update(this, store)
 					b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
-					b.pos = V.vclone(b.bullet.from)
+					b.pos:copy(b.bullet.from)
 
 					simulation:queue_insert_entity(b)
 					U.y_animation_wait_default(this)
@@ -32723,7 +32723,7 @@ function scripts.decal_hero_builder_ultimate_projectile.update(this, store)
 	simulation:queue_insert_entity(shake)
 
 	local aura = E:create_entity(b.aura)
-	aura.pos = V.vclone(b.to)
+	aura.pos:copy(b.to)
 	aura.aura.damage_factor = b.damage_factor
 	simulation:queue_insert_entity(aura)
 
@@ -33203,7 +33203,7 @@ function scripts.hero_robot.update(this, store)
 							local b = E:create_entity(a.bullet)
 
 							b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
-							b.bullet.from = V.vclone(b.pos)
+							b.bullet.from:copy(b.pos)
 							b.bullet.to = pos
 							b.bullet.source_id = this.id
 
@@ -33690,7 +33690,7 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 
 		target.pos.y = target.pos.y - speed.y
 
-		for _, sprite in pairs(target.render.sprites) do
+		for _, sprite in ipairs(target.render.sprites) do
 			sprite.r = sprite.r + rot
 		end
 
@@ -33709,7 +33709,7 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 		target.health.hp = 0
 		target.unit.show_blood_pool = true
 
-		for i, es in pairs(target.render.sprites) do
+		for i, es in ipairs(target.render.sprites) do
 			es.r = 0
 		end
 	end
@@ -33884,7 +33884,7 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 
 				local hit_fx = E:create_entity(this.hit_fx)
 
-				hit_fx.pos = V.vclone(target.pos)
+				hit_fx.pos:copy(target.pos)
 				hit_fx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(hit_fx)
@@ -33939,7 +33939,7 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 
 			local decal = E:create_entity(this.floor_decal)
 
-			decal.pos = V.vclone(this.pos)
+			decal.pos:copy(this.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 			decal.render.sprites[1].flip_x = math.random(1, 2) == 1
 
@@ -33951,7 +33951,7 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 
 			local fx = E:create_entity(this.smoke_fx)
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].flip_x = math.random(1, 2) == 1
 
@@ -34028,7 +34028,7 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 
 	local spawn_fx = E:create_entity(this.spawn_fx)
 
-	spawn_fx.pos = V.vclone(this.pos)
+	spawn_fx.pos:copy(this.pos)
 	spawn_fx.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(spawn_fx)
@@ -34039,7 +34039,7 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 
 	local decal = E:create_entity(this.floor_decal)
 
-	decal.pos = V.vclone(this.pos)
+	decal.pos:copy(this.pos)
 	decal.render.sprites[1].ts = store.tick_ts
 	decal.render.sprites[1].flip_x = math.random(1, 2) == 1
 	decal.render.sprites[1].scale = v(1.3, 1.3)
@@ -34235,7 +34235,7 @@ function scripts.hero_bird.update(this, store)
 			end
 		end
 
-		for _, a in pairs(this.timed_attacks.list) do
+		for _, a in ipairs(this.timed_attacks.list) do
 			if a.disabled then
 			-- block empty
 			elseif a.sync_animation and not this.render.sprites[1].sync_flag then
@@ -34263,7 +34263,7 @@ function scripts.hero_bird.update(this, store)
 						b.bullet.target_id = target.id
 						b.bullet.source_id = this.id
 						b.bullet.xp_dest_id = this.id
-						b.pos = V.vclone(this.pos)
+						b.pos:copy(this.pos)
 
 						if a.bullet_start_offset and #a.bullet_start_offset == 2 then
 							local offset_index = af and 2 or 1
@@ -34273,7 +34273,7 @@ function scripts.hero_bird.update(this, store)
 
 						b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
 						b.pos.y = b.pos.y + bullet_start_offset.y
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 						b.bullet.to = V.v(pred_pos.x, pred_pos.y + a.first_explosion_height)
 
 						b.bullet.damage_factor = this.unit.damage_factor
@@ -34356,7 +34356,7 @@ function scripts.hero_bird.update(this, store)
 
 						local decal = E:create_entity(a.decal)
 
-						decal.pos = V.vclone(this.pos)
+						decal.pos:copy(this.pos)
 						decal.render.sprites[1].ts = store.tick_ts
 
 						simulation:queue_insert_entity(decal)
@@ -34411,7 +34411,7 @@ function scripts.hero_bird.update(this, store)
 
 							local fx = E:create_entity(a.hit_fx)
 
-							fx.pos = V.vclone(target.pos)
+							fx.pos:copy(target.pos)
 
 							if target.unit and target.unit.hit_offset then
 								fx.pos.x = fx.pos.x + target.unit.hit_offset.x
@@ -34437,7 +34437,7 @@ function scripts.hero_bird.update(this, store)
 
 								local decal = E:create_entity(a.decal)
 
-								decal.pos = V.vclone(b_pos)
+								decal.pos:copy(b_pos)
 								decal.render.sprites[1].ts = store.tick_ts
 
 								simulation:queue_insert_entity(decal)
@@ -34581,9 +34581,9 @@ function scripts.controller_bullet_hero_bird_cluster_bomb_part.update(this, stor
 	for _, n in ipairs(nodes) do
 		local part = E:create_entity(this.part_template)
 
-		part.pos = V.vclone(this.pos)
-		part.bullet.from = V.vclone(part.pos)
-		part.bullet.to = V.vclone(n)
+		part.pos:copy(this.pos)
+		part.bullet.from:copy(part.pos)
+		part.bullet.to:copy(n)
 		part.bullet.source_id = this.source_id
 		part.bullet.xp_dest_id = this.source_id
 
@@ -34946,7 +34946,7 @@ function scripts.hero_lava.update(this, store)
 			local b = E:create_entity(a.bullet)
 
 			b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
-			b.bullet.from = V.vclone(b.pos)
+			b.bullet.from:copy(b.pos)
 			b.bullet.to = pos
 			b.bullet.source_id = this.id
 			b.sound_events.insert = nil
@@ -35246,7 +35246,7 @@ function scripts.hero_lava_ultimate.update(this, store)
 
 			if p then
 				e.pos.x, e.pos.y = p.x, start_y
-				e.bullet.from = V.vclone(e.pos)
+				e.bullet.from:copy(e.pos)
 				e.bullet.to = V.v(p.x, p.y)
 
 				simulation:queue_insert_entity(e)
@@ -35321,7 +35321,7 @@ function scripts.bullet_ultimate_hero_lava.update(this, store, script)
 		if b.hit_decal then
 			local decal = E:create_entity(b.hit_decal)
 
-			decal.pos = V.vclone(b.to)
+			decal.pos:copy(b.to)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(decal)
@@ -35927,7 +35927,7 @@ function scripts.hero_spider.update(this, store)
 
 									local decal = E:create_entity(a.hit_decal)
 
-									decal.pos = V.vclone(this.pos)
+									decal.pos:copy(this.pos)
 									decal.render.sprites[1].ts = store.tick_ts
 
 									simulation:queue_insert_entity(decal)
@@ -36061,7 +36061,7 @@ function scripts.controller_hero_spider_ultimate.update(this, store)
 		for _, pos in pairs(spawn_positions) do
 			local fx = E:create_entity(this.spawn_fx)
 
-			fx.pos = V.vclone(pos)
+			fx.pos:copy(pos)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.nav_rally = V.v(x, y)
 			fx.squad_id = this.id
@@ -36099,7 +36099,7 @@ function scripts.fx_hero_spider_ultimate_spawn.update(this, store)
 
 	local fx = E:create_entity(this.spawn_fx_decal)
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(fx)
@@ -36360,7 +36360,7 @@ function scripts.hero_mecha.update(this, store)
 					b.bullet.to = V.v(pred_pos.x, pred_pos.y)
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
-					b.pos = V.vclone(b.bullet.from)
+					b.pos:copy(b.bullet.from)
 
 					simulation:queue_insert_entity(b)
 					SU.y_hero_animation_wait(this)
@@ -36476,7 +36476,7 @@ function scripts.hero_mecha.update(this, store)
 							b.bullet.from = V.v(this.pos.x + a.bullet_start_offset[1].x, this.pos.y + a.bullet_start_offset[1].y)
 							b.bullet.to = V.v(mine_pos.x, mine_pos.y)
 							b.bullet.source_id = this.id
-							b.pos = V.vclone(b.bullet.from)
+							b.pos:copy(b.bullet.from)
 
 							simulation:queue_insert_entity(b)
 							SU.y_hero_animation_wait(this)
@@ -36576,7 +36576,7 @@ function scripts.bullet_hero_mecha.insert(this, store)
 		fx = E:create_entity(b.spawn_fx_1)
 	end
 
-	fx.pos = V.vclone(source.pos)
+	fx.pos:copy(source.pos)
 
 	local s = fx.render.sprites[1]
 
@@ -37051,7 +37051,7 @@ function scripts.aura_bullet_hero_mecha_mine.insert(this, store)
 	this.aura.ts = store.tick_ts
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end
@@ -37089,7 +37089,7 @@ function scripts.aura_bullet_hero_mecha_mine.update(this, store)
 
 			local fx = E:create_entity(this.explosion_fx)
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].runs = 0
 
@@ -37219,10 +37219,10 @@ function scripts.zeppelin_hero_mecha.update(this, store)
 				local b = E:create_entity(a.bullet)
 
 				b.bullet.from = V.v(this.pos.x + a.bullet_start_offset[1].x, this.pos.y + a.bullet_start_offset[1].y + this.render.sprites[2].offset.y)
-				b.bullet.to = V.vclone(pred_pos)
+				b.bullet.to:copy(pred_pos)
 				b.bullet.source_id = this.id
 				b.bullet.target_id = target.id
-				b.pos = V.vclone(b.bullet.from)
+				b.pos:copy(b.bullet.from)
 				b.bullet.level = this.level
 				b.bullet.source_id = this.id
 
@@ -37433,7 +37433,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		if store.wave_group_number > 0 and a_overcharge.fx_mask then
 			local fx = E:create_entity(a_overcharge.fx_mask)
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 			fx.render.sprites[1].offset.y = this.render.sprites[1].offset.y
@@ -37521,9 +37521,9 @@ function scripts.hero_dragon_sun.update(this, store)
 		b.bullet.target_id = target.id
 		b.bullet.source_id = this.id
 		b.bullet.xp_dest_id = this.id
-		b.pos = V.vclone(bullet_from_pos)
-		b.bullet.from = V.vclone(b.pos)
-		b.bullet.to = V.vclone(bullet_dest_pos)
+		b.pos:copy(bullet_from_pos)
+		b.bullet.from:copy(b.pos)
+		b.bullet.to:copy(bullet_dest_pos)
 		b.bullet.damage_factor = this.unit.damage_factor
 
 		simulation:queue_insert_entity(b)
@@ -37604,7 +37604,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		local aura = E:create_entity(a_healing_aura.aura)
 
 		aura.aura.source_id = this.id
-		aura.pos = V.vclone(this.pos)
+		aura.pos:copy(this.pos)
 		aura.aura.ts = store.tick_ts
 
 		simulation:queue_insert_entity(aura)
@@ -37712,7 +37712,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		b.bullet.from = V.v(this.pos.x + a.bullet_start_offset[1].x * (af and -1 or 1), this.pos.y + a.bullet_start_offset[1].y)
 		b.bullet.to = V.v(mine_pos.x, mine_pos.y)
 		b.bullet.source_id = this.id
-		b.pos = V.vclone(b.bullet.from)
+		b.pos:copy(b.bullet.from)
 
 		simulation:queue_insert_entity(b)
 		SU.y_hero_animation_wait(this)
@@ -37812,7 +37812,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		end)
 
 		if area_targets then
-			for _, t in pairs(area_targets) do
+			for _, t in ipairs(area_targets) do
 				d = E.assign_damage(a.area_damage_type, math.ceil(U.frandom(a.area_damage_min, a.area_damage_max)), this.id, t.id)
 
 				queue_damage(store, d)
@@ -38005,7 +38005,7 @@ function scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.insert(this, stor
 	this.aura.ts = store.tick_ts
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end
@@ -38023,7 +38023,7 @@ function scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.update(this, stor
 	local start_ts = store.tick_ts
 	local spawn_fx = E:create_entity(this.spawn_fx)
 
-	spawn_fx.pos = V.vclone(this.pos)
+	spawn_fx.pos:copy(this.pos)
 	spawn_fx.render.sprites[1].ts = store.tick_ts
 	spawn_fx.render.sprites[1].runs = 0
 
@@ -38036,7 +38036,7 @@ function scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.update(this, stor
 	U.y_wait_unconditional(store, fts(11))
 
 	spawn_fx = E:create_entity(this.spawn_fx)
-	spawn_fx.pos = V.vclone(this.pos)
+	spawn_fx.pos:copy(this.pos)
 	spawn_fx.render.sprites[1].ts = store.tick_ts
 	spawn_fx.render.sprites[1].runs = 0
 
@@ -38076,7 +38076,7 @@ function scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.update(this, stor
 
 				local fx = E:create_entity(this.explosion_fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].runs = 0
 
@@ -38084,7 +38084,7 @@ function scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.update(this, stor
 
 				local decal = E:create_entity(this.explosion_decal)
 
-				decal.pos = V.vclone(this.pos)
+				decal.pos:copy(this.pos)
 				decal.render.sprites[1].ts = store.tick_ts
 				decal.render.sprites[1].runs = 0
 
@@ -38152,7 +38152,7 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 
 			local fx = E:create_entity(this.decal)
 
-			fx.pos = V.vclone(dest)
+			fx.pos:copy(dest)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].flip_x = table.random({true, false})
 
@@ -38164,7 +38164,7 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 
 			local fx = E:create_entity(this.fire_fx)
 
-			fx.pos = V.vclone(dest)
+			fx.pos:copy(dest)
 			fx.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(fx)
@@ -38616,8 +38616,8 @@ function scripts.hero_dragon_sun_ultimate.update(this, store)
 	b.bullet.source_id = nil
 	b.bullet.xp_dest_id = nil
 	b.pos = V.v(REF_W / 4 * 3, REF_H + 200)
-	b.bullet.from = V.vclone(b.pos)
-	b.bullet.to = V.vclone(this.pos)
+	b.bullet.from:copy(b.pos)
+	b.bullet.to:copy(this.pos)
 	b.nav_path.pi = n[1]
 	b.nav_path.spi = 1
 	b.nav_path.ni = n[3]
@@ -38640,7 +38640,7 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 	local last_damage_ts = 0
 	local fx = E:create_entity(this.fx_in)
 
-	fx.pos = V.vclone(dest)
+	fx.pos:copy(dest)
 
 	simulation:queue_insert_entity(fx)
 
@@ -38897,7 +38897,7 @@ function scripts.hero_eiskalt.update(this, store)
 				if #nodes > 0 then
 					local flip = target.pos.x < this.pos.x
 					local start_ts = store.tick_ts
-					U.animation_start(this, "icePeaks", flip, store.tick_ts)
+					U.animation_start_default(this, "icePeaks", flip, store.tick_ts)
 					if SU.y_hero_wait(store, this, a.spawn_time) then
 						goto eiskalt_attack_end
 					end
@@ -38940,7 +38940,7 @@ function scripts.hero_eiskalt.update(this, store)
 				if #nodes > 0 then
 					local flip = target.pos.x < this.pos.x
 					local start_ts = store.tick_ts
-					U.animation_start(this, "coldFury", flip, store.tick_ts)
+					U.animation_start_default(this, "coldFury", flip, store.tick_ts)
 					S:queue(a.sound)
 					if SU.y_hero_wait(store, this, a.cast_time) then
 						goto eiskalt_attack_end
@@ -38956,7 +38956,7 @@ function scripts.hero_eiskalt.update(this, store)
 						b.delay = delay
 						simulation:queue_insert_entity(b)
 						local fx = E:create_entity(b.aura.hit_decal)
-						fx.pos = V.vclone(b.pos)
+						fx.pos:copy(b.pos)
 						fx.delay = delay
 						simulation:queue_insert_entity(fx)
 						delay = delay + 0.05
@@ -38998,7 +38998,7 @@ function scripts.hero_eiskalt.update(this, store)
 						local target_node = P:node_pos_ref(nodes[1][1], 1, s_ni)
 						local flip = target_node.x < this.pos.x
 						S:queue(a.sound)
-						U.animation_start(this, "frosty", flip, store.tick_ts)
+						U.animation_start_default(this, "frosty", flip, store.tick_ts)
 						if SU.y_hero_wait(store, this, a.spawn_time) then
 							goto eiskalt_attack_end
 						end
@@ -39027,7 +39027,7 @@ function scripts.hero_eiskalt.update(this, store)
 			if target then
 				local start_ts = store.tick_ts
 				local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
-				U.animation_start(this, an, af, store.tick_ts)
+				U.animation_start_default(this, an, af, store.tick_ts)
 				if SU.y_hero_wait(store, this, a.shoot_time) then
 					goto eiskalt_attack_end
 				end
@@ -39115,7 +39115,7 @@ function scripts.eiskalt_icepeaks.update(this, store)
 	U.sprites_show(this)
 	local start_ts = store.tick_ts
 	S:queue(this.sound_events.delayed_insert)
-	U.animation_start(this, "in", nil, store.tick_ts, false)
+	U.animation_start_default(this, "in", nil, store.tick_ts, false)
 	this.tween.ts = store.tick_ts
 	U.y_wait_unconditional(store, b.hit_time)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
@@ -39533,7 +39533,7 @@ function scripts.hero_asra_ultimate.update(this, store)
 		b.bullet.damage_factor = this.damage_factor
 		b.bullet.from = V.v(pos.x + math.random(-170, -140), pos.y + REF_H)
 		b.bullet.to = pos
-		b.pos = V.vclone(b.bullet.from)
+		b.pos:copy(b.bullet.from)
 		simulation:queue_insert_entity(b)
 	end
 	S:queue(this.sound)
@@ -39587,7 +39587,7 @@ function scripts.arrow_hero_asra_ultimate.update(this, store)
 	end
 
 	local decal = E:create_entity(b.arrive_decal)
-	decal.pos = V.vclone(b.to)
+	decal.pos:copy(b.to)
 	decal.render.sprites[1].ts = store.tick_ts
 	simulation:queue_insert_entity(decal)
 
@@ -39833,10 +39833,10 @@ function scripts.hero_beresad.update(this, store)
 					b.bullet.damage_factor = this.unit.damage_factor
 					b.bullet.damage_min = b.bullet.damage_min + this.unit.damage_buff
 					b.bullet.damage_max = b.bullet.damage_max + this.unit.damage_buff
-					b.pos = V.vclone(this.pos)
+					b.pos:copy(this.pos)
 					b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[ai].x
 					b.pos.y = b.pos.y + a.bullet_start_offset[ai].y
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = V.v(t_pos.x, t_pos.y)
 
 					simulation:queue_insert_entity(b)
@@ -40080,7 +40080,7 @@ function scripts.controller_beresad_ultimate.update(this, store)
 		end
 
 		if store.tick_ts % this.mod_cooldown < store.tick_length then
-			local enemies = U.find_enemies_in_range(store.enemies, this.pos, 0, this.damage_radius, F_RANGED, 0)
+			local enemies = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, F_RANGED, 0)
 			if enemies then
 				for _, enemy in ipairs(enemies) do
 					local mod = E:create_entity(this.mod)
@@ -40578,7 +40578,7 @@ scripts.mod_dianyun_passive = {
 			return true
 		end
 		local fx = E:create_entity(this.fx)
-		fx.pos = V.vclone(target.pos)
+		fx.pos:copy(target.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 		simulation:queue_insert_entity(fx)
 		store.player_gold = store.player_gold + this.gold_reward
@@ -40639,7 +40639,7 @@ function scripts.hero_dianyun_electric_son.update(this, store)
 				b.bullet.target_id = target.id
 				b.bullet.source_id = this.id
 				b.bullet.damage_factor = this.damage_factor
-				b.pos = V.vclone(b.bullet.from)
+				b.pos:copy(b.bullet.from)
 				simulation:queue_insert_entity(b)
 				bullets_shot = bullets_shot + 1
 				attack.ts = ts
@@ -40753,7 +40753,7 @@ local function isfet_blood_pool_target(this, store, attack)
 	local best, best_count
 
 	for _, candidate in ipairs(candidates) do
-		local crowd = U.find_enemies_in_range(store, candidate.pos, 0, attack.crowd_range, attack.vis_flags, attack.vis_bans)
+		local crowd = U.find_enemies_in_range_filter_off(candidate.pos, attack.crowd_range, attack.vis_flags, attack.vis_bans)
 		local count = crowd and #crowd or 0
 
 		if count >= attack.min_targets and (not best_count or count > best_count) then
@@ -40799,7 +40799,7 @@ function scripts.hero_isfet.update(this, store)
 		frog_attack.ts = start_ts
 		SU.hero_gain_xp_from_skill(this, skill)
 		S:queue(frog_attack.sound)
-		U.animation_start(this, frog_attack.animation, target.pos.x < this.pos.x, store.tick_ts, false)
+		U.animation_start_default(this, frog_attack.animation, target.pos.x < this.pos.x, store.tick_ts, false)
 		U.y_wait_unconditional(store, frog_attack.cast_time)
 
 		local projectile = E:create_entity(frog_attack.projectile)
@@ -40830,7 +40830,7 @@ function scripts.hero_isfet.update(this, store)
 
 			U.set_destination(this, waypoint)
 			local animation, flip = U.animation_name_facing_point(this, "walk", this.motion.dest)
-			U.animation_start(this, animation, flip, store.tick_ts, true)
+			U.animation_start_default(this, animation, flip, store.tick_ts, true)
 
 			while not this.motion.arrived do
 				if h.dead and not h.ignore_damage then
@@ -40858,7 +40858,7 @@ function scripts.hero_isfet.update(this, store)
 			end
 		end
 
-		U.animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		U.bans_remove(this.vis, F_ALL)
 		this.health.immune_to = immune_to
 
@@ -40899,7 +40899,7 @@ function scripts.hero_isfet.update(this, store)
 			end
 
 			if not black_cloud_attack.disabled and store.tick_ts - black_cloud_attack.ts >= black_cloud_attack.cooldown then
-				local enemies = U.find_enemies_in_range(store, this.pos, 0, black_cloud_attack.trigger_range, black_cloud_attack.vis_flags, black_cloud_attack.vis_bans)
+				local enemies = U.find_enemies_in_range_filter_off(this.pos, black_cloud_attack.trigger_range, black_cloud_attack.vis_flags, black_cloud_attack.vis_bans)
 
 				if not enemies or #enemies < black_cloud_attack.min_targets then
 					black_cloud_attack.ts = black_cloud_attack.ts + 0.2
@@ -40920,7 +40920,7 @@ function scripts.hero_isfet.update(this, store)
 					S:queue(black_cloud_attack.sound, {
 						delay = black_cloud_attack.sound_delay
 					})
-					U.animation_start(this, black_cloud_attack.animation, cast_flip, store.tick_ts, false)
+					U.animation_start_default(this, black_cloud_attack.animation, cast_flip, store.tick_ts, false)
 					if not SU.y_hero_wait(store, this, black_cloud_attack.cast_time) then
 						local cloud = E:create_entity(black_cloud_attack.entity)
 						local offset = black_cloud_attack.spawn_offset
@@ -40939,7 +40939,7 @@ function scripts.hero_isfet.update(this, store)
 			end
 
 			if not rain_attack.disabled and store.tick_ts - rain_attack.ts >= rain_attack.cooldown then
-				local enemies = U.find_enemies_in_range(store, this.pos, 0, rain_attack.range, rain_attack.vis_flags, rain_attack.vis_bans)
+				local enemies = U.find_enemies_in_range_filter_off(this.pos, rain_attack.range, rain_attack.vis_flags, rain_attack.vis_bans)
 
 				if not enemies then
 					rain_attack.ts = rain_attack.ts + 0.2
@@ -40950,7 +40950,7 @@ function scripts.hero_isfet.update(this, store)
 						delay = rain_attack.sound_delay
 					})
 					U.y_animation_play(this, rain_attack.animation_in, nil, store.tick_ts, 1)
-					U.animation_start(this, rain_attack.animation_loop, nil, store.tick_ts, true)
+					U.animation_start_default(this, rain_attack.animation_loop, nil, store.tick_ts, true)
 
 					local controller = E:create_entity(rain_attack.entity)
 					controller.pos = V.vclone(this.pos)
@@ -40974,7 +40974,7 @@ function scripts.hero_isfet.update(this, store)
 					S:queue(blood_pool_attack.sound, {
 						delay = blood_pool_attack.sound_delay
 					})
-					U.animation_start(this, blood_pool_attack.animation, target.pos.x < this.pos.x, store.tick_ts, false)
+					U.animation_start_default(this, blood_pool_attack.animation, target.pos.x < this.pos.x, store.tick_ts, false)
 					if not SU.y_hero_wait(store, this, blood_pool_attack.cast_time) then
 						local pool = E:create_entity(blood_pool_attack.entity)
 						pool.pos = V.vclone(target.pos)
@@ -41115,7 +41115,7 @@ function scripts.hero_isfet_bolt.update(this, store)
 			end
 		end
 	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
 			for _, target in ipairs(targets) do
@@ -41137,7 +41137,7 @@ function scripts.hero_isfet_bolt.update(this, store)
 
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 		simulation:queue_insert_entity(decal)
 	end
@@ -41256,7 +41256,7 @@ function scripts.hero_isfet_mummy.update(this, store)
 				else
 					U.set_destination(this, next_pos)
 					local animation, flip = U.animation_name_facing_point(this, "walk", this.motion.dest)
-					U.animation_start(this, animation, flip, store.tick_ts, true)
+					U.animation_start_default(this, animation, flip, store.tick_ts, true)
 					U.walk(this, store.tick_length)
 					this.motion.speed.x, this.motion.speed.y = 0, 0
 				end
@@ -41292,7 +41292,7 @@ function scripts.aura_isfet_locust_swarm.update(this, store)
 			if next_pos and P:is_node_valid(this.nav_path.pi, this.nav_path.ni) then
 				U.set_destination(this, next_pos)
 				local animation, flip = U.animation_name_facing_point(this, "walk", this.motion.dest)
-				U.animation_start(this, animation, flip, store.tick_ts, true)
+				U.animation_start_default(this, animation, flip, store.tick_ts, true)
 				U.walk(this, store.tick_length)
 				this.motion.speed.x, this.motion.speed.y = 0, 0
 			end
@@ -41362,10 +41362,10 @@ scripts.decal_isfet_frog = {}
 function scripts.decal_isfet_frog.update(this, store)
 	local start_ts = store.tick_ts
 
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 	while store.tick_ts - start_ts < this.lifetime do
 		if store.tick_ts - start_ts > this.lifetime * 0.5 and this.render.sprites[1].name ~= "talk" then
-			U.animation_start(this, "talk", nil, store.tick_ts, true)
+			U.animation_start_default(this, "talk", nil, store.tick_ts, true)
 		end
 		coroutine.yield()
 	end
@@ -41414,10 +41414,10 @@ function scripts.projectile_isfet_rain.update(this, store)
 	this.pos = V.vclone(this.to)
 	S:queue(this.hit_sound)
 	local fx = E:create_entity(this.hit_fx)
-	fx.pos = V.vclone(this.to)
+	fx.pos:copy(this.to)
 	simulation:queue_insert_entity(fx)
 
-	local targets = U.find_enemies_in_range(store, this.to, 0, this.damage_radius, this.vis_flags, this.vis_bans)
+	local targets = U.find_enemies_in_range_filter_off(this.to, this.damage_radius, this.vis_flags, this.vis_bans)
 	if targets then
 		for _, target in ipairs(targets) do
 			local damage = E.assign_damage(this.damage_type, this.damage, this.source_id, target.id)
@@ -41444,7 +41444,7 @@ function scripts.controller_hero_isfet_ultimate.update(this, store)
 
 	S:queue(this.sound)
 	U.y_animation_play(this, "in", nil, store.tick_ts, 1)
-	U.animation_start(this, "run", nil, store.tick_ts, true)
+	U.animation_start_default(this, "run", nil, store.tick_ts, true)
 
 	local slow_aura = E:create_entity(this.slow_aura)
 	slow_aura.aura.source_id = this.id
@@ -41456,7 +41456,7 @@ function scripts.controller_hero_isfet_ultimate.update(this, store)
 			coroutine.yield()
 		end
 
-		local cloud_targets = U.find_enemies_in_range(store, this.pos, 0, this.cloud_radius, this.damage_flags, this.damage_bans)
+		local cloud_targets = U.find_enemies_in_range_filter_off(this.pos, this.cloud_radius, this.damage_flags, this.damage_bans)
 		local impact_pos
 
 		if cloud_targets then
@@ -41475,7 +41475,7 @@ function scripts.controller_hero_isfet_ultimate.update(this, store)
 		hit_fx.pos = V.v(impact_pos.x, impact_pos.y + this.lightning_destination_y)
 		simulation:queue_insert_entity(hit_fx)
 
-		local damaged_targets = U.find_enemies_in_range(store, impact_pos, 0, this.damage_radius, this.damage_flags, this.damage_bans)
+		local damaged_targets = U.find_enemies_in_range_filter_off(impact_pos, this.damage_radius, this.damage_flags, this.damage_bans)
 		if damaged_targets then
 			for _, target in ipairs(damaged_targets) do
 				local damage = E.assign_damage(this.damage_type, damage_value, this.id, target.id)
@@ -42261,7 +42261,7 @@ function scripts.hero_margosa.update(this, store)
 
 						local an, af = U.animation_name_facing_point(this, tw.animations[2], this.motion.dest)
 
-						U.animation_start(this, an, af, store.tick_ts, true)
+						U.animation_start_default(this, an, af, store.tick_ts, true)
 
 						while not this.motion.arrived do
 							if r.new then
@@ -42549,12 +42549,12 @@ function scripts.shadow_bat.update(this, store)
 				if dist > hit_range then
 					if not chasing then
 						chasing = true
-						U.animation_start(this, "idle", nil, store.tick_ts, true)
+						U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 					end
 
 					fly_to(target.pos, this.flight_speed_busy)
 				elseif ready_to_attack(ca, store, this.owner.unit.cooldown_factor) then
-					U.animation_start(this, "attack", nil, store.tick_ts, true)
+					U.animation_start_default(this, "attack", nil, store.tick_ts, true)
 
 					local d = E.assign_damage(ca.damage_type, math.random(ca.damage_min, ca.damage_max) * this.owner.unit.damage_factor, this.id, target.id)
 
@@ -42582,7 +42582,7 @@ function scripts.shadow_bat.update(this, store)
 				chasing = false
 
 				if V.dist(dest.x, dest.y, this.pos.x, this.pos.y) < 10 then
-					U.animation_start(this, "idle", nil, store.tick_ts, true)
+					U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 					dest = U.point_on_ellipse(this.idle_pos, 30, U.frandom(0, 2 * math.pi))
 				end
 
@@ -42703,7 +42703,7 @@ function scripts.hero_mortemis.update(this, store)
 				local target = U.find_first_enemy_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, SU.is_valid_scare_target)
 
 				if target then
-					U.animation_start(this, a.animation, nil, store.tick_ts, false)
+					U.animation_start_default(this, a.animation, nil, store.tick_ts, false)
 					S:queue(a.sound)
 					if SU.y_hero_wait(store, this, a.cast_time) then
 						goto label_2791_0
@@ -42851,7 +42851,7 @@ function scripts.bolt_mortemis.update(this, store)
 	ps.particle_system.track_id = this.id
 	simulation:queue_insert_entity(ps)
 	S:queue(this.sound_events.travel)
-	U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+	U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 	ps.particle_system.emit = true
 
@@ -43190,7 +43190,7 @@ function scripts.hero_jigou.update(this, store)
 			if ready_to_use_skill(a_mock, store, this.unit.cooldown_factor) then
 				if U.find_first_enemy_in_range_filter_on(this.pos, this.melee.range, a_mock.vis_flags, a_mock.vis_bans, SU.is_valid_mock_target) then
 					local start_ts = store.tick_ts
-					U.animation_start(this, a_mock.animation .. "_start", nil, store.tick_ts)
+					U.animation_start_default(this, a_mock.animation .. "_start", nil, store.tick_ts)
 					S:queue(a_mock.sound)
 
 					if SU.y_hero_wait(store, this, a_mock.hit_time) then
@@ -43221,7 +43221,7 @@ function scripts.hero_jigou.update(this, store)
 					do_mock()
 					U.y_animation_wait_default(this)
 
-					U.animation_start(this, a_mock.animation .. "_loop", nil, store.tick_ts, true)
+					U.animation_start_default(this, a_mock.animation .. "_loop", nil, store.tick_ts, true)
 					start_ts = store.tick_ts
 					local last_mock_ts = start_ts
 					while store.tick_ts - start_ts < a_mock.duration do
@@ -43239,7 +43239,7 @@ function scripts.hero_jigou.update(this, store)
 						coroutine.yield()
 					end
 
-					U.animation_start(this, a_mock.animation .. "_end", nil, store.tick_ts)
+					U.animation_start_default(this, a_mock.animation .. "_end", nil, store.tick_ts)
 
 					local fx = E:create_entity("fx_jigou_igloo_explosion")
 					fx.pos:copy(this.pos)
@@ -43293,7 +43293,7 @@ function scripts.hero_jigou.update(this, store)
 						local flip = target.pos.x < this.pos.x
 						local start_ts = store.tick_ts
 
-						U.animation_start(this, "frozenBreath", flip, store.tick_ts)
+						U.animation_start_default(this, "frozenBreath", flip, store.tick_ts)
 						S:queue(a.sound)
 						if SU.y_hero_wait(store, this, a.cast_time) then
 							goto label_1561_0
@@ -43408,7 +43408,7 @@ function scripts.aura_jigou_ultimate.update(this, store)
 		simulation:queue_insert_entity(fx)
 
 		local radius = last_attack and a.last_attack_damage_radius or a.damage_radius
-		local targets = U.find_enemies_in_range(store, pos, 0, radius, a.vis_flags, a.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(pos, radius, a.vis_flags, a.vis_bans)
 
 		if targets then
 			S:queue(this.sound)
@@ -43656,7 +43656,7 @@ function scripts.hero_tramin.update(this, store)
 					fx.render.sprites[1].offset = v(0, 20)
 					simulation:queue_insert_entity(fx)
 					U.y_animation_play(this, "outJetpack", af, store.tick_ts, 1)
-					U.animation_start(this, "idle", af, store.tick_ts, false)
+					U.animation_start_default(this, "idle", af, store.tick_ts, false)
 				end
 			end
 
@@ -43765,7 +43765,7 @@ function scripts.hero_tramin.update(this, store)
 							b.pos.x = this.pos.x + (af and -1 or 1) * a.start_offsets[km.zmod(hi, #a.start_offsets)].x
 							b.pos.y = this.pos.y + a.start_offsets[hi].y
 							b.bullet.level = skill.level
-							b.bullet.from = V.vclone(b.pos)
+							b.bullet.from:copy(b.pos)
 							b.bullet.to = V.v(b.pos.x + (af and -1 or 1) * a.launch_vector.x, b.pos.y + a.launch_vector.y)
 							b.bullet.target_id = target.id
 							b.bullet.damage_factor = this.unit.damage_factor
@@ -43859,8 +43859,8 @@ function scripts.hero_tramin_ultimate.update(this, store)
 
 	b.pos.x = this.pos.x + (flip and -1 or 1) * this.bullet_start_offset.x
 	b.pos.y = this.pos.y + this.bullet_start_offset.y
-	b.bullet.from = V.vclone(b.pos)
-	b.bullet.to = V.vclone(e.pos)
+	b.bullet.from:copy(b.pos)
+	b.bullet.to:copy(e.pos)
 	b.bullet.hit_payload = e
 
 	simulation:queue_insert_entity(b)
@@ -44227,7 +44227,7 @@ function scripts.hero_tank.update(this, store)
 						b.pos.x = this.pos.x + (af and -1 or 1) * am.start_offsets[km.zmod(hi, #am.start_offsets)].x
 						b.pos.y = this.pos.y + am.start_offsets[hi].y
 						b.bullet.level = skill.level
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 						b.bullet.to = V.v(b.pos.x + (af and -1 or 1) * am.launch_vector.x, b.pos.y + am.launch_vector.y)
 						b.bullet.target_id = target.id
 						b.bullet.source_id = this.id
@@ -44382,10 +44382,10 @@ function scripts.hero_tank.update(this, store)
 					b.bullet.source_id = this.id
 					b.bullet.damage_factor = this.unit.damage_factor
 					b.bullet.xp_dest_id = this.id
-					b.pos = V.vclone(this.pos)
+					b.pos:copy(this.pos)
 					b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[ai].x
 					b.pos.y = b.pos.y + a.bullet_start_offset[ai].y
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = U.calculate_enemy_ffe_pos(target, b.bullet.flight_time)
 
 					simulation:queue_insert_entity(b)
@@ -44454,11 +44454,11 @@ function scripts.aura_tank_skill2_bomb.update(this, store)
 		simulation:queue_insert_entity(fx)
 
 		local radius = last_attack and a.last_attack_damage_radius or a.damage_radius
-		local targets = U.find_enemies_in_range(store.enemies, pos, 0, radius, a.vis_flags, a.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(pos, radius, a.vis_flags, a.vis_bans)
 
 		if targets then
 			S:queue(this.sound)
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local d = E.assign_damage(a.damage_type, math.random(a.damage_min, a.damage_max) * a.damage_factor, this.id, t.id)
 
 				queue_damage(store, d)
@@ -44595,9 +44595,9 @@ function scripts.zeppelin_hero_tank.update(this, store)
 	local b = E:create_entity(a.bullet)
 
 	b.bullet.from = V.v(this.pos.x + a.bullet_start_offset[1].x, this.pos.y + a.bullet_start_offset[1].y + this.render.sprites[1].offset.y)
-	b.bullet.to = V.vclone(this.target_pos)
+	b.bullet.to:copy(this.target_pos)
 	b.bullet.source_id = this.id
-	b.pos = V.vclone(b.bullet.from)
+	b.pos:copy(b.bullet.from)
 	b.bullet.level = this.level
 	b.bullet.damage_factor = this.damage_factor
 	b.bullet.hit_payload = E:create_entity(b.bullet.hit_payload)
@@ -44814,7 +44814,7 @@ function scripts.hero_naga.update(this, store)
 					local start_ts = store.tick_ts
 					local af = enemy.pos.x < this.pos.x
 					S:queue(a.sound)
-					U.animation_start(this, a.animation, af, store.tick_ts, false)
+					U.animation_start_default(this, a.animation, af, store.tick_ts, false)
 
 					if SU.y_hero_wait(store, this, a.cast_time) then
 						goto label_naga_0
@@ -44891,7 +44891,7 @@ function scripts.hero_naga.update(this, store)
 					local start_ts = store.tick_ts
 					local af = soldier.pos.x < this.pos.x
 					S:queue(a.sound)
-					U.animation_start(this, a.animation, af, store.tick_ts, false)
+					U.animation_start_default(this, a.animation, af, store.tick_ts, false)
 
 					if SU.y_hero_wait(store, this, a.cast_time) then
 						goto label_naga_0
@@ -45031,7 +45031,7 @@ function scripts.controller_hero_naga_ultimate.update(this, store)
 			coroutine.yield()
 		end
 
-		local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, this.damage_radius, this.damage_flags, this.damage_bans)
+		local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, this.damage_flags, this.damage_bans)
 
 		if targets then
 			for _, e in ipairs(targets) do
@@ -45068,7 +45068,7 @@ function scripts.aura_naga_skill1_bomb.update(this, store)
 		simulation:queue_insert_entity(fx)
 
 		local radius = last_attack and a.last_attack_damage_radius or a.damage_radius
-		local targets = U.find_enemies_in_range(store.enemies, pos, 0, radius, a.vis_flags, a.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(pos, radius, a.vis_flags, a.vis_bans)
 
 		if targets then
 			S:queue(this.sound)
@@ -45233,7 +45233,7 @@ function scripts.hero_stage_205_alleria.update(this, store)
 		U.y_animation_play(this, "in", this.in_cinematic, store.tick_ts, 1)
 	end
 
-	U.animation_start(this, "idle", this.in_cinematic, store.tick_ts, true)
+	U.animation_start_default(this, "idle", this.in_cinematic, store.tick_ts, true)
 
 	while this.in_cinematic do
 		coroutine.yield()
@@ -45277,13 +45277,13 @@ function scripts.hero_stage_205_alleria.update(this, store)
 
 					for i = 1, ma.shots do
 						S:queue(ma.sound)
-						U.animation_start(this, ma.animations[2], nil, store.tick_ts, false)
+						U.animation_start_default(this, ma.animations[2], nil, store.tick_ts, false)
 						U.y_wait(store, ma.shoot_time)
 
 						local target = enemies[enemy_idx]
 						local bullet = E:create_entity(ma.bullet)
 
-						bullet.pos = V.vclone(this.pos)
+						bullet.pos:copy(this.pos)
 
 						if ma.bullet_start_offset then
 							local offset = ma.bullet_start_offset
@@ -45291,8 +45291,8 @@ function scripts.hero_stage_205_alleria.update(this, store)
 							bullet.pos.x, bullet.pos.y = bullet.pos.x + (this.render.sprites[1].flip_x and -1 or 1) * offset.x, bullet.pos.y + offset.y
 						end
 
-						bullet.bullet.from = V.vclone(bullet.pos)
-						bullet.bullet.to = V.vclone(target.pos)
+						bullet.bullet.from:copy(bullet.pos)
+						bullet.bullet.to:copy(target.pos)
 
 						if not ma.ignore_hit_offset then
 							bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
@@ -45318,7 +45318,7 @@ function scripts.hero_stage_205_alleria.update(this, store)
 			end
 
 			if store.tick_ts - wa.ts > wa.cooldown and this.soldier.target_id == nil then
-				local enemies = U.find_enemies_in_range(store, this.pos, 0, wa.range_check, wa.vis_flags, wa.vis_bans)
+				local enemies = U.find_enemies_in_range_filter_off(this.pos, wa.range_check, wa.vis_flags, wa.vis_bans)
 
 				if not enemies or #enemies < wa.min_targets then
 				-- block empty
@@ -45327,7 +45327,7 @@ function scripts.hero_stage_205_alleria.update(this, store)
 
 					local an, af = U.animation_name_facing_point(this, wa.animation, enemies[1].pos)
 
-					U.animation_start(this, an, af, store.tick_ts, false)
+					U.animation_start_default(this, an, af, store.tick_ts, false)
 					U.y_wait(store, wa.cast_time)
 
 					local e = E:create_entity(wa.entity)
@@ -45348,7 +45348,7 @@ function scripts.hero_stage_205_alleria.update(this, store)
 
 					queue_insert(store, e)
 					S:queue(wa.sound)
-					U.animation_start(e, "in", nil, store.tick_ts, false)
+					U.animation_start_default(e, "in", nil, store.tick_ts, false)
 					U.y_animation_wait(this)
 				end
 			end
@@ -45450,7 +45450,7 @@ function scripts.hero_stage_215_lord_blackburn.update(this, store)
 
 			local decal = E:create_entity(this.explosion_ground_decal)
 
-			decal.pos = V.vclone(this.pos)
+			decal.pos:copy(this.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			queue_insert(store, decal)
@@ -45477,7 +45477,7 @@ function scripts.hero_stage_215_lord_blackburn.update(this, store)
 
 			local decal = E:create_entity(this.explosion_ground_decal)
 
-			decal.pos = V.vclone(this.pos)
+			decal.pos:copy(this.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			queue_insert(store, decal)
@@ -45614,7 +45614,7 @@ function scripts.stage_215_lord_blackburn_ray.update(this, store)
 	local explosion = E:create_entity(this.decal_explosion_ground)
 
 	explosion.render.sprites[1].ts = store.tick_ts
-	explosion.pos = V.vclone(this.pos)
+	explosion.pos:copy(this.pos)
 
 	queue_insert(store, explosion)
 
@@ -45738,7 +45738,7 @@ function scripts.hero_stage_218_denas.insert(this, store)
 end
 
 local function denas_find_bomb_cluster(store, this, ba, predict_time)
-	local enemies = U.find_enemies_in_range(store, this.pos, 0, ba.max_range, ba.vis_flags, ba.vis_bans)
+	local enemies = U.find_enemies_in_range_filter_off(this.pos, ba.max_range, ba.vis_flags, ba.vis_bans)
 
 	if not enemies then
 		return nil, 0
@@ -45806,7 +45806,7 @@ function scripts.hero_stage_218_denas.y_bombardement(store, this)
 	local start_ts = store.tick_ts
 	local flip = target_pos.x < this.pos.x
 
-	U.animation_start(this, ba.animation, flip, store.tick_ts)
+	U.animation_start_default(this, ba.animation, flip, store.tick_ts)
 
 	while store.tick_ts - start_ts < ba.cast_time do
 		if this.nav_rally.new or this.health.dead or this.unit.is_stunned then
@@ -45846,7 +45846,7 @@ function scripts.hero_stage_218_denas.y_bombardement(store, this)
 		end
 
 		e.pos.x, e.pos.y = from_x, from_y
-		e.bullet.from = V.vclone(e.pos)
+		e.bullet.from:copy(e.pos)
 		e.bullet.to = p
 		e.bullet.source_id = this.id
 		e.bullet.damage_factor = 1
@@ -45894,7 +45894,7 @@ function scripts.hero_stage_218_denas.y_denas_guards(store, this)
 	local spawn_pos = P:node_pos(target.nav_path.pi, 1, target.nav_path.ni + dg.ahead_nodes)
 	local start_ts = store.tick_ts
 
-	U.animation_start(this, dg.animation, spawn_pos.x < this.pos.x, store.tick_ts)
+	U.animation_start_default(this, dg.animation, spawn_pos.x < this.pos.x, store.tick_ts)
 
 	while store.tick_ts - start_ts < dg.cast_time do
 		if this.nav_rally.new or this.health.dead or this.unit.is_stunned then
@@ -45959,15 +45959,15 @@ function scripts.hero_stage_218_denas.y_cinematic_entrance(store, this)
 	end
 
 	U.set_destination(this, dest)
-	U.animation_start(this, "cinematic_walk_up", nil, store.tick_ts, true)
+	U.animation_start_default(this, "cinematic_walk_up", nil, store.tick_ts, true)
 	y_walk_while(function()
 		return dist_left() > speed * fts(22)
 	end)
-	U.animation_start(this, "cinematic_drift_in", nil, store.tick_ts, false)
+	U.animation_start_default(this, "cinematic_drift_in", nil, store.tick_ts, false)
 	y_walk_while(function()
 		return not U.animation_finished(this)
 	end)
-	U.animation_start(this, "cinematic_drift_loop", nil, store.tick_ts, true)
+	U.animation_start_default(this, "cinematic_drift_loop", nil, store.tick_ts, true)
 
 	while not U.walk(this, store.tick_length) do
 		coroutine.yield()
@@ -45978,9 +45978,9 @@ function scripts.hero_stage_218_denas.y_cinematic_entrance(store, this)
 	this.nav_rally.pos = V.vclone(dest)
 	this.nav_rally.new = false
 
-	U.animation_start(this, "cinematic_drift_out", nil, store.tick_ts, false)
+	U.animation_start_default(this, "cinematic_drift_out", nil, store.tick_ts, false)
 	U.y_animation_wait(this)
-	U.animation_start(this, "summon_royal_guard", nil, store.tick_ts, false)
+	U.animation_start_default(this, "summon_royal_guard", nil, store.tick_ts, false)
 	U.y_wait(store, dg.cast_time)
 	signal.emit("show-balloon_tutorial-pos", "S18_TRANS_01", false, V.v(this.pos.x, this.pos.y + 80))
 
@@ -45998,7 +45998,7 @@ function scripts.hero_stage_218_denas.y_cinematic_entrance(store, this)
 	end
 
 	U.y_animation_wait(this)
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	local deadline = store.tick_ts + 12
 
@@ -46034,21 +46034,21 @@ function scripts.hero_stage_218_denas.y_cinematic_entrance(store, this)
 
 	this.cinematic_entrance_done = true
 
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	while not this.cinematic_look_start do
 		coroutine.yield()
 	end
 
 	U.y_animation_play(this, "look_around_in", nil, store.tick_ts, 1)
-	U.animation_start(this, "look_around_loop", nil, store.tick_ts, true)
+	U.animation_start_default(this, "look_around_loop", nil, store.tick_ts, true)
 
 	while not this.cinematic_look_end do
 		coroutine.yield()
 	end
 
 	U.y_animation_play(this, "look_around_out", nil, store.tick_ts, 1)
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	this.cinematic_look_done = true
 end
@@ -46071,7 +46071,7 @@ function scripts.hero_stage_218_denas.update(this, store)
 		U.y_animation_play(this, "revive", this.in_cinematic, store.tick_ts, 1)
 	end
 
-	U.animation_start(this, "idle", this.in_cinematic, store.tick_ts, true)
+	U.animation_start_default(this, "idle", this.in_cinematic, store.tick_ts, true)
 
 	if not this.cinematic_entrance_to then
 		for _, sp in ipairs(this.initial_squads_pos or {}) do
