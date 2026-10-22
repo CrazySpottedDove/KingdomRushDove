@@ -467,7 +467,7 @@ function scripts.amazona_gain_mod.update(this, store)
 			damage_limit = damage_limit - this.gain.damage
 
 			if damage_limit >= 0 then
-				for _, a in pairs(target.melee.attacks) do
+				for _, a in ipairs(target.melee.attacks) do
 					a.damage_max = a.damage_max + this.gain.damage
 					a.damage_min = a.damage_min + this.gain.damage
 				end
@@ -728,7 +728,7 @@ function scripts.mod_dracolich_disease.remove(this, store)
 
 		local fx = E:create_entity(this.spread_fx)
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 
 		if target and this.modifier.use_mod_offset and target.unit.mod_offset then
 			local mo = target.unit.mod_offset
@@ -1110,7 +1110,7 @@ function scripts.pirate_exploding_barrel.update(this, store)
 
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(sfx)
@@ -1128,7 +1128,7 @@ function scripts.pirate_exploding_barrel.update(this, store)
 
 		local bf = E:create_entity("barrel_fragment")
 
-		bf.bullet.from = V.vclone(this.pos)
+		bf.bullet.from:copy(this.pos)
 		bf.bullet.to = U.point_on_ellipse(center, (50 * math.random() + 45) * 0.5, angle)
 		bf.bullet.flight_time = U.frandom(fts(16), fts(20))
 		bf.render.sprites[1].r = 100 * math.random() * (math.pi / 180)
@@ -1582,7 +1582,7 @@ scripts.enemy_troll_chieftain = {
 
 					raged_count = raged_count + 1
 
-					for _, name in pairs(a.mods) do
+					for _, name in ipairs(a.mods) do
 						local m = E:create_entity(name)
 
 						m.modifier.source_id = this.id
@@ -2022,7 +2022,7 @@ scripts.enemy_zombiemancer = {
 						local anchor = zombies[raise_index]
 						local fx = E:create_entity("decal_zombiemancer_raise")
 
-						fx.pos = V.vclone(anchor.pos)
+						fx.pos:copy(anchor.pos)
 
 						for i = 1, #fx.render.sprites do
 							fx.render.sprites[i].ts = store.tick_ts
@@ -2412,7 +2412,7 @@ function scripts.bomb_cluster.update(this, store)
 
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(sfx)
@@ -2436,7 +2436,7 @@ function scripts.bomb_cluster.update(this, store)
 
 		local bf = E:create_entity(b.fragment_name)
 
-		bf.bullet.from = V.vclone(this.pos)
+		bf.bullet.from:copy(this.pos)
 		bf.bullet.to = bf_dest
 		bf.bullet.damage_factor = b.damage_factor
 		bf.bullet.flight_time = bf.bullet.flight_time + fts(i) * math.random(1, 2)
@@ -2572,9 +2572,9 @@ function scripts.ray_tesla.update(this, store)
 				if bounce_target then
 					local r = E:create_entity(this.template_name)
 
-					r.pos = V.vclone(dest)
+					r.pos:copy(dest)
 					r.bounce_range = this.orig_bounce_range
-					r.bullet.to = V.vclone(bounce_target.pos)
+					r.bullet.to:copy(bounce_target.pos)
 					r.bullet.target_id = bounce_target.id
 					r.bullet.source_id = target.id
 					r.bullet.damage_factor = b.damage_factor
@@ -2664,7 +2664,7 @@ function scripts.hacksaw_sawblade.update(this, store)
 	if b.hit_blood_fx and target and target.unit.blood_color ~= BLOOD_NONE then
 		local sfx = E:create_entity(b.hit_blood_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 
 		if sfx.use_blood_color and target.unit.blood_color then
@@ -2827,7 +2827,7 @@ function scripts.aura_tesla_overcharge.update(this, store)
 	local a = this.aura
 	local ps = E:create_entity(this.particles_name)
 
-	ps.pos = V.vclone(this.pos)
+	ps.pos:copy(this.pos)
 	ps.particle_system.emit_speed[1] = ps.particle_system.emit_speed[1] * this.scale_factor
 	ps.particle_system.emit_speed[2] = ps.particle_system.emit_speed[2] * this.scale_factor
 	ps.particle_system.emit_duration = ps.particle_system.emit_duration * this.scale_factor
@@ -3049,7 +3049,7 @@ function scripts.aura_ignus_surge_of_flame.update(this, store)
 
 				local fx = E:create_entity(a.hit_fx)
 
-				fx.pos = V.vclone(t.pos)
+				fx.pos:copy(t.pos)
 
 				if t.unit and t.unit.mod_offset then
 					fx.pos.x, fx.pos.y = fx.pos.x + t.unit.mod_offset.x, fx.pos.y + t.unit.mod_offset.y
@@ -3199,7 +3199,7 @@ function scripts.aura_10yr_fireball.update(this, store)
 				b.bullet.to = v(tx, ty)
 			end
 
-			b.bullet.from = V.vclone(b.pos)
+			b.bullet.from:copy(b.pos)
 
 			simulation:queue_insert_entity(b)
 			U.y_wait_unconditional(store, a.delay)
@@ -3801,8 +3801,8 @@ function scripts.mod_hero_thor_chainlightning.update(this, store)
 			local dest = V.vclone(t.pos)
 			local b = E:create_entity(cl.bullet)
 
-			b.pos = V.vclone(chain_pos)
-			b.bullet.from = V.vclone(b.pos)
+			b.pos:copy(chain_pos)
+			b.bullet.from:copy(b.pos)
 			b.bullet.to = dest
 			b.bullet.target_id = t.id
 			b.bullet.source_id = m.source_id
@@ -3878,7 +3878,7 @@ function scripts.mod_hero_thor_thunderclap.update(this, store)
 
 	local fx = E:create_entity(tc.fx)
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(fx)
@@ -3966,7 +3966,7 @@ function scripts.mod_spectral_knight.insert(this, store)
 		return false
 	end
 
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.ts = store.tick_ts
 	end
 
@@ -3998,7 +3998,7 @@ function scripts.mod_skeleton_big.insert(this, store)
 		return false
 	end
 
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.ts = store.tick_ts
 	end
 
@@ -4141,7 +4141,7 @@ function scripts.enemy_base_portal.insert(this, store)
 	if portal and portal.out_nodes[this.nav_path.pi] - this.nav_path.ni < 8 then
 		local fx = E:create_entity(portal.fx_out)
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		if this.unit and this.unit.mod_offset then
@@ -4929,7 +4929,7 @@ function scripts.enemy_shaman_necro.update(this, store)
 				local dead_enemies = U.find_enemies_in_range_filter_override(this.pos, na.max_range, necro_filter)
 
 				if #dead_enemies > 0 then
-					for _, dead in pairs(dead_enemies) do
+					for _, dead in ipairs(dead_enemies) do
 						U.bans_add(dead.vis, F_UNDEAD)
 					end
 
@@ -4948,7 +4948,7 @@ function scripts.enemy_shaman_necro.update(this, store)
 
 					S:queue(na.sound)
 
-					for _, dead in pairs(dead_enemies) do
+					for _, dead in ipairs(dead_enemies) do
 						dead.health.delete_after = 0
 
 						local e = E:create_entity("enemy_cannibal_zombie")
@@ -5655,7 +5655,7 @@ function scripts.enemy_sniper.update(this, store)
 						b = E:create_entity(ra.bullet)
 						b.pos.x = this.pos.x + (af and -1 or 1) * ra.bullet_start_offset[aidx].x
 						b.pos.y = this.pos.y + ra.bullet_start_offset[aidx].y
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 						b.bullet.to = v(ranged.pos.x + ranged.unit.hit_offset.x, ranged.pos.y + ranged.unit.hit_offset.y)
 						b.bullet.source_id = this.id
 						b.bullet.target_id = ranged.id
@@ -6559,8 +6559,8 @@ function scripts.gorilla_small_liana.update(this, store)
 	local o = right_side and this.spawn_offset[1] or this.spawn_offset[2]
 
 	spawn.pos.x, spawn.pos.y = this.pos.x + o.x, this.pos.y + o.y
-	spawn.bullet.from = V.vclone(spawn.pos)
-	spawn.bullet.to = V.vclone(this.spawn_dest)
+	spawn.bullet.from:copy(spawn.pos)
+	spawn.bullet.to:copy(this.spawn_dest)
 	spawn.render.sprites[1].flip_x = right_side
 
 	simulation:queue_insert_entity(spawn)
@@ -6663,7 +6663,7 @@ function scripts.spell_djinn.insert(this, store)
 
 	local fx = E:create_entity("fx")
 
-	fx.pos = V.vclone(target.pos)
+	fx.pos:copy(target.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[1].draw_order = 2
 	fx.render.sprites[1].name = "fx_djinn_smoke"
@@ -6672,7 +6672,7 @@ function scripts.spell_djinn.insert(this, store)
 
 	if instakill then
 		fx = E:create_entity(this.fx_options[math.random(1, #this.fx_options)])
-		fx.pos = V.vclone(target.pos)
+		fx.pos:copy(target.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -6699,7 +6699,7 @@ function scripts.shock_djinn.insert(this, store)
 
 	local fx = E:create_entity("fx")
 
-	fx.pos = V.vclone(target.pos)
+	fx.pos:copy(target.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[1].draw_order = 2
 	fx.render.sprites[1].name = "fx_djinn_smoke"
@@ -6827,8 +6827,8 @@ function scripts.enemy_gunboat.update(this, store)
 							local b = E:create_entity(ba.bullet)
 
 							b.pos.x, b.pos.y = this.pos.x + ba.bullet_start_offset.x, this.pos.y + ba.bullet_start_offset.y
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = V.vclone(shoot_pos)
+							b.bullet.from:copy(b.pos)
+							b.bullet.to:copy(shoot_pos)
 							b.bullet.source_id = this.id
 
 							simulation:queue_insert_entity(b)
@@ -6916,7 +6916,7 @@ function scripts.hero_steam_frigate.update(this, store)
 				local offset = ba.bullet_start_offset[1]
 
 				b.pos.x, b.pos.y = this.pos.x + (af and -1 or 1) * offset.x, this.pos.y + offset.y
-				b.bullet.from = V.vclone(b.pos)
+				b.bullet.from:copy(b.pos)
 				b.bullet.to = pred_pos
 				b.bullet.target_id = enemy.id
 
@@ -6969,7 +6969,7 @@ function scripts.hero_steam_frigate.update(this, store)
 			local offset = ma.bullet_start_offset[1]
 
 			m.pos.x, m.pos.y = this.pos.x + (af and -1 or 1) * offset.x, this.pos.y + offset.y
-			m.bullet.from = V.vclone(m.pos)
+			m.bullet.from:copy(m.pos)
 			m.bullet.to = target_pos
 
 			simulation:queue_insert_entity(m)
@@ -7041,7 +7041,7 @@ function scripts.steam_frigate_mine.update(this, store)
 				fx = E:create_entity("fx_explosion_fragment")
 			end
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(fx)
@@ -7199,7 +7199,7 @@ function scripts.tower_neptune.update(this, store)
 
 				local b = E:create_entity(a.bullet)
 
-				b.bullet.to = V.vclone(pos)
+				b.bullet.to:copy(pos)
 				b.bullet.level = pow.level
 				b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
 
@@ -7426,9 +7426,9 @@ function scripts.ray_frankenstein.update(this, store)
 			if bounce_target then
 				local r = E:create_entity(this.template_name)
 
-				r.pos = V.vclone(dest)
+				r.pos:copy(dest)
 				r.bullet.level = b.level
-				r.bullet.to = V.vclone(target.pos)
+				r.bullet.to:copy(target.pos)
 				r.bullet.target_id = bounce_target.id
 				r.bullet.source_id = target.id
 				r.bullet.damage_factor = b.damage_factor
@@ -7858,7 +7858,7 @@ function scripts.alien_glaive.update(this, store)
 	end
 
 	if bounce_count == 0 or math.random() < this.bounce_chance then
-		local target = U.find_foremost_enemy_with_flying_preference(store, this.pos, 0, this.bounce_range, nil, b.vis_flags, b.vis_bans, function(v)
+		local target = U.find_foremost_enemy_with_flying_preference_in_range_filter_on(this.pos, this.bounce_range, b.vis_flags, b.vis_bans, function(v)
 			return v ~= target
 		end)
 
@@ -8246,8 +8246,8 @@ function scripts.voodoo_witch_skull.update(this, store)
 				local b = E:create_entity(a.bullet)
 
 				b.pos.x, b.pos.y = this.pos.x, this.pos.y + this.render.sprites[1].offset.y
-				b.bullet.from = V.vclone(b.pos)
-				b.bullet.to = V.vclone(target.pos)
+				b.bullet.from:copy(b.pos)
+				b.bullet.to:copy(target.pos)
 				b.bullet.to.x = b.bullet.to.x + target.unit.hit_offset.x
 				b.bullet.to.y = b.bullet.to.y + target.unit.hit_offset.y
 				b.bullet.target_id = target.id
@@ -8574,7 +8574,7 @@ function scripts.decal_eerie_root.update(this, store)
 	U.y_animation_play(this, "start", nil, store.tick_ts)
 
 	while store.tick_ts - start_ts < this.duration do
-		if U.find_first_enemy(store, this.pos, 0, 25, this.vis_flags, this.vis_bans) then
+		if U.find_first_enemy_in_range_filter_off(this.pos, 25, this.vis_flags, this.vis_bans) then
 			U.y_animation_play(this, "loop", nil, store.tick_ts, 1)
 		end
 
@@ -8661,7 +8661,7 @@ end
 
 function scripts.tower_bastion.insert(this, store)
 	if this.tower.flip_x then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.flip_x = true
 		end
 	end
@@ -8710,7 +8710,7 @@ function scripts.tower_bastion.update(this, store)
 
 						b.pos.x = this.pos.x + (flipped and -1 or 1) * ra.bullet_start_offset[1].x
 						b.pos.y = this.pos.y + ra.bullet_start_offset[1].y
-						b.bullet.from = V.vclone(b.pos)
+						b.bullet.from:copy(b.pos)
 						b.bullet.to = dest
 						b.bullet.level = pow.level
 						b.render.sprites[1].flip_x = flipped
@@ -9203,7 +9203,7 @@ function scripts.soldier_druid_bear.update(this, store)
 
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 
 			local ox = 0
 
@@ -9457,7 +9457,7 @@ function scripts.soldier_xin_shadow.update(this, store)
 
 				attack.ts = start_ts
 
-				for _, aa in pairs(this.melee.attacks) do
+				for _, aa in ipairs(this.melee.attacks) do
 					if aa ~= attack and aa.shared_cooldown then
 						aa.ts = attack.ts
 					end
@@ -10103,9 +10103,9 @@ function scripts.enemy_twilight_elf_harasser.update(this, store)
 					local bo = sa.bullet_start_offset[ai]
 					local b = E:create_entity(sa.bullet)
 
-					b.pos = V.vclone(this.pos)
+					b.pos:copy(this.pos)
 					b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * bo.x, b.pos.y + bo.y
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 					b.bullet.target_id = target.id
 
@@ -10998,7 +10998,7 @@ function scripts.enemy_webspitting_spider.update(this, store)
 
 							a.ts = store.tick_ts
 
-							for _, e in pairs(targets_hit) do
+							for _, e in ipairs(targets_hit) do
 								U.unblock_target(store, e)
 							end
 
@@ -11285,7 +11285,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 
 								b.from = v(target.pos.x + target.unit.mod_offset.x, fx.pos.y)
 								b.to = v(this.pos.x + o.x, this.pos.y)
-								b.pos = V.vclone(b.from)
+								b.pos:copy(b.from)
 								b.from_h = target.unit.mod_offset.y
 								b.to_h = a.balls_dest_offset.y
 								b.force_motion.max_flight_height = b.to_h + i * 10
@@ -12063,7 +12063,7 @@ function scripts.enemy_mactans.update(this, store)
 				if is_tb then
 					local m = E:create_entity("mod_mactans_tower_block")
 
-					m.pos = V.vclone(tower.pos)
+					m.pos:copy(tower.pos)
 					m.modifier.target_id = tower.id
 					m.modifier.source_id = this.id
 					m.modifier.duration = pp.block_duration
@@ -12649,7 +12649,7 @@ function scripts.plant_magic_blossom.update(this, store)
 				b.bullet.shot_index = i
 				b.bullet.source_id = this.id
 				b.pos.x, b.pos.y = this.pos.x + ca.bullet_start_offset.x, this.pos.y + ca.bullet_start_offset.y
-				b.bullet.from = V.vclone(b.pos)
+				b.bullet.from:copy(b.pos)
 
 				if targets and #targets > 0 then
 					local target
@@ -12803,7 +12803,7 @@ function scripts.plant_poison_pumpkin.update(this, store)
 
 			if first then
 				for _, target in ipairs(targets) do
-					for _, mod_name in pairs(ca.mods) do
+					for _, mod_name in ipairs(ca.mods) do
 						local m = E:create_entity(mod_name)
 
 						m.modifier.target_id = target.id
@@ -12918,7 +12918,7 @@ function scripts.crystal_arcane.update(this, store)
 					b.bullet.from = v(this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y)
 					b.bullet.to = target and V.vclone(target.pos) or V.vclone(table.random(random_points))
 					b.bullet.target_id = target and target.id
-					b.pos = V.vclone(b.bullet.from)
+					b.pos:copy(b.bullet.from)
 
 					simulation:queue_insert_entity(b)
 				end
@@ -13373,7 +13373,7 @@ function scripts.bolt_elves.update(this, store)
 		queue_damage(store, d)
 
 		if this.bullet.mods then
-			for _, mod_name in pairs(this.bullet.mods) do
+			for _, mod_name in ipairs(this.bullet.mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = target.id
@@ -13417,7 +13417,7 @@ function scripts.bolt_elves.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -13786,7 +13786,7 @@ function scripts.bullet_arachnomancer_spawn.insert(this, store)
 	local b = this.bullet
 
 	b.to = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
-	b.from = V.vclone(this.pos)
+	b.from:copy(this.pos)
 
 	local e = E:create_entity(this.payload_entity)
 
@@ -13828,7 +13828,7 @@ function scripts.rock_perython.update(this, store)
 	if b.hit_fx then
 		local fx = E:create_entity(b.hit_fx)
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -13837,7 +13837,7 @@ function scripts.rock_perython.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(this.pos)
+		decal.pos:copy(this.pos)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -14595,7 +14595,7 @@ function scripts.mod_eldritch.update(this, store)
 
 		local fx = E:create_entity(target.unit.explode_fx)
 
-		fx.pos = V.vclone(target.pos)
+		fx.pos:copy(target.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
 
@@ -14605,7 +14605,7 @@ function scripts.mod_eldritch.update(this, store)
 	if target.unit and show_blood_pool and target.unit.blood_color ~= BLOOD_NONE and band(terrain_type, TERRAIN_WATER) == 0 then
 		local decal = E:create_entity("decal_blood_pool")
 
-		decal.pos = V.vclone(target.pos)
+		decal.pos:copy(target.pos)
 		decal.render.sprites[1].ts = store.tick_ts
 		decal.render.sprites[1].name = target.unit.blood_color
 		decal.render.sprites[1].z = target.render.sprites[1].z
@@ -14780,7 +14780,7 @@ function scripts.mod_rag_raggified.update(this, store)
 			s.scale = s.size_scales[target.unit.size]
 		end
 
-		fx.pos = V.vclone(pos)
+		fx.pos:copy(pos)
 
 		if target.unit.hit_offset then
 			fx.pos.x, fx.pos.y = fx.pos.x + target.unit.hit_offset.x, fx.pos.y + target.unit.hit_offset.y
@@ -14969,7 +14969,7 @@ function scripts.mod_phoenix_flaming_path.update(this, store)
 		if this.custom_offsets and this.custom_offsets[target.template_name] then
 			local o = this.custom_offsets[target.template_name]
 
-			for _, s in pairs(this.render.sprites) do
+			for _, s in ipairs(this.render.sprites) do
 				s.offset.x = s.offset.x + o.x
 				s.offset.y = s.offset.y + o.y
 			end
@@ -15045,7 +15045,7 @@ function scripts.mod_phoenix_purification.update(this, store)
 			local e = E:create_entity(this.entity)
 
 			e.pos = V.vclone(target.pos)
-			e.bullet.from = V.vclone(e.pos)
+			e.bullet.from:copy(e.pos)
 			e.bullet.to = v(target.pos.x, target.pos.y + 100)
 
 			local aura = store.entities[m.source_id]
@@ -15128,7 +15128,7 @@ function scripts.mod_redcap_heal.insert(this, store)
 	if target and source then
 		local fx = E:create_entity(this.hit_fx)
 
-		fx.pos = V.vclone(target.pos)
+		fx.pos:copy(target.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].flip_x = target.pos.x < source.pos.x
 
@@ -16344,7 +16344,7 @@ function scripts.bullet_gryphon.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -16434,7 +16434,7 @@ function scripts.faerie_dragon.update(this, store)
 					local b = E:create_entity(ca.bullet)
 
 					b.pos.x, b.pos.y = this.pos.x + (af and -1 or 1) * so.x, this.pos.y + this.flight_height + so.y
-					b.bullet.from = V.vclone(b.pos)
+					b.bullet.from:copy(b.pos)
 					b.bullet.to = pred_pos
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
@@ -17339,7 +17339,7 @@ scripts.mod_dragon_reign = {
 		end)
 
 		if spread_targets then
-			for _, t in pairs(spread_targets) do
+			for _, t in ipairs(spread_targets) do
 				local m = E:create_entity(this.template_name)
 
 				m.modifier.target_id = t.id
@@ -17539,7 +17539,7 @@ function scripts.ray5_simple.update(this, store)
 					simulation:queue_remove_entity(fx)
 				end
 
-				for key, value in pairs(mods_added) do
+				for key, value in ipairs(mods_added) do
 					simulation:queue_remove_entity(value)
 				end
 
@@ -17630,7 +17630,7 @@ function scripts.tower_holder_blocked_elemental_holder.insert(this, store)
 	this.render.sprites[3].ts = store.tick_ts - math.random() * 3
 
 	if this.should_flip then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.flip_x = true
 		end
 	end
@@ -17642,7 +17642,7 @@ function scripts.tower_holder_blocked_elemental_holder.remove(this, store)
 	if this.remove_fx then
 		local fx = E:create_entity(this.remove_fx)
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -18096,7 +18096,7 @@ function scripts.controller_elemental_fire.update(this, store)
 
 		fx.loop_times = loops and loops or 1
 		fx.delay = 0
-		fx.pos = V.vclone(underground_pos)
+		fx.pos:copy(underground_pos)
 
 		simulation:queue_insert_entity(fx)
 	end
@@ -18334,7 +18334,7 @@ function scripts.controller_elemental_water.update(this, store)
 
 		fx.loop_times = loops and loops or 1
 		fx.delay = 0
-		fx.pos = V.vclone(underground_pos)
+		fx.pos:copy(underground_pos)
 
 		simulation:queue_insert_entity(fx)
 	end
@@ -19196,7 +19196,7 @@ function scripts.controller_elemental_metal.update(this, store)
 
 		fx.loop_times = loops and loops or 1
 		fx.delay = 0
-		fx.pos = V.vclone(underground_pos)
+		fx.pos:copy(underground_pos)
 
 		simulation:queue_insert_entity(fx)
 	end
@@ -19443,7 +19443,7 @@ function scripts.controller_elemental_metal.update(this, store)
 
 					local fx = E:create_entity(this.gold_fx)
 
-					fx.pos = V.vclone(e.pos)
+					fx.pos:copy(e.pos)
 
 					if e.unit.hit_offset then
 						fx.pos.x, fx.pos.y = fx.pos.x + e.unit.hit_offset.x, fx.pos.y + e.unit.hit_offset.y
@@ -19759,7 +19759,7 @@ function scripts.enemy_stage_11_cult_leader_illusion.update(this, store)
 
 	local fx = E:create_entity(this.fx_spawn)
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.tween.ts = store.tick_ts
 
 	simulation:queue_insert_entity(fx)
@@ -20317,7 +20317,7 @@ function scripts.mod_stage_11_portal.insert(this, store)
 
 	local fx = E:create_entity(this.fx)
 
-	fx.pos = V.vclone(target.pos)
+	fx.pos:copy(target.pos)
 	fx.pos.x, fx.pos.y = fx.pos.x + target.unit.hit_offset.x, fx.pos.y + target.unit.hit_offset.y
 	fx.render.sprites[1].ts = store.tick_ts
 
@@ -20896,7 +20896,7 @@ function scripts.controller_terrain_3_local_glare.update(this, store)
 			this.glare_active = true
 			aura = E:create_entity(this.aura_glare)
 			aura.aura.ts = store.tick_ts
-			aura.pos = V.vclone(this.pos)
+			aura.pos:copy(this.pos)
 			aura.render.sprites[1].scale.x = aura.aura.radius / 137
 			aura.render.sprites[1].scale.y = ASPECT * aura.aura.radius / 137
 			aura.render.sprites[1].hidden = true
@@ -20904,7 +20904,7 @@ function scripts.controller_terrain_3_local_glare.update(this, store)
 			simulation:queue_insert_entity(aura)
 
 			decal = E:create_entity(this.decal_ground)
-			decal.pos = V.vclone(this.pos)
+			decal.pos:copy(this.pos)
 
 			simulation:queue_insert_entity(decal)
 			U.y_animation_play(decal, "in", nil, store.tick_ts)
@@ -21264,7 +21264,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 				this.total_enemies_killed = 0
 				as.ts = store.tick_ts
 				b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
-				b.bullet.from = V.vclone(b.pos)
+				b.bullet.from:copy(b.pos)
 				b.bullet.to = target_pos
 				b.bullet.source_id = this.id
 				b.bullet.damage_factor = this.tower.damage_factor
@@ -21303,7 +21303,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 
 						decal.ts = store.tick_ts
 						decal.tween.ts = store.tick_ts
-						decal.pos = V.vclone(target_pos)
+						decal.pos:copy(target_pos)
 						decal.render.sprites[1].flip_x = math.random(1, 2) > 1
 
 						simulation:queue_insert_entity(decal)
@@ -21369,8 +21369,8 @@ function scripts.tower_stage_13_sunray.update(this, store)
 
 			ab.ts = last_ts
 			b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
-			b.bullet.from = V.vclone(b.pos)
-			b.bullet.to = V.vclone(enemy_pos)
+			b.bullet.from:copy(b.pos)
+			b.bullet.to:copy(enemy_pos)
 			b.bullet.target_id = enemy_id
 			b.bullet.source_id = this.id
 			b.bullet.damage_factor = this.tower.damage_factor
@@ -21620,7 +21620,7 @@ function scripts.bullet_tower_stage_13_sunray.update(this, store)
 				simulation:queue_remove_entity(fx)
 			end
 
-			for key, value in pairs(mods_added) do
+			for key, value in ipairs(mods_added) do
 				simulation:queue_remove_entity(value)
 			end
 
@@ -22337,7 +22337,7 @@ function scripts.enemy_cutthroat_rat.update(this, store)
 					if ah.hit_fx then
 						local fx = E:create_entity(ah.hit_fx)
 
-						fx.pos = V.vclone(target.pos)
+						fx.pos:copy(target.pos)
 						fx.render.sprites[1].ts = store.tick_ts
 
 						simulation:queue_insert_entity(fx)
@@ -22351,7 +22351,7 @@ function scripts.enemy_cutthroat_rat.update(this, store)
 				do
 					local fx = E:create_entity(ah.smoke_fx)
 
-					fx.pos = V.vclone(this.pos)
+					fx.pos:copy(this.pos)
 					fx.render.sprites[1].ts = store.tick_ts
 
 					simulation:queue_insert_entity(fx)
@@ -23594,7 +23594,7 @@ function scripts.enemy_armored_nightmare.update(this, store)
 				if e.unit.show_blood_pool and e.unit.blood_color ~= BLOOD_NONE and band(terrain_type, TERRAIN_WATER) == 0 then
 					local decal = E:create_entity("decal_blood_pool")
 
-					decal.pos = V.vclone(e.pos)
+					decal.pos:copy(e.pos)
 					decal.render.sprites[1].ts = store.tick_ts
 					decal.render.sprites[1].name = e.unit.blood_color
 					decal.render.sprites[1].z = e.render.sprites[1].z
@@ -23612,7 +23612,7 @@ function scripts.enemy_armored_nightmare.update(this, store)
 
 				local fx = E:create_entity(this.unit.explode_fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].name = fx.render.sprites[1].size_names[this.unit.size]
 
@@ -23689,7 +23689,7 @@ function scripts.enemy_armored_nightmare.update(this, store)
 			end
 
 			if this.unit.hide_during_death or this.unit.hide_after_death then
-				for _, s in pairs(this.render.sprites) do
+				for _, s in ipairs(this.render.sprites) do
 					s.hidden = true
 				end
 			end
@@ -23886,7 +23886,7 @@ function scripts.enemy_blinker.update(this, store)
 					aura = E:create_entity(ar.aura)
 				end
 
-				aura.pos = V.vclone(target_pos)
+				aura.pos:copy(target_pos)
 				aura.aura.source_id = this.id
 				aura.aura.ts = store.tick_ts
 
@@ -23900,7 +23900,7 @@ function scripts.enemy_blinker.update(this, store)
 					fx = E:create_entity(ar.fx_normal)
 				end
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.pos.x, fx.pos.y = fx.pos.x + this.unit.hit_offset.x, fx.pos.y + this.unit.hit_offset.y
 				fx.render.sprites[1].ts = store.tick_ts
 
@@ -24019,7 +24019,7 @@ function scripts.controller_enemy_mindless_husk_glareling_spawn.update(this, sto
 	local b = E:create_entity(this.glareling_bullet)
 
 	b.pos.x, b.pos.y = this.husk.pos.x + this.start_offset.x, this.husk.pos.y + this.start_offset.y
-	b.bullet.from = V.vclone(b.pos)
+	b.bullet.from:copy(b.pos)
 	b.bullet.to = dest
 	b.bullet.source_id = this.husk.id
 	b.path_to_spawn = np.pi
@@ -24129,8 +24129,8 @@ function scripts.enemy_vile_spawner.update(this, store)
 					local bullet_start_offset = a.bullet_start_offset
 
 					b.pos.x, b.pos.y = this.pos.x + bullet_start_offset.x, this.pos.y + bullet_start_offset.y
-					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = V.vclone(this.available_nodes[i].pos)
+					b.bullet.from:copy(b.pos)
+					b.bullet.to:copy(this.available_nodes[i].pos)
 					b.bullet.to.y = b.bullet.to.y + a.bullet_aim_height
 					b.bullet.source_id = this.id
 					b.bullet_aim_height = a.bullet_aim_height
@@ -24322,7 +24322,7 @@ function scripts.mod_enemy_noxious_horror_poison.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 	local fx = E:create_entity(this.start_fx)
 
-	fx.pos = V.vclone(target.pos)
+	fx.pos:copy(target.pos)
 	fx.pos.x, fx.pos.y = target.unit.hit_offset.x, target.unit.hit_offset.y
 	fx.render.sprites[1].ts = store.tick_ts
 
@@ -24523,7 +24523,7 @@ function scripts.enemy_evolving_scourge.update(this, store)
 						U.flags_add(this.vis, bor(F_ENEMY, F_FLYING))
 						U.bans_add(this.vis, F_BLOCK)
 
-						for k, v in pairs(this.melee.attacks) do
+						for k, v in ipairs(this.melee.attacks) do
 							v.disabled = true
 						end
 
@@ -24926,7 +24926,7 @@ function scripts.aura_enemy_dust_cryptid.insert(this, store)
 	this.aura.ts = store.tick_ts
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end
@@ -25162,7 +25162,7 @@ function scripts.enemy_animated_armor.insert(this, store)
 	end
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end
@@ -25170,7 +25170,7 @@ function scripts.enemy_animated_armor.insert(this, store)
 	if this.melee then
 		this.melee.order = U.attack_order(this.melee.attacks)
 
-		for _, a in pairs(this.melee.attacks) do
+		for _, a in ipairs(this.melee.attacks) do
 			a.ts = store.tick_ts
 		end
 	end
@@ -25178,13 +25178,13 @@ function scripts.enemy_animated_armor.insert(this, store)
 	if this.ranged then
 		this.ranged.order = U.attack_order(this.ranged.attacks)
 
-		for _, a in pairs(this.ranged.attacks) do
+		for _, a in ipairs(this.ranged.attacks) do
 			a.ts = store.tick_ts
 		end
 	end
 
 	if this.auras then
-		for _, a in pairs(this.auras.list) do
+		for _, a in ipairs(this.auras.list) do
 			a.ts = store.tick_ts
 
 			if a.cooldown == 0 then
@@ -25469,13 +25469,13 @@ function scripts.enemy_revenant_soulcaller.update(this, store)
 					else
 						local bullet = E:create_entity(at.bullet)
 
-						bullet.pos = V.vclone(this.pos)
+						bullet.pos:copy(this.pos)
 
 						local offset = at.bullet_start_offset[1]
 
 						bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
-						bullet.bullet.from = V.vclone(bullet.pos)
-						bullet.bullet.to = V.vclone(target.pos)
+						bullet.bullet.from:copy(bullet.pos)
+						bullet.bullet.to:copy(target.pos)
 						bullet.bullet.target_id = target.id
 						bullet.bullet.source_id = this.id
 
@@ -26071,7 +26071,7 @@ function scripts.enemy_quickfeet_gator.update(this, store)
 								bullet.bullet.from = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 								bullet.bullet.xp_dest_id = this.id
 								bullet.bullet.xp_gain_factor = a.xp_gain_factor
-								bullet.pos = V.vclone(bullet.bullet.from)
+								bullet.pos:copy(bullet.bullet.from)
 
 								simulation:queue_insert_entity(bullet)
 
@@ -26216,7 +26216,7 @@ function scripts.quickfeet_gator_chicken_leg_bullet.update(this, store)
 
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 		sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
@@ -26669,7 +26669,7 @@ function scripts.mod_crocs_shaman_tower_debuff.insert(this, store)
 
 	local mods_list = U.get_modifiers(store, target, this.remove_mods)
 
-	for _, v in pairs(mods_list) do
+	for _, v in ipairs(mods_list) do
 		v.remove = true
 	end
 
@@ -26941,20 +26941,20 @@ function scripts.mod_enemy_crocs_tank_charge_soldier.update(this, store)
 					fx.pos = target.pos
 
 					if m.use_mod_offset and target.unit.mod_offset then
-						for _, s in pairs(fx.render.sprites) do
+						for _, s in ipairs(fx.render.sprites) do
 							s.offset.x = target.unit.mod_offset.x
 							s.offset.y = target.unit.mod_offset.y
 						end
 					end
 				else
-					fx.pos = V.vclone(this.pos)
+					fx.pos:copy(this.pos)
 
 					if m.use_mod_offset and target.unit.mod_offset then
 						fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
 					end
 				end
 
-				for _, s in pairs(fx.render.sprites) do
+				for _, s in ipairs(fx.render.sprites) do
 					s.ts = store.tick_ts
 					s.runs = 0
 
@@ -27085,8 +27085,8 @@ function scripts.enemy_crocs_egg_spawner.update(this, store)
 						local bullet_start_offset = a.bullet_start_offset
 
 						b.pos.x, b.pos.y = this.pos.x + bullet_start_offset.x, this.pos.y + bullet_start_offset.y
-						b.bullet.from = V.vclone(b.pos)
-						b.bullet.to = V.vclone(this.available_nodes[i].pos)
+						b.bullet.from:copy(b.pos)
+						b.bullet.to:copy(this.available_nodes[i].pos)
 						b.bullet.source_id = this.id
 						b.nav_path_data = this.available_nodes[i].node
 
@@ -27219,7 +27219,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 				else
 					log.paranoid("attack %i selected for entity %s", i, this.template_name)
 
-					for _, aa in pairs(this.melee.attacks) do
+					for _, aa in ipairs(this.melee.attacks) do
 						if aa ~= ma and aa.shared_cooldown then
 							aa.ts = ma.ts
 						end
@@ -27313,7 +27313,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 						if ma.hit_fx and (not ma.hit_fx_once or i == 1) then
 							local fx = E:create_entity(ma.hit_fx)
 
-							fx.pos = V.vclone(hit_pos)
+							fx.pos:copy(hit_pos)
 
 							if ma.hit_fx_offset then
 								fx.pos.x = fx.pos.x + (af and -1 or 1) * ma.hit_fx_offset.x
@@ -27332,7 +27332,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 						if ma.hit_decal then
 							local fx = E:create_entity(ma.hit_decal)
 
-							fx.pos = V.vclone(hit_pos)
+							fx.pos:copy(hit_pos)
 							fx.render.sprites[1].ts = store.tick_ts
 
 							simulation:queue_insert_entity(fx)
@@ -27492,7 +27492,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 
 			local fx = E:create_entity(this.transform_fx)
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.tween.ts = store.tick_ts
 
@@ -27525,7 +27525,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 		if this.health.dead then
 			local fx = E:create_entity(this.death_fx)
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.tween.ts = store.tick_ts
 
@@ -27556,13 +27556,13 @@ function scripts.enemy_crocs_hydra.update(this, store)
 
 					local bullet = E:create_entity(attack_debuff.bullet)
 
-					bullet.pos = V.vclone(this.pos)
+					bullet.pos:copy(this.pos)
 
 					local offset = attack_debuff.bullet_start_offset[1]
 
 					bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
-					bullet.bullet.from = V.vclone(bullet.pos)
-					bullet.bullet.to = V.vclone(target_pos)
+					bullet.bullet.from:copy(bullet.pos)
+					bullet.bullet.to:copy(target_pos)
 					bullet.bullet.target_id = nil
 					bullet.bullet.source_id = this.id
 
@@ -27571,10 +27571,10 @@ function scripts.enemy_crocs_hydra.update(this, store)
 					for _, v in pairs(attack_debuff.extra_bullets_start_offset) do
 						local bullet = E:create_entity(attack_debuff.bullet)
 
-						bullet.pos = V.vclone(this.pos)
+						bullet.pos:copy(this.pos)
 						bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * v.x, bullet.pos.y + v.y
-						bullet.bullet.from = V.vclone(bullet.pos)
-						bullet.bullet.to = V.vclone(target_pos)
+						bullet.bullet.from:copy(bullet.pos)
+						bullet.bullet.to:copy(target_pos)
 						bullet.bullet.target_id = nil
 						bullet.bullet.source_id = this.id
 						bullet.bullet.hit_payload = nil
@@ -27808,8 +27808,8 @@ function scripts.tower_stage_17_weirdwood.update(this, store)
 			local b = E:create_entity(at.bullet)
 
 			b.pos = V.v(this.pos.x + bo.x, this.pos.y + bo.y)
-			b.bullet.from = V.vclone(b.pos)
-			b.bullet.to = V.vclone(pred_pos)
+			b.bullet.from:copy(b.pos)
+			b.bullet.to:copy(pred_pos)
 			b.bullet.source_id = this.id
 			b.bullet.damage_factor = this.tower.damage_factor
 
@@ -27868,7 +27868,7 @@ function scripts.tower_stage_17_weirdwood.update(this, store)
 
 					local fx = E:create_entity(this.transformation_fx)
 
-					fx.pos = V.vclone(this.pos)
+					fx.pos:copy(this.pos)
 					fx.render.sprites[1].ts = store.tick_ts
 
 					simulation:queue_insert_entity(fx)
@@ -27923,7 +27923,7 @@ function scripts.tower_stage_17_weirdwood.update(this, store)
 
 					local fx = E:create_entity(this.leafless_fx)
 
-					fx.pos = V.vclone(this.pos)
+					fx.pos:copy(this.pos)
 					fx.render.sprites[1].ts = store.tick_ts
 
 					simulation:queue_insert_entity(fx)
@@ -28035,7 +28035,7 @@ function scripts.tower_stage_18_elven_barrack.update(this, store)
 			if this.current_phase > #this.corruption_kr5.corruption_phases then
 				local fx = E:create_entity(this.state_change_fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(fx)
@@ -28043,7 +28043,7 @@ function scripts.tower_stage_18_elven_barrack.update(this, store)
 
 				local fx = E:create_entity(this.transformation_fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(fx)
@@ -28063,7 +28063,7 @@ function scripts.tower_stage_18_elven_barrack.update(this, store)
 			else
 				local fx = E:create_entity(this.state_change_fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(fx)
@@ -28308,7 +28308,7 @@ function scripts.stage_20_arborean_oldtree_tree.update(this, store)
 						target_pos.x, target_pos.y = target_pos.x + target.unit.hit_offset.x, target_pos.y + target.unit.hit_offset.y
 					end
 
-					fx.pos = V.vclone(target_pos)
+					fx.pos:copy(target_pos)
 					fx.render.sprites[1].ts = store.tick_ts
 
 					simulation:queue_insert_entity(fx)
@@ -28585,7 +28585,7 @@ function scripts.tower_stage_20_arborean_barrack.update(this, store)
 				spawn.nav_path.pi = path_index
 				spawn.nav_path.spi = math.random(1, 3)
 				spawn.nav_path.ni = node_index
-				spawn.pos = V.vclone(this.pos)
+				spawn.pos:copy(this.pos)
 				spawn.motion.forced_waypoint = v(this.pos.x, this.pos.y - 30)
 
 				simulation:queue_insert_entity(spawn)
@@ -28664,7 +28664,7 @@ function scripts.tower_stage_20_arborean_watchtower.update(this, store)
 
 		b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 		b.pos.y = this.pos.y + soffset.y + boffset.y
-		b.bullet.from = V.vclone(b.pos)
+		b.bullet.from:copy(b.pos)
 		b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 		b.bullet.target_id = enemy.id
 		b.bullet.source_id = this.id
@@ -28833,7 +28833,7 @@ function scripts.tower_stage_22_arborean_mages.update(this, store)
 
 		b.pos.x = this.pos.x + attack.bullet_start_offset.x * (shooting_right and 1 or -1)
 		b.pos.y = this.pos.y + attack.bullet_start_offset.y
-		b.bullet.from = V.vclone(b.pos)
+		b.bullet.from:copy(b.pos)
 		b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 		b.bullet.target_id = enemy.id
 		b.bullet.source_id = this.id
@@ -29411,7 +29411,7 @@ function scripts.bullet_stage_25_torso_missile.update(this, store)
 			m.modifier.target_id = target.id
 			m.render.sprites[1].ts = store.tick_ts
 			m.tween.ts = store.tick_ts
-			m.pos = V.vclone(target.pos)
+			m.pos:copy(target.pos)
 
 			simulation:queue_insert_entity(m)
 		end
@@ -29495,7 +29495,7 @@ function scripts.bullet_stage_25_torso_missile.update(this, store)
 	if target then
 		local hit_fx = E:create_entity(b.hit_fx)
 
-		hit_fx.pos = V.vclone(b.to)
+		hit_fx.pos:copy(b.to)
 		hit_fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(hit_fx)
@@ -30143,7 +30143,7 @@ function scripts.enemy_brute_welder.update(this, store)
 
 							local aura = E:create_entity(a.aura)
 
-							aura.pos = V.vclone(this.pos)
+							aura.pos:copy(this.pos)
 
 							local offset_flip = af and -1 or 1
 
@@ -30213,11 +30213,11 @@ function scripts.controller_enemy_brute_welder_death.update(this, store)
 
 	local bullet = E:create_entity(this.missile_t)
 
-	bullet.pos = V.vclone(this.pos)
+	bullet.pos:copy(this.pos)
 	bullet.pos.x = bullet.pos.x + this.spawn_offset.x * (this.render.sprites[1].flip_x and -1 or 1)
 	bullet.pos.y = bullet.pos.y + this.spawn_offset.y
-	bullet.bullet.from = V.vclone(bullet.pos)
-	bullet.bullet.to = V.vclone(target.pos)
+	bullet.bullet.from:copy(bullet.pos)
+	bullet.bullet.to:copy(target.pos)
 	bullet.bullet.target_id = target.id
 	bullet.bullet.source_id = this.id
 
@@ -30345,7 +30345,7 @@ function scripts.bullet_enemy_brute_welder_death.update(this, store)
 			local new_target = targets[math.random(1, #targets)]
 
 			b.target_id = new_target.id
-			b.to = V.vclone(new_target.pos)
+			b.to:copy(new_target.pos)
 
 			local m = E:create_entity(this.mark_mod)
 
@@ -30376,7 +30376,7 @@ function scripts.bullet_enemy_brute_welder_death.update(this, store)
 	if target then
 		local hit_fx = E:create_entity(b.hit_fx)
 
-		hit_fx.pos = V.vclone(b.to)
+		hit_fx.pos:copy(b.to)
 		hit_fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(hit_fx)
@@ -30803,11 +30803,11 @@ function scripts.controller_darksteel_guardian_death.update(this, store)
 	local target_pos = P:node_pos(pi, 1, ni)
 	local bullet = E:create_entity(this.clone_t)
 
-	bullet.pos = V.vclone(this.pos)
+	bullet.pos:copy(this.pos)
 	bullet.pos.x = bullet.pos.x + this.spawn_offset.x * (this.render.sprites[1].flip_x and -1 or 1)
 	bullet.pos.y = bullet.pos.y + this.spawn_offset.y
-	bullet.bullet.from = V.vclone(bullet.pos)
-	bullet.bullet.to = V.vclone(target_pos)
+	bullet.bullet.from:copy(bullet.pos)
+	bullet.bullet.to:copy(target_pos)
 	bullet.bullet.source_id = this.id
 
 	simulation:queue_insert_entity(bullet)
@@ -32116,7 +32116,7 @@ function scripts.enemy_drainbrood.update(this, store)
 
 							a.ts = store.tick_ts
 
-							for _, e in pairs(targets_hit) do
+							for _, e in ipairs(targets_hit) do
 								U.unblock_target(store, e)
 							end
 
@@ -32340,7 +32340,7 @@ function scripts.enemy_fire_phoenix.update(this, store)
 
 				local fx = E:create_entity("fx_fire_phoenix_death")
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(fx)
@@ -32387,7 +32387,7 @@ function scripts.decal_dlc_wukong_flaming_ground.insert(this, store)
 
 	this.cached_auras = {}
 
-	for _, a in pairs(this.auras.list) do
+	for _, a in ipairs(this.auras.list) do
 		a.ts = store.tick_ts
 
 		if a.cooldown == 0 then
@@ -33378,7 +33378,7 @@ function scripts.bullet_storm_elemental.update(this, store)
 
 	local start_fx = E:create_entity(this.start_fx)
 
-	start_fx.pos = V.vclone(this.pos)
+	start_fx.pos:copy(this.pos)
 	start_fx.pos.y = start_fx.pos.y - 20
 	start_fx.render.sprites[1].ts = store.tick_ts
 
@@ -33446,7 +33446,7 @@ function scripts.bullet_storm_elemental.update(this, store)
 	if b.hit_fx then
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(sfx)
@@ -33456,7 +33456,7 @@ function scripts.bullet_storm_elemental.update(this, store)
 		for _, decal_name in pairs(b.hit_decal) do
 			local decal = E:create_entity(decal_name)
 
-			decal.pos = V.vclone(b.to)
+			decal.pos:copy(b.to)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(decal)
@@ -33586,7 +33586,7 @@ function scripts.enemy_water_sorceress.update(this, store)
 				if targets_info then
 					local amount_in_paths = {}
 
-					for _, t in pairs(targets_info) do
+					for _, t in ipairs(targets_info) do
 						if not amount_in_paths[t.origin[1]] then
 							amount_in_paths[t.origin[1]] = 1
 						else
@@ -33691,7 +33691,7 @@ function scripts.decal_water_sorceress_heal_wave.insert(this, store)
 
 	local scale = this.scale_min + (this.scale_max - this.scale_min) * math.random()
 
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.scale = V.vv(scale)
 	end
 
@@ -33869,7 +33869,7 @@ function scripts.mod_wukong_flaming_ground_toggle_abilities.update(this, store)
 		end
 
 		if this.render and target.unit.mod_offset then
-			for _, s in pairs(this.render.sprites) do
+			for _, s in ipairs(this.render.sprites) do
 				if s.use_mod_offset then
 					s.offset = V.vclone(target.unit.mod_offset)
 				end
@@ -33968,7 +33968,7 @@ function scripts.enemy_wuxian.update(this, store)
 
 						local bullet = E:create_entity(ranged_attack.bullet)
 
-						bullet.pos = V.vclone(this.pos)
+						bullet.pos:copy(this.pos)
 
 						if ranged_attack.bullet_start_offset then
 							local offset = ranged_attack.bullet_start_offset[1]
@@ -33976,8 +33976,8 @@ function scripts.enemy_wuxian.update(this, store)
 							bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
 						end
 
-						bullet.bullet.from = V.vclone(bullet.pos)
-						bullet.bullet.to = V.vclone(crowded_pos)
+						bullet.bullet.from:copy(bullet.pos)
+						bullet.bullet.to:copy(crowded_pos)
 						bullet.bullet.target_id = nil
 						bullet.bullet.source_id = this.id
 
@@ -34158,9 +34158,9 @@ function scripts.bullet_wuxian_bolt.update(this, store)
 	local sfx = E:create_entity(b.hit_decal)
 
 	if target then
-		sfx.pos = V.vclone(target.pos)
+		sfx.pos:copy(target.pos)
 	else
-		sfx.pos = V.vclone(this.pos)
+		sfx.pos:copy(this.pos)
 	end
 
 	sfx.render.sprites[1].ts = store.tick_ts
@@ -34235,7 +34235,7 @@ function scripts.mod_wukong_flaming_ground_healing.update(this, store)
 		end
 	end
 
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.ts = store.tick_ts
 	end
 
@@ -34268,7 +34268,7 @@ function scripts.mod_wukong_flaming_ground_healing.update(this, store)
 			if hps.fx then
 				local fx = E:create_entity(hps.fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].runs = 0
 
@@ -34550,7 +34550,7 @@ function scripts.enemy_fan_guard.update(this, store)
 				else
 					log.paranoid("attack %i selected for entity %s", i, this.template_name)
 
-					for _, aa in pairs(this.melee.attacks) do
+					for _, aa in ipairs(this.melee.attacks) do
 						if aa ~= ma and aa.shared_cooldown then
 							aa.ts = ma.ts
 						end
@@ -34666,7 +34666,7 @@ function scripts.enemy_fan_guard.update(this, store)
 						if ma.hit_fx and (not ma.hit_fx_once or i == 1) then
 							local fx = E:create_entity(ma.hit_fx)
 
-							fx.pos = V.vclone(hit_pos)
+							fx.pos:copy(hit_pos)
 
 							if ma.hit_fx_offset then
 								fx.pos.x = fx.pos.x + (af and -1 or 1) * ma.hit_fx_offset.x
@@ -34687,7 +34687,7 @@ function scripts.enemy_fan_guard.update(this, store)
 						if ma.hit_decal then
 							local fx = E:create_entity(ma.hit_decal)
 
-							fx.pos = V.vclone(hit_pos)
+							fx.pos:copy(hit_pos)
 
 							for i = 1, #fx.render.sprites do
 								fx.render.sprites[i].ts = store.tick_ts
@@ -34808,7 +34808,7 @@ function scripts.enemy_citizen.insert(this, store)
 	end
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end
@@ -34816,7 +34816,7 @@ function scripts.enemy_citizen.insert(this, store)
 	if this.melee then
 		this.melee.order = U.attack_order(this.melee.attacks)
 
-		for _, a in pairs(this.melee.attacks) do
+		for _, a in ipairs(this.melee.attacks) do
 			a.ts = store.tick_ts
 		end
 	end
@@ -34824,13 +34824,13 @@ function scripts.enemy_citizen.insert(this, store)
 	if this.ranged then
 		this.ranged.order = U.attack_order(this.ranged.attacks)
 
-		for _, a in pairs(this.ranged.attacks) do
+		for _, a in ipairs(this.ranged.attacks) do
 			a.ts = store.tick_ts
 		end
 	end
 
 	if this.auras then
-		for _, a in pairs(this.auras.list) do
+		for _, a in ipairs(this.auras.list) do
 			a.ts = store.tick_ts
 
 			if a.cooldown == 0 then
@@ -35206,7 +35206,7 @@ function scripts.enemy_golden_eyed.update(this, store)
 
 		local shadow = E:create_entity("golden_eyed_shadow")
 
-		shadow.pos = V.vclone(this.pos)
+		shadow.pos:copy(this.pos)
 
 		simulation:queue_insert_entity(shadow)
 
@@ -35580,7 +35580,7 @@ function scripts.mod_doom_bringer_tower_block.insert(this, store)
 
 	local mods_list = U.get_modifiers(store, target, this.remove_mods)
 
-	for _, v in pairs(mods_list) do
+	for _, v in ipairs(mods_list) do
 		v.remove = true
 	end
 
@@ -35896,7 +35896,7 @@ function scripts.bullet_hellfire_warlock_fireball.update(this, store)
 	if b.hit_fx then
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 		sfx.render.sprites[1].flip_x = b.from.x < b.to.x
 
@@ -35906,7 +35906,7 @@ function scripts.bullet_hellfire_warlock_fireball.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 
 		if target then
 			decal.pos.y = decal.pos.y - target.unit.hit_offset.y
@@ -36115,7 +36115,7 @@ end
 scripts.fx_nine_tailed_fox_summon = {}
 
 function scripts.fx_nine_tailed_fox_summon.update(this, store)
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.ts = store.tick_ts
 	end
 
@@ -36260,7 +36260,7 @@ function scripts.mod_stage31_water_mechanic_dps.update(this, store)
 						fx.render.sprites[1].offset.y = target.unit.mod_offset.y
 					end
 				else
-					fx.pos = V.vclone(this.pos)
+					fx.pos:copy(this.pos)
 
 					if m.use_mod_offset and target.unit.mod_offset then
 						fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
@@ -36450,7 +36450,7 @@ function scripts.decal_boss_princess_iron_fan_bossfight_shield.update(this, stor
 
 	local fx = E:create_entity("fx_boss_princess_iron_fan_waves_shield_break")
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(fx)
@@ -36791,7 +36791,7 @@ function scripts.boss_princess_iron_fan_tower_debuff.insert(this, store)
 
 	local mods_list = U.get_modifiers(store, target, this.remove_mods)
 
-	for _, v in pairs(mods_list) do
+	for _, v in ipairs(mods_list) do
 		v.remove = true
 	end
 
@@ -36941,7 +36941,7 @@ function scripts.boss_princess_iron_fan.insert(this, store)
 	end
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end
@@ -36949,7 +36949,7 @@ function scripts.boss_princess_iron_fan.insert(this, store)
 	if this.melee then
 		this.melee.order = U.attack_order(this.melee.attacks)
 
-		for _, a in pairs(this.melee.attacks) do
+		for _, a in ipairs(this.melee.attacks) do
 			a.ts = store.tick_ts
 		end
 	end
@@ -36957,13 +36957,13 @@ function scripts.boss_princess_iron_fan.insert(this, store)
 	if this.ranged then
 		this.ranged.order = U.attack_order(this.ranged.attacks)
 
-		for _, a in pairs(this.ranged.attacks) do
+		for _, a in ipairs(this.ranged.attacks) do
 			a.ts = store.tick_ts
 		end
 	end
 
 	if this.auras then
-		for _, a in pairs(this.auras.list) do
+		for _, a in ipairs(this.auras.list) do
 			a.ts = store.tick_ts
 
 			if a.cooldown == 0 then
@@ -37091,7 +37091,7 @@ function scripts.boss_princess_iron_fan.update(this, store)
 
 				local vfx = E:create_entity("fx_boss_princess_iron_fan_special_vfx")
 
-				vfx.pos = V.vclone(this.pos)
+				vfx.pos:copy(this.pos)
 				vfx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(vfx)
@@ -37798,7 +37798,7 @@ function scripts.bullet_boss_princess_iron_fan.update(this, store)
 					simulation:queue_remove_entity(fx)
 				end
 
-				for key, value in pairs(mods_added) do
+				for key, value in ipairs(mods_added) do
 					simulation:queue_remove_entity(value)
 				end
 
@@ -37848,7 +37848,7 @@ function scripts.boss_bull_king.insert(this, store)
 	end
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end
@@ -37856,7 +37856,7 @@ function scripts.boss_bull_king.insert(this, store)
 	if this.melee then
 		this.melee.order = U.attack_order(this.melee.attacks)
 
-		for _, a in pairs(this.melee.attacks) do
+		for _, a in ipairs(this.melee.attacks) do
 			a.ts = store.tick_ts
 		end
 	end
@@ -37864,13 +37864,13 @@ function scripts.boss_bull_king.insert(this, store)
 	if this.ranged then
 		this.ranged.order = U.attack_order(this.ranged.attacks)
 
-		for _, a in pairs(this.ranged.attacks) do
+		for _, a in ipairs(this.ranged.attacks) do
 			a.ts = store.tick_ts
 		end
 	end
 
 	if this.auras then
-		for _, a in pairs(this.auras.list) do
+		for _, a in ipairs(this.auras.list) do
 			a.ts = store.tick_ts
 
 			if a.cooldown == 0 then
@@ -37895,7 +37895,7 @@ function scripts.boss_bull_king.insert(this, store)
 	if this.spawn_fx then
 		local fx = E:create_entity(this.spawn_fx)
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -38209,7 +38209,7 @@ function scripts.boss_bull_king.update(this, store)
 				local soldiers_stun = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a_area_attack.damage_radius, a_area_attack.vis_flags_stun, a_area_attack.vis_bans_stun)
 
 				if soldiers_damage and #soldiers_damage > 0 then
-					for _, e in pairs(soldiers_damage) do
+					for _, e in ipairs(soldiers_damage) do
 						local d = SU.create_attack_damage(a_area_attack, e.id, this)
 
 						queue_damage(store, d)
@@ -38217,7 +38217,7 @@ function scripts.boss_bull_king.update(this, store)
 				end
 
 				if soldiers_stun and #soldiers_stun > 0 then
-					for _, e in pairs(soldiers_stun) do
+					for _, e in ipairs(soldiers_stun) do
 						local mod = E:create_entity(a_area_attack.mod_stun)
 
 						mod.modifier.target_id = e.id
@@ -38534,7 +38534,7 @@ function scripts.decal_stage33_envelop.update(this, store)
 				else
 					local fx = E:create_entity(this.fx_open)
 
-					fx.pos = V.vclone(this.pos)
+					fx.pos:copy(this.pos)
 
 					simulation:queue_insert_entity(fx)
 					simulation:queue_remove_entity(this)
@@ -38571,7 +38571,7 @@ function scripts.fx_stage33_envelop_open.update(this, store)
 
 		local fx = E:create_entity("fx_stage33_envelop_balatro_coins")
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 
 		simulation:queue_insert_entity(fx)
 	else
@@ -39152,7 +39152,7 @@ function scripts.bullet_stage_37_dragons_wardens.update(this, store)
 			end
 		end
 	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
 			for _, target in ipairs(targets) do
@@ -39178,7 +39178,7 @@ function scripts.bullet_stage_37_dragons_wardens.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -39260,7 +39260,7 @@ function scripts.tower_stage_38_dragon_wardens.update(this, store)
 					spawn.nav_path.spi = 3
 					spawn.nav_path.ni = node_index
 					spawn.nav_path.dir = -1
-					spawn.pos = V.vclone(this.pos)
+					spawn.pos:copy(this.pos)
 					spawn.goal_id = goal_id
 					spawn.do_balloon = spawns_done == 0
 
@@ -39328,7 +39328,7 @@ function scripts.stage_39_veins_tower_stun.insert(this, store, script)
 
 	local mods_list = U.get_modifiers(store, target, this.remove_mods)
 
-	for _, v in pairs(mods_list) do
+	for _, v in ipairs(mods_list) do
 		v.remove = true
 	end
 
@@ -39407,7 +39407,7 @@ function scripts.stage_39_veins_tower_stun.update(this, store)
 
 	local fx = E:create_entity(this.explosion_fx)
 
-	fx.pos = V.vclone(e.pos)
+	fx.pos:copy(e.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[1].runs = 0
 
@@ -39632,7 +39632,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 
 		local fx = E:create_entity("decal_stage_39_tower_stun_explosion")
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 		fx.pos.x = fx.pos.x + math.random(-50, 50)
 		fx.pos.y = fx.pos.y + math.random(-14, 14)
 		fx.render.sprites[1].sort_y_offset = -40
@@ -41152,7 +41152,7 @@ function scripts.fx_boss_stage_40_walk_thunders.update(this, store)
 
 	local fx = E:create_entity("fx_boss_stage_40_walk_thunders_explotion")
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[2].ts = store.tick_ts
 	fx.render.sprites[1].scale = V.vv(1 + 1.5 * math.random())
@@ -41167,7 +41167,7 @@ function scripts.fx_boss_stage_40_walk_thunders.update(this, store)
 
 	local fx = E:create_entity("fx_boss_stage_40_walk_fires")
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[1].scale = V.vv(1 + 1.5 * math.random())
 	fx.tween.props[1].ts = store.tick_ts
@@ -41269,7 +41269,7 @@ function scripts.fx_boss_stage_40_breath_decal.update(this, store)
 
 	local fx = E:create_entity("fx_boss_stage_40_walk_thunders_explotion")
 
-	fx.pos = V.vclone(this.pos)
+	fx.pos:copy(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
 	fx.render.sprites[2].ts = store.tick_ts
 	fx.render.sprites[1].scale = V.vv(1 + 0.7 * math.random())
@@ -41344,7 +41344,7 @@ function scripts.soldier_warden_stage_40_moving_island.update(this, store)
 
 		b.pos.x = this.pos.x + attack.bullet_start_offset.x * (shooting_right and 1 or -1)
 		b.pos.y = this.pos.y + attack.bullet_start_offset.y
-		b.bullet.from = V.vclone(b.pos)
+		b.bullet.from:copy(b.pos)
 		b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 		b.bullet.target_id = enemy.id
 		b.bullet.source_id = this.id
@@ -41379,7 +41379,7 @@ function scripts.soldier_warden_stage_40_moving_island.update(this, store)
 			warden_hp_regen()
 		else
 			if store.tick_ts - aa.ts > aa.cooldown then
-				local trigger_enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, aa.prediction_time, aa.vis_flags, aa.vis_bans)
+				local trigger_enemy, _, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.prediction_time, aa.vis_flags, aa.vis_bans)
 
 				if not trigger_enemy then
 					SU.delay_attack(store, aa, fts(10))
@@ -41397,7 +41397,7 @@ function scripts.soldier_warden_stage_40_moving_island.update(this, store)
 						coroutine.yield()
 					end
 
-					local enemy, _ = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, aa.prediction_time - aa.shoot_time, aa.vis_flags, aa.vis_bans, function(e)
+					local enemy, _ = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, aa.prediction_time - aa.shoot_time, aa.vis_flags, aa.vis_bans, function(e)
 						local looking_left = this.render.sprites[1].flip_x
 
 						return looking_left and e.pos.x < this.pos.x or not looking_left and e.pos.x >= this.pos.x
@@ -42287,8 +42287,8 @@ function scripts.enemy_alfa_lava.update(this, store, script)
 					b.subpath = target_position.spi
 					b.pos = V.v(this.pos.x + a.bullet_start_offset.x * (this.render.sprites[1].flip_x and -1 or 1), this.pos.y + a.bullet_start_offset.y)
 					b.pos.x, b.pos.y = b.pos.x + math.random(-10, 10), b.pos.y + math.random() * 20
-					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = V.vclone(P:node_pos(this.nav_path.pi, target_position.spi, target_position.ni))
+					b.bullet.from:copy(b.pos)
+					b.bullet.to:copy(P:node_pos(this.nav_path.pi, target_position.spi, target_position.ni))
 					b.bullet.source_id = this.id
 
 					simulation:queue_insert_entity(b)
@@ -42441,7 +42441,7 @@ function scripts.bullet_alfa_lava_vomit.update(this, store, script)
 
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 		sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
@@ -42451,7 +42451,7 @@ function scripts.bullet_alfa_lava_vomit.update(this, store, script)
 	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 		decal.subpath = this.subpath
 
@@ -42483,7 +42483,7 @@ end
 scripts.decal_enemy_alfa_lava_dot = {}
 
 function scripts.decal_enemy_alfa_lava_dot.insert(this, store, script)
-	for _, a in pairs(this.auras.list) do
+	for _, a in ipairs(this.auras.list) do
 		a.ts = store.tick_ts
 
 		if a.cooldown == 0 then
@@ -42652,7 +42652,7 @@ function scripts.enemy_basic_acid.update(this, store, script)
 
 					local bullet = E:create_entity(a.bullet)
 
-					bullet.pos = V.vclone(this.pos)
+					bullet.pos:copy(this.pos)
 
 					if a.bullet_start_offset then
 						local offset = a.bullet_start_offset[1]
@@ -42660,8 +42660,8 @@ function scripts.enemy_basic_acid.update(this, store, script)
 						bullet.pos.x, bullet.pos.y = bullet.pos.x + (this.render.sprites[1].flip_x and -1 or 1) * offset.x, bullet.pos.y + offset.y
 					end
 
-					bullet.bullet.from = V.vclone(bullet.pos)
-					bullet.bullet.to = V.vclone(target.pos)
+					bullet.bullet.from:copy(bullet.pos)
+					bullet.bullet.to:copy(target.pos)
 
 					if not a.ignore_hit_offset then
 						bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
@@ -42918,8 +42918,8 @@ function scripts.enemy_evolved_acid.update(this, store, script)
 					local af = this.render.sprites[1].flip_x
 
 					b.pos.x, b.pos.y = this.pos.x + bullet_start_offset.x * (af and -1 or 1), this.pos.y + bullet_start_offset.y
-					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = V.vclone(npos)
+					b.bullet.from:copy(b.pos)
+					b.bullet.to:copy(npos)
 					b.bullet.source_id = this.id
 					b.nav_path_data = node
 
@@ -42964,7 +42964,7 @@ function scripts.enemy_evolved_acid.update(this, store, script)
 
 					local bullet = E:create_entity(a_shot.bullet)
 
-					bullet.pos = V.vclone(this.pos)
+					bullet.pos:copy(this.pos)
 
 					if a_shot.bullet_start_offset then
 						local offset = a_shot.bullet_start_offset[1]
@@ -42972,8 +42972,8 @@ function scripts.enemy_evolved_acid.update(this, store, script)
 						bullet.pos.x, bullet.pos.y = bullet.pos.x + (this.render.sprites[1].flip_x and -1 or 1) * offset.x, bullet.pos.y + offset.y
 					end
 
-					bullet.bullet.from = V.vclone(bullet.pos)
-					bullet.bullet.to = V.vclone(target.pos)
+					bullet.bullet.from:copy(bullet.pos)
+					bullet.bullet.to:copy(target.pos)
 
 					if not a_shot.ignore_hit_offset then
 						bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
@@ -43109,7 +43109,7 @@ function scripts.bullet_enemy_evolved_acid.update(this, store, script)
 			if b.hit_fx then
 				local sfx = E:create_entity(b.hit_fx)
 
-				sfx.pos = V.vclone(target.pos)
+				sfx.pos:copy(target.pos)
 
 				if target.unit.hit_fx then
 				-- block empty
@@ -43133,7 +43133,7 @@ function scripts.bullet_enemy_evolved_acid.update(this, store, script)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -43197,7 +43197,7 @@ function scripts.bullet_enemy_evolved_acid_spawn.update(this, store, script)
 	if b.hit_fx then
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(sfx)
@@ -43206,7 +43206,7 @@ function scripts.bullet_enemy_evolved_acid_spawn.update(this, store, script)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -43394,7 +43394,7 @@ function scripts.enemy_alfa_acid.update(this, store, script)
 							bullet.bullet.from = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 							bullet.bullet.xp_dest_id = this.id
 							bullet.bullet.xp_gain_factor = a.xp_gain_factor
-							bullet.pos = V.vclone(bullet.bullet.from)
+							bullet.pos:copy(bullet.bullet.from)
 
 							simulation:queue_insert_entity(bullet)
 
@@ -43447,9 +43447,9 @@ function scripts.bullet_enemy_alfa_acid.insert(this, store)
 	for _, v in pairs(this.bullets_templates) do
 		local bullet = E:create_entity(v)
 
-		bullet.pos = V.vclone(this.pos)
-		bullet.bullet.from = V.vclone(b.from)
-		bullet.bullet.to = V.vclone(b.to)
+		bullet.pos:copy(this.pos)
+		bullet.bullet.from:copy(b.from)
+		bullet.bullet.to:copy(b.to)
 		bullet.bullet.target_id = b.target_id
 		bullet.bullet.source_id = b.source_id
 		bullet.bullet.damage_factor = b.damage_factor
@@ -43585,7 +43585,7 @@ function scripts.enemy_alfa_acid_sheep.update(this, store, script)
 				end
 			end
 		else
-			local enemy = U.find_foremost_enemy(store.entities, this.pos, 0, this.max_range_retarget, 0, this.vis_flags_retarget, this.vis_bans_retarget, function(e)
+			local enemy = U.find_foremost_enemy_in_range_filter_on(this.pos, this.max_range_retarget, 0, this.vis_flags_retarget, this.vis_bans_retarget, function(e)
 				return (this.allowed_templates and table.contains(this.allowed_templates, e.template_name) or not this.allowed_templates) and not SU.has_modifiers(store, e, this.mark_mod) and e.nav_path.pi == this.node_pos.pi and e.nav_path.spi == this.node_pos.spi and e.nav_path.ni + 1 < this.node_pos.ni and e.render.sprites[1].name ~= "raise"
 			end)
 
@@ -43631,7 +43631,7 @@ function scripts.mod_enemy_alfa_acid_evolve.insert(this, store)
 	if this.fx then
 		local fx = E:create_entity(this.fx)
 
-		fx.pos = V.vclone(target.pos)
+		fx.pos:copy(target.pos)
 		fx.pos.y = fx.pos.y + target.unit.hit_offset.y
 		fx.render.sprites[1].ts = store.tick_ts
 
@@ -43986,7 +43986,7 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 				this.health_bar.hidden = true
 				local decal = E:create_entity(this.evolve_decal)
 
-				decal.pos = V.vclone(this.pos)
+				decal.pos:copy(this.pos)
 				decal.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(decal)
@@ -44590,7 +44590,7 @@ function scripts.enemy_evolved_storm.update(this, store, script)
 
 				local fx = E:create_entity(a_area.fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(fx)
@@ -44957,7 +44957,7 @@ function scripts.mod_enemy_alfa_storm_tower_stun.insert(this, store, script)
 
 	local mods_list = U.get_modifiers(store, target, this.remove_mods)
 
-	for _, v in pairs(mods_list) do
+	for _, v in ipairs(mods_list) do
 		v.remove = true
 	end
 
@@ -45241,7 +45241,7 @@ function scripts.boss_murglum.update(this, store, script)
 			local node_valid = P:is_node_valid(this.nav_path.pi, this.nav_path.ni)
 
 			if node_valid and not ignore_soldiers and this.ranged then
-				for _, a in pairs(this.ranged.attacks) do
+				for _, a in ipairs(this.ranged.attacks) do
 					if not a.disabled and (a.requires_magic ~= false or this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
 						ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(s)
 							return not a.only_foward or s.pos.x + a.only_foward_range <= this.pos.x
@@ -45333,7 +45333,7 @@ function scripts.boss_murglum.update(this, store, script)
 		local bullet = E:create_entity("boss_murglun_proyectil_tower_stun")
 
 		bullet.pos.x, bullet.pos.y = this.pos.x + offset.x, this.pos.y + offset.y
-		bullet.bullet.from = V.vclone(bullet.pos)
+		bullet.bullet.from:copy(bullet.pos)
 		bullet.bullet.to = target_pos
 		bullet.bullet.target_id = target_id
 		bullet.bullet.mod_duration = a_block_towers.duration
@@ -45417,7 +45417,7 @@ function scripts.boss_murglum.update(this, store, script)
 
 			b.bullet.to = pos
 			b.bullet.from = V.v(this.pos.x + offset.x, this.pos.y + offset.y)
-			b.pos = V.vclone(b.bullet.from)
+			b.pos:copy(b.bullet.from)
 
 			simulation:queue_insert_entity(b)
 			U.animation_start(this, a_geisers.animation_loop, nil, store.tick_ts, false, 1, true)
@@ -45482,7 +45482,7 @@ function scripts.boss_murglum.update(this, store, script)
 
 		local fx = E:create_entity("fx_boss_murglun_area_attack")
 
-		fx.pos = V.vclone(this.pos)
+		fx.pos:copy(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(fx)
@@ -45731,7 +45731,7 @@ function scripts.bolt_boss_murglum_attack.update(this, store, script)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -45758,7 +45758,7 @@ function scripts.mod_boss_murglum_tower_block.insert(this, store, script)
 
 	local mods_list = U.get_modifiers(store, target, this.remove_mods)
 
-	for _, v in pairs(mods_list) do
+	for _, v in ipairs(mods_list) do
 		v.remove = true
 	end
 
@@ -45930,7 +45930,7 @@ scripts.decal_boss_murglum_geiser = {}
 function scripts.decal_boss_murglum_geiser.insert(this, store, script)
 	this.cached_auras = {}
 
-	for _, a in pairs(this.auras.list) do
+	for _, a in ipairs(this.auras.list) do
 		a.ts = store.tick_ts
 
 		if a.cooldown == 0 then
@@ -45996,7 +45996,7 @@ function scripts.tower_dragons_warden.update(this, store)
 
 		b.pos.x = this.pos.x + attack.bullet_start_offset.x * (shooting_right and 1 or -1)
 		b.pos.y = this.pos.y + attack.bullet_start_offset.y
-		b.bullet.from = V.vclone(b.pos)
+		b.bullet.from:copy(b.pos)
 		b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 		b.bullet.target_id = enemy.id
 		b.bullet.source_id = this.id
@@ -46027,7 +46027,7 @@ function scripts.tower_dragons_warden.update(this, store)
 		-- block empty
 		else
 			if store.tick_ts - aa.ts > aa.cooldown * this.tower.cooldown_factor then
-				local trigger_enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, aa.prediction_time, aa.vis_flags, aa.vis_bans)
+				local trigger_enemy, _, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.prediction_time, aa.vis_flags, aa.vis_bans)
 
 				if not trigger_enemy then
 					aa.ts = aa.ts + fts(10)
@@ -46039,7 +46039,7 @@ function scripts.tower_dragons_warden.update(this, store)
 					U.animation_start(this, an, af, store.tick_ts, false, 2)
 					U.y_wait_unconditional(store, aa.shoot_time)
 
-					local enemy, _ = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, aa.prediction_time - aa.shoot_time, aa.vis_flags, aa.vis_bans, function(e)
+					local enemy, _ = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, aa.prediction_time - aa.shoot_time, aa.vis_flags, aa.vis_bans, function(e)
 						local looking_left = this.render.sprites[2].flip_x
 
 						return looking_left and e.pos.x < this.pos.x or not looking_left and e.pos.x >= this.pos.x
@@ -46335,7 +46335,7 @@ function scripts.soldier_dragon_warden_charge.update(this, store, script)
 				U.walk_off__accel__unsnapped(this, store.tick_length)
 				coroutine.yield()
 
-				target = U.find_foremost_enemy(store.entities, this.pos, 0, this.melee.range, false, attack.vis_flags, attack.vis_bans)
+				target = U.find_foremost_enemy_in_range_filter_off(this.pos, this.melee.range, false, attack.vis_flags, attack.vis_bans)
 				next_pos = P:next_entity_node(this, store.tick_length)
 
 				if not next_pos or not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) or GR:cell_is(next_pos.x, next_pos.y, bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) then
@@ -46384,8 +46384,8 @@ function scripts.bullet_soldier_dragon_warden_dragon_raider.insert(this, store)
 	end
 
 	this.pos.x, this.pos.y = this.pos.x + offset.x, this.pos.y + offset.y
-	b.from = V.vclone(this.pos)
-	b.to = V.vclone(target.pos)
+	b.from:copy(this.pos)
+	b.to:copy(target.pos)
 
 	if target.unit and target.unit.hit_offset then
 		b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
@@ -46514,7 +46514,7 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 			if this.unit.show_blood_pool and this.unit.blood_color ~= BLOOD_NONE then
 				local decal = E:create_entity("decal_blood_pool")
 
-				decal.pos = V.vclone(this.pos)
+				decal.pos:copy(this.pos)
 				decal.render.sprites[1].ts = store.tick_ts
 				decal.render.sprites[1].name = this.unit.blood_color
 
@@ -46523,7 +46523,7 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 		else
 			local fx = E:create_entity(this.fx_death)
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 			fx.pos.y = fx.pos.y + this.render.sprites[1].offset.y
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.render.sprites[1].z = this.render.sprites[1].z
@@ -46591,7 +46591,7 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 				next_movement_ts = store.tick_ts + this.movement_cooldown_min + math.random() * (this.movement_cooldown_max - this.movement_cooldown_min)
 
 				local target
-				local targets = U.find_enemies_in_range(store.entities, this.spawn_pos, 0, wander_radius, attack.vis_flags, attack.vis_bans)
+				local targets = U.find_enemies_in_range_filter_off(this.spawn_pos, wander_radius, attack.vis_flags, attack.vis_bans)
 
 				if targets and #targets > 0 then
 					table.sort(targets, function(e1, e2)
@@ -46818,7 +46818,7 @@ function scripts.bullet_boss_morglun_tower_stun.update(this, store, script)
 	if b.hit_fx then
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(this.pos)
+		sfx.pos:copy(this.pos)
 		sfx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(sfx)
@@ -46881,7 +46881,7 @@ function scripts.decal_boss_40_scream_chase_mod.update(this, store)
 
 			local decal = E:create_entity(this.decal)
 
-			decal.pos = V.vclone(this.pos)
+			decal.pos:copy(this.pos)
 
 			simulation:queue_insert_entity(decal)
 		end
@@ -46964,22 +46964,22 @@ function scripts.decal_terrain_1_sheep.update(this, store, script)
 
 				break
 			else
-				U.animation_start(this, "tap", nil, store.tick_ts, false)
+				U.animation_start_default(this, "tap", nil, store.tick_ts, false)
 			end
 		end
 
 		if eat_cd < store.tick_ts - eat_ts then
 			eat_ts = store.tick_ts
 
-			U.animation_start(this, "eat", nil, store.tick_ts, false)
+			U.animation_start_default(this, "eat", nil, store.tick_ts, false)
 		end
 
 		if this.render.sprites[1].name == "tap" and U.animation_finished(this) then
-			U.animation_start(this, "idle", nil, store.tick_ts, false)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, false)
 		end
 
 		if this.render.sprites[1].name == "eat" and U.animation_finished(this) then
-			U.animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
 
 		coroutine.yield()
@@ -47068,7 +47068,7 @@ function scripts.bomb_kr6.update(this, store, script)
 
 	if this.decal_shadow then
 		shadow = E:create_entity(this.decal_shadow)
-		shadow.pos = V.vclone(b.from)
+		shadow.pos:copy(b.from)
 		shadow.pos.y = b.from.y - 70
 
 		simulation:queue_insert_entity(shadow)
@@ -47117,7 +47117,7 @@ function scripts.bomb_kr6.update(this, store, script)
 		end
 	end
 
-	local enemies = U.find_enemies_in_range(store.entities, b.to, 0, dradius, b.damage_flags, b.damage_bans)
+	local enemies = U.find_enemies_in_range_filter_off(b.to, dradius, b.damage_flags, b.damage_bans)
 
 	if enemies and dmax and dmax > 0 then
 		local upg = UP:get_upgrade("engineer_efficiency")
@@ -47125,7 +47125,7 @@ function scripts.bomb_kr6.update(this, store, script)
 		local upg_valid = upg and source and source.tower
 		local ignore_dist_factor = upg_valid or this.bullet.chance_ignore_dist_factor and math.random() <= this.bullet.chance_ignore_dist_factor
 
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -47165,7 +47165,7 @@ function scripts.bomb_kr6.update(this, store, script)
 					mods = table.merge(b.mods, {b.mod})
 				end
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local m = E:create_entity(mod_name)
 
 					m.modifier.target_id = enemy.id
@@ -47199,7 +47199,7 @@ function scripts.bomb_kr6.update(this, store, script)
 
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 
 		for i = 1, #sfx.render.sprites do
 			sfx.render.sprites[i].ts = store.tick_ts
@@ -47212,7 +47212,7 @@ function scripts.bomb_kr6.update(this, store, script)
 	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 
 		for i = 1, #decal.render.sprites do
 			decal.render.sprites[i].ts = store.tick_ts
@@ -47272,7 +47272,7 @@ function scripts.decal_utils.animation_on_tap_update(this, store, script)
 			U.y_animation_play(this, this.tap_anim, nil, store.tick_ts, this.tap_anim_play_times)
 
 			if not this.no_loop_anim then
-				U.animation_start(this, this.loop_anim, nil, store.tick_ts, true)
+				U.animation_start_default(this, this.loop_anim, nil, store.tick_ts, true)
 			end
 
 			this.ui.clicked = nil
@@ -47429,7 +47429,7 @@ function scripts.aura_shadow_blades_smoke.insert(this, store, script)
 	this.aura.ts = store.tick_ts
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end
@@ -47488,7 +47488,7 @@ function scripts.enemy_shadow_blades.update(this, store, script)
 			SU.y_enemy_stun(store, this)
 		else
 			if check_smokebomb() then
-				U.animation_start(this, this.smokebomb.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, this.smokebomb.animation, nil, store.tick_ts, false)
 
 				if U.y_wait(store, this.smokebomb.delay, function()
 					return this.health.dead or this.unit.is_stunned
@@ -47596,7 +47596,7 @@ function scripts.enemy_crow.update(this, store)
 	local shadow_sprite = this.render.sprites[2]
 
 	U.y_animation_play(this, "in", nil, store.tick_ts, 1)
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	while true do
 		if this.health.dead then
@@ -47708,7 +47708,7 @@ function scripts.enemy_crowcaller.update(this, store, script)
 
 				as.ts = store.tick_ts
 
-				U.animation_start(this, as.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, as.animation, nil, store.tick_ts, false)
 
 				if SU.y_enemy_wait(store, this, as.cast_time) or #this.enemy.blockers > 0 then
 					goto label_crowcaller_0
@@ -47838,7 +47838,7 @@ function scripts.enemy_orc_warrior.update(this, store, script)
 
 				this.trigger_rage = false
 
-				U.animation_start(this, this.rage.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, this.rage.animation, nil, store.tick_ts, false)
 
 				if SU.y_enemy_wait(store, this, this.rage.cast_time) then
 					goto label_orc_warrior_0
@@ -47974,7 +47974,7 @@ function scripts.enemy_orc_shaman.update(this, store, script)
 
 		heal_check_ts = store.tick_ts
 
-		local targets = U.find_enemies_in_range(store, this.pos, 0, ah.range, this.vis.flags, 0, function(e)
+		local targets = U.find_enemies_in_range_filter_on(this.pos, ah.range, this.vis.flags, 0, function(e)
 			return e.health and e.health.hp / e.health.hp_max < ah.max_target_hp
 		end)
 
@@ -48001,7 +48001,7 @@ function scripts.enemy_orc_shaman.update(this, store, script)
 				trigger_heal = false
 				ah.ts = store.tick_ts
 
-				U.animation_start(this, ah.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, ah.animation, nil, store.tick_ts, false)
 
 				if SU.y_enemy_wait(store, this, ah.cast_time) then
 					goto label_orc_shaman_0
@@ -48043,7 +48043,7 @@ function scripts.aura_orc_shaman_heal.update(this, store, script)
 	end
 
 	U.y_animation_play(this, "in", nil, store.tick_ts, 1)
-	U.animation_start(this, "Idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "Idle", nil, store.tick_ts, true)
 	scripts.aura_apply_mod.update(this, store, script)
 end
 
@@ -48085,7 +48085,7 @@ function scripts.enemy_orc_wildling.update(this, store, script)
 		worg_check_ts = store.tick_ts
 
 		local range = worg_mode and this.worg_mode.range * 1.2 or this.worg_mode.range
-		local targets = U.find_enemies_in_range(store, this.pos, 0, range, this.vis.flags, 0, function(e, o)
+		local targets = U.find_enemies_in_range_filter_on(this.pos, range, this.vis.flags, 0, function(e, o)
 			return e.template_name == "enemy_worg"
 		end)
 
@@ -48212,7 +48212,7 @@ function scripts.soldier_walk_to_objective.update(this, store)
 			else
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest, 1)
 
-				U.animation_start(this, an, af, store.tick_ts, true)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 
 				return true
 			end
@@ -48331,7 +48331,7 @@ function scripts.controller_rider_goblin_spawn.update(this, store, script)
 	local b = E:create_entity(this.spawn_bullet)
 
 	b.pos.x, b.pos.y = this.worg.pos.x + offset_x, this.worg.pos.y + this.start_offset.y
-	b.bullet.from = V.vclone(b.pos)
+	b.bullet.from:copy(b.pos)
 	b.bullet.to = dest
 	b.bullet.source_id = this.worg.id
 	b.path_to_spawn = np.pi
@@ -48349,7 +48349,7 @@ function scripts.bullet_enemy_flying.update(this, store, script)
 	if this.decal_shadow then
 		shadow = E:create_entity(this.decal_shadow)
 
-		shadow.pos = V.vclone(b.from)
+		shadow.pos:copy(b.from)
 		shadow.pos.y = b.from.y - 25
 
 		queue_insert(store, shadow)
@@ -48396,7 +48396,7 @@ function scripts.bullet_enemy_flying.update(this, store, script)
 	if b.hit_fx then
 		local hfx = E:create_entity(b.hit_fx)
 
-		hfx.pos = V.vclone(b.to)
+		hfx.pos:copy(b.to)
 		hfx.render.sprites[1].ts = store.tick_ts
 
 		queue_insert(store, hfx)
@@ -48436,12 +48436,12 @@ function scripts.enemy_cloud_of_crows.update(this, store)
 	this.tween.ts = store.tick_ts
 	this.render.sprites[1].angles.walk = {"attack", "attack", "attack"}
 
-	U.animation_start(this, "attack", nil, store.tick_ts, false)
+	U.animation_start_default(this, "attack", nil, store.tick_ts, false)
 	SU.y_enemy_walk_until_blocked(store, this, true, break_fn_3)
 
 	local explosion = E:create_entity(this.explosion_fx)
 
-	explosion.pos = V.vclone(this.pos)
+	explosion.pos:copy(this.pos)
 	explosion.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(explosion)
@@ -48505,7 +48505,7 @@ function scripts.soldier_stage_208_templar_archer.update(this, store)
 		SU.y_soldier_new_rally(store, this)
 	end
 
-	U.animation_start(this, "idle", true, store.tick_ts, true)
+	U.animation_start_default(this, "idle", true, store.tick_ts, true)
 
 	return scripts.soldier_barrack.update(this, store)
 end
@@ -48618,7 +48618,7 @@ function scripts.enemy_troll_champion_jumper.update(this, store)
 	local function fall_death(start_y_velocity, start_y_offset, over_void)
 		this.render.sprites[1].z = over_void and this.fall_void_z or Z_OBJECTS
 
-		U.animation_start(this, "death_2", not this.render.sprites[1].flip_x, store.tick_ts, true)
+		U.animation_start_default(this, "death_2", not this.render.sprites[1].flip_x, store.tick_ts, true)
 
 		local y_velocity = math.min(this.default_start_y_velocity, start_y_velocity)
 		local y_accel = this.fall_gravity
@@ -48675,7 +48675,7 @@ function scripts.enemy_troll_champion_jumper.update(this, store)
 			if walk then
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-				U.animation_start(this, an, af, store.tick_ts, true)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 
 				local reached_dest = U.walk(this, store.tick_length)
 
@@ -48720,10 +48720,10 @@ function scripts.enemy_troll_champion_jumper.update(this, store)
 
 				if y_velocity > 0 then
 					if this.render.sprites[1].name ~= "air_up" then
-						U.animation_start(this, "air_up", nil, store.tick_ts, true)
+						U.animation_start_default(this, "air_up", nil, store.tick_ts, true)
 					end
 				elseif this.render.sprites[1].name ~= "air_down" then
-					U.animation_start(this, "air_down", nil, store.tick_ts, true)
+					U.animation_start_default(this, "air_down", nil, store.tick_ts, true)
 				end
 
 				this.render.sprites[1].offset.x = 0
@@ -48837,7 +48837,7 @@ function scripts.enemy_troll_glider.update(this, store)
 			if band(this.health.last_damage_types, bor(DAMAGE_DISINTEGRATE)) == 0 then
 				local fx = E:create_entity(this.death_fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.pos.x, fx.pos.y = fx.pos.x + this.death_fx_offset.x, fx.pos.y + this.death_fx_offset.y
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
@@ -48848,7 +48848,7 @@ function scripts.enemy_troll_glider.update(this, store)
 			S:queue(this.sound_events.death, this.sound_events.death_args)
 
 			if GR:cell_is(this.pos.x, this.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and not GR:cell_is(this.pos.x, this.pos.y, bor(TERRAIN_NOWALK)) then
-				U.animation_start(this, "fall_loop", nil, store.tick_ts)
+				U.animation_start_default(this, "fall_loop", nil, store.tick_ts)
 
 				local dt = fts(1)
 
@@ -48973,7 +48973,7 @@ function scripts.enemy_troll_crusher.update(this, store, script)
 			if trigger_pound then
 				this.health.ignore_damage = true
 
-				U.animation_start(this, ap.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, ap.animation, nil, store.tick_ts, false)
 
 				trigger_pound = false
 				ap.ts = store.tick_ts
@@ -48998,7 +48998,7 @@ function scripts.enemy_troll_crusher.update(this, store, script)
 
 				aura.aura.source_id = this.id
 				aura.aura.ts = store.tick_ts
-				aura.pos = V.vclone(this.pos)
+				aura.pos:copy(this.pos)
 
 				queue_insert(store, aura)
 				deal_area_damage(hit_pos, ap)
@@ -49006,7 +49006,7 @@ function scripts.enemy_troll_crusher.update(this, store, script)
 				if ap.hit_fx then
 					local fx = E:create_entity(ap.hit_fx)
 
-					fx.pos = V.vclone(hit_pos)
+					fx.pos:copy(hit_pos)
 					fx.render.sprites[1].ts = store.tick_ts
 
 					queue_insert(store, fx)
@@ -49015,7 +49015,7 @@ function scripts.enemy_troll_crusher.update(this, store, script)
 				if ap.hit_decal then
 					local fx = E:create_entity(ap.hit_decal)
 
-					fx.pos = V.vclone(hit_pos)
+					fx.pos:copy(hit_pos)
 					fx.render.sprites[1].ts = store.tick_ts
 
 					queue_insert(store, fx)
@@ -49174,7 +49174,7 @@ function scripts.enemy_frost_icecaller.update(this, store, script)
 		else
 			if trigger_icicles then
 				S:queue(ai.sound_channel)
-				U.animation_start(this, ai.animation, target_pos.x < this.pos.x, store.tick_ts, false)
+				U.animation_start_default(this, ai.animation, target_pos.x < this.pos.x, store.tick_ts, false)
 
 				trigger_icicles = false
 				ai.ts = store.tick_ts
@@ -49199,7 +49199,7 @@ end
 scripts.decal_frost_icecaller_icicle = {}
 
 function scripts.decal_frost_icecaller_icicle.update(this, store)
-	U.animation_start(this, this.anim_in, nil, store.tick_ts)
+	U.animation_start_default(this, this.anim_in, nil, store.tick_ts)
 	U.y_wait(store, this.damage_delay)
 
 	local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.damage_radius, this.vis_flags, this.vis_bans, function(v, o)
@@ -49207,7 +49207,7 @@ function scripts.decal_frost_icecaller_icicle.update(this, store)
 	end)
 
 	if targets then
-		for _, enemy in pairs(targets) do
+		for _, enemy in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.damage_type
@@ -49219,7 +49219,7 @@ function scripts.decal_frost_icecaller_icicle.update(this, store)
 		end
 	end
 
-	U.animation_start(this, this.anim_loop, nil, store.tick_ts)
+	U.animation_start_default(this, this.anim_loop, nil, store.tick_ts)
 	U.y_wait(store, U.frandom(1, 2))
 	U.y_animation_play(this, this.anim_out, nil, store.tick_ts)
 	queue_remove(store, this)
@@ -49306,7 +49306,7 @@ function scripts.mod_troll_crusher_tower_stun.update(this, store)
 
 	this.render.sprites[1].hidden = false
 
-	U.animation_start(this, "start", nil, store.tick_ts)
+	U.animation_start_default(this, "start", nil, store.tick_ts)
 
 	m.ts = store.tick_ts
 
@@ -49317,7 +49317,7 @@ function scripts.mod_troll_crusher_tower_stun.update(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 
 	U.y_animation_wait(this)
-	U.animation_start(this, "loop", nil, store.tick_ts)
+	U.animation_start_default(this, "loop", nil, store.tick_ts)
 
 	while store.tick_ts - start_ts < m.duration - this.end_anim_duration do
 		coroutine.yield()
@@ -49335,7 +49335,7 @@ function scripts.aura_utils.apply_area_damage(this, store, script)
 	if enemies then
 		local ignore_dist_factor = this.aura.ignore_dist_factor or this.aura.chance_ignore_dist_factor and math.random() <= this.aura.chance_ignore_dist_factor
 
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.aura.damage_type
@@ -49372,7 +49372,7 @@ function scripts.aura_utils.apply_area_damage(this, store, script)
 					mods = table.merge(this.aura.mods, {this.aura.mod})
 				end
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local m = E:create_entity(mod_name)
 
 					m.modifier.target_id = enemy.id
@@ -49497,7 +49497,7 @@ function scripts.aura_apply_mod_towers.update(this, store, script)
 
 					local mods = this.aura.mods or {this.aura.mod}
 
-					for _, mod_name in pairs(mods) do
+					for _, mod_name in ipairs(mods) do
 						local new_mod = E:create_entity(mod_name)
 
 						new_mod.modifier.level = this.aura.level
@@ -49765,7 +49765,7 @@ function scripts.enemy_troll_glider_stage_213_suicide.update(this, store)
 			if band(this.health.last_damage_types, bor(DAMAGE_DISINTEGRATE)) == 0 and this.unit.can_disintegrate then
 				local fx = E:create_entity(this.death_fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.pos.x, fx.pos.y = fx.pos.x + this.death_fx_offset.x, fx.pos.y + this.death_fx_offset.y
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
@@ -49774,7 +49774,7 @@ function scripts.enemy_troll_glider_stage_213_suicide.update(this, store)
 			end
 
 			if GR:cell_is(this.pos.x, this.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and not GR:cell_is(this.pos.x, this.pos.y, bor(TERRAIN_NOWALK)) then
-				U.animation_start(this, "fall_loop", nil, store.tick_ts)
+				U.animation_start_default(this, "fall_loop", nil, store.tick_ts)
 
 				local dt = fts(1)
 
@@ -50084,7 +50084,7 @@ function scripts.enemy_troll_chieftain_kr6.update(this, store, script)
 
 		drum_check_ts = store.tick_ts
 
-		local targets = U.find_enemies_in_range(store, this.pos, 0, ad.range, ad.vis_flags, 0)
+		local targets = U.find_enemies_in_range_filter_off(this.pos, ad.range, ad.vis_flags, 0)
 
 		trigger_drums = targets and #targets >= ad.min_targets
 
@@ -50107,7 +50107,7 @@ function scripts.enemy_troll_chieftain_kr6.update(this, store, script)
 				S:queue(ad.sound, {
 					delay = fts(10)
 				})
-				U.animation_start(this, ad.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, ad.animation, nil, store.tick_ts, false)
 
 				trigger_drums = false
 				ad.ts = store.tick_ts
@@ -50241,7 +50241,7 @@ function scripts.enemy_frost_baiter.y_jump(this, store, dest, break_fn)
 
 	local b = this.bullet
 
-	b.from = V.vclone(this.pos)
+	b.from:copy(this.pos)
 	b.to = dest
 	b.ts = store.tick_ts
 	b.last_pos = V.vclone(this.pos)
@@ -50350,7 +50350,7 @@ function scripts.enemy_frost_baiter.update(this, store, script)
 						local dest = going_to_puddle and V.vclone(fwd_entrances[1].pos) or P:node_pos(np.pi, np.spi, np.ni + nodes_ahead)
 
 						S:queue(this.sound_events.jump)
-						U.animation_start(this, "jumpball", nil, store.tick_ts, true)
+						U.animation_start_default(this, "jumpball", nil, store.tick_ts, true)
 
 						this.render.sprites[2].hidden = false
 						U.bans_add(this.vis, F_BLOCK)
@@ -50456,7 +50456,7 @@ function scripts.enemy_frost_baiter_jumper.update(this, store, script)
 		elseif walk then
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-			U.animation_start(this, an, af, store.tick_ts, true)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 
 			local reached_dest = U.walk(this, store.tick_length)
 
@@ -50466,7 +50466,7 @@ function scripts.enemy_frost_baiter_jumper.update(this, store, script)
 				dest = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.jump_points[jump_i][2])
 
 				S:queue(this.sound_events.jump)
-				U.animation_start(this, "jumpball", nil, store.tick_ts, true)
+				U.animation_start_default(this, "jumpball", nil, store.tick_ts, true)
 
 				shadow_sprite.hidden = false
 				U.bans_add(this.vis, bor(F_FLYING, F_STUN))
@@ -50643,7 +50643,7 @@ function scripts.enemy_frost_brute.update(this, store, script)
 		else
 			if trigger_breath then
 				y_rearm_armor()
-				U.animation_start(this, acb.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, acb.animation, nil, store.tick_ts, false)
 
 				trigger_breath = false
 				acb.ts = store.tick_ts
@@ -50839,7 +50839,7 @@ function scripts.enemy_spider_matriarch.update(this, store, script)
 				trigger_spawn = false
 				as.ts = store.tick_ts
 
-				U.animation_start(this, as.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, as.animation, nil, store.tick_ts, false)
 
 				if SU.y_enemy_wait(store, this, as.cast_time) then
 					goto label_193_0
@@ -50950,7 +50950,7 @@ function scripts.enemy_leaper_spider.update(this, store, script)
 
 		local b = this.bullet
 
-		b.from = V.vclone(this.pos)
+		b.from:copy(this.pos)
 		b.to = dest
 		b.ts = store.tick_ts
 		b.last_pos = V.vclone(this.pos)
@@ -51133,7 +51133,7 @@ function scripts.enemy_son_of_sarelgaz.update(this, store, script)
 				trigger_trap = false
 				ac.ts = store.tick_ts
 
-				U.animation_start(this, ac.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, ac.animation, nil, store.tick_ts, false)
 
 				if SU.y_enemy_wait(store, this, ac.trap_time) then
 					goto label_202_0
@@ -51167,7 +51167,7 @@ function scripts.decal_spider_egg.update(this, store, script)
 	local nest = store.entities[this.source_id]
 
 	U.y_animation_wait(this, 1, 1)
-	U.animation_start(this, this.anim_idle, nil, store.tick_ts, true)
+	U.animation_start_default(this, this.anim_idle, nil, store.tick_ts, true)
 
 	local o = {}
 	local ts = store.tick_ts
@@ -51177,7 +51177,7 @@ function scripts.decal_spider_egg.update(this, store, script)
 			nest.has_eggs = false
 
 			S:queue(this.sound_events.death)
-			U.animation_start(this, this.anim_dead, nil, store.tick_ts)
+			U.animation_start_default(this, this.anim_dead, nil, store.tick_ts)
 
 			goto label_204_0
 		end
@@ -51189,7 +51189,7 @@ function scripts.decal_spider_egg.update(this, store, script)
 		nest.has_eggs = false
 	end
 
-	U.animation_start(this, this.anim_hatch, nil, store.tick_ts)
+	U.animation_start_default(this, this.anim_hatch, nil, store.tick_ts)
 	U.y_wait(store, this.hatch_spawn_delay)
 	S:queue(this.sound_events.hatch)
 
@@ -51623,7 +51623,7 @@ function scripts.enemy_skeleton_kr6.update(this, store, script)
 			this.health.ignore_damage = this._raise_ignore_damage
 		end
 
-		U.animation_start(this, "idle", af, store.tick_ts, true)
+		U.animation_start_default(this, "idle", af, store.tick_ts, true)
 	end
 
 	return scripts.enemy_mixed.update(this, store, script)
@@ -51997,7 +51997,7 @@ function scripts.enemy_dark_disciple.update(this, store, script)
 
 				local af = tower_to_block.pos.x < this.pos.x
 
-				U.animation_start(this, ab.animation, af, store.tick_ts, false)
+				U.animation_start_default(this, ab.animation, af, store.tick_ts, false)
 				S:queue(ab.sound)
 
 				trigger_tower_block = false
@@ -52035,7 +52035,7 @@ function scripts.enemy_dark_disciple.update(this, store, script)
 					local offset = ab.bullet_start_offset
 
 					bullet.pos = V.v(this.pos.x + offset.x * (af and -1 or 1), this.pos.y + offset.y)
-					bullet.bullet.from = V.vclone(bullet.pos)
+					bullet.bullet.from:copy(bullet.pos)
 
 					local tower_name = string.sub(final_tower_to_block.template_name, string.len(this.tower_prefix) + 1, string.len(final_tower_to_block.template_name))
 					local offset_height = ab.custom_heights[tower_name] or ab.default_height
@@ -52210,9 +52210,9 @@ function scripts.mod_enemy_dark_disciple_cage.update(this, store)
 	end
 
 	S:queue(this.sound_in)
-	U.animation_start(this, "in", nil, store.tick_ts)
+	U.animation_start_default(this, "in", nil, store.tick_ts)
 	U.y_wait(store, fts(10))
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	while true do
 		if not source or not store.entities[m.source_id] or source.pending_removal then
@@ -52226,7 +52226,7 @@ function scripts.mod_enemy_dark_disciple_cage.update(this, store)
 		coroutine.yield()
 	end
 
-	U.animation_start(this, "out", nil, store.tick_ts)
+	U.animation_start_default(this, "out", nil, store.tick_ts)
 	S:queue(this.sound_out)
 	U.y_wait(store, fts(11))
 	SU.tower_block_dec(target)
@@ -52260,7 +52260,7 @@ function scripts.enemy_necromancer_kr6.update(this, store, script)
 
 		local an, af = U.animation_name_facing_point(this, ca.animations[1], target.pos)
 
-		U.animation_start(this, an, af, store.tick_ts, false)
+		U.animation_start_default(this, an, af, store.tick_ts, false)
 
 		while store.tick_ts - attack.ts < attack.shoot_time do
 			if this.health.dead or this.unit.is_stunned and not attack.ignore_stun then
@@ -52277,7 +52277,7 @@ function scripts.enemy_necromancer_kr6.update(this, store, script)
 		local bullet = E:create_entity(attack.bullet)
 
 		bullet.pos = V.v(target_pos_x, target_pos_y)
-		bullet.bullet.from = V.vclone(bullet.pos)
+		bullet.bullet.from:copy(bullet.pos)
 		bullet.bullet.to = V.v(this.pos.x + bullet_return_offset.x, this.pos.y + bullet_return_offset.y)
 		bullet.bullet.target_id = target.id
 		bullet.bullet.source_id = this.id
@@ -52300,7 +52300,7 @@ function scripts.enemy_necromancer_kr6.update(this, store, script)
 		particle.particle_system.track_id = bullet.id
 
 		queue_insert(store, particle)
-		U.animation_start(this, ca.animations[2], af, store.tick_ts, true)
+		U.animation_start_default(this, ca.animations[2], af, store.tick_ts, true)
 
 		if U.y_wait(store, ca.duration + fts(3), break_animation) then
 			queue_remove(store, bullet)
@@ -52311,7 +52311,7 @@ function scripts.enemy_necromancer_kr6.update(this, store, script)
 		end
 
 		U.y_animation_play(this, ca.animations[3], nil, store.tick_ts, 1)
-		U.animation_start(this, "idle", af, store.tick_ts, false)
+		U.animation_start_default(this, "idle", af, store.tick_ts, false)
 
 		return true
 	end
@@ -52325,7 +52325,7 @@ function scripts.enemy_necromancer_kr6.update(this, store, script)
 			return false
 		end
 
-		U.animation_start(this, sa.animation, nil, store.tick_ts, false)
+		U.animation_start_default(this, sa.animation, nil, store.tick_ts, false)
 		S:queue(sa.sound)
 
 		for i = 1, summon_amount do
@@ -52657,7 +52657,7 @@ scripts.enemy_demon_imp = {}
 function scripts.enemy_demon_imp.update(this, store)
 	local shadow_sprite = this.render.sprites[2]
 
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	while true do
 		if this.health.dead then
@@ -52688,7 +52688,7 @@ function scripts.enemy_demon_lord.update(this, store)
 	end
 
 	local function get_shield_targets()
-		return U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
+		return U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, function(e)
 			return table.contains(a.allowed_templates, e.template_name)
 		end)
 	end
@@ -52713,7 +52713,7 @@ function scripts.enemy_demon_lord.update(this, store)
 				else
 					a.ts = store.tick_ts
 
-					U.animation_start(this, a.animation, nil, store.tick_ts, false)
+					U.animation_start_default(this, a.animation, nil, store.tick_ts, false)
 
 					if a.sound then
 						S:queue(a.sound)
@@ -52780,9 +52780,9 @@ end
 
 function scripts.enemy_magma_elemental.update(this, store, script)
 	if this.play_spawn_animation then
-		U.animation_start(this, "spawn_loop", true, store.tick_ts, true)
+		U.animation_start_default(this, "spawn_loop", true, store.tick_ts, true)
 		U.y_wait(store, this.spawn_loop_time)
-		U.animation_start(this, "spawn", true, store.tick_ts, false)
+		U.animation_start_default(this, "spawn", true, store.tick_ts, false)
 		U.y_animation_wait(this)
 
 		this.health_bar.hidden = nil

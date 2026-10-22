@@ -1564,7 +1564,7 @@ end
 function scripts.tower_archer.update(this, store)
 	local at = this.attacks
 	local a = this.attacks.list[1]
-	local shooter_sprite_ids = table.slice({3, 4, 5}, 1, #a.bullet_start_offset)
+	local shooter_sprite_count = math.min(3, #a.bullet_start_offset)
 	local last_target_pos = V.v(0, 0)
 
 	a.ts = store.tick_ts
@@ -1584,7 +1584,7 @@ function scripts.tower_archer.update(this, store)
 				a.count = a.count + 1
 
 				local shooter_idx = a.count % #a.bullet_start_offset + 1
-				local shooter_sid = shooter_sprite_ids[shooter_idx]
+				local shooter_sid = shooter_idx + 2
 				local start_offset = a.bullet_start_offset[shooter_idx]
 				local an, af = U.animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
 
@@ -1646,7 +1646,7 @@ function scripts.tower_archer.update(this, store)
 			end
 
 			if store.tick_ts - a.ts > this.tower.long_idle_cooldown then
-				for _, sid in pairs(shooter_sprite_ids) do
+				for sid = 3, shooter_sprite_count + 2 do
 					local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
 
 					U.animation_start(this, an, af, store.tick_ts, true, sid)
@@ -1799,7 +1799,7 @@ function scripts.tower_engineer.update(this, store)
 
 				b.bullet.damage_factor = this.tower.damage_factor
 				b.pos.x, b.pos.y = this.pos.x + ba.bullet_start_offset.x, this.pos.y + ba.bullet_start_offset.y
-				b.bullet.from = V.vclone(b.pos)
+				b.bullet.from:copy(b.pos)
 				b.bullet.to = enemy and pred_pos or trigger_pos
 				b.bullet.source_id = this.id
 
@@ -2261,7 +2261,7 @@ function scripts.arrow.update(this, store)
 			end
 
 			if mods then
-				for _, mod_name in ipairs(mods) do
+				for _, mod_name in pairs(mods) do
 					if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
 						local mod = E:create_entity(mod_name)
 
@@ -2587,7 +2587,7 @@ function scripts.arrow_missile.update(this, store)
 			if b.hit_fx then
 				local fx = E:create_entity(b.hit_fx)
 
-				fx.pos = V.vclone(target_pos)
+				fx.pos:copy(target_pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
 				simulation:queue_insert_entity(fx)
@@ -2596,7 +2596,7 @@ function scripts.arrow_missile.update(this, store)
 			if b.hit_blood_fx and target.unit.blood_color ~= BLOOD_NONE then
 				local sfx = E:create_entity(b.hit_blood_fx)
 
-				sfx.pos = V.vclone(target_pos)
+				sfx.pos:copy(target_pos)
 				sfx.render.sprites[1].ts = store.tick_ts
 
 				if sfx.use_blood_color and target.unit.blood_color then
@@ -2637,7 +2637,7 @@ function scripts.arrow_missile.update(this, store)
 				if b.miss_decal then
 					local decal = E:create_entity("decal_tween")
 
-					decal.pos = V.vclone(this_pos)
+					decal.pos:copy(this_pos)
 					decal.tween.props[1].keys = {{0, 255}, {2.1, 0}}
 					decal.render.sprites[1].ts = store.tick_ts
 					decal.render.sprites[1].name = b.miss_decal
@@ -2803,7 +2803,7 @@ function scripts.bomb.update(this, store)
 			queue_damage(store, d)
 
 			if mods then
-				for _, mod_name in ipairs(mods) do
+				for _, mod_name in pairs(mods) do
 					if U.flags_pass(enemy.vis, E:get_template(mod_name).modifier) then
 						local mod = E:create_entity(mod_name)
 
@@ -2986,7 +2986,7 @@ function scripts.enemy_bomb.update(this, store)
 	if b.hit_fx then
 		local sfx = E:create_entity(b.hit_fx)
 
-		sfx.pos = V.vclone(b.to)
+		sfx.pos:copy(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(sfx)
@@ -2995,7 +2995,7 @@ function scripts.enemy_bomb.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -3643,7 +3643,7 @@ function scripts.bolt.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in ipairs(mods) do
+			for _, mod_name in pairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -3783,7 +3783,7 @@ function scripts.bolt_curve.update(this, store)
 			end
 		end
 	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
 			for _, t in ipairs(targets) do
@@ -3811,7 +3811,7 @@ function scripts.bolt_curve.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(to)
+		decal.pos:copy(to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -3902,7 +3902,7 @@ function scripts.bolt_trace_target.update(this, store)
 
 				-- 在法球当前位置周围寻找新目标
 				local search_range = 200
-				local new_enemy = U.find_first_enemy(store, this.pos, 0, search_range, b.vis_flags, b.vis_bans)
+				local new_enemy = U.find_first_enemy_in_range_filter_off(this.pos, search_range, b.vis_flags, b.vis_bans)
 
 				if new_enemy then
 					-- 找到新目标，更新相关数据
@@ -4603,7 +4603,7 @@ function scripts.bullet_illusion.insert(this, store)
 		return false
 	end
 
-	b.to = V.vclone(target.pos)
+	b.to:copy(target.pos)
 
 	return true
 end
@@ -4684,7 +4684,7 @@ function scripts.bullet_illusion.update(this, store)
 		if b.miss_fx then
 			local fx = E:create_entity(b.miss_fx)
 
-			fx.pos = V.vclone(this.pos)
+			fx.pos:copy(this.pos)
 			fx.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(fx)
@@ -5188,7 +5188,7 @@ function scripts.tunnel_KR6.update(this, store, script)
 			return e and e.enemy and e.health and not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and e.nav_path.pi == tu.pick_pi and e.nav_path.ni >= tu.pick_ni and (tu.pick_pi ~= tu.place_pi or e.nav_path.ni < tu.place_ni)
 		end)
 
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			if tu.pick_fx then
 				local fx = E:create_entity(tu.pick_fx)
 
@@ -5847,7 +5847,7 @@ function scripts.mod_freeze.insert(this, store)
 
 	this._entity_frame_names = {}
 
-	for _, s in pairs(target.render.sprites) do
+	for _, s in ipairs(target.render.sprites) do
 		if s.animated then
 			table.insert(this._entity_frame_names, A:frame_name(s.prefix and (s.prefix .. "_" .. s.name) or s.name, s.frame_idx))
 		else
@@ -6396,7 +6396,7 @@ scripts.mod_dps_with_fade = {
 									end
 								end
 							else
-								fx.pos = V.vclone(this.pos)
+								fx.pos:copy(this.pos)
 
 								if (this.modifier.use_mod_offset) then
 									if target.unit.mod_offset then
@@ -6536,7 +6536,7 @@ function scripts.mod_hps.update(this, store)
 			if hps.fx then
 				local fx = E:create_entity(hps.fx)
 
-				fx.pos = V.vclone(this.pos)
+				fx.pos:copy(this.pos)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.render.sprites[1].runs = 0
 
@@ -6726,7 +6726,7 @@ function scripts.mod_damage_factors.insert(this, store)
 	end
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 
 			if s.size_names then
@@ -6940,7 +6940,7 @@ function scripts.mod_tower_silence.update(this, store)
 		local co = this.custom_offsets[target.template_name]
 
 		if co then
-			for _, s in pairs(this.render.sprites) do
+			for _, s in ipairs(this.render.sprites) do
 				s.offset.x, s.offset.y = s.offset.x + co.x, s.offset.y + co.y
 			end
 		end
@@ -7129,7 +7129,7 @@ function scripts.mod_heal_on_kill.update(this, store)
 
 			m.modifier.target_id = target.id
 			m.modifier.source_id = target.id
-			m.pos = V.vclone(target.pos)
+			m.pos:copy(target.pos)
 
 			simulation:queue_insert_entity(m)
 
@@ -7570,7 +7570,7 @@ function scripts.mod_polymorph.insert(this, store)
 	if pm.hit_fx_sizes then
 		local fx = E:create_entity(pm.hit_fx_sizes[target.unit.size])
 
-		fx.pos = V.vclone(target.pos)
+		fx.pos:copy(target.pos)
 
 		if m.use_mod_offset then
 			fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
@@ -7718,7 +7718,7 @@ function scripts.editor_tower.insert(this, store)
 	end
 
 	if this.tower.flip_x then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.flip_x = true
 		end
 	end
@@ -8206,7 +8206,7 @@ function scripts.power_fireball_control.update(this, store)
 
 			if p then
 				e.pos.x, e.pos.y = p.x, start_y
-				e.bullet.from = V.vclone(e.pos)
+				e.bullet.from:copy(e.pos)
 				e.bullet.to = V.v(p.x, p.y)
 				e.bullet.level = this.user_power.level
 
@@ -8254,7 +8254,7 @@ function scripts.power_fireball_control.update(this, store)
 
 				e.pos.x = dest.x
 				e.pos.y = start_y
-				e.bullet.from = V.vclone(e.pos)
+				e.bullet.from:copy(e.pos)
 				e.bullet.to = dest
 				e.bullet.level = this.user_power.level
 
@@ -8345,7 +8345,7 @@ function scripts.power_fireball.update(this, store)
 		if b.hit_decal then
 			local decal = E:create_entity(b.hit_decal)
 
-			decal.pos = V.vclone(b.to)
+			decal.pos:copy(b.to)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(decal)
@@ -8818,7 +8818,7 @@ function scripts.bomb_bouncing.update(this, store)
 
 			local sfx = E:create_entity(b.hit_fx)
 
-			sfx.pos = V.vclone(this_pos)
+			sfx.pos:copy(this_pos)
 			sfx.render.sprites[1].ts = store.tick_ts
 			sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
@@ -8828,7 +8828,7 @@ function scripts.bomb_bouncing.update(this, store)
 		if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
 			local decal = E:create_entity(b.hit_decal)
 
-			decal.pos = V.vclone(this_pos)
+			decal.pos:copy(this_pos)
 			decal.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(decal)
@@ -9485,7 +9485,7 @@ function scripts.bolt_force_motion_kr5.update(this, store)
 	if b.hit_decal then
 		local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
+		decal.pos:copy(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		simulation:queue_insert_entity(decal)
@@ -10198,7 +10198,7 @@ function scripts.fx_utils.in_loop_out(this, store, script)
 		this.render.sprites[1].loop = true
 		this.render.sprites[1].ts = store.tick_ts
 
-		U.animation_start(this, this.animation_loop, nil, store.tick_ts, true)
+		U.animation_start_default(this, this.animation_loop, nil, store.tick_ts, true)
 		U.y_wait(store, this.loop_time)
 	end
 
