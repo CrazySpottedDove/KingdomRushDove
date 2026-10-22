@@ -4,7 +4,7 @@ local U = require("utils")
 local V = require("lib.klua.vector")
 require("lib.klua.table")
 local scripts = require("scripts")
-local TU = require("tower_utils")
+local TU = require("all.tower_utils")
 local v = V.v
 local GR = require("grid_db")
 local SU = require("script_utils")

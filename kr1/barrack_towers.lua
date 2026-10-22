@@ -2525,10 +2525,9 @@ tt = RT("fx_soul_soldier_tower_ghost", "fx")
 tt.render.sprites[1].name = "ghost_tower_soul_skill_hit_fx_idle"
 tt = RT("decal_soldier_tower_ghost_hit", "fx")
 tt.render.sprites[1].name = "ghost_tower_hit_fx_idle"
+
 tt = RT("soldier_tower_ghost_lvl4", "soldier_militia")
-
 AC(tt, "nav_grid", "powers")
-
 tt.powers.soul_attack = CC("power")
 tt.powers.soul_attack.dead_lifetime_dec = {0.5, 1, 1.5}
 tt.powers.extra_damage = CC("power")
@@ -2565,10 +2564,9 @@ tt.damage_max = {100, 150, 200}
 tt.delay = fts(16)
 tt.radius = 120
 tt.bullet = "bolt_soul_soldier_tower_ghost"
+
 tt = RT("tower_ghost_lvl4", "tower")
-
 AC(tt, "powers", "barrack")
-
 tt.tower.type = "ghost"
 tt.tower.price = 235
 tt.tower.menu_offset = v(0, 30)
@@ -2577,7 +2575,7 @@ tt.info.portrait = "kr5_portraits_towers_0016"
 tt.user_selection_func = scripts.tower_ghost.user_selection_func
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
-tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[1].offset = v(0, 20)
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "ghost_tower_lvl4_tower"
@@ -2612,6 +2610,7 @@ tt.powers.soul_attack = CC("power")
 tt.powers.soul_attack.price_base = 150
 tt.powers.soul_attack.price_inc = 150
 tt.cannot_be_swappeds = {"tower_holder_elemental_wood", "tower_holder_elemental_fire", "tower_holder_elemental_water", "tower_holder_elemental_earth", "tower_holder_elemental_metal"}
+
 tt = RT("bolt_soul_soldier_tower_ghost", "bolt")
 tt.render.sprites[1].name = "ghost_tower_soul_skill_projectile"
 tt.render.sprites[1].animated = false
@@ -2626,13 +2625,13 @@ tt.sound_events.travel = "TowerGhostSoulAttackTravel"
 tt.sound_events.hit = "TowerGhostSoulAttackImpact"
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.particles_name = "ps_soul_soldier_tower_ghost"
+
 tt = RT("mod_tower_ghost_soul_slow", "mod_slow")
 tt.slow.factor = 0.6
 tt.modifier.duration = 3
+
 tt = RT("mod_tower_ghost_soul_damage_factor", "modifier")
-
 AC(tt, "render")
-
 tt.main_script.insert = scripts.mod_damage_factors.insert
 tt.main_script.remove = scripts.mod_damage_factors.remove
 tt.main_script.update = scripts.mod_track_target.update
@@ -2642,10 +2641,9 @@ tt.modifier.use_mod_offset = false
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].prefix = "ghost_tower_soul_skill_enemy_fx"
 tt.render.sprites[1].name = "small"
+
 tt = RT("aura_tower_ghost_extra_damage", "aura")
-
 AC(tt, "render")
-
 tt.aura.cycle_time = 0.15
 tt.aura.duration = -1
 tt.aura.radius = 80
@@ -2699,10 +2697,9 @@ tt = RT("decal_soldier_tower_ghost_spawn", "decal_timed")
 tt.render.sprites[1].name = "ghost_tower_unit_spawn_fx_idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.timed.duration = fts(24)
+
 tt = RT("tower_ghost_hover_controller")
-
 AC(tt, "main_script")
-
 tt.template_hover = "tower_ghost_hover"
 tt.main_script.insert = scripts.tower_ghost_hover_controller.insert
 tt.main_script.remove = scripts.tower_ghost_hover_controller.remove

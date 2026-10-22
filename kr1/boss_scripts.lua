@@ -18,7 +18,7 @@ local P = require("path_db")
 local S = require("sound_db")
 local SU = require("script_utils")
 local U = require("utils")
-local TU = require("tower_utils")
+local TU = require("all.tower_utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
 

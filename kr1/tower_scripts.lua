@@ -21,6 +21,7 @@ local LU = require("level_utils")
 local UP = require("kr1.upgrades")
 local V = require("lib.klua.vector")
 local W = require("wave_db")
+local TU = require("all.tower_utils")
 local game_gui = require("game_gui")
 local bit = require("bit")
 local band = bit.band
@@ -232,15 +233,21 @@ scripts.tower_archer_dwarf = {
 }
 -- 游侠
 scripts.tower_ranger = {
+	on_power_upgrade_thorn = function(this, power_name, power, store)
+		if this.render.sprites[5].hidden then
+			this.render.sprites[5].hidden = false
+			local ta = E:create_entity(power.aura)
+			ta.aura.source_id = this.id
+			ta.pos = tpos(this)
+			simulation:queue_insert_entity(ta)
+		end
+	end,
 	update = function(this, store)
 		local shooter_sids = {3, 4}
 		local shooter_idx = 2
 		local a = this.attacks
 		local aa = this.attacks.list[1]
 		local pow_p = this.powers.poison
-		local pow_t = this.powers.thorn
-		-- 防御塔的攻击子弹备份
-		local attack_bullet = E:create_entity(this.attacks.list[1].bullet)
 
 		aa.ts = store.tick_ts
 
@@ -252,7 +259,7 @@ scripts.tower_ranger = {
 
 		local function enemy_is_going_to_be_poisoned(enemy)
 			for i = 1, #attacked_enemies_id do
-				if attacked_enemies_id[i] == enemy.id and store.tick_ts - attacked_enemies_ts[i] < attack_bullet.bullet.flight_time then
+				if attacked_enemies_id[i] == enemy.id and store.tick_ts - attacked_enemies_ts[i] < T(this.attacks.list[1].bullet).bullet.flight_time then
 					return true
 				end
 			end
@@ -262,7 +269,7 @@ scripts.tower_ranger = {
 
 		local function clear_attacked_enemies()
 			for i = #attacked_enemies_id, 1, -1 do
-				if store.tick_ts - attacked_enemies_ts[i] >= attack_bullet.bullet.flight_time then
+				if store.tick_ts - attacked_enemies_ts[i] >= T(this.attacks.list[1].bullet).bullet.flight_time then
 					table.remove(attacked_enemies_id, i)
 					table.remove(attacked_enemies_ts, i)
 				end
@@ -290,7 +297,12 @@ scripts.tower_ranger = {
 			local shooting_right = tpos.x < enemy.pos.x
 			local soffset = sprites[ssid].offset
 			local boffset = attack.bullet_start_offset[shooting_up and 1 or 2]
-			local b = E:clone_entity(attack_bullet)
+			local b = E:create_entity(this.attacks.list[1].bullet)
+			if pow_p.level > 0 then
+				for i = 1, #pow_p.mods do
+					U.append_mod(b.bullet, pow_p.mods[i])
+				end
+			end
 
 			b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 			b.pos.y = this.pos.y + soffset.y + boffset.y
@@ -309,33 +321,6 @@ scripts.tower_ranger = {
 			if this.tower.blocked then
 				coroutine.yield()
 			else
-				if pow_p.changed then
-					pow_p.changed = nil
-
-					if not pow_p.applied then
-						pow_p.applied = true
-
-						for i = 1, #pow_p.mods do
-							U.append_mod(attack_bullet.bullet, pow_p.mods[i])
-						end
-					end
-				end
-
-				if pow_t.changed then
-					pow_t.changed = nil
-
-					if sprites[5].hidden then
-						sprites[5].hidden = false
-
-						local ta = E:create_entity(pow_t.aura)
-
-						ta.aura.source_id = this.id
-						ta.pos = tpos
-
-						simulation:queue_insert_entity(ta)
-					end
-				end
-
 				if ready_to_attack(aa, store, this.tower.cooldown_factor) then
 					local enemy, enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, aa.vis_flags, aa.vis_bans)
 
@@ -19691,22 +19676,6 @@ function scripts.controller_tower_swap.update(this, store)
 				t2.barrack.rally_pos = V.vclone(t2.tower.default_rally_pos)
 			end
 
-			if t1.powers then
-				for _, p in pairs(t1.powers) do
-					if p.level > 0 then
-						p.changed = true
-					end
-				end
-			end
-
-			if t2.powers then
-				for _, p in pairs(t2.powers) do
-					if p.level > 0 then
-						p.changed = true
-					end
-				end
-			end
-
 			if t1.main_script then
 				t1.main_script.runs = 1
 				t1.main_script.co = nil
@@ -19719,7 +19688,21 @@ function scripts.controller_tower_swap.update(this, store)
 
 			simulation:queue_insert_entity(t1)
 			simulation:queue_insert_entity(t2)
+			if t1.powers then
+				for n, p in pairs(t1.powers) do
+					if p.level > 0 then
+						TU.set_power_level(store, t1, n, p.level)
+					end
+				end
+			end
 
+			if t2.powers then
+				for n, p in pairs(t2.powers) do
+					if p.level > 0 then
+						TU.set_power_level(store, t2, n, p.level)
+					end
+				end
+			end
 			t1.ui.can_click = true
 			t2.ui.can_click = true
 		end
