@@ -1106,6 +1106,7 @@ function level:update(store)
 if is_story_mode(store) then
 apply_phase(store,1)
 y_intro_cinematic(store)
+signal.emit("wave-notification","view","TOWER_FORGER")
 if PHASES[2].after_wave then
 y_wait_wave_end(store,PHASES[2].after_wave)
 y_phase_2_transition(store)
