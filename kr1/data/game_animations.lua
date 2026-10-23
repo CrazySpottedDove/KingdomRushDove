@@ -37402,63 +37402,63 @@ return {
 		prefix = "hee-haw_net",
 		to = 30
 	},
-	sniper_hit_run = {
-		prefix = "sniper_hit",
+	sentry_hit_run = {
+		prefix = "sentry_hit",
 		to = 32,
 		from = 1
 	},
-	sniper_hitbleed_run = {
-		prefix = "sniper_hitbleed",
+	sentry_hitbleed_run = {
+		prefix = "sentry_hitbleed",
 		to = 32,
 		from = 1
 	},
-	sniper_missshot_missdecal = {
-		prefix = "sniper_missshot",
+	sentry_missshot_missdecal = {
+		prefix = "sentry_missshot",
 		to = 40,
 		from = 1
 	},
-	sniper_target_bleed_idle = {
-		prefix = "sniper_target_bleed",
+	sentry_target_bleed_idle = {
+		prefix = "sentry_target_bleed",
 		to = 23,
 		from = 23
 	},
-	sniper_target_bleed_in = {
-		prefix = "sniper_target_bleed",
+	sentry_target_bleed_in = {
+		prefix = "sentry_target_bleed",
 		to = 22,
 		from = 1
 	},
-	sniper_target_idle = {
-		prefix = "sniper_target",
+	sentry_target_idle = {
+		prefix = "sentry_target",
 		to = 23,
 		from = 23
 	},
-	sniper_target_in = {
-		prefix = "sniper_target",
+	sentry_target_in = {
+		prefix = "sentry_target",
 		to = 22,
 		from = 1
 	},
-	sniper_tower4 = {
-		prefix = "sniper_tower4",
+	sentry_tower4 = {
+		prefix = "sentry_tower4",
 		to = 1,
 		from = 1
 	},
-	sniper_tower4mask = {
-		prefix = "sniper_tower4mask",
+	sentry_tower4mask = {
+		prefix = "sentry_tower4mask",
 		to = 1,
 		from = 1
 	},
-	sniper_trail = {
-		prefix = "sniper_trail",
+	sentry_trail = {
+		prefix = "sentry_trail",
 		to = 33,
 		from = 1
 	},
-	sniper_trailbleed = {
-		prefix = "sniper_trailbleed",
+	sentry_trailbleed = {
+		prefix = "sentry_trailbleed",
 		to = 42,
 		from = 1
 	},
-	sniper_trailtripleshot = {
-		prefix = "sniper_trailtripleshot",
+	sentry_trailtripleshot = {
+		prefix = "sentry_trailtripleshot",
 		to = 33,
 		from = 1
 	},

@@ -1273,7 +1273,7 @@ upgrades.arrows = {
 	"arrow_ranger",
 	"shotgun_musketeer",
 	"shotgun_musketeer_sniper",
-	"shotgun_musketeer_sniper_instakill",
+	"shotgun_musketeer_sentry_instakill",
 	"arrow_crossbow",
 	"axe_totem",
 	"dwarf_shotgun",
@@ -1323,8 +1323,8 @@ upgrades.arrows = {
 	"bullet_crossbows",
 	"bullet_crossbows_skill_a",
 	"bullet_crossbows_skill_c",
-	"bullet_sniper_basic",
-	"bullet_sniper_skill_b"
+	"bullet_sentry_basic",
+	"bullet_sentry_skill_b"
 }
 
 upgrades.soldiers = {

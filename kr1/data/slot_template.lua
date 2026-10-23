@@ -102,7 +102,7 @@ return {
 		"tower_alchemist",
 		"tower_forger",
 		"tower_crossbows",
-		"tower_sniper",
+		"tower_sentry",
 		"tower_tree"
 	}
 }

@@ -40802,9 +40802,9 @@ function scripts.decal_forger_ult.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.tower_sniper = {}
+scripts.tower_sentry = {}
 
-function scripts.tower_sniper.get_info(this)
+function scripts.tower_sentry.get_info(this)
 	local b = E:get_template(this.attacks.list[1].bullet)
 
 	return {
@@ -40816,7 +40816,7 @@ function scripts.tower_sniper.get_info(this)
 	}
 end
 
-function scripts.tower_sniper.update(this, store)
+function scripts.tower_sentry.update(this, store)
 	local MODE_FOREMOST = 0
 	local MODE_HP = 1
 	local ba = this.attacks.list[1]
@@ -40902,14 +40902,14 @@ function scripts.tower_sniper.update(this, store)
 	end
 
 	local function entity_killed(e, d)
-		if d.source_id == this._sniper_shot_bullet_id then
-			this._sniper_killed = true
+		if d.source_id == this._sentry_shot_bullet_id then
+			this._sentry_killed = true
 		end
 	end
 
 	signal.register("entity-killed", entity_killed)
 
-	this._sniper_killed_handler = entity_killed
+	this._sentry_killed_handler = entity_killed
 
 	local function shoot(attack)
 		local reduce_cd = false
@@ -40931,7 +40931,7 @@ function scripts.tower_sniper.update(this, store)
 					return false
 				end
 
-				local incoming = e._sniper_pred_damage or 0
+				local incoming = e._sentry_pred_damage or 0
 
 				if incoming == 0 then
 					return true
@@ -41034,7 +41034,7 @@ function scripts.tower_sniper.update(this, store)
 
 		queue_insert(store, b)
 
-		this._sniper_shot_bullet_id = attack == ba and b.id or nil
+		this._sentry_shot_bullet_id = attack == ba and b.id or nil
 
 		local casing = E:create_entity(this.casing_t)
 
@@ -41047,7 +41047,7 @@ function scripts.tower_sniper.update(this, store)
 
 		U.y_wait(store, fts(2))
 
-		if attack == ba and sa_active and this._sniper_killed then
+		if attack == ba and sa_active and this._sentry_killed then
 			local decal = E:create_entity(this.decal_reload)
 
 			decal.pos.x = this.pos.x + this.decal_reload_offset.x
@@ -41092,8 +41092,8 @@ function scripts.tower_sniper.update(this, store)
 			attack.ts = store.tick_ts - attack.crosshair_time
 		end
 
-		this._sniper_killed = false
-		this._sniper_shot_bullet_id = nil
+		this._sentry_killed = false
+		this._sentry_shot_bullet_id = nil
 
 		do_anim("idle", false, last_pos, true)
 	end
@@ -41319,8 +41319,8 @@ function scripts.tower_sniper.update(this, store)
 	end
 end
 
-function scripts.tower_sniper.remove(this, store)
-	signal.remove("entity-killed", this._sniper_killed_handler)
+function scripts.tower_sentry.remove(this, store)
+	signal.remove("entity-killed", this._sentry_killed_handler)
 
 	if this.mod_aim then
 		this.mod_aim.modifier.duration = 0
@@ -41341,9 +41341,9 @@ function scripts.tower_sniper.remove(this, store)
 	return true
 end
 
-scripts.mod_sniper_aim = {}
+scripts.mod_sentry_aim = {}
 
-function scripts.mod_sniper_aim.insert(this, store)
+function scripts.mod_sentry_aim.insert(this, store)
 	if not scripts.mod_track_target.insert(this, store) then
 		return false
 	end
@@ -41351,19 +41351,19 @@ function scripts.mod_sniper_aim.insert(this, store)
 	if this.pred_damage then
 		local target = store.entities[this.modifier.target_id]
 
-		target._sniper_pred_damage = (target._sniper_pred_damage or 0) + this.pred_damage
+		target._sentry_pred_damage = (target._sentry_pred_damage or 0) + this.pred_damage
 		this._applied_damage = this.pred_damage
 	end
 
 	return true
 end
 
-function scripts.mod_sniper_aim.remove(this, store)
+function scripts.mod_sentry_aim.remove(this, store)
 	if this._applied_damage then
 		local target = store.entities[this.modifier.target_id]
 
 		if target then
-			target._sniper_pred_damage = (target._sniper_pred_damage or 0) - this._applied_damage
+			target._sentry_pred_damage = (target._sentry_pred_damage or 0) - this._applied_damage
 		end
 
 		this._applied_damage = nil
@@ -41372,10 +41372,10 @@ function scripts.mod_sniper_aim.remove(this, store)
 	return true
 end
 
-scripts.mod_sniper_skill_b_bleed = {}
+scripts.mod_sentry_skill_b_bleed = {}
 
-function scripts.mod_sniper_skill_b_bleed.insert(this, store)
-	local pow = E:get_template("tower_sniper").powers.skill_b
+function scripts.mod_sentry_skill_b_bleed.insert(this, store)
+	local pow = E:get_template("tower_sentry").powers.skill_b
 	local level = this.modifier.level
 
 	this.dps.damage_min = pow.bleed_damage_min[level]
@@ -41386,9 +41386,9 @@ function scripts.mod_sniper_skill_b_bleed.insert(this, store)
 	return scripts.mod_dps.insert(this, store)
 end
 
-scripts.decal_sniper_skill_c = {}
+scripts.decal_sentry_skill_c = {}
 
-function scripts.decal_sniper_skill_c.update(this, store)
+function scripts.decal_sentry_skill_c.update(this, store)
 	local home = V.vclone(this.pos)
 	local return_point = v(this.pos.x, this.pos.y - 5)
 	local return_point_back = v(this.pos.x, this.pos.y + 5)

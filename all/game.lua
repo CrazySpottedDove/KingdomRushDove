@@ -72,7 +72,7 @@ game.required_textures = {
 	"go_towers_miners",
 	"go_towers_tree",
 	"go_towers_forger",
-	"go_towers_sniper",
+	"go_towers_sentry",
 	"go_stage128",
 	"tower_holders"
 }
@@ -141,7 +141,7 @@ game.required_sounds = {
 	"tower_tree",
 	"tower_light_priestess",
 	"tower_forger",
-	"tower_sniper"
+	"tower_sentry"
 }
 game.required_exoskeletons = {
 	"ignis_altar_lava_golem",
@@ -149,15 +149,15 @@ game.required_exoskeletons = {
 	"ignis_altar_decal",
 	"ignis_altar_decal_lava",
 	"tower_catapult_level_4Def",
-	"sniper4bottomDef",
-	"sniper4topDef",
-	"snipersignDef",
-	"snipercasingDef",
-	"snipersmokeDef",
-	"sniperreloadDef",
-	"sniperdogDef",
-	"sniperultDef",
-	"sniperultmiraDef",
+	"sentry4bottomDef",
+	"sentry4topDef",
+	"sentrysignDef",
+	"sentrycasingDef",
+	"sentrysmokeDef",
+	"sentryreloadDef",
+	"sentrydogDef",
+	"sentryultDef",
+	"sentryultmiraDef",
 	"tower_catapult_level_4_rockyDef",
 	"tower_catapult_level_4_ballsDef",
 	"tower_alchemist_back_bubblesDef",
