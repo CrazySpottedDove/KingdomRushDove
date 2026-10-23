@@ -39129,7 +39129,7 @@ function scripts.tower_light_priestess.update(this, store)
 			-- 守护圣域
 			if U.tower_ready_to_use_power(pow_a, sa, store, this.tower) then
 				local threshold = pow_a.threshold[pow_a.level]
-				local soldiers = U.find_soldiers_in_range(store.soldiers, tpos(this), 0, sa.aura_range, sa.vis_flags, sa.vis_bans, function(e)
+				local soldiers = U.find_soldiers_in_range(store.soldiers, tpos(this), 0, this.attacks.range, sa.vis_flags, sa.vis_bans, function(e)
 					return e.health.hp / e.health.hp_max <= threshold
 				end)
 				if not soldiers then
