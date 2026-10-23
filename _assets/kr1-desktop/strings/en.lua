@@ -8764,6 +8764,7 @@ return {
 	TOWER_SENTRY_CHANGE_MODE_HP_NAME = "Target: Max. Health",
 	TOWER_SENTRY_CHANGE_MODE_HP_NOTE = "Going somewhere, big boy?",
 	TOWER_SENTRY_DESCRIPTION = "No one can hide from these sharpshooter's sight and precision (except under their blindspot).",
+	TOWER_SENTRY_EXTRA = "These sharpshooters are born with super farsightedness, yet they insist they have eagle-eyed vision.",
 	TOWER_SENTRY_NAME = "SENTRY WATCHTOWER",
 	TOWER_SENTRY_SKILL_A_DESCRIPTION_1 = DYN.TOWER_SENTRY_SKILL_A_DESCRIPTION_1,
 	TOWER_SENTRY_SKILL_A_DESCRIPTION_2 = DYN.TOWER_SENTRY_SKILL_A_DESCRIPTION_1,
