@@ -4853,5 +4853,54 @@ return {
 			tt_title = _("TOWER_SANDWORM_SLIME_NAME_2"),
 			tt_desc = _("TOWER_SANDWORM_SLIME_DESCRIPTION_2")
 		}}
+	}), tpl.sell}},
+	forger = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_forger_0001",
+		sounds = {"TowerArcaneForgerSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_FORGER_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_FORGER_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_FORGER_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_FORGER_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_FORGER_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_forger_0002",
+		sounds = {"TowerArcaneForgerSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_FORGER_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_FORGER_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_FORGER_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_FORGER_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_FORGER_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_forger_0003",
+		sounds = {"TowerArcaneForgerSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_FORGER_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_FORGER_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_FORGER_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_FORGER_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_FORGER_SKILL_C_DESCRIPTION_3")
+		}}
 	}), tpl.sell}}
 }

@@ -5588,3 +5588,347 @@ tt.render.sprites[1].z = Z_DECALS
 tt = RT("mod_light_priestess_ult_armor_sunder", "modifier")
 tt.modifier.armor_red_factor = 0.015
 tt.main_script.insert = scripts.mod_light_priestess_ult_armor_sunder.insert
+
+-- 奥术幻铸师
+tt = RT("tower_forger", "tower")
+AC(tt, "attacks", "powers")
+tt.tower.type = "forger"
+tt.tower.price = 280
+tt.tower.menu_offset = v(0, 30)
+tt.tower.long_idle_cooldown = 6
+tt.info.enc_icon = 52
+tt.info.portrait = "kr6_info_portraits_towers_0038"
+tt.info.fn = scripts.tower_mage.get_info
+tt.main_script.update = scripts.tower_forger.update
+tt.main_script.remove = scripts.tower_forger.remove
+tt.powers.skill_a = CC("power")
+tt.powers.skill_a.price_base = 250
+tt.powers.skill_a.price_inc = 250
+tt.powers.skill_a.max_level = 3
+tt.powers.skill_a.damage_min = {30, 60, 90}
+tt.powers.skill_a.damage_max = {45, 90, 135}
+tt.powers.skill_b = CC("power")
+tt.powers.skill_b.price_base = 160
+tt.powers.skill_b.price_inc = 160
+tt.powers.skill_b.max_level = 3
+tt.powers.skill_b.damage_min = {8, 16, 24}
+tt.powers.skill_b.damage_max = {12, 24, 36}
+tt.powers.skill_b.duration = {10, 10, 10}
+tt.powers.skill_b.max_damage = {100, 200, 300}
+tt.powers.skill_c = CC("power")
+tt.powers.skill_c.price_base = 200
+tt.powers.skill_c.price_inc = 200
+tt.powers.skill_c.max_level = 3
+tt.powers.skill_c.stun_duration = {5, 7, 9}
+tt.powers.skill_c.min_targets = {2, 2, 2}
+tt.powers.skill_c.max_targets = {2, 3, 4}
+tt.attacks.range = 190
+tt.attacks.list[1] = CC("bullet_attack")
+tt.attacks.list[1].animation = "attack"
+tt.attacks.list[1].bullet = "bullet_forger_basic"
+tt.attacks.list[1].bullets_suffixes = {
+	{"d", "a", "c"},
+	{"e", "c", "a"},
+	{"d", "e", "a"},
+	{"c", "e", "d"},
+	{"b", "c", "a"},
+	{"e", "c", "d"},
+	{"f", "c", "a"},
+	{"d", "e", "a"},
+	{"e", "a", "d"},
+	{"d", "c", "a"},
+	{"a", "e", "c"},
+	{"e", "c", "d"},
+	{"c", "d", "a"},
+	{"a", "e", "c"},
+	{"d", "a", "c"}
+}
+tt.attacks.list[1].spawn_fx = "fx_bullet_forger_spawn"
+tt.attacks.list[1].spawn_time = fts(20)
+tt.attacks.list[1].cooldown = 0.57
+tt.attacks.list[1].shoot_time = fts(6)
+tt.attacks.list[1].bullet_spawn_positions = {v(0, 103), v(-30, 88), v(30, 83)}
+tt.attacks.list[1].basic_attack = true
+tt.attacks.list[1].node_prediction = fts(12)
+tt.attacks.list[1].reload_time = fts(4)
+tt.attacks.list[1].sound = "TowerArcaneForgerBasicAttackCast"
+tt.attacks.list[1].vis_flags = 0
+tt.attacks.list[1].vis_bans = 0
+tt.attacks.list[2] = CC("custom_attack")
+tt.attacks.list[2].cooldown = 18
+tt.attacks.list[2].detection_range = 180
+tt.attacks.list[2].min_targets = 2
+tt.attacks.list[2].distance = 60
+tt.attacks.list[2].max_spawn_distance = 220
+tt.attacks.list[2].distance_from_enemy = 8
+tt.attacks.list[2].cast_time = fts(9)
+tt.attacks.list[2].discs = 3
+tt.attacks.list[2].disc = "decal_forger_skill_a_blade_cast"
+tt.attacks.list[2].flags = bor(F_RANGED)
+tt.attacks.list[2].bans = bor(F_FLYING)
+tt.attacks.list[2].sound = "TowerArcaneForgerSliveringDiscsCast"
+tt.attacks.list[3] = CC("custom_attack")
+tt.attacks.list[3].cooldown = 20
+tt.attacks.list[3].crystal = "decal_forger_crystal_skill_b"
+tt.attacks.list[3].max_crystals = 2
+tt.attacks.list[3].detection_range = 190
+tt.attacks.list[3].flags = bor(F_RANGED)
+tt.attacks.list[3].bans = 0
+tt.attacks.list[3].min_targets = 1
+tt.attacks.list[3].cast_time = fts(10)
+tt.attacks.list[3].sound = "TowerArcaneForgerPrismaticSentriesCast"
+tt.attacks.list[3].spawn_distance = 5
+tt.attacks.list[4] = CC("custom_attack")
+tt.attacks.list[4].cooldown = 26
+tt.attacks.list[4].flags = 0
+tt.attacks.list[4].bans = bor(F_BOSS, F_FLYING)
+tt.attacks.list[4].detection_range = 120
+tt.attacks.list[4].mod_stun = "mod_forger_skill_c_stun"
+tt.attacks.list[4].mod_floor = "mod_forger_skill_c_stun_floor"
+tt.attacks.list[4].cast_time = fts(23)
+tt.attacks.list[4].sound = "TowerArcaneForgerHardlighPrisonCast"
+tt.attacks.list[5] = CC("custom_attack")
+tt.attacks.list[5].cooldown = 40
+tt.attacks.list[5].detection_range = 180
+tt.attacks.list[5].grouping_range = 80
+tt.attacks.list[5].flags = bor(F_INSTAKILL)
+tt.attacks.list[5].bans = bor(F_FLYING, F_BOSS, F_MINIBOSS)
+tt.attacks.list[5].decal = "decal_forger_ult_floor"
+tt.attacks.list[5].cast_time = fts(30)
+tt.attacks.list[5].node_prediction = fts(30)
+tt.attacks.list[5].min_total_hp = 300
+tt.attacks.list[5].hp_cap = 1200
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 13)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "arcane_forger_lvl4_tower_base"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].offset = v(0, 10)
+tt.render.sprites[3] = CC("sprite")
+tt.render.sprites[3].name = "arcane_forger_lvl4_tower_mid"
+tt.render.sprites[3].animated = false
+tt.render.sprites[3].offset = v(0, 9.5)
+tt.render.sprites[4] = CC("sprite")
+tt.render.sprites[4].prefix = "arcane_forger_lvl4_tower_light_back"
+tt.render.sprites[4].name = "run"
+tt.render.sprites[4].loop = false
+tt.render.sprites[4].offset = v(0, 10)
+tt.render.sprites[5] = CC("sprite")
+tt.render.sprites[5].prefix = "arcane_forger_lvl4_mage"
+tt.render.sprites[5].name = "idle"
+tt.render.sprites[5].offset = v(0, 10)
+tt.render.sprites[5].angles = {}
+tt.render.sprites[5].angles.idle = {"idle_back", "idle"}
+tt.render.sprites[5].angles.attack = {"attack_back", "attack"}
+tt.render.sprites[6] = CC("sprite")
+tt.render.sprites[6].name = "arcane_forger_lvl4_tower_top"
+tt.render.sprites[6].animated = false
+tt.render.sprites[6].offset = v(0, 10)
+tt.render.sprites[7] = CC("sprite")
+tt.render.sprites[7].prefix = "arcane_forger_lvl4_tower_light_top"
+tt.render.sprites[7].name = "run"
+tt.render.sprites[7].loop = false
+tt.render.sprites[7].offset = v(0, 10)
+tt.render.sid_mage = 5
+tt.render.sids_lights = {4, 7}
+tt.sound_events.insert = "TowerArcaneForgerTauntSelect"
+tt.sound_events.room_select = "TowerArcaneForgerTaunt"
+tt.ui.click_rect = r(-42, 0, 85, 90)
+
+tt = RT("bullet_forger_basic", "bolt")
+AC(tt, "force_motion")
+tt.bullet.damage_min = 56
+tt.bullet.damage_max = 88
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.damage_radius = 50
+tt.bullet.damage_factor = 1
+tt.bullet.hit_fx = "fx_bullet_forger_basic_hit"
+tt.bullet.particles_name = "ps_bullet_forger_basic"
+tt.bullet.vis_flags = 0
+tt.bullet.vis_bans = 0
+tt.bullet.rotation_speed = 40
+tt.render.sprites[1].prefix = "arcane_forger_weapon_a"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].sort_y_offset = -40
+tt.main_script.insert = nil
+tt.main_script.update = scripts.bullet_forger.update
+tt.sound_events.insert = nil
+tt.force_motion.a_step = 6
+tt.force_motion.max_a = 3000
+tt.force_motion.max_v = 1200
+tt.fly_suffix = "_projectile"
+tt.sound_events.remove = nil
+tt.sound_impact = "TowerArcaneForgerBasicAttackImpact"
+
+tt = RT("fx_bullet_forger_spawn", "fx")
+AC(tt, "sound_events")
+tt.render.sprites[1].prefix = "arcane_forger_weapons_spawn_fx"
+tt.render.sprites[1].name = "run"
+tt.sound_events.insert = "TowerArcaneForgerBasicAttackCharge"
+
+tt = RT("fx_bullet_forger_basic_hit", "fx")
+tt.render.sprites[1].prefix = "arcane_forger_weapons_hit_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("ps_bullet_forger_basic", "particle_system")
+tt.particle_system.name = "arcane_forger_weapon_a_projectile_trail"
+tt.particle_system.particle_lifetime = {fts(5), fts(5)}
+tt.particle_system.emission_rate = 40
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.scales_x = {1, 0.1}
+tt.particle_system.scales_y = {1, 0.1}
+tt.particle_system.source_lifetime = 10
+tt.particle_system.animated = false
+tt.particle_system.spin = {40, 40}
+
+tt = RT("decal_forger_skill_a_blade_cast", "decal_scripted")
+tt.render.sprites[1].prefix = "arcane_forger_spinning_blade_spawn_fx"
+tt.render.sprites[1].name = "run"
+tt.main_script.update = scripts.decal_forger_skill_a_cast.update
+tt.wait_time = fts(47)
+tt.soldier_t = "soldier_forger_skill_a"
+
+tt = RT("decal_forger_skill_a_end", "decal_timed")
+tt.render.sprites[1].prefix = "arcane_forger_spinning_blade_destroy_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("soldier_forger_skill_a", "soldier_militia")
+tt.ui.click_rect = r(0, 0, 0, 0)
+tt.main_script.update = scripts.soldier_forger_skill_a.update
+tt.motion.max_speed = 120
+tt.render.sprites[1].prefix = "arcane_forger_spinning_blade"
+tt.render.sprites[1].name = "run_side"
+tt.render.sprites[1].anchor = vv(0.5)
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"run_side", "run_down", "run_up", "run_diagonal_up", "run_diagonal_down"}
+tt.vis.bans = bor(F_ALL)
+tt.damage_aura = "aura_forger_skill_a"
+tt.particles_ground = "ps_forger_skill_a_ground_trail"
+tt.particles_debris = "ps_forger_skill_a_debris_trail"
+tt.particles_offsets = {
+	run_side = v(25, 0),
+	run_up = v(0, 0),
+	run_down = v(0, 0),
+	run_diagonal_up = v(0, 0),
+	run_diagonal_down = v(0, 5)
+}
+tt.distance = 60
+tt.decal_end = "decal_forger_skill_a_end"
+tt.sound_events.insert = "TowerArcaneForgerSliveringDiscsSpin"
+
+tt = RT("aura_forger_skill_a", "aura")
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.radius = 30
+tt.aura.damage_type = DAMAGE_MAGICAL
+tt.aura.cycle_time = 0.25
+tt.aura.duration = 1e99
+tt.main_script.update = scripts.aura_apply_damage.update
+
+tt = RT("ps_forger_skill_a_ground_trail", "particle_system")
+tt.particle_system.name = "arcane_forger_spinning_blade_ground_fx_run"
+tt.particle_system.animated = true
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 10
+tt.particle_system.z = Z_OBJECTS
+tt.particle_system.scale_var = {0.75, 1.1}
+tt.particle_system.emit_spread = 0.0523599
+
+tt = RT("ps_forger_skill_a_debris_trail", "particle_system")
+tt.particle_system.name = "arcane_forger_spinning_blade_debris_fx_run"
+tt.particle_system.animated = true
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 25
+tt.particle_system.z = Z_OBJECTS
+tt.particle_system.emit_rotation_spread = 1.4932261378173708
+tt.particle_system.emit_speed = {100, 100}
+tt.particle_system.emit_spread = 0.4042062283539174
+
+tt = RT("decal_forger_crystal_skill_b", "decal_scripted")
+tt.render.sprites[1].prefix = "arcane_forger_crystal"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].loop = true
+tt.main_script.update = scripts.crystal_forger_skill_b.update
+tt.spawn_fx = "fx_crystal_forger_skill_b_spawn"
+tt.range = 120
+tt.bullet = "bullet_forger_skill_b"
+tt.bullet_offset = v(0, 20)
+tt.flags = 0
+tt.bans = 0
+tt.destroy_prefix = "arcane_forger_crystal_destroy"
+tt.destroy_anim = "run"
+
+tt = RT("bullet_forger_skill_b", "bullet")
+tt.bullet.flight_time = fts(6)
+tt.bullet.hit_time = fts(1)
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.damage_factor = 1
+tt.bullet.hit_fx = "fx_crystal_forger_skill_b_hit"
+tt.main_script.update = scripts.bullet_forger_skill_b.update
+tt.render.sprites[1].prefix = "arcane_forger_crystal_ray"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.track_target = true
+tt.hit_cycle_time = 0.25
+tt.image_width = 155
+tt.hit_over_duration = true
+tt.ray_start_fx = "decal_crystal_forger_skill_b_ray_start"
+tt.sound_loop = "TowerArcaneForgerPrismaticSentriesRayLoop"
+
+tt = RT("fx_crystal_forger_skill_b_spawn", "fx")
+tt.render.sprites[1].prefix = "arcane_forger_crystal_spawn_fx"
+tt.render.sprites[1].name = "run"
+
+tt = RT("fx_crystal_forger_skill_b_hit", "fx")
+tt.render.sprites[1].prefix = "arcane_forger_crystal_ray_end"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_EFFECTS
+
+tt = RT("decal_crystal_forger_skill_b_ray_start", "decal")
+tt.render.sprites[1].prefix = "arcane_forger_crystal_ray_start"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].loop = true
+
+tt = RT("mod_forger_skill_c_stun", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.use_mod_offset = false
+tt.modifier.animation_phases = true
+tt.render.sprites[1].size_names = nil
+tt.render.sprites[1].prefix = "arcane_forger_stun_fx"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.prefix_big = "arcane_forger_stun_fx_big"
+
+tt = RT("mod_forger_skill_c_stun_floor", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.use_mod_offset = false
+tt.modifier.animation_phases = true
+tt.render.sprites[1].size_names = nil
+tt.render.sprites[1].prefix = "arcane_forger_stun_fx_floor"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].z = Z_DECALS
+tt.prefix_big = "arcane_forger_stun_fx_floor_big"
+
+tt = RT("decal_forger_ult_maw", "decal_timed")
+tt.render.sprites[1].prefix = "arcane_forger_lvl4_ultimate"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -1
+tt.render.sprites[1].loop = false
+
+tt = RT("decal_forger_ult_floor", "decal_scripted")
+AC(tt, "sound_events")
+tt.render.sprites[1].prefix = "arcane_forger_lvl4_ultimate_floor"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].loop = false
+tt.main_script.update = scripts.decal_forger_ult.update
+tt.decal_maw = "decal_forger_ult_maw"
+tt.damage_time = fts(10)
+tt.sound_events.insert = "TowerArcaneForgerArcaneMawCast"

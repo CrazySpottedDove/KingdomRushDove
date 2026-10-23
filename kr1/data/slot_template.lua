@@ -100,6 +100,7 @@ return {
 		"tower_sunray_master",
 		"tower_light_priestess",
 		"tower_alchemist",
+		"tower_forger",
 		"tower_crossbows",
 		"tower_tree"
 	}

@@ -1550,7 +1550,8 @@ upgrades.mage_tower_bolts = {
 	"bullet_sunray_master_rapid_fire",
 	"bullet_sunray_master_skill_c",
 	"bullet_light_priestess",
-	"bullet_light_priestess_ult"
+	"bullet_light_priestess_ult",
+	"bullet_forger_basic"
 }
 
 local other_bolts = {

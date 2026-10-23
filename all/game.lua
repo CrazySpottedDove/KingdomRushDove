@@ -71,6 +71,7 @@ game.required_textures = {
 	"go_towers_light_priestess",
 	"go_towers_miners",
 	"go_towers_tree",
+	"go_towers_forger",
 	"go_stage128",
 	"tower_holders"
 }
@@ -137,7 +138,8 @@ game.required_sounds = {
 	"tower_elf_ranger",
 	"tower_crossbows",
 	"tower_tree",
-	"tower_light_priestess"
+	"tower_light_priestess",
+	"tower_forger"
 }
 game.required_exoskeletons = {
 	"ignis_altar_lava_golem",
