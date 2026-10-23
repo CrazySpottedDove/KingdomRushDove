@@ -4453,7 +4453,7 @@ tt.main_script.update = scripts.controller_alchemist_skill_b.update
 tt = RT("tower_tree", "tower")
 AC(tt, "attacks", "barrack", "powers")
 tt.tower.type = "tree"
-tt.tower.price = 320
+tt.tower.price = 335
 tt.tower.menu_offset = v(0, 38)
 tt.info.fn = scripts.tower_tree.get_info
 tt.info.portrait = "kr6_info_portraits_towers_0016"

@@ -1548,7 +1548,9 @@ upgrades.mage_tower_bolts = {
 	"wicked_sisters_proy_pink",
 	"bolt_tower_wizard",
 	"bullet_sunray_master_rapid_fire",
-	"bullet_sunray_master_skill_c"
+	"bullet_sunray_master_skill_c",
+	"bullet_light_priestess",
+	"bullet_light_priestess_ult"
 }
 
 local other_bolts = {

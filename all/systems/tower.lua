@@ -77,9 +77,6 @@ end
 
 function tower:on_insert_unconditional(entity, store)
 	if entity.tower then
-		-- tower index
-		store.towers[entity.id] = entity
-
 		-- mage_brilliance
 		local mage_tower_map = self.mage_tower_map
 		local u = UP:get_upgrade("mage_brilliance")
@@ -92,6 +89,9 @@ function tower:on_insert_unconditional(entity, store)
 
 			scale_mage_brilliance_damage(factor)
 		end
+
+		-- tower index
+		store.towers[entity.id] = entity
 	end
 end
 

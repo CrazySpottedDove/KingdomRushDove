@@ -70,7 +70,10 @@ local persistent_exos = table.to_map({
 	"t_unitminiDef",
 	"t_changemodehideDef",
 	"t_instakillDef",
-	"t_decalDef"
+	"t_decalDef",
+	"tower_priestess_lvl4_towerDef",
+	"tower_priestess_lvl4Def",
+	"tower_priestess_lvl4_bellDef"
 })
 
 --- director 调用，将资源列表加入 EXO.exo_lists_to_load 中，在进入对局时被加载
