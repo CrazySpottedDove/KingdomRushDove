@@ -68,6 +68,7 @@ game.required_textures = {
 	"go_towers_ranger",
 	"go_towers_crossbows",
 	"go_towers_sunray_master",
+	"go_towers_light_priestess",
 	"go_towers_miners",
 	"go_towers_tree",
 	"go_stage128",
@@ -135,7 +136,8 @@ game.required_sounds = {
 	"tower_miners",
 	"tower_elf_ranger",
 	"tower_crossbows",
-	"tower_tree"
+	"tower_tree",
+	"tower_light_priestess"
 }
 game.required_exoskeletons = {
 	"ignis_altar_lava_golem",
@@ -190,7 +192,10 @@ game.required_exoskeletons = {
 	"t_unitminiDef",
 	"t_changemodehideDef",
 	"t_instakillDef",
-	"t_decalDef"
+	"t_decalDef",
+	"tower_priestess_lvl4_towerDef",
+	"tower_priestess_lvl4Def",
+	"tower_priestess_lvl4_bellDef"
 }
 game.plugin_required_textures = {}
 game.plugin_required_sounds = {}

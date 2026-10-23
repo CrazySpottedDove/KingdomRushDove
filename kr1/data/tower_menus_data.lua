@@ -291,6 +291,13 @@ return {
 			tt_title = _("TOWER_SUNRAY_MASTER_NAME"),
 			tt_desc = _("TOWER_SUNRAY_MASTER_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_light_priestess",
+			image = "kr6_quickmenu_main_icon_light_priestess",
+			type = "light_priestess",
+			tt_title = _("TOWER_LIGHT_PRIESTESS_NAME"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -1811,6 +1818,55 @@ return {
 			tt_desc = _("TOWER_SUNRAY_MASTER_SKILL_C_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
+	light_priestess = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_light_priestess_0001",
+		place = 6,
+		sounds = {"TowerLightPriestessSkillATaunt"},
+		tt_phrase = _("TOWER_LIGHT_PRIESTESS_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_light_priestess_0002",
+		place = 5,
+		sounds = {"TowerLightPriestessSkillBTaunt"},
+		tt_phrase = _("TOWER_LIGHT_PRIESTESS_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_light_priestess_0003",
+		place = 7,
+		sounds = {"TowerLightPriestessSkillCTaunt"},
+		tt_phrase = _("TOWER_LIGHT_PRIESTESS_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_LIGHT_PRIESTESS_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_LIGHT_PRIESTESS_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
 	mercenaries_desert = {{M(tpl.buy_soldier, {
 		action_arg = "soldier_djinn",
 		image = "main_icons_0030",

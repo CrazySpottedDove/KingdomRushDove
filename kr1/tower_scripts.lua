@@ -39041,4 +39041,711 @@ function scripts.decal_tree_ultimate_bomb.update(this, store)
 	queue_remove(store, this)
 end
 
+-- 光明女祭司
+scripts.tower_light_priestess = {}
+
+function scripts.tower_light_priestess.update(this, store)
+	local sid = this.render.sid_priestess
+	local ba = this.attacks.list[1]
+	local sa = this.attacks.list[2]
+	local sb = this.attacks.list[3]
+	local sc = this.attacks.list[4]
+	local sua = this.attacks.list[5]
+	local pow_a = this.powers.skill_a
+	local pow_b = this.powers.skill_b
+	local pow_c = this.powers.skill_c
+	local last_ts = store.tick_ts
+
+	local passive = E:create_entity(this.passive_aura)
+	passive.pos = V.vclone(tpos(this))
+	queue_insert(store, passive)
+	this.passive_aura_instance = passive
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true, sid)
+
+	ba.ts = store.tick_ts - ba.cooldown
+
+	local function fire_ult_beam(target)
+		local b = E:create_entity(sua.bullet)
+		local pos = tpos(this)
+		b.pos:set(pos.x + sua.offset.x, pos.y + sua.offset.y)
+		b.bullet.from:copy(b.pos)
+		b.bullet.to:copy(target.pos)
+		b.bullet.target_id = target.id
+		b.bullet.source_id = this.id
+		b.bullet.damage_factor = this.tower.damage_factor
+		b.bullet.max_track_distance = this.attacks.range * 1.1
+		queue_insert(store, b)
+		this.ult_bullet = b
+	end
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			this.passive_aura_instance.aura.radius = this.attacks.range
+			-- 普通攻击
+			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
+				local pos = tpos(this)
+				local target = U.detect_foremost_enemy_in_range_filter_off(pos, this.attacks.range, ba.vis_flags, ba.vis_bans)
+
+				if not target then
+					ba.ts = ba.ts + fts(5)
+				else
+					ba.ts = store.tick_ts
+					local pred_pos = U.calculate_enemy_ffe_pos(target, ba.shoot_time)
+					local an = U.animation_name_facing_point(this, "attack", target.pos, sid)
+					local off = ba.bullet_start_offset[an]
+
+					U.animation_start(this, an, nil, store.tick_ts, false, sid)
+					U.y_wait_unconditional(store, ba.shoot_time)
+
+					S:queue(ba.sound)
+
+					local new_target = U.detect_foremost_enemy_in_range_filter_off(pos, this.attacks.range, ba.vis_flags, ba.vis_bans)
+					if new_target then
+						target = new_target
+						pred_pos = target.pos
+					end
+
+					local b = E:create_entity(ba.bullet)
+
+					b.bullet.damage_factor = this.tower.damage_factor
+					b.pos.x, b.pos.y = pos.x + off.x, pos.y + off.y
+					b.bullet.from:copy(b.pos)
+					b.bullet.to:set(pred_pos.x + target.unit.hit_offset.x, pred_pos.y + target.unit.hit_offset.y)
+					b.bullet.source_id = this.id
+					b.bullet.target_id = target.id
+
+					queue_insert(store, b)
+
+					last_ts = store.tick_ts
+					U.y_animation_wait_specific(this, sid)
+
+					U.animation_start(this, target.pos.y > pos.y and "idle_back" or "idle", nil, store.tick_ts, true, sid)
+				end
+			end
+
+			-- 守护圣域
+			if U.tower_ready_to_use_power(pow_a, sa, store, this.tower) then
+				local threshold = pow_a.threshold[pow_a.level]
+				local soldiers = U.find_soldiers_in_range(store.soldiers, tpos(this), 0, sa.aura_range, sa.vis_flags, sa.vis_bans, function(e)
+					return e.health.hp / e.health.hp_max <= threshold
+				end)
+				if not soldiers then
+					sa.ts = sa.ts + fts(5)
+				else
+					sa.ts = store.tick_ts
+
+					local _, surrounded = U.find_entity_most_surrounded(soldiers)
+					local ally = surrounded[1]
+					for _, soldier in ipairs(surrounded) do
+						if U.find_first_enemy_in_range_filter_off(soldier.pos, sa.aura_range, F_NONE, F_NONE) then
+							ally = surrounded[1]
+							break
+						end
+					end
+
+					local an = U.animation_name_facing_point(this, "skill_a", ally.pos, sid)
+
+					U.animation_start(this, an, nil, store.tick_ts, false, sid)
+					U.y_wait(store, sa.hit_time)
+					S:queue(sa.sound)
+
+					local decal = E:create_entity(sa.decal)
+
+					decal.pos:copy(ally.pos)
+					decal.render.sprites[1].ts = store.tick_ts
+					decal.aura_level = pow_a.level
+
+					queue_insert(store, decal)
+
+					while not U.animation_finished(this, sid) do
+						coroutine.yield()
+					end
+
+					last_ts = store.tick_ts
+
+					U.animation_start(this, ally.pos.y > tpos(this).y and "idle_back" or "idle", nil, store.tick_ts, true, sid)
+				end
+			end
+
+			-- 沉默光环
+			if U.tower_ready_to_use_power(pow_b, sb, store, this.tower) then
+				local pos = tpos(this)
+
+				local enemies = U.find_enemies_in_range_filter_off(pos, this.attacks.range, sb.vis_flags, sb.vis_bans)
+
+				if not enemies then
+					sb.ts = sb.ts + fts(5)
+				else
+					sb.ts = store.tick_ts
+					local an = U.animation_name_facing_point(this, "skill_b", enemies[1].pos, sid)
+					local idle_an = enemies[1].pos.y > pos.y and "idle_back" or "idle"
+
+					U.animation_start(this, an, nil, store.tick_ts, false, sid)
+					U.y_wait(store, sb.hit_time)
+					S:queue(sb.sound)
+
+					local decal = E:create_entity(sb.decal)
+					local aura = E:create_entity(sb.aura)
+
+					decal.pos:copy(pos)
+					decal.render.sprites[1].ts = store.tick_ts
+					decal.render.sprites[1].scale:scalar_mul(this.attacks.range / aura.aura.radius)
+					this.sb_decal = decal
+					queue_insert(store, decal)
+
+					aura.pos:copy(pos)
+					aura.aura.level = pow_b.level
+					aura.aura.radius = this.attacks.range
+					this.sb_aura = aura
+
+					queue_insert(store, aura)
+
+					local bell = E:create_entity(sb.decal_bell)
+
+					bell.pos:set(pos.x + sb.bell_offset.x, pos.y + sb.bell_offset.y)
+					bell.render.sprites[1].ts = store.tick_ts
+					this.sb_bell = bell
+
+					queue_insert(store, bell)
+
+					while not U.animation_finished(this, sid) do
+						coroutine.yield()
+					end
+
+					last_ts = store.tick_ts
+
+					U.animation_start(this, idle_an, nil, store.tick_ts, true, sid)
+				end
+			end
+
+			-- 帕那刻亚的祝福
+			if U.tower_ready_to_use_power(pow_c, sc, store, this.tower) then
+				local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, F_RANGED, F_NONE)
+				if not enemy then
+					sc.ts = sc.ts + fts(5)
+				else
+					local towers = U.find_towers_in_range(store.towers, tpos(this), {
+						min_range = 0,
+						max_range = this.attacks.range
+					}, function(t)
+						return t.tower.can_be_mod and not U.get_modifier(t, "mod_light_priestess_skill_c")
+					end)
+
+					if not towers then
+						sc.ts = sc.ts + fts(5)
+					else
+						sc.ts = store.tick_ts
+
+						local target_tower = table.find_best(towers, function(t)
+							return -tpos(t):dist2(enemy.pos)
+						end)
+
+						local duration = pow_c.duration[pow_c.level]
+						local an = U.animation_name_facing_point(this, "skill_c", target_tower.pos, sid)
+						local idle_an = target_tower.pos.y > tpos(this).y and "idle_back" or "idle"
+
+						U.animation_start(this, an, nil, store.tick_ts, false, sid)
+						U.y_wait(store, sc.hit_time)
+						S:queue(sc.sound)
+
+						local m = E:create_entity("mod_light_priestess_skill_c")
+
+						m.modifier.source_id = this.id
+						m.modifier.target_id = target_tower.id
+						m.modifier.level = pow_c.level
+						m.damage_factor = pow_c.damage_factor[pow_c.level]
+						m.modifier.duration = duration
+
+						queue_insert(store, m)
+
+						local decal = E:create_entity("decal_light_priestess_skill_c_tower")
+
+						decal.pos = V.vclone(tpos(this))
+						decal.render.sprites[1].ts = store.tick_ts
+						decal.duration = duration
+						this.sc_decal = decal
+
+						queue_insert(store, decal)
+
+						while not U.animation_finished(this, sid) do
+							coroutine.yield()
+						end
+
+						last_ts = store.tick_ts
+
+						U.animation_start(this, idle_an, nil, store.tick_ts, true, sid)
+					end
+				end
+			end
+
+			-- 圣光降世
+			if ready_to_attack(sua, store, this.tower.cooldown_factor) then
+				local pos = tpos(this)
+				local target = U.detect_foremost_enemy_in_range_filter_off(pos, this.attacks.range, sua.vis_flags, sua.vis_bans)
+
+				if not target then
+					sua.ts = sua.ts + fts(5)
+				else
+					sua.ts = store.tick_ts
+
+					local an = U.animation_name_facing_point(this, "ult", target.pos, sid)
+
+					S:queue(sua.sound)
+					U.y_animation_play(this, "ulti_in" .. an, nil, store.tick_ts, 1, sid)
+
+					local aura = E:create_entity(sua.aura)
+
+					aura.pos:copy(pos)
+					aura.aura.radisu = this.attacks.range
+					this.ult_aura = aura
+
+					queue_insert(store, aura)
+
+					U.animation_start(this, "ulti_loop" .. an, nil, store.tick_ts, true, sid)
+
+					fire_ult_beam(target)
+
+					local start_ts = store.tick_ts
+					local idle_back = target.pos.y > pos.y
+
+					while store.tick_ts - start_ts < sua.duration do
+						if this.tower.blocked then
+							break
+						end
+
+						if not target or target.health.dead or band(target.vis.bans, sua.vis_flags) ~= 0 or band(target.vis.flags, sua.vis_bans) ~= 0 then
+							target = U.detect_foremost_enemy_in_range_filter_off(pos, this.attacks.range * 1.1, sua.vis_flags, sua.vis_bans)
+
+							if not target then
+								break
+							end
+
+							idle_back = target.pos.y > pos.y
+
+							queue_remove(store, this.ult_bullet)
+
+							this.ult_bullet = nil
+
+							an = U.animation_name_facing_point(this, "ult", target.pos, sid)
+
+							U.animation_start(this, "ulti_loop" .. an, nil, store.tick_ts, true, sid)
+
+							fire_ult_beam(target)
+						end
+
+						coroutine.yield()
+					end
+
+					if this.ult_bullet then
+						queue_remove(store, this.ult_bullet)
+
+						this.ult_bullet = nil
+					end
+
+					if this.ult_aura then
+						queue_remove(store, this.ult_aura)
+
+						this.ult_aura = nil
+					end
+
+					U.y_animation_play(this, "ulti_out" .. an, nil, store.tick_ts, 1, sid)
+					U.animation_start(this, idle_back and "idle_back" or "idle", nil, store.tick_ts, true, sid)
+
+					last_ts = store.tick_ts
+				end
+			end
+
+			if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
+				U.animation_start(this, "idle", nil, store.tick_ts, true, sid)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+function scripts.tower_light_priestess.remove(this, store)
+	if this.passive_aura_instance then
+		queue_remove(store, this.passive_aura_instance)
+
+		this.passive_aura_instance = nil
+	end
+
+	if this.sb_aura then
+		queue_remove(store, this.sb_aura)
+
+		this.sb_aura = nil
+	end
+
+	if this.sb_decal then
+		queue_remove(store, this.sb_decal)
+
+		this.sb_decal = nil
+	end
+
+	if this.sb_bell then
+		queue_remove(store, this.sb_bell)
+
+		this.sb_bell = nil
+	end
+
+	if this.sc_decal then
+		queue_remove(store, this.sc_decal)
+
+		this.sc_decal = nil
+	end
+
+	if this.ult_aura then
+		queue_remove(store, this.ult_aura)
+
+		this.ult_aura = nil
+	end
+
+	if this.ult_bullet then
+		queue_remove(store, this.ult_bullet)
+
+		this.ult_bullet = nil
+	end
+
+	return true
+end
+
+scripts.mod_armor_inc_light_priestess = {}
+
+function scripts.mod_armor_inc_light_priestess.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead then
+		return false
+	end
+
+	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
+		return false
+	end
+
+	local inc = this.armor_inc
+	if type(inc) == "table" then
+		inc = inc[this.modifier.level]
+	end
+	this.armor_inc_value = inc
+
+	if this.duration then
+		this.modifier.duration = this.duration[this.modifier.level]
+	end
+
+	SU.armor_inc(target, inc)
+	SU.magic_armor_inc(target, inc)
+	signal.emit("mod-applied", this, target)
+
+	local s = this.render.sprites[1]
+
+	if s.prefix_names then
+		s.prefix = s.prefix_names[target.unit.size]
+
+		if target.unit.size == UNIT_SIZE_LARGE then
+			s.scale = V.vv(1.5)
+		end
+	end
+
+	U.animation_start(this, "in", nil, store.tick_ts, false, 1, true)
+
+	if this.passive and this.shield_decal and target.health_bar then
+		this.shield = E:create_entity(this.shield_decal)
+		this.shield.pos = V.vclone(target.pos)
+		this.shield.render.sprites[1].offset = v(0, target.health_bar.offset.y + 10)
+
+		queue_insert(store, this.shield)
+		U.animation_start(this.shield, "in", nil, store.tick_ts, false, 1, true)
+	end
+
+	return true
+end
+
+function scripts.mod_armor_inc_light_priestess.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	while not U.animation_finished(this, 1) or this.shield and not U.animation_finished(this.shield, 1) do
+		coroutine.yield()
+	end
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+
+	if this.shield then
+		U.animation_start(this.shield, "Idle", nil, store.tick_ts, true, 1)
+	end
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or store.tick_ts - m.ts >= m.duration then
+			if this.shield then
+				U.animation_start(this.shield, "out", nil, store.tick_ts, false, 1)
+			end
+
+			U.y_animation_play(this, "out", nil, store.tick_ts, 1, 1)
+			queue_remove(store, this)
+
+			return
+		end
+
+		if this.shield then
+			this.shield.pos.x, this.shield.pos.y = target.pos.x, target.pos.y
+		end
+
+		if this.render and m.use_mod_offset and target.unit and target.unit.mod_offset and band(target.vis.flags, F_FLYING) ~= 0 then
+			for i = 1, #this.render.sprites do
+				local s = this.render.sprites[i]
+
+				if not s.exclude_mod_offset then
+					s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+function scripts.mod_armor_inc_light_priestess.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target then
+		SU.armor_dec(target, this.armor_inc_value)
+		SU.magic_armor_dec(target, this.armor_inc_value)
+	end
+
+	if this.shield then
+		queue_remove(store, this.shield)
+
+		this.shield = nil
+	end
+
+	return true
+end
+
+scripts.mod_hps_light_priestess = {}
+
+function scripts.mod_hps_light_priestess.insert(this, store)
+	local per_second = this.heal_per_second[this.modifier.level]
+
+	this.hps.heal_min = per_second * this.hps.heal_every
+	this.hps.heal_max = per_second * this.hps.heal_every
+	this.modifier.duration = this.duration[this.modifier.level]
+
+	return scripts.mod_hps.insert(this, store)
+end
+
+scripts.mod_slow_light_priestess = {}
+
+function scripts.mod_slow_light_priestess.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or not target.unit then
+		return false
+	end
+
+	this.modifier.duration = this.slow_duration[this.modifier.level]
+	this.slow.factor = this.slow_factor[this.modifier.level]
+	this.render.sprites[1].prefix = this.render.sprites[1].prefix_names[target.unit.size]
+
+	return scripts.mod_slow.insert(this, store)
+end
+
+function scripts.mod_slow_light_priestess.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target or not target.pos then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1, 1)
+	U.animation_start(this, "loop", nil, store.tick_ts, true, 1)
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
+			U.y_animation_play(this, "out", nil, store.tick_ts, 1, 1)
+			queue_remove(store, this)
+
+			return
+		end
+
+		if this.render and target.unit then
+			local s = this.render.sprites[1]
+			local flip_sign = 1
+
+			if target.render then
+				flip_sign = target.render.sprites[1].flip_x and -1 or 1
+			end
+
+			if m.health_bar_offset and target.health_bar then
+				local hb = target.health_bar.offset
+				local hbo = m.health_bar_offset
+
+				s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
+			elseif m.use_mod_offset and target.unit.mod_offset then
+				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.mod_silence_light_priestess = {}
+
+function scripts.mod_silence_light_priestess.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead or not target.enemy then
+		return false
+	end
+
+	this.modifier.duration = this.silence_duration[this.modifier.level]
+	this.render.sprites[1].prefix = this.render.sprites[1].prefix_names[target.unit.size]
+
+	return scripts.mod_silence.insert(this, store)
+end
+
+scripts.mod_tower_factors_light_priestess = {}
+
+function scripts.mod_tower_factors_light_priestess.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if target then
+		this.pos = target.pos
+	end
+
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1, 1)
+	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+
+	m.ts = store.tick_ts
+
+	while store.tick_ts - m.ts < m.duration do
+		target = store.entities[m.target_id]
+
+		if not target then
+			break
+		end
+
+		this.pos = target.pos
+
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, "out", nil, store.tick_ts, 1, 1)
+	queue_remove(store, this)
+end
+
+scripts.mod_invulnerability_light_priestess = {}
+
+function scripts.mod_invulnerability_light_priestess.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead or target.enemy then
+		return false
+	end
+
+	target.health.ignore_damage = true
+	this.render.sprites[1].ts = store.tick_ts
+
+	return true
+end
+
+function scripts.mod_invulnerability_light_priestess.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target or target.health.dead or target.enemy or m.duration == 0 then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1, 1)
+	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or store.tick_ts - m.ts > m.duration then
+			U.y_animation_play(this, "out", nil, store.tick_ts, 1, 1)
+			queue_remove(store, this)
+
+			return
+		end
+
+		this.pos = target.pos
+
+		coroutine.yield()
+	end
+end
+
+function scripts.mod_invulnerability_light_priestess.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target and not target.health.dead and not target.enemy then
+		target.health.ignore_damage = false
+	end
+
+	return true
+end
+
+scripts.mod_light_priestess_ult_armor_sunder = {}
+
+function scripts.mod_light_priestess_ult_armor_sunder.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.armor <= 0 then
+		return false
+	end
+
+	SU.armor_dec(target, this.modifier.armor_red_factor)
+
+	return false
+end
+
+scripts.decal_light_priestess_skill_a = {}
+
+function scripts.decal_light_priestess_skill_a.update(this, store)
+	U.y_wait(store, this.hit_time)
+
+	local hit = E:create_entity(this.hit_decal)
+
+	hit.pos = V.vclone(this.pos)
+	hit.render.sprites[1].ts = store.tick_ts
+
+	queue_insert(store, hit)
+
+	local aura = E:create_entity(this.aura)
+
+	aura.pos = V.vclone(this.pos)
+	aura.aura.level = this.aura_level
+
+	queue_insert(store, aura)
+	U.y_animation_wait(this, 1, 1)
+	queue_remove(store, this)
+end
+
 return scripts

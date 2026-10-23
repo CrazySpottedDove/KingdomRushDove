@@ -426,6 +426,9 @@ function level:init(store)
 self.manual_hero_insertion=false
 end
 function level:update(store)
+if store.level_mode==GAME_MODE_CAMPAIGN then
+signal.emit("wave-notification","view","TOWER_LIGHT_PRIESTESS")
+end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
