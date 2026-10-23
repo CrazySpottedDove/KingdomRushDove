@@ -198,7 +198,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
 }
 
 return {
