@@ -4902,5 +4902,65 @@ return {
 			tt_title = _("TOWER_FORGER_SKILL_C_NAME_3"),
 			tt_desc = _("TOWER_FORGER_SKILL_C_DESCRIPTION_3")
 		}}
+	}), tpl.sell}},
+
+	sniper = {{M(tpl.change_mode, {
+		image = "kr6_quickmenu_action_icons_0012",
+		image_mode0 = "kr6_quickmenu_action_icons_0012",
+		image_mode1 = "kr6_quickmenu_action_icons_0013",
+		tt_title_mode0 = _("TOWER_SNIPER_CHANGE_MODE_FOREMOST_NAME"),
+		tt_desc_mode0 = _("TOWER_SNIPER_CHANGE_MODE_FOREMOST_DESCRIPTION"),
+		tt_phrase_mode0 = _("TOWER_SNIPER_CHANGE_MODE_FOREMOST_NOTE"),
+		tt_title_mode1 = _("TOWER_SNIPER_CHANGE_MODE_HP_NAME"),
+		tt_desc_mode1 = _("TOWER_SNIPER_CHANGE_MODE_HP_DESCRIPTION"),
+		tt_phrase_mode1 = _("TOWER_SNIPER_CHANGE_MODE_HP_NOTE")
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_sniper_0001",
+		sounds = {"TowerSentryWatchtowerSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_SNIPER_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SNIPER_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_SNIPER_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SNIPER_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_SNIPER_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SNIPER_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_SNIPER_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_sniper_0002",
+		sounds = {"TowerSentryWatchtowerSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_SNIPER_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SNIPER_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_SNIPER_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SNIPER_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_SNIPER_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SNIPER_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_SNIPER_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_sniper_0003",
+		sounds = {"TowerSentryWatchtowerSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_SNIPER_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SNIPER_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_SNIPER_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SNIPER_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_SNIPER_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SNIPER_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_SNIPER_SKILL_C_DESCRIPTION_3")
+		}}
 	}), tpl.sell}}
 }

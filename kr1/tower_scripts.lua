@@ -40802,4 +40802,714 @@ function scripts.decal_forger_ult.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.tower_sniper = {}
+
+function scripts.tower_sniper.get_info(this)
+	local b = E:get_template(this.attacks.list[1].bullet)
+
+	return {
+		type = STATS_TYPE_TOWER_NO_RANGE,
+		damage_min = math.ceil(b.bullet.damage_min * this.tower.damage_factor),
+		damage_max = math.ceil(b.bullet.damage_max * this.tower.damage_factor),
+		damage_type = b.bullet.damage_type,
+		cooldown = this.attacks.list[1].cooldown * this.tower.cooldown_factor
+	}
+end
+
+function scripts.tower_sniper.update(this, store)
+	local MODE_FOREMOST = 0
+	local MODE_HP = 1
+	local ba = this.attacks.list[1]
+	local sba = this.attacks.list[2]
+	local ult = this.attacks.list[3]
+	local pow_a = this.powers.skill_a
+	local pow_b = this.powers.skill_b
+	local pow_c = this.powers.skill_c
+	local data = this.tower_upgrade_persistent_data
+	local sid_bottom = this.render.bottom_sid
+	local sid_top = this.render.top_sid
+	local s_bottom = this.render.sprites[sid_bottom]
+	local s_sids = {sid_bottom, sid_top}
+	local ba_cd_red_factor = 0
+	local sa_active = false
+	local boosted_shot = false
+
+	ba.ts = store.tick_ts
+	ult.ts = store.tick_ts
+	sba.ts = store.tick_ts - sba.cooldown
+
+	local function filter_fn(e)
+		local pi = e.nav_path.pi
+		local ni = e.nav_path.ni
+
+		return P:is_node_valid(pi, ni, NF_RANGE) and ni - P:get_visible_start_node(pi) >= this.ignore_nodes_start and P:get_visible_end_node(pi) - ni >= this.ignore_nodes_end
+	end
+
+	local function filter_skill_b(e)
+		return e.health.hp >= pow_b.min_hp[pow_b.level] and filter_fn(e)
+	end
+
+	local function anim_name(group, pos)
+		local angles = s_bottom.angles[group]
+
+		if #angles == 1 then
+			return angles[1], false
+		end
+
+		local angle_deg = km.unroll(V.angleTo(pos.x - this.pos.x, pos.y - this.pos.y)) * 180 / math.pi
+
+		if angle_deg < 22.5 or angle_deg >= 337.5 then
+			return angles[1], false
+		elseif angle_deg < 67.5 then
+			return angles[4], false
+		elseif angle_deg < 112.5 then
+			return angles[3], false
+		elseif angle_deg < 157.5 then
+			return angles[4], true
+		elseif angle_deg < 202.5 then
+			return angles[1], true
+		elseif angle_deg < 247.5 then
+			return angles[5], true
+		elseif angle_deg < 292.5 then
+			return angles[2], false
+		else
+			return angles[5], false
+		end
+	end
+
+	local function do_anim(group, wait, pos, loop)
+		local an, af = anim_name(group, pos)
+
+		for i = 1, #s_sids do
+			local s = this.render.sprites[s_sids[i]]
+
+			if table.contains(s.angles[group], an) then
+				s.hidden = false
+
+				U.animation_start(this, an, af, store.tick_ts, loop, s_sids[i])
+			else
+				s.hidden = true
+			end
+		end
+
+		if wait then
+			while not U.animation_finished(this, sid_bottom) do
+				coroutine.yield()
+			end
+		end
+
+		return an, af
+	end
+
+	local function entity_killed(e, d)
+		if d.source_id == this._sniper_shot_bullet_id then
+			this._sniper_killed = true
+		end
+	end
+
+	signal.register("entity-killed", entity_killed)
+
+	this._sniper_killed_handler = entity_killed
+
+	local function shoot(attack)
+		local reduce_cd = false
+		local dummy_dmg
+		local base_filter = attack == sba and filter_skill_b or filter_fn
+		local filter = base_filter
+
+		if this.coordinated_targeting then
+			local bt = E:get_template(attack.bullet)
+
+			dummy_dmg = E:create_entity("damage")
+			dummy_dmg.damage_type = bt.bullet.damage_type
+			dummy_dmg.reduce_armor = bt.bullet.reduce_armor
+			dummy_dmg.reduce_magic_armor = bt.bullet.reduce_magic_armor
+			dummy_dmg.value = math.max(1, math.ceil(bt.bullet.damage_min * this.tower.damage_factor))
+
+			filter = function(e)
+				if not base_filter(e) then
+					return false
+				end
+
+				local incoming = e._sniper_pred_damage or 0
+
+				if incoming == 0 then
+					return true
+				end
+
+				return incoming + U.predict_damage(e, dummy_dmg) <= this.coordinated_wasted_damage_factor * e.health.hp
+			end
+		end
+
+		local _, enemies, pred_pos = U.find_foremost_enemy_between_range_filter_on(tpos(this), attack.min_range, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans, filter)
+
+		if not enemies or #enemies == 0 then
+			attack.ts = attack.ts + fts(5)
+
+			return
+		end
+
+		if data.current_mode == MODE_HP then
+			table.sort(enemies, function(v1, v2)
+				return v1.health.hp_max > v2.health.hp_max
+			end)
+		end
+
+		local enemy = enemies[1]
+		local last_pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, attack.node_prediction))
+		local aim_mod = E:create_entity(attack.mod_crosshair)
+
+		aim_mod.modifier.target_id = enemy.id
+		aim_mod.modifier.duration = 1e99
+		aim_mod.render.sprites[1].ts = store.tick_ts
+
+		if dummy_dmg then
+			aim_mod.pred_damage = U.predict_damage(enemy, dummy_dmg)
+		end
+
+		queue_insert(store, aim_mod)
+
+		this.mod_aim = aim_mod
+
+		U.y_animation_play(this, "aimstart", last_pos.x < this.pos.x, store.tick_ts, 1, sid_bottom)
+		do_anim("aim", true, last_pos)
+
+		local ts = store.tick_ts
+
+		while store.tick_ts - ts < attack.crosshair_time do
+			if not enemy or enemy.health.dead then
+				local _, new_enemies = U.find_foremost_enemy_in_range_filter_on(last_pos, attack.max_retarget_range, attack.node_prediction, attack.vis_flags, attack.vis_bans, filter)
+
+				if not new_enemies or #new_enemies == 0 then
+					enemy = nil
+				else
+					if data.current_mode == MODE_HP then
+						table.sort(new_enemies, function(v1, v2)
+							return v1.health.hp_max > v2.health.hp_max
+						end)
+					end
+
+					enemy = new_enemies[1]
+					last_pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, attack.node_prediction))
+
+					queue_remove(store, aim_mod)
+
+					aim_mod = E:create_entity(attack.mod_crosshair)
+					aim_mod.modifier.target_id = enemy.id
+					aim_mod.modifier.duration = 1e99
+					aim_mod.render.sprites[1].ts = store.tick_ts
+					aim_mod.render.sprites[1].name = "idle"
+
+					if dummy_dmg then
+						aim_mod.pred_damage = U.predict_damage(enemy, dummy_dmg)
+					end
+
+					queue_insert(store, aim_mod)
+
+					this.mod_aim = aim_mod
+				end
+			end
+
+			coroutine.yield()
+		end
+
+		local an, af = do_anim("shoot", false, last_pos)
+		local hoffset = enemy and enemy.unit.hit_offset or v(0, 0)
+		local flip = af and -1 or 1
+		local b = E:create_entity(attack.bullet)
+
+		b.pos.x = this.pos.x + attack.bullet_start_offset[an].x * flip
+		b.pos.y = this.pos.y + attack.bullet_start_offset[an].y
+		b.bullet.from = V.vclone(b.pos)
+		b.bullet.to = enemy and V.v(enemy.pos.x + hoffset.x * (enemy.render.sprites[1].flip_x and -1 or 1), enemy.pos.y + hoffset.y) or last_pos
+		b.bullet.target_id = enemy and enemy.id or nil
+		b.bullet.source_id = this.id
+		b.bullet.level = attack == sba and pow_b.level or this.tower.level
+		b.bullet.damage_factor = this.tower.damage_factor * (attack.damage_factor or 1)
+
+		if attack == ba and boosted_shot then
+			b.bullet.damage_factor = b.bullet.damage_factor * pow_a.damage_factor[pow_a.level]
+			boosted_shot = false
+		end
+
+		queue_insert(store, b)
+
+		this._sniper_shot_bullet_id = attack == ba and b.id or nil
+
+		local casing = E:create_entity(this.casing_t)
+
+		casing.pos.x = this.pos.x + attack.casing_offset[an].x * flip
+		casing.pos.y = this.pos.y + attack.casing_offset[an].y
+		casing.render.sprites[1].ts = store.tick_ts
+		casing.render.sprites[1].flip_x = af
+
+		queue_insert(store, casing)
+
+		U.y_wait(store, fts(2))
+
+		if attack == ba and sa_active and this._sniper_killed then
+			local decal = E:create_entity(this.decal_reload)
+
+			decal.pos.x = this.pos.x + this.decal_reload_offset.x
+			decal.pos.y = this.pos.y + this.decal_reload_offset.y
+			decal.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, decal)
+			S:queue("TowerSentryWatchtowerBattleMomentumCast")
+
+			reduce_cd = true
+			boosted_shot = true
+		end
+
+		U.y_animation_wait(this, sid_bottom)
+
+		if this.mod_aim then
+			this.mod_aim.modifier.duration = 0
+			this.mod_aim = nil
+		end
+
+		local to_reload_name, to_reload_flip = do_anim("to_reload", false, last_pos)
+		local smoke_flip = to_reload_flip and -1 or 1
+		local smoke = E:create_entity(this.smoke_t)
+
+		smoke.pos.x = this.pos.x + this.render.sprites[sid_top].offset.x + attack.smoke_offset[to_reload_name].x * smoke_flip
+		smoke.pos.y = this.pos.y + this.render.sprites[sid_top].offset.y + attack.smoke_offset[to_reload_name].y
+		smoke.render.sprites[1].ts = store.tick_ts
+		smoke.render.sprites[1].name = to_reload_name
+		smoke.render.sprites[1].flip_x = to_reload_flip
+
+		queue_insert(store, smoke)
+
+		while not U.animation_finished(this, sid_bottom) do
+			coroutine.yield()
+		end
+
+		do_anim("reload", true, last_pos)
+
+		if reduce_cd then
+			attack.ts = store.tick_ts - attack.crosshair_time - attack.cooldown * ba_cd_red_factor
+		else
+			attack.ts = store.tick_ts - attack.crosshair_time
+		end
+
+		this._sniper_killed = false
+		this._sniper_shot_bullet_id = nil
+
+		do_anim("idle", false, last_pos, true)
+	end
+
+	local function shoot_ult(enemy, pos, crosshair_anim)
+		local an, af = do_anim("shoot", false, pos)
+		local hoffset = enemy and enemy.unit.hit_offset or v(0, 0)
+		local flip = af and -1 or 1
+		local b = E:create_entity(ult.bullet)
+
+		b.pos.x = this.pos.x + ult.bullet_start_offset[an].x * flip
+		b.pos.y = this.pos.y + ult.bullet_start_offset[an].y
+		b.bullet.from = V.vclone(b.pos)
+		b.bullet.to = V.v(pos.x + hoffset.x * (enemy and enemy.render.sprites[1].flip_x and -1 or 1), pos.y + hoffset.y)
+		b.bullet.target_id = enemy and enemy.id
+		b.bullet.source_id = this.id
+		b.bullet.level = this.tower.level
+		b.bullet.damage_factor = this.tower.damage_factor * ult.damage_factor
+
+		queue_insert(store, b)
+
+		local casing = E:create_entity(this.casing_t)
+
+		casing.pos.x = this.pos.x + ult.casing_offset[an].x * flip
+		casing.pos.y = this.pos.y + ult.casing_offset[an].y
+		casing.render.sprites[1].ts = store.tick_ts
+		casing.render.sprites[1].flip_x = af
+
+		queue_insert(store, casing)
+
+		if this.mod_aim_ult then
+			U.animation_start(this.mod_aim_ult, crosshair_anim, nil, store.tick_ts, false, 1)
+		end
+	end
+
+	local function fire_ult()
+		local last_enemy
+		local pred_pos
+		local delay_before_shot = 3 * ult.time_between_shots / 4
+		local delay_after_shot = ult.time_between_shots / 4
+		local ult_dummy
+
+		if this.coordinated_targeting then
+			local ult_bt = E:get_template(ult.bullet)
+
+			ult_dummy = E:create_entity("damage")
+			ult_dummy.damage_type = ult_bt.bullet.damage_type
+			ult_dummy.reduce_armor = ult_bt.bullet.reduce_armor
+			ult_dummy.reduce_magic_armor = ult_bt.bullet.reduce_magic_armor
+			ult_dummy.value = math.max(1, math.ceil(3 * ult_bt.bullet.damage_min * this.tower.damage_factor * ult.damage_factor))
+		end
+
+		for i = 1, 3 do
+			if i == 1 then
+				local _, enemies
+
+				_, enemies, pred_pos = U.find_foremost_enemy_between_range_filter_on(tpos(this), ult.min_range, ult.max_range, nil, ult.vis_flags, ult.vis_bans, filter_fn)
+
+				if not enemies or #enemies == 0 then
+					ult.ts = ult.ts + fts(5)
+
+					return
+				end
+
+				if data.current_mode == MODE_HP then
+					table.sort(enemies, function(v1, v2)
+						return v1.health.hp_max > v2.health.hp_max
+					end)
+				end
+
+				last_enemy = enemies[1]
+				pred_pos = P:node_pos(last_enemy.nav_path.pi, last_enemy.nav_path.spi, last_enemy.nav_path.ni + P:predict_enemy_node_advance(last_enemy, ult.node_prediction + fts(20)))
+
+				this.decal_flare_ult = E:create_entity(ult.flare_decal)
+				this.decal_flare_ult.pos.x = tpos(this).x + ult.flare_offset.x
+				this.decal_flare_ult.pos.y = tpos(this).y + ult.flare_offset.y
+				this.decal_flare_ult.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, this.decal_flare_ult)
+
+				this.mod_aim_ult = E:create_entity(ult.mod_crosshair)
+				this.mod_aim_ult.modifier.target_id = last_enemy.id
+				this.mod_aim_ult.modifier.duration = 1e99
+				this.mod_aim_ult.render.sprites[1].ts = store.tick_ts
+
+				if ult_dummy then
+					this.mod_aim_ult.pred_damage = U.predict_damage(last_enemy, ult_dummy)
+				end
+
+				queue_insert(store, this.mod_aim_ult)
+			elseif not last_enemy or last_enemy.health.dead then
+				local prediction = ult.shoot_time and (ult.shoot_time + delay_before_shot) or nil
+				local _, enemies, pos = U.find_foremost_enemy_in_range_filter_on(pred_pos, ult.retarget_range, prediction, ult.vis_flags, ult.vis_bans, filter_fn)
+
+				if enemies and #enemies ~= 0 then
+					if data.current_mode == MODE_HP then
+						table.sort(enemies, function(v1, v2)
+							return v1.health.hp_max > v2.health.hp_max
+						end)
+					end
+
+					last_enemy = enemies[1]
+					pred_pos = pos
+
+					queue_remove(store, this.mod_aim_ult)
+
+					this.mod_aim_ult = E:create_entity(ult.mod_crosshair)
+					this.mod_aim_ult.modifier.target_id = last_enemy.id
+					this.mod_aim_ult.modifier.duration = 1e99
+					this.mod_aim_ult.render.sprites[1].ts = store.tick_ts
+					this.mod_aim_ult.render.sprites[1].name = "idle" .. i
+
+					if ult_dummy then
+						this.mod_aim_ult.pred_damage = U.predict_damage(last_enemy, ult_dummy)
+					end
+
+					queue_insert(store, this.mod_aim_ult)
+				else
+					last_enemy = nil
+				end
+			else
+				pred_pos = P:node_pos(last_enemy.nav_path.pi, last_enemy.nav_path.spi, last_enemy.nav_path.ni + P:predict_enemy_node_advance(last_enemy, ult.node_prediction))
+			end
+
+			if i == 1 then
+				U.y_wait(store, fts(15))
+				U.y_animation_play(this, "aimstart", pred_pos.x < this.pos.x, store.tick_ts, 1, sid_bottom)
+				do_anim("aim", true, pred_pos)
+				shoot_ult(last_enemy, pred_pos, "shot")
+			else
+				U.y_wait(store, delay_before_shot)
+				shoot_ult(last_enemy, pred_pos, "shot" .. i)
+			end
+
+			U.y_wait(store, delay_after_shot)
+		end
+
+		this.mod_aim_ult.modifier.duration = 0
+		this.mod_aim_ult = nil
+
+		U.y_animation_wait(this, sid_bottom)
+
+		local an, af = do_anim("to_reload", false, pred_pos)
+		local smoke_flip = af and -1 or 1
+		local smoke = E:create_entity(this.smoke_t)
+
+		smoke.pos.x = this.pos.x + this.render.sprites[sid_top].offset.x + ult.smoke_offset[an].x * smoke_flip
+		smoke.pos.y = this.pos.y + this.render.sprites[sid_top].offset.y + ult.smoke_offset[an].y
+		smoke.render.sprites[1].ts = store.tick_ts
+		smoke.render.sprites[1].name = an
+		smoke.render.sprites[1].flip_x = af
+
+		queue_insert(store, smoke)
+
+		while not U.animation_finished(this, sid_bottom) do
+			coroutine.yield()
+		end
+
+		do_anim("reload", true, pred_pos)
+
+		ult.ts = store.tick_ts - ult.crosshair_time
+
+		do_anim("idle", false, pred_pos, true)
+	end
+
+	if data.current_mode == MODE_FOREMOST then
+		U.animation_start(this, "idlenothing", nil, store.tick_ts, false, this.render.banner_sid)
+	else
+		U.animation_start(this, "idle", nil, store.tick_ts, false, this.render.banner_sid)
+	end
+
+	while true do
+		if pow_a.changed then
+			pow_a.changed = nil
+			sa_active = true
+			ba_cd_red_factor = pow_a.cd_red_factor[pow_a.level]
+		end
+
+		if pow_b.changed then
+			pow_b.changed = nil
+			sba.cooldown = pow_b.cooldown[pow_b.level]
+		end
+
+		if pow_c.changed then
+			pow_c.changed = nil
+
+			if not this.decal_skill_c then
+				this.decal_skill_c = E:create_entity(this.decal_skill_c_t)
+				this.decal_skill_c.pos.x = this.pos.x
+				this.decal_skill_c.pos.y = this.pos.y
+				this.decal_skill_c.tower_id = this.id
+
+				queue_insert(store, this.decal_skill_c)
+			end
+
+			this.decal_skill_c.cooldown = pow_c.cooldown[pow_c.level]
+			this.decal_skill_c.damage_min = pow_c.damage_min[pow_c.level]
+			this.decal_skill_c.damage_max = pow_c.damage_max[pow_c.level]
+			this.decal_skill_c.range = ba.min_range
+		end
+
+		if this.change_mode then
+			this.change_mode = false
+
+			if data.current_mode == MODE_HP then
+				U.animation_start(this, "enter", nil, store.tick_ts, false, this.render.banner_sid)
+			else
+				U.animation_start(this, "leave", nil, store.tick_ts, false, this.render.banner_sid)
+			end
+		end
+
+		if this.tower.blocked then
+			coroutine.yield()
+		elseif ready_to_attack(ult, store, this.tower.cooldown_factor) then
+			fire_ult()
+		elseif U.tower_ready_to_use_power(pow_b, sba, store, this.tower) then
+			shoot(sba)
+		elseif ready_to_attack(ba, store, this.tower.cooldown_factor) then
+			shoot(ba)
+		else
+			coroutine.yield()
+		end
+	end
+end
+
+function scripts.tower_sniper.remove(this, store)
+	signal.remove("entity-killed", this._sniper_killed_handler)
+
+	if this.mod_aim then
+		this.mod_aim.modifier.duration = 0
+	end
+
+	if this.mod_aim_ult then
+		this.mod_aim_ult.modifier.duration = 0
+	end
+
+	if this.decal_flare_ult then
+		queue_remove(store, this.decal_flare_ult)
+	end
+
+	if this.decal_skill_c then
+		queue_remove(store, this.decal_skill_c)
+	end
+
+	return true
+end
+
+scripts.mod_sniper_aim = {}
+
+function scripts.mod_sniper_aim.insert(this, store)
+	if not scripts.mod_track_target.insert(this, store) then
+		return false
+	end
+
+	if this.pred_damage then
+		local target = store.entities[this.modifier.target_id]
+
+		target._sniper_pred_damage = (target._sniper_pred_damage or 0) + this.pred_damage
+		this._applied_damage = this.pred_damage
+	end
+
+	return true
+end
+
+function scripts.mod_sniper_aim.remove(this, store)
+	if this._applied_damage then
+		local target = store.entities[this.modifier.target_id]
+
+		if target then
+			target._sniper_pred_damage = (target._sniper_pred_damage or 0) - this._applied_damage
+		end
+
+		this._applied_damage = nil
+	end
+
+	return true
+end
+
+scripts.mod_sniper_skill_b_bleed = {}
+
+function scripts.mod_sniper_skill_b_bleed.insert(this, store)
+	local pow = E:get_template("tower_sniper").powers.skill_b
+	local level = this.modifier.level
+
+	this.dps.damage_min = pow.bleed_damage_min[level]
+	this.dps.damage_max = pow.bleed_damage_max[level]
+	this.dps.damage_every = pow.bleed_cycle_time
+	this.modifier.duration = pow.bleed_duration
+
+	return scripts.mod_dps.insert(this, store)
+end
+
+scripts.decal_sniper_skill_c = {}
+
+function scripts.decal_sniper_skill_c.update(this, store)
+	local home = V.vclone(this.pos)
+	local return_point = v(this.pos.x, this.pos.y - 5)
+	local return_point_back = v(this.pos.x, this.pos.y + 5)
+	local attack_ts = store.tick_ts - this.cooldown
+	local idle_ts = store.tick_ts
+	local tower = store.entities[this.tower_id]
+
+	if not tower then
+		queue_remove(store, this)
+
+		return
+	end
+
+	local function y_run_to(pos, anim)
+		local flip = pos.x < this.pos.x
+
+		U.set_destination(this, pos)
+		U.animation_start(this, anim, flip, store.tick_ts, true, 1)
+
+		while not U.walk(this, store.tick_length) do
+			coroutine.yield()
+		end
+
+		if pos == return_point or pos == return_point_back then
+			this.pos = V.vclone(home)
+		end
+
+		return flip
+	end
+
+	while true do
+		if store.tick_ts - idle_ts > this.idle_cd then
+			local interrupted = false
+
+			U.animation_start(this, "inhouseeveryxseconds", false, store.tick_ts, false, 1)
+
+			while not U.animation_finished(this) do
+				if store.tick_ts - attack_ts > this.cooldown and U.find_foremost_enemy_in_range_filter_off(this.pos, this.range, 0, this.vis_flags, this.vis_bans) ~= nil then
+					interrupted = true
+
+					break
+				end
+
+				coroutine.yield()
+			end
+
+			if not interrupted then
+				U.animation_start(this, "inhouse", false, store.tick_ts, true, 1)
+			end
+
+			idle_ts = store.tick_ts
+		end
+
+		if store.tick_ts - attack_ts > this.cooldown and not tower.tower.blocked then
+			local target = U.find_foremost_enemy_in_range_filter_off(this.pos, this.range, 0, this.vis_flags, this.vis_bans)
+
+			if target then
+				S:queue(this.sound_cast)
+
+				local anim = target.pos.y <= this.pos.y and "abouttogoout" or "abouttogoout2"
+
+				U.y_animation_play(this, anim, false, store.tick_ts, 1, 1)
+
+				local mod_duration = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) / this.motion.max_speed + fts(45)
+				local mod = E:create_entity(this.mod_stun)
+
+				mod.modifier.source_id = this.id
+				mod.modifier.target_id = target.id
+				mod.modifier.duration = mod_duration
+
+				queue_insert(store, mod)
+
+				local front = math.abs(km.signed_unroll(target.heading.angle)) < math.pi / 2 and 1 or -1
+				local slot = V.v(target.pos.x + (target.enemy.melee_slot.x + this.attack_offset.x) * front, target.pos.y + target.enemy.melee_slot.y + this.attack_offset.y)
+				local flip = y_run_to(slot, "run")
+
+				target = store.entities[target.id]
+
+				if target and not target.health.dead then
+					U.animation_start(this, "attack", target.pos.x < this.pos.x, store.tick_ts, false, 1)
+					S:queue(this.sound_dmg)
+
+					local anim_ts = store.tick_ts
+
+					for _, t in ipairs(this.hit_times) do
+						while t > store.tick_ts - anim_ts do
+							coroutine.yield()
+						end
+
+						if target and not target.health.dead then
+							local d = E:create_entity("damage")
+
+							d.source_id = this.id
+							d.target_id = target.id
+							d.damage_type = this.damage_type
+							d.value = math.ceil(U.frandom(this.damage_min * tower.tower.damage_factor, this.damage_max * tower.tower.damage_factor))
+
+							queue_damage(store, d)
+						end
+					end
+
+					while not U.animation_finished(this, 1) do
+						coroutine.yield()
+					end
+				end
+
+				local return_anim = string.find(anim, "2") and "goback2" or "goback"
+				local return_to = string.find(anim, "2") and return_point_back or return_point
+
+				y_run_to(return_to, "run")
+				U.y_animation_play(this, return_anim, false, store.tick_ts, 1, 1)
+
+				attack_ts = store.tick_ts
+				idle_ts = store.tick_ts
+
+				U.animation_start(this, "inhouse", false, store.tick_ts, true, 1)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
 return scripts

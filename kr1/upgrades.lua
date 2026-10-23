@@ -1322,7 +1322,9 @@ upgrades.arrows = {
 	"bullet_elf_ranger_skill_c_bounce_clone",
 	"bullet_crossbows",
 	"bullet_crossbows_skill_a",
-	"bullet_crossbows_skill_c"
+	"bullet_crossbows_skill_c",
+	"bullet_sniper_basic",
+	"bullet_sniper_skill_b"
 }
 
 upgrades.soldiers = {

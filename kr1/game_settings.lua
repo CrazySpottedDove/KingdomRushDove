@@ -26,7 +26,8 @@ GS.archer_towers = {
 	"tower_swamp_monster",
 	"tower_archers",
 	"tower_elf_ranger",
-	"tower_crossbows"
+	"tower_crossbows",
+	"tower_sniper"
 }
 GS.mage_towers = {
 	"tower_mage_1",
