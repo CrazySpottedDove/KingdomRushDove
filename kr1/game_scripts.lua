@@ -14279,7 +14279,7 @@ function scripts.mod_blood_elves.insert(this, store)
 		if this.modifier.source_id then
 			local source = store.entities[this.modifier.source_id]
 			if source and source.bullet then
-				source_damage = math.random(source.bullet.damage_min, source.bullet.damage_max) * source.bullet.damage_factor
+				source_damage = E.assign_damage(source.bullet.damage_type, math.random(source.bullet.damage_min, source.bullet.damage_max) * source.bullet.damage_factor, source.id, target.id)
 			end
 		end
 		if not source_damage then

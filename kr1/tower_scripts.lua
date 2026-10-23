@@ -38477,7 +38477,9 @@ function scripts.tower_tree.update(this, store)
 		s.nav_rally.new = true
 		s.pos.x, s.pos.y = this.pos.x + this.render.sprites[sid].offset.x, this.pos.y + this.render.sprites[sid].offset.y
 		s.powers.skill_b.level = pow_b.level
-		s.powers.skill_b.changed = true
+		if pow_b.level > 0 then
+			s.powers.skill_b.changed = true
+		end
 
 		b.soldiers = {s}
 		soldier = s
