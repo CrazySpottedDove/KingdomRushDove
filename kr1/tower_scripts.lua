@@ -41051,7 +41051,11 @@ function scripts.tower_sentry.update(this, store)
 		b.pos.x = this.pos.x + attack.bullet_start_offset[aim_an].x * flip
 		b.pos.y = this.pos.y + attack.bullet_start_offset[aim_an].y
 		b.bullet.from:copy(b.pos)
-		b.bullet.to:set(target.pos.x + target.unit.hit_offset.x * (target.render.sprites[1].flip_x and -1 or 1), target.pos.y + target.unit.hit_offset.y)
+		local flip = 1
+		if target.render and target.render.sprites[1].flip_x then
+			flip = -1
+		end
+		b.bullet.to:set(target.pos.x + target.unit.hit_offset.x * flip, target.pos.y + target.unit.hit_offset.y)
 		b.bullet.target_id = target.id
 		b.bullet.source_id = this.id
 		b.bullet.damage_factor = this.tower.damage_factor * (1 - this.distance_damage_factor + this.distance_damage_factor * this.attacks.range / this.distance_base)
