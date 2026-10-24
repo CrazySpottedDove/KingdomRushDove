@@ -1,1 +1,1 @@
-return {{date="2026-10-24",author="CrazySpottedDove",message="feat: version->2.1.0.2"},{date="2026-10-24",author="CrazySpottedDove",message="balance: 调整哨兵瞭望塔价格"}}
+return {{date="2026-10-24",author="CrazySpottedDove",message="feat: version->2.1.0.2"},{date="2026-10-24",author="CrazySpottedDove",message="balance: 调整哨兵瞭望塔价格"},{date="2026-10-24",author="CrazySpottedDove",message="chore: 调整release脚本"}}
