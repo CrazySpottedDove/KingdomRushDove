@@ -40261,7 +40261,7 @@ end
 function scripts.tower_forger.remove(this, store)
 	local current_bullets = this.tower_upgrade_persistent_data.current_bullets
 
-	if current_bullets and this.tower.sell then
+	if current_bullets then
 		for _, bullet in pairs(current_bullets) do
 			if bullet then
 				queue_remove(store, bullet)
