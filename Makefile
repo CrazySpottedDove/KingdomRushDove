@@ -41,6 +41,7 @@ assets_check: _examine_dir_map sync
 
 # 用于发布小的版本更新，使得更新器端可以在 master 分支上检查到最新更新
 # master 为“只含编译产物”的投影分支，由 master.sh 生成（不再 merge dev）
+# 每次打包会把 dev 上未投影的提交逐条投影，提交信息/作者/日期与 dev 一致
 package:
 # 	@bash $(MAKE_FILE_DIR)/package.sh
 # 	git add .
