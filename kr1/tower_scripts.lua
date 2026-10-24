@@ -41058,19 +41058,21 @@ function scripts.tower_sentry.update(this, store)
 		b.bullet.to:set(target.pos.x + target.unit.hit_offset.x * flip, target.pos.y + target.unit.hit_offset.y)
 		b.bullet.target_id = target.id
 		b.bullet.source_id = this.id
-		b.bullet.damage_factor = this.tower.damage_factor * (1 - this.distance_damage_factor + this.distance_damage_factor * this.attacks.range / this.distance_base)
-
+		b.bullet.damage_factor = this.tower.damage_factor
+		local factor = 1 - this.distance_damage_factor + this.distance_damage_factor * this.attacks.range / this.distance_base
+		if pow_b.level > 0 then
+			factor = factor * (1 + this.pos:dist(b.bullet.to) / pow_b.distance_scale)
+		end
 		if is_ult then
-			b.bullet.damage_factor = b.bullet.damage_factor * ult.damage_factor
+			factor = factor * ult.damage_factor
 			if pow_b.level > 0 then
 				U.append_mod(b.bullet, "mod_sentry_skill_b_bleed")
 			end
 		end
-		b.bullet.level = pow_b.level
+		b.bullet.damage_min = b.bullet.damage_min * factor
+		b.bullet.damage_max = b.bullet.damage_max * factor
 
-		if pow_b.level > 0 then
-			b.bullet.damage_factor = b.bullet.damage_factor * (1 + this.pos:dist(b.bullet.to) / pow_b.distance_scale)
-		end
+		b.bullet.level = pow_b.level
 
 		queue_insert(store, b)
 
