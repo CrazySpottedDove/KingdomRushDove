@@ -40988,7 +40988,7 @@ function scripts.tower_sentry.update(this, store)
 		end
 
 		if data.current_mode == MODE_FOREMOST then
-			return U.detect_foremost_enemy_between_range_filter_on(origin, this.attacks.blind_range, this.attacks.range, ba.vis_flags, ba.vis_bans, fn)
+			return U.detect_foremost_enemy_with_flying_preference_between_range_filter_on(origin, this.attacks.blind_range, this.attacks.range, ba.vis_flags, ba.vis_bans, fn)
 		end
 
 		local enemies = U.find_enemies_between_range_filter_on(origin, this.attacks.blind_range, this.attacks.range, ba.vis_flags, ba.vis_bans, fn)
