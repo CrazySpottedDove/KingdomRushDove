@@ -40843,8 +40843,9 @@ end
 
 function scripts.tower_sentry.get_info(this)
 	local info = scripts.tower_common.get_info(this)
-	info.damage_min = info.damage_min * this.attacks.range / this.powers.skill_b.distance_base
-	info.damage_max = info.damage_max * this.attacks.range / this.powers.skill_b.distance_base
+	local factor = 1 - this.distance_damage_factor + this.distance_damage_factor * this.attacks.range / this.distance_base
+	info.damage_min = info.damage_min * factor
+	info.damage_max = info.damage_max * factor
 	return info
 end
 
@@ -41053,7 +41054,7 @@ function scripts.tower_sentry.update(this, store)
 		b.bullet.to:set(target.pos.x + target.unit.hit_offset.x * (target.render.sprites[1].flip_x and -1 or 1), target.pos.y + target.unit.hit_offset.y)
 		b.bullet.target_id = target.id
 		b.bullet.source_id = this.id
-		b.bullet.damage_factor = this.tower.damage_factor * (this.attacks.range / pow_b.distance_base)
+		b.bullet.damage_factor = this.tower.damage_factor * (1 - this.distance_damage_factor + this.distance_damage_factor * this.attacks.range / this.distance_base)
 
 		if is_ult then
 			b.bullet.damage_factor = b.bullet.damage_factor * ult.damage_factor
