@@ -298,6 +298,13 @@ return {
 			tt_title = _("TOWER_LIGHT_PRIESTESS_NAME"),
 			tt_desc = _("TOWER_LIGHT_PRIESTESS_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_forger",
+			image = "kr6_quickmenu_main_icon_forger",
+			type = "forger",
+			tt_title = _("TOWER_FORGER_NAME"),
+			tt_desc = _("TOWER_FORGER_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -600,6 +607,13 @@ return {
 			image = "kr6_quickmenu_main_icon_crossbows",
 			tt_title = _("TOWER_CROSSBOWS_NAME"),
 			tt_desc = _("TOWER_CROSSBOWS_DESCRIPTION")
+		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_sentry",
+			type = "sentry",
+			image = "kr6_quickmenu_main_icon_sentry",
+			tt_title = _("TOWER_SENTRY_NAME"),
+			tt_desc = _("TOWER_SENTRY_DESCRIPTION")
 		}),
 		tpl.sell
 	}},
@@ -4852,6 +4866,115 @@ return {
 		}, {
 			tt_title = _("TOWER_SANDWORM_SLIME_NAME_2"),
 			tt_desc = _("TOWER_SANDWORM_SLIME_DESCRIPTION_2")
+		}}
+	}), tpl.sell}},
+	forger = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_forger_0001",
+		sounds = {"TowerArcaneForgerSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_FORGER_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_FORGER_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_FORGER_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_FORGER_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_FORGER_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_forger_0002",
+		sounds = {"TowerArcaneForgerSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_FORGER_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_FORGER_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_FORGER_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_FORGER_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_FORGER_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_forger_0003",
+		sounds = {"TowerArcaneForgerSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_FORGER_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_FORGER_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_FORGER_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_FORGER_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_FORGER_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_FORGER_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
+
+	sentry = {{M(tpl.change_mode, {
+		image = "kr6_quickmenu_action_icons_0012",
+		image_mode0 = "kr6_quickmenu_action_icons_0012",
+		image_mode1 = "kr6_quickmenu_action_icons_0013",
+		tt_title_mode0 = _("TOWER_SENTRY_CHANGE_MODE_FOREMOST_NAME"),
+		tt_desc_mode0 = _("TOWER_SENTRY_CHANGE_MODE_FOREMOST_DESCRIPTION"),
+		tt_phrase_mode0 = _("TOWER_SENTRY_CHANGE_MODE_FOREMOST_NOTE"),
+		tt_title_mode1 = _("TOWER_SENTRY_CHANGE_MODE_HP_NAME"),
+		tt_desc_mode1 = _("TOWER_SENTRY_CHANGE_MODE_HP_DESCRIPTION"),
+		tt_phrase_mode1 = _("TOWER_SENTRY_CHANGE_MODE_HP_NOTE")
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_sentry_0001",
+		sounds = {"TowerSentryWatchtowerSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_SENTRY_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SENTRY_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_SENTRY_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SENTRY_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_SENTRY_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SENTRY_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_SENTRY_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_sentry_0002",
+		sounds = {"TowerSentryWatchtowerSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_SENTRY_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SENTRY_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_SENTRY_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SENTRY_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_SENTRY_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SENTRY_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_SENTRY_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_sentry_0003",
+		sounds = {"TowerSentryWatchtowerSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_SENTRY_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SENTRY_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_SENTRY_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SENTRY_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_SENTRY_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SENTRY_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_SENTRY_SKILL_C_DESCRIPTION_3")
 		}}
 	}), tpl.sell}}
 }

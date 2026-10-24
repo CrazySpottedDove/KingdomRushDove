@@ -1273,7 +1273,7 @@ upgrades.arrows = {
 	"arrow_ranger",
 	"shotgun_musketeer",
 	"shotgun_musketeer_sniper",
-	"shotgun_musketeer_sniper_instakill",
+	"shotgun_musketeer_sentry_instakill",
 	"arrow_crossbow",
 	"axe_totem",
 	"dwarf_shotgun",
@@ -1322,7 +1322,10 @@ upgrades.arrows = {
 	"bullet_elf_ranger_skill_c_bounce_clone",
 	"bullet_crossbows",
 	"bullet_crossbows_skill_a",
-	"bullet_crossbows_skill_c"
+	"bullet_crossbows_skill_c",
+	"bullet_sentry_basic",
+	"bullet_sentry_skill_b",
+	"bullet_sentry_ult"
 }
 
 upgrades.soldiers = {
@@ -1550,7 +1553,8 @@ upgrades.mage_tower_bolts = {
 	"bullet_sunray_master_rapid_fire",
 	"bullet_sunray_master_skill_c",
 	"bullet_light_priestess",
-	"bullet_light_priestess_ult"
+	"bullet_light_priestess_ult",
+	"bullet_forger_basic"
 }
 
 local other_bolts = {
