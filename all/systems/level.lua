@@ -294,7 +294,7 @@ function level:init_coroutined(store)
 
 					if tower_data.powers and tower.powers then
 						for power_name, power_data in pairs(tower_data.powers) do
-							if tower.powers[power_name] then
+							if power_data.level > 0 and tower.powers[power_name] then
 								TU.set_power_level(store, tower, power_name, power_data.level)
 							end
 						end

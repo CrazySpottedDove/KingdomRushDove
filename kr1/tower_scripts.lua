@@ -2354,6 +2354,9 @@ scripts.tower_high_elven = {
 
 		return o
 	end,
+	on_power_upgrade_sentinel = function(this, power_name, power)
+		power.range = power.range_base + power.range_inc * power.level
+	end,
 	remove = function(this, store)
 		for _, s in pairs(this.sentinels) do
 			s.owner = nil
@@ -2461,11 +2464,6 @@ scripts.tower_high_elven = {
 				if pow_t.changed and pow_t.level == 1 then
 					pow_t.changed = nil
 					ta.ts = store.tick_ts
-				end
-
-				if pow_s.changed then
-					pow_s.range = pow_s.range_base + pow_s.range_inc * pow_s.level
-					pow_s.changed = nil
 				end
 
 				if U.tower_ready_to_use_power(pow_s, pow_s, store, tw) then
@@ -4256,6 +4254,18 @@ end
 
 -- 大贝莎
 scripts.tower_bfg = {
+	on_power_upgrade_missile = function(this, power_name, power)
+		local am = this.attacks.list[2]
+
+		am.range = am.range_base * (1 + power.range_inc_factor * power.level)
+		am.cooldown = am.cooldown_base - power.cooldown_dec * power.level
+		am.cooldown_mixed = am.cooldown_mixed_base - power.cooldown_mixed_dec * power.level
+	end,
+	on_power_upgrade_cluster = function(this, power_name, power)
+		local ac = this.attacks.list[3]
+
+		ac.cooldown = ac.cooldown_base - power.cooldown_dec * power.level
+	end,
 	update = function(this, store)
 		local tower_sid = 2
 		local a = this.attacks
@@ -4273,18 +4283,6 @@ scripts.tower_bfg = {
 			if this.tower.blocked then
 				coroutine.yield()
 			else
-				if pow_m.changed then
-					pow_m.changed = nil
-					am.range = am.range_base * (1 + pow_m.range_inc_factor * pow_m.level)
-					am.cooldown = am.cooldown_base - pow_m.cooldown_dec * pow_m.level
-					am.cooldown_mixed = am.cooldown_mixed_base - pow_m.cooldown_mixed_dec * pow_m.level
-				end
-
-				if pow_c.changed then
-					pow_c.changed = nil
-					ac.cooldown = ac.cooldown_base - pow_c.cooldown_dec * pow_c.level
-				end
-
 				if U.tower_ready_to_use_power(pow_m, am, store, this.tower) then
 					local trigger = U.find_first_enemy_in_range_filter_off(tpos, am.range, am.vis_flags, am.vis_bans)
 
@@ -6214,6 +6212,10 @@ end
 
 scripts.tower_tricannon = {}
 
+function scripts.tower_tricannon.on_power_upgrade_bombardment(this, power_name, power)
+	this.attacks.list[2].cooldown = power.cooldown[power.level]
+end
+
 function scripts.tower_tricannon.update(this, store)
 	local a = this.attacks
 	local ab = this.attacks.list[1]
@@ -6263,15 +6265,6 @@ function scripts.tower_tricannon.update(this, store)
 		if tw.blocked then
 			coroutine.yield()
 		else
-			if pow_m.changed then
-				am.cooldown = pow_m.cooldown[pow_m.level]
-				pow_m.changed = nil
-			end
-
-			if pow_o.changed then
-				pow_o.changed = nil
-			end
-
 			if U.tower_ready_to_use_power(pow_m, am, store, tw) then
 				local trigger = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, am.vis_flags, am.vis_bans)
 
@@ -11897,6 +11890,13 @@ end
 -- 观星 BEGIN
 scripts.tower_stargazers = {}
 
+function scripts.tower_stargazers.on_power_upgrade_teleport(this, power_name, power)
+	local at = this.attacks.list[2]
+
+	at.cooldown = power.cooldown[power.level]
+	at.teleport_nodes_back = power.teleport_nodes_back[power.level]
+end
+
 function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
 	local mod_star_m = E:get_template("mod_tower_elven_stargazers_star_death").modifier
 	local pow_s = this.powers.stars_death
@@ -11954,12 +11954,6 @@ function scripts.tower_stargazers.update(this, store)
 	local at_vis_bans = at.vis_bans
 
 	while true do
-		if pow_t.changed then
-			pow_t.changed = nil
-			at.cooldown = pow_t.cooldown[pow_t.level]
-			at.teleport_nodes_back = pow_t.teleport_nodes_back[pow_t.level]
-		end
-
 		if pow_s.changed then
 			pow_s.changed = nil
 			shots = aa.count_base + pow_s.level
@@ -13504,6 +13498,10 @@ end
 -- 五代奥术 BEGIN
 scripts.tower_arcane_wizard5 = {}
 
+function scripts.tower_arcane_wizard5.on_power_upgrade_disintegrate(this, power_name, power)
+	this.attacks.list[2].cooldown = power.cooldown[power.level]
+end
+
 function scripts.tower_arcane_wizard5.get_info(this)
 	local o = scripts.tower_common.get_info(this)
 
@@ -13548,15 +13546,6 @@ function scripts.tower_arcane_wizard5.update(this, store)
 		if this.tower.blocked then
 			coroutine.yield()
 		else
-			if pow_d.changed then
-				pow_d.changed = nil
-				ad.cooldown = pow_d.cooldown[pow_d.level]
-			end
-
-			if pow_e.changed then
-				pow_e.changed = nil
-			end
-
 			if this.ui.hover_active and this.ui.args == "empowerment" and not this.empowerments_previews then
 				this.empowerments_previews = {}
 
@@ -15153,6 +15142,16 @@ end
 -- 喷火器 BEGIN
 scripts.tower_flamespitter = {}
 
+function scripts.tower_flamespitter.on_power_upgrade_skill_bomb(this, power_name, power)
+	this.attacks.list[2].cooldown = power.cooldown[power.level]
+	this.render.sprites[3].hidden = false
+end
+
+function scripts.tower_flamespitter.on_power_upgrade_skill_columns(this, power_name, power)
+	this.attacks.list[3].cooldown = power.cooldown[power.level]
+	this.render.sprites[3].hidden = false
+end
+
 function scripts.tower_flamespitter.get_info(this)
 	local a = this.attacks.list[1]
 	local o = scripts.tower_common.get_info(this)
@@ -15444,30 +15443,6 @@ function scripts.tower_flamespitter.update(this, store)
 		else
 			if not this.render.sprites[this.render.sid_stove_fire].hidden and animation_finished(this, this.render.sid_stove_fire) then
 				this.render.sprites[this.render.sid_stove_fire].hidden = true
-			end
-
-			do
-				local pow = this.powers.skill_bomb
-
-				if pow.changed then
-					pow.changed = nil
-
-					local a = this.attacks.list[2]
-
-					a.cooldown = pow.cooldown[pow.level]
-					this.render.sprites[3].hidden = false
-				end
-
-				pow = this.powers.skill_columns
-
-				if pow.changed then
-					pow.changed = nil
-
-					local a = this.attacks.list[3]
-
-					a.cooldown = pow.cooldown[pow.level]
-					this.render.sprites[3].hidden = false
-				end
 			end
 
 			if idle_cooldown < store.tick_ts - last_ts_idle and (not target or not pred_pos) then
@@ -15820,6 +15795,14 @@ end
 -- 巨弩哨站 BEGIN
 scripts.tower_ballista = {}
 
+function scripts.tower_ballista.on_power_upgrade_skill_bomb(this, power_name, power)
+	this.attacks.list[2].cooldown = power.cooldown[power.level]
+end
+
+function scripts.tower_ballista.on_power_upgrade_skill_final_shot(this, power_name, power)
+	power.damage_factor = power.damage_factor_config[power.level]
+end
+
 function scripts.tower_ballista.update(this, store)
 	local a = this.attacks
 	local aa = a.list[1]
@@ -15989,16 +15972,6 @@ function scripts.tower_ballista.update(this, store)
 		if tw.blocked then
 			coroutine.yield()
 		else
-			if pow_b.changed then
-				pow_b.changed = nil
-				ab.cooldown = pow_b.cooldown[pow_b.level]
-			end
-
-			if pow_s.changed then
-				pow_s.damage_factor = pow_s.damage_factor_config[pow_s.level]
-				pow_s.changed = nil
-			end
-
 			if idle_cooldown < store.tick_ts - last_ts_idle and (not target or not pred_pos) then
 				local new_angle
 
@@ -17218,6 +17191,18 @@ end
 -- 蛤蟆 START
 scripts.tower_hermit_toad = {}
 
+function scripts.tower_hermit_toad.on_power_upgrade_instakill(this, power_name, power)
+	this.attacks.list[3].cooldown = power.cooldown[power.level]
+end
+
+function scripts.tower_hermit_toad.on_power_upgrade_jump(this, power_name, power)
+	local attack = this.attacks.list[4]
+
+	attack.cooldown = power.cooldown[power.level]
+	attack.damage_min = power.damage_min[power.level]
+	attack.damage_max = power.damage_max[power.level]
+end
+
 function scripts.tower_hermit_toad.get_info(this)
 	local index = 1
 	local type = STATS_TYPE_TOWER
@@ -17564,18 +17549,6 @@ function scripts.tower_hermit_toad.update(this, store)
 			coroutine.yield()
 		else
 			check_change_mode()
-
-			if pow_instakill.changed then
-				pow_instakill.changed = nil
-				attack_instakill.cooldown = pow_instakill.cooldown[pow_instakill.level]
-			end
-
-			if pow_jump.changed then
-				pow_jump.changed = nil
-				attack_jump.cooldown = pow_jump.cooldown[pow_jump.level]
-				attack_jump.damage_min = pow_jump.damage_min[pow_jump.level]
-				attack_jump.damage_max = pow_jump.damage_max[pow_jump.level]
-			end
 
 			if U.tower_ready_to_use_power(pow_instakill, attack_instakill, store, tw) then
 				attack = attack_instakill
@@ -18179,6 +18152,20 @@ end
 -- 电涌 START
 scripts.tower_sparking_geode = {}
 
+function scripts.tower_sparking_geode.on_power_upgrade_crystalize(this, power_name, power)
+	local a = this.attacks
+
+	a.list[2].cooldown = power.cooldown[power.level]
+	a.attack_count_for_min_cooldown = a.attack_count_for_min_cooldown_base - power.level - this.powers.spike_burst.level
+end
+
+function scripts.tower_sparking_geode.on_power_upgrade_spike_burst(this, power_name, power)
+	local a = this.attacks
+
+	a.list[3].cooldown = power.cooldown[power.level]
+	a.attack_count_for_min_cooldown = a.attack_count_for_min_cooldown_base - this.powers.crystalize.level - power.level
+end
+
 function scripts.tower_sparking_geode.get_info(this)
 	local b = E:get_template(this.attacks.list[1].bullet)
 	local o = scripts.tower_common.get_info(this)
@@ -18201,20 +18188,6 @@ function scripts.tower_sparking_geode.update(this, store)
 
 	a._last_target_pos = a._last_target_pos or v(REF_W, 0)
 	a_basic.ts = store.tick_ts - a_basic.cooldown + a.attack_delay_on_spawn
-
-	local function update_powers()
-		if pow_crystalize.changed then
-			pow_crystalize.changed = nil
-			a_crystalize.cooldown = pow_crystalize.cooldown[pow_crystalize.level]
-			a.attack_count_for_min_cooldown = a.attack_count_for_min_cooldown_base - pow_crystalize.level - pow_burst.level
-		end
-
-		if pow_burst.changed then
-			pow_burst.changed = nil
-			a_burst.cooldown = pow_burst.cooldown[pow_burst.level]
-			a.attack_count_for_min_cooldown = a.attack_count_for_min_cooldown_base - pow_crystalize.level - pow_burst.level
-		end
-	end
 
 	local function create_evolve_fx()
 		local fx = E:create_entity(this.fx_evolve)
@@ -18254,8 +18227,6 @@ function scripts.tower_sparking_geode.update(this, store)
 	end
 
 	local function a_basic_break()
-		update_powers()
-
 		if tw.blocked then
 			return true
 		end
@@ -18276,8 +18247,6 @@ function scripts.tower_sparking_geode.update(this, store)
 	U.animation_start(this, "on_loop", nil, store.tick_ts, true, 3, true)
 
 	while true do
-		update_powers()
-
 		if tw.blocked then
 		-- block empty
 		else
@@ -19988,6 +19957,18 @@ end
 -- 树灵 START
 scripts.tower_arborean_emissary = {}
 
+function scripts.tower_arborean_emissary.on_power_upgrade_gift_of_nature(this, power_name, power)
+	this.attacks.list[2].cooldown = power.cooldown[power.level]
+end
+
+function scripts.tower_arborean_emissary.on_power_upgrade_wave_of_roots(this, power_name, power)
+	local attack = this.attacks.list[3]
+
+	attack.cooldown = power.cooldown[power.level]
+	attack.damage_min = power.damage_min[power.level]
+	attack.damage_max = power.damage_max[power.level]
+end
+
 function scripts.tower_arborean_emissary.update(this, store)
 	local a = this.attacks
 	local ab = this.attacks.list[1]
@@ -20020,18 +20001,6 @@ function scripts.tower_arborean_emissary.update(this, store)
 		if tw.blocked then
 			coroutine.yield()
 		else
-			if pow_g.changed then
-				ag.cooldown = pow_g.cooldown[pow_g.level]
-				pow_g.changed = nil
-			end
-
-			if pow_w.changed then
-				aw.cooldown = pow_w.cooldown[pow_w.level]
-				aw.damage_min = pow_w.damage_min[pow_w.level]
-				aw.damage_max = pow_w.damage_max[pow_w.level]
-				pow_w.changed = nil
-			end
-
 			if U.tower_ready_to_use_power(pow_g, ag, store, tw) then
 				if U.is_soldiers_around_need_heal(store.soldiers, tpos, 0.99, a.range) then
 					last_ts = store.tick_ts
@@ -24500,6 +24469,30 @@ function scripts.tower_bone_flingers.remove(this, store)
 	return true
 end
 
+function scripts.tower_bone_flingers.on_power_upgrade_golem(this, power_name, power)
+	this.barrack.max_soldiers = power.level
+end
+
+function scripts.tower_bone_flingers.on_power_upgrade_skeleton(this, power_name, power)
+	local as1 = this.attacks.list[2]
+	local as2 = this.attacks.list[3]
+
+	if power.level == 1 then
+		as1.disabled = false
+		as2.disabled = true
+		as1.cooldown = power.cooldown[power.level]
+	elseif power.level == 2 then
+		as1.disabled = true
+		as2.disabled = false
+		as2.cooldown = power.cooldown[power.level]
+	else
+		as1.disabled = false
+		as2.disabled = false
+		as1.cooldown = power.cooldown[power.level]
+		as2.cooldown = power.cooldown[power.level]
+	end
+end
+
 function scripts.tower_bone_flingers.update(this, store)
 	local last_target_pos = V.v(0, 0)
 	local shots_count = 0
@@ -24510,9 +24503,7 @@ function scripts.tower_bone_flingers.update(this, store)
 	local formation_offset = -0.4
 	local soldier_added = false
 	local barrack = this.barrack
-	local pow_g = this.powers.golem
 	local last_soldier_pos = {}
-	local pow_s = this.powers.skeleton
 	local as1 = this.attacks.list[2]
 	local as2 = this.attacks.list[3]
 	local pow_m = this.powers.milk
@@ -24576,34 +24567,6 @@ function scripts.tower_bone_flingers.update(this, store)
 
 	while true do
 		if not this.tower.blocked then
-			if pow_m.changed then
-				pow_m.changed = nil
-			end
-
-			if pow_g.changed then
-				pow_g.changed = nil
-				this.barrack.max_soldiers = pow_g.level
-			end
-
-			if pow_s.changed then
-				pow_s.changed = nil
-
-				if pow_s.level == 1 then
-					as1.disabled = false
-					as2.disabled = true
-					as1.cooldown = pow_s.cooldown[pow_s.level]
-				elseif pow_s.level == 2 then
-					as1.disabled = true
-					as2.disabled = false
-					as2.cooldown = pow_s.cooldown[pow_s.level]
-				elseif pow_s.level == 3 then
-					as1.disabled = false
-					as2.disabled = false
-					as1.cooldown = pow_s.cooldown[pow_s.level]
-					as2.cooldown = pow_s.cooldown[pow_s.level]
-				end
-			end
-
 			check_and_do_spawn_attack(as1)
 			check_and_do_spawn_attack(as2)
 
@@ -24848,6 +24811,20 @@ end
 
 scripts.tower_ogre_shipwreck = {}
 
+function scripts.tower_ogre_shipwreck.on_power_upgrade_multishoot(this, power_name, power)
+	local attack = this.attacks.list[4]
+
+	attack.disabled = nil
+	attack.bullet = "bullet_ogre_shipwreck_musket_volley_lvl" .. power.level
+end
+
+function scripts.tower_ogre_shipwreck.on_power_upgrade_goblin_launcher(this, power_name, power)
+	local attack = this.attacks.list[3]
+
+	attack.disabled = nil
+	attack.cooldown = power.cooldown[power.level]
+end
+
 function scripts.tower_ogre_shipwreck.remove(this, store)
 	this._ogre_bomber_co = nil
 	this._ogre_attack_co = nil
@@ -24859,10 +24836,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 	local tw = this.tower
 	local b = this.barrack
 	local ag = this.attacks.list[3]
-	local am = this.attacks.list[4]
 	local p_armor = this.powers.armor
-	local p_multi = this.powers.multishoot
-	local p_goblin = this.powers.goblin_launcher
 
 	do
 		local list = this.attacks.list
@@ -25102,18 +25076,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 	end)
 
 	while true do
-		if p_multi.changed then
-			am.disabled = nil
-			p_multi.changed = nil
-			am.bullet = "bullet_ogre_shipwreck_musket_volley_lvl" .. p_multi.level
-		end
-
-		if p_goblin.changed then
-			ag.disabled = nil
-			p_goblin.changed = nil
-			ag.cooldown = p_goblin.cooldown[p_goblin.level]
-		end
-
 		if p_armor.changed then
 			p_armor.changed = nil
 			ag.bullet = "bomb_ogre_shipwreck_goblin_skill2"
@@ -30945,6 +30907,24 @@ end
 -- 沙虫
 scripts.tower_sandworm = {}
 
+function scripts.tower_sandworm.on_power_upgrade_slime(this, power_name, power)
+	local attack = this.attacks.list[3]
+
+	attack.disabled = false
+	attack.cooldown = power.cooldown[power.level]
+end
+
+function scripts.tower_sandworm.on_power_upgrade_eat(this, power_name, power)
+	this.attacks.list[2].cooldown = power.cooldown[power.level]
+end
+
+function scripts.tower_sandworm.on_power_upgrade_worm(this, power_name, power)
+	local attack = this.attacks.list[4]
+
+	attack.cooldown = power.cooldown[power.level]
+	attack.entity = "soldier_tower_sandworm_" .. power.level
+end
+
 function scripts.tower_sandworm.get_info(this)
 	local a = E:get_template(this.attacks.list[1].bullet)
 	local count = math.floor(a.aura.duration / a.aura.cycle_time + 1e-8)
@@ -30988,23 +30968,6 @@ function scripts.tower_sandworm.update(this, store)
 
 	while true do
 		if not this.tower.blocked then
-			if pow_s.level > 0 and pow_s.changed then
-				pow_s.changed = nil
-				as.disabled = false
-				as.cooldown = pow_s.cooldown[pow_s.level]
-			end
-
-			if pow_e.level > 0 and pow_e.changed then
-				pow_e.changed = nil
-				ae.cooldown = pow_e.cooldown[pow_e.level]
-			end
-
-			if pow_w.level > 0 and pow_w.changed then
-				pow_w.changed = nil
-				aw.cooldown = pow_w.cooldown[pow_w.level]
-				aw.entity = "soldier_tower_sandworm_" .. pow_w.level
-			end
-
 			-- 秒杀
 			if U.tower_ready_to_use_power(pow_e, ae, store, this.tower) then
 				local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ae.vis_flags, ae.vis_bans)
@@ -37877,6 +37840,14 @@ end
 
 scripts.tower_crossbows = {}
 
+function scripts.tower_crossbows.on_power_upgrade_skill_a(this, power_name, power)
+	this.attacks.list[2].cooldown = power.cooldown[power.level]
+end
+
+function scripts.tower_crossbows.on_power_upgrade_skill_c(this, power_name, power)
+	this.attacks.list[3].cooldown = power.cooldown[power.level]
+end
+
 function scripts.tower_crossbows.update(this, store)
 	local sa = this.powers.skill_a
 	local sb = this.powers.skill_b
@@ -37926,20 +37897,6 @@ function scripts.tower_crossbows.update(this, store)
 		if this.tower.blocked then
 			coroutine.yield()
 		else
-			if sa.changed then
-				sa.changed = nil
-				saa.cooldown = sa.cooldown[sa.level]
-			end
-
-			if sb.changed then
-				sb.changed = nil
-			end
-
-			if sc.changed then
-				sc.changed = nil
-				sca.cooldown = sc.cooldown[sc.level]
-			end
-
 			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
 				local target = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), this.attacks.range, ba.vis_flags, ba.vis_bans)
 
