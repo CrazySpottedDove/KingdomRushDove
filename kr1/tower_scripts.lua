@@ -36637,9 +36637,6 @@ function scripts.tower_sunray_master.update(this, store)
 	local base_range = E:get_template("tower_sunray_master").base_range
 	local basic_angle = 45
 
-	-- this.spawn_golem_flag = false
-	-- this.can_spawn_golem = true
-
 	local function create_gem_glow()
 		this.decal_glow = E:create_entity(this.decal_gem_glow)
 		this.decal_glow.tween.ts = store.tick_ts
@@ -36766,6 +36763,7 @@ function scripts.tower_sunray_master.update(this, store)
 		else
 			if pow_a.changed then
 				pow_a.changed = nil
+				this.barrack.max_soldiers = pow_a.level
 
 				if not this.controller_soldiers then
 					if not this.barrack.rally_pos and this.tower.default_rally_pos then
@@ -36778,9 +36776,7 @@ function scripts.tower_sunray_master.update(this, store)
 
 					queue_insert(store, this.controller_soldiers)
 				end
-
-				this.controller_soldiers.pow_level = pow_a.level
-				this.controller_soldiers.upgraded = true
+				RLU.fire_rally_fn(this, store, this.barrack.rally_pos.x, this.barrack.rally_pos.y, true)
 			end
 
 			if pow_b.changed then
@@ -36794,19 +36790,6 @@ function scripts.tower_sunray_master.update(this, store)
 			if pow_c.changed then
 				pow_c.changed = nil
 			end
-
-			-- if this.spawn_golem_flag then
-			-- 	this.spawn_golem_flag = false
-			-- 	this.can_spawn_golem = false
-
-			-- 	U.animation_start(this, "golem_spawn", nil, store.tick_ts, false, sid_mage)
-			-- 	U.animation_start(this, "golem_spawn", nil, store.tick_ts, false, sid_tower_glow)
-
-			-- 	while not U.animation_finished(this, sid_mage, 1) do
-			-- 		check_conditions_animation()
-			-- 		coroutine.yield()
-			-- 	end
-			-- end
 
 			if ready_to_attack(ult_attack, store, this.tower.cooldown_factor) then
 				local _, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, ult_attack.cast_time, ult_attack.vis_flags, ult_attack.vis_bans)
@@ -36876,8 +36859,6 @@ function scripts.tower_sunray_master.update(this, store)
 						check_conditions_animation()
 						coroutine.yield()
 					end
-
-					-- this.can_spawn_golem = false
 
 					local start_ts = store.tick_ts
 					local new_target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, beam_attack.vis_flags, beam_attack.vis_bans)
@@ -37000,8 +36981,6 @@ function scripts.tower_sunray_master.update(this, store)
 				U.animation_start(this, "idle_1", false, store.tick_ts, true, sid_mage)
 			end
 
-			-- this.can_spawn_golem = true
-
 			coroutine.yield()
 		end
 	end
@@ -37070,35 +37049,9 @@ scripts.controller_tower_sunray_master_soldiers = {}
 
 function scripts.controller_tower_sunray_master_soldiers.update(this, store)
 	local b = this.tower_ref.barrack
-	local pow = this.tower_ref.powers.skill_a
 	local tower_id = this.tower_ref.id
-	local last_pow_level = this.pow_level or 1
-
-	local function apply_level_delta(s, from_level, to_level)
-		if from_level == to_level then
-			return
-		end
-
-		s.health.hp_max = s.health.hp_max + pow.hp[to_level] - pow.hp[from_level]
-		SU.armor_inc_self(s, pow.armor[to_level] - pow.armor[from_level])
-		s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min + pow.damage_min[to_level] - pow.damage_min[from_level]
-		s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + pow.damage_max[to_level] - pow.damage_max[from_level]
-	end
 
 	while true do
-		if this.pow_level ~= last_pow_level then
-			for i = 1, b.max_soldiers do
-				local s = b.soldiers[i]
-
-				if s and store.entities[s.id] then
-					apply_level_delta(s, last_pow_level, this.pow_level)
-					U.heal(s, s.health.hp_max)
-				end
-			end
-
-			last_pow_level = this.pow_level
-		end
-
 		if not this.tower_ref.blocked then
 			for i = 1, b.max_soldiers do
 				local s = b.soldiers[i]
@@ -37109,7 +37062,6 @@ function scripts.controller_tower_sunray_master_soldiers.update(this, store)
 						last_pos = s.pos
 						simulation:queue_remove_entity(s)
 					end
-					-- this.tower_ref.spawn_golem_flag = true
 					s = E:create_entity(b.soldier_type)
 					s.soldier.tower_id = tower_id
 					s.soldier.tower_soldier_idx = i
@@ -37120,9 +37072,6 @@ function scripts.controller_tower_sunray_master_soldiers.update(this, store)
 					end
 					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
 					s.nav_rally.new = true
-
-					apply_level_delta(s, 1, this.pow_level)
-					s.health.hp = s.health.hp_max
 
 					SU.soldier_inherit_tower_buff_factor(s, this.tower_ref, store.tick_ts)
 					queue_insert(store, s)
