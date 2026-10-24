@@ -2870,7 +2870,7 @@ tt.powers.instakill.on_power_upgrade = function(this, power_name, power)
 	this.melee.attacks[3].damage_min = E:get_template("tower_swamp_monster").powers.instakill.damage_min_soldier[power.level]
 	this.melee.attacks[3].damage_max = E:get_template("tower_swamp_monster").powers.instakill.damage_max_soldier[power.level]
 end
-tt.vis.bans = bor(tt.vis.bans, F_SKELETON)
+tt.vis.bans = bor(tt.vis.bans, F_SKELETON, F_LYCAN)
 
 tt = RT("mod_swamp_eat_slot", "modifier")
 AC(tt, "heal_on_kill")

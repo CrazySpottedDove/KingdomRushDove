@@ -4579,6 +4579,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.regen.cooldown = 2
 tt.motion.max_speed = 35
 tt.vis.flags = bor(F_BLOCK, F_FRIEND)
+tt.vis.bans = bor(F_LYCAN)
 tt.melee.range = 70
 tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].cooldown = 3
