@@ -5364,6 +5364,7 @@ return {
 	MAP_UI_UISET_HUD_SCALE = "In-Game Skill Button Scale",
 	MAP_UI_UISET_PERF_ENABLED = "Enable Performance Monitor",
 	MAP_UI_UISET_TOWER_MENU = "Enable In-Game Tower Menu",
+	MAP_UI_UISET_TOWER_MENU_GRID_BG_HIDDEN = "Hide Tower Menu Grid Background",
 	MAP_UI_UISET_TOWER_MENU_GRID_COLS = "Tower Menu Grid Columns",
 	MAP_UI_UISET_TOWER_MENU_GRID_ROWS = "Tower Menu Grid Rows",
 	MAP_UI_UI_SETTINGS = "UI Settings",

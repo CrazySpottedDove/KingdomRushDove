@@ -8384,7 +8384,8 @@ function TowerMenu:show(tower_menu)
 		end
 	end
 
-	local grid_config = data.tower_menu_grid(configer.ui_settings())
+	local ui_settings = configer.ui_settings()
+	local grid_config = data.tower_menu_grid(ui_settings)
 
 	local non_grid_actions = {"tw_sell", "tw_rally", "tw_point", "tw_change_mode"}
 	local function is_grid_item(tower_menu_item)
@@ -8624,7 +8625,7 @@ function TowerMenu:show(tower_menu)
 			grid_bg.pos = v(x_left, y_top)
 			grid_bg.size = v(x_right - x_left, y_bottom - y_top)
 			grid_bg.shape.args = {"fill", 0, 0, grid_bg.size.x, grid_bg.size.y, grid_config.background_radius, grid_config.background_radius}
-			grid_bg.hidden = false
+			grid_bg.hidden = ui_settings.tower_menu_grid_background_hidden
 		end
 
 		x_left, x_right = x_left - data.tower_menu_center_x - 25, x_right - data.tower_menu_center_x + 25

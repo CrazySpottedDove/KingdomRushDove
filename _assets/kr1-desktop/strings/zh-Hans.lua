@@ -5367,6 +5367,7 @@ return {
 	MAP_UI_UISET_HUD_SCALE = "局内技能按钮缩放",
 	MAP_UI_UISET_PERF_ENABLED = "启用性能检测",
 	MAP_UI_UISET_TOWER_MENU = "启用局内防御塔菜单",
+	MAP_UI_UISET_TOWER_MENU_GRID_BG_HIDDEN = "隐藏防御塔菜单网格背景",
 	MAP_UI_UISET_TOWER_MENU_GRID_COLS = "防御塔菜单网格列数",
 	MAP_UI_UISET_TOWER_MENU_GRID_ROWS = "防御塔菜单网格行数",
 	MAP_UI_UI_SETTINGS = "UI设置",
