@@ -1548,8 +1548,8 @@ function scripts.tower_common.get_info(this)
 
 	return {
 		type = STATS_TYPE_TOWER,
-		damage_min = math.ceil(min),
-		damage_max = math.ceil(max),
+		damage_min = min,
+		damage_max = max,
 		damage_type = d_type,
 		range = this.attacks.range,
 		cooldown = cooldown

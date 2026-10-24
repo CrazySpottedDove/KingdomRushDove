@@ -1622,6 +1622,44 @@ function seek.find_biggest_enemy_in_range_filter_on(origin, range, flags, bans, 
 	return biggest_enemy
 end
 
+function seek.find_biggest_enemy_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_fn)
+	local x = origin.x
+	local y = origin.y
+	local min_col = max(1, _x_to_col(x - max_range))
+	local max_col = min(_cols, _x_to_col(x + max_range))
+	local b = max_range * _aspect
+	local min_row = max(1, _y_to_row(y - b))
+	local max_row = min(_rows, _y_to_row(y + b))
+	local index_base = (min_row - 1) * _cols - 1
+	local r_outer_sq = max_range * max_range
+	local r_inner_sq = min_range * min_range
+	local max_hp = -1
+	local biggest_enemy = nil
+
+	for _ = min_row, max_row do
+		for col = min_col, max_col do
+			local cell = id_arrays[index_base + col]
+			local array = cell.array
+
+			for i = 0, cell.size - 1 do
+				local entity = entities[array[i]]
+				local dx = entity.pos.x - x
+				local dy = (entity.pos.y - y) * _aspect_inv
+				local dist2 = dx * dx + dy * dy
+
+				if (dist2 <= r_outer_sq) and (dist2 >= r_inner_sq) and enemy_filter_simple(entity, flags, bans) and filter_fn(entity, origin) and entity.health.hp > max_hp then
+					max_hp = entity.health.hp
+					biggest_enemy = entity
+				end
+			end
+		end
+
+		index_base = index_base + _cols
+	end
+
+	return biggest_enemy
+end
+
 function seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(origin, range, flags, bans, filter_fn)
 	local x = origin.x
 	local y = origin.y

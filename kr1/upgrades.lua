@@ -1324,7 +1324,8 @@ upgrades.arrows = {
 	"bullet_crossbows_skill_a",
 	"bullet_crossbows_skill_c",
 	"bullet_sentry_basic",
-	"bullet_sentry_skill_b"
+	"bullet_sentry_skill_b",
+	"bullet_sentry_ult"
 }
 
 upgrades.soldiers = {
