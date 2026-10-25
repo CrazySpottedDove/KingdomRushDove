@@ -2,14 +2,17 @@
 预编译 CLI
 用法：
   luajit scripts/precompile.lua check
-  luajit scripts/precompile.lua build
+  luajit scripts/precompile.lua build [--force]
   luajit scripts/precompile.lua dump [entity]
 ]]
 
 package.path = "./?.lua;./kr1/?.lua;./all/?.lua;./all/systems/?.lua;./lib/?.lua;./kr1-desktop/?.lua;" .. "./all-desktop/?.lua;./_assets/?.lua;./_assets/kr1-desktop/?.lua;./_assets/all-desktop/?.lua;" .. "./lib/klua/?.lua;./lib/hump/?.lua;./precompile/?.lua;" .. package.path
 
+local bit = require("bit")
+
 local command = arg[1] or "check"
 local GENERATED_DIR = "precompile/generated"
+local CACHE_FILE = GENERATED_DIR .. "/.build_cache"
 local GROUPS = {"enemies", "bullets", "soldiers", "modifiers", "auras"}
 
 local function fail(message)
@@ -423,7 +426,65 @@ local function write_file(path, content)
 	file:close()
 end
 
-local function run_generate(write)
+-- 影响生成结果的所有 Lua 输入。生成物也纳入指纹，避免被手删/手改后仍跳过。
+local FINGERPRINT_DIRS = "all kr1 kr1-desktop all-desktop precompile scripts lib dove_modules _assets plugin patches"
+
+local function capture(command)
+	local pipe = io.popen(command, "r")
+	if not pipe then
+		return nil
+	end
+	local output = pipe:read("*a")
+	pipe:close()
+	if not output or output == "" then
+		return nil
+	end
+	return output
+end
+
+local function build_fingerprint()
+	local command = "{ find " .. FINGERPRINT_DIRS .. " -type f -name '*.lua' ! -path 'precompile/generated/*' -printf '%p\\t%s\\t%T@\\n' 2>/dev/null; " .. "find . -maxdepth 1 -type f -name '*.lua' -printf '%p\\t%s\\t%T@\\n' 2>/dev/null; " .. "find " .. GENERATED_DIR .. " -maxdepth 1 -type f -name '*.lua' -printf '%p\\t%s\\t%T@\\n' 2>/dev/null; " .. "} | LC_ALL=C sort"
+
+	local text = capture(command)
+	if not text then
+		return nil
+	end
+
+	-- FNV-1a，避免把整份 stat 列表写进缓存文件。
+	local hash = 2166136261
+	for i = 1, #text do
+		hash = bit.bxor(hash, text:byte(i)) % 4294967296
+		hash = (hash * 16777619) % 4294967296
+	end
+	return string.format("%08x-%d", hash, #text)
+end
+
+local run_generate
+
+local function run_build(force)
+	local before = build_fingerprint()
+	if not force and before then
+		local cached = read_file(CACHE_FILE)
+		if cached and cached:gsub("%s+$", "") == before then
+			print("输入未变化，跳过预编译")
+			return 0
+		end
+	end
+
+	local code = run_generate(true)
+	if code == 0 then
+		local after = build_fingerprint()
+		if after then
+			os.execute("mkdir -p " .. GENERATED_DIR)
+			write_file(CACHE_FILE, after .. "\n")
+		end
+	else
+		os.remove(CACHE_FILE)
+	end
+	return code
+end
+
+function run_generate(write)
 	local E = load_entities()
 	local specs = require("precompile.specs")
 	local source = require("precompile.frontend.source")
@@ -451,8 +512,15 @@ local function run_generate(write)
 
 	if write then
 		os.execute("mkdir -p " .. GENERATED_DIR)
+		local stale_set = {}
+		for _, path in ipairs(stale) do
+			stale_set[path] = true
+		end
 		for name, content in pairs(files) do
-			write_file(GENERATED_DIR .. "/" .. name .. ".lua", content)
+			local path = GENERATED_DIR .. "/" .. name .. ".lua"
+			if stale_set[path] then
+				write_file(path, content)
+			end
 		end
 	end
 
@@ -573,7 +641,8 @@ if command == "check" then
 	end
 	os.exit(run_generate(false))
 elseif command == "build" then
-	os.exit(run_generate(true))
+	local force = arg[2] == "--force" or arg[2] == "-f"
+	os.exit(run_build(force))
 elseif command == "dump" then
 	os.exit(run_dump(arg[2]))
 elseif command == "which" then
