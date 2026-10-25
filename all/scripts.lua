@@ -10954,6 +10954,12 @@ function scripts.mod_track_target.update_sm(this, store)
 	end
 end
 
+local aura_filter_current
+local function aura_filter(e, origin)
+	local aura = aura_filter_current
+	return (not aura.allowed_templates or table.arraycontains(aura.allowed_templates, e.template_name)) and (not aura.excluded_templates or not table.arraycontains(aura.excluded_templates, e.template_name)) and (not aura.filter_source or aura.source_id ~= e.id)
+end
+
 function scripts.aura_apply_damage.update_sm(this, store)
 	local a = this.aura
 	local context = this.main_script.context
@@ -11007,11 +11013,9 @@ function scripts.aura_apply_damage.update_sm(this, store)
 			end
 		elseif band(a.vis_bans, F_FRIEND) ~= 0 then
 			if a.allowed_templates or a.excluded_templates or a.filter_source then
-				local aura = this.aura
-				local function filter_fn(e)
-					return (not aura.allowed_templates or table.arraycontains(aura.allowed_templates, e.template_name)) and (not aura.excluded_templates or not table.arraycontains(aura.excluded_templates, e.template_name)) and (not aura.filter_source or aura.source_id ~= e.id)
-				end
-				targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, filter_fn)
+				aura_filter_current = a
+				targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, aura_filter)
+				aura_filter_current = nil
 			else
 				targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 			end
@@ -11063,71 +11067,97 @@ function scripts.aura_apply_mod.update_sm(this, store)
 	local a = this.aura
 	local context = this.main_script.context
 
-	local function finish()
-		if a.with_fade then
-			context.state = 3
-			U.animation_start_default(this, "out", false, store.tick_ts, false)
-		else
-			simulation:queue_remove_entity(this)
-		end
-	end
-
-	local function init_context()
-		context.state = 1
-		if a.apply_duration then
-			context.first_hit_ts = store.tick_ts
-		end
-		if a.cycles then
-			context.cycles_count = 0
-		end
-		if a.max_count then
-			context.victims_count = 0
-		end
-		if this.ps_names then
-			context.ps_instances = {}
-			for i = 1, #this.ps_names do
-				local ps = E:create_entity(this.ps_names[i])
-				if this.ps_spread_follow_radius then
-					ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
-				end
-				ps.particle_system.track_id = this.id
-				simulation:queue_insert_entity(ps)
-				context.ps_instances[i] = ps
-			end
-		end
-		if a.track_source then
-			local source = store.entities[this.aura.source_id]
-			if source and source.pos then
-				this.pos = source.pos
-			end
-		end
-		if a.track_target then
-			local target = store.entities[this.aura.target_id]
-			if target and target.pos then
-				this.pos = target.pos
-			end
-		end
-		if a.apply_delay then
-			context.last_hit_ts = store.tick_ts - this.aura.apply_delay - this.aura.cycle_time
-		else
-			context.last_hit_ts = store.tick_ts - this.aura.cycle_time
-		end
-		context.mods = this.aura.mods or {this.aura.mod}
-	end
-
 	if context.state == 0 then
 		if a.with_fade then
 			U.animation_start_default(this, "in", false, store.tick_ts, false)
 			context.state = 2
 		else
-			init_context()
+			context.state = 1
+			if a.apply_duration then
+				context.first_hit_ts = store.tick_ts
+			end
+			if a.cycles then
+				context.cycles_count = 0
+			end
+			if a.max_count then
+				context.victims_count = 0
+			end
+			if this.ps_names then
+				context.ps_instances = {}
+				for i = 1, #this.ps_names do
+					local ps = E:create_entity(this.ps_names[i])
+					if this.ps_spread_follow_radius then
+						ps.particle_system.emit_area_spread = V.vv(a.radius)
+					end
+					ps.particle_system.track_id = this.id
+					simulation:queue_insert_entity(ps)
+					context.ps_instances[i] = ps
+				end
+			end
+			if a.track_source then
+				local source = store.entities[a.source_id]
+				if source and source.pos then
+					this.pos = source.pos
+				end
+			end
+			if a.track_target then
+				local target = store.entities[a.target_id]
+				if target and target.pos then
+					this.pos = target.pos
+				end
+			end
+			if a.apply_delay then
+				context.last_hit_ts = store.tick_ts - a.apply_delay - a.cycle_time
+			else
+				context.last_hit_ts = store.tick_ts - a.cycle_time
+			end
+			context.mods = a.mods or {a.mod}
 		end
 	end
 
 	if a.with_fade then
 		if context.state == 2 then
 			if U.animation_finished_default(this) then
-				init_context()
+				context.state = 1
+				if a.apply_duration then
+					context.first_hit_ts = store.tick_ts
+				end
+				if a.cycles then
+					context.cycles_count = 0
+				end
+				if a.max_count then
+					context.victims_count = 0
+				end
+				if this.ps_names then
+					context.ps_instances = {}
+					for i = 1, #this.ps_names do
+						local ps = E:create_entity(this.ps_names[i])
+						if this.ps_spread_follow_radius then
+							ps.particle_system.emit_area_spread = V.vv(a.radius)
+						end
+						ps.particle_system.track_id = this.id
+						simulation:queue_insert_entity(ps)
+						context.ps_instances[i] = ps
+					end
+				end
+				if a.track_source then
+					local source = store.entities[a.source_id]
+					if source and source.pos then
+						this.pos = source.pos
+					end
+				end
+				if a.track_target then
+					local target = store.entities[a.target_id]
+					if target and target.pos then
+						this.pos = target.pos
+					end
+				end
+				if a.apply_delay then
+					context.last_hit_ts = store.tick_ts - a.apply_delay - a.cycle_time
+				else
+					context.last_hit_ts = store.tick_ts - a.cycle_time
+				end
+				context.mods = a.mods or {a.mod}
 				U.animation_start_default(this, "run", false, store.tick_ts, true)
 			else
 				return
@@ -11144,28 +11174,43 @@ function scripts.aura_apply_mod.update_sm(this, store)
 		context.last_hit_ts = 1e+99
 	end
 
-	if a.cycles and context.cycles_count >= this.aura.cycles then
-		finish()
+	if a.cycles and context.cycles_count >= a.cycles then
+		if a.with_fade then
+			context.state = 3
+			U.animation_start_default(this, "out", false, store.tick_ts, false)
+		else
+			simulation:queue_remove_entity(this)
+		end
 		return
 	end
 
-	if a.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration then
-		finish()
+	if a.duration >= 0 and store.tick_ts - a.ts > this.actual_duration then
+		if a.with_fade then
+			context.state = 3
+			U.animation_start_default(this, "out", false, store.tick_ts, false)
+		else
+			simulation:queue_remove_entity(this)
+		end
 		return
 	end
 
 	if (a.track_source and not a.track_dead) or a.source_vis_flags or a.requires_alive_source then
-		local source = store.entities[this.aura.source_id]
+		local source = store.entities[a.source_id]
 
 		if a.track_source and not a.track_dead and (not source or (source.health and source.health.dead)) then
-			finish()
+			if a.with_fade then
+				context.state = 3
+				U.animation_start_default(this, "out", false, store.tick_ts, false)
+			else
+				simulation:queue_remove_entity(this)
+			end
 			return
 		end
 		if this.render and source and source.enemy and not source.enemy.can_do_magic then
 			this.render.sprites[1].hidden = not source.enemy.can_do_magic
 			return
 		end
-		if a.source_vis_flags and source and source.vis and band(source.vis.bans, this.aura.source_vis_flags) ~= 0 then
+		if a.source_vis_flags and source and source.vis and band(source.vis.bans, a.source_vis_flags) ~= 0 then
 			return
 		end
 		if a.requires_alive_source and source and source.health and source.health.dead then
@@ -11173,16 +11218,16 @@ function scripts.aura_apply_mod.update_sm(this, store)
 		end
 	end
 
-	local apply = store.tick_ts - context.last_hit_ts >= this.aura.cycle_time
+	local apply = store.tick_ts - context.last_hit_ts >= a.cycle_time
 	if a.apply_duration then
-		apply = apply and store.tick_ts - context.first_hit_ts <= this.aura.apply_duration
+		apply = apply and store.tick_ts - context.first_hit_ts <= a.apply_duration
 	end
 	if not apply then
 		return
 	end
 
 	if this.render and a.cast_resets_sprite_id then
-		this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
+		this.render.sprites[a.cast_resets_sprite_id].ts = store.tick_ts
 	end
 	context.last_hit_ts = store.tick_ts
 	if a.cycles then
@@ -11193,24 +11238,22 @@ function scripts.aura_apply_mod.update_sm(this, store)
 	if band(a.vis_bans, F_ENEMY) ~= 0 then
 		targets = {}
 		for _, v in pairs(store.soldiers) do
-			if not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.arraycontains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.arraycontains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id) then
+			if not v.health.dead and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, a.radius) and (not a.allowed_templates or table.arraycontains(a.allowed_templates, v.template_name)) and (not a.excluded_templates or not table.arraycontains(a.excluded_templates, v.template_name)) and (not a.filter_source or a.source_id ~= v.id) then
 				targets[#targets + 1] = v
 			end
 		end
 	elseif band(a.vis_bans, F_FRIEND) ~= 0 then
 		if a.allowed_templates or a.excluded_templates or a.filter_source then
-			local aura = this.aura
-			local function filter_fn(e)
-				return (not aura.allowed_templates or table.arraycontains(aura.allowed_templates, e.template_name)) and (not aura.excluded_templates or not table.arraycontains(aura.excluded_templates, e.template_name)) and (not aura.filter_source or aura.source_id ~= e.id)
-			end
-			targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, filter_fn)
+			aura_filter_current = a
+			targets = U.find_enemies_in_range_filter_on(this.pos, a.radius, a.vis_flags, a.vis_bans, aura_filter)
+			aura_filter_current = nil
 		else
-			targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+			targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 		end
 	else
 		targets = {}
 		for _, v in pairs(store.entities) do
-			if v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.arraycontains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.arraycontains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id) then
+			if v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, a.radius) and (not a.allowed_templates or table.arraycontains(a.allowed_templates, v.template_name)) and (not a.excluded_templates or not table.arraycontains(a.excluded_templates, v.template_name)) and (not a.filter_source or a.source_id ~= v.id) then
 				targets[#targets + 1] = v
 			end
 		end
@@ -11221,11 +11264,11 @@ function scripts.aura_apply_mod.update_sm(this, store)
 	end
 
 	for i = 1, #targets do
-		if a.targets_per_cycle and i > this.aura.targets_per_cycle then
+		if a.targets_per_cycle and i > a.targets_per_cycle then
 			break
 		end
 		if a.max_count then
-			if context.victims_count >= this.aura.max_count then
+			if context.victims_count >= a.max_count then
 				break
 			end
 			context.victims_count = context.victims_count + 1
@@ -11235,11 +11278,11 @@ function scripts.aura_apply_mod.update_sm(this, store)
 		local mods = context.mods
 		for j = 1, #mods do
 			local new_mod = E:create_entity(mods[j])
-			new_mod.modifier.level = this.aura.level
+			new_mod.modifier.level = a.level
 			new_mod.modifier.target_id = target.id
 			new_mod.modifier.source_id = this.id
-			new_mod.modifier.damage_factor = this.aura.damage_factor
-			if a.hide_source_fx and target.id == this.aura.source_id then
+			new_mod.modifier.damage_factor = a.damage_factor
+			if a.hide_source_fx and target.id == a.source_id then
 				new_mod.render = nil
 			end
 			simulation:queue_insert_entity(new_mod)

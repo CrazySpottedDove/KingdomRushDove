@@ -185,7 +185,6 @@ precompile_test:
 	luajit ./precompile/tests/specialize_test.lua
 	luajit ./precompile/tests/parity_test.lua
 	luajit ./precompile/tests/hot_test.lua
-	luajit ./precompile/tests/type_test.lua
 	luajit ./precompile/tests/mod_dps_test.lua
 
 # 文案内嵌表达式检查：加载 entity_db 后逐条展开 %$...%$，验证模板/字段/数值格式

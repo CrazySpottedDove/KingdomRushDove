@@ -356,10 +356,10 @@ precompile_check:
 当前生成规模：
 
 ```text
-生成函数: 1814（共享后 74）
-折叠分支: 3153
-展开循环: 806
-生成文件: 7，总计 0.19 MB
+生成函数: 1814（共享后 234）
+折叠分支: 10096
+展开循环: 811
+生成文件: 7，总计 0.56 MB
 ```
 
 `main_script.type` 保持模板原值：生成出来的是源级协程实现，因此不再像旧模板那样强制把子弹/光环/修饰器更新改成 `type = 1` 的状态机。
@@ -459,3 +459,25 @@ love . -autoplay 1    PASS，errors 0，waves 7/7，sim_seconds 134.0
 7 个状态机 update 已全部迁移完成，没有剩余待迁移项。
 
 注意：不能直接把协程 fallback 当作已验证的编译源。`mod_dps` 的报错就是因为 fallback 与旧模板状态机不等价；每个 `_sm` 迁移前都应先对照旧模板行为，而不是只看 autoplay 是否覆盖到。
+
+
+## 15. 常量白名单与表达式折叠
+
+编译期常量路径统一放在 `precompile/whitelists.lua`，按 family 维护：
+
+- `arrow.insert` 和 `arrow.update` 共用 `M.arrow`；
+- `bomb` / `bolt` / `mod_dps` / `aura_*` 各自一份；
+- `enemies` / `soldiers` 各自一份；
+- 不再有全局 `SAFE_ROOTS` / `SAFE_PATHS`；`value.lua` 只负责 Value 模型和路径拼接。
+
+特化器还支持表达式级常量折叠：`not true`、`true and x`、`false or x` 等会直接化简，因此 `if not b.straight_forward_distance and context.state == 2 then` 会变成 `if context.state == 2 then`。
+
+求值器同时支持 `band` / `bor` / `bnot` 这类纯函数的编译期求值，所以带 family 白名单的 `band(a.vis_bans, F_ENEMY) ~= 0` 会按实体配置直接折叠成 `true` / `false`，不会把整段目标筛选分支都留在运行时。
+
+验证：
+
+```text
+make precompile_test  6 个测试通过
+make precompile_check 通过
+love . -autoplay 1    PASS，errors 0，waves 7/7，sim_seconds 135.5
+```

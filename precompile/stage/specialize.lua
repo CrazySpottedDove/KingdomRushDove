@@ -42,14 +42,18 @@ local function child(env)
 	return setmetatable({
 		parent = env,
 		entity = env.entity,
+		whitelist = env.whitelist,
+		nullable = env.nullable,
 		locals = {}
 	}, Env)
 end
 
-local function new_env(entity)
+local function new_env(entity, whitelist, nullable)
 	return setmetatable({
 		parent = nil,
 		entity = entity,
+		whitelist = whitelist,
+		nullable = nullable,
 		locals = {}
 	}, Env)
 end
@@ -118,6 +122,104 @@ specialize_block = function(block, env, depth, options, state)
 	return table.concat(out)
 end
 
+local function is_truthy(value)
+	return value ~= nil and value ~= false
+end
+
+local function contains_nullable(node, env)
+	if node.tag == "Name" or node.tag == "Index" then
+		local value = eval.eval(node, env)
+		return value.known and value.safe and value.nullable == true
+	end
+	if node.tag == "Paren" then
+		return contains_nullable(node.expr, env)
+	end
+	if node.tag == "UnOp" then
+		return contains_nullable(node.expr, env)
+	end
+	if node.tag == "BinOp" and (node.op == "and" or node.op == "or") then
+		return contains_nullable(node.left, env) or contains_nullable(node.right, env)
+	end
+	return false
+end
+
+local function emit_condition(node, env)
+	if node.tag == "Paren" then
+		return emit_condition(node.expr, env)
+	end
+
+	if node.tag == "UnOp" and node.op == "not" then
+		local inner = emit_condition(node.expr, env)
+		if inner == "true" then
+			return "false"
+		elseif inner == "false" then
+			return "true"
+		end
+		return "(not " .. inner .. ")"
+	end
+
+	if node.tag == "BinOp" and (node.op == "and" or node.op == "or") then
+		local left = eval.eval(node.left, env)
+		if left.known and left.safe and contains_nullable(node.left, env) then
+			local left_code = emit_condition(node.left, env)
+			local right = eval.eval(node.right, env)
+			if right.known and right.safe and not right.nullable then
+				if node.op == "and" and is_truthy(right.value) then
+					return left_code
+				elseif node.op == "or" and not is_truthy(right.value) then
+					return left_code
+				end
+			end
+			if node.op == "and" then
+				if not is_truthy(left.value) then
+					return "false"
+				end
+				return "(" .. left_code .. " and " .. emit_condition(node.right, env) .. ")"
+			else
+				if not is_truthy(left.value) then
+					return emit_condition(node.right, env)
+				end
+				return "(" .. left_code .. " or " .. emit_condition(node.right, env) .. ")"
+			end
+		end
+
+		if left.known and left.safe then
+			if node.op == "and" then
+				if not is_truthy(left.value) then
+					return "false"
+				end
+				return emit_condition(node.right, env)
+			else
+				if is_truthy(left.value) then
+					return "true"
+				end
+				return emit_condition(node.right, env)
+			end
+		end
+
+		local left_code = emit_condition(node.left, env)
+		local right = eval.eval(node.right, env)
+		if right.known and right.safe and not right.nullable then
+			if node.op == "and" and is_truthy(right.value) then
+				return left_code
+			elseif node.op == "or" and not is_truthy(right.value) then
+				return left_code
+			end
+		end
+		return "(" .. left_code .. " " .. node.op .. " " .. emit_condition(node.right, env) .. ")"
+	end
+
+	local value = eval.eval(node, env)
+	if value.known and value.safe and not value.nullable then
+		return is_truthy(value.value) and "true" or "false"
+	end
+	if value.known and value.safe and value.nullable and not is_truthy(value.value) then
+		return "false"
+	end
+
+	return emitter.expr(node)
+end
+
 local function specialize_if(node, env, depth, options, state)
 	local pad = string.rep("\t", depth)
 	local out = {}
@@ -126,7 +228,7 @@ local function specialize_if(node, env, depth, options, state)
 	for i = 1, #node.clauses do
 		local clause = node.clauses[i]
 		local value = eval.eval(clause.cond, env)
-		if value.known and value.safe then
+		if value.known and value.safe and (not contains_nullable(clause.cond, env) or not is_truthy(value.value)) then
 			if value.value ~= nil and value.value ~= false then
 				state.folded = state.folded + 1
 				local body_env = child(env)
@@ -164,7 +266,7 @@ local function specialize_if(node, env, depth, options, state)
 		local keyword = (i == unknown_from) and "if" or "elseif"
 		local body_env = child(env)
 		local body = trim_block(specialize_block(clause.body, body_env, depth + 1, options, state))
-		out[#out + 1] = pad .. keyword .. " " .. emitter.expr(clause.cond) .. " then"
+		out[#out + 1] = pad .. keyword .. " " .. emit_condition(clause.cond, env) .. " then"
 		if body ~= "" then
 			out[#out + 1] = body
 		end
@@ -227,10 +329,10 @@ specialize_stat = function(node, env, depth, options, state)
 		return specialize_num_for(node, env, depth, options, state)
 	elseif tag == "While" then
 		local body_env = child(env)
-		return pad .. "while " .. emitter.expr(node.cond) .. " do\n" .. trim_block(specialize_block(node.body, body_env, depth + 1, options, state)) .. "\n" .. pad .. "end"
+		return pad .. "while " .. emit_condition(node.cond, env) .. " do\n" .. trim_block(specialize_block(node.body, body_env, depth + 1, options, state)) .. "\n" .. pad .. "end"
 	elseif tag == "Repeat" then
 		local body_env = child(env)
-		return pad .. "repeat\n" .. trim_block(specialize_block(node.body, body_env, depth + 1, options, state)) .. "\n" .. pad .. "until " .. emitter.expr(node.cond)
+		return pad .. "repeat\n" .. trim_block(specialize_block(node.body, body_env, depth + 1, options, state)) .. "\n" .. pad .. "until " .. emit_condition(node.cond, env)
 	elseif tag == "Do" then
 		local body_env = child(env)
 		return pad .. "do\n" .. trim_block(specialize_block(node.body, body_env, depth + 1, options, state)) .. "\n" .. pad .. "end"
@@ -280,7 +382,7 @@ end
 --- @param options table|nil { file = string }
 --- @return table { code = string, folded = number, unrolled = number }
 function M.specialize(func, entity, options)
-	local env = new_env(entity)
+	local env = new_env(entity, options and options.whitelist, options and options.nullable)
 	local params = {}
 	for i = 1, #func.params do
 		local name = func.params[i]

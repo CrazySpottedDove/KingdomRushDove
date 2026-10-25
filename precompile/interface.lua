@@ -1,9 +1,6 @@
 local M = {
 	main_script_backup = {},
-	warned = {},
-	script_types = setmetatable({}, {
-		__mode = "k"
-	})
+	warned = {}
 }
 local GenCC = require("precompile.gen_component_cloner")
 local loader = require("precompile.loader")
@@ -72,48 +69,6 @@ local NIL = {}
 
 local loader_ready = false
 
-for _, spec in ipairs(specs.list()) do
-	M.script_types[spec.source] = spec.source_state_machine and 1 or 0
-	if spec.compile_source then
-		M.script_types[spec.compile_source] = spec.state_machine and 1 or 0
-	end
-end
-
-function M:mark_script(fn, script_type)
-	self.script_types[fn] = script_type
-end
-
-function M:script_type(fn)
-	return self.script_types[fn]
-end
-
-function M:ensure_entity_type(e)
-	local s = e.main_script
-	if not s or not s.update then
-		return
-	end
-
-	local fn = s.update
-	local script_type = self.script_types[fn]
-	if script_type == nil then
-		script_type = 0
-		if not s.context then
-			s.context = E:clone_c("context")
-		end
-	end
-
-	if s.type ~= script_type or s._pc_update ~= fn then
-		s.co = nil
-		s.type = script_type
-	end
-
-	if script_type == 1 and not s.context then
-		s.context = E:clone_c("context")
-	end
-
-	s._pc_update = fn
-end
-
 function M:set_and_backup(e, key, value)
 	local name = e.template_name
 	local backup = self.main_script_backup[name]
@@ -143,10 +98,8 @@ function M:restore_main_script(e, base)
 end
 
 function M:apply_generated(e, entry)
-	local script_type = entry.type == 1 and 1 or 0
 	for key, value in pairs(entry) do
 		if type(value) == "function" then
-			self.script_types[value] = script_type
 			self:set_and_backup(e, key, value)
 		end
 	end
@@ -154,11 +107,16 @@ function M:apply_generated(e, entry)
 end
 
 function M:runtime_compile(e)
-	local specs = require("precompile.specs")
+	local items = specs.for_entity(e)
+	if #items == 0 then
+		return
+	end
+
 	local source = require("precompile.frontend.source")
 	local specialize = require("precompile.stage.specialize")
+	local whitelists = require("precompile.whitelists")
 
-	for _, item in ipairs(specs.for_entity(e)) do
+	for _, item in ipairs(items) do
 		local compile_source = item.spec.compile_source or item.source
 		local func, file, err = source.find_function(compile_source)
 		if not func then
@@ -178,11 +136,8 @@ function M:runtime_compile(e)
 				if not chunk then
 					print("precompile: 生成代码无法加载 " .. e.template_name .. ": " .. tostring(load_err))
 				else
-					local fn = chunk()
-					local script_type = item.spec.state_machine and 1 or 0
-					self.script_types[fn] = script_type
-					self:set_and_backup(e, item.key, fn)
-					self:set_and_backup(e, "type", script_type)
+					self:set_and_backup(e, item.key, chunk())
+					self:set_and_backup(e, "type", item.spec.state_machine and 1 or 0)
 				end
 			end
 		end

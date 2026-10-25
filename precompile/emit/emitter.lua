@@ -7,6 +7,10 @@ local function indent(depth)
 	return string.rep("\t", depth)
 end
 
+local function trim_body(body)
+	return (body:gsub("\n+$", ""))
+end
+
 local function join(list, sep)
 	local parts = {}
 	for i = 1, #list do
@@ -152,36 +156,54 @@ local function emit_stat(node, depth, out)
 	elseif tag == "Label" then
 		out[#out + 1] = pad .. "::" .. node.name .. "::"
 	elseif tag == "Do" then
+		local body = trim_body(M.block(node.body, depth + 1))
 		out[#out + 1] = pad .. "do"
-		out[#out + 1] = M.block(node.body, depth + 1)
+		if body ~= "" then
+			out[#out + 1] = body
+		end
 		out[#out + 1] = pad .. "end"
 	elseif tag == "If" then
 		for i = 1, #node.clauses do
 			local clause = node.clauses[i]
 			local keyword = (i == 1) and "if" or "elseif"
+			local body = trim_body(M.block(clause.body, depth + 1))
 			out[#out + 1] = pad .. keyword .. " " .. expr(clause.cond) .. " then"
-			out[#out + 1] = M.block(clause.body, depth + 1)
+			if body ~= "" then
+				out[#out + 1] = body
+			end
 		end
 		if node.else_ then
+			local body = trim_body(M.block(node.else_, depth + 1))
 			out[#out + 1] = pad .. "else"
-			out[#out + 1] = M.block(node.else_, depth + 1)
+			if body ~= "" then
+				out[#out + 1] = body
+			end
 		end
 		out[#out + 1] = pad .. "end"
 	elseif tag == "While" then
+		local body = trim_body(M.block(node.body, depth + 1))
 		out[#out + 1] = pad .. "while " .. expr(node.cond) .. " do"
-		out[#out + 1] = M.block(node.body, depth + 1)
+		if body ~= "" then
+			out[#out + 1] = body
+		end
 		out[#out + 1] = pad .. "end"
 	elseif tag == "Repeat" then
+		local body = trim_body(M.block(node.body, depth + 1))
 		out[#out + 1] = pad .. "repeat"
-		out[#out + 1] = M.block(node.body, depth + 1)
+		if body ~= "" then
+			out[#out + 1] = body
+		end
 		out[#out + 1] = pad .. "until " .. expr(node.cond)
 	elseif tag == "NumFor" then
 		local header = "for " .. node.var .. " = " .. expr(node.from) .. ", " .. expr(node.to)
 		if node.step then
 			header = header .. ", " .. expr(node.step)
 		end
+		local body = trim_body(M.block(node.body, depth + 1))
 		out[#out + 1] = pad .. header .. " do"
-		out[#out + 1] = M.block(node.body, depth + 1)
+		if body ~= "" then
+			out[#out + 1] = body
+		end
 		out[#out + 1] = pad .. "end"
 	elseif tag == "GenFor" then
 		local exprs = {}

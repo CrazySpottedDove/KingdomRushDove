@@ -14290,7 +14290,15 @@ function scripts.mod_archer_magic.insert(this, store)
 
 	local source_damage = this.modifier.source_damage
 	if not source_damage then
-		return false
+		if this.modifier.source_id then
+			local source = store.entities[this.modifier.source_id]
+			if source and source.bullet then
+				source_damage = E.assign_damage(source.bullet.damage_type, math.random(source.bullet.damage_min, source.bullet.damage_max) * source.bullet.damage_factor, source.id, target.id)
+			end
+		end
+		if not source_damage then
+			return false
+		end
 	end
 
 	local dmg = E.assign_damage(DAMAGE_MAGICAL, math.ceil(math.max(source_damage.value * this._mod_archer_magic_factor, 1)), this.modifier.source_id, target.id)

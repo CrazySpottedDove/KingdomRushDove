@@ -1,71 +1,17 @@
 --- 特化期抽象值
 local M = {}
 
-local SAFE_ROOTS = {}
-for _, name in ipairs({
-	"render",
-	"melee",
-	"ranged",
-	"auras",
-	"water",
-	"bullet",
-	"modifier",
-	"aura",
-	"soldier",
-	"dps",
-	"info",
-	"tower",
-	"barrack",
-	"enemy",
-	"unit",
-	"health",
-	"motion",
-	"pos",
-	"nav_path",
-	"spawn_data",
-	"vis",
-	"tween",
-	"main_script",
-	"health_bar",
-	"regen",
-	"powers",
-	"track_kills",
-	"track_damage",
-	"sound_events",
-	"ui",
-	"decal",
-	"controller",
-	"particle_system",
-	"user_power",
-	"buff",
-	"buffs",
-	"abilities",
-	"skills",
-	"level_stats",
-	"hero",
-	"attacks",
-	"exoskeleton"
-}) do
-	SAFE_ROOTS[name] = true
-end
-
-local SAFE_PATHS = {
-	["render.sprites"] = true,
-	["melee.attacks"] = true,
-	["ranged.attacks"] = true,
-	["auras.list"] = true
-}
-
 local function path_key(path)
 	return table.concat(path, ".")
 end
 
-function M.const(value, safe, path)
+function M.const(value, safe, path, nullable)
 	return {
 		known = true,
 		value = value,
 		safe = safe == true,
-		path = path
+		path = path,
+		nullable = nullable == true
 	}
 end
 
@@ -75,7 +21,7 @@ function M.unknown()
 	}
 end
 
-function M.child(obj, key)
+function M.child(obj, key, allowed, nullable)
 	if not obj.known or type(obj.value) ~= "table" then
 		return M.unknown()
 	end
@@ -92,16 +38,10 @@ function M.child(obj, key)
 		path[#path + 1] = key
 	end
 
-	local safe = false
-	if path then
-		if #path == 1 and SAFE_ROOTS[path[1]] then
-			safe = true
-		elseif SAFE_PATHS[path_key(path)] then
-			safe = true
-		end
-	end
+	local safe = allowed ~= nil and allowed[path_key(path)] == true
+	local is_nullable = nullable ~= nil and nullable[path_key(path)] == true
 
-	return M.const(obj.value[key], safe, path)
+	return M.const(obj.value[key], safe, path, is_nullable)
 end
 
 return M
