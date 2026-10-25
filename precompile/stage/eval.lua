@@ -160,4 +160,79 @@ function M.eval(node, env)
 	return V.unknown()
 end
 
+local function is_pure(node)
+	local tag = node and node.tag
+
+	if tag == "Name" or tag == "Nil" or tag == "True" or tag == "False" or tag == "Number" or tag == "String" then
+		return true
+	elseif tag == "Paren" then
+		return is_pure(node.expr)
+	elseif tag == "Index" then
+		return is_pure(node.obj) and is_pure(node.key)
+	elseif tag == "BinOp" then
+		return is_pure(node.left) and is_pure(node.right)
+	elseif tag == "UnOp" then
+		return is_pure(node.expr)
+	elseif tag == "Call" then
+		if node.callee.tag == "Name" and PURE_CALLS[node.callee.name] then
+			for i = 1, #node.args do
+				if not is_pure(node.args[i]) then
+					return false
+				end
+			end
+			return true
+		end
+	end
+
+	return false
+end
+
+--- 条件求值：额外处理 X and false / X or true 的布尔吸收。
+--- 普通表达式求值不能这么做，因为 X and false 的结果可能是 nil 而不是 false。
+function M.eval_condition(node, env)
+	if node.tag == "Paren" then
+		return M.eval_condition(node.expr, env)
+	end
+
+	if node.tag == "BinOp" and node.op == "and" then
+		local left = M.eval_condition(node.left, env)
+
+		if left.known and left.safe then
+			if not is_truthy(left.value) then
+				return left
+			end
+
+			return M.eval_condition(node.right, env)
+		end
+
+		local right = M.eval_condition(node.right, env)
+
+		if right.known and right.safe and not is_truthy(right.value) and is_pure(node.left) then
+			return V.const(false, true)
+		end
+
+		return V.unknown()
+	elseif node.tag == "BinOp" and node.op == "or" then
+		local left = M.eval_condition(node.left, env)
+
+		if left.known and left.safe then
+			if is_truthy(left.value) then
+				return left
+			end
+
+			return M.eval_condition(node.right, env)
+		end
+
+		local right = M.eval_condition(node.right, env)
+
+		if right.known and right.safe and is_truthy(right.value) and is_pure(node.left) then
+			return V.const(true, true)
+		end
+
+		return V.unknown()
+	end
+
+	return M.eval(node, env)
+end
+
 return M

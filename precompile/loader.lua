@@ -68,6 +68,8 @@ function M.load(env)
 		end
 	end
 
+	env.__pc_functions = nil
+
 	return true
 end
 

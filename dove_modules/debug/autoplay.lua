@@ -48,11 +48,41 @@ local STEP = TICK_LENGTH
 --- 自动点击节流：每隔多少游戏内秒点一轮（避免刷屏点击）
 local CLICK_INTERVAL = 0.5
 
+--- 性能对照模式（环境变量控制，不影响正常 autoplay）
+--- AUTOPLAY_BENCH_TICKS: 固定推进的模拟 tick 数；设置后跳过胜负判定
+--- AUTOPLAY_BENCH_WARMUP: 正式计时前的 warmup tick 数，默认 600
+--- AUTOPLAY_SEED: 固定随机种子，避免不同次运行走出不同随机路径
+local BENCH_TICKS = tonumber(os.getenv("AUTOPLAY_BENCH_TICKS") or "")
+local BENCH_WARMUP = tonumber(os.getenv("AUTOPLAY_BENCH_WARMUP") or "") or 600
+local BENCH_SEED = tonumber(os.getenv("AUTOPLAY_SEED") or "")
+local BENCH_TOWER = os.getenv("AUTOPLAY_BENCH_TOWER")
+local BENCH_TOWER_LEVEL = tonumber(os.getenv("AUTOPLAY_BENCH_TOWER_LEVEL") or "")
+local BENCH_JIT_OFF = os.getenv("AUTOPLAY_JIT_OFF") == "1"
+local BENCH_JIT_LOG = os.getenv("AUTOPLAY_JIT_LOG")
+local BENCH_JIT_DUMP = os.getenv("AUTOPLAY_JIT_DUMP")
+local BENCH_JIT_STATS = os.getenv("AUTOPLAY_JIT_STATS") == "1"
+local BENCH_JIT_PATH = os.getenv("AUTOPLAY_JIT_PATH")
+local BENCH_JIT_RESET = os.getenv("AUTOPLAY_JIT_RESET") == "1"
+local BENCH_JIT_DUMP_FLAGS = os.getenv("AUTOPLAY_JIT_DUMP_FLAGS") or "i"
+local BENCH_NO_GC = os.getenv("AUTOPLAY_NO_GC") == "1"
+local BENCH_GC_PAUSE = tonumber(os.getenv("AUTOPLAY_GC_PAUSE") or "")
+
+if BENCH_JIT_PATH then
+	package.path = BENCH_JIT_PATH .. "/?.lua;" .. package.path
+end
+
 -- 四系各取一座满级塔（外加几个别的系），轮流摆到塔位上
 local TOWER_ROTATION = {"tower_ranger", "tower_sorcerer", "tower_barbarian", "tower_bfg", "tower_musketeer", "tower_arcane_wizard", "tower_tesla", "tower_paladin"}
 
 local stats
 local errors
+
+local function memlog(tag)
+	if os.getenv("AUTOPLAY_MEM_TRACE") == "1" then
+		collectgarbage("collect")
+		print(string.format("AUTOPLAY_MEM %-12s %.0f KB", tag, collectgarbage("count")))
+	end
+end
 
 -- AUTOPLAY 覆盖 love.errorhandler：调试时出错立即退出（love 的兜底 handler 会留在错误界面不退出）
 do
@@ -144,6 +174,7 @@ local function report(reason)
 end
 
 function autoplay:init(w, h, done_callback)
+	memlog("init_start")
 	self.screen_w = w
 	self.screen_h = h
 	self.done_callback = done_callback
@@ -162,6 +193,18 @@ function autoplay:init(w, h, done_callback)
 	stats.level_idx = level_idx
 	stats.level_mode = level_mode
 	stats.level_difficulty = level_difficulty
+
+	if BENCH_JIT_OFF and jit then
+		jit.off()
+		jit.flush()
+	end
+
+	if BENCH_SEED then
+		math.randomseed(BENCH_SEED)
+		if love.math and love.math.setRandomSeed then
+			love.math.setRandomSeed(BENCH_SEED)
+		end
+	end
 
 	self.auto_click = (args.auto_click ~= false)
 	self.build_towers_enabled = (args.build_towers ~= false)
@@ -192,6 +235,7 @@ function autoplay:init(w, h, done_callback)
 	game.store.screen_scale = director:get_texture_scale("game", REF_H)
 	game.store.texture_size = director.params.texture_size
 	game.store.level = LU.load_level(game.store, game.store.level_name)
+	memlog("level_loaded")
 
 	if not game.store.level or not game.store.level.data then
 		errors[#errors + 1] = "level data not found: " .. tostring(game.store.level_name)
@@ -304,7 +348,7 @@ function autoplay:build_towers()
 	end)
 
 	for i, holder in ipairs(holders) do
-		local name = TOWER_ROTATION[((i - 1) % #TOWER_ROTATION) + 1]
+		local name = BENCH_TOWER or TOWER_ROTATION[((i - 1) % #TOWER_ROTATION) + 1]
 		local t = E:create_entity(name)
 
 		if not t then
@@ -312,6 +356,10 @@ function autoplay:build_towers()
 		else
 			t.pos = V.vclone(holder.pos)
 			t.tower.spent = 100000
+
+			if BENCH_TOWER_LEVEL then
+				t.tower.level = BENCH_TOWER_LEVEL
+			end
 			t.tower.holder_id = holder.tower.holder_id
 
 			if holder.tower.default_rally_pos then
@@ -551,49 +599,56 @@ function autoplay:cast_spell(store)
 	print(string.format("AUTOPLAY_SPELL cast %s #%d at (%.0f, %.0f)", self.spell_id, stats.spell_casts, pos.x, pos.y))
 end
 
+--- 推进一个固定步长（不含胜负判定）
+function autoplay:step_sim()
+	local store = self.game.simulation.store
+
+	store.paused = false
+
+	-- 代替玩家点「下一波」：清完当前波再发下一波，
+	-- 免得同时上多波把每波出怪代码的覆盖度打没。
+	if store.next_wave_group_ready and not store.send_next_wave and not LU.has_alive_enemies(store) then
+		store.send_next_wave = true
+	end
+
+	if self.auto_click then
+		self:run_clicks()
+	end
+
+	self:force_boss_phases()
+	self:cast_spell(store)
+
+	if not self._sndchk2 then
+		self._sndchk2 = true
+		local SDS = require("sound_db")
+		local f1 = "kr6_sfx_powers_royalDecree_lvl1_v4.ogg"
+		local f2 = "kr6_sfx_powers_royalDecree_lvl3_v3.ogg"
+		print(string.format("SNDCHK2 lvl1=%s lvl6=%s uses_lvl1=%s uses_lvl6=%s", tostring(SDS.sources[f1] ~= nil), tostring(SDS.sources[f2] ~= nil), tostring(SDS.source_uses[f1]), tostring(SDS.source_uses[f2])))
+		S:queue("PowersRoyalDecreeCastLvl6")
+		S:queue("PowersRoyalDecreeCastLvl1")
+	end
+
+	simulation:update(STEP)
+
+	-- 一帧的渲染侧更新也要跑：render / tween / particle_system 的 on_render_update
+	-- 里可能有会影响 main_script 的逻辑（时间回溯的重演走的也是这条路）。
+	simulation:render_update(STEP)
+
+	-- 声音系统也要每步驱动：否则 S:queue 的播放/资源校验永远不会跑，声音问题会被漏掉
+	S:update(STEP)
+
+	if self.game.game_gui then
+		self.game.game_gui:update(STEP)
+	end
+end
+
 --- 推进若干步模拟（不渲染）
 function autoplay:run_sim()
 	local store = self.game.simulation.store
 	local started = love.timer.getTime()
 
 	while love.timer.getTime() - started < WALL_BUDGET do
-		store.paused = false
-
-		-- 代替玩家点「下一波」：清完当前波再发下一波，
-		-- 免得同时上多波把每波出怪代码的覆盖度打没。
-		if store.next_wave_group_ready and not store.send_next_wave and not LU.has_alive_enemies(store) then
-			store.send_next_wave = true
-		end
-
-		if self.auto_click then
-			self:run_clicks()
-		end
-
-		self:force_boss_phases()
-		self:cast_spell(store)
-
-		if not self._sndchk2 then
-			self._sndchk2 = true
-			local SDS = require("sound_db")
-			local f1 = "kr6_sfx_powers_royalDecree_lvl1_v4.ogg"
-			local f2 = "kr6_sfx_powers_royalDecree_lvl3_v3.ogg"
-			print(string.format("SNDCHK2 lvl1=%s lvl6=%s uses_lvl1=%s uses_lvl6=%s", tostring(SDS.sources[f1] ~= nil), tostring(SDS.sources[f2] ~= nil), tostring(SDS.source_uses[f1]), tostring(SDS.source_uses[f2])))
-			S:queue("PowersRoyalDecreeCastLvl6")
-			S:queue("PowersRoyalDecreeCastLvl1")
-		end
-
-		simulation:update(STEP)
-
-		-- 一帧的渲染侧更新也要跑：render / tween / particle_system 的 on_render_update
-		-- 里可能有会影响 main_script 的逻辑（时间回溯的重演走的也是这条路）。
-		simulation:render_update(STEP)
-
-		-- 声音系统也要每步驱动：否则 S:queue 的播放/资源校验永远不会跑，声音问题会被漏掉
-		S:update(STEP)
-
-		if self.game.game_gui then
-			self.game.game_gui:update(STEP)
-		end
+		self:step_sim()
 
 		-- 见 update：只等关卡真正的 game_outcome，别在中途（KR6 boss 降临前）提前收工
 		if store.game_outcome then
@@ -604,6 +659,162 @@ function autoplay:run_sim()
 			return
 		end
 	end
+end
+
+--- 基准用最小推进：只跑 simulation:update，排除 GUI/声音/渲染侧随机源。
+function autoplay:bench_step()
+	local store = self.game.simulation.store
+
+	store.paused = false
+
+	if store.next_wave_group_ready and not store.send_next_wave and not LU.has_alive_enemies(store) then
+		store.send_next_wave = true
+	end
+
+	self:force_boss_phases()
+	simulation:update(STEP)
+end
+
+local function workload_signature(store)
+	local counts = {}
+	local towers = {}
+	local total = 0
+
+	for _, e in pairs(store.entities) do
+		total = total + 1
+		local key = e.template_name or "?"
+		counts[key] = (counts[key] or 0) + 1
+
+		if e.tower and e.tower.type ~= "holder" then
+			towers[#towers + 1] = string.format("%s:%s:%.1f:%.1f", key, tostring(e.tower.level or 0), e.pos.x, e.pos.y)
+		end
+	end
+
+	table.sort(towers)
+	return string.format("entities=%d towers=%d enemies=%d soldiers=%d wave=%s tick=%.1f tower_sig=%s", total, #towers, store.enemy_count or 0, store.soldier_count or 0, tostring(store.wave_group_number or 0), store.tick_ts or 0, table.concat(towers, ","))
+end
+
+--- 固定 tick 基准：正常 autoplay 只用于冒烟，这里用最小推进做 A/B 计时。
+function autoplay:run_bench()
+	local perf = require("dove_modules.perf.perf")
+
+	perf.set_enabled(true)
+	perf.clear()
+
+	if BENCH_JIT_RESET and jit then
+		jit.flush()
+	end
+
+	if BENCH_JIT_LOG then
+		require("jit.v").start(BENCH_JIT_LOG)
+	end
+
+	if BENCH_JIT_DUMP then
+		require("jit.dump").start(BENCH_JIT_DUMP_FLAGS, BENCH_JIT_DUMP)
+	end
+
+	for i = 1, BENCH_WARMUP do
+		self:bench_step()
+	end
+
+	perf.clear()
+
+	local store = self.game.simulation.store
+
+	if os.getenv("AUTOPLAY_WORKLOAD_TRACE") == "1" then
+		print("AUTOPLAY_WORKLOAD start " .. workload_signature(store))
+	end
+
+	local ticks = 0
+	local ended = false
+	if BENCH_NO_GC then
+		collectgarbage("stop")
+	elseif BENCH_GC_PAUSE then
+		collectgarbage("setpause", BENCH_GC_PAUSE)
+	end
+
+	local mem_started = collectgarbage("count")
+	local cpu_started = os.clock()
+	local wall_started = love.timer.getTime()
+
+	for i = 1, BENCH_TICKS do
+		self:bench_step()
+		ticks = ticks + 1
+
+		if store.game_outcome then
+			ended = true
+
+			break
+		end
+	end
+
+	local cpu_ms = (os.clock() - cpu_started) * 1000
+	local wall_ms = (love.timer.getTime() - wall_started) * 1000
+	local mem_raw = collectgarbage("count")
+
+	if BENCH_NO_GC then
+		collectgarbage("restart")
+	end
+
+	collectgarbage("collect")
+	local mem_live = collectgarbage("count")
+
+	local coro_us = perf.items["coro"] and perf.items["coro"].sum or 0
+	local state_us = perf.items["state machine"] and perf.items["state machine"].sum or 0
+	local script_us = coro_us + state_us
+	local mode = os.getenv("KR_NO_PRECOMPILE") == "1" and "source" or "generated"
+
+	local sim_seconds = store.tick_ts or 0
+
+	if os.getenv("AUTOPLAY_WORKLOAD_TRACE") == "1" then
+		print("AUTOPLAY_WORKLOAD end   " .. workload_signature(store))
+	end
+
+	if BENCH_JIT_LOG then
+		require("jit.v").off()
+	end
+
+	if BENCH_JIT_DUMP then
+		require("jit.dump").off()
+	end
+
+	if BENCH_JIT_STATS then
+		local ok, util = pcall(require, "jit.util")
+
+		if ok and util then
+			local traces, ir, max_ir, loops = 0, 0, 0, 0
+			local index = 1
+
+			while true do
+				local info = util.traceinfo(index)
+
+				if not info then
+					break
+				end
+
+				traces = traces + 1
+				ir = ir + (info.nins or 0)
+				max_ir = math.max(max_ir, info.nins or 0)
+
+				if info.linktype == "loop" then
+					loops = loops + 1
+				end
+
+				index = index + 1
+			end
+
+			print(string.format("AUTOPLAY_JIT_STATS traces=%d ir=%d max_ir=%d loops=%d", traces, ir, max_ir, loops))
+		end
+	end
+
+	print(string.format("AUTOPLAY_BENCH mode=%s level=%s ticks=%d cpu_ms=%.1f wall_ms=%.1f us_per_tick=%.2f script_ms=%.1f coro_ms=%.1f state_ms=%.1f coros=%d stms=%d mem_start=%.0f mem_raw=%.0f mem_live=%.0f sim_seconds=%.1f ended=%s", mode, tostring(stats.level_idx), ticks, cpu_ms, wall_ms, ticks > 0 and (cpu_ms * 1000 / ticks) or 0, script_us / 1000, coro_us / 1000, state_us / 1000, perf.coros, perf.stms, mem_started, mem_raw, mem_live, sim_seconds, tostring(ended)))
+	io.stdout:flush()
+
+	stats.total_ts = sim_seconds
+	stats.reason = "bench"
+	report("bench")
+
+	love.event.quit()
 end
 
 function autoplay:update(dt)
@@ -645,6 +856,7 @@ function autoplay:update(dt)
 		-- 冒烟测试不动胜负：把生命拉满，避免因漏怪/被推平提前结束，方便跑到结算
 		game.store.lives = 99999
 
+		memlog("game_init_done")
 		self.phase = "warmup"
 		self.warmup_frames = 0
 
@@ -667,8 +879,27 @@ function autoplay:update(dt)
 				self:build_towers()
 			end
 
-			self.phase = "run"
+			-- 资源/关卡加载期间可能已经消耗过随机数；正式推进前重新定种，
+			-- 保证 warmup 和计时阶段的随机路径可复现。
+			if BENCH_SEED then
+				math.randomseed(BENCH_SEED)
+				if love.math and love.math.setRandomSeed then
+					love.math.setRandomSeed(BENCH_SEED)
+				end
+			end
+
+			memlog("warmup_done")
+			self.phase = BENCH_TICKS and "bench" or "run"
 		end
+
+		return
+	end
+
+	if self.phase == "bench" then
+		stats.wave_group_number = store.wave_group_number
+		stats.wave_group_total = store.wave_group_total
+		stats.lives = store.lives
+		self:run_bench()
 
 		return
 	end

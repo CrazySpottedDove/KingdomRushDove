@@ -382,7 +382,10 @@ local function load(arg)
 	end
 
 	if is_autoplay then
-	-- block empty：窗口保持 conf.lua 的不可见状态
+		-- conf.lua 的窗口仍会被 WM 映射并短暂抢焦点；启动后立刻最小化，
+		-- 让焦点回到之前的窗口，autoplay 继续在最小化窗口里跑。
+		love.window.setPosition(-32000, -32000)
+		love.window.minimize()
 	elseif IS_ANDROID then
 		-- 安卓端强制全屏游戏
 		love.window.setMode(w, h, {
