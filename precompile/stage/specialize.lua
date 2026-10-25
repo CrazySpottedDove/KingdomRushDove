@@ -237,7 +237,7 @@ local function specialize_if(node, env, depth, options, state)
 
 	for i = 1, #node.clauses do
 		local clause = node.clauses[i]
-		local value = eval.eval(clause.cond, env)
+		local value = eval.eval_condition(clause.cond, env)
 		if value.known and value.safe and (not contains_nullable(clause.cond, env) or not is_truthy(value.value)) then
 			if value.value ~= nil and value.value ~= false then
 				state.folded = state.folded + 1
@@ -274,7 +274,7 @@ local function specialize_if(node, env, depth, options, state)
 	local has_else = false
 	for i = unknown_from, #node.clauses do
 		local clause = node.clauses[i]
-		local value = eval.eval(clause.cond, env)
+		local value = eval.eval_condition(clause.cond, env)
 		local folded = value.known and value.safe and (not contains_nullable(clause.cond, env) or not is_truthy(value.value))
 		if folded then
 			state.folded = state.folded + 1
@@ -482,6 +482,9 @@ local function helper_target(node, state)
 end
 
 specialize_call = function(node, env, options, state)
+	if os.getenv("KR_NO_HELPER_INLINE") == "1" then
+		return nil
+	end
 	local target = helper_target(node, state)
 	if not target then
 		return nil

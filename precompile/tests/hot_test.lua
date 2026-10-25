@@ -19,14 +19,15 @@ check(debug.getinfo(base.main_script.update, "S").source:find("generated/shared.
 local hot = E:register_t_hot("pc_hot_a", "enemy_goblin", true)
 hot.enemy.gold = 999
 E:precompile_hot()
-check(debug.getinfo(hot.main_script.update, "S").source:find("generated/pc_hot_a.update", 1, true) ~= nil, "hot template recompiled")
-check(debug.getinfo(hot.main_script.insert, "S").source:find("generated/pc_hot_a.insert", 1, true) ~= nil, "hot insert recompiled")
+check(debug.getinfo(hot.main_script.update, "S").source:find("generated/pc_hot_a.update", 1, true) == nil, "hot template keeps source update")
+check(debug.getinfo(hot.main_script.insert, "S").source:find("generated/pc_hot_a.insert", 1, true) == nil, "hot insert keeps source")
 check(E.entities_backup["pc_hot_a"] == nil, "temporary template not backed up")
+check(#E.hots == 0, "hot list cleared")
 
 local chain = E:register_t_hot("pc_hot_b", "pc_hot_a", true)
 chain.enemy.gold = 1000
 E:precompile_hot()
-check(debug.getinfo(chain.main_script.update, "S").source:find("generated/pc_hot_b.update", 1, true) ~= nil, "chain template recompiled")
+check(debug.getinfo(chain.main_script.update, "S").source:find("generated/pc_hot_b.update", 1, true) == nil, "chain template keeps source")
 
 if failed > 0 then
 	print(string.format("%d 个检查失败", failed))

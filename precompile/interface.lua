@@ -2,6 +2,8 @@ local M = {
 	main_script_backup = {},
 	warned = {}
 }
+-- 性能对照用：完全跳过生成物与运行时特化，保留源码脚本。
+local DISABLED = os.getenv("KR_NO_PRECOMPILE") == "1"
 local GenCC = require("precompile.gen_component_cloner")
 local loader = require("precompile.loader")
 
@@ -153,15 +155,28 @@ function M:runtime_compile(e)
 end
 
 function M:compile(e)
+	if DISABLED then
+		return
+	end
 	if not loader_ready then
 		loader_ready = true
-		loader.load(self.env)
+
+		if os.getenv("KR_GEN_ENV_LEGACY") == "1" then
+			loader.load(self.env)
+		else
+			-- 生成文件头部已经把依赖 require 成 local；用 _G 加载，
+			-- 使 math/table/常量和源码处在完全相同的全局环境。
+			loader.load(_G)
+		end
 	end
 
 	local entry = loader.get(e.template_name)
 	if entry then
 		self:apply_generated(e, entry)
 	else
+		if os.getenv("KR_LOG_RUNTIME_COMPILE") == "1" and #specs.for_entity(e) > 0 then
+			print("RUNTIME_COMPILE " .. tostring(e.template_name))
+		end
 		self:runtime_compile(e)
 	end
 end

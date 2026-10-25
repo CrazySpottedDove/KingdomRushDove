@@ -94,13 +94,13 @@ function entity_db:precompile()
 end
 
 function entity_db:precompile_hot()
-	local compiler = require("precompile.interface")
 	for i = #self.hots, 1, -1 do
 		local name, is_tmp = self.hots[i][1], self.hots[i][2]
-		compiler:compile(self.entities[name])
+
 		if not is_tmp then
 			self.entities_backup[name] = quickcopy(self.entities[name])
 		end
+
 		self.hots[i] = nil
 	end
 end

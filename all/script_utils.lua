@@ -3426,7 +3426,7 @@ function SU.y_enemy_walk_step_default(store, this)
 		local w = m.forced_waypoint
 		local dx = w.x - pos.x
 		local dy = w.y - pos.y
-		if math.sqrt(dx * dx + dy * dy) < 2 * step then
+		if dx * dx + dy * dy < 4 * step * step then
 			pos.x, pos.y = w.x, w.y
 			m.forced_waypoint = nil
 
@@ -3439,7 +3439,7 @@ function SU.y_enemy_walk_step_default(store, this)
 		local path = P.paths[n.pi][n.spi]
 		local next = path[n.ni + n.dir]
 
-		if not next or math.sqrt((next.x - pos.x) * (next.x - pos.x) + (next.y - pos.y) * (next.y - pos.y)) < 2 * step then
+		if not next or ((next.x - pos.x) * (next.x - pos.x) + (next.y - pos.y) * (next.y - pos.y)) < 4 * step * step then
 			n.ni = n.ni + n.dir
 
 			if n.ni < 1 or n.ni > #path then

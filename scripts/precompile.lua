@@ -15,6 +15,25 @@ local GENERATED_DIR = "precompile/generated"
 local CACHE_FILE = GENERATED_DIR .. "/.build_cache"
 local GROUPS = {"enemies", "bullets", "soldiers", "modifiers", "auras"}
 
+-- 生成代码与源码共用 _G。源码里的模块依赖是 local upvalue；生成文件在头部
+-- 用同样的 require 形式引入，避免热路径走自定义 env 的 __index 查表。
+local GENERATED_HEADER = [[
+local E = require("entity_db")
+local GR = require("grid_db")
+local P = require("path_db")
+local S = require("sound_db")
+local SU = require("script_utils")
+local U = require("utils")
+local UP = require("kr1.upgrades")
+local V = require("lib.klua.vector")
+local km = require("lib.klua.macros")
+local signal = require("lib.hump.signal")
+local bit = require("bit")
+local band, bor, bnot = bit.band, bit.bor, bit.bnot
+local queue_damage = U.queue_damage
+local log = require("lib.klua.log"):new("precompile")
+]]
+
 local function fail(message)
 	io.stderr:write(message, "\n")
 	os.exit(1)
@@ -315,7 +334,7 @@ local function generate(E, specs, source, specialize, whitelists, globals)
 	local usage = {}
 
 	do
-		local lines = {}
+		local lines = {GENERATED_HEADER}
 		if #helper_defs > 0 then
 			lines[#lines + 1] = "local __pc_helpers = {}"
 			for _, helper in ipairs(helper_defs) do
