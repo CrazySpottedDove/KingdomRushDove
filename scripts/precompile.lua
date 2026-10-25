@@ -98,7 +98,7 @@ local function has_entity(record, name)
 	return false
 end
 
-local function generate(E, specs, source, specialize)
+local function generate(E, specs, source, specialize, whitelists)
 	local groups = {}
 	for _, group in ipairs(GROUPS) do
 		groups[group] = {}
@@ -119,8 +119,12 @@ local function generate(E, specs, source, specialize)
 			if not func then
 				errors[#errors + 1] = string.format("%s %s.%s: %s", name, item.spec.group, item.spec.key, err)
 			else
+				local whitelist = item.spec.family and whitelists[item.spec.family] or nil
+				local nullable = item.spec.family and whitelists.nullable and whitelists.nullable[item.spec.family] or nil
 				local ok, result = pcall(specialize.specialize, func, e, {
-					file = file.path
+					file = file.path,
+					whitelist = whitelist,
+					nullable = nullable
 				})
 				if not ok then
 					errors[#errors + 1] = string.format("%s %s.%s: %s", name, item.spec.group, item.spec.key, result)
@@ -135,7 +139,7 @@ local function generate(E, specs, source, specialize)
 						if not entry then
 							entry = {
 								keys = {},
-								comments = {}
+								origins = {}
 							}
 							group[name] = entry
 						end
@@ -143,6 +147,10 @@ local function generate(E, specs, source, specialize)
 							errors[#errors + 1] = string.format("%s %s.%s: duplicate spec", name, item.spec.group, item.spec.key)
 						else
 							entry.keys[item.spec.key] = expr
+							entry.origins[item.spec.key] = {
+								file = result.file,
+								line = result.line
+							}
 							if item.spec.state_machine then
 								entry.type = 1
 							end
@@ -190,11 +198,12 @@ local function generate(E, specs, source, specialize)
 
 	local files = {}
 	local modules = {}
+	local usage = {}
 
 	do
 		local lines = {"return {"}
-		for _, item in ipairs(unique_list) do
-			lines[#lines + 1] = "\t" .. item.expr .. ","
+		for id, item in ipairs(unique_list) do
+			lines[#lines + 1] = string.format("\t[%d] = %s,", id, item.expr)
 		end
 		lines[#lines + 1] = "}"
 		files.shared = table.concat(lines, "\n") .. "\n"
@@ -221,6 +230,19 @@ local function generate(E, specs, source, specialize)
 				local script_type = entry.type == 1 and 1 or 0
 				for _, key in ipairs(keys) do
 					local id = assert(expr_to_id[script_type .. "\0" .. entry.keys[key]], "missing shared function")
+					local origin = entry.origins[key] or {}
+					local item = usage[id]
+					if not item then
+						item = {
+							file = origin.file,
+							line = origin.line,
+							group = group_name,
+							key = key,
+							entities = {}
+						}
+						usage[id] = item
+					end
+					item.entities[#item.entities + 1] = name
 					lines[#lines + 1] = string.format("\t\t%s = shared[%d],", key, id)
 				end
 				if entry.type then
@@ -232,6 +254,23 @@ local function generate(E, specs, source, specialize)
 			files[group_name] = table.concat(lines, "\n") .. "\n"
 		end
 	end
+
+	local ids = {}
+	for id in pairs(usage) do
+		ids[#ids + 1] = id
+	end
+	table.sort(ids)
+	local map_lines = {"return {"}
+	for _, id in ipairs(ids) do
+		local item = usage[id]
+		local entities = {}
+		for i = 1, #item.entities do
+			entities[i] = string.format("%q", item.entities[i])
+		end
+		map_lines[#map_lines + 1] = string.format("\t[%d] = { file = %q, line = %d, group = %q, key = %q, entities = {%s} },", id, item.file or "", item.line or 0, item.group or "", item.key or "", table.concat(entities, ", "))
+	end
+	map_lines[#map_lines + 1] = "}"
+	files.source_map = table.concat(map_lines, "\n") .. "\n"
 
 	local index = {"return {", '\t"shared",'}
 	for _, group_name in ipairs(modules) do
@@ -265,7 +304,8 @@ local function run_generate(write)
 	local specs = require("precompile.specs")
 	local source = require("precompile.frontend.source")
 	local specialize = require("precompile.stage.specialize")
-	local files, errors, stats = generate(E, specs, source, specialize)
+	local whitelists = require("precompile.whitelists")
+	local files, errors, stats = generate(E, specs, source, specialize, whitelists)
 
 	if #errors > 0 then
 		print("生成失败:")
@@ -374,6 +414,34 @@ local function run_dump(entity_name)
 	return 0
 end
 
+local function run_which(spec)
+	local line = tonumber(tostring(spec):match("(%d+)$") or "")
+	if not line then
+		fail("which 需要一个行号或 shared.lua:行号")
+	end
+	local shared = assert(loadfile(GENERATED_DIR .. "/shared.lua"))()
+	local id
+	for index, fn in pairs(shared) do
+		local info = debug.getinfo(fn, "S")
+		if info.linedefined <= line and line <= info.lastlinedefined then
+			id = index
+			break
+		end
+	end
+	if not id then
+		fail("没有找到包含第 " .. line .. " 行的生成函数")
+	end
+	local map = assert(loadfile(GENERATED_DIR .. "/source_map.lua"))()
+	local item = map[id]
+	print(string.format("shared[%d]  shared.lua:%d", id, line))
+	if item then
+		print(string.format("源码: %s:%d", item.file or "?", item.line or 0))
+		print(string.format("spec: %s.%s", item.group or "?", item.key or "?"))
+		print("实体: " .. table.concat(item.entities or {}, ", "))
+	end
+	return 0
+end
+
 if command == "check" then
 	if arg[2] == "--source" then
 		os.exit(run_source_check())
@@ -383,6 +451,8 @@ elseif command == "build" then
 	os.exit(run_generate(true))
 elseif command == "dump" then
 	os.exit(run_dump(arg[2]))
+elseif command == "which" then
+	os.exit(run_which(arg[2]))
 else
-	fail("未知命令: " .. command .. "（可用: check, check --source, build, dump）")
+	fail("未知命令: " .. command .. "（可用: check, build, dump, which）")
 end

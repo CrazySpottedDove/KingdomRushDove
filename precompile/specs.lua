@@ -7,6 +7,7 @@ local list = {
 	{
 		key = "insert",
 		source = scripts.enemy_basic.insert,
+		family = "enemies",
 		when = function(e)
 			return e.enemy ~= nil
 		end,
@@ -15,6 +16,7 @@ local list = {
 	{
 		key = "update",
 		source = scripts.enemy_mixed.update,
+		family = "enemies",
 		when = function(e)
 			return e.enemy ~= nil and (e.melee ~= nil or e.ranged ~= nil)
 		end,
@@ -23,6 +25,7 @@ local list = {
 	{
 		key = "update",
 		source = scripts.enemy_passive.update,
+		family = "enemies",
 		when = function(e)
 			return e.enemy ~= nil
 		end,
@@ -31,6 +34,7 @@ local list = {
 	{
 		key = "insert",
 		source = scripts.arrow.insert,
+		family = "arrow",
 		when = function(e)
 			return e.bullet ~= nil
 		end,
@@ -39,6 +43,7 @@ local list = {
 	{
 		key = "insert",
 		source = scripts.bomb.insert,
+		family = "bomb",
 		when = function(e)
 			return e.bullet ~= nil
 		end,
@@ -47,6 +52,7 @@ local list = {
 	{
 		key = "insert",
 		source = scripts.bolt.insert,
+		family = "bolt",
 		when = function(e)
 			return e.bullet ~= nil
 		end,
@@ -56,6 +62,7 @@ local list = {
 		key = "update",
 		source = scripts.arrow.update,
 		compile_source = scripts.arrow.update_sm,
+		family = "arrow",
 		state_machine = true,
 		when = function(e)
 			return e.bullet ~= nil
@@ -66,6 +73,7 @@ local list = {
 		key = "update",
 		source = scripts.bomb.update,
 		compile_source = scripts.bomb.update_sm,
+		family = "bomb",
 		state_machine = true,
 		when = function(e)
 			return e.bullet ~= nil
@@ -76,6 +84,7 @@ local list = {
 		key = "update",
 		source = scripts.bolt.update,
 		compile_source = scripts.bolt.update_sm,
+		family = "bolt",
 		state_machine = true,
 		when = function(e)
 			return e.bullet ~= nil
@@ -85,6 +94,7 @@ local list = {
 	{
 		key = "insert",
 		source = scripts.soldier_barrack.insert,
+		family = "soldiers",
 		when = function(e)
 			return e.soldier ~= nil
 		end,
@@ -93,6 +103,7 @@ local list = {
 	{
 		key = "update",
 		source = scripts.soldier_barrack.update,
+		family = "soldiers",
 		when = function(e)
 			return e.soldier ~= nil
 		end,
@@ -101,6 +112,7 @@ local list = {
 	{
 		key = "insert",
 		source = scripts.mod_dps.insert,
+		family = "mod_dps",
 		when = function(e)
 			return e.modifier ~= nil
 		end,
@@ -109,6 +121,7 @@ local list = {
 	{
 		key = "insert",
 		source = scripts.mod_track_target.insert,
+		family = "mod_track_target",
 		when = function(e)
 			return e.modifier ~= nil
 		end,
@@ -118,6 +131,7 @@ local list = {
 		key = "update",
 		source = scripts.mod_dps.update,
 		compile_source = scripts.mod_dps.update_sm,
+		family = "mod_dps",
 		state_machine = true,
 		when = function(e)
 			return e.modifier ~= nil
@@ -128,6 +142,7 @@ local list = {
 		key = "update",
 		source = scripts.mod_track_target.update,
 		compile_source = scripts.mod_track_target.update_sm,
+		family = "mod_track_target",
 		state_machine = true,
 		when = function(e)
 			return e.modifier ~= nil and e.modifier.duration ~= nil
@@ -137,6 +152,7 @@ local list = {
 	{
 		key = "insert",
 		source = scripts.aura_apply_mod.insert,
+		family = "aura_apply_mod",
 		when = function(e)
 			return e.aura ~= nil
 		end,
@@ -146,6 +162,7 @@ local list = {
 		key = "update",
 		source = scripts.aura_apply_mod.update,
 		compile_source = scripts.aura_apply_mod.update_sm,
+		family = "aura_apply_mod",
 		state_machine = true,
 		when = function(e)
 			return e.aura ~= nil and e.aura.duration ~= nil
@@ -156,6 +173,7 @@ local list = {
 		key = "update",
 		source = scripts.aura_apply_damage.update,
 		compile_source = scripts.aura_apply_damage.update_sm,
+		family = "aura_apply_damage",
 		state_machine = true,
 		when = function(e)
 			return e.aura ~= nil and e.aura.duration ~= nil
