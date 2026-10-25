@@ -20,7 +20,8 @@
 				".codewhale",
 				".vscode",
 				"love_env",
-				"tmp"
+				"tmp",
+				"precompile/generated"
 			]
 		},
 		{
