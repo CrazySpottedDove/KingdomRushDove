@@ -176,6 +176,10 @@ compile_exos_check:
 precompile:
 	luajit ./scripts/precompile.lua build
 
+# 忽略输入指纹缓存，强制全量重建
+precompile_force:
+	luajit ./scripts/precompile.lua build --force
+
 # 预编译源码定位/解析/生成物检查
 precompile_check:
 	luajit ./scripts/precompile.lua check
