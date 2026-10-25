@@ -31,6 +31,9 @@ TMP_INDEX="$(mktemp)"
 trap 'rm -f "$MANIFEST_TMP" "$TMP_INDEX"' EXIT
 rm -f "$TMP_INDEX"
 
+# master 投影额外排除的开发文档（不属于“仅源码”清单）
+MASTER_EXCLUDE_FILES=("precompile/DESIGN.md")
+
 echo "源分支: $SOURCE_BRANCH"
 
 # 1) 同步并推送源分支
@@ -48,6 +51,10 @@ projection_tree() {
 	if [ -s "$manifest" ]; then
 		GIT_INDEX_FILE="$TMP_INDEX" git rm --cached -r -q -f --ignore-unmatch --pathspec-from-file="$manifest"
 	fi
+
+	for extra in "${MASTER_EXCLUDE_FILES[@]}"; do
+		GIT_INDEX_FILE="$TMP_INDEX" git rm --cached -q -f --ignore-unmatch -- "$extra"
+	done
 
 	GIT_INDEX_FILE="$TMP_INDEX" git write-tree
 }
@@ -158,6 +165,10 @@ while IFS= read -r commit; do
 	if [ -s "$MANIFEST_TMP" ]; then
 		git rm -r -q -f --ignore-unmatch --pathspec-from-file="$MANIFEST_TMP"
 	fi
+
+	for extra in "${MASTER_EXCLUDE_FILES[@]}"; do
+		git rm -q -f --ignore-unmatch -- "$extra"
+	done
 
 	AUTHOR="$(git log -1 --format='%an <%ae>' "$commit")"
 	DATE="$(git log -1 --format=%aI "$commit")"
