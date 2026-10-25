@@ -62,9 +62,6 @@ function M.eval(node, env)
 	elseif tag == "Paren" then
 		return M.eval(node.expr, env)
 	elseif tag == "Name" then
-		if node.name == "this" then
-			return V.const(env.entity, true, {})
-		end
 		local value = env:get(node.name)
 		if value.known then
 			return value

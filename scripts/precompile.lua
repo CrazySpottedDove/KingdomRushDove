@@ -98,7 +98,11 @@ local function has_entity(record, name)
 	return false
 end
 
-local function generate(E, specs, source, specialize, whitelists)
+local function sanitize(name)
+	return (name:gsub("[^%w_]", "_"))
+end
+
+local function generate(E, specs, source, specialize, whitelists, globals)
 	local groups = {}
 	for _, group in ipairs(GROUPS) do
 		groups[group] = {}
@@ -124,7 +128,9 @@ local function generate(E, specs, source, specialize, whitelists)
 				local ok, result = pcall(specialize.specialize, func, e, {
 					file = file.path,
 					whitelist = whitelist,
-					nullable = nullable
+					nullable = nullable,
+					globals = globals,
+					helper_prefix = "__pc_" .. sanitize(name) .. "_" .. sanitize(item.spec.key) .. "_"
 				})
 				if not ok then
 					errors[#errors + 1] = string.format("%s %s.%s: %s", name, item.spec.group, item.spec.key, result)
@@ -139,7 +145,8 @@ local function generate(E, specs, source, specialize, whitelists)
 						if not entry then
 							entry = {
 								keys = {},
-								origins = {}
+								origins = {},
+								helpers = {}
 							}
 							group[name] = entry
 						end
@@ -147,6 +154,9 @@ local function generate(E, specs, source, specialize, whitelists)
 							errors[#errors + 1] = string.format("%s %s.%s: duplicate spec", name, item.spec.group, item.spec.key)
 						else
 							entry.keys[item.spec.key] = expr
+							for _, helper in ipairs(result.helpers or {}) do
+								entry.helpers[#entry.helpers + 1] = helper
+							end
 							entry.origins[item.spec.key] = {
 								file = result.file,
 								line = result.line
@@ -163,6 +173,107 @@ local function generate(E, specs, source, specialize, whitelists)
 			end
 		end
 	end
+
+	local helper_by_name = {}
+	for _, group_name in ipairs(GROUPS) do
+		for _, entry in pairs(groups[group_name]) do
+			for _, helper in ipairs(entry.helpers or {}) do
+				helper_by_name[helper.name] = helper
+			end
+		end
+	end
+
+	local function helper_ref(name)
+		return "__pc_helpers[" .. string.format("%q", name) .. "]"
+	end
+
+	local function replace_ref(text, old, new)
+		local needle = helper_ref(old)
+		local replacement = helper_ref(new)
+		local out = {}
+		local pos = 1
+		while true do
+			local from, to = text:find(needle, pos, true)
+			if not from then
+				out[#out + 1] = text:sub(pos)
+				break
+			end
+			out[#out + 1] = text:sub(pos, from - 1)
+			out[#out + 1] = replacement
+			pos = to + 1
+		end
+		return table.concat(out)
+	end
+
+	local canonical = {}
+	local visiting = {}
+	local seen = {}
+	local helper_defs = {}
+	local function normalize(name)
+		if canonical[name] then
+			return canonical[name]
+		end
+		if visiting[name] then
+			return name
+		end
+		local helper = helper_by_name[name]
+		if not helper then
+			return name
+		end
+		visiting[name] = true
+		local body = helper.body
+		local deps = {}
+		local seen_dep = {}
+		for dep in body:gmatch('__pc_helpers%["([^"]+)"%]') do
+			if not seen_dep[dep] then
+				seen_dep[dep] = true
+				deps[#deps + 1] = dep
+			end
+		end
+		for _, dep in ipairs(deps) do
+			local target = normalize(dep)
+			if target ~= dep then
+				body = replace_ref(body, dep, target)
+			end
+		end
+		local key = table.concat(helper.params, ",") .. "\0" .. body
+		local target = seen[key]
+		if not target then
+			target = name
+			seen[key] = target
+			helper_defs[#helper_defs + 1] = {
+				name = target,
+				params = helper.params,
+				body = body
+			}
+		end
+		canonical[name] = target
+		visiting[name] = nil
+		return target
+	end
+	local helper_names = {}
+	for name in pairs(helper_by_name) do
+		helper_names[#helper_names + 1] = name
+	end
+	table.sort(helper_names)
+	for _, name in ipairs(helper_names) do
+		normalize(name)
+	end
+	for _, group_name in ipairs(GROUPS) do
+		for _, entry in pairs(groups[group_name]) do
+			for key, expr in pairs(entry.keys) do
+				for name, target in pairs(canonical) do
+					if name ~= target and expr:find(helper_ref(name), 1, true) then
+						expr = replace_ref(expr, name, target)
+					end
+				end
+				entry.keys[key] = expr
+			end
+		end
+	end
+	table.sort(helper_defs, function(a, b)
+		return a.name < b.name
+	end)
 
 	local unique_by_key = {}
 	for _, group_name in ipairs(GROUPS) do
@@ -201,7 +312,19 @@ local function generate(E, specs, source, specialize, whitelists)
 	local usage = {}
 
 	do
-		local lines = {"return {"}
+		local lines = {}
+		if #helper_defs > 0 then
+			lines[#lines + 1] = "local __pc_helpers = {}"
+			for _, helper in ipairs(helper_defs) do
+				local code = "__pc_helpers[" .. string.format("%q", helper.name) .. "] = function(" .. table.concat(helper.params, ", ") .. ")\n"
+				if helper.body ~= "" then
+					code = code .. helper.body .. "\n"
+				end
+				code = code .. "end"
+				lines[#lines + 1] = code
+			end
+		end
+		lines[#lines + 1] = "return {"
 		for id, item in ipairs(unique_list) do
 			lines[#lines + 1] = string.format("\t[%d] = %s,", id, item.expr)
 		end
@@ -280,6 +403,7 @@ local function generate(E, specs, source, specialize, whitelists)
 	files.index = table.concat(index, "\n") .. "\n"
 
 	stats.unique_functions = #unique_list
+	stats.helpers = #helper_defs
 	return files, errors, stats
 end
 
@@ -305,7 +429,8 @@ local function run_generate(write)
 	local source = require("precompile.frontend.source")
 	local specialize = require("precompile.stage.specialize")
 	local whitelists = require("precompile.whitelists")
-	local files, errors, stats = generate(E, specs, source, specialize, whitelists)
+	local globals = require("precompile.interface").env
+	local files, errors, stats = generate(E, specs, source, specialize, whitelists, globals)
 
 	if #errors > 0 then
 		print("生成失败:")
@@ -335,7 +460,7 @@ local function run_generate(write)
 	for _, content in pairs(files) do
 		bytes = bytes + #content
 	end
-	print(string.format("生成函数: %d（共享后 %d），折叠分支: %d，展开循环: %d", stats.functions, stats.unique_functions, stats.folded, stats.unrolled))
+	print(string.format("生成函数: %d（共享后 %d），helper: %d，折叠分支: %d，展开循环: %d", stats.functions, stats.unique_functions, stats.helpers, stats.folded, stats.unrolled))
 	print(string.format("生成文件: %d，总计 %.2f MB", count_keys(files), bytes / 1024 / 1024))
 
 	if #stale > 0 then

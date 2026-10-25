@@ -127,12 +127,20 @@ function M:runtime_compile(e)
 			end
 		else
 			local ok, result = pcall(specialize.specialize, func, e, {
-				file = file.path
+				file = file.path,
+				whitelist = item.spec.family and whitelists[item.spec.family] or nil,
+				nullable = item.spec.family and whitelists.nullable and whitelists.nullable[item.spec.family] or nil,
+				globals = self.env,
+				helper_prefix = "__pc_h_"
 			})
 			if not ok then
 				print("precompile: 特化失败 " .. e.template_name .. " " .. item.spec.group .. "." .. item.spec.key .. ": " .. tostring(result))
 			else
-				local chunk, load_err = load(result.code, "@precompile/generated/" .. e.template_name .. "." .. item.spec.key, "t", self.env)
+				local source_code = result.code
+				if result.helpers_code and result.helpers_code ~= "" then
+					source_code = result.helpers_code .. "\n" .. source_code
+				end
+				local chunk, load_err = load(source_code, "@precompile/generated/" .. e.template_name .. "." .. item.spec.key, "t", self.env)
 				if not chunk then
 					print("precompile: 生成代码无法加载 " .. e.template_name .. ": " .. tostring(load_err))
 				else

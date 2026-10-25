@@ -3,6 +3,7 @@ package.path = "./?.lua;./precompile/?.lua;" .. package.path
 local source = require("precompile.frontend.source")
 local specialize = require("precompile.stage.specialize")
 local whitelists = require("precompile.whitelists")
+local km = require("lib.klua.macros")
 
 local failed = 0
 
@@ -173,6 +174,104 @@ local multi_result = specialize.specialize(multi_func, {
 })
 check(multi_result.code:find("if b", 1, true) ~= nil, "multi-return lhs stays unknown")
 check(multi_result.code:find("if c", 1, true) ~= nil, "multi-return extra lhs stays unknown")
+
+-- helper 的 this 必须按实参绑定，不能按形参名强制当作当前实体。
+-- 敌人近战攻击士兵时，target 没有 .enemy；旧实现会把守卫折叠掉。
+function fixture_dodge(store, this)
+	if not this.enemy or this.enemy.can_do_magic then
+		return true
+	end
+	return false
+end
+
+function fixture_dodge_caller(this, store, target)
+	return fixture_dodge(store, target)
+end
+
+local dodge_caller = assert(source.find_function(fixture_dodge_caller))
+local dodge_result = specialize.specialize(dodge_caller, {
+	enemy = {
+		can_do_magic = false
+	}
+}, {
+	file = "fixture",
+	whitelist = whitelists.enemies
+})
+if dodge_result.helpers_code ~= "" then
+	check(dodge_result.helpers_code:find("not this.enemy", 1, true) ~= nil, "helper this guard kept from argument binding")
+end
+
+local dodge_chunk = assert(load(dodge_result.helpers_code .. "\n" .. dodge_result.code, "generated_dodge", "t", _G))
+local dodge_generated = dodge_chunk()
+local soldier_target = {
+	dodge = {},
+	unit = {}
+}
+check(dodge_generated({
+	enemy = {
+		can_do_magic = false
+	}
+}, {}, soldier_target) == true, "soldier target does not index enemy")
+
+-- 带 upvalue 的模块局部函数不能直接内联，否则 upvalue 会变成不存在的全局。
+function fixture_clamp(this, store)
+	store.v = km.clamp(0, 1, this.v)
+end
+
+local clamp_func = assert(source.find_function(fixture_clamp))
+local clamp_result = specialize.specialize(clamp_func, {
+	v = 0.5
+}, {
+	file = "fixture",
+	whitelist = whitelists.soldiers,
+	globals = {
+		km = km
+	}
+})
+check(clamp_result.helpers_code:find("CLAMP_SIGNED", 1, true) == nil, "unsafe upvalue function not inlined")
+local clamp_env = setmetatable({
+	km = km
+}, {
+	__index = _G
+})
+local clamp_chunk = assert(load(clamp_result.helpers_code .. "\n" .. clamp_result.code, "generated_clamp", "t", clamp_env))
+local clamp_generated = clamp_chunk()
+local clamp_store = {}
+check(clamp_generated({
+	v = 0.5
+}, clamp_store) == nil and clamp_store.v == 0.5, "inlined caller still runs")
+
+-- 能按同名同值解析的 upvalue 不应阻止内联。
+local safe_helpers = {}
+function safe_helpers.mark(this, store)
+	if this.render then
+		store.marked = true
+	end
+end
+
+function fixture_safe_upvalue(this, store)
+	safe_helpers.mark(this, store)
+end
+
+function fixture_safe_caller(this, store)
+	fixture_safe_upvalue(this, store)
+end
+
+local safe_caller = assert(source.find_function(fixture_safe_caller))
+local safe_result = specialize.specialize(safe_caller, {
+	render = {}
+}, {
+	file = "fixture",
+	whitelist = whitelists.soldiers,
+	globals = setmetatable({
+		safe_helpers = safe_helpers
+	}, {
+		__index = _G
+	})
+})
+local safe_code = safe_result.code .. "\n" .. safe_result.helpers_code
+check(safe_code:find("store.marked = true", 1, true) ~= nil, "safe upvalue helper still inlined")
+check(safe_code:find("fixture_safe_upvalue", 1, true) == nil, "safe upvalue caller inlined")
 
 if failed > 0 then
 	print(string.format("%d 个检查失败", failed))

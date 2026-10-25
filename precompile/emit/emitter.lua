@@ -24,6 +24,18 @@ local function quote(value)
 end
 
 local expr
+local current_hook
+
+function M.with_hook(hook, fn)
+	local previous = current_hook
+	current_hook = hook
+	local ok, result = pcall(fn)
+	current_hook = previous
+	if not ok then
+		error(result, 0)
+	end
+	return result
+end
 
 local function field_key(node)
 	if node.tag == "String" and node.value:match(IDENT) then
@@ -40,7 +52,10 @@ local function function_expr(node)
 	if node.vararg then
 		params[#params + 1] = "..."
 	end
+	local previous = current_hook
+	current_hook = nil
 	local body = (M.block(node.body, 1):gsub("\n+$", ""))
+	current_hook = previous
 	if body ~= "" then
 		body = body .. "\n"
 	end
@@ -49,6 +64,12 @@ end
 
 expr = function(node)
 	local tag = node.tag
+	if current_hook and (tag == "Call" or tag == "Invoke") then
+		local replacement = current_hook(node)
+		if replacement then
+			return replacement
+		end
+	end
 	if tag == "Nil" then
 		return "nil"
 	elseif tag == "True" then
