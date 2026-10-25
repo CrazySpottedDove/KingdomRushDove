@@ -2,6 +2,7 @@
 local V = require("precompile.stage.value")
 local eval = require("precompile.stage.eval")
 local emitter = require("precompile.emit.emitter")
+local source = require("precompile.frontend.source")
 
 local M = {}
 
@@ -104,16 +105,25 @@ end
 
 local specialize_block
 local specialize_stat
+local specialize_call
 
 local function trim_block(body)
 	return (body:gsub("\n+$", ""))
+end
+
+local function make_hook(env, options, state)
+	return function(node)
+		return specialize_call(node, env, options, state)
+	end
 end
 
 specialize_block = function(block, env, depth, options, state)
 	local out = {}
 	for i = 1, #block.stats do
 		local stat = block.stats[i]
-		local code = specialize_stat(stat, env, depth, options, state)
+		local code = emitter.with_hook(make_hook(env, options, state), function()
+			return specialize_stat(stat, env, depth, options, state)
+		end)
 		if code and code ~= "" then
 			out[#out + 1] = code
 			out[#out + 1] = "\n"
@@ -261,17 +271,36 @@ local function specialize_if(node, env, depth, options, state)
 		return ""
 	end
 
+	local has_else = false
 	for i = unknown_from, #node.clauses do
 		local clause = node.clauses[i]
-		local keyword = (i == unknown_from) and "if" or "elseif"
-		local body_env = child(env)
-		local body = trim_block(specialize_block(clause.body, body_env, depth + 1, options, state))
-		out[#out + 1] = pad .. keyword .. " " .. emit_condition(clause.cond, env) .. " then"
-		if body ~= "" then
-			out[#out + 1] = body
+		local value = eval.eval(clause.cond, env)
+		local folded = value.known and value.safe and (not contains_nullable(clause.cond, env) or not is_truthy(value.value))
+		if folded then
+			state.folded = state.folded + 1
+			if not is_truthy(value.value) then
+			-- known false: drop this branch
+			else
+				local body_env = child(env)
+				local body = trim_block(specialize_block(clause.body, body_env, depth + 1, options, state))
+				out[#out + 1] = pad .. "else"
+				if body ~= "" then
+					out[#out + 1] = body
+				end
+				has_else = true
+				break
+			end
+		else
+			local keyword = (i == unknown_from) and "if" or "elseif"
+			local body_env = child(env)
+			local body = trim_block(specialize_block(clause.body, body_env, depth + 1, options, state))
+			out[#out + 1] = pad .. keyword .. " " .. emit_condition(clause.cond, env) .. " then"
+			if body ~= "" then
+				out[#out + 1] = body
+			end
 		end
 	end
-	if node.else_ then
+	if node.else_ and not has_else then
 		local body_env = child(env)
 		local body = trim_block(specialize_block(node.else_, body_env, depth + 1, options, state))
 		out[#out + 1] = pad .. "else"
@@ -377,12 +406,162 @@ specialize_stat = function(node, env, depth, options, state)
 	return emitter.stat(node, depth)
 end
 
+local function resolve_global(node, globals)
+	if node.tag == "Name" then
+		return globals[node.name]
+	elseif node.tag == "Index" then
+		local obj = resolve_global(node.obj, globals)
+		if type(obj) ~= "table" then
+			return nil
+		end
+		local key = node.key
+		if key.tag == "String" then
+			return obj[key.value]
+		elseif key.tag == "Number" then
+			return obj[key.value]
+		end
+	end
+	return nil
+end
+
+local function value_key(value)
+	if not value.known then
+		return "?"
+	end
+	if not value.safe then
+		return "!"
+	end
+	local kind = type(value.value)
+	if kind == "table" then
+		return "t:" .. tostring(value.value)
+	end
+	return kind .. ":" .. tostring(value.value)
+end
+
+local function helper_target(node, state)
+	if node.tag ~= "Call" then
+		return nil
+	end
+	local target = resolve_global(node.callee, state.globals)
+	if type(target) ~= "function" then
+		return nil
+	end
+	if state.target_cache[target] == false then
+		return nil
+	end
+	local cached = state.target_cache[target]
+	if cached then
+		return cached
+	end
+	-- 内联只复制函数体，不复制它的闭包 upvalue。只有 upvalue 能在运行环境
+	-- 里按同名、同值解析时，函数体里的自由变量才仍指向同一个对象；否则
+	-- （例如 macros.lua 的 CLAMP_SIGNED）内联后会变成访问不存在的全局。
+	local upvalue_index = 1
+	while true do
+		local upvalue_name, upvalue_value = debug.getupvalue(target, upvalue_index)
+		if not upvalue_name then
+			break
+		end
+		if upvalue_name ~= "" and state.globals[upvalue_name] ~= upvalue_value then
+			state.target_cache[target] = false
+			return nil
+		end
+		upvalue_index = upvalue_index + 1
+	end
+	local func, file = source.find_function(target)
+	if not func or func.vararg then
+		state.target_cache[target] = false
+		return nil
+	end
+	cached = {
+		func = func,
+		file = file
+	}
+	state.target_cache[target] = cached
+	return cached
+end
+
+specialize_call = function(node, env, options, state)
+	local target = helper_target(node, state)
+	if not target then
+		return nil
+	end
+
+	local args = {}
+	local key_parts = {}
+	for i = 1, #node.args do
+		args[i] = eval.eval(node.args[i], env)
+		key_parts[i] = value_key(args[i])
+	end
+	local key = tostring(target.func) .. "|" .. table.concat(key_parts, ",")
+	local cached = state.helper_cache[key]
+	if cached == false then
+		return nil
+	end
+	local function helper_ref(name)
+		return "__pc_helpers[" .. string.format("%q", name) .. "]"
+	end
+	if type(cached) == "string" then
+		local args_code = {}
+		for i = 1, #node.args do
+			args_code[i] = emitter.expr(node.args[i])
+		end
+		return helper_ref(cached) .. "(" .. table.concat(args_code, ", ") .. ")"
+	end
+
+	state.helper_index = state.helper_index + 1
+	local name = state.helper_prefix .. state.helper_index
+	state.helper_cache[key] = name
+
+	local henv = new_env(env.entity, env.whitelist, env.nullable)
+	for i = 1, #target.func.params do
+		henv:declare(target.func.params[i], args[i] or V.unknown())
+	end
+
+	local folded_before = state.folded
+	local helpers_before = #state.helpers
+	local body = trim_block(specialize_block(target.func.body, henv, 1, options, state))
+	local changed = state.folded > folded_before or #state.helpers > helpers_before
+	if not changed then
+		state.helper_cache[key] = false
+		return nil
+	end
+
+	local params = {}
+	for i = 1, #target.func.params do
+		params[i] = target.func.params[i]
+	end
+	state.helpers[#state.helpers + 1] = {
+		name = name,
+		params = params,
+		body = body,
+		file = target.file and target.file.path
+	}
+	return helper_ref(name) .. "(" .. table.concat((function()
+		local out = {}
+		for i = 1, #node.args do
+			out[i] = emitter.expr(node.args[i])
+		end
+		return out
+	end)(), ", ") .. ")"
+end
+
 --- @param func table Function AST
 --- @param entity table
 --- @param options table|nil { file = string }
 --- @return table { code = string, folded = number, unrolled = number }
 function M.specialize(func, entity, options)
 	local env = new_env(entity, options and options.whitelist, options and options.nullable)
+	local state = {
+		folded = 0,
+		unrolled = 0,
+		helpers = {},
+		helper_cache = {},
+		helper_index = 0,
+		helper_prefix = options and options.helper_prefix or "__pc_h_",
+		target_cache = {},
+		globals = options and options.globals or _G
+	}
 	local params = {}
 	for i = 1, #func.params do
 		local name = func.params[i]
@@ -397,15 +576,26 @@ function M.specialize(func, entity, options)
 		params[#params + 1] = "..."
 	end
 
-	local state = {
-		folded = 0,
-		unrolled = 0
-	}
 	local body = specialize_block(func.body, env, 1, options, state)
 	local code = "return function(" .. table.concat(params, ", ") .. ")\n" .. body .. "end\n"
+	local helper_lines = {}
+	if #state.helpers > 0 then
+		helper_lines[#helper_lines + 1] = "local __pc_helpers = {}"
+		for i = 1, #state.helpers do
+			local helper = state.helpers[i]
+			local code = "__pc_helpers[" .. string.format("%q", helper.name) .. "] = function(" .. table.concat(helper.params, ", ") .. ")\n"
+			if helper.body ~= "" then
+				code = code .. helper.body .. "\n"
+			end
+			code = code .. "end"
+			helper_lines[#helper_lines + 1] = code
+		end
+	end
 
 	return {
 		code = code,
+		helpers = state.helpers,
+		helpers_code = table.concat(helper_lines, "\n"),
 		folded = state.folded,
 		unrolled = state.unrolled,
 		file = options and options.file,

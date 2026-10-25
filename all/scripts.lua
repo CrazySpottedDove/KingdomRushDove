@@ -998,19 +998,17 @@ function scripts.enemy_mixed.update(this, store)
 
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
-		else
+		elseif this.ranged then
 			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
-			if not cont then
-			-- block empty
-			else
+			if cont then
 				if blocker then
 					if not SU.y_wait_for_blocker(store, this, blocker) then
 						goto label_25_0
 					end
 
 					while SU.can_melee_blocker(store, this, blocker) do
-						if this.ranged and this.ranged.range_while_blocking and ranged then
+						if this.ranged.range_while_blocking and ranged then
 							SU.y_enemy_range_attacks(store, this, ranged)
 						end
 
@@ -1023,6 +1021,26 @@ function scripts.enemy_mixed.update(this, store)
 				elseif ranged then
 					while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 do
 						if not SU.y_enemy_range_attacks(store, this, ranged) then
+							goto label_25_0
+						end
+
+						coroutine.yield()
+					end
+				end
+
+				coroutine.yield()
+			end
+		else
+			local cont, blocker = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func__ranged(store, this)
+
+			if cont then
+				if blocker then
+					if not SU.y_wait_for_blocker(store, this, blocker) then
+						goto label_25_0
+					end
+
+					while SU.can_melee_blocker(store, this, blocker) do
+						if not SU.y_enemy_melee_attacks(store, this, blocker) then
 							goto label_25_0
 						end
 
