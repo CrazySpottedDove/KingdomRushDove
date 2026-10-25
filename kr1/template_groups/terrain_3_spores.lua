@@ -1,11 +1,9 @@
 local E = require("entity_db")
+local U = require("utils")
 local v = V.v
 local scripts = require("game_scripts")
 local tt
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local controller_terrain_3_floating_elements = {}
 
 function controller_terrain_3_floating_elements.update(this, store)

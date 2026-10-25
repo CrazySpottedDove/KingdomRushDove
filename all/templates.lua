@@ -1,5 +1,6 @@
 -- chunkname: @./all/templates.lua
 local bit = require("bit")
+local U = require("utils")
 local bor = bit.bor
 local E = require("entity_db")
 local i18n = require("i18n")
@@ -20,10 +21,7 @@ local v = V.v
 local vv = V.vv
 local r = V.r
 
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local function ady(v)
 	return v - anchor_y * image_y
 end

@@ -26,117 +26,10 @@ local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
 
-local function tpos(e)
-	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
-end
-
-local function find_all_t(store, template_name, contains, fn)
-	if not store or not store.entities then
-		return {}
-	end
-
-	return table.filter(store.entities, function(k, v)
-		return (contains and string.find(v.template_name, template_name) or v.template_name == template_name) and (not fn or fn(k, v))
-	end)
-end
-
-local function get_random_round_robin(mutable_history, n, m)
-	if not m then
-		m = n
-		n = 1
-	end
-
-	if m < n then
-		log.error("ERROR: Random round robin needs M to be bigger or equal than N")
-	end
-
-	if #mutable_history == 0 then
-		for i = n, m do
-			table.insert(mutable_history, i)
-		end
-	end
-
-	local pos = math.random(1, #mutable_history)
-	local v = mutable_history[pos]
-
-	table.remove(mutable_history, pos)
-
-	return v
-end
-
-local function generate_blue_noise_cluster(count, candidates, random_fn, ...)
-	local points = {}
-	local x, y = random_fn(...)
-
-	points[1] = {
-		x = x,
-		y = y
-	}
-
-	for i = 2, count do
-		local bestCandidate
-		local bestDistance2 = -1
-
-		for c = 1, candidates do
-			local px, py = random_fn(...)
-			local minDist2 = math.huge
-
-			for _, p in ipairs(points) do
-				local d2 = V.dist2(px, py, p.x, p.y)
-
-				if d2 < minDist2 then
-					minDist2 = d2
-				end
-			end
-
-			if bestDistance2 < minDist2 then
-				bestDistance2 = minDist2
-				bestCandidate = {
-					x = px,
-					y = py
-				}
-			end
-		end
-
-		points[i] = bestCandidate
-	end
-
-	return points
-end
-
-local function random_point_in_ellipse(cx, cy, a, b)
-	local t = 2 * math.pi * math.random()
-	local r = math.sqrt(math.random())
-	local x = r * math.cos(t)
-	local y = r * math.sin(t)
-
-	return cx + x * a, cy + y * b
-end
-
-local function enemy_ready_to_magic_attack(this, store, attack)
-	return this.enemy.can_do_magic and store.tick_ts - attack.ts > attack.cooldown
-end
-
-local function ready_to_attack(attack, store, factor)
-	return store.tick_ts - attack.ts > attack.cooldown * (factor or 1)
-end
-
-local function fts(v)
-	return v / FPS
-end
-
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-
-local function queue_damage(store, damage)
-	table.insert(store.damage_queue, damage)
-end
-
+local tpos = U.tpos
+local ready_to_attack = U.ready_to_attack
+local fts = U.fts
+local queue_damage = U.queue_damage
 local function apply_ultimate(this, store, pos, animation_name)
 	if animation_name then
 		U.y_animation_play(this, animation_name, nil, store.tick_ts, 1)
@@ -34906,28 +34799,6 @@ function scripts.hero_lava.update(this, store)
 	local hotheaded_attack = this.timed_attacks.list[1]
 	local wild_eruption = this.timed_attacks.list[2]
 
-	local function custom_walk(store, this)
-		local dest = this.nav_rally.pos
-
-		if V.veq(this.pos, dest) then
-			this.motion.arrived = true
-
-			return false
-		else
-			U.set_destination(this, dest)
-
-			if U.walk_off__accel__unsnapped(this, store.tick_length) then
-				return false
-			else
-				local an, af = U.animation_name_facing_point(this, "death_walk", this.motion.dest)
-
-				U.animation_start_default(this, an, af, store.tick_ts, true)
-
-				return true
-			end
-		end
-	end
-
 	local function ultimate_extra_fireballs()
 		local a = this._combo_ultimate
 		local max_dist2 = 10000
@@ -42482,19 +42353,6 @@ function scripts.shadow_bat.update(this, store)
 	U.y_animation_play(this, "summon", nil, store.tick_ts, 1)
 	U.y_animation_wait(this, 1)
 
-	local function force_move_step(dest, max_speed, ramp_radius)
-		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
-		local dist = V.len(dx, dy)
-		local df = not (ramp_radius and not (ramp_radius < dist)) and 1 or math.max(dist / ramp_radius, 0.1)
-
-		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(495, V.mul(10 * df, dx, dy)))
-		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
-		fm.v.x, fm.v.y = V.trim(max_speed, fm.v.x, fm.v.y)
-		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
-		fm.a.x, fm.a.y = V.mul(-0.05 / store.tick_length, fm.v.x, fm.v.y)
-		sp.flip_x = this.pos.x < dest.x
-	end
-
 	-- 直线匀速飞向目标（不走弹簧-阻尼，确保实际速度达到 flight_speed_busy）
 	local function fly_to(pos, max_speed)
 		local dx, dy = V.sub(pos.x, pos.y, this.pos.x, this.pos.y)
@@ -45302,7 +45160,7 @@ function scripts.hero_stage_205_alleria.update(this, store)
 						bullet.bullet.target_id = target.id
 						bullet.bullet.source_id = this.id
 
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 
 						enemy_idx = enemy_idx + 1
 
@@ -45346,7 +45204,7 @@ function scripts.hero_stage_205_alleria.update(this, store)
 						e.melee.attacks[1].damage_max = e.melee.attacks[1].damage_max * mods[1].cat_dmg_buff
 					end
 
-					queue_insert(store, e)
+					simulation:queue_insert_entity(e)
 					S:queue(wa.sound)
 					U.animation_start_default(e, "in", nil, store.tick_ts, false)
 					U.y_animation_wait(this)
@@ -45453,7 +45311,7 @@ function scripts.hero_stage_215_lord_blackburn.update(this, store)
 			decal.pos:copy(this.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, decal)
+			simulation:queue_insert_entity(decal)
 			S:queue(this.sound_power_up)
 			U.y_wait(store, fts(82))
 		elseif count == 4 then
@@ -45480,7 +45338,7 @@ function scripts.hero_stage_215_lord_blackburn.update(this, store)
 			decal.pos:copy(this.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, decal)
+			simulation:queue_insert_entity(decal)
 			S:queue(this.sound_power_up)
 			U.y_wait(store, fts(82))
 		end
@@ -45492,14 +45350,14 @@ function scripts.hero_stage_215_lord_blackburn.update(this, store)
 			boss.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 			boss.render.sprites[1].hidden = true
 
-			queue_insert(store, boss)
+			simulation:queue_insert_entity(boss)
 			coroutine.yield()
 
 			boss.render.sprites[1].hidden = false
 			this.render.sprites[1].hidden = true
 
 			signal.emit("hide-stage-hero", this.id)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 
 			return
 		end
@@ -45616,24 +45474,24 @@ function scripts.stage_215_lord_blackburn_ray.update(this, store)
 	explosion.render.sprites[1].ts = store.tick_ts
 	explosion.pos:copy(this.pos)
 
-	queue_insert(store, explosion)
+	simulation:queue_insert_entity(explosion)
 
 	local aura = E:create_entity(this.aura)
 
 	aura.pos = this.pos
 
-	queue_insert(store, aura)
+	simulation:queue_insert_entity(aura)
 
 	if this._tower then
 		SU.remove_modifiers(store, this._tower)
-		queue_remove(store, store.entities[this._tower.id])
+		simulation:queue_remove_entity(store.entities[this._tower.id])
 
 		local holder = table.filter(store.entities, function(k, v)
 			return v.tower and v.tower.type == "holder" and v.tower_holder.holder_id == this._tower.tower.holder_id
 		end)[1]
 
 		if holder then
-			queue_remove(store, store.entities[holder.id])
+			simulation:queue_remove_entity(store.entities[holder.id])
 		end
 	end
 
@@ -45642,7 +45500,7 @@ function scripts.stage_215_lord_blackburn_ray.update(this, store)
 	end
 
 	signal.emit("hide-stage-hero", this.id)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 scripts.mod_stage_215_black_burn_mind_control = {}
@@ -45723,7 +45581,7 @@ local function denas_spawn_guard_squad(store, dg, spawn_pos, entity_name, walk_f
 			e.nav_rally.pos = V.vclone(e.pos)
 		end
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		out[#out + 1] = e
 	end
@@ -45851,7 +45709,7 @@ function scripts.hero_stage_218_denas.y_bombardement(store, this)
 		e.bullet.source_id = this.id
 		e.bullet.damage_factor = 1
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		local ts = store.tick_ts
 

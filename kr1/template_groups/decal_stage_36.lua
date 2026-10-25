@@ -6,10 +6,7 @@ local U = require("utils")
 local S = require("sound_db")
 local ACH = require("achievements")
 local V = require("lib.klua.vector")
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local decal_stage_36_easter_egg_spyro = {}
 
 function decal_stage_36_easter_egg_spyro.insert(this, store, script)

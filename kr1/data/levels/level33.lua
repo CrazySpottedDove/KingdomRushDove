@@ -9,9 +9,6 @@ local LU=require("level_utils")
 local V=require("lib.klua.vector")
 require("all.constants")
 local e
-local function fts(v)
-return v/FPS
-end
 local v=V.v
 local level={}
 function level:init(store)

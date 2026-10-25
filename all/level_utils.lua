@@ -16,12 +16,6 @@ local bit = require("bit")
 local U = require("utils")
 local LU = {}
 
-local function is_file(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "file"
-end
-
 function LU.queue_insert(store, e)
 	simulation:queue_insert_entity(e)
 end

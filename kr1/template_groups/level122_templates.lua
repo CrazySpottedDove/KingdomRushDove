@@ -183,10 +183,7 @@ end
 
 local S = require("sound_db")
 local band = bit.band
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local controller_stage_22_boss_crocs = {}
 
 function controller_stage_22_boss_crocs.update(this, store)

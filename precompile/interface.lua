@@ -15,6 +15,7 @@ local M = {
 }
 local CU = require("precompile.compile_utils")
 local _fn_cache = {}
+local file_utils = require("all.file_utils")
 ------- 提供环境变量
 
 local scripts = require("scripts")
@@ -39,33 +40,13 @@ local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
 
-local function is_file(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "file"
-end
+local is_file = file_utils.is_file
 
 require("i18n")
 
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
-local function fts(v)
-	return v / FPS
-end
-
-local function tpos(e)
-	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
-end
+local queue_damage = U.queue_damage
+local fts = U.fts
+local tpos = U.tpos
 
 M.env = setmetatable({
 	scripts = scripts,
@@ -87,8 +68,6 @@ M.env = setmetatable({
 	bor = bor,
 	bnot = bnot,
 	is_file = is_file,
-	queue_insert = queue_insert,
-	queue_remove = queue_remove,
 	queue_damage = queue_damage,
 	fts = fts,
 	tpos = tpos

@@ -7,9 +7,7 @@ local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local P=require("path_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local level={}
 function level:load(store)
 if store.level_mode~=GAME_MODE_CAMPAIGN then

@@ -170,10 +170,7 @@ end
 local tt
 local S = require("sound_db")
 local P = require("path_db")
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local controller_stage_35_bull_king = {}
 
 function controller_stage_35_bull_king.update(this, store)

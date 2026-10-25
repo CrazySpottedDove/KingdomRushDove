@@ -6,9 +6,7 @@ local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local v = V.v
 local SU = require("script_utils")
-local function fts(t)
-	return t / FPS
-end
+local fts = U.fts
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end

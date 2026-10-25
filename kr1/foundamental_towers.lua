@@ -2,19 +2,13 @@ local i18n = require("i18n")
 
 require("all.constants")
 
-local anchor_x = 0
 local anchor_y = 0
-local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
 local U = require("utils")
 local RLU = require("all.rally_utils")
 require("templates")
-
-local function adx(v)
-	return v - anchor_x * image_x
-end
 
 local function ady(v)
 	return v - anchor_y * image_y

@@ -104,14 +104,6 @@ local function CJK(default, zh, ja, kr)
 	return i18n.cjk(i18n, default, zh, ja, kr)
 end
 
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-
 require("all.constants")
 
 require("gg_views_custom")
@@ -145,9 +137,6 @@ game_gui.ref_w = GUI_REF_W
 game_gui.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game_gui.selected_controables = {}
 
-local function wid(name)
-	return game_gui.window:ci(name)
-end
 -- 辅助函数：解锁用户技能（供信号与其他回调复用）
 local function unlock_user_power(power_idx)
 	if power_idx == 1 then
@@ -915,8 +904,8 @@ function game_gui:build_random_towers(resolved)
 				new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
 			end
 
-			queue_remove(game_gui.game.store, v)
-			queue_insert(game_gui.game.store, new_tower)
+			simulation:queue_remove_entity(v)
+			simulation:queue_insert_entity(new_tower)
 
 			game_gui.game.store.towers[k] = new_tower
 
@@ -8105,8 +8094,8 @@ function CriketMenu:button_callback(button, item, no_overwrite)
 				new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
 			end
 
-			queue_remove(game_gui.game.store, v)
-			queue_insert(game_gui.game.store, new_tower)
+			simulation:queue_remove_entity(v)
+			simulation:queue_insert_entity(new_tower)
 
 			game_gui.game.store.towers[k] = new_tower
 

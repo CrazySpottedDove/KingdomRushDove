@@ -10,9 +10,6 @@ local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
 local TU=require("all.tower_utils")
-local function fts(v)
-return v/FPS
-end
 local boss_shadow_waves,moving_island
 local function y_set_middle_path_walkable(store)
 for x=2,87 do

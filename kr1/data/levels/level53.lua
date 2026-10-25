@@ -7,9 +7,6 @@ local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local P=require("path_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local level={}
 function level:load(store)
 self.catapult_stop_ni={[6]=41,[5]=40}

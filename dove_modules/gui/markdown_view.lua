@@ -127,10 +127,6 @@ local function is_table_sep(s)
 	return true
 end
 
-local function trim(s)
-	return s:match("^%s*(.-)%s*$") or s
-end
-
 local function parse_markdown(text)
 	if not text or text == "" then
 		return {}

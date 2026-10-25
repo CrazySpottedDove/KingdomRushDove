@@ -10,15 +10,7 @@ local vv = V.vv
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
+local fts = U.fts
 local tt
 tt = E:register_t_hot("decal_stage_209_mask_1", "decal", true)
 tt.render.sprites[1].name = "Stage_9_door_MASK-"
@@ -109,7 +101,7 @@ local function decal_stage_209_mortal_kombat_update(this, store)
 					end
 					U.y_animation_play(this, get_opposite_character() .. "_mareo_click", nil, store.tick_ts, 1, 1)
 					signal.emit("kombat-finisher-stage09")
-					queue_remove(store, this)
+					simulation:queue_remove_entity(this)
 					return
 				end
 				coroutine.yield()
@@ -165,7 +157,7 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "rain_of_fire_hit_0009"
 local function tower_holder_pillar_e_insert(this, store)
 	local rally = E:create_entity("editor_pillar_rally_point")
-	queue_insert(store, rally)
+	simulation:queue_insert_entity(rally)
 	rally.tower_id = this.id
 	this.editor.pillar_point_id = rally.id
 	if this.pillar.pillar_damage_center and this.pillar.pillar_damage_center.x ~= 0 and this.pillar.pillar_damage_center.y ~= 0 then
@@ -175,7 +167,7 @@ local function tower_holder_pillar_e_insert(this, store)
 		this.pillar.pillar_damage_center = rally.pos
 	end
 	local rally2 = E:create_entity("editor_rally_point")
-	queue_insert(store, rally2)
+	simulation:queue_insert_entity(rally2)
 	rally2.tower_id = this.id
 	this.editor.rally_point_id = rally2.id
 	if this.pillar.default_rally_pos and this.pillar.default_rally_pos.x ~= 0 and this.pillar.default_rally_pos.y ~= 0 then
@@ -195,11 +187,11 @@ end
 local function tower_holder_pillar_e_remove(this, store)
 	local rally = store.entities[this.editor.rally_point_id]
 	if rally then
-		queue_remove(store, rally)
+		simulation:queue_remove_entity(rally)
 	end
 	local pillar = store.entities[this.editor.pillar_point_id]
 	if pillar then
-		queue_remove(store, pillar)
+		simulation:queue_remove_entity(pillar)
 	end
 	return true
 end
@@ -250,7 +242,7 @@ local function tower_holder_pillar_update(this, store)
 				local dmg_visuals = E:create_entity(this.pillar.explosion_t)
 				dmg_visuals.pos = V.vclone(this.pos)
 				dmg_visuals.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, dmg_visuals)
+				simulation:queue_insert_entity(dmg_visuals)
 				coroutine.yield()
 				this.render.sprites[1].hidden = true
 				local holder = E:create_entity(this.pillar.holder_on_break)
@@ -261,15 +253,15 @@ local function tower_holder_pillar_update(this, store)
 				holder.ui.nav_mesh_id = this.ui.nav_mesh_id
 				holder.tower.level = 1
 				holder.tower.can_be_mod = false
-				queue_insert(store, holder)
+				simulation:queue_insert_entity(holder)
 				signal.emit("tower-removed", this, holder)
 				U.y_wait(store, this.pillar.hit_time)
 				local dmg_aura = E:create_entity(this.pillar.damage_aura_t)
 				dmg_aura.pos = this.pillar.pillar_damage_center
-				queue_insert(store, dmg_aura)
+				simulation:queue_insert_entity(dmg_aura)
 				local decal = E:create_entity(this.pillar.decal_t)
 				decal.pos = this.pillar.pillar_damage_center
-				queue_insert(store, decal)
+				simulation:queue_insert_entity(decal)
 				break
 			else
 				U.animation_start(this, "idle_" .. tap_count + 1, nil, store.tick_ts, true, 1)
@@ -278,7 +270,7 @@ local function tower_holder_pillar_update(this, store)
 		coroutine.yield()
 	end
 	U.y_animation_wait(this)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 tt = E:register_t_hot("tower_holder_pillar_terrain_2_1_down", nil, true)
 AC(tt, "pos", "render", "ui", "sound_events", "editor", "main_script", "editor_script")

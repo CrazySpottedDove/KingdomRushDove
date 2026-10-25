@@ -249,10 +249,7 @@ end
 local tt
 local S = require("sound_db")
 local signal = require("lib.hump.signal")
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local controller_stage_33_ciclone = {}
 
 function controller_stage_33_ciclone.update(this, store)
@@ -545,10 +542,7 @@ function controller_stage_33_tambor.update(this, store)
 end
 
 local SU = require("script_utils")
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
+local queue_damage = U.queue_damage
 tt = RT("stage_33_lightning_strike", "decal_scripted")
 E:add_comps(tt, "tween")
 tt.main_script.update = function(this, store)

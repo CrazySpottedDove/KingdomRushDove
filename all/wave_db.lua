@@ -10,6 +10,7 @@ local EU = require("endless_utils")
 local bit = require("bit")
 require("all.constants")
 
+local file_utils = require("all.file_utils")
 local wave_db = {}
 
 wave_db.db = nil
@@ -49,11 +50,7 @@ local function log_e(fmt, ...)
 	log.error(fmt, ...)
 end
 
-local function is_file(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "file"
-end
+local is_file = file_utils.is_file
 
 --- 按优先级构造波次文件的搜索前缀：编辑器目录优先，其次自定义地图目录，最后游戏目录。
 --- 与 love.filesystem.loadWithPreference 的候选顺序保持一致。

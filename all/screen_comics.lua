@@ -5,6 +5,7 @@ local I = require("lib.klove.image_db")
 local F = require("lib.klove.font_db")
 local S = require("sound_db")
 local SU = require("screen_utils")
+local U = require("utils")
 local v = V.v
 local i18n = require("i18n")
 local timer = require("hump.timer").new()
@@ -13,10 +14,7 @@ local timer_comic = require("hump.timer").new()
 require("klove.kui")
 require("gg_views_custom")
 
-local function fts(v)
-	return v / 30
-end
-
+local fts = U.fts
 screen_comics = {}
 
 screen_comics.ref_h = GUI_REF_H

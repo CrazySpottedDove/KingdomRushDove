@@ -335,16 +335,6 @@ end
 -- 	return lookup
 -- end
 
-local function sorted_keys(derived_map)
-	local out = {}
-	for value in pairs(derived_map) do
-		out[#out + 1] = value
-	end
-	table.sort(out)
-
-	return out
-end
-
 -- local function register_custom_image(rel_path, sprite_name, group_name)
 -- 	if not rel_path or not sprite_name then
 -- 		return false
@@ -461,53 +451,6 @@ local function load_required_templates(level)
 
 		package.loaded[module_name] = nil
 	end
-end
-
-local function gather_wave_enemy_templates(wave_data)
-	local names = {}
-	E:ensure_loaded()
-	local entities = E.entities or {}
-	local function add_enemy_name(name)
-		if type(name) ~= "string" or name == "" then
-			return
-		end
-		if entities[name] then
-			names[name] = true
-			return
-		end
-		local prefixed = "enemy_" .. name
-		if entities[prefixed] then
-			names[prefixed] = true
-		end
-	end
-
-	if type(wave_data) ~= "table" or type(wave_data.groups) ~= "table" then
-		return names
-	end
-
-	for _, group in ipairs(wave_data.groups) do
-		if type(group) == "table" and type(group.waves) == "table" then
-			for _, wave in ipairs(group.waves) do
-				if type(wave) == "table" then
-					if type(wave.enemies) == "table" then
-						for _, enemy_name in ipairs(wave.enemies) do
-							add_enemy_name(enemy_name)
-						end
-					end
-					if type(wave.spawns) == "table" then
-						for _, spawn in ipairs(wave.spawns) do
-							if type(spawn) == "table" then
-								add_enemy_name(spawn.creep)
-								add_enemy_name(spawn.creep_aux)
-							end
-						end
-					end
-				end
-			end
-		end
-	end
-
-	return names
 end
 
 -- function editor:current_custom_music_ids()

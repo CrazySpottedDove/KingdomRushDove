@@ -14,10 +14,6 @@ local DI = require("difficulty")
 local log = require("lib.klua.log"):new("systems")
 local WU = require("all.wave_utils")
 
-local function fts(v)
-	return v / FPS
-end
-
 -- 与 wave_spawn.lua 中 DIFFICULTY_HARD 的出怪加速保持一致：
 -- 后期波次按组号缩减 wave/spawn/wait 的等待时间。
 local function hard_wave_wait_time(wait_time, group_id)

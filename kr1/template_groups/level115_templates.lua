@@ -95,10 +95,7 @@ local v = V.v
 local P = require("path_db")
 local SU = require("script_utils")
 local band = bit.band
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local controller_stage_15_cult_leader_tower = {}
 
 function controller_stage_15_cult_leader_tower.update(this, store)

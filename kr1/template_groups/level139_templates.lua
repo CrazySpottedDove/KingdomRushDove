@@ -93,10 +93,7 @@ local v = V.v
 local S = require("sound_db")
 local signal = require("lib.hump.signal")
 local SU = require("script_utils")
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local decal_stage_39_easter_egg_sheepy = {}
 
 function decal_stage_39_easter_egg_sheepy.update(this, store, script)

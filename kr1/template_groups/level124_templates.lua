@@ -3,9 +3,7 @@ local S = require("sound_db")
 local U = require("utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
-local function fts(v)
-	return v / FPS
-end
+local fts = U.fts
 require("lib.klua.table")
 local scripts = require("scripts")
 local r = V.r

@@ -10,9 +10,6 @@ local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local level={}
 function level:init(store)
 store.level_terrain_style=TERRAIN_STYLE_UNDERGROUND

@@ -31,34 +31,9 @@ local bnot = bit.bnot
 -- local simulation = require("simulation")
 local v = V.v
 
-local function tpos(e)
-	return e.tower and e.tower.range_offset and v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
-end
-
-local function enemy_ready_to_magic_attack(this, store, attack)
-	return this.enemy.can_do_magic and store.tick_ts - attack.ts > attack.cooldown
-end
-
-local function ready_to_attack(attack, store, factor)
-	return store.tick_ts - attack.ts > attack.cooldown * (factor or 1)
-end
-
-local function fts(v)
-	return v / FPS
-end
-
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
+local enemy_ready_to_magic_attack = U.enemy_ready_to_magic_attack
+local fts = U.fts
+local queue_damage = U.queue_damage
 scripts.eb_juggernaut = {}
 
 function scripts.eb_juggernaut.insert(this, store)
@@ -11411,60 +11386,6 @@ function scripts.boss_redboy_teen.update(this, store)
 
 	this.spawn_fly_time_down = 0.1
 
-	local function y_spawn_fly(to, dest_pi, skip_landing)
-		U.flags_add(this.vis, band(this.vis.flags_jumping, bnot(this.vis.flags_normal)))
-		U.bans_add(this.vis, band(this.vis.bans_jumping, bnot(this.vis.bans_normal)))
-
-		local from = V.vclone(this.pos)
-
-		SU.remove_modifiers(store, this)
-
-		local af = to.x < from.x
-
-		this.render.sprites[1]._sort_y_offset = this.render.sprites[1].sort_y_offset
-		this.render.sprites[1].sort_y_offset = -200
-
-		set_exo_for_anim("jump_fly_down")
-		U.animation_start(this, "jump_fly_down", af, store.tick_ts, true, 1, true)
-
-		local start_ts = store.tick_ts
-		local phase
-
-		repeat
-			phase = (store.tick_ts - start_ts) / this.spawn_fly_time_down
-			this.pos.x = U.ease_value(from.x, to.x, phase, "sine-in")
-			this.pos.y = U.ease_value(from.y, to.y, phase, "sine-out") + this.fly_offset_y
-
-			coroutine.yield()
-		until phase >= 1
-
-		this.render.sprites[1].sort_y_offset = this.render.sprites[1]._sort_y_offset
-		this.render.sprites[1]._sort_y_offset = nil
-
-		S:queue(this.sound_land)
-
-		this.pos.x, this.pos.y = to.x, to.y
-
-		if not skip_landing then
-			local shake = E:create_entity("aura_screen_shake")
-
-			shake.aura.amplitude = 0.8
-			shake.aura.duration = 0.2
-			shake.aura.freq_factor = 5
-
-			simulation:queue_insert_entity(shake)
-			set_exo_for_anim("jump_end")
-			U.y_animation_play(this, "jump_end", af, store.tick_ts, 1)
-			set_exo_for_anim("idle")
-			U.animation_start(this, "idle", af, store.tick_ts, true, 1, true)
-		end
-
-		U.flags_remove(this.vis, band(this.vis.flags_jumping, bnot(this.vis.flags_normal)))
-		U.bans_remove(this.vis, band(this.vis.bans_jumping, bnot(this.vis.bans_normal)))
-		this.nav_path.pi = dest_pi
-		this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {dest_pi})[1][3]
-	end
-
 	local function is_after_nodes_limit(attack)
 		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
@@ -13546,7 +13467,7 @@ function scripts.enemy_boss_stage_215.update(this, store, script)
 			shake.aura.duration = 0.2
 			shake.aura.freq_factor = 1
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			U.y_animation_wait(this, 1)
 			U.y_wait(store, 1)
 
@@ -13559,14 +13480,14 @@ function scripts.enemy_boss_stage_215.update(this, store, script)
 			death_aura = E:create_entity(this.fall_death_aura)
 			death_aura.pos.x, death_aura.pos.y = np.x, np.y
 
-			queue_insert(store, death_aura)
+			simulation:queue_insert_entity(death_aura)
 
 			shake = E:create_entity("aura_screen_shake")
 			shake.aura.amplitude = 2
 			shake.aura.duration = 0.2
 			shake.aura.freq_factor = 4
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 		end
 
 		this.nav_path.pi = this.start_path
@@ -13635,7 +13556,7 @@ function scripts.enemy_boss_stage_215.update(this, store, script)
 
 		death_decal.pos.x, death_decal.pos.y = this.pos.x, this.pos.y
 
-		queue_insert(store, death_decal)
+		simulation:queue_insert_entity(death_decal)
 		S:queue(this.sound_death)
 
 		this.render.sprites[1].hidden = true
@@ -13685,7 +13606,7 @@ function scripts.enemy_boss_stage_215.update(this, store, script)
 				fx.pos = V.vclone(hit_pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 
 			if SU.y_enemy_wait(store, this, ab.hit_time) then
@@ -13700,14 +13621,14 @@ function scripts.enemy_boss_stage_215.update(this, store, script)
 				fx.pos = V.vclone(hit_pos)
 				fx.render.sprites[1].ts = store.tick_ts
 
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 
 			local dmg_aura = E:create_entity(ab.damage_aura)
 
 			dmg_aura.pos = V.vclone(this.pos)
 
-			queue_insert(store, dmg_aura)
+			simulation:queue_insert_entity(dmg_aura)
 
 			local shake = E:create_entity("aura_screen_shake")
 
@@ -13715,7 +13636,7 @@ function scripts.enemy_boss_stage_215.update(this, store, script)
 			shake.aura.duration = 0.35
 			shake.aura.freq_factor = 2
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 
 			local aura = E:create_entity(ab.aura)
 
@@ -13723,7 +13644,7 @@ function scripts.enemy_boss_stage_215.update(this, store, script)
 			aura.aura.ts = store.tick_ts
 			aura.pos = V.vclone(this.pos)
 
-			queue_insert(store, aura)
+			simulation:queue_insert_entity(aura)
 			U.y_animation_wait(this)
 
 			trigger_block = false
@@ -13990,10 +13911,10 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 					sfx.render.sprites[1].ts = store.tick_ts
 					sfx.render.sprites[1].r = V.angleTo(bullet.bullet.to.x - bullet.pos.x, bullet.bullet.to.y - bullet.pos.y)
 
-					queue_insert(store, sfx)
+					simulation:queue_insert_entity(sfx)
 				end
 
-				queue_insert(store, bullet)
+				simulation:queue_insert_entity(bullet)
 
 				if SU.y_enemy_wait(store, this, fts(4)) or this._revealing then
 					return
@@ -14015,10 +13936,10 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 				sfx.render.sprites[1].ts = store.tick_ts
 				sfx.render.sprites[1].r = V.angleTo(bullet.bullet.to.x - bullet.pos.x, bullet.bullet.to.y - bullet.pos.y)
 
-				queue_insert(store, sfx)
+				simulation:queue_insert_entity(sfx)
 			end
 
-			queue_insert(store, bullet)
+			simulation:queue_insert_entity(bullet)
 		end
 
 		while not U.animation_finished(this) and not this._revealing do
@@ -14059,7 +13980,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 					m.modifier.target_id = towers[i].id
 					m.modifier.source_id = this.id
 
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 
@@ -14141,7 +14062,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 			blt.bullet.max_speed = speed
 			blt.tween.ts = store.tick_ts
 
-			queue_insert(store, blt)
+			simulation:queue_insert_entity(blt)
 		end
 
 		local shockwave_done = false
@@ -14158,7 +14079,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 					swfx.pos = V.vclone(this.pos)
 					swfx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, swfx)
+					simulation:queue_insert_entity(swfx)
 				end
 			end
 
@@ -14244,7 +14165,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 							sfx.render.sprites[1].ts = store.tick_ts
 							sfx.render.sprites[1].r = V.angleTo(w.to.x - w.from.x, w.to.y - w.from.y)
 
-							queue_insert(store, sfx)
+							simulation:queue_insert_entity(sfx)
 						end
 
 						w.stage = 2
@@ -14274,7 +14195,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 						dis_fx.pos = V.vclone(v.pos)
 						dis_fx.render.sprites[1].ts = store.tick_ts
 
-						queue_insert(store, dis_fx)
+						simulation:queue_insert_entity(dis_fx)
 
 						w.stage = 4
 					elseif w.stage == 4 then
@@ -14303,7 +14224,7 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 
 		shared.reveals_done = (shared.reveals_done or 0) + 1
 
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 
 	local function y_swap_to_real()
@@ -14324,8 +14245,8 @@ function scripts.enemy_stage_218_veznan_illusion.update(this, store, script)
 		real._inherited_hp = this.health.hp
 		real.shared = this.shared
 
-		queue_insert(store, real)
-		queue_remove(store, this)
+		simulation:queue_insert_entity(real)
+		simulation:queue_remove_entity(this)
 	end
 
 	while true do
@@ -14599,10 +14520,10 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 					sfx.render.sprites[1].ts = store.tick_ts
 					sfx.render.sprites[1].r = V.angleTo(bullet.bullet.to.x - bullet.pos.x, bullet.bullet.to.y - bullet.pos.y)
 
-					queue_insert(store, sfx)
+					simulation:queue_insert_entity(sfx)
 				end
 
-				queue_insert(store, bullet)
+				simulation:queue_insert_entity(bullet)
 
 				if SU.y_enemy_wait(store, this, fts(4)) then
 					return
@@ -14624,10 +14545,10 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 				sfx.render.sprites[1].ts = store.tick_ts
 				sfx.render.sprites[1].r = V.angleTo(bullet.bullet.to.x - bullet.pos.x, bullet.bullet.to.y - bullet.pos.y)
 
-				queue_insert(store, sfx)
+				simulation:queue_insert_entity(sfx)
 			end
 
-			queue_insert(store, bullet)
+			simulation:queue_insert_entity(bullet)
 		end
 
 		while not U.animation_finished(this) and not this.health.dead do
@@ -14668,7 +14589,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 					m.modifier.target_id = towers[i].id
 					m.modifier.source_id = this.id
 
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 
@@ -14708,7 +14629,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			cfx.pos = V.vclone(this.pos)
 			cfx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, cfx)
+			simulation:queue_insert_entity(cfx)
 		end
 
 		U.animation_start(this, this.siphon_animations[1], nil, store.tick_ts, false)
@@ -14748,7 +14669,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 						sfx.render.sprites[1].ts = store.tick_ts
 						sfx.render.sprites[1].r = V.angleTo(to.x - from.x, to.y - from.y)
 
-						queue_insert(store, sfx)
+						simulation:queue_insert_entity(sfx)
 					end
 
 					if SU.y_enemy_wait(store, this, this.siphon_flash_soul_time or 0) then
@@ -14770,7 +14691,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 						bullet.bullet.min_speed = speed
 						bullet.bullet.max_speed = speed
 
-						queue_insert(store, bullet)
+						simulation:queue_insert_entity(bullet)
 						table.insert(bullets, bullet)
 
 						if doomed then
@@ -14791,7 +14712,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 							dis_fx.pos = V.vclone(target.pos)
 							dis_fx.render.sprites[1].ts = store.tick_ts
 
-							queue_insert(store, dis_fx)
+							simulation:queue_insert_entity(dis_fx)
 
 							if SU.y_enemy_wait(store, this, this.siphon_disintegrate_kill_time or 0) then
 								return
@@ -14824,7 +14745,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 					afx.pos = V.vclone(blt.pos)
 					afx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, afx)
+					simulation:queue_insert_entity(afx)
 				end
 
 				if blt.arrive_pump_fx then
@@ -14833,10 +14754,10 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 					pfx.pos = V.vclone(this.pos)
 					pfx.render.sprites[1].ts = store.tick_ts
 
-					queue_insert(store, pfx)
+					simulation:queue_insert_entity(pfx)
 				end
 
-				queue_remove(store, blt)
+				simulation:queue_remove_entity(blt)
 			end
 		end
 
@@ -14850,7 +14771,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			hfx.pos = V.vclone(this.pos)
 			hfx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, hfx)
+			simulation:queue_insert_entity(hfx)
 		end
 
 		this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + count * sp.heal_per_soul)
@@ -14891,7 +14812,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 		shake.aura.duration = 2
 		shake.aura.freq_factor = 3
 
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 		signal.emit("boss-killed", this)
 
 		local function cam_out()
@@ -14936,7 +14857,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			swfx.pos = V.v(this.pos.x + off.x, this.pos.y + off.y)
 			swfx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, swfx)
+			simulation:queue_insert_entity(swfx)
 		end
 
 		cam_out()
@@ -14948,7 +14869,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			shake.aura.duration = this.death_loop_shake.duration
 			shake.aura.freq_factor = this.death_loop_shake.freq_factor
 
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 		end
 
 		local sd = this.death_loop_soul_delay
@@ -14967,7 +14888,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 				shake.aura.duration = this.death_end_shake.duration
 				shake.aura.freq_factor = this.death_end_shake.freq_factor
 
-				queue_insert(store, shake)
+				simulation:queue_insert_entity(shake)
 			end
 
 			if next_delay <= store.tick_ts - soul_ts then
@@ -14993,7 +14914,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 				blt.bullet.min_speed = speed
 				blt.bullet.max_speed = speed
 
-				queue_insert(store, blt)
+				simulation:queue_insert_entity(blt)
 			end
 
 			coroutine.yield()
@@ -15004,7 +14925,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 
 			flash.tween.ts = store.tick_ts
 
-			queue_insert(store, flash)
+			simulation:queue_insert_entity(flash)
 		end
 
 		U.y_animation_play(this, this.death_animations[3], nil, store.tick_ts, 1)
@@ -15142,7 +15063,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			tfx.pos = V.vclone(this.pos)
 			tfx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, tfx)
+			simulation:queue_insert_entity(tfx)
 		end
 
 		y_aura_fade_out()
@@ -15163,7 +15084,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			tfx.pos = V.vclone(this.pos)
 			tfx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, tfx)
+			simulation:queue_insert_entity(tfx)
 		end
 
 		U.y_wait(store, this.center_reveal_show_time)
@@ -15192,7 +15113,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 			swfx.pos = V.vclone(this.pos)
 			swfx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, swfx)
+			simulation:queue_insert_entity(swfx)
 		end
 
 		LU.kill_all_enemies(store, false)
@@ -15214,7 +15135,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 					s.modifier.target_id = e.id
 					s.modifier.source_id = this.id
 
-					queue_insert(store, s)
+					simulation:queue_insert_entity(s)
 				else
 					local d = E:create_entity("damage")
 
@@ -15233,7 +15154,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 	cfx.pos = V.vclone(this.pos)
 	cfx.render.sprites[1].ts = store.tick_ts
 
-	queue_insert(store, cfx)
+	simulation:queue_insert_entity(cfx)
 
 	local ok, err = pcall(signal.emit, "boss_fight_start_tweened", this, 0.3)
 
@@ -15260,7 +15181,7 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 		bullet.tween.ts = store.tick_ts
 		bullet.reveal_heal = heal_chunk
 
-		queue_insert(store, bullet)
+		simulation:queue_insert_entity(bullet)
 
 		if i < rv.soul_count then
 			SU.y_enemy_wait(store, this, stagger)

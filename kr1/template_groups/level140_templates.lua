@@ -2,9 +2,7 @@ local E = require("entity_db")
 local S = require("sound_db")
 local U = require("utils")
 local V = require("lib.klua.vector")
-local function fts(v)
-	return v / FPS
-end
+local fts = U.fts
 require("lib.klua.table")
 local SU = require("script_utils")
 local scripts = require("scripts")
@@ -214,10 +212,7 @@ local function fts(v)
 	return v / FPS
 end
 
-local function tpos(e)
-	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
-end
-
+local tpos = U.tpos
 local controller_stage_40_ballista = {}
 
 function controller_stage_40_ballista.update(this, store, script)

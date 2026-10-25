@@ -9,9 +9,6 @@ local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
 local TU=require("all.tower_utils")
-local function fts(v)
-return v/FPS
-end
 local blocked_cells={{14,19},{15,19},{10,18},{11,18},{12,18},{13,18},{14,18},{15,18},{16,18},{17,18},{6,17},{7,17},{8,17},{9,17},{10,17},{11,17},{12,17},{13,17},{14,17},{15,17},{16,17},{17,17},{18,17},{19,17},{2,16},{3,16},{4,16},{5,16},{6,16},{7,16},{8,16},{9,16},{10,16},{11,16},{12,16},{13,16},{14,16},{15,16},{16,16},{17,16},{18,16},{19,16},{20,16},{2,15},{3,15},{4,15},{5,15},{6,15},{7,15},{8,15},{9,15},{10,15},{11,15}}
 local function set_terrain(cells,terrain)
 for _,cell in ipairs(cells) do

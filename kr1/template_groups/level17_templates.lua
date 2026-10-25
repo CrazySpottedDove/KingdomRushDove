@@ -3,9 +3,7 @@ local U = require("utils")
 local LU = require("level_utils")
 require("all.constants")
 require("lib.klua.table")
-local function fts(t)
-	return t / FPS
-end
+local fts = U.fts
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end

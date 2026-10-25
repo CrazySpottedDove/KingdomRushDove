@@ -10,9 +10,6 @@ local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
 local TU=require("all.tower_utils")
-local function fts(v)
-return v/FPS
-end
 local level={}
 function level:preprocess(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then

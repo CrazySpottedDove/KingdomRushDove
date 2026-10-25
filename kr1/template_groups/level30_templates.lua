@@ -7,9 +7,7 @@ require("lib.klua.table")
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local queue_damage = U.queue_damage
 local function sand_worm_update(this, store)
 	local s = this.render.sprites[1]
 	local a = this.area_attack

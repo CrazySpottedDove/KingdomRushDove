@@ -9,10 +9,7 @@ local Common = require("kr1.endless.tech_handlers.common")
 local bit = require("bit")
 local band = bit.band
 
-local function fts(t)
-	return t / FPS
-end
-
+local fts = U.fts
 local function scale_attack_range(t, factor)
 	t.attacks.range = t.attacks.range * factor
 

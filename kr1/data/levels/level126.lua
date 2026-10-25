@@ -9,9 +9,7 @@ local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local level={}
 function level:load(store)
 return

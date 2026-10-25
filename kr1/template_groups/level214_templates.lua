@@ -23,12 +23,6 @@ local function find_all_t(store, template_name, contains, fn)
 		return (contains and string.find(val.template_name, template_name) or val.template_name == template_name) and (not fn or fn(k, val))
 	end)
 end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
 local function tower_stage_214_blacksmith_update(this, store, script)
 	local visuals = find_all_t(store, this.decal)[1]
 	local alert = find_all_t(store, this.alert)[1]
@@ -237,7 +231,7 @@ local function controller_stage_214_houses_update(this, store)
 	for i, h in pairs(houses) do
 		local cont = E:create_entity(this.cont_t)
 		cont.house_id = h.id
-		queue_insert(store, cont)
+		simulation:queue_insert_entity(cont)
 		table.insert(conts, cont)
 	end
 	table.sort(houses, function(b1, b2)
@@ -277,7 +271,7 @@ local function controller_stage_214_house_spawner_update(this, store)
 				enemy.nav_path.spi = math.random(1, 3)
 				enemy.pos = V.vclone(house.pos)
 				enemy.source_id = this.id
-				queue_insert(store, enemy)
+				simulation:queue_insert_entity(enemy)
 				U.y_wait(store, this.delay_between)
 			end
 			this.do_spawn = false
@@ -289,7 +283,7 @@ local function controller_stage_214_community_building_achievement_update(this, 
 	while true do
 		if this.armory_maxed and this.blacksmith_maxed then
 			signal.emit("community-building-stage14")
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		coroutine.yield()
@@ -372,7 +366,7 @@ local function stage_214_goat_graveyard_update(this, store, script)
 		end
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local tt = E:register_t_hot("decal_stage_214_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage214_mask_1"

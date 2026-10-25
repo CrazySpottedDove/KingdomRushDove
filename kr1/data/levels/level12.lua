@@ -6,9 +6,6 @@ local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local P=require("path_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local level={}
 function level:fn_can_power(store,power_id,pos)
 return V.is_inside(pos,V.r(95,318,117,58))

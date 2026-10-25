@@ -5,9 +5,7 @@ local V = require("lib.klua.vector")
 require("all.constants")
 require("lib.klua.table")
 local v = V.v
-local function fts(t)
-	return t / FPS
-end
+local fts = U.fts
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
@@ -78,9 +76,7 @@ tt.attacks.list[1].max_cooldown = 60
 tt.attacks.list[1].shoot_time = fts(29)
 tt.attacks.list[1].max_error = 20
 tt.attacks.list[1].min_error = 5
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local queue_damage = U.queue_damage
 local SU = require("script_utils")
 local function bomb_pirate_cannon_update(this, store)
 	local b = this.bullet

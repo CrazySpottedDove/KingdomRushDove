@@ -19,10 +19,6 @@ local function ady(v)
 	return v - anchor_y * image_y
 end
 
-local function melee_slot_y_flying()
-	return (1 - anchor_y) * image_y
-end
-
 local U = require("utils")
 
 require("game_templates_utils")

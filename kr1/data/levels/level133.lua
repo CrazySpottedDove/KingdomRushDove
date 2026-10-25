@@ -10,9 +10,7 @@ local storage=require("all.storage")
 local GR=require("grid_db")
 local TU=require("all.tower_utils")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local level={}
 local function create_thunder(store,pos)
 local fx=E:create_entity("fx_stage_33_house_destroy")

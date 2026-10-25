@@ -3,9 +3,7 @@ local E = require("entity_db")
 local P = require("path_db")
 local U = require("utils")
 local SU = require("script_utils")
-local function fts(t)
-	return t / 30
-end
+local fts = U.fts
 local vv = vec_1
 local tt = E:register_t_tmp("mod_stage_32_lava_splash", "modifier")
 tt.main_script.insert = scripts.mod_track_target.insert

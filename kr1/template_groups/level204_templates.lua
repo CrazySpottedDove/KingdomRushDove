@@ -12,18 +12,8 @@ local vv = V.vv
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function tpos(e)
-	return e.tower and e.tower.range_offset and v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
-end
+local fts = U.fts
+local tpos = U.tpos
 local function crane_can_select_point(this, x, y)
 	return P:valid_node_nearby(x, y)
 end
@@ -42,7 +32,7 @@ local function crane_update(this, store)
 	this.bubble = E:create_entity(this.bubble_t)
 	this.bubble.pos = V.vclone(this.pos)
 	this.bubble.render.sprites[1].alpha = 0
-	queue_insert(store, this.bubble)
+	simulation:queue_insert_entity(this.bubble)
 	local function activate()
 		this.repair.active = true
 		times_repaired = times_repaired + 1
@@ -85,7 +75,7 @@ local function crane_update(this, store)
 				local pi, spi, ni = unpack(nearest)
 				b.bullet.to = P:node_pos(pi, spi, ni)
 				b.bullet.source_id = this.id
-				queue_insert(store, b)
+				simulation:queue_insert_entity(b)
 				U.y_animation_wait(this)
 				U.animation_start(this, "idle_1", nil, store.tick_ts, true)
 				this.repair.active = false
@@ -109,7 +99,7 @@ local function crane_update(this, store)
 	end
 end
 local function crane_remove(this, store, script)
-	queue_remove(store, this.bubble)
+	simulation:queue_remove_entity(this.bubble)
 	return true
 end
 local function wall_controller_update(this, store)
@@ -135,17 +125,17 @@ local function wall_controller_update(this, store)
 	crane.bubble.render.sprites[1].alpha = 0
 	local decal_explotion = E:create_entity("decal_stage_204_wall_explosion")
 	decal_explotion.pos = V.v(512, 384)
-	queue_insert(store, decal_explotion)
+	simulation:queue_insert_entity(decal_explotion)
 	U.animation_start(decal_explotion, "start", nil, store.tick_ts, false)
 	U.y_wait(store, fts(275))
 	local shake = E:create_entity("aura_screen_shake")
 	shake.aura.amplitude = 0.4
 	shake.aura.duration = 2
 	shake.aura.freq_factor = 4
-	queue_insert(store, shake)
+	simulation:queue_insert_entity(shake)
 	U.y_wait(store, fts(15))
 	mask1.render.sprites[1].z = Z_OBJECTS_COVERS
-	queue_remove(store, mask3)
+	simulation:queue_remove_entity(mask3)
 	local holder_crane = E:create_entity("tower_holder_blocked_terrain_1_3")
 	holder_crane.ui.can_click = true
 	holder_crane.tower.can_hover = true
@@ -153,11 +143,11 @@ local function wall_controller_update(this, store)
 	holder_crane.tower.holder_id = crane.tower.holder_id
 	holder_crane.ui.nav_mesh_id = crane.ui.nav_mesh_id
 	holder_crane.pos = V.vclone(crane.pos)
-	queue_insert(store, holder_crane)
+	simulation:queue_insert_entity(holder_crane)
 	crane.trigger_deselect = true
-	queue_remove(store, crane)
+	simulation:queue_remove_entity(crane)
 	U.y_wait(store, fts(5))
-	queue_remove(store, mask4)
+	simulation:queue_remove_entity(mask4)
 	P:activate_path(3)
 	for k, v in pairs(store.level.ignore_walk_backwards_paths) do
 		if v == 3 then
@@ -243,7 +233,7 @@ local function minecraft_update(this, store)
 			end
 		end
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local mask_z = {Z_BACKGROUND_COVERS, Z_BACKGROUND_COVERS, Z_BACKGROUND_COVERS, Z_BACKGROUND_COVERS}
 for i = 1, 4 do

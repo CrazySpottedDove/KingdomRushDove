@@ -12,15 +12,7 @@ local vv = V.vv
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
+local fts = U.fts
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -36,7 +28,7 @@ local function controller_stage_212_elevator_insert(this, store)
 		local e = E:create_entity(this.elevator_t)
 		e.pos.x, e.pos.y = 512, 384
 		this.elevator = e
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 	end
 	this.mask1 = find_all_t(store, this.elevator_mask_1_t)[1]
 	this.mask2 = find_all_t(store, this.elevator_mask_2_t)[1]
@@ -157,9 +149,9 @@ local function decal_stage_212_troll_warrior_rappel_spawn_update(this, store, sc
 	sp.nav_path.pi = this.pi
 	sp.nav_path.spi = this.spi
 	sp.nav_path.ni = this.ni
-	queue_insert(store, sp)
-	queue_remove(store, shadow)
-	queue_remove(store, this)
+	simulation:queue_insert_entity(sp)
+	simulation:queue_remove_entity(shadow)
+	simulation:queue_remove_entity(this)
 end
 local function decal_stage_212_torch_update(this, store)
 	local old_anim = this.render.sprites[1].name
@@ -231,7 +223,7 @@ local function controller_stage_212_wreak_havoc_achievement_update(this, store)
 		end
 		signal.emit("wreak-havoc-stage12")
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local tt = E:register_t_hot("ps_stage_212_snow", "particle_system", true)
 tt.particle_system.alphas = {205, 200, 0}

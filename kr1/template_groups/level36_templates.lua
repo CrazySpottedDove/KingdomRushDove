@@ -2,9 +2,8 @@ local E = require("entity_db")
 local scripts = require("scripts")
 require("all.constants")
 require("lib.klua.table")
-local function fts(t)
-	return t / FPS
-end
+local U = require("utils")
+local fts = U.fts
 local tt
 tt = E:register_t_hot("bomb_volcano", "bullet", true)
 tt.bullet.damage_max = 160

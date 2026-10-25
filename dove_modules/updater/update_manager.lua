@@ -239,29 +239,7 @@ local function ensure_update_cache_dir(local_hash, server_hash)
 	return dir
 end
 
--- 【新增】获取文件在缓存目录中的路径
-local function get_cached_file_path(file_path, file_type)
-	if not update_cache_dir then
-		return nil
-	end
-	-- file_type: "code" 或 "assets"
-	return update_cache_dir .. "/" .. file_type .. "/" .. file_path
-end
-
 -- 【新增】检查文件是否已经完整下载到缓存
-local function is_file_cached(file_path, file_type, expected_size)
-	local cached_path = get_cached_file_path(file_path, file_type)
-	if not cached_path then
-		return false
-	end
-
-	local info = FS.getInfo(cached_path)
-	if info and info.size == expected_size then
-		return true
-	end
-	return false
-end
-
 -- 【新增】根据网络状况动态调整块大小
 local function adjust_chunk_size(success)
 	if success then

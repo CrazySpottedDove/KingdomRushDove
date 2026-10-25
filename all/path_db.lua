@@ -10,12 +10,6 @@ local V = require("lib.klua.vector")
 local GR = require("grid_db")
 local path_db = {}
 
-local function is_file(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "file"
-end
-
 path_db.path_end_margin = 10
 path_db.path_valid_margin = 1
 path_db.path_valid_margin_top = 2

@@ -19,10 +19,7 @@ local configer = require("dove_modules.configer")
 local WU = require("all.wave_utils")
 local log = require("lib.klua.log"):new("systems")
 
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 wave_spawn.name = "wave_spawn"
 
 local function spawner(store, wave, group_id)

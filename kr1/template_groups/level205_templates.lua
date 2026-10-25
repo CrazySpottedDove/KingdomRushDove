@@ -11,18 +11,8 @@ local v = V.v
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local fts = U.fts
+local queue_damage = U.queue_damage
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -101,7 +91,7 @@ local function upper_path_update(this, store, script)
 	while not U.animation_finished(this) do
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function citizen_basic_update_editor(this, store)
 	while true do
@@ -140,7 +130,7 @@ local function citizen_old_window_update(this, store, script)
 	this.render.sprites[1].hidden = false
 	U.y_animation_play(this, "breakclosestlamp", nil, store.tick_ts, 1)
 	this.render.sprites[1].hidden = true
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function citizen_loop_update(this, store, script)
 	local loop_ts = store.tick_ts
@@ -213,7 +203,7 @@ local function kodama_update(this, store, script)
 	U.y_wait(store, this.random_wait)
 	U.y_animation_play(this, "fadein", nil, store.tick_ts, 1)
 	U.y_animation_play(this, "tap", nil, store.tick_ts, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function controller_kodama_update(this, store, script)
 	local kodamas = find_all_t(store, this.kodama_t, true)
@@ -229,7 +219,7 @@ local function controller_kodama_update(this, store, script)
 	end
 	U.y_wait(store, fts(132 + max_wait))
 	signal.emit("frenzied-spirits-stage05")
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function controller_leaves_update(this, store, script)
 	local tree
@@ -245,7 +235,7 @@ local function controller_leaves_update(this, store, script)
 			leaf.pos = v(this.pos.x + math.random(-this.spawn_width / 2, this.spawn_width / 2), this.pos.y)
 			leaf.render.sprites[1].flip_x = math.random(1, 2) == 1
 			leaf.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, leaf)
+			simulation:queue_insert_entity(leaf)
 			U.y_wait(store, fts(math.random(this.spawn_cd_min * 30, this.spawn_cd_max * 30)))
 		end
 		coroutine.yield()
@@ -275,12 +265,12 @@ local function controller_tree_update(this, store, script)
 	decal_buff.render.sprites[1].ts = store.tick_ts
 	decal_buff.pos = v(609, 340)
 	decal_buff.tween.ts = store.tick_ts
-	queue_insert(store, decal_buff)
+	simulation:queue_insert_entity(decal_buff)
 	local souls = E:create_entity(this.souls_t)
 	souls.render.sprites[1].ts = store.tick_ts
 	souls.pos = v(609, 340)
 	souls.tween.ts = store.tick_ts
-	queue_insert(store, souls)
+	simulation:queue_insert_entity(souls)
 	U.animation_start(tree, "idlecharging", nil, store.tick_ts, true, 1)
 	while store.wave_group_number == 0 do
 		coroutine.yield()
@@ -288,7 +278,7 @@ local function controller_tree_update(this, store, script)
 	local decal_ready = E:create_entity(this.decal_ready_t)
 	decal_ready.render.sprites[1].ts = store.tick_ts
 	decal_ready.pos = v(609, 340)
-	queue_insert(store, decal_ready)
+	simulation:queue_insert_entity(decal_ready)
 	if this.recover_sound then
 		S:queue(this.recover_sound, {
 			delay = fts(this.recover_sound_frame)
@@ -299,7 +289,7 @@ local function controller_tree_update(this, store, script)
 	this.ui.clicked = nil
 	local aura = E:create_entity(this.aura_t)
 	aura.pos = aura_pos
-	queue_insert(store, aura)
+	simulation:queue_insert_entity(aura)
 	U.y_animation_play(zone, "appear2", nil, store.tick_ts, 1)
 	U.animation_start(zone, "idle2", nil, store.tick_ts, false)
 	this.path_unlocked = false
@@ -311,7 +301,7 @@ local function controller_tree_update(this, store, script)
 			decal_buff.tween.remove = true
 			souls.tween.reverse = true
 			souls.tween.remove = true
-			queue_remove(store, aura)
+			simulation:queue_remove_entity(aura)
 			aura = nil
 			if this.path_unlocked then
 				U.animation_start(zone, "disappear", nil, store.tick_ts, false)
@@ -321,7 +311,7 @@ local function controller_tree_update(this, store, script)
 			local decal_stun = E:create_entity(this.decal_stun_t)
 			decal_stun.render.sprites[1].ts = store.tick_ts
 			decal_stun.pos = V.vclone(this.pos)
-			queue_insert(store, decal_stun)
+			simulation:queue_insert_entity(decal_stun)
 			S:queue(this.sound_activation)
 			U.animation_start(tree, "stun", nil, store.tick_ts, false)
 			U.y_wait(store, this.stun_delay)
@@ -332,14 +322,14 @@ local function controller_tree_update(this, store, script)
 			shake.aura.amplitude = 1
 			shake.aura.duration = 0.4
 			shake.aura.freq_factor = 2
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			local enemies = U.find_enemies_in_range(store, aura_pos, 0, this.radius, this.vis_flags, this.vis_bans)
 			if enemies then
 				for k, vv in pairs(enemies) do
 					local mod = E:create_entity(this.mod_stun)
 					mod.modifier.target_id = vv.id
 					mod.modifier.source_id = this.id
-					queue_insert(store, mod)
+					simulation:queue_insert_entity(mod)
 					local d = E.create_damage()
 					d.value = math.random(this.damage_min, this.damage_max)
 					d.source_id = this.id
@@ -358,21 +348,21 @@ local function controller_tree_update(this, store, script)
 			end
 			aura = E:create_entity(this.aura_t)
 			aura.pos = aura_pos
-			queue_insert(store, aura)
+			simulation:queue_insert_entity(aura)
 			decal_buff = E:create_entity(this.decal_buff_t)
 			decal_buff.render.sprites[1].ts = store.tick_ts
 			decal_buff.pos = v(609, 340)
 			decal_buff.tween.ts = store.tick_ts
-			queue_insert(store, decal_buff)
+			simulation:queue_insert_entity(decal_buff)
 			souls = E:create_entity(this.souls_t)
 			souls.render.sprites[1].ts = store.tick_ts
 			souls.pos = v(609, 340)
 			souls.tween.ts = store.tick_ts
-			queue_insert(store, souls)
+			simulation:queue_insert_entity(souls)
 			decal_ready = E:create_entity(this.decal_ready_t)
 			decal_ready.render.sprites[1].ts = store.tick_ts
 			decal_ready.pos = v(609, 340)
-			queue_insert(store, decal_ready)
+			simulation:queue_insert_entity(decal_ready)
 			if this.recover_sound then
 				S:queue(this.recover_sound, {
 					delay = fts(this.recover_sound_frame)
@@ -426,21 +416,21 @@ local function controller_fire_update(this, store)
 	decal_fire.pos = v(-189, 770)
 	decal_fire.render.sprites[1].ts = store.tick_ts
 	decal_fire.tween.ts = store.tick_ts
-	queue_insert(store, decal_fire)
+	simulation:queue_insert_entity(decal_fire)
 	local decal_fire_light = E:create_entity("decal_stage_205_fire_light")
 	decal_fire_light.pos = v(-189, 770)
 	decal_fire_light.render.sprites[1].ts = store.tick_ts
 	decal_fire_light.tween.ts = store.tick_ts
-	queue_insert(store, decal_fire_light)
+	simulation:queue_insert_entity(decal_fire_light)
 	local ps = E:create_entity("ps_stage_205_fire")
 	ps.pos = v(580, 780)
 	ps.particle_system.emit = true
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 	local shake = E:create_entity("aura_screen_shake")
 	shake.aura.amplitude = 0.4
 	shake.aura.duration = 2
 	shake.aura.freq_factor = 4
-	queue_insert(store, shake)
+	simulation:queue_insert_entity(shake)
 	P:activate_path(5)
 	tree_cont.path_unlocked = true
 	for k, vv in pairs(store.level.ignore_walk_backwards_paths) do
@@ -479,7 +469,7 @@ local function mod_tree_stun_update(this, store, script)
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	this.pos = target.pos
@@ -495,7 +485,7 @@ local function mod_tree_stun_update(this, store, script)
 		coroutine.yield()
 	end
 	U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function aura_tree_update(this, store, script)
 	local first_hit_ts
@@ -518,13 +508,13 @@ local function aura_tree_update(this, store, script)
 					new_mod.modifier.level = this.aura.level
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 		end
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function mod_tree_buff_insert(this, store, script)
 	local m = this.modifier
@@ -553,7 +543,7 @@ local function mod_tree_buff_update(this, store, script)
 	this.modifier.ts = store.tick_ts
 	local target = store.entities[m.target_id]
 	if not target or not target.pos then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	this.pos = target.pos

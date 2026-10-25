@@ -12,18 +12,8 @@ local vv = V.vv
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local fts = U.fts
+local queue_damage = U.queue_damage
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -54,7 +44,7 @@ local function decal_stage_206_flush_stick_update(this, store, script)
 	S:queue(this.sound_flush)
 	U.y_wait(store, fts(15))
 	local wave = find_all_t(store, this.wave_t)[1]
-	queue_remove(store, wave)
+	simulation:queue_remove_entity(wave)
 	local mage = find_all_t(store, this.mage_t)[1]
 	U.y_animation_play(mage, "flush", nil, store.tick_ts, 1)
 	U.animation_start(mage, "loop_2", nil, store.tick_ts, true)
@@ -126,7 +116,7 @@ local function controller_stage_206_nivus_update(this, store)
 			b.bullet.shot_index = 1
 			b.bullet.loop_index = i
 			b.bullet.source_id = this.id
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 			U.y_animation_wait(nivus)
 			target_idx = target_idx + 1
 			if target_idx > #enemies then
@@ -143,7 +133,7 @@ local function controller_stage_206_nivus_update(this, store)
 		nivus.render.sprites[1].sort_y_offset = 384 - nivus.pos.y + this.nivus_sort_y_offset
 		nivus.render.sprites[1].ts = store.tick_ts
 		nivus.render.sprites[1].hidden = false
-		queue_insert(store, nivus)
+		simulation:queue_insert_entity(nivus)
 		U.y_animation_play(nivus, "in", nil, store.tick_ts, 1)
 		U.animation_start(nivus, "idle", nil, store.tick_ts, true)
 		bubble = E:create_entity(current_spell.bubble_t)
@@ -152,7 +142,7 @@ local function controller_stage_206_nivus_update(this, store)
 		bubble.pos.y = bubble.pos.y + this.bubble_offset.y
 		bubble.render.sprites[1].hidden = true
 		bubble.tween.ts = store.tick_ts
-		queue_insert(store, bubble)
+		simulation:queue_insert_entity(bubble)
 		this.ui.click_rect.pos.x = nivus.pos.x - this.pos.x - this.ui.click_rect.size.x / 2
 		this.ui.click_rect.pos.y = nivus.pos.y - this.pos.y
 		local books = {}
@@ -166,7 +156,7 @@ local function controller_stage_206_nivus_update(this, store)
 				local fx = E:create_entity(this.books.book_charge_fx_t)
 				fx.pos = V.v(nivus.pos.x, nivus.pos.y + 50)
 				fx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				local book = E:create_entity(this.books.book_charge_t)
 				book.pos = V.v(nivus.pos.x + this.books.offsets[i].x, nivus.pos.y + this.books.offsets[i].y)
 				book.tween.ts = store.tick_ts
@@ -176,7 +166,7 @@ local function controller_stage_206_nivus_update(this, store)
 				book.tween.props[5].name = "offset"
 				book.tween.props[6] = table.deepclone(book.tween.props[5])
 				book.tween.props[6].sprite_id = 2
-				queue_insert(store, book)
+				simulation:queue_insert_entity(book)
 				table.insert(books, book)
 				if i == 2 then
 					book.tween.props[2].keys = {{0, 0}, {1, 1.9 * math.pi}}
@@ -242,7 +232,7 @@ local function controller_stage_206_nivus_update(this, store)
 		end
 		this.ui.clicked = nil
 		target_picked, _, pred_pos = find_target(current_spell, true)
-		queue_remove(store, bubble)
+		simulation:queue_remove_entity(bubble)
 		if current_mode == 1 then
 			U.animation_start(nivus, this.books.animation_shoot, nil, store.tick_ts, false)
 			U.y_wait(store, this.books.cast_time)
@@ -254,7 +244,7 @@ local function controller_stage_206_nivus_update(this, store)
 				local fx = E:create_entity(this.books.book_charge_fx_t)
 				fx.pos = books[i].pos
 				fx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				local b = E:create_entity(this.books.bullet_t)
 				b.pos = books[i].pos
 				b.bullet.from = V.vclone(b.pos)
@@ -267,13 +257,13 @@ local function controller_stage_206_nivus_update(this, store)
 				end
 				b.bullet.to = P:node_pos(pi, spi, ni)
 				b.bullet.source_id = this.id
-				queue_insert(store, b)
-				queue_remove(store, books[i])
+				simulation:queue_insert_entity(b)
+				simulation:queue_remove_entity(books[i])
 				U.y_wait(store, fts(3))
 			end
 			local c = E:create_entity(this.books.squad_controller_t)
 			c.books_spawned = #books
-			queue_insert(store, c)
+			simulation:queue_insert_entity(c)
 			U.y_animation_wait(nivus)
 		elseif current_mode == 2 then
 			local target_pos = target_picked and target_picked.pos or V.v(575, 242)
@@ -281,7 +271,7 @@ local function controller_stage_206_nivus_update(this, store)
 				local m = E:create_entity(this.disintegrate.mod_stun)
 				m.modifier.target_id = target_picked.id
 				m.modifier.source_id = this.id
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 				target_picked.health.ignore_damage = true
 				U.y_wait(store, fts(1))
 				U.bans_add(target_picked.vis, F_ALL)
@@ -311,7 +301,7 @@ local function controller_stage_206_nivus_update(this, store)
 				local fx = E:create_entity(this.disintegrate.vanish_fx_t)
 				fx.pos.x, fx.pos.y = target_picked.pos.x + target_picked.unit.hit_offset.x, target_picked.pos.y + target_picked.unit.hit_offset.y
 				fx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 			U.y_animation_wait(nivus)
 			U.y_wait(store, fts(10))
@@ -343,7 +333,7 @@ local function controller_stage_206_nivus_update(this, store)
 			b.bullet.target_id = target_picked and target_picked.id
 			b.bullet.source_id = this.id
 			b.chain_pos = 1
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 			if target_picked then
 				table.insert(this.chain_targets, target_picked.id, target_picked.id)
 			end
@@ -358,7 +348,7 @@ local function controller_stage_206_nivus_update(this, store)
 				if math.random(1, 2) == 1 then
 					fx.render.sprites[1].flip_x = true
 				end
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				U.y_wait(store, fts(1))
 			end
 			U.y_animation_wait(nivus)
@@ -387,7 +377,7 @@ local function controller_stage_206_nivus_books_squads_update(this, store)
 		local center = V.vclone(books[1].pos)
 		b.nav_rally.pos, b.nav_rally.center = pos, center
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function bullet_nivus_magic_missiles_insert(this, store)
 	local b = this.bullet
@@ -397,7 +387,7 @@ local function bullet_nivus_magic_missiles_insert(this, store)
 	b.to = V.v(this.pos.x + math.random(10, 90) * (math.random() < 0.5 and -1 or 1), this.pos.y + math.random(100, 300))
 	local ps = E:create_entity(b.particles_name)
 	ps.particle_system.track_id = this.id
-	queue_insert(store, ps)
+	simulation:queue_insert_entity(ps)
 	return true
 end
 local function soldier_nivus_book_insert(this, store, script)
@@ -449,7 +439,7 @@ local function bullet_nivus_brooms_update(this, store)
 			fx.render.sprites[1].offset = V.v(0, 0)
 		end
 		fx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 	if b.hit_time > fts(1) then
 		while store.tick_ts - s.ts < b.hit_time do
@@ -478,7 +468,7 @@ local function bullet_nivus_brooms_update(this, store)
 			chain.bullet.target_id = chain_target.id
 			chain.bullet.source_id = b.source_id
 			chain.chain_pos = this.chain_pos + 1
-			queue_insert(store, chain)
+			simulation:queue_insert_entity(chain)
 			table.insert(source.chain_targets, chain_target.id, chain_target.id)
 		end
 	end
@@ -486,7 +476,7 @@ local function bullet_nivus_brooms_update(this, store)
 	if not target then
 		target = store.entities[b.target_id]
 		if not target then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 	end
@@ -496,16 +486,16 @@ local function bullet_nivus_brooms_update(this, store)
 			local m = E:create_entity(mod_name)
 			m.modifier.target_id = b.target_id
 			m.modifier.source_id = b.source_id
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 	end
 	local fx = E:create_entity(this.transform_fx)
 	fx.pos.x, fx.pos.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
 	fx.render.sprites[1].ts = store.tick_ts
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 	U.y_wait(store, fts(4))
 	this.render.sprites[1].hidden = true
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function mod_nivus_brooms_polymorph_insert(this, store)
 	local target = store.entities[this.modifier.target_id]
@@ -519,7 +509,7 @@ local function mod_nivus_brooms_polymorph_insert(this, store)
 		}
 		SU.remove_modifiers(store, target)
 		SU.remove_auras(store, target)
-		queue_remove(store, target)
+		simulation:queue_remove_entity(target)
 		U.unblock_all(store, target)
 		if target.ui then
 			target.ui.can_click = false
@@ -539,7 +529,7 @@ local function mod_nivus_brooms_polymorph_insert(this, store)
 		if broom.grant_original_enemy_gold then
 			broom.enemy.gold = target.enemy.gold
 		end
-		queue_insert(store, broom)
+		simulation:queue_insert_entity(broom)
 		this.polymorph_enemy.broom = broom
 		return true
 	end
@@ -552,7 +542,7 @@ local function mod_nivus_brooms_polymorph_update(this, store, script)
 	this.pos.x, this.pos.y = target.pos.x, target.pos.y
 	while true do
 		if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		coroutine.yield()
@@ -572,7 +562,7 @@ local function mod_nivus_brooms_polymorph_remove(this, store)
 		target.pos.x, target.pos.y = broom.pos.x, broom.pos.y
 		target.nav_path = broom.nav_path
 		target.health.hp = target.health.hp_max * broom.health.hp / broom.health.hp_max
-		queue_insert(store, target)
+		simulation:queue_insert_entity(target)
 		broom.trigger_deselect = true
 		if this.sound_transform_out then
 			S:queue(this.sound_transform_out)
@@ -584,8 +574,8 @@ local function mod_nivus_brooms_polymorph_remove(this, store)
 		if sfx.render.sprites[1].size_names then
 			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
 		end
-		queue_insert(store, sfx)
-		queue_remove(store, broom)
+		simulation:queue_insert_entity(sfx)
+		simulation:queue_remove_entity(broom)
 	end
 	return true
 end

@@ -14,18 +14,8 @@ local km = require("lib.klua.macros")
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local fts = U.fts
+local queue_damage = U.queue_damage
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -71,7 +61,7 @@ local function controller_stage_207_bushes_update(this, store)
 			table.insert(bushes, v)
 			local cont = E:create_entity(this.cont_t)
 			cont.bush_ref = v
-			queue_insert(store, cont)
+			simulation:queue_insert_entity(cont)
 			table.insert(conts, cont)
 		end
 	end
@@ -122,14 +112,14 @@ local function controller_stage_207_bush_spawner_update(this, store)
 				local fx = E:create_entity(this.spawn_fx)
 				fx.pos = V.vclone(bush.pos)
 				fx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				local enemy = E:create_entity(this.enemy_t)
 				enemy.nav_path.pi = this.path_id
 				enemy.nav_path.ni = ni + 5
 				enemy.nav_path.spi = math.random(1, 3)
 				enemy.pos = V.vclone(bush.pos)
 				enemy.source_id = this.id
-				queue_insert(store, enemy)
+				simulation:queue_insert_entity(enemy)
 				U.y_wait(store, this.delay_between)
 			end
 			this.do_spawn = false
@@ -188,7 +178,7 @@ local function controller_stage_207_barn_update(this, store)
 				end
 			end
 			if not any_ready then
-				queue_remove(store, this.bubble)
+				simulation:queue_remove_entity(this.bubble)
 				this.bubble = nil
 				this.ui.can_click = false
 			end
@@ -216,7 +206,7 @@ local function controller_stage_207_horse_update(this, store)
 				this.barn_cont.bubble = E:create_entity(this.bubble_t)
 				this.barn_cont.bubble.pos.x, this.barn_cont.bubble.pos.y = horses[this.horse_id].pos.x + barn_c.bubble_offset.x, horses[this.horse_id].pos.y + barn_c.bubble_offset.y
 				this.barn_cont.bubble.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, this.barn_cont.bubble)
+				simulation:queue_insert_entity(this.barn_cont.bubble)
 				this.barn_cont.ui.can_click = true
 			end
 		end
@@ -230,7 +220,7 @@ local function controller_stage_207_horse_update(this, store)
 			knight.pos = V.vclone(this.pos)
 			knight.path_id = this.knight_path
 			knight.node_id = ni - 5
-			queue_insert(store, knight)
+			simulation:queue_insert_entity(knight)
 			U.y_animation_play(horses[this.horse_id], "in", nil, store.tick_ts, 1)
 			U.animation_start(horses[this.horse_id], "idle", nil, store.tick_ts, true)
 			horses[this.horse_id].can_do_anim = true
@@ -273,11 +263,11 @@ local function aura_stage_207_knight_update(this, store, script)
 					hit_fx.pos = V.vclone(target.pos)
 					hit_fx.pos.x, hit_fx.pos.y = hit_fx.pos.x + target.unit.hit_offset.x, hit_fx.pos.y + target.unit.hit_offset.y
 					hit_fx.render.sprites[1].ts = store.tick_ts
-					queue_insert(store, hit_fx)
+					simulation:queue_insert_entity(hit_fx)
 					local new_mod = E:create_entity(this.aura.mod)
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 			if #targets > 0 then
@@ -325,13 +315,13 @@ local function aura_stage_207_knight_update(this, store, script)
 				ps1 = E:create_entity(this.particles_name_1)
 				ps1.particle_system.emit = true
 				ps1.particle_system.track_id = this.id
-				queue_insert(store, ps1)
+				simulation:queue_insert_entity(ps1)
 			end
 			if this.particles_name_2 then
 				ps2 = E:create_entity(this.particles_name_2)
 				ps2.particle_system.emit = true
 				ps2.particle_system.track_id = this.id
-				queue_insert(store, ps2)
+				simulation:queue_insert_entity(ps2)
 			end
 		end
 		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
@@ -350,7 +340,7 @@ local function aura_stage_207_knight_update(this, store, script)
 		ps2.particle_system.emit = false
 		U.y_wait(store, ps1.particle_system.particle_lifetime[2])
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local mask_z = {Z_OBJECTS, Z_OBJECTS_COVERS, Z_OBJECTS, Z_OBJECTS}
 for i = 1, 4 do

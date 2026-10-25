@@ -58,21 +58,11 @@ local bnot = bit.bnot
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
+local fts = U.fts
 local SU = require("script_utils")
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local queue_damage = U.queue_damage
 local function stage_210_filter_t(entities, origin, range, filter_func)
 	return table.filter(entities, function(k, v)
 		return not filter_func or filter_func(v, origin)
@@ -103,7 +93,7 @@ local function controller_stage_210_jt_icicles_update(this, store)
 	local function spawn_icicle(dest)
 		local controller = E:create_entity(this.cluster_controller)
 		controller.pos.x, controller.pos.y = dest.x, dest.y
-		queue_insert(store, controller)
+		simulation:queue_insert_entity(controller)
 		for i = 1, this.icicles_per_cluster do
 			local icicles = E:create_entity(this.icicle_t)
 			icicles._controller = controller
@@ -117,7 +107,7 @@ local function controller_stage_210_jt_icicles_update(this, store)
 			else
 				icicles.bullet.to = v(dest.x + xr, dest.y + yr)
 			end
-			queue_insert(store, icicles)
+			simulation:queue_insert_entity(icicles)
 			U.y_wait(store, U.frandom(0, this.max_delay_icicles))
 		end
 	end
@@ -169,7 +159,7 @@ local function controller_stage_210_jt_icicles_update(this, store)
 		shake.aura.amplitude = 1
 		shake.aura.duration = 0.5
 		shake.aura.freq_factor = 3
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 		local all_targets = this._target_random + this._target_enemies + this._target_allies
 		local cr, ca, ce = 0, 0, 0
 		local o = {1, 2, 3}
@@ -254,7 +244,7 @@ local function decal_stage_210_jt_door_icicle_update(this, store)
 	local mspeed = 10 * FPS
 	local particle = E:create_entity(this.particles)
 	particle.particle_system.track_id = this.id
-	queue_insert(store, particle)
+	simulation:queue_insert_entity(particle)
 	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
 		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
 		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
@@ -283,8 +273,8 @@ local function decal_stage_210_jt_door_icicle_update(this, store)
 	d.pos.x, d.pos.y = this.pos.x, this.pos.y
 	d.render.sprites[1].ts = store.tick_ts
 	d.render.sprites[1].scale = V.vclone(this.render.sprites[1].scale)
-	queue_insert(store, d)
-	queue_remove(store, this)
+	simulation:queue_insert_entity(d)
+	simulation:queue_remove_entity(this)
 end
 local function controller_stage_210_jt_icicle_cluster_update(this, store, script)
 	this._spawn = false
@@ -295,15 +285,15 @@ local function controller_stage_210_jt_icicle_cluster_update(this, store, script
 		local hfx = E:create_entity(this.hit_fx)
 		hfx.pos.x, hfx.pos.y = this.pos.x, this.pos.y
 		hfx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, hfx)
+		simulation:queue_insert_entity(hfx)
 	end
 	if this.hit_decal then
 		local d = E:create_entity(this.hit_decal)
 		d.pos.x, d.pos.y = this.pos.x, this.pos.y
 		d.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, d)
+		simulation:queue_insert_entity(d)
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function decal_stage_210_jt_door_update(this, store, script)
 	local controller = stage_210_find_all_t(store, this.swipe_controller)[1]
@@ -365,7 +355,7 @@ local function controller_stage_210_jt_swipe_update(this, store, script)
 					U.y_wait(store, this.swipe_timing)
 					aura = E:create_entity(this.aura_swipe)
 					aura.pos.x, aura.pos.y = this.swipe_pos.x, this.swipe_pos.y
-					queue_insert(store, aura)
+					simulation:queue_insert_entity(aura)
 					U.y_animation_wait(door, 1, 1)
 				end
 				S:queue(this.sound_events.bell_freeze, {
@@ -397,7 +387,7 @@ local function aura_stage_210_puddle_entrance_update(this, store, script)
 				local fx = E:create_entity(this.splash_fx)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.pos = V.vclone(e.pos)
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				if this.sound_events and this.sound_events.water_splash then
 					S:queue(this.sound_events.water_splash)
 				end
@@ -433,12 +423,12 @@ local function aura_stage_210_puddle_entrance_update(this, store, script)
 				end
 				local decal = E:create_entity(this.ice_shadow)
 				decal.target_id = e.id
-				queue_insert(store, decal)
+				simulation:queue_insert_entity(decal)
 				e._ice_shadow_decal = decal
 				local ps = E:create_entity(this.ps_ice_shadow)
 				ps.particle_system.emit = true
 				ps.particle_system.track_id = e.id
-				queue_insert(store, ps)
+				simulation:queue_insert_entity(ps)
 				e._ps_ice_shadow_decal = ps
 			end
 		end
@@ -477,7 +467,7 @@ local function aura_stage_210_puddle_exit_update(this, store, script)
 				local fx = E:create_entity(this.splash_fx)
 				fx.render.sprites[1].ts = store.tick_ts
 				fx.pos = V.vclone(e.pos)
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 				if this.sound_events and this.sound_events.water_splash then
 					S:queue(this.sound_events.water_splash)
 				end
@@ -501,11 +491,11 @@ local function aura_stage_210_puddle_exit_update(this, store, script)
 					end
 				end
 				if e._ice_shadow_decal then
-					queue_remove(store, e._ice_shadow_decal)
+					simulation:queue_remove_entity(e._ice_shadow_decal)
 					e._ice_shadow_decal = nil
 				end
 				if e._ps_ice_shadow_decal then
-					queue_remove(store, e._ps_ice_shadow_decal)
+					simulation:queue_remove_entity(e._ps_ice_shadow_decal)
 					e._ps_ice_shadow_decal = nil
 				end
 			end
@@ -515,7 +505,7 @@ local function aura_stage_210_puddle_exit_update(this, store, script)
 end
 local function decal_stage_210_at_at_e_insert(this, store)
 	local r = E:create_entity("editor_pillar_rally_point")
-	queue_insert(store, r)
+	simulation:queue_insert_entity(r)
 	this.editor.shoot_pos_point_id = r.id
 	if this.shoot_pos.pos and this.shoot_pos.pos.x ~= 0 and this.shoot_pos.pos.y ~= 0 then
 		r.pos = this.shoot_pos.pos
@@ -547,12 +537,12 @@ local function decal_stage_210_at_at_update(this, store)
 					bullet.pos = V.v(this.pos.x + this.bullet_offsets[1].x, this.pos.y + this.bullet_offsets[1].y)
 					bullet.bullet.from = V.vclone(bullet.pos)
 					bullet.bullet.to = this.shoot_pos.pos
-					queue_insert(store, bullet)
+					simulation:queue_insert_entity(bullet)
 					local bullet = E:create_entity(this.bullet)
 					bullet.pos = V.v(this.pos.x + this.bullet_offsets[2].x, this.pos.y + this.bullet_offsets[2].y)
 					bullet.bullet.from = V.vclone(bullet.pos)
 					bullet.bullet.to = this.shoot_pos.pos
-					queue_insert(store, bullet)
+					simulation:queue_insert_entity(bullet)
 				end
 				finished_shooting = true
 			end

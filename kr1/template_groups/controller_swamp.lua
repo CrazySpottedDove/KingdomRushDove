@@ -5,10 +5,6 @@ local U = require("utils")
 local S = require("sound_db")
 local log = require("lib.klua.log"):new("templates")
 
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-
 local function get_random_round_robin(mutable_history, n, m)
 	if not m then
 		m = n
@@ -109,7 +105,7 @@ local function swamps_spawn_event(this, store, spawn, path_id, amount, force_cen
 	local spawner = E:create_entity(this.spawner_t)
 
 	spawner.spawn_data = {spawn, int_am, int_pid, swamp.id, force_center}
-	queue_insert(store, spawner)
+	simulation:queue_insert_entity(spawner)
 end
 
 local controller_swamp_bubbles = {}
@@ -172,7 +168,7 @@ function controller_swamp_bubbles_spawner.update(this, store, script)
 				bubble.duration = 1e+99
 				bubble.pos = V.v(bubble_pos.x, bubble_pos.y)
 				bubble.render.sprites[1].scale = V.vv(scale)
-				queue_insert(store, bubble)
+				simulation:queue_insert_entity(bubble)
 				table.insert(bubbles, bubble)
 				U.y_wait(store, U.frandom(bubble_interval_range[1], bubble_interval_range[2]))
 			end

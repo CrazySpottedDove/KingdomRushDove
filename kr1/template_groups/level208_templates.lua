@@ -15,18 +15,8 @@ local km = require("lib.klua.macros")
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local fts = U.fts
+local queue_damage = U.queue_damage
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -255,7 +245,7 @@ local function controller_stage_208_phases_update(this, store, script)
 		barrage = E:create_entity(this.barrage_1_t)
 		barrage.pos = V.v(512, 384)
 		barrage.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, barrage)
+		simulation:queue_insert_entity(barrage)
 		if this.sound_barrage_1 then
 			S:queue(this.sound_barrage_1)
 		end
@@ -265,18 +255,18 @@ local function controller_stage_208_phases_update(this, store, script)
 		shake.aura.amplitude = 0.5
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 3
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 		U.y_wait(store, fts(16))
 		shake = E:create_entity("aura_screen_shake")
 		shake.aura.amplitude = 0.5
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 3
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 		U.y_wait(store, fts(16))
 		phases_refresh_phase_elements(this, store)
 		U.y_animation_wait(this.wall_1)
 		U.animation_start(this.wall_1, "idle", nil, store.tick_ts, true)
-		queue_remove(store, barrage)
+		simulation:queue_remove_entity(barrage)
 	end
 	if this.restarted then
 		phases_refresh_phase_elements(this, store)
@@ -301,7 +291,7 @@ local function controller_stage_208_phases_update(this, store, script)
 	barrage = E:create_entity(this.barrage_2_t)
 	barrage.pos = V.v(512, 384)
 	barrage.render.sprites[1].ts = store.tick_ts
-	queue_insert(store, barrage)
+	simulation:queue_insert_entity(barrage)
 	if this.sound_barrage_2 then
 		S:queue(this.sound_barrage_2)
 	end
@@ -310,7 +300,7 @@ local function controller_stage_208_phases_update(this, store, script)
 	shake.aura.amplitude = 1
 	shake.aura.duration = 2
 	shake.aura.freq_factor = 3
-	queue_insert(store, shake)
+	simulation:queue_insert_entity(shake)
 	U.y_wait(store, fts(30))
 	::label_1110_0::
 	phases_refresh_phase_elements(this, store)
@@ -322,11 +312,11 @@ local function controller_stage_208_phases_update(this, store, script)
 		P:activate_path(v)
 	end
 	for k, v in pairs(this.archers_wall_1) do
-		queue_remove(store, v)
+		simulation:queue_remove_entity(v)
 	end
 	if barrage then
 		U.y_animation_wait(barrage)
-		queue_remove(store, barrage)
+		simulation:queue_remove_entity(barrage)
 	end
 	while this.current_phase == 2 do
 		coroutine.yield()
@@ -367,14 +357,14 @@ local function controller_stage_208_phases_update(this, store, script)
 		end
 	end
 	local fixer = E:create_entity(this.path_fixer_t)
-	queue_insert(store, fixer)
+	simulation:queue_insert_entity(fixer)
 	phases_refresh_phase_elements(this, store)
 	phases_patch_nav_mesh(this, store, 3)
-	queue_remove(store, this.catapult)
+	simulation:queue_remove_entity(this.catapult)
 	for k, v in pairs(this.archers_wall_2) do
-		queue_remove(store, v)
+		simulation:queue_remove_entity(v)
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function controller_stage_208_path_fixer_update(this, store)
 	local run_ts = store.tick_ts - 3
@@ -437,7 +427,7 @@ local function controller_stage_208_crows_update(this, store)
 			crows.source_id = this.id
 			crows.enemy_spawn = this.enemy_type == "sb" and "enemy_shadow_blades" or "enemy_shadow_archer_kr6"
 			crows.spawn_count = this.enemy_count
-			queue_insert(store, crows)
+			simulation:queue_insert_entity(crows)
 			this.spawn_crows = false
 		end
 		coroutine.yield()
@@ -456,7 +446,7 @@ local function controller_stage_208_goblin_catapult_update(this, store)
 			catapult.pos = v(-284, 220)
 			catapult.source_id = this.id
 			catapult.spawn_count = this.enemy_count
-			queue_insert(store, catapult)
+			simulation:queue_insert_entity(catapult)
 			this.spawn_goblins = false
 		end
 		coroutine.yield()
@@ -475,11 +465,11 @@ local function decal_stage_208_goblin_catapult_update(this, store)
 	local ps1 = E:create_entity(this.particles_name[1])
 	ps1.particle_system.emit = true
 	ps1.particle_system.track_id = this.id
-	queue_insert(store, ps1)
+	simulation:queue_insert_entity(ps1)
 	local ps2 = E:create_entity(this.particles_name[2])
 	ps2.particle_system.emit = true
 	ps2.particle_system.track_id = this.id
-	queue_insert(store, ps2)
+	simulation:queue_insert_entity(ps2)
 	while not U.walk(this, store.tick_length) do
 		if this.ui.clicked then
 			this.ui.clicked = false
@@ -489,7 +479,7 @@ local function decal_stage_208_goblin_catapult_update(this, store)
 			fx.pos.x = this.pos.x + 10 + math.random(-20, 20)
 			fx.pos.y = this.pos.y + 20 + math.random(-20, 20)
 			fx.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 			if tap_count >= this.taps_to_explode then
 				ps1.particle_system.emit = false
 				ps2.particle_system.emit = false
@@ -525,7 +515,7 @@ local function decal_stage_208_goblin_catapult_update(this, store)
 			b.path_to_spawn = pi
 			b.bullet.flight_time = b.bullet.flight_time + fts(math.random(-5, 5)) + fts(5)
 			b.bullet.rotation_speed = b.bullet.rotation_speed + math.random(-5, 5)
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 			spi = spi + 1
 			if spi > 3 then
 				spi = 1
@@ -554,7 +544,7 @@ local function decal_stage_208_goblin_catapult_update(this, store)
 			fx.pos.x = this.pos.x + 10 + math.random(-20, 20)
 			fx.pos.y = this.pos.y + 20 + math.random(-20, 20)
 			fx.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 			if tap_count >= this.taps_to_explode then
 				ps1.particle_system.emit = false
 				ps2.particle_system.emit = false
@@ -568,15 +558,15 @@ local function decal_stage_208_goblin_catapult_update(this, store)
 	ps1.particle_system.emit = false
 	ps2.particle_system.emit = false
 	U.y_wait(store, ps2.particle_system.particle_lifetime[2])
-	queue_remove(store, ps1)
-	queue_remove(store, ps2)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(ps1)
+	simulation:queue_remove_entity(ps2)
+	simulation:queue_remove_entity(this)
 end
 local function controller_stage_208_boss_sound_steps_update(this, store, script)
 	local boss = store.entities[this.source_id]
 	while true do
 		if not boss or boss.health.dead then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		local boss_prefix = boss.render.sprites[1].prefix
@@ -603,7 +593,7 @@ local function controller_stage_208_boss_path_update(this, store, script)
 			local decal = E:create_entity(this.sections_decals_t)
 			decal.pos = V.v(512, 384)
 			decal.render.sprites[1].name = this.sections_decals_prefix .. current_section
-			queue_insert(store, decal)
+			simulation:queue_insert_entity(decal)
 			table.insert(decals, decal)
 			current_section = current_section + 1
 		end
@@ -623,16 +613,16 @@ local function controller_stage_208_boss_path_update(this, store, script)
 		local decal = E:create_entity(this.sections_decals_t)
 		decal.pos = V.v(512, 384)
 		decal.render.sprites[1].name = this.sections_decals_prefix .. i
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 		table.insert(decals, decal)
 	end
 	while not this.boss_ref.ready_to_get_up do
 		coroutine.yield()
 	end
 	for k, v in pairs(decals) do
-		queue_remove(store, v)
+		simulation:queue_remove_entity(v)
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function controller_stage_208_templar_swordsmen_update(this, store, script)
 	this.soldiers_alive = 0
@@ -647,7 +637,7 @@ local function controller_stage_208_templar_swordsmen_update(this, store, script
 			soldier.pos = P:node_pos(this.path_id, spi, soldier.starting_ni)
 			soldier.source_id = this.id
 			soldier.cont_ref = this
-			queue_insert(store, soldier)
+			simulation:queue_insert_entity(soldier)
 			spi = spi + 1
 			if spi > 3 then
 				spi = 1
@@ -671,7 +661,7 @@ local function tower_stage_208_catapult_update(this, store)
 	this.bubble = E:create_entity(this.bubble_t)
 	this.bubble.pos = V.vclone(this.pos)
 	this.bubble.render.sprites[1].alpha = 0
-	queue_insert(store, this.bubble)
+	simulation:queue_insert_entity(this.bubble)
 	while true do
 		if store.wave_group_number > 0 and tap_bubble_cd < store.tick_ts - bubble_ts and this.bubble.render.sprites[1].alpha <= 0 then
 			this.bubble.render.sprites[1].ts = store.tick_ts
@@ -698,7 +688,7 @@ local function tower_stage_208_catapult_update(this, store)
 			local d = E:create_entity(ab.decal)
 			d.pos.x, d.pos.y = pos.x, pos.y
 			d.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, d)
+			simulation:queue_insert_entity(d)
 			if ab.sound_load then
 				S:queue(ab.sound_load)
 			end
@@ -720,7 +710,7 @@ local function tower_stage_208_catapult_update(this, store)
 			b.bullet.from = V.vclone(b.pos)
 			b.bullet.to = V.vclone(pos)
 			b.bullet.source_id = this.id
-			queue_insert(store, b)
+			simulation:queue_insert_entity(b)
 			d.timed.duration = time_passed + b.bullet.flight_time
 			U.y_animation_wait(this)
 			U.animation_start(this, "idle", false, store.tick_ts, true)
@@ -729,7 +719,7 @@ local function tower_stage_208_catapult_update(this, store)
 	end
 end
 local function tower_stage_208_catapult_remove(this, store)
-	queue_remove(store, this.bubble)
+	simulation:queue_remove_entity(this.bubble)
 	return true
 end
 local function controller_stage_208_tower_stun_update(this, store, script)
@@ -745,7 +735,7 @@ local function controller_stage_208_tower_stun_update(this, store, script)
 			U.y_wait(store, 3)
 		else
 			local tower_stun = E:create_entity(this.stun_t)
-			queue_insert(store, tower_stun)
+			simulation:queue_insert_entity(tower_stun)
 			U.y_wait(store, math.random(this.cooldown_min, this.cooldown_max))
 		end
 	end
@@ -763,7 +753,7 @@ local function controller_stage_208_tower_stun_moment_update(this, store, script
 		bomb = E:create_entity(this.bomb_t)
 		bomb.pos = V.vclone(tower.pos)
 		bomb.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, bomb)
+		simulation:queue_insert_entity(bomb)
 		if not this.skip_goblin_anim then
 			U.y_animation_play(bomb, "start", nil, store.tick_ts, 1)
 			U.animation_start(bomb, "loop", nil, store.tick_ts, true)
@@ -786,26 +776,26 @@ local function controller_stage_208_tower_stun_moment_update(this, store, script
 			local mod = E:create_entity(this.mod_t)
 			mod.modifier.target_id = tower.id
 			mod.modifier.source_id = this.id
-			queue_insert(store, mod)
+			simulation:queue_insert_entity(mod)
 		end
 		shake = E:create_entity("aura_screen_shake")
 		shake.aura.amplitude = 0.5
 		shake.aura.duration = 1
 		shake.aura.freq_factor = 3
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 		U.y_animation_wait(bomb)
-		queue_remove(store, bomb)
+		simulation:queue_remove_entity(bomb)
 	end
 	if tower then
 		tower._to_be_stunned = false
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function mod_stage_208_tower_stun_update(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	local shown_hand = false
@@ -882,7 +872,7 @@ local function mod_stage_208_tower_stun_update(this, store)
 			hand.pos = this.pos
 			hand.render.sprites[1].ts = store.tick_ts
 			hand.tween.ts = store.tick_ts
-			queue_insert(store, hand)
+			simulation:queue_insert_entity(hand)
 			shown_hand = true
 		end
 		if target.pending_removal then
@@ -902,14 +892,14 @@ local function mod_stage_208_tower_stun_update(this, store)
 		coroutine.yield()
 	end
 	if hand then
-		queue_remove(store, hand)
+		simulation:queue_remove_entity(hand)
 	end
 	U.y_wait(store, this.tween.props[1].keys[2][1])
 	unblock_tower()
 	target.trigger_deselect = true
 	target.user_selection.allowed = true
 	target.repair = nil
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function mod_stage_208_tower_stun_remove(this, store)
 	local target = store.entities[this.modifier.target_id]
