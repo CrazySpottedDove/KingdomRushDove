@@ -1,24 +1,15 @@
 local M = {
-	enemy_basic = require("precompile.templates.enemy_basic"),
-	enemy_mixed = require("precompile.templates.enemy_mixed"),
-	enemy_passive = require("precompile.templates.enemy_passive"),
-	aura_apply_mod = require("precompile.templates.aura_apply_mod"),
-	aura_apply_damage = require("precompile.templates.aura_apply_damage"),
-	mod_dps = require("precompile.templates.mod_dps"),
-	soldier_barrack = require("precompile.templates.soldier_barrack"),
-	-- soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
-	mod_track_target = require("precompile.templates.mod_track_target"),
-	arrow = require("precompile.templates.arrow"),
-	bomb = require("precompile.templates.bomb"),
-	bolt = require("precompile.templates.bolt"),
-	main_script_backup = {}
+	main_script_backup = {},
+	warned = {},
+	script_types = setmetatable({}, {
+		__mode = "k"
+	})
 }
-local CU = require("precompile.compile_utils")
-local _fn_cache = {}
-local file_utils = require("all.file_utils")
-------- 提供环境变量
+local GenCC = require("precompile.gen_component_cloner")
+local loader = require("precompile.loader")
 
 local scripts = require("scripts")
+local specs = require("precompile.specs")
 require("lib.klua.table")
 
 local km = require("lib.klua.macros")
@@ -40,8 +31,9 @@ local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
 
+local file_utils = require("all.file_utils")
 local is_file = file_utils.is_file
-
+local log = require("lib.klua.log"):new("precompile")
 require("i18n")
 
 local queue_damage = U.queue_damage
@@ -70,250 +62,144 @@ M.env = setmetatable({
 	is_file = is_file,
 	queue_damage = queue_damage,
 	fts = fts,
-	tpos = tpos
+	tpos = tpos,
+	log = log
 }, {
 	__index = _G
 })
 
-----------
+local NIL = {}
 
--- 组件克隆函数编译器
-local GenCC = require("precompile.gen_component_cloner")
+local loader_ready = false
 
-local function _context_lines(lines, err_ln, label, around)
-	around = around or 2
-	local out = {}
-	out[#out + 1] = "--- " .. label .. " ---"
-	local start = math.max(1, err_ln - around)
-	local stop = math.min(#lines, err_ln + around)
-	for ln = start, stop do
-		local marker = (ln == err_ln) and ">>> " or "    "
-		out[#out + 1] = string.format("%s%5d | %s", marker, ln, lines[ln])
+for _, spec in ipairs(specs.list()) do
+	M.script_types[spec.source] = spec.source_state_machine and 1 or 0
+	if spec.compile_source then
+		M.script_types[spec.compile_source] = spec.state_machine and 1 or 0
 	end
-	return table.concat(out, "\n")
 end
 
-local function _match_template_line(lines, text)
-	-- 在模板行中定位与出错行最匹配的行号
-	-- 先后尝试：去空格精确匹配 -> 前30字符模糊匹配
-	local s = text:match("^%s*(.-)%s*" .. "$") or text
-	for i, line in ipairs(lines) do
-		local ls = line:match("^%s*(.-)%s*" .. "$") or line
-		if ls == s then
-			return i
-		end
-	end
-	if #s >= 30 then
-		local p = s:sub(1, 30)
-		for i, line in ipairs(lines) do
-			local ls = line:match("^%s*(.-)%s*" .. "$") or line
-			if ls:sub(1, 30) == p then
-				return i
-			end
-		end
-	end
-	return nil
+function M:mark_script(fn, script_type)
+	self.script_types[fn] = script_type
 end
 
-function M:_compile(e, template)
-	local code = CU.process(template, self.env, e)
-	-- if e.template_name == "enemy_goblin" then
-	-- print(code)
-	-- end
+function M:script_type(fn)
+	return self.script_types[fn]
+end
 
-	-- 相同代码字符串 ⇒ 函数必然相同，直接复用
-	local t_cache = _fn_cache[template]
-	if t_cache then
-		local fn = t_cache[code]
-		if fn then
-			return fn
-		end
-	else
-		t_cache = {}
-		_fn_cache[template] = t_cache
+function M:ensure_entity_type(e)
+	local s = e.main_script
+	if not s or not s.update then
+		return
 	end
 
-	local chunk, err = load(code, nil, "t", self.env)
-	if not chunk then
-		-- 提取出错行号（err 格式："[string "..."]:行号: 错误信息"）
-		local err_ln = tonumber(err:match(":(%d+):")) or 0
-		local msg = {""}
-		msg[#msg + 1] = "=== 编译错误 ==="
-		msg[#msg + 1] = "实体模板: " .. tostring(e.template_name)
-		msg[#msg + 1] = ""
-
-		-- 从生成的代码里找上下文
-		local code_lines = {}
-		for line in code:gmatch("([^\n]*)\n?") do
-			code_lines[#code_lines + 1] = line
+	local fn = s.update
+	local script_type = self.script_types[fn]
+	if script_type == nil then
+		script_type = 0
+		if not s.context then
+			s.context = E:clone_c("context")
 		end
-		if err_ln > 0 and err_ln <= #code_lines then
-			msg[#msg + 1] = _context_lines(code_lines, err_ln, "生成的代码（出错位置）")
-		else
-			msg[#msg + 1] = "生成的代码（前30行）："
-			for i = 1, math.min(30, #code_lines) do
-				msg[#msg + 1] = string.format("    %5d | %s", i, code_lines[i])
-			end
-		end
-		msg[#msg + 1] = ""
-
-		-- 模板源码上下文（用出错行的前几个非空格字符匹配）
-		local template_lines = {}
-		for line in template:gmatch("([^\n]*)\n?") do
-			template_lines[#template_lines + 1] = line
-		end
-		if err_ln > 0 and err_ln <= #code_lines then
-			local err_line_text = code_lines[err_ln]
-			-- 取生成的代码出错行的前 20 个非空白字符
-			local sig = err_line_text:match("%s*(.-)%s*$")
-			if sig and #sig > 20 then
-				sig = sig:sub(1, 20)
-			end
-			local tpl_ln = _match_template_line(template_lines, sig)
-			if tpl_ln then
-				msg[#msg + 1] = _context_lines(template_lines, tpl_ln, "编译模板（对应位置）")
-			else
-				-- 退而用代码行的关键字匹配
-				local keyword = err_line_text:match("(%w+)")
-				if keyword then
-					tpl_ln = _match_template_line(code_lines, keyword)
-				end
-				if tpl_ln and tpl_ln <= #template_lines then
-					msg[#msg + 1] = _context_lines(template_lines, tpl_ln, "编译模板（可能位置）")
-				end
-			end
-		end
-
-		msg[#msg + 1] = ""
-		msg[#msg + 1] = "错误：" .. err
-		msg[#msg + 1] = ""
-		msg[#msg + 1] = "提示：检查编译模板（precompile/templates/）中的 constif/constvar/constfor 语法是否正确"
-		error(table.concat(msg, "\n"))
 	end
-	local ok, runtime_err = pcall(chunk)
-	if not ok then
-		local msg = {""}
-		msg[#msg + 1] = "=== 编译后函数运行错误 ==="
-		msg[#msg + 1] = "实体模板: " .. tostring(e.template_name)
-		msg[#msg + 1] = "错误发生于编译生成的 Lua chunk 执行时，请检查模板逻辑。"
-		msg[#msg + 1] = ""
-		msg[#msg + 1] = tostring(runtime_err)
-		msg[#msg + 1] = ""
-		msg[#msg + 1] = "模板名称：" .. tostring(e.template_name)
-		msg[#msg + 1] = "错误来源：编译生成的代码（非模板源码）"
-		error(table.concat(msg, "\n"))
+
+	if s.type ~= script_type or s._pc_update ~= fn then
+		s.co = nil
+		s.type = script_type
 	end
-	local result = chunk()
-	t_cache[code] = result
-	return result
+
+	if script_type == 1 and not s.context then
+		s.context = E:clone_c("context")
+	end
+
+	s._pc_update = fn
 end
 
 function M:set_and_backup(e, key, value)
-	local m = e.main_script
-	if not self.main_script_backup[e.template_name] then
-		self.main_script_backup[e.template_name] = {}
+	local name = e.template_name
+	local backup = self.main_script_backup[name]
+	if not backup then
+		backup = {}
+		self.main_script_backup[name] = backup
 	end
-	self.main_script_backup[e.template_name][key] = m[key]
-	m[key] = value
+	if backup[key] == nil then
+		local current = e.main_script[key]
+		backup[key] = current == nil and NIL or current
+	end
+	e.main_script[key] = value
 end
 
-function M:restore_main_script(e)
-	if self.main_script_backup[e.template_name] then
-		table.merge(e.main_script, self.main_script_backup[e.template_name])
+function M:restore_main_script(e, base)
+	local backup = self.main_script_backup[base or e.template_name]
+	if not backup then
+		return
+	end
+	for key, value in pairs(backup) do
+		if value == NIL then
+			e.main_script[key] = nil
+		else
+			e.main_script[key] = value
+		end
+	end
+end
+
+function M:apply_generated(e, entry)
+	local script_type = entry.type == 1 and 1 or 0
+	for key, value in pairs(entry) do
+		if type(value) == "function" then
+			self.script_types[value] = script_type
+			self:set_and_backup(e, key, value)
+		end
+	end
+	self:set_and_backup(e, "type", entry.type or 0)
+end
+
+function M:runtime_compile(e)
+	local specs = require("precompile.specs")
+	local source = require("precompile.frontend.source")
+	local specialize = require("precompile.stage.specialize")
+
+	for _, item in ipairs(specs.for_entity(e)) do
+		local compile_source = item.spec.compile_source or item.source
+		local func, file, err = source.find_function(compile_source)
+		if not func then
+			local key = e.template_name .. "." .. item.spec.group .. "." .. item.spec.key
+			if not self.warned[key] then
+				self.warned[key] = true
+				print("precompile: 跳过无法定位源码的脚本 " .. key .. ": " .. tostring(err))
+			end
+		else
+			local ok, result = pcall(specialize.specialize, func, e, {
+				file = file.path
+			})
+			if not ok then
+				print("precompile: 特化失败 " .. e.template_name .. " " .. item.spec.group .. "." .. item.spec.key .. ": " .. tostring(result))
+			else
+				local chunk, load_err = load(result.code, "@precompile/generated/" .. e.template_name .. "." .. item.spec.key, "t", self.env)
+				if not chunk then
+					print("precompile: 生成代码无法加载 " .. e.template_name .. ": " .. tostring(load_err))
+				else
+					local fn = chunk()
+					local script_type = item.spec.state_machine and 1 or 0
+					self.script_types[fn] = script_type
+					self:set_and_backup(e, item.key, fn)
+					self:set_and_backup(e, "type", script_type)
+				end
+			end
+		end
 	end
 end
 
 function M:compile(e)
-	if e.main_script then
-		local m = e.main_script
+	if not loader_ready then
+		loader_ready = true
+		loader.load(self.env)
+	end
 
-		-- === 敌人 ===
-		if e.enemy then
-			if m.insert == scripts.enemy_basic.insert then
-				self:set_and_backup(e, "insert", self:_compile(e, self.enemy_basic.insert))
-			end
-
-			if m.update == scripts.enemy_mixed.update then
-				if e.melee or e.ranged then
-					self:set_and_backup(e, "update", self:_compile(e, self.enemy_mixed.update))
-				end
-			elseif m.update == scripts.enemy_passive.update then
-				self:set_and_backup(e, "update", self:_compile(e, self.enemy_passive.update))
-			end
-		end
-
-		-- === 投射物 ===
-		if e.bullet then
-			if m.insert == scripts.arrow.insert then
-				self:set_and_backup(e, "insert", self:_compile(e, self.arrow.insert))
-			elseif m.insert == scripts.bomb.insert then
-				self:set_and_backup(e, "insert", self:_compile(e, self.bomb.insert))
-			elseif m.insert == scripts.bolt.insert then
-				self:set_and_backup(e, "insert", self:_compile(e, self.bolt.insert))
-			end
-
-			if m.update == scripts.arrow.update then
-				self:set_and_backup(e, "update", self:_compile(e, self.arrow.update))
-				self:set_and_backup(e, "type", 1)
-			elseif m.update == scripts.bomb.update then
-				self:set_and_backup(e, "update", self:_compile(e, self.bomb.update))
-				self:set_and_backup(e, "type", 1)
-			elseif m.update == scripts.bolt.update then
-				self:set_and_backup(e, "update", self:_compile(e, self.bolt.update))
-				self:set_and_backup(e, "type", 1)
-			end
-		end
-
-		-- === 士兵（兵营/援军）===
-		if e.soldier then
-			if m.insert == scripts.soldier_barrack.insert then
-				self:set_and_backup(e, "insert", self:_compile(e, self.soldier_barrack.insert))
-			-- 	elseif m.insert == scripts.soldier_reinforcement.insert then
-			-- 		m.insert = self:_compile(e, self.soldier_reinforcement.insert)
-			end
-
-			if m.update == scripts.soldier_barrack.update then
-				self:set_and_backup(e, "update", self:_compile(e, self.soldier_barrack.update))
-			-- 	elseif m.update == scripts.soldier_reinforcement.update then
-			-- 		m.update = self:_compile(e, self.soldier_reinforcement.update)
-			end
-		end
-
-		if e.modifier then
-			if m.insert == scripts.mod_dps.insert then
-				self:set_and_backup(e, "insert", self:_compile(e, self.mod_dps.insert))
-			elseif m.insert == scripts.mod_track_target.insert then
-				self:set_and_backup(e, "insert", self:_compile(e, self.mod_track_target.insert))
-			end
-			if m.update == scripts.mod_dps.update then
-				self:set_and_backup(e, "update", self:_compile(e, self.mod_dps.update))
-				self:set_and_backup(e, "type", 1)
-			elseif m.update == scripts.mod_track_target.update then
-				if e.modifier.duration then
-					self:set_and_backup(e, "update", self:_compile(e, self.mod_track_target.update))
-					self:set_and_backup(e, "type", 1)
-				end
-			end
-		end
-
-		-- === 光环 ===
-		if e.aura then
-			if m.insert == scripts.aura_apply_mod.insert then
-				self:set_and_backup(e, "insert", self:_compile(e, self.aura_apply_mod.insert))
-			end
-
-			if m.update == scripts.aura_apply_mod.update then
-				if e.aura.duration then
-					self:set_and_backup(e, "update", self:_compile(e, self.aura_apply_mod.update))
-					self:set_and_backup(e, "type", 1)
-				end
-			elseif m.update == scripts.aura_apply_damage.update then
-				if e.aura.duration then
-					self:set_and_backup(e, "update", self:_compile(e, self.aura_apply_damage.update))
-					self:set_and_backup(e, "type", 1)
-				end
-			end
-		end
+	local entry = loader.get(e.template_name)
+	if entry then
+		self:apply_generated(e, entry)
+	else
+		self:runtime_compile(e)
 	end
 end
 

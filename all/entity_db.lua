@@ -42,16 +42,14 @@ function entity_db:Load()
 	end
 end
 
--- DEPRECATED: 建议使用 register_t_hot() + precompile_hot() 来实现热加载实体
-function entity_db:hot_load(template_name_table)
-	local compiler = require("precompile.interface")
-	for _, template_name in ipairs(template_name_table) do
-		compiler:compile(self.entities[template_name])
-		self.entities_backup[template_name] = quickcopy(self.entities[template_name])
-	end
+-- 构建期使用：只加载实体模板，不触发运行时预编译
+function entity_db:load_for_build()
+	self.last_id = 1
+	self.loaded = true
+	self:load()
 end
 
---- 实体数据库的首次初始化，实际的初始化逻辑，只负责将组件和实体模板从文件加载到内存中。
+-- 实体数据库的首次初始化，实际的初始化逻辑，只负责将组件和实体模板从文件加载到内存中。
 --- 插件应当 HOOK 该函数，来实现自己定义的组件和实体模板的加载（不要在这个HOOK中做其他事情！）。
 --- 通过将 precompile 步骤和 load 步骤分离，允许了在 load HOOK 中注册的实体也享受到编译效果，从而避免错误地继承一个已被编译的脚本的问题。
 function entity_db:load()
@@ -93,9 +91,6 @@ function entity_db:precompile()
 		compiler:compile(e)
 	end
 	perf.tmp_stop("precompile")
--- profiling report (可注释掉以关闭)
--- local CU = require("precompile.compile_utils")
--- CU.profile_report()
 end
 
 function entity_db:precompile_hot()
@@ -263,7 +258,7 @@ function entity_db:register_t_hot(name, base, is_tmp)
 
 	if t.main_script then
 		local compiler = require("precompile.interface")
-		compiler:restore_main_script(t)
+		compiler:restore_main_script(t, base)
 	end
 
 	t.template_name = name
@@ -281,7 +276,7 @@ function entity_db:register_t_tmp(name, base)
 
 	if t.main_script then
 		local compiler = require("precompile.interface")
-		compiler:restore_main_script(t)
+		compiler:restore_main_script(t, base)
 	end
 
 	t.template_name = name
