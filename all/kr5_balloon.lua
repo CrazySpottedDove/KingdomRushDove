@@ -5,17 +5,9 @@ local kr5_gui_balloon = require("kr5_gui_balloon")
 
 local M = {}
 
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-
 function M.clear(gui, store)
 	if gui.kr5_taunt_entity and store.entities[gui.kr5_taunt_entity.id] then
-		queue_remove(store, gui.kr5_taunt_entity)
+		simulation:queue_remove_entity(gui.kr5_taunt_entity)
 	end
 
 	gui.kr5_taunt_entity = nil
@@ -58,7 +50,7 @@ function M.show(gui, store, taunt_id, pos_override)
 		return true
 	end
 
-	queue_insert(store, t)
+	simulation:queue_insert_entity(t)
 	gui.kr5_taunt_entity = t
 
 	return true

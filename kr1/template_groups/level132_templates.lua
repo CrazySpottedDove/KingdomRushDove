@@ -483,10 +483,7 @@ local S = require("sound_db")
 local signal = require("lib.hump.signal")
 local P = require("path_db")
 local V = require("lib.klua.vector")
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local random = math.random
 
 local controller_stage_32_boss = {}

@@ -9,9 +9,6 @@ local v=V.v
 local P=require("path_db")
 local storage=require("all.storage")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local level={}
 function level:init(store)
 self.manual_hero_insertion=false

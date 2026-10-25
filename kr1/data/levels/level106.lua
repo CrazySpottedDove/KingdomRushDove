@@ -9,9 +9,7 @@ local v=V.v
 local P=require("path_db")
 local SU=require("script_utils")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local level={}
 function level:load(store)
 return

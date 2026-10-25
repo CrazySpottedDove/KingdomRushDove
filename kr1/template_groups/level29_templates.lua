@@ -5,9 +5,7 @@ local V = require("lib.klua.vector")
 require("all.constants")
 require("lib.klua.table")
 local v = V.v
-local function fts(t)
-	return t / FPS
-end
+local fts = U.fts
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end

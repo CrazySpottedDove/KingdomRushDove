@@ -8,9 +8,7 @@ local S = require("sound_db")
 local scripts = require("scripts")
 local log = require("lib.klua.log"):new("level216")
 local signal = require("lib.hump.signal")
-local function fts(v)
-	return v / FPS
-end
+local fts = U.fts
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -34,24 +32,14 @@ local function get_random_round_robin(mutable_history, n, m)
 	table.remove(mutable_history, pos)
 	return value
 end
-local function tpos(e)
-	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
-end
+local tpos = U.tpos
 local function frame_quad(sd)
 	if not sd or not sd.quad then
 		return nil
 	end
 	return sd.quad:getViewport()
 end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local queue_damage = U.queue_damage
 local function treant_killer_on_corromper_tree(this, store, event_name, tree_name)
 	if tree_name ~= this.tower.tree_name then
 		return
@@ -174,7 +162,7 @@ local function treant_killer_fire_bullets(this, store, aa, zone)
 		b.bullet.from = V.vclone(b.pos)
 		b.bullet.to = v(point.x, point.y)
 		b.bullet.source_id = this.id
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 		U.y_wait(store, fts(3))
 	end
 	U.y_animation_wait(this, 2)
@@ -227,7 +215,7 @@ local function treant_killer_instakill_area(this, store, aa)
 	local s = tongue.render.sprites[1]
 	s.r = V.angleTo(center.x - origin.x, center.y - origin.y)
 	s.scale = V.v(V.dist(center.x, center.y, origin.x, origin.y) / TONGUE_TIP_REACH, 1)
-	queue_insert(store, tongue)
+	simulation:queue_insert_entity(tongue)
 	U.animation_start(tongue, "run", nil, store.tick_ts, false, 1)
 	U.y_wait(store, fts(2))
 	local enemies = U.find_enemies_in_range(store, center, 0, aa.instakill_radius, F_INSTAKILL, bor(F_BOSS, F_FLYING))
@@ -237,11 +225,11 @@ local function treant_killer_instakill_area(this, store, aa)
 			local m = E:create_entity("mod_stage_216_treant_killer_tangle")
 			m.modifier.source_id = this.id
 			m.modifier.target_id = enemy.id
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 			local fx = E:create_entity("fx_stage_216_treant_killer_tangle")
 			fx.pos = V.vclone(enemy.pos)
 			fx.render.sprites[1].flip_x = enemy.render.sprites[1].flip_x
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 			U.animation_start(fx, "run", nil, store.tick_ts, false, 1)
 		end
 		U.y_wait(store, fts(5))
@@ -370,7 +358,7 @@ local function decal_killer_bomb_update(this, store)
 	U.animation_start(this, "run", nil, store.tick_ts, nil, 1)
 	local impact = E:create_entity("decal_stage_216_treant_killer_bomb_impact")
 	impact.pos = V.vclone(this.pos)
-	queue_insert(store, impact)
+	simulation:queue_insert_entity(impact)
 	U.y_wait(store, this.spawn_time)
 	if this.t_enemy then
 		local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, {1, 2, 3}, true)
@@ -380,7 +368,7 @@ local function decal_killer_bomb_update(this, store)
 			e.nav_path.pi = n[1]
 			e.nav_path.spi = n[2]
 			e.nav_path.ni = n[3]
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 			if not U.is_seen(store, this.t_enemy) then
 				signal.emit("wave-notification", "icon", this.t_enemy)
 				U.mark_seen(store, this.t_enemy)
@@ -391,9 +379,9 @@ local function decal_killer_bomb_update(this, store)
 	U.y_wait(store, this.time_to_blow - this.spawn_time)
 	local aura = E:create_entity(this.t_aura)
 	aura.pos.x, aura.pos.y = this.pos.x, this.pos.y
-	queue_insert(store, aura)
+	simulation:queue_insert_entity(aura)
 	U.y_animation_wait(this, 1, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function easter_egg_deku_sprout_update(this, store, script)
 	local ts = store.tick_ts
@@ -411,7 +399,7 @@ local function easter_egg_deku_sprout_update(this, store, script)
 				})
 			end
 			U.y_animation_play(this, "run", nil, store.tick_ts, 1, 1)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		if store.tick_ts - ts > this.anim_cd then
@@ -435,7 +423,7 @@ local function rider_fog_emitter_update(this, store)
 	while true do
 		local target = store.entities[this.target_id]
 		if this.finished or not target or target.health and target.health.dead then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		if interval <= store.tick_ts - last_ts then
@@ -453,7 +441,7 @@ local function rider_fog_emitter_update(this, store)
 			local s = fx.render.sprites[1]
 			s.flip_x = math.random() < 0.5
 			s.scale = V.vv(U.frandom(this.trail_scale[1], this.trail_scale[2]))
-			queue_insert(store, fx)
+			simulation:queue_insert_entity(fx)
 			U.animation_start(fx, "run", nil, store.tick_ts, false, 1)
 		end
 		coroutine.yield()
@@ -544,9 +532,9 @@ function nightfall.do_swap(this, store, insert_fn)
 				s.hidden = true
 			end
 		else
-			queue_insert(store, h)
+			simulation:queue_insert_entity(h)
 		end
-		queue_remove(store, best)
+		simulation:queue_remove_entity(best)
 		local buy_c = find_all_t(store, "controller_show_buy_available")[1]
 		if buy_c then
 			buy_c.force_check = true
@@ -918,7 +906,7 @@ function nightfall.update(this, store)
 				s.hidden = true
 			end
 			strip(replaced)
-			queue_remove(store, replaced)
+			simulation:queue_remove_entity(replaced)
 		elseif not replaced then
 			log.warning("nightfall_dissolve: no encontré \"%s\" en (%s,%s)", tostring(this.replace_from), tostring(this.pos.x), tostring(this.pos.y))
 		end
@@ -942,7 +930,7 @@ function nightfall.update(this, store)
 		unwire_swap_cut()
 	end
 	if this.swap_to then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 end
 local bg_corrupt = {}
@@ -1001,7 +989,7 @@ function bg_corrupt.apply_final(this, store)
 				for _, s in ipairs(old.render.sprites) do
 					s.hidden = true
 				end
-				queue_remove(store, old)
+				simulation:queue_remove_entity(old)
 			end
 			local o = E:create_entity("decal_stage_216_corrupt_overlay")
 			o.transition_id = this.id
@@ -1266,7 +1254,7 @@ function bg_corrupt.update(this, store)
 						ps.particle_system.shader = grass_sh
 						ps.particle_system.shader_args = grass_args
 					end
-					queue_insert(store, ps)
+					simulation:queue_insert_entity(ps)
 					this._grass_ps[#this._grass_ps + 1] = {
 						e = ps,
 						id = ps.id,
@@ -1308,7 +1296,7 @@ function bg_corrupt.update(this, store)
 				s.z = item.z
 				s.sort_y_offset = item.sort_y_offset or 0
 			end
-			queue_insert(store, o)
+			simulation:queue_insert_entity(o)
 		end
 	end
 	local function set_thresholds(value)
@@ -1385,7 +1373,7 @@ function bg_corrupt.update(this, store)
 			stop_all_grass_emitters()
 		else
 			for _, fog_t in ipairs(this.fog_fx or {}) do
-				queue_insert(store, E:create_entity(fog_t))
+				simulation:queue_insert_entity(E:create_entity(fog_t))
 			end
 			U.y_ease_key(store, lead_args, "threshold", 0, 1, this.reveal_time, this.reveal_ease, function(dt, phase)
 				local th = lead_args.threshold

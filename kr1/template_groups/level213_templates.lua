@@ -17,12 +17,6 @@ end
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -55,7 +49,7 @@ local function aura_shake_entity_update(this, store)
 		end
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function decal_stage_213_boss_shield_update(this, store)
 	this.shake = false
@@ -97,7 +91,7 @@ local function controller_stage_213_sunray_tower_health_update(this, store)
 			U.y_wait(store, 3)
 			signal.emit("end-cinematic")
 			store.lives = 0
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		coroutine.yield()
@@ -147,15 +141,15 @@ local function controller_stage_213_spawn_sorcerer_update(this, store)
 			sorc_preamble = E:create_entity(this.sorcerer_preamble_prefix .. (left and "_left" or "_right"))
 			sorc_preamble.pos.x, sorc_preamble.pos.y = this.spawn_sorcerer_preamble_pos.x, this.spawn_sorcerer_preamble_pos.y
 			sorc_preamble.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, sorc_preamble)
+			simulation:queue_insert_entity(sorc_preamble)
 			U.y_animation_wait(sorc_preamble, 1)
 			local door_light = E:create_entity(this.sorcerer_door_light_t .. (left and "_left" or "_right"))
 			door_light.pos.x, door_light.pos.y = 512, 384
 			door_light.tween.ts = store.tick_ts
-			queue_insert(store, door_light)
+			simulation:queue_insert_entity(door_light)
 			U.y_wait(store, this.sorcerer_door_wait - door_light.tween.props[1].keys[2][1])
 			door_light.tween.disabled = true
-			queue_remove(store, door_light)
+			simulation:queue_remove_entity(door_light)
 			U.y_wait(store, door_light.tween.props[1].keys[2][1])
 			if sp[2] == nil then
 				this._tower.spawn_sorcerer(sp[1])
@@ -284,7 +278,7 @@ local function tower_stage_213_sunray_tower_update(this, store)
 		sorcerer.is_top = this.sorcerers[spot][5]
 		sorcerer.ritual_spot = spot
 		sorcerer.final_destination = this.sorcerers[sorcerer.ritual_spot][2]
-		queue_insert(store, sorcerer)
+		simulation:queue_insert_entity(sorcerer)
 	end
 	local function on_sorcerer_arrived(sorc)
 		this.sorcerers[sorc.ritual_spot][1] = sorc
@@ -342,7 +336,7 @@ local function tower_stage_213_sunray_tower_update(this, store)
 	local function on_lose_health(current_health)
 		if current_health > 0 then
 			if last_shake and store.entities[last_shake.id] then
-				queue_remove(store, last_shake)
+				simulation:queue_remove_entity(last_shake)
 			end
 			last_shake = E:create_entity("aura_shake_entity")
 			last_shake.aura.target_id = this.id
@@ -351,7 +345,7 @@ local function tower_stage_213_sunray_tower_update(this, store)
 			last_shake.aura.amplitude = this.shake_amplitude
 			last_shake.aura.freq_factor = this.shake_frequency
 			last_shake.aura.sprites_to_shake = {2}
-			queue_insert(store, last_shake)
+			simulation:queue_insert_entity(last_shake)
 		end
 		if current_health == 2 then
 			this.render.sprites[2].prefix = this.sunray.damaged_health_prefix
@@ -425,8 +419,8 @@ local function tower_stage_213_sunray_tower_update(this, store)
 			local to_from = v(b.bullet.to.x - b.bullet.from.x, b.bullet.to.y - b.bullet.from.y)
 			ray_decal.render.sprites[1].r = V.angleTo(to_from.x, to_from.y) + math.pi / 2
 		end
-		queue_insert(store, ray_decal)
-		queue_insert(store, b)
+		simulation:queue_insert_entity(ray_decal)
+		simulation:queue_insert_entity(b)
 	end
 	local function shoot_bullet_pos(attack, target_pos, to_boss)
 		local shooting_right = not this.render.sprites[1].flip_x
@@ -446,8 +440,8 @@ local function tower_stage_213_sunray_tower_update(this, store)
 			local to_from = v(b.bullet.to.x - b.bullet.from.x, b.bullet.to.y - b.bullet.from.y)
 			ray_decal.render.sprites[1].r = V.angleTo(to_from.x, to_from.y)
 		end
-		queue_insert(store, ray_decal)
-		queue_insert(store, b)
+		simulation:queue_insert_entity(ray_decal)
+		simulation:queue_insert_entity(b)
 	end
 	local function y_shoot_ray(a)
 		local trigger_target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, o)
@@ -481,7 +475,7 @@ local function tower_stage_213_sunray_tower_update(this, store)
 		U.y_animation_wait(this, 1)
 		animation_start_all(this, a.loop_anim, nil, store.tick_ts, true)
 		U.y_wait(store, this.sunray.ray_duration - (a.start_anim_duration - a.shoot_time))
-		queue_remove(store, ray_decal)
+		simulation:queue_remove_entity(ray_decal)
 		S:stop(this.sound_events.ray_loop)
 		S:queue(this.sound_events.ray_end)
 		y_animation_play_all(this, a.end_anim, nil, store.tick_ts)
@@ -512,7 +506,7 @@ local function tower_stage_213_sunray_tower_update(this, store)
 		U.y_animation_wait(this, 1)
 		animation_start_all(this, a.loop_anim, nil, store.tick_ts, true)
 		U.y_wait(store, this.sunray.boss_ray_duration - (a.start_anim_duration - a.shoot_time))
-		queue_remove(store, ray_decal)
+		simulation:queue_remove_entity(ray_decal)
 		S:stop(this.sound_events.ray_loop)
 		S:queue(this.sound_events.ray_end)
 		y_animation_play_all(this, a.end_anim, nil, store.tick_ts)
@@ -735,7 +729,7 @@ local function tower_stage_213_sunray_obelisk_update(this, store)
 		b.bullet.target_id = enemy.id
 		b.bullet.source_id = this.id
 		b.bullet.damage_factor = this.tower.damage_factor
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 	local function shoot_bullet_pos(attack, target_pos)
 		local roffset = attack.ray_start_offset
@@ -747,7 +741,7 @@ local function tower_stage_213_sunray_obelisk_update(this, store)
 		b.bullet.to = V.v(target_pos.x + random_offset.x, target_pos.y + random_offset.y)
 		b.bullet.source_id = this.id
 		b.bullet.damage_factor = this.tower.damage_factor
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 	U.y_animation_play(this, this.sunray.buy_start_anim, nil, store.tick_ts, 1, 1)
 	U.animation_start(this, this.sunray.idle_loop_anim, nil, store.tick_ts, true, 1)

@@ -16,18 +16,7 @@ local band = bit.band
 local bor = bit.bor
 local v = V.v
 
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
+local queue_damage = U.queue_damage
 local scripts = require("scripts")
 
 scripts.arrow_endless_multishot = {}
@@ -48,7 +37,7 @@ function scripts.arrow_endless_multishot.insert(this, store)
 					b.bullet.to.y = target.pos.y + target.unit.hit_offset.y
 					b.bullet.target_id = target.id
 
-					queue_insert(store, b)
+					simulation:queue_insert_entity(b)
 				end
 			end
 		end
@@ -146,7 +135,7 @@ function scripts.decal_catapult_endless.update(this, store)
 							b.bullet.hit_payload = e
 						end
 
-						queue_insert(store, b)
+						simulation:queue_insert_entity(b)
 					end
 
 					U.y_animation_wait_default(this)
@@ -199,7 +188,7 @@ function scripts.endless_barrack_synergy_aura.update(this, store)
 					m.modifier.source_id = this.id
 					m.template_name = m.template_name .. tostring(this.id)
 
-					queue_insert(store, m)
+					simulation:queue_insert_entity(m)
 				end
 			end
 
@@ -231,7 +220,7 @@ function scripts.mod_endless_barrack_synergy.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 
 	return
 end
@@ -282,7 +271,7 @@ scripts.mod_endless_engineer_aftermath = {
 		decal.render.sprites[1].ts = store.tick_ts
 		decal.render.sprites[1].scale = v(0.6, 0.6)
 
-		queue_insert(store, decal)
+		simulation:queue_insert_entity(decal)
 
 		return false
 	end
@@ -296,7 +285,7 @@ scripts.aura_endless_engineer_aftermath_ray = {
 		ps.particle_system.scales_x = {0.8, 0.36}
 		ps.particle_system.scales_y = {0.8, 0.36}
 
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 		U.y_wait_unconditional(store, a.duration)
 
 		local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
@@ -309,7 +298,7 @@ scripts.aura_endless_engineer_aftermath_ray = {
 			end
 		end
 
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 }
 scripts.endless_mage_thunder = {}
@@ -327,7 +316,7 @@ function scripts.endless_mage_thunder.update(this, store)
 			e.render.sprites[1].scale = v(0.8, (REF_H - pos.y) / e.image_h)
 		end
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		e = E:create_entity("fx_power_thunder_explosion")
 		e.pos.x, e.pos.y = pos.x, pos.y
@@ -336,19 +325,19 @@ function scripts.endless_mage_thunder.update(this, store)
 		e.render.sprites[2].ts = store.tick_ts
 		e.render.sprites[2].scale = v(0.8, 0.8)
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		e = E:create_entity("fx_power_thunder_explosion_decal")
 		e.pos.x, e.pos.y = pos.x, pos.y
 		e.render.sprites[1].ts = store.tick_ts
 		e.render.sprites[1].scale = v(0.8, 0.8)
 
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 
 		if thunder.pop and math.random() < thunder.pop_chance then
 			local e = SU.create_pop(store, this.pos, thunder.pop)
 
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 		end
 
 		local targets = U.find_enemies_in_range_filter_off(pos, thunder.damage_radius, this.vis_flags, this.vis_bans)
@@ -429,7 +418,7 @@ function scripts.endless_mage_thunder.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 
 return scripts

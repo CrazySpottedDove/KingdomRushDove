@@ -6,12 +6,8 @@ local S = require("sound_db")
 local signal = require("lib.hump.signal")
 local P = require("path_db")
 local V = require("lib.klua.vector")
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-local function fts(v)
-	return v / FPS
-end
+local queue_damage = U.queue_damage
+local fts = U.fts
 local tt = E:register_t_tmp("fx_stage_32_redboy_transform_fire", "fx")
 tt.render.sprites[1].prefix = "dragon_redboy_transformDef"
 tt.render.sprites[1].name = "run"

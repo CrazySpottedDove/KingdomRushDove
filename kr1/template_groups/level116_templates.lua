@@ -1,9 +1,7 @@
 local E = require("entity_db")
 local S = require("sound_db")
 local U = require("utils")
-local function fts(v)
-	return v / FPS
-end
+local fts = U.fts
 require("lib.klua.table")
 local V = require("lib.klua.vector")
 local SU = require("script_utils")
@@ -19,10 +17,7 @@ local bit = require("bit")
 local band = bit.band
 local signal = require("lib.hump.signal")
 
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
+local queue_damage = U.queue_damage
 local controller_terrain_3_stage_16_glare_update
 local controller_stage_16_overseer_tentacle_update
 local controller_stage_16_tentacle_bottom_update

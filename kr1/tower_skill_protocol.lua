@@ -1,5 +1,4 @@
 local E = require("entity_db")
-local V = require("lib.klua.vector")
 local log = require("lib.klua.log"):new("tower_skill")
 local EL = require("kr1.data.endless")
 local U = require("utils")
@@ -7,16 +6,9 @@ local SkillData = require("kr1.data.tower_skills_endless")
 
 local TowerSkill = {}
 
-local function tpos(tower)
-	-- 塔有 range_offset 时用偏移后的坐标；没有就直接用实体坐标。
-	-- 这样选敌范围和原塔攻击判定更一致，不会出现“明明在圈里却打不到”。
-	local p = tower.pos
-	if tower.tower and tower.tower.range_offset then
-		return V.v(p.x + tower.tower.range_offset.x, p.y + tower.tower.range_offset.y)
-	end
-	return p
-end
-
+-- 塔有 range_offset 时用偏移后的坐标；没有就直接用实体坐标。
+-- 这样选敌范围和原塔攻击判定更一致，不会出现“明明在圈里却打不到”。
+local tpos = U.tpos
 local function pick_targets(list, max_targets)
 	-- 先按候选顺序截断，数值可控，后续调平衡只改配置里的 max_targets 即可。
 	if not list or #list == 0 then

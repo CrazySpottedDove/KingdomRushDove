@@ -4,9 +4,7 @@ local U = require("utils")
 local A = require("achievements")
 require("all.constants")
 require("lib.klua.table")
-local function fts(t)
-	return t / FPS
-end
+local fts = U.fts
 local function decal_s25_nessie_update(this, store)
 	local pause_min, pause_max = unpack(this.pause_duration)
 	local animation_min, animation_max = unpack(this.animation_duration)

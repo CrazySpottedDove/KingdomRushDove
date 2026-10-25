@@ -67,9 +67,7 @@ local U = require("utils")
 local P = require("path_db")
 local km = require("lib.klua.macros")
 local v = V.v
-local function fts(t)
-	return t / FPS
-end
+local fts = U.fts
 local function decal_gryphon_update(this, store)
 	local flip_x = this.side == "right"
 	local flip_sign = flip_x and -1 or 1

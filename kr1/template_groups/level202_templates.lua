@@ -11,9 +11,7 @@ local signal = require("lib.hump.signal")
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
+local fts = U.fts
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}

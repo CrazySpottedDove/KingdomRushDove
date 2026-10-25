@@ -10,9 +10,6 @@ local SU=require("script_utils")
 local storage=require("all.storage")
 local W=require("wave_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local function set_can_click_on_all_holders(store,can_click)
 local holders=table.filter(store.entities,function(_,v)
 return v.tower and v.tower.holder_id

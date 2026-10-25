@@ -3632,4 +3632,24 @@ function U.tower_ready_to_use_power(power, power_attack, store, tw)
 	return (tw.can_do_magic or power_attack.requires_magic == false) and power.level > 0 and (store.tick_ts - power_attack.ts > power_attack.cooldown * tw.cooldown_factor)
 end
 
+function U.fts(v)
+	return v / FPS
+end
+
+function U.tpos(e)
+	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
+end
+
+function U.ready_to_attack(attack, store, factor)
+	return store.tick_ts - attack.ts > attack.cooldown * (factor or 1)
+end
+
+function U.enemy_ready_to_magic_attack(this, store, attack)
+	return this.enemy.can_do_magic and store.tick_ts - attack.ts > attack.cooldown
+end
+
+function U.queue_damage(store, damage)
+	store.damage_queue[#store.damage_queue + 1] = damage
+end
+
 return U

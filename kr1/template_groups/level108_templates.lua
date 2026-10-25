@@ -67,10 +67,7 @@ function stage_08_gem_basket.update(this, store)
 end
 
 local scripts = require("game_scripts")
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local controller_stage_08_elf_rescue = {}
 
 function controller_stage_08_elf_rescue.update(this, store)

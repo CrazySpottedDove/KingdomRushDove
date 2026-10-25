@@ -6,9 +6,7 @@ local V=require("lib.klua.vector")
 local S=require("sound_db")
 local P=require("path_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local v=V.v
 local level={}
 function level:init(store)

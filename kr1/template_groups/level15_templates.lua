@@ -3,9 +3,8 @@ local P = require("path_db")
 local log = require("lib.klua.log"):new("level15")
 require("all.constants")
 require("lib.klua.table")
-local function fts(t)
-	return t / FPS
-end
+local U = require("utils")
+local fts = U.fts
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end

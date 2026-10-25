@@ -11,9 +11,7 @@ local scripts=require("scripts")
 require("all.constants")
 require("lib.klua.table")
 local level={}
-local function fts(t)
-return t/30
-end
+local fts=U.fts
 local function find_all_t(store,template_name,contains,fn)
 if not store or not store.entities then
 return {}
@@ -21,12 +19,6 @@ end
 return table.filter(store.entities,function(k,val)
 return (contains and string.find(val.template_name,template_name) or val.template_name==template_name) and (not fn or fn(k,val))
 end)
-end
-local function queue_insert(store,e)
-simulation:queue_insert_entity(e)
-end
-local function queue_remove(store,e)
-simulation:queue_remove_entity(e)
 end
 local function tower_stage_217_joust_update(this,store)
 local lady=find_all_t(store,this.lady_t)[1]
@@ -82,7 +74,7 @@ local reward=E:create_entity(this.gold_reward_t)
 reward.pos.x,reward.pos.y=pos.x,pos.y
 reward.render.sprites[1].ts=store.tick_ts
 reward.reward=this.bet.payout_mult*this.tower_action.cost
-queue_insert(store,reward)
+simulation:queue_insert_entity(reward)
 signal.emit("feeling-lucky-stage17")
 end
 U.y_animation_wait(this,1)
@@ -143,7 +135,7 @@ end
 if path_ni<=0 then
 this.health_bar.hidden=true
 U.unblock_target(store,this)
-queue_remove(store,this)
+simulation:queue_remove_entity(this)
 return
 end
 if this.unit.is_stunned then
@@ -204,7 +196,7 @@ end
 local s=E:create_entity(this.paladin_t)
 s.pi=pi
 s.pos=P:node_pos(pi,1,P:get_end_node(pi))
-queue_insert(store,s)
+simulation:queue_insert_entity(s)
 end
 coroutine.yield()
 end
@@ -251,7 +243,7 @@ U.animation_start(this,this.animation_clash,nil,store.tick_ts,true)
 local tap_decal=E:create_entity(this.tap_decal_t)
 tap_decal.pos.x,tap_decal.pos.y=this.tap_decal_pos.x,this.tap_decal_pos.y
 tap_decal.render.sprites[1].ts=store.tick_ts
-queue_insert(store,tap_decal)
+simulation:queue_insert_entity(tap_decal)
 local start_ts=store.tick_ts
 local window=this.conclusion_window
 while window>store.tick_ts-start_ts do
@@ -265,7 +257,7 @@ break
 end
 coroutine.yield()
 end
-queue_remove(store,tap_decal)
+simulation:queue_remove_entity(tap_decal)
 local result=taps>=this.required_taps and "paladin" or "slayer"
 local controller=store.entities[this.controller_id]
 if result=="paladin" then
@@ -303,14 +295,14 @@ local a=E:create_entity(this.soldier_aura_t)
 a.pos.x,a.pos.y=0,0
 a.aura.ts=store.tick_ts
 a.aura.source_id=this.id
-queue_insert(store,a)
+simulation:queue_insert_entity(a)
 end
 local function buff_enemies()
 local a=E:create_entity(this.enemy_aura_t)
 a.pos.x,a.pos.y=0,0
 a.aura.ts=store.tick_ts
 a.aura.source_id=this.id
-queue_insert(store,a)
+simulation:queue_insert_entity(a)
 end
 local function duel_outcome(result)
 if result=="paladin" then
@@ -322,7 +314,7 @@ slayer.nav_path.spi=1
 slayer.nav_path.ni=1
 slayer.enemy.gold=0
 slayer.pos=P:node_pos(slayer.nav_path.pi,slayer.nav_path.spi,slayer.nav_path.ni)
-queue_insert(store,slayer)
+simulation:queue_insert_entity(slayer)
 if not U.is_seen(store,this.slayer_t) then
 signal.emit("wave-notification","icon",this.slayer_t)
 U.mark_seen(store,this.slayer_t)
@@ -337,11 +329,11 @@ duel_decal.duel_started=true
 U.y_wait(store,fts(116))
 local alert_enemy=E:create_entity(this.alert_enemy)
 alert_enemy.pos=this.alert_enemy_pos
-queue_insert(store,alert_enemy)
+simulation:queue_insert_entity(alert_enemy)
 U.y_wait(store,1e+99,function()
 return this.duel_result~=nil
 end)
-queue_remove(store,alert_enemy)
+simulation:queue_remove_entity(alert_enemy)
 if this.duel_result=="paladin" then
 buff_allies()
 else
@@ -372,7 +364,7 @@ end
 local function mod_stage_217_duel_visuals_update(this,store)
 local target=store.entities[this.modifier.target_id]
 if not target then
-queue_remove(store,this)
+simulation:queue_remove_entity(this)
 return
 end
 if this.render.sprites[1].size_scales then
@@ -420,7 +412,7 @@ end
 while true do
 coroutine.yield()
 end
-queue_remove(store,this)
+simulation:queue_remove_entity(this)
 end
 function level:init(store)
 self.manual_hero_insertion=false

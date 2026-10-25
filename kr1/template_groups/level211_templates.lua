@@ -49,15 +49,7 @@ local vv = V.vv
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
+local fts = U.fts
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -66,13 +58,11 @@ local function find_all_t(store, template_name, contains, fn)
 		return (contains and string.find(val.template_name, template_name) or val.template_name == template_name) and (not fn or fn(k, val))
 	end)
 end
-local function tpos(e)
-	return e.tower and e.tower.range_offset and v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
-end
+local tpos = U.tpos
 local function decal_stage_211_spider_eyes_update(this, store, script)
 	local target = store.entities[this.target_id]
 	if not target or not target.pos then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	this.pos = target.pos
@@ -90,7 +80,7 @@ local function decal_stage_211_spider_eyes_update(this, store, script)
 	while true do
 		target = store.entities[this.target_id]
 		if not target or target.health.dead then
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		local animation = "walk"
@@ -131,9 +121,9 @@ local function decal_stage_211_giant_spider_rappel_spawn_update(this, store, scr
 	sp.nav_path.pi = this.pi
 	sp.nav_path.spi = this.spi
 	sp.nav_path.ni = this.ni
-	queue_insert(store, sp)
-	queue_remove(store, shadow)
-	queue_remove(store, this)
+	simulation:queue_insert_entity(sp)
+	simulation:queue_remove_entity(shadow)
+	simulation:queue_remove_entity(this)
 end
 local function decal_stage_211_sarelgaz_tower_block_update(this, store, script)
 	local start_y = scripts.decal_rappel_utils.set_y(this, store)
@@ -152,7 +142,7 @@ local function decal_stage_211_sarelgaz_tower_block_update(this, store, script)
 	tap_tut.pos.x, tap_tut.pos.y = this.pos.x + this.tap_tutorial_offset.x, this.pos.y + this.tap_tutorial_offset.y
 	tap_tut.render.sprites[1].ts = store.tick_ts
 	tap_tut.render.sprites[1].scale = V.vv(0.6)
-	queue_insert(store, tap_tut)
+	simulation:queue_insert_entity(tap_tut)
 	local spinning_ts = store.tick_ts
 	local taps = 0
 	local tower = find_tower(this.holder_id)
@@ -183,19 +173,19 @@ local function decal_stage_211_sarelgaz_tower_block_update(this, store, script)
 		if taps < this.taps_to_remove then
 			local block = E:create_entity(this.block_mod)
 			block.modifier.target_id = tower.id
-			queue_insert(store, block)
+			simulation:queue_insert_entity(block)
 		end
 	end
 	::label_1213_0::
-	queue_remove(store, tap_tut)
+	simulation:queue_remove_entity(tap_tut)
 	if taps < this.taps_to_remove then
 		U.y_wait(store, this.wait_after_trap)
 	end
 	U.animation_start(this, this.ascend_anim, nil, store.tick_ts, false, 1)
 	scripts.decal_rappel_utils.y_ascend(this, store, start_y, max_height, shadow, string)
 	this.controller._done = true
-	queue_remove(store, shadow)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(shadow)
+	simulation:queue_remove_entity(this)
 end
 local function decal_stage_211_sarelgaz_eggs_spawn_update(this, store, script)
 	local start_y = scripts.decal_rappel_utils.set_y(this, store)
@@ -211,8 +201,8 @@ local function decal_stage_211_sarelgaz_eggs_spawn_update(this, store, script)
 		if this.controller then
 			this.controller._done = true
 		end
-		queue_remove(store, shadow)
-		queue_remove(store, this)
+		simulation:queue_remove_entity(shadow)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	local egg = E:create_entity(this.egg_prefix .. "_" .. this.to_spawn)
@@ -221,14 +211,14 @@ local function decal_stage_211_sarelgaz_eggs_spawn_update(this, store, script)
 	egg.path_id = this.path_id
 	egg.render.sprites[1].ts = store.tick_ts
 	egg.source_id = spawner.id
-	queue_insert(store, egg)
+	simulation:queue_insert_entity(egg)
 	spawner.has_eggs = true
 	spawner.current_egg = egg
 	U.animation_start(this, this.ascend_anim, nil, store.tick_ts, true, 1)
 	scripts.decal_rappel_utils.y_ascend(this, store, start_y, max_height, shadow, string)
 	this.controller._done = true
-	queue_remove(store, shadow)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(shadow)
+	simulation:queue_remove_entity(this)
 end
 local function decal_stage_211_sarelgaz_descent_update(this, store, script)
 	this.render.sprites[1].ts = store.tick_ts
@@ -248,8 +238,8 @@ local function decal_stage_211_sarelgaz_descent_update(this, store, script)
 	end
 	this.render.sprites[1].hidden = true
 	U.y_wait(store, fts(10))
-	queue_remove(store, shadow)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(shadow)
+	simulation:queue_remove_entity(this)
 end
 local function decal_stage_211_sarelgaz_ascent_update(this, store, script)
 	this.render.sprites[1].ts = store.tick_ts
@@ -257,13 +247,13 @@ local function decal_stage_211_sarelgaz_ascent_update(this, store, script)
 	scripts.decal_rappel_utils.y_ascend(this, store, start_y)
 	local controller = find_all_t(store, this.controller_t)[1]
 	controller._done = true
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function decal_stage_211_torch_insert(this, store)
 	local l = E:create_entity(this.torch_light_t)
 	l.pos.x, l.pos.y = this.pos.x + this.light_offset.x, this.pos.y + this.light_offset.y
 	this._torch_light = l
-	queue_insert(store, l)
+	simulation:queue_insert_entity(l)
 	return true
 end
 local function decal_stage_211_torch_update(this, store)
@@ -297,7 +287,7 @@ local function aura_stage_211_camp_fire_arrow_fire_update(this, store, script)
 	end
 	::label_1236_0::
 	U.y_animation_wait(this, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function controller_stage_211_shadows_update(this, store, script)
 	this._ease = false
@@ -319,7 +309,7 @@ local function controller_stage_211_shadows_update(this, store, script)
 			end)
 			table.append(eyes, all_eyes)
 			for _, v in pairs(eyes) do
-				queue_remove(store, v)
+				simulation:queue_remove_entity(v)
 			end
 			if shadow_in then
 				shadow_in.render.sprites[1].hidden = false
@@ -412,7 +402,7 @@ local function mod_stage_211_tower_web_update(this, store)
 		coroutine.yield()
 	end
 	U.y_animation_play(this, this.end_anim, nil, store.tick_ts, 1, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function tower_stage_211_spider_eggs_nest_update(this, store, script)
 	local function activate(camp)
@@ -464,8 +454,8 @@ local function tower_stage_211_camp_on_level_up(this, store, current_level, igno
 		if holder.tween then
 			holder.tween.props[1].ts = store.tick_ts
 		end
-		queue_insert(store, holder)
-		queue_remove(store, h)
+		simulation:queue_insert_entity(holder)
+		simulation:queue_remove_entity(h)
 	end
 	local function ease_lights(from, to, lvl)
 		if this._shadows_controller._ease then
@@ -545,7 +535,7 @@ local function tower_stage_211_camp_insert(this, store)
 		this._shadows_controller = E:create_entity(this.shadows_controller)
 		this._shadows_controller.pos = V.vclone(this.pos)
 		this._shadows_controller._camp = this
-		queue_insert(store, this._shadows_controller)
+		simulation:queue_insert_entity(this._shadows_controller)
 	else
 		this._shadows_controller = lights_controllers[1]
 		this._shadows_controller._camp = this
@@ -554,7 +544,7 @@ local function tower_stage_211_camp_insert(this, store)
 	if not invulnerability_auras or #invulnerability_auras == 0 then
 		this._shadows_aura = E:create_entity(this.shadows_aura)
 		this._shadows_aura.pos = V.v(this.pos.x + this.shadows_offset.x, this.pos.y + this.shadows_offset.y)
-		queue_insert(store, this._shadows_aura)
+		simulation:queue_insert_entity(this._shadows_aura)
 	else
 		this._shadows_aura = invulnerability_auras[1]
 		this._shadows_aura.pos = V.v(this.pos.x + this.shadows_offset.x, this.pos.y + this.shadows_offset.y)
@@ -603,7 +593,7 @@ local function tower_stage_211_camp_enemy_reached_goal_fn(this, store, event_nam
 	local fx = E:create_entity(this.camp_damage_fx .. "_" .. size)
 	fx.pos.x, fx.pos.y = e.pos.x, e.pos.y
 	fx.render.sprites[1].ts = store.tick_ts
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 	local defeat_controller = find_all_t(store, "controller_stage_211_loss")[1]
 	if not defeat_controller then
 		log.debug("tower_stage_211_camp.enemy_reached_goal_fn - defeat_controller removed. skipping...")
@@ -653,7 +643,7 @@ local function tower_stage_211_camp_update(this, store)
 		if b.bullet.fixed_height then
 			b.bullet.flight_time = 2 * (math.sqrt(2 * b.bullet.fixed_height * b.bullet.g * -1) / b.bullet.g * -1)
 		end
-		queue_insert(store, b)
+		simulation:queue_insert_entity(b)
 	end
 	if not this.hand_insert then
 		tower_stage_211_camp_on_level_up(this, store, this.tower.level, false)
@@ -768,7 +758,7 @@ local function controller_stage_211_spider_block_and_spawn_update(this, store, s
 			egg_spawner.path_id = sp.path_id
 			egg_spawner.pos.x = sp.pos.x
 			egg_spawner.target_pos.x, egg_spawner.target_pos.y = sp.pos.x, sp.pos.y
-			queue_insert(store, egg_spawner)
+			simulation:queue_insert_entity(egg_spawner)
 			while not this._done do
 				coroutine.yield()
 			end
@@ -789,7 +779,7 @@ local function controller_stage_211_spider_block_and_spawn_update(this, store, s
 				blocker.holder_id = towers[r].tower.holder_id
 				blocker.pos.x = towers[r].pos.x
 				blocker.target_pos.x, blocker.target_pos.y = towers[r].pos.x, towers[r].pos.y
-				queue_insert(store, blocker)
+				simulation:queue_insert_entity(blocker)
 			else
 				this._done = true
 			end
@@ -807,7 +797,7 @@ local function controller_stage_211_spider_block_and_spawn_update(this, store, s
 			local dest = P:node_pos(this.lower_path_id, 1, this.lower_node_id)
 			descent.pos.x = dest.x
 			descent.target_pos = V.vclone(dest)
-			queue_insert(store, descent)
+			simulation:queue_insert_entity(descent)
 			boss.lower_path_id = this.lower_path_id
 			boss.lower_node_id = this.lower_node_id
 			this.in_use = false
@@ -872,7 +862,7 @@ local function controller_stage_211_loss_update(this, store)
 			signal.emit("end-cinematic")
 			store.game_outcome = nil
 			store.lives = 0
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		if this.defeat_cinematic and this.sarelgaz_defeat then
@@ -919,7 +909,7 @@ local function controller_stage_211_loss_update(this, store)
 				local sp = E:create_entity(this.spawner_t)
 				sp.pos.x, sp.pos.y = v[2].x, v[2].y
 				sp.spawner_id = 4 + i
-				queue_insert(store, sp)
+				simulation:queue_insert_entity(sp)
 			end
 			local spawning = find_all_t(store, "controller_stage_211_spider_rappel_spawning")[1]
 			coroutine.yield()
@@ -940,13 +930,13 @@ local function controller_stage_211_loss_update(this, store)
 			local ascent = E:create_entity(boss.ascend_decal)
 			ascent.pos.x, ascent.pos.y = boss.pos.x, boss.pos.y
 			ascent.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, ascent)
+			simulation:queue_insert_entity(ascent)
 			U.y_wait(store, 1.5)
 			store.ephemeral.defeat_cinematic = nil
 			signal.emit("end-cinematic")
 			store.game_outcome = nil
 			store.lives = 0
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		coroutine.yield()
@@ -966,7 +956,7 @@ local function controller_stage_211_camp_barrack_update(this, store)
 				s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
 				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, math.pi / 4)
 				s.nav_rally.new = true
-				queue_insert(store, s)
+				simulation:queue_insert_entity(s)
 				b.soldiers[i] = s
 			end
 		end
@@ -975,7 +965,7 @@ local function controller_stage_211_camp_barrack_update(this, store)
 end
 local function controller_stage_211_camp_barrack_e_insert(this, store)
 	local r = E:create_entity("editor_rally_point")
-	queue_insert(store, r)
+	simulation:queue_insert_entity(r)
 	r.tower_id = this.id
 	this.editor.rally_point_id = r.id
 	if this.default_rally_pos and this.default_rally_pos.x ~= 0 and this.default_rally_pos.y ~= 0 then
@@ -992,7 +982,7 @@ end
 local function controller_stage_211_camp_barrack_e_remove(this, store)
 	local r = store.entities[this.editor.rally_point_id]
 	if r then
-		queue_remove(store, r)
+		simulation:queue_remove_entity(r)
 	end
 	return true
 end
@@ -1012,7 +1002,7 @@ local function controller_stage_211_spider_eyes_decos_update(this, store, script
 		local eyes = E:create_entity(t)
 		eyes.pos = V.vclone(p)
 		eyes.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, eyes)
+		simulation:queue_insert_entity(eyes)
 	end
 	local function y_run_sequence(sequence)
 		if not sequence then

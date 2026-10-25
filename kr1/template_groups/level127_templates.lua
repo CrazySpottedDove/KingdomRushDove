@@ -4,9 +4,7 @@ local S = require("sound_db")
 local U = require("utils")
 local V = require("lib.klua.vector")
 local SU = require("script_utils")
-local function fts(v)
-	return v / FPS
-end
+local fts = U.fts
 require("lib.klua.table")
 local scripts = require("scripts")
 local r = V.r
@@ -246,10 +244,7 @@ local v = V.v
 local km = require("lib.klua.macros")
 local P = require("path_db")
 local bor = bit.bor
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
+local queue_damage = U.queue_damage
 local function fts(v)
 	return v / FPS
 end

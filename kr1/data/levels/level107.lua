@@ -8,9 +8,6 @@ local V=require("lib.klua.vector")
 local P=require("path_db")
 local storage=require("all.storage")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local level={}
 function level:update(store)
 P:add_invalid_range(4,31,55,NF_NO_SHADOW)

@@ -73,4 +73,13 @@ function file_utils.delete_file(file_path)
 	return os.remove(file_path)
 end
 
+--- 判断路径是否为文件
+---@param path string 路径
+---@return boolean
+function file_utils.is_file(path)
+	local info = FS.getInfo(path)
+
+	return info and info.type == "file"
+end
+
 return file_utils

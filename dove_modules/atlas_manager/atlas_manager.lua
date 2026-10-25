@@ -32,10 +32,6 @@ atlas_manager.ref_w = REF_W
 atlas_manager.ref_h = 1080
 atlas_manager.ref_res = TEXTURE_SIZE_ALIAS.fullhd
 
-local function align4(v)
-	return math.ceil(v / 4) * 4
-end
-
 local project_root = (function()
 	local ok, p = pcall(FS.getRealDirectory, "main.lua")
 	if ok then

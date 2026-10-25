@@ -9,9 +9,7 @@ local scripts = require("scripts")
 local v = V.v
 local vv = V.vv
 local r = V.r
-local function fts(t)
-	return t / 30
-end
+local fts = U.fts
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -20,15 +18,7 @@ local function find_all_t(store, template_name, contains, fn)
 		return (contains and string.find(val.template_name, template_name) or val.template_name == template_name) and (not fn or fn(k, val))
 	end)
 end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local queue_damage = U.queue_damage
 local bit = require("bit")
 local band, bor = bit.band, bit.bor
 local function get_random_round_robin(mutable_history, n, m)
@@ -156,9 +146,9 @@ function S18.nightfall_dissolve.do_swap(this, store, insert_fn)
 				s.hidden = true
 			end
 		else
-			queue_insert(store, h)
+			simulation:queue_insert_entity(h)
 		end
-		queue_remove(store, best)
+		simulation:queue_remove_entity(best)
 	else
 		local tw = S18.nightfall_dissolve.find_tower_over(this, store)
 		if tw then
@@ -499,7 +489,7 @@ function S18.nightfall_dissolve.update(this, store)
 				s.hidden = true
 			end
 			strip(replaced)
-			queue_remove(store, replaced)
+			simulation:queue_remove_entity(replaced)
 		elseif not replaced then
 			log.warning("nightfall_dissolve: no encontré \"%s\" en (%s,%s)", tostring(this.replace_from), tostring(this.pos.x), tostring(this.pos.y))
 		end
@@ -523,7 +513,7 @@ function S18.nightfall_dissolve.update(this, store)
 		unwire_swap_cut()
 	end
 	if this.swap_to then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 	end
 end
 S18.decal_stage_218_spawner = {}
@@ -777,7 +767,7 @@ function S18.stage_218_nightfall.update(this, store)
 				fs.flip_x = this.front_fx_flip and math.random() < 0.5
 				fs.scale = V.vv(U.frandom(smin, smax))
 				fs.ts = store.tick_ts
-				queue_insert(store, fx)
+				simulation:queue_insert_entity(fx)
 			end
 		end
 	end
@@ -789,7 +779,7 @@ function S18.stage_218_nightfall.update(this, store)
 			o.swap_from = pair.from
 			o.swap_to = pair.to
 			o.nightfall_name = this.template_name
-			queue_insert(store, o)
+			simulation:queue_insert_entity(o)
 		end
 		for _, pair in ipairs(this.swap_list) do
 			for _, t in ipairs(find_all_t(store, pair.from)) do
@@ -1059,7 +1049,7 @@ function S18.bullet_stage_218_veznan_bolt.update(this, store)
 		ps = E:create_entity(b.particles_name)
 		ps.particle_system.emit = true
 		ps.particle_system.track_id = this.id
-		queue_insert(store, ps)
+		simulation:queue_insert_entity(ps)
 	end
 	local iix, iiy = V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y)
 	local last_pos = V.vclone(this.pos)
@@ -1115,7 +1105,7 @@ function S18.bullet_stage_218_veznan_bolt.update(this, store)
 		fx.pos.x, fx.pos.y = b.to.x, b.to.y
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].runs = 0
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 	if this.hit_sfx then
 		S:queue(this.hit_sfx)
@@ -1124,7 +1114,7 @@ function S18.bullet_stage_218_veznan_bolt.update(this, store)
 		ps.particle_system.emit = false
 		U.y_wait(store, ps.particle_system.particle_lifetime[2])
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 S18.bullet_stage_218_veznan_soul = {}
 function S18.bullet_stage_218_veznan_soul.insert(this, store, script)
@@ -1150,14 +1140,14 @@ function S18.bullet_stage_218_veznan_soul.update(this, store, script)
 		local fx = E:create_entity(this.arrive_fx)
 		fx.pos = V.vclone(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 	if this.arrive_pump_fx then
 		local src = store.entities[this.bullet.source_id]
 		local pfx = E:create_entity(this.arrive_pump_fx)
 		pfx.pos = V.vclone(src and src.pos or this.pos)
 		pfx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, pfx)
+		simulation:queue_insert_entity(pfx)
 	end
 end
 S18.bullet_stage_218_veznan_soul_reveal = {}
@@ -1188,7 +1178,7 @@ function S18.bullet_stage_218_veznan_soul_reveal.update(this, store, script)
 			if b.particles_name then
 				ps = E:create_entity(b.particles_name)
 				ps.particle_system.track_id = this.id
-				queue_insert(store, ps)
+				simulation:queue_insert_entity(ps)
 			end
 		end
 		if s >= 1 then
@@ -1201,18 +1191,18 @@ function S18.bullet_stage_218_veznan_soul_reveal.update(this, store, script)
 		local fx = E:create_entity(this.arrive_fx)
 		fx.pos = V.vclone(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 	end
 	if this.arrive_pump_fx then
 		local pfx = E:create_entity(this.arrive_pump_fx)
 		pfx.pos = V.vclone(src and src.pos or this.pos)
 		pfx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, pfx)
+		simulation:queue_insert_entity(pfx)
 	end
 	if src and this.reveal_heal and this.reveal_heal > 0 then
 		src.health.hp = km.clamp(0, src.health.hp_max, src.health.hp + this.reveal_heal)
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 S18.controller_stage_218_veznan = {}
 function S18.controller_stage_218_veznan.on_disable_towers(this, store, event_name, count, holder_group, duration)
@@ -1350,9 +1340,9 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 					sfx_angle = sfx_angle + bullet.initial_impulse_angle * bullet.initial_impulse_side
 				end
 				sfx.render.sprites[1].r = sfx_angle
-				queue_insert(store, sfx)
+				simulation:queue_insert_entity(sfx)
 			end
-			queue_insert(store, bullet)
+			simulation:queue_insert_entity(bullet)
 		end
 		y_body_recover()
 		return true
@@ -1378,7 +1368,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 			if cmd.duration then
 				m.modifier.duration = cmd.duration
 			end
-			queue_insert(store, m)
+			simulation:queue_insert_entity(m)
 		end
 		y_body_recover()
 		return true
@@ -1390,7 +1380,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 				circle = E:create_entity(this.summon_circle_t)
 				circle.pos = V.vclone(this.sigil_pos)
 				circle.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, circle)
+				simulation:queue_insert_entity(circle)
 				this._circle = circle
 			end
 			circle._cast = true
@@ -1410,7 +1400,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 		local fx = E:create_entity(this.sigil_burst_fx)
 		fx.pos = V.vclone(this.sigil_pos)
 		fx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 		local pi, ni = sigil_pi, sigil_ni
 		local n = P:nearest_nodes(this.sigil_pos.x, this.sigil_pos.y, {cmd.path})[1]
 		if n then
@@ -1426,7 +1416,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 				local sfx = E:create_entity(this.summon_spawn_fx)
 				sfx.pos = V.vclone(this.sigil_pos)
 				sfx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, sfx)
+				simulation:queue_insert_entity(sfx)
 			end
 			if this.summon_spawn_sound then
 				S:queue(this.summon_spawn_sound)
@@ -1450,7 +1440,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 					end
 				end
 			end
-			queue_insert(store, e)
+			simulation:queue_insert_entity(e)
 		end
 		if circle then
 			circle._out = true
@@ -1481,7 +1471,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 		bullet.bullet.from = V.vclone(bullet.pos)
 		bullet.bullet.to = V.v(cmd.x or this.statue_target_pos.x, cmd.y or this.statue_target_pos.y)
 		bullet.bullet.source_id = this.id
-		queue_insert(store, bullet)
+		simulation:queue_insert_entity(bullet)
 		y_body_recover()
 		return true
 	end
@@ -1516,7 +1506,7 @@ function S18.controller_stage_218_veznan.update(this, store, script)
 	local nodes = P:nearest_nodes(this.sigil_pos.x, this.sigil_pos.y)
 	if #nodes < 1 then
 		log.error("controller_stage_218_veznan: no path nodes near sigil %s,%s", this.sigil_pos.x, this.sigil_pos.y)
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	sigil_pi, _, sigil_ni = unpack(nodes[1])
@@ -1567,12 +1557,12 @@ function S18.fx_stage_218_explosion_estatua.update(this, store, script)
 		shake.aura.amplitude = this.screenshake_amplitude
 		shake.aura.duration = this.screenshake_duration
 		shake.aura.freq_factor = this.screenshake_freq_factor
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 	end
 	U.y_wait(store, this.mask_off_time)
 	for _, e in pairs(store.entities) do
 		if e.template_name == "decal_stage_218_statue_mask" or e.template_name == "decal_stage_218_statue_mask_noche" or e.template_name == "decal_nightfall_overlay" and e.swap_from == "decal_stage_218_statue_mask" then
-			queue_remove(store, e)
+			simulation:queue_remove_entity(e)
 		end
 	end
 end
@@ -1597,21 +1587,21 @@ function S18.fx_stage_218_campana.update(this, store)
 			if REF_H - pos.y > ray.image_h then
 				ray.render.sprites[1].scale = V.v(1, (REF_H - pos.y) / ray.image_h)
 			end
-			queue_insert(store, ray)
+			simulation:queue_insert_entity(ray)
 			local exp = E:create_entity(this.ray_explosion_fx)
 			exp.pos = V.v(pos.x, pos.y)
 			exp.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, exp)
+			simulation:queue_insert_entity(exp)
 			S:queue(this.sound_ray)
 			local grieta = E:create_entity(this.grieta_fx_t)
 			grieta.pos = V.v(pos.x, pos.y)
 			grieta.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, grieta)
+			simulation:queue_insert_entity(grieta)
 			local shake = E:create_entity("aura_screen_shake")
 			shake.aura.amplitude = this.ray_shake.amplitude
 			shake.aura.duration = this.ray_shake.duration
 			shake.aura.freq_factor = this.ray_shake.freq_factor
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			U.y_wait(store, fts(this.ray_cam_delay_frames))
 			prev = prev + this.ray_cam_delay_frames
 			signal.emit("pan-zoom-camera", this.ray_cam_speed, {
@@ -1647,7 +1637,7 @@ function S18.mod_stage_218_veznan_tower_jail.update(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 	if not target then
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	U.animation_start(this, this.anim_tap[1], nil, store.tick_ts, nil, 1)
@@ -1656,7 +1646,7 @@ function S18.mod_stage_218_veznan_tower_jail.update(this, store)
 	local tap_tut = E:create_entity(this.tap_tutorial)
 	tap_tut.pos = v(this.pos.x + this.tut_offset.x, this.pos.y + this.tut_offset.y)
 	tap_tut.render.sprites[1].ts = store.tick_ts
-	queue_insert(store, tap_tut)
+	simulation:queue_insert_entity(tap_tut)
 	local taps = 0
 	local tap_ts = store.tick_ts
 	local window_ts = store.tick_ts
@@ -1669,7 +1659,7 @@ function S18.mod_stage_218_veznan_tower_jail.update(this, store)
 			shake.modifier.target_id = this.id
 			shake.modifier.duration = 0.1
 			shake.modifier.intensity = 4
-			queue_insert(store, shake)
+			simulation:queue_insert_entity(shake)
 			if taps >= this.taps_to_thaw then
 				freed = true
 				S:queue(this.sound_events.interrupted)
@@ -1679,7 +1669,7 @@ function S18.mod_stage_218_veznan_tower_jail.update(this, store)
 		this.ui.clicked = false
 		coroutine.yield()
 	end
-	queue_remove(store, tap_tut)
+	simulation:queue_remove_entity(tap_tut)
 	if not freed then
 		S:queue(this.sound_events.locked)
 		local lock_ts = store.tick_ts
@@ -1689,7 +1679,7 @@ function S18.mod_stage_218_veznan_tower_jail.update(this, store)
 		S:queue(this.sound_events.free_tower)
 	end
 	U.y_animation_play(this, this.anim_end, nil, store.tick_ts, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 S18.bullet_stage_218_moloch_lava_ball = {}
 function S18.bullet_stage_218_moloch_lava_ball.update(this, store, script)
@@ -1702,7 +1692,7 @@ function S18.bullet_stage_218_moloch_lava_ball.update(this, store, script)
 		shake.aura.amplitude = this.screenshake_amplitude
 		shake.aura.duration = this.screenshake_duration
 		shake.aura.freq_factor = this.screenshake_freq_factor
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 	end
 end
 S18.controller_stage_218_moloch = {}
@@ -1742,7 +1732,7 @@ function S18.controller_stage_218_moloch.mod_tower_stun_update(this, store)
 		s.alpha = 255 * km.clamp(0, 1, (m.duration - (store.tick_ts - m.ts)) / this.fade_time)
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 function S18.controller_stage_218_moloch.bullet_target_update(this, store)
 	local start_ts = store.tick_ts
@@ -1754,7 +1744,7 @@ function S18.controller_stage_218_moloch.bullet_target_update(this, store)
 		coroutine.yield()
 	end
 	U.y_animation_play(this, "out2", nil, store.tick_ts, 1)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 function S18.controller_stage_218_moloch.mod_buff_update(this, store)
 	local m = this.modifier
@@ -1780,7 +1770,7 @@ function S18.controller_stage_218_moloch.mod_buff_update(this, store)
 	if expired then
 		U.y_animation_play(this, "out", nil, store.tick_ts, 1)
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 function S18.controller_stage_218_moloch.update(this, store, script)
 	this._queue = this._queue or {}
@@ -1793,7 +1783,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 		shake.modifier.target_id = body.id
 		shake.modifier.duration = duration
 		shake.modifier.intensity = intensity
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 	end
 	local function y_body_cast(sound, anim, hit_time, sound_frame)
 		S:queue(sound, sound_frame and {
@@ -1811,7 +1801,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 		shake.aura.amplitude = cfg.amplitude
 		shake.aura.duration = cfg.duration
 		shake.aura.freq_factor = cfg.freq_factor
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 	end
 	local function y_cast_claw_slam()
 		local cs = this.claw_slam
@@ -1830,14 +1820,14 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 		local tele = E:create_entity(this.claw_telegraph_t)
 		tele.pos = V.vclone(target_pos)
 		tele.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, tele)
+		simulation:queue_insert_entity(tele)
 		U.animation_start(tele, "in", nil, store.tick_ts, false)
 		local anim_started = this.claw_hit_time >= cs.telegraph_time
 		local anim_delay = cs.telegraph_time - this.claw_hit_time
 		local start_ts = store.tick_ts
 		while store.tick_ts - start_ts < cs.telegraph_time - tele.out_time do
 			if this._abort then
-				queue_remove(store, tele)
+				simulation:queue_remove_entity(tele)
 				U.animation_start(body, "idle", nil, store.tick_ts, true, nil, true)
 				return
 			end
@@ -1854,21 +1844,21 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 			U.animation_start(body, this.claw_animation, nil, store.tick_ts, false)
 		end
 		U.y_animation_play(tele, "out", nil, store.tick_ts, 1)
-		queue_remove(store, tele)
+		simulation:queue_remove_entity(tele)
 		S:queue(this.claw_hit_sound)
 		local shake = E:create_entity("aura_screen_shake")
 		shake.aura.amplitude = 1
 		shake.aura.duration = 0.5
 		shake.aura.freq_factor = 2
-		queue_insert(store, shake)
+		simulation:queue_insert_entity(shake)
 		local fx = E:create_entity(this.claw_hit_fx)
 		fx.pos = V.vclone(target_pos)
 		fx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, fx)
+		simulation:queue_insert_entity(fx)
 		local sdecal = E:create_entity(this.claw_decal_t)
 		sdecal.pos = V.vclone(target_pos)
 		sdecal.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, sdecal)
+		simulation:queue_insert_entity(sdecal)
 		local kills = 0
 		local killed = {}
 		local targets = U.find_soldiers_in_range(store.soldiers, target_pos, 0, cs.damage_radius, F_INSTAKILL, bor(F_ENEMY, F_HERO))
@@ -1906,7 +1896,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 				local m = E:create_entity(this.claw_stun_mod_t)
 				m.modifier.target_id = t.id
 				m.modifier.source_id = this.id
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 				stuns = stuns + 1
 			end
 		end
@@ -2030,7 +2020,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 				marker.pos = V.vclone(ev.impact.pos)
 				marker.render.sprites[1].ts = store.tick_ts
 				marker.duration = ev.duration
-				queue_insert(store, marker)
+				simulation:queue_insert_entity(marker)
 			end
 		end
 		U.y_wait(store, this.throw_hit_time - elapsed, function()
@@ -2047,7 +2037,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 			shadow.pos = V.vclone(im.pos)
 			shadow.render.sprites[1].ts = store.tick_ts
 			shadow.tween.props[1].keys[2][1] = im.ft
-			queue_insert(store, shadow)
+			simulation:queue_insert_entity(shadow)
 			local ball = E:create_entity(this.lava_ball_t)
 			ball.pos = V.vclone(from)
 			ball.bullet.from = V.vclone(from)
@@ -2055,7 +2045,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 			ball.bullet.flight_time = im.ft
 			ball.bullet.source_id = this.id
 			ball.spawn_data = im
-			queue_insert(store, ball)
+			simulation:queue_insert_entity(ball)
 			max_ft = math.max(max_ft, im.ft)
 			U.y_wait(store, fts(2))
 		end
@@ -2065,7 +2055,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 				local sfx = E:create_entity(this.lava_spawn_fx)
 				sfx.pos = V.vclone(im.pos)
 				sfx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, sfx)
+				simulation:queue_insert_entity(sfx)
 				if not U.is_seen(store, lb.spawn_template) then
 					signal.emit("wave-notification", "icon", lb.spawn_template)
 					U.mark_seen(store, lb.spawn_template)
@@ -2077,7 +2067,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 				e.nav_path.spi = 1
 				e.nav_path.ni = im.ni
 				e.pos.x, e.pos.y = im.pos.x, im.pos.y
-				queue_insert(store, e)
+				simulation:queue_insert_entity(e)
 			end
 			local pis = {}
 			for _, im in ipairs(impacts) do
@@ -2106,7 +2096,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 				if cmd.duration and cmd.duration > 0 then
 					m.modifier.duration = cmd.duration
 				end
-				queue_insert(store, m)
+				simulation:queue_insert_entity(m)
 				count = count + 1
 			end
 		end
@@ -2119,23 +2109,23 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 	local fx = E:create_entity(this.appear_fx)
 	fx.pos = V.vclone(this.pos)
 	fx.render.sprites[1].ts = store.tick_ts
-	queue_insert(store, fx)
+	simulation:queue_insert_entity(fx)
 	S:queue(this.appear_sound)
 	for _, name in ipairs(this.masks_off_on_appear or {}) do
 		for _, e in pairs(store.entities) do
 			if e.template_name == name or e.template_name == "decal_nightfall_overlay" and e.hide_from == name then
-				queue_remove(store, e)
+				simulation:queue_remove_entity(e)
 			end
 		end
 	end
 	local mascara = E:create_entity(this.mascara_fondo_decal_t)
-	queue_insert(store, mascara)
+	simulation:queue_insert_entity(mascara)
 	body = E:create_entity(this.body_decal_t)
 	body.pos = V.vclone(this.pos)
 	body.render.sprites[1].ts = store.tick_ts
 	body.render.sprites[2].ts = store.tick_ts
 	body.render.sprites[3].ts = store.tick_ts
-	queue_insert(store, body)
+	simulation:queue_insert_entity(body)
 	U.animation_start(body, this.appear_animation, nil, store.tick_ts, false)
 	if this.appear_roar_sound then
 		S:queue(this.appear_roar_sound, {
@@ -2170,7 +2160,7 @@ function S18.controller_stage_218_moloch.update(this, store, script)
 			mascara.render.sprites[1].hidden = false
 		elseif ev.camino then
 			local camino = E:create_entity(this.camino_decal_t)
-			queue_insert(store, camino)
+			simulation:queue_insert_entity(camino)
 			mascara.render.sprites[2].hidden = false
 		end
 	end

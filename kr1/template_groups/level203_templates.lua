@@ -11,18 +11,8 @@ local signal = require("lib.hump.signal")
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function fts(t)
-	return t / 30
-end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local fts = U.fts
+local queue_damage = U.queue_damage
 local function gain_gold(store, pos, amount)
 	store.player_gold = store.player_gold + amount
 
@@ -78,7 +68,7 @@ local function jenkins_update(this, store, script)
 				enraged.pos = this.spawn_pos
 				enraged.path_id = 2
 				enraged.node_id = 88
-				queue_insert(store, enraged)
+				simulation:queue_insert_entity(enraged)
 				break
 			else
 				U.animation_start(this, "idle_" .. taps_count + 1, nil, store.tick_ts, true)
@@ -88,7 +78,7 @@ local function jenkins_update(this, store, script)
 		coroutine.yield()
 	end
 	signal.emit("baby-jenkins-stage03", this)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function fisherman_update(this, store, script)
 	local bubble_ts = store.tick_ts
@@ -97,7 +87,7 @@ local function fisherman_update(this, store, script)
 	this.bubble = E:create_entity(this.bubble_t)
 	this.bubble.pos = V.vclone(this.pos)
 	this.bubble.render.sprites[1].ts = store.tick_ts + 3
-	queue_insert(store, this.bubble)
+	simulation:queue_insert_entity(this.bubble)
 	U.animation_start(this.bubble, "tap", nil, store.tick_ts, false)
 	while fishes_tapped < 5 do
 		if tap_bubble_cd < store.tick_ts - bubble_ts then
@@ -146,7 +136,7 @@ local function fish_update(this, store, script)
 				local decal = E:create_entity(this.tap_t)
 				decal.pos.x, decal.pos.y = this.pos.x, this.pos.y
 				decal.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, decal)
+				simulation:queue_insert_entity(decal)
 				fisherman.fish_tapped = true
 				jump_ts = store.tick_ts
 				jump_cd = fts(math.random(15, 20) * 30)
@@ -165,7 +155,7 @@ local function fish_update(this, store, script)
 		coroutine.yield()
 	end
 	U.y_animation_wait(this)
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function jenkins_aura_update(this, store, script)
 	local first_hit_ts
@@ -189,11 +179,11 @@ local function jenkins_aura_update(this, store, script)
 					hit_fx.pos = V.vclone(target.pos)
 					hit_fx.pos.x, hit_fx.pos.y = hit_fx.pos.x + target.unit.hit_offset.x, hit_fx.pos.y + target.unit.hit_offset.y
 					hit_fx.render.sprites[1].ts = store.tick_ts
-					queue_insert(store, hit_fx)
+					simulation:queue_insert_entity(hit_fx)
 					local new_mod = E:create_entity(this.aura.mod)
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
-					queue_insert(store, new_mod)
+					simulation:queue_insert_entity(new_mod)
 				end
 			end
 			if #targets > 0 then
@@ -246,7 +236,7 @@ local function jenkins_aura_update(this, store, script)
 		end
 		coroutine.yield()
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local mask_z = {Z_OBJECTS_COVERS, Z_BACKGROUND_COVERS, Z_BACKGROUND_COVERS, Z_BACKGROUND_COVERS, Z_BACKGROUND_COVERS, Z_BACKGROUND_COVERS}
 for i = 1, 6 do

@@ -8,9 +8,7 @@ local V=require("lib.klua.vector")
 local P=require("path_db")
 local GR=require("grid_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local function change_grid_rect(rect,terrain)
 local r=rect
 local fi,fj=GR:get_coords(r.pos.x,r.pos.y)

@@ -1,9 +1,7 @@
 local log = require("lib.klua.log"):new("level11")
-local function fts(v)
-	return v / FPS
-end
 local E = require("entity_db")
 local U = require("utils")
+local fts = U.fts
 local P = require("path_db")
 require("all.constants")
 require("lib.klua.table")

@@ -29,16 +29,11 @@ require("i18n")
 ---@param store table game.store
 ---@param damage table 伤害实体
 ---@return nil
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
+local queue_damage = U.queue_damage
 ---帧转秒
 ---@param v number 帧数
 ---@return number 秒数
-local function fts(v)
-	return v / FPS
-end
+local fts = U.fts
 
 SU.has_modifiers = U.has_modifiers
 

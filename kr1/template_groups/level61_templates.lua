@@ -1,9 +1,8 @@
 local E = require("entity_db")
 require("all.constants")
 require("lib.klua.table")
-local function fts(t)
-	return t / FPS
-end
+local U = require("utils")
+local fts = U.fts
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end

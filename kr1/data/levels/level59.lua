@@ -10,9 +10,7 @@ local v=V.v
 local P=require("path_db")
 local GS=require("kr1.game_settings")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local level={}
 function level:load(store)
 P:add_invalid_range(10,nil,nil,bit.bor(NF_RALLY,NF_POWER_1,NF_POWER_2,NF_POWER_3))

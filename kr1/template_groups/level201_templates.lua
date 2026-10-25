@@ -18,9 +18,7 @@ local function RT(name, ref)
 	return E:register_t_hot(name, ref, true)
 end
 local signal = require("lib.hump.signal")
-local function fts(t)
-	return t / 30
-end
+local fts = U.fts
 local tt = E:register_t_hot("decal_stage_201_king", "decal_scripted", true)
 AC(tt, "attacks", "editor")
 tt.render.sprites[1].prefix = "stage_201_old_kingDef"

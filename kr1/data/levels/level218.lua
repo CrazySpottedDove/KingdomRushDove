@@ -15,9 +15,7 @@ require("all.constants")
 require("lib.klua.table")
 local level={}
 local v=V.v
-local function fts(t)
-return t/30
-end
+local fts=U.fts
 local function find_all_t(store,template_name,contains,fn)
 if not store or not store.entities then
 return {}
@@ -25,15 +23,6 @@ end
 return table.filter(store.entities,function(k,val)
 return (contains and string.find(val.template_name,template_name) or val.template_name==template_name) and (not fn or fn(k,val))
 end)
-end
-local function queue_insert(store,e)
-simulation:queue_insert_entity(e)
-end
-local function queue_remove(store,e)
-simulation:queue_remove_entity(e)
-end
-local function queue_damage(store,damage)
-store.damage_queue[#store.damage_queue+1]=damage
 end
 local function find_entity(store,template_name)
 for _,e in pairs(store.entities) do
@@ -135,7 +124,7 @@ local water=find_entity(store,template_name)
 if water then
 if instant then
 water.render.sprites[1].hidden=true
-queue_remove(store,water)
+simulation:queue_remove_entity(water)
 else
 water.tween.ts=store.tick_ts
 water.tween.disabled=false
@@ -200,14 +189,14 @@ if e.template_name=="decal_stage_218_balcon_layer" or e.template_name=="decal_ni
 for _,s in ipairs(e.render.sprites) do
 s.hidden=true
 end
-queue_remove(store,e)
+simulation:queue_remove_entity(e)
 end
 end
 end
 local function remove_puerta_night_overlay(store)
 for _,e in pairs(store.entities) do
 if e.template_name=="decal_nightfall_overlay" and e.render.sprites[1].name=="stage_218_18_puerta_terreno_2" then
-queue_remove(store,e)
+simulation:queue_remove_entity(e)
 end
 end
 end
@@ -229,7 +218,7 @@ overlay.render.sprites[1].name=sprite_name
 else
 overlay=E:create_entity("decal_stage_218_bg_overlay")
 overlay.render.sprites[1].name=sprite_name
-queue_insert(store,overlay)
+simulation:queue_insert_entity(overlay)
 end
 end
 end
@@ -456,14 +445,14 @@ e.health.hp=1
 e.health_bar.hidden=true
 e.enemy.gold=0
 U.update_max_speed(e,E:get_template("enemy_dark_slayer").motion.max_speed*entry_speed_factor(cfg.path))
-queue_insert(store,e)
+simulation:queue_insert_entity(e)
 if cfg.portal then
 for _,tu in pairs(store.entities) do
 if tu.tunnel and tu.tunnel.place_pi==cfg.path and tu.tunnel.place_fx then
 local fx=E:create_entity(tu.tunnel.place_fx)
 fx.pos=V.v(e.pos.x,e.pos.y)
 fx.render.sprites[1].ts=store.tick_ts
-queue_insert(store,fx)
+simulation:queue_insert_entity(fx)
 break
 end
 end
@@ -482,7 +471,7 @@ e.bullet.hit_fx="fx_denas_catapult_explosion_1"
 e.bullet.hit_decal="decal_denas_catapult_floor_1"
 e.bullet.damage_flags=0
 e.bullet.damage_radius=INTRO_BOMB_DAMAGE_RADIUS
-queue_insert(store,e)
+simulation:queue_insert_entity(e)
 end
 local function y_denas_intro_sequence(store)
 local flight_time=E:get_template("bullet_denas_bombardement").bullet.flight_time
@@ -749,13 +738,13 @@ P:deactivate_path(19)
 local boom=E:create_entity("fx_stage_218_explosion_entrada_denas")
 boom.pos=V.v(512,384)
 boom.render.sprites[1].ts=store.tick_ts
-queue_insert(store,boom)
+simulation:queue_insert_entity(boom)
 S:queue("Stage218MidCinematicPortalBreak")
 local shake=E:create_entity("aura_screen_shake")
 shake.aura.amplitude=1
 shake.aura.duration=0.6
 shake.aura.freq_factor=6
-queue_insert(store,shake)
+simulation:queue_insert_entity(shake)
 local denas=spawn_denas(store,false)
 U.y_wait(store,0.2)
 hide_back_portal(store)
@@ -795,7 +784,7 @@ S:queue("Stage218MidCinematicLevelIllusionReveal")
 U.y_wait(store,nf and nf.reveal_time or 4)
 denas.cinematic_look_end=true
 if store.entities[boom.id] then
-queue_remove(store,boom)
+simulation:queue_remove_entity(boom)
 end
 if puerta and store.entities[puerta.id] then
 puerta.on_nightfall(puerta,store)
@@ -865,7 +854,7 @@ U.y_wait(store,fts(54))
 local campana=E:create_entity("fx_stage_218_campana")
 campana.pos=V.v(512,384)
 campana.render.sprites[1].ts=store.tick_ts
-queue_insert(store,campana)
+simulation:queue_insert_entity(campana)
 local ct=E:get_template("fx_stage_218_campana")
 local last_ray=ct.sound_bell_frames[#ct.ray_positions]+ct.ray_delay_frames
 local appear_wait=fts(last_ray)+fts(GRIETA_FRAMES)+MOLOCH_APPEAR_DELAY
@@ -877,7 +866,7 @@ rumble.aura.amplitude=MOLOCH_RUMBLE.amplitude
 rumble.aura.duration=appear_wait-rumble_start+mt.appear_shakes[1].time
 rumble.aura.freq_factor=MOLOCH_RUMBLE.freq_factor
 rumble.aura.reverse_fade=true
-queue_insert(store,rumble)
+simulation:queue_insert_entity(rumble)
 U.y_wait(store,appear_wait-rumble_start)
 apply_phase_background(store,3)
 appear_moloch()
@@ -906,7 +895,7 @@ controller.hold_casts=true
 while body and body.render.sprites[1].name~="idle" do
 coroutine.yield()
 end
-queue_remove(store,controller)
+simulation:queue_remove_entity(controller)
 end
 local boss_t=E:get_template("enemy_stage_218_veznan")
 local cine=is_story_mode(store) and not store.restarted and not main.params.skip_cutscenes and body~=nil
@@ -953,7 +942,7 @@ boss.render.sprites[1].flip_x=true
 elseif sp.anim then
 boss.render.sprites[1].name=sp.anim
 end
-queue_insert(store,boss)
+simulation:queue_insert_entity(boss)
 table.insert(bosses,boss)
 end
 U.y_wait(store,1)
@@ -994,7 +983,7 @@ d.damage_type=DAMAGE_INSTAKILL
 table.insert(store.damage_queue,d)
 end
 end
-queue_remove(store,moloch)
+simulation:queue_remove_entity(moloch)
 end
 local real=find_entity(store,"enemy_stage_218_veznan")
 while real and store.entities[real.id] and not real._death_loop_ts do
@@ -1010,7 +999,7 @@ local shake=E:create_entity("aura_screen_shake")
 shake.aura.amplitude=MOLOCH_DEATH_SHAKE.amplitude
 shake.aura.duration=MOLOCH_DEATH_SHAKE.duration
 shake.aura.freq_factor=MOLOCH_DEATH_SHAKE.freq_factor
-queue_insert(store,shake)
+simulation:queue_insert_entity(shake)
 U.y_wait(store,MOLOCH_DEATH_SHAKE.duration)
 if real and store.entities[real.id] then
 local rumble_time=real._death_loop_ts+real.death_loop_time-real.death_end_shake_lead-store.tick_ts
@@ -1020,7 +1009,7 @@ rumble.aura.amplitude=MOLOCH_DEATH_RUMBLE.amplitude
 rumble.aura.duration=rumble_time
 rumble.aura.freq_factor=MOLOCH_DEATH_RUMBLE.freq_factor
 rumble.aura.reverse_fade=true
-queue_insert(store,rumble)
+simulation:queue_insert_entity(rumble)
 end
 end
 U.y_animation_wait(body)
@@ -1032,11 +1021,11 @@ end
 local function remove_veznan(store)
 local body=find_entity(store,"decal_stage_218_veznan_body")
 if body then
-queue_remove(store,body)
+simulation:queue_remove_entity(body)
 end
 local controller=find_entity(store,"controller_stage_218_veznan")
 if controller then
-queue_remove(store,controller)
+simulation:queue_remove_entity(controller)
 end
 end
 local function apply_moloch_wasteland(store)
@@ -1047,7 +1036,7 @@ if e.template_name==name or e.template_name=="decal_nightfall_overlay" and e.hid
 for _,s in ipairs(e.render.sprites) do
 s.hidden=true
 end
-queue_remove(store,e)
+simulation:queue_remove_entity(e)
 end
 end
 end

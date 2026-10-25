@@ -10,9 +10,7 @@ local W=require("wave_db")
 require("all.constants")
 require("lib.klua.table")
 local level={}
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local function find_all_t(store,template_name,contains,fn)
 if not store or not store.entities then
 return {}

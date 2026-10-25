@@ -376,9 +376,6 @@ end
 local function hnum_on_applied_disabled(store, target, heal_amount)
 end
 
-local function hnum_draw_disabled(g)
-end
-
 local function hnum_on_applied_enabled(store, target, heal_amount)
 	if not target.pos then
 		return

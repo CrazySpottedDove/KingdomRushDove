@@ -8,9 +8,6 @@ local P=require("path_db")
 local GR=require("grid_db")
 require("all.constants")
 local TU=require("all.tower_utils")
-local function fts(v)
-return v/FPS
-end
 local function find_holder_by_id(store,id)
 local holder=table.filter(store.entities,function(_,v)
 return v.tower and v.tower.holder_id==id

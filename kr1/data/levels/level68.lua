@@ -7,9 +7,6 @@ local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local P=require("path_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local level={}
 function level:load(store)
 return

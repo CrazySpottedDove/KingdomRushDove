@@ -6,9 +6,6 @@ local LU=require("level_utils")
 local P=require("path_db")
 local storage=require("all.storage")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local level={}
 function level:preprocess(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then

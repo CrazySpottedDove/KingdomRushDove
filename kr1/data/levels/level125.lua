@@ -10,9 +10,7 @@ local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
 local TU=require("all.tower_utils")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local level={}
 function level:load(store)
 return

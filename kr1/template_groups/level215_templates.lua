@@ -3,9 +3,7 @@ local U = require("utils")
 local V = require("lib.klua.vector")
 local log = require("lib.klua.log"):new("level215")
 local signal = require("lib.hump.signal")
-local function fts(v)
-	return v / FPS
-end
+local fts = U.fts
 local function find_all_t(store, template_name, contains, fn)
 	if not store or not store.entities then
 		return {}
@@ -75,12 +73,6 @@ local r = V.r
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
 local function witch_update(this, store, script)
 	local cauldron = find_all_t(store, this.cauldron_t)[1]
 	this.reaction = function()
@@ -98,7 +90,7 @@ local function witch_update(this, store, script)
 			this.render.sprites[1].hidden = true
 			U.y_animation_play(cauldron, "witchappears", nil, store.tick_ts, 1, 1)
 			U.animation_start(cauldron, "idle", nil, store.tick_ts, true, 1)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		coroutine.yield()
@@ -142,10 +134,10 @@ local function swamp_spawner_update(this, store, script)
 		e.pos = V.vclone(s_pos)
 		e.render.sprites[1].name = "raise"
 		e.motion.forced_waypoint = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
-		queue_insert(store, e)
+		simulation:queue_insert_entity(e)
 		U.y_wait(store, this.spawn_interval)
 	end
-	queue_remove(store, this)
+	simulation:queue_remove_entity(this)
 end
 local function swamps_spawn_event(this, store, spawn, path_id, amount, force_center)
 	local int_pid = tonumber(path_id)
@@ -160,7 +152,7 @@ local function swamps_spawn_event(this, store, spawn, path_id, amount, force_cen
 	end
 	local spawner = E:create_entity(this.spawner_t)
 	spawner.spawn_data = {spawn, int_am, int_pid, swamp.id, force_center}
-	queue_insert(store, spawner)
+	simulation:queue_insert_entity(spawner)
 end
 local function swamps_on_event_1(this, store, action, path_id, amount)
 	swamps_spawn_event(this, store, "enemy_swamp_husk", path_id, amount)
@@ -213,7 +205,7 @@ local function swamp_bubbles_spawner_update(this, store, script)
 				bubble.duration = 1e+99
 				bubble.pos = V.v(bubble_pos.x, bubble_pos.y)
 				bubble.render.sprites[1].scale = V.vv(scale)
-				queue_insert(store, bubble)
+				simulation:queue_insert_entity(bubble)
 				table.insert(bubbles, bubble)
 				U.y_wait(store, U.frandom(bubble_interval_range[1], bubble_interval_range[2]))
 			end
@@ -238,7 +230,7 @@ local function bubble_decorations_update(this, store, script)
 	local decals = find_all_t(store, this.decal_t)
 	if not decals or #decals == 0 then
 		log.error("ERROR: No decals on stage to cause bubbles.")
-		queue_remove(store, this)
+		simulation:queue_remove_entity(this)
 		return
 	end
 	for i, d in ipairs(decals) do
@@ -275,7 +267,7 @@ local function accusation_update(this, store, script)
 			local mod = E:create_entity(this.mod_t)
 			mod.modifier.target_id = bb.id
 			mod.target_pos = this.target_pos
-			queue_insert(store, mod)
+			simulation:queue_insert_entity(mod)
 			local pre_wait_ts = store.tick_ts
 			U.y_wait(store, 1e+99, function()
 				return math.abs(bb.pos.x - this.target_pos.x) < 1 and math.abs(bb.pos.y - this.target_pos.y) < 1
@@ -318,21 +310,21 @@ local function accusation_update(this, store, script)
 			local new_mist = E:create_entity(this.mist_t)
 			new_mist.pos.x, new_mist.pos.y = 512, 384
 			new_mist.render.sprites[1].ts = store.tick_ts
-			queue_insert(store, new_mist)
+			simulation:queue_insert_entity(new_mist)
 			local mask_1 = E:create_entity(this.swamp_mask_1_t)
 			mask_1.pos.x, mask_1.pos.y = 512, 384
 			mask_1.tween.ts = store.tick_ts
-			queue_insert(store, mask_1)
+			simulation:queue_insert_entity(mask_1)
 			local mask_2 = E:create_entity(this.swamp_mask_2_t)
 			mask_2.pos.x, mask_2.pos.y = 512, 384
 			mask_2.tween.ts = store.tick_ts
-			queue_insert(store, mask_2)
+			simulation:queue_insert_entity(mask_2)
 			U.y_wait(store, fts(15))
 			U.animation_start(new_mist, "loop", nil, store.tick_ts, true, 1)
 			U.y_wait(store, fts(24))
 			swamp_bubbles_on_start(bubbles_controller, store, nil, "6")
 			U.y_animation_wait(cauldron, 1)
-			queue_remove(store, mod)
+			simulation:queue_remove_entity(mod)
 			signal.emit("hide-curtains")
 			signal.emit("show-gui")
 			signal.emit("end-cinematic")
@@ -346,7 +338,7 @@ local function accusation_update(this, store, script)
 			swamp_thing.nav_path.spi = 1
 			swamp_thing.nav_path.ni = nn[3]
 			swamp_thing.pos.x, swamp_thing.pos.y = p.x, p.y
-			queue_insert(store, swamp_thing)
+			simulation:queue_insert_entity(swamp_thing)
 			if not U.is_seen(store, swamp_thing_t) then
 				signal.emit("wave-notification", "icon", swamp_thing_t)
 				U.mark_seen(store, swamp_thing_t)
@@ -354,7 +346,7 @@ local function accusation_update(this, store, script)
 			U.animation_start(cauldron, "cinematic2", nil, store.tick_ts, false, 1)
 			U.y_animation_wait(cauldron, 1)
 			cauldron.ui.can_click = false
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		coroutine.yield()
@@ -426,13 +418,13 @@ local function simpsons_fish_update(this, store, script)
 				S:queue(this.sound_tap_2)
 				U.y_animation_play(this, "tap_final", nil, store.tick_ts, 1)
 				signal.emit("three-eyes-on-every-fish-stage15", this)
-				queue_remove(store, this)
+				simulation:queue_remove_entity(this)
 				return
 			end
 		end
 		if store.tick_ts - ts > this.duration then
 			U.y_animation_play(this, "disappear", nil, store.tick_ts, 1)
-			queue_remove(store, this)
+			simulation:queue_remove_entity(this)
 			return
 		end
 		coroutine.yield()
@@ -445,7 +437,7 @@ local function simpsons_controller_update(this, store, script)
 			U.y_wait(store, random)
 			local f = E:create_entity(this.fish_t)
 			f.pos = V.vclone(this.spawn_pos[math.random(1, #this.spawn_pos)])
-			queue_insert(store, f)
+			simulation:queue_insert_entity(f)
 		end
 		coroutine.yield()
 	end

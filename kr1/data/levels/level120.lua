@@ -8,9 +8,6 @@ local P=require("path_db")
 local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
-local function fts(v)
-return v/FPS
-end
 local function set_terrain(cells,terrain)
 for _,cell in ipairs(cells) do
 GR:set_cell(cell[1],cell[2],terrain)

@@ -6,15 +6,11 @@ local P = require("path_db")
 require("all.constants")
 require("lib.klua.table")
 local v = V.v
-local function fts(t)
-	return t / FPS
-end
+local fts = U.fts
 local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
+local queue_damage = U.queue_damage
 local function carnivorous_plant_update(this, store)
 	local a = this.area_attack
 	U.animation_start_default(this, "inactive", nil, store.tick_ts, true)

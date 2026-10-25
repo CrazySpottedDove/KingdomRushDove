@@ -1,5 +1,6 @@
 -- chunkname: @./all/components.lua
 local bit = require("bit")
+local U = require("utils")
 local bor = bit.bor
 local band = bit.band
 local bnot = bit.bnot
@@ -9,10 +10,7 @@ require("all.constants")
 local v = V.v
 local r = V.r
 
-local function fts(v)
-	return v / FPS
-end
-
+local fts = U.fts
 local pos = v(0, 0)
 E:register_c_ffi("pos", pos)
 

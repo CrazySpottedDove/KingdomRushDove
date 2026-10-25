@@ -9,10 +9,7 @@ local S = require("sound_db")
 local GR = require("grid_db")
 local P = require("path_db")
 
-local function fts(x)
-	return x / FPS
-end
-
+local fts = U.fts
 local M = {}
 
 M.id = "royal_edict"

@@ -9,9 +9,7 @@ local storage=require("all.storage")
 local GR=require("grid_db")
 require("all.constants")
 local TU=require("all.tower_utils")
-local function fts(v)
-return v/FPS
-end
+local fts=U.fts
 local mask_phase1_burned,mask_phase2_burned,mask_phase3_burned,exo_fire_a,exo_fire_b,exo_fire_c,exo_forest_1,exo_forest_2,exo_forest_3
 local holders_phase_1_ids={"9","10"}
 local holders_phase_2_ids={"7","8"}

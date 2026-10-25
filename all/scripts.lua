@@ -25,26 +25,11 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 
-local function is_file(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "file"
-end
-
 require("i18n")
 
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
-local function fts(v)
-	return v / FPS
-end
-
-local function tpos(e)
-	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
-end
-
+local queue_damage = U.queue_damage
+local fts = U.fts
+local tpos = U.tpos
 local scripts = {}
 
 scripts.sequence = {}
