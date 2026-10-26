@@ -5725,7 +5725,7 @@ tt.ui.click_rect = r(-42, 0, 85, 90)
 tt = RT("bullet_forger_basic", "bolt")
 AC(tt, "force_motion")
 tt.bullet.damage_min = 56
-tt.bullet.damage_max = 64
+tt.bullet.damage_max = 68
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_radius = 50
 tt.bullet.hit_fx = "fx_bullet_forger_basic_hit"

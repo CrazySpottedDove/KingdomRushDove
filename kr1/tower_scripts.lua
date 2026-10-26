@@ -40378,6 +40378,23 @@ function scripts.decal_forger_skill_a_blade.update(this, store)
 			return
 		end
 
+		if store.tick_ts - last_hit_ts >= this.damage_cycle_time then
+			last_hit_ts = store.tick_ts
+
+			local enemies = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, F_AREA, bor(F_FLYING))
+
+			if enemies then
+				local dmin = pow.damage_min[pow.level] * tower.tower.damage_factor
+				local dmax = pow.damage_max[pow.level] * tower.tower.damage_factor
+
+				for i = 1, #enemies do
+					local d = E.assign_damage(this.damage_type, U.frandom(dmin, dmax), tower.id, enemies[i].id)
+
+					queue_damage(store, d)
+				end
+			end
+		end
+
 		local distance = V.dist2(dest.x, dest.y, this.pos.x, this.pos.y)
 
 		if distance < 25 then
@@ -40404,23 +40421,6 @@ function scripts.decal_forger_skill_a_blade.update(this, store)
 				local an, af = walk_anim(dest.x, dest.y)
 
 				U.animation_start(this, an, af, store.tick_ts, true)
-			end
-		end
-
-		if store.tick_ts - last_hit_ts >= this.damage_cycle_time then
-			last_hit_ts = store.tick_ts
-
-			local enemies = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, F_AREA, bor(F_FLYING))
-
-			if enemies then
-				local dmin = pow.damage_min[pow.level] * tower.tower.damage_factor
-				local dmax = pow.damage_max[pow.level] * tower.tower.damage_factor
-
-				for i = 1, #enemies do
-					local d = E.assign_damage(this.damage_type, U.frandom(dmin, dmax), tower.id, enemies[i].id)
-
-					queue_damage(store, d)
-				end
 			end
 		end
 
