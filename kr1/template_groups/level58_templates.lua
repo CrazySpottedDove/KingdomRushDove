@@ -255,7 +255,7 @@ local function simon_controller_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_s10_gnome", "decal_scripted", true)
+tt = E:register_t("decal_s10_gnome", "decal_scripted", true)
 AC(tt, "ui")
 tt.ui.click_rect = r(-23, -19, 46, 38)
 tt.ui.can_select = false
@@ -265,10 +265,10 @@ tt.main_script.update = decal_s10_gnome_update
 tt.min_delay = 5
 tt.max_delay = 20
 tt.gnome_actions = {"guitar", "diamond", "sleep", "teleport", "flip"}
-tt = E:register_t_hot("decal_s10_gnome_walking", "decal_s10_gnome", true)
+tt = E:register_t("decal_s10_gnome_walking", "decal_s10_gnome", true)
 tt.walk_time = 1.5
 table.insert(tt.gnome_actions, "walk")
-tt = E:register_t_hot("simon_controller", nil, true)
+tt = E:register_t("simon_controller", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = simon_controller_update
 tt.initial_sequence_length = 4
@@ -276,7 +276,7 @@ tt.reward_base = 25
 tt.reward_inc = 15
 tt.achievement_id = "SIMON"
 tt.achievement_count = 9
-tt = E:register_t_hot("simon_mushroom_1", "decal_tween", true)
+tt = E:register_t("simon_mushroom_1", "decal_tween", true)
 AC(tt, "ui", "sound_events")
 tt.ui.click_rect = r(-20, 10, 40, 30)
 tt.ui.can_select = false
@@ -294,22 +294,22 @@ tt.tween.props[2].keys = {{0, 0}}
 tt.tween.props[2].sprite_id = 3
 tt.tween.remove = false
 tt.sound_events.touch = "ElvesSimonYellow"
-tt = E:register_t_hot("simon_mushroom_2", "simon_mushroom_1", true)
+tt = E:register_t("simon_mushroom_2", "simon_mushroom_1", true)
 tt.render.sprites[1].name = "stage8_symon_fungus2_0001"
 tt.render.sprites[2].name = "stage8_symon_fungus2_0002"
 tt.render.sprites[3].name = "stage8_symon_fungus2_0003"
 tt.sound_events.touch = "ElvesSimonGreen"
-tt = E:register_t_hot("simon_mushroom_3", "simon_mushroom_1", true)
+tt = E:register_t("simon_mushroom_3", "simon_mushroom_1", true)
 tt.render.sprites[1].name = "stage8_symon_fungus3_0001"
 tt.render.sprites[2].name = "stage8_symon_fungus3_0002"
 tt.render.sprites[3].name = "stage8_symon_fungus3_0003"
 tt.sound_events.touch = "ElvesSimonRed"
-tt = E:register_t_hot("simon_mushroom_4", "simon_mushroom_1", true)
+tt = E:register_t("simon_mushroom_4", "simon_mushroom_1", true)
 tt.render.sprites[1].name = "stage8_symon_fungus4_0001"
 tt.render.sprites[2].name = "stage8_symon_fungus4_0002"
 tt.render.sprites[3].name = "stage8_symon_fungus4_0003"
 tt.sound_events.touch = "ElvesSimonBlue"
-tt = E:register_t_hot("simon_gnome_mushrooom_glow", "decal_tween", true)
+tt = E:register_t("simon_gnome_mushrooom_glow", "decal_tween", true)
 AC(tt, "ui")
 tt.ui.can_select = false
 tt.ui.click_rect = r(-20, -20, 40, 50)
@@ -317,6 +317,6 @@ tt.render.sprites[1].name = "stage8_symon_bigGlow"
 tt.render.sprites[1].animated = false
 tt.tween.props[1].keys = {{0, 0}}
 tt.tween.remove = false
-tt = E:register_t_hot("simon_gnome", "decal", true)
+tt = E:register_t("simon_gnome", "decal", true)
 tt.render.sprites[1].prefix = "simon_gnome"
 tt.render.sprites[1].sort_y_offset = -38

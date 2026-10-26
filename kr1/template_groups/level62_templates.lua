@@ -44,7 +44,7 @@ local function decal_s14_break_spider_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_s14_break_egg", "decal_scripted", true)
+tt = E:register_t("decal_s14_break_egg", "decal_scripted", true)
 AC(tt, "ui", "click_play", "tween")
 tt.render.sprites[1].prefix = "decal_s14_break_egg"
 tt.render.sprites[1].name = "idle"

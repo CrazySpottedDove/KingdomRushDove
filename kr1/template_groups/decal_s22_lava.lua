@@ -1,6 +1,6 @@
 local E = require("entity_db")
 local tt
-tt = E:register_t_hot("decal_s22_lava_bubble", "decal_delayed_play", true)
+tt = E:register_t("decal_s22_lava_bubble", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "decal_s22_lava_bubble"
 tt.render.sprites[1].name = "play"
 tt.render.sprites[1].hidden = true
@@ -11,7 +11,7 @@ tt.delayed_play.min_delay = 2
 tt.delayed_play.flip_chance = 0.5
 tt.delayed_play.idle_animation = nil
 
-tt = E:register_t_hot("decal_s22_lava_smoke", "decal_delayed_play", true)
+tt = E:register_t("decal_s22_lava_smoke", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "decal_s22_lava_smoke"
 tt.render.sprites[1].name = "play"
 tt.render.sprites[1].hidden = true

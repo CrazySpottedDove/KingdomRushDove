@@ -54,10 +54,10 @@ local function decal_efreeti_door_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_efreeti_tent", "decal", true)
+tt = E:register_t("decal_efreeti_tent", "decal", true)
 tt.render.sprites[1].name = "boss_corps_efreeti"
 tt.render.sprites[1].animated = false
-tt = E:register_t_hot("decal_efreeti_door", "decal_scripted", true)
+tt = E:register_t("decal_efreeti_door", "decal_scripted", true)
 tt.main_script.update = decal_efreeti_door_update
 tt.smoke_positions = {vec_2(521, 674), vec_2(618, 642)}
 tt.stone_positions = {{vec_2(599, 664), 1, false}, {vec_2(688, 592), 0.8, false}, {vec_2(479, 647), 0.8, false}, {vec_2(519, 682), 1, true}, {vec_2(625, 608), 0.8, true}, {vec_2(416, 663), 0.8, true}}
@@ -91,7 +91,7 @@ tt.render.sprites[7].name = "efreeti_door_eyes_effect"
 tt.render.sprites[7].offset = vec_2(-51, -55)
 tt.render.sprites[7].hidden = true
 tt.render.sprites[7].loop = false
-tt = E:register_t_hot("decal_efreeti_door_broken", "decal", true)
+tt = E:register_t("decal_efreeti_door_broken", "decal", true)
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].name = "efreeti_statue_left"
 tt.render.sprites[1].offset = vec_2(-139, -66)

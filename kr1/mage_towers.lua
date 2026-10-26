@@ -2781,7 +2781,6 @@ tt.modifier.duration = fts(120)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
-tt.main_script.type = 1
 -- 蛤蟆 END
 
 -- 树灵 START

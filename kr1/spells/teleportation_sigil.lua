@@ -54,7 +54,7 @@ function M.register_templates(E)
 
 	local tt
 
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	tt.main_script.insert = function(this, store)
 		local nearest = P:nearest_nodes(this.pos.x, this.pos.y)[1]
 
@@ -88,7 +88,7 @@ function M.register_templates(E)
 
 	E:set_template("user_power_3", tt)
 
-	tt = E:register_t_tmp("aura_teleportation_sigil")
+	tt = E:register_t("aura_teleportation_sigil")
 	E:add_comps(tt, "main_script", "pos")
 	tt.main_script.update = function(this, store)
 		local max_times_applied = E:get_template(this.mod_teleport).max_times_applied
@@ -184,7 +184,7 @@ function M.register_templates(E)
 	tt.portal_fx = "decal_teleportation_sigil_fx"
 	tt.sound_in_out = "PowersTeleportSigilInOut"
 
-	tt = E:register_t_tmp("decal_teleportation_sigil", "decal_scripted")
+	tt = E:register_t("decal_teleportation_sigil", "decal_scripted")
 	tt.render.sprites[1].prefix = "sigil_lvl1Def"
 	tt.render.sprites[1].name = "in"
 	tt.render.sprites[1].animated = true
@@ -197,7 +197,7 @@ function M.register_templates(E)
 	tt.idle_force_ts = true
 	tt.main_script.update = scripts.decal_utils.animation_in_loop_out.update
 
-	tt = E:register_t_tmp("decal_teleportation_sigil_fx", "decal")
+	tt = E:register_t("decal_teleportation_sigil_fx", "decal")
 	tt.render.sprites[1].prefix = "portal_particlesDef"
 	tt.render.sprites[1].name = "in"
 	tt.render.sprites[1].animated = true
@@ -205,32 +205,32 @@ function M.register_templates(E)
 	tt.render.sprites[1].z = Z_DECALS + 1
 	tt.render.sprites[1].scale = vv(0.8)
 
-	tt = E:register_t_tmp("fx_mod_teleport_sigil_default", "fx")
+	tt = E:register_t("fx_mod_teleport_sigil_default", "fx")
 	tt.render.sprites[1].prefix = "tp_fx_defaultDef"
 	tt.render.sprites[1].name = "run"
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].offset = v(0, 15)
 	tt.render.sprites[1].z = Z_DECALS + 1
 
-	tt = E:register_t_tmp("fx_mod_teleport_sigil_instakill", "fx")
+	tt = E:register_t("fx_mod_teleport_sigil_instakill", "fx")
 	tt.render.sprites[1].prefix = "fx_instakillDef"
 	tt.render.sprites[1].name = "instakill_in"
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].z = Z_DECALS + 1
 
-	tt = E:register_t_tmp("fx_mod_teleport_sigil_instakill_ashes", "fx")
+	tt = E:register_t("fx_mod_teleport_sigil_instakill_ashes", "fx")
 	tt.render.sprites[1].prefix = "desintegration_smallDef"
 	tt.render.sprites[1].name = "run"
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].z = Z_DECALS + 1
 
-	tt = E:register_t_tmp("fx_mod_teleport_sigil_second_tp", "fx")
+	tt = E:register_t("fx_mod_teleport_sigil_second_tp", "fx")
 	tt.render.sprites[1].prefix = "tp_fx_fuerteDef"
 	tt.render.sprites[1].name = "run"
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].z = Z_DECALS + 1
 
-	tt = E:register_t_tmp("mod_teleportation_sigil_teleport", "mod_teleport")
+	tt = E:register_t("mod_teleportation_sigil_teleport", "mod_teleport")
 	tt.modifier.vis_flags = bor(F_MOD)
 	tt.modifier.vis_bans = bor(F_BOSS)
 	tt.modifier.duration = 1
@@ -540,12 +540,12 @@ function M.register_templates(E)
 		simulation:queue_remove_entity(this)
 	end
 
-	tt = E:register_t_tmp("mod_power_teleportation_sigil_slow", "mod_slow")
+	tt = E:register_t("mod_power_teleportation_sigil_slow", "mod_slow")
 	tt.slow.factor = 0.7
 	tt.modifier.duration = 4
 	tt.modifier.vis_flags = bor(F_MOD)
 
-	tt = E:register_t_tmp("mod_teleportation_sigil_silence", "modifier")
+	tt = E:register_t("mod_teleportation_sigil_silence", "modifier")
 	E:add_comps(tt, "render")
 	tt.render.sprites[1].prefix = "sigil_lvl1Def"
 	tt.render.sprites[1].name = "loop"
@@ -557,14 +557,14 @@ function M.register_templates(E)
 	tt.main_script.remove = scripts.mod_silence.remove
 	tt.modifier.duration = 5
 
-	tt = E:register_t_tmp("mod_teleportation_sigil_damage_red", "modifier")
+	tt = E:register_t("mod_teleportation_sigil_damage_red", "modifier")
 	tt.main_script.insert = scripts.mod_damage_factors.insert
 	tt.main_script.update = scripts.mod_track_target.update
 	tt.main_script.remove = scripts.mod_damage_factors.remove
 	tt.inflicted_damage_factor = 0.5
 	tt.modifier.duration = 5
 
-	tt = E:register_t_tmp("mod_teleportation_sigil_stun", "mod_stun")
+	tt = E:register_t("mod_teleportation_sigil_stun", "mod_stun")
 	tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 	tt.modifier.duration = 3
 end

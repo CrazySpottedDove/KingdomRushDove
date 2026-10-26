@@ -41,16 +41,16 @@ decal_achievement_into_the_ogreverse_update = function(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_stage_28_mask_3", "decal", true)
+tt = E:register_t("decal_stage_28_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage_28_mask_03"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_TOWER_BASES
-tt = E:register_t_hot("decal_stage_28_torches", "decal", true)
+tt = E:register_t("decal_stage_28_torches", "decal", true)
 tt.render.sprites[1].prefix = "stage_28_antorchasDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = 200
-tt = E:register_t_hot("decal_achievement_into_the_ogreverse", "decal_scripted", true)
+tt = E:register_t("decal_achievement_into_the_ogreverse", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(-20, -40, 40, 50)
 tt.main_script.update = decal_achievement_into_the_ogreverse_update
@@ -63,10 +63,10 @@ tt.render.sprites[2].prefix = "ogreverse_character"
 tt.render.sprites[2].name = "cultist_idle"
 tt.render.sprites[2].offset = v(0, 20)
 tt.render.sprites[2].sort_y_offset = -30
-tt = E:register_t_hot("decal_stage_28_mask_1", "decal", true)
+tt = E:register_t("decal_stage_28_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage_28_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 106
-tt = E:register_t_hot("decal_stage_28_mask_2", "decal", true)
+tt = E:register_t("decal_stage_28_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage_28_mask_02"
 tt.render.sprites[1].animated = false

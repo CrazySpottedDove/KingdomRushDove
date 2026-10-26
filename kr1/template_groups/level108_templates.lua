@@ -156,7 +156,7 @@ function controller_stage_08_gem_baskets.update(this, store)
 	end
 end
 
-tt = E:register_t_tmp("enemy_unblinded_abomination_stage_8", "enemy")
+tt = E:register_t("enemy_unblinded_abomination_stage_8", "enemy")
 E:add_comps(tt, "melee", "regen")
 tt.enemy.melee_slot = v(25, 0)
 tt.health.hp_max = 800
@@ -303,13 +303,13 @@ tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
 tt.sound_events.death = "EnemyAbominationDeath"
 
-tt = E:register_t_tmp("enemy_unblinded_abomination_stage_8_lifebar")
+tt = E:register_t("enemy_unblinded_abomination_stage_8_lifebar")
 E:add_comps(tt, "health_bar", "pos", "render", "health")
 tt.render.sprites[1].name = "square_ffffff"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].scale = v(0, 0)
 
-tt = E:register_t_tmp("soldier_elf_stage_08", "decal_scripted")
+tt = E:register_t("soldier_elf_stage_08", "decal_scripted")
 E:add_comps(tt, "bullet_attack", "editor")
 tt.render.sprites[1].prefix = "elven_warrior"
 tt.render.sprites[1].name = "idle"
@@ -399,7 +399,7 @@ tt.bullet_attack.animation = "shoot"
 tt.bullet_attack.vis_bans = bor(F_MINIBOSS)
 tt.idle_rest_cooldown = 2
 
-tt = E:register_t_tmp("arrow_soldier_elf_stage_08", "arrow5_45degrees")
+tt = E:register_t("arrow_soldier_elf_stage_08", "arrow5_45degrees")
 tt.bullet.damage_min = 36
 tt.bullet.damage_max = 54
 tt.bullet.fixed_height = 50
@@ -407,7 +407,7 @@ tt.bullet.miss_decal = "elven_warrior_arrow_0002"
 tt.bullet.mod = "mod_arrow_soldier_elf_stage_08"
 tt.render.sprites[1].name = "elven_warrior_arrow_0001"
 
-tt = E:register_t_tmp("decal_stage_08_elf_rescue_chains", "decal_scripted")
+tt = E:register_t("decal_stage_08_elf_rescue_chains", "decal_scripted")
 tt.render.sprites[1].prefix = "ChainDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -432,7 +432,7 @@ tt.main_script.update = function(this, store)
 	end
 end
 
-tt = E:register_t_tmp("decal_stage_08_elf_rescue_elf_slave", "decal_scripted")
+tt = E:register_t("decal_stage_08_elf_rescue_elf_slave", "decal_scripted")
 tt.render.sprites[1].prefix = "ElfSlaveDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -477,17 +477,17 @@ tt.main_script.update = function(this, store)
 end
 tt.sound_rescue = "Stage08RescuedElves"
 
-tt = E:register_t_tmp("mod_arrow_soldier_elf_stage_08", "mod_stun")
+tt = E:register_t("mod_arrow_soldier_elf_stage_08", "mod_stun")
 tt.modifier.duration = fts(24)
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 
-tt = E:register_t_hot("decal_stage_08_fire", "decal", true)
+tt = E:register_t("decal_stage_08_fire", "decal", true)
 tt.render.sprites[1].prefix = "fire_stage_8Def"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_08_gem_basket_big_clickable", "decal_scripted", true)
+tt = E:register_t("decal_stage_08_gem_basket_big_clickable", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui")
 tt.render.sprites[1].prefix = "stage_8_gems_basket_bigDef"
 tt.render.sprites[1].name = "idle"
@@ -498,16 +498,16 @@ tt.ui.click_rect = r(-525, 200, 50, 50)
 tt.gold_pos_offset = v(0, -30)
 tt.gold_amount = 30
 
-tt = E:register_t_hot("decal_stage_08_gem_basket_small_clickable", "decal_stage_08_gem_basket_big_clickable", true)
+tt = E:register_t("decal_stage_08_gem_basket_small_clickable", "decal_stage_08_gem_basket_big_clickable", true)
 tt.render.sprites[1].prefix = "stage_8_gems_basket_smallDef"
 tt.ui.click_rect = r(138, 248, 40, 40)
 
-tt = E:register_t_hot("decal_stage_08_gem_basket_third_clickable", "decal_stage_08_gem_basket_big_clickable", true)
+tt = E:register_t("decal_stage_08_gem_basket_third_clickable", "decal_stage_08_gem_basket_big_clickable", true)
 tt.render.sprites[1].prefix = "stage_8_gems_basket_thirdDef"
 tt.ui.click_rect = r(477, -260, 50, 50)
 tt.gold_pos_offset = nil
 
-tt = E:register_t_hot("controller_stage_08_elf_rescue", nil, true)
+tt = E:register_t("controller_stage_08_elf_rescue", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.update = controller_stage_08_elf_rescue.update
 tt.entity_elf = "soldier_elf_stage_08"
@@ -520,27 +520,27 @@ tt.pos_chain = v(448, 541)
 tt.pos_elf_slave = v(428, 540)
 tt.spawn_cooldown = 90
 
-tt = E:register_t_hot("stage_08_mask_1", "decal", true)
+tt = E:register_t("stage_08_mask_1", "decal", true)
 tt.render.sprites[1].name = "T2_Stage_8_mask_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset.y = -235
 
-tt = E:register_t_hot("stage_08_mask_2", "decal", true)
+tt = E:register_t("stage_08_mask_2", "decal", true)
 tt.render.sprites[1].name = "T2_Stage_8_mask_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset.y = -235
 
-tt = E:register_t_hot("stage_08_mask_3", "decal", true)
+tt = E:register_t("stage_08_mask_3", "decal", true)
 tt.render.sprites[1].name = "T2_Stage_8_mask_3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset.y = -185
 
-tt = E:register_t_hot("stage_08_mask_4", "decal", true)
+tt = E:register_t("stage_08_mask_4", "decal", true)
 tt.render.sprites[1].name = "T2_Stage_8_mask_4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset.y = -250
 
-tt = E:register_t_hot("controller_stage_08_gem_baskets", nil, true)
+tt = E:register_t("controller_stage_08_gem_baskets", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_08_gem_baskets.update
 

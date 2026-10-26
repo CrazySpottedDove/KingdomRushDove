@@ -1,6 +1,6 @@
 local E = require("entity_db")
 local tt
-tt = E:register_t_hot("decal_jumping_fish", "decal_delayed_play", true)
+tt = E:register_t("decal_jumping_fish", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "decal_elves_fish"
 tt.render.sprites[1].name = "jump"
 tt.render.sprites[1].hidden = true
@@ -10,7 +10,7 @@ tt.delayed_play.max_delay = 10
 tt.delayed_play.flip_chance = 0.5
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "jump"
-tt = E:register_t_hot("decal_stage01_gandalf", "decal_delayed_play", true)
+tt = E:register_t("decal_stage01_gandalf", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "decal_gandalf"
 tt.render.sprites[1].name = "idle"
 tt.delayed_play.min_delay = 5

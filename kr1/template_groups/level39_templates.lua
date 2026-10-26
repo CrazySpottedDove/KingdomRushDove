@@ -195,13 +195,13 @@ local function decal_black_dragon_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("button_steal_dragon_gold", nil, true)
+tt = E:register_t("button_steal_dragon_gold", nil, true)
 AC(tt, "pos", "main_script", "ui")
 tt.main_script.update = button_steal_dragon_gold_update
 tt.ui.click_rect = r(0, 0, 88, 67)
 tt.gold_to_steal = 100
 tt.fx = "fx_coin_jump"
-tt = E:register_t_hot("decal_black_dragon", "decal_scripted", true)
+tt = E:register_t("decal_black_dragon", "decal_scripted", true)
 AC(tt, "motion", "attacks", "tween", "ui", "sound_events")
 tt.main_script.update = decal_black_dragon_update
 tt.motion.max_speed = 12 * FPS
@@ -240,7 +240,7 @@ tt.sleep_pos = vec_2(610, 579)
 tt.speed_fly = 12 * FPS
 tt.speed_takeoff = 5 * FPS
 local scripts = require("scripts")
-tt = E:register_t_hot("mod_black_dragon", "modifier", true)
+tt = E:register_t("mod_black_dragon", "modifier", true)
 AC(tt, "render")
 tt.modifier.duration = 7
 tt.main_script.update = scripts.mod_tower_block.update
@@ -248,7 +248,7 @@ tt.render.sprites[1].prefix = "black_dragon_tower_fire"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].anchor.y = 0.19
 tt.render.sprites[1].sort_y_offset = -1
-tt = E:register_t_hot("ps_black_dragon_flame", nil, true)
+tt = E:register_t("ps_black_dragon_flame", nil, true)
 AC(tt, "pos", "particle_system")
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 20
@@ -260,7 +260,7 @@ tt.particle_system.emit_speed = {24 * FPS, 22 * FPS}
 tt.particle_system.loop = false
 tt.particle_system.name = "black_dragon_flame"
 tt.particle_system.particle_lifetime = {fts(6), fts(6)}
-tt = E:register_t_hot("ps_black_dragon_fire", nil, true)
+tt = E:register_t("ps_black_dragon_fire", nil, true)
 AC(tt, "pos", "particle_system")
 tt.particle_system.alphas = {255, 255, 0}
 tt.particle_system.animated = true
@@ -271,7 +271,7 @@ tt.particle_system.loop = false
 tt.particle_system.name = "black_dragon_fire"
 tt.particle_system.particle_lifetime = {fts(20), fts(25)}
 tt.particle_system.anchor = vec_2(0.5, 0.25)
-tt = E:register_t_hot("fx_black_dragon_flame_hit", "decal_tween", true)
+tt = E:register_t("fx_black_dragon_flame_hit", "decal_tween", true)
 tt.render.sprites[1].name = "black_dragon_flame_hit"
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {0.3, 0}}

@@ -44,7 +44,7 @@ function M.register_templates(E)
 	local SU = require("script_utils")
 	local tt
 
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	tt.main_script.insert = function(this, store)
 		local towers = table.filter(store.towers, function(_, e)
 			return e.tower.can_be_mod and not e.tower.blocked and U.is_inside_ellipse(e.pos, this.pos, this.range)
@@ -147,7 +147,7 @@ function M.register_templates(E)
 	-- 设置技能
 	E:set_template("user_power_3", tt)
 
-	tt = E:register_t_tmp("decal_power_royal_edict_king", "decal_scripted")
+	tt = E:register_t("decal_power_royal_edict_king", "decal_scripted")
 	tt.render.sprites[1].prefix = "royal_edictDef"
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].animated = false
@@ -158,7 +158,7 @@ function M.register_templates(E)
 	tt.animation_idle = "lvl1loop"
 	tt.animation_end = "lvl1loopend"
 
-	tt = E:register_t_tmp("decal_power_royal_edict_rug", "decal_scripted")
+	tt = E:register_t("decal_power_royal_edict_rug", "decal_scripted")
 	tt.render.sprites[1].prefix = "royal_edict_underDef"
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].animated = false
@@ -169,7 +169,7 @@ function M.register_templates(E)
 	tt.animation_idle = "lvl1loop"
 	tt.animation_end = "lvl1loopend"
 
-	tt = E:register_t_tmp("decal_power_royal_edict_area", "decal_tween")
+	tt = E:register_t("decal_power_royal_edict_area", "decal_tween")
 	E:add_comps(tt, "main_script")
 	tt.render.sprites[1].prefix = "royal_edict_decalDef"
 	tt.render.sprites[1].name = "loop"
@@ -185,7 +185,7 @@ function M.register_templates(E)
 	tt.main_script.update = scripts.tween_utils.wait_update
 	tt.wait_time = 0.5 + 1
 
-	tt = E:register_t_tmp("decal_power_royal_edict_confetti", "decal_scripted")
+	tt = E:register_t("decal_power_royal_edict_confetti", "decal_scripted")
 	tt.render.sprites[1].prefix = "royal_edict_confettiDef"
 	tt.render.sprites[1].name = "run"
 	tt.render.sprites[1].exo = true
@@ -194,7 +194,7 @@ function M.register_templates(E)
 	tt.render.sprites[1].z = Z_OBJECTS
 	tt.main_script.update = scripts.tween_utils.wait_update
 
-	tt = E:register_t_tmp("mod_power_royal_edict_towerbuff", "modifier")
+	tt = E:register_t("mod_power_royal_edict_towerbuff", "modifier")
 	E:add_comps(tt, "render", "tween")
 	tt.render.sprites[1].prefix = "royal_edict_towerbuffDef"
 	tt.render.sprites[1].name = "start"
@@ -348,7 +348,7 @@ function M.register_templates(E)
 	tt.respawn_barracks = false
 	tt.reset_skills_cd = false
 
-	tt = E:register_t_tmp("mod_power_royal_edict_golddebuff", "modifier")
+	tt = E:register_t("mod_power_royal_edict_golddebuff", "modifier")
 	tt.main_script.insert = scripts.mod_track_target.insert
 	tt.main_script.update = scripts.mod_track_target.update
 	tt.main_script.remove = function(this, store)

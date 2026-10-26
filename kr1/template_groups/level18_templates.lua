@@ -32,7 +32,7 @@ local function decal_scrat_update(this, store)
 	A:got("DEFEAT_ACORN")
 end
 local tt
-tt = E:register_t_hot("decal_scrat", "decal_scripted", true)
+tt = E:register_t("decal_scrat", "decal_scripted", true)
 AC(tt, "ui")
 tt.render.sprites[1].prefix = "decal_scrat"
 tt.render.sprites[1].name = "idle"

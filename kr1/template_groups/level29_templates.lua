@@ -46,7 +46,7 @@ local function decal_tusken_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_tusken", "decal_scripted", true)
+tt = E:register_t("decal_tusken", "decal_scripted", true)
 AC(tt, "bullet_attack")
 tt.render.sprites[1].prefix = "decal_tusken"
 tt.render.sprites[1].name = "idle"
@@ -58,7 +58,7 @@ tt.bullet_attack.shoot_time = fts(2)
 tt.bullet_attack.cooldown_min = 10
 tt.bullet_attack.cooldown_max = 20
 tt.bullet_attack.bullet_start_offset = vec_2(3, 7)
-tt = E:register_t_hot("bullet_tusken", "shotgun", true)
+tt = E:register_t("bullet_tusken", "shotgun", true)
 tt.bullet.damage_min = 100
 tt.bullet.damage_max = 200
 tt.bullet.min_speed = 40 * FPS

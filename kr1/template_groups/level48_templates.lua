@@ -26,7 +26,7 @@ local function decal_stage22_reptile_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_moria_gate", "decal_scripted", true)
+tt = E:register_t("decal_moria_gate", "decal_scripted", true)
 AC(tt, "tween", "ui")
 tt.render.sprites[1].name = "moria_0001"
 tt.render.sprites[1].animated = false
@@ -43,7 +43,7 @@ tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].keys = {{0, 0}, {0.6, 255}, {0.9, 150}}
 tt.main_script.update = scripts.click_run_tween.update
 tt.ui.click_rect = r(-25, 0, 50, 80)
-tt = E:register_t_hot("decal_stage22_reptile", "decal_scripted", true)
+tt = E:register_t("decal_stage22_reptile", "decal_scripted", true)
 AC(tt, "ui", "motion")
 tt.render.sprites[1].prefix = "decal_stage22_reptile"
 tt.render.sprites[1].name = "idle"

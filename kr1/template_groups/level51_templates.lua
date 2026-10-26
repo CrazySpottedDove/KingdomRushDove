@@ -65,14 +65,14 @@ local function river_object_controller_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_s03_bridge", "decal_static", true)
+tt = E:register_t("decal_s03_bridge", "decal_static", true)
 AC(tt, "ui")
 tt.ui.click_rect = r(-83, -48, 166, 96)
 tt.ui.can_select = false
 tt.render.sprites[1].name = "stage3_bridge"
 tt.render.sprites[1].z = Z_DECALS + 2
 tt.render.sprites[1].sort_y_offset = 48
-tt = E:register_t_hot("decal_crane", "decal_scripted", true)
+tt = E:register_t("decal_crane", "decal_scripted", true)
 AC(tt, "ui")
 tt.render.sprites[1].prefix = "decal_crane"
 tt.render.sprites[1].name = "idle"
@@ -87,7 +87,7 @@ tt.click_animation = "click"
 tt.final_click_animation = "final_click"
 tt.play_time = {10, 45}
 tt.final_clicks = {3, 6}
-tt = E:register_t_hot("river_object_controller", nil, true)
+tt = E:register_t("river_object_controller", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = river_object_controller_update
 tt.river_objects = {"barrel", "barrel", "chest", "wilson", "submarine"}
@@ -100,7 +100,7 @@ local S = require("sound_db")
 local P = require("path_db")
 local V = require("lib.klua.vector")
 
-tt = E:register_t_hot("decal_river_object", "decal_scripted", true)
+tt = E:register_t("decal_river_object", "decal_scripted", true)
 AC(tt, "nav_path", "motion", "ui", "tween", "sound_events")
 tt.main_script.update = function(this, store)
 	local next
@@ -217,7 +217,7 @@ tt.tween.disabled = true
 tt.tween.remove = false
 tt.sound_events.fall = "ElvesWaterfallStrong"
 
-tt = E:register_t_hot("decal_river_object_hobbit", "decal_river_object", true)
+tt = E:register_t("decal_river_object_hobbit", "decal_river_object", true)
 tt.render.sprites[1].prefix = "decal_river_object_hobbit"
 tt.render.sprites[1].anchor.y = 0.2818181818181818
 tt.falls = 2
@@ -226,23 +226,23 @@ tt.achievement_inc = "DWARF_FALL"
 tt.sound_events.save = "ElvesAchievementHobbit"
 tt.sound_events.crash = "ElvesAchievementDwarfFall"
 
-tt = E:register_t_hot("decal_river_object_barrel", "decal_river_object", true)
+tt = E:register_t("decal_river_object_barrel", "decal_river_object", true)
 tt.render.sprites[1].prefix = "decal_river_object_barrel"
 tt.render.sprites[1].anchor.y = 0.45454545454545453
 tt.sound_events.save = "ElvesWaterfallMid"
 
-tt = E:register_t_hot("decal_river_object_chest", "decal_river_object", true)
+tt = E:register_t("decal_river_object_chest", "decal_river_object", true)
 tt.render.sprites[1].prefix = "decal_river_object_chest"
 tt.render.sprites[1].anchor.y = 0.20588235294117646
 tt.gold = 20
 tt.sound_events.save = "ElvesGoldCoin"
 
-tt = E:register_t_hot("decal_river_object_wilson", "decal_river_object", true)
+tt = E:register_t("decal_river_object_wilson", "decal_river_object", true)
 tt.render.sprites[1].prefix = "decal_river_object_wilson"
 tt.render.sprites[1].anchor.y = 0.1527777777777778
 tt.sound_events.save = "ElvesAchievementWilson"
 
-tt = E:register_t_hot("decal_river_object_submarine", "decal_river_object", true)
+tt = E:register_t("decal_river_object_submarine", "decal_river_object", true)
 tt.render.sprites[1].prefix = "decal_river_object_submarine"
 tt.render.sprites[1].anchor.y = 0.20454545454545456
 tt.sound_events.save = "ElvesAchievementYellowSubmarine"

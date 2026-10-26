@@ -21,7 +21,7 @@ function decal_moon_activated.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_moon_dark", "decal_tween", true)
+tt = E:register_t("decal_moon_dark", "decal_tween", true)
 tt.pos.x = REF_W * 0.5
 tt.pos.y = REF_H + 1 + 77
 tt.render.sprites[1].name = "moon_0001"
@@ -34,7 +34,7 @@ tt.tween.props[1].keys = {{0, math.pi / 5}, {0, math.pi * 0.5}}
 tt.tween.disabled = true
 tt.tween.remove = false
 
-tt = E:register_t_hot("decal_moon_light", "decal_tween", true)
+tt = E:register_t("decal_moon_light", "decal_tween", true)
 tt.pos.x = REF_W * 0.5
 tt.pos.y = REF_H + 1 + 77
 tt.render.sprites[1].name = "moon_0002"
@@ -53,7 +53,7 @@ tt.tween.remove = false
 tt.tween.reverse = true
 tt.tween.ts = -1
 
-tt = E:register_t_hot("decal_moon_overlay", "decal_tween", true)
+tt = E:register_t("decal_moon_overlay", "decal_tween", true)
 tt.pos.x = REF_W * 0.5
 tt.pos.y = REF_H * 0.5
 tt.render.sprites[1].name = "moon_overlay"
@@ -65,7 +65,7 @@ tt.tween.remove = false
 tt.tween.reverse = true
 tt.tween.ts = -1
 
-tt = E:register_t_hot("decal_moon_activated", "decal_scripted", true)
+tt = E:register_t("decal_moon_activated", "decal_scripted", true)
 AC(tt, "tween")
 tt.main_script.update = decal_moon_activated.update
 tt.render.sprites[1].animated = false

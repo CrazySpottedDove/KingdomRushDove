@@ -12404,8 +12404,6 @@ tt.modifier.duration = fts(50)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
-tt.main_script.type = 1
-
 tt = RT("mod_hero_witch_ultimate_sleep", "modifier")
 AC(tt, "render")
 tt.main_script.insert = scripts.mod_stun.insert
@@ -15221,8 +15219,6 @@ tt.modifier.duration = 1.5 + 2
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
-tt.main_script.type = 1
-
 tt = E:register_t("mod_hero_dragon_arb_plant_dark_army_slow", "mod_slow")
 tt.slow.factor = nil
 
@@ -22644,7 +22640,6 @@ tt.timed_attacks.list[3].hp_threshold = 0.5
 tt = RT("controller_hero_naga_fight_to_win_or_die")
 AC(tt, "main_script")
 tt.main_script.update = scripts.controller_hero_naga_fight_to_win_or_die.update
-tt.main_script.type = 1
 tt.hp_threshold = 0.8
 tt.damage_factor = 1.5
 tt.enabled = false

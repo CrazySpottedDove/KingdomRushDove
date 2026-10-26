@@ -727,8 +727,6 @@ function editor:load_level(idx, mode, recover)
 		s.level:init(s)
 	end
 
-	E:precompile_hot()
-
 	if s.level.data.entities_list then
 		LU.insert_entities(self.store, s.level.data.entities_list, true)
 	end
@@ -887,8 +885,6 @@ function editor:load_plugin_level(entry, mode)
 	if s.level.init then
 		s.level:init(s)
 	end
-
-	E:precompile_hot()
 
 	if s.level.data.entities_list then
 		LU.insert_entities(self.store, s.level.data.entities_list, true)

@@ -47,14 +47,14 @@ local function lava_fireball_controller_update(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
-tt = E:register_t_hot("decal_s22_lava_hole", "decal_delayed_play", true)
+tt = E:register_t("decal_s22_lava_hole", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "decal_s22_lava_hole"
 tt.render.sprites[1].name = "play"
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].z = Z_DECALS + 1
 tt.delayed_play.max_delay = 2
 tt.delayed_play.idle_animation = nil
-tt = E:register_t_hot("lava_fireball_controller", nil, true)
+tt = E:register_t("lava_fireball_controller", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = lava_fireball_controller_update
 tt.bullet = "bomb_lava_fireball"
@@ -64,7 +64,7 @@ local LU = require("level_utils")
 local scripts = require("scripts")
 local SU = require("script_utils")
 local km = require("lib.klua.macros")
-tt = E:register_t_hot("bomb_lava_fireball", "bullet", true)
+tt = E:register_t("bomb_lava_fireball", "bullet", true)
 tt.bullet.damage_bans = F_ENEMY
 tt.bullet.damage_flags = F_AREA
 tt.bullet.damage_max = 250

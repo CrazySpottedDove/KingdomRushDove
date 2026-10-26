@@ -788,7 +788,7 @@ tt.tween.props[3] = table.deepclone(tt.tween.props[1])
 tt.tween.props[3].keys_end = {{0, 255}, {0.2, 0}, {0.4, 0}}
 tt.tween.props[3].sprite_id = tt.render.sid_spawner
 
-tt = E:register_t_tmp("stage_33_lightning_strike_overlay", "decal_tween")
+tt = E:register_t("stage_33_lightning_strike_overlay", "decal_tween")
 local image_y = 64
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "square_ffffff"
@@ -804,7 +804,7 @@ tt.tween.remove = false
 tt.ts = 0
 tt.cooldown = 0
 
-tt = E:register_t_tmp("stage_33_lightning_strike_fx_power_thunder_1", "decal_tween")
+tt = E:register_t("stage_33_lightning_strike_fx_power_thunder_1", "decal_tween")
 E:add_comps(tt, "sound_events")
 tt.image_h = 496
 tt.render.sprites[1].name = "rayo_og_ray_1"
@@ -813,53 +813,53 @@ tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt.tween.props[1].keys = {{0, 255}, {fts(3), 255}, {fts(8), 0}}
 tt.sound_events.insert = "Stage33StormLightning"
 
-tt = E:register_t_tmp("stage_33_lightning_strike_fx_power_thunder_2", "stage_33_lightning_strike_fx_power_thunder_1")
+tt = E:register_t("stage_33_lightning_strike_fx_power_thunder_2", "stage_33_lightning_strike_fx_power_thunder_1")
 tt.image_h = 456
 tt.render.sprites[1].name = "rayo_og_ray_2"
 
-tt = E:register_t_tmp("stage_33_lightning_strike_fx_power_thunder_explosion", "fx")
+tt = E:register_t("stage_33_lightning_strike_fx_power_thunder_explosion", "fx")
 tt.render.sprites[1].name = "stage_33_lightning_strike_fx_power_thunder_explosion"
 tt.render.sprites[1].sort_y_offset = -5
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].flip_x = true
 
-tt = E:register_t_tmp("stage_33_lightning_strike_fx_power_thunder_explosion_decal", "fx")
+tt = E:register_t("stage_33_lightning_strike_fx_power_thunder_explosion_decal", "fx")
 tt.render.sprites[1].name = "stage_33_lightning_strike_fx_power_thunder_explosion_decal"
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("stage_33_mask_1", "decal", true)
+tt = E:register_t("stage_33_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage33_mask_1_casa_grande"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.pos = v(512, 384)
 tt.render.sprites[1].sort_y_offset = 550 - tt.pos.y
 
-tt = E:register_t_hot("stage_33_mask_1_destroyed", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_1_destroyed", "stage_33_mask_1", true)
 tt.render.sprites[1].name = "stage 33_mask_intersection"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.render.sprites[1].hidden = true
 
-tt = E:register_t_hot("stage_33_mask_4", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_4", "stage_33_mask_1", true)
 tt.render.sprites[1].name = "stage33_mask_4_plataforma"
 tt.render.sprites[1].sort_y_offset = 371 - tt.pos.y
 
-tt = E:register_t_tmp("stage_33_house_destroyed_decal_1", "decal")
+tt = E:register_t("stage_33_house_destroyed_decal_1", "decal")
 tt.render.sprites[1].name = "stage33_casa_holder_escombros_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor = v(0.5760714285714286, 0.3502604166666667)
 
-tt = E:register_t_tmp("stage_33_house_destroyed_decal_2", "decal")
+tt = E:register_t("stage_33_house_destroyed_decal_2", "decal")
 tt.render.sprites[1].name = "stage33_casa_holder_escombros_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor = v(0.3246428571428571, 0.23697916666666666)
 
-tt = E:register_t_tmp("stage_33_house_destroyed_decal_3", "decal")
+tt = E:register_t("stage_33_house_destroyed_decal_3", "decal")
 tt.render.sprites[1].name = "stage33_casa_holder_escombros_3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor = v(0.7917857142857143, 0.69140625)
 
-tt = E:register_t_tmp("stage_33_citizen_house_1", "decal_scripted")
+tt = E:register_t("stage_33_citizen_house_1", "decal_scripted")
 tt.main_script.update = function(this, store)
 	U.animation_start(this, "close", nil, store.tick_ts - 10, false, this.render.sid_door, true)
 
@@ -897,18 +897,18 @@ tt.render.sprites[tt.render.sid_floor].name = "stage33_casa1_pescadores_sombra"
 tt.render.sprites[tt.render.sid_floor].z = Z_DECALS
 tt.render.sprites[tt.render.sid_floor].sort_y_offset = 0
 
-tt = E:register_t_tmp("stage_33_citizen_house_2", "stage_33_citizen_house_1")
+tt = E:register_t("stage_33_citizen_house_2", "stage_33_citizen_house_1")
 tt.render.sprites[tt.render.sid_base].name = "stage33_casa2_pescadores_base"
 tt.render.sprites[tt.render.sid_door].prefix = "stage33_casa2_pescadores_door"
 tt.render.sprites[tt.render.sid_door].sort_y_offset = 0
 tt.render.sprites[tt.render.sid_floor].name = "stage33_casa2_pescadores_sombra"
 
-tt = E:register_t_tmp("fx_stage_33_house_destroy", "decal_scripted")
+tt = E:register_t("fx_stage_33_house_destroy", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].name = "vfx_mecanicas_destroy_house_run"
 tt.render.sprites[1].sort_y_offset = -5
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_33_house_1", "tower_holder_blocked")
+tt = E:register_t("tower_holder_blocked_stage_33_house_1", "tower_holder_blocked")
 tt.pre_destroy_thunders = function(this, store)
 	if not this.pre_destroy_thunders_list then
 		return
@@ -1042,7 +1042,7 @@ tt.pre_destroy_thunders_list = {{
 	pos = v(550, 340)
 }}
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_33_house_2", "tower_holder_blocked_stage_33_house_1")
+tt = E:register_t("tower_holder_blocked_stage_33_house_2", "tower_holder_blocked_stage_33_house_1")
 tt.render.sprites[1].name = "stage33_casas_holder_2"
 tt.render.sprites[1].anchor = v(0.3246428571428571, 0.23697916666666666)
 tt.house_destroy_decal = "stage_33_house_destroyed_decal_2"
@@ -1075,7 +1075,7 @@ tt.pre_destroy_thunders_list = {{
 	pos = v(754, 600)
 }}
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_33_house_3", "tower_holder_blocked_stage_33_house_1")
+tt = E:register_t("tower_holder_blocked_stage_33_house_3", "tower_holder_blocked_stage_33_house_1")
 tt.render.sprites[1].name = "stage33_casas_holder_3"
 tt.render.sprites[1].anchor = v(0.7917857142857143, 0.69140625)
 tt.house_destroy_decal = "stage_33_house_destroyed_decal_3"
@@ -1096,7 +1096,7 @@ tt.pre_destroy_thunders_list = {{
 	pos = v(692, 248)
 }}
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_33_invisible", "tower_holder_blocked")
+tt = E:register_t("tower_holder_blocked_stage_33_invisible", "tower_holder_blocked")
 tt.appear = function(this, store)
 	TU.upgrade_tower(store, this, this.unlock_holder_type)
 	this.tower.can_hover = true
@@ -1106,7 +1106,7 @@ tt.render.sprites[1].hidden = true
 tt.ui.can_click = false
 tt.ui.can_select = false
 
-tt = E:register_t_hot("controller_stage_33_lightning_strike", nil, true)
+tt = E:register_t("controller_stage_33_lightning_strike", nil, true)
 E:add_comps(tt, "pos", "main_script", "editor", "editor_script")
 tt.main_script.update = controller_stage_33_lightning_strike_update
 tt.force_target_soldier_chance = 0.2
@@ -1421,7 +1421,7 @@ tt.editor.overrides = {
 tt.editor.props = {{"strikes_spawn_radius", PT_NUMBER}, {"area_id", PT_NUMBER}}
 tt.editor_script.update = controller_stage_33_lightning_strike_editor_update
 
-tt = E:register_t_hot("stage_33_mask_water_big", "decal", true)
+tt = E:register_t("stage_33_mask_water_big", "decal", true)
 tt.render.sprites[1].prefix = "stage_33_olas_grandesDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
@@ -1429,15 +1429,15 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND - 2
 
-tt = E:register_t_hot("stage_33_mask_6", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_6", "stage_33_mask_1", true)
 tt.render.sprites[1].name = "stage33_mask_6_casita"
 tt.render.sprites[1].sort_y_offset = 374 - tt.pos.y
 
-tt = E:register_t_hot("stage_33_mask_8", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_8", "stage_33_mask_1", true)
 tt.render.sprites[1].name = "stage33_mask_8_casitas"
 tt.render.sprites[1].sort_y_offset = 530 - tt.pos.y
 
-tt = E:register_t_hot("controller_stage33_envelops", nil, true)
+tt = E:register_t("controller_stage33_envelops", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage33_envelops_update
 tt.envelop_t = "decal_stage33_envelop"
@@ -1447,15 +1447,15 @@ tt.decoy_chance = 0.5
 tt.cooldown_min = 20
 tt.cooldown_max = 40
 
-tt = E:register_t_hot("stage_33_mask_2", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_2", "stage_33_mask_1", true)
 tt.render.sprites[1].name = "stage33_mask_2_casita"
 tt.render.sprites[1].sort_y_offset = 581 - tt.pos.y
 
-tt = E:register_t_hot("stage_33_mask_3", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_3", "stage_33_mask_1", true)
 tt.render.sprites[1].name = "stage33_mask_3_casita"
 tt.render.sprites[1].sort_y_offset = 544 - tt.pos.y
 
-tt = E:register_t_hot("controller_stage_33_boat", "decal_scripted", true)
+tt = E:register_t("controller_stage_33_boat", "decal_scripted", true)
 tt.main_script.update = controller_stage_33_boat_update
 E:add_comps(tt, "events")
 tt.render.sid_boat = 1
@@ -1473,7 +1473,7 @@ tt.render.sprites[tt.render.sid_sail].z = Z_DECALS
 tt.events.list[1].name = "boat"
 tt.events.list[1].on_event = controller_stage_33_boat_on_event
 
-tt = E:register_t_hot("controller_stage_33_house_doors", nil, true)
+tt = E:register_t("controller_stage_33_house_doors", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.insert = controller_stage_33_house_doors_insert
 tt.citizen_spawned = controller_stage_33_house_doors_citizen_spawned
@@ -1500,25 +1500,25 @@ tt.door_positions = {{
 	pos = v(1030, 348)
 }}
 
-tt = E:register_t_hot("stage_33_mask_9", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_9", "stage_33_mask_1", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage33_mask_9_modos_relleno_holders"
 tt.render.sprites[1].sort_y_offset = 450 - tt.pos.y
 
-tt = E:register_t_hot("stage_33_spawner", nil, true)
+tt = E:register_t("stage_33_spawner", nil, true)
 E:add_comps(tt, "main_script", "spawner")
 tt.main_script.update = stage_33_spawner_update
 tt.spawner.eternal = true
 
-tt = E:register_t_hot("stage_33_mask_7", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_7", "stage_33_mask_1", true)
 tt.render.sprites[1].name = "stage33_mask_7_casita"
 tt.render.sprites[1].sort_y_offset = 374 - tt.pos.y
 
-tt = E:register_t_hot("stage_33_mask_5", "stage_33_mask_1", true)
+tt = E:register_t("stage_33_mask_5", "stage_33_mask_1", true)
 tt.render.sprites[1].name = "stage33_mask_5_carpa"
 tt.render.sprites[1].sort_y_offset = 365 - tt.pos.y
 
-tt = E:register_t_hot("stage_33_mask_water_small", "decal", true)
+tt = E:register_t("stage_33_mask_water_small", "decal", true)
 tt.render.sprites[1].prefix = "stage_33_olas_chicasDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
@@ -1526,7 +1526,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND - 1
 
-tt = E:register_t_hot("decal_stage33_envelop_spawn_pos", "decal", true)
+tt = E:register_t("decal_stage33_envelop_spawn_pos", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "envelops_envelop_water_idle"
 tt.render.sprites[1].hidden = true
@@ -1534,7 +1534,7 @@ tt.editor.overrides = {
 	["render.sprites[1].hidden"] = false
 }
 
-tt = E:register_t_hot("controller_stage_33_ciclone", "decal_scripted", true)
+tt = E:register_t("controller_stage_33_ciclone", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui", "events")
 tt.main_script.update = controller_stage_33_ciclone.update
 tt.render.sid_tejas = 1
@@ -1614,7 +1614,7 @@ tt.render.sprites[tt.render.sid_escombros].hidden = true
 tt.events.list[1].name = "ciclone"
 tt.events.list[1].on_event = controller_stage_33_ciclone.on_event
 
-tt = E:register_t_hot("controller_stage_33_tambor", "decal_scripted", true)
+tt = E:register_t("controller_stage_33_tambor", "decal_scripted", true)
 tt.do_tambor = controller_stage_33_tambor.do_tambor
 tt.main_script.update = controller_stage_33_tambor.update
 tt.render.sprites[1].prefix = "stage_33_barco_call_tambor"
@@ -1627,7 +1627,7 @@ tt.render.sprites[2].prefix = "stage_33_barco_call_body"
 tt.render.sprites[2].anchor = v(0.113469, 0.52907)
 tt.render.sprites[2].sort_y_offset = -49
 
-tt = E:register_t_hot("stage_33_mask_props", "decal", true)
+tt = E:register_t("stage_33_mask_props", "decal", true)
 tt.render.sprites[1].prefix = "stage_33_anim_propsDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true

@@ -117,7 +117,7 @@ local function decal_s08_hansel_gretel_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_s08_magic_bean", "decal_scripted", true)
+tt = E:register_t("decal_s08_magic_bean", "decal_scripted", true)
 AC(tt, "ui")
 tt.achievement_id = "BEANS"
 tt.main_script.update = decal_s08_magic_bean_update
@@ -155,23 +155,23 @@ local function decal_s08_peakaboo_update(this, store)
 	U.y_animation_play(this, "action", nil, store.tick_ts)
 	simulation:queue_remove_entity(this)
 end
-tt = E:register_t_hot("decal_s08_peekaboo", "decal_scripted", true)
+tt = E:register_t("decal_s08_peekaboo", "decal_scripted", true)
 AC(tt, "ui")
 tt.main_script.update = decal_s08_peakaboo_update
 tt.render.sprites[1].name = "out"
 tt.ui.click_rect = r(-30, -25, 60, 50)
 tt.ui.can_select = false
 tt.sound = "ElvesPeekaboo"
-tt = E:register_t_hot("decal_s08_peekaboo_wolf", "decal_s08_peekaboo", true)
+tt = E:register_t("decal_s08_peekaboo_wolf", "decal_s08_peekaboo", true)
 tt.render.sprites[1].prefix = "decal_s08_peekaboo_wolf"
 tt.achievement_flag = {"PEEKABOO", 1}
-tt = E:register_t_hot("decal_s08_peekaboo_rrh", "decal_s08_peekaboo", true)
+tt = E:register_t("decal_s08_peekaboo_rrh", "decal_s08_peekaboo", true)
 tt.render.sprites[1].prefix = "decal_s08_peekaboo_rrh"
 tt.achievement_flag = {"PEEKABOO", 2}
-tt = E:register_t_hot("decal_s08_peekaboo_pork", "decal_s08_peekaboo", true)
+tt = E:register_t("decal_s08_peekaboo_pork", "decal_s08_peekaboo", true)
 tt.render.sprites[1].prefix = "decal_s08_peekaboo_pork"
 tt.achievement_flag = {"PEEKABOO", 4}
-tt = E:register_t_hot("decal_s08_hansel_gretel", "decal_scripted", true)
+tt = E:register_t("decal_s08_hansel_gretel", "decal_scripted", true)
 AC(tt, "ui")
 tt.main_script.update = decal_s08_hansel_gretel_update
 tt.ui.click_rect = r(-70, -60, 140, 120)

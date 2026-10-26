@@ -237,7 +237,6 @@ if [ "$rebuild_love" -eq 1 ]; then
         "https.dll"
         "https.so"
         "docs/*"
-        "precompile/tests/*"
         "all/librender_sort.so"
         "all/librender_sort.dll"
         "Makefile"

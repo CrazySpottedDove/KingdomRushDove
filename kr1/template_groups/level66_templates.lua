@@ -47,12 +47,12 @@ local function decal_s18_roadrunner_bush_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_s18_statue", "decal", true)
+tt = E:register_t("decal_s18_statue", "decal", true)
 AC(tt, "editor")
 tt.render.sprites[1].name = "stage18_statue"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.176056
-tt = E:register_t_hot("decal_s18_roadrunner_bush", "decal_scripted", true)
+tt = E:register_t("decal_s18_roadrunner_bush", "decal_scripted", true)
 AC(tt, "editor", "ui")
 tt.render.sprites[1].name = "decal_s18_roadrunner_bush_shake"
 tt.render.sprites[1].loop = false
@@ -63,14 +63,14 @@ tt.shake_cooldown = {3, 5}
 tt.sound_clicked = "ElvesGnollTrailOut"
 tt.ui.click_rect = r(-22, -10, 44, 40)
 tt.ui.can_select = false
-tt = E:register_t_hot("decal_s18_flag_head", "decal", true)
+tt = E:register_t("decal_s18_flag_head", "decal", true)
 AC(tt, "editor")
 tt.render.sprites[1].name = "decal_s18_flag_head"
-tt = E:register_t_hot("decal_s18_boss_head", "decal", true)
+tt = E:register_t("decal_s18_boss_head", "decal", true)
 AC(tt, "editor")
 tt.render.sprites[1].name = "stage_18_head"
 tt.render.sprites[1].animated = false
-tt = E:register_t_hot("taunts_s18_defeated_controller", nil, true)
+tt = E:register_t("taunts_s18_defeated_controller", nil, true)
 AC(tt, "main_script", "taunts", "editor")
 tt.load_file = "level66_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
@@ -89,10 +89,10 @@ tt.taunts.sets.right_head.decal_name = "decal_s18_shoutbox"
 tt.taunts.sets.right_head.pos = vec_2(791, 680)
 local A = require("achievements")
 local km = require("lib.klua.macros")
-tt = E:register_t_hot("fx_roadruner_bush_explode", "fx", true)
+tt = E:register_t("fx_roadruner_bush_explode", "fx", true)
 tt.render.sprites[1].name = "gnollBush_explode"
 tt.render.sprites[1].anchor.y = 0.354839
-tt = E:register_t_hot("decal_s18_roadrunner", "decal_tween", true)
+tt = E:register_t("decal_s18_roadrunner", "decal_tween", true)
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "decal_s18_roadrunner_run"
 tt.render.sprites[1].anchor.y = 0.125

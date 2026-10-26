@@ -4,9 +4,9 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text organize_strings android windows publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check precompile precompile_check precompile_test
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text organize_strings android windows publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check component_cloner
 
-all: _examine_dir_map precompile sync
+all: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
 
 _examine_dir_map:
@@ -33,7 +33,7 @@ sync:
 sync-full:
 	@bash $(MAKE_FILE_DIR)/sync-full.sh "$(WINDOWS_DIR)"
 
-debug: _examine_dir_map precompile sync
+debug: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" debug
 
 assets_check: _examine_dir_map sync
@@ -42,7 +42,7 @@ assets_check: _examine_dir_map sync
 # 用于发布小的版本更新，使得更新器端可以在 master 分支上检查到最新更新
 # master 为“只含编译产物”的投影分支，由 master.sh 生成（不再 merge dev）
 # 每次打包会把 dev 上未投影的提交逐条投影，提交信息/作者/日期与 dev 一致
-package: precompile_check
+package:
 # 	@bash $(MAKE_FILE_DIR)/package.sh
 # 	git add .
 # 	git commit -m "UPDATE VERSION COMMIT HASH"
@@ -152,13 +152,13 @@ organize_strings:
 	@dlfmt --json-task ./dlfmt_task.json
 
 # 先 format，再整理文本，整理完后再 format 一次（脚本的原始输出需要 dlfmt 统一格式）
-add: precompile
+add:
 	dlfmt --json-task ./dlfmt_task.json
 	luajit ./scripts/organize_strings.lua
 	dlfmt --json-task ./dlfmt_task.json
 	git add .
 
-compile: precompile compile_animations compile_atlas compile_exos
+compile: compile_animations compile_atlas compile_exos component_cloner
 
 compile_animations:
 	luajit ./scripts/compile_game_animations.lua
@@ -173,23 +173,8 @@ compile_exos:
 compile_exos_check:
 	luajit ./scripts/compile_exoskeletons.lua kr1/data/exoskeletons --check
 
-precompile:
-	luajit ./scripts/precompile.lua build
-
-# 忽略输入指纹缓存，强制全量重建
-precompile_force:
-	luajit ./scripts/precompile.lua build --force
-
-# 预编译源码定位/解析/生成物检查
-precompile_check:
-	luajit ./scripts/precompile.lua check
-
-precompile_test:
-	luajit ./precompile/tests/frontend_test.lua
-	luajit ./precompile/tests/specialize_test.lua
-	luajit ./precompile/tests/parity_test.lua
-	luajit ./precompile/tests/hot_test.lua
-	luajit ./precompile/tests/mod_dps_test.lua
+component_cloner:
+	luajit ./scripts/gen_component_cloner.lua
 
 # 文案内嵌表达式检查：加载 entity_db 后逐条展开 %$...%$，验证模板/字段/数值格式
 check-text:

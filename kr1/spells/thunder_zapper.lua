@@ -76,7 +76,7 @@ function M.register_templates(E)
 
 	local tt
 
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	E:add_comps(tt, "sound_events")
 	tt.main_script.insert = function(this, store)
 		local nearest = P:nearest_nodes(this.pos.x, this.pos.y)[1]
@@ -114,7 +114,7 @@ function M.register_templates(E)
 
 	E:set_template("user_power_3", tt)
 
-	tt = E:register_t_tmp("soldier_thunder_zapper", "soldier_militia")
+	tt = E:register_t("soldier_thunder_zapper", "soldier_militia")
 	E:add_comps(tt, "timed_attacks")
 
 	tt.ui.click_rect = r(0, 0, 0, 0)
@@ -304,7 +304,7 @@ function M.register_templates(E)
 	tt.spawn_detection_range = 80
 	tt.sound_out = "PowersThunderZapperOut"
 
-	tt = E:register_t_tmp("bullet_power_thunder_zapper_ray_l3", "bullet")
+	tt = E:register_t("bullet_power_thunder_zapper_ray_l3", "bullet")
 	tt.bullet.hit_time = fts(1)
 	tt.bullet.damage_type = DAMAGE_TRUE
 	tt.bullet.pop = {"pop_zap"}
@@ -452,7 +452,7 @@ function M.register_templates(E)
 		simulation:queue_remove_entity(this)
 	end
 
-	tt = E:register_t_tmp("aura_power_thunder_zapper", "aura")
+	tt = E:register_t("aura_power_thunder_zapper", "aura")
 	tt.aura.vis_bans = bor(F_FRIEND, F_FLYING, F_HERO)
 	tt.aura.vis_flags = bor(F_AREA)
 	tt.aura.cycle_time = 0.25
@@ -464,7 +464,7 @@ function M.register_templates(E)
 	tt.aura.mods = {}
 	tt.main_script.update = scripts.aura_apply_damage.update
 
-	tt = E:register_t_tmp("aura_power_thunder_zapper_summon", "aura")
+	tt = E:register_t("aura_power_thunder_zapper_summon", "aura")
 	tt.aura.vis_bans = bor(F_FRIEND, F_HERO)
 	tt.aura.vis_flags = bor(F_AREA)
 	tt.aura.cycle_time = 0
@@ -477,7 +477,7 @@ function M.register_templates(E)
 	tt.aura.mods = {}
 	tt.main_script.update = scripts.aura_apply_damage.update
 
-	tt = E:register_t_tmp("aura_power_thunder_zapper_l6", "aura")
+	tt = E:register_t("aura_power_thunder_zapper_l6", "aura")
 	tt.aura.vis_bans = bor(F_FRIEND, F_HERO)
 	tt.aura.vis_flags = bor(F_AREA)
 	tt.aura.cycle_time = 0
@@ -490,14 +490,14 @@ function M.register_templates(E)
 	tt.aura.mods = {}
 	tt.main_script.update = scripts.aura_apply_damage.update
 
-	tt = E:register_t_tmp("decal_power_thunder_zapper_area_damage", "decal_timed")
+	tt = E:register_t("decal_power_thunder_zapper_area_damage", "decal_timed")
 	tt.render.sprites[1].prefix = "animations_areadmgDef"
 	tt.render.sprites[1].name = "in"
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].animated = true
 	tt.render.sprites[1].z = Z_DECALS
 
-	tt = E:register_t_tmp("decal_power_thunder_zapper_ray", "decal_scripted")
+	tt = E:register_t("decal_power_thunder_zapper_ray", "decal_scripted")
 	E:add_comps(tt, "sound_events")
 
 	tt.render.sprites[1].prefix = "animations_skyrayDef"
@@ -530,7 +530,7 @@ function M.register_templates(E)
 	tt.decal_damage = "decal_power_thunder_zapper_area_damage"
 	tt.sound_events.insert = "PowersThunderZapperLightningStrikeCast"
 
-	tt = E:register_t_tmp("decal_power_thunder_zapper_area_range", "decal_scripted")
+	tt = E:register_t("decal_power_thunder_zapper_area_range", "decal_scripted")
 	tt.render.sprites[1].prefix = "animations_decalDef"
 	tt.render.sprites[1].name = "in"
 	tt.render.sprites[1].exo = true
@@ -552,19 +552,19 @@ function M.register_templates(E)
 		simulation:queue_remove_entity(this)
 	end
 
-	tt = E:register_t_tmp("fx_power_thunder_zapper_hit", "fx")
+	tt = E:register_t("fx_power_thunder_zapper_hit", "fx")
 	tt.render.sprites[1].prefix = "animations_modifierDef"
 	tt.render.sprites[1].name = "in"
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].z = Z_BULLETS
 
-	tt = E:register_t_tmp("mod_power_thunder_zapper_slow", "mod_slow")
+	tt = E:register_t("mod_power_thunder_zapper_slow", "mod_slow")
 	tt.slow.factor = 0.75
 	tt.modifier.duration = 1
 	tt.modifier.vis_flags = bor(F_MOD)
 	tt.main_script.insert = scripts.mod_slow.insert
 
-	tt = E:register_t_tmp("mod_power_thunder_zapper_stun", "mod_stun")
+	tt = E:register_t("mod_power_thunder_zapper_stun", "mod_stun")
 	tt.modifier.duration = 3
 	tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 	tt.modifier.vis_bans = bor(F_BOSS)

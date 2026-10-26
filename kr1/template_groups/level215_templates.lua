@@ -442,26 +442,26 @@ local function simpsons_controller_update(this, store, script)
 		coroutine.yield()
 	end
 end
-local tt = E:register_t_hot("decal_stage_215_mask_1", "decal", true)
+local tt = E:register_t("decal_stage_215_mask_1", "decal", true)
 tt.render.sprites[1].name = "Stage_15_Mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -110
 tt.render.sprites[1].z = Z_OBJECTS
-tt = E:register_t_hot("decal_stage_215_mask_2", "decal", true)
+tt = E:register_t("decal_stage_215_mask_2", "decal", true)
 tt.render.sprites[1].name = "Stage_15_Mask_02"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt = E:register_t_hot("decal_stage_215_mask_3", "decal", true)
+tt = E:register_t("decal_stage_215_mask_3", "decal", true)
 tt.render.sprites[1].name = "Stage_15_Mask_03"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 49
 tt.render.sprites[1].z = Z_OBJECTS
-tt = E:register_t_hot("decal_stage_215_mask_4", "decal", true)
+tt = E:register_t("decal_stage_215_mask_4", "decal", true)
 tt.render.sprites[1].name = "Stage_15_Mask_04"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = 268
-tt = E:register_t_hot("decal_stage_215_mask_5", "decal_tween", true)
+tt = E:register_t("decal_stage_215_mask_5", "decal_tween", true)
 tt.render.sprites[1].name = "Stage_15_Mask_05"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS - 1
@@ -469,7 +469,7 @@ tt.tween.props[1].keys = {{0, 0}, {fts(28), 255}}
 tt.tween.remove = false
 tt.tween.reverse = false
 tt.tween.run_once = true
-tt = E:register_t_hot("decal_stage_215_mask_6", "decal_tween", true)
+tt = E:register_t("decal_stage_215_mask_6", "decal_tween", true)
 tt.render.sprites[1].name = "Stage_15_Mask_06"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS - 1
@@ -477,40 +477,40 @@ tt.tween.props[1].keys = {{0, 0}, {fts(28), 255}}
 tt.tween.remove = false
 tt.tween.reverse = false
 tt.tween.run_once = true
-tt = E:register_t_hot("decal_stage_215_water_ripples", "decal", true)
+tt = E:register_t("decal_stage_215_water_ripples", "decal", true)
 tt.render.sprites[1].prefix = "water_ripples_stg215Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
-tt = E:register_t_hot("decal_stage_215_mist", "decal", true)
+tt = E:register_t("decal_stage_215_mist", "decal", true)
 tt.render.sprites[1].prefix = "mist_stg215Def"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS + 1
-tt = E:register_t_hot("decal_stage_215_bubbles", "decal", true)
+tt = E:register_t("decal_stage_215_bubbles", "decal", true)
 tt.render.sprites[1].prefix = "stage_215_bubbles"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
-tt = E:register_t_hot("decal_stage_215_ambient_bubbles", "decal", true)
+tt = E:register_t("decal_stage_215_ambient_bubbles", "decal", true)
 tt.render.sprites[1].prefix = "bubbles_stg215Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS + 1
-tt = E:register_t_hot("decal_stage_215_flags", "decal", true)
+tt = E:register_t("decal_stage_215_flags", "decal", true)
 tt.render.sprites[1].prefix = "flags_stg215Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-tt = E:register_t_hot("decal_stage_215_cabin_smoke", "decal", true)
+tt = E:register_t("decal_stage_215_cabin_smoke", "decal", true)
 tt.render.sprites[1].prefix = "smoke_stg215Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
-tt = E:register_t_hot("decal_stage_215_witch", "decal_scripted", true)
+tt = E:register_t("decal_stage_215_witch", "decal_scripted", true)
 AC(tt, "editor")
 tt.render.sprites[1].prefix = "witch_stg215_witchstartDef"
 tt.render.sprites[1].name = "dialog"
@@ -526,7 +526,7 @@ tt.sound_movement = "Stage15WitchMovement"
 tt.potion_time = fts(11)
 tt.movement_time = fts(220)
 tt.laugh_time = fts(80)
-tt = E:register_t_hot("decal_stage_215_cauldron", "decal_scripted", true)
+tt = E:register_t("decal_stage_215_cauldron", "decal_scripted", true)
 AC(tt, "ui", "editor")
 tt.render.sprites[1].prefix = "witch_stg215Def"
 tt.render.sprites[1].name = "cauldronloop"
@@ -536,20 +536,20 @@ tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.dialog_pos = v(105, 589)
 tt.ui.click_rect = r(-433, 0, 0, 0)
 tt.main_script.update = cauldron_update
-tt = E:register_t_hot("controller_stage_215_bubble_decorations", nil, true)
+tt = E:register_t("controller_stage_215_bubble_decorations", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = bubble_decorations_update
 tt.decal_t = "decal_stage_215_ambient_bubbles"
 tt.disabled = true
 tt.bubble_cd_min = 0.75
 tt.bubble_cd_max = 1.25
-tt = E:register_t_hot("controller_stage_215_wave_report", nil, true)
+tt = E:register_t("controller_stage_215_wave_report", nil, true)
 AC(tt, "events")
 tt.events.list[1].name = "end_wave_14"
 tt.events.list[1].on_event = function(this, store, action)
 	this.no_more_enemies = true
 end
-tt = E:register_t_hot("controller_stage_215_lord_blackburn_wp", nil, true)
+tt = E:register_t("controller_stage_215_lord_blackburn_wp", nil, true)
 AC(tt, "events")
 tt.events.list[1].name = "blackburn_wp"
 tt.events.list[1].on_event = function(this, store, action, x, y)
@@ -558,8 +558,8 @@ tt.events.list[1].on_event = function(this, store, action, x, y)
 		bb.waypoint(tonumber(x), tonumber(y))
 	end
 end
-tt = E:register_t_hot("controller_stage_215_lord_blackburn", nil, true)
-tt = E:register_t_hot("controller_stage_215_accusation_cinematic", nil, true)
+tt = E:register_t("controller_stage_215_lord_blackburn", nil, true)
+tt = E:register_t("controller_stage_215_accusation_cinematic", nil, true)
 AC(tt, "main_script", "events", "editor")
 tt.main_script.update = accusation_update
 tt.cauldron_t = "decal_stage_215_cauldron"
@@ -579,7 +579,7 @@ tt.sound_boil = "Stage15WitchCauldronBoil"
 tt.sound_kick = "Stage15WitchKickCauldronKick"
 tt.sound_splash = "Stage15WitchKickCauldronSplash"
 tt.sound_energy = "Stage15MidCinematicDarkEnergy"
-tt = E:register_t_hot("decal_easter_egg_stage_215_the_ring", "decal_scripted", true)
+tt = E:register_t("decal_easter_egg_stage_215_the_ring", "decal_scripted", true)
 AC(tt, "ui")
 tt.render.sprites[1].prefix = "the_ring_the_ring"
 tt.render.sprites[1].name = "loop_1"
@@ -591,7 +591,7 @@ tt.sound_samara_glitch = {"Stage15TheRingSamaraGlitch1", "Stage15TheRingSamaraGl
 tt.sound_samara_glitch_frames = {79, 121, 169}
 tt.loop_2_cd = 10
 tt.ui.click_rect = r(-18, -10, 35, 35)
-tt = E:register_t_hot("decal_easter_egg_stage_215_the_simpsons", "decal_scripted", true)
+tt = E:register_t("decal_easter_egg_stage_215_the_simpsons", "decal_scripted", true)
 AC(tt, "ui")
 tt.render.sprites[1].prefix = "simpsons_fish_simpsons_fish"
 tt.render.sprites[1].name = "in"
@@ -602,7 +602,7 @@ tt.sound_tap_1 = "Stage15ThreeEyedFishTap1"
 tt.sound_tap_2 = "Stage15ThreeEyedFishTap2"
 tt.duration = 15
 tt.ui.click_rect = r(-18, -10, 30, 30)
-tt = E:register_t_hot("controller_stage_215_easter_egg_simpsons", nil, true)
+tt = E:register_t("controller_stage_215_easter_egg_simpsons", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = simpsons_controller_update
 tt.min_time = 20

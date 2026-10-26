@@ -1394,12 +1394,12 @@ function decal_stage_40_path_rock.tweens_go_down(this, store)
 	return this.tweens_go_down_wait_until
 end
 
-tt = E:register_t_hot("decal_stage_40_top_mask", "decal", true)
+tt = E:register_t("decal_stage_40_top_mask", "decal", true)
 tt.render.sprites[1].name = "stage_40_mask_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_stage_40_storm_decos", "decal", true)
+tt = E:register_t("decal_stage_40_storm_decos", "decal", true)
 tt.render.sprites[1].prefix = "stage_40_storm_01Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
@@ -1435,7 +1435,7 @@ tt.render.sprites[8].pos = v(800, 370)
 tt.render.sprites[8].prefix = "stage_40_storm_04Def"
 tt.render.sprites[8].z = Z_BACKGROUND_COVERS - 1
 
-tt = E:register_t_hot("decal_stage_40_holders_mask", "decal", true)
+tt = E:register_t("decal_stage_40_holders_mask", "decal", true)
 tt.render.sprites[1].name = "stage_40_holder_mask_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 10
@@ -1444,12 +1444,12 @@ tt.render.sprites[2].name = "stage_40_holder_mask_2"
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].z = Z_BACKGROUND_COVERS + 10
 
-tt = E:register_t_hot("decal_stage_40_bottom_mask", "decal", true)
+tt = E:register_t("decal_stage_40_bottom_mask", "decal", true)
 tt.render.sprites[1].name = "stage_40_mask_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 2
 
-tt = E:register_t_hot("controller_stage_40_boss_shadow_waves", "decal_scripted", true)
+tt = E:register_t("controller_stage_40_boss_shadow_waves", "decal_scripted", true)
 E:add_comps(tt, "editor", "timed_attacks", "events")
 tt.main_script.update = controller_stage_40_boss_shadow_waves_update
 tt.render.sprites[1].prefix = "stage_40_bossDef"
@@ -1481,7 +1481,7 @@ tt.timed_attacks.list[tt.attack_units_index].mod_stun_wardens = "mod_boss_stage_
 tt.events.list[1].name = "stun_stage"
 tt.events.list[1].on_event = controller_stage_40_boss_shadow_waves_on_stun_stage
 
-tt = E:register_t_hot("decal_stage_40_boss_fires_steps", "decal_scripted", true)
+tt = E:register_t("decal_stage_40_boss_fires_steps", "decal_scripted", true)
 tt.main_script.update = decal_stage_40_boss_fires_steps.update
 tt.start_next_fire = decal_stage_40_boss_fires_steps.start_next_fire
 tt.render.sprites[1].prefix = "stage_40_fire_paso_1Def"
@@ -1498,14 +1498,14 @@ tt.render.sprites[4].prefix = "stage_40_fire_paso_4Def"
 tt.render.sprites[5] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[5].prefix = "stage_40_fire_paso_5Def"
 
-tt = E:register_t_hot("decal_stage_40_open_middle_mask", "decal", true)
+tt = E:register_t("decal_stage_40_open_middle_mask", "decal", true)
 tt.render.sprites[1].prefix = "mecanica_rocas_stage_40Def"
 tt.render.sprites[1].name = "rocas_in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_40_path_rock_1", "decal_tween", true)
+tt = E:register_t("decal_stage_40_path_rock_1", "decal_tween", true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = decal_stage_40_path_rock.update
 tt.tweens_go_down_fn = decal_stage_40_path_rock.tweens_go_down
@@ -1537,7 +1537,7 @@ tt.small_rocks = {{
 	scale = vv(1)
 }}
 
-tt = E:register_t_hot("decal_stage_40_path_rock_2", "decal_stage_40_path_rock_1", true)
+tt = E:register_t("decal_stage_40_path_rock_2", "decal_stage_40_path_rock_1", true)
 tt.render.sprites[1].prefix = "roca_block02Def"
 tt.small_rocks = {{
 	flip = false,
@@ -1553,7 +1553,7 @@ tt.small_rocks = {{
 	scale = vv(0.9)
 }}
 
-tt = E:register_t_hot("decal_stage_40_path_rock_final", "decal_stage_40_path_rock_1", true)
+tt = E:register_t("decal_stage_40_path_rock_final", "decal_stage_40_path_rock_1", true)
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].prefix = "roca_block_dragonDef"
 tt.render.sprites[2].name = "idle"
@@ -1586,7 +1586,7 @@ tt.small_rocks = {{
 	scale = vv(0.4)
 }}
 
-tt = E:register_t_hot("controller_stage_40_ballista", "decal_scripted", true)
+tt = E:register_t("controller_stage_40_ballista", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = controller_stage_40_ballista.update
 tt.ready_ballista_fn = controller_stage_40_ballista.ready_ballista_fn
@@ -1604,7 +1604,7 @@ tt.damage = {2000, 2500, 3000, 4000, 5000, 7000, 7000}
 tt.shoot_nmbr = 0
 tt.hand_decal_t = "dlc2_generic_tap_hand"
 
-tt = E:register_t_hot("controller_stage_40_moving_island", "decal_scripted", true)
+tt = E:register_t("controller_stage_40_moving_island", "decal_scripted", true)
 E:add_comps(tt, "tween", "nav_path", "motion", "events", "attacks", "editor")
 tt.main_script.insert = controller_stage_40_moving_island.insert
 tt.main_script.update = controller_stage_40_moving_island.update
@@ -1760,7 +1760,7 @@ tt.decal_spell_effect_offsets = {
 	BLOCK_3 = v(0, 18)
 }
 
-tt = E:register_t_hot("decal_boss_40_waves_stun_decoy_position", "decal", true)
+tt = E:register_t("decal_boss_40_waves_stun_decoy_position", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "waveFlag_0001"
 tt.render.sprites[1].animated = false
@@ -1777,7 +1777,7 @@ tt.editor.overrides = {
 	["render.sprites[3].hidden"] = false
 }
 
-tt = E:register_t_hot("decal_stage_40_path_rock_small", "decal_stage_40_path_rock_1", true)
+tt = E:register_t("decal_stage_40_path_rock_small", "decal_stage_40_path_rock_1", true)
 tt.render.sprites[1].prefix = "roca_block_smallDef"
 tt.skip_sparks = true
 tt.skip_big_dust = true
@@ -1785,7 +1785,7 @@ tt.random_delay_up = {0.1, 0.5}
 tt.random_delay_down = {0.3, 0.8}
 tt.small_rocks = {}
 
-tt = E:register_t_hot("decal_stage_40_open_middle_mask_iron", "decal_stage_40_open_middle_mask", true)
+tt = E:register_t("decal_stage_40_open_middle_mask_iron", "decal_stage_40_open_middle_mask", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "rocas_idle"
 

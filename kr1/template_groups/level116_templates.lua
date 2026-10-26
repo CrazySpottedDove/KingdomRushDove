@@ -645,7 +645,7 @@ end
 
 -- 大眼的触手控制
 
-tt = E:register_t_hot("controller_stage_16_tentacle_bottom_left", nil, true)
+tt = E:register_t("controller_stage_16_tentacle_bottom_left", nil, true)
 E:add_comps(tt, "editor", "pos", "render", "main_script")
 tt.main_script.update = controller_stage_16_tentacle_bottom_update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -663,13 +663,13 @@ tt.phase_to_free = 4
 tt.sound_rumble = "Stage16OverseerRumble"
 tt.sound_unchain = "Stage16OverseerUnchainDown"
 
-tt = E:register_t_hot("controller_stage_16_tentacle_bottom_right", "controller_stage_16_tentacle_bottom_left", true)
+tt = E:register_t("controller_stage_16_tentacle_bottom_right", "controller_stage_16_tentacle_bottom_left", true)
 tt.render.sprites[1].prefix = "overseer_undertent2Def"
 tt.render.sprites[2].prefix = "overseer_underbacktents2Def"
 tt.render.sprites[2].offset = v(350, -20)
 tt.phase_to_free = 5
 
-tt = E:register_t_hot("controller_stage_16_tentacle_left", nil, true)
+tt = E:register_t("controller_stage_16_tentacle_left", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script", "render")
 tt.main_script.update = controller_stage_16_overseer_tentacle_update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -692,7 +692,7 @@ tt.sound_rumble = "Stage16OverseerRumble"
 tt.sound_unchain = "Stage16OverseerUnchainLeftRight"
 tt.sound_spawn = "Stage16OverseerSpawnerCast"
 
-tt = E:register_t_hot("controller_stage_16_tentacle_right", "controller_stage_16_tentacle_left", true)
+tt = E:register_t("controller_stage_16_tentacle_right", "controller_stage_16_tentacle_left", true)
 tt.render.sprites[1].flip_x = true
 tt.config = {
 	cooldown = {nil, nil, 45, 45, 35, 25},
@@ -704,53 +704,53 @@ tt.spawn_pos = {v(850, 446), v(860, 206)}
 tt.spawn_path = {3, 4}
 tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_right"
 
-tt = E:register_t_hot("decal_terrain_3_floating_rock_1", "decal_terrain_3_floating_rock", true)
+tt = E:register_t("decal_terrain_3_floating_rock_1", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock1"
 
-tt = E:register_t_hot("decal_terrain_3_floating_rock_5", "decal_terrain_3_floating_rock", true)
+tt = E:register_t("decal_terrain_3_floating_rock_5", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock5"
 
-tt = E:register_t_hot("decal_stage_16_mask_4", "decal", true)
+tt = E:register_t("decal_stage_16_mask_4", "decal", true)
 tt.render.sprites[1].name = "stage16_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_terrain_3_floating_rock_3", "decal_terrain_3_floating_rock", true)
+tt = E:register_t("decal_terrain_3_floating_rock_3", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock3"
 
-tt = E:register_t_hot("controller_terrain_3_stage_16_glare1", "controller_terrain_3_local_glare", true)
+tt = E:register_t("controller_terrain_3_stage_16_glare1", "controller_terrain_3_local_glare", true)
 tt.main_script.update = controller_terrain_3_stage_16_glare_update
 tt.phase_config = {{-1, 0}, {-1, 0}, {-1, 0}, {6, 30}, {6, 20}, {60, 30}}
 tt.decal_ground = "decal_stage_16_glare_1"
 tt.eyes_t = {"decal_stage_16_glare_eye_big", "decal_stage_16_glare_eye_small_1", "decal_stage_16_glare_eye_small_2", "decal_stage_16_glare_eye_small_3"}
 
-tt = E:register_t_hot("decal_stage_16_mask_2", "decal", true)
+tt = E:register_t("decal_stage_16_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage16_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("controller_terrain_3_stage_16_glare2", "controller_terrain_3_local_glare", true)
+tt = E:register_t("controller_terrain_3_stage_16_glare2", "controller_terrain_3_local_glare", true)
 tt.main_script.update = controller_terrain_3_stage_16_glare_update
 tt.phase_config = {{-1, 0}, {8, 25}, {6, 30}, {-1, 0}, {-1, 0}, {6, 30}}
 tt.decal_ground = "decal_stage_16_glare_2"
 
-tt = E:register_t_hot("decal_stage_16_mask_3", "decal", true)
+tt = E:register_t("decal_stage_16_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage16_mask3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_terrain_3_floating_rock_4", "decal_terrain_3_floating_rock", true)
+tt = E:register_t("decal_terrain_3_floating_rock_4", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock4"
 
-tt = E:register_t_hot("decal_terrain_3_floating_rock_2", "decal_terrain_3_floating_rock", true)
+tt = E:register_t("decal_terrain_3_floating_rock_2", "decal_terrain_3_floating_rock", true)
 tt.render.sprites[1].name = "t3_crater_asst_crater_rock2"
 
-tt = E:register_t_hot("decal_stage_16_mask_1", "decal", true)
+tt = E:register_t("decal_stage_16_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage16_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("controller_stage_16_mouth_left", nil, true)
+tt = E:register_t("controller_stage_16_mouth_left", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script", "render")
 tt.main_script.update = controller_stage_16_overseer_mouth_door.update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -764,7 +764,7 @@ tt.check_radius = 150
 tt.check_vis_flags = F_ENEMY
 tt.check_vis_bans = F_BOSS
 
-tt = E:register_t_hot("controller_stage_16_overseer_eye1", nil, true)
+tt = E:register_t("controller_stage_16_overseer_eye1", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script", "render")
 tt.main_script.update = controller_stage_16_overseer_eye.update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -778,27 +778,27 @@ tt.idle_not_damaged = {"anim1", "anim2", "anim3"}
 tt.idle_damaged = {"eyehurttwitch"}
 tt.life_hurt_threshold = 66
 
-tt = E:register_t_hot("controller_stage_16_overseer_eye3", "controller_stage_16_overseer_eye1", true)
+tt = E:register_t("controller_stage_16_overseer_eye3", "controller_stage_16_overseer_eye1", true)
 tt.render.sprites[1].prefix = "overseer_minieye3Def"
 tt.life_hurt_threshold = 33
 
-tt = E:register_t_hot("controller_stage_16_overseer_eye4", "controller_stage_16_overseer_eye1", true)
+tt = E:register_t("controller_stage_16_overseer_eye4", "controller_stage_16_overseer_eye1", true)
 tt.render.sprites[1].prefix = "overseer_minieye4Def"
 
-tt = E:register_t_hot("controller_stage_16_mouth_right", "controller_stage_16_mouth_left", true)
+tt = E:register_t("controller_stage_16_mouth_right", "controller_stage_16_mouth_left", true)
 tt.render.sprites[1].flip_x = true
 tt.check_pos = v(721, 553)
 
-tt = E:register_t_hot("controller_stage_16_overseer_eye2", "controller_stage_16_overseer_eye1", true)
+tt = E:register_t("controller_stage_16_overseer_eye2", "controller_stage_16_overseer_eye1", true)
 tt.render.sprites[1].prefix = "overseer_minieye2Def"
 tt.life_hurt_threshold = 33
 
-tt = E:register_t_hot("mod_heal_overseer", "modifier", true)
+tt = E:register_t("mod_heal_overseer", "modifier", true)
 E:add_comps(tt, "hps")
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 
-tt = E:register_t_hot("mod_slow_overseer", "modifier", true)
+tt = E:register_t("mod_slow_overseer", "modifier", true)
 tt.main_script.insert = mod_slow_overseer.insert
 tt.main_script.update = mod_slow_overseer.update
 tt.shader = "p_tint"
@@ -809,7 +809,7 @@ tt.shader_args = {
 tt.slow_factor = 0.5
 tt.modifier.duration = 12
 
-tt = E:register_t_hot("bullet_stage_16_overseer_destroy_holders", "bullet", true)
+tt = E:register_t("bullet_stage_16_overseer_destroy_holders", "bullet", true)
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.hit_time = fts(2)
 tt.hit_fx_only_no_target = true
@@ -821,9 +821,9 @@ tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
 tt.track_target = true
 tt.ray_duration = fts(26)
 
-tt = E:register_t_hot("bullet_stage_16_overseer_downgrade_towers", "bullet_stage_16_overseer_destroy_holders", true)
+tt = E:register_t("bullet_stage_16_overseer_downgrade_towers", "bullet_stage_16_overseer_destroy_holders", true)
 
-tt = E:register_t_hot("enemy_overseer_hit_point", "enemy", true)
+tt = E:register_t("enemy_overseer_hit_point", "enemy", true)
 E:add_comps(tt, "glare_kr5")
 tt.enemy.gold = 250
 tt.enemy.melee_slot = v(0, 0)
@@ -841,7 +841,7 @@ tt.vis.bans = bor(F_BLOCK, F_FREEZE, F_STUN) --bor(F_MOD, F_BLOCK)
 tt.move_bounds = v(25, 25)
 tt.move_speed = v(0.2, 0.2)
 
-tt = E:register_t_hot("bullet_stage_16_overseer_tentacle_spawn", "bomb", true)
+tt = E:register_t("bullet_stage_16_overseer_tentacle_spawn", "bomb", true)
 tt.sound_events.hit_water = nil
 tt.render.sprites[1].name = "overseer_fx_overseer_proyectile"
 tt.bullet.hit_fx = "fx_stage_16_overseer_tentacle_hit_decal"
@@ -864,7 +864,7 @@ tt.spawn_amounts_per_phase = {0, 0, 3, 3, 4, 5}
 tt.sound_events.insert = nil
 tt.sound_events.hit = "Stage16OverseerSpawnerImpact"
 
-tt = E:register_t_hot("controller_stage_16_tentacle_mouth_left", nil, true)
+tt = E:register_t("controller_stage_16_tentacle_mouth_left", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script", "render")
 tt.main_script.update = controller_stage_16_overseer_tentacle_mouth.update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -873,23 +873,23 @@ tt.render.sprites[1].name = "free"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
 
-tt = E:register_t_hot("controller_stage_16_tentacle_mouth_right", "controller_stage_16_tentacle_mouth_left", true)
+tt = E:register_t("controller_stage_16_tentacle_mouth_right", "controller_stage_16_tentacle_mouth_left", true)
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t_hot("decal_stage_16_holder_destroy_fx", "decal", true)
+tt = E:register_t("decal_stage_16_holder_destroy_fx", "decal", true)
 tt.render.sprites[1].name = "overseer_fx_overseer_crater_run"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].offset.y = 10
 tt.render.sprites[1].sort_y_offset = -1
 
-tt = E:register_t_hot("decal_stage_16_holder_destroy_crater", "decal_scripted", true)
+tt = E:register_t("decal_stage_16_holder_destroy_crater", "decal_scripted", true)
 tt.render.sprites[1].prefix = "t3_craterDef"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].loop = false
 tt.main_script.update = decal_stage_16_holder_destroy_crater.update
 
-tt = E:register_t_hot("decal_stage_16_tower_change_fx", "decal_tween", true)
+tt = E:register_t("decal_stage_16_tower_change_fx", "decal_tween", true)
 tt.render.sprites[1].prefix = "overseer_fx_overseer_teleportdecal"
 tt.render.sprites[1].name = "decalin"
 tt.render.sprites[1].z = Z_DECALS
@@ -906,20 +906,20 @@ tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].name = "alpha"
 tt.tween.props[2].keys = {{0, 0}, {1, 255}, {"this.duration-0.25", 255}, {"this.duration", 0}}
 
-tt = E:register_t_hot("decal_stage_16_overseer_tentacle_projectile", "decal_tween", true)
+tt = E:register_t("decal_stage_16_overseer_tentacle_projectile", "decal_tween", true)
 tt.render.sprites[1].name = "overseer_fx_overseer_proyectile_decal"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.duration = 2.5
 tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.duration-0.5", 255}, {"this.duration", 0}}
 
-tt = E:register_t_hot("decal_stage_16_glare_1", "decal_stage_12_glare", true)
+tt = E:register_t("decal_stage_16_glare_1", "decal_stage_12_glare", true)
 tt.render.sprites[1].prefix = "stage_16_glare_1Def"
 
-tt = E:register_t_hot("decal_stage_16_glare_2", "decal_stage_12_glare", true)
+tt = E:register_t("decal_stage_16_glare_2", "decal_stage_12_glare", true)
 tt.render.sprites[1].prefix = "stage_16_glare_2Def"
 
-tt = E:register_t_hot("decal_stage_16_glare_eye_big", "decal_scripted", true)
+tt = E:register_t("decal_stage_16_glare_eye_big", "decal_scripted", true)
 tt.render.sprites[1].name = "glare_stage_16_eye_big"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].draw_order = 2
@@ -939,47 +939,47 @@ tt.sid_eyelids = 2
 tt.sid_pupil = 3
 tt.is_big_eye = true
 
-tt = E:register_t_hot("decal_stage_16_glare_eye_small_1", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_stage_16_glare_eye_small_1", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_16_eyes_1"
 tt.render.sprites[2].prefix = "glare_stage_16_eyelids_1"
 
-tt = E:register_t_hot("decal_stage_16_glare_eye_small_2", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_stage_16_glare_eye_small_2", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_16_eyes_2"
 tt.render.sprites[2].prefix = "glare_stage_16_eyelids_2"
 
-tt = E:register_t_hot("decal_stage_16_glare_eye_small_3", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_stage_16_glare_eye_small_3", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_16_eyes_3"
 tt.render.sprites[2].prefix = "glare_stage_16_eyelids_3"
 
-tt = E:register_t_hot("decal_stage_16_overseer_blood", nil, true)
+tt = E:register_t("decal_stage_16_overseer_blood", nil, true)
 E:add_comps(tt, "pos", "main_script")
 tt.main_script.update = decal_stage_16_overseer_blood.update
 tt.blood_pos = {v(20, 20), v(100, 100), v(-100, 100), v(-150, -30), v(150, -70), v(-30, 40)}
 tt.fx_template = "decal_stage_16_overseer_single_blood_fx"
 
-tt = E:register_t_hot("decal_stage_16_overseer_single_blood_fx", "decal_tween", true)
+tt = E:register_t("decal_stage_16_overseer_single_blood_fx", "decal_tween", true)
 tt.render.sprites[1].name = "overseer_fx_overseer_blood"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].offset = v(20, 20)
 tt.tween.props[1].keys = {{0, 255}, {fts(13), 255}, {fts(16), 0}}
 
-tt = E:register_t_hot("decal_stage_16_death_bright", "decal", true)
+tt = E:register_t("decal_stage_16_death_bright", "decal", true)
 tt.render.sprites[1].prefix = "overseer_deathbrightDef"
 tt.render.sprites[1].name = "areaattack"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY + 1
 
-tt = E:register_t_hot("decal_stage_16_overseer_destroy_holder_bright", "decal_tween", true)
+tt = E:register_t("decal_stage_16_overseer_destroy_holder_bright", "decal_tween", true)
 tt.render.sprites[1].name = "overseer_fx_overseer_destroyray_bright_run"
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}, {fts(25), 255}, {fts(26), 0}}
 
-tt = E:register_t_hot("fx_stage_16_overseer_tentacle_hit_decal", "fx", true)
+tt = E:register_t("fx_stage_16_overseer_tentacle_hit_decal", "fx", true)
 tt.render.sprites[1].prefix = "overseer_fx_overseer_proyectile_explosion"
 tt.render.sprites[1].name = "run"
 
-tt = E:register_t_hot("controller_tower_swap_overseer", "controller_tower_swap", true)
+tt = E:register_t("controller_tower_swap_overseer", "controller_tower_swap", true)
 tt.fx_out = "decal_tower_swap_fx_in"
 tt.fx_in = "decal_tower_swap_fx_in"
 tt.fx_spawn_delay = 0
@@ -987,13 +987,13 @@ tt.fx_in_delay = 0
 tt.fx_delay_between = fts(14)
 tt.swap_sound = "Stage16OverseerTeleport"
 
-tt = E:register_t_hot("decal_tower_swap_fx_in", "decal_timed", true)
+tt = E:register_t("decal_tower_swap_fx_in", "decal_timed", true)
 tt.render.sprites[1].name = "overseer_fx_overseer_teleportfx_run"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[1].offset = v(0, 10)
 tt.timed.duration = fts(20)
 
-tt = E:register_t_hot("ps_bullet_stage_16_overseer_tentacle_spawn", nil, true)
+tt = E:register_t("ps_bullet_stage_16_overseer_tentacle_spawn", nil, true)
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "overseer_fx_overseer_proyectile_trail_run"
 tt.particle_system.animated = true

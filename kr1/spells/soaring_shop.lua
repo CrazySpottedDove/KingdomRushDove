@@ -49,7 +49,7 @@ function M.register_templates(E)
 
 	local tt
 
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	tt.main_script.insert = function(this, store)
 		local e = E:create_entity("soldier_soaring_shop")
 
@@ -72,7 +72,7 @@ function M.register_templates(E)
 
 	E:set_template("user_power_3", tt)
 
-	tt = E:register_t_tmp("bullet_power_soaring_shop_attack_1", "bomb")
+	tt = E:register_t("bullet_power_soaring_shop_attack_1", "bomb")
 	tt.render.sprites[1].name = "power_globo_FX_attack_projectile"
 	tt.bullet.min_speed = 5 * FPS
 	tt.bullet.max_speed = 15 * FPS
@@ -90,13 +90,13 @@ function M.register_templates(E)
 	tt.sound_events.insert = nil
 	tt.sound_events.hit = "PowersSoaringShopBasicAttack"
 
-	tt = E:register_t_tmp("bullet_power_soaring_shop_special_1", "bullet_power_soaring_shop_attack_1")
+	tt = E:register_t("bullet_power_soaring_shop_special_1", "bullet_power_soaring_shop_attack_1")
 	tt.render.sprites[1].name = "power_globo_FX_attack_special_projectile1"
 
-	tt = E:register_t_tmp("bullet_power_soaring_shop_special_2", "bullet_power_soaring_shop_attack_1")
+	tt = E:register_t("bullet_power_soaring_shop_special_2", "bullet_power_soaring_shop_attack_1")
 	tt.render.sprites[1].name = "power_globo_FX_attack_special_projectile2"
 
-	tt = E:register_t_tmp("bullet_power_soaring_shop_attack_2", "bullet_power_soaring_shop_attack_1")
+	tt = E:register_t("bullet_power_soaring_shop_attack_2", "bullet_power_soaring_shop_attack_1")
 	tt.render.sprites[1].name = "power_globo_FX_attack2_projectile"
 	tt.bullet.hit_fx = "fx_power_soaring_shop_attack_2_hit"
 	tt.bullet.mod = "mod_power_soaring_shop_stun"
@@ -107,7 +107,7 @@ function M.register_templates(E)
 	tt.sound_events.hit = "PowersSoaringShopFrozotov"
 	tt.bullet.damage_bans = bor(F_FLYING)
 
-	tt = E:register_t_tmp("bullet_power_soaring_shop_attack_3", "bullet_power_soaring_shop_attack_1")
+	tt = E:register_t("bullet_power_soaring_shop_attack_3", "bullet_power_soaring_shop_attack_1")
 	tt.render.sprites[1].name = "power_globo_FX_attack3_projectile"
 	tt.bullet.hit_fx = "fx_power_soaring_shop_attack_3_hit"
 	tt.bullet.hit_decal = "decal_power_soaring_shop_attack_3_crack"
@@ -121,35 +121,35 @@ function M.register_templates(E)
 	tt.bullet.flight_time = fts(30)
 	tt.sound_events.insert = "PowersSoaringShopFatBoy"
 
-	tt = E:register_t_tmp("fx_power_soaring_shop_attack_1_hit", "fx")
+	tt = E:register_t("fx_power_soaring_shop_attack_1_hit", "fx")
 	tt.render.sprites[1].name = "hit"
 	tt.render.sprites[1].prefix = "power_globo_FX_attack_hit"
 	tt.render.sprites[1].z = Z_OBJECTS
 	tt.render.sprites[1].sort_y_offset = -1
 
-	tt = E:register_t_tmp("fx_power_soaring_shop_attack_2_hit", "fx")
+	tt = E:register_t("fx_power_soaring_shop_attack_2_hit", "fx")
 	tt.render.sprites[1].name = "hit"
 	tt.render.sprites[1].prefix = "power_globo_FX_attack2_hit"
 	tt.render.sprites[1].z = Z_OBJECTS
 	tt.render.sprites[1].sort_y_offset = -1
 
-	tt = E:register_t_tmp("fx_power_soaring_shop_attack_3_hit", "fx")
+	tt = E:register_t("fx_power_soaring_shop_attack_3_hit", "fx")
 	tt.render.sprites[1].name = "hit"
 	tt.render.sprites[1].prefix = "power_globo_FX_attack3_hit"
 	tt.render.sprites[1].z = Z_OBJECTS
 	tt.render.sprites[1].sort_y_offset = -1
 
-	tt = E:register_t_tmp("decal_power_soaring_shop_attack_1_crack", "decal_tween")
+	tt = E:register_t("decal_power_soaring_shop_attack_1_crack", "decal_tween")
 	tt.render.sprites[1].name = "power_globo_FX_attack_decal"
 	tt.render.sprites[1].animated = false
 	tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 
-	tt = E:register_t_tmp("decal_power_soaring_shop_attack_3_crack", "decal_tween")
+	tt = E:register_t("decal_power_soaring_shop_attack_3_crack", "decal_tween")
 	tt.render.sprites[1].name = "power_globo_FX_attack3_decal"
 	tt.render.sprites[1].animated = false
 	tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 
-	tt = E:register_t_tmp("mod_power_soaring_shop_stun", "mod_stun")
+	tt = E:register_t("mod_power_soaring_shop_stun", "mod_stun")
 	E:add_comps(tt, "render")
 	tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 	tt.modifier.duration = 1.5
@@ -158,7 +158,7 @@ function M.register_templates(E)
 	tt.render.sprites[1].prefix = "power_globo_FX_attack2_stun"
 	tt.render.sprites[1].sort_y_offset = -1
 
-	tt = E:register_t_tmp("controller_soaring_shop_float_anim")
+	tt = E:register_t("controller_soaring_shop_float_anim")
 	E:add_comps(tt, "main_script")
 	tt.main_script.insert = function(this, store)
 		return true
@@ -180,7 +180,7 @@ function M.register_templates(E)
 	tt.max_y = 5
 	tt.speed = 0.2
 
-	tt = E:register_t_tmp("soldier_soaring_shop", "soldier_militia")
+	tt = E:register_t("soldier_soaring_shop", "soldier_militia")
 	E:add_comps(tt, "reinforcement", "nav_grid", "ranged", "timed_attacks")
 	tt.info.fn = scripts.soldier_reinforcement.get_info
 	tt.info.portrait = "kr6_info_portraits_soldiers_0048"

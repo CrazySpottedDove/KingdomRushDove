@@ -4,13 +4,13 @@ require("lib.klua.table")
 local U = require("utils")
 local fts = U.fts
 local tt
-tt = E:register_t_hot("decal_frozen_mushroom", "decal_click_play", true)
+tt = E:register_t("decal_frozen_mushroom", "decal_click_play", true)
 tt.render.sprites[1].prefix = "decal_frozen_mushroom"
 tt.click_play.clicked_sound = "MushroomPoof"
 tt.click_play.play_once = true
-tt = E:register_t_hot("decal_troll_burner", "decal_loop", true)
+tt = E:register_t("decal_troll_burner", "decal_loop", true)
 tt.render.sprites[1].random_ts = fts(11)
 tt.render.sprites[1].name = "decal_troll_burner_idle"
-tt = E:register_t_hot("decal_troll_flag", "decal_loop", true)
+tt = E:register_t("decal_troll_flag", "decal_loop", true)
 tt.render.sprites[1].random_ts = fts(18)
 tt.render.sprites[1].name = "decal_troll_flag_idle"

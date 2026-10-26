@@ -2515,7 +2515,6 @@ tt.info.portrait = "kr4_info_portraits_towers_0015"
 tt.info.enc_icon = 2
 tt.main_script.update = scripts.tower_balloon.update
 tt.main_script.remove = scripts.tower_barrack.remove
-tt.main_script.type = 1
 tt.barrack.soldier_type = "soldier_balloon"
 tt.barrack.rally_range = 190
 tt.barrack.rally_anywhere = true

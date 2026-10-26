@@ -55,15 +55,15 @@ local function decal_bush_statue_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_s05_tree_round", "decal", true)
+tt = E:register_t("decal_s05_tree_round", "decal", true)
 tt.render.sprites[1].name = "stage5_tree"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.139535
-tt = E:register_t_hot("decal_s05_tree_pine", "decal", true)
+tt = E:register_t("decal_s05_tree_pine", "decal", true)
 tt.render.sprites[1].name = "stage5_pine"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.083333
-tt = E:register_t_hot("decal_bush_statue", "decal_scripted", true)
+tt = E:register_t("decal_bush_statue", "decal_scripted", true)
 AC(tt, "ui")
 tt.main_script.insert = decal_bush_statue_insert
 tt.main_script.update = decal_bush_statue_update
@@ -74,7 +74,7 @@ tt.bush_frame_prefix = "stage5_bushes_"
 tt.bush_frames = {"0001", "0002", "0003", "0004", "0005", "0006", "0007"}
 tt.ui.click_rect = r(-40, 0, 80, 66)
 tt.ui.can_select = false
-tt = E:register_t_hot("fx_bush_statue_click", "fx", true)
+tt = E:register_t("fx_bush_statue_click", "fx", true)
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "fx_bush_statue_click"
 tt.render.sprites[1].offset.y = 34

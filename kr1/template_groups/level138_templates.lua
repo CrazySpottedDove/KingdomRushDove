@@ -669,24 +669,24 @@ function stage_36_paths_controller.on_show_path(this, store, action, path)
 	this.show_path = tonumber(path)
 end
 
-tt = E:register_t_hot("decal_stage_38_mask_08", "decal", true)
+tt = E:register_t("decal_stage_38_mask_08", "decal", true)
 tt.render.sprites[1].name = "stage_38_mask_08"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 
-tt = E:register_t_hot("decal_stage_38_mask_10", "decal", true)
+tt = E:register_t("decal_stage_38_mask_10", "decal", true)
 tt.render.sprites[1].name = "stage_38_mask_10"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 
-tt = E:register_t_hot("decal_stage_38_to_the_stars", "decal_scripted", true)
+tt = E:register_t("decal_stage_38_to_the_stars", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_38_to_the_stars_update
 tt.render.sprites[1].prefix = "to_the_stars_guy"
 tt.render.sprites[1].name = "idle1"
 tt.ui.click_rect = r(-60, -20, 70, 70)
 
-tt = E:register_t_hot("decal_stage_38_easter_egg_ender_egg", "decal_scripted", true)
+tt = E:register_t("decal_stage_38_easter_egg_ender_egg", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.insert = decal_stage_38_easter_ender_egg_insert
 tt.main_script.update = decal_stage_38_easter_ender_egg_update
@@ -706,32 +706,32 @@ tt.last_position = {v(805, 554), Z_OBJECTS_COVERS}
 tt.gold_fx = "fx_elemental_metal_holder_coins"
 tt.gold_amount = 150
 
-tt = E:register_t_hot("decal_stage_38_mask_02", "decal", true)
+tt = E:register_t("decal_stage_38_mask_02", "decal", true)
 tt.render.sprites[1].name = "stage_38_mask_02"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 106
 
-tt = E:register_t_hot("decal_stage_38_mask_04", "decal", true)
+tt = E:register_t("decal_stage_38_mask_04", "decal", true)
 tt.render.sprites[1].name = "stage_38_mask_04"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -100
 
-tt = E:register_t_hot("decal_stage_38_mask_09", "decal", true)
+tt = E:register_t("decal_stage_38_mask_09", "decal", true)
 tt.render.sprites[1].name = "stage_38_mask_09"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 
-tt = E:register_t_hot("decal_stage_38_mask_01", "decal", true)
+tt = E:register_t("decal_stage_38_mask_01", "decal", true)
 tt.render.sprites[1].name = "stage_38_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 142
 
-tt = E:register_t_hot("decal_stage_38_mask_03", "decal", true)
+tt = E:register_t("decal_stage_38_mask_03", "decal", true)
 tt.render.sprites[1].name = "stage_38_mask_03"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -20
 
-tt = E:register_t_hot("stage_38_paths_controller", "decal_scripted", true)
+tt = E:register_t("stage_38_paths_controller", "decal_scripted", true)
 E:add_comps(tt, "events", "editor")
 tt.main_script.update = stage_36_paths_controller.update
 tt.render.sprites[1].prefix = "mecanica_camino_stage_3Def"
@@ -767,12 +767,12 @@ tt.editor.overrides = {
 	["render.sprites[1].name"] = "idle"
 }
 
-tt = E:register_t_hot("decal_stage_38_mask_07", "decal", true)
+tt = E:register_t("decal_stage_38_mask_07", "decal", true)
 tt.render.sprites[1].name = "stage_38_mask_07"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -200
 
-tt = E:register_t_hot("decal_stage_38_mask_islas", "decal_tween", true)
+tt = E:register_t("decal_stage_38_mask_islas", "decal_tween", true)
 E:add_comps(tt, "main_script")
 tt.main_script.insert = decal_stage_36_mask_islas.insert
 tt.islas_levels = {
@@ -860,7 +860,7 @@ end
 tt.temp_i = nil
 tt.tween.remove = false
 
-tt = E:register_t_hot("decal_stage_38_easter_egg_yamcha", "decal_scripted", true)
+tt = E:register_t("decal_stage_38_easter_egg_yamcha", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_38_easter_egg_yamcha.update
 tt.render.sprites[1].prefix = "yamcha_warlok"
@@ -872,7 +872,7 @@ tt.render.sprites[2].ignore_start = true
 tt.render.sprites[2].z = Z_DECALS
 tt.ui.click_rect = r(-25, -10, 50, 38)
 
-tt = E:register_t_hot("decal_stage_38_fires_exo", "decal", true)
+tt = E:register_t("decal_stage_38_fires_exo", "decal", true)
 tt.spr_cfgs = {
 	{
 		sort_y_offset = 0
@@ -910,7 +910,7 @@ for k, v in pairs(tt.spr_cfgs) do
 	tt.render.sprites[i].sort_y_offset = v.sort_y_offset
 end
 
-tt = E:register_t_hot("controller_stage_38_cinematic", nil, true)
+tt = E:register_t("controller_stage_38_cinematic", nil, true)
 E:add_comps(tt, "editor", "main_script")
 tt.main_script.update = controller_stage_38_cinematic.update
 

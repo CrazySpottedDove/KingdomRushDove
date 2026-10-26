@@ -42,7 +42,7 @@ local function decal_s19_drizzt_update(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
-tt = E:register_t_hot("decal_s19_drizzt", "decal_scripted", true)
+tt = E:register_t("decal_s19_drizzt", "decal_scripted", true)
 AC(tt, "editor", "ui")
 tt.render.sprites[1].prefix = "decal_s19_drizzt"
 tt.render.sprites[1].name = "idle"

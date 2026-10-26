@@ -2,7 +2,7 @@ local V = require("lib.klua.vector")
 local v = V.v
 local vec_2 = v
 local E = require("entity_db")
-local tt = E:register_t_hot("decal_bat_flying", "decal_delayed_play", true)
+local tt = E:register_t("decal_bat_flying", "decal_delayed_play", true)
 E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "decal_bat_flying"
 tt.render.sprites[1].name = "play"
@@ -368,7 +368,7 @@ local bat_paths = {{
 
 for i, b in ipairs(bat_paths) do
 
-	tt = E:register_t_hot("decal_bat_flying_" .. i, "decal_bat_flying", true)
+	tt = E:register_t("decal_bat_flying_" .. i, "decal_bat_flying", true)
 	local keys = {}
 	local t = 0
 

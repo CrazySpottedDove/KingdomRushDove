@@ -201,52 +201,52 @@ function controller_stage_14_amalgam.update(this, store)
 	goto label_1255_0
 end
 
-tt = E:register_t_hot("decal_terrain_3_glare_eye_big_stage_14", "decal_terrain_3_glare_eye_big", true)
+tt = E:register_t("decal_terrain_3_glare_eye_big_stage_14", "decal_terrain_3_glare_eye_big", true)
 tt.render.sprites[1].name = "glare_stage_14_eye_2_big"
 tt.render.sprites[2].prefix = "glare_stage_14_eyelid_2_big"
 tt.render.sprites[3].prefix = "glare_stage_14_eye_2_big_pupil"
 
-tt = E:register_t_hot("decal_stage_14_glare_1", "decal_stage_12_glare", true)
+tt = E:register_t("decal_stage_14_glare_1", "decal_stage_12_glare", true)
 tt.render.sprites[1].prefix = "stage_14_glare_1Def"
 
-tt = E:register_t_hot("decal_terrain_3_glare_eye_small_3_stage_14", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_terrain_3_glare_eye_small_3_stage_14", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_14_eye_2_3"
 tt.render.sprites[2].prefix = "glare_stage_14_eyelid_2_3"
 
-tt = E:register_t_hot("decal_stage_14_glare_2", "decal_stage_12_glare", true)
+tt = E:register_t("decal_stage_14_glare_2", "decal_stage_12_glare", true)
 tt.render.sprites[1].prefix = "stage_14_glare_2Def"
 
-tt = E:register_t_hot("decal_terrain_3_glare_eye_small_2_stage_14", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_terrain_3_glare_eye_small_2_stage_14", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_14_eye_2_2"
 tt.render.sprites[2].prefix = "glare_stage_14_eyelid_2_2"
 
-tt = E:register_t_hot("decal_stage_14_hidden_path_dust", "decal", true)
+tt = E:register_t("decal_stage_14_hidden_path_dust", "decal", true)
 tt.render.sprites[1].prefix = "dust_pathDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_14_tentacles", "decal_stage_12_tentacles", true)
+tt = E:register_t("decal_stage_14_tentacles", "decal_stage_12_tentacles", true)
 tt.render.sprites[1].prefix = "BKtentacle14Def"
 
-tt = E:register_t_hot("aura_stage_14_prevent_polymorph", "aura", true)
+tt = E:register_t("aura_stage_14_prevent_polymorph", "aura", true)
 tt.aura.duration = 1e+99
 tt.aura.cycle_time = 0.25
 tt.aura.radius = 100
 tt.aura.allowed_templates = {"enemy_glareling"}
 tt.main_script.update = aura_stage_14_prevent_polymorph_update
 
-tt = E:register_t_hot("decal_terrain_3_glare_eye_small_1_stage_14", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_terrain_3_glare_eye_small_1_stage_14", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_14_eye_2_1"
 tt.render.sprites[2].prefix = "glare_stage_14_eyelid_2_1"
 
-tt = E:register_t_hot("decal_stage_14_hidden_path", "decal", true)
+tt = E:register_t("decal_stage_14_hidden_path", "decal", true)
 tt.render.sprites[1].prefix = "hidden_pathDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_stage_14_easter_egg_rickmorty", "decal", true)
+tt = E:register_t("decal_stage_14_easter_egg_rickmorty", "decal", true)
 E:add_comps(tt, "editor", "main_script", "ui")
 tt.main_script.update = decal_stage_14_easter_egg_rickmorty.update
 tt.render.sprites[1].prefix = "Rick1Def"
@@ -259,31 +259,31 @@ tt.ui.click_rect = r(-40, -30, 80, 50)
 tt.pos_spawn = {v(130, 210), v(1033, 468)}
 tt.prefix_names = {"Rick2Def", "Rick3Def"}
 
-tt = E:register_t_hot("decal_stage_14_mask_1", "decal", true)
+tt = E:register_t("decal_stage_14_mask_1", "decal", true)
 tt.render.sprites[1].name = "T3_S14_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_controller_stage_14_amalgam", "decal_stage_14_mask_1", true)
+tt = E:register_t("decal_controller_stage_14_amalgam", "decal_stage_14_mask_1", true)
 tt.render.sprites[1].prefix = "Amalgam_dude"
 tt.render.sprites[1].name = "state_1"
 tt.render.sprites[1].animated = true
 
-tt = E:register_t_hot("decal_stage_14_mask_amalgam", "decal_stage_14_mask_1", true)
+tt = E:register_t("decal_stage_14_mask_amalgam", "decal_stage_14_mask_1", true)
 tt.render.sprites[1].name = "T3_S14_mask_amalgam"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = 90
 
-tt = E:register_t_hot("decal_stage_14_mask_3", "decal_stage_14_mask_1", true)
+tt = E:register_t("decal_stage_14_mask_3", "decal_stage_14_mask_1", true)
 tt.render.sprites[1].name = "T3_S14_mask_03"
 
-tt = E:register_t_hot("decal_stage_14_mask_2", "decal_stage_14_mask_1", true)
+tt = E:register_t("decal_stage_14_mask_2", "decal_stage_14_mask_1", true)
 tt.render.sprites[1].name = "T3_S14_mask_02"
 
-tt = E:register_t_hot("decal_stage_14_mask_4", "decal_stage_14_mask_1", true)
+tt = E:register_t("decal_stage_14_mask_4", "decal_stage_14_mask_1", true)
 tt.render.sprites[1].name = "T3_S14_mask_04"
 
-tt = E:register_t_hot("controller_stage_14_amalgam", nil, true)
+tt = E:register_t("controller_stage_14_amalgam", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_14_amalgam.update
 tt.amalgam_t = "enemy_amalgam"

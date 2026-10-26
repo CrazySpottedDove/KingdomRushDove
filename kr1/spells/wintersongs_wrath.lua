@@ -67,7 +67,7 @@ function M.register_templates(E)
 
 	local tt
 
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	E:add_comps(tt, "info")
 	tt.info.i18n_key = "POWER_WINTERSONGS_WRATH"
 	tt.main_script.insert = function(this, store)
@@ -90,7 +90,7 @@ function M.register_templates(E)
 
 	E:set_template("user_power_3", tt)
 
-	tt = E:register_t_tmp("decal_power_wintersongs_wrath_elora", "decal_scripted")
+	tt = E:register_t("decal_power_wintersongs_wrath_elora", "decal_scripted")
 	E:add_comps(tt, "sound_events")
 	tt.main_script.update = function(this, store)
 		local spikes = {}
@@ -351,7 +351,7 @@ function M.register_templates(E)
 	tt.sound_end_l6_args = {}
 	tt.sound_spike_cast = "PowersWintersongsWrathSpikesCast"
 
-	tt = E:register_t_tmp("decal_power_wintersongs_wrath_tornado", "decal_scripted")
+	tt = E:register_t("decal_power_wintersongs_wrath_tornado", "decal_scripted")
 	tt.render.sprites[1].prefix = "elora_multi_tornado"
 	tt.render.sprites[1].animated = true
 	tt.render.sprites[1].z = Z_OBJECTS
@@ -364,7 +364,7 @@ function M.register_templates(E)
 	tt.delay_animation_start = fts(1)
 	tt.duration = 8
 
-	tt = E:register_t_tmp("decal_power_wintersongs_wrath_fume", "decal_scripted")
+	tt = E:register_t("decal_power_wintersongs_wrath_fume", "decal_scripted")
 	E:add_comps(tt, "tween")
 	tt.render.sprites[1].prefix = "fumeDef"
 	tt.render.sprites[1].animated = true
@@ -401,7 +401,7 @@ function M.register_templates(E)
 	tt.tween.disabled = true
 	tt.duration = 8
 
-	tt = E:register_t_tmp("decal_power_wintersongs_wrath_ice_ground", "decal_scripted")
+	tt = E:register_t("decal_power_wintersongs_wrath_ice_ground", "decal_scripted")
 	tt.render.sprites[1].prefix = "elora_multi_decal_elora"
 	tt.render.sprites[1].animated = true
 	tt.render.sprites[1].z = Z_OBJECTS
@@ -415,19 +415,19 @@ function M.register_templates(E)
 	tt.delay_animation_start = fts(15)
 	tt.duration = 8
 
-	tt = E:register_t_tmp("decal_power_wintersongs_wrath_spike_1", "decal_timed")
+	tt = E:register_t("decal_power_wintersongs_wrath_spike_1", "decal_timed")
 	tt.render.sprites[1].prefix = "elora_multi_spiker_1"
 	tt.render.sprites[1].animated = true
 	tt.render.sprites[1].z = Z_OBJECTS
 	tt.render.sprites[1].name = "in"
 
-	tt = E:register_t_tmp("decal_power_wintersongs_wrath_spike_2", "decal_power_wintersongs_wrath_spike_1")
+	tt = E:register_t("decal_power_wintersongs_wrath_spike_2", "decal_power_wintersongs_wrath_spike_1")
 	tt.render.sprites[1].prefix = "elora_multi_spiker_2"
 
-	tt = E:register_t_tmp("decal_power_wintersongs_wrath_spike_3", "decal_power_wintersongs_wrath_spike_1")
+	tt = E:register_t("decal_power_wintersongs_wrath_spike_3", "decal_power_wintersongs_wrath_spike_1")
 	tt.render.sprites[1].prefix = "elora_multi_spiker_3"
 
-	tt = E:register_t_tmp("aura_power_wintersongs_wrath_slow", "aura")
+	tt = E:register_t("aura_power_wintersongs_wrath_slow", "aura")
 	tt.aura.mods = {"mod_power_wintersongs_wrath_slow", "mod_power_wintersongs_wrath_slow_2", "mod_power_wintersongs_wrath_slow_3"}
 	tt.aura.radius = 120
 	tt.aura.vis_flags = bor(F_AREA)
@@ -438,7 +438,7 @@ function M.register_templates(E)
 	tt.main_script.insert = scripts.aura_apply_mod.insert
 	tt.main_script.update = scripts.aura_apply_mod.update
 
-	tt = E:register_t_tmp("aura_power_wintersongs_wrath_spike", "aura")
+	tt = E:register_t("aura_power_wintersongs_wrath_spike", "aura")
 	tt.aura.radius = 45
 	tt.aura.vis_flags = bor(F_AREA)
 	tt.aura.vis_bans = bor(F_HERO, F_FRIEND, F_FLYING)
@@ -450,7 +450,7 @@ function M.register_templates(E)
 	tt.aura.hit_fx = "fx_power_wintersongs_wrath_hit"
 	tt.main_script.update = scripts.aura_apply_damage.update
 
-	tt = E:register_t_tmp("aura_power_wintersongs_wrath_global_slow", "aura")
+	tt = E:register_t("aura_power_wintersongs_wrath_global_slow", "aura")
 	tt.aura.mods = {"mod_power_wintersongs_wrath_global_slow", "mod_power_wintersongs_wrath_slow_2", "mod_power_wintersongs_wrath_slow_3"}
 	tt.aura.radius = 2000
 	tt.aura.vis_flags = bor(F_AREA, F_STUN)
@@ -460,7 +460,7 @@ function M.register_templates(E)
 	tt.main_script.insert = scripts.aura_apply_mod.insert
 	tt.main_script.update = scripts.aura_apply_mod.update
 
-	tt = E:register_t_tmp("mod_power_wintersongs_wrath_slow", "mod_slow")
+	tt = E:register_t("mod_power_wintersongs_wrath_slow", "mod_slow")
 	E:add_comps(tt, "render")
 	tt.slow.factor = 0.6
 	tt.modifier.duration = 0.35
@@ -474,7 +474,7 @@ function M.register_templates(E)
 	tt.render.sprites[1].loop = true
 	tt.render.sprites[1].z = Z_EFFECTS
 
-	tt = E:register_t_tmp("mod_power_wintersongs_wrath_slow_2", "mod_slow")
+	tt = E:register_t("mod_power_wintersongs_wrath_slow_2", "mod_slow")
 	E:add_comps(tt, "render")
 	tt.slow.factor = 1
 	tt.modifier.duration = 0.35
@@ -489,7 +489,7 @@ function M.register_templates(E)
 	tt.render.sprites[1].loop = true
 	tt.render.sprites[1].z = Z_EFFECTS
 
-	tt = E:register_t_tmp("mod_power_wintersongs_wrath_slow_3", "mod_slow")
+	tt = E:register_t("mod_power_wintersongs_wrath_slow_3", "mod_slow")
 	E:add_comps(tt, "render")
 	tt.slow.factor = 1
 	tt.modifier.duration = 0.35
@@ -502,7 +502,7 @@ function M.register_templates(E)
 	tt.render.sprites[1].animated = false
 	tt.render.sprites[1].z = Z_EFFECTS
 
-	tt = E:register_t_tmp("mod_power_wintersongs_wrath_freeze", "mod_stun")
+	tt = E:register_t("mod_power_wintersongs_wrath_freeze", "mod_stun")
 	tt.modifier.duration = 4
 	tt.modifier.animation_phases = true
 	tt.modifier.use_mod_offset = false
@@ -514,7 +514,7 @@ function M.register_templates(E)
 	tt.main_script.remove = scripts.mod_freeze.remove
 	tt.freeze_decal_name = "decal_freeze_enemy"
 
-	tt = E:register_t_tmp("mod_power_wintersongs_wrath_global_slow", "mod_slow")
+	tt = E:register_t("mod_power_wintersongs_wrath_global_slow", "mod_slow")
 	E:add_comps(tt, "render")
 	tt.slow.factor = 0.5
 	tt.modifier.duration = 0.35
@@ -528,12 +528,12 @@ function M.register_templates(E)
 	tt.render.sprites[1].loop = true
 	tt.render.sprites[1].z = Z_EFFECTS
 
-	tt = E:register_t_tmp("fx_power_wintersongs_wrath_hit", "fx")
+	tt = E:register_t("fx_power_wintersongs_wrath_hit", "fx")
 	tt.render.sprites[1].prefix = "elora_multi_hit"
 	tt.render.sprites[1].name = "in"
 	tt.render.sprites[1].z = Z_BULLETS
 
-	tt = E:register_t_tmp("ps_power_wintersongs_wrath_snow", "particle_system")
+	tt = E:register_t("ps_power_wintersongs_wrath_snow", "particle_system")
 	tt.particle_system.emission_rate = 20
 	tt.particle_system.emit_area_spread = v(1200, 400)
 	tt.particle_system.emit_speed = {300, 300}
@@ -544,7 +544,7 @@ function M.register_templates(E)
 	tt.particle_system.animated = false
 	tt.particle_system.source_lifetime = 30
 
-	tt = E:register_t_tmp("ps_power_wintersongs_wrath_wind", "particle_system")
+	tt = E:register_t("ps_power_wintersongs_wrath_wind", "particle_system")
 	tt.particle_system.emission_rate = 2
 	tt.particle_system.emit_area_spread = v(1200, 700)
 	tt.particle_system.emit_speed = {800, 200}

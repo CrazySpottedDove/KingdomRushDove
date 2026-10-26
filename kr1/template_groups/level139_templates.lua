@@ -326,19 +326,19 @@ function stage_39_cocoon.on_activate_spawner(this, store, event_name, path_index
 	end
 end
 
-tt = E:register_t_hot("decal_stage_39_cocoon_center_5_back", "decal_scripted", true)
+tt = E:register_t("decal_stage_39_cocoon_center_5_back", "decal_scripted", true)
 tt.render.sprites[1].prefix = "spawner_centro_5_backDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = 55
 
-tt = E:register_t_hot("decal_stage_39_cocoon_vena_1", "decal_scripted", true)
+tt = E:register_t("decal_stage_39_cocoon_vena_1", "decal_scripted", true)
 tt.render.sprites[1].prefix = "stage_39_venas_spawner_01Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("decal_stage_39_floor_veins_controller", nil, true)
+tt = E:register_t("decal_stage_39_floor_veins_controller", nil, true)
 E:add_comps(tt, "pos", "main_script")
 tt.main_script.update = decal_stage_39_floor_veins_controller_update
 tt.activate_veins = decal_stage_39_floor_veins_controller_activate_veins_fn
@@ -389,35 +389,35 @@ tt.veins_sequences = {{
 	}}
 }}
 
-tt = E:register_t_hot("decal_stage_39_cocoon_vena_3", "decal_stage_39_cocoon_vena_1", true)
+tt = E:register_t("decal_stage_39_cocoon_vena_3", "decal_stage_39_cocoon_vena_1", true)
 tt.render.sprites[1].prefix = "stage_39_venas_spawner_03Def"
 
-tt = E:register_t_hot("decal_stage_39_cocoon_vena_4", "decal_stage_39_cocoon_vena_1", true)
+tt = E:register_t("decal_stage_39_cocoon_vena_4", "decal_stage_39_cocoon_vena_1", true)
 tt.render.sprites[1].prefix = "stage_39_venas_spawner_04Def"
 
-tt = E:register_t_hot("decal_stage_39_cocoon_vena_2", "decal_stage_39_cocoon_vena_1", true)
+tt = E:register_t("decal_stage_39_cocoon_vena_2", "decal_stage_39_cocoon_vena_1", true)
 tt.render.sprites[1].prefix = "stage_39_venas_spawner_02Def"
 
-tt = E:register_t_hot("decal_stage_39_cocoon_vena_2_2", "decal_stage_39_cocoon_vena_1", true)
+tt = E:register_t("decal_stage_39_cocoon_vena_2_2", "decal_stage_39_cocoon_vena_1", true)
 tt.render.sprites[1].prefix = "stage_39_venas_spawner_02_02Def"
 
-tt = E:register_t_hot("decal_stage_39_cocoon_center_2_back", "decal_scripted", true)
+tt = E:register_t("decal_stage_39_cocoon_center_2_back", "decal_scripted", true)
 tt.render.sprites[1].prefix = "spawner_centro_2_backDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = 5
 
-tt = E:register_t_hot("decal_stage_39_cocoon_vena_5", "decal_stage_39_cocoon_vena_1", true)
+tt = E:register_t("decal_stage_39_cocoon_vena_5", "decal_stage_39_cocoon_vena_1", true)
 tt.render.sprites[1].prefix = "stage_39_venas_spawner_05Def"
 
-tt = E:register_t_hot("decal_stage_39_easter_egg_sheepy", "decal_scripted", true)
+tt = E:register_t("decal_stage_39_easter_egg_sheepy", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_39_easter_egg_sheepy.update
 tt.render.sprites[1].prefix = "dragon_sheepy"
 tt.render.sprites[1].name = "idle_1"
 tt.ui.click_rect = r(-15, -5, 30, 30)
 
-tt = E:register_t_hot("stage_39_cocoon", "decal_scripted", true)
+tt = E:register_t("stage_39_cocoon", "decal_scripted", true)
 E:add_comps(tt, "events", "editor")
 tt.render.sprites[1].prefix = "stage_39_spawnerDef"
 tt.render.sprites[1].name = "spawner_inactivo_idle"
@@ -449,7 +449,7 @@ tt.events.list[1].name = "activate_spawner"
 tt.events.list[1].on_event = stage_39_cocoon.on_activate_spawner
 tt.editor.props = {{"path_index", PT_STRING}}
 
-tt = E:register_t_hot("stage_39_cocoon_center_1", "stage_39_cocoon", true)
+tt = E:register_t("stage_39_cocoon_center_1", "stage_39_cocoon", true)
 tt.render.sprites[1].prefix = "spawner_centro_1Def"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[2] = nil
@@ -461,20 +461,20 @@ tt.events = nil
 tt.render.sprites[1].sort_y_offset = -11
 tt.animation_spawner_idle_broken = "idle"
 
-tt = E:register_t_hot("stage_39_cocoon_center_3", "stage_39_cocoon_center_1", true)
+tt = E:register_t("stage_39_cocoon_center_3", "stage_39_cocoon_center_1", true)
 tt.render.sprites[1].prefix = "spawner_centro_3Def"
 tt.render.sprites[1].sort_y_offset = 68
 
-tt = E:register_t_hot("stage_39_cocoon_center_4", "stage_39_cocoon_center_1", true)
+tt = E:register_t("stage_39_cocoon_center_4", "stage_39_cocoon_center_1", true)
 tt.render.sprites[1].prefix = "spawner_centro_4Def"
 tt.render.sprites[1].sort_y_offset = 134
 
-tt = E:register_t_hot("stage_39_cocoon_center_5", "stage_39_cocoon_center_1", true)
+tt = E:register_t("stage_39_cocoon_center_5", "stage_39_cocoon_center_1", true)
 tt.render.sprites[1].prefix = "spawner_centro_5_frontDef"
 tt.render.sprites[1].sort_y_offset = 16
 tt.back = "decal_stage_39_cocoon_center_5_back"
 
-tt = E:register_t_hot("stage_39_cocoon_center_2", "stage_39_cocoon_center_1", true)
+tt = E:register_t("stage_39_cocoon_center_2", "stage_39_cocoon_center_1", true)
 tt.render.sprites[1].prefix = "spawner_centro_2_frontDef"
 tt.render.sprites[1].sort_y_offset = -25
 tt.back = "decal_stage_39_cocoon_center_2_back"

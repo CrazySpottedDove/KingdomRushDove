@@ -29,7 +29,7 @@ function decal_fish.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_fish", "decal_scripted", true)
+tt = E:register_t("decal_fish", "decal_scripted", true)
 AC(tt, "ui")
 tt.render.sprites[1].prefix = "decal_fish"
 tt.render.sprites[1].name = "jump"

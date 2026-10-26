@@ -538,7 +538,7 @@ function controller_stage_34_ponds_spawner.on_event(this, store, action, path, s
 	this.subpath = subpath
 end
 
-tt = E:register_t_hot("decal_stage_34_fuente_1", "decal_scripted", true)
+tt = E:register_t("decal_stage_34_fuente_1", "decal_scripted", true)
 E:add_comps(tt, "events")
 tt.start_remolino = decal_stage_34_fuente_start_remolino
 tt.end_remolino = decal_stage_34_fuente_end_remolino
@@ -557,28 +557,28 @@ tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.connections = {{nil, 12}}
 tt.sound_mud_pool_transformation = "EnemyBossPrincessMudPoolTransformation"
 
-tt = E:register_t_hot("decal_stage_34_fuente_5", "decal_stage_34_fuente_1", true)
+tt = E:register_t("decal_stage_34_fuente_5", "decal_stage_34_fuente_1", true)
 tt.event_listen_number = 5
 tt.render.sprites[1].prefix = "stage_34_fuente_6Def"
 tt.connections = {{nil, 10}, {nil, 11}}
 
-tt = E:register_t_hot("stage_34_nubes", "decal", true)
+tt = E:register_t("stage_34_nubes", "decal", true)
 tt.render.sprites[1].prefix = "stage_4_nubesDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_34_fuente_3", "decal_stage_34_fuente_1", true)
+tt = E:register_t("decal_stage_34_fuente_3", "decal_stage_34_fuente_1", true)
 tt.event_listen_number = 3
 tt.render.sprites[1].prefix = "stage_34_fuente_4Def"
 tt.connections = {{6, 9}, {7, 10}, {8, 12}}
 
-tt = E:register_t_hot("decal_stage_34_fuente_2", "decal_stage_34_fuente_1", true)
+tt = E:register_t("decal_stage_34_fuente_2", "decal_stage_34_fuente_1", true)
 tt.event_listen_number = 2
 tt.render.sprites[1].prefix = "stage_34_fuente_2Def"
 tt.connections = {{3, 9}, {4, 10}, {5, 11}}
 
-tt = E:register_t_hot("controller_boss_princess_iron_fan_waves", "decal_scripted", true)
+tt = E:register_t("controller_boss_princess_iron_fan_waves", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.force_capture_hero = controller_boss_princess_iron_fan_waves_force_capture_hero
 tt.force_go_middle = controller_boss_princess_iron_fan_waves_force_go_middle
@@ -685,19 +685,19 @@ tt.sound_stun_hero_channel = "EnemyBossPrincessHeroStunChannel"
 tt.sound_stun_hero_fail = "EnemyBossPrincessHeroStunFail"
 tt.sound_stun_hero_success = "EnemyBossPrincessHeroStunSuccess"
 
-tt = E:register_t_hot("decal_stage_34_mask_cascadas_1", "decal", true)
+tt = E:register_t("decal_stage_34_mask_cascadas_1", "decal", true)
 tt.render.sprites[1].name = "stage_34_cascadas_1_run"
 
-tt = E:register_t_hot("decal_stage_34_mask_cascadas_3", "decal_stage_34_mask_cascadas_1", true)
+tt = E:register_t("decal_stage_34_mask_cascadas_3", "decal_stage_34_mask_cascadas_1", true)
 tt.render.sprites[1].name = "stage_34_cascadas_3_run"
 
-tt = E:register_t_hot("stage_34_nubes_camino", "decal", true)
+tt = E:register_t("stage_34_nubes_camino", "decal", true)
 tt.render.sprites[1].prefix = "stage_4_nubescaminoDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_34_easter_egg_mono", "decal_scripted", true)
+tt = E:register_t("decal_stage_34_easter_egg_mono", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.main_script.update = decal_stage_34_easter_egg_mono_update
 tt.render.sprites[1].prefix = "wkstatue_sixear"
@@ -709,38 +709,38 @@ tt.render.sprites[2].z = Z_EFFECTS
 tt.render.sprites[2].offset = v(12, -12)
 tt.ui.click_rect = r(-30, -20, 60, 60)
 
-tt = E:register_t_hot("decal_stage_34_mask_cascadas_6", "decal_stage_34_mask_cascadas_1", true)
+tt = E:register_t("decal_stage_34_mask_cascadas_6", "decal_stage_34_mask_cascadas_1", true)
 tt.render.sprites[1].name = "stage_34_cascadas_6_run"
 
-tt = E:register_t_hot("decal_stage_34_mask_cascadas_2", "decal_stage_34_mask_cascadas_1", true)
+tt = E:register_t("decal_stage_34_mask_cascadas_2", "decal_stage_34_mask_cascadas_1", true)
 tt.render.sprites[1].name = "stage_34_cascadas_2_run"
 
-tt = E:register_t_hot("decal_stage_34_fuente_6", "decal_stage_34_fuente_1", true)
+tt = E:register_t("decal_stage_34_fuente_6", "decal_stage_34_fuente_1", true)
 tt.event_listen_number = 6
 tt.render.sprites[1].prefix = "stage_34_fuente_3Def"
 tt.connections = nil
 
-tt = E:register_t_hot("decal_stage_34_mask_2", "decal", true)
+tt = E:register_t("decal_stage_34_mask_2", "decal", true)
 tt.render.sprites[1].name = "mascara2_puertas"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -100
 
-tt = E:register_t_hot("decal_stage_34_mask_3", "decal", true)
+tt = E:register_t("decal_stage_34_mask_3", "decal", true)
 tt.render.sprites[1].name = "mascara3_gazebo"
 tt.render.sprites[1].animated = false
 
-tt = E:register_t_hot("controller_stage_34_fuentes", nil, true)
+tt = E:register_t("controller_stage_34_fuentes", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_34_fuentes_update
 tt.nodes_range = 15
 tt.open_duration = 3
 
-tt = E:register_t_hot("decal_stage_34_fuente_4", "decal_stage_34_fuente_1", true)
+tt = E:register_t("decal_stage_34_fuente_4", "decal_stage_34_fuente_1", true)
 tt.event_listen_number = 4
 tt.render.sprites[1].prefix = "stage_34_fuente_5Def"
 tt.connections = {{nil, 9}}
 
-tt = E:register_t_hot("tunnel_KR5_stage_34_ponds", "tunnel_KR5", true)
+tt = E:register_t("tunnel_KR5_stage_34_ponds", "tunnel_KR5", true)
 tt.main_script.update = tunnel_KR5_stage_34_ponds_update
 tt.untargetable_distance = 5
 tt.tunnel.speed_factor = 8
@@ -749,23 +749,23 @@ tt.tunnel.pick_fx = "fx_stage_34_fuentes_splash"
 tt.tunnel.place_fx = "fx_stage_34_fuentes_splash"
 tt.tunnel.place_fx_barro = "fx_stage_34_fuentes_splash_barro"
 
-tt = E:register_t_tmp("fx_stage_34_fuentes_splash", "fx")
+tt = E:register_t("fx_stage_34_fuentes_splash", "fx")
 tt.render.sprites[1].prefix = "stage_34_agua_splash"
 tt.render.sprites[1].name = "in"
 
-tt = E:register_t_tmp("fx_stage_34_fuentes_splash_barro", "fx_stage_34_fuentes_splash")
+tt = E:register_t("fx_stage_34_fuentes_splash_barro", "fx_stage_34_fuentes_splash")
 E:add_comps(tt, "sound_events")
 tt.render.sprites[1].prefix = "stage_34_barro_splash"
 tt.sound_events.insert = "EnemyBossPrincessMudPoolSummon"
 
-tt = E:register_t_hot("controller_stage_34_ponds_spawner", nil, true)
+tt = E:register_t("controller_stage_34_ponds_spawner", nil, true)
 E:add_comps(tt, "main_script", "events")
 tt.main_script.update = controller_stage_34_ponds_spawner.update
 tt.unit_t = "enemy_water_spirit_spawnless"
 tt.events.list[1].name = "pond_spawn_water_spirit"
 tt.events.list[1].on_event = controller_stage_34_ponds_spawner.on_event
 
-tt = E:register_t_hot("ps_stage_34_petalos_1", nil, true)
+tt = E:register_t("ps_stage_34_petalos_1", nil, true)
 E:add_comps(tt, "pos", "particle_system")
 tt.pos = v(1300, 0)
 tt.particle_system.alphas = {255, 200, 150, 0}
@@ -782,6 +782,6 @@ tt.particle_system.particle_lifetime = {10, 23}
 tt.particle_system.spin = {0.5, 5}
 tt.particle_system.z = Z_OBJECTS_SKY
 
-tt = E:register_t_hot("ps_stage_34_petalos_2", "ps_stage_34_petalos_1", true)
+tt = E:register_t("ps_stage_34_petalos_2", "ps_stage_34_petalos_1", true)
 tt.particle_system.name = "stage34_petalos_2"
 

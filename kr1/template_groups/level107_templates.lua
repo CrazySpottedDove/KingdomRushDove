@@ -171,7 +171,7 @@ stage_07_witcher_update = function(this, store)
 	return true
 end
 local tt
-tt = E:register_t_tmp("decal_stage_07_crow_clickable", "decal_scripted")
+tt = E:register_t("decal_stage_07_crow_clickable", "decal_scripted")
 E:add_comps(tt, "editor", "ui")
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -219,19 +219,19 @@ tt.main_script.update = function(this, store)
 	simulation:queue_remove_entity(this)
 end
 tt.ui.click_rect = r(-15, -15, 30, 30)
-tt = E:register_t_hot("decal_stage_07_crow_clickable_2", "decal_stage_07_crow_clickable", true)
+tt = E:register_t("decal_stage_07_crow_clickable_2", "decal_stage_07_crow_clickable", true)
 tt.render.sprites[1].prefix = "stage_7_crow2Def"
 tt.render.sprites[1].flip_x = true
-tt = E:register_t_hot("controller_stage_07_crows", nil, true)
+tt = E:register_t("controller_stage_07_crows", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_07_crows_update
-tt = E:register_t_hot("decal_stage_07_mask", "decal", true)
+tt = E:register_t("decal_stage_07_mask", "decal", true)
 tt.render.sprites[1].name = "T2_Stage_7_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt = E:register_t_hot("decal_stage_07_crow_clickable_1", "decal_stage_07_crow_clickable", true)
+tt = E:register_t("decal_stage_07_crow_clickable_1", "decal_stage_07_crow_clickable", true)
 tt.render.sprites[1].prefix = "stage_7_crow1Def"
-tt = E:register_t_hot("decal_stage_07_witcher_easter_egg", "decal_scripted", true)
+tt = E:register_t("decal_stage_07_witcher_easter_egg", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui")
 tt.render.sprites[1].prefix = "the_witcherDef"
 tt.render.sprites[1].name = "idle"
@@ -239,35 +239,35 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.main_script.update = stage_07_witcher_update
 tt.ui.click_rect = r(520, -220, 50, 50)
-tt = E:register_t_hot("decal_stage_07_crow_clickable_4", "decal_stage_07_crow_clickable", true)
+tt = E:register_t("decal_stage_07_crow_clickable_4", "decal_stage_07_crow_clickable", true)
 tt.render.sprites[1].prefix = "stage_7_crow4Def"
 tt.render.sprites[1].z = Z_FLYING_HEROES - 1
-tt = E:register_t_hot("decal_stage_07_temple_mask", "decal", true)
+tt = E:register_t("decal_stage_07_temple_mask", "decal", true)
 tt.render.sprites[1].prefix = "temple_maskDef"
 tt.render.sprites[1].name = "idle_in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].hidden = true
-tt = E:register_t_hot("decal_stage_07_fireMask", "decal", true)
+tt = E:register_t("decal_stage_07_fireMask", "decal", true)
 tt.render.sprites[1].prefix = "fire_maskDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS - 1
-tt = E:register_t_hot("decal_stage_07_dust", "decal_terrain_2_dust", true)
+tt = E:register_t("decal_stage_07_dust", "decal_terrain_2_dust", true)
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[1].random_ts = 1
-tt = E:register_t_hot("decal_stage_07_crow_clickable_3", "decal_stage_07_crow_clickable", true)
+tt = E:register_t("decal_stage_07_crow_clickable_3", "decal_stage_07_crow_clickable", true)
 tt.render.sprites[1].prefix = "stage_7_crow3Def"
 tt.render.sprites[1].flip_x = true
-tt = E:register_t_hot("decal_stage_07_crow_clickable_5", "decal_stage_07_crow_clickable", true)
+tt = E:register_t("decal_stage_07_crow_clickable_5", "decal_stage_07_crow_clickable", true)
 tt.render.sprites[1].prefix = "stage_7_crow5Def"
 tt.render.sprites[1].flip_x = true
-tt = E:register_t_hot("decal_stage_07_cave_mask_smoke", "decal", true)
+tt = E:register_t("decal_stage_07_cave_mask_smoke", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "T2_Stage_7_mask_cave"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt = E:register_t_hot("decal_stage_07_temple", "decal_scripted", true)
+tt = E:register_t("decal_stage_07_temple", "decal_scripted", true)
 tt.render.sprites[1].prefix = "templeDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -277,7 +277,7 @@ tt.activation_wave = 10
 tt.temple_mask = "decal_stage_07_temple_mask"
 tt.cave_mask = "decal_stage_07_cave_mask_smoke"
 tt.sound = "Stage07CultTemple"
-tt = E:register_t_hot("decal_stage_07_fire", "decal", true)
+tt = E:register_t("decal_stage_07_fire", "decal", true)
 tt.render.sprites[1].prefix = "fireDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true

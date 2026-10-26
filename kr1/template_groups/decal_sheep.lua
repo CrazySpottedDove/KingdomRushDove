@@ -13,7 +13,7 @@ function decal_sheep_big.insert(this, store)
 end
 
 local tt
-tt = E:register_t_hot("decal_sheep_big", "decal_delayed_click_play", true)
+tt = E:register_t("decal_sheep_big", "decal_delayed_click_play", true)
 AC(tt, "tween")
 tt.delayed_play.achievement_inc = "SHEEP_KILLER"
 tt.delayed_play.click_interrupts = true
@@ -39,9 +39,9 @@ tt.tween.remove = false
 tt.ui.click_rect = r(-10, -5, 20, 20)
 tt.ui.can_select = false
 
-tt = E:register_t_hot("decal_sheep_small", "decal_sheep_big", true)
+tt = E:register_t("decal_sheep_small", "decal_sheep_big", true)
 tt.render.sprites[1].prefix = "decal_sheep_small"
 
-tt = E:register_t_hot("decal_goat", "decal_sheep_big", true)
+tt = E:register_t("decal_goat", "decal_sheep_big", true)
 tt.render.sprites[1].prefix = "decal_goat"
 

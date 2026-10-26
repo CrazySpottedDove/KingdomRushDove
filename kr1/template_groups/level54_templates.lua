@@ -32,7 +32,7 @@ local function gryphon_controller_update(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
-tt = E:register_t_hot("decal_s06_eagle", "decal_delayed_sequence", true)
+tt = E:register_t("decal_s06_eagle", "decal_delayed_sequence", true)
 AC(tt, "editor")
 tt.delayed_sequence.animations = {"1", "2", "3", "4"}
 tt.delayed_sequence.random = true
@@ -40,7 +40,7 @@ tt.delayed_sequence.max_delay = 3
 tt.render.sprites[1].prefix = "decal_s06_eagle"
 tt.render.sprites[1].name = "1"
 tt.render.sprites[1].z = Z_OBJECTS + 1
-tt = E:register_t_hot("decal_s06_boxed_boss", "decal_delayed_play", true)
+tt = E:register_t("decal_s06_boxed_boss", "decal_delayed_play", true)
 tt.delayed_play.min_delay = 5
 tt.delayed_play.min_delay = 10
 tt.render.sprites[1].prefix = "decal_s06_boxed_boss_l1"
@@ -51,7 +51,7 @@ tt.render.sprites[2].z = Z_OBJECTS + 1
 tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "decal_s06_boxed_boss_l3"
 tt.render.sprites[3].z = Z_OBJECTS + 1
-tt = E:register_t_hot("decal_s06_jailed_boss", "decal", true)
+tt = E:register_t("decal_s06_jailed_boss", "decal", true)
 for i = 1, 6 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "decal_s06_jailed_boss_l" .. i
@@ -59,7 +59,7 @@ for i = 1, 6 do
 	tt.render.sprites[i].anchor.y = 0.263736
 end
 tt.render.sprites[6].sort_y_offset = -10
-tt = E:register_t_hot("gryphon_controller", nil, true)
+tt = E:register_t("gryphon_controller", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = gryphon_controller_update
 local S = require("sound_db")
@@ -174,7 +174,7 @@ local function decal_gryphon_update(this, store)
 		U.y_animation_play_group(this, "takeoff", flip_x, store.tick_ts, 1, "layers")
 	end
 end
-tt = E:register_t_hot("decal_gryphon", "decal_scripted", true)
+tt = E:register_t("decal_gryphon", "decal_scripted", true)
 AC(tt, "attacks", "ui", "sound_events")
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].cooldown = fts(3)

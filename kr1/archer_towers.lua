@@ -1788,7 +1788,6 @@ tt.flight_speed_busy = 1200
 tt.ramp_dist_busy = 0
 tt.idle_pos = v(0, 0)
 tt.main_script.update = scripts.shadow_crow.update
-tt.main_script.type = 1
 tt.custom_attack = E:clone_c("custom_attack")
 tt.custom_attack.min_range = 10
 tt.custom_attack.max_range = 10

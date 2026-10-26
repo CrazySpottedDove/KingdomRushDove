@@ -82,7 +82,7 @@ local function decal_bouncing_bridge_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("carnivorous_plant", "decal_scripted", true)
+tt = E:register_t("carnivorous_plant", "decal_scripted", true)
 AC(tt, "area_attack")
 tt.main_script.update = carnivorous_plant_update
 tt.render.sprites[1].prefix = "carnivorous_plant"
@@ -94,7 +94,7 @@ tt.area_attack.damage_radius = 55
 tt.area_attack.hit_time = fts(10)
 tt.area_attack.vis_flags = F_EAT
 tt.area_attack.damage_type = DAMAGE_EAT
-tt = E:register_t_hot("decal_bouncing_bridge", "decal_scripted", true)
+tt = E:register_t("decal_bouncing_bridge", "decal_scripted", true)
 tt.main_script.update = decal_bouncing_bridge_update
 tt.render.sprites[1].prefix = "decal_bouncing_bridge"
 tt.render.sprites[1].name = "idle"

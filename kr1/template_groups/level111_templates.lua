@@ -682,7 +682,7 @@ function controller_stage_11_cult_leader.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_stage_11_cultist_leader_modes_worker", "decal", true)
+tt = E:register_t("decal_stage_11_cultist_leader_modes_worker", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].prefix = "stage_11_deco_mydrias_workerDef"
@@ -690,14 +690,14 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].draw_order = 2
 
-tt = E:register_t_hot("decal_stage_11_boss_corrupted_denas_intro_base", "decal", true)
+tt = E:register_t("decal_stage_11_boss_corrupted_denas_intro_base", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "denas_intro_baseDef"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_11_sam_and_frodo", "decal_scripted", true)
+tt = E:register_t("decal_stage_11_sam_and_frodo", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "sam_and_frodoDef"
 tt.render.sprites[1].name = "in"
@@ -707,7 +707,7 @@ tt.main_script.update = decal_stage_11_sam_and_frodo_update
 tt.ui.click_rect = r(370, -270, 50, 40)
 tt.push_up_cooldown = 7
 
-tt = E:register_t_hot("controller_stage_11_portal", nil, true)
+tt = E:register_t("controller_stage_11_portal", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = controller_stage_11_portal_insert
 tt.main_script.update = controller_stage_11_portal_update
@@ -744,35 +744,35 @@ tt.sound_thunder_cd_max = 12
 tt.sound_portal_open = "Stage11PortalOpen"
 tt.sound_portal_close = "Stage11PortalClose"
 
-tt = E:register_t_hot("decal_boss_corrupted_denas_dust", "decal", true)
+tt = E:register_t("decal_boss_corrupted_denas_dust", "decal", true)
 tt.render.sprites[1].name = "denas_dustexplosion_run"
 tt.render.sprites[1].hide_after_runs = 1
 
-tt = E:register_t_hot("controller_stage_11_cultist_leader_modes", nil, true)
+tt = E:register_t("controller_stage_11_cultist_leader_modes", nil, true)
 E:add_comps(tt, "editor", "main_script")
 tt.main_script.update = controller_stage_11_cultist_leader_modes_update
 tt.entity_tables = "decal_stage_11_cultist_leader_modes"
 tt.entity_worker = "decal_stage_11_cultist_leader_modes_worker"
 
-tt = E:register_t_hot("decal_stage_11_boss_corrupted_denas_intro_jump", "decal", true)
+tt = E:register_t("decal_stage_11_boss_corrupted_denas_intro_jump", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "denas_intro_jumpDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].loop = false
 
-tt = E:register_t_hot("decal_stage_11_boss_corrupted_denas_intro_chains", "decal", true)
+tt = E:register_t("decal_stage_11_boss_corrupted_denas_intro_chains", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "denas_intro_chainsDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("decal_stage_11_sam_and_frodo_mask", "decal", true)
+tt = E:register_t("decal_stage_11_sam_and_frodo_mask", "decal", true)
 tt.render.sprites[1].name = "sam_and_frodo_easter_egg_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_11_veznan", "tower", true)
+tt = E:register_t("decal_stage_11_veznan", "tower", true)
 E:add_comps(tt, "user_selection", "attacks")
 tt.tower.type = "stage_11_veznan"
 tt.tower.can_be_sold = false
@@ -813,7 +813,7 @@ tt.sound_ready = "Stage11MidCinematicVeznanTeleport"
 tt.sound_soul_impact_cast = "Stage11VeznanSoulImpactCast"
 tt.sound_demon_guard_cast = "Stage11VeznanDemonGuardCast"
 
-tt = E:register_t_hot("decal_stage_11_cultist_leader_modes", "decal", true)
+tt = E:register_t("decal_stage_11_cultist_leader_modes", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].prefix = "stage_11_deco_mydrias_baseDef"
@@ -821,7 +821,7 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].draw_order = 1
 
-tt = E:register_t_hot("decal_stage_11_veznan_modes", "decal", true)
+tt = E:register_t("decal_stage_11_veznan_modes", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].name = "deco_veznan_statue_statue"
@@ -832,19 +832,19 @@ tt.render.sprites[2].name = "idle"
 tt.render.sprites[2].draw_order = 2
 tt.render.sprites[2].offset = v(0, -66)
 
-tt = E:register_t_hot("decal_stage_11_lightnings_1", "decal", true)
+tt = E:register_t("decal_stage_11_lightnings_1", "decal", true)
 tt.render.sprites[1].prefix = "stage_11_elec1Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_stage_11_lightnings_2", "decal", true)
+tt = E:register_t("decal_stage_11_lightnings_2", "decal", true)
 tt.render.sprites[1].prefix = "stage_11_elec2Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_stage_11_lightnings_3", "decal", true)
+tt = E:register_t("decal_stage_11_lightnings_3", "decal", true)
 tt.render.sprites[1].prefix = "stage_11_elec3Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
@@ -859,7 +859,7 @@ tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 -- },
 -- 原在 stage111 中使用，但我们没有这个 sprite
 
-tt = E:register_t_hot("decal_stage_11_rock_1", "decal", true)
+tt = E:register_t("decal_stage_11_rock_1", "decal", true)
 E:add_comps(tt, "tween", "editor")
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_1"
@@ -874,66 +874,66 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].interp = "sine"
 tt.editor.props = {{"tween_amplitude", PT_NUMBER}, {"tween_frecueny", PT_NUMBER}}
 
-tt = E:register_t_hot("decal_stage_11_rock_2", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_2", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_2"
 
-tt = E:register_t_hot("decal_stage_11_rock_4", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_4", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_4"
 
-tt = E:register_t_hot("decal_stage_11_rock_13", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_13", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].scale = vv(0.85)
 
-tt = E:register_t_hot("decal_stage_11_rock_11", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_11", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_11"
 
-tt = E:register_t_hot("decal_stage_11_rock_12", "decal_stage_11_rock_11", true)
+tt = E:register_t("decal_stage_11_rock_12", "decal_stage_11_rock_11", true)
 tt.render.sprites[1].scale = vv(1.35)
 
-tt = E:register_t_hot("decal_stage_11_rock_5", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_5", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_5"
 tt.render.sprites[1].scale = vv(0.65)
 
-tt = E:register_t_hot("decal_stage_11_rock_6", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_6", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_6"
 
-tt = E:register_t_hot("decal_stage_11_rock_8", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_8", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_8"
 tt.render.sprites[1].scale = vv(0.75)
 
-tt = E:register_t_hot("decal_stage_11_rock_3", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_3", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_3"
 
-tt = E:register_t_hot("decal_stage_11_rock_18", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_18", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_12"
 
-tt = E:register_t_hot("decal_stage_11_rock_19", "decal_stage_11_rock_18", true)
+tt = E:register_t("decal_stage_11_rock_19", "decal_stage_11_rock_18", true)
 tt.render.sprites[1].scale = v(0.5, 0.5)
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t_hot("decal_stage_11_rock_16", "decal_stage_11_rock_4", true)
+tt = E:register_t("decal_stage_11_rock_16", "decal_stage_11_rock_4", true)
 tt.render.sprites[1].scale = vv(1.25)
 
-tt = E:register_t_hot("decal_stage_11_rock_10", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_10", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_10"
 
-tt = E:register_t_hot("decal_stage_11_rock_15", "decal_stage_11_rock_2", true)
+tt = E:register_t("decal_stage_11_rock_15", "decal_stage_11_rock_2", true)
 tt.render.sprites[1].scale = vv(2)
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t_hot("decal_stage_11_rock_9", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_9", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_9"
 
-tt = E:register_t_hot("decal_stage_11_rock_7", "decal_stage_11_rock_1", true)
+tt = E:register_t("decal_stage_11_rock_7", "decal_stage_11_rock_1", true)
 tt.render.sprites[1].name = "T2_Stage_11_floating_rocks_7"
 
-tt = E:register_t_hot("decal_stage_11_rock_17", "decal_stage_11_rock_4", true)
+tt = E:register_t("decal_stage_11_rock_17", "decal_stage_11_rock_4", true)
 tt.render.sprites[1].scale = v(0.75, 0.5)
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t_hot("decal_stage_11_rock_14", "decal_stage_11_rock_13", true)
+tt = E:register_t("decal_stage_11_rock_14", "decal_stage_11_rock_13", true)
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t_hot("controller_stage_11_cult_leader", nil, true)
+tt = E:register_t("controller_stage_11_cult_leader", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = controller_stage_11_cult_leader.insert
 tt.main_script.update = controller_stage_11_cult_leader.update
@@ -1039,7 +1039,7 @@ tt.cultist_stun_time = 15
 tt.illusion_delay_between = fts(24)
 tt.sound_illusion_summon_cast = "Stage11MydriasIllusionSummonCast"
 
-tt = E:register_t_hot("decal_boss_corrupted_denas_hit_floor", "decal_tween", true)
+tt = E:register_t("decal_boss_corrupted_denas_hit_floor", "decal_tween", true)
 tt.render.sprites[1].name = "denas_decal"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false

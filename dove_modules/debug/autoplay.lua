@@ -66,6 +66,10 @@ local BENCH_JIT_RESET = os.getenv("AUTOPLAY_JIT_RESET") == "1"
 local BENCH_JIT_DUMP_FLAGS = os.getenv("AUTOPLAY_JIT_DUMP_FLAGS") or "i"
 local BENCH_NO_GC = os.getenv("AUTOPLAY_NO_GC") == "1"
 local BENCH_GC_PAUSE = tonumber(os.getenv("AUTOPLAY_GC_PAUSE") or "")
+local CONTROLLED_ENTITY = os.getenv("AUTOPLAY_ENTITY")
+local CONTROLLED = os.getenv("AUTOPLAY_CONTROLLED") == "1" or CONTROLLED_ENTITY ~= nil
+local CONTROLLED_ENEMY = os.getenv("AUTOPLAY_ENEMY") or "enemy_goblin"
+local CONTROLLED_COUNT = tonumber(os.getenv("AUTOPLAY_ENTITY_COUNT") or os.getenv("AUTOPLAY_ENEMY_COUNT") or "") or 12
 
 if BENCH_JIT_PATH then
 	package.path = BENCH_JIT_PATH .. "/?.lua;" .. package.path
@@ -667,12 +671,19 @@ function autoplay:bench_step()
 
 	store.paused = false
 
-	if store.next_wave_group_ready and not store.send_next_wave and not LU.has_alive_enemies(store) then
-		store.send_next_wave = true
+	if not CONTROLLED then
+		if store.next_wave_group_ready and not store.send_next_wave and not LU.has_alive_enemies(store) then
+			store.send_next_wave = true
+		end
+
+		self:force_boss_phases()
 	end
 
-	self:force_boss_phases()
 	simulation:update(STEP)
+
+	if CONTROLLED_ENTITY then
+		self:maintain_controlled()
+	end
 end
 
 local function workload_signature(store)
@@ -691,7 +702,293 @@ local function workload_signature(store)
 	end
 
 	table.sort(towers)
-	return string.format("entities=%d towers=%d enemies=%d soldiers=%d wave=%s tick=%.1f tower_sig=%s", total, #towers, store.enemy_count or 0, store.soldier_count or 0, tostring(store.wave_group_number or 0), store.tick_ts or 0, table.concat(towers, ","))
+	local target = store._bench_ctrl_target
+	return string.format("entities=%d towers=%d enemies=%d soldiers=%d wave=%s tick=%.1f target_hp=%s tower_sig=%s", total, #towers, store.enemy_count or 0, store.soldier_count or 0, tostring(store.wave_group_number or 0), store.tick_ts or 0, target and target.health and tostring(target.health.hp) or "nil", table.concat(towers, ","))
+end
+
+local function setup_controlled(store)
+	store.send_next_wave = true
+	store.next_wave_group_ready = false
+	store.waves_finished = true
+	store.wave_spawn_thread = nil
+	store.waves_active = {}
+	store.lives = 1000000000
+
+	local remove = {}
+
+	for _, e in pairs(store.entities) do
+		if e.enemy then
+			remove[#remove + 1] = e
+		end
+	end
+
+	for _, e in ipairs(remove) do
+		simulation:queue_remove_entity(e)
+	end
+
+	for _ = 1, 2 do
+		simulation:update(STEP)
+	end
+
+	local pi = 1
+	local sub = P.paths[pi] and P.paths[pi][1]
+
+	if not sub then
+		return
+	end
+
+	local tower_pos = {}
+
+	for _, e in pairs(store.entities) do
+		if e.tower and e.tower.type ~= "holder" and e.pos then
+			tower_pos[#tower_pos + 1] = e.pos
+		end
+	end
+
+	local ni = 1
+	local best = math.huge
+
+	for i, node in ipairs(sub) do
+		for _, pos in ipairs(tower_pos) do
+			local dx = node.x - pos.x
+			local dy = node.y - pos.y
+			local d = dx * dx + dy * dy
+
+			if d < best then
+				best = d
+				ni = i
+			end
+		end
+	end
+
+	local node = sub[ni]
+
+	for _ = 1, CONTROLLED_COUNT do
+		local e = E:create_entity(CONTROLLED_ENEMY)
+
+		if e then
+			e.nav_path.pi = pi
+			e.nav_path.spi = 1
+			e.nav_path.ni = ni
+			e.pos.x = node.x
+			e.pos.y = node.y
+			e.motion.max_speed = 0
+			e.motion.real_speed = 0
+			e.health.hp_max = 1000000000
+			e.health.hp = 1000000000
+			simulation:queue_insert_entity(e)
+		end
+	end
+
+	for _ = 1, 2 do
+		simulation:update(STEP)
+	end
+end
+
+local function clear_non_holders(store)
+	local remove = {}
+
+	if os.getenv("AUTOPLAY_WORKLOAD_TRACE") == "1" then
+		local n = 0
+		for _, e in pairs(store.entities) do
+			if e.tower then
+				n = n + 1
+			end
+		end
+		print("AUTOPLAY_CLEAR before_towers=" .. n .. " entities=" .. tostring(#store.entities))
+	end
+
+	for _, e in pairs(store.entities) do
+		if e.enemy or e.soldier or e.bullet or e.aura or e.modifier or e.tower then
+			remove[#remove + 1] = e
+		end
+	end
+
+	for _, e in ipairs(remove) do
+		simulation:remove_entity(e)
+	end
+
+	if os.getenv("AUTOPLAY_WORKLOAD_TRACE") == "1" then
+		local n = 0
+		for _, e in pairs(store.entities) do
+			if e.tower then
+				n = n + 1
+			end
+		end
+		print("AUTOPLAY_CLEAR after_towers=" .. n .. " removed=" .. #remove)
+	end
+end
+
+local function nearest_node(store)
+	local sub = P.paths[1] and P.paths[1][1]
+
+	if not sub then
+		return nil, nil
+	end
+
+	local towers = {}
+
+	for _, e in pairs(store.entities) do
+		if e.tower and e.tower.type ~= "holder" and e.pos then
+			towers[#towers + 1] = e.pos
+		end
+	end
+
+	if #towers == 0 then
+		return sub[1], 1
+	end
+
+	local ni = 1
+	local best = math.huge
+
+	for i, node in ipairs(sub) do
+		for _, pos in ipairs(towers) do
+			local dx, dy = node.x - pos.x, node.y - pos.y
+			local d = dx * dx + dy * dy
+
+			if d < best then
+				best = d
+				ni = i
+			end
+		end
+	end
+
+	return sub[ni], ni
+end
+
+local function spawn_target(store, node, ni)
+	local e = E:create_entity(CONTROLLED_ENEMY)
+
+	if not e then
+		return nil
+	end
+
+	e.nav_path.pi = 1
+	e.nav_path.spi = 1
+	e.nav_path.ni = ni
+	e.pos.x = node.x
+	e.pos.y = node.y
+	e.motion.max_speed = 0
+	e.motion.real_speed = 0
+	e.health.hp_max = 1000000000
+	e.health.hp = 1000000000
+	e.vis.flags = 0
+	e.vis.bans = 0
+	simulation:queue_insert_entity(e)
+
+	return e
+end
+
+local function make_controlled_entity(store, node, ni, target)
+	local e = E:create_entity(CONTROLLED_ENTITY)
+
+	if not e then
+		return nil
+	end
+
+	e.pos.x = node.x
+	e.pos.y = node.y
+
+	if e.enemy or e.soldier then
+		e.nav_path = e.nav_path or {}
+		e.nav_path.pi = 1
+		e.nav_path.spi = 1
+		e.nav_path.ni = ni
+		if e.motion then
+			e.motion.max_speed = 0
+			e.motion.real_speed = 0
+		end
+		e.health.hp_max = 1000000000
+		e.health.hp = 1000000000
+	elseif e.bullet then
+		local b = e.bullet
+		b.target_id = target.id
+		b.source_id = target.id
+		b.from = {
+			x = node.x - 300,
+			y = node.y
+		}
+		b.to = {
+			x = node.x,
+			y = node.y
+		}
+		b.ts = store.tick_ts
+		b.flight_time = 1
+		b.speed = {
+			x = 300,
+			y = 0
+		}
+		b.damage_min = 1
+		b.damage_max = 1
+	elseif e.modifier then
+		e.modifier.target_id = target.id
+		e.modifier.ts = store.tick_ts
+		e.modifier.duration = 1000000
+		e.modifier.vis_flags = 0
+		e.modifier.vis_bans = 0
+		e.modifier.last_node = nil
+		e.modifier.resets_same = false
+		e.modifier.allows_duplicates = true
+	elseif e.aura then
+		e.aura.source_id = target.id
+		e.aura.ts = store.tick_ts
+		e.aura.duration = 1000000000
+	end
+
+	simulation:queue_insert_entity(e)
+	return e
+end
+
+local function setup_entity(store)
+	store.send_next_wave = true
+	store.next_wave_group_ready = false
+	store.waves_finished = true
+	store.wave_spawn_thread = nil
+	store.waves_active = {}
+	store.lives = 1000000000
+
+	clear_non_holders(store)
+
+	local node, ni = nearest_node(store)
+	if not node then
+		return
+	end
+
+	local target = spawn_target(store, node, ni)
+	if not target then
+		return
+	end
+
+	store._bench_ctrl_node = node
+	store._bench_ctrl_ni = ni
+	store._bench_ctrl_target = target
+
+	for _ = 1, CONTROLLED_COUNT do
+		make_controlled_entity(store, node, ni, target)
+	end
+
+	for _ = 1, 2 do
+		simulation:update(STEP)
+	end
+end
+
+function autoplay:maintain_controlled()
+	local store = self.game.simulation.store
+
+	if not CONTROLLED_ENTITY or not store._bench_ctrl_node or not store._bench_ctrl_target then
+		return
+	end
+	local count = 0
+
+	for _, e in pairs(store.entities) do
+		if e.template_name == CONTROLLED_ENTITY then
+			count = count + 1
+		end
+	end
+
+	for _ = count + 1, CONTROLLED_COUNT do
+		make_controlled_entity(store, store._bench_ctrl_node, store._bench_ctrl_ni, store._bench_ctrl_target)
+	end
 end
 
 --- 固定 tick 基准：正常 autoplay 只用于冒烟，这里用最小推进做 A/B 计时。
@@ -711,6 +1008,12 @@ function autoplay:run_bench()
 
 	if BENCH_JIT_DUMP then
 		require("jit.dump").start(BENCH_JIT_DUMP_FLAGS, BENCH_JIT_DUMP)
+	end
+
+	if CONTROLLED_ENTITY then
+		setup_entity(self.game.simulation.store)
+	elseif CONTROLLED then
+		setup_controlled(self.game.simulation.store)
 	end
 
 	for i = 1, BENCH_WARMUP do
@@ -762,7 +1065,7 @@ function autoplay:run_bench()
 	local coro_us = perf.items["coro"] and perf.items["coro"].sum or 0
 	local state_us = perf.items["state machine"] and perf.items["state machine"].sum or 0
 	local script_us = coro_us + state_us
-	local mode = os.getenv("KR_NO_PRECOMPILE") == "1" and "source" or "generated"
+	local mode = "source"
 
 	local sim_seconds = store.tick_ts or 0
 

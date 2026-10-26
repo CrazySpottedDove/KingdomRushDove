@@ -24,7 +24,7 @@ local function s11_lava_spawner_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("s11_lava_spawner", nil, true)
+tt = E:register_t("s11_lava_spawner", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = s11_lava_spawner_update
 tt.entity = "enemy_lava_elemental"

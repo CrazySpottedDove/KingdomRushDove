@@ -205,12 +205,12 @@ function controller_swamps.spawn_thing(this, store, action, path_id)
 	swamps_spawn_event(this, store, "enemy_swamp_thing_kr6", path_id, "1", true)
 end
 
-tt = E:register_t_hot("controller_swamp_spawn_points", nil, true)
+tt = E:register_t("controller_swamp_spawn_points", nil, true)
 AC(tt, "pos", "graveyard")
 tt.swamp_id = nil
 tt.interrupt = true
 
-tt = E:register_t_hot("controller_swamps", nil, true)
+tt = E:register_t("controller_swamps", nil, true)
 AC(tt, "pos", "events")
 tt.path_spawner_map = {
 	[6] = 2,
@@ -224,7 +224,7 @@ tt.events.list[2] = E:clone_c("event")
 tt.events.list[2].name = "spawn_swamp_thing"
 tt.events.list[2].on_event = controller_swamps.spawn_thing
 
-tt = E:register_t_hot("controller_swamp_bubbles_spawner", nil, true)
+tt = E:register_t("controller_swamp_bubbles_spawner", nil, true)
 AC(tt, "main_script", "pos")
 tt.swamp_id = nil
 tt.bubble_t = "decal_swamp_bubbles_in_loop_out"
@@ -233,7 +233,7 @@ tt.bubble_sound_interval = {3, 7}
 tt.radius = 30
 tt.main_script.update = controller_swamp_bubbles_spawner.update
 
-tt = E:register_t_hot("controller_swamp_bubbles", nil, true)
+tt = E:register_t("controller_swamp_bubbles", nil, true)
 AC(tt, "events")
 tt.spawn_interval = 1
 tt.bubble_spawner_t = "controller_swamp_bubbles_spawner"

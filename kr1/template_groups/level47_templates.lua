@@ -68,7 +68,7 @@ local function decal_taunting_dracula_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_taunting_dracula", "decal_scripted", true)
+tt = E:register_t("decal_taunting_dracula", "decal_scripted", true)
 tt.main_script.update = decal_taunting_dracula_update
 tt.render.sprites[1].prefix = "decal_taunting_dracula"
 tt.render.sprites[1].name = "show"
@@ -92,7 +92,7 @@ local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
 local i18n = require("i18n")
-tt = E:register_t_hot("decal_dracula_shoutbox", "decal_tween", true)
+tt = E:register_t("decal_dracula_shoutbox", "decal_tween", true)
 AC(tt, "texts", "timed")
 tt.render.sprites[1].name = "HalloweenBoss_tauntBox"
 tt.render.sprites[1].animated = false

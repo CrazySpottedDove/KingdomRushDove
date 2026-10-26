@@ -50,7 +50,7 @@ function M.register_templates(E)
 
 	local tt
 
-	tt = E:register_t_tmp("ps_power_rain_of_fire", "particle_system")
+	tt = E:register_t("ps_power_rain_of_fire", "particle_system")
 	tt.particle_system.name = "rain_of_fire_particle_action"
 	tt.particle_system.animated = true
 	tt.particle_system.loop = false
@@ -61,20 +61,20 @@ function M.register_templates(E)
 	tt.particle_system.emit_spread = math.pi * 2
 	tt.particle_system.emit_area_spread = v(6, 6)
 
-	tt = E:register_t_tmp("fx_power_rain_of_fire_hit", "fx")
+	tt = E:register_t("fx_power_rain_of_fire_hit", "fx")
 	tt.render.sprites[1].name = "hit"
 	tt.render.sprites[1].prefix = "rain_of_fire_hit"
 	tt.render.sprites[1].z = Z_OBJECTS
 	tt.render.sprites[1].sort_y_offset = -1
 
-	tt = E:register_t_tmp("decal_power_rain_of_fire_crack", "decal_tween")
+	tt = E:register_t("decal_power_rain_of_fire_crack", "decal_tween")
 	tt.render.sprites[1].name = "rain_of_fire_decal1"
 	tt.render.sprites[1].animated = false
 	tt.render.sprites[1].scale = v(1.2, 1.2)
 	tt.render.sprites[1].z = Z_DECALS
 	tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 
-	tt = E:register_t_tmp("decal_power_rain_of_fire_scorch", "decal_tween")
+	tt = E:register_t("decal_power_rain_of_fire_scorch", "decal_tween")
 	E:add_comps(tt, "main_script")
 	tt.render.sprites[1].prefix = "rain_of_fire_decal2"
 	tt.render.sprites[1].name = "loop"
@@ -91,7 +91,7 @@ function M.register_templates(E)
 		this.tween.disabled = false
 	end
 
-	tt = E:register_t_tmp("decal_power_rain_of_fire_extra_explosion", "decal_scripted")
+	tt = E:register_t("decal_power_rain_of_fire_extra_explosion", "decal_scripted")
 	E:add_comps(tt, "render", "aura")
 	tt.render.sprites[1].prefix = "rain_of_fire_hit_explosion"
 	tt.render.sprites[1].name = "hit"
@@ -128,7 +128,7 @@ function M.register_templates(E)
 		simulation:queue_remove_entity(this)
 	end
 
-	tt = E:register_t_tmp("aura_bullet_power_rain_of_fire_dmg", "aura")
+	tt = E:register_t("aura_bullet_power_rain_of_fire_dmg", "aura")
 	tt.aura.mod = "mod_bullet_power_rain_of_fire_burn"
 	tt.aura.radius = 50
 	tt.aura.vis_flags = bor(F_AREA)
@@ -138,7 +138,7 @@ function M.register_templates(E)
 	tt.main_script.insert = scripts.aura_apply_mod.insert
 	tt.main_script.update = scripts.aura_apply_mod.update
 
-	tt = E:register_t_tmp("aura_bullet_power_rain_of_fire_slow", "aura")
+	tt = E:register_t("aura_bullet_power_rain_of_fire_slow", "aura")
 	tt.aura.mod = "mod_bullet_power_rain_of_fire_slow"
 	tt.aura.radius = 50
 	tt.aura.vis_flags = bor(F_AREA)
@@ -148,13 +148,13 @@ function M.register_templates(E)
 	tt.main_script.insert = scripts.aura_apply_mod.insert
 	tt.main_script.update = scripts.aura_apply_mod.update
 
-	tt = E:register_t_tmp("mod_bullet_power_rain_of_fire_slow", "mod_slow")
+	tt = E:register_t("mod_bullet_power_rain_of_fire_slow", "mod_slow")
 	tt.slow.factor = 0.5
 	tt.modifier.duration = 0.5
 	tt.modifier.vis_flags = bor(F_MOD)
 	tt.main_script.insert = scripts.mod_slow.insert
 
-	tt = E:register_t_tmp("mod_bullet_power_rain_of_fire_burn", "modifier")
+	tt = E:register_t("mod_bullet_power_rain_of_fire_burn", "modifier")
 	E:add_comps(tt, "dps", "render", "tween")
 	tt.modifier.duration = 0.5
 	tt.modifier.vis_flags = bor(F_MOD, F_BURN)
@@ -173,7 +173,7 @@ function M.register_templates(E)
 	tt.main_script.update = scripts.mod_dps.update
 	tt.main_script.remove = scripts.tween_utils.reverse_remove
 
-	tt = E:register_t_tmp("bullet_power_rain_of_fire", "bullet")
+	tt = E:register_t("bullet_power_rain_of_fire", "bullet")
 	tt.bullet.min_speed = 13 * FPS
 	tt.bullet.max_speed = 13 * FPS
 	tt.bullet.acceleration_factor = 0
@@ -281,7 +281,7 @@ function M.register_templates(E)
 		simulation:queue_remove_entity(this)
 	end
 
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	tt.main_script.update = function(this, store)
 		local start_y = store.visible_coords and store.visible_coords.top or REF_H
 		local burst_interval = 0.33

@@ -76,7 +76,7 @@ function stage_02_arborean_baby2.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_arborean_baby_clickeable", "decal_scripted", true)
+tt = E:register_t("decal_arborean_baby_clickeable", "decal_scripted", true)
 E:add_comps(tt, "editor", "editor_script", "ui")
 tt.render.sprites[1].prefix = "arborean_baby"
 tt.main_script.update = stage_02_arborean_baby2.update

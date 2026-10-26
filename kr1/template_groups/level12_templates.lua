@@ -44,13 +44,13 @@ local function veznan_portal_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_burner_big", "decal_loop", true)
+tt = E:register_t("decal_burner_big", "decal_loop", true)
 tt.render.sprites[1].anchor = vec_2(0.5, 0.13)
 tt.render.sprites[1].name = "decal_burner_big_idle"
-tt = E:register_t_hot("decal_burner_small", "decal_loop", true)
+tt = E:register_t("decal_burner_small", "decal_loop", true)
 tt.render.sprites[1].anchor = vec_2(0.5, 0.11)
 tt.render.sprites[1].name = "decal_burner_small_idle"
-tt = E:register_t_hot("veznan_portal", "decal_scripted", true)
+tt = E:register_t("veznan_portal", "decal_scripted", true)
 AC(tt, "editor")
 tt.render.sprites[1].prefix = "veznan_portal"
 tt.render.sprites[1].z = Z_DECALS

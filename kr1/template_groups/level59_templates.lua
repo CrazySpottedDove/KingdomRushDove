@@ -60,7 +60,7 @@ local function decal_drow_queen_portal_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_drow_queen_portal", "decal_scripted", true)
+tt = E:register_t("decal_drow_queen_portal", "decal_scripted", true)
 AC(tt, "editor", "tween")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage11_portal_0001"
@@ -88,7 +88,7 @@ tt.tween.props[4].name = "scale"
 tt.tween.props[4].keys = {{0, vec_1(1)}, {fts(23), vec_1(1.2)}}
 tt.tween.props[4].loop = true
 tt.tween.props[4].ignore_reverse = true
-tt = E:register_t_hot("decal_s11_door_glow", "decal_tween", true)
+tt = E:register_t("decal_s11_door_glow", "decal_tween", true)
 AC(tt, "editor")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage11_doorGlow"
@@ -106,7 +106,7 @@ tt.editor.props = {{"editor.tag", PT_NUMBER}}
 tt.editor.overrides = {
 	["render.sprites[1].alpha"] = 255
 }
-tt = E:register_t_hot("decal_s11_zealot_rune", "decal_tween", true)
+tt = E:register_t("decal_s11_zealot_rune", "decal_tween", true)
 AC(tt, "editor")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].alpha = 0

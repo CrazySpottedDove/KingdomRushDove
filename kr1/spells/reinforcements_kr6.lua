@@ -150,7 +150,7 @@ function M.register_templates(E)
 
 	local tt
 
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	tt.main_script.insert = function(this, store)
 		local function set_name_if_female(variant, e)
 			if e.level == 1 and variant == 1 or (e.level == 2 or e.level == 3) and variant == 2 then
@@ -221,7 +221,7 @@ function M.register_templates(E)
 
 	E:set_template("user_power_3", tt)
 
-	tt = E:register_t_tmp("soldier_reinforcement_base_kr6", "soldier_militia")
+	tt = E:register_t("soldier_reinforcement_base_kr6", "soldier_militia")
 
 	E:add_comps(tt, "reinforcement", "nav_grid", "tween")
 	tt.controable = true
@@ -273,7 +273,7 @@ function M.register_templates(E)
 
 	E:set_template("re_current_kr6", tt)
 
-	tt = E:register_t_tmp("soldier_reinforcement_special_kr6", "soldier_militia")
+	tt = E:register_t("soldier_reinforcement_special_kr6", "soldier_militia")
 
 	E:add_comps(tt, "reinforcement", "nav_grid", "tween")
 	tt.controable = true
@@ -337,17 +337,17 @@ function M.register_templates(E)
 	tt.aura_in_t = "decal_power_reinforcements_special_kr6"
 	tt.aura_buff_t = "aura_power_reinforcement_special_kr6"
 
-	tt = E:register_t_tmp("fx_soldier_reinforcement_lvl3_kr6", "fx")
+	tt = E:register_t("fx_soldier_reinforcement_lvl3_kr6", "fx")
 	tt.render.sprites[1].prefix = "denas_reinforcements_lvl3_hit"
 	tt.render.sprites[1].name = "hit"
 
-	tt = E:register_t_tmp("decal_power_reinforcements_special_kr6", "decal_timed")
+	tt = E:register_t("decal_power_reinforcements_special_kr6", "decal_timed")
 	tt.render.sprites[1].prefix = "denas_reinforcements_lvl3_in"
 	tt.render.sprites[1].name = "decal"
 	tt.render.sprites[1].animated = true
 	tt.render.sprites[1].z = Z_DECALS
 
-	tt = E:register_t_tmp("aura_power_reinforcement_special_kr6", "aura")
+	tt = E:register_t("aura_power_reinforcement_special_kr6", "aura")
 	tt.aura.mods = {"mod_reinforcement_special_damage_kr6", "mod_reinforcement_special_armor_kr6"}
 	tt.aura.cycle_time = 0.2
 	tt.aura.duration = 0.2
@@ -361,7 +361,7 @@ function M.register_templates(E)
 	tt.main_script.insert = scripts.aura_apply_mod.insert
 	tt.main_script.update = scripts.aura_apply_mod.update
 
-	tt = E:register_t_tmp("mod_reinforcement_special_damage_kr6", "modifier")
+	tt = E:register_t("mod_reinforcement_special_damage_kr6", "modifier")
 	tt.modifier.duration = 12
 	tt.modifier.vis_flags = bor(F_MOD)
 	tt.modifier.use_mod_offset = false
@@ -370,7 +370,7 @@ function M.register_templates(E)
 	tt.main_script.remove = scripts.mod_damage_factors.remove
 	tt.main_script.update = scripts.mod_track_target.update
 
-	tt = E:register_t_tmp("mod_reinforcement_special_armor_kr6", "modifier")
+	tt = E:register_t("mod_reinforcement_special_armor_kr6", "modifier")
 	E:add_comps(tt, "render", "armor_buff", "tween")
 	tt.modifier.duration = 12
 	tt.modifier.vis_flags = bor(F_MOD)

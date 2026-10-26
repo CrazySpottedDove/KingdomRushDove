@@ -60,7 +60,7 @@ function decal_rabbit.update(this, store)
 	goto label_510_0
 end
 
-tt = E:register_t_hot("decal_rabbit", "decal_scripted", true)
+tt = E:register_t("decal_rabbit", "decal_scripted", true)
 AC(tt, "ui", "tween")
 tt.render.sprites[1].prefix = "decal_rabbit"
 tt.render.sprites[1].name = "ears"

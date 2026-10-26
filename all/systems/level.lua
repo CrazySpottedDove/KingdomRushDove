@@ -95,12 +95,12 @@ function level:init_coroutined(store)
 
 	-- power3 法术：在预编译前热注册本局选中法术的模板
 	SPELLS:register_templates(E)
-	E:precompile_hot()
 
 	-- 选中法术时对全体敌人额外加生命
 	DI:set_spell_hp_factor(SPELLS:hp_factor())
 	DI:patch_templates()
 	E:precompute()
+	E:clear_backup()
 	game.progress = 0.4
 	coroutine.yield()
 

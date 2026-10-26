@@ -2,7 +2,7 @@ local E = require("entity_db")
 require("all.constants")
 require("lib.klua.table")
 local tt
-tt = E:register_t_hot("decal_obelix", "decal_delayed_click_play", true)
+tt = E:register_t("decal_obelix", "decal_delayed_click_play", true)
 tt.render.sprites[1].prefix = "decal_obelix"
 tt.ui.click_rect = r(-50, -40, 100, 80)
 tt.ui.can_select = false

@@ -76,7 +76,7 @@ function decal_metropolis_portal.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_metropolis_floating_rock", "decal_tween", true)
+tt = E:register_t("decal_metropolis_floating_rock", "decal_tween", true)
 tt.render.sprites[1].animated = false
 tt.tween.random_ts = fts(80)
 tt.tween.remove = false
@@ -84,7 +84,7 @@ tt.tween.props[1].name = "offset"
 tt.tween.props[1].keys = {{0, vec_2(0, 1)}, {fts(20), vec_2(0, 2)}, {fts(40), vec_2(0, 1)}, {fts(60), vec_2(0, 0)}, {fts(80), vec_2(0, 1)}}
 tt.tween.props[1].loop = true
 
-tt = E:register_t_hot("decal_metropolis_portal", "decal_scripted", true)
+tt = E:register_t("decal_metropolis_portal", "decal_scripted", true)
 AC(tt, "tween", "editor")
 tt.main_script.update = decal_metropolis_portal.update
 tt.render.sprites[1].prefix = "decal_metropolis_portal"

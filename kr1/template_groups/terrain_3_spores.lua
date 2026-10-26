@@ -25,11 +25,11 @@ function controller_terrain_3_floating_elements.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("controller_terrain_3_floating_elements", nil, true)
+tt = E:register_t("controller_terrain_3_floating_elements", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.update = controller_terrain_3_floating_elements.update
 
-tt = E:register_t_hot("ps_terrain_3_spores_1", nil, true)
+tt = E:register_t("ps_terrain_3_spores_1", nil, true)
 E:add_comps(tt, "pos", "particle_system")
 tt.pos = v(512, -20)
 tt.particle_system.alphas = {200, 150, 200, 0}
@@ -44,6 +44,6 @@ tt.particle_system.ts_offset = -40
 tt.particle_system.z = Z_OBJECTS_SKY
 tt.particle_system.name = "T3_12_spore"
 
-tt = E:register_t_hot("ps_terrain_3_spores_2", "ps_terrain_3_spores_1", true)
+tt = E:register_t("ps_terrain_3_spores_2", "ps_terrain_3_spores_1", true)
 tt.particle_system.emit_direction = math.pi * 5 / 8
 

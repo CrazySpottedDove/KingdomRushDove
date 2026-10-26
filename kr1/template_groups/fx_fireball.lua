@@ -8,13 +8,13 @@ local P = require("path_db")
 local V = require("lib.klua.vector")
 local queue_damage = U.queue_damage
 local fts = U.fts
-local tt = E:register_t_tmp("fx_stage_32_redboy_transform_fire", "fx")
+local tt = E:register_t("fx_stage_32_redboy_transform_fire", "fx")
 tt.render.sprites[1].prefix = "dragon_redboy_transformDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].offset = v(0, -30)
 
-tt = E:register_t_tmp("fx_stage_32_fireball_right", "decal_scripted")
+tt = E:register_t("fx_stage_32_fireball_right", "decal_scripted")
 tt.main_script.update = function(this, store)
 	local function y_meteorite_shake(store, duration)
 		S:queue("TerrainWukongMeteoriteCast")
@@ -166,7 +166,7 @@ tt.path_fires = {
 	}
 }
 
-tt = E:register_t_tmp("fx_stage_32_fireball_left", "fx_stage_32_fireball_right")
+tt = E:register_t("fx_stage_32_fireball_left", "fx_stage_32_fireball_right")
 tt.render.sprites[1].prefix = "stage_32_fireball_lDef"
 tt.render.sprites[2].prefix = "stage_31_sign_decal_lDef"
 tt.path = 2
@@ -182,7 +182,7 @@ tt.path_fires = {
 	}
 }
 
-tt = E:register_t_tmp("fx_stage_35_fireball_left", "fx_stage_32_fireball_right")
+tt = E:register_t("fx_stage_35_fireball_left", "fx_stage_32_fireball_right")
 tt.render.sprites[1].prefix = "stage_35_fireball_lDef"
 tt.render.sprites[2].prefix = "stage5_samadhi_2Def"
 tt.kill_area_id = 1
@@ -191,7 +191,7 @@ tt.path_fires = {{
 	begin = 20
 }}
 
-tt = E:register_t_tmp("fx_stage_35_fireball_right", "fx_stage_32_fireball_right")
+tt = E:register_t("fx_stage_35_fireball_right", "fx_stage_32_fireball_right")
 tt.render.sprites[1].prefix = "stage_35_fireball_rDef"
 tt.render.sprites[2].prefix = "stage5_samadhi_1Def"
 tt.kill_area_id = 2

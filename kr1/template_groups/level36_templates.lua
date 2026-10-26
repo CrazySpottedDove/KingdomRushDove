@@ -5,7 +5,7 @@ require("lib.klua.table")
 local U = require("utils")
 local fts = U.fts
 local tt
-tt = E:register_t_hot("bomb_volcano", "bullet", true)
+tt = E:register_t("bomb_volcano", "bullet", true)
 tt.bullet.damage_max = 160
 tt.bullet.damage_min = 100
 tt.bullet.damage_radius = 50
@@ -26,13 +26,13 @@ tt.render.sprites[1].name = "Stage9_lavaShot"
 tt.sound_events.insert = "SpecialVolcanoLavaShoot"
 tt.sound_events.hit = "SpecialVolcanoLavaShootHit"
 tt.sound_events.remove = "BombExplosionSound"
-tt = E:register_t_hot("decal_volcano_bubble", "decal_delayed_play", true)
+tt = E:register_t("decal_volcano_bubble", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "volcano_lava"
 tt.render.sprites[1].name = "bubble"
 tt.delayed_play.min_delay = 5
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "bubble"
-tt = E:register_t_hot("decal_volcano_smoke", "decal_delayed_play", true)
+tt = E:register_t("decal_volcano_smoke", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "volcano_lava"
 tt.render.sprites[1].name = "smoke"
 tt.delayed_play.min_delay = 3

@@ -36,7 +36,7 @@ function decal_stage20_ruperto_easter_egg.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("stage_20_arborean_oldtree_tree_2", "decal_scripted", true)
+tt = E:register_t("stage_20_arborean_oldtree_tree_2", "decal_scripted", true)
 E:add_comps(tt, "nav_path", "motion", "custom_attack")
 tt.render.sprites[1].prefix = "arborean_woodDef"
 tt.render.sprites[1].name = "idle"
@@ -62,7 +62,7 @@ tt.custom_attack.cycle_time = 0.3
 tt.custom_attack.vis_flags = bor(F_RANGED)
 tt.custom_attack.vis_bans = bor(F_FLYING)
 
-tt = E:register_t_hot("decal_stage20_ruperto_easter_egg", "decal_scripted", true)
+tt = E:register_t("decal_stage20_ruperto_easter_egg", "decal_scripted", true)
 E:add_comps(tt)
 tt.render.sprites[1].prefix = "anim_arborean_ruperto_arborean"
 tt.render.sprites[1].name = "idle"
@@ -72,7 +72,7 @@ tt.appear_cd_min = 7
 tt.appear_cd_max = 14
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage20_ruperto_ruperto_easter_egg", "decal_scripted", true)
+tt = E:register_t("decal_stage20_ruperto_ruperto_easter_egg", "decal_scripted", true)
 E:add_comps(tt)
 tt.render.sprites[1].name = "anim_arborean_ruperto_ruperto"
 tt.render.sprites[1].animated = false

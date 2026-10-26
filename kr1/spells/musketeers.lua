@@ -70,7 +70,7 @@ function M.register_templates(E)
 
 	local tt
 
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	tt.main_script.insert = function(this, store)
 		local x, y = this.pos.x, this.pos.y
 
@@ -103,7 +103,7 @@ function M.register_templates(E)
 
 	E:set_template("user_power_3", tt)
 
-	tt = E:register_t_tmp("bullet_power_musketeers", "bullet")
+	tt = E:register_t("bullet_power_musketeers", "bullet")
 	tt.render.sprites[1].prefix = "Musketeers_Trail"
 	tt.render.sprites[1].name = "laser"
 	tt.render.sprites[1].draw_order = 4
@@ -120,12 +120,12 @@ function M.register_templates(E)
 	tt.image_width = 100
 	tt.ray_duration = fts(30)
 
-	tt = E:register_t_tmp("bullet_power_musketeers_l4a", "bullet_power_musketeers")
+	tt = E:register_t("bullet_power_musketeers_l4a", "bullet_power_musketeers")
 	tt.bullet.hit_fx = "fx_bullet_musketeers_l4a"
 	tt.bullet.damage_min = BASE.damage_min * 1.35
 	tt.bullet.damage_max = BASE.damage_max * 1.35
 
-	tt = E:register_t_tmp("bullet_power_musketeers_l5b", "bullet_power_musketeers")
+	tt = E:register_t("bullet_power_musketeers_l5b", "bullet_power_musketeers")
 	tt.render.sprites[1].prefix = nil
 	tt.render.sprites[1].name = "Musketeers_TrailInstakill"
 	tt.render.sprites[1].animated = true
@@ -137,7 +137,7 @@ function M.register_templates(E)
 	tt.image_width = 212.5
 	tt.ray_duration = fts(10)
 
-	tt = E:register_t_tmp("bullet_power_musketeers_l6", "bullet_power_musketeers")
+	tt = E:register_t("bullet_power_musketeers_l6", "bullet_power_musketeers")
 	tt.render.sprites[1].prefix = "Musketeers_TrailUlti"
 	tt.render.sprites[1].name = "laser"
 	tt.bullet.hit_fx = "fx_bullet_musketeers_l6"
@@ -235,26 +235,26 @@ function M.register_templates(E)
 		simulation:queue_remove_entity(this)
 	end
 
-	tt = E:register_t_tmp("fx_bullet_musketeers", "fx")
+	tt = E:register_t("fx_bullet_musketeers", "fx")
 	tt.render.sprites[1].prefix = "Musketeers_HitFX"
 	tt.render.sprites[1].name = "run"
 	tt.render.sprites[1].scale = vv(1.2)
 
-	tt = E:register_t_tmp("fx_bullet_musketeers_l4a", "fx")
+	tt = E:register_t("fx_bullet_musketeers_l4a", "fx")
 	tt.render.sprites[1].prefix = "Musketeers_HitFXExtraDMG"
 	tt.render.sprites[1].name = "run"
 
-	tt = E:register_t_tmp("fx_bullet_musketeers_l6", "fx")
+	tt = E:register_t("fx_bullet_musketeers_l6", "fx")
 	tt.render.sprites[1].prefix = "Musketeers_ExplosionUlti"
 	tt.render.sprites[1].name = "explode"
 	tt.render.sprites[1].anchor = v(0.5, 0.35)
 
-	tt = E:register_t_tmp("ps_bullet_musketeers_casing", "particle_system")
+	tt = E:register_t("ps_bullet_musketeers_casing", "particle_system")
 	tt.particle_system.name = "Musketeers_TrailBala_trail"
 	tt.particle_system.particle_lifetime = {fts(20), fts(20)}
 	tt.particle_system.emission_rate = 1
 
-	tt = E:register_t_tmp("fx_bullet_musketeer_casing")
+	tt = E:register_t("fx_bullet_musketeer_casing")
 	E:add_comps(tt, "pos", "render", "main_script", "tween")
 	tt.render.sprites[1].prefix = "Musketeers_Bala"
 	tt.render.sprites[1].name = "spin"
@@ -333,7 +333,7 @@ function M.register_templates(E)
 		this.tween.disabled = false
 	end
 
-	tt = E:register_t_tmp("decal_power_musketeers_fire_1", "decal_scripted")
+	tt = E:register_t("decal_power_musketeers_fire_1", "decal_scripted")
 	E:add_comps(tt, "tween")
 	tt.render.sprites[1].prefix = "Musketeers_UltiRandomDecal"
 	tt.render.sprites[1].name = "loop"
@@ -346,10 +346,10 @@ function M.register_templates(E)
 	tt.tween.props[1].reverse = false
 	tt.tween.disabled = true
 
-	tt = E:register_t_tmp("decal_power_musketeers_fire_2", "decal_power_musketeers_fire_1")
+	tt = E:register_t("decal_power_musketeers_fire_2", "decal_power_musketeers_fire_1")
 	tt.render.sprites[1].prefix = "Musketeers_UltiRandomDecal2"
 
-	tt = E:register_t_tmp("aura_power_musketeers_bullet_l6", "aura")
+	tt = E:register_t("aura_power_musketeers_bullet_l6", "aura")
 	tt.aura.radius = 50
 	tt.aura.vis_flags = bor(F_AREA)
 	tt.aura.vis_bans = bor(F_FRIEND, F_HERO)
@@ -362,11 +362,11 @@ function M.register_templates(E)
 	tt.aura.mod = "mod_power_musketeers_stun"
 	tt.main_script.update = scripts.aura_apply_damage.update
 
-	tt = E:register_t_tmp("mod_power_musketeers_stun", "mod_stun")
+	tt = E:register_t("mod_power_musketeers_stun", "mod_stun")
 	tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 	tt.modifier.duration = 2
 
-	tt = E:register_t_tmp("mod_power_musketeers_instakill_aim", "modifier")
+	tt = E:register_t("mod_power_musketeers_instakill_aim", "modifier")
 	E:add_comps(tt, "render")
 	tt.render.sprites[1].prefix = "Musketeers_MiraInstakill"
 	tt.render.sprites[1].name = "in"
@@ -377,7 +377,7 @@ function M.register_templates(E)
 	tt.main_script.update = scripts.mod_track_target.update
 	tt.main_script.remove = scripts.mod_track_target.remove
 
-	tt = E:register_t_tmp("soldier_musketeers", "soldier_militia")
+	tt = E:register_t("soldier_musketeers", "soldier_militia")
 	E:add_comps(tt, "reinforcement", "nav_grid", "tween", "ranged")
 	tt.health.armor = 0
 	tt.health.hp_max = BASE.hp_max

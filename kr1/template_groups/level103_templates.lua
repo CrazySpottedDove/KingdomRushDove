@@ -261,7 +261,7 @@ trees_heart_of_the_arborean_decal_update = function(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
-tt = E:register_t_tmp("trees_heart_of_the_arborean_decal_hit", "fx")
+tt = E:register_t("trees_heart_of_the_arborean_decal_hit", "fx")
 E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "explosiondecalDef"
 tt.render.sprites[1].name = "idle"
@@ -270,12 +270,12 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {1, 0}}
 
-tt = E:register_t_tmp("trees_heart_of_the_arborean_decal_hit_fx", "fx")
+tt = E:register_t("trees_heart_of_the_arborean_decal_hit_fx", "fx")
 tt.render.sprites[1].prefix = "explosionDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS - 1
-tt = E:register_t_hot("trees_heart_of_the_arborean_decal", "decal_scripted", true)
+tt = E:register_t("trees_heart_of_the_arborean_decal", "decal_scripted", true)
 E:add_comps(tt, "custom_attack", "ui", "cheats")
 tt.render.sprites[1].prefix = "heartDef"
 tt.render.sprites[1].name = "idleLoading"
@@ -311,7 +311,7 @@ end
 tt.sound_ready = "Stage03HeartOfTheForestReady"
 tt.sound_cast = "Stage03HeartOfTheForestCast"
 
-tt = E:register_t_hot("decal_stage_03_butterfly_2", "decal_delayed_play", true)
+tt = E:register_t("decal_stage_03_butterfly_2", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "stage_3_butterfly_2Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
@@ -321,11 +321,11 @@ tt.delayed_play.play_animation = "loop"
 tt.delayed_play.min_delay = 15
 tt.delayed_play.max_delay = 35
 
-tt = E:register_t_hot("controller_stage_03_arborean_babies", nil, true)
+tt = E:register_t("controller_stage_03_arborean_babies", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_03_arborean_babies_update
 
-tt = E:register_t_hot("decal_stage_03_elder_rune", "decal_click_play", true)
+tt = E:register_t("decal_stage_03_elder_rune", "decal_click_play", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage_3_decos_REF_elder_rune_3"
 tt.render.sprites[1].loop = true
@@ -338,13 +338,13 @@ tt.click_play.clicked_sound = "Stage0203Rune"
 tt.ui.can_click = true
 tt.ui.click_rect = r(-30, -30, 60, 60)
 
-tt = E:register_t_hot("trees_heart_of_the_arborean_shaman_water_decal", "decal", true)
+tt = E:register_t("trees_heart_of_the_arborean_shaman_water_decal", "decal", true)
 tt.render.sprites[1].prefix = "wavesDef"
 tt.render.sprites[1].name = "Idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_03_wisps", "decal", true)
+tt = E:register_t("decal_stage_03_wisps", "decal", true)
 tt.render.sprites[1].prefix = "stage_3_wisps_1Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
@@ -353,34 +353,34 @@ tt.render.sprites[2].prefix = "stage_3_wisps_2Def"
 tt.render.sprites[2].name = "loop"
 tt.render.sprites[2].exo = true
 
-tt = E:register_t_hot("decal_stage_03_river", "decal", true)
+tt = E:register_t("decal_stage_03_river", "decal", true)
 tt.render.sprites[1].prefix = "riverDef"
 tt.render.sprites[1].name = "riverRunning"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_03_heart_back_waves", "decal", true)
+tt = E:register_t("decal_stage_03_heart_back_waves", "decal", true)
 tt.render.sprites[1].prefix = "heart_back_wavesDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].loop = true
 
-tt = E:register_t_hot("decal_stage_03_heart_front_waves", "decal", true)
+tt = E:register_t("decal_stage_03_heart_front_waves", "decal", true)
 tt.render.sprites[1].prefix = "heart_front_wavesDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].loop = true
 
-tt = E:register_t_hot("stage3_decos_barriles2", "decal_scripted", true)
+tt = E:register_t("stage3_decos_barriles2", "decal_scripted", true)
 local time_between_animations = fts(30 * math.random(10, 30))
 tt.render.sprites[1].prefix = "stage3_decos_barriles2"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.animations = {{"action", time_between_animations}, {"idle", time_between_animations}}
 tt.main_script.update = scripts.decal_scripted_loop_play.update
 
-tt = E:register_t_hot("decal_stage_03_butterfly_3", "decal_delayed_play", true)
+tt = E:register_t("decal_stage_03_butterfly_3", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "stage_3_butterfly_3Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
@@ -390,7 +390,7 @@ tt.delayed_play.play_animation = "loop"
 tt.delayed_play.min_delay = 12
 tt.delayed_play.max_delay = 32
 
-tt = E:register_t_hot("decal_stage_03_fat_arborean", "decal_click_play", true)
+tt = E:register_t("decal_stage_03_fat_arborean", "decal_click_play", true)
 tt.render.sprites[1].prefix = "stage3_decos_gordito"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = vv(1.1)
@@ -404,7 +404,7 @@ tt.click_play.clicked_sound = "EasterEggCommonTap"
 tt.ui.can_click = true
 tt.ui.click_rect = r(-60, -10, 60, 60)
 
-tt = E:register_t_hot("decal_stage_03_butterfly_1", "decal_delayed_play", true)
+tt = E:register_t("decal_stage_03_butterfly_1", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "stage_3_butterfly_1Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
@@ -414,19 +414,19 @@ tt.delayed_play.play_animation = "loop"
 tt.delayed_play.min_delay = 10
 tt.delayed_play.max_delay = 30
 
-tt = E:register_t_hot("stage3_decos_barriles1", "decal_scripted", true)
+tt = E:register_t("stage3_decos_barriles1", "decal_scripted", true)
 local time_between_animations = fts(30 * math.random(10, 30))
 tt.render.sprites[1].prefix = "stage3_decos_barriles1"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.animations = {{"action", time_between_animations}, {"idle", time_between_animations}}
 tt.main_script.update = scripts.decal_scripted_loop_play.update
 
-tt = E:register_t_hot("stage_3_treeTop", "decal", true)
+tt = E:register_t("stage_3_treeTop", "decal", true)
 tt.render.sprites[1].name = "stage_3_treeTop"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("ps_bullet_stage_03_heart_of_the_arborean", nil, true)
+tt = E:register_t("ps_bullet_stage_03_heart_of_the_arborean", nil, true)
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "stage_3_HeartProy_trail"
 tt.particle_system.animated = true
@@ -437,7 +437,7 @@ tt.particle_system.emit_area_spread = vv(0)
 tt.particle_system.scales_y = {1, 0.5}
 tt.particle_system.scales_x = {1, 0.5}
 
-tt = E:register_t_hot("decal_bullet_stage_03_heart_of_the_arborean", "decal", true)
+tt = E:register_t("decal_bullet_stage_03_heart_of_the_arborean", "decal", true)
 E:add_comps(tt, "tween")
 tt.render.sprites[1].name = "explosiondecal_asst_heart_decal"
 tt.render.sprites[1].animated = false
@@ -446,7 +446,7 @@ tt.tween.disabled = false
 tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 255}, {3, 255}, {4, 0}}
 
-tt = E:register_t_hot("bullet_stage_03_heart_of_the_arborean", "bolt", true)
+tt = E:register_t("bullet_stage_03_heart_of_the_arborean", "bolt", true)
 E:add_comps(tt, "force_motion")
 tt.render.sprites[1].prefix = "stage_3_HeartProy_proyectile"
 tt.render.sprites[1].name = "run"
@@ -638,7 +638,7 @@ tt.force_motion.max_a = 1800
 tt.force_motion.max_v = 600
 tt.sound_events.insert = nil
 
-tt = E:register_t_hot("trees_heart_of_the_arborean_shaman_decal", "decal_scripted", true)
+tt = E:register_t("trees_heart_of_the_arborean_shaman_decal", "decal_scripted", true)
 tt.render.sprites[1].prefix = "shamanDef"
 tt.render.sprites[1].name = "Idle"
 tt.render.sprites[1].exo = true

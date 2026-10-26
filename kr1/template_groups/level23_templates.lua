@@ -16,11 +16,11 @@ local function decal_s23_splinter_pizza_update(this, store)
 	return scripts.click_play.update(this, store)
 end
 local tt
-tt = E:register_t_hot("decal_s23_splinter", "decal_click_play", true)
+tt = E:register_t("decal_s23_splinter", "decal_click_play", true)
 tt.render.sprites[1].prefix = "decal_s23_splinter"
 tt.ui.can_select = false
 tt.ui.click_rect.pos.x = -6
 tt.ui.click_rect.size.x = 25
-tt = E:register_t_hot("decal_s23_splinter_pizza", "decal_s23_splinter", true)
+tt = E:register_t("decal_s23_splinter_pizza", "decal_s23_splinter", true)
 tt.main_script.update = decal_s23_splinter_pizza_update
 tt.render.sprites[1].prefix = "decal_s23_splinter_pizza"

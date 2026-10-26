@@ -59,7 +59,7 @@ function M.register_templates(E)
 	local tt
 
 	-- 控制实体：点击地面 -> 在合法节点召唤索罗化身
-	tt = E:register_t_tmp(M.control, "power_control_custom")
+	tt = E:register_t(M.control, "power_control_custom")
 	tt.main_script.insert = function(this, store)
 		local e = E:create_entity("soldier_aspect_of_sol")
 
@@ -109,7 +109,7 @@ function M.register_templates(E)
 	E:set_template("user_power_3", tt)
 
 	-- 索罗化身本体
-	tt = E:register_t_tmp("soldier_aspect_of_sol", "soldier_militia")
+	tt = E:register_t("soldier_aspect_of_sol", "soldier_militia")
 
 	E:add_comps(tt, "reinforcement", "timed_attacks", "nav_grid")
 
@@ -454,31 +454,31 @@ function M.register_templates(E)
 	tt.sound_events.insert = "PowersAspectOfSolSummonTaunt"
 	tt.sound_events.change_rally_point = "PowersAspectOfSolMoveTaunt"
 	tt.ui.click_rect = r(-25, -2, 50, 50)
-	tt = E:register_t_tmp("decal_power_aspect_of_sol_beam", "decal_timed")
+	tt = E:register_t("decal_power_aspect_of_sol_beam", "decal_timed")
 	tt.render.sprites[1].prefix = "aspectofsol_beam"
 	tt.render.sprites[1].name = "run"
 	tt.render.sprites[1].animated = true
 	tt.render.sprites[1].z = Z_OBJECTS
-	tt = E:register_t_tmp("decal_power_aspect_of_sol_smoke", "decal_timed")
+	tt = E:register_t("decal_power_aspect_of_sol_smoke", "decal_timed")
 	tt.render.sprites[1].prefix = "aspectofsol_humo_land"
 	tt.render.sprites[1].name = "run"
 	tt.render.sprites[1].animated = true
 	tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 	tt.render.sprites[1].offset = v(5, -5)
-	tt = E:register_t_tmp("decal_power_aspect_of_sol_crack", "decal_timed")
+	tt = E:register_t("decal_power_aspect_of_sol_crack", "decal_timed")
 	tt.render.sprites[1].prefix = "aspectofsol_decal"
 	tt.render.sprites[1].name = "crack"
 	tt.render.sprites[1].animated = true
 	tt.render.sprites[1].z = Z_DECALS
-	tt = E:register_t_tmp("fx_soldier_aspect_of_sol_basic_hit", "fx")
+	tt = E:register_t("fx_soldier_aspect_of_sol_basic_hit", "fx")
 	tt.render.sprites[1].prefix = "aspectofsol_hit"
 	tt.render.sprites[1].name = "run"
-	tt = E:register_t_tmp("fx_soldier_aspect_of_sol_special_hit", "fx")
+	tt = E:register_t("fx_soldier_aspect_of_sol_special_hit", "fx")
 	tt.render.sprites[1].prefix = "aspectofsol_hit_fuerte"
 	tt.render.sprites[1].name = "run"
 	tt.render.sprites[1].scale = v(2, 2)
 
-	tt = E:register_t_tmp("mod_power_aspect_of_sol_warcry_dmg_inc", "modifier")
+	tt = E:register_t("mod_power_aspect_of_sol_warcry_dmg_inc", "modifier")
 	E:add_comps(tt, "render")
 	tt.modifier.duration = 5
 	tt.modifier.vis_flags = bor(F_MOD)
@@ -492,7 +492,7 @@ function M.register_templates(E)
 	tt.render.sprites[1].exo = true
 	tt.render.sprites[1].z = Z_DECALS
 
-	tt = E:register_t_tmp("mod_power_aspect_of_sol_warcry_armor_inc", "modifier")
+	tt = E:register_t("mod_power_aspect_of_sol_warcry_armor_inc", "modifier")
 	E:add_comps(tt, "armor_buff")
 	tt.modifier.duration = 5
 	tt.modifier.vis_flags = bor(F_MOD)
@@ -502,16 +502,16 @@ function M.register_templates(E)
 	tt.main_script.insert = scripts.mod_armor_buff.insert
 	tt.main_script.update = scripts.mod_armor_buff.update
 	tt.main_script.remove = scripts.mod_armor_buff.remove
-	tt = E:register_t_tmp("mod_power_aspect_of_sol_warcry_slow", "mod_slow")
+	tt = E:register_t("mod_power_aspect_of_sol_warcry_slow", "mod_slow")
 	tt.slow.factor = 0.5
 	tt.modifier.duration = 6
 	tt.modifier.vis_flags = bor(F_MOD)
-	tt = E:register_t_tmp("mod_power_aspect_of_sol_stun", "mod_stun")
+	tt = E:register_t("mod_power_aspect_of_sol_stun", "mod_stun")
 	tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 	tt.modifier.duration = 2
 	tt.modifier.use_mod_offset = false
 	tt.modifier.animation_phases = false
-	tt = E:register_t_tmp("aura_power_aspect_of_sol_summon", "aura")
+	tt = E:register_t("aura_power_aspect_of_sol_summon", "aura")
 	tt.aura.radius = 100
 	tt.aura.vis_flags = bor(F_AREA)
 	tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)

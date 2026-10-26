@@ -22347,109 +22347,112 @@ local function shadow_crow_force_move_step(this, store, dest, max_speed, ramp_ra
 end
 
 function scripts.shadow_crow.update(this, store)
-	if not this.owner then
-		simulation:queue_remove_entity(this)
+	local initialized = false
+	local context = {}
+	while true do
+		if not this.owner then
+			simulation:queue_remove_entity(this)
 
-		return
-	end
-
-	local context = this.main_script.context
-
-	if context.state == 0 then
-		context.search_ts = store.tick_ts
-		context.state = 1
-		context.dest = V.vclone(this.idle_pos)
-	end
-
-	local mytarget = context.mytarget
-
-	if mytarget and (mytarget.health.dead or mytarget.health.armor <= 0 or not store.entities[mytarget.id] or this.idle_pos:dist2(mytarget.pos) > this.owner.attacks.range * 1.44 * this.owner.attacks.range) then
-		context.mytarget = nil
-		mytarget = nil
-	end
-
-	if not mytarget and context.search_ts < store.tick_ts then
-		context.search_ts = store.tick_ts
-
-		local enemies = U.find_enemies_in_range_filter_off(tpos(this.owner), this.owner.attacks.range * 1.2, this.custom_attack.vis_flags, this.custom_attack.vis_bans)
-
-		if enemies then
-			mytarget = enemies[1]
-
-			for i = 2, #enemies do
-				local candidate = enemies[i]
-
-				if candidate.health.armor > 0 and mytarget.health.armor <= 0 then
-					mytarget = candidate
-				elseif candidate.health.armor <= 0 and mytarget.health.armor > 0 then
-				-- do nothing
-				elseif this.pos:dist2(candidate.pos) < this.pos:dist2(mytarget.pos) then
-					mytarget = candidate
-				end
-			end
-
-			context.mytarget = mytarget
-		else
-			context.search_ts = context.search_ts + fts(5)
+			return
 		end
-	end
 
-	if mytarget then
-		if not this.owner.tower.blocked then
-			local target = store.entities[mytarget.id]
-			local effective_chase_speed = math.max(this.flight_speed_busy - (target.motion and target.motion.max_speed or 0) * 0.5, this.flight_speed_busy * 0.3)
-			local lead_time = math.max(0.06, math.min(V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) / effective_chase_speed, 0.6)) * 1.8
-			local dest = context.dest
+		if not initialized then
+			initialized = true
+			context.search_ts = store.tick_ts
+			context.dest = V.vclone(this.idle_pos)
+		end
 
-			if target.motion and target.motion.speed then
-				dest:copy(target.pos)
-				dest:scalar_add(target.motion.speed.x * lead_time, target.motion.speed.y * lead_time)
+		local mytarget = context.mytarget
+
+		if mytarget and (mytarget.health.dead or mytarget.health.armor <= 0 or not store.entities[mytarget.id] or this.idle_pos:dist2(mytarget.pos) > this.owner.attacks.range * 1.44 * this.owner.attacks.range) then
+			context.mytarget = nil
+			mytarget = nil
+		end
+
+		if not mytarget and context.search_ts < store.tick_ts then
+			context.search_ts = store.tick_ts
+
+			local enemies = U.find_enemies_in_range_filter_off(tpos(this.owner), this.owner.attacks.range * 1.2, this.custom_attack.vis_flags, this.custom_attack.vis_bans)
+
+			if enemies then
+				mytarget = enemies[1]
+
+				for i = 2, #enemies do
+					local candidate = enemies[i]
+
+					if candidate.health.armor > 0 and mytarget.health.armor <= 0 then
+						mytarget = candidate
+					elseif candidate.health.armor <= 0 and mytarget.health.armor > 0 then
+					-- do nothing
+					elseif this.pos:dist2(candidate.pos) < this.pos:dist2(mytarget.pos) then
+						mytarget = candidate
+					end
+				end
+
+				context.mytarget = mytarget
 			else
-				dest:copy(P:predict_enemy_pos(target, lead_time))
-			end
-
-			local random_theta = U.frandom(0, 2 * math.pi)
-
-			dest:scalar_add(10 * math.cos(random_theta), 10 * math.sin(random_theta))
-			U.animation_start_default(this, "fly", nil, store.tick_ts, true)
-			shadow_crow_force_move_step(this, store, dest, this.flight_speed_busy, this.ramp_dist_busy, 4200)
-
-			local ca = this.custom_attack
-
-			if ready_to_attack(ca, store, this.owner.tower.cooldown_factor) and this.pos:dist2(target.pos) <= 2500 then
-				U.animation_start_default(this, "carry", nil, store.tick_ts, true)
-
-				local d = E.assign_damage(ca.damage_type, math.random(ca.damage_min, ca.damage_max) * this.owner.tower.damage_factor, this.id, target.id)
-
-				queue_damage(store, d)
-
-				d = E.assign_damage(DAMAGE_ARMOR, this.damage_armor, this.id, target.id)
-
-				queue_damage(store, d)
-
-				ca.ts = store.tick_ts
-
-				local fx = E:create_entity(ca.hit_fx)
-
-				fx.pos:copy(target.pos)
-
-				if target.unit and target.unit.hit_offset then
-					fx.pos:add(target.unit.hit_offset)
-				end
-
-				fx.render.sprites[1].ts = store.tick_ts
-
-				simulation:queue_insert_entity(fx)
-
-				if this.custom_attack.sound_chance > math.random() then
-					S:queue(this.custom_attack.sound)
-				end
+				context.search_ts = context.search_ts + fts(5)
 			end
 		end
-	else
-		context.dest:copy(this.idle_pos)
-		U.animation_start_default(this, "fly", nil, store.tick_ts, true)
-		shadow_crow_force_move_step(this, store, context.dest, this.flight_speed_idle, this.ramp_dist_idle, 700)
+
+		if mytarget then
+			if not this.owner.tower.blocked then
+				local target = store.entities[mytarget.id]
+				local effective_chase_speed = math.max(this.flight_speed_busy - (target.motion and target.motion.max_speed or 0) * 0.5, this.flight_speed_busy * 0.3)
+				local lead_time = math.max(0.06, math.min(V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) / effective_chase_speed, 0.6)) * 1.8
+				local dest = context.dest
+
+				if target.motion and target.motion.speed then
+					dest:copy(target.pos)
+					dest:scalar_add(target.motion.speed.x * lead_time, target.motion.speed.y * lead_time)
+				else
+					dest:copy(P:predict_enemy_pos(target, lead_time))
+				end
+
+				local random_theta = U.frandom(0, 2 * math.pi)
+
+				dest:scalar_add(10 * math.cos(random_theta), 10 * math.sin(random_theta))
+				U.animation_start_default(this, "fly", nil, store.tick_ts, true)
+				shadow_crow_force_move_step(this, store, dest, this.flight_speed_busy, this.ramp_dist_busy, 4200)
+
+				local ca = this.custom_attack
+
+				if ready_to_attack(ca, store, this.owner.tower.cooldown_factor) and this.pos:dist2(target.pos) <= 2500 then
+					U.animation_start_default(this, "carry", nil, store.tick_ts, true)
+
+					local d = E.assign_damage(ca.damage_type, math.random(ca.damage_min, ca.damage_max) * this.owner.tower.damage_factor, this.id, target.id)
+
+					queue_damage(store, d)
+
+					d = E.assign_damage(DAMAGE_ARMOR, this.damage_armor, this.id, target.id)
+
+					queue_damage(store, d)
+
+					ca.ts = store.tick_ts
+
+					local fx = E:create_entity(ca.hit_fx)
+
+					fx.pos:copy(target.pos)
+
+					if target.unit and target.unit.hit_offset then
+						fx.pos:add(target.unit.hit_offset)
+					end
+
+					fx.render.sprites[1].ts = store.tick_ts
+
+					simulation:queue_insert_entity(fx)
+
+					if this.custom_attack.sound_chance > math.random() then
+						S:queue(this.custom_attack.sound)
+					end
+				end
+			end
+		else
+			context.dest:copy(this.idle_pos)
+			U.animation_start_default(this, "fly", nil, store.tick_ts, true)
+			shadow_crow_force_move_step(this, store, context.dest, this.flight_speed_idle, this.ramp_dist_idle, 700)
+		end
+		coroutine.yield()
 	end
 end
 
@@ -26377,47 +26380,50 @@ end
 scripts.tower_balloon = {}
 
 function scripts.tower_balloon.update(this, store)
-	local b = this.barrack
+	while true do
+		local b = this.barrack
 
-	if #b.soldiers == 0 then
-		local balloon = E:create_entity(this.barrack.soldier_type)
+		if #b.soldiers == 0 then
+			local balloon = E:create_entity(this.barrack.soldier_type)
 
-		balloon.pos.x, balloon.pos.y = this.pos.x, this.pos.y + 16
-		balloon.nav_rally.pos.x, balloon.nav_rally.pos.y = this.tower.default_rally_pos.x, this.tower.default_rally_pos.y
-		balloon.nav_rally.new = true
-		balloon.owner = this
-		balloon.wick_mode = 1
+			balloon.pos.x, balloon.pos.y = this.pos.x, this.pos.y + 16
+			balloon.nav_rally.pos.x, balloon.nav_rally.pos.y = this.tower.default_rally_pos.x, this.tower.default_rally_pos.y
+			balloon.nav_rally.new = true
+			balloon.owner = this
+			balloon.wick_mode = 1
 
-		SU.change_fps(store.tick_ts, balloon, this.tower.cooldown_factor_divider)
-		simulation:queue_insert_entity(balloon)
-		table.insert(this.barrack.soldiers, balloon)
-	end
-
-	if this.powers.oil.changed then
-		this.powers.oil.changed = nil
-
-		for i, s in ipairs(b.soldiers) do
-			s.powers.oil.changed = true
-			s.powers.oil.level = this.powers.oil.level
+			SU.change_fps(store.tick_ts, balloon, this.tower.cooldown_factor_divider)
+			simulation:queue_insert_entity(balloon)
+			table.insert(this.barrack.soldiers, balloon)
 		end
-	end
 
-	if this.powers.watcher.changed then
-		this.powers.watcher.changed = nil
+		if this.powers.oil.changed then
+			this.powers.oil.changed = nil
 
-		for i, s in ipairs(b.soldiers) do
-			s.powers.watcher.changed = true
-			s.powers.watcher.level = this.powers.watcher.level
+			for i, s in ipairs(b.soldiers) do
+				s.powers.oil.changed = true
+				s.powers.oil.level = this.powers.oil.level
+			end
 		end
-	end
 
-	if this.powers.bomber.changed then
-		this.powers.bomber.changed = nil
+		if this.powers.watcher.changed then
+			this.powers.watcher.changed = nil
 
-		for i, s in ipairs(b.soldiers) do
-			s.powers.bomber.changed = true
-			s.powers.bomber.level = this.powers.bomber.level
+			for i, s in ipairs(b.soldiers) do
+				s.powers.watcher.changed = true
+				s.powers.watcher.level = this.powers.watcher.level
+			end
 		end
+
+		if this.powers.bomber.changed then
+			this.powers.bomber.changed = nil
+
+			for i, s in ipairs(b.soldiers) do
+				s.powers.bomber.changed = true
+				s.powers.bomber.level = this.powers.bomber.level
+			end
+		end
+		coroutine.yield()
 	end
 end
 

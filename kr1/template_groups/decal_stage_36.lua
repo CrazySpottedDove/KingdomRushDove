@@ -168,7 +168,7 @@ function decal_stage_36_mask_islas.insert(this, store, script)
 	return true
 end
 
-tt = E:register_t_hot("decal_stage_36_mask_islas", "decal_tween", true)
+tt = E:register_t("decal_stage_36_mask_islas", "decal_tween", true)
 E:add_comps(tt, "main_script")
 tt.main_script.insert = decal_stage_36_mask_islas.insert
 tt.islas_levels = {
@@ -316,7 +316,7 @@ end
 tt.temp_i = nil
 tt.tween.remove = false
 
-tt = E:register_t_hot("decal_stage_36_easter_egg_spyro", "decal_scripted", true)
+tt = E:register_t("decal_stage_36_easter_egg_spyro", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.insert = decal_stage_36_easter_egg_spyro.insert
 tt.main_script.update = decal_stage_36_easter_egg_spyro.update
