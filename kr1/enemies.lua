@@ -12606,7 +12606,6 @@ tt.melee.attacks[2].damage_bans = bor(F_HERO, F_FLYING)
 tt.melee.attacks[2].damage_flags = bor(F_INSTAKILL, F_AREA)
 tt.melee.attacks[2].hit_offset = v(50, 0)
 tt.melee.attacks[2].sound = "Stage39MinibossInstakill"
-tt.melee.attacks[2].mod = "mod_enemy_miniboss_stage_39_instakill"
 tt.motion.max_speed = 12
 tt.render.sprites[1].prefix = "mini_boss_creep"
 tt.render.sprites[1].angles.walk = {"walk", "walk", "walk_down"}
@@ -12618,9 +12617,6 @@ tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.vis.bans = bor(F_TELEPORT)
 tt.sound_events.death = "Stage39MinibossDeath"
 tt.health.dead_lifetime = 3
-
-tt = RT("mod_enemy_miniboss_stage_39_instakill", "modifier")
-tt.main_script.insert = scripts.mod_enemy_miniboss_stage_39_instakill.insert
 
 tt = RT("bullet_enemy_basic_acid", "arrow")
 tt.render.sprites[1].prefix = "acid_basic_proyectil"
