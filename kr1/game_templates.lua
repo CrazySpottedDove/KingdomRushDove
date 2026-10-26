@@ -9125,6 +9125,7 @@ tt.modifier.duration = fts(80)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+
 tt = E:register_t("mod_enemy_crocs_tank_charge_soldier", "modifier")
 E:add_comps(tt, "dps")
 tt.dps.damage_min = 62
@@ -9133,7 +9134,7 @@ tt.dps.damage_every = fts(10)
 tt.dps.fx = "fx_crocs_tank_spin_hit"
 tt.modifier.duration = fts(7)
 tt.main_script.insert = scripts.mod_dps.insert
-tt.main_script.update = scripts.mod_enemy_crocs_tank_charge_soldier.update
+tt.main_script.update = scripts.mod_dps.update
 
 tt = E:register_t("mod_enemy_crocs_shaman_healing", "modifier")
 E:add_comps(tt, "render", "tween", "hps")

@@ -10491,7 +10491,7 @@ tt.bullet.damage_max_config = {11, 19, 30, 42}
 tt.bullet.damage_min_config = {7, 14, 19, 28}
 tt.bullet.level = 1
 tt.render = nil
-tt.main_script.update = scripts.bullet_hero_hunter_ultimate_ranged_attack.update
+tt.main_script.update = scripts.bullet_hero_hunter_ranged_attack.update
 
 tt = RT("aura_hero_hunter_shoot_around", "aura")
 tt.aura.duration = nil

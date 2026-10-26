@@ -314,6 +314,7 @@ cliff.speed_factor = 0.7
 cliff.fall_accel = 300
 cliff.last_terrain_type = nil
 cliff.fall_to_pos = nil
+cliff.kill_on_stun = nil
 
 local user_selection = E:register_c("user_selection")
 user_selection.allowed = false
