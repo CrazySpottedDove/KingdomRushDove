@@ -135,7 +135,7 @@ tt.damage_base = 25
 tt = RT("decalmod_arcane_wizard_disintegrate_ready", "modifier")
 AC(tt, "render", "tween")
 tt.main_script.insert = scripts.mod_tower_decal.insert
-tt.main_script.remove = scripts.mod_tower_decal.remove
+tt.main_script.remove = nil
 tt.tween.remove = false
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].loop = true
@@ -770,7 +770,7 @@ tt.initial_impulse_angle = math.pi / 3
 tt.force_motion.a_step = 5
 tt.force_motion.max_a = 3000
 tt.force_motion.max_v = 300
-tt.main_script.insert = scripts.bolt_elves.insert
+tt.main_script.insert = nil
 tt.main_script.update = scripts.bolt_elves.update
 tt.render.sprites[1].prefix = "bolt_elves"
 tt.render.sprites[1].name = "travel"
@@ -5045,7 +5045,7 @@ tt.hit_delay = fts(1)
 tt.end_animation = "fade"
 
 tt = RT("bullet_sunray_master_rapid_fire", "bullet")
-tt.main_script.insert = scripts.bolt_curve.insert
+tt.main_script.insert = nil
 tt.main_script.update = scripts.bolt_curve.update
 tt.render.sprites[1].prefix = "sunray_master_attack_2_projectile"
 tt.render.sprites[1].name = "idle"

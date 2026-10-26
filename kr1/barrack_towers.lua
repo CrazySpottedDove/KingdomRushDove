@@ -3114,12 +3114,12 @@ tt.bullet.damage_radius_inc = 0
 tt.bullet.damage_inc = 6
 tt.bullet.damage_flags = F_AREA
 tt.main_script.update = scripts.bolt_blast.update
+
 tt = E:register_t("fx_soldier_priests_barrack_bolt_explosion", "fx")
 tt.render.sprites[1].name = "priest_ranged_hit"
+
 tt = E:register_t("soldier_abomination_priests_barrack", "soldier_militia")
-
 E:add_comps(tt, "reinforcement", "nav_grid")
-
 tt.health.hp_max = 450
 tt.health.armor = 0
 tt.regen.health = 0
