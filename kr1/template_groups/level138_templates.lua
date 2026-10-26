@@ -5,7 +5,6 @@ local U = require("utils")
 local V = require("lib.klua.vector")
 local fts = U.fts
 require("lib.klua.table")
-local ACH = require("achievements")
 local scripts = require("scripts")
 local v = V.v
 local r = V.r
@@ -65,7 +64,6 @@ decal_stage_38_easter_ender_egg_update = function(this, store, script)
 		U.y_animation_play(this, "tp_out", nil, store.tick_ts, 1, 1)
 		U.sprites_hide(this, nil, nil, true)
 		U.y_wait_unconditional(store, 0.2)
-		ACH:got("DLC3_ENDER_EGG")
 		simulation:queue_remove_entity(this)
 	end
 	while true do
@@ -119,7 +117,6 @@ decal_stage_38_to_the_stars_update = function(this, store, script)
 				U.y_wait_unconditional(store, fts(50))
 				U.y_animation_play(this, "banish", nil, store.tick_ts, 1, 1)
 				U.y_wait_unconditional(store, 0.2)
-				ACH:got("DLC3_TOUCH_DRAGON")
 				simulation:queue_remove_entity(this)
 				return
 			end

@@ -2,7 +2,6 @@ require("lib.klua.table")
 require("i18n")
 
 local scripts = require("hero_scripts")
-local AC = require("achievements")
 local log = require("lib.klua.log"):new("tower_scripts")
 
 require("lib.klua.table")
@@ -808,7 +807,6 @@ scripts.tower_crossbow = {
 							apply_precision(b)
 							simulation:queue_insert_entity(b)
 
-							-- AC:inc_check("BOLTOFTHESUN", 1)
 							while store.tick_ts - loop_ts < ma.cycle_time do
 								coroutine.yield()
 							end
@@ -3058,7 +3056,6 @@ function scripts.twister.update(this, store)
 				if enemies then
 					for _, enemy in ipairs(enemies) do
 						if enemies_max > #picked_enemies then
-							-- AC:inc_check("FUJITA5", 1)
 							table.insert(picked_enemies, enemy)
 							SU.remove_modifiers(store, enemy)
 							SU.remove_auras(store, enemy)
@@ -4030,7 +4027,6 @@ scripts.tower_sunray = {
 				end
 
 				U.y_animation_wait_group(this, group_tower)
-				AC:inc_check("SUN_BURNER")
 			end
 
 			::continue::
@@ -4280,8 +4276,6 @@ scripts.tower_bfg = {
 						b.bullet.to = v(b.pos.x + am.launch_vector.x, b.pos.y + am.launch_vector.y)
 						b.bullet.damage_max = b.bullet.damage_max + pow_m.damage_inc * pow_m.level
 						b.bullet.damage_min = b.bullet.damage_min + pow_m.damage_inc * pow_m.level
-
-						AC:inc_check("ROCKETEER")
 
 						b.bullet.target_id = enemy and enemy.id or trigger.id
 						b.bullet.source_id = this.id
@@ -4958,7 +4952,6 @@ scripts.tower_entwood = {
 							end
 						end
 
-						-- AC:high_check("HEAVY_WEIGHT", stun_count)
 						U.y_animation_wait_group(this, "layers")
 
 						goto label_43_0
@@ -4968,7 +4961,6 @@ scripts.tower_entwood = {
 				end
 
 				if loaded == "fiery_nuts" and do_attack(fa) then
-				-- AC:inc_check("WILDFIRE_HARVEST")
 				elseif loaded == "default" and store.tick_ts - aa.ts > aa.cooldown * this.tower.cooldown_factor and do_attack(aa) then
 				-- block empty
 				elseif blink_cooldown < store.tick_ts - blink_ts then

@@ -204,7 +204,6 @@ trees_guardian_tree_update = function(this, store)
 end
 local tt
 local decal_stage_02_rune
-local ACH = require("achievements")
 decal_stage_02_rune = {}
 
 function decal_stage_02_rune.insert(this, store)
@@ -250,15 +249,6 @@ function decal_stage_02_rune.update(this, store)
 				U.animation_start_default(this, c.idle_animation, nil, store.tick_ts, true)
 			end
 
-			signal.emit("achievements_custom_event", "RUNEQUEST_2")
-
-			if c.achievement then
-				ACH:got(c.achievement)
-			end
-
-			if c.achievement_flag then
-				ACH:flag_check(unpack(c.achievement_flag))
-			end
 		end
 
 		coroutine.yield()

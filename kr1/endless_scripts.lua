@@ -350,7 +350,6 @@ function scripts.endless_mage_thunder.update(this, store)
 				queue_damage(store, d)
 			end
 		end
-	-- AC:inc_check("LIGHTNING_CAST")
 	end
 
 	local visited = {}

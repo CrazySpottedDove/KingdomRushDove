@@ -1,6 +1,5 @@
 local E = require("entity_db")
 local U = require("utils")
-local A = require("achievements")
 require("all.constants")
 require("lib.klua.table")
 local r = V.r
@@ -19,7 +18,6 @@ local function decal_fredo_update(this, store)
 			this.ui.can_click = false
 			U.animation_start_default(this, "release", nil, store.tick_ts, false)
 			U.y_animation_wait_default(this)
-			A:got("FREE_FREDO")
 			simulation:queue_remove_entity(this)
 		end
 		coroutine.yield()

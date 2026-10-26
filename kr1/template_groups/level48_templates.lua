@@ -1,7 +1,6 @@
 local V = require("lib.klua.vector")
 local E = require("entity_db")
 local U = require("utils")
-local A = require("achievements")
 local scripts = require("scripts")
 require("all.constants")
 require("lib.klua.table")

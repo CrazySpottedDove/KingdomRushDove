@@ -87,7 +87,6 @@ tt.taunts.sets.right_head.end_idx = 8
 tt.taunts.sets.right_head.format = "ELVES_ENEMY_DEATH_TAUNT_%04i"
 tt.taunts.sets.right_head.decal_name = "decal_s18_shoutbox"
 tt.taunts.sets.right_head.pos = vec_2(791, 680)
-local A = require("achievements")
 local km = require("lib.klua.macros")
 tt = E:register_t("fx_roadruner_bush_explode", "fx", true)
 tt.render.sprites[1].name = "gnollBush_explode"

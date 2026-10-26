@@ -6,7 +6,6 @@ require("lib.klua.table")
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
 local A = require("animation_db")
-local AC = require("achievements")
 local E = require("entity_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
@@ -157,18 +156,6 @@ function scripts.delayed_play.update(this, store)
 					U.y_animation_play(this, d.clicked_animation, nil, store.tick_ts, 1)
 				end
 
-				if d.achievement then
-					AC:got(d.achievement)
-				end
-
-				if d.achievement_flag then
-					AC:flag_check(unpack(d.achievement_flag))
-				end
-
-				if d.achievement_inc then
-					AC:inc_check(d.achievement_inc)
-				end
-
 				if d.play_once then
 					simulation:queue_remove_entity(this)
 
@@ -274,14 +261,6 @@ function scripts.click_play.update(this, store)
 				s.hidden = true
 			else
 				U.animation_start_default(this, c.idle_animation, nil, store.tick_ts, true)
-			end
-
-			if c.achievement then
-				AC:got(c.achievement)
-			end
-
-			if c.achievement_flag then
-				AC:flag_check(unpack(c.achievement_flag))
 			end
 
 			if c.play_once then
@@ -9111,18 +9090,6 @@ function scripts.delayed_play_kr5.update(this, store)
 					s.hidden = true
 				elseif d.clicked_animation then
 					U.y_animation_play(this, d.clicked_animation, nil, store.tick_ts, 1)
-				end
-
-				if d.achievement then
-					AC:got(d.achievement)
-				end
-
-				if d.achievement_flag then
-					AC:flag_check(unpack(d.achievement_flag))
-				end
-
-				if d.achievement_inc then
-					AC:inc_check(d.achievement_inc)
 				end
 
 				if d.play_once then

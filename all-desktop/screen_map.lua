@@ -22,7 +22,7 @@ local storage = require("all.storage")
 local signal = require("lib.hump.signal")
 local timer = require("hump.timer").new()
 local utf8 = require("utf8")
-local achievements_data, map_data
+local map_data
 local configer = require("dove_modules.configer")
 local R = require("all.restart")
 local perf = require("dove_modules.perf.perf")
@@ -54,7 +54,6 @@ screen_map.required_sounds = {"common", "music_screen_map"}
 screen_map.required_textures = {
 	"upgrades",
 	"screen_map_backgrond",
-	"achievements",
 	"select_difficulty",
 	"level_select",
 	"screen_map_flags",
@@ -66,7 +65,6 @@ screen_map.required_textures = {
 	"kr2_screen_map_animations",
 	"kr3_screen_map_animations",
 	"view_options",
-	"achievements",
 	"encyclopedia",
 	"encyclopedia_creeps",
 	"gui_ico",
@@ -231,7 +229,6 @@ function screen_map:init_coro(w, h, done_callback)
 		self.done_callback = done_callback
 		self.original_w, self.original_h = w, h
 
-		achievements_data = require("data.achievements_data")
 		map_data = require("data.map_data")
 		self.hero_data = map_data.hero_data
 		self.tower_data = map_data.tower_data
@@ -442,32 +439,10 @@ function screen_map:init(w, h)
 
 	self.window:add_child(o_button)
 
-	local a_button = GGButton:new("mapButtons_notxt_0004", "mapButtons_notxt_0005")
-
-	a_button.anchor = v(a_button.size.x / 2, a_button.size.y / 2)
-	a_button.pos = v(sw - 100, sh - 90)
-
-	function a_button.on_click(this, button, x, y)
-		S:queue("GUIButtonCommon")
-		self:ensure_achievements_view():show()
-	end
-
-	a_button.label.pos = v(50, 121)
-	a_button.label.size = v(126, 30)
-	a_button.label.text_size = a_button.label.size
-	a_button.label.font_size = 18
-	a_button.label.vertical_align = CJK("middle", "top", nil, "top")
-	a_button.label.text = _("Achievements")
-	a_button.label.fit_lines = 1
-
-	self.window:add_child(a_button)
-
-	self.TTT = a_button
-
 	local e_button = GGButton:new("mapButtons_notxt_0007", "mapButtons_notxt_0008")
 
 	e_button.anchor = v(e_button.size.x / 2, e_button.size.y / 2)
-	e_button.pos = v(a_button.pos.x - 170, sh - 90)
+	e_button.pos = v(sw - 100, sh - 90)
 
 	function e_button.on_click(this, button, x, y)
 		S:queue("GUIButtonCommon")
@@ -860,7 +835,7 @@ function screen_map:init(w, h)
 		function card.on_click()
 			S:queue("GUIButtonCommon")
 			gen_dropdown.hidden = true
-			for _, btn in ipairs({sm._change_btn, sm._u_btn, sm._e_btn, sm._a_btn, sm._h_btn}) do
+			for _, btn in ipairs({sm._change_btn, sm._u_btn, sm._e_btn, sm._h_btn}) do
 				if btn then
 					btn:enable()
 				end
@@ -946,7 +921,6 @@ function screen_map:init(w, h)
 	self._change_btn = change_button
 	self._u_btn = u_button
 	self._e_btn = e_button
-	self._a_btn = a_button
 	self._h_btn = h_button
 -- perf.tmp_stop("screen_map_init")
 end
@@ -1158,19 +1132,6 @@ function screen_map:ensure_option_panel()
 	self.option_panel = option_panel
 
 	return option_panel
-end
-
-function screen_map:ensure_achievements_view()
-	if self.achievements then
-		return self.achievements
-	end
-
-	local achievements = AchievementsView:new(self.sw, self.sh)
-	achievements.pos = v(0, 0)
-	self.window:add_child(achievements)
-	self.achievements = achievements
-
-	return achievements
 end
 
 function screen_map:ensure_config_panel_view()
@@ -1493,10 +1454,6 @@ function screen_map:keypressed(key, isrepeat)
 			return true
 		elseif self.encyclopedia and not self.encyclopedia.hidden then
 			self.encyclopedia:hide()
-
-			return true
-		elseif self.achievements and not self.achievements.hidden then
-			self.achievements:hide()
 
 			return true
 		elseif not self.difficulty_view.hidden then
@@ -8056,217 +8013,6 @@ function DifficultyView:initialize(sw, sh)
 	tip.pos = v(354 + 82, 584)
 
 	self.back:add_child(tip)
-end
-
-AchievementsView = class("AchievementsView", PopUpView)
-
-function AchievementsView:initialize(sw, sh)
-	PopUpView.initialize(self, V.v(sw, sh))
-
-	self.disabled_tint_color = {0.7843137254902, 0.7843137254902, 0.7843137254902, 1}
-	self.back = KImageView:new("Achievements_BG_notxt")
-	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
-	self.back.pos = v(sw / 2 - 15, sh / 2)
-
-	self:add_child(self.back)
-
-	sw = self.back.size.x
-	sh = self.back.size.y
-
-	local header = GGPanelHeader:new(_("ACHIEVEMENTS"), 274)
-
-	header.pos = V.v(364, CJK(39, 35, nil, 36))
-
-	self.back:add_child(header)
-
-	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
-
-	close_button.pos = v(self.back.size.x - 55, 31)
-	self.close_button = close_button
-
-	self.back:add_child(close_button)
-
-	function close_button.on_click(this, x, y)
-		S:queue("GUIButtonCommon")
-		self:hide()
-	end
-
-	self.items_per_page = 10
-	self.max_pages = math.ceil(#achievements_data / self.items_per_page)
-	self.boxes = {}
-
-	for i = 1, self.items_per_page do
-		local ach = KImageView:new("Achievements_Box_Large")
-
-		ach.anchor = v(math.floor(ach.size.x / 2), math.floor(ach.size.y / 2))
-		ach.pos = v(self.back.size.x / 2, 173 + math.floor((i - 1) / 2) * 108)
-
-		if i % 2 == 0 then
-			ach.pos.x = ach.pos.x + 230
-		else
-			ach.pos.x = ach.pos.x - 230
-		end
-
-		ach.img = KImageView:new("achievement_icons_0001")
-		ach.img.anchor = v(math.floor(ach.img.size.x / 2), math.floor(ach.img.size.y / 2))
-		ach.img.pos = v(57, 49)
-
-		ach:add_child(ach.img)
-
-		ach.title = GGLabel:new(V.v(260, 32))
-		ach.title.pos = v(118, 2)
-		ach.title.font_name = "h"
-		ach.title.font_size = 18
-		ach.title.colors.text = {233, 224, 117, 255}
-		ach.title.text_align = "left"
-		ach.title.vertical_align = "bottom"
-		ach.title.fit_lines = 1
-
-		ach:add_child(ach.title)
-
-		ach.desc = GGLabel:new(V.v(260, 40))
-		ach.desc.pos = v(118, CJK(33, nil, 36, 36))
-		ach.desc.font_name = "body"
-		ach.desc.font_size = 15
-		ach.desc.colors.text = {156, 152, 126, 255}
-		ach.desc.line_height = CJK(0.75, nil, 1.1, 0.9)
-		ach.desc.text_align = "left"
-		ach.desc.fit_lines = CJK(4, nil, nil, 2)
-
-		ach:add_child(ach.desc)
-		self.back:add_child(ach)
-
-		self.boxes[i] = ach
-	end
-
-	local button_w = 45
-	local start_x = math.floor(self.back.size.x / 2 - button_w * self.max_pages / 2)
-	local ox = start_x
-
-	for i = 1, self.max_pages do
-		local o_button = AchievementsPageButton:new(i)
-
-		o_button.pos = v(ox, 696)
-		o_button.page_idx = i
-
-		self.back:add_child(o_button)
-
-		ox = ox + button_w
-	end
-
-	self:createPage(1)
-end
-
-function AchievementsView:show()
-	self:createPage(1)
-	AchievementsView.super.show(self)
-end
-
-function AchievementsView:createPage(pagenum)
-	local init = (pagenum - 1) * self.items_per_page
-
-	for i = 1, self.items_per_page do
-		if init + i <= #achievements_data then
-			local ach = achievements_data[init + i]
-			local box = self.boxes[i]
-
-			box.hidden = false
-
-			if not screen_map.user_data.achievements then
-				screen_map.user_data.achievements = {}
-			end
-
-			local isActive = screen_map.user_data.achievements[ach.name]
-
-			box.img:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
-
-			if not isActive then
-				box.img:disable()
-			end
-
-			local title = _("ACHIEVEMENT_" .. ach.name .. "_NAME")
-			local desc = _("ACHIEVEMENT_" .. ach.name .. "_DESCRIPTION")
-
-			box.title.text = title
-			box.desc.text = desc
-
-			if isActive then
-				box.desc.colors.text = {156, 152, 126, 255}
-				box.title.colors.text = {233, 224, 177, 255}
-			else
-				box.desc.colors.text = {107, 98, 87, 255}
-				box.title.colors.text = {107, 98, 87, 255}
-			end
-
-			function box.img.on_click(this, button, x, y)
-				if isActive then
-					log.info("Manually retriggering achievement signal for ach %s", ach.name)
-					signal.emit("got-achievement", ach.name)
-				end
-			end
-		else
-			local box = self.boxes[i]
-
-			box.hidden = true
-		end
-	end
-
-	self.current_page_idx = pagenum
-
-	for _, c in pairs(self.back.children) do
-		if c:isInstanceOf(AchievementsPageButton) then
-			if c.page_idx == pagenum then
-				c:select()
-			else
-				c:deselect()
-			end
-		end
-	end
-end
-
-AchievementsPageButton = class("AchievementsPageButton", GGButton)
-AchievementsPageButton.static.init_arg_names = {"label_text"}
-
-function AchievementsPageButton:initialize(label_text)
-	local rs = GGLabel.static.ref_h / REF_H
-
-	GGButton.initialize(self, "Achievements_page_0001", "Achievements_page_0002", "Achievements_page_0002")
-
-	self.deselected_image_name = "Achievements_page_0001"
-	self.selected_image_name = "Achievements_page_0003"
-	self.label.pos.x, self.label.pos.y = rs * 1, 0
-	self.label.vertical_align = "middle-caps"
-	self.label.font_name = "numbers_bold"
-	self.label.font_size = rs * 14
-	self.label.fit_lines = 1
-
-	if not self.label_text_key and label_text then
-		self.label.text = label_text
-	end
-
-	self.on_down_scale = 0.95
-end
-
-function AchievementsPageButton:on_click()
-	S:queue("GUIButtonCommon")
-	self.parent.parent:createPage(self.page_idx)
-end
-
-function AchievementsPageButton:select()
-	self.default_image_name = self.selected_image_name
-
-	self:disable()
-	self:set_image(self.selected_image_name)
-end
-
-function AchievementsPageButton:deselect()
-	self.default_image_name = self.deselected_image_name
-
-	self:enable()
-
-	if not self:is_disabled() then
-		self:set_image(self.default_image_name)
-	end
 end
 
 local EditablePanelView = require("dove_modules.gui.editable_panel_view")

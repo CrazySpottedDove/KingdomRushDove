@@ -203,7 +203,6 @@ controller_stage_40_boss_shadow_waves_on_stun_stage = function(this, store, acti
 	this.stun_side = side
 end
 local tt
-local ACH = require("achievements")
 local signal = require("lib.hump.signal")
 local P = require("path_db")
 local GS = require("kr1.game_settings")
@@ -1058,9 +1057,6 @@ function controller_stage_40_moving_island.island_soldiers(this, store, event_na
 		end
 	end
 
-	if wardens_amount >= 3 then
-		ACH:got("DLC3_WARDENS_40_REACH_END")
-	end
 end
 
 function controller_stage_40_moving_island.on_open_path(this)

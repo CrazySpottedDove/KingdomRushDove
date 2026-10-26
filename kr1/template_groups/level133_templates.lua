@@ -3,7 +3,6 @@ local U = require("utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
 require("lib.klua.table")
-local AC = require("achievements")
 local scripts = require("scripts")
 local TU = require("all.tower_utils")
 local v = V.v

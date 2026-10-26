@@ -2,7 +2,6 @@ local E = require("entity_db")
 local scripts = require("game_scripts")
 local tt
 local U = require("utils")
-local ACH = require("achievements")
 local decal_fish = {}
 
 function decal_fish.update(this, store)
@@ -19,7 +18,6 @@ function decal_fish.update(this, store)
 
 		while not U.animation_finished_default(this) do
 			if this.ui.clicked then
-				ACH:got(this.achievement_id)
 
 				this.ui.clicked = nil
 			end

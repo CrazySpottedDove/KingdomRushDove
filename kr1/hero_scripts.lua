@@ -2,7 +2,6 @@ require("lib.klua.table")
 require("i18n")
 
 local scripts = require("endless_scripts")
-local AC = require("achievements")
 local log = require("lib.klua.log"):new("hero_scripts")
 local A = require("animation_db")
 local km = require("lib.klua.macros")

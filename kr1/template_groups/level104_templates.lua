@@ -5,7 +5,6 @@ local U = require("utils")
 local V = require("lib.klua.vector")
 local fts = U.fts
 require("lib.klua.table")
-local ACH = require("achievements")
 local scripts = require("scripts")
 local v = V.v
 local r = V.r
@@ -155,13 +154,6 @@ decal_stage_04_elder_rune_update = function(this, store)
 			clicks = 0
 			already_played = true
 			U.animation_start_default(this, c.idle_on_animation, nil, store.tick_ts, true)
-			signal.emit("achievements_custom_event", "RUNEQUEST_4")
-			if c.achievement then
-				ACH:got(c.achievement)
-			end
-			if c.achievement_flag then
-				ACH:flag_check(unpack(c.achievement_flag))
-			end
 		end
 		coroutine.yield()
 	end

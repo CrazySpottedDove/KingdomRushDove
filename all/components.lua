@@ -146,8 +146,6 @@ delayed_play.required_clicks_fx = nil
 delayed_play.required_clicks_hides = nil
 delayed_play.play_once = nil
 delayed_play.click_interrupts = nil
-delayed_play.achievement = nil
-delayed_play.achievement_flag = nil
 delayed_play.disabled = nil
 delayed_play.delay = nil
 
@@ -167,8 +165,6 @@ local click_play = E:register_c("click_play")
 click_play.idle_animation = "idle"
 click_play.click_animation = "clicked"
 click_play.required_clicks = 1
-click_play.achievement = nil
-click_play.achievement_flag = nil
 click_play.play_once = false
 
 local sprite = E:register_c("sprite")

@@ -150,7 +150,6 @@ tt.walk_points = {
 	gnoll_right = {vec_2(1016, 673), vec_2(795, 631)}
 }
 local LU = require("level_utils")
-local A = require("achievements")
 local km = require("lib.klua.macros")
 local function decal_walking_update(this, store)
 	local n = this.nav_grid

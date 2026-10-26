@@ -1,7 +1,6 @@
 -- chunkname: @./kr1/game_scripts.lua
 require("lib.klua.table")
 require("i18n")
-local AC = require("achievements")
 local log = require("lib.klua.log"):new("game_scripts")
 local EXO = require("all.exoskeleton")
 require("lib.klua.table")
@@ -667,8 +666,6 @@ function scripts.soldier_sasquash.insert(this, store)
 	if not scripts.soldier_barrack.insert(this, store) then
 		return false
 	end
-
-	AC:got("HENDERSON")
 
 	return true
 end
@@ -1343,16 +1340,12 @@ scripts.enemy_sheep = {
 				d.value = hp_max / this.clicks_to_destroy
 				d.target_id = this.id
 				queue_damage(store, d)
-				if U.predict_damage(this, d) >= this.health.hp then
-					AC:inc_check("SHEEP_KILLER")
-				end
 			end
 
 			if clicks >= this.clicks_to_destroy then
 				this.health.hp = 0
 
 				coroutine.yield()
-				AC:inc_check("SHEEP_KILLER")
 			elseif this.unit.is_stunned then
 				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 				coroutine.yield()
@@ -2323,7 +2316,6 @@ scripts.axe_barbarian = {}
 
 function scripts.axe_barbarian.insert(this, store)
 	if scripts.arrow.insert(this, store) then
-		AC:inc_check("AXE_RAINER")
 
 		return true
 	else
@@ -2409,7 +2401,6 @@ function scripts.bomb_cluster.update(this, store)
 		bf.render.sprites[1].r = 100 * math.random() * (math.pi / 180)
 
 		simulation:queue_insert_entity(bf)
-		AC:inc_check("CLUSTERED")
 	end
 
 	simulation:queue_remove_entity(this)
@@ -4361,10 +4352,6 @@ function scripts.enemy_munra.update(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-
-			if not this.did_sarcophagus then
-				AC:got("MUMMYATTHEGATES")
-			end
 
 			return
 		end
@@ -6644,8 +6631,6 @@ function scripts.spell_djinn.insert(this, store)
 		simulation:queue_insert_entity(fx)
 	end
 
-	-- AC:inc_check("STUFFOMAKER", 1)
-
 	return false
 end
 
@@ -6703,7 +6688,6 @@ function scripts.decal_volcano_virgin.update(this, store)
 		coroutine.yield()
 	end
 
-	-- AC:got("SAVETHEPRINCESS")
 	simulation:queue_remove_entity(this)
 end
 
@@ -8797,7 +8781,6 @@ function scripts.soldier_blade.update(this, store)
 									local d = E.assign_damage(ca.damage_type, math.random(ca.damage_min, ca.damage_max) * this.unit.damage_factor, this.id, target.id)
 
 									queue_damage(store, d)
-								-- AC:inc_check("PERFECT_PARRY", d.value)
 								end
 							end
 						end
@@ -8884,7 +8867,6 @@ function scripts.soldier_blade.update(this, store)
 
 				this.health.ignore_damage = false
 				U.bans_remove(this.vis, F_ALL)
-				-- AC:inc_check("BLADE_DANCE")
 				bda.in_progress = nil
 
 				goto label_53_2
@@ -9029,7 +9011,6 @@ function scripts.soldier_forest.update(this, store)
 					U.y_animation_wait_default(this)
 
 					this._casting_eerie = nil
-				-- AC:inc_check("EERIE_GARDENER")
 				end
 			end
 
@@ -9804,7 +9785,6 @@ function scripts.enemy_hyena.update(this, store)
 
 					U.speed_mul(this, this.coward_speed_factor)
 
-					-- AC:inc("SHEZI_BANZAI_ED")
 					goto label_228_0
 				end
 			elseif store.tick_ts - coward_ts > this.coward_duration then
@@ -11969,7 +11949,6 @@ function scripts.enemy_mactans.update(this, store)
 					end
 
 					if is_tb then
-					-- AC:inc_check("ITS_A_TRAP")
 					end
 
 					S:stop("ElvesFinalBossWebspin")
@@ -12568,7 +12547,6 @@ function scripts.plant_magic_blossom.update(this, store)
 		if this.ui.clicked then
 			this.ui.clicked = nil
 
-			-- AC:inc_check("GARDEN_SONG")
 			S:queue(ca.sound)
 			U.animation_start_default(this, "shoot", nil, store.tick_ts, false)
 			U.y_wait_unconditional(store, ca.shoot_time)
@@ -12716,7 +12694,6 @@ function scripts.plant_poison_pumpkin.update(this, store)
 		if this.ui.clicked then
 			this.ui.clicked = nil
 
-			-- AC:inc_check("GARDEN_SONG")
 			S:queue(ca.sound)
 			U.animation_start_default(this, "shoot", nil, store.tick_ts, false)
 
@@ -15117,7 +15094,6 @@ function scripts.mod_twilight_avenger_last_service.remove(this, store)
 		end
 
 		if count_enemies > 0 and count_soldiers == 0 then
-		-- AC:inc_check("LAST_SERVICE")
 		end
 
 		local p
@@ -15806,7 +15782,6 @@ function scripts.power_thunder_control.update(this, store)
 				queue_damage(store, d)
 			end
 		end
-	-- AC:inc_check("LIGHTNING_CAST")
 	end
 
 	local function flash_screen(fx)
@@ -35813,9 +35788,6 @@ function scripts.mod_stage31_water_mechanic_dps.update(this, store)
 		if will_kill then
 			store.level.last_use_fountain_kills = store.level.last_use_fountain_kills + 1
 
-			if store.level.last_use_fountain_kills >= 14 then
-				AC:got("DLC2_KILL_FOUNTAIN")
-			end
 		end
 	end
 
@@ -38194,10 +38166,6 @@ function scripts.fx_stage33_envelop_open.update(this, store)
 	end
 
 	store.level.envelops_opened = store.level.envelops_opened + 1
-
-	if store.level.envelops_opened >= 8 then
-		AC:got("DLC2_GATHER_ENVELOPS")
-	end
 
 	store.player_gold = store.player_gold + card.gold
 

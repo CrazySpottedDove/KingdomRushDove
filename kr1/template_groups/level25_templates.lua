@@ -1,7 +1,6 @@
 local E = require("entity_db")
 local S = require("sound_db")
 local U = require("utils")
-local A = require("achievements")
 require("all.constants")
 require("lib.klua.table")
 local fts = U.fts
@@ -51,7 +50,6 @@ local function decal_s25_nessie_update(this, store)
 		U.y_wait_unconditional(store, fts(90))
 		S:queue(this.sound)
 		U.y_animation_wait_default(this)
-		A:got("NESSIE")
 		U.sprites_hide(this)
 		coroutine.yield()
 	end

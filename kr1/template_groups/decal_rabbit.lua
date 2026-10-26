@@ -2,7 +2,6 @@ local E = require("entity_db")
 local scripts = require("game_scripts")
 local tt
 local U = require("utils")
-local ACH = require("achievements")
 local decal_rabbit = {}
 
 function decal_rabbit.update(this, store)
@@ -54,7 +53,6 @@ function decal_rabbit.update(this, store)
 	this.tween.reverse = true
 	this.tween.ts = store.tick_ts
 
-	-- ACH:inc_check("FOLLOW_RABBIT")
 	U.y_wait_unconditional(store, math.random(tmin, tmax))
 
 	goto label_510_0
