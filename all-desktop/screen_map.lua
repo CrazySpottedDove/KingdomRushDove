@@ -3299,6 +3299,8 @@ local function add_level_battle_button(parent, mode, level_num)
 	b:add_child(t)
 
 	b.t2 = t
+
+	return b
 end
 
 local function add_level_rules(parent, level_num, y)
@@ -3344,16 +3346,15 @@ local function add_level_rules(parent, level_num, y)
 	parent:add_child(hero_label)
 end
 
-local function add_level_tab(parent, mode, y, stars)
+local function add_level_tab(parent, mode, tab_cfg, y, stars)
 	local x = 1105
 	local fmt = "levelSelect_Mode_notxt_00%02i"
-	local indexes = {
-		[GAME_MODE_CAMPAIGN] = {nil, 1, 2, 3},
-		[GAME_MODE_HEROIC] = {4, 5, 6, 7},
-		[GAME_MODE_IRON] = {8, 9, 10, 11}
-	}
-	local i_l, i_n, i_h, i_s = unpack(indexes[mode])
-	local texts = {_("Campaign"), _("Heroic"), _("Iron")}
+	local i_l, i_n, i_h, i_s = unpack(tab_cfg.indexes)
+	local tab_text = tab_cfg.text
+	local lx = tab_cfg.label_x
+	local ly = tab_cfg.label_y
+	local lx_sel = tab_cfg.selected_label_x
+	local oy = tab_cfg.offset_y or 0
 
 	if not parent.tabs_locked then
 		parent.tabs_locked = {}
@@ -3366,12 +3367,6 @@ local function add_level_tab(parent, mode, y, stars)
 	if not parent.tabs_selected then
 		parent.tabs_selected = {}
 	end
-
-	local oy = (mode ~= GAME_MODE_CAMPAIGN and -2 or 0) + CJK(0, -4, 3, 0)
-	local ox = mode ~= GAME_MODE_CAMPAIGN and 0 or 0
-	local lx = 40
-	local ly = 56
-	local lx_sel = 53
 
 	if i_l and stars < 3 then
 		local t = KImageView:new(string.format(fmt, i_l))
@@ -3398,9 +3393,9 @@ local function add_level_tab(parent, mode, y, stars)
 		l.font_name = CJK("body", nil, nil, "h_noti")
 		l.font_size = 13
 		l.font_align = "center"
-		l.pos = v(lx + ox, ly + oy)
+		l.pos = v(lx, ly + oy)
 		l.colors.text = {198, 134, 95, 255}
-		l.text = texts[mode]
+		l.text = tab_text
 		l.propagate_on_click = true
 		l.fit_lines = 1
 
@@ -3413,9 +3408,9 @@ local function add_level_tab(parent, mode, y, stars)
 			l.font_name = CJK("body", nil, nil, "h_noti")
 			l.font_size = 13
 			l.font_align = "center"
-			l.pos = v(lx + ox, ly + oy)
+			l.pos = v(lx, ly + oy)
 			l.colors.text = {198, 134, 95, 255}
-			l.text = texts[mode]
+			l.text = tab_text
 			l.propagate_on_click = true
 			l.fit_lines = 1
 
@@ -3455,9 +3450,9 @@ local function add_level_tab(parent, mode, y, stars)
 			l.font_name = CJK("body", nil, nil, "h_noti")
 			l.font_size = 13
 			l.font_align = "center"
-			l.pos = v(lx_sel + ox, ly + oy)
+			l.pos = v(lx_sel, ly + oy)
 			l.colors.text = {142, 213, 246, 255}
-			l.text = texts[mode]
+			l.text = tab_text
 			l.propagate_on_click = true
 			l.fit_lines = 1
 
@@ -3472,6 +3467,93 @@ local function add_level_tab(parent, mode, y, stars)
 		end
 	end
 end
+
+screen_map.tab_configs = {
+	[GAME_MODE_CAMPAIGN] = {
+		order = 10,
+		y = 175,
+		tab = {
+			indexes = {nil, 1, 2, 3},
+			text = _("Campaign"),
+			label_x = 40,
+			selected_label_x = 53,
+			label_y = 56,
+			offset_y = CJK(0, -4, 3, 0)
+		},
+		page = {
+			title = _("Campaign"),
+			description = function(ctx)
+				return _("LEVEL_" .. tostring(ctx.level_num) .. "_HISTORY")
+			end,
+			difficulty_stamp = GAME_MODE_CAMPAIGN,
+			battle = {
+				art_mode = GAME_MODE_CAMPAIGN
+			}
+		}
+	},
+	[GAME_MODE_HEROIC] = {
+		order = 20,
+		y = 260,
+		tab = {
+			indexes = {4, 5, 6, 7},
+			text = _("Heroic"),
+			label_x = 40,
+			selected_label_x = 53,
+			label_y = 56,
+			offset_y = -2 + CJK(0, -4, 3, 0)
+		},
+		page = {
+			title = _("Heroic"),
+			description = _("LEVEL_MODE_HEROIC_DESCRIPTION"),
+			rules = true,
+			background = true,
+			difficulty_stamp = GAME_MODE_HEROIC,
+			battle = {
+				art_mode = GAME_MODE_HEROIC
+			}
+		}
+	},
+	[GAME_MODE_IRON] = {
+		order = 30,
+		y = 345,
+		tab = {
+			indexes = {8, 9, 10, 11},
+			text = _("Iron"),
+			label_x = 40,
+			selected_label_x = 53,
+			label_y = 56,
+			offset_y = -2 + CJK(0, -4, 3, 0)
+		},
+		page = {
+			title = _("Iron"),
+			description = _("LEVEL_MODE_IRON_DESCRIPTION"),
+			rules = true,
+			background = true,
+			extra_background = true,
+			difficulty_stamp = GAME_MODE_IRON,
+			battle = {
+				art_mode = GAME_MODE_IRON
+			},
+			after_rules = function(page, ctx)
+				local b_x = 770
+				local b_y = 390
+				local b_o = 50
+				local locked_towers = screen_map.level_data[ctx.level_num].iron
+				local opts = {"archers", "barracks", "mages", "artillery"}
+
+				for i, opt in ipairs(opts) do
+					local n = table.contains(locked_towers, opt) and 2 * i or 2 * i - 1
+					local icon = KImageView:new(string.format("levelSelect_modeRules_000%i", n))
+
+					icon.pos = V.v(b_x, b_y)
+					b_x = b_x + b_o
+
+					page:add_child(icon)
+				end
+			end
+		}
+	}
+}
 
 LevelSelectDifficultyButton = class("LevelSelectDifficultyButton", KImageButton)
 
@@ -3601,100 +3683,110 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 		self.back:add_child(b)
 	end
 
-	self.campaign = KView:new()
+	self.pages = {}
 
-	self.back:add_child(self.campaign)
-	add_level_title(self.campaign, _("Campaign"), "right")
-	add_level_description(self.campaign, _("LEVEL_" .. tostring(level_num) .. "_HISTORY"))
-	add_difficulty_stamp(self.campaign, GAME_MODE_CAMPAIGN, slot_data[GAME_MODE_CAMPAIGN], 690, 520)
+	local page_modes = {}
 
-	local b = LevelSelectDifficultyButton:new()
-	b.pos = v(982, 522)
-	self.campaign:add_child(b)
-	add_level_battle_button(self.campaign, GAME_MODE_CAMPAIGN, level_num)
-	add_level_tab(self, GAME_MODE_CAMPAIGN, 175, stars)
-
-	local rules_y = 290
-
-	self.heroic = KView:new()
-
-	self.back:add_child(self.heroic)
-
-	self.heroic.hidden = true
-
-	local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
-
-	rbg.pos = v(ls_page_r_x + (ls_page_w - rbg.size.x) / 2, rules_y + 20)
-
-	self.heroic:add_child(rbg)
-	add_level_title(self.heroic, _("Heroic"), "right")
-
-	add_level_description(self.heroic, _("LEVEL_MODE_HEROIC_DESCRIPTION"))
-
-	add_level_title(self.heroic, _("Challenge Rules"), "sub", rules_y)
-	add_level_rules(self.heroic, level_num, rules_y + 38)
-	add_difficulty_stamp(self.heroic, GAME_MODE_HEROIC, slot_data[GAME_MODE_HEROIC], 690, 520)
-
-	local b = LevelSelectDifficultyButton:new()
-
-	b.pos = v(982, 522)
-
-	self.heroic:add_child(b)
-	add_level_battle_button(self.heroic, GAME_MODE_HEROIC, level_num)
-	add_level_tab(self, GAME_MODE_HEROIC, 260, stars)
-
-	local rules_y = 290
-
-	self.iron = KView:new()
-
-	self.back:add_child(self.iron)
-
-	self.iron.hidden = true
-
-	local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
-
-	rbg.pos = v(ls_page_r_x + (ls_page_w - rbg.size.x) / 2, rules_y + 20)
-
-	self.iron:add_child(rbg)
-
-	local rbbg = KImageView:new("levelSelect_modebg_notxt_0002")
-
-	rbbg.pos = v(ls_page_r_x + (ls_page_w - rbbg.size.x) / 2, rules_y + 90)
-
-	self.iron:add_child(rbbg)
-	add_level_title(self.iron, _("Iron"), "right")
-
-	add_level_description(self.iron, _("LEVEL_MODE_IRON_DESCRIPTION"))
-
-	add_level_title(self.iron, _("Challenge Rules"), "sub", rules_y)
-	add_level_rules(self.iron, level_num, rules_y + 38)
-
-	local b_x = 770
-	local b_y = rbbg.pos.y + 10
-	local b_o = 50
-	local locked_towers = screen_map.level_data[level_num].iron
-	local opts = {"archers", "barracks", "mages", "artillery"}
-
-	for i, v in ipairs(opts) do
-		local n = table.contains(locked_towers, v) and 2 * i or 2 * i - 1
-		local b = KImageView:new(string.format("levelSelect_modeRules_000%i", n))
-
-		b.pos = V.v(b_x, b_y)
-		b_x = b_x + b_o
-
-		self.iron:add_child(b)
+	for mode, cfg in pairs(screen_map.tab_configs) do
+		page_modes[#page_modes + 1] = {
+			mode = mode,
+			order = cfg.order or 999
+		}
 	end
 
-	add_difficulty_stamp(self.iron, GAME_MODE_IRON, slot_data[GAME_MODE_IRON], 690, 520)
+	table.sort(page_modes, function(a, b)
+		return a.order < b.order
+	end)
 
-	local b = LevelSelectDifficultyButton:new()
+	local first_mode
+	local ctx = {
+		level_num = level_num,
+		slot_data = slot_data or {},
+		stars = stars
+	}
 
-	b.pos = v(982, 522)
+	for page_index, item in ipairs(page_modes) do
+		local mode = item.mode
+		local cfg = screen_map.tab_configs[mode]
+		local page_cfg = cfg.page or {}
+		local page = KView:new()
 
-	self.iron:add_child(b)
-	add_level_battle_button(self.iron, GAME_MODE_IRON, level_num)
-	add_level_tab(self, GAME_MODE_IRON, 345, stars)
-	self:show_page(GAME_MODE_CAMPAIGN, stars)
+		page.hidden = true
+		self.back:add_child(page)
+		self.pages[mode] = page
+
+		if mode == GAME_MODE_CAMPAIGN then
+			self.campaign = page
+		elseif mode == GAME_MODE_HEROIC then
+			self.heroic = page
+		elseif mode == GAME_MODE_IRON then
+			self.iron = page
+		end
+
+		if page_cfg.background then
+			local bg = KImageView:new("levelSelect_modebg_notxt_0001")
+
+			bg.pos = v(ls_page_r_x + (ls_page_w - bg.size.x) / 2, 310)
+			page:add_child(bg)
+		end
+
+		if page_cfg.extra_background then
+			local bg = KImageView:new("levelSelect_modebg_notxt_0002")
+
+			bg.pos = v(ls_page_r_x + (ls_page_w - bg.size.x) / 2, 380)
+			page:add_child(bg)
+		end
+
+		if page_cfg.title then
+			add_level_title(page, type(page_cfg.title) == "function" and page_cfg.title(ctx) or page_cfg.title, "right")
+		end
+
+		if page_cfg.description then
+			local desc = type(page_cfg.description) == "function" and page_cfg.description(ctx) or page_cfg.description
+
+			add_level_description(page, desc)
+		end
+
+		if page_cfg.rules then
+			add_level_title(page, _("Challenge Rules"), "sub", 290)
+			add_level_rules(page, level_num, 290 + 38)
+		end
+
+		if page_cfg.after_rules then
+			page_cfg.after_rules(page, ctx)
+		end
+
+		if page_cfg.difficulty_stamp then
+			add_difficulty_stamp(page, page_cfg.difficulty_stamp, ctx.slot_data[page_cfg.difficulty_stamp], 690, 520)
+		end
+
+		local difficulty = LevelSelectDifficultyButton:new()
+
+		difficulty.pos = v(982, 522)
+		page:add_child(difficulty)
+
+		local battle_cfg = page_cfg.battle or {}
+		local art_mode = battle_cfg.art_mode or mode
+		local battle = add_level_battle_button(page, art_mode, level_num)
+
+		if battle_cfg.on_click then
+			battle.on_click = function()
+				S:queue("GUIButtonCommon")
+				battle_cfg.on_click(ctx)
+			end
+		elseif battle_cfg.mode and battle_cfg.mode ~= art_mode then
+			battle.on_click = function()
+				S:queue("GUIButtonCommon")
+				screen_map:start_level(level_num, battle_cfg.mode)
+			end
+		end
+
+		add_level_tab(self, mode, cfg.tab, cfg.y, stars)
+
+		first_mode = first_mode or mode
+	end
+
+	self:show_page(first_mode or GAME_MODE_CAMPAIGN, stars)
 
 	local name_label = GGLabel:new(V.v(280, 18))
 
@@ -3770,18 +3862,16 @@ function LevelSelectView:update(dt)
 end
 
 function LevelSelectView:show_page(page, stars)
-	self.campaign.hidden = page ~= GAME_MODE_CAMPAIGN
-	self.heroic.hidden = page ~= GAME_MODE_HEROIC
-	self.iron.hidden = page ~= GAME_MODE_IRON
+	for mode, view in pairs(self.pages or {}) do
+		view.hidden = page ~= mode
+	end
 
-	for _, m in pairs({GAME_MODE_CAMPAIGN, GAME_MODE_HEROIC, GAME_MODE_IRON}) do
-		if self.tabs[m] then
-			self.tabs[m].hidden = page == m
-		end
+	for mode, tab in pairs(self.tabs or {}) do
+		tab.hidden = page == mode
+	end
 
-		if self.tabs_selected[m] then
-			self.tabs_selected[m].hidden = page ~= m
-		end
+	for mode, tab in pairs(self.tabs_selected or {}) do
+		tab.hidden = page ~= mode
 	end
 end
 

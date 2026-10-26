@@ -5646,19 +5646,14 @@ function scripts.mod_mark_flags.remove(this, store)
 end
 
 function scripts.mod_mark_flags.update(this, store)
-	local initialized = false
+	local m = this.modifier
+	m.ts = store.tick_ts
 	while true do
-		local m = this.modifier
 		local target = store.entities[m.target_id]
 
 		if not target or target.health and target.health.dead then
 			simulation:queue_remove_entity(this)
 			return
-		end
-
-		if not initialized then
-			initialized = true
-			m.ts = store.tick_ts
 		end
 
 		if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
