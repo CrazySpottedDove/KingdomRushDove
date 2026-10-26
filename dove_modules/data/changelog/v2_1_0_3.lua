@@ -1,1 +1,1 @@
-return {{date="2026-10-26",author="CrazySpottedDove",message="修复139关小boss秒杀使士兵不可见的问题"},{date="2026-10-26",author="CrazySpottedDove",message="perf: 移除无效的脚本"}}
+return {{date="2026-10-26",author="CrazySpottedDove",message="修复139关小boss秒杀使士兵不可见的问题"},{date="2026-10-26",author="CrazySpottedDove",message="perf: 移除无效的脚本"},{date="2026-10-26",author="CrazySpottedDove",message="refactor: 合并部分脚本"}}

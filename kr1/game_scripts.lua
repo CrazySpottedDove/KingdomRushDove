@@ -7726,36 +7726,6 @@ function scripts.points_spawner.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-scripts.mod_dracula_lifesteal = {}
-
-function scripts.mod_dracula_lifesteal.update(this, store)
-	local m = this.modifier
-	local source = store.entities[m.source_id]
-	local target = store.entities[m.target_id]
-
-	m.ts = store.tick_ts
-
-	local last_ts = store.tick_ts
-
-	SU.stun_inc(target)
-
-	while not source.health.dead and store.tick_ts - m.ts < m.duration do
-		if store.tick_ts - last_ts > this.cycle_time then
-			last_ts = store.tick_ts
-			U.heal(source, this.heal_hp)
-		end
-
-		coroutine.yield()
-	end
-
-	SU.stun_dec(target)
-
-	local d = E.assign_damage(target.hero and DAMAGE_TRUE or DAMAGE_INSTAKILL, this.damage, this.id, target.id)
-
-	queue_damage(store, d)
-	simulation:queue_remove_entity(this)
-end
-
 scripts.alien_glaive = {}
 
 function scripts.alien_glaive.update(this, store)
@@ -17537,26 +17507,6 @@ function scripts.ray5_simple.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-scripts.ps_hero_mecha_smoke = {}
-
-function scripts.ps_hero_mecha_smoke.update(this, store)
-	local source_sprite = store.entities[this.particle_system.track_id].render.sprites[1]
-
-	while true do
-		if source_sprite.flip_x then
-			this.particle_system.emit_offset.x = math.abs(this.particle_system.emit_offset.x)
-			this.particle_system.emit_direction = this.emit_direction_sides[2]
-		else
-			this.particle_system.emit_offset.x = -math.abs(this.particle_system.emit_offset.x)
-			this.particle_system.emit_direction = this.emit_direction_sides[1]
-		end
-
-		coroutine.yield()
-	end
-
-	return true
-end
-
 scripts.decal_soldier_shadow = {}
 
 function scripts.decal_soldier_shadow.update(this, store)
@@ -23019,45 +22969,6 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store)
 	end
 end
 
-scripts.enemy_surveyor_harpy = {}
-
-function scripts.enemy_surveyor_harpy.update(this, store)
-	local shadow_sprite = this.render.sprites[2]
-
-	if this.render.sprites[1].name == "raise" then
-		local next_pos
-
-		if this.motion.forced_waypoint then
-			next_pos = this.motion.forced_waypoint
-		else
-			next_pos = P:next_entity_node(this, store.tick_length)
-		end
-
-		local an, af = U.animation_name_facing_point(this, "raise", next_pos)
-
-		U.y_animation_play(this, an, af, store.tick_ts, 1)
-	end
-
-	while true do
-		if this.cliff then
-		end
-
-		if this.health.dead then
-			shadow_sprite.hidden = true
-
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if this.unit.is_stunned then
-			SU.y_enemy_stun(store, this)
-		else
-			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
-		end
-	end
-end
-
 scripts.enemy_small_stalker = {}
 
 function scripts.enemy_small_stalker.update(this, store)
@@ -23298,74 +23209,6 @@ function scripts.mod_enemy_unblinded_abomination_eat.update(this, store)
 
 	simulation:queue_insert_entity(es)
 	simulation:queue_remove_entity(this)
-end
-
-scripts.enemy_spiderling = {}
-
-function scripts.enemy_spiderling.update(this, store)
-	local terrain_type
-
-	::label_67_0::
-
-	while true do
-		if this.cliff then
-			terrain_type = SU.enemy_cliff_change(store, this)
-		end
-
-		if this.health.dead then
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if this.unit.is_stunned then
-			if terrain_type == TERRAIN_CLIFF then
-				SU.remove_modifiers(store, this)
-
-				this.health.hp = 0
-
-				SU.y_enemy_death(store, this)
-
-				return
-			else
-				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
-				coroutine.yield()
-
-				goto label_67_0
-			end
-		end
-
-		local ignore_soldiers = terrain_type == TERRAIN_CLIFF
-		local ok, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers)
-
-		if not ok then
-		-- block empty
-		else
-			if blocker then
-				if not SU.y_wait_for_blocker(store, this, blocker) then
-					goto label_67_0
-				end
-
-				while SU.can_melee_blocker(store, this, blocker) do
-					if not SU.y_enemy_melee_attacks(store, this, blocker) then
-						goto label_67_0
-					end
-
-					coroutine.yield()
-				end
-			elseif ranged then
-				while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 do
-					if not SU.y_enemy_range_attacks(store, this, ranged) then
-						goto label_67_0
-					end
-
-					coroutine.yield()
-				end
-			end
-
-			coroutine.yield()
-		end
-	end
 end
 
 scripts.enemy_unblinded_shackler = {}
@@ -26266,45 +26109,6 @@ function scripts.enemy_killertile.update(this, store)
 	end
 end
 
-scripts.enemy_crocs_flier = {}
-
-function scripts.enemy_crocs_flier.update(this, store)
-	local shadow_sprite = this.render.sprites[2]
-
-	if this.render.sprites[1].name == "raise" then
-		local next_pos
-
-		if this.motion.forced_waypoint then
-			next_pos = this.motion.forced_waypoint
-		else
-			next_pos = P:next_entity_node(this, store.tick_length)
-		end
-
-		local an, af = U.animation_name_facing_point(this, "raise", next_pos)
-
-		U.y_animation_play(this, an, af, store.tick_ts, 1)
-	end
-
-	while true do
-		if this.cliff then
-		end
-
-		if this.health.dead then
-			shadow_sprite.hidden = true
-
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if this.unit.is_stunned then
-			SU.y_enemy_stun(store, this)
-		else
-			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
-		end
-	end
-end
-
 scripts.enemy_crocs_ranged = {}
 
 function scripts.enemy_crocs_ranged.insert(this, store)
@@ -26795,124 +26599,6 @@ function scripts.enemy_crocs_tank.update(this, store)
 
 		coroutine.yield()
 	end
-end
-
-scripts.mod_enemy_crocs_tank_charge_soldier = {}
-
-function scripts.mod_enemy_crocs_tank_charge_soldier.update(this, store)
-	local cycles, total_damage = 0, 0
-	local m = this.modifier
-	local dps = this.dps
-	local dmin = dps.damage_min + m.level * dps.damage_inc
-	local dmax = dps.damage_max + m.level * dps.damage_inc
-	local fx_ts = 0
-
-	local function do_damage(target, value)
-		total_damage = total_damage + value
-
-		local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
-		d.pop = dps.pop
-		d.pop_chance = dps.pop_chance
-		d.pop_conds = dps.pop_conds
-
-		queue_damage(store, d)
-	end
-
-	local target = store.entities[m.target_id]
-
-	if not target then
-		simulation:queue_remove_entity(this)
-
-		return
-	end
-
-	this.pos = target.pos
-
-	while true do
-		target = store.entities[m.target_id]
-
-		if not target or target.health.dead then
-			break
-		end
-
-		if store.tick_ts - m.ts >= m.duration - 1e-09 then
-			if dps.damage_last then
-				do_damage(target, dps.damage_last)
-			end
-
-			break
-		end
-
-		if this.render and m.use_mod_offset and target.unit.mod_offset then
-			local so = this.render.sprites[1].offset
-
-			so.x, so.y = target.unit.mod_offset.x, target.unit.mod_offset.y
-		end
-
-		if dps.damage_every and store.tick_ts - dps.ts >= dps.damage_every then
-			cycles = cycles + 1
-			dps.ts = dps.ts + dps.damage_every
-
-			local damage_value = math.random(dmin, dmax)
-
-			if cycles == 1 and dps.damage_first then
-				damage_value = dps.damage_first
-			end
-
-			if not dps.kill then
-				damage_value = km.clamp(0, target.health.hp - 1, damage_value)
-			end
-
-			do_damage(target, damage_value)
-
-			if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) then
-				fx_ts = store.tick_ts
-
-				local fx = E:create_entity(dps.fx)
-
-				if dps.fx_tracks_target then
-					fx.pos = target.pos
-
-					if m.use_mod_offset and target.unit.mod_offset then
-						for _, s in ipairs(fx.render.sprites) do
-							s.offset.x = target.unit.mod_offset.x
-							s.offset.y = target.unit.mod_offset.y
-						end
-					end
-				else
-					fx.pos:copy(this.pos)
-
-					if m.use_mod_offset and target.unit.mod_offset then
-						fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
-					end
-				end
-
-				for _, s in ipairs(fx.render.sprites) do
-					s.ts = store.tick_ts
-					s.runs = 0
-
-					if s.size_names then
-						s.name = s.size_names[target.unit.size]
-					end
-
-					if s.use_blood_color and target.unit.blood_color then
-						s.name = s.name .. "_" .. target.unit.blood_color
-					end
-
-					if dps.fx_target_flip and target and target.render then
-						s.flip_x = target.render.sprites[1].flip_x
-					end
-				end
-
-				simulation:queue_insert_entity(fx)
-			end
-		end
-
-		coroutine.yield()
-	end
-
-	log.paranoid(">>>>> id:%s - mod_dps cycles:%s total_damage:%s", this.id, cycles, total_damage)
-	simulation:queue_remove_entity(this)
 end
 
 scripts.enemy_crocs_egg_spawner = {}

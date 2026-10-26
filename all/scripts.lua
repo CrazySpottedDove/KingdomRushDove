@@ -963,8 +963,6 @@ function scripts.enemy_passive.update(this, store)
 	end
 end
 
--- 在敌人脚本过多的时候，过多的分支判断是导致 main_script 开销暴涨的主要原因。该脚本确实考虑了各种各样的可能，但是性能却有所欠缺，我们更倾向于在 insert 的时候，根据敌人的 component 判断敌人适合什么样的更新函数，并进行对应的 main_script.update 分发，力求将这些 if 判断消灭在 insert 中，避免 update 时总是做一些重复的 if 判断
--- 现在我们随便了，因为有编译器会消灭 enemy_mixed 中的大量分支。
 scripts.enemy_mixed = {}
 
 function scripts.enemy_mixed.update(this, store)
@@ -1124,9 +1122,7 @@ function scripts.enemy_mixed_cliff.update(this, store)
 	::label_27_0::
 
 	while true do
-		if this.cliff then
-			terrain_type = SU.enemy_cliff_change(store, this)
-		end
+		terrain_type = SU.enemy_cliff_change(store, this)
 
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
@@ -1135,8 +1131,19 @@ function scripts.enemy_mixed_cliff.update(this, store)
 		end
 
 		if this.unit.is_stunned then
-			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
-			coroutine.yield()
+			if this.cliff.kill_on_stun and terrain_type == TERRAIN_CLIFF then
+				SU.remove_modifiers(store, this)
+
+				this.health.hp = 0
+
+				SU.y_enemy_death(store, this)
+
+				return
+			else
+				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+				coroutine.yield()
+				goto label_27_0
+			end
 		else
 			local ignore_soldiers = terrain_type == TERRAIN_CLIFF
 			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers)
@@ -6062,7 +6069,7 @@ function scripts.mod_dps.insert(this, store)
 end
 
 function scripts.mod_dps.update(this, store)
-	local cycles, total_damage = 0, 0
+	local cycles = 0
 	local m = this.modifier
 	local dps = this.dps
 	local dmin = dps.damage_min
@@ -6074,8 +6081,6 @@ function scripts.mod_dps.update(this, store)
 	local fx_ts = 0
 
 	local function do_damage(target, value)
-		total_damage = total_damage + value
-
 		local d = E.assign_damage(dps.damage_type, value * m.damage_factor, this.id, target.id)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
@@ -6131,7 +6136,7 @@ function scripts.mod_dps.update(this, store)
 
 			do_damage(target, damage_value)
 
-			if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) and (not E:get_template(dps.fx).render.sprites[1].use_blood_color or target.unit.blood_color) then
+			if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) then
 				fx_ts = store.tick_ts
 
 				local fx = E:create_entity(dps.fx)
@@ -6144,26 +6149,29 @@ function scripts.mod_dps.update(this, store)
 						fx.render.sprites[1].offset.y = target.unit.mod_offset.y
 					end
 				else
-					fx.pos = V.vclone(this.pos)
+					fx.pos:copy(this.pos)
 
 					if m.use_mod_offset and target.unit.mod_offset then
 						fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
 					end
 				end
 
-				fx.render.sprites[1].ts = store.tick_ts
-				fx.render.sprites[1].runs = 0
+				for i = 1, #fx.render.sprites do
+					local s = fx.render.sprites[i]
+					s.ts = store.tick_ts
+					s.runs = 0
 
-				if fx.render.sprites[1].size_names then
-					fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
-				end
+					if s.size_names then
+						s.name = s.size_names[target.unit.size]
+					end
 
-				if fx.render.sprites[1].use_blood_color then
-					fx.render.sprites[1].name = fx.render.sprites[1].name .. "_" .. target.unit.blood_color
-				end
+					if s.use_blood_color then
+						s.name = s.name .. "_" .. target.unit.blood_color
+					end
 
-				if dps.fx_target_flip and target and target.render then
-					fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
+					if dps.fx_target_flip and target.render then
+						s.flip_x = target.render.sprites[1].flip_x
+					end
 				end
 
 				simulation:queue_insert_entity(fx)

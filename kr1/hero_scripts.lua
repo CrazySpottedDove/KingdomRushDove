@@ -18654,43 +18654,6 @@ function scripts.bullet_hero_hunter_ranged_attack.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
 
-	-- b.damage_min = b.damage_min_config[b.level]
-	-- b.damage_max = b.damage_max_config[b.level]
-	U.y_wait_unconditional(store, b.flight_time)
-
-	if target then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-
-		queue_damage(store, d)
-
-		if b.hit_fx then
-			local fx = E:create_entity(b.hit_fx)
-
-			fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
-			fx.render.sprites[1].ts = store.tick_ts
-
-			simulation:queue_insert_entity(fx)
-		end
-
-		if b.floor_fx and band(target.vis.flags, F_CLIFF) == 0 then
-			local fx = E:create_entity(b.floor_fx)
-
-			fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
-			fx.render.sprites[1].ts = store.tick_ts
-
-			simulation:queue_insert_entity(fx)
-		end
-	end
-
-	simulation:queue_remove_entity(this)
-end
-
-scripts.bullet_hero_hunter_ultimate_ranged_attack = {}
-
-function scripts.bullet_hero_hunter_ultimate_ranged_attack.update(this, store)
-	local b = this.bullet
-	local target = store.entities[b.target_id]
-
 	U.y_wait_unconditional(store, b.flight_time)
 
 	if target then
