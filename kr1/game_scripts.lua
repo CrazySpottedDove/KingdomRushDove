@@ -38935,23 +38935,6 @@ function scripts.enemy_miniboss_stage_39.update(this, store, script)
 	end
 end
 
-scripts.mod_enemy_miniboss_stage_39_instakill = {}
-
-function scripts.mod_enemy_miniboss_stage_39_instakill.insert(this, store, script)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-
-	if not target then
-		return false
-	end
-
-	for i = 1, #target.render.sprites do
-		target.render.sprites[i].hidden = true
-	end
-
-	return true
-end
-
 scripts.bullet_stage_37_dragons_wardens = {}
 
 function scripts.bullet_stage_37_dragons_wardens.update(this, store)
