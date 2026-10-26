@@ -19,7 +19,6 @@ local class = require("middleclass")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
-local AC = require("achievements")
 local F = require("lib.klove.font_db")
 local I = require("lib.klove.image_db")
 local S = require("sound_db")
@@ -128,7 +127,7 @@ local function balloon_at_this_level(at_level_idx)
 	return store and at_level_idx == store.level_idx
 end
 
-game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia_creeps", "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
+game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "encyclopedia_creeps", "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
 game_gui.plugin_required_textures = {}
 game_gui.plugin_required_sounds = {}
 game_gui.plugin_required_exoskeletons = {}
@@ -302,11 +301,6 @@ local signals = {
 
 	["turn-off-balloon"] = function()
 		game_gui:hide_balloon()
-	end,
-
-	["got-achievement"] = function(id)
-		log.debug("achievement %s", id)
-		game_gui:show_achievement(id)
 	end,
 
 	["block-random-power"] = function(duration, style)
@@ -1823,20 +1817,6 @@ function game_gui:hide_balloon()
 	if store then
 		kr5_balloon.clear(self, store)
 	end
-end
-
-function game_gui:show_achievement(id)
-	if self.manual_gui_hide then
-		return
-	end
-
-	if not self.achievement_banner then
-		self.achievement_banner = AchievementBanner:new()
-
-		self.layer_gui_game:add_child(self.achievement_banner)
-	end
-
-	self.achievement_banner:queue(id)
 end
 
 function game_gui:block_random_power(duration, style)
@@ -7417,139 +7397,6 @@ function TutorialBalloon:show()
 
 	self:loop_tween()
 end
-
-AchievementBanner = class("AchievementBanner", KImageView)
-
-function AchievementBanner:initialize(id)
-	AchievementBanner.super.initialize(self, "Achievements_Box_Big")
-
-	local header = GGTextLabel:new(V.v(78, 13))
-
-	header.pos.x, header.pos.y = 95, 8.5 + CJK(0, -1, 0, 0)
-	header.text = _("ACHIEVEMENT")
-	header.vertical_align = "middle"
-	header.text_align = "center"
-	header.colors.text = {72, 51, 25, 255}
-	header.font_name = "h_noti"
-	header.font_size = 16
-	header.fit_lines = 1
-
-	self:add_child(header)
-
-	local icon = KImageView:new("achievement_icons_0001")
-
-	icon.anchor = V.v(icon.size.x * 0.5, icon.size.y * 0.5)
-	icon.pos = V.v(40, 54)
-	icon.scale = V.v(0.8, 0.8)
-	icon.propagate_on_click = true
-
-	self:add_child(icon)
-
-	local l_title = GGTextLabel:new(V.v(180, 14))
-
-	l_title.pos = V.v(68, CJK(35, 33, nil, 33))
-	l_title.font_name = "h"
-	l_title.font_size = 12
-	l_title.colors.text = {234, 205, 132, 255}
-	l_title.text = "TITLE"
-	l_title.text_align = "left"
-	l_title.propagate_on_click = true
-	l_title.fit_lines = 1
-
-	self:add_child(l_title)
-
-	local l_desc = GGTextLabel:new(V.v(180, 32))
-
-	l_desc.font_name = "body"
-	l_desc.font_size = 10
-	l_desc.colors.text = {246, 227, 176, 255}
-	l_desc.text = "DESC"
-	l_desc.text_align = "left"
-	l_desc.propagate_on_click = true
-	l_desc.line_height = CJK(0.8, nil, 1.1, 0.9)
-
-	l_desc:do_fit_lines(3)
-
-	l_desc.clip = true
-	l_desc.pos.x, l_desc.pos.y = 68, 45 + CJK(0, 3, 3, 1)
-
-	self:add_child(l_desc)
-
-	self.icon = icon
-	self.l_title = l_title
-	self.l_desc = l_desc
-
-	function self.on_click(this)
-		if self.active then
-			this:hide()
-		end
-	end
-
-	self.anchor = V.v(self.size.x * 0.5, self.size.y)
-	self.pos = V.v(game_gui.sw * 0.5, -1)
-	self.hidden = true
-	self.queued_ids = {}
-end
-
-function AchievementBanner:queue(id)
-	table.insert(self.queued_ids, id)
-	self:show()
-end
-
-function AchievementBanner:show()
-	if #self.queued_ids < 1 or not self.hidden then
-		return
-	end
-
-	local id = table.remove(self.queued_ids, 1)
-	local ach = AC:get_data(id)
-	local prefix = ""
-
-	self.icon:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
-
-	self.l_title.text = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_NAME")
-	self.l_desc.text = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_DESCRIPTION")
-	self.hidden = false
-	self.active = true
-
-	S:queue("GUIAchievementWin", {
-		ignore = 1
-	})
-
-	if self.timers then
-		for _, t in pairs(self.timers) do
-			timer:cancel(t)
-		end
-	end
-
-	self.timers = {timer:tween(0.5, self.pos, {
-		y = self.size.y * self.scale.y + 10
-	}, "out-back"), timer:after(4, function()
-		self:hide()
-	end)}
-end
-
-function AchievementBanner:hide()
-	if self.timers then
-		for _, t in pairs(self.timers) do
-			timer:cancel(t)
-		end
-	end
-
-	self.active = false
-	self.timers = {timer:tween(0.5, self.pos, {
-		y = -1
-	}, "in-back", function()
-		self.timers = nil
-		self.hidden = true
-
-		if #self.queued_ids > 0 then
-			self:show()
-		end
-	end)}
-end
-
-AchievementBanner.update = KF.update_empty
 
 -- 逻辑节点，用于处理鼠标悬停防御塔，选中实体的逻辑。
 PickView = class("PickView", KVirtualView)

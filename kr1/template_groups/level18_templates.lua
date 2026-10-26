@@ -1,7 +1,6 @@
 local E = require("entity_db")
 local U = require("utils")
 local V = require("lib.klua.vector")
-local A = require("achievements")
 require("all.constants")
 require("lib.klua.table")
 local r = V.r
@@ -29,7 +28,6 @@ local function decal_scrat_update(this, store)
 	U.y_animation_wait_default(this)
 	this.render.sprites[1].hidden = true
 	U.animation_start(this, "end", nil, store.tick_ts, false, 2)
-	A:got("DEFEAT_ACORN")
 end
 local tt
 tt = E:register_t("decal_scrat", "decal_scripted", true)

@@ -6,7 +6,6 @@ require("lib.klua.table")
 
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
-local AC = require("achievements")
 local E = require("entity_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")

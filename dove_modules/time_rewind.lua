@@ -14,7 +14,6 @@ local log = require("lib.klua.log"):new("time_rewind")
 local km = require("lib.klua.macros")
 local configer = require("dove_modules.configer")
 local S = require("sound_db")
-local AC = require("achievements")
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
 local floor = math.floor
 local ceil = math.ceil
@@ -81,54 +80,6 @@ time_rewind.progress = 0
 time_rewind.phase = 0
 time_rewind.state = STATE_IDLE
 time_rewind.panel_open = false
-
--- 重演期间成就信号会再次触发，跨局计数器必须成对备份/还原
-local function snapshot_achievements()
-	local snap = {
-		ach = {},
-		counters = {}
-	}
-
-	for k, v in pairs(AC.ach) do
-		snap.ach[k] = v
-	end
-
-	for period, counter in pairs(AC.counters) do
-		local ids = {}
-
-		for k, v in pairs(counter) do
-			ids[k] = v
-		end
-
-		snap.counters[period] = ids
-	end
-
-	return snap
-end
-
-local function restore_achievements(snap)
-	for period, counter in pairs(AC.counters) do
-		local ids = snap.counters[period]
-
-		for k in pairs(counter) do
-			counter[k] = nil
-		end
-
-		if ids then
-			for k, v in pairs(ids) do
-				counter[k] = v
-			end
-		end
-	end
-
-	for k in pairs(AC.ach) do
-		AC.ach[k] = nil
-	end
-
-	for k, v in pairs(snap.ach) do
-		AC.ach[k] = v
-	end
-end
 
 local function noop()
 end
@@ -794,7 +745,6 @@ function time_rewind:start(game, target_time)
 	self.progress = 0
 	self.phase = PHASE_REBUILD
 	self.state = STATE_REBUILD
-	self.ach_snapshot = snapshot_achievements()
 	cursor = 1
 	pending_music = nil
 
@@ -906,8 +856,6 @@ function time_rewind:finish(game)
 
 	store.paused = false
 
-	restore_achievements(self.ach_snapshot)
-	self.ach_snapshot = nil
 	self.state = STATE_IDLE
 	self.progress = 0
 	self:restore_defs()

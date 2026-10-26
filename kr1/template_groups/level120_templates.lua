@@ -1,6 +1,5 @@
 local E = require("entity_db")
 require("lib.klua.table")
-local AC = require("achievements")
 local scripts = require("scripts")
 local tt
 local decal_stage20_ruperto_easter_egg

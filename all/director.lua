@@ -13,7 +13,6 @@ local SH = require("klove.shader_db")
 local KDB = require("klove.kui_db")
 local S = require("sound_db")
 local G = love.graphics
-local AC = require("achievements")
 local LU = require("level_utils")
 local GEU = require("game_editor_utils")
 local storage = require("all.storage")
@@ -62,10 +61,6 @@ function director:init(params)
 		end
 	end
 	-- perf.tmp_stop("sound_db_init")
-
-	-- perf.tmp_start("achivements_init")
-	AC:init()
-	-- perf.tmp_stop("achivements_init")
 
 	self.params = params
 

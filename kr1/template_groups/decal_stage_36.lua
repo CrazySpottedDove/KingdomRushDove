@@ -4,7 +4,6 @@ local scripts = require("game_scripts")
 local tt
 local U = require("utils")
 local S = require("sound_db")
-local ACH = require("achievements")
 local V = require("lib.klua.vector")
 local fts = U.fts
 local decal_stage_36_easter_egg_spyro = {}
@@ -147,7 +146,6 @@ function decal_stage_36_easter_egg_spyro.update(this, store, script)
 				S:queue("Stage36EasterEggSpyroFall")
 				U.y_animation_play(this, "death", nil, store.tick_ts, 1, 1)
 				U.y_wait_unconditional(store, 0.2)
-				ACH:got("DLC3_SPYRO")
 				simulation:queue_remove_entity(this)
 
 				return

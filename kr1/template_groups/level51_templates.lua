@@ -116,14 +116,6 @@ tt.main_script.update = function(this, store)
 			U.y_animation_play(this, "save", nil, store.tick_ts)
 			simulation:queue_remove_entity(this)
 
-			if this.achievement then
-			-- AC:got(this.achievement)
-			end
-
-			if this.achievement_inc then
-			-- AC:inc_check(this.achievement_inc)
-			end
-
 			return
 		end
 	end

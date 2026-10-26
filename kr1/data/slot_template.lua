@@ -1,5 +1,4 @@
 return {
-	achievements = {},
 	levels = {
 		[1] = {},
 		[27] = {},

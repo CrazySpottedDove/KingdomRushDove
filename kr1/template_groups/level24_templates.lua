@@ -1,6 +1,5 @@
 local E = require("entity_db")
 local U = require("utils")
-local A = require("achievements")
 require("all.constants")
 require("lib.klua.table")
 local fts = U.fts
@@ -18,7 +17,6 @@ local function decal_s24_nevermore_update(this, store)
 	this.tween.reverse = false
 	this.tween.ts = store.tick_ts
 	U.y_wait_unconditional(store, this.leave_time)
-	A:got("NEVERMORE")
 	simulation:queue_remove_entity(this)
 end
 local tt

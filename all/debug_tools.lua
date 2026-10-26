@@ -174,23 +174,6 @@ function dd.nn(force_nni)
 	return string.format("(%s) %s", DEBUG_NNI - 1, noti_name)
 end
 
-local aai = 1
-
-function dd.aa(force_aai)
-	local signal = require("lib.hump.signal")
-
-	ad = require("data.achievements_data")
-	aai = force_aai or aai
-
-	if ad[aai] then
-		signal.emit("got-achievement", ad[aai].name)
-
-		aai = aai + 1
-	else
-		aai = 1
-	end
-end
-
 function dd.dump_flags(v)
 	local flag_names = {
 		F_LETHAL = 8192,
@@ -410,7 +393,7 @@ function dd.wid(n)
 end
 
 function dd.help()
-	out = " \ndd.aa(force_id)  : show achievement (force_id is optional)\ndd.build(tpl)    : build all towers of template, or cycle from list\ndd.cat(filename) : returns a file\ndd.copy_file(s,d): copy file, passing through memory\ndd.d(table)      : return dump of table\ndd.dl(table)     : list entities list with id and template\ndd.dump_flags(v) : dumps wich flags match\ndd.e(id)         : return entity with id\ndd.ed(id,comp)   : return dump of entity with id, or component dump if specified\ndd.f(comp)       : filter and print entities that have specified component\ndd.fd(table)     : return full dump of table\ndd.hex(d,fr,to)  : returns hex dump string of d[fr..to]\ndd.trace(co)     : returns coroutine stack trace\ndd.hook_count(n) : dumps trace after n instructions (100.000.000 for finding infinite loops)\ndd.ft(template)  : return array of entities of template\ndd.ls(path)      : returns printed list of files in path (only for unix)\ndd.ne(name)      : create and insert new entity with template name\ndd.nn(force_id)  : show notification (force_id is optional)\ndd.se()          : return entity selected from the gui\ndd.sid()         : return id of entity selected from the gui\ndd.sk(string)    : send the key names, separated by space(eg: \"tab f q =\")\ndd.sshot()       : prepare the screen for a screenshot (hide hero, gui, holders, etc.)\ndd.wid(n)        : returns kui view with id in director.active_item\n-- debug.debug() utils\ndd.get_local(name) : returns local variable with name\n"
+	out = " \ndd.build(tpl)    : build all towers of template, or cycle from list\ndd.cat(filename) : returns a file\ndd.copy_file(s,d): copy file, passing through memory\ndd.d(table)      : return dump of table\ndd.dl(table)     : list entities list with id and template\ndd.dump_flags(v) : dumps wich flags match\ndd.e(id)         : return entity with id\ndd.ed(id,comp)   : return dump of entity with id, or component dump if specified\ndd.f(comp)       : filter and print entities that have specified component\ndd.fd(table)     : return full dump of table\ndd.hex(d,fr,to)  : returns hex dump string of d[fr..to]\ndd.trace(co)     : returns coroutine stack trace\ndd.hook_count(n) : dumps trace after n instructions (100.000.000 for finding infinite loops)\ndd.ft(template)  : return array of entities of template\ndd.ls(path)      : returns printed list of files in path (only for unix)\ndd.ne(name)      : create and insert new entity with template name\ndd.nn(force_id)  : show notification (force_id is optional)\ndd.se()          : return entity selected from the gui\ndd.sid()         : return id of entity selected from the gui\ndd.sk(string)    : send the key names, separated by space(eg: \"tab f q =\")\ndd.sshot()       : prepare the screen for a screenshot (hide hero, gui, holders, etc.)\ndd.wid(n)        : returns kui view with id in director.active_item\n-- debug.debug() utils\ndd.get_local(name) : returns local variable with name\n"
 
 	print(out)
 
