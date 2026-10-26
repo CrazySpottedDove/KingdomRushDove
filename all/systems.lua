@@ -17,8 +17,6 @@ local systems_list = {
 	"editor_script",
 	"last_hook",
 	"assets_checker",
-	"endless",
-	"tower_skill",
 	"enemy"
 }
 

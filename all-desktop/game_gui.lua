@@ -49,8 +49,6 @@ local LU = require("level_utils")
 local storage = require("all.storage")
 local G = love.graphics
 local i18n = require("i18n")
-local EU = require("endless_utils")
-local EL = require("kr1.data.endless")
 local perf = require("dove_modules.perf.perf")
 
 -- 按钮尺寸取边框（frame_image）的实际显示尺寸，与图标内容无关：
@@ -169,19 +167,6 @@ local signals = {
 			game_gui:show_balloon("TB_WAVE")
 		end
 
-		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
-			if game_gui.game.store.endless.load_from_history then
-				game_gui.game.store.endless.load_from_history = false
-			else
-				if #game_gui.game.store.endless.upgrade_options > 0 and game_gui.game.store.wave_group_number <= 75 then
-					if game_gui.endless_select_reward_view.hidden then
-						game_gui.endless_select_reward_view:show()
-					end
-				end
-				local endless = game_gui.game.store.endless
-				EU.patch_enemy_growth(endless)
-			end
-		end
 	end,
 
 	["next-wave-sent"] = function(group)
@@ -566,14 +551,6 @@ function game_gui:init(w, h, game)
 	layer_gui_top:add_child(notiview)
 	layer_gui_top:add_child(pauseview)
 	layer_gui_top:add_child(time_rewind_view)
-
-	if game.simulation.store.level_mode_override == GAME_MODE_ENDLESS then
-		local endless_select_reward_view = EndlessSelectRewardView:new(sw, sh)
-		endless_select_reward_view.hidden = true
-		endless_select_reward_view.pos = v(0, 0)
-		layer_gui_top:add_child(endless_select_reward_view)
-		self.endless_select_reward_view = endless_select_reward_view
-	end
 
 	if self.game.store.level.show_comic_idx then
 		local comic_transition = KView:new(V.v(sw, sh))
@@ -1097,10 +1074,6 @@ function game_gui:keypressed(key, isrepeat)
 				end
 			end
 		end
-	elseif ks.endless_shop == key and self.game.store.level_mode_override == GAME_MODE_ENDLESS and self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
-		self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
-
-		game_gui.endless_select_reward_view:show(true)
 	elseif ks.hero_menu_toggle == key and configer.ui_settings().hero_menu_enabled then
 		if self.heromenu.hidden then
 			self.heromenu:show()
@@ -1688,65 +1661,6 @@ function game_gui:victory()
 end
 
 function game_gui:go_to_map()
-	if self.game.store.level_mode_override == GAME_MODE_ENDLESS then
-		local endless_data = self.game.store.endless
-
-		-- 保存玩家基础信息
-		endless_data.player_gold = self.game.store.player_gold
-		endless_data.lives = self.game.store.lives
-		endless_data.wave_group_number = self.game.store.wave_group_number
-		-- 保存塔的信息
-		endless_data.towers = {}
-
-		for _, tower in pairs(self.game.store.towers) do
-			local tower_data = {
-				template_name = tower.template_name,
-				pos = V.v(tower.pos.x, tower.pos.y),
-				tower_level = tower.tower.level,
-				spent = tower.tower.spent or 0,
-				holder_id = tower.tower.holder_id,
-				flip_x = tower.tower.flip_x,
-				terrain_style = tower.tower.terrain_style
-			}
-
-			-- 保存塔的技能等级
-			if tower.powers then
-				tower_data.powers = {}
-
-				for power_name, power in pairs(tower.powers) do
-					tower_data.powers[power_name] = {
-						level = power.level,
-						price_base = power.price_base,
-						price_inc = power.price_inc
-					}
-				end
-			end
-
-			-- 保存兵营的集结点
-			if tower.barrack and tower.barrack.rally_pos then
-				tower_data.rally_pos = V.v(tower.barrack.rally_pos.x, tower.barrack.rally_pos.y)
-				tower_data.soldier_count = #tower.barrack.soldiers
-			end
-
-			-- 保存塔的攻击信息
-			if tower.attacks then
-				tower_data.attacks = {}
-
-				for i, attack in ipairs(tower.attacks.list) do
-					if attack.bought then
-						tower_data.attacks[i] = {
-							bought = true
-						}
-					end
-				end
-			end
-
-			table.insert(endless_data.towers, tower_data)
-		end
-
-		storage:save_endless(self.game.store.level_name, self.game.store.endless)
-	end
-
 	S:stop_all()
 	S:resume()
 	signal.emit("game-quit", self.game.store)
@@ -1760,11 +1674,6 @@ function game_gui:restart_game()
 	S:stop_all()
 	S:resume()
 	signal.emit("game-restart", self.game.store)
-
-	if self.game.store.level_mode_override == GAME_MODE_ENDLESS then
-		-- 删除无尽模式存档
-		storage:delete_endless(self.game.store.level_name)
-	end
 
 	game_gui.game:restart()
 end
@@ -3527,7 +3436,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_gold.draw = KF.draw_without_children_and_clip
 	lbl_gold:update_cache()
 
-	local lbl_wave = GGCachedTextLabel:new(V.v(game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and 25 or 74, 28))
+	local lbl_wave = GGCachedTextLabel:new(V.v(74, 28))
 
 	lbl_wave.pos = v(240, 38)
 	lbl_wave.text_align = "left"
@@ -3573,18 +3482,15 @@ function HudCountersView:update(dt)
 	end
 
 	local wave_value = store.wave_group_number
-	if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
-		wave_value = store.wave_group_number
-	elseif configer.criket().on then
+
+	if configer.criket().on then
 		wave_value = store.enemy_count
 	end
 
 	if wave_value ~= self.lbl_wave_value then
 		self.lbl_wave_value = wave_value
 
-		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
-			self.lbl_wave.text = string.format("%d", wave_value)
-		elseif configer.criket().on then
+		if configer.criket().on then
 			self.lbl_wave.text = string.format("%3d*%.2f", wave_value, configer.config().enabled and configer.config().enemy_health_multiplier or 1)
 		else
 			self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), wave_value, store.wave_group_total)
@@ -3890,23 +3796,6 @@ function PauseView:initialize()
 				end
 			end
 			self:add_child(btn_criket)
-		end
-
-		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
-			button_height = button_height + 100
-			local btn_endless = GGOptionsButton:new(_("INGAME_UI_BTN_ENDLESS_SHOP"))
-			btn_endless:set_anchor_to_center()
-			btn_endless.pos.x = right_x
-			btn_endless.pos.y = button_height
-			function btn_endless.on_click()
-				S:queue("GUIButtonCommon")
-				if game_gui.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
-					self:hide()
-					game_gui.game.store.player_gold = game_gui.game.store.player_gold - EL.gold_extra_cost
-					game_gui.endless_select_reward_view:show(true)
-				end
-			end
-			self:add_child(btn_endless)
 		end
 
 		if configer.ui_settings().hero_menu_enabled then
@@ -10239,77 +10128,5 @@ end
 function SelectPanelView:hide()
 	SelectPanelView.super.hide(self)
 end
-
-EndlessSelectRewardView = class("EndlessSelectRewardView", SelectPanelView)
-
-function EndlessSelectRewardView:initialize(sw, sh)
-	SelectPanelView.initialize(self, sw, sh, _("INGAME_UI_SELECT_REWARD"))
-	self:set_key_label_map(EL.key_label_map)
-	self:set_key_desc_map(EL.key_desc_map)
-end
-
-function EndlessSelectRewardView:load()
-	-- 随机选择
-	local selected = {}
-
-	if self.extra then
-		local count = 0
-
-		while count < 3 do
-			local choice = table.random(game_gui.game.store.endless.gold_extra_upgrade_options)
-
-			if selected[choice] == nil then
-				selected[choice] = false
-				count = count + 1
-			end
-		end
-	else
-		local count = 0 -- 手动计数
-		local upgrade_options = game_gui.game.store.endless.upgrade_options
-		local max_count = math.min(3, #upgrade_options) -- 最大选择数量
-
-		while count < max_count do
-			local choice = upgrade_options[math.random(1, #upgrade_options)]
-
-			if selected[choice] == nil then
-				selected[choice] = false
-				count = count + 1 -- 增加计数
-			end
-		end
-	end
-
-	self.data_group:set_all_data(selected)
-	game_gui:disable_keys()
-	game_gui:deselect_all()
-	S:pause()
-
-	game_gui.game.store.paused = true
-
-	game_gui.overlay:show()
-end
-
-function EndlessSelectRewardView:save()
-	local key
-
-	for k, v in pairs(self.data_group:get_all_data()) do
-		if v then
-			key = k
-
-			break
-		end
-	end
-
-	local store = game_gui.game.store
-
-	EU.patch_upgrade_in_game(key, store, store.endless)
-	game_gui:enable_keys()
-	S:resume()
-
-	game_gui.game.store.paused = false
-
-	game_gui.overlay:hide()
-end
-
-EndlessSelectRewardView.update = KF.update_empty
 
 return game_gui

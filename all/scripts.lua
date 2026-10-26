@@ -3576,7 +3576,7 @@ function scripts.bolt.update(this, store)
 			end
 		end
 
-		if target and target.health and not target.health.dead then
+		if target and not target.health.dead then
 			if b.ignore_hit_offset then
 				b.to.x, b.to.y = target.pos.x, target.pos.y
 			else
@@ -3618,13 +3618,14 @@ function scripts.bolt.update(this, store)
 
 		queue_damage(store, d)
 
-		if b.mod or b.mods then
-			local mods = b.mods or {b.mod}
-
-			for _, mod_name in pairs(mods) do
-				local m = E:create_entity(mod_name)
+		local mods = b.mods or (b.mod and {b.mod})
+		if mods then
+			for k = 1, #mods do
+				local m = E:create_entity(mods[k])
 
 				m.modifier.target_id = b.target_id
+				m.modifier.source_id = b.source_id
+				m.modifier.damage_factor = b.damage_factor
 				m.modifier.level = b.level
 
 				simulation:queue_insert_entity(m)

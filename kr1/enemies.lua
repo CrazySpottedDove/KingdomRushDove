@@ -2689,12 +2689,10 @@ tt.ranged.attacks[1].animation = "rangedAttack"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(4, 12)}
 
 tt = RT("arrow_desert_archer", "arrow")
-AC(tt, "endless")
 tt.bullet.damage_min = 20
 tt.bullet.damage_max = 30
 tt.bullet.pop = nil
 tt.bullet.predict_target_pos = false
-tt.endless.factor_map = {{"enemy_desert_archer.rangedDamage", "bullet.damage_min", true}, {"enemy_desert_archer.rangedDamage", "bullet.damage_max", true}}
 
 tt = RT("enemy_scorpion", "enemy")
 AC(tt, "melee")
@@ -2922,7 +2920,7 @@ tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
 
 tt = RT("mod_munra_heal", "modifier")
-AC(tt, "hps", "render", "endless")
+AC(tt, "hps", "render")
 tt.modifier.duration = fts(24)
 tt.hps.heal_min = 100
 tt.hps.heal_max = 100
@@ -2932,10 +2930,8 @@ tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].name = "small"
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
-tt.endless.factor_map = {{"enemy_munra.healPoints", "hps.heal_min", true}, {"enemy_munra.healPoints", "hps.heal_max", true}}
 
 tt = RT("bolt_munra", "bolt_enemy")
-AC(tt, "endless")
 tt.render.sprites[1].prefix = "bolt_munra"
 tt.bullet.align_with_trajectory = true
 tt.bullet.damage_max = 40
@@ -2943,7 +2939,6 @@ tt.bullet.damage_min = 20
 tt.bullet.max_speed = 390
 tt.bullet.hit_fx = "fx_bolt_munra_hit"
 tt.bullet.max_track_distance = 50
-tt.endless.factor_map = {{"enemy_munra.rangedDamage", "bullet.damage_min", true}, {"enemy_munra.rangedDamage", "bullet.damage_max", true}}
 
 tt = RT("fx_bolt_munra_hit", "fx")
 tt.render.sprites[1].name = "bolt_munra_hit"
@@ -5025,14 +5020,13 @@ tt.coward_duration = 1.2
 tt.coward_speed_factor = 1.5
 
 tt = RT("enemy_ettin", "enemy")
-AC(tt, "melee", "auras", "endless")
+AC(tt, "melee", "auras")
 tt.info.enc_icon = 5
 tt.info.portrait = "kr3_info_portraits_enemies_0011"
 tt.info.i18n_key = "ENEMY_ETTIN"
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].name = "aura_ettin_regen"
 tt.auras.list[1].cooldown = 0
-tt.endless.factor_map = {{"enemy_ettin.basicCooldownTime", "insane.cooldown_min", true}, {"enemy_ettin.basicCooldownTime", "insane.cooldown_max", true}}
 tt.enemy.gold = 70
 tt.enemy.lives_cost = {2, 2, 4}
 tt.enemy.melee_slot = vec_2(35, 0)

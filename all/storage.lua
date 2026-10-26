@@ -1,7 +1,6 @@
 -- chunkname: @./all/storage.lua
 local log = require("lib.klua.log"):new("storage")
 local km = require("lib.klua.macros")
-local FS = love.filesystem
 local persistence = require("lib.klua.persistence")
 local signal = require("lib.hump.signal")
 
@@ -93,37 +92,6 @@ function storage:load_lua(filename, force_load)
 end
 
 -- load_config/load_criket moved to dove_modules.configer
-
-function storage:load_endless(level_name)
-	return self:load_lua(string.format("endless_%s.lua", level_name), true)
-end
-
-function storage:save_endless(level_name, endless)
-	local success = self:write_lua(string.format("endless_%s.lua", level_name), endless)
-
-	if not success then
-		log.error("Error saving endless_%s.lua", level_name)
-	end
-end
-
-function storage:delete_endless(level_name)
-	local filename = string.format("endless_%s.lua", level_name)
-
-	-- 目标文件本来就不存在时，按“删除成功”处理。
-	-- 目的：避免反复打无效错误日志，影响排查真正问题。
-	-- 这里不是吞错误，而是把“无文件可删”识别为正常结果。
-	if not FS.getInfo(filename) then
-		return true
-	end
-
-	local success = self:remove(filename, true)
-
-	if not success then
-		log.error("Error deleting endless_%s.lua", level_name)
-	end
-
-	return success
-end
 
 -- load_keyset/load_ui_settings/save_* moved to dove_modules.configer
 
