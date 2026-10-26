@@ -2844,7 +2844,7 @@ function scripts.bomb.update(this, store)
 		hp.source_id = b.source_id
 
 		if hp.unit then
-			hp.unit.damage_factor = this.bullet.damage_factor * hp.unit.damage_factor
+			SU.insert_unit_damage_factor_by_factor(hp, this.bullet.damage_factor)
 		end
 
 		if hp.aura then
@@ -5609,7 +5609,7 @@ function scripts.mod_health_damage_factor_inc.insert(this, store)
 		local target = store.entities[this.modifier.target_id]
 
 		if target and target.health then
-			target.health.damage_factor = target.health.damage_factor * (1 + this.modifier.health_damage_factor_inc)
+			SU.insert_received_damage_factor_buff(target, this.modifier.health_damage_factor_inc)
 		end
 	end
 
@@ -6591,13 +6591,15 @@ function scripts.mod_damage_factors.insert(this, store)
 	local boss_factor = band(target.vis.flags, F_BOSS) ~= 0 and 0.5 or 1
 
 	if this.received_damage_factor then
-		this.received_damage_factor = (this.received_damage_factor - 1) * boss_factor + 1
-		target.health.damage_factor = target.health.damage_factor * this.received_damage_factor
+		local received_damage_factor = 1 + (this.received_damage_factor - 1) * boss_factor
+		this._received_damage_factor = received_damage_factor
+		SU.insert_received_damage_factor_by_factor(target, received_damage_factor)
 	end
 
 	if this.inflicted_damage_factor then
-		this.inflicted_damage_factor = 1 + (this.inflicted_damage_factor - 1) * boss_factor
-		target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+		local inflicted_damage_factor = 1 + (this.inflicted_damage_factor - 1) * boss_factor
+		this._inflicted_damage_factor = inflicted_damage_factor
+		SU.insert_unit_damage_factor_by_factor(target, inflicted_damage_factor)
 	end
 
 	if this.render then
@@ -6623,12 +6625,12 @@ function scripts.mod_damage_factors.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target and target.health and target.unit then
-		if this.received_damage_factor then
-			target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
+		if this._received_damage_factor then
+			SU.remove_received_damage_factor_by_factor(target, this._received_damage_factor)
 		end
 
-		if this.inflicted_damage_factor then
-			target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+		if this._inflicted_damage_factor then
+			SU.remove_unit_damage_factor_by_factor(target, this._inflicted_damage_factor)
 		end
 	end
 

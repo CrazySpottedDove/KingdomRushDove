@@ -486,11 +486,11 @@ function entity_db:patch_config(config)
 			end
 
 			if t.unit.damage_factor then
-				t.unit.damage_factor = t.unit.damage_factor * config.enemy_damage_multiplier
+				t.unit.damage_factor = t.unit.damage_factor + (config.enemy_damage_multiplier - 1)
 			end
 
 			if t.health.damage_factor then
-				t.health.damage_factor = t.health.damage_factor * config.enemy_health_damage_multiplier
+				t.health.damage_factor = t.health.damage_factor + (config.enemy_health_damage_multiplier - 1)
 			end
 
 			if t.motion.max_speed then
@@ -501,7 +501,7 @@ function entity_db:patch_config(config)
 			t.tower.cooldown_factor_divider = config.tower_cooldown_divider * t.tower.cooldown_factor_divider
 			t.tower.cooldown_factor = 1. / t.tower.cooldown_factor_divider
 			SU.change_fps(0, t, t.tower.cooldown_factor_divider)
-			t.tower.damage_factor = t.tower.damage_factor * config.tower_damage_multiplier
+			t.tower.damage_factor = t.tower.damage_factor + (config.tower_damage_multiplier - 1)
 			if t.attacks then
 				t.attacks.range = t.attacks.range * config.tower_range_multiplier
 

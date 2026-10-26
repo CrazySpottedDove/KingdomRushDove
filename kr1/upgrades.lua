@@ -83,7 +83,7 @@ end
 -- 缩放一组塔的伤害倍率
 local function scale_tower_damage(towers, factor)
 	for _, n in pairs(towers) do
-		T(n).tower.damage_factor = T(n).tower.damage_factor * factor
+		T(n).tower.damage_factor = T(n).tower.damage_factor + (factor - 1)
 	end
 end
 
@@ -1881,7 +1881,7 @@ function upgrades:patch_templates(max_level)
 							x = x + 3
 						end
 						local factor = (4 * x) / (3 * (x + 1))
-						soldier_tpl.unit.damage_factor = soldier_tpl.unit.damage_factor * factor
+						soldier_tpl.unit.damage_factor = soldier_tpl.unit.damage_factor + (factor - 1)
 					end
 				end
 				t.barrack.max_soldiers = t.barrack.max_soldiers + 1
@@ -1903,7 +1903,7 @@ function upgrades:patch_templates(max_level)
 
 		for _, n in ipairs(special_soldiers) do
 			local t = T(n)
-			t.unit.damage_factor = t.unit.damage_factor * 1.3
+			t.unit.damage_factor = t.unit.damage_factor + 0.3
 		end
 
 		for _, n in ipairs(barrack_soldiers) do
@@ -1936,7 +1936,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_weapon")
 	if u then
 		for _, n in ipairs(soldiers) do
-			T(n).unit.damage_factor = T(n).unit.damage_factor * u.damage_factor
+			T(n).unit.damage_factor = T(n).unit.damage_factor + (u.damage_factor - 1)
 		end
 	end
 

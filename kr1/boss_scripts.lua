@@ -4064,7 +4064,7 @@ function scripts.mod_gnoll_boss.insert(this, store)
 	this._hp_bonus = math.floor(target.health.hp_max * this.extra_health_factor)
 	target.health.hp_max = target.health.hp_max + this._hp_bonus
 	U.heal(target, this._hp_bonus)
-	target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+	SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 
 	return true
 end
@@ -4076,7 +4076,7 @@ function scripts.mod_gnoll_boss.remove(this, store)
 	if target then
 		target.health.hp_max = target.health.hp_max - this._hp_bonus
 		target.health.hp = target.health.hp - this._hp_bonus
-		target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+		SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 	end
 
 	return true

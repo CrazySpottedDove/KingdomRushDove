@@ -277,6 +277,23 @@ Windows/Linux/Android 分别使用 `librender_sort.dll`、`librender_sort.so`、
 
 1. **局内实时值**：`tdmg`/`tcd` 取的是 `ctx.ent` 上的活值（`entity.tower.damage_factor`
    在局内会被 endless 科技、光环等通过 `SU.insert_tower_damage_factor_buff` 改写）。
+   **伤害倍率分两套**：增伤加算，减伤乘算。单位用
+   `SU.insert_unit_damage_factor_buff` / `SU.remove_unit_damage_factor_buff`
+   （参数是增量，`+0.2` 表示 +20%）和
+   `SU.insert_unit_damage_factor_mul_buff` / `SU.remove_unit_damage_factor_mul_buff`
+   （参数是倍率，`0.8` 表示造成 80% 伤害）；动态倍率用
+   `SU.insert_unit_damage_factor_by_factor` / `SU.remove_unit_damage_factor_by_factor`。
+   内部用 `unit.damage_factor_base/add/mul` 三个字段累计，保证任意顺序应用/移除后
+   能恢复原值。塔仍用 `SU.insert_tower_damage_factor_buff` /
+   `SU.remove_tower_damage_factor_buff`。
+   受到伤害倍率同理：`SU.insert_received_damage_factor_buff` /
+   `SU.remove_received_damage_factor_buff`（增量）、
+   `SU.insert_received_damage_factor_mul_buff` /
+   `SU.remove_received_damage_factor_mul_buff`（倍率）、
+   `SU.insert_received_damage_factor_by_factor` /
+   `SU.remove_received_damage_factor_by_factor`（动态倍率）；
+   内部用 `health.damage_factor_base/add/mul` 累计。
+   不要直接乘除 `unit.damage_factor` / `health.damage_factor`。
    图鉴没有实体，传 `E:create_entity(塔名)` 即得基准值。**用 `tdmg` 却不传 `ctx.ent`
    会让整段渲染成空串**，`make check-text` 会挡住。
    **塔技能的伤害倍率一律写 `tdmg`，不要再写 `T('x').tower.damage_factor`** ——
