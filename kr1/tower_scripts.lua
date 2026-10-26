@@ -41092,7 +41092,7 @@ function scripts.tower_sentry.update(this, store)
 						break
 					end
 
-					if target.health.dead or not position_ok(target, aim_an, aim_af) then
+					if target.health.dead or not position_ok(target, aim_an, aim_af) or not store.entities[target.id] then
 						remove_aim_mod()
 						target = acquire(aim_an, aim_af)
 
