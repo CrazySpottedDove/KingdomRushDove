@@ -249,9 +249,9 @@ function image_db:queue_load_done()
 		-- 不要删掉这行，这真是注释：local ref_scale, path, name = unpack(item)
 		local image_names
 		if item[4] then
-			image_names = self:preload_atlas(item[1], item[2], item[3])
+			image_names = self:preload_atlas_lua(item[1], item[2], item[3])
 		else
-			image_names = self:preload_atlas_from_bytecode(item[1], item[2], item[3])
+			image_names = self:preload_atlas_binary(item[1], item[2], item[3])
 		end
 
 		if image_names then
@@ -348,12 +348,12 @@ function image_db:queue_load_done()
 	return true
 end
 
-function image_db:queue_load_atlas(ref_scale, path, name, not_bytecode)
+function image_db:queue_load_atlas(ref_scale, path, name, not_binary)
 	if self.persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
 		return
 	end
 
-	table.insert(self.load_queue, {ref_scale, path, name, not_bytecode})
+	table.insert(self.load_queue, {ref_scale, path, name, not_binary})
 
 	if #self.load_queue == 1 and not self.load_queue_current then
 		self.progress = 0
@@ -447,9 +447,9 @@ end
 --- 加载图像组的全部帧信息，但不加载图像资源。帧信息实现了帧到纹理的映射。
 ---@param ref_scale number 图像组的渲染比例
 ---@param path string 图像组父目录路径
----@param name string 图像组名称（不含.lua后缀）
+---@param name string 图像组名称（不含后缀）
 ---@return table|nil 所有待加载的图像名称 map<string, boolean>
-function image_db:preload_atlas(ref_scale, path, name)
+function image_db:preload_atlas_lua(ref_scale, path, name)
 	ref_scale = ref_scale or 1
 	local name_scale = string.format("%s-%.6f", name, ref_scale)
 
@@ -520,9 +520,9 @@ end
 --- 使用了预编译的数据，格式见 scripts/compile_image_atlas.lua
 ---@param ref_scale number 图像组的渲染比例
 ---@param path string 图像组父目录路径
----@param name string 图像组名称（不含.lua后缀）
+---@param name string 图像组名称（不含后缀）
 ---@return table|nil 所有待加载的图像名称 map<string, boolean>
-function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
+function image_db:preload_atlas_binary(ref_scale, path, name)
 	ref_scale = ref_scale or 1
 	local name_scale = string.format("%s-%.6f", name, ref_scale)
 
@@ -537,24 +537,16 @@ function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
 
 	local group_file = path .. "/" .. name .. extension_name
 
-	-- 优先按紧凑二进制解析（见 lib/klove/atlas_binary.lua）；否则回退旧 Lua 字节码。
-	local info
 	local data = FS.read(group_file)
 	if not data then
 		log.error("Failed to load atlas data: %s", group_file)
 		return
 	end
-	if atlas_binary.is_binary(data) then
-		info = atlas_binary.unpack(data)
-	else
-		-- DEPRECATED: 旧 Lua 字节码解析，未来会删除
-		local success, chunk = pcall(FS.load, group_file)
-		if not success or type(chunk) ~= "function" then
-			log.error("Failed to load atlas bytecode: %s. Error: %s", group_file, chunk)
-			return
-		end
-		info = chunk()
+	if not atlas_binary.is_binary(data) then
+		log.error("Invalid atlas data: %s", group_file)
+		return
 	end
+	local info = atlas_binary.unpack(data)
 
 	local image_names = {}
 
@@ -582,42 +574,22 @@ function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
 	return image_names
 end
 
---- [[DEPRECATED]] 加载一张图像资源，用于少量、临时的图像加载。建议使用 load_atlas_new 以利用预编译的图像列表，提高加载性能。该接口用于保证现有插件的兼容性，但不建议在新开发中使用。
----@param ref_scale number 图像的渲染比例
----@param path string 图像父目录路径
----@param name string 图像组名称（不含.lua后缀）
-function image_db:load_atlas(ref_scale, path, name)
-	if self.persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
-		return
-	end
-
-	local image_names = self:preload_atlas(ref_scale, path, name)
-
-	if not image_names then
-		return
-	end
-
-	local i = 0
-
-	for fn in pairs(image_names) do
-		i = i + 1
-		local key, im, w, h = image_db:load_image_file(fn, path)
-		self.db_images[key] = {im, w, h}
-	end
-
-	self.progress = 1
-end
-
 --- 加载一张图像资源，用于少量、临时的图像加载
 ---@param ref_scale number 图像的渲染比例
 ---@param path string 图像父目录路径
----@param name string 图像组名称（不含.lua后缀）
-function image_db:load_atlas_new(ref_scale, path, name)
+---@param name string 图像组名称（不含后缀）
+---@param not_binary boolean 为 true 时加载 .lua 源码，否则加载 .bin/.abin
+function image_db:load_atlas_new(ref_scale, path, name, not_binary)
 	if self.persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
 		return
 	end
 
-	local image_names = self:preload_atlas_from_bytecode(ref_scale, path, name)
+	local image_names
+	if not_binary then
+		image_names = self:preload_atlas_lua(ref_scale, path, name)
+	else
+		image_names = self:preload_atlas_binary(ref_scale, path, name)
+	end
 
 	if not image_names then
 		return
