@@ -5,8 +5,6 @@ local tsv = require("lib.klua.tsv")
 require("lib.klua.string")
 require("lib.klua.table")
 local E = require("entity_db")
-local EL = require("kr1.data.endless")
-local EU = require("endless_utils")
 local bit = require("bit")
 require("all.constants")
 
@@ -33,9 +31,7 @@ wave_db.WS_REMOVED = WS_REMOVED
 local gms = {
 	[GAME_MODE_CAMPAIGN] = "campaign",
 	[GAME_MODE_HEROIC] = "heroic",
-	[GAME_MODE_IRON] = "iron",
-	-- [GAME_MODE_ENDLESS] = "endless"
-	[GAME_MODE_ENDLESS] = "campaign" -- endless模式下也加载普通模式的波次
+	[GAME_MODE_IRON] = "iron"
 }
 
 local tsv_cmd_col = 2
@@ -835,7 +831,7 @@ end
 
 --tsv end
 
-function wave_db:load_lua(level_name, game_mode, endless, prefix)
+function wave_db:load_lua(level_name, game_mode, prefix)
 	local base = prefix or KR_PATH_GAME
 	local suffix = gms[game_mode]
 
@@ -853,8 +849,6 @@ function wave_db:load_lua(level_name, game_mode, endless, prefix)
 
 	self.game_mode = game_mode
 	self.format = "lua"
-	self.is_endless = endless
-
 	local wtable = f()
 
 	wave_db.db = wtable
@@ -870,14 +864,10 @@ function wave_db:load_lua(level_name, game_mode, endless, prefix)
 		end
 	end
 
-	if endless then
-		self.endless = EU.init_endless(level_name, self:groups())
-	end
-
 	return true
 end
 
-function wave_db:load(level_name, game_mode, endless)
+function wave_db:load(level_name, game_mode)
 	local prefixes = wave_search_prefixes()
 
 	-- 优先在编辑器目录加载 tsv/lua，再回退到游戏目录
@@ -886,7 +876,7 @@ function wave_db:load(level_name, game_mode, endless)
 			return "tsv"
 		end
 
-		if self:load_lua(level_name, game_mode, endless, prefix) then
+		if self:load_lua(level_name, game_mode, prefix) then
 			return "lua"
 		end
 	end
@@ -1172,9 +1162,7 @@ function wave_db:initial_lives()
 end
 
 function wave_db:groups_count()
-	if self.is_endless then
-		return 0
-	elseif self.format == "tsv" then
+	if self.format == "tsv" then
 		local count = 0
 
 		for _, cmd in ipairs(self.db_cmds) do
@@ -1190,9 +1178,7 @@ function wave_db:groups_count()
 end
 
 function wave_db:waves_count()
-	if self.is_endless then
-		return 0
-	elseif self.format == "tsv" then
+	if self.format == "tsv" then
 		return self:groups_count()
 	else
 		local result = 0
@@ -1206,59 +1192,11 @@ function wave_db:waves_count()
 end
 
 function wave_db:has_group(i)
-	if self.is_endless then
-		return i <= 100
-	else
-		return i <= #self.db.groups
-	end
+	return i <= #self.db.groups
 end
 
 function wave_db:get_group(i)
-	if self.is_endless then
-		return self:get_endless_group(i)
-	else
-		return self.db.groups[i]
-	end
-end
-
-function wave_db:get_endless_early_wave_reward_factor()
-	if self.db and self.db.nextWaveRewardMoneyMultiplier then
-		return self.db.nextWaveRewardMoneyMultiplier
-	else
-		return 1
-	end
-end
-
-function wave_db:get_endless_score_config()
-	if self.db and self.db.score then
-		return table.deepclone(self.db.score)
-	else
-		return nil
-	end
-end
-
-function wave_db:get_endless_boss_config(i)
-	local out = {}
-	local db = self.db
-	local dif_max = #db.difficulties
-	local dif_level = math.ceil(i / 10)
-	local dif_idx = km.clamp(1, dif_max, dif_level)
-	local dif = db.difficulties[dif_idx]
-	local dbc = dif.bossConfig
-
-	out.chance = dbc.powerChance + dbc.powerChanceIncrement * dif_level
-	out.cooldown = math.random(dbc.powerCooldownMin, dbc.powerCooldownMax)
-	out.multiple_attacks_chance = dbc.powerMultiChance
-	out.power_chances = dbc.powerDistribution
-	out.powers_config_dif = dbc.powerConfig
-	out.boss_config_dif = dbc
-	out.powers_config = db.bossConfig.powerConfig
-
-	return out
-end
-
-function wave_db:get_endless_group(i)
-	return EU.generate_group(self.endless)
+	return self.db.groups[i]
 end
 
 return wave_db

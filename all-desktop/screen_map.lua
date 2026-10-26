@@ -162,8 +162,7 @@ local function get_map_points_for_generation(generation)
 
 	cached = {
 		points = points_by_level,
-		flags = points_data and points_data.flags or {},
-		endless_flags = points_data and points_data.endless_flags or {}
+		flags = points_data and points_data.flags or {}
 	}
 	map_points_cache[generation] = cached
 
@@ -1267,10 +1266,6 @@ function screen_map:update(dt)
 
 	if self.heroTip then
 		self.heroTip.scale = v(math.sin(self.stime * 0.5) * 0.02 + 0.98, math.sin(self.stime * 0.5) * 0.02 + 0.98)
-	end
-
-	if self.endlessTip then
-		self.endlessTip.scale = v(math.sin(self.stime * 0.5) * 0.02 + 0.98, math.sin(self.stime * 0.5) * 0.02 + 0.98)
 	end
 
 	return true
@@ -2985,36 +2980,6 @@ function LevelFlagView:update(dt)
 	end
 end
 
-EndlessLevelFlagView = class("EndlessLevelFlagView", KImageButton)
-
-function EndlessLevelFlagView:initialize(level_num)
-	KImageButton.initialize(self, "mapFlag_endless_desktop_0001", "mapFlag_endless_desktop_0002", "mapFlag_endless_desktop_0002")
-
-	self.anchor = v(self.size.x / 2, self.size.y / 2)
-	self.level_num = level_num
-end
-
-function EndlessLevelFlagView:on_click()
-	S:queue("GUIButtonCommon")
-
-	if screen_map.endlessTip then
-		screen_map.endlessTip.hidden = true
-		screen_map.user_data.seen.map_balloon_endless_view = true
-
-		storage:save_slot(screen_map.user_data)
-	end
-
-	screen_map.level_select = EndlessLevelSelectView:new(screen_map.sw, screen_map.sh, self.level_num, self.slot_data)
-
-	screen_map.window:add_child(screen_map.level_select)
-	screen_map.level_select:show()
-	self:on_exit()
-	self:disable(false)
-	timer:after(0.5, function()
-		self:enable()
-	end)
-end
-
 StarsBanner = class("StarsBanner", KImageView)
 
 function StarsBanner:initialize()
@@ -3818,226 +3783,6 @@ function LevelSelectView:show_page(page, stars)
 			self.tabs_selected[m].hidden = page ~= m
 		end
 	end
-end
-
-EndlessLevelSelectView = class("EndlessLevelSelectView", PopUpView)
-
-function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
-	PopUpView.initialize(self, V.v(sw, sh))
-
-	self.level_idx = level_num
-
-	local level_string = string.format("%02i", level_num)
-
-	self.back = KImageView:new("levelSelect_background")
-	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
-	self.back.pos = v(sw / 2 - 15, sh / 2 - 50)
-
-	self:add_child(self.back)
-
-	self.back.alpha = 0
-
-	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
-
-	close_button.pos = v(self.back.size.x - 50, 20)
-	self.close_button = close_button
-
-	self.back:add_child(close_button)
-
-	function close_button.on_click()
-		S:queue("GUIButtonCommon")
-		self:hide()
-	end
-
-	add_level_title(self.back, _(string.format("ENDLESS_LEVEL_%d_TITLE", level_num - 80)), "left", ls_page_y + 22)
-
-	local stage_thumb = KImageView:new("stage_thumbs_endless_00" .. level_string)
-
-	stage_thumb.pos = v(215, 190)
-
-	self.back:add_child(stage_thumb)
-
-	local thumb_frame = KImageView:new("levelSelect_thumbFrame")
-
-	thumb_frame.pos = v(202, 175)
-
-	self.back:add_child(thumb_frame)
-
-	local bp = KImageView:new("levelSelect_bg_patch")
-
-	bp.scale = v(21, 6)
-	bp.pos = v(290, 475)
-
-	self.back:add_child(bp)
-
-	local w = KImageView:new("levelSelect_waves")
-
-	w.anchor = v(w.size.x / 2, w.size.y / 2)
-	w.pos = v(290, 485)
-
-	self.back:add_child(w)
-
-	local wl = GGLabel:new(v(30, 24))
-
-	wl.pos = v(29, 29)
-	wl.vertical_align = "middle"
-	wl.font_name = "body"
-	wl.font_size = 20
-	wl.fit_size = true
-	wl.colors.text = {64, 57, 36, 255}
-	wl.colors.background = {0, 0, 0, 0}
-	wl.text = "99"
-
-	w:add_child(wl)
-
-	self.waves_label = wl
-
-	local wd = GGLabel:new(V.v(100, 40))
-
-	wd.text = _("ENDLESS_LEVEL_SELECT_SURVIVED")
-	wd.pos = v(w.pos.x, w.pos.y + 55)
-	wd.anchor = v(wd.size.x / 2, wd.size.y / 2)
-	wd.font_name = "body"
-	wd.font_size = 16
-	wd.text_align = "center"
-	wd.vertical_align = "top"
-	wd.colors.text = {64, 57, 36, 255}
-
-	self.back:add_child(wd)
-
-	local s = KImageView:new("levelSelect_maxScore")
-
-	s.anchor = v(s.size.x / 2, s.size.y / 2)
-	s.pos = v(480, 487)
-
-	self.back:add_child(s)
-
-	local sl = GGLabel:new(v(84, 24))
-
-	sl.pos = v(32, 25)
-	sl.vertical_align = "middle"
-	sl.font_name = "body"
-	sl.font_size = 20
-	sl.fit_size = true
-	sl.fit_lines = 1
-	sl.colors.text = {64, 57, 36, 255}
-	sl.colors.background = {0, 0, 0, 0}
-	sl.text = "999999"
-
-	s:add_child(sl)
-
-	self.score_label = sl
-
-	local sd = GGLabel:new(V.v(100, 40))
-
-	sd.text = _("ENDLESS_LEVEL_SELECT_MAX_SCORE")
-	sd.pos = v(s.pos.x, s.pos.y + 55)
-	sd.anchor = v(sd.size.x / 2, sd.size.y / 2)
-	sd.font_name = "body"
-	sd.font_size = 16
-	sd.text_align = "center"
-	sd.vertical_align = "top"
-	sd.colors.text = {64, 57, 36, 255}
-
-	self.back:add_child(sd)
-	self:load_score()
-
-	local right_page = KView:new()
-
-	self.back:add_child(right_page)
-	add_level_title(right_page, _("ENDLESS_LEVEL_SELECT_HEADER"), "right")
-
-	add_level_description(right_page, _("ENDLESS_LEVEL_" .. tostring(level_num - 80) .. "_HISTORY"))
-
-	local rules_y = 320
-	local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
-
-	rbg.pos = v(ls_page_r_x + (ls_page_w - rbg.size.x) / 2, rules_y + 20)
-
-	right_page:add_child(rbg)
-	add_level_title(right_page, _("Challenge Rules"), "sub", rules_y)
-
-	rules_y = rules_y + 38
-
-	local heart_icon = KImageView:new("levelSelect_modeRules_endless_0001")
-
-	heart_icon.pos = v(ls_page_r_x + 20, rules_y)
-
-	right_page:add_child(heart_icon)
-
-	local skull_icon = KImageView:new("levelSelect_modeRules_endless_0002")
-
-	skull_icon.pos = v(ls_page_r_x + ls_page_w / 2 + 20, rules_y)
-
-	right_page:add_child(skull_icon)
-
-	local heart_label = GGLabel:new(V.v(90, heart_icon.size.y))
-
-	heart_label.text = _("ENDLESS_LEVEL_SELECT_LIVES_INFO")
-	heart_label.pos = v(heart_icon.pos.x + heart_icon.size.x, heart_icon.pos.y + heart_icon.size.y / 2)
-	heart_label.anchor.y = heart_label.size.y / 2
-	heart_label.font_name = "body"
-	heart_label.font_size = 13
-	heart_label.text_align = "center"
-	heart_label.vertical_align = "middle"
-	heart_label.colors.text = {64, 57, 36, 255}
-
-	right_page:add_child(heart_label)
-
-	local skull_label = GGLabel:new(V.v(90, skull_icon.size.y))
-
-	skull_label.text = _("ENDLESS_LEVEL_SELECT_WAVES_INFO")
-	skull_label.pos = v(skull_icon.pos.x + skull_icon.size.x, skull_icon.pos.y + skull_icon.size.y / 2)
-	skull_label.anchor.y = skull_label.size.y / 2
-	skull_label.font_name = "body"
-	skull_label.font_size = 13
-	skull_label.text_align = "center"
-	skull_label.vertical_align = "middle"
-	skull_label.colors.text = {64, 57, 36, 255}
-
-	right_page:add_child(skull_label)
-
-	local b = LevelSelectDifficultyButton:new()
-
-	b.pos = v(982, 522)
-	b.parent_on_click = b.on_click
-
-	function b.on_click(this)
-		this:parent_on_click()
-		self:load_score()
-	end
-
-	right_page:add_child(b)
-
-	local r = KImageButton("levelSelect_rankings_0001", "levelSelect_rankings_0002", "levelSelect_rankings_0002")
-
-	r.pos = v(720, 550)
-	r.anchor = v(r.size.x / 2, r.size.y / 2)
-	r.alpha = 0.5
-
-	function r.on_click()
-		S:queue("GUIButtonCommon")
-
-		return
-	end
-
-	right_page:add_child(r)
-	add_level_battle_button(right_page, GAME_MODE_ENDLESS, level_num)
-end
-
-function EndlessLevelSelectView:load_score()
-	local waves_survived = 0
-	local high_score = 0
-	local user_data = storage:load_slot()
-	local slot_level = user_data.levels[self.level_idx]
-
-	if slot_level and slot_level[user_data.difficulty] then
-		waves_survived = slot_level[user_data.difficulty].waves_survived
-		high_score = slot_level[user_data.difficulty].high_score
-	end
-
-	self.waves_label.text = tostring(waves_survived)
-	self.score_label.text = tostring(high_score)
 end
 
 -- 科技
@@ -8025,7 +7770,6 @@ function ConfigPanelView:initialize(sw, sh, keyboard, controller)
 		hero_level_at_start = _("MAP_UI_CFG_HERO_LEVEL_AT_START"),
 		reverse_path = _("MAP_UI_CFG_REVERSE_PATH"),
 		enabled = _("MAP_UI_CFG_ENABLED"),
-		endless = _("MAP_UI_CFG_ENDLESS"),
 		enemy_count_multiplier = _("MAP_UI_CFG_ENEMY_COUNT_MULTIPLIER"),
 		enemy_gold_multiplier = _("MAP_UI_CFG_ENEMY_GOLD_MULTIPLIER"),
 		enemy_health_multiplier = _("MAP_UI_CFG_ENEMY_HEALTH_MULTIPLIER"),
@@ -8107,7 +7851,6 @@ function KeysetPanelView:initialize(sw, sh, keyboard, controller)
 		quick = _("MAP_UI_KEY_QUICK"),
 		normal = _("MAP_UI_KEY_NORMAL"),
 		criket_toggle = _("MAP_UI_KEY_CRIKET_TOGGLE"),
-		endless_shop = _("MAP_UI_KEY_ENDLESS_SHOP"),
 		barrack_seek = _("MAP_UI_KEY_BARRACK_SEEK"),
 		hero_menu_toggle = _("MAP_UI_KEY_HERO_MENU_TOGGLE"),
 		force_next_wave = _("MAP_UI_KEY_FORCE_NEXT_WAVE"),

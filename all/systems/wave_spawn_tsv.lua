@@ -87,7 +87,6 @@ function wave_spawn_tsv.cmd_fns.wave(store, cmd)
 
 	signal.emit("next-wave-ready", group)
 
-	local wave_number = store.wave_group_number
 	local wait_time = hard_wave_wait_time(cmd.wait_time, store.wave_group_number)
 	local start_ts = store.tick_ts
 
@@ -115,13 +114,6 @@ function wave_spawn_tsv.cmd_fns.wave(store, cmd)
 		WU.next_wave_reward(store, group, km.round(wait_time - actual_wait_time))
 	else
 		store.early_wave_reward = 0
-	end
-
-	if store.level_mode == GAME_MODE_ENDLESS and wave_number > 1 then
-		local conf = W:get_endless_score_config()
-		local reward = (wave_number - 1) * conf.scorePerWave
-
-		store.player_score = store.player_score + reward
 	end
 
 	store.current_spawn_idx = 0
@@ -314,11 +306,7 @@ function wave_spawn_tsv:init(store)
 		end
 	end
 
-	if store.level_mode == GAME_MODE_ENDLESS then
-		store.wave_group_total = 0
-	else
-		store.wave_group_total = W:groups_count()
-	end
+	store.wave_group_total = W:groups_count()
 
 	store.wave_spawn_co = coroutine.create(wave_spawn_tsv.y_run_wave)
 end

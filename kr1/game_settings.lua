@@ -181,7 +181,6 @@ GS.extra_level5_from = 4999
 GS.extra_level5 = 0
 GS.extra_level6_from = 5999
 GS.extra_level6 = 0
-GS.endless_levels_count = 1
 GS.level_ranges1 = {{1, 12}, {13}, {14}, {15}, {16, 17}, {18, 19}, {20, 21}, {22}, {23, 26}, {1000}}
 GS.level_ranges2 = {{27, 41}, {42, 44}, {45, 47}, {48}}
 GS.level_ranges3 = {{49, 63}, {64, 66}, {67, 68}, {69, 70}}

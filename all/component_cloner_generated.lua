@@ -236,9 +236,6 @@ return {
 			runs = 1
 		}
 	end,
-	["endless"] = function(tpl)
-		return {}
-	end,
 	["enemy"] = function(tpl)
 		return {
 			blockers = {},

@@ -33,7 +33,6 @@ return {
 	-- 开启/关闭一键造塔菜单键位，默认为 "f1"
 	criket_toggle = "f1",
 	-- 无尽模式开启商店键位，一旦开启即扣取对应金币，默认为 "f2"
-	endless_shop = "f2",
 	-- 兵营寻路键位，会让士兵未处于拦截状态的兵营修改集结点到离家最近敌人位置，默认为 "f3"
 	barrack_seek = "f3",
 	-- 开启/关闭英雄菜单键位，只有ui_settings.lua中hero_menu_enabled为true时生效，默认为 "f4"

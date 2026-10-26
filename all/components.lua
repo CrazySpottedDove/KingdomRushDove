@@ -1096,9 +1096,6 @@ moon.regen_hp = nil
 moon.transform_name = nil
 moon.lifesteal_damage_factor = nil
 
-local endless = E:register_c("endless")
-endless.factor_map = nil
-
 local plant = E:register_c("plant")
 plant.block_count = 0
 plant.blocked = nil

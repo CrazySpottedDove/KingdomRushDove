@@ -107,25 +107,13 @@ function wave_spawn:init(store)
 	store.wave_signals = {}
 	store.send_next_wave = false
 
-	if store.level_mode_override == GAME_MODE_ENDLESS then
-		store.wave_group_total = 0
-
-		if store.endless and store.endless.wave_group_number then
-			store.wave_group_number = store.endless.wave_group_number
-		end
-	else
-		store.wave_group_total = W:groups_count()
-	end
+	store.wave_group_total = W:groups_count()
 
 	local function run(store)
 		log.info("Wave group spawn thread STARTING")
 
 		local i = 1
 		local start = true
-
-		if store.endless and store.endless.wave_group_number then
-			i = store.endless.wave_group_number
-		end
 
 		while W:has_group(i) do
 			local group = W:get_group(i)

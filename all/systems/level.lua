@@ -4,7 +4,6 @@ local perf = require("dove_modules.perf.perf")
 
 require("all.constants")
 
-local EU = require("endless_utils")
 local A = require("animation_db")
 local DI = require("difficulty")
 local E = require("entity_db")
@@ -16,8 +15,6 @@ local UP = require("kr1.upgrades")
 local SPELLS = require("spell_system")
 local U = require("utils")
 local LU = require("level_utils")
-local TU = require("all.tower_utils")
-local V = require("lib.klua.vector")
 local storage = require("all.storage")
 require("lib.klua.table")
 
@@ -104,7 +101,7 @@ function level:init_coroutined(store)
 	game.progress = 0.4
 	coroutine.yield()
 
-	W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
+	W:load(store.level_name, store.level_mode)
 	game.progress = 0.5
 	coroutine.yield()
 
@@ -220,92 +217,6 @@ function level:init_coroutined(store)
 		store.lives = 1
 	end
 
-	if store.level_mode_override == GAME_MODE_ENDLESS then
-		store.lives = 20
-		store.player_gold = store.player_gold + W.endless.extra_cash
-		store.endless = W.endless
-
-		local endless_data = store.endless
-
-		if endless_data.upgrade_levels then
-			EU.patch_upgrades(endless_data)
-		end
-
-		if endless_data.player_gold then
-			store.player_gold = endless_data.player_gold
-		end
-
-		if endless_data.lives then
-			store.lives = endless_data.lives
-		end
-
-		if endless_data.wave_group_number then
-			store.wave_group_number = endless_data.wave_group_number
-		end
-
-		if endless_data.towers then
-			for i = #endless_data.towers, 1, -1 do
-				local tower_data = endless_data.towers[i]
-				local tower = E:create_entity(tower_data.template_name)
-
-				if not tower then
-					log.error("endless restore: tower template missing, skip spawn (holder_id=%s name=%s)", tostring(tower_data.holder_id), tostring(tower_data.template_name))
-				else
-					tower.pos = V.v(tower_data.pos.x, tower_data.pos.y)
-					tower.tower.level = tower_data.tower_level
-					tower.tower.spent = tower_data.spent
-					tower.tower.holder_id = tower_data.holder_id
-
-					for _, e in pairs(store.pending_inserts) do
-						if e.tower and e.tower.holder_id == tower.tower.holder_id then
-							if e.template_name == tower.template_name then
-								goto continue
-							end
-
-							tower.tower.default_rally_pos = V.vclone(e.tower.default_rally_pos)
-
-							if tower.ui and e.ui then
-								tower.ui.nav_mesh_id = e.ui.nav_mesh_id
-							end
-
-							simulation:queue_remove_entity(e)
-						end
-					end
-
-					tower.tower.flip_x = tower_data.flip_x
-
-					if tower_data.terrain_style then
-						U.set_terrain_style(tower, tower_data.terrain_style)
-					end
-
-					if tower_data.rally_pos and tower.barrack then
-						tower.barrack.rally_pos = V.v(tower_data.rally_pos.x, tower_data.rally_pos.y)
-
-						if tower.mercenary then
-							for si = 1, tower_data.soldier_count do
-								tower.barrack.soldiers[si] = E:create_entity(tower.barrack.soldier_type)
-								tower.barrack.soldiers[si].health.dead = true
-								tower.barrack.soldiers[si].id = -1
-							end
-						end
-					end
-
-					simulation:queue_insert_entity(tower)
-
-					if tower_data.powers and tower.powers then
-						for power_name, power_data in pairs(tower_data.powers) do
-							if power_data.level > 0 and tower.powers[power_name] then
-								TU.set_power_level(store, tower, power_name, power_data.level)
-							end
-						end
-					end
-
-					::continue::
-				end
-			end
-		end
-	end
-
 	store.player_score = 0
 	store.game_outcome = nil
 	store.main_hero = nil
@@ -338,8 +249,6 @@ function level:on_update(dt, ts, store)
 
 		if store.level_mode == GAME_MODE_IRON or store.level_mode == GAME_MODE_HEROIC then
 			signal.emit("wave-notification", "view", "TIP_UPGRADES")
-		elseif store.level_mode_override == GAME_MODE_ENDLESS then
-			signal.emit("wave-notification", "view", "TIP_SURVIVAL")
 		elseif store.selected_hero and #store.selected_hero ~= 0 and not U.is_seen(store, "TIP_HEROES") then
 			signal.emit("wave-notification", "icon", "TIP_HEROES")
 		end

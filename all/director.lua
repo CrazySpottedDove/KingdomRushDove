@@ -495,10 +495,6 @@ function director:queue_load_item_named(name)
 		game.store.screen_scale = self:get_texture_scale("game", REF_H)
 		game.store.texture_size = self.params.texture_size
 		game.store.level = LU.load_level(game.store, game.store.level_name)
-		if configer.config().enabled and configer.config().endless then
-			game.store.level_mode_override = GAME_MODE_ENDLESS
-		end
-
 		-- power3 法术：先解析选择，再按选择 queue 本局资源（写法与 scene/game/level 一致）
 		local slot = storage:load_slot()
 		local SPELLS = require("spell_system")

@@ -21,7 +21,6 @@ return {
 	-- 启动自定义配置开关，默认为 true。如果需要恢复默认配置，可以将它变为 false
 	enabled = true,
 	-- 启动无尽模式开关，默认为 false
-	endless = false,
 	-- 怪物伤害倍率，默认为 1
 	enemy_damage_multiplier = 1,
 	-- 怪物受伤倍率，默认为 1
