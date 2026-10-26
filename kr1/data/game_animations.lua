@@ -5129,11 +5129,6 @@ return {
 		prefix = "boss_godieth_spit-f",
 		to = 6
 	},
-	bullet_catapult_endless_bomb = {
-		from = 4,
-		prefix = "catapult_endless_proy",
-		to = 9
-	},
 	bullet_kamihare = {
 		from = 1,
 		prefix = "rabbit",
@@ -5379,49 +5374,6 @@ return {
 		from = 98,
 		prefix = "catapult-f",
 		to = 116
-	},
-	catapult_endless_explosions_barrel = {
-		from = 22,
-		prefix = "catapult_endless_explosions",
-		to = 39
-	},
-	catapult_endless_explosions_bomb = {
-		from = 40,
-		prefix = "catapult_endless_explosions",
-		to = 60
-	},
-	catapult_endless_explosions_spikebomb = {
-		from = 1,
-		prefix = "catapult_endless_explosions",
-		to = 21
-	},
-	catapult_endless_layerX_death = {
-		from = 98,
-		layer_from = 1,
-		layer_prefix = "catapult_endless_layer%i",
-		layer_to = 9,
-		to = 116
-	},
-	catapult_endless_layerX_idle = {
-		from = 16,
-		layer_from = 1,
-		layer_prefix = "catapult_endless_layer%i",
-		layer_to = 9,
-		to = 16
-	},
-	catapult_endless_layerX_running = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "catapult_endless_layer%i",
-		layer_to = 9,
-		to = 15
-	},
-	catapult_endless_layerX_shoot = {
-		from = 17,
-		layer_from = 1,
-		layer_prefix = "catapult_endless_layer%i",
-		layer_to = 9,
-		to = 97
 	},
 	catapult_idle = {
 		from = 16,
@@ -9488,26 +9440,6 @@ return {
 		prefix = "CB_Stg26_hanged",
 		to = 35
 	},
-	decal_s81_burner = {
-		from = 1,
-		prefix = "stage_endless_1_burner",
-		to = 12
-	},
-	decal_s81_percussionist_idle = {
-		from = 1,
-		prefix = "endless_boss_percusion",
-		to = 1
-	},
-	decal_s81_percussionist_play = {
-		from = 2,
-		prefix = "endless_boss_percusion",
-		to = 11
-	},
-	decal_s82_house_fire = {
-		from = 1,
-		prefix = "stage_endless_2_fire",
-		to = 38
-	},
 	decal_saurian_king_hammer = {
 		from = 1,
 		prefix = "saurianBoss_effect",
@@ -9626,56 +9558,6 @@ return {
 		from = 1,
 		prefix = "reptile",
 		to = 1
-	},
-	decal_stage81_burner_fire = {
-		from = 1,
-		prefix = "deco_fire",
-		to = 12
-	},
-	decal_stage81_miner1 = {
-		from = 1,
-		prefix = "deco_miner",
-		to = 34
-	},
-	decal_stage81_miner2_idle = {
-		from = 1,
-		prefix = "deco_miner2",
-		to = 19
-	},
-	decal_stage81_miner2_play = {
-		from = 20,
-		prefix = "deco_miner2",
-		to = 74
-	},
-	decal_stage81_miner3 = {
-		from = 1,
-		prefix = "deco_miner3",
-		to = 240
-	},
-	decal_stage81_stargate_end = {
-		from = 37,
-		prefix = "stargate_portal",
-		to = 48
-	},
-	decal_stage81_stargate_lights = {
-		from = 1,
-		prefix = "stargate_lights",
-		to = 42
-	},
-	decal_stage81_stargate_loop = {
-		from = 13,
-		prefix = "stargate_portal",
-		to = 36
-	},
-	decal_stage81_stargate_start = {
-		from = 1,
-		prefix = "stargate_portal",
-		to = 12
-	},
-	decal_stage82_burner_fire = {
-		from = 1,
-		prefix = "endless2_fire",
-		to = 12
 	},
 	decal_stage_02_bigwaves_idle = {
 		from = 1,

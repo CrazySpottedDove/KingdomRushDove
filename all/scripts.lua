@@ -2230,26 +2230,20 @@ function scripts.arrow.update(this, store)
 
 			queue_damage(store, d)
 
-			local mods
-
-			if b.mod then
-				mods = {b.mod}
-			elseif b.mods then
-				mods = b.mods
-			end
-
+			local mods = b.mods or (b.mod and {b.mod})
 			if mods then
-				for _, mod_name in pairs(mods) do
-					if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
-						local mod = E:create_entity(mod_name)
+				for k = 1, #mods do
+					local mod = mods[k]
+					if U.flags_pass(target.vis, E:get_template(mod).modifier) then
+						local m = E:create_entity(mods[k])
 
-						mod.modifier.source_id = this.id
-						mod.modifier.target_id = target.id
-						mod.modifier.level = b.level
-						mod.modifier.source_damage = d
-						mod.modifier.damage_factor = b.damage_factor
+						m.modifier.target_id = b.target_id
+						m.modifier.source_id = b.source_id
+						m.modifier.damage_factor = b.damage_factor
+						m.modifier.level = b.level
+						m.modifier.source_damage = d
 
-						simulation:queue_insert_entity(mod)
+						simulation:queue_insert_entity(m)
 					end
 				end
 			end
@@ -2781,14 +2775,17 @@ function scripts.bomb.update(this, store)
 			queue_damage(store, d)
 
 			if mods then
-				for _, mod_name in pairs(mods) do
-					if U.flags_pass(enemy.vis, E:get_template(mod_name).modifier) then
-						local mod = E:create_entity(mod_name)
+				for k = 1, #mods do
+					local mod = mods[k]
+					if U.flags_pass(enemy.vis, E:get_template(mod).modifier) then
+						local m = E:create_entity(mods[k])
 
-						mod.modifier.damage_factor = b.damage_factor
-						mod.modifier.target_id = enemy.id
-						mod.modifier.source_id = this.id
-						simulation:queue_insert_entity(mod)
+						m.modifier.target_id = b.target_id
+						m.modifier.source_id = b.source_id
+						m.modifier.damage_factor = b.damage_factor
+						m.modifier.level = b.level
+
+						simulation:queue_insert_entity(m)
 					end
 				end
 			end
@@ -3621,14 +3618,17 @@ function scripts.bolt.update(this, store)
 		local mods = b.mods or (b.mod and {b.mod})
 		if mods then
 			for k = 1, #mods do
-				local m = E:create_entity(mods[k])
+				local mod = mods[k]
+				if U.flags_pass(target.vis, E:get_template(mod).modifier) then
+					local m = E:create_entity(mods[k])
 
-				m.modifier.target_id = b.target_id
-				m.modifier.source_id = b.source_id
-				m.modifier.damage_factor = b.damage_factor
-				m.modifier.level = b.level
+					m.modifier.target_id = b.target_id
+					m.modifier.source_id = b.source_id
+					m.modifier.damage_factor = b.damage_factor
+					m.modifier.level = b.level
 
-				simulation:queue_insert_entity(m)
+					simulation:queue_insert_entity(m)
+				end
 			end
 		end
 
