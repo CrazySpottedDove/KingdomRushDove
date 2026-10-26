@@ -42787,49 +42787,6 @@ function scripts.bolt_mortemis.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-scripts.aura_mortemis_curse_armor = {}
-
-function scripts.aura_mortemis_curse_armor.update(this, store)
-	local aura = this.aura
-	local last_ts = store.tick_ts - aura.cycle_time
-
-	while true do
-		local source = store.entities[aura.source_id]
-
-		if not source or not source.pos then
-			simulation:queue_remove_entity(this)
-
-			return
-		end
-
-		this.pos.x, this.pos.y = source.pos.x, source.pos.y
-
-		local skill = source.hero and source.hero.skills and source.hero.skills.grim_presence
-
-		if skill and skill.level >= 1 and not source.health.dead and store.tick_ts - last_ts >= aura.cycle_time then
-			last_ts = store.tick_ts
-
-			local targets = U.find_enemies_in_range_filter_off(this.pos, aura.radius, aura.vis_flags, aura.vis_bans)
-
-			if targets then
-				for _, t in ipairs(targets) do
-					for _, mod_name in ipairs(aura.mods) do
-						local new_mod = E:create_entity(mod_name)
-
-						new_mod.modifier.level = skill.level
-						new_mod.modifier.target_id = t.id
-						new_mod.modifier.source_id = aura.source_id
-
-						simulation:queue_insert_entity(new_mod)
-					end
-				end
-			end
-		end
-
-		coroutine.yield()
-	end
-end
-
 scripts.aura_mortemis_zombie = {}
 
 function scripts.aura_mortemis_zombie.update(this, store)
@@ -45461,10 +45418,6 @@ function scripts.hero_stage_215_lord_blackburn.update(this, store)
 
 		coroutine.yield()
 	end
-end
-
-function scripts.hero_stage_215_lord_blackburn.remove(this, store)
-	return true
 end
 
 scripts.stage_215_lord_blackburn_ray = {}
