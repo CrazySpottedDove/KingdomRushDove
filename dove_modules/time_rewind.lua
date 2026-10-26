@@ -765,7 +765,6 @@ function time_rewind:start(game, target_time)
 		{S, "stop_group", noop},
 		{S, "stop", noop},
 		{S, "stop_all", noop},
-		{AC, "save", noop},
 		{adaptive_fps, "fps", fps},
 		{adaptive_fps, "tick_length", tick},
 		{adaptive_fps.scene, "limit_fps", fps},
