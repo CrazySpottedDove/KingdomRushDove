@@ -532,7 +532,7 @@ function KView:set_image(image, size)
 			self.size.x, self.size.y = size.x, size.y
 		else
 			local ref_scale = ss.ref_scale * self.image_scale
-			self.size.x, self.size.y = ss.size[1] * ref_scale, ss.size[2] * ref_scale
+			self.size.x, self.size.y = ss.size[0] * ref_scale, ss.size[1] * ref_scale
 		end
 	elseif size then
 		self.size.x, self.size.y = size.x, size.y
@@ -665,7 +665,7 @@ function KView:_draw_self()
 		local ss = self.image_ss
 		local ref_scale = ss.ref_scale * self.image_scale
 
-		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+		G.draw(self.image, ss.quad, ss.trim[0] * ref_scale, ss.trim[1] * ref_scale, 0, ref_scale)
 	end
 
 	G.setColor(pr, pg, pb, pa)

@@ -70,7 +70,7 @@ local tower_menu_button_size_map = {
 
 local notification_photo_size = v(260, 250)
 
--- 跨版本图标：按 ss._content_bbox（可见内容，由 GU.measure_sprite_content 缓存）在按钮框内居中绘制。
+-- 跨版本图标：按可见内容（由 GU.measure_sprite_content 缓存）在按钮框内居中绘制。
 -- 边框（bo）在图标之后绘制，会自然遮住超出的部分。tint 用于禁用态变灰。
 local function draw_centered_tower_icon(self)
 	local pr, pg, pb, pa = G.getColor()
@@ -85,7 +85,7 @@ local function draw_centered_tower_icon(self)
 
 	if ss then
 		local ref_scale = ss.ref_scale * self.image_scale
-		local content = ss._content_bbox
+		local content = GU.measure_sprite_content(ss)
 		local off, visible = content.off, content.visible
 		local x = self.size.x * 0.5 - (off.x + visible.x * 0.5) * ref_scale
 		local y = self.size.y * 0.5 - (off.y + visible.y * 0.5) * ref_scale
@@ -2890,7 +2890,7 @@ local function info_bar_portrait_geometry(portrait_bo)
 	local ss = portrait_bo.image_ss
 	local _, _, qw, qh = ss.quad:getViewport()
 	local ref_scale = ss.ref_scale * portrait_bo.image_scale
-	local center = v((ss.trim[1] + qw * 0.5) * ref_scale, (ss.trim[2] + qh * 0.5) * ref_scale)
+	local center = v((ss.trim[0] + qw * 0.5) * ref_scale, (ss.trim[1] + qh * 0.5) * ref_scale)
 	local diameter = math.min(qw, qh) * ref_scale * INFO_BAR_PORTRAIT_DIAMETER_RATIO
 
 	return center, diameter
@@ -4188,7 +4188,7 @@ function VictoryParticles:initialize(w, h)
 
 	local ss = I:s("victory_star")
 	local p_scale = ss.ref_scale
-	local c = G.newCanvas(ss.size[1], ss.size[2])
+	local c = G.newCanvas(ss.size[0], ss.size[1])
 
 	G.setCanvas(c)
 	G.draw(I:i(ss.atlas), ss.quad)
@@ -6425,7 +6425,7 @@ function NotificationView:show(id, no_transition, force_show)
 		local ss = I:s(image)
 		local v_image
 
-		if ss and not (ss.size[1] == notification_photo_size.x and ss.size[2] == notification_photo_size.y) then
+		if ss and not (ss.size[0] == notification_photo_size.x and ss.size[1] == notification_photo_size.y) then
 			local target = v(notification_photo_size.x * ss.ref_scale, notification_photo_size.y * ss.ref_scale)
 			local content = GU.measure_sprite_content(ss)
 			local visible = content.visible
@@ -7885,14 +7885,14 @@ function CriketMenuButton:initialize(item)
 	local b
 	if size_entry then
 		local frame_ss = I:s(size_entry.frame_image)
-		local frame_size = v(frame_ss.size[1] * frame_ss.ref_scale, frame_ss.size[2] * frame_ss.ref_scale)
+		local frame_size = v(frame_ss.size[0] * frame_ss.ref_scale, frame_ss.size[1] * frame_ss.ref_scale)
 
 		-- 按钮尺寸取边框实际尺寸，与图标内容无关（价格/光环/升级点等子节点都按它定位）
 		b = KImageView:new(item.image, frame_size)
 
 		-- 原生图标（与边框同逻辑尺寸）按原尺寸居中即可对齐；
 		-- 跨版本图标把可见内容缩放到 target 尺寸并居中（不能按整个 quad，否则带透明边的图会被缩得过小/过大）
-		if not (ss.size[1] == frame_ss.size[1] and ss.size[2] == frame_ss.size[2]) then
+		if not (ss.size[0] == frame_ss.size[0] and ss.size[1] == frame_ss.size[1]) then
 			local content = GU.measure_sprite_content(ss)
 			local visible = content.visible
 			local desired = size_entry.target
@@ -8520,7 +8520,7 @@ function TowerMenu:show(tower_menu)
 			holder.propagate_on_click = true
 
 			local ss = I:s(image)
-			local arrow = KImageView:new(image, nil, 36 / (ss.size[1] * ss.ref_scale))
+			local arrow = KImageView:new(image, nil, 36 / (ss.size[0] * ss.ref_scale))
 
 			arrow.pos = v((size.x - arrow.size.x) * 0.5, (size.y - arrow.size.y) * 0.5)
 			holder.arrow = arrow
@@ -9643,14 +9643,14 @@ function TowerMenuButton:initialize(item, entity)
 	local b
 	if size_entry then
 		local frame_ss = I:s(size_entry.frame_image)
-		local frame_size = v(frame_ss.size[1] * frame_ss.ref_scale, frame_ss.size[2] * frame_ss.ref_scale)
+		local frame_size = v(frame_ss.size[0] * frame_ss.ref_scale, frame_ss.size[1] * frame_ss.ref_scale)
 
 		-- 按钮尺寸取边框实际尺寸，与图标内容无关（价格/光环/升级点等子节点都按它定位）
 		b = KImageView:new(item.image, frame_size)
 
 		-- 原生图标（与边框同逻辑尺寸）按原尺寸居中即可对齐；
 		-- 跨版本图标把可见内容缩放到 target 尺寸并居中（不能按整个 quad，否则带透明边的图会被缩得过小/过大）
-		if not (ss.size[1] == frame_ss.size[1] and ss.size[2] == frame_ss.size[2]) then
+		if not (ss.size[0] == frame_ss.size[0] and ss.size[1] == frame_ss.size[1]) then
 			local content = GU.measure_sprite_content(ss)
 			local visible = content.visible
 			local desired = size_entry.target

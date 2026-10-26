@@ -174,7 +174,7 @@ local M = {
 		local ss = self.image_ss
 		local ref_scale = ss.ref_scale * self.image_scale
 
-		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+		G.draw(self.image, ss.quad, ss.trim[0] * ref_scale, ss.trim[1] * ref_scale, 0, ref_scale)
 	end,
 	_draw_self_KView_no_color_animated = function(self)
 		local fn = self:animation_frame(self.animation, self.ts, self.loop, self.fps)
@@ -182,7 +182,7 @@ local M = {
 		self.image_ss = ss
 		self.image = I:i(ss.atlas)
 		local ref_scale = ss.ref_scale * self.image_scale
-		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+		G.draw(self.image, ss.quad, ss.trim[0] * ref_scale, ss.trim[1] * ref_scale, 0, ref_scale)
 	end,
 	_draw_self_KView_colored = function(self)
 		local pr, pg, pb, pa = G.getColor()
@@ -210,7 +210,7 @@ local M = {
 		local ss = self.image_ss
 		local ref_scale = ss.ref_scale * self.image_scale
 
-		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+		G.draw(self.image, ss.quad, ss.trim[0] * ref_scale, ss.trim[1] * ref_scale, 0, ref_scale)
 
 		G.setColor(pr, pg, pb, pa)
 	end,
@@ -242,7 +242,7 @@ local M = {
 		self.image_ss = ss
 		self.image = I:i(ss.atlas)
 		local ref_scale = ss.ref_scale * self.image_scale
-		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+		G.draw(self.image, ss.quad, ss.trim[0] * ref_scale, ss.trim[1] * ref_scale, 0, ref_scale)
 		G.setColor(pr, pg, pb, pa)
 	end
 }

@@ -1463,7 +1463,7 @@ function editor:draw()
 					local f = e.render.sprites[1]
 
 					if f.ss then
-						local w, h = f.ss.size[1] * f.ss.ref_scale, f.ss.size[2] * f.ss.ref_scale
+						local w, h = f.ss.size[0] * f.ss.ref_scale, f.ss.size[0] * f.ss.ref_scale
 
 						G.rectangle("line", e.pos.x + f.anchor.x * -1 * w, e.pos.y + f.anchor.y * -1 * h, w, h)
 					end

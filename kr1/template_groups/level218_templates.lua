@@ -71,10 +71,13 @@ function S18.nightfall_dissolve.quad_screen_rect(pos, s)
 	local sy = rs * (s.scale and s.scale.y or 1)
 	local ax = s.anchor and s.anchor.x or 0.5
 	local ay = s.anchor and s.anchor.y or 0.5
-	local trim = sd.trim or {0, 0, 0, 0}
+	local trim = sd.trim or {
+		[0] = 0,
+		[1] = 0
+	}
 	local x = pos.x + (s.offset and s.offset.x or 0)
 	local y = REF_H - (pos.y + (s.offset and s.offset.y or 0))
-	return x - (ax * sd.size[1] - trim[1]) * sx, y - ((1 - ay) * sd.size[2] - trim[2]) * sy, vw * sx, vh * sy
+	return x - (ax * sd.size[0] - trim[0]) * sx, y - ((1 - ay) * sd.size[1] - trim[1]) * sy, vw * sx, vh * sy
 end
 function S18.nightfall_dissolve.front_noise(px, py)
 	local n = 0.5 + 0.3 * math.sin(px * 2.1 + py * 1.3) + 0.2 * math.sin(px * 1 - py * 2.6 + 1.7)

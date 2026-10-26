@@ -157,7 +157,7 @@ function RU.init()
 									local visible = true
 
 									if cull_bounds then
-										visible = not (x + ss.size[1] * math.abs(sx) * 0.5 < cull_left or x - ss.size[1] * math.abs(sx) * 0.5 > cull_right or y + ss.size[2] * math.abs(sy) * 0.5 < cull_top or y - ss.size[2] * math.abs(sy) * 0.5 > cull_bottom)
+										visible = not (x + ss.size[0] * math.abs(sx) * 0.5 < cull_left or x - ss.size[0] * math.abs(sx) * 0.5 > cull_right or y + ss.size[1] * math.abs(sy) * 0.5 < cull_top or y - ss.size[1] * math.abs(sy) * 0.5 > cull_bottom)
 									end
 
 									if visible then
@@ -204,7 +204,7 @@ function RU.init()
 											lr, lg, lb, la = r, g, b, a
 										end
 
-										batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - exo.parts[part_name_idx][3] / ref_scale, exo_buf[o + 8], exo_buf[o + 9])
+										batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[0] - ss.trim[0] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][3] / ref_scale, exo_buf[o + 8], exo_buf[o + 9])
 										batch_count = batch_count + 1
 									end
 
@@ -235,10 +235,10 @@ function RU.init()
 							-- local ref_scale = ss.ref_scale
 							-- local sx_abs = math.abs(f.scale and f.scale.x or 1) * ref_scale
 							-- local sy_abs = math.abs(f.scale and f.scale.y or 1) * ref_scale
-							-- local w, h = ss.size[1] * sx_abs, ss.size[2] * sy_abs
+							-- local w, h = ss.size[0] * sx_abs, ss.size[1] * sy_abs
 							-- local hw, hh = w * 0.5, h * 0.5
 							-- visible = not (final_x + hw < cull_left or final_x - hw > cull_right or final_y + hh < cull_top or final_y - hh > cull_bottom)
-							visible = not (x + ss.size[1] * math.abs(sx) * 0.5 < cull_left or x - ss.size[1] * math.abs(sx) * 0.5 > cull_right or y + ss.size[2] * math.abs(sy) * 0.5 < cull_top or y - ss.size[2] * math.abs(sy) * 0.5 > cull_bottom)
+							visible = not (x + ss.size[0] * math.abs(sx) * 0.5 < cull_left or x - ss.size[0] * math.abs(sx) * 0.5 > cull_right or y + ss.size[1] * math.abs(sy) * 0.5 < cull_top or y - ss.size[1] * math.abs(sy) * 0.5 > cull_bottom)
 						end
 
 						if visible then
@@ -285,7 +285,7 @@ function RU.init()
 							end
 
 							-- batch:add(RU.frame_draw_params(f))
-							batch:add(ss.quad, x, y, -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2], f.kx, f.ky)
+							batch:add(ss.quad, x, y, -f.r, sx, sy, f.anchor.x * ss.size[0] - ss.trim[0], (1 - f.anchor.y) * ss.size[1] - ss.trim[1], f.kx, f.ky)
 							batch_count = batch_count + 1
 						end
 					end
@@ -475,8 +475,8 @@ function RU.init()
 								-- 暂无任何纹理使用 textureRotated，这个实际上是属于补丁，我们先禁用
 								-- if ss.textureRotated then
 								-- 	r = r - math.pi / 2
-								-- 	ox = 0.5 * ss.size[2] - ss.trim[4] + poy / ref_scale
-								-- 	oy = 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale
+								-- 	ox = 0.5 * ss.size[1] - ss.trim[4] + poy / ref_scale
+								-- 	oy = 0.5 * ss.size[0] - ss.trim[0] - pox / ref_scale
 								-- 	-- sy = xf.sx * (f.flip_y and -1 or 1) * ref_scale
 								-- 	-- sx = xf.sy * (f.flip_x and -1 or 1) * ref_scale
 								-- 	sy = sx * (f.flip_y and -1 or 1) * ref_scale
@@ -501,7 +501,7 @@ function RU.init()
 									y = p_y_s + render_base_y
 								end
 
-								batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - exo.parts[part_name_idx][3] / ref_scale, exo_buf[o + 8], exo_buf[o + 9])
+								batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[0] - ss.trim[0] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][3] / ref_scale, exo_buf[o + 8], exo_buf[o + 9])
 								batch_count = batch_count + 1
 							end
 						end
@@ -569,7 +569,7 @@ function RU.init()
 						sy = sy * f.scale.y
 						sx = sx * f.scale.x
 					end
-					batch:add(ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2], f.kx, f.ky)
+					batch:add(ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[0] - ss.trim[0], (1 - f.anchor.y) * ss.size[1] - ss.trim[1], f.kx, f.ky)
 
 					batch_count = batch_count + 1
 				end
@@ -616,7 +616,7 @@ end
 -- 		sx = sx * f.scale.x
 -- 	end
 
--- 	return ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2]
+-- 	return ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[0] - ss.trim[0], (1 - f.anchor.y) * ss.size[1] - ss.trim[1]
 -- end
 
 function RU.add_batches(count)

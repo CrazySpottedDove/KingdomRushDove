@@ -6,11 +6,14 @@ local V = require("lib.klua.vector")
 local v = V.v
 local G = love.graphics
 
+local content_bbox_cache = {}
+
 -- 测量图集帧 ss 中不透明内容（可见像素）相对 quad 的位置与大小（单位：图集像素），并缓存到 ss 上。
 -- 带大量透明边的移植图（插件大图、半身像）需要以可见内容为准做缩放/居中，否则会按整个 quad 算错。
 -- 返回 {off = v(x, y), visible = v(w, h)}；off 为可见内容左上角相对 quad 原点的偏移。
 function GU.measure_sprite_content(ss)
-	local cached = ss._content_bbox
+	local cache_key = ss.id and (ss.id * 4294967296 + ss.generation) or ss
+	local cached = content_bbox_cache[cache_key]
 
 	if cached then
 		return cached
@@ -81,7 +84,7 @@ function GU.measure_sprite_content(ss)
 		off = off,
 		visible = visible
 	}
-	ss._content_bbox = cached
+	content_bbox_cache[cache_key] = cached
 
 	return cached
 end
@@ -114,9 +117,12 @@ function GU.fit_sprite_content(view, box_w, box_h, cover)
 
 	view.scale.x, view.scale.y = s, s
 
-	local trim = ss.trim or {0, 0, 0, 0}
-	local off_x = (trim[1] + b.off.x) * ref * s
-	local off_y = (trim[2] + b.off.y) * ref * s
+	local trim = ss.trim or {
+		[0] = 0,
+		[1] = 0
+	}
+	local off_x = (trim[0] + b.off.x) * ref * s
+	local off_y = (trim[1] + b.off.y) * ref * s
 
 	return vis_w * s, vis_h * s, off_x, off_y
 end

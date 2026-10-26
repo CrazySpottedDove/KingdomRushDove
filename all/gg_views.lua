@@ -690,14 +690,14 @@ function GG9View:initialize(image_name, size, slice_rect)
 	G.setColor(1, 1, 1, 1)
 
 	local scx, scy, scw, sch = G.getScissor()
-	local imgw, imgh = oss.size[1], oss.size[2]
+	local imgw, imgh = oss.size[0], oss.size[1]
 	local img = G.newCanvas(imgw, imgh)
 
 	G.push()
 	G.setScissor()
 	G.setCanvas(img)
 	G.origin()
-	G.draw(oim, oss.quad, oss.trim[1], oss.trim[2], 0, 1, 1, 0, 0)
+	G.draw(oim, oss.quad, oss.trim[0], oss.trim[1], 0, 1, 1, 0, 0)
 	G.pop()
 
 	local p1x, p2x = slice_rect.pos.x / ref_scale, (slice_rect.pos.x + slice_rect.size.x) / ref_scale

@@ -8,6 +8,7 @@ local floor = math.floor
 local max = math.max
 local min = math.min
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
+local image_db = require("lib.klove.image_db")
 require("all.constants")
 
 local animation_db = {}
@@ -204,25 +205,25 @@ function animation_db:def_frame_name(def, idx)
 end
 
 --- 把某个动画 def 解析成"可直接渲染的帧引用数组"，缓存于 def.link。
---- 对普通动画，元素是 image_db 的 db_atlas item（miss 时直接打印）；
+--- 对普通动画，元素是 image_db 的 frame id（miss 时直接打印）；
 --- 对 exo 动画，EXO:load 会直接把 def.link 设为 exo_frame 数组，不走这里。
 function animation_db:build_link(def, animation_name)
 	local count = def[1]
 	local prefix = def.prefix
 	local nums = def.nums
-	local db_atlas = require("lib.klove.image_db").db_atlas
 	local link = {}
 	local key = animation_name or prefix
 
 	for i = 1, count do
 		local fname = prefix .. string.format("_%04i", nums[i - 1])
-		local ss = db_atlas[fname]
+		local id = image_db.db_atlas[fname]
+		local frame = id and image_db:frame(id)
 
-		if not ss then
+		if not frame then
 			log.error("missing frame: animation %s -> %s", key, fname)
 		end
 
-		link[i] = ss
+		link[i] = frame
 	end
 
 	def.link = link
@@ -264,7 +265,7 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 	return self:def_frame_name(a, idx), runs, idx
 end
 
---- 新接口：直接返回渲染负载（image_db 的 db_atlas item 或 exo_frame），跳过帧名与 I:s 查找。
+--- 新接口：直接返回渲染负载（image_db 的 FrameData cdata 或 exo_frame），跳过帧名与 I:s 查找。
 function animation_db:f(animation_name, time_offset, loop, fps)
 	local a = self.db[animation_name]
 
