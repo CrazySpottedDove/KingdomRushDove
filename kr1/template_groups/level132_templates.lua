@@ -7,7 +7,7 @@ local r = V.r
 local U = require("utils")
 local tt
 
-tt = E:register_t_tmp("decal_stage_32_boss_bubbles", "decal_scripted")
+tt = E:register_t("decal_stage_32_boss_bubbles", "decal_scripted")
 E:add_comps(tt, "tween")
 tt.main_script.update = function(this, store)
 	if not this.moving_towards then
@@ -70,7 +70,7 @@ tt.tween.disabled = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 
-tt = E:register_t_tmp("mod_stage_32_tower_block", "mod_hide_tower")
+tt = E:register_t("mod_stage_32_tower_block", "mod_hide_tower")
 E:add_comps(tt, "render")
 tt.main_script.update = function(this, store)
 	local m = this.modifier
@@ -229,16 +229,16 @@ tt.skip_modifiers = {"mod_boss_crocs_tower_eat"}
 tt.click_rect = r(-30, 0, 60, 60)
 tt.menu_offset = v(0, 12)
 
-tt = E:register_t_tmp("fx_stage_32_dragon_mouth_fire_left", "fx")
+tt = E:register_t("fx_stage_32_dragon_mouth_fire_left", "fx")
 tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_01Def"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = DAMAGE_TRUE
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_tmp("fx_stage_32_dragon_mouth_fire_right", "fx_stage_32_dragon_mouth_fire_left")
+tt = E:register_t("fx_stage_32_dragon_mouth_fire_right", "fx_stage_32_dragon_mouth_fire_left")
 tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_02Def"
 
-tt = E:register_t_tmp("fx_stage_32_dragon_down_splash", "fx")
+tt = E:register_t("fx_stage_32_dragon_down_splash", "fx")
 tt.render.sprites[1].prefix = "dragon_redboy_splashDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
@@ -246,13 +246,13 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -20
 tt.render.sprites[1].offset = v(0, 15)
 
-tt = E:register_t_tmp("fx_stage_32_lava_geyser", "fx")
+tt = E:register_t("fx_stage_32_lava_geyser", "fx")
 tt.render.sprites[1].prefix = "dragon_cracks_geyserDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = E:register_t_tmp("decal_stage_32_boss_fissure_ability", "decal_dlc_wukong_flaming_ground")
+tt = E:register_t("decal_stage_32_boss_fissure_ability", "decal_dlc_wukong_flaming_ground")
 tt.main_script.update = function(this, store)
 	local function set_auras_enabled(enabled)
 		for _, id in ipairs(this.cached_auras) do
@@ -340,26 +340,26 @@ tt.max_geysers = 5
 tt.geyser_delay_max = 0.5
 tt.geyser_delay_min = 0.2
 
-tt = E:register_t_hot("stage_32_mask_waterfall_1", "decal", true)
+tt = E:register_t("stage_32_mask_waterfall_1", "decal", true)
 tt.render.sprites[1].prefix = "stage_32_lava_waterfall_1Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("stage_32_mask_waterfall_2", "stage_32_mask_waterfall_1", true)
+tt = E:register_t("stage_32_mask_waterfall_2", "stage_32_mask_waterfall_1", true)
 tt.render.sprites[1].prefix = "stage_32_lava_waterfall_2Def"
 tt.render.sprites[1].sort_y_offset = 175
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = E:register_t_hot("stage_32_mask_lava_rocks", "decal", true)
+tt = E:register_t("stage_32_mask_lava_rocks", "decal", true)
 tt.render.sprites[1].prefix = "stage_32_rockDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("stage_32_mask_fire_decals", "decal", true)
+tt = E:register_t("stage_32_mask_fire_decals", "decal", true)
 tt.render.sprites[1].prefix = "stage_32_lava_buffDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
@@ -367,23 +367,23 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("stage_32_mask_front", "decal", true)
+tt = E:register_t("stage_32_mask_front", "decal", true)
 tt.render.sprites[1].prefix = "stage_32_lava_shadow_dragonDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 
-tt = E:register_t_hot("controller_stage_32_lava_splash_2", "controller_stage_32_lava_splash", true)
+tt = E:register_t("controller_stage_32_lava_splash_2", "controller_stage_32_lava_splash", true)
 tt.mod = "mod_stage_32_lava_splash_2"
 tt.paths_y = {
 	[3] = 560
 }
 
-tt = E:register_t_hot("stage_32_mask_waterfall_3", "stage_32_mask_waterfall_2", true)
+tt = E:register_t("stage_32_mask_waterfall_3", "stage_32_mask_waterfall_2", true)
 tt.render.sprites[1].prefix = "stage_32_lava_waterfall_3Def"
 
-tt = E:register_t_hot("stage_32_mask_lava_bubbles", "decal", true)
+tt = E:register_t("stage_32_mask_lava_bubbles", "decal", true)
 tt.render.sprites[1].prefix = "stage_32_lava_bubbleDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
@@ -391,13 +391,13 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = 176
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = E:register_t_hot("stage_32_mask_heads", "decal", true)
+tt = E:register_t("stage_32_mask_heads", "decal", true)
 tt.render.sprites[1].name = "stage_32_masks_layer_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 160
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = E:register_t_hot("stage_32_mask_heads_2", "stage_32_mask_heads", true)
+tt = E:register_t("stage_32_mask_heads_2", "stage_32_mask_heads", true)
 tt.render.sprites[1].flip_x = true
 
 local decal_stage_32_easter_egg_sheepy
@@ -451,7 +451,7 @@ function decal_stage_32_easter_egg_sheepy.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_stage_32_easter_egg_sheepy", "decal_scripted", true)
+tt = E:register_t("decal_stage_32_easter_egg_sheepy", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_32_easter_egg_sheepy.update
 tt.render.sprites[1].prefix = "sheepylava_sheepy"
@@ -1241,7 +1241,7 @@ function controller_stage_32_boss.update(this, store)
 	this.boss_death_ended = true
 end
 
-tt = E:register_t_hot("controller_stage_32_boss", "decal_scripted", true)
+tt = E:register_t("controller_stage_32_boss", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui")
 tt.boss_controler_balance = {
 	death_duration = 12,

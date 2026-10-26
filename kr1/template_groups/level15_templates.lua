@@ -54,14 +54,14 @@ local function s15_rotten_spawner_update(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
-tt = E:register_t_hot("decal_swamp_bubble", "decal_delayed_play", true)
+tt = E:register_t("decal_swamp_bubble", "decal_delayed_play", true)
 tt.render.sprites[1].name = "decal_swamp_bubble_jump"
 tt.delayed_play.flip_chance = 0.5
 tt.delayed_play.min_delay = fts(150)
 tt.delayed_play.max_delay = fts(400)
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "decal_swamp_bubble_jump"
-tt = E:register_t_hot("s15_rotten_spawner", nil, true)
+tt = E:register_t("s15_rotten_spawner", nil, true)
 AC(tt, "main_script", "editor")
 tt.main_script.update = s15_rotten_spawner_update
 tt.entity = "enemy_rotten_tree"

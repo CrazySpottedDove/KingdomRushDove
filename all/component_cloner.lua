@@ -4,6 +4,23 @@
 
 local M = {}
 
+local function sorted_keys(t)
+	local keys = {}
+	for k in pairs(t) do
+		keys[#keys + 1] = k
+	end
+	table.sort(keys, function(a, b)
+		if type(a) ~= type(b) then
+			return type(a) < type(b)
+		end
+		if type(a) == "string" or type(a) == "number" then
+			return a < b
+		end
+		return tostring(a) < tostring(b)
+	end)
+	return keys
+end
+
 -- 判断一个 table 是否能被安全地内联为字面量（所有值都是标量，不含子表或 cdata）
 local function is_simple_literal(t)
 	for _, v in pairs(t) do
@@ -122,7 +139,8 @@ local function gen_value(v, tpl_path)
 		else
 			-- 复杂表：递归展开，生成内联构造器
 			local parts = {}
-			for k, vv in pairs(v) do
+			for _, k in ipairs(sorted_keys(v)) do
+				local vv = v[k]
 				local sub_path = {}
 				for _, p in ipairs(tpl_path) do
 					sub_path[#sub_path + 1] = p
@@ -160,13 +178,14 @@ end
 function M.generate(comp_name, comp_table)
 	-- 处理 ffi cdata 组件（通过 register_c_ffi 注册的）
 	if type(comp_table) ~= "table" then
-		return ("-- compiled cloner for ffi component %q\n" .. "return function(tpl)\n" .. "\treturn tpl:clone()\n" .. "end"):format(comp_name)
+		return "return function(tpl)\n\treturn tpl:clone()\nend"
 	end
 
 	-- 递归展开整个组件表
 	-- 顶层路径为空，gen_value 遇到 cdata 时直接生成 "tpl:clone()"
 	local parts = {}
-	for k, v in pairs(comp_table) do
+	for _, k in ipairs(sorted_keys(comp_table)) do
+		local v = comp_table[k]
 		local sub_path = {k}
 		local sub_expr = gen_value(v, sub_path)
 		if sub_expr then
@@ -198,6 +217,20 @@ function M.generate(comp_name, comp_table)
 	body = body .. "end"
 
 	return body
+end
+
+--- 生成静态文件内容：return { [name] = cloner, ... }
+function M.generate_table(components)
+	local lines = {"-- 由 scripts/gen_component_cloner.lua 生成，请勿手改", "return {"}
+
+	for _, name in ipairs(sorted_keys(components)) do
+		local code = M.generate(name, components[name])
+		code = code:gsub("^%s*return%s+", "", 1)
+		lines[#lines + 1] = string.format("\t[%q] = %s,", name, code)
+	end
+
+	lines[#lines + 1] = "}"
+	return table.concat(lines, "\n") .. "\n"
 end
 
 --- 为所有 components 生成克隆函数，并返回 {name = func} 的表

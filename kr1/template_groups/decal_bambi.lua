@@ -77,7 +77,7 @@ function decal_bambi.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_bambi", "decal_scripted", true)
+tt = E:register_t("decal_bambi", "decal_scripted", true)
 AC(tt, "ui", "motion")
 tt.render.sprites[1].prefix = "decal_bambi"
 tt.render.sprites[1].name = "idle"

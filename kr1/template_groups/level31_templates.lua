@@ -48,16 +48,16 @@ local function pirate_cannons_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_lumberjack", "decal", true)
+tt = E:register_t("decal_lumberjack", "decal", true)
 tt.render.sprites[1].prefix = "lumberjack"
 tt.render.sprites[1].anchor.y = 0.19
 tt.render.sprites[1].flip_x = true
-tt = E:register_t_hot("decal_ship_door", "decal", true)
+tt = E:register_t("decal_ship_door", "decal", true)
 tt.render.sprites[1].prefix = "decal_ship_door"
 tt.render.sprites[1].name = "closed"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt = E:register_t_hot("pirate_cannons", "decal_scripted", true)
+tt = E:register_t("pirate_cannons", "decal_scripted", true)
 AC(tt, "attacks")
 tt.main_script.update = pirate_cannons_update
 tt.render.sprites[1].prefix = "pirate_cannon_left"
@@ -102,7 +102,7 @@ local function bomb_pirate_cannon_update(this, store)
 	simulation:queue_insert_entity(decal)
 	simulation:queue_remove_entity(this)
 end
-tt = E:register_t_hot("decal_pirate_cannon_target", "decal_tween", true)
+tt = E:register_t("decal_pirate_cannon_target", "decal_tween", true)
 tt.render.sprites[1].name = "Stage4_ShipCrosshair"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
@@ -111,7 +111,7 @@ tt.tween.props[1].keys = {{0, vec_2(1.86, 1.86)}, {fts(20), vec_2(1.05, 1.05)}, 
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "alpha"
 tt.tween.props[2].keys = {{0, 0}, {fts(20), 255}, {fts(74), 255}, {fts(78), 0}}
-tt = E:register_t_hot("bomb_pirate_cannon", "bullet", true)
+tt = E:register_t("bomb_pirate_cannon", "bullet", true)
 tt.render = nil
 tt.main_script.update = bomb_pirate_cannon_update
 tt.bullet.damage_min = 50

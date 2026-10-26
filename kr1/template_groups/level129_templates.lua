@@ -279,7 +279,7 @@ function stage_29_cocoon.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-tt = E:register_t_hot("controller_stage_29_spider_holders", "decal_scripted", true)
+tt = E:register_t("controller_stage_29_spider_holders", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui")
 tt.main_script.update = controller_stage_29_spider_holders_update
 tt.render.sprites[1].prefix = "spiderholder_spiderholder"
@@ -332,7 +332,7 @@ end
 tt.sound_loop = "EnemySpidersMechanicTowerSpiderWorkingLoop"
 tt.sound_death = "EnemySpidersMechanicTowerSpiderDeath"
 
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_fredo", "decal_scripted", true)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_fredo", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(-20, -50, 40, 40)
 tt.main_script.update = decal_achievement_a_coon_of_surprises.update
@@ -352,13 +352,13 @@ tt.render.sprites[tt.render.sid_animated].z = Z_OBJECTS_SKY
 tt.render.sprites[tt.render.sid_animated].offset = v(5, 4)
 tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.973404)
 
-tt = E:register_t_hot("decal_stage_29_background_eyes", "decal", true)
+tt = E:register_t("decal_stage_29_background_eyes", "decal", true)
 tt.render.sprites[1].prefix = "spiders_stage29_eyes_stageDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_arak", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_arak", "decal_achievement_a_coon_of_surprises_fredo", true)
 tt.give_achievement = false
 tt.ui.click_rect = r(-20, -40, 62, 75)
 tt.change_y_sort_offset = 0
@@ -370,7 +370,7 @@ tt.render.sprites[tt.render.sid_animated].name = "idle"
 tt.render.sprites[tt.render.sid_animated].animated = true
 tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
 
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_darkcrystal", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_darkcrystal", "decal_achievement_a_coon_of_surprises_fredo", true)
 tt.give_achievement = false
 tt.change_z_time = fts(37)
 tt.change_y_sort_offset = -260
@@ -382,7 +382,7 @@ tt.render.sprites[tt.render.sid_animated].name = "idle"
 tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
 tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
 
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_silksong", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_silksong", "decal_achievement_a_coon_of_surprises_fredo", true)
 tt.give_achievement = false
 tt.change_z_time = fts(36)
 tt.change_y_sort_offset = -400
@@ -394,7 +394,7 @@ tt.render.sprites[tt.render.sid_animated].name = "idle"
 tt.render.sprites[tt.render.sid_animated].offset = v(2, -30)
 tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
 
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_jarra", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_jarra", "decal_achievement_a_coon_of_surprises_fredo", true)
 tt.give_achievement = false
 tt.change_z_time = fts(32)
 tt.change_y_sort_offset = -210
@@ -406,7 +406,7 @@ tt.render.sprites[tt.render.sid_animated].name = "idle"
 tt.render.sprites[tt.render.sid_animated].offset = v(-2, -22)
 tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
 
-tt = E:register_t_hot("decal_achievement_a_coon_of_surprises_sheepy", "decal_achievement_a_coon_of_surprises_fredo", true)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_sheepy", "decal_achievement_a_coon_of_surprises_fredo", true)
 tt.give_achievement = false
 tt.change_z_time = fts(30)
 tt.change_y_sort_offset = -336
@@ -418,7 +418,7 @@ tt.render.sprites[tt.render.sid_animated].name = "idle"
 tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
 tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.517391)
 
-tt = E:register_t_hot("stage_29_cocoon", "decal_scripted", true)
+tt = E:register_t("stage_29_cocoon", "decal_scripted", true)
 E:add_comps(tt, "spawner")
 tt.render.sprites[1].prefix = "cocon_stage2_coocoon"
 tt.render.sprites[1].name = "idle"

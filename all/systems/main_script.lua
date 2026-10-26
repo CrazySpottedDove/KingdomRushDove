@@ -3,7 +3,6 @@ local main_script = {}
 local perf = require("dove_modules.perf.perf")
 
 local log = require("lib.klua.log"):new("systems")
-local E = require("entity_db")
 
 main_script.name = "main_script"
 
@@ -11,19 +10,11 @@ function main_script:init(store)
 	store.entities_with_main_script_on_update_count = 0
 	store.entities_with_main_script_on_update = {}
 	store.entities_with_main_script_on_update_index = {}
-	store.entities_with_main_script_on_update_count1 = 0
-	store.entities_with_main_script_on_update1 = {}
-	store.entities_with_main_script_on_update_index1 = {}
 	store._dominant_entity = nil
 end
 
 function main_script:on_insert(entity, store)
 	if entity.main_script then
-		if entity.main_script.type == 1 then
-			if entity.main_script.context == nil then
-				entity.main_script.context = E:clone_c("context")
-			end
-		end
 		if entity.main_script.insert then
 			store._dominant_entity = entity
 			local result = entity.main_script.insert(entity, store)
@@ -40,46 +31,26 @@ end
 function main_script:on_insert_unconditional(e, d)
 	local s = e.main_script
 	if s and s.update then
-		if s.type == 0 then
-			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count + 1
-			d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = e
-			d.entities_with_main_script_on_update_index[e.id] = d.entities_with_main_script_on_update_count
-		else
-			d.entities_with_main_script_on_update_count1 = d.entities_with_main_script_on_update_count1 + 1
-			d.entities_with_main_script_on_update1[d.entities_with_main_script_on_update_count1] = e
-			d.entities_with_main_script_on_update_index1[e.id] = d.entities_with_main_script_on_update_count1
-		end
+		d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count + 1
+		d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = e
+		d.entities_with_main_script_on_update_index[e.id] = d.entities_with_main_script_on_update_count
 	end
 end
 
 function main_script:on_remove_unconditional(e, d)
 	local s = e.main_script
 	if s and s.update then
-		if s.type == 0 then
-			local index = d.entities_with_main_script_on_update_index[e.id]
-			if not index then
-				log.error(string.format(_("MAIN_SCRIPT_UPDATE_NOT_REGISTERED"), e.template_name))
-				return
-			end
-			local last_entity = d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count]
-			d.entities_with_main_script_on_update[index] = last_entity
-			d.entities_with_main_script_on_update_index[last_entity.id] = index
-			d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = nil
-			d.entities_with_main_script_on_update_index[e.id] = nil
-			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count - 1
-		else
-			local index = d.entities_with_main_script_on_update_index1[e.id]
-			if not index then
-				log.error(string.format(_("MAIN_SCRIPT_UPDATE_NOT_REGISTERED"), e.template_name))
-				return
-			end
-			local last_entity = d.entities_with_main_script_on_update1[d.entities_with_main_script_on_update_count1]
-			d.entities_with_main_script_on_update1[index] = last_entity
-			d.entities_with_main_script_on_update_index1[last_entity.id] = index
-			d.entities_with_main_script_on_update1[d.entities_with_main_script_on_update_count1] = nil
-			d.entities_with_main_script_on_update_index1[e.id] = nil
-			d.entities_with_main_script_on_update_count1 = d.entities_with_main_script_on_update_count1 - 1
+		local index = d.entities_with_main_script_on_update_index[e.id]
+		if not index then
+			log.error(string.format(_("MAIN_SCRIPT_UPDATE_NOT_REGISTERED"), e.template_name))
+			return
 		end
+		local last_entity = d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count]
+		d.entities_with_main_script_on_update[index] = last_entity
+		d.entities_with_main_script_on_update_index[last_entity.id] = index
+		d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = nil
+		d.entities_with_main_script_on_update_index[e.id] = nil
+		d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count - 1
 	end
 end
 
@@ -120,17 +91,8 @@ function main_script:on_update(dt, ts, store)
 	end
 	perf.stop("coro")
 
-	perf.start("state machine")
-	for i = 1, store.entities_with_main_script_on_update_count1 do
-		local e = store.entities_with_main_script_on_update1[i]
-		store._dominant_entity = e
-		e.main_script.update(e, store)
-	end
-	perf.stop("state machine")
-
 	store._dominant_entity = nil
 	perf.set_coros(store.entities_with_main_script_on_update_count)
-	perf.set_stms(store.entities_with_main_script_on_update_count1)
 end
 
 function main_script:on_remove(entity, store)

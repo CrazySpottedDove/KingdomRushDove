@@ -192,17 +192,17 @@ function decal_achievement_lucas_spider.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("mask_stage_30_5", "decal", true)
+tt = E:register_t("mask_stage_30_5", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_05"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
 
-tt = E:register_t_hot("mask_stage_30_4", "decal", true)
+tt = E:register_t("mask_stage_30_4", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_04"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
 
-tt = E:register_t_hot("controller_stage_30_boss_spiders", "decal_scripted", true)
+tt = E:register_t("controller_stage_30_boss_spiders", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.main_script.update = controller_stage_30_boss_spiders_update
 tt.spawn_path = 1
@@ -544,22 +544,22 @@ tt.render.sid_smoke = 4
 tt.render.sprites[tt.render.sid_smoke] = table.deepclone(tt.render.sprites[2])
 tt.render.sprites[tt.render.sid_smoke].prefix = "spiderqueen_smokeDef"
 
-tt = E:register_t_hot("mask_stage_30_1", "decal", true)
+tt = E:register_t("mask_stage_30_1", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -60
 
-tt = E:register_t_hot("mask_stage_30_2", "decal", true)
+tt = E:register_t("mask_stage_30_2", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_02"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -112
 
-tt = E:register_t_hot("mask_stage_30_3", "decal", true)
+tt = E:register_t("mask_stage_30_3", "decal", true)
 tt.render.sprites[1].name = "stage_30_mask_03"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
 
-tt = E:register_t_hot("decal_stage_30_door", "decal_scripted", true)
+tt = E:register_t("decal_stage_30_door", "decal_scripted", true)
 tt.render.sprites[1].prefix = "stage_30_spider_doorDef"
 tt.render.sprites[1].name = "idle1"
 tt.render.sprites[1].exo = true
@@ -577,7 +577,7 @@ tt.waves = {{
 	[15] = {{1, 10}, {18, 28}, {52, 62}}
 }, {{{44, 52}}, {{57, 67}}, {{0.2, 10}, {44, 60}}, {{46, 60}}, {{0.5, 19}}, {{24, 34}, {70, 80}}}, {{{155, 180}, {220, 250}}}}
 
-tt = E:register_t_hot("decal_achievement_lucas_spider", "decal_scripted", true)
+tt = E:register_t("decal_achievement_lucas_spider", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(-20, -10, 40, 40)
 tt.main_script.update = decal_achievement_lucas_spider.update

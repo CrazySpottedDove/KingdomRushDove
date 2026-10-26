@@ -21,10 +21,10 @@ local function decal_s17_barricade_update(this, store)
 	U.animation_start_default(this, "destroy", nil, store.tick_ts, false)
 end
 local tt
-tt = E:register_t_hot("decal_bandits_flag", "decal_loop", true)
+tt = E:register_t("decal_bandits_flag", "decal_loop", true)
 tt.render.sprites[1].random_ts = fts(14)
 tt.render.sprites[1].name = "decal_bandits_flag_idle"
-tt = E:register_t_hot("decal_s17_barricade", "decal", true)
+tt = E:register_t("decal_s17_barricade", "decal", true)
 AC(tt, "editor", "main_script")
 tt.boss_name = "eb_kingpin"
 tt.boss_spawn_wave = 15

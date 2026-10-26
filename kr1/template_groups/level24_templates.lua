@@ -22,7 +22,7 @@ local function decal_s24_nevermore_update(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
-tt = E:register_t_hot("decal_s24_nevermore", "decal_click_play", true)
+tt = E:register_t("decal_s24_nevermore", "decal_click_play", true)
 AC(tt, "tween")
 tt.render.sprites[1].scale = vec_2(0.7, 0.7)
 tt.render.sprites[1].prefix = "decal_s24_nevermore"

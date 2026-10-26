@@ -105,17 +105,17 @@ local function decal_tree_ewok_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_s04_land_1", "decal_background", true)
+tt = E:register_t("decal_s04_land_1", "decal_background", true)
 AC(tt, "tween")
 tt.render.sprites[1].name = "Stage04_0003"
 tt.render.sprites[1].z = Z_DECALS + 1
 tt.editor.game_mode = 1
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
-tt = E:register_t_hot("decal_s04_land_2", "decal_s04_land_1", true)
+tt = E:register_t("decal_s04_land_2", "decal_s04_land_1", true)
 tt.render.sprites[1].name = "Stage04_0004"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-tt = E:register_t_hot("decal_s04_tree_burn", "decal_timed", true)
+tt = E:register_t("decal_s04_tree_burn", "decal_timed", true)
 AC(tt, "editor")
 tt.render.sprites[1].prefix = "decal_s04_tree_burn"
 tt.render.sprites[1].name = "idle"
@@ -125,7 +125,7 @@ tt.timed.runs = INT_32_MAX
 tt.editor.game_mode = 1
 tt.editor.tag = 1
 tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-tt = E:register_t_hot("decal_s04_charcoal_1", "decal_tween", true)
+tt = E:register_t("decal_s04_charcoal_1", "decal_tween", true)
 AC(tt, "editor")
 tt.render.sprites[1].name = "stage4_fire_decal_0001"
 tt.render.sprites[1].animated = false
@@ -136,13 +136,13 @@ tt.tween.props[1].keys = {{0, 255}, {0.4, 255}, {1.7, 0}}
 tt.editor.game_mode = 1
 tt.editor.tag = 1
 tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
-tt = E:register_t_hot("decal_s04_charcoal_2", "decal_s04_charcoal_1", true)
+tt = E:register_t("decal_s04_charcoal_2", "decal_s04_charcoal_1", true)
 tt.render.sprites[1].name = "stage4_fire_decal_0002"
-tt = E:register_t_hot("decal_s04_charcoal_3", "decal_s04_charcoal_1", true)
+tt = E:register_t("decal_s04_charcoal_3", "decal_s04_charcoal_1", true)
 tt.render.sprites[1].name = "stage4_fire_decal_0003"
-tt = E:register_t_hot("fx_torch_gnoll_burner_explosion_stage04", "fx", true)
+tt = E:register_t("fx_torch_gnoll_burner_explosion_stage04", "fx", true)
 tt.render.sprites[1].name = "fx_torch_gnoll_burner_explosion_stage04"
-tt = E:register_t_hot("fx_s04_tree_fire_1", "decal_timed", true)
+tt = E:register_t("fx_s04_tree_fire_1", "decal_timed", true)
 AC(tt, "editor")
 tt.timed.runs = INT_32_MAX
 tt.render.sprites[1].name = "fx_s04_tree_fire_1"
@@ -155,9 +155,9 @@ tt.editor.overrides = {
 	["render.sprites[1].hidden"] = false,
 	["render.sprites[1].loop"] = true
 }
-tt = E:register_t_hot("fx_s04_tree_fire_2", "fx_s04_tree_fire_1", true)
+tt = E:register_t("fx_s04_tree_fire_2", "fx_s04_tree_fire_1", true)
 tt.render.sprites[1].name = "fx_s04_tree_fire_2"
-tt = E:register_t_hot("decal_george_jungle", "decal_scripted", true)
+tt = E:register_t("decal_george_jungle", "decal_scripted", true)
 AC(tt, "ui", "tween")
 tt.main_script.update = decal_george_jungle_update
 tt.render.sprites[1].anchor.y = 1
@@ -189,7 +189,7 @@ tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "offset"
 tt.tween.props[2].keys = {{0, v(0, 0)}, {0.3, v(0, 0)}}
 tt.achievement = "GEORGE_FALL"
-tt = E:register_t_hot("decal_tree_ewok", "decal_scripted", true)
+tt = E:register_t("decal_tree_ewok", "decal_scripted", true)
 AC(tt, "motion", "nav_path", "ranged", "unit")
 tt.main_script.update = decal_tree_ewok_update
 tt.render.sprites[1].anchor.y = 0.083333
@@ -205,7 +205,7 @@ tt.dance_animations = {"dance1", "dance2"}
 tt.ranged_center = vec_2(550, 380)
 tt.motion.max_speed = 45
 local km = require("lib.klua.macros")
-tt = E:register_t_hot("spear_tree_ewok", "arrow", true)
+tt = E:register_t("spear_tree_ewok", "arrow", true)
 tt.bullet.damage_max = 10
 tt.bullet.hit_chance = 0.4
 tt.bullet.miss_decal = "ewok_2_proy_0002"

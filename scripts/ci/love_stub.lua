@@ -135,7 +135,7 @@ for n, v in pairs({
 	_G[n] = v
 end
 
---- 打桩完成后加载真实的 entity_db（首次 Load 会 load + precompile 全部模板）
+--- 打桩完成后加载真实的 entity_db
 ---@return table entity_db
 function stub.load_entity_db()
 	local E = require('entity_db')

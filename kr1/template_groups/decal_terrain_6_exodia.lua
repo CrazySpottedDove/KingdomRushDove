@@ -38,7 +38,7 @@ function decal_terrain_6_exodia_part.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_terrain_6_exodia_arm", "decal_scripted", true)
+tt = E:register_t("decal_terrain_6_exodia_arm", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_arm"
 tt.render.sprites[1].name = "idle"
@@ -47,14 +47,14 @@ tt.main_script.update = decal_terrain_6_exodia_part.update
 tt.ui.click_rect = r(-15, -5, 30, 20)
 tt.sound_click = "Terrain6ExodiaPart"
 
-tt = E:register_t_hot("decal_terrain_6_exodia_head", "decal_terrain_6_exodia_arm", true)
+tt = E:register_t("decal_terrain_6_exodia_head", "decal_terrain_6_exodia_arm", true)
 tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_head"
 
-tt = E:register_t_hot("decal_terrain_6_exodia_leg", "decal_terrain_6_exodia_arm", true)
+tt = E:register_t("decal_terrain_6_exodia_leg", "decal_terrain_6_exodia_arm", true)
 tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_leg"
 tt.ui.click_rect = r(-15, -5, 30, 30)
 
-tt = E:register_t_hot("decal_terrain_6_exodia_leg_2", "decal_terrain_6_exodia_arm", true)
+tt = E:register_t("decal_terrain_6_exodia_leg_2", "decal_terrain_6_exodia_arm", true)
 tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_leg"
 tt.render.sprites[1].flip_x = true
 tt.ui.click_rect = r(-15, -5, 30, 30)

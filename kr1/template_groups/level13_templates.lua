@@ -26,7 +26,7 @@ local function decal_fredo_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_fredo", "decal_scripted", true)
+tt = E:register_t("decal_fredo", "decal_scripted", true)
 AC(tt, "ui")
 tt.render.sprites[1].prefix = "decal_fredo"
 tt.render.sprites[1].name = "idle"

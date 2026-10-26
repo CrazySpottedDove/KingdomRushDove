@@ -247,7 +247,7 @@ function controller_basic_clone_darksteel_guardian.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("controller_darksteel_guardian", nil, true)
+tt = E:register_t("controller_darksteel_guardian", nil, true)
 E:add_comps(tt, "main_script", "editor")
 tt.main_script.insert = controller_darksteel_guardian_insert
 tt.guardian_t = "enemy_darksteel_guardian"
@@ -255,7 +255,7 @@ tt.editor.flip_x = false
 tt.editor.path = 1
 tt.editor.props = {{"editor.flip_x", PT_NUMBER}, {"editor.path", PT_NUMBER}}
 
-tt = E:register_t_hot("decal_stage_23_crane", "decal_scripted", true)
+tt = E:register_t("decal_stage_23_crane", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "DLCenanos_stage1_deco_gruaDef"
 tt.render.sprites[1].name = "idle"
@@ -266,24 +266,24 @@ tt.ui.click_rect = r(400, -220, 110, 100)
 tt.sound_tap_1_2 = "Stage23TruckOneShot"
 tt.sound_tap_3 = "Stage23TruckTap3"
 
-tt = E:register_t_hot("decal_stage_23_mask_2", "decal", true)
+tt = E:register_t("decal_stage_23_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage23_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 51
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_23_mask_1", "decal", true)
+tt = E:register_t("decal_stage_23_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage23_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 170
 
-tt = E:register_t_hot("decal_stage_23_torches", "decal", true)
+tt = E:register_t("decal_stage_23_torches", "decal", true)
 tt.render.sprites[1].prefix = "dclenanos_stage01_torchesDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("controller_stage_23_roboboots", "decal_scripted", true)
+tt = E:register_t("controller_stage_23_roboboots", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.main_script.update = controller_stage_23_roboboots_update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -398,35 +398,35 @@ tt.wave_config = {{
 tt.sound_open = "Stage23BootOpen"
 tt.sound_close = "Stage23BootClose"
 
-tt = E:register_t_hot("decal_stage_23_snow", "decal", true)
+tt = E:register_t("decal_stage_23_snow", "decal", true)
 tt.render.sprites[1].prefix = "dclenanos_stage01_snowfallDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_23_mask_4", "decal", true)
+tt = E:register_t("decal_stage_23_mask_4", "decal", true)
 tt.render.sprites[1].name = "stage23_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -8
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_23_mask_5", "decal", true)
+tt = E:register_t("decal_stage_23_mask_5", "decal", true)
 tt.render.sprites[1].name = "stage23_mask5"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 50
 tt.render.sprites[1].hidden = false
 
-tt = E:register_t_hot("decal_stage_23_mask_6", "decal", true)
+tt = E:register_t("decal_stage_23_mask_6", "decal", true)
 tt.render.sprites[1].name = "stage23_mask6"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 123
 tt.render.sprites[1].hidden = true
 
-tt = E:register_t_hot("decal_stage_23_rock", "decal", true)
+tt = E:register_t("decal_stage_23_rock", "decal", true)
 tt.render.sprites[1].prefix = "darksteel_guardian_stage_rock"
 tt.render.sprites[1].name = "idle"
 
-tt = E:register_t_hot("controller_basic_clone_darksteel_guardian", "enemy", true)
+tt = E:register_t("controller_basic_clone_darksteel_guardian", "enemy", true)
 tt.info.portrait = "kr5_info_portraits_enemies_0001"
 tt.motion.max_speed = 36
 tt.main_script.update = controller_basic_clone_darksteel_guardian.update

@@ -125,13 +125,13 @@ function SPELLS:compute_level(store)
 end
 
 function SPELLS:register_common_templates(E)
-	local tt = E:register_t_tmp("power_control_custom")
+	local tt = E:register_t("power_control_custom")
 	E:add_comps(tt, "user_power", "pos", "main_script", "user_selection")
 
-	E:register_t_tmp("user_power_3")
+	E:register_t("user_power_3")
 end
 
---- 在 E:precompile_hot() 之前调用：仅选中时注册本局法术模板
+--- 仅选中时注册本局法术模板
 function SPELLS:register_templates(E)
 	local spell = self:get_selected()
 
@@ -143,7 +143,7 @@ function SPELLS:register_templates(E)
 	spell.register_templates(E)
 end
 
---- 在 E:precompile_hot() 之后调用
+--- 法术模板注册完成后的处理
 function SPELLS:apply(store)
 	local spell = self:get_selected()
 

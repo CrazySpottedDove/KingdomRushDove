@@ -57,7 +57,7 @@ local function decal_s25_nessie_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("decal_s25_nessie", "decal_click_play", true)
+tt = E:register_t("decal_s25_nessie", "decal_click_play", true)
 tt.render.sprites[1].anchor = vec_2(0.5, 0.434783)
 tt.render.sprites[1].prefix = "decal_s25_nessie"
 tt.main_script.update = decal_s25_nessie_update

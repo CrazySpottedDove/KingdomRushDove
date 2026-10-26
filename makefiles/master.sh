@@ -32,7 +32,7 @@ trap 'rm -f "$MANIFEST_TMP" "$TMP_INDEX"' EXIT
 rm -f "$TMP_INDEX"
 
 # master 投影额外排除的开发文档（不属于“仅源码”清单）
-MASTER_EXCLUDE_FILES=("precompile/DESIGN.md")
+MASTER_EXCLUDE_FILES=()
 
 echo "源分支: $SOURCE_BRANCH"
 

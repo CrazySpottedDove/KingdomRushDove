@@ -3,7 +3,7 @@ local signal = require("lib.hump.signal")
 local E = require("entity_db")
 local V = require("lib.klua.vector")
 local v = V.v
-local tt = E:register_t_hot("decal_achievement_saitam_stage31", "decal_scripted", true)
+local tt = E:register_t("decal_achievement_saitam_stage31", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor", "tween")
 tt.main_script.update = function(this, store)
 	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
@@ -67,14 +67,14 @@ tt.ui.click_rect = r(-50, -5, 40, 30)
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.5, 0}}
 
-tt = E:register_t_hot("decal_achievement_saitam_stage32", "decal_achievement_saitam_stage31", true)
+tt = E:register_t("decal_achievement_saitam_stage32", "decal_achievement_saitam_stage31", true)
 tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_2"
 
-tt = E:register_t_hot("decal_achievement_saitam_stage33", "decal_achievement_saitam_stage31", true)
+tt = E:register_t("decal_achievement_saitam_stage33", "decal_achievement_saitam_stage31", true)
 tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_3"
 
-tt = E:register_t_hot("decal_achievement_saitam_stage34", "decal_achievement_saitam_stage31", true)
+tt = E:register_t("decal_achievement_saitam_stage34", "decal_achievement_saitam_stage31", true)
 tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_4"
 
-tt = E:register_t_hot("decal_achievement_saitam_stage35", "decal_achievement_saitam_stage31", true)
+tt = E:register_t("decal_achievement_saitam_stage35", "decal_achievement_saitam_stage31", true)
 tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_5"

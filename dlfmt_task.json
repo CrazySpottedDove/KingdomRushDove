@@ -20,9 +20,8 @@
 				".codewhale",
 				".vscode",
 				"love_env",
-				"tmp",
-				"precompile/generated"
-			]
+				"tmp"
+							]
 		},
 		{
 			"type": "compress",

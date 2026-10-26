@@ -125,17 +125,17 @@ local function malik_slave_controller_update(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
-tt = E:register_t_hot("decal_hr_cart", "decal", true)
+tt = E:register_t("decal_hr_cart", "decal", true)
 tt.render.sprites[1].name = "stage17_carret"
 tt.render.sprites[1].anchor.y = 0.083333
 tt.render.sprites[1].animated = false
-tt = E:register_t_hot("decal_hr_worker_a", "decal", true)
+tt = E:register_t("decal_hr_worker_a", "decal", true)
 tt.render.sprites[1].name = "decal_hr_worker_a"
 tt.render.sprites[1].anchor.y = 0.027778
-tt = E:register_t_hot("decal_hr_worker_b", "decal", true)
+tt = E:register_t("decal_hr_worker_b", "decal", true)
 tt.render.sprites[1].name = "decal_hr_worker_b"
 tt.render.sprites[1].anchor.y = 0.208333
-tt = E:register_t_hot("malik_slave_controller", "decal_scripted", true)
+tt = E:register_t("malik_slave_controller", "decal_scripted", true)
 AC(tt, "editor")
 tt.fn_can_power = malik_slave_controller_fn_can_power
 tt.hero_spawn_pos = vec_2(736, 639)
@@ -174,7 +174,7 @@ local function decal_walking_update(this, store)
 		coroutine.yield()
 	end
 end
-tt = E:register_t_hot("decal_gnoll_gnawer", "decal_scripted", true)
+tt = E:register_t("decal_gnoll_gnawer", "decal_scripted", true)
 AC(tt, "motion", "nav_grid", "tween")
 tt.render.sprites[1].anchor = vec_2(0.5, 0.25)
 tt.render.sprites[1].prefix = "gnoll_gnawer"
@@ -183,14 +183,14 @@ tt.motion.max_speed = 2 * FPS
 tt.main_script.update = decal_walking_update
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-tt = E:register_t_hot("decal_baby_malik_slave", "decal_scripted", true)
+tt = E:register_t("decal_baby_malik_slave", "decal_scripted", true)
 AC(tt, "motion", "nav_grid")
 tt.render.sprites[1].anchor.y = 0.184
 tt.render.sprites[1].prefix = "decal_baby_malik"
 tt.render.sprites[1].name = "idle"
 tt.main_script.update = decal_walking_update
 tt.motion.max_speed = 2 * FPS
-tt = E:register_t_hot("decal_baby_malik_slave_banner", "decal_tween", true)
+tt = E:register_t("decal_baby_malik_slave_banner", "decal_tween", true)
 tt.render.sprites[1].name = "malikAfro_sign"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset = vec_2(30, 66)
@@ -200,7 +200,7 @@ tt.tween.props[1].keys = {{0, 100}, {fts(4), 255}, {fts(71), 255}, {fts(75), 0}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_1(0.75)}, {fts(4), vec_1(1.075)}, {fts(7), vec_1(0.9625)}, {fts(9), vec_1(1)}, {fts(69), vec_1(1)}, {fts(71), vec_1(1.075)}, {fts(75), vec_1(0.75)}}
-tt = E:register_t_hot("decal_baby_malik_slave_free", "decal", true)
+tt = E:register_t("decal_baby_malik_slave_free", "decal", true)
 tt.render.sprites[1].name = "decal_baby_malik_free"
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].loop = false

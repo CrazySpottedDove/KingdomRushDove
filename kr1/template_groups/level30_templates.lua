@@ -76,7 +76,7 @@ local function sand_worm_update(this, store)
 	end
 end
 local tt
-tt = E:register_t_hot("sand_worm", "decal_scripted", true)
+tt = E:register_t("sand_worm", "decal_scripted", true)
 AC(tt, "area_attack")
 tt.render.sprites[1].prefix = "sand_worm"
 tt.render.sprites[1].name = "attack"
@@ -90,13 +90,13 @@ tt.area_attack.max_count = 30
 tt.area_attack.hit_time = 6
 tt.area_attack.damage_type = DAMAGE_EAT
 tt.area_attack.vis_flags = bor(F_EAT)
-tt = E:register_t_hot("fx_sand_worm_incoming", "decal_tween", true)
+tt = E:register_t("fx_sand_worm_incoming", "decal_tween", true)
 tt.render.sprites[1].anchor.y = 0.44
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].name = "sand_worm_incoming"
 tt.tween.props[1].keys = {{0, 0}, {0.6, 255}}
 tt.tween.remove = false
-tt = E:register_t_hot("fx_sand_worm_out", "decal_tween", true)
+tt = E:register_t("fx_sand_worm_out", "decal_tween", true)
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].name = "sandworm_decal_out"

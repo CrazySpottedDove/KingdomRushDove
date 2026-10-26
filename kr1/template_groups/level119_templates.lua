@@ -257,18 +257,18 @@ function controller_stage_19_mausoleum.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_stage_19_bubbles_water", "decal", true)
+tt = E:register_t("decal_stage_19_bubbles_water", "decal", true)
 tt.render.sprites[1].prefix = "stage_19_bubbles_waterDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_19_mask_3", "decal", true)
+tt = E:register_t("decal_stage_19_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage19_mask3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("controller_stage_19_navira", "decal_scripted", true)
+tt = E:register_t("controller_stage_19_navira", "decal_scripted", true)
 E:add_comps(tt, "taunts", "editor")
 tt.main_script.update = controller_stage_19_navira_update
 tt.render.sprites[1].prefix = "navira_navira"
@@ -301,24 +301,24 @@ tt.sound_fireball_cast = "Stage19NaviraFireballCast"
 tt.sound_hands_down = "Stage19NaviraHandsDown"
 tt.sound_hands_up = "Stage19NaviraHandsUp"
 
-tt = E:register_t_hot("decal_stage_19_smoke", "decal", true)
+tt = E:register_t("decal_stage_19_smoke", "decal", true)
 tt.render.sprites[1].prefix = "stage_19_smokeDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_19_bubbles", "decal", true)
+tt = E:register_t("decal_stage_19_bubbles", "decal", true)
 tt.render.sprites[1].prefix = "stage_19_bubblesDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_19_mask_2", "decal", true)
+tt = E:register_t("decal_stage_19_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage19_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_19_statue", "decal_scripted", true)
+tt = E:register_t("decal_stage_19_statue", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(272, 110, 60, 60)
 tt.main_script.update = decal_stage_19_statue_update
@@ -328,19 +328,19 @@ tt.render.sprites[1].exo = true
 tt.sound_12 = "Stage19Statue12"
 tt.sound_3 = "Stage19Statue3"
 
-tt = E:register_t_hot("decal_stage_19_mask_1", "decal", true)
+tt = E:register_t("decal_stage_19_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage19_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 194
 
-tt = E:register_t_hot("decal_stage_19_statue_hands", "decal", true)
+tt = E:register_t("decal_stage_19_statue_hands", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "navira_hands"
 tt.render.sprites[1].name = "hands_idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[1].draw_order = -1
 
-tt = E:register_t_hot("controller_stage_19_mausoleum", "decal_scripted", true)
+tt = E:register_t("controller_stage_19_mausoleum", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.main_script.update = controller_stage_19_mausoleum.update
 tt.render.sprites[1] = E:clone_c("sprite")

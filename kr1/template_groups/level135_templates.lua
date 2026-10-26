@@ -628,7 +628,7 @@ function controller_stage_35_redboy_powers.on_portal_left(this, store, action)
 	this.activate = "portal_in"
 end
 
-tt = E:register_t_tmp("fx_stage_35_cannonball", "decal_scripted")
+tt = E:register_t("fx_stage_35_cannonball", "decal_scripted")
 tt.main_script.update = function(this, store)
 	if this.start_delay then
 		U.sprites_hide(this, nil, nil, true)
@@ -777,7 +777,7 @@ tt.render.sprites[1].sort_y_offset = -30
 tt.escombro_camino = "decal_stage_35_escombros_cannonball_camino"
 tt.escombro_holder = "decal_stage_35_escombros_cannonball_holder"
 
-tt = E:register_t_tmp("fx_stage_35_cannonball_open_path", "decal_scripted")
+tt = E:register_t("fx_stage_35_cannonball_open_path", "decal_scripted")
 tt.main_script.update = function(this, store)
 	U.y_wait_unconditional(store, fts(60))
 	this.render.sprites[1].hidden = false
@@ -800,7 +800,7 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = -130
 
-tt = E:register_t_tmp("fx_stage_35_cannonball_block_path", "decal_scripted")
+tt = E:register_t("fx_stage_35_cannonball_block_path", "decal_scripted")
 tt.main_script.update = function(this, store)
 	U.animation_start_default(this, "in", nil, store.tick_ts, false)
 	U.y_wait_unconditional(store, fts(39))
@@ -820,7 +820,7 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = -450
 
-tt = E:register_t_tmp("soldier_stage_35_cannonball", "soldier_militia")
+tt = E:register_t("soldier_stage_35_cannonball", "soldier_militia")
 E:add_comps(tt, "reinforcement", "nav_path", "tween")
 -- tt.info.portrait = "gui_bottom_info_image_soldiers_0076"
 tt.info.portrait = "kr5_info_portraits_soldiers_0001"
@@ -999,7 +999,7 @@ tt.tween.remove = false
 tt.tween.loop = false
 tt.tween.disabled = true
 
-tt = E:register_t_tmp("fx_stage_35_small_spawner_fx", "decal_scripted")
+tt = E:register_t("fx_stage_35_small_spawner_fx", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].prefix = "stage_5_spawner_fxDef"
 tt.render.sprites[1].name = "run"
@@ -1008,35 +1008,35 @@ tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].delay_start = fts(2)
 tt.render.sprites[1].hidden = true
 
-tt = E:register_t_tmp("decal_stage_35_escombros_holder_1", "decal")
+tt = E:register_t("decal_stage_35_escombros_holder_1", "decal")
 tt.render.sprites[1].name = "stage35_escombros_holder_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].offset = v(2, -16)
 
-tt = E:register_t_tmp("decal_stage_35_escombros_holder_2", "decal")
+tt = E:register_t("decal_stage_35_escombros_holder_2", "decal")
 tt.render.sprites[1].name = "stage35_escombros_holder_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].offset = v(0, -3)
 
-tt = E:register_t_tmp("decal_stage_35_escombros_holder_3", "decal")
+tt = E:register_t("decal_stage_35_escombros_holder_3", "decal")
 tt.render.sprites[1].name = "stage35_escombros_holder_3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_tmp("decal_stage_35_escombros_cannonball_camino", "decal_tween")
+tt = E:register_t("decal_stage_35_escombros_cannonball_camino", "decal_tween")
 tt.render.sprites[1].name = "destruccion_holder_escombros_camino"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].keys = {{0, 255}, {14, 255}, {16, 0}}
 tt.tween.disabled = false
 
-tt = E:register_t_tmp("decal_stage_35_escombros_cannonball_holder", "decal_stage_35_escombros_cannonball_camino")
+tt = E:register_t("decal_stage_35_escombros_cannonball_holder", "decal_stage_35_escombros_cannonball_camino")
 tt.render.sprites[1].name = "destruccion_holder_escombros_oro"
 tt.render.sprites[1].offset = v(0, 20)
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_35_house_1", "tower_holder_blocked")
+tt = E:register_t("tower_holder_blocked_stage_35_house_1", "tower_holder_blocked")
 tt.pre_destroy = function(this, store)
 	if this.sound then
 		S:queue(this.sound)
@@ -1159,7 +1159,7 @@ tt.cinematic_camera_duration_offset = 0
 tt.ui.can_click = false
 tt.ui.can_select = false
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_35_house_2", "tower_holder_blocked_stage_35_house_1")
+tt = E:register_t("tower_holder_blocked_stage_35_house_2", "tower_holder_blocked_stage_35_house_1")
 tt.render.sprites[1].name = "stage35_deco2"
 tt.render.sprites[1].anchor = v(0.7857142857142857, 0.7272135416666666)
 tt.unit_spawns = nil
@@ -1168,7 +1168,7 @@ tt.cinematic_camera_duration_offset = -1.4
 tt.pre_destroy_cannonballs_list = nil
 tt.sound = nil
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_35_house_3", "tower_holder_blocked_stage_35_house_1")
+tt = E:register_t("tower_holder_blocked_stage_35_house_3", "tower_holder_blocked_stage_35_house_1")
 tt.render.sprites[1].name = "stage35_deco3"
 tt.render.sprites[1].anchor = v(0.23, 0.673828125)
 tt.unit_spawns = nil
@@ -1180,7 +1180,7 @@ tt.pre_destroy_cannonballs_list = {{
 }}
 tt.sound = "Stage35Cinematic3"
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_35_house_4", "tower_holder_blocked_stage_35_house_1")
+tt = E:register_t("tower_holder_blocked_stage_35_house_4", "tower_holder_blocked_stage_35_house_1")
 tt.render.sprites[1].name = "stage35_deco4"
 tt.render.sprites[1].anchor = v(0.7767857142857143, 0.3190104166666667)
 tt.spawn_escombro = "holder"
@@ -1191,7 +1191,7 @@ tt.pre_destroy_cannonballs_list = {{
 }}
 tt.sound = "Stage35Cinematic2"
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_35_house_5", "tower_holder_blocked_stage_35_house_1")
+tt = E:register_t("tower_holder_blocked_stage_35_house_5", "tower_holder_blocked_stage_35_house_1")
 tt.render.sprites[1].hidden = true
 tt.destroy_small_spawner_nmbr = 1
 tt.decal = "decal_stage_35_escombros_holder_2"
@@ -1204,7 +1204,7 @@ tt.pre_destroy_cannonballs_list = {{
 }}
 tt.sound = nil
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_35_house_6", "tower_holder_blocked_stage_35_house_1")
+tt = E:register_t("tower_holder_blocked_stage_35_house_6", "tower_holder_blocked_stage_35_house_1")
 tt.render.sprites[1].hidden = true
 tt.destroy_small_spawner_nmbr = 3
 tt.decal = "decal_stage_35_escombros_holder_1"
@@ -1212,7 +1212,7 @@ tt.spawn_escombro = "holder"
 tt.pre_destroy_cannonballs_list = nil
 tt.sound = nil
 
-tt = E:register_t_tmp("tower_holder_blocked_stage_35_house_7", "tower_holder_blocked_stage_35_house_1")
+tt = E:register_t("tower_holder_blocked_stage_35_house_7", "tower_holder_blocked_stage_35_house_1")
 tt.render.sprites[1].hidden = true
 tt.destroy_small_spawner_nmbr = 2
 tt.decal = "decal_stage_35_escombros_holder_3"
@@ -1220,7 +1220,7 @@ tt.spawn_escombro = nil
 tt.pre_destroy_cannonballs_list = nil
 tt.sound = nil
 
-tt = E:register_t_tmp("controller_stage_35_small_spawner", "decal_scripted")
+tt = E:register_t("controller_stage_35_small_spawner", "decal_scripted")
 E:add_comps(tt, "events", "editor")
 tt.unit_spawned = function(this, store)
 	local fx = E:create_entity("fx_stage_35_small_spawner_fx")
@@ -1293,30 +1293,30 @@ tt.events.list[2].on_event = function(this, store, action, nmbr)
 end
 tt.sound_open = "Stage35Spawners"
 
-tt = E:register_t_hot("decal_stage_35_mask_boss_bull_left", "decal", true)
+tt = E:register_t("decal_stage_35_mask_boss_bull_left", "decal", true)
 tt.render.sprites[1].name = "stage35_mask_shadow_creeps"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_35_fume_entradas", "decal_scripted", true)
+tt = E:register_t("decal_stage_35_fume_entradas", "decal_scripted", true)
 tt.main_script.update = decal_stage_35_fume_entradas_update
 tt.render.sprites[1].prefix = "stage_35_fumeDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_35_mask_boss_bull_right", "decal_stage_35_mask_boss_bull_left", true)
+tt = E:register_t("decal_stage_35_mask_boss_bull_right", "decal_stage_35_mask_boss_bull_left", true)
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t_hot("decal_stage_35_mask_redboy_bottom", "decal", true)
+tt = E:register_t("decal_stage_35_mask_redboy_bottom", "decal", true)
 tt.render.sprites[1].name = "stage35_mask_mask_creeps"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -30
 
-tt = E:register_t_hot("decal_stage_35_mask_princess_bottom", "decal_stage_35_mask_redboy_bottom", true)
+tt = E:register_t("decal_stage_35_mask_princess_bottom", "decal_stage_35_mask_redboy_bottom", true)
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t_hot("controller_stage_35", "decal_scripted", true)
+tt = E:register_t("controller_stage_35", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui", "events")
 tt.main_script.update = controller_stage_35_update
 tt.render.sprites[1].prefix = "stage_5_cinematicaDef"
@@ -1329,27 +1329,27 @@ tt.events.list[1].name = "barrage"
 tt.events.list[1].on_event = controller_stage_35_on_event
 tt.fixed_screen_offset = v(40, 40)
 
-tt = E:register_t_hot("decal_stage_35_mask_boss_bull", "decal", true)
+tt = E:register_t("decal_stage_35_mask_boss_bull", "decal", true)
 tt.render.sprites[1].name = "stage35_mask_boss"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 200
 
-tt = E:register_t_hot("decal_stage_35_mask_path_open", "decal", true)
+tt = E:register_t("decal_stage_35_mask_path_open", "decal", true)
 tt.render.sprites[1].name = "stage35_mask_path_open"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.render.sprites[1].hidden = true
 
-tt = E:register_t_hot("decal_stage_35_mask_redboy_top", "decal", true)
+tt = E:register_t("decal_stage_35_mask_redboy_top", "decal", true)
 tt.render.sprites[1].name = "stage35_mask_bosses"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
 tt.render.sprites[1].sort_y_offset = -86
 
-tt = E:register_t_hot("decal_stage_35_mask_princess_top", "decal_stage_35_mask_redboy_top", true)
+tt = E:register_t("decal_stage_35_mask_princess_top", "decal_stage_35_mask_redboy_top", true)
 tt.render.sprites[1].flip_x = true
 
-tt = E:register_t_hot("controller_stage_35_redboy_powers", "decal_scripted", true)
+tt = E:register_t("controller_stage_35_redboy_powers", "decal_scripted", true)
 E:add_comps(tt, "events")
 tt.main_script.update = controller_stage_35_redboy_powers.update
 tt.render.sprites[1].prefix = "redboy_stage5Def"
@@ -1365,7 +1365,7 @@ tt.events.list[3] = E:clone_c("event")
 tt.events.list[3].name = "portal_left"
 tt.events.list[3].on_event = controller_stage_35_redboy_powers.on_portal_left
 
-tt = E:register_t_hot("controller_stage_35_princess_powers", "decal_scripted", true)
+tt = E:register_t("controller_stage_35_princess_powers", "decal_scripted", true)
 E:add_comps(tt, "events")
 tt.main_script.update = controller_stage_35_princess_powers.update
 tt.render.sid_unit = 1
@@ -1408,7 +1408,7 @@ tt.events.list[3] = E:clone_c("event")
 tt.events.list[3].name = "portal_right"
 tt.events.list[3].on_event = controller_stage_35_princess_powers.on_portal_right
 
-tt = E:register_t_hot("controller_stage_35_portal_left", "decal_scripted", true)
+tt = E:register_t("controller_stage_35_portal_left", "decal_scripted", true)
 E:add_comps(tt, "events")
 tt.main_script.update = controller_stage_35_portal_door_bosses.update
 tt.render.sprites[1].prefix = "stage_5_puerta_redboyDef"
@@ -1420,14 +1420,14 @@ tt.events.list[2] = E:clone_c("event")
 tt.events.list[2].name = "portal_left_close"
 tt.events.list[2].on_event = controller_stage_35_portal_door_bosses.on_portal_close
 
-tt = E:register_t_hot("controller_stage_35_portal_right", "controller_stage_35_portal_left", true)
+tt = E:register_t("controller_stage_35_portal_right", "controller_stage_35_portal_left", true)
 tt.render.sprites[1].prefix = "stage_5_puerta_princessDef"
 tt.render.sprites[1].flip_x = true
 tt.events.list[1].name = "portal_right"
 tt.events.list[2].name = "portal_right_close"
 tt.sound_open = "Stage35PortalWater"
 
-tt = E:register_t_hot("controller_stage_35_bull_king", "decal_scripted", true)
+tt = E:register_t("controller_stage_35_bull_king", "decal_scripted", true)
 E:add_comps(tt, "events", "editor")
 tt.main_script.update = controller_stage_35_bull_king.update
 tt.render.sprites[1].prefix = "stage_35_boss_bull_1Def"
@@ -1455,7 +1455,7 @@ tt.events.list[7] = E:clone_c("event")
 tt.events.list[7].name = "portal_right"
 tt.events.list[7].on_event = controller_stage_35_bull_king.on_portal_right
 
-tt = E:register_t_hot("controller_stage_35_golden_eyed_left", "decal_scripted", true)
+tt = E:register_t("controller_stage_35_golden_eyed_left", "decal_scripted", true)
 E:add_comps(tt, "events")
 tt.main_script.update = controller_stage_35_golden_beast.update
 tt.render.sprites[1].prefix = "spawner_golden_beastDef"
@@ -1468,7 +1468,7 @@ tt.empty_wait = 2
 tt.golden_eyed_entity = "enemy_golden_eyed"
 tt.summon_sound = "EnemyGoldenEyedSummon"
 
-tt = E:register_t_hot("controller_stage_35_golden_eyed_right", "controller_stage_35_golden_eyed_left", true)
+tt = E:register_t("controller_stage_35_golden_eyed_right", "controller_stage_35_golden_eyed_left", true)
 tt.render.sprites[1].prefix = "spawner_golden_beastDef"
 tt.events.list[1].name = "golden_beast_right"
 tt.path_id = 6

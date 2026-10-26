@@ -935,13 +935,13 @@ function aura_stage_208_archers_visibility.update(this, store, script)
 	simulation:queue_remove_entity(this)
 end
 
-tt = E:register_t_hot("decal_stage_208_city_mask_1", "decal", true)
+tt = E:register_t("decal_stage_208_city_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_1_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.render.sprites[1].sort_y_offset = -43
 
-tt = E:register_t_hot("decal_stage_208_city_mask_2", "decal_tween", true)
+tt = E:register_t("decal_stage_208_city_mask_2", "decal_tween", true)
 tt.render.sprites[1].name = "stage208_MASK_1_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
@@ -951,88 +951,88 @@ tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.remove = false
 tt.tween.disabled = true
 
-tt = E:register_t_hot("decal_stage_208_wall_1", "decal", true)
+tt = E:register_t("decal_stage_208_wall_1", "decal", true)
 tt.render.sprites[1].prefix = "stage208_muro1Def"
 tt.render.sprites[1].name = "startidle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_208_wall_1_broken_mask_1", "decal", true)
+tt = E:register_t("decal_stage_208_wall_1_broken_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_2_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -158
 
-tt = E:register_t_hot("decal_stage_208_wall_1_broken_mask_2", "decal", true)
+tt = E:register_t("decal_stage_208_wall_1_broken_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_2_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = 85
 
-tt = E:register_t_hot("decal_stage_208_wall_2", "decal", true)
+tt = E:register_t("decal_stage_208_wall_2", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 tt.render.sprites[1].draw_order = 1
 
-tt = E:register_t_hot("decal_stage_208_wall_2_broken", "decal", true)
+tt = E:register_t("decal_stage_208_wall_2_broken", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_stage_208_wall_2_broken_mask_1", "decal", true)
+tt = E:register_t("decal_stage_208_wall_2_broken_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_3_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -280
 
-tt = E:register_t_hot("decal_stage_208_wall_2_broken_mask_2", "decal", true)
+tt = E:register_t("decal_stage_208_wall_2_broken_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_3_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = 155
 
-tt = E:register_t_hot("decal_stage_208_wall_2_broken_mask_3", "decal", true)
+tt = E:register_t("decal_stage_208_wall_2_broken_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_3_3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = 169
 
-tt = E:register_t_hot("decal_stage_208_wall_2_broken_mask_5", "decal", true)
+tt = E:register_t("decal_stage_208_wall_2_broken_mask_5", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_3_5"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_208_no_walls", "decal", true)
+tt = E:register_t("decal_stage_208_no_walls", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_stage_208_no_walls_mask_1", "decal", true)
+tt = E:register_t("decal_stage_208_no_walls_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_4_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = 80
 
-tt = E:register_t_hot("decal_stage_208_no_walls_mask_2", "decal", true)
+tt = E:register_t("decal_stage_208_no_walls_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_4_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].sort_y_offset = -20
 
-tt = E:register_t_hot("decal_stage_208_no_walls_mask_3", "decal", true)
+tt = E:register_t("decal_stage_208_no_walls_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_4_3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].sort_y_offset = -20
 
-tt = E:register_t_hot("decal_stage_208_rock_mask_1", "decal", true)
+tt = E:register_t("decal_stage_208_rock_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage208_MASK_5"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].sort_y_offset = -20
 
-tt = E:register_t_hot("decal_stage_208_torch", "decal", true)
+tt = E:register_t("decal_stage_208_torch", "decal", true)
 tt.render.sprites[1].prefix = "stage208_torchesDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
@@ -1040,7 +1040,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_208_stone_barrage_1", "decal", true)
+tt = E:register_t("decal_stage_208_stone_barrage_1", "decal", true)
 tt.render.sprites[1].prefix = "stage208_muro1_2Def"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].animated = true
@@ -1048,7 +1048,7 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY + 1
 
-tt = E:register_t_hot("decal_stage_208_stone_barrage_2", "decal", true)
+tt = E:register_t("decal_stage_208_stone_barrage_2", "decal", true)
 tt.render.sprites[1].prefix = "stage208_muro2Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
@@ -1056,7 +1056,7 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY + 1
 
-tt = E:register_t_hot("decal_stage_208_catapult_bubble", "decal_tween", true)
+tt = E:register_t("decal_stage_208_catapult_bubble", "decal_tween", true)
 tt.render.sprites[1].prefix = "stage_208_catapult_speech_bubbleDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
@@ -1067,21 +1067,21 @@ tt.tween.props[1].keys = {{0, 0}, {fts(8), 255}}
 tt.tween.remove = false
 tt.tween.disabled = true
 
-tt = E:register_t_hot("decal_stage_208_citizens_1", "decal", true)
+tt = E:register_t("decal_stage_208_citizens_1", "decal", true)
 tt.render.sprites[1].prefix = "stage208_civviesoverDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 tt.render.sprites[1].draw_order = 2
 
-tt = E:register_t_hot("decal_stage_208_citizens_2", "decal", true)
+tt = E:register_t("decal_stage_208_citizens_2", "decal", true)
 tt.render.sprites[1].prefix = "stage208_civviesunderDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 tt.render.sprites[1].draw_order = 0
 
-tt = E:register_t_hot("decal_stage_208_goblin_catapult", "decal_scripted", true)
+tt = E:register_t("decal_stage_208_goblin_catapult", "decal_scripted", true)
 AC(tt, "motion", "ui", "sound_events")
 tt.render.sprites[1].prefix = "stage_208_goblin_catapultDef"
 tt.render.sprites[1].name = "walk_right"
@@ -1105,12 +1105,12 @@ tt.nodes_ahead = 50
 tt.particles_name = {"ps_goblin_catapult_1", "ps_goblin_catapult_2"}
 tt.ui.click_rect = r(-40, -10, 80, 80)
 
-tt = E:register_t_hot("decal_stage_208_path", "decal", true)
+tt = E:register_t("decal_stage_208_path", "decal", true)
 tt.render.sprites[1].name = "stage208_floorpath_0"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_stage_208_tower_stun_bomb", "decal", true)
+tt = E:register_t("decal_stage_208_tower_stun_bomb", "decal", true)
 tt.render.sprites[1].prefix = "stage208_bombDef"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].exo = true
@@ -1119,7 +1119,7 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -11
 tt.render.sprites[1].offset = v(0, 6)
 
-tt = E:register_t_hot("decal_stage_208_catapult_crosshair", "decal_timed", true)
+tt = E:register_t("decal_stage_208_catapult_crosshair", "decal_timed", true)
 tt.render.sprites[1].prefix = "stage_208_catapult_crosshairDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
@@ -1128,29 +1128,29 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
 tt.timed.runs = INT_32_MAX
 
-tt = E:register_t_hot("decal_stage_208_catapult_shadow", "decal", true)
+tt = E:register_t("decal_stage_208_catapult_shadow", "decal", true)
 tt.render.sprites[1].name = "stage_208_catapult_shadow"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset = vv(0)
 
-tt = E:register_t_hot("decal_stage_208_catapult_hit", "decal_timed", true)
+tt = E:register_t("decal_stage_208_catapult_hit", "decal_timed", true)
 tt.render.sprites[1].prefix = "stage_208_catapult_decalDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
 tt.timed.runs = 1
 
-tt = E:register_t_hot("fx_stage_208_catapult", "fx", true)
+tt = E:register_t("fx_stage_208_catapult", "fx", true)
 tt.render.sprites[1].prefix = "stage_208_catapult_fxDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("fx_goblin_catapult_tap", "fx", true)
+tt = E:register_t("fx_goblin_catapult_tap", "fx", true)
 tt.render.sprites[1].prefix = "stage_208_goblin_catapult_tap_FXDef"
 tt.render.sprites[1].name = "tap"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("ps_goblin_catapult_1", "particle_system", true)
+tt = E:register_t("ps_goblin_catapult_1", "particle_system", true)
 tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.z = Z_BULLET_PARTICLES
@@ -1160,12 +1160,12 @@ tt.particle_system.emission_rate = 5
 tt.particle_system.emit_offset = v(-45, 15)
 tt.particle_system.emit_area_spread = v(15, 15)
 
-tt = E:register_t_hot("ps_goblin_catapult_2", "ps_goblin_catapult_1", true)
+tt = E:register_t("ps_goblin_catapult_2", "ps_goblin_catapult_1", true)
 tt.particle_system.name = "goblin_catapult_particles_particle2_idle"
 tt.particle_system.particle_lifetime = {fts(33), fts(33)}
 tt.particle_system.emission_rate = 5
 
-tt = E:register_t_hot("mod_stage_208_tower_stun", "modifier", true)
+tt = E:register_t("mod_stage_208_tower_stun", "modifier", true)
 AC(tt, "render", "tween")
 tt.main_script.update = mod_stage_208_tower_stun_update
 tt.main_script.remove = mod_stage_208_tower_stun_remove
@@ -1186,7 +1186,7 @@ tt.tween.props[1].name = "alpha"
 tt.tween.remove = false
 tt.tween.disabled = true
 
-tt = E:register_t_hot("tower_stage_208_catapult", "tower", true)
+tt = E:register_t("tower_stage_208_catapult", "tower", true)
 AC(tt, "user_selection", "attacks")
 tt.tower.type = "stage_208_catapult"
 tt.tower.menu_offset = v(0, 0)
@@ -1222,7 +1222,7 @@ tt.ui.hover_sprite_scale = vv(1.4)
 tt.ui.hover_sprite_offset = v(0, -8)
 tt.tower.can_hover = false
 
-tt = E:register_t_hot("bullet_stage_208_catapult", "bomb", true)
+tt = E:register_t("bullet_stage_208_catapult", "bomb", true)
 tt.bullet.damage_min = 100
 tt.bullet.damage_max = 150
 tt.bullet.damage_radius = 80
@@ -1246,7 +1246,7 @@ tt.screenshake_duration = 0.4
 tt.screenshake_freq_factor = 3
 tt.decal_shadow = "decal_stage_208_catapult_shadow"
 
-tt = E:register_t_hot("controller_stage_208_phases", nil, true)
+tt = E:register_t("controller_stage_208_phases", nil, true)
 AC(tt, "main_script", "editor", "editor_script")
 tt.editor_script.update = controller_stage_208_phases_update_editor
 tt.main_script.update = controller_stage_208_phases_update
@@ -1292,7 +1292,7 @@ tt.nav_mesh_patches = {
 	}
 }
 
-tt = E:register_t_hot("controller_stage_208_path_fixer", nil, true)
+tt = E:register_t("controller_stage_208_path_fixer", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_208_path_fixer_update
 tt.path_change_map = {
@@ -1300,15 +1300,15 @@ tt.path_change_map = {
 	[4] = 7
 }
 
-tt = E:register_t_hot("controller_stage_208_citizens_1", nil, true)
+tt = E:register_t("controller_stage_208_citizens_1", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_208_citizens_update
 tt.citizens_t = "decal_stage_208_citizens_1"
 
-tt = E:register_t_hot("controller_stage_208_citizens_2", "controller_stage_208_citizens_1", true)
+tt = E:register_t("controller_stage_208_citizens_2", "controller_stage_208_citizens_1", true)
 tt.citizens_t = "decal_stage_208_citizens_2"
 
-tt = E:register_t_hot("controller_stage_208_crows", nil, true)
+tt = E:register_t("controller_stage_208_crows", nil, true)
 AC(tt, "main_script", "events")
 tt.main_script.update = controller_stage_208_crows_update
 tt.crows_t = "enemy_stage_208_cloud_of_crows"
@@ -1317,14 +1317,14 @@ tt.path_id_bossfight = 9
 tt.events.list[1].name = "crows"
 tt.events.list[1].on_event = controller_stage_208_crows_on_event
 
-tt = E:register_t_hot("controller_stage_208_goblin_catapult", nil, true)
+tt = E:register_t("controller_stage_208_goblin_catapult", nil, true)
 AC(tt, "main_script", "events")
 tt.main_script.update = controller_stage_208_goblin_catapult_update
 tt.catapult_t = "decal_stage_208_goblin_catapult"
 tt.events.list[1].name = "catapult"
 tt.events.list[1].on_event = controller_stage_208_goblin_catapult_on_event
 
-tt = E:register_t_hot("controller_stage_208_boss_path", nil, true)
+tt = E:register_t("controller_stage_208_boss_path", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_208_boss_path_update
 tt.start_offset = -50
@@ -1333,21 +1333,21 @@ tt.sections_decals_t = "decal_stage_208_path"
 tt.sections_decals_prefix = "stage208_floorpath_"
 tt.sections_count = 10
 
-tt = E:register_t_hot("controller_stage_208_templar_swordsmen", nil, true)
+tt = E:register_t("controller_stage_208_templar_swordsmen", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_208_templar_swordsmen_update
 tt.templar_t = "soldier_stage_208_templar_swordsman"
 tt.spawn_cooldown = 12
 tt.spawn_count = 3
 
-tt = E:register_t_hot("controller_stage_208_tower_stun", nil, true)
+tt = E:register_t("controller_stage_208_tower_stun", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_208_tower_stun_update
 tt.stun_t = "controller_stage_208_tower_stun_moment"
 tt.cooldown_min = 90
 tt.cooldown_max = 120
 
-tt = E:register_t_hot("controller_stage_208_tower_stun_moment", nil, true)
+tt = E:register_t("controller_stage_208_tower_stun_moment", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_208_tower_stun_moment_update
 tt.bomb_t = "decal_stage_208_tower_stun_bomb"
@@ -1357,7 +1357,7 @@ tt.hit_time = fts(8)
 tt.sound_fire = "Stage08FieryProjectilesTravel"
 tt.sound_hit = "Stage08FieryProjectilesExplosion"
 
-tt = E:register_t_hot("controller_stage_208_boss_sound_steps", nil, true)
+tt = E:register_t("controller_stage_208_boss_sound_steps", nil, true)
 AC(tt, "main_script")
 tt.main_script.update = controller_stage_208_boss_sound_steps_update
 tt.frames_to_do_sound = {
@@ -1371,7 +1371,7 @@ tt.frames_to_do_sound = {
 	}
 }
 
-tt = E:register_t_hot("aura_stage_208_archers_visibility", "aura", true)
+tt = E:register_t("aura_stage_208_archers_visibility", "aura", true)
 tt.aura.duration = 1e+99
 tt.aura.radius = 10
 tt.aura.cycle_time = fts(5)

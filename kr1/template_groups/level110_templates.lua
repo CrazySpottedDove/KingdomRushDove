@@ -559,7 +559,7 @@ controller_stage_10_ymca_update = function(this, store)
 end
 local tt
 
-tt = E:register_t_hot("soldier_stage_10_ymca", "soldier_militia", true)
+tt = E:register_t("soldier_stage_10_ymca", "soldier_militia", true)
 E:add_comps(tt, "reinforcement", "nav_grid", "tween")
 tt.health.armor = 0
 tt.health.hp_max = 100
@@ -696,40 +696,40 @@ tt.unit.hit_offset = v(0, 5)
 tt.unit.mod_offset = v(0, 14)
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 
-tt = E:register_t_hot("soldier_stage_10_ymca_indio", "soldier_stage_10_ymca", true)
+tt = E:register_t("soldier_stage_10_ymca_indio", "soldier_stage_10_ymca", true)
 tt.render.sprites[1].prefix = "ymca_ymca_indio"
 tt.info.portrait = "kr5_info_portraits_soldiers_0020"
 
-tt = E:register_t_hot("soldier_stage_10_ymca_constructor", "soldier_stage_10_ymca", true)
+tt = E:register_t("soldier_stage_10_ymca_constructor", "soldier_stage_10_ymca", true)
 tt.render.sprites[1].prefix = "ymca_ymca_constructor"
 tt.render.sprites[1].anchor = v(0.5, 1)
 tt.render.sprites[1].offset.y = 35
 tt.info.portrait = "kr5_info_portraits_soldiers_0023"
 
-tt = E:register_t_hot("soldier_stage_10_ymca_biker", "soldier_stage_10_ymca", true)
+tt = E:register_t("soldier_stage_10_ymca_biker", "soldier_stage_10_ymca", true)
 tt.render.sprites[1].prefix = "ymca_ymca_biker"
 tt.info.portrait = "kr5_info_portraits_soldiers_0022"
 
-tt = E:register_t_hot("soldier_stage_10_ymca_policia", "soldier_stage_10_ymca", true)
+tt = E:register_t("soldier_stage_10_ymca_policia", "soldier_stage_10_ymca", true)
 tt.render.sprites[1].prefix = "ymca_ymca_policia"
 tt.info.portrait = "kr5_info_portraits_soldiers_0021"
 
-tt = E:register_t_hot("fx_stage_10_statue_click", "fx", true)
+tt = E:register_t("fx_stage_10_statue_click", "fx", true)
 tt.render.sprites[1].prefix = "ymca_statue_dust"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].hide_after_runs = 1
 
-tt = E:register_t_hot("fx_stage_10_obelisk_teleport", "fx", true)
+tt = E:register_t("fx_stage_10_obelisk_teleport", "fx", true)
 tt.render.sprites[1].prefix = "TeleportFxDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("fx_stage_10_obelisk_stun_explosion", "fx", true)
+tt = E:register_t("fx_stage_10_obelisk_stun_explosion", "fx", true)
 tt.render.sprites[1].prefix = "StunFxDef"
 tt.render.sprites[1].name = "Idle"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("fx_stage_10_obelisk_stun_explosion_white", "decal_tween", true)
+tt = E:register_t("fx_stage_10_obelisk_stun_explosion_white", "decal_tween", true)
 tt.render.sprites[1].prefix = "StunWhiteDef"
 tt.render.sprites[1].name = "Idle"
 tt.render.sprites[1].z = Z_GUI - 2
@@ -738,19 +738,19 @@ tt.render.sprites[1].scale = vv(70)
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{fts(0), vv(70)}}
 
-tt = E:register_t_hot("fx_stage_10_obelisk_stun_circle", "fx", true)
+tt = E:register_t("fx_stage_10_obelisk_stun_circle", "fx", true)
 tt.render.sprites[1].prefix = "StunCircleDef"
 tt.render.sprites[1].name = "Idle"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("fx_stage_10_obelisk_teleport_crystal", "decal_tween", true)
+tt = E:register_t("fx_stage_10_obelisk_teleport_crystal", "decal_tween", true)
 tt.render.sprites[1].prefix = "stage10_obelisk_teleport_fx_teleport"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].z = Z_DECALS - 1
 tt.fx_duration = 1.6
 tt.tween.props[1].keys = {{fts(0), 0}, {fts(5), 255}, {tt.fx_duration - fts(7), 255}, {tt.fx_duration, 0}}
 
-tt = E:register_t_hot("decal_stage_10_ymca_statue", "decal_scripted", true)
+tt = E:register_t("decal_stage_10_ymca_statue", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "ymca_statue"
 tt.main_script.update = function(this, store)
@@ -798,23 +798,23 @@ end
 tt.ui.click_rect = r(-30, -10, 60, 80)
 tt.click_fx = "fx_stage_10_statue_click"
 
-tt = E:register_t_hot("decal_stage_10_ymca_dots", "decal", true)
+tt = E:register_t("decal_stage_10_ymca_dots", "decal", true)
 tt.render.sprites[1].prefix = "YMCAPuntosDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_10_ymca_fireworks", "decal", true)
+tt = E:register_t("decal_stage_10_ymca_fireworks", "decal", true)
 tt.render.sprites[1].prefix = "ymca_spawn_fx_layer_3"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].hide_after_runs = 1
 
-tt = E:register_t_hot("decal_stage_10_ymca_lights", "decal", true)
+tt = E:register_t("decal_stage_10_ymca_lights", "decal", true)
 tt.render.sprites[1].prefix = "ymca_spawn_fx_layer_4"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("mod_stage_10_obelisk_heal", "modifier", true)
+tt = E:register_t("mod_stage_10_obelisk_heal", "modifier", true)
 E:add_comps(tt, "hps", "render")
 tt.modifier.duration = 10
 tt.modifier.use_mod_offset = false
@@ -923,7 +923,7 @@ tt.render.sprites[3].prefix = "HealFx3Def"
 tt.render.sprites[3].name = "Idle"
 tt.render.sprites[3].exo = true
 
-tt = E:register_t_hot("aura_stage_10_obelisk_teleport", "aura", true)
+tt = E:register_t("aura_stage_10_obelisk_teleport", "aura", true)
 E:add_comps(tt, "track_damage", "render")
 tt.aura.duration = fts(1)
 tt.aura.radius = 100
@@ -1067,7 +1067,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].name = "decal_in"
 tt.render.sprites[1].hidden = true
 
-tt = E:register_t_hot("mod_stage_10_obelisk_teleport", "mod_teleport", true)
+tt = E:register_t("mod_stage_10_obelisk_teleport", "mod_teleport", true)
 tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.nodes_offset = 25
@@ -1079,12 +1079,12 @@ tt.fx_start = "fx_stage_10_obelisk_teleport"
 tt.fx_end = "fx_stage_10_obelisk_teleport"
 tt.max_times_applied = 1e+99
 
-tt = E:register_t_hot("decal_stage_10_obelisk_priests", "decal", true)
+tt = E:register_t("decal_stage_10_obelisk_priests", "decal", true)
 tt.render.sprites[1].prefix = "stage10_obelisk_priests"
 tt.render.sprites[1].name = "idle_off"
 tt.render.sprites[1].z = Z_DECALS + 1
 
-tt = E:register_t_hot("decal_stage_10_obelisk_crystals", "decal", true)
+tt = E:register_t("decal_stage_10_obelisk_crystals", "decal", true)
 tt.render.sprites[1].prefix = "stage10_obelisk_base_cristalitos"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_DECALS
@@ -1093,7 +1093,7 @@ tt.render.sprites[2].prefix = "stage10_obelisk_base_cristalitos_back"
 tt.render.sprites[2].name = "idle"
 tt.render.sprites[2].z = Z_DECALS - 1
 
-tt = E:register_t_hot("decal_stage_10_obelisk_crystal", "decal_tween", true)
+tt = E:register_t("decal_stage_10_obelisk_crystal", "decal_tween", true)
 tt.render.sprites[1].prefix = "stage10_obelisk_crystal"
 tt.render.sprites[1].name = "idle_off"
 tt.render.sprites[1].z = Z_DECALS - 1
@@ -1112,7 +1112,7 @@ tt.tween.props[2].disabled = true
 tt.tween.remove = false
 tt.tween.disabled = true
 
-tt = E:register_t_hot("decal_stage_10_obelisk_crystal_fx", "decal_scripted", true)
+tt = E:register_t("decal_stage_10_obelisk_crystal_fx", "decal_scripted", true)
 E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "stage10_obelisk_changestate_fx_change"
 tt.tween.props[1].name = "alpha"
@@ -1137,10 +1137,10 @@ tt.main_script.update = function(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-tt = E:register_t_hot("fx_stage_10_obelisk_priest_hit", "fx", true)
+tt = E:register_t("fx_stage_10_obelisk_priest_hit", "fx", true)
 tt.render.sprites[1].name = "stage10_obelisk_hit"
 
-tt = E:register_t_hot("ps_bullet_stage_10_obelisk_priests", nil, true)
+tt = E:register_t("ps_bullet_stage_10_obelisk_priests", nil, true)
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "stage10_obelisk_particle_Idle"
 tt.particle_system.animated = true
@@ -1152,7 +1152,7 @@ tt.particle_system.scales_y = {1, 1.5}
 tt.particle_system.scales_x = {1, 1.5}
 tt.particle_system.animation_fps = 15
 
-tt = E:register_t_hot("bullet_stage_10_obelisk_priests", "bolt", true)
+tt = E:register_t("bullet_stage_10_obelisk_priests", "bolt", true)
 E:add_comps(tt, "force_motion")
 tt.render.sprites[1].prefix = "stage10_obelisk_projectile"
 tt.bullet.acceleration_factor = 0.1
@@ -1269,7 +1269,7 @@ tt.bullet.min_speed = 3
 tt.force_motion.a_step = 5
 tt.force_motion.max_a = 900
 tt.force_motion.max_v = 300
-tt = E:register_t_hot("controller_stage_10_obelisk", nil, true)
+tt = E:register_t("controller_stage_10_obelisk", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = function(this, store)
 	local cultist = E:create_entity(this.entity_cultist)
@@ -1902,20 +1902,20 @@ tt.sound_heal_loop = "Stage10ObeliskEffectHealLoop"
 tt.sound_change_mode = "Stage10ObeliskEffectChange"
 tt.sound_cast_golem = "Stage10ObeliskEffectGolemSpawnCast"
 tt.sound_cast_teleport = "EnemyVoidBlinkerTeleport"
-tt = E:register_t_hot("controller_stage_10_obelisk_wave_fixed", "controller_stage_10_obelisk", true)
+tt = E:register_t("controller_stage_10_obelisk_wave_fixed", "controller_stage_10_obelisk", true)
 tt.main_script.update = controller_stage_10_obelisk_wave_fixed_update
 
-tt = E:register_t_hot("decal_stage_10_ymca_ground_decos", "decal", true)
+tt = E:register_t("decal_stage_10_ymca_ground_decos", "decal", true)
 tt.render.sprites[1].name = "ymca_spawn_fx_layer_2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_10_obelisk_back", "decal", true)
+tt = E:register_t("decal_stage_10_obelisk_back", "decal", true)
 tt.render.sprites[1].name = "stage10_obelisk_base_back"
 tt.render.sprites[1].z = Z_DECALS - 1
 tt.render.sprites[1].animated = false
 
-tt = E:register_t_hot("controller_stage_10_obelisk_iron", "controller_stage_10_obelisk", true)
+tt = E:register_t("controller_stage_10_obelisk_iron", "controller_stage_10_obelisk", true)
 tt.main_script.update = controller_stage_10_obelisk_iron_update
 tt.golem_holder_pos = {v(74, 524), v(310, 440), v(60, 308), v(700, 400), v(328, 204)}
 tt.golem_walk_pos = {v(26, -34), v(50, 50), v(30, 0), v(0, -70), v(54, 60)}
@@ -1923,12 +1923,12 @@ tt.golem_activate_holder = {"2", "4", "1", "11", "6"}
 tt.golem_selected_paths = {4, 3, 2, 3, 1}
 tt.prepare_delay = 3
 
-tt = E:register_t_hot("decal_stage_10_obelisk", "decal", true)
+tt = E:register_t("decal_stage_10_obelisk", "decal", true)
 tt.render.sprites[1].name = "stage10_obelisk_base"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false
 
-tt = E:register_t_hot("controller_stage_10_ymca", nil, true)
+tt = E:register_t("controller_stage_10_ymca", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = controller_stage_10_ymca_insert
 tt.main_script.update = controller_stage_10_ymca_update
@@ -1947,13 +1947,13 @@ local base = v(925, 445)
 tt.soldier_path_pos = {v(base.x - 20, base.y + 20), v(base.x + 13, base.y + 33), v(base.x + 25, base.y), v(base.x - 10, base.y - 10)}
 tt.soldier_spawn_delay = {1.5, 1.8, 1.7, 1.5}
 
-tt = E:register_t_hot("decal_stage_10_fire", "decal", true)
+tt = E:register_t("decal_stage_10_fire", "decal", true)
 tt.render.sprites[1].prefix = "stage_10_fireDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_10_mask", "decal", true)
+tt = E:register_t("decal_stage_10_mask", "decal", true)
 tt.render.sprites[1].name = "T2_Stage_10_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS

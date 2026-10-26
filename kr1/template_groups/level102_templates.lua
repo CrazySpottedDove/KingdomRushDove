@@ -265,13 +265,13 @@ function decal_stage_02_rune.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_stage_02_elder_rune_static", "decal", true)
+tt = E:register_t("decal_stage_02_elder_rune_static", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_2_rapido_elder_rune_2_0117"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
 
-tt = E:register_t_hot("decal_stage_02_lion_king", "decal_scripted", true)
+tt = E:register_t("decal_stage_02_lion_king", "decal_scripted", true)
 E:add_comps(tt, "ui")
 for i = 1, 4 do
 	tt.render.sprites[i] = E:clone_c("sprite")
@@ -292,12 +292,12 @@ tt.min_cooldown_idle = 4
 tt.max_cooldown_idle = 7
 tt.entity_light = "decal_stage_02_lion_king_light"
 
-tt = E:register_t_hot("decal_stage_02_veznan", "decal_scripted", true)
+tt = E:register_t("decal_stage_02_veznan", "decal_scripted", true)
 E:add_comps(tt, "editor", "editor_script")
 tt.render.sprites[1].prefix = "veznan_cinematic_veznan"
 tt.render.sprites[1].name = "idle"
 
-tt = E:register_t_hot("decal_stage_02_fishing_link", "decal_click_play", true)
+tt = E:register_t("decal_stage_02_fishing_link", "decal_click_play", true)
 tt.render.sprites[1].prefix = "fishing_link"
 tt.render.sprites[1].loop = true
 tt.main_script.insert = decal_stage_02_fishing_link_insert
@@ -321,13 +321,13 @@ tt.gold_pos_offset = v(-10, 40)
 tt.gold_amount = 25
 tt.fish_animations = {"fishing_nothing", "fishing_nothing", "fishing_fish_or_boot", "fishing_nothing", "fishing_nothing"}
 
-tt = E:register_t_hot("decal_waterfall_splash", "decal_loop", true)
+tt = E:register_t("decal_waterfall_splash", "decal_loop", true)
 tt.render.sprites[1].name = "stage_2_props_waterfall_splash"
 
-tt = E:register_t_hot("decal_waterfall", "decal_loop", true)
+tt = E:register_t("decal_waterfall", "decal_loop", true)
 tt.render.sprites[1].name = "stage_2_props_waterfall"
 
-tt = E:register_t_hot("trees_guardian_tree", "decal_scripted", true)
+tt = E:register_t("trees_guardian_tree", "decal_scripted", true)
 E:add_comps(tt, "custom_attack", "cheats", "editor")
 tt.tree_disabled = false
 tt.wave_config = {true, true, true, true, true, true, true, true}
@@ -393,7 +393,7 @@ tt.sound_pre_cast = "Stage02GuardianTreePreCast"
 tt.sound_cast = "Stage02GuardianTreeCast"
 tt.sound_roots = "Stage02GuardianTreeRoots"
 
-tt = E:register_t_hot("decal_stage_02_elder_rune", "decal_click_play", true)
+tt = E:register_t("decal_stage_02_elder_rune", "decal_click_play", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage_2_rapido_elder_rune_2_fx"
 tt.render.sprites[1].loop = true
@@ -407,19 +407,19 @@ tt.ui.can_click = true
 tt.ui.click_rect = r(0, -30, 60, 60)
 tt.base_rock_entity = "decal_stage_02_elder_rune_base"
 
-tt = E:register_t_hot("decal_stage_02_fishing_link_water_splash", "decal", true)
+tt = E:register_t("decal_stage_02_fishing_link_water_splash", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "water_splash"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = true
 
-tt = E:register_t_hot("decal_stage_02_elder_rune_base", "decal", true)
+tt = E:register_t("decal_stage_02_elder_rune_base", "decal", true)
 E:add_comps(tt, "main_script")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage_2_rapido_elder_rune_2_base"
 tt.render.sprites[1].sort_y_offset = 1
 
-tt = E:register_t_hot("decal_stage_02_fishing_link_line", "decal_scripted", true)
+tt = E:register_t("decal_stage_02_fishing_link_line", "decal_scripted", true)
 tt.render.sprites[1].prefix = "fishing_link_line"
 tt.render.sprites[1].loop = true
 tt.main_script.update = function(this, store)
@@ -504,7 +504,7 @@ tt.main_script.update = function(this, store)
 end
 tt.fish_animations = {"fishing_nothing", "fishing_boot", "fishing_fish", "fishing_rupee", "fishing_nothing"}
 
-tt = E:register_t_hot("decal_stage_02_lion_king_light", "decal_scripted", true)
+tt = E:register_t("decal_stage_02_lion_king_light", "decal_scripted", true)
 E:add_comps(tt, "ui", "tween")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].animated = false
@@ -515,7 +515,7 @@ tt.tween.props[1].keys = {{0, 0}, {fts(29), 255}, {fts(77), 255}, {fts(102), 0}}
 tt.tween.remove = false
 tt.tween.disabled = true
 
-tt = E:register_t_hot("trees_guardian_tree_wave_of_roots", nil, true)
+tt = E:register_t("trees_guardian_tree_wave_of_roots", nil, true)
 E:add_comps(tt, "pos", "main_script")
 tt.main_script.update = function(this, store)
 	local count = this.count
@@ -635,14 +635,14 @@ tt.vis_flags = bor(F_STUN)
 tt.vis_bans = bor(F_FLYING, F_BOSS)
 tt.mod = "mod_stage_guardian_tree_wave_of_roots_stun"
 
-tt = E:register_t_hot("trees_guardian_tree_wave_of_roots_decal", "decal_sequence", true)
+tt = E:register_t("trees_guardian_tree_wave_of_roots_decal", "decal_sequence", true)
 tt.render.sprites[1].prefix = "stage_2_special_treeFX_groundFX0"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.3181818181818182
 tt.render.sprites[1].z = Z_DECALS
 tt.sequence.steps = {"start", nil, "end"}
 
-tt = E:register_t_hot("mod_stage_guardian_tree_wave_of_roots_stun", "modifier", true)
+tt = E:register_t("mod_stage_guardian_tree_wave_of_roots_stun", "modifier", true)
 E:add_comps(tt, "render")
 tt.modifier.duration = 4
 tt.modifier.replaces_lower = false

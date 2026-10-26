@@ -870,9 +870,9 @@ function controller_stage_27_head.on_scrap_event(this, store, action, scrap_coun
 	this.scrap_count = scrap_count
 end
 
-tt = E:register_t_tmp("decal_stage27_boss_shoutbox", "decal_stage06_cultist_shoutbox")
+tt = E:register_t("decal_stage27_boss_shoutbox", "decal_stage06_cultist_shoutbox")
 
-tt = E:register_t_tmp("controller_stage_27_cannon")
+tt = E:register_t("controller_stage_27_cannon")
 E:add_comps(tt, "main_script")
 tt.main_script.update = function(this, store)
 	local function shoot_clone(pos, dies)
@@ -960,30 +960,30 @@ tt.bullet_clone_dead_t = "bullet_stage_27_clone_dead"
 tt.bullet_clone_alive_t = "bullet_stage_27_clone_alive"
 tt.sound_shot = "Stage27CloneCannonOneShot"
 
-tt = E:register_t_tmp("decal_stage_27_clone_dead", "decal_tween")
+tt = E:register_t("decal_stage_27_clone_dead", "decal_tween")
 tt.render.sprites[1].prefix = "cannonLAYERS_clonedecorative"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].loop = false
 tt.tween.props[1].keys = {{0, 255}, {fts(30), 255}, {fts(55), 0}}
 
-tt = E:register_t_tmp("decal_stage_27_clone_alive", "decal_timed")
+tt = E:register_t("decal_stage_27_clone_alive", "decal_timed")
 tt.render.sprites[1].prefix = "cannonLAYERS_cloneland"
 tt.render.sprites[1].name = "idle"
 
-tt = E:register_t_tmp("decal_stage_27_ray", "decal")
+tt = E:register_t("decal_stage_27_ray", "decal")
 tt.render.sprites[1].prefix = "dclenanos_stage05_headrayDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].scale = vv(2)
 
-tt = E:register_t_tmp("decal_stage_27_goblins", "decal")
+tt = E:register_t("decal_stage_27_goblins", "decal")
 tt.render.sprites[1].prefix = "dclenanos_head_goblinsDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = -350
 
-tt = E:register_t_tmp("bullet_stage_27_clone_dead", "bomb")
+tt = E:register_t("bullet_stage_27_clone_dead", "bomb")
 tt.bullet.flight_time = fts(35)
 tt.bullet.hit_fx = nil
 tt.bullet.hit_decal = "decal_stage_27_clone_dead"
@@ -994,11 +994,11 @@ tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
 tt.bullet.pop_chance = 0
 tt.render.sprites[1].name = "cannonLAYERS_flyclone"
 
-tt = E:register_t_tmp("bullet_stage_27_clone_alive", "bullet_stage_27_clone_dead")
+tt = E:register_t("bullet_stage_27_clone_alive", "bullet_stage_27_clone_dead")
 tt.bullet.hit_decal = "decal_stage_27_clone_alive"
 tt.bullet.hit_payload = "controller_spawn_enemy_common_clone"
 
-tt = E:register_t_tmp("bullet_stage_27_scrap", "bomb")
+tt = E:register_t("bullet_stage_27_scrap", "bomb")
 tt.bullet.damage_max = 72
 tt.bullet.damage_min = 48
 tt.bullet.damage_radius = 50
@@ -1016,7 +1016,7 @@ tt.sound_events.hit = "TowerBallistaScrapBombExplosion"
 tt.main_script.insert = scripts.enemy_bomb.insert
 tt.main_script.update = scripts.enemy_bomb.update
 
-tt = E:register_t_tmp("bullet_stage_27_tower_stun", "bomb")
+tt = E:register_t("bullet_stage_27_tower_stun", "bomb")
 tt.bullet.flight_time = fts(60)
 tt.bullet.particles_name = "ps_bullet_stage_27_tower_stun"
 tt.bullet.hit_fx = "fx_bullet_stage_27_tower_stun"
@@ -1082,7 +1082,7 @@ end
 tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
 tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
 
-tt = E:register_t_tmp("mod_bullet_stage_27_tower_stun", "modifier")
+tt = E:register_t("mod_bullet_stage_27_tower_stun", "modifier")
 E:add_comps(tt, "render")
 tt.main_script.update = function(this, store)
 	local m = this.modifier
@@ -1130,7 +1130,7 @@ tt.repair_cost = {50, 75, 100, 125, 150, 175, 200, 225, 250, 275}
 tt.hand_decal_t = "decal_mod_stage_25_torso_missile_stun_hand"
 tt.modifier.duration = 4
 
-tt = E:register_t_tmp("mod_stage_27_ray_stun", "modifier")
+tt = E:register_t("mod_stage_27_ray_stun", "modifier")
 E:add_comps(tt, "render", "tween")
 tt.main_script.update = function(this, store)
 	local m = this.modifier
@@ -1190,25 +1190,25 @@ tt.tween.remove = false
 tt.sound_events.insert = "EnemyRevenantSoulcallerBlockTowerIn"
 tt.sound_events.remove = "EnemyRevenantSoulcallerBlockTowerOut"
 
-tt = E:register_t_tmp("fx_stage_27_cannon_shot", "fx")
+tt = E:register_t("fx_stage_27_cannon_shot", "fx")
 tt.render.sprites[1].prefix = "dlcenanos_stage05_cannon_explosionDef"
 tt.render.sprites[1].name = "shoot"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_tmp("fx_stage_27_scrap", "fx")
+tt = E:register_t("fx_stage_27_scrap", "fx")
 tt.render.sprites[1].prefix = "dclenanos_stage05_ScrapProjectileFXDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_tmp("fx_bullet_stage_27_scrap", "fx")
+tt = E:register_t("fx_bullet_stage_27_scrap", "fx")
 tt.render.sprites[1].prefix = "dclenanos_stage05_ScrapProjectileHitFXDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_tmp("fx_bullet_stage_27_tower_stun", "fx")
+tt = E:register_t("fx_bullet_stage_27_tower_stun", "fx")
 tt.render.sprites[1].name = "boss_fx_scrap_hit"
 
-tt = E:register_t_tmp("ps_bullet_stage_27_scrap")
+tt = E:register_t("ps_bullet_stage_27_scrap")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "dclenanos_stage05_ScrapProjectileTrail_asst_scrap_projectile_trail"
 tt.particle_system.emission_rate = 15
@@ -1219,7 +1219,7 @@ tt.particle_system.alphas = {255, 0}
 tt.particle_system.scales_x = {0.9, 1.2}
 tt.particle_system.scales_y = {0.9, 1.2}
 
-tt = E:register_t_tmp("ps_bullet_stage_27_tower_stun")
+tt = E:register_t("ps_bullet_stage_27_tower_stun")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "boss_fx_scrap_particle"
 tt.particle_system.animated = true
@@ -1230,7 +1230,7 @@ tt.particle_system.particle_lifetime = {fts(6), fts(6)}
 tt.particle_system.scales_x = {0.9, 1.1}
 tt.particle_system.scales_y = {0.9, 1.1}
 
-tt = E:register_t_hot("decal_stage_27_modes_decos", "decal_scripted", true)
+tt = E:register_t("decal_stage_27_modes_decos", "decal_scripted", true)
 E:add_comps(tt, "editor", "ui")
 tt.render.sprites[1].prefix = "DLCstage5_deco_modosDef"
 tt.render.sprites[1].name = "idle"
@@ -1239,19 +1239,19 @@ tt.render.sprites[1].z = Z_DECALS
 tt.main_script.update = decal_stage_27_modes_decos_update
 tt.ui.click_rect = r(-33, 60, 20, 20)
 
-tt = E:register_t_hot("decal_stage_27_platform_bars", "decal", true)
+tt = E:register_t("decal_stage_27_platform_bars", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "dclenanos_stage05_platform_barsDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 
-tt = E:register_t_hot("decal_stage_27_mask_3", "decal", true)
+tt = E:register_t("decal_stage_27_mask_3", "decal", true)
 tt.render.sprites[1].name = "stage27_mask3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = true
 
-tt = E:register_t_hot("decal_stage_27_beam", "decal_scripted", true)
+tt = E:register_t("decal_stage_27_beam", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.render.sprites[1].prefix = "DLCstage5_enanos_vigaDef"
 tt.render.sprites[1].name = "idle"
@@ -1261,25 +1261,25 @@ tt.main_script.update = decal_stage_27_beam_update
 tt.ui.click_rect = r(-470, 200, 150, 60)
 tt.sound_prefix = "Stage27BeamWorkersTap"
 
-tt = E:register_t_hot("decal_stage_27_mask_2", "decal", true)
+tt = E:register_t("decal_stage_27_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage27_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_27_platform", "decal", true)
+tt = E:register_t("decal_stage_27_platform", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "dclenanos_stage05_platformDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-tt = E:register_t_hot("decal_stage_27_snow", "decal", true)
+tt = E:register_t("decal_stage_27_snow", "decal", true)
 tt.render.sprites[1].prefix = "dclenanos_stage05_snowfallDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_EFFECTS
 
-tt = E:register_t_hot("controller_stage_27_platform", nil, true)
+tt = E:register_t("controller_stage_27_platform", nil, true)
 E:add_comps(tt, "main_script", "events", "taunts", "editor")
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.main_script.update = controller_stage_27_platform_update
@@ -1320,25 +1320,25 @@ tt.sound_platform_destroy_chains = "Stage27PlatformDestroyChains"
 tt.sound_platform_destroy_impacts = "Stage27PlatformDestroyHeadImpacts"
 tt.sound_cannon_alarm = "Stage27CloneCannonAlarm"
 
-tt = E:register_t_hot("decal_stage_27_mask_5", "decal", true)
+tt = E:register_t("decal_stage_27_mask_5", "decal", true)
 tt.render.sprites[1].name = "stage27_mask5"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.render.sprites[1].draw_order = 2
 
-tt = E:register_t_hot("decal_stage_27_mask_4", "decal", true)
+tt = E:register_t("decal_stage_27_mask_4", "decal", true)
 tt.render.sprites[1].name = "stage27_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.render.sprites[1].draw_order = 2
 
-tt = E:register_t_hot("decal_stage_27_mask_1", "decal", true)
+tt = E:register_t("decal_stage_27_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage27_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.render.sprites[1].draw_order = 3
 
-tt = E:register_t_hot("decal_stage_27_cannon_right", "decal", true)
+tt = E:register_t("decal_stage_27_cannon_right", "decal", true)
 tt.render.sprites[1].prefix = "dlcenanos_stage05_cannonDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -1347,7 +1347,7 @@ tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 tt.shot_pos = v(924, 509)
 tt.shot_target_pos = v(815, 364)
 
-tt = E:register_t_hot("decal_stage_27_cannon_left", "decal", true)
+tt = E:register_t("decal_stage_27_cannon_left", "decal", true)
 tt.render.sprites[1].prefix = "dlcenanos_stage05_cannonDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -1357,7 +1357,7 @@ tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 tt.shot_pos = v(238, 532)
 tt.shot_target_pos = v(361, 345)
 
-tt = E:register_t_hot("decal_stage_27_head", "decal", true)
+tt = E:register_t("decal_stage_27_head", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "dclenanos_stage05_headDef"
 tt.render.sprites[1].name = "headdeathsmokeidle"
@@ -1365,21 +1365,21 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.render.sprites[1].draw_order = 1
 
-tt = E:register_t_hot("decal_stage_27_smoke_back", "decal", true)
+tt = E:register_t("decal_stage_27_smoke_back", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "dclenanos_stage05_HeadSmokeBackDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 
-tt = E:register_t_hot("decal_stage_27_smoke_front", "decal", true)
+tt = E:register_t("decal_stage_27_smoke_front", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "dclenanos_stage05_HeadSmokeFrontDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_27_sparks", "decal", true)
+tt = E:register_t("decal_stage_27_sparks", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "dclenanos_stage05_HeadSparksDef"
 tt.render.sprites[1].name = "loop"
@@ -1391,19 +1391,19 @@ local function controller_stage_27_cannon_on_cannons_event(this, store, action, 
 	this.clones_count = clones_count
 end
 
-tt = E:register_t_hot("controller_stage_27_cannon_L", "controller_stage_27_cannon", true)
+tt = E:register_t("controller_stage_27_cannon_L", "controller_stage_27_cannon", true)
 E:add_comps(tt, "events")
 tt.events.list[1].name = "shoot-cannons-L"
 tt._decal = "decal_stage_27_cannon_left"
 tt.events.list[1].on_event = controller_stage_27_cannon_on_cannons_event
 
-tt = E:register_t_hot("controller_stage_27_cannon_R", "controller_stage_27_cannon", true)
+tt = E:register_t("controller_stage_27_cannon_R", "controller_stage_27_cannon", true)
 E:add_comps(tt, "events")
 tt.events.list[1].name = "shoot-cannons-R"
 tt._decal = "decal_stage_27_cannon_right"
 tt.events.list[1].on_event = controller_stage_27_cannon_on_cannons_event
 
-tt = E:register_t_hot("controller_stage_27_head", nil, true)
+tt = E:register_t("controller_stage_27_head", nil, true)
 E:add_comps(tt, "main_script", "events", "ui", "editor")
 tt.main_script.update = controller_stage_27_head.update
 tt.head_t = "decal_stage_27_head"

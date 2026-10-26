@@ -547,13 +547,13 @@ function stage_36_paths_controller.on_show_path(this, store, action, path)
 	this.show_path = tonumber(path)
 end
 
-tt = E:register_t_hot("decal_stage_36_mask_1", "decal", true)
+tt = E:register_t("decal_stage_36_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage_36_mask_1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 
-tt = E:register_t_hot("controller_stage_36_portal_splash", nil, true)
+tt = E:register_t("controller_stage_36_portal_splash", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_36_portal_splash_update
 tt.mod = "mod_stage_36_portal_splash"
@@ -561,13 +561,13 @@ tt.paths_nodes = {23, 23, 23, 23}
 tt.vis_flags = 0
 tt.vis_bans = 0
 
-tt = E:register_t_hot("decal_stage_36_mask_portal", "decal", true)
+tt = E:register_t("decal_stage_36_mask_portal", "decal", true)
 tt.render.sprites[1].prefix = "stage_1_portalDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].sort_y_offset = 25
 
-tt = E:register_t_hot("stage_36_paths_controller", "decal_scripted", true)
+tt = E:register_t("stage_36_paths_controller", "decal_scripted", true)
 E:add_comps(tt, "events", "editor")
 tt.main_script.update = stage_36_paths_controller.update
 tt.render.sprites[1].prefix = "mecanica_camino_1_stage_1Def"
@@ -638,14 +638,14 @@ tt.editor.overrides = {
 	["render.sprites[1].name"] = "idle"
 }
 
-tt = E:register_t_hot("decal_stage_36_easter_egg_ranger_verde", "decal_scripted", true)
+tt = E:register_t("decal_stage_36_easter_egg_ranger_verde", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_36_easter_egg_ranger_verde_update
 tt.render.sprites[1].prefix = "ranger_verde_character"
 tt.render.sprites[1].name = "idle1"
 tt.ui.click_rect = r(-25, -10, 50, 50)
 
-tt = E:register_t_hot("decal_stage_36_mask_path_main", "decal", true)
+tt = E:register_t("decal_stage_36_mask_path_main", "decal", true)
 tt.render.sprites[1].name = "stage_36_mask_path"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0

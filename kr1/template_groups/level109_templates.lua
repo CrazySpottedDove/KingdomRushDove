@@ -99,7 +99,7 @@ function decal_stage_09_bridge.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-tt = E:register_t_tmp("aura_stage_09_spawn_nightmare_convert", "aura")
+tt = E:register_t("aura_stage_09_spawn_nightmare_convert", "aura")
 tt.aura.duration = 1e+99
 tt.aura.radius = 4
 tt.include_templates = {"enemy_lesser_sister_nightmare"}
@@ -206,7 +206,7 @@ tt.wave_config = {{
 }}}}
 tt.sound_spawn = "EnemyTwistedSisterSummonSpawn"
 
-tt = E:register_t_tmp("aura_stage_09_spawn_nightmare_convert_spawn_fx", "aura")
+tt = E:register_t("aura_stage_09_spawn_nightmare_convert_spawn_fx", "aura")
 tt.aura.duration = 1e+99
 tt.aura.radius = 80
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
@@ -236,27 +236,27 @@ tt.main_script.update = function(this, store)
 	end
 end
 
-tt = E:register_t_tmp("fx_stage_09_portal_path_spawn_fx", "fx")
+tt = E:register_t("fx_stage_09_portal_path_spawn_fx", "fx")
 tt.render.sprites[1].prefix = "stage_9_portal_path_spawn_FXDef"
 tt.render.sprites[1].name = "spawn"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("decal_stage_09_bridge_mask", "decal", true)
+tt = E:register_t("decal_stage_09_bridge_mask", "decal", true)
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_09_bridge1_mask", "decal_stage_09_bridge_mask", true)
+tt = E:register_t("decal_stage_09_bridge1_mask", "decal_stage_09_bridge_mask", true)
 tt.render.sprites[1].prefix = "stage_9_bridge1_maskDef"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_09_bridge2_mask", "decal_stage_09_bridge_mask", true)
+tt = E:register_t("decal_stage_09_bridge2_mask", "decal_stage_09_bridge_mask", true)
 tt.render.sprites[1].prefix = "stage_9_bridge2_maskDef"
 
-tt = E:register_t_hot("decal_stage_09_bridge3_mask", "decal_stage_09_bridge_mask", true)
+tt = E:register_t("decal_stage_09_bridge3_mask", "decal_stage_09_bridge_mask", true)
 tt.render.sprites[1].prefix = "stage_9_bridge3_maskDef"
 
-tt = E:register_t_hot("decal_stage_09_candle", "decal_scripted", true)
+tt = E:register_t("decal_stage_09_candle", "decal_scripted", true)
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].name = "idle_off"
@@ -288,37 +288,37 @@ tt.main_script.update = function(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_stage_09_candle_back1", "decal_stage_09_candle", true)
+tt = E:register_t("decal_stage_09_candle_back1", "decal_stage_09_candle", true)
 tt.render.sprites[1].prefix = "stage_9_candles_back_1Def"
 
-tt = E:register_t_hot("decal_stage_09_candle_back2", "decal_stage_09_candle", true)
+tt = E:register_t("decal_stage_09_candle_back2", "decal_stage_09_candle", true)
 tt.render.sprites[1].prefix = "stage_9_candles_back_2Def"
 
-tt = E:register_t_hot("decal_stage_09_candle_back3", "decal_stage_09_candle", true)
+tt = E:register_t("decal_stage_09_candle_back3", "decal_stage_09_candle", true)
 tt.render.sprites[1].prefix = "stage_9_candles_back_3Def"
 
-tt = E:register_t_hot("decal_stage_09_candle_front1", "decal_stage_09_candle", true)
+tt = E:register_t("decal_stage_09_candle_front1", "decal_stage_09_candle", true)
 tt.render.sprites[1].prefix = "stage_9_candles_front_1Def"
 
-tt = E:register_t_hot("decal_stage_09_candle_front2", "decal_stage_09_candle", true)
+tt = E:register_t("decal_stage_09_candle_front2", "decal_stage_09_candle", true)
 tt.render.sprites[1].prefix = "stage_9_candles_front_2Def"
 
-tt = E:register_t_hot("decal_stage_09_candle_front3", "decal_stage_09_candle", true)
+tt = E:register_t("decal_stage_09_candle_front3", "decal_stage_09_candle", true)
 tt.render.sprites[1].prefix = "stage_9_candles_front_3Def"
 
-tt = E:register_t_hot("decal_stage_09_candle_glow_back", "decal", true)
+tt = E:register_t("decal_stage_09_candle_glow_back", "decal", true)
 tt.render.sprites[1].prefix = "stage_9_candles_glow_backDef"
 tt.render.sprites[1].name = "off"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_09_candle_glow_front", "decal", true)
+tt = E:register_t("decal_stage_09_candle_glow_front", "decal", true)
 tt.render.sprites[1].prefix = "stage_9_candles_glow_frontDef"
 tt.render.sprites[1].name = "off"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_09_portal_path_spawn", "decal_scripted", true)
+tt = E:register_t("decal_stage_09_portal_path_spawn", "decal_scripted", true)
 tt.render.sprites[1].prefix = "stage_9_portal_pathDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -351,19 +351,19 @@ tt.main_script.update = function(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_stage_09_portal", "decal", true)
+tt = E:register_t("decal_stage_09_portal", "decal", true)
 tt.render.sprites[1].prefix = "stage_9_portalDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_09_fire", "decal", true)
+tt = E:register_t("decal_stage_09_fire", "decal", true)
 tt.render.sprites[1].prefix = "stage_9_fireDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS + 1
 
-tt = E:register_t_hot("decal_stage_09_sheepy_easteregg", "decal_scripted", true)
+tt = E:register_t("decal_stage_09_sheepy_easteregg", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.render.sprites[1].prefix = "stage_9_sheepyDef"
 tt.render.sprites[1].name = "idle"
@@ -372,7 +372,7 @@ tt.render.sprites[1].z = Z_DECALS - 1
 tt.main_script.update = decal_stage_09_sheepy_easteregg_update
 tt.ui.click_rect = r(-20, -10, 40, 40)
 
-tt = E:register_t_hot("controller_stage_09_spawn_nightmares", nil, true)
+tt = E:register_t("controller_stage_09_spawn_nightmares", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script")
 tt.main_script.insert = function(this, store)
 	local portal_spawned = E:create_entity(this.entity_portal)
@@ -590,12 +590,12 @@ tt.path_portal_off_delay = 10
 tt.sound_candles_in = "Stage09NightmarePortalCandles"
 tt.sound_portal_in = "Stage09NightmarePortalEye"
 
-tt = E:register_t_hot("decal_stage_09_mask", "decal", true)
+tt = E:register_t("decal_stage_09_mask", "decal", true)
 tt.render.sprites[1].name = "T2_Stage_9_chains_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_09_bridge", "decal_scripted", true)
+tt = E:register_t("decal_stage_09_bridge", "decal_scripted", true)
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
@@ -606,17 +606,17 @@ tt.mask_before = false
 tt.main_script.insert = decal_stage_09_bridge.insert
 tt.main_script.update = decal_stage_09_bridge.update
 
-tt = E:register_t_hot("decal_stage_09_bridge1", "decal_stage_09_bridge", true)
+tt = E:register_t("decal_stage_09_bridge1", "decal_stage_09_bridge", true)
 tt.render.sprites[1].prefix = "stage_9_bridge1Def"
 tt.mask_entity = "decal_stage_09_bridge1_mask"
 tt.in_delay = 1
 
-tt = E:register_t_hot("decal_stage_09_bridge2", "decal_stage_09_bridge", true)
+tt = E:register_t("decal_stage_09_bridge2", "decal_stage_09_bridge", true)
 tt.render.sprites[1].prefix = "stage_9_bridge2Def"
 tt.mask_entity = "decal_stage_09_bridge2_mask"
 tt.in_delay = 2.5
 
-tt = E:register_t_hot("decal_stage_09_bridge3", "decal_stage_09_bridge", true)
+tt = E:register_t("decal_stage_09_bridge3", "decal_stage_09_bridge", true)
 tt.render.sprites[1].prefix = "stage_9_bridge3Def"
 tt.mask_entity = "decal_stage_09_bridge3_mask"
 tt.mask_before = true

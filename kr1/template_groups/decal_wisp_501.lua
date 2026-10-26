@@ -1,6 +1,6 @@
 local E = require("entity_db")
 local tt
-tt = E:register_t_hot("decal_wisp_501", "decal_delayed_play", true)
+tt = E:register_t("decal_wisp_501", "decal_delayed_play", true)
 tt.render.sprites[1].name = "props_wisp"
 tt.delayed_play.min_delay = 2
 tt.delayed_play.max_delay = 30

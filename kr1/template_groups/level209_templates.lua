@@ -12,52 +12,52 @@ local function AC(tpl, ...)
 end
 local fts = U.fts
 local tt
-tt = E:register_t_hot("decal_stage_209_mask_1", "decal", true)
+tt = E:register_t("decal_stage_209_mask_1", "decal", true)
 tt.render.sprites[1].name = "Stage_9_door_MASK-"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt = E:register_t_hot("decal_stage_209_mask_2", "decal", true)
+tt = E:register_t("decal_stage_209_mask_2", "decal", true)
 tt.render.sprites[1].name = "Stage_9_troll_door_MASK"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt = E:register_t_hot("decal_stage_209_mask_3", "decal", true)
+tt = E:register_t("decal_stage_209_mask_3", "decal", true)
 tt.render.sprites[1].name = "Stage_9_troll_floor_MASK"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 1
-tt = E:register_t_hot("decal_stage_209_mask_4", "decal", true)
+tt = E:register_t("decal_stage_209_mask_4", "decal", true)
 tt.render.sprites[1].name = "Stage_9_door_column_MASK"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BULLETS + 1
-tt = E:register_t_hot("decal_stage_209_mask_5", "decal", true)
+tt = E:register_t("decal_stage_209_mask_5", "decal", true)
 tt.render.sprites[1].name = "Stage_9_light_MASK"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt = E:register_t_hot("decal_stage_209_cliff_mask_small", "decal", true)
+tt = E:register_t("decal_stage_209_cliff_mask_small", "decal", true)
 tt.render.sprites[1].name = "Stage_9_column_shadow_MASK"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].scale = v(1.5, 1.2)
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt = E:register_t_hot("decal_stage_209_cliff_mask_big", "decal_stage_209_cliff_mask_small", true)
+tt = E:register_t("decal_stage_209_cliff_mask_big", "decal_stage_209_cliff_mask_small", true)
 tt.render.sprites[1].scale = v(2.2, 1.2)
-tt = E:register_t_hot("decal_stage_209_entrance_cover", "decal", true)
+tt = E:register_t("decal_stage_209_entrance_cover", "decal", true)
 tt.render.sprites[1].prefix = "troll_door_stg9Def"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
-tt = E:register_t_hot("decal_stage_209_brazier", "decal", true)
+tt = E:register_t("decal_stage_209_brazier", "decal", true)
 tt.render.sprites[1].prefix = "fire_stg9Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
-tt = E:register_t_hot("decal_stage_209_bg_brazier", "decal", true)
+tt = E:register_t("decal_stage_209_bg_brazier", "decal", true)
 tt.render.sprites[1].prefix = "fire_small_stg9Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].exo = true
-tt = E:register_t_hot("decal_stage_209_pillar_dust", "decal_tween", true)
+tt = E:register_t("decal_stage_209_pillar_dust", "decal_tween", true)
 AC(tt, "main_script")
 tt.render.sprites[1].prefix = "column_decal_stg9Def"
 tt.render.sprites[1].name = "idle"
@@ -115,7 +115,7 @@ local function decal_stage_209_mortal_kombat_update(this, store)
 		coroutine.yield()
 	end
 end
-tt = E:register_t_hot("decal_stage_209_mortal_kombat", "decal", true)
+tt = E:register_t("decal_stage_209_mortal_kombat", "decal", true)
 AC(tt, "main_script", "ui")
 tt.render.sprites[1].prefix = "easter_egg_mortal_kombatDef"
 tt.render.sprites[1].name = "idle"
@@ -136,15 +136,15 @@ tt.sound_finisher = "Stage09MortalKombatFinisher"
 tt.sound_finisher_frame = 17
 tt.attack_cd = 10
 tt.stun_duration = 5
-tt = E:register_t_hot("fx_stage_209_pillar_thump_top", "fx", true)
+tt = E:register_t("fx_stage_209_pillar_thump_top", "fx", true)
 tt.render.sprites[1].prefix = "top_column_crumble_stg9Def"
 tt.render.sprites[1].name = "tapCrumble"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt = E:register_t_hot("fx_stage_209_pillar_thump_down", "fx_stage_209_pillar_thump_top", true)
+tt = E:register_t("fx_stage_209_pillar_thump_down", "fx_stage_209_pillar_thump_top", true)
 tt.render.sprites[1].prefix = "down_column_crumble_stg9Def"
-tt = E:register_t_hot("aura_pillar_stage_209_damage", "aura", true)
+tt = E:register_t("aura_pillar_stage_209_damage", "aura", true)
 tt.aura.radius = 65
 tt.aura.vis_flags = bor(F_AREA, F_ENEMY, F_FRIEND)
 tt.aura.vis_bans = bor(F_FLYING)
@@ -152,7 +152,7 @@ tt.aura.damage_min = 200
 tt.aura.damage_max = 300
 tt.aura.damage_type = DAMAGE_INSTAKILL
 tt.main_script.update = scripts.aura_utils.apply_area_damage
-tt = E:register_t_hot("editor_pillar_rally_point", "editor_rally_point", true)
+tt = E:register_t("editor_pillar_rally_point", "editor_rally_point", true)
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "rain_of_fire_hit_0009"
 local function tower_holder_pillar_e_insert(this, store)
@@ -272,7 +272,7 @@ local function tower_holder_pillar_update(this, store)
 	U.y_animation_wait(this)
 	simulation:queue_remove_entity(this)
 end
-tt = E:register_t_hot("tower_holder_pillar_terrain_2_1_down", nil, true)
+tt = E:register_t("tower_holder_pillar_terrain_2_1_down", nil, true)
 AC(tt, "pos", "render", "ui", "sound_events", "editor", "main_script", "editor_script")
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].prefix = "down_column_stg9Def"
@@ -304,6 +304,6 @@ tt.ui.hover_sprite_scale = vv(1.2)
 tt.ui.hover_sprite_offset = v(4, 12)
 tt.random_min = 0
 tt.random_max = 2
-tt = E:register_t_hot("tower_holder_pillar_terrain_2_1_top", "tower_holder_pillar_terrain_2_1_down", true)
+tt = E:register_t("tower_holder_pillar_terrain_2_1_top", "tower_holder_pillar_terrain_2_1_down", true)
 tt.render.sprites[1].prefix = "top_column_stg9Def"
 tt.pillar.explosion_t = "fx_stage_209_pillar_thump_top"

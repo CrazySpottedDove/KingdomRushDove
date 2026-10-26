@@ -320,11 +320,11 @@ function controller_stage_15_cult_leader_tower.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_terrain_3_glare_eye_small_2_stage_15", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_terrain_3_glare_eye_small_2_stage_15", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_15_eyes_2"
 tt.render.sprites[2].prefix = "glare_stage_15_eyelids_2"
 
-tt = E:register_t_hot("decal_stage_15_easter_egg_goblin", "decal_scripted", true)
+tt = E:register_t("decal_stage_15_easter_egg_goblin", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.main_script.update = decal_stage_15_easter_egg_goblin_update
 tt.render.sprites[1].prefix = "t3stage15_eastereggDef"
@@ -336,58 +336,58 @@ tt.sweep_cooldown = 2
 tt.time_to_in_cooldown = 20
 tt.ui.click_rect = r(-10, -30, 50, 50)
 
-tt = E:register_t_hot("decal_stage_15_tentacles", "decal_stage_12_tentacles", true)
+tt = E:register_t("decal_stage_15_tentacles", "decal_stage_12_tentacles", true)
 tt.render.sprites[1].prefix = "BKtentacle_S15Def"
 
-tt = E:register_t_hot("decal_terrain_3_glare_eye_small_1_stage_15", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_terrain_3_glare_eye_small_1_stage_15", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_15_eyes_1"
 tt.render.sprites[2].prefix = "glare_stage_15_eyelids_1"
 
-tt = E:register_t_hot("decal_stage_15_mask_1", "decal", true)
+tt = E:register_t("decal_stage_15_mask_1", "decal", true)
 tt.render.sprites[1].name = "T3_15_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_15_mask_2", "decal_stage_15_mask_1", true)
+tt = E:register_t("decal_stage_15_mask_2", "decal_stage_15_mask_1", true)
 tt.render.sprites[1].name = "T3_15_mask_02"
 
-tt = E:register_t_hot("power_denas_control", "power_reinforcements_control", true)
+tt = E:register_t("power_denas_control", "power_reinforcements_control", true)
 tt.main_script.insert = power_stage_15_denas_control_insert
 tt.denas_t = "soldier_reinforcement_stage_15_denas"
 
-tt = E:register_t_hot("decal_terrain_3_glare_eye_small_3_stage_15", "decal_terrain_3_glare_eye_small", true)
+tt = E:register_t("decal_terrain_3_glare_eye_small_3_stage_15", "decal_terrain_3_glare_eye_small", true)
 tt.render.sprites[1].prefix = "glare_stage_15_eyes_3"
 tt.render.sprites[2].prefix = "glare_stage_15_eyelids_3"
 
-tt = E:register_t_hot("decal_stage_15_mask_5", "decal_stage_15_mask_1", true)
+tt = E:register_t("decal_stage_15_mask_5", "decal_stage_15_mask_1", true)
 tt.render.sprites[1].name = "T3_15_mask_05"
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = E:register_t_hot("decal_stage_15_mask_modes", "decal", true)
+tt = E:register_t("decal_stage_15_mask_modes", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage15modos"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 20
 
-tt = E:register_t_hot("decal_stage_15_mask_3", "decal_stage_15_mask_1", true)
+tt = E:register_t("decal_stage_15_mask_3", "decal_stage_15_mask_1", true)
 tt.render.sprites[1].name = "T3_15_mask_03"
 
-tt = E:register_t_hot("decal_terrain_3_glare_eye_big_stage_15", "decal_terrain_3_glare_eye_big", true)
+tt = E:register_t("decal_terrain_3_glare_eye_big_stage_15", "decal_terrain_3_glare_eye_big", true)
 tt.render.sprites[1].name = "glare_stage_15_eye_big"
 tt.render.sprites[2].prefix = "glare_stage_15_eyelids_big"
 tt.render.sprites[3].prefix = "glare_stage_15_eye_big_pupil"
 
-tt = E:register_t_hot("decal_stage_15_mask_4", "decal_stage_15_mask_1", true)
+tt = E:register_t("decal_stage_15_mask_4", "decal_stage_15_mask_1", true)
 tt.render.sprites[1].name = "T3_15_mask_04"
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = E:register_t_hot("decal_stage_15_cult_leader_tower_mask", "decal", true)
+tt = E:register_t("decal_stage_15_cult_leader_tower_mask", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "mutamydrias_fx_Mutamydrias_balcon"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 15
 tt.render.sprites[1].animated = false
 
-tt = E:register_t_hot("taunts_s115_controller", nil, true)
+tt = E:register_t("taunts_s115_controller", nil, true)
 E:add_comps(tt, "main_script", "taunts", "editor")
 tt.load_file = "level115_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
@@ -533,11 +533,11 @@ function controller_terrain_3_stage_15_glare.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("controller_terrain_3_stage_15_glare", "controller_terrain_3_local_glare", true)
+tt = E:register_t("controller_terrain_3_stage_15_glare", "controller_terrain_3_local_glare", true)
 tt.main_script.insert = controller_terrain_3_stage_15_glare.insert
 tt.main_script.update = controller_terrain_3_stage_15_glare.update
 
-tt = E:register_t_hot("controller_stage_15_cult_leader_tower", nil, true)
+tt = E:register_t("controller_stage_15_cult_leader_tower", nil, true)
 E:add_comps(tt, "editor", "pos", "main_script", "render")
 tt.main_script.update = controller_stage_15_cult_leader_tower.update
 tt.render.sprites[1] = E:clone_c("sprite")
@@ -650,6 +650,6 @@ tt.flags = bor(F_FRIEND, F_MOD)
 tt.aura = "aura_stage_15_cult_leader_tower_stun"
 tt.boss_to_spawn = "boss_cult_leader"
 
-tt = E:register_t_hot("decal_stage_15_glare", "decal_stage_12_glare", true)
+tt = E:register_t("decal_stage_15_glare", "decal_stage_12_glare", true)
 tt.render.sprites[1].prefix = "stage_15_glareDef"
 

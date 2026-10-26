@@ -97,7 +97,7 @@ decal_stage_05_bear_woodcutter_update = function(this, store)
 	SU.y_enemy_walk_step(store, entity)
 end
 local tt
-tt = E:register_t_hot("decal_stage_05_bear_woodcutter", "decal_scripted", true)
+tt = E:register_t("decal_stage_05_bear_woodcutter", "decal_scripted", true)
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "bear_woodcutterDef"
 tt.render.sprites[1].name = "loop"
@@ -109,7 +109,7 @@ tt.entity = "enemy_bear_woodcutter"
 tt.spawn_pos = v(242, 459)
 tt.waypoint_pos = v(220, 459)
 
-tt = E:register_t_hot("decal_stage_05_elder_rune", "decal_click_play", true)
+tt = E:register_t("decal_stage_05_elder_rune", "decal_click_play", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage_5_elder_rune_5"
 tt.render.sprites[1].loop = true
@@ -122,29 +122,29 @@ tt.click_play.clicked_sound = "Stage0506Rune"
 tt.ui.can_click = true
 tt.ui.click_rect = r(-50, -10, 50, 50)
 
-tt = E:register_t_hot("decal_stage_05_elder_rune_static", "decal", true)
+tt = E:register_t("decal_stage_05_elder_rune_static", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_5_elder_rune_5_0125"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
 
-tt = E:register_t_hot("stage_05_bridge_mask_right", "decal", true)
+tt = E:register_t("stage_05_bridge_mask_right", "decal", true)
 tt.render.sprites[1].name = "stage_5_MaskBridge_right"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("stage_05_bridge_mask_left", "decal", true)
+tt = E:register_t("stage_05_bridge_mask_left", "decal", true)
 tt.render.sprites[1].name = "stage_5_MaskBridge_left"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_05_elder_rune_base", "decal", true)
+tt = E:register_t("decal_stage_05_elder_rune_base", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_5_elder_rune_5_base"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].draw_order = 0
 
-tt = E:register_t_hot("stage_05_trees_mask", "decal", true)
+tt = E:register_t("stage_05_trees_mask", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_5_MaskTree"
 tt.render.sprites[1].animated = false

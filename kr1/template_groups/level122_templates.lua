@@ -424,60 +424,60 @@ function controller_stage_22_boss_crocs.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_stage_22_easteregg_sheepy", "decal_scripted", true)
+tt = E:register_t("decal_stage_22_easteregg_sheepy", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.main_script.update = decal_stage_22_easteregg_sheepy_update
 tt.render.sprites[1].prefix = "croco_sheepy"
 tt.render.sprites[1].name = "idle"
 tt.ui.click_rect = r(-15, -5, 30, 50)
 
-tt = E:register_t_hot("decal_stage_22_water_vfx1", "decal", true)
+tt = E:register_t("decal_stage_22_water_vfx1", "decal", true)
 tt.render.sprites[1].prefix = "stage_22_bubbles_01Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_22_puerta5", "decal", true)
+tt = E:register_t("decal_stage_22_puerta5", "decal", true)
 tt.render.sprites[1].name = "stage_22_puerta5"
 tt.render.sprites[1].animated = false
 
-tt = E:register_t_hot("decal_stage_22_puerta3", "decal", true)
+tt = E:register_t("decal_stage_22_puerta3", "decal", true)
 tt.render.sprites[1].name = "stage_22_puerta3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 290
 
-tt = E:register_t_hot("decal_stage_22_puerta4", "decal", true)
+tt = E:register_t("decal_stage_22_puerta4", "decal", true)
 tt.render.sprites[1].name = "stage_22_puerta4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 290
 
-tt = E:register_t_hot("tunnel_KR5_stage22_boss", "tunnel_KR5", true)
+tt = E:register_t("tunnel_KR5_stage22_boss", "tunnel_KR5", true)
 tt.untargetable_distance = 20
 tt.tunnel.speed_factor = 1000
 
-tt = E:register_t_hot("decal_stage_22_puerta1", "decal", true)
+tt = E:register_t("decal_stage_22_puerta1", "decal", true)
 tt.render.sprites[1].name = "stage_22_puerta1"
 tt.render.sprites[1].animated = false
 
-tt = E:register_t_hot("decal_stage_22_sombras", "decal", true)
+tt = E:register_t("decal_stage_22_sombras", "decal", true)
 tt.render.sprites[1].name = "stage_22_sombras"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 
-tt = E:register_t_hot("decal_stage_22_puerta6", "decal", true)
+tt = E:register_t("decal_stage_22_puerta6", "decal", true)
 tt.render.sprites[1].name = "stage_22_puerta6"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_22_water_vfx2", "decal_stage_22_water_vfx1", true)
+tt = E:register_t("decal_stage_22_water_vfx2", "decal_stage_22_water_vfx1", true)
 tt.render.sprites[1].prefix = "stage_22_bubbles_02Def"
 
-tt = E:register_t_hot("decal_stage_22_puerta2", "decal", true)
+tt = E:register_t("decal_stage_22_puerta2", "decal", true)
 tt.render.sprites[1].name = "stage_22_puerta2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_22_rune_rock", "decal_scripted", true)
+tt = E:register_t("decal_stage_22_rune_rock", "decal_scripted", true)
 tt.main_script.update = decal_stage_22_rune_rock.update
 tt.animation_idle = "idle1"
 tt.animation_start = "redin"
@@ -487,7 +487,7 @@ tt.render.sprites[1].prefix = "rune_rockDef"
 tt.render.sprites[1].name = "idle1"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("decal_stage_22_rune_doors", "decal_scripted", true)
+tt = E:register_t("decal_stage_22_rune_doors", "decal_scripted", true)
 tt.main_script.update = decal_stage_22_rune_rock.update
 tt.animation_idle = "idleblue"
 tt.animation_start = "redin"
@@ -508,7 +508,7 @@ tt.render.sprites[5].prefix = "stage_22_Glow_Rock5Def"
 tt.render.sprites[5].sort_y_offset = -100
 tt.render.sprites[5].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_22_remolino", "decal_scripted", true)
+tt = E:register_t("decal_stage_22_remolino", "decal_scripted", true)
 
 tt.main_script.update = decal_stage_22_remolino.update
 tt.animation_start = "in"
@@ -538,14 +538,14 @@ tt.waves = {{
 	[6] = {{0, 5}, {25, 63}}
 }, {{{115, 319}}}}
 
-tt = E:register_t_hot("decal_achievement_stage_22_croc_king", "decal_scripted", true)
+tt = E:register_t("decal_achievement_stage_22_croc_king", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.ui.click_rect = r(-20, -10, 40, 40)
 tt.main_script.update = decal_achievement_stage_22_croc_king.update
 tt.render.sprites[1].prefix = "achievement_donkey_kong_creep"
 tt.render.sprites[1].name = "idle"
 
-tt = E:register_t_hot("controller_stage_22_boss_crocs", "decal_scripted", true)
+tt = E:register_t("controller_stage_22_boss_crocs", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.main_script.update = controller_stage_22_boss_crocs.update
 tt.render.sprites[1].prefix = "boss_crocs_intro_bossDef"

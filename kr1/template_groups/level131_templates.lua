@@ -73,7 +73,7 @@ decal_stage_31_easter_egg_littledragon_update = function(this, store)
 end
 local tt
 
-tt = E:register_t_tmp("controller_stage_31_water_mechanic", "decal_scripted")
+tt = E:register_t("controller_stage_31_water_mechanic", "decal_scripted")
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = function(this, store)
 	local explained_mechanic = false
@@ -475,7 +475,7 @@ tt.extra_ui_click_rect_speach_bubble = r(50, 58, 78, 67)
 tt.mods = {"mod_stage31_water_mechanic_dps"}
 tt.enemies_detection = {"enemy_fire_phoenix", "enemy_fire_fox", "enemy_nine_tailed_fox", "enemy_burning_treant", "enemy_ash_spirit"}
 
-tt = E:register_t_tmp("stage_31_water_mechanic_fx", "decal_scripted")
+tt = E:register_t("stage_31_water_mechanic_fx", "decal_scripted")
 tt.main_script.update = function(this, store)
 	U.sprites_hide(this, nil, nil)
 	U.y_wait_unconditional(store, math.random() * fts(8))
@@ -487,7 +487,7 @@ tt.render.sprites[1].prefix = "water_splash_unitDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_tmp("stage_31_water_mechanic_fx_decal", "decal_tween")
+tt = E:register_t("stage_31_water_mechanic_fx_decal", "decal_tween")
 E:add_comps(tt, "main_script")
 tt.render.sprites[1].prefix = "charco_unitDef"
 tt.render.sprites[1].name = "Idle"
@@ -515,7 +515,7 @@ tt.tween.props[2].keys = {{0, vv(0.8)}, {fts(2), vv(0.8)}, {fts(7), vv(1)}, {fts
 tt.tween.props[2].name = "scale"
 
 for i = 1, 3 do
-	tt = E:register_t_tmp("stage_31_exo_forest_" .. i, "decal")
+	tt = E:register_t("stage_31_exo_forest_" .. i, "decal")
 	E:add_comps(tt, "editor_script")
 	tt.render.sprites[1].prefix = "stage_31_forest_0" .. i .. "Def"
 	tt.render.sprites[1].name = "loop"
@@ -533,7 +533,7 @@ for i = 1, 3 do
 end
 
 for lyr_nmbr = 1, 7 do
-	tt = E:register_t_tmp("stage_31_exo_waterfall_layer_" .. lyr_nmbr, "decal")
+	tt = E:register_t("stage_31_exo_waterfall_layer_" .. lyr_nmbr, "decal")
 	tt.render.sprites[1].prefix = "stage_31_waterfall_layer_" .. lyr_nmbr .. "Def"
 	tt.render.sprites[1].name = "loop"
 	tt.render.sprites[1].animated = true
@@ -557,7 +557,7 @@ for lyr_nmbr = 1, 7 do
 	end
 end
 
-tt = E:register_t_hot("decal_stage_31_easter_egg_oogway", "decal_scripted", true)
+tt = E:register_t("decal_stage_31_easter_egg_oogway", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_31_easter_egg_oogway_update
 tt.render.sprites[1].prefix = "stage_31_oogwayDef"
@@ -567,14 +567,14 @@ tt.idle_cooldown_max = 20
 tt.idle_cooldown_min = 5
 tt.ui.click_rect = r(-30, -20, 60, 60)
 
-tt = E:register_t_hot("fx_stage_31_fireball_b", "fx", true)
+tt = E:register_t("fx_stage_31_fireball_b", "fx", true)
 tt.render.sprites[1].prefix = "stage_31_fireball_BDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt.kill_area_id = 2
 
-tt = E:register_t_hot("decal_stage_31_easter_egg_littledragon", "decal_scripted", true)
+tt = E:register_t("decal_stage_31_easter_egg_littledragon", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_31_easter_egg_littledragon_update
 tt.render.sprites[1].prefix = "littledragon_easteregg_stage1_easteregg"
@@ -592,27 +592,27 @@ tt.render.sprites[3].anchor = v(0, 0)
 tt.render.sprites[3].offset = v(-69, -23)
 tt.ui.click_rect = r(-30, -20, 60, 60)
 
-tt = E:register_t_hot("stage_31_mask_shadow_top", "decal", true)
+tt = E:register_t("stage_31_mask_shadow_top", "decal", true)
 tt.render.sprites[1].prefix = "stage_31_shadowDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 
-tt = E:register_t_hot("fx_stage_31_fireball_a", "fx", true)
+tt = E:register_t("fx_stage_31_fireball_a", "fx", true)
 tt.render.sprites[1].prefix = "stage_31_fireball_ADef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt.kill_area_id = 1
 
-tt = E:register_t_hot("fx_stage_31_fireball_c", "fx", true)
+tt = E:register_t("fx_stage_31_fireball_c", "fx", true)
 tt.render.sprites[1].prefix = "stage_31_fireball_CDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt.kill_area_id = 3
 
-tt = E:register_t_hot("stage_31_mask_burned_01", "decal", true)
+tt = E:register_t("stage_31_mask_burned_01", "decal", true)
 E:add_comps(tt, "editor", "editor_script")
 tt.render.sprites[1].name = "stage_31_mask_burned_01"
 tt.render.sprites[1].animated = false
@@ -622,15 +622,15 @@ tt.render.sprites[1].hidden = true
 tt.show_in_editor = true
 tt.editor_script.insert = scripts.editor_mask.insert
 
-tt = E:register_t_hot("stage_31_mask_burned_02", "stage_31_mask_burned_01", true)
+tt = E:register_t("stage_31_mask_burned_02", "stage_31_mask_burned_01", true)
 tt.render.sprites[1].name = "stage_31_mask_burned_02"
 tt.render.sprites[1].sort_y_offset = -112
 
-tt = E:register_t_hot("stage_31_mask_burned_03", "stage_31_mask_burned_01", true)
+tt = E:register_t("stage_31_mask_burned_03", "stage_31_mask_burned_01", true)
 tt.render.sprites[1].name = "stage_31_mask_burned_03"
 tt.render.sprites[1].sort_y_offset = -80
 
-tt = E:register_t_hot("stage_31_exo_fire_a", "decal", true)
+tt = E:register_t("stage_31_exo_fire_a", "decal", true)
 E:add_comps(tt, "editor", "editor_script")
 tt.render.sprites[1].prefix = "stage_31_fire_ADef"
 tt.render.sprites[1].name = "loop"
@@ -642,8 +642,8 @@ tt.render.sprites[1].hidden = true
 tt.show_in_editor = true
 tt.editor_script.insert = scripts.editor_mask.insert
 
-tt = E:register_t_hot("stage_31_exo_fire_c", "stage_31_exo_fire_a", true)
+tt = E:register_t("stage_31_exo_fire_c", "stage_31_exo_fire_a", true)
 tt.render.sprites[1].prefix = "stage_31_fire_CDef"
 
-tt = E:register_t_hot("stage_31_exo_fire_b", "stage_31_exo_fire_a", true)
+tt = E:register_t("stage_31_exo_fire_b", "stage_31_exo_fire_a", true)
 tt.render.sprites[1].prefix = "stage_31_fire_BDef"

@@ -44842,19 +44842,22 @@ end
 
 scripts.controller_hero_naga_fight_to_win_or_die = {
 	update = function(this, store)
-		local e = store.entities[this.target_id]
-		if e then
-			if e.health.hp / e.health.hp_max < this.hp_threshold then
-				if not this.enabled then
-					this.enabled = true
-					e.unit.damage_factor = e.unit.damage_factor * this.damage_factor
-				end
-			else
-				if this.enabled then
-					this.enabled = false
-					e.unit.damage_factor = e.unit.damage_factor / this.damage_factor
+		while true do
+			local e = store.entities[this.target_id]
+			if e then
+				if e.health.hp / e.health.hp_max < this.hp_threshold then
+					if not this.enabled then
+						this.enabled = true
+						e.unit.damage_factor = e.unit.damage_factor * this.damage_factor
+					end
+				else
+					if this.enabled then
+						this.enabled = false
+						e.unit.damage_factor = e.unit.damage_factor / this.damage_factor
+					end
 				end
 			end
+			coroutine.yield()
 		end
 	end
 }

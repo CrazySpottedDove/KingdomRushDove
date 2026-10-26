@@ -1331,13 +1331,13 @@ function stage_37_barrack_dragon_wardens.destroy(this, store)
 	this.destroyed = true
 end
 
-tt = E:register_t_hot("decal_stage_37_layer02", "decal", true)
+tt = E:register_t("decal_stage_37_layer02", "decal", true)
 tt.render.sprites[1].name = "stage_37_layer02"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN + 1
 
-tt = E:register_t_hot("decal_stage_37_mask_islas", "decal_tween", true)
+tt = E:register_t("decal_stage_37_mask_islas", "decal_tween", true)
 E:add_comps(tt, "main_script")
 tt.main_script.insert = decal_stage_36_mask_islas.insert
 tt.islas_levels = {
@@ -1430,23 +1430,23 @@ end
 tt.temp_i = nil
 tt.tween.remove = false
 
-tt = E:register_t_hot("decal_stage_37_mask_01", "decal", true)
+tt = E:register_t("decal_stage_37_mask_01", "decal", true)
 tt.render.sprites[1].name = "stage_37_mask_01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 263
 
-tt = E:register_t_hot("decal_stage_37_mask_04", "decal", true)
+tt = E:register_t("decal_stage_37_mask_04", "decal", true)
 tt.render.sprites[1].name = "stage_37_mask_04"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 86
 
-tt = E:register_t_hot("decal_stage_37_layer01", "decal", true)
+tt = E:register_t("decal_stage_37_layer01", "decal", true)
 tt.render.sprites[1].name = "stage_37_layer01"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 0
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 
-tt = E:register_t_hot("decal_stage_37_easter_egg_how_to_train_dragon", "decal_scripted", true)
+tt = E:register_t("decal_stage_37_easter_egg_how_to_train_dragon", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_37_easter_egg_how_to_train_dragon_update
 tt.render.sprites[1].prefix = "train_dragon_characters"
@@ -1454,12 +1454,12 @@ tt.render.sprites[1].name = "idle1"
 tt.ui.click_rect = r(-25, -20, 75, 40)
 tt.spawn_entity = "soldier_dragon_warden_dragon_raider_mounted"
 
-tt = E:register_t_hot("decal_stage_37_mask_02", "decal", true)
+tt = E:register_t("decal_stage_37_mask_02", "decal", true)
 tt.render.sprites[1].name = "stage_37_mask_02"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 145
 
-tt = E:register_t_hot("controller_stage_37_dragon_boss", "decal_scripted", true)
+tt = E:register_t("controller_stage_37_dragon_boss", "decal_scripted", true)
 E:add_comps(tt, "events", "editor", "tween")
 tt.boss_controler_balance = {
 	hp = 10400,
@@ -1605,17 +1605,17 @@ tt.tween.props[2].interp = "sine"
 tt.tween.props[2].keys = {{0, v(0, tt.flight_height)}, {fts(6), v(0, tt.flight_height)}, {fts(11), v(0, tt.flight_height + 50)}, {fts(19), v(0, tt.flight_height + 70)}, {fts(24), v(0, tt.flight_height + 70)}, {fts(26), v(0, 0)}}
 tt.tween.props[2].disabled = true
 
-tt = E:register_t_hot("decal_stage_37_mask_03", "decal", true)
+tt = E:register_t("decal_stage_37_mask_03", "decal", true)
 tt.render.sprites[1].name = "stage_37_mask_03"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = 192
 
-tt = E:register_t_hot("decal_stage_37_mask_05", "decal", true)
+tt = E:register_t("decal_stage_37_mask_05", "decal", true)
 tt.render.sprites[1].name = "stage_37_mask_05"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].sort_y_offset = -239
 
-tt = E:register_t_hot("decal_stage_37_tall_tower_mid", "decal_scripted", true)
+tt = E:register_t("decal_stage_37_tall_tower_mid", "decal_scripted", true)
 tt.sid_back = 1
 tt.sid_front = 2
 tt.render.sprites[tt.sid_back].prefix = "destruccion_torres_stage_37_torre_2_back"
@@ -1636,27 +1636,27 @@ tt.spawn_anim = decal_stage_37_tall_tower.spawn_anim
 tt.destroy = decal_stage_37_tall_tower.destroy
 tt.destroy_warden_barrack = fts(16)
 
-tt = E:register_t_hot("decal_stage_37_tall_tower_left", "decal_stage_37_tall_tower_mid", true)
+tt = E:register_t("decal_stage_37_tall_tower_left", "decal_stage_37_tall_tower_mid", true)
 tt.render.sprites[tt.sid_back].prefix = "destruccion_torres_stage_37_torre_3_back"
 tt.render.sprites[tt.sid_back].name = "idle_sana"
 tt.render.sprites[tt.sid_front].prefix = "destruccion_torres_stage_37_torre_3_front"
 tt.render.sprites[tt.sid_front].name = "idle_sana"
 
-tt = E:register_t_hot("decal_stage_37_tall_tower_right", "decal_stage_37_tall_tower_mid", true)
+tt = E:register_t("decal_stage_37_tall_tower_right", "decal_stage_37_tall_tower_mid", true)
 tt.render.sprites[tt.sid_back].name = "destruccion_torres_stage_37_torre_1_back_0001"
 tt.render.sprites[tt.sid_back].animated = false
 tt.render.sprites[tt.sid_front] = nil
 tt.sid_front = nil
 tt.destroy_warden_barrack = nil
 
-tt = E:register_t_hot("decal_stage_37_bridge", "decal", true)
+tt = E:register_t("decal_stage_37_bridge", "decal", true)
 tt.render.sprites[1].prefix = "stage_37_anim_props_puente"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].sort_y_offset = 0
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 tt.destroy = decal_stage_37_bridge.destroy
 
-tt = E:register_t_hot("decal_stage_37_easter_daenerys", "decal_scripted", true)
+tt = E:register_t("decal_stage_37_easter_daenerys", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor")
 tt.main_script.update = decal_stage_37_easter_daenerys.update
 tt.render.sprites[1].prefix = "daenerys_easter_eggDef"
@@ -1664,7 +1664,7 @@ tt.render.sprites[1].name = "idle_1"
 tt.render.sprites[1].exo = true
 tt.ui.click_rect = r(-25, -10, 50, 50)
 
-tt = E:register_t_hot("decal_stage_37_fires_exo", "decal", true)
+tt = E:register_t("decal_stage_37_fires_exo", "decal", true)
 tt.spr_cfgs = {
 	{
 		sort_y_offset = 0
@@ -1696,7 +1696,7 @@ for k, v in pairs(tt.spr_cfgs) do
 	tt.render.sprites[i].sort_y_offset = v.sort_y_offset
 end
 
-tt = E:register_t_hot("stage_37_barrack_dragon_wardens", "tower", true)
+tt = E:register_t("stage_37_barrack_dragon_wardens", "tower", true)
 E:add_comps(tt, "barrack")
 tt.tower.type = "stage_37_barrack_dragon_wardens"
 tt.tower.can_be_sold = false
@@ -1722,7 +1722,7 @@ tt.barrack.rally_fn = RLU.rally_fn_default
 tt.respawn_time = 30
 tt.destroyed = false
 
-tt = E:register_t_hot("stage_37_paths_controller", "decal_scripted", true)
+tt = E:register_t("stage_37_paths_controller", "decal_scripted", true)
 E:add_comps(tt, "events", "editor")
 tt.main_script.update = stage_36_paths_controller.update
 tt.render.sprites[1].prefix = "mecanica_camino_2_stage_2Def"

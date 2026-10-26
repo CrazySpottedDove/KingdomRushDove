@@ -15,11 +15,11 @@ local function AC(tpl, ...)
 	return E:add_comps(tpl, ...)
 end
 local function RT(name, ref)
-	return E:register_t_hot(name, ref, true)
+	return E:register_t(name, ref, true)
 end
 local signal = require("lib.hump.signal")
 local fts = U.fts
-local tt = E:register_t_hot("decal_stage_201_king", "decal_scripted", true)
+local tt = E:register_t("decal_stage_201_king", "decal_scripted", true)
 AC(tt, "attacks", "editor")
 tt.render.sprites[1].prefix = "stage_201_old_kingDef"
 tt.render.sprites[1].name = "idle"
@@ -91,7 +91,7 @@ tt.attacks.list[1].bullet_chances = {0.3, 0.6, 0.1}
 tt.wait_laugh = fts(29)
 tt.sound_attack = "Stage01OldKingGibberishThrow"
 tt.sound_laugh = "Stage01OldKingGibberishLaugh"
-tt = E:register_t_hot("bullet_stage_201_king_anvil", "bomb", true)
+tt = E:register_t("bullet_stage_201_king_anvil", "bomb", true)
 tt.bullet.damage_decay_random = false
 tt.bullet.damage_type = DAMAGE_EXPLOSION
 tt.bullet.hit_decal = "decal_bomb_crater_KR5"
@@ -117,29 +117,29 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].scale = vv(1)
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{0, v(1, 1)}, {fts(5), v(1, 1)}, {fts(15), v(0.8, 1.4)}}
-tt = E:register_t_hot("bullet_stage_201_king_bust", "bullet_stage_201_king_anvil", true)
+tt = E:register_t("bullet_stage_201_king_bust", "bullet_stage_201_king_anvil", true)
 tt.bullet.hit_fx = "fx_stage_201_bust_hit"
 tt.render.sprites[1].name = "Stage_1_old_king_projectiles_pojectile_bust"
-tt = E:register_t_hot("bullet_stage_201_king_sheep", "bullet_stage_201_king_anvil", true)
+tt = E:register_t("bullet_stage_201_king_sheep", "bullet_stage_201_king_anvil", true)
 tt.bullet.hit_fx = "fx_stage_201_sheep_hit"
 tt.bullet.hit_decal = "decal_stage_201_sheep_hit"
 tt.render.sprites[1].prefix = "Stage_1_old_king_projectiles_pojectile_sheep"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
-tt = E:register_t_hot("fx_stage_201_anvil_hit", "fx", true)
+tt = E:register_t("fx_stage_201_anvil_hit", "fx", true)
 tt.render.sprites[1].prefix = "Stage_1_old_king_projectiles_anvil_break_fx"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].z = Z_OBJECTS - 1
-tt = E:register_t_hot("fx_stage_201_bust_hit", "fx", true)
+tt = E:register_t("fx_stage_201_bust_hit", "fx", true)
 tt.render.sprites[1].prefix = "Stage_1_old_king_projectiles_bust_break_fx"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].z = Z_OBJECTS - 1
-tt = E:register_t_hot("fx_stage_201_sheep_hit", "fx", true)
+tt = E:register_t("fx_stage_201_sheep_hit", "fx", true)
 tt.render.sprites[1].prefix = "Stage_1_old_king_projectiles_sheep_break_fx"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].z = Z_OBJECTS - 1
-tt = E:register_t_hot("bullet_stage_201_king", "bullet_stage_201_king_anvil", true)
-tt = E:register_t_hot("decal_stage_201_anvil_bust_hit", "decal_tween", true)
+tt = E:register_t("bullet_stage_201_king", "bullet_stage_201_king_anvil", true)
+tt = E:register_t("decal_stage_201_anvil_bust_hit", "decal_tween", true)
 E:add_comps(tt, "main_script")
 tt.render.sprites[1].prefix = "Stage_1_old_king_projectiles_explosion_fx_a_decal"
 tt.render.sprites[1].name = "run"
@@ -154,7 +154,7 @@ tt.render.sprites[2].loop = false
 tt.render.sprites[2].z = Z_OBJECTS
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2.5, 0}}
-local tt = E:register_t_hot("decal_stage_201_cow", "decal_scripted", true)
+local tt = E:register_t("decal_stage_201_cow", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "stage201_cowDef"
 tt.render.sprites[1].name = "idle"
@@ -178,28 +178,28 @@ tt.main_script.update = function(this, store, script)
 	signal.emit("cow-ard-spies-stage01")
 	simulation:queue_remove_entity(this)
 end
-local tt = E:register_t_hot("decal_stage_201_hp_mask_1", "decal", true)
+local tt = E:register_t("decal_stage_201_hp_mask_1", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "KR6_stage_201_iron_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-local tt = E:register_t_hot("decal_stage_201_mask_1", "decal", true)
+local tt = E:register_t("decal_stage_201_mask_1", "decal", true)
 tt.render.sprites[1].name = "KR6_stage_201_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-local tt = E:register_t_hot("decal_stage_201_mask_2", "decal", true)
+local tt = E:register_t("decal_stage_201_mask_2", "decal", true)
 tt.render.sprites[1].name = "KR6_stage_201_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-local tt = E:register_t_hot("decal_stage_201_mask_3", "decal", true)
+local tt = E:register_t("decal_stage_201_mask_3", "decal", true)
 tt.render.sprites[1].name = "KR6_stage_201_mask3"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-local tt = E:register_t_hot("decal_stage_201_mask_4", "decal", true)
+local tt = E:register_t("decal_stage_201_mask_4", "decal", true)
 tt.render.sprites[1].name = "KR6_stage_201_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-local tt = E:register_t_hot("decal_stage_201_merchant", "decal_scripted", true)
+local tt = E:register_t("decal_stage_201_merchant", "decal_scripted", true)
 tt.render.sprites[1].prefix = "stage_201_merchantDef"
 tt.render.sprites[1].name = "idle_1"
 tt.render.sprites[1].exo = true
@@ -223,7 +223,7 @@ tt.main_script.update = function(this, store, script)
 	signal.emit("my-cabbages-stage01")
 	U.y_animation_wait(this)
 end
-local tt = E:register_t_hot("decal_stage_201_sheep", "decal_scripted", true)
+local tt = E:register_t("decal_stage_201_sheep", "decal_scripted", true)
 E:add_comps(tt, "ui", "editor", "editor_script")
 tt.render.sprites[1].prefix = "stage_201_sheepDef"
 tt.render.sprites[1].name = "idle"
@@ -236,7 +236,7 @@ tt.taps_to_explode = 5
 tt.ui.click_rect = r(-15, -5, 30, 25)
 tt.editor.flip = 0
 tt.editor.props = {{"editor.flip", PT_NUMBER}}
-local tt = E:register_t_hot("decal_stage_201_sheep_hit", "decal_tween", true)
+local tt = E:register_t("decal_stage_201_sheep_hit", "decal_tween", true)
 E:add_comps(tt, "main_script")
 tt.render.sprites[1].name = "Stage_1_old_king_projectiles_explosion_fx_b_decal"
 tt.render.sprites[1].animated = false
@@ -256,10 +256,10 @@ tt.render.sprites[3].loop = false
 tt.render.sprites[3].z = Z_OBJECTS
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2.5, 0}}
-local tt = E:register_t_hot("decal_stage_201_sheep_small", "decal_stage_201_sheep", true)
+local tt = E:register_t("decal_stage_201_sheep_small", "decal_stage_201_sheep", true)
 tt.render.sprites[1].prefix = "stage_201_sheep_smallDef"
 tt.ui.click_rect = r(-12.5, -5, 25, 20)
-local tt = E:register_t_hot("decal_stage_201_statue", "decal_scripted", true)
+local tt = E:register_t("decal_stage_201_statue", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "stage201_statueDef"
 tt.render.sprites[1].name = "idle"
@@ -295,7 +295,7 @@ tt.main_script.update = function(this, store, script)
 	end
 	simulation:queue_remove_entity(this)
 end
-local tt = E:register_t_hot("decal_stage_201_stone", "decal_scripted", true)
+local tt = E:register_t("decal_stage_201_stone", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "stage_201_stoneDef"
 tt.render.sprites[1].name = "idle"
@@ -346,20 +346,20 @@ tt.main_script.update = function(this, store, script)
 	end
 	simulation:queue_remove_entity(this)
 end
-local tt = E:register_t_hot("decal_stage_201_water", "decal", true)
+local tt = E:register_t("decal_stage_201_water", "decal", true)
 tt.render.sprites[1].prefix = "stage_201_water_dotsDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].random_ts = fts(15)
-local tt = E:register_t_hot("decal_stage_201_worker_1", "decal", true)
+local tt = E:register_t("decal_stage_201_worker_1", "decal", true)
 tt.render.sprites[1].prefix = "stage201_dude1Def"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].random_ts = fts(30)
-local tt = E:register_t_hot("decal_stage_201_worker_1f", "decal_stage_201_worker_1", true)
+local tt = E:register_t("decal_stage_201_worker_1f", "decal_stage_201_worker_1", true)
 tt.render.sprites[1].flip_x = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
-local tt = E:register_t_hot("decal_stage_201_worker_2", "decal_scripted", true)
+local tt = E:register_t("decal_stage_201_worker_2", "decal_scripted", true)
 tt.render.sprites[1].prefix = "stage201_dude2Def"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -373,16 +373,16 @@ tt.main_script.update = function(this, store, script)
 		coroutine.yield()
 	end
 end
-local tt = E:register_t_hot("decal_stage_201_worker_2f", "decal_stage_201_worker_2", true)
+local tt = E:register_t("decal_stage_201_worker_2f", "decal_stage_201_worker_2", true)
 tt.render.sprites[1].flip_x = true
-local tt = E:register_t_hot("decal_stage_201_worker_3", "decal_stage_201_worker_1", true)
+local tt = E:register_t("decal_stage_201_worker_3", "decal_stage_201_worker_1", true)
 tt.render.sprites[1].prefix = "stage201_dude3Def"
 tt.render.sprites[1].name = "loop"
-local tt = E:register_t_hot("decal_stage_201_worker_3f", "decal_stage_201_worker_3", true)
+local tt = E:register_t("decal_stage_201_worker_3f", "decal_stage_201_worker_3", true)
 tt.render.sprites[1].flip_x = true
-local tt = E:register_t_hot("decal_stage_201_worker_4", "decal_stage_201_worker_3", true)
+local tt = E:register_t("decal_stage_201_worker_4", "decal_stage_201_worker_3", true)
 tt.render.sprites[1].prefix = "stage201_dude4Def"
-local tt = E:register_t_hot("decal_stage_201_worker_statue", "decal", true)
+local tt = E:register_t("decal_stage_201_worker_statue", "decal", true)
 tt.render.sprites[1].prefix = "stage201_dude1_statueDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true

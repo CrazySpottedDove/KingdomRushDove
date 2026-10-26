@@ -86,7 +86,7 @@ function decal_whale.update(this, store)
 	log.debug("whale ended")
 end
 
-local tt = E:register_t_hot("decal_whale", "decal_scripted", true)
+local tt = E:register_t("decal_whale", "decal_scripted", true)
 AC(tt, "nav_path")
 tt.path_origin_offset = vec_2(36, 36)
 tt.main_script.insert = decal_whale.insert

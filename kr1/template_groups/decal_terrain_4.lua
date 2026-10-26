@@ -86,7 +86,7 @@ function decal_terrain_4_cheshire_cat_easter_egg.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-tt = E:register_t_hot("decal_terrain_4_cheshire_cat_easter_egg", "decal_scripted", true)
+tt = E:register_t("decal_terrain_4_cheshire_cat_easter_egg", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "cheshire_cat_easter_egg_cat"
 tt.render.sprites[1].name = "idle"
@@ -100,7 +100,7 @@ tt.appear_duration_max = 7
 tt.sound_in = "Terrain4CheshireCatIn"
 tt.sound_out = "Terrain4CheshireCatOut"
 
-tt = E:register_t_hot("controller_terrain_4_animated_armor_achievement", nil, true)
+tt = E:register_t("controller_terrain_4_animated_armor_achievement", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_terrain_4_animated_armor_achievement.update
 tt.revived = 0

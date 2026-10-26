@@ -447,14 +447,14 @@ function controller_stage_24_machinist.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-tt = E:register_t_hot("decal_stage_24_mask_1", "decal", true)
+tt = E:register_t("decal_stage_24_mask_1", "decal", true)
 tt.render.sprites[1].name = "stage24_mask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].draw_order = 1
 tt.render.sprites[1].hidden = true
 
-tt = E:register_t_hot("decal_stage_24_gear_tower", "decal_scripted", true)
+tt = E:register_t("decal_stage_24_gear_tower", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "towerDef"
 tt.render.sprites[1].name = "loop"
@@ -462,7 +462,7 @@ tt.render.sprites[1].exo = true
 tt.main_script.update = decal_stage_24_gears_update
 tt.ui.click_rect = r(15, -35, 40, 65)
 
-tt = E:register_t_hot("decal_stage_24_bubble", "decal_scripted", true)
+tt = E:register_t("decal_stage_24_bubble", "decal_scripted", true)
 tt.render.sprites[1].prefix = "lavabubbleDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].loop = false
@@ -471,24 +471,24 @@ tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].hidden = true
 tt.main_script.update = decal_stage_24_bubble_update
 
-tt = E:register_t_hot("decal_stage_24_fans", "decal", true)
+tt = E:register_t("decal_stage_24_fans", "decal", true)
 tt.render.sprites[1].prefix = "stage2dlcanimsfansDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 
-tt = E:register_t_hot("decal_stage_24_dust", "decal", true)
+tt = E:register_t("decal_stage_24_dust", "decal", true)
 tt.render.sprites[1].prefix = "t5_dustDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_24_smoke", "decal", true)
+tt = E:register_t("decal_stage_24_smoke", "decal", true)
 tt.render.sprites[1].prefix = "t5_smokeDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 
-tt = E:register_t_hot("decal_stage_24_upgrade_station", "decal_scripted", true)
+tt = E:register_t("decal_stage_24_upgrade_station", "decal_scripted", true)
 tt.render.sprites[1].prefix = "converterDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
@@ -539,20 +539,20 @@ tt.sound_open = "Stage24UpgradeStationIn"
 tt.sound_close = "Stage24UpgradeStationOut"
 tt.sound_transform = "Stage24UpgradeStationTransform"
 
-tt = E:register_t_hot("decal_stage_24_gear_factory", "decal", true)
+tt = E:register_t("decal_stage_24_gear_factory", "decal", true)
 tt.render.sprites[1].prefix = "factory2Def"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_24_gear_floor", "decal_scripted", true)
+tt = E:register_t("decal_stage_24_gear_floor", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "dlc_enanos_stage_02_LAYERS_gear"
 tt.render.sprites[1].name = "loop"
 tt.main_script.update = decal_stage_24_gears_update
 tt.ui.click_rect = r(-25, -5, 50, 35)
 
-tt = E:register_t_hot("decal_stage_24_modes_decos", "decal_scripted", true)
+tt = E:register_t("decal_stage_24_modes_decos", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage2DLC_ascensor_modosDef"
 tt.render.sprites[1].name = "idle"
@@ -560,28 +560,28 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 tt.main_script.update = decal_stage_24_modes_decos_update
 
-tt = E:register_t_hot("decal_stage_24_gears", "decal", true)
+tt = E:register_t("decal_stage_24_gears", "decal", true)
 tt.render.sprites[1].prefix = "stage2dlcanimstuercasDef"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_24_mask_3", "decal", true)
+tt = E:register_t("decal_stage_24_mask_3", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage24_mask3"
 tt.render.sprites[1].animated = false
 
-tt = E:register_t_hot("decal_stage_24_mask_2", "decal", true)
+tt = E:register_t("decal_stage_24_mask_2", "decal", true)
 tt.render.sprites[1].name = "stage24_mask2"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
-tt = E:register_t_hot("decal_stage_24_mask_5", "decal", true)
+tt = E:register_t("decal_stage_24_mask_5", "decal", true)
 tt.render.sprites[1].name = "stage24_mask5"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_24_factory", "decal_scripted", true)
+tt = E:register_t("decal_stage_24_factory", "decal_scripted", true)
 E:add_comps(tt, "spawner", "editor")
 tt.render.sprites[1].prefix = "factoryDef"
 tt.render.sprites[1].name = "idle"
@@ -592,14 +592,14 @@ tt.spawner.eternal = true
 tt.sound_factory_turn_on_end = "Stage24FactoryTurnOnEnd"
 tt.sound_factory_turn_off = "Stage24FactoryTurnOff"
 
-tt = E:register_t_hot("decal_stage_24_factory_conveyor_belt", "decal", true)
+tt = E:register_t("decal_stage_24_factory_conveyor_belt", "decal", true)
 tt.render.sprites[1].prefix = "dlc_enanos_stage_02_LAYERS_factorygate"
 tt.render.sprites[1].name = "activeloop"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].draw_order = 1
 tt.render.sprites[1].hidden = true
 
-tt = E:register_t_hot("decal_stage_24_factory_sparks", "decal_scripted", true)
+tt = E:register_t("decal_stage_24_factory_sparks", "decal_scripted", true)
 tt.render.sprites[1].prefix = "dlc_dwarf_boss_operator_sparks"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].loop = false
@@ -607,7 +607,7 @@ tt.render.sprites[1].z = Z_DECALS + 1
 tt.render.sprites[1].hidden = true
 tt.main_script.update = decal_stage_24_factory_sparks.update
 
-tt = E:register_t_hot("decal_stage_24_elevator", "decal_scripted", true)
+tt = E:register_t("decal_stage_24_elevator", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "ascensorDef"
 tt.render.sprites[1].name = "idle"
@@ -617,19 +617,19 @@ tt.main_script.update = decal_stage_24_elevator.update
 tt.sound_machinist_in = "Stage24MachinistEnter"
 tt.sound_machinist_out = "Stage24MachinistExit"
 
-tt = E:register_t_hot("decal_stage_24_mask_4", "decal", true)
+tt = E:register_t("decal_stage_24_mask_4", "decal", true)
 tt.render.sprites[1].name = "stage24_mask4"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = 44
 
-tt = E:register_t_hot("decal_stage_24_mask_6", "decal", true)
+tt = E:register_t("decal_stage_24_mask_6", "decal", true)
 tt.render.sprites[1].name = "stage24_mask6"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = 95
 
-tt = E:register_t_hot("controller_stage_24_machinist", nil, true)
+tt = E:register_t("controller_stage_24_machinist", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_24_machinist.update
 tt.wave_config = {{

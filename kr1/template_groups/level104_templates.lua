@@ -267,7 +267,7 @@ function controller_stage_04_arboreans.update(this, store)
 	end
 end
 
-tt = E:register_t_hot("decal_stage_04_arborean_right", "decal_scripted", true)
+tt = E:register_t("decal_stage_04_arborean_right", "decal_scripted", true)
 E:add_comps(tt, "ui", "motion", "force_motion")
 tt.render.sprites[1].prefix = "stage_4_arboreans_arborean_01"
 tt.render.sprites[1].name = "walk"
@@ -286,14 +286,14 @@ tt.force_motion.fr = 0.1
 tt.force_motion.a_step = 20
 tt.sound_fall = "Stage04ArboreanFall"
 
-tt = E:register_t_hot("decal_stage_04_arborean_center", "decal_stage_04_arborean_right", true)
+tt = E:register_t("decal_stage_04_arborean_center", "decal_stage_04_arborean_right", true)
 tt.render.sprites[1].prefix = "stage_4_arboreans_arborean_03"
 tt.main_script.update = decal_stage_04_arborean_update
 tt.walk_destination = {v(0, 0), v(142, -75)}
 tt.fall_to_y = 300
 tt.sprite_change = {"stage_4_arboreans_arborean_04", "stage_4_arboreans_arborean_03"}
 
-tt = E:register_t_hot("decal_stage_04_elder_rune", "decal_click_play", true)
+tt = E:register_t("decal_stage_04_elder_rune", "decal_click_play", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage_4_elder_rune_4"
 tt.render.sprites[1].loop = true
@@ -309,7 +309,7 @@ tt.click_play.clicked_sound = "Stage04Rune"
 tt.ui.can_click = true
 tt.ui.click_rect = r(-35, -100, 70, 70)
 
-tt = E:register_t_hot("stage_4_leaf_anim", "decal_delayed_play", true)
+tt = E:register_t("stage_4_leaf_anim", "decal_delayed_play", true)
 E:add_comps(tt, "tween")
 local duration = 2.8
 local fade_time = 0.2
@@ -329,13 +329,13 @@ tt.tween.props[2].name = "offset"
 tt.tween.props[2].keys = {{0, v(0, 0)}, {duration, v(0, -130)}}
 tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"render.sprites[1].scale", PT_COORDS}}
 
-tt = E:register_t_hot("decal_stage_04_arborean_left", "decal_stage_04_arborean_right", true)
+tt = E:register_t("decal_stage_04_arborean_left", "decal_stage_04_arborean_right", true)
 tt.render.sprites[1].prefix = "stage_4_arboreans_arborean_02"
 tt.main_script.update = decal_stage_04_arborean_update
 tt.walk_destination = {v(0, 0), v(54, 8), v(151, 55), v(54, 8)}
 tt.fall_to_y = 580
 
-tt = E:register_t_hot("stage_4_arborean_vine", "decal_scripted", true)
+tt = E:register_t("stage_4_arborean_vine", "decal_scripted", true)
 E:add_comps(tt, "ui")
 tt.render.sprites[1].prefix = "anim_liana"
 tt.ui.can_click = true
@@ -350,7 +350,7 @@ tt.down_cooldown = 14
 tt.down_duration = 3
 tt.sound_fall = "Stage04ArboreanFall"
 
-tt = E:register_t_hot("decal_stage_04_mask_tunnel", "decal", true)
+tt = E:register_t("decal_stage_04_mask_tunnel", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "Stage4_NEW_Topmask"
 tt.render.sprites[1].animated = false
@@ -361,7 +361,7 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].z = Z_OBJECTS
 tt.render.sprites[2].sort_y_offset = 35
 
-tt = E:register_t_hot("controller_stage_04_easteregg_sheepy", nil, true)
+tt = E:register_t("controller_stage_04_easteregg_sheepy", nil, true)
 E:add_comps(tt, "ui", "pos", "main_script")
 tt.main_script.update = controller_stage_04_easteregg_sheepy_update
 tt.entity_baby = "decal_stage_04_easteregg_sheepy_baby"
@@ -371,30 +371,30 @@ tt.old_man_cooldown = 5
 tt.sheepy_man_cooldown = 5
 tt.ui.click_rect = r(-65, -10, 80, 40)
 
-tt = E:register_t_hot("decal_stage_04_elder_rune_static", "decal", true)
+tt = E:register_t("decal_stage_04_elder_rune_static", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage_4_elder_rune_4_0119"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
 
-tt = E:register_t_hot("decal_stage_04_waterfall", "decal_scripted", true)
+tt = E:register_t("decal_stage_04_waterfall", "decal_scripted", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "anim_waterfall"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
 
-tt = E:register_t_hot("decal_stage_04_easteregg_sheepy_sheepy", "decal", true)
+tt = E:register_t("decal_stage_04_easteregg_sheepy_sheepy", "decal", true)
 tt.render.sprites[1].prefix = "sheepy_stage4_sheepy"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_04_easteregg_sheepy_old_man", "decal", true)
+tt = E:register_t("decal_stage_04_easteregg_sheepy_old_man", "decal", true)
 tt.render.sprites[1].prefix = "sheepy_stage4_old_arborean"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t_hot("decal_stage_04_easteregg_sheepy_baby", "decal_scripted", true)
+tt = E:register_t("decal_stage_04_easteregg_sheepy_baby", "decal_scripted", true)
 E:add_comps(tt, "force_motion")
 tt.render.sprites[1].prefix = "sheepy_stage4_baby"
 tt.render.sprites[1].animated = true
@@ -408,48 +408,48 @@ tt.force_motion.ramp_radius = 30
 tt.force_motion.fr = 0.1
 tt.force_motion.a_step = 15
 
-tt = E:register_t_hot("stage_04_mask_top", "decal", true)
+tt = E:register_t("stage_04_mask_top", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "stage4_elevatormask1"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
 
-tt = E:register_t_hot("controller_stage_04_arboreans", nil, true)
+tt = E:register_t("controller_stage_04_arboreans", nil, true)
 E:add_comps(tt, "main_script")
 tt.main_script.update = controller_stage_04_arboreans.update
 
-tt = E:register_t_hot("stage_04_mask_bridge_center_back", "decal", true)
+tt = E:register_t("stage_04_mask_bridge_center_back", "decal", true)
 E:add_comps(tt, "editor")
 tt.render.sprites[1].name = "Stage4_center_bridge_back_mask"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 3
 tt.render.sprites[1].pos = v(512, 384)
 
-tt = E:register_t_hot("stage_04_mask_bridge_right_front", "stage_04_mask_bridge_center_back", true)
+tt = E:register_t("stage_04_mask_bridge_right_front", "stage_04_mask_bridge_center_back", true)
 tt.render.sprites[1].name = "Stage4_right_bridge_front_mask"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
 
-tt = E:register_t_hot("stage_04_mask_bridge_left_back", "stage_04_mask_bridge_center_back", true)
+tt = E:register_t("stage_04_mask_bridge_left_back", "stage_04_mask_bridge_center_back", true)
 tt.render.sprites[1].name = "Stage4_left_bridge_back_mask"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 1
 
-tt = E:register_t_hot("stage_04_mask_bottom", "stage_04_mask_top", true)
+tt = E:register_t("stage_04_mask_bottom", "stage_04_mask_top", true)
 tt.render.sprites[1].name = "stage4_elevatormask2"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
 
-tt = E:register_t_hot("stage_04_mask_bridge_right_back", "stage_04_mask_bridge_center_back", true)
+tt = E:register_t("stage_04_mask_bridge_right_back", "stage_04_mask_bridge_center_back", true)
 tt.render.sprites[1].name = "Stage4_right_bridge_back_mask"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 3
 
-tt = E:register_t_hot("stage_04_mask_bridge_left_front", "stage_04_mask_bridge_center_back", true)
+tt = E:register_t("stage_04_mask_bridge_left_front", "stage_04_mask_bridge_center_back", true)
 tt.render.sprites[1].name = "Stage4_left_bridge_front_mask"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 1
 
-tt = E:register_t_hot("stage_04_mask_bridge_center_front", "stage_04_mask_bridge_center_back", true)
+tt = E:register_t("stage_04_mask_bridge_center_front", "stage_04_mask_bridge_center_back", true)
 tt.render.sprites[1].name = "Stage4_center_bridge_front_mask"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 2
 
-tt = E:register_t_hot("bush_ladder", "decal_scripted", true)
+tt = E:register_t("bush_ladder", "decal_scripted", true)
 E:add_comps(tt, "spawner", "tween")
 tt.render.sprites[1].prefix = "elevator_cosoDef"
 tt.render.sprites[1].name = "idleraise"
@@ -558,7 +558,7 @@ tt.tween.props[3].name = "offset"
 tt.tween.props[3].keys = {{0, v(0, 100)}, {fts(5), v(0, 0)}}
 tt.tween.props[3].sprite_id = 2
 
-tt = E:register_t_hot("bush_spawner", "decal_scripted", true)
+tt = E:register_t("bush_spawner", "decal_scripted", true)
 E:add_comps(tt, "spawner", "editor")
 tt.render.sprites[1].prefix = "elevatorDef"
 tt.render.sprites[1].name = "idle"

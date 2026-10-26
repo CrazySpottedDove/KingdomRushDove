@@ -2,7 +2,6 @@
 local log = require("lib.klua.log"):new("entity_db")
 
 require("lib.klua.table")
-local perf = require("dove_modules.perf.perf")
 
 local copy = table.deepclone
 
@@ -18,8 +17,7 @@ local entity_db = {
 	last_id = 1,
 	entities = {},
 	components = {},
-	components_cloner = {},
-	hots = {},
+	components_cloner = require("all.component_cloner_generated"),
 	loaded = false
 }
 
@@ -31,7 +29,6 @@ function entity_db:Load()
 
 	if not self.entities_backup then
 		self:load()
-		self:precompile()
 		self.entities_backup = quickcopy(self.entities)
 	else
 		-- 已有实体数据库备份时，直接拷贝即可。components 约定为只读数据，无需重复拷贝。
@@ -42,22 +39,10 @@ function entity_db:Load()
 	end
 end
 
--- 构建期使用：只加载实体模板，不触发运行时预编译
-function entity_db:load_for_build()
-	self.last_id = 1
-	self.loaded = true
-	self:load()
-end
-
 -- 实体数据库的首次初始化，实际的初始化逻辑，只负责将组件和实体模板从文件加载到内存中。
 --- 插件应当 HOOK 该函数，来实现自己定义的组件和实体模板的加载（不要在这个HOOK中做其他事情！）。
---- 通过将 precompile 步骤和 load 步骤分离，允许了在 load HOOK 中注册的实体也享受到编译效果，从而避免错误地继承一个已被编译的脚本的问题。
 function entity_db:load()
 	require("components")
-
-	local compiler = require("precompile.interface")
-	self.components_cloner = compiler:compile_component_cloners(self.components)
-
 	require("templates")
 	require("game_templates")
 
@@ -79,30 +64,13 @@ function entity_db:load()
 -- self:test_tween()
 end
 
---- 在 DI:patch_templates() 后调用，负责进行一些预计算工作，减少运行时检查开销
+--- 在 DI:patch_templates() 后调用，负责进行一些预计算工作。
 function entity_db:precompute()
 end
 
---- 在第一次初始化 entity_db 时调用，对 entity_db 里的实体运行逻辑进行类似编译的操作，减少运行时的动态分支，以提高脚本执行性能
-function entity_db:precompile()
-	local compiler = require("precompile.interface")
-	perf.tmp_start("precompile")
-	for _, e in pairs(self.entities) do
-		compiler:compile(e)
-	end
-	perf.tmp_stop("precompile")
-end
-
-function entity_db:precompile_hot()
-	for i = #self.hots, 1, -1 do
-		local name, is_tmp = self.hots[i][1], self.hots[i][2]
-
-		if not is_tmp then
-			self.entities_backup[name] = quickcopy(self.entities[name])
-		end
-
-		self.hots[i] = nil
-	end
+--- 进入局内后不再需要模板快照，释放这份深拷贝。
+function entity_db:clear_backup()
+	self.entities_backup = nil
 end
 
 --- 确认 entity_db 已加载
@@ -169,7 +137,7 @@ function entity_db:test()
 	collectgarbage("collect")
 
 	local mem_before = collectgarbage("count") -- 单位：KB
-	local t0 = os.clock()
+	local t = os.clock()
 
 	self:load()
 
@@ -196,7 +164,7 @@ function entity_db:test()
 
 	local mem_after = collectgarbage("count") -- 单位：KB
 
-	print(string.format(_("ENTITY_DB_LOAD_TIME"), t1 - t0))
+	print(string.format(_("ENTITY_DB_LOAD_TIME"), t1 - t))
 	print(string.format(_("ENTITY_DB_MEM_BEFORE"), mem_before))
 	print(string.format(_("ENTITY_DB_MEM_AFTER"), mem_after))
 	print(string.format(_("ENTITY_DB_MEM_DELTA"), mem_after - mem_before))
@@ -204,7 +172,7 @@ function entity_db:test()
 	print(string.format(_("ENTITY_DB_COMPONENT_COUNT"), component_count))
 
 	-- 可选：测试批量创建实体的性能和内存
-	local create_count = 1000
+	local create_count = 1
 	local t2 = os.clock()
 	local tmp_entities = {}
 
@@ -240,49 +208,15 @@ function entity_db:register_t(name, base)
 	-- end
 
 	local t = base and quickcopy(self.entities[base]) or {}
-
 	t.template_name = name
 	self.entities[name] = t
 
 	return t
 end
 
---- 热注册实体
----@param name string 模板名
----@param base string 父模板名
----@param is_tmp boolean 是否为临时模板，临时模板不会被备份到 entities_backup 中
-function entity_db:register_t_hot(name, base, is_tmp)
-	local t = base and quickcopy(self.entities[base]) or {}
-	self.entities[name] = t
-	self.hots[#self.hots + 1] = {name, is_tmp}
-
-	if t.main_script then
-		local compiler = require("precompile.interface")
-		compiler:restore_main_script(t, base)
-	end
-
-	t.template_name = name
-
-	return t
-end
-
---- 临时热加载实体
----@param name string 模板名
----@param base string 父模板名
-function entity_db:register_t_tmp(name, base)
-	local t = base and quickcopy(self.entities[base]) or {}
-	self.entities[name] = t
-	self.hots[#self.hots + 1] = {name, true}
-
-	if t.main_script then
-		local compiler = require("precompile.interface")
-		compiler:restore_main_script(t, base)
-	end
-
-	t.template_name = name
-
-	return t
-end
+--- DEPRECATED，直接使用register_t 热注册实体
+entity_db.register_t_hot = entity_db.register_t
+entity_db.register_t_tmp = entity_db.register_t
 
 function entity_db:register_c(name, base)
 	-- if self.components[name] then
@@ -311,11 +245,6 @@ function entity_db:clone_c(name)
 
 	-- 	return
 	-- end
-
-	local cloner = self.components_cloner[name]
-	if cloner then
-		return cloner(self.components[name])
-	end
 
 	return copy(self.components[name])
 end
@@ -358,7 +287,7 @@ function entity_db:create_entity(t)
 	return out
 end
 
---- 这是一个面向伤害的特殊优化函数，因为调用 table.deepclone 在创建伤害时的效率是直接给一个伤害表的 1 / 10。
+--- 这是一个面向伤害的特殊优化函数，因为调用 table.deepclone 在创建伤害时的效率是直接给一个伤害表的 1 / 1。
 --- 注意和 templates.lua 中的 damage 模板同步定义。
 function entity_db.create_damage()
 	return {
@@ -420,13 +349,13 @@ function entity_db:filter(entities, ...)
 	for id, e in pairs(entities) do
 		for _, n in pairs({...}) do
 			if not e[n] then
-				goto label_12_0
+				goto label_12_
 			end
 		end
 
 		table.insert(result, e)
 
-		::label_12_0::
+		::label_12_::
 	end
 
 	return result
@@ -437,7 +366,7 @@ function entity_db:filter_iter(entities, c1, c2, c3)
 		local k, v = i, nil
 
 		while true do
-			::label_14_0::
+			::label_14_::
 
 			k, v = next(t, k)
 
@@ -446,15 +375,15 @@ function entity_db:filter_iter(entities, c1, c2, c3)
 			end
 
 			if c1 and not v[c1] then
-				goto label_14_0
+				goto label_14_
 			end
 
 			if c2 and not v[c2] then
-				goto label_14_0
+				goto label_14_
 			end
 
 			if c3 and not v[c3] then
-				goto label_14_0
+				goto label_14_
 			end
 
 			return k, v
@@ -570,7 +499,7 @@ function entity_db:patch_config(config)
 		end
 		if t.tower then
 			t.tower.cooldown_factor_divider = config.tower_cooldown_divider * t.tower.cooldown_factor_divider
-			t.tower.cooldown_factor = 1.0 / t.tower.cooldown_factor_divider
+			t.tower.cooldown_factor = 1. / t.tower.cooldown_factor_divider
 			SU.change_fps(0, t, t.tower.cooldown_factor_divider)
 			t.tower.damage_factor = t.tower.damage_factor * config.tower_damage_multiplier
 			if t.attacks then

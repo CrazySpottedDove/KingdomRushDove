@@ -22,7 +22,7 @@ import re
 import sys
 
 KEYWORDS = {"function", "do", "then", "end", "repeat", "until", "else", "elseif", "local", "for", "in", "if", "while"}
-SKIP_DIRS = {"lib", "_assets", "tmp", "precompile", ".git", ".agents", "scripts", "love_env", ".versions", "mime"}
+SKIP_DIRS = {"lib", "_assets", "tmp", ".git", ".agents", "scripts", "love_env", ".versions", "mime"}
 
 
 def tokenize(src):

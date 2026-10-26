@@ -111,11 +111,11 @@ local function decal_s09_crystal_serpent_scream_update(this, store)
 	simulation:queue_remove_entity(this)
 end
 local tt
-tt = E:register_t_hot("aura_waterfall_entrance", "aura", true)
+tt = E:register_t("aura_waterfall_entrance", "aura", true)
 tt.main_script.update = aura_waterfall_entrance_update
 tt.show_fx = "fx_waterfall_splash"
 
-tt = E:register_t_hot("decal_s09_land_3", "decal_background", true)
+tt = E:register_t("decal_s09_land_3", "decal_background", true)
 AC(tt, "tween")
 tt.render.sprites[1].name = "Stage09_0002"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
@@ -123,13 +123,13 @@ tt.editor.game_mode = 1
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{fts(9), 255}, {fts(18), 0}}
 
-tt = E:register_t_hot("decal_s09_land_2", "decal_s09_land_3", true)
+tt = E:register_t("decal_s09_land_2", "decal_s09_land_3", true)
 tt.render.sprites[1].name = "Stage09_0003"
 
-tt = E:register_t_hot("decal_s09_land_1", "decal_s09_land_3", true)
+tt = E:register_t("decal_s09_land_1", "decal_s09_land_3", true)
 tt.render.sprites[1].name = "Stage09_0004"
 
-tt = E:register_t_hot("decal_s09_crystal_1", "decal_timed", true)
+tt = E:register_t("decal_s09_crystal_1", "decal_timed", true)
 AC(tt, "editor")
 tt.render.sprites[1].prefix = "decal_s09_crystal_1"
 tt.render.sprites[1].name = "idle"
@@ -141,19 +141,19 @@ tt.editor.tag = 1
 tt.editor.props = {{"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
 tt.debris_pos = vec_2(-5, 1)
 
-tt = E:register_t_hot("decal_s09_crystal_2", "decal_s09_crystal_1", true)
+tt = E:register_t("decal_s09_crystal_2", "decal_s09_crystal_1", true)
 tt.render.sprites[1].prefix = "decal_s09_crystal_2"
 tt.debris_pos = vec_2(9, 4)
 
-tt = E:register_t_hot("decal_s09_crystal_3", "decal_s09_crystal_1", true)
+tt = E:register_t("decal_s09_crystal_3", "decal_s09_crystal_1", true)
 tt.render.sprites[1].prefix = "decal_s09_crystal_3"
 tt.debris_pos = vec_2(9, -5)
 
-tt = E:register_t_hot("decal_s09_crystal_4", "decal_s09_crystal_1", true)
+tt = E:register_t("decal_s09_crystal_4", "decal_s09_crystal_1", true)
 tt.render.sprites[1].prefix = "decal_s09_crystal_4"
 tt.debris_pos = vec_2(-6, 6)
 
-tt = E:register_t_hot("decal_s09_crystal_serpent_back", "decal_tween", true)
+tt = E:register_t("decal_s09_crystal_serpent_back", "decal_tween", true)
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "crystal_serpent_appear"
 tt.render.sprites[1].loop = false
@@ -161,18 +161,18 @@ tt.tween.props[1].name = "offset"
 tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(80), vec_2(0, 0)}, {fts(114), vec_2(0, 0)}}
 tt.sound_events.insert = "ElvesCrystalSerpentPassby"
 
-tt = E:register_t_hot("decal_s09_crystal_serpent_attack", "decal_scripted", true)
+tt = E:register_t("decal_s09_crystal_serpent_attack", "decal_scripted", true)
 tt.render.sprites[1].prefix = "crystal_serpent"
 tt.main_script.update = decal_s09_crystal_serpent_attack_update
 
-tt = E:register_t_hot("decal_s09_crystal_serpent_scream", "decal_s09_crystal_serpent_attack", true)
+tt = E:register_t("decal_s09_crystal_serpent_scream", "decal_s09_crystal_serpent_attack", true)
 tt.main_script.update = decal_s09_crystal_serpent_scream_update
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].hidden = true
 tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[3].hidden = true
 
-tt = E:register_t_hot("decal_s09_waterfall", "decal_scripted", true)
+tt = E:register_t("decal_s09_waterfall", "decal_scripted", true)
 tt.render.sprites[1].name = "decal_s09_waterfall_lines1"
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "decal_s09_waterfall_lines2"
@@ -181,7 +181,7 @@ tt.render.sprites[3].name = "decal_s09_waterfall_top"
 tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].name = "decal_s09_waterfall_bottom"
 
-tt = E:register_t_hot("decal_crystal_water_waves2", "decal_delayed_play", true)
+tt = E:register_t("decal_crystal_water_waves2", "decal_delayed_play", true)
 tt.render.sprites[1].prefix = "decal_water_wave_2"
 tt.render.sprites[1].name = "play"
 tt.render.sprites[1].hidden = true
@@ -233,14 +233,14 @@ local function bullet_crystal_serpent_update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
-tt = E:register_t_hot("bullet_crystal_serpent", "bullet", true)
+tt = E:register_t("bullet_crystal_serpent", "bullet", true)
 tt.render.sprites[1].hidden = true
 tt.bullet.mod = "mod_crystal_serpent"
 tt.bullet.flight_time = fts(17)
 tt.bullet.particles_name = "ps_bullet_crystal_serpent_fly"
 tt.main_script.update = bullet_crystal_serpent_update
 
-tt = E:register_t_hot("decal_s09_crystal_debris", "decal_tween", true)
+tt = E:register_t("decal_s09_crystal_debris", "decal_tween", true)
 tt.render.sprites[1].name = "decal_s09_crystal_debris_1"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].offset = vec_2(16, 12)
@@ -279,7 +279,7 @@ tt.tween.props[5].sprite_id = 3
 tt.tween.props[6] = table.clone(tt.tween.props[1])
 tt.tween.props[6].sprite_id = 4
 
-tt = E:register_t_hot("decal_s09_crystal_debris_mod", "decal_s09_crystal_debris", true)
+tt = E:register_t("decal_s09_crystal_debris_mod", "decal_s09_crystal_debris", true)
 tt.render.sprites[3].sort_y_offset = 1
 tt.render.sprites[4].sort_y_offset = 1
 
