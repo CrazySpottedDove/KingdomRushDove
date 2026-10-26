@@ -1225,10 +1225,6 @@ AC(tt, "sound_events")
 tt.render.sprites[1].name = "decal_scrat_touch_fx"
 tt.sound_events.insert = "JtHitIce"
 
-tt = RT("decal_endless_burner", "decal_loop")
-tt.render.sprites[1].name = "decal_orc_burner_idle"
-tt.render.sprites[1].random_ts = fts(14)
-
 tt = RT("tower_archer_hammerhold", "tower")
 AC(tt, "attacks")
 tt.tower.type = "archer_hammerhold"
@@ -2270,18 +2266,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt = RT("fx_bullet_balrog_hit", "fx")
 tt.render.sprites[1].name = "balrog_aura_splash"
 tt.render.sprites[1].anchor.y = 0.43636363636363634
-
-tt = RT("fx_bullet_catapult_endless_spiked_explosion", "fx_rock_explosion")
-tt.render.sprites[1].name = "catapult_endless_explosions_spikebomb"
-tt.render.sprites[1].anchor.y = 0.36875
-
-tt = RT("fx_bullet_catapult_endless_bomb_explosion", "fx_rock_explosion")
-tt.render.sprites[1].name = "catapult_endless_explosions_bomb"
-tt.render.sprites[1].anchor.y = 0.36875
-
-tt = RT("fx_bullet_catapult_endless_barrel_explosion", "fx_rock_explosion")
-tt.render.sprites[1].name = "catapult_endless_explosions_barrel"
-tt.render.sprites[1].anchor.y = 0.36875
 
 tt = RT("fx_block_tower_ainyl_end", "fx")
 tt.render.sprites[1].name = "ainyl_block_end"
@@ -3830,31 +3814,6 @@ tt.main_script.insert = scripts.enemy_bomb.insert
 tt.main_script.update = scripts.enemy_bomb.update
 tt.sound_events.insert = nil
 tt.sound_events.hit = "ElvesBalrogBloodpool"
-
-tt = RT("bullet_catapult_endless_rock", "rock_enemy_catapult")
-tt.render.sprites[1].name = "catapult_endless_proy_0001"
-tt.bullet.damage_max = 100
-tt.bullet.damage_min = 100
-tt.bullet.damage_radius = 60
-tt.bullet.hit_fx = "fx_rock_explosion"
-
-tt = RT("bullet_catapult_endless_spiked", "rock_enemy_catapult")
-tt.render.sprites[1].name = "catapult_endless_proy_0002"
-tt.bullet.damage_min = 200
-tt.bullet.damage_radius = 60
-tt.bullet.hit_fx = "fx_bullet_catapult_endless_spiked_explosion"
-
-tt = RT("bullet_catapult_endless_bomb", "rock_enemy_catapult")
-tt.render.sprites[1].name = "bullet_catapult_endless_bomb"
-tt.render.sprites[1].animated = true
-tt.bullet.damage_max = 300
-tt.bullet.damage_min = 300
-tt.bullet.damage_radius = 60
-tt.bullet.hit_fx = "fx_bullet_catapult_endless_bomb_explosion"
-
-tt = RT("bullet_catapult_endless_barrel", "rock_enemy_catapult")
-tt.render.sprites[1].name = "catapult_endless_proy_0003"
-tt.bullet.hit_fx = "fx_bullet_catapult_endless_barrel_explosion"
 
 tt = RT("bolt_plant_magic_blossom", "bolt_elves")
 tt.render.sprites[1].prefix = "bolt_plant_magic_blossom"
@@ -5541,11 +5500,6 @@ tt = RT("fx_bomb_lava_fireball_explosion", "fx")
 tt.render.sprites[1].name = "fireball_explosion"
 tt.render.sprites[1].anchor.y = 0.15
 tt.render.sprites[1].z = Z_OBJECTS
-
-tt = RT("decal_endless_shoutbox", "decal_s18_shoutbox")
-tt.render.sprites[1].name = "hee-haw_taunt"
-tt.texts.list[1].color = {233, 189, 255}
-tt.texts.list[1].font_size = 20
 
 tt = RT("decal_regson_heal_ball", "decal_scripted")
 AC(tt, "force_motion")
