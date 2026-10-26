@@ -170,11 +170,20 @@ function render:init(store)
 
 	local hb_quad = love.graphics.newQuad(unpack(HEALTH_BAR_CORNER_DOT_QUAD))
 
+	-- _hb_ss 是血条角点使用的独立 Quad，不属于 image_db 图集帧：
+	-- 没有 atlas/group，也不会进入 atlas 加载/卸载生命周期。
+	-- 这里只模拟 FrameData 的只读字段，trim/size 与 image_db 保持一致使用 0-based。
 	self._hb_ss = {
 		ref_scale = 1,
 		quad = hb_quad,
-		trim = {0, 0},
-		size = {1, 1}
+		trim = {
+			[0] = 0,
+			[1] = 0
+		},
+		size = {
+			[0] = 1,
+			[1] = 1
+		}
 	}
 	self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
 	self._hb_colors = HEALTH_BAR_COLORS
@@ -193,10 +202,7 @@ function render:on_insert_unconditional(entity, store)
 					local group = "temp_game_texts"
 					local scale = store.screen_scale
 					local image = F:create_text_image(t.text, t.size, t.alignment, t.font_name, t.font_size, t.color, t.line_height, store.screen_scale, t.fit_height, t.debug_bg)
-					I:add_image(image_name, image, group, scale)
-
-					-- 标记 atlas 引用计数，保证卸载正常
-					I.atlas_uses[string.format("%s-%.6f", group, scale)] = 1
+					I:add_image(image_name, image, group, scale, true)
 				end
 
 				-- local group = "temp_game_texts"

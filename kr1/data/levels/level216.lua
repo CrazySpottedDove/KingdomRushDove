@@ -487,10 +487,10 @@ local sx=rs*(s.scale and s.scale.x or 1)
 local sy=rs*(s.scale and s.scale.y or 1)
 local ax=s.anchor and s.anchor.x or 0.5
 local ay=s.anchor and s.anchor.y or 0.5
-local trim=sd.trim or {0,0,0,0}
+local trim=sd.trim or {[0]=0,[1]=0}
 local x=pos.x+(s.offset and s.offset.x or 0)
 local y=REF_H-(pos.y+(s.offset and s.offset.y or 0))
-return x-(ax*sd.size[1]-trim[1])*sx, y-((1-ay)*sd.size[2]-trim[2])*sy, vw*sx, vh*sy
+return x-(ax*sd.size[0]-trim[0])*sx, y-((1-ay)*sd.size[1]-trim[1])*sy, vw*sx, vh*sy
 end
 function nightfall.front_noise(px,py)
 local n=0.5+0.3*math.sin(px*2.1+py*1.3)+0.2*math.sin(px*1-py*2.6+1.7)
@@ -1197,8 +1197,8 @@ local pt=E:get_template(tpl)
 local pname=pt and pt.particle_system and pt.particle_system.name
 local psd=pname and A:f(pname,0,false)
 if psd and psd.size then
-area_x=psd.size[1]*area_frac
-area_y=psd.size[2]*area_frac
+area_x=psd.size[0]*area_frac
+area_y=psd.size[1]*area_frac
 end
 end
 local s1=this.render.sprites[1]
@@ -1299,9 +1299,9 @@ if bx then
 args.mask_rect={bx,by,bw,bh}
 end
 if sd and sd.size then
-local trim=sd.trim or {0,0}
-local w=sd.size[1]-(trim[1] or 0)
-local h=sd.size[2]-(trim[2] or 0)
+local trim=sd.trim or {[0]=0,[1]=0}
+local w=sd.size[0]-(trim[0] or 0)
+local h=sd.size[1]-(trim[1] or 0)
 local d=math.sqrt(w*w+h*h)
 args.dist_scale={w/d,h/d}
 end

@@ -73,12 +73,12 @@ function main_script:on_update(dt, ts, store)
 			if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
 				if not success and err ~= nil then
 					-- -- 安卓端逻辑：直接抛出错误，触发全局错误捕获机制，弹出错误提示框
-					if IS_ANDROID then
-						error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
-					else
-						log.error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
-						simulation:queue_remove_entity(e)
-					end
+					-- if IS_ANDROID then
+					-- error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
+					-- else
+					log.error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
+					simulation:queue_remove_entity(e)
+					-- end
 
 					if LLDEBUGGER then
 						LLDEBUGGER.start()

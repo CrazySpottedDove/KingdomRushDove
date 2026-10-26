@@ -3678,21 +3678,18 @@ function atlas_manager:_hot_reload_group(name, frames, w, h)
 		return
 	end
 	local img_w, img_h = img:getDimensions()
-	I.db_images[dds_key] = {img, img_w, img_h}
-	I.image_uses[dds_key] = (I.image_uses[dds_key] or 0) + 1
 	local name_scale = string.format("%s-%.6f", name, 1)
-	I.atlas_uses[name_scale] = (I.atlas_uses[name_scale] or 0) + 1
+	I.db_images[dds_key] = {img, img_w, img_h}
+	local first_frame = true
 	for fname, fdata in pairs(frames) do
-		I.db_atlas[fname] = {
-			atlas = dds_key,
-			group = name_scale,
-			quad = G.newQuad(fdata.f_quad[1], fdata.f_quad[2], fdata.f_quad[3], fdata.f_quad[4], img_w, img_h),
-			trim = {fdata.trim[1], fdata.trim[2]},
-			ref_scale = fdata.ref_scale or 1,
-			size = {fdata.size[1], fdata.size[2]}
-		}
+		local id, atlas_id, group_id = I:add_frame(fname, dds_key, name_scale, G.newQuad(fdata.f_quad[1], fdata.f_quad[2], fdata.f_quad[3], fdata.f_quad[4], img_w, img_h), fdata.ref_scale or 1, fdata.trim[1], fdata.trim[2], fdata.size[1], fdata.size[2])
+		if first_frame then
+			I.image_uses[atlas_id] = (I.image_uses[atlas_id] or 0) + 1
+			I.atlas_uses[group_id] = (I.atlas_uses[group_id] or 0) + 1
+			first_frame = false
+		end
 		for i = 1, #(fdata.alias or {}) do
-			I.db_atlas[fdata.alias[i]] = I.db_atlas[fname]
+			I.db_atlas[fdata.alias[i]] = id
 		end
 	end
 	print(string.format("[atlas_manager] hot_reload: %s from %s (%dx%d) %d frames -> image_db", name, png_path, img_w, img_h, #frames))

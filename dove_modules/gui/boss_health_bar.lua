@@ -180,7 +180,7 @@ function BossHealthBar:_draw_self()
 	local ss = self.portrait_ss
 	local ref_scale = ss.ref_scale * 0.6
 	G.setColor(1, 1, 1, 0.9 * alpha)
-	G.draw(self.portrait, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+	G.draw(self.portrait, ss.quad, ss.trim[0] * ref_scale, ss.trim[1] * ref_scale, 0, ref_scale)
 
 	-- BOSS名称文字
 	G.setFont(self.font)

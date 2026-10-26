@@ -5007,7 +5007,7 @@ local function get_clean_page_frame()
 	G.clear(0, 0, 0, 0)
 	G.setBlendMode("replace", "premultiplied")
 	G.setColor(1, 1, 1, 1)
-	G.draw(atlas, ss.quad, ss.trim[1] * sx, ss.trim[2] * sy, 0, sx, sy)
+	G.draw(atlas, ss.quad, ss.trim[0] * sx, ss.trim[1] * sy, 0, sx, sy)
 
 	-- 用 replace 混合把数字区域清成透明，保留花边外框
 	G.setColor(0, 0, 0, 0)
@@ -5705,8 +5705,8 @@ function EncyclopediaView:detail_tower(index)
 	local target_size = encyclopedia_view_size_map["tower_detail"]
 	local image_scale = 1
 	if target_size then
-		local scale_x = target_size.x / ss.ref_scale / ss.size[1]
-		local scale_y = target_size.y / ss.ref_scale / ss.size[2]
+		local scale_x = target_size.x / ss.ref_scale / ss.size[0]
+		local scale_y = target_size.y / ss.ref_scale / ss.size[1]
 		image_scale = math.min(scale_x, scale_y)
 	end
 	local portrait
@@ -5968,8 +5968,8 @@ function EncyclopediaView:detail_tower_second(index)
 		local target_size = encyclopedia_view_size_map["tower_special_icon"]
 		local image_scale = 1
 		if target_size then
-			local scale_x = target_size.x / ss.ref_scale / ss.size[1]
-			local scale_y = target_size.y / ss.ref_scale / ss.size[2]
+			local scale_x = target_size.x / ss.ref_scale / ss.size[0]
+			local scale_y = target_size.y / ss.ref_scale / ss.size[1]
 			image_scale = math.min(scale_x, scale_y)
 		end
 
@@ -7176,7 +7176,7 @@ function SpellMapButton:initialize()
 	local mask_ss = I:s(mask_name)
 	local ref = mask_ss.ref_scale or 1
 	local _, _, mask_w, mask_h = mask_ss.quad:getViewport()
-	local mask_x, mask_y = mask_ss.trim[1] * ref, mask_ss.trim[2] * ref
+	local mask_x, mask_y = mask_ss.trim[0] * ref, mask_ss.trim[1] * ref
 	local window_w, window_h = mask_w * ref, mask_h * ref
 
 	self.icon_window = KView:new(v(window_w, window_h))
