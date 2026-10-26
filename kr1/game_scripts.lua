@@ -341,7 +341,7 @@ function scripts.mod_death_rider.insert(this, store)
 
 	SU.armor_inc(target, m.extra_armor)
 
-	target.unit.damage_factor = target.unit.damage_factor * (this.inflicted_damage_factor + this.inflicted_damage_factor_inc * level)
+	SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor + this.inflicted_damage_factor_inc * level)
 
 	return true
 end
@@ -354,7 +354,7 @@ function scripts.mod_death_rider.remove(this, store)
 	if target then
 		SU.armor_dec(target, m.extra_armor)
 
-		target.unit.damage_factor = target.unit.damage_factor / (this.inflicted_damage_factor + this.inflicted_damage_factor_inc * level)
+		SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor + this.inflicted_damage_factor_inc * level)
 	end
 
 	return true
@@ -1517,6 +1517,18 @@ scripts.enemy_rocketeer = {
 		return true
 	end
 }
+scripts.enemy_orc_armored_mad = {
+	on_damage = function(this, store, damage)
+		if this.health.hp <= this.health.hp_max * 0.5 and not this.strengthened then
+			U.speed_dec(this, 0.5 * FPS)
+
+			SU.insert_received_damage_factor_mul_buff(this, 0.3)
+			this.strengthened = true
+		end
+
+		return true
+	end
+}
 scripts.enemy_troll_chieftain = {
 	update = function(this, store)
 		local a = this.timed_attacks.list[1]
@@ -2097,7 +2109,7 @@ function scripts.enemy_necromancer.update(this, store)
 				local s = store.entities[sid]
 
 				if s and not s.health.dead then
-					s.health.damage_factor = s.health.damage_factor + 0.3
+					SU.remove_received_damage_factor_mul_buff(s, 0.7)
 				end
 			end
 
@@ -2147,7 +2159,7 @@ function scripts.enemy_necromancer.update(this, store)
 					e.nav_path.ni = this.nav_path.ni + math.random(noff[2], noff[3])
 					e.render.sprites[1].name = a.spawn_animation
 					e.enemy.gold = 0
-					e.health.damage_factor = e.health.damage_factor - 0.3
+					SU.insert_received_damage_factor_mul_buff(e, 0.7)
 					e.motion.max_speed = (0.5 + math.random() * 0.2) * FPS
 
 					-- E:add_comps(e, "count_group")
@@ -3640,7 +3652,7 @@ function scripts.mod_giant_rat_poison.insert(this, store)
 		return false
 	end
 
-	target.unit.damage_factor = target.unit.damage_factor * this.reduced_damage_factor
+	SU.insert_unit_damage_factor_by_factor(target, this.reduced_damage_factor)
 
 	return true
 end
@@ -3649,7 +3661,7 @@ function scripts.mod_giant_rat_poison.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target and target.unit then
-		target.unit.damage_factor = target.unit.damage_factor / this.reduced_damage_factor
+		SU.remove_unit_damage_factor_by_factor(target, this.reduced_damage_factor)
 	end
 
 	return true
@@ -3929,7 +3941,7 @@ function scripts.mod_spectral_knight.insert(this, store)
 
 	this.pos = target.pos
 	m.ts = store.tick_ts
-	target.unit.damage_factor = target.unit.damage_factor * this.damage_factor_increase
+	SU.insert_unit_damage_factor_by_factor(target, this.damage_factor_increase)
 
 	return true
 end
@@ -3939,7 +3951,7 @@ function scripts.mod_spectral_knight.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		target.unit.damage_factor = target.unit.damage_factor / this.damage_factor_increase
+		SU.remove_unit_damage_factor_by_factor(target, this.damage_factor_increase)
 	end
 
 	return true
@@ -3961,7 +3973,7 @@ function scripts.mod_skeleton_big.insert(this, store)
 
 	this.pos = target.pos
 	m.ts = store.tick_ts
-	target.health.damage_factor = target.health.damage_factor - this.health_damage_factor_dec
+	SU.insert_received_damage_factor_mul_buff(target, 1 - this.health_damage_factor_dec)
 
 	return true
 end
@@ -3971,7 +3983,7 @@ function scripts.mod_skeleton_big.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		target.health.damage_factor = target.health.damage_factor + this.health_damage_factor_dec
+		SU.remove_received_damage_factor_mul_buff(target, 1 - this.health_damage_factor_dec)
 	end
 
 	return true
@@ -7560,7 +7572,7 @@ function scripts.moon_enemy_aura.update(this, store)
 			end
 
 			if source.moon.damage_factor and source.melee then
-				source.unit.damage_factor = source.unit.damage_factor * source.moon.damage_factor
+				SU.insert_unit_damage_factor_by_factor(source, source.moon.damage_factor)
 			end
 
 			if source.moon.regen_hp and source.regen then
@@ -7586,7 +7598,7 @@ function scripts.moon_enemy_aura.update(this, store)
 			end
 
 			if source.moon.damage_factor and source.melee then
-				source.unit.damage_factor = source.unit.damage_factor / source.moon.damage_factor
+				SU.remove_unit_damage_factor_by_factor(source, source.moon.damage_factor)
 			end
 
 			if source.moon.regen_hp and source.regen then
@@ -12462,7 +12474,7 @@ function scripts.mod_shadow_champion.insert(this, store)
 	end
 
 	U.heal(target, target.health.hp_max * this.heal_factor)
-	target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+	SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 
 	return true
 end
@@ -12472,7 +12484,7 @@ function scripts.mod_shadow_champion.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+		SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 	end
 
 	return true
@@ -14403,8 +14415,9 @@ function scripts.mod_arrow_silver_mark.insert(this, store)
 
 	local boss_factor = band(target.vis.flags, F_BOSS) ~= 0 and 0.5 or 1
 
-	this.received_damage_factor = (this.received_damage_factor - 1) * boss_factor + 1
-	target.health.damage_factor = target.health.damage_factor * this.received_damage_factor
+	local received_damage_factor = 1 + (this.received_damage_factor - 1) * boss_factor
+	this._received_damage_factor = received_damage_factor
+	SU.insert_received_damage_factor_by_factor(target, received_damage_factor)
 
 	signal.emit("mod-applied", this, target)
 
@@ -14447,8 +14460,8 @@ end
 function scripts.mod_arrow_silver_mark.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if target and target.health and target.unit then
-		target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
+	if target and target.health and target.unit and this._received_damage_factor then
+		SU.remove_received_damage_factor_by_factor(target, this._received_damage_factor)
 	end
 
 	return true
@@ -15124,7 +15137,7 @@ function scripts.mod_twilight_scourger_lash.insert(this, store)
 
 	U.speed_mul(target, this.speed_factor)
 
-	target.unit.damage_factor = target.unit.damage_factor * this.damage_factor
+	SU.insert_unit_damage_factor_by_factor(target, this.damage_factor)
 
 	local s1, s2 = this.render.sprites[1], this.render.sprites[2]
 
@@ -15143,7 +15156,7 @@ function scripts.mod_twilight_scourger_lash.remove(this, store)
 	if target then
 		U.speed_div(target, this.speed_factor)
 
-		target.unit.damage_factor = target.unit.damage_factor / this.damage_factor
+		SU.remove_unit_damage_factor_by_factor(target, this.damage_factor)
 	end
 
 	return true
@@ -17218,7 +17231,7 @@ function scripts.mod_dwarf_beer.insert(this, store)
 
 	this.hps.ts = store.tick_ts - this.hps.heal_every
 	this.modifier.ts = store.tick_ts
-	target.health.damage_factor = target.health.damage_factor * this.damage_factor
+	SU.insert_received_damage_factor_mul_buff(target, this.damage_factor)
 
 	signal.emit("mod-applied", this, target)
 
@@ -17232,7 +17245,7 @@ function scripts.mod_dwarf_beer.remove(this, store)
 		return true
 	end
 
-	target.health.damage_factor = target.health.damage_factor * 1.25
+	SU.remove_received_damage_factor_mul_buff(target, this.damage_factor)
 
 	return true
 end
@@ -20936,7 +20949,7 @@ function scripts.mod_glare.insert(this, store)
 	end
 
 	if t.glare_kr5.damage_factor and t.melee then
-		t.unit.damage_factor = t.unit.damage_factor * t.glare_kr5.damage_factor
+		SU.insert_unit_damage_factor_by_factor(t, t.glare_kr5.damage_factor)
 	end
 
 	if t.glare_kr5.on_start_glare then
@@ -21020,7 +21033,7 @@ function scripts.mod_glare.remove(this, store)
 	end
 
 	if t.glare_kr5.damage_factor and t.melee then
-		t.unit.damage_factor = t.unit.damage_factor / t.glare_kr5.damage_factor
+		SU.remove_unit_damage_factor_by_factor(t, t.glare_kr5.damage_factor)
 	end
 
 	if t.glare_kr5.on_end_glare then
@@ -45579,10 +45592,10 @@ function scripts.tower_dragons_warden.update(this, store)
 
 				if pow == this.powers.increase_damage then
 					if pow.level > 1 then
-						this.tower.damage_factor = this.tower.damage_factor / this.powers.increase_damage.damage_factor[pow.level - 1]
+						SU.remove_tower_damage_factor_buff(this, this.powers.increase_damage.damage_factor[pow.level - 1] - 1)
 					end
 
-					this.tower.damage_factor = this.tower.damage_factor * this.powers.increase_damage.damage_factor[pow.level]
+					SU.insert_tower_damage_factor_buff(this, this.powers.increase_damage.damage_factor[pow.level] - 1)
 				elseif pow == this.powers.increase_rate then
 					aa.cooldown = this.powers.increase_rate.attack_cooldown[pow.level]
 				end
@@ -46486,18 +46499,18 @@ scripts.controller_mage_purge_field = {
 
 		local last_ts = store.tick_ts
 		local last_damage_factor_inc = 0.14
-		target.tower.damage_factor = target.tower.damage_factor + last_damage_factor_inc
+		SU.insert_tower_damage_factor_buff(target, last_damage_factor_inc)
 		while store.entities[this.target_id] do
 			if store.tick_ts - last_ts >= 1 then
 				last_ts = store.tick_ts
 				local enemies = U.find_enemies_in_range_filter_off(tpos(target), target.attacks.range, F_NONE, F_NONE)
 				local new_damage_factor_inc = 0.14 + math.min((enemies and #enemies or 0) * 0.01, 0.3)
-				target.tower.damage_factor = target.tower.damage_factor + new_damage_factor_inc - last_damage_factor_inc
+				SU.insert_tower_damage_factor_buff(target, new_damage_factor_inc - last_damage_factor_inc)
 				last_damage_factor_inc = new_damage_factor_inc
 			end
 			coroutine.yield()
 		end
-		target.tower.damage_factor = target.tower.damage_factor - last_damage_factor_inc
+		SU.remove_tower_damage_factor_buff(target, last_damage_factor_inc)
 		simulation:queue_remove_entity(this)
 	end
 }

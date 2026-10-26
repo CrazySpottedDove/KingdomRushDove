@@ -844,16 +844,7 @@ tt.info.i18n_key = "ENEMY_ORC_ARMORED"
 tt.motion.max_speed = 1.1 * FPS
 tt.melee.attacks[1].mod = "mod_orc_blood"
 tt.strengthened = false
-tt.health.on_damage = function(this, store, damage)
-	if this.health.hp <= this.health.hp_max * 0.5 and not this.strengthened then
-		U.speed_dec(this, 0.5 * FPS)
-
-		this.health.damage_factor = 0.3
-		this.strengthened = true
-	end
-
-	return true
-end
+tt.health.on_damage = scripts.enemy_orc_armored_mad.on_damage
 
 tt = RT("enemy_orc_rider", "enemy")
 AC(tt, "melee", "death_spawns")

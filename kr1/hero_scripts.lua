@@ -1556,7 +1556,7 @@ scripts.hero_wizard = {
 
 					local tmp = 1 + this.arcanetorrent_factor_base * count
 
-					this.unit.damage_factor = this.unit.damage_factor / (1 + this.arcanetorrent_factor) * tmp
+					SU.insert_unit_damage_factor_buff(this, (tmp - 1) - this.arcanetorrent_factor)
 					this.arcanetorrent_factor = tmp - 1
 				end
 
@@ -3325,7 +3325,7 @@ scripts.mod_van_helsing_beacon = {
 			return false
 		end
 
-		target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+		SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 
 		return true
 	end,
@@ -3334,7 +3334,7 @@ scripts.mod_van_helsing_beacon = {
 		local target = store.entities[m.target_id]
 
 		if target then
-			target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+			SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 		end
 
 		return true
@@ -3977,7 +3977,7 @@ scripts.mod_priest_armor = {
 		SU.armor_inc(target, this.armor_inc)
 		SU.magic_armor_inc(target, this.magic_armor_inc)
 
-		target.unit.damage_factor = target.unit.damage_factor * (this.damage_rate + 1)
+		SU.insert_unit_damage_factor_buff(target, this.damage_rate)
 
 		SU.insert_unit_cooldown_buff(store.tick_ts, target, this.cooldown_rate)
 		signal.emit("mod-applied", this, target)
@@ -3991,7 +3991,7 @@ scripts.mod_priest_armor = {
 			SU.armor_dec(target, this.armor_inc)
 			SU.magic_armor_dec(target, this.magic_armor_inc)
 
-			target.unit.damage_factor = target.unit.damage_factor / (this.damage_rate + 1)
+			SU.remove_unit_damage_factor_buff(target, this.damage_rate)
 
 			SU.remove_unit_cooldown_buff(store.tick_ts, target, this.cooldown_rate)
 		end
@@ -4695,7 +4695,7 @@ scripts.hero_magnus = {
 						e.tween.props[1].keys[1][2].y = -o.y
 						e.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 						e.owner = this
-						e.unit.damage_factor = this.unit.damage_factor
+						SU.insert_unit_damage_factor_buff(e, this.unit.damage_factor - e.unit.damage_factor)
 
 						simulation:queue_insert_entity(e)
 					end
@@ -6796,7 +6796,7 @@ scripts.hero_oni = {
 
 			local unyield = rate * this.unyield_max
 
-			this.health.damage_factor = this.health.damage_factor + this.unyield - unyield
+			SU.insert_received_damage_factor_buff(this, unyield - this.unyield)
 			this.unyield = unyield
 
 			if this.unit.is_stunned then
@@ -8969,7 +8969,7 @@ scripts.mod_monk_damage_reduction = {
 		local target = store.entities[this.modifier.target_id]
 
 		if target and target.unit then
-			target.unit.damage_factor = target.unit.damage_factor * (1 - this.reduction_factor)
+			SU.insert_unit_damage_factor_mul_buff(target, 1 - this.reduction_factor)
 		end
 
 		return false
@@ -11941,7 +11941,7 @@ function scripts.mod_lynn_despair.insert(this, store)
 		return false
 	end
 
-	target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+	SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 
 	if not target.motion.invulnerable then
 		U.speed_mul(target, this.speed_factor)
@@ -11959,7 +11959,7 @@ function scripts.mod_lynn_despair.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target and target.health and target.unit and target.motion then
-		target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+		SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 
 		if not target.motion.invulnerable then
 			U.speed_div(target, this.speed_factor)
@@ -13076,7 +13076,7 @@ function scripts.hero_durax.update(this, store)
 						clone.clone.duration = skill.duration[skill.level]
 						clone.hero.level = this.hero.level
 						clone.hero.xp = this.hero.xp
-						clone.unit.damage_factor = this.hero.skills.crystallites.damage_factor * this.unit.damage_factor
+						SU.insert_unit_damage_factor_buff(clone, this.unit.damage_factor + this.hero.skills.crystallites.damage_factor - 1 - clone.unit.damage_factor)
 
 						for sn, s in pairs(this.hero.skills) do
 							clone.hero.skills[sn].level = s.level
@@ -13502,7 +13502,7 @@ function scripts.mod_elves_denas_sybarite.insert(this, store)
 		return false
 	end
 
-	target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+	SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 	U.heal(target, this.heal_hp)
 	this.render.sprites[1].ts = store.tick_ts
 
@@ -13514,7 +13514,7 @@ function scripts.mod_elves_denas_sybarite.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+		SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 	end
 
 	return true
@@ -18910,7 +18910,7 @@ function scripts.hero_hunter_ultimate.update(this, store)
 
 		e.pos.x = x
 		e.pos.y = y
-		e.unit.damage_factor = this.damage_factor
+		SU.insert_unit_damage_factor_buff(e, this.damage_factor - e.unit.damage_factor)
 		e.nav_rally.center = V.v(x, y)
 		e.nav_rally.pos = V.vclone(e.pos)
 		e.level = this.level
@@ -19384,7 +19384,7 @@ function scripts.hero_space_elf.update(this, store)
 
 						local e = E:create_entity(a.entity)
 
-						e.unit.damage_factor = this.unit.damage_factor
+						SU.insert_unit_damage_factor_buff(e, this.unit.damage_factor - e.unit.damage_factor)
 						e.pos = pos
 						e.nav_rally.center = V.vclone(e.pos)
 						e.nav_rally.pos = V.vclone(e.pos)
@@ -26922,7 +26922,7 @@ function scripts.hero_wukong.update(this, store)
 		e.pos = V.vclone(pos)
 		e.nav_rally.center = V.vclone(e.pos)
 		e.nav_rally.pos = V.vclone(e.pos)
-		e.unit.damage_factor = this.unit.damage_factor
+		SU.insert_unit_damage_factor_buff(e, this.unit.damage_factor - e.unit.damage_factor)
 
 		simulation:queue_insert_entity(e)
 
@@ -30838,11 +30838,11 @@ function scripts.mod_hero_dragon_arb_ultimate.insert(this, store, script)
 	end
 
 	if this.received_damage_factor then
-		target.health.damage_factor = target.health.damage_factor * this.received_damage_factor
+		SU.insert_received_damage_factor_by_factor(target, this.received_damage_factor)
 	end
 
 	if this.inflicted_damage_factor then
-		target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+		SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 	end
 
 	if this.extra_armor then
@@ -30876,11 +30876,11 @@ function scripts.mod_hero_dragon_arb_ultimate.remove(this, store, script)
 
 	if target and target.health and target.unit then
 		if this.received_damage_factor then
-			target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
+			SU.remove_received_damage_factor_by_factor(target, this.received_damage_factor)
 		end
 
 		if this.inflicted_damage_factor then
-			target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+			SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 		end
 
 		if this.extra_armor then
@@ -41507,14 +41507,14 @@ scripts.aura_hero_orc_aimed_slash = {
 					end
 
 					if store.tick_ts - upgrade_ts >= this.upgrade_cycle_time and last_buff_level < this.max_buff_level then
-						target.unit.damage_factor = target.unit.damage_factor * (1 + this.damage_factor_inc * (last_buff_level + 1)) / (1 + this.damage_factor_inc * last_buff_level)
+						SU.insert_unit_damage_factor_buff(target, this.damage_factor_inc)
 						last_buff_level = last_buff_level + 1
 						upgrade_ts = store.tick_ts
 						this.render.sprites[1].hidden = false
 					end
 				else
 					if last_buff_level > 0 then
-						target.unit.damage_factor = target.unit.damage_factor / (1 + last_buff_level * this.damage_factor_inc) * (1 + this.damage_factor_inc * (last_buff_level - 1))
+						SU.remove_unit_damage_factor_buff(target, this.damage_factor_inc)
 						last_buff_level = last_buff_level - 1
 						upgrade_ts = store.tick_ts
 
@@ -41996,7 +41996,7 @@ function scripts.hero_margosa.update(this, store)
 		U.heal_with_overflow(this, this.health.hp_max, 2)
 		this.melee.attacks[1].cooldown = 0.8
 		this.melee.attacks[1].damage_type = DAMAGE_TRUE
-		this.unit.damage_factor = this.unit.damage_factor * ultimate.damage_factor
+		SU.insert_unit_damage_factor_by_factor(this, ultimate.damage_factor)
 		this.vampiric_touch_rate = 0.8
 		U.speed_mul_self(this, ultimate.speed_factor)
 		this.is_buffed = true
@@ -42012,7 +42012,7 @@ function scripts.hero_margosa.update(this, store)
 		U.heal(this, this.health.hp_max)
 		this.melee.attacks[1].cooldown = 1.2
 		this.melee.attacks[1].damage_type = DAMAGE_RUDE
-		this.unit.damage_factor = this.unit.damage_factor / ultimate.damage_factor
+		SU.remove_unit_damage_factor_by_factor(this, ultimate.damage_factor)
 		this.vampiric_touch_rate = this.hero.skills.vampiric_touch.track_rate[this.hero.skills.vampiric_touch.level]
 		U.speed_div_self(this, ultimate.speed_factor)
 		ultimate.ts = ultimate.ts - ultimate.cooldown * (1 - math.max((store.tick_ts - ultimate.ts) / ultimate.duration, 1))
@@ -42992,7 +42992,7 @@ function scripts.hero_jigou.update(this, store)
 					aura.pos:copy(this.pos)
 					simulation:queue_insert_entity(aura)
 
-					this.health.damage_factor = this.health.damage_factor * a_mock.damage_factor
+					SU.insert_received_damage_factor_mul_buff(this, a_mock.damage_factor)
 					SU.hero_gain_xp_from_skill(this, this.hero.skills.glacial_form)
 
 					do_mock()
@@ -43022,7 +43022,7 @@ function scripts.hero_jigou.update(this, store)
 					fx.pos:copy(this.pos)
 					fx.render.sprites[1].ts = store.tick_ts
 					simulation:queue_insert_entity(fx)
-					this.health.damage_factor = this.health.damage_factor / a_mock.damage_factor
+					SU.remove_received_damage_factor_mul_buff(this, a_mock.damage_factor)
 
 					local enemy_continue_to_block
 					if not this.nav_rally.new and #mocked_targets > 0 and not this.soldier.target_id then
@@ -44750,7 +44750,7 @@ function scripts.hero_naga.remove(this, store)
 		local e = store.entities[this.fight_to_win_or_die_controller_id]
 		if e then
 			if e.enabled then
-				this.unit.damage_factor = this.unit.damage_factor / e.damage_factor
+				SU.remove_unit_damage_factor_by_factor(this, e.damage_factor)
 				e.enabled = false
 				simulation:queue_remove_entity(e)
 			end
@@ -44767,12 +44767,12 @@ scripts.controller_hero_naga_fight_to_win_or_die = {
 				if e.health.hp / e.health.hp_max < this.hp_threshold then
 					if not this.enabled then
 						this.enabled = true
-						e.unit.damage_factor = e.unit.damage_factor * this.damage_factor
+						SU.insert_unit_damage_factor_by_factor(e, this.damage_factor)
 					end
 				else
 					if this.enabled then
 						this.enabled = false
-						e.unit.damage_factor = e.unit.damage_factor / this.damage_factor
+						SU.remove_unit_damage_factor_by_factor(e, this.damage_factor)
 					end
 				end
 			end

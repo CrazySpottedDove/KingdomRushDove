@@ -74,7 +74,7 @@ function scripts.soldier_templar.side_effect_2(this, store, damage, target)
 	this.revive.protect = this.revive.protect + 0.01
 
 	if target then
-		target.health.damage_factor = target.health.damage_factor * this.powers.blood.vulnerability_factor
+		SU.insert_received_damage_factor_by_factor(target, this.powers.blood.vulnerability_factor)
 
 		local d = E.assign_damage(DAMAGE_TRUE, math.ceil(this.health.hp_max * this.powers.extralife.damage_factor_blood * this.powers.extralife.level), this.id, target.id)
 
@@ -8670,7 +8670,7 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 					s.nav_path.ni = this.nav_path.ni + 2
 				end
 
-				s.unit.damage_factor = s.unit.damage_factor * m.damage_factor
+				SU.insert_unit_damage_factor_by_factor(s, m.damage_factor)
 
 				simulation:queue_insert_entity(s)
 			end
@@ -18557,11 +18557,11 @@ function scripts.mod_tower_sparking_geode_stun.insert(this, store)
 	end
 
 	if this.received_damage_factor then
-		target.health.damage_factor = target.health.damage_factor * this.received_damage_factor
+		SU.insert_received_damage_factor_by_factor(target, this.received_damage_factor)
 	end
 
 	if this.inflicted_damage_factor then
-		target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+		SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 	end
 
 	if this.health_bar_offset then
@@ -18723,11 +18723,11 @@ function scripts.mod_tower_sparking_geode_stun.remove(this, store)
 
 	if target.health and target.unit then
 		if this.received_damage_factor then
-			target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
+			SU.remove_received_damage_factor_by_factor(target, this.received_damage_factor)
 		end
 
 		if this.inflicted_damage_factor then
-			target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+			SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 		end
 	end
 
@@ -20494,11 +20494,11 @@ function scripts.mod_arborean_emissary_weak.insert(this, store)
 	this.modifier.duration = this.modifier_duration[this.modifier.level]
 
 	if this.received_damage_factor then
-		target.health.damage_factor = target.health.damage_factor * this.received_damage_factor
+		SU.insert_received_damage_factor_by_factor(target, this.received_damage_factor)
 	end
 
 	if this.inflicted_damage_factor then
-		target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+		SU.insert_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 	end
 
 	if this.render then
@@ -20525,11 +20525,11 @@ function scripts.mod_arborean_emissary_weak.remove(this, store)
 
 	if target then
 		if this.received_damage_factor then
-			target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
+			SU.remove_received_damage_factor_by_factor(target, this.received_damage_factor)
 		end
 
 		if this.inflicted_damage_factor then
-			target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+			SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 		end
 	end
 
@@ -22275,7 +22275,7 @@ function scripts.mod_arrow_shadow_mark.insert(this, store)
 
 	m.received_damage_factor = m.received_damage_factors[m.level]
 	m.duration = m.durations[m.level]
-	target.health.damage_factor = target.health.damage_factor * m.received_damage_factor
+	SU.insert_received_damage_factor_by_factor(target, m.received_damage_factor)
 
 	signal.emit("mod-applied", this, target)
 
@@ -22315,7 +22315,7 @@ function scripts.mod_arrow_shadow_mark.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		target.health.damage_factor = target.health.damage_factor / m.received_damage_factor
+		SU.remove_received_damage_factor_by_factor(target, m.received_damage_factor)
 	end
 
 	return true
@@ -23689,13 +23689,13 @@ function scripts.tower_orc_warriors.update(this, store)
 				end
 
 				if pn == "bloodlust" then
-					this.tower.damage_factor = this.tower.damage_factor * p.damage_factor[p.level] / p.last_damage_factor
+					SU.insert_tower_damage_factor_buff(this, p.damage_factor[p.level] - p.last_damage_factor)
 
 					for i = 1, b.max_soldiers do
 						local s = b.soldiers[i]
 
 						if s and not s.health.dead then
-							s.unit.damage_factor = s.unit.damage_factor * p.damage_factor[p.level] / p.last_damage_factor
+							SU.insert_unit_damage_factor_buff(s, p.damage_factor[p.level] - p.last_damage_factor)
 						end
 					end
 
@@ -24096,7 +24096,7 @@ function scripts.soldier_dark_knight.update(this, store)
 
 		if p_shield.level > 0 and ready_to_attack(shield_attack, store, 1) then
 			if U.find_first_enemy_in_range_filter_on(this.pos, shield_attack.range, shield_attack.vis_flags, shield_attack.vis_bans, SU.is_valid_mock_target) then
-				this.health.damage_factor = this.health.damage_factor * shield_attack.damage_factor
+				SU.insert_received_damage_factor_mul_buff(this, shield_attack.damage_factor)
 				shield_attack.ts = store.tick_ts
 
 				S:queue(shield_attack.sound)
@@ -24161,7 +24161,7 @@ function scripts.soldier_dark_knight.update(this, store)
 
 				U.y_animation_play(this, shield_attack.animation_end, nil, store.tick_ts, 1)
 
-				this.health.damage_factor = this.health.damage_factor / shield_attack.damage_factor
+				SU.remove_received_damage_factor_mul_buff(this, shield_attack.damage_factor)
 			else
 				shield_attack.ts = store.tick_ts + 0.3
 			end

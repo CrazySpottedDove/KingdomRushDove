@@ -414,8 +414,8 @@ local function create_hero(store, name, pos, force_full_level)
 	end
 
 	if configer.config().enabled then
-		hero.unit.damage_factor = configer.config().hero_damage_multiplier * hero.unit.damage_factor
-		hero.health.damage_factor = configer.config().hero_health_damage_multiplier * hero.health.damage_factor
+		hero.unit.damage_factor = hero.unit.damage_factor + (configer.config().hero_damage_multiplier - 1)
+		hero.health.damage_factor = hero.health.damage_factor + (configer.config().hero_health_damage_multiplier - 1)
 	end
 	return hero
 end

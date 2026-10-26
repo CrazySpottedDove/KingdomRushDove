@@ -349,6 +349,198 @@ function SU.damage_dec(this, value)
 	this.unit.damage_buff = this.unit.damage_buff - value
 end
 
+local function prepare_unit_damage_factor(target)
+	local u = target.unit
+
+	if u.damage_factor_base == nil then
+		u.damage_factor_base = u.damage_factor
+		u.damage_factor_add = 0
+		u.damage_factor_mul = 1
+	end
+end
+
+local function apply_unit_damage_factor(target)
+	local u = target.unit
+
+	u.damage_factor = (u.damage_factor_base + u.damage_factor_add) * u.damage_factor_mul
+end
+
+---增加单位伤害倍率（加算，参数为倍率增量，如 0.2 表示 +20%）
+---@param target table 单位实体
+---@param damage_factor number 倍率增量
+---@return nil
+function SU.insert_unit_damage_factor_buff(target, damage_factor)
+	prepare_unit_damage_factor(target)
+
+	local u = target.unit
+
+	u.damage_factor_add = u.damage_factor_add + damage_factor
+
+	apply_unit_damage_factor(target)
+end
+
+---移除单位伤害倍率（加算逆操作）
+---@param target table 单位实体
+---@param damage_factor number 倍率增量
+---@return nil
+function SU.remove_unit_damage_factor_buff(target, damage_factor)
+	prepare_unit_damage_factor(target)
+
+	local u = target.unit
+
+	u.damage_factor_add = u.damage_factor_add - damage_factor
+
+	apply_unit_damage_factor(target)
+end
+
+---增加单位伤害倍率（乘算减伤，参数为倍率本身，如 0.8 表示造成 80% 伤害）
+---@param target table 单位实体
+---@param damage_factor number 减伤倍率
+---@return nil
+function SU.insert_unit_damage_factor_mul_buff(target, damage_factor)
+	prepare_unit_damage_factor(target)
+
+	local u = target.unit
+
+	u.damage_factor_mul = u.damage_factor_mul * damage_factor
+
+	apply_unit_damage_factor(target)
+end
+
+---移除单位伤害倍率（乘算逆操作）
+---@param target table 单位实体
+---@param damage_factor number 减伤倍率
+---@return nil
+function SU.remove_unit_damage_factor_mul_buff(target, damage_factor)
+	prepare_unit_damage_factor(target)
+
+	local u = target.unit
+
+	u.damage_factor_mul = u.damage_factor_mul / damage_factor
+
+	apply_unit_damage_factor(target)
+end
+
+---按倍率应用单位伤害倍率：大于 1 加算，小于 1 乘算
+---@param target table 单位实体
+---@param damage_factor number 倍率本身
+---@return nil
+function SU.insert_unit_damage_factor_by_factor(target, damage_factor)
+	if damage_factor >= 1 then
+		SU.insert_unit_damage_factor_buff(target, damage_factor - 1)
+	else
+		SU.insert_unit_damage_factor_mul_buff(target, damage_factor)
+	end
+end
+
+---按倍率移除单位伤害倍率：大于 1 加算逆操作，小于 1 乘算逆操作
+---@param target table 单位实体
+---@param damage_factor number 倍率本身
+---@return nil
+function SU.remove_unit_damage_factor_by_factor(target, damage_factor)
+	if damage_factor >= 1 then
+		SU.remove_unit_damage_factor_buff(target, damage_factor - 1)
+	else
+		SU.remove_unit_damage_factor_mul_buff(target, damage_factor)
+	end
+end
+
+local function prepare_received_damage_factor(target)
+	local h = target.health
+
+	if h.damage_factor_base == nil then
+		h.damage_factor_base = h.damage_factor
+		h.damage_factor_add = 0
+		h.damage_factor_mul = 1
+	end
+end
+
+local function apply_received_damage_factor(target)
+	local h = target.health
+
+	h.damage_factor = (h.damage_factor_base + h.damage_factor_add) * h.damage_factor_mul
+end
+
+---增加受到伤害倍率（加算，参数为倍率增量，如 0.2 表示 +20%）
+---@param target table 单位实体
+---@param damage_factor number 倍率增量
+---@return nil
+function SU.insert_received_damage_factor_buff(target, damage_factor)
+	prepare_received_damage_factor(target)
+
+	local h = target.health
+
+	h.damage_factor_add = h.damage_factor_add + damage_factor
+
+	apply_received_damage_factor(target)
+end
+
+---移除受到伤害倍率（加算逆操作）
+---@param target table 单位实体
+---@param damage_factor number 倍率增量
+---@return nil
+function SU.remove_received_damage_factor_buff(target, damage_factor)
+	prepare_received_damage_factor(target)
+
+	local h = target.health
+
+	h.damage_factor_add = h.damage_factor_add - damage_factor
+
+	apply_received_damage_factor(target)
+end
+
+---增加受到伤害倍率（乘算减速伤，参数为倍率本身，如 0.8 表示受到 80% 伤害）
+---@param target table 单位实体
+---@param damage_factor number 减伤倍率
+---@return nil
+function SU.insert_received_damage_factor_mul_buff(target, damage_factor)
+	prepare_received_damage_factor(target)
+
+	local h = target.health
+
+	h.damage_factor_mul = h.damage_factor_mul * damage_factor
+
+	apply_received_damage_factor(target)
+end
+
+---移除受到伤害倍率（乘算逆操作）
+---@param target table 单位实体
+---@param damage_factor number 减伤倍率
+---@return nil
+function SU.remove_received_damage_factor_mul_buff(target, damage_factor)
+	prepare_received_damage_factor(target)
+
+	local h = target.health
+
+	h.damage_factor_mul = h.damage_factor_mul / damage_factor
+
+	apply_received_damage_factor(target)
+end
+
+---按倍率应用受到伤害倍率：大于 1 加算，小于 1 乘算
+---@param target table 单位实体
+---@param damage_factor number 倍率本身
+---@return nil
+function SU.insert_received_damage_factor_by_factor(target, damage_factor)
+	if damage_factor >= 1 then
+		SU.insert_received_damage_factor_buff(target, damage_factor - 1)
+	else
+		SU.insert_received_damage_factor_mul_buff(target, damage_factor)
+	end
+end
+
+---按倍率移除受到伤害倍率：大于 1 加算逆操作，小于 1 乘算逆操作
+---@param target table 单位实体
+---@param damage_factor number 倍率本身
+---@return nil
+function SU.remove_received_damage_factor_by_factor(target, damage_factor)
+	if damage_factor >= 1 then
+		SU.remove_received_damage_factor_buff(target, damage_factor - 1)
+	else
+		SU.remove_received_damage_factor_mul_buff(target, damage_factor)
+	end
+end
+
 ---增加反伤甲
 ---@param this table 单位实体
 ---@param value number 增加值
@@ -4577,7 +4769,7 @@ function SU.insert_unit_cooldown_buff(ts, target, cooldown_factor)
 end
 
 function SU.soldier_inherit_tower_buff_factor(soldier, tower, ts)
-	soldier.unit.damage_factor = soldier.unit.damage_factor * tower.tower.damage_factor
+	SU.insert_unit_damage_factor_by_factor(soldier, tower.tower.damage_factor)
 	SU.insert_unit_cooldown_buff(ts, soldier, tower.tower.cooldown_factor)
 end
 
@@ -4653,16 +4845,12 @@ end
 ---@param target table 塔实体
 ---@param damage_factor number 伤害加成值
 function SU.insert_tower_damage_factor_buff(target, damage_factor)
-	if not target then
-		return
-	end
-
 	target.tower.damage_factor = target.tower.damage_factor + damage_factor
 
 	if target.barrack then
 		for _, s in pairs(target.barrack.soldiers) do
 			if s.unit then
-				s.unit.damage_factor = s.unit.damage_factor + damage_factor
+				SU.insert_unit_damage_factor_by_factor(s, 1 + damage_factor)
 			end
 		end
 	end
@@ -4672,16 +4860,12 @@ end
 ---@param target table 塔实体
 ---@param damage_factor number 伤害加成值
 function SU.remove_tower_damage_factor_buff(target, damage_factor)
-	if not target then
-		return
-	end
-
 	target.tower.damage_factor = target.tower.damage_factor - damage_factor
 
 	if target.barrack then
 		for _, s in pairs(target.barrack.soldiers) do
 			if s.unit then
-				s.unit.damage_factor = s.unit.damage_factor - damage_factor
+				SU.remove_unit_damage_factor_by_factor(s, 1 + damage_factor)
 			end
 		end
 	end
@@ -4839,8 +5023,9 @@ function SU.enemy_scale_mul(store, e, factor, duration)
 	u.marker_offset.y = u.marker_offset.y * factor
 	u.mod_offset.x = u.mod_offset.x * factor
 	u.mod_offset.y = u.mod_offset.y * factor
-	u.damage_factor = u.damage_factor * (factor * factor * factor)
-	e.health.damage_factor = e.health.damage_factor / (factor * factor * factor)
+	local damage_factor_scale = factor * factor * factor
+	SU.insert_unit_damage_factor_by_factor(e, damage_factor_scale)
+	SU.insert_received_damage_factor_mul_buff(e, 1 / damage_factor_scale)
 
 	if e.melee then
 		for i = 1, #e.melee.attacks do
