@@ -6,10 +6,214 @@ local storage = require("all.storage")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local plugin_paths = require("plugin_paths")
 local km = require("lib.klua.macros")
+local F = require("lib.klove.font_db")
+local i18n = require("i18n")
 local utf8_util = require("lib.utf8_utils")
 local utf8 = require("utf8")
 
 require("gg_views_custom")
+
+-- ─────────────────────────────────────────────
+-- PluginLabel：缓存换行结果
+-- GGLabel 在绘制垂直居中的文本时每帧都会调用 get_wrap_lines，
+-- LÖVE 的 Font:getWrap 每次返回新的 lines 表，插件管理器同时存在的
+-- 标签数量较多，会形成持续的 GC 压力。这里只缓存文本/字体/宽度
+-- 未变化时的换行结果，插件管理器内部不会原地修改返回的 lines 表。
+-- ─────────────────────────────────────────────
+PluginLabel = class("PluginLabel", GGLabel)
+
+function PluginLabel:get_wrap_lines()
+	self:_load_font()
+
+	local font = self.font
+	local text = self.text
+	local wrap_width = self.text_size.x * self._font_scale
+	local cache = self._wrap_cache
+
+	if cache and cache.font == font and cache.text == text and cache.width == wrap_width then
+		return cache.w, cache.n, cache.lines
+	end
+
+	local width, lines = font:getWrap(text, wrap_width)
+
+	width = width / self._font_scale
+
+	local n = #lines
+
+	if not cache then
+		cache = {}
+		self._wrap_cache = cache
+	end
+
+	cache.font, cache.text, cache.width, cache.w, cache.n, cache.lines = font, text, wrap_width, width, n, lines
+
+	return width, n, lines
+end
+
+--- 插件管理器标签的自动缩字号。
+--- GGLabel 原本从配置字号起每降 0.5 就新建字体并重排一次，首次打开时
+--- 大量标签同时触发，字体创建开销非常明显。这里参考 hero_room_view 的
+--- do_fit_lines_fast：先用一次测量按线性比例估算目标字号，再用最多几次
+--- 迭代收敛，并把结果按 文本/字体/尺寸 缓存，重复文案的标签直接复用。
+local CJK_LOCALES = {
+	ja = true,
+	["zh-Hans"] = true,
+	["zh-Hant"] = true
+}
+local FIT_SPACERS = {" ", ",", "\n", utf8.char(65292), utf8.char(12290)}
+local fit_cache = {}
+local fit_cache_count = 0
+local FIT_CACHE_MAX = 2048
+
+local function fit_key(label, start_size, fit_lines, fit_size)
+	return table.concat({label.font_name or "", start_size, label._font_scale or 1, label.text_size.x, label.text_size.y, label.line_height, fit_lines or "", fit_size and 1 or 0, i18n.current_locale or "", label.text}, "\1")
+end
+
+local function measure_fit(label, size, fit_lines, fit_size)
+	local font = F:f(label.font_name, size * label._font_scale)
+
+	if not font then
+		return false, 1
+	end
+
+	local avail = label.text_size.x * label._font_scale
+	local ratio = 1
+	local fits = true
+
+	if fit_lines == 1 then
+		local w = font:getWidth(label.text)
+
+		if w > avail then
+			fits = false
+			ratio = math.min(ratio, avail / w)
+		end
+
+		if fit_size then
+			-- 单行最终只会占一行，不需要 getWrap
+			local h = font:getHeight() * label.line_height / label._font_scale
+
+			if h > label.text_size.y and h > 0 then
+				fits = false
+				ratio = math.min(ratio, label.text_size.y / h)
+			end
+		end
+	elseif fit_size or (fit_lines and fit_lines > 1) then
+		local _, lines = font:getWrap(label.text, avail)
+		local line_count = #lines
+
+		if fit_lines and line_count > fit_lines then
+			fits = false
+			ratio = math.min(ratio, fit_lines / line_count)
+		end
+
+		if fit_size then
+			local h = line_count * font:getHeight() * label.line_height / label._font_scale
+
+			if h > label.text_size.y and h > 0 then
+				fits = false
+				ratio = math.min(ratio, label.text_size.y / h)
+			end
+		end
+	end
+
+	return fits, ratio
+end
+
+local function apply_fit(label, size, start_size, fit_lines)
+	label._fitted_font_size = size
+	label.font = nil
+	label:_load_font()
+	label._fitted_starting_font_size = start_size
+	label._fitted_font = label.font
+	label._fitted_lines = fit_lines
+	label._fitted_fit_size = label.fit_size
+	label._fitted_step = label.fit_step
+	label._fitted_size = label.text_size
+	label._fitted_text = label.text
+end
+
+function PluginLabel:_fit_text()
+	local fit_lines = self.fit_lines
+	local fit_size = self.fit_size
+
+	if not (fit_lines or fit_size) or not self.text or self.text == "" or not self.font_name or not self.font_size or not self.text_size or self.text_size.x <= 0 then
+		return GGLabel._fit_text(self)
+	end
+
+	if self._fast_fit_text == self.text then
+		return GGLabel._fit_text(self)
+	end
+
+	self._fast_fit_text = self.text
+
+	local start_size = self.font_size
+	local effective_fit_lines = fit_lines
+
+	-- 与 GGLabel:_fit_text 保持一致：非 CJK 环境下没有分隔符的长文本按单行处理
+	if fit_lines and fit_lines > 1 and not CJK_LOCALES[i18n.current_locale] then
+		for _, v in ipairs(FIT_SPACERS) do
+			if string.find(self.text, v) then
+				goto has_spacer
+			end
+		end
+
+		effective_fit_lines = 1
+	end
+
+	::has_spacer::
+
+	local key = fit_key(self, start_size, effective_fit_lines, fit_size)
+	local cached = fit_cache[key]
+
+	if cached then
+		apply_fit(self, cached, start_size, effective_fit_lines)
+		return
+	end
+
+	local fits, ratio = measure_fit(self, start_size, effective_fit_lines, fit_size)
+	local fitted = start_size
+	local fitted_ok = fits
+
+	if not fits then
+		local size = math.max(1, math.ceil(start_size * ratio))
+
+		if size >= start_size then
+			size = math.max(1, start_size - self.fit_step)
+		end
+
+		for _ = 1, 4 do
+			local ok, r = measure_fit(self, size, effective_fit_lines, fit_size)
+
+			fitted = size
+			fitted_ok = ok
+
+			if ok then
+				break
+			end
+
+			local next_size = math.max(1, math.ceil(size * r))
+
+			if next_size >= size then
+				next_size = math.max(1, size - self.fit_step)
+			end
+
+			size = next_size
+		end
+	end
+
+	if not fitted_ok then
+		return GGLabel._fit_text(self)
+	end
+
+	if fit_cache_count >= FIT_CACHE_MAX then
+		fit_cache = {}
+		fit_cache_count = 0
+	end
+
+	fit_cache[key] = fitted
+	fit_cache_count = fit_cache_count + 1
+	apply_fit(self, fitted, start_size, effective_fit_lines)
+end
 
 local ROW_H = 156
 local ROW_PAD = 16
@@ -54,7 +258,7 @@ function PluginActionButton:initialize(text, size)
 		name = "rectangle",
 		args = {"fill", 0, 0, w, h, 8, 8}
 	}
-	self._label = GGLabel:new(self.size)
+	self._label = PluginLabel:new(self.size)
 	self._label.font_name = "body"
 	self._label.font_size = 13 * rs
 	self._label.text_align = "center"
@@ -127,7 +331,7 @@ function PluginToggleButton:initialize(initial_value, size, label_font)
 	}
 	self.value = initial_value ~= false
 	self._hover = false
-	self._label = GGLabel:new(self.size)
+	self._label = PluginLabel:new(self.size)
 	self._label.font_name = "body"
 	self._label.font_size = self._label_font * rs
 	self._label.text_align = "center"
@@ -226,7 +430,7 @@ function PluginItemRow:initialize(opts, row_w)
 	self:add_child(accent)
 	self._accent = accent
 
-	local name_lbl = GGLabel:new(V.v(text_w, 26))
+	local name_lbl = PluginLabel:new(V.v(text_w, 26))
 	name_lbl.font_name = "h"
 	name_lbl.font_size = 16 * rs
 	name_lbl.text_align = "left"
@@ -238,7 +442,7 @@ function PluginItemRow:initialize(opts, row_w)
 	name_lbl.pos = V.v(ACCENT_W + ROW_PAD, 10)
 	self:add_child(name_lbl)
 
-	local meta_lbl = GGLabel:new(V.v(text_w, 22))
+	local meta_lbl = PluginLabel:new(V.v(text_w, 22))
 	meta_lbl.font_name = "body"
 	meta_lbl.font_size = 13 * rs
 	meta_lbl.text_align = "left"
@@ -250,7 +454,7 @@ function PluginItemRow:initialize(opts, row_w)
 	meta_lbl.pos = V.v(ACCENT_W + ROW_PAD, 38)
 	self:add_child(meta_lbl)
 
-	local desc_lbl = GGLabel:new(V.v(text_w, 62))
+	local desc_lbl = PluginLabel:new(V.v(text_w, 62))
 	desc_lbl.font_name = "body"
 	desc_lbl.font_size = 12 * rs
 	desc_lbl.text_align = "left"
@@ -265,7 +469,7 @@ function PluginItemRow:initialize(opts, row_w)
 
 	local status_y = 8
 	local status_h = 22
-	local status_lbl = GGLabel:new(V.v(status_w, status_h))
+	local status_lbl = PluginLabel:new(V.v(status_w, status_h))
 	status_lbl.font_name = "body"
 	status_lbl.font_size = 12 * rs
 	status_lbl.text_align = "right"
@@ -468,7 +672,7 @@ function PluginSearchBox:initialize(opts)
 	self.on_change = opts.on_change
 	self.on_submit = opts.on_submit
 
-	self._label = GGLabel:new(V.v(w - 28, h))
+	self._label = PluginLabel:new(V.v(w - 28, h))
 	self._label.font_name = "body"
 	self._label.font_size = 13 * rs
 	self._label.text_align = "left"
