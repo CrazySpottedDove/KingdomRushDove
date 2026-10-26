@@ -18,6 +18,7 @@ local plugin_packs = require("dove_modules.gui.plugin_manager_packs")
 local version = require("version")
 
 local km = require("lib.klua.macros")
+local G = love.graphics
 local utf8_util = require("lib.utf8_utils")
 require("lib.klua.string")
 require("gg_views_custom")
@@ -305,6 +306,37 @@ local function format_speed(bps)
 end
 
 require("dove_modules.gui.plugin_manager_components")
+
+-- 只绘制滚动列表里真正可见的行：KScrollList 默认会把全部行都画一遍
+-- （靠 stencil 裁掉），插件较多时离屏行的文本排版/换行是开启卡顿和
+-- 每帧 GC 的主要来源。
+local CULL_MARGIN = 24
+
+local function enable_row_culling(list)
+	function list:_draw_children()
+		local px, py = 0, 0
+		local top = -self.scroll_origin_y
+		local bottom = top + self.size.y
+
+		for i = 1, #self.children do
+			local c = self.children[i]
+
+			if not c.hidden then
+				G.translate(c.pos.x - px, c.pos.y - py)
+
+				local cy = c.pos.y
+
+				if cy + c.size.y >= top - CULL_MARGIN and cy <= bottom + CULL_MARGIN then
+					c:draw()
+				end
+
+				px, py = c.pos.x, c.pos.y
+			end
+		end
+
+		G.translate(-px, -py)
+	end
+end
 
 -- ─────────────────────────────────────────────
 -- 下拉选择面板公共辅助函数
@@ -824,7 +856,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.back:add_child(self.search_box)
 
 	-- 状态提示文本与翻页标签
-	self.hint_lbl = GGLabel:new(V.v(panel_w - 40, hint_h))
+	self.hint_lbl = PluginLabel:new(V.v(panel_w - 40, hint_h))
 	self.hint_lbl.font_name = "body"
 	self.hint_lbl.font_size = 12 * rs
 	self.hint_lbl.text_align = "left"
@@ -833,7 +865,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.hint_lbl.text = self._status_text
 	self.back:add_child(self.hint_lbl)
 
-	self.page_lbl = GGLabel:new(V.v(pager_page_w, pager_btn_h))
+	self.page_lbl = PluginLabel:new(V.v(pager_page_w, pager_btn_h))
 	self.page_lbl.font_name = "body"
 	self.page_lbl.font_size = 12 * rs
 	self.page_lbl.text_align = "center"
@@ -875,7 +907,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.task_dialog.hidden = true
 	self.back:add_child(self.task_dialog)
 
-	self.task_title_lbl = GGLabel:new(V.v(self.task_dialog.size.x - 24, 24))
+	self.task_title_lbl = PluginLabel:new(V.v(self.task_dialog.size.x - 24, 24))
 	self.task_title_lbl.font_name = "h"
 	self.task_title_lbl.font_size = 15 * rs
 	self.task_title_lbl.text_align = "left"
@@ -885,7 +917,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.task_title_lbl.pos = V.v(12, 10)
 	self.task_dialog:add_child(self.task_title_lbl)
 
-	self.task_status_lbl = GGLabel:new(V.v(self.task_dialog.size.x - 24, 48))
+	self.task_status_lbl = PluginLabel:new(V.v(self.task_dialog.size.x - 24, 48))
 	self.task_status_lbl.font_name = "body"
 	self.task_status_lbl.font_size = 12 * rs
 	self.task_status_lbl.text_align = "left"
@@ -970,7 +1002,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.task_dialog:add_child(self._cover_no_btn)
 
 	-- 禁用警告与插件列表
-	self._disabled_warning = GGLabel:new(V.v(panel_w - 40, 28))
+	self._disabled_warning = PluginLabel:new(V.v(panel_w - 40, 28))
 	self._disabled_warning.font_name = "body"
 	self._disabled_warning.font_size = 14 * rs
 	self._disabled_warning.text_align = "center"
@@ -982,6 +1014,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.back:add_child(self._disabled_warning)
 
 	self.plugin_list = KScrollList:new(V.v(panel_w - 40, scroll_h))
+	enable_row_culling(self.plugin_list)
 	self.plugin_list.pos = V.v(20, list_top_y)
 	self.plugin_list.drag_scroll_threshold = IS_ANDROID and 20 or 6
 	self.plugin_list.scroll_amount = ROW_H
@@ -1035,7 +1068,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._confirm_dialog.hidden = true
 	self.back:add_child(self._confirm_dialog)
 
-	local confirm_title = GGLabel:new(V.v(self._confirm_dialog.size.x - 24, 28))
+	local confirm_title = PluginLabel:new(V.v(self._confirm_dialog.size.x - 24, 28))
 	confirm_title.font_name = "h"
 	confirm_title.font_size = 15 * rs
 	confirm_title.text_align = "left"
@@ -1045,7 +1078,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	confirm_title.pos = V.v(12, 10)
 	self._confirm_dialog:add_child(confirm_title)
 
-	local confirm_hint = GGLabel:new(V.v(self._confirm_dialog.size.x - 24, 28))
+	local confirm_hint = PluginLabel:new(V.v(self._confirm_dialog.size.x - 24, 28))
 	confirm_hint.font_name = "body"
 	confirm_hint.font_size = 12 * rs
 	confirm_hint.text_align = "left"
@@ -1254,10 +1287,25 @@ function PluginManagerView:_set_status(text, progress)
 end
 
 function PluginManagerView:_render_progress()
-	self._progress_value = self._progress_value + (self._progress_target - self._progress_value) * 0.2
-	local w = (self.progress_bg.size.x) * (self._progress_value / 100)
+	local value = self._progress_value
+	local target = self._progress_target
+
+	if value == target then
+		return
+	end
+
+	value = value + (target - value) * 0.2
+
+	if math.abs(target - value) < 0.1 then
+		value = target
+	end
+
+	self._progress_value = value
+
+	local w = self.progress_bg.size.x * (value / 100)
+
 	self.progress_fill.shape.args[4] = w
-	self.progress_fill.size = V.v(w, self.progress_fill.size.y)
+	self.progress_fill.size.x = w
 end
 
 function PluginManagerView:_request(url, options, timeout_sec, cancel_fn)
@@ -2151,7 +2199,7 @@ function PluginManagerView:_show_min_version_blocked_dialog(items)
 	}
 	layer:add_child(panel)
 
-	local title = GGLabel:new(V.v(pw - 60, 30))
+	local title = PluginLabel:new(V.v(pw - 60, 30))
 	title.font_name = "h"
 	title.font_size = 15 * rs
 	title.text_align = "left"
@@ -2164,6 +2212,7 @@ function PluginManagerView:_show_min_version_blocked_dialog(items)
 	panel:add_child(title)
 
 	local list = KScrollList:new(V.v(list_w, list_h))
+	enable_row_culling(list)
 	list.pos = V.v(16, header_h)
 	list.colors.scroller_background = {45, 36, 22, 200}
 	list.colors.scroller_foreground = {110, 90, 50, 255}
@@ -2181,7 +2230,7 @@ function PluginManagerView:_show_min_version_blocked_dialog(items)
 			name = "rectangle",
 			args = {"fill", 0, 0, card_w, row_h, 8, 8}
 		}
-		local lbl = GGLabel:new(V.v(card_w - 24, row_h))
+		local lbl = PluginLabel:new(V.v(card_w - 24, row_h))
 		lbl.font_name = "body"
 		lbl.font_size = 12 * rs
 		lbl.text_align = "left"
@@ -2190,7 +2239,7 @@ function PluginManagerView:_show_min_version_blocked_dialog(items)
 		lbl.fit_lines = 1
 		lbl.fit_size = true
 		lbl.colors.text = {235, 220, 185, 255}
-		lbl.text = string.format(_("PLUGIN_MGR_MIN_VERSION_BLOCKED"), item.name or item.entry or "?", item.entry or "?", item.min_version or "?")
+		lbl.text = string.format(_("PLUGIN_MGR_MIN_VERSION_BLOCKED"), utf8_util.sanitize(item.name or item.entry or "?"), utf8_util.sanitize(item.entry or "?"), utf8_util.sanitize(item.min_version or "?"))
 		lbl.pos = V.v(12, 0)
 		row:add_child(lbl)
 		list:add_row(row)
@@ -2750,7 +2799,6 @@ function PluginManagerView:show()
 	self._category_panel.hidden = true
 	self._sort_panel.hidden = true
 	self:_set_status(_("PLUGIN_MGR_STATUS_AUTO_FETCH_FIRST_PAGE"), 0)
-	self:_sanitize_view_texts(self.back)
 	PluginManagerView.super.show(self)
 end
 
@@ -2790,7 +2838,6 @@ function PluginManagerView:update(dt)
 		self:hide()
 		return
 	end
-	self:_sanitize_view_texts(self.back)
 	self:_render_progress()
 	self:_update_dl_queue()
 	if not self._active_task then
@@ -2917,13 +2964,13 @@ function PluginManagerView:_handle_upload_plugin(plugin_data)
 
 	if cover_name then
 		self.task_title_lbl.text = _("PLUGIN_MGR_TASK_UPLOAD_PLUGIN")
-		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_COVER_FOUND"), cover_name)
+		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_COVER_FOUND"), utf8_util.sanitize(cover_name))
 		self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_UPLOAD_COVER"))
 		self._cover_yes_btn.hidden = false
 		self._cover_no_btn.hidden = false
 	else
 		self.task_title_lbl.text = _("PLUGIN_MGR_TASK_UPLOAD_PLUGIN")
-		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_UPLOAD_PLUGIN"), plugin_data.config.name)
+		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_UPLOAD_PLUGIN"), utf8_util.sanitize(plugin_data.config.name))
 		self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_CONFIRM_UPLOAD"))
 		self._cover_yes_btn.hidden = false
 		self._cover_no_btn.hidden = true
@@ -3579,7 +3626,7 @@ function PluginManagerView:_build_dl_view()
 	}
 	self._dl_view:add_child(panel)
 
-	local title = GGLabel:new(V.v(pw - 80, 30))
+	local title = PluginLabel:new(V.v(pw - 80, 30))
 	title.font_name = "h"
 	title.font_size = 16 * rs
 	title.text_align = "left"
@@ -3589,7 +3636,7 @@ function PluginManagerView:_build_dl_view()
 	title.pos = V.v(20, 12)
 	panel:add_child(title)
 
-	local hint = GGLabel:new(V.v(pw - 40, 20))
+	local hint = PluginLabel:new(V.v(pw - 40, 20))
 	hint.font_size = 12 * rs
 	hint.font_name = "body"
 	hint.text_align = "left"
@@ -3610,6 +3657,7 @@ function PluginManagerView:_build_dl_view()
 	panel:add_child(close_btn)
 
 	self._dl_list = KScrollList:new(V.v(pw - 40, ph - 118))
+	enable_row_culling(self._dl_list)
 	self._dl_list.pos = V.v(20, 74)
 	self._dl_list.colors.scroller_background = {45, 36, 22, 200}
 	self._dl_list.colors.scroller_foreground = {110, 90, 50, 255}
@@ -3642,7 +3690,7 @@ function PluginManagerView:_render_dl_task_view()
 	local list_w = self._dl_list.size.x - self._dl_list.scroller_width - 2 * self._dl_list.scroller_margin
 
 	if #self._dl_queue == 0 then
-		local lbl = GGLabel:new(V.v(list_w, 40))
+		local lbl = PluginLabel:new(V.v(list_w, 40))
 		lbl.font_size = 13 * rs
 		lbl.text_align = "center"
 		lbl.colors.text = {200, 185, 150, 255}
@@ -3663,7 +3711,7 @@ function PluginManagerView:_render_dl_task_view()
 		}
 
 		-- 名称：固定字号，超长按字符截断，避免 GGLabel fit_lines 自动缩放字体导致各任务字号不一致
-		local name_lbl = GGLabel:new(V.v(list_w - 300 * us, math.floor(22 * us + 0.5)))
+		local name_lbl = PluginLabel:new(V.v(list_w - 300 * us, math.floor(22 * us + 0.5)))
 		name_lbl.font_size = 13 * rs
 		name_lbl.text_align = "left"
 		name_lbl.vertical_align = "middle"
@@ -3681,7 +3729,7 @@ function PluginManagerView:_render_dl_task_view()
 		-- （极端情况 "Downloading  1234.5 MB/s" 约 245 单位），原来写死 140 会折成两行压到下面的进度条上；
 		-- 这里放宽到 260，右边缘仍与列表保持 12 的边距，超出时再由 fit_lines 收缩兜底。
 		local state_lbl_w = math.floor(260 * us + 0.5)
-		local state_lbl = GGLabel:new(V.v(state_lbl_w, math.floor(22 * us + 0.5)))
+		local state_lbl = PluginLabel:new(V.v(state_lbl_w, math.floor(22 * us + 0.5)))
 		state_lbl.font_size = 13 * rs
 		state_lbl.text_align = "right"
 		state_lbl.vertical_align = "middle"
@@ -3720,7 +3768,7 @@ function PluginManagerView:_render_dl_task_view()
 		bar_fill.shape.args[4] = fill_w
 		bar_fill.size = V.v(fill_w, bar_h)
 
-		local progress_lbl = GGLabel:new(V.v(math.floor(60 * us + 0.5), math.floor(20 * us + 0.5)))
+		local progress_lbl = PluginLabel:new(V.v(math.floor(60 * us + 0.5), math.floor(20 * us + 0.5)))
 		progress_lbl.font_size = 12 * rs
 		progress_lbl.text_align = "left"
 		progress_lbl.vertical_align = "middle"
@@ -3732,7 +3780,7 @@ function PluginManagerView:_render_dl_task_view()
 		task._progress_lbl = progress_lbl
 
 		if task.error and task.error ~= "" then
-			local err_lbl = GGLabel:new(V.v(list_w - 200 * us, math.floor(18 * us + 0.5)))
+			local err_lbl = PluginLabel:new(V.v(list_w - 200 * us, math.floor(18 * us + 0.5)))
 			err_lbl.font_size = 11 * rs
 			err_lbl.text_align = "left"
 			err_lbl.colors.text = {255, 150, 130, 255}
@@ -3911,7 +3959,7 @@ function PluginManagerView:_render_local_groups_list()
 	local q = self._search_query and self._search_query ~= "" and self._search_query:lower()
 
 	if #self.local_packs == 0 then
-		local lbl = GGLabel:new(V.v(list_w, 60))
+		local lbl = PluginLabel:new(V.v(list_w, 60))
 		lbl.font_name = "body"
 		lbl.font_size = 14 * rs
 		lbl.text_align = "center"
@@ -4174,7 +4222,7 @@ function PluginManagerView:_render_store_packs_list()
 	local idle = self._active_task == nil
 
 	if #self.pack_store_items == 0 then
-		local lbl = GGLabel:new(V.v(list_w, 60))
+		local lbl = PluginLabel:new(V.v(list_w, 60))
 		lbl.font_name = "body"
 		lbl.font_size = 14 * rs
 		lbl.text_align = "center"
@@ -4595,7 +4643,7 @@ function PluginManagerView:_show_pack_confirm(opts)
 	}
 	layer:add_child(panel)
 
-	local title = GGLabel:new(V.v(pw - 80, 30))
+	local title = PluginLabel:new(V.v(pw - 80, 30))
 	title.font_name = "h"
 	title.font_size = 15 * rs
 	title.text_align = "left"
@@ -4625,7 +4673,7 @@ function PluginManagerView:_show_pack_confirm(opts)
 		else
 			text = lines[i]
 		end
-		local lbl = GGLabel:new(V.v(pw - 56, line_h))
+		local lbl = PluginLabel:new(V.v(pw - 56, line_h))
 		lbl.font_name = "body"
 		lbl.font_size = 12 * rs
 		lbl.text_align = "left"
@@ -4766,7 +4814,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	self._group_editor_panel = panel
 
 	local is_new = pack_cfg == nil
-	local title = GGLabel:new(V.v(pw - 120, title_h))
+	local title = PluginLabel:new(V.v(pw - 120, title_h))
 	title.font_name = "h"
 	title.font_size = 15 * rs
 	title.text_align = "left"
@@ -4829,7 +4877,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	-- 分组分类标签（tag）：左侧小字标签与 chips 同一行（不换行）
 	-- 中文「分类」约 37 单位；英文 "Category" 约 69 单位，56 会让它被 fit 缩字号，故按文本实测宽度留位
 	local gcat_lbl_w = 56
-	local gcat_lbl = GGLabel:new(V.v(gcat_lbl_w, gcat_h))
+	local gcat_lbl = PluginLabel:new(V.v(gcat_lbl_w, gcat_h))
 	gcat_lbl.font_name = "body"
 	gcat_lbl.font_size = 11 * rs
 	gcat_lbl.text_align = "left"
@@ -4880,7 +4928,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	self._refresh_tag_cats = refresh_gcat
 
 	-- 校验错误提示
-	self._group_editor_error = GGLabel:new(V.v(pw - pad * 2, err_h))
+	self._group_editor_error = PluginLabel:new(V.v(pw - pad * 2, err_h))
 	self._group_editor_error.font_name = "body"
 	self._group_editor_error.font_size = 12 * rs
 	self._group_editor_error.text_align = "left"
@@ -4958,7 +5006,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 	local col_rx = col_lx + col_w + col_gap
 
 	local function col_header(text, x)
-		local lbl = GGLabel:new(V.v(col_w, header_h))
+		local lbl = PluginLabel:new(V.v(col_w, header_h))
 		lbl.font_name = "body"
 		lbl.font_size = 12 * rs
 		lbl.text_align = "left"
@@ -4973,6 +5021,7 @@ function PluginManagerView:_open_group_editor(pack_cfg)
 
 	local function make_list(x)
 		local list = KScrollList:new(V.v(col_w, list_h))
+		enable_row_culling(list)
 		list.pos = V.v(x, list_top)
 		list.drag_scroll_threshold = IS_ANDROID and 20 or 6
 		list.scroll_amount = 50
@@ -5052,26 +5101,26 @@ function PluginManagerView:_make_group_pick_row(opts)
 
 	local text_w = math.max(120, opts.list_w - right_zone - 22)
 	local name_y = is_member and 5 or 3
-	local name_lbl = GGLabel:new(V.v(text_w, 22))
+	local name_lbl = PluginLabel:new(V.v(text_w, 22))
 	name_lbl.font_name = "body"
 	name_lbl.font_size = 13 * rs
 	name_lbl.text_align = "left"
 	name_lbl.vertical_align = "middle"
 	name_lbl.colors.text = {238, 218, 162, 255}
-	name_lbl.text = opts.name
+	name_lbl.text = utf8_util.sanitize(opts.name)
 	name_lbl.fit_lines = 1
 	name_lbl.fit_size = true
 	name_lbl.pos = V.v(14, name_y)
 	row:add_child(name_lbl)
 
 	local entry_y = is_member and 27 or 27
-	local entry_lbl = GGLabel:new(V.v(text_w, 16))
+	local entry_lbl = PluginLabel:new(V.v(text_w, 16))
 	entry_lbl.font_name = "body"
 	entry_lbl.font_size = 10 * rs
 	entry_lbl.text_align = "left"
 	entry_lbl.vertical_align = "middle"
 	entry_lbl.colors.text = {150, 138, 112, 255}
-	entry_lbl.text = opts.entry
+	entry_lbl.text = utf8_util.sanitize(opts.entry)
 	entry_lbl.fit_lines = 1
 	entry_lbl.fit_size = true
 	entry_lbl.pos = V.v(14, entry_y)
@@ -5128,7 +5177,7 @@ function PluginManagerView:_render_group_candidates()
 	local list_w = list.size.x - list.scroller_width - 2 * list.scroller_margin
 
 	if #self.local_plugins == 0 then
-		local lbl = GGLabel:new(V.v(list_w, 40))
+		local lbl = PluginLabel:new(V.v(list_w, 40))
 		lbl.font_name = "body"
 		lbl.font_size = 13 * rs
 		lbl.text_align = "center"
@@ -5179,7 +5228,7 @@ function PluginManagerView:_render_group_candidates()
 	end)
 
 	if #candidates == 0 then
-		local lbl = GGLabel:new(V.v(list_w, 40))
+		local lbl = PluginLabel:new(V.v(list_w, 40))
 		lbl.font_name = "body"
 		lbl.font_size = 13 * rs
 		lbl.text_align = "center"
@@ -5235,7 +5284,7 @@ function PluginManagerView:_render_group_members()
 
 	local order = self._group_editor_order or {}
 	if #order == 0 then
-		local lbl = GGLabel:new(V.v(list_w, 40))
+		local lbl = PluginLabel:new(V.v(list_w, 40))
 		lbl.font_name = "body"
 		lbl.font_size = 13 * rs
 		lbl.text_align = "center"
