@@ -669,14 +669,11 @@ function director:load_plugin_texture_groups(groups, ref_height, queue, item_nam
 
 	for group, texture_group_info in pairs(groups) do
 		local path = "plugins/" .. texture_group_info.path
+		local not_binary = not texture_group_info.use_bytecode
 		if queue then
-			I:queue_load_atlas(scale, path, group, not texture_group_info.use_bytecode)
+			I:queue_load_atlas(scale, path, group, not_binary)
 		else
-			if texture_group_info.use_bytecode then
-				I:load_atlas_new(scale, path, group)
-			else
-				I:load_atlas(scale, path, group)
-			end
+			I:load_atlas_new(scale, path, group, not_binary)
 		end
 	end
 end

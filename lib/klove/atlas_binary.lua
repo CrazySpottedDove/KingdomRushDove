@@ -1,6 +1,6 @@
 -- lib/klove/atlas_binary.lua
 -- 图集元数据紧凑二进制格式，用于替代 .bin/.abin（Lua 逐字节码），降低存储体积。
--- 加载端见 lib/klove/image_db.lua:preload_atlas_from_bytecode；
+-- 加载端见 lib/klove/image_db.lua:preload_atlas_binary；
 -- 生成端见 scripts/compile_image_atlas.lua 与 dove_modules/atlas_manager/atlas_util.lua。
 --
 -- 布局（小端；所有整数无符号）：
