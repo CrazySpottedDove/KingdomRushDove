@@ -3567,7 +3567,7 @@ function scripts.bolt.update(this, store)
 
 			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
 
-			if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
+			if d > b.max_track_distance then
 				target_invalid = true
 				target = nil
 			end
@@ -3583,9 +3583,15 @@ function scripts.bolt.update(this, store)
 			new_target = false
 		end
 
-		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+		mspeed = mspeed + FPS * mspeed * (1 / FPS) * b.acceleration_factor
 		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
-		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		if b.to.x == this.pos.x and b.to.y == this.pos.y then
+			b.speed:set(0, 0)
+		else
+			local factor = mspeed / b.to:dist(this.pos)
+			b.speed:set((b.to.x - this.pos.x) * factor, (b.to.y - this.pos.y) * factor)
+		end
+
 		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
 
 		if not b.ignore_rotation then
