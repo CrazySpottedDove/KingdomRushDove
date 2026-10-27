@@ -1042,11 +1042,11 @@ tt.render.sprites[1].loop = false
 tt = E:register_t("power_scorched_water", "aura")
 E:add_comps(tt, "render", "tween")
 tt.main_script.update = scripts.aura_apply_damage.update
-tt.aura.duration = 5
+tt.aura.duration = 0
 tt.aura.radius = 65
 tt.aura.cycle_time = 1
-tt.aura.damage_min = 10
-tt.aura.damage_max = 20
+tt.aura.damage_min = 0
+tt.aura.damage_max = 0
 tt.aura.damage_type = DAMAGE_PHYSICAL
 tt.aura.vis_flags = bor(F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
