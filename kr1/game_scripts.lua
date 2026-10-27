@@ -56,8 +56,10 @@ scripts.mod_high_elven = {
 		local m = this.modifier
 		local target = store.entities[m.target_id]
 
-		SU.remove_tower_damage_factor_buff(target, this.damage_factor + this.damage_factor_inc * m.level)
-		SU.remove_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
+		if target then
+			SU.remove_tower_damage_factor_buff(target, this.damage_factor + this.damage_factor_inc * m.level)
+			SU.remove_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
+		end
 
 		return true
 	end
