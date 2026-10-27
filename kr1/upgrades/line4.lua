@@ -506,15 +506,21 @@ local techs = {
 	},
 	thunder_typhoon = {
 		class = "rain",
+		extra_duration_increase = 4,
 		from_kr = 3,
+		hits_increase = 2,
 		icon = 21,
 		level = 6,
 		price = 4,
+		second_count_increase = 4,
+		slow_factor_increase = -0.15,
 		patch = function(UP, u)
-			T("power_thunder_control").thunders[1].count = 10
-			T("power_thunder_control").thunders[2].count = 10
-			T("power_thunder_control").slow.factor = 0.25
-			T("power_thunder_control").extra_duration = 4
+			local control = T("power_thunder_control")
+
+			control.thunders[1].count = control.thunders[1].count + u.hits_increase
+			control.thunders[2].count = control.thunders[2].count + u.second_count_increase
+			T("mod_power_thunder_slow").slow.factor = T("mod_power_thunder_slow").slow.factor + u.slow_factor_increase
+			control.extra_duration = (control.extra_duration or 0) + u.extra_duration_increase
 		end
 	}
 
