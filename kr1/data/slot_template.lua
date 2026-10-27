@@ -14,7 +14,7 @@ return {
 		barracks = 0,
 		mages = 0
 	},
-	upgrade_list_id = 1,
+	upgrade_list_id = "1",
 	-- power3 法术：默认未选择（nil），由选择 UI 写入 id
 	spell_power_id = nil,
 	seen = {

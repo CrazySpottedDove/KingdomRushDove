@@ -56,7 +56,14 @@ function level:init_coroutined(store)
 	local slot = storage:load_slot(nil, true)
 
 	UP:set_levels(slot.upgrades)
-	UP:set_list_id(slot.upgrade_list_id)
+
+	local line_key = tostring(slot.upgrade_list_id or "1")
+
+	if not UP.list[line_key] then
+		line_key = "1"
+	end
+
+	UP:set_list_id(line_key)
 	DI:set_level(store.level_difficulty)
 
 	-- power3 法术：解析本局选择（可为 nil = 未选择）
@@ -123,7 +130,8 @@ function level:init_coroutined(store)
 
 	-- 防护：避免某些不合适的插件破坏存档中的科技。这表现为 user_power_1 未正确设置具体模板
 	if E:get_template("user_power_1").template_name == "user_power_1" then
-		slot.upgrade_list_id = 1
+		slot.upgrade_list_id = "1"
+		UP:set_list_id("1")
 		UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
 		storage:save_slot(slot, nil, true)
 	end
