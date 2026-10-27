@@ -14245,6 +14245,8 @@ tt = E:register_t("arrow_hero_vesper_long_arrow", "arrow_hero_vesper_short_arrow
 tt.bullet.xp_gain_factor = 2
 
 tt = E:register_t("hero_vesper_arrow_to_the_knee_arrow", "arrow")
+tt.main_script.insert = scripts.arrow_straight_forward.insert
+tt.main_script.update = scripts.arrow_straight_forward.update
 tt.render.sprites[1].name = "hero_vesper_arrow_to_the_knee_arrow"
 tt.bullet.miss_decal = "hero_vesper_arrow_to_the_knee_arrow_miss"
 tt.bullet.flight_time = fts(12)

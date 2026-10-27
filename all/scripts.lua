@@ -2349,6 +2349,180 @@ function scripts.arrow.update(this, store)
 	simulation:queue_remove_entity(this)
 end
 
+scripts.arrow_straight_forward = {}
+
+function scripts.arrow_straight_forward.insert(this, store)
+	local b = this.bullet
+	local target = store.entities[b.target_id]
+
+	if not target then
+		return false
+	end
+
+	if b.reset_to_target_pos then
+		b.to.x, b.to.y = target.pos.x, target.pos.y
+
+		if target.unit and target.unit.hit_offset and not b.ignore_hit_offset then
+			b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
+		end
+	end
+
+	if b.predict_target_pos then
+		b.to.x = b.to.x + target.motion.speed.x * b.flight_time
+		b.to.y = b.to.y + target.motion.speed.y * b.flight_time
+	end
+
+	local angle = math.atan2(b.to.y - this.pos.y, b.to.x - this.pos.x)
+
+	b.to.x = this.pos.x + math.cos(angle) * b.straight_forward_distance
+	b.to.y = this.pos.y + math.sin(angle) * b.straight_forward_distance
+
+	b.speed.x = math.cos(angle) * b.straight_forward_distance / b.flight_time
+	b.speed.y = math.sin(angle) * b.straight_forward_distance / b.flight_time
+
+	if b.rotation_speed then
+		b.rotation_speed = b.rotation_speed * (b.to.x > this.pos.x and -1 or 1)
+
+		if b.rotation_speed > 0 then
+			this.render.sprites[1].flip_x = not this.render.sprites[1].flip_x
+		end
+	end
+
+	if b.hide_radius then
+		this.render.sprites[1].hidden = true
+	end
+
+	return true
+end
+
+function scripts.arrow_straight_forward.update(this, store)
+	local b = this.bullet
+	local s = this.render.sprites[1]
+	local ps
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+
+		simulation:queue_insert_entity(ps)
+	end
+
+	local mods = b.mods or (b.mod and {b.mod})
+	local hitted = {}
+	local last_x, last_y = this.pos.x, this.pos.y
+	local last_ts = store.tick_ts
+	local speed_norm2 = b.speed.x * b.speed.x + b.speed.y * b.speed.y
+
+	while true do
+		local dt = store.tick_ts - last_ts
+		local arrived = false
+
+		if speed_norm2 * dt * dt > V.dist2(last_x, last_y, b.to.x, b.to.y) then
+			this.pos.x, this.pos.y = b.to.x, b.to.y
+			arrived = true
+		else
+			this.pos.x = this.pos.x + b.speed.x * dt
+			this.pos.y = this.pos.y + b.speed.y * dt
+		end
+
+		local targets = U.find_enemies_around_line(last_x, last_y, this.pos.x, this.pos.y, b.damage_radius, F_RANGED, b.damage_flags, b.damage_bans)
+
+		if targets then
+			for i = 1, #targets do
+				local target = targets[i]
+
+				if not hitted[target.id] then
+					hitted[target.id] = true
+
+					local d = SU.create_bullet_damage(b, target.id, this.id)
+
+					queue_damage(store, d)
+
+					if mods then
+						for j = 1, #mods do
+							local mod_name = mods[j]
+
+							if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+								local mod = E:create_entity(mod_name)
+
+								mod.modifier.source_id = this.id
+								mod.modifier.target_id = target.id
+								mod.modifier.level = b.level
+								mod.modifier.source_damage = d
+								mod.modifier.damage_factor = b.damage_factor
+
+								simulation:queue_insert_entity(mod)
+							end
+						end
+					end
+
+					if b.hit_fx then
+						local fx = E:create_entity(b.hit_fx)
+
+						fx.pos = V.vclone(target.pos)
+						fx.render.sprites[1].ts = store.tick_ts
+
+						simulation:queue_insert_entity(fx)
+					end
+
+					if b.hit_blood_fx and target.unit.blood_color ~= BLOOD_NONE then
+						local sfx = E:create_entity(b.hit_blood_fx)
+
+						sfx.pos = V.vclone(target.pos)
+						sfx.render.sprites[1].ts = store.tick_ts
+
+						if sfx.use_blood_color and target.unit.blood_color then
+							sfx.render.sprites[1].name = target.unit.blood_color
+							sfx.render.sprites[1].r = s.r
+						end
+
+						simulation:queue_insert_entity(sfx)
+					end
+				end
+			end
+		end
+
+		if arrived then
+			break
+		end
+
+		last_x, last_y = this.pos.x, this.pos.y
+		last_ts = store.tick_ts
+
+		coroutine.yield()
+	end
+
+	if b.payload then
+		local p = E:create_entity(b.payload)
+
+		p.pos.x, p.pos.y = this.pos.x, this.pos.y
+		p.target_id = b.target_id
+		p.source_id = this.id
+
+		if p.aura then
+			p.aura.level = b.level
+			p.aura.damage_factor = b.damage_factor
+		end
+
+		if b.payload_props then
+			for k, v in pairs(b.payload_props) do
+				p[k] = v
+			end
+		end
+
+		simulation:queue_insert_entity(p)
+	end
+
+	if ps and ps.particle_system.emit then
+		s.hidden = true
+		ps.particle_system.emit = false
+
+		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
+	end
+
+	simulation:queue_remove_entity(this)
+end
+
 scripts.arrow_missile = {}
 
 function scripts.arrow_missile.update(this, store)
@@ -3551,7 +3725,7 @@ function scripts.bolt.update(this, store)
 		end
 	end
 
-	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+	while this.pos:dist(b.to) > mspeed * store.tick_length do
 		coroutine.yield()
 
 		if not target_invalid then
