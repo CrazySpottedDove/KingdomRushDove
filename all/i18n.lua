@@ -105,6 +105,24 @@ function i18n:find_fallback_locale(lang, script)
 	end
 end
 
+--- 暴露给插件，用于插件merge自己的i18n
+---@param locale string 语言名，如 zh-Hans
+---@param plugin_i18n_path string 插件i18n路径，如对于 entry 为 foo 的插件，可写 "foo.assets.strings"
+function i18n:merge_locales(locale, plugin_i18n_path)
+	local plugin_file_path = plugin_i18n_path .. "." .. locale
+	local ok, plugin_strings = pcall(require, plugin_file_path)
+	if not ok then
+		plugin_file_path = plugin_i18n_path .. "." .. self.default_locale
+		ok, plugin_strings = pcall(require, plugin_file_path)
+	end
+	if ok then
+		for k, v in pairs(plugin_strings) do
+			self.msgs[locale][k] = v
+		end
+		package.loaded[plugin_file_path] = nil
+	end
+end
+
 -- 缺失文案可见化：只在显式开启时替换实现，正常工作路径不带任何检查
 local fast_lookup = _
 function i18n.set_debug_missing(on)
