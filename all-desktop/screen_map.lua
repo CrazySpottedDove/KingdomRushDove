@@ -477,7 +477,7 @@ function screen_map:init(w, h)
 	u_button.label.text_size = u_button.label.size
 	u_button.label.font_size = 18
 	u_button.label.vertical_align = CJK("middle", "top", nil, "top")
-	u_button.label.text = _("UPGRADES_" .. self.user_data.upgrade_list_id)
+	u_button.label.text = screen_map:upgrade_line_title(self.user_data.upgrade_list_id)
 	u_button.label.fit_lines = 1
 
 	self.window:add_child(u_button)
@@ -951,7 +951,7 @@ end
 
 function screen_map:refresh_upgrade_button_state()
 	local list_id = self.user_data.upgrade_list_id or 1
-	local upgrade_list = UPGR.list[list_id] or UPGR.list[1]
+	local upgrade_list = (UPGR.list[list_id] or UPGR.list[1]).techs
 	local bought_levels = self.user_data.upgrades or {}
 	local spent_stars = 0
 	local max_upgrade_stars = 0
@@ -3875,6 +3875,27 @@ function LevelSelectView:show_page(page, stars)
 	end
 end
 
+screen_map.upgrade_line_configs = {
+	[1] = {
+		title = _("UPGRADES_1")
+	},
+	[2] = {
+		title = _("UPGRADES_2")
+	},
+	[3] = {
+		title = _("UPGRADES_3")
+	},
+	[4] = {
+		title = _("UPGRADES_4")
+	}
+}
+
+function screen_map:upgrade_line_title(id)
+	local cfg = self.upgrade_line_configs[id] or self.upgrade_line_configs[1]
+
+	return cfg.title
+end
+
 -- 科技
 UpgradesView = class("UpgradesView", PopUpView)
 
@@ -3891,7 +3912,7 @@ function UpgradesView:initialize(sw, sh)
 
 	self.back.alpha = 1
 
-	local header = GGPanelHeader:new(_("UPGRADES_" .. UPGR.list_id), 274)
+	local header = GGPanelHeader:new(screen_map:upgrade_line_title(UPGR.list_id), 274)
 
 	header.pos = V.v(308, CJK(27, 25, nil, 25))
 
@@ -3927,19 +3948,19 @@ function UpgradesView:initialize(sw, sh)
 
 	self:add_child(self.list_dropdown)
 
-	self.list_options = {{
-		label = _("UPGRADES_1"),
-		value = 1
-	}, {
-		label = _("UPGRADES_2"),
-		value = 2
-	}, {
-		label = _("UPGRADES_3"),
-		value = 3
-	}, {
-		label = _("UPGRADES_4"),
-		value = 4
-	}}
+	self.list_options = {}
+
+	for id, cfg in pairs(screen_map.upgrade_line_configs) do
+		self.list_options[#self.list_options + 1] = {
+			label = cfg.title,
+			value = id
+		}
+	end
+
+	table.sort(self.list_options, function(a, b)
+		return a.value < b.value
+	end)
+
 	local list_options = self.list_options
 
 	local card_w = 160
@@ -3994,8 +4015,11 @@ function UpgradesView:initialize(sw, sh)
 			self.list_dropdown.hidden = true
 			if UPGR.list_id ~= opt.value then
 				UPGR:set_list_id(opt.value)
-				self.header.text = _("UPGRADES_" .. UPGR.list_id)
-				screen_map.u_button.label.text = _("UPGRADES_" .. UPGR.list_id)
+
+				local title = screen_map:upgrade_line_title(UPGR.list_id)
+
+				self.header.text = title
+				screen_map.u_button.label.text = title
 				self:rebuild_upgrade_buttons()
 			end
 		end
@@ -4052,7 +4076,7 @@ function UpgradesView:initialize(sw, sh)
 	local separation_y = 80
 	local x_offsets = {121, 243, 361, 483, 604, 724}
 
-	for key, value in pairs(UPGR.list[UPGR.list_id]) do
+	for key, value in pairs(UPGR:get_techs()) do
 		local class_ind = table.keyforobject(UPGR.display_order, value.class)
 		local icon_index = value.icon
 		local icon_name = U.splicing_from_kr(value.from_kr, string.format("Upgrades_Icons_%04i", icon_index))
@@ -4309,7 +4333,7 @@ function UpgradesView:rebuild_upgrade_buttons()
 	local separation_y = 80
 	local x_offsets = {121, 243, 361, 483, 604, 724}
 
-	for key, value in pairs(UPGR.list[UPGR.list_id]) do
+	for key, value in pairs(UPGR:get_techs()) do
 		local class_ind = table.keyforobject(UPGR.display_order, value.class)
 		local icon_index = value.icon
 		local icon_name = U.splicing_from_kr(value.from_kr, string.format("Upgrades_Icons_%04i", icon_index))
