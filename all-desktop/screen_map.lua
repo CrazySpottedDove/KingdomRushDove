@@ -50,6 +50,26 @@ local function custom_maps_signature(maps)
 end
 
 screen_map = {}
+
+function screen_map:upgrade_line_title(key)
+	if not UPGR.list[key] then
+		key = "1"
+	end
+
+	return _("UPGRADES_" .. key)
+end
+
+function screen_map:resolve_upgrade_line()
+	local key = tostring(self.user_data.upgrade_list_id or "1")
+
+	if not UPGR.list[key] then
+		key = "1"
+	end
+
+	UPGR:set_list_id(key)
+	self.user_data.upgrade_list_id = key
+end
+
 screen_map.required_sounds = {"common", "music_screen_map"}
 screen_map.required_textures = {
 	"upgrades",
@@ -234,6 +254,7 @@ function screen_map:init_coro(w, h, done_callback)
 		self.level_data = map_data.level_data
 
 		self.user_data = storage:load_slot()
+		self:resolve_upgrade_line()
 		SPELLS:set_selected(self.user_data.spell_power_id)
 		self.generation = self.user_data.last_generation
 		local map_gen = self.generation == self.CUSTOM_GEN and 1 or self.generation
@@ -950,8 +971,8 @@ function screen_map:normalize_selected_heroes()
 end
 
 function screen_map:refresh_upgrade_button_state()
-	local list_id = self.user_data.upgrade_list_id or 1
-	local upgrade_list = (UPGR.list[list_id] or UPGR.list[1]).techs
+	local list_id = self.user_data.upgrade_list_id or "1"
+	local upgrade_list = (UPGR.list[list_id] or UPGR.list["1"]).techs
 	local bought_levels = self.user_data.upgrades or {}
 	local spent_stars = 0
 	local max_upgrade_stars = 0
@@ -3875,27 +3896,6 @@ function LevelSelectView:show_page(page, stars)
 	end
 end
 
-screen_map.upgrade_line_configs = {
-	[1] = {
-		title = _("UPGRADES_1")
-	},
-	[2] = {
-		title = _("UPGRADES_2")
-	},
-	[3] = {
-		title = _("UPGRADES_3")
-	},
-	[4] = {
-		title = _("UPGRADES_4")
-	}
-}
-
-function screen_map:upgrade_line_title(id)
-	local cfg = self.upgrade_line_configs[id] or self.upgrade_line_configs[1]
-
-	return cfg.title
-end
-
 -- 科技
 UpgradesView = class("UpgradesView", PopUpView)
 
@@ -3950,10 +3950,10 @@ function UpgradesView:initialize(sw, sh)
 
 	self.list_options = {}
 
-	for id, cfg in pairs(screen_map.upgrade_line_configs) do
+	for key in pairs(UPGR.list) do
 		self.list_options[#self.list_options + 1] = {
-			label = cfg.title,
-			value = id
+			label = screen_map:upgrade_line_title(key),
+			value = key
 		}
 	end
 
@@ -4508,7 +4508,9 @@ function UpgradeButtons:on_enter()
 		self.over_circle.hidden = false
 	end
 
-	screen_map.upgrades:set_tip_panel(_("UPGRADE_" .. UPGR.list_id .. "_" .. self.my_id .. "_NAME"), _("UPGRADE_" .. UPGR.list_id .. "_" .. self.my_id .. "_DESCRIPTION"), self.data_values.price)
+	local line_key = UPGR.list_id
+
+	screen_map.upgrades:set_tip_panel(_("UPGRADE_" .. line_key .. "_" .. self.my_id .. "_NAME"), _("UPGRADE_" .. line_key .. "_" .. self.my_id .. "_DESCRIPTION"), self.data_values.price)
 end
 
 function UpgradeButtons:on_exit()
@@ -4756,7 +4758,14 @@ function EncyclopediaView:show()
 	local user_data = storage:load_slot()
 	E:Load()
 	UPGR:set_levels(user_data.upgrades)
-	UPGR:set_list_id(user_data.upgrade_list_id)
+
+	local key = tostring(user_data.upgrade_list_id or "1")
+
+	if not UPGR.list[key] then
+		key = "1"
+	end
+
+	UPGR:set_list_id(key)
 	DI:set_level(screen_map.user_data.difficulty)
 	UPGR:patch_templates(6)
 	SPELLS:set_selected(user_data.spell_power_id)

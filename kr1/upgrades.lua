@@ -12,16 +12,21 @@ upgrades.levels.engineers = 0
 upgrades.levels.rain = 0
 upgrades.levels.reinforcements = 0
 upgrades.display_order = {"archers", "barracks", "mages", "engineers", "rain", "reinforcements"}
-upgrades.list_id = 1
+upgrades.list_id = "1"
 local line1 = require("kr1.upgrades.line1")
 local line2 = require("kr1.upgrades.line2")
 local line3 = require("kr1.upgrades.line3")
 local line4 = require("kr1.upgrades.line4")
 
-upgrades.list = {line1, line2, line3, line4}
+upgrades.list = {
+	["1"] = line1,
+	["2"] = line2,
+	["3"] = line3,
+	["4"] = line4
+}
 
 function upgrades:set_list_id(id)
-	self.list_id = id or 1
+	self.list_id = id or "1"
 end
 
 function upgrades:set_levels(levels)

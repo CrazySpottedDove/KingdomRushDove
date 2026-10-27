@@ -42,7 +42,7 @@ local SETTINGS_PARAMS = {
 local SLOT_ADDITIONAL_DATA = {
 	gems = 0,
 	bag = {},
-	upgrade_list_id = 1,
+	upgrade_list_id = "1",
 	last_generation = 1
 }
 local SLOT_MANDATORY_KEYS = {"levels", "upgrades", "heroes"}
