@@ -3583,7 +3583,7 @@ function scripts.bolt.update(this, store)
 			new_target = false
 		end
 
-		mspeed = mspeed + FPS * mspeed * (1 / FPS) * b.acceleration_factor
+		mspeed = mspeed + FPS * mspeed * math.ceil(b.acceleration_factor / FPS)
 		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
 		if b.to.x == this.pos.x and b.to.y == this.pos.y then
 			b.speed:set(0, 0)
