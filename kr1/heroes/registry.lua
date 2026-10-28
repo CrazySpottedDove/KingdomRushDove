@@ -234,30 +234,30 @@ function HEROES:ensure_animations(name)
 end
 
 --- 各英雄声明的 screen_map 资源聚合（这部分与局内 required_* 分开）
----@return table {textures=table, plugin_textures=table, sounds=table, plugin_sounds=table}
+---@return table {required_textures=table, plugin_required_textures=table, required_sounds=table, plugin_required_sounds=table}
 function HEROES:screen_resources()
 	local out = {
-		textures = {},
-		plugin_textures = {},
-		sounds = {},
-		plugin_sounds = {}
+		required_textures = {},
+		plugin_required_textures = {},
+		required_sounds = {},
+		plugin_required_sounds = {}
 	}
 
 	for _, module in ipairs(self.declarations) do
 		for _, group in ipairs(module.screen_map_required_textures or {}) do
-			out.textures[#out.textures + 1] = group
+			out.required_textures[#out.required_textures + 1] = group
 		end
 
 		for _, group in ipairs(module.screen_map_required_sounds or {}) do
-			out.sounds[#out.sounds + 1] = group
+			out.required_sounds[#out.required_sounds + 1] = group
 		end
 
 		for group, info in pairs(module.screen_map_plugin_required_textures or {}) do
-			out.plugin_textures[group] = info
+			out.plugin_required_textures[group] = info
 		end
 
 		for _, group in ipairs(module.screen_map_plugin_required_sounds or {}) do
-			out.plugin_sounds[#out.plugin_sounds + 1] = group
+			out.plugin_required_sounds[#out.plugin_required_sounds + 1] = group
 		end
 	end
 

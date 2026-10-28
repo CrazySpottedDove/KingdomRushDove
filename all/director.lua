@@ -248,9 +248,7 @@ function director:item_done_callback(item_name, outcome)
 	if props.next then
 		local props_next = self.item_props[props.next]
 
-		if props_next and props_next.skip_check and director.skip_checks[props_next.skip_check] and director.skip_checks[props_next.skip_check]() then
-			log.debug("skipping screen %s. %s passed", props.next, props_next.skip_check)
-
+		if props_next and props_next.skip_check and self.skip_checks[props_next.skip_check] and self.skip_checks[props_next.skip_check]() then
 			props = props_next
 
 			goto label_6_0
@@ -274,8 +272,8 @@ function director:unload_item(item)
 		_G.CUSTOM_MAP_ROOT = nil
 		local game = item
 
-		self:unload_texture_groups(replace_locale(game.game_gui.required_textures), game.game_gui.ref_res, "game_gui")
-		self:unload_plugin_texture_groups(game.game_gui.plugin_required_textures, game.game_gui.ref_res, "game_gui")
+		self:queue_unload_texture_groups(replace_locale(game.game_gui.required_textures), game.game_gui.ref_res, "game_gui")
+		self:queue_unload_plugin_texture_groups(game.game_gui.plugin_required_textures, game.game_gui.ref_res, "game_gui")
 
 		local groups = {}
 
@@ -285,7 +283,7 @@ function director:unload_item(item)
 		if configer.ui_settings().hero_menu_enabled then
 			for _, module in ipairs(HEROES.declarations) do
 				groups = table.append(groups, module.required_textures or {})
-				self:unload_plugin_texture_groups(module.plugin_required_textures, game.ref_res, "game")
+				self:queue_unload_plugin_texture_groups(module.plugin_required_textures, game.ref_res, "game")
 				EXO:unload(module.required_exoskeletons or {})
 				EXO:unload(module.plugin_required_exoskeletons or {})
 			end
@@ -295,7 +293,7 @@ function director:unload_item(item)
 
 				if module then
 					groups = table.append(groups, module.required_textures or {})
-					self:unload_plugin_texture_groups(module.plugin_required_textures, game.ref_res, "game")
+					self:queue_unload_plugin_texture_groups(module.plugin_required_textures, game.ref_res, "game")
 					EXO:unload(module.required_exoskeletons or {})
 					EXO:unload(module.plugin_required_exoskeletons or {})
 				else
@@ -320,9 +318,9 @@ function director:unload_item(item)
 		-- 释放本局 animation_db -> image_db 的链接缓存，必须在 atlas 卸载前执行
 		A:unlink()
 
-		self:unload_texture_groups(groups, game.ref_res, "game")
-		self:unload_plugin_texture_groups(game.plugin_required_textures, game.ref_res, "game")
-		I:unload_atlas("temp_game_texts", game.store.screen_scale)
+		self:queue_unload_texture_groups(groups, game.ref_res, "game")
+		self:queue_unload_plugin_texture_groups(game.plugin_required_textures, game.ref_res, "game")
+		I:queue_unload("temp_game_texts", game.store.screen_scale)
 
 		self:unload_sound_groups(item.required_sounds)
 		self:unload_sound_groups(item.plugin_required_sounds)
@@ -349,7 +347,7 @@ function director:unload_item(item)
 		if game.store and game.store.level then
 			local level = game.store.level
 			if level.plugin_required_textures then
-				self:unload_plugin_texture_groups(level.plugin_required_textures, game.ref_res, "game")
+				self:queue_unload_plugin_texture_groups(level.plugin_required_textures, game.ref_res, "game")
 			end
 			if level.plugin_required_sounds then
 				self:unload_sound_groups(level.plugin_required_sounds)
@@ -361,51 +359,54 @@ function director:unload_item(item)
 		local spell_def_u = SPELLS_U:get_selected()
 
 		if spell_def_u then
-			self:unload_texture_groups(spell_def_u.required_textures or {}, game.ref_res, "game")
-			self:unload_plugin_texture_groups(spell_def_u.plugin_required_textures or {}, game.ref_res, "game")
+			self:queue_unload_texture_groups(spell_def_u.required_textures or {}, game.ref_res, "game")
+			self:queue_unload_plugin_texture_groups(spell_def_u.plugin_required_textures or {}, game.ref_res, "game")
 			self:unload_sound_groups(spell_def_u.required_sounds or {})
 			self:unload_sound_groups(spell_def_u.plugin_required_sounds or {})
 			EXO:unload(spell_def_u.required_exoskeletons or {})
 			EXO:unload(spell_def_u.plugin_required_exoskeletons or {})
 		end
 
+		I:queue_unload_done()
 		game:destroy()
 
 		game.store = nil
 	else
 		local textures = item.required_textures
-		local hero_screen = item.hero_screen_resources
+		local hero_resources = item.hero_resources
 
 		if textures then
 			local unload_textures = replace_locale(textures, item.locale_at_requirement)
 
-			if hero_screen then
-				unload_textures = table.append(unload_textures, hero_screen.textures, true)
+			if hero_resources then
+				unload_textures = table.append(unload_textures, hero_resources.required_textures, true)
 			end
 
-			self:unload_texture_groups(unload_textures, item.ref_res, item.item_name)
+			self:queue_unload_texture_groups(unload_textures, item.ref_res, item.item_name)
 
 			local plugin_textures = item.plugin_required_textures
 
-			if hero_screen and next(hero_screen.plugin_textures) then
-				plugin_textures = table.merge(plugin_textures or {}, hero_screen.plugin_textures, true)
+			if hero_resources then
+				plugin_textures = table.merge(plugin_textures or {}, hero_resources.plugin_required_textures, true)
 			end
 
-			self:unload_plugin_texture_groups(plugin_textures, item.ref_res, item.item_name)
+			self:queue_unload_plugin_texture_groups(plugin_textures, item.ref_res, item.item_name)
 		end
+
+		I:queue_unload_done()
 
 		if item.required_sounds then
 			local sounds = item.required_sounds
 
-			if hero_screen then
-				sounds = table.append(sounds, hero_screen.sounds, true)
+			if hero_resources then
+				sounds = table.append(sounds, hero_resources.required_sounds, true)
 			end
 
 			self:unload_sound_groups(sounds)
 		end
 
-		if hero_screen and #hero_screen.plugin_sounds > 0 then
-			self:unload_sound_groups(hero_screen.plugin_sounds)
+		if hero_resources then
+			self:unload_sound_groups(hero_resources.plugin_required_sounds)
 		end
 
 		self:unload_sound_groups(item.plugin_required_sounds)
@@ -475,26 +476,26 @@ function director:queue_load_item_named(name)
 		item.args = self.next_item_args
 
 		-- 英雄声明里要求在地图界面加载的额外资源
-		local hero_screen
+		local hero_resources
 
 		if name == "map" then
-			hero_screen = HEROES:screen_resources()
-			item.hero_screen_resources = hero_screen
+			hero_resources = HEROES:screen_resources()
+			item.hero_resources = hero_resources
 		end
 
 		if item.required_textures then
 			local textures = replace_locale(item.required_textures)
 
-			if hero_screen then
-				textures = table.append(textures, hero_screen.textures, true)
+			if hero_resources then
+				textures = table.append(textures, hero_resources.required_textures, true)
 			end
 
 			self:load_texture_groups(textures, self.params.texture_size, item.ref_res, true, name)
 
 			local plugin_textures = item.plugin_required_textures
 
-			if hero_screen and next(hero_screen.plugin_textures) then
-				plugin_textures = table.merge(plugin_textures or {}, hero_screen.plugin_textures, true)
+			if hero_resources then
+				plugin_textures = table.merge(plugin_textures or {}, hero_resources.plugin_required_textures, true)
 			end
 
 			self:load_plugin_texture_groups(plugin_textures, item.ref_res, true, name)
@@ -509,15 +510,15 @@ function director:queue_load_item_named(name)
 		if item.required_sounds then
 			local sounds = item.required_sounds
 
-			if hero_screen then
-				sounds = table.append(sounds, hero_screen.sounds, true)
+			if hero_resources then
+				sounds = table.append(sounds, hero_resources.required_sounds, true)
 			end
 
 			self:load_sound_groups(sounds)
 		end
 
-		if hero_screen and #hero_screen.plugin_sounds > 0 then
-			self:load_sound_groups(hero_screen.plugin_sounds)
+		if hero_resources then
+			self:load_sound_groups(hero_resources.plugin_required_sounds)
 		end
 
 		self:load_sound_groups(item.plugin_required_sounds)
@@ -700,10 +701,10 @@ function director:queue_load_item_named(name)
 	log.debug("queued item: %s", self.queued_item.item_name)
 end
 
-function director:unload_texture_groups(groups, ref_height, item_name)
+function director:queue_unload_texture_groups(groups, ref_height, item_name)
 	local scale = ref_height and self:get_texture_scale(item_name, ref_height) or 1
 	for _, group in pairs(groups) do
-		I:unload_atlas(group, scale)
+		I:queue_unload(group, scale)
 	end
 end
 
@@ -744,11 +745,10 @@ function director:load_plugin_texture_groups(groups, ref_height, queue, item_nam
 	end
 end
 
-function director:unload_plugin_texture_groups(groups, ref_height, item_name)
+function director:queue_unload_plugin_texture_groups(groups, ref_height, item_name)
 	local scale = ref_height and self:get_texture_scale(item_name, ref_height) or 1
-
-	for group, _ in pairs(groups) do
-		I:unload_atlas(group, scale)
+	for group in pairs(groups) do
+		I:queue_unload(group, scale)
 	end
 end
 

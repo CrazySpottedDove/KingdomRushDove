@@ -596,7 +596,7 @@ function editor:load_level(idx, mode, recover)
 	if self.store and self.store.level then
 		local old = self.store.level
 		if old.plugin_required_textures then
-			director:unload_plugin_texture_groups(old.plugin_required_textures, self.ref_res, "game_editor")
+			director:queue_unload_plugin_texture_groups(old.plugin_required_textures, self.ref_res, "game_editor")
 		end
 	end
 
@@ -794,10 +794,10 @@ function editor:load_plugin_level(entry, mode)
 	if self.store and self.store.level then
 		local old = self.store.level
 		if old.plugin_required_textures then
-			director:unload_plugin_texture_groups(old.plugin_required_textures, self.ref_res, "game_editor")
+			director:queue_unload_plugin_texture_groups(old.plugin_required_textures, self.ref_res, "game_editor")
 		end
 		if old.required_textures then
-			director:unload_texture_groups(old.required_textures, self.ref_res, "game_editor")
+			director:queue_unload_texture_groups(old.required_textures, self.ref_res, "game_editor")
 		end
 	end
 
