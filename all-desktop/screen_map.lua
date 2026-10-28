@@ -13,6 +13,7 @@ local SH = require("klove.shader_db")
 local SU = require("screen_utils")
 local U = require("utils")
 local UPGR = require("kr1.upgrades")
+local HEROES = require("heroes.registry")
 local SPELLS = require("spell_system")
 local V = require("lib.klua.vector")
 local v = V.v
@@ -111,6 +112,10 @@ end
 
 local function wid(name)
 	return screen_map.window:get_child_by_id(name)
+end
+
+local function hero_icon_image(hd)
+	return hd.icon_image or U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
 end
 
 local function get_hero_index(hero_name)
@@ -249,7 +254,7 @@ function screen_map:init_coro(w, h, done_callback)
 		self.original_w, self.original_h = w, h
 
 		map_data = require("data.map_data")
-		self.hero_data = map_data.hero_data
+		self.hero_data = HEROES:get_hero_data()
 		self.tower_data = map_data.tower_data
 		self.level_data = map_data.level_data
 
@@ -1011,7 +1016,7 @@ function screen_map:refresh_hero_button_state()
 		p2.hidden = true
 	elseif #selected == 1 then
 		local hd = self.hero_data[get_hero_index(selected[1])]
-		local img = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
+		local img = hero_icon_image(hd)
 
 		p1:set_image(img)
 		p1.image_scale = 1
@@ -1025,8 +1030,8 @@ function screen_map:refresh_hero_button_state()
 	else
 		local hd1 = self.hero_data[get_hero_index(selected[1])]
 		local hd2 = self.hero_data[get_hero_index(selected[2])]
-		local img1 = U.splicing_from_kr(hd1.from_kr, string.format("mapButtons_portrait_hero_%04i", hd1.icon))
-		local img2 = U.splicing_from_kr(hd2.from_kr, string.format("mapButtons_portrait_hero_%04i", hd2.icon))
+		local img1 = hero_icon_image(hd1)
+		local img2 = hero_icon_image(hd2)
 		local d = W / 5
 
 		p1:set_image(img1)
@@ -6240,17 +6245,57 @@ function EncyclopediaView:detail_creep(index)
 	self.right_panel:add_child(desc_label)
 end
 
+local HERO_NAME_STYLE_DEFAULT = {
+	margin = 0,
+	p1 = 0,
+	p2 = 0.5,
+	c1 = {0, 0, 0, 255},
+	c2 = {255, 183, 95, 255},
+	c3 = {255, 98, 0, 255},
+	outline = {88, 19, 0, 255},
+	outline_thickness = 2.5,
+	glow = {88, 19, 0, 255},
+	glow_thickness = 1.5
+}
+
+local function build_hero_name_style(style)
+	local rs = GGLabel.static.ref_h / REF_H
+
+	local function color(c)
+		return {c[1] / 255, c[2] / 255, c[3] / 255, c[4] / 255}
+	end
+
+	return {
+		single_line = style.single_line,
+		font_size = style.font_size,
+		shader_args = {{
+			margin = style.margin * rs,
+			p1 = style.p1,
+			p2 = style.p2,
+			c1 = color(style.c1),
+			c2 = color(style.c2),
+			c3 = color(style.c3)
+		}, {
+			thickness = style.outline_thickness * rs,
+			outline_color = color(style.outline)
+		}, {
+			thickness = style.glow_thickness * rs,
+			glow_color = color(style.glow)
+		}}
+	}
+end
+
 HeroNameLabel = class("HeroNameLabel", KView)
 
 function HeroNameLabel:initialize(size)
 	HeroNameLabel.super.initialize(self, size or self.size)
 
 	self.labels = {}
-	self.hero_name_config = map_data.hero_names_config
 end
 
 function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
-	local conf = self.hero_name_config[hero_name] or self.hero_name_config.default
+	local module = HEROES:get(hero_name)
+	local conf = build_hero_name_style(module and module.name_style or HERO_NAME_STYLE_DEFAULT)
 	local text = _(string.upper(hero_i18n_key or hero_name) .. "_NAME")
 
 	for _, s in pairs({_("MAP_UI_HERO_NAME_SEP_CJK"), _("MAP_UI_HERO_NAME_SEP_LATIN")}) do
@@ -6432,6 +6477,35 @@ function HPAni:update(dt)
 	HPAni.super.update(self, dt)
 end
 
+--- 按 hero 模板的 room_special_order 生成有序的技能说明列表
+---@param name string 英雄模板名
+---@return table[] {{name=string, desc=string}, ...}
+local function get_hero_room_special(name)
+	local tt = E:get_template(name)
+	local prefix = "HERO_ROOM_" .. string.upper(tt.info.i18n_key or name):gsub("^HERO_", "") .. "_"
+	local list = {}
+
+	local order = tt.hero.room_special_order or {}
+
+	for i = 1, #order do
+		local key = prefix .. order[i]
+
+		list[#list + 1] = {
+			name = _(key .. "_NAME"),
+			desc = U.format_text_expr(_(key .. "_DESC"), {})
+		}
+	end
+
+	if #list == 0 then
+		list[1] = {
+			name = _("HERO_ROOM_PROCESSING"),
+			desc = _("HERO_ROOM_PROCESSING")
+		}
+	end
+
+	return list
+end
+
 HeroRoomViewKR1 = class("HeroRoomViewKR1", PopUpView)
 
 --- 返回所有已通过关卡的哈希表
@@ -6480,7 +6554,7 @@ function HeroRoomViewKR1:initialize(size)
 		local col = (i - 1) % per_row
 		local row = math.floor((i - 1) / per_row)
 		local thumb_pos = V.v(col * spacing_x, row * spacing_y)
-		local v2_name = U.splicing_from_kr(data.from_kr, string.format("hero_room_thumbs_%04d", data.thumb))
+		local v2_name = data.thumb_image or U.splicing_from_kr(data.from_kr, string.format("hero_room_thumbs_%04d", data.thumb))
 		local v2 = KImageView:new(v2_name)
 
 		v2.pos = thumb_pos
@@ -6526,6 +6600,47 @@ function HeroRoomViewKR1:initialize(size)
 	local num_rows = math.ceil(#screen_map.hero_data / per_row)
 
 	ht._bottom_y = (num_rows - 1) * spacing_y + single_hero_thumb_x_size * scale.y
+
+	-- 为没有静态节点的英雄（模块/插件注册的）补一个殿堂大图节点
+	local hero_portraits = self:get_child_by_id("hero_portraits")
+
+	for _, data in ipairs(screen_map.hero_data) do
+		local node_id = "portrait_" .. data.name
+
+		if data.portrait_image and not hero_portraits:get_child_by_id(node_id) then
+			local proto = hero_portraits:get_child_by_id("portrait_prototype")
+			local node = KView:new(V.vclone(proto.size or V.v(0, 0)))
+
+			node.id = node_id
+			node.hidden = true
+			node.pos = V.vclone(proto.pos)
+			node.scale = V.vclone(proto.scale)
+
+			local img = KImageView:new(data.portrait_image)
+
+			node:add_child(img)
+
+			local name_img = KImageView:new("hero_room_portraits_name_0000")
+
+			name_img.id = "name_img"
+			name_img.hidden = true
+			node:add_child(name_img)
+
+			-- 名字标签是 hero_portraits 的最后一个孩子，动态节点必须插在它前面，
+			-- 否则头像会盖住名字（静态节点本来就在标签之前）
+			local insert_index = #hero_portraits.children + 1
+
+			for i, child in ipairs(hero_portraits.children) do
+				if child.id == "portrait_hero_name_label" then
+					insert_index = i
+
+					break
+				end
+			end
+
+			hero_portraits:add_child(node, insert_index)
+		end
+	end
 
 	local function create_select_view(name)
 		local view = KImageView(name)
@@ -6642,6 +6757,9 @@ function HeroRoomViewKR1:show_hero(name)
 	self.hero_shown = name
 
 	local hd = screen_map.hero_data[get_hero_index(name)]
+
+	HEROES:ensure_template(name)
+
 	local ht = E:get_template(hd.name)
 	local th = self:get_child_by_id(name)
 
@@ -6889,9 +7007,7 @@ function HeroRoomViewKR1:toggle_special_description()
 
 		self.back:add_child(special_list)
 
-		-- 首先，做一个 special 列表，每一个项的字符串取 skills_spec_desc 的内容按，拆分
-		local hero_room_special = require("strings.hero_room_special")
-		local special_map = hero_room_special[self.hero_shown] or hero_room_special["default"]
+		local special_list_items = get_hero_room_special(self.hero_shown)
 		-- 添加一个用于显示描述的区域
 		local desc_area = GGLabel:new(V.v(700, 180))
 
@@ -6912,26 +7028,20 @@ function HeroRoomViewKR1:toggle_special_description()
 		-- 对于每一项竖向显示，做成按钮
 		local y_end = 260
 		local y_offset = 80
-		local i = 0
-		local count = 0
-
-		for _name, _ in pairs(special_map) do
-			count = count + 1
-		end
+		local count = #special_list_items
 
 		special_list.buttons = {}
 
-		for name, text in pairs(special_map) do
-			local spec_button = GGOptionsButton:new(name)
+		for i, item in ipairs(special_list_items) do
+			local spec_button = GGOptionsButton:new(item.name)
 
-			spec_button.pos = v(-20, y_end - i * y_offset)
+			spec_button.pos = v(-20, y_end - (i - 1) * y_offset)
 			spec_button.anchor.x = spec_button.size.x / 2
 			spec_button.fit_size = true
-			i = i + 1
 
 			function spec_button.on_click()
 				S:queue("GUIButtonCommon")
-				self:show_special_description(name)
+				self:show_special_description(item.desc)
 
 				spec_button.selected = true
 
@@ -6963,7 +7073,7 @@ function HeroRoomViewKR1:toggle_special_description()
 			special_list.buttons[#special_list.buttons + 1] = spec_button
 
 			if i == count then
-				self:show_special_description(name)
+				self:show_special_description(item.desc)
 
 				spec_button.selected = true
 
@@ -6975,11 +7085,7 @@ function HeroRoomViewKR1:toggle_special_description()
 	self.showing_special_description = not self.showing_special_description
 end
 
-function HeroRoomViewKR1:show_special_description(special_name)
-	local hero_room_special = require("strings.hero_room_special")
-	local special_map = hero_room_special[self.hero_shown] or hero_room_special["default"]
-	local special_text = special_map[special_name]
-
+function HeroRoomViewKR1:show_special_description(special_text)
 	self.special_description_area.text = special_text
 end
 

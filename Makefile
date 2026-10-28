@@ -162,6 +162,10 @@ compile: compile_animations compile_atlas compile_exos component_cloner
 
 compile_animations:
 	luajit ./scripts/compile_game_animations.lua
+	@for f in kr1/heroes/*/animations.lua; do \
+		[ -e "$$f" ] || continue; \
+		luajit ./scripts/compile_game_animations.lua "$$f" "$${f%.lua}.bin"; \
+	done
 
 compile_atlas:
 	luajit ./scripts/compile_image_atlas.lua
