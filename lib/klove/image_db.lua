@@ -76,6 +76,7 @@ image_db.atlas_uses = {}
 image_db.image_uses = {}
 image_db.load_queue = {}
 image_db.load_queue_current = nil
+image_db.unload_queue = {}
 image_db.progress = 0
 image_db.missing_images = {}
 image_db.missing_sprites = {}
@@ -684,11 +685,63 @@ function image_db:queue_load_done()
 	return true
 end
 
----减少图集组引用计数，归零时卸载帧和纹理
----@param name string 图集名称
----@param ref_scale number? 渲染缩放比例，默认 1
----@return nil
-function image_db:unload_atlas(name, ref_scale)
+---卸载一批已归零的图集组，只遍历一次 db_atlas
+---@param self table
+---@param group_ids integer[]
+local function unload_group_batch(self, group_ids)
+	local groups = {}
+
+	for i = 1, #group_ids do
+		groups[group_ids[i]] = {
+			frames = {},
+			ids = {},
+			images = {}
+		}
+	end
+
+	for k, id in pairs(self.db_atlas) do
+		local f = get_frame(id)
+		local group = f and groups[f.group_id]
+
+		if group then
+			group.frames[#group.frames + 1] = k
+
+			if not group.ids[id] then
+				group.ids[id] = true
+
+				local atlas_id = f.atlas_id
+				group.images[atlas_id] = (group.images[atlas_id] or 0) + 1
+			end
+		end
+	end
+
+	for i = 1, #group_ids do
+		local group = groups[group_ids[i]]
+		local removed_images_count = 0
+
+		for atlas_id, count in pairs(group.images) do
+			local uses = (self.image_uses[atlas_id] or 0) - count
+
+			if uses <= 0 then
+				self.image_uses[atlas_id] = nil
+				self.db_images[atlas_names[atlas_id]] = nil
+				removed_images_count = removed_images_count + 1
+			else
+				self.image_uses[atlas_id] = uses
+			end
+		end
+
+		for _, k in ipairs(group.frames) do
+			self.db_atlas[k] = nil
+		end
+
+		for id in pairs(group.ids) do
+			free_frame_id(id)
+		end
+	end
+end
+
+local function unload_atlas_uses_reference(self, name, ref_scale)
 	-- 不卸载持久化纹理
 	if self.persistent_textures[name] then
 		return
@@ -700,61 +753,52 @@ function image_db:unload_atlas(name, ref_scale)
 	local group_id = group_ids[name_scale]
 
 	if not group_id or not self.atlas_uses[group_id] then
-		log.info("atlas %s does not exist", name_scale)
-
 		return
 	end
 
 	self.atlas_uses[group_id] = self.atlas_uses[group_id] - 1
 
 	if self.atlas_uses[group_id] > 0 then
-		log.debug("atlas %s still in use", name)
-
 		return
 	end
 
-	log.debug("unloading atlas %s-%.6f", name, ref_scale)
-
 	self.atlas_uses[group_id] = nil
+	return group_id
+end
 
-	local remove_frames = {}
-	local removed_ids = {}
-	local image_counts = {}
+---减少图集组引用计数，归零时卸载帧和纹理
+---@param name string 图集名称
+---@param ref_scale number? 渲染缩放比例，默认 1
+---@return nil
+function image_db:unload_atlas(name, ref_scale)
+	local group_id = unload_atlas_uses_reference(self, name, ref_scale)
+	unload_group_batch(self, {group_id})
+end
 
-	for k, id in pairs(self.db_atlas) do
-		local f = get_frame(id)
-		if f and f.group_id == group_id then
-			remove_frames[#remove_frames + 1] = k
-			if not removed_ids[id] then
-				removed_ids[id] = true
-				local atlas_id = f.atlas_id
-				image_counts[atlas_id] = (image_counts[atlas_id] or 0) + 1
-			end
-		end
+---将图集组卸载请求加入队列，由 queue_unload_done 统一处理
+---@param name string 图集名称
+---@param ref_scale number? 渲染缩放比例，默认 1
+---@return nil
+function image_db:queue_unload(name, ref_scale)
+	self.unload_queue[#self.unload_queue + 1] = {name, ref_scale}
+end
+
+---结算队列中的全部图集组卸载请求，归零的组共用一次 db_atlas 遍历
+---@return nil
+function image_db:queue_unload_done()
+	local queue = self.unload_queue
+	local pending_unload_groups = {}
+
+	for i = 1, #queue do
+		local item = queue[i]
+		pending_unload_groups[#pending_unload_groups + 1] = unload_atlas_uses_reference(self, item[1], item[2])
 	end
 
-	local removed_images_count = 0
-
-	for atlas_id, count in pairs(image_counts) do
-		local uses = (self.image_uses[atlas_id] or 0) - count
-		if uses <= 0 then
-			self.image_uses[atlas_id] = nil
-			self.db_images[atlas_names[atlas_id]] = nil
-			removed_images_count = removed_images_count + 1
-		else
-			self.image_uses[atlas_id] = uses
-		end
+	if #pending_unload_groups > 0 then
+		unload_group_batch(self, pending_unload_groups)
 	end
 
-	for _, k in pairs(remove_frames) do
-		self.db_atlas[k] = nil
-	end
-
-	for id in pairs(removed_ids) do
-		free_frame_id(id)
-	end
-
-	log.debug(" removed #frames:%s #images:%s ", #remove_frames, removed_images_count)
+	self.unload_queue = {}
 end
 
 ---同步加载图集帧信息和纹理
