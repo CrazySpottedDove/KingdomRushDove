@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr4_hero_room_thumbs_0004",
 		icon_image = "kr4_mapButtons_portrait_hero_0004"
 	},
+	room_special_order = {"ULTIMATE", "BAT_FAMILIAR", "MYST_FORM", "DARK_CALL", "VAMPIRIC_TOUCH", "ULTIMATE_2"},
 	required_textures = {"go_hero_margosa"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_margosa"},

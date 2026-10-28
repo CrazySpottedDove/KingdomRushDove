@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0005",
 		icon_image = "kr3_mapButtons_portrait_hero_0005"
 	},
+	room_special_order = {"SHIELD_STRIKE", "CELEBRITY", "MIGHTY", "ULTIMATE", "ULTIMATE_2", "SYBARITE"},
 	required_textures = {"go_hero_elves_denas"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_elves_denas"},

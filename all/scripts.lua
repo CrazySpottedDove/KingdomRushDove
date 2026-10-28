@@ -3019,16 +3019,16 @@ function scripts.bomb.update(this, store)
 
 		if hp.unit then
 			SU.insert_unit_damage_factor_by_factor(hp, this.bullet.damage_factor)
+			if hp.nav_rally and hp.nav_rally.pos.x == 0 and hp.nav_rally.pos.y == 0 then
+				hp.nav_rally.pos:copy(hp.pos)
+				hp.nav_rally.center:copy(hp.pos)
+			end
 		end
 
 		if hp.aura then
 			hp.aura.level = this.bullet.level
 			hp.aura.source_id = this.id
 			hp.aura.damage_factor = this.bullet.damage_factor * hp.aura.damage_factor
-		end
-
-		if not hp.unit and not hp.aura then
-			hp.damage_factor = this.bullet.damage_factor
 		end
 
 		simulation:queue_insert_entity(hp)

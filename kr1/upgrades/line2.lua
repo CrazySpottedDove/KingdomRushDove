@@ -35,8 +35,11 @@ local techs = {
 		price = 4,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.arrows) do
-				local b = T(n).bullet
-				apply_mod(b, "mod_blood_elves")
+				local t = T(n)
+
+				if t then
+					apply_mod(t.bullet, "mod_blood_elves")
+				end
 			end
 		end
 	},
@@ -64,7 +67,10 @@ local techs = {
 			local archer_towers = UP.archer_towers
 			for _, n in ipairs(archer_towers) do
 				local t = T(n)
-				SU.insert_tower_cooldown_buff(0, t, u.cooldown_factor)
+
+				if t then
+					SU.insert_tower_cooldown_buff(0, t, u.cooldown_factor)
+				end
 			end
 		end
 	},
@@ -88,17 +94,22 @@ local techs = {
 		price = 2,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.arrows) do
-				local b = T(n).bullet
-				if b.damage_min and b.damage_max then
-					local damage_avg = (b.damage_min + b.damage_max) / 2
-					if damage_avg > 40 then
-						apply_mod(b, "mod_archer_tear_big")
-					elseif damage_avg > 20 then
-						apply_mod(b, "mod_archer_tear")
-					elseif damage_avg > 10 then
-						apply_mod(b, "mod_archer_tear_small")
-					else
-						apply_mod(b, "mod_archer_tear_tiny")
+				local t = T(n)
+
+				if t then
+					local b = t.bullet
+
+					if b.damage_min and b.damage_max then
+						local damage_avg = (b.damage_min + b.damage_max) / 2
+						if damage_avg > 40 then
+							apply_mod(b, "mod_archer_tear_big")
+						elseif damage_avg > 20 then
+							apply_mod(b, "mod_archer_tear")
+						elseif damage_avg > 10 then
+							apply_mod(b, "mod_archer_tear_small")
+						else
+							apply_mod(b, "mod_archer_tear_tiny")
+						end
 					end
 				end
 			end
@@ -116,19 +127,22 @@ local techs = {
 			for _, n in ipairs(GS.barrack_towers) do
 				if not table.arraycontains(special_towers, n) then
 					local t = T(n)
-					local soldier_t = t.barrack.soldier_type
-					if soldier_t then
-						local soldier_tpl = T(soldier_t)
-						if soldier_tpl then
-							local x = t.barrack.max_soldiers
-							if n == "tower_dwarf_lvl4" then
-								x = x + 3
+
+					if t then
+						local soldier_t = t.barrack.soldier_type
+						if soldier_t then
+							local soldier_tpl = T(soldier_t)
+							if soldier_tpl then
+								local x = t.barrack.max_soldiers
+								if n == "tower_dwarf_lvl4" then
+									x = x + 3
+								end
+								local factor = (4 * x) / (3 * (x + 1))
+								soldier_tpl.unit.damage_factor = soldier_tpl.unit.damage_factor + (factor - 1)
 							end
-							local factor = (4 * x) / (3 * (x + 1))
-							soldier_tpl.unit.damage_factor = soldier_tpl.unit.damage_factor + (factor - 1)
 						end
+						t.barrack.max_soldiers = t.barrack.max_soldiers + 1
 					end
-					t.barrack.max_soldiers = t.barrack.max_soldiers + 1
 				end
 			end
 			local special_soldiers = {
@@ -147,12 +161,16 @@ local techs = {
 
 			for _, n in ipairs(special_soldiers) do
 				local t = T(n)
-				t.unit.damage_factor = t.unit.damage_factor + 0.3
+
+				if t then
+					t.unit.damage_factor = t.unit.damage_factor + 0.3
+				end
 			end
 
 			for _, n in ipairs(barrack_soldiers) do
 				local t = T(n)
-				if t.health.hp_max and not table.arraycontains(special_soldiers, n) then
+
+				if t and t.health.hp_max and not table.arraycontains(special_soldiers, n) then
 					t.health.hp_max = t.health.hp_max * 0.8
 				end
 			end
@@ -193,10 +211,18 @@ local techs = {
 			local soldiers = UP.soldiers
 			local towers_with_barrack = UP.towers_with_barrack
 			for _, n in ipairs(towers_with_barrack) do
-				T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+				local t = T(n)
+
+				if t then
+					t.barrack.rally_range = t.barrack.rally_range * u.rally_range_factor
+				end
 			end
 			for _, n in ipairs(soldiers) do
-				T(n).motion.max_speed = T(n).motion.max_speed + u.speed_inc
+				local t = T(n)
+
+				if t then
+					t.motion.max_speed = t.motion.max_speed + u.speed_inc
+				end
 			end
 			T("soldier_tower_rocket_gunners_lvl4").speed_flight = T("soldier_tower_rocket_gunners_lvl4").speed_flight + u.speed_inc
 			T("soldier_tower_rocket_gunners_lvl4").speed_ground = T("soldier_tower_rocket_gunners_lvl4").speed_ground + u.speed_inc
@@ -212,7 +238,11 @@ local techs = {
 		patch = function(UP, u)
 			local towers_with_barrack = UP.towers_with_barrack
 			for _, n in ipairs(towers_with_barrack) do
-				T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+				local t = T(n)
+
+				if t then
+					t.barrack.rally_range = t.barrack.rally_range * u.rally_range_factor
+				end
 			end
 		end
 	},
@@ -226,7 +256,11 @@ local techs = {
 		patch = function(UP, u)
 			local soldiers = UP.soldiers
 			for _, n in ipairs(soldiers) do
-				T(n).unit.damage_factor = T(n).unit.damage_factor + (u.damage_factor - 1)
+				local t = T(n)
+
+				if t then
+					t.unit.damage_factor = t.unit.damage_factor + (u.damage_factor - 1)
+				end
 			end
 		end
 	},
@@ -455,11 +489,15 @@ local techs = {
 			T("power_fireball_control").cooldown = T("power_fireball_control").cooldown - u.cooldown_reduction
 
 			for _, name in ipairs({"power_scorched_earth", "power_scorched_water"}) do
-				local aura = T(name).aura
+				local t = T(name)
 
-				aura.damage_min = aura.damage_min + u.damage_min_increase
-				aura.damage_max = aura.damage_max + u.damage_max_increase
-				aura.duration = aura.duration + u.duration_increase
+				if t then
+					local aura = t.aura
+
+					aura.damage_min = aura.damage_min + u.damage_min_increase
+					aura.damage_max = aura.damage_max + u.damage_max_increase
+					aura.duration = aura.duration + u.duration_increase
+				end
 			end
 		end
 	},

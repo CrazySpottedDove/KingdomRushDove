@@ -283,19 +283,11 @@ function director:unload_item(item)
 		groups = table.append(groups, replace_locale(game.store.level.required_textures))
 
 		if configer.ui_settings().hero_menu_enabled then
-			for _, data in pairs(HEROES:get_hero_data()) do
-				local hero = data.name
-				local module = HEROES:get(hero)
-
-				if module then
-					groups = table.append(groups, module.required_textures or {})
-					self:unload_plugin_texture_groups(module.plugin_required_textures, game.ref_res, "game")
-					EXO:unload(module.required_exoskeletons or {})
-					EXO:unload(module.plugin_required_exoskeletons or {})
-				else
-					-- 老写法：约定 go_<英雄模板名>
-					table.insert(groups, "go_" .. hero)
-				end
+			for _, module in ipairs(HEROES.declarations) do
+				groups = table.append(groups, module.required_textures or {})
+				self:unload_plugin_texture_groups(module.plugin_required_textures, game.ref_res, "game")
+				EXO:unload(module.required_exoskeletons or {})
+				EXO:unload(module.plugin_required_exoskeletons or {})
 			end
 		elseif game.store.selected_hero then
 			for _, hero in pairs(game.store.selected_hero) do
@@ -624,17 +616,17 @@ function director:queue_load_item_named(name)
 				slot.heroes.selected = {}
 			end
 			local hero_count = #slot.heroes.selected
-			local hero_data = HEROES:get_hero_data()
+			local declarations = HEROES.declarations
 			local selected_idx = {}
 			for i = 1, hero_count do
-				local candidate_idx = math.random(1, #hero_data)
+				local candidate_idx = math.random(1, #declarations)
 				local try_count = 0
 				while selected_idx[candidate_idx] and try_count < 100 do
-					candidate_idx = math.random(1, #hero_data)
+					candidate_idx = math.random(1, #declarations)
 					try_count = try_count + 1
 				end
 				selected_idx[candidate_idx] = true
-				slot.heroes.selected[i] = hero_data[candidate_idx].name
+				slot.heroes.selected[i] = declarations[candidate_idx].name
 			end
 			storage:save_slot(slot)
 		end
@@ -643,22 +635,13 @@ function director:queue_load_item_named(name)
 			local hero_textures = {}
 			local hero_sounds = {}
 
-			for _, data in pairs(HEROES:get_hero_data()) do
-				local hero = data.name
-				local module = HEROES:get(hero)
-
-				if module then
-					hero_textures = table.append(hero_textures, module.required_textures or {})
-					hero_sounds = table.append(hero_sounds, module.required_sounds or {})
-					hero_sounds = table.append(hero_sounds, module.plugin_required_sounds or {})
-					self:load_plugin_texture_groups(module.plugin_required_textures, game.ref_res, true, "game")
-					EXO:queue_load(module.required_exoskeletons or {})
-					EXO:queue_load_plugin(module.plugin_required_exoskeletons)
-				else
-					-- 老写法：约定 go_<英雄模板名> 与同名音效组
-					hero_textures[#hero_textures + 1] = "go_" .. hero
-					hero_sounds[#hero_sounds + 1] = hero
-				end
+			for _, module in ipairs(HEROES.declarations) do
+				hero_textures = table.append(hero_textures, module.required_textures or {})
+				hero_sounds = table.append(hero_sounds, module.required_sounds or {})
+				hero_sounds = table.append(hero_sounds, module.plugin_required_sounds or {})
+				self:load_plugin_texture_groups(module.plugin_required_textures, game.ref_res, true, "game")
+				EXO:queue_load(module.required_exoskeletons or {})
+				EXO:queue_load_plugin(module.plugin_required_exoskeletons)
 			end
 
 			if #hero_textures > 0 then

@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0006",
 		icon_image = "kr3_mapButtons_portrait_hero_0006"
 	},
+	room_special_order = {"KAMIHARE", "HAMMER_TIME", "ANGRY_GNOME", "RAGGIFIED", "ULTIMATE"},
 	required_textures = {"go_hero_rag"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_rag"},

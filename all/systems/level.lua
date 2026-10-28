@@ -9,6 +9,7 @@ local DI = require("difficulty")
 local E = require("entity_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
+local HEROES = require("heroes.registry")
 local P = require("path_db")
 local W = require("wave_db")
 local UP = require("kr1.upgrades")
@@ -123,6 +124,11 @@ function level:init_coroutined(store)
 	coroutine.yield()
 
 	store.selected_hero = slot.heroes.selected
+
+	-- 英雄模板在 UP patch 前注册，保证英雄弹道能吃到法师科技
+	for _, name in ipairs(store.selected_hero or {}) do
+		HEROES:ensure_template(name)
+	end
 
 	-- 先进行 spell apply，以使 spell 中模板可受 UP 影响
 	SPELLS:apply(store)

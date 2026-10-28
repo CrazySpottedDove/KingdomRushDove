@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr5_hero_room_thumbs_0017",
 		icon_image = "kr5_mapButtons_portrait_hero_0017"
 	},
+	room_special_order = {"INSTAKILL_MELEE", "AREA_ATTACK", "TUNNELING", "SUPREME_HUNTER", "ULTIMATE"},
 	required_textures = {"go_hero_spider"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_spider"},

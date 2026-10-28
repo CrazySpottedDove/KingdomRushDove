@@ -40,8 +40,11 @@ local techs = {
 		price = 4,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.arrows) do
-				local b = T(n).bullet
-				apply_mod(b, "mod_blood_elves")
+				local t = T(n)
+
+				if t then
+					apply_mod(t.bullet, "mod_blood_elves")
+				end
 			end
 		end
 	},
@@ -71,25 +74,27 @@ local techs = {
 			for _, n in ipairs(UP.arrows) do
 				local tpl = T(n)
 
-				if tpl.main_script.insert then
-					local original_insert = tpl.main_script.insert
-					tpl.main_script.insert = function(this, store)
-						if not original_insert(this, store) then
-							return false
+				if tpl then
+					if tpl.main_script.insert then
+						local original_insert = tpl.main_script.insert
+						tpl.main_script.insert = function(this, store)
+							if not original_insert(this, store) then
+								return false
+							end
+							local target = store.entities[this.bullet.target_id]
+							if target and bit.band(target.vis.flags, F_FLYING) ~= 0 then
+								this.bullet.damage_factor = this.bullet.damage_factor * damage_factor_fly
+							end
+							return true
 						end
-						local target = store.entities[this.bullet.target_id]
-						if target and bit.band(target.vis.flags, F_FLYING) ~= 0 then
-							this.bullet.damage_factor = this.bullet.damage_factor * damage_factor_fly
+					else
+						tpl.main_script.insert = function(this, store)
+							local target = store.entities[this.bullet.target_id]
+							if target and bit.band(target.vis.flags, F_FLYING) ~= 0 then
+								this.bullet.damage_factor = this.bullet.damage_factor * damage_factor_fly
+							end
+							return true
 						end
-						return true
-					end
-				else
-					tpl.main_script.insert = function(this, store)
-						local target = store.entities[this.bullet.target_id]
-						if target and bit.band(target.vis.flags, F_FLYING) ~= 0 then
-							this.bullet.damage_factor = this.bullet.damage_factor * damage_factor_fly
-						end
-						return true
 					end
 				end
 			end
@@ -152,7 +157,11 @@ local techs = {
 			patch_soldier_dead_lifetime(UP.soldiers, u.cooldown_factor)
 
 			for _, n in ipairs(towers_with_barrack) do
-				T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+				local t = T(n)
+
+				if t then
+					t.barrack.rally_range = t.barrack.rally_range * u.rally_range_factor
+				end
 			end
 		end
 	},
@@ -296,7 +305,11 @@ local techs = {
 			scale_tower_attack_range(mage_towers, u.range_factor)
 
 			for _, n in ipairs(UP.mage_tower_bolts) do
-				avg_dmg_mul(T(n).bullet, u.damage_factor)
+				local t = T(n)
+
+				if t then
+					avg_dmg_mul(t.bullet, u.damage_factor)
+				end
 			end
 
 			avg_dmg_mul(T("mod_ray_arcane").dps, u.damage_factor)
@@ -325,25 +338,28 @@ local techs = {
 			local mage_towers = UP.mage_towers
 			for _, n in ipairs(mage_towers) do
 				local t = T(n)
-				if t.main_script.insert then
-					local insert = t.main_script.insert
-					t.main_script.insert = function(this, store)
-						if not insert(this, store) then
-							return false
+
+				if t then
+					if t.main_script.insert then
+						local insert = t.main_script.insert
+						t.main_script.insert = function(this, store)
+							if not insert(this, store) then
+								return false
+							end
+							local e = E:create_entity("controller_mage_purge_field")
+							e.target_id = this.id
+							simulation:queue_insert_entity(e)
+
+							return true
 						end
-						local e = E:create_entity("controller_mage_purge_field")
-						e.target_id = this.id
-						simulation:queue_insert_entity(e)
+					else
+						t.main_script.insert = function(this, store)
+							local e = E:create_entity("controller_mage_purge_field")
+							e.target_id = this.id
+							simulation:queue_insert_entity(e)
 
-						return true
-					end
-				else
-					t.main_script.insert = function(this, store)
-						local e = E:create_entity("controller_mage_purge_field")
-						e.target_id = this.id
-						simulation:queue_insert_entity(e)
-
-						return true
+							return true
+						end
 					end
 				end
 			end
@@ -369,10 +385,13 @@ local techs = {
 		price = 2,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.bolts) do
-				local mods = {u.mod}
-				local b = T(n).bullet
+				local t = T(n)
 
-				add_mods(b, mods)
+				if t then
+					local mods = {u.mod}
+
+					add_mods(t.bullet, mods)
+				end
 			end
 
 			add_mods(T("tower_pixie").attacks.list[4], {u.mod})

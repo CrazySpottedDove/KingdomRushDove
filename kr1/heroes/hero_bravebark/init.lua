@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0007",
 		icon_image = "kr3_mapButtons_portrait_hero_0007"
 	},
+	room_special_order = {"ULTIMATE", "SPRINGSAP", "OAKSEEDS", "ROOTSPIKES", "BRANCHBALL"},
 	required_textures = {"go_hero_bravebark"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_bravebark"},

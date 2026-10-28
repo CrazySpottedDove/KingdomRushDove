@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr4_hero_room_thumbs_0009",
 		icon_image = "kr4_mapButtons_portrait_hero_0009"
 	},
+	room_special_order = {"ULTIMATE", "HEAT_MISSILES", "GROUND_SLAM", "EXPENDABLES", "SCORCHING_CANNON", "ULTIMATE_2"},
 	required_textures = {"go_hero_tank"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_tank"},

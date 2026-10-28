@@ -13,6 +13,7 @@ return {
 		thumb_image = "hero_room_thumbs_0003",
 		icon_image = "mapButtons_portrait_hero_0003"
 	},
+	room_special_order = {"SURGE_OF_FLAME", "SMASH", "FISSURE"},
 	required_textures = {"go_hero_malik"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_malik"},

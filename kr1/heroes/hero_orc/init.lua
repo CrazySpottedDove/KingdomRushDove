@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr4_hero_room_thumbs_0001",
 		icon_image = "kr4_mapButtons_portrait_hero_0001"
 	},
+	room_special_order = {"DUELIST", "BRUTE_FORCE", "INSPIRING_LEADER", "ULTIMATE", "ULTIMATE_2", "AIMED_SLASH"},
 	required_textures = {"go_hero_orc"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_orc"},

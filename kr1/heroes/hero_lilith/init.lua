@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0014",
 		icon_image = "kr3_mapButtons_portrait_hero_0014"
 	},
+	room_special_order = {"INFERNAL_WHEEL", "REAPERS_HARVEST", "ULTIMATE", "SOUL_EATER", "RESURRECTION", "RESURRECTION_2"},
 	required_textures = {"go_hero_lilith"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_lilith"},

@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr5_hero_room_thumbs_0003",
 		icon_image = "kr5_mapButtons_portrait_hero_0003"
 	},
+	room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"},
 	required_textures = {"go_hero_muyrn"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_muyrn"},

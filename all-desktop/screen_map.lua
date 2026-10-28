@@ -254,7 +254,7 @@ function screen_map:init_coro(w, h, done_callback)
 		self.original_w, self.original_h = w, h
 
 		map_data = require("data.map_data")
-		self.hero_data = HEROES:get_hero_data()
+		self.hero_data = self:build_hero_data()
 		self.tower_data = map_data.tower_data
 		self.level_data = map_data.level_data
 
@@ -948,6 +948,22 @@ function screen_map:init(w, h)
 	self._e_btn = e_button
 	self._h_btn = h_button
 -- perf.tmp_stop("screen_map_init")
+end
+
+--- 由注册表声明计算 UI 用的英雄列表（screen_map 自己维护）。
+---@return table[]
+function screen_map:build_hero_data()
+	local list = {}
+
+	for _, module in ipairs(HEROES.declarations) do
+		if module.room then
+			list[#list + 1] = table.merge(module.room, {
+				name = module.name
+			}, true)
+		end
+	end
+
+	return list
 end
 
 function screen_map:normalize_selected_heroes()
@@ -6477,15 +6493,20 @@ function HPAni:update(dt)
 	HPAni.super.update(self, dt)
 end
 
---- 按 hero 模板的 room_special_order 生成有序的技能说明列表
+local function get_hero_special_order(name)
+	local tt = E:get_template(name)
+	local module = HEROES:get(name)
+	local prefix = "HERO_ROOM_" .. string.upper(tt.info.i18n_key or name):gsub("^HERO_", "") .. "_"
+
+	return prefix, module and module.room_special_order or {}
+end
+
+--- 按英雄声明的 room_special_order 生成有序的技能说明列表
 ---@param name string 英雄模板名
 ---@return table[] {{name=string, desc=string}, ...}
 local function get_hero_room_special(name)
-	local tt = E:get_template(name)
-	local prefix = "HERO_ROOM_" .. string.upper(tt.info.i18n_key or name):gsub("^HERO_", "") .. "_"
+	local prefix, order = get_hero_special_order(name)
 	local list = {}
-
-	local order = tt.hero.room_special_order or {}
 
 	for i = 1, #order do
 		local key = prefix .. order[i]
@@ -6506,6 +6527,24 @@ local function get_hero_room_special(name)
 	return list
 end
 
+--- 按 room_special_order 拼接技能名，替代各英雄单独维护的 HERO_<NAME>_SPECIAL。
+---@param name string 英雄模板名
+---@return string
+local function get_hero_special_summary(name)
+	local prefix, order = get_hero_special_order(name)
+	local names = {}
+
+	for i = 1, #order do
+		names[i] = _(prefix .. order[i] .. "_NAME")
+	end
+
+	if #names == 0 then
+		return _("HERO_ROOM_PROCESSING")
+	end
+
+	return table.concat(names, _("HERO_ROOM_FMT_SEP"))
+end
+
 HeroRoomViewKR1 = class("HeroRoomViewKR1", PopUpView)
 
 --- 返回所有已通过关卡的哈希表
@@ -6522,21 +6561,13 @@ function HeroRoomViewKR1:get_finished_levels()
 	return finished_levels
 end
 
-function HeroRoomViewKR1:initialize(size)
-	-- perf.tmp_start("HeroRoomViewKR1:initialize")
-	HeroRoomViewKR1.super.initialize(self, size)
-
-	local ht = self:get_child_by_id("hero_thumbs")
-	local finished_levels = self:get_finished_levels()
-	self.finished_levels = finished_levels
-	local single_hero_thumb_x_size
+function HeroRoomViewKR1:get_hero_thumb_layout()
 	local scale = V.v(0.625, 0.625)
 	local per_row = 7
 	local spacing_x = 46 -- 7列右边缘在 6*46+84*0.625=328.5，加滚动条24px共352.5，容器355px
 	local spacing_y = 50
-
-	-- 安卓端：给按钮提供更大的点击区域
 	local android_scale_factor = 7 / 5
+
 	if IS_ANDROID then
 		scale.x = scale.x * android_scale_factor
 		scale.y = scale.y * android_scale_factor
@@ -6545,10 +6576,34 @@ function HeroRoomViewKR1:initialize(size)
 		per_row = per_row / android_scale_factor
 	end
 
+	return scale, per_row, spacing_x, spacing_y, android_scale_factor
+end
+
+function HeroRoomViewKR1:refresh_hero_thumbs()
+	local ht = self:get_child_by_id("hero_thumbs")
+	local finished_levels = self:get_finished_levels()
+	local scale, per_row, spacing_x, spacing_y, android_scale_factor = self:get_hero_thumb_layout()
+
+	self.finished_levels = finished_levels
+
+	local overlays = {}
+
+	for i = #ht.children, 1, -1 do
+		local child = ht.children[i]
+
+		ht:remove_child(child)
+
+		if child.not_thumb then
+			table.insert(overlays, 1, child)
+		end
+	end
+
 	-- 深色半透明主题色
 	ht.colors.scroller_background = {40, 30, 20, 180}
 	ht.colors.scroller_foreground = {140, 110, 60, 220}
 	ht.scroll_amount = spacing_y
+
+	local single_hero_thumb_x_size
 
 	for i, data in ipairs(screen_map.hero_data) do
 		local col = (i - 1) % per_row
@@ -6596,12 +6651,22 @@ function HeroRoomViewKR1:initialize(size)
 		end
 	end
 
+	for _, child in ipairs(overlays) do
+		ht:add_child(child)
+	end
+
 	-- 设置滚动列表内容高度（用于计算滚动范围）
 	local num_rows = math.ceil(#screen_map.hero_data / per_row)
 
-	ht._bottom_y = (num_rows - 1) * spacing_y + single_hero_thumb_x_size * scale.y
+	ht._bottom_y = (num_rows - 1) * spacing_y + (single_hero_thumb_x_size or 0) * scale.y
 
-	-- 为没有静态节点的英雄（模块/插件注册的）补一个殿堂大图节点
+	self._hero_thumb_scale = scale
+	self._hero_thumb_android_scale_factor = android_scale_factor
+
+	return scale, single_hero_thumb_x_size, android_scale_factor
+end
+
+function HeroRoomViewKR1:refresh_hero_portraits()
 	local hero_portraits = self:get_child_by_id("hero_portraits")
 
 	for _, data in ipairs(screen_map.hero_data) do
@@ -6641,6 +6706,81 @@ function HeroRoomViewKR1:initialize(size)
 			hero_portraits:add_child(node, insert_index)
 		end
 	end
+end
+
+function HeroRoomViewKR1:refresh_hero_entries()
+	screen_map.hero_data = screen_map:build_hero_data()
+	screen_map:normalize_selected_heroes()
+
+	self:refresh_hero_thumbs()
+	self:refresh_hero_portraits()
+
+	self.check_image_1.hidden = true
+	self.check_image_2.hidden = true
+
+	for _, selected_name in ipairs(screen_map.user_data.heroes.selected) do
+		self:select_hero(selected_name, true)
+	end
+
+	local thumbs = self:get_child_by_id("hero_thumbs")
+
+	if self.hero_shown and HEROES:get(self.hero_shown) then
+		local th = thumbs:get_child_by_id(self.hero_shown)
+
+		if th then
+			self.border_image.pos = th.pos
+			self.border_image.hidden = false
+		end
+
+		self:update_hero_display(self.hero_shown)
+
+		if self.special_list then
+			self:toggle_special_description()
+			self:toggle_special_description()
+		end
+	else
+		local shown_name = screen_map.user_data.heroes.selected[1]
+
+		if not shown_name or not get_hero_index(shown_name) then
+			shown_name = screen_map.hero_data[1] and screen_map.hero_data[1].name
+		end
+
+		if shown_name then
+			self:show_hero(shown_name)
+		else
+			self.hero_shown = nil
+			self.border_image.hidden = true
+			self:get_child_by_id("hero_room_description_box").hidden = true
+			self:get_child_by_id("hero_room_stats").hidden = true
+			self:get_child_by_id("portrait_hero_name_label").hidden = true
+
+			for _, c in pairs(self:get_child_by_id("hero_portraits").children) do
+				if c:get_child_by_id("name_img") then
+					c.hidden = true
+				end
+			end
+		end
+	end
+
+	self:update_portrait_display()
+end
+
+function HeroRoomViewKR1:show()
+	self:refresh_hero_entries()
+	HeroRoomViewKR1.super.show(self)
+end
+
+function HeroRoomViewKR1:initialize(size)
+	-- perf.tmp_start("HeroRoomViewKR1:initialize")
+	HeroRoomViewKR1.super.initialize(self, size)
+
+	screen_map.hero_data = screen_map:build_hero_data()
+	screen_map:normalize_selected_heroes()
+
+	local ht = self:get_child_by_id("hero_thumbs")
+	local scale, single_hero_thumb_x_size, android_scale_factor = self:refresh_hero_thumbs()
+
+	self:refresh_hero_portraits()
 
 	local function create_select_view(name)
 		local view = KImageView(name)
@@ -6738,13 +6878,20 @@ function HeroRoomViewKR1:initialize(size)
 
 	screen_map:normalize_selected_heroes()
 	local selected_names = screen_map.user_data.heroes.selected
-	local shown_name = selected_names[1] or "hero_gerald"
+	local shown_name = selected_names[1]
+
+	if not shown_name or not get_hero_index(shown_name) then
+		shown_name = screen_map.hero_data[1] and screen_map.hero_data[1].name
+	end
 
 	for _, selected_name in ipairs(selected_names) do
 		self:select_hero(selected_name, true)
 	end
 
-	self:show_hero(shown_name)
+	if shown_name then
+		self:show_hero(shown_name)
+	end
+
 	self:update_portrait_display()
 -- perf.tmp_stop("HeroRoomViewKR1:initialize")
 end
@@ -6753,7 +6900,7 @@ function HeroRoomViewKR1:update_portrait_display()
 	screen_map:refresh_hero_button_state()
 end
 
-function HeroRoomViewKR1:show_hero(name)
+function HeroRoomViewKR1:update_hero_display(name)
 	self.hero_shown = name
 
 	local hd = screen_map.hero_data[get_hero_index(name)]
@@ -6813,11 +6960,16 @@ function HeroRoomViewKR1:show_hero(name)
 	end
 
 	self:get_child_by_id("skills_bio_desc").text = _(string.upper(ht.template_name) .. "_DESCRIPTION")
-	self:get_child_by_id("skills_spec_desc").text = _(string.upper(ht.template_name) .. "_SPECIAL")
+	self:get_child_by_id("skills_spec_desc").text = get_hero_special_summary(ht.template_name)
 
 	for i, c in pairs(self:get_child_by_id("hero_room_stats").children) do
 		c:set(hd.stats[i], true)
 	end
+
+end
+
+function HeroRoomViewKR1:show_hero(name)
+	self:update_hero_display(name)
 
 	self.showing_special_description = not self.showing_special_description
 

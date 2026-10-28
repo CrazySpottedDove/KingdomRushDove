@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0005",
 		icon_image = "kr2_mapButtons_portrait_hero_0005"
 	},
+	room_special_order = {"LAUGHINGSKULLS", "DEATHSKULL", "BONEDANCE", "DEATHAURA", "VOODOOMAGIC"},
 	required_textures = {"go_hero_voodoo_witch"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_voodoo_witch"},

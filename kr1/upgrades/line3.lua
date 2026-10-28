@@ -40,8 +40,11 @@ local techs = {
 		price = 4,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.arrows) do
-				local b = T(n).bullet
-				apply_mod(b, "mod_blood_elves")
+				local t = T(n)
+
+				if t then
+					apply_mod(t.bullet, "mod_blood_elves")
+				end
 			end
 		end
 	},
@@ -66,8 +69,11 @@ local techs = {
 		patch = function(UP, u)
 			T("mod_archer_magic")._mod_archer_magic_factor = u.factor
 			for _, n in ipairs(UP.arrows) do
-				local b = T(n).bullet
-				apply_mod(b, "mod_archer_magic")
+				local t = T(n)
+
+				if t then
+					apply_mod(t.bullet, "mod_archer_magic")
+				end
 			end
 		end
 	},
@@ -120,10 +126,18 @@ local techs = {
 			local soldiers = UP.soldiers
 			local towers_with_barrack = UP.towers_with_barrack
 			for _, n in ipairs(towers_with_barrack) do
-				T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+				local t = T(n)
+
+				if t then
+					t.barrack.rally_range = t.barrack.rally_range * u.rally_range_factor
+				end
 			end
 			for _, n in ipairs(soldiers) do
-				T(n).motion.max_speed = T(n).motion.max_speed * u.speed_factor
+				local t = T(n)
+
+				if t then
+					t.motion.max_speed = t.motion.max_speed * u.speed_factor
+				end
 			end
 			T("soldier_tower_rocket_gunners_lvl4").speed_flight = T("soldier_tower_rocket_gunners_lvl4").speed_flight * u.speed_factor
 			T("soldier_tower_rocket_gunners_lvl4").speed_ground = T("soldier_tower_rocket_gunners_lvl4").speed_ground * u.speed_factor
@@ -199,14 +213,17 @@ local techs = {
 		patch = function(UP, u)
 			local engineer_bombs = UP.engineer_bombs
 			for _, n in ipairs(engineer_bombs) do
-				local n = T(n)
-				local b = n.bullet
-				if b.damage_radius then
-					mul_field(b, "damage_radius", u.radius_factor)
-					if n.hit_fx then
-						local fx = T(n.hit_fx)
-						if fx.render then
-							scale_sprite(fx.render.sprites[1], u.radius_factor)
+				local t = T(n)
+
+				if t then
+					local b = t.bullet
+					if b.damage_radius then
+						mul_field(b, "damage_radius", u.radius_factor)
+						if t.hit_fx then
+							local fx = T(t.hit_fx)
+							if fx and fx.render then
+								scale_sprite(fx.render.sprites[1], u.radius_factor)
+							end
 						end
 					end
 				end
@@ -218,8 +235,11 @@ local techs = {
 
 			for _, name in ipairs({"aura_bullet_ignis_altar", "aura_bullet_tower_hermit_toad_engineer_basic", "aura_tower_sandworm"}) do
 				local t = T(name)
-				scale_sprite(t.render.sprites[1], u.radius_factor)
-				mul_field(t.aura, "radius", u.radius_factor)
+
+				if t then
+					scale_sprite(t.render.sprites[1], u.radius_factor)
+					mul_field(t.aura, "radius", u.radius_factor)
+				end
 			end
 
 			mul_field(T("tower_melting_furnace").attacks, "range", u.radius_factor)
@@ -236,8 +256,11 @@ local techs = {
 
 			for _, name in ipairs({"aura_alchemist_hit_green", "aura_alchemist_skill_a", "aura_alchemist_skill_c"}) do
 				local t = T(name)
-				mul_field(t.aura, "radius", u.radius_factor)
-				scale_sprite(t.render.sprites[1], u.radius_factor)
+
+				if t then
+					mul_field(t.aura, "radius", u.radius_factor)
+					scale_sprite(t.render.sprites[1], u.radius_factor)
+				end
 			end
 		end
 	},
@@ -366,8 +389,11 @@ local techs = {
 			T("mod_mage_treasure").extra_gold_factor = u.extra_gold_factor
 			T("mod_mage_treasure").max_extra_gold_factor = u.max_extra_gold_factor
 			for _, n in ipairs(UP.mage_tower_bolts) do
-				local b = T(n).bullet
-				add_mods(b, {"mod_mage_treasure"})
+				local t = T(n)
+
+				if t then
+					add_mods(t.bullet, {"mod_mage_treasure"})
+				end
 			end
 			add_mods(T("tower_pixie").attacks.list[4], {"mod_mage_treasure"})
 		end

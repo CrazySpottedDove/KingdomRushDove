@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0007",
 		icon_image = "kr2_mapButtons_portrait_hero_0007"
 	},
+	room_special_order = {"HOLYLIGHT", "CONSECRATE", "WINGSOFLIGHT"},
 	required_textures = {"go_hero_priest"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_priest"},

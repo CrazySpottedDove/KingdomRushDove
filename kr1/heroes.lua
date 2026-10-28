@@ -29,7 +29,6 @@ require("game_templates_utils")
 
 -- 艾莉瑞亚
 tt = RT("hero_alleria", "hero")
-tt.hero.room_special_order = {"MULTISHOT", "CALLOFWILD", "MISSILESHOT"}
 AC(tt, "melee", "ranged", "timed_attacks")
 anchor_y = 0.14
 anchor_x = 0.5
@@ -217,7 +216,6 @@ tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE)
 
 -- 博林
 tt = RT("hero_bolin", "hero")
-tt.hero.room_special_order = {"MINES", "TAR", "TAR_2", "TAR_3"}
 AC(tt, "melee", "timed_attacks")
 anchor_y = 0.24
 anchor_x = 0.5
@@ -408,171 +406,7 @@ tt = RT("mod_bolin_slow", "mod_slow")
 tt.modifier.duration = 4
 tt.slow.factor = 0.6
 
--- 马格努斯
-tt = RT("hero_magnus", "hero")
-tt.hero.room_special_order = {"MIRAGE", "MIRAGE_2", "ARCANE_RAIN"}
-AC(tt, "melee", "ranged", "timed_attacks", "teleport")
-anchor_y = 0.14
-anchor_x = 0.5
-image_y = 76
-image_x = 60
-tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.hp_max = {170, 190, 210, 230, 250, 270, 290, 310, 330, 350}
-tt.hero.level_stats.melee_damage_max = {2, 4, 5, 6, 7, 8, 10, 11, 12, 13}
-tt.hero.level_stats.melee_damage_min = {1, 2, 2, 3, 4, 5, 6, 6, 7, 8}
-tt.hero.level_stats.ranged_damage_max = {27, 32, 36, 41, 45, 50, 54, 59, 63, 68}
-tt.hero.level_stats.ranged_damage_min = {9, 11, 12, 14, 15, 17, 18, 20, 21, 23}
-tt.hero.skills.mirage = CC("hero_skill")
-tt.hero.skills.mirage.count = {1, 2, 3, 4, 5, 6}
-tt.hero.skills.mirage.health_factor = 0.15
-tt.hero.skills.mirage.damage_factor = 0.3
-tt.hero.skills.mirage.xp_level_steps = {
-	[2] = 1,
-	[3] = 2,
-	[5] = 3,
-	[6] = 4,
-	[8] = 5,
-	[9] = 6
-}
-tt.hero.skills.mirage.xp_gain = {75, 100, 125, 150, 175, 175}
-tt.hero.skills.arcane_rain = CC("hero_skill")
-tt.hero.skills.arcane_rain.count = {8, 12, 16}
-tt.hero.skills.arcane_rain.damage = {25, 25, 25}
-tt.hero.skills.arcane_rain.xp_level_steps = {
-	[4] = 1,
-	[7] = 2,
-	[10] = 3
-}
-tt.hero.skills.arcane_rain.xp_gain = {75, 100, 150}
-tt.health.dead_lifetime = 15
-tt.health_bar.offset = vec_2(0, 33)
-tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.hero.fn_level_up = scripts.hero_magnus.level_up
-tt.hero.tombstone_show_time = fts(60)
-tt.info.hero_portrait = "hero_portraits_0005"
-tt.info.portrait = "info_portraits_heroes_0005"
-tt.main_script.update = scripts.hero_magnus.update
-tt.motion.max_speed = 1.2 * FPS
-tt.regen.cooldown = 1
-tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
-tt.render.sprites[1].prefix = "hero_magnus"
-tt.soldier.melee_slot_offset = vec_2(4, 0)
-tt.sound_events.death = "HeroMageDeath"
-tt.sound_events.insert = "HeroMageTauntIntro"
-tt.sound_events.respawn = "HeroMageTauntIntro"
-tt.sound_events.change_rally_point = "HeroMageTaunt"
-tt.sound_events.hero_room_select = "HeroMageTauntSelect"
-tt.teleport.min_distance = 45
-tt.teleport.sound = "TeleporthSound"
-tt.ui.click_rect = r(-13, -5, 26, 32)
-tt.unit.mod_offset = vec_2(0, 15)
-tt.melee.range = 45
-tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].hit_time = fts(12)
-tt.melee.attacks[1].xp_gain_factor = 2.5
-tt.melee.attacks[1].damage_type = DAMAGE_MAGICAL
-tt.ranged.attacks[1] = CC("bullet_attack")
-tt.ranged.attacks[1].bullet = "bolt_magnus"
-tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 23)}
-tt.ranged.attacks[1].max_range = 175
-tt.ranged.attacks[1].min_range = 50
-tt.ranged.attacks[1].shoot_time = fts(18)
-tt.ranged.attacks[1].cooldown = fts(33)
-tt.timed_attacks.list[1] = CC("spawn_attack")
-tt.timed_attacks.list[1].animation = "mirage"
-tt.timed_attacks.list[1].cooldown = 10 + fts(29)
-tt.timed_attacks.list[1].cast_time = fts(12)
-tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].entity = "soldier_magnus_illusion"
-tt.timed_attacks.list[1].sound = "HeroMageShadows"
-tt.timed_attacks.list[1].spawn_time = fts(19)
-tt.timed_attacks.list[1].initial_rally = vec_2(0, 30)
-tt.timed_attacks.list[1].initial_pos = vec_2(0, 33)
-tt.timed_attacks.list[1].radius = 30
-tt.timed_attacks.list[1].xp_from_skill = "mirage"
-tt.timed_attacks.list[2] = CC("spawn_attack")
-tt.timed_attacks.list[2].animation = "arcaneRain"
-tt.timed_attacks.list[2].entity = "magnus_arcane_rain_controller"
-tt.timed_attacks.list[2].cooldown = 14 + fts(25)
-tt.timed_attacks.list[2].cast_time = fts(15)
-tt.timed_attacks.list[2].disabled = true
-tt.timed_attacks.list[2].max_range = 200
-tt.timed_attacks.list[2].min_range = 0
-tt.timed_attacks.list[2].sound = "HeroMageRainCharge"
-tt.timed_attacks.list[2].vis_bans = bor(F_FRIEND)
-tt.timed_attacks.list[2].vis_flags = F_RANGED
-tt.timed_attacks.list[2].xp_from_skill = "arcane_rain"
-
-tt = RT("magnus_arcane_rain_controller", "decal_scripted")
-AC(tt, "tween")
-tt.main_script.update = scripts.magnus_arcane_rain_controller.update
-tt.spawn_time = fts(6)
-tt.initial_angle = d2r(0)
-tt.angle_increment = d2r(70)
-tt.entity = "magnus_arcane_rain"
-tt.decal = "decal_magnus_arcane_rain"
-tt.render.sprites[1].name = "hero_mage_rain_decal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
-tt.tween.remove = false
-tt.tween.disabled = true
-
-tt = RT("magnus_arcane_rain")
-AC(tt, "render", "main_script", "pos")
-tt.damage_type = DAMAGE_TRUE
-tt.damage_radius = 40
-tt.damage_min = 20
-tt.damage_max = 20
-tt.hit_time = fts(10)
-tt.damage_flags = F_AREA
-tt.main_script.update = scripts.magnus_arcane_rain.update
-tt.render.sprites[1].prefix = "magnus_arcane_rain"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].anchor = vec_2(0.5, 0.07)
-tt.sound = "HeroMageRainDrop"
-
-tt = RT("soldier_magnus_illusion", "soldier_militia")
-AC(tt, "reinforcement", "ranged", "tween")
-image_y = 76
-image_x = 60
-anchor_y = 0.14
-tt.health.hp_max = nil
-tt.health_bar.offset = vec_2(0, 33)
-tt.health.dead_lifetime = fts(14)
-tt.info.portrait = "info_portraits_heroes_0005"
-tt.info.random_name_format = nil
-tt.main_script.insert = scripts.soldier_reinforcement.insert
-tt.main_script.update = scripts.soldier_magnus_illusion.update
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].hit_time = fts(12)
-tt.melee.range = 45
-tt.skill_radius_factor = 0.8
-tt.skill_damage_factor = 0.4
-tt.reinforcement.duration = 10
-tt.reinforcement.fade = nil
-tt.ranged.attacks[1] = CC("bullet_attack")
-tt.ranged.attacks[1].bullet = "bolt_magnus_illusion"
-tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 23)}
-tt.ranged.attacks[1].max_range = 150
-tt.ranged.attacks[1].min_range = 50
-tt.ranged.attacks[1].shoot_time = fts(18)
-tt.ranged.attacks[1].cooldown = fts(33)
-tt.render.sprites[1].prefix = "soldier_magnus_illusion"
-tt.render.sprites[1].name = "raise"
-tt.render.sprites[1].alpha = 180
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(6), vec_2(0, 0)}}
-tt.tween.remove = false
-tt.tween.run_once = true
-tt.ui.click_rect = r(-13, -5, 26, 32)
-tt.unit.mod_offset = vec_2(0, 15)
-tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
-
 tt = RT("hero_ignus", "hero")
-tt.hero.room_special_order = {"FLAMING_FRENZY", "SURGE_OF_FLAME", "SURGE_OF_FLAME_2"}
 AC(tt, "melee", "timed_attacks")
 anchor_y = 0.1
 anchor_x = 0.5
@@ -704,7 +538,6 @@ tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 
 tt = RT("hero_malik", "hero")
-tt.hero.room_special_order = {"SURGE_OF_FLAME", "SMASH", "FISSURE"}
 AC(tt, "melee")
 anchor_y = 0.1
 anchor_x = 0.5
@@ -824,7 +657,6 @@ tt.render.sprites[2].hide_after_runs = 1
 tt.render.sprites[2].anchor.y = 0.24
 
 tt = RT("hero_denas", "hero")
-tt.hero.room_special_order = {"TOWER_BUFF", "CATAPULT", "CATAPULT_2"}
 AC(tt, "melee", "ranged", "timed_attacks")
 anchor_y = 0.26
 anchor_x = 0.5
@@ -1029,7 +861,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.13, 255}, {1.63, 255}, {2.76, 0}}
 
 tt = RT("hero_ingvar", "hero")
-tt.hero.room_special_order = {"ICE_STORM", "ANCESTORS_CALL", "BEAR"}
 AC(tt, "melee", "timed_attacks", "auras")
 anchor_y = 0.19
 anchor_x = 0.5
@@ -1175,7 +1006,6 @@ tt.regen.cooldown = 1
 tt.regen.health = 5
 
 tt = RT("hero_elora", "hero")
-tt.hero.room_special_order = {"CHILL", "ICE_STORM", "ICE_STORM_2"}
 AC(tt, "melee", "ranged", "timed_attacks")
 anchor_y = 0.17
 anchor_x = 0.5
@@ -1352,7 +1182,6 @@ tt.sound_events.delayed_insert = "HeroFrostIceRainDrop"
 tt.sound_events.ice_break = "HeroFrostIceRainBreak"
 
 tt = RT("hero_oni", "hero")
-tt.hero.room_special_order = {"DEATH_STRIKE", "TORMENT", "RAGE"}
 AC(tt, "melee", "timed_attacks")
 anchor_y = 0.14285714285714285
 anchor_x = 0.5
@@ -1476,7 +1305,6 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 
 tt = RT("hero_hacksaw", "hero")
-tt.hero.room_special_order = {"BEAR", "SAWBLADE", "TIMBER"}
 AC(tt, "melee", "ranged")
 anchor_y = 0.13636363636363635
 anchor_x = 0.5
@@ -1579,7 +1407,6 @@ tt.sound_events.insert = "HeroAlienDiscoThrow"
 tt.sound_events.bounce = "HeroAlienDiscoBounce"
 
 tt = RT("hero_thor", "hero")
-tt.hero.room_special_order = {"THUNDERCLAP", "CHAINLIGHTNING", "CHAINLIGHTNING_2"}
 AC(tt, "melee", "ranged")
 anchor_y = 0.25
 anchor_x = 0.5
@@ -1725,7 +1552,6 @@ tt = RT("mod_hero_thor_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 
 tt = RT("hero_10yr", "hero")
-tt.hero.room_special_order = {"BUFFED", "BUFFED_2", "RAIN"}
 AC(tt, "melee", "timed_attacks", "teleport")
 anchor_y = 0.20161290322580644
 anchor_x = 0.5
@@ -1949,7 +1775,6 @@ tt.render.sprites[2].anchor.y = 0.24
 --         二代
 --     --
 tt = RT("hero_mirage", "hero")
-tt.hero.room_special_order = {"SHADOWDODGE", "SHADOWDANCE", "LETHALSTRIKE"}
 AC(tt, "dodge", "melee", "ranged", "timed_attacks")
 anchor_y = 0.14
 image_y = 72
@@ -2162,7 +1987,6 @@ tt.vis.bans = bor(F_POISON, F_CANNIBALIZE, F_STUN, F_SKELETON, F_LYCAN)
 tt.vis.flags = F_FRIEND
 
 tt = RT("hero_wizard", "hero")
-tt.hero.room_special_order = {"MAGICMISSILE", "CHAINSPELL", "DISINTEGRATE", "ARCANETORRENT"}
 AC(tt, "teleport", "melee", "ranged", "timed_attacks")
 anchor_y = 0.22
 image_y = 78
@@ -2373,7 +2197,6 @@ tt.particle_system.particle_lifetime = {0.35, 0.35}
 tt.particle_system.emission_rate = 20
 
 tt = RT("hero_alric", "hero")
-tt.hero.room_special_order = {"FLURRY", "SANDWARRIORS", "SANDWARRIORS_2", "SPIKEDARMOR"}
 AC(tt, "melee", "timed_attacks", "transfer")
 anchor_y = 0.09
 image_y = 90
@@ -2529,7 +2352,6 @@ tt.vis.bans = bor(F_POISON, F_CANNIBALIZE, F_LYCAN, F_SKELETON)
 tt.vis.flags = F_FRIEND
 
 tt = RT("hero_beastmaster", "hero")
-tt.hero.room_special_order = {"BOARMASTER", "FALCONER", "STAMPEDE", "DEEPLASHES", "DEEPLASHES_2"}
 AC(tt, "melee", "timed_attacks")
 anchor_y = 0.175
 image_y = 80
@@ -2815,7 +2637,6 @@ tt = RT("mod_beastmaster_falcon", "mod_slow")
 tt.modifier.duration = 1.5
 
 tt = RT("hero_priest", "hero")
-tt.hero.room_special_order = {"HOLYLIGHT", "CONSECRATE", "WINGSOFLIGHT"}
 AC(tt, "melee", "ranged", "teleport", "timed_attacks")
 anchor_y = 0.18
 image_y = 134
@@ -2996,7 +2817,6 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 
 tt = RT("hero_dracolich", "hero")
-tt.hero.room_special_order = {"SPINERAIN", "DISEASENOVA", "PLAGUECARRIER", "BONEGOLEM", "UNSTABLEDISEASE"}
 AC(tt, "ranged", "timed_attacks")
 image_y = 308
 anchor_y = 0.12962962962962962
@@ -3329,7 +3149,6 @@ tt.unit.explode_fx = nil
 tt.vis.bans = bor(F_POISON, F_SKELETON, F_LYCAN, F_CANNIBALIZE)
 
 tt = RT("hero_pirate", "hero")
-tt.hero.room_special_order = {"SCATTERSHOT", "KRAKEN", "LOOTING"}
 AC(tt, "melee", "ranged", "timed_attacks", "pickpocket")
 anchor_y = 0.18
 image_y = 88
@@ -3594,7 +3413,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.duration = 3
 
 tt = RT("hero_dragon", "hero")
-tt.hero.room_special_order = {"BLAZINGBREATH", "FEAST", "FIERYMIST", "WILDFIREBARRAGE", "REIGNOFFIRE"}
 AC(tt, "ranged", "timed_attacks")
 anchor_y = 0.065
 image_y = 310
@@ -3941,7 +3759,6 @@ tt.render.sprites[1].anchor.y = 0.3
 tt.render.sprites[1].z = Z_DECALS
 
 tt = RT("hero_van_helsing", "hero")
-tt.hero.room_special_order = {"SILVERBULLET", "MULTISHOOT", "RELICOFPOWER", "HOLYGRENADE", "BEACONOFLIGHT"}
 AC(tt, "melee", "ranged", "timed_attacks")
 image_y = 98
 anchor_y = 28 / image_y
@@ -4281,7 +4098,6 @@ tt.sound_events.insert = "AxeSound"
 tt.trigger_radius = 10
 
 tt = RT("hero_vampiress", "hero")
-tt.hero.room_special_order = {"VAMPIRISM", "SLAYER", "SLAYER_2", "SLAYER_3"}
 AC(tt, "melee", "timed_attacks", "track_kills")
 image_y = 74
 anchor_y = 24 / image_y
@@ -4408,7 +4224,6 @@ tt.main_script.insert = scripts.mod_gain_on_kill.insert
 tt.main_script.update = scripts.mod_vampiress_gain.update
 
 tt = RT("hero_alien", "hero")
-tt.hero.room_special_order = {"ENERGYGLAIVE", "PURIFICATIONPROTOCOL", "ABDUCTION", "VIBROBLADES", "FINALCOUNTDOWN"}
 AC(tt, "melee", "ranged", "selfdestruct", "timed_attacks")
 anchor_y = 0.31
 image_y = 112
@@ -4676,7 +4491,6 @@ tt.vis_bans = bor(F_BOSS)
 tt.vis_flags = bor(F_RANGED)
 
 tt = RT("hero_monk", "hero")
-tt.hero.room_special_order = {"TIGERSTYLE", "SNAKESTYLE", "LEOPARDSTYLE", "DRAGONSTYLE", "CRANESTYLE", "CRANESTYLE_2"}
 AC(tt, "dodge", "melee", "timed_attacks")
 anchor_y = 0.18446601941747573
 image_y = 206
@@ -4850,7 +4664,6 @@ tt = RT("mod_monk_damage_reduction", "modifier")
 tt.main_script.insert = scripts.mod_monk_damage_reduction.insert
 
 tt = RT("hero_voodoo_witch", "hero")
-tt.hero.room_special_order = {"LAUGHINGSKULLS", "DEATHSKULL", "BONEDANCE", "DEATHAURA", "VOODOOMAGIC"}
 AC(tt, "melee", "ranged", "timed_attacks")
 image_y = 66
 anchor_y = 14 / image_y
@@ -5098,7 +4911,6 @@ tt.slow.factor = 0.3
 tt.modifier.duration = 0.4
 
 tt = RT("hero_crab", "hero")
-tt.hero.room_special_order = {"BATTLEHARDENED", "PINCERATTACK", "SHOULDERCANNON", "BURROW"}
 AC(tt, "water", "melee", "ranged", "timed_attacks")
 anchor_y = 0.26785714285714285
 image_y = 112
@@ -5301,7 +5113,6 @@ tt.tween.props[4].keys = {{0, vec_2(0.75, 0.85)}, {fts(10), vec_2(0.8, 0.8)}, {f
 tt.tween.props[4].loop = true
 
 tt = RT("hero_giant", "hero")
-tt.hero.room_special_order = {"BOULDERTHROW", "MASSIVEDAMAGE", "STOMP", "HARDROCK"}
 AC(tt, "auras", "melee", "ranged", "timed_attacks")
 anchor_y = 0.19117647058823528
 image_y = 88
@@ -5502,7 +5313,6 @@ tt.render.sprites[1].name = "giant_boulder_explosion"
 tt.render.sprites[1].z = Z_OBJECTS
 
 tt = RT("hero_minotaur", "hero")
-tt.hero.room_special_order = {"BULLRUSH", "BLOODAXE", "DAEDALUSMAZE", "ROAROFFURY", "DOOMSPIN"}
 AC(tt, "melee", "timed_attacks")
 image_y = 110
 anchor_y = 28 / image_y
@@ -5728,7 +5538,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "minotaur_axeDecal"
 
 tt = RT("hero_monkey_god", "hero")
-tt.hero.room_special_order = {"SPINNINGPOLE", "TETSUBOSTORM", "MONKEYPALM", "ANGRYGOD", "ANGRYGOD_2"}
 AC(tt, "melee", "timed_attacks")
 image_y = 148
 anchor_y = 28 / image_y
@@ -5959,7 +5768,6 @@ tt.particle_system.sort_y_offset = -45
 tt.particle_system.spin = {-math.pi * 0.5, math.pi * 0.5}
 
 tt = RT("hero_dwarf", "hero")
-tt.hero.room_special_order = {"RING", "GIANT", "GIANT_2"}
 AC(tt, "melee", "timed_attacks")
 image_y = 94
 anchor_y = 0.13
@@ -6088,7 +5896,6 @@ tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
 --  三代
 -- 艾莉丹
 tt = RT("hero_elves_archer", "hero")
-tt.hero.room_special_order = {"NIMBLE_FENCER", "DOUBLE_STRIKE", "PORCUPINE", "MULTISHOT", "ULTIMATE", "GUARDS"}
 AC(tt, "melee", "ranged", "dodge", "timed_attacks")
 image_y = 68
 anchor_y = 16 / image_y
@@ -6305,7 +6112,6 @@ tt.render.sprites[2].loop = false
 
 -- 雷格森
 tt = RT("hero_regson", "hero")
-tt.hero.room_special_order = {"SLASH", "SLASH_2", "HEAL", "BLADE", "ULTIMATE"}
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {330, 352, 374, 396, 418, 440, 462, 484, 504, 528}
@@ -6482,7 +6288,6 @@ tt.vis_bans = 0
 tt.hit_time = fts(20)
 
 tt = RT("hero_lynn", "hero")
-tt.hero.room_special_order = {"HEXFURY", "DESPAIR", "WEAKENING", "CHARM_OF_UNLUCK", "ULTIMATE"}
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0.13, 0.16, 0.19, 0.22, 0.25, 0.28, 0.31, 0.34, 0.37, 0.4}
 tt.hero.level_stats.magic_armor = {0.13, 0.16, 0.19, 0.22, 0.25, 0.28, 0.31, 0.34, 0.37, 0.4}
@@ -6711,7 +6516,6 @@ tt.armor_reduction = -tt.armor_reduction * 0.5
 tt.magic_armor_reduction = -tt.magic_armor_reduction * 0.5
 
 tt = RT("hero_wilbur", "hero")
-tt.hero.room_special_order = {"SMOKE", "MISSILE", "BOX", "ULTIMATE"}
 AC(tt, "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {300, 330, 360, 390, 420, 450, 480, 510, 540, 570}
@@ -6981,7 +6785,6 @@ tt.tween.props[1].keys = {{0, vec_2(0, tt.flight_height + 2)}, {0.4, vec_2(0, tt
 tt.tween.props[1].interp = "sine"
 
 tt = RT("hero_veznan", "hero")
-tt.hero.room_special_order = {"SOULBURN", "SHACKLES", "ARCANENOVA", "ULTIMATE"}
 AC(tt, "melee", "ranged", "timed_attacks", "teleport")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {185, 200, 215, 230, 245, 260, 275, 290, 305, 320}
@@ -7217,7 +7020,6 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 
 tt = RT("hero_durax", "hero")
-tt.hero.room_special_order = {"SHARDSEED", "LETHAL_PRISM", "ARMSWORD", "CRYSTALLITES", "ULTIMATE"}
 AC(tt, "melee", "ranged", "timed_attacks", "transfer")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {280, 300, 320, 340, 360, 380, 400, 420, 440, 460}
@@ -7380,7 +7182,6 @@ tt.tween.props[1].keys = {{2, 255}, {3, 0}}
 tt.transfer.particles_name = "ps_durax_clone_transfer"
 
 tt = RT("hero_elves_denas", "hero")
-tt.hero.room_special_order = {"SHIELD_STRIKE", "CELEBRITY", "MIGHTY", "ULTIMATE", "ULTIMATE_2", "SYBARITE"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0.38, 0.41, 0.44, 0.47, 0.5, 0.53, 0.56, 0.59, 0.62, 0.65}
 tt.hero.level_stats.hp_max = {308, 324, 343, 357, 374, 390, 407, 423, 440, 456}
@@ -7586,7 +7387,6 @@ tt.modifier.duration = 8
 tt.render.sprites[1].name = "fx_elves_denas_heal"
 
 tt = RT("hero_arivan", "hero")
-tt.hero.room_special_order = {"LIGHTNING_ROD", "STONE_DANCE", "SEAL_OF_FIRE", "ICY_PRISON", "ULTIMATE"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {115, 130, 145, 160, 175, 190, 205, 220, 235, 250}
@@ -7914,7 +7714,6 @@ tt.modifier.duration = fts(12)
 tt = RT("mod_arivan_ultimate_freeze", "mod_arivan_freeze")
 
 tt = RT("hero_phoenix", "hero")
-tt.hero.room_special_order = {"PURIFICATION", "INMOLATE", "BLAZING_OFFSPRING", "FLAMING_PATH", "ULTIMATE"}
 AC(tt, "ranged", "timed_attacks", "selfdestruct")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {530, 510, 490, 470, 450, 430, 410, 390, 370, 350}
@@ -8227,7 +8026,6 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 
 tt = RT("hero_bravebark", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "SPRINGSAP", "OAKSEEDS", "ROOTSPIKES", "BRANCHBALL"}
 AC(tt, "melee", "teleport", "timed_attacks")
 tt.hero.level_stats.armor = {0.13, 0.16, 0.19, 0.22, 0.25, 0.28, 0.31, 0.34, 0.37, 0.4}
 tt.hero.level_stats.hp_max = {375, 400, 425, 450, 475, 500, 525, 550, 575, 600}
@@ -8457,7 +8255,6 @@ tt = RT("mod_bravebark_ultimate", "mod_stun")
 tt.modifier.duration = 1
 
 tt = RT("hero_catha", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "CURSE", "SOUL", "TALE", "FURY"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45}
 tt.hero.level_stats.hp_max = {210, 220, 230, 240, 250, 260, 270, 280, 290, 300}
@@ -8666,7 +8463,6 @@ tt.unit.mod_offset = vec_2(0, 22)
 tt.unit.hide_after_death = true
 
 tt = RT("hero_lilith", "hero")
-tt.hero.room_special_order = {"INFERNAL_WHEEL", "REAPERS_HARVEST", "ULTIMATE", "SOUL_EATER", "RESURRECTION", "RESURRECTION_2"}
 AC(tt, "melee", "ranged", "timed_attacks", "revive")
 tt.hero.level_stats.armor = {0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55}
 tt.hero.level_stats.hp_max = {240, 260, 280, 300, 320, 340, 360, 380, 400, 420}
@@ -8941,7 +8737,6 @@ tt.render.sprites[1].name = "fallen_angel_hero_proy_0001-f"
 tt.sound_events.insert = "ElvesHeroLilithRangeShoot"
 
 tt = RT("hero_xin", "hero")
-tt.hero.room_special_order = {"INSPIRE", "DARING_STRIKE", "ULTIMATE", "MIND_OVER_BODY", "PANDA_STYLE"}
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25}
 tt.hero.level_stats.hp_max = {330, 360, 390, 420, 450, 480, 510, 540, 570, 600}
@@ -9202,7 +8997,6 @@ tt = RT("mod_xin_slow", "mod_slow")
 tt.modifier.duration = 6
 
 tt = RT("hero_faustus", "hero")
-tt.hero.room_special_order = {"TELEPORT_RUNE", "ULTIMATE", "DRAGON_LANCE", "LIQUID_FIRE", "ENERVATION", "URINATION"}
 AC(tt, "ranged")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {400, 425, 450, 475, 500, 525, 550, 575, 600, 625}
@@ -9478,7 +9272,6 @@ tt.separation_nodes = 20
 tt.show_delay = 0.5
 
 tt = RT("hero_rag", "hero")
-tt.hero.room_special_order = {"KAMIHARE", "HAMMER_TIME", "ANGRY_GNOME", "RAGGIFIED", "ULTIMATE"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {380, 405, 440, 465, 490, 515, 550, 575, 600, 625}
@@ -9739,7 +9532,6 @@ tt.unit.hide_after_death = true
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 
 tt = RT("hero_bruce", "hero")
-tt.hero.room_special_order = {"SHARP_CLAWS", "KINGS_ROAR", "GRIEVOUS_BITES", "ULTIMATE"}
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0.14, 0.18, 0.22, 0.26, 0.3, 0.34, 0.38, 0.42, 0.46, 0.5}
 tt.hero.level_stats.hp_max = {365, 390, 415, 440, 465, 490, 515, 540, 565, 590}
@@ -9932,7 +9724,6 @@ tt.main_script.update = scripts.mod_dps.update
 tt.main_script.remove = scripts.mod_mark_flags.remove
 
 tt = RT("hero_bolverk", "hero")
-tt.hero.room_special_order = {"SLASH", "SCREAM", "BERSERKER"}
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {410, 425, 440, 455, 470, 485, 500, 515, 530, 545}
@@ -10135,7 +9926,6 @@ tt.distance_to_revive = 150
 
 -- 安雅
 tt = RT("hero_hunter", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3}
 tt.hero.level_stats.hp_max = {195, 213, 234, 252, 273, 291, 312, 330, 351, 364}
@@ -10427,7 +10217,6 @@ tt.main_script.update = scripts.hero_hunter_ultimate.update
 tt.sound = "HeroHunterUltimateCast"
 
 tt = RT("hero_space_elf", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "melee", "ranged", "teleport", "transfer", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {208, 221, 234, 247, 260, 273, 286, 299, 312, 325}
@@ -10805,7 +10594,6 @@ tt.main_script.update = scripts.hero_space_elf_ultimate.update
 tt.radius = 90
 
 tt = RT("hero_raelyn", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0.43, 0.46, 0.49, 0.52, 0.55, 0.58, 0.61, 0.64, 0.67, 0.7}
 tt.hero.level_stats.hp_max = {286, 312, 338, 364, 390, 416, 442, 468, 494, 520}
@@ -11148,7 +10936,6 @@ tt.vis_flags = bor(F_AREA)
 tt.vis_bans = bor(F_FLYING)
 
 tt = RT("hero_venom", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {234, 266, 299, 341, 364, 396, 429, 461, 494, 520}
@@ -11507,7 +11294,6 @@ tt.tween_remove = false
 tt.sound_events.insert = "HeroDragonGemUltimateCast"
 
 tt = RT("hero_dragon_gem", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5", "BERSERKER_6"}
 AC(tt, "ranged", "timed_attacks", "tween")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {390, 429, 468, 507, 546, 585, 624, 663, 707, 754}
@@ -11918,7 +11704,6 @@ tt.death_spawns.delay = fts(19)
 tt.sound_death = "HeroWitchDazzlingDecoyExplosion"
 
 tt = RT("hero_witch", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "melee", "ranged", "dodge", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {169, 188, 208, 227, 247, 266, 288, 305, 325, 344}
@@ -12389,7 +12174,6 @@ tt.render.sprites[1].scale = vec_1(1)
 tt.timed.duration = fts(27)
 
 tt = RT("hero_dragon_bone", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5", "BERSERKER_6"}
 AC(tt, "ranged", "timed_attacks", "tween")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {409, 442, 474, 507, 539, 572, 604, 637, 669, 702}
@@ -12912,7 +12696,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = false
 
 tt = RT("hero_lumenir", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "ranged", "tween")
 tt.hero.level_stats.armor = {0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36}
 tt.hero.level_stats.hp_max = {357, 390, 422, 455, 487, 520, 552, 585, 617, 650}
@@ -13533,7 +13316,6 @@ tt.render.sprites[1].sort_y_offset = -10
 tt.render.sprites[1].hidden = true
 
 tt = RT("hero_wukong", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1}
 tt.hero.level_stats.hp_max = {260, 286, 312, 338, 354, 390, 416, 442, 468, 494}
@@ -13859,7 +13641,6 @@ tt.render.sprites[1].hide_after_runs = 1
 tt.render.sprites[1].z = Z_OBJECTS
 
 tt = E:register_t("hero_vesper", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 E:add_comps(tt, "melee", "ranged", "dodge", "timed_attacks", "teleport")
 tt.hero.level_stats.armor = {0.18, 0.21, 0.24, 0.27, 0.3, 0.33, 0.36, 0.39, 0.42, 0.45}
 tt.hero.level_stats.hp_max = {220, 240, 260, 280, 300, 320, 340, 360, 380, 400}
@@ -14177,7 +13958,6 @@ tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.mod_track_target.update
 
 tt = E:register_t("hero_muyrn", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {162, 175, 188, 201, 214, 226, 240, 253, 266, 279}
@@ -14634,7 +14414,6 @@ tt.render.sprites[2].name = "hero_dragon_arborean_splinter_decal"
 tt.render.sprites[2].z = Z_DECALS
 
 tt = E:register_t("hero_dragon_arb", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 E:add_comps(tt, "ranged", "timed_attacks", "tween")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.magic_armor = {0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.21, 0.24, 0.27, 0.3}
@@ -15316,7 +15095,6 @@ tt.render.sprites[1].name = "start"
 tt.render.sprites[1].loop = true
 
 tt = RT("hero_builder", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.21, 0.24, 0.27, 0.3}
 tt.hero.level_stats.hp_max = {325, 364, 403, 442, 481, 520, 559, 598, 637, 676}
@@ -15690,7 +15468,6 @@ tt.render.sprites[1].loop = false
 tt.tween.props[1].keys = {{0, 255}, {1, 0}}
 
 tt = RT("hero_robot", "hero")
-tt.hero.room_special_order = {"BERSERKER", "BERSERKER_2", "BERSERKER_3", "BERSERKER_4", "BERSERKER_5"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7}
 tt.hero.level_stats.hp_max = {260, 279, 299, 318, 338, 357, 377, 396, 416, 435}
@@ -16080,7 +15857,6 @@ tt.render.sprites[1].scale = vv(0.7)
 tt.timed.duration = fts(27)
 
 tt = RT("hero_bird", "hero")
-tt.hero.room_special_order = {"CLUSTER_BOMB", "SHOUT_STUN", "GATTLING", "EAT_INSTAKILL", "ULTIMATE"}
 AC(tt, "ranged", "timed_attacks", "tween")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {364, 390, 416, 442, 468, 494, 520, 546, 572, 598}
@@ -16492,7 +16268,6 @@ tt.unit.fade_time_after_death = 1
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 
 tt = RT("hero_lava", "hero")
-tt.hero.room_special_order = {"TEMPER_TANTRUM", "HEART", "DOUBLE_TROUBLE", "WILD_ERUPTION", "ULTIMATE"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {292, 305, 318, 331, 344, 357, 370, 383, 396, 409}
@@ -16834,7 +16609,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].sort_y_offset = -5
 
 tt = RT("hero_spider", "hero")
-tt.hero.room_special_order = {"INSTAKILL_MELEE", "AREA_ATTACK", "TUNNELING", "SUPREME_HUNTER", "ULTIMATE"}
 AC(tt, "melee", "ranged", "teleport", "timed_attacks")
 tt.hero.level_stats.armor = {0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1}
 tt.hero.level_stats.magic_armor = {0.34, 0.38, 0.42, 0.46, 0.5, 0.54, 0.58, 0.62, 0.66, 0.7}
@@ -17169,7 +16943,6 @@ tt.tween.props[1].keys = {{1, 255}, {9, 255}, {12, 0}}
 tt.tween.run_once = true
 
 tt = RT("hero_mecha", "hero")
-tt.hero.room_special_order = {"GOBLIDRONES", "TAR_BOMB", "POWER_SLAM", "MINE_DROP", "ULTIMATE"}
 AC(tt, "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0.1, 0.16, 0.22, 0.28, 0.34, 0.4, 0.46, 0.52, 0.58, 0.64}
 tt.hero.level_stats.hp_max = {260, 273, 286, 299, 312, 325, 338, 351, 364, 377}
@@ -17852,7 +17625,6 @@ tt.spawn_bullet = "bullet_hero_dragon_sun_ultimate"
 
 -- hero main template
 tt = RT("hero_dragon_sun", "hero")
-tt.hero.room_special_order = {"WORTHY_FOE", "SOLAR_CLEANSING", "OVERCHARGE", "SOLAR_STONES", "ULTIMATE"}
 AC(tt, "ranged", "timed_attacks", "tween")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {273, 292, 312, 331, 351, 370, 390, 409, 435, 461}
@@ -18057,7 +17829,6 @@ tt.ultimate = {
 -- ======== hero_eiskalt(冰龙) ========
 
 tt = RT("hero_eiskalt", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "EXPLOSION", "COLDFURY", "FROSTY", "ICEPEAK", "ULTIMATE_2"}
 AC(tt, "ranged", "timed_attacks")
 tt.regen.cooldown = 1
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
@@ -18429,7 +18200,6 @@ tt.particle_system.alphas = {255, 0}
 
 -- ======== 阿斯拉 ========
 tt = RT("hero_asra", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "SPIDER_BITE", "ONIX_ARROWS", "QUIVER_OF_SORROW", "SHIELD_OF_SHADOWS", "ULTIMATE_2"}
 AC(tt, "melee", "ranged", "teleport")
 tt.hero.level_stats.armor = {0.07, 0.075, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13, 0.14, 0.15}
 tt.hero.level_stats.hp_max = {140, 160, 180, 200, 220, 240, 260, 280, 290, 300}
@@ -18701,7 +18471,6 @@ tt.main_script.update = scripts.mod_track_target.update
 
 -- ======== 贝雷萨德 ========
 tt = RT("hero_beresad", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "CONFLAGRATION", "FEAR_DRAGON", "DRAGON_SPAWN", "REMOVE_EXISTENCE", "ULTIMATE_2"}
 AC(tt, "ranged", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {375, 400, 425, 450, 475, 500, 525, 550, 575, 600}
@@ -19113,7 +18882,6 @@ tt.stop_animation = "stop"
 
 -- ======== 电云 ========
 tt = RT("hero_dianyun", "hero")
-tt.hero.room_special_order = {"RICOCHET", "LORD_STORM", "DIVINE_RAIN", "SUPREME_WAVE", "ULTIMATE", "ULTIMATE_2"}
 AC(tt, "ranged", "timed_attacks")
 tt.ui.click_rect = r(-25, 70, 60, 60)
 tt.hero.level_stats.hp_max = {320, 338, 356, 374, 392, 410, 428, 446, 464, 482}
@@ -19992,7 +19760,6 @@ tt.render.sprites[1].z = Z_BULLETS
 
 -- ======== 维鲁克(hero_orc) ========
 tt = RT("hero_orc", "hero")
-tt.hero.room_special_order = {"DUELIST", "BRUTE_FORCE", "INSPIRING_LEADER", "ULTIMATE", "ULTIMATE_2", "AIMED_SLASH"}
 AC(tt, "melee", "timed_attacks")
 anchor_y = 0.12
 anchor_x = 0.5
@@ -20239,7 +20006,6 @@ tt.render.sprites[1].name = "hero_orc_spear_goblin_fx_run"
 
 -- 主英雄模板
 tt = RT("hero_oloch", "hero")
-tt.hero.room_special_order = {"DUPLICATION", "MAGMA_ERUPTION", "HELLISH_INFUSION", "DEMONIC_BLAST", "ULTIMATE", "ULTIMATE_2"}
 AC(tt, "melee", "ranged", "timed_attacks", "selfdestruct")
 tt.melee.range = 30
 tt.health_bar.offset = v(0, 52)
@@ -20622,7 +20388,6 @@ tt.render.sprites[1].name = "hero_oloch_teleport_modifier_run"
 
 -- ======== 苦楝夫人 ========
 tt = RT("hero_margosa", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "BAT_FAMILIAR", "MYST_FORM", "DARK_CALL", "VAMPIRIC_TOUCH", "ULTIMATE_2"}
 AC(tt, "melee", "timed_attacks")
 anchor_y = 0.12
 anchor_x = 0.5
@@ -20866,7 +20631,6 @@ anchor_x, anchor_y = 0.5, 0.12
 image_x, image_y = 92, 110
 
 tt = RT("hero_mortemis", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "CALL_HAUNTED", "DEADLY_FUMES", "GRIM_PRESENCE", "UNDEAD_SERVITUDE", "ULTIMATE_2", "UNDEAD_SERVITUDE_2"}
 AC(tt, "melee", "ranged", "timed_attacks", "death_spawns", "auras")
 tt.melee.range = 45
 tt.regen.cooldown = 1
@@ -21223,7 +20987,6 @@ anchor_x, anchor_y = 0.5, 0.12
 image_x, image_y = 92, 110
 
 tt = RT("hero_jigou", "hero")
-tt.hero.room_special_order = {"UNDEAD_SERVITUDE", "ICE_SHARD", "FROZEN_BREATH", "EARTHSHAKE", "GLACIAL_FORM", "ULTIMATE"}
 AC(tt, "melee", "timed_attacks", "ranged", "auras")
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].name = "aura_jigou_regen"
@@ -21545,7 +21308,6 @@ tt.bullet.use_hit_offset = true
 tt.render.sprites[1].name = "hero_tramin_bombot_proyectile"
 
 tt = RT("hero_tramin", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "BOMBOTS", "NITRO_RUSH", "FLASHBANG", "ROCKET_BARRAGE", "ULTIMATE_2"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.melee.range = 25
 tt.health_bar.offset = v(0, 40)
@@ -21850,7 +21612,6 @@ tt.sound_events.insert = "BombExplosionSound"
 
 -- ======== 毁灭坦克 SG-11 ========
 tt = RT("hero_tank", "hero")
-tt.hero.room_special_order = {"ULTIMATE", "HEAT_MISSILES", "GROUND_SLAM", "EXPENDABLES", "SCORCHING_CANNON", "ULTIMATE_2"}
 AC(tt, "ranged", "timed_attacks", "auras")
 tt.health.dead_lifetime = 15
 tt.health_bar.draw_order = -1
@@ -22360,7 +22121,6 @@ anchor_x, anchor_y = 0.5, 0.12
 image_x, image_y = 92, 110
 
 tt = RT("hero_naga", "hero")
-tt.hero.room_special_order = {"PASSIVE", "SPLASH", "WAVE", "BANNER_ALLIES", "GAZE", "ULTIMATE"}
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.melee.range = 60
 tt.health_bar.offset = v(0, 53)

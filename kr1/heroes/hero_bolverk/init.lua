@@ -11,6 +11,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0019",
 		icon_image = "kr3_mapButtons_portrait_hero_0019"
 	},
+	room_special_order = {"SLASH", "SCREAM", "BERSERKER"},
 	required_textures = {"go_hero_bolverk"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_bolverk"},

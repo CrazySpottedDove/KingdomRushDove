@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr4_hero_room_thumbs_0005",
 		icon_image = "kr4_mapButtons_portrait_hero_0005"
 	},
+	room_special_order = {"ULTIMATE", "CALL_HAUNTED", "DEADLY_FUMES", "GRIM_PRESENCE", "UNDEAD_SERVITUDE", "ULTIMATE_2", "UNDEAD_SERVITUDE_2"},
 	required_textures = {"go_hero_mortemis"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_mortemis"},
