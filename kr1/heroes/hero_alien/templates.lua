@@ -13,7 +13,6 @@ require("all.constants")
 
 local band = bit.band
 local bor = bit.bor
-local v = V.v
 local level_up_basic = HU.level_up_basic
 local upgrade_skill = HU.upgrade_skill
 local update_hp = HU.update_hp

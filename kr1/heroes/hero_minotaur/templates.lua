@@ -16,7 +16,6 @@ require("all.constants")
 local band = bit.band
 local bnot = bit.bnot
 local bor = bit.bor
-local v = V.v
 local level_up_basic = HU.level_up_basic
 local upgrade_skill = HU.upgrade_skill
 local ready_to_use_skill = HU.ready_to_use_skill
