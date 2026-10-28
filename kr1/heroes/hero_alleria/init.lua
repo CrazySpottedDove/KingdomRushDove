@@ -24,6 +24,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_alleria.templates"},
+	animations = {"heroes.hero_alleria.animations"},
+	sounds = {"heroes.hero_alleria.sounds"},
+	groups = {"heroes.hero_alleria.groups"},
 
 	name_style = {
 		margin = 0,

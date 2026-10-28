@@ -24,6 +24,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_10yr.templates"},
+	animations = {"heroes.hero_10yr.animations"},
+	sounds = {"heroes.hero_10yr.sounds"},
+	groups = {"heroes.hero_10yr.groups"},
 
 	name_style = {
 		margin = 0,

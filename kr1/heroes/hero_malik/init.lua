@@ -24,6 +24,9 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_malik.templates"},
+	animations = {"heroes.hero_malik.animations"},
+	groups = {"heroes.hero_malik.groups"},
 
 	name_style = {
 		margin = 0,

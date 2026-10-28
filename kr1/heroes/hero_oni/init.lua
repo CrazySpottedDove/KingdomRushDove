@@ -24,6 +24,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_oni.templates"},
+	animations = {"heroes.hero_oni.animations"},
+	sounds = {"heroes.hero_oni.sounds"},
+	groups = {"heroes.hero_oni.groups"},
 
 	name_style = {
 		margin = 0,

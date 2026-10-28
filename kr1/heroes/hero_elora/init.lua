@@ -24,6 +24,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_elora.templates"},
+	animations = {"heroes.hero_elora.animations"},
+	sounds = {"heroes.hero_elora.sounds"},
+	groups = {"heroes.hero_elora.groups"},
 
 	name_style = {
 		margin = 0,

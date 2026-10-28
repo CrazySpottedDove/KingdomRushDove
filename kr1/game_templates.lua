@@ -88,70 +88,6 @@ tt.particle_system.scale_var = {0.8, 1.2}
 tt.particle_system.scales_x = {1, 0.3}
 tt.particle_system.scales_y = {1, 0.3}
 
-tt = RT("ps_hacksaw_sawblade")
-AC(tt, "pos", "particle_system")
-tt.particle_system.alphas = {255, 200, 0, 0}
-tt.particle_system.animated = true
-tt.particle_system.emission_rate = 120
-tt.particle_system.emit_spread = math.pi
-tt.particle_system.loop = false
-tt.particle_system.name = "ps_hacksaw_sawblade"
-tt.particle_system.particle_lifetime = {fts(12), fts(12)}
-tt.particle_system.scales_x = {1, 0.5}
-tt.particle_system.scales_y = {1.5, 0.5}
-
-tt = RT("ps_elora_run")
-AC(tt, "pos", "particle_system")
-tt.particle_system.alphas = {255, 0}
-tt.particle_system.animated = true
-tt.particle_system.emission_rate = 10
-tt.particle_system.loop = false
-tt.particle_system.z = Z_DECALS + 1
-tt.particle_system.name = "ps_hero_elora_run"
-tt.particle_system.particle_lifetime = {0.8, 1}
-
-tt = RT("ps_hero_ignus_idle", "particle_system")
-tt.particle_system.name = "ps_hero_ignus_idle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {0.5, 0.5}
-tt.particle_system.alphas = {255, 255}
-tt.particle_system.emit_direction = d2r(90)
-tt.particle_system.emit_speed = {30, 30}
-tt.particle_system.emission_rate = 2.5
-tt.particle_system.z = Z_OBJECTS
-
-tt = RT("ps_ignus_run")
-AC(tt, "pos", "particle_system")
-tt.particle_system.alphas = {255, 200, 0}
-tt.particle_system.anchor = vec_2(0.5, 0.1)
-tt.particle_system.animated = true
-tt.particle_system.emission_rate = 10
-tt.particle_system.loop = false
-tt.particle_system.z = Z_DECALS + 1
-tt.particle_system.name = "ps_hero_ignus_run"
-tt.particle_system.particle_lifetime = {0.6, 0.8}
-
-tt = RT("ps_hero_ignus_smoke", "ps_power_fireball")
-tt.particle_system.scales_x = {2, 3}
-tt.particle_system.scales_y = {2, 3}
-tt.particle_system.emission_rate = 30
-tt.particle_system.emit_offset = vec_2(0, 17)
-tt.particle_system.name = "ps_hero_ignus_smoke"
-tt.particle_system.sort_y_offset = -16
-tt.particle_system.z = Z_OBJECTS
-
-tt = RT("ps_hero_10yr_idle", "particle_system")
-tt.particle_system.name = "ps_hero_10yr_particle_fire"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {0.5, 0.5}
-tt.particle_system.alphas = {255, 255}
-tt.particle_system.emit_direction = d2r(90)
-tt.particle_system.emit_speed = {30, 30}
-tt.particle_system.emission_rate = 2.5
-tt.particle_system.z = Z_OBJECTS
-
 tt = RT("ps_stage_snow")
 AC(tt, "pos", "particle_system")
 tt.pos = vec_2(512, 768)
@@ -181,23 +117,6 @@ tt.render.sprites[1].name = "fx_mod_polymorph_sorcerer_small"
 
 tt = RT("fx_mod_polymorph_sorcerer_big", "fx_mod_polymorph_sorcerer_small")
 tt.render.sprites[1].name = "fx_mod_polymorph_sorcerer_big"
-
-tt = RT("fx_hacksaw_sawblade_hit", "fx")
-tt.render.sprites[1].prefix = "fx_hacksaw_sawblade"
-tt.render.sprites[1].name = "hit"
-
-tt = RT("fx_hero_thor_thunderclap_disipate", "fx")
-tt.render.sprites[1].name = "fx_hero_thor_thunderclap_disipate"
-tt.render.sprites[1].anchor = vec_2(0.5, 0.15)
-
-tt = RT("fx_bolt_elora_hit", "fx")
-tt.render.sprites[1].prefix = "fx_bolt_elora"
-tt.render.sprites[1].name = "hit"
-
-tt = RT("fx_ignus_burn", "fx")
-tt.render.sprites[1].prefix = "fx_burn"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
 
 tt = RT("fx_juggernaut_smoke", "fx")
 tt.render.sprites[1].name = "fx_juggernaut_smoke"
@@ -264,25 +183,6 @@ tt = RT("decal_zombiemancer_raise", "decal_timed")
 tt.render.sprites[1].name = "decal_paladin_holystrike"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].color = {0, 255, 0}
-
-tt = RT("decal_oni_torment_sword", "decal_scripted")
-tt.render.sprites[1].prefix = "decal_oni_torment_sword_1"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].anchor.y = 0.16666666666666666
-tt.main_script.update = scripts.decal_oni_torment_sword.update
-tt.duration = 0.5
-tt.delay = 0.01
-tt.sword_names = {"decal_oni_torment_sword_1", "decal_oni_torment_sword_2", "decal_oni_torment_sword_3", "decal_oni_torment_sword_1"}
-
-tt = RT("decal_ignus_flaming", "decal_timed")
-tt.render.sprites[1].name = "decal_ignus_flaming"
-tt.render.sprites[1].z = Z_DECALS
-
-tt = RT("decal_ingvar_attack", "decal_tween")
-tt.render.sprites[1].name = "hero_viking_axeDecal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].keys = {{0, 200}, {1, 200}, {1.5, 0}}
 
 tt = RT("decal_jt_ground_hit", "decal_timed")
 tt.render.sprites[1].name = "decal_jt_ground_hit"
@@ -691,11 +591,6 @@ tt.render.sprites[1].name = "ray_sorcerer_polymorph"
 tt.sound_events.insert = "PolymorphSound"
 tt.track_target = true
 
-tt = RT("ray_hero_thor", "ray_tesla")
-tt.bullet.mod = "mod_ray_hero_thor"
-tt.render.sprites[1].name = "ray_hero_thor"
-tt.main_script.update = scripts.ray_thor.update
-
 tt = RT("shotgun_bolin", "shotgun")
 tt.bullet.damage_max = 90
 tt.bullet.damage_min = 45
@@ -758,20 +653,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].anchor.y = 0.375
 tt.sound_events.insert = "TeleporthSound"
-
-tt = RT("aura_ignus_idle", "aura")
-tt.particles_name = "ps_hero_ignus_idle"
-tt.emit_states = {"idle", "attack"}
-tt.main_script.update = scripts.aura_ignus_particles.update
-tt.particle_offsets = {vec_2(-17, 16), vec_2(-12, 27), vec_2(4, 37), vec_2(2, 35), vec_2(12, 22), vec_2(14, 13)}
-tt.flip_offset = vec_2(3, 0)
-
-tt = RT("aura_10yr_idle", "aura")
-tt.particles_name = "ps_hero_10yr_idle"
-tt.emit_states = {"idle", "running"}
-tt.main_script.update = scripts.aura_10yr_particles.update
-tt.particle_offsets = {vec_2(-25.714285714285715, 25.714285714285715), vec_2(-15.714285714285715, 37.142857142857146), vec_2(0, 45.714285714285715), vec_2(8.571428571428571, 42.85714285714286), vec_2(14.285714285714286, 32.85714285714286), vec_2(21.42857142857143, 21.42857142857143)}
-tt.flip_offset = vec_2(3, 0)
 
 tt = RT("aura_troll_regen", "aura")
 AC(tt, "regen")
