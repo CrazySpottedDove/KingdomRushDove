@@ -39640,9 +39640,9 @@ function scripts.tower_forger.update(this, store)
 						U.animation_start(this, "run", nil, store.tick_ts, false, sid)
 					end
 
-					sa.ts = store.tick_ts
+					local start_ts = store.tick_ts
 
-					U.y_wait(store, sa.cast_time)
+					U.y_wait_unconditional(store, sa.cast_time)
 
 					available_path = find_disc_path()
 
@@ -39668,6 +39668,9 @@ function scripts.tower_forger.update(this, store)
 							simulation:queue_insert_entity(disc)
 							U.y_wait(store, fts(3) * this.tower.cooldown_factor)
 						end
+						sa.ts = start_ts
+					else
+						sa.ts = sa.ts + 5
 					end
 
 					U.y_animation_wait(this, sid_mage, 1)
@@ -39687,9 +39690,9 @@ function scripts.tower_forger.update(this, store)
 						U.animation_start(this, "run", nil, store.tick_ts, false, sid)
 					end
 
-					sb.ts = store.tick_ts
+					local start_ts = store.tick_ts
 
-					U.y_wait(store, sb.cast_time)
+					U.y_wait_unconditional(store, sb.cast_time)
 
 					local _, new_targets = U.find_foremost_enemy_in_range_filter_off(this.pos, this.attacks.range, fts(15), sb.flags, sb.bans)
 
@@ -39725,62 +39728,12 @@ function scripts.tower_forger.update(this, store)
 							this.crystals[#this.crystals + 1] = c
 							U.y_wait(store, fts(1) * this.tower.cooldown_factor)
 						end
+						sb.ts = start_ts
+					else
+						sb.ts = sb.ts + 5
 					end
 
 					U.y_animation_wait(this, sid_mage, 1)
-				end
-			end
-
-			if U.tower_ready_to_use_power(pow_c, sc, store, this.tower) then
-				local _, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, this.attacks.range, fts(15), sc.flags, sc.bans)
-
-				if not targets then
-					sc.ts = sc.ts + fts(10)
-				else
-					U.animation_start(this, "stun", nil, store.tick_ts, false, sid_mage)
-
-					for _, sid in pairs(sids_lights) do
-						U.animation_start(this, "run", nil, store.tick_ts, false, sid)
-					end
-
-					sc.ts = store.tick_ts
-
-					U.y_wait(store, sc.cast_time)
-					S:queue(sc.sound)
-
-					local _, new_targets = U.find_foremost_enemy_in_range_filter_off(this.pos, this.attacks.range, fts(15), sc.flags, sc.bans)
-
-					if new_targets then
-						new_targets = table.slice(table.random_order(new_targets), 1, pow_c.max_targets[pow_c.level])
-
-						for _, e in ipairs(new_targets) do
-							local m = E:create_entity(sc.mod_stun)
-
-							m.modifier.target_id = e.id
-							m.modifier.source_id = this.id
-							m.modifier.duration = pow_c.stun_duration[pow_c.level]
-
-							if e.unit.size ~= 1 then
-								m.render.sprites[1].prefix = m.prefix_big
-							end
-
-							simulation:queue_insert_entity(m)
-
-							local mf = E:create_entity(sc.mod_floor)
-
-							mf.modifier.target_id = e.id
-							mf.modifier.source_id = this.id
-							mf.modifier.duration = pow_c.stun_duration[pow_c.level]
-
-							if e.unit.size ~= 1 then
-								mf.render.sprites[1].prefix = mf.prefix_big
-							end
-
-							simulation:queue_insert_entity(mf)
-						end
-					end
-
-					U.y_animation_wait(this, sid_mage)
 				end
 			end
 
@@ -39788,7 +39741,7 @@ function scripts.tower_forger.update(this, store)
 				local function find_maw_targets()
 					local _, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, this.attacks.range, ult.node_prediction, ult.flags, ult.bans)
 
-					if not targets or #targets == 0 then
+					if not targets then
 						return nil
 					end
 
@@ -39811,12 +39764,12 @@ function scripts.tower_forger.update(this, store)
 						local first = best_group[i]
 						local last = best_group[#best_group - i + 1]
 
-						if first.health.hp + total_hp <= ult.hp_cap and not table.contains(new_targets, first) then
+						if first.health.hp + total_hp <= ult.hp_cap and not table.arraycontains(new_targets, first) then
 							total_hp = total_hp + first.health.hp
 							new_targets[#new_targets + 1] = first
 						end
 
-						if last.health.hp + total_hp <= ult.hp_cap and not table.contains(new_targets, last) then
+						if last.health.hp + total_hp <= ult.hp_cap and not table.arraycontains(new_targets, last) then
 							total_hp = total_hp + last.health.hp
 							new_targets[#new_targets + 1] = last
 						end
@@ -39840,9 +39793,9 @@ function scripts.tower_forger.update(this, store)
 						U.animation_start(this, "run", nil, store.tick_ts, false, sid)
 					end
 
-					ult.ts = store.tick_ts
+					local start_ts = store.tick_ts
 
-					U.y_wait(store, ult.cast_time)
+					U.y_wait_unconditional(store, ult.cast_time)
 
 					new_targets = find_maw_targets()
 
@@ -39866,6 +39819,10 @@ function scripts.tower_forger.update(this, store)
 						decal.targets = new_targets
 
 						simulation:queue_insert_entity(decal)
+
+						ult.ts = start_ts
+					else
+						ult.ts = ult.ts + 5
 					end
 
 					U.y_animation_wait(this, sid_mage)
@@ -39894,7 +39851,7 @@ function scripts.tower_forger.update(this, store)
 
 						U.animation_start(this, an, af, store.tick_ts, false, sid_mage)
 
-						U.y_wait(store, ba.shoot_time)
+						U.y_wait_unconditional(store, ba.shoot_time)
 
 						target, _, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, ba.node_prediction, ba.vis_flags, ba.vis_bans)
 
@@ -39914,6 +39871,62 @@ function scripts.tower_forger.update(this, store)
 					end
 
 					last_ts = store.tick_ts
+				end
+			end
+
+			if U.tower_ready_to_use_power(pow_c, sc, store, this.tower) then
+				if not U.find_first_enemy_in_range_filter_on(this.pos, this.attacks.range, sc.flags, sc.bans, function(e)
+					return not e.unit.is_stunned
+				end) then
+					sc.ts = sc.ts + fts(10)
+				else
+					U.animation_start(this, "stun", nil, store.tick_ts, false, sid_mage)
+
+					for _, sid in pairs(sids_lights) do
+						U.animation_start(this, "run", nil, store.tick_ts, false, sid)
+					end
+
+					local start_ts = store.tick_ts
+
+					U.y_wait_unconditional(store, sc.cast_time)
+					S:queue(sc.sound)
+
+					local targets = U.find_enemies_in_range_filter_off(this.pos, this.attacks.range, sc.flags, sc.bans)
+
+					if targets then
+						targets = table.slice(table.random_order(targets), 1, pow_c.max_targets[pow_c.level])
+
+						for _, e in ipairs(targets) do
+							local m = E:create_entity(sc.mod_stun)
+
+							m.modifier.target_id = e.id
+							m.modifier.source_id = this.id
+							m.modifier.duration = pow_c.stun_duration[pow_c.level]
+
+							if e.unit.size ~= 1 then
+								m.render.sprites[1].prefix = m.prefix_big
+							end
+
+							simulation:queue_insert_entity(m)
+
+							local mf = E:create_entity(sc.mod_floor)
+
+							mf.modifier.target_id = e.id
+							mf.modifier.source_id = this.id
+							mf.modifier.duration = pow_c.stun_duration[pow_c.level]
+
+							if e.unit.size ~= 1 then
+								mf.render.sprites[1].prefix = mf.prefix_big
+							end
+
+							simulation:queue_insert_entity(mf)
+						end
+						sc.ts = start_ts
+					else
+						sc.ts = sc.ts + 5
+					end
+
+					U.y_animation_wait(this, sid_mage)
 				end
 			end
 
