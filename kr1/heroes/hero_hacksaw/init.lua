@@ -24,6 +24,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_hacksaw.templates"},
+	animations = {"heroes.hero_hacksaw.animations"},
+	sounds = {"heroes.hero_hacksaw.sounds"},
+	groups = {"heroes.hero_hacksaw.groups"},
 
 	name_style = {
 		margin = 0,
