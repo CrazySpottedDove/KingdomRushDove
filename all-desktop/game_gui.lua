@@ -7879,7 +7879,7 @@ function CriketMenu:button_callback(button, item, no_overwrite)
 end
 
 -- 局内召唤英雄仪表盘
-local hero_data = require("data.map_data").hero_data
+local HEROES = require("heroes.registry")
 
 HeroMenuButton = class("HeroMenuButton", KView)
 
@@ -7946,7 +7946,9 @@ end
 function HeroMenu:show()
 	self:remove_children()
 
-	for index, data in pairs(hero_data) do
+	for index, data in pairs(HEROES:get_hero_data()) do
+		HEROES:ensure_template(data.name)
+
 		local t = E:get_template(data.name)
 		local item = {
 			image = t.info.portrait,

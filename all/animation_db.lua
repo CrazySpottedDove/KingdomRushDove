@@ -110,16 +110,10 @@ function animation_db:register_animations(animations)
 	end
 end
 
---- 加载编译产物 game_animations.bin（见 scripts/compile_game_animations.lua）：
+--- 解析一份编译产物并合并进 self.db。
+--- 布局（见 scripts/compile_game_animations.lua）：
 --- header + directory(name/prefix/count) + 连续 uint16 帧号。
---- 帧号一次性 ffi.copy 成一个大数组，每个 def 用 offset 指向它。
-function animation_db:load()
-	if self.loaded then
-		return
-	end
-
-	local bin = FS.read(KR_PATH_GAME .. "/data/game_animations.bin")
-
+local function merge_bin(self, bin, label)
 	local p = 1
 
 	local function read_u16()
@@ -139,8 +133,9 @@ function animation_db:load()
 	end
 
 	local anim_count = read_u32()
-	local db = {}
+	local db = self.db
 	local entries = {}
+	local offsets = {}
 	local total = 0
 
 	for i = 1, anim_count do
@@ -158,14 +153,15 @@ function animation_db:load()
 		local def = {count}
 
 		def.prefix = prefix
-		def.offset = total
 		db[name] = def
 		entries[i] = def
+		offsets[i] = total
 		total = total + count
 	end
 
 	if p - 1 + total * 2 > #bin then
-		log.error("game_animations.bin 帧数据越界（文件损坏）")
+		log.error("%s 帧数据越界（文件损坏）", label)
+
 		return
 	end
 
@@ -176,12 +172,37 @@ function animation_db:load()
 	local base = ffi.cast("uint16_t*", frames)
 
 	for i = 1, anim_count do
-		entries[i].nums = base + entries[i].offset
+		entries[i].nums = base + offsets[i]
 	end
 
-	-- ffi 数组的 gc 锁，不可删去
-	self._frames = frames
-	self.db = db
+	self._extra_frames = self._extra_frames or {}
+	self._extra_frames[#self._extra_frames + 1] = frames
+end
+
+--- 注册一份编译产物（animations.bin）里的动画。
+---@param path string
+---@return boolean
+function animation_db:register_animations_bin(path)
+	local bin = FS.read(path)
+
+	if not bin then
+		return false
+	end
+
+	merge_bin(self, bin, path)
+
+	return true
+end
+
+--- 加载全局编译产物 game_animations.bin。
+function animation_db:load()
+	if self.loaded then
+		return
+	end
+
+	merge_bin(self, FS.read(KR_PATH_GAME .. "/data/game_animations.bin"), "game_animations.bin")
+
+	-- 帧数组的 gc 锁在 merge_bin 里挂在 self._extra_frames 上，不可删去
 	self.loaded = true
 end
 

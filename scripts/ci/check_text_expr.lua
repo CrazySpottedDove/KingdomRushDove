@@ -21,10 +21,19 @@
 --   6. 展开结果非空，且没有残留的 %$
 --   7. 代入的数字按 U.format_text_number 规则显示（整数原样 / 至多两位小数）
 
-package.path = './?.lua;./kr1/?.lua;./all/?.lua;./lib/?.lua;./kr1-desktop/?.lua;' .. './all-desktop/?.lua;./_assets/?.lua;./_assets/kr1-desktop/?.lua;' .. package.path
+package.path = './?.lua;./?/init.lua;./kr1/?.lua;./kr1/?/init.lua;./all/?.lua;./all/?/init.lua;./lib/?.lua;' .. './kr1-desktop/?.lua;./all-desktop/?.lua;./_assets/?.lua;./_assets/kr1-desktop/?.lua;' .. package.path
 
 -- ── 加载实体库（love 打桩见 scripts/ci/love_stub.lua）──
 local E = require('scripts.ci.love_stub').load_entity_db()
+
+-- 模块化英雄是懒加载的：文案里会引用它们的模板，这里统一注册一遍
+local HEROES = require('heroes.registry')
+
+HEROES:init()
+
+for _, data in ipairs(HEROES:get_hero_data()) do
+	HEROES:ensure_template(data.name)
+end
 
 local U = require('utils')
 local i18n = require('i18n')
@@ -54,7 +63,21 @@ local ENV_NAMES = {
 	this = true,
 	tdmg = true,
 	tcd = true,
-	grow = true
+	grow = true,
+	levels = true,
+	tail = true,
+	sum = true,
+	fts = true,
+	damage_name = true,
+	damage_str = true,
+	damage_type_str = true,
+	cooldown_str = true,
+	rate_str = true,
+	hp_str = true,
+	health_str = true,
+	armor_str = true,
+	magic_armor_str = true,
+	_ = true
 }
 
 local KEYWORDS = {
@@ -382,6 +405,9 @@ local function check_string(locale, key, s)
 end
 
 for _, locale in ipairs(i18n.supported_locales) do
+	-- 表达式里的 _()/str() 等短名依赖当前语言包
+	i18n.load_locale(locale)
+
 	local strings = require('strings.' .. locale)
 
 	for key, value in pairs(strings) do

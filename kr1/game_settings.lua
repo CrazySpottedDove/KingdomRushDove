@@ -617,9 +617,4 @@ GS.wraith = {
 	soldier_crossbows_ult = true
 }
 
-GS.hero_exoskeletons = {
-	hero_dianyun = {"hero_dianyun", "hero_dianyun_health_rain"}
--- hero_beresad = {"hero_beresad_ultimate_particles_animations"}
-}
-
 return GS

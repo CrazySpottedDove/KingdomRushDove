@@ -2594,6 +2594,118 @@ local expr_env = {
 	end
 }
 
+-- 英雄殿堂技能描述用到的格式化助手（与旧 hero_room_special 的语义一致）
+local function text_str(...)
+	local t = {}
+
+	for i = 1, select("#", ...) do
+		local v = select(i, ...)
+
+		if type(v) == "number" then
+			t[#t + 1] = U.format_text_number(v)
+		else
+			t[#t + 1] = tostring(v)
+		end
+	end
+
+	return table.concat(t)
+end
+
+local DAMAGE_NAME_KEYS = {
+	[DAMAGE_TRUE] = "HERO_ROOM_DMG_TRUE",
+	[DAMAGE_PHYSICAL] = "HERO_ROOM_DMG_PHYSICAL",
+	[DAMAGE_MAGICAL] = "HERO_ROOM_DMG_MAGICAL",
+	[DAMAGE_EXPLOSION] = "HERO_ROOM_DMG_EXPLOSION",
+	[DAMAGE_RUDE] = "HERO_ROOM_DMG_RUDE",
+	[DAMAGE_STAB] = "HERO_ROOM_DMG_STAB",
+	[DAMAGE_MAGICAL_EXPLOSION] = "HERO_ROOM_DMG_MAGICAL_EXPLOSION",
+	[DAMAGE_ELECTRICAL] = "HERO_ROOM_DMG_ELECTRICAL",
+	[DAMAGE_MIXED] = "HERO_ROOM_DMG_MIXED",
+	[DAMAGE_SHOT] = "HERO_ROOM_DMG_SHOT",
+	[DAMAGE_POISON] = "HERO_ROOM_DMG_POISON",
+	[DAMAGE_AGAINST_ARMOR] = "HERO_ROOM_DMG_AGAINST_ARMOR",
+	[DAMAGE_AGAINST_MAGIC_ARMOR] = "HERO_ROOM_DMG_AGAINST_MAGIC_ARMOR"
+}
+
+local function text_damage_name(dtype)
+	if DAMAGE_NAME_KEYS[dtype] then
+		return _(DAMAGE_NAME_KEYS[dtype])
+	end
+
+	for t, key in pairs(DAMAGE_NAME_KEYS) do
+		if band(dtype, t) ~= 0 then
+			return _(key)
+		end
+	end
+end
+
+local function text_damage_str(damage_min, damage_max, dtype)
+	if damage_min == damage_max then
+		return string.format(_("HERO_ROOM_FMT_DAMAGE"), text_str(damage_min), text_damage_name(dtype))
+	end
+
+	return string.format(_("HERO_ROOM_FMT_DAMAGE_RANGE"), text_str(damage_min), text_str(damage_max), text_damage_name(dtype))
+end
+
+local function text_health_str(hp_max, armor, magic_armor)
+	local out = string.format(_("HERO_ROOM_FMT_HP"), text_str(hp_max))
+
+	if armor and armor > 0 then
+		out = text_str(out, _("HERO_ROOM_FMT_SEP"), string.format(_("HERO_ROOM_FMT_ARMOR"), text_str(armor * 100)))
+	end
+
+	if magic_armor and magic_armor > 0 then
+		out = text_str(out, _("HERO_ROOM_FMT_SEP"), string.format(_("HERO_ROOM_FMT_MAGIC_ARMOR"), text_str(magic_armor * 100)))
+	end
+
+	return out
+end
+
+expr_env._ = function(key)
+	return _(key)
+end
+expr_env.tail = table.tail
+expr_env.levels = function(skill)
+	local n = 0
+
+	for _ in pairs(skill.xp_level_steps) do
+		n = n + 1
+	end
+
+	return n
+end
+expr_env.sum = function(t)
+	local total = 0
+
+	for _, v in pairs(t) do
+		total = total + v
+	end
+
+	return total
+end
+expr_env.damage_name = text_damage_name
+expr_env.damage_type_str = text_damage_name
+expr_env.fts = function(v)
+	return v / FPS
+end
+expr_env.damage_str = text_damage_str
+expr_env.cooldown_str = function(cooldown)
+	return string.format(_("HERO_ROOM_FMT_COOLDOWN"), text_str(cooldown))
+end
+expr_env.rate_str = function(rate)
+	return string.format(_("HERO_ROOM_FMT_CHANCE"), text_str(rate * 100))
+end
+expr_env.hp_str = function(hp_max)
+	return string.format(_("HERO_ROOM_FMT_HP"), text_str(hp_max))
+end
+expr_env.health_str = text_health_str
+expr_env.armor_str = function(armor)
+	return string.format(_("HERO_ROOM_FMT_ARMOR"), text_str(armor * 100))
+end
+expr_env.magic_armor_str = function(magic_armor)
+	return string.format(_("HERO_ROOM_FMT_MAGIC_ARMOR"), text_str(magic_armor * 100))
+end
+
 --- 属性在当前等级的线性取值：t[k] + t[k.."_inc"] * level。
 --- 只支持「同名字段成对」这一种约定（slow.factor / slow.factor_inc）。
 --- 共享 inc 的写法（aura.damage_min / aura.damage_inc）请用语句块 + local 展开，

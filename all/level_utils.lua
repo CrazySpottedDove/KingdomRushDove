@@ -14,6 +14,7 @@ local configer = require("dove_modules.configer")
 local P = require("path_db")
 local bit = require("bit")
 local U = require("utils")
+local HEROES = require("heroes.registry")
 local LU = {}
 
 function LU.queue_insert(store, e)
@@ -391,6 +392,9 @@ function LU.insert_background(store, name, z, sort_y, quad_trim)
 end
 
 local function create_hero(store, name, pos, force_full_level)
+	HEROES:ensure_template(name)
+	HEROES:ensure_animations(name)
+
 	local hero = E:create_entity(name)
 
 	hero.pos = V.vclone(pos)
@@ -444,6 +448,8 @@ function LU.insert_hero(store, name, pos, force_full_level)
 	end
 
 	for i, template_name in ipairs(template_names) do
+		HEROES:ensure_template(template_name)
+
 		local hero = E:get_template(template_name)
 		local pos
 
