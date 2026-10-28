@@ -6353,6 +6353,17 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 
 	local longest_l = labels[longest_idx]
 
+	-- 标签在英雄之间复用，上一次 fit 的缓存会污染这次的字体高度/baseline，必须清掉再 fit
+	for i = 1, #labels do
+		local l = labels[i]
+
+		l._fitted_font = nil
+		l._fitted_starting_font_size = nil
+		l._fitted_size = nil
+		l._fitted_text = nil
+		l._fitted_font_size = nil
+	end
+
 	longest_l.text = parts[longest_idx]
 
 	longest_l:do_fit_lines_fast(1, fs)
@@ -6367,6 +6378,7 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 		if i ~= longest_idx then
 			l.text = parts[i]
 			l.font_size = longest_l:get_fitted_font_size()
+			l._loaded_font_size = nil
 		end
 
 		l.size.y = longest_l.size.y
