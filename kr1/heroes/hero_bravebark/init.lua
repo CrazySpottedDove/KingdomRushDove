@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_bravebark.templates"},
+	animations = {"heroes.hero_bravebark.animations"},
+	sounds = {"heroes.hero_bravebark.sounds"},
+	groups = {"heroes.hero_bravebark.groups"},
 
 	name_style = {
 		margin = 1,

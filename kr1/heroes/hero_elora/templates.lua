@@ -101,7 +101,6 @@ local function hero_level_up(this, store)
 		b.bullet.damage_min = s.damage_min[s.level]
 		b.bullet.damage_max = s.damage_max[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -301,20 +300,22 @@ end
 local tt
 
 tt = RT("ps_elora_run")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.alphas = {255, 0}
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 10
 tt.particle_system.loop = false
 tt.particle_system.z = Z_DECALS + 1
 tt.particle_system.name = "ps_hero_elora_run"
-
 tt = RT("fx_bolt_elora_hit", "fx")
 tt.render.sprites[1].prefix = "fx_bolt_elora"
 tt.render.sprites[1].name = "hit"
-
 tt = RT("hero_elora", "hero")
+
 AC(tt, "melee", "ranged", "timed_attacks")
+
 tt.hero.level_stats.armor = {0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5}
 tt.hero.level_stats.hp_max = {270, 290, 310, 330, 350, 370, 390, 410, 430, 450}
 tt.hero.level_stats.melee_damage_max = {2, 4, 6, 8, 11, 13, 16, 18, 20, 23}
@@ -411,7 +412,6 @@ tt.timed_attacks.list[2].nodes_offset = 6
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING, F_FRIEND)
 tt.timed_attacks.list[2].vis_flags = F_RANGED
 tt.timed_attacks.list[2].xp_from_skill = "chill"
-
 tt = RT("bolt_elora_freeze", "bolt")
 tt.render.sprites[1].prefix = "bolt_elora"
 tt.bullet.hit_fx = "fx_bolt_elora_hit"
@@ -421,12 +421,12 @@ tt.bullet.mod = "mod_elora_bolt_freeze"
 tt.bullet.damage_min = 14
 tt.bullet.damage_max = 41
 tt.bullet.xp_gain_factor = 2
-
 tt = RT("bolt_elora_slow", "bolt_elora_freeze")
 tt.bullet.mod = "mod_elora_bolt_slow"
-
 tt = RT("mod_elora_bolt_freeze", "mod_freeze")
+
 AC(tt, "render")
+
 tt.modifier.duration = 2
 tt.render.sprites[1].prefix = "freeze_creep"
 tt.render.sprites[1].sort_y_offset = -2
@@ -438,13 +438,13 @@ tt.custom_suffixes = {
 	flying = "_air"
 }
 tt.custom_animations = {"start", "end"}
-
 tt = RT("mod_elora_bolt_slow", "mod_slow")
 tt.modifier.duration = 2
 tt.slow.factor = 0.45
-
 tt = RT("aura_chill_elora", "aura")
+
 AC(tt, "render", "tween")
+
 tt.aura.cycle_time = fts(10)
 tt.aura.duration = 3
 tt.aura.mod = "mod_elora_chill"
@@ -459,11 +459,9 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
-
 tt = RT("mod_elora_chill", "mod_slow")
 tt.modifier.duration = fts(11)
 tt.slow.factor = 0.8
-
 tt = RT("elora_ice_spike", "bullet")
 tt.main_script.update = ice_spike_update
 tt.bullet.damage_max = nil
@@ -486,4 +484,3 @@ tt.render.sprites[2].name = "hero_frost_spikes_decal"
 tt.render.sprites[2].z = Z_DECALS
 tt.sound_events.delayed_insert = "HeroFrostIceRainDrop"
 tt.sound_events.ice_break = "HeroFrostIceRainBreak"
-

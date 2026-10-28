@@ -17,7 +17,6 @@ local upgrade_skill = HU.upgrade_skill
 local ready_to_use_skill = HU.ready_to_use_skill
 local update_hp = HU.update_hp
 local scripts = require("scripts")
-
 local anchor_x, anchor_y = 0, 0
 local image_x, image_y
 
@@ -62,11 +61,11 @@ local hero_script = {
 		end)
 		upgrade_skill(this, "holy_strike", function(this, s)
 			local a = this.melee.attacks[3]
+
 			a.disabled = nil
 			a.damage_min = s.damage_min[s.level]
 			a.damage_max = s.damage_max[s.level]
 		end)
-
 		update_hp(this)
 	end,
 	fn_can_dodge = function(store, this, ranged_attack, attack, source)
@@ -85,6 +84,7 @@ local hero_script = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
+
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -216,7 +216,6 @@ local hero_script = {
 		end
 	end
 }
-
 local courage_script = {}
 
 function courage_script.insert(this, store)
@@ -233,16 +232,12 @@ function courage_script.insert(this, store)
 	if band(target.vis.flags, F_HERO) ~= 0 then
 		SU.magic_armor_inc(target, buff.magic_armor_inc * m.level * 0.5)
 		SU.armor_inc(target, buff.armor_inc * m.level * 0.5)
-
 		U.heal(target, heal * 0.5)
-
 		SU.damage_inc(target, buff.damage_inc * m.level + buff.damage_inc_base)
 	else
 		SU.magic_armor_inc(target, buff.magic_armor_inc * m.level)
 		SU.armor_inc(target, buff.armor_inc * m.level)
-
 		U.heal(target, heal)
-
 		SU.damage_inc(target, buff.damage_inc * m.level + buff.damage_inc_base)
 	end
 
@@ -284,7 +279,9 @@ end
 local tt
 
 tt = RT("hero_gerald", "hero")
+
 AC(tt, "melee", "timed_attacks", "dodge")
+
 anchor_y = 0.12
 anchor_x = 0.5
 image_y = 110
@@ -403,9 +400,10 @@ tt.dodge.counter_attack.reflected_damage_factor = 0.5
 tt.dodge.counter_attack.reflected_damage_factor_inc = 0.5
 tt.dodge.counter_attack.hit_time = fts(5)
 tt.dodge.counter_attack.sound = "HeroPaladinDeflect"
-
 tt = RT("mod_gerald_courage", "modifier")
+
 AC(tt, "render")
+
 tt.courage = {
 	heal_once_factor = 0.12,
 	heal_inc = 0.06,
@@ -422,9 +420,10 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.render.sprites[1].name = "mod_gerald_courage"
 tt.render.sprites[1].anchor = vec_2(0.51, 0.17307692307692307)
 tt.render.sprites[1].draw_order = 2
-
 tt = RT("soldier_gerald_paladin", "soldier_militia")
+
 AC(tt, "reinforcement", "tween", "nav_grid")
+
 anchor_y = 0.15
 anchor_x = 0.5
 image_y = 41

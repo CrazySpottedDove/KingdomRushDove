@@ -41,6 +41,7 @@ local function aura_slow_update(this, store)
 			last_hit_ts = store.tick_ts
 
 			local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+
 			if targets then
 				for i, target in ipairs(targets) do
 					local new_mod = E:create_entity(this.aura.mod)
@@ -72,6 +73,7 @@ local function decal_mine_update(this, store)
 			local dec = E:create_entity(this.hit_decal)
 
 			dec.pos:copy(this.pos)
+
 			dec.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(dec)
@@ -80,6 +82,7 @@ local function decal_mine_update(this, store)
 			local fx = E:create_entity(this.hit_fx)
 
 			fx.pos:copy(this.pos)
+
 			fx.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(fx)
@@ -100,8 +103,8 @@ local function decal_mine_update(this, store)
 
 	simulation:queue_remove_entity(this)
 end
--- 博林
 
+-- 博林
 local function hero_level_up(this, store)
 	local hl, ls = level_up_basic(this)
 
@@ -148,6 +151,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -203,7 +207,9 @@ local function hero_update(this, store)
 
 							b.bullet.from = V.v(this.pos.x + (af and -1 or 1) * o.x, this.pos.y + o.y)
 							b.bullet.to = P:node_pos(pi, spi, ni)
+
 							b.pos:copy(b.bullet.from)
+
 							b.bullet.source_id = this.id
 
 							simulation:queue_insert_entity(b)
@@ -267,7 +273,9 @@ local function hero_update(this, store)
 
 						b.bullet.from = V.v(this.pos.x + (af and -1 or 1) * o.x, this.pos.y + o.y)
 						b.bullet.to = mine_pos
+
 						b.pos:copy(b.bullet.from)
+
 						b.bullet.source_id = this.id
 
 						simulation:queue_insert_entity(b)
@@ -295,6 +303,7 @@ local function hero_update(this, store)
 
 				if ready_to_attack(a, store) then
 					local target, targets
+
 					if a.filter_fn then
 						target, targets = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, a.filter_fn)
 					else
@@ -349,7 +358,9 @@ local function hero_update(this, store)
 							for i = 1, a.count do
 								target = targets[km.zmod(i, #targets)]
 								b = E:create_entity(a.bullet)
+
 								b.pos:copy(this.pos)
+
 								b.bullet.damage_type = a.damage_type
 
 								if a == this.timed_attacks.list[4] then
@@ -364,6 +375,7 @@ local function hero_update(this, store)
 								end
 
 								b.bullet.from:copy(b.pos)
+
 								b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 								b.bullet.target_id = target.id
 								b.bullet.shot_index = si
@@ -405,7 +417,9 @@ end
 local tt
 
 tt = RT("hero_bolin", "hero")
+
 AC(tt, "melee", "timed_attacks")
+
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {400, 430, 460, 490, 520, 550, 580, 610, 640, 670}
 tt.hero.level_stats.melee_damage_max = {15, 18, 20, 23, 25, 28, 30, 33, 35, 38}
@@ -501,7 +515,6 @@ tt.timed_attacks.list[5].disabled = true
 tt.timed_attacks.list[5].shoot_times = {fts(10)}
 tt.timed_attacks.list[5].bullet = "bomb_shrapnel_bolin"
 tt.timed_attacks.list[5].count = 3
-
 tt = RT("bomb_shrapnel_bolin", "bomb")
 tt.bullet.damage_max = 72
 tt.bullet.damage_min = 36
@@ -513,14 +526,12 @@ tt.render.sprites[1].name = "bombs_0007"
 tt.sound_events.insert = "ShrapnelSound"
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
-
 tt = RT("fx_explosion_shrapnel_bolin", "fx")
 tt.render.sprites[1].anchor.y = 0.2
 tt.render.sprites[1].sort_y_offset = -2
 tt.render.sprites[1].prefix = "explosion"
 tt.render.sprites[1].name = "shrapnel"
 tt.render.sprites[1].scale = vec_1(1.5)
-
 tt = RT("bomb_mine_bolin", "bomb")
 tt.bullet.damage_bans = F_ALL
 tt.bullet.damage_flags = 0
@@ -537,7 +548,6 @@ tt.render.sprites[1].name = "hero_artillery_mine_proy"
 tt.sound_events.insert = "HeroRiflemanMine"
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
-
 tt = RT("decal_bolin_mine", "decal_scripted")
 tt.check_interval = fts(3)
 tt.damage_type = DAMAGE_EXPLOSION
@@ -551,7 +561,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.sound = "BombExplosionSound"
 tt.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.vis_flags = bor(F_ENEMY)
-
 tt = RT("bomb_tar_bolin", "bomb")
 tt.bullet.damage_bans = F_ALL
 tt.bullet.damage_flags = 0
@@ -569,9 +578,10 @@ tt.render.sprites[1].name = "hero_artillery_brea_shot"
 tt.sound_events.insert = "HeroRiflemanBrea"
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
-
 tt = RT("aura_bolin_tar", "aura")
+
 AC(tt, "render", "tween")
+
 tt.aura.cycle_time = fts(10)
 tt.aura.duration = 6
 tt.aura.mod = "mod_bolin_slow"
@@ -586,8 +596,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.3, 0}}
-
 tt = RT("mod_bolin_slow", "mod_slow")
 tt.modifier.duration = 4
 tt.slow.factor = 0.6
-

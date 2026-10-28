@@ -16,7 +16,6 @@ local level_up_basic = HU.level_up_basic
 local upgrade_skill = HU.upgrade_skill
 local ready_to_use_skill = HU.ready_to_use_skill
 local update_hp = HU.update_hp
-
 local anchor_y = 0.19
 local image_y = 116
 
@@ -58,6 +57,7 @@ local function level_up(this, store)
 		e.health.hp_max = s.hp_max[s.level]
 		e.melee.attacks[1].damage_min = s.damage_min[s.level]
 		e.melee.attacks[1].damage_max = s.damage_max[s.level]
+
 		U.update_max_speed(e, s.max_speed[s.level])
 	end)
 	upgrade_skill(this, "bear", function(this, s)
@@ -71,7 +71,6 @@ local function level_up(this, store)
 		a.damage_min = s.damage_min[s.level]
 		a.damage_max = s.damage_max[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -118,6 +117,7 @@ local function update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	while true do
 		if h.dead then
 			if this.is_bear then
@@ -242,6 +242,7 @@ local function aura_update(this, store)
 		-- block empty
 		elseif store.tick_ts - this.aura.ts >= this.regen.cooldown then
 			this.aura.ts = store.tick_ts
+
 			U.heal(hero, this.regen.health)
 		end
 
@@ -252,7 +253,9 @@ end
 local tt
 
 tt = RT("hero_ingvar", "hero")
+
 AC(tt, "melee", "timed_attacks", "auras")
+
 tt.hero.level_stats.armor = {0.13, 0.16, 0.19, 0.22, 0.25, 0.28, 0.31, 0.34, 0.37, 0.4}
 tt.hero.level_stats.hp_max = {430, 460, 490, 520, 550, 580, 610, 640, 670, 670}
 tt.hero.level_stats.melee_damage_max = {45, 49, 54, 58, 63, 67, 72, 76, 81, 85}
@@ -357,9 +360,10 @@ tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].transform_health_factor = 0.5
 tt.timed_attacks.list[2].immune_to = DAMAGE_BASE_TYPES
 tt.timed_attacks.list[2].sound = "HeroVikingBearTransform"
-
 tt = RT("soldier_ingvar_ancestor", "soldier_militia")
+
 AC(tt, "reinforcement", "nav_grid")
+
 tt.controable = true
 tt.controable_other = true
 tt.health.armor = 0.25
@@ -382,13 +386,13 @@ tt.render.sprites[1].prefix = "soldier_ingvar_ancestor"
 tt.ui.click_rect = r(-13, 0, 26, 30)
 tt.unit.mod_offset = vec_2(0, 15)
 tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
-
 tt = RT("aura_ingvar_bear_regenerate", "aura")
+
 AC(tt, "regen")
+
 tt.main_script.update = aura_update
 tt.regen.cooldown = 1
 tt.regen.health = 5
-
 tt = RT("decal_ingvar_attack", "decal_tween")
 tt.render.sprites[1].name = "hero_viking_axeDecal"
 tt.render.sprites[1].animated = false

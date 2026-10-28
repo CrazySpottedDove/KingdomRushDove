@@ -180,7 +180,6 @@ local function hero_level_up(this, store)
 		au.aura.damage_min = s.damage_min[s.level]
 		au.aura.damage_max = s.damage_max[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -191,6 +190,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -230,7 +230,9 @@ end
 local tt
 
 tt = RT("hero_malik", "hero")
+
 AC(tt, "melee")
+
 tt.hero.level_stats.armor = {0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2}
 tt.hero.level_stats.hp_max = {450, 500, 550, 600, 650, 720, 790, 860, 930, 1000}
 tt.hero.level_stats.melee_damage_max = {26, 29, 31, 34, 36, 38, 41, 43, 45, 47}
@@ -315,7 +317,6 @@ tt.melee.attacks[4].hit_offset = vec_2(22, 0)
 tt.melee.attacks[4].hit_time = fts(17)
 tt.melee.attacks[4].sound = "HeroReinforcementJump"
 tt.melee.attacks[4].xp_from_skill = "fissure"
-
 tt = RT("aura_malik_fissure", "aura")
 tt.aura.fx = "decal_malik_earthquake"
 tt.aura.damage_radius = 40
@@ -329,18 +330,14 @@ tt.stun = {
 	vis_bans = bor(F_FLYING, F_BOSS),
 	mod = "mod_malik_stun"
 }
-
 tt = RT("mod_malik_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
-
 tt = RT("decal_malik_ring", "decal_timed")
 tt.render.sprites[1].name = "decal_malik_ring"
 tt.render.sprites[1].z = Z_DECALS
-
 tt = RT("decal_malik_earthquake", "decal_bomb_crater")
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "decal_malik_earthquake"
 tt.render.sprites[2].hide_after_runs = 1
 tt.render.sprites[2].anchor.y = 0.24
-

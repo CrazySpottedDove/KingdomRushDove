@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_raelyn.templates"},
+	animations = {"heroes.hero_raelyn.animations"},
+	sounds = {"heroes.hero_raelyn.sounds"},
+	groups = {"heroes.hero_raelyn.groups"},
 
 	name_style = {
 		margin = 0,

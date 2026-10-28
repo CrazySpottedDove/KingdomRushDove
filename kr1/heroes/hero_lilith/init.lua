@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_lilith.templates"},
+	animations = {"heroes.hero_lilith.animations"},
+	sounds = {"heroes.hero_lilith.sounds"},
+	groups = {"heroes.hero_lilith.groups"},
 
 	name_style = {
 		margin = 1,

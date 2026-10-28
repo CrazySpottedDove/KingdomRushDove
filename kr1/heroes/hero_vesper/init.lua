@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_vesper.templates"},
+	animations = {"heroes.hero_vesper.animations"},
+	sounds = {"heroes.hero_vesper.sounds"},
+	groups = {"heroes.hero_vesper.groups"},
 
 	name_style = {
 		margin = 0,

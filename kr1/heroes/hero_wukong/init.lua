@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_wukong.templates"},
+	animations = {"heroes.hero_wukong.animations"},
+	sounds = {"heroes.hero_wukong.sounds"},
+	groups = {"heroes.hero_wukong.groups"},
 
 	name_style = {
 		margin = 0,

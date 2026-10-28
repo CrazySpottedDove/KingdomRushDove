@@ -108,7 +108,6 @@ local function hero_level_up(this, store)
 		this.rage_max = s.rage_max[s.level]
 		this.unyield_max = s.unyield_max[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -151,6 +150,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -165,6 +165,7 @@ local function hero_update(this, store)
 		local unyield = rate * this.unyield_max
 
 		SU.insert_received_damage_factor_buff(this, unyield - this.unyield)
+
 		this.unyield = unyield
 
 		if this.unit.is_stunned then
@@ -261,7 +262,9 @@ end
 local tt
 
 tt = RT("hero_oni", "hero")
+
 AC(tt, "melee", "timed_attacks")
+
 tt.hero.level_stats.armor = {0.32, 0.35, 0.38, 0.41, 0.45, 0.48, 0.51, 0.54, 0.57, 0.6}
 tt.hero.level_stats.hp_max = {425, 450, 475, 500, 525, 550, 575, 600, 625, 650}
 tt.hero.level_stats.melee_damage_max = {22, 23, 25, 27, 28, 30, 32, 34, 36, 38}
@@ -364,9 +367,10 @@ tt.rage = 0
 tt.rage_max = 0
 tt.unyield = 0
 tt.unyield_max = 0
-
 tt = RT("aura_oni_rage", "aura")
+
 AC(tt, "render", "tween")
+
 tt.aura.duration = -1
 tt.aura.track_source = true
 tt.main_script.update = aura_rage_update
@@ -378,7 +382,6 @@ tt.render.sprites[1].anchor.y = 0.19117647058823528
 tt.render.sprites[1].color = {255, 100, 100}
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
-
 tt = RT("decal_oni_torment_sword", "decal_scripted")
 tt.render.sprites[1].prefix = "decal_oni_torment_sword_1"
 tt.render.sprites[1].name = "in"

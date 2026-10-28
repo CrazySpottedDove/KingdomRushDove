@@ -21,6 +21,9 @@ return {
 	screen_map_required_textures = {},
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {}
-
+	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_bolverk.templates"},
+	animations = {"heroes.hero_bolverk.animations"},
+	sounds = {"heroes.hero_bolverk.sounds"},
+	groups = {"heroes.hero_bolverk.groups"}
 }

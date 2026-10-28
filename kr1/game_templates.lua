@@ -1353,27 +1353,6 @@ tt.particle_system.particle_lifetime = {fts(10), fts(15)}
 tt.particle_system.scales_y = {1, 0.3}
 tt.particle_system.alphas = {190, 120, 0}
 
-tt = RT("ps_shield_elves_denas")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "shield_elves_denas_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(12), fts(12)}
-tt.particle_system.emission_rate = 60
-tt.particle_system.scales_y = {1.5, 0.5}
-tt.particle_system.scales_y = {1.5, 0.5}
-tt.particle_system.track_rotation = true
-tt.particle_system.z = Z_BULLETS
-
-tt = RT("ps_freeze_arivan")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "arivan_freeze_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(8), fts(8)}
-tt.particle_system.emission_rate = 30
-tt.particle_system.z = Z_BULLETS
-
 tt = RT("ps_fireball_arivan")
 AC(tt, "pos", "particle_system")
 tt.particle_system.names = {"arivan_fireball_particle_1", "arivan_fireball_particle_2"}
@@ -1420,46 +1399,6 @@ tt.particle_system.loop = false
 tt.particle_system.names = {"s11_malicia_particle1", "s11_malicia_particle2"}
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_OBJECTS
-
-tt = RT("ps_bolt_faustus")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "bolt_faustus_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(10), fts(10)}
-tt.particle_system.emission_rate = 30
-tt.particle_system.emit_rotation_spread = math.pi
-
-tt = RT("ps_bolt_lance_faustus")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "bolt_lance_faustus_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(10), fts(10)}
-tt.particle_system.emission_rate = 90
-tt.particle_system.emit_rotation_spread = math.pi
-
-tt = RT("ps_bullet_liquid_fire_faustus")
-AC(tt, "pos", "particle_system")
-tt.particle_system.emission_rate = 20
-tt.particle_system.emit_duration = fts(10)
-tt.particle_system.emit_speed = {250, 250}
-tt.particle_system.emit_rotation_spread = math.pi / 4
-tt.particle_system.animated = true
-tt.particle_system.animation_fps = 18
-tt.particle_system.loop = false
-tt.particle_system.name = "bullet_liquid_fire_faustus_particle"
-tt.particle_system.particle_lifetime = {fts(9), fts(11)}
-tt.particle_system.alphas = {255, 255, 50}
-tt.particle_system.scales_x = {1, 1, 1.5}
-tt.particle_system.scales_y = {1, 1, 1.5}
-tt.particle_system.spin = {-math.pi * 0.5, math.pi * 0.5}
-tt.particle_system.sort_y_offsets = {-100, 0}
-
-tt = RT("ps_minidragon_faustus_fire", "ps_bullet_liquid_fire_faustus")
-tt.particle_system.emit_duration = nil
-tt.particle_system.emit_speed = {500, 500}
-tt.particle_system.emit_rotation_spread = math.pi / 8
 
 tt = RT("ps_bullet_twilight_evoker")
 AC(tt, "pos", "particle_system")
@@ -1538,75 +1477,6 @@ tt.particle_system.particle_lifetime = {fts(9), fts(11)}
 tt.particle_system.scales_x = {1, 1.5}
 tt.particle_system.scales_y = {1, 1.5}
 tt.particle_system.scale_var = {0.35, 0.8}
-
-tt = RT("ps_veznan_soulburn")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "veznan_hero_soulBurn_particle"
-tt.particle_system.loop = false
-tt.particle_system.emission_rate = 30
-tt.particle_system.particle_lifetime = {fts(4), fts(12)}
-tt.particle_system.scales_x = {1, 1.25}
-tt.particle_system.scales_y = {1, 1.25}
-tt.particle_system.scale_var = {0.25, 1}
-tt.particle_system.alphas = {255, 0}
-
-tt = RT("ps_bullet_rag_trail")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "razzAndRaggs_hero_proy_particle"
-tt.particle_system.particle_lifetime = {0.2, 0.2}
-tt.particle_system.alphas = {255, 12}
-tt.particle_system.scales_y = {0.8, 0.05}
-tt.particle_system.emission_rate = 30
-
-tt = RT("ps_durax_transfer")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "ps_durax_transfer"
-tt.particle_system.animated = true
-tt.particle_system.animation_fps = 15
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(12), fts(12)}
-tt.particle_system.emission_rate = 30
-tt.particle_system.emit_offset = vec_2(0, 16)
-tt.particle_system.emit_rotation_spread = math.pi
-tt.particle_system.sort_y_offset = 2
-
-tt = RT("ps_durax_clone_transfer", "ps_durax_transfer")
-tt.particle_system.alphas = {150}
-
-tt = RT("ps_bullet_lilith_trail")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "fallen_angel_hero_proy_particle"
-tt.particle_system.particle_lifetime = {0.2, 0.2}
-tt.particle_system.alphas = {255, 12}
-tt.particle_system.scales_y = {0.8, 0.05}
-tt.particle_system.emission_rate = 30
-
-tt = RT("ps_missile_phoenix")
-AC(tt, "pos", "particle_system")
-tt.particle_system.animated = true
-tt.particle_system.animation_fps = 50
-tt.particle_system.emission_rate = 50
-tt.particle_system.emit_area_spread = vec_2(4, 4)
-tt.particle_system.loop = false
-tt.particle_system.name = "ps_missile_phoenix"
-tt.particle_system.particle_lifetime = {0.14, 0.18}
-tt.particle_system.spin = {-0.3, 0.3}
-tt.particle_system.track_rotation = true
-
-tt = RT("ps_missile_phoenix_small", "ps_missile_phoenix")
-tt.particle_system.scale_var = {0.65, 0.65}
-tt.particle_system.emit_area_spread = vec_2(2, 2)
-
-tt = RT("ps_missile_wilbur")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "hero_wilburg_missile_particle"
-tt.particle_system.particle_lifetime = {1.6, 1.8}
-tt.particle_system.alphas = {255, 0}
-tt.particle_system.scales_x = {1, 3}
-tt.particle_system.scales_y = {1, 3}
-tt.particle_system.scale_var = {0.4, 0.95}
-tt.particle_system.emit_spread = math.pi
-tt.particle_system.emission_rate = 30
 
 tt = RT("ps_bomb_lava_fireball")
 AC(tt, "pos", "particle_system")
@@ -1800,114 +1670,6 @@ tt.render.sprites[1].name = "fx_arrow_soldier_re_hit"
 tt = RT("fx_dagger_drow_hit", "fx")
 tt.render.sprites[1].name = "fx_dagger_drow_hit"
 
-tt = RT("fx_faustus_start_attack", "fx")
-tt.render.sprites[1].name = "fx_faustus_attack"
-tt.render.sprites[1].anchor.y = 0.065
-
-tt = RT("fx_faustus_start_lance", "fx")
-tt.render.sprites[1].name = "hero_faustus_rayShoot"
-tt.render.sprites[1].anchor.y = 0.065
-tt.render.sprites[1].sort_y_offset = -1
-
-tt = RT("fx_faustus_start_teleport", "fx")
-tt.render.sprites[1].name = "hero_faustus_teleport"
-tt.render.sprites[1].anchor.y = 0.065
-tt.render.sprites[1].sort_y_offset = -1
-
-tt = RT("fx_faustus_start_enervation", "fx")
-tt.render.sprites[1].name = "hero_faustus_silence"
-tt.render.sprites[1].anchor.y = 0.065
-tt.render.sprites[1].sort_y_offset = -1
-
-tt = RT("fx_faustus_start_liquid_fire", "fx")
-tt.render.sprites[1].name = "fx_faustus_start_liquid_fire"
-tt.render.sprites[1].anchor.y = 0.065
-tt.render.sprites[1].sort_y_offset = -1
-
-tt = RT("fx_bolt_faustus_hit", "fx")
-tt.render.sprites[1].name = "bolt_faustus_hit"
-
-tt = RT("fx_bolt_lance_faustus_hit", "fx")
-tt.render.sprites[1].anchor.y = 0.21428571428571427
-tt.render.sprites[1].prefix = "fx_bolt_lance_faustus_hit"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-
-tt = RT("fx_teleport_faustus", "fx")
-tt.render.sprites[1].name = "fx_teleport_faustus"
-tt.render.sprites[1].size_scales = {vec_1(0.83), vec_1(1), vec_1(1)}
-
-tt = RT("fx_bullet_liquid_fire_faustus_hit", "decal_tween")
-tt.render.sprites[1].name = "fx_bullet_liquid_fire_faustus_hit"
-tt.render.sprites[1].anchor.y = 0.16666666666666666
-tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {2, 0}}
-
-tt = RT("fx_bravebark_teleport_out", "decal_tween")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "bravebark_teleportOutFx"
-tt.render.sprites[1].anchor.y = 0.15517241379310345
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "bravebark_hero_teleportDecal"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].z = Z_DECALS
-tt.tween.props[1].sprite_id = 2
-tt.tween.props[1].keys = {{fts(12), 0}, {fts(13), 255}, {fts(44), 0}}
-tt.sound_events.insert = "ElvesHeroForestElementalTeleportIn"
-
-tt = RT("fx_bravebark_teleport_in", "fx_bravebark_teleport_out")
-tt.render.sprites[1].name = "bravebark_teleportInFx"
-tt.tween.props[1].keys = {{fts(1), 255}, {fts(44), 0}}
-tt.sound_events.insert = "ElvesHeroForestElementalTeleportOut"
-
-tt = RT("fx_bravebark_branchball_hit", "fx")
-tt.render.sprites[1].name = "bravebark_superHit"
-
-tt = RT("fx_bravebark_melee_hit", "fx")
-tt.render.sprites[1].name = "bravebark_hitSmoke"
-tt.render.sprites[1].anchor.y = 0.2
-
-tt = RT("fx_bravebark_ultimate", "fx")
-tt.render.sprites[1].name = "bravebark_spikedRoots_spawnFx"
-tt.render.sprites[1].anchor.y = 0.3181818181818182
-
-tt = RT("fx_xin_smoke_teleport_out", "fx")
-tt.render.sprites[1].name = "fx_xin_smoke_teleport_out"
-tt.render.sprites[1].anchor.y = 0.25925925925925924
-
-tt = RT("fx_xin_smoke_teleport_hit", "fx")
-tt.render.sprites[1].name = "fx_xin_smoke_teleport_hit"
-tt.render.sprites[1].anchor.y = 0.25925925925925924
-
-tt = RT("fx_xin_smoke_teleport_hit_out", "fx")
-tt.render.sprites[1].name = "fx_xin_smoke_teleport_hit_out"
-tt.render.sprites[1].anchor.y = 0.25925925925925924
-
-tt = RT("fx_xin_smoke_teleport_in", "fx")
-tt.render.sprites[1].name = "fx_xin_smoke_teleport_in"
-tt.render.sprites[1].anchor.y = 0.25925925925925924
-
-tt = RT("fx_xin_panda_style_smoke", "fx")
-tt.render.sprites[1].name = "fx_xin_panda_style_smoke"
-tt.render.sprites[1].anchor.y = 0.4
-tt.render.sprites[1].z = Z_DECALS
-
-tt = RT("fx_catha_ultimate", "fx")
-tt.render.sprites[1].name = "fx_catha_soul"
-tt.render.sprites[1].anchor.y = 0.373015873015873
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "fx_catha_ultimate"
-tt.render.sprites[2].z = Z_DECALS
-
-tt = RT("fx_catha_soul", "fx")
-tt.render.sprites[1].name = "fx_catha_soul"
-tt.render.sprites[1].anchor.y = 0.373015873015873
-
-tt = RT("fx_knife_catha_hit", "fx")
-tt.render.sprites[1].name = "fx_knife_catha_hit"
-
-tt = RT("fx_bolt_veznan_hit", "fx")
-tt.render.sprites[1].name = "veznan_hero_bolt_hit"
-
 tt = RT("fx_fireball_veznan_demon_hit_air", "fx")
 tt.render.sprites[1].name = "fx_fireball_veznan_demon_hit_air"
 tt.render.sprites[1].anchor.y = 0.25925925925925924
@@ -1916,44 +1678,12 @@ tt = RT("fx_fireball_veznan_demon_hit", "fx")
 tt.render.sprites[1].name = "fx_fireball_veznan_demon_hit"
 tt.render.sprites[1].anchor.y = 0.25925925925925924
 
-tt = RT("fx_veznan_arcanenova", "fx")
-tt.render.sprites[1].name = "fx_veznan_arcanenova"
-tt.render.sprites[1].anchor.y = 0.11904761904761904
-tt.render.sprites[1].z = Z_OBJECTS
-
-tt = RT("fx_veznan_soulburn", "decal_tween")
-tt.render.sprites[1].prefix = "veznan_hero_soulBurn_desintegrate"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt.render.sprites[1].anchor.y = 0.15217391304347827
-tt.tween.props[1].keys = {{0.5, 255}, {1, 0}}
-
-tt = RT("fx_veznan_soulburn_ball_spawn", "fx")
-tt.render.sprites[1].prefix = "veznan_hero_soulBurn_proy_spawn"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt.render.sprites[1].z = Z_BULLETS
-
-tt = RT("fx_rag_ultimate", "fx")
-tt.render.sprites[1].name = "fx_rag_ultimate"
-tt.render.sprites[1].anchor.y = 0.2
-
-tt = RT("fx_rag_raggified", "fx")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "rag_polymorphed_fx"
-tt.render.sprites[1].size_scales = {vec_1(0.75), vec_1(1), vec_1(1)}
-tt.sound_events.insert = "ElvesHeroRagTransform"
-
 tt = RT("fx_rabbit_kamihare_explode", "fx")
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "fx_rabbit_kamihare_explode"
 tt.render.sprites[1].anchor.y = 0.13793103448275862
 tt.render.sprites[1].z = Z_OBJECTS
 tt.sound_events.insert = "BombExplosionSound"
-
-tt = RT("fx_bullet_rag_hit", "fx")
-tt.render.sprites[1].name = "fx_bullet_rag_hit"
 
 tt = RT("fx_durax_ultimate_fang_1", "decal_tween")
 tt.render.sprites[1].name = "fx_durax_ultimate_fang_1"
@@ -1974,88 +1704,11 @@ tt.tween.props[1].keys = {{1, 255}, {1.2, 0}}
 tt = RT("fx_durax_ultimate_fang_extra_2", "fx_durax_ultimate_fang_extra_1")
 tt.render.sprites[1].name = "fx_durax_ultimate_fang_extra_2"
 
-tt = RT("fx_ray_durax_hit", "fx")
-tt.render.sprites[1].name = "fx_ray_durax_hit"
-
-tt = RT("fx_shardseed_hit", "fx")
-AC(tt, "sound_events")
-tt.render.sprites[1].name = "fx_shardseed_hit"
-tt.render.sprites[1].anchor.y = 0.46296296296296297
-tt.sound_events.insert = "ElvesHeroDuraxShardSpearHit"
-
-tt = RT("fx_meteor_lilith_explosion", "fx")
-tt.render.sprites[1].name = "lilith_ultimate_meteor_explosion"
-tt.render.sprites[1].anchor.y = 0.20930232558139536
-tt.render.sprites[1].z = Z_OBJECTS
-
-tt = RT("fx_lilith_soul_eater_ball_hit", "fx")
-tt.render.sprites[1].name = "lilith_soul_eater_explosion_anim"
-
-tt = RT("fx_lilith_ranged_hit", "fx")
-tt.render.sprites[1].name = "fx_lilith_ranged_hit"
-
 tt = RT("fx_lynn_explosion", "fx")
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "fx_lynn_explosion"
 tt.render.sprites[1].anchor.y = 0.3706896551724138
 tt.sound_events.insert = "BombExplosionSound"
-
-tt = RT("fx_flaming_path_start", "fx")
-tt.render.sprites[1].name = "fx_flaming_path_start"
-tt.render.sprites[1].anchor.y = 0.26666666666666666
-
-tt = RT("fx_flaming_path_end", "fx_flaming_path_start")
-tt.render.sprites[1].name = "fx_flaming_path_end"
-
-tt = RT("fx_phoenix_explosion", "fx")
-tt.render.sprites[1].name = "hero_phoenix_explosion"
-tt.render.sprites[1].anchor.y = 0.20588235294117646
-
-tt = RT("fx_phoenix_inmolation", "decal_tween")
-tt.render.sprites[1].name = "hero_phoenix_explosion"
-tt.render.sprites[1].anchor.y = 0.20588235294117646
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].hide_after_runs = 1
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "phoenix_hero_suicide_decals_0001"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].z = Z_DECALS
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].animated = false
-tt.render.sprites[3].name = "phoenix_hero_suicide_decals_0002"
-tt.render.sprites[3].z = Z_DECALS
-tt.tween.props[1].sprite_id = 2
-tt.tween.props[1].keys = {{fts(20), 255}, {fts(34), 0}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].sprite_id = 3
-tt.tween.props[2].keys = {{fts(4), 255}, {fts(10), 0}}
-
-tt = RT("fx_ray_phoenix_hit", "fx")
-tt.render.sprites[1].name = "fx_ray_phoenix_hit"
-tt.render.sprites[1].anchor.y = 0.16666666666666666
-
-tt = RT("fx_box_wilbur_smoke_a", "fx")
-tt.render.sprites[1].name = "fx_box_wilbur_smoke_a"
-tt.render.sprites[1].z = Z_OBJECTS
-
-tt = RT("fx_box_wilbur_smoke_b", "fx")
-tt.render.sprites[1].name = "fx_box_wilbur_smoke_b"
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].sort_y_offset = -5
-
-tt = RT("fx_missile_wilbur_hit", "fx_fireball_veznan_demon_hit")
-tt.render.sprites[1].scale = vec_1(1.4)
-
-tt = RT("fx_missile_wilbur_hit_air", "fx_fireball_veznan_demon_hit_air")
-tt.render.sprites[1].scale = vec_1(1.4)
-
-tt = RT("fx_shot_wilbur_flash", "fx")
-tt.render.sprites[1].name = "fx_shot_wilbur_flash"
-
-tt = RT("fx_shot_wilbur_hit", "fx")
-tt.render.sprites[1].name = "fx_shot_wilbur_hit"
-tt.render.sprites[1].anchor.y = 0.19230769230769232
-tt.render.sprites[1].z = Z_OBJECTS
 
 tt = RT("fx_torch_gnoll_burner_explosion", "fx")
 tt.render.sprites[1].name = "fx_torch_gnoll_burner_explosion"
@@ -2332,33 +1985,6 @@ tt = RT("decal_eerie_root_2", "decal_eerie_root_1")
 tt.render.sprites[1].prefix = "decal_eerie_roots_2"
 tt.render.sprites[1].anchor.y = 0.14285714285714285
 
-tt = RT("decal_bravebark_rootspikes_hit", "decal_tween")
-tt.render.sprites[1].name = "bravebark_hero_handDecal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.y = 0.45454545454545453
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].keys = {{0, 255}, {2, 0}}
-
-tt = RT("decal_bravebark_melee_hit", "decal_bravebark_rootspikes_hit")
-tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
-tt = RT("decal_bravebark_rootspike", "decal_scripted")
-tt.render.sprites[1].prefix = "bravebark_spike"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].anchor.y = 0.25
-tt.main_script.update = scripts.decal_bravebark_rootspike.update
-tt.hold_duration = 1
-tt.hole_decal = "decal_bravebark_rootspike_hole"
-tt.delay = 0
-tt.scale = 1
-
-tt = RT("decal_bravebark_rootspike_hole", "decal_tween")
-tt.render.sprites[1].name = "bravebark_hero_spikeDecal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
 tt = RT("decal_bravebark_branchball_enemy_clone", "decal_tween")
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.35, 0}}
@@ -2371,55 +1997,6 @@ tt.tween.props[3].keys = {{0, 0}, {0.35, 0}}
 
 tt = RT("decal_bram_enemy_clone", "decal_bravebark_branchball_enemy_clone")
 
-tt = RT("decal_bravebark_ultimate", "decal_sequence")
-tt.render.sprites[1].prefix = "bravebark_spikedRoots"
-tt.render.sprites[1].name = "in"
-tt.render.sprites[1].anchor.y = 0.3181818181818182
-tt.render.sprites[1].scale = vec_1(0.75)
-tt.sequence.steps = {"in", 1, "out"}
-tt.sequence.fxs = {"fx_bravebark_ultimate", nil, "decal_bravebark_ultimate_crater"}
-
-tt = RT("decal_bravebark_ultimate_crater", "decal_tween")
-tt.render.sprites[1].name = "bravebark_hero_spikedRootsDecal"
-tt.render.sprites[1].animated = false
-tt.tween.props[1].keys = {{0, 255}, {1, 255}, {2, 0}}
-
-tt = RT("decal_xin_inspire", "decal_tween")
-tt.render.sprites[1].name = "xin_hero_scream_decal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {fts(20), 63}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_1(0.5)}, {fts(10), vec_1(0.68)}, {fts(20), vec_1(1.25)}}
-
-tt = RT("decal_xin_drink_circle", "decal_tween")
-tt.render.sprites[1].name = "xin_hero_drink_auraCircle"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {fts(20), 0}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_1(0.7)}, {fts(20), vec_1(1.5)}}
-
-tt = RT("decal_veznan_arcanenova", "decal_bomb_crater")
-tt.render.sprites[1].name = "veznan_hero_arcaneNova_terrainDecal"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "fx_veznan_arcanenova_terrain"
-tt.render.sprites[2].hide_after_runs = 1
-tt.render.sprites[2].z = Z_DECALS
-
-tt = RT("decal_veznan_soulburn_ball", "decal_scripted")
-tt.render.sprites[1].prefix = "veznan_hero_soulBurn_proy"
-tt.render.sprites[1].name = "fly"
-tt.render.sprites[1].z = Z_BULLETS
-tt.render.sprites[1].hidden = true
-tt.speed = 14 * FPS
-tt.offset = vec_2(-5, 5)
-tt.particles_name = "ps_veznan_soulburn"
-tt.spawn_fx = "fx_veznan_soulburn_ball_spawn"
-tt.main_script.update = scripts.decal_veznan_soulburn_ball.update
-
 tt = RT("decal_baby_malik_smash", "decal_bomb_crater")
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "decal_baby_malik_ring"
@@ -2431,56 +2008,6 @@ tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "decal_baby_malik_earthquake"
 tt.render.sprites[2].hide_after_runs = 1
 tt.render.sprites[2].anchor.y = 0.24
-
-tt = RT("decal_rag_ultimate", "fx")
-tt.render.sprites[1].name = "decal_rag_ultimate"
-tt.render.sprites[1].z = Z_DECALS
-
-tt = RT("decal_durax", "decal")
-tt.render.sprites[1].name = "aura_durax"
-tt.render.sprites[1].scale = vec_1(1.3)
-tt.render.sprites[1].z = Z_DECALS
-
-tt = RT("decal_meteor_lilith_explosion", "decal_tween")
-tt.render.sprites[1].name = "stage4_fire_decal_0002"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = vec_1(0.6)
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].keys = {{0, 130}, {2.5, 130}, {3.25, 0}}
-
-tt = RT("decal_lilith_soul_eater_ball", "decal_scripted")
-AC(tt, "force_motion", "sound_events")
-tt.render.sprites[1].name = "lilith_soul_eater_ball_loop"
-tt.render.sprites[1].offset.y = 10
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "decal_flying_shadow"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].z = Z_DECALS
-tt.force_motion.max_a = 5400
-tt.force_motion.max_v = 240
-tt.force_motion.max_flight_height = 60
-tt.main_script.update = scripts.decal_lilith_soul_eater_ball.update
-tt.hit_fx = "fx_lilith_soul_eater_ball_hit"
-tt.hit_mod = "mod_lilith_soul_eater_damage_factor"
-tt.sound_events.insert = "ElvesHeroLilithSoulEater"
-
-tt = RT("decal_lilith_reapers_harvest", "decal_timed")
-tt.render.sprites[1].name = "lilith_reapers_harvest_decal_anim"
-tt.render.sprites[1].z = Z_DECALS
-
-tt = RT("decal_phoenix_ultimate", "decal_rock_crater")
-tt.render.sprites[1].name = "phoenix_hero_egg_decal"
-
-tt = RT("decal_phoenix_flaming_path_pulse", "decal_tween")
-tt.render.sprites[1].name = "phoenix_hero_towerBurn_Circle"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].name = "scale"
-tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.32, vec_2(2.4, 2.4)}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].name = "alpha"
-tt.tween.props[2].keys = {{0, 255}, {0.32, 0}}
 
 tt = RT("decal_twilight_scourger_lash", "decal_tween")
 tt.render.sprites[1].name = "scourger_special_decal"
@@ -2786,16 +2313,6 @@ tt.custom_attack.hit_fx = nil
 tt.sound_events.insert = "ElvesHeroGyroBombsMarch"
 tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 
--- ======== 特拉敏大师 ========
-tt = RT("bomb_tramin_skill1", "bomb_wilbur")
-tt.main_script.insert = scripts.bomb_tramin_skill1.insert
-tt.render.sprites[1].prefix = "hero_tramin_bombot"
-tt.render.sprites[1].name = "walk"
-tt.render.sprites[1].angles.walk = {"walk"}
-tt.custom_attack.aura = "aura_bomb_tramin_skill1"
-tt.sound_events.insert = nil
-tt.sound_events.remove_stop = nil
-
 tt = RT("bomb_tramin_ultimate_1", "bomb_wilbur")
 tt.render.sprites[1].prefix = "hero_tramin_ultimate_bomb_1"
 tt.render.sprites[1].name = "walk"
@@ -2908,66 +2425,6 @@ tt.render.sprites[1].sort_y_offset = -2
 -- tt.ranged.attacks[1].bullet = "arrow_soldier_re_4"
 -- tt.ranged.attacks[1].max_range = 150
 -- tt = RT("soldier_re_5", "soldier_re_4")
-
--- tt.unit.level = 5
--- tt.health.hp_max = 150
--- tt.health.armor = 0.5
--- tt.health_bar.offset = vec_2(0, 46)
--- tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
--- tt.info.portrait_idxs = {41, 45, 49}
--- tt.melee.attacks[1].damage_max = 15
--- tt.melee.attacks[1].damage_min = 10
--- tt.melee.attacks[1].hit_time = fts(11)
--- tt.motion.max_speed = 84
--- tt.render.sprites[1].prefix = "soldier_re_%s3"
--- tt.ranged.attacks[1].bullet = "arrow_soldier_re_5"
--- tt.ranged.attacks[1].max_range = 160
--- tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 36)}
--- tt.soldier.melee_slot_offset = vec_2(8, 0)
--- tt.unit.hit_offset = vec_2(0, 15)
--- tt.unit.mod_offset = vec_2(0, 22)
--- for i, k in ipairs({"A", "B", "C"}) do
---     for j = 0, 5 do
---         local name = string.format("soldier_re_%i", j)
---         local base_t = E:get_template(name)
---         local fn = name .. "_" .. i
---         local t = RT(fn, base_t)
---         t.render.sprites[1].prefix = string.format(t.render.sprites[1].prefix, k)
---         t.info.portrait = string.format("kr3_portraits_sc_00%02d", t.info.portrait_idxs[i])
---     end
--- end
--- for i = 1, 3 do
---     E:set_template("re_current_" .. i, E:get_template("soldier_re_0_" .. i))
--- end
-tt = RT("fx_elves_denas_flash", "fx")
-tt.render.sprites[1].name = "fx_elves_denas_flash"
-
-tt = RT("fx_shield_elves_denas_hit", "fx")
-tt.render.sprites[1].name = "fx_shield_elves_denas_hit"
-tt.render.sprites[1].z = Z_EFFECTS - 1
-
-tt = RT("decal_minidragon_faustus", "decal_scripted")
-AC(tt, "motion", "attacks")
-tt.main_script.update = scripts.decal_minidragon_faustus.update
-tt.motion.max_speed = 10 * FPS
-tt.attacks.list[1] = CC("aura_attack")
-tt.attacks.list[1].disabled = true
-tt.attacks.list[1].bullet = "aura_minidragon_faustus"
-tt.attacks.list[1].bullet_start_offset = vec_2(25, 70)
-tt.attacks.list[1].cooldown = fts(2)
-tt.attacks.list[1].sound = "ElvesHeroFaustusFire"
-tt.render.sprites[1].prefix = "minidragon_faustus_l1"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].z = Z_BULLETS
-tt.render.sprites[1].offset = vec_2(0, 70)
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].prefix = "minidragon_faustus_l2"
-tt.render.sprites[2].name = "idle"
-tt.render.sprites[2].z = Z_BULLETS
-tt.render.sprites[2].offset = vec_2(0, 70)
-tt.emit_ox = 180
-tt.cast_ox = 80
-tt.image_w = 40
 
 -- tt = RT("hero_alleria", "stage_hero")
 -- AC(tt, "melee", "ranged")
@@ -3407,42 +2864,6 @@ tt.bullet.reset_to_target_pos = true
 -- tt.bullet.damage_max = 30
 -- tt.bullet.damage_min = 20
 
-tt = RT("bullet_bravebark_seed", "bomb")
-tt.bullet.damage_type = DAMAGE_NONE
-tt.bullet.flight_time = fts(22)
-tt.bullet.hide_radius = nil
-tt.bullet.pop = nil
-tt.bullet.hit_fx = nil
-tt.bullet.hit_decal = nil
-tt.sound_events.insert = nil
-tt.sound_events.hit = nil
-tt.render.sprites[1].name = "bravebark_hero_mignonSeed"
-
-tt = RT("catha_fury", "bullet")
-tt.animations = {
-	loop = "dashLoop",
-	start = "dashStart",
-	attack = "dashHit"
-}
-tt.bullet.damage_max = nil
-tt.bullet.damage_min = nil
-tt.bullet.damage_type = DAMAGE_MAGICAL
-tt.bullet.max_speed = 240
-tt.bullet.min_speed = 210
-tt.bullet.mod = "mod_catha_curse"
-tt.lead_time = fts(12)
-tt.main_script.insert = scripts.bullet_illusion.insert
-tt.main_script.update = scripts.bullet_illusion.update
-tt.render.sprites[1].anchor.y = 0.373015873015873
-tt.render.sprites[1].name = "dashStart"
-tt.render.sprites[1].prefix = "hero_catha"
-tt.render.sprites[1].z = Z_OBJECTS
-tt.sound_events.hit = "ElvesHeroCathaFuryHit"
-
-tt = RT("knife_soldier_catha", "knife_catha")
-tt.bullet.xp_gain_factor = nil
-tt.bullet.mod = "mod_soldier_catha_curse"
-
 tt = RT("fireball_veznan_demon", "bullet")
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.damage_radius = 40
@@ -3457,67 +2878,6 @@ tt.render.sprites[1].anchor.x = 0.7352941176470589
 tt.render.sprites[1].name = "fireball_veznan_demon"
 tt.sound_events.insert = "ElvesHeroVeznanDemonFireballThrow"
 tt.sound_events.hit = "ElvesHeroVeznanDemonFireballHit"
-
-tt = RT("ray_rag", "bullet")
-tt.image_width = 164
-tt.main_script.update = scripts.ray_simple.update
-tt.render.sprites[1].name = "ray_rag"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].anchor = vec_2(0, 0.5)
-tt.bullet.damage_type = DAMAGE_NONE
-tt.bullet.hit_time = fts(5)
-tt.bullet.mod = "mod_rag_raggified"
-
-tt = RT("bullet_kamihare", "bomb")
-tt.bullet.damage_type = DAMAGE_NONE
-tt.bullet.flight_time = fts(17)
-tt.bullet.hide_radius = nil
-tt.bullet.pop = nil
-tt.bullet.hit_fx = nil
-tt.bullet.hit_decal = nil
-tt.bullet.g = -1.25 / (fts(1) * fts(1))
-tt.bullet.rotation_speed = nil
-tt.sound_events.insert = nil
-tt.sound_events.hit = nil
-tt.render.sprites[1].name = "bullet_kamihare"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].anchor.y = 0.20512820512820512
-
-tt = RT("ray_durax", "bullet")
-tt.bullet.damage_max = nil
-tt.bullet.damage_min = nil
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.hit_fx = "fx_ray_durax_hit"
-tt.bullet.hit_time = fts(5)
-tt.image_width = 164
-tt.track_target = true
-tt.main_script.update = scripts.ray_simple.update
-tt.render.sprites[1].anchor = vec_2(0, 0.5)
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].name = "ray_durax"
-tt.sound_events.insert = "ElvesHeroDuraxLethalPrismShoot"
-
-tt = RT("spear_durax", "arrow")
-tt.bullet.damage_max = nil
-tt.bullet.damage_min = nil
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.flight_time = fts(16)
-tt.bullet.hide_radius = 1
-tt.bullet.hit_fx = "fx_shardseed_hit"
-tt.bullet.miss_decal = "durax_hero_proy_0002-f"
-tt.bullet.miss_decal_anchor = vec_2(1, 0.5)
-tt.bullet.reset_to_target_pos = true
-tt.bullet.xp_gain_factor = 0.35
-tt.render.sprites[1].anchor.x = 0.8214285714285714
-tt.render.sprites[1].name = "durax_hero_proy_0001-f"
-tt.sound_events.insert = "ElvesHeroDuraxShardSpearThrow"
-
-tt = RT("spear_durax_clone", "spear_durax")
-tt.render.sprites[1].shader = "p_tint"
-tt.render.sprites[1].shader_args = {
-	tint_color = {0, 1, 1, 1}
-}
 
 tt = RT("torch_gnoll_burner", "arrow")
 tt.bullet.mod = "mod_gnoll_burner"
@@ -3699,16 +3059,6 @@ tt.render.sprites[1].anchor = vec_2(0, 0.5)
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "ray_crystal_arcane"
 
-tt = RT("aura_enervation_faustus", "aura")
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_apply_mod.update
-tt.aura.mod = "mod_enervation_faustus"
-tt.aura.cycle_time = 0
-tt.aura.cycles = 1
-tt.aura.radius = 100
-tt.aura.vis_flags = bor(F_RANGED)
-tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO)
-
 tt = RT("aura_baby_malik_fissure", "aura")
 tt.aura.fx = "decal_baby_malik_earthquake"
 tt.aura.damage_type = DAMAGE_PHYSICAL
@@ -3721,32 +3071,11 @@ tt.stun.vis_flags = bor(F_RANGED, F_STUN)
 tt.stun.vis_bans = bor(F_FLYING, F_BOSS)
 tt.stun.mod = "mod_baby_malik_stun"
 
-tt = RT("aura_bruce_hps", "aura")
-AC(tt, "hps")
-tt.aura.duration = -1
-tt.main_script.update = scripts.aura_bruce_hps.update
-tt.hps.heal_max = 3
-
 tt = RT("aura_bomb_wilbur", "aura_rabbit_kamihare")
 tt.aura.damage_min = 110
 tt.aura.damage_max = 155
 tt.aura.radius = 35
 tt.sound_events.insert = "BombExplosionSound"
-
-tt = RT("aura_bobbing_wilbur", "aura")
-tt.aura.duration = -1
-tt.main_script.update = scripts.aura_wilbur_bobbing.update
-
-tt = RT("aura_box_wilbur", "decal_scripted")
-AC(tt, "spawner", "sound_events")
-tt.render.sprites[1].anchor.y = 0.25
-tt.render.sprites[1].name = "box_wilbur_open"
-tt.render.sprites[1].loop = false
-tt.spawner.entity = "bomb_wilbur"
-tt.spawner.spawn_time = fts(10)
-tt.spawner.count = nil
-tt.sound_events.insert = "ElvesHeroGyroBoombBoxTouchdown"
-tt.main_script.update = scripts.aura_box_wilbur.update
 
 tt = RT("aura_gnoll_gnawer", "aura")
 tt.main_script.update = scripts.aura_gnoll_gnawer.update
@@ -4033,101 +3362,7 @@ tt.dps.kill = true
 tt.dps.damage_every = fts(3)
 tt.dps.damage_type = DAMAGE_POISON
 
-tt = RT("mod_enervation_faustus", "modifier")
-AC(tt, "render", "tween")
-tt.main_script.insert = scripts.mod_silence.insert
-tt.main_script.remove = scripts.mod_silence.remove
-tt.main_script.update = scripts.mod_track_target.update
-tt.modifier.duration = nil
-tt.render.sprites[1].prefix = "mod_enervation_faustus"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
-
-tt = RT("mod_liquid_fire_faustus", "modifier")
-AC(tt, "dps", "render")
-tt.dps.damage_max = nil
-tt.dps.damage_min = nil
-tt.dps.damage_type = DAMAGE_TRUE
-tt.dps.damage_every = fts(6)
-tt.dps.kill = true
-tt.main_script.insert = scripts.mod_dps.insert
-tt.main_script.update = scripts.mod_dps.update
-tt.modifier.duration = 1
-tt.render.sprites[1].prefix = "mod_liquid_fire_faustus"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt.render.sprites[1].draw_order = 10
-
-tt = RT("mod_minidragon_faustus", "mod_liquid_fire_faustus")
-
-tt = RT("mod_bravebark_branchball", "modifier")
-AC(tt, "render")
-tt.main_script.insert = scripts.mod_bravebark_branchball.insert
-tt.main_script.update = scripts.mod_bravebark_branchball.update
-tt.custom_anchors = {}
-tt.custom_anchors.default = vec_2(0.5, 0.45)
-tt.render.sprites[1].name = "bravebark_paralyzeRoots"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].sort_y_offset = -1
-tt.render.sprites[1].anchor.y = 0.22727272727272727
-
-tt = RT("mod_catha_curse", "mod_stun")
-tt.main_script.insert = scripts.mod_catha_curse.insert
-tt.modifier.vis_bans = bor(F_BOSS)
-tt.modifier.vis_flags = bor(F_STUN, F_MOD)
-tt.modifier.duration = nil
-tt.modifier.resets_same = false
-tt.render.sprites[1].keep_flip_x = true
-tt.render.sprites[1].size_names = nil
-tt.render.sprites[1].prefix = "mod_catha_curse"
-tt.render.sprites[1].name = "loop"
-tt.chance = 0
-tt.xp_from_skill = "curse"
-
-tt = RT("mod_soldier_catha_curse", "mod_catha_curse")
-tt.xp_from_skill = nil
-
-tt = RT("mod_catha_ultimate", "mod_catha_curse")
-tt.main_script.insert = scripts.mod_stun.insert
-tt.modifier.vis_bans = 0
-tt.xp_from_skill = nil
-
-tt = RT("mod_catha_soul", "modifier")
-AC(tt, "render", "hps")
-tt.hps.heal_every = 9e+99
-tt.hps.heal_max = nil
-tt.hps.heal_min = nil
-tt.main_script.insert = scripts.mod_hps.insert
-tt.main_script.update = scripts.mod_hps.update
-tt.modifier.duration = fts(25)
-tt.modifier.bans = {"mod_son_of_mactans_poison", "mod_drider_poison", "mod_dark_spitters", "mod_balrog"}
-tt.modifier.remove_banned = true
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].name = "mod_catha_soul"
-tt.render.sprites[1].anchor.y = 0.2631578947368421
-
 tt = RT("mod_baby_malik_stun", "mod_stun")
-
-tt = RT("mod_rag_hammer_time_stun", "mod_stun")
-tt.modifier.duration = 2
-tt.modifier.vis_bans = F_BOSS
-
-tt = RT("mod_durax_slow", "mod_slow")
-tt.modifier.duration = fts(15)
-tt.slow.factor = 0.9
-
-tt = RT("mod_durax_stun", "mod_stun")
-tt.modifier.duration = fts(20)
-tt.modifier.vis_bans = F_BOSS
-
-tt = RT("mod_lilith_angel_stun", "mod_stun")
-tt.modifier.duration = fts(34)
-
-tt = RT("mod_lilith_soul_eater_track", "modifier")
-tt.main_script.update = scripts.mod_lilith_soul_eater_track.update
-tt.modifier.duration = fts(11)
 
 tt = RT("mod_bruce_sharp_claws", "mod_blood_elves")
 tt.modifier.allows_duplicates = true
@@ -4141,18 +3376,6 @@ tt.dps.damage_max = nil
 tt.extra_bleeding_damage = nil
 tt.extra_bleeding_damage_type = DAMAGE_RUDE
 tt.xp_from_skill = "sharp_claws"
-
-tt = RT("mod_bruce_kings_roar", "mod_stun")
-tt.modifier.duration = nil
-tt.modifier.vis_bans = F_BOSS
-tt.modifier.health_bar_offset = vec_2(0, -3)
-tt.modifier.use_mod_offset = false
-tt.render.sprites[1].prefix = "mod_bruce_kings_roar"
-tt.render.sprites[1].name = "loop"
-tt.render.sprites[1].size_names = nil
-
-tt = RT("mod_slow_wilbur", "mod_slow")
-tt.slow.factor = nil
 
 tt = RT("mod_gnoll_burner", "modifier")
 AC(tt, "dps", "render", "mark_flags")
@@ -5363,73 +4586,11 @@ tt.render.sprites[1].name = "fireball_explosion"
 tt.render.sprites[1].anchor.y = 0.15
 tt.render.sprites[1].z = Z_OBJECTS
 
-tt = RT("decal_regson_heal_ball", "decal_scripted")
-AC(tt, "force_motion")
-tt.render.sprites[1].name = "regson_heal_ball_travel"
-tt.render.sprites[1].offset.y = 10
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "decal_flying_shadow"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].z = Z_DECALS
-tt.force_motion.max_a = 5400
-tt.force_motion.max_v = 180
-tt.force_motion.max_flight_height = 60
-tt.main_script.update = scripts.decal_regson_heal_ball.update
-tt.fx_spawn = "fx_regson_heal_ball_spawn"
-tt.fx_receive = "fx_regson_heal"
-tt.side_effect = function(hero, store)
-	local cool_next = hero.melee.attacks[5].cooldown * hero.unit.cooldown_factor - (hero.melee.attacks[5].ts - store.tick_ts)
-	if cool_next > 0 then
-		hero.melee.attacks[5].ts = hero.melee.attacks[5].ts - cool_next * 0.035
-	end
-	cool_next = hero.timed_attacks.list[1].cooldown * hero.unit.cooldown_factor - (hero.timed_attacks.list[1].ts - store.tick_ts)
-	if cool_next > 0 then
-		hero.timed_attacks.list[1].ts = hero.timed_attacks.list[1].ts - cool_next * 0.0175
-	end
-end
-
-tt = RT("fx_regson_heal_ball_spawn", "fx")
-tt.render.sprites[1].name = "fx_regson_heal_ball_spawn"
-tt.render.sprites[1].anchor.y = 0.35
-
-tt = RT("fx_regson_heal", "fx")
-tt.render.sprites[1].name = "fx_regson_heal"
-tt.render.sprites[1].sort_y_offset = -1
-
--- kr5
-tt = RT("ps_hero_hunter_walk_trail")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "mist_run_trail_run"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.emission_rate = 15
-tt.particle_system.emit_rotation_spread = d2r(45)
-tt.particle_system.emit_area_spread = vec_2(2, 2)
-tt.particle_system.emit_speed = {5, 25}
-tt.particle_system.emit_offsets = {vec_2(13, 12), vec_2(-13, 12)}
-tt.particle_system.z = Z_OBJECTS
-tt.particle_system.particle_lifetime = {fts(14), fts(14)}
-tt.emit_direction = d2r(90)
-
-tt = RT("fx_hero_hunter_skill_heal_strike_hit", "fx")
-tt.render.sprites[1].name = "mistystep_hit_run"
-
 tt = RT("fx_hero_hunter_ranged_attack", "fx")
 tt.render.sprites[1].name = "shothit_run"
 
 tt = RT("fx_hero_hunter_skill_ricochet_hit", "fx")
 tt.render.sprites[1].name = "mistystep_hit_run"
-
-tt = RT("fx_hero_hunter_skill_shoot_around_decal", "fx")
-tt.render.sprites[1].name = "argent_storm_decal_run"
-
-tt = RT("fx_hero_hunter_ultimate_hit", "fx")
-tt.render.sprites[1].name = "hit_dante_run"
-
-tt = RT("fx_hero_hunter_steal", "fx")
-tt.render.sprites[1].name = "duskbeast_coin_run"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
 tt = RT("ps_hero_space_elf_basic_attack_trail")
 AC(tt, "pos", "particle_system")
@@ -5449,26 +4610,6 @@ tt.render.sprites[1].name = "hero_therien_melee_hit_idle"
 tt = RT("fx_hero_space_elf_astral_reflection_spawn", "fx")
 tt.render.sprites[1].name = "hero_therien_reflection_spawn_fx_idle"
 
-tt = RT("fx_hero_space_elf_black_aegis_hit", "fx")
-tt.render.sprites[1].name = "hero_therien_black_aegis_hit"
-
-tt = RT("decal_hero_space_elf_ultimate", "decal_timed")
-tt.render.sprites[1].name = "hero_therien_void_prison_floor_fx_idle"
-tt.render.sprites[1].z = Z_DECALS
-
-tt = RT("decal_hero_space_elf_ultimate_mod", "decal_tween")
-tt.tween.remove = false
-tt.tween.disabled = true
-tt.tween.props[1].keys = {{0, 255}, {0.13, 0}}
-
-tt = RT("decal_hero_space_elf_void_rift_therien", "decal_tween")
-tt.render.sprites[1].name = "hero_therien_rift_therien_fx_idle"
-tt.render.sprites[1].z = Z_DECALS + 1
-tt.render.sprites[1].loop = false
-tt.tween.disabled = false
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {1.5, 255}, {1.8, 0}}
-
 tt = RT("hero_raelyn_command_orders_hit_fx", "fx")
 tt.render.sprites[1].name = "hero_raelyn_command_orders_hit_fx_Idle1_1"
 
@@ -5480,108 +4621,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].loop = false
 tt.modifier.use_mod_offset = false
 tt.main_script.update = scripts.mod_track_target.update
-
-tt = RT("decal_hero_raelyn_onslaught_decal", "decal_tween")
-tt.render.sprites[1].name = "hero_raelyn_onslaught_fx_idle"
-tt.render.sprites[1].hide_after_runs = 1
-tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
-
-tt = RT("fx_hero_venom_melee_attack_hit", "fx")
-tt.render.sprites[1].name = "hero_venom_hit_fx_idle"
-tt.render.sprites[1].z = Z_BULLETS + 1
-
-tt = RT("fx_hero_venom_beast_lvl_up", "fx")
-tt.render.sprites[1].name = "hero_venom_levelup_fx_idle"
-
-tt = RT("decal_hero_venom_slimewalk", "decal_timed")
-tt.render.sprites[1].prefix = "hero_venom_run_particle"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].fps = 15
-tt.timed.duration = fts(20)
-
-tt = RT("decal_hero_venom_spike_b", "decal_hero_venom_spike_a")
-tt.render.sprites[1].prefix = "hero_venom_spike_b"
-
-tt = RT("decal_hero_venom_death", "decal_scripted")
-AC(tt, "tween")
-tt.render.sprites[1].prefix = "hero_venom_death_decal"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].hidden = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_hero_venom_death.update
-tt.tween.disabled = true
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 0}, {1, 255}}
-tt.tween.remove = false
-
-tt = RT("ps_hero_witch_ranged_basic_trail")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "hero_witch_ranged_attack_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.emission_rate = 60
-tt.particle_system.particle_lifetime = {fts(5), fts(8)}
-tt.particle_system.emit_rotation_spread = math.pi * 0.5
-
-tt = RT("ps_hero_witch_spark_1")
-AC(tt, "pos", "particle_system", "main_script")
-tt.particle_system.name = "hero_witch_walk_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.emission_rate = 10
-tt.particle_system.particle_lifetime = {fts(25), fts(30)}
-tt.particle_system.emit_rotation_spread = math.pi * 2
-tt.particle_system.emit_area_spread = vec_2(2, 1)
-tt.particle_system.emit_direction = 2 * math.pi / 3
-tt.particle_system.emit_speed = {10, 10}
-tt.particle_system.emit_offset = vec_2(-15, 0)
-tt.particle_system.z = Z_OBJECTS
-tt.particle_system.animation_fps = 15
-tt.particle_system.sort_y_offset = -40
-tt.main_script.update = scripts.ps_hero_mecha_smoke.update
-tt.emit_direction_sides = {2 * math.pi / 3, math.pi / 3}
-
-tt = RT("ps_bullet_hero_witch_skill_polymorph")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "hero_witch_skill_1_particle_idle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.emission_rate = 60
-tt.particle_system.emit_rotation_spread = math.pi * 2
-tt.particle_system.emit_area_spread = vec_2(8, 8)
-tt.particle_system.scales_y = {1, 1.5}
-tt.particle_system.scales_x = {1, 1.5}
-tt.particle_system.emit_offset = vec_2(0, 0)
-tt.particle_system.particle_lifetime = {fts(8), fts(8)}
-tt.emit_offset_relative = vec_2(-15, 0)
-
-tt = RT("fx_hero_witch_basic_ranged_hit", "fx")
-tt.render.sprites[1].name = "hero_witch_ranged_attack_hit"
-tt.render.sprites[1].scale = vec_1(1)
-
-tt = RT("fx_hero_witch_ultimate", "fx")
-tt.render.sprites[1].name = "hero_witch_ultimate_teleport_fx"
-tt.render.sprites[1].scale = vec_1(1)
-
-tt = RT("fx_hero_witch_skill_path_aoe_in", "fx")
-tt.render.sprites[1].name = "hero_witch_skill_4_potion_in_layer1_in"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].scale = vec_1(1)
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "hero_witch_skill_4_potion_in_layer2_in"
-tt.render.sprites[2].loop = false
-tt.render.sprites[2].z = Z_EFFECTS
-tt.render.sprites[2].scale = vec_1(1)
-
-tt = RT("fx_hero_witch_skill_polymorph", "fx")
-tt.render.sprites[1].name = "hero_witch_skill_1_hit_run"
-tt.render.sprites[1].z = Z_OBJECTS_COVERS
-tt.render.sprites[1].scale = vec_1(1)
-
-tt = RT("decal_hero_witch_ultimate", "decal_timed")
-tt.render.sprites[1].name = "hero_witch_ultimate_teleport_decal"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].scale = vec_1(1)
 
 tt = RT("tower_tricannon_bomb_4_trail")
 AC(tt, "pos", "particle_system")
@@ -7675,35 +6714,9 @@ tt = E:register_t("controller_soldier_reinforcement_stage_15_denas_timeout")
 E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.controller_soldier_reinforcement_stage_15_denas_timeout.update
 
-tt = E:register_t("hero_muyrn_treewalk_trail")
-E:add_comps(tt, "pos", "particle_system")
-tt.particle_system.animated = true
-tt.particle_system.animation_fps = 15
-tt.particle_system.name = "hero_nyru_walk2_roots_particle"
-tt.particle_system.loop = false
-tt.particle_system.emission_rate = 10
-tt.particle_system.z = Z_OBJECTS
-tt.particle_system.emit_area_spread = v(0, 5)
-
-tt = E:register_t("ps_hero_muyrn_verdant_blast_bolt_trail")
-E:add_comps(tt, "pos", "particle_system")
-tt.particle_system.name = "hero_nyru_verdant_blast_particle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(10), fts(10)}
-tt.particle_system.emission_rate = 60
-tt.particle_system.emit_rotation_spread = math.pi * 2
-
 tt = E:register_t("fx_hero_muyrn_faery_dust", "fx")
 tt.render.sprites[1].name = "hero_nyru_fairy_dust_FX"
 tt.render.sprites[1].hide_after_runs = 1
-
-tt = E:register_t("fx_hero_muyrn_sentinel_wisps_attack", "fx")
-tt.render.sprites[1].name = "hero_nyru_sentinel_wisps_attack_attack"
-tt.render.sprites[1].hide_after_runs = 1
-
-tt = E:register_t("hero_muyrn_sentinel_wisps_hit_fx", "fx")
-tt.render.sprites[1].name = "hero_nyru_sentinel_wisps_hit"
 
 tt = E:register_t("decal_hero_muyrn_root_defender_root_1", "decal_scripted")
 tt.render.sprites[1].prefix = "hero_nyru_root_defender_root1"
@@ -7719,10 +6732,6 @@ tt.render.sprites[1].prefix = "hero_nyru_root_defender_root2"
 
 tt = E:register_t("decal_hero_muyrn_root_defender_root_3", "decal_hero_muyrn_root_defender_root_1")
 tt.render.sprites[1].prefix = "hero_nyru_root_defender_root3"
-
-tt = E:register_t("decal_hero_muyrn_verdant_blast_hit", "decal")
-tt.render.sprites[1].name = "hero_nyru_verdant_blast_explosion_decal"
-tt.render.sprites[1].hide_after_runs = 1
 
 tt = E:register_t("fx_bullet_tower_stage_17_weirdwood", "fx")
 tt.render.sprites[1].prefix = "tower_tree_projectile_explosionDef"
@@ -13187,5 +12196,38 @@ tt.spawn_interval = 1
 tt.spawn_cooldown = 3
 tt.main_script.update = scripts.controller_swamp_spawner.update
 
-return scripts
+tt = RT("decal_regson_heal_ball", "decal_scripted")
+AC(tt, "force_motion")
+tt.render.sprites[1].name = "regson_heal_ball_travel"
+tt.render.sprites[1].offset.y = 10
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "decal_flying_shadow"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].z = Z_DECALS
+tt.force_motion.max_a = 5400
+tt.force_motion.max_v = 180
+tt.force_motion.max_flight_height = 60
+tt.main_script.update = scripts.decal_regson_heal_ball.update
+tt.fx_spawn = "fx_regson_heal_ball_spawn"
+tt.fx_receive = "fx_regson_heal"
+tt.side_effect = function(hero, store)
+	local cool_next = hero.melee.attacks[5].cooldown * hero.unit.cooldown_factor - (hero.melee.attacks[5].ts - store.tick_ts)
+	if cool_next > 0 then
+		hero.melee.attacks[5].ts = hero.melee.attacks[5].ts - cool_next * 0.035
+	end
+	cool_next = hero.timed_attacks.list[1].cooldown * hero.unit.cooldown_factor - (hero.timed_attacks.list[1].ts - store.tick_ts)
+	if cool_next > 0 then
+		hero.timed_attacks.list[1].ts = hero.timed_attacks.list[1].ts - cool_next * 0.0175
+	end
+end
 
+tt = RT("fx_regson_heal_ball_spawn", "fx")
+tt.render.sprites[1].name = "fx_regson_heal_ball_spawn"
+tt.render.sprites[1].anchor.y = 0.35
+
+tt = RT("fx_regson_heal", "fx")
+tt.render.sprites[1].name = "fx_regson_heal"
+tt.render.sprites[1].sort_y_offset = -1
+
+return scripts

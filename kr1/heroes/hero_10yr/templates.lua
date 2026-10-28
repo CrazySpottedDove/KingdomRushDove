@@ -22,7 +22,6 @@ local update_hp = HU.update_hp
 local queue_damage = U.queue_damage
 local v = V.v
 local vv = V.vv
-
 local anchor_y = 0.20161290322580644
 local anchor_x = 0.5
 local image_y = 116
@@ -130,7 +129,6 @@ local function aura_10yr_fireball_update(this, store)
 			end
 
 			b.bullet.from:copy(b.pos)
-
 			simulation:queue_insert_entity(b)
 			U.y_wait_unconditional(store, a.delay)
 		end
@@ -278,7 +276,6 @@ local function hero_level_up(this, store)
 		a.damage_min = s.spin_damage_min[s.level]
 		a.damage_max = s.spin_damage_max[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -310,9 +307,9 @@ local function hero_update(this, store)
 		ba.ts = store.tick_ts
 		this.teleport.disabled = true
 		this.is_buffed = true
+
 		-- this.health_bar.offset = this.health_bar.offset_buffed
 		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset_buffed.y)
-
 		U.update_max_speed(this, this.motion.max_speed_buffed)
 
 		this.melee.range = this.melee.range_buffed
@@ -337,9 +334,9 @@ local function hero_update(this, store)
 		this.health.immune_to = DAMAGE_NONE
 		this.render.sprites[1].prefix = "hero_10yr"
 		this.teleport.disabled = nil
+
 		-- this.health_bar.offset = this.health_bar.offset_normal
 		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset_normal.y)
-
 		U.update_max_speed(this, this.motion.max_speed_normal)
 
 		this.melee.range = this.melee.range_normal
@@ -349,6 +346,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	local aura = E:create_entity(this.particles_aura)
 
 	aura.aura.source_id = this.id
@@ -650,6 +648,7 @@ local function power_fireball_10yr_update(this, store)
 			local decal = E:create_entity(b.hit_decal)
 
 			decal.pos:copy(b.to)
+
 			decal.render.sprites[1].ts = store.tick_ts
 
 			simulation:queue_insert_entity(decal)
@@ -740,6 +739,7 @@ local function power_giant_fireball_10yr_update(this, store)
 		fx.pos.x, fx.pos.y = b.to.x, b.to.y
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].scale = V.vv(2)
+
 		simulation:queue_insert_entity(fx)
 
 		if this.scorch_earth then
@@ -760,6 +760,7 @@ local function power_giant_fireball_10yr_update(this, store)
 			local decal = E:create_entity(b.hit_decal)
 
 			decal.pos:copy(b.to)
+
 			decal.render.sprites[1].ts = store.tick_ts
 			decal.render.sprites[1].scale = V.vv(2)
 
@@ -797,7 +798,6 @@ local function power_giant_fireball_10yr_update(this, store)
 end
 
 -- 红龙
-
 local tt
 
 tt = RT("ps_hero_10yr_idle", "particle_system")
@@ -810,16 +810,16 @@ tt.particle_system.emit_direction = d2r(90)
 tt.particle_system.emit_speed = {30, 30}
 tt.particle_system.emission_rate = 2.5
 tt.particle_system.z = Z_OBJECTS
-
 tt = RT("aura_10yr_idle", "aura")
 tt.particles_name = "ps_hero_10yr_idle"
 tt.emit_states = {"idle", "running"}
 tt.main_script.update = aura_10yr_particles_update
 tt.particle_offsets = {vec_2(-25.714285714285715, 25.714285714285715), vec_2(-15.714285714285715, 37.142857142857146), vec_2(0, 45.714285714285715), vec_2(8.571428571428571, 42.85714285714286), vec_2(14.285714285714286, 32.85714285714286), vec_2(21.42857142857143, 21.42857142857143)}
 tt.flip_offset = vec_2(3, 0)
-
 tt = RT("hero_10yr", "hero")
+
 AC(tt, "melee", "timed_attacks", "teleport")
+
 tt.hero.level_stats.armor = {0.23, 0.26, 0.29, 0.32, 0.35, 0.38, 0.41, 0.44, 0.47, 0.5}
 tt.hero.level_stats.hp_max = {380, 400, 420, 440, 460, 480, 500, 520, 540, 560}
 tt.hero.level_stats.melee_damage_max = {22, 25, 28, 31, 34, 37, 40, 43, 46, 49}
@@ -962,7 +962,6 @@ tt.timed_attacks.list[3].xp_from_skill = "buffed"
 tt.timed_attacks.list[4] = table.deepclone(tt.timed_attacks.list[1])
 tt.timed_attacks.list[4].cooldown = 46
 tt.timed_attacks.list[4].entity = "aura_10yr_giant_fireball"
-
 tt = RT("aura_10yr_fireball", "aura")
 tt.main_script.update = aura_10yr_fireball_update
 tt.aura.entity = "fireball_10yr"
@@ -970,12 +969,10 @@ tt.aura.delay = fts(15)
 tt.aura.max_range = E:get_template("hero_10yr").timed_attacks.list[1].max_range
 tt.aura.vis_flags = E:get_template("hero_10yr").timed_attacks.list[1].vis_flags
 tt.aura.vis_bans = E:get_template("hero_10yr").timed_attacks.list[1].vis_bans
-
 tt = RT("aura_10yr_giant_fireball", "aura_10yr_fireball")
 tt.aura.entity = "giant_fireball_10yr"
 tt.aura.loops = 1
 tt.aura.delay = fts(20)
-
 tt = RT("fireball_10yr", "bullet")
 tt.bullet.min_speed = 24 * FPS
 tt.bullet.max_speed = 24 * FPS
@@ -992,7 +989,6 @@ tt.main_script.update = power_fireball_10yr_update
 tt.scorch_earth = false
 tt.sound_events.insert = "FireballRelease"
 tt.sound_events.hit = "FireballHit"
-
 tt = RT("giant_fireball_10yr", "fireball_10yr")
 tt.bullet.min_speed = 8 * FPS
 tt.bullet.max_speed = 8 * FPS
@@ -1001,7 +997,6 @@ tt.bullet.damage_min = 60
 tt.bullet.damage_max = 120
 tt.main_script.update = power_giant_fireball_10yr_update
 tt.render.sprites[1].scale = vv(2)
-
 tt = RT("aura_10yr_bomb", "aura")
 tt.aura.fx = "decal_10yr_spike"
 tt.aura.damage_radius = 40
@@ -1023,17 +1018,14 @@ tt.aura.stun_chance = 0.25
 tt.aura.min_nodes = 0
 tt.aura.max_nodes = 25
 tt.aura.min_count = 1
-
 tt = RT("mod_10yr_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
 tt.modifier.duration = 3
-
 tt = RT("decal_10yr_spike", "decal_bomb_crater")
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "decal_10yr_bomb_spike"
 tt.render.sprites[2].hide_after_runs = 1
 tt.render.sprites[2].anchor.y = 0.24
-
 --         二代
 --     --

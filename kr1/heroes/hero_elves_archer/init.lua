@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_elves_archer.templates"},
+	animations = {"heroes.hero_elves_archer.animations"},
+	sounds = {"heroes.hero_elves_archer.sounds"},
+	groups = {"heroes.hero_elves_archer.groups"},
 
 	name_style = {
 		margin = 2.5,
