@@ -17139,7 +17139,6 @@ tt.rally_speed_boost = {
 	speed_factor = 1.5
 }
 tt.regen.cooldown = 1
-tt.regen.health = 60
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk_slow"}
