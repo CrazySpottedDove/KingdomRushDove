@@ -282,6 +282,43 @@ function autoplay:init(w, h, done_callback)
 	EXO:queue_load_plugin(game.plugin_required_exoskeletons)
 	EXO:queue_load_plugin(game_gui.plugin_required_exoskeletons)
 
+	-- 选中英雄的资源（与 director 的 type=game 非英雄殿堂分支一致）
+	do
+		local HEROES = require("heroes.registry")
+		local slot = require("all.storage"):load_slot()
+		local selected = slot.heroes and slot.heroes.selected
+
+		if selected then
+			local hero_textures = {}
+			local hero_sounds = {}
+
+			for i = 1, #selected do
+				local hero = selected[i]
+				local module = HEROES:get(hero)
+
+				if module then
+					hero_textures = table.append(hero_textures, module.required_textures or {})
+					hero_sounds = table.append(hero_sounds, module.required_sounds or {})
+					hero_sounds = table.append(hero_sounds, module.plugin_required_sounds or {})
+					director:load_plugin_texture_groups(module.plugin_required_textures, game.ref_res, true, "game")
+					EXO:queue_load(module.required_exoskeletons or {})
+					EXO:queue_load_plugin(module.plugin_required_exoskeletons)
+				else
+					hero_textures[#hero_textures + 1] = "go_" .. hero
+					hero_sounds[#hero_sounds + 1] = hero
+				end
+			end
+
+			if #hero_textures > 0 then
+				director:load_texture_groups(hero_textures, director.params.texture_size, game.ref_res, true, "game")
+			end
+
+			if #hero_sounds > 0 then
+				director:load_sound_groups(hero_sounds)
+			end
+		end
+	end
+
 	-- power3 法术：像 director 那样按需加载选中法术的资源
 	if self.spell_id then
 		local SPELLS = require("spell_system")

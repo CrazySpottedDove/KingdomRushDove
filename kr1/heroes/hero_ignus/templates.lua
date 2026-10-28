@@ -127,6 +127,7 @@ local function aura_ignus_surge_of_flame_update(this, store)
 	end
 
 	ps.particle_system.emit = false
+
 	simulation:queue_remove_entity(ps)
 	simulation:queue_remove_entity(this)
 end
@@ -167,7 +168,6 @@ local function hero_level_up(this, store)
 		aura.aura.damage_min = s.damage_min[s.level]
 		aura.aura.damage_max = s.damage_max[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -178,6 +178,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	local aura = E:create_entity(this.particles_aura)
 
 	aura.aura.source_id = this.id
@@ -250,6 +251,7 @@ local function hero_update(this, store)
 					-- block empty
 					else
 						local bans_added = false
+
 						local function surge(target)
 							U.unblock_target(store, this)
 							U.block_enemy(store, this, target)
@@ -259,8 +261,10 @@ local function hero_update(this, store)
 
 							if not bans_added then
 								U.bans_add(this.vis, F_ALL)
+
 								bans_added = true
 							end
+
 							this.health.ignore_damage = true
 
 							U.speed_mul(this, a.speed_factor)
@@ -295,10 +299,13 @@ local function hero_update(this, store)
 							U.y_animation_play(this, a.animations[2], nil, store.tick_ts)
 
 							a.ts = store.tick_ts
+
 							if bans_added then
 								U.bans_remove(this.vis, F_ALL)
+
 								bans_added = false
 							end
+
 							this.health.ignore_damage = nil
 						end
 
@@ -431,9 +438,10 @@ tt.particle_system.emit_direction = d2r(90)
 tt.particle_system.emit_speed = {30, 30}
 tt.particle_system.emission_rate = 2.5
 tt.particle_system.z = Z_OBJECTS
-
 tt = RT("ps_ignus_run")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.alphas = {255, 200, 0}
 tt.particle_system.anchor = vec_2(0.5, 0.1)
 tt.particle_system.animated = true
@@ -442,7 +450,6 @@ tt.particle_system.loop = false
 tt.particle_system.z = Z_DECALS + 1
 tt.particle_system.name = "ps_hero_ignus_run"
 tt.particle_system.particle_lifetime = {0.6, 0.8}
-
 tt = RT("ps_hero_ignus_smoke", "ps_power_fireball")
 tt.particle_system.scales_x = {2, 3}
 tt.particle_system.scales_y = {2, 3}
@@ -451,25 +458,23 @@ tt.particle_system.emit_offset = vec_2(0, 17)
 tt.particle_system.name = "ps_hero_ignus_smoke"
 tt.particle_system.sort_y_offset = -16
 tt.particle_system.z = Z_OBJECTS
-
 tt = RT("fx_ignus_burn", "fx")
 tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
-
 tt = RT("decal_ignus_flaming", "decal_timed")
 tt.render.sprites[1].name = "decal_ignus_flaming"
 tt.render.sprites[1].z = Z_DECALS
-
 tt = RT("aura_ignus_idle", "aura")
 tt.particles_name = "ps_hero_ignus_idle"
 tt.emit_states = {"idle", "attack"}
 tt.main_script.update = aura_ignus_particles_update
 tt.particle_offsets = {vec_2(-17, 16), vec_2(-12, 27), vec_2(4, 37), vec_2(2, 35), vec_2(12, 22), vec_2(14, 13)}
 tt.flip_offset = vec_2(3, 0)
-
 tt = RT("hero_ignus", "hero")
+
 AC(tt, "melee", "timed_attacks")
+
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {400, 430, 460, 490, 520, 550, 580, 620, 660, 700}
 tt.hero.level_stats.melee_damage_max = {30, 33, 35, 38, 40, 43, 45, 48, 50, 53}
@@ -552,7 +557,6 @@ tt.timed_attacks.list[2].sound = "HeroRainOfFireFireball1"
 tt.timed_attacks.list[2].sound_end = "HeroRainOfFireFireball2"
 tt.timed_attacks.list[2].vis_bans = bor(F_FRIEND)
 tt.timed_attacks.list[2].vis_flags = bor(F_ENEMY, F_BLOCK)
-
 tt = RT("aura_ignus_surge_of_flame", "aura")
 tt.aura.cycle_time = fts(1)
 tt.aura.damage_type = DAMAGE_TRUE
@@ -561,7 +565,6 @@ tt.aura.hit_fx = "fx_ignus_burn"
 tt.damage_state = "surgeOfFlame"
 tt.main_script.update = aura_ignus_surge_of_flame_update
 tt.particles_name = "ps_hero_ignus_smoke"
-
 tt = RT("mod_ignus_burn_1", "mod_lava")
 tt.dps.damage_min = 5
 tt.dps.damage_max = 5
@@ -572,7 +575,6 @@ tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
-
 tt = RT("mod_ignus_burn_2", "mod_lava")
 tt.dps.damage_min = 8
 tt.dps.damage_max = 8
@@ -583,7 +585,6 @@ tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
-
 tt = RT("mod_ignus_burn_3", "mod_lava")
 tt.dps.damage_min = 10
 tt.dps.damage_max = 10
@@ -594,4 +595,3 @@ tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
-

@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_durax.templates"},
+	animations = {"heroes.hero_durax.animations"},
+	sounds = {"heroes.hero_durax.sounds"},
+	groups = {"heroes.hero_durax.groups"},
 
 	name_style = {
 		margin = 1.5,

@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_dianyun.templates"},
+	animations = {"heroes.hero_dianyun.animations"},
+	sounds = {"heroes.hero_dianyun.sounds"},
+	groups = {"heroes.hero_dianyun.groups"},
 	name_style = {
 		margin = 0,
 		p1 = NS.p11,

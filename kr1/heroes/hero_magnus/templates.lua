@@ -90,6 +90,7 @@ local function soldier_magnus_illusion_update(this, store)
 	end
 
 	this.health_bar.hidden = true
+
 	U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 	if not this.health.dead then
@@ -247,7 +248,6 @@ local function hero_level_up(this, store)
 		r.damage_min = s.damage[s.level]
 		r.damage_max = s.damage[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -258,6 +258,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -304,8 +305,8 @@ local function hero_update(this, store)
 					e.tween.props[1].keys[1][2].y = -o.y
 					e.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 					e.owner = this
-					SU.insert_unit_damage_factor_buff(e, this.unit.damage_factor - e.unit.damage_factor)
 
+					SU.insert_unit_damage_factor_buff(e, this.unit.damage_factor - e.unit.damage_factor)
 					simulation:queue_insert_entity(e)
 				end
 
@@ -393,7 +394,6 @@ local tt
 
 tt = RT("fx_bolt_magnus_hit", "fx")
 tt.render.sprites[1].name = "bolt_magnus_hit"
-
 tt = RT("bolt_magnus", "bolt")
 tt.render.sprites[1].prefix = "bolt_magnus"
 tt.bullet.hit_fx = "fx_bolt_magnus_hit"
@@ -404,14 +404,14 @@ tt.bullet.damage_min = 9
 tt.bullet.damage_max = 27
 tt.bullet.max_speed = 360
 tt.bullet.xp_gain_factor = 2.2
-
 tt = RT("bolt_magnus_illusion", "bolt_magnus")
 tt.bullet.damage_min = nil
 tt.bullet.damage_max = nil
 tt.bullet.xp_gain_factor = nil
-
 tt = RT("hero_magnus", "hero")
+
 AC(tt, "melee", "ranged", "timed_attacks", "teleport")
+
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {170, 190, 210, 230, 250, 270, 290, 310, 330, 350}
 tt.hero.level_stats.melee_damage_max = {2, 4, 5, 6, 7, 8, 10, 11, 12, 13}
@@ -498,9 +498,10 @@ tt.timed_attacks.list[2].sound = "HeroMageRainCharge"
 tt.timed_attacks.list[2].vis_bans = bor(F_FRIEND)
 tt.timed_attacks.list[2].vis_flags = F_RANGED
 tt.timed_attacks.list[2].xp_from_skill = "arcane_rain"
-
 tt = RT("magnus_arcane_rain_controller", "decal_scripted")
+
 AC(tt, "tween")
+
 tt.main_script.update = magnus_arcane_rain_controller_update
 tt.spawn_time = fts(6)
 tt.initial_angle = d2r(0)
@@ -514,9 +515,10 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.remove = false
 tt.tween.disabled = true
-
 tt = RT("magnus_arcane_rain")
+
 AC(tt, "render", "main_script", "pos")
+
 tt.damage_type = DAMAGE_TRUE
 tt.damage_radius = 40
 tt.damage_min = 20
@@ -528,9 +530,10 @@ tt.render.sprites[1].prefix = "magnus_arcane_rain"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = vec_2(0.5, 0.07)
 tt.sound = "HeroMageRainDrop"
-
 tt = RT("soldier_magnus_illusion", "soldier_militia")
+
 AC(tt, "reinforcement", "ranged", "tween")
+
 tt.health.hp_max = nil
 tt.health_bar.offset = vec_2(0, 33)
 tt.health.dead_lifetime = fts(14)

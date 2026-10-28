@@ -103,6 +103,7 @@ local function chain_update(this, store)
 
 			b.pos:copy(chain_pos)
 			b.bullet.from:copy(b.pos)
+
 			b.bullet.to = dest
 			b.bullet.target_id = t.id
 			b.bullet.source_id = m.source_id
@@ -177,6 +178,7 @@ local function thunderclap_update(this, store)
 	local fx = E:create_entity(tc.fx)
 
 	fx.pos:copy(this.pos)
+
 	fx.render.sprites[1].ts = store.tick_ts
 
 	simulation:queue_insert_entity(fx)
@@ -220,7 +222,6 @@ local function hero_level_up(this, store)
 		mod.thunderclap.stun_duration_max = s.stun_duration[s.level]
 		mod.thunderclap.max_range = s.max_range[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -231,6 +232,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -279,13 +281,13 @@ tt = RT("ray_hero_thor", "ray_tesla")
 tt.bullet.mod = "mod_ray_hero_thor"
 tt.render.sprites[1].name = "ray_hero_thor"
 tt.main_script.update = ray_thor_update
-
 tt = RT("fx_hero_thor_thunderclap_disipate", "fx")
 tt.render.sprites[1].name = "fx_hero_thor_thunderclap_disipate"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.15)
-
 tt = RT("hero_thor", "hero")
+
 AC(tt, "melee", "ranged")
+
 tt.hero.level_stats.armor = {0.43, 0.46, 0.49, 0.52, 0.55, 0.58, 0.61, 0.64, 0.67, 0.7}
 tt.hero.level_stats.hp_max = {380, 410, 440, 470, 500, 530, 560, 590, 620, 650}
 tt.hero.level_stats.melee_damage_max = {31, 34, 36, 39, 42, 44, 47, 49, 52, 55}
@@ -365,7 +367,6 @@ tt.ranged.attacks[1].shoot_time = fts(12)
 tt.ranged.attacks[1].sound_shoot = "HeroThorHammer"
 tt.ranged.attacks[1].xp_from_skill = "thunderclap"
 tt.lightning_heal = 20
-
 tt = RT("hammer_hero_thor", "bolt")
 tt.bullet.min_speed = 300
 tt.bullet.max_speed = 900
@@ -375,13 +376,11 @@ tt.bullet.mod = "mod_hero_thor_thunderclap"
 tt.bullet.pop = nil
 tt.render.sprites[1].prefix = "hammer_hero_thor"
 tt.sound_events.insert = nil
-
 tt = RT("mod_ray_hero_thor", "mod_ray_tesla")
 tt.modifier.duration = fts(16)
 tt.dps.damage_min = 5
 tt.dps.damage_max = 5
 tt.dps.damage_type = DAMAGE_ELECTRICAL
-
 tt = RT("mod_hero_thor_chainlightning", "modifier")
 tt.chainlightning = {
 	bullet = "ray_hero_thor",
@@ -395,9 +394,10 @@ tt.chainlightning = {
 	mod = "mod_tesla_overcharge"
 }
 tt.main_script.update = chain_update
-
 tt = RT("mod_hero_thor_thunderclap", "modifier")
+
 AC(tt, "render")
+
 tt.thunderclap = {
 	damage = 60,
 	offset = vec_2(0, 10),
@@ -421,7 +421,5 @@ tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].loop = false
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].name = "mod_hero_thor_thunderclap_explosion"
-
 tt = RT("mod_hero_thor_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
-

@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_rag.templates"},
+	animations = {"heroes.hero_rag.animations"},
+	sounds = {"heroes.hero_rag.sounds"},
+	groups = {"heroes.hero_rag.groups"},
 
 	name_style = {
 		margin = 1,

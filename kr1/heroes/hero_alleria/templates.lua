@@ -24,6 +24,7 @@ local function wildcat_level_up(this, store, skill)
 	local hp_factor = GS.difficulty_soldier_hp_max_factor[store.level_difficulty]
 
 	this.health.hp_max = skill.hp_base + skill.hp_inc * skill.level * hp_factor
+
 	update_hp(this)
 
 	local at = this.melee.attacks[1]
@@ -97,6 +98,7 @@ local function wildcat_update(this, store)
 		coroutine.yield()
 	end
 end
+
 -- 艾莉瑞亚-分裂箭
 local function arrow_multishot_insert(this, store)
 	if this.extra_arrows > 0 then
@@ -163,6 +165,7 @@ local function arrow_multishot_insert(this, store)
 
 	return scripts.arrow.insert(this, store)
 end
+
 -- 艾莉瑞亚
 local function hero_level_up(this, store)
 	local hl, ls = level_up_basic(this)
@@ -205,7 +208,6 @@ local function hero_level_up(this, store)
 
 		b.bullet.target_num = s.count_base + s.count_inc * s.level
 	end)
-
 	update_hp(this)
 end
 
@@ -222,6 +224,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -323,7 +326,9 @@ end
 local tt
 
 tt = RT("hero_alleria", "hero")
+
 AC(tt, "melee", "ranged", "timed_attacks")
+
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {200, 220, 240, 260, 280, 300, 320, 350, 380, 410}
 tt.hero.level_stats.melee_damage_max = {5, 7, 9, 12, 15, 18, 22, 26, 30, 34}
@@ -429,11 +434,9 @@ tt.timed_attacks.list[1].sound = "HeroArcherSummon"
 tt.timed_attacks.list[1].spawn_time = fts(10)
 tt.timed_attacks.list[1].min_range = 30
 tt.timed_attacks.list[1].max_range = 50
-
 tt = RT("arrow_hero_alleria", "arrow")
 tt.bullet.xp_gain_factor = 2.9
 tt.bullet.flight_time = fts(15)
-
 tt = RT("arrow_multishot_hero_alleria", "arrow")
 tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
 tt.bullet.damage_min = 15
@@ -443,7 +446,6 @@ tt.extra_arrows_range = 100
 tt.extra_arrows = 2
 tt.main_script.insert = arrow_multishot_insert
 tt.render.sprites[1].name = "hero_archer_arrow"
-
 tt = RT("arrow_hero_alleria_missile", "arrow")
 tt.bullet.particles_name = "ps_arrow_hero_alleria_missile"
 tt.render.sprites[1].name = "hero_archer_arrow"
@@ -454,15 +456,15 @@ tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.target_num = 5
 tt.bullet.max_seek_angle = math.pi / 3
 tt.main_script.update = scripts.arrow_missile.update
-
 tt = RT("ps_arrow_hero_alleria_missile", "ps_arrow_multishot_hero_alleria")
 tt.particle_system.particle_lifetime = {0.6, 0.6}
 tt.particle_system.scales_y = {0.8, 0.2}
 tt.particle_system.scales_x = {1.5, 0.3}
 tt.particle_system.emission_rate = 60
-
 tt = RT("soldier_alleria_wildcat", "soldier")
+
 AC(tt, "melee", "nav_grid")
+
 tt.fn_level_up = wildcat_level_up
 tt.info.portrait = "info_portraits_soldiers_0022"
 tt.health.hp_max = nil
@@ -492,5 +494,4 @@ tt.unit.mod_offset = vec_2(0, 14)
 tt.unit.hide_after_death = true
 tt.unit.explode_fx = nil
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE)
-
 -- 博林

@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_faustus.templates"},
+	animations = {"heroes.hero_faustus.animations"},
+	sounds = {"heroes.hero_faustus.sounds"},
+	groups = {"heroes.hero_faustus.groups"},
 
 	name_style = {
 		margin = 1,

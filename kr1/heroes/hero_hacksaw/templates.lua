@@ -36,7 +36,6 @@ local function hero_level_up(this, store)
 		a.disabled = nil
 		a.cooldown = s.cooldown[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -63,6 +62,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	while true do
 		if h.dead then
 			S:queue(this.sound_events.death2)
@@ -162,6 +162,7 @@ local function sawblade_update(this, store)
 		local sfx = E:create_entity(b.hit_blood_fx)
 
 		sfx.pos:copy(b.to)
+
 		sfx.render.sprites[1].ts = store.tick_ts
 
 		if sfx.use_blood_color and target.unit.blood_color then
@@ -194,7 +195,9 @@ end
 local tt
 
 tt = RT("hero_hacksaw", "hero")
+
 AC(tt, "melee", "ranged")
+
 tt.hero.level_stats.armor = {0.53, 0.56, 0.59, 0.62, 0.65, 0.68, 0.71, 0.74, 0.77, 0.8}
 tt.hero.level_stats.hp_max = {420, 440, 460, 480, 500, 520, 540, 560, 580, 600}
 tt.hero.level_stats.melee_damage_max = {27, 30, 33, 36, 39, 42, 45, 48, 51, 54}
@@ -275,7 +278,6 @@ tt.ranged.attacks[1].shoot_time = fts(16)
 tt.ranged.attacks[1].sound_shoot = "HeroHacksawShoot"
 tt.ranged.attacks[1].cooldown = 6.5 + fts(32)
 tt.ranged.attacks[1].xp_from_skill = "sawblade"
-
 tt = RT("hacksaw_sawblade", "bullet")
 tt.main_script.update = sawblade_update
 tt.bullet.particles_name = "ps_hacksaw_sawblade"
@@ -290,9 +292,10 @@ tt.bounce_range = 160
 tt.render.sprites[1].prefix = "hacksaw_sawblade"
 tt.sound_events.insert = "HeroAlienDiscoThrow"
 tt.sound_events.bounce = "HeroAlienDiscoBounce"
-
 tt = RT("ps_hacksaw_sawblade")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.alphas = {255, 200, 0, 0}
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 120
@@ -302,7 +305,6 @@ tt.particle_system.name = "ps_hacksaw_sawblade"
 tt.particle_system.particle_lifetime = {fts(12), fts(12)}
 tt.particle_system.scales_x = {1, 0.5}
 tt.particle_system.scales_y = {1.5, 0.5}
-
 tt = RT("fx_hacksaw_sawblade_hit", "fx")
 tt.render.sprites[1].prefix = "fx_hacksaw_sawblade"
 tt.render.sprites[1].name = "hit"

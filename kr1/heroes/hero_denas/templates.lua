@@ -40,7 +40,9 @@ local function catapult_controller_update(this, store)
 		local bullet = E:create_entity(this.bullet)
 
 		bullet.pos = V.v(rock_x, rock_y)
+
 		bullet.bullet.from:copy(bullet.pos)
+
 		bullet.bullet.to = U.point_on_ellipse(this.pos, r, a)
 		bullet.bullet.target_id = nil
 		bullet.bullet.source_id = this.id
@@ -57,6 +59,7 @@ local function catapult_controller_update(this, store)
 	this.tween.remove = true
 	this.tween.ts = store.tick_ts
 end
+
 -- 迪纳斯-施加buff特效
 local function cursing_update(this, store)
 	this.render.sprites[1].ts = store.tick_ts
@@ -84,6 +87,7 @@ local function cursing_update(this, store)
 
 	simulation:queue_remove_entity(this)
 end
+
 -- 迪纳斯-被buff塔特效
 local function buff_aura_update(this, store)
 	local target = store.entities[this.aura.target_id]
@@ -138,6 +142,7 @@ local function buff_aura_update(this, store)
 
 	simulation:queue_remove_entity(this)
 end
+
 -- 迪纳斯-buff
 local function mod_tower_insert(this, store)
 	local m = this.modifier
@@ -194,6 +199,7 @@ local function mod_tower_remove(this, store)
 
 	return true
 end
+
 -- 迪纳斯
 local function hero_level_up(this, store)
 	local hl, ls = level_up_basic(this)
@@ -235,7 +241,6 @@ local function hero_level_up(this, store)
 		r.bullet.damage_min = s.damage_min[s.level]
 		r.bullet.damage_max = s.damage_max[s.level]
 	end)
-
 	update_hp(this)
 end
 
@@ -247,6 +252,7 @@ local function hero_update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
+
 	for _, t in pairs(E:filter_templates("tower")) do
 		t.tower.price = math.floor(t.tower.price * this.tower_price_factor)
 	end
@@ -254,7 +260,6 @@ local function hero_update(this, store)
 	local function do_denas_attack(target, attack, pred_pos)
 		local bullet
 		local bullet_to = pred_pos or target.pos
-
 		local bidx = math.random(1, #a.animations)
 		local animation = attack.animations[bidx]
 		local bullet_name = attack.bullets[bidx]
@@ -267,6 +272,7 @@ local function hero_update(this, store)
 		end
 
 		bullet = E:create_entity(bullet_name)
+
 		bullet.pos:copy(this.pos)
 
 		if attack.bullet_start_offset then
@@ -277,6 +283,7 @@ local function hero_update(this, store)
 
 		bullet.bullet.from:copy(bullet.pos)
 		bullet.bullet.to:copy(bullet_to)
+
 		bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
 		bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
 		bullet.bullet.target_id = target.id
@@ -458,7 +465,9 @@ local anchor_x, anchor_y = 0.5, 0.26
 local tt
 
 tt = RT("hero_denas", "hero")
+
 AC(tt, "melee", "ranged", "timed_attacks")
+
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {300, 340, 380, 420, 450, 480, 510, 530, 550, 570}
 tt.hero.level_stats.melee_damage_max = {19, 23, 28, 33, 38, 42, 47, 52, 56, 61}
@@ -545,15 +554,15 @@ tt.timed_attacks.list[3].sound = "HeroDenasAttack"
 tt.timed_attacks.list[3].vis_bans = F_FRIEND
 tt.timed_attacks.list[3].vis_flags = F_RANGED
 tt.timed_attacks.list[3].xp_from_skill = "catapult"
-
 tt = RT("denas_cursing", "decal_scripted")
 tt.render.sprites[1].name = "hero_denas_cursing"
 tt.duration = fts(36)
 tt.offset = vec_2(0, 25)
 tt.main_script.update = cursing_update
-
 tt = RT("denas_catapult_controller", "decal_scripted")
+
 AC(tt, "tween", "sound_events")
+
 tt.bullet = "denas_catapult_rock"
 tt.main_script.update = catapult_controller_update
 tt.initial_angle = d2r(0)
@@ -569,9 +578,10 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.2, 255}}
 tt.tween.remove = false
 tt.sound_events.shoot = "BombShootSound"
-
 tt = RT("denas_buffing_circle", "decal_timed")
+
 AC(tt, "tween")
+
 tt.render.sprites[1].name = "hero_king_glow"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.26)
 tt.render.sprites[1].animated = false
@@ -582,9 +592,10 @@ tt.tween.props[1].keys = {{0, 25.5}, {0.33, 255}, {1, 0}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_2(0.7, 0.7)}, {1, vec_2(1.8, 1.8)}}
-
 tt = RT("mod_denas_tower", "modifier")
+
 AC(tt, "render", "tween")
+
 tt.range_factor = 1.25
 tt.cooldown_factor = 0.75
 tt.main_script.insert = mod_tower_insert
@@ -598,7 +609,6 @@ tt.render.sprites[1].offset.y = 7
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.remove = false
-
 tt = RT("projectile_denas", "arrow")
 tt.bullet.flight_time = fts(20)
 tt.bullet.rotation_speed = 15 * FPS * math.pi / 180
@@ -611,28 +621,20 @@ tt.bullet.track_kills = true
 tt.bullet.xp_gain_factor = 2.42
 tt.render.sprites[1].name = "hero_king_projectiles_0001"
 tt.sound_events.insert = "AxeSound"
-
 tt = RT("projectile_denas_barrell", "projectile_denas")
 tt.render.sprites[1].name = "hero_king_projectiles_0002"
-
 tt = RT("projectile_denas_chicken", "projectile_denas")
 tt.render.sprites[1].name = "hero_king_projectiles_0003"
-
 tt = RT("projectile_denas_bottle", "projectile_denas")
 tt.render.sprites[1].name = "hero_king_projectiles_0004"
-
 tt = RT("projectile_denas_melee", "projectile_denas")
 tt.bullet.flight_time = fts(13)
-
 tt = RT("projectile_denas_melee_barrell", "projectile_denas_barrell")
 tt.bullet.flight_time = fts(13)
-
 tt = RT("projectile_denas_melee_chicken", "projectile_denas_chicken")
 tt.bullet.flight_time = fts(13)
-
 tt = RT("projectile_denas_melee_bottle", "projectile_denas_bottle")
 tt.bullet.flight_time = fts(13)
-
 tt = RT("denas_catapult_rock", "bomb")
 tt.bullet.flight_time = fts(45)
 tt.bullet.damage_radius = 55
@@ -643,9 +645,10 @@ tt.bullet.particles_name = "ps_power_fireball"
 tt.render.sprites[1].name = "hero_king_catapultProjectile"
 tt.render.sprites[1].scale = vec_2(0.7, 0.7)
 tt.sound_events.insert = nil
-
 tt = RT("denas_buff_aura", "aura")
+
 AC(tt, "render", "tween")
+
 tt.aura.duration = 1.63
 tt.entity = "denas_buffing_circle"
 tt.main_script.update = buff_aura_update
@@ -656,4 +659,3 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.disabled = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.13, 255}, {1.63, 255}, {2.76, 0}}
-

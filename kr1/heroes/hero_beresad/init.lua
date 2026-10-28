@@ -25,6 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_beresad.templates"},
+	animations = {"heroes.hero_beresad.animations"},
+	sounds = {"heroes.hero_beresad.sounds"},
+	groups = {"heroes.hero_beresad.groups"},
 
 	name_style = {
 		margin = 0,
