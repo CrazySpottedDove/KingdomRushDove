@@ -1049,51 +1049,6 @@ return {
 		prefix = "boss_ainyl_shield_small",
 		to = 6
 	},
-	alien_abduction_ship_beam = {
-		from = 1,
-		prefix = "hero_alien_motherShip_Attack",
-		to = 35
-	},
-	alien_abduction_ship_lightning_1 = {
-		from = 1,
-		prefix = "hero_alien_motherShip_Lightening",
-		to = 12
-	},
-	alien_abduction_ship_lightning_2 = {
-		from = 1,
-		prefix = "hero_alien_motherShip_Lightening2",
-		to = 12
-	},
-	alien_drone_appear_long = {
-		from = 1,
-		prefix = "hero_alien_ship",
-		to = 16
-	},
-	alien_drone_appear_short = {
-		from = 13,
-		prefix = "hero_alien_ship",
-		to = 16
-	},
-	alien_drone_attack_beam = {
-		from = 1,
-		prefix = "hero_alien_shipAttack",
-		to = 8
-	},
-	alien_drone_attack_decal = {
-		from = 1,
-		prefix = "hero_alien_shipAttackDecal",
-		to = 12
-	},
-	alien_drone_disappear_long = {
-		from = 31,
-		prefix = "hero_alien_ship",
-		to = 46
-	},
-	alien_drone_disappear_short = {
-		from = 31,
-		prefix = "hero_alien_ship",
-		to = 34
-	},
 	alien_drone_idle = {
 		from = 17,
 		prefix = "hero_alien_ship",
@@ -1118,21 +1073,6 @@ return {
 		from = 1,
 		prefix = "AlienEgg",
 		to = 20
-	},
-	alien_glaive = {
-		from = 1,
-		prefix = "hero_alien_proy",
-		to = 8
-	},
-	alien_glaive_hit = {
-		from = 1,
-		prefix = "hero_alien_proyHit",
-		to = 7
-	},
-	alien_glaive_trail = {
-		from = 1,
-		prefix = "hero_alien_proyParticle",
-		to = 12
 	},
 	alien_spit_aura = {
 		from = 1,
@@ -3334,21 +3274,6 @@ return {
 		prefix = "hero_pirate_barrelExplosion",
 		to = 18
 	},
-	barrel_fragment = {
-		from = 1,
-		prefix = "hero_pirate_barrelFire",
-		to = 6
-	},
-	barrel_fragment_ground_explosion = {
-		from = 2,
-		prefix = "hero_pirate_barrelFireExplosion",
-		to = 14
-	},
-	barrel_fragment_trail = {
-		from = 1,
-		prefix = "hero_pirate_barrelFireParticle",
-		to = 15
-	},
 	barrel_tower_berserker_unit_attack = {
 		from = 41,
 		prefix = "barrel_tower_berserker_unit",
@@ -3618,31 +3543,6 @@ return {
 		from = 102,
 		prefix = "bear_woodcutter",
 		to = 130
-	},
-	beastmaster_boar_attack = {
-		from = 9,
-		prefix = "hero_beastMaster_pumba",
-		to = 24
-	},
-	beastmaster_boar_death = {
-		from = 44,
-		prefix = "hero_beastMaster_pumba",
-		to = 61
-	},
-	beastmaster_boar_idle = {
-		from = 1,
-		prefix = "hero_beastMaster_pumba",
-		to = 1
-	},
-	beastmaster_boar_running = {
-		from = 2,
-		prefix = "hero_beastMaster_pumba",
-		to = 8
-	},
-	beastmaster_boar_spawn = {
-		from = 25,
-		prefix = "hero_beastMaster_pumba",
-		to = 43
 	},
 	big_terracota_attack = {
 		from = 116,
@@ -4249,21 +4149,6 @@ return {
 		prefix = "plant_magicBlosom_bolt",
 		to = 1
 	},
-	bolt_priest_flying = {
-		from = 1,
-		prefix = "hero_priest_bolt",
-		to = 2
-	},
-	bolt_priest_hit = {
-		from = 3,
-		prefix = "hero_priest_bolt",
-		to = 10
-	},
-	bolt_priest_idle = {
-		from = 1,
-		prefix = "hero_priest_bolt",
-		to = 2
-	},
 	bolt_shaman_necro_flying = {
 		from = 1,
 		prefix = "CanibalShamanNecroBolt",
@@ -4298,16 +4183,6 @@ return {
 		from = 1,
 		prefix = "sorcererbolt_star",
 		to = 8
-	},
-	bolt_voodoo_witch_flying = {
-		from = 1,
-		prefix = "voodoo_proy",
-		to = 15
-	},
-	bolt_voodoo_witch_hit = {
-		from = 16,
-		prefix = "voodoo_proy",
-		to = 25
 	},
 	bolt_wild_magus_flying = {
 		from = 1,
@@ -7772,31 +7647,6 @@ return {
 		prefix = "elynia_rayDecal",
 		to = 6
 	},
-	decal_falcon_attack_fly = {
-		from = 13,
-		prefix = "hero_beastMaster_bird",
-		to = 13
-	},
-	decal_falcon_attack_hit = {
-		from = 14,
-		prefix = "hero_beastMaster_bird",
-		to = 22
-	},
-	decal_falcon_death = {
-		from = 40,
-		prefix = "hero_beastMaster_bird",
-		to = 57
-	},
-	decal_falcon_idle = {
-		from = 1,
-		prefix = "hero_beastMaster_bird",
-		to = 12
-	},
-	decal_falcon_respawn = {
-		from = 24,
-		prefix = "hero_beastMaster_bird",
-		to = 39
-	},
 	decal_fiery_nut_scorched = {
 		from = 1,
 		prefix = "artillery_tree_scorched",
@@ -8074,11 +7924,6 @@ return {
 		prefix = "molino_small",
 		to = 16
 	},
-	decal_minotaur_roaroffury_horns = {
-		from = 1,
-		prefix = "minotaur_towerBuff_horns",
-		to = 12
-	},
 	decal_mod_forest_circle = {
 		from = 1,
 		prefix = "forestKeeper_soldierBuff_decal",
@@ -8234,16 +8079,6 @@ return {
 		prefix = "Stage8_Predator",
 		to = 43
 	},
-	decal_priest_armor = {
-		from = 1,
-		prefix = "hero_barracks_buff",
-		to = 28
-	},
-	decal_priest_consecrate = {
-		from = 1,
-		prefix = "hero_priest_swords",
-		to = 24
-	},
 	decal_rabbit_ears = {
 		from = 1,
 		prefix = "stage1_rabbit",
@@ -8294,21 +8129,6 @@ return {
 		from = 17,
 		prefix = "rally_feedback",
 		to = 25
-	},
-	decal_rhino_walkingDown = {
-		from = 23,
-		prefix = "hero_beastMaster_Rhyno",
-		to = 33
-	},
-	decal_rhino_walkingRightLeft = {
-		from = 1,
-		prefix = "hero_beastMaster_Rhyno",
-		to = 11
-	},
-	decal_rhino_walkingUp = {
-		from = 12,
-		prefix = "hero_beastMaster_Rhyno",
-		to = 22
 	},
 	decal_river_object_barrel_fall = {
 		from = 31,
@@ -9574,11 +9394,6 @@ return {
 		prefix = "Stage9_Fire",
 		to = 12
 	},
-	decal_voodoo_witch_death_aura = {
-		from = 1,
-		prefix = "voodoo_buff_base",
-		to = 80
-	},
 	decal_vulture_idle = {
 		from = 1,
 		prefix = "Stage3_Vulture",
@@ -10699,90 +10514,10 @@ return {
 		prefix = "doom_bringer_tower_stun",
 		to = 46
 	},
-	dracolich_disease_big = {
-		from = 1,
-		prefix = "Halloween_hero_bones_disease_big",
-		to = 26
-	},
-	dracolich_disease_explosion = {
-		from = 1,
-		prefix = "Halloween_hero_bones_disease_explotion",
-		to = 15
-	},
-	dracolich_disease_small = {
-		from = 1,
-		prefix = "Halloween_hero_bones_disease_small",
-		to = 26
-	},
-	dracolich_fireball_particle_1 = {
-		from = 1,
-		prefix = "Halloween_hero_bones_proyParticle",
-		to = 8
-	},
-	dracolich_fireball_particle_2 = {
-		from = 9,
-		prefix = "Halloween_hero_bones_proyParticle",
-		to = 16
-	},
-	dracolich_plague_carrier = {
-		from = 1,
-		prefix = "Halloween_hero_bones_soul",
-		to = 6
-	},
-	dracolich_spine1_end = {
-		from = 31,
-		prefix = "Halloween_hero_bones_attack",
-		to = 48
-	},
-	dracolich_spine1_start = {
-		from = 1,
-		prefix = "Halloween_hero_bones_attack",
-		to = 30
-	},
-	dracolich_spine2_end = {
-		from = 79,
-		prefix = "Halloween_hero_bones_attack",
-		to = 95
-	},
-	dracolich_spine2_start = {
-		from = 49,
-		prefix = "Halloween_hero_bones_attack",
-		to = 78
-	},
-	dracolich_spine3_end = {
-		from = 127,
-		prefix = "Halloween_hero_bones_attack",
-		to = 144
-	},
-	dracolich_spine3_start = {
-		from = 96,
-		prefix = "Halloween_hero_bones_attack",
-		to = 126
-	},
 	dracula_damage_aura = {
 		from = 1,
 		prefix = "HalloweenBoss_Fx",
 		to = 16
-	},
-	dragon_breath_fire = {
-		from = 1,
-		prefix = "hero_dragon_flameBurnFire",
-		to = 18
-	},
-	dragon_breath_fire_decal = {
-		from = 1,
-		prefix = "hero_dragon_fireDecal",
-		to = 32
-	},
-	dragon_breath_particle = {
-		from = 1,
-		prefix = "hero_dragon_flameBurnParticle",
-		to = 6
-	},
-	dragon_fierymist_particle = {
-		from = 1,
-		prefix = "hero_dragon_smokeParticle",
-		to = 10
 	},
 	dragon_sheepy_click_1 = {
 		from = 8,
@@ -10818,31 +10553,6 @@ return {
 		from = 112,
 		prefix = "dragon_sheepy_sheepy",
 		to = 113
-	},
-	dragon_wildfirebarrage_decal = {
-		from = 7,
-		prefix = "hero_dragon_fireDecal",
-		to = 32
-	},
-	dragon_wildfirebarrage_explosion_1 = {
-		from = 1,
-		prefix = "hero_dragon_fireThrow_explosion1",
-		to = 15
-	},
-	dragon_wildfirebarrage_explosion_2 = {
-		from = 1,
-		prefix = "hero_dragon_fireThrow_explosion2",
-		to = 21
-	},
-	dragon_wildfirebarrage_particle = {
-		from = 1,
-		prefix = "hero_dragon_fireThrow_particle",
-		to = 3
-	},
-	dragon_wildfirebarrage_projectile = {
-		from = 1,
-		prefix = "hero_dragon_fireThrow_proy",
-		to = 6
 	},
 	drainblood_cucoon_death = {
 		from = 24,
@@ -18822,11 +18532,6 @@ return {
 		prefix = "faustus_hero_magicFire_hit",
 		to = 10
 	},
-	fx_bullet_mirage_hit = {
-		from = 2,
-		prefix = "proy_mirage",
-		to = 8
-	},
 	fx_bullet_pixie_instakill_hit = {
 		from = 1,
 		prefix = "pixie_mushroomHit_big",
@@ -18927,46 +18632,6 @@ return {
 		prefix = "soldier_djinn_polysmoke",
 		to = 14
 	},
-	fx_dracolich_explosion = {
-		from = 1,
-		prefix = "Halloween_hero_bones_explosion",
-		to = 14
-	},
-	fx_dracolich_fireball_explosion_air = {
-		from = 1,
-		prefix = "Halloween_hero_bones_proyExplotionAir",
-		to = 18
-	},
-	fx_dracolich_fireball_explosion_ground = {
-		from = 1,
-		prefix = "Halloween_hero_bones_proyExplosion",
-		to = 14
-	},
-	fx_dracolich_skeleton_glow = {
-		from = 19,
-		prefix = "Halloween_hero_bones_layer2",
-		to = 42
-	},
-	fx_dragon_feast = {
-		from = 1,
-		prefix = "hero_dragon_groundAttack",
-		to = 15
-	},
-	fx_dragon_feast_explode = {
-		from = 1,
-		prefix = "hero_dragon_groundAttackKill",
-		to = 15
-	},
-	fx_dragon_range_attack = {
-		from = 1,
-		prefix = "hero_dragon_attack",
-		to = 9
-	},
-	fx_dragon_wildfirebarrage = {
-		from = 1,
-		prefix = "hero_dragon_fireThrow",
-		to = 14
-	},
 	fx_drow_queen_portal = {
 		from = 1,
 		prefix = "DarterEffectTeleport",
@@ -19016,16 +18681,6 @@ return {
 		from = 1,
 		prefix = "durax_hero_saphirefangultimate_complement_2",
 		to = 29
-	},
-	fx_dwarf_area_quake = {
-		from = 1,
-		prefix = "hero_reinforce_rocks",
-		to = 17
-	},
-	fx_dwarf_area_ring = {
-		from = 1,
-		prefix = "DwarfChampion_Ring",
-		to = 10
 	},
 	fx_eb_spider_jump_smoke = {
 		from = 1,
@@ -19092,11 +18747,6 @@ return {
 		prefix = "rodOfDragonfire_explosion",
 		to = 14
 	},
-	fx_fierymist_dragon = {
-		from = 1,
-		prefix = "hero_dragon_smokeDecal",
-		to = 27
-	},
 	fx_fireball_baby_ashbite_hit = {
 		from = 1,
 		prefix = "babyAshbite_proyHit",
@@ -19106,11 +18756,6 @@ return {
 		from = 1,
 		prefix = "babyAshbite_proyHitAir",
 		to = 14
-	},
-	fx_fireball_dragon_hit = {
-		from = 1,
-		prefix = "hero_dragon_fireThrow_explosion1",
-		to = 13
 	},
 	fx_fireball_veznan_demon_hit = {
 		from = 1,
@@ -19147,19 +18792,9 @@ return {
 		prefix = "crystalUnstable_healFx",
 		to = 25
 	},
-	fx_hero_crab_bubbles = {
-		from = 1,
-		prefix = "hero_crabman_invulnerable_effect_bubbles",
-		to = 30
-	},
 	fx_hero_crab_quake = {
 		from = 1,
 		prefix = "hero_reinforce_rocks",
-		to = 17
-	},
-	fx_hero_crab_splash = {
-		from = 1,
-		prefix = "hero_crabman_proySplash",
 		to = 17
 	},
 	fx_hero_elves_archer_ultimate_smoke = {
@@ -19237,16 +18872,6 @@ return {
 		prefix = "ancientNecropolisTeleport_decalFx",
 		to = 25
 	},
-	fx_minotaur_dust = {
-		from = 1,
-		prefix = "minotaur_dust",
-		to = 8
-	},
-	fx_minotaur_roarofury_scream = {
-		from = 1,
-		prefix = "minotaur_scream",
-		to = 36
-	},
 	fx_mod_pixie_polymorph = {
 		from = 1,
 		prefix = "pixie_polymorph_smoke_big",
@@ -19281,16 +18906,6 @@ return {
 		from = 1,
 		prefix = "Inferno_Moloch_Rocks",
 		to = 17
-	},
-	fx_monkey_god_angry = {
-		from = 1,
-		prefix = "hero_monkeyGod_angryGodEffect",
-		to = 10
-	},
-	fx_monkey_god_palm = {
-		from = 1,
-		prefix = "hero_monkeyGod_monkeyPalmEffect_big",
-		to = 8
 	},
 	fx_myconid_spores = {
 		from = 1,
@@ -19351,21 +18966,6 @@ return {
 		from = 1,
 		prefix = "lightning_storm_rain_splash",
 		to = 10
-	},
-	fx_priest_armor = {
-		from = 1,
-		prefix = "hero_priest_shieldFx",
-		to = 20
-	},
-	fx_priest_heal = {
-		from = 1,
-		prefix = "hero_priest_healFx",
-		to = 25
-	},
-	fx_priest_revive = {
-		from = 1,
-		prefix = "hero_priest_revive",
-		to = 17
 	},
 	fx_rabbit_kamihare_explode = {
 		from = 1,
@@ -19617,11 +19217,6 @@ return {
 		prefix = "teleport_bubble",
 		to = 24
 	},
-	fx_vampiress_transform = {
-		from = 21,
-		prefix = "Halloween_hero_vamp",
-		to = 36
-	},
 	fx_veznan_arcanenova = {
 		from = 1,
 		prefix = "veznan_hero_arcaneNova",
@@ -19653,11 +19248,6 @@ return {
 		},
 		prefix = "boss_veznan_demonFire",
 		to = 11
-	},
-	fx_voodoo_witch_skull_explosion = {
-		from = 1,
-		prefix = "voodoo_skull_exlposion",
-		to = 16
 	},
 	fx_water_bubble_big = {
 		from = 1,
@@ -19698,11 +19288,6 @@ return {
 		from = 1,
 		prefix = "hero_wilburg_smoke",
 		to = 12
-	},
-	fx_wizard_disintegrate = {
-		from = 1,
-		prefix = "hero_wizard_papers",
-		to = 31
 	},
 	fx_wrath_of_elynia_creep_explosion = {
 		from = 1,
@@ -20001,26 +19586,6 @@ return {
 		from = 1,
 		prefix = "hero_giant_decal",
 		to = 21
-	},
-	giant_boulder_explosion = {
-		from = 2,
-		prefix = "hero_giant_proy",
-		to = 15
-	},
-	giant_ice_big = {
-		from = 1,
-		prefix = "hero_giant_ice_big",
-		to = 12
-	},
-	giant_ice_small = {
-		from = 1,
-		prefix = "hero_giant_ice_small",
-		to = 12
-	},
-	giant_stomp_stones = {
-		from = 2,
-		prefix = "hero_giant_stones",
-		to = 15
 	},
 	glare_eye_big_idle = {
 		from = 1,
@@ -22333,56 +21898,6 @@ return {
 		prefix = "hermit_toad_tower_trail",
 		to = 18
 	},
-	hero_alien_abduction = {
-		from = 105,
-		prefix = "hero_alien",
-		to = 138
-	},
-	hero_alien_attack = {
-		from = 7,
-		prefix = "hero_alien",
-		to = 32
-	},
-	hero_alien_death = {
-		from = 204,
-		prefix = "hero_alien",
-		to = 215
-	},
-	hero_alien_idle = {
-		from = 1,
-		prefix = "hero_alien",
-		to = 1
-	},
-	hero_alien_levelup = {
-		from = 216,
-		prefix = "hero_alien",
-		to = 232
-	},
-	hero_alien_purification = {
-		from = 62,
-		prefix = "hero_alien",
-		to = 104
-	},
-	hero_alien_respawn = {
-		from = 216,
-		prefix = "hero_alien",
-		to = 232
-	},
-	hero_alien_running = {
-		from = 2,
-		prefix = "hero_alien",
-		to = 6
-	},
-	hero_alien_selfdestruct = {
-		from = 138,
-		prefix = "hero_alien",
-		to = 203
-	},
-	hero_alien_shoot = {
-		from = 33,
-		prefix = "hero_alien",
-		to = 61
-	},
 	hero_alleria5_attack = {
 		from = 80,
 		prefix = "hero_alleria5",
@@ -22500,76 +22015,6 @@ return {
 			{63, 63},
 			{74, 79}
 		}
-	},
-	hero_alric_attack = {
-		from = 7,
-		prefix = "hero_hammerhold",
-		to = 23
-	},
-	hero_alric_attack2 = {
-		from = 24,
-		prefix = "hero_hammerhold",
-		to = 39
-	},
-	hero_alric_death = {
-		from = 105,
-		prefix = "hero_hammerhold",
-		to = 111
-	},
-	hero_alric_flurry_end = {
-		from = 63,
-		prefix = "hero_hammerhold",
-		to = 70
-	},
-	hero_alric_flurry_loop = {
-		from = 50,
-		prefix = "hero_hammerhold",
-		to = 62
-	},
-	hero_alric_flurry_start = {
-		from = 40,
-		prefix = "hero_hammerhold",
-		to = 49
-	},
-	hero_alric_idle = {
-		from = 1,
-		prefix = "hero_hammerhold",
-		to = 1
-	},
-	hero_alric_levelup = {
-		from = 118,
-		prefix = "hero_hammerhold",
-		to = 136
-	},
-	hero_alric_respawn = {
-		from = 118,
-		prefix = "hero_hammerhold",
-		to = 136
-	},
-	hero_alric_running = {
-		from = 2,
-		prefix = "hero_hammerhold",
-		to = 6
-	},
-	hero_alric_sand_travel_end = {
-		from = 37,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 38
-	},
-	hero_alric_sand_travel_loop = {
-		from = 29,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 36
-	},
-	hero_alric_sand_travel_start = {
-		from = 25,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 28
-	},
-	hero_alric_sandwarrior = {
-		from = 71,
-		prefix = "hero_hammerhold",
-		to = 104
 	},
 	hero_arivan_attack = {
 		from = 18,
@@ -22931,51 +22376,6 @@ return {
 		prefix = "hero_aurion_ulti",
 		to = 77
 	},
-	hero_beastmaster_attack = {
-		from = 8,
-		prefix = "hero_beastMaster",
-		to = 31
-	},
-	hero_beastmaster_death = {
-		from = 164,
-		prefix = "hero_beastMaster",
-		to = 175
-	},
-	hero_beastmaster_idle = {
-		from = 1,
-		prefix = "hero_beastMaster",
-		to = 1
-	},
-	hero_beastmaster_lash = {
-		from = 32,
-		prefix = "hero_beastMaster",
-		to = 59
-	},
-	hero_beastmaster_levelup = {
-		from = 150,
-		prefix = "hero_beastMaster",
-		to = 163
-	},
-	hero_beastmaster_pets = {
-		from = 60,
-		prefix = "hero_beastMaster",
-		to = 105
-	},
-	hero_beastmaster_respawn = {
-		from = 150,
-		prefix = "hero_beastMaster",
-		to = 163
-	},
-	hero_beastmaster_running = {
-		from = 2,
-		prefix = "hero_beastMaster",
-		to = 7
-	},
-	hero_beastmaster_stampede = {
-		from = 106,
-		prefix = "hero_beastMaster",
-		to = 149
-	},
 	hero_bolverk_attack = {
 		from = 9,
 		prefix = "bolverk_hero",
@@ -23230,141 +22630,6 @@ return {
 		from = 412,
 		prefix = "catha_hero",
 		to = 452
-	},
-	hero_crab_attack = {
-		from = 18,
-		prefix = "hero_crabman",
-		to = 41
-	},
-	hero_crab_burrow_down = {
-		from = 187,
-		prefix = "hero_crabman",
-		to = 200
-	},
-	hero_crab_burrow_down_water = {
-		from = 275,
-		prefix = "hero_crabman",
-		to = 288
-	},
-	hero_crab_burrow_in = {
-		from = 119,
-		prefix = "hero_crabman",
-		to = 127
-	},
-	hero_crab_burrow_out = {
-		from = 136,
-		prefix = "hero_crabman",
-		to = 153
-	},
-	hero_crab_burrow_side = {
-		from = 172,
-		prefix = "hero_crabman",
-		to = 186
-	},
-	hero_crab_burrow_side_water = {
-		from = 246,
-		prefix = "hero_crabman",
-		to = 260
-	},
-	hero_crab_burrow_up = {
-		from = 158,
-		prefix = "hero_crabman",
-		to = 171
-	},
-	hero_crab_burrow_up_water = {
-		from = 261,
-		prefix = "hero_crabman",
-		to = 274
-	},
-	hero_crab_cannon = {
-		from = 69,
-		prefix = "hero_crabman",
-		to = 118
-	},
-	hero_crab_death = {
-		from = 201,
-		prefix = "hero_crabman",
-		to = 229
-	},
-	hero_crab_idle = {
-		from = 1,
-		prefix = "hero_crabman",
-		to = 1
-	},
-	hero_crab_invuln = {
-		from = 289,
-		prefix = "hero_crabman",
-		to = 309
-	},
-	hero_crab_levelup = {
-		from = 230,
-		prefix = "hero_crabman",
-		to = 245
-	},
-	hero_crab_pincer = {
-		from = 42,
-		prefix = "hero_crabman",
-		to = 68
-	},
-	hero_crab_respawn = {
-		from = 230,
-		prefix = "hero_crabman",
-		to = 245
-	},
-	hero_crab_running = {
-		from = 1,
-		prefix = "hero_crabman",
-		to = 16
-	},
-	hero_crab_small_cannon = {
-		from = 311,
-		prefix = "hero_crabman",
-		to = 334
-	},
-	hero_dracolich_death = {
-		from = 78,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 97
-	},
-	hero_dracolich_golem = {
-		from = 19,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 42
-	},
-	hero_dracolich_idle = {
-		from = 1,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 18
-	},
-	hero_dracolich_levelup = {
-		from = 1,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 1
-	},
-	hero_dracolich_nova = {
-		from = 124,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 149
-	},
-	hero_dracolich_plague = {
-		from = 43,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 77
-	},
-	hero_dracolich_range_attack = {
-		from = 43,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 77
-	},
-	hero_dracolich_respawn = {
-		from = 98,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 123
-	},
-	hero_dracolich_spinerain = {
-		from = 19,
-		prefix = "Halloween_hero_bones_layer1",
-		to = 42
 	},
 	hero_dragon_arborean_arborean_attack = {
 		from = 84,
@@ -24011,100 +23276,10 @@ return {
 		prefix = "hero_dragon_bone_shadow",
 		to = 1
 	},
-	hero_dragon_breath = {
-		from = 55,
-		prefix = "hero_dragon",
-		to = 93
-	},
-	hero_dragon_death = {
-		from = 151,
-		prefix = "hero_dragon",
-		to = 164
-	},
-	hero_dragon_feast = {
-		from = 118,
-		prefix = "hero_dragon",
-		to = 150
-	},
 	hero_dragon_gem_shadow = {
 		from = 1,
 		prefix = "hero_dragon_gem_shadow",
 		to = 1
-	},
-	hero_dragon_idle = {
-		from = 1,
-		prefix = "hero_dragon",
-		to = 18
-	},
-	hero_dragon_levelup = {
-		from = 1,
-		prefix = "hero_dragon",
-		to = 1
-	},
-	hero_dragon_mist = {
-		from = 55,
-		prefix = "hero_dragon",
-		to = 93
-	},
-	hero_dragon_range_attack = {
-		from = 19,
-		prefix = "hero_dragon",
-		to = 36
-	},
-	hero_dragon_respawn = {
-		from = 165,
-		prefix = "hero_dragon",
-		to = 180
-	},
-	hero_dragon_wildfirebarrage = {
-		from = 37,
-		prefix = "hero_dragon",
-		to = 54
-	},
-	hero_dwarf_attack = {
-		from = 7,
-		prefix = "DwarfChampion",
-		to = 25
-	},
-	hero_dwarf_attack2 = {
-		from = 25,
-		prefix = "DwarfChampion",
-		to = 71
-	},
-	hero_dwarf_death = {
-		from = 89,
-		prefix = "DwarfChampion",
-		to = 96
-	},
-	hero_dwarf_giant_end = {
-		from = 71,
-		prefix = "DwarfChampion",
-		to = 71
-	},
-	hero_dwarf_giant_start = {
-		from = 25,
-		prefix = "DwarfChampion",
-		to = 25
-	},
-	hero_dwarf_idle = {
-		from = 1,
-		prefix = "DwarfChampion",
-		to = 1
-	},
-	hero_dwarf_levelup = {
-		from = 72,
-		prefix = "DwarfChampion",
-		to = 88
-	},
-	hero_dwarf_respawn = {
-		from = 72,
-		prefix = "DwarfChampion",
-		to = 88
-	},
-	hero_dwarf_running = {
-		from = 2,
-		prefix = "DwarfChampion",
-		to = 6
 	},
 	hero_elves_archer_attack = {
 		from = 80,
@@ -24544,61 +23719,6 @@ return {
 		from = 103,
 		prefix = "faustus_hero",
 		to = 138
-	},
-	hero_giant_attack = {
-		from = 26,
-		prefix = "hero_giant",
-		to = 42
-	},
-	hero_giant_death = {
-		from = 118,
-		prefix = "hero_giant",
-		to = 130
-	},
-	hero_giant_death_remains = {
-		from = 131,
-		prefix = "hero_giant",
-		to = 131
-	},
-	hero_giant_death_rocks = {
-		from = 148,
-		prefix = "hero_giant",
-		to = 162
-	},
-	hero_giant_idle = {
-		from = 1,
-		prefix = "hero_giant",
-		to = 1
-	},
-	hero_giant_levelup = {
-		from = 132,
-		prefix = "hero_giant",
-		to = 146
-	},
-	hero_giant_massive = {
-		from = 43,
-		prefix = "hero_giant",
-		to = 67
-	},
-	hero_giant_ranged = {
-		from = 69,
-		prefix = "hero_giant",
-		to = 99
-	},
-	hero_giant_respawn = {
-		from = 132,
-		prefix = "hero_giant",
-		to = 146
-	},
-	hero_giant_running = {
-		from = 2,
-		prefix = "hero_giant",
-		to = 25
-	},
-	hero_giant_stomp = {
-		from = 100,
-		prefix = "hero_giant",
-		to = 116
 	},
 	hero_king_denas_attack = {
 		from = 18,
@@ -25134,331 +24254,6 @@ return {
 		from = 193,
 		prefix = "lynn_hero",
 		to = 240
-	},
-	hero_minotaur_attack = {
-		from = 20,
-		prefix = "minotaur",
-		to = 41
-	},
-	hero_minotaur_axe = {
-		from = 42,
-		prefix = "minotaur",
-		to = 75
-	},
-	hero_minotaur_daedalus = {
-		from = 104,
-		prefix = "minotaur",
-		to = 136
-	},
-	hero_minotaur_death = {
-		from = 213,
-		prefix = "minotaur",
-		to = 233
-	},
-	hero_minotaur_idle = {
-		from = 1,
-		prefix = "minotaur",
-		to = 1
-	},
-	hero_minotaur_levelup = {
-		from = 234,
-		prefix = "minotaur",
-		to = 255
-	},
-	hero_minotaur_respawn = {
-		from = 234,
-		prefix = "minotaur",
-		to = 255
-	},
-	hero_minotaur_roar = {
-		from = 137,
-		prefix = "minotaur",
-		to = 183
-	},
-	hero_minotaur_running = {
-		from = 2,
-		prefix = "minotaur",
-		to = 19
-	},
-	hero_minotaur_rush_end = {
-		from = 200,
-		prefix = "minotaur",
-		to = 213
-	},
-	hero_minotaur_rush_loop = {
-		from = 192,
-		prefix = "minotaur",
-		to = 199
-	},
-	hero_minotaur_rush_start = {
-		from = 184,
-		prefix = "minotaur",
-		to = 191
-	},
-	hero_minotaur_spin = {
-		from = 76,
-		prefix = "minotaur",
-		to = 103
-	},
-	hero_mirage_appear = {
-		from = 63,
-		prefix = "hero_mirage",
-		to = 69
-	},
-	hero_mirage_attack = {
-		from = 7,
-		prefix = "hero_mirage",
-		to = 30
-	},
-	hero_mirage_death = {
-		from = 144,
-		prefix = "hero_mirage",
-		to = 151
-	},
-	hero_mirage_disappear = {
-		from = 59,
-		prefix = "hero_mirage",
-		to = 62
-	},
-	hero_mirage_idle = {
-		from = 1,
-		prefix = "hero_mirage",
-		to = 1
-	},
-	hero_mirage_lethal_attack = {
-		from = 70,
-		prefix = "hero_mirage",
-		to = 91
-	},
-	hero_mirage_lethal_in = {
-		from = 95,
-		prefix = "hero_mirage",
-		to = 101
-	},
-	hero_mirage_lethal_out = {
-		from = 59,
-		prefix = "hero_mirage",
-		to = 62
-	},
-	hero_mirage_levelup = {
-		from = 128,
-		prefix = "hero_mirage",
-		to = 143
-	},
-	hero_mirage_respawn = {
-		from = 128,
-		prefix = "hero_mirage",
-		to = 143
-	},
-	hero_mirage_running = {
-		from = 2,
-		prefix = "hero_mirage",
-		to = 6
-	},
-	hero_mirage_shadows = {
-		from = 105,
-		prefix = "hero_mirage",
-		to = 127
-	},
-	hero_mirage_shoot = {
-		from = 31,
-		prefix = "hero_mirage",
-		to = 45
-	},
-	hero_mirage_shoot_up = {
-		from = 46,
-		prefix = "hero_mirage",
-		to = 58
-	},
-	hero_monk_attack1 = {
-		from = 52,
-		prefix = "hero_kungFu",
-		to = 77
-	},
-	hero_monk_attack2 = {
-		from = 22,
-		prefix = "hero_kungFu",
-		to = 49
-	},
-	hero_monk_attack3 = {
-		from = 78,
-		prefix = "hero_kungFu",
-		to = 97
-	},
-	hero_monk_crane = {
-		from = 119,
-		prefix = "hero_kungFu",
-		to = 135
-	},
-	hero_monk_death = {
-		from = 361,
-		prefix = "hero_kungFu",
-		to = 377
-	},
-	hero_monk_dragon = {
-		from = 265,
-		prefix = "hero_kungFu",
-		to = 291
-	},
-	hero_monk_idle = {
-		from = 1,
-		prefix = "hero_kungFu",
-		to = 16
-	},
-	hero_monk_leopard_end = {
-		from = 214,
-		prefix = "hero_kungFu",
-		to = 218
-	},
-	hero_monk_leopard_hit1 = {
-		from = 178,
-		prefix = "hero_kungFu",
-		to = 181
-	},
-	hero_monk_leopard_hit2 = {
-		from = 182,
-		prefix = "hero_kungFu",
-		to = 186
-	},
-	hero_monk_leopard_hit3 = {
-		from = 187,
-		prefix = "hero_kungFu",
-		to = 191
-	},
-	hero_monk_leopard_hit4 = {
-		from = 192,
-		prefix = "hero_kungFu",
-		to = 196
-	},
-	hero_monk_leopard_start = {
-		from = 166,
-		prefix = "hero_kungFu",
-		to = 171
-	},
-	hero_monk_levelup = {
-		from = 328,
-		prefix = "hero_kungFu",
-		to = 344
-	},
-	hero_monk_respawn = {
-		from = 378,
-		prefix = "hero_kungFu",
-		to = 396
-	},
-	hero_monk_running = {
-		from = 17,
-		prefix = "hero_kungFu",
-		to = 21
-	},
-	hero_monk_snake = {
-		from = 223,
-		prefix = "hero_kungFu",
-		to = 243
-	},
-	hero_monk_tiger = {
-		from = 105,
-		prefix = "hero_kungFu",
-		to = 118
-	},
-	hero_monkey_god_angry_end = {
-		from = 214,
-		prefix = "hero_monkeyGod",
-		to = 219
-	},
-	hero_monkey_god_angry_loop = {
-		from = 196,
-		prefix = "hero_monkeyGod",
-		to = 213
-	},
-	hero_monkey_god_angry_start = {
-		from = 182,
-		prefix = "hero_monkeyGod",
-		to = 195
-	},
-	hero_monkey_god_attack = {
-		from = 20,
-		prefix = "hero_monkeyGod",
-		to = 37
-	},
-	hero_monkey_god_attack2 = {
-		from = 38,
-		prefix = "hero_monkeyGod",
-		to = 55
-	},
-	hero_monkey_god_cloud_end = {
-		from = 256,
-		prefix = "hero_monkeyGod",
-		to = 265
-	},
-	hero_monkey_god_cloud_loop = {
-		from = 245,
-		prefix = "hero_monkeyGod",
-		to = 245
-	},
-	hero_monkey_god_cloud_start = {
-		from = 247,
-		prefix = "hero_monkeyGod",
-		to = 255
-	},
-	hero_monkey_god_death = {
-		from = 56,
-		prefix = "hero_monkeyGod",
-		to = 79
-	},
-	hero_monkey_god_idle = {
-		from = 1,
-		prefix = "hero_monkeyGod",
-		to = 1
-	},
-	hero_monkey_god_levelup = {
-		from = 220,
-		prefix = "hero_monkeyGod",
-		to = 244
-	},
-	hero_monkey_god_palm = {
-		from = 160,
-		prefix = "hero_monkeyGod",
-		to = 181
-	},
-	hero_monkey_god_pole_end = {
-		from = 94,
-		prefix = "hero_monkeyGod",
-		to = 100
-	},
-	hero_monkey_god_pole_loop = {
-		from = 84,
-		prefix = "hero_monkeyGod",
-		to = 93
-	},
-	hero_monkey_god_pole_start = {
-		from = 80,
-		prefix = "hero_monkeyGod",
-		to = 83
-	},
-	hero_monkey_god_respawn = {
-		from = 220,
-		prefix = "hero_monkeyGod",
-		to = 244
-	},
-	hero_monkey_god_running = {
-		from = 2,
-		prefix = "hero_monkeyGod",
-		to = 19
-	},
-	hero_monkey_god_tetsubo_end = {
-		from = 137,
-		prefix = "hero_monkeyGod",
-		to = 159
-	},
-	hero_monkey_god_tetsubo_loop = {
-		from = 125,
-		prefix = "hero_monkeyGod",
-		to = 136
-	},
-	hero_monkey_god_tetsubo_start = {
-		from = 101,
-		prefix = "hero_monkeyGod",
-		to = 124
 	},
 	hero_murglun_attack = {
 		from = 20,
@@ -26272,51 +25067,6 @@ return {
 		prefix = "phoenix_hero",
 		to = 116
 	},
-	hero_pirate_attack = {
-		from = 8,
-		prefix = "hero_pirate",
-		to = 23
-	},
-	hero_pirate_bombing = {
-		from = 172,
-		prefix = "hero_pirate",
-		to = 205
-	},
-	hero_pirate_death = {
-		from = 206,
-		prefix = "hero_pirate",
-		to = 220
-	},
-	hero_pirate_idle = {
-		from = 1,
-		prefix = "hero_pirate",
-		to = 1
-	},
-	hero_pirate_kraken = {
-		from = 108,
-		prefix = "hero_pirate",
-		to = 153
-	},
-	hero_pirate_levelup = {
-		from = 154,
-		prefix = "hero_pirate",
-		to = 171
-	},
-	hero_pirate_respawn = {
-		from = 154,
-		prefix = "hero_pirate",
-		to = 171
-	},
-	hero_pirate_running = {
-		from = 2,
-		prefix = "hero_pirate",
-		to = 7
-	},
-	hero_pirate_shoot = {
-		from = 24,
-		prefix = "hero_pirate",
-		to = 51
-	},
 	hero_pirate_shootDown = {
 		from = 52,
 		prefix = "hero_pirate",
@@ -26326,61 +25076,6 @@ return {
 		from = 80,
 		prefix = "hero_pirate",
 		to = 107
-	},
-	hero_priest_attack = {
-		from = 30,
-		prefix = "hero_priest",
-		to = 51
-	},
-	hero_priest_consecrate = {
-		from = 91,
-		prefix = "hero_priest",
-		to = 121
-	},
-	hero_priest_death = {
-		from = 83,
-		prefix = "hero_priest",
-		to = 90
-	},
-	hero_priest_holylight = {
-		from = 52,
-		prefix = "hero_priest",
-		to = 82
-	},
-	hero_priest_idle = {
-		from = 1,
-		prefix = "hero_priest",
-		to = 24
-	},
-	hero_priest_levelup = {
-		from = 193,
-		prefix = "hero_priest",
-		to = 209
-	},
-	hero_priest_respawn = {
-		from = 147,
-		prefix = "hero_priest",
-		to = 164
-	},
-	hero_priest_running = {
-		from = 25,
-		prefix = "hero_priest",
-		to = 29
-	},
-	hero_priest_shoot = {
-		from = 168,
-		prefix = "hero_priest",
-		to = 193
-	},
-	hero_priest_teleport_in = {
-		from = 147,
-		prefix = "hero_priest",
-		to = 164
-	},
-	hero_priest_teleport_out = {
-		from = 122,
-		prefix = "hero_priest",
-		to = 136
 	},
 	hero_raelyn_brutal_slash_decal_idle = {
 		from = 1,
@@ -27280,201 +25975,6 @@ return {
 		prefix = "hero_therien_void_prison_fx_small",
 		to = 88
 	},
-	hero_vampiress_attack = {
-		from = 79,
-		prefix = "Halloween_hero_vamp",
-		to = 104
-	},
-	hero_vampiress_bat_enter = {
-		from = 14,
-		prefix = "Halloween_hero_vamp",
-		to = 18
-	},
-	hero_vampiress_bat_exit = {
-		from = 130,
-		prefix = "Halloween_hero_vamp",
-		to = 137
-	},
-	hero_vampiress_bat_idle = {
-		from = 37,
-		prefix = "Halloween_hero_vamp",
-		to = 44
-	},
-	hero_vampiress_bat_running = {
-		from = 37,
-		prefix = "Halloween_hero_vamp",
-		to = 44
-	},
-	hero_vampiress_death = {
-		from = 105,
-		prefix = "Halloween_hero_vamp",
-		to = 129
-	},
-	hero_vampiress_exit = {
-		from = 130,
-		prefix = "Halloween_hero_vamp",
-		to = 137
-	},
-	hero_vampiress_idle = {
-		from = 1,
-		prefix = "Halloween_hero_vamp",
-		to = 1
-	},
-	hero_vampiress_levelup = {
-		from = 72,
-		prefix = "Halloween_hero_vamp",
-		to = 88
-	},
-	hero_vampiress_respawn = {
-		from = 130,
-		prefix = "Halloween_hero_vamp",
-		to = 148
-	},
-	hero_vampiress_running = {
-		from = 2,
-		prefix = "Halloween_hero_vamp",
-		to = 12
-	},
-	hero_vampiress_slayer = {
-		from = 46,
-		prefix = "Halloween_hero_vamp",
-		to = 77
-	},
-	hero_vampiress_vampirism = {
-		from = 149,
-		prefix = "Halloween_hero_vamp",
-		to = 198
-	},
-	hero_vanhelsing_attack = {
-		from = 71,
-		prefix = "Halloween_hero_vhelsing",
-		to = 91
-	},
-	hero_vanhelsing_death = {
-		from = 623,
-		prefix = "Halloween_hero_vhelsing",
-		to = 631
-	},
-	hero_vanhelsing_ghost_idle = {
-		from = 571,
-		prefix = "Halloween_hero_vhelsing",
-		to = 602
-	},
-	hero_vanhelsing_ghost_running = {
-		from = 571,
-		prefix = "Halloween_hero_vhelsing",
-		to = 602
-	},
-	hero_vanhelsing_ghost_start = {
-		from = 555,
-		prefix = "Halloween_hero_vhelsing",
-		to = 570
-	},
-	hero_vanhelsing_grenade = {
-		from = 483,
-		prefix = "Halloween_hero_vhelsing",
-		to = 510
-	},
-	hero_vanhelsing_idle = {
-		from = 1,
-		prefix = "Halloween_hero_vhelsing",
-		to = 1
-	},
-	hero_vanhelsing_levelup = {
-		from = 603,
-		prefix = "Halloween_hero_vhelsing",
-		to = 622
-	},
-	hero_vanhelsing_multi_end_down = {
-		from = 212,
-		prefix = "Halloween_hero_vhelsing",
-		to = 235
-	},
-	hero_vanhelsing_multi_end_side = {
-		from = 141,
-		prefix = "Halloween_hero_vhelsing",
-		to = 164
-	},
-	hero_vanhelsing_multi_end_up = {
-		from = 289,
-		prefix = "Halloween_hero_vhelsing",
-		to = 306
-	},
-	hero_vanhelsing_multi_loop_down = {
-		from = 201,
-		prefix = "Halloween_hero_vhelsing",
-		to = 211
-	},
-	hero_vanhelsing_multi_loop_side = {
-		from = 130,
-		prefix = "Halloween_hero_vhelsing",
-		to = 140
-	},
-	hero_vanhelsing_multi_loop_up = {
-		from = 273,
-		prefix = "Halloween_hero_vhelsing",
-		to = 282
-	},
-	hero_vanhelsing_multi_start_down = {
-		from = 165,
-		prefix = "Halloween_hero_vhelsing",
-		to = 200
-	},
-	hero_vanhelsing_multi_start_side = {
-		from = 92,
-		prefix = "Halloween_hero_vhelsing",
-		to = 129
-	},
-	hero_vanhelsing_multi_start_up = {
-		from = 236,
-		prefix = "Halloween_hero_vhelsing",
-		to = 272
-	},
-	hero_vanhelsing_ranged_down = {
-		from = 27,
-		prefix = "Halloween_hero_vhelsing",
-		to = 48
-	},
-	hero_vanhelsing_ranged_side = {
-		from = 6,
-		prefix = "Halloween_hero_vhelsing",
-		to = 26
-	},
-	hero_vanhelsing_ranged_up = {
-		from = 49,
-		prefix = "Halloween_hero_vhelsing",
-		to = 70
-	},
-	hero_vanhelsing_relic = {
-		from = 511,
-		prefix = "Halloween_hero_vhelsing",
-		to = 554
-	},
-	hero_vanhelsing_respawn = {
-		from = 603,
-		prefix = "Halloween_hero_vhelsing",
-		to = 622
-	},
-	hero_vanhelsing_running = {
-		from = 2,
-		prefix = "Halloween_hero_vhelsing",
-		to = 5
-	},
-	hero_vanhelsing_silver_down = {
-		from = 366,
-		prefix = "Halloween_hero_vhelsing",
-		to = 423
-	},
-	hero_vanhelsing_silver_side = {
-		from = 307,
-		prefix = "Halloween_hero_vhelsing",
-		to = 365
-	},
-	hero_vanhelsing_silver_up = {
-		from = 424,
-		prefix = "Halloween_hero_vhelsing",
-		to = 482
-	},
 	hero_velann_attack = {
 		from = 256,
 		prefix = "hero_velann",
@@ -28102,51 +26602,6 @@ return {
 		prefix = "hero_vesper_vesper",
 		to = 36
 	},
-	hero_voodoo_witch_attack = {
-		from = 7,
-		prefix = "voodoo",
-		to = 29
-	},
-	hero_voodoo_witch_death = {
-		from = 116,
-		prefix = "voodoo",
-		to = 139
-	},
-	hero_voodoo_witch_idle = {
-		from = 1,
-		prefix = "voodoo",
-		to = 1
-	},
-	hero_voodoo_witch_levelup = {
-		from = 140,
-		prefix = "voodoo",
-		to = 159
-	},
-	hero_voodoo_witch_magic = {
-		from = 54,
-		prefix = "voodoo",
-		to = 115
-	},
-	hero_voodoo_witch_respawn = {
-		from = 140,
-		prefix = "voodoo",
-		to = 159
-	},
-	hero_voodoo_witch_running = {
-		from = 2,
-		prefix = "voodoo",
-		to = 6
-	},
-	hero_voodoo_witch_shoot = {
-		from = 30,
-		prefix = "voodoo",
-		to = 53
-	},
-	hero_voodoo_witch_skull_sacrifice = {
-		from = 140,
-		prefix = "voodoo",
-		to = 159
-	},
 	hero_wilbur_layerX_box = {
 		from = 96,
 		layer_from = 1,
@@ -28514,72 +26969,6 @@ return {
 		from = 1,
 		prefix = "hero_witch_walk_particle",
 		to = 10
-	},
-	hero_wizard_attack = {
-		from = 201,
-		prefix = "hero_wizard",
-		to = 224
-	},
-	hero_wizard_death = {
-		from = 125,
-		prefix = "hero_wizard",
-		to = 139
-	},
-	hero_wizard_disintegrate = {
-		from = 162,
-		prefix = "hero_wizard",
-		to = 202
-	},
-	hero_wizard_idle = {
-		from = 1,
-		prefix = "hero_wizard",
-		to = 1
-	},
-	hero_wizard_levelup = {
-		from = 225,
-		prefix = "hero_wizard",
-		to = 243
-	},
-	hero_wizard_missile_end = {
-		from = 158,
-		pre = {154, 154, 154},
-		prefix = "hero_wizard",
-		to = 161
-	},
-	hero_wizard_missile_loop = {
-		from = 157,
-		prefix = "hero_wizard",
-		to = 157
-	},
-	hero_wizard_missile_start = {
-		from = 140,
-		prefix = "hero_wizard",
-		to = 153
-	},
-	hero_wizard_respawn = {
-		from = 86,
-		prefix = "hero_wizard",
-		to = 107
-	},
-	hero_wizard_running = {
-		from = 2,
-		prefix = "hero_wizard",
-		to = 17
-	},
-	hero_wizard_shoot = {
-		from = 18,
-		prefix = "hero_wizard",
-		to = 51
-	},
-	hero_wizard_teleport_in = {
-		from = 86,
-		prefix = "hero_wizard",
-		to = 107
-	},
-	hero_wizard_teleport_out = {
-		from = 52,
-		prefix = "hero_wizard",
-		to = 72
 	},
 	hero_wukong_attack_range_projectile = {
 		from = 1,
@@ -29395,41 +27784,6 @@ return {
 		from = 1,
 		prefix = "knights_order_tower_lvl4",
 		to = 1
-	},
-	kraken_tentacle_big_end = {
-		from = 82,
-		prefix = "hero_pirate_tentacle_big",
-		to = 91
-	},
-	kraken_tentacle_big_grab = {
-		from = 2,
-		prefix = "hero_pirate_tentacle_big",
-		to = 82
-	},
-	kraken_tentacle_small_end = {
-		from = 82,
-		prefix = "hero_pirate_tentacle_small",
-		to = 91
-	},
-	kraken_tentacle_small_grab = {
-		from = 2,
-		prefix = "hero_pirate_tentacle_small",
-		to = 82
-	},
-	kraken_water_end = {
-		from = 25,
-		prefix = "hero_pirate_water",
-		to = 33
-	},
-	kraken_water_loop = {
-		from = 9,
-		prefix = "hero_pirate_water",
-		to = 24
-	},
-	kraken_water_start = {
-		from = 1,
-		prefix = "hero_pirate_water",
-		to = 8
 	},
 	la_red_lvl4_tp_fire_enemy_run = {
 		from = 1,
@@ -30297,21 +28651,6 @@ return {
 		prefix = "hero_mirage_blood_violet",
 		to = 9
 	},
-	mirage_shadow_attack = {
-		from = 153,
-		prefix = "hero_mirage",
-		to = 162
-	},
-	mirage_shadow_death = {
-		from = 163,
-		prefix = "hero_mirage",
-		to = 163
-	},
-	mirage_shadow_running = {
-		from = 164,
-		prefix = "hero_mirage",
-		to = 168
-	},
 	missile_bfg_flying = {
 		from = 1,
 		prefix = "missile",
@@ -30326,36 +28665,6 @@ return {
 		from = 1,
 		prefix = "hero_wilburg_missile",
 		to = 3
-	},
-	missile_wizard_flying = {
-		from = 1,
-		prefix = "hero_wizard_proy",
-		to = 6
-	},
-	missile_wizard_hit = {
-		from = 7,
-		prefix = "hero_wizard_proy",
-		to = 14
-	},
-	missile_wizard_sparks1 = {
-		from = 1,
-		prefix = "hero_wizard_proyParticleSpk1",
-		to = 10
-	},
-	missile_wizard_sparks2 = {
-		from = 1,
-		prefix = "hero_wizard_proyParticleSpk2",
-		to = 10
-	},
-	missile_wizard_sparks3 = {
-		from = 1,
-		prefix = "hero_wizard_proyParticleSpk3",
-		to = 10
-	},
-	missile_wizard_trail = {
-		from = 1,
-		prefix = "hero_wizard_proyParticle",
-		to = 12
 	},
 	mist_run_trail_run = {
 		from = 1,
@@ -30791,11 +29100,6 @@ return {
 		from = 1,
 		prefix = "boss_veznan_towerHold",
 		to = 32
-	},
-	mod_voodoo_witch_magic = {
-		from = 1,
-		prefix = "voodoo_nail",
-		to = 29
 	},
 	mod_ward_decal = {
 		from = 1,
@@ -33046,16 +31350,6 @@ return {
 		from = 1,
 		prefix = "mage_wild_ray",
 		to = 16
-	},
-	ray_wizard = {
-		from = 1,
-		prefix = "hero_wizard_bolt",
-		to = 14
-	},
-	ray_wizard_ball = {
-		from = 1,
-		prefix = "hero_wizard_bolt_ball",
-		to = 18
 	},
 	razing_rhino_razign_rhino_instakill_fx = {
 		from = 1,
@@ -36512,31 +34806,6 @@ return {
 		prefix = "NecromancerDeathKnight",
 		to = 6
 	},
-	soldier_dracolich_golem_attack = {
-		from = 12,
-		prefix = "Halloween_hero_bones_golem",
-		to = 25
-	},
-	soldier_dracolich_golem_death = {
-		from = 50,
-		prefix = "Halloween_hero_bones_golem",
-		to = 72
-	},
-	soldier_dracolich_golem_idle = {
-		from = 1,
-		prefix = "Halloween_hero_bones_golem",
-		to = 1
-	},
-	soldier_dracolich_golem_raise = {
-		from = 26,
-		prefix = "Halloween_hero_bones_golem",
-		to = 49
-	},
-	soldier_dracolich_golem_running = {
-		from = 2,
-		prefix = "Halloween_hero_bones_golem",
-		to = 11
-	},
 	soldier_drow_attack = {
 		from = 35,
 		prefix = "mercenaryDraw",
@@ -36846,26 +35115,6 @@ return {
 		from = 7,
 		prefix = "gryphon_guards",
 		to = 21
-	},
-	soldier_mirage_illusion_attack = {
-		from = 169,
-		prefix = "hero_mirage",
-		to = 184
-	},
-	soldier_mirage_illusion_death = {
-		from = 163,
-		prefix = "hero_mirage",
-		to = 163
-	},
-	soldier_mirage_illusion_idle = {
-		from = 163,
-		prefix = "hero_mirage",
-		to = 163
-	},
-	soldier_mirage_illusion_running = {
-		from = 164,
-		prefix = "hero_mirage",
-		to = 168
 	},
 	soldier_paladin_attack = {
 		from = 7,
@@ -37329,46 +35578,6 @@ return {
 		from = 1,
 		prefix = "imperialGuard",
 		to = 6
-	},
-	soldier_sand_warrior_attack = {
-		from = 46,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 63
-	},
-	soldier_sand_warrior_death = {
-		from = 64,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 74
-	},
-	soldier_sand_warrior_death_travel = {
-		from = 75,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 82
-	},
-	soldier_sand_warrior_idle = {
-		from = 22,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 22
-	},
-	soldier_sand_warrior_raise = {
-		from = 1,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 22
-	},
-	soldier_sand_warrior_start_walk = {
-		from = 23,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 28
-	},
-	soldier_sand_warrior_stop_walk = {
-		from = 37,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 45
-	},
-	soldier_sand_warrior_walk = {
-		from = 29,
-		prefix = "hero_hammerhold_sandWarrior",
-		to = 36
 	},
 	soldier_sasquash_attack = {
 		from = 29,
@@ -43924,26 +42133,6 @@ return {
 		prefix = "Halloween_hero_vhelsing_sniper",
 		to = 16
 	},
-	vanhelsing_grenade_explosion = {
-		from = 1,
-		prefix = "Halloween_hero_vhelsing_waterExplosion",
-		to = 18
-	},
-	vanhelsing_relic = {
-		from = 1,
-		prefix = "Halloween_hero_vhelsing_shield",
-		to = 23
-	},
-	vanhelsing_silence_big = {
-		from = 1,
-		prefix = "Halloween_hero_vhelsing_waterFx_big",
-		to = 18
-	},
-	vanhelsing_silence_small = {
-		from = 1,
-		prefix = "Halloween_hero_vhelsing_waterFx_small",
-		to = 18
-	},
 	veznan_cinematic_veznan_idle = {
 		from = 1,
 		prefix = "veznan_cinematic_veznan",
@@ -44374,21 +42563,6 @@ return {
 		from = 2,
 		prefix = "Stage9_Virgin",
 		to = 10
-	},
-	voodoo_skull_particle = {
-		from = 1,
-		prefix = "voodoo_skull_particle",
-		to = 8
-	},
-	voodoo_witch_skull_idle = {
-		from = 1,
-		prefix = "voodoo_skull",
-		to = 1
-	},
-	voodoo_witch_skull_shoot = {
-		from = 2,
-		prefix = "voodoo_skull",
-		to = 17
 	},
 	warden_warlock_hit_run = {
 		from = 1,

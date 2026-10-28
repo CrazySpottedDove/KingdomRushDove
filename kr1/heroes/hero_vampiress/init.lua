@@ -21,6 +21,9 @@ return {
 	screen_map_required_textures = {},
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {}
-
+	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_vampiress.templates"},
+	animations = {"heroes.hero_vampiress.animations"},
+	sounds = {"heroes.hero_vampiress.sounds"},
+	groups = {"heroes.hero_vampiress.groups"}
 }

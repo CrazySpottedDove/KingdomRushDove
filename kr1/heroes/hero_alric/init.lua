@@ -25,7 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
-
+	templates = {"heroes.hero_alric.templates"},
+	animations = {"heroes.hero_alric.animations"},
+	sounds = {"heroes.hero_alric.sounds"},
+	groups = {"heroes.hero_alric.groups"},
 	name_style = {
 		margin = 0,
 		p1 = NS.p11,
