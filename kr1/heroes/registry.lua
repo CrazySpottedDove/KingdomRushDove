@@ -96,7 +96,6 @@ HEROES.module_names = {
 	"heroes.hero_naga"
 }
 HEROES._inited = false
-HEROES._hero_data = nil
 
 --- 资源字段统一为 require 路径数组；plugin_* 字段为映射
 local function merge_map(paths)
@@ -118,8 +117,6 @@ local function find(name)
 end
 
 local function add(module)
-	HEROES._hero_data = nil
-
 	local _, index = find(module.name)
 
 	if index then
@@ -170,8 +167,6 @@ function HEROES:unregister(name)
 
 	if index then
 		table.remove(self.declarations, index)
-
-		self._hero_data = nil
 	end
 end
 
@@ -181,15 +176,32 @@ function HEROES:get(name)
 	return (find(name))
 end
 
---- 按需注册一个英雄的脚本与模板（模板已存在时跳过）。
+--- 按需注册一个英雄的脚本与模板（模板已存在时跳过模板注册）。
+--- 模板模块是副作用模块：注册前显式失效 require 缓存，保证 E:Load 重建后能重新执行。
 ---@param name string
 function HEROES:ensure_template(name)
 	local module = self:get(name)
 
+	if not module then
+		return
+	end
+
 	if not E:get_template(name) then
 		for _, path in ipairs(module.templates or {}) do
-			require(path)()
+			require(path)
+			package.loaded[path] = nil
 		end
+	end
+end
+
+--- 更新一个英雄模块。如果该英雄的模板已加载，则会重新加载
+---@param name string 英雄模板名称
+---@param update_fn function 更新英雄模块的函数。
+function HEROES:update_module_with(name, update_fn)
+	update_fn()
+	if E:get_template(name) then
+		E.entities[name] = nil
+		self:ensure_template(name)
 	end
 end
 
@@ -201,6 +213,10 @@ function HEROES:ensure_animations(name)
 	end
 
 	local module = self:get(name)
+
+	if not module then
+		return
+	end
 
 	self._loaded_animations = self._loaded_animations or {}
 
@@ -246,28 +262,6 @@ function HEROES:screen_resources()
 	end
 
 	return out
-end
-
---- 英雄殿堂入口列表：按声明顺序聚合各模块的 room。
----@return table
-function HEROES:get_hero_data()
-	if self._hero_data then
-		return self._hero_data
-	end
-
-	local list = {}
-
-	for _, module in ipairs(self.declarations) do
-		if module.room then
-			list[#list + 1] = table.merge(module.room, {
-				name = module.name
-			}, true)
-		end
-	end
-
-	self._hero_data = list
-
-	return list
 end
 
 return HEROES

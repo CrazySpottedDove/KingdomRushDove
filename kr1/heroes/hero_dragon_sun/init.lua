@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr5_hero_room_thumbs_0019",
 		icon_image = "kr5_mapButtons_portrait_hero_0019"
 	},
+	room_special_order = {"WORTHY_FOE", "SOLAR_CLEANSING", "OVERCHARGE", "SOLAR_STONES", "ULTIMATE"},
 	required_textures = {"go_hero_dragon_sun"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_dragon_sun"},

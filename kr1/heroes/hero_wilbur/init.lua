@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0015",
 		icon_image = "kr3_mapButtons_portrait_hero_0015"
 	},
+	room_special_order = {"SMOKE", "MISSILE", "BOX", "ULTIMATE"},
 	required_textures = {"go_hero_wilbur"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_wilbur"},

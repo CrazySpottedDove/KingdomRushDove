@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0002",
 		icon_image = "kr2_mapButtons_portrait_hero_0002"
 	},
+	room_special_order = {"SHADOWDODGE", "SHADOWDANCE", "LETHALSTRIKE"},
 	required_textures = {"go_hero_mirage"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_mirage"},

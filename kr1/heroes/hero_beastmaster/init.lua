@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0004",
 		icon_image = "kr2_mapButtons_portrait_hero_0004"
 	},
+	room_special_order = {"BOARMASTER", "FALCONER", "STAMPEDE", "DEEPLASHES", "DEEPLASHES_2"},
 	required_textures = {"go_hero_beastmaster"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_beastmaster"},

@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr5_hero_room_thumbs_0008",
 		icon_image = "kr5_mapButtons_portrait_hero_0008"
 	},
+	room_special_order = {"CLUSTER_BOMB", "SHOUT_STUN", "GATTLING", "EAT_INSTAKILL", "ULTIMATE"},
 	required_textures = {"go_hero_bird"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_bird"},

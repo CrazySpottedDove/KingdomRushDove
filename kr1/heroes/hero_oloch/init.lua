@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr4_hero_room_thumbs_0003",
 		icon_image = "kr4_mapButtons_portrait_hero_0003"
 	},
+	room_special_order = {"DUPLICATION", "MAGMA_ERUPTION", "HELLISH_INFUSION", "DEMONIC_BLAST", "ULTIMATE", "ULTIMATE_2"},
 	required_textures = {"go_hero_oloch"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_oloch"},

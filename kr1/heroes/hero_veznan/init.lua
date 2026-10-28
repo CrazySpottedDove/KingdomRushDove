@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0008",
 		icon_image = "kr3_mapButtons_portrait_hero_0008"
 	},
+	room_special_order = {"SOULBURN", "SHACKLES", "ARCANENOVA", "ULTIMATE"},
 	required_textures = {"go_hero_veznan"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_veznan"},

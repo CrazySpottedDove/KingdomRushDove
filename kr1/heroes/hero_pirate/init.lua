@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0003",
 		icon_image = "kr2_mapButtons_portrait_hero_0003"
 	},
+	room_special_order = {"SCATTERSHOT", "KRAKEN", "LOOTING"},
 	required_textures = {"go_hero_pirate"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_pirate"},

@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr4_hero_room_thumbs_0002",
 		icon_image = "kr4_mapButtons_portrait_hero_0002"
 	},
+	room_special_order = {"ULTIMATE", "SPIDER_BITE", "ONIX_ARROWS", "QUIVER_OF_SORROW", "SHIELD_OF_SHADOWS", "ULTIMATE_2"},
 	required_textures = {"go_hero_asra"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_asra"},

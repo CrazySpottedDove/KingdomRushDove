@@ -7946,13 +7946,15 @@ end
 function HeroMenu:show()
 	self:remove_children()
 
-	for index, data in pairs(HEROES:get_hero_data()) do
-		HEROES:ensure_template(data.name)
+	for index, module in ipairs(HEROES.declarations) do
+		local name = module.name
 
-		local t = E:get_template(data.name)
+		HEROES:ensure_template(name)
+
+		local t = E:get_template(name)
 		local item = {
 			image = t.info.portrait,
-			name = data.name,
+			name = name,
 			halo = "glow_ico_main"
 		}
 		local b = HeroMenuButton:new(item)

@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0002",
 		icon_image = "kr3_mapButtons_portrait_hero_0002"
 	},
+	room_special_order = {"LIGHTNING_ROD", "STONE_DANCE", "SEAL_OF_FIRE", "ICY_PRISON", "ULTIMATE"},
 	required_textures = {"go_hero_arivan"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_arivan"},

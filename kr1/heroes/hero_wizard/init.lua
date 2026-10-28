@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0006",
 		icon_image = "kr2_mapButtons_portrait_hero_0006"
 	},
+	room_special_order = {"MAGICMISSILE", "CHAINSPELL", "DISINTEGRATE", "ARCANETORRENT"},
 	required_textures = {"go_hero_wizard"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_wizard"},

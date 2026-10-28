@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0014",
 		icon_image = "kr2_mapButtons_portrait_hero_0014"
 	},
+	room_special_order = {"SPINERAIN", "DISEASENOVA", "PLAGUECARRIER", "BONEGOLEM", "UNSTABLEDISEASE"},
 	required_textures = {"go_hero_dracolich"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_dracolich"},

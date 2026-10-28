@@ -36,8 +36,11 @@ local techs = {
 		price = 4,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.arrows) do
-				local b = T(n).bullet
-				apply_mod(b, "mod_blood_elves")
+				local t = T(n)
+
+				if t then
+					apply_mod(t.bullet, "mod_blood_elves")
+				end
 			end
 		end
 	},
@@ -60,14 +63,18 @@ local techs = {
 		reduce_armor_factor = 0.1,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.arrows) do
-				local reduce_armor = T(n).bullet.reduce_armor
+				local t = T(n)
 
-				if type(reduce_armor) == "table" then
-					for k, v in ipairs(reduce_armor) do
-						reduce_armor[k] = v + u.reduce_armor_factor
+				if t then
+					local reduce_armor = t.bullet.reduce_armor
+
+					if type(reduce_armor) == "table" then
+						for k, v in ipairs(reduce_armor) do
+							reduce_armor[k] = v + u.reduce_armor_factor
+						end
+					else
+						t.bullet.reduce_armor = u.reduce_armor_factor + reduce_armor
 					end
-				else
-					T(n).bullet.reduce_armor = u.reduce_armor_factor + reduce_armor
 				end
 			end
 		end
@@ -139,7 +146,11 @@ local techs = {
 			patch_soldier_dead_lifetime(UP.soldiers, u.cooldown_factor)
 
 			for _, n in ipairs(towers_with_barrack) do
-				T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+				local t = T(n)
+
+				if t then
+					t.barrack.rally_range = t.barrack.rally_range * u.rally_range_factor
+				end
 			end
 		end
 	},
@@ -254,16 +265,20 @@ local techs = {
 		price = 1,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.bolts) do
-				local b = T(n).bullet
-				local mods
+				local t = T(n)
 
-				if (b.damage_max and b.damage_max >= 50) or b.template_name == "ray_arcane" then
-					mods = {u.mod_normal}
-				else
-					mods = {u.mod_little}
+				if t then
+					local b = t.bullet
+					local mods
+
+					if (b.damage_max and b.damage_max >= 50) or b.template_name == "ray_arcane" then
+						mods = {u.mod_normal}
+					else
+						mods = {u.mod_little}
+					end
+
+					add_mods(b, mods)
 				end
-
-				add_mods(b, mods)
 			end
 
 			add_mods(T("tower_pixie").attacks.list[4], {u.mod_normal})
@@ -306,10 +321,13 @@ local techs = {
 		price = 3,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.bolts) do
-				local mods = {u.mod}
-				local b = T(n).bullet
+				local t = T(n)
 
-				add_mods(b, mods)
+				if t then
+					local mods = {u.mod}
+
+					add_mods(t.bullet, mods)
+				end
 			end
 
 			add_mods(T("tower_pixie").attacks.list[4], {u.mod})
@@ -366,11 +384,15 @@ local techs = {
 			T("power_fireball_control").cooldown = T("power_fireball_control").cooldown - u.cooldown_reduction
 
 			for _, name in ipairs({"power_scorched_earth", "power_scorched_water"}) do
-				local aura = T(name).aura
+				local t = T(name)
 
-				aura.damage_min = aura.damage_min + u.damage_min_increase
-				aura.damage_max = aura.damage_max + u.damage_max_increase
-				aura.duration = aura.duration + u.duration_increase
+				if t then
+					local aura = t.aura
+
+					aura.damage_min = aura.damage_min + u.damage_min_increase
+					aura.damage_max = aura.damage_max + u.damage_max_increase
+					aura.duration = aura.duration + u.duration_increase
+				end
 			end
 		end
 	},

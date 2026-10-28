@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0004",
 		icon_image = "kr3_mapButtons_portrait_hero_0004"
 	},
+	room_special_order = {"SLASH", "SLASH_2", "HEAL", "BLADE", "ULTIMATE"},
 	required_textures = {"go_hero_regson"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_regson"},

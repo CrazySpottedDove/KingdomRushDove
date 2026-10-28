@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0012",
 		icon_image = "kr3_mapButtons_portrait_hero_0012"
 	},
+	room_special_order = {"HEXFURY", "DESPAIR", "WEAKENING", "CHARM_OF_UNLUCK", "ULTIMATE"},
 	required_textures = {"go_hero_lynn"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_lynn"},

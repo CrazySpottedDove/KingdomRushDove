@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr3_hero_room_thumbs_0016",
 		icon_image = "kr3_mapButtons_portrait_hero_0016"
 	},
+	room_special_order = {"TELEPORT_RUNE", "ULTIMATE", "DRAGON_LANCE", "LIQUID_FIRE", "ENERVATION", "URINATION"},
 	required_textures = {"go_hero_faustus"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_faustus"},

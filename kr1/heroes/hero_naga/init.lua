@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr4_hero_room_thumbs_0010",
 		icon_image = "kr4_mapButtons_portrait_hero_0010"
 	},
+	room_special_order = {"PASSIVE", "SPLASH", "WAVE", "BANNER_ALLIES", "GAZE", "ULTIMATE"},
 	required_textures = {"go_hero_naga"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_naga"},

@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0016",
 		icon_image = "kr2_mapButtons_portrait_hero_0016"
 	},
+	room_special_order = {"SPINNINGPOLE", "TETSUBOSTORM", "MONKEYPALM", "ANGRYGOD", "ANGRYGOD_2"},
 	required_textures = {"go_hero_monkey_god"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_monkey_god"},

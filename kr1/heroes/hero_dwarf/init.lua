@@ -11,6 +11,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0017",
 		icon_image = "kr2_mapButtons_portrait_hero_0017"
 	},
+	room_special_order = {"RING", "GIANT", "GIANT_2"},
 	required_textures = {"go_hero_dwarf"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_dwarf"},

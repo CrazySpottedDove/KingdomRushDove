@@ -44,15 +44,20 @@ end
 
 function H.add_damage_hooks(template_names, hook)
 	for _, n in ipairs(template_names) do
-		local b = H.T(n).bullet
-		b.damage_hooks[#b.damage_hooks + 1] = hook
+		local t = H.T(n)
+
+		if t then
+			local b = t.bullet
+			b.damage_hooks[#b.damage_hooks + 1] = hook
+		end
 	end
 end
 
 function H.scale_tower_price(towers, factor, round_fn)
 	for _, n in ipairs(towers) do
 		local t = H.T(n)
-		if t.tower and t.tower.price then
+
+		if t and t.tower and t.tower.price then
 			t.tower.price = round_fn(t.tower.price * factor)
 		end
 	end
@@ -61,7 +66,8 @@ end
 function H.scale_power_prices(towers, factor, round_fn)
 	for _, n in ipairs(towers) do
 		local t = H.T(n)
-		if t.powers then
+
+		if t and t.powers then
 			for _, p in pairs(t.powers) do
 				if p.price_base then
 					p.price_base = round_fn(p.price_base * factor)
@@ -76,14 +82,20 @@ end
 
 function H.scale_tower_damage(towers, factor)
 	for _, n in ipairs(towers) do
-		H.T(n).tower.damage_factor = H.T(n).tower.damage_factor + (factor - 1)
+		local t = H.T(n)
+
+		if t then
+			t.tower.damage_factor = t.tower.damage_factor + (factor - 1)
+		end
 	end
 end
 
 function H.scale_tower_attack_range(towers, factor, skip)
 	for _, n in ipairs(towers) do
-		if not (skip and skip[n]) then
-			H.T(n).attacks.range = H.T(n).attacks.range * factor
+		local t = H.T(n)
+
+		if t and not (skip and skip[n]) then
+			t.attacks.range = t.attacks.range * factor
 		end
 	end
 end
@@ -198,7 +210,11 @@ end
 
 function H.bomb_damage_mul(engineer_bombs, damage_factor)
 	for _, n in ipairs(engineer_bombs) do
-		H.mul_dmg(H.T(n).bullet, damage_factor)
+		local t = H.T(n)
+
+		if t then
+			H.mul_dmg(t.bullet, damage_factor)
+		end
 	end
 
 	H.mul_dmg(H.T("tower_dwaarp").attacks.list[1], damage_factor)
@@ -224,7 +240,11 @@ end
 
 function H.mage_bolt_damage_mul(mage_tower_bolts, damage_factor)
 	for _, n in ipairs(mage_tower_bolts) do
-		H.mul_dmg(H.T(n).bullet, damage_factor)
+		local t = H.T(n)
+
+		if t then
+			H.mul_dmg(t.bullet, damage_factor)
+		end
 	end
 
 	H.mul_dmg(H.T("mod_ray_arcane").dps, damage_factor)
@@ -246,7 +266,11 @@ end
 
 function H.apply_soldier_health_factor(soldiers, health_factor)
 	for _, n in ipairs(soldiers) do
-		H.T(n).health.hp_max = H.T(n).health.hp_max * health_factor
+		local t = H.T(n)
+
+		if t then
+			t.health.hp_max = t.health.hp_max * health_factor
+		end
 	end
 
 	local tt = E:get_template("big_guy_tower_demon_pit_lvl4")
@@ -258,7 +282,11 @@ end
 
 function H.patch_soldier_armor_inc(soldiers, armor_inc)
 	for _, n in ipairs(soldiers) do
-		H.T(n).health.armor = H.T(n).health.armor + armor_inc
+		local t = H.T(n)
+
+		if t then
+			t.health.armor = t.health.armor + armor_inc
+		end
 	end
 
 	local tt = H.T("soldier_frankenstein")
@@ -279,7 +307,11 @@ end
 
 function H.patch_soldier_dead_lifetime(soldiers, factor)
 	for _, n in ipairs(soldiers) do
-		H.T(n).health.dead_lifetime = H.T(n).health.dead_lifetime * factor
+		local t = H.T(n)
+
+		if t then
+			t.health.dead_lifetime = t.health.dead_lifetime * factor
+		end
 	end
 end
 

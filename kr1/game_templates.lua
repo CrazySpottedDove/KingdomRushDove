@@ -194,9 +194,6 @@ tt = RT("fx_bolt_elora_hit", "fx")
 tt.render.sprites[1].prefix = "fx_bolt_elora"
 tt.render.sprites[1].name = "hit"
 
-tt = RT("fx_bolt_magnus_hit", "fx")
-tt.render.sprites[1].name = "bolt_magnus_hit"
-
 tt = RT("fx_ignus_burn", "fx")
 tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
@@ -615,22 +612,6 @@ tt.bullet.mod = "mod_witch_frog"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[1].prefix = "bolt_witch"
 tt.sound_events.insert = "kr4_tower_wickedsisters_attack_v1"
-
-tt = RT("bolt_magnus", "bolt")
-tt.render.sprites[1].prefix = "bolt_magnus"
-tt.bullet.hit_fx = "fx_bolt_magnus_hit"
-tt.bullet.pop = nil
-tt.bullet.pop_conds = nil
-tt.bullet.acceleration_factor = 0.1
-tt.bullet.damage_min = 9
-tt.bullet.damage_max = 27
-tt.bullet.max_speed = 360
-tt.bullet.xp_gain_factor = 2.2
-
-tt = RT("bolt_magnus_illusion", "bolt_magnus")
-tt.bullet.damage_min = nil
-tt.bullet.damage_max = nil
-tt.bullet.xp_gain_factor = nil
 
 tt = RT("bomb_goblin_zapper", "bomb")
 tt.bullet.damage_bans = F_ENEMY

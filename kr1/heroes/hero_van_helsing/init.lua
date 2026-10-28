@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr2_hero_room_thumbs_0013",
 		icon_image = "kr2_mapButtons_portrait_hero_0013"
 	},
+	room_special_order = {"SILVERBULLET", "MULTISHOOT", "RELICOFPOWER", "HOLYGRENADE", "BEACONOFLIGHT"},
 	required_textures = {"go_hero_van_helsing"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_van_helsing"},

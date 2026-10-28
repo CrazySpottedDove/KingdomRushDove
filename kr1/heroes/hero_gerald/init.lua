@@ -14,6 +14,7 @@ return {
 		thumb_image = "hero_room_thumbs_0001",
 		icon_image = "mapButtons_portrait_hero_0001"
 	},
+	room_special_order = {"BLOCK_COUNTER", "HOLY_STRIKE", "COURAGE", "PALADIN"},
 	required_textures = {"go_hero_gerald"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_gerald"},

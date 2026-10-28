@@ -14,6 +14,7 @@ return {
 		thumb_image = "kr4_hero_room_thumbs_0008",
 		icon_image = "kr4_mapButtons_portrait_hero_0008"
 	},
+	room_special_order = {"ULTIMATE", "CONFLAGRATION", "FEAR_DRAGON", "DRAGON_SPAWN", "REMOVE_EXISTENCE", "ULTIMATE_2"},
 	required_textures = {"go_hero_beresad"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_beresad"},
