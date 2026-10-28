@@ -2802,8 +2802,16 @@ function PluginManagerView:show()
 	PluginManagerView.super.show(self)
 end
 
+--- 归还输入焦点（关闭管理器/弹确认框时调用，否则 window.responder 会一直拦截快捷键）
+function PluginManagerView:_blur_inputs()
+	self.search_box:set_focused(false)
+	self.search_box:set_text("")
+	self:_blur_group_inputs()
+end
+
 function PluginManagerView:hide()
 	if self._unsaved_changes then
+		self:_blur_group_inputs()
 		-- 卸载/更新正在运行的插件时，退出必须重启，提示文案说明原因
 		if self._confirm_hint then
 			if self:_needs_restart() then
@@ -2823,6 +2831,7 @@ function PluginManagerView:hide()
 		return
 	end
 	-- 关闭管理器：清理本次修改记忆，避免下次打开污染
+	self:_blur_inputs()
 	self:_clear_pending_changes()
 	self._cancel_requested = true
 	self:_stop_http_thread()
