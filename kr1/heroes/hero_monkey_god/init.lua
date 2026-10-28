@@ -25,7 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
-
+	templates = {"heroes.hero_monkey_god.templates"},
+	animations = {"heroes.hero_monkey_god.animations"},
+	sounds = {"heroes.hero_monkey_god.sounds"},
+	groups = {"heroes.hero_monkey_god.groups"},
 	name_style = {
 		margin = 2,
 		p1 = NS.p21,

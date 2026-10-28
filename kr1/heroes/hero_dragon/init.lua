@@ -25,7 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
-
+	templates = {"heroes.hero_dragon.templates"},
+	animations = {"heroes.hero_dragon.animations"},
+	sounds = {"heroes.hero_dragon.sounds"},
+	groups = {"heroes.hero_dragon.groups"},
 	name_style = {
 		margin = 0,
 		p1 = NS.p21,

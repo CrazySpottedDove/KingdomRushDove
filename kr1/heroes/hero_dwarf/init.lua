@@ -21,6 +21,9 @@ return {
 	screen_map_required_textures = {},
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {}
-
+	screen_map_plugin_required_sounds = {},
+	templates = {"heroes.hero_dwarf.templates"},
+	animations = {"heroes.hero_dwarf.animations"},
+	sounds = {"heroes.hero_dwarf.sounds"},
+	groups = {"heroes.hero_dwarf.groups"}
 }

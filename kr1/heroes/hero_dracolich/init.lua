@@ -25,7 +25,10 @@ return {
 	screen_map_plugin_required_textures = {},
 	screen_map_required_sounds = {},
 	screen_map_plugin_required_sounds = {},
-
+	templates = {"heroes.hero_dracolich.templates"},
+	animations = {"heroes.hero_dracolich.animations"},
+	sounds = {"heroes.hero_dracolich.sounds"},
+	groups = {"heroes.hero_dracolich.groups"},
 	name_style = {
 		margin = 0,
 		p1 = NS.p11,
