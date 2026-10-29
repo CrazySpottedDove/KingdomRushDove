@@ -2,6 +2,17 @@
 set -euo pipefail
 
 VERSION_FILE="./version.lua"
+PACKAGE_BRANCH="${PACKAGE_BRANCH:-master}"
+PACKAGE_TAG="${PACKAGE_TAG:-}"
+case "$PACKAGE_BRANCH" in
+    master|dev) ;;
+    *) echo "ERROR: PACKAGE_BRANCH 只能是 master 或 dev" >&2; exit 1 ;;
+esac
+if [ "$PACKAGE_BRANCH" = "dev" ]; then
+    NAME_SUFFIX=" Dev"
+else
+    NAME_SUFFIX=""
+fi
 if [ -n "${VERSION_FILE:-}" ] && [ -f "$VERSION_FILE" ]; then
     current_id=$(awk -F'"' '/^[[:space:]]*id[[:space:]]*=/ {print $2; exit}' "$VERSION_FILE")
     current_id=${current_id:-$(date +%s)}
@@ -12,9 +23,12 @@ fi
 echo "Current version id: $current_id"
 
 mkdir -p ".versions"
-INSTALLER_FILE=".versions/王国保卫战Dove版-v${current_id}-Windows电脑端-安装程序.exe"
-TOPDIR="王国保卫战Dove版-Windows电脑端-v${current_id}"
-GAME_7Z="game-v${current_id}.7z"
+INSTALLER_FILE=".versions/王国保卫战Dove版-v${current_id}${PACKAGE_TAG}-Windows电脑端-安装程序.exe"
+TOPDIR="王国保卫战Dove版-Windows电脑端-v${current_id}${PACKAGE_TAG}"
+GAME_7Z="game-v${current_id}${PACKAGE_TAG}.7z"
+INSTALL_DIR_NAME="王国保卫战Dove版${PACKAGE_TAG}"
+SHORTCUT_NAME="王国保卫战 Dove 版${NAME_SUFFIX}"
+REG_KEY="Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版${PACKAGE_TAG}"
 
 QUICK_MODE=0
 NO_UPLOAD_MODE=0
@@ -98,6 +112,21 @@ while IFS= read -r arg; do
 done < <(gitignore_excludes)
 rsync -a "${EXCLUDE_ARGS[@]}" ./ "$DEST_DIR/"
 
+COMMIT_HASH="$(git rev-parse --verify --quiet "$PACKAGE_BRANCH")"
+if [ -z "$COMMIT_HASH" ]; then
+    echo "ERROR: 本地没有 $PACKAGE_BRANCH 分支，无法写入 current_version_commit_hash.txt" >&2
+    exit 1
+fi
+printf '%s\n' "$COMMIT_HASH" > "$DEST_DIR/current_version_commit_hash.txt"
+cat > "$DEST_DIR/build_info.lua" <<EOF
+return {
+    branch = "$PACKAGE_BRANCH",
+}
+EOF
+if [ "$PACKAGE_BRANCH" = "dev" ]; then
+    echo "WARN: dev 安装包记录的是本地 dev commit；请确认该 commit 已推送到服务器 dev" >&2
+fi
+
 # Download Windows 7za.exe if not cached
 SZ7ZA_EXE=".versions/7za.exe"
 if [ ! -f "$SZ7ZA_EXE" ]; then
@@ -151,8 +180,8 @@ cat > "$NSI_FILE" << NSISEOL
 
 Name "王国保卫战 Dove 版"
 OutFile "..\\$(basename "$INSTALLER_FILE")"
-InstallDir "\$LOCALAPPDATA\\王国保卫战Dove版"
-InstallDirRegKey HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "UninstallString"
+InstallDir "\$LOCALAPPDATA\\${INSTALL_DIR_NAME}"
+InstallDirRegKey HKCU "${REG_KEY}" "UninstallString"
 RequestExecutionLevel user
 
 SetCompressor zlib
@@ -161,18 +190,18 @@ SetCompressor zlib
 !define MUI_ABORTWARNING_TEXT "你确定要退出安装吗？"
 !define MUI_ICON "${ICON_NSIS}"
 !define MUI_UNICON "${ICON_NSIS}"
-!define MUI_WELCOMEPAGE_TITLE "欢迎安装 王国保卫战 Dove 版"
+!define MUI_WELCOMEPAGE_TITLE "欢迎安装 ${SHORTCUT_NAME}"
 !define MUI_WELCOMEPAGE_TEXT "本安装向导将引导您完成安装过程。$\r$\n$\r$\n点击「下一步」继续。$\r$\n$\r$\n注意：本游戏为免费改版，一切售卖本游戏的行为均属侵权。"
 !define MUI_FINISHPAGE_TITLE "安装完成"
-!define MUI_FINISHPAGE_TEXT "王国保卫战 Dove 版已成功安装！$\r$\n$\r$\n点击「完成」退出安装向导。"
+!define MUI_FINISHPAGE_TEXT "${SHORTCUT_NAME} 已成功安装！$\r$\n$\r$\n点击「完成」退出安装向导。"
 
 !define MUI_INSTFILESPAGE_FINISHHEADER_TEXT "安装进行中"
 !define MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT "请稍候，正在复制文件..."
 
-Caption "王国保卫战 Dove 版 安装程序"
+Caption "${SHORTCUT_NAME} 安装程序"
 VIProductVersion "${current_id}"
-VIAddVersionKey "ProductName" "王国保卫战 Dove 版"
-VIAddVersionKey "FileDescription" "王国保卫战 Dove 版 安装程序"
+VIAddVersionKey "ProductName" "${SHORTCUT_NAME}"
+VIAddVersionKey "FileDescription" "${SHORTCUT_NAME} 安装程序"
 VIAddVersionKey "FileVersion" "${current_id}"
 VIAddVersionKey "LegalCopyright" "Modified version based on Kingdom Rush, Copyright Ironhide Game Studio. KingdomRushDove mod by CrazySpottedDove."
 BrandingText "https://github.com/CrazySpottedDove/KingdomRushDove"
@@ -200,27 +229,27 @@ Section "Install"
   Delete "\$INSTDIR\\7za.exe"
 
   SetOutPath "\$INSTDIR\\KingdomRushDove"
-  CreateDirectory "\$SMPROGRAMS\\王国保卫战 Dove 版"
+  CreateDirectory "\$SMPROGRAMS\\${SHORTCUT_NAME}"
   DetailPrint "正在创建桌面快捷方式..."
-  CreateShortCut "\$DESKTOP\\王国保卫战 Dove 版.lnk" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
+  CreateShortCut "\$DESKTOP\\${SHORTCUT_NAME}.lnk" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
   DetailPrint "正在创建开始菜单快捷方式..."
-  CreateShortCut "\$SMPROGRAMS\\王国保卫战 Dove 版\\王国保卫战 Dove 版.lnk" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
+  CreateShortCut "\$SMPROGRAMS\\${SHORTCUT_NAME}\\${SHORTCUT_NAME}.lnk" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
 
   WriteUninstaller "\$INSTDIR\\uninstall.exe"
 
-  WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "DisplayName" "王国保卫战 Dove 版"
-  WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "UninstallString" "\$INSTDIR\\uninstall.exe"
-  WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "DisplayIcon" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
-  WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "Publisher" "Dove"
-  WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "NoModify" 1
-  WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "NoRepair" 1
+  WriteRegStr HKCU "${REG_KEY}" "DisplayName" "${SHORTCUT_NAME}"
+  WriteRegStr HKCU "${REG_KEY}" "UninstallString" "\$INSTDIR\\uninstall.exe"
+  WriteRegStr HKCU "${REG_KEY}" "DisplayIcon" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
+  WriteRegStr HKCU "${REG_KEY}" "Publisher" "Dove"
+  WriteRegDWORD HKCU "${REG_KEY}" "NoModify" 1
+  WriteRegDWORD HKCU "${REG_KEY}" "NoRepair" 1
 SectionEnd
 
 Section "Uninstall"
-  Delete "\$DESKTOP\\王国保卫战 Dove 版.lnk"
-  RMDir /r "\$SMPROGRAMS\\王国保卫战 Dove 版"
+  Delete "\$DESKTOP\\${SHORTCUT_NAME}.lnk"
+  RMDir /r "\$SMPROGRAMS\\${SHORTCUT_NAME}"
   RMDir /r "\$INSTDIR"
-  DeleteRegKey HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版"
+  DeleteRegKey HKCU "${REG_KEY}"
 SectionEnd
 NSISEOL
 

@@ -16,6 +16,14 @@ local font_small = require("lib.klove.font_db"):f("msyh", 14)
 local FU = require("all.file_utils")
 local zip = require("lib.zip")
 local utf8_util = require("lib.utf8_utils")
+local version = require("version")
+
+local branch = version.branch or "master"
+local fatal_update_error = nil
+
+local function asset_static_base()
+	return branch == "dev" and "_dev-assets/" or "_assets/"
+end
 
 -- UI 动画状态
 local ui_state = {
@@ -454,7 +462,8 @@ end
 ---@param url_base string ipv4/ipv6 服务器基地址
 ---@param file_param string 游戏文件相对路径
 ---@param fs_path string 下载到的 lovefs 路径
-local function download_to_lovefs_chunked(url_base, file_param, fs_path)
+---@param commit string|nil 指定目标 commit（/file 使用）
+local function download_to_lovefs_chunked(url_base, file_param, fs_path, commit)
 	local part_path = fs_path .. ".part"
 	-- 使用自适应块大小
 	local chunk_size = current_chunk_size
@@ -468,6 +477,9 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 		url = url_base .. encoded_file
 	else
 		url = url_base .. "?file=" .. encoded_file
+		if commit and commit ~= "" then
+			url = url .. "&commit=" .. url_encode(commit)
+		end
 	end
 
 	-- 获取文件总大小
@@ -743,7 +755,8 @@ local function diff_assets()
 	log_info(_("UPDATER_UI_LOG_FETCH_ASSET_INDEX"))
 
 	local tmp_file_path = tmp_dir .. "/assets_index.lua"
-	local ok, index_content = download_to_lovefs_chunked(url_base, "_assets/assets_index.lua", tmp_file_path)
+	local target_commit = update_response and update_response.target_commit_hash
+	local ok, index_content = download_to_lovefs_chunked(url_base, "_assets/assets_index.lua", tmp_file_path, target_commit)
 
 	if not ok then
 		log_error(_("UPDATER_UI_ERR_ASSET_INDEX_DOWNLOAD"))
@@ -784,8 +797,8 @@ local function sync_assets(added_or_modified)
 		return true
 	end
 
-	-- 单文件回退下载走 /_assets/ 静态服务（/assets/download 接口已废弃）
-	local url_base = server_address .. "_assets/"
+	-- 单文件回退下载走当前分支的静态资源服务（/assets/download 接口已废弃）
+	local url_base = server_address .. asset_static_base()
 	local file_count = #added_or_modified
 
 	for i, file_path in ipairs(added_or_modified) do
@@ -823,7 +836,8 @@ local function sync_assets_batch(batch, bi, total_batches)
 			["Content-Type"] = "application/json"
 		},
 		data = json.encode({
-			files = batch
+			files = batch,
+			branch = branch
 		})
 	}, 60)
 
@@ -941,6 +955,7 @@ local function upgrade_new_version(info)
 
 	local added_or_modified = info.added_or_modified_files or {}
 	local url_base = server_address .. "file"
+	local target_commit = info.target_commit_hash or (update_response and update_response.target_commit_hash)
 	local file_count = #added_or_modified
 
 	for i, file_path in ipairs(added_or_modified) do
@@ -956,7 +971,7 @@ local function upgrade_new_version(info)
 		if cached_info and cached_info.size and cached_info.size > 0 then
 			log_info(_("UPDATER_UI_LOG_ALREADY_CACHED"))
 		else
-			local ok, _unused = download_to_lovefs_chunked(url_base, file_path, cached_path)
+			local ok, _unused = download_to_lovefs_chunked(url_base, file_path, cached_path, target_commit)
 
 			if not ok then
 				log_error(_("UPDATER_UI_ERR_DOWNLOAD") .. file_path)
@@ -987,7 +1002,8 @@ local function upgrade_new_version_bundled(info)
 			["Content-Type"] = "application/json"
 		},
 		data = json.encode({
-			files = added_or_modified
+			files = added_or_modified,
+			commit = info.target_commit_hash
 		})
 	}, 60)
 
@@ -1115,8 +1131,8 @@ local function commit_all_changes(info)
 	end
 
 	-- 4. 更新版本号
-	if info.master_commit_hash then
-		if not FU.write_file("current_version_commit_hash.txt", info.master_commit_hash) then
+	if info.target_commit_hash then
+		if not FU.write_file("current_version_commit_hash.txt", info.target_commit_hash) then
 			log_error(_("UPDATER_UI_ERR_UPDATE_VERSION"))
 			return false
 		end
@@ -1129,6 +1145,7 @@ local function commit_all_changes(info)
 end
 
 local function check_update()
+	fatal_update_error = nil
 	local params = M.params
 	local commit_hash = FS.read("current_version_commit_hash.txt")
 	if not commit_hash then
@@ -1162,7 +1179,8 @@ local function check_update()
 				["Content-Type"] = "application/json"
 			},
 			data = json.encode({
-				commit_hash = commit_hash
+				commit_hash = commit_hash,
+				branch = branch
 			})
 		}, 15)
 
@@ -1175,10 +1193,18 @@ local function check_update()
 				storage:save_settings(params)
 			end
 			break
+		elseif code == 409 then
+			fatal_update_error = response
+			log_error(response)
+			break
 		else
 			log_info(_("UPDATER_UI_LOG_UNAVAILABLE_HTTP") .. tostring(code))
 			set_state(STATE_SELECT_URL)
 		end
+	end
+
+	if fatal_update_error then
+		return false
 	end
 
 	if not server_address then
@@ -1196,6 +1222,13 @@ end
 local function run_code()
 	local check_result = check_update()
 	if check_result == false then
+		if fatal_update_error then
+			return {
+				status = "Error",
+				title = _("UPDATER_UI_UPGRADE_FAILED"),
+				message = fatal_update_error
+			}
+		end
 		return {
 			status = "NoUpdate"
 		}
@@ -1221,7 +1254,7 @@ local function do_update()
 	else
 		local_hash = "unknown"
 	end
-	local server_hash = update_response.master_commit_hash or "unknown"
+	local server_hash = update_response.target_commit_hash or update_response.master_commit_hash or "unknown"
 	ensure_update_cache_dir(local_hash, server_hash)
 	log_info(_("UPDATER_UI_LOG_CACHE_DIR") .. update_cache_dir)
 
@@ -1275,7 +1308,7 @@ local function do_update()
 		added_or_modified_files = update_response.added_or_modified_files or {},
 		added_or_modified_assets = added_or_modified_assets,
 		deleted_files = update_response.deleted_files or {},
-		master_commit_hash = update_response.master_commit_hash
+		target_commit_hash = update_response.target_commit_hash or update_response.master_commit_hash
 	}
 
 	success = commit_all_changes(commit_info)

@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text organize_strings android windows publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check component_cloner
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text organize_strings android windows dev-windows dev-installer publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check component_cloner
 
 all: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -88,6 +88,16 @@ android:
 windows:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	bash $(MAKE_FILE_DIR)/pack_windows.sh
+
+# 开发包：跟 dev 分支，独立 identity，产物名带 -dev；同时产出 zip 和 installer
+dev-windows:
+	@bash $(MAKE_FILE_DIR)/package.sh
+	PACKAGE_BRANCH=dev PACKAGE_TAG=-dev bash $(MAKE_FILE_DIR)/pack_windows.sh
+	PACKAGE_BRANCH=dev PACKAGE_TAG=-dev bash $(MAKE_FILE_DIR)/pack_windows_installer.sh
+
+dev-installer:
+	@bash $(MAKE_FILE_DIR)/package.sh
+	PACKAGE_BRANCH=dev PACKAGE_TAG=-dev bash $(MAKE_FILE_DIR)/pack_windows_installer.sh
 
 linux:
 	@bash $(MAKE_FILE_DIR)/package.sh
