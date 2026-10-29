@@ -82,22 +82,21 @@ download:
 
 android:
 	@bash $(MAKE_FILE_DIR)/package.sh
-	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh sd
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh hd
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh uhd
 
 windows:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	bash $(MAKE_FILE_DIR)/pack_windows.sh
 
-# 开发包：跟 dev 分支，独立 identity，产物名带 -dev；同时产出 zip 和 installer
 dev-windows:
 	@bash $(MAKE_FILE_DIR)/package.sh
-	PACKAGE_BRANCH=dev PACKAGE_TAG=-dev bash $(MAKE_FILE_DIR)/pack_windows.sh
-	PACKAGE_BRANCH=dev PACKAGE_TAG=-dev bash $(MAKE_FILE_DIR)/pack_windows_installer.sh
+	PACKAGE_BRANCH=dev PACKAGE_TAG=-开发预览版 bash $(MAKE_FILE_DIR)/pack_windows.sh
 
 dev-installer:
 	@bash $(MAKE_FILE_DIR)/package.sh
-	PACKAGE_BRANCH=dev PACKAGE_TAG=-dev bash $(MAKE_FILE_DIR)/pack_windows_installer.sh
+	PACKAGE_BRANCH=dev PACKAGE_TAG=-开发预览版 bash $(MAKE_FILE_DIR)/pack_windows_installer.sh
 
 linux:
 	@bash $(MAKE_FILE_DIR)/package.sh
@@ -121,8 +120,9 @@ installer_build:
 
 android_quick:
 	@bash $(MAKE_FILE_DIR)/package.sh
-	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh quick
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh sd quick
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh hd quick
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh uhd quick
 
 linux_quick:
 	@bash $(MAKE_FILE_DIR)/package.sh
@@ -136,11 +136,15 @@ publish_retry:
 
 android_build:
 # 	@bash $(MAKE_FILE_DIR)/package.sh
-	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh no-upload
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh sd no-upload
 
 android_hd_build:
 # 	@bash $(MAKE_FILE_DIR)/package.sh
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh hd no-upload
+
+android_uhd_build:
+# 	@bash $(MAKE_FILE_DIR)/package.sh
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh uhd no-upload
 
 push:
 	git push origin dev
