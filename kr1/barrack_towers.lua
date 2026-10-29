@@ -4306,13 +4306,13 @@ tt.ultimate = {
 }
 tt.spawn_soldier_interval = 5
 tt.gold_generation = {
-	min_gold = 3,
+	min_gold = 4,
 	max_gold = 6,
 	tick_cooldown = 3
 }
 tt.total_gold_generated = 0
 tt.gold_threshold = 1800
-tt.beyond_threshold_gold_factor = 0.5
+tt.beyond_threshold_gold_factor = 0.4
 tt.gold_effect_offset = v(0, 68)
 tt.cart_start_offset = v(0, 10)
 tt.render.sprites[1].animated = false
