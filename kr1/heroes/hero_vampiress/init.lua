@@ -2,7 +2,6 @@ return {
 	name = "hero_vampiress",
 	room = {
 		available_level = 47,
-		starting_level = 1,
 		stats = {7, 6, 0, 6},
 		thumb_image = "kr2_hero_room_thumbs_0018",
 		icon_image = "kr2_mapButtons_portrait_hero_0018"

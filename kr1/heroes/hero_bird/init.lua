@@ -4,7 +4,6 @@ return {
 	name = "hero_bird",
 	room = {
 		available_level = 109,
-		starting_level = 1,
 		stats = {5, 7, 6, 5},
 		portrait_image = "kr5_portrait_notxt_0008",
 		thumb_image = "kr5_hero_room_thumbs_0008",

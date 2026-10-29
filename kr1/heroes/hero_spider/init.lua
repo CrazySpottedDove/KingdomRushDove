@@ -4,7 +4,6 @@ return {
 	name = "hero_spider",
 	room = {
 		available_level = 116,
-		starting_level = 1,
 		stats = {6, 8, 6, 4},
 		portrait_image = "kr5_portrait_notxt_0017",
 		thumb_image = "kr5_hero_room_thumbs_0017",
