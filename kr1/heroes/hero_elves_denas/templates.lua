@@ -567,6 +567,7 @@ tt.rebound_range = 125
 tt = RT("soldier_elves_denas_guard", "soldier_militia")
 
 AC(tt, "reinforcement", "tween", "nav_grid")
+anchor_y = 12 / 80
 
 tt.health.armor = 0.4
 tt.health.hp_max = 200

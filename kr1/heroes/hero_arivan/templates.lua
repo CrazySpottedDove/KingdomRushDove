@@ -870,6 +870,7 @@ tt.owner_vis_bans = bor(F_BURN, F_POISON, F_STUN, F_NET, F_BLOOD)
 tt.rot_speed = 3 * FPS * math.pi / 180
 tt.rot_radius = 25
 tt = RT("arivan_stone", "decal_tween")
+anchor_y = 0.11666666666666667
 tt.render.sprites[1].name = "arivan_stone_%d"
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].loop = false
