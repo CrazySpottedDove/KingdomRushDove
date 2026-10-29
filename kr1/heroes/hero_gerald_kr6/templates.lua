@@ -400,7 +400,7 @@ local function hero_gerald_kr6_update(this, store)
 			else
 				if ready_to_use_skill(inspire, store, this.unit.cooldown_factor) then
 					local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, inspire.min_range, inspire.max_range, inspire.vis_flags, inspire.vis_bans, function(s)
-						return s.id ~= this.id and s.soldier.target_id ~= nil
+						return s.soldier.target_id ~= nil
 					end)
 
 					if not soldiers or #soldiers < inspire.min_targets then

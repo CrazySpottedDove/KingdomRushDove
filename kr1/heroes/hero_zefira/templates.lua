@@ -551,9 +551,9 @@ tt.hero.skills.skill_c.duration = {4, 6, 8}
 tt.hero.skills.skill_c.damage_factor = {1.3, 1.55, 1.8}
 tt.hero.skills.skill_c.xp_gain = {0, 0, 0}
 tt.hero.skills.skill_c.xp_level_steps = {
-	[4] = 1,
-	[7] = 2,
-	[10] = 3
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
 }
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.cooldown = 34
