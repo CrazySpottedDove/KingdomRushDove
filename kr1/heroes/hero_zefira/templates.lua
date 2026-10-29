@@ -244,6 +244,21 @@ local function decal_zefira_ultimate_spear_update(this, store)
 	U.y_animation_wait(this)
 	U.animation_start(this, "loop", nil, store.tick_ts, true)
 	U.y_wait_unconditional(store, fts(30))
+
+	local enemies = U.find_enemies_in_range(store, this.pos, 0, this.damage_radius, this.vis_flags, this.vis_bans)
+
+	if enemies then
+		for _, enemy in ipairs(enemies) do
+			local d = E:create_entity("damage")
+
+			d.damage_type = this.damage_type
+			d.value = math.random(this.damage_min, this.damage_max)
+			d.source_id = this.id
+			d.target_id = enemy.id
+
+			queue_damage(store, d)
+		end
+	end
 	U.y_animation_play(this, "out", nil, store.tick_ts, 1)
 
 	this.render.sprites[1].hidden = true
