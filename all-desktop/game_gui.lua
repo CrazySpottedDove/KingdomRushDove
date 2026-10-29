@@ -69,7 +69,7 @@ local notification_photo_size = v(260, 250)
 
 -- 跨版本图标：按可见内容（由 GU.measure_sprite_content 缓存）在按钮框内居中绘制。
 -- 边框（bo）在图标之后绘制，会自然遮住超出的部分。tint 用于禁用态变灰。
-local function draw_centered_tower_icon(self)
+local function draw_centered_menu_icon(self)
 	local pr, pg, pb, pa = G.getColor()
 
 	if self.colors.tint then
@@ -91,6 +91,35 @@ local function draw_centered_tower_icon(self)
 	end
 
 	G.setColor(pr, pg, pb, pa)
+end
+
+--- 按边框纹理尺寸创建菜单按钮图标；跨版本图标把可见内容缩放到统一尺寸并居中。
+---@param image_name string
+---@param size_entry table|nil
+---@return KImageView
+local function create_menu_button_image(image_name, size_entry)
+	if not size_entry then
+		return KImageView:new(image_name)
+	end
+
+	local ss = I:s(image_name)
+	local frame_ss = I:s(size_entry.frame_image)
+	local frame_size = v(frame_ss.size[0] * frame_ss.ref_scale, frame_ss.size[1] * frame_ss.ref_scale)
+	local b = KImageView:new(image_name, frame_size)
+
+	-- 原生图标（与边框同逻辑尺寸）按原尺寸居中即可对齐；
+	-- 跨版本图标把可见内容缩放到 target 尺寸并居中（不能按整个 quad，否则带透明边的图会被缩得过小/过大）
+	if not (ss.size[0] == frame_ss.size[0] and ss.size[1] == frame_ss.size[1]) then
+		local content = GU.measure_sprite_content(ss)
+		local visible = content.visible
+		local desired = size_entry.target
+		local scale = ss.ref_scale
+
+		b.image_scale = math.max(desired.x / (visible.x * scale), desired.y / (visible.y * scale))
+		b._draw_self = draw_centered_menu_icon
+	end
+
+	return b
 end
 
 local function ISW(...)
@@ -6301,7 +6330,7 @@ function NotificationView:show(id, no_transition, force_show)
 
 			v_image = KImageView:new(image, target)
 			v_image.image_scale = math.min(target.x / (visible.x * ss.ref_scale), target.y / (visible.y * ss.ref_scale))
-			v_image._draw_self = draw_centered_tower_icon
+			v_image._draw_self = draw_centered_menu_icon
 		else
 			v_image = KImageView:new(image)
 		end
@@ -7616,30 +7645,7 @@ function CriketMenuButton:initialize(item)
 	self.item_image = item.image
 	self.item = item
 
-	local ss = I:s(item.image)
-	local size_entry = tower_menu_button_size_map[item.action]
-	local b
-	if size_entry then
-		local frame_ss = I:s(size_entry.frame_image)
-		local frame_size = v(frame_ss.size[0] * frame_ss.ref_scale, frame_ss.size[1] * frame_ss.ref_scale)
-
-		-- 按钮尺寸取边框实际尺寸，与图标内容无关（价格/光环/升级点等子节点都按它定位）
-		b = KImageView:new(item.image, frame_size)
-
-		-- 原生图标（与边框同逻辑尺寸）按原尺寸居中即可对齐；
-		-- 跨版本图标把可见内容缩放到 target 尺寸并居中（不能按整个 quad，否则带透明边的图会被缩得过小/过大）
-		if not (ss.size[0] == frame_ss.size[0] and ss.size[1] == frame_ss.size[1]) then
-			local content = GU.measure_sprite_content(ss)
-			local visible = content.visible
-			local desired = size_entry.target
-			local scale = ss.ref_scale
-
-			b.image_scale = math.max(desired.x / (visible.x * scale), desired.y / (visible.y * scale))
-			b._draw_self = draw_centered_tower_icon
-		end
-	else
-		b = KImageView:new(item.image)
-	end
+	local b = create_menu_button_image(item.image, tower_menu_button_size_map[item.action])
 
 	b.pos = v(0, 0)
 	b.propagate_on_click = true
@@ -7880,6 +7886,10 @@ end
 
 -- 局内召唤英雄仪表盘
 local HEROES = require("heroes.registry")
+local hero_menu_button_size = {
+	frame_image = "main_icons_0000",
+	target = v(44, 42)
+}
 
 HeroMenuButton = class("HeroMenuButton", KView)
 
@@ -7889,7 +7899,7 @@ function HeroMenuButton:initialize(item)
 	self.item_image = item.image
 	self.item = item
 
-	local b = KImageView:new(item.image)
+	local b = create_menu_button_image(item.image, hero_menu_button_size)
 
 	b.pos = v(0, 0)
 	b.propagate_on_click = true
@@ -9378,30 +9388,7 @@ function TowerMenuButton:initialize(item, entity)
 	self.item = item
 	self.entity = entity
 
-	local ss = I:s(item.image)
-	local size_entry = tower_menu_button_size_map[item.action]
-	local b
-	if size_entry then
-		local frame_ss = I:s(size_entry.frame_image)
-		local frame_size = v(frame_ss.size[0] * frame_ss.ref_scale, frame_ss.size[1] * frame_ss.ref_scale)
-
-		-- 按钮尺寸取边框实际尺寸，与图标内容无关（价格/光环/升级点等子节点都按它定位）
-		b = KImageView:new(item.image, frame_size)
-
-		-- 原生图标（与边框同逻辑尺寸）按原尺寸居中即可对齐；
-		-- 跨版本图标把可见内容缩放到 target 尺寸并居中（不能按整个 quad，否则带透明边的图会被缩得过小/过大）
-		if not (ss.size[0] == frame_ss.size[0] and ss.size[1] == frame_ss.size[1]) then
-			local content = GU.measure_sprite_content(ss)
-			local visible = content.visible
-			local desired = size_entry.target
-			local scale = ss.ref_scale
-
-			b.image_scale = math.max(desired.x / (visible.x * scale), desired.y / (visible.y * scale))
-			b._draw_self = draw_centered_tower_icon
-		end
-	else
-		b = KImageView:new(item.image)
-	end
+	local b = create_menu_button_image(item.image, tower_menu_button_size_map[item.action])
 
 	b.pos = v(0, 0)
 	b.propagate_on_click = true
