@@ -201,7 +201,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_2 = "Every %$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$ seconds, silences up to %$T('tower_wild_magus').powers.ward.target_count[level]%$ enemies, blocking their magical abilities for %$T('mod_ward').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[2].cooldown * tcd%$ seconds, throws a fireball towards the path, dealing %$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$ magic explosion damage and burning enemies for %$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$ true damage every %$T('mod_firebook_aura').dps.damage_every%$ seconds over %$T('mod_firebook_aura').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[3].cooldown * tcd%$ seconds, grants a %$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$% damage buff to all towers within range for %$T('tower_wizard').attacks.list[3].duration[level]%$ seconds.",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage."
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage.",
 }
 
 return {
@@ -4935,7 +4935,7 @@ return {
 	PLUGIN_MGR_META_PACK = "v%s · Members: %s · Downloads: %s · Author: %s",
 	PLUGIN_MGR_META_PLUGIN_AUTHOR = "%s v%s  Author: %s",
 	PLUGIN_MGR_META_STORE_ITEM = "v%s  Downloads: %s  Author: %s",
-	PLUGIN_MGR_MIN_VERSION_BLOCKED = "%s(%s) requires game version %s or newer to run. Please update the game first.",
+	PLUGIN_MGR_MIN_VERSION_BLOCKED = "The newest version of %s(%s) requires game version %s or newer to run. Install rejected.",
 	PLUGIN_MGR_MIN_VERSION_TITLE = "Cannot Install Plugin",
 	PLUGIN_MGR_NO_DESCRIPTION = "No documentation available",
 	PLUGIN_MGR_NO_SUMMARY = "No description",

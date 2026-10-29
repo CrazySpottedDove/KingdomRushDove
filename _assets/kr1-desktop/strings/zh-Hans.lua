@@ -4938,7 +4938,7 @@ return {
 	PLUGIN_MGR_META_PACK = "v%s · 成员:%s · 下载:%s · 作者:%s",
 	PLUGIN_MGR_META_PLUGIN_AUTHOR = "%s v%s  作者: %s",
 	PLUGIN_MGR_META_STORE_ITEM = "v%s  下载:%s  作者:%s",
-	PLUGIN_MGR_MIN_VERSION_BLOCKED = "%s(%s)需要%s版本本体才可运行，请先更新本体。",
+	PLUGIN_MGR_MIN_VERSION_BLOCKED = "%s(%s)的最新版本需要%s版本本体才可运行，拒绝更新。",
 	PLUGIN_MGR_MIN_VERSION_TITLE = "无法安装插件",
 	PLUGIN_MGR_NO_DESCRIPTION = "暂无说明文档",
 	PLUGIN_MGR_NO_SUMMARY = "暂无简介",
