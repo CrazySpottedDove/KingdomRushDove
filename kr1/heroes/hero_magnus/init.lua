@@ -6,9 +6,6 @@ return {
 		available_level = 6,
 		starting_level = 1,
 		stats = {3, 2, 7, 8},
-		portrait = 5,
-		thumb = 5,
-		icon = 5,
 		portrait_image = "portrait_notxt_0005",
 		thumb_image = "hero_room_thumbs_0005",
 		icon_image = "mapButtons_portrait_hero_0005"
