@@ -204,7 +204,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
 }
 
 return {
@@ -2747,6 +2747,8 @@ return {
 	HERO_FAUSTUS_DESCRIPTION = "精灵族的守护圣龙，生命与艾纳尼之泪紧密连结。绝不能让那圣物落入敌人之手！",
 	HERO_FAUSTUS_NAME = "浮士德",
 	HERO_GERALD_DESCRIPTION = "正义的守护者， 黑暗的惩戒者， 无辜民众的保护者， 邪魔歪道的粉碎者， 光之追寻者杰拉尔德堪称利尼维亚军队中最异乎寻常的人物！",
+	HERO_GERALD_KR6_DESCRIPTION = "从卫兹南带来的浩劫中幸存后，杰拉尔德回到过去，肩负起了阻止黑暗巫师染指“艾纳妮之泪”的使命。",
+	HERO_GERALD_KR6_NAME = "杰拉尔德",
 	HERO_GERALD_NAME = "杰拉尔德爵士",
 	HERO_GIANT_DESCRIPTION = "当蜥蜴人的镐子落到这位岩石巨人的身上时，大地震颤，格劳尔怒火冲天地加入了我们的队伍。或许我们应该庆幸最先挖到它的不是我们的矮人朋友……",
 	HERO_GIANT_NAME = "格劳尔",
@@ -3142,6 +3144,18 @@ return {
 	HERO_ROOM_GERALD_COURAGE_NAME = "鼓舞",
 	HERO_ROOM_GERALD_HOLY_STRIKE_DESC = "%$ cooldown_str(((T('hero_gerald')).melee.attacks[3].cooldown)) %$杰拉尔德发动神圣打击，对%$ ((T('hero_gerald')).melee.attacks[3].damage_radius) %$范围内敌人造成%$ damage_str(((T('hero_gerald')).hero.skills.holy_strike).damage_min[levels((T('hero_gerald')).hero.skills.holy_strike)],((T('hero_gerald')).hero.skills.holy_strike).damage_max[levels((T('hero_gerald')).hero.skills.holy_strike)],(T('hero_gerald')).melee.attacks[3].damage_type) %$，并使其沉默%$ ((T('mod_paladin_silence')).modifier.duration) %$秒。",
 	HERO_ROOM_GERALD_HOLY_STRIKE_NAME = "神圣打击",
+	HERO_ROOM_GERALD_KR6_BATTLE_VIGOR_DESC = "杰拉尔德每秒恢复%$ ((T('hero_gerald_kr6')).hero.skills.battle_vigor.regen_ptg) %$%最大生命值。",
+	HERO_ROOM_GERALD_KR6_BATTLE_VIGOR_NAME = "战斗活力",
+	HERO_ROOM_GERALD_KR6_DIVINE_BLADE_DESC = "每隔%$ ((T('hero_gerald_kr6')).timed_attacks.list[4].cooldown) %$秒，杰拉尔德对目标造成%$ ((T('hero_gerald_kr6')).timed_attacks.list[4].damage_min) %$点真实伤害，并眩晕目标%$ ((E:get_template('mod_gerald_kr6_ultimate_hit_stun')).modifier.duration) %$秒；目标周围%$ ((T('hero_gerald_kr6')).timed_attacks.list[4].splash_radius) %$范围内的敌人受到%$ ((T('hero_gerald_kr6')).timed_attacks.list[4].splash_damage_min) %$点真实伤害并被眩晕。",
+	HERO_ROOM_GERALD_KR6_DIVINE_BLADE_NAME = "神圣之刃",
+	HERO_ROOM_GERALD_KR6_FATED_SURVIVOR_DESC = "每隔%$ ((T('hero_gerald_kr6')).hero.skills.fated_survivor.cooldown[levels((T('hero_gerald_kr6')).hero.skills.fated_survivor)]) %$秒，杰拉尔德在受到致命伤害时扭转死亡，恢复%$ ((T('hero_gerald_kr6')).hero.skills.fated_survivor.hp_ptg[levels((T('hero_gerald_kr6')).hero.skills.fated_survivor)]) %$%最大生命值，并将攻击者传送回后方。",
+	HERO_ROOM_GERALD_KR6_FATED_SURVIVOR_NAME = "命运幸存者",
+	HERO_ROOM_GERALD_KR6_HARDENED_STEEL_DESC = "杰拉尔德有%$ ((T('hero_gerald_kr6')).hero.skills.hardened_steel.chance) %$%的概率格挡近战攻击。",
+	HERO_ROOM_GERALD_KR6_HARDENED_STEEL_NAME = "百炼精钢",
+	HERO_ROOM_GERALD_KR6_INSPIRE_COURAGE_DESC = "每隔%$ ((T('hero_gerald_kr6')).timed_attacks.list[1].cooldown) %$秒，杰拉尔德鼓舞%$ ((T('hero_gerald_kr6')).timed_attacks.list[1].max_range) %$范围内的友军，使其护甲与魔法抗性提升%$ ((T('hero_gerald_kr6')).hero.skills.inspire_courage.armor_inc) %$%，持续%$ ((T('hero_gerald_kr6')).hero.skills.inspire_courage.duration[levels((T('hero_gerald_kr6')).hero.skills.inspire_courage)]) %$秒。",
+	HERO_ROOM_GERALD_KR6_INSPIRE_COURAGE_NAME = "鼓舞勇气",
+	HERO_ROOM_GERALD_KR6_SHIELD_OF_RETRIBUTION_DESC = "每隔%$ ((T('hero_gerald_kr6')).hero.skills.shield_of_retribution.cooldown[levels((T('hero_gerald_kr6')).hero.skills.shield_of_retribution)]) %$秒，杰拉尔德获得一面护盾，提升%$ ((T('hero_gerald_kr6')).hero.skills.shield_of_retribution.armor_inc[levels((T('hero_gerald_kr6')).hero.skills.shield_of_retribution)]) %$%护甲与魔法抗性，持续%$ ((E:get_template('mod_gerald_kr6_shield')).modifier.duration) %$秒，并将受到近战伤害的%$ ((T('hero_gerald_kr6')).hero.skills.shield_of_retribution.spiked_armor[levels((T('hero_gerald_kr6')).hero.skills.shield_of_retribution)]) %$%反射给攻击者。",
+	HERO_ROOM_GERALD_KR6_SHIELD_OF_RETRIBUTION_NAME = "复仇之盾",
 	HERO_ROOM_GERALD_PALADIN_DESC = "每隔%$ ((T('hero_gerald')).timed_attacks.list[2].cooldown) %$秒，爵士召唤一名可调集的皇家近卫协助战斗。皇家近卫拥有%$ hp_str(((T('hero_gerald')).hero.skills.paladin).hp_max[(levels((T('hero_gerald')).hero.skills.paladin))]) %$，%$ armor_str((E:get_template('soldier_gerald_paladin')).health.armor) %$，每次攻击造成%$ damage_str(((T('hero_gerald')).hero.skills.paladin).melee_damage_min[(levels((T('hero_gerald')).hero.skills.paladin))],((T('hero_gerald')).hero.skills.paladin).melee_damage_max[(levels((T('hero_gerald')).hero.skills.paladin))],(E:get_template('soldier_gerald_paladin')).melee.attacks[1].damage_type) %$，驻场%$ ((E:get_template('soldier_gerald_paladin')).reinforcement.duration) %$秒。",
 	HERO_ROOM_GERALD_PALADIN_NAME = "神圣支援",
 	HERO_ROOM_GIANT_BOULDERTHROW_DESC = "%$ cooldown_str(((T('hero_giant')).ranged.attacks[1].cooldown)) %$格劳尔投掷巨石，对%$ ((T('giant_boulder')).bullet.damage_radius) %$范围内敌人造成%$ damage_str(((T('hero_giant')).hero.skills.boulderthrow).damage_min[(levels((T('hero_giant')).hero.skills.boulderthrow))],((T('hero_giant')).hero.skills.boulderthrow).damage_max[(levels((T('hero_giant')).hero.skills.boulderthrow))],(T('giant_boulder')).bullet.damage_type) %$。",

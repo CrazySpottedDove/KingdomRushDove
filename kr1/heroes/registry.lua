@@ -16,6 +16,7 @@ HEROES.declarations = {}
 -- 本体英雄模块路径。插件不要改这里，用 HEROES:register。
 HEROES.module_names = {
 	"heroes.hero_gerald",
+	"heroes.hero_gerald_kr6",
 	"heroes.hero_alleria",
 	"heroes.hero_malik",
 	"heroes.hero_bolin",
