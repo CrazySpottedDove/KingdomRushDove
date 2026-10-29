@@ -29994,6 +29994,16 @@ return {
 		prefix = "silence_small",
 		to = 9
 	},
+	vanhelsing_silence_big = {
+		from = 1,
+		prefix = "Halloween_hero_vhelsing_waterFx_big",
+		to = 18
+	},
+	vanhelsing_silence_small = {
+		from = 1,
+		prefix = "Halloween_hero_vhelsing_waterFx_small",
+		to = 18
+	},
 	simon_gnome_fx = {
 		from = 56,
 		prefix = "stage8_symon",

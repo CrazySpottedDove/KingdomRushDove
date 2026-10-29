@@ -138,15 +138,5 @@ return {
 		from = 1,
 		prefix = "Halloween_hero_vhelsing_shield",
 		to = 23
-	},
-	vanhelsing_silence_big = {
-		from = 1,
-		prefix = "Halloween_hero_vhelsing_waterFx_big",
-		to = 18
-	},
-	vanhelsing_silence_small = {
-		from = 1,
-		prefix = "Halloween_hero_vhelsing_waterFx_small",
-		to = 18
 	}
 }
