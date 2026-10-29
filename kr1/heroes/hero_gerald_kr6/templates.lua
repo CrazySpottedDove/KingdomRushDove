@@ -218,7 +218,7 @@ local function hero_gerald_kr6_update(this, store)
 
 				local attacker = this.soldier.target_id and store.entities[this.soldier.target_id]
 
-				if attacker and not attacker.health.dead then
+				if attacker and not attacker.health.dead and band(attacker.vis.flags, fated.vis_bans) == 0 and band(attacker.vis.bans, fated.vis_flags) == 0 then
 					local mod = E:create_entity(fated.mod)
 
 					mod.modifier.target_id = attacker.id
@@ -463,13 +463,13 @@ local tt
 
 tt = RT("hero_gerald_kr6", "hero")
 AC(tt, "melee", "timed_attacks", "dodge")
-tt.hero.level_stats.armor = {0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5}
-tt.hero.level_stats.hp_max = {220, 240, 260, 280, 300, 320, 340, 360, 380, 400}
+tt.hero.level_stats.armor = {0.23, 0.26, 0.29, 0.32, 0.35, 0.38, 0.41, 0.44, 0.47, 0.5}
+tt.hero.level_stats.hp_max = {240, 260, 280, 300, 320, 340, 360, 380, 400, 450}
 tt.hero.level_stats.melee_damage_min = {14, 16, 18, 19, 21, 22, 24, 26, 28, 30}
 tt.hero.level_stats.melee_damage_max = {22, 24, 26, 29, 31, 34, 36, 39, 41, 44}
 tt.hero.skills.inspire_courage = CC("hero_skill")
 tt.hero.skills.inspire_courage.armor_inc = 0.4
-tt.hero.skills.inspire_courage.duration = {4, 6, 10}
+tt.hero.skills.inspire_courage.duration = {5, 7.5, 10}
 tt.hero.skills.inspire_courage.xp_gain = {64, 128, 192}
 tt.hero.skills.inspire_courage.xp_level_steps = {
 	[2] = 1,
@@ -477,9 +477,9 @@ tt.hero.skills.inspire_courage.xp_level_steps = {
 	[8] = 3
 }
 tt.hero.skills.shield_of_retribution = CC("hero_skill")
-tt.hero.skills.shield_of_retribution.armor_inc = {0.3, 0.3, 0.4}
-tt.hero.skills.shield_of_retribution.spiked_armor = {0.4, 0.8, 1.2}
-tt.hero.skills.shield_of_retribution.cooldown = {24, 24, 20}
+tt.hero.skills.shield_of_retribution.armor_inc = {0.4, 0.4, 0.4}
+tt.hero.skills.shield_of_retribution.spiked_armor = {0.5, 1, 1.5}
+tt.hero.skills.shield_of_retribution.cooldown = {20, 20, 20}
 tt.hero.skills.shield_of_retribution.xp_gain = {96, 192, 288}
 tt.hero.skills.shield_of_retribution.xp_level_steps = {
 	[3] = 1,
@@ -487,7 +487,7 @@ tt.hero.skills.shield_of_retribution.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.fated_survivor = CC("hero_skill")
-tt.hero.skills.fated_survivor.cooldown = {50, 50, 40}
+tt.hero.skills.fated_survivor.cooldown = {40, 40, 40}
 tt.hero.skills.fated_survivor.hp_ptg = {0.4, 0.7, 1}
 tt.hero.skills.fated_survivor.xp_gain = {200, 400, 600}
 tt.hero.skills.fated_survivor.xp_level_steps = {
@@ -551,7 +551,7 @@ tt.melee.attacks[1].shared_cooldown = true
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 2
+tt.melee.attacks[1].xp_gain_factor = 2.5
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].animation = "attack_2"
 tt.melee.attacks[2].chance = 0.5
@@ -560,10 +560,10 @@ tt.melee.range = 60
 tt.timed_attacks.list[1] = CC("custom_attack")
 tt.timed_attacks.list[1].animation = "inspire_courage"
 tt.timed_attacks.list[1].cast_time = fts(16.666)
-tt.timed_attacks.list[1].cooldown = 16
+tt.timed_attacks.list[1].cooldown = 15
 tt.timed_attacks.list[1].decal = "decal_gerald_kr6_courage"
 tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].max_range = 60
+tt.timed_attacks.list[1].max_range = 105
 tt.timed_attacks.list[1].min_range = 0
 tt.timed_attacks.list[1].min_targets = 1
 tt.timed_attacks.list[1].mod = "mod_gerald_kr6_courage"
@@ -586,11 +586,13 @@ tt.timed_attacks.list[3].disabled = true
 tt.timed_attacks.list[3].hp_ptg = 0.4
 tt.timed_attacks.list[3].mod = "mod_gerald_kr6_teleport"
 tt.timed_attacks.list[3].sound = "HeroGeraldFatedSurvivorCast"
+tt.timed_attacks.list[3].vis_bans = F_BOSS
+tt.timed_attacks.list[3].vis_flags = F_TELEPORT
 tt.timed_attacks.list[4] = CC("custom_attack")
 tt.timed_attacks.list[4].animation = "ultimate"
 tt.timed_attacks.list[4].cooldown = 25
-tt.timed_attacks.list[4].damage_min = 400
-tt.timed_attacks.list[4].damage_max = 400
+tt.timed_attacks.list[4].damage_min = 500
+tt.timed_attacks.list[4].damage_max = 500
 tt.timed_attacks.list[4].damage_type = DAMAGE_TRUE
 tt.timed_attacks.list[4].disabled = true
 tt.timed_attacks.list[4].hit_decal = "decal_gerald_kr6_ultimate"
@@ -603,8 +605,8 @@ tt.timed_attacks.list[4].shared_cooldown = true
 tt.timed_attacks.list[4].sound_cast = "HeroGeraldDivineBladeCast"
 tt.timed_attacks.list[4].sound_hit = "HeroDivineBladeImpact"
 tt.timed_attacks.list[4].sound_taunt = "HeroGeraldTauntUltimate"
-tt.timed_attacks.list[4].splash_damage_min = 200
-tt.timed_attacks.list[4].splash_damage_max = 200
+tt.timed_attacks.list[4].splash_damage_min = 250
+tt.timed_attacks.list[4].splash_damage_max = 250
 tt.timed_attacks.list[4].splash_radius = 50
 tt.timed_attacks.list[4].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[4].vis_flags = bor(F_AREA)
@@ -613,9 +615,7 @@ tt.dodge.ranged = true
 tt.dodge.silent = true
 
 tt = RT("mod_gerald_kr6_courage", "modifier")
-
 AC(tt, "render")
-
 tt.armor_inc = 0.4
 tt.fx = "fx_gerald_kr6_courage"
 tt.main_script.insert = mod_gerald_kr6_courage_insert
@@ -631,14 +631,12 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_DECALS
 
 tt = RT("mod_gerald_kr6_shield", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.armor_inc = 0.3
 tt.main_script.insert = mod_gerald_kr6_shield_insert
 tt.main_script.remove = mod_gerald_kr6_shield_remove
 tt.main_script.update = mod_gerald_kr6_shield_update
-tt.modifier.duration = 6
+tt.modifier.duration = 8
 tt.modifier.use_mod_offset = false
 tt.modifier.vis_bans = 0
 tt.modifier.vis_flags = bor(F_MOD)
