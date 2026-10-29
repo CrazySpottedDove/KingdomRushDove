@@ -114,10 +114,6 @@ local function wid(name)
 	return screen_map.window:get_child_by_id(name)
 end
 
-local function hero_icon_image(hd)
-	return hd.icon_image or U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
-end
-
 local function get_hero_index(hero_name)
 	for i, h in ipairs(screen_map.hero_data) do
 		if hero_name == h.name then
@@ -1032,7 +1028,7 @@ function screen_map:refresh_hero_button_state()
 		p2.hidden = true
 	elseif #selected == 1 then
 		local hd = self.hero_data[get_hero_index(selected[1])]
-		local img = hero_icon_image(hd)
+		local img = hd.icon_image
 
 		p1:set_image(img)
 		p1.image_scale = 1
@@ -1046,8 +1042,8 @@ function screen_map:refresh_hero_button_state()
 	else
 		local hd1 = self.hero_data[get_hero_index(selected[1])]
 		local hd2 = self.hero_data[get_hero_index(selected[2])]
-		local img1 = hero_icon_image(hd1)
-		local img2 = hero_icon_image(hd2)
+		local img1 = hd1.icon_image
+		local img2 = hd2.icon_image
 		local d = W / 5
 
 		p1:set_image(img1)
@@ -6621,7 +6617,7 @@ function HeroRoomViewKR1:refresh_hero_thumbs()
 		local col = (i - 1) % per_row
 		local row = math.floor((i - 1) / per_row)
 		local thumb_pos = V.v(col * spacing_x, row * spacing_y)
-		local v2_name = data.thumb_image or U.splicing_from_kr(data.from_kr, string.format("hero_room_thumbs_%04d", data.thumb))
+		local v2_name = data.thumb_image
 		local v2 = KImageView:new(v2_name)
 
 		v2.pos = thumb_pos

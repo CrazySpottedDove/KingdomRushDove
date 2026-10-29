@@ -7,9 +7,6 @@ return {
 		starting_level = 1,
 		from_kr = 5,
 		stats = {9, 0, 9, 5},
-		portrait = 19,
-		thumb = 19,
-		icon = 19,
 		portrait_image = "kr5_portrait_notxt_0019",
 		thumb_image = "kr5_hero_room_thumbs_0019",
 		icon_image = "kr5_mapButtons_portrait_hero_0019"
