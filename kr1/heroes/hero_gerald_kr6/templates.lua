@@ -46,7 +46,7 @@ local function mod_gerald_kr6_courage_update(this, store)
 		return
 	end
 
-	this.pos.x, this.pos.y = target.pos.x, target.pos.y
+	this.pos = target.pos
 
 	local fx = E:create_entity(this.fx)
 
@@ -478,7 +478,7 @@ tt.hero.skills.inspire_courage.xp_level_steps = {
 }
 tt.hero.skills.shield_of_retribution = CC("hero_skill")
 tt.hero.skills.shield_of_retribution.armor_inc = {0.3, 0.3, 0.4}
-tt.hero.skills.shield_of_retribution.spiked_armor = {0.3, 0.6, 0.8}
+tt.hero.skills.shield_of_retribution.spiked_armor = {0.4, 0.8, 1.2}
 tt.hero.skills.shield_of_retribution.cooldown = {24, 24, 20}
 tt.hero.skills.shield_of_retribution.xp_gain = {96, 192, 288}
 tt.hero.skills.shield_of_retribution.xp_level_steps = {
@@ -589,8 +589,8 @@ tt.timed_attacks.list[3].sound = "HeroGeraldFatedSurvivorCast"
 tt.timed_attacks.list[4] = CC("custom_attack")
 tt.timed_attacks.list[4].animation = "ultimate"
 tt.timed_attacks.list[4].cooldown = 25
-tt.timed_attacks.list[4].damage_min = 300
-tt.timed_attacks.list[4].damage_max = 300
+tt.timed_attacks.list[4].damage_min = 400
+tt.timed_attacks.list[4].damage_max = 400
 tt.timed_attacks.list[4].damage_type = DAMAGE_TRUE
 tt.timed_attacks.list[4].disabled = true
 tt.timed_attacks.list[4].hit_decal = "decal_gerald_kr6_ultimate"
