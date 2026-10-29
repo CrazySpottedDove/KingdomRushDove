@@ -5,7 +5,6 @@ return {
 	room = {
 		available_level = 116,
 		starting_level = 1,
-		from_kr = 5,
 		stats = {6, 0, 5, 5},
 		portrait_image = "kr5_portrait_notxt_0014",
 		thumb_image = "kr5_hero_room_thumbs_0014",
