@@ -6,7 +6,6 @@ return {
 		available_level = 6,
 		starting_level = 1,
 		stats = {6, 5, 0, 4},
-		from_kr = 1,
 		portrait_image = "portrait_notxt_0001",
 		thumb_image = "hero_room_thumbs_0001",
 		icon_image = "mapButtons_portrait_hero_0001"
