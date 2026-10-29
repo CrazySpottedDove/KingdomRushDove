@@ -464,9 +464,8 @@ local function hero_elves_archer_update(this, store)
 end
 
 tt = RT("hero_elves_archer", "hero")
-
 AC(tt, "melee", "ranged", "dodge", "timed_attacks")
-
+anchor_y = 16 / 68
 tt.hero.level_stats.hp_max = {220, 240, 260, 280, 300, 320, 340, 360, 380, 400}
 tt.hero.level_stats.armor = {0.19, 0.23, 0.27, 0.31, 0.35, 0.39, 0.43, 0.47, 0.51, 0.55}
 tt.hero.level_stats.melee_damage_min = {11, 11, 12, 13, 14, 15, 15, 16, 17, 18}
