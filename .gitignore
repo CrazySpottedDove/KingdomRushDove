@@ -66,4 +66,4 @@ __pycache__/
 *.pyo
 args.lua
 AGENTS.md
-precompile/generated/.build_cache
+build_info.lua

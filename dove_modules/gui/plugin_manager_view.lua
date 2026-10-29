@@ -16,6 +16,7 @@ local markdown_view = require("dove_modules.gui.markdown_view")
 local zip = require("lib.zip")
 local plugin_packs = require("dove_modules.gui.plugin_manager_packs")
 local version = require("version")
+local branch = version.branch or "master"
 
 local km = require("lib.klua.macros")
 local G = love.graphics
@@ -108,15 +109,26 @@ while true do
 end
 ]]
 
-local function version_to_num(v)
-	-- 先把字符串里不是数字的都除去
-	local num_str = v:gsub("[^%d]", "")
-
-	return tonumber(num_str)
+local function version_parts(v)
+	local parts = {}
+	for n in tostring(v or ""):gmatch("%d+") do
+		parts[#parts + 1] = tonumber(n)
+	end
+	return parts
 end
 
+--- 按数字段比较版本，避免 1.10 被当成 110 / 1.2.3 被当成 123
 local function version_lt(v1, v2)
-	return version_to_num(v1) < version_to_num(v2)
+	local a = version_parts(v1)
+	local b = version_parts(v2)
+	for i = 1, math.max(#a, #b) do
+		local x = a[i] or 0
+		local y = b[i] or 0
+		if x ~= y then
+			return x < y
+		end
+	end
+	return false
 end
 
 --- 判断商店条目是否因本体版本过低而不可用
@@ -200,7 +212,7 @@ local function deep_equal(a, b)
 	return true
 end
 
-local preserved_keys = table.to_map({"__default_config", "key_label_map", "key_order_list"})
+local preserved_keys = table.to_map({"__default_config", "key_label_map", "key_order_list", "branch"})
 
 -- 提取配置中的默认数值（排除保留字段本身）
 local function extract_default_config(cfg)
@@ -1442,7 +1454,7 @@ function PluginManagerView:_get_store_page(base, sort_val, category_val, page, u
 		return true, self._store_page_cache[key], true
 	end
 
-	local url = string.format("%s/list?page=%d&page_size=%d&sort=%s&category=%s%s%s", base, page, STORE_PAGE_SIZE, sort_val, category_val, exclude_param, q_param)
+	local url = string.format("%s/list?page=%d&page_size=%d&sort=%s&category=%s&branch=%s&core_version=%s%s%s", base, page, STORE_PAGE_SIZE, sort_val, category_val, branch, url_encode(version.id or ""), exclude_param, q_param)
 	local resp, err = self:_request(url, {
 		method = "GET"
 	}, 20)
@@ -1566,7 +1578,9 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 				["Content-Type"] = "application/json"
 			},
 			data = json.encode({
-				entries = batch
+				entries = batch,
+				branch = branch,
+				core_version = version.id
 			})
 		}, 30)
 		if err then
@@ -1733,7 +1747,8 @@ function PluginManagerView:_download_zip(item, task)
 	if not filename or filename == "" then
 		return nil, _("PLUGIN_MGR_ERR_PLUGIN_NO_FILENAME")
 	end
-	local url = base .. "/download/" .. url_encode(filename) .. "?platform=" .. get_platform()
+	local item_branch = item.branch or branch
+	local url = base .. "/download/" .. url_encode(filename) .. "?platform=" .. get_platform() .. "&branch=" .. url_encode(item_branch)
 	local chunk_size = 1024 * 1024
 	local chunks = {}
 	local downloaded = 0
@@ -2036,7 +2051,7 @@ function PluginManagerView:_apply_patch_to_dir(target_dir, patch_data)
 	remove_dir_recursive(tmp)
 	return true, nil
 end
-function PluginManagerView:_download_patch(entry, platform, version, changed, deleted)
+function PluginManagerView:_download_patch(entry, platform, version, changed, deleted, target_branch)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
@@ -2050,6 +2065,7 @@ function PluginManagerView:_download_patch(entry, platform, version, changed, de
 			entry = entry,
 			version = version,
 			platform = platform,
+			branch = target_branch or branch,
 			changed = changed,
 			deleted = deleted
 		})
@@ -2079,7 +2095,8 @@ function PluginManagerView:_install_or_update_item(item, task)
 	if FS.getInfo(target_dir, "directory") then
 		local local_cfg = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
 		local dir_info = self:_compute_dir_hashes(target_dir)
-		local hash_ok, hash_resp = self:_hash_check(entry, item.version or "", dir_info.hashes, get_platform(), "download")
+		local item_branch = item.branch or branch
+		local hash_ok, hash_resp = self:_hash_check(entry, item.version or "", dir_info.hashes, get_platform(), "download", item_branch)
 		if hash_ok and hash_resp and type(hash_resp.changed) == "table" then
 			local changed = hash_resp.changed
 			local deleted = hash_resp.deleted
@@ -2087,7 +2104,7 @@ function PluginManagerView:_install_or_update_item(item, task)
 				self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_UP_TO_DATE"), item.name or item.entry), 100)
 				return true, nil
 			end
-			local patch_data = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted)
+			local patch_data = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted, item_branch)
 			if task and task.cancelled then
 				return false, "cancelled"
 			end
@@ -2716,7 +2733,7 @@ function PluginManagerView:_render_store_list()
 
 		local row = PluginItemRow:new({
 			title = item.name or item.entry,
-			meta = string.format(_("PLUGIN_MGR_META_STORE_ITEM"), utf8_util.sanitize(item.version), utf8_util.sanitize(item.downloads), utf8_util.sanitize(item.by)),
+			meta = string.format(_("PLUGIN_MGR_META_STORE_ITEM"), utf8_util.sanitize(item.version), utf8_util.sanitize(item.downloads), utf8_util.sanitize(item.by)) .. (item.branch == "dev" and "  [dev]" or ""),
 			desc = item.desc or "",
 			status = status,
 			show_toggle = false,
@@ -2924,7 +2941,8 @@ function PluginManagerView:_show_store_plugin_detail(item)
 			return false, _("PLUGIN_MGR_ERR_PLUGIN_NO_ENTRY")
 		end
 
-		local url = base .. "/" .. url_encode(entry) .. "/readme"
+		local item_branch = item.branch or branch
+		local url = base .. "/" .. url_encode(entry) .. "/readme?branch=" .. url_encode(item_branch)
 		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_FETCHING_DETAILS"), item.name or item.entry), 50)
 		local resp, err = self:_request(url, {
 			method = "GET"
@@ -2955,11 +2973,13 @@ end
 
 function PluginManagerView:_handle_upload_plugin(plugin_data)
 	local cover_name = nil
-	local items = FS.getDirectoryItems(plugin_paths.plugin_dir(plugin_data.config.entry)) or {}
-	for _, name in ipairs(items) do
-		if name:lower():match("^cover%.") then
-			cover_name = name
-			break
+	if (plugin_data.config.branch or "master") == "master" then
+		local items = FS.getDirectoryItems(plugin_paths.plugin_dir(plugin_data.config.entry)) or {}
+		for _, name in ipairs(items) do
+			if name:lower():match("^cover%.") then
+				cover_name = name
+				break
+			end
 		end
 	end
 
@@ -3095,7 +3115,7 @@ function PluginManagerView:_compute_dir_hashes(dir)
 	}
 end
 
-function PluginManagerView:_hash_check(entry, version, hashes, platform, mode)
+function PluginManagerView:_hash_check(entry, version, hashes, platform, mode, target_branch)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
@@ -3104,6 +3124,7 @@ function PluginManagerView:_hash_check(entry, version, hashes, platform, mode)
 		entry = entry,
 		version = version,
 		platform = platform,
+		branch = target_branch or branch,
 		hashes = hashes
 	}
 	if mode then
@@ -3179,7 +3200,8 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 			["Content-Type"] = "application/octet-stream",
 			["X-Upload-Mode"] = "patch",
 			["X-Plugin-Entry"] = entry,
-			["X-Plugin-Version"] = version
+			["X-Plugin-Version"] = version,
+			["X-Plugin-Branch"] = plugin_data.config.branch or "master"
 		},
 		data = patch_data
 	}, 120)
@@ -3204,6 +3226,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 	local entry = plugin_data.config.entry
 	local version = plugin_data.config.version
+	local target_branch = plugin_data.config.branch or "master"
 
 	-- 上传成功后远端内容即与本地一致：同步刷新远端缓存版本，
 	-- 否则本行会继续命中「含未上传更新」的高亮与置顶。
@@ -3236,7 +3259,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 	-- 与服务端比对哈希，决定全量还是增量
 	local use_full = true
-	local hash_ok, hash_resp = self:_hash_check(entry, version, dir_info.hashes)
+	local hash_ok, hash_resp = self:_hash_check(entry, version, dir_info.hashes, nil, nil, target_branch)
 	if hash_ok and hash_resp and type(hash_resp.changed) == "table" and type(hash_resp.deleted) == "table" then
 		local changed = hash_resp.changed
 		local deleted = hash_resp.deleted
@@ -3290,7 +3313,8 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		method = "POST",
 		headers = {
 			["Authorization"] = "Bearer " .. self._developer_token,
-			["Content-Type"] = "application/octet-stream"
+			["Content-Type"] = "application/octet-stream",
+			["X-Plugin-Branch"] = target_branch
 		},
 		data = zip_data
 	}, 60)
@@ -4368,7 +4392,9 @@ function PluginManagerView:_lookup_remote_plugins(entries)
 				["Content-Type"] = "application/json"
 			},
 			data = json.encode({
-				entries = batch
+				entries = batch,
+				branch = branch,
+				core_version = version.id
 			})
 		}, 30)
 		if err then

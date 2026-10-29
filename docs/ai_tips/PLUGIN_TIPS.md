@@ -54,6 +54,7 @@ return {
     desc = "描述",
     url = "链接",
     by = "作者",
+    branch = "master", -- "master"：进入正式商城；"dev"：只有开发包查询时可见
     enabled = true,   -- false 则不加载
     priority = 0,     -- 数字越小越先初始化（高优先级覆盖低优先级）
 }

@@ -2,6 +2,12 @@
 set -euo pipefail
 
 VERSION_FILE="./version.lua"
+PACKAGE_BRANCH="${PACKAGE_BRANCH:-master}"
+PACKAGE_TAG="${PACKAGE_TAG:-}"
+case "$PACKAGE_BRANCH" in
+    master|dev) ;;
+    *) echo "ERROR: PACKAGE_BRANCH 只能是 master 或 dev" >&2; exit 1 ;;
+esac
 # 可通过 VERSION_FILE 环境变量指定版本文件（可选）
 # VERSION_FILE=${VERSION_FILE:-}
 
@@ -16,7 +22,7 @@ fi
 echo "Current version id: $current_id"
 
 mkdir -p ".versions"
-ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-Windows电脑端.zip"
+ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}${PACKAGE_TAG}-Windows电脑端.zip"
 TOPDIR="$(basename "$ARCHIVE_DIR" .zip)"  # love_env 改名为这个
 
 QUICK_MODE=0
@@ -94,6 +100,22 @@ while IFS= read -r arg; do
     EXCLUDE_ARGS+=("$arg")
 done < <(gitignore_excludes)
 rsync -a "${EXCLUDE_ARGS[@]}" ./ "$DEST_DIR/"
+
+# 构建标签必须写在发布产物里，而不是被 master 投影带回 dev 源码
+COMMIT_HASH="$(git rev-parse --verify --quiet "$PACKAGE_BRANCH")"
+if [ -z "$COMMIT_HASH" ]; then
+    echo "ERROR: 本地没有 $PACKAGE_BRANCH 分支，无法写入 current_version_commit_hash.txt" >&2
+    exit 1
+fi
+printf '%s\n' "$COMMIT_HASH" > "$DEST_DIR/current_version_commit_hash.txt"
+cat > "$DEST_DIR/build_info.lua" <<EOF
+return {
+    branch = "$PACKAGE_BRANCH"
+}
+EOF
+if [ "$PACKAGE_BRANCH" = "dev" ]; then
+    echo "WARN: dev 包记录的是本地 dev commit；请确认该 commit 已推送到服务器 dev" >&2
+fi
 
 echo "Creating archive -> $ARCHIVE_DIR"
 (
