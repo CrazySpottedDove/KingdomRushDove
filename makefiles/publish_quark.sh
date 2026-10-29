@@ -205,7 +205,7 @@ PY
 }
 
 run_cleanup() {
-    cleanup_remote_versions "$QUARK_DIR_ANDROID" '^王国保卫战Dove版-v([0-9]+(?:\.[0-9]+)*)-(?:安卓手机端-低配版|安卓手机端)\.apk$' "$KEEP_LATEST"
+    cleanup_remote_versions "$QUARK_DIR_ANDROID" '^王国保卫战Dove版-v([0-9]+(?:\.[0-9]+)*)-(?:安卓手机端-普清版|安卓手机端-高清版|安卓手机端-超清版|安卓手机端-低配版|安卓手机端)\.apk$' "$KEEP_LATEST"
     cleanup_remote_versions "$QUARK_DIR_WINDOWS" '^王国保卫战Dove版-v([0-9]+(?:\.[0-9]+)*)-Windows电脑端\.zip$' "$KEEP_LATEST"
     cleanup_remote_versions "$QUARK_DIR_LINUX" '^王国保卫战Dove版-v([0-9]+(?:\.[0-9]+)*)-Linux电脑端\.zip$' "$KEEP_LATEST"
 }
@@ -238,13 +238,15 @@ case "$MODE" in
         fi
 
         mkdir -p ".versions"
-        android_apk=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.apk"
-        android_hd_apk=".versions/王国保卫战Dove版-v${current_id}-安卓手机端.apk"
+        android_apk=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-普清版.apk"
+        android_hd_apk=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-高清版.apk"
+        android_uhd_apk=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-超清版.apk"
         windows_zip=".versions/王国保卫战Dove版-v${current_id}-Windows电脑端.zip"
         linux_zip=".versions/王国保卫战Dove版-v${current_id}-Linux电脑端.zip"
 
         upload_if_needed "$android_apk" "$QUARK_DIR_ANDROID"
         upload_if_needed "$android_hd_apk" "$QUARK_DIR_ANDROID"
+        upload_if_needed "$android_uhd_apk" "$QUARK_DIR_ANDROID"
         upload_if_needed "$windows_zip" "$QUARK_DIR_WINDOWS"
         upload_if_needed "$linux_zip" "$QUARK_DIR_LINUX"
         run_cleanup

@@ -62,32 +62,53 @@ mkdir -p ".versions"
 # 把 .versions 转化成绝对目录
 VERSION_DIR="$(cd .versions && pwd)"
 
-HD_MODE=0
+TIER="hd"
 QUICK_MODE=0
 NO_UPLOAD_MODE=0
 for arg in "$@"; do
     case "$arg" in
-        hd) HD_MODE=1 ;;
+        sd) TIER="sd" ;;
+        hd) TIER="hd" ;;
+        uhd) TIER="uhd" ;;
         quick) QUICK_MODE=1 ;;
         no-upload) NO_UPLOAD_MODE=1 ;; # 保持原有 no-upload 逻辑
     esac
 done
 
-if [ "$HD_MODE" -eq 1 ]; then
-    ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端.zip"
-    OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端.apk
-    CACHE_DIR=".versions/.android_image_cache_hd"
-    CACHE_KEY="resize=100%|strip=1|astc=1|tool=$IM_CMD|pngsrc=1|astc_bg=10x10|astc_def=8x8"
-    AUDIO_CACHE_DIR=".versions/.android_audio_cache_hd"
-else
-    ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.zip"
-    OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.apk
-    CACHE_DIR=".versions/.android_image_cache"
-    CACHE_KEY="resize=50%|strip=1|astc=1|tool=$IM_CMD|pngsrc=1|astc_bg=10x10|astc_def=8x8"
-    AUDIO_CACHE_DIR=".versions/.android_audio_cache"
-fi
+ASTC_EFFORT="-verythorough"
+case "$TIER" in
+    sd)
+        TIER_NAME="普清版"
+        RESIZE_IMAGES=1
+        ASTC_BLOCK_OTHER="8x8"
+        ASTC_BLOCK_BG="10x10"
+        CACHE_DIR=".versions/.android_image_cache"
+        AUDIO_CACHE_DIR=".versions/.android_audio_cache"
+        ;;
+    uhd)
+        TIER_NAME="超清版"
+        RESIZE_IMAGES=0
+        ASTC_BLOCK_OTHER="6x6"
+        ASTC_BLOCK_BG="8x8"
+        CACHE_DIR=".versions/.android_image_cache_uhd"
+        AUDIO_CACHE_DIR=".versions/.android_audio_cache_hd"
+        ;;
+    *)
+        TIER_NAME="高清版"
+        RESIZE_IMAGES=0
+        ASTC_BLOCK_OTHER="8x8"
+        ASTC_BLOCK_BG="10x10"
+        CACHE_DIR=".versions/.android_image_cache_hd"
+        AUDIO_CACHE_DIR=".versions/.android_audio_cache_hd"
+        ;;
+esac
 
-# 打包新版本前，删除 .versions 下旧版本的安卓包（含高配/低配），保留当前版本
+ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-${TIER_NAME}.zip"
+OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端-${TIER_NAME}.apk
+CACHE_KEY="resize=${RESIZE_IMAGES}|strip=1|astc=1|tool=$IM_CMD|pngsrc=1|astc_bg=${ASTC_BLOCK_BG}|astc_def=${ASTC_BLOCK_OTHER}|effort=${ASTC_EFFORT}"
+echo "Android tier: ${TIER_NAME} (resize=${RESIZE_IMAGES}, astc=${ASTC_BLOCK_OTHER}/bg ${ASTC_BLOCK_BG}, effort=${ASTC_EFFORT})"
+
+# 打包新版本前，删除 .versions 下旧版本的安卓包（含超清/高清/普清），保留当前版本
 source makefiles/cleanup_old_versions.sh
 cleanup_old_packages "$current_id" \
     ".versions/王国保卫战Dove版-v*安卓手机端*.zip" \
@@ -279,13 +300,13 @@ if [ "$rebuild_love" -eq 1 ]; then
     else
         echo "Processing $dds_count DDS files with $JOBS jobs (incremental cache enabled)..."
 
-        export IM_CMD stage_dir CACHE_DIR RESIZE_MAP_FILE HD_MODE
+        export IM_CMD stage_dir CACHE_DIR RESIZE_MAP_FILE RESIZE_IMAGES ASTC_BLOCK_OTHER ASTC_BLOCK_BG ASTC_EFFORT
 
         # 并行增量处理 DDS -> ASTC
         # 命中缓存：直接拷贝缓存结果；未命中：转换后写入缓存并拷贝
         printf "%s\0" "${dds_files[@]}" | xargs -0 -P "$JOBS" -I {} bash -c '
             should_resize() {
-                if [ "$HD_MODE" = "1" ]; then
+                if [ "$RESIZE_IMAGES" != "1" ]; then
                     return 1
                 fi
                 local filename="$1"
@@ -298,10 +319,10 @@ if [ "$rebuild_love" -eq 1 ]; then
             base_name="${rel%.dds}"
             base_name_only="$(basename "$base_name")"
 
-            # 差分 ASTC 块尺寸：背景图 (-bg) 用 10x10，其余 8x8
-            astc_blocksize="8x8"
+            # 差分 ASTC 块尺寸：背景图用更粗档，其余用细档
+            astc_blocksize="$ASTC_BLOCK_OTHER"
             case "$base_name_only" in
-                *_bg*|*-bg*) astc_blocksize="10x10" ;;
+                *_bg*|*-bg*) astc_blocksize="$ASTC_BLOCK_BG" ;;
             esac
 
             cache_file="$CACHE_DIR/${base_name}.astc"
@@ -337,7 +358,7 @@ if [ "$rebuild_love" -eq 1 ]; then
                     "$IM_CMD" "$src_actual" -strip "png:$temp_png" 2>/dev/null
                 fi
 
-                astcenc -cs "$temp_png" "$cache_file" "$astc_blocksize" -thorough -silent 2>/dev/null
+                astcenc -cs "$temp_png" "$cache_file" "$astc_blocksize" "$ASTC_EFFORT" -silent 2>/dev/null
                 rm -f "$temp_png"
                 cp -f "$cache_file" "$dest"
             fi
@@ -353,10 +374,10 @@ if [ "$rebuild_love" -eq 1 ]; then
                 base_name="${rel%.png}"
                 base_name_only="$(basename "$base_name")"
 
-                # 差分 ASTC 块尺寸：背景图 (-bg) 用 10x10，其余 8x8
-                astc_blocksize="8x8"
+                # 差分 ASTC 块尺寸：背景图用更粗档，其余用细档
+                astc_blocksize="$ASTC_BLOCK_OTHER"
                 case "$base_name_only" in
-                    *_bg*|*-bg*) astc_blocksize="10x10" ;;
+                    *_bg*|*-bg*) astc_blocksize="$ASTC_BLOCK_BG" ;;
                 esac
 
                 cache_file="$CACHE_DIR/${base_name}.astc"
@@ -368,7 +389,7 @@ if [ "$rebuild_love" -eq 1 ]; then
                 if [ -f "$cache_file" ] && [ "$cache_file" -nt "$src" ]; then
                     cp -f "$cache_file" "$dest"
                 else
-                    astcenc -cs "$src" "$cache_file" "$astc_blocksize" -thorough -silent 2>/dev/null
+                    astcenc -cs "$src" "$cache_file" "$astc_blocksize" "$ASTC_EFFORT" -silent 2>/dev/null
                     cp -f "$cache_file" "$dest"
                 fi
             ' _ {}
