@@ -1,0 +1,1 @@
+return {version=3,partScaleCompensation=1.40625,fps=30,parts={{'hero_zefira_talent_decal_big_asst_hero_zefira_talent_decal_big',0,-0.6}},attach_points={},animations={{name='idle',frames={{{1,1,1,0,0.6,1,1,0,0,0}}}}}}

@@ -201,7 +201,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_2 = "Every %$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$ seconds, silences up to %$T('tower_wild_magus').powers.ward.target_count[level]%$ enemies, blocking their magical abilities for %$T('mod_ward').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[2].cooldown * tcd%$ seconds, throws a fireball towards the path, dealing %$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$ magic explosion damage and burning enemies for %$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$ true damage every %$T('mod_firebook_aura').dps.damage_every%$ seconds over %$T('mod_firebook_aura').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[3].cooldown * tcd%$ seconds, grants a %$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$% damage buff to all towers within range for %$T('tower_wizard').attacks.list[3].duration[level]%$ seconds.",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage."
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage.",
 }
 
 return {
@@ -3610,6 +3610,18 @@ return {
 	HERO_ROOM_XIN_PANDA_STYLE_NAME = "Panda Style",
 	HERO_ROOM_XIN_ULTIMATE_DESC = "%$ cooldown_str(((T('hero_xin')).ultimate.cooldown)) %$Xin summons %$ (((T('hero_xin')).hero.skills.ultimate).count[levels((T('hero_xin')).hero.skills.ultimate)]) %$ disciples to help; each elbows the enemy %$ ((E:get_template('soldier_xin_ultimate')).max_attack_count) %$ times before leaving, each elbow dealing %$ damage_str(((T('hero_xin')).hero.skills.ultimate).damage[levels((T('hero_xin')).hero.skills.ultimate)],((T('hero_xin')).hero.skills.ultimate).damage[levels((T('hero_xin')).hero.skills.ultimate)],(E:get_template('soldier_xin_ultimate')).melee.attacks[1].damage_type) %$.",
 	HERO_ROOM_XIN_ULTIMATE_NAME = "Pandamonium",
+	HERO_ROOM_ZEFIRA_ASTRAL_BLINK_DESC = "When travelling long distances, Zefira teleports to her destination and gains a %$ (((T('hero_zefira')).hero.skills.skill_c.damage_factor[levels((T('hero_zefira')).hero.skills.skill_c)]) - 1) %$% damage bonus for %$ ((T('hero_zefira')).hero.skills.skill_c.duration[levels((T('hero_zefira')).hero.skills.skill_c)]) %$ seconds.",
+	HERO_ROOM_ZEFIRA_ASTRAL_BLINK_NAME = "Astral Blink",
+	HERO_ROOM_ZEFIRA_DAZZLING_HAMMER_DESC = "Every %$ ((T('hero_zefira')).melee.attacks[2].cooldown) %$ seconds, Zefira smashes enemies with an energy hammer, dealing %$ damage_str(((T('hero_zefira')).hero.skills.skill_a).damage_min[levels((T('hero_zefira')).hero.skills.skill_a)],((T('hero_zefira')).hero.skills.skill_a).damage_max[levels((T('hero_zefira')).hero.skills.skill_a)],(T('hero_zefira')).melee.attacks[2].damage_type) %$ to enemies within %$ ((T('hero_zefira')).melee.attacks[2].damage_radius) %$ range and stunning them for %$ ((E:get_template('mod_zefira_skill_a_stun')).modifier.duration) %$ seconds.",
+	HERO_ROOM_ZEFIRA_DAZZLING_HAMMER_NAME = "Dazzling Hammer",
+	HERO_ROOM_ZEFIRA_ETHEREAL_SPEARS_DESC = "Every %$ ((T('hero_zefira')).timed_attacks.list[1].cooldown) %$ seconds, Zefira calls down %$ ((T('hero_zefira')).timed_attacks.list[1].spears_count) %$ ethereal spears along the path, dealing %$ ((T('hero_zefira')).timed_attacks.list[1].spears_count * (E:get_template('decal_zefira_ultimate_spear')).damage_min) %$ magic damage in total.",
+	HERO_ROOM_ZEFIRA_ETHEREAL_SPEARS_NAME = "Ethereal Spears",
+	HERO_ROOM_ZEFIRA_SHIELDING_BLADES_DESC = "Every %$ ((T('hero_zefira')).hero.skills.skill_b.cooldown) %$ seconds while blocking in melee, Zefira summons swirling blades that increase her armor and magic resistance by %$ ((E:get_template('aura_zefira_skill_b')).aura.armor_inc) %$% for %$ ((T('hero_zefira')).hero.skills.skill_b.duration[levels((T('hero_zefira')).hero.skills.skill_b)]) %$ seconds and deal %$ ((E:get_template('aura_zefira_skill_b')).aura.damage_min * ((T('hero_zefira')).hero.skills.skill_b.duration[levels((T('hero_zefira')).hero.skills.skill_b)]) / (E:get_template('aura_zefira_skill_b')).aura.cycle_time) %$ magic damage to nearby enemies, slowing them by %$ (1 - (E:get_template('mod_zefira_skill_b_slow')).slow.factor) %$%.",
+	HERO_ROOM_ZEFIRA_SHIELDING_BLADES_NAME = "Shielding Blades",
+	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_DESC = "Zefira's basic attacks have a %$ ((T('hero_zefira')).hero.skills.talent_2.crit_chance) %$% chance to deal double damage.",
+	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_NAME = "Spell Proficiency",
+	HERO_ROOM_ZEFIRA_WEAKENING_AURA_DESC = "Enemies within %$ ((E:get_template('aura_zefira_talent')).aura.radius) %$ range of Zefira have their armor and magic resistance reduced by %$ ((E:get_template('mod_zefira_talent')).armor_factor) %$%.",
+	HERO_ROOM_ZEFIRA_WEAKENING_AURA_NAME = "Weakening Aura",
 	HERO_SPACE_ELF_DESCRIPTION = "\"To understand the dark, you must first step into it.\" For years the void mage Selien was shunned by her fellows for meddling with unknown otherworldly powers. Even so, she has always used her power with restraint, ready to act when she is needed.",
 	HERO_SPACE_ELF_NAME = "Therien",
 	HERO_SPIDER_DESCRIPTION = "Spydyr is the last living member of a group of Twilight Elves tasked with annihilating the Spider Queen's Cult. Adding shadow magic to her unmatched hunting prowess, she is feared as one of the deadliest assassins across all kingdoms.",
@@ -3645,6 +3657,8 @@ return {
 	HERO_WUKONG_NAME = "Sun Wukong",
 	HERO_XIN_DESCRIPTION = "Heir to the legendary master Ten'Shi, master of a unique panda martial art, and a dab hand at both drinking and calling in friends.",
 	HERO_XIN_NAME = "Xin",
+	HERO_ZEFIRA_DESCRIPTION = "The sorceress Zefira wields magic as innately as she breathes. Eager for a challenge, she left the academy to join Gerald's mission.",
+	HERO_ZEFIRA_NAME = "Zefira",
 	HINT = "HINT",
 	HOURS_ABBREVIATION = "h",
 	Hammerhold = "Hammerhold",

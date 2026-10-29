@@ -1,0 +1,1 @@
+return {["parts"]={{"hero_zefira_attack_projectile_asst_hero_zefira_attack_projectile",0,0}},["animations"]={{["frames"]={{{1,1,1,0,0,1,1,0,0,0}}},["name"]="flying"}},["attach_points"]={},["version"]=3,["partScaleCompensation"]=1.40625,["fps"]=30}

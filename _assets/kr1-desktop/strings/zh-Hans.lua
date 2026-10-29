@@ -204,7 +204,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
 }
 
 return {
@@ -3613,6 +3613,18 @@ return {
 	HERO_ROOM_XIN_PANDA_STYLE_NAME = "熊猫流派",
 	HERO_ROOM_XIN_ULTIMATE_DESC = "%$ cooldown_str(((T('hero_xin')).ultimate.cooldown)) %$鑫召唤%$ (((T('hero_xin')).hero.skills.ultimate).count[levels((T('hero_xin')).hero.skills.ultimate)]) %$名弟子支援，每名弟子肘敌人%$ ((E:get_template('soldier_xin_ultimate')).max_attack_count) %$下后退场，每肘造成%$ damage_str(((T('hero_xin')).hero.skills.ultimate).damage[levels((T('hero_xin')).hero.skills.ultimate)],((T('hero_xin')).hero.skills.ultimate).damage[levels((T('hero_xin')).hero.skills.ultimate)],(E:get_template('soldier_xin_ultimate')).melee.attacks[1].damage_type) %$。",
 	HERO_ROOM_XIN_ULTIMATE_NAME = "熊猫乱舞",
+	HERO_ROOM_ZEFIRA_ASTRAL_BLINK_DESC = "长距离移动时，泽菲拉会传送至目标位置，并获得%$ (((T('hero_zefira')).hero.skills.skill_c.damage_factor[levels((T('hero_zefira')).hero.skills.skill_c)]) - 1) %$%伤害增益，持续%$ ((T('hero_zefira')).hero.skills.skill_c.duration[levels((T('hero_zefira')).hero.skills.skill_c)]) %$秒。",
+	HERO_ROOM_ZEFIRA_ASTRAL_BLINK_NAME = "星界闪现",
+	HERO_ROOM_ZEFIRA_DAZZLING_HAMMER_DESC = "每隔%$ ((T('hero_zefira')).melee.attacks[2].cooldown) %$秒，泽菲拉以魔能之锤重击敌人，对%$ ((T('hero_zefira')).melee.attacks[2].damage_radius) %$范围内的敌人造成%$ damage_str(((T('hero_zefira')).hero.skills.skill_a).damage_min[levels((T('hero_zefira')).hero.skills.skill_a)],((T('hero_zefira')).hero.skills.skill_a).damage_max[levels((T('hero_zefira')).hero.skills.skill_a)],(T('hero_zefira')).melee.attacks[2].damage_type) %$，并眩晕%$ ((E:get_template('mod_zefira_skill_a_stun')).modifier.duration) %$秒。",
+	HERO_ROOM_ZEFIRA_DAZZLING_HAMMER_NAME = "眩光之锤",
+	HERO_ROOM_ZEFIRA_ETHEREAL_SPEARS_DESC = "每隔%$ ((T('hero_zefira')).timed_attacks.list[1].cooldown) %$秒，泽菲拉召来%$ ((T('hero_zefira')).timed_attacks.list[1].spears_count) %$支魔能长矛，沿道路造成总计%$ ((T('hero_zefira')).timed_attacks.list[1].spears_count * (E:get_template('decal_zefira_ultimate_spear')).damage_min) %$点魔法伤害。",
+	HERO_ROOM_ZEFIRA_ETHEREAL_SPEARS_NAME = "魔能长矛",
+	HERO_ROOM_ZEFIRA_SHIELDING_BLADES_DESC = "每隔%$ ((T('hero_zefira')).hero.skills.skill_b.cooldown) %$秒，泽菲拉在近战接敌时召唤环绕剑阵，提升自身%$ ((E:get_template('aura_zefira_skill_b')).aura.armor_inc) %$%护甲与魔法抗性，持续%$ ((T('hero_zefira')).hero.skills.skill_b.duration[levels((T('hero_zefira')).hero.skills.skill_b)]) %$秒，并对周围敌人造成共%$ ((E:get_template('aura_zefira_skill_b')).aura.damage_min * ((T('hero_zefira')).hero.skills.skill_b.duration[levels((T('hero_zefira')).hero.skills.skill_b)]) / (E:get_template('aura_zefira_skill_b')).aura.cycle_time) %$点魔法伤害，同时使其减速%$ (1 - (E:get_template('mod_zefira_skill_b_slow')).slow.factor) %$%。",
+	HERO_ROOM_ZEFIRA_SHIELDING_BLADES_NAME = "护身剑阵",
+	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_DESC = "泽菲拉的普通攻击有%$ ((T('hero_zefira')).hero.skills.talent_2.crit_chance) %$%的概率造成双倍伤害。",
+	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_NAME = "法术精通",
+	HERO_ROOM_ZEFIRA_WEAKENING_AURA_DESC = "泽菲拉周围%$ ((E:get_template('aura_zefira_talent')).aura.radius) %$范围内的敌人护甲与魔法抗性降低%$ ((E:get_template('mod_zefira_talent')).armor_factor) %$%。",
+	HERO_ROOM_ZEFIRA_WEAKENING_AURA_NAME = "削弱光环",
 	HERO_SPACE_ELF_DESCRIPTION = "“要想了解黑暗，必先踏入黑暗。”多年来，虚空法师赛莉恩因涉足未知的异世界力量而被同伴们排斥。尽管如此，她始终克制地使用着自己的力量，随时准备在需要时出手。",
 	HERO_SPACE_ELF_NAME = "赛莉恩",
 	HERO_SPIDER_DESCRIPTION = "丝派蒂尔隶属暮光精灵的一支猎蛛部队，任务是歼灭蜘蛛女王和其手下的邪教，如今她是最后一名队员。她将暗影魔法与独一无二狩猎技巧结合，成为令整片大陆都闻风丧胆致命刺客。",
@@ -3648,6 +3660,8 @@ return {
 	HERO_WUKONG_NAME = "孙悟空",
 	HERO_XIN_DESCRIPTION = "传说级大师天十的传人，掌握着独一无二的熊猫武学，喝酒和摇人都是一把好手。",
 	HERO_XIN_NAME = "鑫",
+	HERO_ZEFIRA_DESCRIPTION = "魔力的掌控，对她已如呼吸一般稀松平常。泽菲拉渴求更高境界的挑战，于是离开学院，与杰拉尔德一同踏上了旅途。",
+	HERO_ZEFIRA_NAME = "泽菲拉",
 	HINT = "提示",
 	HOURS_ABBREVIATION = "小时",
 	Hammerhold = "战锤要塞",

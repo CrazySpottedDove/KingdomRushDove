@@ -94,7 +94,8 @@ HEROES.module_names = {
 	"heroes.hero_tramin",
 	"heroes.hero_tank",
 	"heroes.hero_naga",
-	"heroes.hero_gerald_kr6"
+	"heroes.hero_gerald_kr6",
+	"heroes.hero_zefira"
 }
 HEROES._inited = false
 

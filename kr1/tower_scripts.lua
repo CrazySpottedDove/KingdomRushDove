@@ -37694,7 +37694,7 @@ function scripts.tower_crossbows.update(this, store)
 							b.bullet.target_id = target.id
 
 							if sb.level > 0 then
-								b.bullet.mod = "mod_crossbows_skill_b"
+								U.append_mod(b.bullet, "mod_crossbows_skill_b")
 								b.bullet.level = sb.level
 							end
 
