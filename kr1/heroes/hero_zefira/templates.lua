@@ -144,7 +144,7 @@ local function aura_zefira_skill_b_update(this, store)
 					d.source_id = this.id
 					d.target_id = target.id
 					d.damage_type = this.aura.damage_type
-					d.value = math.random(this.aura.damage_min, this.aura.damage_max)
+					d.value = math.random(this.aura.damage_min, this.aura.damage_max) * this.aura.damage_factor
 
 					queue_damage(store, d)
 
@@ -227,7 +227,7 @@ local function decal_zefira_ultimate_spear_update(this, store)
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.damage_type
-			d.value = math.random(this.damage_min, this.damage_max)
+			d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 			d.source_id = this.id
 			d.target_id = enemy.id
 
@@ -252,7 +252,7 @@ local function decal_zefira_ultimate_spear_update(this, store)
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.damage_type
-			d.value = math.random(this.damage_min, this.damage_max)
+			d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 			d.source_id = this.id
 			d.target_id = enemy.id
 
@@ -384,7 +384,7 @@ local function hero_zefira_update(this, store)
 		pos.y = pos.y + math.random(-5, 5)
 
 		local spear = E:create_entity(ultimate.spear_t)
-
+		spear.damage_factor = this.unit.damage_factor
 		spear.pos = V.vclone(pos)
 		spear.render.sprites[1].flip_x = flip
 
@@ -425,6 +425,7 @@ local function hero_zefira_update(this, store)
 					aura.aura.target_id = this.id
 					aura.aura.level = skill_b.level
 					aura.aura.duration = skill_b.duration[skill_b.level]
+					aura.aura.damage_factor = this.unit.damage_factor
 
 					simulation:queue_insert_entity(aura)
 				end
