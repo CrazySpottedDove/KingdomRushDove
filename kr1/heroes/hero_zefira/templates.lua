@@ -497,10 +497,10 @@ local function hero_zefira_update(this, store)
 						end
 					end
 
-					SU.y_hero_animation_wait(this)
+					if SU.y_hero_animation_wait(this) then
+						goto continue
+					end
 					U.animation_start(this, "idle", nil, store.tick_ts, true)
-
-					goto continue
 				else
 					a.ts = a.ts + fts(10)
 				end
