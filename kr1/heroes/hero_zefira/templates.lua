@@ -441,11 +441,7 @@ local function hero_zefira_update(this, store)
 						local pi = enemy.nav_path.pi
 
 						if P:is_path_active(pi) and not (store.level.ignore_walk_backwards_paths and table.contains(store.level.ignore_walk_backwards_paths, pi)) then
-							local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {pi})
-
-							if nearest[1] and nearest[1][3] < enemy.nav_path.ni then
-								targets[#targets + 1] = enemy
-							end
+							targets[#targets + 1] = enemy
 						end
 					end
 				end
