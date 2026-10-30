@@ -279,9 +279,7 @@ end
 local tt
 
 tt = RT("hero_gerald", "hero")
-
 AC(tt, "melee", "timed_attacks", "dodge")
-
 anchor_y = 0.12
 anchor_x = 0.5
 image_y = 110

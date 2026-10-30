@@ -271,7 +271,7 @@ local function hero_gerald_kr6_update(this, store)
 					S:queue(ultimate.sound_cast)
 					S:queue(ultimate.sound_taunt)
 
-					if SU.y_hero_wait(store, this, fts(16)) then
+					if SU.y_hero_wait(store, this, fts(16) * this.unit.cooldown_factor) then
 						goto continue
 					end
 
@@ -294,7 +294,7 @@ local function hero_gerald_kr6_update(this, store)
 
 					local hit_start_ts = store.tick_ts
 
-					while store.tick_ts - hit_start_ts < ultimate.hit_time - fts(16) do
+					while store.tick_ts - hit_start_ts < ultimate.hit_time - fts(16) * this.unit.cooldown_factor do
 						if SU.soldier_interrupted(this) then
 							goto continue
 						end
@@ -358,10 +358,10 @@ local function hero_gerald_kr6_update(this, store)
 
 					simulation:queue_insert_entity(decal)
 					SU.hero_gain_xp_from_skill(this, skills.divine_blade)
-					SU.y_hero_animation_wait(this)
+					if SU.y_hero_animation_wait(this) then
+						goto continue
+					end
 					U.animation_start(this, "idle", nil, store.tick_ts, true)
-
-					goto continue
 				end
 			end
 
@@ -393,7 +393,10 @@ local function hero_gerald_kr6_update(this, store)
 						mod.spiked_armor = skills.shield_of_retribution.spiked_armor[skills.shield_of_retribution.level]
 
 						simulation:queue_insert_entity(mod)
-						SU.y_hero_animation_wait(this)
+						if SU.y_hero_animation_wait(this) then
+							goto continue
+						end
+
 						U.animation_start(this, "idle", nil, store.tick_ts, true)
 					end
 				end
@@ -426,21 +429,24 @@ local function hero_gerald_kr6_update(this, store)
 
 						simulation:queue_insert_entity(decal)
 
-						for _, soldier in ipairs(soldiers) do
-							local mod = E:create_entity(inspire.mod)
+						local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, inspire.min_range, inspire.max_range, inspire.vis_flags, inspire.vis_bans)
+						if soldiers then
+							for _, soldier in ipairs(soldiers) do
+								local mod = E:create_entity(inspire.mod)
 
-							mod.modifier.source_id = this.id
-							mod.modifier.target_id = soldier.id
-							mod.armor_inc = skills.inspire_courage.armor_inc
-							mod.modifier.duration = skills.inspire_courage.duration[skills.inspire_courage.level]
+								mod.modifier.source_id = this.id
+								mod.modifier.target_id = soldier.id
+								mod.armor_inc = skills.inspire_courage.armor_inc
+								mod.modifier.duration = skills.inspire_courage.duration[skills.inspire_courage.level]
 
-							simulation:queue_insert_entity(mod)
+								simulation:queue_insert_entity(mod)
+							end
 						end
 
-						SU.y_hero_animation_wait(this)
+						if SU.y_hero_animation_wait(this) then
+							goto continue
+						end
 						U.animation_start(this, "idle", nil, store.tick_ts, true)
-
-						goto continue
 					end
 				end
 
@@ -552,6 +558,7 @@ tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
 tt.melee.attacks[1].xp_gain_factor = 3
+tt.melee.attacks[1].damage_type = DAMAGE_TRUE
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].animation = "attack_2"
 tt.melee.attacks[2].chance = 0.5
@@ -636,7 +643,7 @@ tt.armor_inc = 0.3
 tt.main_script.insert = mod_gerald_kr6_shield_insert
 tt.main_script.remove = mod_gerald_kr6_shield_remove
 tt.main_script.update = mod_gerald_kr6_shield_update
-tt.modifier.duration = 8
+tt.modifier.duration = 12
 tt.modifier.use_mod_offset = false
 tt.modifier.vis_bans = 0
 tt.modifier.vis_flags = bor(F_MOD)
