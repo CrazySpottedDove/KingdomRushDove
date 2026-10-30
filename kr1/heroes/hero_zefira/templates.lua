@@ -432,7 +432,7 @@ local function hero_zefira_update(this, store)
 
 			if ready_to_use_skill(ultimate, store, cdf) then
 				local a = ultimate
-				local enemies = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+				local _, enemies = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, nil, a.vis_flags, a.vis_bans)
 				local targets = {}
 
 				if enemies then

@@ -7705,6 +7705,21 @@ local function calculate_menu_button_position(item_index)
 	return V.v((column_id - 1) * (button_size + padding_button) + padding_x, (row_id - 1) * (button_size + padding_button) + padding_y)
 end
 
+local function calculate_hero_menu_button_position(item_index)
+	local padding_x = 30
+	local padding_y = 10 + game_gui.hud_counters.size.y * game_gui.hud_counters.scale.y + game_gui.hud_counters.pos.y
+	local cell_size = 96
+	local step = 55 + 8
+
+	local sw = game_gui.sw
+	local columns = math.max(1, math.floor((sw - 2 * padding_x - cell_size) / step) + 1)
+	local row_id, column_id = math.floor((item_index - 1) / columns) + 1, (item_index - 1) % columns + 1
+
+	padding_x = (sw - ((columns - 1) * step + cell_size)) / 2
+
+	return V.v((column_id - 1) * step + padding_x, (row_id - 1) * step + padding_y)
+end
+
 function CriketMenu:initialize()
 	CriketMenu.super.initialize(self)
 	self.can_drag = false
@@ -7895,13 +7910,21 @@ HeroMenuButton = class("HeroMenuButton", KView)
 
 function HeroMenuButton:initialize(item)
 	HeroMenuButton.super.initialize(self)
+	self.size = v(96, 96)
 
 	self.item_image = item.image
 	self.item = item
 
-	local b = create_menu_button_image(item.image, hero_menu_button_size)
+	local b
+	local ss = I:s(item.image)
 
-	b.pos = v(0, 0)
+	if ss.size[0] == 96 and ss.size[1] == 96 then
+		b = KImageView:new(item.image)
+	else
+		b = create_menu_button_image(item.image, hero_menu_button_size)
+	end
+
+	b.pos = v(math.floor((self.size.x - b.size.x) * 0.5), math.floor((self.size.y - b.size.y) * 0.5))
 	b.propagate_on_click = true
 	b.disabled_tint_color = nil
 	self.button = b
@@ -7911,8 +7934,8 @@ function HeroMenuButton:initialize(item)
 	local function get_pos(this, offset)
 		offset = offset or v(0, 0)
 
-		local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
-		local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+		local x = math.floor(-0.5 * (this.size.x - self.size.x) + offset.x)
+		local y = math.floor(-0.5 * (this.size.y - self.size.y) + offset.y)
 
 		return v(x, y)
 	end
@@ -7937,8 +7960,6 @@ function HeroMenuButton:initialize(item)
 
 	self:add_child(halo)
 	create_bo_view("main_icons_0000")
-
-	self.size = V.vclone(b.size)
 end
 
 HeroMenu = class("HeroMenu", KVirtualView)
@@ -7969,7 +7990,7 @@ function HeroMenu:show()
 		}
 		local b = HeroMenuButton:new(item)
 
-		b.pos = calculate_menu_button_position(index)
+		b.pos = calculate_hero_menu_button_position(index)
 		b.item_props = item
 
 		local stm = self
