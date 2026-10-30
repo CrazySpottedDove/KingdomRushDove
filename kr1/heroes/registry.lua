@@ -95,7 +95,17 @@ HEROES.module_names = {
 	"heroes.hero_tank",
 	"heroes.hero_naga",
 	"heroes.hero_gerald_kr6",
-	"heroes.hero_zefira"
+	"heroes.hero_zefira",
+	"heroes.hero_bolin_kr6",
+	"heroes.hero_connor",
+	"heroes.hero_myriath",
+	"heroes.hero_malik_kr6",
+	"heroes.hero_rhodes",
+	"heroes.hero_ashbite",
+	"heroes.hero_drakkan",
+	"heroes.hero_ignus_kr6",
+	"heroes.hero_oni_kr6",
+	"heroes.hero_illiana"
 }
 HEROES._inited = false
 
