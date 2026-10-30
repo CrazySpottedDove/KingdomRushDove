@@ -3937,7 +3937,7 @@ tt.vis_flags = bor(F_RANGED)
 
 tt = RT("mod_power_thunder_slow", "mod_slow")
 tt.modifier.duration = 0.25
-tt.slow.factor = 0
+tt.slow.factor = 1
 
 tt = RT("fx_power_thunder_1", "decal_tween")
 AC(tt, "sound_events")
