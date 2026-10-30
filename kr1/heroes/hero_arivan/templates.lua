@@ -21,7 +21,6 @@ local ready_to_use_skill = HU.ready_to_use_skill
 local update_hp = HU.update_hp
 local upgrade_skill = HU.upgrade_skill
 local valid_twister_node_nearby = HU.valid_twister_node_nearby
-local v = V.v
 local tt
 
 local function fireball_arivan_update(this, store)

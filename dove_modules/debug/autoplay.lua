@@ -18,8 +18,6 @@
 --
 -- 判定只看一件事：这局有没有 log.error / 异常。胜负不重要。
 
-local log = require("lib.klua.log"):new("autoplay")
-
 require("all.constants")
 
 local V = require("lib.klua.vector")
