@@ -480,7 +480,7 @@ local techs = {
 			T("power_thunder_control").thunders[1].count = T("power_thunder_control").thunders[1].count + u.hits_increase
 			T("power_thunder_control").rain.disabled = nil
 			T("power_thunder_control").slow.disabled = nil
-			T("mod_power_thunder_slow").slow.factor = T("mod_power_thunder_slow").slow.factor - u.slow_factor_increase
+			T("mod_power_thunder_slow").slow.factor = T("mod_power_thunder_slow").slow.factor + u.slow_factor_increase
 		end
 	},
 	thunder_level_4 = {
