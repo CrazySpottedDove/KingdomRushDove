@@ -502,7 +502,7 @@ tt.hero.skills.fated_survivor.xp_level_steps = {
 	[10] = 3
 }
 tt.hero.skills.divine_blade = CC("hero_skill")
-tt.hero.skills.divine_blade.xp_gain = {100}
+tt.hero.skills.divine_blade.xp_gain = {150}
 tt.hero.skills.divine_blade.xp_level_steps = {
 	[1] = 1
 }
