@@ -365,6 +365,55 @@ local function hero_gerald_kr6_update(this, store)
 				end
 			end
 
+			if ready_to_use_skill(inspire, store, this.unit.cooldown_factor) then
+				local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, inspire.min_range, inspire.max_range, inspire.vis_flags, inspire.vis_bans, function(s)
+					return s.soldier.target_id ~= nil
+				end)
+
+				if not soldiers or #soldiers < inspire.min_targets then
+					inspire.ts = inspire.ts + fts(10)
+				else
+					local start_ts = store.tick_ts
+
+					U.animation_start(this, inspire.animation, nil, store.tick_ts, false)
+					S:queue(inspire.sound)
+
+					if SU.y_hero_wait(store, this, inspire.cast_time) then
+						goto continue
+					end
+
+					inspire.ts = start_ts
+
+					SU.hero_gain_xp_from_skill(this, skills.inspire_courage)
+
+					local decal = E:create_entity(inspire.decal)
+
+					decal.pos = V.vclone(this.pos)
+					decal.render.sprites[1].ts = store.tick_ts
+
+					simulation:queue_insert_entity(decal)
+
+					local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, inspire.min_range, inspire.max_range, inspire.vis_flags, inspire.vis_bans)
+					if soldiers then
+						for _, soldier in ipairs(soldiers) do
+							local mod = E:create_entity(inspire.mod)
+
+							mod.modifier.source_id = this.id
+							mod.modifier.target_id = soldier.id
+							mod.armor_inc = skills.inspire_courage.armor_inc
+							mod.modifier.duration = skills.inspire_courage.duration[skills.inspire_courage.level]
+
+							simulation:queue_insert_entity(mod)
+						end
+					end
+
+					if SU.y_hero_animation_wait(this) then
+						goto continue
+					end
+					U.animation_start(this, "idle", nil, store.tick_ts, true)
+				end
+			end
+
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 			if brk or sta ~= A_NO_TARGET then
@@ -401,55 +450,6 @@ local function hero_gerald_kr6_update(this, store)
 					end
 				end
 			else
-				if ready_to_use_skill(inspire, store, this.unit.cooldown_factor) then
-					local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, inspire.min_range, inspire.max_range, inspire.vis_flags, inspire.vis_bans, function(s)
-						return s.soldier.target_id ~= nil
-					end)
-
-					if not soldiers or #soldiers < inspire.min_targets then
-						inspire.ts = inspire.ts + fts(10)
-					else
-						local start_ts = store.tick_ts
-
-						U.animation_start(this, inspire.animation, nil, store.tick_ts, false)
-						S:queue(inspire.sound)
-
-						if SU.y_hero_wait(store, this, inspire.cast_time) then
-							goto continue
-						end
-
-						inspire.ts = start_ts
-
-						SU.hero_gain_xp_from_skill(this, skills.inspire_courage)
-
-						local decal = E:create_entity(inspire.decal)
-
-						decal.pos = V.vclone(this.pos)
-						decal.render.sprites[1].ts = store.tick_ts
-
-						simulation:queue_insert_entity(decal)
-
-						local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, inspire.min_range, inspire.max_range, inspire.vis_flags, inspire.vis_bans)
-						if soldiers then
-							for _, soldier in ipairs(soldiers) do
-								local mod = E:create_entity(inspire.mod)
-
-								mod.modifier.source_id = this.id
-								mod.modifier.target_id = soldier.id
-								mod.armor_inc = skills.inspire_courage.armor_inc
-								mod.modifier.duration = skills.inspire_courage.duration[skills.inspire_courage.level]
-
-								simulation:queue_insert_entity(mod)
-							end
-						end
-
-						if SU.y_hero_animation_wait(this) then
-							goto continue
-						end
-						U.animation_start(this, "idle", nil, store.tick_ts, true)
-					end
-				end
-
 				if SU.soldier_go_back_step(store, this) then
 				-- block empty
 				else
