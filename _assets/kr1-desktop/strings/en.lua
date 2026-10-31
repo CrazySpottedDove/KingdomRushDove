@@ -201,7 +201,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_2 = "Every %$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$ seconds, silences up to %$T('tower_wild_magus').powers.ward.target_count[level]%$ enemies, blocking their magical abilities for %$T('mod_ward').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[2].cooldown * tcd%$ seconds, throws a fireball towards the path, dealing %$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$ magic explosion damage and burning enemies for %$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$ true damage every %$T('mod_firebook_aura').dps.damage_every%$ seconds over %$T('mod_firebook_aura').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[3].cooldown * tcd%$ seconds, grants a %$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$% damage buff to all towers within range for %$T('tower_wizard').attacks.list[3].duration[level]%$ seconds.",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage."
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage.",
 }
 
 return {
@@ -3763,7 +3763,7 @@ return {
 	HERO_ROOM_ZEFIRA_ETHEREAL_SPEARS_NAME = "Ethereal Spears",
 	HERO_ROOM_ZEFIRA_SHIELDING_BLADES_DESC = "Every %$ ((T('hero_zefira')).hero.skills.skill_b.cooldown) %$ seconds while blocking in melee, Zefira summons swirling blades that increase her armor and magic resistance by %$ ((E:get_template('aura_zefira_skill_b')).aura.armor_inc) %$% for %$ ((T('hero_zefira')).hero.skills.skill_b.duration[levels((T('hero_zefira')).hero.skills.skill_b)]) %$ seconds and deal %$ ((E:get_template('aura_zefira_skill_b')).aura.damage_min * ((T('hero_zefira')).hero.skills.skill_b.duration[levels((T('hero_zefira')).hero.skills.skill_b)]) / (E:get_template('aura_zefira_skill_b')).aura.cycle_time) %$ magic damage to nearby enemies, slowing them by %$ (1 - (E:get_template('mod_zefira_skill_b_slow')).slow.factor) %$%.",
 	HERO_ROOM_ZEFIRA_SHIELDING_BLADES_NAME = "Shielding Blades",
-	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_DESC = "Zefira's basic attacks have a %$ ((T('hero_zefira')).hero.skills.talent_2.crit_chance) %$% chance to deal double damage.",
+	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_DESC = "Zefira's basic melee attacks have a %$ ((T('hero_zefira')).hero.skills.talent_2.crit_chance) %$% chance to deal double damage.",
 	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_NAME = "Spell Proficiency",
 	HERO_ROOM_ZEFIRA_WEAKENING_AURA_DESC = "Enemies within %$ ((E:get_template('aura_zefira_talent')).aura.radius) %$ range of Zefira have their armor and magic resistance reduced by %$ ((E:get_template('mod_zefira_talent')).armor_factor) %$%.",
 	HERO_ROOM_ZEFIRA_WEAKENING_AURA_NAME = "Weakening Aura",

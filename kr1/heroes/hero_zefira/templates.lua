@@ -267,7 +267,7 @@ local function decal_zefira_ultimate_spear_update(this, store)
 end
 
 local function zefira_crit_damage(this, store, attack, target)
-	local base = math.random(attack.damage_min, attack.damage_max)
+	local base = (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 	local s = this.hero.skills.talent_2
 
 	if s.level > 0 and math.random() < s.crit_chance then
