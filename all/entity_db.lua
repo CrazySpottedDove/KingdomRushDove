@@ -27,12 +27,12 @@ function entity_db:Load()
 	self.last_id = 1
 	self.loaded = true
 
+	table.clear(self.entities)
 	if not self.entities_backup then
 		self:load()
 		self.entities_backup = quickcopy(self.entities)
 	else
 		-- 已有实体数据库备份时，直接拷贝即可。components 约定为只读数据，无需重复拷贝。
-		table.clear(self.entities)
 		for k, v in pairs(self.entities_backup) do
 			self.entities[k] = quickcopy(v)
 		end
