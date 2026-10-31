@@ -204,7 +204,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
 }
 
 return {
@@ -3766,7 +3766,7 @@ return {
 	HERO_ROOM_ZEFIRA_ETHEREAL_SPEARS_NAME = "魔能长矛",
 	HERO_ROOM_ZEFIRA_SHIELDING_BLADES_DESC = "每隔%$ ((T('hero_zefira')).hero.skills.skill_b.cooldown) %$秒，泽菲拉在近战接敌时召唤环绕剑阵，提升自身%$ ((E:get_template('aura_zefira_skill_b')).aura.armor_inc) %$%护甲与魔法抗性，持续%$ ((T('hero_zefira')).hero.skills.skill_b.duration[levels((T('hero_zefira')).hero.skills.skill_b)]) %$秒，并对周围敌人造成共%$ ((E:get_template('aura_zefira_skill_b')).aura.damage_min * ((T('hero_zefira')).hero.skills.skill_b.duration[levels((T('hero_zefira')).hero.skills.skill_b)]) / (E:get_template('aura_zefira_skill_b')).aura.cycle_time) %$点魔法伤害，同时使其减速%$ (1 - (E:get_template('mod_zefira_skill_b_slow')).slow.factor) %$%。",
 	HERO_ROOM_ZEFIRA_SHIELDING_BLADES_NAME = "护身剑阵",
-	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_DESC = "泽菲拉的普通攻击有%$ ((T('hero_zefira')).hero.skills.talent_2.crit_chance) %$%的概率造成双倍伤害。",
+	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_DESC = "泽菲拉的近战普通攻击有%$ ((T('hero_zefira')).hero.skills.talent_2.crit_chance) %$%的概率造成双倍伤害。",
 	HERO_ROOM_ZEFIRA_SPELL_PROFICIENCY_NAME = "法术精通",
 	HERO_ROOM_ZEFIRA_WEAKENING_AURA_DESC = "泽菲拉周围%$ ((E:get_template('aura_zefira_talent')).aura.radius) %$范围内的敌人护甲与魔法抗性降低%$ ((E:get_template('mod_zefira_talent')).armor_factor) %$%。",
 	HERO_ROOM_ZEFIRA_WEAKENING_AURA_NAME = "削弱光环",
