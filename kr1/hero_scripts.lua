@@ -868,8 +868,6 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 	end
 end
 
--- 悟空_END
-
 scripts.hero_muyrn_ranged_attack_bullet = {}
 
 function scripts.hero_muyrn_ranged_attack_bullet.update(this, store)
@@ -1947,24 +1945,6 @@ function scripts.controller_hero_isfet_ultimate.update(this, store)
 end
 --#endregion hero_isfet
 
---#endregion hero_orc
-
---#endregion hero_oloch
-
---#region hero_margosa
-
---#endregion hero_margosa
-
---#endregion hero_mortemis
-
---#endregion hero_jigou
-
---#region hero_tramin
-
---#endregion hero_tramin
-
--- ======== 毁灭坦克 SG-11 ========
-
 -- ======== 银橡村关卡自带英雄（KR6 level05 stage hero）========
 scripts.hero_stage_205_alleria = {}
 
@@ -2910,5 +2890,97 @@ function scripts.hero_stage_218_denas.update(this, store)
 end
 
 scripts.decal_regson_heal_ball = {}
+
+function scripts.decal_regson_heal_ball.update(this, store)
+	local sp = this.render.sprites[1]
+	local fm = this.force_motion
+	local source = store.entities[this.source_id]
+	local hero = store.entities[this.target_id]
+
+	if not source or not hero then
+		simulation:queue_remove_entity(this)
+		return
+	end
+
+	local initial_pos, initial_dest
+	local initial_h = 0
+	local dest_h = hero.unit.hit_offset.y
+	local max_dist
+	local last_pos = V.v(0, 0)
+
+	local function move_step(dest)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+
+		max_dist = math.max(dist, max_dist)
+
+		local phase = km.clamp(0, 1, 1 - dist / max_dist)
+		local df = (not fm.ramp_radius or dist > fm.ramp_radius) and 1 or math.max(dist / fm.ramp_radius, 0.1)
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step * df, dx, dy)))
+		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
+		fm.v.x, fm.v.y = V.trim(fm.max_v, fm.v.x, fm.v.y)
+
+		local sx, sy = V.mul(store.tick_length, fm.v.x, fm.v.y)
+
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, sx, sy)
+		fm.a.x, fm.a.y = V.mul(-0.05 / store.tick_length, fm.v.x, fm.v.y)
+		sp.offset.y = SU.parabola_y(phase, initial_h, dest_h, fm.max_flight_height)
+		sp.r = V.angleTo(this.pos.x - last_pos.x, this.pos.y + sp.offset.y - last_pos.y)
+		last_pos.x, last_pos.y = this.pos.x, this.pos.y + sp.offset.y
+
+		return dist < 2 * fm.max_v * store.tick_length
+	end
+
+	sp.hidden = true
+	this.pos.x, this.pos.y = source.pos.x, source.pos.y
+
+	if source.unit and source.unit.hit_offset then
+		initial_h = source.unit.hit_offset.y
+	end
+
+	do
+		local fx = E:create_entity(this.fx_spawn)
+
+		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+		fx.render.sprites[1].offset.y = initial_h
+		fx.render.sprites[1].ts = store.tick_ts
+
+		simulation:queue_insert_entity(fx)
+	end
+
+	U.y_wait_unconditional(store, fts(10))
+
+	sp.hidden = nil
+	this.dest = hero.pos
+	initial_pos = V.vclone(this.pos)
+	initial_dest = V.vclone(hero.pos)
+	initial_h = initial_h + 18
+	fm.a.x, fm.a.y = 0, 2.5
+	last_pos.x, last_pos.y = this.pos.x, this.pos.y + sp.offset.y
+	max_dist = V.len(initial_dest.x - initial_pos.x, initial_dest.y - initial_pos.y)
+
+	while not hero.health.dead and not move_step(this.dest) do
+		coroutine.yield()
+	end
+
+	if not hero.health.dead then
+		U.heal(hero, this.source_hp * this.hp_factor)
+
+		local fx = E:create_entity(this.fx_receive)
+
+		fx.pos = hero.pos
+		fx.render.sprites[1].ts = store.tick_ts
+		fx.render.sprites[1].offset = hero.unit.mod_offset
+
+		simulation:queue_insert_entity(fx)
+
+		if this.side_effect then
+			this.side_effect(hero, store)
+		end
+	end
+
+	simulation:queue_remove_entity(this)
+end
 
 return scripts
