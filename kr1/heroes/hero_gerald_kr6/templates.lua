@@ -470,7 +470,7 @@ local tt
 tt = RT("hero_gerald_kr6", "hero")
 AC(tt, "melee", "timed_attacks", "dodge")
 tt.hero.level_stats.armor = {0.23, 0.26, 0.29, 0.32, 0.35, 0.38, 0.41, 0.44, 0.47, 0.5}
-tt.hero.level_stats.hp_max = {240, 260, 280, 300, 320, 340, 360, 380, 400, 450}
+tt.hero.level_stats.hp_max = {300, 320, 340, 360, 380, 400, 450, 470, 490, 500}
 tt.hero.level_stats.melee_damage_min = {14, 16, 18, 19, 21, 22, 24, 26, 28, 30}
 tt.hero.level_stats.melee_damage_max = {22, 24, 26, 29, 31, 34, 36, 39, 41, 44}
 tt.hero.skills.inspire_courage = CC("hero_skill")
