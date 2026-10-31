@@ -532,7 +532,7 @@ local tt
 tt = RT("hero_zefira", "hero")
 AC(tt, "melee", "ranged", "timed_attacks", "teleport", "transfer")
 tt.hero.level_stats.armor = {0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2}
-tt.hero.level_stats.hp_max = {160, 170, 180, 190, 200, 210, 220, 230, 240, 250}
+tt.hero.level_stats.hp_max = {200, 210, 220, 230, 240, 250, 260, 270, 280, 290}
 tt.hero.level_stats.melee_damage_min = {8, 9, 9, 10, 11, 12, 13, 14, 15, 16}
 tt.hero.level_stats.melee_damage_max = {23, 26, 28, 30, 32, 34, 36, 38, 40, 42}
 tt.hero.level_stats.ranged_damage_min = {6, 7, 8, 9, 9, 10, 11, 12, 13, 14}
