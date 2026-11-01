@@ -36486,6 +36486,14 @@ function scripts.tower_sunray_master.update(this, store)
 	create_gem_glow()
 	U.animation_start(this, "idle_1", nil, store.tick_ts, true, sid_mage)
 
+	if pow_a.level > 0 and not this.controller_soldiers then
+		this.controller_soldiers = E:create_entity(this.controller_soldiers_template)
+		this.controller_soldiers.tower_ref = this
+		this.controller_soldiers.pos = this.pos
+
+		simulation:queue_insert_entity(this.controller_soldiers)
+	end
+
 	while true do
 		if this.tower.blocked then
 			coroutine.yield()
@@ -36495,10 +36503,6 @@ function scripts.tower_sunray_master.update(this, store)
 				this.barrack.max_soldiers = pow_a.level
 
 				if not this.controller_soldiers then
-					if not this.barrack.rally_pos and this.tower.default_rally_pos then
-						this.barrack.rally_pos = V.vclone(this.tower.default_rally_pos)
-					end
-
 					this.controller_soldiers = E:create_entity(this.controller_soldiers_template)
 					this.controller_soldiers.tower_ref = this
 					this.controller_soldiers.pos = this.pos
@@ -36726,10 +36730,12 @@ function scripts.tower_sunray_master.remove(this, store)
 
 	if this.decal_glow then
 		simulation:queue_remove_entity(this.decal_glow)
+		this.decal_glow = nil
 	end
 
 	if this.controller_soldiers then
 		simulation:queue_remove_entity(this.controller_soldiers)
+		this.controller_soldiers = nil
 	end
 
 	if this.gem_fx then
