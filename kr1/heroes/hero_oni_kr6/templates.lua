@@ -21,10 +21,12 @@ local fts = U.fts
 
 local THROTTLE_CD = 1
 
-local function apply_delayed_cooldowns(store, attacks)
+local function apply_delayed_cooldowns(this, store, attacks)
 	for _, a in ipairs(attacks) do
-		if a.throttle_cooldown_on_skill_use and a.cooldown and store.tick_ts - a.ts >= a.cooldown then
-			a.ts = store.tick_ts - a.cooldown + THROTTLE_CD
+		local cooldown = a.cooldown and a.cooldown * (this.unit.cooldown_factor or 1)
+
+		if a.throttle_cooldown_on_skill_use and cooldown and store.tick_ts - a.ts >= cooldown then
+			a.ts = store.tick_ts - cooldown + THROTTLE_CD
 		end
 	end
 end
@@ -286,6 +288,8 @@ local function hero_oni_kr6_insert(this, store)
 end
 
 local function hero_oni_kr6_update(this, store)
+	U.y_animation_play(this, "lvlup", nil, store.tick_ts, 1)
+
 	local h = this.health
 	local skills = this.hero.skills
 	local list = this.timed_attacks.list
@@ -363,7 +367,7 @@ local function hero_oni_kr6_update(this, store)
 			if sta == A_DONE and this.melee.last_attack and this.melee.last_attack.attack == this.melee.attacks[3] then
 				sa.ts = store.tick_ts
 
-				apply_delayed_cooldowns(store, list)
+				apply_delayed_cooldowns(this, store, list)
 
 				this.used_skill = true
 			end
@@ -372,7 +376,7 @@ local function hero_oni_kr6_update(this, store)
 				local _, triggers = U.find_foremost_enemy(store, this.pos, 0, ult.max_range, ult.prediction, ult.flags, ult.bans)
 
 				if not triggers or #triggers < ult.min_targets then
-					SU.delay_attack(store, ult, fts(10))
+					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					S:queue(ult.sound)
 					S:queue(ult.taunt)
@@ -423,7 +427,7 @@ local function hero_oni_kr6_update(this, store)
 
 					ult.ts = store.tick_ts
 
-					apply_delayed_cooldowns(store, list)
+					apply_delayed_cooldowns(this, store, list)
 
 					this.used_skill = true
 
@@ -478,7 +482,7 @@ local function hero_oni_kr6_update(this, store)
 
 				::skill_b_stop::
 
-				apply_delayed_cooldowns(store, list)
+				apply_delayed_cooldowns(this, store, list)
 
 				this.used_skill = true
 
@@ -489,7 +493,7 @@ local function hero_oni_kr6_update(this, store)
 				local target = U.find_foremost_enemy(store, this.pos, sc.min_detection_range, sc.detection_range, sc.prediction, sc.flags, sc.bans)
 
 				if not target then
-					SU.delay_attack(store, sc, fts(10))
+					sc.ts = store.tick_ts - sc.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					U.animation_start(this, sc.animation_in, this.pos.x > target.pos.x, store.tick_ts, false, 1)
 
@@ -559,7 +563,7 @@ local function hero_oni_kr6_update(this, store)
 					this.used_skill = true
 					sc.ts = store.tick_ts
 
-					apply_delayed_cooldowns(store, list)
+					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
 				end
@@ -600,13 +604,13 @@ local tt
 tt = RT("hero_oni_kr6", "hero")
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0.1, 0.13, 0.16, 0.19, 0.22, 0.25, 0.28, 0.31, 0.34, 0.37}
-tt.hero.level_stats.hp_max = {180, 195, 210, 225, 240, 255, 270, 285, 300, 315}
-tt.hero.level_stats.melee_damage_min = {5, 7, 9, 10, 12, 13, 15, 17, 18, 20}
-tt.hero.level_stats.melee_damage_max = {8, 11, 13, 15, 18, 20, 23, 25, 27, 30}
+tt.hero.level_stats.hp_max = {446, 484, 520, 560, 595, 633, 670, 707, 744, 781}
+tt.hero.level_stats.melee_damage_min = {14, 19, 24, 25, 30, 34, 38, 44, 45, 50}
+tt.hero.level_stats.melee_damage_max = {21, 27, 34, 38, 45, 50, 58, 63, 68, 74}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = 24
-tt.hero.skills.skill_a.damage_min = {95, 165, 235}
-tt.hero.skills.skill_a.damage_max = {105, 175, 245}
+tt.hero.skills.skill_a.damage_min = {262, 451, 643}
+tt.hero.skills.skill_a.damage_max = {288, 479, 670}
 tt.hero.skills.skill_a.damage_type = DAMAGE_TRUE
 tt.hero.skills.skill_a.xp_gain = {96, 192, 288}
 tt.hero.skills.skill_a.xp_level_steps = {
@@ -619,7 +623,7 @@ tt.hero.skills.skill_b.cooldown = 20
 tt.hero.skills.skill_b.duration = 3
 tt.hero.skills.skill_b.cancel_time_refund = 0.5
 tt.hero.skills.skill_b.trigger_threshold = 0.5
-tt.hero.skills.skill_b.heal_ptg = {0.0208, 0.0333, 0.0458}
+tt.hero.skills.skill_b.heal_ptg = {0.04, 0.08, 0.12}
 tt.hero.skills.skill_b.heal_every = 0.25
 tt.hero.skills.skill_b.xp_gain = {80, 160, 240}
 tt.hero.skills.skill_b.xp_level_steps = {
@@ -631,8 +635,8 @@ tt.hero.skills.skill_c = CC("hero_skill")
 tt.hero.skills.skill_c.cooldown = 18
 tt.hero.skills.skill_c.min_detection_range = 100
 tt.hero.skills.skill_c.detection_range = 250
-tt.hero.skills.skill_c.damage_min = {40, 52, 64}
-tt.hero.skills.skill_c.damage_max = {60, 78, 96}
+tt.hero.skills.skill_c.damage_min = {109, 144, 173}
+tt.hero.skills.skill_c.damage_max = {164, 213, 263}
 tt.hero.skills.skill_c.damage_type = DAMAGE_PHYSICAL
 tt.hero.skills.skill_c.armor_red = {0.05, 0.07, 0.1}
 tt.hero.skills.skill_c.xp_gain = {72, 144, 216}
@@ -644,8 +648,8 @@ tt.hero.skills.skill_c.xp_level_steps = {
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.level = 1
 tt.hero.skills.ultimate.cooldown = 38
-tt.hero.skills.ultimate.damage_min = 160
-tt.hero.skills.ultimate.damage_max = 180
+tt.hero.skills.ultimate.damage_min = 436
+tt.hero.skills.ultimate.damage_max = 490
 tt.hero.skills.ultimate.damage_type = DAMAGE_TRUE
 tt.hero.skills.ultimate.xp_gain = {152}
 tt.hero.skills.ultimate.xp_level_steps = {
@@ -679,7 +683,7 @@ tt.info.hero_portrait = "kr6_hero_portraits_0011"
 tt.info.portrait = "kr6_info_portraits_heroes_0013"
 tt.main_script.insert = hero_oni_kr6_insert
 tt.main_script.update = hero_oni_kr6_update
-tt.motion.max_speed = 70
+tt.motion.max_speed = 87.5
 tt.regen.cooldown = 1
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
@@ -702,8 +706,8 @@ tt.unit.pop_offset = vec_2(0, 15)
 tt.melee.attacks[1] = CC("melee_attack")
 tt.melee.attacks[1].animations = {nil, "attack"}
 tt.melee.attacks[1].cooldown = 2
-tt.melee.attacks[1].damage_min = 5
-tt.melee.attacks[1].damage_max = 8
+tt.melee.attacks[1].damage_min = 15
+tt.melee.attacks[1].damage_max = 24
 tt.melee.attacks[1].hit_fx = "fx_oni_hit"
 tt.melee.attacks[1].hit_offset = vec_2(30, 15)
 tt.melee.attacks[1].hit_times = {fts(12), fts(24)}
@@ -711,20 +715,20 @@ tt.melee.attacks[1].loops = 1
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 1.4
+tt.melee.attacks[1].xp_gain_factor = 1.2
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].animations = {nil, "attack_strong"}
 tt.melee.attacks[2].cooldown = 0
-tt.melee.attacks[2].damage_min = 10
-tt.melee.attacks[2].damage_max = 16
+tt.melee.attacks[2].damage_min = 27
+tt.melee.attacks[2].damage_max = 45
 tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
 tt.melee.attacks[2].disabled = true
 tt.melee.attacks[2].fn_can = fn_can_talent_1
 tt.melee.attacks[3] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[3].animation = "skill_01"
 tt.melee.attacks[3].cooldown = 0
-tt.melee.attacks[3].damage_min = 95
-tt.melee.attacks[3].damage_max = 105
+tt.melee.attacks[3].damage_min = 262
+tt.melee.attacks[3].damage_max = 288
 tt.melee.attacks[3].damage_type = DAMAGE_TRUE
 tt.melee.attacks[3].disabled = true
 tt.melee.attacks[3].fn_can = fn_can_skill_a
@@ -795,8 +799,8 @@ tt.timed_attacks.list[4].torment_swords = {{0.01, 20, 8}, {0.2, 37.5, 8}, {0.3, 
 
 tt = RT("aura_oni_ult", "aura")
 tt.aura.cycles = 1
-tt.aura.damage_max = 180
-tt.aura.damage_min = 160
+tt.aura.damage_max = 490
+tt.aura.damage_min = 436
 tt.aura.damage_type = DAMAGE_TRUE
 tt.aura.duration = 1e+99
 tt.aura.radius = 70
@@ -871,6 +875,7 @@ tt.render.sprites[1].name = "oni_multi_fx_respawn_decal"
 tt.render.sprites[1].z = Z_DECALS
 
 tt = RT("decal_oni_respawn", "decal_scripted")
+tt.render.sprites = {}
 tt.decals = {"decal_oni_respawn_dust", "decal_oni_respawn_aura", "decal_oni_respawn_ground"}
 tt.main_script.update = decal_oni_respawn_update
 

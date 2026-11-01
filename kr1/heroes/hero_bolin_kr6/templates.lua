@@ -594,6 +594,8 @@ local function hero_bolin_kr6_level_up(this, store)
 end
 
 local function hero_bolin_kr6_update(this, store)
+	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
 	local h = this.health
 	local skills = this.hero.skills
 	local sa, sb, sc, su = skills.skill_a, skills.skill_b, skills.skill_c, skills.ultimate
@@ -725,7 +727,7 @@ local function hero_bolin_kr6_update(this, store)
 					local trigger_target, targets = U.find_foremost_enemy(store, this.pos, 0, sua.max_range, 0, sua.vis_flags, sua.vis_bans)
 
 					if not trigger_target or bolin_skip_ultimate(targets, sua) then
-						SU.delay_attack(store, sua, fts(10))
+						sua.ts = store.tick_ts - sua.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 					else
 						local ultimate_aura = E:create_entity(su.aura_decal)
 
@@ -746,7 +748,7 @@ local function hero_bolin_kr6_update(this, store)
 						repeat
 							while not U.animation_finished(this, 1) do
 								if this.unit.is_stunned or this.health.dead or this.nav_rally.new then
-									SU.delay_attack(store, sua, fts(10))
+									sua.ts = store.tick_ts - sua.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 									break
 								end
@@ -839,7 +841,7 @@ local function hero_bolin_kr6_update(this, store)
 					local destinations = first and bolin_mortar_positions(first, saa.bullet_count, saa.mortar_gap, pred_time)
 
 					if not first or #targets < saa.min_targets or not destinations or #destinations == 0 then
-						SU.delay_attack(store, saa, fts(10))
+						saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 					else
 						local af = not (first.pos.x > this.pos.x)
 
@@ -881,10 +883,10 @@ local function hero_bolin_kr6_update(this, store)
 				end
 
 				if not acted and ready_to_use_skill(aa, store, this.unit.cooldown_factor) and this.soldier.target_id == nil then
-					local trigger_target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, 0, aa.max_range, 0, aa.vis_flags, aa.vis_bans)
+					local trigger_target, _, pred_pos = U.find_foremost_enemy(store, this.pos, 0, aa.max_range, 0, aa.vis_flags, aa.vis_bans)
 
 					if not trigger_target then
-						SU.delay_attack(store, aa, fts(10))
+						aa.ts = store.tick_ts - aa.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 					else
 						local target_pos = V.vclone(pred_pos)
 						local aborted = false
@@ -899,7 +901,7 @@ local function hero_bolin_kr6_update(this, store)
 
 						while store.tick_ts - start_ts < aa.shoot_time do
 							if this.unit.is_stunned or this.health.dead or this.nav_rally.new then
-								SU.delay_attack(store, aa, fts(10))
+								aa.ts = store.tick_ts - aa.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 								aborted = true
 
 								break
@@ -915,7 +917,7 @@ local function hero_bolin_kr6_update(this, store)
 								trigger_target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, 0, aa.max_range, 0, aa.vis_flags, aa.vis_bans)
 
 								if not trigger_target then
-									SU.delay_attack(store, aa, fts(10))
+									aa.ts = store.tick_ts - aa.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 									aborted = true
 								else
 									target_pos = V.vclone(pred_pos)
@@ -938,7 +940,7 @@ local function hero_bolin_kr6_update(this, store)
 							bullet.bullet.target_id = trigger_target.id
 							bullet.bullet.source_id = this.id
 							bullet.bullet.xp_dest_id = this.id
-							bullet.bullet.xp_gain_factor = 1.6
+							bullet.bullet.xp_gain_factor = 2.4
 							bullet.bullet.level = aa.level
 							bullet.bullet.damage_min = aa.damage_min
 							bullet.bullet.damage_max = aa.damage_max
@@ -969,7 +971,7 @@ local function hero_bolin_kr6_update(this, store)
 
 							while not U.animation_finished(this, 1) do
 								if this.unit.is_stunned or this.health.dead or this.nav_rally.new then
-									SU.delay_attack(store, aa, fts(10))
+									aa.ts = store.tick_ts - aa.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 									break
 								end
@@ -986,7 +988,7 @@ local function hero_bolin_kr6_update(this, store)
 					local target = U.find_foremost_enemy(store, this.pos, 0, sba.max_range, 0, sba.vis_flags, sba.vis_bans)
 
 					if target then
-						SU.delay_attack(store, sba, fts(10))
+						sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 					else
 						local near_mines = table.filter(store.entities, function(k, v)
 							return v.template_name == "aura_bolin_skill_b_trigger" and V.dist2(v.pos.x, v.pos.y, this.pos.x, this.pos.y) <= sba.max_range * sba.max_range
@@ -995,14 +997,14 @@ local function hero_bolin_kr6_update(this, store)
 						if #near_mines >= sba.max_mines then
 							this.max_mines_near = true
 
-							SU.delay_attack(store, sba, fts(10))
+							sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 						else
 							local mine_pos = bolin_mine_pos(this, near_mines, sba)
 
 							if not mine_pos then
 								this.max_mines_near = true
 
-								SU.delay_attack(store, sba, fts(10))
+								sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 							else
 								local all_mines = bolin_find_mines(store)
 
@@ -1068,15 +1070,15 @@ tt = RT("hero_bolin_kr6", "hero")
 AC(tt, "melee", "ranged", "timed_attacks")
 
 tt.hero.level_stats.armor = {0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.15}
-tt.hero.level_stats.hp_max = {170, 180, 190, 200, 210, 220, 230, 240, 250, 260}
-tt.hero.level_stats.melee_damage_min = {8, 9, 10, 10, 11, 12, 13, 14, 14, 15}
-tt.hero.level_stats.melee_damage_max = {12, 13, 14, 16, 17, 18, 19, 20, 22, 23}
-tt.hero.level_stats.ranged_damage_min = {20, 22, 24, 26, 28, 30, 32, 34, 36, 38}
-tt.hero.level_stats.ranged_damage_max = {30, 33, 36, 39, 42, 45, 48, 52, 54, 57}
+tt.hero.level_stats.hp_max = {227, 240, 254, 267, 280, 293, 307, 320, 334, 348}
+tt.hero.level_stats.melee_damage_min = {12, 13, 14, 14, 15, 16, 17, 19, 19, 21}
+tt.hero.level_stats.melee_damage_max = {16, 17, 19, 22, 23, 24, 25, 26, 28, 30}
+tt.hero.level_stats.ranged_damage_min = {26, 28, 32, 36, 38, 40, 43, 45, 48, 50}
+tt.hero.level_stats.ranged_damage_max = {40, 44, 48, 51, 57, 61, 64, 69, 71, 76}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = 16
-tt.hero.skills.skill_a.damage_min = {10, 15, 20}
-tt.hero.skills.skill_a.damage_max = {15, 20, 25}
+tt.hero.skills.skill_a.damage_min = {14, 21, 26}
+tt.hero.skills.skill_a.damage_max = {21, 26, 35}
 tt.hero.skills.skill_a.slow_factor = 0.6
 tt.hero.skills.skill_a.xp_gain = {64, 128, 192}
 tt.hero.skills.skill_a.xp_level_steps = {
@@ -1086,8 +1088,8 @@ tt.hero.skills.skill_a.xp_level_steps = {
 }
 tt.hero.skills.skill_b = CC("hero_skill")
 tt.hero.skills.skill_b.cooldown = 6
-tt.hero.skills.skill_b.damage_min = {12, 17, 24}
-tt.hero.skills.skill_b.damage_max = {18, 28, 36}
+tt.hero.skills.skill_b.damage_min = {16, 23, 32}
+tt.hero.skills.skill_b.damage_max = {24, 38, 48}
 tt.hero.skills.skill_b.max_mines = {4, 6, 8}
 tt.hero.skills.skill_b.xp_gain = {24, 24, 24}
 tt.hero.skills.skill_b.xp_level_steps = {
@@ -1143,7 +1145,7 @@ tt.hero.respawn_animation = "levelup"
 tt.info.hero_portrait = "kr6_hero_portraits_0003"
 tt.info.portrait = "kr6_info_portraits_heroes_0004"
 tt.main_script.update = hero_bolin_kr6_update
-tt.motion.max_speed = 60
+tt.motion.max_speed = 75
 tt.regen.cooldown = 1
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
@@ -1190,7 +1192,7 @@ tt.melee.attacks[1].shared_cooldown = true
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 2
+tt.melee.attacks[1].xp_gain_factor = 2.4
 tt.melee.attacks[1].hit_offset = vec_2(30, 20)
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].animation = "shoot"
@@ -1219,8 +1221,8 @@ tt.timed_attacks.list[1].cooldown = 16
 tt.timed_attacks.list[1].min_targets = 3
 tt.timed_attacks.list[1].min_range = 200
 tt.timed_attacks.list[1].max_range = 300
-tt.timed_attacks.list[1].damage_min = 10
-tt.timed_attacks.list[1].damage_max = 15
+tt.timed_attacks.list[1].damage_min = 14
+tt.timed_attacks.list[1].damage_max = 21
 tt.timed_attacks.list[1].mortar_gap = 10
 tt.timed_attacks.list[1].sound = "HeroBolinSmokeMortarCast"
 tt.timed_attacks.list[1].sound_hit = "HeroBolinSmokeMortarTripleImpact"
@@ -1375,7 +1377,7 @@ tt = RT("bullet_bolin", "bullet")
 tt.main_script.update = bullet_bolin_update
 tt.bullet.damage_min = nil
 tt.bullet.damage_max = nil
-tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_type = DAMAGE_SHOT
 tt.bullet.reduce_armor = 0
 tt.bullet.hit_blood_fx = nil
 tt.bullet.hit_fx = "fx_bullet_bolin"
@@ -1437,7 +1439,7 @@ tt.render.sprites[1].prefix = "bolin_giantslayer_trail_animations"
 tt.render.sprites[1].name = "laser"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = vec_2(0.2, 0.5)
-tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_type = DAMAGE_SHOT
 tt.bullet.hit_fxs = {"fx_bullet_bolin", "fx_bullet_bolin_skill_c"}
 tt.bullet.hit_time = fts(1)
 tt.bullet.ignore_hit_offset = true
@@ -1455,7 +1457,7 @@ tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].prefix = "bolin_ulti_trail_animations"
 tt.render.sprites[1].name = "laser"
 tt.render.sprites[1].loop = false
-tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_type = DAMAGE_SHOT
 tt.bullet.hit_fxs = {"fx_bullet_bolin"}
 tt.bullet.hit_time = fts(1)
 tt.sound_events.insert = "HeroBolinBasicAttackCast"
@@ -1484,8 +1486,8 @@ tt = RT("aura_bolin_death_damage", "aura")
 tt.aura.radius = 70
 tt.aura.vis_flags = bor(F_AREA, F_ENEMY)
 tt.aura.vis_bans = bor(F_FRIEND)
-tt.aura.damage_min = 20
-tt.aura.damage_max = 30
+tt.aura.damage_min = 26
+tt.aura.damage_max = 40
 tt.aura.damage_type = DAMAGE_EXPLOSION
 tt.main_script.update = bolin_area_damage_update
 
@@ -1531,8 +1533,8 @@ tt = RT("aura_bolin_talent_2_area_damage", "aura")
 tt.aura.radius = 50
 tt.aura.vis_flags = bor(F_AREA, F_ENEMY)
 tt.aura.vis_bans = bor(F_FRIEND)
-tt.aura.damage_min = 24
-tt.aura.damage_max = 36
+tt.aura.damage_min = 32
+tt.aura.damage_max = 48
 tt.aura.damage_type = DAMAGE_EXPLOSION
 tt.main_script.update = bolin_area_damage_update
 

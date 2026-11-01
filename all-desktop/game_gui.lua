@@ -96,7 +96,7 @@ end
 --- 按边框纹理尺寸创建菜单按钮图标；跨版本图标把可见内容缩放到统一尺寸并居中。
 ---@param image_name string
 ---@param size_entry table|nil
----@return KImageView
+---@return table KImageView
 local function create_menu_button_image(image_name, size_entry)
 	if not size_entry then
 		return KImageView:new(image_name)

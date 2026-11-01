@@ -22,10 +22,12 @@ local fts = U.fts
 
 local THROTTLE_CD = 1
 
-local function apply_delayed_cooldowns(store, attacks)
+local function apply_delayed_cooldowns(this, store, attacks)
 	for _, a in ipairs(attacks) do
-		if a.throttle_cooldown_on_skill_use and a.cooldown and store.tick_ts - a.ts >= a.cooldown then
-			a.ts = store.tick_ts - a.cooldown + THROTTLE_CD
+		local cooldown = a.cooldown and a.cooldown * (this.unit.cooldown_factor or 1)
+
+		if a.throttle_cooldown_on_skill_use and cooldown and store.tick_ts - a.ts >= cooldown then
+			a.ts = store.tick_ts - cooldown + THROTTLE_CD
 		end
 	end
 end
@@ -458,6 +460,8 @@ local function hero_ignus_kr6_insert(this, store)
 end
 
 local function hero_ignus_kr6_update(this, store)
+	U.y_animation_play(this, "lvlup", nil, store.tick_ts, 1)
+
 	local h = this.health
 	local skills = this.hero.skills
 	local list = this.timed_attacks.list
@@ -525,7 +529,7 @@ local function hero_ignus_kr6_update(this, store)
 				local targets = U.find_enemies_in_range(store, this.pos, 0, ultimate.max_range, 0, 0)
 
 				if not targets or #targets < ultimate.min_targets or not this.motion.arrived then
-					SU.delay_attack(store, ultimate, fts(10))
+					ultimate.ts = store.tick_ts - ultimate.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					local selected_e = store.entities[this.soldier.target_id] or targets[1]
 
@@ -598,17 +602,17 @@ local function hero_ignus_kr6_update(this, store)
 
 					ultimate.ts = store.tick_ts
 
-					apply_delayed_cooldowns(store, list)
+					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
 				end
 			end
 
 			if ready_to_use_skill(sb, store, this.unit.cooldown_factor) then
-				local target, targets = U.find_foremost_enemy(store, this.pos, 0, sb.max_range, fts(10), 0, 0)
+				local _, targets = U.find_foremost_enemy(store, this.pos, 0, sb.max_range, fts(10), 0, 0)
 
 				if not targets or #targets < sb.min_targets or not this.motion.arrived then
-					SU.delay_attack(store, sb, fts(10))
+					sb.ts = store.tick_ts - sb.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					S:queue(sb.sound)
 					U.animation_start(this, sb.animation, nil, store.tick_ts, false, 1)
@@ -639,7 +643,7 @@ local function hero_ignus_kr6_update(this, store)
 
 					sb.ts = store.tick_ts
 
-					apply_delayed_cooldowns(store, list)
+					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
 				end
@@ -653,7 +657,7 @@ local function hero_ignus_kr6_update(this, store)
 				end)
 
 				if not t or not this.motion.arrived then
-					SU.delay_attack(store, sc, fts(10))
+					sc.ts = store.tick_ts - sc.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					U.animation_start(this, sc.animation_in, t.pos.x < this.pos.x, store.tick_ts, false, 1)
 
@@ -749,7 +753,7 @@ local function hero_ignus_kr6_update(this, store)
 
 					sc.ts = store.tick_ts
 
-					apply_delayed_cooldowns(store, list)
+					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
 				end
@@ -759,7 +763,7 @@ local function hero_ignus_kr6_update(this, store)
 				local target, _, pred_pos = U.find_foremost_enemy(store, this.pos, sa.min_range, sa.max_range, sa.prediction, sa.vis_flags, sa.vis_bans)
 
 				if not target or not this.motion.arrived then
-					SU.delay_attack(store, sa, fts(10))
+					sa.ts = store.tick_ts - sa.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					this.render.sprites[1].flip_x = target.pos.x < this.pos.x
 					U.animation_start(this, sa.animation, nil, store.tick_ts, false, 1)
@@ -796,7 +800,7 @@ local function hero_ignus_kr6_update(this, store)
 
 					sa.ts = store.tick_ts
 
-					apply_delayed_cooldowns(store, list)
+					apply_delayed_cooldowns(this, store, list)
 					SU.y_hero_animation_wait(this)
 
 					goto continue
@@ -830,13 +834,13 @@ local tt
 tt = RT("hero_ignus_kr6", "hero")
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.hp_max = {210, 225, 240, 255, 270, 285, 300, 315, 330, 345}
-tt.hero.level_stats.melee_damage_min = {3, 3, 4, 4, 5, 5, 6, 7, 7, 8}
-tt.hero.level_stats.melee_damage_max = {4, 5, 6, 7, 7, 8, 9, 10, 11, 11}
+tt.hero.level_stats.hp_max = {395, 426, 453, 482, 509, 540, 566, 594, 621, 651}
+tt.hero.level_stats.melee_damage_min = {6, 6, 7, 7, 9, 9, 12, 14, 14, 16}
+tt.hero.level_stats.melee_damage_max = {7, 9, 12, 14, 14, 16, 18, 20, 21, 21}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = 10
-tt.hero.skills.skill_a.damage_min = {40, 64, 100}
-tt.hero.skills.skill_a.damage_max = {60, 96, 150}
+tt.hero.skills.skill_a.damage_min = {75, 121, 189}
+tt.hero.skills.skill_a.damage_max = {113, 181, 282}
 tt.hero.skills.skill_a.damage_type = DAMAGE_TRUE
 tt.hero.skills.skill_a.xp_gain = {40, 80, 120}
 tt.hero.skills.skill_a.xp_level_steps = {
@@ -846,8 +850,8 @@ tt.hero.skills.skill_a.xp_level_steps = {
 }
 tt.hero.skills.skill_b = CC("hero_skill")
 tt.hero.skills.skill_b.cooldown = 18
-tt.hero.skills.skill_b.damage_min = {48, 64, 88}
-tt.hero.skills.skill_b.damage_max = {90, 120, 165}
+tt.hero.skills.skill_b.damage_min = {89, 121, 165}
+tt.hero.skills.skill_b.damage_max = {171, 226, 312}
 tt.hero.skills.skill_b.damage_type = DAMAGE_TRUE
 tt.hero.skills.skill_b.min_targets = 3
 tt.hero.skills.skill_b.xp_gain = {72, 144, 216}
@@ -858,8 +862,8 @@ tt.hero.skills.skill_b.xp_level_steps = {
 }
 tt.hero.skills.skill_c = CC("hero_skill")
 tt.hero.skills.skill_c.cooldown = 15
-tt.hero.skills.skill_c.damage_min = {56, 80, 120}
-tt.hero.skills.skill_c.damage_max = {84, 120, 180}
+tt.hero.skills.skill_c.damage_min = {106, 152, 226}
+tt.hero.skills.skill_c.damage_max = {158, 226, 340}
 tt.hero.skills.skill_c.damage_type = DAMAGE_TRUE
 tt.hero.skills.skill_c.max_hits = 3
 tt.hero.skills.skill_c.xp_gain = {60, 120, 180}
@@ -876,8 +880,8 @@ tt.hero.skills.ultimate.xp_level_steps = {
 }
 tt.hero.skills.talent_1 = CC("hero_skill")
 tt.hero.skills.talent_1.aura = "aura_ignus_talent_1"
-tt.hero.skills.talent_1.damage_min = 2
-tt.hero.skills.talent_1.damage_max = 2
+tt.hero.skills.talent_1.damage_min = 3
+tt.hero.skills.talent_1.damage_max = 3
 tt.hero.skills.talent_1.damage_type = DAMAGE_TRUE
 tt.hero.skills.talent_1.cycle_time = 0.25
 tt.hero.skills.talent_1.disabled = true
@@ -885,7 +889,7 @@ tt.hero.skills.talent_1.xp_level_steps = {
 	[1] = 1
 }
 tt.hero.skills.talent_2 = CC("hero_skill")
-tt.hero.skills.talent_2.heal_ptg = 0.15
+tt.hero.skills.talent_2.heal_ptg = 0.28
 tt.hero.skills.talent_2.mod = "mod_ignus_talent_2_heal"
 tt.hero.skills.talent_2.disabled = true
 tt.hero.skills.talent_2.xp_level_steps = {
@@ -903,7 +907,7 @@ tt.info.hero_portrait = "kr6_hero_portraits_0010"
 tt.info.portrait = "kr6_info_portraits_heroes_0011"
 tt.main_script.insert = hero_ignus_kr6_insert
 tt.main_script.update = hero_ignus_kr6_update
-tt.motion.max_speed = 70
+tt.motion.max_speed = 87.5
 tt.regen.cooldown = 1
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
@@ -937,7 +941,7 @@ tt.melee.attacks[1].loops = 1
 tt.melee.attacks[1].sound_hit = "HeroIgnusBasicAttackCast"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 1.4
+tt.melee.attacks[1].xp_gain_factor = 1.2
 tt.melee.cooldown = 0
 tt.melee.range = 78
 tt.timed_attacks.list[1] = CC("custom_attack")
@@ -985,8 +989,8 @@ tt.timed_attacks.list[4].animations = {"ulti_in", "ulti_loop", "ulti_out"}
 tt.timed_attacks.list[4].aura = "aura_ignus_ultimate"
 tt.timed_attacks.list[4].cast_time = fts(26)
 tt.timed_attacks.list[4].cooldown = 30
-tt.timed_attacks.list[4].damage_max = 30
-tt.timed_attacks.list[4].damage_min = 20
+tt.timed_attacks.list[4].damage_max = 58
+tt.timed_attacks.list[4].damage_min = 38
 tt.timed_attacks.list[4].damage_radius = 80
 tt.timed_attacks.list[4].damage_type = DAMAGE_TRUE
 tt.timed_attacks.list[4].disabled = true
@@ -1019,8 +1023,8 @@ tt.modifier.vis_bans = 0
 tt = RT("aura_ignus_skill_b", "aura")
 tt.aura.cycles = 1
 tt.aura.cycle_time = 0
-tt.aura.damage_max = 90
-tt.aura.damage_min = 48
+tt.aura.damage_max = 171
+tt.aura.damage_min = 89
 tt.aura.damage_type = DAMAGE_TRUE
 tt.aura.duration = 1e+99
 tt.aura.radius = 100
@@ -1030,8 +1034,8 @@ tt.main_script.update = aura_ignus_apply_damage_update
 
 tt = RT("aura_ignus_ultimate", "aura")
 tt.aura.cycle_time = 0.25
-tt.aura.damage_max = 30
-tt.aura.damage_min = 20
+tt.aura.damage_max = 58
+tt.aura.damage_min = 38
 tt.aura.damage_type = DAMAGE_TRUE
 tt.aura.duration = 3
 tt.aura.radius = 80
@@ -1041,8 +1045,8 @@ tt.main_script.update = aura_ignus_apply_damage_update
 
 tt = RT("aura_ignus_talent_1", "aura")
 tt.aura.cycle_time = 0.25
-tt.aura.damage_max = 2
-tt.aura.damage_min = 2
+tt.aura.damage_max = 3
+tt.aura.damage_min = 3
 tt.aura.damage_type = DAMAGE_TRUE
 tt.aura.duration = 1e+99
 tt.aura.hit_fx = "fx_ignus_talent_1_hit"
@@ -1117,14 +1121,14 @@ tt.tween.props[1].keys = {{0, 0}, {fts(1), 0}}
 
 tt = RT("bullet_ignus_skill_a", "bolt")
 tt.bullet.align_with_trajectory = true
-tt.bullet.damage_max = 60
-tt.bullet.damage_min = 40
+tt.bullet.damage_max = 113
+tt.bullet.damage_min = 75
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.g = nil
 tt.bullet.hit_fx = "fx_bullet_ignus_skill_a_hit"
 tt.bullet.hit_fx_match_flip = true
 tt.bullet.ignore_hit_offset = false
-tt.bullet.max_speed = 600
+tt.bullet.max_speed = 1088
 tt.bullet.min_speed = 600
 tt.bullet.particles_name = "ps_ignus_skill_a_trail"
 tt.bullet.pop_chance = 0
@@ -1141,8 +1145,8 @@ tt = RT("bullet_ignus_skill_c", "bullet")
 tt.bans = F_FLYING
 tt.bounce_range = 120
 tt.bullet.acceleration = 500
-tt.bullet.damage_max = 0
-tt.bullet.damage_min = 0
+tt.bullet.damage_max = 1
+tt.bullet.damage_min = 1
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.ignore_hit_offset = true
 tt.bullet.max_speed = 1e+99
@@ -1157,6 +1161,8 @@ tt.return_offset = vec_2(35, 40)
 
 tt = RT("ps_ignus_skill_a_trail")
 AC(tt, "pos", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emission_rate = 30
 tt.particle_system.name = "ignus_multi_trail2_in"
 tt.particle_system.particle_lifetime = {fts(6), fts(6)}
@@ -1165,6 +1171,8 @@ tt.particle_system.track_rotation = true
 
 tt = RT("ps_ignus_skill_c_trail")
 AC(tt, "pos", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emit_area_spread = vec_2(4.5, 4.5)
 tt.particle_system.emission_rate = 60
 tt.particle_system.name = "ignus_multi_trail1_in"
@@ -1174,6 +1182,8 @@ tt.particle_system.spin = {-5, 5}
 
 tt = RT("ps_ignus_flywalk_trail")
 AC(tt, "pos", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emit_area_spread = vec_2(4.5, 4.5)
 tt.particle_system.emission_rate = 80
 tt.particle_system.name = "ignus_multi_trail_fast_move_in"

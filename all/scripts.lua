@@ -4693,15 +4693,19 @@ function scripts.fireball.update(this, store)
 				queue_damage(store, d)
 			end
 
-			if b.mod then
-				local mod = E:create_entity(b.mod)
+			local mods = b.mods or (b.mod and {b.mod})
 
-				mod.modifier.target_id = e.id
-				mod.modifier.source_id = b.source_id
-				mod.modifier.damage_factor = b.damage_factor
-				mod.xp_dest_id = b.source_id
+			if mods then
+				for _, mod_name in ipairs(mods) do
+					local mod = E:create_entity(mod_name)
 
-				simulation:queue_insert_entity(mod)
+					mod.modifier.target_id = e.id
+					mod.modifier.source_id = b.source_id
+					mod.modifier.damage_factor = b.damage_factor
+					mod.xp_dest_id = b.source_id
+
+					simulation:queue_insert_entity(mod)
+				end
 			end
 		end
 	end
@@ -6311,8 +6315,18 @@ function scripts.mod_dps.update(this, store)
 					end
 				end
 
+				local insert = true
+
 				for i = 1, #fx.render.sprites do
 					local s = fx.render.sprites[i]
+
+					if s.use_blood_color then
+						if not target.unit.blood_color then
+							insert = false
+							break
+						end
+						s.name = s.name .. "_" .. target.unit.blood_color
+					end
 					s.ts = store.tick_ts
 					s.runs = 0
 
@@ -6320,16 +6334,14 @@ function scripts.mod_dps.update(this, store)
 						s.name = s.size_names[target.unit.size]
 					end
 
-					if s.use_blood_color then
-						s.name = s.name .. "_" .. target.unit.blood_color
-					end
-
 					if dps.fx_target_flip and target.render then
 						s.flip_x = target.render.sprites[1].flip_x
 					end
 				end
 
-				simulation:queue_insert_entity(fx)
+				if insert then
+					simulation:queue_insert_entity(fx)
+				end
 			end
 		end
 

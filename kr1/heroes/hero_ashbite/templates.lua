@@ -75,13 +75,23 @@ local function mod_ashbite_burn_update(this, store)
 		armor_sunder = source.aura.armor_sunder or 0
 	end
 
-	local damage_buff = hero and hero.unit and hero.unit.damage_buff or 0
-	local damage_factor = hero and hero.unit and hero.unit.damage_factor or 1
 	local source_id = hero and hero.id or this.id
+
+	if hero and hero.hero then
+		local t2 = hero.hero.skills.talent_2
+
+		if t2.level > 0 then
+			armor_sunder = math.max(armor_sunder, t2.armor_sunder)
+		end
+	end
+
+	this._armor_sunder_ts = this._armor_sunder_ts or store.tick_ts
 
 	this.pos = target.pos
 
 	while true do
+		local damage_buff = hero and hero.unit and hero.unit.damage_buff or 0
+		local damage_factor = hero and hero.unit and hero.unit.damage_factor or 1
 		target = store.entities[m.target_id]
 
 		if not target or target.health.dead then
@@ -121,7 +131,9 @@ local function mod_ashbite_burn_update(this, store)
 
 			queue_damage(store, d)
 
-			if armor_sunder > 0 and band(target.vis.flags, F_BOSS) == 0 then
+			if armor_sunder > 0 and band(target.vis.flags, F_BOSS) == 0 and store.tick_ts - this._armor_sunder_ts >= 1 then
+				this._armor_sunder_ts = store.tick_ts
+
 				SU.armor_dec(target, armor_sunder)
 			end
 
@@ -182,14 +194,18 @@ local function aura_ashbite_skill_a_update(this, store)
 
 					queue_damage(store, d)
 
-					if a.mod then
-						local mod = E:create_entity(a.mod)
+					local mods = a.mods or (a.mod and {a.mod})
 
-						mod.modifier.level = 1
-						mod.modifier.target_id = target.id
-						mod.modifier.source_id = a.source_id
+					if mods then
+						for _, mod_name in ipairs(mods) do
+							local mod = E:create_entity(mod_name)
 
-						simulation:queue_insert_entity(mod)
+							mod.modifier.level = 1
+							mod.modifier.target_id = target.id
+							mod.modifier.source_id = a.source_id
+
+							simulation:queue_insert_entity(mod)
+						end
 					end
 				end
 			end
@@ -219,7 +235,11 @@ local function hero_ashbite_level_up(this, store, initial)
 	end
 
 	local hl, ls = level_up_basic(this)
-	local skills = this.hero.skills
+
+	local bt = E:get_template(this.ranged.attacks[1].bullet)
+
+	bt.bullet.damage_min = ls.ranged_damage_min[hl]
+	bt.bullet.damage_max = ls.ranged_damage_max[hl]
 
 	upgrade_skill(this, "skill_a", function(this, s)
 		this.timed_attacks.list[1].disabled = nil
@@ -256,6 +276,8 @@ local function hero_ashbite_remove(this, store)
 end
 
 local function hero_ashbite_update(this, store)
+	U.y_animation_play(this, "lvlup", nil, store.tick_ts, 1)
+
 	local h = this.health
 	local skills = this.hero.skills
 	local sa = skills.skill_a
@@ -269,19 +291,10 @@ local function hero_ashbite_update(this, store)
 	local sba = this.timed_attacks.list[2]
 	local sca = this.timed_attacks.list[3]
 	local ua = this.timed_attacks.list[4]
-	local level_stats = this.hero.level_stats
 	local brk, sta
 	local feeding_time = false
 	local feeding_time_mod
 	local feeding_time_start_ts = 0
-	local shadow_sprite = this.render.sprites[2]
-	local cdf = this.unit.cooldown_factor or 1
-
-	aa.ts = store.tick_ts - aa.cooldown * cdf
-	saa.ts = store.tick_ts - saa.cooldown * cdf
-	sba.ts = store.tick_ts - sba.cooldown * cdf
-	sca.ts = store.tick_ts - sca.cooldown * cdf
-	ua.ts = store.tick_ts - ua.cooldown * cdf
 
 	local ult_start_cd = store.wave_group_number == 0
 
@@ -355,7 +368,7 @@ local function hero_ashbite_update(this, store)
 			return sum
 		end
 
-		local target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
+		local _, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 		if not targets or #targets < a.min_targets then
 			return nil
@@ -393,14 +406,11 @@ local function hero_ashbite_update(this, store)
 			return
 		end
 
-		if store.tick_ts - aa.ts < aa.cooldown * (this.unit.cooldown_factor or 1) then
+		if store.tick_ts - aa.ts < aa.cooldown * this.unit.cooldown_factor then
 			return
 		end
 
-		local pos_offset = V.v(this.pos.x + aa.ignore_offset.x, this.pos.y + aa.ignore_offset.y)
-		local _, targets = U.find_foremost_enemy(store, this.pos, aa.min_range, aa.max_range, 0, aa.vis_flags, aa.vis_bans, function(e)
-			return V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > aa.radius * aa.radius
-		end)
+		local _, targets = U.find_foremost_enemy(store, this.pos, aa.min_range, aa.max_range, 0, aa.vis_flags, aa.vis_bans)
 
 		if not targets or #targets == 0 then
 			return
@@ -425,18 +435,17 @@ local function hero_ashbite_update(this, store)
 		S:queue(aa.sound)
 
 		local b = E:create_entity(aa.bullet)
-		local hl = this.hero.level
 		local buff = this.unit.damage_buff or 0
 
 		b.bullet.target_id = target.id
 		b.bullet.source_id = this.id
 		b.bullet.xp_dest_id = this.id
-		b.bullet.damage_min = level_stats.ranged_damage_min[hl] + buff
-		b.bullet.damage_max = level_stats.ranged_damage_max[hl] + buff
+		b.bullet.damage_min = b.bullet.damage_min + buff
+		b.bullet.damage_max = b.bullet.damage_max + buff
 		b.bullet.damage_factor = this.unit.damage_factor
 
 		if st1.level > 0 then
-			b.bullet.mod = st1.mod_t
+			U.append_mod(b.bullet, st1.mod_t)
 		end
 
 		b.pos = V.vclone(this.pos)
@@ -476,12 +485,20 @@ local function hero_ashbite_update(this, store)
 		end
 
 		if h.dead then
+			feeding_time = false
+
 			if this.__dust_controller then
 				simulation:queue_remove_entity(this.__dust_controller)
 				this.__dust_controller = nil
 			end
 
 			SU.y_hero_death_and_respawn(store, this)
+
+			this._current_height = this.flight_height
+			this.render.sprites[1].offset.y = this.flight_height
+			this.render.sprites[1].z = Z_FLYING_HEROES
+
+			U.flags_add(this.vis, F_FLYING)
 			U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 		end
 
@@ -500,7 +517,7 @@ local function hero_ashbite_update(this, store)
 			local enemies = find_targets_ultimate(a)
 
 			if not enemies or #enemies < a.min_targets then
-				SU.delay_attack(store, a, fts(10))
+				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 			else
 				U.animation_start(this, a.animation, nil, store.tick_ts, false)
 				S:queue(a.sound)
@@ -555,7 +572,7 @@ local function hero_ashbite_update(this, store)
 			end)
 
 			if not target then
-				SU.delay_attack(store, a, fts(10))
+				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 			else
 				local c = E:create_entity(a.dust_c)
 
@@ -564,7 +581,7 @@ local function hero_ashbite_update(this, store)
 
 				simulation:queue_insert_entity(c)
 
-				this.soldier.target_id = target.id
+				U.block_enemy(store, this, target)
 
 				U.animation_start(this, a.animation_down, nil, store.tick_ts)
 				S:queue(a.sound)
@@ -614,13 +631,12 @@ local function hero_ashbite_update(this, store)
 
 		if not feeding_time and ready_to_use_skill(sba, store, this.unit.cooldown_factor) then
 			local a = sba
-			local pos_offset = V.v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
 			local target, enemies = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, o)
-				return not e.unit.ignore_stun and not e.unit.is_stunned and GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > a.radius * a.radius
+				return not e.unit.ignore_stun and not e.unit.is_stunned and GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
 			end)
 
 			if not enemies or #enemies == 0 then
-				SU.delay_attack(store, a, fts(10))
+				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 			else
 				table.sort(enemies, function(a1, a2)
 					return a1.health.hp_max > a2.health.hp_max
@@ -687,13 +703,12 @@ local function hero_ashbite_update(this, store)
 
 		if not feeding_time and ready_to_use_skill(saa, store, this.unit.cooldown_factor) then
 			local a = saa
-			local pos_offset = V.v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
 			local target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, nil, a.vis_flags, a.vis_bans, function(e, o)
-				return GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > a.radius * a.radius
+				return GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
 			end)
 
 			if not targets or #targets < a.min_targets then
-				SU.delay_attack(store, a, fts(10))
+				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 			else
 				local target_pos = target.pos
 
@@ -738,7 +753,7 @@ local function hero_ashbite_update(this, store)
 				au.aura.damage_max = sa.aura_damage_max[sa.level]
 
 				if st2.level > 0 then
-					au.aura.mod = st2.mod
+					U.append_mod(au.aura, st2.mod)
 				end
 
 				simulation:queue_insert_entity(au)
@@ -786,9 +801,7 @@ local function hero_ashbite_update(this, store)
 				U.flags_add(this.vis, F_FLYING)
 				U.bans_remove(this.vis, F_STUN)
 
-				if SU.y_hero_animation_wait(this) then
-					goto continue
-				end
+				SU.y_hero_animation_wait(this)
 
 				if feeding_time_mod then
 					simulation:queue_remove_entity(feeding_time_mod)
@@ -797,6 +810,8 @@ local function hero_ashbite_update(this, store)
 
 				feeding_time = false
 				sca.ts = store.tick_ts
+
+				goto continue
 			else
 				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
@@ -961,6 +976,7 @@ tt.melee.attacks[1] = CC("melee_attack")
 tt.melee.attacks[1].animation = "feeding_attack"
 tt.melee.attacks[1].damage_min = 80
 tt.melee.attacks[1].damage_max = 120
+tt.melee.attacks[1].damage_type = DAMAGE_RUDE
 tt.melee.attacks[1].damage_bans = 0
 tt.melee.attacks[1].damage_flags = 0
 tt.melee.attacks[1].hit_time = fts(16)
@@ -971,7 +987,7 @@ tt.melee.attacks[1].sound_args = {
 	delay = fts(15)
 }
 tt.melee.attacks[1].vis_bans = 0
-tt.melee.attacks[1].xp_gain_factor = 1
+tt.melee.attacks[1].xp_gain_factor = 1.7
 tt.melee.attacks[1].hit_fx = "fx_ashbite_skill_c_hit"
 tt.melee.attacks[1].hit_offset = vec_2(60, 0)
 tt.timed_attacks.list[1] = CC("custom_attack")
@@ -1068,7 +1084,7 @@ tt.bullet.particles_name = "ps_bullet_ashbite"
 tt.bullet.max_speed = 600
 tt.bullet.align_with_trajectory = true
 tt.bullet.min_speed = 600
-tt.bullet.xp_gain_factor = 1.2
+tt.bullet.xp_gain_factor = 1.7
 tt.bullet.ignore_hit_offset = false
 tt.bullet.pop_chance = 0
 tt.bullet.g = nil

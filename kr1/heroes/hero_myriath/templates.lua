@@ -111,6 +111,8 @@ local function hero_myriath_insert(this, store)
 end
 
 local function hero_myriath_update(this, store)
+	U.y_animation_play(this, "lvl_up", nil, store.tick_ts, 1)
+
 	local h = this.health
 	local brk, sta
 	local old_tombstone_time = this.hero.tombstone_show_time
@@ -119,8 +121,6 @@ local function hero_myriath_update(this, store)
 	this.health_bar.hidden = false
 
 	local clone_ids = {}
-	local t1 = this.hero.skills.talent_1
-	local t2 = this.hero.skills.talent_2
 	local ska = this.timed_attacks.list[1]
 	local pow_a = this.hero.skills.skill_a
 	local skb = this.timed_attacks.list[2]
@@ -129,12 +129,10 @@ local function hero_myriath_update(this, store)
 	local pow_c = this.hero.skills.skill_c
 	local ult = this.timed_attacks.list[4]
 	local ultimate = this.hero.skills.ultimate
-	local cdf = this.unit.cooldown_factor or 1
-
-	ska.ts = store.tick_ts - ska.cooldown * cdf
-	skb.ts = store.tick_ts - skb.cooldown * cdf
-	skc.ts = store.tick_ts - skc.cooldown * cdf
-	ult.ts = store.tick_ts - ult.cooldown * cdf
+	ska.ts = store.tick_ts - ska.cooldown * (this.unit.cooldown_factor or 1)
+	skb.ts = store.tick_ts - skb.cooldown * (this.unit.cooldown_factor or 1)
+	skc.ts = store.tick_ts - skc.cooldown * (this.unit.cooldown_factor or 1)
+	ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1)
 
 	local function add_clone_id(id)
 		table.insert(clone_ids, id)
@@ -242,7 +240,7 @@ local function hero_myriath_update(this, store)
 
 			if not ult.disabled and ready_to_use_skill(ult, store, this.unit.cooldown_factor) then
 				local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
-				local target, targets = U.find_foremost_enemy(store, this.pos, ult.min_detection_range, ult.max_detection_range, ult.prediction, 0, ult.bans, function(v)
+				local _, targets = U.find_foremost_enemy(store, this.pos, ult.min_detection_range, ult.max_detection_range, ult.prediction, 0, ult.bans, function(v)
 					for _, p in pairs(nearest) do
 						if p[1] == v.nav_path.pi and v.nav_path.ni < p[3] then
 							return true
@@ -253,15 +251,14 @@ local function hero_myriath_update(this, store)
 				end)
 
 				if not targets or #targets < ult.min_targets then
-					SU.delay_attack(store, ult, fts(10))
+					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					local paths = sort_paths_by_distance(find_most_populated_path(targets), ult.distance)
 
 					if #paths == 0 then
-						SU.delay_attack(store, ult, fts(10))
+						ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 					else
 						local n = P:nearest_nodes(this.pos.x, this.pos.y, {paths[1][1]})
-						local pos = P:node_pos(n[1][1], n[1][2], n[1][3])
 
 						U.animation_start(this, ult.animation, this.render.sprites[1].flip_x, store.tick_ts, false)
 						S:queue(ult.sound_taunt)
@@ -355,7 +352,7 @@ local function hero_myriath_update(this, store)
 				local target = store.entities[this.soldier.target_id]
 
 				if not target or not this.motion.arrived or target.health.dead then
-					SU.delay_attack(store, skc, fts(10))
+					skc.ts = store.tick_ts - skc.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					h.ignore_damage = true
 					this.health_bar.hidden = true
@@ -435,7 +432,7 @@ local function hero_myriath_update(this, store)
 				end)
 
 				if not target or #targets == 0 then
-					SU.delay_attack(store, ska, fts(10))
+					ska.ts = store.tick_ts - ska.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					this.render.sprites[1].flip_x = target.pos.x < this.pos.x
 
@@ -1041,16 +1038,16 @@ local tt
 tt = RT("hero_myriath", "hero")
 AC(tt, "melee", "ranged", "timed_attacks", "dodge")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.hp_max = {170, 180, 190, 200, 210, 220, 230, 240, 250, 260}
-tt.hero.level_stats.melee_damage_min = {12, 14, 16, 17, 19, 21, 23, 25, 26, 28}
-tt.hero.level_stats.melee_damage_max = {18, 21, 23, 26, 29, 32, 34, 37, 40, 42}
-tt.hero.level_stats.ranged_damage_min = {12, 14, 16, 17, 19, 21, 23, 25, 26, 28}
-tt.hero.level_stats.ranged_damage_max = {18, 21, 23, 26, 29, 32, 34, 37, 40, 42}
+tt.hero.level_stats.hp_max = {247, 262, 276, 292, 306, 321, 336, 351, 365, 379}
+tt.hero.level_stats.melee_damage_min = {18, 21, 23, 25, 28, 30, 32, 37, 39, 41}
+tt.hero.level_stats.melee_damage_max = {26, 30, 32, 39, 43, 47, 49, 54, 57, 61}
+tt.hero.level_stats.ranged_damage_min = {18, 21, 23, 25, 28, 30, 32, 37, 39, 41}
+tt.hero.level_stats.ranged_damage_max = {26, 30, 32, 39, 43, 47, 49, 54, 57, 61}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.key = "FORWARD_ILLUSION"
 tt.hero.skills.skill_a.cooldown = 6
-tt.hero.skills.skill_a.damage_min = {12, 24, 36}
-tt.hero.skills.skill_a.damage_max = {18, 36, 54}
+tt.hero.skills.skill_a.damage_min = {18, 35, 52}
+tt.hero.skills.skill_a.damage_max = {26, 52, 78}
 tt.hero.skills.skill_a.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.skill_a.xp_gain = {24, 48, 72}
 tt.hero.skills.skill_a.xp_level_steps = {
@@ -1070,8 +1067,8 @@ tt.hero.skills.skill_b.xp_level_steps = {
 tt.hero.skills.skill_c = CC("hero_skill")
 tt.hero.skills.skill_c.key = "MIRROR_MISSILES"
 tt.hero.skills.skill_c.cooldown = 12
-tt.hero.skills.skill_c.damage_min = {6, 7, 8}
-tt.hero.skills.skill_c.damage_max = {8, 10, 12}
+tt.hero.skills.skill_c.damage_min = {8, 9, 10}
+tt.hero.skills.skill_c.damage_max = {10, 16, 18}
 tt.hero.skills.skill_c.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.skill_c.xp_gain = {48, 96, 192}
 tt.hero.skills.skill_c.xp_level_steps = {
@@ -1083,8 +1080,8 @@ tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.key = "I_AM_LEGION"
 tt.hero.skills.ultimate.cooldown = 40
 tt.hero.skills.ultimate.damage_type = DAMAGE_MAGICAL
-tt.hero.skills.ultimate.damage_min = 60
-tt.hero.skills.ultimate.damage_max = 90
+tt.hero.skills.ultimate.damage_min = 87
+tt.hero.skills.ultimate.damage_max = 130
 tt.hero.skills.ultimate.clone_count = 3
 tt.hero.skills.ultimate.xp_gain = {160}
 tt.hero.skills.ultimate.xp_level_steps = {
@@ -1116,7 +1113,7 @@ tt.info.hero_portrait = "kr6_hero_portraits_0005"
 tt.info.portrait = "kr6_info_portraits_heroes_0009"
 tt.main_script.insert = hero_myriath_insert
 tt.main_script.update = hero_myriath_update
-tt.motion.max_speed = 90
+tt.motion.max_speed = 112.5
 tt.regen.cooldown = 1
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
@@ -1142,8 +1139,8 @@ tt.dodge.ranged = false
 tt.melee.attacks[1] = CC("melee_attack")
 tt.melee.attacks[1].animation = "attack_1"
 tt.melee.attacks[1].cooldown = 1.5
-tt.melee.attacks[1].damage_min = 12
-tt.melee.attacks[1].damage_max = 18
+tt.melee.attacks[1].damage_min = 18
+tt.melee.attacks[1].damage_max = 26
 tt.melee.attacks[1].damage_type = DAMAGE_MAGICAL
 tt.melee.attacks[1].hit_fx = "fx_myriath_hit"
 tt.melee.attacks[1].hit_offset = vec_2(30, 20)
@@ -1152,7 +1149,7 @@ tt.melee.attacks[1].shared_cooldown = true
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 1.6
+tt.melee.attacks[1].xp_gain_factor = 1.2
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].animation = "attack_2"
 tt.melee.attacks[2].chance = 0.5
@@ -1198,8 +1195,8 @@ tt.timed_attacks.list[3].animation = "skill_3"
 tt.timed_attacks.list[3].animation_in = "skill_3_cast"
 tt.timed_attacks.list[3].animation_out = "skill_2_in"
 tt.timed_attacks.list[3].cooldown = 12
-tt.timed_attacks.list[3].damage_min = 6
-tt.timed_attacks.list[3].damage_max = 8
+tt.timed_attacks.list[3].damage_min = 8
+tt.timed_attacks.list[3].damage_max = 10
 tt.timed_attacks.list[3].damage_type = DAMAGE_MAGICAL
 tt.timed_attacks.list[3].disabled = true
 tt.timed_attacks.list[3].hit_fx = "fx_myriath_hit"
@@ -1226,7 +1223,7 @@ tt = RT("soldier_myriath_clone", "soldier_militia")
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.nav_grid = nil
 tt.health.armor = 0
-tt.health.hp_max = 85
+tt.health.hp_max = 124
 tt.health_bar.offset = vec_2(0, 45)
 tt.health_bar.draw_order = -1
 tt.health_bar.sort_y_offset = -161
@@ -1239,7 +1236,7 @@ tt.info.random_name_count = nil
 tt.info.random_name_format = nil
 tt.main_script.insert = soldier_myriath_clone_insert
 tt.main_script.update = soldier_myriath_clone_update
-tt.motion.max_speed = 100
+tt.motion.max_speed = 146
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].prefix = "hero_myriath_illusionDef"
 tt.render.sprites[1].name = "in"
@@ -1281,7 +1278,7 @@ tt.ui.click_rect = r(0, 0, 0, 0)
 tt.main_script.insert = scripts.soldier_reinforcement.insert
 tt.main_script.update = soldier_myriath_ult_update
 tt.main_script.remove = soldier_myriath_ult_remove
-tt.motion.max_speed = 80
+tt.motion.max_speed = 117
 tt.render.sprites[1].prefix = "hero_myriath_FX_stampede"
 tt.render.sprites[1].name = "side"
 tt.render.sprites[1].angles = {}
@@ -1297,8 +1294,8 @@ tt.distance = 40
 
 tt = RT("bullet_myriath_skill_a", "bomb")
 tt.render.sprites[1].hidden = true
-tt.bullet.damage_min = 0
-tt.bullet.damage_max = 0
+tt.bullet.damage_min = 1
+tt.bullet.damage_max = 1
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_radius = 0
 tt.bullet.flight_time = fts(5)
@@ -1323,8 +1320,8 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
 tt.bullet.align_with_trajectory = true
 tt.bullet.chance_to_ignore_mr = 1
-tt.bullet.damage_min = 0
-tt.bullet.damage_max = 0
+tt.bullet.damage_min = 1
+tt.bullet.damage_max = 1
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.flight_time = fts(5)
 tt.bullet.g = 0
@@ -1335,7 +1332,7 @@ tt.bullet.pop = {"pop_zap"}
 tt.bullet.predict_target_pos = true
 tt.bullet.prediction_error = true
 tt.bullet.reduce_magic_armor = 1
-tt.bullet.xp_gain_factor = 1.6
+tt.bullet.xp_gain_factor = 1.2
 tt.force_motion.a_step = 4
 tt.force_motion.max_a = 850 * FPS
 tt.force_motion.max_v = 35 * FPS
@@ -1354,8 +1351,8 @@ tt.bullet.xp_gain_factor = 0
 
 tt = RT("aura_myriath_talent_2_area_damage", "aura")
 tt.aura.cycles = 1
-tt.aura.damage_max = 72
-tt.aura.damage_min = 48
+tt.aura.damage_max = 105
+tt.aura.damage_min = 70
 tt.aura.damage_type = DAMAGE_MAGICAL
 tt.aura.radius = 75
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
@@ -1363,8 +1360,8 @@ tt.aura.vis_flags = bor(F_AREA)
 tt.main_script.update = scripts.aura_apply_damage.update
 
 tt = RT("aura_myriath_ultimate_damage", "aura")
-tt.aura.damage_max = 90
-tt.aura.damage_min = 60
+tt.aura.damage_max = 130
+tt.aura.damage_min = 87
 tt.aura.damage_type = DAMAGE_MAGICAL
 tt.aura.duration = 1e+99
 tt.aura.radius = 55
@@ -1375,17 +1372,23 @@ tt.clone_t = "soldier_myriath_clone"
 tt.main_script.update = aura_myriath_ult_update
 
 tt = RT("ps_myriath_skill_a_trail", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emission_rate = 30
 tt.particle_system.name = "hero_myriath_FX_walk_trail_action"
 tt.particle_system.particle_lifetime = {fts(9), fts(9)}
 
 tt = RT("ps_myriath_skill_c_trail", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emit_area_spread = vec_2(10, 0)
 tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.emission_rate = 40
 tt.particle_system.name = "hero_myriath_FX_skill3_particle_action"
 
 tt = RT("ps_myriath_ult_trail", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emit_area_spread = vec_2(5, 5)
 tt.particle_system.emission_rate = 1.5
 tt.particle_system.name = "hero_myriath_FX_ult_trail_run"

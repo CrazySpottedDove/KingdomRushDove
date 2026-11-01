@@ -91,7 +91,7 @@ end
 --- 扫描 plugins/ 下的插件目录，返回 entry 列表。
 --- 没有 config.lua 的目录按「不是插件」跳过；缺 entry、或目录名与 entry 不一致时直接报错
 --- （位置由 entry 推导，两边不一致就无法定位）。
----@return table<string>
+---@return table string
 function plugin_paths.list_plugin_entries()
 	local entries = {}
 	local items = FS.getDirectoryItems(plugin_paths.LOCAL_PLUGINS_DIR) or {}

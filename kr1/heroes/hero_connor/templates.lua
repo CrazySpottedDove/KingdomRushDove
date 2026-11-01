@@ -257,6 +257,8 @@ local function hero_connor_level_up(this, store)
 end
 
 local function hero_connor_update(this, store)
+	U.y_animation_play(this, "lvl_up", nil, store.tick_ts, 1)
+
 	local h = this.health
 	local sk = this.hero.skills
 	local sa, sb, sc, su, st1, st2 = sk.skill_a, sk.skill_b, sk.skill_c, sk.ultimate, sk.talent_1, sk.talent_2
@@ -270,15 +272,13 @@ local function hero_connor_update(this, store)
 
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
-	local cdf = this.unit.cooldown_factor or 1
-
-	saa.ts = store.tick_ts - saa.cooldown * cdf
-	sba.ts = store.tick_ts - sba.cooldown * cdf
-	sca.ts = store.tick_ts - sca.cooldown
-	ua.ts = store.tick_ts - ua.cooldown * cdf
+	saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor or 1)
+	sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor or 1)
+	sca.ts = store.tick_ts - sca.cooldown * (this.unit.cooldown_factor or 1)
+	ua.ts = store.tick_ts - ua.cooldown * (this.unit.cooldown_factor or 1)
 
 	local sba_ts = sba.ts
-	local st2_ts = store.tick_ts - st2.cooldown + st2.starting_cd
+	local st2_ts = store.tick_ts - st2.cooldown * (this.unit.cooldown_factor or 1) + st2.starting_cd
 	local ready_to_block = false
 	local block_started_ts = 0
 	local blocked = false
@@ -331,7 +331,7 @@ local function hero_connor_update(this, store)
 
 	while true do
 		if h.dead then
-			if st2.level > 0 and store.tick_ts - st2_ts > st2.cooldown and math.random() < st2.chance_to_revive then
+			if st2.level > 0 and store.tick_ts - st2_ts > st2.cooldown * (this.unit.cooldown_factor or 1) and math.random() < st2.chance_to_revive then
 				h.dead = false
 				this.health_bar.hidden = false
 				this.ui.can_click = true
@@ -467,7 +467,7 @@ local function hero_connor_update(this, store)
 				local targets = table.filter(enemies, function(k, v)
 					local vpi = v.nav_path.pi
 					local vnearest = P:nearest_nodes(this.pos.x, this.pos.y, {vpi})
-					local v_pi, v_spi, v_ni, v_distance = unpack(vnearest[1])
+					local _, _, v_ni, v_distance = unpack(vnearest[1])
 
 					if v_distance < 50 and (not store.level.ignore_walk_backwards_paths or not table.contains(store.level.ignore_walk_backwards_paths, vpi)) and P:is_path_active(vpi) and v_ni > v.nav_path.ni then
 						return true
@@ -502,7 +502,7 @@ local function hero_connor_update(this, store)
 
 				local nodes_between_aoe = a.node_between_aoes
 				local nearest_target = P:nearest_nodes(this.pos.x, this.pos.y, {targets[1].nav_path.pi})
-				local pi, spi, ni = unpack(nearest_target[1])
+				local pi, _, ni = unpack(nearest_target[1])
 
 				local function spawn_area_damage(pi, spi, ni)
 					local pos = P:node_pos(pi, spi, ni)
@@ -712,13 +712,13 @@ local tt
 tt = RT("hero_connor", "hero")
 AC(tt, "melee", "timed_attacks", "dodge")
 tt.hero.level_stats.armor = {0.07, 0.09, 0.11, 0.13, 0.15, 0.17, 0.19, 0.21, 0.23, 0.25}
-tt.hero.level_stats.hp_max = {200, 215, 230, 245, 260, 275, 290, 305, 320, 335}
-tt.hero.level_stats.melee_damage_min = {13, 14, 15, 17, 18, 20, 21, 22, 24, 25}
-tt.hero.level_stats.melee_damage_max = {19, 21, 23, 25, 27, 29, 32, 34, 36, 38}
+tt.hero.level_stats.hp_max = {425, 458, 489, 521, 552, 586, 616, 649, 679, 713}
+tt.hero.level_stats.melee_damage_min = {28, 30, 33, 35, 36, 44, 45, 47, 51, 55}
+tt.hero.level_stats.melee_damage_max = {42, 45, 50, 55, 57, 62, 67, 73, 78, 80}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = 16
-tt.hero.skills.skill_a.damage_min = {12, 32, 52}
-tt.hero.skills.skill_a.damage_max = {18, 48, 78}
+tt.hero.skills.skill_a.damage_min = {28, 75, 120}
+tt.hero.skills.skill_a.damage_max = {44, 112, 183}
 tt.hero.skills.skill_a.bleed_duration = {4, 6, 8}
 tt.hero.skills.skill_a.xp_gain = {64, 128, 192}
 tt.hero.skills.skill_a.xp_level_steps = {
@@ -728,8 +728,8 @@ tt.hero.skills.skill_a.xp_level_steps = {
 }
 tt.hero.skills.skill_b = CC("hero_skill")
 tt.hero.skills.skill_b.cooldown = {25, 22, 19}
-tt.hero.skills.skill_b.damage_min = {64, 80, 96}
-tt.hero.skills.skill_b.damage_max = {96, 120, 144}
+tt.hero.skills.skill_b.damage_min = {149, 187, 226}
+tt.hero.skills.skill_b.damage_max = {226, 281, 336}
 tt.hero.skills.skill_b.xp_gain = {100, 200, 300}
 tt.hero.skills.skill_b.xp_level_steps = {
 	[3] = 1,
@@ -738,8 +738,8 @@ tt.hero.skills.skill_b.xp_level_steps = {
 }
 tt.hero.skills.skill_c = CC("hero_skill")
 tt.hero.skills.skill_c.cooldown = 22
-tt.hero.skills.skill_c.damage_min = {44, 54, 74}
-tt.hero.skills.skill_c.damage_max = {68, 82, 106}
+tt.hero.skills.skill_c.damage_min = {102, 126, 172}
+tt.hero.skills.skill_c.damage_max = {162, 192, 249}
 tt.hero.skills.skill_c.aoe_count = {4, 6, 8}
 tt.hero.skills.skill_c.xp_gain = {88, 176, 264}
 tt.hero.skills.skill_c.xp_level_steps = {
@@ -762,7 +762,7 @@ tt.hero.skills.talent_1.xp_level_steps = {
 tt.hero.skills.talent_2 = CC("hero_skill")
 tt.hero.skills.talent_2.chance_to_revive = 1
 tt.hero.skills.talent_2.cooldown = 180
-tt.hero.skills.talent_2.hp_ptg_on_revive = 0.7
+tt.hero.skills.talent_2.hp_ptg_on_revive = 1
 tt.hero.skills.talent_2.starting_cd = 0
 tt.hero.skills.talent_2.xp_level_steps = {
 	[1] = 1
@@ -780,7 +780,7 @@ tt.hero.ultimate_sparks_controller_t = "controller_connor_ultimate_sparks"
 tt.info.hero_portrait = "kr6_hero_portraits_0004"
 tt.info.portrait = "kr6_info_portraits_heroes_0010"
 tt.main_script.update = hero_connor_update
-tt.motion.max_speed = 70
+tt.motion.max_speed = 87.5
 tt.regen.cooldown = 1
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
@@ -817,7 +817,7 @@ tt.melee.attacks[1].shared_cooldown = true
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 1.8
+tt.melee.attacks[1].xp_gain_factor = 1.2
 tt.melee.attacks[1].hit_fx = "fx_connor_hit"
 tt.melee.attacks[1].hit_offset = vec_2(40, 15)
 tt.timed_attacks.list[1] = CC("custom_attack")
@@ -830,8 +830,8 @@ tt.timed_attacks.list[1].max_range = 100
 tt.timed_attacks.list[1].min_targets = 3
 tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[1].vis_flags = bor(F_AREA, F_ENEMY)
-tt.timed_attacks.list[1].damage_min = 12
-tt.timed_attacks.list[1].damage_max = 18
+tt.timed_attacks.list[1].damage_min = 28
+tt.timed_attacks.list[1].damage_max = 44
 tt.timed_attacks.list[1].damage_radius = 170
 tt.timed_attacks.list[1].damage_type = DAMAGE_PHYSICAL
 tt.timed_attacks.list[1].mod_bleed = "mod_connor_skill_a_bleed"
@@ -843,8 +843,8 @@ tt.timed_attacks.list[2].animation = "retribution"
 tt.timed_attacks.list[2].cooldown = 25
 tt.timed_attacks.list[2].cast_time = fts(28)
 tt.timed_attacks.list[2].time_to_block = 2
-tt.timed_attacks.list[2].damage_min = 64
-tt.timed_attacks.list[2].damage_max = 96
+tt.timed_attacks.list[2].damage_min = 149
+tt.timed_attacks.list[2].damage_max = 226
 tt.timed_attacks.list[2].damage_type = DAMAGE_PHYSICAL
 tt.timed_attacks.list[2].hit_fx = "fx_connor_skill_b_hit"
 tt.timed_attacks.list[2].sound = "HeroConnorRetributionCast"
@@ -895,7 +895,7 @@ tt.ultimate_melee.attacks[1].cooldown = 1
 tt.ultimate_melee.attacks[1].sound = "HeroConnorTemplarRageBasicAttackCast"
 tt.ultimate_melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.ultimate_melee.attacks[1].vis_flags = F_BLOCK
-tt.ultimate_melee.attacks[1].xp_gain_factor = 1.6
+tt.ultimate_melee.attacks[1].xp_gain_factor = 1.2
 tt.ultimate_melee.attacks[1].hit_fx = "fx_connor_ultimate_hit"
 tt.ultimate_melee.attacks[1].hit_offset = vec_2(40, 15)
 tt.ultimate_melee.attacks[2] = table.deepclone(tt.ultimate_melee.attacks[1])
@@ -955,8 +955,8 @@ tt.aura.duration = 1
 tt.aura.cycle_time = 0.9
 tt.aura.cycles = 1
 tt.aura.damage_type = DAMAGE_PHYSICAL
-tt.aura.damage_min = 44
-tt.aura.damage_max = 68
+tt.aura.damage_min = 102
+tt.aura.damage_max = 162
 tt.aura.radius = 40
 tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
@@ -969,8 +969,8 @@ tt.aura.cycles = 1
 tt.aura.no_talent_buff = true
 tt.aura.mod = "mod_connor_ultimate_stun"
 tt.aura.damage_type = DAMAGE_PHYSICAL
-tt.aura.damage_min = 20
-tt.aura.damage_max = 20
+tt.aura.damage_min = 47
+tt.aura.damage_max = 47
 tt.aura.radius = 100
 tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
