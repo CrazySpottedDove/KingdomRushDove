@@ -457,11 +457,10 @@ local function hero_gerald_kr6_update(this, store)
 					SU.soldier_regen(store, this)
 				end
 			end
-
-			::continue::
-
-			coroutine.yield()
 		end
+		::continue::
+
+		coroutine.yield()
 	end
 end
 
