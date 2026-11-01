@@ -229,7 +229,7 @@ local function aura_rhodes_skill_c_update(this, store)
 						value = (value + source.unit.damage_buff) * source.unit.damage_factor
 					end
 
-					d.damage_type = this.damage_type
+					d.damage_type = this.aura.damage_type
 					d.value = value
 					d.source_id = this.id
 					d.target_id = target.id
@@ -384,6 +384,8 @@ local function hero_rhodes_level_up(this, store)
 end
 
 local function hero_rhodes_update(this, store)
+	U.y_animation_play(this, "level_up", nil, store.tick_ts, 1)
+
 	local h = this.health
 	local skills = this.hero.skills
 	local sa, sb, sc, su, st1, st2 = skills.skill_a, skills.skill_b, skills.skill_c, skills.ultimate, skills.talent_1, skills.talent_2
@@ -624,13 +626,13 @@ local function hero_rhodes_update(this, store)
 					about_to_block = false
 				end
 
-				if delayed_attack_ult and store.tick_ts - sca.ts > sca.cooldown then
+				if delayed_attack_ult and store.tick_ts - sca.ts > sca.cooldown * (this.unit.cooldown_factor or 1) then
 					delayed_attack_ult = false
 				end
 
 				local ult_ready = ready_to_use_skill(ua, store, this.unit.cooldown_factor)
 
-				if not ua.disabled and (ult_ready and this.motion.arrived and this.soldier.target_id == nil or (ult_ready or delayed_attack_ult) and about_to_block) then
+				if not ua.disabled and (ult_ready and this.motion.arrived or (ult_ready or delayed_attack_ult) and about_to_block) then
 					local a = ua
 					local det_range = about_to_block and a.range_pre_block or a.range
 					local target, targets = U.find_foremost_enemy(store, this.pos, 0, det_range, a.prediction_time, a.vis_flags, a.vis_bans)
@@ -638,7 +640,7 @@ local function hero_rhodes_update(this, store)
 					if not target or #targets == 0 then
 						delayed_attack_ult = true
 
-						SU.delay_attack(store, a, fts(10))
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 						goto continue
 					end
@@ -649,7 +651,7 @@ local function hero_rhodes_update(this, store)
 					if not ray_targets or #ray_targets == 0 then
 						delayed_attack_ult = true
 
-						SU.delay_attack(store, a, fts(10))
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 						goto continue
 					end
@@ -659,7 +661,7 @@ local function hero_rhodes_update(this, store)
 					if not path then
 						delayed_attack_ult = true
 
-						SU.delay_attack(store, a, fts(10))
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 						goto continue
 					end
@@ -697,7 +699,7 @@ local function hero_rhodes_update(this, store)
 
 						delayed_attack_ult = true
 
-						SU.delay_attack(store, a, fts(10))
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 						U.animation_start(this, a.animation_end, nil, store.tick_ts, false, 1)
 						SU.y_hero_animation_wait(this)
 
@@ -759,7 +761,7 @@ local function hero_rhodes_update(this, store)
 					SU.hero_gain_xp_from_skill(this, su)
 
 					ua.ts = store.tick_ts
-					this.nav_rally.new = nil
+					this.nav_rally.new = false
 
 					U.animation_start(this, a.animation_end, nil, store.tick_ts, false, 1)
 
@@ -778,13 +780,13 @@ local function hero_rhodes_update(this, store)
 					local a = sca
 					local sc_aura = E:get_template(a.aura)
 					local real_prediction = a.prediction_time + sc_aura.max_nodes * P.average_node_dist / sc_aura.motion.max_speed
-					local target, targets = U.find_foremost_enemy(store, this.pos, 0, a.max_range, real_prediction, a.vis_flags, a.vis_bans, function(v)
+					local _, targets = U.find_foremost_enemy(store, this.pos, 0, a.max_range, real_prediction, a.vis_flags, a.vis_bans, function(v)
 						return v.nav_path
 					end)
 					local path = targets and find_most_populated_path_that_we_are_on(targets, a.min_targets) or nil
 
 					if not path then
-						SU.delay_attack(store, a, fts(10))
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 					else
 						U.animation_start(this, a.animation_start, nil, store.tick_ts, false, 1)
 						S:queue(a.sound_start)
@@ -806,7 +808,7 @@ local function hero_rhodes_update(this, store)
 						end
 
 						if not path then
-							SU.delay_attack(store, a, fts(10))
+							a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 							U.animation_start(this, a.animation_end, nil, store.tick_ts, false, 1)
 							S:queue(a.sound_end)
 							SU.y_hero_animation_wait(this)
@@ -840,7 +842,7 @@ local function hero_rhodes_update(this, store)
 							SU.hero_gain_xp_from_skill(this, sc)
 
 							sca.ts = store.tick_ts
-							this.nav_rally.new = nil
+							this.nav_rally.new = false
 
 							U.animation_start(this, a.animation_end, nil, store.tick_ts, false, 1)
 							S:queue(a.sound_end)
@@ -863,7 +865,7 @@ local function hero_rhodes_update(this, store)
 					local trigger_target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 					if not targets or #targets == 0 then
-						SU.delay_attack(store, a, fts(10))
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 					else
 						local target_pos = V.vclone(trigger_target.pos)
 
@@ -896,7 +898,7 @@ local function hero_rhodes_update(this, store)
 							SU.hero_gain_xp_from_skill(this, sa)
 
 							saa.ts = store.tick_ts
-							this.nav_rally.new = nil
+							this.nav_rally.new = false
 
 							while not U.animation_finished(this, 1) do
 								if SU.soldier_interrupted(this) then
@@ -974,13 +976,13 @@ local tt
 tt = RT("hero_rhodes", "hero")
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0.23, 0.26, 0.29, 0.32, 0.35, 0.38, 0.41, 0.44, 0.47, 0.5}
-tt.hero.level_stats.hp_max = {180, 205, 230, 255, 280, 305, 330, 355, 380, 405}
-tt.hero.level_stats.melee_damage_min = {8, 10, 11, 12, 13, 14, 16, 17, 18, 19}
-tt.hero.level_stats.melee_damage_max = {13, 14, 16, 18, 20, 22, 23, 25, 27, 29}
+tt.hero.level_stats.hp_max = {470, 534, 603, 665, 730, 795, 861, 928, 991, 1055}
+tt.hero.level_stats.melee_damage_min = {22, 27, 30, 32, 33, 38, 42, 44, 49, 51}
+tt.hero.level_stats.melee_damage_max = {33, 38, 42, 49, 53, 59, 60, 65, 71, 75}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = {10, 9, 8}
-tt.hero.skills.skill_a.damage_min = {16, 28, 40}
-tt.hero.skills.skill_a.damage_max = {24, 42, 60}
+tt.hero.skills.skill_a.damage_min = {49, 82, 114}
+tt.hero.skills.skill_a.damage_max = {70, 122, 174}
 tt.hero.skills.skill_a.damage_type = DAMAGE_TRUE
 tt.hero.skills.skill_a.xp_gain = {40, 80, 120}
 tt.hero.skills.skill_a.xp_level_steps = {
@@ -991,7 +993,7 @@ tt.hero.skills.skill_a.xp_level_steps = {
 tt.hero.skills.skill_b = CC("hero_skill")
 tt.hero.skills.skill_b.cooldown = 22
 tt.hero.skills.skill_b.duration = 6
-tt.hero.skills.skill_b.hp_heal_ptg = {0.3, 0.4, 0.5}
+tt.hero.skills.skill_b.hp_heal_ptg = {0.8, 0.95, 0.95}
 tt.hero.skills.skill_b.armor_inc = {0.3, 0.4, 0.5}
 tt.hero.skills.skill_b.trigger_hp_ptg = 0.7
 tt.hero.skills.skill_b.time_blocking_to_trigger = 5
@@ -1003,8 +1005,8 @@ tt.hero.skills.skill_b.xp_level_steps = {
 }
 tt.hero.skills.skill_c = CC("hero_skill")
 tt.hero.skills.skill_c.cooldown = 16
-tt.hero.skills.skill_c.damage_min = {10, 10, 12}
-tt.hero.skills.skill_c.damage_max = {15, 15, 18}
+tt.hero.skills.skill_c.damage_min = {30, 30, 33}
+tt.hero.skills.skill_c.damage_max = {44, 44, 53}
 tt.hero.skills.skill_c.slow_factor = {0.8, 0.7, 0.7}
 tt.hero.skills.skill_c.xp_gain = {64, 128, 192}
 tt.hero.skills.skill_c.xp_level_steps = {
@@ -1036,7 +1038,7 @@ tt.hero.respawn_animation = "level_up"
 tt.info.hero_portrait = "kr6_hero_portraits_0007"
 tt.info.portrait = "kr6_info_portraits_heroes_0007"
 tt.main_script.update = hero_rhodes_update
-tt.motion.max_speed = 32
+tt.motion.max_speed = 40
 tt.regen.cooldown = 1
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
@@ -1074,7 +1076,7 @@ tt.melee.attacks[1].sound_args = {
 }
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 2
+tt.melee.attacks[1].xp_gain_factor = 1.6
 tt.melee.attacks[1].hit_fx = "fx_rhodes_hit"
 tt.melee.attacks[1].hit_offset = vec_2(45, 10)
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
@@ -1085,8 +1087,8 @@ tt.timed_attacks.list[1].animation = "sunbeam"
 tt.timed_attacks.list[1].bullet = "bullet_rhodes_skill_a"
 tt.timed_attacks.list[1].cast_time = fts(14)
 tt.timed_attacks.list[1].cooldown = 10
-tt.timed_attacks.list[1].damage_min = 16
-tt.timed_attacks.list[1].damage_max = 24
+tt.timed_attacks.list[1].damage_min = 49
+tt.timed_attacks.list[1].damage_max = 70
 tt.timed_attacks.list[1].damage_type = DAMAGE_TRUE
 tt.timed_attacks.list[1].disabled = true
 tt.timed_attacks.list[1].max_range = 200
@@ -1103,7 +1105,7 @@ tt.timed_attacks.list[2].cast_time = fts(16)
 tt.timed_attacks.list[2].cooldown = 22
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].duration = 6
-tt.timed_attacks.list[2].hp_heal_ptg = 0.3
+tt.timed_attacks.list[2].hp_heal_ptg = 0.8
 tt.timed_attacks.list[2].mod_armor = "mod_rhodes_skill_b_armor"
 tt.timed_attacks.list[2].mod_heal = "mod_rhodes_skill_b_heal"
 tt.timed_attacks.list[2].sound = "HeroRhodesStrongCrustCast"
@@ -1145,8 +1147,8 @@ tt.timed_attacks.list[4].sound_taunt = "HeroRhodesTauntUltimate"
 tt.timed_attacks.list[4].vis_bans = bor(F_FLYING)
 
 tt = RT("bullet_rhodes_skill_a", "bullet")
-tt.bullet.damage_max = 24
-tt.bullet.damage_min = 16
+tt.bullet.damage_max = 70
+tt.bullet.damage_min = 49
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.flight_time = fts(6)
 tt.bullet.hit_fxs = {"fx_rhodes_skill_a_hit", "fx_rhodes_skill_a_end"}
@@ -1166,8 +1168,8 @@ tt.render.sprites[1].z = Z_BULLETS
 tt = RT("bullet_rhodes_ultimate_ray", "bullet")
 tt.anim_end = "end"
 tt.anim_end_duration = fts(10)
-tt.bullet.damage_max = 0
-tt.bullet.damage_min = 0
+tt.bullet.damage_max = 1
+tt.bullet.damage_min = 1
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.flight_time = fts(6)
 tt.bullet.hit_decal = "decal_rhodes_ultimate_ray_ground"
@@ -1202,7 +1204,7 @@ tt.hit_fx = "fx_rhodes_hit"
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = aura_rhodes_skill_c_update
 tt.max_nodes = 18
-tt.motion.max_speed = 200
+tt.motion.max_speed = 482
 tt.particles_name = "ps_rhodes_skill_c_dust"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].name = "loop"
@@ -1213,8 +1215,8 @@ tt.sound_loop = "HeroRhodesTwistingTopLoop"
 tt = RT("aura_rhodes_ultimate_ray", "aura")
 tt.aura.cycle_time = fts(1)
 tt.aura.cycles = 1
-tt.aura.damage_max = 42
-tt.aura.damage_min = 30
+tt.aura.damage_max = 122
+tt.aura.damage_min = 84
 tt.aura.damage_type = DAMAGE_TRUE
 tt.aura.duration = 1e+99
 tt.aura.mod = "mod_rhodes_ult_slow"

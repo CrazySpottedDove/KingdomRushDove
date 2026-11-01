@@ -384,7 +384,12 @@ local other_bolts = {
 	"bolt_oloch",
 	"bolt_oloch_big",
 	"bolt_oloch_duplication",
-	"bolt_mortemis"
+	"bolt_mortemis",
+	"bullet_zefira",
+	"bullet_myriath_basic_ranged",
+	"bullet_myriath_clone_basic_ranged",
+	"bullet_drakkan",
+	"bullet_drakkan_clone"
 }
 
 upgrades.bolts = table.append(other_bolts, upgrades.mage_tower_bolts)

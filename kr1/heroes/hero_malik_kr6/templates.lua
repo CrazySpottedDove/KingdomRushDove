@@ -533,7 +533,7 @@ local function hero_malik_update(this, store)
 				local enemies = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
-					SU.delay_attack(store, a, fts(10))
+					a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					S:queue(a.sound_cast)
 					S:queue(a.sound_loop, {
@@ -682,7 +682,7 @@ local function hero_malik_update(this, store)
 				local enemies = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
-					SU.delay_attack(store, a, fts(10))
+					a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 				else
 					U.animation_start(this, a.animation, nil, store.tick_ts, false)
 					S:queue(a.sound, {
@@ -769,9 +769,9 @@ local tt
 tt = RT("hero_malik_kr6", "hero")
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.hp_max = {200, 230, 260, 290, 320, 350, 380, 410, 440, 470}
-tt.hero.level_stats.melee_damage_min = {10, 11, 12, 13, 14, 16, 17, 18, 19, 20}
-tt.hero.level_stats.melee_damage_max = {14, 16, 18, 20, 22, 23, 25, 27, 29, 31}
+tt.hero.level_stats.hp_max = {377, 431, 490, 545, 602, 658, 714, 770, 827, 883}
+tt.hero.level_stats.melee_damage_min = {20, 21, 22, 25, 27, 29, 30, 34, 36, 39}
+tt.hero.level_stats.melee_damage_max = {27, 29, 34, 39, 42, 44, 48, 50, 54, 60}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = 18
 tt.hero.skills.skill_a.duration = 6
@@ -784,10 +784,10 @@ tt.hero.skills.skill_a.xp_level_steps = {
 }
 tt.hero.skills.skill_b = CC("hero_skill")
 tt.hero.skills.skill_b.cooldown = 20
-tt.hero.skills.skill_b.damage_min = 48
-tt.hero.skills.skill_b.damage_max = 72
+tt.hero.skills.skill_b.damage_min = 102
+tt.hero.skills.skill_b.damage_max = 148
 tt.hero.skills.skill_b.damage_radius = {50, 50, 120}
-tt.hero.skills.skill_b.stun_duration = {2, 4, 4}
+tt.hero.skills.skill_b.stun_duration = {2, 7, 7}
 tt.hero.skills.skill_b.xp_gain = {80, 160, 240}
 tt.hero.skills.skill_b.xp_level_steps = {
 	[3] = 1,
@@ -837,7 +837,7 @@ tt.info.hero_portrait = "kr6_hero_portraits_0006"
 tt.info.portrait = "kr6_info_portraits_heroes_0005"
 tt.main_script.insert = hero_malik_insert
 tt.main_script.update = hero_malik_update
-tt.motion.max_speed = 60
+tt.motion.max_speed = 75
 tt.regen.cooldown = 1
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].angles = {}
@@ -864,6 +864,7 @@ tt.melee.attacks[1] = CC("melee_attack")
 tt.melee.attacks[1].animation = "attack"
 tt.melee.attacks[1].cooldown = 1.5
 tt.melee.attacks[1].damage_flags = 0
+tt.melee.attacks[1].damage_bans = bor(F_FLYING, F_FRIEND, F_HERO)
 tt.melee.attacks[1].damage_radius = 70
 tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
 tt.melee.attacks[1].hit_fx = "fx_malik_hit"
@@ -875,7 +876,7 @@ tt.melee.attacks[1].sound_args = {
 	delay = fts(13)
 }
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
-tt.melee.attacks[1].xp_gain_factor = 1.8
+tt.melee.attacks[1].xp_gain_factor = 1.3
 tt.timed_attacks.list[1] = CC("custom_attack")
 tt.timed_attacks.list[1].animation = "buff"
 tt.timed_attacks.list[1].cast_time = fts(9)
@@ -890,8 +891,8 @@ tt.timed_attacks.list[2] = CC("custom_attack")
 tt.timed_attacks.list[2].animation = "stun"
 tt.timed_attacks.list[2].cast_time = fts(30)
 tt.timed_attacks.list[2].cooldown = 20
-tt.timed_attacks.list[2].damage_max = 72
-tt.timed_attacks.list[2].damage_min = 48
+tt.timed_attacks.list[2].damage_max = 148
+tt.timed_attacks.list[2].damage_min = 102
 tt.timed_attacks.list[2].damage_radius = 50
 tt.timed_attacks.list[2].damage_type = DAMAGE_PHYSICAL
 tt.timed_attacks.list[2].disabled = true
@@ -910,7 +911,7 @@ tt.timed_attacks.list[3].cooldown = 40
 tt.timed_attacks.list[3].current_hp_threshold = 80
 tt.timed_attacks.list[3].disabled = true
 tt.timed_attacks.list[3].enemy_move_offset = vec_2(10, 40)
-tt.timed_attacks.list[3].hp_threshold = 1500
+tt.timed_attacks.list[3].hp_threshold = 3000
 tt.timed_attacks.list[3].mod = "mod_malik_skill_c_instakill"
 tt.timed_attacks.list[3].sound = "HeroMalikObliterateCast"
 tt.timed_attacks.list[3].vis_bans = bor(F_FLYING, F_BOSS, F_MINIBOSS)
@@ -997,8 +998,8 @@ tt.main_script.update = aura_malik_talent_2_buff_update
 
 tt = RT("aura_malik_ultimate", "aura")
 tt.aura.cycle_time = 0.5
-tt.aura.damage_max = 24
-tt.aura.damage_min = 16
+tt.aura.damage_max = 49
+tt.aura.damage_min = 34
 tt.aura.damage_type = DAMAGE_PHYSICAL
 tt.aura.duration = 5
 tt.aura.hit_fx = "fx_malik_hit"

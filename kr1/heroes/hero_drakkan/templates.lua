@@ -175,10 +175,9 @@ local function bullet_drakkan_ultimate_update(this, store)
 end
 
 local function hero_drakkan_get_info(this)
-	local hl = this.hero.level
-	local ls = this.hero.level_stats
-	local min = (ls.ranged_damage_min[hl] + this.unit.damage_buff) * this.unit.damage_factor
-	local max = (ls.ranged_damage_max[hl] + this.unit.damage_buff) * this.unit.damage_factor
+	local b = E:get_template(this.ranged.attacks[1].bullet)
+	local min = (b.bullet.damage_min + this.unit.damage_buff) * this.unit.damage_factor
+	local max = (b.bullet.damage_max + this.unit.damage_buff) * this.unit.damage_factor
 
 	return {
 		type = STATS_TYPE_SOLDIER,
@@ -216,7 +215,12 @@ local function hero_drakkan_level_up(this, store)
 		S:queue(this.sound_events.level_up)
 	end
 
-	HU.level_up_basic(this)
+	local hl, ls = HU.level_up_basic(this)
+
+	local bt = E:get_template(this.ranged.attacks[1].bullet)
+
+	bt.bullet.damage_min = ls.ranged_damage_min[hl]
+	bt.bullet.damage_max = ls.ranged_damage_max[hl]
 
 	local talent_2 = this.hero.skills.talent_2
 	local cooldown_factor = 1 - (talent_2.level > 0 and talent_2.skills_cd_red or 0)
@@ -330,12 +334,7 @@ local function hero_drakkan_death_and_respawn(store, this)
 end
 
 local function hero_drakkan_basic_attack(this, store, attack)
-	local hl = this.hero and this.hero.level or 1
-	local ls = this.hero and this.hero.level_stats
-	local pos_offset = V.v(this.pos.x + attack.ignore_offset.x, this.pos.y + attack.ignore_offset.y)
-	local target = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans, function(e)
-		return V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > attack.radius * attack.radius
-	end)
+	local target = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans)
 
 	if not target then
 		return false
@@ -383,15 +382,8 @@ local function hero_drakkan_basic_attack(this, store, attack)
 		bullet.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 	end
 
-	if this.is_clone then
-		local bt = E:get_template(attack.bullet)
-
-		bullet.bullet.damage_min = bt.bullet.damage_min + this.unit.damage_buff
-		bullet.bullet.damage_max = bt.bullet.damage_max + this.unit.damage_buff
-	else
-		bullet.bullet.damage_min = ls.ranged_damage_min[hl] + this.unit.damage_buff
-		bullet.bullet.damage_max = ls.ranged_damage_max[hl] + this.unit.damage_buff
-	end
+	bullet.bullet.damage_min = bullet.bullet.damage_min + this.unit.damage_buff
+	bullet.bullet.damage_max = bullet.bullet.damage_max + this.unit.damage_buff
 
 	bullet.bullet.damage_factor = this.unit.damage_factor
 
@@ -413,9 +405,8 @@ local function hero_drakkan_basic_attack(this, store, attack)
 end
 
 local function hero_drakkan_skill_a(this, store, attack, skill)
-	local pos_offset = V.v(this.pos.x + attack.ignore_offset.x, this.pos.y + attack.ignore_offset.y)
 	local target, targets = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range, nil, attack.vis_flags, attack.vis_bans, function(e)
-		return GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > attack.radius * attack.radius
+		return GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
 	end)
 	local magic_targets = 0
 
@@ -428,7 +419,7 @@ local function hero_drakkan_skill_a(this, store, attack, skill)
 	end
 
 	if not targets or #targets < attack.min_targets and magic_targets == 0 then
-		SU.delay_attack(store, attack, fts(10))
+		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 		return
 	end
@@ -472,7 +463,7 @@ local function hero_drakkan_skill_a(this, store, attack, skill)
 
 	SU.hero_gain_xp_from_skill(this, skill)
 
-	this.nav_rally.new = nil
+	this.nav_rally.new = false
 
 	SU.y_hero_animation_wait(this)
 	U.animation_start(this, "walk", nil, store.tick_ts, true)
@@ -482,7 +473,7 @@ local function hero_drakkan_skill_b(this, store, attack, skill)
 	local _, targets = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans)
 
 	if not targets or #targets < attack.min_targets then
-		SU.delay_attack(store, attack, fts(10))
+		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 		return
 	end
@@ -546,7 +537,7 @@ local function hero_drakkan_skill_b(this, store, attack, skill)
 
 	SU.hero_gain_xp_from_skill(this, skill)
 
-	this.nav_rally.new = nil
+	this.nav_rally.new = false
 
 	SU.y_hero_animation_wait(this)
 end
@@ -555,7 +546,7 @@ local function hero_drakkan_skill_c(this, store, attack, skill)
 	local targets = U.find_enemies_in_range(store, this.pos, 0, attack.range, attack.vis_flags, attack.vis_bans)
 
 	if not targets or #targets == 0 then
-		SU.delay_attack(store, attack, fts(10))
+		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 		return
 	end
@@ -605,7 +596,7 @@ local function hero_drakkan_ultimate(this, store, attack, skill, start_y)
 	local targets = find_ultimate_targets(this, store, attack)
 
 	if not targets then
-		SU.delay_attack(store, attack, fts(10))
+		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 		return
 	end
@@ -645,6 +636,10 @@ local function hero_drakkan_ultimate(this, store, attack, skill, start_y)
 end
 
 local function hero_drakkan_update(this, store)
+	if not this.is_clone then
+		U.y_animation_play(this, "lvl_up", nil, store.tick_ts, 1)
+	end
+
 	local h = this.health
 	local is_clone = this.is_clone == true
 	local skills = this.hero and this.hero.skills
@@ -667,24 +662,22 @@ local function hero_drakkan_update(this, store)
 		U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts - fts(4), this.idle_flip.loop, nil, true)
 	end
 
-	local cooldown_factor = this.unit.cooldown_factor or 1
-
-	attack.ts = store.tick_ts - attack.cooldown * cooldown_factor
+	attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1)
 
 	if skill_a and not skill_a.disabled then
-		skill_a.ts = store.tick_ts - skill_a.cooldown * cooldown_factor
+		skill_a.ts = store.tick_ts - skill_a.cooldown * (this.unit.cooldown_factor or 1)
 	end
 
 	if skill_b and not skill_b.disabled then
-		skill_b.ts = store.tick_ts - skill_b.cooldown * cooldown_factor
+		skill_b.ts = store.tick_ts - skill_b.cooldown * (this.unit.cooldown_factor or 1)
 	end
 
 	if skill_c and not skill_c.disabled then
-		skill_c.ts = store.tick_ts - skill_c.cooldown * cooldown_factor
+		skill_c.ts = store.tick_ts - skill_c.cooldown * (this.unit.cooldown_factor or 1)
 	end
 
 	if ultimate and not ultimate.disabled then
-		ultimate.ts = store.tick_ts - ultimate.cooldown * cooldown_factor
+		ultimate.ts = store.tick_ts - ultimate.cooldown * (this.unit.cooldown_factor or 1)
 	end
 
 	while true do
@@ -755,11 +748,11 @@ local tt
 tt = RT("hero_drakkan", "hero")
 AC(tt, "melee", "ranged", "timed_attacks", "tween", "teleport")
 tt.hero.level_stats.armor = {0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18}
-tt.hero.level_stats.hp_max = {230, 255, 280, 305, 330, 355, 380, 405, 430, 455}
-tt.hero.level_stats.melee_damage_min = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-tt.hero.level_stats.melee_damage_max = {1, 2, 4, 4, 5, 6, 7, 8, 9, 10}
-tt.hero.level_stats.ranged_damage_min = {13, 16, 19, 22, 26, 29, 32, 35, 38, 42}
-tt.hero.level_stats.ranged_damage_max = {19, 24, 29, 34, 38, 43, 48, 53, 58, 62}
+tt.hero.level_stats.hp_max = {242, 268, 294, 320, 347, 373, 399, 425, 452, 478}
+tt.hero.level_stats.melee_damage_min = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11}
+tt.hero.level_stats.melee_damage_max = {1, 2, 4, 4, 5, 6, 7, 8, 9, 11}
+tt.hero.level_stats.ranged_damage_min = {14, 17, 20, 23, 27, 30, 34, 37, 40, 44}
+tt.hero.level_stats.ranged_damage_max = {20, 25, 30, 36, 40, 45, 50, 56, 61, 65}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = 15
 tt.hero.skills.skill_a.xp_gain = {60, 120, 180}
@@ -771,8 +764,8 @@ tt.hero.skills.skill_a.xp_level_steps = {
 tt.hero.skills.skill_a.key = "NULLIFYING_PULSE"
 tt.hero.skills.skill_a.aura = {}
 tt.hero.skills.skill_a.aura.duration = fts(45)
-tt.hero.skills.skill_a.aura.damage_min = {6, 8, 12}
-tt.hero.skills.skill_a.aura.damage_max = {9, 12, 18}
+tt.hero.skills.skill_a.aura.damage_min = {6, 8, 13}
+tt.hero.skills.skill_a.aura.damage_max = {9, 13, 19}
 tt.hero.skills.skill_a.aura.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.skill_a.aura.damage_every = 0.25
 tt.hero.skills.skill_a.aura.damage_radius = 75
@@ -788,8 +781,8 @@ tt.hero.skills.skill_b.xp_level_steps = {
 }
 tt.hero.skills.skill_b.key = "DECONSTRUCT"
 tt.hero.skills.skill_b.aura = {}
-tt.hero.skills.skill_b.aura.damage_min = {24, 48, 82}
-tt.hero.skills.skill_b.aura.damage_max = {36, 72, 114}
+tt.hero.skills.skill_b.aura.damage_min = {25, 50, 86}
+tt.hero.skills.skill_b.aura.damage_max = {38, 76, 120}
 tt.hero.skills.skill_b.aura.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.skill_b.aura.damage_radius = 90
 tt.hero.skills.skill_c = CC("hero_skill")
@@ -814,8 +807,8 @@ tt.hero.skills.ultimate.key = "ARCANE_STORM"
 tt.hero.skills.ultimate.shots = 7
 tt.hero.skills.ultimate.min_targets = 7
 tt.hero.skills.ultimate.max_range = 2000
-tt.hero.skills.ultimate.damage_min = 40
-tt.hero.skills.ultimate.damage_max = 60
+tt.hero.skills.ultimate.damage_min = 42
+tt.hero.skills.ultimate.damage_max = 63
 tt.hero.skills.ultimate.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.ultimate.damage_radius = 70
 tt.hero.skills.talent_1 = CC("hero_skill")
@@ -830,6 +823,7 @@ tt.hero.skills.talent_2.xp_level_steps = {
 	[1] = 1
 }
 tt.health.dead_lifetime = 15
+tt.health.magic_armor = 1
 tt.health_bar.draw_order = -1
 tt.health_bar.offset = vec_2(0, 160)
 tt.health_bar.sort_y_offset = -161
@@ -850,7 +844,7 @@ tt.info.hero_portrait = "kr6_hero_portraits_0009"
 tt.info.portrait = "kr6_info_portraits_heroes_0008"
 tt.main_script.insert = hero_drakkan_insert
 tt.main_script.update = hero_drakkan_update
-tt.motion.max_speed = 100
+tt.motion.max_speed = 105
 tt.nav_rally.requires_node_nearby = false
 tt.nav_grid.ignore_waypoints = true
 tt.nav_grid.valid_terrains = bor(TERRAIN_NONE, TERRAIN_LAND, TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK, TERRAIN_SHALLOW, TERRAIN_FAERIE, TERRAIN_ICE)
@@ -984,7 +978,7 @@ tt = RT("soldier_drakkan_clone", "soldier_militia")
 AC(tt, "melee", "ranged", "timed_attacks", "tween", "nav_grid", "reinforcement")
 tt.flight_height = 80
 tt.health.armor = 0.06
-tt.health.hp_max = 240
+tt.health.hp_max = 252
 tt.health.dead_lifetime = fts(25)
 tt.health_bar.draw_order = -1
 tt.health_bar.offset = vec_2(0, 160)
@@ -1001,14 +995,14 @@ tt.info.portrait = "info_portraits_soldiers_0020"
 tt.info.random_name_count = nil
 tt.info.random_name_format = nil
 tt.main_script.update = hero_drakkan_update
-tt.motion.max_speed = 100
+tt.motion.max_speed = 105
 tt.nav_rally.requires_node_nearby = false
 tt.nav_grid.ignore_waypoints = true
 tt.nav_grid.valid_terrains = bor(TERRAIN_NONE, TERRAIN_LAND, TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK, TERRAIN_SHALLOW, TERRAIN_FAERIE, TERRAIN_ICE)
 tt.nav_grid.valid_terrains_dest = tt.nav_grid.valid_terrains
 tt.drag_line_origin_offset = vec_2(0, tt.flight_height)
 tt.regen.cooldown = 1
-tt.regen.health = 19
+tt.regen.health = 20
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
@@ -1169,9 +1163,9 @@ tt.bullet.hit_fx = "fx_bullet_drakkan_hit_ground"
 tt.bullet.hit_fx_air = "fx_bullet_drakkan_hit_air"
 tt.bullet.hit_decal = "decal_bullet_drakkan"
 tt.bullet.particles_name = "ps_bullet_drakkan"
-tt.bullet.max_speed = 600
+tt.bullet.max_speed = 630
 tt.bullet.min_speed = 600
-tt.bullet.xp_gain_factor = 1.2
+tt.bullet.xp_gain_factor = 2.1
 tt.bullet.align_with_trajectory = true
 tt.bullet.ignore_hit_offset = false
 tt.bullet.pop_chance = 0
@@ -1183,11 +1177,11 @@ tt.render.sprites[1].z = Z_BULLETS
 tt.sound_events.insert = nil
 
 tt = RT("bullet_drakkan_clone", "bullet_drakkan")
-tt.bullet.damage_min = 19
-tt.bullet.damage_max = 29
+tt.bullet.damage_min = 20
+tt.bullet.damage_max = 30
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_radius = 40
-tt.bullet.xp_gain_factor = 1.2
+tt.bullet.xp_gain_factor = 2.1
 
 tt = RT("bullet_drakkan_ultimate", "bullet")
 AC(tt, "sound_events")
@@ -1200,8 +1194,8 @@ tt.bullet.hit_decal = "decal_bullet_drakkan"
 tt.bullet.ignore_hit_offset = true
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_radius = 70
-tt.bullet.damage_min = 40
-tt.bullet.damage_max = 60
+tt.bullet.damage_min = 42
+tt.bullet.damage_max = 63
 tt.bullet.damage_flags = F_AREA
 tt.bullet.particles_name = "ps_bullet_drakkan_ultimate"
 tt.main_script.update = bullet_drakkan_ultimate_update

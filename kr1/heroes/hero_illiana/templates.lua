@@ -17,7 +17,6 @@ local band = bit.band
 local bor = bit.bor
 local level_up_basic = HU.level_up_basic
 local upgrade_skill = HU.upgrade_skill
-local ready_to_use_skill = HU.ready_to_use_skill
 local update_hp = HU.update_hp
 local queue_damage = U.queue_damage
 local fts = U.fts
@@ -393,7 +392,6 @@ local function hero_illiana_level_up(this, store, initial)
 	end
 
 	local hl, ls = level_up_basic(this)
-	local skills = this.hero.skills
 
 	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
 	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
@@ -513,6 +511,8 @@ local function illiana_do_ranged_attack(store, this, attack, target, pred_pos)
 end
 
 local function hero_illiana_update(this, store)
+	U.y_animation_play(this, "lvl_up", nil, store.tick_ts, 1)
+
 	local h = this.health
 	local brk, sta
 	local casting_ult = false
@@ -530,11 +530,11 @@ local function hero_illiana_update(this, store)
 	this.health_bar.hidden = false
 
 	if skb then
-		skb.ts = store.tick_ts - skb.cooldown
+		skb.ts = store.tick_ts - skb.cooldown * (this.unit.cooldown_factor or 1)
 	end
 
 	if ult then
-		ult.ts = store.tick_ts - ult.cooldown
+		ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1)
 	end
 
 	local ult_start_cd = ult ~= nil and store.wave_group_number == 0
@@ -899,7 +899,6 @@ local function hero_illiana_update(this, store)
 	end
 
 	local function y_illiana_walk_waypoints(store, this, animation)
-		local animation = animation or "walk"
 		local r = this.nav_rally
 		local dest = r.pos
 		local old_damage_factor = this.unit.damage_factor
@@ -1077,7 +1076,7 @@ local function hero_illiana_update(this, store)
 				U.y_animation_play(this, "lvl_up", nil, store.tick_ts, 1)
 			end
 
-			if ult and store.tick_ts - ult.ts > ult.cooldown and not this.dragon_skill_c_in_progress then
+			if ult and store.tick_ts - ult.ts > ult.cooldown * (this.unit.cooldown_factor or 1) and not this.dragon_skill_c_in_progress then
 				local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
 				local targets = U.find_enemies_in_range(store, this.pos, 0, ult.detection_range, ult.flags, ult.bans, function(v)
 					for _, p in pairs(nearest) do
@@ -1086,7 +1085,7 @@ local function hero_illiana_update(this, store)
 				end)
 
 				if not targets or #targets < ult.min_targets then
-					SU.delay_attack(store, ult, fts(10))
+					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 					goto label_ult_0
 				end
@@ -1096,7 +1095,7 @@ local function hero_illiana_update(this, store)
 				paths = sort_paths_by_distance(paths, ult.distance)
 
 				if #paths == 0 then
-					SU.delay_attack(store, ult, fts(10))
+					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
 
 					goto label_ult_0
 				end
@@ -1110,7 +1109,7 @@ local function hero_illiana_update(this, store)
 						casting_ult = false
 						this.cast_ult = false
 
-						SU.delay_attack(store, ult, 1)
+						ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + 1
 
 						goto label_continue
 					end
@@ -1130,7 +1129,7 @@ local function hero_illiana_update(this, store)
 						casting_ult = false
 						this.cast_ult = false
 
-						SU.delay_attack(store, ult, 1)
+						ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + 1
 
 						goto label_continue
 					end
@@ -1167,11 +1166,11 @@ local function hero_illiana_update(this, store)
 
 			::label_ult_0::
 
-			if skb and store.tick_ts - skb.ts > skb.cooldown and not casting_ult then
+			if skb and store.tick_ts - skb.ts > skb.cooldown * (this.unit.cooldown_factor or 1) and not casting_ult then
 				local _, targets = U.find_foremost_enemy(store, this.pos, 0, skb.max_range, 0, skb.flags, skb.bans)
 
 				if not targets or #targets < skb.min_targets then
-					SU.delay_attack(store, skb, fts(5))
+					skb.ts = store.tick_ts - skb.cooldown * (this.unit.cooldown_factor or 1) + fts(5)
 				else
 					local flight_time = E:get_template(skb.bullet).bullet.flight_time
 					local shoot_pos_prev = find_center_of_group(targets, flight_time)
@@ -1243,18 +1242,18 @@ local function decal_illiana_dragon_update(this, store)
 		return
 	end
 
-	ba.ts = store.tick_ts - ba.cooldown
+	ba.ts = store.tick_ts - ba.cooldown * (illiana.unit.cooldown_factor or 1)
 
 	local sa = not this.ranged.attacks[2].disabled and this.ranged.attacks[2] or nil
 
 	if sa then
-		sa.ts = store.tick_ts - sa.cooldown
+		sa.ts = store.tick_ts - sa.cooldown * (illiana.unit.cooldown_factor or 1)
 	end
 
 	local sc = not this.timed_attacks.list[1].disabled and this.timed_attacks.list[1] or nil
 
 	if sc then
-		sc.ts = store.tick_ts - sc.cooldown
+		sc.ts = store.tick_ts - sc.cooldown * (illiana.unit.cooldown_factor or 1)
 		sc.damage_min = illiana.hero.skills.skill_c.damage_min[illiana.hero.skills.skill_c.level]
 		sc.damage_max = illiana.hero.skills.skill_c.damage_max[illiana.hero.skills.skill_c.level]
 	end
@@ -1271,9 +1270,7 @@ local function decal_illiana_dragon_update(this, store)
 	local function shoot(attack)
 		local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, 0, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans)
 
-		if store.tick_ts - attack.ts > attack.cooldown and target and not target.health.dead and (not attack.min_targets or #targets >= attack.min_targets) then
-			local start_ts = store.tick_ts
-
+		if store.tick_ts - attack.ts > attack.cooldown * (illiana.unit.cooldown_factor or 1) and target and not target.health.dead and (not attack.min_targets or #targets >= attack.min_targets) then
 			hold_position()
 
 			local an, af = U.animation_name_facing_point(this, attack.animation, pred_pos)
@@ -1347,7 +1344,7 @@ local function decal_illiana_dragon_update(this, store)
 
 		for i = start_i, end_i do
 			local nearest = P:nearest_nodes(pos.x, pos.y, {pi})
-			local npi, nspi, ni = unpack(nearest[1])
+			local npi, _, ni = unpack(nearest[1])
 			local fire_pos = P:node_pos(npi, i, ni + math.random(-ult.random_for_node, ult.random_for_node))
 			local decal = E:create_entity(ult.decal_fire_ground)
 
@@ -1588,13 +1585,13 @@ local function decal_illiana_dragon_update(this, store)
 					shoot(sa)
 				end
 
-				if sc and store.tick_ts - sc.ts > sc.cooldown then
+				if sc and store.tick_ts - sc.ts > sc.cooldown * (illiana.unit.cooldown_factor or 1) then
 					local targets = U.find_enemies_in_range(store, this.pos, 0, sc.detection_range, 0, 0, function(v)
 						return v.unit.is_stunned
 					end)
 
 					if not targets or #targets == 0 then
-						SU.delay_attack(store, sc, fts(10))
+						sc.ts = store.tick_ts - sc.cooldown * (illiana.unit.cooldown_factor or 1) + fts(10)
 					else
 						illiana.dragon_skill_c_in_progress = true
 
@@ -1617,7 +1614,7 @@ local function decal_illiana_dragon_update(this, store)
 							dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
 
 							if this.chase then
-								SU.delay_attack(store, sc, fts(10))
+								sc.ts = store.tick_ts - sc.cooldown * (illiana.unit.cooldown_factor or 1) + fts(10)
 
 								goto label_dragon_504_0
 							end
@@ -1629,7 +1626,7 @@ local function decal_illiana_dragon_update(this, store)
 						if U.y_wait(store, sc.lower_time, function(store, time)
 							return this.chase
 						end) then
-							SU.delay_attack(store, sc, fts(10))
+							sc.ts = store.tick_ts - sc.cooldown * (illiana.unit.cooldown_factor or 1) + fts(10)
 
 							illiana.dragon_skill_c_in_progress = false
 
@@ -2015,7 +2012,7 @@ tt.melee.attacks[1].shared_cooldown = true
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 1.5
+tt.melee.attacks[1].xp_gain_factor = 3.1
 tt.melee.attacks[1].hit_fx = "fx_illiana_basic_melee_hit"
 tt.melee.attacks[1].hit_offset = vec_2(30, 20)
 tt.melee.range = 60
@@ -2028,7 +2025,7 @@ tt.ranged.attacks[1].min_range = 70
 tt.ranged.attacks[1].max_range = 165
 tt.ranged.attacks[1].damage_min = 4
 tt.ranged.attacks[1].damage_max = 10
-tt.ranged.attacks[1].xp_gain_factor = 1.5
+tt.ranged.attacks[1].xp_gain_factor = 3.1
 tt.ranged.attacks[1].shoot_time = fts(11)
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(5, 20)}
 tt.ranged.attacks[1].ignore_hit_offset = false
@@ -2110,7 +2107,7 @@ tt.ranged.attacks[1].bullet = "bullet_illiana_dragon_basic"
 tt.ranged.attacks[1].shoot_time = fts(14)
 tt.ranged.attacks[1].bullet_start_offset = vec_2(10, -5)
 tt.ranged.attacks[1].node_prediction = fts(22)
-tt.ranged.attacks[1].xp_gain_factor = 1.5
+tt.ranged.attacks[1].xp_gain_factor = 3.1
 tt.ranged.attacks[1].damage_type = DAMAGE_MAGICAL
 tt.ranged.attacks[2] = table.deepclone(tt.ranged.attacks[1])
 tt.ranged.attacks[2].bullet = "bullet_illiana_skill_a"
@@ -2165,26 +2162,33 @@ tt.timed_attacks.list[2].sound = "HeroIllianaSparkyIncinerateFire"
 tt.main_script.update = decal_illiana_dragon_update
 
 tt = RT("ps_bullet_illiana_basic", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.name = "hero_Illiana_FX_illiana_attack_projectile_particle_action"
 tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.particle_system.emission_rate = 30
 
 tt = RT("ps_bullet_illiana_dragon_basic", "particle_system")
+tt.particle_system.animated = true
 tt.particle_system.name = "hero_Illiana_FX_dragon_attack_particle"
 tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.particle_system.emission_rate = 30
 
 tt = RT("ps_bullet_illiana_skill_a", "particle_system")
+tt.particle_system.animated = true
 tt.particle_system.name = "hero_Illiana_FX_dragon_skill_a_particle_idle"
 tt.particle_system.particle_lifetime = {fts(13), fts(13)}
 tt.particle_system.emission_rate = 30
 
 tt = RT("ps_bullet_illiana_skill_b", "particle_system")
+tt.particle_system.animated = true
 tt.particle_system.name = "hero_Illiana_FX_illiana_skill_b_particle"
 tt.particle_system.particle_lifetime = {fts(7), fts(7)}
 tt.particle_system.emission_rate = 30
 
 tt = RT("ps_illiana_ult_fire", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emission_rate = 10
 tt.particle_system.emit_area_spread = vec_2(0, 0)
 tt.particle_system.emit_direction = -math.pi / 4
@@ -2195,6 +2199,8 @@ tt.particle_system.z = Z_OBJECTS
 tt.particle_system.draw_order = 1
 
 tt = RT("ps_illiana_ult_breath", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emission_rate = 15
 tt.particle_system.emit_area_spread = vec_2(0, 0)
 tt.particle_system.emit_direction = -math.pi / 4
@@ -2204,6 +2210,8 @@ tt.particle_system.name = "hero_Illiana_FX_dragon_ulti_breath_particle_in"
 tt.particle_system.z = Z_OBJECTS
 
 tt = RT("ps_illiana_ult_smoke", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.loop = false
 tt.particle_system.emission_rate = 10
 tt.particle_system.emit_area_spread = vec_2(0, 0)
 tt.particle_system.emit_direction = -math.pi / 4
@@ -2288,7 +2296,7 @@ tt.bullet.damage_max = 10
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 tt.bullet.hit_fx = "fx_bullet_illiana_basic_ranged_hit"
 tt.bullet.particles_name = "ps_bullet_illiana_basic"
-tt.bullet.xp_gain_factor = 1.5
+tt.bullet.xp_gain_factor = 3.1
 tt.bullet.min_speed = 500
 tt.bullet.max_speed = 500
 tt.bullet.align_with_trajectory = true
