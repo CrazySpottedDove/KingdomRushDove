@@ -2447,7 +2447,7 @@ return {
 		prefix = "armored_nightmare_enemy",
 		to = 1
 	},
-	armored_nightmare_enemy_walk_back = {
+	armored_nightmare_enemy_walkingUp = {
 		from = 49,
 		prefix = "armored_nightmare_enemy",
 		to = 72

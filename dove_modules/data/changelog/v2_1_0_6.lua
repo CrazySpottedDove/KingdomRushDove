@@ -1,1 +1,1 @@
-return {{date="2026-11-01",author="CrazySpottedDove",message="feat: version->2.1.0.6"},{date="2026-11-01",author="CrazySpottedDove",message="feat: 调整六代英雄的解锁时间"}}
+return {{date="2026-11-01",author="CrazySpottedDove",message="feat: version->2.1.0.6"},{date="2026-11-01",author="CrazySpottedDove",message="feat: 调整六代英雄的解锁时间"},{date="2026-11-01",author="CrazySpottedDove",message="fix: 修正武装梦魇向上移动时的动画引用名称"}}
