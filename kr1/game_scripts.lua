@@ -45899,7 +45899,6 @@ function scripts.aura_apply_mod_towers.update(this, store, script)
 		coroutine.yield()
 	end
 
-	signal.emit("aura-apply-mod-towers-victims", this, victims_count)
 	simulation:queue_remove_entity(this)
 end
 
