@@ -442,8 +442,6 @@ local function hero_lava_update(this, store)
 			simulation:queue_insert_entity(aura)
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
-			this.health.dead = false
-
 			while store.tick_ts - death_ts < this.health.dead_lifetime and not this.force_respawn do
 				this.render.sprites[1].z = Z_OBJECTS
 
