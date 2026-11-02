@@ -393,6 +393,7 @@ function game:restart()
 	self:flush_seen()
 	self.simulation:init(self.store, self.simulation_systems)
 	self.game_gui:init(self.screen_w, self.screen_h, self)
+	S:clear_all()
 	S:stop_all()
 	if self.store.custom_battle_prep_music then
 		S:queue(self.store.custom_battle_prep_music)

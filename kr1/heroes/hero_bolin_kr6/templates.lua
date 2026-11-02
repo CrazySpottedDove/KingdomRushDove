@@ -110,7 +110,7 @@ local function bolin_skip_ultimate(targets, sua)
 end
 
 local function bolin_area_damage_update(this, store)
-	local factor = this.damage_factor
+	local factor = this.aura.damage_factor
 	local enemies = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
 	if enemies then
@@ -141,7 +141,7 @@ local function controller_bolin_death_explosion_update(this, store)
 
 	exp.pos = V.vclone(source.pos)
 	exp.source_id = this.source_id
-	exp.damage_factor = source.unit.damage_factor
+	exp.aura.damage_factor = source.unit.damage_factor
 
 	simulation:queue_insert_entity(exp)
 	simulation:queue_remove_entity(this)
@@ -299,7 +299,7 @@ local function bullet_bolin_update(this, store)
 			local hp = E:create_entity(b.hit_payload)
 
 			hp.source_id = b.source_id
-			hp.damage_factor = b.damage_factor
+			hp.aura.damage_factor = b.damage_factor
 			hp.pos = V.vclone(target.pos)
 
 			simulation:queue_insert_entity(hp)
@@ -1067,8 +1067,8 @@ tt.hero.level_stats.armor = {0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13
 tt.hero.level_stats.hp_max = {227, 240, 254, 267, 280, 293, 307, 320, 334, 348}
 tt.hero.level_stats.melee_damage_min = {12, 13, 14, 14, 15, 16, 17, 19, 19, 21}
 tt.hero.level_stats.melee_damage_max = {16, 17, 19, 22, 23, 24, 25, 26, 28, 30}
-tt.hero.level_stats.ranged_damage_min = {26, 28, 32, 36, 38, 40, 43, 45, 48, 50}
-tt.hero.level_stats.ranged_damage_max = {40, 44, 48, 51, 57, 61, 64, 69, 71, 76}
+tt.hero.level_stats.ranged_damage_min = {28, 32, 36, 38, 40, 43, 45, 48, 50, 53}
+tt.hero.level_stats.ranged_damage_max = {44, 48, 51, 57, 61, 64, 69, 71, 76, 80}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = 16
 tt.hero.skills.skill_a.damage_min = {14, 21, 26}
@@ -1085,7 +1085,7 @@ tt.hero.skills.skill_b.cooldown = 6
 tt.hero.skills.skill_b.damage_min = {16, 23, 32}
 tt.hero.skills.skill_b.damage_max = {24, 38, 48}
 tt.hero.skills.skill_b.max_mines = {4, 6, 8}
-tt.hero.skills.skill_b.xp_gain = {24, 24, 24}
+tt.hero.skills.skill_b.xp_gain = {30, 60, 90}
 tt.hero.skills.skill_b.xp_level_steps = {
 	[3] = 1,
 	[6] = 2,

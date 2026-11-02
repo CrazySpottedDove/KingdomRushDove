@@ -204,7 +204,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
 }
 
 return {
@@ -2888,7 +2888,7 @@ return {
 	HERO_ROOM_ARIVAN_ULTIMATE_NAME = "元素之怒",
 	HERO_ROOM_ASHBITE_BLAZING_BREATH_DESC = "每隔%$ ((T('hero_ashbite')).timed_attacks.list[1].cooldown) %$秒，阿什比特喷吐出锥状火焰，每%$ ((E:get_template('aura_ashbite_skill_a')).aura.cycle_time) %$秒对范围内敌人造成%$ ((T('hero_ashbite')).hero.skills.skill_a.aura_damage_min[levels((T('hero_ashbite')).hero.skills.skill_a)]) %$-%$ ((T('hero_ashbite')).hero.skills.skill_a.aura_damage_max[levels((T('hero_ashbite')).hero.skills.skill_a)]) %$点真实伤害，持续%$ ((E:get_template('aura_ashbite_skill_a')).aura.duration) %$秒。",
 	HERO_ROOM_ASHBITE_BLAZING_BREATH_NAME = "炽热吐息",
-	HERO_ROOM_ASHBITE_FEEDING_TIME_DESC = "每隔%$ ((T('hero_ashbite')).timed_attacks.list[3].cooldown) %$秒，阿什比特降落至地面战斗%$ ((T('hero_ashbite')).timed_attacks.list[3].duration) %$秒，每下撕咬造成%$ ((T('hero_ashbite')).melee.attacks[1].damage_min) %$-%$ ((T('hero_ashbite')).melee.attacks[1].damage_max) %$点物理伤害。若以此击杀敌人，恢复自身%$ ((T('hero_ashbite')).hero.skills.skill_c.heal_ptg[levels((T('hero_ashbite')).hero.skills.skill_c)]) %$%的总生命值。移动时取消技能。",
+	HERO_ROOM_ASHBITE_FEEDING_TIME_DESC = "每隔%$ ((T('hero_ashbite')).timed_attacks.list[3].cooldown) %$秒，阿什比特降落至地面战斗%$ ((T('hero_ashbite')).timed_attacks.list[3].duration) %$秒，每下撕咬造成%$ ((T('hero_ashbite')).melee.attacks[1].damage_min) %$-%$ ((T('hero_ashbite')).melee.attacks[1].damage_max) %$点残暴伤害。若以此击杀敌人，恢复自身%$ ((T('hero_ashbite')).hero.skills.skill_c.heal_ptg[levels((T('hero_ashbite')).hero.skills.skill_c)]) %$%的总生命值。移动时取消技能。",
 	HERO_ROOM_ASHBITE_FEEDING_TIME_NAME = "开饭时间",
 	HERO_ROOM_ASHBITE_MELTING_FURY_DESC = "因阿什比特的能力受到燃烧的敌人，每秒降低%$ ((E:get_template('mod_ashbite_talent_2_skill_a_armor_red')).modifier.armor_red_factor) %$%的护甲。",
 	HERO_ROOM_ASHBITE_MELTING_FURY_NAME = "熔融之怒",
