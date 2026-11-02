@@ -501,6 +501,22 @@ function sound_db:stop_all()
 	self.ref_counters = {}
 end
 
+--- 清理所有尚未执行的播放/停止请求（不影响正在播放的音源）。
+--- 场景或关卡切换后，属于旧声音组的延迟请求会失去音源，
+--- 需要在卸载声音组之前/同时清掉。
+function sound_db:clear_all()
+	for i = #self.request_queue, 1, -1 do
+		local req = self.request_queue[i]
+		self.request_queue[i] = nil
+		req.options = nil
+		_req_pool[#_req_pool + 1] = req
+	end
+
+	for i = #sound_db.stop_queue, 1, -1 do
+		sound_db.stop_queue[i] = nil
+	end
+end
+
 --- 暂停所有正在播放的声音
 function sound_db:pause()
 	self.paused = true

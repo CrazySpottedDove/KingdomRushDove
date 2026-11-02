@@ -1691,6 +1691,7 @@ end
 
 function game_gui:go_to_map()
 	S:stop_all()
+	S:clear_all()
 	S:resume()
 	signal.emit("game-quit", self.game.store)
 	local return_to = self.game.store.custom_map_return_to or "map"
@@ -1701,6 +1702,7 @@ end
 
 function game_gui:restart_game()
 	S:stop_all()
+	S:clear_all()
 	S:resume()
 	signal.emit("game-restart", self.game.store)
 
