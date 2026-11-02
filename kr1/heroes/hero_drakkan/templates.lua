@@ -45,14 +45,12 @@ local function aura_drakkan_skill_a_update(this, store)
 		if store.tick_ts >= next_ts then
 			next_ts = next_ts + this.aura.cycle_time
 
-			local source = store.entities[this.aura.source_id]
-			local buff = source and source.unit.damage_buff or 0
-			local factor = source and source.unit.damage_factor or 1
+			local factor = this.aura.damage_factor
 			local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
 			if targets then
 				for _, target in ipairs(targets) do
-					local d = E.assign_damage(this.aura.damage_type, (math.random(this.aura.damage_min, this.aura.damage_max) + buff) * factor, this.aura.source_id, target.id)
+					local d = E.assign_damage(this.aura.damage_type, math.random(this.aura.damage_min, this.aura.damage_max) * factor, this.aura.source_id, target.id)
 
 					queue_damage(store, d)
 
@@ -75,14 +73,12 @@ local function aura_drakkan_skill_a_update(this, store)
 end
 
 local function aura_drakkan_skill_b_update(this, store)
-	local source = store.entities[this.aura.source_id]
-	local buff = source and source.unit.damage_buff or 0
-	local factor = source and source.unit.damage_factor or 1
+	local factor = this.aura.damage_factor
 	local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E.assign_damage(this.aura.damage_type, (math.random(this.aura.damage_min, this.aura.damage_max) + buff) * factor, this.aura.source_id, target.id)
+			local d = E.assign_damage(this.aura.damage_type, math.random(this.aura.damage_min, this.aura.damage_max) * factor, this.aura.source_id, target.id)
 
 			queue_damage(store, d)
 
@@ -126,10 +122,7 @@ local function bullet_drakkan_ultimate_update(this, store)
 	this.pos.x, this.pos.y = b.to.x, b.to.y
 	particle.particle_system.source_lifetime = 0
 
-	local source = store.entities[b.source_id]
-	local buff = source and source.unit.damage_buff or 0
-	local factor = source and source.unit.damage_factor or 1
-	local damage_value = math.ceil((math.random(b.damage_min, b.damage_max) + buff) * factor)
+	local damage_value = math.ceil(math.random(b.damage_min, b.damage_max) * b.damage_factor)
 	local enemies = U.find_enemies_in_range(store, b.to, 0, b.damage_radius, b.damage_flags or F_AREA, b.damage_bans or 0)
 
 	if enemies then
@@ -453,7 +446,6 @@ local function hero_drakkan_skill_a(this, store, attack, skill)
 	aura.aura.damage_min = skill.aura.damage_min[skill.level]
 	aura.aura.damage_max = skill.aura.damage_max[skill.level]
 	aura.aura.damage_factor = this.unit.damage_factor
-	aura.aura.damage_buff = this.unit.damage_buff
 	aura.aura.silence_duration = skill.silence.duration[skill.level]
 	aura.aura.duration = skill.aura.duration
 
@@ -506,7 +498,6 @@ local function hero_drakkan_skill_b(this, store, attack, skill)
 	aura.aura.damage_min = skill.aura.damage_min[skill.level]
 	aura.aura.damage_max = skill.aura.damage_max[skill.level]
 	aura.aura.damage_factor = this.unit.damage_factor
-	aura.aura.damage_buff = this.unit.damage_buff
 
 	simulation:queue_insert_entity(aura)
 
@@ -622,6 +613,7 @@ local function hero_drakkan_ultimate(this, store, attack, skill, start_y)
 		bullet.bullet.target_id = target.id
 		bullet.bullet.source_id = this.id
 		bullet.bullet.xp_dest_id = this.id
+		bullet.bullet.damage_factor = this.unit.damage_factor
 		bullet.pos = V.v(pred_pos.x, start_y)
 		bullet.bullet.from = V.vclone(bullet.pos)
 		bullet.bullet.to = V.v(pred_pos.x, pred_pos.y)

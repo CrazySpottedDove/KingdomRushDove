@@ -59,11 +59,10 @@ local function aura_oni_ult_update(this, store)
 			local targets = U.find_enemies_in_range(store, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				local buff = source.unit.damage_buff or 0
-				local factor = source.unit.damage_factor
+				local factor = a.damage_factor
 
 				for _, target in ipairs(targets) do
-					local d = E.assign_damage(a.damage_type, math.ceil((math.random(a.damage_min, a.damage_max) + buff) * factor), this.id, target.id)
+					local d = E.assign_damage(a.damage_type, math.ceil(math.random(a.damage_min, a.damage_max) * factor), this.id, target.id)
 
 					d.xp_dest_id = a.xp_dest_id
 					d.xp_gain_factor = a.xp_gain_factor
@@ -112,9 +111,7 @@ local function decal_oni_skill_c_update(this, store)
 			S:queue(this.sound_hit)
 		end
 
-		local buff = source.unit.damage_buff or 0
-		local factor = source.unit.damage_factor
-		local d = E.assign_damage(this.damage_type, math.ceil((math.random(this.damage_min[i], this.damage_max[i]) + buff) * factor), this.source_id, this.target_id)
+		local d = E.assign_damage(this.damage_type, math.ceil(math.random(this.damage_min[i], this.damage_max[i]) * this.damage_factor), this.source_id, this.target_id)
 
 		queue_damage(store, d)
 
@@ -411,6 +408,7 @@ local function hero_oni_kr6_update(this, store)
 
 					aura.pos = V.vclone(this.pos)
 					aura.aura.source_id = this.id
+					aura.aura.damage_factor = this.unit.damage_factor
 
 					simulation:queue_insert_entity(aura)
 
@@ -535,6 +533,7 @@ local function hero_oni_kr6_update(this, store)
 					decal.target_id = target.id
 					decal.damage_min = skill_c.damage_min
 					decal.damage_max = skill_c.damage_max
+					decal.damage_factor = this.unit.damage_factor
 					decal.armor_red = skill_c.armor_red[skill_c.level]
 					decal.render.sprites[1].ts = store.tick_ts
 

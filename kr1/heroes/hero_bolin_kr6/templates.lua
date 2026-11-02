@@ -110,21 +110,14 @@ local function bolin_skip_ultimate(targets, sua)
 end
 
 local function bolin_area_damage_update(this, store)
-	local source = store.entities[this.source_id or this.aura.source_id]
-
-	if source and source.bullet then
-		source = store.entities[source.bullet.source_id]
-	end
-
-	local buff = source and source.unit.damage_buff or 0
-	local factor = source and source.unit.damage_factor or 1
+	local factor = this.damage_factor
 	local enemies = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
 	if enemies then
 		for _, enemy in ipairs(enemies) do
 			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.aura.radius)
 			local value = math.floor(this.aura.damage_max - (this.aura.damage_max - this.aura.damage_min) * dist_factor)
-			local d = E.assign_damage(this.aura.damage_type, math.ceil((value + buff) * factor), this.id, enemy.id)
+			local d = E.assign_damage(this.aura.damage_type, math.ceil(value * factor), this.id, enemy.id)
 
 			queue_damage(store, d)
 		end
@@ -148,6 +141,7 @@ local function controller_bolin_death_explosion_update(this, store)
 
 	exp.pos = V.vclone(source.pos)
 	exp.source_id = this.source_id
+	exp.damage_factor = source.unit.damage_factor
 
 	simulation:queue_insert_entity(exp)
 	simulation:queue_remove_entity(this)
@@ -282,7 +276,7 @@ local function bullet_bolin_update(this, store)
 
 	if target and not target.health.dead then
 		local buff = source and source.unit.damage_buff or 0
-		local factor = source and source.unit.damage_factor or 1
+		local factor = b.damage_factor
 		local d = E.assign_damage(b.damage_type, math.max(1, (U.frandom(b.damage_min, b.damage_max) + buff) * factor), this.id, target.id)
 
 		d.reduce_armor = b.reduce_armor
@@ -305,6 +299,7 @@ local function bullet_bolin_update(this, store)
 			local hp = E:create_entity(b.hit_payload)
 
 			hp.source_id = b.source_id
+			hp.damage_factor = b.damage_factor
 			hp.pos = V.vclone(target.pos)
 
 			simulation:queue_insert_entity(hp)
@@ -370,6 +365,8 @@ local function bullet_bolin_skills_parabola_update(this, store)
 			hp.render.sprites[1].ts = store.tick_ts
 		end
 
+		hp.damage_factor = b.damage_factor
+
 		if hp.aura then
 			hp.aura.level = this.bullet.level
 
@@ -406,7 +403,7 @@ local function bullet_bolin_skills_parabola_update(this, store)
 	if b.damage_min and b.damage_max then
 		local source = store.entities[b.source_id]
 		local buff = source and source.unit.damage_buff or 0
-		local factor = source and source.unit.damage_factor or 1
+		local factor = b.damage_factor
 		local enemies = U.find_enemies_in_range(store, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
 
 		if enemies then
@@ -438,16 +435,14 @@ end
 
 local function aura_bolin_skill_b_trigger_update(this, store)
 	local function do_damage()
-		local source = store.entities[this.source_id]
-		local buff = source and source.unit.damage_buff or 0
-		local factor = source and source.unit.damage_factor or 1
+		local factor = this.damage_factor
 		local enemies = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
 		if enemies then
 			for _, enemy in ipairs(enemies) do
 				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.aura.radius)
 				local value = math.floor(this.damage_max - (this.damage_max - this.damage_min) * dist_factor)
-				local d = E.assign_damage(this.damage_type, math.ceil((value + buff) * factor), this.id, enemy.id)
+				local d = E.assign_damage(this.damage_type, math.ceil(value * factor), this.id, enemy.id)
 
 				queue_damage(store, d)
 			end
@@ -523,7 +518,6 @@ local function bullet_bolin_skill_c_update(this, store, script)
 
 		b.damage_min = b.damage_min + source.unit.damage_buff
 		b.damage_max = b.damage_max + source.unit.damage_buff
-		b.damage_factor = source.unit.damage_factor
 	end
 
 	scripts.ray5_simple.update(this, store, script)
@@ -542,7 +536,6 @@ local function bullet_bolin_ultimate_update(this, store, script)
 
 		b.damage_min = b.damage_min + source.unit.damage_buff
 		b.damage_max = b.damage_max + source.unit.damage_buff
-		b.damage_factor = source.unit.damage_factor
 	end
 
 	scripts.ray5_simple.update(this, store, script)
@@ -1034,6 +1027,7 @@ local function hero_bolin_kr6_update(this, store)
 									b.bullet.from = vec_2(this.pos.x + sba.bullet_start_offset.x, this.pos.y + sba.bullet_start_offset.y)
 									b.bullet.to = V.vclone(mine_pos)
 									b.bullet.source_id = this.id
+									b.bullet.damage_factor = this.unit.damage_factor
 									b.payload_damage_min = sb.damage_min[sb.level]
 									b.payload_damage_max = sb.damage_max[sb.level]
 

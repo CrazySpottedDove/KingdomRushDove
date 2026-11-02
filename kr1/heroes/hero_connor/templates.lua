@@ -73,17 +73,11 @@ local function aura_connor_damage_update(this, store)
 			last_hit_ts = store.tick_ts
 			cycles = cycles + 1
 
-			local factor = 1
-
-			if source.hero and not a.no_talent_buff then
-				factor = connor_skill_factor(source)
-			end
-
 			local targets = U.find_enemies_in_range(store, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
 				for _, target in ipairs(targets) do
-					local value = (math.random(a.damage_min, a.damage_max) + source.unit.damage_buff) * source.unit.damage_factor * factor
+					local value = math.random(a.damage_min, a.damage_max) * a.damage_factor
 					local d = E.assign_damage(a.damage_type, math.ceil(value), this.id, target.id)
 
 					queue_damage(store, d)
@@ -149,8 +143,7 @@ local function mod_connor_ultimate_buff_insert(this, store)
 		return false
 	end
 
-	this._old_damage_factor = target.unit.damage_factor
-	target.unit.damage_factor = this.base_damage_factor
+	SU.insert_unit_damage_factor_by_factor(target, this.base_damage_factor)
 	this._old_melee_cooldown = target.melee.cooldown
 	target.melee.cooldown = this.ultimate_melee_cooldown
 
@@ -161,7 +154,7 @@ local function mod_connor_ultimate_buff_remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target then
-		target.unit.damage_factor = this._old_damage_factor
+		SU.remove_unit_damage_factor_by_factor(target, this.base_damage_factor)
 		target.melee.cooldown = this._old_melee_cooldown
 	end
 
@@ -405,6 +398,7 @@ local function hero_connor_update(this, store)
 
 					aura.pos.x, aura.pos.y = this.pos.x, this.pos.y
 					aura.aura.source_id = this.id
+					aura.aura.damage_factor = this.unit.damage_factor
 					aura.aura.ts = store.tick_ts
 
 					simulation:queue_insert_entity(aura)
@@ -518,6 +512,7 @@ local function hero_connor_update(this, store)
 					au.aura.source_id = this.id
 					au.aura.damage_min = a.damage_min
 					au.aura.damage_max = a.damage_max
+					au.aura.damage_factor = this.unit.damage_factor * connor_skill_factor(this)
 
 					simulation:queue_insert_entity(au)
 
@@ -611,7 +606,7 @@ local function hero_connor_update(this, store)
 							mod.modifier.source_id = this.id
 							mod.modifier.target_id = target.id
 							mod.modifier.duration = a.bleed_duration
-							mod.modifier.damage_factor = this.unit.damage_factor
+							mod.modifier.damage_factor = this.unit.damage_factor * connor_skill_factor(this)
 
 							simulation:queue_insert_entity(mod)
 						end

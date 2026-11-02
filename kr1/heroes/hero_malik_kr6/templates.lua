@@ -365,7 +365,7 @@ local function aura_malik_ultimate_update(this, store)
 					d.source_id = source.id
 					d.target_id = target.id
 					d.damage_type = a.damage_type
-					d.value = math.ceil((math.random(a.damage_min, a.damage_max) + source.unit.damage_buff) * source.unit.damage_factor)
+					d.value = math.ceil(math.random(a.damage_min, a.damage_max) * a.damage_factor)
 
 					queue_damage(store, d)
 
@@ -566,6 +566,7 @@ local function hero_malik_update(this, store)
 					local au = E:create_entity(a.aura_t)
 
 					au.aura.source_id = this.id
+					au.aura.damage_factor = this.unit.damage_factor
 					au.pos = V.vclone(this.pos)
 
 					simulation:queue_insert_entity(au)
