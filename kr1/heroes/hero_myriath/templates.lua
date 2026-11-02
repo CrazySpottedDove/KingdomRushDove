@@ -452,6 +452,7 @@ local function hero_myriath_update(this, store)
 					bullet.bullet.to.x = bullet.bullet.to.x + (target.enemy.melee_slot.x + this.soldier.melee_slot_offset.x) * flip
 					bullet.bullet.target_id = target.id
 					bullet.bullet.source_id = this.id
+					bullet.bullet.damage_factor = this.unit.damage_factor
 
 					simulation:queue_insert_entity(bullet)
 					S:queue(ska.sound)
@@ -570,8 +571,6 @@ local function soldier_myriath_clone_update(this, store)
 				local aura = E:create_entity(this.aura_explosion)
 
 				aura.aura.source_id = this.id
-				aura.aura.damage_min = aura.aura.damage_min + hero.unit.damage_buff
-				aura.aura.damage_max = aura.aura.damage_max + hero.unit.damage_buff
 				aura.aura.damage_factor = hero.unit.damage_factor
 				aura.pos = V.vclone(this.pos)
 
@@ -750,7 +749,7 @@ local function bullet_myriath_basic_ranged_update(this, store)
 	if target and not target.health.dead then
 		local source = store.entities[b.source_id]
 		local ra = source.ranged.attacks[1]
-		local value = (math.random(ra.damage_min, ra.damage_max) + source.unit.damage_buff) * source.unit.damage_factor
+		local value = (math.random(ra.damage_min, ra.damage_max) + source.unit.damage_buff) * b.damage_factor
 		local d = E.assign_damage(b.damage_type, math.max(1, value), this.id, target.id)
 
 		d.reduce_magic_armor = b.reduce_magic_armor
@@ -833,7 +832,7 @@ local function bullet_myriath_skill_a_update(this, store)
 
 	if b.target_id then
 		local power = source.hero.skills.skill_a
-		local value = (math.random(power.damage_min[power.level], power.damage_max[power.level]) + source.unit.damage_buff) * source.unit.damage_factor
+		local value = math.random(power.damage_min[power.level], power.damage_max[power.level]) * b.damage_factor
 		local d = E.assign_damage(b.damage_type, math.ceil(value), b.source_id, b.target_id)
 
 		queue_damage(store, d)
@@ -878,9 +877,11 @@ local function soldier_myriath_ult_update(this, store)
 
 	if path_spi == 1 then
 		local aura = E:create_entity(this.damage_aura)
+		local source = store.entities[this.source_id]
 
 		aura.pos = this.pos
 		aura.aura.source_id = this.source_id
+		aura.aura.damage_factor = source.unit.damage_factor
 
 		this.aura = aura
 
@@ -964,8 +965,6 @@ local function aura_myriath_ult_update(this, store)
 				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.excluded_entities or not table.contains(this.aura.excluded_entities, v.id))
 			end)
 
-			local source = store.entities[this.aura.source_id]
-
 			for _, target in pairs(targets) do
 				local dmin, dmax = this.aura.damage_min, this.aura.damage_max
 
@@ -974,9 +973,7 @@ local function aura_myriath_ult_update(this, store)
 					dmax = dmax + this.aura.damage_inc * this.aura.level
 				end
 
-				local buff = source and source.unit.damage_buff or 0
-				local factor = source and source.unit.damage_factor or 1
-				local d = E.assign_damage(this.aura.damage_type, math.ceil((math.random(dmin, dmax) + buff) * factor), this.id, target.id)
+				local d = E.assign_damage(this.aura.damage_type, math.ceil(math.random(dmin, dmax) * this.aura.damage_factor), this.id, target.id)
 
 				d.track_damage = this.aura.track_damage
 				d.xp_dest_id = this.aura.xp_dest_id

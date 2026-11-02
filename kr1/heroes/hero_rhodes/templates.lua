@@ -218,16 +218,10 @@ local function aura_rhodes_skill_c_update(this, store)
 		end)
 
 		if targets then
-			local source = store.entities[this.aura.source_id]
-
 			for _, target in ipairs(targets) do
 				if target and not target.health.dead and target.enemy then
 					local d = E:create_entity("damage")
-					local value = math.random(this.damage_min, this.damage_max)
-
-					if source and source.unit then
-						value = (value + source.unit.damage_buff) * source.unit.damage_factor
-					end
+					local value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 
 					d.damage_type = this.aura.damage_type
 					d.value = value
@@ -824,6 +818,7 @@ local function hero_rhodes_update(this, store)
 							top.rhodes = this
 							top.damage_min = sc.damage_min[sc.level]
 							top.damage_max = sc.damage_max[sc.level]
+							top.damage_factor = this.unit.damage_factor
 							top.slow_factor = sc.slow_factor[sc.level]
 
 							simulation:queue_insert_entity(top)

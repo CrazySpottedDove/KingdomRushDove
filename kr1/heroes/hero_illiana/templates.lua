@@ -331,13 +331,11 @@ local function aura_illiana_fire_update(this, store)
 			last_hit_ts = store.tick_ts
 			cycles = cycles + 1
 
-			local source = store.entities[this.damage_source_id]
-			local buff = source and source.unit and source.unit.damage_buff or 0
-			local factor = source and source.unit and source.unit.damage_factor or 1
+			local factor = this.damage_factor
 			local targets = U.find_enemies_in_range(store, this.pos, 0, a.radius, a.vis_flags, a.vis_bans) or {}
 
 			for _, target in ipairs(targets) do
-				local d = E.assign_damage(a.damage_type, math.ceil((math.random(a.damage_min, a.damage_max) + buff) * factor), this.damage_source_id or this.id, target.id)
+				local d = E.assign_damage(a.damage_type, math.ceil(math.random(a.damage_min, a.damage_max) * factor), this.damage_source_id or this.id, target.id)
 
 				queue_damage(store, d)
 			end
@@ -519,7 +517,6 @@ local function hero_illiana_update(this, store)
 	local tr = this.transfer
 	local ps
 	local transfering = false
-	local idle_damage_factor = this.unit.damage_factor
 	local og_z = this.render.sprites[1].z
 	local og_animation = this.ranged.attacks[1].animation
 	local n = this.nav_grid
@@ -692,7 +689,7 @@ local function hero_illiana_update(this, store)
 		end
 
 		if t2 then
-			this.unit.damage_factor = t2.damage_factor
+			SU.insert_unit_damage_factor_by_factor(this, t2.damage_factor)
 		end
 
 		this.ranged.attacks[1].animation = "walk_2_attack"
@@ -723,7 +720,11 @@ local function hero_illiana_update(this, store)
 		end
 
 		this.pos = V.vclone(this.pos)
-		this.unit.damage_factor = idle_damage_factor
+
+		if t2 then
+			SU.remove_unit_damage_factor_by_factor(this, t2.damage_factor)
+		end
+
 		this.ride_anim_ts = nil
 
 		if tr.particles_name then
@@ -901,10 +902,9 @@ local function hero_illiana_update(this, store)
 	local function y_illiana_walk_waypoints(store, this, animation)
 		local r = this.nav_rally
 		local dest = r.pos
-		local old_damage_factor = this.unit.damage_factor
 
 		if t2 then
-			this.unit.damage_factor = t2.damage_factor
+			SU.insert_unit_damage_factor_by_factor(this, t2.damage_factor)
 		end
 
 		local og_animation = this.ranged.attacks[1].animation
@@ -951,7 +951,11 @@ local function hero_illiana_update(this, store)
 		this.motion.speed.x, this.motion.speed.y = 0, 0
 		this.motion.arrived = false
 		r.new = false
-		this.unit.damage_factor = old_damage_factor
+
+		if t2 then
+			SU.remove_unit_damage_factor_by_factor(this, t2.damage_factor)
+		end
+
 		this.ranged.attacks[1].animation = og_animation
 		this.pos = V.vclone(this.dragon.pos)
 	end
@@ -1357,6 +1361,7 @@ local function decal_illiana_dragon_update(this, store)
 
 			aura.pos = fire_pos
 			aura.damage_source_id = illiana.id
+			aura.damage_factor = illiana.unit.damage_factor
 
 			simulation:queue_insert_entity(aura)
 		end
@@ -1742,6 +1747,7 @@ local function decal_illiana_dragon_update(this, store)
 
 					aura.pos = V.v(this.pos.x + ult.fire_stream_hit_offset.x * (flip_x and -1 or 1), this.pos.y + ult.fire_stream_hit_offset.y)
 					aura.damage_source_id = illiana.id
+					aura.damage_factor = illiana.unit.damage_factor
 
 					simulation:queue_insert_entity(aura)
 					S:queue(ult.sound)

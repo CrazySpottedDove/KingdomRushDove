@@ -68,11 +68,10 @@ local function aura_ignus_apply_damage_update(this, store)
 			local targets = U.find_enemies_in_range(store, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				local factor = source.unit.damage_factor
-				local buff = source.unit.damage_buff or 0
+				local factor = a.damage_factor
 
 				for _, target in ipairs(targets) do
-					local d = E.assign_damage(a.damage_type, math.ceil((math.random(a.damage_min, a.damage_max) + buff) * factor), this.id, target.id)
+					local d = E.assign_damage(a.damage_type, math.ceil(math.random(a.damage_min, a.damage_max) * factor), this.id, target.id)
 
 					d.xp_dest_id = a.xp_dest_id
 					d.xp_gain_factor = a.xp_gain_factor
@@ -152,8 +151,7 @@ local function bolt_ignus_skill_a_update(this, store)
 	local target = store.entities[b.target_id]
 
 	if target and not target.health.dead then
-		local source = store.entities[b.source_id]
-		local value = (math.random(b.damage_min, b.damage_max) + source.unit.damage_buff) * source.unit.damage_factor
+		local value = math.random(b.damage_min, b.damage_max) * b.damage_factor
 		local d = E.assign_damage(b.damage_type, math.ceil(value), this.id, target.id)
 
 		d.xp_gain_factor = b.xp_gain_factor
@@ -314,6 +312,7 @@ local function bullet_ignus_skill_c_update(this, store)
 	p.damage_min = this.payload_damage_min
 	p.damage_max = this.payload_damage_max
 	p.damage_type = this.payload_damage_type
+	p.damage_factor = b.damage_factor
 
 	simulation:queue_insert_entity(p)
 	U.y_wait(store, fts(8))
@@ -380,8 +379,7 @@ end
 local function decal_ignus_hit_skill_c_update(this, store)
 	U.y_wait(store, this.hit_time)
 
-	local source = store.entities[this.source_id]
-	local value = (math.random(this.damage_min, this.damage_max) + source.unit.damage_buff) * source.unit.damage_factor
+	local value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 	local d = E.assign_damage(this.damage_type, math.ceil(value), this.source_id, this.target_id)
 
 	queue_damage(store, d)
@@ -478,6 +476,7 @@ local function hero_ignus_kr6_update(this, store)
 
 		aura.pos = V.vclone(this.pos)
 		aura.aura.source_id = this.id
+		aura.aura.damage_factor = this.unit.damage_factor
 		aura.aura.track_source = true
 
 		simulation:queue_insert_entity(aura)
@@ -664,6 +663,7 @@ local function hero_ignus_kr6_update(this, store)
 					a.aura.damage_min = ultimate.damage_min
 					a.aura.damage_max = ultimate.damage_max
 					a.aura.damage_type = ultimate.damage_type
+					a.aura.damage_factor = this.unit.damage_factor
 					a.aura.radius = ultimate.damage_radius
 
 					simulation:queue_insert_entity(a)
@@ -735,6 +735,7 @@ local function hero_ignus_kr6_update(this, store)
 					a.aura.source_id = this.id
 					a.aura.damage_min = skills.skill_b.damage_min[skills.skill_b.level]
 					a.aura.damage_max = skills.skill_b.damage_max[skills.skill_b.level]
+					a.aura.damage_factor = this.unit.damage_factor
 
 					d.pos = V.vclone(this.pos)
 					d.render.sprites[1].ts = store.tick_ts
@@ -817,6 +818,7 @@ local function hero_ignus_kr6_update(this, store)
 						b.bullet.to.x = pred_pos.x + flip * (t.unit.hit_offset.x + this.soldier.melee_slot_offset.x)
 						b.bullet.to.y = pred_pos.y + t.unit.hit_offset.y + this.soldier.melee_slot_offset.y
 						b.bullet.source_id = this.id
+						b.bullet.damage_factor = this.unit.damage_factor
 						b.payload_damage_min = skills.skill_c.damage_min[skills.skill_c.level]
 						b.payload_damage_max = skills.skill_c.damage_max[skills.skill_c.level]
 						b.payload_damage_type = skills.skill_c.damage_type
@@ -889,6 +891,7 @@ local function hero_ignus_kr6_update(this, store)
 					b.bullet.damage_min = skills.skill_a.damage_min[skills.skill_a.level]
 					b.bullet.damage_max = skills.skill_a.damage_max[skills.skill_a.level]
 					b.bullet.damage_type = skills.skill_a.damage_type
+					b.bullet.damage_factor = this.unit.damage_factor
 					b.pos.x, b.pos.y = this.pos.x + sa.offset.x, this.pos.y + sa.offset.y
 					b.bullet.from = V.vclone(b.pos)
 					b.bullet.to = vec_2(pred_pos.x + target.unit.hit_offset.x, pred_pos.y + target.unit.hit_offset.y)

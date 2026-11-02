@@ -90,8 +90,7 @@ local function mod_ashbite_burn_update(this, store)
 	this.pos = target.pos
 
 	while true do
-		local damage_buff = hero and hero.unit and hero.unit.damage_buff or 0
-		local damage_factor = hero and hero.unit and hero.unit.damage_factor or 1
+		local damage_factor = this.modifier.damage_factor
 		target = store.entities[m.target_id]
 
 		if not target or target.health.dead then
@@ -111,7 +110,7 @@ local function mod_ashbite_burn_update(this, store)
 		if dps.damage_every and store.tick_ts - dps.ts >= dps.damage_every then
 			dps.ts = dps.ts + dps.damage_every
 
-			local value = math.floor((math.random(dmin, dmax) + damage_buff) * damage_factor)
+			local value = math.floor(math.random(dmin, dmax) * damage_factor)
 
 			if not dps.kill then
 				value = km.clamp(0, target.health.hp - 1, value)
@@ -166,16 +165,7 @@ local function aura_ashbite_skill_a_update(this, store)
 			break
 		end
 
-		local source = store.entities[a.source_id]
-		local damage_buff, damage_factor
-
-		if source and source.unit then
-			damage_buff = source.unit.damage_buff or 0
-			damage_factor = source.unit.damage_factor or 1
-		else
-			damage_buff = 0
-			damage_factor = 1
-		end
+		local damage_factor = a.damage_factor
 
 		if store.tick_ts - last_hit_ts >= a.cycle_time then
 			last_hit_ts = store.tick_ts
@@ -184,7 +174,7 @@ local function aura_ashbite_skill_a_update(this, store)
 
 			if targets then
 				for _, target in ipairs(targets) do
-					local value = math.floor((math.random(a.damage_min, a.damage_max) + damage_buff) * damage_factor)
+					local value = math.floor(math.random(a.damage_min, a.damage_max) * damage_factor)
 					local d = E:create_entity("damage")
 
 					d.source_id = a.source_id
@@ -203,6 +193,7 @@ local function aura_ashbite_skill_a_update(this, store)
 							mod.modifier.level = 1
 							mod.modifier.target_id = target.id
 							mod.modifier.source_id = a.source_id
+							mod.modifier.damage_factor = damage_factor
 
 							simulation:queue_insert_entity(mod)
 						end
@@ -751,6 +742,7 @@ local function hero_ashbite_update(this, store)
 				au.aura.level = sa.level
 				au.aura.damage_min = sa.aura_damage_min[sa.level]
 				au.aura.damage_max = sa.aura_damage_max[sa.level]
+				au.aura.damage_factor = this.unit.damage_factor
 
 				if st2.level > 0 then
 					U.append_mod(au.aura, st2.mod)
