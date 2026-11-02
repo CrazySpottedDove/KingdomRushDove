@@ -516,7 +516,114 @@ local function hero_ignus_kr6_update(this, store)
 			SU.soldier_idle(store, this)
 		else
 			while this.nav_rally.new do
-				if SU.y_hero_new_rally(store, this) then
+				local r = this.nav_rally
+				local flywalk = this.flywalk
+
+				if flywalk and V.dist(this.pos.x, this.pos.y, r.pos.x, r.pos.y) > flywalk.min_distance then
+					r.new = false
+
+					U.unblock_target(store, this)
+
+					local immune = this.health.immune_to
+					local original_speed = this.motion.max_speed
+					local old_z = this.render.sprites[1].z
+					local slide_distance = original_speed / 2 * fts(18)
+
+					U.bans_add(this.vis, F_ALL)
+					this.health.immune_to = F_ALL
+					this.render.sprites[1].z = Z_FLYING_HEROES
+					U.update_max_speed(this, original_speed * flywalk.extra_speed_factor)
+					this.unit.marker_hidden = true
+					this.health_bar.hidden = true
+
+					S:queue(this.sound_events.change_rally_point)
+					S:queue(flywalk.sound)
+
+					local an, af = U.animation_name_facing_point(this, flywalk.animations[1], r.pos)
+
+					U.animation_start_default(this, an, af, store.tick_ts)
+
+					local function spawn_fire_decal()
+						local fd = E:create_entity(flywalk.fire_decal)
+
+						fd.render.sprites[1].ts = store.tick_ts
+						fd.render.sprites[1].flip_x = not this.render.sprites[1].flip_x
+						fd.pos = V.vclone(this.pos)
+
+						simulation:queue_insert_entity(fd)
+					end
+
+					spawn_fire_decal()
+
+					for _ = 1, 6 do
+						U.walk(this, store.tick_length)
+					end
+
+					local ps = E:create_entity(flywalk.particles)
+
+					ps.pos = V.vclone(this.pos)
+					ps.particle_system.emit = true
+					ps.particle_system.track_id = this.id
+
+					simulation:queue_insert_entity(ps)
+
+					local distance_flag, new_decal = false, false
+
+					::flywalk_retarget::
+
+					U.set_destination(this, r.pos)
+					local flip = r.pos.x < this.pos.x and math.pi or 0
+
+					this.render.sprites[1].flip_x = r.pos.x < this.pos.x
+					this.render.sprites[1].r = V.angleTo(r.pos.x - this.pos.x, r.pos.y - this.pos.y) + flip
+
+					if new_decal then
+						spawn_fire_decal()
+
+						new_decal = false
+					end
+
+					U.animation_start(this, flywalk.animations[2], nil, store.tick_ts, true, 1)
+
+					while not V.veq(this.pos, this.motion.dest) do
+						while not this.motion.arrived do
+							if r.new and not distance_flag then
+								r.new = false
+								new_decal = true
+
+								goto flywalk_retarget
+							end
+
+							if not distance_flag and V.dist2(this.pos.x, this.pos.y, r.pos.x, r.pos.y) <= slide_distance * slide_distance then
+								distance_flag = true
+
+								U.update_max_speed(this, original_speed / 2)
+								U.animation_start(this, flywalk.animations[3], nil, store.tick_ts, false, 1)
+
+								this.render.sprites[1].r = 0
+								this.render.sprites[1].z = old_z
+							end
+
+							U.walk(this, store.tick_length)
+							coroutine.yield()
+
+							this.motion.speed.x, this.motion.speed.y = 0, 0
+						end
+
+						ps.particle_system.emit = false
+						this.pos:copy(this.motion.dest)
+					end
+
+					simulation:queue_remove_entity(ps)
+					SU.show_modifiers(store, this, true)
+					U.update_max_speed(this, original_speed)
+					this.render.sprites[1].r = 0
+					this.render.sprites[1].z = old_z
+					U.bans_remove(this.vis, F_ALL)
+					this.health.immune_to = immune
+					this.unit.marker_hidden = nil
+					this.health_bar.hidden = nil
+				elseif SU.y_hero_new_rally(store, this) then
 					break
 				end
 			end
@@ -908,6 +1015,13 @@ tt.info.portrait = "kr6_info_portraits_heroes_0011"
 tt.main_script.insert = hero_ignus_kr6_insert
 tt.main_script.update = hero_ignus_kr6_update
 tt.motion.max_speed = 87.5
+tt.flywalk = {}
+tt.flywalk.min_distance = 160
+tt.flywalk.extra_speed_factor = 7.714
+tt.flywalk.animations = {"speed_fly_in", "speed_fly_loop", "speed_fly_out"}
+tt.flywalk.fire_decal = "decal_ignus_fire_skill_c"
+tt.flywalk.particles = "ps_ignus_flywalk_trail"
+tt.flywalk.sound = "HeroIgnusFireMovement"
 tt.regen.cooldown = 1
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
