@@ -495,7 +495,7 @@ function scripts.soldier_barrack.get_info(this)
 			if a.damage_min then
 				min, max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
 				damage_type = a.damage_type
-				cooldown = a.cooldown
+				cooldown = (this.melee.cooldown and a.shared_cooldown) and this.melee.cooldown or a.cooldown
 				break
 			end
 		end
