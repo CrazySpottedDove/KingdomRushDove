@@ -71,8 +71,19 @@ local function hero_myriath_level_up(this, store)
 	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
 	this.melee.attacks[2].damage_min = ls.melee_damage_min[hl]
 	this.melee.attacks[2].damage_max = ls.melee_damage_max[hl]
-	this.ranged.attacks[1].damage_min = ls.ranged_damage_min[hl]
-	this.ranged.attacks[1].damage_max = ls.ranged_damage_max[hl]
+
+	local b = E:get_template("bullet_myriath_basic_ranged")
+	b.bullet.damage_min = ls.ranged_damage_min[hl]
+	b.bullet.damage_max = ls.ranged_damage_max[hl]
+
+	local e = E:get_template("soldier_myriath_clone")
+	local b = E:get_template("bullet_myriath_clone_basic_ranged")
+	b.bullet.damage_min = ls.ranged_damage_min[hl] * e.basic_ranged_attack_ptg
+	b.bullet.damage_max = ls.ranged_damage_max[hl] * e.basic_ranged_attack_ptg
+	e.melee.attacks[1].damage_min = this.melee.attacks[1].damage_min * e.basic_melee_attack_ptg
+	e.melee.attacks[1].damage_max = this.melee.attacks[1].damage_max * e.basic_melee_attack_ptg
+	e.timed_attacks.list[1].damage_min = this.timed_attacks.list[3].damage_min * e.skill_c_attack_ptg
+	e.timed_attacks.list[1].damage_max = this.timed_attacks.list[3].damage_max * e.skill_c_attack_ptg
 
 	upgrade_skill(this, "skill_a", function(this, s)
 		this.timed_attacks.list[1].disabled = nil
@@ -501,12 +512,6 @@ local function soldier_myriath_clone_insert(this, store)
 	local hero = find_hero(store)
 
 	this.hero_myriath = hero
-	this.melee.attacks[1].damage_min = hero.melee.attacks[1].damage_min * this.basic_melee_attack_ptg
-	this.melee.attacks[1].damage_max = hero.melee.attacks[1].damage_max * this.basic_melee_attack_ptg
-	this.ranged.attacks[1].damage_min = hero.ranged.attacks[1].damage_min * this.basic_ranged_attack_ptg
-	this.ranged.attacks[1].damage_max = hero.ranged.attacks[1].damage_max * this.basic_ranged_attack_ptg
-	this.timed_attacks.list[1].damage_min = hero.timed_attacks.list[3].damage_min * this.skill_c_attack_ptg
-	this.timed_attacks.list[1].damage_max = hero.timed_attacks.list[3].damage_max * this.skill_c_attack_ptg
 	this.nav_rally.pos = V.vclone(this.pos)
 	this.melee.order = U.attack_order(this.melee.attacks)
 	this.ranged.order = U.attack_order(this.ranged.attacks)
@@ -1035,13 +1040,12 @@ local tt
 tt = RT("hero_myriath", "hero")
 AC(tt, "melee", "ranged", "timed_attacks", "dodge")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.hp_max = {262, 276, 292, 306, 321, 336, 351, 365, 379, 394}
-tt.hero.level_stats.melee_damage_min = {23, 25, 28, 30, 32, 37, 39, 41, 44, 46}
-tt.hero.level_stats.melee_damage_max = {32, 39, 43, 47, 49, 54, 57, 61, 64, 68}
+tt.hero.level_stats.hp_max = {276, 292, 306, 321, 336, 351, 365, 379, 394, 400}
+tt.hero.level_stats.melee_damage_min = {25, 28, 30, 32, 37, 39, 41, 44, 46, 49}
+tt.hero.level_stats.melee_damage_max = {39, 43, 47, 49, 54, 57, 61, 64, 68, 71}
 tt.hero.level_stats.ranged_damage_min = {21, 23, 25, 28, 30, 32, 37, 39, 41, 44}
 tt.hero.level_stats.ranged_damage_max = {30, 32, 39, 43, 47, 49, 54, 57, 61, 64}
 tt.hero.skills.skill_a = CC("hero_skill")
-tt.hero.skills.skill_a.key = "FORWARD_ILLUSION"
 tt.hero.skills.skill_a.cooldown = 6
 tt.hero.skills.skill_a.damage_min = {21, 37, 54}
 tt.hero.skills.skill_a.damage_max = {30, 54, 80}
@@ -1053,7 +1057,6 @@ tt.hero.skills.skill_a.xp_level_steps = {
 	[8] = 3
 }
 tt.hero.skills.skill_b = CC("hero_skill")
-tt.hero.skills.skill_b.key = "GUARDING_DECOY"
 tt.hero.skills.skill_b.cooldown = {16, 13, 10}
 tt.hero.skills.skill_b.xp_gain = {70, 140, 210}
 tt.hero.skills.skill_b.xp_level_steps = {
@@ -1062,7 +1065,6 @@ tt.hero.skills.skill_b.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.skill_c = CC("hero_skill")
-tt.hero.skills.skill_c.key = "MIRROR_MISSILES"
 tt.hero.skills.skill_c.cooldown = 12
 tt.hero.skills.skill_c.damage_min = {8, 12, 16}
 tt.hero.skills.skill_c.damage_max = {10, 15, 20}
@@ -1074,7 +1076,6 @@ tt.hero.skills.skill_c.xp_level_steps = {
 	[10] = 3
 }
 tt.hero.skills.ultimate = CC("hero_skill")
-tt.hero.skills.ultimate.key = "I_AM_LEGION"
 tt.hero.skills.ultimate.cooldown = 40
 tt.hero.skills.ultimate.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.ultimate.damage_min = 87
@@ -1085,14 +1086,12 @@ tt.hero.skills.ultimate.xp_level_steps = {
 	[5] = 1
 }
 tt.hero.skills.talent_1 = CC("hero_skill")
-tt.hero.skills.talent_1.key = "SOLID_LIGHT"
 tt.hero.skills.talent_1.health_inc = 25
 tt.hero.skills.talent_1.duration_inc = 2
 tt.hero.skills.talent_1.xp_level_steps = {
 	[1] = 1
 }
 tt.hero.skills.talent_2 = CC("hero_skill")
-tt.hero.skills.talent_2.key = "LAST_EFFORT"
 tt.hero.skills.talent_2.aura = "aura_myriath_talent_2_area_damage"
 tt.hero.skills.talent_2.xp_level_steps = {
 	[1] = 1
@@ -1220,7 +1219,7 @@ tt = RT("soldier_myriath_clone", "soldier_militia")
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.nav_grid = nil
 tt.health.armor = 0
-tt.health.hp_max = 124
+tt.health.hp_max = 150
 tt.health_bar.offset = vec_2(0, 45)
 tt.health_bar.draw_order = -1
 tt.health_bar.sort_y_offset = -161
@@ -1261,8 +1260,8 @@ tt.timed_attacks.list[1].animation_in = "skill_3_in"
 tt.timed_attacks.list[1].animation_out = "in"
 tt.death_sfx = "HeroGeminaIllusionDeath"
 tt.death_explosion_sfx = "HeroGeminaDeathExplosion"
-tt.basic_melee_attack_ptg = 0.68
-tt.basic_ranged_attack_ptg = 0.68
+tt.basic_melee_attack_ptg = 0.8
+tt.basic_ranged_attack_ptg = 0.8
 tt.skill_c_attack_ptg = 1
 tt.duration = 6
 tt.death_anim = "out"
