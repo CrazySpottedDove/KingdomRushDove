@@ -265,13 +265,13 @@ local function hero_connor_update(this, store)
 
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
-	saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor or 1)
-	sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor or 1)
-	sca.ts = store.tick_ts - sca.cooldown * (this.unit.cooldown_factor or 1)
-	ua.ts = store.tick_ts - ua.cooldown * (this.unit.cooldown_factor or 1)
+	saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor)
+	sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor)
+	sca.ts = store.tick_ts - sca.cooldown * (this.unit.cooldown_factor)
+	ua.ts = store.tick_ts - ua.cooldown * (this.unit.cooldown_factor)
 
 	local sba_ts = sba.ts
-	local st2_ts = store.tick_ts - st2.cooldown * (this.unit.cooldown_factor or 1) + st2.starting_cd
+	local st2_ts = store.tick_ts - st2.cooldown * (this.unit.cooldown_factor) + st2.starting_cd
 	local ready_to_block = false
 	local block_started_ts = 0
 	local blocked = false
@@ -324,7 +324,7 @@ local function hero_connor_update(this, store)
 
 	while true do
 		if h.dead then
-			if st2.level > 0 and store.tick_ts - st2_ts > st2.cooldown * (this.unit.cooldown_factor or 1) and math.random() < st2.chance_to_revive then
+			if st2.level > 0 and store.tick_ts - st2_ts > st2.cooldown * (this.unit.cooldown_factor) and math.random() < st2.chance_to_revive then
 				h.dead = false
 				this.health_bar.hidden = false
 				this.ui.can_click = true
@@ -354,7 +354,7 @@ local function hero_connor_update(this, store)
 			end
 
 			if not in_ult and not sba.disabled then
-				if not ready_to_block and store.tick_ts - sba_ts > sba.cooldown * (this.unit.cooldown_factor or 1) and this.soldier.target_id ~= nil and this.motion.arrived then
+				if not ready_to_block and store.tick_ts - sba_ts > sba.cooldown * (this.unit.cooldown_factor) and this.soldier.target_id ~= nil and this.motion.arrived then
 					ready_to_block = true
 					block_started_ts = store.tick_ts
 					this.dodge.chance = 1

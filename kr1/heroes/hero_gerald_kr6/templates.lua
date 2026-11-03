@@ -191,7 +191,7 @@ local function hero_gerald_kr6_update(this, store)
 
 	this.health_bar.hidden = false
 
-	local cdf = this.unit.cooldown_factor or 1
+	local cdf = this.unit.cooldown_factor
 
 	inspire.ts = store.tick_ts - inspire.cooldown * cdf
 	shield.ts = store.tick_ts - shield.cooldown * cdf

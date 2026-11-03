@@ -393,10 +393,10 @@ local function hero_rhodes_update(this, store)
 
 	this.health_bar.hidden = false
 
-	saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor or 1)
-	sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor or 1)
-	sca.ts = store.tick_ts - sca.cooldown * (this.unit.cooldown_factor or 1)
-	ua.ts = store.tick_ts - ua.cooldown * (this.unit.cooldown_factor or 1)
+	saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor)
+	sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor)
+	sca.ts = store.tick_ts - sca.cooldown * (this.unit.cooldown_factor)
+	ua.ts = store.tick_ts - ua.cooldown * (this.unit.cooldown_factor)
 
 	local function trigger_immune_to_stuns()
 		this.unit.ignore_stun = true
@@ -620,7 +620,7 @@ local function hero_rhodes_update(this, store)
 					about_to_block = false
 				end
 
-				if delayed_attack_ult and store.tick_ts - sca.ts > sca.cooldown * (this.unit.cooldown_factor or 1) then
+				if delayed_attack_ult and store.tick_ts - sca.ts > sca.cooldown * (this.unit.cooldown_factor) then
 					delayed_attack_ult = false
 				end
 
@@ -634,7 +634,7 @@ local function hero_rhodes_update(this, store)
 					if not target or #targets == 0 then
 						delayed_attack_ult = true
 
-						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 
 						goto continue
 					end
@@ -645,7 +645,7 @@ local function hero_rhodes_update(this, store)
 					if not ray_targets or #ray_targets == 0 then
 						delayed_attack_ult = true
 
-						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 
 						goto continue
 					end
@@ -655,7 +655,7 @@ local function hero_rhodes_update(this, store)
 					if not path then
 						delayed_attack_ult = true
 
-						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 
 						goto continue
 					end
@@ -693,7 +693,7 @@ local function hero_rhodes_update(this, store)
 
 						delayed_attack_ult = true
 
-						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 						U.animation_start(this, a.animation_end, nil, store.tick_ts, false, 1)
 						SU.y_hero_animation_wait(this)
 
@@ -780,7 +780,7 @@ local function hero_rhodes_update(this, store)
 					local path = targets and find_most_populated_path_that_we_are_on(targets, a.min_targets) or nil
 
 					if not path then
-						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 					else
 						U.animation_start(this, a.animation_start, nil, store.tick_ts, false, 1)
 						S:queue(a.sound_start)
@@ -802,7 +802,7 @@ local function hero_rhodes_update(this, store)
 						end
 
 						if not path then
-							a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+							a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 							U.animation_start(this, a.animation_end, nil, store.tick_ts, false, 1)
 							S:queue(a.sound_end)
 							SU.y_hero_animation_wait(this)
@@ -860,7 +860,7 @@ local function hero_rhodes_update(this, store)
 					local trigger_target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 					if not targets or #targets == 0 then
-						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 					else
 						local target_pos = V.vclone(trigger_target.pos)
 

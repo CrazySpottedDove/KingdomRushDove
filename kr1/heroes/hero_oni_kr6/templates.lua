@@ -23,7 +23,7 @@ local THROTTLE_CD = 1
 
 local function apply_delayed_cooldowns(this, store, attacks)
 	for _, a in ipairs(attacks) do
-		local cooldown = a.cooldown and a.cooldown * (this.unit.cooldown_factor or 1)
+		local cooldown = a.cooldown and a.cooldown * (this.unit.cooldown_factor)
 
 		if a.throttle_cooldown_on_skill_use and cooldown and store.tick_ts - a.ts >= cooldown then
 			a.ts = store.tick_ts - cooldown + THROTTLE_CD
@@ -234,7 +234,7 @@ local function hero_oni_kr6_level_up(this, store, initial)
 		this.melee.attacks[3].damage_max = s.damage_max[s.level]
 
 		if s.level == 1 then
-			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1)
+			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor)
 		end
 	end)
 
@@ -244,7 +244,7 @@ local function hero_oni_kr6_level_up(this, store, initial)
 		a.disabled = nil
 
 		if s.level == 1 then
-			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1)
+			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor)
 		end
 	end)
 
@@ -254,7 +254,7 @@ local function hero_oni_kr6_level_up(this, store, initial)
 		a.disabled = nil
 
 		if s.level == 1 then
-			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1)
+			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor)
 			this.end_skill_c = false
 		end
 	end)
@@ -263,7 +263,7 @@ local function hero_oni_kr6_level_up(this, store, initial)
 		local a = this.timed_attacks.list[4]
 
 		a.disabled = nil
-		a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1)
+		a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor)
 	end)
 
 	local t2 = this.hero.skills.talent_2
@@ -373,7 +373,7 @@ local function hero_oni_kr6_update(this, store)
 				local _, triggers = U.find_foremost_enemy(store, this.pos, 0, ult.max_range, ult.prediction, ult.flags, ult.bans)
 
 				if not triggers or #triggers < ult.min_targets then
-					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					S:queue(ult.sound)
 					S:queue(ult.taunt)
@@ -491,7 +491,7 @@ local function hero_oni_kr6_update(this, store)
 				local target = U.find_foremost_enemy(store, this.pos, sc.min_detection_range, sc.detection_range, sc.prediction, sc.flags, sc.bans)
 
 				if not target then
-					sc.ts = store.tick_ts - sc.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					sc.ts = store.tick_ts - sc.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					U.animation_start(this, sc.animation_in, this.pos.x > target.pos.x, store.tick_ts, false, 1)
 

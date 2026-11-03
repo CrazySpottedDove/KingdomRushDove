@@ -24,7 +24,7 @@ local THROTTLE_CD = 1
 
 local function apply_delayed_cooldowns(this, store, attacks)
 	for _, a in ipairs(attacks) do
-		local cooldown = a.cooldown and a.cooldown * (this.unit.cooldown_factor or 1)
+		local cooldown = a.cooldown and a.cooldown * (this.unit.cooldown_factor)
 
 		if a.throttle_cooldown_on_skill_use and cooldown and store.tick_ts - a.ts >= cooldown then
 			a.ts = store.tick_ts - cooldown + THROTTLE_CD
@@ -412,7 +412,7 @@ local function hero_ignus_kr6_level_up(this, store, initial)
 		a.disabled = nil
 
 		if s.level == 1 then
-			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1)
+			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor)
 		end
 	end)
 	upgrade_skill(this, "skill_b", function(this, s)
@@ -421,7 +421,7 @@ local function hero_ignus_kr6_level_up(this, store, initial)
 		a.disabled = nil
 
 		if s.level == 1 then
-			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1)
+			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor)
 		end
 	end)
 	upgrade_skill(this, "skill_c", function(this, s)
@@ -430,7 +430,7 @@ local function hero_ignus_kr6_level_up(this, store, initial)
 		a.disabled = nil
 
 		if s.level == 1 then
-			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1)
+			a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor)
 			this.end_skill_c = false
 		end
 	end)
@@ -438,7 +438,7 @@ local function hero_ignus_kr6_level_up(this, store, initial)
 		local a = this.timed_attacks.list[4]
 
 		a.disabled = nil
-		a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1)
+		a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor)
 	end)
 	upgrade_skill(this, "talent_1", function(this, s)
 		this.hero.skills.talent_1.disabled = nil
@@ -635,7 +635,7 @@ local function hero_ignus_kr6_update(this, store)
 				local targets = U.find_enemies_in_range(store, this.pos, 0, ultimate.max_range, 0, 0)
 
 				if not targets or #targets < ultimate.min_targets or not this.motion.arrived then
-					ultimate.ts = store.tick_ts - ultimate.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					ultimate.ts = store.tick_ts - ultimate.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					local selected_e = store.entities[this.soldier.target_id] or targets[1]
 
@@ -719,7 +719,7 @@ local function hero_ignus_kr6_update(this, store)
 				local _, targets = U.find_foremost_enemy(store, this.pos, 0, sb.max_range, fts(10), 0, 0)
 
 				if not targets or #targets < sb.min_targets or not this.motion.arrived then
-					sb.ts = store.tick_ts - sb.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					sb.ts = store.tick_ts - sb.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					S:queue(sb.sound)
 					U.animation_start(this, sb.animation, nil, store.tick_ts, false, 1)
@@ -765,7 +765,7 @@ local function hero_ignus_kr6_update(this, store)
 				end)
 
 				if not t or not this.motion.arrived then
-					sc.ts = store.tick_ts - sc.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					sc.ts = store.tick_ts - sc.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					U.animation_start(this, sc.animation_in, t.pos.x < this.pos.x, store.tick_ts, false, 1)
 
@@ -872,7 +872,7 @@ local function hero_ignus_kr6_update(this, store)
 				local target, _, pred_pos = U.find_foremost_enemy(store, this.pos, sa.min_range, sa.max_range, sa.prediction, sa.vis_flags, sa.vis_bans)
 
 				if not target or not this.motion.arrived then
-					sa.ts = store.tick_ts - sa.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					sa.ts = store.tick_ts - sa.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					this.render.sprites[1].flip_x = target.pos.x < this.pos.x
 					U.animation_start(this, sa.animation, nil, store.tick_ts, false, 1)

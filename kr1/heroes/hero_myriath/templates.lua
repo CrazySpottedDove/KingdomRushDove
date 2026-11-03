@@ -35,7 +35,7 @@ end
 local function hero_myriath_can_dodge(store, this, ranged_attack, attack, enemy)
 	local skb = this.timed_attacks.list[2]
 
-	if skb and not skb.disabled and store.tick_ts - skb.ts > skb.cooldown * (this.unit.cooldown_factor or 1) then
+	if skb and not skb.disabled and store.tick_ts - skb.ts > skb.cooldown * (this.unit.cooldown_factor) then
 		if enemy and enemy.health and not enemy.health.dead then
 			local enp = enemy.nav_path
 			local new_ni = enp.ni
@@ -140,10 +140,10 @@ local function hero_myriath_update(this, store)
 	local pow_c = this.hero.skills.skill_c
 	local ult = this.timed_attacks.list[4]
 	local ultimate = this.hero.skills.ultimate
-	ska.ts = store.tick_ts - ska.cooldown * (this.unit.cooldown_factor or 1)
-	skb.ts = store.tick_ts - skb.cooldown * (this.unit.cooldown_factor or 1)
-	skc.ts = store.tick_ts - skc.cooldown * (this.unit.cooldown_factor or 1)
-	ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1)
+	ska.ts = store.tick_ts - ska.cooldown * (this.unit.cooldown_factor)
+	skb.ts = store.tick_ts - skb.cooldown * (this.unit.cooldown_factor)
+	skc.ts = store.tick_ts - skc.cooldown * (this.unit.cooldown_factor)
+	ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor)
 
 	local function add_clone_id(id)
 		table.insert(clone_ids, id)
@@ -262,12 +262,12 @@ local function hero_myriath_update(this, store)
 				end)
 
 				if not targets or #targets < ult.min_targets then
-					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					local paths = sort_paths_by_distance(find_most_populated_path(targets), ult.distance)
 
 					if #paths == 0 then
-						ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+						ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor) + fts(10)
 					else
 						local n = P:nearest_nodes(this.pos.x, this.pos.y, {paths[1][1]})
 
@@ -363,7 +363,7 @@ local function hero_myriath_update(this, store)
 				local target = store.entities[this.soldier.target_id]
 
 				if not target or not this.motion.arrived or target.health.dead then
-					skc.ts = store.tick_ts - skc.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					skc.ts = store.tick_ts - skc.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					h.ignore_damage = true
 					this.health_bar.hidden = true
@@ -443,7 +443,7 @@ local function hero_myriath_update(this, store)
 				end)
 
 				if not target or #targets == 0 then
-					ska.ts = store.tick_ts - ska.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					ska.ts = store.tick_ts - ska.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					this.render.sprites[1].flip_x = target.pos.x < this.pos.x
 
@@ -752,10 +752,8 @@ local function bullet_myriath_basic_ranged_update(this, store)
 	end
 
 	if target and not target.health.dead then
-		local source = store.entities[b.source_id]
-		local ra = source.ranged.attacks[1]
-		local value = (math.random(ra.damage_min, ra.damage_max) + source.unit.damage_buff) * b.damage_factor
-		local d = E.assign_damage(b.damage_type, math.max(1, value), this.id, target.id)
+		local value = math.random(b.damage_min, b.damage_max) * b.damage_factor
+		local d = E.assign_damage(b.damage_type, value, this.id, target.id)
 
 		d.reduce_magic_armor = b.reduce_magic_armor
 		d.xp_dest_id = b.xp_dest_id
