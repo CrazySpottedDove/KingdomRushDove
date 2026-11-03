@@ -508,7 +508,7 @@ local function hero_ashbite_update(this, store)
 			local enemies = find_targets_ultimate(a)
 
 			if not enemies or #enemies < a.min_targets then
-				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 			else
 				U.animation_start(this, a.animation, nil, store.tick_ts, false)
 				S:queue(a.sound)
@@ -563,7 +563,7 @@ local function hero_ashbite_update(this, store)
 			end)
 
 			if not target then
-				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 			else
 				local c = E:create_entity(a.dust_c)
 
@@ -627,7 +627,7 @@ local function hero_ashbite_update(this, store)
 			end)
 
 			if not enemies or #enemies == 0 then
-				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 			else
 				table.sort(enemies, function(a1, a2)
 					return a1.health.hp_max > a2.health.hp_max
@@ -699,7 +699,7 @@ local function hero_ashbite_update(this, store)
 			end)
 
 			if not targets or #targets < a.min_targets then
-				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 			else
 				local target_pos = target.pos
 
@@ -952,7 +952,7 @@ tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].bullet = "bullet_ashbite"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(46, 57), vec_2(50, 57)}
 tt.ranged.attacks[1].cooldown = 2
-tt.ranged.attacks[1].min_range = 50
+tt.ranged.attacks[1].min_range = 0
 tt.ranged.attacks[1].max_range = 220
 tt.ranged.attacks[1].shoot_time = fts(14)
 tt.ranged.attacks[1].sync_animation = true
@@ -988,7 +988,7 @@ tt.timed_attacks.list[1].animation = "breath"
 tt.timed_attacks.list[1].cooldown = 16
 tt.timed_attacks.list[1].ignore_offset = vec_2(0, 110)
 tt.timed_attacks.list[1].radius = 125
-tt.timed_attacks.list[1].min_range = 50
+tt.timed_attacks.list[1].min_range = 0
 tt.timed_attacks.list[1].max_range = 150
 tt.timed_attacks.list[1].height_tolerance = 20
 tt.timed_attacks.list[1].offset = vec_2(37, -6)
@@ -1009,7 +1009,7 @@ tt.timed_attacks.list[2].animation = "sneeze"
 tt.timed_attacks.list[2].cooldown = 20
 tt.timed_attacks.list[2].ignore_offset = vec_2(0, 110)
 tt.timed_attacks.list[2].radius = 125
-tt.timed_attacks.list[2].min_range = 50
+tt.timed_attacks.list[2].min_range = 0
 tt.timed_attacks.list[2].max_range = 200
 tt.timed_attacks.list[2].node_prediction = fts(15)
 tt.timed_attacks.list[2].offset = vec_2(37, -6)
@@ -1049,7 +1049,7 @@ tt.timed_attacks.list[4].disabled = true
 tt.timed_attacks.list[4].damage_min = 64
 tt.timed_attacks.list[4].damage_max = 96
 tt.timed_attacks.list[4].min_targets = 3
-tt.timed_attacks.list[4].min_range = 100
+tt.timed_attacks.list[4].min_range = 0
 tt.timed_attacks.list[4].max_range = 300
 tt.timed_attacks.list[4].node_prediction = fts(35)
 tt.timed_attacks.list[4].cast_time = fts(15)

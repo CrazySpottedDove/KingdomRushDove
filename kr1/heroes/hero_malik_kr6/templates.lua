@@ -470,10 +470,10 @@ local function hero_malik_update(this, store)
 
 	U.y_animation_play(this, "lvlup", nil, store.tick_ts, 1)
 
-	saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor or 1)
-	sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor or 1)
-	sca.ts = store.tick_ts - sca.cooldown * (this.unit.cooldown_factor or 1)
-	ua.ts = store.tick_ts - ua.cooldown * (this.unit.cooldown_factor or 1)
+	saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor)
+	sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor)
+	sca.ts = store.tick_ts - sca.cooldown * (this.unit.cooldown_factor)
+	ua.ts = store.tick_ts - ua.cooldown * (this.unit.cooldown_factor)
 
 	if skills.talent_2.level > 0 and not this.hero.talent_2_aura then
 		local aura = E:create_entity(skills.talent_2.aura)
@@ -533,7 +533,7 @@ local function hero_malik_update(this, store)
 				local enemies = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
-					a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					S:queue(a.sound_cast)
 					S:queue(a.sound_loop, {
@@ -683,7 +683,7 @@ local function hero_malik_update(this, store)
 				local enemies = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
-					a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+					a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					U.animation_start(this, a.animation, nil, store.tick_ts, false)
 					S:queue(a.sound, {

@@ -355,16 +355,15 @@ local function hero_zefira_update(this, store)
 	local talent_1 = skills.talent_1
 	local ultimate = this.timed_attacks.list[1]
 	local brk, sta
-	local cdf = this.unit.cooldown_factor or 1
 
 	U.y_animation_play(this, "level_up", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
 
-	this.melee.attacks[1].ts = store.tick_ts - this.melee.attacks[1].cooldown * cdf
-	skill_b.ts = store.tick_ts - skill_b.cooldown * cdf
-	skill_c.ts = store.tick_ts - skill_c.cooldown * cdf
-	ultimate.ts = store.tick_ts - ultimate.cooldown * cdf
+	this.melee.attacks[1].ts = store.tick_ts - this.melee.attacks[1].cooldown * (this.unit.cooldown_factor)
+	skill_b.ts = store.tick_ts - skill_b.cooldown * (this.unit.cooldown_factor)
+	skill_c.ts = store.tick_ts - skill_c.cooldown * (this.unit.cooldown_factor)
+	ultimate.ts = store.tick_ts - ultimate.cooldown * (this.unit.cooldown_factor)
 
 	if talent_1.level > 0 and not this.hero.talent_1_aura then
 		local aura = E:create_entity(talent_1.aura)
@@ -409,7 +408,7 @@ local function hero_zefira_update(this, store)
 				U.y_animation_play(this, "level_up", nil, store.tick_ts, 1)
 			end
 
-			if skill_b.level > 0 and ready_to_use_skill(skill_b, store, cdf) and this.soldier.target_id and this.motion.arrived then
+			if skill_b.level > 0 and ready_to_use_skill(skill_b, store, this.unit.cooldown_factor) and this.soldier.target_id and this.motion.arrived then
 				local target = store.entities[this.soldier.target_id]
 
 				if target and not target.health.dead then
@@ -431,7 +430,7 @@ local function hero_zefira_update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(ultimate, store, cdf) then
+			if ready_to_use_skill(ultimate, store, this.unit.cooldown_factor) then
 				local a = ultimate
 				local _, enemies = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, nil, a.vis_flags, a.vis_bans)
 				local targets = {}

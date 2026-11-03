@@ -412,7 +412,7 @@ local function hero_drakkan_skill_a(this, store, attack, skill)
 	end
 
 	if not targets or #targets < attack.min_targets and magic_targets == 0 then
-		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor) + fts(10)
 
 		return
 	end
@@ -465,7 +465,7 @@ local function hero_drakkan_skill_b(this, store, attack, skill)
 	local _, targets = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans)
 
 	if not targets or #targets < attack.min_targets then
-		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor) + fts(10)
 
 		return
 	end
@@ -537,7 +537,7 @@ local function hero_drakkan_skill_c(this, store, attack, skill)
 	local targets = U.find_enemies_in_range(store, this.pos, 0, attack.range, attack.vis_flags, attack.vis_bans)
 
 	if not targets or #targets == 0 then
-		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor) + fts(10)
 
 		return
 	end
@@ -587,7 +587,7 @@ local function hero_drakkan_ultimate(this, store, attack, skill, start_y)
 	local targets = find_ultimate_targets(this, store, attack)
 
 	if not targets then
-		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1) + fts(10)
+		attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor) + fts(10)
 
 		return
 	end
@@ -654,22 +654,22 @@ local function hero_drakkan_update(this, store)
 		U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts - fts(4), this.idle_flip.loop, nil, true)
 	end
 
-	attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor or 1)
+	attack.ts = store.tick_ts - attack.cooldown * (this.unit.cooldown_factor)
 
 	if skill_a and not skill_a.disabled then
-		skill_a.ts = store.tick_ts - skill_a.cooldown * (this.unit.cooldown_factor or 1)
+		skill_a.ts = store.tick_ts - skill_a.cooldown * (this.unit.cooldown_factor)
 	end
 
 	if skill_b and not skill_b.disabled then
-		skill_b.ts = store.tick_ts - skill_b.cooldown * (this.unit.cooldown_factor or 1)
+		skill_b.ts = store.tick_ts - skill_b.cooldown * (this.unit.cooldown_factor)
 	end
 
 	if skill_c and not skill_c.disabled then
-		skill_c.ts = store.tick_ts - skill_c.cooldown * (this.unit.cooldown_factor or 1)
+		skill_c.ts = store.tick_ts - skill_c.cooldown * (this.unit.cooldown_factor)
 	end
 
 	if ultimate and not ultimate.disabled then
-		ultimate.ts = store.tick_ts - ultimate.cooldown * (this.unit.cooldown_factor or 1)
+		ultimate.ts = store.tick_ts - ultimate.cooldown * (this.unit.cooldown_factor)
 	end
 
 	while true do
@@ -724,7 +724,7 @@ local function hero_drakkan_update(this, store)
 			hero_drakkan_skill_a(this, store, skill_a, skills.skill_a)
 		end
 
-		if store.tick_ts - attack.ts >= attack.cooldown * (this.unit.cooldown_factor or 1) then
+		if store.tick_ts - attack.ts >= attack.cooldown * (this.unit.cooldown_factor) then
 			hero_drakkan_basic_attack(this, store, attack)
 		end
 
