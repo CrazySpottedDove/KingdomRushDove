@@ -3582,24 +3582,38 @@ end
 function PluginManagerView:save()
 	local base_cfg = plugin_paths.load_main_config()
 	base_cfg.enabled = self.global_toggle.value
-	local ok = storage:write_lua(plugin_paths.MAIN_CONFIG_PATH, base_cfg)
-	if not ok then
-		log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), plugin_paths.MAIN_CONFIG_PATH)
+
+	if base_cfg.enabled ~= self._saved_state.global_enabled then
+		local ok = storage:write_lua(plugin_paths.MAIN_CONFIG_PATH, base_cfg)
+		if not ok then
+			log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), plugin_paths.MAIN_CONFIG_PATH)
+		end
 	end
+
+	local now = os.time()
 
 	for _i, plugin_data in ipairs(self.local_plugins) do
 		local cfg = plugin_data.config or {}
-		local out = {}
-		for k, v in pairs(cfg) do
-			out[k] = v
-		end
-		out.enabled = cfg.enabled
-		if out.enabled then
-			out.last_used_at = os.time()
-		end
-		local wok = storage:write_lua(plugin_paths.metadata_path(plugin_data.config.entry), out)
-		if not wok then
-			log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), plugin_paths.metadata_path(plugin_data.config.entry))
+		local entry = plugin_data.config.entry
+		local saved_enabled = self._saved_state.plugin_enabled[entry]
+		local pending = self._pending.plugins[entry]
+		local enabled_changed = saved_enabled == nil or saved_enabled ~= cfg.enabled
+		local config_changed = pending and pending.config_changed
+
+		if enabled_changed or config_changed then
+			local out = {}
+			for k, v in pairs(cfg) do
+				out[k] = v
+			end
+			out.enabled = cfg.enabled
+			if out.enabled then
+				out.last_used_at = now
+				cfg.last_used_at = now
+			end
+			local wok = storage:write_lua(plugin_paths.metadata_path(entry), out)
+			if not wok then
+				log.error(_("PLUGIN_MGR_LOG_WRITE_FAILED"), plugin_paths.metadata_path(entry))
+			end
 		end
 	end
 
