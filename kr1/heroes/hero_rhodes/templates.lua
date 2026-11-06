@@ -195,11 +195,14 @@ end
 local function aura_rhodes_skill_c_update(this, store)
 	local first_hit_ts
 	local last_hit_ts = store.tick_ts - this.aura.cycle_time
-	local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.pi}, {1})
+	local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.pi}, {this.spi or 1})
 	local pi, spi, ni = unpack(nearest_nodes[1])
 	local starting_ni = ni
 	local distSq = 0
-	local is_backwards = true
+	local charge_dir = this.charge_dir or -1
+	local dir = charge_dir
+	local node_count = #P:path(pi, spi)
+	local reversed = false
 	local origin = V.vclone(this.pos)
 	local target_pos = P:node_pos(pi, spi, ni)
 	local sound_flag = true
@@ -273,11 +276,11 @@ local function aura_rhodes_skill_c_update(this, store)
 		end
 	end
 
-	local function run(is_backwards)
+	local function run(dir)
 		distSq = V.dist2(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
 
 		if distSq < 25 then
-			ni = ni + 3 * (is_backwards and -1 or 1)
+			ni = ni + 3 * dir
 			target_pos = P:node_pos(pi, spi, ni)
 		end
 
@@ -291,11 +294,14 @@ local function aura_rhodes_skill_c_update(this, store)
 			last_hit_ts = 1e+99
 		end
 
-		if is_backwards and starting_ni - ni > this.max_nodes or ni <= 3 then
-			is_backwards = false
+		local offset = (ni - starting_ni) * charge_dir
+
+		if not reversed and (offset >= this.max_nodes or ni <= 3 or ni > node_count) then
+			reversed = true
+			dir = -charge_dir
 		end
 
-		if not is_backwards and starting_ni - ni < 3 then
+		if reversed and offset < 3 then
 			break
 		end
 
@@ -310,7 +316,7 @@ local function aura_rhodes_skill_c_update(this, store)
 			hit_enemies()
 		end
 
-		run(is_backwards)
+		run(dir)
 
 		::continue::
 
@@ -842,10 +848,31 @@ local function hero_rhodes_update(this, store)
 								trigger_immune_to_stuns()
 							end
 
+							local charge_target
+
+							for _, enemy in ipairs(targets) do
+								if not enemy.health.dead and enemy.nav_path.pi == path and (not charge_target or enemy.nav_path.ni > charge_target.nav_path.ni) then
+									charge_target = enemy
+								end
+							end
+
+							local charge_dir = -1
+							local charge_spi = 1
+
+							if charge_target then
+								charge_spi = charge_target.nav_path.spi
+
+								local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {path}, {charge_spi})
+
+								charge_dir = charge_target.nav_path.ni >= nodes[1][3] and 1 or -1
+							end
+
 							local top = E:create_entity(a.aura)
 
 							top.pos.x, top.pos.y = this.pos.x, this.pos.y
 							top.pi = path
+							top.spi = charge_spi
+							top.charge_dir = charge_dir
 							top.rhodes = this
 							top.damage_min = sc.damage_min[sc.level]
 							top.damage_max = sc.damage_max[sc.level]
@@ -1007,8 +1034,8 @@ tt = RT("hero_rhodes", "hero")
 AC(tt, "melee", "timed_attacks")
 tt.hero.level_stats.armor = {0.23, 0.26, 0.29, 0.32, 0.35, 0.38, 0.41, 0.44, 0.47, 0.5}
 tt.hero.level_stats.hp_max = {470, 534, 603, 665, 730, 795, 861, 928, 991, 1055}
-tt.hero.level_stats.melee_damage_min = {27, 30, 32, 33, 38, 42, 44, 49, 51, 56}
-tt.hero.level_stats.melee_damage_max = {38, 42, 49, 53, 59, 60, 65, 71, 75, 82}
+tt.hero.level_stats.melee_damage_min = {30, 32, 33, 38, 42, 44, 49, 51, 56, 60}
+tt.hero.level_stats.melee_damage_max = {42, 49, 53, 59, 60, 65, 71, 75, 82, 90}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = {10, 9, 8}
 tt.hero.skills.skill_a.damage_min = {50, 90, 130}
@@ -1023,7 +1050,7 @@ tt.hero.skills.skill_a.xp_level_steps = {
 tt.hero.skills.skill_b = CC("hero_skill")
 tt.hero.skills.skill_b.cooldown = 22
 tt.hero.skills.skill_b.duration = 6
-tt.hero.skills.skill_b.hp_heal_ptg = {0.8, 0.95, 0.95}
+tt.hero.skills.skill_b.hp_heal_ptg = {0.8, 0.95, 1}
 tt.hero.skills.skill_b.armor_inc = {0.3, 0.4, 0.5}
 tt.hero.skills.skill_b.trigger_hp_ptg = 0.7
 tt.hero.skills.skill_b.time_blocking_to_trigger = 5
@@ -1035,18 +1062,18 @@ tt.hero.skills.skill_b.xp_level_steps = {
 }
 tt.hero.skills.skill_c = CC("hero_skill")
 tt.hero.skills.skill_c.cooldown = 16
-tt.hero.skills.skill_c.damage_min = {30, 30, 33}
-tt.hero.skills.skill_c.damage_max = {44, 44, 53}
-tt.hero.skills.skill_c.slow_factor = {0.8, 0.7, 0.7}
+tt.hero.skills.skill_c.damage_min = {30, 45, 60}
+tt.hero.skills.skill_c.damage_max = {48, 64, 80}
+tt.hero.skills.skill_c.slow_factor = {0.8, 0.7, 0.6}
 tt.hero.skills.skill_c.xp_gain = {80, 160, 240}
 tt.hero.skills.skill_c.xp_level_steps = {
-	[4] = 1,
-	[7] = 2,
-	[10] = 3
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
 }
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.cooldown = 35
-tt.hero.skills.ultimate.xp_gain = {140}
+tt.hero.skills.ultimate.xp_gain = {300}
 tt.hero.skills.ultimate.xp_level_steps = {
 	[5] = 1
 }
@@ -1068,7 +1095,7 @@ tt.hero.respawn_animation = "level_up"
 tt.info.hero_portrait = "kr6_hero_portraits_0007"
 tt.info.portrait = "kr6_info_portraits_heroes_0007"
 tt.main_script.update = hero_rhodes_update
-tt.motion.max_speed = 40
+tt.motion.max_speed = 45
 tt.regen.cooldown = 1
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk"}
