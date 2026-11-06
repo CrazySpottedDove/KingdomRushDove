@@ -18,27 +18,6 @@ local update_hp = HU.update_hp
 local queue_damage = U.queue_damage
 local fts = U.fts
 
----天赋生效时的技能伤害倍率
----@param this table 英雄实体
----@return number
-local function connor_skill_factor(this)
-	local t = this.hero.skills.talent_1
-
-	if t.level > 0 and this.health.hp <= this.health.hp_max * t.hp_ptg_to_trigger then
-		return t.skill_damage_factor
-	end
-
-	return 1
-end
-
----按英雄实时伤害属性结算技能伤害
----@param this table 英雄实体
----@param base number 基础伤害
----@return number
-local function connor_skill_damage(this, base)
-	return math.ceil((base + this.unit.damage_buff) * this.unit.damage_factor * connor_skill_factor(this))
-end
-
 local function aura_connor_damage_update(this, store)
 	local a = this.aura
 	local source = store.entities[a.source_id]
@@ -120,7 +99,7 @@ local function controller_connor_ultimate_sparks_update(this, store)
 			return
 		end
 
-		if store.tick_ts - last_ts >= fts(3) and target.render.sprites[1].name and string.sub(target.render.sprites[1].name, 1, 6) == "attack" then
+		if store.tick_ts - last_ts >= fts(3) and target.render.sprites[1].name == "walk" then
 			last_ts = store.tick_ts
 
 			local fx = E:create_entity(this.fx_t)
@@ -162,20 +141,17 @@ local function mod_connor_ultimate_buff_remove(this, store)
 end
 
 local function mod_connor_talent_1_update(this, store)
-	local target = store.entities[this.modifier.source_id]
-
-	if not target then
-		simulation:queue_remove_entity(this)
-
-		return
-	end
-
-	local shown = false
+	this.active = false
 
 	while true do
-		target = store.entities[this.modifier.source_id]
+		local target = store.entities[this.modifier.source_id]
 
 		if not target or target.health.dead then
+			if target and this.active then
+				SU.remove_unit_damage_factor_by_factor(target, this.damage_factor)
+				this.active = false
+			end
+
 			simulation:queue_remove_entity(this)
 
 			return
@@ -183,22 +159,36 @@ local function mod_connor_talent_1_update(this, store)
 
 		this.pos = target.pos
 
-		local active = target.health.hp <= target.health.hp_max * this.hp_ptg_to_trigger
+		local trigger = target.health.hp <= target.health.hp_max * this.hp_ptg_to_trigger
 
-		if active and not shown then
+		if trigger and not this.active then
 			this.render.sprites[1].hidden = false
 
 			U.animation_start(this, "in", nil, store.tick_ts, false)
 			U.animation_start(this, "loop", nil, store.tick_ts, true)
+			SU.insert_unit_damage_factor_by_factor(target, this.damage_factor)
 
-			shown = true
-		elseif not active and shown then
+			this.active = true
+		elseif not trigger and this.active then
 			U.animation_start(this, "out", nil, store.tick_ts, false)
-			shown = false
+			SU.remove_unit_damage_factor_by_factor(target, this.damage_factor)
+
+			this.active = false
 		end
 
 		coroutine.yield()
 	end
+end
+
+local function mod_connor_talent_1_remove(this, store)
+	local target = store.entities[this.modifier.source_id]
+
+	if target and this.active then
+		SU.remove_unit_damage_factor_by_factor(target, this.damage_factor)
+		this.active = false
+	end
+
+	return true
 end
 
 local function hero_connor_level_up(this, store)
@@ -245,6 +235,10 @@ local function hero_connor_level_up(this, store)
 	end)
 	upgrade_skill(this, "ultimate", function(this, s)
 		this.timed_attacks.list[4].disabled = nil
+	end)
+	upgrade_skill(this, "talent_1", function()
+	end)
+	upgrade_skill(this, "talent_2", function()
 	end)
 	update_hp(this)
 end
@@ -512,7 +506,7 @@ local function hero_connor_update(this, store)
 					au.aura.source_id = this.id
 					au.aura.damage_min = a.damage_min
 					au.aura.damage_max = a.damage_max
-					au.aura.damage_factor = this.unit.damage_factor * connor_skill_factor(this)
+					au.aura.damage_factor = this.unit.damage_factor
 
 					simulation:queue_insert_entity(au)
 
@@ -597,7 +591,7 @@ local function hero_connor_update(this, store)
 							d.source_id = this.id
 							d.target_id = target.id
 							d.damage_type = a.damage_type
-							d.value = connor_skill_damage(this, math.random(a.damage_min, a.damage_max))
+							d.value = math.ceil((math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor)
 
 							queue_damage(store, d)
 
@@ -606,7 +600,7 @@ local function hero_connor_update(this, store)
 							mod.modifier.source_id = this.id
 							mod.modifier.target_id = target.id
 							mod.modifier.duration = a.bleed_duration
-							mod.modifier.damage_factor = this.unit.damage_factor * connor_skill_factor(this)
+							mod.modifier.damage_factor = this.unit.damage_factor
 
 							simulation:queue_insert_entity(mod)
 						end
@@ -659,7 +653,7 @@ local function hero_connor_update(this, store)
 					d.source_id = this.id
 					d.target_id = target.id
 					d.damage_type = a.damage_type
-					d.value = connor_skill_damage(this, math.random(a.damage_min, a.damage_max))
+					d.value = math.ceil((math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor)
 
 					queue_damage(store, d)
 
@@ -749,7 +743,7 @@ tt.hero.skills.ultimate.xp_level_steps = {
 }
 tt.hero.skills.talent_1 = CC("hero_skill")
 tt.hero.skills.talent_1.hp_ptg_to_trigger = 0.4
-tt.hero.skills.talent_1.skill_damage_factor = 1.4
+tt.hero.skills.talent_1.damage_factor = 1.4
 tt.hero.skills.talent_1.mod_t = "mod_connor_talent_1"
 tt.hero.skills.talent_1.xp_level_steps = {
 	[1] = 1
@@ -828,7 +822,7 @@ tt.timed_attacks.list[1].vis_flags = bor(F_AREA, F_ENEMY)
 tt.timed_attacks.list[1].damage_min = 28
 tt.timed_attacks.list[1].damage_max = 44
 tt.timed_attacks.list[1].damage_radius = 170
-tt.timed_attacks.list[1].damage_type = DAMAGE_PHYSICAL
+tt.timed_attacks.list[1].damage_type = DAMAGE_RUDE
 tt.timed_attacks.list[1].mod_bleed = "mod_connor_skill_a_bleed"
 tt.timed_attacks.list[1].decal = "decal_connor_skill_a"
 tt.timed_attacks.list[1].sound = "HeroConnorArterialSlashCast"
@@ -840,7 +834,7 @@ tt.timed_attacks.list[2].cast_time = fts(28)
 tt.timed_attacks.list[2].time_to_block = 2
 tt.timed_attacks.list[2].damage_min = 149
 tt.timed_attacks.list[2].damage_max = 226
-tt.timed_attacks.list[2].damage_type = DAMAGE_PHYSICAL
+tt.timed_attacks.list[2].damage_type = DAMAGE_RUDE
 tt.timed_attacks.list[2].hit_fx = "fx_connor_skill_b_hit"
 tt.timed_attacks.list[2].sound = "HeroConnorRetributionCast"
 tt.timed_attacks.list[3] = CC("custom_attack")
@@ -883,14 +877,14 @@ tt.ultimate_melee = {}
 tt.ultimate_melee.attacks = {}
 tt.ultimate_melee.attacks[1] = CC("melee_attack")
 tt.ultimate_melee.attacks[1].animation = "attack_1"
-tt.ultimate_melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.ultimate_melee.attacks[1].damage_type = DAMAGE_RUDE
 tt.ultimate_melee.attacks[1].hit_time = fts(6)
 tt.ultimate_melee.attacks[1].shared_cooldown = true
 tt.ultimate_melee.attacks[1].cooldown = 1
 tt.ultimate_melee.attacks[1].sound = "HeroConnorTemplarRageBasicAttackCast"
 tt.ultimate_melee.attacks[1].vis_bans = bor(F_CLIFF)
 tt.ultimate_melee.attacks[1].vis_flags = F_BLOCK
-tt.ultimate_melee.attacks[1].xp_gain_factor = 1.2
+tt.ultimate_melee.attacks[1].xp_gain_factor = 2
 tt.ultimate_melee.attacks[1].hit_fx = "fx_connor_ultimate_hit"
 tt.ultimate_melee.attacks[1].hit_offset = vec_2(40, 15)
 tt.ultimate_melee.attacks[2] = table.deepclone(tt.ultimate_melee.attacks[1])
@@ -949,9 +943,10 @@ tt.main_script.update = aura_connor_damage_update
 tt.aura.duration = 1
 tt.aura.cycle_time = 0.9
 tt.aura.cycles = 1
-tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.aura.damage_type = DAMAGE_RUDE
 tt.aura.damage_min = 102
 tt.aura.damage_max = 162
+tt.aura.mod = "mod_connor_skill_c_stun"
 tt.aura.radius = 40
 tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
@@ -963,7 +958,7 @@ tt.aura.cycle_time = 0.9
 tt.aura.cycles = 1
 tt.aura.no_talent_buff = true
 tt.aura.mod = "mod_connor_ultimate_stun"
-tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.aura.damage_type = DAMAGE_RUDE
 tt.aura.damage_min = 47
 tt.aura.damage_max = 47
 tt.aura.radius = 100
@@ -979,6 +974,9 @@ tt.dps.kill = true
 tt.modifier.duration = 4
 tt.modifier.vis_flags = bor(F_MOD, F_BLOOD)
 tt.modifier.vis_bans = 0
+
+tt = RT("mod_connor_skill_c_stun", "mod_stun")
+tt.modifier.duration = 1
 
 tt = RT("mod_connor_ultimate_stun", "mod_stun")
 tt.modifier.duration = 1
@@ -1003,8 +1001,9 @@ tt.modifier.vis_bans = bor(F_BOSS, F_ENEMY)
 tt = RT("mod_connor_talent_1", "modifier")
 AC(tt, "main_script", "render")
 tt.hp_ptg_to_trigger = 0.4
-tt.skill_damage_factor = 1.4
+tt.damage_factor = 1.4
 tt.main_script.update = mod_connor_talent_1_update
+tt.main_script.remove = mod_connor_talent_1_remove
 tt.modifier.duration = 1e+99
 tt.modifier.vis_flags = bor(F_MOD, F_HERO)
 tt.modifier.vis_bans = bor(F_BOSS, F_ENEMY)
