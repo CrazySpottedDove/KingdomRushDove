@@ -3273,7 +3273,7 @@ return {
 	HERO_ROOM_IGNUS_SURGE_OF_FLAME_2_NAME = "烈火附身",
 	HERO_ROOM_IGNUS_SURGE_OF_FLAME_DESC = "%$ cooldown_str(((T('hero_ignus')).timed_attacks.list[2].cooldown)) %$伊格努斯化为火球，快速穿梭至另一名敌人面前，再穿梭回来，期间保持无敌，并对身边%$ ((T('aura_ignus_surge_of_flame')).aura.damage_radius) %$范围内敌人每%$ ((T('aura_ignus_surge_of_flame')).aura.cycle_time) %$秒造成%$ damage_str(((T('hero_ignus')).hero.skills.surge_of_flame).damage_min[(levels((T('hero_ignus')).hero.skills.surge_of_flame))],((T('hero_ignus')).hero.skills.surge_of_flame).damage_max[(levels((T('hero_ignus')).hero.skills.surge_of_flame))],(T('aura_ignus_surge_of_flame')).aura.damage_type) %$。若穿梭导致了目标死亡，伊格努斯将额外寻找目标穿梭。",
 	HERO_ROOM_IGNUS_SURGE_OF_FLAME_NAME = "烈焰喷涌",
-	HERO_ROOM_ILLIANA_AIRBORNE_BLISS_DESC = "在飞行时，伊莉安娜的攻击造成%$ ((T('hero_illiana')).hero.skills.talent_2.damage_factor - 1) %$%的额外伤害。",
+	HERO_ROOM_ILLIANA_AIRBORNE_BLISS_DESC = "在飞行时，伊莉安娜的攻击造成%$ ((T('hero_illiana')).hero.skills.talent_2.damage_factor - 1) %$%的额外伤害。伊莉安娜的普攻附带短暂眩晕效果。",
 	HERO_ROOM_ILLIANA_AIRBORNE_BLISS_NAME = "欢乐飞行",
 	HERO_ROOM_ILLIANA_EASY_PREY_DESC = "每隔%$ ((T('hero_illiana')).timed_attacks.list[1].cooldown) %$秒，斯帕奇俯冲向%$ ((T('decal_illiana_dragon')).timed_attacks.list[1].detection_range) %$范围内一名受到眩晕或定身的敌人，对其造成%$ damage_str(((T('hero_illiana')).hero.skills.skill_c).damage_min[levels((T('hero_illiana')).hero.skills.skill_c)],((T('hero_illiana')).hero.skills.skill_c).damage_max[levels((T('hero_illiana')).hero.skills.skill_c)],(T('hero_illiana')).hero.skills.skill_c.damage_type) %$。",
 	HERO_ROOM_ILLIANA_EASY_PREY_NAME = "轻松到手",

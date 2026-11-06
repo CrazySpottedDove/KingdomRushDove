@@ -21,10 +21,6 @@ local update_hp = HU.update_hp
 local queue_damage = U.queue_damage
 local fts = U.fts
 
-local function illiana_damage(this, base)
-	return math.ceil((base + this.unit.damage_buff) * this.unit.damage_factor)
-end
-
 local function restore_bans(vis, bans)
 	U.bans_remove(vis, F_ALL)
 	U.bans_add(vis, bans)
@@ -157,19 +153,13 @@ local function illiana_bolt_update(this, store)
 	end
 
 	if target and target.health and not target.health.dead and (not b.damage_radius or b.damage_radius == 0) then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-
-		queue_damage(store, d)
+		SU.apply_single_bullet_simulation(this, target, store)
 	elseif b.damage_radius and b.damage_radius > 0 then
 		local target_pos = target and V.vclone(target.pos) or b.to
 		local targets = U.find_enemies_in_range(store, target_pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, t in ipairs(targets) do
-				local d = SU.create_bullet_damage(b, t.id, this.id)
-
-				queue_damage(store, d)
-			end
+			SU.apply_batch_bullet_simulation(this, targets, store)
 		end
 	end
 
@@ -1594,7 +1584,7 @@ local function decal_illiana_dragon_update(this, store)
 
 						d.source_id = this.id
 						d.target_id = target.id
-						d.value = illiana_damage(illiana, U.frandom(sc.damage_min, sc.damage_max))
+						d.value = (math.random(sc.damage_min, sc.damage_max) + illiana.unit.damage_buff) * illiana.unit.damage_factor
 						d.damage_type = sc.damage_type
 
 						queue_damage(store, d)
@@ -1840,8 +1830,8 @@ tt.dragon_ranged_damage_min = {4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
 tt.dragon_ranged_damage_max = {7, 8, 9, 11, 12, 14, 15, 17, 18, 20}
 tt.dragon_t = "decal_illiana_dragon"
 tt.hero.skills.skill_a = CC("hero_skill")
-tt.hero.skills.skill_a.damage_min = {30, 60, 90}
-tt.hero.skills.skill_a.damage_max = {40, 80, 120}
+tt.hero.skills.skill_a.damage_min = {40, 70, 100}
+tt.hero.skills.skill_a.damage_max = {50, 90, 130}
 tt.hero.skills.skill_a.damage_type = DAMAGE_TRUE
 tt.hero.skills.skill_a.cooldown = 12
 tt.hero.skills.skill_a.max_bounces = 2
@@ -1861,7 +1851,7 @@ tt.hero.skills.skill_b.cooldown = 15
 tt.hero.skills.skill_b.min_targets = 2
 tt.hero.skills.skill_b.detection_radius = 165
 tt.hero.skills.skill_b.stun_radius = 100
-tt.hero.skills.skill_b.stun_duration = {2, 4, 6}
+tt.hero.skills.skill_b.stun_duration = {4, 5, 6}
 tt.hero.skills.skill_b.xp_gain = {60, 120, 180}
 tt.hero.skills.skill_b.xp_level_steps = {
 	[3] = 1,
@@ -1870,8 +1860,8 @@ tt.hero.skills.skill_b.xp_level_steps = {
 }
 tt.hero.skills.skill_c = CC("hero_skill")
 tt.hero.skills.skill_c.cooldown = 1
-tt.hero.skills.skill_c.damage_min = {40, 80, 120}
-tt.hero.skills.skill_c.damage_max = {60, 120, 180}
+tt.hero.skills.skill_c.damage_min = {60, 100, 120}
+tt.hero.skills.skill_c.damage_max = {80, 140, 200}
 tt.hero.skills.skill_c.damage_type = DAMAGE_PHYSICAL
 tt.hero.skills.skill_c.detection_range = 165
 tt.hero.skills.skill_c.xp_gain = {32, 64, 96}
@@ -1913,9 +1903,9 @@ tt.info.hero_portrait = "kr6_hero_portraits_0012"
 tt.info.portrait = "kr6_info_portraits_heroes_0014"
 tt.main_script.insert = hero_illiana_insert
 tt.main_script.update = hero_illiana_update
-tt.motion.max_speed = 70
+tt.motion.max_speed = 75
 tt.regen.cooldown = 1
-tt.transfer.extra_speed = 25
+tt.transfer.extra_speed = 50
 tt.transfer.min_distance = 160
 tt.teleport.min_distance = 160
 tt.teleport.disabled = false
@@ -1930,7 +1920,6 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk_1"}
 tt.render.sprites[1].draw_order = DO_HEROES
-tt.render.sprites[1].scale = vec_2(1.15, 1.15)
 tt.sound_events.change_rally_point = "HeroIllianaTaunt"
 tt.sound_events.death = "HeroIllianaDeath"
 tt.sound_events.respawn = "HeroIllianaTauntIntro"
@@ -1963,8 +1952,8 @@ tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].animation = "range_attack"
 tt.ranged.attacks[1].bullet = "bullet_illiana_basic"
 tt.ranged.attacks[1].cooldown = 1
-tt.ranged.attacks[1].min_range = 70
-tt.ranged.attacks[1].max_range = 165
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].max_range = 180
 tt.ranged.attacks[1].xp_gain_factor = 3.1
 tt.ranged.attacks[1].shoot_time = fts(11)
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(5, 20)}
@@ -1974,14 +1963,14 @@ tt.ranged.attacks[1].node_prediction = fts(15)
 tt.ranged.attacks[1].sound = "HeroIllianaBasicAttackCast"
 tt.timed_attacks.list[1] = CC("custom_attack")
 tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].basic_range = 165
+tt.timed_attacks.list[1].basic_range = 180
 tt.timed_attacks.list[1].cooldown = 12
 tt.timed_attacks.list[2] = CC("custom_attack")
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].bullet = "bullet_illiana_skill_b"
 tt.timed_attacks.list[2].animation = "skill_b"
 tt.timed_attacks.list[2].shoot_time = fts(27)
-tt.timed_attacks.list[2].max_range = 165
+tt.timed_attacks.list[2].max_range = 180
 tt.timed_attacks.list[2].min_targets = 3
 tt.timed_attacks.list[2].cooldown = 15
 tt.timed_attacks.list[2].offset = vec_2(-10, 5)
@@ -2024,11 +2013,11 @@ tt.mouth_offset = vec_2(10, 0)
 tt.pickup_anim_time = fts(10)
 tt.pickup_contact_time = fts(8)
 tt.follow_distance = 25
-tt.force_motion.max_a = 600
-tt.force_motion.max_v = 360
+tt.force_motion.max_a = 720
+tt.force_motion.max_v = 432
 tt.force_motion.ramp_radius = 30
 tt.force_motion.fr = 0.05
-tt.force_motion.a_step = 20
+tt.force_motion.a_step = 24
 tt.offset = vec_2(10, 0)
 tt.render.sprites[1].prefix = "hero_illiana_dragonDef"
 tt.render.sprites[1].name = "idle"
@@ -2042,7 +2031,7 @@ tt.render.sprites[2].name = "decal_flying_shadow"
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].animation = "attack"
 tt.ranged.attacks[1].cooldown = 1
-tt.ranged.attacks[1].max_range = 165
+tt.ranged.attacks[1].max_range = 180
 tt.ranged.attacks[1].bullet = "bullet_illiana_dragon_basic"
 tt.ranged.attacks[1].shoot_time = fts(14)
 tt.ranged.attacks[1].bullet_start_offset = vec_2(10, -5)
@@ -2053,7 +2042,7 @@ tt.ranged.attacks[2] = table.deepclone(tt.ranged.attacks[1])
 tt.ranged.attacks[2].bullet = "bullet_illiana_skill_a"
 tt.ranged.attacks[2].animation = "skill_a"
 tt.ranged.attacks[2].shoot_time = fts(17)
-tt.ranged.attacks[2].max_range = 165
+tt.ranged.attacks[2].max_range = 180
 tt.ranged.attacks[2].disabled = true
 tt.ranged.attacks[2].min_targets = 3
 tt.ranged.attacks[2].cooldown = 12
@@ -2235,6 +2224,7 @@ tt.bullet.damage_min = 4
 tt.bullet.damage_max = 10
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 tt.bullet.hit_fx = "fx_bullet_illiana_basic_ranged_hit"
+tt.bullet.mod = "mod_illiana_stun_basic"
 tt.bullet.particles_name = "ps_bullet_illiana_basic"
 tt.bullet.xp_gain_factor = 3
 tt.bullet.min_speed = 500
@@ -2251,6 +2241,9 @@ tt.render.sprites[1].animated = false
 tt.main_script.insert = illiana_bolt_insert
 tt.main_script.update = illiana_bolt_update
 tt.sound_events.insert = nil
+
+tt = RT("mod_illiana_stun_basic", "mod_stun")
+tt.modifier.duration = 0.15
 
 tt = RT("bullet_illiana_dragon_basic", "bolt")
 tt.bullet.damage_min = 4
