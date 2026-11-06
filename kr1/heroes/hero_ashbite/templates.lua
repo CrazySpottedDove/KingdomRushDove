@@ -754,6 +754,10 @@ local function hero_ashbite_update(this, store)
 
 				a.ts = store.tick_ts
 
+				if SU.y_hero_animation_wait(this) then
+					goto continue
+				end
+
 				U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 				goto continue
@@ -1183,12 +1187,13 @@ tt.render.sprites[1].z = Z_OBJECTS_COVERS
 
 tt = RT("fx_ashbite_skill_a", "fx")
 AC(tt, "main_script")
+tt.timed.runs = INT_32_MAX
 tt.render.sprites[1].prefix = "hero_ashbite_fx_breath_fx"
 tt.render.sprites[1].name = "in"
 tt.animation_in = "in"
 tt.animation_loop = "loop"
 tt.animation_end = "out"
-tt.loop_time = fts(17)
+tt.loop_time = fts(8)
 tt.main_script.update = scripts.fx_utils.in_loop_out
 
 tt = RT("fx_ashbite_skill_a_hit", "fx")
