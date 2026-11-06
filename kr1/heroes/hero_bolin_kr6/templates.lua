@@ -8,6 +8,7 @@ local U = require("utils")
 local V = require("lib.klua.vector")
 local km = require("lib.klua.macros")
 local HU = require("hero_utils")
+local UP = require("kr1.upgrades")
 
 require("all.constants")
 require("lib.klua.table")
@@ -115,8 +116,16 @@ local function bolin_area_damage_update(this, store)
 
 	if enemies then
 		for _, enemy in ipairs(enemies) do
-			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.aura.radius)
-			local value = math.floor(this.aura.damage_max - (this.aura.damage_max - this.aura.damage_min) * dist_factor)
+			local value
+
+			if UP:get_upgrade("engineer_efficiency") then
+				value = this.aura.damage_max
+			else
+				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.aura.radius)
+
+				value = math.floor(this.aura.damage_max - (this.aura.damage_max - this.aura.damage_min) * dist_factor)
+			end
+
 			local d = E.assign_damage(this.aura.damage_type, math.ceil(value * factor), this.id, enemy.id)
 
 			queue_damage(store, d)
@@ -246,7 +255,6 @@ end
 
 local function bullet_bolin_update(this, store)
 	local b = this.bullet
-	local source = store.entities[b.source_id]
 	local target = store.entities[b.target_id]
 
 	local function create_fx(hfx)
@@ -264,8 +272,8 @@ local function bullet_bolin_update(this, store)
 			sfx.pos.x, sfx.pos.y = target.pos.x + hoffset.x, target.pos.y + hoffset.y
 		end
 
-		if sfx.allow_rotation and source then
-			local vx, vy = V.sub(target.pos.x, target.pos.y, source.pos.x, source.pos.y)
+		if sfx.allow_rotation and b.source_pos then
+			local vx, vy = V.sub(target.pos.x, target.pos.y, b.source_pos.x, b.source_pos.y)
 			local r = km.unroll(V.angleTo(vx, vy))
 
 			sfx.render.sprites[1].r = r
@@ -275,9 +283,8 @@ local function bullet_bolin_update(this, store)
 	end
 
 	if target and not target.health.dead then
-		local buff = source and source.unit.damage_buff or 0
 		local factor = b.damage_factor
-		local d = E.assign_damage(b.damage_type, math.max(1, (U.frandom(b.damage_min, b.damage_max) + buff) * factor), this.id, target.id)
+		local d = E.assign_damage(b.damage_type, math.max(1, U.frandom(b.damage_min, b.damage_max) * factor), this.id, target.id)
 
 		d.reduce_armor = b.reduce_armor
 		d.xp_gain_factor = b.xp_gain_factor
@@ -401,14 +408,12 @@ local function bullet_bolin_skills_parabola_update(this, store)
 	end
 
 	if b.damage_min and b.damage_max then
-		local source = store.entities[b.source_id]
-		local buff = source and source.unit.damage_buff or 0
 		local factor = b.damage_factor
 		local enemies = U.find_enemies_in_range(store, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
 
 		if enemies then
 			for _, enemy in ipairs(enemies) do
-				local d = E.assign_damage(b.damage_type, math.ceil((math.random(b.damage_min, b.damage_max) + buff) * factor), this.id, enemy.id)
+				local d = E.assign_damage(b.damage_type, math.ceil(math.random(b.damage_min, b.damage_max) * factor), this.id, enemy.id)
 
 				if b.xp_gain_factor and b.xp_dest_id then
 					d.xp_gain_factor = b.xp_gain_factor
@@ -440,8 +445,16 @@ local function aura_bolin_skill_b_trigger_update(this, store)
 
 		if enemies then
 			for _, enemy in ipairs(enemies) do
-				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.aura.radius)
-				local value = math.floor(this.damage_max - (this.damage_max - this.damage_min) * dist_factor)
+				local value
+
+				if UP:get_upgrade("engineer_efficiency") then
+					value = this.damage_max
+				else
+					local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this.pos, this.aura.radius)
+
+					value = math.floor(this.damage_max - (this.damage_max - this.damage_min) * dist_factor)
+				end
+
 				local d = E.assign_damage(this.damage_type, math.ceil(value * factor), this.id, enemy.id)
 
 				queue_damage(store, d)
@@ -491,8 +504,6 @@ local function bullet_bolin_skill_c_update(this, store, script)
 		return false
 	end
 
-	local source = store.entities[b.source_id]
-
 	if target.health then
 		local hp_pctg = this.boss_hp_pctg
 
@@ -507,35 +518,6 @@ local function bullet_bolin_skill_c_update(this, store, script)
 			b.damage_min = math.max(b.damage_min, this.damage_cap)
 			b.damage_max = math.max(b.damage_max, this.damage_cap)
 		end
-	end
-
-	if source then
-		local st_1 = source.hero.skills.talent_1
-
-		if st_1.level > 0 then
-			b.reduce_armor = st_1.reduce_armor
-		end
-
-		b.damage_min = b.damage_min + source.unit.damage_buff
-		b.damage_max = b.damage_max + source.unit.damage_buff
-	end
-
-	scripts.ray5_simple.update(this, store, script)
-end
-
-local function bullet_bolin_ultimate_update(this, store, script)
-	local b = this.bullet
-	local source = store.entities[b.source_id]
-
-	if source then
-		local st_1 = source.hero.skills.talent_1
-
-		if st_1.level > 0 then
-			b.reduce_armor = st_1.reduce_armor
-		end
-
-		b.damage_min = b.damage_min + source.unit.damage_buff
-		b.damage_max = b.damage_max + source.unit.damage_buff
 	end
 
 	scripts.ray5_simple.update(this, store, script)
@@ -650,6 +632,9 @@ local function hero_bolin_kr6_update(this, store)
 		bullet.bullet.xp_gain_factor = xp_gain_factor
 		bullet.bullet.level = sua.level
 		bullet.bullet.damage_factor = this.unit.damage_factor
+		bullet.bullet.damage_min = bullet.bullet.damage_min + this.unit.damage_buff
+		bullet.bullet.damage_max = bullet.bullet.damage_max + this.unit.damage_buff
+		bullet.bullet.source_pos = V.vclone(this.pos)
 
 		if st1.level > 0 then
 			bullet.bullet.reduce_armor = st1.reduce_armor
@@ -805,6 +790,15 @@ local function hero_bolin_kr6_update(this, store)
 
 								if i == 1 then
 									U.y_wait(store, sua.shoot_time)
+
+									target = U.find_foremost_enemy(store, this.pos, 0, sua.max_range, 0, sua.vis_flags, sua.vis_bans)
+
+									if not target then
+										sua.ts = store.tick_ts
+										aborted = true
+
+										break
+									end
 								end
 
 								shoot_bullet(target, bullet_t, flip, ai, nil)
@@ -853,40 +847,57 @@ local function hero_bolin_kr6_update(this, store)
 						saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor) + fts(10)
 					else
 						local af = not (first.pos.x > this.pos.x)
+						local fire_target = first
 
 						U.animation_start(this, saa.animation, af, store.tick_ts, false)
 						U.y_wait(store, saa.shoot_time)
-						S:queue(saa.sound)
-						S:queue(saa.sound_hit, {
-							delay = pred_time
-						})
 
-						local shooting_right = not this.render.sprites[1].flip_x
-						local boffset = saa.bullet_start_offset
-
-						for i = 1, saa.bullet_count do
-							local b = E:create_entity(saa.bullet)
-
-							b.bullet.damage_min = saa.damage_min
-							b.bullet.damage_max = saa.damage_max
-							b.bullet.damage_factor = this.unit.damage_factor
-							b.bullet.flight_time = pred_time + 0.18 * (i - 1)
-							b.pos.x = this.pos.x + boffset.x * (shooting_right and 1 or -1)
-							b.pos.y = this.pos.y + boffset.y
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = destinations[i] or destinations[1]
-							b.bullet.source_id = this.id
-
-							simulation:queue_insert_entity(b)
+						if not store.entities[fire_target.id] or fire_target.health.dead then
+							fire_target = U.find_foremost_enemy(store, this.pos, saa.min_range, saa.max_range, pred_time, saa.vis_flags, saa.vis_bans)
 						end
 
-						while not U.animation_finished(this, 1) and not this.nav_rally.new do
-							coroutine.yield()
+						destinations = fire_target and bolin_mortar_positions(fire_target, saa.bullet_count, saa.mortar_gap, pred_time)
+
+						if destinations and #destinations > 0 then
+							S:queue(saa.sound)
+							S:queue(saa.sound_hit, {
+								delay = pred_time
+							})
+
+							local shooting_right = not this.render.sprites[1].flip_x
+							local boffset = saa.bullet_start_offset
+
+							for i = 1, saa.bullet_count do
+								local b = E:create_entity(saa.bullet)
+
+								b.bullet.damage_min = saa.damage_min + this.unit.damage_buff
+								b.bullet.damage_max = saa.damage_max + this.unit.damage_buff
+								b.bullet.damage_factor = this.unit.damage_factor
+								b.bullet.flight_time = pred_time + 0.18 * (i - 1)
+								b.pos.x = this.pos.x + boffset.x * (shooting_right and 1 or -1)
+								b.pos.y = this.pos.y + boffset.y
+								b.bullet.from = V.vclone(b.pos)
+								b.bullet.to = destinations[i] or destinations[1]
+								b.bullet.source_id = this.id
+
+								simulation:queue_insert_entity(b)
+							end
+
+							while not U.animation_finished(this, 1) and not this.nav_rally.new do
+								coroutine.yield()
+							end
+
+							SU.hero_gain_xp_from_skill(this, sa)
+
+							saa.ts = store.tick_ts
+						else
+							while not U.animation_finished(this, 1) and not this.nav_rally.new do
+								coroutine.yield()
+							end
+
+							saa.ts = store.tick_ts - saa.cooldown * (this.unit.cooldown_factor) + fts(10)
 						end
 
-						SU.hero_gain_xp_from_skill(this, sa)
-
-						saa.ts = store.tick_ts
 						acted = true
 					end
 				end
@@ -897,7 +908,7 @@ local function hero_bolin_kr6_update(this, store)
 					if not trigger_target then
 						aa.ts = store.tick_ts - aa.cooldown * (this.unit.cooldown_factor) + fts(10)
 					else
-						local target_pos = V.vclone(pred_pos)
+						local target_pos
 						local aborted = false
 
 						spawn_casings(aa)
@@ -922,15 +933,13 @@ local function hero_bolin_kr6_update(this, store)
 						if aborted then
 						-- interrupted
 						else
-							if not store.entities[trigger_target.id] or trigger_target.health.dead then
-								trigger_target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, 0, aa.max_range, 0, aa.vis_flags, aa.vis_bans)
+							trigger_target, _, pred_pos = U.find_foremost_enemy(store, this.pos, 0, aa.max_range, 0, aa.vis_flags, aa.vis_bans)
 
-								if not trigger_target then
-									aa.ts = store.tick_ts - aa.cooldown * (this.unit.cooldown_factor) + fts(10)
-									aborted = true
-								else
-									target_pos = V.vclone(pred_pos)
-								end
+							if not trigger_target then
+								aa.ts = store.tick_ts - aa.cooldown * (this.unit.cooldown_factor) + fts(10)
+								aborted = true
+							else
+								target_pos = V.vclone(pred_pos)
 							end
 						end
 
@@ -945,13 +954,16 @@ local function hero_bolin_kr6_update(this, store)
 							bullet.pos.x = bullet.pos.x + (af and -1 or 1) * offset.x
 							bullet.pos.y = bullet.pos.y + offset.y
 							bullet.bullet.from = V.vclone(bullet.pos)
-							bullet.bullet.to = vec_2(target_pos.x + trigger_target.unit.hit_offset.x, target_pos.y + trigger_target.unit.hit_offset.y)
+							bullet.bullet.to = V.v(target_pos.x + trigger_target.unit.hit_offset.x, target_pos.y + trigger_target.unit.hit_offset.y)
 							bullet.bullet.target_id = trigger_target.id
 							bullet.bullet.source_id = this.id
 							bullet.bullet.xp_dest_id = this.id
 							bullet.bullet.xp_gain_factor = 2.4
 							bullet.bullet.level = aa.level
 							bullet.bullet.damage_factor = this.unit.damage_factor
+							bullet.bullet.damage_min = bullet.bullet.damage_min + this.unit.damage_buff
+							bullet.bullet.damage_max = bullet.bullet.damage_max + this.unit.damage_buff
+							bullet.bullet.source_pos = V.vclone(this.pos)
 
 							if st1.level > 0 then
 								bullet.bullet.reduce_armor = st1.reduce_armor
@@ -992,27 +1004,34 @@ local function hero_bolin_kr6_update(this, store)
 				end
 
 				if not acted and not sba.disabled and ready_to_use_skill(sba, store, this.unit.cooldown_factor) and this.soldier.target_id == nil and not this.max_mines_near and store.wave_group_number > 0 then
-					local target = U.find_foremost_enemy(store, this.pos, 0, sba.max_range, 0, sba.vis_flags, sba.vis_bans)
+					local near_mines = table.filter(store.entities, function(k, v)
+						return v.template_name == "aura_bolin_skill_b_trigger" and V.dist2(v.pos.x, v.pos.y, this.pos.x, this.pos.y) <= sba.max_range * sba.max_range
+					end)
 
-					if target then
+					if #near_mines >= sba.max_mines then
+						this.max_mines_near = true
+
 						sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor) + fts(10)
 					else
-						local near_mines = table.filter(store.entities, function(k, v)
-							return v.template_name == "aura_bolin_skill_b_trigger" and V.dist2(v.pos.x, v.pos.y, this.pos.x, this.pos.y) <= sba.max_range * sba.max_range
-						end)
+						local start_ts = store.tick_ts
 
-						if #near_mines >= sba.max_mines then
-							this.max_mines_near = true
+						U.y_animation_play(this, sba.animations[1], nil, store.tick_ts, 1, nil)
+						U.animation_start(this, sba.animations[2], nil, store.tick_ts, false, nil)
 
-							sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor) + fts(10)
-						else
-							local mine_pos = bolin_mine_pos(this, near_mines, sba)
+						if not SU.y_hero_wait(store, this, sba.throw_time) then
+							local mine_flight_time = E:get_template(sba.bullet).bullet.flight_time or 0
+							local target, _, pred_pos = U.find_foremost_enemy(store, this.pos, 0, sba.max_range * 3, mine_flight_time, sba.vis_flags, sba.vis_bans, function(e)
+								return math.abs(this.pos.x - e.pos.x) > 20
+							end)
+							local mine_pos
 
-							if not mine_pos then
-								this.max_mines_near = true
-
-								sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor) + fts(10)
+							if target then
+								mine_pos = V.vclone(pred_pos)
 							else
+								mine_pos = bolin_mine_pos(this, near_mines, sba)
+							end
+
+							if mine_pos then
 								local all_mines = bolin_find_mines(store)
 
 								if #all_mines >= sba.max_mines then
@@ -1029,34 +1048,31 @@ local function hero_bolin_kr6_update(this, store)
 									end
 								end
 
-								local start_ts = store.tick_ts
+								local b = E:create_entity(sba.bullet)
 
-								U.y_animation_play(this, sba.animations[1], nil, store.tick_ts, 1, nil)
-								U.animation_start(this, sba.animations[2], nil, store.tick_ts, false, nil)
+								b.pos = V.vclone(this.pos)
+								b.bullet.from = V.v(this.pos.x + sba.bullet_start_offset.x, this.pos.y + sba.bullet_start_offset.y)
+								b.bullet.to = V.vclone(mine_pos)
+								b.bullet.source_id = this.id
+								b.bullet.damage_factor = this.unit.damage_factor
+								b.payload_damage_min = sb.damage_min[sb.level]
+								b.payload_damage_max = sb.damage_max[sb.level]
 
-								if not SU.y_hero_wait(store, this, sba.throw_time) then
-									local b = E:create_entity(sba.bullet)
+								simulation:queue_insert_entity(b)
+								SU.y_hero_animation_wait(this)
+								U.y_animation_play(this, sba.animations[3], nil, store.tick_ts, 1, nil)
 
-									b.pos = V.vclone(this.pos)
-									b.bullet.from = vec_2(this.pos.x + sba.bullet_start_offset.x, this.pos.y + sba.bullet_start_offset.y)
-									b.bullet.to = V.vclone(mine_pos)
-									b.bullet.source_id = this.id
-									b.bullet.damage_factor = this.unit.damage_factor
-									b.payload_damage_min = sb.damage_min[sb.level]
-									b.payload_damage_max = sb.damage_max[sb.level]
+								sba.ts = start_ts
 
-									simulation:queue_insert_entity(b)
-									SU.y_hero_animation_wait(this)
-									U.y_animation_play(this, sba.animations[3], nil, store.tick_ts, 1, nil)
+								SU.hero_gain_xp_from_skill(this, sb)
+							else
+								this.max_mines_near = true
 
-									sba.ts = start_ts
-
-									SU.hero_gain_xp_from_skill(this, sb)
-								end
-
-								acted = true
+								sba.ts = store.tick_ts - sba.cooldown * (this.unit.cooldown_factor) + fts(10)
 							end
 						end
+
+						acted = true
 					end
 				end
 
@@ -1074,19 +1090,17 @@ end
 local tt
 
 tt = RT("hero_bolin_kr6", "hero")
-
 AC(tt, "melee", "ranged", "timed_attacks")
-
 tt.hero.level_stats.armor = {0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.15}
 tt.hero.level_stats.hp_max = {227, 240, 254, 267, 280, 293, 307, 320, 334, 348}
 tt.hero.level_stats.melee_damage_min = {11, 12, 13, 14, 14, 15, 16, 17, 19, 19}
 tt.hero.level_stats.melee_damage_max = {15, 16, 17, 19, 22, 23, 24, 25, 26, 28}
-tt.hero.level_stats.ranged_damage_min = {32, 36, 38, 40, 43, 45, 48, 50, 53, 55}
-tt.hero.level_stats.ranged_damage_max = {48, 51, 57, 61, 64, 69, 71, 76, 80, 85}
+tt.hero.level_stats.ranged_damage_min = {36, 38, 40, 43, 45, 48, 50, 53, 55, 58}
+tt.hero.level_stats.ranged_damage_max = {51, 57, 61, 64, 69, 71, 76, 80, 85, 90}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.cooldown = 16
-tt.hero.skills.skill_a.damage_min = {14, 21, 26}
-tt.hero.skills.skill_a.damage_max = {21, 26, 35}
+tt.hero.skills.skill_a.damage_min = {15, 30, 45}
+tt.hero.skills.skill_a.damage_max = {25, 50, 75}
 tt.hero.skills.skill_a.slow_factor = 0.6
 tt.hero.skills.skill_a.xp_gain = {64, 128, 192}
 tt.hero.skills.skill_a.xp_level_steps = {
@@ -1096,8 +1110,8 @@ tt.hero.skills.skill_a.xp_level_steps = {
 }
 tt.hero.skills.skill_b = CC("hero_skill")
 tt.hero.skills.skill_b.cooldown = 6
-tt.hero.skills.skill_b.damage_min = {16, 23, 32}
-tt.hero.skills.skill_b.damage_max = {24, 38, 48}
+tt.hero.skills.skill_b.damage_min = {20, 40, 60}
+tt.hero.skills.skill_b.damage_max = {40, 80, 100}
 tt.hero.skills.skill_b.max_mines = {4, 6, 8}
 tt.hero.skills.skill_b.xp_gain = {30, 60, 90}
 tt.hero.skills.skill_b.xp_level_steps = {
@@ -1206,7 +1220,7 @@ tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].animation = "shoot"
 tt.ranged.attacks[1].bullet = "bullet_bolin"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(20, 15), vec_2(8, 8), vec_2(4, 0)}
-tt.ranged.attacks[1].cooldown = 2.75
+tt.ranged.attacks[1].cooldown = 2.7
 tt.ranged.attacks[1].min_range = 70
 tt.ranged.attacks[1].max_range = 200
 tt.ranged.attacks[1].shoot_time = fts(19)
@@ -1460,7 +1474,7 @@ tt.hit_delay = fts(1)
 
 tt = RT("bullet_bolin_ultimate", "bullet_bolin")
 AC(tt, "render")
-tt.main_script.update = bullet_bolin_ultimate_update
+tt.main_script.update = scripts.ray5_simple.update
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].prefix = "bolin_ulti_trail_animations"
 tt.render.sprites[1].name = "laser"
@@ -1538,10 +1552,10 @@ tt.sound_events.insert_args = {
 
 tt = RT("aura_bolin_talent_2_area_damage", "aura")
 tt.aura.radius = 50
-tt.aura.vis_flags = bor(F_AREA, F_ENEMY)
+tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FRIEND)
-tt.aura.damage_min = 32
-tt.aura.damage_max = 48
+tt.aura.damage_min = 35
+tt.aura.damage_max = 50
 tt.aura.damage_type = DAMAGE_EXPLOSION
 tt.main_script.update = bolin_area_damage_update
 
