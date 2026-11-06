@@ -243,6 +243,8 @@ local function hero_ashbite_level_up(this, store, initial)
 	end)
 	upgrade_skill(this, "ultimate", function(this, s)
 		this.timed_attacks.list[4].disabled = nil
+		this.timed_attacks.list[4].damage_min = s.damage_min
+		this.timed_attacks.list[4].damage_max = s.damage_max
 	end)
 	upgrade_skill(this, "talent_1", function(this, s)
 		s.disabled = nil
@@ -842,7 +844,7 @@ tt.hero.level_stats.ranged_damage_min = {19, 22, 26, 29, 32, 35, 38, 42, 45, 48}
 tt.hero.level_stats.ranged_damage_max = {29, 34, 38, 43, 48, 53, 58, 62, 67, 72}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.aura_damage_min = {6, 8, 10}
-tt.hero.skills.skill_a.aura_damage_max = {6, 9, 12}
+tt.hero.skills.skill_a.aura_damage_max = {6, 10, 14}
 tt.hero.skills.skill_a.xp_gain = {64, 128, 192}
 tt.hero.skills.skill_a.xp_level_steps = {
 	[2] = 1,
@@ -850,8 +852,8 @@ tt.hero.skills.skill_a.xp_level_steps = {
 	[8] = 3
 }
 tt.hero.skills.skill_b = CC("hero_skill")
-tt.hero.skills.skill_b.damage_min = 40
-tt.hero.skills.skill_b.damage_max = 40
+tt.hero.skills.skill_b.damage_min = 50
+tt.hero.skills.skill_b.damage_max = 50
 tt.hero.skills.skill_b.stun_duration = {2, 3, 4}
 tt.hero.skills.skill_b.embers_duration = {4, 6, 8}
 tt.hero.skills.skill_b.xp_gain = {80, 160, 240}
@@ -966,7 +968,7 @@ tt.melee.cooldown = 2
 tt.melee.range = 120
 tt.melee.attacks[1] = CC("melee_attack")
 tt.melee.attacks[1].animation = "feeding_attack"
-tt.melee.attacks[1].damage_min = 100
+tt.melee.attacks[1].damage_min = 125
 tt.melee.attacks[1].damage_max = 150
 tt.melee.attacks[1].damage_type = DAMAGE_RUDE
 tt.melee.attacks[1].damage_bans = 0
