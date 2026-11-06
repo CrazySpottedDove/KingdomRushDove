@@ -204,7 +204,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
 }
 
 return {
@@ -3008,9 +3008,9 @@ return {
 	HERO_ROOM_CATHA_ULTIMATE_NAME = "仙境魔尘",
 	HERO_ROOM_CONNOR_ARTERIAL_SLASH_DESC = "每隔%$ ((T('hero_connor')).timed_attacks.list[1].cooldown) %$秒，康纳挥舞长剑，对%$ ((T('hero_connor')).timed_attacks.list[1].damage_radius) %$范围内的敌人造成%$ damage_str(((T('hero_connor')).hero.skills.skill_a).damage_min[levels((T('hero_connor')).hero.skills.skill_a)],((T('hero_connor')).hero.skills.skill_a).damage_max[levels((T('hero_connor')).hero.skills.skill_a)],((T('hero_connor')).timed_attacks.list[1]).damage_type) %$，并在%$ ((T('hero_connor')).hero.skills.skill_a).bleed_duration[levels((T('hero_connor')).hero.skills.skill_a)] %$秒内额外造成%$ ((E:get_template('mod_connor_skill_a_bleed')).dps.damage_min * ((T('hero_connor')).hero.skills.skill_a).bleed_duration[levels((T('hero_connor')).hero.skills.skill_a)] / (E:get_template('mod_connor_skill_a_bleed')).dps.damage_every) %$点真实伤害。",
 	HERO_ROOM_CONNOR_ARTERIAL_SLASH_NAME = "动脉斩击",
-	HERO_ROOM_CONNOR_BATTLEBORN_DESC = "当康纳的生命值低于最大生命值的%$ ((T('hero_connor')).hero.skills.talent_1.hp_ptg_to_trigger) %$%时，他的技能伤害提升%$ (((T('hero_connor')).hero.skills.talent_1.skill_damage_factor) - 1) %$%。",
+	HERO_ROOM_CONNOR_BATTLEBORN_DESC = "当康纳的生命值低于最大生命值的%$ ((T('hero_connor')).hero.skills.talent_1.hp_ptg_to_trigger) %$%时，他的伤害提升%$ (((T('hero_connor')).hero.skills.talent_1.damage_factor) - 1) %$%。",
 	HERO_ROOM_CONNOR_BATTLEBORN_NAME = "为战而生",
-	HERO_ROOM_CONNOR_EARTHSHATTER_DESC = "每隔%$ ((T('hero_connor')).timed_attacks.list[3].cooldown) %$秒，康纳巨剑斩裂大地，在地面产生%$ ((T('hero_connor')).hero.skills.skill_c).aoe_count[levels((T('hero_connor')).hero.skills.skill_c)] %$道裂隙，每道裂隙对敌人造成%$ damage_str(((T('hero_connor')).hero.skills.skill_c).damage_min[levels((T('hero_connor')).hero.skills.skill_c)],((T('hero_connor')).hero.skills.skill_c).damage_max[levels((T('hero_connor')).hero.skills.skill_c)],(E:get_template('aura_connor_skill_c')).aura.damage_type) %$。",
+	HERO_ROOM_CONNOR_EARTHSHATTER_DESC = "每隔%$ ((T('hero_connor')).timed_attacks.list[3].cooldown) %$秒，康纳巨剑斩裂大地，在地面产生%$ ((T('hero_connor')).hero.skills.skill_c).aoe_count[levels((T('hero_connor')).hero.skills.skill_c)] %$道裂隙，每道裂隙对敌人造成%$ damage_str(((T('hero_connor')).hero.skills.skill_c).damage_min[levels((T('hero_connor')).hero.skills.skill_c)],((T('hero_connor')).hero.skills.skill_c).damage_max[levels((T('hero_connor')).hero.skills.skill_c)],(E:get_template('aura_connor_skill_c')).aura.damage_type) %$，并眩晕敌人%$ ((E:get_template('mod_connor_skill_c_stun')).modifier.duration) %$秒。",
 	HERO_ROOM_CONNOR_EARTHSHATTER_NAME = "裂地斩",
 	HERO_ROOM_CONNOR_HOLY_GRAIL_DESC = "每隔%$ (T('hero_connor')).hero.skills.talent_2.cooldown %$秒，康纳在阵亡时可以%$ (T('hero_connor')).hero.skills.talent_2.hp_ptg_on_revive %$%的总生命值复活。",
 	HERO_ROOM_CONNOR_HOLY_GRAIL_NAME = "圣杯",
