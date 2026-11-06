@@ -3179,7 +3179,6 @@ tt.bullet.damage_max = 43
 tt.bullet.hit_fx = "fx_bolt_faerie_dragon_lvl4"
 tt.bullet.mod = "mod_faerie_dragon_lvl4"
 tt.bullet.particles_name = "ps_bolt_faerie_dragon_lvl4"
-tt.bullet.use_unit_damage_factor = true
 tt.sound_events.insert = "TowerDragonsAttack"
 
 tt = RT("fx_bolt_faerie_dragon_lvl4", "fx")

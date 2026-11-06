@@ -4111,7 +4111,6 @@ tt.bullet.miss_decal = "wildcat_huntresses_tower_raining_arrows_floor_0011"
 tt.bullet.hide_radius = 0
 tt.bullet.particles_name = "ps_arrow_trail_wildcat"
 tt.bullet.hit_fx = "fx_wildcat_arrow_hit"
-tt.bullet.use_unit_damage_factor = true
 tt.render.sprites[1].name = "wildcat_huntresses_tower_arrow"
 tt.render.sprites[1].animated = false
 tt.sound_events.insert = "TowerArcherGarrisonBasicAttack"

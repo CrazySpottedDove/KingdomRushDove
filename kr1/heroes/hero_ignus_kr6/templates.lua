@@ -1249,7 +1249,6 @@ tt.bullet.max_speed = 1088
 tt.bullet.min_speed = 600
 tt.bullet.particles_name = "ps_ignus_skill_a_trail"
 tt.bullet.pop_chance = 0
-tt.bullet.use_unit_damage_factor = true
 tt.main_script.insert = bolt_ignus_skill_a_insert
 tt.main_script.update = bolt_ignus_skill_a_update
 tt.render.sprites[1].name = "in"

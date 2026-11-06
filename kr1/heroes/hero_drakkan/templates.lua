@@ -215,6 +215,10 @@ local function hero_drakkan_level_up(this, store)
 	bt.bullet.damage_min = ls.ranged_damage_min[hl]
 	bt.bullet.damage_max = ls.ranged_damage_max[hl]
 
+	bt = E:get_template("bullet_drakkan_clone")
+	bt.bullet.damage_min = ls.ranged_damage_min[hl]
+	bt.bullet.damage_max = ls.ranged_damage_max[hl]
+
 	local talent_2 = this.hero.skills.talent_2
 	local cooldown_factor = 1 - (talent_2.level > 0 and talent_2.skills_cd_red or 0)
 
@@ -756,7 +760,7 @@ tt.hero.skills.skill_a.xp_level_steps = {
 tt.hero.skills.skill_a.key = "NULLIFYING_PULSE"
 tt.hero.skills.skill_a.aura = {}
 tt.hero.skills.skill_a.aura.duration = fts(45)
-tt.hero.skills.skill_a.aura.damage_min = {6, 11, 16}
+tt.hero.skills.skill_a.aura.damage_min = {6, 12, 18}
 tt.hero.skills.skill_a.aura.damage_max = {9, 15, 21}
 tt.hero.skills.skill_a.aura.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.skill_a.aura.damage_every = 0.25
@@ -773,8 +777,8 @@ tt.hero.skills.skill_b.xp_level_steps = {
 }
 tt.hero.skills.skill_b.key = "DECONSTRUCT"
 tt.hero.skills.skill_b.aura = {}
-tt.hero.skills.skill_b.aura.damage_min = {25, 61, 97}
-tt.hero.skills.skill_b.aura.damage_max = {38, 82, 126}
+tt.hero.skills.skill_b.aura.damage_min = {40, 70, 100}
+tt.hero.skills.skill_b.aura.damage_max = {50, 90, 130}
 tt.hero.skills.skill_b.aura.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.skill_b.aura.damage_radius = 90
 tt.hero.skills.skill_c = CC("hero_skill")
@@ -800,7 +804,7 @@ tt.hero.skills.ultimate.shots = 7
 tt.hero.skills.ultimate.min_targets = 7
 tt.hero.skills.ultimate.max_range = 2000
 tt.hero.skills.ultimate.damage_min = 50
-tt.hero.skills.ultimate.damage_max = 80
+tt.hero.skills.ultimate.damage_max = 100
 tt.hero.skills.ultimate.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.ultimate.damage_radius = 70
 tt.hero.skills.talent_1 = CC("hero_skill")
@@ -1150,7 +1154,7 @@ tt = RT("bullet_drakkan", "bolt")
 tt.bullet.damage_min = nil
 tt.bullet.damage_max = nil
 tt.bullet.damage_type = DAMAGE_MAGICAL
-tt.bullet.damage_radius = 40
+tt.bullet.damage_radius = 45
 tt.bullet.hit_fx = "fx_bullet_drakkan_hit_ground"
 tt.bullet.hit_fx_air = "fx_bullet_drakkan_hit_air"
 tt.bullet.hit_decal = "decal_bullet_drakkan"
@@ -1162,7 +1166,7 @@ tt.bullet.align_with_trajectory = true
 tt.bullet.ignore_hit_offset = false
 tt.bullet.pop_chance = 0
 tt.bullet.g = nil
-tt.bullet.use_unit_damage_factor = true
+tt.main_script.update = scripts.fireball_dragon.update
 tt.render.sprites[1].prefix = "drakkan_fx_attack_projectile"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_BULLETS
@@ -1171,8 +1175,6 @@ tt.sound_events.insert = nil
 tt = RT("bullet_drakkan_clone", "bullet_drakkan")
 tt.bullet.damage_min = 20
 tt.bullet.damage_max = 30
-tt.bullet.damage_type = DAMAGE_MAGICAL
-tt.bullet.damage_radius = 40
 tt.bullet.xp_gain_factor = 2.1
 
 tt = RT("bullet_drakkan_ultimate", "bullet")
