@@ -679,69 +679,75 @@ local function hero_malik_update(this, store)
 
 			if ready_to_use_skill(sba, store, this.unit.cooldown_factor) and this.soldier.target_id ~= nil and this.motion.arrived then
 				local a = sba
-				local start_ts = store.tick_ts
 				local enemies = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
 					a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
-					U.animation_start(this, a.animation, nil, store.tick_ts, false)
-					S:queue(a.sound, {
-						delay = fts(11)
-					})
+					local target = store.entities[this.soldier.target_id]
+					if not target then
+						a.ts = a.ts + fts(10)
+					else
+						local start_ts = store.tick_ts
+						local af = target.pos.x < this.pos.x
+						U.animation_start(this, a.animation, af, store.tick_ts, false)
+						S:queue(a.sound, {
+							delay = fts(11)
+						})
 
-					a.ts = start_ts
+						a.ts = start_ts
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+						if SU.y_hero_wait(store, this, a.cast_time) then
+							goto continue
+						end
+
+						SU.hero_gain_xp_from_skill(this, sb)
+
+						local hit_pos = V.vclone(this.pos)
+
+						if a.hit_offset then
+							hit_pos.x = hit_pos.x + (af and -1 or 1) * a.hit_offset.x
+							hit_pos.y = hit_pos.y + a.hit_offset.y
+						end
+
+						local enemies = U.find_enemies_in_range(store, hit_pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
+
+						if enemies and #enemies > 0 then
+							for _, target in ipairs(enemies) do
+								local d = E:create_entity("damage")
+
+								d.source_id = this.id
+								d.target_id = target.id
+								d.damage_type = a.damage_type
+								d.value = math.ceil((math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor)
+
+								queue_damage(store, d)
+
+								local mod = E:create_entity(a.mod_stun)
+
+								mod.modifier.source_id = this.id
+								mod.modifier.target_id = target.id
+								mod.modifier.duration = a.stun_duration
+
+								simulation:queue_insert_entity(mod)
+							end
+						end
+
+						local decal = E:create_entity(a.hit_decal)
+
+						decal.pos = V.vclone(hit_pos)
+
+						for i = 1, #decal.render.sprites do
+							decal.render.sprites[i].ts = store.tick_ts
+							decal.render.sprites[i].flip_x = this.render.sprites[i].flip_x
+						end
+
+						simulation:queue_insert_entity(decal)
+						SU.y_hero_animation_wait(this)
+						U.animation_start(this, "idle", nil, store.tick_ts, true)
+
 						goto continue
 					end
-
-					SU.hero_gain_xp_from_skill(this, sb)
-
-					local hit_pos = V.vclone(this.pos)
-
-					if a.hit_offset then
-						hit_pos.x = hit_pos.x + (this.render.sprites[1].flip_x and -1 or 1) * a.hit_offset.x
-						hit_pos.y = hit_pos.y + a.hit_offset.y
-					end
-
-					local enemies = U.find_enemies_in_range(store, hit_pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
-
-					if enemies and #enemies > 0 then
-						for _, target in ipairs(enemies) do
-							local d = E:create_entity("damage")
-
-							d.source_id = this.id
-							d.target_id = target.id
-							d.damage_type = a.damage_type
-							d.value = math.ceil((math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor)
-
-							queue_damage(store, d)
-
-							local mod = E:create_entity(a.mod_stun)
-
-							mod.modifier.source_id = this.id
-							mod.modifier.target_id = target.id
-							mod.modifier.duration = a.stun_duration
-
-							simulation:queue_insert_entity(mod)
-						end
-					end
-
-					local decal = E:create_entity(a.hit_decal)
-
-					decal.pos = V.vclone(hit_pos)
-
-					for i = 1, #decal.render.sprites do
-						decal.render.sprites[i].ts = store.tick_ts
-						decal.render.sprites[i].flip_x = this.render.sprites[i].flip_x
-					end
-
-					simulation:queue_insert_entity(decal)
-					SU.y_hero_animation_wait(this)
-					U.animation_start(this, "idle", nil, store.tick_ts, true)
-
-					goto continue
 				end
 			end
 
@@ -785,8 +791,8 @@ tt.hero.skills.skill_a.xp_level_steps = {
 }
 tt.hero.skills.skill_b = CC("hero_skill")
 tt.hero.skills.skill_b.cooldown = 20
-tt.hero.skills.skill_b.damage_min = 102
-tt.hero.skills.skill_b.damage_max = 148
+tt.hero.skills.skill_b.damage_min = 105
+tt.hero.skills.skill_b.damage_max = 150
 tt.hero.skills.skill_b.damage_radius = {50, 50, 120}
 tt.hero.skills.skill_b.stun_duration = {2, 7, 7}
 tt.hero.skills.skill_b.xp_gain = {80, 160, 240}
@@ -809,7 +815,7 @@ tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.cooldown = 28
 tt.hero.skills.ultimate.duration = 5
 tt.hero.skills.ultimate.min_targets = 3
-tt.hero.skills.ultimate.xp_gain = {112}
+tt.hero.skills.ultimate.xp_gain = {120}
 tt.hero.skills.ultimate.xp_level_steps = {
 	[5] = 1
 }
@@ -999,8 +1005,8 @@ tt.main_script.update = aura_malik_talent_2_buff_update
 
 tt = RT("aura_malik_ultimate", "aura")
 tt.aura.cycle_time = 0.5
-tt.aura.damage_max = 49
-tt.aura.damage_min = 34
+tt.aura.damage_max = 55
+tt.aura.damage_min = 35
 tt.aura.damage_type = DAMAGE_PHYSICAL
 tt.aura.duration = 5
 tt.aura.hit_fx = "fx_malik_hit"
