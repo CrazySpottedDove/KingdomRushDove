@@ -421,10 +421,6 @@ local function hero_illiana_level_up(this, store, initial)
 			a.damage_max = s.damage_max[s.level]
 		end
 	end)
-	upgrade_skill(this, "talent_1", function(this, s)
-		s.disabled = nil
-		this.dodge.chance = s.dodge_chance
-	end)
 	upgrade_skill(this, "talent_2", function(this, s)
 		s.disabled = nil
 	end)
@@ -1819,15 +1815,15 @@ end
 local tt
 
 tt = RT("hero_illiana", "hero")
-AC(tt, "melee", "ranged", "timed_attacks", "transfer", "teleport", "dodge")
+AC(tt, "melee", "ranged", "timed_attacks", "transfer", "teleport")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {140, 150, 160, 170, 180, 190, 200, 210, 220, 230}
-tt.hero.level_stats.melee_damage_min = {4, 4, 5, 5, 6, 7, 8, 8, 9, 10}
-tt.hero.level_stats.melee_damage_max = {7, 8, 9, 10, 11, 12, 13, 14, 15, 16}
-tt.hero.level_stats.ranged_damage_min = {4, 7, 8, 9, 10, 12, 13, 14, 15, 16}
-tt.hero.level_stats.ranged_damage_max = {10, 13, 15, 17, 20, 22, 24, 26, 29, 31}
-tt.dragon_ranged_damage_min = {4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
-tt.dragon_ranged_damage_max = {7, 8, 9, 11, 12, 14, 15, 17, 18, 20}
+tt.hero.level_stats.melee_damage_min = {4, 4, 4, 5, 5, 6, 7, 8, 8, 9}
+tt.hero.level_stats.melee_damage_max = {6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+tt.hero.level_stats.ranged_damage_min = {7, 8, 9, 10, 12, 13, 14, 15, 16, 18}
+tt.hero.level_stats.ranged_damage_max = {13, 15, 17, 20, 22, 24, 26, 29, 31, 34}
+tt.dragon_ranged_damage_min = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+tt.dragon_ranged_damage_max = {8, 9, 11, 12, 14, 15, 17, 18, 20, 22}
 tt.dragon_t = "decal_illiana_dragon"
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.damage_min = {40, 70, 100}
@@ -1880,12 +1876,6 @@ tt.hero.skills.ultimate.xp_level_steps = {
 	[5] = 1
 }
 tt.hero.skills.ultimate.active = false
-tt.hero.skills.talent_1 = CC("hero_skill")
-tt.hero.skills.talent_1.dodge_chance = 0.4
-tt.hero.skills.talent_1.disabled = true
-tt.hero.skills.talent_1.xp_level_steps = {
-	[1] = 1
-}
 tt.hero.skills.talent_2 = CC("hero_skill")
 tt.hero.skills.talent_2.damage_factor = 3
 tt.hero.skills.talent_2.disabled = true
@@ -1909,10 +1899,6 @@ tt.transfer.extra_speed = 50
 tt.transfer.min_distance = 160
 tt.teleport.min_distance = 160
 tt.teleport.disabled = false
-tt.dodge.chance = 0
-tt.dodge.show_pop = true
-tt.dodge.silent = true
-tt.dodge.pop = "pop_miss"
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].prefix = "hero_illianaDef"
 tt.render.sprites[1].name = "idle"
@@ -2287,9 +2273,8 @@ tt.bounce_range = 75
 tt.sound_events.insert = "HeroIllianaTagCast"
 
 tt = RT("bullet_illiana_skill_b", "bomb")
-tt.bullet.damage_min = 0
-tt.bullet.damage_max = 0
-tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.damage_min = 50
+tt.bullet.damage_max = 50
 tt.bullet.flight_time = fts(20)
 tt.bullet.hit_fx = "fx_bullet_illiana_skill_b_hit"
 tt.bullet.hit_decal = "decal_illiana_skill_b_hit_decal"

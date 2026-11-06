@@ -9,7 +9,7 @@ return {
 		thumb_image = "hero_illiana_kr6_thumb",
 		icon_image = "hero_illiana_kr6_icon"
 	},
-	room_special_order = {"TAG", "GLITTER_BOMB", "EASY_PREY", "TEAMWORK", "AIRBORNE_BLISS", "SPARKY_INCINERATE"},
+	room_special_order = {"TAG", "GLITTER_BOMB", "EASY_PREY", "AIRBORNE_BLISS", "SPARKY_INCINERATE"},
 	required_textures = {"go_hero_illiana"},
 	plugin_required_textures = {},
 	required_sounds = {"hero_illiana"},
