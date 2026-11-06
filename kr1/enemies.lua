@@ -12992,7 +12992,7 @@ tt.render.sprites[1].angles_custom = {
 }
 tt.enemy.gold = 6
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = {55, 55, 68.75, 137.5}
+tt.health.hp_max = {55, 55, 68.75, 120}
 tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 32)
@@ -13016,7 +13016,7 @@ tt.ui.click_rect = r(-13, 0, 26, 25)
 
 tt = RT("enemy_bandit_tut_kr6", "enemy_bandit_kr6")
 tt.info.i18n_key = "ENEMY_BANDIT_KR6"
-tt.health.hp_max = 33
+tt.health.hp_max = 30
 tt.motion.max_speed = 40.32
 tt.ui.click_rect = r(0, 0, 0, 0)
 
@@ -13030,7 +13030,7 @@ tt.render.sprites[1].angles_custom = {
 }
 tt.enemy.gold = 9
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = {96.25, 110, 137.5, 275}
+tt.health.hp_max = {96.25, 110, 137.5, 250}
 tt.health.armor = 0.3
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 34)
@@ -13061,7 +13061,7 @@ tt.health.dead_lifetime = 3
 tt.enemy.gold = 88
 tt.enemy.melee_slot = v(36, 0)
 tt.enemy.lives_cost = 2
-tt.health.hp_max = {962, 1184, 1332, 2664}
+tt.health.hp_max = {962, 1184, 1332, 2500}
 tt.health.armor = 0.5
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 50)
@@ -13114,7 +13114,7 @@ tt.health.dead_lifetime = 3
 tt.enemy.gold = 2
 tt.count_group.name = "enemy_crow"
 tt.flight_height = 40
-tt.health.hp_max = {27.5, 27.5, 34.375, 55}
+tt.health.hp_max = {27.5, 27.5, 34.375, 50}
 tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, tt.flight_height + 25)
@@ -13146,7 +13146,7 @@ tt = RT("enemy_shadow_blades", "enemy")
 AC(tt, "melee")
 tt.enemy.gold = 11
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = {82.5, 96.25, 110, 220}
+tt.health.hp_max = {82.5, 96.25, 110, 200}
 tt.health_bar.offset = v(0, 35)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health.armor = 0
@@ -13225,7 +13225,7 @@ tt = RT("enemy_shadow_archer_kr6", "enemy")
 AC(tt, "melee", "ranged")
 tt.enemy.gold = 17
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = {139, 152.9, 194.6, 389.2}
+tt.health.hp_max = {139, 152.9, 194.6, 350}
 tt.health.armor = 0
 tt.health.magic_armor = 0.3
 tt.health_bar.offset = v(0, 35)
@@ -13272,8 +13272,6 @@ tt.bullet.damage_min = 12
 tt.bullet.damage_max = 19
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 
--- ==================== kr6 关卡 204：shadow_order / orcs 敌人 ====================
-
 tt = RT("fx_crowcaller_hit", "fx")
 tt.render.sprites[1].name = "crowcaller_hit_idle"
 
@@ -13306,7 +13304,7 @@ AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 44
 tt.enemy.melee_slot = v(30, 0)
 tt.enemy.has_magic = true
-tt.health.hp_max = {355, 426, 497, 1065}
+tt.health.hp_max = {355, 426, 497, 975}
 tt.health.armor = 0
 tt.health.magic_armor = 0.6
 tt.health_bar.offset = v(0, 34)
@@ -13350,7 +13348,7 @@ tt.info.i18n_key = "ENEMY_GOBLIN"
 AC(tt, "melee")
 tt.enemy.gold = 3
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = {27.5, 27.5, 41.25, 103.125}
+tt.health.hp_max = {27.5, 27.5, 41.25, 90}
 tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 32)
@@ -13379,7 +13377,7 @@ AC(tt, "melee")
 tt.enemy.gold = 17
 tt.enemy.melee_slot = v(32, 0)
 tt.enemy.has_magic = true
-tt.health.hp_max = {222.4, 250.2, 278, 556}
+tt.health.hp_max = {222.4, 250.2, 278, 525}
 tt.health.armor = 0.3
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 34)
@@ -13446,7 +13444,7 @@ AC(tt, "melee", "ranged", "timed_attacks")
 tt.enemy.gold = 13
 tt.enemy.melee_slot = v(28, 0)
 tt.enemy.has_magic = true
-tt.health.hp_max = {110, 137.5, 165, 343.75}
+tt.health.hp_max = {110, 137.5, 165, 325}
 tt.health.armor = 0
 tt.health.magic_armor = 0.8
 tt.health_bar.offset = v(0, 32)
@@ -13529,8 +13527,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
 tt.tween.props[1].keys = {{0, 0}, {fts(7), 255}}
 
--- ==================== kr6 关卡 205：orcs 野猪狼骑敌人 ====================
-
 tt = RT("fx_orc_wildling_hit", "fx")
 tt.render.sprites[1].name = "wildling_hit_fx_run"
 
@@ -13549,7 +13545,7 @@ tt.render.sprites[1].angles_custom = {
 }
 tt.enemy.gold = 5
 tt.enemy.melee_slot = v(26, 0)
-tt.health.hp_max = {48.125, 55, 55, 110}
+tt.health.hp_max = {48.125, 55, 55, 100}
 tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 31)
@@ -13585,7 +13581,7 @@ tt.render.sprites[1].angles_custom = {
 }
 tt.enemy.gold = 11
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = {137.5, 165, 192.5, 385}
+tt.health.hp_max = {137.5, 165, 192.5, 350}
 tt.health.armor = 0
 tt.health.magic_armor = 0.5
 tt.health_bar.offset = v(0, 34)
@@ -13622,7 +13618,7 @@ tt.render.sprites[1].angles_custom = {
 }
 tt.enemy.gold = 22
 tt.enemy.melee_slot = v(34, 0)
-tt.health.hp_max = {333.6, 389.2, 444.8, 889.6}
+tt.health.hp_max = {333.6, 389.2, 444.8, 800}
 tt.health.armor = 0.6
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(2, 45)
@@ -13655,13 +13651,11 @@ tt.worg_mode.sound_in = "EnemyOrcWildlingTriggerRunCast"
 tt.sound_events.death = "EnemyOrcWildlingDeath"
 tt.ui.click_rect = r(-22, 0, 44, 40)
 
--- ==================== kr6 关卡 207：goblin 狼骑（rider_goblin） ====================
-
 tt = RT("enemy_rider_goblin", "enemy")
 AC(tt, "melee")
 tt.enemy.gold = 11
 tt.enemy.melee_slot = v(30, 0)
-tt.health.hp_max = {165, 192.5, 220, 440}
+tt.health.hp_max = {165, 192.5, 220, 400}
 tt.health.armor = 0
 tt.health.magic_armor = 0.5
 tt.health_bar.offset = v(0, 45)
@@ -13721,15 +13715,13 @@ tt.render.sprites[1].name = "goblin_projectile"
 tt.main_script.update = scripts.bullet_enemy_flying.update
 tt.decal_shadow = "decal_rider_goblin_bullet_shadow"
 
--- ==================== kr6 关卡 207：ogre 食人魔 ====================
-
 tt = RT("enemy_ogre_kr6", "enemy")
 tt.info.i18n_key = "ENEMY_OGRE"
 AC(tt, "melee")
 tt.enemy.gold = 132
 tt.enemy.melee_slot = v(38, 0)
 tt.enemy.lives_cost = 2
-tt.health.hp_max = {1694, 2002, 2464, 4312}
+tt.health.hp_max = {1694, 2002, 2464, 4000}
 tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 70)
