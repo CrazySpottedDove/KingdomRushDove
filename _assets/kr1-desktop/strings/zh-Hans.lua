@@ -204,7 +204,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
 }
 
 return {
@@ -2896,7 +2896,7 @@ return {
 	HERO_ROOM_ASHBITE_SEARING_SNEEZE_NAME = "灼热喷嚏",
 	HERO_ROOM_ASHBITE_SPITFIRE_DESC = "阿什比特的普通攻击也会使敌人燃烧，在%$ ((E:get_template('mod_ashbite_talent_1_fire')).modifier.duration) %$秒内造成%$ ((E:get_template('mod_ashbite_talent_1_fire')).dps.damage_min * (E:get_template('mod_ashbite_talent_1_fire')).modifier.duration / (E:get_template('mod_ashbite_talent_1_fire')).dps.damage_every) %$点真实伤害。",
 	HERO_ROOM_ASHBITE_SPITFIRE_NAME = "红焰",
-	HERO_ROOM_ASHBITE_WILDFIRE_BARRAGE_DESC = "每隔%$ ((T('hero_ashbite')).timed_attacks.list[4].cooldown) %$秒，阿什比特朝道路喷出3颗火焰弹，每颗对%$ ((E:get_template('bullet_ashbite_ultimate')).bullet.damage_radius) %$范围内的敌人造成%$ ((T('hero_ashbite')).timed_attacks.list[4].damage_min) %$-%$ ((T('hero_ashbite')).timed_attacks.list[4].damage_max) %$点范围真实伤害。",
+	HERO_ROOM_ASHBITE_WILDFIRE_BARRAGE_DESC = "每隔%$ ((T('hero_ashbite')).timed_attacks.list[4].cooldown) %$秒，阿什比特朝道路喷出3颗火焰弹，每颗对%$ ((E:get_template('bullet_ashbite_ultimate')).bullet.damage_radius) %$范围内的敌人造成%$ ((T('hero_ashbite')).hero.skills.ultimate.damage_min) %$-%$ ((T('hero_ashbite')).hero.skills.ultimate.damage_max) %$点范围真实伤害。",
 	HERO_ROOM_ASHBITE_WILDFIRE_BARRAGE_NAME = "野火弹幕",
 	HERO_ROOM_ASRA_ONIX_ARROWS_DESC = "%$ cooldown_str(((T('hero_asra')).ranged.attacks[2].cooldown)) %$向目标射出%$ ((T('hero_asra')).hero.skills.onix_arrows).loops[(levels((T('hero_asra')).hero.skills.onix_arrows))] %$支箭，每支造成%$ damage_str(((T('hero_asra')).hero.skills.onix_arrows).damage_min[(levels((T('hero_asra')).hero.skills.onix_arrows))],((T('hero_asra')).hero.skills.onix_arrows).damage_max[(levels((T('hero_asra')).hero.skills.onix_arrows))],T('bullet_onix_asra').bullet.damage_type) %$。",
 	HERO_ROOM_ASRA_ONIX_ARROWS_NAME = "岩蛇箭",
