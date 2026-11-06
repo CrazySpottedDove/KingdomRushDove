@@ -10982,7 +10982,6 @@ tt.bullet.min_speed = 600
 tt.bullet.damage_max = 60
 tt.bullet.damage_min = 38
 tt.bullet.align_with_trajectory = true
-tt.bullet.use_unit_damage_factor = true
 tt.bullet.pop_chance = 0
 tt.initial_impulse = 600
 tt.initial_impulse_reduction = 0.99
