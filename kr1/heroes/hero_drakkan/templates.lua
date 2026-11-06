@@ -423,12 +423,24 @@ local function hero_drakkan_skill_a(this, store, attack, skill)
 
 	this.render.sprites[1].flip_x = target.pos.x < this.pos.x
 
+	local start_ts = store.tick_ts
+
 	U.animation_start_default(this, attack.animation, this.render.sprites[1].flip_x, store.tick_ts)
 	S:queue(attack.sound)
 
 	if SU.y_hero_wait(store, this, attack.cast_time) then
 		return
 	end
+
+	local new_target, new_targets = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range, nil, attack.vis_flags, attack.vis_bans, function(e)
+		return GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
+	end)
+
+	if new_target and new_targets and #new_targets >= attack.min_targets then
+		target = new_target
+	end
+
+	attack.ts = start_ts
 
 	local direction = this.render.sprites[1].flip_x and -1 or 1
 	local offset = V.v(attack.offset.x * direction, attack.offset.y)
@@ -455,8 +467,6 @@ local function hero_drakkan_skill_a(this, store, attack, skill)
 
 	simulation:queue_insert_entity(aura)
 
-	attack.ts = store.tick_ts
-
 	SU.hero_gain_xp_from_skill(this, skill)
 
 	this.nav_rally.new = false
@@ -474,16 +484,18 @@ local function hero_drakkan_skill_b(this, store, attack, skill)
 		return
 	end
 
+	local start_ts = store.tick_ts
+
 	U.animation_start_default(this, attack.animation_lower, nil, store.tick_ts)
 	S:queue(attack.sound)
 	U.y_wait_unconditional(store, attack.wait_to_lower)
 
 	this.render.sprites[1].z = Z_OBJECTS
 
-	local start_ts = store.tick_ts
+	local lower_ts = store.tick_ts
 
 	while true do
-		local p = math.min(1, (store.tick_ts - start_ts) / attack.lower_duration)
+		local p = math.min(1, (store.tick_ts - lower_ts) / attack.lower_duration)
 		local height = attack.floor_height + (this.flight_height - attack.floor_height) * (1 - p)
 
 		set_hero_height(this, height)
@@ -494,6 +506,8 @@ local function hero_drakkan_skill_b(this, store, attack, skill)
 
 		coroutine.yield()
 	end
+
+	attack.ts = start_ts
 
 	local aura = E:create_entity(attack.aura_t)
 
@@ -528,8 +542,6 @@ local function hero_drakkan_skill_b(this, store, attack, skill)
 
 	set_hero_height(this, this.flight_height)
 
-	attack.ts = store.tick_ts
-
 	SU.hero_gain_xp_from_skill(this, skill)
 
 	this.nav_rally.new = false
@@ -546,6 +558,8 @@ local function hero_drakkan_skill_c(this, store, attack, skill)
 		return
 	end
 
+	local start_ts = store.tick_ts
+
 	U.animation_start_default(this, attack.animation, nil, store.tick_ts)
 	U.y_wait_unconditional(store, attack.cast_time)
 	S:queue(attack.sound)
@@ -560,9 +574,9 @@ local function hero_drakkan_skill_c(this, store, attack, skill)
 
 	simulation:queue_insert_entity(clone)
 
-	SU.hero_gain_xp_from_skill(this, skill)
+	attack.ts = start_ts
 
-	attack.ts = store.tick_ts
+	SU.hero_gain_xp_from_skill(this, skill)
 
 	SU.y_hero_animation_wait(this)
 end
@@ -596,6 +610,8 @@ local function hero_drakkan_ultimate(this, store, attack, skill, start_y)
 		return
 	end
 
+	local start_ts = store.tick_ts
+
 	U.animation_start_default(this, attack.animation, nil, store.tick_ts)
 	S:queue(attack.sound_cast)
 	S:queue(attack.sound_taunt)
@@ -604,7 +620,13 @@ local function hero_drakkan_ultimate(this, store, attack, skill, start_y)
 		return
 	end
 
-	attack.ts = store.tick_ts
+	local new_targets = find_ultimate_targets(this, store, attack)
+
+	if new_targets then
+		targets = new_targets
+	end
+
+	attack.ts = start_ts
 
 	SU.hero_gain_xp_from_skill(this, skill)
 

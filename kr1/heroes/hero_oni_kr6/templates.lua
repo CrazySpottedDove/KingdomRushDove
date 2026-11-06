@@ -375,6 +375,8 @@ local function hero_oni_kr6_update(this, store)
 				if not triggers or #triggers < ult.min_targets then
 					ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
+					local start_ts = store.tick_ts
+
 					S:queue(ult.sound)
 					S:queue(ult.taunt)
 					U.animation_start(this, ult.animation_in, this.render.sprites[1].flip_x, store.tick_ts, false, 1)
@@ -384,6 +386,8 @@ local function hero_oni_kr6_update(this, store)
 
 						goto continue
 					end
+
+					ult.ts = start_ts
 
 					U.animation_start(this, ult.animation_loop, this.render.sprites[1].flip_x, store.tick_ts, true, 1)
 
@@ -423,8 +427,6 @@ local function hero_oni_kr6_update(this, store)
 					SU.hero_gain_xp_from_skill(this, skills.ultimate)
 					U.y_animation_play(this, ult.animation_out, this.render.sprites[1].flip_x, store.tick_ts, 1, 1)
 
-					ult.ts = store.tick_ts
-
 					apply_delayed_cooldowns(this, store, list)
 
 					this.used_skill = true
@@ -435,6 +437,9 @@ local function hero_oni_kr6_update(this, store)
 
 			if ready_to_use_skill(sb, store, this.unit.cooldown_factor) and h.hp <= h.hp_max * sb.threshold then
 				S:queue(sb.sound, sb.sound_args)
+
+				local start_ts = store.tick_ts
+
 				U.animation_start(this, sb.animation, this.render.sprites[1].flip_x, store.tick_ts, false, 1)
 
 				local ts = store.tick_ts
@@ -442,6 +447,8 @@ local function hero_oni_kr6_update(this, store)
 				if SU.y_hero_wait(store, this, sb.cast_time) then
 					goto continue
 				end
+
+				sb.ts = start_ts
 
 				local mod = E:create_entity(sb.mod)
 				local heal = h.hp_max * skills.skill_b.heal_ptg[skills.skill_b.level]
@@ -476,8 +483,6 @@ local function hero_oni_kr6_update(this, store)
 
 				::skill_b_finish::
 
-				sb.ts = store.tick_ts
-
 				::skill_b_stop::
 
 				apply_delayed_cooldowns(this, store, list)
@@ -493,6 +498,8 @@ local function hero_oni_kr6_update(this, store)
 				if not target then
 					sc.ts = store.tick_ts - sc.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, sc.animation_in, this.pos.x > target.pos.x, store.tick_ts, false, 1)
 
 					this.health_bar.hidden = true
@@ -523,6 +530,10 @@ local function hero_oni_kr6_update(this, store)
 
 					simulation:queue_insert_entity(decal_cast)
 					U.y_wait(store, sc.disappear_time)
+
+					target = U.find_foremost_enemy(store, this.pos, sc.min_detection_range, sc.detection_range, sc.prediction, sc.flags, sc.bans) or target
+
+					sc.ts = start_ts
 
 					local flip = target.pos.x < this.pos.x and 1 or -1
 					local decal = E:create_entity(sc.decal)
@@ -560,7 +571,6 @@ local function hero_oni_kr6_update(this, store)
 					U.y_animation_wait(this)
 
 					this.used_skill = true
-					sc.ts = store.tick_ts
 
 					apply_delayed_cooldowns(this, store, list)
 

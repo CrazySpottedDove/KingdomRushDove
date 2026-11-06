@@ -306,7 +306,6 @@ local function hero_connor_update(this, store)
 
 			this.health.ignore_damage = false
 			in_ult = false
-			ua.ts = store.tick_ts
 
 			U.animation_start(this, "idle", nil, store.tick_ts, true)
 
@@ -436,6 +435,21 @@ local function hero_connor_update(this, store)
 
 			if not in_ult and not ready_to_block and not sca.disabled and ready_to_use_skill(sca, store, this.unit.cooldown_factor) and this.soldier.target_id == nil then
 				local a = sca
+
+				local function filter_targets(list)
+					return table.filter(list, function(k, v)
+						local vpi = v.nav_path.pi
+						local vnearest = P:nearest_nodes(this.pos.x, this.pos.y, {vpi})
+						local _, _, v_ni, v_distance = unpack(vnearest[1])
+
+						if v_distance < 50 and (not store.level.ignore_walk_backwards_paths or not table.contains(store.level.ignore_walk_backwards_paths, vpi)) and P:is_path_active(vpi) and v_ni > v.nav_path.ni then
+							return true
+						end
+
+						return false
+					end)
+				end
+
 				local enemies = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -452,17 +466,7 @@ local function hero_connor_update(this, store)
 					goto label_skills
 				end
 
-				local targets = table.filter(enemies, function(k, v)
-					local vpi = v.nav_path.pi
-					local vnearest = P:nearest_nodes(this.pos.x, this.pos.y, {vpi})
-					local _, _, v_ni, v_distance = unpack(vnearest[1])
-
-					if v_distance < 50 and (not store.level.ignore_walk_backwards_paths or not table.contains(store.level.ignore_walk_backwards_paths, vpi)) and P:is_path_active(vpi) and v_ni > v.nav_path.ni then
-						return true
-					end
-
-					return false
-				end)
+				local targets = filter_targets(enemies)
 
 				if not targets or #targets < a.min_targets then
 					sca.ts = sca.ts + fts(10)
@@ -481,6 +485,13 @@ local function hero_connor_update(this, store)
 
 				if SU.y_hero_wait(store, this, a.cast_time) then
 					goto continue
+				end
+
+				local fresh_enemies = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+				local fresh_targets = fresh_enemies and filter_targets(fresh_enemies)
+
+				if fresh_targets and #fresh_targets >= a.min_targets then
+					targets = fresh_targets
 				end
 
 				sca.ts = start_ts
@@ -642,6 +653,8 @@ local function hero_connor_update(this, store)
 					if SU.y_hero_wait(store, this, a.cast_time) then
 						goto continue
 					end
+
+					target = store.entities[this.soldier.target_id] or target
 
 					sba_ts = start_ts
 					sba.ts = start_ts

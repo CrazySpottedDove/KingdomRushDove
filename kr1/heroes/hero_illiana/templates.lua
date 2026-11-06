@@ -1051,9 +1051,8 @@ local function hero_illiana_update(this, store)
 				end
 
 				S:queue(ult.taunt)
-				U.animation_start(this, ult.animation, nil, store.tick_ts, false, 1)
-
 				local start_ts = store.tick_ts
+				U.animation_start(this, ult.animation, nil, store.tick_ts, false, 1)
 
 				while store.tick_ts - start_ts < ult.shoot_time do
 					if SU.soldier_interrupted(this) then
@@ -1068,6 +1067,22 @@ local function hero_illiana_update(this, store)
 
 					coroutine.yield()
 				end
+
+				local fresh_targets = U.find_enemies_in_range(store, this.pos, 0, ult.detection_range, ult.flags, ult.bans, function(v)
+					for _, p in pairs(nearest) do
+						return p[1] == v.nav_path.pi and v.nav_path.ni < p[3]
+					end
+				end)
+
+				if fresh_targets and #fresh_targets >= ult.min_targets then
+					local fresh_paths = sort_paths_by_distance(find_most_populated_path(fresh_targets), ult.distance)
+
+					if fresh_paths and #fresh_paths > 0 then
+						paths = fresh_paths
+					end
+				end
+
+				ult.ts = start_ts
 
 				S:queue(ult.sound)
 
@@ -1093,7 +1108,6 @@ local function hero_illiana_update(this, store)
 
 				casting_ult = false
 				this.cast_ult = false
-				ult.ts = store.tick_ts
 			end
 
 			::label_ult_0::
@@ -1108,11 +1122,20 @@ local function hero_illiana_update(this, store)
 					local shoot_pos_prev = find_center_of_group(targets, flight_time)
 					local f = this.pos.x > shoot_pos_prev.x
 
+					local start_ts = store.tick_ts
 					U.animation_start(this, skb.animation, f, store.tick_ts, false, 1)
 
 					if SU.y_hero_wait(store, this, skb.shoot_time) then
 						goto label_continue
 					end
+
+					local _, fresh_targets = U.find_foremost_enemy(store, this.pos, 0, skb.max_range, 0, skb.flags, skb.bans)
+
+					if fresh_targets and #fresh_targets >= skb.min_targets then
+						targets = fresh_targets
+					end
+
+					skb.ts = start_ts
 
 					local shoot_pos = find_center_of_group(targets, flight_time)
 					local flip = this.render.sprites[1].flip_x and -1 or 1
@@ -1127,8 +1150,6 @@ local function hero_illiana_update(this, store)
 					simulation:queue_insert_entity(b)
 					SU.hero_gain_xp_from_skill(this, skills.skill_b)
 					SU.y_hero_animation_wait(this)
-
-					skb.ts = store.tick_ts
 
 					goto label_continue
 				end
@@ -1554,6 +1575,7 @@ local function decal_illiana_dragon_update(this, store)
 						until dist < 10
 
 						hold_position()
+						local start_ts = store.tick_ts
 						U.animation_start(this, sc.animation, this.pos.x > target.pos.x, store.tick_ts, false, 1)
 
 						if U.y_wait(store, sc.lower_time, function(store, time)
@@ -1575,6 +1597,16 @@ local function decal_illiana_dragon_update(this, store)
 						s.offset = V.v(0, sc.flight_heights[3])
 
 						S:queue(sc.sound)
+
+						local retargeted = U.find_enemies_in_range(store, this.pos, 0, sc.detection_range, 0, 0, function(v)
+							return v.unit.is_stunned
+						end)
+
+						if retargeted and #retargeted > 0 then
+							target = retargeted[1]
+						end
+
+						sc.ts = start_ts
 
 						local d = E:create_entity("damage")
 
@@ -1600,7 +1632,6 @@ local function decal_illiana_dragon_update(this, store)
 						this.force_motion.max_v = og_speed
 						illiana.can_transfer = true
 						illiana.teleport.disabled = false
-						sc.ts = store.tick_ts
 
 						goto label_dragon_504_0
 					end

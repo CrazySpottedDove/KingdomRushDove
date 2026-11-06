@@ -512,12 +512,22 @@ local function hero_ashbite_update(this, store)
 			if not enemies or #enemies < a.min_targets then
 				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 			else
+				local start_ts = store.tick_ts
+
 				U.animation_start(this, a.animation, nil, store.tick_ts, false)
 				S:queue(a.sound)
 
 				if SU.y_hero_wait(store, this, a.cast_time) then
 					goto continue
 				end
+
+				local fresh_enemies = find_targets_ultimate(a)
+
+				if fresh_enemies and #fresh_enemies >= a.min_targets then
+					enemies = fresh_enemies
+				end
+
+				a.ts = start_ts
 
 				local fireballs = #a.fireball_timings
 				local max_shot = 1
@@ -544,8 +554,6 @@ local function hero_ashbite_update(this, store)
 					end
 				end
 
-				a.ts = store.tick_ts
-
 				SU.hero_gain_xp_from_skill(this, su)
 
 				if SU.y_hero_animation_wait(this) then
@@ -567,6 +575,7 @@ local function hero_ashbite_update(this, store)
 			if not target then
 				a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 			else
+				local start_ts = store.tick_ts
 				local c = E:create_entity(a.dust_c)
 
 				c.ashbite_e = this
@@ -596,6 +605,8 @@ local function hero_ashbite_update(this, store)
 					this.render.sprites[2].scale = V.vv(scale)
 				end)
 
+				a.ts = start_ts
+
 				U.flags_remove(this.vis, F_FLYING)
 				U.bans_add(this.vis, F_STUN)
 
@@ -624,6 +635,21 @@ local function hero_ashbite_update(this, store)
 
 		if not feeding_time and ready_to_use_skill(sba, store, this.unit.cooldown_factor) then
 			local a = sba
+			local function aim_pos(t)
+				if a.node_prediction and t.motion and t.motion.speed then
+					if t.motion.forced_waypoint then
+						local dt = a.node_prediction == true and 1 or a.node_prediction
+
+						return V.v(t.pos.x + dt * t.motion.speed.x, t.pos.y + dt * t.motion.speed.y)
+					end
+
+					local node_offset = P:predict_enemy_node_advance(t, a.node_prediction)
+
+					return P:node_pos(t.nav_path.pi, t.nav_path.spi, t.nav_path.ni + node_offset)
+				end
+
+				return t.pos
+			end
 			local target, enemies = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, o)
 				return not e.unit.ignore_stun and not e.unit.is_stunned and GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
 			end)
@@ -637,23 +663,11 @@ local function hero_ashbite_update(this, store)
 
 				target = enemies[1]
 
-				local pred_pos
-
-				if a.node_prediction and target.motion and target.motion.speed then
-					if target.motion.forced_waypoint then
-						local dt = a.node_prediction == true and 1 or a.node_prediction
-
-						pred_pos = V.v(target.pos.x + dt * target.motion.speed.x, target.pos.y + dt * target.motion.speed.y)
-					else
-						local node_offset = P:predict_enemy_node_advance(target, a.node_prediction)
-
-						pred_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
-					end
-				else
-					pred_pos = target.pos
-				end
+				local pred_pos = aim_pos(target)
 
 				this.render.sprites[1].flip_x = pred_pos.x < this.pos.x
+
+				local start_ts = store.tick_ts
 
 				U.animation_start(this, a.animation, nil, store.tick_ts, false)
 				S:queue(a.sound)
@@ -662,7 +676,20 @@ local function hero_ashbite_update(this, store)
 					goto continue
 				end
 
-				a.ts = store.tick_ts
+				local _, fresh_enemies = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, o)
+					return not e.unit.ignore_stun and not e.unit.is_stunned and GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
+				end)
+
+				if fresh_enemies and #fresh_enemies > 0 then
+					table.sort(fresh_enemies, function(a1, a2)
+						return a1.health.hp_max > a2.health.hp_max
+					end)
+
+					target = fresh_enemies[1]
+					pred_pos = aim_pos(target)
+				end
+
+				a.ts = start_ts
 
 				SU.hero_gain_xp_from_skill(this, sb)
 
@@ -707,6 +734,8 @@ local function hero_ashbite_update(this, store)
 
 				this.render.sprites[1].flip_x = target_pos.x < this.pos.x
 
+				local start_ts = store.tick_ts
+
 				U.animation_start(this, a.animation, nil, store.tick_ts, false)
 				S:queue(a.sound)
 
@@ -714,7 +743,16 @@ local function hero_ashbite_update(this, store)
 					goto continue
 				end
 
-				a.ts = store.tick_ts
+				local fresh_target, fresh_targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, nil, a.vis_flags, a.vis_bans, function(e, o)
+					return GR:cell_is(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
+				end)
+
+				if fresh_targets and #fresh_targets >= a.min_targets then
+					target = fresh_target
+					target_pos = fresh_target.pos
+				end
+
+				a.ts = start_ts
 
 				SU.hero_gain_xp_from_skill(this, sa)
 
@@ -751,8 +789,6 @@ local function hero_ashbite_update(this, store)
 				end
 
 				simulation:queue_insert_entity(au)
-
-				a.ts = store.tick_ts
 
 				if SU.y_hero_animation_wait(this) then
 					goto continue
@@ -807,7 +843,6 @@ local function hero_ashbite_update(this, store)
 				end
 
 				feeding_time = false
-				sca.ts = store.tick_ts
 
 				goto continue
 			else

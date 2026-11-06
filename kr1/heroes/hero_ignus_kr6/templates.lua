@@ -642,16 +642,27 @@ local function hero_ignus_kr6_update(this, store)
 					U.unblock_target(store, this)
 					S:queue(ultimate.taunt)
 					S:queue(ultimate.sound_cast)
+
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, ultimate.animations[1], nil, store.tick_ts, false, 1)
 
 					if SU.y_hero_wait(store, this, ultimate.cast_time) then
 						goto continue
 					end
 
+					local new_targets = U.find_enemies_in_range(store, this.pos, 0, ultimate.max_range, 0, 0)
+
+					if new_targets and #new_targets >= ultimate.min_targets then
+						selected_e = store.entities[this.soldier.target_id] or new_targets[1]
+					end
+
 					U.animation_start(this, ultimate.animations[2], nil, store.tick_ts, true, 1)
 					S:queue(ultimate.sound_loop)
 
-					local start_ts = store.tick_ts
+					ultimate.ts = start_ts
+
+					local channel_ts = store.tick_ts
 					local a = E:create_entity(ultimate.aura)
 					local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {selected_e.nav_path.pi})[1]
 					local node_pos = P:node_pos(nearest[1], 1, nearest[3])
@@ -674,7 +685,7 @@ local function hero_ignus_kr6_update(this, store)
 					U.set_destination(this, node_pos)
 					U.speed_mul_self(this, ultimate.movement_speed)
 
-					while store.tick_ts - start_ts < ultimate.duration do
+					while store.tick_ts - channel_ts < ultimate.duration do
 						if not V.veq(this.pos, node_pos) then
 							U.walk(this, store.tick_length)
 						end
@@ -707,8 +718,6 @@ local function hero_ignus_kr6_update(this, store)
 					SU.hero_gain_xp_from_skill(this, skills.ultimate)
 					talent_2_heal()
 
-					ultimate.ts = store.tick_ts
-
 					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
@@ -722,11 +731,16 @@ local function hero_ignus_kr6_update(this, store)
 					sb.ts = store.tick_ts - sb.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					S:queue(sb.sound)
+
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, sb.animation, nil, store.tick_ts, false, 1)
 
 					if SU.y_hero_wait(store, this, sb.cast_time) then
 						goto continue
 					end
+
+					sb.ts = start_ts
 
 					local a = E:create_entity(sb.aura)
 					local d = E:create_entity(sb.decal_ground)
@@ -749,8 +763,6 @@ local function hero_ignus_kr6_update(this, store)
 					talent_2_heal()
 					U.y_animation_wait(this)
 
-					sb.ts = store.tick_ts
-
 					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
@@ -767,11 +779,15 @@ local function hero_ignus_kr6_update(this, store)
 				if not t or not this.motion.arrived then
 					sc.ts = store.tick_ts - sc.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, sc.animation_in, t.pos.x < this.pos.x, store.tick_ts, false, 1)
 
 					if SU.y_hero_wait(store, this, sc.dissapear_time) then
 						goto continue
 					end
+
+					sc.ts = start_ts
 
 					S:queue(sc.sound)
 
@@ -803,9 +819,13 @@ local function hero_ignus_kr6_update(this, store)
 						simulation:queue_insert_entity(fx)
 					end
 
-					t, _, pred_pos = U.find_foremost_enemy(store, this.pos, 0, sc.detection_range, fts(20), 0, sc.bans, function(e)
+					local new_t, _, new_pred_pos = U.find_foremost_enemy(store, this.pos, 0, sc.detection_range, fts(20), 0, sc.bans, function(e)
 						return e.id ~= this.soldier.target_id
 					end)
+
+					if new_t then
+						t, pred_pos = new_t, new_pred_pos
+					end
 
 					if t then
 						local b = E:create_entity(sc.bullet)
@@ -860,8 +880,6 @@ local function hero_ignus_kr6_update(this, store)
 
 					U.y_animation_wait(this)
 
-					sc.ts = store.tick_ts
-
 					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
@@ -875,11 +893,22 @@ local function hero_ignus_kr6_update(this, store)
 					sa.ts = store.tick_ts - sa.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
 					this.render.sprites[1].flip_x = target.pos.x < this.pos.x
+
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, sa.animation, nil, store.tick_ts, false, 1)
 
 					if SU.y_hero_wait(store, this, sa.cast_time) then
 						goto continue
 					end
+
+					local new_target, _, new_pred_pos = U.find_foremost_enemy(store, this.pos, sa.min_range, sa.max_range, sa.prediction, sa.vis_flags, sa.vis_bans)
+
+					if new_target then
+						target, pred_pos = new_target, new_pred_pos
+					end
+
+					sa.ts = start_ts
 
 					S:queue(sa.sound)
 
@@ -907,8 +936,6 @@ local function hero_ignus_kr6_update(this, store)
 					simulation:queue_insert_entity(fx)
 					SU.hero_gain_xp_from_skill(this, skills.skill_a)
 					talent_2_heal()
-
-					sa.ts = store.tick_ts
 
 					apply_delayed_cooldowns(this, store, list)
 					SU.y_hero_animation_wait(this)

@@ -203,11 +203,13 @@ local function hero_gerald_kr6_update(this, store)
 			if ready_to_use_skill(fated, store, this.unit.cooldown_factor) then
 				h.ignore_damage = true
 
-				fated.ts = store.tick_ts
+				local start_ts = store.tick_ts
 
 				U.animation_start(this, "fated_survivor", nil, store.tick_ts, false)
 				S:queue(fated.sound)
 				SU.y_hero_wait(store, this, fated.cast_time)
+
+				fated.ts = start_ts
 
 				local decal = E:create_entity(fated.decal)
 
@@ -275,6 +277,14 @@ local function hero_gerald_kr6_update(this, store)
 						goto continue
 					end
 
+					local new_target = store.entities[this.soldier.target_id]
+
+					if new_target and not new_target.health.dead then
+						target = new_target
+					end
+
+					ultimate.ts = start_ts
+
 					local enemies = U.find_enemies_in_range(store, this.pos, 0, ultimate.initial_stun_radius, ultimate.vis_flags, F_BOSS) or {}
 
 					if not table.contains(enemies, target) then
@@ -301,8 +311,6 @@ local function hero_gerald_kr6_update(this, store)
 
 						coroutine.yield()
 					end
-
-					ultimate.ts = start_ts
 
 					local d = E:create_entity("damage")
 
@@ -393,7 +401,12 @@ local function hero_gerald_kr6_update(this, store)
 
 					simulation:queue_insert_entity(decal)
 
-					local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, inspire.min_range, inspire.max_range, inspire.vis_flags, inspire.vis_bans)
+					local refreshed_soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, inspire.min_range, inspire.max_range, inspire.vis_flags, inspire.vis_bans)
+
+					if refreshed_soldiers and #refreshed_soldiers >= inspire.min_targets then
+						soldiers = refreshed_soldiers
+					end
+
 					if soldiers then
 						for _, soldier in ipairs(soldiers) do
 							local mod = E:create_entity(inspire.mod)
