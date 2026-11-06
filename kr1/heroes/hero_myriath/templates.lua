@@ -269,7 +269,7 @@ local function hero_myriath_update(this, store)
 					if #paths == 0 then
 						ult.ts = store.tick_ts - ult.cooldown * (this.unit.cooldown_factor) + fts(10)
 					else
-						local n = P:nearest_nodes(this.pos.x, this.pos.y, {paths[1][1]})
+						local start_ts = store.tick_ts
 
 						U.animation_start(this, ult.animation, this.render.sprites[1].flip_x, store.tick_ts, false)
 						S:queue(ult.sound_taunt)
@@ -277,6 +277,28 @@ local function hero_myriath_update(this, store)
 						if SU.y_hero_wait(store, this, ult.cast_time) then
 							goto continue
 						end
+
+						local _, effect_targets = U.find_foremost_enemy(store, this.pos, ult.min_detection_range, ult.max_detection_range, ult.prediction, 0, ult.bans, function(v)
+							for _, p in pairs(nearest) do
+								if p[1] == v.nav_path.pi and v.nav_path.ni < p[3] then
+									return true
+								end
+							end
+
+							return false
+						end)
+
+						if effect_targets and #effect_targets >= ult.min_targets then
+							local effect_paths = sort_paths_by_distance(find_most_populated_path(effect_targets), ult.distance)
+
+							if #effect_paths > 0 then
+								paths = effect_paths
+							end
+						end
+
+						local n = P:nearest_nodes(this.pos.x, this.pos.y, {paths[1][1]})
+
+						ult.ts = start_ts
 
 						S:queue(ult.sound_cast)
 
@@ -296,8 +318,6 @@ local function hero_myriath_update(this, store)
 						SU.hero_gain_xp_from_skill(this, ultimate)
 						U.y_animation_wait(this)
 
-						ult.ts = store.tick_ts
-
 						goto continue
 					end
 				end
@@ -313,17 +333,22 @@ local function hero_myriath_update(this, store)
 
 					this.dodge.new_pos = nil
 
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, skb.animation_out, nil, store.tick_ts, false)
 
 					if SU.y_hero_wait(store, this, fts(6)) then
 						goto continue
 					end
 
+					enemy = store.entities[this.soldier.target_id] or enemy
+
 					U.unblock_target(store, this)
 					U.bans_add(this.vis, F_ALL)
 					SU.hide_modifiers(store, this, true)
 					SU.hide_auras(store, this, true)
 					S:queue(skb.sound)
+					skb.ts = start_ts
 
 					local clone = E:create_entity(ska.clone)
 
@@ -353,8 +378,6 @@ local function hero_myriath_update(this, store)
 					SU.show_auras(store, this, true)
 					U.y_animation_wait(this)
 
-					skb.ts = store.tick_ts
-
 					goto continue
 				end
 			end
@@ -369,6 +392,9 @@ local function hero_myriath_update(this, store)
 					this.health_bar.hidden = true
 
 					S:queue(skc.sound_cast)
+
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, skc.animation_in, this.render.sprites[1].flip_x, store.tick_ts, false)
 
 					for _, id in ipairs(clone_ids) do
@@ -380,8 +406,6 @@ local function hero_myriath_update(this, store)
 					SU.y_hero_animation_wait(this)
 
 					if cant_do_action() then
-						skc.ts = store.tick_ts
-
 						SU.hero_gain_xp_from_skill(this, pow_c)
 
 						h.ignore_damage = false
@@ -389,6 +413,10 @@ local function hero_myriath_update(this, store)
 
 						goto continue
 					end
+
+					target = store.entities[this.soldier.target_id] or target
+
+					skc.ts = start_ts
 
 					local original_pos = V.vclone(this.pos)
 
@@ -431,8 +459,6 @@ local function hero_myriath_update(this, store)
 
 					SU.hero_gain_xp_from_skill(this, pow_c)
 
-					skc.ts = store.tick_ts
-
 					goto continue
 				end
 			end
@@ -447,12 +473,24 @@ local function hero_myriath_update(this, store)
 				else
 					this.render.sprites[1].flip_x = target.pos.x < this.pos.x
 
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, ska.animation, nil, store.tick_ts, false)
 					U.y_wait(store, fts(19), cant_do_action)
 
 					if cant_do_action() then
 						goto continue
 					end
+
+					local effect_target, effect_targets = U.find_foremost_enemy(store, this.pos, ska.min_range, ska.max_range, ska.node_prediction, ska.vis_flags, ska.vis_bans, function(e)
+						return band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0
+					end)
+
+					if effect_target and effect_targets and #effect_targets > 0 then
+						target = effect_target
+					end
+
+					ska.ts = start_ts
 
 					local flip = target.render.sprites[1].flip_x and -1 or 1
 					local bullet = E:create_entity(ska.bullet)
@@ -469,8 +507,6 @@ local function hero_myriath_update(this, store)
 					S:queue(ska.sound)
 					SU.y_hero_animation_wait(this)
 					SU.hero_gain_xp_from_skill(this, pow_a)
-
-					ska.ts = store.tick_ts
 
 					goto continue
 				end

@@ -541,6 +541,7 @@ local function hero_malik_update(this, store)
 					})
 					S:queue(a.sound_taunt)
 					U.unblock_target(store, this)
+					local start_ts = store.tick_ts
 					U.animation_start(this, a.animation_start, nil, store.tick_ts, false)
 
 					if SU.y_hero_wait(store, this, a.cast_time) then
@@ -550,6 +551,7 @@ local function hero_malik_update(this, store)
 					end
 
 					local ts = store.tick_ts
+					a.ts = start_ts
 					local prev_immune = this.health.immune_to
 
 					U.bans_add(this.vis, F_ALL)
@@ -598,7 +600,6 @@ local function hero_malik_update(this, store)
 					U.bans_remove(this.vis, F_ALL)
 
 					this.health.immune_to = prev_immune
-					a.ts = store.tick_ts
 
 					SU.y_hero_animation_wait(this)
 					U.animation_start(this, "idle", nil, store.tick_ts, true)
@@ -620,27 +621,33 @@ local function hero_malik_update(this, store)
 					goto continue
 				end
 
-				if not blocker or not U.is_blocked_valid(store, this) then
+				if not U.is_blocked_valid(store, this) then
 					this.soldier.target_id = nil
-				else
-					a.ts = start_ts
-
-					SU.hero_gain_xp_from_skill(this, sc)
-
-					local mod = E:create_entity(a.mod)
-
-					mod.modifier.source_id = this.id
-					mod.modifier.target_id = blocker.id
-					mod.enemy_move_offset = a.enemy_move_offset
-
-					simulation:queue_insert_entity(mod)
-					SU.y_hero_animation_wait(this)
-					U.animation_start(this, "idle", nil, store.tick_ts, true)
-
-					this.soldier.target_id = nil
-
-					goto continue
 				end
+
+				local fresh_blocker = store.entities[this.soldier.target_id]
+
+				if fresh_blocker and fresh_blocker.health and not fresh_blocker.health.dead then
+					blocker = fresh_blocker
+				end
+
+				a.ts = start_ts
+
+				SU.hero_gain_xp_from_skill(this, sc)
+
+				local mod = E:create_entity(a.mod)
+
+				mod.modifier.source_id = this.id
+				mod.modifier.target_id = blocker.id
+				mod.enemy_move_offset = a.enemy_move_offset
+
+				simulation:queue_insert_entity(mod)
+				SU.y_hero_animation_wait(this)
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+				this.soldier.target_id = nil
+
+				goto continue
 			end
 
 			if ready_to_use_skill(saa, store, this.unit.cooldown_factor) and this.soldier.target_id ~= nil and this.motion.arrived then
@@ -657,11 +664,19 @@ local function hero_malik_update(this, store)
 
 				if not blocker then
 					this.soldier.target_id = nil
-				else
-					a.ts = start_ts
+				end
 
-					SU.hero_gain_xp_from_skill(this, sa)
+				local fresh_blocker = store.entities[this.soldier.target_id]
 
+				if fresh_blocker and fresh_blocker.health and not fresh_blocker.health.dead then
+					blocker = fresh_blocker
+				end
+
+				a.ts = start_ts
+
+				SU.hero_gain_xp_from_skill(this, sa)
+
+				if blocker then
 					local mod = E:create_entity(a.mod)
 
 					mod.modifier.duration = a.duration
@@ -670,11 +685,12 @@ local function hero_malik_update(this, store)
 					mod.shield_max_damage = a.shield_base + blocker.health.hp_max * a.hp_increase_ptg
 
 					simulation:queue_insert_entity(mod)
-					SU.y_hero_animation_wait(this)
-					U.animation_start(this, "idle", nil, store.tick_ts, true)
-
-					goto continue
 				end
+
+				SU.y_hero_animation_wait(this)
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+				goto continue
 			end
 
 			if ready_to_use_skill(sba, store, this.unit.cooldown_factor) and this.soldier.target_id ~= nil and this.motion.arrived then
@@ -684,6 +700,7 @@ local function hero_malik_update(this, store)
 				if not enemies or #enemies < a.min_targets then
 					a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 				else
+					local original_enemies = enemies
 					local target = store.entities[this.soldier.target_id]
 					if not target then
 						a.ts = a.ts + fts(10)
@@ -694,8 +711,6 @@ local function hero_malik_update(this, store)
 						S:queue(a.sound, {
 							delay = fts(11)
 						})
-
-						a.ts = start_ts
 
 						if SU.y_hero_wait(store, this, a.cast_time) then
 							goto continue
@@ -711,6 +726,12 @@ local function hero_malik_update(this, store)
 						end
 
 						local enemies = U.find_enemies_in_range(store, hit_pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
+
+						if not enemies or #enemies == 0 then
+							enemies = original_enemies
+						end
+
+						a.ts = start_ts
 
 						if enemies and #enemies > 0 then
 							for _, target in ipairs(enemies) do

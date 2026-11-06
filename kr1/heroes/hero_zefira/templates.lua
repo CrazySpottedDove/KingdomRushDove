@@ -458,6 +458,23 @@ local function hero_zefira_update(this, store)
 						goto continue
 					end
 
+					local _, effect_enemies = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, nil, a.vis_flags, a.vis_bans)
+					local effect_targets = {}
+
+					if effect_enemies then
+						for _, enemy in ipairs(effect_enemies) do
+							local pi = enemy.nav_path.pi
+
+							if P:is_path_active(pi) and not (store.level.ignore_walk_backwards_paths and table.contains(store.level.ignore_walk_backwards_paths, pi)) then
+								effect_targets[#effect_targets + 1] = enemy
+							end
+						end
+					end
+
+					if #effect_targets >= a.min_targets then
+						targets = effect_targets
+					end
+
 					a.ts = start_ts
 
 					SU.hero_gain_xp_from_skill(this, ultimate)

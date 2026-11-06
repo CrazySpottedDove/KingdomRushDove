@@ -662,6 +662,8 @@ local function hero_rhodes_update(this, store)
 
 					delayed_attack_ult = false
 
+					local start_ts = store.tick_ts
+
 					S:queue(ua.sound_cast)
 					S:queue(a.sound_taunt)
 					U.animation_start(this, a.animation_start, nil, store.tick_ts, false, 1)
@@ -674,6 +676,22 @@ local function hero_rhodes_update(this, store)
 						end
 
 						coroutine.yield()
+					end
+
+					local effect_target, effect_targets = U.find_foremost_enemy(store, this.pos, 0, det_range, a.prediction_time, a.vis_flags, a.vis_bans)
+
+					if effect_target and effect_targets and #effect_targets > 0 then
+						local ray_t = E:get_template(a.bullet)
+						local _, effect_ray_targets = U.find_foremost_enemy(store, effect_target.pos, 0, ray_t.ray_duration * a.move_speed, fts(31), a.vis_flags, a.vis_bans)
+
+						if effect_ray_targets and #effect_ray_targets > 0 then
+							local effect_path = find_most_populated_path(effect_ray_targets, a.min_targets)
+
+							if effect_path then
+								targets = effect_targets
+								path = effect_path
+							end
+						end
 					end
 
 					local first_enemy_on_path
@@ -699,6 +717,8 @@ local function hero_rhodes_update(this, store)
 
 						goto continue
 					end
+
+					ua.ts = start_ts
 
 					U.animation_start(this, a.animation_loop, nil, store.tick_ts, true, 1)
 
@@ -754,7 +774,6 @@ local function hero_rhodes_update(this, store)
 					U.animation_start(ray, ray.anim_end, nil, store.tick_ts, false, 1)
 					SU.hero_gain_xp_from_skill(this, su)
 
-					ua.ts = store.tick_ts
 					this.nav_rally.new = false
 
 					U.animation_start(this, a.animation_end, nil, store.tick_ts, false, 1)
@@ -782,6 +801,8 @@ local function hero_rhodes_update(this, store)
 					if not path then
 						a.ts = store.tick_ts - a.cooldown * (this.unit.cooldown_factor) + fts(10)
 					else
+						local start_ts = store.tick_ts
+
 						U.animation_start(this, a.animation_start, nil, store.tick_ts, false, 1)
 						S:queue(a.sound_start)
 
@@ -791,6 +812,14 @@ local function hero_rhodes_update(this, store)
 							end
 
 							coroutine.yield()
+						end
+
+						local _, effect_targets = U.find_foremost_enemy(store, this.pos, 0, a.max_range, real_prediction, a.vis_flags, a.vis_bans, function(v)
+							return v.nav_path
+						end)
+
+						if effect_targets and #effect_targets > 0 then
+							targets = effect_targets
 						end
 
 						path = find_most_populated_path_that_we_are_on(targets, a.min_targets)
@@ -807,6 +836,8 @@ local function hero_rhodes_update(this, store)
 							S:queue(a.sound_end)
 							SU.y_hero_animation_wait(this)
 						else
+							sca.ts = start_ts
+
 							if st2.level == 0 then
 								trigger_immune_to_stuns()
 							end
@@ -836,7 +867,6 @@ local function hero_rhodes_update(this, store)
 
 							SU.hero_gain_xp_from_skill(this, sc)
 
-							sca.ts = store.tick_ts
 							this.nav_rally.new = false
 
 							U.animation_start(this, a.animation_end, nil, store.tick_ts, false, 1)
@@ -866,6 +896,8 @@ local function hero_rhodes_update(this, store)
 
 						this.render.sprites[1].flip_x = P:predict_enemy_pos(trigger_target, a.cast_time).x < this.pos.x
 
+						local start_ts = store.tick_ts
+
 						U.animation_start(this, a.animation, nil, store.tick_ts, nil, 1)
 						S:queue(saa.sound)
 
@@ -880,19 +912,18 @@ local function hero_rhodes_update(this, store)
 
 							local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
-							if not trigger_target or trigger_target.health.dead then
-								if not target then
-									shoot_bullet_pos(saa, target_pos)
-								else
-									shoot_bullet(a, target)
-								end
-							else
+							saa.ts = start_ts
+
+							if target then
+								shoot_bullet(a, target)
+							elseif trigger_target and not trigger_target.health.dead then
 								shoot_bullet(a, trigger_target)
+							else
+								shoot_bullet_pos(saa, target_pos)
 							end
 
 							SU.hero_gain_xp_from_skill(this, sa)
 
-							saa.ts = store.tick_ts
 							this.nav_rally.new = false
 
 							while not U.animation_finished(this, 1) do
@@ -912,16 +943,20 @@ local function hero_rhodes_update(this, store)
 					local blocker = store.entities[this.soldier.target_id]
 					local a = sba
 
+					local start_ts = store.tick_ts
+
 					U.animation_start(this, a.animation, nil, store.tick_ts, false)
 					S:queue(sba.sound, {
 						delay = fts(14)
 					})
 
 					if not SU.y_hero_wait(store, this, a.cast_time) then
+						blocker = store.entities[this.soldier.target_id] or blocker
+
 						if not blocker then
 							this.soldier.target_id = nil
 						else
-							a.ts = store.tick_ts
+							a.ts = start_ts
 
 							SU.hero_gain_xp_from_skill(this, sb)
 

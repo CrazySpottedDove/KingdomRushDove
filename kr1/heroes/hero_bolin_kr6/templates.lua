@@ -731,13 +731,11 @@ local function hero_bolin_kr6_update(this, store)
 						simulation:queue_insert_entity(ultimate_aura)
 
 						local af = not (trigger_target.pos.x > this.pos.x)
+						local start_ts = store.tick_ts
 
 						U.animation_start(this, sua.animations[1], af, store.tick_ts, false)
 
-						local start_ts = store.tick_ts
 						local sound_played = false
-
-						sua.ts = start_ts
 
 						repeat
 							while not U.animation_finished(this, 1) do
@@ -761,6 +759,14 @@ local function hero_bolin_kr6_update(this, store)
 								break
 							end
 
+							local fresh_target, fresh_targets = U.find_foremost_enemy(store, this.pos, 0, sua.max_range, 0, sua.vis_flags, sua.vis_bans)
+
+							if fresh_target and not bolin_skip_ultimate(fresh_targets, sua) then
+								trigger_target = fresh_target
+							end
+
+							sua.ts = start_ts
+
 							local bullet_t = sc.level > 0 and su.bullet_skill_c or su.bullet
 							local aborted = false
 
@@ -773,10 +779,9 @@ local function hero_bolin_kr6_update(this, store)
 									j = 3
 								end
 
-								local target = U.find_foremost_enemy(store, this.pos, 0, sua.max_range, 0, sua.vis_flags, sua.vis_bans)
+								local target = U.find_foremost_enemy(store, this.pos, 0, sua.max_range, 0, sua.vis_flags, sua.vis_bans) or trigger_target
 
 								if not target then
-									sua.ts = store.tick_ts
 									aborted = true
 
 									break
@@ -791,10 +796,9 @@ local function hero_bolin_kr6_update(this, store)
 								if i == 1 then
 									U.y_wait(store, sua.shoot_time)
 
-									target = U.find_foremost_enemy(store, this.pos, 0, sua.max_range, 0, sua.vis_flags, sua.vis_bans)
+									target = U.find_foremost_enemy(store, this.pos, 0, sua.max_range, 0, sua.vis_flags, sua.vis_bans) or target
 
 									if not target then
-										sua.ts = store.tick_ts
 										aborted = true
 
 										break
@@ -809,7 +813,6 @@ local function hero_bolin_kr6_update(this, store)
 
 								while not U.animation_finished(this, 1) do
 									if this.unit.is_stunned or this.health.dead or this.nav_rally.new then
-										sua.ts = store.tick_ts
 										aborted = true
 
 										break
@@ -827,8 +830,6 @@ local function hero_bolin_kr6_update(this, store)
 								spawn_casings(sua)
 
 								SU.hero_gain_xp_from_skill(this, su)
-
-								sua.ts = store.tick_ts
 							end
 						until true
 
@@ -848,17 +849,21 @@ local function hero_bolin_kr6_update(this, store)
 					else
 						local af = not (first.pos.x > this.pos.x)
 						local fire_target = first
+						local start_ts = store.tick_ts
 
 						U.animation_start(this, saa.animation, af, store.tick_ts, false)
 						U.y_wait(store, saa.shoot_time)
 
-						if not store.entities[fire_target.id] or fire_target.health.dead then
-							fire_target = U.find_foremost_enemy(store, this.pos, saa.min_range, saa.max_range, pred_time, saa.vis_flags, saa.vis_bans)
+						local fresh_target, fresh_targets = U.find_foremost_enemy(store, this.pos, saa.min_range, saa.max_range, pred_time, saa.vis_flags, saa.vis_bans)
+
+						if fresh_target and #fresh_targets >= saa.min_targets then
+							fire_target = fresh_target
 						end
 
 						destinations = fire_target and bolin_mortar_positions(fire_target, saa.bullet_count, saa.mortar_gap, pred_time)
 
 						if destinations and #destinations > 0 then
+							saa.ts = start_ts
 							S:queue(saa.sound)
 							S:queue(saa.sound_hit, {
 								delay = pred_time
@@ -888,8 +893,6 @@ local function hero_bolin_kr6_update(this, store)
 							end
 
 							SU.hero_gain_xp_from_skill(this, sa)
-
-							saa.ts = store.tick_ts
 						else
 							while not U.animation_finished(this, 1) and not this.nav_rally.new do
 								coroutine.yield()
@@ -1048,6 +1051,8 @@ local function hero_bolin_kr6_update(this, store)
 									end
 								end
 
+								sba.ts = start_ts
+
 								local b = E:create_entity(sba.bullet)
 
 								b.pos = V.vclone(this.pos)
@@ -1061,8 +1066,6 @@ local function hero_bolin_kr6_update(this, store)
 								simulation:queue_insert_entity(b)
 								SU.y_hero_animation_wait(this)
 								U.y_animation_play(this, sba.animations[3], nil, store.tick_ts, 1, nil)
-
-								sba.ts = start_ts
 
 								SU.hero_gain_xp_from_skill(this, sb)
 							else
