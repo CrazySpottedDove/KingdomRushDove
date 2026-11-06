@@ -408,10 +408,9 @@ tt = RT("bolt_magnus_illusion", "bolt_magnus")
 tt.bullet.damage_min = nil
 tt.bullet.damage_max = nil
 tt.bullet.xp_gain_factor = nil
+
 tt = RT("hero_magnus", "hero")
-
 AC(tt, "melee", "ranged", "timed_attacks", "teleport")
-
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {170, 190, 210, 230, 250, 270, 290, 310, 330, 350}
 tt.hero.level_stats.melee_damage_max = {2, 4, 5, 6, 7, 8, 10, 11, 12, 13}
