@@ -1,1 +1,1 @@
-return {{date="2026-11-06",author="CrazySpottedDove",message="balance: 删除德拉坎的身下盲区"}}
+return {{date="2026-11-06",author="CrazySpottedDove",message="balance: 删除德拉坎的身下盲区"},{date="2026-11-06",author="CrazySpottedDove",message="fix: 修复六代阿什比特的喷火动画错误问题"}}
