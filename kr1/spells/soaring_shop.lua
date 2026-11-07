@@ -1,6 +1,6 @@
 local M = {}
 
-M.id = "soaring_shop"
+M.name = "soaring_shop"
 M.i18n = "POWER_SOARING_SHOP"
 M.control = "power_soaring_shop_control"
 M.button_icon = "in_game_icon_power_soaring_shop"
@@ -20,12 +20,16 @@ M.name_style = {
 	}},
 	shader_margin = 16
 }
-M.required_textures = {"go_power_soaring_shop"}
-M.plugin_required_textures = {}
-M.required_sounds = {"spell_soaring_shop"}
-M.plugin_required_sounds = {}
-M.required_exoskeletons = {"spell_shop_lvl1Def", "spell_shop_lvl3Def", "spell_shop_lvl6Def"}
-M.plugin_required_exoskeletons = {}
+M.resources = {
+	game = {
+		required_textures = {"go_power_soaring_shop"},
+		plugin_required_textures = {},
+		required_sounds = {"spell_soaring_shop"},
+		plugin_required_sounds = {},
+		required_exoskeletons = {"spell_shop_lvl1Def", "spell_shop_lvl3Def", "spell_shop_lvl6Def"},
+		plugin_required_exoskeletons = {}
+	}
+}
 
 function M.register_templates(E)
 	local V = require("lib.klua.vector")

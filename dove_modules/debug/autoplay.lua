@@ -22,6 +22,7 @@ require("all.constants")
 
 local V = require("lib.klua.vector")
 local LU = require("level_utils")
+local LEGACY = require("generations.legacy")
 local E = require("entity_db")
 local P = require("path_db")
 local signal = require("lib.hump.signal")
@@ -188,10 +189,12 @@ function autoplay:init(w, h, done_callback)
 	hook_log_errors()
 
 	local args = self.args or {}
+	local gen_id = args.gen_id
 	local level_idx = args.level_idx
 	local level_mode = args.level_mode or GAME_MODE_CAMPAIGN
 	local level_difficulty = args.level_difficulty or DIFFICULTY_NORMAL
 
+	stats.gen_id = gen_id
 	stats.level_idx = level_idx
 	stats.level_mode = level_mode
 	stats.level_difficulty = level_difficulty
@@ -230,8 +233,9 @@ function autoplay:init(w, h, done_callback)
 	game.max_fps = DRAW_FPS
 
 	game.store = {}
+	game.store.gen_id = gen_id
 	game.store.level_idx = level_idx
-	game.store.level_name = "level" .. string.format("%02i", level_idx)
+	game.store.level_name = LEGACY.level_name(gen_id, level_idx)
 	game.store.level_mode = level_mode
 	game.store.level_difficulty = level_difficulty
 	game.store.screen_scale = director:get_texture_scale("game", REF_H)

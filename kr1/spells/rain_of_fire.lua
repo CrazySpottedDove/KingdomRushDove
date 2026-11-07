@@ -1,6 +1,6 @@
 local M = {}
 
-M.id = "rain_of_fire"
+M.name = "rain_of_fire"
 M.i18n = "POWER_RAIN_OF_FIRE"
 M.control = "power_rain_of_fire_control"
 M.button_icon = "in_game_icon_power_rain_of_fire"
@@ -20,12 +20,16 @@ M.name_style = {
 	}},
 	shader_margin = 16
 }
-M.required_textures = {"go_power_rain_of_fire"}
-M.plugin_required_textures = {}
-M.required_sounds = {"spell_rain_of_fire"}
-M.plugin_required_sounds = {}
-M.required_exoskeletons = {}
-M.plugin_required_exoskeletons = {}
+M.resources = {
+	game = {
+		required_textures = {"go_power_rain_of_fire"},
+		plugin_required_textures = {},
+		required_sounds = {"spell_rain_of_fire"},
+		plugin_required_sounds = {},
+		required_exoskeletons = {},
+		plugin_required_exoskeletons = {}
+	}
+}
 
 function M.register_templates(E)
 	local V = require("lib.klua.vector")

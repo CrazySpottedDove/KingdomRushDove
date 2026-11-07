@@ -10,16 +10,24 @@ return {
 		icon_image = "kr4_mapButtons_portrait_hero_0002"
 	},
 	room_special_order = {"ULTIMATE", "SPIDER_BITE", "ONIX_ARROWS", "QUIVER_OF_SORROW", "SHIELD_OF_SHADOWS", "ULTIMATE_2"},
-	required_textures = {"go_hero_asra"},
-	plugin_required_textures = {},
-	required_sounds = {"hero_asra"},
-	plugin_required_sounds = {},
-	required_exoskeletons = {},
-	plugin_required_exoskeletons = {},
-	screen_map_required_textures = {},
-	screen_map_plugin_required_textures = {},
-	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {},
+	resources = {
+		game = {
+			required_textures = {"go_hero_asra"},
+			plugin_required_textures = {},
+			required_sounds = {"hero_asra"},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		},
+		map = {
+			required_textures = {},
+			plugin_required_textures = {},
+			required_sounds = {},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		}
+	},
 	templates = {"heroes.hero_asra.templates"},
 	animations = {"heroes.hero_asra.animations"},
 	sounds = {"heroes.hero_asra.sounds"},

@@ -326,7 +326,7 @@ loader = {
 }
 
 function loader:load()
-	if main.params.autoplay then
+	if main.params.autoplay or main.params.autoplay_map then
 		-- 无人值守自动测试：跳过 settings / language_select / must_read / update_manager，
 		-- 直接进 director（由它把 autoplay 场景排进队列）。
 		-- 窗口不可见（见 conf.lua 的 t.window.visible）、静音、且不重置窗口模式，
@@ -374,7 +374,7 @@ local function load(arg)
 	local is_autoplay = false
 
 	for _, v in pairs(arg) do
-		if v == "-autoplay" then
+		if v == "-autoplay" or v == "-autoplay_map" then
 			is_autoplay = true
 
 			break
@@ -463,7 +463,7 @@ local function load(arg)
 	main:set_locale(main.params.locale)
 
 	-- 自动测试下不碰窗口标题/图标：窗口不可见，也没必要惊动窗口管理器
-	if not main.params.autoplay then
+	if not main.params.autoplay and not main.params.autoplay_map then
 		love.window.setTitle(_("APP_TITLE") .. version.id)
 
 		-- icon switched to krdove
@@ -856,6 +856,14 @@ function love.errorhandler(msg)
 	local plugins_text = build_enabled_plugins_text()
 
 	close_log()
+
+	if main.params and main.params.exit_on_error then
+		io.stderr:write("ERROR: " .. tostring(msg) .. "\n")
+		io.stderr:write(trace .. "\n")
+		io.stderr:write("LAST LOG: " .. tostring(last_log_msg) .. "\n")
+		io.flush()
+		os.exit(1)
+	end
 
 	love.mouse.setVisible(true)
 	love.mouse.setGrabbed(false)

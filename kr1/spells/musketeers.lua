@@ -1,6 +1,6 @@
 local M = {}
 
-M.id = "musketeers"
+M.name = "musketeers"
 M.i18n = "POWER_MUSKETEERS"
 M.control = "power_musketeers_control"
 M.button_icon = "in_game_icon_power_musketeers"
@@ -20,12 +20,16 @@ M.name_style = {
 	}},
 	shader_margin = 16
 }
-M.required_textures = {"go_power_musketeers"}
-M.plugin_required_textures = {}
-M.required_sounds = {"spell_musketeers"}
-M.plugin_required_sounds = {}
-M.required_exoskeletons = {}
-M.plugin_required_exoskeletons = {}
+M.resources = {
+	game = {
+		required_textures = {"go_power_musketeers"},
+		plugin_required_textures = {},
+		required_sounds = {"spell_musketeers"},
+		plugin_required_sounds = {},
+		required_exoskeletons = {},
+		plugin_required_exoskeletons = {}
+	}
+}
 
 local BASE = {
 	cooldown = 20,

@@ -64,7 +64,7 @@ function scripts.eb_juggernaut.update(this, store)
 
 	while true do
 		if this.health.dead then
-			if store.level_idx == 6 then
+			if store.gen_id == "kr1" and store.level_idx == 6 then
 				LU.kill_all_enemies(store, true)
 			end
 
@@ -1584,7 +1584,7 @@ function scripts.eb_blackburn.update(this, store)
 
 	while true do
 		if this.health.dead then
-			if store.level_idx == 26 then
+			if store.gen_id == "kr1" and store.level_idx == 26 then
 				LU.kill_all_enemies(store, true)
 			end
 
@@ -1599,14 +1599,14 @@ function scripts.eb_blackburn.update(this, store)
 				megaspawner.interrupt = true
 			end
 
-			if store.level_idx == 26 then
+			if store.gen_id == "kr1" and store.level_idx == 26 then
 				store.force_next_wave = true
 			end
 
 			U.animation_start_default(this, "death_end", nil, store.tick_ts, true)
 			signal.emit("boss-killed", this)
 
-			if store.level_idx == 26 then
+			if store.gen_id == "kr1" and store.level_idx == 26 then
 				LU.kill_all_enemies(store, true)
 			end
 

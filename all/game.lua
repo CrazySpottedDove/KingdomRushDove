@@ -14,6 +14,8 @@ local S = require("sound_db")
 local SU = require("screen_utils")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
+local GENS = require("generations.registry")
+local LEGACY = require("generations.legacy")
 local simulation = require("simulation")
 local game_gui = require("game_gui")
 local SH = require("klove.shader_db")
@@ -352,7 +354,7 @@ function game:init(screen_w, screen_h)
 		if self.store.custom_battle_prep_music then
 			S:queue(self.store.custom_battle_prep_music)
 		elseif self.store.level_idx and self.store.level_idx > 0 then
-			S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+			S:queue(GENS:prep_music(self.store.gen_id, self.store.level_idx))
 		end
 	end
 end
@@ -398,7 +400,7 @@ function game:restart()
 	if self.store.custom_battle_prep_music then
 		S:queue(self.store.custom_battle_prep_music)
 	elseif self.store.level_idx > 0 then
-		S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+		S:queue(GENS:prep_music(self.store.gen_id, self.store.level_idx))
 	end
 
 	self:init_debug()
@@ -458,7 +460,7 @@ function game:init_debug()
 
 	local data = require("data.game_debug_data")
 
-	self.current_enemy_page = data.default_page_for_level and data.default_page_for_level[self.store.level_idx] or 1
+	self.current_enemy_page = data.default_page_for_level and data.default_page_for_level[LEGACY.to_global(self.store.gen_id, self.store.level_idx)] or 1
 	self.enemy_pages = data.enemy_pages
 	self.enemy_keys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"}
 	self.dbg_active_pi = 1

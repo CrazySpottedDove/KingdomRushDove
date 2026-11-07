@@ -10,16 +10,24 @@ return {
 		icon_image = "kr4_mapButtons_portrait_hero_0013"
 	},
 	room_special_order = {"RICOCHET", "LORD_STORM", "DIVINE_RAIN", "SUPREME_WAVE", "ULTIMATE", "ULTIMATE_2"},
-	required_textures = {"go_hero_dianyun"},
-	plugin_required_textures = {},
-	required_sounds = {"hero_dianyun"},
-	plugin_required_sounds = {},
-	required_exoskeletons = {"hero_dianyun", "hero_dianyun_health_rain"},
-	plugin_required_exoskeletons = {},
-	screen_map_required_textures = {},
-	screen_map_plugin_required_textures = {},
-	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {},
+	resources = {
+		game = {
+			required_textures = {"go_hero_dianyun"},
+			plugin_required_textures = {},
+			required_sounds = {"hero_dianyun"},
+			plugin_required_sounds = {},
+			required_exoskeletons = {"hero_dianyun", "hero_dianyun_health_rain"},
+			plugin_required_exoskeletons = {}
+		},
+		map = {
+			required_textures = {},
+			plugin_required_textures = {},
+			required_sounds = {},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		}
+	},
 	templates = {"heroes.hero_dianyun.templates"},
 	animations = {"heroes.hero_dianyun.animations"},
 	sounds = {"heroes.hero_dianyun.sounds"},

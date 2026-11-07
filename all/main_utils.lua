@@ -124,6 +124,10 @@ function mu.parse_args(arg, params)
 		params.autoplay = argv("autoplay")
 	end
 
+	if has_arg("autoplay_map") then
+		params.autoplay_map = argv("autoplay_map") or true
+	end
+
 	if has_arg("spell") then
 		params.spell_id = argv("spell")
 	end
@@ -138,6 +142,24 @@ function mu.parse_args(arg, params)
 
 	if has_arg("notowers") then
 		params.no_towers = true
+	end
+
+	if has_arg("exit_on_error") then
+		params.exit_on_error = true
+	end
+
+	if has_arg("scene_trace") then
+		params.scene_trace = true
+	end
+
+	if has_arg("skip_settings") then
+		params.launch_options = params.launch_options or {}
+		params.launch_options.skip_settings = true
+	end
+
+	if has_arg("skip_must_read") then
+		params.launch_options = params.launch_options or {}
+		params.launch_options.skip_must_read = true
 	end
 end
 

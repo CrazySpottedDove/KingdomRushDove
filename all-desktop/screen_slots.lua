@@ -11,7 +11,7 @@ local S = require("sound_db")
 local SU = require("screen_utils")
 local U = require("utils")
 local km = require("lib.klua.macros")
-local GS = require("kr1.game_settings")
+local GENS = require("generations.registry")
 local i18n = require("i18n")
 
 require("gg_views_custom")
@@ -186,7 +186,7 @@ function SlotView:show()
 		local l_iron = self:get_child_by_id("l_iron")
 		local num_stars, num_heroic, num_iron = U.count_stars(slot)
 
-		l_stars.text = tostring(num_stars) .. "/" .. tostring(GS.max_stars)
+		l_stars.text = tostring(num_stars) .. "/" .. tostring(GENS:total_max_stars())
 		l_heroic.text = tostring(num_heroic)
 		l_iron.text = tostring(num_iron)
 	end

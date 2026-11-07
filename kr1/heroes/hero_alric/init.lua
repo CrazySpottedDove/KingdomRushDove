@@ -10,16 +10,24 @@ return {
 		icon_image = "kr2_mapButtons_portrait_hero_0001"
 	},
 	room_special_order = {"FLURRY", "SANDWARRIORS", "SANDWARRIORS_2", "SPIKEDARMOR"},
-	required_textures = {"go_hero_alric"},
-	plugin_required_textures = {},
-	required_sounds = {"hero_alric"},
-	plugin_required_sounds = {},
-	required_exoskeletons = {},
-	plugin_required_exoskeletons = {},
-	screen_map_required_textures = {},
-	screen_map_plugin_required_textures = {},
-	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {},
+	resources = {
+		game = {
+			required_textures = {"go_hero_alric"},
+			plugin_required_textures = {},
+			required_sounds = {"hero_alric"},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		},
+		map = {
+			required_textures = {},
+			plugin_required_textures = {},
+			required_sounds = {},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		}
+	},
 	templates = {"heroes.hero_alric.templates"},
 	animations = {"heroes.hero_alric.animations"},
 	sounds = {"heroes.hero_alric.sounds"},

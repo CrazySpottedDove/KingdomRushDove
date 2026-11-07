@@ -9,55 +9,38 @@ local UP = require("kr1.upgrades")
 local GS = require("kr1.game_settings")
 local km = require("lib.klua.macros")
 local log = require("lib.klua.log"):new("spell_system")
+local Registry = require("registry")
 
 require("lib.klua.table")
 
-local SPELLS = {}
+local SPELLS = Registry.new({
+	module_names = {"kr1.spells.royal_edict", "kr1.spells.aspect_of_sol", "kr1.spells.musketeers", "kr1.spells.wintersongs_wrath", "kr1.spells.rain_of_fire", "kr1.spells.teleportation_sigil", "kr1.spells.thunder_zapper", "kr1.spells.reinforcements_kr6", "kr1.spells.soaring_shop"},
+	lazy = true
+})
 
-SPELLS.registry = {}
 SPELLS.max_level = 6
 -- 当前选择由 SPELLS 自己管理，不挂到 store 上。
 SPELLS.selected_id = nil
 -- 选中法术时全体敌人生命倍率
 SPELLS.spell_hp_factor = 1.1
 
--- spell 模块路径注册表
-SPELLS.module_names = {"kr1.spells.royal_edict", "kr1.spells.aspect_of_sol", "kr1.spells.musketeers", "kr1.spells.wintersongs_wrath", "kr1.spells.rain_of_fire", "kr1.spells.teleportation_sigil", "kr1.spells.thunder_zapper", "kr1.spells.reinforcements_kr6", "kr1.spells.soaring_shop"}
-
---- 按法术 id 懒加载模块（id 必须等于 module_names 路径最后一段）
---- 先确认 module_names 里仍有这个路径，避免插件卸载后还命中旧缓存。
----@param id string
+--- 按法术 name 懒加载模块（name 必须等于 module_names 路径最后一段）。
+---@param name string
 ---@return table?
-function SPELLS:get(id)
-	if not id then
+function SPELLS:get(name)
+	local spell, err = Registry.get(self, name)
+
+	if err then
+		log.error("failed to load spell module %s: %s", name, tostring(err))
 		return nil
 	end
 
-	if self.registry[id] then
-		return self.registry[id]
+	if spell and (type(spell) ~= "table" or not spell.name) then
+		log.error("invalid spell module %s: expected table with name", name)
+		return nil
 	end
 
-	for _, path in ipairs(self.module_names) do
-		if path:match("([^%.]+)$") == id then
-			local ok, spell = pcall(require, path)
-
-			if not ok then
-				log.error("failed to load spell module %s: %s", path, tostring(spell))
-				return nil
-			end
-
-			if type(spell) ~= "table" or not spell.id then
-				log.error("invalid spell module %s: expected table with id", path)
-				return nil
-			end
-
-			self.registry[id] = spell
-
-			return spell
-		end
-	end
-
-	return nil
+	return spell
 end
 
 --- 设置当前选择。selected_id 只保存当前有效的法术。
@@ -90,29 +73,11 @@ end
 --- 枚举所有法术模块（仅供选择 GUI 使用，首次打开时才 require）
 ---@return table[]
 function SPELLS:modules()
-	local list = {}
-
 	for _, path in ipairs(self.module_names) do
-		local id = path:match("([^%.]+)$")
-		local spell = self.registry[id]
-
-		if not spell then
-			local ok, m = pcall(require, path)
-
-			if ok then
-				spell = m
-				self.registry[id] = spell
-			else
-				log.error("failed to load spell module %s: %s", path, tostring(m))
-			end
-		end
-
-		if spell and spell.id then
-			list[#list + 1] = spell
-		end
+		self:get(path:match("([^%.]+)$"))
 	end
 
-	return list
+	return self:all()
 end
 
 --- 按照火雨援军的等级计算自定义法术的等级
@@ -154,7 +119,7 @@ function SPELLS:apply(store)
 	spell.apply(self:compute_level(store))
 
 	local up = E:get_template("user_power_3")
-	up.power_id = spell.id
+	up.power_id = spell.name
 end
 
 return SPELLS

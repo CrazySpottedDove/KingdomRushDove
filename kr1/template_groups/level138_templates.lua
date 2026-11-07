@@ -206,7 +206,7 @@ local stage_36_paths_controller = {}
 function stage_36_paths_controller.update(this, store, script)
 	local radius = 32
 
-	if store.level_idx == 37 then
+	if store.gen_id == "kr2" and store.level_idx == 11 then
 		radius = 16
 	end
 
@@ -484,7 +484,7 @@ function stage_36_paths_controller.update(this, store, script)
 
 	while true do
 		if this.show_path then
-			if store.level_idx == 36 then
+			if store.gen_id == "kr2" and store.level_idx == 10 then
 				for _, e in pairs(store.entities) do
 					if e.template_name == "decal_stage_36_easter_egg_spyro" then
 						e.leave = true
@@ -523,7 +523,7 @@ function stage_36_paths_controller.update(this, store, script)
 
 			S:queue("Stage36PathOpen" .. sprite_sid)
 
-			if store.level_idx == 38 then
+			if store.gen_id == "kr2" and store.level_idx == 12 then
 				local options = {
 					delay = 0.6
 				}

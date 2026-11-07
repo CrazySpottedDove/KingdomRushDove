@@ -1,6 +1,6 @@
 local M = {}
 
-M.id = "teleportation_sigil"
+M.name = "teleportation_sigil"
 M.i18n = "POWER_TELEPORTATION_SIGIL"
 M.control = "power_teleportation_sigil_control"
 M.button_icon = "in_game_icon_power_teleportation_sigil"
@@ -20,12 +20,16 @@ M.name_style = {
 	}},
 	shader_margin = 16
 }
-M.required_textures = {"go_power_teleportation_sigil"}
-M.plugin_required_textures = {}
-M.required_sounds = {"spell_teleportation_sigil"}
-M.plugin_required_sounds = {}
-M.required_exoskeletons = {"sigil_lvl1Def", "sigil_lvl2Def", "sigil_lvl3Def", "portal_particlesDef", "tp_fx_defaultDef", "tp_fx_fuerteDef", "fx_instakillDef", "desintegration_smallDef"}
-M.plugin_required_exoskeletons = {}
+M.resources = {
+	game = {
+		required_textures = {"go_power_teleportation_sigil"},
+		plugin_required_textures = {},
+		required_sounds = {"spell_teleportation_sigil"},
+		plugin_required_sounds = {},
+		required_exoskeletons = {"sigil_lvl1Def", "sigil_lvl2Def", "sigil_lvl3Def", "portal_particlesDef", "tp_fx_defaultDef", "tp_fx_fuerteDef", "fx_instakillDef", "desintegration_smallDef"},
+		plugin_required_exoskeletons = {}
+	}
+}
 
 function M.register_templates(E)
 	local V = require("lib.klua.vector")

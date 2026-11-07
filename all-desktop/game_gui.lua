@@ -25,6 +25,7 @@ local S = require("sound_db")
 local SU = require("screen_utils")
 local E = require("entity_db")
 local U = require("utils")
+local GENS = require("generations.registry")
 local RLU = require("all.rally_utils")
 local TU = require("all.tower_utils")
 local configer = require("dove_modules.configer")
@@ -220,8 +221,8 @@ local signals = {
 			S:stop_group("MUSIC")
 			if game_gui.game.store.custom_battle_music then
 				S:queue(game_gui.game.store.custom_battle_music)
-			else
-				S:queue(string.format("MusicBattle_%02d", game_gui.game.store.level_idx))
+			elseif game_gui.game.store.gen_id ~= "custom" then
+				S:queue(GENS:battle_music(game_gui.game.store.gen_id, game_gui.game.store.level_idx))
 			end
 		end
 
@@ -4413,8 +4414,8 @@ function VictoryView:show()
 
 		if game_gui.game.store.custom_battle_prep_music then
 			S:queue(game_gui.game.store.custom_battle_prep_music)
-		else
-			S:queue(string.format("MusicBattlePrep_%02d", level_idx))
+		elseif game_gui.game.store.gen_id ~= "custom" then
+			S:queue(GENS:prep_music(game_gui.game.store.gen_id, level_idx))
 		end
 	end)
 end
@@ -6050,7 +6051,7 @@ function MousePointer:initialize(window)
 
 	-- 第三技能（法术）的鼠标指针随选中法术变化，缺省回退到原援军指针
 	local spell_def = SPELLS:get_selected()
-	local p3_pointer_icon = (spell_def and (spell_def.pointer_icon or ("pointer_power_" .. spell_def.id))) or "pointer_user_power_0002"
+	local p3_pointer_icon = (spell_def and (spell_def.pointer_icon or ("pointer_power_" .. spell_def.name))) or "pointer_user_power_0002"
 	local p3i = KImageView:new(p3_pointer_icon)
 
 	p3i.anchor = V.v(p3i.size.x * 0.5, p3i.size.y * 100 / 100)
@@ -7979,7 +7980,7 @@ end
 function HeroMenu:show()
 	self:remove_children()
 
-	for index, module in ipairs(HEROES.declarations) do
+	for index, module in ipairs(HEROES:all()) do
 		local name = module.name
 
 		HEROES:ensure_template(name)

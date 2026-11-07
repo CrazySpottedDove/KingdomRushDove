@@ -10,6 +10,7 @@ local E = require("entity_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
 local HEROES = require("heroes.registry")
+local GENS = require("generations.registry")
 local P = require("path_db")
 local W = require("wave_db")
 local UP = require("kr1.upgrades")
@@ -56,15 +57,27 @@ function level:init_coroutined(store)
 	perf.clear()
 	local slot = storage:load_slot(nil, true)
 
-	UP:set_levels(slot.upgrades)
-
-	local line_key = tostring(slot.upgrade_list_id or "1")
+	local gen_upgrades = slot.upgrades[store.custom_map_entry and "custom" or store.gen_id]
+	local line_key = gen_upgrades.list_id
 
 	if not UP.list[line_key] then
 		line_key = "1"
 	end
 
 	UP:set_list_id(line_key)
+
+	if store.custom_map_entry then
+		local full_levels = {}
+
+		for _, tech in pairs(UP:get_techs()) do
+			full_levels[tech.class] = math.max(full_levels[tech.class] or 0, tech.level)
+		end
+
+		UP:set_levels(full_levels)
+	else
+		UP:set_levels(gen_upgrades.levels)
+	end
+
 	DI:set_level(store.level_difficulty)
 
 	-- power3 法术：解析本局选择（可为 nil = 未选择）
@@ -136,7 +149,7 @@ function level:init_coroutined(store)
 
 	-- 防护：避免某些不合适的插件破坏存档中的科技。这表现为 user_power_1 未正确设置具体模板
 	if E:get_template("user_power_1").template_name == "user_power_1" then
-		slot.upgrade_list_id = "1"
+		gen_upgrades.list_id = "1"
 		UP:set_list_id("1")
 		UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
 		storage:save_slot(slot, nil, true)
@@ -172,17 +185,8 @@ function level:init_coroutined(store)
 	store.hero_xp_multiplier = GS.hero_xp_gain_per_difficulty_mode[store.level_difficulty] * (configer.config().enabled and configer.config().hero_xp_gain_multiplier or 1)
 
 	if not store.custom_map_entry then
-		if store.level_idx <= 9 then
-			store.hero_xp_multiplier = 0.1 * store.level_idx * store.hero_xp_multiplier
-		elseif store.level_idx <= 35 and store.level_idx > 26 then
-			store.hero_xp_multiplier = 0.1 * (store.level_idx - 26) * store.hero_xp_multiplier
-		elseif store.level_idx <= 57 and store.level_idx > 48 then
-			store.hero_xp_multiplier = 0.1 * (store.level_idx - 48) * store.hero_xp_multiplier
-		elseif store.level_idx <= 109 and store.level_idx > 100 then
-			store.hero_xp_multiplier = 0.1 * (store.level_idx - 100) * store.hero_xp_multiplier
-		elseif store.level_idx <= 209 and store.level_idx > 200 then
-			store.hero_xp_multiplier = 0.1 * (store.level_idx - 200) * store.hero_xp_multiplier
-		end
+		local gen = GENS:get(store.gen_id)
+		store.hero_xp_multiplier = gen.levels.xp_multiplier(store.level_idx) * store.hero_xp_multiplier
 	end
 
 	if slot.locked_towers then
@@ -291,6 +295,7 @@ function level:on_update(dt, ts, store)
 
 			store.game_outcome = {
 				victory = false,
+				gen_id = store.gen_id,
 				level_idx = store.level_idx,
 				level_mode = store.level_mode,
 				level_difficulty = store.level_difficulty
@@ -321,6 +326,7 @@ function level:on_update(dt, ts, store)
 					victory = true,
 					lives_left = store.lives,
 					stars = stars,
+					gen_id = store.gen_id,
 					level_idx = store.level_idx,
 					level_mode = store.level_mode,
 					level_difficulty = store.level_difficulty
@@ -357,6 +363,7 @@ function level:on_update(dt, ts, store)
 			if not store.custom_map_entry then
 				local slot = storage:load_slot()
 				slot.last_victory = {
+					gen_id = store.gen_id,
 					level_idx = store.level_idx,
 					level_difficulty = store.level_difficulty,
 					level_mode = store.level_mode,

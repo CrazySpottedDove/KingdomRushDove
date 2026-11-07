@@ -4530,7 +4530,7 @@ function SU.y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait
 
 	duration = duration or taunts.duration
 
-	if kr5_tb.is_kr5(store) then
+	if kr5_tb.uses_balloons(store) then
 		local taunt_id = string.format(set.format, index)
 		local bd = kr5_tb.get_def(taunt_id)
 

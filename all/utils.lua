@@ -13,6 +13,7 @@ local V = require("lib.klua.vector")
 local P = require("path_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
+local GENS = require("generations.registry")
 
 require("all.constants")
 
@@ -2063,7 +2064,28 @@ function U.mark_seen(store, id)
 	end
 end
 
----计算星星数量
+---计算单个世代的星星数量
+---@param slot table 存档槽位
+---@param gen_id string 世代 id
+---@return number 战役星星数, number 英雄模式星星数, number 铁人模式星星数
+function U.count_stars_for_gen(slot, gen_id)
+	local campaign = 0
+	local heroic = 0
+	local iron = 0
+	local levels = slot.levels[gen_id]
+
+	if levels then
+		for _, v in pairs(levels) do
+			heroic = heroic + (v[GAME_MODE_HEROIC] and 1 or 0)
+			iron = iron + (v[GAME_MODE_IRON] and 1 or 0)
+			campaign = campaign + (v.stars or 0)
+		end
+	end
+
+	return campaign + heroic + iron, heroic, iron
+end
+
+---计算所有世代的星星数量
 ---@param slot table 存档槽位
 ---@return number 战役星星数, number 英雄模式星星数, number 铁人模式星星数
 function U.count_stars(slot)
@@ -2071,13 +2093,17 @@ function U.count_stars(slot)
 	local heroic = 0
 	local iron = 0
 
-	for i, v in pairs(slot.levels) do
-		heroic = heroic + (v[GAME_MODE_HEROIC] and 1 or 0)
-		iron = iron + (v[GAME_MODE_IRON] and 1 or 0)
-		campaign = campaign + (v.stars or 0)
+	for _, gen in ipairs(GENS:all()) do
+		if gen.kind == "standard" then
+			local gen_total, gen_heroic, gen_iron = U.count_stars_for_gen(slot, gen.name)
+
+			campaign = campaign + gen_total
+			heroic = heroic + gen_heroic
+			iron = iron + gen_iron
+		end
 	end
 
-	return campaign + heroic + iron, heroic, iron
+	return campaign, heroic, iron
 end
 
 ---搜索范围内的下一个关卡
@@ -2123,13 +2149,11 @@ end
 
 ---解锁范围内的下一个关卡
 ---@param unlock_data table 解锁数据
----@param levels table 关卡数据
----@param game_settings table 游戏设置
----@param generation number 世代
+---@param levels table 单个世代的关卡数据
+---@param level_ranges table 单个世代的 local 关卡范围
+---@param last_campaign_level number 主线最后一关 local 编号
 ---@return boolean 是否有变化
-function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, generation)
-	local level_ranges = game_settings["level_ranges" .. generation]
-	local last_campaign_level = game_settings["main_campaign_levels" .. generation]
+function U.unlock_next_levels_in_ranges(unlock_data, levels, level_ranges, last_campaign_level)
 	local dirty = false
 
 	local function sanitize_unlock(idx)
