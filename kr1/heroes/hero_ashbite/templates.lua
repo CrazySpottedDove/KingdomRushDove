@@ -375,13 +375,14 @@ local function hero_ashbite_update(this, store)
 		end
 
 		targets = table.filter(real_targets, function(k, v)
-			if not v.nav_path or not v.__ffe_pos then
+			if not v.nav_path then
 				return false
 			end
 
-			local vni = P:nearest_nodes(v.__ffe_pos.x, v.__ffe_pos.y, {v.nav_path.pi})[1][3]
+			local v_pos = U.calculate_enemy_ffe_pos(v, real_prediction)
+			local vni = P:nearest_nodes(v_pos.x, v_pos.y, {v.nav_path.pi})[1][3]
 
-			return v.nav_path and v.__ffe_pos and (GR:cell_is(v.__ffe_pos.x, v.__ffe_pos.y, TERRAIN_LAND) or GR:cell_is(v.__ffe_pos.x, v.__ffe_pos.y, TERRAIN_ICE)) and P:is_node_valid(v.nav_path.pi, vni)
+			return (GR:cell_is(v_pos.x, v_pos.y, TERRAIN_LAND) or GR:cell_is(v_pos.x, v_pos.y, TERRAIN_ICE)) and P:is_node_valid(v.nav_path.pi, vni)
 		end)
 
 		table.sort(targets, function(e1, e2)

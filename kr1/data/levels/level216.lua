@@ -177,7 +177,7 @@ local nodes=#in_range>0 and in_range or nearest
 for i=1,aa.projectile_count do
 if targets and #targets>0 then
 local t=get_random_round_robin(targets,1)
-points[i]=V.vclone(t.__ffe_pos)
+points[i]=U.calculate_enemy_ffe_pos(t,pred_time)
 else
 local n=nodes[math.random(1,#nodes)]
 points[i]=P:node_pos(n[1],n[2],n[3])

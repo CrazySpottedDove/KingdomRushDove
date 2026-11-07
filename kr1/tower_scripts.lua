@@ -34841,16 +34841,7 @@ function scripts.soldier_wildcat.update(this, store)
 					local average_y = 0
 
 					for _, e in ipairs(enemies2) do
-						local v_pos
-
-						if e.__ffe_pos then
-							v_pos = e.__ffe_pos
-						else
-							local node_offset = P:predict_enemy_node_advance(e, sc_prediction_time)
-							local e_ni = e.nav_path.ni + node_offset
-
-							v_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-						end
+						local v_pos = U.calculate_enemy_ffe_pos(e, sc_prediction_time)
 
 						average_x = average_x + v_pos.x
 						average_y = average_y + v_pos.y

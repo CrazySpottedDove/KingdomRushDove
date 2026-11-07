@@ -20,18 +20,6 @@ local update_hp = HU.update_hp
 local queue_damage = U.queue_damage
 local fts = U.fts
 
-local THROTTLE_CD = 1
-
-local function apply_delayed_cooldowns(this, store, attacks)
-	for _, a in ipairs(attacks) do
-		local cooldown = a.cooldown and a.cooldown * (this.unit.cooldown_factor)
-
-		if a.throttle_cooldown_on_skill_use and cooldown and store.tick_ts - a.ts >= cooldown then
-			a.ts = store.tick_ts - cooldown + THROTTLE_CD
-		end
-	end
-end
-
 local function aura_ignus_apply_damage_update(this, store)
 	local a = this.aura
 
@@ -718,8 +706,6 @@ local function hero_ignus_kr6_update(this, store)
 					SU.hero_gain_xp_from_skill(this, skills.ultimate)
 					talent_2_heal()
 
-					apply_delayed_cooldowns(this, store, list)
-
 					goto continue
 				end
 			end
@@ -762,8 +748,6 @@ local function hero_ignus_kr6_update(this, store)
 					SU.hero_gain_xp_from_skill(this, skills.skill_b)
 					talent_2_heal()
 					U.y_animation_wait(this)
-
-					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
 				end
@@ -880,8 +864,6 @@ local function hero_ignus_kr6_update(this, store)
 
 					U.y_animation_wait(this)
 
-					apply_delayed_cooldowns(this, store, list)
-
 					goto continue
 				end
 			end
@@ -937,7 +919,6 @@ local function hero_ignus_kr6_update(this, store)
 					SU.hero_gain_xp_from_skill(this, skills.skill_a)
 					talent_2_heal()
 
-					apply_delayed_cooldowns(this, store, list)
 					SU.y_hero_animation_wait(this)
 
 					goto continue
@@ -1100,7 +1081,6 @@ tt.timed_attacks.list[1].min_range = 50
 tt.timed_attacks.list[1].offset = vec_2(0, 50)
 tt.timed_attacks.list[1].prediction = fts(39)
 tt.timed_attacks.list[1].sound = "HeroIgnusFireballCast"
-tt.timed_attacks.list[1].throttle_cooldown_on_skill_use = true
 tt.timed_attacks.list[1].vis_bans = 0
 tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
 tt.timed_attacks.list[2] = CC("custom_attack")
@@ -1113,7 +1093,6 @@ tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].max_range = 90
 tt.timed_attacks.list[2].min_targets = 3
 tt.timed_attacks.list[2].sound = "HeroIgnusHeatwaveCast"
-tt.timed_attacks.list[2].throttle_cooldown_on_skill_use = true
 tt.timed_attacks.list[3] = CC("custom_attack")
 tt.timed_attacks.list[3].animation_in = "skill_03_in"
 tt.timed_attacks.list[3].animation_out = "skill_03_out"
@@ -1127,7 +1106,6 @@ tt.timed_attacks.list[3].fx_stun = "fx_ignus_hit"
 tt.timed_attacks.list[3].invincible_time = fts(26)
 tt.timed_attacks.list[3].mod_stun = "mod_ignus_skill_c_stun"
 tt.timed_attacks.list[3].sound = "HeroIgnusFlameRushCast"
-tt.timed_attacks.list[3].throttle_cooldown_on_skill_use = true
 tt.timed_attacks.list[4] = CC("custom_attack")
 tt.timed_attacks.list[4].animations = {"ulti_in", "ulti_loop", "ulti_out"}
 tt.timed_attacks.list[4].aura = "aura_ignus_ultimate"
@@ -1148,7 +1126,6 @@ tt.timed_attacks.list[4].sound_cast = "HeroIgnusSupernovaLoopStart"
 tt.timed_attacks.list[4].sound_end = "HeroIgnusSupernovaLoopEnd"
 tt.timed_attacks.list[4].sound_loop = "HeroIgnusSupernovaLoop"
 tt.timed_attacks.list[4].taunt = "HeroIgnusTauntUltimate"
-tt.timed_attacks.list[4].throttle_cooldown_on_skill_use = true
 
 tt = RT("mod_ignus_skill_c_stun", "mod_stun")
 tt.modifier.duration = 1e+99
