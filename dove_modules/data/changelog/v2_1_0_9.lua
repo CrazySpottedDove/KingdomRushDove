@@ -1,0 +1,1 @@
+return {{date="2026-11-07",author="CrazySpottedDove",message="feat: 支持通过参数进行插件初始化测试；添加对已废弃插件的处理；标明dev分支和master分支的插件，并支持将dev分支插件一键转为master分支并上传"}}

@@ -38,6 +38,11 @@ local STORE_PAGE_SIZE = 20
 -- 本地版本高于远端（存在未上传更新）时的开发者提示行背景色
 local LOCAL_AHEAD_BG = {74, 36, 22, 225}
 local LOCAL_AHEAD_HOVER_BG = {98, 50, 30, 235}
+local DEPRECATED_BG = {72, 30, 30, 235}
+local DEPRECATED_HOVER_BG = {96, 40, 40, 245}
+-- dev 分支插件提示行背景色（蓝色，区别于 master）
+local DEV_BG = {30, 52, 86, 235}
+local DEV_HOVER_BG = {40, 70, 116, 245}
 
 local STORE_BACKUP_SITES = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
 
@@ -140,6 +145,11 @@ local function min_version_blocked(item)
 		return false
 	end
 	return version_lt(version.id, item.min_version)
+end
+
+--- 服务端检查失败的插件：禁止新的安装/更新入口。
+local function is_deprecated(item)
+	return item and item.deprecated == true
 end
 
 local function remove_dir_recursive(path)
@@ -592,6 +602,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._developer_mode = false
 	self._upload_pending_data = nil
 	self._upload_pending_cover = nil
+	self._upload_pending_convert_master = false
 	self._my_plugins_only = false
 	do
 		local dev_chunk = FS.load("developer.lua")
@@ -980,9 +991,16 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		S:queue("GUIButtonCommon")
 		local plugin_data = self._upload_pending_data
 		local has_cover = self._upload_pending_cover ~= nil
+		local convert_master = self._upload_pending_convert_master
 		self:_reset_cover_prompt()
 		if plugin_data then
 			self:_start_task(_("PLUGIN_MGR_TASK_UPLOAD_PLUGIN"), function()
+				if convert_master then
+					local ok, err = self:_convert_plugin_branch_to_master(plugin_data)
+					if not ok then
+						return false, err
+					end
+				end
 				return self:_upload_plugin(plugin_data, has_cover)
 			end)
 		end
@@ -1640,6 +1658,13 @@ function PluginManagerView:_reload_local_plugins()
 	self:_sort_local_plugins()
 end
 
+--- 开发者自己的插件：本地未上传时不提示“已下架”。
+---@param cfg table 插件 config.lua
+---@return boolean
+function PluginManagerView:_is_own_plugin(cfg)
+	return self._developer_mode and cfg and cfg.by == self._developer_config.account
+end
+
 --- 本地版本是否高于远端（作者本地改动尚未上传到商店）
 ---@param plugin_data table
 ---@return boolean
@@ -1665,6 +1690,12 @@ function PluginManagerView:_sort_local_plugins()
 		local ahead_b = self:_is_local_ahead(b)
 		if ahead_a ~= ahead_b then
 			return ahead_a
+		end
+		-- dev 分支插件优先于 master 分支（分支优先级先于使用时间）
+		local dev_a = (a.config.branch or "master") == "dev"
+		local dev_b = (b.config.branch or "master") == "dev"
+		if dev_a ~= dev_b then
+			return dev_a
 		end
 		local t_a = a.config.last_used_at or 0
 		local t_b = b.config.last_used_at or 0
@@ -1859,6 +1890,9 @@ function PluginManagerView:_collect_plugin_root_candidates(base_dir)
 end
 
 function PluginManagerView:_install_plugin(item, is_update, task)
+	if is_deprecated(item) then
+		return false, _("PLUGIN_MGR_STATUS_DEPRECATED_BLOCKED")
+	end
 	local entry = item.entry
 	self:_set_status(string.format(is_update and _("PLUGIN_MGR_STATUS_UPDATING_PLUGIN") or _("PLUGIN_MGR_STATUS_INSTALLING_PLUGIN"), item.name), 0)
 	local zip_data, err = self:_download_zip(item, task)
@@ -2083,6 +2117,9 @@ function PluginManagerView:_install_or_update_item(item, task)
 	if task and task.cancelled then
 		return false, "cancelled"
 	end
+	if is_deprecated(item) then
+		return false, _("PLUGIN_MGR_STATUS_DEPRECATED_BLOCKED")
+	end
 	local local_plugin = self.local_by_entry[item.entry]
 	local need_update = local_plugin and version_lt(local_plugin.config.version, item.version)
 	if not need_update then
@@ -2291,6 +2328,10 @@ function PluginManagerView:_enqueue_download(item, is_update)
 	if not item or not item.entry then
 		return nil
 	end
+	if is_deprecated(item) then
+		self:_set_status(_("PLUGIN_MGR_STATUS_DEPRECATED_BLOCKED"), 0)
+		return nil, "deprecated"
+	end
 	if min_version_blocked(item) then
 		-- 只收集不弹窗：批量入口同一帧会连续命中多个，交给 update 统一汇总
 		self:_queue_min_version_blocked(item)
@@ -2491,7 +2532,7 @@ function PluginManagerView:_update_all_plugins()
 	local pending = {}
 	for _, plugin_data in ipairs(self.local_plugins) do
 		local remote = self.remote_by_entry[plugin_data.config.entry]
-		if remote and version_lt(plugin_data.config.version, remote.version) then
+		if remote and not is_deprecated(remote) and version_lt(plugin_data.config.version, remote.version) then
 			pending[#pending + 1] = {
 				local_plugin = plugin_data,
 				remote = remote
@@ -2565,14 +2606,21 @@ function PluginManagerView:_render_local_list()
 			local remote = self.remote_by_entry[plugin_data.config.entry]
 			local status = ""
 			local local_ahead = self:_is_local_ahead(plugin_data)
+			local own = self:_is_own_plugin(cfg)
+			local missing = self._remote_lookup_done and not remote and not own
+			local is_dev = (cfg.branch or "master") == "dev"
 
-			if remote and version_lt(cfg.version, remote.version) then
+			if is_deprecated(remote) then
+				status = _("PLUGIN_MGR_STATUS_DEPRECATED_LOCAL")
+			elseif remote and version_lt(cfg.version, remote.version) then
 				status = string.format(_("PLUGIN_MGR_STATUS_UPDATE_AVAILABLE"), utf8_util.sanitize(cfg.version), utf8_util.sanitize(remote.version))
 			elseif local_ahead then
 				-- 本地版本高于远端：作者本地的改动尚未上传到商店
 				status = _("PLUGIN_MGR_STATUS_LOCAL_AHEAD")
 			elseif remote then
 				status = _("PLUGIN_MGR_STATUS_UP_TO_DATE")
+			elseif missing then
+				status = _("PLUGIN_MGR_STATUS_MAYBE_DELISTED")
 			else
 				status = self._remote_lookup_done and _("PLUGIN_MGR_STATUS_REMOTE_NOT_FOUND") or _("PLUGIN_MGR_STATUS_REMOTE_NOT_QUERIED")
 			end
@@ -2608,7 +2656,19 @@ function PluginManagerView:_render_local_list()
 					end)
 				end
 			}
-			if remote and version_lt(cfg.version, remote.version) then
+			if (is_deprecated(remote) or missing) and cfg.enabled then
+				actions[#actions + 1] = {
+					text = _("PLUGIN_MGR_BTN_DISABLE"),
+					on_press = function()
+						cfg.enabled = false
+						self._unsaved_changes = self:_check_unsaved()
+						self:_render_current_list()
+						-- 一键禁用：立即落盘；能热卸载就热卸载，否则按既有逻辑重启。
+						self:apply()
+					end
+				}
+			end
+			if remote and not is_deprecated(remote) and version_lt(cfg.version, remote.version) then
 				local dl_task = self:_find_dl_task_by_entry(remote.entry)
 				actions[#actions + 1] = {
 					text = dl_task and _("PLUGIN_MGR_BTN_UPDATING") or _("UPDATE_POPUP"),
@@ -2632,6 +2692,8 @@ function PluginManagerView:_render_local_list()
 				action_bottom_margin = self._row_action_bottom_margin,
 				toggle_top_margin = self._row_toggle_top_margin,
 				enabled = cfg.enabled,
+				bg_color = (is_deprecated(remote) or missing) and DEPRECATED_BG or (is_dev and DEV_BG or (local_ahead and LOCAL_AHEAD_BG or nil)),
+				hover_bg_color = (is_deprecated(remote) or missing) and DEPRECATED_HOVER_BG or (is_dev and DEV_HOVER_BG or (local_ahead and LOCAL_AHEAD_HOVER_BG or nil)),
 				on_toggle = function(v)
 					cfg.enabled = v
 					if v then
@@ -2641,9 +2703,6 @@ function PluginManagerView:_render_local_list()
 				end,
 				manager = self, -- 供配置编辑器延迟写盘与记忆待应用修改
 				actions = global_disabled and {} or actions,
-				-- 含未上传更新：用高亮背景提示开发者
-				bg_color = local_ahead and LOCAL_AHEAD_BG or nil,
-				hover_bg_color = local_ahead and LOCAL_AHEAD_HOVER_BG or nil,
 				_sw = self._sw,
 				_sh = self._sh,
 				_keyboard = self._keyboard,
@@ -2670,10 +2729,14 @@ function PluginManagerView:_render_store_list()
 			goto continue
 		end
 		local installed = local_plugin ~= nil
-		local needs_update = installed and version_lt(local_plugin.config.version, item.version)
+		local deprecated = is_deprecated(item)
+		local is_dev = item.branch == "dev"
+		local needs_update = installed and not deprecated and version_lt(local_plugin.config.version, item.version)
 		local dl_task = self:_find_dl_task_by_entry(item.entry)
 		local status
-		if dl_task then
+		if deprecated then
+			status = _("PLUGIN_MGR_STATUS_DEPRECATED")
+		elseif dl_task then
 			if dl_task.state == "running" or dl_task.state == "cancelling" then
 				status = _("PLUGIN_MGR_STATUS_DOWNLOADING_ELLIPSIS")
 			else
@@ -2696,7 +2759,14 @@ function PluginManagerView:_render_store_list()
 				self:_show_store_plugin_detail(item)
 			end
 		}
-		if dl_task then
+		if deprecated then
+			actions[#actions + 1] = {
+				text = _("PLUGIN_MGR_BTN_UNAVAILABLE"),
+				enabled = false,
+				on_press = function()
+				end
+			}
+		elseif dl_task then
 			-- 已在下载队列：按钮改为排队提示（点击不再重复入队，_enqueue_download 会提示）
 			actions[#actions + 1] = {
 				text = dl_task.state == "running" and _("PLUGIN_MGR_STATUS_DOWNLOADING") or _("PLUGIN_MGR_STATUS_QUEUED"),
@@ -2741,6 +2811,8 @@ function PluginManagerView:_render_store_list()
 			status_width = self._row_status_width,
 			right_pad = self._row_right_pad,
 			action_bottom_margin = self._row_action_bottom_margin,
+			bg_color = deprecated and DEPRECATED_BG or (is_dev and DEV_BG or nil),
+			hover_bg_color = deprecated and DEPRECATED_HOVER_BG or (is_dev and DEV_HOVER_BG or nil),
 			actions = actions
 		}, list_w)
 		self.plugin_list:add_row(row)
@@ -2905,11 +2977,13 @@ end
 function PluginManagerView:_reset_cover_prompt()
 	self._upload_pending_data = nil
 	self._upload_pending_cover = nil
+	self._upload_pending_convert_master = false
 	self._cover_yes_btn.hidden = true
 	self._cover_no_btn.hidden = true
 	self._confirm_cancel_btn.hidden = true
 	self.task_cancel_btn.hidden = false
 	self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_UPLOAD_COVER"))
+	self._cover_no_btn:set_text(_("PLUGIN_MGR_BTN_SKIP_COVER"))
 end
 
 function PluginManagerView:_show_local_plugin_detail(plugin_data)
@@ -2972,30 +3046,39 @@ function PluginManagerView:_show_store_plugin_detail(item)
 end
 
 function PluginManagerView:_handle_upload_plugin(plugin_data)
+	local is_dev = (plugin_data.config.branch or "master") == "dev"
 	local cover_name = nil
-	if (plugin_data.config.branch or "master") == "master" then
-		local items = FS.getDirectoryItems(plugin_paths.plugin_dir(plugin_data.config.entry)) or {}
-		for _, name in ipairs(items) do
-			if name:lower():match("^cover%.") then
-				cover_name = name
-				break
-			end
+	local items = FS.getDirectoryItems(plugin_paths.plugin_dir(plugin_data.config.entry)) or {}
+	for _, name in ipairs(items) do
+		if name:lower():match("^cover%.") then
+			cover_name = name
+			break
 		end
 	end
 
 	self._upload_pending_data = plugin_data
 	self._upload_pending_cover = cover_name
+	-- dev 插件默认走「转为 master 并上传」，用户也可选择继续以 dev 上传
+	self._upload_pending_convert_master = is_dev
 	self.task_dialog.hidden = false
 	self.task_cancel_btn.hidden = true
 	self._confirm_cancel_btn.hidden = false
 	self.progress_fill.shape.args[4] = 0
 	self.progress_fill.size = V.v(0, self.progress_fill.size.y)
 
-	if cover_name then
+	if is_dev then
+		self.task_title_lbl.text = _("PLUGIN_MGR_TASK_UPLOAD_PLUGIN")
+		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_UPLOAD_DEV"), utf8_util.sanitize(plugin_data.config.name))
+		self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_UPLOAD_AS_MASTER"))
+		self._cover_yes_btn.hidden = false
+		self._cover_no_btn:set_text(_("PLUGIN_MGR_BTN_UPLOAD_AS_DEV"))
+		self._cover_no_btn.hidden = false
+	elseif cover_name then
 		self.task_title_lbl.text = _("PLUGIN_MGR_TASK_UPLOAD_PLUGIN")
 		self.task_status_lbl.text = string.format(_("PLUGIN_MGR_CONFIRM_COVER_FOUND"), utf8_util.sanitize(cover_name))
 		self._cover_yes_btn:set_text(_("PLUGIN_MGR_BTN_UPLOAD_COVER"))
 		self._cover_yes_btn.hidden = false
+		self._cover_no_btn:set_text(_("PLUGIN_MGR_BTN_SKIP_COVER"))
 		self._cover_no_btn.hidden = false
 	else
 		self.task_title_lbl.text = _("PLUGIN_MGR_TASK_UPLOAD_PLUGIN")
@@ -3149,6 +3232,27 @@ function PluginManagerView:_hash_check(entry, version, hashes, platform, mode, t
 		return false, _("PLUGIN_MGR_ERR_HASH_COMPARE_PARSE")
 	end
 	return true, body
+end
+
+--- 将插件 config.lua 的 branch 直接改为 master 并落盘（用于 dev 插件转正式发布）。
+---@param plugin_data table 本地插件记录
+---@return boolean ok, string|nil err
+function PluginManagerView:_convert_plugin_branch_to_master(plugin_data)
+	local cfg = plugin_data and plugin_data.config
+	if not cfg or not cfg.entry then
+		return false, _("PLUGIN_MGR_ERR_PLUGIN_NO_ENTRY")
+	end
+	local path = plugin_paths.metadata_path(cfg.entry)
+	local disk_cfg = plugin_paths.load_lua_table(path)
+	if type(disk_cfg) ~= "table" then
+		return false, _("PLUGIN_MGR_ERR_CONFIG_WRITE")
+	end
+	disk_cfg.branch = "master"
+	if not plugin_paths.write_lua_table(path, disk_cfg) then
+		return false, _("PLUGIN_MGR_ERR_CONFIG_WRITE")
+	end
+	cfg.branch = "master"
+	return true, nil
 end
 
 function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, deleted, upload_cover)
@@ -4456,6 +4560,7 @@ function PluginManagerView:_install_pack_from_item(item)
 	local latest_n = 0 -- 跳过最新
 	local gone_n = 0 -- 商店缺失
 	local blocked_n = 0 -- 本体版本不足
+	local deprecated_n = 0 -- 服务端检查失败
 	for _i, member in ipairs(members) do
 		if self._cancel_requested then
 			return false, "cancelled"
@@ -4466,6 +4571,8 @@ function PluginManagerView:_install_pack_from_item(item)
 		if not ritem then
 			-- 商店已下架/不存在：无论本地是否存在都跳过并计数
 			gone_n = gone_n + 1
+		elseif is_deprecated(ritem) then
+			deprecated_n = deprecated_n + 1
 		elseif blocked then
 			-- 成员要求更高本体版本：跳过（其余成员照常同步）
 			blocked_n = blocked_n + 1
@@ -4504,6 +4611,9 @@ function PluginManagerView:_install_pack_from_item(item)
 	end
 	if blocked_n > 0 then
 		parts[#parts + 1] = string.format(_("PLUGIN_MGR_SYNC_PART_BLOCKED"), blocked_n)
+	end
+	if deprecated_n > 0 then
+		parts[#parts + 1] = string.format(_("PLUGIN_MGR_SYNC_PART_DEPRECATED"), deprecated_n)
 	end
 	if #parts == 0 then
 		parts[#parts + 1] = _("PLUGIN_MGR_SYNC_PART_NONE")
