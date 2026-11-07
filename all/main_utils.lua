@@ -174,6 +174,10 @@ function mu.parse_args(arg, params)
 		params.plugin_test_branch = argv("plugin_test_branch")
 	end
 
+	if has_arg("plugin_test_level") then
+		params.plugin_test_level = true
+	end
+
 	if has_arg("scene_trace") then
 		params.scene_trace = true
 	end

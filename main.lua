@@ -687,15 +687,23 @@ local function escape_lua_pattern(s)
 	return (tostring(s):gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1"))
 end
 
+--- 从已加载的 plugin_main 模块读取 registry，不依赖全局变量。
+local function get_plugin_registry()
+	local plugin_main = package.loaded["plugin.plugin_main"]
+
+	return type(plugin_main) == "table" and plugin_main.registry or nil
+end
+
 local function find_plugin_entry_in_line(line)
-	if type(line) ~= "string" or type(PLUGIN_REGISTRY) ~= "table" then
+	local registry = get_plugin_registry()
+	if type(line) ~= "string" or type(registry) ~= "table" then
 		return nil
 	end
 
 	local padded_line = " " .. line .. " "
 
-	-- PLUGIN_REGISTRY 以 entry 为键（见 plugin_main:after_init）
-	for entry in pairs(PLUGIN_REGISTRY) do
+	-- registry 以 entry 为键（见 plugin_main:after_init）
+	for entry in pairs(registry) do
 		if type(entry) == "string" and entry ~= "" then
 			local escaped_entry = escape_lua_pattern(entry)
 			local token_pattern = "[^%w_]" .. escaped_entry .. "[^%w_]"
@@ -800,14 +808,15 @@ local function disabled_all_plugins()
 end
 
 -- 构建当前已启用（已加载或正在加载）的插件列表（名称 + 版本）文本。
--- 数据源仅 PLUGIN_REGISTRY，没有则输出 "(无)"。
+-- 数据源仅 plugin_main.registry，没有则输出 "(无)"。
 local function build_enabled_plugins_text()
 	local lines = {_("CRASH_UI_ENABLED_PLUGIN_LIST")}
+	local registry = get_plugin_registry()
 
 	local listed = 0
 
-	if type(PLUGIN_REGISTRY) == "table" then
-		for plugin_dir, config in pairs(PLUGIN_REGISTRY) do
+	if type(registry) == "table" then
+		for plugin_dir, config in pairs(registry) do
 			lines[#lines + 1] = string.format("  %s(%s) : %s", config.name, config.entry, config.version or "?")
 			listed = listed + 1
 		end
@@ -906,10 +915,11 @@ function love.errorhandler(msg)
 
 	if blamed_plugins then
 		table.insert(tip, _("CRASH_UI_CRASH_BY_PLUGIN"))
+		local registry = get_plugin_registry()
 		for _idx, plugin_error_info in ipairs(blamed_plugins) do
 			local plugin_tip
-			if PLUGIN_REGISTRY and PLUGIN_REGISTRY[plugin_error_info.entry] then
-				local config = PLUGIN_REGISTRY[plugin_error_info.entry]
+			if registry and registry[plugin_error_info.entry] then
+				local config = registry[plugin_error_info.entry]
 				plugin_tip = string.format("    %s(%s:%s)", config.name, config.entry, config.version or "?")
 			else
 				plugin_tip = string.format("    %s", plugin_error_info.entry)
