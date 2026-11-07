@@ -16,7 +16,12 @@ local storage = {}
 storage.active_slot_idx = nil
 storage.slot = nil
 storage.SETTINGS_FILE = "settings.lua"
+-- 旧版单文件存档，仅用于迁移。
 storage.SLOT_FILE_FMT = "slot_%d.lua"
+-- 新版每个 slot 一个目录，每个 generation 一个文件。
+storage.SLOT_DIR_FMT = "slot_%d"
+storage.SLOT_META_FILE = "meta.lua"
+storage.SLOT_SCHEMA_VERSION = 3
 
 local SETTINGS_PARAMS = {
 	"fps",
@@ -40,14 +45,8 @@ local SETTINGS_PARAMS = {
 	-- 用于指示是否为即时重启。如为即时重启，会跳过多数不必要的 scene。
 	"tmp_restart"
 }
-local SLOT_ADDITIONAL_DATA = {
-	gems = 0,
-	bag = {},
-	levels = {},
-	upgrades = {},
-	last_generation = "kr1"
-}
 local SLOT_MANDATORY_KEYS = {"levels", "upgrades", "heroes"}
+local OBSOLETE_SLOT_KEYS = {"unmigrated_levels", "gems", "bag", "status", "achievements", "achivements", "achievement_counters", "achievements_counters", "upgrade_line_key"}
 local DEFAULT_UPGRADE_LEVELS = {
 	archers = 0,
 	barracks = 0,
@@ -125,6 +124,155 @@ function storage:remove(filename)
 	return ok
 end
 
+--- slot 目录。
+---@param idx number
+---@return string
+function storage:get_slot_dir(idx)
+	return string.format(self.SLOT_DIR_FMT, idx)
+end
+
+--- generation 数据文件路径。
+---@param idx number
+---@param gen_name string
+---@return string
+function storage:get_generation_path(idx, gen_name)
+	return self:get_slot_dir(idx) .. "/" .. gen_name .. ".lua"
+end
+
+--- 补齐 slot 的公共默认字段，并标记为当前 schema。
+---@param slot table
+---@return table
+function storage:normalize_slot(slot)
+	for _, key in ipairs(OBSOLETE_SLOT_KEYS) do
+		slot[key] = nil
+	end
+
+	slot.schema_version = self.SLOT_SCHEMA_VERSION
+
+	return slot
+end
+
+--- 读取新版 slot 目录。metadata 与 generation 文件在内存中重新合并为旧结构。
+---@param idx number
+---@param force boolean|nil
+---@return table|nil
+function storage:load_slot_folder(idx, force)
+	local dir = self:get_slot_dir(idx)
+	local meta = self:load_lua(dir .. "/" .. self.SLOT_META_FILE, force)
+
+	if not meta or type(meta) ~= "table" then
+		return nil
+	end
+
+	local slot = {}
+
+	for k, v in pairs(meta) do
+		if k ~= "levels" and k ~= "upgrades" then
+			slot[k] = v
+		end
+	end
+
+	slot.levels = {}
+	slot.upgrades = {}
+
+	-- 兼容未来可能把 levels/upgrades 留在 meta 中的中间格式。
+	if type(meta.levels) == "table" then
+		for k, v in pairs(meta.levels) do
+			slot.levels[k] = v
+		end
+	end
+
+	if type(meta.upgrades) == "table" then
+		for k, v in pairs(meta.upgrades) do
+			slot.upgrades[k] = v
+		end
+	end
+
+	local ok, items = pcall(love.filesystem.getDirectoryItems, dir)
+
+	if ok and items then
+		for _, filename in ipairs(items) do
+			local gen_name = filename:match("^([%w_%-]+)%.lua$")
+
+			if gen_name and gen_name ~= "meta" then
+				local data = self:load_lua(dir .. "/" .. filename, force)
+
+				if type(data) == "table" then
+					slot.levels[gen_name] = data.levels or {}
+					slot.upgrades[gen_name] = data.upgrades or {}
+				end
+			end
+		end
+	end
+
+	return slot
+end
+
+--- 将内存中的 slot 写入目录结构。
+---@param slot table
+---@param idx number
+---@return boolean
+function storage:write_slot_folder(slot, idx)
+	local dir = self:get_slot_dir(idx)
+
+	love.filesystem.createDirectory(dir)
+
+	local meta = {}
+
+	for k, v in pairs(slot) do
+		if k ~= "levels" and k ~= "upgrades" then
+			meta[k] = v
+		end
+	end
+
+	meta.schema_version = self.SLOT_SCHEMA_VERSION
+
+	if not self:write_lua(dir .. "/" .. self.SLOT_META_FILE, meta) then
+		return false
+	end
+
+	local gen_names = {}
+
+	for gen_name in pairs(slot.levels or {}) do
+		gen_names[gen_name] = true
+	end
+
+	for gen_name in pairs(slot.upgrades or {}) do
+		gen_names[gen_name] = true
+	end
+
+	for _, gen in ipairs(GENS:all()) do
+		gen_names[gen.name] = true
+	end
+
+	for gen_name in pairs(gen_names) do
+		local gen_data = {
+			levels = slot.levels and slot.levels[gen_name] or {},
+			upgrades = slot.upgrades and slot.upgrades[gen_name] or {}
+		}
+
+		if not self:write_lua(self:get_generation_path(idx, gen_name), gen_data) then
+			return false
+		end
+	end
+
+	slot.schema_version = self.SLOT_SCHEMA_VERSION
+
+	return true
+end
+
+--- 迁移旧单文件 slot 前保留原始内容。
+---@param idx number
+function storage:backup_legacy_slot(idx)
+	local filename = string.format(self.SLOT_FILE_FMT, idx)
+	local raw = love.filesystem.read(filename)
+
+	if raw then
+		local backup = filename .. ".bak_v3_" .. os.date("%Y%m%d_%H%M%S")
+		love.filesystem.write(backup, raw)
+	end
+end
+
 function storage:load_settings()
 	local input = self:load_lua(self.SETTINGS_FILE)
 	local template = require("settings_template")
@@ -177,7 +325,7 @@ end
 function storage:ensure_slot_v2(input, idx)
 	GENS:init()
 
-	if input.schema_version ~= 2 then
+	if (tonumber(input.schema_version) or 1) < 2 then
 		local fn = string.format(self.SLOT_FILE_FMT, idx)
 		local raw = love.filesystem.read(fn)
 
@@ -187,7 +335,6 @@ function storage:ensure_slot_v2(input, idx)
 
 		local old_levels = input.levels
 		input.levels = {}
-		input.unmigrated_levels = {}
 
 		for key, value in pairs(old_levels) do
 			local global_idx = tonumber(key)
@@ -196,8 +343,6 @@ function storage:ensure_slot_v2(input, idx)
 			if gen_id then
 				input.levels[gen_id] = input.levels[gen_id] or {}
 				input.levels[gen_id][local_idx] = value
-			else
-				input.unmigrated_levels[key] = value
 			end
 		end
 
@@ -276,11 +421,31 @@ function storage:load_slot(idx, force)
 		return nil
 	end
 
-	local input = self:load_lua(string.format(self.SLOT_FILE_FMT, idx), force)
+	local input = self:load_slot_folder(idx, force)
 
-	if not input or not type(input) == "table" then
+	if not input then
+		local legacy_filename = string.format(self.SLOT_FILE_FMT, idx)
+		local legacy = self:load_lua(legacy_filename, force)
+
+		if legacy and type(legacy) == "table" then
+			self:backup_legacy_slot(idx)
+
+			input = self:ensure_slot_v2(legacy, idx)
+			input = self:normalize_slot(input)
+
+			-- 迁移成功后再移除旧文件；失败时保留旧文件作为回退。
+			if self:write_slot_folder(input, idx) then
+				sio:remove_file(legacy_filename)
+			end
+		end
+	end
+
+	if not input or type(input) ~= "table" then
 		return nil
 	end
+
+	input = self:ensure_slot_v2(input, idx)
+	input = self:normalize_slot(input)
 
 	for _, v in pairs(SLOT_MANDATORY_KEYS) do
 		if not input[v] then
@@ -288,14 +453,6 @@ function storage:load_slot(idx, force)
 			self:delete_slot(idx)
 
 			return nil
-		end
-	end
-
-	input = self:ensure_slot_v2(input, idx)
-
-	for k, v in pairs(SLOT_ADDITIONAL_DATA) do
-		if not input[k] then
-			input[k] = v
 		end
 	end
 
@@ -311,8 +468,7 @@ function storage:save_slot(data_table, idx, should_sync)
 		return nil
 	end
 
-	local fn = string.format(self.SLOT_FILE_FMT, idx)
-	local success = self:write_lua(fn, data_table)
+	local success = self:write_slot_folder(data_table, idx)
 
 	if success then
 		signal.emit("slot-saved", idx, should_sync)
@@ -330,21 +486,62 @@ function storage:delete_slot(idx)
 		return nil
 	end
 
-	local success = storage:remove(string.format(self.SLOT_FILE_FMT, idx), true)
+	local dir = self:get_slot_dir(idx)
+	local success = false
+	local ok, items = pcall(love.filesystem.getDirectoryItems, dir)
+
+	if ok and items then
+		for _, filename in ipairs(items) do
+			sio:remove_file(dir .. "/" .. filename)
+			success = true
+		end
+	end
+
+	if love.filesystem.remove(dir) then
+		success = true
+	end
+
+	if sio:remove_file(string.format(self.SLOT_FILE_FMT, idx)) then
+		success = true
+	end
 
 	if success then
 		signal.emit("slot-deleted", idx)
+	else
+		log.error("error deleting slot %s", idx)
 	end
 
 	return success
 end
 
+--- 将磁盘镜像结构的模板合并成运行时使用的 slot 结构。
+---@param template table
+---@return table
+function storage:merge_slot_template(template)
+	local slot = {}
+
+	for k, v in pairs(template.meta or {}) do
+		slot[k] = table.deepclone(v)
+	end
+
+	slot.levels = {}
+	slot.upgrades = {}
+
+	for gen_name, data in pairs(template.generations or {}) do
+		slot.levels[gen_name] = table.deepclone(data.levels or {})
+		slot.upgrades[gen_name] = table.deepclone(data.upgrades or {})
+	end
+
+	return slot
+end
+
 function storage:new_slot(idx)
 	local template = require("data.slot_template")
+	local slot = self:merge_slot_template(template)
 
-	template = table.deepclone(template)
+	slot = self:ensure_slot_v2(slot, idx or self.active_slot_idx)
 
-	return self:ensure_slot_v2(template, idx or self.active_slot_idx)
+	return self:normalize_slot(slot)
 end
 
 function storage:create_slot(idx)
@@ -372,7 +569,7 @@ function storage:set_active_slot(idx)
 end
 
 function storage:get_slot_name(idx)
-	return string.format(self.SLOT_FILE_FMT, idx)
+	return self:get_slot_dir(idx)
 end
 
 function storage:get_slot_progress(slot)
