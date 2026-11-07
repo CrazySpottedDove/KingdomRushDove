@@ -24,12 +24,20 @@ function GENS:total_max_stars()
 	return total
 end
 
---- 按 (name, local_idx) 生成关卡文件名。
+--- 按 (name, local_idx) 生成全局唯一关卡逻辑 key。
 ---@param name string
 ---@param local_idx number
 ---@return string
 function GENS:level_name(name, local_idx)
 	return string.format("level_%s_%03d", name, local_idx)
+end
+
+--- 按 (name, local_idx) 生成 generation 内的物理文件名。
+---@param name string
+---@param local_idx number
+---@return string
+function GENS:level_file(name, local_idx)
+	return string.format("level_%03d", local_idx)
 end
 
 --- 关卡标题 i18n key。

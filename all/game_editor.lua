@@ -21,6 +21,8 @@ local P = require("path_db")
 local SU = require("screen_utils")
 local GR = require("grid_db")
 local LU = require("level_utils")
+local GENS = require("generations.registry")
+local LEGACY = require("generations.legacy")
 local GEU = require("game_editor_utils")
 local sys = require("systems")
 local W = require("wave_db")
@@ -664,8 +666,23 @@ function editor:load_level(idx, mode, recover)
 	-- end
 	-- else
 	-- 不需要区分来自 game_editor 目录还是游戏目录，直接进行加载。默认情况下，会先从 game_editor 加载，然后才是从游戏目录加载。
-	s.level_idx = idx
-	s.level_name = "level" .. string.format("%02i", idx)
+	local gen_id, local_idx = LEGACY.to_ref(idx)
+
+	if gen_id then
+		local gen = GENS:get(gen_id)
+
+		s.gen_id = gen_id
+		s.level_idx = local_idx
+		s.level_name = GENS:level_name(gen_id, local_idx)
+		s.level_file = GENS:level_file(gen_id, local_idx)
+		s.level_root = gen and gen.resource_root or nil
+	else
+		s.level_idx = idx
+		s.level_name = "level" .. string.format("%02i", idx)
+		s.level_file = nil
+		s.level_root = nil
+	end
+
 	s.level_mode = mode
 	s.level_difficulty = DIFFICULTY_EASY
 	s.level = LU.load_level(s, s.level_name)
@@ -746,7 +763,7 @@ function editor:load_level(idx, mode, recover)
 	-- end
 
 	-- 尝试加载网格
-	if not GR:load_file(LU.resolve_level_file(s, s.level_name, "_grid.lua")) then
+	if not GR:load_file(LU.resolve_level_file(s, s.level_file or s.level_name, "_grid.lua")) then
 		local gox, goy = -192, 0
 		local bgw, bgh = 1408, 768
 		local gw, gh = math.ceil(bgw / GR.cell_size), math.ceil(bgh / GR.cell_size)
@@ -754,7 +771,7 @@ function editor:load_level(idx, mode, recover)
 		GR:init_grid(gw, gh, gox, goy, GR.cell_size)
 	end
 
-	P:load_curves(LU.resolve_level_file(s, s.level_name, "_paths.lua"))
+	P:load_curves(LU.resolve_level_file(s, s.level_file or s.level_name, "_paths.lua"))
 
 	self.entities_dirty = true
 
@@ -901,14 +918,14 @@ function editor:load_plugin_level(entry, mode)
 		s.level:load(s)
 	end
 
-	if not GR:load_file(LU.resolve_level_file(s, s.level_name, "_grid.lua")) then
+	if not GR:load_file(LU.resolve_level_file(s, s.level_file or s.level_name, "_grid.lua")) then
 		local gox, goy = -192, 0
 		local bgw, bgh = 1408, 768
 		local gw, gh = math.ceil(bgw / GR.cell_size), math.ceil(bgh / GR.cell_size)
 		GR:init_grid(gw, gh, gox, goy, GR.cell_size)
 	end
 
-	P:load_curves(LU.resolve_level_file(s, s.level_name, "_paths.lua"))
+	P:load_curves(LU.resolve_level_file(s, s.level_file or s.level_name, "_paths.lua"))
 
 	self.entities_dirty = true
 	self.grid_dirty = true

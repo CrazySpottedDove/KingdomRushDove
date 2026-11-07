@@ -238,6 +238,7 @@ function autoplay:init(w, h, done_callback)
 	game.store.gen_id = gen_id
 	game.store.level_idx = level_idx
 	game.store.level_name = GENS:level_name(gen_id, level_idx)
+	game.store.level_file = GENS:level_file(gen_id, level_idx)
 	game.store.level_root = gen and gen.resource_root or nil
 	game.store.level_mode = level_mode
 	game.store.level_difficulty = level_difficulty

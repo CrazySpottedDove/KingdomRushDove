@@ -67,12 +67,6 @@ function common.standard(config)
 				end
 
 				return 1
-			end,
-			water_speed = config.water_speed or function(local_idx)
-				return 0
-			end,
-			enemy_page = config.enemy_page or function(local_idx)
-				return 1
 			end
 		},
 		level_select = config.level_select or {},

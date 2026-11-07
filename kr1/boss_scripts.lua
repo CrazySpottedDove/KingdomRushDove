@@ -5485,7 +5485,7 @@ function scripts.boss_corrupted_denas.update(this, store)
 	local megaspawner_boss
 
 	for _, value in pairs(spawners) do
-		if value.load_file == "level_kr5_011_spawner" then
+		if value.load_file == "level_011_spawner" then
 			megaspawner_boss = value
 		end
 	end
@@ -5762,7 +5762,7 @@ function scripts.boss_cult_leader.update(this, store)
 	local megaspawner_boss
 
 	for _, value in pairs(spawners) do
-		if value.load_file == "level_kr5_015_spawner" then
+		if value.load_file == "level_015_spawner" then
 			megaspawner_boss = value
 		end
 	end
@@ -6308,7 +6308,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 	local megaspawner_boss
 
 	for _, value in pairs(spawners) do
-		if value.load_file == "level_kr5_016_spawner" then
+		if value.load_file == "level_016_spawner" then
 			megaspawner_boss = value
 		end
 	end
@@ -7052,7 +7052,7 @@ function scripts.boss_navira.update(this, store)
 	local megaspawner_boss
 
 	for _, value in pairs(spawners) do
-		if value.load_file == "level_kr5_019_spawner" then
+		if value.load_file == "level_019_spawner" then
 			megaspawner_boss = value
 		end
 	end
@@ -7621,7 +7621,7 @@ function scripts.boss_crocs.update(this, store)
 	local megaspawner_boss
 
 	for _, value in pairs(spawners) do
-		if value.load_file == "level_kr5_022_spawner" then
+		if value.load_file == "level_022_spawner" then
 			megaspawner_boss = value
 		end
 	end
@@ -8463,7 +8463,7 @@ function scripts.boss_pig.update(this, store)
 	local megaspawner_boss
 
 	for _, value in pairs(spawners) do
-		if value.load_file == "level_kr5_006_spawner" then
+		if value.load_file == "level_006_spawner" then
 			megaspawner_boss = value
 		end
 	end
@@ -8758,7 +8758,7 @@ function scripts.boss_machinist.update(this, store)
 	local megaspawner_boss
 
 	for _, value in pairs(spawners) do
-		if value.load_file == "level_kr5_024_spawner" then
+		if value.load_file == "level_024_spawner" then
 			megaspawner_boss = value
 		end
 	end

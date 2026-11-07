@@ -8,8 +8,6 @@
 				"_assets/kr1-desktop/sounds",
 				"_assets/kr1-desktop/pixel_art",
 				"kr1/data/exoskeletons",
-				"kr1/data/levels",
-				"kr1/data/waves",
 				"kr1-desktop/data",
 				"all-desktop/data",
 				"dove_modules/data",
@@ -20,8 +18,13 @@
 				".codewhale",
 				".vscode",
 				"love_env",
-				"tmp"
-							]
+				"tmp",
+				"kr1/generations/kr1/data",
+				"kr1/generations/kr2/data",
+				"kr1/generations/kr3/data",
+				"kr1/generations/kr5/data",
+				"kr1/generations/kr6/data"
+			]
 		},
 		{
 			"type": "compress",
@@ -45,11 +48,23 @@
 		},
 		{
 			"type": "compress",
-			"directory": "kr1/data/levels"
+			"directory": "kr1/generations/kr1/data"
 		},
 		{
 			"type": "compress",
-			"directory": "kr1/data/waves"
+			"directory": "kr1/generations/kr2/data"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/generations/kr3/data"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/generations/kr5/data"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/generations/kr6/data"
 		},
 		{
 			"type": "compress",

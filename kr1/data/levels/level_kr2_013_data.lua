@@ -1,1 +1,0 @@
-return {level_mode_overrides={},required_templates={"kr1.template_groups.level_kr2_013_templates","kr1.template_groups.background_sounds_underground"},required_sounds={"music_stage39","FrontiersUndergroundAmbienceSounds","SpecialBlackDragon"},required_textures={"go_enemies_underground","go_stages_underground","go_stage39","go_stage39_bg"}}
