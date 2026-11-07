@@ -267,7 +267,7 @@ bomb.bullet.hit_fx = "fx_explosion_small"
 bomb.bullet.hit_decal = "decal_bomb_crater"
 bomb.bullet.hit_fx_water = "fx_explosion_water"
 bomb.bullet.damage_type = DAMAGE_EXPLOSION
-bomb.bullet.damage_min = 9
+bomb.bullet.damage_min = 11
 bomb.bullet.damage_max = 17
 bomb.bullet.damage_radius = 62.400000000000006
 bomb.bullet.pop = {"pop_kboom"}
@@ -285,7 +285,7 @@ local bomb_dynamite = E:register_t("bomb_dynamite", "bomb")
 -- dps: 44 / 3 = 14.67
 -- 性价比: 14.67 / 345 = 0.0425
 bomb_dynamite.render.sprites[1].name = "bombs_0002"
-bomb_dynamite.bullet.damage_min = 22
+bomb_dynamite.bullet.damage_min = 26
 bomb_dynamite.bullet.damage_max = 44
 bomb_dynamite.bullet.damage_radius = 62.400000000000006
 
@@ -294,7 +294,7 @@ local bomb_black = E:register_t("bomb_black", "bomb")
 -- 性价比: 22 / 665 = 0.036
 bomb_black.render.sprites[1].name = "bombs_0003"
 bomb_black.bullet.align_with_trajectory = true
-bomb_black.bullet.damage_min = 36
+bomb_black.bullet.damage_min = 42
 bomb_black.bullet.damage_max = 72
 bomb_black.bullet.damage_radius = 67.2
 
