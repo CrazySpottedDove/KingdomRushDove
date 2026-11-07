@@ -19,18 +19,6 @@ local update_hp = HU.update_hp
 local queue_damage = U.queue_damage
 local fts = U.fts
 
-local THROTTLE_CD = 1
-
-local function apply_delayed_cooldowns(this, store, attacks)
-	for _, a in ipairs(attacks) do
-		local cooldown = a.cooldown and a.cooldown * (this.unit.cooldown_factor)
-
-		if a.throttle_cooldown_on_skill_use and cooldown and store.tick_ts - a.ts >= cooldown then
-			a.ts = store.tick_ts - cooldown + THROTTLE_CD
-		end
-	end
-end
-
 local function aura_oni_ult_update(this, store)
 	local a = this.aura
 
@@ -364,8 +352,6 @@ local function hero_oni_kr6_update(this, store)
 			if sta == A_DONE and this.melee.last_attack and this.melee.last_attack.attack == this.melee.attacks[3] then
 				sa.ts = store.tick_ts
 
-				apply_delayed_cooldowns(this, store, list)
-
 				this.used_skill = true
 			end
 
@@ -427,8 +413,6 @@ local function hero_oni_kr6_update(this, store)
 					SU.hero_gain_xp_from_skill(this, skills.ultimate)
 					U.y_animation_play(this, ult.animation_out, this.render.sprites[1].flip_x, store.tick_ts, 1, 1)
 
-					apply_delayed_cooldowns(this, store, list)
-
 					this.used_skill = true
 
 					goto continue
@@ -484,8 +468,6 @@ local function hero_oni_kr6_update(this, store)
 				::skill_b_finish::
 
 				::skill_b_stop::
-
-				apply_delayed_cooldowns(this, store, list)
 
 				this.used_skill = true
 
@@ -571,8 +553,6 @@ local function hero_oni_kr6_update(this, store)
 					U.y_animation_wait(this)
 
 					this.used_skill = true
-
-					apply_delayed_cooldowns(this, store, list)
 
 					goto continue
 				end
@@ -753,7 +733,6 @@ tt.melee.range = 60
 tt.timed_attacks.list[1] = CC("custom_attack")
 tt.timed_attacks.list[1].cooldown = 24
 tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].throttle_cooldown_on_skill_use = true
 tt.timed_attacks.list[2] = CC("custom_attack")
 tt.timed_attacks.list[2].animation = "skill_02"
 tt.timed_attacks.list[2].cancel_time_refund = 0.5
@@ -764,7 +743,6 @@ tt.timed_attacks.list[2].duration = 3
 tt.timed_attacks.list[2].mod = "mod_oni_skill_b_heal"
 tt.timed_attacks.list[2].sound = "HeroOniNetherfocusCast"
 tt.timed_attacks.list[2].threshold = 0.5
-tt.timed_attacks.list[2].throttle_cooldown_on_skill_use = true
 tt.timed_attacks.list[3] = CC("custom_attack")
 tt.timed_attacks.list[3].animation_in = "skill_03_in"
 tt.timed_attacks.list[3].animation_out = "skill_03_out"
@@ -782,7 +760,6 @@ tt.timed_attacks.list[3].invincible_time = fts(14)
 tt.timed_attacks.list[3].min_detection_range = 100
 tt.timed_attacks.list[3].mod_stun = "mod_oni_skill_c_stun"
 tt.timed_attacks.list[3].sound = "HeroOniHellishStrikeCast"
-tt.timed_attacks.list[3].throttle_cooldown_on_skill_use = true
 tt.timed_attacks.list[4] = CC("custom_attack")
 tt.timed_attacks.list[4].animation_in = "ulti_in"
 tt.timed_attacks.list[4].animation_loop = "ulti_loop"
@@ -803,7 +780,6 @@ tt.timed_attacks.list[4].offset = 0
 tt.timed_attacks.list[4].prediction = 0
 tt.timed_attacks.list[4].sound = "HeroOniSwordTormentOneShot"
 tt.timed_attacks.list[4].taunt = "HeroOniTauntUltimate"
-tt.timed_attacks.list[4].throttle_cooldown_on_skill_use = true
 tt.timed_attacks.list[4].torment_swords = {{0.01, 20, 8}, {0.2, 37.5, 8}, {0.3, 55, 8}}
 
 tt = RT("aura_oni_ult", "aura")

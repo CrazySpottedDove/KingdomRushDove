@@ -46,7 +46,7 @@ local function enemy_filter_simple(e, flags, bans)
 	return not e.health.dead and band(e.vis.bans, flags) == 0 and band(e.vis.flags, bans) == 0 and P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
 end
 
---- 返回敌人的 __ffe_pos
+--- 计算敌人的预测位置
 ---@param e table
 ---@param prediction_time number?
 ---@return table

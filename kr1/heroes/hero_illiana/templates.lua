@@ -35,14 +35,9 @@ local function find_center_of_group(targets, node_prediction)
 	local ax, ay = 0, 0
 
 	for _, v in pairs(targets) do
-		if v.__ffe_pos then
-			ax, ay = ax + v.__ffe_pos.x, ay + v.__ffe_pos.y
-		else
-			local node_offset = P:predict_enemy_node_advance(v, np)
-			local v_pos = P:node_pos(v.nav_path.pi, v.nav_path.spi, v.nav_path.ni + node_offset)
+		local v_pos = U.calculate_enemy_ffe_pos(v, np)
 
-			ax, ay = ax + v_pos.x, ay + v_pos.y
-		end
+		ax, ay = ax + v_pos.x, ay + v_pos.y
 	end
 
 	return V.v(ax / #targets, ay / #targets)
