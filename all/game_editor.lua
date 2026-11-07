@@ -948,12 +948,13 @@ function editor:load_plugin_level(entry, mode)
 end
 
 function editor:load_wave_assets()
-	local level_name = self.store.level_name
-	local mode = self.store.level_mode
-	local cfg_path = string.format("data/waveconfigs/%s_waves_%s_config.lua", level_name, mode_suffix(mode))
-	local wave_path = string.format("data/waves/%s_waves_%s.lua", level_name, mode_suffix(mode))
-	local cfg_raw = load_lua_table_with_pref(cfg_path)
-	local wave_raw = load_lua_table_with_pref(wave_path)
+	local level_name = self.store.level_file or self.store.level_name
+	local suffix = mode_suffix(self.store.level_mode)
+	local cfg_path = LU.find_level_path(self.store, "data/waveconfigs/" .. level_name .. "_waves_" .. suffix .. "_config.lua")
+	local wave_path = LU.find_level_path(self.store, "data/waves/" .. level_name .. "_waves_" .. suffix .. ".lua")
+	local cfg_raw = cfg_path and storage:load_lua(cfg_path) or nil
+	local wave_raw = wave_path and storage:load_lua(wave_path) or nil
+
 	self.wave_config = sanitize_wave_config(cfg_raw)
 	self.wave_data = sanitize_wave_data(wave_raw, self.wave_config)
 end
@@ -974,7 +975,7 @@ function editor:generate_wave_data_from_config(config)
 end
 
 function editor:save_wave_assets()
-	local level_name = self.store.level_name
+	local level_name = self.store.level_file or self.store.level_name
 	local mode = self.store.level_mode
 	local suffix = mode_suffix(mode)
 

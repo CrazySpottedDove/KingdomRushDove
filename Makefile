@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text organize_strings android windows dev-windows dev-installer publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check component_cloner
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text organize_strings version_check android windows dev-windows dev-installer publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check component_cloner
 
 all: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -21,6 +21,10 @@ _examine_dir_map:
 
 changelog:
 	@luajit scripts/gen_changelog.lua
+
+# 检查 scripts/version_tasks.lua 中到期的版本任务。
+version_check:
+	@luajit ./scripts/check_version_tasks.lua
 
 # 替代 git commit，自动将本次提交记入更新日志。
 # 用法: make commit msg="feat: 新增某某功能"

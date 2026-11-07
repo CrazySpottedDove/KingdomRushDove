@@ -67,3 +67,6 @@ __pycache__/
 args.lua
 AGENTS.md
 build_info.lua
+
+# 本地版本任务提醒（每个开发者自行维护）
+scripts/version_tasks.lua
