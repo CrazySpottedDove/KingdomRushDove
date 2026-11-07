@@ -12912,7 +12912,7 @@ scripts.mactans_controller = {}
 function scripts.mactans_controller.insert(this, store)
 	if this.load_file then
 		local fn = "data/levels/" .. this.load_file .. ".lua"
-		local data, err = LU.eval_file(fn)
+		local data, err = LU.eval_file(fn, LU.level_prefixes(store))
 
 		if not data then
 			log.error("mactans_controller failed loading file %s: %s", this.load_file, err)

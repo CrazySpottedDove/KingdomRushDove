@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_templates={"kr1.template_groups.level_kr2_021_templates","kr1.template_groups.decal_moon"},required_sounds={"music_stage47","HalloweenSounds","HWVampiress","HWVampireBoss"},required_textures={"go_enemies_halloween","go_enemies_blackburn","go_stages_halloween","go_hero_vampiress","go_stage47","go_stage47_bg"}}

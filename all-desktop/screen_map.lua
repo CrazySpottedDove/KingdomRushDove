@@ -2279,7 +2279,7 @@ function MapView:zoom_by(factor, px, py)
 end
 
 function MapView:load_map_animations(gen)
-	local anis = map_data["map_animations" .. gen.map.data_key]
+	local anis = gen.map.animations or map_data["map_animations" .. gen.map.data_key] or {}
 
 	for _, o in pairs(anis) do
 		anis[o.id] = o
@@ -2587,8 +2587,9 @@ end
 function MapView:load_level_decos(gen)
 	local layers = {self.ma_under_layer, self.ma_mid_layer, self.ma_over_layer}
 	local out = {}
+	local decos = gen.map.decos or (map_data.map_decos and map_data.map_decos[gen.map.data_key]) or {}
 
-	for _, d in pairs(map_data.map_decos[gen.map.data_key]) do
+	for _, d in pairs(decos) do
 		local v = KImageView:new(d.image)
 
 		v.id = d.id
@@ -3400,8 +3401,7 @@ local function add_level_battle_button(parent, mode, level_num)
 	return b
 end
 
-local function add_level_rules(parent, level_num, y)
-	local level_data = screen_map.level_data[level_num]
+local function add_level_rules(parent, level_data, y)
 	local has_hero = level_data.upgrades.heroe
 	local upg_desc = _("UPGRADE_LEVEL") .. "\n" .. tostring(level_data.upgrades.level)
 	local upg_icon = KImageView:new("levelSelect_modeRules_0010")
@@ -3580,7 +3580,7 @@ screen_map.tab_configs = {
 		page = {
 			title = _("Campaign"),
 			description = function(ctx)
-				return _("LEVEL_" .. tostring(ctx.level_num) .. "_HISTORY")
+				return _(GENS:level_history_key(ctx.gen_id, ctx.local_idx))
 			end,
 			difficulty_stamp = GAME_MODE_CAMPAIGN,
 			battle = {
@@ -3635,7 +3635,7 @@ screen_map.tab_configs = {
 				local b_x = 770
 				local b_y = 390
 				local b_o = 50
-				local locked_towers = screen_map.level_data[ctx.level_num].iron
+				local locked_towers = ctx.level_data.iron
 				local opts = {"archers", "barracks", "mages", "artillery"}
 
 				for i, opt in ipairs(opts) do
@@ -3710,6 +3710,7 @@ function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, ir
 	self.gen = GENS:get(gen_id)
 
 	local legacy_level_num = LEGACY.to_global(gen_id, level_num)
+	self.level_data = (self.gen.map.level_data and self.gen.map.level_data[level_num]) or (legacy_level_num and screen_map.level_data[legacy_level_num]) or {}
 
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
@@ -3734,10 +3735,19 @@ function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, ir
 		self:hide()
 	end
 
-	add_level_title(self.back, level_num .. " " .. _(string.format("LEVEL_%d_TITLE", legacy_level_num)), "left", ls_page_y + 22)
+	add_level_title(self.back, level_num .. " " .. _(GENS:level_title_key(gen_id, level_num)), "left", ls_page_y + 22)
 
-	local level_string = string.format("%02i", legacy_level_num)
-	local stage_thumb = KImageView:new(string.format("stage_thumbs_%04i", level_string))
+	local thumb_key
+
+	if self.gen.map.thumb_key then
+		thumb_key = self.gen.map.thumb_key(level_num)
+	elseif legacy_level_num then
+		thumb_key = string.format("stage_thumbs_%04i", legacy_level_num)
+	else
+		thumb_key = GENS:level_thumb_key(gen_id, level_num)
+	end
+
+	local stage_thumb = KImageView:new(thumb_key)
 	-- stage_thumb.pos:set(215, 190)
 	do
 		local stage_thumb_x, stage_thumb_y = 342, 246
@@ -3799,6 +3809,7 @@ function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, ir
 		gen_id = gen_id,
 		local_idx = level_num,
 		level_num = legacy_level_num,
+		level_data = self.level_data,
 		slot_data = slot_data or {},
 		stars = stars
 	}
@@ -3847,7 +3858,7 @@ function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, ir
 
 		if page_cfg.rules then
 			add_level_title(page, _("Challenge Rules"), "sub", 290)
-			add_level_rules(page, legacy_level_num, 290 + 38)
+			add_level_rules(page, self.level_data, 290 + 38)
 		end
 
 		if page_cfg.after_rules then

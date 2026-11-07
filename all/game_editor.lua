@@ -442,7 +442,7 @@ local function load_required_templates(level)
 	end
 
 	for i = 1, #groups do
-		local module_name = "kr1.template_groups." .. groups[i]
+		local module_name = groups[i]
 		local ok, err = pcall(require, module_name)
 
 		if not ok then
@@ -746,7 +746,7 @@ function editor:load_level(idx, mode, recover)
 	-- end
 
 	-- 尝试加载网格
-	if not GR:load(s.level_name) then
+	if not GR:load_file(LU.resolve_level_file(s, s.level_name, "_grid.lua")) then
 		local gox, goy = -192, 0
 		local bgw, bgh = 1408, 768
 		local gw, gh = math.ceil(bgw / GR.cell_size), math.ceil(bgh / GR.cell_size)
@@ -754,7 +754,7 @@ function editor:load_level(idx, mode, recover)
 		GR:init_grid(gw, gh, gox, goy, GR.cell_size)
 	end
 
-	P:load_curves(s.level_name)
+	P:load_curves(LU.resolve_level_file(s, s.level_name, "_paths.lua"))
 
 	self.entities_dirty = true
 
@@ -901,14 +901,14 @@ function editor:load_plugin_level(entry, mode)
 		s.level:load(s)
 	end
 
-	if not GR:load(s.level_name) then
+	if not GR:load_file(LU.resolve_level_file(s, s.level_name, "_grid.lua")) then
 		local gox, goy = -192, 0
 		local bgw, bgh = 1408, 768
 		local gw, gh = math.ceil(bgw / GR.cell_size), math.ceil(bgh / GR.cell_size)
 		GR:init_grid(gw, gh, gox, goy, GR.cell_size)
 	end
 
-	P:load_curves(s.level_name)
+	P:load_curves(LU.resolve_level_file(s, s.level_name, "_paths.lua"))
 
 	self.entities_dirty = true
 	self.grid_dirty = true

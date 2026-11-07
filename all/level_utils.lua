@@ -17,6 +17,58 @@ local U = require("utils")
 local HEROES = require("heroes.registry")
 local LU = {}
 
+--- 关卡资源搜索前缀：编辑器 > generation 资源根 > custom map > 本体资源根。
+---@param store table?
+---@return table
+function LU.level_prefixes(store)
+	local prefixes = {EDITOR_PATH}
+
+	if store and store.level_root then
+		prefixes[#prefixes + 1] = store.level_root
+	end
+
+	if _G.CUSTOM_MAP_ROOT then
+		if type(_G.CUSTOM_MAP_ROOT) == "table" then
+			for _, path in ipairs(_G.CUSTOM_MAP_ROOT) do
+				prefixes[#prefixes + 1] = path
+			end
+		else
+			prefixes[#prefixes + 1] = _G.CUSTOM_MAP_ROOT
+		end
+	end
+
+	prefixes[#prefixes + 1] = KR_PATH_GAME
+
+	return prefixes
+end
+
+--- 查找资源文件的最终虚拟路径。
+---@param store table
+---@param relative string
+---@return string|nil
+function LU.find_level_path(store, relative)
+	for _, prefix in ipairs(LU.level_prefixes(store)) do
+		local path = prefix .. "/" .. relative
+
+		if love.filesystem.getInfo(path) then
+			return path
+		end
+	end
+
+	return nil
+end
+
+--- 解析关卡资源文件的最终虚拟路径。路径解析属于关卡层，不属于各个 DB。
+---@param store table
+---@param name string
+---@param suffix string
+---@return string
+function LU.resolve_level_file(store, name, suffix)
+	local relative = "data/levels/" .. name .. suffix
+
+	return LU.find_level_path(store, relative) or relative
+end
+
 function LU.queue_insert(store, e)
 	simulation:queue_insert_entity(e)
 end
@@ -62,8 +114,9 @@ end
 function LU.load_level(store, name)
 	local level
 	local fn = "data/levels/" .. name .. ".lua"
+	local prefixes = LU.level_prefixes(store)
 
-	local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
+	local f, err = love.filesystem.loadWithPreference(fn, prefixes)
 
 	if not f then
 		log.debug("Level file does not exist for %s", fn)
@@ -168,7 +221,7 @@ end
 ---@param store table
 function LU.load_data(store)
 	local fn = "data/levels/" .. store.level_name .. "_data.lua"
-	local data = LU.eval_file(fn)
+	local data = LU.eval_file(fn, LU.level_prefixes(store))
 
 	if not data then
 		log.info("Level data file %s could not be loaded", fn)
@@ -196,7 +249,7 @@ end
 ---@param store table
 function LU.load_locations(store)
 	local fn = "data/levels/" .. store.level_name .. "_loc.lua"
-	local l, err = LU.eval_file(fn)
+	local l, err = LU.eval_file(fn, LU.level_prefixes(store))
 
 	if not l then
 		log.info("Level locations file does not exist for %s: %s", fn, err)

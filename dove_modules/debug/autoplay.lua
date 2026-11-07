@@ -22,7 +22,7 @@ require("all.constants")
 
 local V = require("lib.klua.vector")
 local LU = require("level_utils")
-local LEGACY = require("generations.legacy")
+local GENS = require("generations.registry")
 local E = require("entity_db")
 local P = require("path_db")
 local signal = require("lib.hump.signal")
@@ -233,9 +233,12 @@ function autoplay:init(w, h, done_callback)
 	game.max_fps = DRAW_FPS
 
 	game.store = {}
+	local gen = GENS:get(gen_id)
+
 	game.store.gen_id = gen_id
 	game.store.level_idx = level_idx
-	game.store.level_name = LEGACY.level_name(gen_id, level_idx)
+	game.store.level_name = GENS:level_name(gen_id, level_idx)
+	game.store.level_root = gen and gen.resource_root or nil
 	game.store.level_mode = level_mode
 	game.store.level_difficulty = level_difficulty
 	game.store.screen_scale = director:get_texture_scale("game", REF_H)

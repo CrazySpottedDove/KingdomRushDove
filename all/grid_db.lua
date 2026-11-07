@@ -69,14 +69,15 @@ function grid_db:init_grid(w, h, ox, oy, cell_size)
 	self.grid_h = #grid[1]
 end
 
-function grid_db:load(name)
+--- 加载已解析的 grid 文件路径。
+---@param filename string
+function grid_db:load_file(filename)
 	self.waypoints_cache = {}
 
-	local fn = "data/levels/" .. name .. "_grid.lua"
-	local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
+	local f, err = love.filesystem.load(filename)
 
 	if not f then
-		log.error("File %s doesn't exist - error: %s", fn, err)
+		log.error("File %s doesn't exist - error: %s", filename, err)
 
 		return false
 	elseif not err then
@@ -90,7 +91,7 @@ function grid_db:load(name)
 
 		return true
 	else
-		log.error("Failed to load %s - error: %s", fn, err)
+		log.error("Failed to load %s - error: %s", filename, err)
 
 		return false
 	end

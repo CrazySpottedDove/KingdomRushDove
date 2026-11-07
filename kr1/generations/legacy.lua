@@ -72,9 +72,7 @@ end
 ---@param local_idx number
 ---@return string
 function legacy.level_name(gen_id, local_idx)
-	local global_idx = legacy.to_global(gen_id, local_idx)
-
-	return string.format("level%02i", global_idx)
+	return string.format("level_%s_%03d", gen_id, local_idx)
 end
 
 --- 旧数字 generation -> 字符串 id

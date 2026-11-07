@@ -5215,7 +5215,7 @@ tt.tween.remove = false
 
 tt = E:register_t("taunts_s19_controller")
 E:add_comps(tt, "main_script", "taunts", "editor")
-tt.load_file = "level101_taunts"
+tt.load_file = "level_kr5_001_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.taunts.delay_min = 10
 tt.taunts.sets = {}
@@ -5298,7 +5298,7 @@ tt.particle_system.z = Z_DECALS
 
 tt = E:register_t("taunts_s06_controller")
 E:add_comps(tt, "main_script", "taunts", "editor")
-tt.load_file = "level101_taunts"
+tt.load_file = "level_kr5_001_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.taunts.delay_min = 10
 tt.taunts.sets = {}
@@ -5436,7 +5436,7 @@ tt.sound_end = "Stage11VeznanMagicShacklesRelease"
 
 tt = E:register_t("taunts_s11_controller")
 E:add_comps(tt, "main_script", "taunts", "editor")
-tt.load_file = "level111_taunts"
+tt.load_file = "level_kr5_011_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.taunts.delay_min = 10
 tt.taunts.sets = {}
@@ -8033,7 +8033,7 @@ tt = E:register_t("decal_stage24_boss_machinist_shoutbox", "decal_stage06_cultis
 
 tt = E:register_t("taunts_s24_controller")
 E:add_comps(tt, "main_script", "taunts", "editor")
-tt.load_file = "level101_taunts"
+tt.load_file = "level_kr5_001_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.taunts.delay_min = 10
 tt.taunts.sets = {}
@@ -8046,7 +8046,7 @@ tt = E:register_t("decal_stage25_machinist_shoutbox", "decal_stage06_cultist_sho
 
 tt = E:register_t("taunts_s25_controller")
 E:add_comps(tt, "main_script", "taunts", "editor")
-tt.load_file = "level101_taunts"
+tt.load_file = "level_kr5_001_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.taunts.delay_min = 10
 tt.taunts.sets = {}
@@ -8059,7 +8059,7 @@ tt = E:register_t("decal_stage26_boss_shoutbox", "decal_stage06_cultist_shoutbox
 
 tt = E:register_t("taunts_s26_controller")
 E:add_comps(tt, "main_script", "taunts", "editor")
-tt.load_file = "level101_taunts"
+tt.load_file = "level_kr5_001_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.taunts.delay_min = 10
 tt.taunts.sets = {}
