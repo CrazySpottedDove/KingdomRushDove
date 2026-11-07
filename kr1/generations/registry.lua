@@ -61,9 +61,16 @@ end
 ---@param local_idx number
 ---@return string
 function GENS:battle_music(name, local_idx)
+	local module = self:get(name)
+	local fn = module and module.map and module.map.battle_music
+
+	if fn then
+		return fn(local_idx)
+	end
+
 	local global_idx = LEGACY.to_global(name, local_idx)
 
-	return string.format("MusicBattle_%02d", global_idx)
+	return global_idx and string.format("MusicBattle_%02d", global_idx) or nil
 end
 
 --- 准备音乐 sound id。
@@ -71,9 +78,16 @@ end
 ---@param local_idx number
 ---@return string
 function GENS:prep_music(name, local_idx)
+	local module = self:get(name)
+	local fn = module and module.map and module.map.prep_music
+
+	if fn then
+		return fn(local_idx)
+	end
+
 	local global_idx = LEGACY.to_global(name, local_idx)
 
-	return string.format("MusicBattlePrep_%02d", global_idx)
+	return global_idx and string.format("MusicBattlePrep_%02d", global_idx) or nil
 end
 
 --- 判定 local 关卡是否在当前世代有效。

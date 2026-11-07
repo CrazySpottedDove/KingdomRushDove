@@ -7845,7 +7845,7 @@ scripts.mega_spawner = {}
 function scripts.mega_spawner.insert(this, store)
 	if this.load_file then
 		local fn = "data/levels/" .. this.load_file .. ".lua"
-		local fd, err = LU.eval_file(fn)
+		local fd, err = LU.eval_file(fn, LU.level_prefixes(store))
 
 		if not fd then
 			log.error("mega_spawner load_file does not exist: %s, error: %s", this.load_file, err)
@@ -8163,7 +8163,7 @@ scripts.taunts_controller = {}
 function scripts.taunts_controller.insert(this, store)
 	if this.load_file then
 		local fn = "data/levels/" .. this.load_file .. ".lua"
-		local data, err = LU.eval_file(fn)
+		local data, err = LU.eval_file(fn, LU.level_prefixes(store))
 
 		if not data then
 			log.error("taunts_controller failed loading file %s: %s", this.load_file, err)

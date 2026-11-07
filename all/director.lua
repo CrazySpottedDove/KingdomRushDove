@@ -621,10 +621,14 @@ function director:queue_load_item_named(name)
 			game.store.custom_battle_music = args.custom_battle_music
 			game.store.custom_battle_prep_music = args.custom_battle_prep_music
 			game.store.level_idx = 0
+			game.store.level_root = nil
 		else
+			local gen = GENS:get(args.gen_id)
+
 			game.store.gen_id = args.gen_id
 			game.store.level_idx = args.level_idx
-			game.store.level_name = LEGACY.level_name(args.gen_id, args.level_idx)
+			game.store.level_name = GENS:level_name(args.gen_id, args.level_idx)
+			game.store.level_root = gen and gen.resource_root or nil
 		end
 		game.store.level_mode = args.level_mode
 		game.store.level_difficulty = args.level_difficulty

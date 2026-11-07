@@ -40,13 +40,20 @@ function common.standard(config)
 		hotkey = config.hotkey or "",
 		kind = "standard",
 		legacy = config.legacy,
+		resource_root = config.resource_root,
 		map = {
 			background = config.background,
 			vignette = "map_vignette_small",
 			music = config.music,
 			points = require(config.points_path),
 			data_key = config.data_key,
-			start_here_pos = v(292, 775)
+			start_here_pos = v(292, 775),
+			animations = config.map_animations,
+			decos = config.map_decos,
+			level_data = config.level_data,
+			thumb_key = config.thumb_key,
+			battle_music = config.battle_music,
+			prep_music = config.prep_music
 		},
 		flags = flags,
 		levels = {
@@ -70,7 +77,6 @@ function common.standard(config)
 		},
 		level_select = config.level_select or {},
 		upgrades = {
-			lines = config.upgrade_lines or {"1", "2", "3", "4"},
 			default_line = config.default_upgrade_line or "1"
 		},
 		resources = {

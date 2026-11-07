@@ -83,8 +83,8 @@ function level:init_coroutined(store)
 	-- power3 法术：解析本局选择（可为 nil = 未选择）
 	SPELLS:set_selected(slot.spell_power_id)
 
-	GR:load(store.level_name)
-	P:load(store.level_name, store.visible_coords)
+	GR:load_file(LU.resolve_level_file(store, store.level_name, "_grid.lua"))
+	P:load_file(LU.resolve_level_file(store, store.level_name, "_paths.lua"), store.visible_coords)
 	game.progress = 0.2
 	coroutine.yield()
 
@@ -99,10 +99,10 @@ function level:init_coroutined(store)
 	-- 预加载关卡的 required_templates
 	if store.level.data and store.level.data.required_templates then
 		local groups = store.level.data.required_templates
+
 		for i = 1, #groups do
-			local module_name = "kr1.template_groups." .. groups[i]
-			require(module_name)
-			package.loaded[module_name] = nil
+			require(groups[i])
+			package.loaded[groups[i]] = nil
 		end
 	end
 
@@ -122,7 +122,9 @@ function level:init_coroutined(store)
 	game.progress = 0.4
 	coroutine.yield()
 
-	W:load(store.level_name, store.level_mode)
+	local wave_base = "data/waves/" .. store.level_name .. "_waves_" .. W:mode_suffix(store.level_mode)
+
+	W:load_files(LU.find_level_path(store, wave_base .. ".tsv"), LU.find_level_path(store, wave_base .. ".lua"), LU.find_level_path(store, wave_base .. "_extra.lua"), store.level_mode)
 	game.progress = 0.5
 	coroutine.yield()
 

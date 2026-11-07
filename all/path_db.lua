@@ -15,12 +15,11 @@ path_db.path_valid_margin = 1
 path_db.path_valid_margin_top = 2
 path_db.average_node_dist = 6
 
-local function load_file_by_name(name)
+local function load_file_by_path(filename)
 	local data
-	local fn = "data/levels/" .. name .. "_paths.lua"
-	local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
+	local f, err = love.filesystem.load(filename)
 	if not f then
-		log.debug("Level paths file does not exist for %s", fn)
+		log.debug("Level paths file does not exist for %s", filename)
 
 		data = {
 			connections = {},
@@ -30,7 +29,7 @@ local function load_file_by_name(name)
 		}
 	else
 		if err then
-			log.error("Error loading path curves for %s: %s", fn, err)
+			log.error("Error loading path curves for %s: %s", filename, err)
 
 			return nil
 		end
@@ -63,7 +62,10 @@ function path_db:collect_connect_info()
 	end
 end
 
-function path_db:load(name, visible_coords)
+--- 加载已解析的 paths 文件路径。
+---@param filename string
+---@param visible_coords table|nil
+function path_db:load_file(filename, visible_coords)
 	self.paths = {}
 	self.path_connections = {}
 	self.path_connections_spi_to_ni = {}
@@ -81,7 +83,7 @@ function path_db:load(name, visible_coords)
 	self.defend_point_node = {}
 	self.path_curves = {}
 
-	local path_list = load_file_by_name(name)
+	local path_list = load_file_by_path(filename)
 
 	for i, p in ipairs(path_list.paths) do
 		if path_list.active and path_list.active[i] == false then
@@ -795,8 +797,10 @@ function path_db:active_path_id_sum()
 	return i
 end
 
-function path_db:load_curves(name)
-	local data = load_file_by_name(name)
+--- 加载已解析的 paths 文件路径，仅读取曲线数据。
+---@param filename string
+function path_db:load_curves(filename)
+	local data = load_file_by_path(filename)
 
 	self.path_connections = data.connections or {}
 	self.path_curves = data.curves or {}

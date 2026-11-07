@@ -1,0 +1,1 @@
+return {level_mode_overrides={},required_templates={"kr1.template_groups.level_kr2_004_templates"},required_sounds={"music_stage30","LegionnaireSounds","GenieSounds","SpecialWorm"},required_textures={"go_enemies_desert","go_stages_desert","go_stage30","go_stage30_bg"}}

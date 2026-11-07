@@ -17,7 +17,6 @@ return {
 		max_stars = 0
 	},
 	upgrades = {
-		lines = {"1", "2", "3", "4"},
 		default_line = "1"
 	},
 	resources = {
