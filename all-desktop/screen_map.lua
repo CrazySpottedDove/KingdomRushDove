@@ -71,6 +71,18 @@ function screen_map:resolve_upgrade_line()
 	end
 
 	UPGR:set_list_id(key)
+
+	if self.upgrade_gen_id == self.CUSTOM_GEN and not upgrades.initialized then
+		local full_levels = UPGR:get_full_levels()
+
+		for class, level in pairs(full_levels) do
+			upgrades.levels[class] = level
+		end
+
+		upgrades.initialized = true
+		storage:save_slot(self.user_data)
+	end
+
 	UPGR:set_levels(upgrades.levels)
 	upgrades.list_id = key
 end
@@ -317,6 +329,12 @@ function screen_map:init_coro(w, h, done_callback)
 		end
 
 		self.total_stars = U.count_stars_for_gen(self.user_data, self.map_gen_id)
+
+		-- 自制关卡默认可升满科技
+		if self.gen_id == self.CUSTOM_GEN then
+			self.total_stars = UPGR:get_total_stars()
+		end
+
 		self.progress = 0.5
 		coroutine.yield()
 		E:ensure_loaded()
@@ -1388,8 +1406,8 @@ function screen_map:change_generation(gen_id)
 		self.map_gen_id = "kr1"
 		self.display_gen = GENS:get("kr1")
 		self.upgrade_gen_id = self.gen_id
-		self.total_stars = U.count_stars_for_gen(self.user_data, "kr1")
 		self:resolve_upgrade_line()
+		self.total_stars = UPGR:get_total_stars()
 		self:refresh_upgrade_button_state()
 
 		if self.u_button then
@@ -1843,7 +1861,6 @@ function screen_map:keypressed(key, isrepeat)
 			self.map_view:show_flags()
 		-- elseif key == "n" then
 		--     local cur = self._test_unlocked_level
-		--     local nex = U.find_next_level_in_ranges(GS.level_ranges, cur)
 		--     self.map_view:clear_flags()
 		--     reset_unlock_data()
 		--     self.user_data.levels[cur] = {
@@ -3658,10 +3675,8 @@ end
 function LevelSelectDifficultyButton:on_click()
 	S:queue("GUIButtonCommon")
 
-	-- local campaign_done = #screen_map.user_data.levels > GS.main_campaign_levels
 	local diff = screen_map.user_data.difficulty
 
-	-- diff = km.zmod(diff + 1, campaign_done and GS.max_difficulty or 3)
 	diff = km.zmod(diff + 1, GS.max_difficulty)
 	screen_map.user_data.difficulty = diff
 

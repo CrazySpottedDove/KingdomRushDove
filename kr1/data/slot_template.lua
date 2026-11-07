@@ -1,177 +1,179 @@
 return {
-	schema_version = 2,
-	levels = {
-		kr1 = {
-			[1] = {}
-		},
-		kr2 = {
-			[1] = {}
-		},
-		kr3 = {
-			[1] = {}
-		},
-		kr5 = {
-			[1] = {}
-		},
-		kr6 = {
-			[1] = {}
-		}
-	},
-	upgrades = {
-		kr1 = {
-			list_id = "1",
-			levels = {
-				reinforcements = 0,
-				archers = 0,
-				engineers = 0,
-				rain = 0,
-				barracks = 0,
-				mages = 0
-			}
-		},
-		kr2 = {
-			list_id = "1",
-			levels = {
-				reinforcements = 0,
-				archers = 0,
-				engineers = 0,
-				rain = 0,
-				barracks = 0,
-				mages = 0
-			}
-		},
-		kr3 = {
-			list_id = "1",
-			levels = {
-				reinforcements = 0,
-				archers = 0,
-				engineers = 0,
-				rain = 0,
-				barracks = 0,
-				mages = 0
-			}
-		},
-		kr5 = {
-			list_id = "1",
-			levels = {
-				reinforcements = 0,
-				archers = 0,
-				engineers = 0,
-				rain = 0,
-				barracks = 0,
-				mages = 0
-			}
-		},
-		kr6 = {
-			list_id = "1",
-			levels = {
-				reinforcements = 0,
-				archers = 0,
-				engineers = 0,
-				rain = 0,
-				barracks = 0,
-				mages = 0
-			}
-		},
+	generations = {
 		custom = {
-			list_id = "1",
-			levels = {
-				reinforcements = 0,
-				archers = 0,
-				engineers = 0,
-				rain = 0,
-				barracks = 0,
-				mages = 0
+			levels = {},
+			upgrades = {
+				initialized = true,
+				levels = {
+					archers = 6,
+					barracks = 6,
+					engineers = 6,
+					mages = 6,
+					rain = 6,
+					reinforcements = 6
+				},
+				list_id = "1"
+			}
+		},
+		kr1 = {
+			levels = {{}},
+			upgrades = {
+				levels = {
+					archers = 0,
+					barracks = 0,
+					engineers = 0,
+					mages = 0,
+					rain = 0,
+					reinforcements = 0
+				},
+				list_id = "1"
+			}
+		},
+		kr2 = {
+			levels = {{}},
+			upgrades = {
+				levels = {
+					archers = 0,
+					barracks = 0,
+					engineers = 0,
+					mages = 0,
+					rain = 0,
+					reinforcements = 0
+				},
+				list_id = "1"
+			}
+		},
+		kr3 = {
+			levels = {{}},
+			upgrades = {
+				levels = {
+					archers = 0,
+					barracks = 0,
+					engineers = 0,
+					mages = 0,
+					rain = 0,
+					reinforcements = 0
+				},
+				list_id = "1"
+			}
+		},
+		kr5 = {
+			levels = {{}},
+			upgrades = {
+				levels = {
+					archers = 0,
+					barracks = 0,
+					engineers = 0,
+					mages = 0,
+					rain = 0,
+					reinforcements = 0
+				},
+				list_id = "1"
+			}
+		},
+		kr6 = {
+			levels = {{}},
+			upgrades = {
+				levels = {
+					archers = 0,
+					barracks = 0,
+					engineers = 0,
+					mages = 0,
+					rain = 0,
+					reinforcements = 0
+				},
+				list_id = "1"
 			}
 		}
 	},
-	-- power3 法术：默认未选择（nil），由选择 UI 写入 id
-	spell_power_id = nil,
-	seen = {
-		enemy_goblin = true,
-		enemy_bouncer = true,
-		enemy_gnoll_reaver = true,
-		enemy_hog_invader = true
-	},
-	heroes = {
-		selected = {}
-	},
-	last_generation = "kr1",
-	locked_towers = {
-		"tower_paladin",
-		"tower_barbarian",
-		"tower_assassin",
-		"tower_elf",
-		"tower_templar",
-		"tower_barrack_amazonas",
-		"tower_barrack_pirates",
-		"tower_blade",
-		"tower_forest",
-		"tower_drow",
-		"tower_barrack_dwarf",
-		"tower_ewok",
-		"tower_barrack_mercenaries",
-		"tower_arcane_wizard",
-		"tower_sorcerer",
-		"tower_sunray",
-		"tower_necromancer",
-		"tower_archmage",
-		"tower_high_elven",
-		"tower_wild_magus",
-		"tower_faerie_dragon",
-		"tower_ranger",
-		"tower_musketeer",
-		"tower_crossbow",
-		"tower_totem",
-		"tower_archer_dwarf",
-		"tower_arcane",
-		"tower_silver",
-		"tower_pirate_watchtower",
-		"tower_bfg",
-		"tower_tesla",
-		"tower_dwaarp",
-		"tower_mech",
-		"tower_frankenstein",
-		"tower_druid",
-		"tower_entwood",
-		"tower_baby_ashbite",
-		"tower_pixie",
-		"tower_tricannon_lvl4",
-		"tower_royal_archers_lvl4",
-		"tower_arcane_wizard_lvl4",
-		"tower_ballista_lvl4",
-		"tower_arborean_emissary_lvl4",
-		"tower_flamespitter_lvl4",
-		"tower_necromancer_lvl4",
-		"tower_elven_stargazers_lvl4",
-		"tower_demon_pit_lvl4",
-		"tower_sand_lvl4",
-		"tower_rocket_gunners_lvl4",
-		"tower_ray_lvl4",
-		"tower_ghost_lvl4",
-		"tower_dark_elf_lvl4",
-		"tower_hermit_toad_lvl4",
-		"tower_sparking_geode_lvl4",
-		"tower_pandas_lvl4",
-		"tower_dwarf_lvl4",
-		"tower_barrel_lvl4",
-		"tower_paladin_covenant_lvl4",
-		"tower_dragons_lvl4",
-		"tower_stage_28_priests_barrack",
-		"tower_knights",
-		"tower_archers",
-		"tower_wizard",
-		"tower_catapult",
-		"tower_culverine",
-		"tower_elf_ranger",
-		"tower_wildcat",
-		"tower_miners",
-		"tower_sunray_master",
-		"tower_light_priestess",
-		"tower_alchemist",
-		"tower_forger",
-		"tower_crossbows",
-		"tower_sentry",
-		"tower_tree"
+	meta = {
+		heroes = {
+			selected = {}
+		},
+		last_generation = "kr1",
+		locked_towers = {
+			"tower_paladin",
+			"tower_barbarian",
+			"tower_assassin",
+			"tower_elf",
+			"tower_templar",
+			"tower_barrack_amazonas",
+			"tower_barrack_pirates",
+			"tower_blade",
+			"tower_forest",
+			"tower_drow",
+			"tower_barrack_dwarf",
+			"tower_ewok",
+			"tower_barrack_mercenaries",
+			"tower_arcane_wizard",
+			"tower_sorcerer",
+			"tower_sunray",
+			"tower_necromancer",
+			"tower_archmage",
+			"tower_high_elven",
+			"tower_wild_magus",
+			"tower_faerie_dragon",
+			"tower_ranger",
+			"tower_musketeer",
+			"tower_crossbow",
+			"tower_totem",
+			"tower_archer_dwarf",
+			"tower_arcane",
+			"tower_silver",
+			"tower_pirate_watchtower",
+			"tower_bfg",
+			"tower_tesla",
+			"tower_dwaarp",
+			"tower_mech",
+			"tower_frankenstein",
+			"tower_druid",
+			"tower_entwood",
+			"tower_baby_ashbite",
+			"tower_pixie",
+			"tower_tricannon_lvl4",
+			"tower_royal_archers_lvl4",
+			"tower_arcane_wizard_lvl4",
+			"tower_ballista_lvl4",
+			"tower_arborean_emissary_lvl4",
+			"tower_flamespitter_lvl4",
+			"tower_necromancer_lvl4",
+			"tower_elven_stargazers_lvl4",
+			"tower_demon_pit_lvl4",
+			"tower_sand_lvl4",
+			"tower_rocket_gunners_lvl4",
+			"tower_ray_lvl4",
+			"tower_ghost_lvl4",
+			"tower_dark_elf_lvl4",
+			"tower_hermit_toad_lvl4",
+			"tower_sparking_geode_lvl4",
+			"tower_pandas_lvl4",
+			"tower_dwarf_lvl4",
+			"tower_barrel_lvl4",
+			"tower_paladin_covenant_lvl4",
+			"tower_dragons_lvl4",
+			"tower_stage_28_priests_barrack",
+			"tower_knights",
+			"tower_archers",
+			"tower_wizard",
+			"tower_catapult",
+			"tower_culverine",
+			"tower_elf_ranger",
+			"tower_wildcat",
+			"tower_miners",
+			"tower_sunray_master",
+			"tower_light_priestess",
+			"tower_alchemist",
+			"tower_forger",
+			"tower_crossbows",
+			"tower_sentry",
+			"tower_tree"
+		},
+		schema_version = 3,
+		seen = {
+			enemy_bouncer = true,
+			enemy_gnoll_reaver = true,
+			enemy_goblin = true,
+			enemy_hog_invader = true
+		}
 	}
 }

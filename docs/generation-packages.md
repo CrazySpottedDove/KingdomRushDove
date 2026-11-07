@@ -186,7 +186,7 @@ saves/
     mygen.lua
 ```
 
-`meta.lua`：
+`meta.lua`（当前 `schema_version = 3`）：
 
 - `schema_version`
 - `last_generation`
@@ -201,6 +201,22 @@ saves/
 - `upgrades = {list_id, levels}`
 
 插件移除后保留 generation 文件；插件重新出现时自动恢复。`last_generation` 失效时回退到 `kr1`。
+
+旧 `slot_n.lua` 首次读取时会迁移到 `slot_n/`，原始文件备份为 `slot_n.lua.bak_v3_<timestamp>` 后移除。
+
+新档默认值模板 `kr1/data/slot_template.lua` 也使用与磁盘一致的镜像结构：
+
+```lua
+{
+    meta = {...},
+    generations = {
+        kr1 = {levels = {...}, upgrades = {...}},
+        ...
+    }
+}
+```
+
+`storage:new_slot()` 会把 `meta` 与 `generations` 合并成运行时使用的 `slot.levels[gen]` / `slot.upgrades[gen]` 结构。
 
 ## 实施阶段
 
@@ -232,11 +248,11 @@ saves/
 
 ### 阶段 D：存档分片
 
-- [ ] `slot_<n>/meta.lua`
-- [ ] `slot_<n>/<gen>.lua`
-- [ ] 旧 `slot_n.lua` 自动迁移并备份
-- [ ] 插件移除后保留 generation 文件
-- [ ] 总星数按已注册 generation 聚合
+- [x] `slot_<n>/meta.lua`
+- [x] `slot_<n>/<gen>.lua`
+- [x] 旧 `slot_n.lua` 自动迁移并备份
+- [x] 插件移除后保留 generation 文件
+- [x] 总星数按已注册 generation 聚合
 
 ### 阶段 E：插件生命周期与工具
 

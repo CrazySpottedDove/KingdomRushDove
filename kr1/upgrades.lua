@@ -39,6 +39,19 @@ function upgrades:get_techs(id)
 	return self.list[id or self.list_id].techs
 end
 
+--- 当前科技线的全满等级。自定义地图使用全满科技。
+---@param id string|nil
+---@return table
+function upgrades:get_full_levels(id)
+	local full_levels = {}
+
+	for _, tech in pairs(self:get_techs(id)) do
+		full_levels[tech.class] = math.max(full_levels[tech.class] or 0, tech.level)
+	end
+
+	return full_levels
+end
+
 function upgrades:has_upgrade(name)
 	local u = self:get_techs()[name]
 

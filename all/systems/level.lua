@@ -66,17 +66,7 @@ function level:init_coroutined(store)
 
 	UP:set_list_id(line_key)
 
-	if store.custom_map_entry then
-		local full_levels = {}
-
-		for _, tech in pairs(UP:get_techs()) do
-			full_levels[tech.class] = math.max(full_levels[tech.class] or 0, tech.level)
-		end
-
-		UP:set_levels(full_levels)
-	else
-		UP:set_levels(gen_upgrades.levels)
-	end
+	UP:set_levels(gen_upgrades.levels)
 
 	DI:set_level(store.level_difficulty)
 
