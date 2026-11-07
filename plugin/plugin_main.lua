@@ -3,6 +3,9 @@ local log = require("lib.klua.log"):new("plugin_main")
 local json = require("lib.json")
 local version = require("version")
 local FS = love.filesystem
+local signal = require("lib.hump.signal")
+local storage = require("all.storage")
+local constants = require("all.constants")
 local additional_paths = {"plugin/?.lua", "plugin/all/?.lua", "plugins/?.lua", "plugins/all/?.lua"}
 local plugin_paths = require("plugin_paths")
 
@@ -18,7 +21,9 @@ local plugin_utils = require("plugin_utils")
 local hook_utils = require("hook_utils")
 local plugin_db = require("plugin_db")
 local plugin_main = {
-	loaded_plugins = {}
+	loaded_plugins = {},
+	-- 以 entry 为键的已加载插件配置；errorhandler 通过模块读取，而不是依赖全局。
+	registry = {}
 }
 
 --- 日志/提示里用的插件标签：显示名优先，没有就退回 entry
@@ -69,9 +74,62 @@ local function write_plugin_test_result(result)
 	io.flush()
 end
 
+--- 进入关卡插件对应的 custom map，game-start 后写结果。
+--- 这样不仅验证 init，还验证关卡文件、波次、模板和资源加载流程。
+local function start_level_test(entry, config, director, result)
+	local base = plugin_paths.plugin_dir(entry)
+	local level_file = base .. "/data/levels/" .. entry .. "_data.lua"
+	local wave_file = base .. "/data/waves/" .. entry .. "_waves_campaign.lua"
+	if not FS.getInfo(level_file, "file") or not FS.getInfo(wave_file, "file") then
+		result.phase = "level"
+		result.error = string.format("level files missing: %s / %s", level_file, wave_file)
+		write_plugin_test_result(result)
+		love.event.quit(1)
+		return
+	end
+
+	local metadata = plugin_paths.load_lua_table(base .. "/data/levels/" .. entry .. "_metadata.lua") or {}
+	local finished = false
+	local function on_game_start()
+		if finished then
+			return
+		end
+		finished = true
+		signal.remove("game-start", on_game_start)
+		result.ok = true
+		result.phase = "level"
+		result.error = ""
+		write_plugin_test_result(result)
+		love.event.quit(0)
+	end
+
+	plugin_main.registry[entry] = config
+	signal.register("game-start", on_game_start)
+
+	-- 无头测试没有用户存档；进入关卡前创建一个临时 slot。
+	if not storage:load_slot(1) then
+		storage:create_slot(1)
+	end
+	storage:set_active_slot(1)
+
+	-- 与 screen_custom_map 的 start_game 使用同一组参数。
+	director.next_item_name = "game"
+	director.next_item_args = {
+		next_item_name = "game",
+		level_mode = constants.GAME_MODE_CAMPAIGN,
+		level_difficulty = constants.DIFFICULTY_NORMAL,
+		custom_map_entry = entry,
+		custom_map_level_name = entry,
+		custom_map_root = base,
+		custom_map_return_to = "map",
+		custom_battle_music = type(metadata) == "table" and metadata.battle_music or nil,
+		custom_battle_prep_music = type(metadata) == "table" and metadata.battle_prep_music or nil
+	}
+end
+
 --- 无头插件检查：只加载目标插件，执行 config -> module load -> init。
 --- 成功和失败都会写结构化结果，worker 不依赖人类日志解析。
-function plugin_main:run_plugin_test(entry)
+function plugin_main:run_plugin_test(entry, director)
 	local result = {
 		entry = entry,
 		branch = version and version.branch or "master",
@@ -120,8 +178,7 @@ function plugin_main:run_plugin_test(entry)
 		return
 	end
 
-	PLUGIN_REGISTRY = PLUGIN_REGISTRY or {}
-	PLUGIN_REGISTRY[entry] = config
+	plugin_main.registry[entry] = config
 	local ok, init_err = xpcall(plugin.init, function(err)
 		return debug.traceback(err)
 	end, plugin, plugin_data)
@@ -131,6 +188,11 @@ function plugin_main:run_plugin_test(entry)
 	result.error = ok and "" or tostring(init_err)
 	if ok then
 		print(plugin_db.get_debug_info(config))
+	end
+
+	if ok and main.params and main.params.plugin_test_level and config.category == "level" then
+		start_level_test(entry, config, director, result)
+		return
 	end
 
 	write_plugin_test_result(result)
@@ -143,7 +205,7 @@ function plugin_main:init(director)
 	director:init(main.params)
 
 	if main.params and main.params.plugin_test then
-		self:run_plugin_test(main.params.plugin_test)
+		self:run_plugin_test(main.params.plugin_test, director)
 		return
 	end
 
@@ -155,8 +217,8 @@ end
 --- 初始化所有已启用的插件
 ---@return nil
 function plugin_main:after_init()
-	-- 提前初始化，确保 errorhandler 归因时 PLUGIN_REGISTRY 不为 nil
-	PLUGIN_REGISTRY = {}
+	-- 提前初始化，确保 errorhandler 能通过模块读取 registry
+	self.registry = {}
 	PLUGIN_ERRORS = {}
 
 	-- 倒序加载插件，确保加载模块顺序正确
@@ -202,7 +264,7 @@ function plugin_main:after_init()
 	-- 正序初始化插件，确保高优先级覆盖低优先级
 	for i = loaded_plugins_count, 1, -1 do
 		local loaded_plugin, plugin_data = unpack(self.loaded_plugins[i])
-		PLUGIN_REGISTRY[plugin_data.config.entry] = plugin_data.config
+		self.registry[plugin_data.config.entry] = plugin_data.config
 		-- 初始化插件
 		local ok, err = xpcall(loaded_plugin.init, plugin_error_handler, loaded_plugin, plugin_data)
 		if ok then
@@ -369,7 +431,7 @@ function plugin_main:apply_hot(plan)
 					break
 				end
 			end
-			PLUGIN_REGISTRY[pd.config.entry] = nil
+			self.registry[pd.config.entry] = nil
 		end
 	end
 
@@ -380,7 +442,7 @@ function plugin_main:apply_hot(plan)
 		local plugin = self:_hot_module(pd)
 		if plugin then
 			self:_insert_loaded(plugin, pd)
-			PLUGIN_REGISTRY[pd.config.entry] = pd.config
+			self.registry[pd.config.entry] = pd.config
 			if type(plugin.reload) == "function" then
 				local ok, err = pcall(plugin.reload, plugin, pd)
 				if not ok then
