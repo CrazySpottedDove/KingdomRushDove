@@ -2,6 +2,7 @@ local common = require("kr1.generations.common")
 
 return common.standard({
 	name = "kr5",
+	resource_root = "kr1/generations/kr5",
 	order = 40,
 	label_key = "MAP_UI_GEN_5",
 	hotkey = "5",

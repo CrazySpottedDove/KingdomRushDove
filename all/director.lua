@@ -628,6 +628,7 @@ function director:queue_load_item_named(name)
 			game.store.gen_id = args.gen_id
 			game.store.level_idx = args.level_idx
 			game.store.level_name = GENS:level_name(args.gen_id, args.level_idx)
+			game.store.level_file = GENS:level_file(args.gen_id, args.level_idx)
 			game.store.level_root = gen and gen.resource_root or nil
 		end
 		game.store.level_mode = args.level_mode

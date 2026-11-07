@@ -1,1 +1,0 @@
-return {level_mode_overrides={},required_templates={"kr1.template_groups.level_kr2_010_templates","kr1.template_groups.background_sounds_jungle","kr1.template_groups.decal_whale"},required_sounds={"music_stage36","FrontiersJungleAmbienceSounds","SpecialVolcanoSounds"},required_textures={"go_enemies_jungle","go_stages_jungle","go_stage36","go_stage36_bg"}}

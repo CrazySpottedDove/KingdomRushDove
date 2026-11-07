@@ -113,7 +113,7 @@ end
 --- @param name string 关卡名称
 function LU.load_level(store, name)
 	local level
-	local fn = "data/levels/" .. name .. ".lua"
+	local fn = "data/levels/" .. (store.level_file or name) .. ".lua"
 	local prefixes = LU.level_prefixes(store)
 
 	local f, err = love.filesystem.loadWithPreference(fn, prefixes)
@@ -220,7 +220,7 @@ end
 --- 加载 level_data
 ---@param store table
 function LU.load_data(store)
-	local fn = "data/levels/" .. store.level_name .. "_data.lua"
+	local fn = "data/levels/" .. (store.level_file or store.level_name) .. "_data.lua"
 	local data = LU.eval_file(fn, LU.level_prefixes(store))
 
 	if not data then
@@ -248,7 +248,7 @@ end
 --- 加载 level_loc
 ---@param store table
 function LU.load_locations(store)
-	local fn = "data/levels/" .. store.level_name .. "_loc.lua"
+	local fn = "data/levels/" .. (store.level_file or store.level_name) .. "_loc.lua"
 	local l, err = LU.eval_file(fn, LU.level_prefixes(store))
 
 	if not l then

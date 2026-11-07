@@ -28,9 +28,10 @@ level_mygen_001
 generation 包内可以使用局部文件名：
 
 ```text
-kr1/generations/kr1/levels/level_001.lua
-kr1/generations/kr1/levels/level_001_data.lua
-kr1/generations/kr1/levels/level_001_waves_campaign.tsv
+kr1/generations/kr1/data/levels/level_001.lua
+kr1/generations/kr1/data/levels/level_001_data.lua
+kr1/generations/kr1/data/waves/level_001_waves_campaign.tsv
+kr1/generations/kr1/templates/level_001_templates.lua
 ```
 
 物理文件由 `gen.resource_root` 定位，不再要求文件名里出现 `kr1`。
@@ -215,11 +216,11 @@ saves/
 
 ### 阶段 C：本体关卡包化
 
-- [ ] 关卡文件移入 `kr1/generations/<gen>/levels/`
-- [ ] 波次移入对应 generation
-- [ ] 模板组移入对应 generation
-- [ ] 本体文件使用局部文件名
-- [ ] 本体共享美术/音乐保持集中管理
+- [x] 关卡文件移入 `kr1/generations/<gen>/data/levels/`
+- [x] 波次移入对应 generation 的 `data/waves/`
+- [x] 关卡模板组移入对应 generation 的 `templates/`
+- [x] 本体文件使用局部文件名
+- [x] 本体共享美术/音乐保持集中管理
 
 ### 阶段 D：存档分片
 

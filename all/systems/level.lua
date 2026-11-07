@@ -83,8 +83,10 @@ function level:init_coroutined(store)
 	-- power3 法术：解析本局选择（可为 nil = 未选择）
 	SPELLS:set_selected(slot.spell_power_id)
 
-	GR:load_file(LU.resolve_level_file(store, store.level_name, "_grid.lua"))
-	P:load_file(LU.resolve_level_file(store, store.level_name, "_paths.lua"), store.visible_coords)
+	local level_file = store.level_file or store.level_name
+
+	GR:load_file(LU.resolve_level_file(store, level_file, "_grid.lua"))
+	P:load_file(LU.resolve_level_file(store, level_file, "_paths.lua"), store.visible_coords)
 	game.progress = 0.2
 	coroutine.yield()
 
@@ -122,7 +124,7 @@ function level:init_coroutined(store)
 	game.progress = 0.4
 	coroutine.yield()
 
-	local wave_base = "data/waves/" .. store.level_name .. "_waves_" .. W:mode_suffix(store.level_mode)
+	local wave_base = "data/waves/" .. (store.level_file or store.level_name) .. "_waves_" .. W:mode_suffix(store.level_mode)
 
 	W:load_files(LU.find_level_path(store, wave_base .. ".tsv"), LU.find_level_path(store, wave_base .. ".lua"), LU.find_level_path(store, wave_base .. "_extra.lua"), store.level_mode)
 	game.progress = 0.5

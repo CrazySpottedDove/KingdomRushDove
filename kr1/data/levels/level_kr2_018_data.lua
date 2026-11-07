@@ -1,1 +1,0 @@
-return {level_mode_overrides={},required_templates={"kr1.template_groups.level_kr2_018_templates"},required_sounds={"music_stage44","RisingTidesSounds","SpecialMermaid"},required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage44","go_stage44_bg"}}
