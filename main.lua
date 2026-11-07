@@ -326,7 +326,7 @@ loader = {
 }
 
 function loader:load()
-	if main.params.autoplay or main.params.autoplay_map then
+	if main.params.autoplay or main.params.autoplay_map or main.params.plugin_test then
 		-- 无人值守自动测试：跳过 settings / language_select / must_read / update_manager，
 		-- 直接进 director（由它把 autoplay 场景排进队列）。
 		-- 窗口不可见（见 conf.lua 的 t.window.visible）、静音、且不重置窗口模式，
@@ -374,7 +374,7 @@ local function load(arg)
 	local is_autoplay = false
 
 	for _, v in pairs(arg) do
-		if v == "-autoplay" or v == "-autoplay_map" then
+		if v == "-autoplay" or v == "-autoplay_map" or v == "-plugin_test" then
 			is_autoplay = true
 
 			break
@@ -447,6 +447,11 @@ local function load(arg)
 	MU.parse_args(arg, main.params)
 	MU.default_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
 
+	-- 插件检查 worker 可以显式指定测试分支，避免源码默认 master 导致 dev 视图选错版本。
+	if main.params.plugin_test_branch then
+		version.branch = main.params.plugin_test_branch
+	end
+
 	if main.params.log_level then
 		log:set_level(main.params.log_level)
 	end
@@ -463,7 +468,7 @@ local function load(arg)
 	main:set_locale(main.params.locale)
 
 	-- 自动测试下不碰窗口标题/图标：窗口不可见，也没必要惊动窗口管理器
-	if not main.params.autoplay and not main.params.autoplay_map then
+	if not main.params.autoplay and not main.params.autoplay_map and not main.params.plugin_test then
 		love.window.setTitle(_("APP_TITLE") .. version.id)
 
 		-- icon switched to krdove

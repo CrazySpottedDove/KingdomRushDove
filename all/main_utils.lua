@@ -14,12 +14,25 @@ function mu.basic_init()
 end
 
 function mu.parse_args(arg, params)
+	local function arg_keys(key)
+		return "-" .. key, "-" .. key:gsub("_", "-")
+	end
+
 	local function has_arg(key)
-		return table.contains(arg, "-" .. key)
+		local underscore_key, hyphen_key = arg_keys(key)
+
+		return table.contains(arg, underscore_key) or table.contains(arg, hyphen_key)
 	end
 
 	local function argv(key)
-		return arg[table.keyforobject(arg, "-" .. key) + 1]
+		local underscore_key, hyphen_key = arg_keys(key)
+		local idx = table.keyforobject(arg, underscore_key)
+
+		if not idx then
+			idx = table.keyforobject(arg, hyphen_key)
+		end
+
+		return idx and arg[idx + 1] or nil
 	end
 
 	if has_arg("fps") then
@@ -148,6 +161,19 @@ function mu.parse_args(arg, params)
 		params.exit_on_error = true
 	end
 
+	-- 插件沙箱检查：只加载指定插件并写结构化结果。
+	if has_arg("plugin_test") then
+		params.plugin_test = argv("plugin_test")
+	end
+
+	if has_arg("plugin_test_result") then
+		params.plugin_test_result = argv("plugin_test_result")
+	end
+
+	if has_arg("plugin_test_branch") then
+		params.plugin_test_branch = argv("plugin_test_branch")
+	end
+
 	if has_arg("scene_trace") then
 		params.scene_trace = true
 	end
@@ -204,7 +230,7 @@ function mu.apply_params(params, game_name, game_target, game_platform)
 	-- 安卓端禁止自定义参数
 	-- autoplay（无人值守自动测试）不重置窗口：conf.lua 已经把窗口建成不可见，
 	-- 这里再 setMode 会把它重新显示出来，打断正在全屏游玩的本体。
-	if not IS_ANDROID and not params.autoplay then
+	if not IS_ANDROID and not params.autoplay and not params.plugin_test then
 		love.window.setMode(params.width, params.height, {
 			centered = false,
 			fullscreen = params.fullscreen,

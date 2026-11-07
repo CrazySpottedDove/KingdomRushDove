@@ -1,5 +1,7 @@
 -- chunkname: @./plugin/plugin_main.lua
 local log = require("lib.klua.log"):new("plugin_main")
+local json = require("lib.json")
+local version = require("version")
 local FS = love.filesystem
 local additional_paths = {"plugin/?.lua", "plugin/all/?.lua", "plugins/?.lua", "plugins/all/?.lua"}
 local plugin_paths = require("plugin_paths")
@@ -45,10 +47,105 @@ local function load_plugin_module(plugin_data)
 	return nil, string.format("Entry file '%s' not found for plugin '%s'", entry_path, entry)
 end
 
+local function write_plugin_test_result(result)
+	local encoded = json.encode(result)
+	local path = main.params and main.params.plugin_test_result
+	local written = false
+
+	if path and path ~= "" then
+		local f = io.open(path, "wb")
+		if f then
+			f:write(encoded)
+			f:close()
+			written = true
+		end
+	end
+
+	if not written then
+		love.filesystem.write("plugin_test_result.json", encoded)
+	end
+
+	print("PLUGIN_TEST_RESULT: " .. encoded)
+	io.flush()
+end
+
+--- 无头插件检查：只加载目标插件，执行 config -> module load -> init。
+--- 成功和失败都会写结构化结果，worker 不依赖人类日志解析。
+function plugin_main:run_plugin_test(entry)
+	local result = {
+		entry = entry,
+		branch = version and version.branch or "master",
+		version = "",
+		phase = "config",
+		ok = false,
+		error = nil
+	}
+
+	local config, config_err = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
+	if type(config) ~= "table" then
+		result.error = tostring(config_err or "invalid config.lua")
+		write_plugin_test_result(result)
+		love.event.quit(1)
+		return
+	end
+
+	if config.entry ~= entry then
+		result.error = string.format("config.entry mismatch: expected %s, got %s", tostring(entry), tostring(config.entry))
+		write_plugin_test_result(result)
+		love.event.quit(1)
+		return
+	end
+
+	result.version = config.version or ""
+	config.enabled = true
+	local plugin_data = {
+		config = config,
+		has_plugin_config = plugin_paths.has_plugin_config(entry)
+	}
+
+	result.phase = "load"
+	local plugin, load_err = load_plugin_module(plugin_data)
+	if type(plugin) ~= "table" then
+		result.error = tostring(load_err or "plugin entry must return a table")
+		write_plugin_test_result(result)
+		love.event.quit(1)
+		return
+	end
+
+	result.phase = "init"
+	if type(plugin.init) ~= "function" then
+		result.error = "plugin.init is not a function"
+		write_plugin_test_result(result)
+		love.event.quit(1)
+		return
+	end
+
+	PLUGIN_REGISTRY = PLUGIN_REGISTRY or {}
+	PLUGIN_REGISTRY[entry] = config
+	local ok, init_err = xpcall(plugin.init, function(err)
+		return debug.traceback(err)
+	end, plugin, plugin_data)
+
+	result.ok = ok
+	result.phase = ok and "done" or "init"
+	result.error = ok and "" or tostring(init_err)
+	if ok then
+		print(plugin_db.get_debug_info(config))
+	end
+
+	write_plugin_test_result(result)
+	love.event.quit(ok and 0 or 1)
+end
+
 function plugin_main:init(director)
 	plugin_db:init()
 	local plugin_main_config = plugin_paths.load_main_config()
 	director:init(main.params)
+
+	if main.params and main.params.plugin_test then
+		self:run_plugin_test(main.params.plugin_test)
+		return
+	end
 
 	if plugin_main_config.enabled then
 		self:after_init()
