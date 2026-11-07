@@ -46,34 +46,56 @@ local DEV_HOVER_BG = {40, 70, 116, 245}
 
 local STORE_BACKUP_SITES = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
 
-local CATEGORY_OPTIONS = {{
-	label = _("PLUGIN_MGR_CATEGORY_ALL"),
-	value = "all"
-}, {
-	label = _("PLUGIN_MGR_CATEGORY_GAMEPLAY"),
-	value = "gameplay"
-}, {
-	label = _("Towers"),
-	value = "tower"
-}, {
-	label = _("Heroes"),
-	value = "hero"
-}, {
-	label = _("PLUGIN_MGR_CATEGORY_DISPLAY"),
-	value = "display"
-}, {
-	label = _("PLUGIN_MGR_CATEGORY_COSMETIC"),
-	value = "cosmetic"
-}, {
-	label = _("Enemies"),
-	value = "enemy"
-}, {
-	label = _("PLUGIN_MGR_CATEGORY_LEVELS"),
-	value = "level"
-}, {
-	label = _("PLUGIN_MGR_CATEGORY_OTHER"),
-	value = "other"
-}}
+local CATEGORY_OPTIONS = {
+	{
+		label = _("PLUGIN_MGR_CATEGORY_ALL"),
+		value = "all"
+	},
+	{
+		label = _("PLUGIN_MGR_CATEGORY_GAMEPLAY"),
+		value = "gameplay"
+	},
+	{
+		label = _("Towers"),
+		value = "tower"
+	},
+	{
+		label = _("Heroes"),
+		value = "hero"
+	},
+	{
+		label = _("PLUGIN_MGR_CATEGORY_DISPLAY"),
+		value = "display"
+	},
+	{
+		label = _("PLUGIN_MGR_CATEGORY_COSMETIC"),
+		value = "cosmetic"
+	},
+	{
+		label = _("Enemies"),
+		value = "enemy"
+	},
+	{
+		label = _("PLUGIN_MGR_CATEGORY_LEVELS"),
+		value = "level"
+	},
+	{
+		label = _("PLUGIN_MGR_CATEGORY_UPGRADE"),
+		value = "upgrade"
+	},
+	{
+		label = _("PLUGIN_MGR_CATEGORY_GENERATION"),
+		value = "generation"
+	},
+	{
+		label = _("PLUGIN_MGR_CATEGORY_SPELL"),
+		value = "spell"
+	},
+	{
+		label = _("PLUGIN_MGR_CATEGORY_OTHER"),
+		value = "other"
+	}
+}
 
 local SORT_OPTIONS = {{
 	label = _("PLUGIN_MGR_SORT_TRENDING"),
