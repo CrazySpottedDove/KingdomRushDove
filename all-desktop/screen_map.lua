@@ -25,7 +25,7 @@ local storage = require("all.storage")
 local signal = require("lib.hump.signal")
 local timer = require("hump.timer").new()
 local utf8 = require("utf8")
-local map_data
+local tower_data
 local configer = require("dove_modules.configer")
 local R = require("all.restart")
 local perf = require("dove_modules.perf.perf")
@@ -152,13 +152,7 @@ local function get_map_points(gen_id)
 	local flags = {}
 
 	if points_data and points_data.flags then
-		for key, flag in pairs(points_data.flags) do
-			local local_idx = key
-
-			if type(key) == "number" and key > gen.levels.count then
-				local_idx = gen.levels.count - gen.legacy.extra_count + (key - gen.legacy.extra_from)
-			end
-
+		for local_idx, flag in pairs(points_data.flags) do
 			flags[local_idx] = flag
 		end
 	end
@@ -245,10 +239,9 @@ function screen_map:init_coro(w, h, done_callback)
 		self.done_callback = done_callback
 		self.original_w, self.original_h = w, h
 
-		map_data = require("data.map_data")
+		tower_data = require("data.tower_data")
 		self.hero_data = self:build_hero_data()
-		self.tower_data = map_data.tower_data
-		self.level_data = map_data.level_data
+		self.tower_data = tower_data
 
 		self.user_data = storage:load_slot()
 		self.gen_id = self.user_data.last_generation
@@ -2279,7 +2272,7 @@ function MapView:zoom_by(factor, px, py)
 end
 
 function MapView:load_map_animations(gen)
-	local anis = gen.map.animations or map_data["map_animations" .. gen.map.data_key] or {}
+	local anis = gen.map.animations or {}
 
 	for _, o in pairs(anis) do
 		anis[o.id] = o
@@ -2587,7 +2580,7 @@ end
 function MapView:load_level_decos(gen)
 	local layers = {self.ma_under_layer, self.ma_mid_layer, self.ma_over_layer}
 	local out = {}
-	local decos = gen.map.decos or (map_data.map_decos and map_data.map_decos[gen.map.data_key]) or {}
+	local decos = gen.map.decos or {}
 
 	for _, d in pairs(decos) do
 		local v = KImageView:new(d.image)
@@ -3710,7 +3703,7 @@ function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, ir
 	self.gen = GENS:get(gen_id)
 
 	local legacy_level_num = LEGACY.to_global(gen_id, level_num)
-	self.level_data = (self.gen.map.level_data and self.gen.map.level_data[level_num]) or (legacy_level_num and screen_map.level_data[legacy_level_num]) or {}
+	self.level_data = self.gen.map.level_data and self.gen.map.level_data[level_num] or {}
 
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)

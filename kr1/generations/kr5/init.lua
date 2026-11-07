@@ -14,8 +14,10 @@ return common.standard({
 	},
 	background = "map_background_kr5",
 	music = "MusicMap5",
-	points_path = "data.map_points5",
-	data_key = 5,
+	points = require("kr1.generations.kr5.data.map_points"),
+	map_animations = require("kr1.generations.kr5.data.map_animations"),
+	map_decos = require("kr1.generations.kr5.data.map_decos"),
+	level_data = require("kr1.generations.kr5.data.level_data"),
 	count = 40,
 	main_campaign_last = 16,
 	ranges = {{1, 16}, {17, 19}, {20, 22}, {23, 27}, {28, 30}, {31, 35}, {36, 40}}

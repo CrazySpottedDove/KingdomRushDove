@@ -137,21 +137,27 @@ KR_PATH_GAME
 
 ## 地图数据归属
 
-每个 generation 自己提供 map 模块：
+每个 generation 自己提供地图数据模块：
 
 ```text
-kr1/generations/kr1/map.lua
-kr1/generations/kr1/map_points.lua
+kr1/generations/kr1/data/map_points.lua
+kr1/generations/kr1/data/map_animations.lua
+kr1/generations/kr1/data/map_decos.lua
+kr1/generations/kr1/data/level_data.lua
 ```
 
 插件：
 
 ```text
-plugins/MyGen/map.lua
-plugins/MyGen/map_points.lua
+plugins/MyGen/data/map_points.lua
+plugins/MyGen/data/map_animations.lua
+plugins/MyGen/data/map_decos.lua
+plugins/MyGen/data/level_data.lua
 ```
 
-map 模块负责：
+地图背景、音乐、缩略图、战斗/准备音乐等描述字段仍由 generation 的 `init.lua` 通过 `common.standard` 声明。
+
+`gen.map` 负责：
 
 - 背景
 - 地图动画
@@ -208,11 +214,13 @@ saves/
 
 ### 阶段 B：地图数据 generation 化
 
-- [ ] 拆出 `kr1/generations/<gen>/map.lua`
-- [ ] 拆出 `kr1/generations/<gen>/map_points.lua`
-- [ ] `MapView` 只读 `gen.map`
-- [ ] `screen_map.level_data` 改为 `gen.map.level_data`
-- [ ] 缩略图、音乐从 `gen.map` 读取
+- [x] 拆出 `kr1/generations/<gen>/data/map_points.lua`
+- [x] 拆出 `kr1/generations/<gen>/data/map_animations.lua`
+- [x] 拆出 `kr1/generations/<gen>/data/map_decos.lua`
+- [x] 拆出 `kr1/generations/<gen>/data/level_data.lua`
+- [x] `MapView` 只读 `gen.map`
+- [x] `screen_map.level_data` 改为 `gen.map.level_data`
+- [x] 缩略图、音乐从 `gen.map` 读取
 
 ### 阶段 C：本体关卡包化
 
