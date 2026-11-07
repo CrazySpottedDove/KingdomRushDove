@@ -10,16 +10,24 @@ return {
 		icon_image = "hero_oni_kr6_icon"
 	},
 	room_special_order = {"DEATH_STRIKE", "NETHERFOCUS", "HELLISH_BLINK", "LETHAL_COMBO", "DUEL_FERVOR", "SWORD_TORMENT"},
-	required_textures = {"go_hero_oni_kr6"},
-	plugin_required_textures = {},
-	required_sounds = {"hero_oni_kr6"},
-	plugin_required_sounds = {},
-	required_exoskeletons = {"OniDef"},
-	plugin_required_exoskeletons = {},
-	screen_map_required_textures = {},
-	screen_map_plugin_required_textures = {},
-	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {},
+	resources = {
+		game = {
+			required_textures = {"go_hero_oni_kr6"},
+			plugin_required_textures = {},
+			required_sounds = {"hero_oni_kr6"},
+			plugin_required_sounds = {},
+			required_exoskeletons = {"OniDef"},
+			plugin_required_exoskeletons = {}
+		},
+		map = {
+			required_textures = {},
+			plugin_required_textures = {},
+			required_sounds = {},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		}
+	},
 	templates = {"heroes.hero_oni_kr6.templates"},
 	animations = {"heroes.hero_oni_kr6.animations"},
 	sounds = {"heroes.hero_oni_kr6.sounds"},

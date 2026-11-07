@@ -1,6 +1,6 @@
 local M = {}
 
-M.id = "wintersongs_wrath"
+M.name = "wintersongs_wrath"
 M.i18n = "POWER_WINTERSONGS_WRATH"
 M.control = "power_wintersongs_wrath_control"
 M.button_icon = "in_game_icon_power_wintersongs_wrath"
@@ -20,12 +20,16 @@ M.name_style = {
 	}},
 	shader_margin = 16
 }
-M.required_textures = {"go_power_wintersongs_wrath"}
-M.plugin_required_textures = {}
-M.required_sounds = {"spell_wintersongs_wrath"}
-M.plugin_required_sounds = {}
-M.required_exoskeletons = {"eloraDef", "fumeDef"}
-M.plugin_required_exoskeletons = {}
+M.resources = {
+	game = {
+		required_textures = {"go_power_wintersongs_wrath"},
+		plugin_required_textures = {},
+		required_sounds = {"spell_wintersongs_wrath"},
+		plugin_required_sounds = {},
+		required_exoskeletons = {"eloraDef", "fumeDef"},
+		plugin_required_exoskeletons = {}
+	}
+}
 
 function M.register_templates(E)
 	local V = require("lib.klua.vector")

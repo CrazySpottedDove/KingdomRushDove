@@ -1,18 +1,16 @@
 -- chunkname: @./kr1/heroes/registry.lua
 -- 英雄模块注册表：英雄列表、殿堂数据与资源都由 kr1/heroes/<name>/init.lua 声明。
 -- 插件英雄走 register()；patch 本体英雄则 HEROES:get(name) 后往资源列表里 insert。
--- 注册数据：templates / animations / sounds / groups（均为 require 路径数组），
---   与 SPELLS 的资源字段一致，声明方式见各英雄 init.lua。
--- 资源依赖：required_textures / plugin_required_textures / required_sounds /
---   plugin_required_sounds / required_exoskeletons / plugin_required_exoskeletons，
---   由 director 按英雄加载/卸载，字段语义与 SPELLS 完全相同。
+-- 注册数据：templates / animations / sounds / groups（均为 require 路径数组）。
+-- 资源声明统一为 resources[scene] = { required_textures, ... }，
+--   scene 为 "game" / "map"，写法和任意 scene 的资源声明一致。
 local E = require("entity_db")
 local A = require("animation_db")
 local S = require("sound_db")
+local Registry = require("registry")
 
-local HEROES = {}
+local HEROES = Registry.new({})
 
-HEROES.declarations = {}
 -- 本体英雄模块路径。插件不要改这里，用 HEROES:register。
 HEROES.module_names = {
 	"heroes.hero_gerald",
@@ -107,7 +105,6 @@ HEROES.module_names = {
 	"heroes.hero_oni_kr6",
 	"heroes.hero_illiana"
 }
-HEROES._inited = false
 
 --- 资源字段统一为 require 路径数组；plugin_* 字段为映射
 local function merge_map(paths)
@@ -120,23 +117,7 @@ local function merge_map(paths)
 	return out
 end
 
-local function find(name)
-	for i, module in ipairs(HEROES.declarations) do
-		if module.name == name then
-			return module, i
-		end
-	end
-end
-
-local function add(module)
-	local _, index = find(module.name)
-
-	if index then
-		HEROES.declarations[index] = module
-	else
-		HEROES.declarations[#HEROES.declarations + 1] = module
-	end
-
+HEROES.on_register = function(module)
 	local sounds = module.sounds and merge_map(module.sounds) or nil
 
 	if sounds then
@@ -148,44 +129,6 @@ local function add(module)
 	if groups then
 		S:register_groups(groups)
 	end
-end
-
---- 加载本体英雄声明（不做模板/脚本注册）。由 director:init 调用一次。
-function HEROES:init()
-	if self._inited then
-		return
-	end
-
-	self._inited = true
-
-	for _, path in ipairs(self.module_names) do
-		add(require(path))
-	end
-end
-
---- 注册一个英雄模块声明。插件在 init 里调用即可。
----@param module table
----@return table
-function HEROES:register(module)
-	add(module)
-
-	return module
-end
-
---- 卸载一个英雄模块（仅清理注册表，已创建的模板/实体不回收）。
----@param name string
-function HEROES:unregister(name)
-	local _, index = find(name)
-
-	if index then
-		table.remove(self.declarations, index)
-	end
-end
-
----@param name string
----@return table|nil
-function HEROES:get(name)
-	return (find(name))
 end
 
 --- 按需注册一个英雄的脚本与模板（模板已存在时跳过模板注册）。
@@ -243,37 +186,6 @@ function HEROES:ensure_animations(name)
 			end
 		end
 	end
-end
-
---- 各英雄声明的 screen_map 资源聚合（这部分与局内 required_* 分开）
----@return table {required_textures=table, plugin_required_textures=table, required_sounds=table, plugin_required_sounds=table}
-function HEROES:screen_resources()
-	local out = {
-		required_textures = {},
-		plugin_required_textures = {},
-		required_sounds = {},
-		plugin_required_sounds = {}
-	}
-
-	for _, module in ipairs(self.declarations) do
-		for _, group in ipairs(module.screen_map_required_textures or {}) do
-			out.required_textures[#out.required_textures + 1] = group
-		end
-
-		for _, group in ipairs(module.screen_map_required_sounds or {}) do
-			out.required_sounds[#out.required_sounds + 1] = group
-		end
-
-		for group, info in pairs(module.screen_map_plugin_required_textures or {}) do
-			out.plugin_required_textures[group] = info
-		end
-
-		for _, group in ipairs(module.screen_map_plugin_required_sounds or {}) do
-			out.plugin_required_sounds[#out.plugin_required_sounds + 1] = group
-		end
-	end
-
-	return out
 end
 
 return HEROES

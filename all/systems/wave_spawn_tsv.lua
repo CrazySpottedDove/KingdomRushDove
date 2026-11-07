@@ -315,8 +315,8 @@ function wave_spawn_tsv:on_update(dt, ts, store)
 			store.wave_spawn_co = nil
 		end
 	elseif store.waves_finished == false then
-		local level_table = {116}
-		if store.wave_group_total <= (store.wave_group_number + 0.5) and not table.contains(level_table, store.level_idx) then
+		local level_table = {16}
+		if store.wave_group_total <= (store.wave_group_number + 0.5) and not (store.gen_id == "kr5" and table.contains(level_table, store.level_idx)) then
 			store.waves_finished = true
 			print("LIUHUI349 FORCE END LEVEL")
 		end

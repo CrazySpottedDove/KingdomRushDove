@@ -5,8 +5,6 @@ local balloons = require("data.kr5_text_balloons")
 
 local M = {}
 
-M.FIRST_LEVEL = 101
-
 local by_text
 
 local function ensure_text_index()
@@ -23,8 +21,8 @@ local function ensure_text_index()
 	end
 end
 
-function M.is_kr5(store)
-	return store and store.level_idx and store.level_idx >= M.FIRST_LEVEL
+function M.uses_balloons(store)
+	return store and (store.gen_id == "kr5" or store.gen_id == "kr6")
 end
 
 function M.get_def(taunt_id)

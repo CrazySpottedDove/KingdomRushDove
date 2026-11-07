@@ -31,7 +31,7 @@ local HEROES = require('heroes.registry')
 
 HEROES:init()
 
-for _, module in ipairs(HEROES.declarations) do
+for _, module in ipairs(HEROES:all()) do
 	HEROES:ensure_template(module.name)
 end
 

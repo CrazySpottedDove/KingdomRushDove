@@ -20,7 +20,7 @@ end
 
 ---@return boolean handled 是否按 KR5 逻辑处理（含失败日志）
 function M.show(gui, store, taunt_id, pos_override)
-	if not tb.is_kr5(store) then
+	if not tb.uses_balloons(store) then
 		return false
 	end
 

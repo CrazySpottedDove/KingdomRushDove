@@ -10,6 +10,7 @@ local signal = require("lib.hump.signal")
 local E = require("entity_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
+local GENS = require("generations.registry")
 local P = require("path_db")
 local S = require("sound_db")
 local configer = require("dove_modules.configer")
@@ -6268,7 +6269,7 @@ function scripts.moon_controller.update(this, store)
 					U.y_wait_unconditional(store, fade_time)
 				end
 
-				S:queue(string.format("MusicBattle_%02d", store.level_idx), {
+				S:queue(GENS:battle_music(store.gen_id, store.level_idx), {
 					seek = 19.774
 				})
 
@@ -22840,7 +22841,7 @@ function scripts.enemy_crocs_basic.insert(this, store)
 
 	--5代水域
 	if this.water_fixed_speed then
-		local level_water_speed = this.water_fixed_speed[game.store.level_idx - 100]
+		local level_water_speed = this.water_fixed_speed[game.store.level_idx]
 
 		level_water_speed = level_water_speed or 30
 		this.water.speed_factor = level_water_speed / this.motion.max_speed
@@ -23334,7 +23335,7 @@ function scripts.enemy_crocs_ranged.insert(this, store)
 
 	--5代水域
 	if this.water_fixed_speed then
-		local level_water_speed = this.water_fixed_speed[game.store.level_idx - 100]
+		local level_water_speed = this.water_fixed_speed[game.store.level_idx]
 
 		level_water_speed = level_water_speed or 30
 		this.water.speed_factor = level_water_speed / this.motion.max_speed
@@ -26608,7 +26609,7 @@ function scripts.enemy_surveillance_sentry.update(this, store)
 	end
 
 	local function walk_checks_fn()
-		if game.store.level_idx ~= 27 then
+		if game.store.gen_id ~= "kr2" or game.store.level_idx ~= 1 then
 			return false
 		end
 
@@ -28421,7 +28422,7 @@ function scripts.enemy_ballooning_spider.update(this, store)
 		set_flying_vars()
 		change_motion_speed(this.takeoff.max_speed)
 
-		if store.level_idx == 128 and this.nav_path.pi == 7 then
+		if store.gen_id == "kr5" and store.level_idx == 28 and this.nav_path.pi == 7 then
 			this.pos.x = this.pos.x + 80
 			this.pos.y = this.pos.y - 80
 		end
@@ -29354,7 +29355,7 @@ function scripts.enemy_nine_tailed_fox.update(this, store)
 	else
 		a_tp.ts = store.tick_ts - a_tp.cooldown
 
-		if store.level_idx == 132 and (this.nav_path.pi == 2 or this.nav_path.pi == 3) then
+		if store.gen_id == "kr5" and store.level_idx == 32 and (this.nav_path.pi == 2 or this.nav_path.pi == 3) then
 			a_tp.ts = a_tp.ts + a_tp.lava_paths_first_cooldown
 		else
 			a_tp.ts = a_tp.ts + a_tp.first_cooldown
@@ -29756,7 +29757,7 @@ function scripts.enemy_water_spirit.update(this, store)
 
 	simulation:queue_insert_entity(ps_jump)
 
-	if store.level_idx == 134 then
+	if store.gen_id == "kr5" and store.level_idx == 34 then
 		local fx = E:create_entity("fx_stage_34_fuentes_splash")
 
 		fx.pos = V.v(this.pos.x, this.pos.y)
@@ -31778,7 +31779,7 @@ function scripts.enemy_terracota.update(this, store)
 		end
 	end
 
-	if store.level_idx == 134 and not this.not_fx_barro then
+	if store.gen_id == "kr5" and store.level_idx == 34 and not this.not_fx_barro then
 		local fx = E:create_entity("fx_stage_34_fuentes_splash_barro")
 
 		fx.pos = V.v(this.pos.x, this.pos.y)
@@ -40103,7 +40104,7 @@ function scripts.enemy_alfa_acid.update(this, store, script)
 			-1
 		}
 
-		if store.level_idx == 40 and store.wave_group_number < 10 then
+		if store.gen_id == "kr2" and store.level_idx == 14 and store.wave_group_number < 10 then
 			local current_node_fly = fly_map[this.nav_path.pi]
 
 			if current_node_fly and (current_node_fly == -1 or current_node_fly > this.nav_path.ni) then
@@ -41278,7 +41279,7 @@ function scripts.enemy_basic_storm.update(this, store, script)
 			-1
 		}
 
-		if store.level_idx == 40 and store.wave_group_number < 10 then
+		if store.gen_id == "kr2" and store.level_idx == 14 and store.wave_group_number < 10 then
 			local current_node_fly = fly_map[this.nav_path.pi]
 
 			if current_node_fly and (current_node_fly == -1 or current_node_fly > this.nav_path.ni) then

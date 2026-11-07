@@ -1,6 +1,6 @@
 local M = {}
 
-M.id = "thunder_zapper"
+M.name = "thunder_zapper"
 M.i18n = "POWER_THUNDER_ZAPPER"
 M.control = "power_thunder_zapper_control"
 M.button_icon = "in_game_icon_power_thunder_zapper"
@@ -13,12 +13,16 @@ M.name_style = {
 	shaders = {"p_outline", "p_glow"},
 	shader_margin = 16
 }
-M.required_textures = {"go_power_thunder_zapper"}
-M.plugin_required_textures = {}
-M.required_sounds = {"spell_thunder_zapper"}
-M.plugin_required_sounds = {}
-M.required_exoskeletons = {"teslaguy_lvl1Def", "teslaguy_lvl2Def", "teslaguy_lvl3Def", "animations_areadmgDef", "animations_skyrayDef", "animations_modifierDef", "animations_decalDef"}
-M.plugin_required_exoskeletons = {}
+M.resources = {
+	game = {
+		required_textures = {"go_power_thunder_zapper"},
+		plugin_required_textures = {},
+		required_sounds = {"spell_thunder_zapper"},
+		plugin_required_sounds = {},
+		required_exoskeletons = {"teslaguy_lvl1Def", "teslaguy_lvl2Def", "teslaguy_lvl3Def", "animations_areadmgDef", "animations_skyrayDef", "animations_modifierDef", "animations_decalDef"},
+		plugin_required_exoskeletons = {}
+	}
+}
 
 function M.register_templates(E)
 	local V = require("lib.klua.vector")

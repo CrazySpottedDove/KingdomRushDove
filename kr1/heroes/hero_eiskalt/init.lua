@@ -10,16 +10,24 @@ return {
 		icon_image = "kr4_mapButtons_portrait_hero_0011"
 	},
 	room_special_order = {"ULTIMATE", "EXPLOSION", "COLDFURY", "FROSTY", "ICEPEAK", "ULTIMATE_2"},
-	required_textures = {"go_hero_eiskalt"},
-	plugin_required_textures = {},
-	required_sounds = {"hero_eiskalt"},
-	plugin_required_sounds = {},
-	required_exoskeletons = {},
-	plugin_required_exoskeletons = {},
-	screen_map_required_textures = {},
-	screen_map_plugin_required_textures = {},
-	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {},
+	resources = {
+		game = {
+			required_textures = {"go_hero_eiskalt"},
+			plugin_required_textures = {},
+			required_sounds = {"hero_eiskalt"},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		},
+		map = {
+			required_textures = {},
+			plugin_required_textures = {},
+			required_sounds = {},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		}
+	},
 	templates = {"heroes.hero_eiskalt.templates"},
 	animations = {"heroes.hero_eiskalt.animations"},
 	sounds = {"heroes.hero_eiskalt.sounds"},

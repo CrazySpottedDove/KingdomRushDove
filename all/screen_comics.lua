@@ -4,6 +4,7 @@ local V = require("lib.klua.vector")
 local I = require("lib.klove.image_db")
 local F = require("lib.klove.font_db")
 local S = require("sound_db")
+local GENS = require("generations.registry")
 local SU = require("screen_utils")
 local U = require("utils")
 local v = V.v
@@ -223,8 +224,9 @@ function screen_comics:init(w, h, done_callback)
 		end)
 	end
 
-	if self.level_idx then
-		S:queue(string.format("MusicBattlePrep_%02d", self.level_idx))
+	if self.level_idx and self.level_idx > 0 then
+		local gen_id = self.gen_id == "custom" and "kr1" or self.gen_id
+		S:queue(GENS:prep_music(gen_id, self.level_idx))
 	end
 end
 

@@ -1,6 +1,6 @@
 local M = {}
 
-M.id = "aspect_of_sol"
+M.name = "aspect_of_sol"
 M.i18n = "POWER_ASPECT_OF_SOL"
 M.control = "power_aspect_of_sol_control"
 M.button_icon = "in_game_icon_power_aspect_of_sol"
@@ -20,12 +20,16 @@ M.name_style = {
 	}},
 	shader_margin = 16
 }
-M.required_textures = {"go_power_aspect_of_sol"}
-M.plugin_required_textures = {}
-M.required_sounds = {"spell_aspect_of_sol"}
-M.plugin_required_sounds = {}
-M.required_exoskeletons = {"hero_gerald_inspire_courage_buff_decalDef"}
-M.plugin_required_exoskeletons = {}
+M.resources = {
+	game = {
+		required_textures = {"go_power_aspect_of_sol"},
+		plugin_required_textures = {},
+		required_sounds = {"spell_aspect_of_sol"},
+		plugin_required_sounds = {},
+		required_exoskeletons = {"hero_gerald_inspire_courage_buff_decalDef"},
+		plugin_required_exoskeletons = {}
+	}
+}
 
 function M.register_templates(E)
 	-- 惰性加载：只有本局选中该法术时才 require / 定义脚本

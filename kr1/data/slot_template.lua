@@ -1,20 +1,90 @@
 return {
+	schema_version = 2,
 	levels = {
-		[1] = {},
-		[27] = {},
-		[49] = {},
-		[101] = {},
-		[201] = {}
+		kr1 = {
+			[1] = {}
+		},
+		kr2 = {
+			[1] = {}
+		},
+		kr3 = {
+			[1] = {}
+		},
+		kr5 = {
+			[1] = {}
+		},
+		kr6 = {
+			[1] = {}
+		}
 	},
 	upgrades = {
-		reinforcements = 0,
-		archers = 0,
-		engineers = 0,
-		rain = 0,
-		barracks = 0,
-		mages = 0
+		kr1 = {
+			list_id = "1",
+			levels = {
+				reinforcements = 0,
+				archers = 0,
+				engineers = 0,
+				rain = 0,
+				barracks = 0,
+				mages = 0
+			}
+		},
+		kr2 = {
+			list_id = "1",
+			levels = {
+				reinforcements = 0,
+				archers = 0,
+				engineers = 0,
+				rain = 0,
+				barracks = 0,
+				mages = 0
+			}
+		},
+		kr3 = {
+			list_id = "1",
+			levels = {
+				reinforcements = 0,
+				archers = 0,
+				engineers = 0,
+				rain = 0,
+				barracks = 0,
+				mages = 0
+			}
+		},
+		kr5 = {
+			list_id = "1",
+			levels = {
+				reinforcements = 0,
+				archers = 0,
+				engineers = 0,
+				rain = 0,
+				barracks = 0,
+				mages = 0
+			}
+		},
+		kr6 = {
+			list_id = "1",
+			levels = {
+				reinforcements = 0,
+				archers = 0,
+				engineers = 0,
+				rain = 0,
+				barracks = 0,
+				mages = 0
+			}
+		},
+		custom = {
+			list_id = "1",
+			levels = {
+				reinforcements = 0,
+				archers = 0,
+				engineers = 0,
+				rain = 0,
+				barracks = 0,
+				mages = 0
+			}
+		}
 	},
-	upgrade_list_id = "1",
 	-- power3 法术：默认未选择（nil），由选择 UI 写入 id
 	spell_power_id = nil,
 	seen = {
@@ -26,7 +96,7 @@ return {
 	heroes = {
 		selected = {}
 	},
-	last_generation = 1,
+	last_generation = "kr1",
 	locked_towers = {
 		"tower_paladin",
 		"tower_barbarian",

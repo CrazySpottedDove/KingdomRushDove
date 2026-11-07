@@ -1,6 +1,6 @@
 local M = {}
 
-M.id = "reinforcements_kr6"
+M.name = "reinforcements_kr6"
 M.i18n = "POWER_REINFORCEMENTS_KR6"
 M.control = "power_reinforcements_control_kr6"
 M.button_icon = "in_game_icon_power_reinforcements"
@@ -13,12 +13,16 @@ M.name_style = {
 	shaders = {"p_outline", "p_glow"},
 	shader_margin = 16
 }
-M.required_textures = {"go_power_reinforcements"}
-M.plugin_required_textures = {}
-M.required_sounds = {}
-M.plugin_required_sounds = {}
-M.required_exoskeletons = {}
-M.plugin_required_exoskeletons = {}
+M.resources = {
+	game = {
+		required_textures = {"go_power_reinforcements"},
+		plugin_required_textures = {},
+		required_sounds = {},
+		plugin_required_sounds = {},
+		required_exoskeletons = {},
+		plugin_required_exoskeletons = {}
+	}
+}
 
 function M.register_templates(E)
 	local V = require("lib.klua.vector")

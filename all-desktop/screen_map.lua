@@ -15,6 +15,8 @@ local U = require("utils")
 local UPGR = require("kr1.upgrades")
 local HEROES = require("heroes.registry")
 local SPELLS = require("spell_system")
+local GENS = require("generations.registry")
+local LEGACY = require("generations.legacy")
 local V = require("lib.klua.vector")
 local v = V.v
 local km = require("lib.klua.macros")
@@ -61,14 +63,16 @@ function screen_map:upgrade_line_title(key)
 end
 
 function screen_map:resolve_upgrade_line()
-	local key = tostring(self.user_data.upgrade_list_id or "1")
+	local upgrades = self.user_data.upgrades[self.upgrade_gen_id]
+	local key = upgrades.list_id
 
 	if not UPGR.list[key] then
-		key = "1"
+		key = self.gen.upgrades.default_line
 	end
 
 	UPGR:set_list_id(key)
-	self.user_data.upgrade_list_id = key
+	UPGR:set_levels(upgrades.levels)
+	upgrades.list_id = key
 end
 
 screen_map.required_sounds = {"common", "music_screen_map"}
@@ -82,9 +86,6 @@ screen_map.required_textures = {
 	"stars_container",
 	"hero_room",
 	"screen_map_buttons",
-	"screen_map_animations",
-	"kr2_screen_map_animations",
-	"kr3_screen_map_animations",
 	"view_options",
 	"encyclopedia",
 	"encyclopedia_creeps",
@@ -99,7 +100,6 @@ screen_map.plugin_required_exoskeletons = {}
 screen_map.ref_w = 1920
 screen_map.ref_h = 1080
 screen_map.ref_res = TEXTURE_SIZE_ALIAS.fullhd
-screen_map.generation = 1
 screen_map.CUSTOM_GEN = "custom"
 
 local function ISW(...)
@@ -126,29 +126,42 @@ local function get_hero_index(hero_name)
 	return nil
 end
 
+local function hero_is_unlocked(available, finished_levels)
+	if available.mode == "default" then
+		return true
+	end
+
+	local levels = finished_levels[available.gen]
+
+	return levels and levels[available.level] or false
+end
+
 local map_points_cache = {}
 
-local function get_map_points_for_generation(generation)
-	local cached = map_points_cache[generation]
+local function get_map_points(gen_id)
+	local cached = map_points_cache[gen_id]
+
 	if cached then
 		return cached
 	end
 
-	local points_data
-	if generation == 1 then
-		points_data = require("data.map_points")
-	elseif generation == 2 then
-		points_data = require("data.map_points2")
-	elseif generation == 3 then
-		points_data = require("data.map_points3")
-	elseif generation == 5 then
-		points_data = require("data.map_points5")
-	elseif generation == 6 then
-		points_data = require("data.map_points6")
-	end
-
+	local gen = GENS:get(gen_id)
+	local points_data = gen.map.points
 	local points_by_level = {}
 	local points = points_data and points_data.points
+	local flags = {}
+
+	if points_data and points_data.flags then
+		for key, flag in pairs(points_data.flags) do
+			local local_idx = key
+
+			if type(key) == "number" and key > gen.levels.count then
+				local_idx = gen.levels.count - gen.legacy.extra_count + (key - gen.legacy.extra_from)
+			end
+
+			flags[local_idx] = flag
+		end
+	end
 
 	if points then
 		if not points_data._points_indexed then
@@ -183,34 +196,17 @@ local function get_map_points_for_generation(generation)
 
 	cached = {
 		points = points_by_level,
-		flags = points_data and points_data.flags or {}
+		flags = flags
 	}
-	map_points_cache[generation] = cached
+	map_points_cache[gen_id] = cached
 
 	return cached
 end
 
-local function queue_generation_music(generation)
-	if generation == 1 or generation == screen_map.CUSTOM_GEN then
-		S:queue("MusicMap1")
-	elseif generation == 2 then
-		S:queue("MusicMap2")
-	elseif generation == 3 then
-		S:queue("MusicMap3")
-	elseif generation == 5 then
-		S:queue("MusicMap5")
-	elseif generation == 6 then
-		S:queue("MusicMap6")
-	end
-end
+local function queue_generation_music(gen_id)
+	local music_gen_id = gen_id == screen_map.CUSTOM_GEN and "kr1" or gen_id
 
--- 判断是否为额外关卡
-local function is_extra_level(level, num)
-	local e = "extra_level" .. num
-	local efrom = GS[e .. "_from"]
-	local eto = efrom + GS[e]
-
-	return level > efrom and level <= eto
+	S:queue(GENS:get(music_gen_id).map.music)
 end
 
 screen_map.signal_handlers = {}
@@ -255,19 +251,24 @@ function screen_map:init_coro(w, h, done_callback)
 		self.level_data = map_data.level_data
 
 		self.user_data = storage:load_slot()
+		self.gen_id = self.user_data.last_generation
+		self.gen = GENS:get(self.gen_id)
+		self.map_gen_id = self.gen_id == self.CUSTOM_GEN and "kr1" or self.gen_id
+		self.upgrade_gen_id = self.gen_id
+		self.display_gen = self.gen.kind == "standard" and self.gen or GENS:get("kr1")
 		self:resolve_upgrade_line()
 		SPELLS:set_selected(self.user_data.spell_power_id)
-		self.generation = self.user_data.last_generation
-		local map_gen = self.generation == self.CUSTOM_GEN and 1 or self.generation
-		self.map_points = get_map_points_for_generation(map_gen)
+		self.map_points = get_map_points(self.map_gen_id)
 		self.unlock_data = {}
 		self.unlock_data.unlocked_levels = {}
 
-		local levels = self.user_data.levels
+		local levels = self.user_data.levels[self.gen_id]
 		local victory = self.user_data.last_victory
 
-		if victory then
-			local level = levels[victory.level_idx]
+		if victory and self.gen_id ~= self.CUSTOM_GEN then
+			local victory_gen_id = victory.gen_id
+			local victory_levels = self.user_data.levels[victory_gen_id]
+			local level = victory_levels and victory_levels[victory.level_idx]
 
 			if not level then
 				log.error("victory level %s was not shown in map before. ignoring victory", victory.level_idx)
@@ -278,10 +279,13 @@ function screen_map:init_coro(w, h, done_callback)
 						self.unlock_data.show_stars_level = victory.level_idx
 						self.unlock_data.star_count_before = 0
 
-						if victory.level_idx < GS["last_level" .. self.generation] and not levels[victory.level_idx + 1] then
-							levels[victory.level_idx + 1] = {}
+						local victory_gen = GENS:get(victory_gen_id)
+
+						if victory.level_idx < victory_gen.levels.count and not victory_levels[victory.level_idx + 1] then
+							victory_levels[victory.level_idx + 1] = {}
 							self.unlock_data.new_level = victory.level_idx + 1
 							self.unlock_data.last_finished_level = victory.level_idx
+							self.unlock_data.last_finished_gen_id = victory_gen_id
 
 							table.insert(self.unlock_data.unlocked_levels, self.unlock_data.new_level)
 						end
@@ -308,18 +312,18 @@ function screen_map:init_coro(w, h, done_callback)
 			self.user_data.last_victory = nil
 
 			storage:save_slot(self.user_data)
-		elseif #self.user_data.levels == 0 then
+		elseif self.gen_id ~= self.CUSTOM_GEN and next(levels) == nil then
 			self.unlock_data.unlocked_levels = {1}
 			levels[1] = {}
 
 			storage:save_slot(self.user_data)
 		end
 
-		if self.generation ~= self.CUSTOM_GEN and U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, self.generation) then
+		if self.gen_id ~= self.CUSTOM_GEN and U.unlock_next_levels_in_ranges(self.unlock_data, levels, self.gen.levels.ranges, self.gen.levels.main_campaign_last) then
 			storage:save_slot(self.user_data)
 		end
 
-		self.total_stars = U.count_stars(self.user_data)
+		self.total_stars = U.count_stars_for_gen(self.user_data, self.map_gen_id)
 		self.progress = 0.5
 		coroutine.yield()
 		E:ensure_loaded()
@@ -341,11 +345,7 @@ function screen_map:init(w, h)
 
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
-	local map_gen = self.generation == screen_map.CUSTOM_GEN and 1 or self.generation
-	local saved_gen = self.generation
-	self.generation = map_gen
-	local map = MapView:new(sw, sh)
-	self.generation = saved_gen
+	local map = MapView:new(sw, sh, self.map_gen_id)
 
 	self.window:add_child(map)
 
@@ -499,7 +499,7 @@ function screen_map:init(w, h)
 	u_button.label.text_size = u_button.label.size
 	u_button.label.font_size = 18
 	u_button.label.vertical_align = CJK("middle", "top", nil, "top")
-	u_button.label.text = screen_map:upgrade_line_title(self.user_data.upgrade_list_id)
+	u_button.label.text = screen_map:upgrade_line_title(UPGR.list_id)
 	u_button.label.fit_lines = 1
 
 	self.window:add_child(u_button)
@@ -586,11 +586,21 @@ function screen_map:init(w, h)
 
 	self.hero_but = h_button
 
-	local hero_unlock_levels = table.map(self.hero_data, function(k, v)
-		return v.available_level
-	end)
+	local unlocked_hero = false
+	local last_finished_gen_id = self.unlock_data.last_finished_gen_id
+	local last_finished_level = self.unlock_data.last_finished_level
 
-	if table.contains(hero_unlock_levels, self.unlock_data.last_finished_level) then
+	if last_finished_gen_id then
+		for _, data in ipairs(self.hero_data) do
+			if data.available.mode == "level" and data.available.gen == last_finished_gen_id and data.available.level == last_finished_level then
+				unlocked_hero = true
+
+				break
+			end
+		end
+	end
+
+	if unlocked_hero then
 		self.heroTip = KImageView:new("mapBalloon_heroUnlocked_notxt")
 		self.heroTip.anchor = v(self.heroTip.size.x / 2, self.heroTip.size.y)
 		self.heroTip.pos = v(h_button.pos.x, sh - 165)
@@ -646,7 +656,7 @@ function screen_map:init(w, h)
 	cat_filter_btn.label.vertical_align = CJK("middle", "top", nil, "top")
 	cat_filter_btn.label.text = _("CUSTOM_MAP_UI_ALL")
 	cat_filter_btn.label.fit_lines = 1
-	cat_filter_btn.hidden = self.generation ~= screen_map.CUSTOM_GEN
+	cat_filter_btn.hidden = self.gen_id ~= screen_map.CUSTOM_GEN
 	self.window:add_child(cat_filter_btn)
 	self._cat_filter_btn = cat_filter_btn
 
@@ -785,43 +795,38 @@ function screen_map:init(w, h)
 
 	self.window:add_child(gen_dropdown)
 
-	local gen_options = {{
-		label = _("MAP_UI_GEN_1"),
-		value = 1
-	}, {
-		label = _("MAP_UI_GEN_2"),
-		value = 2
-	}, {
-		label = _("MAP_UI_GEN_3"),
-		value = 3
-	}, {
-		label = _("MAP_UI_GEN_5"),
-		value = 5
-	}, {
-		label = _("MAP_UI_GEN_6"),
-		value = 6
-	}, {
-		label = _("MAP_UI_GEN_PLUGIN"),
-		value = screen_map.CUSTOM_GEN
-	}}
+	local gen_options = {}
+
+	for index, gen in ipairs(GENS:all()) do
+		gen_options[index] = {
+			label = _(gen.label_key),
+			value = gen.name,
+			hotkey = gen.hotkey
+		}
+	end
 
 	local card_w = 160
 	local card_h = 120
 	local gap = 16
-	local total_w = #gen_options * (card_w + gap) - gap
+	local cols = math.min(#gen_options, 6)
+	local rows = math.ceil(#gen_options / cols)
+	local total_w = cols * (card_w + gap) - gap
+	local total_h = rows * (card_h + gap) - gap
 	local start_x = (sw - total_w) * 0.5
-	local start_y = (sh - card_h) * 0.5
+	local start_y = (sh - total_h) * 0.5
 	local sm = self
 
 	for i, opt in ipairs(gen_options) do
+		local col = (i - 1) % cols
+		local row = math.floor((i - 1) / cols)
 		local card = KView:new(V.v(card_w, card_h))
-		card.pos = V.v(start_x + (i - 1) * (card_w + gap), start_y)
-		card.colors.background = sm.generation == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
+		card.pos = V.v(start_x + col * (card_w + gap), start_y + row * (card_h + gap))
+		card.colors.background = sm.gen_id == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
 		card.shape = {
 			name = "rectangle",
 			args = {"fill", 0, 0, card_w, card_h, 12, 12}
 		}
-		local border_color = sm.generation == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
+		local border_color = sm.gen_id == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
 		local border = KView:new(V.v(card_w, card_h))
 		border.colors.background = border_color
 		border.shape = {
@@ -850,8 +855,8 @@ function screen_map:init(w, h)
 			card._border.colors.background = {220, 180, 80, 255}
 		end
 		function card.on_exit()
-			card.colors.background = sm.generation == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
-			card._border.colors.background = sm.generation == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
+			card.colors.background = sm.gen_id == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
+			card._border.colors.background = sm.gen_id == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
 		end
 		function card.on_click()
 			S:queue("GUIButtonCommon")
@@ -861,7 +866,7 @@ function screen_map:init(w, h)
 					btn:enable()
 				end
 			end
-			if sm.generation ~= opt.value then
+			if sm.gen_id ~= opt.value then
 				sm:change_generation(opt.value)
 			end
 		end
@@ -883,7 +888,7 @@ function screen_map:init(w, h)
 			for i, card in ipairs(gen_dropdown._cards or {}) do
 				local opt = gen_options[i]
 				if opt then
-					local selected = sm.generation == opt.value
+					local selected = sm.gen_id == opt.value
 					card.colors.background = selected and {60, 45, 20, 240} or {35, 25, 12, 220}
 					card._border.colors.background = selected and {207, 164, 72, 255} or {100, 80, 40, 200}
 				end
@@ -900,8 +905,9 @@ function screen_map:init(w, h)
 	}))
 
 	self.window:add_child(map_counters)
+	self.map_counters = map_counters
 
-	wid("map_counters_stars").text = string.format("%s/%s", self.total_stars, GS.max_stars)
+	wid("map_counters_stars").text = string.format("%s/%s", self.total_stars, self.display_gen.levels.max_stars)
 
 	self.difficulty_view = DifficultyView:new(sw, sh)
 	self.difficulty_view.pos = v(0, 0)
@@ -917,7 +923,7 @@ function screen_map:init(w, h)
 	end
 	self.window:add_child(self.numeric_keyboard)
 
-	queue_generation_music(self.generation)
+	queue_generation_music(self.gen_id)
 
 	self.stime = 0
 
@@ -925,10 +931,12 @@ function screen_map:init(w, h)
 		signal.register(sn, fn)
 	end
 
-	if self.generation == screen_map.CUSTOM_GEN then
+	if self.gen_id == screen_map.CUSTOM_GEN then
 		if self.map_view then
 			self.map_view.hidden = true
 		end
+
+		self.map_counters.hidden = true
 		self:ensure_custom_map_view()
 	end
 
@@ -943,6 +951,33 @@ function screen_map:init(w, h)
 	self._u_btn = u_button
 	self._e_btn = e_button
 	self._h_btn = h_button
+
+	if self.args and self.args.screen_test then
+		timer:script(function(wait)
+			for _, gen in ipairs(GENS:all()) do
+				if gen.kind == "standard" then
+					if self.gen_id ~= gen.name then
+						self:change_generation(gen.name)
+					end
+
+					wait(1.2)
+
+					local level_select = LevelSelectView:new(self.sw, self.sh, gen.name, 1, 0, 0, 0, {})
+					self.window:add_child(level_select)
+					level_select:show()
+					wait(0.2)
+					level_select:hide()
+					wait(0.2)
+					print("[screen_test] ok " .. gen.name)
+				end
+			end
+
+			self.done_callback({
+				quit = true
+			})
+		end)
+	end
+
 -- perf.tmp_stop("screen_map_init")
 end
 
@@ -951,11 +986,35 @@ end
 function screen_map:build_hero_data()
 	local list = {}
 
-	for _, module in ipairs(HEROES.declarations) do
+	for _, module in ipairs(HEROES:all()) do
 		if module.room then
-			list[#list + 1] = table.merge(module.room, {
+			local room = table.merge(module.room, {
 				name = module.name
 			}, true)
+
+			if room.available_level then
+				local gen_id, local_idx = LEGACY.to_ref(room.available_level)
+
+				if gen_id then
+					room.available = {
+						mode = "level",
+						gen = gen_id,
+						level = local_idx
+					}
+				else
+					room.available = {
+						mode = "default"
+					}
+				end
+
+				room.available_level = nil
+			end
+
+			room.available = room.available or {
+				mode = "default"
+			}
+
+			list[#list + 1] = room
 		end
 	end
 
@@ -988,9 +1047,17 @@ function screen_map:normalize_selected_heroes()
 end
 
 function screen_map:refresh_upgrade_button_state()
-	local list_id = self.user_data.upgrade_list_id or "1"
+	if self.gen_id == screen_map.CUSTOM_GEN then
+		self.upgrade_star.hidden = true
+		self.upgrade_points.hidden = true
+
+		return
+	end
+
+	local gen_upgrades = self.user_data.upgrades[self.upgrade_gen_id]
+	local list_id = gen_upgrades.list_id
 	local upgrade_list = (UPGR.list[list_id] or UPGR.list["1"]).techs
-	local bought_levels = self.user_data.upgrades or {}
+	local bought_levels = gen_upgrades.levels
 	local spent_stars = 0
 	local max_upgrade_stars = 0
 
@@ -1072,6 +1139,8 @@ end
 
 function screen_map:ensure_upgrades_view()
 	if self.upgrades then
+		self.upgrades:refresh_for_gen()
+
 		return self.upgrades
 	end
 
@@ -1080,7 +1149,7 @@ function screen_map:ensure_upgrades_view()
 	upgrades.scale = v(upgrades_view_scale, upgrades_view_scale)
 	upgrades.pos = v((1 - upgrades_view_scale) * 0.5 * self.sw, (1 - upgrades_view_scale) * 0.5 * self.sh)
 	self.window:add_child(upgrades)
-	upgrades:set_init_values(screen_map.total_stars, screen_map.user_data.upgrades)
+	upgrades:set_init_values(screen_map.total_stars, screen_map.user_data.upgrades[screen_map.upgrade_gen_id].levels)
 	self.upgrades = upgrades
 
 	return upgrades
@@ -1313,32 +1382,60 @@ function screen_map:draw()
 	self.window:draw()
 end
 
-function screen_map:change_generation(i)
-	if self.is_switching_map then
+function screen_map:change_generation(gen_id)
+	if self.is_switching_map or self.gen_id == gen_id then
 		return
 	end
+
 	S:queue("GUIButtonCommon")
 
-	if i == screen_map.CUSTOM_GEN then
-		if self.generation == screen_map.CUSTOM_GEN then
-			return
+	if gen_id == screen_map.CUSTOM_GEN then
+		self.gen_id = screen_map.CUSTOM_GEN
+		self.gen = GENS:get(self.gen_id)
+		self.map_gen_id = "kr1"
+		self.display_gen = GENS:get("kr1")
+		self.upgrade_gen_id = self.gen_id
+		self.total_stars = U.count_stars_for_gen(self.user_data, "kr1")
+		self:resolve_upgrade_line()
+		self:refresh_upgrade_button_state()
+
+		if self.u_button then
+			self.u_button.label.text = screen_map:upgrade_line_title(UPGR.list_id)
 		end
-		self.generation = screen_map.CUSTOM_GEN
-		queue_generation_music(self.generation)
+
+		queue_generation_music(self.gen_id)
 		self.map_view.hidden = true
+		self.map_counters.hidden = true
 		self:ensure_custom_map_view()
+
 		if self._cat_filter_btn then
 			self._cat_filter_btn.hidden = false
 		end
+
 		return
 	end
 
 	local function reload_generation()
-		self.map_points = get_map_points_for_generation(self.generation)
+		self.gen_id = gen_id
+		self.gen = GENS:get(gen_id)
+		self.map_gen_id = gen_id
+		self.display_gen = self.gen
+		self.upgrade_gen_id = gen_id
+		self.map_points = get_map_points(gen_id)
 		self.unlock_data = {
 			unlocked_levels = {}
 		}
-		U.unlock_next_levels_in_ranges(self.unlock_data, self.user_data.levels, GS, self.generation)
+
+		local levels = self.user_data.levels[gen_id]
+
+		U.unlock_next_levels_in_ranges(self.unlock_data, levels, self.gen.levels.ranges, self.gen.levels.main_campaign_last)
+		self.total_stars = U.count_stars_for_gen(self.user_data, gen_id)
+		self:resolve_upgrade_line()
+		self:refresh_upgrade_button_state()
+
+		if self.u_button then
+			self.u_button.label.text = screen_map:upgrade_line_title(UPGR.list_id)
+		end
 
 		if self.map_tween_handle then
 			timer:cancel(self.map_tween_handle)
@@ -1351,7 +1448,7 @@ function screen_map:change_generation(i)
 
 		local old_map_view = self.map_view
 		local old_order = old_map_view and old_map_view:get_order() or 1
-		local new_map_view = MapView:new(self.sw, self.sh)
+		local new_map_view = MapView:new(self.sw, self.sh, gen_id)
 
 		self.window:add_child(new_map_view, old_order)
 
@@ -1360,29 +1457,35 @@ function screen_map:change_generation(i)
 		end
 
 		self.map_view = new_map_view
-		queue_generation_music(self.generation)
+		self.map_counters.hidden = false
+		wid("map_counters_stars").text = string.format("%s/%s", self.total_stars, self.display_gen.levels.max_stars)
+		queue_generation_music(gen_id)
 	end
 
-	if self.generation == screen_map.CUSTOM_GEN then
+	if self.gen_id == screen_map.CUSTOM_GEN then
 		self._custom_map_view.hidden = true
 		self.map_view.hidden = false
-		self.generation = i
+
 		if self._cat_filter_btn then
 			self._cat_filter_btn.hidden = true
 		end
+
 		if self._cat_dropdown then
 			self._cat_dropdown.hidden = true
 		end
+
 		self._cat_filter = "all"
+
 		if self._cat_filter_btn then
 			self._cat_filter_btn.label.text = _("CUSTOM_MAP_UI_ALL")
 		end
+
 		reload_generation()
 	else
-		self.generation = i
 		if self._custom_map_view then
 			self._custom_map_view.hidden = true
 		end
+
 		self.is_switching_map = true
 		local scale_x = self.window.scale.x
 		local scale_y = self.window.scale.y
@@ -1420,7 +1523,7 @@ end
 function screen_map:refresh_custom_map_view()
 	local maps = SCU.scan_maps()
 	if self._custom_map_view and self._custom_maps_sig == custom_maps_signature(maps) then
-		if self.generation ~= screen_map.CUSTOM_GEN then
+		if self.gen_id ~= screen_map.CUSTOM_GEN then
 			self._custom_map_view.hidden = true
 		end
 		return
@@ -1441,7 +1544,7 @@ function screen_map:refresh_custom_map_view()
 	list_view.blocks_map_input = true
 	self.window:add_child(list_view, 1)
 	self._custom_map_view = list_view
-	if was_hidden or self.generation ~= screen_map.CUSTOM_GEN then
+	if was_hidden or self.gen_id ~= screen_map.CUSTOM_GEN then
 		self._custom_map_view.hidden = true
 	end
 end
@@ -1571,29 +1674,29 @@ function screen_map:keypressed(key, isrepeat)
 			next_item_name = "atlas_manager"
 		})
 	elseif key == "1" then
-		if self.generation ~= 1 then
+		if self.gen_id ~= "kr1" then
 			hide_others()
-			self:change_generation(1)
+			self:change_generation("kr1")
 		end
 	elseif key == "2" then
-		if self.generation ~= 2 then
+		if self.gen_id ~= "kr2" then
 			hide_others()
-			self:change_generation(2)
+			self:change_generation("kr2")
 		end
 	elseif key == "3" then
-		if self.generation ~= 3 then
+		if self.gen_id ~= "kr3" then
 			hide_others()
-			self:change_generation(3)
+			self:change_generation("kr3")
 		end
 	elseif key == "5" then
-		if self.generation ~= 5 then
+		if self.gen_id ~= "kr5" then
 			hide_others()
-			self:change_generation(5)
+			self:change_generation("kr5")
 		end
 	elseif key == "6" then
-		if self.generation ~= 6 then
+		if self.gen_id ~= "kr6" then
 			hide_others()
-			self:change_generation(6)
+			self:change_generation("kr6")
 		end
 	elseif key == "k" then
 		hide_others()
@@ -2044,10 +2147,11 @@ end
 
 function screen_map:start_level(level_idx, level_mode)
 	local user_data = storage:load_slot()
-	user_data.last_generation = self.generation
+	user_data.last_generation = self.gen_id
 	storage:save_slot(user_data, nil, true)
 	self.done_callback({
 		next_item_name = "game",
+		gen_id = self.gen_id,
 		level_idx = level_idx,
 		level_mode = level_mode,
 		level_difficulty = self.user_data.difficulty
@@ -2056,9 +2160,11 @@ end
 
 MapView = class("MapView", KImageView)
 
-function MapView:initialize(screen_w, screen_h)
-	local background_name = "map_background_kr" .. screen_map.generation
-	KImageView.initialize(self, background_name)
+function MapView:initialize(screen_w, screen_h, gen_id)
+	self.gen_id = gen_id
+	self.gen = GENS:get(gen_id)
+
+	KImageView.initialize(self, self.gen.map.background)
 
 	self.screen_w = screen_w
 	self.screen_h = screen_h
@@ -2111,7 +2217,8 @@ function MapView:initialize(screen_w, screen_h)
 
 	self:add_child(self.ma_over_layer)
 
-	local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
+	local levels = screen_map.user_data.levels[gen_id]
+	local last_flag_idx = screen_map.unlock_data.new_level or #(levels or {})
 	local last_flag = screen_map.map_points.flags[last_flag_idx]
 
 	if last_flag and last_flag.pos then
@@ -2123,8 +2230,8 @@ function MapView:initialize(screen_w, screen_h)
 		end
 	end
 
-	self:load_map_animations(screen_map.generation)
-	self:show_flags(screen_map.generation)
+	self:load_map_animations(self.gen)
+	self:show_flags(self.gen)
 	self.pos.y = (self.screen_h - self.size.y) * 0.5
 end
 
@@ -2171,8 +2278,8 @@ function MapView:zoom_by(factor, px, py)
 	self:set_zoom(self.zoom * factor, px, py)
 end
 
-function MapView:load_map_animations(num)
-	local anis = map_data["map_animations" .. num]
+function MapView:load_map_animations(gen)
+	local anis = map_data["map_animations" .. gen.map.data_key]
 
 	for _, o in pairs(anis) do
 		anis[o.id] = o
@@ -2477,11 +2584,11 @@ function MapView:clear_flags()
 	self.level_decos = {}
 end
 
-function MapView:load_level_decos(i)
+function MapView:load_level_decos(gen)
 	local layers = {self.ma_under_layer, self.ma_mid_layer, self.ma_over_layer}
 	local out = {}
 
-	for _, d in pairs(map_data.map_decos[i]) do
+	for _, d in pairs(map_data.map_decos[gen.map.data_key]) do
 		local v = KImageView:new(d.image)
 
 		v.id = d.id
@@ -2527,38 +2634,30 @@ function MapView:load_level_decos(i)
 	return out
 end
 
-function MapView:show_flags(num)
+function MapView:show_flags(gen)
 	self.flags = {}
 	self.wings = {}
 	self.point_groups = {}
-	self.level_decos = self:load_level_decos(num)
+	self.level_decos = self:load_level_decos(gen)
 
-	local max_level = GS["last_level" .. num]
-	local jnum = GS["level" .. num .. "_from"]
-
-	local levels = screen_map.user_data.levels
+	local max_level = gen.levels.count
+	local levels = screen_map.user_data.levels[gen.name]
 
 	timer:script(function(wait)
 		self.show_flags_in_progress = true
 
 		local ud = screen_map.unlock_data
 
-		local function show_flag1(i, jnum, extra)
-			local level = levels[i + jnum]
+		local function show_flag1(i)
+			local level = levels[i]
 
 			if not level then
 			-- block empty
 			else
 				local points_data = screen_map.map_points.points[i]
-				local flag_pos
+				local flag_pos = V.vclone(screen_map.map_points.flags[i].pos)
 
-				if extra then
-					flag_pos = V.vclone(screen_map.map_points.flags[i + jnum].pos)
-				else
-					flag_pos = V.vclone(screen_map.map_points.flags[i].pos)
-				end
-
-				if self.level_decos[i] and not table.contains(ud.unlocked_levels, i + jnum) then
+				if self.level_decos[i] and not table.contains(ud.unlocked_levels, i) then
 					local v = self.level_decos[i].view
 
 					v:unlock()
@@ -2580,47 +2679,26 @@ function MapView:show_flags(num)
 						pointt.anchor = v(pointt.size.x / 2, pointt.size.y - 4)
 						pointt.propagate_on_click = true
 
-						if table.contains(ud.unlocked_levels, i + jnum) then
+						if table.contains(ud.unlocked_levels, i) then
 							pointt.hidden = true
 						end
 					end
 				end
 
-				local flag
-
-				if extra then
-					flag = LevelFlagView:new(i + jnum)
-				else
-					flag = LevelFlagView:new(i)
-				end
+				local flag = LevelFlagView:new(i, self.gen.flags)
 
 				flag:set_data(level)
 				self.flags_layer:add_child(flag)
-
-				if extra then
-					self.flags[i + jnum] = flag
-				else
-					self.flags[i] = flag
-				end
-
+				self.flags[i] = flag
 				flag.pos = flag_pos
-
-				if num == 6 then
-					-- KR6 的 StageFlag5 旗子轴心是插地点 (43.95,106.55)（贴图 96x132），
-					-- dove 的 LevelFlagView 默认是中心锚点 (size/2)。这里把 KR6 轴心按旗面
-					-- 尺寸比例映射到 dove 旗面（map_flag_0181 = 88x120），使旗子插在相同位置，
-					-- 而不是简单平移坐标。
-					flag.anchor = v(43.95 * flag.size.x / 96, 106.55 * flag.size.y / 132)
-				end
-
 				flag:set_mode("nostar")
 
-				if table.contains(ud.unlocked_levels, i + jnum) then
+				if table.contains(ud.unlocked_levels, i) then
 					flag.hidden = true
 				end
 
 				if level[GAME_MODE_CAMPAIGN] and level.stars then
-					if ud.show_stars_level ~= i + jnum or ud.star_count_before > 0 then
+					if ud.show_stars_level ~= i or ud.star_count_before > 0 then
 						flag:set_mode("campaign")
 					end
 
@@ -2634,27 +2712,21 @@ function MapView:show_flags(num)
 
 						star.pos = flag.star_pos[j]
 
-						if ud.show_stars_level == i + jnum and j > ud.star_count_before then
+						if ud.show_stars_level == i and j > ud.star_count_before then
 							star.hidden = true
 						end
 					end
 				end
 
-				if level[GAME_MODE_IRON] and ud.iron_level ~= i + jnum then
+				if level[GAME_MODE_IRON] and ud.iron_level ~= i then
 					flag:set_mode("iron")
 				end
 
 				if level[GAME_MODE_HEROIC] then
-					local wing = KImageView:new("map_flag_heroic_0015")
+					local wing = KImageView:new(self.gen.flags.wing_texture)
 
 					self.flags_layer:add_child(wing)
-
-					if extra then
-						self.wings[i + jnum] = wing
-					else
-						self.wings[i] = wing
-					end
-
+					self.wings[i] = wing
 					wing:order_below(flag)
 
 					-- 旗帜锚点可能不是中心（如 KR6 用插地点锚点），此时 flag_pos 已不再是
@@ -2662,21 +2734,15 @@ function MapView:show_flags(num)
 					local flag_center_dx = flag.size.x / 2 - flag.anchor.x
 					local flag_center_dy = flag.size.y / 2 - flag.anchor.y
 
-					wing.pos = v(flag_pos.x - 3 + flag_center_dx, flag_pos.y + flag_center_dy)
+					wing.pos = v(flag_pos.x + self.gen.flags.wing_offset.x + flag_center_dx, flag_pos.y + self.gen.flags.wing_offset.y + flag_center_dy)
 					wing.anchor = v(wing.size.x / 2, wing.size.y / 2)
-					wing.hidden = ud.heroic_level == i + jnum
+					wing.hidden = ud.heroic_level == i
 				end
 			end
 		end
 
 		for i = 1, max_level do
-			show_flag1(i, jnum)
-		end
-
-		if GS["extra_level" .. num] then
-			for i = 1, GS["extra_level" .. num] do
-				show_flag1(i, GS["extra_level" .. num .. "_from"], true)
-			end
+			show_flag1(i)
 		end
 
 		wait(1)
@@ -2685,23 +2751,16 @@ function MapView:show_flags(num)
 			wait(0.5)
 		end
 
-		local function show_flag2(i, jnum, extra)
-			local level = levels[i + jnum]
+		local function show_flag2(i)
+			local level = levels[i]
 
 			if not level then
 			-- block empty
 			else
-				local flag, wing
+				local flag = self.flags[i]
+				local wing = self.wings[i]
 
-				if extra then
-					flag = self.flags[i + jnum]
-					wing = self.wings[i + jnum]
-				else
-					flag = self.flags[i]
-					wing = self.wings[i]
-				end
-
-				if flag and ud.show_stars_level == i + jnum then
+				if flag and ud.show_stars_level == i then
 					flag:disable(false)
 
 					local first_star = ud.star_count_before + 1
@@ -2736,7 +2795,7 @@ function MapView:show_flags(num)
 					flag:enable()
 				end
 
-				if flag and ud.iron_level == i + jnum then
+				if flag and ud.iron_level == i then
 					flag:disable(false)
 					wait(0.5)
 					S:queue("GUIWinStars")
@@ -2746,7 +2805,7 @@ function MapView:show_flags(num)
 					flag:enable()
 				end
 
-				if wing and ud.heroic_level == i + jnum then
+				if wing and ud.heroic_level == i then
 					flag:disable(false)
 
 					wing.hidden = true
@@ -2766,13 +2825,13 @@ function MapView:show_flags(num)
 					flag:enable()
 				end
 
-				if self.level_decos[i] and table.contains(ud.unlocked_levels, i + jnum) then
+				if self.level_decos[i] and table.contains(ud.unlocked_levels, i) then
 					local v = self.level_decos[i].view
 
 					v:unlock(wait)
 				end
 
-				if i > 1 and ud.new_level == i + jnum then
+				if i > 1 and ud.new_level == i then
 					S:queue("GuimapNewRoad")
 
 					for _, pointt in ipairs(self.point_groups[i]) do
@@ -2788,7 +2847,7 @@ function MapView:show_flags(num)
 					end
 				end
 
-				if table.contains(ud.unlocked_levels, i + jnum) then
+				if table.contains(ud.unlocked_levels, i) then
 					flag.hidden = false
 
 					flag:disable(false)
@@ -2802,27 +2861,21 @@ function MapView:show_flags(num)
 		end
 
 		for i = 1, max_level do
-			show_flag2(i, jnum)
-		end
-
-		if GS["extra_level" .. num] then
-			for i = 1, GS["extra_level" .. num] do
-				show_flag2(i, GS["extra_level" .. num .. "_from"], true)
-			end
+			show_flag2(i)
 		end
 
 		self.show_flags_in_progress = nil
 
-		if DBG_SHOW_BALLOONS or #screen_map.user_data.levels == 1 then
+		if DBG_SHOW_BALLOONS or #levels == 1 then
 			local start_here = KImageView:new("mapBalloon_starthere_notxt")
 
 			start_here.anchor = v(start_here.size.x / 2, start_here.size.y)
 
-			start_here.pos = v(292, 775)
+			start_here.pos = V.vclone(gen.map.start_here_pos)
 
-			screen_map.map_view:add_child(start_here)
+			self:add_child(start_here)
 
-			screen_map.map_view.start_here = start_here
+			self.start_here = start_here
 
 			local l = GGLabel:new(V.v(164, 32))
 
@@ -2896,16 +2949,22 @@ end
 
 LevelFlagView = class("LevelFlagView", KImageView)
 
-function LevelFlagView:initialize(level_num)
-	KImageView.initialize(self, "map_flag_0181")
+function LevelFlagView:initialize(level_num, flag_cfg)
+	KImageView.initialize(self, flag_cfg.texture)
 
-	self.star_pos = {v(12, 12), v(28, 12), v(43, 12)}
+	self.flag_cfg = flag_cfg
+	self.star_pos = flag_cfg.star_pos
 	self.star_views = {}
-	self.anchor = v(self.size.x / 2, self.size.y / 2)
 	self.mode = "default"
 	self.animations = {}
 	self.level_num = level_num
 	self.button = KButtonNoText:new(V.v(self.size.x, self.size.y))
+
+	if flag_cfg.anchor.mode == "insertion" then
+		self.anchor = v(flag_cfg.anchor.px * self.size.x / flag_cfg.anchor.src_w, flag_cfg.anchor.py * self.size.y / flag_cfg.anchor.src_h)
+	else
+		self.anchor = v(self.size.x / 2, self.size.y / 2)
+	end
 
 	self:add_child(self.button)
 
@@ -2914,7 +2973,7 @@ function LevelFlagView:initialize(level_num)
 	function self.button.on_click()
 		S:queue("GUIButtonCommon")
 
-		screen_map.level_select = LevelSelectView:new(screen_map.sw, screen_map.sh, self.level_num, self.stars, self.heroic, self.iron, self.slot_data)
+		screen_map.level_select = LevelSelectView:new(screen_map.sw, screen_map.sh, screen_map.gen_id, self.level_num, self.stars, self.heroic, self.iron, self.slot_data)
 
 		screen_map.window:add_child(screen_map.level_select)
 		screen_map.level_select:show()
@@ -2930,7 +2989,7 @@ function LevelFlagView:initialize(level_num)
 		self.animation = nil
 
 		if self.mode == "campaign" then
-			self:set_image("map_flag_0181")
+			self:set_image(self.flag_cfg.texture)
 		elseif self.mode == "iron" then
 			self:set_image("map_flag_0182")
 		else
@@ -3025,7 +3084,7 @@ function StarsBanner:initialize()
 
 	self.anchor = v(self.size.x / 2, 0)
 
-	self:set_value(screen_map.total_stars, GS.max_stars)
+	self:set_value(screen_map.total_stars, screen_map.display_gen.levels.max_stars)
 end
 
 function StarsBanner:set_value(got_value, of_value)
@@ -3644,14 +3703,13 @@ end
 
 LevelSelectView = class("LevelSelectView", PopUpView)
 
-function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot_data)
+function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, iron, slot_data)
 	PopUpView.initialize(self, V.v(sw, sh))
 
-	if screen_map.generation ~= 1 then
-		if not is_extra_level(level_num, screen_map.generation) then
-			level_num = level_num + GS["level" .. screen_map.generation .. "_from"]
-		end
-	end
+	self.gen_id = gen_id
+	self.gen = GENS:get(gen_id)
+
+	local legacy_level_num = LEGACY.to_global(gen_id, level_num)
 
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
@@ -3676,9 +3734,9 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 		self:hide()
 	end
 
-	add_level_title(self.back, level_num .. " " .. _(string.format("LEVEL_%d_TITLE", level_num)), "left", ls_page_y + 22)
+	add_level_title(self.back, level_num .. " " .. _(string.format("LEVEL_%d_TITLE", legacy_level_num)), "left", ls_page_y + 22)
 
-	local level_string = string.format("%02i", level_num)
+	local level_string = string.format("%02i", legacy_level_num)
 	local stage_thumb = KImageView:new(string.format("stage_thumbs_%04i", level_string))
 	-- stage_thumb.pos:set(215, 190)
 	do
@@ -3738,7 +3796,9 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
 	local first_mode
 	local ctx = {
-		level_num = level_num,
+		gen_id = gen_id,
+		local_idx = level_num,
+		level_num = legacy_level_num,
 		slot_data = slot_data or {},
 		stars = stars
 	}
@@ -3787,7 +3847,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
 		if page_cfg.rules then
 			add_level_title(page, _("Challenge Rules"), "sub", 290)
-			add_level_rules(page, level_num, 290 + 38)
+			add_level_rules(page, legacy_level_num, 290 + 38)
 		end
 
 		if page_cfg.after_rules then
@@ -3919,7 +3979,8 @@ UpgradesView = class("UpgradesView", PopUpView)
 function UpgradesView:initialize(sw, sh)
 	-- perf.tmp_start("UpgradesView:initialize")
 	PopUpView.initialize(self, V.v(sw, sh))
-	UPGR:set_list_id(screen_map.user_data.upgrade_list_id)
+	local gen_upgrades = screen_map.user_data.upgrades[screen_map.upgrade_gen_id]
+	UPGR:set_list_id(gen_upgrades.list_id)
 
 	self.back = KImageView:new("Upgrades_BG_notxt")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
@@ -4085,7 +4146,7 @@ function UpgradesView:initialize(sw, sh)
 
 	self.upgrade_buttons = {}
 
-	local init_bought_list = screen_map.user_data.upgrades
+	local init_bought_list = screen_map.user_data.upgrades[screen_map.upgrade_gen_id].levels
 
 	self.spent_stars = 0
 
@@ -4218,6 +4279,16 @@ function UpgradesView:set_init_values(stars, init_list)
 	end
 end
 
+function UpgradesView:refresh_for_gen()
+	local gen_upgrades = screen_map.user_data.upgrades[screen_map.upgrade_gen_id]
+
+	UPGR:set_list_id(gen_upgrades.list_id)
+	UPGR:set_levels(gen_upgrades.levels)
+	self.header.text = screen_map:upgrade_line_title(UPGR.list_id)
+	self:set_init_values(screen_map.total_stars, gen_upgrades.levels)
+	self:rebuild_upgrade_buttons()
+end
+
 function UpgradesView:update_tooltip_position()
 	if not self.tip_panel.hidden then
 		local mx, my = screen_map.window:get_mouse_position()
@@ -4290,8 +4361,9 @@ function UpgradesView:set_bought_levels(new_bought_list)
 
 	self:set_stars_and_check()
 
-	screen_map.user_data.upgrades = new_bought_list
-	screen_map.user_data.upgrade_list_id = UPGR.list_id
+	local gen_upgrades = screen_map.user_data.upgrades[screen_map.upgrade_gen_id]
+	gen_upgrades.levels = new_bought_list
+	gen_upgrades.list_id = UPGR.list_id
 	storage:save_slot(screen_map.user_data)
 end
 
@@ -4328,7 +4400,7 @@ function UpgradesView:upgrade_bought(class, level, stars_num)
 end
 
 function UpgradesView:show()
-	self:set_init_values(screen_map.total_stars, screen_map.user_data.upgrades)
+	self:set_init_values(screen_map.total_stars, screen_map.user_data.upgrades[screen_map.upgrade_gen_id].levels)
 	UpgradesView.super.show(self)
 end
 
@@ -4364,7 +4436,7 @@ function UpgradesView:rebuild_upgrade_buttons()
 		self.back:add_child(_button)
 	end
 
-	self:set_bought_levels(screen_map.user_data.upgrades)
+	self:set_bought_levels(screen_map.user_data.upgrades[screen_map.upgrade_gen_id].levels)
 	self:set_stars_and_check()
 end
 
@@ -4773,10 +4845,11 @@ function EncyclopediaView:show()
 	EncyclopediaView.super.show(self)
 
 	local user_data = storage:load_slot()
+	local gen_upgrades = user_data.upgrades[screen_map.upgrade_gen_id]
 	E:Load()
-	UPGR:set_levels(user_data.upgrades)
+	UPGR:set_levels(gen_upgrades.levels)
 
-	local key = tostring(user_data.upgrade_list_id or "1")
+	local key = gen_upgrades.list_id
 
 	if not UPGR.list[key] then
 		key = "1"
@@ -6560,9 +6633,14 @@ HeroRoomViewKR1 = class("HeroRoomViewKR1", PopUpView)
 function HeroRoomViewKR1:get_finished_levels()
 	local finished_levels = {}
 
-	for level, level_stats in pairs(screen_map.user_data.levels) do
-		if level_stats.stars then
-			finished_levels[level] = true
+	for gen_id, levels in pairs(screen_map.user_data.levels) do
+		local gen_finished = {}
+		finished_levels[gen_id] = gen_finished
+
+		for level, level_stats in pairs(levels) do
+			if level_stats.stars then
+				gen_finished[level] = true
+			end
 		end
 	end
 
@@ -6632,7 +6710,7 @@ function HeroRoomViewKR1:refresh_hero_thumbs()
 
 		ht:add_child(bo)
 
-		if not finished_levels[data.available_level] then
+		if not hero_is_unlocked(data.available, finished_levels) then
 			local v1 = KImageView:new("hero_room_portraits_lock")
 
 			v1.scale = scale
@@ -6947,9 +7025,9 @@ function HeroRoomViewKR1:update_hero_display(name)
 	local bd = self:get_child_by_id("hero_room_sel_deselect")
 	local finished_levels = self.finished_levels
 
-	if not finished_levels[hd.available_level] then
+	if not hero_is_unlocked(hd.available, finished_levels) then
 		ll.hidden = false
-		ll.text = string.format(_("MAP_HERO_ROOM_UNLOCK"), hd.available_level)
+		ll.text = string.format(_("MAP_HERO_ROOM_UNLOCK"), hd.available.gen:upper() .. " " .. hd.available.level)
 		bs.hidden = true
 		bd.hidden = true
 	else
@@ -7451,7 +7529,7 @@ function SpellSelectView:build_list()
 		end
 
 		self.thumbs:add_child(tile)
-		self.tiles[def.id] = tile
+		self.tiles[def.name] = tile
 	end
 
 	-- 当前预览但尚未确认选择的法术：淡金色框
@@ -7477,10 +7555,10 @@ end
 
 function SpellSelectView:show_spell(spell)
 	self.shown_def = spell
-	self.shown_id = spell and spell.id or nil
+	self.shown_id = spell and spell.name or nil
 
 	if spell then
-		local key = spell.i18n or ("POWER_" .. string.upper(spell.id))
+		local key = spell.i18n or ("POWER_" .. string.upper(spell.name))
 		local style = spell.name_style
 
 		self.name_label.font_name = style and style.font_name or "h"
@@ -7542,7 +7620,7 @@ function SpellSelectView:refresh_selection()
 		end
 	end
 
-	local selected = self.shown_def and selected_id == self.shown_def.id
+	local selected = self.shown_def and selected_id == self.shown_def.name
 
 	self.select_button.hidden = not self.shown_def or selected
 	self.deselect_button.hidden = not selected
@@ -7586,7 +7664,7 @@ function SpellSelectView:show()
 	self:show_spell(spell)
 	PopUpView.show(self)
 
-	local tile = spell and self.tiles[spell.id] or nil
+	local tile = spell and self.tiles[spell.name] or nil
 
 	if tile then
 		self.thumbs:scroll_to_show_y(tile.pos.y + tile.size.y * 0.5)

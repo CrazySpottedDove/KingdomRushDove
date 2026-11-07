@@ -21,6 +21,8 @@ local GS = require("kr1.game_settings")
 local EXO = require("all.exoskeleton")
 local A = require("animation_db")
 local HEROES = require("heroes.registry")
+local GENS = require("generations.registry")
+local LEGACY = require("generations.legacy")
 local configer = require("dove_modules.configer")
 
 local function replace_locale(list, locale)
@@ -33,6 +35,10 @@ local function replace_locale(list, locale)
 	end
 
 	return out
+end
+
+local function resources_of(module, scene_name)
+	return module.resources and module.resources[scene_name] or {}
 end
 
 director = {}
@@ -63,6 +69,7 @@ function director:init(params)
 	end
 	-- perf.tmp_stop("sound_db_init")
 	HEROES:init()
+	GENS:init()
 
 	self.params = params
 
@@ -91,7 +98,19 @@ function director:init(params)
 		self.next_item_name = "slots"
 	end
 
-	if params.autoplay then
+	if params.autoplay_map then
+		if not storage:load_slot(1) then
+			storage:create_slot(1)
+		end
+
+		storage:set_active_slot(1)
+
+		self.next_item_name = "map"
+		self.next_item_args = {
+			screen_test = true,
+			gen_id = params.autoplay_map == true and "kr1" or params.autoplay_map
+		}
+	elseif params.autoplay then
 		-- 无人值守自动测试：跳过所有其它场景，直接进 autoplay
 		if not storage:load_slot(1) then
 			storage:create_slot(1)
@@ -100,8 +119,10 @@ function director:init(params)
 		storage:set_active_slot(1)
 
 		self.next_item_name = "autoplay"
+		local autoplay_gen_id, autoplay_local_idx = LEGACY.to_ref(tonumber(params.autoplay))
 		self.next_item_args = {
-			level_idx = tonumber(params.autoplay),
+			gen_id = autoplay_gen_id,
+			level_idx = autoplay_local_idx,
 			level_mode = params.mode and tonumber(params.mode) or GAME_MODE_CAMPAIGN,
 			level_difficulty = params.diff and tonumber(params.diff) or DIFFICULTY_NORMAL,
 			auto_click = not params.no_click,
@@ -124,8 +145,10 @@ function director:init(params)
 			}
 		elseif params.level then
 			self.next_item_name = "game"
+			local level_gen_id, level_local_idx = LEGACY.to_ref(tonumber(params.level))
 			self.next_item_args = {
-				level_idx = tonumber(params.level),
+				gen_id = level_gen_id,
+				level_idx = level_local_idx,
 				level_mode = params.mode and tonumber(params.mode) or GAME_MODE_CAMPAIGN,
 				level_difficulty = params.diff and tonumber(params.diff) or DIFFICULTY_NORMAL
 			}
@@ -203,6 +226,10 @@ function director:reset_screen_params(force_scissor)
 end
 
 function director:item_done_callback(item_name, outcome)
+	if self.params.scene_trace then
+		print(string.format("[scene] done %s -> %s", item_name, outcome and outcome.next_item_name or "nil"))
+	end
+
 	if self.active_item and self.active_item.done_callback_called then
 		log.error("  Done callback already called... Ignoring!")
 
@@ -281,21 +308,21 @@ function director:unload_item(item)
 		groups = table.append(groups, replace_locale(game.store.level.required_textures))
 
 		if configer.ui_settings().hero_menu_enabled then
-			for _, module in ipairs(HEROES.declarations) do
-				groups = table.append(groups, module.required_textures or {})
-				self:queue_unload_plugin_texture_groups(module.plugin_required_textures, game.ref_res, "game")
-				EXO:unload(module.required_exoskeletons or {})
-				EXO:unload(module.plugin_required_exoskeletons or {})
+			for _, module in ipairs(HEROES:all()) do
+				groups = table.append(groups, resources_of(module, "game").required_textures or {})
+				self:queue_unload_plugin_texture_groups(resources_of(module, "game").plugin_required_textures, game.ref_res, "game")
+				EXO:unload(resources_of(module, "game").required_exoskeletons or {})
+				EXO:unload(resources_of(module, "game").plugin_required_exoskeletons or {})
 			end
 		elseif game.store.selected_hero then
 			for _, hero in pairs(game.store.selected_hero) do
 				local module = HEROES:get(hero)
 
 				if module then
-					groups = table.append(groups, module.required_textures or {})
-					self:queue_unload_plugin_texture_groups(module.plugin_required_textures, game.ref_res, "game")
-					EXO:unload(module.required_exoskeletons or {})
-					EXO:unload(module.plugin_required_exoskeletons or {})
+					groups = table.append(groups, resources_of(module, "game").required_textures or {})
+					self:queue_unload_plugin_texture_groups(resources_of(module, "game").plugin_required_textures, game.ref_res, "game")
+					EXO:unload(resources_of(module, "game").required_exoskeletons or {})
+					EXO:unload(resources_of(module, "game").plugin_required_exoskeletons or {})
 				else
 					-- 老写法：约定 go_<英雄模板名>
 					table.insert(groups, "go_" .. hero)
@@ -335,8 +362,8 @@ function director:unload_item(item)
 					local module = HEROES:get(hero)
 
 					if module then
-						self:unload_sound_groups(module.required_sounds or {})
-						self:unload_sound_groups(module.plugin_required_sounds or {})
+						self:unload_sound_groups(resources_of(module, "game").required_sounds or {})
+						self:unload_sound_groups(resources_of(module, "game").plugin_required_sounds or {})
 					else
 						S:unload_group(hero)
 					end
@@ -359,12 +386,12 @@ function director:unload_item(item)
 		local spell_def_u = SPELLS_U:get_selected()
 
 		if spell_def_u then
-			self:queue_unload_texture_groups(spell_def_u.required_textures or {}, game.ref_res, "game")
-			self:queue_unload_plugin_texture_groups(spell_def_u.plugin_required_textures or {}, game.ref_res, "game")
-			self:unload_sound_groups(spell_def_u.required_sounds or {})
-			self:unload_sound_groups(spell_def_u.plugin_required_sounds or {})
-			EXO:unload(spell_def_u.required_exoskeletons or {})
-			EXO:unload(spell_def_u.plugin_required_exoskeletons or {})
+			self:queue_unload_texture_groups(resources_of(spell_def_u, "game").required_textures or {}, game.ref_res, "game")
+			self:queue_unload_plugin_texture_groups(resources_of(spell_def_u, "game").plugin_required_textures or {}, game.ref_res, "game")
+			self:unload_sound_groups(resources_of(spell_def_u, "game").required_sounds or {})
+			self:unload_sound_groups(resources_of(spell_def_u, "game").plugin_required_sounds or {})
+			EXO:unload(resources_of(spell_def_u, "game").required_exoskeletons or {})
+			EXO:unload(resources_of(spell_def_u, "game").plugin_required_exoskeletons or {})
 		end
 
 		I:queue_unload_done()
@@ -374,6 +401,7 @@ function director:unload_item(item)
 	else
 		local textures = item.required_textures
 		local hero_resources = item.hero_resources
+		local gen_resources = item.gen_resources
 
 		if textures then
 			local unload_textures = replace_locale(textures, item.locale_at_requirement)
@@ -382,12 +410,20 @@ function director:unload_item(item)
 				unload_textures = table.append(unload_textures, hero_resources.required_textures, true)
 			end
 
+			if gen_resources then
+				unload_textures = table.append(unload_textures, gen_resources.required_textures, true)
+			end
+
 			self:queue_unload_texture_groups(unload_textures, item.ref_res, item.item_name)
 
 			local plugin_textures = item.plugin_required_textures
 
 			if hero_resources then
 				plugin_textures = table.merge(plugin_textures or {}, hero_resources.plugin_required_textures, true)
+			end
+
+			if gen_resources then
+				plugin_textures = table.merge(plugin_textures or {}, gen_resources.plugin_required_textures, true)
 			end
 
 			self:queue_unload_plugin_texture_groups(plugin_textures, item.ref_res, item.item_name)
@@ -402,11 +438,19 @@ function director:unload_item(item)
 				sounds = table.append(sounds, hero_resources.required_sounds, true)
 			end
 
+			if gen_resources then
+				sounds = table.append(sounds, gen_resources.required_sounds, true)
+			end
+
 			self:unload_sound_groups(sounds)
 		end
 
 		if hero_resources then
 			self:unload_sound_groups(hero_resources.plugin_required_sounds)
+		end
+
+		if gen_resources then
+			self:unload_sound_groups(gen_resources.plugin_required_sounds)
 		end
 
 		self:unload_sound_groups(item.plugin_required_sounds)
@@ -422,6 +466,10 @@ function director:unload_item(item)
 end
 
 function director:queue_load_item_named(name)
+	if self.params.scene_trace then
+		print(string.format("[scene] queue %s", name))
+	end
+
 	local function _require(name)
 		local r = require(name)
 
@@ -475,12 +523,15 @@ function director:queue_load_item_named(name)
 		item.item_name = name
 		item.args = self.next_item_args
 
-		-- 英雄声明里要求在地图界面加载的额外资源
+		-- 英雄/世代声明里要求在地图界面加载的额外资源
 		local hero_resources
+		local gen_resources
 
 		if name == "map" then
-			hero_resources = HEROES:screen_resources()
+			hero_resources = HEROES:resources("map")
+			gen_resources = GENS:resources("map")
 			item.hero_resources = hero_resources
+			item.gen_resources = gen_resources
 		end
 
 		if item.required_textures then
@@ -490,12 +541,20 @@ function director:queue_load_item_named(name)
 				textures = table.append(textures, hero_resources.required_textures, true)
 			end
 
+			if gen_resources then
+				textures = table.append(textures, gen_resources.required_textures, true)
+			end
+
 			self:load_texture_groups(textures, self.params.texture_size, item.ref_res, true, name)
 
 			local plugin_textures = item.plugin_required_textures
 
 			if hero_resources then
 				plugin_textures = table.merge(plugin_textures or {}, hero_resources.plugin_required_textures, true)
+			end
+
+			if gen_resources then
+				plugin_textures = table.merge(plugin_textures or {}, gen_resources.plugin_required_textures, true)
 			end
 
 			self:load_plugin_texture_groups(plugin_textures, item.ref_res, true, name)
@@ -514,11 +573,19 @@ function director:queue_load_item_named(name)
 				sounds = table.append(sounds, hero_resources.required_sounds, true)
 			end
 
+			if gen_resources then
+				sounds = table.append(sounds, gen_resources.required_sounds, true)
+			end
+
 			self:load_sound_groups(sounds)
 		end
 
 		if hero_resources then
 			self:load_sound_groups(hero_resources.plugin_required_sounds)
+		end
+
+		if gen_resources then
+			self:load_sound_groups(gen_resources.plugin_required_sounds)
 		end
 
 		self:load_sound_groups(item.plugin_required_sounds)
@@ -547,6 +614,7 @@ function director:queue_load_item_named(name)
 		game.store = {}
 		if args.custom_map_root then
 			_G.CUSTOM_MAP_ROOT = args.custom_map_root
+			game.store.gen_id = "custom"
 			game.store.level_name = args.custom_map_level_name
 			game.store.custom_map_entry = args.custom_map_entry
 			game.store.custom_map_return_to = args.custom_map_return_to
@@ -554,8 +622,9 @@ function director:queue_load_item_named(name)
 			game.store.custom_battle_prep_music = args.custom_battle_prep_music
 			game.store.level_idx = 0
 		else
+			game.store.gen_id = args.gen_id
 			game.store.level_idx = args.level_idx
-			game.store.level_name = "level" .. string.format("%02i", args.level_idx)
+			game.store.level_name = LEGACY.level_name(args.gen_id, args.level_idx)
 		end
 		game.store.level_mode = args.level_mode
 		game.store.level_difficulty = args.level_difficulty
@@ -570,12 +639,12 @@ function director:queue_load_item_named(name)
 		local spell = SPELLS:get_selected()
 
 		if spell then
-			self:load_texture_groups(spell.required_textures or {}, self.params.texture_size, game.ref_res, true, "game")
-			self:load_plugin_texture_groups(spell.plugin_required_textures or {}, game.ref_res, true, "game")
-			self:load_sound_groups(spell.required_sounds)
-			self:load_sound_groups(spell.plugin_required_sounds)
-			EXO:queue_load(spell.required_exoskeletons or {})
-			EXO:queue_load_plugin(spell.plugin_required_exoskeletons or {})
+			self:load_texture_groups(resources_of(spell, "game").required_textures or {}, self.params.texture_size, game.ref_res, true, "game")
+			self:load_plugin_texture_groups(resources_of(spell, "game").plugin_required_textures or {}, game.ref_res, true, "game")
+			self:load_sound_groups(resources_of(spell, "game").required_sounds)
+			self:load_sound_groups(resources_of(spell, "game").plugin_required_sounds)
+			EXO:queue_load(resources_of(spell, "game").required_exoskeletons or {})
+			EXO:queue_load_plugin(resources_of(spell, "game").plugin_required_exoskeletons or {})
 		end
 
 		self:load_texture_groups(replace_locale(game.required_textures), self.params.texture_size, game.ref_res, true, "game")
@@ -617,7 +686,7 @@ function director:queue_load_item_named(name)
 				slot.heroes.selected = {}
 			end
 			local hero_count = #slot.heroes.selected
-			local declarations = HEROES.declarations
+			local declarations = HEROES:all()
 			local selected_idx = {}
 			for i = 1, hero_count do
 				local candidate_idx = math.random(1, #declarations)
@@ -636,13 +705,13 @@ function director:queue_load_item_named(name)
 			local hero_textures = {}
 			local hero_sounds = {}
 
-			for _, module in ipairs(HEROES.declarations) do
-				hero_textures = table.append(hero_textures, module.required_textures or {})
-				hero_sounds = table.append(hero_sounds, module.required_sounds or {})
-				hero_sounds = table.append(hero_sounds, module.plugin_required_sounds or {})
-				self:load_plugin_texture_groups(module.plugin_required_textures, game.ref_res, true, "game")
-				EXO:queue_load(module.required_exoskeletons or {})
-				EXO:queue_load_plugin(module.plugin_required_exoskeletons)
+			for _, module in ipairs(HEROES:all()) do
+				hero_textures = table.append(hero_textures, resources_of(module, "game").required_textures or {})
+				hero_sounds = table.append(hero_sounds, resources_of(module, "game").required_sounds or {})
+				hero_sounds = table.append(hero_sounds, resources_of(module, "game").plugin_required_sounds or {})
+				self:load_plugin_texture_groups(resources_of(module, "game").plugin_required_textures, game.ref_res, true, "game")
+				EXO:queue_load(resources_of(module, "game").required_exoskeletons or {})
+				EXO:queue_load_plugin(resources_of(module, "game").plugin_required_exoskeletons)
 			end
 
 			if #hero_textures > 0 then
@@ -662,12 +731,12 @@ function director:queue_load_item_named(name)
 					local module = HEROES:get(hero)
 
 					if module then
-						hero_textures = table.append(hero_textures, module.required_textures or {})
-						hero_sounds = table.append(hero_sounds, module.required_sounds or {})
-						hero_sounds = table.append(hero_sounds, module.plugin_required_sounds or {})
-						self:load_plugin_texture_groups(module.plugin_required_textures, game.ref_res, true, "game")
-						EXO:queue_load(module.required_exoskeletons or {})
-						EXO:queue_load_plugin(module.plugin_required_exoskeletons)
+						hero_textures = table.append(hero_textures, resources_of(module, "game").required_textures or {})
+						hero_sounds = table.append(hero_sounds, resources_of(module, "game").required_sounds or {})
+						hero_sounds = table.append(hero_sounds, resources_of(module, "game").plugin_required_sounds or {})
+						self:load_plugin_texture_groups(resources_of(module, "game").plugin_required_textures, game.ref_res, true, "game")
+						EXO:queue_load(resources_of(module, "game").required_exoskeletons or {})
+						EXO:queue_load_plugin(resources_of(module, "game").plugin_required_exoskeletons)
 					else
 						-- 老写法：约定 go_<英雄模板名> 与同名音效组
 						hero_textures[#hero_textures + 1] = "go_" .. hero
@@ -688,6 +757,7 @@ function director:queue_load_item_named(name)
 
 			item.item_name = "comics"
 			item.required_textures = {"comic_" .. comic_idx}
+			item.gen_id = game.store.gen_id
 			item.level_idx = game.store.level_idx
 			item.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. string.format("/data/comics/%02i.csv", comic_idx))
 

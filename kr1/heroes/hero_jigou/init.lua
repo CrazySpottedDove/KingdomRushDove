@@ -10,16 +10,24 @@ return {
 		icon_image = "kr4_mapButtons_portrait_hero_0007"
 	},
 	room_special_order = {"UNDEAD_SERVITUDE", "ICE_SHARD", "FROZEN_BREATH", "EARTHSHAKE", "GLACIAL_FORM", "ULTIMATE"},
-	required_textures = {"go_hero_jigou"},
-	plugin_required_textures = {},
-	required_sounds = {"hero_jigou"},
-	plugin_required_sounds = {},
-	required_exoskeletons = {},
-	plugin_required_exoskeletons = {},
-	screen_map_required_textures = {},
-	screen_map_plugin_required_textures = {},
-	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {},
+	resources = {
+		game = {
+			required_textures = {"go_hero_jigou"},
+			plugin_required_textures = {},
+			required_sounds = {"hero_jigou"},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		},
+		map = {
+			required_textures = {},
+			plugin_required_textures = {},
+			required_sounds = {},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		}
+	},
 	templates = {"heroes.hero_jigou.templates"},
 	animations = {"heroes.hero_jigou.animations"},
 	sounds = {"heroes.hero_jigou.sounds"},

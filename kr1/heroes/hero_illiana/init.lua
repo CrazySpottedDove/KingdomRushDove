@@ -10,16 +10,24 @@ return {
 		icon_image = "hero_illiana_kr6_icon"
 	},
 	room_special_order = {"TAG", "GLITTER_BOMB", "EASY_PREY", "AIRBORNE_BLISS", "SPARKY_INCINERATE"},
-	required_textures = {"go_hero_illiana"},
-	plugin_required_textures = {},
-	required_sounds = {"hero_illiana"},
-	plugin_required_sounds = {},
-	required_exoskeletons = {"hero_illianaDef", "hero_illiana_dragonDef", "hero_illiana_walk2Def", "hero_illiana_dragon_fire_fxDef"},
-	plugin_required_exoskeletons = {},
-	screen_map_required_textures = {},
-	screen_map_plugin_required_textures = {},
-	screen_map_required_sounds = {},
-	screen_map_plugin_required_sounds = {},
+	resources = {
+		game = {
+			required_textures = {"go_hero_illiana"},
+			plugin_required_textures = {},
+			required_sounds = {"hero_illiana"},
+			plugin_required_sounds = {},
+			required_exoskeletons = {"hero_illianaDef", "hero_illiana_dragonDef", "hero_illiana_walk2Def", "hero_illiana_dragon_fire_fxDef"},
+			plugin_required_exoskeletons = {}
+		},
+		map = {
+			required_textures = {},
+			plugin_required_textures = {},
+			required_sounds = {},
+			plugin_required_sounds = {},
+			required_exoskeletons = {},
+			plugin_required_exoskeletons = {}
+		}
+	},
 	templates = {"heroes.hero_illiana.templates"},
 	animations = {"heroes.hero_illiana.animations"},
 	sounds = {"heroes.hero_illiana.sounds"},
