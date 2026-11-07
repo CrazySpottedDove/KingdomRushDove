@@ -1011,7 +1011,7 @@ tt.hero.skills.skill_c.xp_level_steps = {
 }
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.level = 1
-tt.hero.skills.ultimate.xp_gain = {120}
+tt.hero.skills.ultimate.xp_gain = {480}
 tt.hero.skills.ultimate.xp_level_steps = {
 	[5] = 1
 }
