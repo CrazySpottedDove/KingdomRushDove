@@ -10,6 +10,15 @@
 
 set -e
 
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT_DIR"
+
+# 提交前检查版本任务。放在 commit 之前，避免“提交成功后才发现任务到期”的无效拦截。
+if ! luajit ./scripts/check_version_tasks.lua; then
+	echo "ERROR: 存在到期的版本任务，已阻止提交。设置 VERSION_TASKS_WARN_ONLY=1 可仅提醒。" >&2
+	exit 1
+fi
+
 # Step 2: git commit (capture exit without set -e killing us)
 set +e
 git commit "$@"
