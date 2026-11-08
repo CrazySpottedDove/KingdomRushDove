@@ -16,6 +16,17 @@ end
 
 love.filesystem.setIdentity(version.identity)
 
+-- 尽早识别 -test：即使错误发生在参数解析之前，errorhandler 也能直接退出。
+KRDOVE_TEST_MODE = false
+
+for _, v in pairs(arg or {}) do
+	if v == "-test" then
+		KRDOVE_TEST_MODE = true
+
+		break
+	end
+end
+
 --- 调用 love.filesystem 来加载文件，但是在 prefixs 中进行逐个尝试，返回最先找到的文件
 ---@param filename string
 ---@param prefixs table
@@ -266,6 +277,11 @@ local function load_director()
 	require("plugin.plugin_main"):init(director)
 end
 
+--- -test：不进入任何场景，只启动命令宿主。第一条命令决定去哪。
+local function load_test()
+	main.handler = require("dove_modules.test.harness"):init(main.params)
+end
+
 local function load_update_manager()
 	local update_manager = require("dove_modules.updater.update_manager")
 	main.handler = update_manager
@@ -321,22 +337,21 @@ loader = {
 		language_select = load_language_select,
 		must_read = load_must_read,
 		update_manager = load_update_manager,
-		director = load_director
+		director = load_director,
+		test = load_test
 	}
 }
 
 function loader:load()
-	if main.params.autoplay or main.params.autoplay_map or main.params.plugin_test then
-		-- 无人值守自动测试：跳过 settings / language_select / must_read / update_manager，
-		-- 直接进 director（由它把 autoplay 场景排进队列）。
-		-- 窗口不可见（见 conf.lua 的 t.window.visible）、静音、且不重置窗口模式，
-		-- 避免打断正在全屏游玩的本体。
+	if main.params.test then
+		-- 测试模式：跳过 settings / language_select / must_read / update_manager，
+		-- 只保留命令宿主。窗口不可见（conf.lua），静音，不重置窗口模式。
 		main.params.fullscreen = false
 		main.params.vsync = false
 		main.params.volume_fx = 0
 		main.params.volume_music = 0
 		MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
-		self.items = {"director"}
+		self.items = {"test"}
 	elseif main.params.tmp_restart then
 		MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
 		self.items = {"director"}
@@ -369,21 +384,20 @@ end
 local function load(arg)
 	local w, h = love.window.getDesktopDimensions()
 
-	-- 无人值守自动测试（-autoplay）：这里再 setMode 会把 conf.lua 建好的不可见窗口重新显示出来，
-	-- 抢走正在全屏游玩的本体的焦点。所以保留 conf.lua 创建的那个不可见窗口，不碰窗口设置。
-	local is_autoplay = false
+	-- 测试模式（-test）：这里再 setMode 会把 conf.lua 建好的不可见窗口重新显示出来，
+	-- 抢走正在全屏游玩的本体的焦点。所以保留 conf.lua 创建的那个不可见窗口。
+	local is_test = false
 
 	for _, v in pairs(arg) do
-		if v == "-autoplay" or v == "-autoplay_map" or v == "-plugin_test" then
-			is_autoplay = true
+		if v == "-test" then
+			is_test = true
 
 			break
 		end
 	end
 
-	if is_autoplay then
-		-- conf.lua 的窗口仍会被 WM 映射并短暂抢焦点；启动后立刻最小化，
-		-- 让焦点回到之前的窗口，autoplay 继续在最小化窗口里跑。
+	if is_test then
+		-- conf.lua 的窗口仍会被 WM 映射并短暂抢焦点；启动后立刻最小化。
 		love.window.setPosition(-32000, -32000)
 		love.window.minimize()
 	elseif IS_ANDROID then
@@ -447,9 +461,11 @@ local function load(arg)
 	MU.parse_args(arg, main.params)
 	MU.default_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
 
-	-- 插件检查 worker 可以显式指定测试分支，避免源码默认 master 导致 dev 视图选错版本。
-	if main.params.plugin_test_branch then
-		version.branch = main.params.plugin_test_branch
+	-- 插件验收等外部工具需要指定测试分支时，用环境变量，不再为它单独加 flag。
+	local env_branch = os.getenv("KRDOVE_BRANCH")
+
+	if env_branch and env_branch ~= "" then
+		version.branch = env_branch
 	end
 
 	if main.params.log_level then
@@ -467,8 +483,8 @@ local function load(arg)
 
 	main:set_locale(main.params.locale)
 
-	-- 自动测试下不碰窗口标题/图标：窗口不可见，也没必要惊动窗口管理器
-	if not main.params.autoplay and not main.params.autoplay_map and not main.params.plugin_test then
+	-- 测试模式下不碰窗口标题/图标：窗口不可见，也没必要惊动窗口管理器
+	if not main.params.test then
 		love.window.setTitle(_("APP_TITLE") .. version.id)
 
 		-- icon switched to krdove
@@ -871,11 +887,19 @@ function love.errorhandler(msg)
 
 	close_log()
 
-	if main.params and main.params.exit_on_error then
+	if KRDOVE_TEST_MODE or (main.params and main.params.test) then
+		local json = require("lib.json")
+
+		io.stdout:write("@TEST ", json.encode({
+			type = "fatal",
+			error = tostring(msg),
+			trace = trace,
+			last_log = tostring(last_log_msg)
+		}), "\n")
+		io.stdout:flush()
 		io.stderr:write("ERROR: " .. tostring(msg) .. "\n")
 		io.stderr:write(trace .. "\n")
-		io.stderr:write("LAST LOG: " .. tostring(last_log_msg) .. "\n")
-		io.flush()
+		io.stderr:flush()
 		os.exit(1)
 	end
 

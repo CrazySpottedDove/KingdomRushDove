@@ -115,10 +115,6 @@ function mu.parse_args(arg, params)
 		params.mode = argv("mode")
 	end
 
-	if has_arg("repl") then
-		params.repl = argv("repl")
-	end
-
 	if has_arg("screen") then
 		params.screen = argv("screen")
 	end
@@ -131,55 +127,16 @@ function mu.parse_args(arg, params)
 		params.atlas_manager_on = true
 	end
 
-	-- 无人值守自动测试：-autoplay <关卡号>[-mode <模式>][-diff <难度>][-noclick][-notowers]
-	-- 直接进入 autoplay 场景，跳过其它所有场景。
-	if has_arg("autoplay") then
-		params.autoplay = argv("autoplay")
-	end
+	-- 命令行测试：-test [script.jsonl]
+	-- 只保留这一个测试入口；无头、跳过启动界面、error 退出、命令通道都由它开启。
+	if has_arg("test") then
+		local script = argv("test")
 
-	if has_arg("autoplay_map") then
-		params.autoplay_map = argv("autoplay_map") or true
-	end
+		if script and (script == "" or script:sub(1, 1) == "-") then
+			script = nil
+		end
 
-	if has_arg("spell") then
-		params.spell_id = argv("spell")
-	end
-
-	if has_arg("spell_level") then
-		params.spell_level = tonumber(argv("spell_level"))
-	end
-
-	if has_arg("noclick") then
-		params.no_click = true
-	end
-
-	if has_arg("notowers") then
-		params.no_towers = true
-	end
-
-	if has_arg("exit_on_error") then
-		params.exit_on_error = true
-	end
-
-	-- 插件沙箱检查：只加载指定插件并写结构化结果。
-	if has_arg("plugin_test") then
-		params.plugin_test = argv("plugin_test")
-	end
-
-	if has_arg("plugin_test_result") then
-		params.plugin_test_result = argv("plugin_test_result")
-	end
-
-	if has_arg("plugin_test_branch") then
-		params.plugin_test_branch = argv("plugin_test_branch")
-	end
-
-	if has_arg("plugin_test_level") then
-		params.plugin_test_level = true
-	end
-
-	if has_arg("scene_trace") then
-		params.scene_trace = true
+		params.test = script or true
 	end
 
 	if has_arg("skip_settings") then
@@ -231,10 +188,8 @@ function mu.apply_params(params, game_name, game_target, game_platform)
 		love.system.setTargetFrameRate(DRAW_FPS)
 	end
 
-	-- 安卓端禁止自定义参数
-	-- autoplay（无人值守自动测试）不重置窗口：conf.lua 已经把窗口建成不可见，
-	-- 这里再 setMode 会把它重新显示出来，打断正在全屏游玩的本体。
-	if not IS_ANDROID and not params.autoplay and not params.plugin_test then
+	-- 测试模式不重置窗口：conf.lua 已经把窗口建成不可见。
+	if not IS_ANDROID and not params.test then
 		love.window.setMode(params.width, params.height, {
 			centered = false,
 			fullscreen = params.fullscreen,

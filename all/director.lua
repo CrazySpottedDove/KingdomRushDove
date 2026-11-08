@@ -81,9 +81,13 @@ function director:init(params)
 		main:set_locale(params.locale)
 	end
 
-	love.window.setTitle(_("APP_TITLE") .. version.id)
+	if not params.test then
+		love.window.setTitle(_("APP_TITLE") .. version.id)
+	end
 
-	if params.launch_options.skip_slot or params.tmp_restart then
+	if params.test then
+	-- -test 空宿主：不自动进入任何场景，由命令决定。
+	elseif params.launch_options.skip_slot or params.tmp_restart then
 		if params.tmp_restart then
 			params.tmp_restart = false
 			storage:save_settings(params)
@@ -98,39 +102,7 @@ function director:init(params)
 		self.next_item_name = "slots"
 	end
 
-	if params.autoplay_map then
-		if not storage:load_slot(1) then
-			storage:create_slot(1)
-		end
-
-		storage:set_active_slot(1)
-
-		self.next_item_name = "map"
-		self.next_item_args = {
-			screen_test = true,
-			gen_id = params.autoplay_map == true and "kr1" or params.autoplay_map
-		}
-	elseif params.autoplay then
-		-- 无人值守自动测试：跳过所有其它场景，直接进 autoplay
-		if not storage:load_slot(1) then
-			storage:create_slot(1)
-		end
-
-		storage:set_active_slot(1)
-
-		self.next_item_name = "autoplay"
-		local autoplay_gen_id, autoplay_local_idx = LEGACY.to_ref(tonumber(params.autoplay))
-		self.next_item_args = {
-			gen_id = autoplay_gen_id,
-			level_idx = autoplay_local_idx,
-			level_mode = params.mode and tonumber(params.mode) or GAME_MODE_CAMPAIGN,
-			level_difficulty = params.diff and tonumber(params.diff) or DIFFICULTY_NORMAL,
-			auto_click = not params.no_click,
-			build_towers = not params.no_towers,
-			spell_id = params.spell_id,
-			spell_level = params.spell_level
-		}
-	elseif params.level or params.screen then
+	if params.level or params.screen then
 		if not storage:load_slot(1) then
 			storage:create_slot(1)
 		end
@@ -226,10 +198,6 @@ function director:reset_screen_params(force_scissor)
 end
 
 function director:item_done_callback(item_name, outcome)
-	if self.params.scene_trace then
-		print(string.format("[scene] done %s -> %s", item_name, outcome and outcome.next_item_name or "nil"))
-	end
-
 	if self.active_item and self.active_item.done_callback_called then
 		log.error("  Done callback already called... Ignoring!")
 
@@ -495,10 +463,6 @@ function director:unload_item(item)
 end
 
 function director:queue_load_item_named(name)
-	if self.params.scene_trace then
-		print(string.format("[scene] queue %s", name))
-	end
-
 	local function _require(name)
 		local r = require(name)
 
