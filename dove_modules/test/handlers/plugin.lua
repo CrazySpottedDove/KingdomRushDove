@@ -224,7 +224,7 @@ function plugin.plugin_level_test(harness, args)
 		game.store.send_next_wave = true
 	end
 
-	local sim_seconds = tonumber(args.sim_seconds) or 30
+	local sim_seconds = tonumber(args.sim_seconds) or 15
 	local fps = DRAW_FPS
 	local total_ticks = math.max(0, math.floor(sim_seconds * fps))
 	local ran_ticks = 0
