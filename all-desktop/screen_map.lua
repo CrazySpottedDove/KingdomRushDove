@@ -2241,6 +2241,7 @@ function MapView:initialize(screen_w, screen_h, gen_id)
 	end
 
 	self:load_map_animations(self.gen)
+	self:apply_map_progress()
 	self:show_flags(self.gen)
 	self.pos.y = (self.screen_h - self.size.y) * 0.5
 end
@@ -2344,6 +2345,28 @@ function MapView:load_map_animations(gen)
 				data = ani
 			}
 			av = v
+		elseif ani.exo_name then
+			av = ExoView:new(ani.exo_name, ani.exo_animation or "loop", ani.exo_scale_factor, ani.exo_class == "GGExoOverseer")
+			av.pos = ani.pos and V.vclone(ani.pos) or v(0, 0)
+			av.anchor = ani.anchor and V.vclone(ani.anchor) or v(0, 0)
+			av.r = ani.r or av.r
+			av.loop = ani.loop
+
+			if ani.scale then
+				av.scale = V.vclone(ani.scale)
+			end
+
+			local transform = gen.map.animation_transform
+
+			if transform then
+				local sx = transform.scale and transform.scale.x or 1
+				local sy = transform.scale and transform.scale.y or 1
+				local ox = transform.offset and transform.offset.x or 0
+				local oy = transform.offset and transform.offset.y or 0
+
+				av.pos = v(av.pos.x * sx + ox, av.pos.y * sy + oy)
+				av.scale = v(av.scale.x * sx, av.scale.y * sy)
+			end
 		elseif ani.pos or ani.path or ani.move then
 			local f1 = string.format("%s_%04d", ani.animation.prefix, ani.animation.from)
 
@@ -2366,12 +2389,25 @@ function MapView:load_map_animations(gen)
 
 		av.id = ani.id
 		av.alpha = ani.alpha or 1
-		av.animation = ani.animation
+
+		if not ani.exo_name then
+			av.animation = ani.animation
+		end
+
+		if ani.hidden ~= nil then
+			av.hidden = ani.hidden
+		end
+
+		if ani.ts ~= nil then
+			av.ts = ani.ts
+		end
 
 		if ani.fns then
 			if av.prepare then
 				av:prepare()
 			end
+		elseif ani.exo_name then
+		-- exo 自己推进动画
 		elseif ani.path then
 			av.loop = ani.loop
 			av.path_idx = 1
@@ -2566,6 +2602,111 @@ function MapView:load_map_animations(gen)
 			av.propagate_on_down = true
 			av.propagate_on_up = true
 		end
+	end
+end
+
+--- 当前世代某关是否已解锁（存在存档条目）。
+---@param local_idx number
+---@return boolean
+function MapView:level_unlocked(local_idx)
+	local levels = screen_map.user_data.levels[self.gen.name]
+	local level = levels and levels[local_idx]
+
+	return level ~= nil
+end
+
+--- 当前世代某关是否已通关（战役模式有记录）。
+---@param local_idx number
+---@return boolean
+function MapView:level_completed(local_idx)
+	local levels = screen_map.user_data.levels[self.gen.name]
+	local level = levels and levels[local_idx]
+	local value = level and level[GAME_MODE_CAMPAIGN]
+
+	return value ~= nil and value >= 1
+end
+
+--- 本次返回地图时刚解锁的关卡（local 编号）。
+---@return number|nil
+function MapView:new_level()
+	local unlock_data = screen_map.unlock_data
+
+	return unlock_data and unlock_data.new_level
+end
+
+--- 地图进度通用能力：按 id 操作地图动画，供各世代 map_progress 使用。
+---@param id string
+---@return table|nil
+function MapView:map_exo(id)
+	return self:ci(id)
+end
+
+---@param id string
+---@param hidden boolean
+function MapView:hide_exo(id, hidden)
+	local view = self:ci(id)
+
+	if view then
+		view.hidden = hidden
+	end
+end
+
+---@param id string
+---@param animation string
+---@param loop boolean|nil
+function MapView:play_exo(id, animation, loop)
+	local view = self:ci(id)
+
+	if view then
+		view.exo_animation = animation
+		view.ts = 0
+
+		if loop ~= nil then
+			view.loop = loop
+		end
+	end
+end
+
+---@param id string
+---@param animation string
+---@param opts table|nil {next_animation=string, next_loop=boolean, on_finished=function}
+function MapView:play_exo_once(id, animation, opts)
+	local view = self:ci(id)
+
+	if not view then
+		return
+	end
+
+	opts = opts or {}
+	view.exo_animation = animation
+	view.ts = 0
+	view.loop = false
+	view.on_exo_finished = function(this)
+		if opts.on_finished then
+			opts.on_finished(this)
+		end
+
+		if opts.next_animation then
+			this.exo_animation = opts.next_animation
+			this.loop = opts.next_loop ~= false
+			this.ts = 0
+		end
+
+		this.on_exo_finished = nil
+	end
+end
+
+---@param seconds number
+---@param fn function
+function MapView:after(seconds, fn)
+	timer:after(seconds, fn)
+end
+
+function MapView:apply_map_progress()
+	local progress = self.gen.map.progress
+
+	if progress then
+		progress(self)
 	end
 end
 
@@ -3675,9 +3816,8 @@ end
 function LevelSelectDifficultyButton:on_click()
 	S:queue("GUIButtonCommon")
 
-	local diff = screen_map.user_data.difficulty
+	local diff = km.zmod(self.difficulty + 1, GS.max_difficulty)
 
-	diff = km.zmod(diff + 1, GS.max_difficulty)
 	screen_map.user_data.difficulty = diff
 
 	storage:save_slot(screen_map.user_data)
@@ -3702,7 +3842,7 @@ end
 function LevelSelectDifficultyButton:update(dt)
 	local diff = screen_map.user_data.difficulty
 
-	if diff ~= self.difficulty then
+	if diff and diff ~= self.difficulty then
 		self:set_difficulty(diff)
 	end
 
