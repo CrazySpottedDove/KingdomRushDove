@@ -23691,14 +23691,6 @@ function scripts.tower_orc_warriors.update(this, store)
 				if pn == "bloodlust" then
 					SU.insert_tower_damage_factor_buff(this, p.damage_factor[p.level] - p.last_damage_factor)
 
-					for i = 1, b.max_soldiers do
-						local s = b.soldiers[i]
-
-						if s and not s.health.dead then
-							SU.insert_unit_damage_factor_buff(s, p.damage_factor[p.level] - p.last_damage_factor)
-						end
-					end
-
 					p.last_damage_factor = p.damage_factor[p.level]
 				end
 
