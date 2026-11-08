@@ -158,11 +158,11 @@ scripts/test/autoplay.sh 1 -- -endless -locale zh-Hans
 ### 关卡插件完整冒烟
 
 ```json
-{"id":1,"cmd":"plugin_level_test","args":{"entry":"Sinister_Runes","sim_seconds":30}}
+{"id":1,"cmd":"plugin_level_test","args":{"entry":"Sinister_Runes","sim_seconds":15}}
 {"id":2,"cmd":"quit","args":{"code":0}}
 ```
 
-它会依次执行：加载插件 -> 打开自定义地图界面 -> 进入关卡 -> 等 `game-start` -> 主动发第一波 -> 固定 tick 跑 30 秒。
+它会依次执行：加载插件 -> 打开自定义地图界面 -> 进入关卡 -> 等 `game-start` -> 主动发第一波 -> 固定 tick 跑 15 秒。
 任何一步报错都会返回 `ok:false` 并以退出码 1 结束。
 
 ## 旧 flag 迁移
