@@ -15029,7 +15029,7 @@ tt.render.sprites[1].angles_custom = {
 }
 tt.enemy.gold = 22
 tt.enemy.melee_slot = v(28, 0)
-tt.health.hp_max = {347.5, 389.2, 486.5, 625.5}
+tt.health.hp_max = {347.5, 389.2, 486.5, 610}
 tt.health.armor = 0.4
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 32)
@@ -15065,7 +15065,6 @@ tt.melee.attacks[2].mod = "mod_brigand_bleed"
 tt.sound_events.death = "EnemyBanditDeath"
 tt.ui.click_rect = r(-13, 0, 30, 35)
 
--- enemy_dark_sapper（远程自爆兵）
 tt = RT("enemy_dark_sapper", "enemy")
 AC(tt, "melee", "ranged", "death_spawns")
 tt.unit.head_offset = v(5.5, 13)
@@ -15332,8 +15331,6 @@ tt.ui.click_rect = r(0, 0, 0, 0)
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY)
 tt.sound_events.death = "EnemySkeletonDeath"
-
--- ==================== kr6 stage15：新敌人 ====================
 
 tt = RT("enemy_swamp_husk", "enemy")
 AC(tt, "melee")
@@ -15688,6 +15685,7 @@ tt.sound_events.death_args = {
 }
 tt.ui.click_rect = r(-22, -1, 44, 40)
 
+-- 六代黑骑
 tt = RT("enemy_dark_knight_kr6", "enemy")
 AC(tt, "melee", "death_spawns", "track_kills")
 tt.unit.head_offset = v(5, 22)
@@ -15696,7 +15694,7 @@ tt.health.dead_lifetime = 3
 tt.enemy.gold = 66
 tt.enemy.melee_slot = v(36, 0)
 tt.enemy.lives_cost = 1
-tt.health.hp_max = {1015, 1247, 1392, 1740}
+tt.health.hp_max = {1015, 1247, 1392, 1680}
 tt.health.armor = 0.8
 tt.health.magic_armor = 0
 tt.health_bar.offset = v(0, 39)
@@ -15730,6 +15728,7 @@ tt.kills_to_transform = 1000
 tt.transformation_sound = "EnemyDarkKnightTransform"
 tt.decal_on_kill = "decal_dark_knight_on_kill"
 
+-- 六代黑屠
 tt = RT("enemy_dark_slayer", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(6, 32)
@@ -15738,7 +15737,7 @@ tt.health.dead_lifetime = 3
 tt.enemy.gold = 176
 tt.enemy.melee_slot = v(36, 0)
 tt.enemy.lives_cost = 2
-tt.health.hp_max = {1920, 2304, 2560, 3200}
+tt.health.hp_max = {1920, 2304, 2560, 3100}
 tt.health.armor = 1
 tt.health.magic_armor = 0
 tt.health.spiked_armor = 0.3
@@ -15782,11 +15781,7 @@ tt.sound_events.death = "EnemyDarkSlayerDeath"
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.ui.click_rect = r(-25, 0, 50, 45)
 
--- ============================================================
--- KR6 stage 18（最终关）恶魔敌人
--- ============================================================
-
--- enemy_demon_spawn（小恶魔，死亡自爆）
+-- 六代恶魔之子
 tt = RT("enemy_demon_spawn", "enemy")
 AC(tt, "melee", "death_spawns")
 tt.unit.head_offset = v(4, 12)
@@ -15825,7 +15820,7 @@ tt.death_spawns.fx = "decal_demon_spawn_death"
 tt.sound_events.death = "Stage218DemonSpawnDeath"
 tt.ui.click_rect = r(-13, 0, 26, 30)
 
--- enemy_demon_flareon_kr6（远程火焰恶魔，必须 _kr6 后缀：与 KR1 本体 enemy_demon_flareon 冲突）
+-- 六代火伊布
 tt = RT("enemy_demon_flareon_kr6", "enemy")
 AC(tt, "melee", "ranged", "death_spawns")
 tt.unit.head_offset = v(5.5, 13)
@@ -15875,7 +15870,7 @@ tt.unit.show_blood_pool = false
 tt.sound_events.death = "Stage218DemonSpawnDeath"
 tt.ui.click_rect = r(-13, -3, 32, 35)
 
--- enemy_demon_hound（闪避恶魔犬，死亡自爆）
+-- 六代恶魔猎犬
 tt = RT("enemy_demon_hound", "enemy")
 AC(tt, "melee", "dodge", "death_spawns")
 tt.unit.head_offset = v(15, 14)
@@ -15918,7 +15913,7 @@ tt.death_spawns.fx = "decal_demon_hound_death"
 tt.sound_events.death = "Stage218DemonHoundDeath"
 tt.ui.click_rect = r(-26, -3, 52, 32)
 
--- enemy_demon_lord（恶魔领主，给友军套盾，死亡自爆）
+-- 六代恶魔领主
 tt = RT("enemy_demon_lord", "enemy")
 AC(tt, "melee", "timed_attacks", "death_spawns")
 tt.unit.head_offset = v(5, 22)
@@ -15968,7 +15963,7 @@ tt.death_spawns.fx = "decal_demon_lord_death"
 tt.sound_events.death = "Stage218DemonLordDeath"
 tt.ui.click_rect = r(-20, -3, 40, 35)
 
--- enemy_magma_elemental（岩浆元素，范围灼烧）
+-- 六代熔岩元素
 tt = RT("enemy_magma_elemental", "enemy")
 AC(tt, "melee")
 tt.unit.head_offset = v(0, 40)
@@ -16018,7 +16013,6 @@ tt.sound_events.death = "Stage218MagmaElementalDeath"
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.ui.click_rect = r(-34, -2, 68, 65)
 
--- enemy_demon_imp_kr6（飞行小恶魔，必须 _kr6 后缀：与 KR1 本体 enemy_demon_imp 冲突）
 tt = RT("enemy_demon_imp_kr6", "enemy")
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
 tt.health.dead_lifetime = 3
