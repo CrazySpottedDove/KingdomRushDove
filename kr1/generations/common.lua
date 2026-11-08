@@ -18,6 +18,31 @@ local function count_stars(ranges)
 	return total
 end
 
+--- 由关卡范围推导关卡总数、主线末关与满星数。
+--- ranges 必须从 1 开始连续覆盖所有关卡，否则会在加载时报错。
+---@param ranges table
+---@return table
+function common.level_meta(ranges)
+	local count = 0
+
+	for _, range in ipairs(ranges) do
+		local first = range[1]
+		local last = range[2] or first
+
+		assert(first == count + 1, string.format("gen ranges 必须从 1 开始连续覆盖：期望 %d，实际 %d", count + 1, first))
+		assert(last >= first, string.format("gen ranges 的区间结束值不能小于起始值：%d > %d", first, last))
+
+		count = last
+	end
+
+	return {
+		count = count,
+		main_campaign_last = ranges[1] and (ranges[1][2] or ranges[1][1]) or 0,
+		ranges = ranges,
+		max_stars = count_stars(ranges)
+	}
+end
+
 --- 构造标准世代描述符。
 ---@param config table
 ---@return table
@@ -32,14 +57,20 @@ function common.standard(config)
 		wing_texture = "map_flag_heroic_0015",
 		wing_offset = v(-3, 0)
 	}
+	local levels = common.level_meta(ranges)
+	levels.xp_multiplier = config.xp_multiplier or function(local_idx)
+		if local_idx <= 9 then
+			return 0.1 * local_idx
+		end
+
+		return 1
+	end
 
 	return {
 		name = config.name,
-		order = config.order,
 		label_key = config.label_key,
 		hotkey = config.hotkey or "",
 		kind = "standard",
-		legacy = config.legacy,
 		resource_root = config.resource_root,
 		map = {
 			background = config.background,
@@ -55,19 +86,7 @@ function common.standard(config)
 			prep_music = config.prep_music
 		},
 		flags = flags,
-		levels = {
-			count = config.count,
-			main_campaign_last = config.main_campaign_last,
-			ranges = ranges,
-			max_stars = count_stars(ranges),
-			xp_multiplier = config.xp_multiplier or function(local_idx)
-				if local_idx <= 9 then
-					return 0.1 * local_idx
-				end
-
-				return 1
-			end
-		},
+		levels = levels,
 		level_select = config.level_select or {},
 		upgrades = {
 			default_line = config.default_upgrade_line or "1"

@@ -1,18 +1,9 @@
 return {
 	name = "custom",
-	order = 60,
 	label_key = "MAP_UI_GEN_PLUGIN",
 	hotkey = "",
 	kind = "custom",
-	legacy = {
-		level_from = 0,
-		last_level = 0,
-		extra_from = 0,
-		extra_count = 0
-	},
 	levels = {
-		count = 0,
-		main_campaign_last = 0,
 		ranges = {},
 		max_stars = 0
 	},

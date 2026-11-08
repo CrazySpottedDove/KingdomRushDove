@@ -84,9 +84,7 @@ require(required_templates[i])
     map = require("MyGen.map"),
 
     levels = {
-        count = 10,
         ranges = {{1, 10}},
-        main_campaign_last = 10,
     },
 
     upgrades = {
@@ -98,6 +96,10 @@ require(required_templates[i])
     },
 }
 ```
+
+`order` 可选：未声明时按注册顺序递增（本体世代按 `module_names` 顺序）。插件若要插到已有世代之间，再显式指定。
+
+`levels.count`、`levels.main_campaign_last`、`levels.max_stars` 由 `levels.ranges` 自动推导，不需要手写；`ranges` 必须从 1 开始连续覆盖所有关卡。
 
 ### 科技线
 
