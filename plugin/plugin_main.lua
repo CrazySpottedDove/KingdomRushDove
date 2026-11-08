@@ -1,11 +1,6 @@
 -- chunkname: @./plugin/plugin_main.lua
 local log = require("lib.klua.log"):new("plugin_main")
-local json = require("lib.json")
-local version = require("version")
 local FS = love.filesystem
-local signal = require("lib.hump.signal")
-local storage = require("all.storage")
-local constants = require("all.constants")
 local additional_paths = {"plugin/?.lua", "plugin/all/?.lua", "plugins/?.lua", "plugins/all/?.lua"}
 local plugin_paths = require("plugin_paths")
 
@@ -52,164 +47,14 @@ local function load_plugin_module(plugin_data)
 	return nil, string.format("Entry file '%s' not found for plugin '%s'", entry_path, entry)
 end
 
-local function write_plugin_test_result(result)
-	local encoded = json.encode(result)
-	local path = main.params and main.params.plugin_test_result
-	local written = false
+plugin_main.load_plugin_module = load_plugin_module
 
-	if path and path ~= "" then
-		local f = io.open(path, "wb")
-		if f then
-			f:write(encoded)
-			f:close()
-			written = true
-		end
-	end
-
-	if not written then
-		love.filesystem.write("plugin_test_result.json", encoded)
-	end
-
-	print("PLUGIN_TEST_RESULT: " .. encoded)
-	io.flush()
-end
-
---- 进入关卡插件对应的 custom map，game-start 后写结果。
---- 这样不仅验证 init，还验证关卡文件、波次、模板和资源加载流程。
-local function start_level_test(entry, config, director, result)
-	local base = plugin_paths.plugin_dir(entry)
-	local level_file = base .. "/data/levels/" .. entry .. "_data.lua"
-	local wave_file = base .. "/data/waves/" .. entry .. "_waves_campaign.lua"
-	if not FS.getInfo(level_file, "file") or not FS.getInfo(wave_file, "file") then
-		result.phase = "level"
-		result.error = string.format("level files missing: %s / %s", level_file, wave_file)
-		write_plugin_test_result(result)
-		love.event.quit(1)
-		return
-	end
-
-	local metadata = plugin_paths.load_lua_table(base .. "/data/levels/" .. entry .. "_metadata.lua") or {}
-	local finished = false
-	local function on_game_start()
-		if finished then
-			return
-		end
-		finished = true
-		signal.remove("game-start", on_game_start)
-		result.ok = true
-		result.phase = "level"
-		result.error = ""
-		write_plugin_test_result(result)
-		love.event.quit(0)
-	end
-
-	plugin_main.registry[entry] = config
-	signal.register("game-start", on_game_start)
-
-	-- 无头测试没有用户存档；进入关卡前创建一个临时 slot。
-	if not storage:load_slot(1) then
-		storage:create_slot(1)
-	end
-	storage:set_active_slot(1)
-
-	-- 与 screen_custom_map 的 start_game 使用同一组参数。
-	director.next_item_name = "game"
-	director.next_item_args = {
-		next_item_name = "game",
-		level_mode = constants.GAME_MODE_CAMPAIGN,
-		level_difficulty = constants.DIFFICULTY_NORMAL,
-		custom_map_entry = entry,
-		custom_map_level_name = entry,
-		custom_map_root = base,
-		custom_map_return_to = "map",
-		custom_battle_music = type(metadata) == "table" and metadata.battle_music or nil,
-		custom_battle_prep_music = type(metadata) == "table" and metadata.battle_prep_music or nil
-	}
-end
-
---- 无头插件检查：只加载目标插件，执行 config -> module load -> init。
---- 成功和失败都会写结构化结果，worker 不依赖人类日志解析。
-function plugin_main:run_plugin_test(entry, director)
-	local result = {
-		entry = entry,
-		branch = version and version.branch or "master",
-		version = "",
-		phase = "config",
-		ok = false,
-		error = nil
-	}
-
-	local config, config_err = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
-	if type(config) ~= "table" then
-		result.error = tostring(config_err or "invalid config.lua")
-		write_plugin_test_result(result)
-		love.event.quit(1)
-		return
-	end
-
-	if config.entry ~= entry then
-		result.error = string.format("config.entry mismatch: expected %s, got %s", tostring(entry), tostring(config.entry))
-		write_plugin_test_result(result)
-		love.event.quit(1)
-		return
-	end
-
-	result.version = config.version or ""
-	config.enabled = true
-	local plugin_data = {
-		config = config,
-		has_plugin_config = plugin_paths.has_plugin_config(entry)
-	}
-
-	result.phase = "load"
-	local plugin, load_err = load_plugin_module(plugin_data)
-	if type(plugin) ~= "table" then
-		result.error = tostring(load_err or "plugin entry must return a table")
-		write_plugin_test_result(result)
-		love.event.quit(1)
-		return
-	end
-
-	result.phase = "init"
-	if type(plugin.init) ~= "function" then
-		result.error = "plugin.init is not a function"
-		write_plugin_test_result(result)
-		love.event.quit(1)
-		return
-	end
-
-	plugin_main.registry[entry] = config
-	local ok, init_err = xpcall(plugin.init, function(err)
-		return debug.traceback(err)
-	end, plugin, plugin_data)
-
-	result.ok = ok
-	result.phase = ok and "done" or "init"
-	result.error = ok and "" or tostring(init_err)
-	if ok then
-		print(plugin_db.get_debug_info(config))
-	end
-
-	if ok and main.params and main.params.plugin_test_level and config.category == "level" then
-		start_level_test(entry, config, director, result)
-		return
-	end
-
-	write_plugin_test_result(result)
-	love.event.quit(ok and 0 or 1)
-end
-
-function plugin_main:init(director)
+function plugin_main:init(director, load_plugins)
 	plugin_db:init()
 	local plugin_main_config = plugin_paths.load_main_config()
 	director:init(main.params)
 
-	if main.params and main.params.plugin_test then
-		self:run_plugin_test(main.params.plugin_test, director)
-		return
-	end
-
-	if plugin_main_config.enabled then
+	if load_plugins ~= false and plugin_main_config.enabled then
 		self:after_init()
 	end
 end

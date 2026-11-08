@@ -963,32 +963,6 @@ function screen_map:init(w, h)
 	self._e_btn = e_button
 	self._h_btn = h_button
 
-	if self.args and self.args.screen_test then
-		timer:script(function(wait)
-			for _, gen in ipairs(GENS:all()) do
-				if gen.kind == "standard" then
-					if self.gen_id ~= gen.name then
-						self:change_generation(gen.name)
-					end
-
-					wait(1.2)
-
-					local level_select = LevelSelectView:new(self.sw, self.sh, gen.name, 1, 0, 0, 0, {})
-					self.window:add_child(level_select)
-					level_select:show()
-					wait(0.2)
-					level_select:hide()
-					wait(0.2)
-					print("[screen_test] ok " .. gen.name)
-				end
-			end
-
-			self.done_callback({
-				quit = true
-			})
-		end)
-	end
-
 -- perf.tmp_stop("screen_map_init")
 end
 
