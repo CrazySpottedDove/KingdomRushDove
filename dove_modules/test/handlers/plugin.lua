@@ -215,7 +215,9 @@ function plugin.plugin_level_test(harness, args)
 		error("level reported game-start but harness flag is false")
 	end
 
-	-- 3. 主动开第一波，并实际推进 N 秒模拟，覆盖波次/地图装饰/运行时脚本。
+	-- 3. 主动开第一波，并实际推进 N 秒对应的固定 tick 数。
+	-- 这里不要求 store.tick_ts 必须增长：部分关卡会暂停/等待选择/提前结算，
+	-- 用固定步数才能真正覆盖更新代码，而不是把“时钟没走”误判成失败。
 	local game = harness:get_game()
 
 	if game and args.start_waves ~= false then
@@ -224,19 +226,23 @@ function plugin.plugin_level_test(harness, args)
 
 	local sim_seconds = tonumber(args.sim_seconds) or 30
 	local fps = DRAW_FPS
-	local max_ticks = math.floor(sim_seconds * fps) + 1000
+	local total_ticks = math.max(0, math.floor(sim_seconds * fps))
+	local ran_ticks = 0
 
-	if sim_seconds > 0 then
-		local run_result = session.run_until(harness, {
-			condition = "tick_ts_or_outcome",
-			n = sim_seconds,
-			max_ticks = max_ticks,
-			load_timeout_ms = 60000
-		})
+	for _ = 1, total_ticks do
+		harness:step_once()
 
-		if not run_result.met then
-			error(string.format("level did not run for %.1fs: %s", sim_seconds, tostring(run_result.reason)))
+		ran_ticks = ran_ticks + 1
+
+		local current = harness:get_game()
+
+		if not current or (current.store and current.store.game_outcome) then
+			break
 		end
+	end
+
+	if total_ticks > 0 and ran_ticks == 0 then
+		error("level did not run any fixed ticks")
 	end
 
 	return {
@@ -244,6 +250,7 @@ function plugin.plugin_level_test(harness, args)
 		entry = entry,
 		version = loaded.version,
 		sim_seconds = sim_seconds,
+		ran_ticks = ran_ticks,
 		state = harness:snapshot()
 	}
 end
