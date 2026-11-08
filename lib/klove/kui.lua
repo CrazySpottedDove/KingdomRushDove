@@ -9,6 +9,8 @@ local V = require("lib.klua.vector")
 local I = require("lib.klove.image_db")
 local F = require("lib.klove.font_db")
 local SH = require("klove.shader_db")
+local A = require("animation_db")
+local EXO = require("all.exoskeleton")
 local class = require("middleclass")
 local G = love.graphics
 local _last_id = 99000
@@ -2189,6 +2191,195 @@ function KScrollList:on_scroll(button)
 	self:scroll_by((button == "wu" and 1 or -1) * self.scroll_amount)
 
 	return false
+end
+
+local EXO_CANVAS
+
+local function exo_canvas()
+	if not EXO_CANVAS then
+		EXO_CANVAS = G.newCanvas(2, 2)
+	end
+
+	return EXO_CANVAS
+end
+
+--- 骨骼动画视图。资源（exo / 图集）由 director 按 screen 的 required_exoskeletons 加载，
+--- 本类只负责按 exo_name + exo_animation 播放与绘制。
+ExoView = class("ExoView", KView)
+ExoView.static.init_arg_names = {"exo_name", "exo_animation", "exo_scale_factor"}
+
+function ExoView:initialize(exo_name, exo_animation, exo_scale_factor, overseer)
+	KView.initialize(self)
+
+	self.exo_name = exo_name
+	self.exo_scale_factor = exo_scale_factor
+	self.overseer = overseer
+	self.runs = 0
+
+	if overseer then
+		self.action_cooldown = 8
+		self.tick_ts = 0
+		self.action_ts = 0
+	end
+
+	self:set_exo_animation(exo_animation or "loop")
+end
+
+--- 切换动画并重置时间。
+---@param name string
+function ExoView:set_exo_animation(name)
+	self.exo_animation = name
+	self.ts = 0
+end
+
+function ExoView:update(dt)
+	-- 进度逻辑会直接改 exo_animation，这里按实际值重建动画名
+	if self._animation_name ~= self.exo_animation then
+		self._animation_name = self.exo_animation
+		self._animation_key = self.exo_name .. "_" .. self.exo_animation
+	end
+
+	if self.ts <= 0 then
+		self.runs = 0
+	end
+
+	self.ts = self.ts + dt
+
+	local frame, runs = A:f(self._animation_key, self.ts, self.loop)
+
+	if not frame then
+		return
+	end
+
+	self._exo_frame = frame
+
+	if not self.loop and self.runs ~= runs and runs > 0 and self.on_exo_finished then
+		self:on_exo_finished(runs)
+	end
+
+	self.runs = runs
+
+	if self.overseer then
+		self.tick_ts = self.tick_ts + dt
+
+		if not self.hidden and self.exo_animation ~= "loop_inactive" and self.tick_ts - self.action_ts >= self.action_cooldown then
+			self:set_exo_animation("action")
+			self.action_ts = self.tick_ts
+			self.loop = false
+		end
+	end
+end
+
+function ExoView:on_exo_finished(runs)
+	if self.overseer and self.exo_animation == "action" and runs == 1 then
+		self:set_exo_animation("loop_active")
+		self.loop = true
+	end
+end
+
+function ExoView:_ensure_batch(count)
+	if self.batch and self.batch_capacity >= count then
+		return
+	end
+
+	local capacity = 64
+
+	while capacity < count do
+		capacity = capacity * 2
+	end
+
+	self.batch = G.newSpriteBatch(exo_canvas(), capacity, "stream")
+	self.batch_capacity = capacity
+end
+
+function ExoView:_draw_self()
+	local frame = self._exo_frame
+
+	if not frame then
+		return
+	end
+
+	local exo = EXO:get_exo_by_frame(frame)
+
+	if not exo then
+		return
+	end
+
+	self:_ensure_batch(frame.count)
+
+	local buf = exo.floats
+	local batch = self.batch
+	local batch_count = 0
+	local current_atlas
+	local last_alpha
+	local scale_factor = self.exo_scale_factor
+
+	batch:clear()
+
+	for idx = 0, frame.count - 1 do
+		local o = frame.base + idx * 10
+
+		if buf[o] == 1 then
+			local part = exo.parts[buf[o + 1]]
+
+			if part then
+				local ss = I:s(part[1])
+
+				if ss then
+					if ss.atlas and ss.atlas ~= current_atlas then
+						if batch_count > 0 then
+							G.draw(batch)
+
+							batch_count = 0
+						end
+
+						batch:clear()
+
+						last_alpha = nil
+						current_atlas = ss.atlas
+						batch:setTexture(I:i(current_atlas))
+					end
+
+					local alpha = buf[o + 2]
+
+					if alpha ~= last_alpha then
+						batch:setColor(1, 1, 1, alpha)
+
+						last_alpha = alpha
+					end
+
+					local x, y, sx, sy, r = buf[o + 3], buf[o + 4], buf[o + 5], buf[o + 6], buf[o + 7]
+					local ref_scale = ss.ref_scale or 1
+					local pox, poy = part[2], part[3]
+
+					if scale_factor then
+						x = x * scale_factor
+						y = y * scale_factor
+						pox = pox * scale_factor
+						poy = poy * scale_factor
+					end
+
+					local ox = 0.5 * ss.size[0] - ss.trim[0] - pox / ref_scale
+					local oy = 0.5 * ss.size[1] - ss.trim[1] - poy / ref_scale
+
+					batch:add(ss.quad, x, y, r, sx * ref_scale, sy * ref_scale, ox, oy, buf[o + 8], buf[o + 9])
+
+					batch_count = batch_count + 1
+				end
+			end
+		end
+	end
+
+	if batch_count > 0 then
+		G.draw(batch)
+	end
+end
+
+function ExoView:destroy()
+	self.batch = nil
+	self._exo_frame = nil
+
+	KView.destroy(self)
 end
 
 KVideoView = class("KVideoView", KView)

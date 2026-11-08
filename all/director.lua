@@ -455,6 +455,35 @@ function director:unload_item(item)
 
 		self:unload_sound_groups(item.plugin_required_sounds)
 
+		-- 与加载对称：screen 及其世代/英雄声明的 exo 一并释放
+		local screen_exos = item.required_exoskeletons
+
+		if hero_resources and hero_resources.required_exoskeletons then
+			screen_exos = screen_exos and table.append(screen_exos, hero_resources.required_exoskeletons, true) or table.clone(hero_resources.required_exoskeletons)
+		end
+
+		if gen_resources and gen_resources.required_exoskeletons then
+			screen_exos = screen_exos and table.append(screen_exos, gen_resources.required_exoskeletons, true) or table.clone(gen_resources.required_exoskeletons)
+		end
+
+		if screen_exos then
+			EXO:unload(screen_exos)
+		end
+
+		local plugin_exos = item.plugin_required_exoskeletons
+
+		if hero_resources and hero_resources.plugin_required_exoskeletons then
+			plugin_exos = table.merge(plugin_exos or {}, hero_resources.plugin_required_exoskeletons, true)
+		end
+
+		if gen_resources and gen_resources.plugin_required_exoskeletons then
+			plugin_exos = table.merge(plugin_exos or {}, gen_resources.plugin_required_exoskeletons, true)
+		end
+
+		if plugin_exos then
+			EXO:unload(plugin_exos)
+		end
+
 		if item.destroy then
 			item:destroy()
 		end
@@ -562,6 +591,40 @@ function director:queue_load_item_named(name)
 
 		if item.ref_res then
 			item.screen_scale = self:get_texture_scale(name, item.ref_res)
+		end
+
+		-- screen 声明的 exo：与纹理/音效一样由 director 统一加载，UI 只负责渲染
+		local screen_exos = item.required_exoskeletons
+
+		if hero_resources and hero_resources.required_exoskeletons then
+			screen_exos = screen_exos and table.append(screen_exos, hero_resources.required_exoskeletons, true) or table.clone(hero_resources.required_exoskeletons)
+		end
+
+		if gen_resources and gen_resources.required_exoskeletons then
+			screen_exos = screen_exos and table.append(screen_exos, gen_resources.required_exoskeletons, true) or table.clone(gen_resources.required_exoskeletons)
+		end
+
+		if screen_exos then
+			A:load()
+			EXO:queue_load(screen_exos)
+		end
+
+		local plugin_exos = item.plugin_required_exoskeletons
+
+		if hero_resources and hero_resources.plugin_required_exoskeletons then
+			plugin_exos = table.merge(plugin_exos or {}, hero_resources.plugin_required_exoskeletons, true)
+		end
+
+		if gen_resources and gen_resources.plugin_required_exoskeletons then
+			plugin_exos = table.merge(plugin_exos or {}, gen_resources.plugin_required_exoskeletons, true)
+		end
+
+		if plugin_exos then
+			EXO:queue_load_plugin(plugin_exos)
+		end
+
+		if screen_exos or plugin_exos then
+			EXO:load()
 		end
 
 		self.queued_item = item

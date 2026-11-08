@@ -79,6 +79,8 @@ function common.standard(config)
 			points = config.points,
 			start_here_pos = v(292, 775),
 			animations = config.map_animations,
+			animation_transform = config.map_animation_transform,
+			progress = config.map_progress,
 			decos = config.map_decos,
 			level_data = config.level_data,
 			thumb_key = config.thumb_key,

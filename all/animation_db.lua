@@ -256,7 +256,7 @@ end
 local function frame_index(len, time_offset, loop, fps)
 	local time_in_frames_plus_eps = time_offset * fps
 	local idx = loop and (floor(time_in_frames_plus_eps) % len + 1) or max(1, min(len, ceil(time_in_frames_plus_eps)))
-	local runs = max(0, floor((ceil(time_in_frames_plus_eps + adaptive_fps.tick_length * fps) - 1) / len))
+	local runs = max(0, floor((ceil(time_in_frames_plus_eps + (adaptive_fps.tick_length or 1 / fps) * fps) - 1) / len))
 
 	return idx, runs
 end
