@@ -687,6 +687,11 @@ function director:queue_load_item_named(name)
 		self:load_sound_groups(game.required_sounds)
 		self:load_sound_groups(game.plugin_required_sounds)
 		self:load_sound_groups(game.store.level.required_sounds)
+		if game.store.level.plugin_required_textures then
+			self:load_plugin_texture_groups(game.store.level.plugin_required_textures, game.ref_res, true, "game")
+		end
+
+		self:load_sound_groups(game.store.level.plugin_required_sounds)
 		self:load_sound_groups(game_gui.plugin_required_sounds)
 
 		if game.store.level.required_exoskeletons then
@@ -700,18 +705,6 @@ function director:queue_load_item_named(name)
 		EXO:queue_load(game.required_exoskeletons)
 		EXO:queue_load_plugin(game.plugin_required_exoskeletons)
 		EXO:queue_load_plugin(game_gui.plugin_required_exoskeletons)
-
-		if args.custom_map_root then
-			local level = game.store.level
-			if level then
-				if level.plugin_required_textures then
-					self:load_plugin_texture_groups(level.plugin_required_textures, game.ref_res, true, "game")
-				end
-				if level.plugin_required_sounds then
-					self:load_sound_groups(level.plugin_required_sounds)
-				end
-			end
-		end
 
 		if configer.config().enabled and configer.config().random_hero then
 			if not slot.heroes.selected then
