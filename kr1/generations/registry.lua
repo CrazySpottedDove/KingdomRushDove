@@ -2,13 +2,50 @@
 -- 插件在初始化时调用 GENS:register(module) 即可加入切换菜单。
 local Registry = require("registry")
 local LEGACY = require("generations.legacy")
+local common = require("kr1.generations.common")
 
 local GENS = Registry.new({
 	module_names = {"kr1.generations.kr1.init", "kr1.generations.kr2.init", "kr1.generations.kr3.init", "kr1.generations.kr5.init", "kr1.generations.kr6.init", "kr1.generations.custom.init"},
 	sort_fn = function(a, b)
-		return a.order < b.order
+		local ao = a.order or math.huge
+		local bo = b.order or math.huge
+
+		if ao == bo then
+			return (a.name or "") < (b.name or "")
+		end
+
+		return ao < bo
 	end
 })
+
+local ORDER_STEP = 10
+
+--- 注册时补全展示顺序：未声明 order 的模块按注册顺序递增。
+--- 插件若要插到本体世代之间，显式传 order 即可。
+function GENS:add(module)
+	local existing = self.by_id[module.name]
+
+	if module.levels and module.levels.ranges then
+		local meta = common.level_meta(module.levels.ranges)
+
+		module.levels.count = meta.count
+		module.levels.main_campaign_last = meta.main_campaign_last
+		module.levels.max_stars = meta.max_stars
+	end
+
+	if module.order == nil then
+		if existing and existing.order ~= nil then
+			module.order = existing.order
+		else
+			self._next_order = (self._next_order or 0) + ORDER_STEP
+			module.order = self._next_order
+		end
+	elseif self._next_order == nil or module.order > self._next_order then
+		self._next_order = module.order
+	end
+
+	return Registry.add(self, module)
+end
 
 --- 所有世代星数上限总和（读档界面用）。
 ---@return number
