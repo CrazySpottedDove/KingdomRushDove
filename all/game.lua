@@ -5,6 +5,7 @@ local perf = require("dove_modules.perf.perf")
 local signal = require("lib.hump.signal")
 local V = require("lib.klua.vector")
 local U = require("utils")
+local LU = require("level_utils")
 local RU = require("render_utils")
 local I = require("lib.klove.image_db")
 local E = require("entity_db")
@@ -267,6 +268,11 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 		bottom = v_bottom,
 		right = v_right
 	}
+	-- visible_coords 始终同步为当前相机可见世界矩形；世界边界单独存放
+	local world_bounds = LU.get_world_bounds(self.store)
+
+	self.store.world_bounds = world_bounds
+
 	self.camera = {}
 	self.camera.x = screen_w * 0.5
 	self.camera.y = screen_h * 0.5
@@ -283,16 +289,44 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 		self.camera.wr = self.camera.wl + self.camera.wh * 1920 / 1080
 	end
 
-	self.camera.wt = (visible_h - v_top) * self.game_scale
-	self.camera.wb = (visible_h - v_bottom) * self.game_scale
+	-- world_bounds 始终存在：关卡可覆盖，默认是 1024x768
+	self.camera.wl = world_bounds.left * self.game_scale
+	self.camera.wr = world_bounds.right * self.game_scale
+	self.camera.wt = (visible_h - world_bounds.top) * self.game_scale
+	self.camera.wb = (visible_h - world_bounds.bottom) * self.game_scale
 	self.camera.zoom = 1
 	self.camera.min_zoom = aspect > 1.7777777777777777 and math.min(screen_w, MAX_SCREEN_ASPECT * screen_h) / (visible_w * self.game_scale) or 1
 	self.camera.max_zoom = 2.5
+	self.camera.sync_visible = function()
+		self:sync_visible_coords()
+	end
+
+	local camera_start = LU.get_camera_start(self.store)
+
+	if camera_start then
+		self.camera.x = camera_start.x * self.game_scale
+		self.camera.y = (visible_h - camera_start.y) * self.game_scale
+	end
 
 	function self.camera:clamp()
 		self.zoom = km.clamp(self.min_zoom, self.max_zoom, self.zoom)
-		self.x = km.clamp(self.wl + self.ww * self.min_zoom / (2 * self.zoom), self.wr - self.ww * self.min_zoom / (2 * self.zoom), self.x)
-		self.y = km.clamp(self.wt + self.wh / (2 * self.zoom), self.wb - self.wh / (2 * self.zoom), self.y)
+
+		local min_x = self.wl + self.ww * self.min_zoom / (2 * self.zoom)
+		local max_x = self.wr - self.ww * self.min_zoom / (2 * self.zoom)
+		local min_y = self.wt + self.wh / (2 * self.zoom)
+		local max_y = self.wb - self.wh / (2 * self.zoom)
+
+		if min_x <= max_x then
+			self.x = km.clamp(min_x, max_x, self.x)
+		else
+			self.x = (self.wl + self.wr) * 0.5
+		end
+
+		if min_y <= max_y then
+			self.y = km.clamp(min_y, max_y, self.y)
+		else
+			self.y = (self.wt + self.wb) * 0.5
+		end
 	end
 
 	function self.camera.tween(this, timer, time, x, y, zoom, ease)
@@ -304,12 +338,17 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 
 		this:cancel_tween(timer)
 
+		this.tweening = true
 		this.tweener = timer:tween(time, this, {
 			x = x,
 			y = y,
 			zoom = zoom
 		}, ease, function()
 			this.tweener = nil
+			this.tweening = nil
+			if this.sync_visible then
+				this.sync_visible()
+			end
 		end)
 	end
 
@@ -318,10 +357,12 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 			timer:cancel(this.tweener)
 
 			this.tweener = nil
+			this.tweening = nil
 		end
 	end
 
 	self.camera:clamp()
+	self:sync_visible_coords()
 
 	RU.init()
 
@@ -480,9 +521,31 @@ function game:camera_move_allowed()
 	return click_state.active and not (gui.damage_trace_panel and not gui.damage_trace_panel.hidden) and not (gui.pauseview and not gui.pauseview.hidden)
 end
 
+function game:sync_visible_coords()
+	local cam = self.camera
+	if not cam or not self.game_scale then
+		return
+	end
+
+	local vc = self.store.visible_coords
+	local zoom = cam.zoom or 1
+	local half_w = self.screen_w / (2 * zoom)
+	local half_h = self.screen_h / (2 * zoom)
+
+	vc.left = (cam.x - half_w) / self.game_scale
+	vc.right = (cam.x + half_w) / self.game_scale
+	vc.top = self.ref_h + (half_h - cam.y) / self.game_scale
+	vc.bottom = self.ref_h - (half_h + cam.y) / self.game_scale
+end
+
 function game:update(dt)
 	if DEBUG then
 		self:update_debug(dt)
+	end
+
+	-- 相机补间期间 x/y/zoom 每帧都在变，才需要每帧同步。
+	if self.camera and self.camera.tweening then
+		self:sync_visible_coords()
 	end
 
 	if self:camera_move_allowed() then
@@ -494,6 +557,7 @@ function game:update(dt)
 			self.camera.x = self.camera.x - sx + click_state.x
 			self.camera.y = self.camera.y - sy + click_state.y
 			self.camera:clamp()
+			self:sync_visible_coords()
 			click_state.x = sx
 			click_state.y = sy
 		end
@@ -598,6 +662,7 @@ function game:wheelmoved(dx, dy)
 		self.camera.zoom = self.camera.zoom * (1 + dy * 0.1)
 
 		self.camera:clamp()
+		self:sync_visible_coords()
 	end
 end
 
@@ -658,6 +723,7 @@ function game:touchmoved(id, x, y, dx, dy, pressure)
 				-- 以两指中心为缩放中心
 				self.camera.zoom = new_zoom
 				self.camera:clamp()
+				self:sync_visible_coords()
 			end
 		end
 	end

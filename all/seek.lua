@@ -24,11 +24,22 @@ end
 
 local _aspect = ASPECT
 local _aspect_inv = 1.0 / _aspect
-local _cell_size_factor = SPATIAL_HASH_CELL_SIZE_FACTOR
-local _x_min = IN_GAME_X_MIN
-local _y_min = IN_GAME_Y_MIN
-local _cols = SPATIAL_HASH_COLS
-local _rows = SPATIAL_HASH_ROWS
+local _cell_size_factor = 1 / SPATIAL_HASH_CELL_SIZE
+local _x_min = 0
+local _y_min = 0
+local _cols = 0
+local _rows = 0
+
+--- 同步 spatial_index 的动态网格参数。
+--- spatial_index.rebuild 后必须调用，否则索敌会继续使用旧网格坐标。
+---@param params table
+function seek.set_grid_params(params)
+	_x_min = params.x_min
+	_y_min = params.y_min
+	_cols = params.cols
+	_rows = params.rows
+	_cell_size_factor = params.cell_size_factor
+end
 local ceil = math.ceil
 local floor = math.floor
 local max = math.max

@@ -5,6 +5,7 @@ local signal = require("lib.hump.signal")
 local km = require("lib.klua.macros")
 local P = require("path_db")
 local U = require("utils")
+local LU = require("level_utils")
 local perf = require("dove_modules.perf.perf")
 
 function enemy:init(store)
@@ -24,12 +25,17 @@ function enemy:init(store)
 	package.loaded["spatial_index"] = nil
 	store.enemy_spatial_index = require("spatial_index")
 
+	-- 每个关卡可能有不同的地图尺寸；实体插入前按世界边界重建空间索引
+	-- 没有声明 map_size 的关卡会使用默认 1024x768
+	store.enemy_spatial_index.rebuild(LU.get_spatial_bounds(store))
+
 	store.enemy_spatial_index.set_entities(store.enemies)
 	store.enemy_spatial_index.gc_locked(store)
 
 	local seek = require("seek")
 
 	seek.set_id_arrays(store.enemy_spatial_index.get_id_arrays())
+	seek.set_grid_params(store.enemy_spatial_index.get_grid_params())
 	seek.set_entities(store.enemies)
 end
 

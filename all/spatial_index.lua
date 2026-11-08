@@ -8,13 +8,13 @@ require("all.constants")
 
 local ceil = math.ceil
 local floor = math.floor
-local max = math.max
-local min = math.min
-local _cell_size_factor = SPATIAL_HASH_CELL_SIZE_FACTOR
-local _x_min = IN_GAME_X_MIN
-local _y_min = IN_GAME_Y_MIN
-local _cols = SPATIAL_HASH_COLS
-local _max_size = SPATIAL_HASH_MAX_INDEX
+local _cell_size = SPATIAL_HASH_CELL_SIZE
+local _cell_size_factor = 1 / _cell_size
+local _x_min = 0
+local _y_min = 0
+local _cols = 0
+local _rows = 0
+local _max_size = 0
 local _check_interval = SPATIAL_INDEX_CHECK_INTERVAL
 
 -- array: 存储实体 id 的数组
@@ -29,11 +29,20 @@ typedef struct{
 ]]
 
 --- 模块数据区 BEGIN
--- id_array 数组，共 SPATIAL_HASH_MAX_INDEX 个元素
-local id_arrays = ffi.new("id_array[?]", _max_size)
+local id_arrays = nil
 
-for i = 0, _max_size - 1 do
-	id_arrays[i].size = 0
+--- 按当前世界边界重新分配空间索引。
+---@param cols number
+---@param rows number
+local function allocate(cols, rows)
+	_cols = cols
+	_rows = rows
+	_max_size = _cols * _rows
+	id_arrays = ffi.new("id_array[?]", _max_size)
+
+	for i = 0, _max_size - 1 do
+		id_arrays[i].size = 0
+	end
 end
 
 local entities = nil
@@ -42,6 +51,42 @@ local t = 0
 --- 模块数据区 END
 -- 对外暴露方法集
 local spatial_index = {}
+
+--- 根据世界边界重建空间索引。
+--- 每局开始、关卡尺寸不同或切换地图后调用；重建后原有实体索引失效，必须在实体插入前调用。
+---@param bounds table {left, bottom, right, top}
+---@param cell_size number|nil
+function spatial_index.rebuild(bounds, cell_size)
+	_cell_size = cell_size or SPATIAL_HASH_CELL_SIZE
+	_cell_size_factor = 1 / _cell_size
+	_x_min = bounds.left
+	_y_min = bounds.bottom
+
+	allocate(ceil((bounds.right - bounds.left) / _cell_size), ceil((bounds.top - bounds.bottom) / _cell_size))
+	t = 0
+end
+
+--- 当前空间索引实际覆盖的世界范围。
+function spatial_index.get_bounds()
+	return {
+		left = _x_min,
+		bottom = _y_min,
+		right = _x_min + _cols * _cell_size,
+		top = _y_min + _rows * _cell_size
+	}
+end
+
+--- 当前网格参数。seek 等 friend module 必须用这些值同步自己的缓存。
+function spatial_index.get_grid_params()
+	return {
+		x_min = _x_min,
+		y_min = _y_min,
+		cols = _cols,
+		rows = _rows,
+		cell_size = _cell_size,
+		cell_size_factor = _cell_size_factor
+	}
+end
 
 -- 用 set 方法设置 entities 引用
 function spatial_index.set_entities(entities_given)
@@ -54,7 +99,6 @@ end
 
 function spatial_index.insert_entity(entity)
 	local id_array_index = floor((entity.pos.y - _y_min) * _cell_size_factor) * _cols + floor((entity.pos.x - _x_min) * _cell_size_factor)
-
 	local id_array = id_arrays[id_array_index]
 
 	-- 让 entity 知道自己在 spatial_index 中的位置

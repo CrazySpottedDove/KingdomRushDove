@@ -2,6 +2,7 @@
 local log = require("lib.klua.log"):new("level_utils")
 
 require("lib.klua.table")
+require("all.constants")
 
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
@@ -16,6 +17,104 @@ local bit = require("bit")
 local U = require("utils")
 local HEROES = require("heroes.registry")
 local LU = {}
+
+--- 默认世界尺寸：覆盖旧版相机实际可到达的 16:9 世界范围。
+--- 这样未声明 map_size 的旧关卡与旧版相机 clamp 完全一致。
+local DEFAULT_WORLD_WIDTH = REF_H * 16 / 9
+
+LU.DEFAULT_MAP_SIZE = {
+	width = DEFAULT_WORLD_WIDTH,
+	height = REF_H
+}
+
+--- 默认世界原点：让默认世界以 1024x768 为中心。
+LU.DEFAULT_MAP_ORIGIN = {
+	x = (REF_W - DEFAULT_WORLD_WIDTH) * 0.5,
+	y = 0
+}
+
+--- 默认世界的零原点。
+LU.ZERO_MAP_ORIGIN = {
+	x = 0,
+	y = 0
+}
+
+--- 默认空间索引 margin。
+--- 默认世界是旧版相机实际范围；这组 margin 让默认参数下的空间索引
+--- 正好落在旧版 -400..1500 / -250..1000。
+LU.DEFAULT_SPATIAL_MARGIN = {
+	left = 229.33333333333337,
+	right = 305.33333333333348,
+	bottom = 250,
+	top = 232
+}
+
+--- 读取关卡声明的世界尺寸；未声明时返回默认世界。
+--- 关卡数据被视为可信输入，不做运行时校验。
+---@param store table
+---@return table {width, height}
+function LU.get_map_size(store)
+	local data = store.level.data
+
+	return data.map_size or LU.DEFAULT_MAP_SIZE
+end
+
+--- 读取关卡声明的世界原点。
+---@param store table
+---@return table {x, y}
+function LU.get_map_origin(store)
+	local data = store.level.data
+
+	if data.map_origin then
+		return data.map_origin
+	end
+
+	-- 显式声明了 map_size 时，原点默认是 (0, 0)
+	if data.map_size then
+		return LU.ZERO_MAP_ORIGIN
+	end
+
+	return LU.DEFAULT_MAP_ORIGIN
+end
+
+--- 派生世界边界。world_bounds 用于相机/空间索引；
+--- store.visible_coords 由 game 在相机变化时同步为当前可见世界矩形，不另设别名。
+---@param store table
+---@return table {left, right, bottom, top}
+function LU.get_world_bounds(store)
+	local size = LU.get_map_size(store)
+	local origin = LU.get_map_origin(store)
+
+	return {
+		left = origin.x,
+		bottom = origin.y,
+		right = origin.x + size.width,
+		top = origin.y + size.height
+	}
+end
+
+--- 空间索引边界：世界边界向外扩默认 margin，容纳出生/离场等屏幕外实体。
+--- 默认参数下结果与原版 IN_GAME_* 完全一致。
+---@param store table
+---@return table
+function LU.get_spatial_bounds(store)
+	local bounds = LU.get_world_bounds(store)
+	local margin = LU.DEFAULT_SPATIAL_MARGIN
+
+	return {
+		left = bounds.left - margin.left,
+		bottom = bounds.bottom - margin.bottom,
+		right = bounds.right + margin.right,
+		top = bounds.top + margin.top
+	}
+end
+
+--- 读取关卡声明的初始镜头位置（世界坐标）。
+---@param store table
+---@return table|nil {x, y}
+function LU.get_camera_start(store)
+	return store.level.data.camera_start
+end
 
 --- 关卡资源搜索前缀：编辑器 > generation 资源根 > custom map > 本体资源根。
 ---@param store table?
@@ -293,7 +392,7 @@ function LU.insert_entities(store, items, store_back_references)
 					if k ~= "template" then
 						local vv = v
 
-						if not store_back_references and type(v) == "table" then
+						if not store_back_references and (type(v) == "table" or type(v) == "cdata") then
 							vv = table.deepclone(v)
 						end
 

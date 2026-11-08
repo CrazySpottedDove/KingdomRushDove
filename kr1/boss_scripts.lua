@@ -4642,7 +4642,9 @@ function scripts.eb_spider.update(this, store)
 			s.sort_y = this.pos.y
 		end
 
-		U.y_ease_key(store, this.pos, "y", this.pos.y, math.min(this.pos.y + REF_H, IN_GAME_Y_MAX - 1), 1, "quad-in")
+		local spatial_bounds = store.enemy_spatial_index.get_bounds()
+
+		U.y_ease_key(store, this.pos, "y", this.pos.y, math.min(this.pos.y + REF_H, spatial_bounds.top - 1), 1, "quad-in")
 	end
 
 	local function y_jump_in(round_idx)
@@ -12070,9 +12072,9 @@ end
 scripts.enemy_boss_stage_11 = {}
 
 function scripts.enemy_boss_stage_11.update(this, store, script)
-	-- dove 的 spatial_index 上界是 IN_GAME_Y_MAX(=1000) 开区间，boss 升到 y=1000 会
-	-- `spatial_index.on_update: ... out of bounds`。取 1000 以下的值即可（仍在屏幕外）。
-	local OFF_SCREEN_X, OFF_SCREEN_Y = 512, 950
+	-- 保持在当前空间索引上界以下，避免 spatial_index.on_update 越界。
+	local spatial_bounds = store.enemy_spatial_index.get_bounds()
+	local OFF_SCREEN_X, OFF_SCREEN_Y = 512, spatial_bounds.top - 50
 	local controller = boss_find_all_t(store, this.controller_t)[1]
 	local phase = 1
 
