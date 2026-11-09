@@ -2631,6 +2631,10 @@ function PluginManagerView:_render_local_list()
 			local own = self:_is_own_plugin(cfg)
 			local missing = self._remote_lookup_done and not remote and not own
 			local is_dev = (cfg.branch or "master") == "dev"
+			local release_tag = ""
+			if is_dev and cfg.release_version and cfg.release_version ~= "" then
+				release_tag = string.format(_("PLUGIN_MGR_DEV_RELEASE_VERSION"), utf8_util.sanitize(cfg.release_version))
+			end
 
 			if is_deprecated(remote) then
 				status = _("PLUGIN_MGR_STATUS_DEPRECATED_LOCAL")
@@ -2703,7 +2707,7 @@ function PluginManagerView:_render_local_list()
 			local row = PluginItemRow:new({
 				plugin_data = plugin_data,
 				title = cfg.name,
-				meta = string.format(_("PLUGIN_MGR_META_PLUGIN_AUTHOR"), plugin_data.config.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)) .. self:_group_tag_for(plugin_data.config.entry),
+				meta = string.format(_("PLUGIN_MGR_META_PLUGIN_AUTHOR"), plugin_data.config.entry, utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)) .. self:_group_tag_for(plugin_data.config.entry) .. release_tag,
 				desc = cfg.desc,
 				status = status,
 				show_toggle = not global_disabled,
@@ -2823,9 +2827,17 @@ function PluginManagerView:_render_store_list()
 			}
 		end
 
+		local release_version = item.release_version
+		if (not release_version or release_version == "") and local_plugin and local_plugin.config then
+			release_version = local_plugin.config.release_version
+		end
+		local release_tag = ""
+		if is_dev and release_version and release_version ~= "" then
+			release_tag = string.format(_("PLUGIN_MGR_DEV_RELEASE_VERSION"), utf8_util.sanitize(release_version))
+		end
 		local row = PluginItemRow:new({
 			title = item.name or item.entry,
-			meta = string.format(_("PLUGIN_MGR_META_STORE_ITEM"), utf8_util.sanitize(item.version), utf8_util.sanitize(item.downloads), utf8_util.sanitize(item.by)) .. (item.branch == "dev" and "  [dev]" or ""),
+			meta = string.format(_("PLUGIN_MGR_META_STORE_ITEM"), utf8_util.sanitize(item.version), utf8_util.sanitize(item.downloads), utf8_util.sanitize(item.by)) .. (is_dev and "  [dev]" or "") .. release_tag,
 			desc = item.desc or "",
 			status = status,
 			show_toggle = false,
