@@ -111,27 +111,19 @@ local function mode_suffix(mode)
 	return GEU.mode_to_str(mode or GAME_MODE_CAMPAIGN)
 end
 
-local function wave_cfg_rel(level_name, mode)
-	return string.format("game_editor/data/waveconfigs/%s_waves_%s_config.lua", level_name, mode_suffix(mode))
+local function wave_cfg_rel(gen_id, level_name, mode)
+	return string.format("%s/data/waveconfigs/%s_waves_%s_config.lua", LU.editor_generation_root(gen_id), level_name, mode_suffix(mode))
 end
 
-local function wave_rel(level_name, mode)
-	return string.format("game_editor/data/waves/%s_waves_%s.lua", level_name, mode_suffix(mode))
-end
-
-local function load_lua_table_with_pref(path)
-	local f = love.filesystem.loadWithPreference(path, {EDITOR_PATH, KR_PATH_GAME})
-	if not f then
-		return nil
-	end
-	local ok, data = pcall(f)
-	if ok and type(data) == "table" then
-		return data
-	end
-	return nil
+local function wave_rel(gen_id, level_name, mode)
+	return string.format("%s/data/waves/%s_waves_%s.lua", LU.editor_generation_root(gen_id), level_name, mode_suffix(mode))
 end
 
 local function sanitize_wave_config(raw)
+	if raw == nil then
+		return wave_gen_interface.config_default()
+	end
+
 	local ok, err = wave_gen_interface.validate_config(raw)
 	if not ok then
 		log.error("Invalid wave config, using default config instead: %s", err)
@@ -587,18 +579,31 @@ end
 -- 	level.required_exoskeletons = table.deepclone(data.required_exoskeletons)
 -- end
 
--- 加载某一个关卡。查找顺序：编辑器目录 → 游戏目录 → 初始化空白关卡
-function editor:load_level(idx, mode, recover)
+-- 加载某一个关卡。查找顺序：编辑器代际目录 → generation 资源根 → 游戏目录 → 初始化空白关卡
+---@param gen_id string 代际 id，例如 kr1 / kr6 / 插件代际名
+---@param local_idx number 代际内关卡序号
+---@param mode number 游戏模式
+---@param recover boolean? 是否强制恢复至本体内容
+function editor:load_level(gen_id, local_idx, mode, recover)
+	-- 兼容旧的全局关卡号调用：load_level(global_idx, mode, recover)
+	if type(gen_id) == "number" then
+		local legacy_gen, legacy_idx = LEGACY.to_ref(gen_id)
+		gen_id, local_idx, mode, recover = legacy_gen or gen_id, legacy_idx, local_idx, mode
+	end
+
 	if recover then
 		-- 如果是希望恢复至游戏本体内容，优先从游戏目录加载。
 		EDITOR_PATH = "kr1"
 	end
 
-	-- 清理上一插件关卡资源
+	-- 清理上一关卡资源
 	if self.store and self.store.level then
 		local old = self.store.level
 		if old.plugin_required_textures then
 			director:queue_unload_plugin_texture_groups(old.plugin_required_textures, self.ref_res, "game_editor")
+		end
+		if old.required_textures then
+			director:queue_unload_texture_groups(old.required_textures, self.ref_res, "game_editor")
 		end
 	end
 
@@ -617,73 +622,19 @@ function editor:load_level(idx, mode, recover)
 
 	local s = self.store
 
-	if not idx then
-		-- 默认值：斗蛐蛐关卡
-		idx = 1000
-	end
+	-- 默认值：第一代第一关
+	gen_id = gen_id or "kr1"
+	local_idx = local_idx or 1
 
-	-- 如果没有 idx，我们应该找到一个合适的关卡序号，并创建一个新的关卡
-	-- if not idx then
-	-- -- 获取一个合适的关卡序号
-	-- idx = GEU.find_min_editor_index() - 1
-	-- s.level_idx = idx
-	-- s.level_name = "level" .. string.format("%02i", idx)
-	-- s.level_mode = mode
-	-- s.level_difficulty = DIFFICULTY_EASY
-	-- s.level = {
-	-- 	data = {
-	-- 		locked_hero = false,
-	-- 		level_terrain_style = "tower_holder_grass",
-	-- 		max_upgrade_level = 6,
-	-- 		entities_list = {},
-	-- 		invalid_path_ranges = {},
-	-- 		level_mode_overrides = {{}, {}, {}},
-	-- 		nav_mesh = {},
-	-- 		custom_resources = {},
-	-- 		required_sounds = {},
-	-- 		required_textures = {},
-	-- 		required_exoskeletons = {}
-	-- 	},
-	-- 	unlock_towers = {},
-	-- 	locked_towers = {}
-	-- }
-	-- for _, n in ipairs({
-	-- 	"required_textures",
-	-- 	"required_sounds",
-	-- 	"required_exoskeletons",
-	-- 	"locked_hero",
-	-- 	"locked_powers",
-	-- 	"locked_towers",
-	-- 	"max_upgrade_level",
-	-- 	"custom_spawn_pos",
-	-- 	"show_comic_idx",
-	-- 	"nav_mesh",
-	-- 	"unlock_towers",
-	-- 	"custom_start_pos",
-	-- 	"ignore_walk_backwards_paths"
-	-- }) do
-	-- 	s.level[n] = s.level.data[n]
-	-- end
-	-- else
-	-- 不需要区分来自 game_editor 目录还是游戏目录，直接进行加载。默认情况下，会先从 game_editor 加载，然后才是从游戏目录加载。
-	local gen_id, local_idx = LEGACY.to_ref(idx)
+	local gen = GENS:get(gen_id)
 
-	if gen_id then
-		local gen = GENS:get(gen_id)
+	s.gen_id = gen_id
+	s.level_idx = local_idx
+	s.level_name = GENS:level_name(gen_id, local_idx)
+	s.level_file = GENS:level_file(gen_id, local_idx)
+	s.level_root = gen and gen.resource_root or nil
 
-		s.gen_id = gen_id
-		s.level_idx = local_idx
-		s.level_name = GENS:level_name(gen_id, local_idx)
-		s.level_file = GENS:level_file(gen_id, local_idx)
-		s.level_root = gen and gen.resource_root or nil
-	else
-		s.level_idx = idx
-		s.level_name = "level" .. string.format("%02i", idx)
-		s.level_file = nil
-		s.level_root = nil
-	end
-
-	s.level_mode = mode
+	s.level_mode = mode or GAME_MODE_CAMPAIGN
 	s.level_difficulty = DIFFICULTY_EASY
 	s.level = LU.load_level(s, s.level_name)
 	if not s.level.data then
@@ -728,6 +679,15 @@ function editor:load_level(idx, mode, recover)
 	load_required_templates(s.level)
 	-- custom_resource_table(s.level.data)
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
+	if s.level.plugin_required_textures then
+		director:load_plugin_texture_groups(s.level.plugin_required_textures, self.ref_res, false, "game_editor")
+	end
+	if s.level.required_sounds then
+		director:load_sound_groups(s.level.required_sounds)
+	end
+	if s.level.plugin_required_sounds then
+		director:load_sound_groups(s.level.plugin_required_sounds)
+	end
 
 	if s.level.required_exoskeletons then
 		EXO:queue_load(s.level.required_exoskeletons)
@@ -796,7 +756,7 @@ function editor:load_level(idx, mode, recover)
 	self.undo_active = true
 	self:load_wave_assets()
 
-	self.gui:level_loaded(idx)
+	self.gui:level_loaded(gen_id, local_idx)
 
 	if recover then
 		EDITOR_PATH = "game_editor"
@@ -987,8 +947,12 @@ function editor:save_wave_assets()
 		cfg_path = base .. "/waveconfigs/" .. level_name .. "_waves_" .. suffix .. "_config.lua"
 		wave_path = base .. "/waves/" .. level_name .. "_waves_" .. suffix .. ".lua"
 	else
-		cfg_path = wave_cfg_rel(level_name, mode)
-		wave_path = wave_rel(level_name, mode)
+		local gen_id = self.store.gen_id
+		local base = self:_editor_generation_root() .. "/data"
+		love.filesystem.createDirectory(base .. "/waveconfigs")
+		love.filesystem.createDirectory(base .. "/waves")
+		cfg_path = wave_cfg_rel(gen_id, level_name, mode)
+		wave_path = wave_rel(gen_id, level_name, mode)
 	end
 
 	self.wave_config = sanitize_wave_config(self.wave_config)
@@ -1011,9 +975,13 @@ function editor:init(screen_w, screen_h, done_callback)
 	game_editor_gui:init(screen_w, screen_h, self)
 	self.gui = game_editor_gui
 
+	local level_gen_id = self.args and self.args.gen_id
 	local level_idx = self.args and self.args.level_idx
+	if not level_gen_id and self.args and self.args.level then
+		level_gen_id, level_idx = LEGACY.to_ref(tonumber(self.args.level))
+	end
 	local level_mode = (self.args and self.args.level_mode) or GAME_MODE_CAMPAIGN
-	self:load_level(level_idx, level_mode)
+	self:load_level(level_gen_id or "kr1", level_idx or 1, level_mode)
 
 	self.paths_visible = false
 	self.grid_visible = false
@@ -1808,16 +1776,26 @@ function editor:serialize_level()
 	end
 end
 
+function editor:_editor_generation_root()
+	return LU.editor_generation_root(self.store.gen_id or "kr1")
+end
+
+function editor:_editor_level_name()
+	return self.store.level_file or self.store.level_name
+end
+
 function editor:_plugin_save_path(name)
 	if self.store.custom_map_entry then
 		love.filesystem.createDirectory("plugins/" .. self.store.custom_map_entry .. "/data/levels")
 		return "plugins/" .. self.store.custom_map_entry .. "/data/levels/" .. name
 	end
-	return "game_editor/data/levels/" .. name
+	local dir = self:_editor_generation_root() .. "/data/levels"
+	love.filesystem.createDirectory(dir)
+	return dir .. "/" .. name
 end
 
 function editor:save_data()
-	local fn = self:_plugin_save_path(self.store.level_name .. "_data.lua")
+	local fn = self:_plugin_save_path(self:_editor_level_name() .. "_data.lua")
 	-- self:refresh_required_assets()
 	self:serialize_level()
 	local data = table.deepclone(self.store.level.data)
@@ -1826,7 +1804,7 @@ function editor:save_data()
 end
 
 function editor:save_curves()
-	local fn = self:_plugin_save_path(self.store.level_name .. "_paths.lua")
+	local fn = self:_plugin_save_path(self:_editor_level_name() .. "_paths.lua")
 	local t = {
 		connections = P.path_connections,
 		curves = P.path_curves,
@@ -1840,7 +1818,7 @@ function editor:save_curves()
 end
 
 function editor:save_grid()
-	local fn = self:_plugin_save_path(self.store.level_name .. "_grid.lua")
+	local fn = self:_plugin_save_path(self:_editor_level_name() .. "_grid.lua")
 	local data = table.deepclone(GR)
 	clear_key(data, {"cell_size", "cell_type_names", "grid_colors", "grid_h", "grid_w", "waypoints_cache"})
 	return storage:write_lua(fn, data)
@@ -1852,7 +1830,7 @@ function editor:level_save()
 	if self.store.custom_map_entry then
 		love.filesystem.createDirectory("plugins/" .. self.store.custom_map_entry)
 	else
-		love.filesystem.createDirectory("game_editor/data/levels")
+		love.filesystem.createDirectory(self:_editor_generation_root() .. "/data/levels")
 	end
 	local ok_curves = self:save_curves()
 	local ok_grid = self:save_grid()

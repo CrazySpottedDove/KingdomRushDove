@@ -116,11 +116,26 @@ function LU.get_camera_start(store)
 	return store.level.data.camera_start
 end
 
---- 关卡资源搜索前缀：编辑器 > generation 资源根 > custom map > 本体资源根。
+--- 地图编辑器中某个代际的关卡资源根。
+--- 目录结构与仓库内的 generation 包一致：game_editor/generations/<gen>/data/...
+---@param gen_id string
+---@return string
+function LU.editor_generation_root(gen_id)
+	return string.format("%s/generations/%s", "game_editor", tostring(gen_id or "unknown"))
+end
+
+--- 关卡资源搜索前缀：编辑器代际覆盖 > generation 资源根 > custom map > 本体资源根。
 ---@param store table?
 ---@return table
 function LU.level_prefixes(store)
-	local prefixes = {EDITOR_PATH}
+	local prefixes = {}
+	local editor_root = EDITOR_PATH
+
+	-- 编辑器按代际保存的关卡优先覆盖本体关卡。
+	-- recover 时 EDITOR_PATH 会被临时改为本体根，此时不会命中编辑器目录。
+	if editor_root and store and store.gen_id then
+		prefixes[#prefixes + 1] = editor_root .. "/generations/" .. store.gen_id
+	end
 
 	if store and store.level_root then
 		prefixes[#prefixes + 1] = store.level_root
@@ -274,9 +289,9 @@ end
 
 --- 读取单个关卡文件，返回数据
 ---@param filename string
----@param prefixes table|nil 搜索前缀，默认优先编辑器目录（game_editor）
+---@param prefixes table|nil 搜索前缀，默认仅本体资源根
 function LU.eval_file(filename, prefixes)
-	local f, err = love.filesystem.loadWithPreference(filename, prefixes or {EDITOR_PATH, KR_PATH_GAME})
+	local f, err = love.filesystem.loadWithPreference(filename, prefixes or {KR_PATH_GAME})
 
 	if not f then
 		return nil, "File does not exist"

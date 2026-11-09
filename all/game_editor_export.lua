@@ -5,6 +5,8 @@ require("gg_views_custom")
 local V = require("lib.klua.vector")
 local v = V.v
 local storage = require("all.storage")
+local LU = require("level_utils")
+local GENS = require("generations.registry")
 local FS = love.filesystem
 
 local EditorExportView = class("EditorExportView", PopUpView)
@@ -273,20 +275,38 @@ function EditorExportView:_do_export()
 		priority = priority
 	}
 
-	local abs_base = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data"
-	local has_data = self:_copy_into_plugin("game_editor/data/levels/" .. level_name .. "_data.lua", abs_base .. "/levels/" .. level_name .. "_data.lua", levels_dir .. "/" .. level_name .. "_data.lua")
-	local has_paths = self:_copy_into_plugin("game_editor/data/levels/" .. level_name .. "_paths.lua", abs_base .. "/levels/" .. level_name .. "_paths.lua", levels_dir .. "/" .. level_name .. "_paths.lua")
-	self:_copy_into_plugin("game_editor/data/levels/" .. level_name .. "_grid.lua", abs_base .. "/levels/" .. level_name .. "_grid.lua", levels_dir .. "/" .. level_name .. "_grid.lua")
-	self:_copy_into_plugin("game_editor/data/levels/" .. level_name .. ".lua", abs_base .. "/levels/" .. level_name .. ".lua", levels_dir .. "/" .. level_name .. ".lua")
+	local gen_id = self.editor.store.gen_id or "kr1"
+	local level_file = self.editor.store.level_file or level_name
+	local gen = GENS:get(gen_id)
+	local editor_data_root
+	local abs_levels
+	local abs_waves
 
-	local has_campaign = self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_campaign.lua", abs_base .. "/waves/" .. level_name .. "_waves_campaign.lua", waves_dir .. "/" .. level_name .. "_waves_campaign.lua")
+	if self.editor.store.custom_map_entry then
+		editor_data_root = "plugins/" .. self.editor.store.custom_map_entry .. "/data"
+		abs_levels = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/"
+		abs_waves = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/waves/"
+	else
+		editor_data_root = LU.editor_generation_root(gen_id) .. "/data"
+
+		local resource_root = gen and gen.resource_root or KR_PATH_GAME
+		abs_levels = KR_FULLPATH_BASE .. "/" .. resource_root .. "/data/levels/"
+		abs_waves = KR_FULLPATH_BASE .. "/" .. resource_root .. "/data/waves/"
+	end
+
+	local has_data = self:_copy_into_plugin(editor_data_root .. "/levels/" .. level_file .. "_data.lua", abs_levels .. level_file .. "_data.lua", levels_dir .. "/" .. level_name .. "_data.lua")
+	local has_paths = self:_copy_into_plugin(editor_data_root .. "/levels/" .. level_file .. "_paths.lua", abs_levels .. level_file .. "_paths.lua", levels_dir .. "/" .. level_name .. "_paths.lua")
+	self:_copy_into_plugin(editor_data_root .. "/levels/" .. level_file .. "_grid.lua", abs_levels .. level_file .. "_grid.lua", levels_dir .. "/" .. level_name .. "_grid.lua")
+	self:_copy_into_plugin(editor_data_root .. "/levels/" .. level_file .. ".lua", abs_levels .. level_file .. ".lua", levels_dir .. "/" .. level_name .. ".lua")
+
+	local has_campaign = self:_copy_into_plugin(editor_data_root .. "/waves/" .. level_file .. "_waves_campaign.lua", abs_waves .. level_file .. "_waves_campaign.lua", waves_dir .. "/" .. level_name .. "_waves_campaign.lua")
 	if not has_campaign then
 		FS.write(waves_dir .. "/" .. level_name .. "_waves_campaign.lua", "return {\n    lives = 20,\n    cash = 800,\n    groups = {}\n}\n")
 		has_campaign = true
 	end
-	self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_heroic.lua", abs_base .. "/waves/" .. level_name .. "_waves_heroic.lua", waves_dir .. "/" .. level_name .. "_waves_heroic.lua")
+	self:_copy_into_plugin(editor_data_root .. "/waves/" .. level_file .. "_waves_heroic.lua", abs_waves .. level_file .. "_waves_heroic.lua", waves_dir .. "/" .. level_name .. "_waves_heroic.lua")
 
-	self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_iron.lua", abs_base .. "/waves/" .. level_name .. "_waves_iron.lua", waves_dir .. "/" .. level_name .. "_waves_iron.lua")
+	self:_copy_into_plugin(editor_data_root .. "/waves/" .. level_file .. "_waves_iron.lua", abs_waves .. level_file .. "_waves_iron.lua", waves_dir .. "/" .. level_name .. "_waves_iron.lua")
 
 	local resources = self.editor.store.level and self.editor.store.level.data and self.editor.store.level.data.custom_resources or {}
 
