@@ -5005,6 +5005,7 @@ return {
 	PLUGIN_MGR_CONFIRM_UNSAVED_TITLE = "Unsaved Changes",
 	PLUGIN_MGR_CONFIRM_UPLOAD_DEV = "Plugin %s is currently on the dev branch. Convert it to master before uploading, or continue uploading as dev.",
 	PLUGIN_MGR_CONFIRM_UPLOAD_PLUGIN = "Upload %s to the store?",
+	PLUGIN_MGR_DEV_RELEASE_VERSION = "  release:%s",
 	PLUGIN_MGR_DISABLED = "Disabled",
 	PLUGIN_MGR_DL_MANAGER_EMPTY = "No download tasks",
 	PLUGIN_MGR_DL_MANAGER_HINT = "After a task completes, \"Clear Records\" only removes list entries and does not delete installed plugins; uninstall plugins from the local list.",

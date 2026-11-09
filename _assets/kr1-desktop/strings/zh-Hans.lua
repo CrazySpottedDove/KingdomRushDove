@@ -5008,6 +5008,7 @@ return {
 	PLUGIN_MGR_CONFIRM_UNSAVED_TITLE = "有未保存的修改",
 	PLUGIN_MGR_CONFIRM_UPLOAD_DEV = "插件 %s 当前为 dev 分支。可转为 master 后上传，或继续以 dev 上传。",
 	PLUGIN_MGR_CONFIRM_UPLOAD_PLUGIN = "确认上传 %s 到商店？",
+	PLUGIN_MGR_DEV_RELEASE_VERSION = "  转正:%s",
 	PLUGIN_MGR_DISABLED = "已禁用",
 	PLUGIN_MGR_DL_MANAGER_EMPTY = "暂无下载任务",
 	PLUGIN_MGR_DL_MANAGER_HINT = "任务完成后点「清除记录」仅移除列表项，不会删除已安装的插件；卸载插件请在本地列表操作。",
