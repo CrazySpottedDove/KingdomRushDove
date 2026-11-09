@@ -140,6 +140,127 @@ function gui:set_selected_gen_id(gen_id)
 	end
 end
 
+function gui:get_selected_level_idx()
+	local w = wid("tools_level_name")
+
+	return tonumber(w and w.level_idx) or 1
+end
+
+--- 关卡下拉文案：序号 + 对应代际的 i18n 标题。
+function gui:level_display_text(gen_id, local_idx)
+	local key = GENS:level_title_key(gen_id, local_idx)
+	local title = key and _(key) or nil
+
+	if not title or title == "" or title == key then
+		return tostring(local_idx)
+	end
+
+	return string.format("%d  %s", local_idx, title)
+end
+
+function gui:set_selected_level(gen_id, local_idx)
+	local w = wid("tools_level_name")
+
+	if w then
+		w.level_idx = local_idx
+		w:set_value(self:level_display_text(gen_id, local_idx), true)
+	end
+end
+
+--- 列出当前代际的所有关卡：序号 + i18n 名称。
+function gui:show_level_selector()
+	if self.editor.store and self.editor.store.custom_map_entry then
+		return
+	end
+
+	local gen_id = self:get_selected_gen_id()
+	local gen = GENS:get(gen_id)
+	local count = gen and gen.levels and gen.levels.count or 0
+
+	if count <= 0 then
+		return
+	end
+
+	local sw, sh = self.window.size.x, self.window.size.y
+	local popup = PopUpView:new(V.v(sw, sh))
+	self.window:add_child(popup)
+
+	local pw, ph = 460, math.min(560, sh - 100)
+	local panel = KView:new(V.v(pw, ph))
+	panel.anchor = V.v(pw * 0.5, ph * 0.5)
+	panel.pos = V.v(sw * 0.5, sh * 0.5)
+	panel.colors.background = {46, 32, 18, 248}
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 12, 12}
+	}
+	popup:add_child(panel)
+
+	local title = GGLabel:new(V.v(pw - 20, 30))
+	title.pos = V.v(10, 8)
+	title.font_name = "h"
+	title.font_size = 18
+	title.text_align = "center"
+	title.text = string.format("%s: %s", _("EDITOR_TPL_PROP_LEVEL"), gen_id)
+	title.colors.text = {241, 222, 171, 255}
+	panel:add_child(title)
+
+	local list = KScrollList:new(V.v(pw - 24, ph - 50))
+	list.pos = V.v(12, 40)
+	list.drag_scroll_threshold = 6
+	list.scroll_amount = 44
+	list.colors.scroller_background = {45, 36, 22, 200}
+	list.colors.scroller_foreground = {110, 90, 50, 255}
+	list.scroller_width = 16
+	panel:add_child(list)
+
+	local current_idx = self:get_selected_level_idx()
+
+	for idx = 1, count do
+		local btn = KView:new(V.v(pw - 54, 34))
+		btn.colors.background = {35, 25, 12, 220}
+		btn.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, btn.size.x, btn.size.y, 6, 6}
+		}
+		list:add_row(btn)
+
+		local label = GGLabel:new(V.v(btn.size.x - 10, btn.size.y))
+		label.font_name = "body"
+		label.font_size = 14
+		label.text_align = "left"
+		label.vertical_align = "middle"
+		label.colors.text = {241, 222, 171, 255}
+		label.text = self:level_display_text(gen_id, idx)
+		label.fit_lines = 1
+		label.fit_size = true
+		label.propagate_on_click = true
+		btn:add_child(label)
+
+		if idx == current_idx then
+			btn.colors.background = {60, 45, 20, 240}
+		end
+
+		function btn.on_click()
+			popup:hide()
+			self:set_selected_level(gen_id, idx)
+			self:sync_level_identity()
+		end
+		function btn.on_enter()
+			btn.colors.background = {50, 35, 16, 240}
+		end
+		function btn.on_exit()
+			if idx == self:get_selected_level_idx() then
+				btn.colors.background = {60, 45, 20, 240}
+			else
+				btn.colors.background = {35, 25, 12, 220}
+			end
+		end
+	end
+
+	popup:show()
+end
+
 --- 列出所有已注册的标准代际（包含插件提供的代际），供编辑器选择。
 function gui:show_generation_selector()
 	local gens = {}
@@ -243,8 +364,14 @@ function gui:sync_level_identity()
 	end
 
 	local gen_id = self:get_selected_gen_id()
-	local local_idx = wid("tools_level_name").value
 	local gen = GENS:get(gen_id)
+	local local_idx = self:get_selected_level_idx()
+
+	if gen and gen.levels and gen.levels.count then
+		local_idx = km.clamp(local_idx, 1, gen.levels.count)
+	end
+
+	self:set_selected_level(gen_id, local_idx)
 
 	editor.store.gen_id = gen_id
 	editor.store.level_idx = local_idx
@@ -349,7 +476,7 @@ function gui:init(w, h, editor)
 			local mode = wid("tools_game_mode") and wid("tools_game_mode").value or GAME_MODE_CAMPAIGN
 			editor:load_plugin_level(editor.store.custom_map_entry, mode)
 		else
-			editor:load_level(self:get_selected_gen_id(), wid("tools_level_name").value, wid("tools_game_mode").value)
+			editor:load_level(self:get_selected_gen_id(), self:get_selected_level_idx(), wid("tools_game_mode").value)
 		end
 	end
 	wid("tools_recover").on_click = function()
@@ -644,8 +771,6 @@ function gui:init(w, h, editor)
 	wid("nav_adds_missing_numbers").on_click = function(this)
 		gui.adds_missing_numbers()
 	end
-	wid("tools_level_name").value = 1
-
 	local gen_w = wid("tools_gen_id")
 	if gen_w then
 		gen_w:set_value("kr1", true)
@@ -657,9 +782,13 @@ function gui:init(w, h, editor)
 		end
 	end
 
-	-- 修改代际/关卡时，自动更新关卡名称以保持一致
-	wid("tools_level_name").on_change = function(self)
-		gui:sync_level_identity()
+	self:set_selected_level("kr1", 1)
+
+	local level_w = wid("tools_level_name")
+	level_w.on_click = function(this)
+		self:show_level_selector()
+
+		return true
 	end
 
 	wid("tools_game_mode").on_change = function(self)
@@ -1142,7 +1271,26 @@ function gui:mousereleased(x, y, button)
 	self.window:mousereleased(x, y, button)
 end
 
+--- 判断屏幕坐标是否落在 GUI 控件上（世界区域只剩全屏 picker）。
+function gui:pointer_over_gui(x, y)
+	local wx, wy = self.window:screen_to_view(x - self.window.origin.x, y - self.window.origin.y)
+	local hit = self.window:hit_topmost(wx, wy, function()
+		return true
+	end)
+
+	return hit ~= nil and hit ~= wid("picker")
+end
+
 function gui:wheelmoved(dx, dy)
+	local x, y = love.mouse.getPosition()
+	local ctrl_down = love.keyboard.isDown("lctrl", "rctrl", "lgui", "rgui")
+
+	if ctrl_down or not self:pointer_over_gui(x, y) then
+		self.editor:zoom_at(x, y, dy)
+
+		return
+	end
+
 	self.window:wheelmoved(dx, dy)
 	local popups = {{
 		v = self._wave_editor,
@@ -1229,11 +1377,11 @@ function gui:level_loaded(gen_id, local_idx)
 
 	if type(gen_id) == "string" and local_idx == nil then
 		-- 插件自定义地图：沿用旧的单字段展示方式。
-		name_w.value = gen_id
-		name_w.lt.text = gen_id
+		name_w.level_idx = nil
+		name_w:set_value(gen_id, true)
 	else
 		self:set_selected_gen_id(gen_id or "kr1")
-		name_w:set_value(local_idx or 1)
+		self:set_selected_level(gen_id or "kr1", local_idx or 1)
 	end
 
 	local mode_w = wid("tools_game_mode")
