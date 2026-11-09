@@ -3270,10 +3270,12 @@ function PluginManagerView:_convert_plugin_branch_to_master(plugin_data)
 		return false, _("PLUGIN_MGR_ERR_CONFIG_WRITE")
 	end
 	disk_cfg.branch = "master"
+	disk_cfg.release_version = nil
 	if not plugin_paths.write_lua_table(path, disk_cfg) then
 		return false, _("PLUGIN_MGR_ERR_CONFIG_WRITE")
 	end
 	cfg.branch = "master"
+	cfg.release_version = nil
 	return true, nil
 end
 
