@@ -676,6 +676,7 @@ function editor:load_level(gen_id, local_idx, mode, recover)
 			end
 		end
 	end
+	self:fit_map_view()
 	load_required_templates(s.level)
 	-- custom_resource_table(s.level.data)
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
@@ -838,6 +839,7 @@ function editor:load_plugin_level(entry, mode)
 		end
 	end
 
+	self:fit_map_view()
 	load_required_templates(s.level)
 
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
@@ -961,6 +963,80 @@ function editor:save_wave_assets()
 	local ok_waves = save_lua_table(wave_path, self.wave_data)
 	return ok_cfg and ok_waves
 end
+
+--- 让编辑器所有依赖视图变换的缓存失效。
+function editor:invalidate_view()
+	self.entities_dirty = true
+	self.grid_dirty = true
+	self.paths_dirty = true
+	self.nav_dirty = true
+end
+
+--- 按整个关卡世界边界适配视图，异形尺寸地图也能完整显示。
+function editor:fit_map_view()
+	if not self.store or not self.store.level or not self.store.level.data then
+		return
+	end
+
+	local bounds = LU.get_world_bounds(self.store)
+	local world_w = bounds.right - bounds.left
+	local world_h = bounds.top - bounds.bottom
+
+	if world_w <= 0 or world_h <= 0 then
+		return
+	end
+
+	local padding = 48
+	local scale = math.min((self.screen_w - padding * 2) / world_w, (self.screen_h - padding * 2) / world_h, 1)
+	scale = km.clamp(scale, editor.MIN_VIEW_SCALE, editor.MAX_VIEW_SCALE)
+
+	self.game_scale = scale
+	self.game_ref_origin.x = (self.screen_w - world_w * scale) * 0.5 - bounds.left * scale
+	self.game_ref_origin.y = (self.screen_h - world_h * scale) * 0.5 - bounds.bottom * scale
+	self:invalidate_view()
+end
+
+--- 以屏幕坐标为中心缩放视图。
+---@param sx number
+---@param sy number
+---@param dy number 滚轮方向
+function editor:zoom_at(sx, sy, dy)
+	if not self.gui or dy == 0 then
+		return
+	end
+
+	local world_x, world_y = self.gui:u2g(V.v(sx, sy))
+	local old_scale = self.game_scale
+	local factor = dy > 0 and 1.1 or 1 / 1.1
+	local new_scale = km.clamp(old_scale * factor, editor.MIN_VIEW_SCALE, editor.MAX_VIEW_SCALE)
+
+	if new_scale == old_scale then
+		return
+	end
+
+	local gui = self.gui
+	local ui_scale = gui.scale or 1
+	local ui_origin = gui.window.origin
+
+	self.game_scale = new_scale
+	self.game_ref_origin.x = sx * ui_scale + ui_origin.x - world_x * new_scale
+	self.game_ref_origin.y = gui.sh * ui_scale - (sy * ui_scale + ui_origin.y) - world_y * new_scale
+	self:invalidate_view()
+end
+
+function editor:pan_by(dx, dy)
+	if dx == 0 and dy == 0 then
+		return
+	end
+
+	self.game_ref_origin.x = self.game_ref_origin.x + dx
+	-- 画布使用 Y 向上的世界坐标，origin.y 是“顶部留白”，因此屏幕向下拖动要减小它。
+	self.game_ref_origin.y = self.game_ref_origin.y - dy
+	self:invalidate_view()
+end
+
+editor.MIN_VIEW_SCALE = 0.1
+editor.MAX_VIEW_SCALE = 4
 
 function editor:init(screen_w, screen_h, done_callback)
 	adaptive_fps:set_scene(self)
@@ -1118,6 +1194,22 @@ function editor:destroy()
 end
 
 function editor:update(dt)
+	if self._view_panning then
+		local mx, my = love.mouse.getPosition()
+		local last = self._view_pan_last
+
+		if last then
+			self:pan_by(mx - last.x, my - last.y)
+
+			last.x = mx
+			last.y = my
+		end
+
+		if not love.mouse.isDown(self._view_pan_button or 3) then
+			self._view_panning = false
+		end
+	end
+
 	self.simulation:update(dt)
 	self.simulation:render_update(dt)
 	self.gui:update(dt)
@@ -1137,10 +1229,24 @@ function editor:textinput(t)
 end
 
 function editor:mousepressed(x, y, button)
+	if button == 3 or (button == 1 and love.keyboard.isDown("space")) then
+		self._view_panning = true
+		self._view_pan_button = button
+		self._view_pan_last = V.v(x, y)
+
+		return
+	end
+
 	self.gui:mousepressed(x, y, button)
 end
 
 function editor:mousereleased(x, y, button)
+	if self._view_panning and button == self._view_pan_button then
+		self._view_panning = false
+
+		return
+	end
+
 	self.gui:mousereleased(x, y, button)
 end
 
@@ -1605,10 +1711,12 @@ function editor:draw()
 	end
 
 	-- 绘制实体对应的帧
+	-- RU 的帧坐标是 y 向下（REF_H - world_y），而编辑器的画布使用 y 向上。
+	-- 这里必须用画布的世界原点换算出帧的顶部偏移，否则平移/缩放后帧会和选中十字、路径、网格错位。
 	G.push()
 	G.translate(self.gui.window.pos.x, self.gui.window.pos.y)
 	G.push()
-	G.translate(rox, roy)
+	G.translate(rox, self.screen_h - roy - self.ref_h * gs)
 	G.scale(gs, gs)
 
 	RU.draw_frames_range(self.store.render_frames, self.store.render_frames_start_idx, Z_GUI - 1)
