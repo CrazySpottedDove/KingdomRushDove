@@ -10,6 +10,7 @@ local F = require("lib.klove.font_db")
 local I = require("lib.klove.image_db")
 local SU = require("screen_utils")
 local LU = require("level_utils")
+local GENS = require("generations.registry")
 local E = require("entity_db")
 local U = require("utils")
 local V = require("lib.klua.vector")
@@ -114,6 +115,144 @@ function gui.are_axes_in_range(axi1, axi2, range)
 	end
 end
 
+function gui:get_selected_gen_id()
+	local w = wid("tools_gen_id")
+	local value = w and w.value
+
+	if type(value) ~= "string" then
+		return "kr1"
+	end
+
+	value = value:gsub("^%s+", ""):gsub("%s+$", "")
+
+	if value == "" then
+		return "kr1"
+	end
+
+	return value
+end
+
+function gui:set_selected_gen_id(gen_id)
+	local w = wid("tools_gen_id")
+
+	if w then
+		w:set_value(gen_id or "kr1", true)
+	end
+end
+
+--- 列出所有已注册的标准代际（包含插件提供的代际），供编辑器选择。
+function gui:show_generation_selector()
+	local gens = {}
+
+	for _, gen in ipairs(GENS:all()) do
+		if gen.kind == "standard" then
+			gens[#gens + 1] = gen
+		end
+	end
+
+	if #gens == 0 then
+		return
+	end
+
+	local sw, sh = self.window.size.x, self.window.size.y
+	local popup = PopUpView:new(V.v(sw, sh))
+	self.window:add_child(popup)
+
+	local pw, ph = 400, math.min(520, sh - 100)
+	local panel = KView:new(V.v(pw, ph))
+	panel.anchor = V.v(pw * 0.5, ph * 0.5)
+	panel.pos = V.v(sw * 0.5, sh * 0.5)
+	panel.colors.background = {46, 32, 18, 248}
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 12, 12}
+	}
+	popup:add_child(panel)
+
+	local title = GGLabel:new(V.v(pw - 20, 30))
+	title.pos = V.v(10, 8)
+	title.font_name = "h"
+	title.font_size = 18
+	title.text_align = "center"
+	title.text = _("EDITOR_TPL_PROP_GENERATION")
+	title.colors.text = {241, 222, 171, 255}
+	panel:add_child(title)
+
+	local list = KScrollList:new(V.v(pw - 24, ph - 50))
+	list.pos = V.v(12, 40)
+	list.drag_scroll_threshold = 6
+	list.scroll_amount = 44
+	list.colors.scroller_background = {45, 36, 22, 200}
+	list.colors.scroller_foreground = {110, 90, 50, 255}
+	list.scroller_width = 16
+	panel:add_child(list)
+
+	local current_gen_id = self:get_selected_gen_id()
+
+	for _i, gen in ipairs(gens) do
+		local btn = KView:new(V.v(pw - 54, 40))
+		btn.colors.background = {35, 25, 12, 220}
+		btn.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, btn.size.x, btn.size.y, 6, 6}
+		}
+		list:add_row(btn)
+
+		local label = GGLabel:new(V.v(btn.size.x - 10, btn.size.y))
+		label.font_name = "body"
+		label.font_size = 14
+		label.text_align = "left"
+		label.vertical_align = "middle"
+		label.colors.text = {241, 222, 171, 255}
+		label.text = string.format("%s  (%s)", gen.name, gen.label_key and _(gen.label_key) or gen.name)
+		label.fit_lines = 1
+		label.fit_size = true
+		label.propagate_on_click = true
+		btn:add_child(label)
+
+		if gen.name == current_gen_id then
+			btn.colors.background = {60, 45, 20, 240}
+		end
+
+		function btn.on_click()
+			popup:hide()
+			self:set_selected_gen_id(gen.name)
+			self:sync_level_identity()
+		end
+		function btn.on_enter()
+			btn.colors.background = {50, 35, 16, 240}
+		end
+		function btn.on_exit()
+			if gen.name == self:get_selected_gen_id() then
+				btn.colors.background = {60, 45, 20, 240}
+			else
+				btn.colors.background = {35, 25, 12, 220}
+			end
+		end
+	end
+
+	popup:show()
+end
+
+--- 将工具面板中的代际 + 关卡序号写回 store，保持名称与代际一致。
+function gui:sync_level_identity()
+	local editor = self.editor
+
+	if not editor.store or editor.store.custom_map_entry then
+		return
+	end
+
+	local gen_id = self:get_selected_gen_id()
+	local local_idx = wid("tools_level_name").value
+	local gen = GENS:get(gen_id)
+
+	editor.store.gen_id = gen_id
+	editor.store.level_idx = local_idx
+	editor.store.level_name = GENS:level_name(gen_id, local_idx)
+	editor.store.level_file = GENS:level_file(gen_id, local_idx)
+	editor.store.level_root = gen and gen.resource_root or nil
+end
+
 function gui:init(w, h, editor)
 	self.editor = editor
 	self.w = w
@@ -210,11 +349,11 @@ function gui:init(w, h, editor)
 			local mode = wid("tools_game_mode") and wid("tools_game_mode").value or GAME_MODE_CAMPAIGN
 			editor:load_plugin_level(editor.store.custom_map_entry, mode)
 		else
-			editor:load_level(wid("tools_level_name").value, wid("tools_game_mode").value)
+			editor:load_level(self:get_selected_gen_id(), wid("tools_level_name").value, wid("tools_game_mode").value)
 		end
 	end
 	wid("tools_recover").on_click = function()
-		editor:load_level(editor.store.level_idx, editor.store.level_mode, true)
+		editor:load_level(editor.store.gen_id, editor.store.level_idx, editor.store.level_mode, true)
 	end
 	wid("tools_undo").on_click = function()
 		self:undo()
@@ -507,10 +646,20 @@ function gui:init(w, h, editor)
 	end
 	wid("tools_level_name").value = 1
 
-	-- 修改关卡时，自动更新关卡名称以保持一致
+	local gen_w = wid("tools_gen_id")
+	if gen_w then
+		gen_w:set_value("kr1", true)
+		gen_w.editable = false
+		gen_w.on_click = function(this)
+			self:show_generation_selector()
+
+			return true
+		end
+	end
+
+	-- 修改代际/关卡时，自动更新关卡名称以保持一致
 	wid("tools_level_name").on_change = function(self)
-		editor.store.level_idx = self.value
-		editor.store.level_name = "level" .. string.format("%02i", self.value)
+		gui:sync_level_identity()
 	end
 
 	wid("tools_game_mode").on_change = function(self)
@@ -1075,14 +1224,18 @@ function gui:u2g(s)
 	return px, py
 end
 
-function gui:level_loaded(level_idx)
+function gui:level_loaded(gen_id, local_idx)
 	local name_w = wid("tools_level_name")
-	if type(level_idx) == "string" then
-		name_w.value = level_idx
-		name_w.lt.text = level_idx
+
+	if type(gen_id) == "string" and local_idx == nil then
+		-- 插件自定义地图：沿用旧的单字段展示方式。
+		name_w.value = gen_id
+		name_w.lt.text = gen_id
 	else
-		name_w:set_value(level_idx)
+		self:set_selected_gen_id(gen_id or "kr1")
+		name_w:set_value(local_idx or 1)
 	end
+
 	local mode_w = wid("tools_game_mode")
 	if mode_w and self.editor.store then
 		mode_w:set_value(self.editor.store.level_mode)
@@ -1557,6 +1710,9 @@ function gui:select_entity(e)
 	local vs = wid("entities_selected")
 	local vd = wid("entities_deselected")
 
+	-- 切换选中实体时重置拖拽位置缓存，避免沿用上一个实体的旧坐标导致拖拽被距离保护拦截。
+	self._last_prop_value = e and e.pos and V.v(e.pos.x, e.pos.y) or nil
+
 	if e then
 		self.editor.entities_selected = {e.id}
 		vd.hidden = true
@@ -1646,7 +1802,9 @@ function gui:update_entity_prop(prop_view)
 			self._last_prop_value = V.v(prop_value.x, prop_value.y)
 		end
 
-		local state = self.are_axes_in_range(prop_value, self._last_prop_value)
+		-- 鼠标拖拽实体时允许直接跟随指针，不受“相对上一点最大 550px”的防跳变保护限制。
+		local is_dragging = picker and picker.tracking and love.mouse.isDown(1, 2) and prop_name == "pos"
+		local state = is_dragging or self.are_axes_in_range(prop_value, self._last_prop_value)
 
 		if state then
 			self.editor:undo_push_entity(picker.tracking, e.id, prop_name .. ".x", get_prop(e, prop_name .. ".x"), prop_name .. ".y", get_prop(e, prop_name .. ".y"))

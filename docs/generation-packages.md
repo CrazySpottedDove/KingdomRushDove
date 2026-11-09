@@ -121,7 +121,7 @@ gen.resource_root = "plugins/MyGen"
 搜索顺序：
 
 ```text
-EDITOR_PATH
+EDITOR_PATH/generations/<gen>（地图编辑器的代际覆盖）
 gen.resource_root
 CUSTOM_MAP_ROOT（仅 custom map）
 KR_PATH_GAME
@@ -134,6 +134,9 @@ KR_PATH_GAME
 - `all/path_db.lua`
 - `all/wave_db.lua`
 - `all/scripts.lua` / `kr1/game_scripts.lua` 的 `load_file`
+
+地图编辑器按代际保存到 `game_editor/generations/<gen>/data/{levels,waves,waveconfigs}/`，
+仓库内的关卡文件使用同一套相对路径，因此编辑器数据会优先于 `gen.resource_root` 生效。
 
 `custom map` 的 `CUSTOM_MAP_ROOT` 行为保持不变。
 
