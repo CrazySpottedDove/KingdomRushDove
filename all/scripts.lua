@@ -5897,7 +5897,16 @@ function scripts.mod_freeze.insert(this, store)
 
 	for _, s in ipairs(target.render.sprites) do
 		if s.animated then
-			table.insert(this._entity_frame_names, A:frame_name(s.prefix and (s.prefix .. "_" .. s.name) or s.name, s.frame_idx))
+			-- 脚本中更新的动画prefix和render层更新的frame_idx可能不一致，所以这里手动更新frame_idx，保证其可用性
+			local key = s.prefix and (s.prefix .. "_" .. s.name) or s.name
+			local anim = A.db[key]
+			local frame_idx = 1
+
+			if anim and anim[1] > 0 then
+				frame_idx = A.frame_index(anim[1], (store.tick_ts or 0) - (s.ts or 0) + (s.time_offset or 0), s.loop, s.fps or A.fps)
+			end
+
+			table.insert(this._entity_frame_names, A:frame_name(key, frame_idx))
 		else
 			table.insert(this._entity_frame_names, s.name)
 		end

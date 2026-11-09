@@ -261,6 +261,8 @@ local function frame_index(len, time_offset, loop, fps)
 	return idx, runs
 end
 
+animation_db.frame_index = frame_index
+
 --- 原语义不变：完成从动画名称到具体帧名（如 soldier_0001）的转换，返回帧名字符串。
 function animation_db:fn(animation_name, time_offset, loop, fps)
 	local a = self.db[animation_name]
