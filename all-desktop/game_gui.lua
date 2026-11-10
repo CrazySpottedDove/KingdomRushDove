@@ -190,7 +190,6 @@ local signals = {
 		log.debug("next_wave_ready_handler. group_idx:%s", group.group_idx)
 		S:queue("GUINextWaveReady")
 		game_gui:show_wave_flags(group)
-		-- game_gui.next_wave_button:enable()
 
 		if game_gui.game.store.level.show_next_wave_balloon then
 			game_gui.game.store.level.show_next_wave_balloon = nil
@@ -202,7 +201,6 @@ local signals = {
 	["next-wave-sent"] = function(group)
 		log.debug("next_wave_sent_handler")
 		game_gui:hide_wave_flags()
-		-- game_gui.next_wave_button:disable()
 		game_gui:show_early_wave_reward()
 
 		if group.group_idx == 1 then
@@ -1070,10 +1068,10 @@ function game_gui:keypressed(key, isrepeat)
 	elseif ks.normal == key then
 		self:change_speed_factor(1)
 	elseif ks.next_wave == key then
-		-- if not self.next_wave_button:is_disabled() then
-		game_gui.game.store.send_next_wave = true
-		time_rewind:record_decision(RK.next_wave, game_gui.game.store.tick_ts)
-	-- end
+		if game_gui.game.store.next_wave_group_ready then
+			game_gui.game.store.send_next_wave = true
+			time_rewind:record_decision(RK.next_wave, game_gui.game.store.tick_ts)
+		end
 	elseif ks.criket_toggle == key and configer.ui_settings().tower_menu_enabled then
 		if self.criketmenu.hidden then
 			self.criketmenu:show()
