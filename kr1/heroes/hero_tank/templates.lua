@@ -989,17 +989,16 @@ tt.timed_attacks.list[3].vis_flags = F_RANGED
 tt.timed_attacks.list[3].vis_bans = F_FLYING
 tt.timed_attacks.list[3].min_range = 0
 tt.timed_attacks.list[3].max_range = 70
+
 tt = RT("controller_overwhelm_tank")
-
 AC(tt, "main_script")
-
 tt.owner = nil
 tt.cooldown = 0.2
 tt.damage = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 tt.damage_type = DAMAGE_PHYSICAL
 tt.damage_radius = 50
 tt.damage_flags = F_AREA
-tt.damage_bans = 0
+tt.damage_bans = F_FLYING
 tt.xp_gain_factor = 1
 tt.ts = 0
 tt.main_script.update = controller_overwhelm_tank_update
