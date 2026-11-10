@@ -2860,6 +2860,15 @@ function scripts.bomb.insert(this, store)
 		this.render.sprites[1].hidden = true
 	end
 
+	if b.use_hit_offset then
+		if b.target_id then
+			local target = store.entities[b.target_id]
+			if target then
+				b._hit_offset_record = target.unit.hit_offset
+			end
+		end
+	end
+
 	return true
 end
 
@@ -2923,7 +2932,7 @@ function scripts.bomb.update(this, store)
 		last_ts = last_ts + dt
 	end
 
-	local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
+	local enemies = U.find_enemies_in_range_filter_off(b._hit_offset_record and V.v(b._hit_offset_record.x + this_pos.x, b._hit_offset_record.y + this_pos.y) or this_pos, dradius, b.damage_flags, b.damage_bans)
 	local mods
 	if b.mod then
 		mods = {b.mod}
