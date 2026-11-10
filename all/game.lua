@@ -258,6 +258,9 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 	local visible_w = math.ceil(self.screen_w * self.ref_h / self.screen_h)
 
 	visible_w = km.clamp(REF_H * 4 / 3, REF_H * 16 / 9, visible_w)
+
+	-- 实际用于游戏画面的水平宽度；超过 MAX_SCREEN_ASPECT 的超宽区域会被裁掉。
+	local viewport_w = math.min(screen_w, MAX_SCREEN_ASPECT * screen_h)
 	local v_left = (self.ref_w - visible_w) * 0.5
 	local v_right = self.ref_w + (visible_w - self.ref_w) * 0.5
 	local v_top = visible_h
@@ -295,8 +298,19 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 	self.camera.wt = (visible_h - world_bounds.top) * self.game_scale
 	self.camera.wb = (visible_h - world_bounds.bottom) * self.game_scale
 	self.camera.zoom = 1
-	self.camera.min_zoom = aspect > 1.7777777777777777 and math.min(screen_w, MAX_SCREEN_ASPECT * screen_h) / (visible_w * self.game_scale) or 1
+	self.camera.min_zoom = aspect > 1.7777777777777777 and viewport_w / (visible_w * self.game_scale) or 1
 	self.camera.max_zoom = 2.5
+
+	-- 地图可能大于可见区域：允许缩小视角，最多缩到某一方向刚好铺满地图。
+	local world_w = self.camera.wr - self.camera.wl
+	local world_h = self.camera.wb - self.camera.wt
+
+	if world_w > 0 and world_h > 0 then
+		local fit_zoom = math.max(viewport_w / world_w, self.camera.wh / world_h)
+
+		self.camera.min_zoom = math.min(self.camera.min_zoom, fit_zoom)
+	end
+
 	self.camera.sync_visible = function()
 		self:sync_visible_coords()
 	end
@@ -311,8 +325,8 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 	function self.camera:clamp()
 		self.zoom = km.clamp(self.min_zoom, self.max_zoom, self.zoom)
 
-		local min_x = self.wl + self.ww * self.min_zoom / (2 * self.zoom)
-		local max_x = self.wr - self.ww * self.min_zoom / (2 * self.zoom)
+		local min_x = self.wl + viewport_w / (2 * self.zoom)
+		local max_x = self.wr - viewport_w / (2 * self.zoom)
 		local min_y = self.wt + self.wh / (2 * self.zoom)
 		local max_y = self.wb - self.wh / (2 * self.zoom)
 
