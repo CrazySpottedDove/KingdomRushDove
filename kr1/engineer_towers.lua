@@ -1793,7 +1793,6 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.render.sprites[1].name = "barrel_tower_projectile_mod_idle"
 tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].size_names = {"barrel_tower_projectile_mod_idle", "barrel_tower_projectile_mod_idle", "barrel_tower_projectile_mod_big_idle"}
-tt.modifier.level = 4
 tt.modifier.duration = 5
 tt.inflicted_damage_factor = 0.6
 
