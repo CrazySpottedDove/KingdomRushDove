@@ -2952,9 +2952,9 @@ function scripts.bomb.update(this, store)
 				for k = 1, #mods do
 					local mod = mods[k]
 					if U.flags_pass(enemy.vis, E:get_template(mod).modifier) then
-						local m = E:create_entity(mods[k])
+						local m = E:create_entity(mod)
 
-						m.modifier.target_id = b.target_id
+						m.modifier.target_id = enemy.id
 						m.modifier.source_id = b.source_id
 						m.modifier.damage_factor = b.damage_factor
 						m.modifier.level = b.level
