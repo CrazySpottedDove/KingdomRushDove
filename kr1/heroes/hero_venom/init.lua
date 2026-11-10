@@ -3,7 +3,11 @@ local NS = require("heroes.name_style")
 return {
 	name = "hero_venom",
 	room = {
-		available_level = 108,
+		available = {
+			mode = "level",
+			gen = "kr5",
+			level = 8
+		},
 		stats = {5, 5, 5, 6},
 		portrait_image = "kr5_portrait_notxt_0004",
 		thumb_image = "kr5_hero_room_thumbs_0004",

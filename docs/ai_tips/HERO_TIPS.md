@@ -196,22 +196,23 @@ end
 
 每个新英雄需要在以下**四处**补充内容：
 
-### 5.1 `kr1-desktop/data/map_data.lua`
+### 5.1 `kr1/heroes/<name>/init.lua` 的 `room` 表
 
-在 `hero_data` 列表中添加英雄条目：
+英雄殿堂数据由英雄注册模块自己的 `room` 表声明（不再有 `map_data.lua` 的 `hero_data`）：
 
 ```lua
-{
-    from_kr = 5,
-    portrait = 15,   -- 对应大图编号
-    thumb = 15,
-    name = "hero_dragon_arb",
-    available_level = 116,
-    starting_level = 1,
-    icon = 15,
-    stats = {8, 4, 7, 5}
-}
+room = {
+    -- 解锁条件：generation + 世代内局部关卡号，禁止再写旧的全局关卡号
+    available = { mode = "level", gen = "kr5", level = 16 },
+    stats = {8, 4, 7, 5},
+    portrait_image = "kr5_portrait_notxt_0015",
+    thumb_image = "kr5_hero_room_thumbs_0015",
+    icon_image = "kr5_mapButtons_portrait_hero_0015"
+},
 ```
+
+- `gen` 为世代 id（`kr1` / `kr2` / `kr3` / `kr5` / `kr6`），`level` 为该世代自己的局部序号（从 1 开始）。
+- 无条件解锁写 `available = { mode = "default" }`（或不写，`build_hero_data` 会补默认值）。
 
 ### 5.2 `kr1-desktop/data/kui_templates/hero_room_view.lua`
 

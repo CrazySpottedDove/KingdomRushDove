@@ -1,7 +1,11 @@
 return {
 	name = "hero_bolverk",
 	room = {
-		available_level = 70,
+		available = {
+			mode = "level",
+			gen = "kr3",
+			level = 22
+		},
 		stats = {5, 5, 0, 6},
 		thumb_image = "kr3_hero_room_thumbs_0019",
 		icon_image = "kr3_mapButtons_portrait_hero_0019"

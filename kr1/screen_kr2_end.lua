@@ -101,7 +101,6 @@ function screen:next_item()
 		self.active_screen = nil
 
 		self.done_callback({
-			level_idx = 37,
 			next_item_name = "map"
 		})
 	end
