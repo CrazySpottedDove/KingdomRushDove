@@ -337,6 +337,21 @@ local function normalize_headers(h)
 	return out
 end
 
+-- 插件包分块下载：单块失败后重试并沿用当前偏移续传，避免大插件因一次抖动整体失败。
+local DOWNLOAD_CHUNK_TIMEOUT = 120
+local DOWNLOAD_CHUNK_MAX_RETRIES = 5
+local DOWNLOAD_RETRY_DELAY_BASE = 1.5
+local DOWNLOAD_RETRY_DELAY_MAX = 8
+local DOWNLOAD_RETRY_AFTER_MAX = 30
+
+local function download_retry_delay(attempt, headers)
+	local retry_after = headers and tonumber(headers["retry-after"])
+	if retry_after and retry_after > 0 then
+		return math.min(retry_after, DOWNLOAD_RETRY_AFTER_MAX)
+	end
+	return math.min(DOWNLOAD_RETRY_DELAY_BASE ^ attempt, DOWNLOAD_RETRY_DELAY_MAX)
+end
+
 -- 将字节/秒格式化为可读的速度文本（空或 0 时返回空串）
 local function format_speed(bps)
 	if bps and bps >= 1024 * 1024 then
@@ -1082,6 +1097,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	save_btn:set_anchor_to_center()
 	save_btn.pos = V.v(panel_w / 3, y_btn)
 	self.back:add_child(save_btn)
+	self._apply_btn = save_btn
 	save_btn.on_click = function()
 		S:queue("GUIButtonCommon")
 		self:apply()
@@ -1251,6 +1267,14 @@ function PluginManagerView:_refresh_header_buttons()
 	self.uninstalled_btn.hidden = not in_store or in_packs
 	-- 搜索框常驻：商店模式搜索远端，本地模式过滤本地
 	local task_running = self._active_task ~= nil
+	local apply_blocked = self._active_task ~= nil or self._dl_running ~= nil
+	if self._apply_btn then
+		if apply_blocked then
+			self._apply_btn:disable()
+		else
+			self._apply_btn:enable()
+		end
+	end
 	-- 本地分组视图的“刷新”只是重读磁盘（不联网）
 	self.refresh_btn:set_text(in_store and _("PLUGIN_MGR_BTN_REFRESH_STORE") or (in_packs and _("PLUGIN_MGR_BTN_REFRESH_GROUPS") or _("PLUGIN_MGR_BTN_QUERY_REMOTE")))
 	-- 分类按钮常显：本地插件按分类过滤、商店（插件/整合包）按分类筛选、本地分组按分组 tag 筛选
@@ -1791,26 +1815,42 @@ function PluginManagerView:_delete_local_plugin(entry)
 	return true, nil
 end
 
-function PluginManagerView:_download_zip(item, task)
-	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
-	if not base then
-		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
-	end
-	local filename = item.filename
-	if not filename or filename == "" then
-		return nil, _("PLUGIN_MGR_ERR_PLUGIN_NO_FILENAME")
-	end
-	local item_branch = item.branch or branch
-	local url = base .. "/download/" .. url_encode(filename) .. "?platform=" .. get_platform() .. "&branch=" .. url_encode(item_branch)
-	local chunk_size = 1024 * 1024
+--- 分块下载 URL 到内存；单块失败时按当前偏移重试（续传）。
+---@param url string
+---@param opts table|nil { task, cancel_fn, status_key, active_name, chunk_size, timeout_sec, max_retries, method, headers, data }
+---@return string|nil data
+---@return string|nil err
+function PluginManagerView:_download_url_chunked(url, opts)
+	opts = opts or {}
+	local task = opts.task
+	local cancel_fn = opts.cancel_fn
+	local status_key = opts.status_key or "PLUGIN_MGR_STATUS_DOWNLOADING_PROGRESS"
+	local active_name = opts.active_name or self._active_download_name or ""
+	local chunk_size = opts.chunk_size or (1024 * 1024)
+	local timeout_sec = opts.timeout_sec or DOWNLOAD_CHUNK_TIMEOUT
+	local max_retries = opts.max_retries or DOWNLOAD_CHUNK_MAX_RETRIES
+	local method = opts.method or "GET"
+	local extra_headers = opts.headers
+	local request_data = opts.data
+
 	local chunks = {}
 	local downloaded = 0
 	local total = nil
 	local speed_bps = 0
-	self._active_download_name = item.name or item.entry or filename
 
 	local function is_cancelled()
-		return (task and task.cancelled) or self._cancel_requested
+		return (task and task.cancelled) or (cancel_fn and cancel_fn()) or self._cancel_requested
+	end
+
+	local function wait_retry(seconds)
+		local deadline = love.timer.getTime() + seconds
+		while love.timer.getTime() < deadline do
+			if is_cancelled() then
+				return false
+			end
+			coroutine.yield()
+		end
+		return not is_cancelled()
 	end
 
 	while not total or downloaded < total do
@@ -1827,31 +1867,75 @@ function PluginManagerView:_download_zip(item, task)
 		else
 			end_pos = downloaded + chunk_size - 1
 		end
-		local chunk_t0 = love.timer.getTime()
-		local resp, err = self:_request(url, {
-			method = "GET",
-			headers = {
+
+		local attempt = 0
+		local resp, err, code, headers, body
+		local chunk_t0
+		while true do
+			chunk_t0 = love.timer.getTime()
+			local req_headers = {
 				["Range"] = string.format("bytes=%d-%d", downloaded, end_pos)
 			}
-		}, 120, function()
-			return task and task.cancelled
-		end)
+			if extra_headers then
+				for k, v in pairs(extra_headers) do
+					req_headers[k] = v
+				end
+			end
+			resp, err = self:_request(url, {
+				method = method,
+				headers = req_headers,
+				data = request_data
+			}, timeout_sec, function()
+				return is_cancelled()
+			end)
+			if err == "cancelled" or is_cancelled() then
+				if task then
+					task.progress = 0
+					task.speed = 0
+				end
+				return nil, "cancelled"
+			end
+
+			code = resp and tonumber(resp.code) or nil
+			headers = resp and normalize_headers(resp.headers) or nil
+			body = resp and (resp.body or "") or ""
+
+			-- 网络错误、超时、429/408/5xx、空分块都按当前偏移重试（续传）。
+			local retryable = err ~= nil or code == 0 or code == 429 or code == 408 or (code ~= nil and code >= 500) or (code == 206 and body == "")
+			if not retryable or attempt >= max_retries then
+				break
+			end
+
+			attempt = attempt + 1
+			-- local reason = err or ("HTTP " .. tostring(code))
+			local delay = download_retry_delay(attempt, headers)
+			local percent = total and (downloaded * 100 / math.max(total, 1)) or 0
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_DOWNLOAD_RETRYING"), attempt, max_retries, percent), percent)
+			if not wait_retry(delay) then
+				if task then
+					task.progress = 0
+					task.speed = 0
+				end
+				return nil, "cancelled"
+			end
+		end
+
 		if err then
 			return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_FAILED"), err)
 		end
-		local code = tonumber(resp.code)
 		if code ~= 206 and code ~= 200 then
-			return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_FAILED_HTTP"), tostring(resp.code))
+			return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_FAILED_HTTP"), tostring(code))
+		end
+		if body == "" then
+			return nil, _("PLUGIN_MGR_ERR_DOWNLOAD_EMPTY")
 		end
 
-		local headers = normalize_headers(resp.headers)
 		if not total then
-			total = parse_content_range(headers["content-range"]) or tonumber(headers["content-length"])
+			total = parse_content_range(headers and headers["content-range"]) or tonumber(headers and headers["content-length"])
 			if total and code == 200 then
-				total = #resp.body
+				total = #body
 			end
 		end
-		local body = resp.body or ""
 		chunks[#chunks + 1] = body
 		downloaded = downloaded + #body
 
@@ -1871,13 +1955,10 @@ function PluginManagerView:_download_zip(item, task)
 		if speed_text ~= "" then
 			speed_text = "  " .. speed_text
 		end
-		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_DOWNLOADING_PROGRESS"), self._active_download_name, percent, speed_text), percent)
+		self:_set_status(string.format(_(status_key), active_name, percent, speed_text), percent)
 
 		if code == 200 then
 			break
-		end
-		if #body == 0 then
-			return nil, _("PLUGIN_MGR_ERR_DOWNLOAD_EMPTY")
 		end
 	end
 
@@ -1885,6 +1966,24 @@ function PluginManagerView:_download_zip(item, task)
 		return nil, _("PLUGIN_MGR_ERR_DOWNLOAD_INCOMPLETE")
 	end
 	return table.concat(chunks), nil
+end
+
+function PluginManagerView:_download_zip(item, task)
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
+	end
+	local filename = item.filename
+	if not filename or filename == "" then
+		return nil, _("PLUGIN_MGR_ERR_PLUGIN_NO_FILENAME")
+	end
+	local item_branch = item.branch or branch
+	local url = base .. "/download/" .. url_encode(filename) .. "?platform=" .. get_platform() .. "&branch=" .. url_encode(item_branch)
+	self._active_download_name = item.name or item.entry or filename
+	return self:_download_url_chunked(url, {
+		task = task,
+		status_key = "PLUGIN_MGR_STATUS_DOWNLOADING_PROGRESS"
+	})
 end
 
 function PluginManagerView:_collect_plugin_root_candidates(base_dir)
@@ -2107,12 +2206,13 @@ function PluginManagerView:_apply_patch_to_dir(target_dir, patch_data)
 	remove_dir_recursive(tmp)
 	return true, nil
 end
-function PluginManagerView:_download_patch(entry, platform, version, changed, deleted, target_branch)
+function PluginManagerView:_download_patch(entry, platform, version, changed, deleted, target_branch, task)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
-	local resp, err = self:_request(base .. "/download_patch", {
+	self._active_download_name = entry
+	local patch_data, err = self:_download_url_chunked(base .. "/download_patch", {
 		method = "POST",
 		headers = {
 			["Content-Type"] = "application/json"
@@ -2124,15 +2224,19 @@ function PluginManagerView:_download_patch(entry, platform, version, changed, de
 			branch = target_branch or branch,
 			changed = changed,
 			deleted = deleted
-		})
-	}, 60)
-	if err then
+		}),
+		status_key = "PLUGIN_MGR_STATUS_DOWNLOADING_PATCH_PROGRESS",
+		cancel_fn = function()
+			return task and task.cancelled
+		end
+	})
+	if not patch_data then
+		if err == "cancelled" then
+			return nil, "cancelled"
+		end
 		return nil, string.format(_("PLUGIN_MGR_ERR_INCREMENTAL_REQUEST"), err)
 	end
-	if tonumber(resp.code) ~= 200 then
-		return nil, string.format(_("PLUGIN_MGR_ERR_INCREMENTAL_REQUEST_HTTP"), tostring(resp.code))
-	end
-	return resp.body, nil
+	return patch_data, nil
 end
 
 function PluginManagerView:_install_or_update_item(item, task)
@@ -2153,7 +2257,9 @@ function PluginManagerView:_install_or_update_item(item, task)
 	local target_dir = plugin_paths.plugin_dir(entry)
 	if FS.getInfo(target_dir, "directory") then
 		local local_cfg = plugin_paths.load_lua_table(plugin_paths.metadata_path(entry))
-		local dir_info = self:_compute_dir_hashes(target_dir)
+		local dir_info = self:_compute_dir_hashes(target_dir, function()
+			coroutine.yield()
+		end)
 		local item_branch = item.branch or branch
 		local hash_ok, hash_resp = self:_hash_check(entry, item.version or "", dir_info.hashes, get_platform(), "download", item_branch)
 		if hash_ok and hash_resp and type(hash_resp.changed) == "table" then
@@ -2163,7 +2269,7 @@ function PluginManagerView:_install_or_update_item(item, task)
 				self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PLUGIN_UP_TO_DATE"), item.name or item.entry), 100)
 				return true, nil
 			end
-			local patch_data = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted, item_branch)
+			local patch_data = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted, item_branch, task)
 			if task and task.cancelled then
 				return false, "cancelled"
 			end
@@ -3174,7 +3280,7 @@ function PluginManagerView:_developer_login()
 	return true, nil
 end
 
-function PluginManagerView:_compute_dir_hashes(dir)
+function PluginManagerView:_compute_dir_hashes(dir, on_progress)
 	local hashes = {}
 	local sizes = {}
 	local total_bytes = 0
@@ -3213,6 +3319,9 @@ function PluginManagerView:_compute_dir_hashes(dir)
 						hashes[rel_path] = love.data.encode("string", "hex", hash_data)
 						sizes[rel_path] = #data
 						total_bytes = total_bytes + #data
+						if on_progress then
+							on_progress(rel_path, total_bytes)
+						end
 					end
 				end
 			end
@@ -3316,14 +3425,33 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 		if data then
 			FS.write(dst, data)
 		end
+		if self._cancel_requested then
+			return false, "cancelled"
+		end
+		coroutine.yield()
 	end
 
 	FS.write(tmp .. "/_patch_manifest.json", json.encode({
 		deleted = deleted
 	}))
-	local patch_data = zip.create_from_dir(tmp, {})
+	local patch_data, patch_err = zip.create_from_dir(tmp, {
+		on_progress = function(done, total, phase)
+			if self._cancel_requested then
+				return false
+			end
+			if phase == "read" then
+				local percent = 30 + 10 * (done - 1) / math.max(total, 1)
+				self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPRESSING"), entry), percent)
+			end
+			coroutine.yield()
+			return true
+		end
+	})
 	remove_dir_recursive("tmp/plugin_patch")
 	if not patch_data then
+		if patch_err == "cancelled" then
+			return false, "cancelled"
+		end
 		return false, _("PLUGIN_MGR_ERR_PACK_DELTA")
 	end
 
@@ -3392,7 +3520,9 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 	-- 计算本地文件哈希
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPUTING_HASH"), entry), 5)
-	local dir_info = self:_compute_dir_hashes(plugin_paths.plugin_dir(plugin_data.config.entry))
+	local dir_info = self:_compute_dir_hashes(plugin_paths.plugin_dir(plugin_data.config.entry), function()
+		coroutine.yield()
+	end)
 	if dir_info.total_bytes == 0 then
 		return false, _("PLUGIN_MGR_ERR_PLUGIN_DIR_EMPTY")
 	end
@@ -3426,6 +3556,9 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 				return true, nil
 			end
 			log.error(_("PLUGIN_MGR_LOG_DELTA_UPLOAD_FAILED"), tostring(err_patch))
+			if err_patch == "cancelled" then
+				return false, "cancelled"
+			end
 			use_full = true
 		end
 	end
@@ -3435,11 +3568,25 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 	-- 全量上传（增量不可用或变更量过大时回落）
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPRESSING"), entry), 20)
-	local zip_data = zip.create_from_dir(plugin_paths.plugin_dir(plugin_data.config.entry), {
+	local zip_data, zip_err = zip.create_from_dir(plugin_paths.plugin_dir(plugin_data.config.entry), {
 		exclude = {"^cover%..+$"},
-		skip_dirs = {".git", ".backup", ".tmp"}
+		skip_dirs = {".git", ".backup", ".tmp"},
+		on_progress = function(done, total, phase)
+			if self._cancel_requested then
+				return false
+			end
+			if phase == "read" then
+				local percent = 20 + 20 * (done - 1) / math.max(total, 1)
+				self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPRESSING"), entry), percent)
+			end
+			coroutine.yield()
+			return true
+		end
 	})
 	if not zip_data then
+		if zip_err == "cancelled" then
+			return false, "cancelled"
+		end
 		return false, _("PLUGIN_MGR_ERR_PACK_EMPTY_DIR")
 	end
 
@@ -3666,6 +3813,10 @@ end
 --- 热应用成功后自动关闭管理器；部分失败时保持打开并在状态栏提示。
 --- 没有任何需要应用的修改时直接关闭，不提示。
 function PluginManagerView:apply()
+	if self._active_task or self._dl_running then
+		self:_set_status(_("PLUGIN_MGR_STATUS_TASK_IN_PROGRESS"), 0)
+		return
+	end
 	local changes = self:_collect_changes()
 	local has_runtime_actions = changes.unloads[1] or changes.reloads[1] or changes.configs[1]
 	local has_pending_config = next(self._pending.plugins) ~= nil
@@ -4482,17 +4633,17 @@ function PluginManagerView:_download_pack_lua(item)
 		return nil, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_PACK_SITE")
 	end
 	local filename = item.filename or (tostring(item.entry or "") .. ".zip")
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_DOWNLOADING_PACK"), item.name or item.entry), 10)
-	local resp, err = self:_request(base .. "/download/" .. url_encode(filename), {
-		method = "GET"
-	}, 60)
-	if err then
+	self._active_download_name = item.name or item.entry or filename
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_DOWNLOADING_PACK"), self._active_download_name), 10)
+	local zip_data, err = self:_download_url_chunked(base .. "/download/" .. url_encode(filename), {
+		status_key = "PLUGIN_MGR_STATUS_DOWNLOADING_PACK_PROGRESS"
+	})
+	if not zip_data then
+		if err == "cancelled" then
+			return nil, "cancelled"
+		end
 		return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_PACK"), err)
 	end
-	if tonumber(resp.code) ~= 200 then
-		return nil, string.format(_("PLUGIN_MGR_ERR_DOWNLOAD_PACK_HTTP"), tostring(resp.code))
-	end
-	local zip_data = resp.body or ""
 	local stage = "tmp/pack_dl"
 	remove_dir_recursive(stage)
 	FS.createDirectory("tmp")

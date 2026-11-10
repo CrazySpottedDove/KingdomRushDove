@@ -75,12 +75,22 @@ local function ensure_crc32_table()
 	end
 end
 
-local function crc32(data)
+local CRC_PROGRESS_STEP = 1024 * 1024
+
+local function crc32(data, on_progress)
 	ensure_crc32_table()
 	local crc = 0xFFFFFFFF
-	for i = 1, #data do
+	local len = #data
+	local next_progress = CRC_PROGRESS_STEP
+	for i = 1, len do
 		local byte = data:byte(i)
 		crc = bxor(rshift(crc, 8), crc32_table[band(bxor(crc, byte), 0xFF) + 1])
+		if on_progress and i >= next_progress then
+			if on_progress(i, len) == false then
+				return nil
+			end
+			next_progress = i + CRC_PROGRESS_STEP
+		end
 	end
 	return bxor(crc, 0xFFFFFFFF)
 end
@@ -172,8 +182,16 @@ function zip.create_from_dir(source_dir, opts)
 	opts = opts or {}
 	local exclude = opts.exclude or {}
 	local skip_dirs = opts.skip_dirs or {}
+	local on_progress = opts.on_progress
 
-	local files = {}
+	local function step(done, total, phase, name)
+		if not on_progress then
+			return true
+		end
+		return on_progress(done, total, phase, name)
+	end
+
+	local file_names = {}
 	local function collect(dir, prefix)
 		prefix = prefix or ""
 		local items = FS.getDirectoryItems(dir) or {}
@@ -201,14 +219,7 @@ function zip.create_from_dir(source_dir, opts)
 						end
 					end
 					if not excluded then
-						local data = FS.read(full_path)
-						if data then
-							files[#files + 1] = {
-								name = prefix .. name,
-								data = data,
-								crc = crc32(data)
-							}
-						end
+						file_names[#file_names + 1] = prefix .. name
 					end
 				end
 			end
@@ -216,63 +227,81 @@ function zip.create_from_dir(source_dir, opts)
 	end
 	collect(source_dir, "")
 
-	if #files == 0 then
+	local total_files = #file_names
+	if total_files == 0 then
 		return nil, "没有找到可打包的文件"
 	end
 
 	local local_headers = {}
 	local central_entries = {}
 	local offset = 0
+	local num_files = 0
 
-	for _, f in ipairs(files) do
-		local name_bytes = f.name
-		local name_len = #name_bytes
-		local data = f.data
-		local crc = f.crc
-		local uncomp_size = #data
-
-		local ok, comp_data = pcall(love.data.compress, "string", "deflate", data)
-		if not ok then
-			return nil, "文件压缩失败: " .. f.name
+	for idx, name in ipairs(file_names) do
+		if step(idx, total_files, "read", name) == false then
+			return nil, "cancelled"
 		end
-		local comp_size = #comp_data
+		local data = FS.read(source_dir .. "/" .. name)
+		if data then
+			local file_crc = crc32(data, function(done, total)
+				return step(idx, total_files, "crc", name)
+			end)
+			if not file_crc then
+				return nil, "cancelled"
+			end
 
-		local lh = string.char(0x50, 0x4b, 0x03, 0x04)
-		lh = lh .. string.char(20, 0)
-		lh = lh .. string.char(0, 0)
-		lh = lh .. string.char(8, 0)
-		lh = lh .. string.char(0, 0)
-		lh = lh .. string.char(0, 0)
-		lh = lh .. encode_u32(crc)
-		lh = lh .. encode_u32(comp_size)
-		lh = lh .. encode_u32(uncomp_size)
-		lh = lh .. encode_u16(name_len)
-		lh = lh .. encode_u16(0)
-		lh = lh .. name_bytes
-		local_headers[#local_headers + 1] = lh
-		local_headers[#local_headers + 1] = comp_data
+			local name_bytes = name
+			local name_len = #name_bytes
+			local uncomp_size = #data
 
-		local ce = string.char(0x50, 0x4b, 0x01, 0x02)
-		ce = ce .. string.char(20, 0)
-		ce = ce .. string.char(20, 0)
-		ce = ce .. string.char(0, 0)
-		ce = ce .. string.char(8, 0)
-		ce = ce .. string.char(0, 0)
-		ce = ce .. string.char(0, 0)
-		ce = ce .. encode_u32(crc)
-		ce = ce .. encode_u32(comp_size)
-		ce = ce .. encode_u32(uncomp_size)
-		ce = ce .. encode_u16(name_len)
-		ce = ce .. encode_u16(0)
-		ce = ce .. encode_u16(0)
-		ce = ce .. encode_u16(0)
-		ce = ce .. encode_u16(0)
-		ce = ce .. encode_u32(0)
-		ce = ce .. encode_u32(offset)
-		ce = ce .. name_bytes
-		central_entries[#central_entries + 1] = ce
+			if step(idx, total_files, "compress", name) == false then
+				return nil, "cancelled"
+			end
+			local ok, comp_data = pcall(love.data.compress, "string", "deflate", data)
+			if not ok then
+				return nil, "文件压缩失败: " .. name
+			end
+			local comp_size = #comp_data
 
-		offset = offset + #lh + comp_size
+			local lh = string.char(0x50, 0x4b, 0x03, 0x04)
+			lh = lh .. string.char(20, 0)
+			lh = lh .. string.char(0, 0)
+			lh = lh .. string.char(8, 0)
+			lh = lh .. string.char(0, 0)
+			lh = lh .. string.char(0, 0)
+			lh = lh .. encode_u32(file_crc)
+			lh = lh .. encode_u32(comp_size)
+			lh = lh .. encode_u32(uncomp_size)
+			lh = lh .. encode_u16(name_len)
+			lh = lh .. encode_u16(0)
+			lh = lh .. name_bytes
+			local_headers[#local_headers + 1] = lh
+			local_headers[#local_headers + 1] = comp_data
+
+			local ce = string.char(0x50, 0x4b, 0x01, 0x02)
+			ce = ce .. string.char(20, 0)
+			ce = ce .. string.char(20, 0)
+			ce = ce .. string.char(0, 0)
+			ce = ce .. string.char(8, 0)
+			ce = ce .. string.char(0, 0)
+			ce = ce .. string.char(0, 0)
+			ce = ce .. encode_u32(file_crc)
+			ce = ce .. encode_u32(comp_size)
+			ce = ce .. encode_u32(uncomp_size)
+			ce = ce .. encode_u16(name_len)
+			ce = ce .. encode_u16(0)
+			ce = ce .. encode_u16(0)
+			ce = ce .. encode_u16(0)
+			ce = ce .. encode_u16(0)
+			ce = ce .. encode_u32(0)
+			ce = ce .. encode_u32(offset)
+			ce = ce .. name_bytes
+			central_entries[#central_entries + 1] = ce
+
+			offset = offset + #lh + comp_size
+			num_files = num_files + 1
+			data = nil
+		end
 	end
 
 	local zip_data = table.concat(local_headers)
@@ -282,7 +311,6 @@ function zip.create_from_dir(source_dir, opts)
 	local cd_size = #cd
 	zip_data = zip_data .. cd
 
-	local num_files = #files
 	local eocd = string.char(0x50, 0x4b, 0x05, 0x06)
 	eocd = eocd .. encode_u16(0)
 	eocd = eocd .. encode_u16(0)
