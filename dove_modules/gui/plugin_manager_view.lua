@@ -108,15 +108,13 @@ local SORT_OPTIONS = {{
 	value = "newest"
 }}
 
+-- 每个请求独立一个线程：某个请求超时后仍可能在等待服务端响应，
+-- 不能让它堵住后续请求（否则重试的 hash_check 会继续排队并超时）。
 local HTTP_WORKER = [[
 local https = require("https")
-local req_ch = love.thread.getChannel("plugin_store_http_req")
-local resp_ch = love.thread.getChannel("plugin_store_http_resp")
-while true do
-	local req = req_ch:demand()
-	if req == "quit" then
-		break
-	end
+local req_ch, resp_ch = ...
+local req = req_ch:demand()
+if req and req ~= "quit" then
 	local ok, code, body, headers = pcall(https.request, req.url, req.options)
 	if ok then
 		resp_ch:push({
@@ -588,7 +586,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._task_result = nil
 	self._selected_site = nil
 	self._active_download_name = ""
-	self._http_thread = nil
+	self._http_threads = {}
 	-- 下载任务队列（串行）：_dl_queue 是 FIFO 队列，_dl_running 是当前执行中的任务
 	self._dl_queue = {}
 	self._dl_running = nil
@@ -1222,28 +1220,30 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 end
 
 function PluginManagerView:_start_http_thread()
-	if self._http_thread then
+	self:_prune_http_threads()
+end
+
+function PluginManagerView:_prune_http_threads()
+	local list = self._http_threads
+	if not list then
 		return
 	end
-	local req_ch = love.thread.getChannel("plugin_store_http_req")
-	local resp_ch = love.thread.getChannel("plugin_store_http_resp")
-	while req_ch:getCount() > 0 do
-		req_ch:pop()
+	for i = #list, 1, -1 do
+		if not list[i].thread:isRunning() then
+			table.remove(list, i)
+		end
 	end
-	while resp_ch:getCount() > 0 do
-		resp_ch:pop()
-	end
-	self._http_thread = love.thread.newThread(HTTP_WORKER)
-	self._http_thread:start()
 end
 
 function PluginManagerView:_stop_http_thread()
-	if not self._http_thread then
+	local list = self._http_threads
+	if not list then
 		return
 	end
-	love.thread.getChannel("plugin_store_http_req"):push("quit")
-	self._http_thread:wait()
-	self._http_thread = nil
+	for _, item in ipairs(list) do
+		item.req_ch:push("quit")
+	end
+	self._http_threads = {}
 end
 
 function PluginManagerView:_refresh_header_buttons()
@@ -1384,29 +1384,48 @@ function PluginManagerView:_render_progress()
 	self.progress_fill.size.x = w
 end
 
-function PluginManagerView:_request(url, options, timeout_sec, cancel_fn)
+function PluginManagerView:_request(url, options, timeout_sec, cancel_fn, on_tick)
 	timeout_sec = timeout_sec or 20
 	self._request_id = self._request_id + 1
 	local req_id = self._request_id
-	local req_ch = love.thread.getChannel("plugin_store_http_req")
-	local resp_ch = love.thread.getChannel("plugin_store_http_resp")
+
+	-- 独立线程 + 独立通道：超时的请求只丢弃结果，不阻塞下一次重试。
+	local req_ch = love.thread.newChannel()
+	local resp_ch = love.thread.newChannel()
+	local thread = love.thread.newThread(HTTP_WORKER)
+
+	thread:start(req_ch, resp_ch)
 	req_ch:push({
 		id = req_id,
 		url = url,
 		options = options
 	})
 
+	self._http_threads = self._http_threads or {}
+	table.insert(self._http_threads, {
+		thread = thread,
+		req_ch = req_ch,
+		resp_ch = resp_ch
+	})
+
 	local start_t = love.timer.getTime()
+	local last_tick = 0
 	while true do
 		if self._cancel_requested or (cancel_fn and cancel_fn()) then
 			return nil, "cancelled"
 		end
-		if love.timer.getTime() - start_t > timeout_sec then
+		local elapsed = love.timer.getTime() - start_t
+		if elapsed > timeout_sec then
 			return nil, "timeout"
+		end
+		if on_tick and elapsed - last_tick >= 0.5 then
+			last_tick = elapsed
+			on_tick(elapsed)
 		end
 		while resp_ch:getCount() > 0 do
 			local resp = resp_ch:pop()
 			if resp and resp.id == req_id then
+				self:_prune_http_threads()
 				return resp, nil
 			end
 		end
@@ -3363,16 +3382,16 @@ function PluginManagerView:_hash_check(entry, version, hashes, platform, mode, t
 			["Content-Type"] = "application/json"
 		},
 		data = json.encode(body_data)
-	}, 30)
+	}, 60)
 	if err then
 		return false, string.format(_("PLUGIN_MGR_ERR_HASH_COMPARE"), err)
 	end
 	if tonumber(resp.code) ~= 200 then
-		return false, nil
+		return false, nil, tonumber(resp.code)
 	end
 	local ok, body = pcall(json.decode, resp.body)
 	if not ok or type(body) ~= "table" then
-		return false, _("PLUGIN_MGR_ERR_HASH_COMPARE_PARSE")
+		return false, _("PLUGIN_MGR_ERR_HASH_COMPARE_PARSE"), tonumber(resp.code)
 	end
 	return true, body
 end
@@ -3400,7 +3419,9 @@ function PluginManagerView:_convert_plugin_branch_to_master(plugin_data)
 	return true, nil
 end
 
-function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, deleted, upload_cover)
+function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, deleted, upload_cover, changed_bytes)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PATCH_PREPARING"), entry, #changed, (changed_bytes or 0) / 1048576), 25)
+
 	local tmp = "tmp/plugin_patch/" .. entry
 	remove_dir_recursive("tmp/plugin_patch")
 	FS.createDirectory("tmp")
@@ -3460,7 +3481,8 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA"), entry), 40)
+	local patch_mb = #patch_data / 1048576
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, patch_mb, 0), 40)
 	local resp, err = self:_request(base .. "/upload", {
 		method = "POST",
 		headers = {
@@ -3469,19 +3491,25 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 			["X-Upload-Mode"] = "patch",
 			["X-Plugin-Entry"] = entry,
 			["X-Plugin-Version"] = version,
-			["X-Plugin-Branch"] = plugin_data.config.branch or "master"
+			["X-Plugin-Branch"] = plugin_data.config.branch or "master",
+			["X-Upload-Async"] = "1"
 		},
 		data = patch_data
-	}, 120)
+	}, 600, nil, function(elapsed)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, patch_mb, math.floor(elapsed)), 40)
+	end)
 
 	if err then
 		return false, string.format(_("PLUGIN_MGR_ERR_DELTA_UPLOAD"), err)
+	end
+	if tonumber(resp.code) == 202 then
+		return true, nil, true
 	end
 	if tonumber(resp.code) ~= 200 then
 		return false, string.format(_("PLUGIN_MGR_ERR_DELTA_UPLOAD_HTTP"), tostring(resp.code), tostring(resp.body))
 	end
 
-	return true, nil
+	return true, nil, false
 end
 
 function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
@@ -3520,7 +3548,12 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 
 	-- 计算本地文件哈希
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPUTING_HASH"), entry), 5)
-	local dir_info = self:_compute_dir_hashes(plugin_paths.plugin_dir(plugin_data.config.entry), function()
+	local hashed_files = 0
+	local dir_info = self:_compute_dir_hashes(plugin_paths.plugin_dir(plugin_data.config.entry), function(_unused, hashed_bytes)
+		hashed_files = hashed_files + 1
+		if hashed_files % 20 == 0 then
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPUTING_HASH_PROGRESS"), entry, hashed_files, hashed_bytes / 1048576), 5)
+		end
 		coroutine.yield()
 	end)
 	if dir_info.total_bytes == 0 then
@@ -3528,8 +3561,33 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	end
 
 	-- 与服务端比对哈希，决定全量还是增量
+	local function wait_seconds(seconds)
+		local deadline = love.timer.getTime() + seconds
+		while love.timer.getTime() < deadline do
+			if self._cancel_requested then
+				return false
+			end
+			coroutine.yield()
+		end
+		return true
+	end
+
 	local use_full = true
-	local hash_ok, hash_resp = self:_hash_check(entry, version, dir_info.hashes, nil, nil, target_branch)
+	local hash_ok, hash_resp, hash_code
+
+	-- hash_check 的临时超时不应直接升级成全量上传，先重试；
+	-- 只有明确的 404（远端没有哈希记录）才说明需要全量上传。
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_HASH_COMPARING"), entry, hashed_files), 10)
+	for attempt = 1, 3 do
+		hash_ok, hash_resp, hash_code = self:_hash_check(entry, version, dir_info.hashes, nil, nil, target_branch)
+		if hash_ok or hash_code == 404 then
+			break
+		end
+		if attempt < 3 and not wait_seconds(3) then
+			return false, "cancelled"
+		end
+	end
+
 	if hash_ok and hash_resp and type(hash_resp.changed) == "table" and type(hash_resp.deleted) == "table" then
 		local changed = hash_resp.changed
 		local deleted = hash_resp.deleted
@@ -3539,6 +3597,12 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		end
 		use_full = changed_bytes > dir_info.total_bytes * 0.6
 
+		if use_full then
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_FULL_UPLOAD_DECIDED"), entry), 20)
+		else
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_DELTA_DECIDED"), #changed, #deleted, entry), 20)
+		end
+
 		if #changed == 0 and #deleted == 0 then
 			print(_("PLUGIN_MGR_LOG_NO_CHANGES"))
 			mark_remote_synced()
@@ -3546,24 +3610,57 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 			return true, nil
 		end
 		if not use_full and #changed > 0 then
-			local ok_patch, err_patch = self:_upload_patch(plugin_data, entry, version, changed, deleted, upload_cover)
+			local ok_patch, err_patch, accepted = self:_upload_patch(plugin_data, entry, version, changed, deleted, upload_cover, changed_bytes)
 			if ok_patch then
 				if cover_data and cover_ext then
 					self:_upload_cover(entry, cover_data, cover_ext)
 				end
 				mark_remote_synced()
-				self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
+				if accepted then
+					self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_UPLOAD_ACCEPTED"), entry), plugin_data.config.entry)
+				else
+					self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
+				end
 				return true, nil
 			end
-			log.error(_("PLUGIN_MGR_LOG_DELTA_UPLOAD_FAILED"), tostring(err_patch))
 			if err_patch == "cancelled" then
 				return false, "cancelled"
 			end
+
+			-- 超时/网络中断时服务端可能已经应用成功。先核对远端哈希：
+			-- 已同步则按成功处理；否则返回错误让用户重试，避免自动全量覆盖。
+			local err_text = tostring(err_patch)
+			local unknown_outcome = err_text:find("timeout", 1, true) or err_text:find("HTTP 0 ", 1, true) or err_text:find("HTTP 409", 1, true)
+			if unknown_outcome then
+				log.warning(_("PLUGIN_MGR_LOG_DELTA_UPLOAD_UNKNOWN"), err_text)
+				self:_set_status(string.format(_("PLUGIN_MGR_STATUS_VERIFYING_UPLOAD"), entry), 70)
+				if not wait_seconds(5) then
+					return false, "cancelled"
+				end
+				local verify_ok, verify_resp = self:_hash_check(entry, version, dir_info.hashes, nil, nil, target_branch)
+				if verify_ok and verify_resp and type(verify_resp.changed) == "table" and #verify_resp.changed == 0 and type(verify_resp.deleted) == "table" and #verify_resp.deleted == 0 then
+					log.info(_("PLUGIN_MGR_LOG_DELTA_UPLOAD_CONFIRMED"), entry)
+					if cover_data and cover_ext then
+						self:_upload_cover(entry, cover_data, cover_ext)
+					end
+					mark_remote_synced()
+					self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_DELTA_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
+					return true, nil
+				end
+				log.error(_("PLUGIN_MGR_LOG_DELTA_UPLOAD_FAILED"), err_text)
+				return false, err_patch
+			end
+
+			log.warning(_("PLUGIN_MGR_LOG_FULL_UPLOAD_FALLBACK"), err_text)
 			use_full = true
 		end
 	end
 	if not hash_ok then
-		log.error(_("PLUGIN_MGR_LOG_HASH_CHECK_FAILED"), tostring(hash_resp))
+		log.error(_("PLUGIN_MGR_LOG_HASH_CHECK_FAILED"), tostring(hash_resp or hash_code))
+		if hash_code ~= 404 then
+			return false, hash_resp or string.format(_("PLUGIN_MGR_ERR_HASH_COMPARE"), tostring(hash_code))
+		end
+		log.warning(_("PLUGIN_MGR_LOG_FULL_UPLOAD_FALLBACK"), "no remote hash record")
 	end
 
 	-- 全量上传（增量不可用或变更量过大时回落）
@@ -3595,21 +3692,31 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN"), entry), 40)
+	local zip_mb = #zip_data / 1048576
+	-- 新插件的封面接口要求插件记录已存在；带封面时先用同步模式，保证封面能随本次上传生效
+	local async_upload = hash_code ~= 404 or not (cover_data and cover_ext)
+	local upload_headers = {
+		["Authorization"] = "Bearer " .. self._developer_token,
+		["Content-Type"] = "application/octet-stream",
+		["X-Plugin-Branch"] = target_branch
+	}
+	if async_upload then
+		upload_headers["X-Upload-Async"] = "1"
+	end
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, zip_mb, 0), 40)
 	local resp, err = self:_request(base .. "/upload", {
 		method = "POST",
-		headers = {
-			["Authorization"] = "Bearer " .. self._developer_token,
-			["Content-Type"] = "application/octet-stream",
-			["X-Plugin-Branch"] = target_branch
-		},
+		headers = upload_headers,
 		data = zip_data
-	}, 60)
+	}, 600, nil, function(elapsed)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, zip_mb, math.floor(elapsed)), 40)
+	end)
 
 	if err then
 		return false, string.format(_("PLUGIN_MGR_ERR_UPLOAD"), err)
 	end
-	if tonumber(resp.code) ~= 200 then
+	local accepted = tonumber(resp.code) == 202
+	if not accepted and tonumber(resp.code) ~= 200 then
 		return false, string.format(_("PLUGIN_MGR_ERR_UPLOAD_HTTP"), tostring(resp.code), tostring(resp.body))
 	end
 
@@ -3618,13 +3725,17 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		return false, _("PLUGIN_MGR_ERR_UPLOAD_PARSE")
 	end
 
-	self:_set_status(_("PLUGIN_MGR_STATUS_PLUGIN_UPLOADED"), 80)
+	self:_set_status(_(accepted and "PLUGIN_MGR_STATUS_UPLOAD_ACCEPTED" or "PLUGIN_MGR_STATUS_PLUGIN_UPLOADED"), 80)
 	if cover_data and cover_ext then
 		self:_upload_cover(entry, cover_data, cover_ext)
 	end
 
 	mark_remote_synced()
-	self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
+	if accepted then
+		self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_UPLOAD_ACCEPTED"), entry), plugin_data.config.entry)
+	else
+		self:_refresh_local_view(string.format(_("PLUGIN_MGR_STATUS_UPLOAD_SUCCESS"), entry), plugin_data.config.entry)
+	end
 	return true, nil
 end
 
