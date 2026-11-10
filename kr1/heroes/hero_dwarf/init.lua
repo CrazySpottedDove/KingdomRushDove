@@ -1,7 +1,11 @@
 return {
 	name = "hero_dwarf",
 	room = {
-		available_level = 40,
+		available = {
+			mode = "level",
+			gen = "kr2",
+			level = 14
+		},
 		stats = {7, 5, 0, 4},
 		thumb_image = "kr2_hero_room_thumbs_0017",
 		icon_image = "kr2_mapButtons_portrait_hero_0017"

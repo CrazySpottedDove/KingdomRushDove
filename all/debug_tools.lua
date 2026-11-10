@@ -37,7 +37,7 @@ function dd.ne(name)
 	local E = require("entity_db")
 	local e = E:create_entity(name)
 
-	e.nav_path.pi = game.dbg_active_pi
+	e.nav_path.pi = game.dbg_active_pi or 1
 	e.nav_path.spi = math.random(1, 3)
 
 	game.simulation:queue_insert_entity(e)

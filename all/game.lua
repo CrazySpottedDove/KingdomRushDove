@@ -16,7 +16,6 @@ local SU = require("screen_utils")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
 local GENS = require("generations.registry")
-local LEGACY = require("generations.legacy")
 local simulation = require("simulation")
 local game_gui = require("game_gui")
 local SH = require("klove.shader_db")
@@ -472,24 +471,6 @@ function game:destroy()
 	adaptive_fps:destroy()
 end
 
-function game:update_debug(dt)
-	if self.DBG_AUTO_SEND then
-		for k, ts in pairs(self.auto_send_list) do
-			if game.store.tick_ts - ts > self.auto_send_interval then
-				self.auto_send_list[k] = game.store.tick_ts
-
-				local e = E:create_entity(k)
-
-				e.nav_path.pi = self.dbg_active_pi
-				e.nav_path.spi = self.dbg_use_random_subpath and math.random(1, 3) or 1
-				e.nav_path.ni = P:get_start_node(self.dbg_active_pi)
-
-				self.simulation:queue_insert_entity(e)
-			end
-		end
-	end
-end
-
 function game:init_debug()
 	if not DEBUG then
 		return
@@ -500,25 +481,12 @@ function game:init_debug()
 	self.DBG_DRAW_PATHS = nil
 	self.DBG_DRAW_GRID = false
 	self.DBG_DRAW_CENTERS = false
-	self.DBG_ENEMY_PAGES = false
 	self.DBG_DRAW_RALLY_RANGES = false
 	self.DBG_DRAW_UNIT_RANGE = false
 	self.DBG_DRAW_BULLET_TRAILS = false
 	self.DBG_FPS_COUNTER = false
 	self.PERF_TIME_GRAPH = false
 	self.DBG_TIME_MULT = 1
-	self.DBG_AUTO_SEND = false
-	self.auto_send_list = {}
-	self.auto_send_interval = 5
-	self.dbg_use_random_subpath = true
-	package.loaded["data.game_debug_data"] = nil
-
-	local data = require("data.game_debug_data")
-
-	self.current_enemy_page = data.default_page_for_level and data.default_page_for_level[LEGACY.to_global(self.store.gen_id, self.store.level_idx)] or 1
-	self.enemy_pages = data.enemy_pages
-	self.enemy_keys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"}
-	self.dbg_active_pi = 1
 end
 
 local click_state = {
@@ -553,10 +521,6 @@ function game:sync_visible_coords()
 end
 
 function game:update(dt)
-	if DEBUG then
-		self:update_debug(dt)
-	end
-
 	-- 相机补间期间 x/y/zoom 每帧都在变，才需要每帧同步。
 	if self.camera and self.camera.tweening then
 		self:sync_visible_coords()
@@ -757,176 +721,12 @@ function game:draw()
 	self:draw_game()
 end
 
-function game:draw_enemy_pages()
-	local function print_sh(str, x, y, color)
-		color = color and color or {255, 255, 255}
-
-		G.setColor(0, 0, 0)
-		G.print(str, x + 1, y + 1)
-		G.setColor_old(unpack(color))
-		G.print(str, x, y)
-		G.setColor(1, 1, 1)
-	end
-
-	local _, _, _, origin = SU.clamp_window_aspect(self.screen_w, self.screen_h, self.screen_w, self.screen_h)
-
-	G.setColor(0, 0, 0, 0.392)
-	G.rectangle("fill", origin.x + 5, self.screen_h * 0.5 - 5, 270, self.screen_h / 3)
-	local names = self.enemy_pages[self.current_enemy_page]
-	local x, y = math.floor(origin.x + 10), self.screen_h * 0.5
-
-	G.setFont(F:f("DroidSansMono", 13))
-
-	for i, n in ipairs(names) do
-		local key = self.enemy_keys[i]
-
-		print_sh(string.format("%s: %s", key, n), x, y, self.auto_send_list[n] and {255, 100, 100} or {255, 255, 255})
-
-		y = y + 12
-	end
-
-	G.setColor(1, 1, 1)
-
-	y = y + 12
-
-	print_sh("[: prev page", x, y)
-
-	y = y + 12
-
-	print_sh("]: next page", x, y)
-
-	y = y + 12
-
-	if self.DBG_AUTO_SEND then
-		print_sh("=: auto send (ON)", x, y)
-	else
-		print_sh("=: auto send (OFF)", x, y)
-	end
-
-	y = y + 12
-
-	print_sh(string.format(";: use random subpath: %s", self.dbg_use_random_subpath), x, y)
-
-	y = y + 12
-
-	print_sh(string.format(":: remove existing mods: %s", self.DBG_REMOVE_EXISTING_MODS), x, y)
-
-	y = y + 12
-
-	print_sh(string.format("+/-: auto send time (%s sec)", self.auto_send_interval), x, y)
-
-	if self.store.game_outcome then
-		y = y + 12
-
-		print_sh("Lives checking OFF (store.game_outcome set)", x, y)
-	end
-
-	y = y + 12
-
-	print_sh(string.format("z/Z: time warp (%sx)", self.DBG_TIME_MULT), x, y)
-
-	y = y + 12
-
-	print_sh(string.format("f9/f10: enemy speed factor (%sx)", GS.difficulty_enemy_speed_factor[self.store.level_difficulty]), x, y)
-
-	y = y + 12
-
-	print_sh(string.format("DEBUG KEYS ARE %s", DEBUG_KEYS_ON and "ON" or "OFF"), x, y)
-
-	y = y + 12
-
-	print_sh(string.format("Frame: %if", self.store.tick_ts * FPS), x, y)
-
-	if self.store._lap_start then
-		y = y + 12
-
-		local sta = self.store._lap_start
-		local sto = self.store._lap_stop or 0
-
-		print_sh(string.format(",/.: Chrono: %i->%i=%if (%.2fs)", sta * FPS, sto * FPS, (sto - sta) * FPS, sto - sta), x, y)
-	end
-end
-
 if DEBUG then
 	function game:debug_keypressed(key, isrepeat)
 		local shift = love.keyboard.isDown("rshift") or love.keyboard.isDown("lshift")
 		local ctrl = love.keyboard.isDown("lctrl") or love.keyboard.isDown("lctrl")
 
-		local function remove_all_modifiers()
-			log.error("remove_all_modifiers")
-
-			for _, e in pairs(self.store.entities) do
-				if e.modifier then
-					self.simulation:queue_remove_entity(e)
-				end
-			end
-		end
-
-		local function apply_modifier(name, e)
-			if e then
-				local m = E:create_entity(name)
-
-				m.modifier.target_id = e.id
-				m.pos = V.vclone(e.pos)
-
-				self.simulation:queue_insert_entity(m)
-			else
-				for _, e in pairs(self.store.enemies) do
-					local m = E:create_entity(name)
-
-					m.modifier.target_id = e.id
-					m.pos = V.vclone(e.pos)
-
-					self.simulation:queue_insert_entity(m)
-				end
-			end
-		end
-
-		if self.DBG_ENEMY_PAGES and table.contains(self.enemy_keys, key) and #self.enemy_pages[self.current_enemy_page] >= table.keyforobject(self.enemy_keys, key) then
-			local idx = table.keyforobject(self.enemy_keys, key)
-			local template_name = self.enemy_pages[self.current_enemy_page][idx]
-			local e = E:create_entity(template_name)
-
-			if e and e.enemy then
-				e.enemy.wave_group_idx = km.clamp(1, 99999, game.store.wave_group_number)
-				e.nav_path.pi = self.dbg_active_pi
-				e.nav_path.spi = self.dbg_use_random_subpath and math.random(1, 3) or 1
-				e.nav_path.ni = P:get_start_node(self.dbg_active_pi)
-
-				if self.DBG_AUTO_SEND then
-					if self.auto_send_list[e.template_name] then
-						self.auto_send_list[e.template_name] = nil
-					else
-						self.auto_send_list[e.template_name] = 0
-					end
-				end
-
-				if not self.DBG_AUTO_SEND then
-					self.simulation:queue_insert_entity(e)
-				end
-			elseif e and e.modifier and not isrepeat then
-				if self.DBG_REMOVE_EXISTING_MODS then
-					remove_all_modifiers()
-				end
-
-				apply_modifier(self.enemy_pages[self.current_enemy_page][idx], self.game_gui.selected_entity)
-			end
-		elseif key == "-" then
-			self.auto_send_interval = km.clamp(1, 1000, self.auto_send_interval - 1)
-		elseif key == "=" then
-			if shift then
-				self.auto_send_interval = km.clamp(1, 1000, self.auto_send_interval + 1)
-			else
-				self.DBG_AUTO_SEND = not self.DBG_AUTO_SEND
-				self.auto_send_list = {}
-			end
-		elseif key == "`" then
-			self.DBG_ENEMY_PAGES = not self.DBG_ENEMY_PAGES
-		elseif key == "[" then
-			self.current_enemy_page = km.clamp(1, #self.enemy_pages, self.current_enemy_page - 1)
-		elseif key == "]" then
-			self.current_enemy_page = km.clamp(1, #self.enemy_pages, self.current_enemy_page + 1)
-		elseif key == "a" then
+		if key == "a" then
 			self.store.paused = not self.store.paused
 		elseif key == "s" then
 			self.store.step = true
@@ -976,9 +776,6 @@ if DEBUG then
 			else
 				self.DBG_DRAW_PATHS = nil
 			end
-		elseif key == "j" then
-			self.dbg_active_pi = km.zmod(self.dbg_active_pi + 1, #P.paths)
-			self.path_canvas = nil
 		elseif key == "l" then
 			if ctrl then
 				local outcome = {
@@ -1011,12 +808,6 @@ if DEBUG then
 				self.store.game_outcome = {}
 			elseif self.store.lives <= 20 then
 				self.store.game_outcome = nil
-			end
-		elseif key == ";" then
-			if shift then
-				self.DBG_REMOVE_EXISTING_MODS = not self.DBG_REMOVE_EXISTING_MODS
-			else
-				self.dbg_use_random_subpath = not self.dbg_use_random_subpath
 			end
 		elseif key == "z" then
 			if shift then
@@ -1460,9 +1251,6 @@ function game:after_draw_debug(rox, roy, gs)
 		self.dbg_bullet_canvas = nil
 	end
 
-	if self.DBG_ENEMY_PAGES then
-		game:draw_enemy_pages()
-	end
 end
 
 function game:draw_dark_foreground(rox, roy, gs)

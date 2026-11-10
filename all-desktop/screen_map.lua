@@ -977,24 +977,6 @@ function screen_map:build_hero_data()
 				name = module.name
 			}, true)
 
-			if room.available_level then
-				local gen_id, local_idx = LEGACY.to_ref(room.available_level)
-
-				if gen_id then
-					room.available = {
-						mode = "level",
-						gen = gen_id,
-						level = local_idx
-					}
-				else
-					room.available = {
-						mode = "default"
-					}
-				end
-
-				room.available_level = nil
-			end
-
 			room.available = room.available or {
 				mode = "default"
 			}
