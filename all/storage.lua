@@ -401,6 +401,9 @@ function storage:ensure_slot_v2(input, idx)
 		end
 
 		upgrades.list_id = tostring(upgrades.list_id)
+		if not upgrades.levels then
+			upgrades.levels = {}
+		end
 
 		for class, value in pairs(DEFAULT_UPGRADE_LEVELS) do
 			if upgrades.levels[class] == nil then
