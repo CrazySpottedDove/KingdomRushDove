@@ -35,6 +35,13 @@ local ROW_H = 156
 local LIST_TOP_Y = 208
 local STORE_PAGE_SIZE = 20
 
+-- 大插件走分块上传：避免单次请求体撞到反向代理/CDN 的 100 MB 限制，
+-- 也避免服务端一次性把整个包读进 web::Bytes。
+local UPLOAD_CHUNK_SIZE = 8 * 1024 * 1024
+local UPLOAD_CHUNK_THRESHOLD = 48 * 1024 * 1024
+local UPLOAD_CHUNK_TIMEOUT = 180
+local UPLOAD_CHUNK_MAX_RETRIES = 3
+
 -- 本地版本高于远端（存在未上传更新）时的开发者提示行背景色
 local LOCAL_AHEAD_BG = {74, 36, 22, 225}
 local LOCAL_AHEAD_HOVER_BG = {98, 50, 30, 235}
@@ -3419,6 +3426,128 @@ function PluginManagerView:_convert_plugin_branch_to_master(plugin_data)
 	return true, nil
 end
 
+--- 分块上传完整插件包。
+--- 返回 resp, err；服务端不支持分块接口时 err == "unsupported"，由调用方回落旧接口。
+---@param base string 已拼接好的 /plugins 地址
+---@param data string 完整 zip 内容
+---@param opts table { mode, entry, version, branch, async_upload }
+function PluginManagerView:_upload_chunked(base, data, opts)
+	opts = opts or {}
+	local mode = opts.mode or "full"
+	local entry = opts.entry or ""
+	local version = opts.version or ""
+	local target_branch = opts.branch or "master"
+	local async_upload = opts.async_upload and true or false
+	local total_chunks = math.max(1, math.ceil(#data / UPLOAD_CHUNK_SIZE))
+	local auth_headers = {
+		["Authorization"] = "Bearer " .. self._developer_token
+	}
+	local function is_cancelled()
+		return self._cancel_requested
+	end
+
+	local start_resp, start_err = self:_request(base .. "/upload/chunked/start", {
+		method = "POST",
+		headers = {
+			["Authorization"] = "Bearer " .. self._developer_token,
+			["Content-Type"] = "application/json"
+		},
+		data = json.encode({
+			mode = mode,
+			branch = target_branch,
+			entry = entry,
+			version = version,
+			async_upload = async_upload,
+			total_chunks = total_chunks,
+			total_size = #data
+		})
+	}, 30, is_cancelled)
+	if start_err then
+		return nil, start_err
+	end
+	local start_code = tonumber(start_resp.code)
+	if start_code == 404 or start_code == 405 then
+		return nil, "unsupported"
+	end
+	if start_code ~= 200 then
+		return nil, string.format("HTTP %s %s", tostring(start_resp.code), tostring(start_resp.body))
+	end
+	local decoded_ok, start_body = pcall(json.decode, start_resp.body)
+	local upload_id = decoded_ok and start_body and start_body.upload_id
+	if not upload_id then
+		return nil, _("PLUGIN_MGR_ERR_UPLOAD_PARSE")
+	end
+
+	local function abort()
+		self:_request(base .. "/upload/chunked/" .. upload_id, {
+			method = "DELETE",
+			headers = auth_headers
+		}, 10)
+	end
+
+	local sent = 0
+	local total = #data
+	for i = 0, total_chunks - 1 do
+		if is_cancelled() then
+			abort()
+			return nil, "cancelled"
+		end
+		local first = i * UPLOAD_CHUNK_SIZE + 1
+		local last = math.min(first + UPLOAD_CHUNK_SIZE - 1, total)
+		local chunk = string.sub(data, first, last)
+
+		local chunk_resp, chunk_err
+		for attempt = 1, UPLOAD_CHUNK_MAX_RETRIES do
+			if is_cancelled() then
+				abort()
+				return nil, "cancelled"
+			end
+			chunk_resp, chunk_err = self:_request(base .. "/upload/chunked/" .. upload_id .. "/" .. i, {
+				method = "PUT",
+				headers = {
+					["Authorization"] = "Bearer " .. self._developer_token,
+					["Content-Type"] = "application/octet-stream"
+				},
+				data = chunk
+			}, UPLOAD_CHUNK_TIMEOUT, is_cancelled)
+			if not chunk_err and chunk_resp and tonumber(chunk_resp.code) == 200 then
+				break
+			end
+			if attempt < UPLOAD_CHUNK_MAX_RETRIES then
+				local deadline = love.timer.getTime() + math.min(attempt * 2, 5)
+				while love.timer.getTime() < deadline do
+					if is_cancelled() then
+						abort()
+						return nil, "cancelled"
+					end
+					coroutine.yield()
+				end
+			end
+		end
+
+		if chunk_err or not chunk_resp or tonumber(chunk_resp.code) ~= 200 then
+			abort()
+			if chunk_err then
+				return nil, chunk_err
+			end
+			return nil, string.format("HTTP %s %s", tostring(chunk_resp.code), tostring(chunk_resp.body))
+		end
+
+		sent = sent + #chunk
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, sent / 1048576, 0), 40 + 20 * (i + 1) / total_chunks)
+		coroutine.yield()
+	end
+
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, total / 1048576, 0), 65)
+	local resp, err = self:_request(base .. "/upload/chunked/" .. upload_id .. "/complete", {
+		method = "POST",
+		headers = auth_headers
+	}, 600, is_cancelled, function(elapsed)
+		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, total / 1048576, math.floor(elapsed)), 70)
+	end)
+	return resp, err
+end
+
 function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, deleted, upload_cover, changed_bytes)
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_PATCH_PREPARING"), entry, #changed, (changed_bytes or 0) / 1048576), 25)
 
@@ -3483,24 +3612,45 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 
 	local patch_mb = #patch_data / 1048576
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, patch_mb, 0), 40)
-	local resp, err = self:_request(base .. "/upload", {
-		method = "POST",
-		headers = {
-			["Authorization"] = "Bearer " .. self._developer_token,
-			["Content-Type"] = "application/octet-stream",
-			["X-Upload-Mode"] = "patch",
-			["X-Plugin-Entry"] = entry,
-			["X-Plugin-Version"] = version,
-			["X-Plugin-Branch"] = plugin_data.config.branch or "master",
-			["X-Upload-Async"] = "1"
-		},
-		data = patch_data
-	}, 600, nil, function(elapsed)
-		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, patch_mb, math.floor(elapsed)), 40)
-	end)
+	local resp, err
+	local use_legacy_upload = #patch_data < UPLOAD_CHUNK_THRESHOLD
+	if not use_legacy_upload then
+		resp, err = self:_upload_chunked(base, patch_data, {
+			mode = "patch",
+			entry = entry,
+			version = version,
+			branch = plugin_data.config.branch or "master",
+			async_upload = true
+		})
+		if err == "unsupported" then
+			log.warning("chunked patch upload unsupported; falling back to single request")
+			use_legacy_upload = true
+			resp, err = nil, nil
+		end
+	end
+	if use_legacy_upload then
+		resp, err = self:_request(base .. "/upload", {
+			method = "POST",
+			headers = {
+				["Authorization"] = "Bearer " .. self._developer_token,
+				["Content-Type"] = "application/octet-stream",
+				["X-Upload-Mode"] = "patch",
+				["X-Plugin-Entry"] = entry,
+				["X-Plugin-Version"] = version,
+				["X-Plugin-Branch"] = plugin_data.config.branch or "master",
+				["X-Upload-Async"] = "1"
+			},
+			data = patch_data
+		}, 600, nil, function(elapsed)
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, patch_mb, math.floor(elapsed)), 40)
+		end)
+	end
 
 	if err then
 		return false, string.format(_("PLUGIN_MGR_ERR_DELTA_UPLOAD"), err)
+	end
+	if not resp then
+		return false, _("PLUGIN_MGR_ERR_UPLOAD_PARSE")
 	end
 	if tonumber(resp.code) == 202 then
 		return true, nil, true
@@ -3704,16 +3854,38 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		upload_headers["X-Upload-Async"] = "1"
 	end
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, zip_mb, 0), 40)
-	local resp, err = self:_request(base .. "/upload", {
-		method = "POST",
-		headers = upload_headers,
-		data = zip_data
-	}, 600, nil, function(elapsed)
-		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, zip_mb, math.floor(elapsed)), 40)
-	end)
+	local resp, err
+	local use_legacy_upload = #zip_data < UPLOAD_CHUNK_THRESHOLD
+	if not use_legacy_upload then
+		resp, err = self:_upload_chunked(base, zip_data, {
+			mode = "full",
+			entry = entry,
+			version = version,
+			branch = target_branch,
+			async_upload = async_upload
+		})
+		if err == "unsupported" then
+			-- 兼容尚未部署分块接口的旧服务器/备用站点
+			log.warning("chunked upload unsupported; falling back to single request")
+			use_legacy_upload = true
+			resp, err = nil, nil
+		end
+	end
+	if use_legacy_upload then
+		resp, err = self:_request(base .. "/upload", {
+			method = "POST",
+			headers = upload_headers,
+			data = zip_data
+		}, 600, nil, function(elapsed)
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, zip_mb, math.floor(elapsed)), 40)
+		end)
+	end
 
 	if err then
 		return false, string.format(_("PLUGIN_MGR_ERR_UPLOAD"), err)
+	end
+	if not resp then
+		return false, _("PLUGIN_MGR_ERR_UPLOAD_PARSE")
 	end
 	local accepted = tonumber(resp.code) == 202
 	if not accepted and tonumber(resp.code) ~= 200 then
