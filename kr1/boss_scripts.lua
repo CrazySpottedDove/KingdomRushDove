@@ -195,6 +195,9 @@ function scripts.eb_jt.update(this, store)
 	::label_133_0::
 
 	while true do
+		if this.health.dead then
+			this.dying = true
+		end
 		if this.dying then
 			S:queue(this.sound_events.death)
 			U.y_animation_play(this, "death", nil, store.tick_ts)
@@ -817,6 +820,9 @@ function scripts.eb_veznan.update(this, store)
 	this.phase = "battle"
 
 	while not this.phase_signal do
+		if this.health.dead then
+			break
+		end
 		if this.unit.is_stunned then
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			coroutine.yield()
@@ -883,6 +889,9 @@ function scripts.eb_veznan.update(this, store)
 	this.phase = "demon"
 
 	while not this.phase_signal do
+		if this.health.dead then
+			break
+		end
 		if this.unit.is_stunned then
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			coroutine.yield()
