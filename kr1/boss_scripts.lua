@@ -4084,7 +4084,8 @@ function scripts.mod_gnoll_boss.remove(this, store)
 
 	if target then
 		target.health.hp_max = target.health.hp_max - this._hp_bonus
-		target.health.hp = target.health.hp - this._hp_bonus
+		local d = E.assign_damage(DAMAGE_TRUE, this._hp_bonus, this.id, target.id)
+		queue_damage(store, d)
 		SU.remove_unit_damage_factor_by_factor(target, this.inflicted_damage_factor)
 	end
 

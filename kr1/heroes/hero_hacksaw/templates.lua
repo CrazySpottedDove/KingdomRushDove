@@ -50,7 +50,8 @@ local function hero_side_effect(this, store, damage, target)
 	end
 
 	target.enemy.gold = target.enemy.gold * 2
-	target.health.hp = 0
+	local d = E.assign_damage(DAMAGE_TRUE, math.max(target.heatlh.hp, 1), this.id, target.id)
+	queue_damage(store, d)
 
 	simulation:queue_insert_entity(fx)
 end

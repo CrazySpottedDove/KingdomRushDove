@@ -1012,7 +1012,8 @@ local function mod_hero_space_elf_ultimate_update(this, store)
 	U.y_animation_wait_default(this)
 
 	if this.interrupt then
-		target.health.hp = 0
+		local d = E.assign_damage(DAMAGE_EAT, 1, this.id, target.id)
+		queue_damage(store, d)
 
 		if target.death_spawns then
 			target.health.last_damage_types = DAMAGE_NO_SPAWNS
