@@ -33,7 +33,7 @@ local techs = {
 		from_kr = 3,
 		icon = 5,
 		level = 6,
-		price = 4,
+		price = 3,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.arrows) do
 				local t = T(n)
@@ -48,7 +48,7 @@ local techs = {
 		class = "archers",
 		icon = 16,
 		level = 4,
-		price = 2,
+		price = 1,
 		range_factor = 1.05,
 		patch = function(UP, u)
 			local archer_towers = UP.archer_towers
@@ -59,7 +59,7 @@ local techs = {
 		class = "archers",
 		icon = 15,
 		level = 3,
-		price = 2,
+		price = 1,
 		reduce_armor_factor = 0.1,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.arrows) do
@@ -85,7 +85,7 @@ local techs = {
 		damage_factor = 2,
 		icon = 17,
 		level = 5,
-		price = 3
+		price = 2
 	},
 	archer_salvage = {
 		class = "archers",
@@ -102,7 +102,7 @@ local techs = {
 		class = "barracks",
 		icon = 12,
 		level = 5,
-		price = 3,
+		price = 2,
 		spiked_armor_factor = 0.1,
 		patch = function(UP, u)
 			for _, t in ipairs(E:filter_templates("soldier")) do
@@ -129,7 +129,7 @@ local techs = {
 		icon = 8,
 		level = 6,
 		magic_armor_inc = 0.1,
-		price = 4,
+		price = 3,
 		patch = function(UP, u)
 			patch_soldier_magic_armor_inc(u.factor, u.magic_armor_inc)
 		end
@@ -139,7 +139,7 @@ local techs = {
 		cooldown_factor = 0.8,
 		icon = 10,
 		level = 3,
-		price = 2,
+		price = 1,
 		rally_range_factor = 1.2,
 		patch = function(UP, u)
 			local towers_with_barrack = UP.towers_with_barrack
@@ -172,7 +172,7 @@ local techs = {
 		health_factor = 1.09,
 		icon = 11,
 		level = 4,
-		price = 2,
+		price = 1,
 		patch = function(UP, u)
 			local function apply_soldier_health_factor(health_factor)
 				H.apply_soldier_health_factor(UP.soldiers, health_factor)
@@ -194,7 +194,7 @@ local techs = {
 		class = "engineers",
 		icon = 27,
 		level = 5,
-		price = 3,
+		price = 2,
 		patch = function(UP, u)
 			mul_dmg(T("mod_tower_rotten_forest_burst_damage").dps, 1.25)
 			mul_dmg(T("mod_ignis_altar_damage"), 1.25)
@@ -218,7 +218,7 @@ local techs = {
 		cost_factor = 0.9,
 		icon = 25,
 		level = 3,
-		price = 2,
+		price = 1,
 		patch = function(UP, u)
 			local engineer_towers = UP.engineer_towers
 			scale_tower_price(engineer_towers, u.cost_factor, math.floor)
@@ -231,7 +231,7 @@ local techs = {
 		from_kr = 2,
 		icon = 19,
 		level = 6,
-		price = 4,
+		price = 3,
 		patch = function(UP, u)
 			patch_engineer_power_cooldown(u.cooldown_factor, u.cooldown_factor_electric)
 		end
@@ -241,7 +241,7 @@ local techs = {
 		cost_factor = 0.8,
 		icon = 26,
 		level = 4,
-		price = 3,
+		price = 2,
 		patch = function(UP, u)
 			scale_power_prices(UP.engineer_advanced_tower, u.cost_factor, math.floor)
 		end
@@ -290,14 +290,14 @@ local techs = {
 		from_kr = 2,
 		icon = 15,
 		level = 6,
-		price = 4
+		price = 3
 	},
 	mage_empowered_magic = {
 		class = "mages",
 		damage_factor = 1.15,
 		icon = 21,
 		level = 4,
-		price = 2,
+		price = 1,
 		patch = function(UP, u)
 			H.mage_bolt_damage_mul(UP.mage_tower_bolts, u.damage_factor)
 		end
@@ -307,7 +307,7 @@ local techs = {
 		cost_factor = 0.91,
 		icon = 20,
 		level = 3,
-		price = 2,
+		price = 1,
 		patch = function(UP, u)
 			local mage_towers = UP.mage_towers
 			scale_tower_price(mage_towers, u.cost_factor, math.ceil)
@@ -318,7 +318,7 @@ local techs = {
 		icon = 22,
 		level = 5,
 		mod = "mod_slow_curse",
-		price = 3,
+		price = 2,
 		patch = function(UP, u)
 			for _, n in ipairs(UP.bolts) do
 				local t = T(n)
@@ -350,7 +350,7 @@ local techs = {
 		from_kr = 2,
 		icon = 25,
 		level = 6,
-		price = 4,
+		price = 3,
 		patch = function(UP, u)
 			T("power_fireball_control").cataclysm_count = T("power_fireball_control").cataclysm_count + u.fireball_count_increase
 			T("power_fireball_control").fireball_count = T("power_fireball_control").fireball_count + u.fireball_count_increase
@@ -362,7 +362,7 @@ local techs = {
 		damage_increase = 30,
 		icon = 5,
 		level = 3,
-		price = 3,
+		price = 2,
 		range_factor = 1.25,
 		patch = function(UP, u)
 			T("power_fireball_control").cooldown = T("power_fireball_control").cooldown - u.cooldown_reduction
@@ -379,7 +379,7 @@ local techs = {
 		duration_increase = 5,
 		icon = 6,
 		level = 4,
-		price = 3,
+		price = 2,
 		patch = function(UP, u)
 			T("power_fireball_control").cooldown = T("power_fireball_control").cooldown - u.cooldown_reduction
 
@@ -402,7 +402,7 @@ local techs = {
 		fireball_count_increase = 2,
 		icon = 3,
 		level = 1,
-		price = 2,
+		price = 1,
 		patch = function(UP, u)
 			T("power_fireball_control").fireball_count = T("power_fireball_control").fireball_count + u.fireball_count_increase
 			T("power_fireball").bullet.damage_min = T("power_fireball").bullet.damage_min + u.damage_increase
@@ -415,7 +415,7 @@ local techs = {
 		damage_increase = 60,
 		icon = 7,
 		level = 5,
-		price = 3,
+		price = 2,
 		patch = function(UP, u)
 			T("power_fireball_control").cataclysm_count = T("power_fireball_control").cataclysm_count + u.cataclysm_count_increase
 			T("power_fireball").bullet.damage_min = T("power_fireball").bullet.damage_min + u.damage_increase
@@ -426,7 +426,7 @@ local techs = {
 		class = "rain",
 		icon = 4,
 		level = 2,
-		price = 2,
+		price = 1,
 		patch = function(UP, u)
 			T("power_fireball").scorch_earth = true
 		end
@@ -435,35 +435,35 @@ local techs = {
 		class = "reinforcements",
 		icon = 28,
 		level = 1,
-		price = 2,
+		price = 1,
 		template_name = "re_farmer_well_fed"
 	},
 	reinforcement_level_2 = {
 		class = "reinforcements",
 		icon = 29,
 		level = 2,
-		price = 3,
+		price = 2,
 		template_name = "re_conscript"
 	},
 	reinforcement_level_3 = {
 		class = "reinforcements",
 		icon = 30,
 		level = 3,
-		price = 3,
+		price = 2,
 		template_name = "re_warrior"
 	},
 	reinforcement_level_4 = {
 		class = "reinforcements",
 		icon = 1,
 		level = 4,
-		price = 3,
+		price = 2,
 		template_name = "re_legionnaire"
 	},
 	reinforcement_level_5 = {
 		class = "reinforcements",
 		icon = 2,
 		level = 5,
-		price = 4,
+		price = 3,
 		template_name = "re_legionnaire_ranged"
 	},
 	reinforcement_level_6 = {
@@ -473,7 +473,7 @@ local techs = {
 		from_kr = 3,
 		icon = 29,
 		level = 6,
-		price = 4
+		price = 3
 	}
 
 }
