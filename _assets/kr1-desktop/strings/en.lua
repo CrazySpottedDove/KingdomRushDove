@@ -201,7 +201,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_2 = "Every %$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$ seconds, silences up to %$T('tower_wild_magus').powers.ward.target_count[level]%$ enemies, blocking their magical abilities for %$T('mod_ward').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[2].cooldown * tcd%$ seconds, throws a fireball towards the path, dealing %$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$ magic explosion damage and burning enemies for %$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$ true damage every %$T('mod_firebook_aura').dps.damage_every%$ seconds over %$T('mod_firebook_aura').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[3].cooldown * tcd%$ seconds, grants a %$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$% damage buff to all towers within range for %$T('tower_wizard').attacks.list[3].duration[level]%$ seconds.",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage."
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage.",
 }
 
 return {
@@ -4495,9 +4495,12 @@ return {
 	LEVEL_MODE_CAMPAIGN = "Campaign",
 	LEVEL_MODE_HEROIC = "Heroic Challenge",
 	LEVEL_MODE_HEROIC_DESCRIPTION = "Test your tactical skills against an elite enemy force in this challenge meant for only the most heroic defenders!",
+	LEVEL_MODE_HEROIC_UNAVAILABLE = "This stage has no Heroic mode.",
 	LEVEL_MODE_IRON = "Iron Challenge",
 	LEVEL_MODE_IRON_DESCRIPTION = "A test for the ultimate defender, the iron challenge will take your tactical skills to the limit. ",
+	LEVEL_MODE_IRON_UNAVAILABLE = "This stage has no Iron mode.",
 	LEVEL_MODE_LOCKED_DESCRIPTION = "Complete this stage with 3 stars to unlock this mode.",
+	LEVEL_MODE_UNAVAILABLE = "This stage has no such mode.",
 	LEVEL_SELECT_DIFFICULTY_CASUAL = "Casual",
 	LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE = "Impossible",
 	LEVEL_SELECT_DIFFICULTY_NORMAL = "Normal",

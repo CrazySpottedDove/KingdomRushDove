@@ -17,6 +17,8 @@ local HEROES = require("heroes.registry")
 local SPELLS = require("spell_system")
 local GENS = require("generations.registry")
 local LEGACY = require("generations.legacy")
+local LU = require("level_utils")
+local WAVE_DB = require("wave_db")
 local V = require("lib.klua.vector")
 local v = V.v
 local km = require("lib.klua.macros")
@@ -3550,7 +3552,25 @@ local function add_level_rules(parent, level_data, y)
 	parent:add_child(hero_label)
 end
 
-local function add_level_tab(parent, mode, tab_cfg, y, stars)
+--- 判定某关卡模式是否有独立的波次文件（.lua 或 .tsv）。
+--- 后缀统一取自 wave_db，新增模式只需在 wave_db.mode_suffixes 注册即可。
+local function has_mode_wave_file(gen, gen_id, level_num, mode)
+	local suffix = WAVE_DB:mode_suffix(mode)
+
+	if not suffix then
+		return false
+	end
+
+	local base = "data/waves/" .. GENS:level_file(gen_id, level_num) .. "_waves_" .. suffix
+	local store = {
+		gen_id = gen_id,
+		level_root = gen and gen.resource_root
+	}
+
+	return LU.find_level_path(store, base .. ".lua") ~= nil or LU.find_level_path(store, base .. ".tsv") ~= nil
+end
+
+local function add_level_tab(parent, mode, tab_cfg, y, stars, available)
 	local x = 1105
 	local fmt = "levelSelect_Mode_notxt_00%02i"
 	local i_l, i_n, i_h, i_s = unpack(tab_cfg.indexes)
@@ -3572,15 +3592,22 @@ local function add_level_tab(parent, mode, tab_cfg, y, stars)
 		parent.tabs_selected = {}
 	end
 
-	if i_l and stars < 3 then
+	if not available or (i_l and stars < 3) then
 		local t = KImageView:new(string.format(fmt, i_l))
 
 		t.pos = v(x, y)
 
 		function t.on_enter()
 			local msg = mode == GAME_MODE_HEROIC and _("Heroic challenge") or _("Iron challenge")
+			local desc
 
-			parent:show_tooltip(msg)
+			if not available then
+				desc = tab_cfg.unavailable_text or _("LEVEL_MODE_UNAVAILABLE")
+			else
+				desc = _("LEVEL_MODE_LOCKED_DESCRIPTION")
+			end
+
+			parent:show_tooltip(msg, desc)
 		end
 
 		function t.on_exit()
@@ -3698,9 +3725,11 @@ screen_map.tab_configs = {
 	[GAME_MODE_HEROIC] = {
 		order = 20,
 		y = 260,
+		requires_wave_file = true,
 		tab = {
 			indexes = {4, 5, 6, 7},
 			text = _("Heroic"),
+			unavailable_text = _("LEVEL_MODE_HEROIC_UNAVAILABLE"),
 			label_x = 40,
 			selected_label_x = 53,
 			label_y = 56,
@@ -3720,9 +3749,11 @@ screen_map.tab_configs = {
 	[GAME_MODE_IRON] = {
 		order = 30,
 		y = 345,
+		requires_wave_file = true,
 		tab = {
 			indexes = {8, 9, 10, 11},
 			text = _("Iron"),
+			unavailable_text = _("LEVEL_MODE_IRON_UNAVAILABLE"),
 			label_x = 40,
 			selected_label_x = 53,
 			label_y = 56,
@@ -3922,6 +3953,11 @@ function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, ir
 		local mode = item.mode
 		local cfg = screen_map.tab_configs[mode]
 		local page_cfg = cfg.page or {}
+		local available = true
+
+		if cfg.requires_wave_file then
+			available = has_mode_wave_file(self.gen, gen_id, level_num, mode)
+		end
 		local page = KView:new()
 
 		page.hidden = true
@@ -3994,7 +4030,7 @@ function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, ir
 			end
 		end
 
-		add_level_tab(self, mode, cfg.tab, cfg.y, stars)
+		add_level_tab(self, mode, cfg.tab, cfg.y, stars, available)
 
 		first_mode = first_mode or mode
 	end
@@ -4050,9 +4086,10 @@ function LevelSelectView:initialize(sw, sh, gen_id, level_num, stars, heroic, ir
 	self.tip_panel.hidden = true
 end
 
-function LevelSelectView:show_tooltip(title)
+function LevelSelectView:show_tooltip(title, desc)
 	self.tip_panel.hidden = false
 	self.tip_panel.title.text = title
+	self.tip_panel.desc.text = desc or _("LEVEL_MODE_LOCKED_DESCRIPTION")
 
 	self:update_tooltip_position()
 end
