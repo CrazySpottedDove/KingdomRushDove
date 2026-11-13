@@ -40698,7 +40698,7 @@ function scripts.tower_sentry.update(this, store)
 		local pos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni + P:predict_enemy_node_advance(e, ba.node_prediction))
 		local e_an, e_af = anim_name("shoot", pos)
 
-		return e_an == an and e_af == af
+		return e_an == an and e_af == af and this.pos:dist2(e.pos) > this.attacks.blind_range * this.attacks.blind_range
 	end
 
 	local function score_hp_max(e)
@@ -40899,7 +40899,7 @@ function scripts.tower_sentry.update(this, store)
 						break
 					end
 
-					if target.health.dead or not position_ok(target, aim_an, aim_af) or not store.entities[target.id] then
+					if target.health.dead or not position_ok(target, aim_an, aim_af) or not store.entities[target.id] or band(target.vis.flags, ba.vis_bans) ~= 0 or band(target.vis.bans, ba.vis_flags) ~= 0 then
 						remove_aim_mod()
 						target = acquire(aim_an, aim_af)
 
