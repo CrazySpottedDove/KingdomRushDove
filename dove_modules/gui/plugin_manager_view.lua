@@ -14,6 +14,7 @@ local plugin_main = require("plugin.plugin_main")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local markdown_view = require("dove_modules.gui.markdown_view")
 local zip = require("lib.zip")
+local gitignore = require("dove_modules.gitignore")
 local plugin_packs = require("dove_modules.gui.plugin_manager_packs")
 local version = require("version")
 local branch = version.branch or "master"
@@ -3306,36 +3307,29 @@ function PluginManagerView:_developer_login()
 	return true, nil
 end
 
-function PluginManagerView:_compute_dir_hashes(dir, on_progress)
+function PluginManagerView:_compute_dir_hashes(dir, on_progress, respect_gitignore)
 	local hashes = {}
 	local sizes = {}
 	local total_bytes = 0
 
-	local skip_dirs = {".git", ".backup", ".tmp"}
+	local rules = {}
+	-- 插件根目录下始终排除的条目，与 .gitignore 共用同一套匹配逻辑
+	gitignore.append(rules, "/.git\n/.backup\n/.tmp\n/cover.*", "")
 
 	local function walk(path, prefix)
+		local rule_count = #rules
+		if respect_gitignore then
+			local ignore_path = path .. "/.gitignore"
+			if FS.getInfo(ignore_path, "file") then
+				gitignore.append(rules, FS.read(ignore_path), prefix)
+			end
+		end
 		local items = FS.getDirectoryItems(path) or {}
 		for _, name in ipairs(items) do
-			if prefix == "" then
-				local is_skip = false
-				for _, sd in ipairs(skip_dirs) do
-					if name == sd then
-						is_skip = true
-						break
-					end
-				end
-				if is_skip then
-					goto continue
-				end
-				if name:lower():match("^cover%.") then
-					goto continue
-				end
-			end
-
 			local full_path = path .. "/" .. name
 			local rel_path = (prefix ~= "" and prefix .. "/" .. name) or name
 			local info = FS.getInfo(full_path)
-			if info then
+			if info and not gitignore.ignored(rules, rel_path, info.type == "directory") then
 				if info.type == "directory" then
 					walk(full_path, rel_path)
 				elseif info.type == "file" then
@@ -3351,7 +3345,9 @@ function PluginManagerView:_compute_dir_hashes(dir, on_progress)
 					end
 				end
 			end
-			::continue::
+		end
+		for i = #rules, rule_count + 1, -1 do
+			rules[i] = nil
 		end
 	end
 
@@ -3686,9 +3682,14 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	local cover_data = nil
 	local cover_ext = nil
 	if upload_cover then
+		local cover_rules = {}
+		local ignore_path = plugin_paths.plugin_dir(entry) .. "/.gitignore"
+		if FS.getInfo(ignore_path, "file") then
+			gitignore.append(cover_rules, assert(FS.read(ignore_path)), "")
+		end
 		local items = FS.getDirectoryItems(plugin_paths.plugin_dir(plugin_data.config.entry)) or {}
 		for _, name in ipairs(items) do
-			if name:lower():match("^cover%.") then
+			if name:lower():match("^cover%.") and not gitignore.ignored(cover_rules, name, false) then
 				cover_data = FS.read(plugin_paths.plugin_dir(plugin_data.config.entry) .. "/" .. name)
 				cover_ext = name:match("%.([^%.]+)$")
 				break
@@ -3705,7 +3706,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPUTING_HASH_PROGRESS"), entry, hashed_files, hashed_bytes / 1048576), 5)
 		end
 		coroutine.yield()
-	end)
+	end, true)
 	if dir_info.total_bytes == 0 then
 		return false, _("PLUGIN_MGR_ERR_PLUGIN_DIR_EMPTY")
 	end
@@ -3739,7 +3740,12 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	end
 
 	if hash_ok and hash_resp and type(hash_resp.changed) == "table" and type(hash_resp.deleted) == "table" then
-		local changed = hash_resp.changed
+		local changed = {}
+		for _, path in ipairs(hash_resp.changed) do
+			if dir_info.hashes[path] then
+				changed[#changed + 1] = path
+			end
+		end
 		local deleted = hash_resp.deleted
 		local changed_bytes = 0
 		for _, p in ipairs(changed) do
@@ -3816,8 +3822,9 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	-- 全量上传（增量不可用或变更量过大时回落）
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_COMPRESSING"), entry), 20)
 	local zip_data, zip_err = zip.create_from_dir(plugin_paths.plugin_dir(plugin_data.config.entry), {
-		exclude = {"^cover%..+$"},
-		skip_dirs = {".git", ".backup", ".tmp"},
+		include = function(path)
+			return dir_info.hashes[path] ~= nil
+		end,
 		on_progress = function(done, total, phase)
 			if self._cancel_requested then
 				return false
