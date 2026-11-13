@@ -181,7 +181,6 @@ end
 function zip.create_from_dir(source_dir, opts)
 	opts = opts or {}
 	local exclude = opts.exclude or {}
-	local skip_dirs = opts.skip_dirs or {}
 	local on_progress = opts.on_progress
 
 	local function step(done, total, phase, name)
@@ -200,16 +199,7 @@ function zip.create_from_dir(source_dir, opts)
 			local info = FS.getInfo(full_path)
 			if info then
 				if info.type == "directory" then
-					local skip = false
-					for _, d in ipairs(skip_dirs) do
-						if name == d then
-							skip = true
-							break
-						end
-					end
-					if not skip then
-						collect(full_path, prefix .. name .. "/")
-					end
+					collect(full_path, prefix .. name .. "/")
 				elseif info.type == "file" then
 					local excluded = false
 					for _, pat in ipairs(exclude) do
@@ -218,7 +208,7 @@ function zip.create_from_dir(source_dir, opts)
 							break
 						end
 					end
-					if not excluded then
+					if not excluded and (not opts.include or opts.include(prefix .. name)) then
 						file_names[#file_names + 1] = prefix .. name
 					end
 				end
