@@ -3434,6 +3434,7 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 	local version = opts.version or ""
 	local target_branch = opts.branch or "master"
 	local async_upload = opts.async_upload and true or false
+	local status_key = opts.status_key or "PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"
 	local total_chunks = math.max(1, math.ceil(#data / UPLOAD_CHUNK_SIZE))
 	local auth_headers = {
 		["Authorization"] = "Bearer " .. self._developer_token
@@ -3457,7 +3458,9 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 			total_chunks = total_chunks,
 			total_size = #data
 		})
-	}, 30, is_cancelled)
+	}, 30, is_cancelled, function(elapsed)
+		self:_set_status(string.format(_(status_key), entry, 0, #data / 1048576, math.floor(elapsed)), 40)
+	end)
 	if start_err then
 		return nil, start_err
 	end
@@ -3483,6 +3486,7 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 
 	local sent = 0
 	local total = #data
+	local upload_start_t = love.timer.getTime()
 	for i = 0, total_chunks - 1 do
 		if is_cancelled() then
 			abort()
@@ -3505,7 +3509,9 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 					["Content-Type"] = "application/octet-stream"
 				},
 				data = chunk
-			}, UPLOAD_CHUNK_TIMEOUT, is_cancelled)
+			}, UPLOAD_CHUNK_TIMEOUT, is_cancelled, function(elapsed)
+				self:_set_status(string.format(_(status_key), entry, sent / 1048576, total / 1048576, math.floor(love.timer.getTime() - upload_start_t)), 40 + 20 * sent / total)
+			end)
 			if not chunk_err and chunk_resp and tonumber(chunk_resp.code) == 200 then
 				break
 			end
@@ -3530,16 +3536,16 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 		end
 
 		sent = sent + #chunk
-		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, sent / 1048576, 0), 40 + 20 * (i + 1) / total_chunks)
+		self:_set_status(string.format(_(status_key), entry, sent / 1048576, total / 1048576, math.floor(love.timer.getTime() - upload_start_t)), 40 + 20 * (i + 1) / total_chunks)
 		coroutine.yield()
 	end
 
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, total / 1048576, 0), 65)
+	self:_set_status(string.format(_(status_key), entry, total / 1048576, total / 1048576, math.floor(love.timer.getTime() - upload_start_t)), 65)
 	local resp, err = self:_request(base .. "/upload/chunked/" .. upload_id .. "/complete", {
 		method = "POST",
 		headers = auth_headers
 	}, 600, is_cancelled, function(elapsed)
-		self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, total / 1048576, math.floor(elapsed)), 70)
+		self:_set_status(string.format(_(status_key), entry, total / 1048576, total / 1048576, math.floor(love.timer.getTime() - upload_start_t)), 70)
 	end)
 	return resp, err
 end
@@ -3607,7 +3613,7 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 	end
 
 	local patch_mb = #patch_data / 1048576
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, patch_mb, 0), 40)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, 0, patch_mb, 0), 40)
 	local resp, err
 	local use_legacy_upload = #patch_data < UPLOAD_CHUNK_THRESHOLD
 	if not use_legacy_upload then
@@ -3616,7 +3622,8 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 			entry = entry,
 			version = version,
 			branch = plugin_data.config.branch or "master",
-			async_upload = true
+			async_upload = true,
+			status_key = "PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"
 		})
 		if err == "unsupported" then
 			log.warning("chunked patch upload unsupported; falling back to single request")
@@ -3638,7 +3645,7 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 			},
 			data = patch_data
 		}, 600, nil, function(elapsed)
-			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, patch_mb, math.floor(elapsed)), 40)
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, 0, patch_mb, math.floor(elapsed)), 40)
 		end)
 	end
 
@@ -3860,7 +3867,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	if async_upload then
 		upload_headers["X-Upload-Async"] = "1"
 	end
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, zip_mb, 0), 40)
+	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, 0, zip_mb, 0), 40)
 	local resp, err
 	local use_legacy_upload = #zip_data < UPLOAD_CHUNK_THRESHOLD
 	if not use_legacy_upload then
@@ -3884,7 +3891,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 			headers = upload_headers,
 			data = zip_data
 		}, 600, nil, function(elapsed)
-			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, zip_mb, math.floor(elapsed)), 40)
+			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, 0, zip_mb, math.floor(elapsed)), 40)
 		end)
 	end
 
