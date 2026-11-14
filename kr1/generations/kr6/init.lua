@@ -13,6 +13,7 @@ return common.standard({
 	map_animations = require("kr1.generations.kr6.data.map_animations"),
 	map_decos = require("kr1.generations.kr6.data.map_decos"),
 	level_data = require("kr1.generations.kr6.data.level_data"),
+	encyclopedia_entries = require("kr1.generations.kr6.encyclopedia_entries"),
 	ranges = {{1, 18}},
 	map_animation_transform = {
 		scale = v(3496 / 2486, 1955 / 1390)

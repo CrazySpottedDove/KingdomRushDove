@@ -6577,17 +6577,10 @@ function NotificationView:show(id, no_transition, force_show)
 
 			if t and t.info then
 				n_prefix = t.info.i18n_key or n_prefix
-				if t.info.enc_icon then
-					local from_kr
-					for i = 1, #GS.encyclopedia_enemies do
-						if GS.encyclopedia_enemies[i] == t.template_name then
-							from_kr = U.get_enemy_encyclopedia_creep_from_kr(i)
-							break
-						end
-					end
-					if from_kr then
-						n_image = U.splicing_from_kr(from_kr, string.format("encyclopedia_creeps_%04i", t.info.enc_icon))
-					end
+				local entry = GENS.encyclopedia_map[t.template_name]
+
+				if entry then
+					n_image = entry.portrait or entry.thumbnail
 				end
 			end
 		end

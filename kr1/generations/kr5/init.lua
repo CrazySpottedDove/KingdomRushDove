@@ -13,6 +13,7 @@ return common.standard({
 	map_animations = require("kr1.generations.kr5.data.map_animations"),
 	map_decos = require("kr1.generations.kr5.data.map_decos"),
 	level_data = require("kr1/generations.kr5.data.level_data"),
+	encyclopedia_entries = require("kr1.generations.kr5.encyclopedia_entries"),
 	ranges = {{1, 16}, {17, 19}, {20, 22}, {23, 27}, {28, 30}, {31, 35}, {36, 40}},
 	map_animation_transform = {
 		offset = v(2.5, 7.25)

@@ -10,6 +10,7 @@ return {
 	upgrades = {
 		default_line = "1"
 	},
+	encyclopedia_entries = {},
 	resources = {
 		map = {
 			required_textures = {},

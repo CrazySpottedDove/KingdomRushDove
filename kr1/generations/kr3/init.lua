@@ -11,6 +11,7 @@ return common.standard({
 	map_animations = require("kr1.generations.kr3.data.map_animations"),
 	map_decos = require("kr1.generations.kr3.data.map_decos"),
 	level_data = require("kr1.generations.kr3.data.level_data"),
+	encyclopedia_entries = require("kr1.generations.kr3.encyclopedia_entries"),
 	ranges = {{1, 15}, {16, 18}, {19, 20}, {21, 22}},
 	required_textures = {"kr3_screen_map_animations"}
 })
