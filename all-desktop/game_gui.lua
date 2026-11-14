@@ -6540,7 +6540,7 @@ function NotificationView:show(id, no_transition, force_show)
 		return views, v_paper.size.x, v_paper.size.y
 	end
 
-	local n = data.notifications[id]
+	local n = GENS.notifications[id]
 
 	if not n then
 		return
@@ -6909,7 +6909,7 @@ function NotificationQueue:update(dt)
 end
 
 function NotificationQueue:add(id, force)
-	local n = data.notifications[id]
+	local n = GENS.notifications[id]
 
 	if not n then
 		return

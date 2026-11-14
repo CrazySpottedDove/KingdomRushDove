@@ -11,6 +11,7 @@ return {
 		default_line = "1"
 	},
 	encyclopedia_entries = {},
+	notifications = {},
 	resources = {
 		map = {
 			required_textures = {},

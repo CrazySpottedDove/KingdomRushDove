@@ -20,6 +20,7 @@ local GENS = Registry.new({
 
 GENS.encyclopedia_entries = {}
 GENS.encyclopedia_map = {}
+GENS.notifications = {}
 
 local function add_encyclopedia_entries(entries)
 	for _, entry in ipairs(entries) do
@@ -41,6 +42,16 @@ local function remove_encyclopedia_entries(entries)
 		end
 	end
 end
+
+local function add_notifications(notifications)
+	for id, notification in pairs(notifications) do
+		GENS.notifications[id] = notification
+	end
+end
+
+-- 初始化
+add_notifications(require("kr1.data.notifications"))
+
 local ORDER_STEP = 10
 
 --- 注册时补全展示顺序：未声明 order 的模块按注册顺序递增。
@@ -68,6 +79,7 @@ function GENS:add(module)
 	end
 
 	add_encyclopedia_entries(module.encyclopedia_entries)
+	add_notifications(module.notifications)
 
 	return Registry.add(self, module)
 end

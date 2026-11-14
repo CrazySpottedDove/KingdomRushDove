@@ -88,6 +88,7 @@ function common.standard(config)
 			prep_music = config.prep_music
 		},
 		encyclopedia_entries = config.encyclopedia_entries or {},
+		notifications = config.notifications or {},
 		flags = flags,
 		levels = levels,
 		level_select = config.level_select or {},

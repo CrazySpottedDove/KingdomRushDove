@@ -18,6 +18,14 @@ local U = require("utils")
 local HEROES = require("heroes.registry")
 local LU = {}
 
+function LU.show_notification(id, force)
+	signal.emit("wave-notification", "view", id, force)
+end
+
+function LU.show_notification_icon(id, force)
+	signal.emit("wave-notification", "icon", id, force)
+end
+
 --- 默认世界尺寸：覆盖旧版相机实际可到达的 16:9 世界范围。
 --- 这样未声明 map_size 的旧关卡与旧版相机 clamp 完全一致。
 local DEFAULT_WORLD_WIDTH = REF_H * 16 / 9
