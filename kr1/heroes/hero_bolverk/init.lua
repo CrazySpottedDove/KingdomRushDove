@@ -7,6 +7,7 @@ return {
 			level = 22
 		},
 		stats = {5, 5, 0, 6},
+		portrait_image = "kr3_portrait_notxt_0019",
 		thumb_image = "kr3_hero_room_thumbs_0019",
 		icon_image = "kr3_mapButtons_portrait_hero_0019"
 	},
