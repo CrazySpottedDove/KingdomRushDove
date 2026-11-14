@@ -43,6 +43,97 @@ function deco_fn.path_open.unlock(this, wait)
 	end
 end
 
+deco_fn.kr5_map_state = {}
+
+local function kr5_map_add_animation(parent, id, prefix, frame_count, pos, anchor, scale, loop)
+	local view = KImageView:new(string.format("%s_%04d", prefix, 1))
+
+	view.id = id
+	view.pos = pos
+	view.anchor = anchor or v(0, 0)
+	view.scale = scale or v(1, 1)
+	view.animation = {
+		prefix = prefix,
+		from = 1,
+		to = frame_count
+	}
+	view.loop = loop
+	view._kr5_prefix = prefix
+	parent:add_child(view)
+
+	return view
+end
+
+local function kr5_map_set_frame(view, frame)
+	view:set_image(string.format("%s_%04d", view._kr5_prefix, frame))
+	view.animation = {
+		prefix = view._kr5_prefix,
+		from = frame,
+		to = frame
+	}
+	view.loop = false
+	view.ts = 0
+end
+
+function deco_fn.kr5_map_state.prepare(this)
+	local screen_map = this.ctx.screen_map
+	local map_view = screen_map and screen_map.map_view
+	local timer = this.ctx.timer
+
+	if not map_view then
+		return
+	end
+
+	local root = KView:new()
+	root.pos = v(307.65, 1418.7)
+	this:add_child(root)
+
+	local bridge = kr5_map_add_animation(root, "timeline_portal_t2", "map_flags_animation_bridge_door", 37, v(1041.85 - 185.8, -222.45 - 11.45), v(-22.95, -1.5), v(1.45, 1.45), false)
+	local portal_1 = kr5_map_add_animation(root, "timeline_portal_1", "map_flags_animation_portal", 17, v(1158.65 + 12.7, -540.9 - 12.6), v(48.6, 29.45), nil, true)
+	local portal_2 = kr5_map_add_animation(root, "timeline_portal_2", "map_flags_animation_portal", 17, v(1434.35 + 12.7, -730.35 - 12.6), v(48.6, 29.45), nil, true)
+	local stones = kr5_map_add_animation(root, "timeline_stones_portal_t3", "map_flags_animation_stones_portal", 32, v(1408.5 - 4.6, -537.15 - 0.9), v(-0.85, 0.95), nil, true)
+	local flames = kr5_map_add_animation(root, "timeline_flames", "map_flags_animation_temple_fire", 12, v(1028.6 - 36.45, -116.85 + 2.85), v(-0.15, 19.45), nil, true)
+
+	kr5_map_set_frame(bridge, 1)
+	portal_1.hidden = true
+	portal_2.hidden = true
+	stones.hidden = true
+	flames.hidden = true
+
+	local new_level = map_view:new_level()
+	local level_8_unlocked = map_view:level_unlocked(8)
+	local level_12_unlocked = map_view:level_unlocked(12)
+
+	if new_level == 8 then
+		timer:after(15 / 30, function()
+			bridge.animation = {
+				prefix = bridge._kr5_prefix,
+				from = 1,
+				to = 37
+			}
+			bridge.loop = false
+			bridge.ts = 0
+		end)
+		timer:after(50 / 30, function()
+			flames.hidden = false
+			flames.ts = 0
+		end)
+	elseif level_8_unlocked then
+		kr5_map_set_frame(bridge, 37)
+		flames.hidden = false
+		flames.ts = 0
+	end
+
+	if level_12_unlocked then
+		portal_1.hidden = false
+		portal_2.hidden = false
+		stones.hidden = false
+		portal_1.ts = 0
+		portal_2.ts = 0
+		stones.ts = 0
+	end
+end
+
 deco_fn.ma_big_boat = {}
 
 function deco_fn.ma_big_boat:prepare()

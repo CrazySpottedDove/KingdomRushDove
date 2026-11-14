@@ -17,7 +17,7 @@ return common.standard({
 	notifications = require("kr1.generations.kr5.notifications"),
 	ranges = {{1, 16}, {17, 19}, {20, 22}, {23, 27}, {28, 30}, {31, 35}, {36, 40}},
 	map_animation_transform = {
-		offset = v(2.5, 7.25)
+		offset = v(0, 0)
 	},
 	map_progress = require("kr1.generations.kr5.data.map_progress"),
 	required_textures = {"screen_map_5", "screen_map_5_dlc"},
