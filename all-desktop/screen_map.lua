@@ -6267,7 +6267,8 @@ function EncyclopediaView:load_creeps(index)
 	self.creep:add_child(right_deco)
 
 	local creeps_per_page = 64
-	local max_creeps = #GS.encyclopedia_enemies
+	local encyclopedia_entries = GENS.encyclopedia_entries
+	local max_creeps = #encyclopedia_entries
 	local first_cell
 
 	if not screen_map.user_data.seen then
@@ -6278,13 +6279,11 @@ function EncyclopediaView:load_creeps(index)
 		local i = d + creeps_per_page * (index - 1)
 
 		if i <= max_creeps then
-			local t = E:get_template(GS.encyclopedia_enemies[i])
-			local from_kr = U.get_enemy_encyclopedia_creep_from_kr(i)
+			local entry = encyclopedia_entries[i]
+			local enemy_thumb_fmt = entry.thumbnail
 
-			local f = string.format("encyclopedia_creep_thumbs_%04i", t.info.enc_icon)
-			local enemy_thumb_fmt = U.splicing_from_kr(from_kr, f)
 			local pos = v(math.fmod(d - 1, 8) * 47.25 + 35, math.floor((d - 1) / 8) * 47.25 + 140)
-			local seen = screen_map.user_data.seen[GS.encyclopedia_enemies[i]] and true or false
+			local seen = screen_map.user_data.seen[entry.template_name] and true or false
 			local cell = self:create_thumb_cell("creep", seen and enemy_thumb_fmt or thumb_frame_sources.creep.lock, pos)
 
 			self.creep:add_child(cell)
@@ -6324,9 +6323,9 @@ function EncyclopediaView:load_creeps(index)
 		self:load_creeps(page)
 	end)
 
-	local first_creep = GS.encyclopedia_enemies[(index - 1) * creeps_per_page + 1]
+	local first_creep_entry = encyclopedia_entries[(index - 1) * creeps_per_page + 1]
 
-	if first_creep and screen_map.user_data.seen[first_creep] then
+	if first_creep_entry and screen_map.user_data.seen[first_creep_entry.template_name] then
 		if first_cell then
 			first_cell._state = "select"
 			self._selected_cell = first_cell
@@ -6349,8 +6348,10 @@ function EncyclopediaView:detail_creep(index)
 
 	self.back:add_child(self.right_panel)
 
-	local creep_name = GS.encyclopedia_enemies[index]
-	local ce = E:create_entity(creep_name)
+	local entry = GENS.encyclopedia_entries[index]
+	local creep_name = entry.template_name
+	-- 只读
+	local ce = E:get_template(creep_name)
 	local name_prefix = ce.info.i18n_key or string.upper(creep_name)
 	local title_label = GGLabel:new(V.v(280, 50))
 
@@ -6383,10 +6384,8 @@ function EncyclopediaView:detail_creep(index)
 
 	self.right_panel:add_child(right_decoration)
 
-	local from_kr = U.get_enemy_encyclopedia_creep_from_kr(index)
+	local enemy_fmt = entry.portrait
 
-	local f = string.format("encyclopedia_creeps_%04i", ce.info.enc_icon)
-	local enemy_fmt = U.splicing_from_kr(from_kr, f)
 	local portrait = KImageView:new(enemy_fmt)
 
 	portrait.anchor = v(portrait.size.x / 2, portrait.size.y / 2)

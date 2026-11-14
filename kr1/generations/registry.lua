@@ -18,6 +18,29 @@ local GENS = Registry.new({
 	end
 })
 
+GENS.encyclopedia_entries = {}
+GENS.encyclopedia_map = {}
+
+local function add_encyclopedia_entries(entries)
+	for _, entry in ipairs(entries) do
+		GENS.encyclopedia_entries[#GENS.encyclopedia_entries + 1] = entry
+		GENS.encyclopedia_map[entry.template_name] = entry
+	end
+end
+
+local function remove_encyclopedia_entries(entries)
+	for _, entry in ipairs(entries) do
+		GENS.encyclopedia_map[entry.template_name] = nil
+
+		for i = #GENS.encyclopedia_entries, 1, -1 do
+			if GENS.encyclopedia_entries[i] == entry then
+				table.remove(GENS.encyclopedia_entries, i)
+
+				break
+			end
+		end
+	end
+end
 local ORDER_STEP = 10
 
 --- 注册时补全展示顺序：未声明 order 的模块按注册顺序递增。
@@ -43,6 +66,8 @@ function GENS:add(module)
 	elseif self._next_order == nil or module.order > self._next_order then
 		self._next_order = module.order
 	end
+
+	add_encyclopedia_entries(module.encyclopedia_entries)
 
 	return Registry.add(self, module)
 end

@@ -7,6 +7,7 @@ local P = require("path_db")
 local U = require("utils")
 local LU = require("level_utils")
 local perf = require("dove_modules.perf.perf")
+local GENS = require("generations.registry")
 
 function enemy:init(store)
 	local storage = require("all.storage")
@@ -19,7 +20,7 @@ function enemy:init(store)
 	local slot = storage:load_slot()
 	store.seen = slot.seen and slot.seen or {}
 	store.seen_dirty = nil
-	self.encyclopedia_map = table.to_map(require("kr1.game_settings").encyclopedia_enemies)
+	self.encyclopedia_map = table.deepclone(GENS.encyclopedia_map)
 
 	-- spatial index
 	package.loaded["spatial_index"] = nil
