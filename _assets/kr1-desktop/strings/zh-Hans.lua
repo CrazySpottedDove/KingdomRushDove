@@ -204,7 +204,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
 }
 
 return {
@@ -6249,7 +6249,16 @@ return {
 	TIP_5 = "如果你觉得有些防御塔的索敌很奇怪，或许是有些敌人会嘲讽？",
 	TIP_50 = "哥布林火箭的破片会被人海截停，然后造成大量伤害！",
 	TIP_51 = "哈！哈！哈！",
+	TIP_52 = "手机端存档目录为内部存储/KingdomRushDove，电脑端则在安装目录下可找到存档位置链接。",
+	TIP_53 = "插件出错时，可尝试二分排查法。",
+	TIP_54 = "不开插件情况下出错才是本体问题，否则考虑插件有问题。",
+	TIP_55 = "可在https://krdove.crazyspotteddove.top查看最新的更新日志。",
+	TIP_56 = "如有破坏性更新，可在更新前关闭插件管理器，更新后一键更新所有插件，然后再启用。",
+	TIP_57 = "插件目录和游戏本体目录不同，重装游戏无法解决插件问题。",
+	TIP_58 = "下载插件前请先仔细阅读插件说明，避免不必要的麻烦。",
+	TIP_59 = "插件代码质量良莠不齐，请谨慎辨别使用。",
 	TIP_6 = "矮人火枪手劲很大，真的很大。",
+	TIP_60 = "发现本体美术资源出现问题时，优先考虑重新下载最新游戏本体。",
 	TIP_7 = "圣杯是异常状态的克星。",
 	TIP_8 = "瓦解效果可以避免某些敌人的亡语触发。",
 	TIP_9 = "大法师的法球会自动选择合适的目标。魔法时刻！",

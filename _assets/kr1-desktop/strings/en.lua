@@ -201,7 +201,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_2 = "Every %$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$ seconds, silences up to %$T('tower_wild_magus').powers.ward.target_count[level]%$ enemies, blocking their magical abilities for %$T('mod_ward').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[2].cooldown * tcd%$ seconds, throws a fireball towards the path, dealing %$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$ magic explosion damage and burning enemies for %$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$ true damage every %$T('mod_firebook_aura').dps.damage_every%$ seconds over %$T('mod_firebook_aura').modifier.duration%$ seconds.",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[3].cooldown * tcd%$ seconds, grants a %$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$% damage buff to all towers within range for %$T('tower_wizard').attacks.list[3].duration[level]%$ seconds.",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage."
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "Every %$T('tower_wizard').attacks.list[4].cooldown * tcd%$ seconds, throws a magic book towards the path, releasing %$T('aura_wizard_skill_c').bullet_count[level]%$ projectiles that strike enemies, each dealing %$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$ magic damage.",
 }
 
 return {
@@ -6246,7 +6246,16 @@ return {
 	TIP_5 = "If some towers' targeting looks strange, maybe some enemies are taunting them?",
 	TIP_50 = "Goblin rocket fragments get stopped by crowds - and then deal heavy damage!",
 	TIP_51 = "Ha! Ha! Ha!",
+	TIP_52 = "On mobile, the save directory is internal storage/KingdomRushDove; on PC, you can find a link to the save location in the installation directory.",
+	TIP_53 = "If a plugin errors, try the binary search troubleshooting method.",
+	TIP_54 = "If errors occur with plugins disabled, it is a base game issue; otherwise, consider it a plugin issue.",
+	TIP_55 = "You can view the latest changelog at https://krdove.crazyspotteddove.top.",
+	TIP_56 = "If there is a breaking update, disable the plugin manager before updating; after updating, one-click update all plugins, then re-enable them.",
+	TIP_57 = "The plugin directory is different from the game's base directory; reinstalling the game cannot solve plugin issues.",
+	TIP_58 = "Before downloading plugins, please read the plugin instructions carefully to avoid unnecessary trouble.",
+	TIP_59 = "Plugin code quality varies greatly; please use them with caution and discretion.",
 	TIP_6 = "Dwarven musketeers pack a punch. A really big punch.",
+	TIP_60 = "When you find issues with the base game's art assets, prioritize re-downloading the latest game version.",
 	TIP_7 = "The Holy Grail is the bane of status effects.",
 	TIP_8 = "Disintegration prevents some enemies' deathrattles from triggering.",
 	TIP_9 = "The Archmage's orb picks a suitable target automatically. Magic time!",
