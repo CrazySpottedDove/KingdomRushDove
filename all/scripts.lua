@@ -2307,6 +2307,9 @@ function scripts.arrow.update(this, store)
 					decal.render.sprites[1].flip_x = b.rotation_speed > 0
 				else
 					decal.render.sprites[1].r = -math.pi * 0.5 * (1 + (0.5 - math.random()) * 0.35)
+					if b.miss_decal_rotation then
+						decal.render.sprites[1].r = decal.render.sprites[1].r + b.miss_decal_rotation
+					end
 				end
 
 				if b.miss_decal_anchor then
