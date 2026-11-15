@@ -13099,13 +13099,16 @@ function scripts.power_thunder_control.update(this, store)
 					if thunder.created == 0 then
 						pos = this.pos
 					else
-						local target = U.find_nearest_enemy(store, this.pos, 0, thunder.range, this.vis_flags, this.vis_bans, function(v)
-							return not table.contains(visited, v)
-						end)
+						local target, targets = U.find_nearest_enemy(store, this.pos, 0, thunder.range, this.vis_flags, this.vis_bans)
+
+						if targets then
+							target = table.find_best(targets, function(e)
+								return -e.pos:dist2(this.pos) - (visited[e.id] and 100000 or 0)
+							end)
+						end
 
 						if target then
-							table.insert(visited, target)
-
+							visited[target.id] = true
 							pos = target.pos
 						else
 							local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
