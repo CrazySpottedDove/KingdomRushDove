@@ -2183,10 +2183,10 @@ function scripts.arrow.update(this, store)
 		local dt = store.tick_ts - last_ts
 
 		this_pos.x = this_pos.x + v_x * dt
-		this_pos.y = this_pos.y + v_y * dt
+		this_pos.y = this_pos.y + (v_y + b.g * dt * 0.5) * dt
 
 		if b.rotation_speed then
-			s.r = s.r + b.rotation_speed * store.tick_length
+			s.r = s.r + b.rotation_speed * dt
 		else
 			s.r = math.atan2(v_y, v_x)
 
@@ -2569,10 +2569,10 @@ function scripts.arrow_missile.update(this, store)
 		local dt = store.tick_ts - last_ts
 
 		this_pos.x = this_pos.x + v_x * dt
-		this_pos.y = this_pos.y + v_y * dt
+		this_pos.y = this_pos.y + (v_y + b.g * 0.5 * dt) * dt
 
 		if b.rotation_speed then
-			s.r = s.r + b.rotation_speed * store.tick_length
+			s.r = s.r + b.rotation_speed * dt
 		else
 			s.r = math.atan2(v_y, v_x)
 
@@ -2919,12 +2919,12 @@ function scripts.bomb.update(this, store)
 		local dt = store.tick_ts - last_ts
 
 		this_pos.x = this_pos.x + v_x * dt
-		this_pos.y = this_pos.y + v_y * dt
+		this_pos.y = this_pos.y + (v_y + 0.5 * b.g * dt) * dt
 
 		if b.align_with_trajectory then
 			sprites[1].r = math.atan2(v_y, v_x)
 		elseif b.rotation_speed then
-			sprites[1].r = sprites[1].r + b.rotation_speed * store.tick_length
+			sprites[1].r = sprites[1].r + b.rotation_speed * dt
 		end
 
 		if b.hide_radius then
@@ -2935,15 +2935,16 @@ function scripts.bomb.update(this, store)
 		last_ts = last_ts + dt
 	end
 
-	local enemies = U.find_enemies_in_range_filter_off(b._hit_offset_record and V.v(b._hit_offset_record.x + this_pos.x, b._hit_offset_record.y + this_pos.y) or this_pos, dradius, b.damage_flags, b.damage_bans)
-	local mods
-	if b.mod then
-		mods = {b.mod}
-	elseif b.mods then
-		mods = b.mods
-	end
+	local hit_pos = b._hit_offset_record and V.v(b._hit_offset_record.x + this_pos.x, b._hit_offset_record.y + this_pos.y) or this_pos
+	local enemies = U.find_enemies_in_range_filter_off(hit_pos, dradius, b.damage_flags, b.damage_bans)
 
 	if enemies then
+		local mods
+		if b.mod then
+			mods = {b.mod}
+		elseif b.mods then
+			mods = b.mods
+		end
 		for i = 1, #enemies do
 			local enemy = enemies[i]
 			local d = SU.create_bullet_damage_without_pops_and_value(b, enemy.id, this.id)
@@ -2951,7 +2952,7 @@ function scripts.bomb.update(this, store)
 			if UP:get_upgrade("engineer_efficiency") then
 				d.value = dmax
 			else
-				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
+				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, hit_pos, dradius)
 
 				d.value = dmax - (dmax - dmin) * dist_factor
 			end
@@ -8944,12 +8945,12 @@ function scripts.bomb_bouncing.update(this, store)
 		local dt = store.tick_ts - last_ts
 
 		this_pos.x = this_pos.x + dt * v_x
-		this_pos.y = this_pos.y + dt * v_y
+		this_pos.y = this_pos.y + dt * (v_y + b.g * dt * 0.5)
 
 		if b.align_with_trajectory then
 			this.render.sprites[1].r = math.atan2(v_y, v_x)
 		elseif b.rotation_speed then
-			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * dt
 		end
 
 		if b.hide_radius then
@@ -8982,7 +8983,7 @@ function scripts.bomb_bouncing.update(this, store)
 			local dt = store.tick_ts - last_ts
 
 			this.pos.x = this.pos.x + dt * v_x
-			this.pos.y = this.pos.y + dt * v_y
+			this.pos.y = this.pos.y + dt * (v_y + b.g * dt * 0.5)
 
 			if b.align_with_trajectory then
 				this.render.sprites[1].r = math.atan2(v_y, v_x)
