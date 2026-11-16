@@ -97,7 +97,7 @@ local function mod_hero_robot_skill_uppercut_update(this, store, script)
 		target.ui.can_select = true
 		target.health_bar.hidden = false
 		local d = E.assign_damage(DAMAGE_TRUE, target.health.hp_max, this.modifier.source_id, target.id)
-		queue_damage(d)
+		queue_damage(store, d)
 		target.unit.show_blood_pool = true
 
 		for i, es in ipairs(target.render.sprites) do
