@@ -1,0 +1,258 @@
+#	COMANDOS							1 - arriba-medio-arriba					2 -  arriba - medio - abajo					3 - arriba - derecha - arriba					4 -Fort - abajo					5 -  derecha - abajo					12 -  spawner - cruza- abajo					13 -  spawner - cruza- arriba					14 -  spawner - puerta - arriba izquierda					15 -  spawner - puerta - abajo					16 -  spawner - salida - arriba					17 -  spawner - carpa abajo					18 -  spawner - esquinala fort abajo					19 -  FORT - boss						20 -  Derecha a Medio Abajo					21 -  Fuerte Centro a Medio Abajo					22 -  Fuerte Centro a Medio Arriba					23 -  Fuerte Centro a Arriba del todo
+	column_names						inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		12:*	12:2	12:1	12:3		13:*	13:2	13:1	13:3		14:*	14:2	14:1	14:3		15:*	15:2	15:1	15:3		16:*	16:2	16:1	16:3		17:*	17:2	17:1	17:3		18:*	18:2	18:1	18:3		19:*	19:2	19:1	19:3			20:*	20:2	20:1	20:3		21:*	21:2	21:1	21:3		22:*	22:2	22:1	22:3		23:*	23:2	23:1	23:3
+#	level properties
+	description	NH Rodri
+	lives	20
+	gold	1650
+	gems	175
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	2161
+#	stage gold curve
+#	WAVE 3
+#	enemies							bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	shadow_blades		orc_warrior	grizzly	grizzly	trickster		orc_wildling	grizzly	hammercrow
+#	cant.							1	7	8	1		1	1	1	0		1	0	0	0		1	0	0
+#	gold	313						5	56	80	15		2	40	80	0		15	0	0	0		20	0	0
+	wave		1				-1
+							0
+							0.8																																																																																		blackguard
+							0.8																																																																																		blackguard
+							1																																																																																		blackguard
+							0.8																																																																																		blackguard
+							4																																																																																		blackguard
+							0.8																																																																																		blackguard
+							1																																																																																		blackguard
+							0
+							6																																																																																		blackguard
+							1																																																																																		blackguard
+							1																																																																																		blackguard
+							3																																									shadow_blades																																									blackguard
+							0.8																																									shadow_blades																																									blackguard
+							2																																				shadow_blades					shadow_blades																																									blackguard
+							1																																				shadow_blades																																														blackguard
+							0.6																																				shadow_blades																																														blackguard
+							6																																						shadow_blades																																							bandit_kr6
+	event	spawn_on_path	enemy_crow_alchemist_watchtower	7	1	1
+							0.8																																						shadow_blades					shadow_blades																																		bandit_kr6
+							0.8																																											shadow_blades																																		bandit_kr6
+							0.8																																																																													bandit_kr6
+							0.8																																																blackguard																													bandit_kr6
+							1																																																blackguard																													bandit_kr6
+							1																																																blackguard																													bandit_kr6
+							1																																																																													bandit_kr6
+	event	spawn_on_path	enemy_crow_alchemist_watchtower	11	1	1
+							2																																																																													bandit_kr6
+							1																																																																													bandit_kr6
+							1																																																																													bandit_kr6
+							1																																																																													bandit_kr6
+
+
+
+
+
+#	WAVE 6
+#	enemies							bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	shadow_blades		orc_warrior	grizzly	grizzly	trickster		orc_wildling	grizzly	hammercrow			orc_wildling	grizzly	hammercrow
+#	cant.							0	6	6	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0
+#	gold	108						0	48	60	0		0	0	0	0		0	0	0	0		0	0	0			0	0	0
+	wave		2				15
+							0
+							1																					shadow_blades
+							2																					shadow_blades
+							3																					shadow_blades
+#	event	throw_barrel	enemy_headhunter	3
+							1																shadow_blades																																																			shadow_blades
+							1																shadow_blades																																																			shadow_blades
+							1																shadow_blades																																																			shadow_blades
+							2.5																		blackguard																																																	shadow_blades
+							2																		blackguard																																																	shadow_blades
+							2																		blackguard																																																	shadow_blades
+#	event	throw_barrel	enemy_headhunter	3
+							0																shadow_blades
+							1																shadow_blades
+							1																shadow_blades																																																			shadow_blades
+							1																					shadow_blades																																														shadow_blades
+							1																					shadow_blades																																														shadow_blades
+							1																					shadow_blades																																														shadow_blades
+							6																																																										blackguard
+							1
+							1																																																										blackguard
+							1																																																										blackguard
+							1																blackguard
+							1																blackguard
+							2																blackguard
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 7
+#	enemies							bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	shadow_blades		orc_warrior	grizzly	grizzly	trickster		orc_wildling	grizzly	hammercrow
+#	cant.							0	0	0	0		0	0	0	0		0	0	0	0		0	0	0
+#	gold	0						0	0	0	0		0	0	0	0		0	0	0	0		0	0	0
+	wave		3				15
+							0
+							1
+							3																																																																									trickster
+							2																																																																										trickster
+							1																																																																											trickster
+	event	spawn_on_path	enemy_crow_alchemist_watchtower	8	1	1
+							2																																																																									trickster						crow_alchemist
+							2																																																																											trickster
+	event	spawn_on_path	enemy_crow_alchemist_watchtower	7	1	1
+							2																																																																									headhunter
+							2																																																																											headhunter
+	event	spawn_on_path	enemy_crow_alchemist_watchtower	11	1	1
+							10																							headhunter																																		shadow_archer_kr6
+							1																																																											shadow_archer_kr6
+							7																					headhunter
+							1																																																											shadow_archer_kr6															trickster
+							1																																																																											trickster
+							1																																																									shadow_archer_kr6																trickster
+							7																					headhunter
+
+	event	spawn_on_path	enemy_shadow_archer_watchtower	8	1	1
+							4																																																																									blackguard		blackguard
+							2																																																																										blackguard
+							3																																																																									blackguard		blackguard
+							2																																																																										blackguard
+
+
+
+
+
+
+
+
+
+
+#	WAVE 10
+#	enemies							bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	shadow_blades		orc_warrior	grizzly	grizzly	trickster		orc_wildling	grizzly	hammercrow
+#	cant.							0	10	0	0		0	0	2	0		0	0	0	0		0	0	0
+#	gold	240						0	80	0	0		0	0	160	0		0	0	0	0		0	0	0
+	wave		4				25
+							1
+							2
+							2																																						blackguard
+							1																																						blackguard																																							blackguard
+							1.5																																											blackguard																																		blackguard
+							1																																											blackguard																																		blackguard
+	event	spawn_on_path	enemy_shadow_archer_watchtower	8	1	1
+							2																																																blackguard																													blackguard
+							1.5																																																blackguard																													blackguard
+#	event	spawn_on_path	enemy_shadow_archer_watchtower	9	1	1
+	event	spawn_on_path	enemy_shadow_archer_watchtower	7	1	1
+							0																																																																															crow_alchemist
+							8
+							0
+#	event	throw_barrel	enemy_headhunter	2
+							1																	blackguard
+							1																			blackguard																													blackguard										blackguard
+							0																																																blackguard										blackguard
+							10																		blackguard					shadow_archer_kr6																																																			red_shadow
+#	event	throw_barrel	enemy_headhunter	2																				blackguard		blackguard
+							1																		blackguard																				headhunter
+							1																	headhunter					shadow_archer_kr6
+							1																																																blackguard
+							5																	blackguard		headhunter					shadow_archer_kr6																								blackguard																														blackguard
+							3																		blackguard					shadow_archer_kr6																																																									blackguard
+							4																	blackguard		blackguard			shadow_archer_kr6																																																								blackguard
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 12
+#	enemies							bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	shadow_blades		orc_warrior	grizzly	grizzly	trickster		orc_wildling	grizzly	hammercrow
+#	cant.							0	0	0	0		0	0	1	0		0	0	0	0		0	0	0
+#	gold	80						0	0	0	0		0	0	80	0		0	0	0	0		0	0	0
+	wave		5				25
+							0
+							1.5																trickster
+							1.5																trickster
+	event	spawn_on_path	enemy_crow_alchemist_watchtower	11	1	1
+							2																trickster
+							1.2																																																																																			blackguard
+							1.2																																																																																					blackguard
+							1.2																																																																																			blackguard
+							1.2																																																																																					blackguard
+#	event	throw_barrel	enemy_hammercrow	1
+							0																																						headhunter
+							6																						grizzly																																																													blackguard
+							4																		headhunter
+							3																								grizzly																																																							hammercrow
+							5																																																																														crow_alchemist
+							2.3
+	event	spawn_on_path	enemy_trickster	22	85	90	8
+	event	spawn_on_path	enemy_trickster	21	75	80	1
+	event	spawn_on_path	enemy_trickster	22	95	100	1
+	event	spawn_on_path	enemy_trickster	21	95	100	1.5
+	event	spawn_on_path	enemy_trickster	22	85	90	1.5
+	event	spawn_on_path	enemy_trickster	21	85	90	1.5
+							5																																																																																		shadow_archer_kr6
+							1																																																																																		shadow_archer_kr6
+							1																																																																																		shadow_archer_kr6
+
+
+
+
+
+
+
+
+#	WAVE 15
+#	enemies							bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	shadow_blades		orc_warrior	grizzly	grizzly	trickster		orc_wildling	grizzly	hammercrow
+#	cant.							0	0	0	0		0	0	0	0		0	0	0	0		0	0	0
+#	gold	0						0	0	0	0		0	0	0	0		0	0	0	0		0	0	0
+	wave		6				25
+							0																																																																															hammercrow
+
+							2																																																																																					red_shadow
+							3																																																																																			blackguard
+							1																																																																									blackguard												blackguard
+							1																																																																																			blackguard
+							1																																																																																					blackguard
+							1																																																																									blackguard										blackguard
+							1																																																																																					blackguard
+							1																																																																													blackguard
+							1																																																																													blackguard
+	event	spawn_on_path	enemy_crow_alchemist_watchtower	7	1	1	0	5
+	event	spawn_on_path	enemy_crow_alchemist_watchtower	8	1	1	0	5
+
+
+	event	spawn_on_path	enemy_trickster	22	80	85	5
+	event	spawn_on_path	enemy_trickster	22	85	90	1.5
+	event	spawn_on_path	enemy_trickster	22	85	90	1.5
+	event	spawn_on_path	enemy_trickster	22	95	100	1.5
+	event	spawn_on_path	enemy_trickster	22	100	105	1.5
+	wait						10
+							2																																																																												trickster
+							1																																																																																red_shadow
+							1.2
+							1.2																																																																														headhunter
+							0.6																							grizzly																																																				blackguard
+							0.6
+							2																						shadow_archer_kr6																																																				blackguard
+							1																								shadow_archer_kr6																																																				blackguard
+							2																						shadow_archer_kr6																																																				blackguard
+							0.5																								shadow_archer_kr6
+							1																						shadow_archer_kr6																																																						blackguard
+							1																								shadow_archer_kr6																																																		blackguard
+							1																						shadow_archer_kr6																																																						blackguard
+
+
+
+																																																																	crow_alchemist

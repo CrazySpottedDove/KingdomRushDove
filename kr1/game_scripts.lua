@@ -49215,7 +49215,6 @@ function scripts.enemy_trickster.update(this, store, script)
 	local trigger_invisible = false
 	local trigger_visible = false
 	local on_invisible = false
-	local target
 
 	ai.ts = store.tick_ts - ai.cooldown + ai.first_cooldown
 
@@ -49721,7 +49720,7 @@ function scripts.aura_crow_alchemist_miss.insert(this, store, script)
 	this.actual_duration = this.aura.duration
 
 	local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y)
-	local pi, spi, ni = unpack(nearest_nodes[1])
+	local pi, _, ni = unpack(nearest_nodes[1])
 
 	this.pos = P:node_pos(pi, 1, ni)
 	this.decals = {}
@@ -50171,7 +50170,6 @@ function scripts.enemy_red_shadow.update(this, store, script)
 			simulation:queue_insert_entity(stun_mod)
 		end
 
-		local current_exit_dist = 1e+99
 		local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {target_pi}, nil, true)
 
 		if #nodes == 0 then
@@ -50184,7 +50182,7 @@ function scripts.enemy_red_shadow.update(this, store, script)
 		this.nav_path.spi = spi
 		this.nav_path.ni = ni
 
-		local targets = U.find_soldiers_in_range(store.entities, this.pos, 0, rc.damage_radius, rc.damage_vis_flags, rc.damage_vis_bans)
+		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, rc.damage_radius, rc.damage_vis_flags, rc.damage_vis_bans)
 
 		if targets and #targets > 0 then
 			for _, t in pairs(targets) do
@@ -50278,6 +50276,178 @@ function scripts.enemy_red_shadow.update(this, store, script)
 				coroutine.yield()
 			end
 		end
+	end
+end
+
+-- =====================================================================
+-- KR6 stage 21 shared scripts
+-- =====================================================================
+scripts.enemy_mixed_timed = {}
+
+function scripts.enemy_mixed_timed.update(this, store, script)
+	local start_ts = store.tick_ts
+
+	local function expired()
+		return this.duration and store.tick_ts - start_ts >= this.duration
+	end
+
+	if this.render.sprites[1].name == "raise" then
+		if this.sound_events and this.sound_events.raise then
+			S:queue(this.sound_events.raise, this.sound_events.raise_args)
+		end
+
+		this.health_bar.hidden = true
+
+		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
+
+		U.y_animation_play(this, an, af, store.tick_ts, 1)
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	::label_1817_0::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+
+			return
+		end
+
+		if expired() then
+			if this.timeout_fx then
+				local fx = E:create_entity(this.timeout_fx)
+
+				fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+				fx.render.sprites[1].ts = store.tick_ts
+
+				simulation:queue_insert_entity(fx)
+			end
+
+			simulation:queue_remove_entity(this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, nil, expired)
+
+			if not cont then
+			-- block empty
+			else
+				if blocker then
+					if not SU.y_wait_for_blocker(store, this, blocker) then
+						goto label_1817_0
+					end
+
+					while SU.can_melee_blocker(store, this, blocker) and not expired() do
+						if not SU.y_enemy_melee_attacks(store, this, blocker) then
+							goto label_1817_0
+						end
+
+						coroutine.yield()
+					end
+				elseif ranged then
+					while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 and not expired() do
+						if not SU.y_enemy_range_attacks(store, this, ranged) then
+							goto label_1817_0
+						end
+
+						coroutine.yield()
+					end
+				end
+
+				coroutine.yield()
+			end
+		end
+	end
+end
+
+scripts.decal_defend_point5 = {}
+
+function scripts.decal_defend_point5.insert(this, store)
+	local nodes_list = P:nearest_nodes(this.pos.x, this.pos.y)
+
+	for _, item in pairs(nodes_list) do
+		local pi, _, ni, dist = unpack(item, 1, 4)
+
+		if dist < P:path_width(pi) / 2 then
+			P:set_defend_point_node(pi, ni)
+		end
+	end
+
+	this.render.sprites[1].ts = store.tick_ts
+	this.render.sprites[1].alpha = this.editor.alpha * 10
+	this.render.sprites[1].flip_x = this.editor.flip > 0
+
+	if this.editor and this.editor.exit_id then
+		if not store.level.locations.exits then
+			store.level.locations.exits = {}
+		end
+
+		local exits = store.level.locations.exits
+		local exit = {}
+
+		exit.pos = this.pos
+		exit.exit_id = this.editor.exit_id
+
+		table.insert(exits, exit)
+		table.sort(exits, function(a1, a2)
+			return a1.exit_id < a2.exit_id
+		end)
+	end
+
+	return true
+end
+
+function scripts.decal_defend_point5.update_editor(this, store)
+	while true do
+		this.render.sprites[1].alpha = this.editor.alpha * 10
+		this.render.sprites[1].flip_x = this.editor.flip > 0
+
+		coroutine.yield()
+	end
+
+	return true
+end
+
+scripts.decal_defense_flag5 = {}
+
+function scripts.decal_defense_flag5.insert(this, store)
+	this.render.sprites[1].flip_x = this.editor.flip > 0
+
+	return true
+end
+
+function scripts.decal_defense_flag5.update_editor(this, store)
+	while true do
+		this.render.sprites[1].flip_x = this.editor.flip > 0
+
+		coroutine.yield()
+	end
+
+	return true
+end
+
+scripts.background_sounds_kr5 = {}
+
+function scripts.background_sounds_kr5.update(this, store, script)
+	while true do
+		local delay = math.random(this.min_delay, this.max_delay)
+
+		U.y_wait(store, delay)
+
+		if store.wave_group_number > 0 and this.only_on_preparation then
+			simulation:queue_remove_entity(this)
+
+			return
+		end
+
+		S:queue(this.sounds[math.random(#this.sounds)])
 	end
 end
 

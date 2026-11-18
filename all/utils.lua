@@ -723,8 +723,13 @@ function U.animation_name_with_direction(sprite, group, dx, dy)
 		return angles[1], dx < 0, 1
 	elseif angle_count == 2 then
 		local coordinate_idx = dy > 0 and 1 or 2
+		local flip_x = dx < 0
 
-		return angles[coordinate_idx], (sprite.angles_flip_horizontal and sprite.angles_flip_horizontal[coordinate_idx]) and (dx >= 0) or (dx < 0), coordinate_idx
+		if sprite.angles_flip_horizontal and sprite.angles_flip_horizontal[coordinate_idx] then
+			flip_x = not flip_x
+		end
+
+		return angles[coordinate_idx], flip_x, coordinate_idx
 	--else if angle_count == 3 then
 	else
 		local angle = atan2(dy, dx) % 6.2831853071795862

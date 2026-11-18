@@ -49720,5 +49720,80 @@ return {
 		prefix = "redshadow_crows",
 		to = 38,
 		from = 12
+	},
+	fx_sentinels_run = {
+		prefix = "fx_sentinels",
+		to = 17,
+		from = 1
+	},
+	kingpin_vfx_multiexport_modifier_body_run = {
+		prefix = "kingpin_vfx_multiexport_modifier_body",
+		to = 28,
+		from = 1
+	},
+	stage_221_princess_captives_1_angry_1 = {
+		prefix = "stage_221_princess_captives",
+		to = 202,
+		from = 94
+	},
+	stage_221_princess_captives_1_angry_2 = {
+		prefix = "stage_221_princess_captives",
+		to = 344,
+		from = 307
+	},
+	stage_221_princess_captives_1_in_tired = {
+		prefix = "stage_221_princess_captives",
+		to = 240,
+		from = 203
+	},
+	stage_221_princess_captives_1_loop_tired = {
+		prefix = "stage_221_princess_captives",
+		to = 306,
+		from = 241
+	},
+	stage_221_princess_captives_2_angry_1 = {
+		prefix = "stage_221_princess_captives",
+		to = 453,
+		from = 345
+	},
+	stage_221_princess_captives_2_angry_2 = {
+		prefix = "stage_221_princess_captives",
+		to = 595,
+		from = 558
+	},
+	stage_221_princess_captives_2_in_tired = {
+		prefix = "stage_221_princess_captives",
+		to = 491,
+		from = 454
+	},
+	stage_221_princess_captives_2_loop_tired = {
+		prefix = "stage_221_princess_captives",
+		to = 557,
+		from = 492
+	},
+	stage_221_princess_captives_3_angry_1 = {
+		prefix = "stage_221_princess_captives",
+		to = 704,
+		from = 596
+	},
+	stage_221_princess_captives_3_angry_2 = {
+		prefix = "stage_221_princess_captives",
+		to = 846,
+		from = 809
+	},
+	stage_221_princess_captives_3_in_tired = {
+		prefix = "stage_221_princess_captives",
+		to = 742,
+		from = 705
+	},
+	stage_221_princess_captives_3_loop_tired = {
+		prefix = "stage_221_princess_captives",
+		to = 808,
+		from = 743
+	},
+	stage_221_princess_captives_in = {
+		prefix = "stage_221_princess_captives",
+		to = 93,
+		from = 1
 	}
 }

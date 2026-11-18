@@ -16185,3 +16185,46 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].sprite_id = 2
 tt.tween.remove = false
 tt.tween.disabled = true
+
+-- =====================================================================
+-- KR6 stage 21 watchtower enemies
+-- =====================================================================
+tt = RT("enemy_shadow_archer_watchtower", "enemy_shadow_archer_kr6")
+tt.enemy.gold = 17
+tt.melee.attacks[1].disabled = true
+tt.vis.bans = bor(F_BLOCK, F_AREA, F_POLYMORPH)
+tt.render.sprites[1].angles.walk = {"idle", "idle", "idle"}
+tt.render.sprites[1].sort_y_offset = -100
+tt.health_bar.sort_y_offset = -100
+tt.render.sprites[1].flip_x = true
+tt.motion.max_speed = 0
+tt.vis.flags = bor(F_ENEMY, F_FLYING)
+tt.ranged.attacks[1].min_range = 60
+tt.ranged.attacks[1].max_range = 320
+tt.ranged.attacks[1].bullet = "bullet_shadow_archer_watchtower"
+tt.duration = 10
+tt.timeout_fx = "fx_stage_221_sentinels"
+tt.main_script.update = scripts.enemy_mixed_timed.update
+
+tt = RT("bullet_shadow_archer_watchtower", "bullet_shadow_archer")
+tt.bullet.damage_min = 18
+tt.bullet.damage_max = 35
+
+tt = RT("enemy_crow_alchemist_watchtower", "enemy_crow_alchemist")
+tt.enemy.gold = 44
+tt.melee.attacks[1].disabled = true
+tt.vis.bans = bor(F_BLOCK, F_AREA, F_POLYMORPH)
+tt.vis.flags = bor(F_ENEMY, F_FLYING)
+tt.render.sprites[1].angles.walk = {"idle", "idle", "idle"}
+tt.render.sprites[1].sort_y_offset = -100
+tt.health_bar.sort_y_offset = -100
+tt.render.sprites[1].flip_x = true
+tt.motion.max_speed = 0
+tt.ranged.attacks[1].min_range = 60
+tt.ranged.attacks[1].max_range = 300
+tt.timed_attacks.list[1].min_range = 80
+tt.timed_attacks.list[1].max_range = 300
+tt.timed_attacks.list[1].safe_nodes_to_exit = 0
+tt.timed_attacks.list[1].target_safe_nodes_to_exit = 40
+tt.duration = 10
+tt.timeout_fx = "fx_stage_221_sentinels"

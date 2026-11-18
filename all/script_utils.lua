@@ -3709,7 +3709,10 @@ function SU.y_enemy_walk_step_default(store, this)
 			elseif _angle_count == 2 then
 				local _coordinate_idx = dy > 0 and 1 or 2
 				an = _angles[_coordinate_idx]
-				af = (_sprite.angles_flip_horizontal and _sprite.angles_flip_horizontal[_coordinate_idx]) and (dx >= 0) or (dx < 0)
+				af = dx < 0
+				if _sprite.angles_flip_horizontal and _sprite.angles_flip_horizontal[_coordinate_idx] then
+					af = not af
+				end
 			else
 				local _angle = math.atan2(dy, dx) % 6.2831853071795862
 				local _coordinate_idx = 1
