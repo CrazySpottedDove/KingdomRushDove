@@ -12446,28 +12446,6 @@ tt.modifier.vis_bans = bor(F_ENEMY)
 -- =====================================================================
 -- KR6 stage 21 shared pieces
 -- =====================================================================
-tt = E:register_t("decal_defend_point5", "decal")
-E:add_comps(tt, "main_script", "editor", "editor_script")
-tt.main_script.insert = scripts.decal_defend_point5.insert
-tt.render.sprites[1].name = "defendFlag_0069"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].alpha = 100
-tt.editor.exit_id = 1
-tt.editor.orientation = 1
-tt.editor.alpha = 10
-tt.editor.flip = 0
-tt.editor_script.update = scripts.decal_defend_point5.update_editor
-tt.editor.props = {{"editor.exit_id", PT_NUMBER}, {"editor.orientation", PT_NUMBER}, {"editor.alpha", PT_NUMBER}, {"editor.flip", PT_NUMBER}}
-
-tt = E:register_t("decal_defense_flag5", "decal_defense_flag")
-E:add_comps(tt, "main_script", "editor", "editor_script")
-tt.main_script.insert = scripts.decal_defense_flag5.insert
-tt.render.sprites[1].name = "DefenseFlag"
-tt.editor.flip = 0
-tt.editor_script.update = scripts.decal_defense_flag5.update_editor
-tt.editor.props = {{"editor.flip", PT_NUMBER}}
-
 tt = E:register_t("background_sounds_kr5", "background_sounds")
 tt.main_script.update = scripts.background_sounds_kr5.update
 tt.min_delay = 7
