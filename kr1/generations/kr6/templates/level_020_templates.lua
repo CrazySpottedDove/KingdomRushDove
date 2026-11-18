@@ -236,7 +236,6 @@ local function crow_tower_update1_hunter_outpost_update(this, store)
 	local ss = this.render.sprites[2]
 	local a = this.melee.attacks[1]
 	local fm = this.force_motion
-	local attack_ts, search_ts = 0, 0
 	local target, targets, dist
 	local dest = V.v(this.pos.x, this.pos.y)
 

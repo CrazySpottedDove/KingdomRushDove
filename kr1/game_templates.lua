@@ -12443,4 +12443,121 @@ tt.modifier.duration = 1
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_ENEMY)
 
+-- =====================================================================
+-- KR6 stage 21 shared pieces
+-- =====================================================================
+tt = E:register_t("decal_defend_point5", "decal")
+E:add_comps(tt, "main_script", "editor", "editor_script")
+tt.main_script.insert = scripts.decal_defend_point5.insert
+tt.render.sprites[1].name = "defendFlag_0069"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].alpha = 100
+tt.editor.exit_id = 1
+tt.editor.orientation = 1
+tt.editor.alpha = 10
+tt.editor.flip = 0
+tt.editor_script.update = scripts.decal_defend_point5.update_editor
+tt.editor.props = {{"editor.exit_id", PT_NUMBER}, {"editor.orientation", PT_NUMBER}, {"editor.alpha", PT_NUMBER}, {"editor.flip", PT_NUMBER}}
+
+tt = E:register_t("decal_defense_flag5", "decal_defense_flag")
+E:add_comps(tt, "main_script", "editor", "editor_script")
+tt.main_script.insert = scripts.decal_defense_flag5.insert
+tt.render.sprites[1].name = "DefenseFlag"
+tt.editor.flip = 0
+tt.editor_script.update = scripts.decal_defense_flag5.update_editor
+tt.editor.props = {{"editor.flip", PT_NUMBER}}
+
+tt = E:register_t("background_sounds_kr5", "background_sounds")
+tt.main_script.update = scripts.background_sounds_kr5.update
+tt.min_delay = 7
+tt.max_delay = 13
+tt.only_on_preparation = true
+
+-- Kingpin buffs / summons
+tt = E:register_t("mod_boss_bandit_spawn_jump_stun", "mod_stun")
+tt.modifier.duration = 2
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_ENEMY)
+
+tt = E:register_t("fx_boss_bandit_spawn_jump", "fx")
+tt.render.sprites[1].prefix = "kingpin_explosion_area_attackDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = -2
+
+tt = E:register_t("fx_boss_bandit_spawn_jump_circle", "fx")
+tt.render.sprites[1].prefix = "kingpin_explosion_area_circleDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t("fx_boss_bandit_red_shadow_spawn", "fx_red_shadow_red_crows_explosion")
+tt.render.sprites[1].offset = v(0, -51)
+
+tt = E:register_t("aura_boss_bandit_march", "aura")
+tt.aura.track_source = true
+tt.aura.duration = 1e+99
+tt.aura.radius = 60
+tt.aura.cycle_time = fts(20)
+tt.main_script.update = scripts.aura_boss_bandit_march.update
+
+tt = E:register_t("aura_boss_bandit_buff", "aura")
+tt.aura.radius = 130
+tt.aura.cycles = 1
+tt.aura.mods = {"mod_boss_bandit_ally_buff_damage", "mod_boss_bandit_ally_buff_speed"}
+tt.aura.vis_bans = F_FRIEND
+tt.aura.vis_flags = 0
+tt.aura.filter_source = true
+tt.main_script.insert = scripts.aura_boss_bandit_buff.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = E:register_t("aura_boss_bandit_spawn_buff", "aura_boss_bandit_buff")
+tt.aura.radius = 130
+tt.aura.mods = {"mod_boss_bandit_spawn_ally_buff_damage", "mod_boss_bandit_spawn_ally_buff_speed"}
+
+tt = E:register_t("mod_boss_bandit_ally_buff_damage", "modifier")
+E:add_comps(tt, "render")
+tt.modifier.vis_flags = F_MOD
+tt.inflicted_damage_factor = 1.5
+tt.modifier.duration = 5
+tt.modifier.resets_same = true
+tt.fade_out = 0.3
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.update = scripts.mod_boss_bandit_buff_floor_fx.update
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.render.sprites[1].prefix = "kingpin_modifierDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "kingpin_vfx_multiexport_modifier_body"
+tt.render.sprites[2].name = "run"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].hide_after_runs = 2
+tt.render.sprites[2].draw_order = 2
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = -1
+
+tt = E:register_t("mod_boss_bandit_ally_buff_speed", "modifier")
+E:add_comps(tt, "slow")
+tt.modifier.vis_flags = F_MOD
+tt.slow.factor = 1.5
+tt.modifier.duration = 5
+tt.modifier.resets_same = true
+tt.main_script.insert = scripts.mod_slow.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.main_script.remove = scripts.mod_slow.remove
+
+tt = E:register_t("mod_boss_bandit_spawn_ally_buff_damage", "mod_boss_bandit_ally_buff_damage")
+tt.inflicted_damage_factor = 1.5
+tt.modifier.duration = 5
+
+tt = E:register_t("mod_boss_bandit_spawn_ally_buff_speed", "mod_boss_bandit_ally_buff_speed")
+tt.slow.factor = 1.5
+tt.modifier.duration = 5
+
 return scripts

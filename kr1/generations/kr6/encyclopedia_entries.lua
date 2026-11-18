@@ -298,5 +298,10 @@ return {
 		template_name = 'enemy_red_shadow',
 		thumbnail = 'kr6_encyclopedia_creep_thumbs_0039',
 		portrait = 'kr6_encyclopedia_creeps_0039'
+	},
+	{
+		template_name = 'enemy_boss_bandit_spawn',
+		thumbnail = 'kr6_encyclopedia_creep_thumbs_0064',
+		portrait = 'kr6_encyclopedia_creeps_0064'
 	}
 }
