@@ -445,13 +445,6 @@ return {
 		image = "kr5_encyclopedia_towers_0005",
 		layout = N_TOWER
 	},
-	TOWER_ALCHEMIST = {
-		prefix = "TOWER_ALCHEMIST",
-		always = true,
-		sub = "TOWER_ENGINEERS_SUBTITLE",
-		image = "kr6_encyclopedia_towers_0048",
-		layout = N_TOWER
-	},
 	TOWER_ARBOREAN_EMISSARY = {
 		prefix = "TOWER_ARBOREAN_EMISSARY_LVL4",
 		always = true,

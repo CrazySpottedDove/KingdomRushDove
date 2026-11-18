@@ -273,5 +273,30 @@ return {
 		template_name = 'enemy_stage_218_veznan',
 		thumbnail = 'kr6_encyclopedia_creep_thumbs_0061',
 		portrait = 'kr6_encyclopedia_creeps_0061'
+	},
+	{
+		template_name = 'enemy_trickster',
+		thumbnail = 'kr6_encyclopedia_creep_thumbs_0035',
+		portrait = 'kr6_encyclopedia_creeps_0035'
+	},
+	{
+		template_name = 'enemy_grizzly',
+		thumbnail = 'kr6_encyclopedia_creep_thumbs_0036',
+		portrait = 'kr6_encyclopedia_creeps_0036'
+	},
+	{
+		template_name = 'enemy_hammercrow',
+		thumbnail = 'kr6_encyclopedia_creep_thumbs_0037',
+		portrait = 'kr6_encyclopedia_creeps_0037'
+	},
+	{
+		template_name = 'enemy_crow_alchemist',
+		thumbnail = 'kr6_encyclopedia_creep_thumbs_0038',
+		portrait = 'kr6_encyclopedia_creeps_0038'
+	},
+	{
+		template_name = 'enemy_red_shadow',
+		thumbnail = 'kr6_encyclopedia_creep_thumbs_0039',
+		portrait = 'kr6_encyclopedia_creeps_0039'
 	}
 }

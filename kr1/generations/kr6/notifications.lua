@@ -195,20 +195,6 @@ return {
 		icon = "kr6_alert_creep_notxt_0059",
 		layout = N_ENEMY
 	},
-	TOWER_ARCHER_ARCANE = {
-		prefixes = {"TOWER_ARCANE", "TOWER_EWOK"},
-		always = true,
-		subs = {"TOWER_ARCHERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
-		images = {"kr3_encyclopedia_towers_0005", "kr3_encyclopedia_towers_0009"},
-		layout = N_TOWER_2
-	},
-	TOWER_BARRACK_BLADE = {
-		prefix = "TOWER_BLADE",
-		always = true,
-		sub = "TOWER_BARRACKS_SUBTITLE",
-		image = "kr3_encyclopedia_towers_0008",
-		layout = N_TOWER
-	},
 	TOWER_CULVERINE = {
 		prefixes = {"TOWER_CULVERINE", "TOWER_MINERS"},
 		always = true,
@@ -258,140 +244,6 @@ return {
 		images = {"kr6_encyclopedia_towers_0020", "kr6_encyclopedia_towers_0028"},
 		layout = N_TOWER_2
 	},
-	TOWER_MAGE_WILD_MAGUS = {
-		prefix = "TOWER_WILD_MAGUS",
-		always = true,
-		sub = "TOWER_MAGES_SUBTITLE",
-		image = "kr3_encyclopedia_towers_0004",
-		layout = N_TOWER
-	},
-	TOWER_PIXIE = {
-		prefix = "TOWER_PIXIE",
-		always = true,
-		sub = "TOWER_MAGES_SUBTITLE",
-		image = "kr3_encyclopedia_towers_0011",
-		layout = N_TOWER
-	},
-	TOWER_ROCK_THROWER_STONE_DRUID = {
-		prefix = "TOWER_DRUID",
-		always = true,
-		sub = "TOWER_ENGINEERS_SUBTITLE",
-		image = "kr3_encyclopedia_towers_0001",
-		layout = N_TOWER
-	},
-	TOWER_MAGE_HIGH_ELVEN = {
-		prefixes = {"TOWER_HIGH_ELVEN", "TOWER_FAERIE_DRAGON"},
-		always = true,
-		subs = {"TOWER_MAGES_SUBTITLE", "TOWER_MAGES_SUBTITLE"},
-		images = {"kr3_encyclopedia_towers_0003", "kr3_encyclopedia_towers_0010"},
-		layout = N_TOWER_2
-	},
-	TOWER_ROCK_THROWER_ENTWOOD = {
-		prefix = "TOWER_ENTWOOD",
-		always = true,
-		sub = "TOWER_ENGINEERS_SUBTITLE",
-		image = "kr3_encyclopedia_towers_0002",
-		layout = N_TOWER
-	},
-	TOWER_ARCHER_SILVER = {
-		always = true,
-		layout = N_TOWER_2,
-		images = {"kr3_encyclopedia_towers_0006", "kr3_encyclopedia_towers_0007"},
-		prefixes = {"TOWER_SILVER", "TOWER_FOREST"},
-		subs = {"TOWER_ARCHERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"}
-	},
-	TOWER_DWAARP = {
-		prefixes = {"TOWER_DWAARP", "TOWER_BARRACK_PIRATES"},
-		always = true,
-		subs = {"TOWER_ENGINEERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
-		images = {"kr2_encyclopedia_towers_0004", "kr2_encyclopedia_towers_0010"},
-		layout = N_TOWER_2
-	},
-	TOWER_ARCHMAGE = {
-		prefix = "TOWER_ARCHMAGE",
-		always = true,
-		sub = "TOWER_MAGES_SUBTITLE",
-		image = "kr2_encyclopedia_towers_0003",
-		layout = N_TOWER
-	},
-	TOWER_TEMPLARS = {
-		prefixes = {"TOWER_TEMPLAR", "TOWER_BARRACK_AMAZONAS"},
-		always = true,
-		subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
-		images = {"kr2_encyclopedia_towers_0006", "kr2_encyclopedia_towers_0011"},
-		layout = N_TOWER_2
-	},
-	TOWER_TOTEM = {
-		prefix = "TOWER_TOTEM",
-		always = true,
-		sub = "TOWER_ARCHERS_SUBTITLE",
-		image = "kr2_encyclopedia_towers_0005",
-		layout = N_TOWER
-	},
-	TOWER_ARCHER_DWARF = {
-		prefixes = {"TOWER_BARRACK_DWARF", "TOWER_ARCHER_DWARF"},
-		always = true,
-		subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_ARCHERS_SUBTITLE"},
-		images = {"kr2_encyclopedia_towers_0012", "kr2_encyclopedia_towers_0013"},
-		layout = N_TOWER_2
-	},
-	TOWER_PIRATE_WATCHTOWER = {
-		prefix = "TOWER_PIRATE_WATCHTOWER",
-		always = true,
-		sub = "TOWER_ARCHERS_SUBTITLE",
-		image = "kr2_encyclopedia_towers_0014",
-		layout = N_TOWER
-	},
-	TOWER_FRANKENSTEIN = {
-		prefix = "TOWER_FRANKENSTEIN",
-		always = true,
-		sub = "TOWER_ENGINEERS_SUBTITLE",
-		image = "kr2_encyclopedia_towers_0015",
-		layout = N_TOWER
-	},
-	TOWER_NECROMANCER = {
-		prefix = "TOWER_NECROMANCER",
-		always = true,
-		sub = "TOWER_MAGES_SUBTITLE",
-		image = "kr2_encyclopedia_towers_0007",
-		layout = N_TOWER
-	},
-	TOWER_MECH = {
-		prefix = "TOWER_MECH",
-		always = true,
-		sub = "TOWER_ENGINEERS_SUBTITLE",
-		image = "kr2_encyclopedia_towers_0008",
-		layout = N_TOWER
-	},
-	TOWER_ASSASINS_CROSSBOW = {
-		always = true,
-		layout = N_TOWER_2,
-		images = {"kr2_encyclopedia_towers_0002", "kr2_encyclopedia_towers_0001"},
-		prefixes = {"TOWER_ASSASSIN", "TOWER_CROSSBOW"},
-		subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_ARCHERS_SUBTITLE"},
-		next = "TOWER_BARRACK_MERCENARIES"
-	},
-	TOWER_MUSKETEER = {
-		prefix = "TOWER_MUSKETEER",
-		always = true,
-		sub = "TOWER_ARCHERS_SUBTITLE",
-		image = "encyclopedia_towers_0017",
-		layout = N_TOWER
-	},
-	TOWER_RANGER = {
-		prefixes = {"TOWER_RANGER", "TOWER_ELF"},
-		always = true,
-		subs = {"TOWER_ARCHERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
-		images = {"encyclopedia_towers_0013", "encyclopedia_towers_0021"},
-		layout = N_TOWER_2
-	},
-	TOWER_SORCERER = {
-		prefixes = {"TOWER_SORCERER", "TOWER_SUNRAY"},
-		always = true,
-		subs = {"TOWER_MAGES_SUBTITLE", "TOWER_MAGES_SUBTITLE"},
-		images = {"encyclopedia_towers_0019", "encyclopedia_towers_0022"},
-		layout = N_TOWER_2
-	},
 	TOWER_SUNRAY_MASTER = {
 		prefix = "TOWER_SUNRAY_MASTER",
 		always = true,
@@ -399,47 +251,25 @@ return {
 		image = "kr6_encyclopedia_towers_0032",
 		layout = N_TOWER
 	},
-	TOWER_TESLA = {
-		prefix = "TOWER_TESLA",
-		always = true,
-		sub = "TOWER_ENGINEERS_SUBTITLE",
-		image = "encyclopedia_towers_0020",
-		layout = N_TOWER
+	enemy_trickster = {
+		icon = "kr6_alert_creep_notxt_0030",
+		layout = N_ENEMY
 	},
-	TOWER_BARBARIAN_BGF = {
-		always = true,
-		layout = N_TOWER_2,
-		images = {"encyclopedia_towers_0018", "encyclopedia_towers_0016"},
-		prefixes = {"TOWER_BARBARIAN", "TOWER_BFG"},
-		subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_ENGINEERS_SUBTITLE"}
+	enemy_grizzly = {
+		icon = "kr6_alert_creep_notxt_0031",
+		layout = N_ENEMY
 	},
-	TOWER_PALADIN = {
-		always = true,
-		layout = N_TOWER_2,
-		images = {"encyclopedia_towers_0015", "encyclopedia_towers_0014"},
-		prefixes = {"TOWER_ARCANE_WIZARD", "TOWER_PALADIN"},
-		subs = {"TOWER_MAGES_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"}
+	enemy_hammercrow = {
+		icon = "kr6_alert_creep_notxt_0032",
+		layout = N_ENEMY
 	},
-	TOWER_BARRACK_MERCENARIES = {
-		prefix = "TOWER_BARRACK_MERCENARIES",
-		always = true,
-		sub = "TOWER_BARRACKS_SUBTITLE",
-		image = "kr2_encyclopedia_towers_0009",
-		layout = N_TOWER
+	enemy_crow_alchemist = {
+		icon = "kr6_alert_creep_notxt_0033",
+		layout = N_ENEMY
 	},
-	TOWER_BABY_ASHBITE = {
-		prefix = "TOWER_BABY_ASHBITE",
-		always = true,
-		sub = "TOWER_BARRACKS_SUBTITLE",
-		image = "kr3_encyclopedia_towers_0012",
-		layout = N_TOWER
-	},
-	TOWER_DROW = {
-		prefix = "TOWER_DROW",
-		always = true,
-		sub = "TOWER_BARRACKS_SUBTITLE",
-		image = "kr3_encyclopedia_towers_0013",
-		layout = N_TOWER
+	enemy_red_shadow = {
+		icon = "kr6_alert_creep_notxt_0034",
+		layout = N_ENEMY
 	},
 	TOWER_GENERATION6_FOUNDAMENTALS = {
 		always = true,
@@ -455,5 +285,13 @@ return {
 		images = {"kr6_encyclopedia_towers_0012", "kr6_encyclopedia_towers_0016"},
 		subs = {"TOWER_MAGES_SUBTITLE", "TOWER_ENGINEERS_SUBTITLE"},
 		layout = N_TOWER_2
+	},
+	TOWER_ALCHEMIST = {
+		prefix = "TOWER_ALCHEMIST",
+		always = true,
+		sub = "TOWER_ENGINEERS_SUBTITLE",
+		image = "kr6_encyclopedia_towers_0048",
+		layout = N_TOWER
 	}
+
 }

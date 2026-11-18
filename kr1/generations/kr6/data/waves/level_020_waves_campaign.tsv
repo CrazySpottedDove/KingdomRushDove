@@ -1,0 +1,533 @@
+#	COMANDOS					1 - arriba-medio-arriba					2 -  arriba - medio - abajo					3 - arriba - derecha - arriba					4 - Arriba - derecha - abajo					5 - arriba, derecha - abajo - abajo					6 - abajo - medio - arriba					7 - abajo - abajo
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3
+#	level properties
+	description	main Gerson
+	lives	20
+	gold	990
+	gems	175
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	8579
+#	stage gold curve
+#	WAVE 1
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					21	0	10	0		0	0	0	0		0	5	0	0
+#	gold	255				105	0	100	0		0	0	0	0		0	50	0	0
+	wave		1		-1
+					1				shadow_blades			shadow_blades
+					1			shadow_blades						shadow_blades
+					1							shadow_blades
+					1				shadow_blades
+					1							shadow_blades
+					1		shadow_blades						shadow_blades
+					1				shadow_blades
+					0											trickster
+					2											trickster
+					1											trickster
+					6		bandit_kr6		bandit_kr6
+					2			bandit_kr6
+					0.7		bandit_kr6		bandit_kr6
+					0.7			bandit_kr6
+					2							bandit_kr6		bandit_kr6
+					0.5								bandit_kr6
+					0.5							bandit_kr6		bandit_kr6
+					0.5							bandit_kr6		bandit_kr6
+					0.5
+					0.5							bandit_kr6		bandit_kr6					trickster
+					0.5								bandit_kr6				trickster
+					5						bandit_kr6
+					0.8						bandit_kr6
+					0.8						bandit_kr6
+					0.8						bandit_kr6
+					0.5						bandit_kr6
+
+
+#	32.3
+
+#	WAVE 2
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	13	12	0		0	0	0	0		0	0	0	0
+#	gold	224				0	104	120	0		0	0	0	0		0	0	0	0
+	wave		2		22
+					0.2																blackguard
+					1																blackguard
+					1.5																blackguard
+					1																blackguard
+					2																blackguard
+					1.5																blackguard
+					2																blackguard
+					10	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades															blackguard
+					1.5	shadow_blades															blackguard
+					0.6	shadow_blades															blackguard
+					0.6	shadow_blades															blackguard
+					3						shadow_blades										blackguard
+					0.6						shadow_blades										blackguard
+					0.6						shadow_blades
+					4						shadow_blades
+					0.6						shadow_blades
+					0.6						shadow_blades
+
+
+
+
+#	32.5
+
+#	WAVE 3
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	18	0	0		0	0	0	0		0	0	2	2
+#	gold	284				0	144	0	0		0	0	0	0		0	0	60	80
+	wave		3		20
+					0									blackguard				crow_alchemist
+					1							blackguard
+					1									blackguard
+					2							blackguard
+					1							blackguard
+					1									blackguard
+					9							blackguard
+					0.6									blackguard
+					6							blackguard																				grizzly
+					1							blackguard
+					1									blackguard
+					1									blackguard
+					1							blackguard																					grizzly
+					2													crow_alchemist
+					4									blackguard
+					0.6							blackguard
+					0.6							blackguard
+					0.6									blackguard
+					0.6									blackguard
+#	34
+
+#	WAVE 4
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	10	0		7	3	0	0		0	5	0	0
+#	gold	284				0	0	100	0		14	120	0	0		0	50	0	0
+	wave		4		26
+					0			crowcaller
+					1.5																			trickster
+					1.5																	trickster
+					4		crow
+					0.6			crow	crow
+					1		crow
+					1				crow
+					1			crow															trickster
+					2		crow															trickster
+					2		crowcaller
+					2				crowcaller
+					1.5																			trickster
+					7																										shadow_blades
+					1																										shadow_blades
+					1																										shadow_blades
+					1																										shadow_blades
+					1																										shadow_blades
+					1																										shadow_blades
+					1																										shadow_blades
+					1																										shadow_blades
+					1																										shadow_blades
+					1																										shadow_blades
+
+
+
+
+
+
+#	34.1
+
+#	WAVE 5
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	6	0	25		0	0	2	0		0	0	0	3
+#	gold	703				0	48	0	375		0	0	160	0		0	0	0	120
+	wave		5		25
+					0													headhunter
+					2												shadow_archer_kr6
+					1														shadow_archer_kr6
+					1												shadow_archer_kr6
+					1														shadow_archer_kr6
+					3													crow_alchemist
+					6		shadow_archer_kr6							shadow_archer_kr6														headhunter
+					1		shadow_archer_kr6							shadow_archer_kr6													shadow_archer_kr6		shadow_archer_kr6
+					1		shadow_archer_kr6							shadow_archer_kr6													shadow_archer_kr6
+					1																								shadow_archer_kr6
+					4	shadow_archer_kr6																					crow_alchemist											blackguard
+					0.8	shadow_archer_kr6																															blackguard
+					0.8	shadow_archer_kr6																																	blackguard
+					0.8	shadow_archer_kr6																																blackguard
+					0.8	shadow_archer_kr6																																	blackguard
+					0.8	shadow_archer_kr6																															blackguard
+					5						shadow_archer_kr6																											crow_alchemist
+					0.8						shadow_archer_kr6
+					0.8						shadow_archer_kr6
+					0.8						shadow_archer_kr6
+					0.8						shadow_archer_kr6
+
+
+
+
+
+
+
+
+
+
+#	33.2
+
+
+
+#	WAVE 6
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist							orc_wildling	grizzly	hammercrow			orc_wildling	grizzly	hammercrow			orc_wildling	grizzly	hammercrow
+#	cant.					0	0	26	0		0	0	0	0		0	0	4	1							0	0	0			0	0	0			0	0	0
+#	gold	420				0	0	260	0		0	0	0	0		0	0	120	40							0	0	0			0	0	0			0	0	0
+	wave		6		26
+					0																					shadow_blades					grizzly
+					1																					shadow_blades
+					1																					shadow_blades
+					1																					shadow_blades					grizzly
+					1																					shadow_blades
+					1																					shadow_blades
+					3																										grizzly
+					3																										grizzly
+					1																					shadow_blades										shadow_blades
+					1																					shadow_blades										shadow_blades
+					1																					shadow_blades
+					1																															shadow_blades
+					1																															shadow_blades
+					1																															shadow_blades
+					5						shadow_blades																											crow_alchemist
+					0.8						shadow_blades
+					1						shadow_blades
+					0.8						shadow_blades
+					3						shadow_blades
+					3						shadow_blades
+					0.8						shadow_blades
+					1						shadow_blades
+					0.8						shadow_blades
+					1						shadow_blades
+					1						shadow_blades
+					1						shadow_blades
+
+
+
+
+
+
+
+
+#	36.2
+
+
+
+#	WAVE 7
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	23	0	0		0	0	3	0		0	0	2	3
+#	gold	604				0	184	0	0		0	0	240	0		0	0	60	120
+	wave		7		30
+					0							blackguard
+					0.8									blackguard
+					0.8							blackguard
+					1								crow_alchemist
+					3									blackguard																							grizzly
+					0.7							blackguard
+					0.6									blackguard
+					0.5							blackguard
+					10																												headhunter
+					0.7																											blackguard		blackguard				grizzly
+					1																											blackguard	crow_alchemist	blackguard
+					1								blackguard																			blackguard		blackguard
+					7							blackguard		blackguard															headhunter
+					1
+					1							blackguard		blackguard													headhunter
+					1
+					3							blackguard																crow_alchemist
+					1								blackguard	blackguard
+					1							blackguard		blackguard
+
+
+
+#	35.1
+
+
+
+
+
+#	WAVE 8
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	15	0		38	0	0	0		1	0	0	2
+#	gold	376				0	0	150	0		76	0	0	0		70	0	0	80
+	wave		8		20
+					0	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow							crow_alchemist
+					1						crow
+					0.6						crow
+					0.6						crow
+					0.6						crow
+					5	crow		crow_alchemist
+					0.6	crow
+					1	crow																	hammercrow
+					0.6	crow
+					1	crow
+					0.6	crow
+					4		crow
+					2				crow																				shadow_blades
+					0.6	crow																						shadow_blades
+					0.6	crow																					shadow_blades
+					0.6	crow																							shadow_blades
+					0.6	crow																					shadow_blades
+					7	crow																					shadow_blades
+					0.6	crow																							shadow_blades
+					1	crow																						shadow_blades
+					0.6	crow																					shadow_blades
+					6						crow																shadow_blades
+					0.6						crow																		shadow_blades
+					0.6						crow																		shadow_blades
+					0.6						crow																	shadow_blades
+					0.6						crow																shadow_blades
+					0.6						crow																		shadow_blades
+					3	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow
+
+
+
+#	47.2
+
+
+
+#	WAVE 9
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	7	0		0	2	2	0		0	6	0	2
+#	gold	450				0	0	70	0		0	80	160	0		0	60	0	80
+	wave		9		25
+					1							headhunter
+					2									headhunter
+					4								trickster
+					1							trickster
+					1									trickster
+					3								crow_alchemist
+					5	shadow_blades																							crowcaller
+					1.5	shadow_blades
+					1.5	shadow_blades																					crowcaller
+					3	shadow_blades						trickster
+					1.5	shadow_blades							trickster
+					1.5	shadow_blades								trickster
+					1.5	shadow_blades							crow_alchemist
+
+
+
+
+
+
+
+#	27.5
+
+#	WAVE 10
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	14	0	5		0	0	3	2		0	0	0	0
+#	gold	627				0	112	0	75		0	0	240	200		0	0	0	0
+	wave		10		20
+					1																		red_shadow
+					5																	shadow_archer_kr6
+					1																			shadow_archer_kr6
+					1.5																		shadow_archer_kr6
+					1																	shadow_archer_kr6
+					1.5																			shadow_archer_kr6
+					8							headhunter
+					1									headhunter
+					1								headhunter																									blackguard
+					7																		red_shadow														blackguard		blackguard
+					1																																blackguard		blackguard
+					1																																blackguard		blackguard
+					7																																	blackguard
+					4																																blackguard		blackguard
+					1																																blackguard		blackguard
+					1																																blackguard		blackguard
+
+
+
+#	43
+
+
+
+#	WAVE 11
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	12	0		16	0	1	0		0	11	0	0
+#	gold	342				0	0	120	0		32	0	80	0		0	110	0	0
+	wave		11		25
+					0																															headhunter
+					3	crow						trickster
+					1	crow
+					1	crow								trickster
+					0.7	crow
+					0.7								trickster
+					0.7	crow
+					0.7							trickster
+					0.7	crow
+					0.7									trickster
+					0.7	crow
+					0.7	crow
+					3								trickster																				trickster
+					0.7	crow																					shadow_blades	shadow_blades
+					0.7	crow																							shadow_blades
+					0.7																						shadow_blades		shadow_blades			trickster
+					0.7																							shadow_blades						trickster
+					0.7																												trickster
+					0.7																											trickster
+					3	crow																					shadow_blades	shadow_blades
+					0.7	crow																							shadow_blades
+					0.7	crow																					shadow_blades		shadow_blades
+					0.7	crow																						shadow_blades
+					0.7	crow
+					0.7	crow
+
+
+
+
+#	24.3
+
+
+#	WAVE 12
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	0	10		0	0	0	0		2	6	4	2
+#	gold	550				0	0	0	150		0	0	0	0		140	60	120	80
+	wave		12		27
+					0																												trickster
+					1.5																													trickster
+					2								hammercrow									crow_alchemist										trickster
+					1.2							shadow_archer_kr6
+					1.2									shadow_archer_kr6
+					1.2							shadow_archer_kr6
+					1.2									shadow_archer_kr6
+					8																		crow_alchemist
+					2																												grizzly
+					2			hammercrow
+					4																													grizzly
+					2
+					8																					shadow_archer_kr6
+					1.2																					shadow_archer_kr6
+					1.2																					shadow_archer_kr6
+					1.2																					shadow_archer_kr6
+					1.2																					shadow_archer_kr6
+					1.2																					shadow_archer_kr6
+					5																												trickster
+					2																																grizzly
+					3																													trickster
+					2																											trickster							grizzly
+
+
+
+
+
+
+
+#	52.3
+
+
+#	WAVE 13
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	0	0		0	3	0	1		0	0	5	2
+#	gold	450				0	0	0	0		0	120	0	100		0	0	150	80							0	0	0		0	0	0		0	0	0		0	0
+	wave		13		20
+					0								red_shadow
+					2							grizzly
+					2.5									grizzly
+					8								grizzly
+					2
+					2							grizzly
+					3									grizzly
+					6							crow_alchemist																crowcaller
+					5																						crowcaller
+					2																								crowcaller				crow_alchemist
+
+
+
+
+
+
+#	32.5
+
+
+
+#	WAVE 14
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	5	0	0		0	0	8	1		1	6	0	5
+#	gold	1110				0	40	0	0		0	0	640	100		70	60	0	200
+	wave		14		25
+					0								hammercrow										crow_alchemist										red_shadow
+					3			trickster	trickster
+					2		trickster							headhunter																			headhunter
+					4				headhunter																			crow_alchemist
+					2			headhunter
+					10		headhunter															crow_alchemist										headhunter
+					2																													headhunter					blackguard
+					4.5							headhunter												crow_alchemist														blackguard
+					2.5																																blackguard
+					3																																		blackguard
+					2			trickster						crow_alchemist
+					1		trickster		trickster																													blackguard
+
+
+
+
+
+
+
+#	36
+
+
+#	WAVE 15
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	11	0		0	0	2	2		2	9	6	3
+#	gold	1000				0	0	110	0		0	0	160	200		140	90	180	120
+	wave		15		30
+					0			hammercrow
+					2																						grizzly
+					2																								grizzly
+					2		grizzly
+					2																						grizzly
+					3		grizzly
+					4				grizzly
+					3																												hammercrow
+					0.8																					shadow_blades
+					0.8																					shadow_blades
+					0.8																					shadow_blades
+					1.5																											crow_alchemist
+					6			red_shadow
+					5								red_shadow
+					2							trickster
+					1.5									trickster
+					1							trickster
+					1									trickster
+					2								crow_alchemist
+					8				headhunter
+					2		headhunter
+					2			crow_alchemist
+					2							trickster		trickster																							shadow_blades
+					0.8																																shadow_blades
+					1								trickster																										shadow_blades
+					0.8									trickster																							shadow_blades
+					1							trickster
+					1																																		shadow_blades
+					3																																shadow_blades
+					1																																shadow_blades
+					0.8																																		shadow_blades
+					0.8
+
+
+
+
+
+
+
+
+
+#	64.6

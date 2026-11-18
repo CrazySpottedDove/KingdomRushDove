@@ -2,9 +2,12 @@
 # 用新的 -test 命令脚本跑一局 autoplay。
 #
 # 用法：
-#   scripts/test/autoplay.sh <关卡号> [选项] [-- 其它 love 参数]
+#   scripts/test/autoplay.sh --gen <generation> --level <关卡序号> [选项] [-- 其它 love 参数]
+#   例：scripts/test/autoplay.sh --gen kr6 --level 18
 #
 # 选项：
+#   --gen ID             generation id（如 kr6）
+#   --level N            generation 内的关卡序号（local index）
 #   --mode N             1 campaign / 2 heroic / 3 iron
 #   --difficulty N       难度
 #   --no-towers          不铺塔
@@ -18,13 +21,12 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-LEVEL="${1:-}"
-shift || true
-
-if [[ -z "$LEVEL" ]]; then
-	echo "usage: $0 <level> [options] [-- love args]" >&2
-	exit 2
-fi
+GEN_ID=""
+LEVEL=""
+case "${1:-}" in
+	''|--*) ;;
+	*) LEVEL="$1"; shift ;;
+esac
 
 MODE=1
 DIFF=1
@@ -40,6 +42,8 @@ EXTRA=()
 
 while [[ $# -gt 0 ]]; do
 	case "$1" in
+		--gen) GEN_ID="$2"; shift 2 ;;
+		--level) LEVEL="$2"; shift 2 ;;
 		--mode) MODE="$2"; shift 2 ;;
 		--difficulty|--diff) DIFF="$2"; shift 2 ;;
 		--no-towers) BUILD_TOWERS=false; shift ;;
@@ -54,6 +58,11 @@ while [[ $# -gt 0 ]]; do
 		*) EXTRA+=("$1"); shift ;;
 	esac
 done
+
+if [[ -z "$LEVEL" ]]; then
+	echo "usage: $0 --gen <generation> --level <关卡序号> [options] [-- love args]" >&2
+	exit 2
+fi
 
 TMP_SCRIPT="$(mktemp "${TMPDIR:-/tmp}/krd-autoplay-XXXXXX.jsonl")"
 cleanup() {
@@ -77,10 +86,16 @@ if [[ -n "$SPELL_LEVEL" ]]; then
 	START_ARGS="$START_ARGS,\"spell_level\":$SPELL_LEVEL"
 fi
 
+if [[ -n "$GEN_ID" ]]; then
+	OPEN_LEVEL="\"gen_id\":\"$GEN_ID\",\"level_idx\":$LEVEL"
+else
+	OPEN_LEVEL="\"level\":$LEVEL"
+fi
+
 {
 	echo "{\"id\":0,\"cmd\":\"plugins_load_all\"}"
 	echo "{\"id\":1,\"cmd\":\"configure\",\"args\":{$CONFIG_ARGS}}"
-	echo "{\"id\":2,\"cmd\":\"open_level\",\"args\":{\"level\":$LEVEL,\"mode\":$MODE,\"difficulty\":$DIFF}}"
+	echo "{\"id\":2,\"cmd\":\"open_level\",\"args\":{$OPEN_LEVEL,\"mode\":$MODE,\"difficulty\":$DIFF}}"
 	echo "{\"id\":3,\"cmd\":\"run_until\",\"args\":{\"condition\":\"game_start\",\"load_timeout_ms\":60000,\"max_ticks\":400000}}"
 	echo "{\"id\":4,\"cmd\":\"autoplay_start\",\"args\":{$START_ARGS}}"
 	echo "{\"id\":5,\"cmd\":\"run_until\",\"args\":{\"condition\":\"level_outcome\",\"max_sim_seconds\":$MAX_SECONDS}}"

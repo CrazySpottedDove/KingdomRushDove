@@ -49057,5 +49057,668 @@ return {
 		prefix = "light_priestess_FX_skill_a_proj",
 		to = 9,
 		from = 1
+	},
+
+	castle_warrior_hit_run = {
+		from = 1,
+		prefix = "castle_warrior_hit",
+		to = 7
+	},
+	castle_warrior_unit_idle = {
+		from = 1,
+		prefix = "castle_warrior_unit",
+		to = 42
+	},
+	castle_warrior_unit_walk = {
+		from = 43,
+		prefix = "castle_warrior_unit",
+		to = 66
+	},
+	castle_warrior_unit_attack_1 = {
+		from = 67,
+		prefix = "castle_warrior_unit",
+		to = 98
+	},
+	castle_warrior_unit_attack_2 = {
+		from = 99,
+		prefix = "castle_warrior_unit",
+		to = 130
+	},
+	castle_warrior_unit_death = {
+		from = 131,
+		prefix = "castle_warrior_unit",
+		to = 231
+	},
+	castle_warrior_unit_stun_idle = {
+		from = 232,
+		prefix = "castle_warrior_unit",
+		to = 251
+	},
+	castle_warrior_unit_stun_end = {
+		from = 252,
+		prefix = "castle_warrior_unit",
+		to = 427
+	},
+	castle_warrior_unit_raise = {
+		from = 428,
+		prefix = "castle_warrior_unit",
+		to = 457
+	},
+	castle_warrior_unit_attack_area = {
+		from = 458,
+		prefix = "castle_warrior_unit",
+		to = 550
+	},
+	castle_warrior_unit_attack_attack = {
+		from = 551,
+		prefix = "castle_warrior_unit",
+		to = 587
+	},
+	castle_warrior_shield_projectile_hit_run = {
+		from = 1,
+		prefix = "castle_warrior_shield_projectile_hit",
+		to = 13
+	},
+	castle_warrior_shield_projectile_trail_idle = {
+		from = 1,
+		prefix = "castle_warrior_shield_projectile_trail",
+		to = 10
+	},
+	castle_warrior_shield_projectile_idle = {
+		from = 1,
+		prefix = "castle_warrior_shield_projectile",
+		to = 10
+	},
+	castle_warrior_shield_projectile_death = {
+		from = 11,
+		prefix = "castle_warrior_shield_projectile",
+		to = 26
+	},
+	castle_warrior_area_decal_run = {
+		from = 1,
+		prefix = "castle_warrior_area_decal",
+		to = 18
+	},
+
+	bandit_princess_trickster_run = {
+		from = 1,
+		prefix = "bandit_princess_trickster",
+		to = 16
+	},
+	bandit_princess_bandit_run = {
+		from = 1,
+		prefix = "bandit_princess_bandit",
+		to = 20
+	},
+	bandit_princess_blackguard_run = {
+		from = 1,
+		prefix = "bandit_princess_blackguard",
+		to = 20
+	},
+	bandit_princess_emoji_in = {
+		from = 1,
+		prefix = "bandit_princess_emoji",
+		to = 4
+	},
+	bandit_princess_emoji_run = {
+		from = 5,
+		prefix = "bandit_princess_emoji",
+		to = 50
+	},
+	bandit_princess_emoji_out = {
+		from = 51,
+		prefix = "bandit_princess_emoji",
+		to = 55
+	},
+
+	creep_trickster_creep_idle = {
+		prefix = "creep_trickster_creep",
+		to = 1,
+		from = 1
+	},
+	creep_trickster_creep_walk = {
+		prefix = "creep_trickster_creep",
+		to = 20,
+		from = 2
+	},
+	creep_trickster_creep_walk_down = {
+		prefix = "creep_trickster_creep",
+		to = 40,
+		from = 21
+	},
+	creep_trickster_creep_walk_up = {
+		prefix = "creep_trickster_creep",
+		to = 60,
+		from = 41
+	},
+	creep_trickster_creep_attack = {
+		prefix = "creep_trickster_creep",
+		to = 80,
+		from = 61
+	},
+	creep_trickster_creep_death = {
+		prefix = "creep_trickster_creep",
+		to = 110,
+		from = 81
+	},
+	creep_trickster_creep_smoke_idle = {
+		prefix = "creep_trickster_creep",
+		to = 111,
+		from = 111
+	},
+	creep_trickster_creep_smoke_walk = {
+		prefix = "creep_trickster_creep",
+		to = 126,
+		from = 112
+	},
+	creep_trickster_creep_smoke_walk_down = {
+		prefix = "creep_trickster_creep",
+		to = 142,
+		from = 127
+	},
+	creep_trickster_creep_smoke_walk_up = {
+		prefix = "creep_trickster_creep",
+		to = 158,
+		from = 143
+	},
+	creep_trickster_creep_smoke_bomb = {
+		prefix = "creep_trickster_creep",
+		to = 186,
+		from = 159
+	},
+	creep_trickster_creep_smoke_death = {
+		prefix = "creep_trickster_creep",
+		to = 216,
+		from = 187
+	},
+	creep_trickster_creep_attack_ranged = {
+		prefix = "creep_trickster_creep",
+		to = 250,
+		from = 217
+	},
+	creep_trickster_smoke_trail = {
+		prefix = "creep_trickster_smoke_trail",
+		to = 16,
+		from = 1
+	},
+	creep_trickster_projectile_hit_run = {
+		prefix = "creep_trickster_projectile_hit",
+		to = 6,
+		from = 1
+	},
+	creep_trickster_smoke_bomb_run = {
+		prefix = "creep_trickster_smoke_bomb",
+		to = 19,
+		from = 1
+	},
+	creep_trickster_trapdoor_creep_in = {
+		prefix = "creep_trickster_trapdoor_creep",
+		to = 28,
+		from = 1
+	},
+	creep_trickster_trapdoor_door_in = {
+		prefix = "creep_trickster_trapdoor_door",
+		to = 34,
+		from = 1
+	},
+	creep_trickster_trapdoor_door_idle = {
+		prefix = "creep_trickster_trapdoor_door",
+		to = 35,
+		from = 35
+	},
+	creep_trickster_trapdoor_door_out = {
+		prefix = "creep_trickster_trapdoor_door",
+		to = 45,
+		from = 36
+	},
+	creep_trickster_trapdoor_in = {
+		prefix = "creep_trickster_trapdoor",
+		to = 4,
+		from = 1
+	},
+	creep_trickster_trapdoor_loop = {
+		prefix = "creep_trickster_trapdoor",
+		to = 22,
+		from = 5
+	},
+	creep_trickster_trapdoor_idle = {
+		prefix = "creep_trickster_trapdoor",
+		to = 23,
+		from = 23
+	},
+	creep_trickster_trapdoor_out = {
+		prefix = "creep_trickster_trapdoor",
+		frames = {23, 23, 23, 23, 4, 3, 2, 1}
+	},
+
+	creep_grizzly_2_creep_idle = {
+		prefix = "creep_grizzly_2_creep",
+		to = 1,
+		from = 1
+	},
+	creep_grizzly_2_creep_walk = {
+		prefix = "creep_grizzly_2_creep",
+		to = 25,
+		from = 2
+	},
+	creep_grizzly_2_creep_walk_down = {
+		prefix = "creep_grizzly_2_creep",
+		to = 49,
+		from = 26
+	},
+	creep_grizzly_2_creep_walk_up = {
+		prefix = "creep_grizzly_2_creep",
+		to = 73,
+		from = 50
+	},
+	creep_grizzly_2_creep_attack = {
+		prefix = "creep_grizzly_2_creep",
+		to = 105,
+		from = 74
+	},
+	creep_grizzly_2_creep_death = {
+		prefix = "creep_grizzly_2_creep",
+		to = 139,
+		from = 106
+	},
+	creep_grizzly_2_creep_run_side = {
+		prefix = "creep_grizzly_2_creep",
+		to = 151,
+		from = 140
+	},
+	creep_grizzly_2_creep_run_side_down = {
+		prefix = "creep_grizzly_2_creep",
+		to = 163,
+		from = 152
+	},
+	creep_grizzly_2_creep_run_side_up = {
+		prefix = "creep_grizzly_2_creep",
+		to = 175,
+		from = 164
+	},
+	creep_grizzly_2_creep_rage = {
+		prefix = "creep_grizzly_2_creep",
+		to = 221,
+		from = 176
+	},
+
+	hammercrow_3_rocas_hit_towerstun_run = {
+		prefix = "hammercrow_3_rocas_hit_towerstun",
+		to = 63,
+		from = 1
+	},
+
+	hammercrow_3_hit_run = {
+		prefix = "hammercrow_3_hit",
+		to = 7,
+		from = 1
+	},
+
+	hammercrow_3_tower_stun_start = {
+		prefix = "hammercrow_3_tower_stun",
+		to = 35,
+		from = 1
+	},
+
+	hammercrow_3_tower_stun_loop = {
+		prefix = "hammercrow_3_tower_stun",
+		to = 46,
+		from = 36
+	},
+
+	hammercrow_3_tower_stun_end = {
+		prefix = "hammercrow_3_tower_stun",
+		to = 94,
+		from = 47
+	},
+
+	hammercrow_3_hammercrow_idle = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 1,
+		from = 1
+	},
+
+	hammercrow_3_hammercrow_walk = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 33,
+		from = 2
+	},
+
+	hammercrow_3_hammercrow_walk_front = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 65,
+		from = 34
+	},
+
+	hammercrow_3_hammercrow_walk_back = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 100,
+		from = 66
+	},
+
+	hammercrow_3_hammercrow_melee = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 140,
+		from = 101
+	},
+
+	hammercrow_3_hammercrow_attk_area_in = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 160,
+		from = 141
+	},
+
+	hammercrow_3_hammercrow_attk_area_loop = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 166,
+		from = 161
+	},
+
+	hammercrow_3_hammercrow_attk_area_out = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 194,
+		from = 167
+	},
+
+	hammercrow_3_hammercrow_stun_torre = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 281,
+		from = 195
+	},
+
+	hammercrow_3_hammercrow_death = {
+		prefix = "hammercrow_3_hammercrow",
+		to = 356,
+		from = 282
+	},
+	crow_alchemist_hit_run = {
+		prefix = "crow_alchemist_hit",
+		to = 9,
+		from = 1
+	},
+	crow_alchemist_nube_fx_loop = {
+		prefix = "crow_alchemist_nube_fx",
+		to = 42,
+		from = 1
+	},
+	crow_alchemist_modifier_poison_run = {
+		prefix = "crow_alchemist_modifier_poison",
+		to = 14,
+		from = 1
+	},
+	crow_alchemist_bomb_smoke_run = {
+		prefix = "crow_alchemist_bomb_smoke",
+		to = 1,
+		from = 1
+	},
+	crow_alchemist_bomb_smoke_explosion = {
+		prefix = "crow_alchemist_bomb_smoke_explosion",
+		to = 22,
+		from = 1
+	},
+	crow_alchemist_bomb_smoke_trail = {
+		prefix = "crow_alchemist_bomb_smoke_trail",
+		to = 22,
+		from = 1
+	},
+	crow_alchemist_bullet_poison_run = {
+		prefix = "crow_alchemist_bullet_poison",
+		to = 1,
+		from = 1
+	},
+	crow_alchemist_hit_poison_run = {
+		prefix = "crow_alchemist_hit_poison",
+		to = 18,
+		from = 1
+	},
+	crow_alchemist_hit_poison_floor_run = {
+		prefix = "crow_alchemist_hit_poison_floor",
+		to = 18,
+		from = 1
+	},
+	crow_alchemist_creep_idle = {
+		prefix = "crow_alchemist_creep",
+		to = 1,
+		from = 1
+	},
+	crow_alchemist_creep_melee = {
+		prefix = "crow_alchemist_creep",
+		to = 42,
+		from = 2
+	},
+	crow_alchemist_creep_ranged = {
+		prefix = "crow_alchemist_creep",
+		to = 86,
+		from = 43
+	},
+	crow_alchemist_creep_ranged_buff_aliados = {
+		prefix = "crow_alchemist_creep",
+		to = 144,
+		from = 87
+	},
+	crow_alchemist_creep_death = {
+		prefix = "crow_alchemist_creep",
+		to = 179,
+		from = 145
+	},
+	crow_alchemist_creep_walk = {
+		prefix = "crow_alchemist_creep",
+		to = 199,
+		from = 180
+	},
+	crow_alchemist_creep_walk_down = {
+		prefix = "crow_alchemist_creep",
+		to = 219,
+		from = 200
+	},
+	crow_alchemist_creep_walk_up = {
+		prefix = "crow_alchemist_creep",
+		to = 239,
+		from = 220
+	},
+	redshadow_decal_run = {
+		prefix = "redshadow_decal",
+		to = 21,
+		from = 1
+	},
+	redshadow_hit_run = {
+		prefix = "redshadow_hit",
+		to = 7,
+		from = 1
+	},
+	redshadow_explosion_humo_run = {
+		prefix = "redshadow_explosion_humo",
+		to = 15,
+		from = 1
+	},
+	redshadow_crows_teleport_crows_in = {
+		prefix = "redshadow_crows",
+		to = 11,
+		from = 1
+	},
+	redshadow_crows_teleport_crows_loop = {
+		prefix = "redshadow_crows",
+		to = 38,
+		from = 12
+	},
+	redshadow_crows_teleport_crows_out_area_attk = {
+		prefix = "redshadow_crows",
+		to = 54,
+		from = 39
+	},
+	redshadow_creep_idle = {
+		prefix = "redshadow_creep",
+		to = 1,
+		from = 1
+	},
+	redshadow_creep_melee = {
+		prefix = "redshadow_creep",
+		to = 39,
+		from = 2
+	},
+	redshadow_creep_walk = {
+		prefix = "redshadow_creep",
+		to = 47,
+		from = 40
+	},
+	redshadow_creep_walk_down = {
+		prefix = "redshadow_creep",
+		to = 59,
+		from = 48
+	},
+	redshadow_creep_walk_up = {
+		prefix = "redshadow_creep",
+		to = 72,
+		from = 60
+	},
+	redshadow_creep_teleport_creep_in = {
+		prefix = "redshadow_creep",
+		to = 100,
+		from = 73
+	},
+	redshadow_creep_teleport_creep_out_area_attk = {
+		prefix = "redshadow_creep",
+		to = 130,
+		from = 101
+	},
+	redshadow_creep_death = {
+		prefix = "redshadow_creep",
+		to = 193,
+		from = 131
+	},
+	celtic_tower_hunter_lvl1_idle = {
+		prefix = "celtic_tower_hunter_lvl1",
+		to = 1,
+		from = 1
+	},
+	celtic_tower_hunter_lvl1_attack = {
+		prefix = "celtic_tower_hunter_lvl1",
+		to = 23,
+		from = 2
+	},
+	celtic_tower_hunter_lvl1_death = {
+		prefix = "celtic_tower_hunter_lvl1",
+		to = 47,
+		from = 24
+	},
+	celtic_tower_hunter_lvl1_running = {
+		prefix = "celtic_tower_hunter_lvl1",
+		to = 67,
+		from = 48
+	},
+	celtic_tower_hunter_lvl2_idle = {
+		prefix = "celtic_tower_hunter_lvl2",
+		to = 1,
+		from = 1
+	},
+	celtic_tower_hunter_lvl2_attack = {
+		prefix = "celtic_tower_hunter_lvl2",
+		to = 29,
+		from = 2
+	},
+	celtic_tower_hunter_lvl2_ranged = {
+		prefix = "celtic_tower_hunter_lvl2",
+		to = 70,
+		from = 30
+	},
+	celtic_tower_hunter_lvl2_death = {
+		prefix = "celtic_tower_hunter_lvl2",
+		to = 94,
+		from = 71
+	},
+	celtic_tower_hunter_lvl2_running = {
+		prefix = "celtic_tower_hunter_lvl2",
+		to = 114,
+		from = 95
+	},
+	celtic_tower_door_open = {
+		prefix = "celtic_tower_door",
+		to = 12,
+		from = 1
+	},
+	celtic_tower_door_idle = {
+		prefix = "celtic_tower_door",
+		to = 13,
+		from = 13
+	},
+	celtic_tower_door_close = {
+		prefix = "celtic_tower_door",
+		to = 26,
+		from = 14
+	},
+	celtic_tower_owl_shadow = {
+		prefix = "celtic_tower_owl_shadow",
+		to = 1,
+		from = 1
+	},
+	celtic_tower_projectile_run = {
+		prefix = "celtic_tower_projectile",
+		to = 6,
+		from = 1
+	},
+	celtic_tower_projectile_hit_run = {
+		prefix = "celtic_tower_projectile_hit",
+		to = 6,
+		from = 1
+	},
+	celtic_tower_projectile_hit_floor_run = {
+		prefix = "celtic_tower_projectile_hit_floor",
+		to = 6,
+		from = 1
+	},
+	celtic_tower_projectile_hit_floor_idle = {
+		prefix = "celtic_tower_projectile_hit_floor",
+		to = 7,
+		from = 7
+	},
+	celtic_tower_projectile_hit_floor_out = {
+		prefix = "celtic_tower_projectile_hit_floor",
+		to = 25,
+		from = 8
+	},
+	celtic_tower_owl_spawn = {
+		prefix = "celtic_tower_owl",
+		to = 20,
+		from = 1
+	},
+	celtic_tower_owl_idle = {
+		prefix = "celtic_tower_owl",
+		to = 40,
+		from = 21
+	},
+	celtic_tower_owl_attack = {
+		prefix = "celtic_tower_owl",
+		to = 62,
+		from = 41
+	},
+	redshadow_crows_teleport_crows_walk = {
+		prefix = "redshadow_crows",
+		to = 38,
+		from = 12
+	},
+	redshadow_crows_teleport_crows_walk_up = {
+		prefix = "redshadow_crows",
+		to = 38,
+		from = 12
+	},
+	redshadow_crows_teleport_crows_walk_down = {
+		prefix = "redshadow_crows",
+		to = 38,
+		from = 12
+	},
+	redshadow_crows_teleport_crows_idle = {
+		prefix = "redshadow_crows",
+		to = 38,
+		from = 12
+	},
+	redshadow_crows_teleport_crows_melee = {
+		prefix = "redshadow_crows",
+		to = 38,
+		from = 12
+	},
+	redshadow_crows_teleport_crows_death = {
+		prefix = "redshadow_crows",
+		to = 38,
+		from = 12
 	}
 }

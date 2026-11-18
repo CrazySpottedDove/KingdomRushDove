@@ -187,5 +187,94 @@ return {
 	enemy_sniper = {
 		icon = "kr2_alert_creep_notxt_0050",
 		layout = N_ENEMY
+	},
+	TOWER_DWAARP = {
+		prefixes = {"TOWER_DWAARP", "TOWER_BARRACK_PIRATES"},
+		always = true,
+		subs = {"TOWER_ENGINEERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
+		images = {"kr2_encyclopedia_towers_0004", "kr2_encyclopedia_towers_0010"},
+		layout = N_TOWER_2
+	},
+
+	TOWER_ARCHMAGE = {
+		prefix = "TOWER_ARCHMAGE",
+		always = true,
+		sub = "TOWER_MAGES_SUBTITLE",
+		image = "kr2_encyclopedia_towers_0003",
+		layout = N_TOWER
+	},
+
+	TOWER_TEMPLARS = {
+		prefixes = {"TOWER_TEMPLAR", "TOWER_BARRACK_AMAZONAS"},
+		always = true,
+		subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
+		images = {"kr2_encyclopedia_towers_0006", "kr2_encyclopedia_towers_0011"},
+		layout = N_TOWER_2
+	},
+
+	TOWER_TOTEM = {
+		prefix = "TOWER_TOTEM",
+		always = true,
+		sub = "TOWER_ARCHERS_SUBTITLE",
+		image = "kr2_encyclopedia_towers_0005",
+		layout = N_TOWER
+	},
+
+	TOWER_ARCHER_DWARF = {
+		prefixes = {"TOWER_BARRACK_DWARF", "TOWER_ARCHER_DWARF"},
+		always = true,
+		subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_ARCHERS_SUBTITLE"},
+		images = {"kr2_encyclopedia_towers_0012", "kr2_encyclopedia_towers_0013"},
+		layout = N_TOWER_2
+	},
+
+	TOWER_PIRATE_WATCHTOWER = {
+		prefix = "TOWER_PIRATE_WATCHTOWER",
+		always = true,
+		sub = "TOWER_ARCHERS_SUBTITLE",
+		image = "kr2_encyclopedia_towers_0014",
+		layout = N_TOWER
+	},
+
+	TOWER_FRANKENSTEIN = {
+		prefix = "TOWER_FRANKENSTEIN",
+		always = true,
+		sub = "TOWER_ENGINEERS_SUBTITLE",
+		image = "kr2_encyclopedia_towers_0015",
+		layout = N_TOWER
+	},
+
+	TOWER_NECROMANCER = {
+		prefix = "TOWER_NECROMANCER",
+		always = true,
+		sub = "TOWER_MAGES_SUBTITLE",
+		image = "kr2_encyclopedia_towers_0007",
+		layout = N_TOWER
+	},
+
+	TOWER_MECH = {
+		prefix = "TOWER_MECH",
+		always = true,
+		sub = "TOWER_ENGINEERS_SUBTITLE",
+		image = "kr2_encyclopedia_towers_0008",
+		layout = N_TOWER
+	},
+
+	TOWER_ASSASINS_CROSSBOW = {
+		always = true,
+		layout = N_TOWER_2,
+		images = {"kr2_encyclopedia_towers_0002", "kr2_encyclopedia_towers_0001"},
+		prefixes = {"TOWER_ASSASSIN", "TOWER_CROSSBOW"},
+		subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_ARCHERS_SUBTITLE"},
+		next = "TOWER_BARRACK_MERCENARIES"
+	},
+
+	TOWER_BARRACK_MERCENARIES = {
+		prefix = "TOWER_BARRACK_MERCENARIES",
+		always = true,
+		sub = "TOWER_BARRACKS_SUBTITLE",
+		image = "kr2_encyclopedia_towers_0009",
+		layout = N_TOWER
 	}
+
 }

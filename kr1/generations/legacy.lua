@@ -31,7 +31,7 @@ legacy.ranges = {{
 }, {
 	gen_id = "kr6",
 	from = 201,
-	to = 218,
+	to = 220,
 	local_from = 1
 }}
 
