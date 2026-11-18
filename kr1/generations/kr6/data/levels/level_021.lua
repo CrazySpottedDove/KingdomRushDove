@@ -725,10 +725,6 @@ while not controller._wave6_open do
 coroutine.yield()
 end
 load_grid(store,"level_021_fase_3")
-local nw=store.next_wave_group_ready
-if nw then
-signal.emit("next-wave-ready",nw)
-end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end

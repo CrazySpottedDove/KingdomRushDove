@@ -14,7 +14,19 @@ local Registry = require("registry")
 require("lib.klua.table")
 
 local SPELLS = Registry.new({
-	module_names = {"kr1.spells.royal_edict", "kr1.spells.aspect_of_sol", "kr1.spells.musketeers", "kr1.spells.wintersongs_wrath", "kr1.spells.rain_of_fire", "kr1.spells.teleportation_sigil", "kr1.spells.thunder_zapper", "kr1.spells.reinforcements_kr6", "kr1.spells.soaring_shop"},
+	module_names = {
+		"kr1.spells.royal_edict",
+		"kr1.spells.regeneration_circle",
+		"kr1.spells.sheepmorph",
+		"kr1.spells.aspect_of_sol",
+		"kr1.spells.musketeers",
+		"kr1.spells.wintersongs_wrath",
+		"kr1.spells.rain_of_fire",
+		"kr1.spells.teleportation_sigil",
+		"kr1.spells.thunder_zapper",
+		"kr1.spells.reinforcements_kr6",
+		"kr1.spells.soaring_shop"
+	},
 	lazy = true
 })
 
