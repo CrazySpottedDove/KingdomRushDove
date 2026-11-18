@@ -2,6 +2,7 @@ local tpl = require("data.tower_menus_data_templates")
 local scripts = require("kr1.data.tower_menus_data_scripts")
 local M = scripts.merge
 local i18n = require("i18n")
+
 return {
 	holder = {{M(tpl.upgrade, {
 		action_arg = "tower_build_archer",
@@ -4917,7 +4918,6 @@ return {
 			tt_desc = _("TOWER_FORGER_SKILL_C_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
-
 	sentry = {{M(tpl.change_mode, {
 		image = "kr6_quickmenu_action_icons_0012",
 		image_mode0 = "kr6_quickmenu_action_icons_0012",
@@ -4976,5 +4976,73 @@ return {
 			tt_title = _("TOWER_SENTRY_SKILL_C_NAME_3"),
 			tt_desc = _("TOWER_SENTRY_SKILL_C_DESCRIPTION_3")
 		}}
-	}), tpl.sell}}
+	}), tpl.sell}},
+	barracks_stage_19 = {{M(tpl.upgrade_power, {
+		action_arg = "aoe",
+		halo = "glow_ico_special",
+		image = "kr6_quickmenu_special_icons_hunteroutpost_0003",
+		check = "main_icons_0019",
+		place = 6,
+		sounds = {"Stage19SirNoytBuyAreaDmg"},
+		tt_phrase = _("SPECIAL_KNIGHT_STAGE_19_AREA_NOTE"),
+		tt_list = {{
+			tt_title = _("SPECIAL_KNIGHT_STAGE_19_AREA_NAME"),
+			tt_desc = _("SPECIAL_KNIGHT_STAGE_19_AREA_1_DESCRIPTION")
+		}, {
+			tt_title = _("SPECIAL_KNIGHT_STAGE_19_AREA_NAME"),
+			tt_desc = _("SPECIAL_KNIGHT_STAGE_19_AREA_2_DESCRIPTION")
+		}, {
+			tt_title = _("SPECIAL_KNIGHT_STAGE_19_AREA_NAME"),
+			tt_desc = _("SPECIAL_KNIGHT_STAGE_19_AREA_3_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "ricochet",
+		halo = "glow_ico_special",
+		image = "kr6_quickmenu_special_icons_hunteroutpost_0004",
+		check = "main_icons_0019",
+		place = 7,
+		sounds = {"Stage19SirNoytBuyThrowShield"},
+		tt_phrase = _("SPECIAL_KNIGHT_STAGE_19_RICOCHET_NOTE"),
+		tt_list = {{
+			tt_title = _("SPECIAL_KNIGHT_STAGE_19_RICOCHET_NAME"),
+			tt_desc = _("SPECIAL_KNIGHT_STAGE_19_RICOCHET_1_DESCRIPTION")
+		}, {
+			tt_title = _("SPECIAL_KNIGHT_STAGE_19_RICOCHET_NAME"),
+			tt_desc = _("SPECIAL_KNIGHT_STAGE_19_RICOCHET_2_DESCRIPTION")
+		}, {
+			tt_title = _("SPECIAL_KNIGHT_STAGE_19_RICOCHET_NAME"),
+			tt_desc = _("SPECIAL_KNIGHT_STAGE_19_RICOCHET_3_DESCRIPTION")
+		}}
+	}), tpl.rally}},
+	update_1_hunter_outpost = {{M(tpl.upgrade_power, {
+		action_arg = "owls",
+		halo = "glow_ico_special",
+		image = "kr6_quickmenu_special_icons_hunteroutpost_0002",
+		check = "main_icons_0019",
+		place = 6,
+		sounds = {"Stage20HuntersOutpostBuyOwl"},
+		tt_phrase = _("SPECIAL_CELTIC_OWL_NOTE"),
+		tt_list = {{
+			tt_title = _("SPECIAL_CELTIC_OWL_NAME"),
+			tt_desc = _("SPECIAL_CELTIC_OWL_1_DESCRIPTION")
+		}, {
+			tt_title = _("SPECIAL_CELTIC_OWL_NAME"),
+			tt_desc = _("SPECIAL_CELTIC_OWL_2_DESCRIPTION")
+		}, {
+			tt_title = _("SPECIAL_CELTIC_OWL_NAME"),
+			tt_desc = _("SPECIAL_CELTIC_OWL_3_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "ranged",
+		halo = "glow_ico_special",
+		image = "kr6_quickmenu_special_icons_hunteroutpost_0001",
+		check = "main_icons_0019",
+		place = 7,
+		sounds = {"Stage20HuntersOutpostBuyAxes"},
+		tt_phrase = _("SPECIAL_CELTIC_MAN_NOTE"),
+		tt_list = {{
+			tt_title = _("SPECIAL_CELTIC_MAN_NAME"),
+			tt_desc = _("SPECIAL_CELTIC_MAN_DESCRIPTION")
+		}}
+	}), tpl.rally}}
 }

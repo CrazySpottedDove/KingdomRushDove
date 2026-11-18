@@ -1,0 +1,269 @@
+#	COMANDOS					1 - bosque arriba					2 -  bosque abajo arriba					3 - bosque abajo abajo					4 - Abajo 					5 - senderito
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3
+#	level properties
+	description	NH Rodri
+	lives	20
+	gold	990
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	4254
+#	stage gold curve
+#	WAVE 2
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter
+#	cant.					0	0	30	0		0	0	0
+#	gold	380				0	0	300	0		0	0	0
+	wave		1		-1
+					0
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0
+					2																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+	event	bush	5	2	6	4
+					3	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+					0.6	shadow_blades
+	event	bush	5	2	5	4
+					1																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+					0.6																shadow_blades
+#	33.2
+#	WAVE 5
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter			grizzly	hammercrow	trickster
+#	cant.					0	6	0	8		19	0	2			0	0	0
+#	gold	516				0	48	0	120		38	0	160			0	0	0
+	wave		2		22
+					0																		headhunter
+	event	bush	5	2	3	5
+	event	bush	3	1	5	5
+					0	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow
+					0	shadow_archer_kr6
+					1	shadow_archer_kr6
+					1	shadow_archer_kr6
+					1	shadow_archer_kr6
+					5	crow																headhunter				blackguard
+					0.6	crow
+					0.6	crow																				blackguard
+					0.6	crow
+					0.6	crow
+					3	shadow_archer_kr6																				blackguard
+					1	shadow_archer_kr6
+					1	shadow_archer_kr6
+					1	shadow_archer_kr6																				blackguard
+	event	bush	3	1	6	5
+					0.6	crow
+					0.6	crow
+					0.6	crow																				blackguard
+					0.6	crow
+					3	crow																				blackguard
+					0.6	crow
+					0.6	crow
+					0.6	crow
+					0.6	crow
+
+
+
+
+
+
+
+
+
+
+#	40.6
+
+#	WAVE 6
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter			grizzly	hammercrow	trickster
+#	cant.					0	0	14	0		0	0	2			0	0	9
+#	gold	510				0	0	140	0		0	0	160			0	0	90
+	wave		3		20
+					1								trickster
+					2									trickster
+					1							trickster
+					1								trickster
+
+
+	event	bush	5	2	6	3
+					3																	headhunter
+					3																			headhunter
+					3								trickster
+	event	bush	4	4	0	3
+					0.6				shadow_blades					trickster
+					1		shadow_blades
+					1				shadow_blades
+					4								trickster
+					0.6		shadow_blades		shadow_blades					trickster
+					1		shadow_blades					trickster
+					0.6				shadow_blades
+					0.6		shadow_blades
+	event	bush	2	1	0.2	3
+	event	bush	4	4	1	3
+
+
+					10		shadow_blades
+					0.6		shadow_blades
+					0.6			shadow_blades
+					0.6				shadow_blades
+					0.6				shadow_blades
+					0.6			shadow_blades
+
+
+
+
+
+
+
+
+
+#	43.6
+
+
+
+#	WAVE 10
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter			grizzly	hammercrow	trickster
+#	cant.					0	0	0	13		0	0	3			0	1	4
+#	gold	545				0	0	0	195		0	0	240			0	70	40
+	wave		4		26
+					1																		hammercrow
+					4																	shadow_archer_kr6
+					2	trickster																		shadow_archer_kr6
+					1	trickster
+					1.5	trickster																shadow_archer_kr6
+					1.5	trickster
+					8																	shadow_archer_kr6
+					1.5														headhunter					shadow_archer_kr6
+					1.5												headhunter					shadow_archer_kr6
+					4								headhunter
+					7							shadow_archer_kr6
+					1									shadow_archer_kr6
+					1							shadow_archer_kr6
+					1									shadow_archer_kr6
+					2							shadow_archer_kr6
+					1									shadow_archer_kr6
+					1							shadow_archer_kr6
+
+
+
+
+
+#	40
+
+
+
+
+
+
+
+#	WAVE 12
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter			grizzly	hammercrow	trickster
+#	cant.					0	0	0	15		0	0	4			0	1	0
+#	gold	615				0	0	0	225		0	0	320			0	70	0
+	wave		5		27
+					0								hammercrow
+					2																	headhunter
+					1.5																			headhunter
+
+					2							shadow_archer_kr6
+					1.2									shadow_archer_kr6
+					1.2							shadow_archer_kr6
+					1.2									shadow_archer_kr6
+					1.2							shadow_archer_kr6
+
+					3																shadow_archer_kr6
+					1.5				headhunter
+					3		headhunter														shadow_archer_kr6
+					8						shadow_archer_kr6										shadow_archer_kr6
+					2						shadow_archer_kr6
+					1.2						shadow_archer_kr6										shadow_archer_kr6
+					2						shadow_archer_kr6
+					1.2						shadow_archer_kr6
+					2						shadow_archer_kr6
+
+
+
+
+
+
+
+#	34.2
+
+
+
+#	WAVE 15
+#	enemies					bandit	blackguard	shadow_blades	shadow_archer		crow	crowcaller	headhunter			grizzly	hammercrow	trickster
+#	cant.					0	16	0	8		0	0	0			2	2	9
+#	gold	788				0	128	0	120		0	0	0			60	140	90
+	wave		6		30
+					0			hammercrow															hammercrow
+					2							blackguard
+					1														blackguard
+					1							blackguard
+					1														blackguard
+					1							blackguard
+					1														blackguard
+					0							blackguard
+
+					5							blackguard
+	event	bush	5	2	0	5
+	event	bush	2	1	0.5	5
+					0.6														blackguard
+					1							blackguard
+					1	shadow_archer_kr6													blackguard
+					1	shadow_archer_kr6
+					1	shadow_archer_kr6
+					1	shadow_archer_kr6
+					8																					grizzly
+					2			trickster
+					2				trickster
+					2		trickster
+	event	bush	1	5	1.5	5
+					0.5																					grizzly
+					5		shadow_archer_kr6										trickster
+					1			shadow_archer_kr6											trickster
+					1				shadow_archer_kr6
+					0.5			shadow_archer_kr6										trickster				blackguard
+					1																			blackguard
+					1												trickster					blackguard
+					1														trickster				blackguard
+					1													trickster						blackguard
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	45.6

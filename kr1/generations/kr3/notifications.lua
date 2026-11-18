@@ -156,5 +156,85 @@ return {
 	enemy_shadow_champion = {
 		icon = "kr3_alert_creep_notxt_0040",
 		layout = N_ENEMY
+	},
+	TOWER_ARCHER_ARCANE = {
+		prefixes = {"TOWER_ARCANE", "TOWER_EWOK"},
+		always = true,
+		subs = {"TOWER_ARCHERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
+		images = {"kr3_encyclopedia_towers_0005", "kr3_encyclopedia_towers_0009"},
+		layout = N_TOWER_2
+	},
+
+	TOWER_BARRACK_BLADE = {
+		prefix = "TOWER_BLADE",
+		always = true,
+		sub = "TOWER_BARRACKS_SUBTITLE",
+		image = "kr3_encyclopedia_towers_0008",
+		layout = N_TOWER
+	},
+
+	TOWER_MAGE_WILD_MAGUS = {
+		prefix = "TOWER_WILD_MAGUS",
+		always = true,
+		sub = "TOWER_MAGES_SUBTITLE",
+		image = "kr3_encyclopedia_towers_0004",
+		layout = N_TOWER
+	},
+
+	TOWER_PIXIE = {
+		prefix = "TOWER_PIXIE",
+		always = true,
+		sub = "TOWER_MAGES_SUBTITLE",
+		image = "kr3_encyclopedia_towers_0011",
+		layout = N_TOWER
+	},
+
+	TOWER_ROCK_THROWER_STONE_DRUID = {
+		prefix = "TOWER_DRUID",
+		always = true,
+		sub = "TOWER_ENGINEERS_SUBTITLE",
+		image = "kr3_encyclopedia_towers_0001",
+		layout = N_TOWER
+	},
+
+	TOWER_MAGE_HIGH_ELVEN = {
+		prefixes = {"TOWER_HIGH_ELVEN", "TOWER_FAERIE_DRAGON"},
+		always = true,
+		subs = {"TOWER_MAGES_SUBTITLE", "TOWER_MAGES_SUBTITLE"},
+		images = {"kr3_encyclopedia_towers_0003", "kr3_encyclopedia_towers_0010"},
+		layout = N_TOWER_2
+	},
+
+	TOWER_ROCK_THROWER_ENTWOOD = {
+		prefix = "TOWER_ENTWOOD",
+		always = true,
+		sub = "TOWER_ENGINEERS_SUBTITLE",
+		image = "kr3_encyclopedia_towers_0002",
+		layout = N_TOWER
+	},
+
+	TOWER_ARCHER_SILVER = {
+		always = true,
+		layout = N_TOWER_2,
+		images = {"kr3_encyclopedia_towers_0006", "kr3_encyclopedia_towers_0007"},
+		prefixes = {"TOWER_SILVER", "TOWER_FOREST"},
+		subs = {"TOWER_ARCHERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"}
+	},
+
+	TOWER_BABY_ASHBITE = {
+		prefix = "TOWER_BABY_ASHBITE",
+		always = true,
+		sub = "TOWER_BARRACKS_SUBTITLE",
+		image = "kr3_encyclopedia_towers_0012",
+		layout = N_TOWER
+	},
+
+	TOWER_DROW = {
+		prefix = "TOWER_DROW",
+		always = true,
+		sub = "TOWER_BARRACKS_SUBTITLE",
+		image = "kr3_encyclopedia_towers_0013",
+		layout = N_TOWER
 	}
+
 }

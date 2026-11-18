@@ -12229,4 +12229,218 @@ tt = RT("fx_regson_heal", "fx")
 tt.render.sprites[1].name = "fx_regson_heal"
 tt.render.sprites[1].sort_y_offset = -1
 
+tt = RT("bullet_trickster", "bolt_enemy")
+tt.render.sprites[1].name = "creep_trickster_bullet"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].flip_x = true
+tt.bullet.align_with_trajectory = true
+tt.bullet.acceleration_factor = 0.12
+tt.bullet.min_speed = 240
+tt.bullet.max_speed = 360
+tt.bullet.hit_fx = "fx_trickster_bullet_hit"
+tt.bullet.use_unit_damage_factor = true
+tt.bullet.damage_min = 19
+tt.bullet.damage_max = 30
+tt.bullet.damage_type = DAMAGE_TRUE
+
+tt = RT("fx_trickster_smoke_bomb", "fx")
+tt.render.sprites[1].name = "creep_trickster_smoke_bomb_run"
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt = RT("fx_trickster_bullet_hit", "fx")
+tt.render.sprites[1].name = "creep_trickster_projectile_hit_run"
+
+tt = RT("ps_trickster_trail", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.name = "creep_trickster_smoke_trail"
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 30
+tt.particle_system.z = Z_OBJECTS
+tt.particle_system.emit_area_spread = v(0, 5)
+tt.particle_system.sort_y_offset = -10
+tt.particle_system.emit_offset = v(0, 10)
+
+tt = RT("fx_hammercrow_hit", "fx")
+tt.render.sprites[1].name = "hammercrow_3_hit_run"
+
+tt = RT("fx_hammercrow_hit_stun_tower", "fx")
+tt.render.sprites[1].name = "hammercrow_3_rocas_hit_towerstun_run"
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("mod_hammercrow_tower_block_mark", "modifier")
+AC(tt, "mark_flags")
+tt.mark_flags.vis_bans = bor(F_RANGED, F_BLOCK, F_STUN)
+tt.modifier.duration = fts(30)
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
+tt.main_script.update = scripts.mod_mark_flags.update
+
+tt = RT("mod_hammercrow_tower_block", "mod_hide_tower")
+AC(tt, "render")
+tt.main_script.update = scripts.mod_hammercrow_tower_block.update
+tt.main_script.remove = scripts.mod_hammercrow_tower_block.remove
+tt.modifier.duration = 6
+tt.modifier.vis_flags = F_CUSTOM
+tt.modifier.handle_stun = true
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].prefix = "hammercrow_3_tower_stun"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].offset.y = 5
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+
+tt = RT("bullet_crow_alchemist", "bomb")
+tt.render.sprites[1].name = "crow_alchemist_bullet_poison"
+tt.render.sprites[1].animated = false
+tt.main_script.insert = scripts.bullet_crow_alchemist.insert
+tt.main_script.update = scripts.enemy_bomb.update
+tt.bullet.hit_fx = "fx_bullet_crow_alchemist_hit"
+tt.bullet.flight_time = fts(25)
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = 15
+tt.bullet.damage_min = 5
+tt.bullet.damage_max = 7
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_radius = 70
+tt.bullet.damage_bans = F_ENEMY
+tt.bullet.hit_payload = "aura_crow_alchemist_dot"
+tt.sound_events.hit = "EnemyCrowAlchemistAcidImpact"
+
+tt = RT("bullet_crow_alchemist_miss", "bomb")
+tt.render.sprites[1].name = "crow_alchemist_bomb_smoke"
+tt.render.sprites[1].animated = false
+tt.bullet.particles_name = "ps_bullet_crow_alchemist_smoke"
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.enemy_bomb.update
+tt.bullet.hit_fx = "fx_bullet_crow_alchemist_hit_2"
+tt.bullet.flight_time = fts(25)
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = 15
+tt.bullet.damage_min = 5
+tt.bullet.damage_max = 7
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_radius = 70
+tt.bullet.damage_bans = F_ENEMY
+tt.bullet.hit_payload = "aura_crow_alchemist_miss"
+tt.sound_events.hit = "EnemyCrowAlchemistSmokeImpact"
+
+tt = RT("ps_bullet_crow_alchemist_smoke", "particle_system")
+tt.particle_system.name = "crow_alchemist_bomb_smoke_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(22), fts(22)}
+tt.particle_system.emission_rate = 30
+
+tt = RT("fx_crow_alchemist_hit", "fx")
+tt.render.sprites[1].name = "crow_alchemist_hit_run"
+
+tt = RT("fx_bullet_crow_alchemist_hit", "fx")
+tt.render.sprites[1].name = "crow_alchemist_hit_poison_run"
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "crow_alchemist_hit_poison_floor_run"
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[2].animated = true
+
+tt = RT("fx_bullet_crow_alchemist_hit_2", "fx")
+tt.render.sprites[1].name = "crow_alchemist_bomb_smoke_explosion"
+
+tt = RT("fx_red_shadow_red_crows_explosion", "fx")
+tt.render.sprites[1].name = "redshadow_explosion_humo_run"
+
+tt = RT("fx_red_shadow_red_hit", "fx")
+tt.render.sprites[1].name = "redshadow_hit_run"
+
+tt = RT("decal_crow_alchemist_miss", "decal_tween")
+tt.range_factor = 1
+tt.render.sprites[1].prefix = "crow_alchemist_nube_fx"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].offset = v(0, -10)
+tt.render.sprites[1].sort_y_offset = -15
+tt.render.sprites[1].fps = 30
+tt.render.sprites[1].color = {255, 125, 125, 255}
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].loop = false
+tt.tween.remove = false
+
+tt = RT("decal_red_shadow_red_crows", "decal_tween")
+tt.render.sprites[1].name = "redshadow_decal_0005"
+tt.render.sprites[1].animated = false
+tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
+
+tt = RT("aura_crow_alchemist_dot", "aura")
+tt.aura.mod = "mod_crow_alchemist_dot"
+tt.aura.radius = 80
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.cycle_time = 0.2
+tt.aura.duration = 0.3
+tt.aura.track_source = false
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.main_script.remove = scripts.aura_apply_mod.remove
+
+tt = RT("aura_crow_alchemist_miss", "aura")
+tt.aura.mod = "mod_crow_alchemist_miss"
+tt.aura.radius = 225
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.cycle_time = 0.2
+tt.aura.duration = 10
+tt.aura.track_source = false
+tt.main_script.insert = scripts.aura_crow_alchemist_miss.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.main_script.remove = scripts.aura_crow_alchemist_miss.remove
+tt.decal_t = "decal_crow_alchemist_miss"
+
+tt = RT("mod_crow_alchemist_dot", "modifier")
+AC(tt, "dps", "render", "tween")
+tt.modifier.duration = 5
+tt.modifier.vis_flags = bor(F_MOD, F_POISON)
+tt.render.sprites[1].prefix = "crow_alchemist_modifier_poison"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.6)
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -1
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_min = 3
+tt.dps.damage_max = 3
+tt.dps.damage_every = 0.25
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.tween.props[1].keys = {{5 - fts(10), 255}, {5, 0}}
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 1
+
+tt = RT("mod_crow_alchemist_dot_melee", "mod_crow_alchemist_dot")
+tt.modifier.duration = 3
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_min = 3
+tt.dps.damage_max = 3
+tt.dps.damage_every = 0.25
+tt.tween.props[1].keys = {{3 - fts(10), 255}, {3, 0}}
+
+tt = RT("mod_crow_alchemist_miss", "modifier")
+AC(tt, "render")
+tt.modifier.duration = 0.25
+tt.main_script.insert = scripts.mod_crow_alchemist_miss.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.main_script.remove = scripts.mod_crow_alchemist_miss.remove
+tt.render.sprites[1].prefix = "crow_alchemist_modifier_poison"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].alpha = 0
+tt.dodge_chance = 1
+
+tt = RT("mod_red_shadow_crow_stun", "mod_stun")
+tt.modifier.duration = 1
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_ENEMY)
+
 return scripts

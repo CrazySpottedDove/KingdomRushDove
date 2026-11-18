@@ -215,5 +215,53 @@ return {
 	enemy_lycan = {
 		icon = "alert_creep_notxt_0056",
 		layout = N_ENEMY
+	},
+	TOWER_MUSKETEER = {
+		prefix = "TOWER_MUSKETEER",
+		always = true,
+		sub = "TOWER_ARCHERS_SUBTITLE",
+		image = "encyclopedia_towers_0017",
+		layout = N_TOWER
+	},
+
+	TOWER_RANGER = {
+		prefixes = {"TOWER_RANGER", "TOWER_ELF"},
+		always = true,
+		subs = {"TOWER_ARCHERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
+		images = {"encyclopedia_towers_0013", "encyclopedia_towers_0021"},
+		layout = N_TOWER_2
+	},
+
+	TOWER_SORCERER = {
+		prefixes = {"TOWER_SORCERER", "TOWER_SUNRAY"},
+		always = true,
+		subs = {"TOWER_MAGES_SUBTITLE", "TOWER_MAGES_SUBTITLE"},
+		images = {"encyclopedia_towers_0019", "encyclopedia_towers_0022"},
+		layout = N_TOWER_2
+	},
+
+	TOWER_TESLA = {
+		prefix = "TOWER_TESLA",
+		always = true,
+		sub = "TOWER_ENGINEERS_SUBTITLE",
+		image = "encyclopedia_towers_0020",
+		layout = N_TOWER
+	},
+
+	TOWER_BARBARIAN_BGF = {
+		always = true,
+		layout = N_TOWER_2,
+		images = {"encyclopedia_towers_0018", "encyclopedia_towers_0016"},
+		prefixes = {"TOWER_BARBARIAN", "TOWER_BFG"},
+		subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_ENGINEERS_SUBTITLE"}
+	},
+
+	TOWER_PALADIN = {
+		always = true,
+		layout = N_TOWER_2,
+		images = {"encyclopedia_towers_0015", "encyclopedia_towers_0014"},
+		prefixes = {"TOWER_ARCANE_WIZARD", "TOWER_PALADIN"},
+		subs = {"TOWER_MAGES_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"}
 	}
+
 }

@@ -1,0 +1,243 @@
+#	COMANDOS					1 - arriba-medio-arriba					2 -  arriba - medio - abajo					3 - arriba - derecha - arriba					4 - Arriba - derecha - abajo					5 - abajo, derecha - abajo - abajo					6 - abajo - medio - arriba					7 - abajo - abajo
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3
+#	level properties
+	description	Iron Rodri
+	lives	1
+	gold	1100
+	gems	175
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold
+#	stage total gold	4767
+#	stage gold curve
+#	WAVE 1
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					30	13	0	0		0	0	0	0		0	10	0	0
+#	gold	354				150	104	0	0		0	0	0	0		0	100	0	0
+	wave		1		-1
+					1			trickster
+					2		trickster
+					2				trickster
+					1																						bandit_kr6		bandit_kr6
+					0.7																							bandit_kr6	bandit_kr6
+					0.7																							bandit_kr6
+					0.7																						bandit_kr6		bandit_kr6
+					0.7																							bandit_kr6
+					0.7																						bandit_kr6	bandit_kr6
+					0.7																								bandit_kr6
+					0.7																						bandit_kr6	bandit_kr6
+					0.7																						bandit_kr6		bandit_kr6
+					0.7																							bandit_kr6
+					0.7																						bandit_kr6		bandit_kr6
+					3			trickster
+					2				trickster
+					2		trickster
+					5																		blackguard					bandit_kr6
+					0.8																	blackguard		blackguard			bandit_kr6
+					0.8																		blackguard					bandit_kr6
+					0.8																			blackguard				bandit_kr6
+					0.8																	blackguard	blackguard						bandit_kr6
+					0.8																			blackguard			bandit_kr6		bandit_kr6
+					0.8																	blackguard					bandit_kr6		bandit_kr6
+					0.8																		blackguard	blackguard				bandit_kr6
+					0.8																	blackguard	blackguard				bandit_kr6		bandit_kr6
+					5			trickster
+					2		trickster		trickster
+					2			trickster
+
+#	Introducción ya desafiante, pero que indica masomenos donde tenemos que construir qué tipo de torre.
+Salida de arriba más single strong enemies, salida de abajo más swarmera.
+#	40.4
+
+#	WAVE 2
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	40	11		0	0	0	0		0	0	0	0
+#	gold	565				0	0	400	165		0	0	0	0		0	0	0	0
+#	wave		2
+					8.5														shadow_blades			shadow_blades
+					1														shadow_blades			shadow_blades
+					1														shadow_blades			shadow_blades
+					3														shadow_blades			shadow_blades
+					1														shadow_blades			shadow_blades
+					1														shadow_blades			shadow_blades
+					2																												shadow_archer_kr6
+					1																											shadow_archer_kr6
+					1																													shadow_archer_kr6
+					2														shadow_blades			shadow_blades
+					1														shadow_blades			shadow_blades											shadow_archer_kr6
+					1														shadow_blades			shadow_blades										shadow_archer_kr6
+					1														shadow_blades			shadow_blades												shadow_archer_kr6
+					1														shadow_blades			shadow_blades
+					3																											shadow_archer_kr6		shadow_archer_kr6
+					1																												shadow_archer_kr6
+					1																											shadow_archer_kr6		shadow_archer_kr6
+					3		shadow_blades																													shadow_blades
+					1				shadow_blades																											shadow_blades
+					1		shadow_blades																													shadow_blades
+					1				shadow_blades																											shadow_blades
+					1		shadow_blades
+					2				shadow_blades
+					1		shadow_blades																													shadow_blades
+					1				shadow_blades																											shadow_blades
+					1		shadow_blades																													shadow_blades
+					1				shadow_blades																											shadow_blades
+
+#	Segunda parte pagadora, que siga marcando donde construir qué.
+Perrito del Sniper es buena opcion
+#	43.5
+
+#	WAVE 3
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	16	0	0		15	2	3	0		0	0	3	1
+#	gold	608				0	128	0	0		30	80	240	0		0	0	90	40
+#	wave		3
+					3								headhunter
+					2							headhunter		headhunter
+					4		crowcaller
+					2				crowcaller
+					6																												grizzly
+					2																											grizzly		grizzly
+					6																	blackguard					crow
+					0.7																		blackguard						crow
+					0.7																			blackguard				crow
+					0.7																	blackguard							crow
+					0.7																		blackguard				crow
+					0.7																			blackguard				crow
+					0.7																		blackguard				crow
+					3																												crow_alchemist
+					5																	blackguard					crow
+					0.7																		blackguard					crow
+					0.7																			blackguard			crow
+					0.7																		blackguard						crow
+					0.7																	blackguard						crow
+					0.7																			blackguard					crow
+					0.7																		blackguard				crow
+					0.7																	blackguard		blackguard				crow
+
+
+
+
+
+
+
+
+
+
+#	Necesario el uso de los true damage de los buhos para lidiar con tantos voladores y armor.
+Tambien se fomenta el mortal wound y los chokes fuertes con Barbarians + Alchemist. Sniper en Max HP Toggle
+Comprar hachitas a rango en los Barbarians de arriba izquierda.
+#	42.1
+
+#	WAVE 4
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	10	5	4		0	2	2	0		1	0	0	3
+#	gold	620				0	80	50	60		0	80	160	0		70	0	0	120
+#	wave		4
+					15													hammercrow
+					3												shadow_archer_kr6		shadow_archer_kr6
+					1												shadow_archer_kr6		shadow_archer_kr6
+					3													crow_alchemist
+					5																											crowcaller
+					2																													crowcaller
+
+					5																						headhunter
+					1																								headhunter
+					3																							crow_alchemist
+					8	shadow_blades																															blackguard		blackguard
+					0.7	shadow_blades																															blackguard
+					0.8	shadow_blades																																	blackguard
+					0.7	shadow_blades																																	blackguard
+					0.8	shadow_blades																																crow_alchemist
+					0.8																																blackguard
+					0.7																																		blackguard
+					0.7																																blackguard
+					0.8																																blackguard		blackguard
+
+
+
+
+
+
+
+
+
+#	Intro Hammercrow. Alguna variación pero se respetan las mismas reglas. 
+Apretamos directo por p7 al final.
+#	52
+
+#	WAVE 5
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					16	0	15	0		0	0	0	2		1	8	0	0
+#	gold	580				80	0	150	0		0	0	0	200		70	80	0	0
+#	wave		5
+					25								red_shadow
+					5				shadow_blades								trickster																				bandit_kr6
+					1.5			shadow_blades											trickster																				bandit_kr6
+					1		shadow_blades											trickster																					bandit_kr6
+					1.25			shadow_blades											trickster																			bandit_kr6
+					1.25				shadow_blades																												bandit_kr6		bandit_kr6
+					3												trickster																				bandit_kr6
+					1.5													trickster																					bandit_kr6
+					1												trickster																					bandit_kr6
+					1.5														trickster																		bandit_kr6
+					12																												hammercrow
+					3																							red_shadow
+					6				shadow_blades			shadow_blades																											bandit_kr6
+					1				shadow_blades			shadow_blades																									bandit_kr6
+					1				shadow_blades			shadow_blades																										bandit_kr6
+					1				shadow_blades			shadow_blades																										bandit_kr6
+					1				shadow_blades			shadow_blades																									bandit_kr6		bandit_kr6
+
+
+
+
+
+
+
+#	Intro Red Shadows. Single target focus. Desafío interesante que requiero micro y gastar el oro que tenemos.
+Fomenta Brable Shot y Alchemists lvl 1. Por p7 pagan/relleno bandits.
+#	67
+
+#	WAVE 6
+#	enemies					bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly	crow_alchemist
+#	cant.					0	0	10	0		0	0	4	2		2	7	3	3
+#	gold	1040				0	0	100	0		0	0	320	200		140	70	90	120
+#	wave		6
+					20																		red_shadow
+					5								hammercrow
+					3							headhunter		headhunter
+					5								crow_alchemist
+					10													hammercrow
+					4												trickster		trickster
+					1.5														trickster
+					1												trickster
+					1.35														trickster
+					1.5												trickster		trickster
+					10																							red_shadow
+					2																													grizzly
+					3																												grizzly
+					2																											grizzly
+					5																												crow_alchemist
+					5																																		headhunter
+					1.5																																headhunter
+					3																																	crow_alchemist
+					10	shadow_blades																				shadow_blades
+					0.8	shadow_blades																				shadow_blades
+					0.8	shadow_blades																				shadow_blades
+					0.8	shadow_blades																				shadow_blades
+					0.8	shadow_blades																				shadow_blades
+
+
+
+
+
+
+
+
+
+
+#	Push final full yuyera.
+#	97.05
+
+#	TOTAL DURATION (min):	5.700833333
