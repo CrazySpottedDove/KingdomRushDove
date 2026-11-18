@@ -190,9 +190,9 @@ local function soldier_tower_update1_hunter_outpost_insert(this, store, script)
 end
 
 tt = E:register_t("soldier_tower_update1_hunter_outpost", "soldier_militia", true)
-
 AC(tt, "powers", "nav_grid", "ranged")
-
+tt.controable = true
+tt.controable_other = true
 tt.health.armor = 0
 tt.health.hp_max = 150
 tt.health.dead_lifetime = 12

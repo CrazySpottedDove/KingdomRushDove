@@ -304,6 +304,8 @@ function M.register_templates(E)
 		end
 
 		tt.reinforcement.fade = false
+		tt.controable = true
+		tt.controable_other = true
 		tt.circle_margin = 8
 		tt.health.hp_max = 200
 		tt.health.hp = 200
