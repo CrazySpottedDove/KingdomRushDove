@@ -49236,6 +49236,9 @@ function scripts.enemy_trickster.update(this, store, script)
 	simulation:queue_insert_entity(ps1)
 
 	local function should_invisible()
+		if not this.enemy.can_do_magic then
+			return false
+		end
 		if trigger_invisible or on_invisible then
 			return false
 		end
@@ -49254,7 +49257,6 @@ function scripts.enemy_trickster.update(this, store, script)
 
 		if nearby then
 			trigger_invisible = true
-			target = nearby
 		end
 
 		return trigger_invisible
@@ -49271,7 +49273,6 @@ function scripts.enemy_trickster.update(this, store, script)
 		U.unblock_all(store, this)
 
 		on_invisible = true
-		target = nil
 		this.ranged.attacks[1].disabled = true
 		this.melee.attacks[1].disabled = true
 
@@ -49298,7 +49299,7 @@ function scripts.enemy_trickster.update(this, store, script)
 	end
 
 	local function should_visible()
-		if not trigger_visible and on_invisible and store.tick_ts - ai.ts > ai.duration then
+		if not trigger_visible and on_invisible and (store.tick_ts - ai.ts > ai.duration or P:get_end_node(this.nav_path.pi) - this.nav_path.ni < safe_nodes_to_exit) then
 			trigger_visible = true
 
 			return true

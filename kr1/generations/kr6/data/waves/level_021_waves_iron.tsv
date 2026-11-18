@@ -12,7 +12,7 @@
 #	stage total gold	4253.386667
 #	stage gold curve
 #	WAVE 1																																																																													Bandit x14																														Headhunter x2
-Bandit x10					Bandit x16 S. Blades x8					Bandit x16 S. Blades x8
+	#	Bandit x10					Bandit x16 S. Blades x8					Bandit x16 S. Blades x8
 #	enemies							bandit_kr6	blackguard	shadow_blades	shadow_archer_kr6		crow	crowcaller	headhunter	red_shadow		hammercrow	trickster	grizzly
 #	cant.							40	0	8	0		0	0	2	0		0	0	0	0		0	0	0
 #	gold	440						200	0	80	0		0	0	160	0		0	0	0	0		0	0	0

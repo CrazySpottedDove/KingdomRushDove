@@ -49795,5 +49795,75 @@ return {
 		prefix = "stage_221_princess_captives",
 		to = 93,
 		from = 1
+	},
+	power_sheepmorph_spawn_in_fx_run = {
+		prefix = "power_sheepmorph_spawn_in_fx",
+		to = 14,
+		from = 1
+	},
+	power_sheepmorph_spread_curse_fx_run = {
+		prefix = "power_sheepmorph_spread_curse_fx",
+		to = 21,
+		from = 1
+	},
+	power_sheepmorph_click_no_creeps_run = {
+		prefix = "power_sheepmorph_click_no_creeps",
+		to = 36,
+		from = 1
+	},
+	power_sheepmorph_ninja_poison_loop = {
+		prefix = "power_sheepmorph_ninja_poison",
+		to = 40,
+		from = 1
+	},
+	power_sheepmorph_supersheep_bullet_loop = {
+		prefix = "power_sheepmorph_supersheep_bullet",
+		to = 6,
+		from = 1
+	},
+	power_sheepmorph_supersheep_trail_run = {
+		prefix = "power_sheepmorph_supersheep_trail",
+		to = 16,
+		from = 1
+	},
+	power_sheepmorph_supersheep_explosion_run = {
+		prefix = "power_sheepmorph_supersheep_explosion",
+		to = 20,
+		from = 1
+	},
+	power_sheepmorph_supersheep_decal_in = {
+		prefix = "power_sheepmorph_supersheep_decal",
+		to = 5,
+		from = 1
+	},
+	power_sheepmorph_supersheep_decal_out = {
+		prefix = "power_sheepmorph_supersheep_decal",
+		to = 18,
+		from = 6
+	},
+	power_sheepmorph_bomb_bullet_loop = {
+		prefix = "power_sheepmorph_bomb_bullet",
+		to = 6,
+		from = 1
+	},
+	power_sheepmorph_bomb_trail_run = {
+		prefix = "power_sheepmorph_bomb_trail",
+		to = 16,
+		from = 1
+	},
+	power_sheepmorph_bomb_explosion_run = {
+		prefix = "power_sheepmorph_bomb_explosion",
+		to = 21,
+		from = 1
+	},
+	power_sheepmorph_bomb_decal_in = {
+		prefix = "power_sheepmorph_bomb_decal",
+		to = 5,
+		from = 1
+	},
+	power_sheepmorph_bomb_decal_out = {
+		prefix = "power_sheepmorph_bomb_decal",
+		to = 18,
+		from = 6
 	}
 }
