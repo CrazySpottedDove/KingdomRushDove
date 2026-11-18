@@ -5172,6 +5172,7 @@ tt.render.sprites[2].prefix = "kingpin_carro_baseDef"
 tt.render.sprites[2].name = "walk"
 tt.render.sprites[2].exo = true
 tt.render.sprites[2].draw_order = DO_ENEMY_BIG - 1
+tt.render.sprites[2].sort_y_offset = 1
 tt.unit.hit_offset = v(0, 46)
 tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 33)
