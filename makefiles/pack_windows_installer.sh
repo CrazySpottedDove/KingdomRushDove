@@ -79,6 +79,9 @@ else
     cp -r ./love_env "$STAGE_DIR/$TOPDIR"
 fi
 
+# 声明 DPI 感知，避免高缩放显示器下系统位图放大导致画面模糊
+python3 scripts/patch_love_dpi.py "$STAGE_DIR/$TOPDIR/love.exe"
+
 DEST_DIR="$STAGE_DIR/$TOPDIR/KingdomRushDove"
 mkdir -p "$DEST_DIR"
 
