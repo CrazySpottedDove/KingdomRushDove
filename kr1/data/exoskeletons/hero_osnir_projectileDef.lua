@@ -1,0 +1,1 @@
+return {version=3,partScaleCompensation=1.40625,fps=30,parts={{'hero_osnir_projectile_asst_hunter_weapon_01',-1.5,-4}},attach_points={},animations={{name='idle',frames={{{1,1,0.500,0.05,0,0.999972,-0.999972,2.762611,0,0},{1,1,1,0.05,0,0.999998,-0.999998,2.980465,0,0},{1,1,1,0,0,1,-1,3.141593,0,0}}}}}}

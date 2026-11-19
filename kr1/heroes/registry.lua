@@ -103,7 +103,9 @@ HEROES.module_names = {
 	"heroes.hero_drakkan",
 	"heroes.hero_ignus_kr6",
 	"heroes.hero_oni_kr6",
-	"heroes.hero_illiana"
+	"heroes.hero_illiana",
+	"heroes.hero_osnir",
+	"heroes.hero_princess"
 }
 
 --- 资源字段统一为 require 路径数组；plugin_* 字段为映射
