@@ -204,6 +204,54 @@ function harness:tick(n)
 	return self:snapshot()
 end
 
+function harness:click_tower(args)
+	local util = require("dove_modules.test.util")
+	local autoplay = require("dove_modules.test.handlers.autoplay")
+	local active = util.require_game(self)
+
+	if not args.holder_id then
+		error("click_tower requires holder_id")
+	end
+
+	local tower = util.find_tower_by_holder(active.store, args.holder_id)
+
+	if not tower then
+		error("tower not found at holder: " .. tostring(args.holder_id))
+	end
+
+	local gui = active.game_gui
+
+	gui:deselect_entity()
+
+	for _ = 1, 120 do
+		if gui.towermenu.hidden then
+			break
+		end
+
+		self:step_once()
+	end
+
+	autoplay.click_entity(self, tower)
+
+	if gui.selected_entity ~= tower then
+		local selected = gui.selected_entity
+		local rect = tower.ui and tower.ui.click_rect
+
+		error(string.format("tower click did not select %s, selected %s, pos %s,%s, rect %s", tostring(tower.template_name), selected and (selected.template_name or tostring(selected.id)) or "nil", tostring(tower.pos.x), tostring(tower.pos.y), rect and string.format("%s,%s,%s,%s", rect.pos.x, rect.pos.y, rect.size.x, rect.size.y) or "nil"))
+	end
+
+	if gui.towermenu.hidden then
+		error("tower menu did not open: " .. tostring(tower.template_name))
+	end
+
+	return {
+		holder_id = args.holder_id,
+		template = tower.template_name,
+		level = tower.tower.level,
+		menu = true
+	}
+end
+
 function harness:respond(id, ok, payload)
 	local msg = {
 		type = "response",

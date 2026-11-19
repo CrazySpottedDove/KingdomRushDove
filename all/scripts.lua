@@ -1804,7 +1804,7 @@ scripts.tower_barrack = {}
 function scripts.tower_barrack.get_info(this)
 	local s = E:create_entity(this.barrack.soldier_type)
 
-	if this.powers then
+	if this.powers and s.powers then
 		for pn, p in pairs(this.powers) do
 			if s.powers[pn] then
 				s.powers[pn].level = p.level

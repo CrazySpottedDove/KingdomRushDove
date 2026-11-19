@@ -49865,5 +49865,181 @@ return {
 		prefix = "power_sheepmorph_bomb_decal",
 		to = 18,
 		from = 6
+	},
+
+	owl_area_attack_explosion_run = {
+		from = 1,
+		prefix = "tower_buho_owl_area_attack_explosion",
+		to = 25
+	},
+	tower_buho_owl_area_attack_decal_run = {
+		from = 1,
+		prefix = "tower_buho_owl_area_attack_decal",
+		to = 18
+	},
+	tower_buho_owl_area_attack_hit_run = {
+		from = 1,
+		prefix = "tower_buho_owl_area_attack_hit",
+		to = 7
+	},
+	tower_buho_owl_lvl4_attack = {
+		from = 17,
+		prefix = "tower_buho_owl_lvl4",
+		to = 48
+	},
+	tower_buho_owl_lvl4_idle = {
+		from = 1,
+		prefix = "tower_buho_owl_lvl4",
+		to = 16
+	},
+	tower_buho_owl_lvl4_long_shot = {
+		from = 133,
+		prefix = "tower_buho_owl_lvl4",
+		to = 192
+	},
+	tower_buho_owl_lvl4_screech = {
+		from = 88,
+		prefix = "tower_buho_owl_lvl4",
+		to = 132
+	},
+	tower_buho_owl_lvl4_tornado = {
+		from = 193,
+		prefix = "tower_buho_owl_lvl4",
+		to = 246
+	},
+	tower_buho_owl_lvl4_ultimate = {
+		from = 49,
+		prefix = "tower_buho_owl_lvl4",
+		to = 87
+	},
+	tower_buho_owl_spawn_vfx_run = {
+		from = 1,
+		prefix = "tower_buho_owl_spawn_vfx",
+		to = 20
+	},
+	tower_buho_owl_tornado_end = {
+		from = 68,
+		prefix = "tower_buho_owl_tornado",
+		to = 81
+	},
+	tower_buho_owl_tornado_front_end = {
+		from = 68,
+		prefix = "tower_buho_owl_tornado_front",
+		to = 81
+	},
+	tower_buho_owl_tornado_front_in = {
+		from = 1,
+		prefix = "tower_buho_owl_tornado_front",
+		to = 27
+	},
+	tower_buho_owl_tornado_front_loop = {
+		from = 28,
+		prefix = "tower_buho_owl_tornado_front",
+		to = 67
+	},
+	tower_buho_owl_tornado_in = {
+		from = 1,
+		prefix = "tower_buho_owl_tornado",
+		to = 27
+	},
+	tower_buho_owl_tornado_loop = {
+		from = 28,
+		prefix = "tower_buho_owl_tornado",
+		to = 67
+	},
+	tower_buho_projectile_hit_floor_idle = {
+		from = 7,
+		prefix = "tower_buho_projectile_hit_floor",
+		to = 7
+	},
+	tower_buho_projectile_hit_floor_in = {
+		from = 1,
+		prefix = "tower_buho_projectile_hit_floor",
+		to = 6
+	},
+	tower_buho_projectile_hit_floor_long_shot_idle = {
+		from = 7,
+		prefix = "tower_buho_projectile_hit_floor_long_shot",
+		to = 7
+	},
+	tower_buho_projectile_hit_floor_long_shot_in = {
+		from = 1,
+		prefix = "tower_buho_projectile_hit_floor_long_shot",
+		to = 6
+	},
+	tower_buho_projectile_hit_floor_long_shot_out = {
+		from = 8,
+		prefix = "tower_buho_projectile_hit_floor_long_shot",
+		to = 25
+	},
+	tower_buho_projectile_hit_floor_out = {
+		from = 8,
+		prefix = "tower_buho_projectile_hit_floor",
+		to = 25
+	},
+	tower_buho_projectile_hit_run = {
+		from = 1,
+		prefix = "tower_buho_projectile_hit",
+		to = 6
+	},
+	tower_buho_projectile_long_shot_explosion_run = {
+		from = 1,
+		prefix = "tower_buho_projectile_long_shot_explosion",
+		to = 24
+	},
+	tower_buho_projectile_run = {
+		from = 1,
+		prefix = "tower_buho_projectile",
+		to = 6
+	},
+	tower_buho_screech_aura_run = {
+		from = 1,
+		prefix = "tower_buho_screech_aura",
+		to = 24
+	},
+	tower_buho_screech_modifier_idle = {
+		from = 1,
+		prefix = "tower_buho_screech_modifier",
+		to = 6
+	},
+	tower_buho_skill_deco_longshot_lvl4_appear = {
+		from = 1,
+		prefix = "tower_buho_skill_deco_longshot_lvl4",
+		to = 34
+	},
+	tower_buho_skill_deco_longshot_lvl4_desappear = {
+		from = 36,
+		prefix = "tower_buho_skill_deco_longshot_lvl4",
+		to = 61
+	},
+	tower_buho_skill_deco_longshot_lvl4_idle = {
+		from = 35,
+		prefix = "tower_buho_skill_deco_longshot_lvl4",
+		to = 35
+	},
+	tower_buho_skill_deco_screech_lvl4_idle = {
+		from = 1,
+		prefix = "tower_buho_skill_deco_screech_lvl4",
+		to = 119
+	},
+	tower_buho_skill_deco_screech_lvl4_screech = {
+		from = 120,
+		prefix = "tower_buho_skill_deco_screech_lvl4",
+		to = 167
+	},
+	tower_buho_skill_deco_torbellino_lvl4_idle = {
+		from = 1,
+		prefix = "tower_buho_skill_deco_torbellino_lvl4",
+		to = 66
+	},
+	tower_buho_tower_lvlup_vfx_run = {
+		from = 1,
+		prefix = "tower_buho_tower_lvlup_vfx",
+		to = 34
+	},
+	tower_buho_tower_owl_lvl4 = {
+		from = 1,
+		prefix = "tower_buho_tower_owl_lvl4",
+		to = 1
 	}
 }

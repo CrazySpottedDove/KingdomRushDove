@@ -292,6 +292,12 @@ return {
 		sub = "TOWER_ENGINEERS_SUBTITLE",
 		image = "kr6_encyclopedia_towers_0048",
 		layout = N_TOWER
+	},
+	TOWER_OWL = {
+		prefix = "TOWER_OWL",
+		always = true,
+		sub = "TOWER_ARCHERS_SUBTITLE",
+		image = "kr6_encyclopedia_towers_0084",
+		layout = N_TOWER
 	}
-
 }

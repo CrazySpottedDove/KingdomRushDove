@@ -140,7 +140,8 @@ upgrades.arrows = {
 	"bullet_crossbows_skill_c",
 	"bullet_sentry_basic",
 	"bullet_sentry_skill_b",
-	"bullet_sentry_ult"
+	"bullet_sentry_ult",
+	"bullet_owl"
 }
 
 upgrades.soldiers = {
@@ -311,7 +312,8 @@ upgrades.towers_with_barrack = {
 	"tower_wildcat",
 	"tower_miners",
 	"tower_sunray_master",
-	"tower_tree"
+	"tower_tree",
+	"tower_owl"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {
@@ -329,7 +331,8 @@ upgrades.non_barrack_towers_with_barrack_attribute = {
 	"tower_shaolin",
 	"tower_swamp_monster",
 	"tower_wicked_sisters",
-	"tower_sunray_master"
+	"tower_sunray_master",
+	"tower_owl"
 }
 
 upgrades.mage_towers = GS.mage_towers

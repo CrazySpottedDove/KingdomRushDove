@@ -5344,6 +5344,10 @@ local function analyze_thumb_sprite(name)
 	G.setCanvas()
 	G.pop()
 
+	if KRDOVE_TEST_MODE then
+		love.graphics.present()
+	end
+
 	local data = canvas:newImageData()
 
 	canvas:release()
@@ -5518,6 +5522,10 @@ local function get_thumb_frame(kind)
 		G.setLineWidth(1)
 		G.setCanvas()
 		G.pop()
+
+		if KRDOVE_TEST_MODE then
+			love.graphics.present()
+		end
 
 		borders[state] = G.newImage(canvas:newImageData())
 

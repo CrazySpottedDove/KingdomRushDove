@@ -159,6 +159,9 @@ end
 end
 end
 end
+if store.level_mode==GAME_MODE_CAMPAIGN then
+signal.emit("wave-notification","view","TOWER_OWL")
+end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end

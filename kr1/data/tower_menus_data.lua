@@ -616,6 +616,13 @@ return {
 			tt_title = _("TOWER_SENTRY_NAME"),
 			tt_desc = _("TOWER_SENTRY_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_owl",
+			type = "owl",
+			image = "kr6_quickmenu_main_icon_owlmasters",
+			tt_title = _("TOWER_OWL_NAME"),
+			tt_desc = _("TOWER_OWL_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	-- 技能按钮从左到右固定为 skill_a(place 6，左) / skill_b(place 5，中) / skill_c(place 7，右)，
@@ -5044,5 +5051,54 @@ return {
 			tt_title = _("SPECIAL_CELTIC_MAN_NAME"),
 			tt_desc = _("SPECIAL_CELTIC_MAN_DESCRIPTION")
 		}}
-	}), tpl.rally}}
+	}), tpl.rally}},
+	owl = {{M(tpl.upgrade_power, {
+		action_arg = "skill_a",
+		image = "kr6_quickmenu_special_icons_owlmasters_0003",
+		sounds = {"TowerOwlRidersSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_OWL_SKILL_A_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_OWL_SKILL_A_NAME_1"),
+			tt_desc = _("TOWER_OWL_SKILL_A_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_OWL_SKILL_A_NAME_2"),
+			tt_desc = _("TOWER_OWL_SKILL_A_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_OWL_SKILL_A_NAME_3"),
+			tt_desc = _("TOWER_OWL_SKILL_A_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_b",
+		image = "kr6_quickmenu_special_icons_owlmasters_0002",
+		sounds = {"TowerOwlRidersSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_OWL_SKILL_B_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_OWL_SKILL_B_NAME_1"),
+			tt_desc = _("TOWER_OWL_SKILL_B_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_OWL_SKILL_B_NAME_2"),
+			tt_desc = _("TOWER_OWL_SKILL_B_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_OWL_SKILL_B_NAME_3"),
+			tt_desc = _("TOWER_OWL_SKILL_B_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "skill_c",
+		image = "kr6_quickmenu_special_icons_owlmasters_0001",
+		sounds = {"TowerOwlRidersSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_OWL_SKILL_C_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_OWL_SKILL_C_NAME_1"),
+			tt_desc = _("TOWER_OWL_SKILL_C_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_OWL_SKILL_C_NAME_2"),
+			tt_desc = _("TOWER_OWL_SKILL_C_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_OWL_SKILL_C_NAME_3"),
+			tt_desc = _("TOWER_OWL_SKILL_C_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}}
 }

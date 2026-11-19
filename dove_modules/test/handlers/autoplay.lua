@@ -138,7 +138,7 @@ function autoplay.build_tower(harness, args)
 end
 
 --- 把实体所在的世界坐标换算成窗口坐标，模拟一次真实鼠标左键点击。
-local function simulate_click_at(harness, e)
+function autoplay.click_entity(harness, e)
 	local game = util.require_game(harness)
 	local game_gui = game.game_gui
 
@@ -198,7 +198,7 @@ function autoplay.run_clicks(harness)
 
 	for _, e in pairs(store.entities_with_ui) do
 		if e.ui and e.ui.can_click and not e.pending_removal and not e.enemy and not e.hero and not e.soldier and not e.tower then
-			simulate_click_at(harness, e)
+			autoplay.click_entity(harness, e)
 
 			state.stats.auto_clicks = state.stats.auto_clicks + 1
 		end
@@ -263,7 +263,7 @@ function autoplay.run_clicks(harness)
 				end
 			end
 
-			simulate_click_at(harness, e)
+			autoplay.click_entity(harness, e)
 
 			state.stats.auto_clicks = state.stats.auto_clicks + 1
 
