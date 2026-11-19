@@ -310,7 +310,6 @@ local function hero_princess_update(this, store)
 		this.dodge.silent = nil
 		this.dodge.animation = dodge_animation
 		this.dodge.time_before_hit = nil
-		this.dodge.active = false
 	end
 
 	local ult = this.melee.attacks[4]
@@ -790,7 +789,7 @@ local tt
 tt = RT("hero_princess", "hero")
 AC(tt, "melee", "timed_attacks", "dodge")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.hp_max = {200, 211, 222, 233, 244, 256, 267, 278, 289, 300}
+tt.hero.level_stats.hp_max = {230, 240, 250, 260, 270, 280, 290, 300, 310, 320}
 tt.hero.level_stats.melee_damage_min = {5, 6, 7, 8, 9, 10, 13, 14, 15, 16}
 tt.hero.level_stats.melee_damage_max = {7, 8, 9, 10, 13, 14, 15, 16, 17, 18}
 tt.hero.level_stats.dodge_chance = {0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9}
