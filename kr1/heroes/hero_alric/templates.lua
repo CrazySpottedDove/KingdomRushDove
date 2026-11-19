@@ -352,7 +352,6 @@ tt.melee.attacks[3].damage_min = nil
 tt.melee.attacks[3].disabled = true
 tt.melee.attacks[3].hit_times = {fts(4), fts(9)}
 tt.melee.attacks[3].interrupt_loop_on_dead_target = true
-tt.melee.attacks[3].loopable = true
 tt.melee.attacks[3].loops = 1
 tt.melee.attacks[3].sound_loop = "HeroAlricFlurry"
 tt.melee.attacks[3].vis_bans = bor(F_FLYING, F_CLIFF)

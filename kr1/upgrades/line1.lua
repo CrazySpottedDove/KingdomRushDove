@@ -88,7 +88,6 @@ local techs = {
 		level = 5,
 		price = 2,
 		patch = function(UP, u)
-			table.append(arrows, UP.arrows)
 			local arrows = UP.arrows
 
 			for _, n in ipairs(arrows) do

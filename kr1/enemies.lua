@@ -13223,7 +13223,6 @@ tt.melee.attacks[2].damage_min = 35
 tt.melee.attacks[2].damage_radius = 80
 tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
 tt.melee.attacks[2].hit_time = fts(3)
-tt.melee.attacks[2].loopable = true
 tt.melee.attacks[2].loops = 2
 tt.melee.attacks[2].hit_fx_area_target = "fx_hammercrow_hit"
 tt.melee.attacks[2].sound = "EnemyHammercrowSpinAttack"
