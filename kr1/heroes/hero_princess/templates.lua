@@ -314,7 +314,6 @@ local function hero_princess_update(this, store)
 	end
 
 	local ult = this.melee.attacks[4]
-	local skill_a = this.melee.attacks[3]
 
 	ult.ts = store.tick_ts - ult.cooldown
 
