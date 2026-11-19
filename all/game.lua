@@ -74,6 +74,7 @@ game.required_textures = {
 	"go_towers_tree",
 	"go_towers_forger",
 	"go_towers_sentry",
+	"go_towers_owl",
 	"go_stage128",
 	"tower_holders"
 }
@@ -140,6 +141,7 @@ game.required_sounds = {
 	"tower_elf_ranger",
 	"tower_crossbows",
 	"tower_tree",
+	"tower_owl",
 	"tower_light_priestess",
 	"tower_forger",
 	"tower_sentry"

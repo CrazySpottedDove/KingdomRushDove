@@ -34,6 +34,7 @@ local commands = {
 		click_hero_room_button = screen.click_hero_room_button,
 		click_change_generation_button = screen.click_change_generation_button,
 		click_spell_button = screen.click_spell_button,
+		close_view = screen.close_view,
 		click_map_flag = screen.click_map_flag,
 		click_level = screen.click_level,
 		-- 局内语义命令
@@ -46,6 +47,9 @@ local commands = {
 		build_tower = game.build_tower,
 		build_all_towers = game.build_all_towers,
 		upgrade_tower = game.upgrade_tower,
+		click_tower = function(harness, args)
+			return harness:click_tower(args)
+		end,
 		sell_tower = game.sell_tower,
 		get_tower_holders = game.get_tower_holders,
 		get_entities = game.get_entities,

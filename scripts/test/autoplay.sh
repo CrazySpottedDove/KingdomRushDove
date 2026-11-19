@@ -20,6 +20,8 @@
 #   --script-out PATH    保留生成的 JSONL 脚本到指定路径
 set -euo pipefail
 
+export MESA_LOADER_DRIVER_OVERRIDE="${MESA_LOADER_DRIVER_OVERRIDE:-llvmpipe}"
+
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 GEN_ID=""
 LEVEL=""

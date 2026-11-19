@@ -23,8 +23,37 @@ local function ensure_slot()
 	return slot
 end
 
+local VIEWS = {
+	hero_room = "HeroRoomViewKR1",
+	encyclopedia = "EncyclopediaView",
+	upgrades = "UpgradesView",
+	spell_view = "SpellSelectView"
+}
+
 local function map(harness)
 	return util.scene(harness, "map")
+end
+
+local function open_view(harness, button, field)
+	local sm = map(harness)
+
+	if not button or not button.on_click then
+		error(VIEWS[field] .. " button has no on_click")
+	end
+
+	button.on_click(button)
+
+	local view = sm[field]
+
+	if not view then
+		error(VIEWS[field] .. " was not created")
+	end
+
+	if view.hidden then
+		error(VIEWS[field] .. " did not open")
+	end
+
+	return VIEWS[field]
 end
 
 local function mode(args)
@@ -138,7 +167,7 @@ function screen.click_upgrade_button(harness)
 
 	return {
 		clicked = "upgrade_button",
-		x = util.click_view(sm.u_button or sm._u_btn)
+		opened = open_view(harness, sm.u_button or sm._u_btn, "upgrades")
 	}
 end
 
@@ -147,7 +176,7 @@ function screen.click_encyclopedia_button(harness)
 
 	return {
 		clicked = "encyclopedia_button",
-		x = util.click_view(sm._e_btn)
+		opened = open_view(harness, sm._e_btn, "encyclopedia")
 	}
 end
 
@@ -156,7 +185,7 @@ function screen.click_hero_room_button(harness)
 
 	return {
 		clicked = "hero_room_button",
-		x = util.click_view(sm.hero_but or sm._h_btn)
+		opened = open_view(harness, sm.hero_but or sm._h_btn, "hero_room")
 	}
 end
 
@@ -174,7 +203,42 @@ function screen.click_spell_button(harness)
 
 	return {
 		clicked = "spell_button",
-		x = util.click_view(sm.spell_button)
+		opened = open_view(harness, sm.spell_button, "spell_view")
+	}
+end
+
+function screen.close_view(harness, args)
+	local sm = map(harness)
+	local field = args.field or args.name
+
+	if not VIEWS[field] then
+		for key, name in pairs(VIEWS) do
+			if name == args.name then
+				field = key
+			end
+		end
+	end
+
+	if not VIEWS[field] then
+		error("close_view requires a known view name")
+	end
+
+	local view = sm[field]
+
+	if not view then
+		error(VIEWS[field] .. " was not created")
+	end
+
+	local close = view.close_button or view:get_child_by_id("close_button")
+
+	if not close or not close.on_click then
+		error(VIEWS[field] .. " close button has no on_click")
+	end
+
+	close.on_click(close)
+
+	return {
+		closed = VIEWS[field]
 	}
 end
 

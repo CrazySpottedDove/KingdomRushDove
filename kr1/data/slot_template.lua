@@ -166,7 +166,8 @@ return {
 			"tower_forger",
 			"tower_crossbows",
 			"tower_sentry",
-			"tower_tree"
+			"tower_tree",
+			"tower_owl"
 		},
 		schema_version = 3,
 		seen = {

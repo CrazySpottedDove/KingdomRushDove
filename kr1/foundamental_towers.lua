@@ -245,6 +245,9 @@ tt.build_name = "tower_engineer_1"
 tt.render.sprites[2].name = "tower_constructing_0001"
 tt.render.sprites[2].offset = vec_2(0, 41)
 
+tt = RT("tower_build_owl", "tower_build_archer")
+tt.build_name = "tower_owl"
+
 tt = RT("tower_mage_1", "tower")
 AC(tt, "attacks")
 tt.tower.type = "mage"

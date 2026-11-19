@@ -41160,4 +41160,886 @@ function scripts.decal_sentry_skill_c.update(this, store)
 	end
 end
 
+scripts.tower_owl = {}
+
+function scripts.tower_owl.get_info(this)
+	local info = scripts.tower_barrack.get_info(this)
+	info.type = STATS_TYPE_TOWER
+	info.range = this.attacks.range
+	return info
+end
+
+function scripts.tower_owl.find_tornado_target(this, store, ult)
+	local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, {1}, true, NF_NO_BACKWARDS)
+
+	if not nodes or #nodes == 0 then
+		return nil
+	end
+
+	local function count_back(pi, spawn_ni)
+		local lo = spawn_ni - ult.count_back_nodes
+		local c = 0
+
+		for _, e in pairs(store.enemies) do
+			if e.nav_path and e.nav_path.pi == pi and e.health and not e.health.dead and spawn_ni >= e.nav_path.ni and lo <= e.nav_path.ni and band(e.vis.flags, ult.vis_bans) == 0 and band(e.vis.bans, ult.vis_flags) == 0 then
+				c = c + 1
+			end
+		end
+
+		return c
+	end
+
+	local best, best_count = nil, 0
+
+	for _, n in ipairs(nodes) do
+		local pi, ni, dist = n[1], n[3], n[4]
+
+		if dist <= ult.max_path_dist then
+			local spawn_ni = km.clamp(P:get_start_node(pi), P:get_end_node(pi), ni - ult.spawn_back_nodes - 5)
+			local sp = P:node_pos(pi, 1, spawn_ni)
+
+			if V.dist(sp.x, sp.y, this.pos.x, this.pos.y) <= ult.max_path_dist and P:is_node_valid(pi, spawn_ni, NF_NO_BACKWARDS) then
+				local c = count_back(pi, spawn_ni)
+
+				if best_count < c then
+					best_count = c
+					best = {
+						pi = pi,
+						ni = spawn_ni
+					}
+				end
+			end
+		end
+	end
+
+	if not best or best_count < 1 then
+		return nil
+	end
+
+	return best
+end
+
+function scripts.tower_owl.cast_tornado(this, store, owl, target)
+	local sp = P:node_pos(target.pi, 1, target.ni)
+
+	owl.render.sprites[1].flip_x = sp.x < owl.pos.x
+	U.animation_start(owl, "tornado", nil, store.tick_ts, false)
+
+	local aura = E:create_entity("aura_owl_tornado")
+
+	aura.pos = P:node_pos(target.pi, 1, target.ni)
+	aura.nav_path.pi, aura.nav_path.ni = target.pi, target.ni
+	aura.aura.source_id = owl.id
+	aura.aura.level = 1
+	aura._target = target
+	simulation:queue_insert_entity(aura)
+
+	local sid = this.skill_deco_sprites.ultimate
+
+	this.render.sprites[sid].hidden = false
+	U.animation_start(this, "tower_buho_skill_deco_torbellino_lvl4_idle", nil, store.tick_ts, false, sid)
+end
+
+function scripts.tower_owl.update(this, store)
+	local b = this.barrack
+	local tw = this.tower
+	local ult = this.attacks.list[1]
+	local deco = this.skill_deco_sprites
+	local sid_ls = deco.skill_c
+	local sid_sc = deco.skill_b
+	local rp = tw.default_rally_pos or b.rally_pos
+
+	if rp and rp.x > this.pos.x then
+		for _, s in ipairs(this.render.sprites) do
+			s.flip_x = true
+		end
+	end
+
+	do
+		local fx = E:create_entity("fx_owl_tower_lvlup")
+
+		fx.pos = V.vclone(this.pos)
+		fx.render.sprites[1].ts = store.tick_ts
+		simulation:queue_insert_entity(fx)
+	end
+
+	ult.ts = store.tick_ts
+
+	while true do
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
+
+				local sid = deco[pn]
+
+				if sid and this.render.sprites[sid] and p.level > 0 then
+					if pn == "skill_c" then
+						if p.level == 1 then
+							this._longshot_deco_appear = true
+						end
+					elseif pn == "skill_b" then
+						this._screech_deco_trigger = true
+					else
+						this.render.sprites[sid].hidden = false
+						this.render.sprites[sid].ts = store.tick_ts
+					end
+				end
+			end
+		end
+
+		if this._screech_deco_trigger then
+			this._screech_deco_trigger = nil
+			this.render.sprites[sid_sc].hidden = false
+
+			U.animation_start(this, "tower_buho_skill_deco_screech_lvl4_screech", nil, store.tick_ts, false, sid_sc)
+
+			this._screech_deco_playing = true
+		elseif this._screech_deco_playing and U.animation_finished(this, sid_sc) then
+			this._screech_deco_playing = false
+
+			U.animation_start(this, "tower_buho_skill_deco_screech_lvl4_idle", nil, store.tick_ts, true, sid_sc)
+		end
+
+		local owl = b.soldiers[1]
+		local in_ls_anim = owl and owl.render and owl.render.sprites[1].name == "long_shot"
+
+		if in_ls_anim and not this._longshot_anim_active then
+			this._longshot_anim_active = true
+			this._longshot_deco_disappear = true
+		elseif not in_ls_anim then
+			this._longshot_anim_active = false
+		end
+
+		if this._longshot_deco_appear then
+			this._longshot_deco_appear = nil
+			this.render.sprites[sid_ls].hidden = false
+
+			U.animation_start(this, "tower_buho_skill_deco_longshot_lvl4_appear", nil, store.tick_ts, false, sid_ls)
+
+			this._longshot_deco_state = "appearing"
+		elseif this._longshot_deco_disappear then
+			this._longshot_deco_disappear = nil
+			this.render.sprites[sid_ls].hidden = false
+
+			U.animation_start(this, "tower_buho_skill_deco_longshot_lvl4_desappear", nil, store.tick_ts, false, sid_ls)
+
+			this._longshot_deco_state = "disappearing"
+		elseif this._longshot_deco_state == "appearing" and U.animation_finished(this, sid_ls) then
+			this._longshot_deco_state = "idle"
+
+			U.animation_start(this, "tower_buho_skill_deco_longshot_lvl4_idle", nil, store.tick_ts, true, sid_ls)
+		end
+
+		if not tw.blocked then
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+
+				if not s or s.health.dead and not store.entities[s.id] then
+					s = E:create_entity(b.soldier_type)
+					s.soldier.tower_id = this.id
+					s.soldier.tower_soldier_idx = i
+					s.pos = V.v(this.pos.x + b.respawn_offset.x, this.pos.y + b.respawn_offset.y)
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+					s.nav_rally.new = true
+
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
+					simulation:queue_insert_entity(s)
+
+					b.soldiers[i] = s
+
+					signal.emit("tower-spawn", this, s)
+
+					local fx = E:create_entity("fx_owl_spawn")
+
+					fx.pos = V.vclone(s.pos)
+					fx.render.sprites[1].ts = store.tick_ts
+					simulation:queue_insert_entity(fx)
+				end
+			end
+		end
+
+		if ready_to_attack(ult, store, tw.cooldown_factor) then
+			local enemy = U.find_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, false, ult.vis_flags, ult.vis_bans)
+
+			if not enemy then
+				ult.ts = ult.ts + fts(5)
+			else
+				owl = b.soldiers[1]
+
+				local target = owl and not owl.health.dead and scripts.tower_owl.find_tornado_target(owl, store, ult)
+
+				if target then
+					ult.ts = store.tick_ts
+					scripts.tower_owl.cast_tornado(this, store, owl, target)
+				else
+					ult.ts = ult.ts + fts(10)
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_owl = {}
+
+function scripts.soldier_owl.get_info(this)
+	local info = scripts.soldier_barrack.get_info(this)
+	info.type = STATS_TYPE_TOWER
+	info.damage_min = info.ranged_damage_min
+	info.damage_max = info.ranged_damage_max
+	return info
+end
+
+function scripts.soldier_owl.insert(this, store)
+	local a = this.ranged.attacks[1]
+
+	function a.filter_fn(e)
+		if this._rc_ts ~= store.tick_ts then
+			this._rc_ts = store.tick_ts
+			this._ranged_candidates = {}
+		end
+
+		this._ranged_candidates[#this._ranged_candidates + 1] = e
+
+		return true
+	end
+
+	return scripts.soldier_barrack.insert(this, store)
+end
+
+function scripts.soldier_owl.update(this, store)
+	local tower = store.entities[this.soldier.tower_id]
+	local tw = tower.tower
+	local sa = this.timed_actions.list[1]
+	local sb = this.timed_actions.list[2]
+	local sc = this.timed_actions.list[3]
+	local pow_a = tower.powers.skill_a
+	local pow_b = tower.powers.skill_b
+	local pow_c = tower.powers.skill_c
+	sb.cooldown = pow_a.cooldown
+	sc.cooldown = pow_c.cooldown
+
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
+	end
+
+	while true do
+		if this.health.dead then
+			this.ui.can_click = false
+
+			SU.y_soldier_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_soldier_new_rally(store, this) then
+					goto owl_continue
+				end
+			end
+
+			if pow_b.level > 0 then
+				sa.cooldown = pow_b.cooldown[pow_b.level]
+			end
+
+			if pow_b.level > 0 and U.tower_ready_to_use_power(pow_b, sa, store, tw) then
+				local enemies = U.find_enemies_in_range_filter_off(this.pos, pow_b.radius, sa.vis_flags, sa.vis_bans)
+
+				if not enemies then
+					sa.ts = sa.ts + fts(5)
+				else
+					sa.ts = store.tick_ts
+
+					local left, right = 0, 0
+
+					for _, e in ipairs(enemies) do
+						if P:predict_enemy_pos(e, sa.cast_time).x < this.pos.x then
+							left = left + 1
+						else
+							right = right + 1
+						end
+					end
+
+					U.animation_start(this, sa.animation, right < left, store.tick_ts, false)
+					S:queue(sa.sound)
+					U.y_wait_unconditional(store, sa.cast_time)
+
+					local aura = E:create_entity("aura_owl_screech")
+
+					aura.pos = V.vclone(this.pos)
+					aura.aura.source_id = this.id
+					aura.aura.level = pow_b.level
+					aura.aura.damage_factor = this.unit.damage_factor
+					aura.aura.targets_per_cycle = pow_b.max_targets[pow_b.level]
+					simulation:queue_insert_entity(aura)
+
+					tower._screech_deco_trigger = true
+
+					while not U.animation_finished(this, 1) do
+						coroutine.yield()
+					end
+				end
+			end
+
+			if pow_a.level > 0 and U.tower_ready_to_use_power(pow_a, sb, store, tw) then
+				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, pow_a.radius_detection, false, sb.vis_flags, sb.vis_bans)
+
+				if not target then
+					sb.ts = sb.ts + fts(5)
+				else
+					sb.ts = store.tick_ts
+
+					U.animation_start(this, sb.animation, nil, store.tick_ts, false)
+					S:queue(sb.sound)
+					U.y_wait(store, sb.cast_time)
+
+					local aura = E:create_entity("aura_owl_dive")
+
+					aura.pos = V.vclone(this.pos)
+					aura.aura.source_id = this.id
+					aura.aura.level = pow_a.level
+					aura.aura.damage_factor = this.unit.damage_factor
+					aura.aura.damage_min = pow_a.damage_min[pow_a.level]
+					aura.aura.damage_max = pow_a.damage_max[pow_a.level]
+					simulation:queue_insert_entity(aura)
+
+					local ox = this.render.sprites[1].flip_x and -25 or 25
+
+					for _, fx_name in ipairs({"fx_owl_dive_decal", "fx_owl_dive_hit"}) do
+						local fx = E:create_entity(fx_name)
+
+						fx.pos = V.v(this.pos.x + ox, this.pos.y)
+						fx.render.sprites[1].ts = store.tick_ts
+						simulation:queue_insert_entity(fx)
+					end
+
+					while not U.animation_finished(this, 1) do
+						coroutine.yield()
+					end
+				end
+			end
+
+			if pow_c.level > 0 and U.tower_ready_to_use_power(pow_c, sc, store, tw) then
+				local target = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(this.pos, pow_c.max_range, sc.vis_flags, sc.vis_bans)
+
+				if not target then
+					sc.ts = sc.ts + fts(5)
+				else
+					sc.ts = store.tick_ts
+
+					local flip = target.pos.x < this.pos.x
+
+					U.animation_start(this, sc.animation, flip, store.tick_ts, false)
+					S:queue(sc.sound, sc.sound_args)
+					U.y_wait(store, sc.shoot_time)
+
+					local new_target = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(this.pos, pow_c.max_range, sc.vis_flags, sc.vis_bans)
+					if new_target then
+						target = new_target
+					end
+
+					local bullet = E:create_entity(sc.bullet)
+
+					bullet.pos:copy(this.pos)
+					bullet.pos.x = bullet.pos.x + (flip and -1 or 1) * sc.bullet_start_offset.x
+					bullet.pos.y = bullet.pos.y + sc.bullet_start_offset.y
+					bullet.bullet.from:copy(bullet.pos)
+					bullet.bullet.to = U.calculate_enemy_ffe_pos(target, bullet.bullet.flight_time)
+					bullet.bullet.target_id = target.id
+					bullet.bullet.source_id = this.id
+					bullet.bullet.level = pow_c.level
+					bullet.bullet.damage_factor = this.unit.damage_factor
+					bullet.bullet.damage_min = pow_c.damage_min[pow_c.level]
+					bullet.bullet.damage_max = pow_c.damage_max[pow_c.level]
+					bullet.bullet.damage_radius = pow_c.damage_radius
+					simulation:queue_insert_entity(bullet)
+
+					while not U.animation_finished(this, 1) do
+						coroutine.yield()
+					end
+				end
+			end
+
+			local brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+			if brk or sta == A_DONE then
+				goto owl_continue
+			elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+				goto owl_idle
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+				goto owl_continue
+			end
+
+			::owl_idle::
+
+			SU.soldier_idle(store, this)
+			SU.soldier_regen(store, this)
+		end
+
+		::owl_continue::
+
+		coroutine.yield()
+	end
+end
+
+scripts.bullet_owl = {}
+
+function scripts.bullet_owl.insert(this, store)
+	local b = this.bullet
+
+	b.fixed_height = b.fixed_height * (1 + (random() * 0.8 - 0.4))
+	b.rotation_speed = b.rotation_speed * (1 + (random() * 0.4 - 0.2))
+
+	if not this._is_twin then
+		local twin = E:create_entity(this.template_name)
+
+		twin._is_twin = true
+		twin.pos:copy(this.pos)
+		twin.bullet.from:copy(b.from)
+		twin.bullet.source_id = b.source_id
+		twin.bullet.xp_dest_id = b.xp_dest_id
+		twin.bullet.level = b.level
+		twin.bullet.mod = b.mod
+		twin.bullet.mods = b.mods
+		twin.bullet.damage_factor = b.damage_factor
+
+		local owl = b.source_id and store.entities[b.source_id]
+		local t2
+
+		if owl then
+			local primary = store.entities[b.target_id]
+			local ppos = primary and primary.pos or b.to
+			local r = b.second_target_range or 60
+			local owl_attack = owl.ranged and owl.ranged.attacks[1]
+			local owl_range = owl_attack and owl_attack.max_range
+
+			for _, en in ipairs(owl._ranged_candidates or {}) do
+				if en.id ~= b.target_id and en.health and not en.health.dead and r >= V.dist(en.pos.x, en.pos.y, ppos.x, ppos.y) and (not owl_range or U.is_inside_ellipse(en.pos, owl.pos, owl_range)) then
+					t2 = en
+
+					break
+				end
+			end
+		end
+
+		if t2 then
+			twin.bullet.target_id = t2.id
+			twin.bullet.to:set(t2.pos.x + (t2.unit and t2.unit.hit_offset.x or 0), t2.pos.y + (t2.unit and t2.unit.hit_offset.y or 0))
+		else
+			twin.bullet.target_id = b.target_id
+			twin.bullet.to:copy(b.to)
+		end
+
+		simulation:queue_insert_entity(twin)
+	end
+
+	return scripts.arrow5_fixed_height.insert(this, store)
+end
+
+scripts.bullet_owl_long_shot = {}
+
+function scripts.bullet_owl_long_shot.insert(this, store)
+	local b = this.bullet
+	local owl = b.source_id and store.entities[b.source_id]
+	local tower = owl and owl.soldier and store.entities[owl.soldier.tower_id]
+
+	if tower then
+		b.deco_owner_id = tower.id
+	end
+
+	this.render.sprites[1].flip_x = b.to.x < b.from.x
+
+	return scripts.bomb.insert(this, store)
+end
+
+function scripts.bullet_owl_long_shot.update(this, store)
+	local b = this.bullet
+
+	scripts.bomb.update(this, store)
+
+	if b.owned_hit_decal and band(GR:cell_type(b.to.x, b.to.y), TERRAIN_WATER) == 0 then
+		local decal = E:create_entity(b.owned_hit_decal)
+
+		decal.pos = V.vclone(b.to)
+		decal._deco_owner_id = b.deco_owner_id
+
+		local flip = b.to.x < b.from.x
+
+		for i = 1, #decal.render.sprites do
+			decal.render.sprites[i].ts = store.tick_ts
+
+			if flip then
+				decal.render.sprites[i].flip_x = true
+			end
+		end
+
+		simulation:queue_insert_entity(decal)
+	end
+end
+
+scripts.decal_owl_long_shot_hit = {}
+
+function scripts.decal_owl_long_shot_hit.update(this, store)
+	local aura = E:create_entity("fx_owl_screech_aura")
+
+	aura.pos = V.vclone(this.pos)
+	aura.render.sprites[1].ts = store.tick_ts
+
+	if this.render.sprites[1].flip_x then
+		aura.render.sprites[1].flip_x = true
+	end
+
+	simulation:queue_insert_entity(aura)
+
+	return scripts.decal_utils.animation_in_loop_out.update(this, store)
+end
+
+function scripts.decal_owl_long_shot_hit.remove(this, store)
+	local tower = this._deco_owner_id and store.entities[this._deco_owner_id]
+
+	if tower then
+		tower._longshot_deco_appear = true
+	end
+
+	return true
+end
+
+scripts.mod_owl_screech_weak = {}
+
+function scripts.mod_owl_screech_weak.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+	local lvl = this.modifier.level
+	local factor
+
+	if band(target.vis.flags, F_BOSS) ~= 0 then
+		factor = this.boss_received_damage_factor[lvl]
+	else
+		factor = this.received_damage_factor[lvl]
+	end
+
+	this._factor = factor
+	this.modifier.duration = this.duration[lvl]
+	this.modifier.ts = store.tick_ts
+
+	SU.insert_received_damage_factor_by_factor(target, factor)
+
+	local fx = E:create_entity("fx_owl_screech_hit")
+
+	fx.pos = V.v(target.pos.x, target.pos.y)
+	fx.render.sprites[1].ts = store.tick_ts
+
+	if target.unit and target.unit.mod_offset then
+		fx.render.sprites[1].offset.x = target.unit.mod_offset.x
+		fx.render.sprites[1].offset.y = target.unit.mod_offset.y
+	end
+
+	simulation:queue_insert_entity(fx)
+	signal.emit("mod-applied", this, target)
+
+	return true
+end
+
+function scripts.mod_owl_screech_weak.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target and target.health then
+		SU.remove_received_damage_factor_by_factor(target, this._factor)
+	end
+
+	return true
+end
+
+scripts.mod_owl_screech_slow = {}
+
+function scripts.mod_owl_screech_slow.insert(this, store)
+	local lvl = this.modifier.level
+
+	this.slow.factor = this.slow_factor[lvl]
+	this.modifier.duration = this.duration[lvl]
+
+	return scripts.mod_slow.insert(this, store)
+end
+
+scripts.aura_owl_tornado = {}
+
+function scripts.aura_owl_tornado.update(this, store)
+	local np = this.nav_path
+
+	np.spi = 1
+
+	if this._target then
+		np.pi, np.ni = this._target.pi, this._target.ni
+		this._target = nil
+	else
+		local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, {1}, true, NF_NO_BACKWARDS)
+
+		if not nodes or #nodes == 0 then
+			simulation:queue_remove_entity(this)
+
+			return
+		end
+
+		np.pi, np.ni = nodes[1][1], nodes[1][3]
+	end
+
+	this.pos = P:node_pos(np.pi, 1, np.ni)
+
+	local duration = this.aura.duration
+	local picked = this.picked_enemies
+
+	local function pickup()
+		if #picked >= this.enemies_max then
+			return
+		end
+
+		local enemies = U.find_enemies_in_range_filter_off(this.pos, this.pickup_range, this.aura.vis_flags, this.aura.vis_bans)
+
+		if not enemies then
+			return
+		end
+
+		for _, e in ipairs(enemies) do
+			if #picked >= this.enemies_max then
+				break
+			end
+
+			if not e._owl_tornado_caught and not e.pending_removal and not e.unit.ignore_stun and not e.health.ignore_damage then
+				e._owl_tornado_caught = true
+
+				local ranges = {}
+
+				if e.ranged then
+					for i, a in ipairs(e.ranged.attacks) do
+						ranges[i] = a.max_range
+					end
+				end
+
+				local g = E:create_entity("decal")
+
+				g.pos = V.vclone(e.pos)
+				g.render.sprites = {}
+
+				local oys, scales = {}, {}
+
+				for i, es in ipairs(e.render.sprites) do
+					local s = table.clone(es)
+
+					g.render.sprites[i] = s
+					s.offset = V.vclone(es.offset)
+					s.track_id, s.track_sprite_id, s.track_attach_point = nil, nil, nil
+
+					if not s.animated then
+						s.hidden = true
+					end
+
+					s.z = Z_OBJECTS
+					oys[i] = s.offset.y
+					scales[i] = s.scale and V.vclone(s.scale) or V.v(1, 1)
+					s.scale = V.vclone(scales[i])
+				end
+
+				simulation:queue_insert_entity(g)
+				SU.remove_modifiers(store, e)
+				SU.remove_auras(store, e)
+				simulation:queue_remove_entity(e)
+
+				e.health.dead = true
+				e.main_script.co = nil
+				e.main_script.runs = 0
+				U.unblock_all(store, e)
+
+				if e.ui then
+					e.ui.can_click = false
+				end
+
+				if e.count_group then
+					e.count_group.in_limbo = true
+				end
+
+				table.insert(picked, {
+					e = e,
+					g = g,
+					ang = math.random() * 2 * math.pi,
+					ts = store.tick_ts,
+					oys = oys,
+					scales = scales,
+					ranges = ranges
+				})
+			end
+		end
+	end
+
+	local function orbit()
+		local t = store.tick_ts - this.aura.ts
+		local lift = (1 - math.cos(t * this.lift_freq)) * 0.5 * this.lift_max
+
+		for _, p in ipairs(picked) do
+			p.ang = p.ang + 8 * store.tick_length
+			p.g.pos.x = this.pos.x + math.cos(p.ang) * this.orbit_radius
+			p.g.pos.y = this.pos.y + math.sin(p.ang) * this.orbit_radius * 0.5
+
+			local k = 0.75 - 0.1 * math.sin(p.ang)
+
+			for i, s in ipairs(p.g.render.sprites) do
+				s.offset.y = p.oys[i] + lift
+				s.scale.x, s.scale.y = p.scales[i].x * k, p.scales[i].y * k
+			end
+		end
+	end
+
+	local function disperse()
+		if this._disperse_ts and store.tick_ts - this._disperse_ts < 0.2 then
+			return
+		end
+
+		this._disperse_ts = store.tick_ts
+
+		local r = this.miss_disperse_range
+
+		for _, e in pairs(store.entities) do
+			if e.tween and e.pos and not e._owl_tornado_dispersed and r >= V.dist(e.pos.x, e.pos.y, this.pos.x, this.pos.y) then
+				local tn = e.template_name
+				local sn = e.render and e.render.sprites[1].name
+
+				if tn == "decal_crow_alchemist_miss" then
+					e._owl_tornado_dispersed = true
+					e.tween.ts = store.tick_ts
+					e.tween.reverse = true
+					e.tween.remove = true
+				elseif tn == "decal_tween" and (sn == "shadow_archer_arrow2" or sn == "exalted_archer_arrow2") then
+					e._owl_tornado_dispersed = true
+					e.tween.ts = store.tick_ts
+					e.tween.reverse = false
+					e.tween.props[1].keys = {{0, 255}, {fts(12), 0}}
+					e.tween.remove = true
+				end
+			end
+		end
+	end
+
+	U.y_animation_play(this, "in", nil, store.tick_ts)
+	U.animation_start(this, "loop", nil, store.tick_ts, true)
+
+	this.aura.ts = store.tick_ts
+
+	while not this.interrupt do
+		if duration < store.tick_ts - this.aura.ts or np.ni <= P:get_start_node(np.pi) or not P:is_node_valid(np.pi, np.ni + this.nodes_step, NF_NO_BACKWARDS) or band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_CLIFF) ~= 0 then
+			break
+		end
+
+		np.ni = np.ni + this.nodes_step
+		np.spi = np.spi == 2 and 3 or 2
+
+		U.set_destination(this, P:node_pos(np.pi, np.spi, np.ni))
+
+		while not this.motion.arrived and not this.interrupt do
+			U.walk(this, store.tick_length)
+			pickup()
+			orbit()
+			disperse()
+			coroutine.yield()
+		end
+
+		orbit()
+	end
+
+	local rel_lo, rel_hi = P:get_start_node(np.pi), P:get_end_node(np.pi)
+
+	local function release_ni()
+		local cand = km.clamp(rel_lo, rel_hi, np.ni + math.random(-4, 4))
+
+		if P:is_node_valid(np.pi, cand) then
+			return cand
+		end
+
+		for d = 1, 12 do
+			if cand + d <= rel_hi and P:is_node_valid(np.pi, cand + d) then
+				return cand + d
+			end
+
+			if cand - d >= rel_lo and P:is_node_valid(np.pi, cand - d) then
+				return cand - d
+			end
+		end
+
+		return km.clamp(rel_lo, rel_hi, np.ni)
+	end
+
+	local kill = this.interrupt
+
+	for _, p in ipairs(picked) do
+		local e = p.e
+
+		simulation:queue_remove_entity(p.g)
+
+		if type(e.on_ice_mod) == "table" then
+			e.on_ice_mod = e.on_ice_mod.template_name
+		end
+
+		e._owl_tornado_caught = nil
+		e.health.dead = false
+		e.motion.forced_waypoint = nil
+		e.nav_path.pi = np.pi
+		e.nav_path.spi = math.random(1, 3)
+		e.nav_path.ni = release_ni()
+		e.pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+		e.main_script.runs = 1
+
+		if e.ui then
+			e.ui.can_click = true
+		end
+
+		if kill then
+			e.health.hp = 0
+
+			if e.death_spawns then
+				e.health.last_damage_types = DAMAGE_NO_SPAWNS
+			end
+
+			e.enemy.gold = 0
+		end
+
+		p.dot_ticks = math.floor((store.tick_ts - p.ts) / this.dot_every)
+
+		simulation:queue_insert_entity(e)
+	end
+
+	if #picked > 0 then
+		coroutine.yield()
+
+		for _, p in ipairs(picked) do
+			if p.e.ranged then
+				for i, a in ipairs(p.e.ranged.attacks) do
+					if p.ranges[i] then
+						a.max_range = p.ranges[i]
+					end
+				end
+			end
+
+			if not kill and p.dot_ticks > 0 then
+				local d = E:create_entity("damage")
+
+				d.source_id = this.id
+				d.target_id = p.e.id
+				d.value = this.dot_damage * p.dot_ticks
+				d.damage_type = this.dot_damage_type
+
+				queue_damage(store, d)
+			end
+		end
+	end
+
+	this.picked_enemies = {}
+
+	U.y_animation_play(this, "end", nil, store.tick_ts)
+	simulation:queue_remove_entity(this)
+end
+
 return scripts

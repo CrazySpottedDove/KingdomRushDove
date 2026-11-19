@@ -17,6 +17,10 @@ love . -test script.jsonl    # 从脚本文件读命令
 
 游戏日志照常输出；测试响应统一写到 stdout，并以 `@TEST ` 前缀开头，方便外部脚本过滤。
 
+WSLg/D3D12 下 `canvas:newImageData()` 可能卡死；`scripts/test/autoplay.sh`
+和插件检查器默认设置 `MESA_LOADER_DRIVER_OVERRIDE=llvmpipe`，已显式设置时以外部值为准。
+直接运行 `love . -test` 时建议也带上该变量。图鉴缩略图已在测试模式下用 `present()` 兜底。
+
 ## 协议
 
 请求，一行一个 JSON：
@@ -80,11 +84,12 @@ love . -test script.jsonl    # 从脚本文件读命令
 | `open_screen` | `name`，`custom` | 进入任意 director 场景 |
 | `back_to_map` | | 回地图 |
 | `select_generation` | `gen_id` | 切换世代 |
-| `click_upgrade_button` | | screen_map 升级按钮 on_click |
-| `click_encyclopedia_button` | | 图鉴按钮 |
-| `click_hero_room_button` | | 英雄殿按钮 |
+| `click_upgrade_button` | | 升级按钮 on_click，断言 UpgradesView 已打开 |
+| `click_encyclopedia_button` | | 图鉴按钮 on_click，断言 EncyclopediaView 已打开 |
+| `click_hero_room_button` | | 英雄殿按钮 on_click，断言 HeroRoomViewKR1 已打开 |
 | `click_change_generation_button` | | 世代切换按钮 |
-| `click_spell_button` | | 法术选择按钮 |
+| `click_spell_button` | | 法术按钮 on_click，断言 SpellSelectView 已打开 |
+| `close_view` | `name` 或 `field` | 调用界面关闭按钮 on_click |
 | `click_map_flag` | `level` | 点击关卡旗子 |
 | `click_level` | `level`，`mode` | 直接开始关卡 |
 | `snapshot_map` | | 地图状态 |
@@ -99,6 +104,7 @@ love . -test script.jsonl    # 从脚本文件读命令
 | `build_tower` | `holder_id`, `tower`, `level` | 指定塔位造塔 |
 | `build_all_towers` | `rotation`, `tower`, `level` | 所有空塔位造塔 |
 | `upgrade_tower` | `holder_id`, `tower` | 按 tower_menus_data 升级 |
+| `click_tower` | `holder_id` | 点击塔实体，断言选中且塔菜单已打开 |
 | `sell_tower` | `holder_id` | 卖塔 |
 | `get_tower_holders` | | 塔位列表 |
 | `get_entities` | `template` | 实体列表 |
