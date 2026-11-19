@@ -66,7 +66,7 @@ local function princess_y_skill_b(store, this, on_skill_used)
 	local enemies = U.find_enemies_in_range(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
 
 	if not enemies or #enemies < a.min_targets then
-		SU.delay_attack(store, a, fts(10))
+		a.ts = a.ts + fts(10)
 
 		return false
 	end
@@ -118,7 +118,7 @@ local function princess_y_skill_b(store, this, on_skill_used)
 				local dist = U.frandom(-a.miss_radius, a.miss_radius)
 
 				knife.missed = true
-				knife.bullet.to = V.v(target.pos.x + math.cos(angle) * dist, target.pos.y + math.sin(angle) * dist * 0.7)
+				knife.bullet.to = V.v(target.pos.x + math.cos(angle) * dist, target.pos.y + math.sin(angle) * dist * 0.6)
 				knife._shadow_to = V.vclone(knife.bullet.to)
 			else
 				knife.bullet.target_id = target.id
@@ -177,7 +177,7 @@ local function princess_y_skill_c(store, this, on_skill_used)
 	end
 
 	if not pi then
-		SU.delay_attack(store, a, fts(10))
+		a.ts = a.ts + fts(10)
 
 		return false
 	end
@@ -341,10 +341,6 @@ local function hero_princess_update(this, store)
 
 				if target and not target.health.dead then
 					SU.y_soldier_do_loopable_melee_attack(store, this, target, this.dodge.counter_attack)
-				-- else
-				-- 	U.animation_start(this, this.dodge.animation, nil, store.tick_ts, false)
-				-- 	S:queue(this.dodge.counter_attack.sound, this.dodge.counter_attack.sound_args)
-				-- 	SU.y_hero_animation_wait(this)
 				end
 
 				this.dodge.active = false
@@ -421,11 +417,11 @@ local function hero_princess_update(this, store)
 				end
 			end
 
-			silent_dodges_start()
+			-- silent_dodges_start()
 
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-			silent_dodges_end()
+			-- silent_dodges_end()
 
 			if brk or sta ~= A_NO_TARGET then
 			elseif SU.soldier_go_back_step(store, this) then
@@ -765,13 +761,13 @@ local tt
 tt = RT("hero_princess", "hero")
 AC(tt, "melee", "timed_attacks", "dodge")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.hp_max = {230, 240, 250, 260, 270, 280, 290, 300, 310, 320}
+tt.hero.level_stats.hp_max = {260, 270, 280, 290, 300, 310, 320, 330, 340, 350}
 tt.hero.level_stats.melee_damage_min = {5, 6, 7, 8, 9, 10, 13, 14, 15, 16}
 tt.hero.level_stats.melee_damage_max = {7, 8, 9, 10, 13, 14, 15, 16, 17, 18}
-tt.hero.level_stats.dodge_chance = {0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9}
+tt.hero.level_stats.dodge_chance = {0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6}
 tt.hero.skills.skill_a = CC("hero_skill")
 tt.hero.skills.skill_a.damage_min = {20, 35, 50}
-tt.hero.skills.skill_a.damage_max = {25, 45, 70}
+tt.hero.skills.skill_a.damage_max = {40, 60, 80}
 tt.hero.skills.skill_a.damage_type = DAMAGE_MAGICAL
 tt.hero.skills.skill_a.cooldown = 10
 tt.hero.skills.skill_a.xp_gain = {90, 180, 270}
@@ -781,8 +777,8 @@ tt.hero.skills.skill_a.xp_level_steps = {
 	[8] = 3
 }
 tt.hero.skills.skill_b = CC("hero_skill")
-tt.hero.skills.skill_b.damage_min = {25, 50, 80}
-tt.hero.skills.skill_b.damage_max = {36, 65, 100}
+tt.hero.skills.skill_b.damage_min = {25, 55, 85}
+tt.hero.skills.skill_b.damage_max = {35, 70, 105}
 tt.hero.skills.skill_b.damage_type = DAMAGE_PHYSICAL
 tt.hero.skills.skill_b.cooldown = 10
 tt.hero.skills.skill_b.range = 200
@@ -794,7 +790,7 @@ tt.hero.skills.skill_b.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.skill_c = CC("hero_skill")
-tt.hero.skills.skill_c.damage_min = {55, 65, 90}
+tt.hero.skills.skill_c.damage_min = {55, 75, 90}
 tt.hero.skills.skill_c.damage_max = {85, 100, 135}
 tt.hero.skills.skill_c.damage_type = DAMAGE_EXPLOSION
 tt.hero.skills.skill_c.cooldown = {16, 14, 12}
@@ -808,7 +804,7 @@ tt.hero.skills.skill_c.xp_level_steps = {
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.level = 1
 tt.hero.skills.ultimate.cooldown = 25
-tt.hero.skills.ultimate.damage_min = 10
+tt.hero.skills.ultimate.damage_min = 12
 tt.hero.skills.ultimate.damage_max = 20
 tt.hero.skills.ultimate.target_min_hp = 400
 tt.hero.skills.ultimate.target_max_hp = 2000
@@ -852,7 +848,6 @@ tt.render.sprites[1].prefix = "hero_princessDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].draw_order = DO_HEROES
--- tt.render.sprites[1].scale = V.vv(1.1)
 tt.sound_events.change_rally_point = "HeroDaliaTaunt"
 tt.sound_events.death = "HeroDaliaTauntDeath"
 tt.sound_events.respawn = "HeroDaliaTauntIntro"
@@ -878,6 +873,7 @@ tt.dodge.counter_attack.xp_gain_factor = 1.75
 tt.dodge.counter_attack.hit_fx = "fx_princess_hit_critical"
 tt.dodge.counter_attack.hit_offset = vec_2(33, 16.5)
 tt.dodge.counter_attack.ignore_rally_change = true
+tt.dodge.counter_attack.never_interrupt = true
 tt.dodge.counter_attack.sound = "HeroDaliaDodgeStrikeCast"
 tt.dodge.counter_attack.sound_args = {
 	delay = fts(1)
@@ -983,7 +979,6 @@ tt.render.sprites[1].prefix = "hero_princessDef"
 tt.render.sprites[1].name = "death_idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].loop = true
-tt.render.sprites[1].scale = V.vv(1.1)
 
 tt = RT("mod_princess_ulti_lock", "mod_stun")
 tt.main_script.update = ulti_lock_update
@@ -1035,7 +1030,6 @@ tt.path_ni = nil
 tt = RT("bullet_princess_skill_b", "arrow")
 tt.render.sprites[1].name = "hero_princess_vfx_proyectil_bolso_1"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = V.vv(1.1)
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 tt.bullet.flight_time = fts(22)
 tt.bullet.particles_name = "ps_princess_skill_b_trail"
@@ -1061,50 +1055,41 @@ tt.shadow = "decal_princess_skill_b_shadow"
 tt = RT("decal_princess_skill_b_shadow", "decal_scripted")
 tt.render.sprites[1].name = "hero_princess_vfx_proyectil_bolso_sombra"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = V.vv(1.1)
 tt.main_script.update = skill_b_shadow_update
 
 tt = RT("decal_princess_skill_b_bag", "decal_tween")
 tt.render.sprites[1].name = "hero_princess_vfx_proyectil_bolso_sombra"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = V.vv(1.1)
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "hero_princess_vfx_proyectil_bolso_1"
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].z = tt.render.sprites[1].z
-tt.render.sprites[2].scale = V.vv(1.1)
 tt.tween.props[1].keys = {{0, 255}, {fts(60), 255}, {fts(75), 0}}
 
 tt = RT("decal_princess_skill_c", "decal_tween")
 tt.render.sprites[1].name = "hero_princess_vfx_skill_3_decal"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = V.vv(1.1)
 tt.tween.props[1].keys = {{0, 255}, {fts(45), 255}, {fts(75), 0}}
 
 tt = RT("fx_princess_hit_critical", "fx")
 tt.render.sprites[1].prefix = "hero_princess_vfx_hit_critical"
 tt.render.sprites[1].name = "action"
-tt.render.sprites[1].scale = V.vv(1.1)
 
 tt = RT("fx_princess_skill_b_hit", "fx")
 tt.render.sprites[1].prefix = "hero_princess_vfx_proyectil_bolso_hit"
 tt.render.sprites[1].name = "action"
-tt.render.sprites[1].scale = V.vv(1.1)
 
 tt = RT("fx_princess_ulti_explosion", "fx")
 tt.render.sprites[1].prefix = "hero_princess_vfx_ulti_explosion"
 tt.render.sprites[1].name = "action"
-tt.render.sprites[1].scale = V.vv(1.1)
 
 tt = RT("fx_princess_skill_c_blast", "fx")
 tt.render.sprites[1].prefix = "hero_princess_vfx_skill_3_blast"
 tt.render.sprites[1].name = "action"
-tt.render.sprites[1].scale = V.vv(1.1)
 
 tt = RT("fx_princess_skill_c_hit", "fx")
 tt.render.sprites[1].prefix = "hero_princess_vfx_skill_3_hit"
 tt.render.sprites[1].name = "action"
-tt.render.sprites[1].scale = V.vv(1.1)
 
 tt = RT("ps_princess_ulti_trail", "particle_system")
 tt.particle_system.name = "hero_princess_vfx_ulti_trail_enemies"

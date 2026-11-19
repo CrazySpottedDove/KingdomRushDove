@@ -446,11 +446,11 @@ function U.y_animation_wait_specific(entity, idx)
 end
 
 --- U.animation_start 的显式默认实现，性能更优
----@param entity any
----@param name any
----@param flip_x any
----@param ts any
----@param loop any
+---@param entity table
+---@param name string
+---@param flip_x boolean
+---@param ts number
+---@param loop boolean?
 function U.animation_start_default(entity, name, flip_x, ts, loop)
 	for i = 1, #entity.render.sprites do
 		local a = entity.render.sprites[i]
