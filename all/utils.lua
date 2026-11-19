@@ -2017,8 +2017,16 @@ function U.predict_damage(entity, damage)
 
 	local protection = U.calc_protection(entity.health, damage)
 
-	for i = 1, #damage.hooks do
-		damage.hooks[i](entity, damage, protection)
+	if #damage.hooks > 0 then
+		if not damage.applied_hooks then
+			damage.applied_hooks = {}
+		end
+		for i = 1, #damage.hooks do
+			if not damage.applied_hooks[i] then
+				damage.hooks[i](entity, damage, protection)
+				damage.applied_hooks[i] = true
+			end
+		end
 	end
 
 	local dvalue = damage.value

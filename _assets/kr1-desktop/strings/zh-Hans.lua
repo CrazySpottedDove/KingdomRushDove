@@ -8652,7 +8652,7 @@ return {
 	UPGRADE_1_archer_far_shots_NAME = "远程射击",
 	UPGRADE_1_archer_piercing_DESCRIPTION = "箭矢忽略敌人10点护甲。",
 	UPGRADE_1_archer_piercing_NAME = "穿刺射击",
-	UPGRADE_1_archer_precision_DESCRIPTION = "神射手攻击时有10%几率造成双倍伤害。",
+	UPGRADE_1_archer_precision_DESCRIPTION = "神射手攻击时有15%几率造成双倍伤害。",
 	UPGRADE_1_archer_precision_NAME = "精准射击",
 	UPGRADE_1_archer_salvage_DESCRIPTION = "神射手防御塔价格下降5%。",
 	UPGRADE_1_archer_salvage_NAME = "资源回收",

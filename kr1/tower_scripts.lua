@@ -47,16 +47,6 @@ end
 
 local fts = U.fts
 local queue_damage = U.queue_damage
-local function apply_precision(b)
-	local u = UP:get_upgrade("archer_precision")
-
-	if u and random() < u.chance then
-		b.bullet.damage_min = b.bullet.damage_min * u.damage_factor
-		b.bullet.damage_max = b.bullet.damage_max * u.damage_factor
-		b.bullet.pop = {"pop_crit"}
-		b.bullet.pop_conds = DR_DAMAGE
-	end
-end
 
 scripts.soldier_templar = {}
 
@@ -186,7 +176,6 @@ scripts.tower_archer_dwarf = {
 					b1.bullet.level = pow.level
 
 					if (b1.template_name == "dwarf_shotgun") then
-						apply_precision(b1)
 						b1.bullet.to:add(enemy.unit.hit_offset)
 					end
 
@@ -288,7 +277,6 @@ scripts.tower_ranger = {
 			b.bullet.level = level
 			b.bullet.damage_factor = tw.damage_factor
 
-			apply_precision(b)
 			simulation:queue_insert_entity(b)
 		end
 
@@ -416,7 +404,6 @@ scripts.tower_musketeer = {
 				end
 			end
 
-			apply_precision(b)
 			simulation:queue_insert_entity(b)
 
 			return b
@@ -804,7 +791,6 @@ scripts.tower_crossbow = {
 							bl.to = shoot_pos
 							b.pos = vclone(bl.from)
 
-							apply_precision(b)
 							simulation:queue_insert_entity(b)
 
 							while store.tick_ts - loop_ts < ma.cycle_time do
@@ -876,7 +862,6 @@ scripts.tower_crossbow = {
 							end
 						end
 
-						apply_precision(b1)
 						simulation:queue_insert_entity(b1)
 
 						while not animation_finished(this, shooter_sid) do
@@ -1012,7 +997,6 @@ scripts.tower_totem = {
 						b1.bullet.target_id = enemy.id
 						b1.bullet.source_id = this.id
 
-						apply_precision(b1)
 						simulation:queue_insert_entity(b1)
 
 						while not animation_finished(this, shooter_sid) do
@@ -1336,7 +1320,6 @@ scripts.tower_pirate_watchtower = {
 						bl.target_id = enemy.id
 						bl.source_id = this.id
 
-						apply_precision(b1)
 						simulation:queue_insert_entity(b1)
 
 						while not animation_finished(this, shooter_sid) do
@@ -1451,8 +1434,6 @@ scripts.tower_arcane = {
 			if attack.bullet == "arrow_arcane_burst" then
 				bl.payload_props["sleep_chance"] = this.attacks.list[3].chance * 5
 			end
-
-			apply_precision(b)
 
 			local dist = bl.from:dist(bl.to)
 
@@ -1641,8 +1622,6 @@ scripts.tower_silver = {
 			bl.source_id = this.id
 			bl.level = level or 0
 			bl.damage_factor = tw.damage_factor
-
-			apply_precision(b)
 
 			bl.flight_time = bl.flight_time_min + bl.to:dist(bl.from) * bl.flight_time_factor
 
@@ -6733,8 +6712,6 @@ function scripts.tower_dark_elf.update(this, store)
 					bullet.bullet.damage_min = bullet.bullet.damage_min + this.tower_upgrade_persistent_data.souls_extra_damage_min
 					bullet.bullet.damage_max = bullet.bullet.damage_max + this.tower_upgrade_persistent_data.souls_extra_damage_max
 				end
-
-				apply_precision(bullet)
 
 				if target then
 					bullet.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
@@ -12363,8 +12340,6 @@ function scripts.tower_sand.update(this, store)
 		b.bullet.level = level
 		b.bullet.damage_factor = this.tower.damage_factor
 
-		apply_precision(b)
-
 		b.bounces = 0
 
 		simulation:queue_insert_entity(b)
@@ -12880,7 +12855,6 @@ function scripts.tower_royal_archers.update(this, store)
 
 							bl.flight_time = bl.flight_time + arrow_number * fts(6)
 
-							apply_precision(b)
 							simulation:queue_insert_entity(b)
 							U.y_wait_unconditional(store, ap.time_between_arrows * tw.cooldown_factor)
 
@@ -12924,8 +12898,6 @@ function scripts.tower_royal_archers.update(this, store)
 
 						b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 						b.pos.y = this.pos.y + soffset.y + boffset.y
-
-						apply_precision(b)
 
 						local bl = b.bullet
 
@@ -16030,8 +16002,6 @@ function scripts.tower_ballista.update(this, store)
 
 					bl.source_id = this.id
 					bl.damage_factor = bl.damage_factor * tw.damage_factor
-
-					apply_precision(b)
 
 					if shoot_final_shot then
 						bl.damage_factor = this.powers.skill_final_shot.damage_factor * bl.damage_factor
@@ -21944,7 +21914,6 @@ function scripts.tower_shadow_archer.update(this, store)
 		b.bullet.level = level
 		b.bullet.damage_factor = this.tower.damage_factor
 
-		apply_precision(b)
 		simulation:queue_insert_entity(b)
 
 		if attack.shot_fx then
@@ -24440,7 +24409,6 @@ function scripts.tower_bone_flingers.update(this, store)
 					b1.bullet.target_id = enemy.id
 					b1.bullet.source_id = this.id
 
-					apply_precision(b1)
 					simulation:queue_insert_entity(b1)
 
 					while not U.animation_finished(this, shooter_sid) do
@@ -24741,7 +24709,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 						bullet.bullet.source_id = this.id
 
 						bullet.pos:copy(bullet.bullet.from)
-						apply_precision(bullet)
 						simulation:queue_insert_entity(bullet)
 
 						while store.tick_ts - loop_ts < a_multi.cycle_time do
@@ -24806,7 +24773,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 					bl.source_id = this.id
 					bl.damage_factor = this.tower.damage_factor
 
-					apply_precision(bullet)
 					simulation:queue_insert_entity(bullet)
 
 					local bullet_2 = E:clone_entity(bullet)
@@ -28889,7 +28855,7 @@ function scripts.decal_shaolin.update(this, store)
 
 						bullet.bullet.damage_factor = this.owner.tower.damage_factor / math.sqrt(math.max(this.target_round - 2, 1))
 
-						apply_precision(bullet)
+						bullet.main_script.insert(bullet, store)
 
 						local d = SU.create_bullet_damage_without_pops(bullet.bullet, target.id, this.id)
 						local mods = bullet.bullet.mods

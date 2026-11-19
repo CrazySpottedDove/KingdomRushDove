@@ -1604,15 +1604,6 @@ function scripts.tower_archer.update(this, store)
 						b.flight_time = b.flight_time_min + dist / at.range * b.flight_time_factor
 					end
 
-					local u = UP:get_upgrade("archer_precision")
-
-					if u and math.random() < u.chance then
-						b.damage_min = b.damage_min * u.damage_factor
-						b.damage_max = b.damage_max * u.damage_factor
-						b.pop = {"pop_crit"}
-						b.pop_conds = DR_DAMAGE
-					end
-
 					simulation:queue_insert_entity(bullet)
 				end
 
@@ -4288,15 +4279,6 @@ function scripts.shotgun.update(this, store)
 	end
 
 	if target and target.health and not target.health.dead then
-		local u = UP:get_upgrade("archer_precision")
-
-		if u and math.random() < u.chance then
-			b.damage_min = b.damage_min * u.damage_factor
-			b.damage_max = b.damage_max * u.damage_factor
-			b.pop = {"pop_crit"}
-			b.pop_conds = DR_DAMAGE
-		end
-
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
