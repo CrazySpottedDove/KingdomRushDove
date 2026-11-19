@@ -2319,8 +2319,16 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 	if attack.animations[1] then
 		an, af = U.animation_name_facing_point(this, attack.animations[1], target.pos)
+		U.animation_start_once_specific(this, an, af, store.tick_ts, 1)
+		while not U.animation_finished_default(this) do
+			if SU.attack_interrupted(this, attack) or (not attack.ignore_rally_change and this.nav_rally and this.nav_rally.new) then
+				goto label_70_1
+			elseif SU.dodge_active(this) then
+				this.render.sprites[1].alpha = 128
+			end
 
-		U.y_animation_play(this, an, af, store.tick_ts, 1)
+			coroutine.yield()
+		end
 	end
 
 	for i = 1, attack.loops do
@@ -2348,8 +2356,10 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 					goto label_70_1
 				end
 
-				if this.health.dead or this.nav_rally and this.nav_rally.new then
+				if this.health.dead or this.nav_rally and this.nav_rally.new or (this.dodge and this.dodge.active and not (this.dodge.silent or attack.never_interrupt)) then
 					goto label_70_1
+				elseif SU.dodge_active(this) then
+					this.render.sprites[1].alpha = 128
 				end
 
 				coroutine.yield()
@@ -2493,8 +2503,10 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 				goto label_70_0
 			end
 
-			if this.health.dead or this.nav_rally and this.nav_rally.new then
+			if this.health.dead or this.nav_rally and this.nav_rally.new or (this.dodge and this.dodge.active and not (this.dodge.silent or attack.never_interrupt)) then
 				goto label_70_1
+			elseif SU.dodge_active(this) then
+				this.render.sprites[1].alpha = 128
 			end
 
 			coroutine.yield()
@@ -2515,8 +2527,10 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 		U.animation_start_default(this, an, af, store.tick_ts, false)
 
 		while not U.animation_finished_default(this) do
-			if this.health.dead or this.nav_rally and this.nav_rally.new then
+			if this.health.dead or this.nav_rally and this.nav_rally.new or (this.dodge and this.dodge.active and not (this.dodge.silent or attack.never_interrupt)) then
 				break
+			elseif SU.dodge_active(this) then
+				this.render.sprites[1].alpha = 128
 			end
 
 			coroutine.yield()
@@ -2526,6 +2540,10 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 	::label_70_1::
 
 	S:stop(attack.sound)
+	if SU.dodge_active(this) and this.render.sprites[1].alpha == 128 then
+		this.render.sprites[1].alpha = 255
+		this.dodge.active = false
+	end
 
 	return attack_done
 end
