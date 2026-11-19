@@ -8734,9 +8734,7 @@ function scripts.enemy_twilight_scourger.update(this, store)
 											d.value = U.frandom(a.damage_min, a.damage_max)
 										end
 
-										local pd = U.predict_damage(target, d)
-
-										d.value = math.min(pd, target.health.hp - 1)
+										d.value = math.min(d.value, target.health.hp - 1)
 
 										queue_damage(store, d)
 

@@ -8649,7 +8649,7 @@ return {
 	UPGRADE_1_archer_far_shots_NAME = "Far Shots",
 	UPGRADE_1_archer_piercing_DESCRIPTION = "Arrows ignore 10 points of enemy armor.",
 	UPGRADE_1_archer_piercing_NAME = "Piercing Shots",
-	UPGRADE_1_archer_precision_DESCRIPTION = "Marksmen attacks have a 10% chance of dealing double damage.",
+	UPGRADE_1_archer_precision_DESCRIPTION = "Marksmen attacks have a 15% chance of dealing double damage.",
 	UPGRADE_1_archer_precision_NAME = "Precision",
 	UPGRADE_1_archer_salvage_DESCRIPTION = "Marksmen towers return 90% of value when sold.",
 	UPGRADE_1_archer_salvage_NAME = "Salvage",

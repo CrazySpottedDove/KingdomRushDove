@@ -2,6 +2,7 @@ local H = require("kr1.upgrades.upgrade_utils")
 
 local T = H.T
 local E = require("entity_db")
+local random = math.random
 local mul_dmg = H.mul_dmg
 local scale_tower_price = H.scale_tower_price
 local scale_power_prices = H.scale_power_prices
@@ -80,12 +81,41 @@ local techs = {
 		end
 	},
 	archer_precision = {
-		chance = 0.1,
+		chance = 0.15,
 		class = "archers",
 		damage_factor = 2,
 		icon = 17,
 		level = 5,
-		price = 2
+		price = 2,
+		patch = function(UP, u)
+			table.append(arrows, UP.arrows)
+			local arrows = UP.arrows
+
+			for _, n in ipairs(arrows) do
+				local t = T(n)
+
+				if t then
+					local insert = t.main_script.insert
+
+					t.main_script.insert = function(this, store)
+						if random() < u.chance then
+							local b = this.bullet
+
+							b.damage_min = b.damage_min * u.damage_factor
+							b.damage_max = b.damage_max * u.damage_factor
+							b.pop = {"pop_crit"}
+							b.pop_conds = DR_DAMAGE
+						end
+
+						if insert then
+							return insert(this, store)
+						end
+
+						return true
+					end
+				end
+			end
+		end
 	},
 	archer_salvage = {
 		class = "archers",
