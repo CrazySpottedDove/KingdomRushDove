@@ -16,7 +16,6 @@ local systems_list = {
 	"editor_overrides",
 	"editor_script",
 	"last_hook",
-	"assets_checker",
 	"enemy"
 }
 

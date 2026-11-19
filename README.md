@@ -29,39 +29,61 @@ love .
 
 可以使用 Makefile 提供的命令。
 
-## 美术资源的同步
+## 美术资源存档
 
-### 预备工具
+### 目录
 
-确保 `git` 和 `gh` 已添加到环境变量。确保 `lua` 或 `luajit`
-已添加到环境变量。（下面的内容，使用 `lua` 和使用 `luajit` 同理）。
+- PNG 存档：`assets/`（独立 git 仓库，主仓库忽略）
+  - `assets/images/<page>.png`
+  - 纳入 git 的每个 PNG 必须能在 `_assets/` 找到同名 `.dds`
+  - `assets/images/append/` 只保留本地，不提交
+- 运行时资源：`_assets/`
+  - `_assets/kr1-desktop/images/fullhd/<page>.dds`
+  - `_assets/kr1-desktop/sounds/files/*`
+  - `_assets/all-desktop/fonts/*`
+- `assets` 中的 PNG **不保证**是当前 DDS 的源；它只是来源存档。
 
-### 注册本地美术资源路径
+### 两条合法路径
 
-首先，在 `makefiles` 目录下创建
-`.assets_path.txt`，在里面写上你本地美术资源目录。如，我在 `wsl`
-下开发，但是美术资源放在 windows 中，那么我的 `.assets_path.txt` 的内容就可能是
-
-```txt
-/mnt/d/Local-App/Kingdom_Rush_dove/Kingdom Rush/_assets
-```
-
-### 更新美术资源索引
-
-在项目目录下运行
+优先：先 PNG 源，后 DDS
 
 ```sh
-lua ./scripts/gen_assets_index.lua
+# 1. 放入 assets/images/<name>.png
+luajit scripts/assets/encode_dds.lua \
+  assets/images/<name>.png \
+  _assets/kr1-desktop/images/fullhd/<name>.dds
+make index
 ```
 
-来更新美术资源索引。这个命令会在 `_assets` 下生成/更新美术资源索引
-`assets_index.lua`。
+兜底：先 DDS，后解码 PNG
+
+```sh
+# 1. 放入 _assets/kr1-desktop/images/fullhd/<name>.dds
+luajit scripts/assets/decode_dds.lua \
+  _assets/kr1-desktop/images/fullhd/<name>.dds \
+  assets/images/<name>.png
+make index
+```
+
+第二种路径产生的 PNG 只作存档；以后拿到无损源时应优先替换。
+
+### 更新运行时索引
+
+```sh
+make index
+```
+
+生成 `_assets/assets_index.bin`。`assets/` 没有索引。
+
+查看索引：
+
+```sh
+luajit scripts/assets/index.lua decode _assets/assets_index.bin
+```
 
 ### 上传美术资源
 
 安全起见，client 需联系作者获得。
-
-在项目目录下运行
 
 ```cmd
 .\client.exe --upload-assets
@@ -70,12 +92,13 @@ lua ./scripts/gen_assets_index.lua
 或
 
 ```sh
+./client --upload-assets --dry-run   # 先看要传什么
 ./client --upload-assets
 ```
 
-### 下载美术资源
+上传后提交并 push 新的 `_assets/assets_index.bin`，服务端 pre-receive 会校验。
 
-在项目目录下运行
+### 下载美术资源
 
 ```cmd
 .\client.exe --sync-assets
@@ -85,6 +108,12 @@ lua ./scripts/gen_assets_index.lua
 
 ```sh
 ./client --sync-assets
+```
+
+如果本机有 `assets/` 源仓库，不要用 `--sync-assets` 覆盖运行时目录，改用：
+
+```sh
+git -C assets pull
 ```
 
 ## 服务器仓库

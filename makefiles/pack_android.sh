@@ -178,8 +178,8 @@ calc_love_fingerprint() {
             -path "./.deepseek" -prune -o \
             -path "./.codewhale" -prune -o \
             -path "./.agents" -prune -o \
-            -path "./.images" -prune -o \
-            -path "./.images_backup" -prune -o \
+            -path "./assets" -prune -o \
+            -path "./.assets_backup" -prune -o \
             -path "*/__pycache__" -prune -o \
             -type f ! -name "*.dds" ! -name "*.exe" \
             ! -name "*.pyc" ! -name "*.pyo" \
@@ -198,8 +198,8 @@ calc_love_fingerprint() {
         | sort -z \
         | xargs -0 stat -c 'DDS|%n|%s|%Y' 2>/dev/null || true
 
-        # .images 中的原始 png（优先于 dds→png 转换）
-        find ".images" -maxdepth 1 -type f -name "*.png" -print0 2>/dev/null \
+        # assets/images 源图（仅 PNG 存档）
+        find "assets/images" -maxdepth 1 -type f -name "*.png" -print0 2>/dev/null \
         | sort -z \
         | xargs -0 stat -c 'IMG|%n|%s|%Y' 2>/dev/null || true
     } | sha256sum | awk '{print $1}'
@@ -268,7 +268,6 @@ if [ "$rebuild_love" -eq 1 ]; then
         "current_version_commit_hash.txt"
         ".gitignore"
         "游玩必读说明，务必阅读.url"
-        "_assets/assets_index.lua"
         "_assets/tmp_download/*"
         "lldebugger.lua"
         "kr1/data/game_animations.lua"
@@ -331,8 +330,8 @@ if [ "$rebuild_love" -eq 1 ]; then
             mkdir -p "$(dirname "$dest")"
             mkdir -p "$(dirname "$cache_file")"
 
-            # 优先使用 .images 中的原始 PNG（同尺寸时避免 dds→png 损耗）
-            png_alt=".images/${base_name_only}.png"
+            # 优先使用 assets/images 中的原始 PNG（同尺寸时避免 dds→png 损耗）
+            png_alt="assets/images/${base_name_only}.png"
             use_png=0
             if [ -f "$png_alt" ]; then
                 png_dim=$("$IM_CMD" identify -format "%wx%h" "$png_alt" 2>/dev/null || true)

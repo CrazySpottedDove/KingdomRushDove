@@ -82,7 +82,7 @@ KingdomRushDove/
 │       ├── balance.lua       # 数值平衡
 │       └── exoskeletons/     # 骨骼动画数据
 ├── _assets/                  # 资源索引（不含实际图片/音频）
-│   └── assets_index.lua      # 资源路径索引
+│   └── assets_index.bin      # 资源路径索引
 ├── plugin/                     # Plugin 系统
 │   ├── plugin_main.lua          # Plugin 系统入口
 │   ├── plugin_globals.lua       # 全局变量注入
@@ -104,7 +104,7 @@ KingdomRushDove/
 │   ├── hump/                 # HUMP 库（vector-light, signal）
 │   └── ...                   # json, serpent, middleclass 等
 ├── patches/                  # 补丁文件（default.lua 等）
-├── scripts/                  # 开发辅助脚本（gen_assets_index.lua 等）
+├── scripts/                  # 开发辅助脚本（assets/ 等）
 ├── makefiles/                # Makefile 辅助文件
 ├── client / client.exe       # 资源同步客户端（需联系作者获取）
 └── aidoc/                    # AI 文档（本目录）
@@ -193,7 +193,7 @@ simulation:do_tick(dt)
 "render",           -- ★ 渲染帧维护与排序
 "sound_events", "seen_tracker", "spatial_index",
 "last_hook",        -- ★ 最后钩子，维护各分类索引
-"lights", "assets_checker", "wave_generator"
+"lights", "wave_generator"
 ```
 
 ---
@@ -529,8 +529,9 @@ perf.reset() -- 每帧重置
 
 ## 十四、资源系统
 
-- 美术资源（图集/音效）**不纳入版控**，通过 `client.exe --sync-assets` 同步
-- 资源索引由 `lua ./scripts/gen_assets_index.lua` 生成，输出到 `_assets/assets_index.lua`
+- `assets/` 是独立 git 仓库，只存 PNG 存档；`_assets` 是运行时资源目录
+- `assets` 中的 PNG 不保证是 `_assets` 中 DDS 的源，只用于追溯
+- 资源索引由 `make index` 生成，输出到 `_assets/assets_index.bin`（二进制）
 - 打包发布时资源存于 `all-desktop.dat` / `kr1-desktop.dat`（fused 模式挂载）
 - 图集数据库：`lib/klove/image_db.lua`（`I`），字体数据库：`lib/klove/font_db.lua`（`F`）
 

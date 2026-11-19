@@ -16,8 +16,8 @@ require("gg_views_custom")
 require("klove.kui")
 
 local ATLAS_DIR = "_assets/kr1-desktop/images/fullhd"
-local IMAGES_DIR = ".images"
-local BACKUP_DIR = ".images_backup"
+local IMAGES_DIR = "assets/images"
+local BACKUP_DIR = ".assets_backup"
 local REF_W = 1920
 local REF_H = 1080
 
@@ -163,7 +163,7 @@ function atlas_manager:preview_group(gname)
 	if not group then
 		return
 	end
-	-- 松散组（如 .images/append）：把每个 png 作为一页预览，可直接单图查看
+	-- 松散组（如 assets/images/append）：把每个 png 作为一页预览，可直接单图查看
 	if group._is_loose_group then
 		local files = {}
 		for _, fname in ipairs(group.frame_order) do
@@ -564,7 +564,7 @@ function atlas_manager:build_header()
 	local header = GGPanelHeader:new(_("ATLAS_MGR_TITLE"), 300)
 	header.pos = V.v(20, 14)
 	ui.window:add_child(header)
-	-- 重新扫描 .images/append：把新增的小图同步进松散组 append
+	-- 重新扫描 assets/images/append：把新增的小图同步进松散组 append
 	local refresh_btn = self:make_button(_("ATLAS_MGR_BTN_REFRESH_APPEND"), V.v(110, 24))
 	refresh_btn.pos = V.v(330, 14)
 	refresh_btn._label.font_size = 12 * rs
@@ -1569,7 +1569,7 @@ end
 
 local _dds_cache = {}
 
--- 扫描 .images/append 平铺 png，返回 frames（loose frame 元数据）与有序名称列表
+-- 扫描 assets/images/append 平铺 png，返回 frames（loose frame 元数据）与有序名称列表
 function atlas_manager:_scan_append_dir_frames()
 	local frames = {}
 	local frame_order = {}
@@ -1619,7 +1619,7 @@ function atlas_manager:_scan_append_dir_frames()
 	return frames, frame_order
 end
 
--- 刷新 .images/append 松散组（组名 append），保留仍存在的帧的选中状态
+-- 刷新 assets/images/append 松散组（组名 append），保留仍存在的帧的选中状态
 function atlas_manager:refresh_append_group()
 	local gname = "append"
 	local frames, frame_order = self:_scan_append_dir_frames()
@@ -1751,7 +1751,7 @@ function atlas_manager:refresh_groups()
 			state.group_order[#state.group_order + 1] = f.base
 		end
 	end
-	-- scan loose PNGs: .images/append 下的平铺小图，注册为一个可勾选的松散组
+	-- scan loose PNGs: assets/images/append 下的平铺小图，注册为一个可勾选的松散组
 	-- （组名固定 append，可与其它图集帧一起参与合并）
 	self:refresh_append_group()
 	self:set_status(string.format(_("ATLAS_MGR_STATUS_LOADED_ATLASES"), #state.group_order))
@@ -2410,7 +2410,7 @@ function atlas_manager:get_selected_frame_list()
 end
 
 --- 帧的内容指纹。内容完全一致的帧只打包一份，其余名字写成 alias 指向规范帧。
---- - 松散帧（.images/append 的独立 png）：文件内容 md5（字节一致 → 尺寸/裁剪必然一致）
+--- - 松散帧（assets/images/append 的独立 png）：文件内容 md5（字节一致 → 尺寸/裁剪必然一致）
 --- - 图集帧：源页 + 源矩形 + 逻辑框 + 裁剪 + 缩放，四项全等才认定可复用
 function atlas_manager:_frame_content_key(sel)
 	local f = sel.frame
@@ -3311,7 +3311,7 @@ function atlas_manager:do_split(max_size)
 	popup.file_idx = 1
 	self:select_preview_file(1)
 	ui.split_dialog.hidden = true
-	-- write split page PNGs to .images so they can be previewed / selectively converted
+	-- write split page PNGs to assets/images so they can be previewed / selectively converted
 	local merge_name = ui.merge_name_input and ui.merge_name_input._text or state.merge_name or "merged_atlas"
 	if merge_name == "" then
 		merge_name = "merged_atlas"
@@ -5034,7 +5034,7 @@ function atlas_manager:rpk_stage()
 end
 
 -- 可靠备份：把 base 相关旧文件（lua/bin/abin、base.dds、base-N.dds、旧PNG）逐一
--- 用 io 直接拷贝到 .images_backup/<时间戳>_<base>/，并返回成功拷贝的文件清单。
+-- 用 io 直接拷贝到 .assets_backup/<时间戳>_<base>/，并返回成功拷贝的文件清单。
 function atlas_manager:rpk_backup_old(base)
 	local back_dir = real_path(BACKUP_DIR)
 	os.execute("mkdir -p " .. back_dir:gsub(" ", "\\ "))
@@ -5080,7 +5080,7 @@ function atlas_manager:rpk_backup_old(base)
 		end
 	end
 	scan_copy(atlas_real, "^" .. base .. "%-%d+%.dds$")
-	-- .images 里的旧 png
+	-- assets/images 里的旧 png
 	scan_copy(imgs_real, "^" .. base .. "%.png$")
 	scan_copy(imgs_real, "^" .. base .. "%-%d+%.png$")
 	return {
@@ -5154,7 +5154,7 @@ function atlas_manager:rpk_commit()
 			end
 		end
 	end
-	-- 3) 新 png 进 .images
+	-- 3) 新 png 进 assets/images
 	for _, o in ipairs(rp.outs_staged) do
 		local f = io.open(rp.stage.dir .. "/" .. o.page .. ".png", "rb")
 		if f then

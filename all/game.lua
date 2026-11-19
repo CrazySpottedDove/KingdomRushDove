@@ -230,9 +230,8 @@ game.simulation_systems = {
 	"timed",
 	"sound_events",
 	"enemy",
-	"last_hook",
-	-- "lights",
-	"assets_checker"
+	"last_hook"
+-- "lights",
 }
 
 local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_done)

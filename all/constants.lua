@@ -1,6 +1,5 @@
 -- chunkname: @./all/constants.lua
 local V = require("lib.klua.vector")
-ASSETS_CHECK_ENABLED = false
 GEN_WAVES_ENABLED = false
 PATH_POINTS_DISTANCE = 7
 -- 运行时平台是否为安卓

@@ -49573,7 +49573,7 @@ function scripts.enemy_hammercrow.update(this, store, script)
 				end
 			end
 
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, nil, break_fn)
+			local cont, blocker = SU.y_enemy_walk_until_blocked(store, this, nil, break_fn)
 
 			if not cont then
 			-- block empty
@@ -49585,14 +49585,6 @@ function scripts.enemy_hammercrow.update(this, store, script)
 
 					while SU.can_melee_blocker(store, this, blocker) and not break_fn() do
 						if not SU.y_enemy_melee_attacks(store, this, blocker) then
-							goto label_1787_0
-						end
-
-						coroutine.yield()
-					end
-				elseif ranged then
-					while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 and not break_fn() do
-						if not SU.y_enemy_range_attacks(store, this, ranged) then
 							goto label_1787_0
 						end
 

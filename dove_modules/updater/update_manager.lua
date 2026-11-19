@@ -17,6 +17,7 @@ local FU = require("all.file_utils")
 local zip = require("lib.zip")
 local utf8_util = require("lib.utf8_utils")
 local version = require("version")
+local assets_index_bin = require("dove_modules.updater.assets_index_bin")
 
 local branch = version.branch or "master"
 local fatal_update_error = nil
@@ -343,38 +344,6 @@ local function async_sleep(seconds)
 	while love.timer.getTime() - t < seconds do
 		coroutine.yield()
 	end
-end
-
--- 与 gen_assets_index.lua 中的 hash 计算保持一致
-local function file_hash(path)
-	local bit = require("bit")
-	local f = io.open(path, "rb")
-	if not f then
-		return "0"
-	end
-
-	local size = f:seek("end")
-	local hash = 2166136261
-	local prime = 16777619
-	local mod = 0xFFFFFFFF
-
-	f:seek("set", 0)
-	local head = f:read(4096) or ""
-	for i = 1, #head do
-		hash = (bit.bxor(hash, head:byte(i)) * prime) % mod
-	end
-
-	if size > 8192 then
-		f:seek("set", size - 4096)
-		local tail = f:read(4096) or ""
-		for i = 1, #tail do
-			hash = (bit.bxor(hash, tail:byte(i)) * prime) % mod
-		end
-	end
-
-	hash = (bit.bxor(hash, size) * prime) % mod
-	f:close()
-	return string.format("%08x", hash)
 end
 
 -- URL 编码（简单版本，适用于文件路径）
@@ -745,6 +714,8 @@ local MAX_RAW_BUNDLE_SIZE = 20 * 1024 * 1024
 -- 增量更新可接受的资源总量上限：超过则拒绝增量更新，提示玩家直接安装新本体
 local MAX_INCREMENTAL_ASSET_SIZE = 100 * 1024 * 1024
 
+local pending_asset_index = nil
+
 local function diff_assets()
 	set_state(STATE_CHECKING_ASSETS)
 	local tmp_dir = ".assets_diff_tmp"
@@ -754,9 +725,9 @@ local function diff_assets()
 	local url_base = server_address .. "file"
 	log_info(_("UPDATER_UI_LOG_FETCH_ASSET_INDEX"))
 
-	local tmp_file_path = tmp_dir .. "/assets_index.lua"
+	local tmp_file_path = tmp_dir .. "/assets_index.bin"
 	local target_commit = update_response and update_response.target_commit_hash
-	local ok, index_content = download_to_lovefs_chunked(url_base, "_assets/assets_index.lua", tmp_file_path, target_commit)
+	local ok, index_content = download_to_lovefs_chunked(url_base, "_assets/assets_index.bin", tmp_file_path, target_commit)
 
 	if not ok then
 		log_error(_("UPDATER_UI_ERR_ASSET_INDEX_DOWNLOAD"))
@@ -766,29 +737,39 @@ local function diff_assets()
 
 	log_info(_("UPDATER_UI_LOG_ASSET_INDEX_DONE"))
 
-	-- 远程的 assets_index 内容
-	local remote_assets_index = loadstring(index_content)()
-	-- 本地的 assets_index 内容
-	local local_assets_index = love.filesystem.load("_assets/assets_index.lua")()
+	local ok_remote, remote_assets_index = pcall(assets_index_bin.parse, index_content)
+	if not ok_remote then
+		log_error("资源索引解析失败: " .. tostring(remote_assets_index))
+		FS.remove(tmp_dir)
+		return nil
+	end
+	pending_asset_index = remote_assets_index
+
+	local local_assets_index = nil
+	local ok_local, local_data = pcall(FS.read, "_assets/assets_index.bin")
+	if ok_local and local_data then
+		local ok_parse, parsed = pcall(assets_index_bin.parse, local_data)
+		if ok_parse then
+			local_assets_index = parsed
+		end
+	end
 
 	local added_or_modified = {}
-	for file, info in pairs(remote_assets_index) do
-		local local_info = local_assets_index[file]
-		if not local_info then
-			added_or_modified[#added_or_modified + 1] = file
-		else
-			if not local_info[2] then
-				local_info[2] = file_hash("_assets/" .. file)
-			end
-
-			if local_info[1] ~= info[1] or local_info[2] ~= info[2] then
-				added_or_modified[#added_or_modified + 1] = file
+	if not local_assets_index then
+		for _, entry in ipairs(remote_assets_index.entries) do
+			added_or_modified[#added_or_modified + 1] = entry.path
+		end
+	else
+		for _, entry in ipairs(remote_assets_index.entries) do
+			local local_info = local_assets_index.map[entry.path]
+			if not local_info or local_info.size ~= entry.size or local_info.sha256 ~= entry.sha256 then
+				added_or_modified[#added_or_modified + 1] = entry.path
 			end
 		end
 	end
 
 	FS.remove(tmp_dir)
-	return added_or_modified, remote_assets_index
+	return added_or_modified, remote_assets_index.map
 end
 
 -- 【重构】下载资源到缓存目录（不直接覆盖本地文件）
@@ -910,7 +891,7 @@ local function sync_assets_bundled(added_or_modified, asset_sizes)
 
 	local total_size = 0
 	for _, f in ipairs(added_or_modified) do
-		total_size = total_size + ((asset_sizes and asset_sizes[f]) and asset_sizes[f][1] or 0)
+		total_size = total_size + ((asset_sizes and asset_sizes[f]) and asset_sizes[f].size or 0)
 	end
 
 	if file_count > 1000 or total_size > 100 * 1024 * 1024 then
@@ -926,7 +907,7 @@ local function sync_assets_bundled(added_or_modified, asset_sizes)
 	local current = {}
 	local current_size = 0
 	for _, f in ipairs(added_or_modified) do
-		local fsize = (asset_sizes and asset_sizes[f]) and asset_sizes[f][1] or 0
+		local fsize = (asset_sizes and asset_sizes[f]) and asset_sizes[f].size or 0
 		if current_size + fsize > MAX_RAW_BUNDLE_SIZE and #current > 0 then
 			table.insert(batches, current)
 			current = {f}
@@ -1107,6 +1088,14 @@ local function commit_all_changes(info)
 			return false
 		end
 
+		local expected = pending_asset_index and pending_asset_index[file_path]
+		if expected then
+			if #content ~= expected.size or assets_index_bin.hash_string(content) ~= expected.sha256 then
+				log_error("资源校验失败: " .. file_path)
+				return false
+			end
+		end
+
 		-- 写入本地文件
 		FU.ensure_parent_dir(local_path)
 		local success = FU.write_file(local_path, content)
@@ -1272,7 +1261,7 @@ local function do_update()
 	local total_asset_size = 0
 	for _i, file_path in ipairs(added_or_modified_assets) do
 		local file_info = asset_sizes and asset_sizes[file_path]
-		total_asset_size = total_asset_size + ((file_info and file_info[1]) or 0)
+		total_asset_size = total_asset_size + ((file_info and file_info.size) or 0)
 	end
 	if total_asset_size > MAX_INCREMENTAL_ASSET_SIZE then
 		return {

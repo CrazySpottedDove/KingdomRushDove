@@ -202,15 +202,6 @@ local log = require("lib.klua.log")
 require("lib.klua.table")
 require("lib.klua.dump")
 
--- 伤害调试等开关：love . --damage-trace …（与 constants.lua 中 DEBUG_* 对应）
-for i = 1, #arg do
-	local a = arg[i]
-
-	if a == "assets" then
-		ASSETS_CHECK_ENABLED = true
-	end
-end
-
 if version.build == "RELEASE" then
 	DEBUG = nil
 	log:set_level("error")

@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check check-text organize_strings version_check android windows dev-windows dev-installer publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check component_cloner
+.PHONY: all debug package repackage sync branch master index main_version_jump check-text organize_strings version_check android windows dev-windows dev-installer publish publish_retry compile compile_animations compile_atlas compile_exos compile_exos_check component_cloner assets-commit assets-checkout
 
 all: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -40,8 +40,6 @@ sync-full:
 debug: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" debug
 
-assets_check: _examine_dir_map sync
-	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" assets
 
 # 用于发布小的版本更新，使得更新器端可以在 master 分支上检查到最新更新
 # master 为“只含编译产物”的投影分支，由 master.sh 生成（不再 merge dev）
@@ -68,17 +66,16 @@ branch:
 master:
 	@bash $(MAKE_FILE_DIR)/master.sh
 
-# 建立美术资源索引，在上传前必须使用
+# 建立运行时资源索引；assets/ 只是 PNG 存档，没有索引
 index:
-	@luajit scripts/gen_assets_index.lua
+	@luajit scripts/assets/index.lua build-runtime
 
-# 上传修改的美术资源(Deprecated)
-upload:
-	@lua scripts/upload_assets.lua
+# 在 assets 仓库提交，提交信息为主仓库 commit hash
+assets-commit:
+	@luajit scripts/assets/repo.lua commit "$(shell git rev-parse HEAD)"
 
-# 拉取最新的资源文件到本地(Deprecated)
-download:
-	@lua scripts/download_assets.lua
+assets-checkout:
+	@luajit scripts/assets/repo.lua checkout "$(main)"
 
 # deprecated
 # main_version_jump: sync
