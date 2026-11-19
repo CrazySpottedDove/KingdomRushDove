@@ -1,5 +1,5 @@
 -- scripts/atlas_repack/main.lua
--- 批量图集重打包（以 .images/<page>.png 为像素源）：
+-- 批量图集重打包（以 assets/images/<page>.png 为像素源）：
 --   1) 去 mipmap（重打包/重编码时 -nomips；无源可改的页做无损 mip 剥离）
 --   2) 允许非常规尺寸：对每页取「当前 / 包围盒裁剪 / 重新排布打包」中面积最小者
 --      - 裁剪：只裁右/下（保留左上 health-bar 块），DDS 按 BC 块无损裁剪
@@ -8,7 +8,7 @@
 --
 -- 用法（WSL）：
 --   love scripts/atlas_repack                 # 只报告
---   love scripts/atlas_repack --apply         # 执行（先备份 .images + 图集描述）
+--   love scripts/atlas_repack --apply         # 执行（先备份 assets/images + 图集描述）
 --   love scripts/atlas_repack --apply --only=<page> [--no-backup]
 --   love scripts/atlas_repack --repack-dds    # 无 PNG 的页也重排（需 GPU 解码 DDS，dds->dds）
 
@@ -373,8 +373,8 @@ local function main()
 	parse_args(arg, love.arg, _cmdline)
 	ROOT = resolve_root()
 	ATLAS_DIR = ROOT .. "/_assets/kr1-desktop/images/fullhd"
-	IMG_DIR = ROOT .. "/.images"
-	BACKUP_DIR = ROOT .. "/.images_backup"
+	IMG_DIR = ROOT .. "/assets/images"
+	BACKUP_DIR = ROOT .. "/.assets_backup"
 	package.loaded["lib.klove.atlas_binary"] = dofile(ROOT .. "/lib/klove/atlas_binary.lua")
 	atlas_util = dofile(ROOT .. "/dove_modules/atlas_manager/atlas_util.lua")
 	binpack = dofile(ROOT .. "/dove_modules/atlas_manager/atlas_binpack.lua")
@@ -585,7 +585,7 @@ local function main()
 		local ts = os.date("%Y%m%d_%H%M%S")
 		local dst = BACKUP_DIR .. "/" .. ts .. "_pre_repack"
 		os.execute('mkdir -p "' .. BACKUP_DIR .. '"')
-		print("[backup] .images -> " .. dst)
+		print("[backup] assets/images -> " .. dst)
 		local r = os.execute('cp -a --reflink=auto "' .. IMG_DIR .. '" "' .. dst .. '"')
 		if not ((r == 0) or (r == true)) then
 			print("[backup] 失败，中止。")

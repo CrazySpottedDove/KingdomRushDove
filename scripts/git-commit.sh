@@ -42,4 +42,16 @@ git add dove_modules/data/changelog/
 # Step 5: squash into the same commit
 git commit --amend --no-edit
 
+# Step 6: record assets repo commit against the final main commit hash.
+MAIN_HEAD="$(git rev-parse HEAD)"
+if [ -d "$ROOT_DIR/assets/.git" ]; then
+	FORCE_EMPTY=""
+	if git diff-tree --no-commit-id --name-only -r "$MAIN_HEAD" -- _assets/assets_index.bin | grep -q .; then
+		FORCE_EMPTY="--force-empty"
+	fi
+	if ! luajit ./scripts/assets/repo.lua commit "$MAIN_HEAD" $FORCE_EMPTY; then
+		echo "WARN: assets 仓库提交失败，可稍后运行 make assets-commit" >&2
+	fi
+fi
+
 echo "Changelog updated and squashed into the commit."

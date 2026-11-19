@@ -40,10 +40,10 @@ exit /b 0
 
 :index
 echo 生成资源索引...
-if exist "scripts/gen_assets_index.lua" (
-    %LUA_EXEC% "scripts/gen_assets_index.lua"
+if exist "scripts\assets\index.lua" (
+    %LUA_EXEC% "scripts\assets\index.lua" build-runtime
 ) else (
-    echo 错误: 未找到 gen_assets_index.lua
+    echo 错误: 未找到 scripts\assets\index.lua
     exit /b 1
 )
 exit /b 0

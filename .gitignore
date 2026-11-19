@@ -4,6 +4,8 @@ _assets/kr1-desktop/icons
 _assets/kr1-desktop/images/fullhd/*.png
 _assets/kr1-desktop/images/fullhd/*.dds
 _assets/kr1-desktop/sounds/files
+/assets/
+/.assets_backup/
 _assets/kr1-desktop/strings/de.lua
 _assets/kr1-desktop/strings/es.lua
 _assets/kr1-desktop/strings/fr.lua
