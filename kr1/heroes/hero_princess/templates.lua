@@ -222,8 +222,8 @@ local function princess_level_up(this, store, initial)
 	local t2 = this.hero.skills.talent_2
 	local counter_factor = t2.damage_factor
 
-	this.dodge.counter_attack.damage_min = counter_factor * ls.melee_damage_min[hl] * #this.melee.attacks[1].hit_times
-	this.dodge.counter_attack.damage_max = counter_factor * ls.melee_damage_max[hl] * #this.melee.attacks[1].hit_times
+	this.dodge.counter_attack.damage_min = counter_factor * ls.melee_damage_min[hl] * #this.melee.attacks[1].hit_times / #this.dodge.counter_attack.hit_times
+	this.dodge.counter_attack.damage_max = counter_factor * ls.melee_damage_max[hl] * #this.melee.attacks[1].hit_times / #this.dodge.counter_attack.hit_times
 
 	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
 	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
@@ -876,7 +876,7 @@ tt.render.sprites[1].prefix = "hero_princessDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].draw_order = DO_HEROES
-tt.render.sprites[1].scale = V.vv(1.1)
+-- tt.render.sprites[1].scale = V.vv(1.1)
 tt.sound_events.change_rally_point = "HeroDaliaTaunt"
 tt.sound_events.death = "HeroDaliaTauntDeath"
 tt.sound_events.respawn = "HeroDaliaTauntIntro"
