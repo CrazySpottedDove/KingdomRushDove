@@ -3106,25 +3106,27 @@ function scripts.enemy_bomb.update(this, store)
 	end
 
 	for _, target in ipairs(targets) do
-		local d = E.assign_damage(b.damage_type, 0, this.id, target.id)
+		if not SU.unit_dodges(store, target, true) then
+			local d = E.assign_damage(b.damage_type, 0, this.id, target.id)
 
-		if b.damage_decay_random then
-			d.value = U.frandom(b.damage_min, b.damage_max)
-		else
-			local dist_factor = U.dist_factor_inside_ellipse(target.pos, this.pos, b.damage_radius)
+			if b.damage_decay_random then
+				d.value = U.frandom(b.damage_min, b.damage_max)
+			else
+				local dist_factor = U.dist_factor_inside_ellipse(target.pos, this.pos, b.damage_radius)
 
-			d.value = b.damage_max - (b.damage_max - b.damage_min) * dist_factor
-		end
+				d.value = b.damage_max - (b.damage_max - b.damage_min) * dist_factor
+			end
 
-		queue_damage(store, d)
+			queue_damage(store, d)
 
-		if b.mod then
-			local mod = E:create_entity(b.mod)
+			if b.mod then
+				local mod = E:create_entity(b.mod)
 
-			mod.modifier.target_id = target.id
-			mod.modifier.source_id = this.id
+				mod.modifier.target_id = target.id
+				mod.modifier.source_id = this.id
 
-			simulation:queue_insert_entity(mod)
+				simulation:queue_insert_entity(mod)
+			end
 		end
 	end
 

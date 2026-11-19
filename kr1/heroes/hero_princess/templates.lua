@@ -284,24 +284,10 @@ local function hero_princess_update(this, store)
 
 	this._t1_until = -1e+99
 
-	local dodge_animation = this.dodge.animation
-
 	local function on_skill_used(start_ts)
 		if t1 then
 			this._t1_until = math.max(this._t1_until, start_ts + t1.duration)
 		end
-	end
-
-	local function silent_dodges_start()
-		this.dodge.silent = true
-		this.dodge.animation = nil
-		this.dodge.time_before_hit = 0
-	end
-
-	local function silent_dodges_end()
-		this.dodge.silent = nil
-		this.dodge.animation = dodge_animation
-		this.dodge.time_before_hit = nil
 	end
 
 	local ult = this.melee.attacks[4]
@@ -406,22 +392,14 @@ local function hero_princess_update(this, store)
 			end
 
 			if ready_to_use_skill(this.timed_attacks.list[2], store, this.unit.cooldown_factor) then
-				silent_dodges_start()
-
 				local interrupted = princess_y_skill_c(store, this, on_skill_used)
-
-				silent_dodges_end()
 
 				if interrupted then
 					goto continue
 				end
 			end
 
-			-- silent_dodges_start()
-
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
-
-			-- silent_dodges_end()
 
 			if brk or sta ~= A_NO_TARGET then
 			elseif SU.soldier_go_back_step(store, this) then
@@ -918,6 +896,7 @@ tt.melee.attacks[3].disabled = true
 tt.melee.attacks[3].side_effect = function(this, store, damage, target)
 	this._t1_until = store.tick_ts + this.hero.skills.talent_1.duration
 end
+tt.melee.attacks[3].never_interrupt = true
 tt.melee.attacks[4] = CC("melee_attack")
 tt.melee.attacks[4].animation = "ulti"
 tt.melee.attacks[4].hit_time = 0
@@ -928,6 +907,7 @@ tt.melee.attacks[4].cooldown = 25
 tt.melee.attacks[4].mod = "mod_princess_ulti_lock"
 tt.melee.attacks[4].sound = "HeroDaliaTauntUltimate"
 tt.melee.attacks[4].ignore_rally_change = true
+tt.melee.attacks[4].never_interrupt = true
 tt.melee.attacks[4].vis_flags = bor(F_BLOCK, F_STUN, F_INSTAKILL)
 tt.melee.attacks[4].vis_bans = bor(F_CLIFF, F_BOSS, F_MINIBOSS)
 tt.melee.attacks[4].target_min_hp = 100
@@ -1055,6 +1035,7 @@ tt.shadow = "decal_princess_skill_b_shadow"
 tt = RT("decal_princess_skill_b_shadow", "decal_scripted")
 tt.render.sprites[1].name = "hero_princess_vfx_proyectil_bolso_sombra"
 tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = V.vv(1)
 tt.main_script.update = skill_b_shadow_update
 
 tt = RT("decal_princess_skill_b_bag", "decal_tween")

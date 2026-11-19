@@ -605,7 +605,6 @@ area_attack.damage_max = 0
 area_attack.damage_min = 0
 area_attack.damage_radius = 0
 area_attack.damage_type = DAMAGE_EXPLOSION
--- area_attack.dodge_time = nil
 area_attack.dodge_time = fts(4)
 area_attack.fn_filter = nil
 area_attack.hit_decal = nil
