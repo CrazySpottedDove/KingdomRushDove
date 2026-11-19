@@ -1473,6 +1473,15 @@ function screen_map:change_generation(gen_id)
 			reload_generation()
 			self.window.alpha = 0
 			self.window.scale = v(large_scale_x, large_scale_y)
+
+			-- TODO: 这里是一处 hack，目的是修复一个可能时 kr6/kr5 地图转 kr3 地图黑屏的bug。推测可能与 ExoView 的实现有关，这里暂时重置绘图颜色状态，在查明原因前做 workaround
+			-- HACK BEGIN
+			local r, g, b, a = G.getColor()
+			G.setColor(1, 1, 1, 0)
+			G.draw(G.newMesh(1, "triangles"))
+			G.setColor(r, g, b, a)
+			-- HACK END
+
 			timer:tween(0.4, self.window, {
 				alpha = 1,
 				scale = {
