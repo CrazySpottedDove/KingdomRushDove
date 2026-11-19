@@ -188,7 +188,8 @@ function plugin.plugin_level_test(harness, args)
 	local map_result = session.run_until(harness, {
 		condition = "scene",
 		name = "map",
-		load_timeout_ms = 30000
+		load_timeout_ms = 30000,
+		timeout_ms = 30000
 	})
 
 	if not map_result.met then
@@ -204,7 +205,8 @@ function plugin.plugin_level_test(harness, args)
 
 	local start_result = session.run_until(harness, {
 		condition = "game_start",
-		load_timeout_ms = 30000
+		load_timeout_ms = 30000,
+		timeout_ms = 30000
 	})
 
 	if not start_result.met then
