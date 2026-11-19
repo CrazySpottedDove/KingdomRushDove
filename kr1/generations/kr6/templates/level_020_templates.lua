@@ -198,7 +198,6 @@ tt.health.hp_max = 150
 tt.health.dead_lifetime = 12
 tt.regen.health = 5
 tt.health_bar.offset = v(0, 35)
-tt.health.delete_after = 2
 tt.info.portrait = "kr6_info_portraits_soldiers_0027"
 tt.info.random_name_format = "SOLDIER_STAGE_20_HUNTER_OUTPOST_%i_NAME"
 tt.info.random_name_count = 9
