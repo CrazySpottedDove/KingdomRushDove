@@ -2336,7 +2336,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 		U.animation_start_default(this, an, af, store.tick_ts, false)
 
-		local hit_times = attack.hit_times and attack.hit_times or {attack.hit_time}
+		local hit_times = attack.hit_times or {attack.hit_time}
 
 		for _, ht in ipairs(hit_times) do
 			while ht > store.tick_ts - loop_ts do
@@ -4283,6 +4283,11 @@ function SU.y_enemy_melee_attacks(store, this, target)
 
 				ma.ts = store.tick_ts
 
+				-- 处理敌人的循环近战攻击
+				if ma.loops then
+					return SU.y_enemy_do_loopable_melee_attack(store, this, target, ma)
+				end
+
 				S:queue(ma.sound, ma.sound_args)
 
 				local an, af = U.animation_name_facing_point(this, ma.animation, target.pos)
@@ -4445,6 +4450,169 @@ function SU.y_enemy_melee_attacks(store, this, target)
 	end
 
 	return true
+end
+
+---敌人循环近战攻击
+---@param store table game.store
+---@param this table 敌人实体
+---@param target table 士兵实体
+---@param attack table 攻击
+---@return boolean 是否攻击完成
+function SU.y_enemy_do_loopable_melee_attack(store, this, target, attack)
+	local attack_done = false
+	local start_ts = store.tick_ts
+	local an, af
+
+	S:queue(attack.sound, attack.sound_args)
+
+	if attack.animations[1] then
+		an, af = U.animation_name_facing_point(this, attack.animations[1], target.pos)
+
+		U.y_animation_play(this, an, af, store.tick_ts, 1)
+	end
+
+	for i = 1, attack.loops do
+		local loop_ts = store.tick_ts
+
+		S:queue(attack.sound_loop, attack.sound_loop_args)
+
+		an, af = U.animation_name_facing_point(this, attack.animations[2], target.pos)
+
+		U.animation_start_default(this, an, af, store.tick_ts, false)
+
+		local hit_times = attack.hit_times or {attack.hit_time}
+
+		for _, ht in ipairs(hit_times) do
+			while ht > store.tick_ts - loop_ts do
+				if this.unit.is_stunned then
+					goto label_115_0
+				end
+
+				if this.health.dead then
+					goto label_115_1
+				end
+
+				coroutine.yield()
+			end
+
+			S:queue(attack.sound_hit, attack.sound_hit_args)
+
+			attack.ts = start_ts
+
+			if attack.shared_cooldown then
+				for _, aa in ipairs(this.melee.attacks) do
+					if aa ~= attack and aa.shared_cooldown then
+						aa.ts = attack.ts
+					end
+				end
+			end
+
+			local hit_pos = V.vclone(this.pos)
+
+			if attack.hit_offset then
+				hit_pos.x = hit_pos.x + (af and -1 or 1) * attack.hit_offset.x
+				hit_pos.y = hit_pos.y + attack.hit_offset.y
+			end
+
+			if attack.type == "area" then
+				local targets = table.filter(store.soldiers, function(_, e)
+					return not e.health.dead and band(e.vis.flags, attack.vis_bans) == 0 and band(e.vis.bans, attack.vis_flags) == 0 and U.is_inside_ellipse(e.pos, hit_pos, attack.damage_radius) and (not attack.fn_filter or attack.fn_filter(this, store, attack, e))
+				end)
+				local max_count = attack.count and math.min(#targets, attack.count) or #targets
+
+				for j = 1, max_count do
+					local e = targets[j]
+					local d = E.assign_damage(attack.damage_type, this.unit.damage_factor * math.random(attack.damage_min, attack.damage_max), this.id, e.id)
+					d.track_kills = this.track_kills ~= nil
+					d.track_damage = attack.track_damage
+					d.pop = attack.pop
+					d.pop_chance = attack.pop_chance
+					d.pop_conds = attack.pop_conds
+
+					queue_damage(store, d)
+
+					if attack.hit_fx_area_target then
+						local fx = E:create_entity(attack.hit_fx_area_target)
+
+						fx.pos = V.vclone(e.pos)
+
+						for k = 1, #fx.render.sprites do
+							fx.render.sprites[k].ts = store.tick_ts
+						end
+
+						simulation:queue_insert_entity(fx)
+					end
+
+					if attack.mod then
+						local mod = E:create_entity(attack.mod)
+
+						mod.modifier.target_id = e.id
+						mod.modifier.source_id = this.id
+						mod.modifier.damage_factor = this.unit.damage_factor
+
+						simulation:queue_insert_entity(mod)
+					end
+				end
+			elseif table.arraycontains(this.enemy.blockers, target.id) and attack.damage_min then
+				local d = E.assign_damage(attack.damage_type, this.unit.damage_factor * math.random(attack.damage_min, attack.damage_max), this.id, target.id)
+				d.track_kills = this.track_kills ~= nil
+				d.track_damage = attack.track_damage
+				d.pop = attack.pop
+				d.pop_chance = attack.pop_chance
+				d.pop_conds = attack.pop_conds
+
+				queue_damage(store, d)
+
+				if attack.mod then
+					local mod = E:create_entity(attack.mod)
+
+					mod.modifier.target_id = target.id
+					mod.modifier.source_id = this.id
+					mod.modifier.damage_factor = this.unit.damage_factor
+
+					simulation:queue_insert_entity(mod)
+				end
+			end
+
+			attack_done = true
+		end
+
+		while not U.animation_finished_default(this) do
+			if this.unit.is_stunned then
+				goto label_115_0
+			end
+
+			if this.health.dead then
+				goto label_115_1
+			end
+
+			coroutine.yield()
+		end
+	end
+
+	::label_115_0::
+
+	S:queue(attack.sound_end)
+
+	if attack.animations[3] then
+		an, af = U.animation_name_facing_point(this, attack.animations[3], target.pos)
+
+		U.animation_start_default(this, an, af, store.tick_ts, false)
+
+		while not U.animation_finished_default(this) do
+			if this.health.dead then
+				break
+			end
+
+			coroutine.yield()
+		end
+	end
+
+	::label_115_1::
+
+	S:stop(attack.sound)
+
+	return attack_done
 end
 
 ---敌人眩晕

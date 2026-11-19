@@ -337,7 +337,6 @@ tt.melee.attacks[3].disabled = true
 tt.melee.attacks[3].damage_min = nil
 tt.melee.attacks[3].damage_max = nil
 tt.melee.attacks[3].hit_times = {fts(10), fts(25), fts(41)}
-tt.melee.attacks[3].loopable = true
 tt.melee.attacks[3].loops = 1
 tt.melee.attacks[3].sound_hit = "HeroVikingAttackHit"
 tt.melee.attacks[3].sound = "HeroVikingBearAttackStart"
