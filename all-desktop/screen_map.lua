@@ -2728,6 +2728,7 @@ function MapView:load_level_decos(gen)
 
 		v.ctx = {
 			screen_map = screen_map,
+			map_view = self,
 			timer = timer
 		}
 

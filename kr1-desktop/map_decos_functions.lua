@@ -76,13 +76,8 @@ local function kr5_map_set_frame(view, frame)
 end
 
 function deco_fn.kr5_map_state.prepare(this)
-	local screen_map = this.ctx.screen_map
-	local map_view = screen_map and screen_map.map_view
+	local map_view = this.ctx.map_view
 	local timer = this.ctx.timer
-
-	if not map_view then
-		return
-	end
 
 	local root = KView:new()
 	root.pos = v(307.65, 1418.7)
