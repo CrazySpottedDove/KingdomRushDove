@@ -280,7 +280,7 @@ local function hero_princess_update(this, store)
 
 	this.health_bar.hidden = false
 
-	local t1 = not this.hero.skills.talent_1.disabled and this.hero.skills.talent_1 or nil
+	local t1 = this.hero.skills.talent_1
 
 	this._t1_until = -1e+99
 
@@ -293,20 +293,12 @@ local function hero_princess_update(this, store)
 	end
 
 	local function silent_dodges_start()
-		if not t1 then
-			return
-		end
-
 		this.dodge.silent = true
 		this.dodge.animation = nil
 		this.dodge.time_before_hit = 0
 	end
 
 	local function silent_dodges_end()
-		if not t1 then
-			return
-		end
-
 		this.dodge.silent = nil
 		this.dodge.animation = dodge_animation
 		this.dodge.time_before_hit = nil
@@ -348,15 +340,11 @@ local function hero_princess_update(this, store)
 				local target = this.soldier.target_id and store.entities[this.soldier.target_id]
 
 				if target and not target.health.dead then
-					this._attacking = true
-
 					SU.y_soldier_do_loopable_melee_attack(store, this, target, this.dodge.counter_attack)
-
-					this._attacking = false
-				else
-					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, false)
-					S:queue(this.dodge.counter_attack.sound, this.dodge.counter_attack.sound_args)
-					SU.y_hero_animation_wait(this)
+				-- else
+				-- 	U.animation_start(this, this.dodge.animation, nil, store.tick_ts, false)
+				-- 	S:queue(this.dodge.counter_attack.sound, this.dodge.counter_attack.sound_args)
+				-- 	SU.y_hero_animation_wait(this)
 				end
 
 				this.dodge.active = false
@@ -414,11 +402,7 @@ local function hero_princess_update(this, store)
 			end
 
 			if not this.soldier.target_id and ready_to_use_skill(this.timed_attacks.list[1], store, this.unit.cooldown_factor) then
-				this._attacking = true
-
 				local interrupted = princess_y_skill_b(store, this, on_skill_used)
-
-				this._attacking = false
 
 				if interrupted then
 					goto continue
@@ -426,30 +410,22 @@ local function hero_princess_update(this, store)
 			end
 
 			if ready_to_use_skill(this.timed_attacks.list[2], store, this.unit.cooldown_factor) then
-				this._attacking = true
-
 				silent_dodges_start()
 
 				local interrupted = princess_y_skill_c(store, this, on_skill_used)
 
 				silent_dodges_end()
 
-				this._attacking = false
-
 				if interrupted then
 					goto continue
 				end
 			end
-
-			this._attacking = true
 
 			silent_dodges_start()
 
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 			silent_dodges_end()
-
-			this._attacking = false
 
 			if brk or sta ~= A_NO_TARGET then
 			elseif SU.soldier_go_back_step(store, this) then
