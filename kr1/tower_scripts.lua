@@ -8614,7 +8614,7 @@ function scripts.mod_tower_necromancer_curse.insert(this, store)
 	target._necromancer_entity_name = entity_name
 	target.old_death_spawns = target.death_spawns
 
-	if not target.death_spawns or target.death_spawns.name ~= entity_name then
+	if target.death_spawns and target.death_spawns.name ~= entity_name and band(target.vis.flags, F_BOSS) == 0 then
 		target.death_spawns = nil
 	end
 
@@ -8626,7 +8626,7 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		local can_spawn = target.health.dead and target._necromancer_entity_name and band(target.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS)) == 0
+		local can_spawn = target.health.dead and target._necromancer_entity_name and band(target.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS)) == 0 and band(target.vis.flags, F_BOSS) == 0
 
 		if can_spawn then
 			target.death_spawns = nil
