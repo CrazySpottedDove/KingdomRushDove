@@ -370,6 +370,27 @@ local function format_speed(bps)
 	return ""
 end
 
+local function format_bytes(bytes)
+	if bytes >= 1024 * 1024 then
+		return string.format("%.1f MB", bytes / 1024 / 1024)
+	elseif bytes >= 1024 then
+		return string.format("%.0f KB", bytes / 1024)
+	end
+	return string.format("%d B", bytes)
+end
+
+local function format_transfer_metrics(current, total, speed)
+	local metrics = format_bytes(current)
+	if total > 0 then
+		metrics = metrics .. " / " .. format_bytes(total)
+	end
+	local speed_text = format_speed(speed)
+	if speed_text ~= "" then
+		metrics = metrics .. "  " .. speed_text
+	end
+	return metrics
+end
+
 require("dove_modules.gui.plugin_manager_components")
 
 -- 只绘制滚动列表里真正可见的行：KScrollList 默认会把全部行都画一遍
@@ -594,6 +615,15 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._task_result = nil
 	self._selected_site = nil
 	self._active_download_name = ""
+	self._transfer = {
+		name = "",
+		phase = "",
+		current = 0,
+		total = 0,
+		speed = 0,
+		progress = 0,
+		indeterminate = false
+	}
 	self._http_threads = {}
 	-- 下载任务队列（串行）：_dl_queue 是 FIFO 队列，_dl_running 是当前执行中的任务
 	self._dl_queue = {}
@@ -1370,6 +1400,39 @@ function PluginManagerView:_set_status(text, progress)
 	end
 end
 
+function PluginManagerView:_set_transfer(name, phase, current, total, speed, progress, indeterminate, task)
+	local transfer = self._transfer
+	transfer.name = name or ""
+	transfer.phase = phase or ""
+	transfer.current = current or 0
+	transfer.total = total or 0
+	transfer.speed = speed or 0
+	transfer.progress = progress or 0
+	transfer.indeterminate = indeterminate == true
+
+	local metrics = format_transfer_metrics(transfer.current, transfer.total, transfer.speed)
+	local text = transfer.phase
+	if transfer.name ~= "" then
+		text = text .. ": " .. utf8_util.sanitize(transfer.name)
+	end
+	if metrics ~= "" then
+		text = text .. "  " .. metrics
+	end
+	if transfer.indeterminate then
+		text = text .. "  …"
+	end
+	self:_set_status(text, transfer.indeterminate and nil or progress)
+
+	if task then
+		task.transferred = transfer.current
+		task.total = transfer.total
+		task.speed = transfer.speed
+		task.progress = progress or 0
+		task.phase = transfer.phase
+		task.indeterminate = transfer.indeterminate
+	end
+end
+
 function PluginManagerView:_render_progress()
 	local value = self._progress_value
 	local target = self._progress_target
@@ -1844,14 +1907,13 @@ end
 
 --- 分块下载 URL 到内存；单块失败时按当前偏移重试（续传）。
 ---@param url string
----@param opts table|nil { task, cancel_fn, status_key, active_name, chunk_size, timeout_sec, max_retries, method, headers, data }
+---@param opts table|nil { task, cancel_fn, active_name, chunk_size, timeout_sec, max_retries, method, headers, data }
 ---@return string|nil data
 ---@return string|nil err
 function PluginManagerView:_download_url_chunked(url, opts)
 	opts = opts or {}
 	local task = opts.task
 	local cancel_fn = opts.cancel_fn
-	local status_key = opts.status_key or "PLUGIN_MGR_STATUS_DOWNLOADING_PROGRESS"
 	local active_name = opts.active_name or self._active_download_name or ""
 	local chunk_size = opts.chunk_size or (1024 * 1024)
 	local timeout_sec = opts.timeout_sec or DOWNLOAD_CHUNK_TIMEOUT
@@ -1864,6 +1926,7 @@ function PluginManagerView:_download_url_chunked(url, opts)
 	local downloaded = 0
 	local total = nil
 	local speed_bps = 0
+	local transfer_phase = _("PLUGIN_MGR_STATUS_DOWNLOADING")
 
 	local function is_cancelled()
 		return (task and task.cancelled) or (cancel_fn and cancel_fn()) or self._cancel_requested
@@ -1885,6 +1948,7 @@ function PluginManagerView:_download_url_chunked(url, opts)
 			if task then
 				task.progress = 0
 				task.speed = 0
+				task.transferred = 0
 			end
 			return nil, "cancelled"
 		end
@@ -1919,6 +1983,7 @@ function PluginManagerView:_download_url_chunked(url, opts)
 				if task then
 					task.progress = 0
 					task.speed = 0
+					task.transferred = 0
 				end
 				return nil, "cancelled"
 			end
@@ -1942,6 +2007,7 @@ function PluginManagerView:_download_url_chunked(url, opts)
 				if task then
 					task.progress = 0
 					task.speed = 0
+					task.transferred = downloaded
 				end
 				return nil, "cancelled"
 			end
@@ -1974,15 +2040,7 @@ function PluginManagerView:_download_url_chunked(url, opts)
 		end
 
 		local percent = total and (downloaded * 100 / math.max(total, 1)) or 0
-		if task then
-			task.progress = percent
-			task.speed = speed_bps
-		end
-		local speed_text = format_speed(speed_bps)
-		if speed_text ~= "" then
-			speed_text = "  " .. speed_text
-		end
-		self:_set_status(string.format(_(status_key), active_name, percent, speed_text), percent)
+		self:_set_transfer(active_name, transfer_phase, downloaded, total or 0, speed_bps, percent, total == nil, task)
 
 		if code == 200 then
 			break
@@ -2008,8 +2066,7 @@ function PluginManagerView:_download_zip(item, task)
 	local url = base .. "/download/" .. url_encode(filename) .. "?platform=" .. get_platform() .. "&branch=" .. url_encode(item_branch)
 	self._active_download_name = item.name or item.entry or filename
 	return self:_download_url_chunked(url, {
-		task = task,
-		status_key = "PLUGIN_MGR_STATUS_DOWNLOADING_PROGRESS"
+		task = task
 	})
 end
 
@@ -2252,7 +2309,6 @@ function PluginManagerView:_download_patch(entry, platform, version, changed, de
 			changed = changed,
 			deleted = deleted
 		}),
-		status_key = "PLUGIN_MGR_STATUS_DOWNLOADING_PATCH_PROGRESS",
 		cancel_fn = function()
 			return task and task.cancelled
 		end
@@ -2510,7 +2566,11 @@ function PluginManagerView:_enqueue_download(item, is_update)
 		is_update = is_update == true,
 		state = "queued",
 		progress = 0,
+		transferred = 0,
+		total = 0,
+		phase = "",
 		speed = 0,
+		indeterminate = false,
 		error = nil,
 		cancelled = false,
 		coro = nil
@@ -3434,7 +3494,7 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 	local version = opts.version or ""
 	local target_branch = opts.branch or "master"
 	local async_upload = opts.async_upload and true or false
-	local status_key = opts.status_key or "PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"
+	local transfer_phase = opts.phase or string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN"), entry)
 	local total_chunks = math.max(1, math.ceil(#data / UPLOAD_CHUNK_SIZE))
 	local auth_headers = {
 		["Authorization"] = "Bearer " .. self._developer_token
@@ -3459,7 +3519,7 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 			total_size = #data
 		})
 	}, 30, is_cancelled, function(elapsed)
-		self:_set_status(string.format(_(status_key), entry, 0, #data / 1048576, math.floor(elapsed)), 40)
+		self:_set_transfer("", transfer_phase, 0, #data, 0, 40, true)
 	end)
 	if start_err then
 		return nil, start_err
@@ -3486,7 +3546,8 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 
 	local sent = 0
 	local total = #data
-	local upload_start_t = love.timer.getTime()
+	local speed_bps = 0
+	self:_set_transfer("", transfer_phase, 0, total, 0, 40, false)
 	for i = 0, total_chunks - 1 do
 		if is_cancelled() then
 			abort()
@@ -3497,6 +3558,7 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 		local chunk = string.sub(data, first, last)
 
 		local chunk_resp, chunk_err
+		local chunk_t0 = love.timer.getTime()
 		for attempt = 1, UPLOAD_CHUNK_MAX_RETRIES do
 			if is_cancelled() then
 				abort()
@@ -3510,7 +3572,7 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 				},
 				data = chunk
 			}, UPLOAD_CHUNK_TIMEOUT, is_cancelled, function(elapsed)
-				self:_set_status(string.format(_(status_key), entry, sent / 1048576, total / 1048576, math.floor(love.timer.getTime() - upload_start_t)), 40 + 20 * sent / total)
+				self:_set_transfer("", transfer_phase, sent, total, speed_bps, 40 + 20 * sent / total, false)
 			end)
 			if not chunk_err and chunk_resp and tonumber(chunk_resp.code) == 200 then
 				break
@@ -3536,16 +3598,21 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 		end
 
 		sent = sent + #chunk
-		self:_set_status(string.format(_(status_key), entry, sent / 1048576, total / 1048576, math.floor(love.timer.getTime() - upload_start_t)), 40 + 20 * (i + 1) / total_chunks)
+		local chunk_elapsed = love.timer.getTime() - chunk_t0
+		if chunk_elapsed > 0.02 then
+			local chunk_speed = #chunk / chunk_elapsed
+			speed_bps = speed_bps > 0 and speed_bps * 0.7 + chunk_speed * 0.3 or chunk_speed
+		end
+		self:_set_transfer("", transfer_phase, sent, total, speed_bps, 40 + 20 * (i + 1) / total_chunks, false)
 		coroutine.yield()
 	end
 
-	self:_set_status(string.format(_(status_key), entry, total / 1048576, total / 1048576, math.floor(love.timer.getTime() - upload_start_t)), 65)
+	self:_set_transfer("", transfer_phase, total, total, speed_bps, 65, false)
 	local resp, err = self:_request(base .. "/upload/chunked/" .. upload_id .. "/complete", {
 		method = "POST",
 		headers = auth_headers
 	}, 600, is_cancelled, function(elapsed)
-		self:_set_status(string.format(_(status_key), entry, total / 1048576, total / 1048576, math.floor(love.timer.getTime() - upload_start_t)), 70)
+		self:_set_transfer("", transfer_phase, total, total, speed_bps, 70, false)
 	end)
 	return resp, err
 end
@@ -3612,8 +3679,7 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 
-	local patch_mb = #patch_data / 1048576
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, 0, patch_mb, 0), 40)
+	self:_set_transfer("", string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA"), entry), 0, #patch_data, 0, 40, true)
 	local resp, err
 	local use_legacy_upload = #patch_data < UPLOAD_CHUNK_THRESHOLD
 	if not use_legacy_upload then
@@ -3623,7 +3689,7 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 			version = version,
 			branch = plugin_data.config.branch or "master",
 			async_upload = true,
-			status_key = "PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"
+			phase = string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA"), entry)
 		})
 		if err == "unsupported" then
 			log.warning("chunked patch upload unsupported; falling back to single request")
@@ -3645,7 +3711,7 @@ function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, d
 			},
 			data = patch_data
 		}, 600, nil, function(elapsed)
-			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA_PROGRESS"), entry, 0, patch_mb, math.floor(elapsed)), 40)
+			self:_set_transfer("", string.format(_("PLUGIN_MGR_STATUS_UPLOADING_DELTA"), entry), 0, #patch_data, 0, 40, true)
 		end)
 	end
 
@@ -3856,7 +3922,6 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 		return false, _("PLUGIN_MGR_ERR_CANNOT_CHOOSE_STORE_SITE")
 	end
 
-	local zip_mb = #zip_data / 1048576
 	-- 新插件的封面接口要求插件记录已存在；带封面时先用同步模式，保证封面能随本次上传生效
 	local async_upload = hash_code ~= 404 or not (cover_data and cover_ext)
 	local upload_headers = {
@@ -3867,7 +3932,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	if async_upload then
 		upload_headers["X-Upload-Async"] = "1"
 	end
-	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, 0, zip_mb, 0), 40)
+	self:_set_transfer("", string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN"), entry), 0, #zip_data, 0, 40, true)
 	local resp, err
 	local use_legacy_upload = #zip_data < UPLOAD_CHUNK_THRESHOLD
 	if not use_legacy_upload then
@@ -3891,7 +3956,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 			headers = upload_headers,
 			data = zip_data
 		}, 600, nil, function(elapsed)
-			self:_set_status(string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN_PROGRESS"), entry, 0, zip_mb, math.floor(elapsed)), 40)
+			self:_set_transfer("", string.format(_("PLUGIN_MGR_STATUS_UPLOADING_PLUGIN"), entry), 0, #zip_data, 0, 40, true)
 		end)
 	end
 
@@ -3926,7 +3991,7 @@ function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 end
 
 function PluginManagerView:_upload_cover(entry, cover_data, cover_ext)
-	self:_set_status(_("PLUGIN_MGR_STATUS_UPLOADING_COVER"), 90)
+	self:_set_transfer(entry, _("PLUGIN_MGR_STATUS_UPLOADING_COVER"), 0, #cover_data, 0, 90, true)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return
@@ -4357,8 +4422,11 @@ function PluginManagerView:_render_dl_task_view()
 		row:add_child(name_lbl)
 
 		local state_text = DL_STATE_TEXT[task.state] or task.state
-		if task.state == "running" and task.speed and task.speed > 0 then
-			state_text = state_text .. "  " .. format_speed(task.speed)
+		if task.state == "running" and task.total and task.total > 0 then
+			state_text = state_text .. "  " .. format_transfer_metrics(task.transferred or 0, task.total, task.speed)
+		end
+		if task.state == "running" and task.indeterminate then
+			state_text = state_text .. "  …"
 		end
 		-- 状态列：中文「下载中」+ 速度约 160 单位，英文 "Downloading  2.4 MB/s" 约 213 单位
 		-- （极端情况 "Downloading  1234.5 MB/s" 约 245 单位），原来写死 140 会折成两行压到下面的进度条上；
@@ -4465,9 +4533,11 @@ function PluginManagerView:_update_dl_view_progress()
 		end
 		if task._state_lbl then
 			local state_text = DL_STATE_TEXT[task.state] or task.state
-			-- 下载中：在状态文本后附加实时速度
-			if task.state == "running" and task.speed and task.speed > 0 then
-				state_text = state_text .. "  " .. format_speed(task.speed)
+			if task.state == "running" and task.total and task.total > 0 then
+				state_text = state_text .. "  " .. format_transfer_metrics(task.transferred or 0, task.total, task.speed)
+			end
+			if task.state == "running" and task.indeterminate then
+				state_text = state_text .. "  …"
 			end
 			task._state_lbl.text = state_text
 		end
@@ -4932,9 +5002,7 @@ function PluginManagerView:_download_pack_lua(item)
 	local filename = item.filename or (tostring(item.entry or "") .. ".zip")
 	self._active_download_name = item.name or item.entry or filename
 	self:_set_status(string.format(_("PLUGIN_MGR_STATUS_DOWNLOADING_PACK"), self._active_download_name), 10)
-	local zip_data, err = self:_download_url_chunked(base .. "/download/" .. url_encode(filename), {
-		status_key = "PLUGIN_MGR_STATUS_DOWNLOADING_PACK_PROGRESS"
-	})
+	local zip_data, err = self:_download_url_chunked(base .. "/download/" .. url_encode(filename), {})
 	if not zip_data then
 		if err == "cancelled" then
 			return nil, "cancelled"
