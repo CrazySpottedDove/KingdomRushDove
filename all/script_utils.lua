@@ -4899,7 +4899,7 @@ function SU.scale_fps_based_keys(tbl, factor, visited)
 	for k, v in pairs(tbl) do
 		-- 跳过 _origin_xxx 字段，避免递归
 		if fps_based_keys[k] then
-			local _origin_key = "_origin_" .. k
+			local _origin_key = "_sfb_origin_" .. k
 
 			if not tbl[_origin_key] then
 				tbl[_origin_key] = table.deepclone(v)
