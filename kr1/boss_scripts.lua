@@ -14554,13 +14554,13 @@ function scripts.enemy_stage_218_veznan.update(this, store, script)
 
 	local rv = this.reveal
 
-	while #this.enemy.blockers > 0 do
-		local blocker = store.entities[this.enemy.blockers[1]]
-
+	for i = #this.enemy.blockers, 1, -1 do
+		local blocker = store.entities[this.enemy.blockers[i]]
 		if blocker then
 			U.unblock_target(store, blocker)
-		else
-			table.remove(this.enemy.blockers, 1)
+		end
+		if this.enemy.blockers[i] then
+			this.enemy.blockers[i] = nil
 		end
 	end
 
