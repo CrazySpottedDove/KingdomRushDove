@@ -41354,6 +41354,7 @@ function scripts.soldier_owl.get_info(this)
 	info.type = STATS_TYPE_TOWER
 	info.damage_min = info.ranged_damage_min
 	info.damage_max = info.ranged_damage_max
+	info.cooldown = info.ranged_cooldown
 	return info
 end
 
