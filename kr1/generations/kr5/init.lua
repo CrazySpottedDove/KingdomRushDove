@@ -20,7 +20,7 @@ return common.standard({
 		offset = v(0, 0)
 	},
 	map_progress = require("kr1.generations.kr5.data.map_progress"),
-	required_textures = {"screen_map_5", "screen_map_5_dlc"},
+	required_textures = {"screen_map_decos_kr5"},
 	required_exoskeletons = {
 		"AcolyteDef",
 		"ArboreanBabyDef",
