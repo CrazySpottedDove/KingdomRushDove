@@ -6072,6 +6072,9 @@ function scripts.ray_frankenstein.update(this, store)
 	end
 
 	if target then
+		if not this.bounces then
+			this.bounces = this.bounces_lvl[b.level]
+		end
 		s.ts = store.tick_ts
 
 		update_sprite()
@@ -6097,10 +6100,6 @@ function scripts.ray_frankenstein.update(this, store)
 		end
 
 		table.insert(this.seen_targets, target.id)
-
-		if not this.bounces then
-			this.bounces = this.bounces_lvl[b.level]
-		end
 
 		if this.bounces > 0 then
 			U.y_wait_unconditional(store, this.bounce_delay)
