@@ -16,6 +16,7 @@ local markdown_view = require("dove_modules.gui.markdown_view")
 local zip = require("lib.zip")
 local gitignore = require("dove_modules.gitignore")
 local plugin_packs = require("dove_modules.gui.plugin_manager_packs")
+local network = require("dove_modules.network")
 local version = require("version")
 local branch = version.branch or "master"
 
@@ -115,49 +116,6 @@ local SORT_OPTIONS = {{
 	label = _("PLUGIN_MGR_SORT_NEWEST"),
 	value = "newest"
 }}
-
--- 常驻线程连续处理请求，使底层 HTTPS 连接可以在同一线程内复用。
-local HTTP_WORKER = [[
-local https = require("https")
-local req_ch, resp_ch = ...
-
-while true do
-	local req = req_ch:demand()
-	if not req or req == "quit" then
-		break
-	end
-	local options = {}
-	for key, value in pairs(req.options or {}) do
-		options[key] = value
-	end
-	options.progress = function(received, total)
-		resp_ch:push({
-			type = "progress",
-			id = req.id,
-			received = received,
-			total = total
-		})
-	end
-	local ok, code, body, headers = pcall(https.request, req.url, options)
-	if ok then
-		resp_ch:push({
-			type = "complete",
-			id = req.id,
-			code = code,
-			body = body,
-			headers = headers or {}
-		})
-	else
-		resp_ch:push({
-			type = "complete",
-			id = req.id,
-			code = 0,
-			body = tostring(code),
-			headers = {}
-		})
-	end
-end
-]]
 
 local function version_parts(v)
 	local parts = {}
@@ -630,7 +588,6 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._progress_value = 0
 	self._status_text = _("PLUGIN_MGR_EMPTY_LOAD_HINT")
 	self._cancel_requested = false
-	self._request_id = 0
 	self._active_task = nil
 	self._task_result = nil
 	self._selected_site = nil
@@ -644,10 +601,6 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		progress = 0,
 		indeterminate = false
 	}
-	self._http_threads = {}
-	self._http_worker = nil
-	self._http_responses = {}
-	self._http_progress = {}
 	-- 下载任务队列（串行）：_dl_queue 是 FIFO 队列，_dl_running 是当前执行中的任务
 	self._dl_queue = {}
 	self._dl_running = nil
@@ -1259,7 +1212,6 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 			self:_clear_pending_changes()
 			self._unsaved_changes = false
 			if needs_restart then
-				self:_stop_http_thread()
 				restart.tmp()
 				return
 			end
@@ -1277,54 +1229,6 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 
 	self.task_dialog:order_to_front()
 	self:_refresh_header_buttons()
-	self:_start_http_thread()
-end
-
-function PluginManagerView:_start_http_thread()
-	self:_prune_http_threads()
-	if self._http_worker then
-		return
-	end
-	local req_ch = love.thread.newChannel()
-	local resp_ch = love.thread.newChannel()
-	local thread = love.thread.newThread(HTTP_WORKER)
-	thread:start(req_ch, resp_ch)
-	local worker = {
-		thread = thread,
-		req_ch = req_ch,
-		resp_ch = resp_ch
-	}
-	self._http_worker = worker
-	table.insert(self._http_threads, worker)
-end
-
-function PluginManagerView:_prune_http_threads()
-	local list = self._http_threads
-	if not list then
-		return
-	end
-	for i = #list, 1, -1 do
-		if not list[i].thread:isRunning() then
-			if list[i] == self._http_worker then
-				self._http_worker = nil
-			end
-			table.remove(list, i)
-		end
-	end
-end
-
-function PluginManagerView:_stop_http_thread()
-	local list = self._http_threads
-	if not list then
-		return
-	end
-	for _, item in ipairs(list) do
-		item.req_ch:push("quit")
-	end
-	self._http_threads = {}
-	self._http_worker = nil
-	self._http_responses = {}
-	self._http_progress = {}
 end
 
 function PluginManagerView:_refresh_header_buttons()
@@ -1500,65 +1404,9 @@ end
 
 function PluginManagerView:_request(url, options, timeout_sec, cancel_fn, on_tick, on_progress)
 	timeout_sec = timeout_sec or 20
-	self._request_id = self._request_id + 1
-	local req_id = self._request_id
-	self:_start_http_thread()
-	local worker = self._http_worker
-	self._http_progress[req_id] = on_progress
-	worker.req_ch:push({
-		id = req_id,
-		url = url,
-		options = options
-	})
-
-	local start_t = love.timer.getTime()
-	local last_tick = 0
-	while true do
-		if self._cancel_requested or (cancel_fn and cancel_fn()) then
-			self._http_progress[req_id] = nil
-			if self._http_worker == worker then
-				self._http_worker = nil
-				worker.req_ch:push("quit")
-			end
-			return nil, "cancelled"
-		end
-		local elapsed = love.timer.getTime() - start_t
-		if elapsed > timeout_sec then
-			self._http_progress[req_id] = nil
-			if self._http_worker == worker then
-				self._http_worker = nil
-				worker.req_ch:push("quit")
-			end
-			return nil, "timeout"
-		end
-		if on_tick and elapsed - last_tick >= 0.5 then
-			last_tick = elapsed
-			on_tick(elapsed)
-		end
-		local saved = self._http_responses[req_id]
-		if saved then
-			self._http_responses[req_id] = nil
-			self._http_progress[req_id] = nil
-			self:_prune_http_threads()
-			return saved, nil
-		end
-		while worker.resp_ch:getCount() > 0 do
-			local resp = worker.resp_ch:pop()
-			if resp and resp.type == "progress" then
-				local progress = self._http_progress[resp.id]
-				if progress then
-					progress(resp.received, resp.total)
-				end
-			elseif resp and resp.id == req_id then
-				self._http_progress[req_id] = nil
-				self:_prune_http_threads()
-				return resp, nil
-			elseif resp then
-				self._http_responses[resp.id] = resp
-			end
-		end
-		coroutine.yield()
-	end
+	return network.request(url, options, timeout_sec, on_progress, on_tick, function()
+		return self._cancel_requested or cancel_fn and cancel_fn()
+	end)
 end
 
 function PluginManagerView:_select_store_base_url()
@@ -3177,7 +3025,6 @@ function PluginManagerView:show()
 		deleted = {},
 		updated = {}
 	}
-	self:_start_http_thread()
 	-- 从磁盘读取初始状态，但仅在此处（后续 _reload_local_plugins 不会覆盖用户未保存的修改）
 	local cfg = plugin_paths.load_main_config()
 	local saved_cb = self.global_toggle.on_change
@@ -3220,7 +3067,6 @@ function PluginManagerView:hide()
 	end
 	if self:_needs_restart() then
 		-- 防御：存在已卸载/更新的运行中插件但未被标记为未保存修改（正常流程不会走到）
-		self:_stop_http_thread()
 		restart.tmp()
 		return
 	end
@@ -3228,7 +3074,6 @@ function PluginManagerView:hide()
 	self:_blur_inputs()
 	self:_clear_pending_changes()
 	self._cancel_requested = true
-	self:_stop_http_thread()
 	PluginManagerView.super.hide(self)
 end
 
@@ -4279,7 +4124,6 @@ function PluginManagerView:apply()
 
 	if needs_restart then
 		-- 更新/删除了正在运行的插件：文件已替换/移除，无法安全热应用，直接重启
-		self:_stop_http_thread()
 		restart.tmp()
 		return
 	end
@@ -4294,7 +4138,6 @@ function PluginManagerView:apply()
 	local hot_ok = plugin_main:can_hot_apply(changes)
 	if not hot_ok then
 		-- 存在无法热重载的修改：沿用原重启逻辑
-		self:_stop_http_thread()
 		restart.tmp()
 		return
 	end
@@ -4367,10 +4210,6 @@ function PluginManagerView:save()
 		end
 	end
 	self:_capture_state()
-end
-
-function PluginManagerView:destroy()
-	self:_stop_http_thread()
 end
 
 -- ─────────────────────────────────────────────

@@ -440,7 +440,6 @@ end
 local function hero_ignus_kr6_insert(this, store)
 	this.hero.fn_level_up(this, store, true)
 	this.melee.order = U.attack_order(this.melee.attacks)
-	this.timed_attacks.list[4].disabled = true
 
 	return true
 end
