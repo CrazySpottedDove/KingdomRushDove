@@ -38,6 +38,7 @@ local ui_state = {
 	current_file = "", -- 当前文件名
 	files_done = 0, -- 已完成文件数
 	files_total = 0, -- 总文件数
+	current_speed = 0, -- 最近采样区间的下载速度
 	speed_samples = {}, -- 速度采样（用于计算平均速度）
 	last_bytes = 0, -- 上次记录的字节数
 	last_sample_time = 0 -- 上次采样时间
@@ -80,7 +81,9 @@ local error_log_lines = {}
 local DOWNLOAD_CONFIG = {
 	chunk_size_initial = 1 * 1024 * 1024, -- 初始块大小 1MB
 	chunk_size_min = 64 * 1024, -- 最小块大小 64KB
+	chunk_size_max = 16 * 1024 * 1024,
 	chunk_timeout = 45, -- 单块超时 45 秒
+	chunk_target_ratio = 0.5,
 	chunk_max_retries = 5, -- 单块最多重试 5 次（移除文件级重试）
 	retry_backoff_base = 1.5, -- 退避基数（缩短）
 	retry_backoff_max = 8, -- 最大退避 8 秒（大幅缩短）
@@ -91,8 +94,6 @@ local DOWNLOAD_CONFIG = {
 
 -- 当前自适应的块大小（会根据网络情况动态调整，单次更新中保持）
 local current_chunk_size = DOWNLOAD_CONFIG.chunk_size_initial
--- 连续成功计数（用于判断是否可以增大块大小）
-local consecutive_success_count = 0
 
 -- 更新目录（基于 local_hash + server_hash）
 local update_cache_dir = nil
@@ -153,6 +154,7 @@ local function update_progress(percent, force, bytes_downloaded, bytes_total)
 			local delta_time = now - ui_state.last_sample_time
 			if delta_time > 0 then
 				local speed = delta_bytes / delta_time
+				ui_state.current_speed = speed
 				table.insert(ui_state.speed_samples, speed)
 				-- 只保留最近 10 个样本
 				if #ui_state.speed_samples > 10 then
@@ -178,6 +180,7 @@ local function set_state(new_state)
 	if new_state == STATE_DOWNLOADING_ASSETS or new_state == STATE_DOWNLOADING_CODE then
 		ui_state.download_start_time = love.timer.getTime()
 		ui_state.speed_samples = {}
+		ui_state.current_speed = 0
 		ui_state.last_bytes = 0
 		ui_state.last_sample_time = love.timer.getTime()
 	end
@@ -250,18 +253,20 @@ end
 
 -- 【新增】检查文件是否已经完整下载到缓存
 -- 【新增】根据网络状况动态调整块大小
-local function adjust_chunk_size(success)
+local function adjust_chunk_size(success, speed_bps)
 	if success then
-		consecutive_success_count = consecutive_success_count + 1
-		-- 连续 5 次成功后才尝试增大块大小
-		if consecutive_success_count >= 5 and current_chunk_size < DOWNLOAD_CONFIG.chunk_size_initial then
-			current_chunk_size = math.min(current_chunk_size * 1.5, DOWNLOAD_CONFIG.chunk_size_initial)
-			consecutive_success_count = 0
-			log_info(string.format(_("UPDATER_UI_LOG_CHUNK_UP"), current_chunk_size / 1024))
+		if speed_bps and speed_bps > 0 then
+			local target_size = math.floor(speed_bps * DOWNLOAD_CONFIG.chunk_timeout * DOWNLOAD_CONFIG.chunk_target_ratio / DOWNLOAD_CONFIG.chunk_size_min) * DOWNLOAD_CONFIG.chunk_size_min
+			target_size = math.max(DOWNLOAD_CONFIG.chunk_size_min, math.min(target_size, DOWNLOAD_CONFIG.chunk_size_max))
+			local old_size = current_chunk_size
+			current_chunk_size = target_size
+			if current_chunk_size ~= old_size then
+				local message_key = current_chunk_size > old_size and "UPDATER_UI_LOG_CHUNK_UP" or "UPDATER_UI_LOG_CHUNK_DOWN"
+				log_info(string.format(_(message_key), current_chunk_size / 1024))
+			end
 		end
 	else
 		-- 失败时立即减半块大小（但不低于最小值）
-		consecutive_success_count = 0
 		local old_size = current_chunk_size
 		current_chunk_size = math.max(current_chunk_size / 2, DOWNLOAD_CONFIG.chunk_size_min)
 		if current_chunk_size ~= old_size then
@@ -284,12 +289,23 @@ local HTTP_WORKER = [[
         local req = req_ch:demand()
         if req == "quit" then break end
 
+        local options = {}
+        for key, value in pairs(req.options or {}) do options[key] = value end
+        options.progress = function(received, total)
+            resp_ch:push({
+                type = "progress",
+                seq = req.seq,
+                received = received,
+                total = total
+            })
+        end
         local start_time = os.time()
-        local ok, code, body, headers = pcall(https.request, req.url, req.options)
+        local ok, code, body, headers = pcall(https.request, req.url, options)
         local elapsed = os.time() - start_time
 
         if ok then
             resp_ch:push({
+                type = "complete",
                 code = code,
                 body = body,
                 headers = headers,
@@ -298,6 +314,7 @@ local HTTP_WORKER = [[
             })
         else
             resp_ch:push({
+                type = "complete",
                 code = 0,
                 body = tostring(code),
                 headers = {},
@@ -311,7 +328,7 @@ local http_worker = nil
 local request_seq = 0
 
 --- 异步 HTTP 请求，含默认超时策略
-local function async_request(url, options, timeout)
+local function async_request(url, options, timeout, on_progress)
 	request_seq = request_seq + 1
 	local seq = request_seq
 	love.thread.getChannel("um_http_req"):push({
@@ -329,7 +346,11 @@ local function async_request(url, options, timeout)
 		end
 		if resp_ch:getCount() > 0 then
 			local resp = resp_ch:pop()
-			if resp.seq == seq then
+			if resp.type == "progress" then
+				if resp.seq == seq and on_progress then
+					on_progress(resp.received, resp.total)
+				end
+			elseif resp.seq == seq then
 				return resp.code, resp.body, resp.headers, resp.elapsed or 0
 			end
 		else
@@ -436,6 +457,7 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path, commit)
 	local part_path = fs_path .. ".part"
 	-- 使用自适应块大小
 	local chunk_size = current_chunk_size
+	local speed_bps = 0
 
 	local encoded_file = url_encode(file_param)
 	-- 两种 URL 模式：
@@ -495,13 +517,18 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path, commit)
 		local chunk_success = false
 
 		while chunk_retries <= DOWNLOAD_CONFIG.chunk_max_retries do
+			local chunk_t0 = love.timer.getTime()
 			local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
 			local code, body, headers = async_request(url, {
 				method = "GET",
 				headers = {
 					["Range"] = "bytes=" .. chunk_start .. "-" .. chunk_end
 				}
-			}, DOWNLOAD_CONFIG.chunk_timeout)
+			}, DOWNLOAD_CONFIG.chunk_timeout, function(received)
+				local current = downloaded_size + received
+				local current_total = total_size
+				update_progress(current * 100.0 / current_total, true, current, current_total)
+			end)
 
 			if code == 206 or code == 200 then
 				local ok_resp, new_size = validate_chunk_response(code, body, headers, chunk_start, chunk_end, total_size, downloaded_size)
@@ -513,6 +540,11 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path, commit)
 					end
 					FS.write(part_path, existing)
 					downloaded_size = new_size
+					local chunk_elapsed = love.timer.getTime() - chunk_t0
+					if chunk_elapsed > 0.02 and #body > 0 then
+						local chunk_speed = #body / chunk_elapsed
+						speed_bps = speed_bps > 0 and speed_bps * 0.7 + chunk_speed * 0.3 or chunk_speed
+					end
 
 					-- 更新进度（传递字节信息用于 UI）
 					local percent = downloaded_size * 100.0 / total_size
@@ -550,7 +582,7 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path, commit)
 
 		-- 成功下载块后，尝试恢复块大小
 		if chunk_success then
-			adjust_chunk_size(true)
+			adjust_chunk_size(true, speed_bps)
 			chunk_size = current_chunk_size
 		end
 	end
@@ -578,6 +610,7 @@ end
 local function download_bundle_zip(url, fs_path)
 	local part_path = fs_path .. ".part"
 	local chunk_size = current_chunk_size
+	local speed_bps = 0
 
 	local parent = fs_path:match("(.+)/")
 	if parent then
@@ -629,13 +662,18 @@ local function download_bundle_zip(url, fs_path)
 		local chunk_success = false
 
 		while chunk_retries <= DOWNLOAD_CONFIG.chunk_max_retries do
+			local chunk_t0 = love.timer.getTime()
 			local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
 			local code, body, headers = async_request(url, {
 				method = "GET",
 				headers = {
 					["Range"] = "bytes=" .. chunk_start .. "-" .. chunk_end
 				}
-			}, DOWNLOAD_CONFIG.chunk_timeout)
+			}, DOWNLOAD_CONFIG.chunk_timeout, function(received)
+				local current = downloaded_size + received
+				local current_total = total_size
+				update_progress(current * 100.0 / current_total, true, current, current_total)
+			end)
 
 			if code == 206 or code == 200 then
 				local ok_resp, new_size = validate_chunk_response(code, body, headers, chunk_start, chunk_end, total_size, downloaded_size)
@@ -647,6 +685,11 @@ local function download_bundle_zip(url, fs_path)
 					end
 					FS.write(part_path, existing)
 					downloaded_size = new_size
+					local chunk_elapsed = love.timer.getTime() - chunk_t0
+					if chunk_elapsed > 0.02 and #body > 0 then
+						local chunk_speed = #body / chunk_elapsed
+						speed_bps = speed_bps > 0 and speed_bps * 0.7 + chunk_speed * 0.3 or chunk_speed
+					end
 					local percent = downloaded_size * 100.0 / total_size
 					update_progress(percent, true, downloaded_size, total_size)
 					chunk_success = true
@@ -677,7 +720,7 @@ local function download_bundle_zip(url, fs_path)
 		end
 
 		if chunk_success then
-			adjust_chunk_size(true)
+			adjust_chunk_size(true, speed_bps)
 			chunk_size = current_chunk_size
 		end
 	end
@@ -1870,7 +1913,7 @@ function M:draw()
 
 		-- 下载速度和剩余时间
 		local speed_y = info_y + 20
-		local speed = get_average_speed()
+		local speed = ui_state.current_speed
 		if speed > 0 then
 			local speed_text = format_bytes(speed) .. "/s"
 			G.setColor(0.5, 0.8, 0.5, ui_state.fade_alpha)
