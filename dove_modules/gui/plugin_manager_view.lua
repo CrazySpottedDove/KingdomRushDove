@@ -126,9 +126,22 @@ while true do
 	if not req or req == "quit" then
 		break
 	end
-	local ok, code, body, headers = pcall(https.request, req.url, req.options)
+	local options = {}
+	for key, value in pairs(req.options or {}) do
+		options[key] = value
+	end
+	options.progress = function(received, total)
+		resp_ch:push({
+			type = "progress",
+			id = req.id,
+			received = received,
+			total = total
+		})
+	end
+	local ok, code, body, headers = pcall(https.request, req.url, options)
 	if ok then
 		resp_ch:push({
+			type = "complete",
 			id = req.id,
 			code = code,
 			body = body,
@@ -136,6 +149,7 @@ while true do
 		})
 	else
 		resp_ch:push({
+			type = "complete",
 			id = req.id,
 			code = 0,
 			body = tostring(code),
@@ -349,6 +363,9 @@ end
 -- 插件包分块下载：单块失败后重试并沿用当前偏移续传，避免大插件因一次抖动整体失败。
 local DOWNLOAD_CHUNK_TIMEOUT = 120
 local DOWNLOAD_CHUNK_MAX_RETRIES = 5
+local DOWNLOAD_CHUNK_MIN_SIZE = 64 * 1024
+local DOWNLOAD_CHUNK_MAX_SIZE = 16 * 1024 * 1024
+local DOWNLOAD_CHUNK_TARGET_RATIO = 0.5
 local DOWNLOAD_RETRY_DELAY_BASE = 1.5
 local DOWNLOAD_RETRY_DELAY_MAX = 8
 local DOWNLOAD_RETRY_AFTER_MAX = 30
@@ -364,7 +381,7 @@ end
 -- 将字节/秒格式化为可读的速度文本（空或 0 时返回空串）
 local function format_speed(bps)
 	if bps and bps >= 1024 * 1024 then
-		return string.format("%.1f MB/s", bps / 1024 / 1024)
+		return string.format("%.2f MB/s", bps / 1024 / 1024)
 	elseif bps and bps >= 1024 then
 		return string.format("%.0f KB/s", bps / 1024)
 	elseif bps and bps > 0 then
@@ -375,7 +392,7 @@ end
 
 local function format_bytes(bytes)
 	if bytes >= 1024 * 1024 then
-		return string.format("%.1f MB", bytes / 1024 / 1024)
+		return string.format("%.2f MB", bytes / 1024 / 1024)
 	elseif bytes >= 1024 then
 		return string.format("%.0f KB", bytes / 1024)
 	end
@@ -630,6 +647,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._http_threads = {}
 	self._http_worker = nil
 	self._http_responses = {}
+	self._http_progress = {}
 	-- 下载任务队列（串行）：_dl_queue 是 FIFO 队列，_dl_running 是当前执行中的任务
 	self._dl_queue = {}
 	self._dl_running = nil
@@ -1306,6 +1324,7 @@ function PluginManagerView:_stop_http_thread()
 	self._http_threads = {}
 	self._http_worker = nil
 	self._http_responses = {}
+	self._http_progress = {}
 end
 
 function PluginManagerView:_refresh_header_buttons()
@@ -1479,12 +1498,13 @@ function PluginManagerView:_render_progress()
 	self.progress_fill.size.x = w
 end
 
-function PluginManagerView:_request(url, options, timeout_sec, cancel_fn, on_tick)
+function PluginManagerView:_request(url, options, timeout_sec, cancel_fn, on_tick, on_progress)
 	timeout_sec = timeout_sec or 20
 	self._request_id = self._request_id + 1
 	local req_id = self._request_id
 	self:_start_http_thread()
 	local worker = self._http_worker
+	self._http_progress[req_id] = on_progress
 	worker.req_ch:push({
 		id = req_id,
 		url = url,
@@ -1495,6 +1515,7 @@ function PluginManagerView:_request(url, options, timeout_sec, cancel_fn, on_tic
 	local last_tick = 0
 	while true do
 		if self._cancel_requested or (cancel_fn and cancel_fn()) then
+			self._http_progress[req_id] = nil
 			if self._http_worker == worker then
 				self._http_worker = nil
 				worker.req_ch:push("quit")
@@ -1503,6 +1524,7 @@ function PluginManagerView:_request(url, options, timeout_sec, cancel_fn, on_tic
 		end
 		local elapsed = love.timer.getTime() - start_t
 		if elapsed > timeout_sec then
+			self._http_progress[req_id] = nil
 			if self._http_worker == worker then
 				self._http_worker = nil
 				worker.req_ch:push("quit")
@@ -1516,16 +1538,22 @@ function PluginManagerView:_request(url, options, timeout_sec, cancel_fn, on_tic
 		local saved = self._http_responses[req_id]
 		if saved then
 			self._http_responses[req_id] = nil
+			self._http_progress[req_id] = nil
 			self:_prune_http_threads()
 			return saved, nil
 		end
 		while worker.resp_ch:getCount() > 0 do
 			local resp = worker.resp_ch:pop()
-			if resp and resp.id == req_id then
+			if resp and resp.type == "progress" then
+				local progress = self._http_progress[resp.id]
+				if progress then
+					progress(resp.received, resp.total)
+				end
+			elseif resp and resp.id == req_id then
+				self._http_progress[req_id] = nil
 				self:_prune_http_threads()
 				return resp, nil
-			end
-			if resp then
+			elseif resp then
 				self._http_responses[resp.id] = resp
 			end
 		end
@@ -1944,7 +1972,7 @@ function PluginManagerView:_download_url_chunked(url, opts)
 	local task = opts.task
 	local cancel_fn = opts.cancel_fn
 	local active_name = opts.active_name or self._active_download_name or ""
-	local chunk_size = opts.chunk_size or (1024 * 1024)
+	local chunk_size = math.max(DOWNLOAD_CHUNK_MIN_SIZE, math.min(opts.chunk_size or (1024 * 1024), DOWNLOAD_CHUNK_MAX_SIZE))
 	local timeout_sec = opts.timeout_sec or DOWNLOAD_CHUNK_TIMEOUT
 	local max_retries = opts.max_retries or DOWNLOAD_CHUNK_MAX_RETRIES
 	local method = opts.method or "GET"
@@ -1981,18 +2009,20 @@ function PluginManagerView:_download_url_chunked(url, opts)
 			end
 			return nil, "cancelled"
 		end
-		local end_pos
-		if total then
-			end_pos = math.min(downloaded + chunk_size - 1, total - 1)
-		else
-			end_pos = downloaded + chunk_size - 1
-		end
-
 		local attempt = 0
 		local resp, err, code, headers, body
 		local chunk_t0
+		local current_speed_bps = 0
 		while true do
+			local end_pos
+			if total then
+				end_pos = math.min(downloaded + chunk_size - 1, total - 1)
+			else
+				end_pos = downloaded + chunk_size - 1
+			end
 			chunk_t0 = love.timer.getTime()
+			local progress_received = 0
+			local progress_t0 = chunk_t0
 			local req_headers = {
 				["Range"] = string.format("bytes=%d-%d", downloaded, end_pos)
 			}
@@ -2007,6 +2037,18 @@ function PluginManagerView:_download_url_chunked(url, opts)
 				data = request_data
 			}, timeout_sec, function()
 				return is_cancelled()
+			end, nil, function(received)
+				local current = downloaded + received
+				local current_total = total or 0
+				local percent = current_total > 0 and current * 100 / math.max(current_total, 1) or 0
+				local now = love.timer.getTime()
+				local elapsed = now - progress_t0
+				if elapsed >= 0.05 then
+					current_speed_bps = (received - progress_received) / elapsed
+					progress_received = received
+					progress_t0 = now
+				end
+				self:_set_transfer(active_name, transfer_phase, current, current_total, current_speed_bps, percent, current_total == 0, task)
 			end)
 			if err == "cancelled" or is_cancelled() then
 				if task then
@@ -2028,6 +2070,7 @@ function PluginManagerView:_download_url_chunked(url, opts)
 			end
 
 			attempt = attempt + 1
+			chunk_size = math.max(DOWNLOAD_CHUNK_MIN_SIZE, math.floor(chunk_size / 2))
 			-- local reason = err or ("HTTP " .. tostring(code))
 			local delay = download_retry_delay(attempt, headers)
 			local percent = total and (downloaded * 100 / math.max(total, 1)) or 0
@@ -2066,10 +2109,16 @@ function PluginManagerView:_download_url_chunked(url, opts)
 		if chunk_elapsed > 0.02 and #body > 0 then
 			local chunk_speed = #body / chunk_elapsed
 			speed_bps = speed_bps > 0 and (speed_bps * 0.7 + chunk_speed * 0.3) or chunk_speed
+			if current_speed_bps <= 0 then
+				current_speed_bps = chunk_speed
+			end
+			local target_size = math.floor(speed_bps * timeout_sec * DOWNLOAD_CHUNK_TARGET_RATIO / DOWNLOAD_CHUNK_MIN_SIZE) * DOWNLOAD_CHUNK_MIN_SIZE
+			target_size = math.max(DOWNLOAD_CHUNK_MIN_SIZE, math.min(target_size, DOWNLOAD_CHUNK_MAX_SIZE))
+			chunk_size = target_size
 		end
 
 		local percent = total and (downloaded * 100 / math.max(total, 1)) or 0
-		self:_set_transfer(active_name, transfer_phase, downloaded, total or 0, speed_bps, percent, total == nil, task)
+		self:_set_transfer(active_name, transfer_phase, downloaded, total or 0, current_speed_bps, percent, total == nil, task)
 
 		if code == 200 then
 			break
@@ -3602,6 +3651,11 @@ function PluginManagerView:_upload_chunked(base, data, opts)
 				data = chunk
 			}, UPLOAD_CHUNK_TIMEOUT, is_cancelled, function(elapsed)
 				self:_set_transfer("", transfer_phase, sent, total, speed_bps, 40 + 20 * sent / total, false)
+			end, function(received)
+				local elapsed = love.timer.getTime() - chunk_t0
+				local current = sent + received
+				local current_speed = elapsed > 0.02 and received / elapsed or speed_bps
+				self:_set_transfer("", transfer_phase, current, total, current_speed, 40 + 20 * current / total, false)
 			end)
 			if not chunk_err and chunk_resp and tonumber(chunk_resp.code) == 200 then
 				break
