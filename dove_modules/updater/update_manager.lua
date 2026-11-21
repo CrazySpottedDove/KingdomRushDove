@@ -18,6 +18,7 @@ local zip = require("lib.zip")
 local utf8_util = require("lib.utf8_utils")
 local version = require("version")
 local assets_index_bin = require("dove_modules.updater.assets_index_bin")
+local network = require("dove_modules.network")
 
 local branch = version.branch or "master"
 local fatal_update_error = nil
@@ -280,83 +281,13 @@ local server_address = nil
 local json = require("lib.json")
 local update_response = nil
 
--- HTTP 工作线程
-local HTTP_WORKER = [[
-   local https = require("https")
-   local req_ch  = love.thread.getChannel("um_http_req")
-   local resp_ch = love.thread.getChannel("um_http_resp")
-   while true do
-        local req = req_ch:demand()
-        if req == "quit" then break end
-
-        local options = {}
-        for key, value in pairs(req.options or {}) do options[key] = value end
-        options.progress = function(received, total)
-            resp_ch:push({
-                type = "progress",
-                seq = req.seq,
-                received = received,
-                total = total
-            })
-        end
-        local start_time = os.time()
-        local ok, code, body, headers = pcall(https.request, req.url, options)
-        local elapsed = os.time() - start_time
-
-        if ok then
-            resp_ch:push({
-                type = "complete",
-                code = code,
-                body = body,
-                headers = headers,
-                elapsed = elapsed,
-                seq = req.seq
-            })
-        else
-            resp_ch:push({
-                type = "complete",
-                code = 0,
-                body = tostring(code),
-                headers = {},
-                elapsed = elapsed,
-                seq = req.seq
-            })
-        end
-   end
-]]
-local http_worker = nil
-local request_seq = 0
-
 --- 异步 HTTP 请求，含默认超时策略
 local function async_request(url, options, timeout, on_progress)
-	request_seq = request_seq + 1
-	local seq = request_seq
-	love.thread.getChannel("um_http_req"):push({
-		url = url,
-		options = options,
-		seq = seq
-	})
-	local resp_ch = love.thread.getChannel("um_http_resp")
-	timeout = timeout or DOWNLOAD_CONFIG.base_timeout
-
-	local start_time = love.timer.getTime()
-	while true do
-		if love.timer.getTime() - start_time > timeout then
-			return 0, _("UPDATER_UI_ERR_REQUEST_TIMEOUT"), {}, 0
-		end
-		if resp_ch:getCount() > 0 then
-			local resp = resp_ch:pop()
-			if resp.type == "progress" then
-				if resp.seq == seq and on_progress then
-					on_progress(resp.received, resp.total)
-				end
-			elseif resp.seq == seq then
-				return resp.code, resp.body, resp.headers, resp.elapsed or 0
-			end
-		else
-			coroutine.yield()
-		end
+	local response, err = network.request(url, options, timeout or DOWNLOAD_CONFIG.base_timeout, on_progress)
+	if not response then
+		return 0, err == "timeout" and _("UPDATER_UI_ERR_REQUEST_TIMEOUT") or err, {}, 0
 	end
+	return response.code, response.body, response.headers, response.elapsed or 0
 end
 
 -- 非阻塞等待
@@ -1511,18 +1442,6 @@ function M:init(params, done_callback)
 		return
 	end
 
-	-- 清空通道
-	local req_ch = love.thread.getChannel("um_http_req")
-	local resp_ch = love.thread.getChannel("um_http_resp")
-	while req_ch:getCount() > 0 do
-		req_ch:pop()
-	end
-	while resp_ch:getCount() > 0 do
-		resp_ch:pop()
-	end
-
-	http_worker = love.thread.newThread(HTTP_WORKER)
-	http_worker:start()
 	local co = coroutine.create(run_code)
 	self.co = co
 end
@@ -1549,11 +1468,6 @@ function M:update(dt)
 			table.insert(update_log_lines, _("UPDATER_UI_LOG_ERROR_PREFIX") .. utf8_util.sanitize(tostring(result)))
 			table.insert(error_log_lines, utf8_util.sanitize(tostring(result)))
 			self.co = nil
-			-- 确保线程退出
-			love.thread.getChannel("um_http_req"):push("quit")
-			if http_worker then
-				http_worker:wait()
-			end
 			self:_open_dialog(_("UPDATER_UI_UPGRADE_FAILED"), _("UPDATER_UI_ERR_UPDATE_EXCEPTION") .. utf8_util.sanitize(tostring(result)), {{
 				text = _("UPDATER_UI_OK"),
 				value = "ok",
@@ -1565,13 +1479,7 @@ function M:update(dt)
 		elseif coroutine.status(self.co) == "dead" then
 			-- 协程正常结束，处理返回结果
 			self.co = nil
-			-- 无论什么情况，都要清理线程
-			love.thread.getChannel("um_http_req"):push("quit")
-			if http_worker then
-				http_worker:wait()
-			end
-
-			-- 【修复】线程清理完成后，根据结果显示消息框并执行相应操作
+			-- 根据结果显示消息框并执行相应操作
 			if result.status == "NoUpdate" then
 				-- 无更新，继续启动游戏
 				self:done_callback()
@@ -1587,8 +1495,6 @@ function M:update(dt)
 					is_cancel = true
 				}}, function(btn)
 					if btn and btn.value == "update" then
-						http_worker = love.thread.newThread(HTTP_WORKER)
-						http_worker:start()
 						self.co = coroutine.create(do_update)
 					else
 						self:done_callback()

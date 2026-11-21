@@ -24,6 +24,7 @@ local HEROES = require("heroes.registry")
 local GENS = require("generations.registry")
 local LEGACY = require("generations.legacy")
 local configer = require("dove_modules.configer")
+local network = require("dove_modules.network")
 
 local function replace_locale(list, locale)
 	local out = {}
@@ -630,6 +631,7 @@ function director:queue_load_item_named(name)
 		self.queued_item = item
 	elseif props.type == "game" then
 		-- 进入游戏的加载环节
+		network.stop()
 		local game_gui = _require("game_gui")
 		local game = _require("game")
 
