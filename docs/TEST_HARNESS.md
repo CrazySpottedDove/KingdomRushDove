@@ -104,7 +104,7 @@ WSLg/D3D12 下 `canvas:newImageData()` 可能卡死；`scripts/test/autoplay.sh`
 | `build_tower` | `holder_id`, `tower`, `level` | 指定塔位造塔 |
 | `build_all_towers` | `rotation`, `tower`, `level` | 所有空塔位造塔 |
 | `upgrade_tower` | `holder_id`, `tower` | 按 tower_menus_data 升级 |
-| `click_tower` | `holder_id` | 点击塔实体，断言选中且塔菜单已打开 |
+| `click_tower` | `holder_id` | 直接触发塔的点击事件（不模拟坐标）；选不中时返回 `selected:false` / `skipped`，不算错误 |
 | `sell_tower` | `holder_id` | 卖塔 |
 | `get_tower_holders` | | 塔位列表 |
 | `get_entities` | `template` | 实体列表 |

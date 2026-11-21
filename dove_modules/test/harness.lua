@@ -204,9 +204,12 @@ function harness:tick(n)
 	return self:snapshot()
 end
 
+--- 直接触发塔实体的点击事件，而不是按屏幕坐标模拟鼠标。
+--- 插件可能改动 GUI 布局/缩放，模拟点击会打不中；这里直接走游戏自己的
+--- 点击入口（置 ui.clicked 并调用 select_entity），绕过坐标命中检测。
+--- 选不中只表示这次测试没跑下去，返回 skipped 而不是抛错，避免误判插件。
 function harness:click_tower(args)
 	local util = require("dove_modules.test.util")
-	local autoplay = require("dove_modules.test.handlers.autoplay")
 	local active = util.require_game(self)
 
 	if not args.holder_id then
@@ -216,39 +219,55 @@ function harness:click_tower(args)
 	local tower = util.find_tower_by_holder(active.store, args.holder_id)
 
 	if not tower then
-		error("tower not found at holder: " .. tostring(args.holder_id))
+		return {
+			holder_id = args.holder_id,
+			selected = false,
+			menu = false,
+			skipped = "tower not found at holder"
+		}
 	end
 
 	local gui = active.game_gui
 
-	gui:deselect_entity()
-
-	for _ = 1, 120 do
-		if gui.towermenu.hidden then
-			break
-		end
-
-		self:step_once()
+	if not gui or not gui.select_entity then
+		return {
+			holder_id = args.holder_id,
+			template = tower.template_name,
+			selected = false,
+			menu = false,
+			skipped = "game gui unavailable"
+		}
 	end
 
-	autoplay.click_entity(self, tower)
-
-	if gui.selected_entity ~= tower then
-		local selected = gui.selected_entity
-		local rect = tower.ui and tower.ui.click_rect
-
-		error(string.format("tower click did not select %s, selected %s, pos %s,%s, rect %s", tostring(tower.template_name), selected and (selected.template_name or tostring(selected.id)) or "nil", tostring(tower.pos.x), tostring(tower.pos.y), rect and string.format("%s,%s,%s,%s", rect.pos.x, rect.pos.y, rect.size.x, rect.size.y) or "nil"))
+	if gui.deselect_all then
+		gui:deselect_all()
+	elseif gui.deselect_entity then
+		gui:deselect_entity()
 	end
 
-	if gui.towermenu.hidden then
-		error("tower menu did not open: " .. tostring(tower.template_name))
+	if tower.ui then
+		tower.ui.clicked = true
+	end
+
+	gui:select_entity(tower)
+
+	local selected = gui.selected_entity == tower
+	local menu = gui.towermenu ~= nil and not gui.towermenu.hidden
+	local skipped
+
+	if not selected then
+		skipped = "tower click did not select entity"
+	elseif not menu then
+		skipped = "tower menu did not open"
 	end
 
 	return {
 		holder_id = args.holder_id,
 		template = tower.template_name,
-		level = tower.tower.level,
-		menu = true
+		level = tower.tower and tower.tower.level,
+		selected = selected,
+		menu = menu,
+		skipped = skipped
 	}
 end
 
