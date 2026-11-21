@@ -116,13 +116,16 @@ local SORT_OPTIONS = {{
 	value = "newest"
 }}
 
--- 每个请求独立一个线程：某个请求超时后仍可能在等待服务端响应，
--- 不能让它堵住后续请求（否则重试的 hash_check 会继续排队并超时）。
+-- 常驻线程连续处理请求，使底层 HTTPS 连接可以在同一线程内复用。
 local HTTP_WORKER = [[
 local https = require("https")
 local req_ch, resp_ch = ...
-local req = req_ch:demand()
-if req and req ~= "quit" then
+
+while true do
+	local req = req_ch:demand()
+	if not req or req == "quit" then
+		break
+	end
 	local ok, code, body, headers = pcall(https.request, req.url, req.options)
 	if ok then
 		resp_ch:push({
@@ -625,6 +628,8 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		indeterminate = false
 	}
 	self._http_threads = {}
+	self._http_worker = nil
+	self._http_responses = {}
 	-- 下载任务队列（串行）：_dl_queue 是 FIFO 队列，_dl_running 是当前执行中的任务
 	self._dl_queue = {}
 	self._dl_running = nil
@@ -1259,6 +1264,20 @@ end
 
 function PluginManagerView:_start_http_thread()
 	self:_prune_http_threads()
+	if self._http_worker then
+		return
+	end
+	local req_ch = love.thread.newChannel()
+	local resp_ch = love.thread.newChannel()
+	local thread = love.thread.newThread(HTTP_WORKER)
+	thread:start(req_ch, resp_ch)
+	local worker = {
+		thread = thread,
+		req_ch = req_ch,
+		resp_ch = resp_ch
+	}
+	self._http_worker = worker
+	table.insert(self._http_threads, worker)
 end
 
 function PluginManagerView:_prune_http_threads()
@@ -1268,6 +1287,9 @@ function PluginManagerView:_prune_http_threads()
 	end
 	for i = #list, 1, -1 do
 		if not list[i].thread:isRunning() then
+			if list[i] == self._http_worker then
+				self._http_worker = nil
+			end
 			table.remove(list, i)
 		end
 	end
@@ -1282,6 +1304,8 @@ function PluginManagerView:_stop_http_thread()
 		item.req_ch:push("quit")
 	end
 	self._http_threads = {}
+	self._http_worker = nil
+	self._http_responses = {}
 end
 
 function PluginManagerView:_refresh_header_buttons()
@@ -1459,45 +1483,50 @@ function PluginManagerView:_request(url, options, timeout_sec, cancel_fn, on_tic
 	timeout_sec = timeout_sec or 20
 	self._request_id = self._request_id + 1
 	local req_id = self._request_id
-
-	-- 独立线程 + 独立通道：超时的请求只丢弃结果，不阻塞下一次重试。
-	local req_ch = love.thread.newChannel()
-	local resp_ch = love.thread.newChannel()
-	local thread = love.thread.newThread(HTTP_WORKER)
-
-	thread:start(req_ch, resp_ch)
-	req_ch:push({
+	self:_start_http_thread()
+	local worker = self._http_worker
+	worker.req_ch:push({
 		id = req_id,
 		url = url,
 		options = options
-	})
-
-	self._http_threads = self._http_threads or {}
-	table.insert(self._http_threads, {
-		thread = thread,
-		req_ch = req_ch,
-		resp_ch = resp_ch
 	})
 
 	local start_t = love.timer.getTime()
 	local last_tick = 0
 	while true do
 		if self._cancel_requested or (cancel_fn and cancel_fn()) then
+			if self._http_worker == worker then
+				self._http_worker = nil
+				worker.req_ch:push("quit")
+			end
 			return nil, "cancelled"
 		end
 		local elapsed = love.timer.getTime() - start_t
 		if elapsed > timeout_sec then
+			if self._http_worker == worker then
+				self._http_worker = nil
+				worker.req_ch:push("quit")
+			end
 			return nil, "timeout"
 		end
 		if on_tick and elapsed - last_tick >= 0.5 then
 			last_tick = elapsed
 			on_tick(elapsed)
 		end
-		while resp_ch:getCount() > 0 do
-			local resp = resp_ch:pop()
+		local saved = self._http_responses[req_id]
+		if saved then
+			self._http_responses[req_id] = nil
+			self:_prune_http_threads()
+			return saved, nil
+		end
+		while worker.resp_ch:getCount() > 0 do
+			local resp = worker.resp_ch:pop()
 			if resp and resp.id == req_id then
 				self:_prune_http_threads()
 				return resp, nil
+			end
+			if resp then
+				self._http_responses[resp.id] = resp
 			end
 		end
 		coroutine.yield()
