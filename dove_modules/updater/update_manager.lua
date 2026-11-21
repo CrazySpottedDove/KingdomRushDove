@@ -18,6 +18,23 @@ local zip = require("lib.zip")
 local utf8_util = require("lib.utf8_utils")
 local version = require("version")
 local assets_index_bin = require("dove_modules.updater.assets_index_bin")
+
+local function apply_pending_https_dll()
+	local pending = io.open("https.dll.pending", "rb")
+	if not pending then
+		return
+	end
+	pending:close()
+	os.remove("https.dll.backup")
+	os.rename("https.dll", "https.dll.backup")
+	if os.rename("https.dll.pending", "https.dll") then
+		os.remove("https.dll.backup")
+		return
+	end
+	os.rename("https.dll.backup", "https.dll")
+end
+
+apply_pending_https_dll()
 local network = require("dove_modules.network")
 
 local branch = version.branch or "master"
@@ -1028,6 +1045,7 @@ end
 -- 【新增】统一提交所有更改（代码 + 资源）
 local function commit_all_changes(info)
 	set_state(STATE_COMMITTING_CHANGES)
+	network.stop()
 
 	local added_or_modified_code = info.added_or_modified_files or {}
 	local added_or_modified_assets = info.added_or_modified_assets or {}
@@ -1038,8 +1056,9 @@ local function commit_all_changes(info)
 		local cached_path = update_cache_dir .. "/code/" .. file_path
 		local content = FS.read(cached_path)
 		if content then
-			FU.ensure_parent_dir(file_path)
-			if not FU.write_file(file_path, content) then
+			local target_path = file_path:match("[^/\\]+$") == "https.dll" and "https.dll.pending" or file_path
+			FU.ensure_parent_dir(target_path)
+			if not FU.write_file(target_path, content) then
 				log_error(_("UPDATER_UI_ERR_WRITE_CODE") .. file_path)
 				return false
 			end
@@ -1501,14 +1520,21 @@ function M:update(dt)
 					end
 				end)
 			elseif result.status == "Updated" then
-				-- 更新完成，显示成功消息并重启
+				-- 更新完成，等待玩家选择重启方式
 				self:_open_dialog(_("UPDATER_UI_UPGRADE_COMPLETE"), result.message, {{
-					text = _("UPDATER_UI_OK"),
-					value = "ok",
-					is_default = true,
+					text = _("UPDATER_UI_RESTART_BTN"),
+					value = "restart",
+					is_default = true
+				}, {
+					text = _("UPDATER_UI_EXIT_BTN"),
+					value = "exit",
 					is_cancel = true
-				}}, function()
-					love.event.quit()
+				}}, function(btn)
+					if btn and btn.value == "restart" then
+						R.full()
+					else
+						love.event.quit()
+					end
 				end)
 			elseif result.status == "Error" then
 				-- 更新失败，显示错误消息
