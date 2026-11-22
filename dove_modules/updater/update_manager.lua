@@ -18,6 +18,9 @@ local zip = require("lib.zip")
 local utf8_util = require("lib.utf8_utils")
 local version = require("version")
 local assets_index_bin = require("dove_modules.updater.assets_index_bin")
+local log = require("lib.klua.log"):new("update_manager")
+
+log.error("restart-diag updater module loaded")
 
 local HTTPS_LIB_NAME = love.system.getOS() == "Windows" and "https.dll" or "https.so"
 
@@ -34,7 +37,9 @@ do
 		end
 	end
 end
+log.error("restart-diag updater requiring network")
 local network = require("dove_modules.network")
+log.error("restart-diag updater network loaded")
 
 local branch = version.branch or "master"
 local fatal_update_error = nil
@@ -1043,12 +1048,14 @@ end
 
 -- 【新增】统一提交所有更改（代码 + 资源）
 local function commit_all_changes(info)
+	log.error("restart-diag updater stage=commit begin")
 	set_state(STATE_COMMITTING_CHANGES)
 	network.stop()
 
 	local added_or_modified_code = info.added_or_modified_files or {}
 	local added_or_modified_assets = info.added_or_modified_assets or {}
 	local deleted_files = info.deleted_files or {}
+	log.error("restart-diag updater commit counts code=%s assets=%s deleted=%s", #added_or_modified_code, #added_or_modified_assets, #deleted_files)
 
 	-- 1. 提交代码文件
 	for _i, file_path in ipairs(added_or_modified_code) do
@@ -1113,19 +1120,25 @@ local function commit_all_changes(info)
 
 	-- 4. 更新版本号
 	if info.target_commit_hash then
+		log.error("restart-diag updater commit version begin")
 		if not FU.write_file("current_version_commit_hash.txt", info.target_commit_hash) then
 			log_error(_("UPDATER_UI_ERR_UPDATE_VERSION"))
 			return false
 		end
+		log.error("restart-diag updater commit version end")
 	end
 
 	-- 5. 清理缓存目录
+	log.error("restart-diag updater commit cleanup begin")
 	cleanup_old_update_dirs(nil) -- 传 nil 表示清理所有更新目录
+	log.error("restart-diag updater commit cleanup end")
+	log.error("restart-diag updater stage=commit end")
 
 	return true
 end
 
 local function check_update()
+	log.error("restart-diag updater stage=check_update begin")
 	fatal_update_error = nil
 	local params = M.params
 	local commit_hash = FS.read("current_version_commit_hash.txt")
@@ -1195,14 +1208,18 @@ local function check_update()
 
 	if resp_json and resp_json.commits and #resp_json.commits > 0 then
 		update_response = resp_json
+		log.error("restart-diag updater stage=check_update update_available")
 		return true
 	end
+	log.error("restart-diag updater stage=check_update no_update")
 	return false
 end
 
 local function run_code()
+	log.error("restart-diag updater stage=run_code begin")
 	local check_result = check_update()
 	if check_result == false then
+		log.error("restart-diag updater stage=run_code end status=no_update_or_error")
 		if fatal_update_error then
 			return {
 				status = "Error",
@@ -1228,6 +1245,7 @@ local function run_code()
 end
 
 local function do_update()
+	log.error("restart-diag updater stage=do_update begin")
 	-- 【新增】初始化缓存目录
 	local local_hash = FS.read("current_version_commit_hash.txt")
 	if local_hash then
@@ -1265,6 +1283,7 @@ local function do_update()
 
 	-- 2. 下载资源到缓存（使用打包方式，失败自动回退）
 	local success = sync_assets_bundled(added_or_modified_assets, asset_sizes)
+	log.error("restart-diag updater stage=assets_download end success=%s", tostring(success))
 	if not success then
 		return {
 			status = "Error",
@@ -1275,6 +1294,7 @@ local function do_update()
 
 	-- 3. 下载代码到缓存（使用打包方式，失败自动回退）
 	success = upgrade_new_version_bundled(update_response)
+	log.error("restart-diag updater stage=code_download end success=%s", tostring(success))
 	if not success then
 		return {
 			status = "Error",
@@ -1293,6 +1313,7 @@ local function do_update()
 	}
 
 	success = commit_all_changes(commit_info)
+	log.error("restart-diag updater stage=commit result success=%s", tostring(success))
 	if not success then
 		return {
 			status = "Error",
@@ -1442,6 +1463,7 @@ function M:_scroll_dialog_by(delta)
 end
 
 function M:init(params, done_callback)
+	log.error("restart-diag updater init begin enabled=%s", tostring(params.update_enabled))
 	apply_upgrade = apply_upgrade and params.update_enabled
 
 	self.done_callback = done_callback
@@ -1456,12 +1478,14 @@ function M:init(params, done_callback)
 	self._dialog_scroll_start = 0
 	self._dialog_hover_button_index = nil
 	if not apply_upgrade then
+		log.error("restart-diag updater init bypass")
 		self:done_callback()
 		return
 	end
 
 	local co = coroutine.create(run_code)
 	self.co = co
+	log.error("restart-diag updater init end coroutine_created")
 end
 
 function M:update(dt)
@@ -1482,6 +1506,7 @@ function M:update(dt)
 	if self.co then
 		local success, result = coroutine.resume(self.co)
 		if not success then
+			log.error("restart-diag updater coroutine resume error=%s", tostring(result))
 			-- 协程执行异常
 			table.insert(update_log_lines, _("UPDATER_UI_LOG_ERROR_PREFIX") .. utf8_util.sanitize(tostring(result)))
 			table.insert(error_log_lines, utf8_util.sanitize(tostring(result)))
@@ -1496,6 +1521,7 @@ function M:update(dt)
 				self:done_callback()
 			end)
 		elseif coroutine.status(self.co) == "dead" then
+			log.error("restart-diag updater coroutine resume end status=%s", tostring(result and result.status))
 			-- 协程正常结束，处理返回结果
 			self.co = nil
 			network.stop()
@@ -1532,6 +1558,7 @@ function M:update(dt)
 					is_cancel = true
 				}}, function(btn)
 					if btn and btn.value == "restart" then
+						log.error("restart-diag updater restart button selected")
 						network.stop()
 						R.full()
 					else
