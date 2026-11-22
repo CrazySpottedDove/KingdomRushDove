@@ -19,22 +19,21 @@ local utf8_util = require("lib.utf8_utils")
 local version = require("version")
 local assets_index_bin = require("dove_modules.updater.assets_index_bin")
 
-local function apply_pending_https_dll()
-	local pending = io.open("https.dll.pending", "rb")
-	if not pending then
-		return
-	end
-	pending:close()
-	os.remove("https.dll.backup")
-	os.rename("https.dll", "https.dll.backup")
-	if os.rename("https.dll.pending", "https.dll") then
-		os.remove("https.dll.backup")
-		return
-	end
-	os.rename("https.dll.backup", "https.dll")
-end
+local HTTPS_LIB_NAME = love.system.getOS() == "Windows" and "https.dll" or "https.so"
 
-apply_pending_https_dll()
+do
+	local pending = io.open(HTTPS_LIB_NAME .. ".pending", "rb")
+	if pending then
+		pending:close()
+		os.remove(HTTPS_LIB_NAME .. ".backup")
+		os.rename(HTTPS_LIB_NAME, HTTPS_LIB_NAME .. ".backup")
+		if os.rename(HTTPS_LIB_NAME .. ".pending", HTTPS_LIB_NAME) then
+			os.remove(HTTPS_LIB_NAME .. ".backup")
+		else
+			os.rename(HTTPS_LIB_NAME .. ".backup", HTTPS_LIB_NAME)
+		end
+	end
+end
 local network = require("dove_modules.network")
 
 local branch = version.branch or "master"
@@ -1056,7 +1055,7 @@ local function commit_all_changes(info)
 		local cached_path = update_cache_dir .. "/code/" .. file_path
 		local content = FS.read(cached_path)
 		if content then
-			local target_path = file_path:match("[^/\\]+$") == "https.dll" and "https.dll.pending" or file_path
+			local target_path = file_path:match("[^/\\]+$") == HTTPS_LIB_NAME and HTTPS_LIB_NAME .. ".pending" or file_path
 			FU.ensure_parent_dir(target_path)
 			if not FU.write_file(target_path, content) then
 				log_error(_("UPDATER_UI_ERR_WRITE_CODE") .. file_path)
@@ -1487,6 +1486,7 @@ function M:update(dt)
 			table.insert(update_log_lines, _("UPDATER_UI_LOG_ERROR_PREFIX") .. utf8_util.sanitize(tostring(result)))
 			table.insert(error_log_lines, utf8_util.sanitize(tostring(result)))
 			self.co = nil
+			network.stop()
 			self:_open_dialog(_("UPDATER_UI_UPGRADE_FAILED"), _("UPDATER_UI_ERR_UPDATE_EXCEPTION") .. utf8_util.sanitize(tostring(result)), {{
 				text = _("UPDATER_UI_OK"),
 				value = "ok",
@@ -1498,6 +1498,7 @@ function M:update(dt)
 		elseif coroutine.status(self.co) == "dead" then
 			-- 协程正常结束，处理返回结果
 			self.co = nil
+			network.stop()
 			-- 根据结果显示消息框并执行相应操作
 			if result.status == "NoUpdate" then
 				-- 无更新，继续启动游戏
@@ -1531,6 +1532,7 @@ function M:update(dt)
 					is_cancel = true
 				}}, function(btn)
 					if btn and btn.value == "restart" then
+						network.stop()
 						R.full()
 					else
 						love.event.quit()
