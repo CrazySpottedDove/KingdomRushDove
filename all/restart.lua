@@ -34,7 +34,13 @@ local function quote_argument(value)
 	return '"' .. tostring(value):gsub('"', '\\"') .. '"'
 end
 
+local function restart_diag(message)
+	io.stderr:write("[restart-diag] " .. message .. "\n")
+	io.stderr:flush()
+end
+
 local function spawn_new_process()
+	restart_diag("spawn begin")
 	local exe = love.filesystem.getExecutablePath()
 	local args = {quote_argument(exe)}
 	local skip_next = false
@@ -52,10 +58,14 @@ local function spawn_new_process()
 
 	if IS_WINDOWS then
 		local result = shell32.ShellExecuteW(nil, utf8_to_wide("open"), utf8_to_wide(exe), utf8_to_wide(table.concat(args, " ", 2)), nil, 1)
-		return ffi.cast("intptr_t", result) > 32
+		local success = ffi.cast("intptr_t", result) > 32
+		restart_diag("spawn end success=" .. tostring(success))
+		return success
 	end
 
-	return os.execute("nohup " .. table.concat(args, " ") .. " >/dev/null 2>&1 &") == 0
+	local success = os.execute("nohup " .. table.concat(args, " ") .. " >/dev/null 2>&1 &") == 0
+	restart_diag("spawn end success=" .. tostring(success))
+	return success
 end
 
 function restart.tmp()

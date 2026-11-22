@@ -45,6 +45,7 @@ end
 ]]
 
 local M = {}
+local log = require("lib.klua.log"):new("network")
 local worker
 local request_channel
 local response_channel
@@ -68,18 +69,21 @@ function M.start()
 	worker = love.thread.newThread(HTTP_WORKER)
 	worker:start(request_channel, response_channel)
 	clear_messages()
+	log.error("restart-diag network worker started")
 end
 
 function M.stop()
 	if not worker then
 		return
 	end
+	log.error("restart-diag network stop begin")
 	request_channel:push("quit")
 	worker:wait()
 	worker = nil
 	request_channel = nil
 	response_channel = nil
 	clear_messages()
+	log.error("restart-diag network stop end")
 end
 
 local function read_messages(channel)
@@ -100,6 +104,7 @@ end
 
 function M.request(url, options, timeout, on_progress, on_tick, cancel_fn)
 	M.start()
+	log.error("restart-diag network request begin url=%s", url)
 	request_id = request_id + 1
 	local id = request_id
 	local channel = request_channel
@@ -115,11 +120,13 @@ function M.request(url, options, timeout, on_progress, on_tick, cancel_fn)
 	while true do
 		local elapsed = love.timer.getTime() - start_time
 		if cancel_fn and cancel_fn() then
+			log.error("restart-diag network request cancelled id=%s", tostring(id))
 			ignored[id] = true
 			progress[id] = nil
 			return nil, "cancelled"
 		end
 		if elapsed > timeout then
+			log.error("restart-diag network request timeout id=%s elapsed=%s", tostring(id), tostring(elapsed))
 			ignored[id] = true
 			progress[id] = nil
 			return nil, "timeout"
@@ -139,6 +146,7 @@ function M.request(url, options, timeout, on_progress, on_tick, cancel_fn)
 		local result = responses[id]
 		if result then
 			responses[id] = nil
+			log.error("restart-diag network request end id=%s", tostring(id))
 			return result
 		end
 		coroutine.yield()
