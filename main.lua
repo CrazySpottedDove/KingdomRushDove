@@ -16,23 +16,6 @@ end
 
 love.filesystem.setIdentity(version.identity)
 
-local function restart_diag(message)
-	io.stderr:write("[restart-diag] " .. message .. "\n")
-	io.stderr:flush()
-end
-
-local function get_process_id()
-	local ffi = require("ffi")
-	if love.system.getOS() == "Windows" then
-		ffi.cdef[[unsigned long GetCurrentProcessId(void);]]
-		return ffi.load("kernel32").GetCurrentProcessId()
-	end
-	ffi.cdef[[int getpid(void);]]
-	return ffi.C.getpid()
-end
-
-restart_diag("process pid=" .. tostring(get_process_id()))
-
 local function wait_for_parent_process()
 	local pid
 	for i = 1, #arg do
@@ -44,7 +27,6 @@ local function wait_for_parent_process()
 	if not pid then
 		return
 	end
-	restart_diag("child waiting for parent pid=" .. tostring(pid))
 
 	local ffi = require("ffi")
 	if love.system.getOS() == "Windows" then
@@ -67,7 +49,6 @@ local function wait_for_parent_process()
 			love.timer.sleep(0.05)
 		end
 	end
-	restart_diag("parent exited, continuing startup")
 end
 
 wait_for_parent_process()
@@ -319,11 +300,9 @@ end
 local loader
 
 local function load_director()
-	log.error("restart-diag stage=load_director begin")
 	local director = require("director")
 	main.handler = director
 	require("plugin.plugin_main"):init(director)
-	log.error("restart-diag stage=load_director end")
 end
 
 --- -test：不进入任何场景，只启动命令宿主。第一条命令决定去哪。
@@ -332,14 +311,11 @@ local function load_test()
 end
 
 local function load_update_manager()
-	log.error("restart-diag stage=load_update_manager begin")
 	local update_manager = require("dove_modules.updater.update_manager")
 	main.handler = update_manager
 	update_manager:init(main.params, function()
-		log.error("restart-diag stage=update_manager done_callback")
 		loader:load_next()
 	end)
-	log.error("restart-diag stage=load_update_manager end")
 end
 
 --- 安卓端没有设置界面，语言选择改到启动流程最前（作者的话之前）。
@@ -428,7 +404,6 @@ end
 
 function loader:load_next()
 	local next_item = table.remove(self.items, 1)
-	log.error("restart-diag loader next=%s", tostring(next_item))
 	if next_item then
 		self.methods[next_item]()
 	end
@@ -526,7 +501,6 @@ local function load(arg)
 	end
 
 	main.log_output = MU.redirect_output(main.params)
-	log.error("restart-diag main load complete, entering loader")
 
 	if main.log_output then
 		log.error(MU.get_version_info(version))
