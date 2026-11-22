@@ -1511,7 +1511,7 @@ function M:update(dt)
 					text = _("UPDATER_UI_CANCEL_BTN"),
 					value = "cancel",
 					is_cancel = true
-				}}, function()
+				}}, function(btn)
 					if btn and btn.value == "update" then
 						self.co = coroutine.create(do_update)
 					else
