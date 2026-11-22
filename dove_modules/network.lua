@@ -74,10 +74,8 @@ function M.stop()
 	if not worker then
 		return
 	end
-	if worker:isRunning() then
-		request_channel:push("quit")
-		worker:wait()
-	end
+	request_channel:push("quit")
+	worker:wait()
 	worker = nil
 	request_channel = nil
 	response_channel = nil
