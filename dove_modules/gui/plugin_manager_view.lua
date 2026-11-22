@@ -1078,7 +1078,6 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	end
 	self._confirm_cancel_btn.hidden = true
 	self.task_dialog:add_child(self._confirm_cancel_btn)
-	self.task_dialog:add_child(self._cover_no_btn)
 
 	-- 禁用警告与插件列表
 	self._disabled_warning = PluginLabel:new(V.v(panel_w - 40, 28))
