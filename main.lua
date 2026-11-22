@@ -16,43 +16,6 @@ end
 
 love.filesystem.setIdentity(version.identity)
 
-local function wait_for_parent_process()
-	local pid
-	for i = 1, #arg do
-		if arg[i] == "-restart-wait-pid" then
-			pid = tonumber(arg[i + 1])
-			break
-		end
-	end
-	if not pid then
-		return
-	end
-
-	local ffi = require("ffi")
-	if love.system.getOS() == "Windows" then
-		ffi.cdef[[
-			void *OpenProcess(unsigned long dwDesiredAccess, int bInheritHandle, unsigned long dwProcessId);
-			unsigned long WaitForSingleObject(void *hHandle, unsigned long dwMilliseconds);
-			int CloseHandle(void *hObject);
-		]]
-		local kernel32 = ffi.load("kernel32")
-		local handle = kernel32.OpenProcess(0x00100000, 0, pid)
-		if handle ~= nil then
-			kernel32.WaitForSingleObject(handle, 0xFFFFFFFF)
-			kernel32.CloseHandle(handle)
-		end
-	else
-		ffi.cdef[[
-			int kill(int pid, int sig);
-		]]
-		while ffi.C.kill(pid, 0) == 0 do
-			love.timer.sleep(0.05)
-		end
-	end
-end
-
-wait_for_parent_process()
-
 -- 尽早识别 -test：即使错误发生在参数解析之前，errorhandler 也能直接退出。
 KRDOVE_TEST_MODE = false
 

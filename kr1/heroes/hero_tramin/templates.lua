@@ -473,6 +473,7 @@ tt.bullet.damage_radius = 36
 tt.bullet.xp_gain_factor = 1.6
 tt.bullet.use_hit_offset = true
 tt.render.sprites[1].name = "hero_tramin_bomb_proyectile"
+
 tt = RT("bullet_tramin_flashlight", "bomb")
 tt.bullet.flight_time = fts(18)
 tt.bullet.hit_fx = "fx_explosion_tramin_flashlight"
@@ -483,10 +484,9 @@ tt.bullet.mod = "mod_tramin_stun"
 tt.bullet.pop = nil
 tt.bullet.use_hit_offset = true
 tt.render.sprites[1].name = "hero_tramin_bombot_proyectile"
+
 tt = RT("hero_tramin", "hero")
-
 AC(tt, "melee", "ranged", "timed_attacks")
-
 tt.melee.range = 25
 tt.health_bar.offset = v(0, 40)
 tt.health.dead_lifetime = 15
@@ -591,9 +591,7 @@ tt.ranged.attacks[1].bullet = "bullet_tramin"
 tt.ranged.attacks[1].shoot_time = fts(11)
 tt.ranged.attacks[1].check_target_before_shot = true
 tt.ranged.attacks[1].animation = "throwBomb"
-
 update_node_prediction(tt.ranged.attacks[1])
-
 tt.ranged.attacks[1].bullet_start_offset = {v(-8, 24)}
 -- 1技能 自爆机器人
 tt.ranged.attacks[2] = CC("bullet_attack")
