@@ -44002,7 +44002,7 @@ scripts.tween_utils = {}
 -- 延迟移除：先播 tween 反向淡出，tween 跑完后由 all/systems/tween.lua 统一移除。
 -- 本函数返回 false 表示本帧不移除；返回前清掉 pending_removal，all/simulation.lua
 -- 据此识别为「正常延迟跳过」而非异常阻断，不再打印 "remove xxx aborted"。
-function scripts.tween_utils.reverse_remove(this, store, script)
+function scripts.tween_utils.reverse_remove(this, store)
 	if this.tween.disabled then
 		if this.tween_prop_replace then
 			this.tween.props[1].keys[2] = this.tween_prop_replace
