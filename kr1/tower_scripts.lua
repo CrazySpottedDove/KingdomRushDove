@@ -40934,6 +40934,7 @@ function scripts.tower_sentry.remove(this, store)
 
 	if this.decal_skill_c then
 		simulation:queue_remove_entity(this.decal_skill_c)
+		this.decal_skill_c = nil
 	end
 
 	return true
