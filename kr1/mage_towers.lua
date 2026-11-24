@@ -1252,7 +1252,7 @@ tt.render.sprites[1].name = "faerie_dragon_shoot_fx"
 
 tt = RT("mod_faerie_dragon_l0", "mod_freeze")
 AC(tt, "render")
-tt.modifier.duration = 1
+tt.modifier.duration = 1.05
 tt.modifier.vis_bans = F_BOSS
 tt.modifier.vis_flags = bor(F_STUN, F_MOD)
 tt.render.sprites[1].prefix = "mod_faerie_dragon"
@@ -1266,10 +1266,10 @@ tt.freeze_decal_name = "decal_faerie_dragon_freeze_enemy"
 tt.sound_events.insert = "ElvesFaeryDragonAttackCristalization"
 
 tt = RT("mod_faerie_dragon_l1", "mod_faerie_dragon_l0")
-tt.modifier.duration = 1.25
+tt.modifier.duration = 1.31
 
 tt = RT("mod_faerie_dragon_l2", "mod_faerie_dragon_l0")
-tt.modifier.duration = 1.5
+tt.modifier.duration = 1.57
 
 -- 侏儒花园
 tt = RT("tower_pixie", "tower")
