@@ -68,5 +68,25 @@ return {
 		from = 9,
 		prefix = "lynn_hero_weakening_fx_decal",
 		to = 34
+	},
+	fx_lynn_explosion = {
+		from = 1,
+		prefix = "lynn_explosion",
+		to = 21
+	},
+	mod_lynn_ultimate = {
+		from = 1,
+		prefix = "lynn_hero_ultimate_fx_above",
+		to = 28
+	},
+	mod_lynn_ultimate_decal_loop = {
+		from = 9,
+		prefix = "lynn_hero_ultimate_fx_decal",
+		to = 34
+	},
+	mod_lynn_ultimate_over = {
+		from = 1,
+		prefix = "lynn_hero_ultimate_fx_over",
+		to = 12
 	}
 }

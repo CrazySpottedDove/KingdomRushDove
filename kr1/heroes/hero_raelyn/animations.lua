@@ -143,5 +143,15 @@ return {
 		from = 1,
 		prefix = "hero_raelyn_unbreakable_shield_lvl1",
 		to = 12
+	},
+	hero_raelyn_command_orders_hit_fx_Idle1_1 = {
+		from = 1,
+		prefix = "hero_raelyn_command_orders_hit_fx",
+		to = 8
+	},
+	hero_raelyn_command_orders_spawn_fx_Idle1_1 = {
+		from = 1,
+		prefix = "hero_raelyn_command_orders_spawn_fx",
+		to = 21
 	}
 }

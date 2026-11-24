@@ -88,5 +88,10 @@ return {
 		from = 105,
 		prefix = "hero_kungFu",
 		to = 118
+	},
+	fx_hero_monk_particle = {
+		from = 1,
+		prefix = "hero_kungFu_particle",
+		to = 9
 	}
 }

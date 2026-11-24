@@ -103,5 +103,75 @@ return {
 		from = 27,
 		prefix = "bravebark_hero",
 		to = 38
+	},
+	bravebark_levelUpLeaves = {
+		from = 1,
+		prefix = "bravebark_hero_levelUpLeaves",
+		to = 29
+	},
+	bravebark_mignon_attack = {
+		from = 20,
+		prefix = "bravebark_hero_mignon",
+		to = 38
+	},
+	bravebark_mignon_death = {
+		from = 49,
+		prefix = "bravebark_hero_mignon",
+		to = 85
+	},
+	bravebark_mignon_idle = {
+		from = 19,
+		prefix = "bravebark_hero_mignon",
+		to = 19
+	},
+	bravebark_mignon_raise = {
+		from = 1,
+		prefix = "bravebark_hero_mignon",
+		to = 18
+	},
+	bravebark_mignon_running = {
+		from = 39,
+		prefix = "bravebark_hero_mignon",
+		to = 48
+	},
+	bravebark_spike_in = {
+		from = 1,
+		prefix = "bravebark_hero_spike",
+		to = 12
+	},
+	bravebark_spike_out = {
+		from = 13,
+		prefix = "bravebark_hero_spike",
+		to = 14
+	},
+	bravebark_spikedRoots1_in = {
+		from = 1,
+		prefix = "bravebark_hero_spikedRoots1",
+		to = 3
+	},
+	bravebark_spikedRoots1_out = {
+		from = 20,
+		prefix = "bravebark_hero_spikedRoots1",
+		to = 28
+	},
+	bravebark_spikedRoots2_in = {
+		from = 1,
+		prefix = "bravebark_hero_spikedRoots2",
+		to = 3
+	},
+	bravebark_spikedRoots2_out = {
+		from = 18,
+		prefix = "bravebark_hero_spikedRoots2",
+		to = 27
+	},
+	bravebark_spikedRoots3_in = {
+		from = 1,
+		prefix = "bravebark_hero_spikedRoots3",
+		to = 3
+	},
+	bravebark_spikedRoots3_out = {
+		from = 16,
+		prefix = "bravebark_hero_spikedRoots3",
+		to = 24
 	}
 }

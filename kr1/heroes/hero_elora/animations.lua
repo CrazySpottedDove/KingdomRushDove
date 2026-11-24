@@ -83,5 +83,15 @@ return {
 		from = 1,
 		prefix = "hero_frost_groundFreeze_3",
 		to = 11
+	},
+	bolt_elora_flying = {
+		from = 1,
+		prefix = "hero_frost_bolt",
+		to = 4
+	},
+	bolt_elora_idle = {
+		from = 1,
+		prefix = "hero_frost_bolt",
+		to = 1
 	}
 }

@@ -108,5 +108,30 @@ return {
 		from = 164,
 		prefix = "hero_mirage",
 		to = 168
+	},
+	fx_hero_mirage_smoke = {
+		from = 1,
+		prefix = "hero_mirage_smoke",
+		to = 17
+	},
+	mirage_blood_gray = {
+		from = 1,
+		prefix = "hero_mirage_blood_gray",
+		to = 9
+	},
+	mirage_blood_green = {
+		from = 1,
+		prefix = "hero_mirage_blood_green",
+		to = 9
+	},
+	mirage_blood_red = {
+		from = 1,
+		prefix = "hero_mirage_blood_red",
+		to = 9
+	},
+	mirage_blood_violet = {
+		from = 1,
+		prefix = "hero_mirage_blood_violet",
+		to = 9
 	}
 }

@@ -93,5 +93,25 @@ return {
 		from = 1,
 		prefix = "arivan_hero_fire_explosion",
 		to = 14
+	},
+	lilith_ultimate_angel_attack = {
+		from = 15,
+		prefix = "fallen_angel_hero_ultimate_angel",
+		to = 24
+	},
+	lilith_ultimate_angel_death = {
+		from = 35,
+		prefix = "fallen_angel_hero_ultimate_angel",
+		to = 44
+	},
+	lilith_ultimate_angel_idle = {
+		from = 15,
+		prefix = "fallen_angel_hero_ultimate_angel",
+		to = 15
+	},
+	lilith_ultimate_angel_raise = {
+		from = 1,
+		prefix = "fallen_angel_hero_ultimate_angel",
+		to = 14
 	}
 }

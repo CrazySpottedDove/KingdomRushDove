@@ -93,5 +93,25 @@ return {
 		from = 1,
 		prefix = "durax_hero_lethalprism_ray",
 		to = 25
+	},
+	fx_durax_ultimate_fang_1 = {
+		from = 1,
+		prefix = "durax_hero_saphirefangultimate_single",
+		to = 29
+	},
+	fx_durax_ultimate_fang_2 = {
+		from = 1,
+		prefix = "durax_hero_saphirefangultimate_multiple",
+		to = 29
+	},
+	fx_durax_ultimate_fang_extra_1 = {
+		from = 1,
+		prefix = "durax_hero_saphirefangultimate_complement_1",
+		to = 29
+	},
+	fx_durax_ultimate_fang_extra_2 = {
+		from = 1,
+		prefix = "durax_hero_saphirefangultimate_complement_2",
+		to = 29
 	}
 }

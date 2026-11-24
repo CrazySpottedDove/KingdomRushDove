@@ -181,5 +181,10 @@ return {
 		from = 1,
 		prefix = "razzAndRaggs_hero_ray",
 		to = 14
+	},
+	fx_rabbit_kamihare_explode = {
+		from = 1,
+		prefix = "razzAndRaggs_rabbit_explosion",
+		to = 21
 	}
 }

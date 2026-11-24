@@ -103,5 +103,85 @@ return {
 		from = 220,
 		prefix = "veznan_hero",
 		to = 228
+	},
+	veznan_demon_attack = {
+		from = 46,
+		prefix = "veznan_hero_demon",
+		to = 67
+	},
+	veznan_demon_death = {
+		from = 93,
+		prefix = "veznan_hero_demon",
+		to = 113
+	},
+	veznan_demon_idle = {
+		from = 29,
+		prefix = "veznan_hero_demon",
+		to = 29
+	},
+	veznan_demon_raise = {
+		from = 1,
+		prefix = "veznan_hero_demon",
+		to = 28
+	},
+	veznan_demon_running = {
+		from = 30,
+		prefix = "veznan_hero_demon",
+		to = 45
+	},
+	veznan_demon_shoot = {
+		from = 68,
+		prefix = "veznan_hero_demon",
+		to = 92
+	},
+	veznan_hero_shackles_big_end = {
+		from = 34,
+		prefix = "veznan_hero_shackles_big",
+		to = 41
+	},
+	veznan_hero_shackles_big_loop = {
+		from = 12,
+		prefix = "veznan_hero_shackles_big",
+		to = 33
+	},
+	veznan_hero_shackles_big_start = {
+		from = 1,
+		prefix = "veznan_hero_shackles_big",
+		to = 11
+	},
+	veznan_hero_shackles_small_end = {
+		from = 34,
+		prefix = "veznan_hero_shackles_small",
+		to = 41
+	},
+	veznan_hero_shackles_small_loop = {
+		from = 12,
+		prefix = "veznan_hero_shackles_small",
+		to = 33
+	},
+	veznan_hero_shackles_small_start = {
+		from = 1,
+		prefix = "veznan_hero_shackles_small",
+		to = 11
+	},
+	veznan_hero_soulBurn_desintegrate_big = {
+		from = 1,
+		prefix = "veznan_hero_soulBurn_big",
+		to = 16
+	},
+	veznan_hero_soulBurn_desintegrate_small = {
+		from = 1,
+		prefix = "veznan_hero_soulBurn_small",
+		to = 16
+	},
+	veznan_hero_soulBurn_proy_spawn_big = {
+		from = 1,
+		prefix = "veznan_hero_soulBurn_Fx_big",
+		to = 6
+	},
+	veznan_hero_soulBurn_proy_spawn_small = {
+		from = 1,
+		prefix = "veznan_hero_soulBurn_Fx_small",
+		to = 6
 	}
 }

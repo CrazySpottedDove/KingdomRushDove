@@ -93,5 +93,30 @@ return {
 		from = 2,
 		prefix = "hero_alleria_wildcat",
 		to = 11
+	},
+	soldier_alleria_attack = {
+		from = 14,
+		prefix = "hero_archer_wildcat",
+		to = 27
+	},
+	soldier_alleria_death = {
+		from = 47,
+		prefix = "hero_archer_wildcat",
+		to = 64
+	},
+	soldier_alleria_idle = {
+		from = 1,
+		prefix = "hero_archer_wildcat",
+		to = 1
+	},
+	soldier_alleria_running = {
+		from = 2,
+		prefix = "hero_archer_wildcat",
+		to = 11
+	},
+	soldier_alleria_spawn = {
+		from = 28,
+		prefix = "hero_archer_wildcat",
+		to = 46
 	}
 }

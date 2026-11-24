@@ -68,5 +68,85 @@ return {
 		from = 1,
 		prefix = "hero_onagro_ultimate_projectile",
 		to = 1
+	},
+	hero_onagro_attack_2_hit_idle = {
+		from = 1,
+		prefix = "hero_onagro_attack_2_hit",
+		to = 6
+	},
+	hero_onagro_hero_attack_1 = {
+		from = 43,
+		prefix = "hero_onagro_hero",
+		to = 61
+	},
+	hero_onagro_hero_attack_2 = {
+		from = 62,
+		prefix = "hero_onagro_hero",
+		to = 80
+	},
+	hero_onagro_hero_death = {
+		from = 320,
+		prefix = "hero_onagro_hero",
+		to = 380
+	},
+	hero_onagro_hero_idle = {
+		from = 1,
+		prefix = "hero_onagro_hero",
+		to = 10
+	},
+	hero_onagro_hero_respawn = {
+		from = 296,
+		prefix = "hero_onagro_hero",
+		to = 319
+	},
+	hero_onagro_hero_skill_1 = {
+		from = 81,
+		prefix = "hero_onagro_hero",
+		to = 130
+	},
+	hero_onagro_hero_skill_2 = {
+		from = 131,
+		prefix = "hero_onagro_hero",
+		to = 180
+	},
+	hero_onagro_hero_skill_3 = {
+		from = 181,
+		prefix = "hero_onagro_hero",
+		to = 245
+	},
+	hero_onagro_hero_skill_4 = {
+		from = 246,
+		prefix = "hero_onagro_hero",
+		to = 295
+	},
+	hero_onagro_hero_walk = {
+		from = 11,
+		prefix = "hero_onagro_hero",
+		to = 42
+	},
+	hero_onagro_skill_1_drone_attack = {
+		from = 13,
+		prefix = "hero_onagro_skill_1_drone",
+		to = 24
+	},
+	hero_onagro_skill_1_drone_idle = {
+		from = 1,
+		prefix = "hero_onagro_skill_1_drone",
+		to = 12
+	},
+	hero_onagro_skill_4_mine_idle = {
+		from = 11,
+		prefix = "hero_onagro_skill_4_mine",
+		to = 38
+	},
+	hero_onagro_skill_4_mine_in = {
+		from = 1,
+		prefix = "hero_onagro_skill_4_mine",
+		to = 10
+	},
+	hero_onagro_skill_4_mine_on = {
+		from = 39,
+		prefix = "hero_onagro_skill_4_mine",
+		to = 60
 	}
 }

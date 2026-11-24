@@ -113,5 +113,40 @@ return {
 		from = 1,
 		prefix = "xin_hero_scream_soldierDecal",
 		to = 24
+	},
+	xin_shadow_attack = {
+		from = 11,
+		prefix = "xin_hero_shadow",
+		to = 20
+	},
+	xin_shadow_attack2 = {
+		from = 21,
+		prefix = "xin_hero_shadow",
+		to = 32
+	},
+	xin_shadow_attack3 = {
+		from = 33,
+		prefix = "xin_hero_shadow",
+		to = 42
+	},
+	xin_shadow_attack4 = {
+		from = 43,
+		prefix = "xin_hero_shadow",
+		to = 51
+	},
+	xin_shadow_death = {
+		from = 52,
+		prefix = "xin_hero_shadow",
+		to = 82
+	},
+	xin_shadow_idle = {
+		from = 9,
+		prefix = "xin_hero_shadow",
+		to = 9
+	},
+	xin_shadow_raise = {
+		from = 1,
+		prefix = "xin_hero_shadow",
+		to = 10
 	}
 }

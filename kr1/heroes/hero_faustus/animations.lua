@@ -133,5 +133,25 @@ return {
 		from = 1,
 		prefix = "faustus_hero_creep_fire_effect_small",
 		to = 11
+	},
+	minidragon_faustus_l1_fire = {
+		from = 1,
+		prefix = "faustus_hero_rage",
+		to = 18
+	},
+	minidragon_faustus_l1_idle = {
+		from = 1,
+		prefix = "faustus_hero_rage",
+		to = 18
+	},
+	minidragon_faustus_l2_fire = {
+		from = 37,
+		prefix = "faustus_hero_rage",
+		to = 54
+	},
+	minidragon_faustus_l2_idle = {
+		from = 19,
+		prefix = "faustus_hero_rage",
+		to = 36
 	}
 }

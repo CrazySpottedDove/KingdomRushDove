@@ -101,5 +101,40 @@ return {
 		from = 1,
 		prefix = "hero_wilburg_missile",
 		to = 3
+	},
+	bomb_wilbur_death = {
+		from = 28,
+		prefix = "hero_wilburg_bomb_box",
+		to = 48
+	},
+	bomb_wilbur_idle = {
+		from = 1,
+		prefix = "hero_wilburg_bomb_box",
+		to = 1
+	},
+	bomb_wilbur_walkingDown = {
+		from = 19,
+		prefix = "hero_wilburg_bomb_box",
+		to = 27
+	},
+	bomb_wilbur_walkingRightLeft = {
+		from = 1,
+		prefix = "hero_wilburg_bomb_box",
+		to = 9
+	},
+	bomb_wilbur_walkingUp = {
+		from = 10,
+		prefix = "hero_wilburg_bomb_box",
+		to = 18
+	},
+	wilbur_drone_idle = {
+		from = 1,
+		prefix = "hero_wilburg_drones",
+		to = 14
+	},
+	wilbur_drone_shoot = {
+		from = 15,
+		prefix = "hero_wilburg_drones",
+		to = 29
 	}
 }

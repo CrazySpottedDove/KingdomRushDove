@@ -168,5 +168,35 @@ return {
 		from = 1,
 		prefix = "hero_lumenir_radiant_wave_trail",
 		to = 16
+	},
+	hero_lumenir_attack_hit_fx_air = {
+		from = 1,
+		prefix = "hero_lumenir_attack_hit_fx_air",
+		to = 18
+	},
+	hero_lumenir_attack_projectile_idle = {
+		from = 1,
+		prefix = "hero_lumenir_attack_projectile",
+		to = 10
+	},
+	hero_lumenir_attack_projectile_trail_idle = {
+		from = 1,
+		prefix = "hero_lumenir_attack_projectile_trail",
+		to = 12
+	},
+	hero_lumenir_light_companion_attack_fx_idle = {
+		from = 1,
+		prefix = "hero_lumenir_light_companion_attack_fx",
+		to = 8
+	},
+	hero_lumenir_light_companion_attack_projectile_trail_particle_idle = {
+		from = 1,
+		prefix = "hero_lumenir_light_companion_attack_projectile_trail_particle",
+		to = 6
+	},
+	hero_lumenir_radiant_wave_projectile_idle = {
+		from = 1,
+		prefix = "hero_lumenir_radiant_wave_projectile",
+		to = 20
 	}
 }

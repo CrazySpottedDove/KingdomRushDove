@@ -93,5 +93,20 @@ return {
 		from = 1,
 		prefix = "hero_pirate_water",
 		to = 8
+	},
+	barrel_explosion = {
+		from = 2,
+		prefix = "hero_pirate_barrelExplosion",
+		to = 18
+	},
+	hero_pirate_shootDown = {
+		from = 52,
+		prefix = "hero_pirate",
+		to = 79
+	},
+	hero_pirate_shootUp = {
+		from = 80,
+		prefix = "hero_pirate",
+		to = 107
 	}
 }

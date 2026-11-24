@@ -83,5 +83,40 @@ return {
 		from = 1,
 		prefix = "hero_denas_proyParticle",
 		to = 8
+	},
+	elves_denas_guard_attack = {
+		from = 7,
+		prefix = "denas_hero_guard",
+		to = 28
+	},
+	elves_denas_guard_attack2 = {
+		from = 29,
+		prefix = "denas_hero_guard",
+		to = 52
+	},
+	elves_denas_guard_death = {
+		from = 53,
+		prefix = "denas_hero_guard",
+		to = 60
+	},
+	elves_denas_guard_idle = {
+		from = 1,
+		prefix = "denas_hero_guard",
+		to = 1
+	},
+	elves_denas_guard_raise = {
+		from = 61,
+		prefix = "denas_hero_guard",
+		to = 79
+	},
+	elves_denas_guard_respawn = {
+		from = 61,
+		prefix = "denas_hero_guard",
+		to = 79
+	},
+	elves_denas_guard_running = {
+		from = 2,
+		prefix = "denas_hero_guard",
+		to = 6
 	}
 }

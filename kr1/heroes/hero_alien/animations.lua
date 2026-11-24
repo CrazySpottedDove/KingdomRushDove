@@ -108,5 +108,10 @@ return {
 		from = 33,
 		prefix = "hero_alien",
 		to = 61
+	},
+	alien_drone_idle = {
+		from = 17,
+		prefix = "hero_alien_ship",
+		to = 30
 	}
 }

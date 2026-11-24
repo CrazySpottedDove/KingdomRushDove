@@ -53,5 +53,40 @@ return {
 		from = 1,
 		prefix = "bruce_hero_stars",
 		to = 10
+	},
+	bruce_ultimate_boom = {
+		from = 25,
+		prefix = "bruce_hero_ultimate",
+		to = 41
+	},
+	bruce_ultimate_twister_end = {
+		from = 15,
+		prefix = "bruce_hero_ultimate_twister",
+		to = 24
+	},
+	bruce_ultimate_twister_loop = {
+		from = 7,
+		prefix = "bruce_hero_ultimate_twister",
+		to = 14
+	},
+	bruce_ultimate_twister_start = {
+		from = 1,
+		prefix = "bruce_hero_ultimate_twister",
+		to = 6
+	},
+	bruce_ultimate_walkingDown = {
+		from = 17,
+		prefix = "bruce_hero_ultimate",
+		to = 24
+	},
+	bruce_ultimate_walkingRightLeft = {
+		from = 1,
+		prefix = "bruce_hero_ultimate",
+		to = 8
+	},
+	bruce_ultimate_walkingUp = {
+		from = 9,
+		prefix = "bruce_hero_ultimate",
+		to = 16
 	}
 }

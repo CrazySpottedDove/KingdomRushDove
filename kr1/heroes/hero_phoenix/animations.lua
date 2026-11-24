@@ -78,5 +78,15 @@ return {
 		from = 1,
 		prefix = "phoenix_hero_proy",
 		to = 12
+	},
+	phoenix_ultimate_activate = {
+		from = 7,
+		prefix = "phoenix_hero_egg",
+		to = 15
+	},
+	phoenix_ultimate_place = {
+		from = 1,
+		prefix = "phoenix_hero_egg",
+		to = 6
 	}
 }

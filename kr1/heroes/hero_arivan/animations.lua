@@ -133,5 +133,20 @@ return {
 		from = 2,
 		prefix = "arivan_hero",
 		to = 17
+	},
+	arivan_twister_end = {
+		from = 21,
+		prefix = "arivan_hero_twister",
+		to = 28
+	},
+	arivan_twister_start = {
+		from = 1,
+		prefix = "arivan_hero_twister",
+		to = 12
+	},
+	arivan_twister_travel = {
+		from = 13,
+		prefix = "arivan_hero_twister",
+		to = 20
 	}
 }

@@ -368,5 +368,55 @@ return {
 		from = 1,
 		prefix = "hero_dragon_arborean_water_projectile_trail",
 		to = 9
+	},
+	hero_dragon_arborean_leaf_projectile_spawn_fx_idle = {
+		from = 1,
+		prefix = "hero_dragon_arborean_leaf_projectile_spawn_fx",
+		to = 16
+	},
+	hero_dragon_arborean_passive_root1_end = {
+		from = 29,
+		prefix = "hero_dragon_arborean_passive_root1",
+		to = 37
+	},
+	hero_dragon_arborean_passive_root1_loop = {
+		from = 21,
+		prefix = "hero_dragon_arborean_passive_root1",
+		to = 28
+	},
+	hero_dragon_arborean_passive_root1_start = {
+		from = 1,
+		prefix = "hero_dragon_arborean_passive_root1",
+		to = 20
+	},
+	hero_dragon_arborean_passive_root2_end = {
+		from = 29,
+		prefix = "hero_dragon_arborean_passive_root2",
+		to = 37
+	},
+	hero_dragon_arborean_passive_root2_loop = {
+		from = 21,
+		prefix = "hero_dragon_arborean_passive_root2",
+		to = 28
+	},
+	hero_dragon_arborean_passive_root2_start = {
+		from = 1,
+		prefix = "hero_dragon_arborean_passive_root2",
+		to = 20
+	},
+	hero_dragon_arborean_passive_root3_end = {
+		from = 23,
+		prefix = "hero_dragon_arborean_passive_root3",
+		to = 38
+	},
+	hero_dragon_arborean_passive_root3_loop = {
+		from = 18,
+		prefix = "hero_dragon_arborean_passive_root3",
+		to = 22
+	},
+	hero_dragon_arborean_passive_root3_start = {
+		from = 1,
+		prefix = "hero_dragon_arborean_passive_root3",
+		to = 17
 	}
 }
