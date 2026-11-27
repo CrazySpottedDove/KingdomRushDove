@@ -207,7 +207,7 @@ local DYN = {
 	TOWER_WILD_MAGUS_WARD_DESCRIPTION_1 = "每隔%$(T('tower_wild_magus').attacks.list[3].cooldown) * tcd%$秒，沉默最多%$T('tower_wild_magus').powers.ward.target_count[level]%$个敌人，封锁其魔法技能，持续%$T('mod_ward').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_A_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[2].cooldown * tcd%$秒向道路投出火焰法球，造成%$T('tower_wizard').powers.skill_a.damage_min[level] * tdmg%$点法术爆炸伤害，并使敌人每%$T('mod_firebook_aura').dps.damage_every%$秒受到%$T('tower_wizard').powers.skill_a.burn_damage[level]*tdmg%$点真实伤害，持续%$T('mod_firebook_aura').modifier.duration%$秒。",
 	TOWER_WIZARD_SKILL_B_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[3].cooldown * tcd%$秒，使射程内所有防御塔获得%$(T('tower_wizard').attacks.list[3].damage_factor[level] - 1)%$%伤害增益，持续%$T('tower_wizard').attacks.list[3].duration[level]%$秒。",
-	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。"
+	TOWER_WIZARD_SKILL_C_DESCRIPTION_1 = "每%$T('tower_wizard').attacks.list[4].cooldown * tcd%$秒向道路投出一本魔法书，释放%$T('aura_wizard_skill_c').bullet_count[level]%$道魔法攻击，每道造成%$T('aura_wizard_skill_c').min_damage[level] * tdmg%$-%$T('aura_wizard_skill_c').max_damage[level] * tdmg%$点魔法伤害。",
 }
 
 return {
@@ -2804,6 +2804,10 @@ return {
 	HERO_INGVAR_NAME = "英格瓦·熊爪",
 	HERO_ISFET_DESCRIPTION = "在很久以前，伊斯菲特，一个被遗忘传说中的术士，利用黑暗魔法揭开了巨灵咒语的秘密。在他沉睡于一个古老金字塔中时，维兹南的邪恶气息使他作为一个不朽的神秘力量返回，准备再次塑造沙漠的命运。",
 	HERO_ISFET_NAME = "伊斯菲特",
+	HERO_JACKO_GHOUL_NAME = "食尸鬼",
+	HERO_JACK_O_LANTERN_CLASS = "黑暗骑手",
+	HERO_JACK_O_LANTERN_DESCRIPTION = "杰克曾是一名战技娴熟的骑士，还是某个久负盛名的雇佣兵团的团长。在利尼维亚首任国王尚未即位时，他曾经作为对方的敌手与之交战。在某场战斗中，一颗炮弹直接打在他头上，从此他的尸身便只能与腐朽森林的树根相伴。自那之后，凡是行经那片土地的人类，都不得不遭受他的折磨。",
+	HERO_JACK_O_LANTERN_NAME = "南瓜灯杰克",
 	HERO_JIGOU_DESCRIPTION = "这头凶蛮可怕的野兽原本被囚禁在北国冰山，从沉睡中醒来只为向维兹南俯首听命。它会按照主人的号令，毫不容情地粉碎一切敌人。",
 	HERO_JIGOU_NAME = "极狗",
 	HERO_LAVA_DESCRIPTION = "拉瓦是一名来自火山地带的狂暴战士，越濒临死亡越是强大，能用熔岩喷发摧毁一切挡在她面前的敌人。",
@@ -3334,6 +3338,18 @@ return {
 	HERO_ROOM_ISFET_ULTIMATE_2_NAME = "倒下的仆从",
 	HERO_ROOM_ISFET_ULTIMATE_DESC = "%$ cooldown_str(((T('hero_isfet')).ultimate.cooldown)) %$召唤一场致命的风暴，对区域内的敌人每0.2秒造成%$ damage_str(((T('hero_isfet')).hero.skills.ultimate).damage[levels((T('hero_isfet')).hero.skills.ultimate)],((T('hero_isfet')).hero.skills.ultimate).damage[levels((T('hero_isfet')).hero.skills.ultimate)],1) %$伤害并减速60%。",
 	HERO_ROOM_ISFET_ULTIMATE_NAME = "黑暗风暴",
+	HERO_ROOM_JACK_O_LANTERN_EXPLOSIVE_HEAD_DESC = "%$ cooldown_str((T('hero_jack_o_lantern')).timed_attacks.list[1].cooldown) %$杰克会把自己的南瓜脑袋扔向%$ (T('hero_jack_o_lantern')).timed_attacks.list[1].max_range %$范围内的一名敌人，对落点周围%$ (T('bomb_explosive_head')).bullet.damage_radius %$范围内的敌人造成%$ damage_str((T('hero_jack_o_lantern')).hero.skills.explosive_head.damage[levels((T('hero_jack_o_lantern')).hero.skills.explosive_head)],(T('hero_jack_o_lantern')).hero.skills.explosive_head.damage[levels((T('hero_jack_o_lantern')).hero.skills.explosive_head)],(T('bomb_explosive_head')).bullet.damage_type) %$，且无视敌人50%的护甲。",
+	HERO_ROOM_JACK_O_LANTERN_EXPLOSIVE_HEAD_NAME = "爆炸头",
+	HERO_ROOM_JACK_O_LANTERN_HAUNTED_BLADE_DESC = "%$ cooldown_str((T('hero_jack_o_lantern')).hero.skills.haunted_blade.cooldown[levels((T('hero_jack_o_lantern')).hero.skills.haunted_blade)]) %$杰克会用鬼缠之刃斩击被他拦截的敌人，造成%$ damage_str(tail((T('hero_jack_o_lantern')).hero.level_stats.melee_damage_min),tail((T('hero_jack_o_lantern')).hero.level_stats.melee_damage_max),(T('hero_jack_o_lantern')).melee.attacks[2].damage_type) %$，并将目标的魔法抗性清零。",
+	HERO_ROOM_JACK_O_LANTERN_HAUNTED_BLADE_NAME = "鬼缠之刃",
+	HERO_ROOM_JACK_O_LANTERN_HERO_JACKO_MELEE_DESC = "杰克会把每次受到伤害的%$ (T('hero_jack_o_lantern')).hero.skills.hero_jacko_melee.accumulated_damage_factor[levels((T('hero_jack_o_lantern')).hero.skills.hero_jacko_melee)] %$%转化为法伤积蓄下来，在下一次普通攻击时一并释放。",
+	HERO_ROOM_JACK_O_LANTERN_HERO_JACKO_MELEE_NAME = "复仇之灵",
+	HERO_ROOM_JACK_O_LANTERN_HERO_JACKO_THRILLER_DESC = "%$ cooldown_str((T('hero_jack_o_lantern')).timed_attacks.list[2].cooldown) %$杰克会在附近道路上撒下%$ (T('hero_jack_o_lantern')).hero.skills.hero_jacko_thriller.max_bullets[levels((T('hero_jack_o_lantern')).hero.skills.hero_jacko_thriller)] %$颗南瓜籽，每颗南瓜籽落地后都会钻出一只食尸鬼为你作战%$ (T('hero_jacko_ghoul')).reinforcement.duration %$秒。食尸鬼拥有%$ hp_str((T('hero_jacko_ghoul')).health.hp_max) %$，并造成%$ damage_str((T('hero_jacko_ghoul')).melee.attacks[1].damage_min,(T('hero_jacko_ghoul')).melee.attacks[1].damage_max,(T('hero_jacko_ghoul')).melee.attacks[1].damage_type) %$。",
+	HERO_ROOM_JACK_O_LANTERN_HERO_JACKO_THRILLER_NAME = "惊魂夜",
+	HERO_ROOM_JACK_O_LANTERN_PASSIVE_DESC = "当集结点变动距离超过%$ (T('hero_jack_o_lantern')).teleport.min_distance %$时，杰克会直接瞬移到目标位置，并在传送过程中免疫伤害。",
+	HERO_ROOM_JACK_O_LANTERN_PASSIVE_NAME = "幽魂骑士",
+	HERO_ROOM_JACK_O_LANTERN_ULTIMATE_DESC = "%$ cooldown_str((T('hero_jack_o_lantern')).ultimate.cooldown) %$杰克召唤3匹幽灵战马，以%$ (T('hero_jacko_horse')).motion.max_speed %$的移速沿道路向出怪口冲锋，每匹战马每%$ (T('hero_jacko_horse')).aura.cycle_time %$秒对附近%$ (T('hero_jacko_horse')).aura.radius %$范围内的敌人造成%$ damage_str((T('hero_jack_o_lantern')).hero.skills.ultimate.damage_over_time[levels((T('hero_jack_o_lantern')).hero.skills.ultimate)],(T('hero_jack_o_lantern')).hero.skills.ultimate.damage_over_time[levels((T('hero_jack_o_lantern')).hero.skills.ultimate)],(T('hero_jacko_horse')).aura.damage_type) %$，并使其以%$ (T('mod_hero_jacko_horse_intimidation')).slow.factor %$%的移速掉头逃跑，持续%$ (T('mod_hero_jacko_horse_intimidation')).modifier.duration %$秒。战马最多存在%$ (T('hero_jacko_horse')).aura.duration %$秒，期间最多造成%$ damage_str((T('hero_jack_o_lantern')).hero.skills.ultimate.damage_over_time[levels((T('hero_jack_o_lantern')).hero.skills.ultimate)] * ((T('hero_jacko_horse')).aura.duration / (T('hero_jacko_horse')).aura.cycle_time),(T('hero_jack_o_lantern')).hero.skills.ultimate.damage_over_time[levels((T('hero_jack_o_lantern')).hero.skills.ultimate)] * ((T('hero_jacko_horse')).aura.duration / (T('hero_jacko_horse')).aura.cycle_time),(T('hero_jacko_horse')).aura.damage_type) %$。",
+	HERO_ROOM_JACK_O_LANTERN_ULTIMATE_NAME = "噩梦",
 	HERO_ROOM_JIGOU_EARTHSHAKE_DESC = "%$ cooldown_str(((T('hero_jigou')).melee.attacks[2].cooldown)) %$暴怒，猛烈击打大地%$ (((T('hero_jigou')).hero.skills.earthshake).loops[levels((T('hero_jigou')).hero.skills.earthshake)]) %$次，对周围敌人造成%$ damage_str((T('hero_jigou')).melee.attacks[2].damage_min,(T('hero_jigou')).melee.attacks[2].damage_max,(T('hero_jigou')).melee.attacks[2].damage_type) %$，并使其眩晕%$ (T('mod_jigou_stun').modifier.duration) %$秒。",
 	HERO_ROOM_JIGOU_EARTHSHAKE_NAME = "猛击大地",
 	HERO_ROOM_JIGOU_FROZEN_BREATH_DESC = "%$ cooldown_str(((T('hero_jigou')).timed_attacks.list[2].cooldown)) %$极狗呼出肺中的空气，冻结面前的敌人，使其冻结%$ (T('mod_jigou_freeze').modifier.duration) %$秒。",

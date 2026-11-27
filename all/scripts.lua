@@ -2926,7 +2926,7 @@ function scripts.bomb.update(this, store)
 		last_ts = last_ts + dt
 	end
 
-	local hit_pos = b._hit_offset_record and V.v(b._hit_offset_record.x + this_pos.x, b._hit_offset_record.y + this_pos.y) or this_pos
+	local hit_pos = b._hit_offset_record and V.v(this_pos.x - b._hit_offset_record.x, this_pos.y - b._hit_offset_record.y) or this_pos
 	local enemies = U.find_enemies_in_range_filter_off(hit_pos, dradius, b.damage_flags, b.damage_bans)
 
 	if enemies then
