@@ -92,6 +92,7 @@ HEROES.module_names = {
 	"heroes.hero_naga",
 	"heroes.hero_eiskalt",
 	"heroes.hero_murglun",
+	"heroes.hero_jack_o_lantern",
 	"heroes.hero_dianyun",
 	"heroes.hero_gerald_kr6",
 	"heroes.hero_zefira",
