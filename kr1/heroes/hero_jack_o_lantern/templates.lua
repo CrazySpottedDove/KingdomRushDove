@@ -244,6 +244,11 @@ end
 local function hero_jacko_ghoul_update(this, store)
 	local hover = this.hover
 
+	if this.vis._bans_added then
+		U.bans_remove(this.vis, F_ALL)
+		this.vis._bans_added = nil
+	end
+
 	hover.oni = this.nav_path.ni
 	hover.ts = store.tick_ts
 	hover.cooldown = U.frandom(hover.cooldown_min, hover.cooldown_max)
