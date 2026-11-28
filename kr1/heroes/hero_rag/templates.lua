@@ -121,6 +121,9 @@ local function mod_rag_raggified_update(this, store)
 			target.count_group.in_limbo = nil
 		end
 
+		-- 避免恢复的敌人逃跑
+		target.nav_path.dir = 1
+
 		U.bans_remove(target.vis, F_RAGGIFY)
 		simulation:queue_insert_entity(target)
 	else
